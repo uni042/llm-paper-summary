@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-10T21:46:56+00:00",
-  "record_count": 4603,
+  "updated_at": "2026-10-11T01:32:12+00:00",
+  "record_count": 4608,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -70412,6 +70412,81 @@
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "Oryx MLLM: On-Demand Spatial-Temporal Understanding at Arbitrary Resolution"
+    },
+    "arXiv:2112.04267": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2112.04267",
+      "identity_tokens": [
+        "arXiv:2112.04267"
+      ],
+      "reason": "The arXiv abstract studies INRs as an image-compression pipeline with quantization, entropy coding, and faster per-image fitting; these compression mechanisms are adjacent to model compression, but the measured target is image coding rather than LLM inference.",
+      "first_checked_at": "2026-10-11T01:32:11+00:00",
+      "last_checked_at": "2026-10-11T01:32:11+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2004.07320-training-with-quantization-noise-for-extreme-model-compression.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Implicit Neural Representations for Image Compression"
+    },
+    "DOI:10.1145/3506695": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3506695",
+      "identity_tokens": [
+        "DOI:10.1145/3506695"
+      ],
+      "reason": "The paper concerns how tuning and model-optimization choices change DNN performance properties, including deployment latency and model size; its empirical scope is general DNNs rather than LLM serving, so transfer to the target system remains uncertain. Primary-source retrieval failure: ACM DL primary DOI page returned HTTP 403 Forbidden; no primary abstract was retrieved from that page.",
+      "first_checked_at": "2026-10-11T01:32:11+00:00",
+      "last_checked_at": "2026-10-11T01:32:11+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2004.07320-training-with-quantization-noise-for-extreme-model-compression.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "An Empirical Study of the Impact of Hyperparameter Tuning and Model Optimization on the Performance Properties of Deep Neural Networks"
+    },
+    "arXiv:2306.09818": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2306.09818",
+      "identity_tokens": [
+        "arXiv:2306.09818"
+      ],
+      "reason": "HiNeRV combines neural video compression with pruning and quantization, but its target is rate-distortion performance of a video codec; the abstract does not connect its compression pipeline to LLM inference systems.",
+      "first_checked_at": "2026-10-11T01:32:11+00:00",
+      "last_checked_at": "2026-10-11T01:32:11+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2004.07320-training-with-quantization-noise-for-extreme-model-compression.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "HiNeRV: Video Compression with Hierarchical Encoding-based Neural Representation"
+    },
+    "DOI:10.3390/ijms262210925": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.3390/ijms262210925",
+      "identity_tokens": [
+        "DOI:10.3390/ijms262210925"
+      ],
+      "reason": "The registered title identifies a broad genomics review, but the MDPI primary article page could not be retrieved, so its abstract-based relevance could not be established. Primary-source retrieval failure: The DOI-resolved MDPI page (https://www.mdpi.com/1422-0067/26/22/10925) returned HTTP 429 Too Many Requests; a subsequent publisher-page attempt returned HTTP 429. Abstract not available from the primary page.",
+      "first_checked_at": "2026-10-11T01:32:11+00:00",
+      "last_checked_at": "2026-10-11T01:32:11+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2302.10866-hyena-hierarchy-towards-larger-convolutional-language-models.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Advances in Artificial Intelligence (AI) Models and Generative Algorithms Represent a New Paradigm for Genomics Research"
+    },
+    "DOI:10.1101/2024.08.26.609813": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1101/2024.08.26.609813",
+      "identity_tokens": [
+        "DOI:10.1101/2024.08.26.609813"
+      ],
+      "reason": "The registered title identifies a long-context RNA foundation model, but the bioRxiv primary page could not be fetched; without its abstract, its system-efficiency connection cannot be determined. Primary-source retrieval failure: The DOI's primary bioRxiv page (https://www.biorxiv.org/content/10.1101/2024.08.26.609813v1) returned an internal fetch error with no HTTP status exposed; no status is inferred.",
+      "first_checked_at": "2026-10-11T01:32:12+00:00",
+      "last_checked_at": "2026-10-11T01:32:12+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2302.10866-hyena-hierarchy-towards-larger-convolutional-language-models.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Learning transcriptome architecture from sequence with a long-context RNA foundation model"
     }
   }
 }

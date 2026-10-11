@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-11T00:45:52+00:00",
-  "record_count": 11418,
+  "updated_at": "2026-10-11T01:32:15+00:00",
+  "record_count": 11428,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -163212,6 +163212,146 @@
       "last_checked_at": "2026-10-11T00:45:52+00:00",
       "linked_from": [],
       "title": "DIFFormer: Scalable (Graph) Transformers Induced by Energy Constrained Diffusion"
+    },
+    "arXiv:1911.00623": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1911.00623",
+      "identity_tokens": [
+        "arXiv:1911.00623"
+      ],
+      "reason": "Although the survey frames on-device ML as resource-constrained, its stated subject is on-device training, online learning, and model adaptation; it does not address efficient inference or an inference execution system.",
+      "first_checked_at": "2026-10-11T01:32:12+00:00",
+      "last_checked_at": "2026-10-11T01:32:12+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2004.07320-training-with-quantization-noise-for-extreme-model-compression.md"
+      ],
+      "title": "On-Device Machine Learning: An Algorithms and Learning Theory Perspective"
+    },
+    "arXiv:2404.09554": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2404.09554",
+      "identity_tokens": [
+        "arXiv:2404.09554"
+      ],
+      "reason": "The survey organizes explainability needs and methods for generative AI; the abstract mentions cost as one explanation desideratum but does not study inference-system cost reduction or execution efficiency.",
+      "first_checked_at": "2026-10-11T01:32:12+00:00",
+      "last_checked_at": "2026-10-11T01:32:12+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2302.10866-hyena-hierarchy-towards-larger-convolutional-language-models.md"
+      ],
+      "title": "Explainable Generative AI (GenXAI): a survey, conceptualization, and research agenda"
+    },
+    "arXiv:2607.05184": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.05184",
+      "identity_tokens": [
+        "arXiv:2607.05184"
+      ],
+      "reason": "The paper studies how privileged self-distillation affects thinking-model accuracy and correction behavior during training; its abstract reports degradation rather than an inference-efficiency mechanism.",
+      "first_checked_at": "2026-10-11T01:32:13+00:00",
+      "last_checked_at": "2026-10-11T01:32:13+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2502.04463-training-language-models-to-reason-efficiently.md"
+      ],
+      "title": "Rethinking On-Policy Self-Distillation for Thinking Models"
+    },
+    "DOI:10.1038/s42256-025-01165-w": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1038/s42256-025-01165-w",
+      "identity_tokens": [
+        "DOI:10.1038/s42256-025-01165-w"
+      ],
+      "reason": "The publisher abstract describes XPert, a dual-branch transformer for predicting drug-induced cellular gene-expression changes and dose–time responses; its purpose is biological prediction, not inference-system efficiency.",
+      "first_checked_at": "2026-10-11T01:32:13+00:00",
+      "last_checked_at": "2026-10-11T01:32:13+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2302.10866-hyena-hierarchy-towards-larger-convolutional-language-models.md"
+      ],
+      "title": "Modelling drug-induced cellular perturbation responses with a biologically informed dual-branch transformer"
+    },
+    "arXiv:2512.07533": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2512.07533",
+      "identity_tokens": [
+        "arXiv:2512.07533"
+      ],
+      "reason": "VulnLLM-R adds a specialized reasoning model and agent scaffold for vulnerability detection; the abstract focuses on security-detection performance and does not identify serving, latency, or compute-efficiency contributions.",
+      "first_checked_at": "2026-10-11T01:32:14+00:00",
+      "last_checked_at": "2026-10-11T01:32:14+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2502.04463-training-language-models-to-reason-efficiently.md"
+      ],
+      "title": "VulnLLM-R: Specialized Reasoning LLM with Agent Scaffold for Vulnerability Detection"
+    },
+    "arXiv:2604.14806": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.14806",
+      "identity_tokens": [
+        "arXiv:2604.14806"
+      ],
+      "reason": "The abstract presents a perception-grounded hybrid reasoning model for audio understanding; it focuses on audio task reasoning and perception quality without a concrete inference-efficiency or runtime contribution.",
+      "first_checked_at": "2026-10-11T01:32:14+00:00",
+      "last_checked_at": "2026-10-11T01:32:14+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2502.04463-training-language-models-to-reason-efficiently.md"
+      ],
+      "title": "Listen, Pause, and Reason: Toward Perception-Grounded Hybrid Reasoning for Audio Understanding"
+    },
+    "DOI:10.1002/wcms.70064": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1002/wcms.70064",
+      "identity_tokens": [
+        "DOI:10.1002/wcms.70064"
+      ],
+      "reason": "This review concerns using deep learning to address accuracy, speed, and sampling limits in molecular-dynamics simulations; its computational target is scientific simulation, not LLM inference or model-serving infrastructure.",
+      "first_checked_at": "2026-10-11T01:32:14+00:00",
+      "last_checked_at": "2026-10-11T01:32:14+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2204.09656-a-fast-post-training-pruning-framework-for-transformers.md"
+      ],
+      "title": "Breaking the Barriers of Molecular Dynamics With Deep‐Learning: Opportunities, Pitfalls, and How to Navigate Them"
+    },
+    "arXiv:2601.17958": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.17958",
+      "identity_tokens": [
+        "arXiv:2601.17958"
+      ],
+      "reason": "TensorLens is an analysis method for interpreting transformer attention tensors; the abstract emphasizes model analysis and explanations, not reduced inference cost or a more efficient execution path.",
+      "first_checked_at": "2026-10-11T01:32:15+00:00",
+      "last_checked_at": "2026-10-11T01:32:15+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2302.10866-hyena-hierarchy-towards-larger-convolutional-language-models.md"
+      ],
+      "title": "TensorLens: End-to-End Transformer Analysis via High-Order Attention Tensors"
+    },
+    "arXiv:2409.17808": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2409.17808",
+      "identity_tokens": [
+        "arXiv:2409.17808"
+      ],
+      "reason": "The paper uses generative models as surrogate models for molecular-dynamics trajectories and related scientific tasks; it targets molecular simulation rather than LLM inference efficiency.",
+      "first_checked_at": "2026-10-11T01:32:15+00:00",
+      "last_checked_at": "2026-10-11T01:32:15+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2302.10866-hyena-hierarchy-towards-larger-convolutional-language-models.md"
+      ],
+      "title": "Generative Modeling of Molecular Dynamics Trajectories"
+    },
+    "arXiv:2603.07789": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.07789",
+      "identity_tokens": [
+        "arXiv:2603.07789"
+      ],
+      "reason": "SGI compresses structured 2D Gaussian image representations and speeds their fitting; its abstract concerns image representation and reconstruction, not LLM model compression or serving.",
+      "first_checked_at": "2026-10-11T01:32:15+00:00",
+      "last_checked_at": "2026-10-11T01:32:15+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2004.07320-training-with-quantization-noise-for-extreme-model-compression.md"
+      ],
+      "title": "SGI: Structured 2D Gaussians for Efficient and Compact Large Image Representation"
     }
   }
 }

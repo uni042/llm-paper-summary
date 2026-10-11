@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-c67269ff0aaf0f11-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2112.04267",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2112.04267",
+    "identity_tokens": [
+      "arXiv:2112.04267"
+    ],
+    "reason": "The arXiv abstract studies INRs as an image-compression pipeline with quantization, entropy coding, and faster per-image fitting; these compression mechanisms are adjacent to model compression, but the measured target is image coding rather than LLM inference.",
+    "first_checked_at": "2026-10-11T01:32:11+00:00",
+    "last_checked_at": "2026-10-11T01:32:11+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2020-2004.07320-training-with-quantization-noise-for-extreme-model-compression.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Implicit Neural Representations for Image Compression"
+  },
+  "processed_at": "2026-10-11T01:32:11+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-c67269ff0aaf",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
