@@ -1,7 +1,7 @@
 # Scheduled worker :30 worklist
 
 Worker: `scheduled-chat-30`  
-Generated: `2026-10-11T22:14:26+00:00`
+Generated: `2026-10-11T23:01:19+00:00`
 
 このページはこのworker専用の再構築可能な選択索引です。他のScheduled worker用ページとは候補を重複させません（十分な在庫がある場合）。
 正本は `.survey/work-queue/jobs/`、claim、論文実体、relevance ledgerです。処理直前に最新正本を再確認してください。
@@ -220,8 +220,8 @@ ready総数: **1082** / 未claim総数: **1081** / このworker向け: **200**
 
 ## リスト入り判定待ち Discovery候補
 
-未判定総数: **111561** / このworker向け: **500**
-事前選別: **quarantine** / 暫定隔離 **106148** / 監査再投入 **0** / 機械規則適用後 **108256** / 選抜率 **5.0%** （候補の正本は保持。隔離はunrelated判定ではない）
+未判定総数: **111560** / このworker向け: **500**
+事前選別: **quarantine** / 暫定隔離 **106147** / 監査再投入 **0** / 機械規則適用後 **108255** / 選抜率 **5.0%** （候補の正本は保持。隔離はunrelated判定ではない）
 
 | # | priority | 系統内引用最多 | 系統内引用合計 | identity | title | published | venue | 全被引用 | 参照関係 | 系統候補 | source |
 |---:|---:|---:|---:|---|---|---|---|---:|---:|---|---|
@@ -686,7 +686,7 @@ ready総数: **1082** / 未claim総数: **1081** / このworker向け: **200**
 | 459 | 106 | 5 | 16 | DOI:10.1109/TMC.2025.3628498 | H2O: Heterogeneity-Aware Hierarchical Orchestration for Memory-Efficient On-Device LLM Inference | 2026-04-01 | IEEE Transactions on Mobile Computing | 6 | 16 | CPUオフロード / 活性化疎性 / 階層メモリ, Conditional Computation, Edge／on-device MoE, KV cache compression / cross-layer state merging, KV cache quantization / long-context inference / activation compression, inference-systems, post-training quantization / second-order compression / weight-only LLM inference, オフロード／階層メモリ, 重み専用量子化 / 推論カーネル | [source](https://doi.org/10.1109/TMC.2025.3628498) |
 | 460 | 7 | 5 | 16 | arXiv:2508.08531 | Profiling Large Language Model Inference on Apple Silicon: A Quantization Perspective | 2025-08-12 | arXiv.org | 7 | 16 | 16-weight-quantization-compression, CPUオフロード / 活性化疎性 / 階層メモリ, LLM Serving / Scheduling / Disaggregation, Offload / Hierarchical Memory, Weight Quantization / Compression, inference-systems, post-training quantization / second-order compression / weight-only LLM inference, survey-low-bit-llm, 大規模言語モデル重み量子化 / 混合精度 / 疎量子化, 投機的復号 / 無損失復号高速化, 注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層 | [source](https://arxiv.org/abs/2508.08531) |
 | 461 | 10 | 5 | 16 | DOI:10.18653/v1/2026.acl-long.46 | RoBSA: RoPE-based Blockwise Sparse Multi-head Latent Attention | 2026 | Annual Meeting of the Association for Computational Linguistics | 0 | 16 | 07-kv-cache-optimization-compression, KV cache memory management / streaming inference / attention sinks / length extrapolation, KVキャッシュ最適化／適応圧縮, LLM Serving / Scheduling / Disaggregation, Sparse Attention, kv-cache-optimization-compression, long-context inference / dynamic sparse attention / prefill acceleration, post-training quantization / second-order compression / weight-only LLM inference, sparse attention / long-context Transformer, 疎注意 / KVキャッシュ選択 / 長文脈推論 | [source](https://doi.org/10.18653/v1/2026.acl-long.46) |
-| 462 | 13 | 5 | 15 | DOI:10.48550/arXiv.2408.04307 | MoC-System: Efficient Fault Tolerance for Sparse Mixture-of-Experts Model Training | 2024-08-08 | International Conference on Architectural Support for Programming Languages and Operating Systems | 13 | 15 | Expert Prefetch, MoE inference systems / expert parallelism / model compression / knowledge distillation, Training Offload / Memory Systems, 分散学習 / 混合専門家モデル / 自動シャーディング / SPMD, 大規模モデル学習／分散学習メモリ最適化／DeepSpeed, 注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層 | [source](https://arxiv.org/abs/2408.04307) |
+| 462 | 0 | 5 | 15 | DOI:10.48550/arXiv.2408.04307 | Partial Experts Checkpoint: Efficient Fault Tolerance for Sparse Mixture-of-Experts Model Training | 2024-08-08 | arXiv.org | 0 | 15 | Expert Prefetch, MoE inference systems / expert parallelism / model compression / knowledge distillation, Training Offload / Memory Systems, 分散学習 / 混合専門家モデル / 自動シャーディング / SPMD, 大規模モデル学習／分散学習メモリ最適化／DeepSpeed, 注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層 | [source](https://doi.org/10.48550/arXiv.2408.04307) |
 | 463 | 10 | 5 | 15 | arXiv:2605.06206 | Federation of Experts: Communication Efficient Distributed Inference for Large Language Models | 2026-05-07 | arXiv.org | 0 | 15 | LLM Serving / Scheduling / Disaggregation, MoE architecture / hardware-software co-design / latent expert computation / Nemotron-3, MoE inference systems / expert parallelism / model compression / knowledge distillation, MoE推論／エキスパート並列／エキスパート配置／全対全通信／負荷分散, inference-systems, その他システム研究, 分散学習 / 混合専門家モデル / 自動シャーディング / SPMD | [source](https://arxiv.org/abs/2605.06206) |
 | 464 | 0 | 5 | 15 | SemanticScholar:26737389fd1c3ab8d0a5c9157c64be732c4684bd | BALANCE: Hybrid Autoregressive-Speculative LLM Inference in Wireless Edge Networks |  |  | 0 | 15 | LLM Serving / Scheduling / Disaggregation, LLM routing、hybrid inference、quality-aware model selection, LLMサービング、エッジ推論、協調推論、資源管理・スケジューリング, LLMサービング／スケジューリング, Offload / Hierarchical Memory, inference-systems, speculative decoding / draft-model design, survey-speculative-decoding, エッジLLM推論・投機的デコーディング・無線資源配分・バッチスケジューリング | [source](https://www.semanticscholar.org/paper/26737389fd1c3ab8d0a5c9157c64be732c4684bd) |
 | 465 | 1 | 5 | 14 | arXiv:2510.22641 | FastVLM: Self-Speculative Decoding for Fast Vision-Language Model Inference | 2025-10-26 | IJCNLP-AACL | 1 | 14 | 07-kv-cache-optimization-compression, Conditional Computation, Offload / Hierarchical Memory, Speculative Decoding, Transformer inference runtime and variable-length request batching, inference-systems, post-training quantization / second-order compression / weight-only LLM inference, 投機的デコード / 分布保存型デコード高速化, 投機的復号 / 無損失復号高速化 | [source](https://arxiv.org/abs/2510.22641) |
