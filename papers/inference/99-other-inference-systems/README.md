@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（441本）
+## 自動生成の論文一覧（443本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -65,6 +65,10 @@
 - **2026-06 · [Models Take Notes at Prefill: KV Cache Can Be Editable and Composable](2026-2606.17107-models-take-notes-at-prefill-kv-cache-can-be-editable-and-composable.md)**  
   実装：[✓](https://github.com/19PINE-AI/programmable-kv) ・ リポジトリ内被引用：2  
   プリフィル済みKVキャッシュを結論メモとして捉え、追記訂正による編集とRoPE再配置による部品合成で再プリフィルを回避する。
+
+- **2026-06 · [MiniPIC: Flexible Position-Independent Caching in <100LOC](2026-2606.13126-minipic-flexible-position-independent-caching-in-100loc.md)**  
+  実装：[✓](https://github.com/IBM/vllm) ・ リポジトリ内被引用：2  
+  例えばシステム指示や文書の並び順が異なる二つの要求は、同じ文書の事前充填を繰り返すことになる。H100単体・2Wikiの12,576サンプルでは、文書の事前充填と最終要求を交互に投入する方式により48.01サンプル/秒を達成し、通常vLLMの32.21サンプル/秒に対して49%増加した。
 
 - **2026-05 · [SYMPHONY: Enabling Compute-Memory Disaggregation in LLM Serving Systems](2026-0fd53670e945-symphony-enabling-compute-memory-disaggregation-in-llm-serving-systems.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
@@ -395,6 +399,10 @@
 - **2026-08 · [SplitScaling: Adaptive Scaling for Disaggregated LLM Serving Against Traffic Bursts via DRL](2026-92b65c48d388-splitscaling-adaptive-scaling-for-disaggregated-llm-serving-against-traffic-bursts-via-drl.md)**  
   実装：[✓](https://github.com/Onlytonight/SplitScaling) ・ リポジトリ内被引用：0  
   プリフィル／デコード各プールを深層強化学習で独立伸縮し、新規ノードへ待機要求を即時再割当して、バースト負荷下でSLOを守りながら静的構成比25.2%の計算コストを削減する。
+
+- **2026-08 · [SoftWater: Class-Aware Rate Allocation for Softmax Quantization](2026-2608.12026-softwater-class-aware-rate-allocation-for-softmax-quantization.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  通常の事後量子化では中間の線形層を2〜4ビットにしても、この最終出力層だけを16ビットで残すことが多い。例えばLlama-3.2-1Bの出力層は約2.63億パラメータ、モデル全体の21.3%であり、本体を低ビット化すると出力層の相対的な容量負担がさらに増える。
 
 - **2026-08 · [RotaryQuant: Fitting 120B MoE Models on Consumer Hardware via Fused Compressed-Space Attention](2026-2608.08081-rotaryquant-fitting-120b-moe-models-on-consumer-hardware-via-fused-compressed-space-attention.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -1029,7 +1037,7 @@
   混合専門家（Mixture-of-Experts; MoE）は総パラメータを増やしながら、各トークンで一部専門家だけを実行することで、密 モデルより計算量を抑えられる。
 
 - **2024-03 · [QuaRot: Outlier-Free 4-Bit Inference in Rotated LLMs](2024-2404.00456-quarot-outlier-free-4-bit-inference-in-rotated-llms.md)**  
-  実装：[✓](https://github.com/spcl/QuaRot) ・ リポジトリ内被引用：45  
+  実装：[✓](https://github.com/spcl/QuaRot) ・ リポジトリ内被引用：46  
   QuaRotは、大規模言語モデル（LLM）の4ビット推論を難しくする活性値の外れ値を、高精度の例外チャネルへ逃がすのではなく、モデルの関数を変えない直交回転（orthogonal rotation）で多数の次元へ分散する量子化手法である。
 
 - **2024-02 · [QuIP#: Even Better LLM Quantization with Hadamard Incoherence and Lattice Codebooks](2024-2402.04396-quip-even-better-llm-quantization-with-hadamard-incoherence-and-lattice-.md)**  

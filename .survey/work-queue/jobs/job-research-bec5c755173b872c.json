@@ -45,11 +45,16 @@
   "selection_reason": "vLLMに100行未満のcore変更で位置非依存KV cache再利用を導入しCPU offloadとも統合。prefill throughput 49%向上、cached-span TTFT最大2桁短縮。",
   "semantic_scholar_id": "a8ad278ee75a875f56e632252c1b7c23b0033e32",
   "source_url": "https://www.semanticscholar.org/paper/a8ad278ee75a875f56e632252c1b7c23b0033e32",
-  "status": "ready",
+  "status": "superseded",
   "status_submission": ".survey/work-queue/submissions/research/attempt-1676031a0252447c163dfc04.json",
   "title": "MiniPIC: Flexible Position-Independent Caching in <100LOC",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-10-11T17:51:54+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2026-2606.13126-minipic-flexible-position-independent-caching-in-100loc.md",
+  "represented_canonical_id": "arXiv:2606.13126",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
