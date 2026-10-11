@@ -4537,6 +4537,15 @@
       "warnings": []
     },
     {
+      "path": "papers/inference/07-kv-cache-optimization-compression/2026-2605.08840-rest-kv-robust-kv-cache-eviction-with-layer-wise-output-reconstruction-a.md",
+      "status": "PASS",
+      "summary": "注意出力の再構成誤差と時空間平滑化でKV削除を選び、RULER平均82.27点、128K文脈で全キャッシュ比約10.61倍のデコード高速化を報告。",
+      "char_count": 73,
+      "japanese_ratio": 1.0,
+      "failures": [],
+      "warnings": []
+    },
+    {
       "path": "papers/inference/07-kv-cache-optimization-compression/2026-2605.13734-kvserve-service-aware-kv-cache-compression.md",
       "status": "PASS",
       "summary": "KVServeは、実効帯域・負荷・品質制約からKV圧縮プロファイルか無圧縮を選び、分離型LLMの通信待ちと圧縮処理費を同時に抑える。",
@@ -5675,6 +5684,15 @@
       "status": "PASS",
       "summary": "二次テイラー線形注意と短い局所ソフトマックス注意を組み合わせ、状態量・再取得能力・生成処理量のパレート前線を改善するモデル設計。",
       "char_count": 64,
+      "japanese_ratio": 1.0,
+      "failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/09-kernel-runtime-compilation/2024-2403.16971-aios-llm-agent-operating-system.md",
+      "status": "PASS",
+      "summary": "LLMエージェントの推論要求・ツール・記憶をOS風カーネルで調停。単一GPUの多エージェント実行でシステムコール処理率を最大2.1倍改善。",
+      "char_count": 69,
       "japanese_ratio": 1.0,
       "failures": [],
       "warnings": []
@@ -10844,6 +10862,15 @@
       "warnings": []
     },
     {
+      "path": "papers/inference/14-agentic-inference-serving-runtime/2025-2511.20975-aragog-just-in-time-model-routing-for-scalable-serving-of-agentic-workfl.md",
+      "status": "PASS",
+      "summary": "ワークフロー各段階のLLMモデル割当を実行時負荷で切替え、候補精度の事前推定と軽量な共同スケジューリングにより最大処理率42.8～217.0%改善。",
+      "char_count": 74,
+      "japanese_ratio": 1.0,
+      "failures": [],
+      "warnings": []
+    },
+    {
       "path": "papers/inference/14-agentic-inference-serving-runtime/2025-2512.15834-optimizing-agentic-language-model-inference-via-speculative-tool-calls.md",
       "status": "PASS",
       "summary": "小型モデルで次のツール呼出しを先読みして本体生成と外部実行を重ね、BFCL系評価で6〜21%時間短縮。推論エンジン統合では短いツールでさらに2〜3%改善。",
@@ -12169,6 +12196,15 @@
       "warnings": []
     },
     {
+      "path": "papers/inference/99-other-inference-systems/2020-2005.14187-hat-hardware-aware-transformers-for-efficient-natural-language-processin.md",
+      "status": "PASS",
+      "summary": "実機で測ったCPU・GPUの遅延を学習した予測器と、重み共有型の進化的構造探索により、翻訳Transformerの注意接続・層幅・深さを機器別に最適化し、Raspberry Pi 4で同等BLEUのまま約3倍高速化した。",
+      "char_count": 110,
+      "japanese_ratio": 1.0,
+      "failures": [],
+      "warnings": []
+    },
+    {
       "path": "papers/inference/99-other-inference-systems/2020-2006.04152-bert-loses-patience-fast-and-robust-inference-with-early-exit.md",
       "status": "PASS",
       "summary": "層ごとの分類予測が連続一致した時点で推論を打ち切るPABEEにより、ALBERTで平均1.57倍の高速化と分類精度・敵対的頑健性の改善を実現する。",
@@ -12948,6 +12984,15 @@
       "summary": "視覚言語モデルのFFNを疎MoE化し、トークンごとにtop-k 専門家だけを動かすことで総パラメータを増やしつつ推論時活性 computeを抑える。",
       "char_count": 74,
       "japanese_ratio": 0.8253968253968254,
+      "failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/99-other-inference-systems/2024-2401.17377-infini-gram-scaling-unbounded-n-gram-language-models-to-a-trillion-token.md",
+      "status": "PASS",
+      "summary": "接尾辞配列を用いて5兆トークン規模の無限長n-gram検索を実現。ディスク常駐で計数約20ms、次トークン分布180msを測定し、神経言語モデルとの混合による予測改善と自由生成の限界を示す。",
+      "char_count": 95,
+      "japanese_ratio": 0.9375,
       "failures": [],
       "warnings": []
     },
@@ -14057,6 +14102,15 @@
       "summary": "三値LLMの参照表をSIMDレジスタ内で動的生成し、専用命令と形状別カーネルでCPU推論のメモリ律速を緩和する。性能は新命令を模擬したgem5上で検証。",
       "char_count": 76,
       "japanese_ratio": 1.0,
+      "failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/99-other-inference-systems/2025-2512.04550-admtree-compressing-lengthy-context-with-adaptive-semantic-trees.md",
+      "status": "PASS",
+      "summary": "情報密度に応じたgistトークン配置と二分木集約で長文脈を圧縮。LongBenchの品質と遅延を比較し、木構造・適応配分の寄与を実験で検証。",
+      "char_count": 70,
+      "japanese_ratio": 0.9310344827586207,
       "failures": [],
       "warnings": []
     },
