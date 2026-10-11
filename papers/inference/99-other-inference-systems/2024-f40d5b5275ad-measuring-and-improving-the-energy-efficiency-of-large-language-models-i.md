@@ -1,30 +1,63 @@
 ---
-canonical_id: 'DOI:10.1109/ACCESS.2024.3409745'
-title: 'Measuring and Improving the Energy Efficiency of Large Language Models Inference'
+canonical_id: DOI:10.1109/ACCESS.2024.3409745
+title: Measuring and Improving the Energy Efficiency of Large Language Models Inference
 authors:
-  - 'Mauricio Fadel Argerich'
-  - 'Marta Patiño-Martínez'
+- Mauricio Fadel Argerich
+- Marta Patiño-Martínez
 published: '2024-06-05'
-publication: 'IEEE Access, vol. 12, pp. 80194–80207 (2024)'
+publication: IEEE Access, vol. 12, pp. 80194–80207 (2024)
 publication_type: journal
 publication_status: published
-source: 'https://doi.org/10.1109/ACCESS.2024.3409745'
+source: https://doi.org/10.1109/ACCESS.2024.3409745
 sources:
-  - 'https://doi.org/10.1109/ACCESS.2024.3409745'
-  - 'https://oa.upm.es/86674/1/10226248.pdf'
-implementation: 'Linuxベアメタル環境でRAPL、NVIDIA NVML、eBPF/bpftraceを統合したPython計測器EnergyMeterを実装・公開。Intel Core i9-9900K、RTX 4090 24GB、RAM 32GB、Samsung 970 EVO 1TBで、Transformers/PyTorch、bitsandbytes、GGUF/ctransformersなどの推論構成を実験。'
-code: 'https://github.com/maufadel/EnergyMeter'
-summary: 'LLM推論のエネルギー消費をCPU、GPU、DRAM、ストレージに分解して測るEnergyMeterを実装し、モデル規模・層数・並列化構造・バッチ数・量子化実装がトークン当たり消費エネルギーと遅延に及ぼす影響を実機評価した。Pythiaではバッチ1から100への増加により70Mモデルでトークン当たりエネルギーが最大20分の1、6.9Bモデルでは約3分の1になった。3B級では同程度のパラメータ数でも方式間でエネルギー47%、遅延83%の差がある。bitsandbytesによる量子化は逆に遅延・エネルギーを悪化させる場合があり、GGUFのLlama 2 7Bでは省エネルギー効果が4ビット付近で頭打ちになった。推論品質の比較は実施しておらず、結果は単一のRTX 4090環境に限定される。'
-list_summary: 'CPU/GPU/DRAM/SSD別の推論エネルギーをEnergyMeterで測定し、バッチ化・モデル構造・量子化実装が省電力に与える影響を実機で比較。バッチ増大で最大20倍のトークン当たり省エネルギーを観測。'
+- https://doi.org/10.1109/ACCESS.2024.3409745
+- https://oa.upm.es/86674/1/10226248.pdf
+implementation: Linuxベアメタル環境でRAPL、NVIDIA NVML、eBPF/bpftraceを統合したPython計測器EnergyMeterを実装・公開。Intel Core i9-9900K、RTX 4090 24GB、RAM 32GB、Samsung 970 EVO 1TBで、Transformers/PyTorch、bitsandbytes、GGUF/ctransformersなどの推論構成を実験。
+code: https://github.com/maufadel/EnergyMeter
+summary: LLM推論のエネルギー消費をCPU、GPU、DRAM、ストレージに分解して測るEnergyMeterを実装し、モデル規模・層数・並列化構造・バッチ数・量子化実装がトークン当たり消費エネルギーと遅延に及ぼす影響を実機評価した。Pythiaではバッチ1から100への増加により70Mモデルでトークン当たりエネルギーが最大20分の1、6.9Bモデルでは約3分の1になった。3B級では同程度のパラメータ数でも方式間でエネルギー47%、遅延83%の差がある。bitsandbytesによる量子化は逆に遅延・エネルギーを悪化させる場合があり、GGUFのLlama 2 7Bでは省エネルギー効果が4ビット付近で頭打ちになった。推論品質の比較は実施しておらず、結果は単一のRTX 4090環境に限定される。
+list_summary: CPU/GPU/DRAM/SSD別の推論エネルギーをEnergyMeterで測定し、バッチ化・モデル構造・量子化実装が省電力に与える影響を実機で比較。バッチ増大で最大20倍のトークン当たり省エネルギーを観測。
 worker_id: scheduled-chat-00
 scheduled_slot: '00'
-worker_run_key: '20261011-2155-scheduled-chat-00/r01'
-reference_main_sha: 'dec8140a99d1f1c7da2695aca1981c16ad6953c7'
+worker_run_key: 20261011-2155-scheduled-chat-00/r01
+reference_main_sha: dec8140a99d1f1c7da2695aca1981c16ad6953c7
 worklist_rank: 47
 last_checked: '2026-10-11'
 worker_completed_at: '2026-10-11T21:59:44+09:00'
 last_audited: null
 audit_version: 0
+references:
+- canonical_id: arXiv:2210.00586
+  arxiv_id: '2210.00586'
+- canonical_id: arXiv:2207.02852
+  arxiv_id: '2207.02852'
+- canonical_id: arXiv:2303.18223
+  arxiv_id: '2303.18223'
+- canonical_id: arXiv:2104.10350
+  arxiv_id: '2104.10350'
+- canonical_id: arXiv:2205.09646
+  arxiv_id: '2205.09646'
+- canonical_id: arXiv:2211.02001
+  arxiv_id: '2211.02001'
+- canonical_id: DOI:10.5281/zenodo.11171501
+  doi: 10.5281/zenodo.11171501
+- canonical_id: arXiv:1810.04805
+  arxiv_id: '1810.04805'
+- canonical_id: arXiv:2302.14017
+  arxiv_id: '2302.14017'
+- canonical_id: arXiv:2211.05100
+  arxiv_id: '2211.05100'
+- canonical_id: arXiv:2307.09288
+  arxiv_id: '2307.09288'
+- canonical_id: arXiv:2101.00027
+  arxiv_id: '2101.00027'
+- canonical_id: DOI:10.34740/kaggle/dsv/6443346
+  doi: 10.34740/kaggle/dsv/6443346
+- canonical_id: arXiv:2212.09720
+- canonical_id: arXiv:1803.05457
+  arxiv_id: '1803.05457'
+references_checked_at: '2026-10-11'
+references_source: primary-pdf-reference-section
+references_total: 59
 ---
 
 ## 概要

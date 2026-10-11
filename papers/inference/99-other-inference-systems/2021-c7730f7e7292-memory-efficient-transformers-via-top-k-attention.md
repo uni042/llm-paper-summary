@@ -1,36 +1,48 @@
 ---
-canonical_id: "DOI:10.18653/v1/2021.sustainlp-1.5"
-title: "Memory-efficient Transformers via Top-k Attention"
-summary: "Guptaらは、通常の自己注意で学習済みのモデルを再事前学習せず省メモリ化するため、問い合わせを小さな塊に分け、各問い合わせについて全鍵との内積から上位k個だけを残すTop-k Attentionを提案した。前向きでは上位位置と値を保持し、逆伝播では大きな内積行列を再計算せずに必要な活性のみ再構成する。さらにフィードフォワード層を問い合わせ・鍵・値の演算へ書き換え、ReLU活性にも適用する。A100で65,536トークンの単層注意を10GiB未満で処理し、UnifiedQA-11Bの65,536次元中間層ではk=256〜512（1%未満）でも12問答課題の多くで通常層に近い性能を得た。ただし内積計算量は系列長に対して二乗のままで、疎行列演算による実行時間改善も実証していない。"
-list_summary: "全鍵との内積から問い合わせごとに上位k位置だけを保持し、分割処理と逆伝播時の選択値再構成によって、既存注意・フィードフォワード層を再事前学習なしで省メモリ化する。"
+canonical_id: DOI:10.18653/v1/2021.sustainlp-1.5
+title: Memory-efficient Transformers via Top-k Attention
+summary: Guptaらは、通常の自己注意で学習済みのモデルを再事前学習せず省メモリ化するため、問い合わせを小さな塊に分け、各問い合わせについて全鍵との内積から上位k個だけを残すTop-k Attentionを提案した。前向きでは上位位置と値を保持し、逆伝播では大きな内積行列を再計算せずに必要な活性のみ再構成する。さらにフィードフォワード層を問い合わせ・鍵・値の演算へ書き換え、ReLU活性にも適用する。A100で65,536トークンの単層注意を10GiB未満で処理し、UnifiedQA-11Bの65,536次元中間層ではk=256〜512（1%未満）でも12問答課題の多くで通常層に近い性能を得た。ただし内積計算量は系列長に対して二乗のままで、疎行列演算による実行時間改善も実証していない。
+list_summary: 全鍵との内積から問い合わせごとに上位k位置だけを保持し、分割処理と逆伝播時の選択値再構成によって、既存注意・フィードフォワード層を再事前学習なしで省メモリ化する。
 authors:
-  - "Ankit Gupta"
-  - "Guy Dar"
-  - "Shaya Goodman"
-  - "David Ciprut"
-  - "Jonathan Berant"
-published: "2021-11-10"
-publication: "Proceedings of the Second Workshop on Simple and Efficient Natural Language Processing, pp. 39–52"
-publication_type: "査読付き国際会議ワークショップ論文"
-publication_status: "published"
-source: "https://aclanthology.org/2021.sustainlp-1.5.pdf"
+- Ankit Gupta
+- Guy Dar
+- Shaya Goodman
+- David Ciprut
+- Jonathan Berant
+published: '2021-11-10'
+publication: Proceedings of the Second Workshop on Simple and Efficient Natural Language Processing, pp. 39–52
+publication_type: 査読付き国際会議ワークショップ論文
+publication_status: published
+source: https://aclanthology.org/2021.sustainlp-1.5.pdf
 sources:
-  - "https://aclanthology.org/2021.sustainlp-1.5"
-  - "https://aclanthology.org/2021.sustainlp-1.5.pdf"
-  - "https://doi.org/10.18653/v1/2021.sustainlp-1.5"
-implementation: "ACL Anthology掲載の原著は公式コード https://github.com/ag1988/top_k_attention を明記。A100 GPU上のPyTorch実装で単層注意・フィードフォワード層・12層デコーダの前向きと逆伝播を計測し、LRA、WikiText-103、UnifiedQA-11B、BERT-large、T5-baseで品質を比較。"
-code: "https://github.com/ag1988/top_k_attention"
-last_checked: "2026-10-11"
-worker_completed_at: "2026-10-11T21:30:00+09:00"
-worker_run_key: "20261011-2130-scheduled-chat-30/r01"
-reference_main_sha: "6d07f98d3a1a5fd1d4601e6ac27ec33ff2800f8a"
+- https://aclanthology.org/2021.sustainlp-1.5
+- https://aclanthology.org/2021.sustainlp-1.5.pdf
+- https://doi.org/10.18653/v1/2021.sustainlp-1.5
+implementation: ACL Anthology掲載の原著は公式コード https://github.com/ag1988/top_k_attention を明記。A100 GPU上のPyTorch実装で単層注意・フィードフォワード層・12層デコーダの前向きと逆伝播を計測し、LRA、WikiText-103、UnifiedQA-11B、BERT-large、T5-baseで品質を比較。
+code: https://github.com/ag1988/top_k_attention
+last_checked: '2026-10-11'
+worker_completed_at: '2026-10-11T21:30:00+09:00'
+worker_run_key: 20261011-2130-scheduled-chat-30/r01
+reference_main_sha: 6d07f98d3a1a5fd1d4601e6ac27ec33ff2800f8a
 quality_self_review_passed: true
-quality_self_review_version: "2026-10-07"
-repair_origin: "returned_research_queue"
-repair_original_canonical_id: "DOI:10.18653/v1/2021.sustainlp-1.5"
-repair_original_git_blob_sha: "07a1a7cdd55ad9eb12dfc6256d66641a73f37d2f"
+quality_self_review_version: '2026-10-07'
+repair_origin: returned_research_queue
+repair_original_canonical_id: DOI:10.18653/v1/2021.sustainlp-1.5
+repair_original_git_blob_sha: 07a1a7cdd55ad9eb12dfc6256d66641a73f37d2f
 last_audited: null
 audit_version: 0
+references:
+- canonical_id: arXiv:1911.04070
+  arxiv_id: '1911.04070'
+- canonical_id: DOI:10.1145/3315508.3329973
+- canonical_id: arXiv:1911.02972
+- canonical_id: arXiv:1904.10509
+- canonical_id: arXiv:2007.04825
+- canonical_id: arXiv:2007.14062
+- canonical_id: arXiv:2009.14794
+references_checked_at: '2026-10-11'
+references_source: primary-pdf-reference-section
+references_total: 2
 ---
 
 # 上位k注意による既存Transformerの省メモリ化
