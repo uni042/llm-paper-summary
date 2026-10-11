@@ -1,0 +1,26 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261011-1605-scheduled-chat-00/r01",
+  "reference_main_sha": "2b8df26df5166daa68dcf3f458f0836bf3d3d3e9",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2506.01844",
+      "identity_tokens": [
+        "arXiv:2506.01844"
+      ],
+      "title": "SmolVLA: A Vision-Language-Action Model for Affordable and Efficient Robotics",
+      "reason": "一次要旨によると、研究の最終適用先は低価格ロボットの視覚・言語・行動制御であり、主たる評価も実機・模擬ロボットの制御成功率である。非同期推論スタックは行動実行と知覚を分離するロボット固有の制御速度改善で、汎用LLM推論サービング、KVキャッシュ、GPU推論基盤の性能設計を主題としていない。",
+      "source_url": "https://arxiv.org/abs/2506.01844",
+      "body_check": "abstract_screen_only; body_not_read; robotics vision-language-action policy and control-rate evaluation",
+      "first_checked_at": "2026-10-11T16:05:00+09:00",
+      "last_checked_at": "2026-10-11T16:05:00+09:00",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance",
+      "worklist_rank": 5
+    }
+  ]
+}
