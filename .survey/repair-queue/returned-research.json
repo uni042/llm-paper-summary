@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-11T15:07:45+00:00",
+  "generated_at": "2026-10-11T15:12:10+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -1606,34 +1606,6 @@
       "worker_run_key": "20261011-2230-scheduled-chat-30/r01"
     },
     {
-      "canonical_id": "arXiv:2502.11494",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-11T14:32:05+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 0 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5829,
-        "body_paragraphs": 29,
-        "method_chars": 1910,
-        "method_paragraphs": 10,
-        "evaluation_chars": 0,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "評価説明量 0 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_72abf029205c8191946d133bd8bbca14--2025-2502.11494-dart-visual-token-reduction-research-20261011-1900-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_72abf029205c8191946d133bd8bbca14--2025-2502.11494-dart-visual-token-reduction-research-20261011-1900-scheduled-chat-00-r01.json",
-      "worker_run_key": "20261011-1900-scheduled-chat-00/r01"
-    },
-    {
       "canonical_id": "arXiv:2403.00579",
       "title": null,
       "source_url": null,
@@ -1660,34 +1632,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_ba6632bb9fbc819196d514897f03b92b--2024-2403.00579-neupims-research-20261011-1756-scheduled-chat-00-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_ba6632bb9fbc819196d514897f03b92b--2024-2403.00579-neupims-research-20261011-1756-scheduled-chat-00-r01.json",
       "worker_run_key": "20261011-1756-scheduled-chat-00/r01"
-    },
-    {
-      "canonical_id": "arXiv:2608.28444",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-11T14:54:31+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 4159,
-        "body_paragraphs": 23,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 1454,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_cc5c8f4175188191b88e8a27095fb366--2026-2608.28444-swa-v2-quality-repair-20261011-1726-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_cc5c8f4175188191b88e8a27095fb366--2026-2608.28444-swa-v2-quality-repair-20261011-1726-scheduled-chat-30-r01.json",
-      "worker_run_key": "20261011-1726-scheduled-chat-30/r01"
     },
     {
       "canonical_id": "arXiv:2110.02861",
@@ -1747,8 +1691,8 @@
     },
     {
       "canonical_id": "arXiv:2607.23765",
-      "title": "WISERouter: LLM Routing with Workload Budget Constraint",
-      "source_url": "https://arxiv.org/abs/2607.23765",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-11T15:07:41+00:00",
       "return_count": 6,
       "assigned_worker": "scheduled-chat-30",
@@ -1774,8 +1718,8 @@
     },
     {
       "canonical_id": "arXiv:2312.04927",
-      "title": "Zoology: Measuring and Improving Recall in Efficient Language Models",
-      "source_url": "https://arxiv.org/html/2312.04927v1",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-11T15:07:42+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-30",
@@ -1802,8 +1746,8 @@
     },
     {
       "canonical_id": "arXiv:2412.04468",
-      "title": "NVILA: Efficient Frontier Visual Language Models",
-      "source_url": "https://arxiv.org/html/2412.04468v3",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-11T15:07:43+00:00",
       "return_count": 4,
       "assigned_worker": "scheduled-chat-30",
@@ -1829,8 +1773,8 @@
     },
     {
       "canonical_id": "arXiv:2601.04719",
-      "title": "GPU-Accelerated INT8 Quantization for KV Cache Compression in Large Language Models",
-      "source_url": "https://arxiv.org/abs/2601.04719",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-11T15:07:44+00:00",
       "return_count": 5,
       "assigned_worker": "scheduled-chat-30",
@@ -1854,8 +1798,8 @@
     },
     {
       "canonical_id": "arXiv:2601.21927",
-      "title": "SONIC: Segmented Optimized Nexus for Information Compression in Key-Value Caching",
-      "source_url": "https://arxiv.org/abs/2601.21927",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-11T15:07:44+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-30",
@@ -1878,6 +1822,62 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-d9ae36cc9be6--libfile_42d667dc4aac8191a0d1b17275891c4a--2026-2601.21927-sonic-research-20261011-2256-scheduled-chat-00-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-d9ae36cc9be6--libfile_42d667dc4aac8191a0d1b17275891c4a--2026-2601.21927-sonic-research-20261011-2256-scheduled-chat-00-r01.json",
       "worker_run_key": "20261011-2256-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2608.28444",
+      "title": "Sliding-window beats linear attention",
+      "source_url": "https://arxiv.org/abs/2608.28444",
+      "returned_at": "2026-10-11T15:12:09+00:00",
+      "return_count": 3,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 4159,
+        "body_paragraphs": 23,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 1454,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-e8b91ca6eefa--libfile_cc5c8f4175188191b88e8a27095fb366--2026-2608.28444-swa-v2-quality-repair-20261011-1726-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-e8b91ca6eefa--libfile_cc5c8f4175188191b88e8a27095fb366--2026-2608.28444-swa-v2-quality-repair-20261011-1726-scheduled-chat-30-r01.json",
+      "worker_run_key": "20261011-1726-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2502.11494",
+      "title": "Stop Looking for Important Tokens in Multimodal Language Models: Duplication Matters More",
+      "source_url": "https://arxiv.org/html/2502.11494v2",
+      "returned_at": "2026-10-11T15:12:10+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 0 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5829,
+        "body_paragraphs": 29,
+        "method_chars": 1910,
+        "method_paragraphs": 10,
+        "evaluation_chars": 0,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "評価説明量 0 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-fed447fe4466--libfile_72abf029205c8191946d133bd8bbca14--2025-2502.11494-dart-visual-token-reduction-research-20261011-1900-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-fed447fe4466--libfile_72abf029205c8191946d133bd8bbca14--2025-2502.11494-dart-visual-token-reduction-research-20261011-1900-scheduled-chat-00-r01.json",
+      "worker_run_key": "20261011-1900-scheduled-chat-00/r01"
     }
   ]
 }
