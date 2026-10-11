@@ -35,10 +35,15 @@
   "selection_reason": "DeepSeek-R1-Distill-Qwen-32Bの明示的思考区間を空にするNoThinkingと、独立標本の並列生成・最良解選択を組み合わせ、推論時トークン予算と応答遅延の交換条件を改善する。AMC 2023で700トークン時51.3対28.9、定理証明で3.3〜3.7倍少ないトークン、検証器ありの並列選択で最大7倍低遅延を報告し、LLM推論時計算最適化に該当する。",
   "semantic_scholar_id": "ac8d1e4c86266770571df0f412bbe89d8a003c77",
   "source_url": "https://arxiv.org/abs/2504.09858",
-  "status": "ready",
+  "status": "superseded",
   "title": "Reasoning Models Can Be Effective Without Thinking",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2025
+  "year": 2025,
+  "superseded_at": "2026-10-11T15:02:31+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2025-2504.09858-reasoning-models-can-be-effective-without-thinking.md",
+  "represented_canonical_id": "arXiv:2504.09858",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

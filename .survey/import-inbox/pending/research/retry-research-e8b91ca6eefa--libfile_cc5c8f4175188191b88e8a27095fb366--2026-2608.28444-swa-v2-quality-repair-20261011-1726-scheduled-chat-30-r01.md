@@ -35,6 +35,8 @@ repair_origin: "returned-research"
 repair_original_canonical_id: "arXiv:2608.28444"
 repair_original_git_blob_sha: "6794a9175697b40f69346628b7a64e32aeda10ef"
 repair_failure: "日本語比率 68.6% < 70%"
+last_audited: null
+audit_version: 0
 ---
 
 # Sliding-window beats linear attention

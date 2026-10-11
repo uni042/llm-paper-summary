@@ -23,7 +23,7 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
 - [09-kernel-runtime-compilation](../09-kernel-runtime-compilation/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（19本）
+## 自動生成の論文一覧（20本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -75,6 +75,10 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
 - **2026-09 · [Characterizing High Bandwidth Flash for LLM Serving](2026-2609.39131-characterizing-high-bandwidth-flash-for-llm-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   著者らはHBM、HBF、ホストDRAM、SSDの四階層にまたがる配置方針と、キャッシュ再利用を優先しながら新規要求の受入れを制限するスケジューラを設計する。B200相当の計算モデルとHBFの仮定仕様を用いた結果、評価した負荷条件で処理完了時間を36.1〜87.7%短縮する構成があり、モデル化したエネルギー削減率は最大59.1%に達する。
+
+- **2026-08 · [Simthesizer: An Agent-Driven Simulation Framework for LLM Serving Systems](2026-2608.24650-simthesizer-an-agent-driven-simulation-framework-for-llm-serving-systems.md)**  
+  実装：[✓](https://github.com/casys-kaist/Simthesizer) ・ リポジトリ内被引用：0  
+  大規模言語モデル（LLM）の推論提供では、連続的なバッチ形成、入力処理と生成の分離、KVキャッシュの退避、投機的復号、専門家混合（MoE）、複数回のモデル呼出しを含むエージェント処理など、複雑な機構が急速に増えている。
 
 - **2026-08 · [BALANCE: Hybrid Autoregressive-Speculative LLM Inference at the Network Edge](2026-2608.05926-balance-hybrid-autoregressive-speculative-llm-inference-at-the-network-e.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

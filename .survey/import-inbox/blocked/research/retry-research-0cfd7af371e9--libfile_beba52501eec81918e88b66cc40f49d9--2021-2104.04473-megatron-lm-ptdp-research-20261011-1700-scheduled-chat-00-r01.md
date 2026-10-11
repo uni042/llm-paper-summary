@@ -38,6 +38,8 @@ reference_main_sha: '788db1cb5f12f9dbb2e8bf6c5cea75aedee21db4'
 worklist_rank: 2
 last_checked: '2026-10-11'
 worker_completed_at: '2026-10-11T17:04:01+09:00'
+last_audited: null
+audit_version: 0
 ---
 
 ## 概要

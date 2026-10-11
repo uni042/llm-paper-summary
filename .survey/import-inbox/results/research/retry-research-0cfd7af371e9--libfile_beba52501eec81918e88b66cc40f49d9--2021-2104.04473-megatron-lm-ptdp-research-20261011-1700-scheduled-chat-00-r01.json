@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "115dfd7c1920e78839df6dfd155168fe3399f64553cec89679ecf6558e09b82d",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/retry-research-0cfd7af371e9--libfile_beba52501eec81918e88b66cc40f49d9--2021-2104.04473-megatron-lm-ptdp-research-20261011-1700-scheduled-chat-00-r01.md",
+  "canonical_id": "arXiv:2104.04473",
+  "worker_completed_at": "2026-10-11T17:04:01+09:00",
+  "worker_run_key": "20261011-1700-scheduled-chat-00/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 7331,
+    "body_paragraphs": 33,
+    "method_chars": 3096,
+    "method_paragraphs": 13,
+    "evaluation_chars": 0,
+    "limitation_chars": 0,
+    "insufficiency_flags": [
+      "評価説明量 0 < 500",
+      "限界説明量 0 < 推奨 120"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 評価説明量 0 < 500"
+  ],
+  "processed_at": "2026-10-11T15:01:22+00:00"
+}
