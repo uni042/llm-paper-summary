@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-11T06:30:47+00:00",
+  "generated_at": "2026-10-11T07:47:18+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 113,
+  "count": 114,
   "entries": [
     {
       "canonical_id": "arXiv:2606.24506",
@@ -832,22 +832,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-97ee9f2dc9c2--libfile_54f27b0becdc81919c7e97422419c095--1811.03115-blockwise-parallel-decoding(1).md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-97ee9f2dc9c2--libfile_54f27b0becdc81919c7e97422419c095--1811.03115-blockwise-parallel-decoding-1.json",
       "worker_run_key": "20261006-0700-scheduled-chat-00/r01"
-    },
-    {
-      "canonical_id": "arXiv:2305.17126",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-05T23:19:39+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "日本語比率 65.8% < 70%"
-      ],
-      "quality_metrics": null,
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-b005949baa02--libfile_846183fd1e708191a26830a3e6b9f74f--2305.17126-latm.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-b005949baa02--libfile_846183fd1e708191a26830a3e6b9f74f--2305.17126-latm.json",
-      "worker_run_key": "20261006-0630-scheduled-chat-30/r01"
     },
     {
       "canonical_id": "arXiv:2601.05109",
@@ -2218,6 +2202,60 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-8ae00b18ca23--libfile_171b1f9bbfb481918f3aaf1bbb3e1c56--2024-2405.11299-cap-principle-under16kb-reaudit-20261011-1357-scheduled-chat-00-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-8ae00b18ca23--libfile_171b1f9bbfb481918f3aaf1bbb3e1c56--2024-2405.11299-cap-principle-under16kb-reaudit-20261011-1357-scheduled-chat-00-r01.json",
       "worker_run_key": "20261011-1357-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2203.14680",
+      "title": "Transformer Feed-Forward Layers Build Predictions by Promoting Concepts in the Vocabulary Space",
+      "source_url": "https://arxiv.org/html/2203.14680v3",
+      "returned_at": "2026-10-11T07:47:16+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 0 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 4072,
+        "body_paragraphs": 22,
+        "method_chars": 1986,
+        "method_paragraphs": 10,
+        "evaluation_chars": 0,
+        "limitation_chars": 624,
+        "insufficiency_flags": [
+          "評価説明量 0 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_565bcbebb890819190e44f15ba32085d--exact--2022-2203.14680-ffn-concepts-early-exit-research-20261011-1605-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_565bcbebb890819190e44f15ba32085d--exact--2022-2203.14680-ffn-concepts-early-exit-research-20261011-1605-scheduled-chat-00-r01.json",
+      "worker_run_key": "20261011-1605-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2305.17126",
+      "title": "Large Language Models as Tool Makers",
+      "source_url": "https://arxiv.org/html/2305.17126v2",
+      "returned_at": "2026-10-11T07:47:17+00:00",
+      "return_count": 4,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 366 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 4127,
+        "body_paragraphs": 22,
+        "method_chars": 1760,
+        "method_paragraphs": 9,
+        "evaluation_chars": 366,
+        "limitation_chars": 625,
+        "insufficiency_flags": [
+          "評価説明量 366 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_9a43209cf5a481918ffee4200ea813e2--exact--2023-2305.17126-latm-functional-cache-research-20261011-1605-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_9a43209cf5a481918ffee4200ea813e2--exact--2023-2305.17126-latm-functional-cache-research-20261011-1605-scheduled-chat-00-r01.json",
+      "worker_run_key": "20261011-1605-scheduled-chat-00/r01"
     }
   ]
 }
