@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-10-10T21:49:51.329252+00:00",
+  "generated_at": "2026-10-11T02:57:07.107910+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 40,
+  "count": 36,
   "worker_counts": {
-    "scheduled-chat-00": 13,
-    "scheduled-chat-30": 14,
-    "scheduled-chat-45": 13
+    "scheduled-chat-00": 12,
+    "scheduled-chat-30": 12,
+    "scheduled-chat-45": 12
   },
   "entries": [
     {
@@ -128,46 +128,6 @@
       "warnings": []
     },
     {
-      "path": "papers/inference/13-sparse-attention/2026-c3c79f91845d-scaling-attention-beyond-gpus-for-llm-inference.md",
-      "canonical_id": "DOI:10.1145/3806645.3807596",
-      "title": "Scaling Attention Beyond GPUs for LLM Inference",
-      "file_bytes": 12534,
-      "source_sha256": "264c0b3a062325f25fcc5a9427f39960bf93a81307d565e952e8eb0c00169d35",
-      "source_git_blob_sha": "dc8d7486da279421bd477d6ada5fd3471ed87bb2",
-      "assigned_worker": "scheduled-chat-45",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.908037,
-      "quality_metrics": {
-        "body_chars": 3686,
-        "method_chars": 972,
-        "evaluation_chars": 1421,
-        "limitation_chars": 265
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/06-moe-quantization-compression/2025-2505.03804-moequant-enhancing-quantization-for-mixture-of-experts-large-language-models-via.md",
-      "canonical_id": "arXiv:2505.03804",
-      "title": "MoEQuant: Enhancing Quantization for Mixture-of-Experts Large Language Models via Expert-Balanced Sampling and Affinity Guidance",
-      "file_bytes": 12748,
-      "source_sha256": "0cb134bcd2aa7ea81bcf37a5772a5fa400cdd5e31c18484d5d1d82edd479d91c",
-      "source_git_blob_sha": "43ba3dc0c403e174fcb82159df61c24eacff2c9c",
-      "assigned_worker": "scheduled-chat-45",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.929293,
-      "quality_metrics": {
-        "body_chars": 2775,
-        "method_chars": 1604,
-        "evaluation_chars": 810,
-        "limitation_chars": 0
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
       "path": "papers/inference/05-speculative-decoding-moe/2025-2505.19645-moesd-unveiling-speculative-decodings-potential-for-accelerating-moe-inference.md",
       "canonical_id": "arXiv:2505.19645",
       "title": "MoESD: Unveil Speculative Decoding's Potential for Accelerating Sparse MoE",
@@ -256,7 +216,7 @@
       "file_bytes": 12963,
       "source_sha256": "9458dfe78c95fedddfb11249d244993418823b9a7d5d57b10fea9728aca37f89",
       "source_git_blob_sha": "1dfa28000343b47a3e32e8f15982259c52b4c933",
-      "assigned_worker": "scheduled-chat-30",
+      "assigned_worker": "scheduled-chat-45",
       "semantic_status": "pending",
       "mechanical_status": "FAIL",
       "japanese_ratio": 0.976736,
@@ -509,30 +469,6 @@
       ],
       "warnings": [
         "日本語比率 70.1% < 警告基準 80%"
-      ]
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2023-2312.05821-asvd-activation-aware-singular-value-decomposition-for-compressing-large.md",
-      "canonical_id": "arXiv:2312.05821",
-      "title": "ASVD: Activation-aware Singular Value Decomposition for Compressing Large Language Models",
-      "file_bytes": 14135,
-      "source_sha256": "71e0d27ced2c324289880889a5f54280283c2f57b747bfafa61b5cd042caccd4",
-      "source_git_blob_sha": "f3e41f9e299620fcde5836eeddee7be59a7c06ce",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.726862,
-      "quality_metrics": {
-        "body_chars": 4427,
-        "method_chars": 1231,
-        "evaluation_chars": 1702,
-        "limitation_chars": 452
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 日本語比率 72.7% < 80%"
-      ],
-      "warnings": [
-        "日本語比率 72.7% < 警告基準 80%"
       ]
     },
     {
@@ -848,26 +784,6 @@
         "method_chars": 1081,
         "evaluation_chars": 649,
         "limitation_chars": 245
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/19-inference-evaluation-benchmarking/2024-2402.16775-a-comprehensive-evaluation-of-quantization-strategies-for-large-language.md",
-      "canonical_id": "arXiv:2402.16775",
-      "title": "A Comprehensive Evaluation of Quantization Strategies for Large Language Models",
-      "file_bytes": 19187,
-      "source_sha256": "3aa734afdbcd635129e8b96b983c5443cfcdcc3e947f2280cd691c963e5a4e0c",
-      "source_git_blob_sha": "aa02e08fe36f2eaaf60d86be66f0b93ff3bd3db5",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.997697,
-      "quality_metrics": {
-        "body_chars": 3703,
-        "method_chars": 752,
-        "evaluation_chars": 939,
-        "limitation_chars": 218
       },
       "mechanical_failures": [],
       "warnings": []
