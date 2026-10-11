@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-11T20:52:05+00:00",
+  "generated_at": "2026-10-11T21:44:54+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 80,
+  "count": 79,
   "entries": [
     {
       "canonical_id": "arXiv:2311.14652",
@@ -383,22 +383,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_3282cf9e48148191ab1c3fc01d22bcfe--2026-talaria.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_3282cf9e48148191ab1c3fc01d22bcfe--2026-talaria.json",
       "worker_run_key": "20261004-0700-scheduled-chat-00/r02"
-    },
-    {
-      "canonical_id": "arXiv:2609.19207",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-04T03:03:38+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "日本語比率 60.2% < 70%"
-      ],
-      "quality_metrics": null,
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_7651da8554d08191994a3d1aa728d839--2026-2609.19207-meshkv.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_7651da8554d08191994a3d1aa728d839--2026-2609.19207-meshkv.json",
-      "worker_run_key": "20261004-0730-scheduled-chat-30/r01"
     },
     {
       "canonical_id": "arXiv:2608.04991",
