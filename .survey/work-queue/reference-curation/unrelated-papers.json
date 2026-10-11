@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-11T20:41:09+00:00",
-  "record_count": 11530,
+  "updated_at": "2026-10-11T20:48:40+00:00",
+  "record_count": 11533,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -164852,6 +164852,48 @@
         "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
       ],
       "title": "When Mamba Meets KAN: A Hybrid Learning Network for Electric Vehicle Charging Demand Prediction"
+    },
+    "arXiv:2511.21285": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2511.21285",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2026.eacl-long.140",
+        "arXiv:2511.21285",
+        "semanticscholar:6c8f97f0dbfb37423ddb90075107aba860353d6d"
+      ],
+      "reason": "自己回帰LLMのパラメータ効率のよい追加学習方式（PEFT）を27データセットと複数方式で統一比較する評価基盤を提案し、学習可能パラメータ数、推論速度、学習時メモリ量を組み合わせる費用指標も定義する。推論速度は評価指標に含まれるが、研究の中心は既存の微調整方式の再現可能な比較であり、推論ランタイムやキャッシュ、オフロード、分散サービングの新しいシステム最適化ではない。現行の学習単独範囲凍結方針により収録対象外とする。",
+      "first_checked_at": "2026-10-11T20:48:38+00:00",
+      "last_checked_at": "2026-10-11T20:48:38+00:00",
+      "linked_from": [],
+      "title": "PEFT-Bench: A Parameter-Efficient Fine-Tuning Methods Benchmark"
+    },
+    "arXiv:2601.18496": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.18496",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2601.18496",
+        "arXiv:2601.18496",
+        "semanticscholar:651de358537e09001f21efd2c800c7f7631167b6"
+      ],
+      "reason": "医療質問応答のために複数段の医療検索データ合成、難易度に応じたツール呼出し回数への罰則、推論中の仮説検証モニタを組み合わせ、7種の医療ベンチマークで基盤モデルより平均9.79%改善したとする。呼出し回数抑制と文脈劣化の防止には推論運用上の接点があるが、提案の主眼は医療推論の正答率と証拠利用の改善であり、一般的なLLMサービング基盤・GPUメモリ階層・カーネル実行技術の性能改善を評価していないため対象外とする。",
+      "first_checked_at": "2026-10-11T20:48:39+00:00",
+      "last_checked_at": "2026-10-11T20:48:39+00:00",
+      "linked_from": [],
+      "title": "DEEPMED: Building a Medical DeepResearch Agent via Multi-hop Med-Search Data and Turn-Controlled Agentic Training & Inference"
+    },
+    "arXiv:2210.13452": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2210.13452",
+      "identity_tokens": [
+        "DOI:10.1109/tpami.2023.3329173",
+        "arXiv:2210.13452",
+        "semanticscholar:fc4cbc7a75f5a3bbca59db5513231555f078fe78"
+      ],
+      "reason": "著者らは画像認識向けMetaFormerのトークン混合器を恒等写像・乱数行列・畳み込み・注意機構へ置換して比較し、ImageNet-1K分類でIdentityFormerが80%超、CAFormerが85.5%を達成すると報告する。StarReLUで活性化関数の演算量を71%減らす結果もあるが、実証対象は画像分類・物体検出等の視覚モデルの構造設計である。LLM推論エンジン、KVキャッシュ、GPU/CPUオフロード、言語モデルサービングの直接的な実装・評価は一次要旨で示されず、現行の推論システムサーベイから除外する。",
+      "first_checked_at": "2026-10-11T20:48:40+00:00",
+      "last_checked_at": "2026-10-11T20:48:40+00:00",
+      "linked_from": [],
+      "title": "MetaFormer Baselines for Vision"
     }
   }
 }
