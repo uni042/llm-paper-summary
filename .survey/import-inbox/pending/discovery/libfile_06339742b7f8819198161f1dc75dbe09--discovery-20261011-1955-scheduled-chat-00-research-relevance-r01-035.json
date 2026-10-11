@@ -1,0 +1,26 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261011-1955-scheduled-chat-00/r01",
+  "reference_main_sha": "c502d13432fb448564f470da620b7c76d27236ad",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2512.05665",
+      "identity_tokens": [
+        "arXiv:2512.05665"
+      ],
+      "title": "Interleaved Latent Visual Reasoning with Selective Perceptual Modeling",
+      "reason": "ILVRはマルチモーダル推論中の画像再符号化を避け、潜在視覚状態をテキスト生成と交互に扱う。計算費用の問題に触れるが、主要な貢献と評価は視覚推論品質・中間知覚表現の学習であり、LLM推論サービングのメモリ階層・カーネル・実測処理量最適化ではない。",
+      "source_url": "https://arxiv.org/abs/2512.05665",
+      "body_check": "abstract_screen_only; body_not_read; arXiv v3要旨でmomentum teacherによる中間画像特徴の選択的蒸留と潜在視覚推論を確認。",
+      "first_checked_at": "2026-10-11T19:55:08+09:00",
+      "last_checked_at": "2026-10-11T19:55:08+09:00",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance",
+      "worklist_rank": 35
+    }
+  ]
+}
