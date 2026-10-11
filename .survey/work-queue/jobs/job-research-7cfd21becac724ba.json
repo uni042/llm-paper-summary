@@ -35,10 +35,15 @@
   "selection_reason": "EnergyMeterでCPU・GPU・memory・storage別のLLM推論energyを測定し、model architecture、batch size、weight quantizationがenergy/tokenとlatencyへ与える影響を実測して運用最適化する。batch増加で最大20倍のenergy/token削減、量子化で条件によりenergy最大2倍・latency3倍超改善など、LLM推論効率を直接評価するため対象内。",
   "semantic_scholar_id": "9e2a96feceb90d9636616e7ce507c8c52d447cc5",
   "source_url": "https://doi.org/10.1109/ACCESS.2024.3409745",
-  "status": "ready",
+  "status": "superseded",
   "title": "Measuring and Improving the Energy Efficiency of Large Language Models Inference",
   "type": "research",
   "venue": "IEEE Access",
   "workflow_version": 10,
-  "year": 2024
+  "year": 2024,
+  "superseded_at": "2026-10-11T13:26:44+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2024-f40d5b5275ad-measuring-and-improving-the-energy-efficiency-of-large-language-models-i.md",
+  "represented_canonical_id": "DOI:10.1109/ACCESS.2024.3409745",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

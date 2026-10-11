@@ -29,6 +29,8 @@ quality_self_review_version: "2026-10-07"
 repair_origin: "returned_research_queue"
 repair_original_canonical_id: "DOI:10.18653/v1/2021.sustainlp-1.5"
 repair_original_git_blob_sha: "07a1a7cdd55ad9eb12dfc6256d66641a73f37d2f"
+last_audited: null
+audit_version: 0
 ---
 
 # 上位k注意による既存Transformerの省メモリ化

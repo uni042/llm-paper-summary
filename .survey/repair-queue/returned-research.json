@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-11T13:08:48+00:00",
+  "generated_at": "2026-10-11T13:26:44+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 109,
+  "count": 101,
   "entries": [
     {
       "canonical_id": "arXiv:2606.24506",
@@ -706,22 +706,6 @@
       "worker_run_key": "20261004-0600-scheduled-chat-00/r02"
     },
     {
-      "canonical_id": "arXiv:2609.22106",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-04T03:18:52+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "日本語比率 59.0% < 70%"
-      ],
-      "quality_metrics": null,
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_f2e8d59ed9f481918e6eb57971ab05a3--2026-2609.22106-prquant.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_f2e8d59ed9f481918e6eb57971ab05a3--2026-2609.22106-prquant.json",
-      "worker_run_key": "20261004-1000-scheduled-chat-00/r01"
-    },
-    {
       "canonical_id": "arXiv:2608.15299",
       "title": null,
       "source_url": null,
@@ -1170,22 +1154,6 @@
       "worker_run_key": "20261006-2000-scheduled-chat-00/r01"
     },
     {
-      "canonical_id": "DOI:10.1109/ACCESS.2024.3409745",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-06T21:28:30+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "日本語比率 68.4% < 70%"
-      ],
-      "quality_metrics": null,
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-9dc49aa4fecd--libfile_161d5f95f5608191bc8e6e67ce0eaf93--energy-efficiency-llm-inference.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-9dc49aa4fecd--libfile_161d5f95f5608191bc8e6e67ce0eaf93--energy-efficiency-llm-inference.json",
-      "worker_run_key": "20261006-1330-scheduled-chat-30/r01"
-    },
-    {
       "canonical_id": "arXiv:2607.06763",
       "title": null,
       "source_url": null,
@@ -1247,33 +1215,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-d2cb5246d7e7--libfile_1c1a8ebfacec81919bbd5d4cd9fb4f06--2509.17765-qwen3-omni.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-d2cb5246d7e7--libfile_1c1a8ebfacec81919bbd5d4cd9fb4f06--2509.17765-qwen3-omni.json",
       "worker_run_key": "20261007-1627-scheduled-chat-30/r01"
-    },
-    {
-      "canonical_id": "DOI:10.18653/v1/2021.sustainlp-1.5",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-07T14:03:05+00:00",
-      "return_count": 3,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 430 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 2928,
-        "body_paragraphs": 21,
-        "method_chars": 997,
-        "method_paragraphs": 8,
-        "evaluation_chars": 430,
-        "limitation_chars": 421,
-        "insufficiency_flags": [
-          "評価説明量 430 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-0b56525f9707--libfile_f8af839f5d988191b76bc4602b3a475c--2021-top-k-attention-repair-20261007.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-0b56525f9707--libfile_f8af839f5d988191b76bc4602b3a475c--2021-top-k-attention-repair-20261007.json",
-      "worker_run_key": "20261007-2031-scheduled-chat-30/repair-r02"
     },
     {
       "canonical_id": "DOI:10.1109/ISCA59077.2024.00082",
@@ -1916,116 +1857,6 @@
       "worker_run_key": "20261011-0530-scheduled-chat-30/r01"
     },
     {
-      "canonical_id": "arXiv:2310.02170",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-11T04:04:55+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "16KB未満再監査: 評価説明量 277 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 3987,
-        "body_paragraphs": 24,
-        "method_chars": 1269,
-        "method_paragraphs": 8,
-        "evaluation_chars": 277,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "評価説明量 277 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-89be20f458e2--libfile_0541f7af95a08191bacd845447539f11--2023-2310.02170-dylan-under16kb-reaudit-20261011-0200-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-89be20f458e2--libfile_0541f7af95a08191bacd845447539f11--2023-2310.02170-dylan-under16kb-reaudit-20261011-0200-scheduled-chat-00-r01.json",
-      "worker_run_key": "20261011-0200-scheduled-chat-00/r01"
-    },
-    {
-      "canonical_id": "arXiv:2608.19147",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-11T04:04:55+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "16KB未満再監査: 評価説明量 0 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 4955,
-        "body_paragraphs": 24,
-        "method_chars": 2059,
-        "method_paragraphs": 10,
-        "evaluation_chars": 0,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "評価説明量 0 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-77951b5018f9--libfile_828a606c19c48191a30414d51379a048--2026-2608.19147-pipeline-shards-under16kb-reaudit-20261011-0400-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-77951b5018f9--libfile_828a606c19c48191a30414d51379a048--2026-2608.19147-pipeline-shards-under16kb-reaudit-20261011-0400-scheduled-chat-00-r01.json",
-      "worker_run_key": "20261011-0400-scheduled-chat-00/r01"
-    },
-    {
-      "canonical_id": "arXiv:2607.05061",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-11T04:04:58+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "16KB未満再監査: 評価説明量 149 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 4735,
-        "body_paragraphs": 27,
-        "method_chars": 1750,
-        "method_paragraphs": 9,
-        "evaluation_chars": 149,
-        "limitation_chars": 525,
-        "insufficiency_flags": [
-          "評価説明量 149 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-c35e468bd627--libfile_71928257ea208191a068b4ccbd625f4b--2026-2607.05061-kvpop-under16kb-reaudit-20261011-0400-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-c35e468bd627--libfile_71928257ea208191a068b4ccbd625f4b--2026-2607.05061-kvpop-under16kb-reaudit-20261011-0400-scheduled-chat-00-r01.json",
-      "worker_run_key": "20261011-0400-scheduled-chat-00/r01"
-    },
-    {
-      "canonical_id": "arXiv:2411.16102",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-11T04:04:59+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "16KB未満再監査: 評価説明量 463 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 4889,
-        "body_paragraphs": 27,
-        "method_chars": 1497,
-        "method_paragraphs": 8,
-        "evaluation_chars": 463,
-        "limitation_chars": 510,
-        "insufficiency_flags": [
-          "評価説明量 463 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-ca01ba914acc--libfile_77ad64fce54c819185243c57ec72d3c3--2024-2411.16102-blendserve-under16kb-reaudit-20261011-0200-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-ca01ba914acc--libfile_77ad64fce54c819185243c57ec72d3c3--2024-2411.16102-blendserve-under16kb-reaudit-20261011-0200-scheduled-chat-00-r01.json",
-      "worker_run_key": "20261011-0200-scheduled-chat-00/r01"
-    },
-    {
       "canonical_id": "arXiv:2501.03895",
       "title": null,
       "source_url": null,
@@ -2051,34 +1882,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-486e980fcebb--libfile_927e973ec6c08191904c365de41c80ba--2025-2501.03895-llava-mini-research-20261011-0530-scheduled-chat-30-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-486e980fcebb--libfile_927e973ec6c08191904c365de41c80ba--2025-2501.03895-llava-mini-research-20261011-0530-scheduled-chat-30-r01.json",
       "worker_run_key": "20261011-0530-scheduled-chat-30/r01"
-    },
-    {
-      "canonical_id": "arXiv:2405.11299",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-11T05:49:17+00:00",
-      "return_count": 6,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "16KB未満再監査: 手法説明量 0 < 700"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 4467,
-        "body_paragraphs": 26,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 0,
-        "limitation_chars": 322,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700",
-          "評価説明量 0 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-8ae00b18ca23--libfile_171b1f9bbfb481918f3aaf1bbb3e1c56--2024-2405.11299-cap-principle-under16kb-reaudit-20261011-1357-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-8ae00b18ca23--libfile_171b1f9bbfb481918f3aaf1bbb3e1c56--2024-2405.11299-cap-principle-under16kb-reaudit-20261011-1357-scheduled-chat-00-r01.json",
-      "worker_run_key": "20261011-1357-scheduled-chat-00/r01"
     },
     {
       "canonical_id": "arXiv:2203.14680",
