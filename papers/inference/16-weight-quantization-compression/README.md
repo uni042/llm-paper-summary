@@ -152,7 +152,7 @@
 
 - **2024-02 · [BitDistiller: Unleashing the Potential of Sub-4-Bit LLMs via Self-Distillation](2024-2402.10631-bitdistiller-unleashing-the-potential-of-sub-4-bit-llms-via-self-distill.md)**  
   実装：[✓](https://github.com/DD-DuDa/BitDistiller) ・ リポジトリ内被引用：3  
-  BitDistillerは、4bit未満、とくに2bit・3bitの重み量子化で急激に悪化するLLM品質を、量子化認識学習（Quantization-Aware 学習; QAT）と自己蒸留（self-distillation）で回復する枠組みである。
+  学習後量子化（post-学習 量子化、PTQ）は比較的低費用だが、低ビットでは誤差を修正しにくい。
 
 - **2024-02 · [DB-LLM: Accurate Dual-Binarization for Efficient LLMs](2024-2402.11960-db-llm-accurate-dual-binarization-for-efficient-llms.md)**  
   実装：✓ ・ リポジトリ内被引用：2  

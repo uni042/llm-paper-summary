@@ -25,6 +25,8 @@ worker_completed_at: "2026-10-11T10:57:36+09:00"
 worker_run_key: "20261011-1055-scheduled-chat-00/r01"
 reference_main_sha: "542f3396ef2e3718d91cf685d5e239d6310356b1"
 research_job_id: null
+last_audited: null
+audit_version: 0
 ---
 
 # EdgeShard：異種エッジ機器での大規模言語モデル分割推論

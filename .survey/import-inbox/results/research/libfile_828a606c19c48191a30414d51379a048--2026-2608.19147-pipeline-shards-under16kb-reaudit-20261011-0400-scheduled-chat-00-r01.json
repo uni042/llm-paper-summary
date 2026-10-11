@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "53c2b7efee05d4cb6f05a029381ef10f609a0e3ccf5040b5117cab83f3cf8aa6",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_828a606c19c48191a30414d51379a048--2026-2608.19147-pipeline-shards-under16kb-reaudit-20261011-0400-scheduled-chat-00-r01.md",
+  "canonical_id": "arXiv:2608.19147",
+  "worker_completed_at": "2026-10-11T04:09:13+09:00",
+  "worker_run_key": "20261011-0400-scheduled-chat-00/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 4955,
+    "body_paragraphs": 24,
+    "method_chars": 2059,
+    "method_paragraphs": 10,
+    "evaluation_chars": 0,
+    "limitation_chars": 0,
+    "insufficiency_flags": [
+      "評価説明量 0 < 500",
+      "限界説明量 0 < 推奨 120"
+    ]
+  },
+  "failures": [
+    "16KB未満再監査: 評価説明量 0 < 500"
+  ],
+  "processed_at": "2026-10-11T03:52:20+00:00"
+}

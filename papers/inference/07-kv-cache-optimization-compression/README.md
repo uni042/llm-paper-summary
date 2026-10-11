@@ -395,7 +395,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 
 - **2026-07 · [LOCKS: Page-Local Compact Key Summaries for Efficient Long-Context Decoding](2026-2607.24555-locks.md)**  
   実装：[✓](https://github.com/Js-Hwang1/locks) ・ リポジトリ内被引用：0  
-  LOCKSは、長文脈デコードで毎トークンごとに巨大なKVキャッシュ全体を読み直す帯域問題に対し、各ページ固有の低ランク要約だけを常駐させ、問い合わせごとに読むページを選ぶ方式である。ランク8では要約は元KVページのおよそ10%で、選択時には候補ページの完全なキーも値も読まない。
+  長文脈LLMでは復号のたびに過去トークンの鍵・値（KV）を読み、問い合わせと照合する。短文脈で小さなバッチならモデル重みの読出しが支配的だが、長文脈かつ複数要求では要求ごとのKV読出しが帯域を圧迫する。例えばLlama-3.1-8Bの128K文脈はbf16のKVだけで要求あたり約16GiBとなる。本方式はKVキャッシュの削除や容量圧縮ではない。
 
 - **2026-07 · [KAP: Bridging the Knowledge Selection-Runtime Consumption Gap in LLM Systems](2026-2607.24260-kap-knowledge-access-planning-kv-runtime.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

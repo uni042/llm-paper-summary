@@ -291,8 +291,8 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
   CacheTuneは文書断片KVを周波数成分で選別し、重要部分だけ全体文脈で再計算、残りをストレージから再利用して、品質と再計算・転送時間を両立する方式。
 
 - **2026-04 · [KV Packet: Recomputation-Free Context-Independent KV Caching for LLMs](2026-2604.13226-kv-packet-recomputation-free-context-independent-kv-caching-for-llms.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  KV Packetは、検索拡張生成で同じ文書を別の問い合わせや別順序の文脈へ再利用するとき、既存のKVキャッシュを修復するための再計算を不要にする方式である。Llama-3.1とQwen2.5を用いた評価では、完全再計算に近いF1を保ちながら文脈準備の演算をほぼ除去し、長文脈条件で初回トークン時間を完全再計算比最大19.45倍短縮したと報告する。
+  実装：[✓](https://github.com/ChuangtaoChen-TUM/KVPacket) ・ リポジトリ内被引用：0  
+  KV Packetは、検索拡張生成（Retrieval-Augmented Generation; RAG）で同じ文書が異なる問い合わせや異なる文書順序で繰り返し現れる状況に向けた、鍵・値キャッシュ（Key–Value Cache; KVキャッシュ）の再利用方式である。
 
 - **2026-02 · [ParisKV: Fast and Drift-Robust KV-Cache Retrieval for Long-Context LLMs](2026-2602.07721-pariskv-fast-drift-robust-kv-cache-retrieval.md)**  
   実装：[✓](https://github.com/amy-77/ParisKV) ・ リポジトリ内被引用：0  

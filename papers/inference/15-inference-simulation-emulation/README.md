@@ -83,8 +83,8 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
 ### 2年前（2024-11〜2025-10）
 
 - **2024-11 · [APEX: An Extensible and Dynamism-Aware Simulator for Automated Parallel Execution in LLM Serving](2024-2411.17651-apex-an-extensible-and-dynamism-aware-simulator-for-automated-parallel-e.md)**  
-  実装：✓ ・ リポジトリ内被引用：8  
-  APEXは、LLM サービングでテンソル並列（テンソル 並列方式; TP）、パイプライン並列（パイプライン 並列方式; PP）、データ並列（data 並列方式; DP）、エキスパート並列（エキスパート 並列方式; EP）をどう組み合わせるべきかを、GPUクラスタへ候補を総当たり配備せずCPU上のシミュレーションで探索するシステムである。
+  実装：[✓](https://github.com/microsoft/apex_plus) ・ リポジトリ内被引用：8  
+  APEXは、大規模言語モデル（LLM）を複数GPUで提供する際に、どの並列化方式を組み合わせるべきかを実機へ総当たりで配備せず、CPU上のシミュレーションで比較するシステムである。
 
 - **2025-03 · [Improving the End-to-End Efficiency of Offline Inference for Multi-LLM Applications Based on Sampling and Simulation](2025-2503.16893-improving-the-end-to-end-efficiency-of-offline-inference-for-multi-llm-a.md)**  
   実装：[✓](https://github.com/puddingfjz/vllm) ・ リポジトリ内被引用：3  

@@ -35,10 +35,15 @@
   "selection_reason": "Qwen2.5-Omniは音声・映像をblock-wiseにstream処理し、Thinker-Talkerでtext/speechを並行生成する。特にstreaming audio decodeでsliding-window DiTによりreceptive fieldを制限してinitial package delayを削減しており、リアルタイムmultimodal LLM推論のlatency設計を直接扱うため対象内。",
   "semantic_scholar_id": "2024e5247104cf2261314e813e0bf8d48467ec43",
   "source_url": "https://arxiv.org/abs/2503.20215",
-  "status": "ready",
+  "status": "superseded",
   "title": "Qwen2.5-Omni Technical Report",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2025
+  "year": 2025,
+  "superseded_at": "2026-10-11T03:57:38+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2025-2503.20215-qwen2-5-omni-technical-report.md",
+  "represented_canonical_id": "arXiv:2503.20215",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

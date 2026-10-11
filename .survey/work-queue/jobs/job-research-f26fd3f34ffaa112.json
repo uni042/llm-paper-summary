@@ -33,10 +33,15 @@
   "selection_reason": "landmark tokenで長文脈をblock単位検索し、通常tokenのKVをCPU/ディスクへ退避して必要blockだけ戻すため、長文脈推論の計算・メモリを直接削減する。",
   "semantic_scholar_id": "60b35c6d68acced19b0c66edcfc0ee0a2c11efed",
   "source_url": "https://arxiv.org/abs/2305.16300",
-  "status": "ready",
+  "status": "superseded",
   "title": "Landmark Attention: Random-Access Infinite Context Length for Transformers",
   "type": "research",
   "venue": "Neural Information Processing Systems",
   "workflow_version": 10,
-  "year": 2023
+  "year": 2023,
+  "superseded_at": "2026-10-11T03:57:38+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2023-2305.16300-landmark-attention-random-access-infinite-context-length-for-transformer.md",
+  "represented_canonical_id": "arXiv:2305.16300",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
