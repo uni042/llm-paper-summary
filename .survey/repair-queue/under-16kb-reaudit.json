@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-10-11T04:00:11.167887+00:00",
+  "generated_at": "2026-10-11T05:00:06.351194+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 18,
+  "count": 14,
   "worker_counts": {
-    "scheduled-chat-00": 6,
-    "scheduled-chat-30": 6,
-    "scheduled-chat-45": 6
+    "scheduled-chat-00": 5,
+    "scheduled-chat-30": 4,
+    "scheduled-chat-45": 5
   },
   "entries": [
     {
@@ -128,26 +128,6 @@
       "warnings": []
     },
     {
-      "path": "papers/inference/02-adaptive-expert-computation-compression/2025-2511.04805-puzzlemoe-efficient-compression-of-large-mixture-of-experts-models-via-s.md",
-      "canonical_id": "arXiv:2511.04805",
-      "title": "PuzzleMoE: Efficient Compression of Large Mixture-of-Experts Models via Fine-Grained Expert Merging and Bit-packed Inference",
-      "file_bytes": 12961,
-      "source_sha256": "671f607832e88801c40727712ef121206e3e24ea477e0e79af05508f7dcf5e94",
-      "source_git_blob_sha": "ee623bc68413e6b58be8d9a3866b44fd7aca1b06",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.831062,
-      "quality_metrics": {
-        "body_chars": 3241,
-        "method_chars": 1128,
-        "evaluation_chars": 582,
-        "limitation_chars": 436
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
       "path": "papers/inference/17-pim-near-data-acceleration/2026-h3-attn.md",
       "canonical_id": "DOI:10.1145/3816440.3818602",
       "title": "H3-Attn: Attention-Efficient 3D DRAM PNM Processor with Hybrid Head Parallelism and Hierarchical SFU",
@@ -174,7 +154,7 @@
       "file_bytes": 13092,
       "source_sha256": "76f51572df4662a7738db02f4d1e8995d95e084efbba64ccd52578cf570444ff",
       "source_git_blob_sha": "2f0e1c98dbb03dd94cc354bae828256f20a3d3a0",
-      "assigned_worker": "scheduled-chat-00",
+      "assigned_worker": "scheduled-chat-30",
       "semantic_status": "pending",
       "mechanical_status": "FAIL",
       "japanese_ratio": 0.97209,
@@ -212,26 +192,6 @@
       "warnings": []
     },
     {
-      "path": "papers/inference/06-moe-quantization-compression/2024-2406.08155-examining-post-training-quantization-for-mixture-of-experts-a-benchmark.md",
-      "canonical_id": "arXiv:2406.08155",
-      "title": "Examining Post-Training Quantization for Mixture-of-Experts: A Benchmark",
-      "file_bytes": 13316,
-      "source_sha256": "8c684f64099b9d591888c61c5cb0410316b34f20a5c68d6bc0f7e4b1b896e9f5",
-      "source_git_blob_sha": "dd8c6f685f25eb56fcf3a4e8fca53318ce34c9cd",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.961887,
-      "quality_metrics": {
-        "body_chars": 2785,
-        "method_chars": 1124,
-        "evaluation_chars": 1303,
-        "limitation_chars": 0
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
       "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2411.16102-blendserve-optimizing-offline-inference-for-auto-regressive-large-models.md",
       "canonical_id": "arXiv:2411.16102",
       "title": "BlendServe: Optimizing Offline Inference for Auto-regressive Large Models with Resource-aware Batching",
@@ -255,28 +215,6 @@
       "warnings": [
         "日本語比率 78.8% < 警告基準 80%"
       ]
-    },
-    {
-      "path": "papers/inference/07-kv-cache-optimization-compression/2025-2510.23649-efficient-low-rank-attention-for-long-context-inference-in-large-languag.md",
-      "canonical_id": "arXiv:2510.23649",
-      "title": "Efficient Low Rank Attention for Long-Context Inference in Large Language Models",
-      "file_bytes": 13711,
-      "source_sha256": "2ec28e823b470e5adf86ff6e10d3ef4c3bb8707885f09d8bfc85abc3be1a0851",
-      "source_git_blob_sha": "e571dc061ebff2692260ecb7431e3fcb8be1603f",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.870011,
-      "quality_metrics": {
-        "body_chars": 3093,
-        "method_chars": 1199,
-        "evaluation_chars": 0,
-        "limitation_chars": 344
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 評価説明量 0 < 500"
-      ],
-      "warnings": []
     },
     {
       "path": "papers/training/03-pipeline-parallel-modular-training/2026-2608.07974-zerolock-concurrent-memory-efficient-llm-training-via-modular-update-decoupling.md",
@@ -382,26 +320,6 @@
         "method_chars": 1084,
         "evaluation_chars": 248,
         "limitation_chars": 192
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2026-2610.01763-topk-guided-adaptive-budget-aware-activation-sparsity-for-efficient-llm-.md",
-      "canonical_id": "arXiv:2610.01763",
-      "title": "TopK-Guided: Adaptive, Budget-Aware Activation Sparsity for Efficient LLM Inference",
-      "file_bytes": 14860,
-      "source_sha256": "b7081063f94839003dda0972d57524cf912384fca71740c71beb6d5da6e28853",
-      "source_git_blob_sha": "9a27a552ae34780a0972b2b27bdb16c7481dd812",
-      "assigned_worker": "scheduled-chat-45",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.808019,
-      "quality_metrics": {
-        "body_chars": 4159,
-        "method_chars": 1131,
-        "evaluation_chars": 539,
-        "limitation_chars": 0
       },
       "mechanical_failures": [],
       "warnings": []
