@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-11T01:52:00+00:00",
-  "record_count": 11429,
+  "updated_at": "2026-10-11T02:48:45+00:00",
+  "record_count": 11430,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -163149,7 +163149,7 @@
       ],
       "reason": "TimeMachineは多変量時系列の長期予測精度とメモリ効率を高めるため、4つのMamba状態空間モジュールでチャネル内外・複数解像度の依存関係をモデル化する。一次要旨の評価対象は時系列予測であり、LLMのトークン生成、サービング、KV管理、MoE推論やCPU/GPUオフロードへの直接貢献は示されないため対象外。",
       "first_checked_at": "2026-10-10T21:46:55+00:00",
-      "last_checked_at": "2026-10-11T00:44:46+00:00",
+      "last_checked_at": "2026-10-11T02:48:45+00:00",
       "linked_from": [],
       "title": "TimeMachine: A Time Series is Worth 4 Mambas for Long-term Forecasting"
     },
@@ -163364,6 +163364,18 @@
       "last_checked_at": "2026-10-11T01:52:00+00:00",
       "linked_from": [],
       "title": "PackCache: A Training-Free Acceleration Method for Unified Autoregressive Video Generation via Compact KV-Cache"
+    },
+    "arXiv:2204.13767": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2204.13767",
+      "identity_tokens": [
+        "arXiv:2204.13767"
+      ],
+      "reason": "題名が多変量時系列予測のための三角形注意機構を対象としており、生成型LLMの推論基盤、モデルサービング、KVキャッシュ、量子化、MoE推論ではないことが明白なため、本文読解前のタイトル先行除外とする。Researchの5件ノルマには算入しない。",
+      "first_checked_at": "2026-10-11T02:48:44+00:00",
+      "last_checked_at": "2026-10-11T02:48:44+00:00",
+      "linked_from": [],
+      "title": "Triformer: Triangular, Variable-Specific Attentions for Long Sequence Multivariate Time Series Forecasting-Full Version"
     }
   }
 }

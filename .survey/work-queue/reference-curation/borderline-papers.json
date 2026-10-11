@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-11T01:51:58+00:00",
-  "record_count": 4609,
+  "updated_at": "2026-10-11T02:48:44+00:00",
+  "record_count": 4611,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -70500,6 +70500,32 @@
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "Learning Query-Aware Budget-Tier Routing for Runtime Agent Memory"
+    },
+    "arXiv:2309.15789": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2309.15789",
+      "identity_tokens": [
+        "arXiv:2309.15789"
+      ],
+      "reason": "著者要旨は複数の大規模言語モデルから新規タスクに最も正確なモデルを選ぶため、既存ベンチマークを二値分類器の学習データとして転用する方式を提案し、単一モデル固定より予測精度が向上することを示す。モデル選択という推論時のルーティングに接点はあるが、主たる最適化目標はタスク別正確性であり、GPU実行時の遅延、処理率、メモリ階層、モデルロードやサービング費用の最適化を要旨から確認できないため、現行の推論システムサーベイでは境界的と判定する。",
+      "first_checked_at": "2026-10-11T02:48:44+00:00",
+      "last_checked_at": "2026-10-11T02:48:44+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Large Language Model Routing with Benchmark Datasets"
+    },
+    "arXiv:2506.15841": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2506.15841",
+      "identity_tokens": [
+        "arXiv:2506.15841"
+      ],
+      "reason": "一次要旨は強化学習で複数ターンのエージェントに定長の共有内部状態を更新させ、冗長な観測を破棄する方式を扱う。16目的の多段質問応答でQwen2.5-14B-Instruct比3.5倍の性能と3.7倍のメモリ削減を報告するが、主貢献は長期エージェントの学習・記憶統合であり、GPUメモリ配置やLLMサービングの実行時最適化ではない。推論文脈効率との接点を理由に境界とする。",
+      "first_checked_at": "2026-10-11T02:48:44+00:00",
+      "last_checked_at": "2026-10-11T02:48:44+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "MEM1: Learning to Synergize Memory and Reasoning for Efficient Long-Horizon Agents"
     }
   }
 }
