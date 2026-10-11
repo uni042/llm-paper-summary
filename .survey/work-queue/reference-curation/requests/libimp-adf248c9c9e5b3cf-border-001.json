@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-adf248c9c9e5b3cf-border-001",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:1909.08053",
+  "reason": "原著の一次要旨が掲げる主目的は巨大Transformerの分散学習であり、層内の行列分割と通信演算をPyTorchに追加して8.3Bモデルを512 GPUで学習し、15.1 PFLOPS・76%スケーリング効率を測る。現行サーベイの通常Researchでは学習専用高速化を凍結範囲としている。一方、層内テンソル並列の構成は分散LLM推論の重み分割と通信設計にも直接転用可能な基礎技術なので、完全な無関係とは断定せずborderlineに保留する。論文の主評価は学習性能であり、オンライン推論のトークン遅延・同時要求処理・KVキャッシュ性能を直接測定した成果ではない。",
+  "title": "Megatron-LM: Training Multi-Billion Parameter Language Models Using Model Parallelism",
+  "identity_tokens": [
+    "arXiv:1909.08053"
+  ],
+  "linked_from": [],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-adf248c9c9e5",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}
