@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-945e31ecb65c168d-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2002.08307",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2002.08307",
+    "identity_tokens": [
+      "arXiv:2002.08307"
+    ],
+    "reason": "本文の§2〜§5を確認。BERT-Baseの重みの大きさに基づく枝刈りを30〜90%まで実施し、GLUEの転移学習への影響を測る。30〜40%の重み除去は精度を保つが、中心的な研究質問は事前学習情報の転移と微調整前後の枝刈り可能性であり、自己回帰LLM推論のサービング性能・速度・メモリ転送の実測最適化ではない。圧縮技術として関連するが、現在のLLM推論システム収録では境界的。",
+    "first_checked_at": "2026-10-05T16:34:20+00:00",
+    "last_checked_at": "2026-10-11T07:46:55+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Compressing BERT: Studying the Effects of Weight Pruning on Transfer Learning"
+  },
+  "processed_at": "2026-10-11T07:46:55+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-945e31ecb65c",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -2,7 +2,7 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-11T07:45:45+00:00",
+  "updated_at": "2026-10-11T07:46:55+00:00",
   "record_count": 11487,
   "records": {
     "arXiv:2303.08774": {
@@ -115803,9 +115803,9 @@
       "identity_tokens": [
         "arXiv:2506.01844"
       ],
-      "reason": "小型VLAと非同期推論stackで推論コスト・robot control rateを改善するが、最終workloadは実機・simulationのrobotics policyである。現行サーベイはLLM推論systemsを対象とするため、ロボット制御向けVLA効率化は対象外。",
+      "reason": "一次要旨によると、研究の最終適用先は低価格ロボットの視覚・言語・行動制御であり、主たる評価も実機・模擬ロボットの制御成功率である。非同期推論スタックは行動実行と知覚を分離するロボット固有の制御速度改善で、汎用LLM推論サービング、KVキャッシュ、GPU推論基盤の性能設計を主題としていない。",
       "first_checked_at": "2026-10-06T12:12:53+00:00",
-      "last_checked_at": "2026-10-07T06:59:11+00:00",
+      "last_checked_at": "2026-10-11T07:46:54+00:00",
       "linked_from": [],
       "title": "SmolVLA: A Vision-Language-Action Model for Affordable and Efficient Robotics"
     },
@@ -163923,7 +163923,7 @@
       ],
       "reason": "強化学習によるLLMエージェントの記憶利用・管理が主題であり、GPU推論やKVキャッシュなどの計算機メモリ管理を対象としない。推論システムサーベイの直接対象外。",
       "first_checked_at": "2026-10-11T07:45:37+00:00",
-      "last_checked_at": "2026-10-11T07:45:37+00:00",
+      "last_checked_at": "2026-10-11T07:46:55+00:00",
       "linked_from": [],
       "title": "Memory-R1: Enhancing Large Language Model Agents to Manage and Utilize Memories via Reinforcement Learning"
     },
@@ -164195,7 +164195,7 @@
       ],
       "reason": "LLMエージェントが推論履歴を記憶して自己改善する手法であり、タイトルからはLLM推論のハードウェア・サービング・メモリ階層・計算効率を直接扱う研究ではない。エージェントの行動・記憶学習の課題として対象外。",
       "first_checked_at": "2026-10-11T07:45:45+00:00",
-      "last_checked_at": "2026-10-11T07:45:45+00:00",
+      "last_checked_at": "2026-10-11T07:46:55+00:00",
       "linked_from": [],
       "title": "ReasoningBank: Scaling Agent Self-Evolving with Reasoning Memory"
     }
