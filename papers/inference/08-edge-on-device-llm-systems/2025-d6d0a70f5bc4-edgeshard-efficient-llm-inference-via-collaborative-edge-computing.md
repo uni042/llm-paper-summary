@@ -1,32 +1,66 @@
 ---
-canonical_id: "DOI:10.1109/JIOT.2024.3524255"
-title: "EdgeShard: Efficient LLM Inference via Collaborative Edge Computing"
-summary: "EdgeShardは異種のエッジ機器とクラウド機器を横断して大規模言語モデルの層を分割配置し、実測した層実行時間・機器メモリ・通信帯域に基づく動的計画法で遅延または処理量を最適化する。Llama2-7Bの実機評価では、端末単独の140.34ミリ秒/トークン・24.36トークン/秒に対し、75.88ミリ秒/トークン・52.45トークン/秒を示した。"
-list_summary: "異種エッジ端末とクラウドを横断してLLM層の配置先と分割境界を動的計画法で同時に選び、通信・メモリ・入力保持制約の下で単一要求遅延と複数要求処理量を別々に最適化する。"
+canonical_id: DOI:10.1109/JIOT.2024.3524255
+title: 'EdgeShard: Efficient LLM Inference via Collaborative Edge Computing'
+summary: EdgeShardは異種のエッジ機器とクラウド機器を横断して大規模言語モデルの層を分割配置し、実測した層実行時間・機器メモリ・通信帯域に基づく動的計画法で遅延または処理量を最適化する。Llama2-7Bの実機評価では、端末単独の140.34ミリ秒/トークン・24.36トークン/秒に対し、75.88ミリ秒/トークン・52.45トークン/秒を示した。
+list_summary: 異種エッジ端末とクラウドを横断してLLM層の配置先と分割境界を動的計画法で同時に選び、通信・メモリ・入力保持制約の下で単一要求遅延と複数要求処理量を別々に最適化する。
 authors:
-  - Mingjin Zhang
-  - Xiaoming Shen
-  - Jiannong Cao
-  - Zeyang Cui
-  - Shan Jiang
-published: "2025-05-15"
-publication: "IEEE Internet of Things Journal, vol. 12, no. 10, pp. 13119–13131; online published 2024-12-31"
-publication_type: "journal"
-publication_status: "published"
-source: "https://doi.org/10.1109/JIOT.2024.3524255"
+- Mingjin Zhang
+- Xiaoming Shen
+- Jiannong Cao
+- Zeyang Cui
+- Shan Jiang
+published: '2025-05-15'
+publication: IEEE Internet of Things Journal, vol. 12, no. 10, pp. 13119–13131; online published 2024-12-31
+publication_type: journal
+publication_status: published
+source: https://doi.org/10.1109/JIOT.2024.3524255
 sources:
-  - "https://doi.org/10.1109/JIOT.2024.3524255"
-  - "https://ira.lib.polyu.edu.hk/bitstream/10397/118711/1/Zhang_EdgeShard_Efficient_LLM.pdf"
-implementation: "著者らは実際の異種エッジ機器15台でLlama2の推論を実装・測定した。大学の機関リポジトリで査読受理稿の全文を確認したが、一次資料内に公式実装リポジトリの公開URLは確認できなかった。"
+- https://doi.org/10.1109/JIOT.2024.3524255
+- https://ira.lib.polyu.edu.hk/bitstream/10397/118711/1/Zhang_EdgeShard_Efficient_LLM.pdf
+implementation: 著者らは実際の異種エッジ機器15台でLlama2の推論を実装・測定した。大学の機関リポジトリで査読受理稿の全文を確認したが、一次資料内に公式実装リポジトリの公開URLは確認できなかった。
 code: null
-last_checked: "2026-10-11"
-worker_id: "scheduled-chat-00"
-worker_completed_at: "2026-10-11T10:57:36+09:00"
-worker_run_key: "20261011-1055-scheduled-chat-00/r01"
-reference_main_sha: "542f3396ef2e3718d91cf685d5e239d6310356b1"
+last_checked: '2026-10-11'
+worker_id: scheduled-chat-00
+worker_completed_at: '2026-10-11T10:57:36+09:00'
+worker_run_key: 20261011-1055-scheduled-chat-00/r01
+reference_main_sha: 542f3396ef2e3718d91cf685d5e239d6310356b1
 research_job_id: null
 last_audited: null
 audit_version: 0
+references:
+- canonical_id: arXiv:2303.08774
+  arxiv_id: '2303.08774'
+- canonical_id: arXiv:2307.09288
+  arxiv_id: '2307.09288'
+- canonical_id: arXiv:2305.10403
+  arxiv_id: '2305.10403'
+- canonical_id: arXiv:2312.05693
+  arxiv_id: '2312.05693'
+- canonical_id: arXiv:2210.17323
+  arxiv_id: '2210.17323'
+- canonical_id: arXiv:2306.00978
+  arxiv_id: '2306.00978'
+- canonical_id: arXiv:2211.10438
+- canonical_id: arXiv:2402.10787
+  arxiv_id: '2402.10787'
+- canonical_id: arXiv:2311.14030
+  arxiv_id: '2311.14030'
+- canonical_id: SemanticScholar:d79a26226393f687ddbc375e32055b40b8ad8d38
+- canonical_id: DOI:10.1145/3341301.3359646
+- canonical_id: arXiv:2311.18677
+- canonical_id: arXiv:1810.04805
+  arxiv_id: '1810.04805'
+- canonical_id: arXiv:2308.15078
+  arxiv_id: '2308.15078'
+- canonical_id: arXiv:2312.07850
+  arxiv_id: '2312.07850'
+- canonical_id: arXiv:2406.02239
+  arxiv_id: '2406.02239'
+- canonical_id: arXiv:2209.01188
+  arxiv_id: '2209.01188'
+references_checked_at: '2026-10-11'
+references_source: primary-pdf-reference-section
+references_total: 40
 ---
 
 # EdgeShard：異種エッジ機器での大規模言語モデル分割推論
