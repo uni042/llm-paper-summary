@@ -1,0 +1,145 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-eb9065ce5d7c1fb0-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-eb9065ce5d7c",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2605.27480"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 1,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "eeb5b0d654ef9160e4cf4471af3c96386715af0e",
+  "raw_search_result_count": 1,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 1,
+  "provider_progress": {
+    "requested_count": 1,
+    "status_counts": {
+      "allowed": 1,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-11T05:39:16.348762+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2605.27480",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "BIRDS: Characterizing and Understanding Biodiversity Impact of Large Language Model Serving",
+      "source_url": "https://arxiv.org/abs/2605.27480",
+      "year": 2026,
+      "published": "2026-05-26",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language model (LLM) serving creates environmental impacts beyond carbon and water, including ecosystem damage through biodiversity-related pathways. We present BIRDS, a framework for Biodiversity Impact of Request-Driven LLM Serving. BIRDS defines request-level functional units, quantifies operational and embodied biodiversity impact, and introduces Quality-Normalized Biodiversity Impact (QNBI) to jointly analyze ecological impact and response quality. Across diverse workloads, models, GPUs, and regions, BIRDS reveals that biodiversity impact accumulates at scale and exposes quality-aware serving tradeoffs. The code is available at https://github.com/TianyaoShi/BIRDS.",
+      "identifiers": [
+        "SemanticScholar:bc077f922f83dcdb4b6bf3532dae4d544737fecd"
+      ],
+      "semantic_scholar_id": "bc077f922f83dcdb4b6bf3532dae4d544737fecd",
+      "canonical_id": "arXiv:2605.27480",
+      "arxiv_id": "2605.27480",
+      "doi": "10.48550/arXiv.2605.27480",
+      "authors": [
+        "Tian-Yao Shi",
+        "Yi Ding"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 138,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2605.27480",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2605.27480",
+        "id:SemanticScholar:bc077f922f83dcdb4b6bf3532dae4d544737fecd",
+        "id:arXiv:2605.27480",
+        "title:birds characterizing and understanding biodiversity impact of large language model serving",
+        "url:https://arxiv.org/abs/2605.27480"
+      ],
+      "record": {
+        "title": "BIRDS: Characterizing and Understanding Biodiversity Impact of Large Language Model Serving",
+        "source_url": "https://arxiv.org/abs/2605.27480",
+        "year": 2026,
+        "published": "2026-05-26",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large language model (LLM) serving creates environmental impacts beyond carbon and water, including ecosystem damage through biodiversity-related pathways. We present BIRDS, a framework for Biodiversity Impact of Request-Driven LLM Serving. BIRDS defines request-level functional units, quantifies operational and embodied biodiversity impact, and introduces Quality-Normalized Biodiversity Impact (QNBI) to jointly analyze ecological impact and response quality. Across diverse workloads, models, GPUs, and regions, BIRDS reveals that biodiversity impact accumulates at scale and exposes quality-aware serving tradeoffs. The code is available at https://github.com/TianyaoShi/BIRDS.",
+        "identifiers": [
+          "SemanticScholar:bc077f922f83dcdb4b6bf3532dae4d544737fecd"
+        ],
+        "semantic_scholar_id": "bc077f922f83dcdb4b6bf3532dae4d544737fecd",
+        "canonical_id": "arXiv:2605.27480",
+        "arxiv_id": "2605.27480",
+        "doi": "10.48550/arXiv.2605.27480",
+        "authors": [
+          "Tian-Yao Shi",
+          "Yi Ding"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 138,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:8e3d3eca6affad7952d3002967cbbfcd6516946f9c35232e48e9991968528672",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}
