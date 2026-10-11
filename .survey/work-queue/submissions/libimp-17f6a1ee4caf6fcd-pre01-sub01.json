@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "TopoClaw: A Human-Centric and Topology-Aware Agent Operating System",
+      "source_url": "https://arxiv.org/abs/2605.15556",
+      "year": 2026,
+      "published": "2026-05-15",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLMs) have evolved AI assistants into autonomous reasoning engines that maintain context, invoke tools, and pursue long-horizon tasks. This has spurred Agent Operating Systems (Agent OS) as kernel-like layers for lifecycle management, memory, scheduling, and access control. Yet most designs remain agent-centric, treating the OS as a single-host runtime for internal reasoning and tool use, leaving open how autonomous actions integrate with distributed, collaborative, permission-sensitive workflows. TopoClaw is an open-source, human-centric, topology-aware Agent OS modeling the user's ecosystem as two coupled structures: a physical device topology of heterogeneous surfaces and a social relationship topology of shared spaces, teams, and delegated roles. It unifies device operation, messaging, and skills around accountable cross-boundary execution, with three core contributions: (1) cross-device action placement, decoupling intent from actuation and routing distributed actions across the device cluster based on hardware affordances and user context; (2) cross-user identity attribution, treating agents as socially situated\"Digital Twins\"that coordinate in multi-user spaces while preserving provenance, role-aware permissions, and human accountability; (3) cross-context authority governance, pairing broad capability with distributed, context-aware policy enforcement across physical and social trust boundaries to bound proactive autonomy at the OS layer. This report presents TopoClaw as an engineering-oriented reference architecture, covering its design principles, runtime, cross-device execution, collaboration mechanisms, security model, and deployment outlook.",
+      "identifiers": [
+        "SemanticScholar:9478405ffafebdd7799c2545f128e6b7b1759ad4"
+      ],
+      "semantic_scholar_id": "9478405ffafebdd7799c2545f128e6b7b1759ad4",
+      "canonical_id": "arXiv:2605.15556",
+      "arxiv_id": "2605.15556",
+      "doi": "10.48550/arXiv.2605.15556",
+      "authors": [
+        "He-Yuan Huang",
+        "Yeyi Guan",
+        "Ji-Hong Wang",
+        "Mingzhi Wang",
+        "Jiamu Zhou",
+        "Xiang-Mou Qu",
+        "Jia-Xin Yin",
+        "Xingchuang Liao",
+        "Xingyu Lou",
+        "Jun Wang"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 149,
+        "matched_prestigious_venue": null
+      },
+      "reason": "TopoClawはLLM agent lifecycle/memory/schedulingとcross-device action placementを扱うAgent OS architectureでruntime/systems lineageに直接関連。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-17f6a1ee4caf",
+    "round": "libimp-17f6a1ee4caf6fcd-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 1,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-17f6a1ee4caf6fcd-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-17f6a1ee4caf6fcd-pre01.json",
+    "receipt": "sha256:5eb6770630a372e4a49bc40ee0109a47156a16f9d7fd4051280987f96b6b89f2"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-17f6a1ee4caf",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
