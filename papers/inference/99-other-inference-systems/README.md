@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（398本）
+## 自動生成の論文一覧（401本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -672,6 +672,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   視覚入力で膨らむKVキャッシュと演算重みをDRAM・RRAMへ役割分担し、近メモリ実行と局所性を保つ演算融合で端末MLLM推論のデータ移動を抑える設計を示す。
 
+- **2025-12 · [AdmTree: Compressing Lengthy Context with Adaptive Semantic Trees](2025-2512.04550-admtree-compressing-lengthy-context-with-adaptive-semantic-trees.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  AdmTreeは、長い文書を大規模言語モデル（LLM）へ入力する際、入力トークンを短い潜在表現へ圧縮しつつ、局所的な事実と文書全体の意味を両立して保持する方式である。LongBenchの評価では、Llama-2-7Bを基盤にしたAdmTreeの平均得点は44.1で、活性値 Beaconの40.1を上回った。
+
 - **2025-11 · [T-SAR: A Full-Stack Co-design for CPU-Only Ternary LLM Inference via In-Place SIMD ALU Reorganization](2025-2511.13676-t-sar-a-full-stack-co-design-for-cpu-only-ternary-llm-inference-via-in-p.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   T-SARは、重みを−1、0、+1の三値に制約した大規模言語モデル（LLM）を、専用の大きな行列演算器なしにCPUで高速実行するための、アルゴリズム・命令セット・マイクロアーキテクチャ・ソフトウェアの協調設計である。
@@ -1272,6 +1276,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   GPUから通信とオプティマイザ状態をSmartNIC・SmartSwitch・単一パラメータサーバへ分離し、100B級モデル分割データ並列の干渉と容量制約を同時に減らす。
 
+- **2024-01 · [Infini-gram: Scaling Unbounded n-gram Language Models to a Trillion Tokens](2024-2401.17377-infini-gram-scaling-unbounded-n-gram-language-models-to-a-trillion-token.md)**  
+  実装：[✓](https://github.com/liujch1998/infini-gram) ・ リポジトリ内被引用：0  
+  従来のn-gram方式は直前の数トークンしか参照しないため、長い固有表現や定型句を扱いにくかった。
+
 ### 4年前（2022-11〜2023-10）
 
 - **2023-07 · [FlashAttention-2: Faster Attention with Better Parallelism and Work Partitioning](2023-2307.08691-flashattention-2.md)**  
@@ -1555,6 +1563,10 @@
 - **2020-06 · [BERT Loses Patience: Fast and Robust Inference with Early Exit](2020-2006.04152-bert-loses-patience-fast-and-robust-inference-with-early-exit.md)**  
   実装：✓ ・ リポジトリ内被引用：5  
   浅い層で正しい分類がほぼ確定している入力にも後段層の計算を続けるため、不要な遅延が生じる。従来の早期終了方式は中間分類器の最大確率やエントロピーなど、一つの層での自信の強さを停止信号にすることが多かった。
+
+- **2020-07 · [HAT: Hardware-Aware Transformers for Efficient Natural Language Processing](2020-2005.14187-hat-hardware-aware-transformers-for-efficient-natural-language-processin.md)**  
+  実装：[✓](https://github.com/mit-han-lab/hardware-aware-transformers) ・ リポジトリ内被引用：4  
+  Transformerの推論速度を改善するため、パラメータ数や浮動小数点演算回数（FLOPs）を減らすことは一般的だが、演算量が同じモデルでも機器によって実測遅延は大きく異なる。HAT（Hardware-Aware Transformers）はこの差を設計時に扱う。
 
 - **2020-07 · [FTRANS: Energy-Efficient Acceleration of Transformers using FPGA](2020-2007.08563-ftrans-energy-efficient-acceleration-of-transformers-using-fpga.md)**  
   実装：✓ ・ リポジトリ内被引用：3  

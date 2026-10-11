@@ -35,10 +35,15 @@
   "selection_reason": "接尾辞配列で5兆トークン規模の無限長n-gram確率をディスク上で照会する推論エンジン。1.4兆トークン索引を128 CPUで約48時間構築、n-gram計数20ms未満、無限長LM推論200ms程度、索引7byte/tokenを示し、CPU/ディスク階層による低遅延推論システムとして対象。",
   "semantic_scholar_id": "1c143a753d4eb82da5526132149f6e4ed5271b63",
   "source_url": "https://arxiv.org/abs/2401.17377",
-  "status": "ready",
+  "status": "superseded",
   "title": "Infini-gram: Scaling Unbounded n-gram Language Models to a Trillion Tokens",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2024
+  "year": 2024,
+  "superseded_at": "2026-10-11T00:49:57+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2024-2401.17377-infini-gram-scaling-unbounded-n-gram-language-models-to-a-trillion-token.md",
+  "represented_canonical_id": "arXiv:2401.17377",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

@@ -23,7 +23,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - [06-moe-quantization-compression](../06-moe-quantization-compression/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（56本）
+## 自動生成の論文一覧（57本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -211,6 +211,10 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - **2024-07 · [Inference Performance Optimization for Large Language Models on CPUs](2024-2407.07304-inference-performance-optimization-for-large-language-models-on-cpus.md)**  
   実装：[✓](https://github.com/intel/xFasterTransformer) ・ リポジトリ内被引用：2  
   IntelのxFasterTransformerに、CPU向けSlimAttention、トークン・ヘッド単位のINT8 KVキャッシュ、oneCCLによる分散推論とゼロコピー通信を組み込む。Xeon 8563C環境でLlama2-70Bの次トークン遅延を2ソケット249.7msから8ソケット87.7msへ短縮した。
+
+- **2024-03 · [AIOS: LLM Agent Operating System](2024-2403.16971-aios-llm-agent-operating-system.md)**  
+  実装：[✓](https://github.com/agiresearch/AIOS) ・ リポジトリ内被引用：2  
+  従来のエージェント枠組みでは、各エージェントがLLMやツールを直接呼び出し、GPUメモリの不足、競合するAPI呼び出し、長時間要求の独占を個別に処理しがちだった。AIOSはエージェントアプリケーションと資源管理を分離し、専用のAIOSカーネルを通じてサービスを提供する。
 
 ### 4年前（2022-11〜2023-10）
 

@@ -35,10 +35,15 @@
   "selection_reason": "Hardware-Aware TransformersはSuperTransformerのweight sharingとhardware latency constraint付きevolutionary searchでtarget CPU/GPU/IoT向けSubTransformerを選び、低遅延推論を直接最適化する。WMT'14でRaspberry Pi 4上baseline Transformer比3倍高速・3.7倍小型、Evolved Transformer比2.7倍高速・3.6倍小型を性能低下なしで報告するため対象内。",
   "semantic_scholar_id": "ef8d788a904ed66bd8e30ffa69bc3ea1fe57dda7",
   "source_url": "https://arxiv.org/abs/2005.14187",
-  "status": "ready",
+  "status": "superseded",
   "title": "HAT: Hardware-Aware Transformers for Efficient Natural Language Processing",
   "type": "research",
   "venue": "Annual Meeting of the Association for Computational Linguistics",
   "workflow_version": 10,
-  "year": 2020
+  "year": 2020,
+  "superseded_at": "2026-10-11T00:49:57+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2020-2005.14187-hat-hardware-aware-transformers-for-efficient-natural-language-processin.md",
+  "represented_canonical_id": "arXiv:2005.14187",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

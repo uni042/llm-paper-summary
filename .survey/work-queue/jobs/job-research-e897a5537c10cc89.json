@@ -33,10 +33,15 @@
   "selection_reason": "LLMエージェントを並行実行するためのOS型サービング基盤で、LLM呼出し・メモリ・ストレージ・ツールをsystem call化し、スケジューリングとcontext interruptで資源競合を管理するため、エージェント推論サービングの対象に直接該当する。",
   "semantic_scholar_id": "f89e85059a55b647c93822aefa7e985376e0ef20",
   "source_url": "https://arxiv.org/abs/2403.16971",
-  "status": "ready",
+  "status": "superseded",
   "title": "AIOS: LLM Agent Operating System",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2024
+  "year": 2024,
+  "superseded_at": "2026-10-11T00:49:57+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/09-kernel-runtime-compilation/2024-2403.16971-aios-llm-agent-operating-system.md",
+  "represented_canonical_id": "arXiv:2403.16971",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
