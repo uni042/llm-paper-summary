@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-11T21:30:17+00:00",
-  "record_count": 4667,
+  "updated_at": "2026-10-11T21:44:19+00:00",
+  "record_count": 4668,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -71355,6 +71355,19 @@
       ],
       "borderline_recheck_count": 0,
       "title": "MEMTIER: Tiered Memory Architecture and Retrieval Bottleneck Analysis for Long-Running Autonomous AI Agents"
+    },
+    "arXiv:2601.10323": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2601.10323",
+      "identity_tokens": [
+        "arXiv:2601.10323"
+      ],
+      "reason": "一次要旨では、連続音声・映像を同期単位へまとめ、軽量な発話判定ヘッドで応答開始と内容生成を分離する。逐次入力を扱う実時間実行との接点はあるが、主要貢献は複数感覚の理解モデル、発話判断、二段階学習と12ベンチマークでの対話品質であり、推論サービングのスケジューラ、GPUカーネル、階層メモリや資源効率の定量的な改善を一次要旨から確認できないため境界的とする。",
+      "first_checked_at": "2026-10-11T21:44:19+00:00",
+      "last_checked_at": "2026-10-11T21:44:19+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "ROMA: Real-time Omni-Multimodal Assistant with Interactive Streaming Understanding"
     }
   }
 }
