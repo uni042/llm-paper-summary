@@ -1,0 +1,112 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Efficient Paths and Dense Rewards: Probabilistic Flow Reasoning for Large Language Models",
+      "source_url": "https://arxiv.org/abs/2601.09260",
+      "year": 2026,
+      "published": "2026-01-14",
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "High-quality chain-of-thought has demonstrated strong potential for unlocking the reasoning capabilities of large language models. However, current paradigms typically treat the reasoning process as an indivisible sequence, lacking an intrinsic mechanism to quantify step-wise information gain. This granularity gap manifests in two limitations: inference inefficiency from redundant exploration without explicit guidance, and optimization difficulty due to sparse outcome supervision or costly external verifiers. In this work, we propose CoT-Flow, a framework that reconceptualizes discrete reasoning steps as a continuous probabilistic flow, quantifying the contribution of each step toward the ground-truth answer. Built on this formulation, CoT-Flow enables two complementary methodologies: flow-guided decoding, which employs a greedy flow-based decoding strategy to extract information-efficient reasoning paths, and flow-based reinforcement learning, which constructs a verifier-free dense reward function. Experiments on challenging benchmarks demonstrate that CoT-Flow achieves a superior balance between inference efficiency and reasoning performance.",
+      "identifiers": [
+        "SemanticScholar:e9c102df3f0d3d66de041693cea79658257c7b2b"
+      ],
+      "semantic_scholar_id": "e9c102df3f0d3d66de041693cea79658257c7b2b",
+      "canonical_id": "arXiv:2601.09260",
+      "arxiv_id": "2601.09260",
+      "doi": "10.48550/arXiv.2601.09260",
+      "authors": [
+        "Yan Liu",
+        "Feng Zhang",
+        "Zhanyu Ma",
+        "Jun Xu",
+        "Jiuchong Gao",
+        "Jinghua Hao",
+        "Ren-Qing He",
+        "Han Liu",
+        "Yangdong Deng"
+      ],
+      "priority": 112,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 10,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 112,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 270,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      },
+      "reason": "CoT-Flow identifies redundant reasoning as inference inefficiency and uses step-wise information gain to improve it.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "eGPU: Production-Scale Elastic Sharing Over 10,000 GPUs",
+      "source_url": "https://doi.org/10.1109/HPCA68181.2026.11408556",
+      "year": 2026,
+      "published": "2026-01-31",
+      "venue": "International Symposium on High-Performance Computer Architecture",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "As the cost of GPUs continues to rise, GPU-sharing solutions have become increasingly important for improving efficiency and maximizing resource utilization. At the same time, large-scale operational deployments of such solutions remain relatively less explored, especially in heterogeneous production environments where workload dynamics and orchestration complexity introduce new practical considerations. In this paper, we introduce eGPU, an elastic, efficient, and scalable GPU-sharing framework tailored for production-scale concurrent machine learning (ML) training and inference. eGPU enables fine-grained, runtime-adjustable sharing of GPUs across multiple jobs, while preserving high resource utilization and fault isolation. To address communication bottlenecks, eGPU supports native NVLink/NCCL-based communication between shared GPU instances, capabilities that are limited or unavailable in many existing designs. Built with production deployment in mind, eGPU integrates with Kubernetes (K8s) to support large-scale orchestration. It has been deployed and running stably in production clusters with over $\\text{1 0, 0 0 0 ~ G P U s}$ for five years. Our evaluation results show that eGPU achieves elastic and precise control over instance sizes, improves job efficiency by 21 % to 31% than SOTA sharing solutions, saves the number of GPUs required by up to $8 \\times$, and improves cluster GPU utilization by more than $\\mathrm{3} \\times$.",
+      "identifiers": [
+        "SemanticScholar:6b0acfc8842473e6d3961a5bd3c06b582b937fd5"
+      ],
+      "semantic_scholar_id": "6b0acfc8842473e6d3961a5bd3c06b582b937fd5",
+      "doi": "10.1109/HPCA68181.2026.11408556",
+      "canonical_id": "DOI:10.1109/HPCA68181.2026.11408556",
+      "authors": [
+        "Xiaochuan Tang",
+        "Hao Qi",
+        "Jianbo Dong",
+        "Ying-Hao Yu",
+        "Zhennan Xue",
+        "Zheng-Yu Zhang",
+        "Dao-Cheng Ying",
+        "Zheng Cao",
+        "Xiao-Yi Lu"
+      ],
+      "priority": 111,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 10,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 111,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 253,
+        "matched_prestigious_venue": "High-Performance Computer Architecture"
+      },
+      "reason": "eGPU shares GPUs across production training/inference and reports job-efficiency, utilization, and GPU-count gains.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-2e3cca2d574e",
+    "round": "libimp-2e3cca2d574e50ff-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 2,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-2e3cca2d574e50ff-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-2e3cca2d574e50ff-pre01.json",
+    "receipt": "sha256:6a7c3f18c4114186a8dc948a240601b97e409b71a79a132e2804896c118d1487"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-2e3cca2d574e",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
