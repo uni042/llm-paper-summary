@@ -1,0 +1,616 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-6c6739e204ec9575-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-6c6739e204ec",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "DOI:10.21105/joss.10304",
+    "arXiv:2605.20473",
+    "arXiv:2605.25188",
+    "arXiv:2605.25645",
+    "arXiv:2605.27441",
+    "arXiv:2607.19353"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 6,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "30825878ec0e50cb2b1ecc7446914862ee1611bb",
+  "raw_search_result_count": 6,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 6,
+  "provider_progress": {
+    "requested_count": 6,
+    "status_counts": {
+      "allowed": 6,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-11T06:01:52.203278+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "DOI:10.21105/joss.10304",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2605.20473",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2605.25188",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2605.25645",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2605.27441",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2607.19353",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Code Generation by Differential Test Time Scaling",
+      "source_url": "https://arxiv.org/abs/2605.20473",
+      "year": 2026,
+      "published": "2026-05-19",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Test-time scaling has emerged as a promising approach for improving code generation by exploring large solution spaces at inference time. However, existing methods often rely on public test cases that are unavailable in practice, or require extensive LLM inference for candidate selection, leading to significant token consumption and time overhead. We present DiffCodeGen, a novel test-time scaling method for code generation based on coverage-guided differential analysis. DiffCodeGen generates diverse code candidates using various sampling and prompting strategies, then applies coverage-guided fuzzing to synthesize inputs without requiring any existing tests or large language models. By executing all candidates on these inputs, DiffCodeGen captures their dynamic behavior and clusters candidates based on behavioral similarity. DiffCodeGen selects the medoid of the largest cluster as the final output. Unlike prior test-time scaling methods that invoke additional LLM inference for candidate selection, DiffCodeGen performs selection without any extra model calls, incurring little to no additional token consumption. DiffCodeGen is fully asynchronous, naturally suited to the current trend of agentic coding, and is thus efficient and highly scalable. We evaluate DiffCodeGen across 4 large language models, demonstrating consistent improvements over baselines. Compared to state-of-the-art test-time scaling methods, DiffCodeGen achieves competitive or superior performance while using only a fraction of time and tokens. DiffCodeGen is model-agnostic and can be combined with reasoning models to further boost performance.",
+      "identifiers": [
+        "SemanticScholar:bea732652ae1cab45f2ba3678e48cfc22cf4b72a"
+      ],
+      "semantic_scholar_id": "bea732652ae1cab45f2ba3678e48cfc22cf4b72a",
+      "canonical_id": "arXiv:2605.20473",
+      "arxiv_id": "2605.20473",
+      "doi": "10.48550/arXiv.2605.20473",
+      "authors": [
+        "Yifeng He",
+        "Ethan Wang",
+        "Ji-Cheng Wang",
+        "Xuan-Xin Ouyang",
+        "Hao Chen"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 145,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Benchmarking Confidential GPU Inference on NVIDIA H100 under Intel TDX",
+      "source_url": "https://arxiv.org/abs/2607.19353",
+      "year": 2026,
+      "published": "2026-05-20",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Confidential computing is becoming a practical deployment requirement for AI inference workloads that process sensitive inputs or protect proprietary model assets. However, the performance cost of enabling confidential execution for GPU-accelerated large language model serving remains workload dependent and operationally important. This paper presents a benchmark study comparing standard non-confidential execution with confidential computing mode on a single NVIDIA H100 80GB GPU hosted in an Intel TDX confidential instance. The evaluation uses two representative language models, Mistral-7B v0.1 and Qwen3-30B-A3B, and measures time to first token, end-to-end request latency, per-request token generation throughput, global token throughput, and closed-loop request throughput under increasing concurrency. In fixed request-rate experiments, confidential mode increases average TTFT by 21.8% for Mistral-7B and 27.8% for Qwen3-30B-A3B, while global token throughput drops by 17.7% and 21.1%, respectively. In closed-loop concurrency experiments, throughput gaps remain in the 11.5-20.2% range, but the larger model reaches its saturation knee earlier under confidential mode. The results suggest that confidential GPU inference can retain usable throughput under load, but capacity planning must account for both the steady throughput penalty and the earlier saturation behavior observed for larger models.",
+      "identifiers": [
+        "SemanticScholar:9fd5ad4ec77555dd4876626e5d3e43da2ba8b69c"
+      ],
+      "semantic_scholar_id": "9fd5ad4ec77555dd4876626e5d3e43da2ba8b69c",
+      "canonical_id": "arXiv:2607.19353",
+      "arxiv_id": "2607.19353",
+      "doi": "10.48550/arXiv.2607.19353",
+      "authors": [
+        "Wei Wang",
+        "Abdul Hyee Waqas",
+        "Burns Smith"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 144,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "ado: a Python framework for computational experimentation and benchmarking",
+      "source_url": "https://doi.org/10.21105/joss.10304",
+      "year": 2026,
+      "published": "2026-05-22",
+      "venue": "Journal of Open Source Software",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The Accelerated Discovery Orchestrator (ado) is a Python package that addresses a recurring challenge in research software development: implementing common capabilities for design of experiments (DoE) and execution of related computational experiment campaigns. These cross-cutting capabilities span methodology (design-space specification, sampling, analysis), interface (CLI and configuration management), execution (parallel and scale-out), and data (sharing, provenance, and reuse). ado delivers these capabilities across domains through a lightweight plugin model, where integrating new components can be as simple as decorating a Python function. This is enabled by ado’s core abstraction: the Discovery Space . Out-of-the-box, ado includes state-of-the-art optimization algorithms and predictive modeling tools, alongside experiments targeting foundation-model performance. Our aim is for ado to become a focal point for developing and consuming advanced capabilities for defining and executing experiment campaigns.",
+      "identifiers": [
+        "SemanticScholar:70d544df1ae5fc2f61fdebcb477ca4aa893eac10"
+      ],
+      "semantic_scholar_id": "70d544df1ae5fc2f61fdebcb477ca4aa893eac10",
+      "doi": "10.21105/joss.10304",
+      "canonical_id": "DOI:10.21105/joss.10304",
+      "authors": [
+        "Michael Johnston",
+        "Alessandro Pomponio"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 142,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "A Unified Structured Query Understanding Framework for Industrial Semantic Search",
+      "source_url": "https://arxiv.org/abs/2605.27441",
+      "year": 2026,
+      "published": "2026-05-22",
+      "venue": "Proceedings of the 32nd ACM SIGKDD Conference on Knowledge Discovery and Data Mining V.2",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Query understanding in large-scale industrial search systems is typically implemented as a cascade of disparate, task-specific components. While individually optimizable, this fragmented architecture incurs high maintenance overhead and results in inconsistent behaviors, particularly for long-tail queries. In this work, we propose and deploy a unified structured query understanding system that consolidates these heterogeneous functions into a single Small Language Model (SLM) that performs schema-constrained generation. To address the data bottlenecks inherent in unified modeling, we introduce Query Illuminator, a dual-purpose framework serving as: (i) a teacher model for high-quality auto-annotation and distillation, and (ii) a surrogate judge for scalable evaluation where human labels are scarce. We validate this approach through extensive offline and online tests within LinkedIn's Job Search system. Furthermore, we demonstrate the framework's horizontal extensibility through a cross-domain case study on People Search. The results show improved user engagement and reduced operational costs, achieved while satisfying strict low-latency serving constraints on limited GPU resources.",
+      "identifiers": [
+        "SemanticScholar:0f2aef010511841cb5b59e68578df4435305f782"
+      ],
+      "semantic_scholar_id": "0f2aef010511841cb5b59e68578df4435305f782",
+      "canonical_id": "arXiv:2605.27441",
+      "arxiv_id": "2605.27441",
+      "doi": "10.1145/3770855.3818312",
+      "authors": [
+        "Ping Liu",
+        "Qian-Qi Shen",
+        "Jian-Qiang Shen",
+        "Chunnan Yao",
+        "Kevin Kao",
+        "Rajat Arora",
+        "Dan Xu",
+        "Baofeng Zheng",
+        "Yun-Xiang Ren",
+        "Benjamin Le",
+        "Ali Hooshmand",
+        "Igor Lapchuk",
+        "Juan Bottaro",
+        "Raghavan Muthuregunathan",
+        "Caleb Johnson",
+        "Liang-Jie Hong",
+        "Jing-Wei Wu",
+        "Wen-Jing Zhang"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 142,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "DarkForest: Less Talk, Higher Accuracy for Multi-Agent LLMs",
+      "source_url": "https://arxiv.org/abs/2605.25188",
+      "year": 2026,
+      "published": "2026-05-24",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Multi-agent LLM systems improve reasoning by combining outputs from multiple agents, but interaction-heavy methods can introduce error propagation and high communication overhead. When agents exchange raw responses or reasoning traces, incorrect intermediate reasoning may be adopted and amplified, leading to confident but wrong consensus; multi-round communication also increases token consumption, latency, and inference cost. In this paper, we propose a controlled-communication coordination framework named DarkForest. DarkForest first keeps agents independent, so each agent produces an answer without seeing the others'outputs. It then parses the raw responses into structured candidate records, groups semantically equivalent candidates into clusters, and estimates a calibrated belief distribution over these clusters using agent reliability, confidence, parse quality, support-pattern reliability, and independence corrections. A coordinator receives only policy-permitted evidence from this belief state with controlled communication. Experiments on six reasoning benchmarks show that DarkForest achieves leading overall quality, improves the strongest baseline by up to 30.7\\% on benchmark metrics, and reduces token consumption by up to $6.5\\times$ compared with communication-heavy baselines.",
+      "identifiers": [
+        "SemanticScholar:3a83512c76d548d164e52f57941b1a85fd919098"
+      ],
+      "semantic_scholar_id": "3a83512c76d548d164e52f57941b1a85fd919098",
+      "canonical_id": "arXiv:2605.25188",
+      "arxiv_id": "2605.25188",
+      "doi": "10.48550/arXiv.2605.25188",
+      "authors": [
+        "Yi Li",
+        "Song-Tao Wei",
+        "Dongming Jiang",
+        "Zhi-Chun Guo",
+        "Qiannan Li",
+        "Bing-Zhe Li"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 140,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Fine-Tuning and Serving Gemma 4 31B on Google Cloud TPU: A Technical Comparison with GPU Baselines",
+      "source_url": "https://arxiv.org/abs/2605.25645",
+      "year": 2026,
+      "published": "2026-05-25",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "We present the first end-to-end demonstration of fine-tuning and serving Google's Gemma 4 31B model on TPU hardware, providing an empirical comparison of TPU and GPU platforms for large language model adaptation. Using LoRA on a Google TPU v5p-8 for training and TPU v6e-8 (Trillium) for inference, we document the full set of code-level adaptations required to port a GPU-native training recipe - built on PyTorch, HuggingFace TRL, and FSDP - to the JAX + Tunix/Qwix stack. These adaptations span mesh configuration, LoRA module naming conventions, sharding annotation corrections, gradient checkpoint, data pipeline restructuring, and a custom Orbax-to-safetensor checkpoint merging procedure. For inference, we detail the vLLM-TPU Docker setup necessary to serve Gemma 4 on v6e-8 and characterize the resulting latency and throughput profile. Compared with a similar-costing 2xH100 GPU baseline under identical hyperparameters, TPU training completes 1.61x faster at 2.12x lower cost. For inference, we cover the vLLM-TPU Docker setup required to serve Gemma 4 on v6e-8 and explain the observed latency and throughput characteristics across a QPS sweep spanning 512 to 16k input tokens. Across both workloads we compare performance and cost against a 2xH100 GPU baseline running identical hyperparameters. The TPU completes training 1.61x faster at 2.12x lower cost. For inference, TPU v6e-8 matches GPU at short context (<=2048 tokens) and decisively outperforms at long context: 66% higher throughput and 23.6x faster TTFT at 4096-token inputs (61 ms vs 1,443 ms at QPS=4). Our work removes a critical gap in the open tooling ecosystem and provides practitioners with a recipe for Gemma 4 Dense 31B deployment on the TPU infrastructure.",
+      "identifiers": [
+        "SemanticScholar:47b62a9f11367e2af023ec91054ab699decbe41b"
+      ],
+      "semantic_scholar_id": "47b62a9f11367e2af023ec91054ab699decbe41b",
+      "canonical_id": "arXiv:2605.25645",
+      "arxiv_id": "2605.25645",
+      "doi": "10.48550/arXiv.2605.25645",
+      "authors": [
+        "Jatin Kishnani",
+        "Mayank Goel",
+        "A. Singh",
+        "Pulkit Agrawal",
+        "Sairanjan Mishra"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 139,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2605.20473",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2605.20473",
+        "id:SemanticScholar:bea732652ae1cab45f2ba3678e48cfc22cf4b72a",
+        "id:arXiv:2605.20473",
+        "title:code generation by differential test time scaling",
+        "url:https://arxiv.org/abs/2605.20473"
+      ],
+      "record": {
+        "title": "Code Generation by Differential Test Time Scaling",
+        "source_url": "https://arxiv.org/abs/2605.20473",
+        "year": 2026,
+        "published": "2026-05-19",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Test-time scaling has emerged as a promising approach for improving code generation by exploring large solution spaces at inference time. However, existing methods often rely on public test cases that are unavailable in practice, or require extensive LLM inference for candidate selection, leading to significant token consumption and time overhead. We present DiffCodeGen, a novel test-time scaling method for code generation based on coverage-guided differential analysis. DiffCodeGen generates diverse code candidates using various sampling and prompting strategies, then applies coverage-guided fuzzing to synthesize inputs without requiring any existing tests or large language models. By executing all candidates on these inputs, DiffCodeGen captures their dynamic behavior and clusters candidates based on behavioral similarity. DiffCodeGen selects the medoid of the largest cluster as the final output. Unlike prior test-time scaling methods that invoke additional LLM inference for candidate selection, DiffCodeGen performs selection without any extra model calls, incurring little to no additional token consumption. DiffCodeGen is fully asynchronous, naturally suited to the current trend of agentic coding, and is thus efficient and highly scalable. We evaluate DiffCodeGen across 4 large language models, demonstrating consistent improvements over baselines. Compared to state-of-the-art test-time scaling methods, DiffCodeGen achieves competitive or superior performance while using only a fraction of time and tokens. DiffCodeGen is model-agnostic and can be combined with reasoning models to further boost performance.",
+        "identifiers": [
+          "SemanticScholar:bea732652ae1cab45f2ba3678e48cfc22cf4b72a"
+        ],
+        "semantic_scholar_id": "bea732652ae1cab45f2ba3678e48cfc22cf4b72a",
+        "canonical_id": "arXiv:2605.20473",
+        "arxiv_id": "2605.20473",
+        "doi": "10.48550/arXiv.2605.20473",
+        "authors": [
+          "Yifeng He",
+          "Ethan Wang",
+          "Ji-Cheng Wang",
+          "Xuan-Xin Ouyang",
+          "Hao Chen"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 145,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2607.19353",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2607.19353",
+        "id:SemanticScholar:9fd5ad4ec77555dd4876626e5d3e43da2ba8b69c",
+        "id:arXiv:2607.19353",
+        "title:benchmarking confidential gpu inference on nvidia h100 under intel tdx",
+        "url:https://arxiv.org/abs/2607.19353"
+      ],
+      "record": {
+        "title": "Benchmarking Confidential GPU Inference on NVIDIA H100 under Intel TDX",
+        "source_url": "https://arxiv.org/abs/2607.19353",
+        "year": 2026,
+        "published": "2026-05-20",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Confidential computing is becoming a practical deployment requirement for AI inference workloads that process sensitive inputs or protect proprietary model assets. However, the performance cost of enabling confidential execution for GPU-accelerated large language model serving remains workload dependent and operationally important. This paper presents a benchmark study comparing standard non-confidential execution with confidential computing mode on a single NVIDIA H100 80GB GPU hosted in an Intel TDX confidential instance. The evaluation uses two representative language models, Mistral-7B v0.1 and Qwen3-30B-A3B, and measures time to first token, end-to-end request latency, per-request token generation throughput, global token throughput, and closed-loop request throughput under increasing concurrency. In fixed request-rate experiments, confidential mode increases average TTFT by 21.8% for Mistral-7B and 27.8% for Qwen3-30B-A3B, while global token throughput drops by 17.7% and 21.1%, respectively. In closed-loop concurrency experiments, throughput gaps remain in the 11.5-20.2% range, but the larger model reaches its saturation knee earlier under confidential mode. The results suggest that confidential GPU inference can retain usable throughput under load, but capacity planning must account for both the steady throughput penalty and the earlier saturation behavior observed for larger models.",
+        "identifiers": [
+          "SemanticScholar:9fd5ad4ec77555dd4876626e5d3e43da2ba8b69c"
+        ],
+        "semantic_scholar_id": "9fd5ad4ec77555dd4876626e5d3e43da2ba8b69c",
+        "canonical_id": "arXiv:2607.19353",
+        "arxiv_id": "2607.19353",
+        "doi": "10.48550/arXiv.2607.19353",
+        "authors": [
+          "Wei Wang",
+          "Abdul Hyee Waqas",
+          "Burns Smith"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 144,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.21105/joss.10304",
+      "identity_tokens": [
+        "id:DOI:10.21105/joss.10304",
+        "id:SemanticScholar:70d544df1ae5fc2f61fdebcb477ca4aa893eac10",
+        "title:ado a python framework for computational experimentation and benchmarking",
+        "url:https://doi.org/10.21105/joss.10304"
+      ],
+      "record": {
+        "title": "ado: a Python framework for computational experimentation and benchmarking",
+        "source_url": "https://doi.org/10.21105/joss.10304",
+        "year": 2026,
+        "published": "2026-05-22",
+        "venue": "Journal of Open Source Software",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The Accelerated Discovery Orchestrator (ado) is a Python package that addresses a recurring challenge in research software development: implementing common capabilities for design of experiments (DoE) and execution of related computational experiment campaigns. These cross-cutting capabilities span methodology (design-space specification, sampling, analysis), interface (CLI and configuration management), execution (parallel and scale-out), and data (sharing, provenance, and reuse). ado delivers these capabilities across domains through a lightweight plugin model, where integrating new components can be as simple as decorating a Python function. This is enabled by ado’s core abstraction: the Discovery Space . Out-of-the-box, ado includes state-of-the-art optimization algorithms and predictive modeling tools, alongside experiments targeting foundation-model performance. Our aim is for ado to become a focal point for developing and consuming advanced capabilities for defining and executing experiment campaigns.",
+        "identifiers": [
+          "SemanticScholar:70d544df1ae5fc2f61fdebcb477ca4aa893eac10"
+        ],
+        "semantic_scholar_id": "70d544df1ae5fc2f61fdebcb477ca4aa893eac10",
+        "doi": "10.21105/joss.10304",
+        "canonical_id": "DOI:10.21105/joss.10304",
+        "authors": [
+          "Michael Johnston",
+          "Alessandro Pomponio"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 142,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.27441",
+      "identity_tokens": [
+        "id:DOI:10.1145/3770855.3818312",
+        "id:SemanticScholar:0f2aef010511841cb5b59e68578df4435305f782",
+        "id:arXiv:2605.27441",
+        "title:a unified structured query understanding framework for industrial semantic search",
+        "url:https://arxiv.org/abs/2605.27441"
+      ],
+      "record": {
+        "title": "A Unified Structured Query Understanding Framework for Industrial Semantic Search",
+        "source_url": "https://arxiv.org/abs/2605.27441",
+        "year": 2026,
+        "published": "2026-05-22",
+        "venue": "Proceedings of the 32nd ACM SIGKDD Conference on Knowledge Discovery and Data Mining V.2",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Query understanding in large-scale industrial search systems is typically implemented as a cascade of disparate, task-specific components. While individually optimizable, this fragmented architecture incurs high maintenance overhead and results in inconsistent behaviors, particularly for long-tail queries. In this work, we propose and deploy a unified structured query understanding system that consolidates these heterogeneous functions into a single Small Language Model (SLM) that performs schema-constrained generation. To address the data bottlenecks inherent in unified modeling, we introduce Query Illuminator, a dual-purpose framework serving as: (i) a teacher model for high-quality auto-annotation and distillation, and (ii) a surrogate judge for scalable evaluation where human labels are scarce. We validate this approach through extensive offline and online tests within LinkedIn's Job Search system. Furthermore, we demonstrate the framework's horizontal extensibility through a cross-domain case study on People Search. The results show improved user engagement and reduced operational costs, achieved while satisfying strict low-latency serving constraints on limited GPU resources.",
+        "identifiers": [
+          "SemanticScholar:0f2aef010511841cb5b59e68578df4435305f782"
+        ],
+        "semantic_scholar_id": "0f2aef010511841cb5b59e68578df4435305f782",
+        "canonical_id": "arXiv:2605.27441",
+        "arxiv_id": "2605.27441",
+        "doi": "10.1145/3770855.3818312",
+        "authors": [
+          "Ping Liu",
+          "Qian-Qi Shen",
+          "Jian-Qiang Shen",
+          "Chunnan Yao",
+          "Kevin Kao",
+          "Rajat Arora",
+          "Dan Xu",
+          "Baofeng Zheng",
+          "Yun-Xiang Ren",
+          "Benjamin Le",
+          "Ali Hooshmand",
+          "Igor Lapchuk",
+          "Juan Bottaro",
+          "Raghavan Muthuregunathan",
+          "Caleb Johnson",
+          "Liang-Jie Hong",
+          "Jing-Wei Wu",
+          "Wen-Jing Zhang"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 142,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.25188",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2605.25188",
+        "id:SemanticScholar:3a83512c76d548d164e52f57941b1a85fd919098",
+        "id:arXiv:2605.25188",
+        "title:darkforest less talk higher accuracy for multiagent llms",
+        "url:https://arxiv.org/abs/2605.25188"
+      ],
+      "record": {
+        "title": "DarkForest: Less Talk, Higher Accuracy for Multi-Agent LLMs",
+        "source_url": "https://arxiv.org/abs/2605.25188",
+        "year": 2026,
+        "published": "2026-05-24",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Multi-agent LLM systems improve reasoning by combining outputs from multiple agents, but interaction-heavy methods can introduce error propagation and high communication overhead. When agents exchange raw responses or reasoning traces, incorrect intermediate reasoning may be adopted and amplified, leading to confident but wrong consensus; multi-round communication also increases token consumption, latency, and inference cost. In this paper, we propose a controlled-communication coordination framework named DarkForest. DarkForest first keeps agents independent, so each agent produces an answer without seeing the others'outputs. It then parses the raw responses into structured candidate records, groups semantically equivalent candidates into clusters, and estimates a calibrated belief distribution over these clusters using agent reliability, confidence, parse quality, support-pattern reliability, and independence corrections. A coordinator receives only policy-permitted evidence from this belief state with controlled communication. Experiments on six reasoning benchmarks show that DarkForest achieves leading overall quality, improves the strongest baseline by up to 30.7\\% on benchmark metrics, and reduces token consumption by up to $6.5\\times$ compared with communication-heavy baselines.",
+        "identifiers": [
+          "SemanticScholar:3a83512c76d548d164e52f57941b1a85fd919098"
+        ],
+        "semantic_scholar_id": "3a83512c76d548d164e52f57941b1a85fd919098",
+        "canonical_id": "arXiv:2605.25188",
+        "arxiv_id": "2605.25188",
+        "doi": "10.48550/arXiv.2605.25188",
+        "authors": [
+          "Yi Li",
+          "Song-Tao Wei",
+          "Dongming Jiang",
+          "Zhi-Chun Guo",
+          "Qiannan Li",
+          "Bing-Zhe Li"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 140,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.25645",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2605.25645",
+        "id:SemanticScholar:47b62a9f11367e2af023ec91054ab699decbe41b",
+        "id:arXiv:2605.25645",
+        "title:finetuning and serving gemma 4 31b on google cloud tpu a technical comparison with gpu baselines",
+        "url:https://arxiv.org/abs/2605.25645"
+      ],
+      "record": {
+        "title": "Fine-Tuning and Serving Gemma 4 31B on Google Cloud TPU: A Technical Comparison with GPU Baselines",
+        "source_url": "https://arxiv.org/abs/2605.25645",
+        "year": 2026,
+        "published": "2026-05-25",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "We present the first end-to-end demonstration of fine-tuning and serving Google's Gemma 4 31B model on TPU hardware, providing an empirical comparison of TPU and GPU platforms for large language model adaptation. Using LoRA on a Google TPU v5p-8 for training and TPU v6e-8 (Trillium) for inference, we document the full set of code-level adaptations required to port a GPU-native training recipe - built on PyTorch, HuggingFace TRL, and FSDP - to the JAX + Tunix/Qwix stack. These adaptations span mesh configuration, LoRA module naming conventions, sharding annotation corrections, gradient checkpoint, data pipeline restructuring, and a custom Orbax-to-safetensor checkpoint merging procedure. For inference, we detail the vLLM-TPU Docker setup necessary to serve Gemma 4 on v6e-8 and characterize the resulting latency and throughput profile. Compared with a similar-costing 2xH100 GPU baseline under identical hyperparameters, TPU training completes 1.61x faster at 2.12x lower cost. For inference, we cover the vLLM-TPU Docker setup required to serve Gemma 4 on v6e-8 and explain the observed latency and throughput characteristics across a QPS sweep spanning 512 to 16k input tokens. Across both workloads we compare performance and cost against a 2xH100 GPU baseline running identical hyperparameters. The TPU completes training 1.61x faster at 2.12x lower cost. For inference, TPU v6e-8 matches GPU at short context (<=2048 tokens) and decisively outperforms at long context: 66% higher throughput and 23.6x faster TTFT at 4096-token inputs (61 ms vs 1,443 ms at QPS=4). Our work removes a critical gap in the open tooling ecosystem and provides practitioners with a recipe for Gemma 4 Dense 31B deployment on the TPU infrastructure.",
+        "identifiers": [
+          "SemanticScholar:47b62a9f11367e2af023ec91054ab699decbe41b"
+        ],
+        "semantic_scholar_id": "47b62a9f11367e2af023ec91054ab699decbe41b",
+        "canonical_id": "arXiv:2605.25645",
+        "arxiv_id": "2605.25645",
+        "doi": "10.48550/arXiv.2605.25645",
+        "authors": [
+          "Jatin Kishnani",
+          "Mayank Goel",
+          "A. Singh",
+          "Pulkit Agrawal",
+          "Sairanjan Mishra"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 139,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:a07d3805d3dde322daf592b0f8ac2b7adcf8b7ec0e66c954ce9f99244d2570ce",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}
