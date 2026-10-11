@@ -28,6 +28,8 @@ worker_completed_at: "2026-10-11T11:50:10+09:00"
 worker_run_key: "20261011-1145-scheduled-chat-45/r01"
 reference_main_sha: "542f3396ef2e3718d91cf685d5e239d6310356b1"
 research_job_id: null
+last_audited: null
+audit_version: 0
 ---
 
 # Sanger：動的疎注意を高速化するソフトウェア・ハードウェア協調設計

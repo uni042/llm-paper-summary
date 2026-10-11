@@ -35,10 +35,15 @@
   "selection_reason": "低bitでattention matrixを予測してdynamic sparse maskを作り、structured blockへ再配置し、reconfigurable systolic arrayでSDDMM/SpMMを統合実行するsoftware-hardware co-design。BERTでaccuracyを維持しながらV100比4.64倍等の推論高速化を評価しており、sparse attention acceleratorとして直接対象。",
   "semantic_scholar_id": "b97c3c370401dc34d2adbeb24f34de5180a14be6",
   "source_url": "https://doi.org/10.1145/3466752.3480125",
-  "status": "ready",
+  "status": "superseded",
   "title": "Sanger: A Co-Design Framework for Enabling Sparse Attention using Reconfigurable Architecture",
   "type": "research",
   "venue": "Micro",
   "workflow_version": 10,
-  "year": 2021
+  "year": 2021,
+  "superseded_at": "2026-10-11T04:48:04+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/13-sparse-attention/2021-0aaecf5ce8bb-sanger-a-co-design-framework-for-enabling-sparse-attention-using-reconfi.md",
+  "represented_canonical_id": "DOI:10.1145/3466752.3480125",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

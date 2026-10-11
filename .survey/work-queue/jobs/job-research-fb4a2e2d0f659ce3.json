@@ -35,10 +35,15 @@
   "selection_reason": "タスク・問い合わせ・LLMの異種グラフを構築し、モデルと問い合わせ間の応答品質・API推論費用を辺特徴として学習、帰納的グラフニューラルネットワークで新モデルにも再学習なしに割当を予測する。Alpaca、GSM8K、SQuAD、Multi-Newsと10モデルを使い、品質・費用の3重み条件で既存ルーター比少なくとも12.3%の報酬改善を報告。推論時のモデル選択と費用最適化に直接該当する。",
   "semantic_scholar_id": "f8d75c913a4811fe9f2030ca8d965c3a6d49b423",
   "source_url": "https://arxiv.org/abs/2410.03834",
-  "status": "ready",
+  "status": "superseded",
   "title": "GraphRouter: A Graph-based Router for LLM Selections",
   "type": "research",
   "venue": "International Conference on Learning Representations",
   "workflow_version": 10,
-  "year": 2024
+  "year": 2024,
+  "superseded_at": "2026-10-11T04:48:04+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2410.03834-graphrouter-a-graph-based-router-for-llm-selections.md",
+  "represented_canonical_id": "arXiv:2410.03834",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

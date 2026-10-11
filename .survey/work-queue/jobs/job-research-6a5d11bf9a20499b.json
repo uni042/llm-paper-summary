@@ -35,10 +35,15 @@
   "selection_reason": "問題難度に応じThinking/NoThinkingを選択させ、不要な長いreasoningを回避する推論効率化。学習はRLだが最終目的・評価が推論token/cost削減で、DeepSeek-R1-Distill-Qwen-1.5Bの平均response lengthを53%削減しaccuracyを2.4%改善する。",
   "semantic_scholar_id": "0fe4e9d7f771290da5bec757ae77208d320922bb",
   "source_url": "https://arxiv.org/abs/2505.13417",
-  "status": "ready",
+  "status": "superseded",
   "title": "AdaptThink: Reasoning Models Can Learn When to Think",
   "type": "research",
   "venue": "Conference on Empirical Methods in Natural Language Processing",
   "workflow_version": 10,
-  "year": 2025
+  "year": 2025,
+  "superseded_at": "2026-10-11T04:48:04+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2025-2505.13417-adaptthink-reasoning-models-can-learn-when-to-think.md",
+  "represented_canonical_id": "arXiv:2505.13417",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
