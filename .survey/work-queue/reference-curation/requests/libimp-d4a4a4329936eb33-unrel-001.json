@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-d4a4a4329936eb33-unrel-001",
+  "operation": "mark_unrelated",
+  "canonical_id": "arXiv:2601.04359",
+  "reason": "一次要旨を確認。PackCacheは自動回帰型の動画生成で、条件画像・テキストを意味アンカーとして残し、過去フレームへの注意の時間減衰と三次元位置埋め込みを使って動画フレームのKVキャッシュを圧縮する。48フレームの動画生成を1.7～2.2倍高速化するが、評価対象は画像・動画トークンの生成であり、LLMのテキスト生成、LLMサービング、MoE、GPU/CPUオフロードの直接的な実装・性能評価を示さない。KV削除という技術的隣接性はあるが現行LLM推論サーベイの対象外とする。",
+  "title": "PackCache: A Training-Free Acceleration Method for Unified Autoregressive Video Generation via Compact KV-Cache",
+  "identity_tokens": [
+    "arxiv:2601.04359",
+    "2601.04359"
+  ],
+  "linked_from": [],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d4a4a4329936",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}
