@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-11T06:24:39+00:00",
-  "record_count": 4632,
+  "updated_at": "2026-10-11T06:45:23+00:00",
+  "record_count": 4636,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -70825,6 +70825,70 @@
       ],
       "borderline_recheck_count": 0,
       "title": "Transformer-like Inference from Optimal Control"
+    },
+    "DOI:10.3389/fsci.2023.1017235": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.3389/fsci.2023.1017235",
+      "identity_tokens": [
+        "DOI:10.3389/fsci.2023.1017235"
+      ],
+      "reason": "Organoid biocomputing projects energy/data efficiency, but its relationship to digital LLM inference or serving remains unclear.",
+      "first_checked_at": "2026-10-11T06:45:22+00:00",
+      "last_checked_at": "2026-10-11T06:45:22+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2004.11886-lite-transformer-with-long-short-range-attention.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Organoid intelligence (OI): the new frontier in biocomputing and intelligence-in-a-dish"
+    },
+    "arXiv:2511.19418": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2511.19418",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2511.19418",
+        "arXiv:2511.19418"
+      ],
+      "reason": "Compact continuous visual tokens avoid pixel-dense re-encoding in MLLMs, but broader serving transfer is unclear.",
+      "first_checked_at": "2026-10-11T06:45:22+00:00",
+      "last_checked_at": "2026-10-11T06:45:22+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2412.13171-compressed-chain-of-thought-efficient-reasoning-through-dense-representa.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Chain-of-Visual-Thought: Teaching VLMs to See and Think Better with Continuous Visual Tokens"
+    },
+    "arXiv:2603.01928": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2603.01928",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2603.01928",
+        "arXiv:2603.01928"
+      ],
+      "reason": "LaST-VLA adopts physically grounded latent reasoning, but the abstract reports task quality rather than compute savings.",
+      "first_checked_at": "2026-10-11T06:45:23+00:00",
+      "last_checked_at": "2026-10-11T06:45:23+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2412.13171-compressed-chain-of-thought-efficient-reasoning-through-dense-representa.md",
+        "papers/inference/99-other-inference-systems/2025-2505.13417-adaptthink-reasoning-models-can-learn-when-to-think.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "LaST-VLA: Thinking in Latent Spatio-Temporal Space for Vision-Language-Action in Autonomous Driving"
+    },
+    "arXiv:2512.24426": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2512.24426",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2512.24426",
+        "arXiv:2512.24426"
+      ],
+      "reason": "CF-VLA enables extra reasoning only in challenging driving scenarios; adaptive compute is relevant but no cost benefit is measured.",
+      "first_checked_at": "2026-10-11T06:45:23+00:00",
+      "last_checked_at": "2026-10-11T06:45:23+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2505.13417-adaptthink-reasoning-models-can-learn-when-to-think.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Counterfactual VLA: Self-Reflective Vision-Language-Action Model with Adaptive Reasoning"
     }
   }
 }
