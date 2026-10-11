@@ -49,7 +49,7 @@ MoEで次に使われるexpertを**routing結果が確定する前に予測し�
 ### 2年前（2024-11〜2025-10）
 
 - **2024-12 · [DAOP: Data-Aware Offloading and Predictive Pre-Calculation for Efficient MoE Inference](2024-2501.10375-daop-data-aware-offloading-and-predictive-pre-calculation-for-efficient-moe-infe.md)**  
-  実装：[✓](https://github.com/ecolab-nus/DAOP) ・ リポジトリ内被引用：17  
+  実装：[✓](https://github.com/ecolab-nus/DAOP) ・ リポジトリ内被引用：18  
   しかし、GPUメモリが限られると専門家の重みをすべて常駐させられない。従来のCPU専門家実行方式Fiddlerに対し、DAOPは二つの最適化を加える。RTX A6000 48GBと18コアCPUの実機評価では、Fiddler比で専門家キャッシュ比率を変えた場合の平均生成速度改善が35.4%、一部条件では40.4%である。
 
 - **2025-02 · [Fate: Fast Edge Inference of Mixture-of-Experts Models via Cross-Layer Gate](2025-2502.12224-fate-fast-edge-inference-of-mixture-of-experts-models-via-cross-layer-gate.md)**  

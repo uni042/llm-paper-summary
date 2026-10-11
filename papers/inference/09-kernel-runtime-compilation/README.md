@@ -267,7 +267,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 ### 6年前（2020-11〜2021-10）
 
 - **2021-02 · [TurboTransformers: An Efficient GPU Serving System For Transformer Models](2021-2010.05680-turbotransformers-an-efficient-gpu-serving-system-for-transformer-models.md)**  
-  実装：[✓](https://github.com/Tencent/TurboTransformers) ・ リポジトリ内被引用：19  
+  実装：[✓](https://github.com/Tencent/TurboTransformers) ・ リポジトリ内被引用：20  
   提案システムは、GEMM（行列積）間の演算融合とSoftmax・LayerNormの並列縮約、系列長を受け取ってから行う中間領域の再利用、実測コストを使う動的計画法による要求バッチ分割を組み合わせる。
 
 - **2021-03 · [Random Feature Attention](2021-2103.02143-random-feature-attention.md)**  
@@ -283,7 +283,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 ### 8年前（2018-11〜2019-10）
 
 - **2019-06 · [Triton: An Intermediate Language and Compiler for Tiled Neural Network Computations](2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md)**  
-  実装：[✓](https://github.com/triton-lang/triton) ・ リポジトリ内被引用：67  
+  実装：[✓](https://github.com/triton-lang/triton) ・ リポジトリ内被引用：68  
   深層学習の演算を高速なGPUカーネルにするには、数式を記述するだけでは足りない。入力配列のどの部分をまとめて読み出し、何回再利用し、どのスレッドに配り、いつ共有メモリへ移すかによって性能が大きく変わる。既存のcuBLASやcuDNNが対象とする標準演算なら高性能な実装を利用できるが、新しい行列演算や不規則な参照を伴う演算では、そのまま使えない。
 
 - **2019-10 · [Structured Pruning of Large Language Models](2019-1910.04732-structured-pruning-of-large-language-models.md)**  

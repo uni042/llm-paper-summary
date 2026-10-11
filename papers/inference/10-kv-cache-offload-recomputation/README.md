@@ -44,6 +44,10 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
   実装：✓ ・ リポジトリ内被引用：6  
   CXL-SpecKVは低温KVをCXLメモリへ置き、FPGAで圧縮・展開とDMAを処理し、将来トークンを予測し、予測トークンに対応すると論文が説明する将来位置のKVを先読みすることで容量と転送待ちを減らす方式。論文は投機先読みを報告するが、公開実装ではLSTM重み読込・実DMA・予測トークン別address生成を確認できず性能寄与未検証。
 
+- **2025-11 · [KVSwap: Disk-aware KV Cache Offloading for Long-Context On-device Inference](2025-2511.11907-kvswap-disk-aware-kv-cache-offloading-for-long-context-on-device-inference.md)**  
+  実装：✓ ・ リポジトリ内被引用：6  
+  長文脈推論ではKVキャッシュが系列長とバッチ数に比例して増え、モデル重みを量子化してもメモリ容量壁が残る。サーバ向け方式はGPUメモリから大容量CPUメモリへ退避できるが、モバイルや組込み機器ではCPUとGPU/NPUが8〜32GB程度の統合メモリを共有し、逃がし先がない。
+
 - **2026-08 · [Cross-Model KV Cache Transfer in LLM Families: A Closed-Form Linear Mapping for Prefill Reuse](2026-2608.03893-cross-model-kv-cache-transfer.md)**  
   実装：✓ ・ リポジトリ内被引用：5  
   大小モデル間でKVを内容空間のヘッド単位線形写像へ変換し、受信モデルの長文再プリフィルを省く方式。対応層を選びRoPEを付け直して形状差による誤差を抑える。
@@ -55,10 +59,6 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
 - **2026-01 · [SuperInfer: SLO-Aware Rotary Scheduling and Memory Management for LLM Inference on Superchips](2026-2601.20309-superinfer-slo-aware-rotary-scheduling-and-memory-management-for-llm-inference-on-superchips.md)**  
   実装：[✓](https://github.com/Supercomputing-System-AI-Lab/SuperInfer) ・ リポジトリ内被引用：5  
   SuperInferはTTFT/TBTのSLO遅れを監視し、要求KVをGH200のHBMとCPU DRAM間で入れ替え、KVブロックを集約転送してヘッドオブライン待ちとC2C帯域浪費を抑える方式。
-
-- **2025-11 · [KVSwap: Disk-aware KV Cache Offloading for Long-Context On-device Inference](2025-2511.11907-kvswap-disk-aware-kv-cache-offloading-for-long-context-on-device-inference.md)**  
-  実装：✓ ・ リポジトリ内被引用：5  
-  長文脈推論ではKVキャッシュが系列長とバッチ数に比例して増え、モデル重みを量子化してもメモリ容量壁が残る。サーバ向け方式はGPUメモリから大容量CPUメモリへ退避できるが、モバイルや組込み機器ではCPUとGPU/NPUが8〜32GB程度の統合メモリを共有し、逃がし先がない。
 
 - **2026-05 · [SplitZip: Ultra Fast Lossless KV Compression for Disaggregated LLM Serving](2026-2605.01708-splitzip-lossless-kv-compression.md)**  
   実装：[✓](https://github.com/Intelligent-Microsystems-Lab/SplitZip) ・ リポジトリ内被引用：4  
@@ -415,11 +415,11 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
   複数RAG文書の事前計算KVを連結し、交差注意の影響が大きい5〜18%程度のトークンだけを層ごとに再計算する方式。SSD読出しと再計算を重ね、完全再計算比でTTFTを2.2〜3.3倍短縮した。
 
 - **2023-11 · [Prompt Cache: Modular Attention Reuse for Low-Latency Inference](2023-2311.04934-prompt-cache.md)**  
-  実装：[✓](https://github.com/yale-sys/prompt-cache) ・ リポジトリ内被引用：67  
+  実装：[✓](https://github.com/yale-sys/prompt-cache) ・ リポジトリ内被引用：68  
   複数要求で再利用されるプロンプト断片のKV状態をモジュール単位で事前計算し、位置整合を保って合成することで初回トークン遅延を削減する。
 
 - **2024-10 · [ShadowKV: KV Cache in Shadows for High-Throughput Long-Context LLM Inference](2024-2410.21465-shadowkv-low-rank-key-value-offload.md)**  
-  実装：[✓](https://github.com/ByteDance-Seed/ShadowKV) ・ リポジトリ内被引用：60  
+  実装：[✓](https://github.com/ByteDance-Seed/ShadowKV) ・ リポジトリ内被引用：61  
   ShadowKVはキーを低ランク要約と代表値としてGPUに残し、値だけCPUへ置いて重要チャンクの値を選択転送し、長文KVの容量とPCIe転送量を減らす方式。
 
 - **2024-03 · [FastDecode: High-Throughput GPU-Efficient LLM Serving using Heterogeneous Pipelines](2024-2403.11421-fastdecode-high-throughput-gpu-efficient-llm-serving-using-heterogeneous-pipelines.md)**  
@@ -435,7 +435,7 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
   InstAttention（プレプリント名InstInfer）は、長文脈・大バッチの大規模言語モデル推論で、鍵・値キャッシュをSSDへ退避するとGPUへの読戻し転送が律速になる問題を扱う。OPT-13BをNVIDIA A6000と組み合わせた評価では、従来のSSD退避システムFlexGenと比べて最大11.1倍の処理量を報告する。
 
 - **2024-10 · [Compute Or Load KV Cache? Why Not Both?](2024-2410.03065-cake-compute-or-load-kv-cache.md)**  
-  実装：✓ ・ リポジトリ内被引用：11  
+  実装：✓ ・ リポジトリ内被引用：12  
   Cakeは保存済み接頭辞KVの先頭をGPUで再計算し末尾をストレージから逆順読込みし、両方をチャンク並行化してTTFTを支配する計算・I/O待ちを減らす方式。
 
 - **2024-07 · [Aqa (Aqua): Network-Accelerated Memory Offloading for LLMs in Scale-Up GPU Domains](2024-2407.21255-aqua-network-accelerated-memory-offloading-for-llms-in-scale-up-gpu-domains.md)**  
