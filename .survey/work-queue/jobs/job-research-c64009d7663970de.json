@@ -23,8 +23,13 @@
   "schema_version": 1,
   "selection_reason": "Examines concrete KV retention/offload primitives in TensorRT-LLM, SGLang/HiCache, Dynamo and patched vLLM, providing a runtime-semantics view complementary to performance-centric cache work.",
   "source_url": "https://arxiv.org/abs/2606.01387",
-  "status": "ready",
+  "status": "superseded",
   "title": "Fail-Closed Lowering of Resident KV Claims onto LLM Serving Runtimes",
   "type": "research",
-  "workflow_version": 10
+  "workflow_version": 10,
+  "superseded_at": "2026-10-11T15:54:06+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2606.01387-fail-closed-lowering-of-resident-kv-claims-onto-llm-serving-runtimes.md",
+  "represented_canonical_id": "arXiv:2606.01387",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
