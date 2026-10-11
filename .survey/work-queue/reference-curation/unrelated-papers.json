@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-11T19:35:03+00:00",
-  "record_count": 11522,
+  "updated_at": "2026-10-11T20:41:09+00:00",
+  "record_count": 11530,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -164729,6 +164729,129 @@
         "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
       ],
       "title": "MamVIO: End-to-End Visual–Inertial Odometry via Mamba for Intelligent Vehicles"
+    },
+    "arXiv:2605.05951": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.05951",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2605.05951",
+        "PRIMARY:https://arxiv.org/abs/2605.05951v2",
+        "arXiv:2605.05951"
+      ],
+      "reason": "HaM-Worldはselective Mamba memoryを使うRL world-model/planning手法だが、memoryはsimulated control stateに対するものでLLM/serving inference efficiencyを対象としない。",
+      "first_checked_at": "2026-10-11T20:41:06+00:00",
+      "last_checked_at": "2026-10-11T20:41:06+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "title": "HaM-World: Soft-Hamiltonian World Models with Selective Memory for Planning"
+    },
+    "arXiv:2605.06650": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.06650",
+      "identity_tokens": [
+        "PRIMARY:https://arxiv.org/abs/2605.06650v2",
+        "arXiv:2605.06650"
+      ],
+      "reason": "POPOはpositive-only on-policy self-distillationでLLM reasoning abilityを改善するRLVR/post-training研究。効率化の対象は学習目的の変更でもなく、inference efficiencyの実証なし。",
+      "first_checked_at": "2026-10-11T20:41:07+00:00",
+      "last_checked_at": "2026-10-11T20:41:07+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+      ],
+      "title": "Improving Reasoning Ability via Asynchronous On-Policy Self-Distillation under Positive Rollouts"
+    },
+    "arXiv:2605.03430": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.03430",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2605.03430",
+        "PRIMARY:https://arxiv.org/abs/2605.03430v1",
+        "arXiv:2605.03430"
+      ],
+      "reason": "DynaTabは高次元tabular prediction向けfeature ordering/neural rewiringで、LLM inference/servingの対象技術ではない。",
+      "first_checked_at": "2026-10-11T20:41:07+00:00",
+      "last_checked_at": "2026-10-11T20:41:07+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "title": "DynaTab: Dynamic Feature Ordering as Neural Rewiring for High-Dimensional Tabular Data"
+    },
+    "arXiv:2605.03776": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.03776",
+      "identity_tokens": [
+        "PRIMARY:https://arxiv.org/abs/2605.03776v2",
+        "arXiv:2605.03776"
+      ],
+      "reason": "speech codecのintelligibility/listening effortとspeech enhancementの影響を測るperceptual evaluationで、推論system efficiencyを扱わない。",
+      "first_checked_at": "2026-10-11T20:41:08+00:00",
+      "last_checked_at": "2026-10-11T20:41:08+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2410.00037-moshi-a-speech-text-foundation-model-for-real-time-dialogue.md"
+      ],
+      "title": "Assessing the Impact of Noise and Speech Enhancement on the Intelligibility of Speech Codecs"
+    },
+    "DOI:10.1002/eqe.70197": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1002/eqe.70197",
+      "identity_tokens": [
+        "DOI:10.1002/eqe.70197",
+        "PRIMARY:https://onlinelibrary.wiley.com/doi/10.1002/eqe.70197"
+      ],
+      "reason": "PG-MAHはoffline training後のseismic structural-response predictionをMamba/attentionで効率化するが、応用・改善対象が固定構造物のearthquake engineering prediction。LLM serving技術と接続しない。",
+      "first_checked_at": "2026-10-11T20:41:08+00:00",
+      "last_checked_at": "2026-10-11T20:41:08+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "title": "Physics‐Guided Mamba‐Attention Network for Nonlinear Seismic Response of Structures"
+    },
+    "arXiv:2605.02392": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.02392",
+      "identity_tokens": [
+        "DOI:10.1145/3805712.3809576",
+        "PRIMARY:https://arxiv.org/abs/2605.02392v1",
+        "arXiv:2605.02392"
+      ],
+      "reason": "Fine-grained patent novelty workflowでLLMのpassage retrieval/reasoning精度と説明granularityを評価するpatent examination application。推論cost/latencyやruntime基盤の改善なし。",
+      "first_checked_at": "2026-10-11T20:41:08+00:00",
+      "last_checked_at": "2026-10-11T20:41:08+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+      ],
+      "title": "Is It Novel and Why? Fine-Grained Patent Novelty Prediction Based on Passage Retrieval"
+    },
+    "DOI:10.1109/icassp55912.2026.11460670": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/icassp55912.2026.11460670",
+      "identity_tokens": [
+        "DOI:10.1109/icassp55912.2026.11460670",
+        "PRIMARY:https://doi.org/10.1109/icassp55912.2026.11460670"
+      ],
+      "reason": "題名がsystem logsのanomaly detectionをSSM recurrent encodingで行うtask-specific detection modelを示す。対象はlog classification/contrastive representationで、LLM inference platform optimizationではないためtitle-screenした。",
+      "first_checked_at": "2026-10-11T20:41:08+00:00",
+      "last_checked_at": "2026-10-11T20:41:08+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "title": "Log Anomaly Detection via Hybrid State-Space Recurrent Encoding and Meta-Contrastive Learning"
+    },
+    "DOI:10.1109/icassp55912.2026.11461366": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/icassp55912.2026.11461366",
+      "identity_tokens": [
+        "DOI:10.1109/icassp55912.2026.11461366",
+        "PRIMARY:https://doi.org/10.1109/icassp55912.2026.11461366"
+      ],
+      "reason": "題名がelectric-vehicle charging demand prediction向けMamba-KAN hybrid networkを示す。energy forecasting applicationであり、LLM inference/servingとの接続がないためtitle-screenした。",
+      "first_checked_at": "2026-10-11T20:41:09+00:00",
+      "last_checked_at": "2026-10-11T20:41:09+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "title": "When Mamba Meets KAN: A Hybrid Learning Network for Electric Vehicle Charging Demand Prediction"
     }
   }
 }

@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-b8e93d45907c1e07-border-007",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.48550/arxiv.2605.03117",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.48550/arxiv.2605.03117",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2605.03117",
+      "PRIMARY:https://arxiv.org/abs/2605.03117v2",
+      "arXiv:2605.03117"
+    ],
+    "reason": "ARISEはQwen2.5-Coder agentへdata-flow slicingをsingle-call tool APIとして追加しfault localization successを改善する。agent tool/runtime architectureとの接点はあるが、efficiency gainは測定していない。",
+    "first_checked_at": "2026-10-11T20:41:06+00:00",
+    "last_checked_at": "2026-10-11T20:41:06+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "ARISE: A Repository-level Graph Representation and Toolset for Agentic Fault Localization and Program Repair"
+  },
+  "processed_at": "2026-10-11T20:41:06+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-b8e93d45907c",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-b8e93d45907c1e07-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2605.05951",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2605.05951",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2605.05951",
+      "PRIMARY:https://arxiv.org/abs/2605.05951v2",
+      "arXiv:2605.05951"
+    ],
+    "reason": "HaM-Worldはselective Mamba memoryを使うRL world-model/planning手法だが、memoryはsimulated control stateに対するものでLLM/serving inference efficiencyを対象としない。",
+    "first_checked_at": "2026-10-11T20:41:06+00:00",
+    "last_checked_at": "2026-10-11T20:41:06+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+    ],
+    "title": "HaM-World: Soft-Hamiltonian World Models with Selective Memory for Planning"
+  },
+  "processed_at": "2026-10-11T20:41:07+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-b8e93d45907c",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
