@@ -35,10 +35,15 @@
   "selection_reason": "小型LMで処理可能な要求を大規模LMへ回さず、トークン単位の不確実性から学習した保留判定を用いて推論費用と生成品質を両立する多モデル推論ルーティング研究。FLAN-T5で単純な系列不確実性集約より良い費用品質トレードオフを報告するため対象。",
   "semantic_scholar_id": "19e499d76a2e49574b499cd9ebd31304880d33d6",
   "source_url": "https://arxiv.org/abs/2404.10136",
-  "status": "ready",
+  "status": "superseded",
   "title": "Language Model Cascades: Token-level uncertainty and beyond",
   "type": "research",
   "venue": "International Conference on Learning Representations",
   "workflow_version": 10,
-  "year": 2024
+  "year": 2024,
+  "superseded_at": "2026-10-11T04:15:33+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2024-2404.10136-language-model-cascades-token-level-uncertainty-and-beyond.md",
+  "represented_canonical_id": "arXiv:2404.10136",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

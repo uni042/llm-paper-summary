@@ -35,10 +35,15 @@
   "selection_reason": "24B親モデルから層・隠れ幅・FFN次元を剪定し、蒸留と追加学習を反復するCascade Distillationで14B/8B/3Bの小型LLMを構築。3Bは26層、8Bは34層、14Bは40層で、事前学習計算と推論時モデル規模を減らす圧縮・学習効率化の直接的研究として対象。",
   "semantic_scholar_id": "6aa88dc32e65da7e530d8ba274fac6e13edfce9c",
   "source_url": "https://arxiv.org/abs/2601.08584",
-  "status": "ready",
+  "status": "superseded",
   "title": "Ministral 3",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-10-11T04:15:33+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2026-2601.08584-ministral-3.md",
+  "represented_canonical_id": "arXiv:2601.08584",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
