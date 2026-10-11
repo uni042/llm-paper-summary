@@ -1,35 +1,136 @@
 ---
-canonical_id: "DOI:10.1145/3466752.3480125"
-title: "Sanger: A Co-Design Framework for Enabling Sparse Attention using Reconfigurable Architecture"
-summary: "Sangerは注意行列を4ビット量子化したクエリ・キーから予測して動的に枝刈りし、非零要素を均等な小ブロックへ詰め直すソフトウェアと、スコア保持型データフロー・再構成可能なシストリック配列を組み合わせた疎注意専用アクセラレータである。BERT、GPT-2、BARTの評価でV100 GPUのFP16実装に対し各4.64倍、6.88倍、3.94倍の高速化を報告するが、専用ASICの結果は55nm合成とサイクル精密シミュレーションに基づき、現物の量産チップ実測ではない。"
-list_summary: "4ビット注意予測→動的枝刈り→pack/split負荷平準化→スコア保持型の再構成可能配列でSDDMMとSpMMを一体実行する疎注意アクセラレータ。"
+canonical_id: DOI:10.1145/3466752.3480125
+title: 'Sanger: A Co-Design Framework for Enabling Sparse Attention using Reconfigurable Architecture'
+summary: Sangerは注意行列を4ビット量子化したクエリ・キーから予測して動的に枝刈りし、非零要素を均等な小ブロックへ詰め直すソフトウェアと、スコア保持型データフロー・再構成可能なシストリック配列を組み合わせた疎注意専用アクセラレータである。BERT、GPT-2、BARTの評価でV100 GPUのFP16実装に対し各4.64倍、6.88倍、3.94倍の高速化を報告するが、専用ASICの結果は55nm合成とサイクル精密シミュレーションに基づき、現物の量産チップ実測ではない。
+list_summary: 4ビット注意予測→動的枝刈り→pack/split負荷平準化→スコア保持型の再構成可能配列でSDDMMとSpMMを一体実行する疎注意アクセラレータ。
 authors:
-  - Liqiang Lu
-  - Yicheng Jin
-  - Hangrui Bi
-  - Zizhang Luo
-  - Peng Li
-  - Tao Wang
-  - Yun Liang
-published: "2021-10-18"
-publication: "MICRO '21: 54th Annual IEEE/ACM International Symposium on Microarchitecture, pp. 977–991"
-publication_type: "conference"
-publication_status: "published"
-source: "https://doi.org/10.1145/3466752.3480125"
+- Liqiang Lu
+- Yicheng Jin
+- Hangrui Bi
+- Zizhang Luo
+- Peng Li
+- Tao Wang
+- Yun Liang
+published: '2021-10-18'
+publication: 'MICRO ''21: 54th Annual IEEE/ACM International Symposium on Microarchitecture, pp. 977–991'
+publication_type: conference
+publication_status: published
+source: https://doi.org/10.1145/3466752.3480125
 sources:
-  - "https://doi.org/10.1145/3466752.3480125"
-  - "https://liqianglu-zju.github.io/files/conference/2021/MICRO_2021_Sanger.pdf"
-  - "https://github.com/pku-liang/Sanger"
-implementation: "著者公開のpku-liang/SangerはBERT/GPT-2/BARTの動的疎注意アルゴリズムと再現用設定・実行スクリプトを収録する。専用アクセラレータはChiselからVerilogを生成し、UMC 55nmの合成・配置配線とサイクル精密モデルで評価した。"
-code: "https://github.com/pku-liang/Sanger"
-last_checked: "2026-10-11"
-worker_id: "scheduled-chat-45"
-worker_completed_at: "2026-10-11T11:50:10+09:00"
-worker_run_key: "20261011-1145-scheduled-chat-45/r01"
-reference_main_sha: "542f3396ef2e3718d91cf685d5e239d6310356b1"
+- https://doi.org/10.1145/3466752.3480125
+- https://liqianglu-zju.github.io/files/conference/2021/MICRO_2021_Sanger.pdf
+- https://github.com/pku-liang/Sanger
+implementation: 著者公開のpku-liang/SangerはBERT/GPT-2/BARTの動的疎注意アルゴリズムと再現用設定・実行スクリプトを収録する。専用アクセラレータはChiselからVerilogを生成し、UMC 55nmの合成・配置配線とサイクル精密モデルで評価した。
+code: https://github.com/pku-liang/Sanger
+last_checked: '2026-10-11'
+worker_id: scheduled-chat-45
+worker_completed_at: '2026-10-11T11:50:10+09:00'
+worker_run_key: 20261011-1145-scheduled-chat-45/r01
+reference_main_sha: 542f3396ef2e3718d91cf685d5e239d6310356b1
 research_job_id: null
 last_audited: null
 audit_version: 0
+references:
+- canonical_id: DOI:10.1145/2228360.2228584
+  doi: 10.1145/2228360.2228584
+- canonical_id: arXiv:2004.05150
+  arxiv_id: '2004.05150'
+- canonical_id: DOI:10.1145/2541940.2541967
+  doi: 10.1145/2541940.2541967
+- canonical_id: DOI:10.1109/micro.2014.58
+  doi: 10.1109/micro.2014.58
+- canonical_id: DOI:10.1145/3007787.3001177
+  doi: 10.1145/3007787.3001177
+- canonical_id: arXiv:1807.07928
+  arxiv_id: '1807.07928'
+  doi: 10.1109/jetcas.2019.2910232
+- canonical_id: arXiv:1904.10509
+  arxiv_id: '1904.10509'
+- canonical_id: DOI:10.1145/3297858.3304041
+  doi: 10.1145/3297858.3304041
+- canonical_id: DOI:10.1109/micro.2018.00024
+  doi: 10.1109/micro.2018.00024
+- canonical_id: DOI:10.1145/2749469.2750389
+  doi: 10.1145/2749469.2750389
+- canonical_id: DOI:10.5555/3433701.3433722
+  doi: 10.5555/3433701.3433722
+- canonical_id: DOI:10.1109/hpca47549.2020.00035
+  doi: 10.1109/hpca47549.2020.00035
+- canonical_id: DOI:10.1145/3020078.3021745
+  doi: 10.1145/3020078.3021745
+- canonical_id: DOI:10.1109/isca.2016.30
+  doi: 10.1109/isca.2016.30
+- canonical_id: DOI:10.1145/3352460.3358283
+  doi: 10.1145/3352460.3358283
+- canonical_id: DOI:10.1145/3352460.3358286
+  doi: 10.1145/3352460.3358286
+- canonical_id: arXiv:2001.04451
+- canonical_id: DOI:10.1145/3297858.3304028
+  doi: 10.1145/3297858.3304028
+- canonical_id: DOI:10.1109/asap.2019.00-31
+  doi: 10.1109/asap.2019.00-31
+- canonical_id: DOI:10.1145/3173162.3173176
+  doi: 10.1145/3173162.3173176
+- canonical_id: DOI:10.1145/3352460.3358295
+  doi: 10.1145/3352460.3358295
+- canonical_id: DOI:10.18653/v1/2020.acl-main.703
+  doi: 10.18653/v1/2020.acl-main.703
+- canonical_id: arXiv:2007.08563
+  doi: 10.1145/3370748.3406567
+- canonical_id: DOI:10.1145/2694344.2694358
+  doi: 10.1145/2694344.2694358
+- canonical_id: DOI:10.1109/isca52012.2021.00062
+  doi: 10.1109/isca52012.2021.00062
+- canonical_id: DOI:10.1145/3195970.3196120
+  doi: 10.1145/3195970.3196120
+- canonical_id: DOI:10.1109/fccm.2019.00013
+  doi: 10.1109/fccm.2019.00013
+- canonical_id: DOI:10.1145/2507157.2507163
+  doi: 10.1145/2507157.2507163
+- canonical_id: DOI:10.1109/hpca.2018.00067
+  doi: 10.1109/hpca.2018.00067
+- canonical_id: DOI:10.1145/2485922.2485925
+  doi: 10.1145/2485922.2485925
+- canonical_id: DOI:10.1109/hpca47549.2020.00015
+  doi: 10.1109/hpca47549.2020.00015
+- canonical_id: DOI:10.18653/v1/d16-1264
+  doi: 10.18653/v1/d16-1264
+- canonical_id: arXiv:2003.05997
+- canonical_id: DOI:10.1145/2833179.2833183
+  doi: 10.1145/2833179.2833183
+- canonical_id: DOI:10.1109/isca.2018.00068
+  doi: 10.1109/isca.2018.00068
+- canonical_id: DOI:10.1109/hpca47549.2020.00062
+  doi: 10.1109/hpca47549.2020.00062
+- canonical_id: arXiv:2009.06732
+  arxiv_id: '2009.06732'
+- canonical_id: DOI:10.5555/3295222.3295349
+  doi: 10.5555/3295222.3295349
+- canonical_id: DOI:10.18653/v1/w18-5446
+  doi: 10.18653/v1/w18-5446
+- canonical_id: arXiv:2012.09852
+  doi: 10.1109/hpca51647.2021.00018
+- canonical_id: DOI:10.1109/apccas.2018.8605654
+  doi: 10.1109/apccas.2018.8605654
+- canonical_id: DOI:10.1109/cvpr.2018.00813
+  doi: 10.1109/cvpr.2018.00813
+- canonical_id: DOI:10.18653/v1/2020.emnlp-demos.6
+  doi: 10.18653/v1/2020.emnlp-demos.6
+- canonical_id: DOI:10.1109/isca52012.2021.00086
+  doi: 10.1109/isca52012.2021.00086
+- canonical_id: DOI:10.1145/3307650.3322271
+  doi: 10.1145/3307650.3322271
+- canonical_id: arXiv:2007.14062
+  arxiv_id: '2007.14062'
+- canonical_id: DOI:10.1109/micro.2016.7783723
+  doi: 10.1109/micro.2016.7783723
+- canonical_id: DOI:10.1109/micro.2018.00011
+  doi: 10.1109/micro.2018.00011
+- canonical_id: DOI:10.1145/3352460.3358269
+  doi: 10.1145/3352460.3358269
+references_checked_at: '2026-10-11'
+references_source: crossref-deposited-reference-metadata
+references_total: 70
 ---
 
 # Sanger：動的疎注意を高速化するソフトウェア・ハードウェア協調設計
