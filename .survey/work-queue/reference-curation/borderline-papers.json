@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-11T05:58:38+00:00",
-  "record_count": 4630,
+  "updated_at": "2026-10-11T06:24:39+00:00",
+  "record_count": 4632,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -70795,6 +70795,36 @@
       ],
       "borderline_recheck_count": 0,
       "title": "CogScale: Scalable Benchmark for Sequence Processing"
+    },
+    "arXiv:2605.17281": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.17281",
+      "identity_tokens": [
+        "arXiv:2605.17281"
+      ],
+      "reason": "LLM agentのAPI artifact有効期限・byte integrity benchmarkで運用信頼性は扱うがinference efficiencyとの関係は薄い。",
+      "first_checked_at": "2026-10-11T06:24:39+00:00",
+      "last_checked_at": "2026-10-11T06:24:39+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "ContractBench: Can LLM Agents Preserve Observation Contracts?"
+    },
+    "arXiv:2605.15608": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.15608",
+      "identity_tokens": [
+        "arXiv:2605.15608"
+      ],
+      "reason": "optimal controlからTransformer型explicit inference algorithmを導く理論研究。推論architectureには直接触れるが実装効率・serving評価がなくborderline。",
+      "first_checked_at": "2026-10-11T06:24:39+00:00",
+      "last_checked_at": "2026-10-11T06:24:39+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Transformer-like Inference from Optimal Control"
     }
   }
 }
