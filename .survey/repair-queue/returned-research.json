@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-11T08:51:11+00:00",
+  "generated_at": "2026-10-11T08:56:41+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -2215,38 +2215,11 @@
       "worker_run_key": "20261011-1605-scheduled-chat-00/r01"
     },
     {
-      "canonical_id": "arXiv:2305.17126",
-      "title": "Large Language Models as Tool Makers",
-      "source_url": "https://arxiv.org/html/2305.17126v2",
-      "returned_at": "2026-10-11T08:51:11+00:00",
-      "return_count": 7,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 366 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 4127,
-        "body_paragraphs": 22,
-        "method_chars": 1760,
-        "method_paragraphs": 9,
-        "evaluation_chars": 366,
-        "limitation_chars": 625,
-        "insufficiency_flags": [
-          "評価説明量 366 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_aa0338eac6d081919ac0f359689315b0--2023-2305.17126-latm-functional-cache-quality-repair-20261011-1645-scheduled-chat-45-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_aa0338eac6d081919ac0f359689315b0--2023-2305.17126-latm-functional-cache-quality-repair-20261011-1645-scheduled-chat-45-r01.json",
-      "worker_run_key": "20261011-1645-scheduled-chat-45/r01"
-    },
-    {
       "canonical_id": "arXiv:2601.04719",
       "title": "GPU-Accelerated INT8 Quantization for KV Cache Compression in Large Language Models",
       "source_url": "https://arxiv.org/abs/2601.04719",
-      "returned_at": "2026-10-11T08:51:11+00:00",
-      "return_count": 2,
+      "returned_at": "2026-10-11T08:56:40+00:00",
+      "return_count": 3,
       "assigned_worker": "scheduled-chat-30",
       "reason": "blocked_quality",
       "failures": [
@@ -2264,9 +2237,36 @@
           "評価説明量 197 < 500"
         ]
       },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_7646e7197cd081918fe852095c08790b--2026-2601.04719-int8-kv-cache-quality-repair-20261011-1726-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_7646e7197cd081918fe852095c08790b--2026-2601.04719-int8-kv-cache-quality-repair-20261011-1726-scheduled-chat-30-r01.json",
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-adc9b3eddf59--libfile_7646e7197cd081918fe852095c08790b--2026-2601.04719-int8-kv-cache-quality-repair-20261011-1726-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-adc9b3eddf59--libfile_7646e7197cd081918fe852095c08790b--2026-2601.04719-int8-kv-cache-quality-repair-20261011-1726-scheduled-chat-30-r01.json",
       "worker_run_key": "20261011-1726-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2305.17126",
+      "title": "Large Language Models as Tool Makers",
+      "source_url": "https://arxiv.org/html/2305.17126v2",
+      "returned_at": "2026-10-11T08:56:41+00:00",
+      "return_count": 8,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 366 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 4127,
+        "body_paragraphs": 22,
+        "method_chars": 1760,
+        "method_paragraphs": 9,
+        "evaluation_chars": 366,
+        "limitation_chars": 625,
+        "insufficiency_flags": [
+          "評価説明量 366 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-fe426f30cd0a--libfile_aa0338eac6d081919ac0f359689315b0--2023-2305.17126-latm-functional-cache-quality-repair-20261011-1645-scheduled-chat-45-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-fe426f30cd0a--libfile_aa0338eac6d081919ac0f359689315b0--2023-2305.17126-latm-functional-cache-quality-repair-20261011-1645-scheduled-chat-45-r01.json",
+      "worker_run_key": "20261011-1645-scheduled-chat-45/r01"
     }
   ]
 }
