@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-10-11T13:11:11.194102+00:00",
+  "generated_at": "2026-10-11T13:28:16.804701+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 13,
+  "count": 8,
   "worker_counts": {
-    "scheduled-chat-00": 5,
-    "scheduled-chat-30": 4,
-    "scheduled-chat-45": 4
+    "scheduled-chat-00": 2,
+    "scheduled-chat-30": 3,
+    "scheduled-chat-45": 3
   },
   "entries": [
     {
@@ -19,7 +19,7 @@
       "file_bytes": 9952,
       "source_sha256": "8b78672dfd3367b0494e3c7598b7da2601580cb6b08f4395783b6fda1b12e681",
       "source_git_blob_sha": "c799f4294b018595eed9c724fc6829cf8353f2d3",
-      "assigned_worker": "scheduled-chat-30",
+      "assigned_worker": "scheduled-chat-00",
       "semantic_status": "pending",
       "mechanical_status": "FAIL",
       "japanese_ratio": 0.8674,
@@ -41,7 +41,7 @@
       "file_bytes": 10421,
       "source_sha256": "b567ecd24a6b929729be201f7e450f810d2dc44b6e3a93a7bdcdc5e8a9e40067",
       "source_git_blob_sha": "71fd61aae1645a21c651c0c1fd2998b179dd9bbb",
-      "assigned_worker": "scheduled-chat-45",
+      "assigned_worker": "scheduled-chat-00",
       "semantic_status": "pending",
       "mechanical_status": "FAIL",
       "japanese_ratio": 0.789025,
@@ -150,53 +150,6 @@
       "warnings": []
     },
     {
-      "path": "papers/inference/07-kv-cache-optimization-compression/2026-2607.05061-kvpop-key-value-cache-compression-with-predictive-online-pruning.md",
-      "canonical_id": "arXiv:2607.05061",
-      "title": "KVpop：将来注意を用いた予測型オンラインKVキャッシュ枝刈り",
-      "file_bytes": 13165,
-      "source_sha256": "92a4eb827ebd4b0ea71e41b93c0fb1d5747021cd850fa6c1ffc7a18f908bc520",
-      "source_git_blob_sha": "8a5704b135cb8f29a6bfb4dd982c1f8ff2a4fe30",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 1.0,
-      "quality_metrics": {
-        "body_chars": 2464,
-        "method_chars": 1017,
-        "evaluation_chars": 285,
-        "limitation_chars": 276
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 評価説明量 285 < 500"
-      ],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2411.16102-blendserve-optimizing-offline-inference-for-auto-regressive-large-models.md",
-      "canonical_id": "arXiv:2411.16102",
-      "title": "BlendServe: Optimizing Offline Inference for Auto-regressive Large Models with Resource-aware Batching",
-      "file_bytes": 13393,
-      "source_sha256": "4098a79795acc0906cb2f975042e2dad67671bb5250fa64bc0d7e70b6bd4e62f",
-      "source_git_blob_sha": "fd1b5f76537784c0fe7a5d6bae4fb24bd645320a",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.788144,
-      "quality_metrics": {
-        "body_chars": 3209,
-        "method_chars": 608,
-        "evaluation_chars": 1124,
-        "limitation_chars": 242
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 手法説明量 608 < 700",
-        "16KB未満再監査: 日本語比率 78.8% < 80%"
-      ],
-      "warnings": [
-        "日本語比率 78.8% < 警告基準 80%"
-      ]
-    },
-    {
       "path": "papers/training/03-pipeline-parallel-modular-training/2026-2608.07974-zerolock-concurrent-memory-efficient-llm-training-via-modular-update-decoupling.md",
       "canonical_id": "arXiv:2608.07974",
       "title": "ZeroLock: Concurrent Memory-Efficient LLM Training via Modular Update Decoupling",
@@ -221,26 +174,6 @@
       ]
     },
     {
-      "path": "papers/inference/99-other-inference-systems/2023-2310.02170-a-dynamic-llm-powered-agent-network-for-task-oriented-agent-collaboratio.md",
-      "canonical_id": "arXiv:2310.02170",
-      "title": "A Dynamic LLM-Powered Agent Network for Task-Oriented Agent Collaboration",
-      "file_bytes": 14531,
-      "source_sha256": "ab8dea950a75e5baccaba085f72e06970d88663bed73cda944180c14ee6ef871",
-      "source_git_blob_sha": "ab802dd006e0a9668e804e3ecc66a767f0cebe65",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.908075,
-      "quality_metrics": {
-        "body_chars": 3525,
-        "method_chars": 771,
-        "evaluation_chars": 1222,
-        "limitation_chars": 391
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
       "path": "papers/inference/07-kv-cache-optimization-compression/2026-2608.13263-vtoken-token-level-virtualization-for-reclaimable-kv-caches.md",
       "canonical_id": "arXiv:2608.13263",
       "title": "vToken: Token-Level Virtualization for Reclaimable KV Caches",
@@ -256,50 +189,6 @@
         "method_chars": 1009,
         "evaluation_chars": 548,
         "limitation_chars": 244
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/05-speculative-decoding-moe/2026-2608.19147-pre-compiled-pipeline-shards-for-distributed-llm-inference-on-intel-ai-p.md",
-      "canonical_id": "arXiv:2608.19147",
-      "title": "Pre-Compiled Pipeline Shards for Distributed LLM Inference on Intel AI PC Fleets",
-      "file_bytes": 14763,
-      "source_sha256": "095fd62923d1fc4dafe836ca7b217882cf45f17643c7f7a58f692f4dbf94cfcc",
-      "source_git_blob_sha": "3ca10264d8332a9a0894c177ab2c422ba98fc3c8",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.725798,
-      "quality_metrics": {
-        "body_chars": 5228,
-        "method_chars": 1694,
-        "evaluation_chars": 1958,
-        "limitation_chars": 570
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 日本語比率 72.6% < 80%"
-      ],
-      "warnings": [
-        "日本語比率 72.6% < 警告基準 80%"
-      ]
-    },
-    {
-      "path": "papers/survey/06-long-context-serving/2024-2405.11299-cap-principle-long-context-llm-serving.md",
-      "canonical_id": "arXiv:2405.11299",
-      "title": "The CAP Principle for LLM Serving: A Survey of Long-Context Large Language Model Serving",
-      "file_bytes": 14858,
-      "source_sha256": "4bdfaaa7ed09365fd1c5c76825275e507b2e12816fc36517b2f95fd585b4856a",
-      "source_git_blob_sha": "08983a9c6ea4ecb7cd87b5a64bc677c109823a8b",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.973752,
-      "quality_metrics": {
-        "body_chars": 2601,
-        "method_chars": 1084,
-        "evaluation_chars": 248,
-        "limitation_chars": 192
       },
       "mechanical_failures": [],
       "warnings": []
