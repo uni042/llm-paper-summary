@@ -35,10 +35,15 @@
   "selection_reason": "Adaptive Retrievalがsubject entity popularityに基づき必要なqueryだけ外部検索し、parametric/non-parametric memoryを動的に切り替える。本文でPopQA性能を最大10%改善しつつGPT-3 API costを約半減する推論時conditional retrievalを評価しており、RAG推論コスト最適化として直接対象。",
   "semantic_scholar_id": "c6ee979c2da4b55a8486abae4cd720422ab09b26",
   "source_url": "https://arxiv.org/abs/2212.10511",
-  "status": "ready",
+  "status": "superseded",
   "title": "When Not to Trust Language Models: Investigating Effectiveness of Parametric and Non-Parametric Memories",
   "type": "research",
   "venue": "Annual Meeting of the Association for Computational Linguistics",
   "workflow_version": 10,
-  "year": 2022
+  "year": 2022,
+  "superseded_at": "2026-10-11T06:55:03+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2023-2212.10511-when-not-to-trust-language-models-investigating-effectiveness-of-paramet.md",
+  "represented_canonical_id": "arXiv:2212.10511",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
