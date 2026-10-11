@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-11T17:49:18+00:00",
-  "record_count": 4657,
+  "updated_at": "2026-10-11T18:49:06+00:00",
+  "record_count": 4658,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -71182,6 +71182,19 @@
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "On the Utility and Factual Reliability of Pruned Mixture-of-Experts Models in the Biomedical Domain"
+    },
+    "arXiv:2604.05688": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2604.05688",
+      "identity_tokens": [
+        "arXiv:2604.05688"
+      ],
+      "reason": "arXiv一次要旨による事前判定。既存のQwen3-8BおよびQwen3-30B-A3Bの注意機構をMLAまたはGateSWAへ置換し、層別教師強制・中間活性監督とモデル全体の蒸留によって再学習する方式。目的はKV容量・帯域削減による推論効率改善だが、主要技術の中心は既学習モデルの構造変換と追加蒸留学習であり、現行サーベイで凍結中の学習主体研究と推論基盤最適化の境界に位置する。実機での推論効率改善は関連性があるため無関係と断定せずborderlineに保留。",
+      "first_checked_at": "2026-10-11T18:49:06+00:00",
+      "last_checked_at": "2026-10-11T18:49:06+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Attention Editing: A Versatile Framework for Cross-Architecture Attention Conversion"
     }
   }
 }
