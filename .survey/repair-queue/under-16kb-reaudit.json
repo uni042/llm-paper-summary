@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-10-11T03:04:52.872349+00:00",
+  "generated_at": "2026-10-11T04:00:11.167887+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 27,
+  "count": 18,
   "worker_counts": {
-    "scheduled-chat-00": 9,
-    "scheduled-chat-30": 9,
-    "scheduled-chat-45": 9
+    "scheduled-chat-00": 6,
+    "scheduled-chat-30": 6,
+    "scheduled-chat-45": 6
   },
   "entries": [
     {
@@ -19,7 +19,7 @@
       "file_bytes": 9952,
       "source_sha256": "8b78672dfd3367b0494e3c7598b7da2601580cb6b08f4395783b6fda1b12e681",
       "source_git_blob_sha": "c799f4294b018595eed9c724fc6829cf8353f2d3",
-      "assigned_worker": "scheduled-chat-45",
+      "assigned_worker": "scheduled-chat-30",
       "semantic_status": "pending",
       "mechanical_status": "FAIL",
       "japanese_ratio": 0.8674,
@@ -112,7 +112,7 @@
       "file_bytes": 12280,
       "source_sha256": "5c5ebcda8aa68c601f22288eac3ffe4a616c59de11a4f1b5cb0d264e165f9a69",
       "source_git_blob_sha": "aa2f4ec004900e7292d58e5da54cdea2b429c351",
-      "assigned_worker": "scheduled-chat-00",
+      "assigned_worker": "scheduled-chat-30",
       "semantic_status": "pending",
       "mechanical_status": "FAIL",
       "japanese_ratio": 0.943721,
@@ -125,26 +125,6 @@
       "mechanical_failures": [
         "16KB未満再監査: 評価説明量 270 < 500"
       ],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2024-2409.17422-discovering-the-gems-in-early-layers-accelerating-long-context-llms-with.md",
-      "canonical_id": "arXiv:2409.17422",
-      "title": "Discovering the Gems in Early Layers: Accelerating Long-Context LLMs with 1000x Input Token Reduction",
-      "file_bytes": 12861,
-      "source_sha256": "3a0921d7477f5612ef0638194d2e3f984fef5cb1c21fcf272582136fcc415473",
-      "source_git_blob_sha": "510fb6fc19c8cbe94de3feb6ede6a3cab8641ea0",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.887255,
-      "quality_metrics": {
-        "body_chars": 3528,
-        "method_chars": 1134,
-        "evaluation_chars": 994,
-        "limitation_chars": 323
-      },
-      "mechanical_failures": [],
       "warnings": []
     },
     {
@@ -185,28 +165,6 @@
         "limitation_chars": 0
       },
       "mechanical_failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/10-kv-cache-offload-recomputation/2026-2604.13226-kv-packet-recomputation-free-context-independent-kv-caching-for-llms.md",
-      "canonical_id": "arXiv:2604.13226",
-      "title": "KV Packet: Recomputation-Free Context-Independent KV Caching for LLMs",
-      "file_bytes": 12963,
-      "source_sha256": "9458dfe78c95fedddfb11249d244993418823b9a7d5d57b10fea9728aca37f89",
-      "source_git_blob_sha": "1dfa28000343b47a3e32e8f15982259c52b4c933",
-      "assigned_worker": "scheduled-chat-45",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.976736,
-      "quality_metrics": {
-        "body_chars": 2838,
-        "method_chars": 1248,
-        "evaluation_chars": 396,
-        "limitation_chars": 223
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 評価説明量 396 < 500"
-      ],
       "warnings": []
     },
     {
@@ -299,50 +257,6 @@
       ]
     },
     {
-      "path": "papers/inference/99-other-inference-systems/2023-2312.08583-zeroquant-4-2-redefining-llms-quantization-with-a-new-fp6-centric-strate.md",
-      "canonical_id": "arXiv:2312.08583",
-      "title": "ZeroQuant(4+2): Redefining LLMs Quantization with a New FP6-Centric Strategy for Diverse Generative Tasks",
-      "file_bytes": 13512,
-      "source_sha256": "6a34fe511c6182487837a6cdad656711d9e88c56b4cda533d9639093e989dd9f",
-      "source_git_blob_sha": "374b08f9db3de3351ba1d24645c0f2b07aa09e99",
-      "assigned_worker": "scheduled-chat-45",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 1.0,
-      "quality_metrics": {
-        "body_chars": 2928,
-        "method_chars": 758,
-        "evaluation_chars": 1018,
-        "limitation_chars": 185
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/15-inference-simulation-emulation/2024-2411.17651-apex-an-extensible-and-dynamism-aware-simulator-for-automated-parallel-e.md",
-      "canonical_id": "arXiv:2411.17651",
-      "title": "APEX: An Extensible and Dynamism-Aware Simulator for Automated Parallel Execution in LLM Serving",
-      "file_bytes": 13693,
-      "source_sha256": "6e928cbefa3c1f23ad01b963211038fe6619a086b22576379a3ce460138092ab",
-      "source_git_blob_sha": "0b43f79017292a9acd86a10748f8774dd201e138",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.734064,
-      "quality_metrics": {
-        "body_chars": 4322,
-        "method_chars": 1305,
-        "evaluation_chars": 1077,
-        "limitation_chars": 359
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 日本語比率 73.4% < 80%"
-      ],
-      "warnings": [
-        "日本語比率 73.4% < 警告基準 80%"
-      ]
-    },
-    {
       "path": "papers/inference/07-kv-cache-optimization-compression/2025-2510.23649-efficient-low-rank-attention-for-long-context-inference-in-large-languag.md",
       "canonical_id": "arXiv:2510.23649",
       "title": "Efficient Low Rank Attention for Long-Context Inference in Large Language Models",
@@ -362,71 +276,6 @@
       "mechanical_failures": [
         "16KB未満再監査: 評価説明量 0 < 500"
       ],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/16-weight-quantization-compression/2024-2402.10631-bitdistiller-unleashing-the-potential-of-sub-4-bit-llms-via-self-distill.md",
-      "canonical_id": "arXiv:2402.10631",
-      "title": "BitDistiller: Unleashing the Potential of Sub-4-Bit LLMs via Self-Distillation",
-      "file_bytes": 13858,
-      "source_sha256": "7158a6d74d7cea90ed4047e96eb763db620d19d7c010fc134f0c4e40fa530438",
-      "source_git_blob_sha": "7fa98fa1b734a3368e007663a863f2ec88707cf1",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.901954,
-      "quality_metrics": {
-        "body_chars": 4284,
-        "method_chars": 1113,
-        "evaluation_chars": 1567,
-        "limitation_chars": 425
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2026-2606.26650-cat-q-cost-efficient-and-accurate-ternary-quantization-for-llms.md",
-      "canonical_id": "arXiv:2606.26650",
-      "title": "CAT-Q: Cost-efficient and Accurate Ternary Quantization for LLMs",
-      "file_bytes": 14069,
-      "source_sha256": "ed38b46a2340b7610cb8f9c2f337a1cbd1bc72a1ce0cc4e93bb9201593828e1f",
-      "source_git_blob_sha": "0342be9638eca818acf53b37cdd9b0ef9b317401",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.701364,
-      "quality_metrics": {
-        "body_chars": 3720,
-        "method_chars": 1105,
-        "evaluation_chars": 254,
-        "limitation_chars": 535
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 評価説明量 254 < 500",
-        "16KB未満再監査: 日本語比率 70.1% < 80%"
-      ],
-      "warnings": [
-        "日本語比率 70.1% < 警告基準 80%"
-      ]
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2024-2401.15947-moe-llava-mixture-of-experts-for-large-vision-language-models.md",
-      "canonical_id": "arXiv:2401.15947",
-      "title": "MoE-LLaVA: Mixture of Experts for Large Vision-Language Models",
-      "file_bytes": 14394,
-      "source_sha256": "f26c824461f7a200c7e71d4e8cbcc172965cba0b81e93e62e86524215db3aab0",
-      "source_git_blob_sha": "eae160dded8bec4ffe311138f23d9ce09a52326e",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.818626,
-      "quality_metrics": {
-        "body_chars": 3613,
-        "method_chars": 1164,
-        "evaluation_chars": 1110,
-        "limitation_chars": 329
-      },
-      "mechanical_failures": [],
       "warnings": []
     },
     {
@@ -553,46 +402,6 @@
         "method_chars": 1131,
         "evaluation_chars": 539,
         "limitation_chars": 0
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2026-2609.21672-accelerating-dense-llms-via-l0-regularized-mixture-of-experts.md",
-      "canonical_id": "arXiv:2609.21672",
-      "title": "Accelerating Dense LLMs via L0-regularized Mixture-of-Experts",
-      "file_bytes": 15081,
-      "source_sha256": "7981361197cbb9c8fef1b0e61db588f480a4537895bb9d2fbc0c1b43b3c9f2ac",
-      "source_git_blob_sha": "e5066fe1cb43edd20fa91989999e11a0b89437cb",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.946069,
-      "quality_metrics": {
-        "body_chars": 4116,
-        "method_chars": 1322,
-        "evaluation_chars": 1313,
-        "limitation_chars": 437
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/07-kv-cache-optimization-compression/2026-2607.24555-locks.md",
-      "canonical_id": "arXiv:2607.24555",
-      "title": "LOCKS: Page-Local Compact Key Summaries for Efficient Long-Context Decoding",
-      "file_bytes": 16028,
-      "source_sha256": "2bb33fe00164d3e26c3cc0d0f3fc4eda67cc33cd69a6337d3f02907d5e1001b1",
-      "source_git_blob_sha": "c62d28bb29fe9060821c7264d2f01053cdeafaac",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.981093,
-      "quality_metrics": {
-        "body_chars": 3034,
-        "method_chars": 1081,
-        "evaluation_chars": 649,
-        "limitation_chars": 245
       },
       "mechanical_failures": [],
       "warnings": []
