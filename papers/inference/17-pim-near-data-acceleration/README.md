@@ -123,5 +123,5 @@
 
 - **2022-04 · [TransPIM: A Memory-based Acceleration via Software-Hardware Co-Design for Transformer](2022-392657209cc9-transpim-a-memory-based-acceleration-via-software-hardware-co-design-for.md)**  
   実装：✓ ・ リポジトリ内被引用：10  
-  TransPIMは、Transformerを高帯域メモリ（High Bandwidth メモリ; HBM）上のメモリ内処理（Processing-in-メモリ; PIM）とニアメモリ計算（Near-メモリ Computing; NMC）で高速化するため、データ配置・実行順とHBM内部ハードウェアを一体で設計したアクセラレータである。
+  高帯域メモリ（High Bandwidth メモリ、HBM）の近くへ演算を移すメモリ内処理（Processing-in-メモリ、PIM）やメモリ近傍計算（Near-メモリ Computing、NMC）は有力だが、従来の方式をそのままTransformerへ適用しても層間のデータ再配置や注意機構の削減演算が律速になる。
 <!-- survey:auto:end -->

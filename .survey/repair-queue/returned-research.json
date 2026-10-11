@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-11T02:55:40+00:00",
+  "generated_at": "2026-10-11T03:03:25+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 122,
+  "count": 121,
   "entries": [
     {
       "canonical_id": "arXiv:2606.24506",
@@ -1709,31 +1709,6 @@
       "worker_run_key": "interactive-20261008-bottom-up-reaudit-r2-2608.07974"
     },
     {
-      "canonical_id": "arXiv:2312.11462",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-08T14:09:50+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "16KB未満再監査: 日本語比率 77.7% < 80%"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5791,
-        "body_paragraphs": 45,
-        "method_chars": 1403,
-        "method_paragraphs": 13,
-        "evaluation_chars": 1925,
-        "limitation_chars": 377,
-        "insufficiency_flags": []
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-97b554551359--interactive-20261008-bottom-up-reaudit-r2-2312.11462.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-97b554551359--interactive-20261008-bottom-up-reaudit-r2-2312.11462.json",
-      "worker_run_key": "interactive-20261008-bottom-up-reaudit-r2-2312.11462"
-    },
-    {
       "canonical_id": "arXiv:2509.23324",
       "title": null,
       "source_url": null,
@@ -2243,34 +2218,6 @@
       "worker_run_key": "20261010-1700-scheduled-chat-00/r01"
     },
     {
-      "canonical_id": "arXiv:2405.11299",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-10T09:57:06+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "16KB未満再監査: 手法説明量 0 < 700"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 7115,
-        "body_paragraphs": 37,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 0,
-        "limitation_chars": 372,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700",
-          "評価説明量 0 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-e7e75bf4ebc8--libfile_9a81e4bec2d88191a0d82cb27ef68342--2024-2405.11299-cap-principle-under16kb-reaudit-20261010-1700-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-e7e75bf4ebc8--libfile_9a81e4bec2d88191a0d82cb27ef68342--2024-2405.11299-cap-principle-under16kb-reaudit-20261010-1700-scheduled-chat-00-r01.json",
-      "worker_run_key": "20261010-1700-scheduled-chat-00/r01"
-    },
-    {
       "canonical_id": "arXiv:2409.17422",
       "title": null,
       "source_url": null,
@@ -2405,6 +2352,35 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-e820d57bd622--libfile_6a302ce46204819193e38375087501a8--2021-doi-10.1145-3466752.3480125-sanger-research-20261011-1055-scheduled-chat-00-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-e820d57bd622--libfile_6a302ce46204819193e38375087501a8--2021-doi-10.1145-3466752.3480125-sanger-research-20261011-1055-scheduled-chat-00-r01.json",
       "worker_run_key": "20261011-1055-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2405.11299",
+      "title": "The CAP Principle for LLM Serving: A Survey of Long-Context Large Language Model Serving",
+      "source_url": "https://arxiv.org/abs/2405.11299",
+      "returned_at": "2026-10-11T03:02:04+00:00",
+      "return_count": 3,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "16KB未満再監査: 手法説明量 0 < 700"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5736,
+        "body_paragraphs": 30,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 0,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700",
+          "評価説明量 0 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_99eb503987708191ba4df50297ce0a7b--2024-2405.11299-cap-principle-under16kb-reaudit-20261011-0000-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_99eb503987708191ba4df50297ce0a7b--2024-2405.11299-cap-principle-under16kb-reaudit-20261011-0000-scheduled-chat-00-r01.json",
+      "worker_run_key": "20261011-0000-scheduled-chat-00/r01"
     }
   ]
 }

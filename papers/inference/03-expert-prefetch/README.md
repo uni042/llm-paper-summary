@@ -40,7 +40,7 @@ MoEで次に使われるexpertを**routing結果が確定する前に予測し�
 
 - **2026-08 · [SPICE: Speculative Prefetching with Low-Rank Expert Surrogates and Heterogeneous Orchestration for MoE Inference Acceleration](2026-2608.21240-spice-speculative-prefetching-low-rank-expert-surrogates-heterogeneous-orchestration.md)**  
   実装：[✓](https://anonymous.4open.science/r/SPICE) ・ リポジトリ内被引用：0  
-  SPICEは予測した専門家を低ランク近似・CPU正確計算・GPU正確計算へ振り分け、低ランク代替で予測外れの転送を避けつつ、MoEオフロードのPCIe待ちを減らす。
+  一文解説： GPUに全専門家の重みが載らない混合専門家モデルで、SPICEは将来必要になる専門家を予測して早めに転送し、予測を外した場合も「近似して即時に進む」「CPUで正確に計算する」「GPUへ重みを移して正確に計算する」の三経路を選び、転送待ちを減らす。
 
 - **2026-03 · [CasMoE: A Cascaded Framework for Efficient MoE Inference on Resource-constrained Devices](2026-casmoe-a-cascaded-framework-for-efficient-moe-inference-on-resource-constrained-.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
