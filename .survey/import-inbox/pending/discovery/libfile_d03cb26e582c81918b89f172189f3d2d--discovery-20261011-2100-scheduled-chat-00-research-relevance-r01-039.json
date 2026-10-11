@@ -1,0 +1,27 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261011-2100-scheduled-chat-00/r01",
+  "reference_main_sha": "ff2c19ca1a1859265ace13c512c4dcb01f4c7920",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2512.24617",
+      "identity_tokens": [
+        "arxiv:2512.24617",
+        "https://arxiv.org/abs/2512.24617"
+      ],
+      "title": "Dynamic Large Concept Models: Latent Reasoning in an Adaptive Semantic Space",
+      "reason": "本文の節3〜4は潜在概念境界の学習、概念列への圧縮、因果的な交差注意による復元を扱い、節6〜8は圧縮比・モデル幅の学習時スケーリング則と同一推論FLOPsでの正答率改善を主に評価する。節4.1〜4.3には概念複製とFlashAttention VarLenのカーネル比較（Flex Attention比1.26〜1.73倍）という推論実装の直接的接点もあるが、中心は新しい言語モデル構造・学習安定化・品質評価であり、既存LLMの推論サービングやメモリ階層を直接改善するシステム研究とは区別する。",
+      "source_url": "https://arxiv.org/abs/2512.24617",
+      "body_check": "research_fulltext_relevance_review: arXiv HTML v2 の節3.3（動的境界）、節4.1-4.3（概念複製とカーネル計測）、節6（学習時スケーリング則）、節7-8（同一FLOPsでの品質と構成要素除去）を確認。学習・アーキテクチャが主題のためborderline。",
+      "first_checked_at": "2026-10-11T21:09:53+09:00",
+      "last_checked_at": "2026-10-11T21:09:53+09:00",
+      "linked_from": [],
+      "origin": "research_postread_relevance",
+      "worklist_rank": 39
+    }
+  ]
+}
