@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-2f68d80c02c99c38-border-001",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2006.02464",
+  "reason": "原著20ページを確認。中央制御器がモデル重みのGPUロード（LOAD）とDNN実行（INFER）の開始時刻・締切を決め、ワーカーの暗黙の選択を排除して尾部遅延を抑えるモデルサービング研究である。ResNet50やその他の固定形状DNN、TVMコンパイルモデル、V100 GPUでの検証が主で、自己回帰LLMの出力長変動、KVキャッシュ成長、トークン単位バッチングは直接評価されていない。LLMサービングの設計思想に関係する基礎研究だが、現行LLM推論システムの直接評価ではないため境界扱い。",
+  "title": "Serving DNNs like Clockwork: Performance Predictability from the Bottom Up",
+  "identity_tokens": [
+    "arXiv:2006.02464"
+  ],
+  "linked_from": [],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-2f68d80c02c9",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}

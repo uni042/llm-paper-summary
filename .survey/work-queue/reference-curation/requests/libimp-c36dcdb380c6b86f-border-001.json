@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-c36dcdb380c6b86f-border-001",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2004.07320",
+  "reason": "訓練中に毎回異なる重み部分集合を量子化し、非量子化部分へ勾配を通すことで強い重み圧縮を可能にする学習手法。RoBERTaの14MB化など最終モデルの推論メモリに関係するが、要旨の中心は訓練時の量子化雑音とモデル精度であり、生成LLMの推論カーネル・KV管理・サービングを直接測っていない。モデル圧縮としての関連性があるため境界扱い。",
+  "title": "Training with Quantization Noise for Extreme Model Compression",
+  "identity_tokens": [
+    "arXiv:2004.07320"
+  ],
+  "linked_from": [],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-c36dcdb380c6",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}
