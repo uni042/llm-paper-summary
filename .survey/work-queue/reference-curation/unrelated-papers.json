@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-11T14:41:43+00:00",
-  "record_count": 11501,
+  "updated_at": "2026-10-11T15:41:17+00:00",
+  "record_count": 11508,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -164402,6 +164402,110 @@
       "last_checked_at": "2026-10-11T14:41:43+00:00",
       "linked_from": [],
       "title": "Voxel Set Transformer: A Set-to-Set Approach to 3D Object Detection from Point Clouds"
+    },
+    "arXiv:2603.24654": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.24654",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2603.24654",
+        "arXiv:2603.24654"
+      ],
+      "reason": "This article explores quantum spectral ML possibilities without a concrete LLM inference/serving technique.",
+      "first_checked_at": "2026-10-11T15:41:15+00:00",
+      "last_checked_at": "2026-10-11T15:41:15+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2105.03824-fnet-mixing-tokens-with-fourier-transforms.md"
+      ],
+      "title": "Spectral methods: crucial for machine learning, natural for quantum computers?"
+    },
+    "arXiv:2603.01437": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.01437",
+      "identity_tokens": [
+        "arXiv:2603.01437"
+      ],
+      "reason": "Post-hoc CoT analysis probes and steers answers for interpretability, not inference-resource savings.",
+      "first_checked_at": "2026-10-11T15:41:15+00:00",
+      "last_checked_at": "2026-10-11T15:41:15+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2504.05419-reasoning-models-know-when-they-re-right-probing-hidden-states-for-self-.md"
+      ],
+      "title": "Post-Hoc Reasoning in Chain of Thought: Decoding and Steering Pre-Committed Answers"
+    },
+    "arXiv:2604.15383": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.15383",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2604.15383",
+        "arXiv:2604.15383"
+      ],
+      "reason": "Temporal Contrastive Decoding improves audio grounding at inference but claims no compute/latency reduction.",
+      "first_checked_at": "2026-10-11T15:41:16+00:00",
+      "last_checked_at": "2026-10-11T15:41:16+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2408.16725-mini-omni-language-models-can-hear-talk-while-thinking-in-streaming.md"
+      ],
+      "title": "Temporal Contrastive Decoding: A Training-Free Method for Large Audio-Language Models"
+    },
+    "arXiv:2604.12373": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.12373",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2604.12373",
+        "arXiv:2604.12373"
+      ],
+      "reason": "The paper compares internal/external correctness classifiers; its subject is calibration rather than system efficiency.",
+      "first_checked_at": "2026-10-11T15:41:16+00:00",
+      "last_checked_at": "2026-10-11T15:41:16+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2504.05419-reasoning-models-know-when-they-re-right-probing-hidden-states-for-self-.md"
+      ],
+      "title": "Masked by Consensus: Disentangling Privileged Knowledge in LLM Correctness"
+    },
+    "arXiv:2601.21750": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.21750",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2601.21750",
+        "arXiv:2601.21750"
+      ],
+      "reason": "FISMO modifies optimizer geometry for neural-network training, not inference execution.",
+      "first_checked_at": "2026-10-11T15:41:16+00:00",
+      "last_checked_at": "2026-10-11T15:41:16+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2406.16793-adam-mini-use-fewer-learning-rates-to-gain-more.md"
+      ],
+      "title": "FISMO: Fisher-Structured Momentum-Orthogonalized Optimizer"
+    },
+    "arXiv:2511.01385": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2511.01385",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2511.01385",
+        "arXiv:2511.01385"
+      ],
+      "reason": "rdFFT reduces memory/compute for deep-learning training kernels, not inference systems.",
+      "first_checked_at": "2026-10-11T15:41:17+00:00",
+      "last_checked_at": "2026-10-11T15:41:17+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2105.03824-fnet-mixing-tokens-with-fourier-transforms.md"
+      ],
+      "title": "Memory-Efficient Training with In-Place FFT Implementation"
+    },
+    "arXiv:2602.04669": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.04669",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2602.04669",
+        "arXiv:2602.04669"
+      ],
+      "reason": "This work analyzes Muon optimizer variants and training behavior, not inference systems.",
+      "first_checked_at": "2026-10-11T15:41:17+00:00",
+      "last_checked_at": "2026-10-11T15:41:17+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2406.16793-adam-mini-use-fewer-learning-rates-to-gain-more.md"
+      ],
+      "title": "Delving into Muon and Beyond: Deep Analysis and Extensions"
     }
   }
 }

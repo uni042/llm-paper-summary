@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-11T14:27:36+00:00",
-  "record_count": 4654,
+  "updated_at": "2026-10-11T15:41:14+00:00",
+  "record_count": 4655,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -71139,6 +71139,21 @@
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "Tree Training: Accelerating Agentic LLMs Training via Shared Prefix Reuse"
+    },
+    "DOI:10.1109/ecie69549.2026.11565531": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/ecie69549.2026.11565531",
+      "identity_tokens": [
+        "DOI:10.1109/ecie69549.2026.11565531"
+      ],
+      "reason": "Crossref confirmed IEEE DOI/title; primary IEEE Xplore was blocked by an AWS WAF challenge, so no abstract was used.",
+      "first_checked_at": "2026-10-11T15:41:14+00:00",
+      "last_checked_at": "2026-10-11T15:41:14+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2020-2006.02464-serving-dnns-like-clockwork-performance-predictability-from-the-bottom-u.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Risk-Calibrated Uncertainty-Aware Edge–Cloud Scheduling for Reliable Multi-Tenant Ml Inference"
     }
   }
 }
