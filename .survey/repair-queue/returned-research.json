@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-11T11:52:21+00:00",
+  "generated_at": "2026-10-11T12:51:54+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 111,
+  "count": 110,
   "entries": [
     {
       "canonical_id": "arXiv:2606.24506",
@@ -1495,37 +1495,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-db9b64083a25--libfile_22d1ae4caed48191bfba38e18a29126f--2025-2509.23324-under16kb-reaudit-20261008-0047.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-db9b64083a25--libfile_22d1ae4caed48191bfba38e18a29126f--2025-2509.23324-under16kb-reaudit-20261008-0047.json",
       "worker_run_key": "20261008-0047-interactive-under16kb-reverse-reaudit/r01"
-    },
-    {
-      "canonical_id": "arXiv:2405.13792",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-08T14:13:45+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 本文説明量 1604 < 2200",
-        "説明不足トリガー: 手法説明量 414 < 700",
-        "説明不足トリガー: 評価説明量 118 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 1604,
-        "body_paragraphs": 11,
-        "method_chars": 414,
-        "method_paragraphs": 3,
-        "evaluation_chars": 118,
-        "limitation_chars": 208,
-        "insufficiency_flags": [
-          "本文説明量 1604 < 2200",
-          "手法説明量 414 < 700",
-          "評価説明量 118 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-0e84fe39498e--libfile_fe9bf5ab63f0819196df16d8ef0593c5--2024-2405.13792-xrag.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-0e84fe39498e--libfile_fe9bf5ab63f0819196df16d8ef0593c5--2024-2405.13792-xrag.json",
-      "worker_run_key": "20261007-1657-scheduled-chat-00/r02"
     },
     {
       "canonical_id": "arXiv:2402.11295",
