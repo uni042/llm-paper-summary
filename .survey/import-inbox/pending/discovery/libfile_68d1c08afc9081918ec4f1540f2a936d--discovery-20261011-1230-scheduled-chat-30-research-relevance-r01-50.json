@@ -1,0 +1,30 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261011-1230-scheduled-chat-30/r01",
+  "reference_main_sha": "4ab30574f8e88f0b46aae413e6d3c237ba589c4f",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2601.08815",
+      "identity_tokens": [
+        "arXiv:2601.08815",
+        "arxiv:2601.08815",
+        "2601.08815"
+      ],
+      "title": "Agent Contracts: A Formal Framework for Resource-Bounded Autonomous AI Systems",
+      "reason": "Agent Contractsは入出力仕様、トークン/API呼出し/時間の予算、成功条件を契約として形式化し、親子エージェントの予算保存則と実行停止を規定する。本文第4〜8節では複数呼出し間の監視と委譲を検証し、反復コードレビューでトークン34,606から3,461への削減を示すが、成功率60.0%から52.9%への差もある。単一LLM呼出し中の強制制御はできず、主題はエージェント運用統治であって推論カーネル・メモリ階層・GPUサービングではないため境界的。",
+      "source_url": "https://arxiv.org/abs/2601.08815",
+      "body_check": "research_fulltext_relevance_review: 原著v3の第4〜7節（契約定義、実行時監視、保存則、単一呼出し制御限界）と第8節（70件コードレビュー等の評価）を確認。推論基盤の内部最適化ではない。",
+      "first_checked_at": "2026-10-11T12:31:05+09:00",
+      "last_checked_at": "2026-10-11T12:31:05+09:00",
+      "linked_from": [
+        ".survey/work-queue/WORKLIST-30.md"
+      ],
+      "origin": "research_postread_relevance",
+      "worklist_rank": 50
+    }
+  ]
+}
