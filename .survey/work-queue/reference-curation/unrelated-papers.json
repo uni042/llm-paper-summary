@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-11T07:46:55+00:00",
-  "record_count": 11487,
+  "updated_at": "2026-10-11T08:49:39+00:00",
+  "record_count": 11488,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -164198,6 +164198,19 @@
       "last_checked_at": "2026-10-11T07:46:55+00:00",
       "linked_from": [],
       "title": "ReasoningBank: Scaling Agent Self-Evolving with Reasoning Memory"
+    },
+    "arXiv:2303.05511": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2303.05511",
+      "identity_tokens": [
+        "DOI:10.1109/cvpr52729.2023.00976",
+        "arXiv:2303.05511"
+      ],
+      "reason": "タイトルと割当jobの対象説明が示す中心課題は、GANによる文章条件付き画像合成と512px画像生成の高速化である。LLM、Transformer言語モデル、LLM推論サービング、学習時メモリ階層やMoEシステムの最適化を主題としない。画像生成器の実行速度改善をLLM推論技術の直接研究と誤認しないため除外する。",
+      "first_checked_at": "2026-10-11T08:49:39+00:00",
+      "last_checked_at": "2026-10-11T08:49:39+00:00",
+      "linked_from": [],
+      "title": "Scaling up GANs for Text-to-Image Synthesis"
     }
   }
 }
