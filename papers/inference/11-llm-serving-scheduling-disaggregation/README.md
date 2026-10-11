@@ -1006,6 +1006,10 @@
   実装：[✓](https://github.com/microsoft/sarathi-serve/tree/niyama_asplos2026) ・ リポジトリ内被引用：4  
   対話・コード補完・要約などを「対話型」「バッチ型」の別GPU群へ固定せず、要求ごとの細かなサービス品質（Quality of Service; QoS）期限を同じGPUプールで扱う配信系。Niyamaはデコード要求の締切余裕を見ながらプリフィルの分割サイズを動的に変え、期限優先と残り仕事量優先を混ぜ、過負荷時には少数要求だけを低優先度へ降格する。
 
+- **2025-02 · [Universal Model Routing for Efficient LLM Inference](2025-2502.08773-universal-model-routing-for-efficient-llm-inference.md)**  
+  実装：✓ ・ リポジトリ内被引用：4  
+  新LLMを代表プロンプト群へのクラスタ別誤差ベクトルで表現し、ルータ再学習なしで動的モデルプールへ追加するUniRouteが、30超の未観測LLMを含む評価でK-NN/ZeroRouterを上回る。
+
 - **2024-12 · [GreenLLM: Disaggregating Large Language Model Serving on Heterogeneous GPUs for Lower Carbon Emissions](2024-2412.20322-greenllm-disaggregating-large-language-model-serving-on-heterogeneous-gpus.md)**  
   実装：✓ ・ リポジトリ内被引用：4  
   GreenLLMは、新型A100と旧世代T4/V100を組み合わせ、要求の種類と負荷に応じて推論処理の一部を旧GPUへ割り当てる配信基盤である。
@@ -1029,10 +1033,6 @@
 - **2025-05 · [PrefillOnly: An Inference Engine for Prefill-only Workloads in Large Language Model Applications](2025-2505.07203-prefillonly-an-inference-engine-for-prefill-only-workloads-in-large-language-model-applications.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
   PrefillOnlyは、推薦・信用審査・ラベル付けのように「長い入力を読むが出力は1トークンだけ」というプリフィル専用（プリフィル-only）要求へ通常の生成エンジンをそのまま使う無駄を取り除く。後続デコードで再利用しないキー・バリュー（Key-Value; KV）キャッシュを全層分保持せず、固定出力長から完了時間を予測して要求を並べ替える。
-
-- **2025-02 · [Universal Model Routing for Efficient LLM Inference](2025-2502.08773-universal-model-routing-for-efficient-llm-inference.md)**  
-  実装：✓ ・ リポジトリ内被引用：3  
-  新LLMを代表プロンプト群へのクラスタ別誤差ベクトルで表現し、ルータ再学習なしで動的モデルプールへ追加するUniRouteが、30超の未観測LLMを含む評価でK-NN/ZeroRouterを上回る。
 
 - **2024-11 · [Ensuring Fair LLM Serving Amid Diverse Applications](2024-2411.15997-ensuring-fair-llm-serving-amid-diverse-applications.md)**  
   実装：✓ ・ リポジトリ内被引用：3  

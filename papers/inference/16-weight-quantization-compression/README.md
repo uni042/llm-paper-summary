@@ -150,13 +150,13 @@
   実装：[✓](https://github.com/NoakLiu/LLMEasyQuant) ・ リポジトリ内被引用：4  
   LLMEasyQuantは、大規模言語モデル（LLM）の学習後量子化を研究・実行するための統合基盤である。論文は、量子化方式の品質だけを比較しても、実行時のメモリ転送や通信、逆量子化が遅ければ推論の速度向上につながらないと考える。
 
+- **2024-02 · [DB-LLM: Accurate Dual-Binarization for Efficient LLMs](2024-2402.11960-db-llm-accurate-dual-binarization-for-efficient-llms.md)**  
+  実装：✓ ・ リポジトリ内被引用：3  
+  大規模言語モデルの重み量子化は、16ビット浮動小数点の重みを数ビットの離散値へ置き換え、モデル保存量と重み読み出し量を減らす。LLaMA-1-7Bでは平均重み疎性が62.8%となり、著者らの計算量モデルでは32トークン入力のFLOPsが通常2ビット量子化の37.3Gから29.8Gへ減る。
+
 - **2024-02 · [BitDistiller: Unleashing the Potential of Sub-4-Bit LLMs via Self-Distillation](2024-2402.10631-bitdistiller-unleashing-the-potential-of-sub-4-bit-llms-via-self-distill.md)**  
   実装：[✓](https://github.com/DD-DuDa/BitDistiller) ・ リポジトリ内被引用：3  
   学習後量子化（post-学習 量子化、PTQ）は比較的低費用だが、低ビットでは誤差を修正しにくい。
-
-- **2024-02 · [DB-LLM: Accurate Dual-Binarization for Efficient LLMs](2024-2402.11960-db-llm-accurate-dual-binarization-for-efficient-llms.md)**  
-  実装：✓ ・ リポジトリ内被引用：2  
-  大規模言語モデルの重み量子化は、16ビット浮動小数点の重みを数ビットの離散値へ置き換え、モデル保存量と重み読み出し量を減らす。LLaMA-1-7Bでは平均重み疎性が62.8%となり、著者らの計算量モデルでは32トークン入力のFLOPsが通常2ビット量子化の37.3Gから29.8Gへ減る。
 
 ### 4年前（2022-11〜2023-10）
 
