@@ -1,0 +1,28 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "reference_main_sha": "50fc31bfaf1bf9e6954cba937ca58e4d02e635ef",
+  "record_count": 1,
+  "run_key": "20261011-0900-scheduled-chat-00/r01",
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2403.09898",
+      "identity_tokens": [
+        "arxiv:2403.09898",
+        "2403.09898"
+      ],
+      "title": "TimeMachine: A Time Series is Worth 4 Mambas for Long-term Forecasting",
+      "reason": "TimeMachineは多変量時系列の長期予測精度とメモリ効率を高めるため、4つのMamba状態空間モジュールでチャネル内外・複数解像度の依存関係をモデル化する。一次要旨の評価対象は時系列予測であり、LLMのトークン生成、サービング、KV管理、MoE推論やCPU/GPUオフロードへの直接貢献は示されないため対象外。",
+      "source_url": "https://arxiv.org/abs/2403.09898",
+      "body_check": "abstract_screen_only; body_not_read; 一次論文の公開要旨と公式書誌を確認。本文の詳細実験は未読。",
+      "first_checked_at": "2026-10-11T09:06:00+09:00",
+      "last_checked_at": "2026-10-11T09:06:00+09:00",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance",
+      "worklist_rank": 33,
+      "research_job_id": null
+    }
+  ]
+}
