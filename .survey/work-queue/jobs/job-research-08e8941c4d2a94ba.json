@@ -35,10 +35,15 @@
   "selection_reason": "疎（LSH）と低ランク（kernel feature map）attentionを統合して長系列attentionの計算・memory bottleneckを削減するefficient attention。言語モデリング/LRAでも評価され、長系列推論効率へ直接接続する。",
   "semantic_scholar_id": "5f895e84c1fea75de07b4f90da518273c2e57291",
   "source_url": "https://arxiv.org/abs/2110.15343",
-  "status": "ready",
+  "status": "superseded",
   "title": "Scatterbrain: Unifying Sparse and Low-rank Attention Approximation",
   "type": "research",
   "venue": "Neural Information Processing Systems",
   "workflow_version": 10,
-  "year": 2021
+  "year": 2021,
+  "superseded_at": "2026-10-11T13:43:18+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/13-sparse-attention/2021-2110.15343-scatterbrain-unifying-sparse-and-low-rank-attention-approximation.md",
+  "represented_canonical_id": "arXiv:2110.15343",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
