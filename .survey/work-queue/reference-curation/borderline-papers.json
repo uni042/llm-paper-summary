@@ -2,7 +2,7 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-11T03:46:34+00:00",
+  "updated_at": "2026-10-11T03:55:09+00:00",
   "record_count": 4620,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
@@ -70368,9 +70368,9 @@
       "identity_tokens": [
         "arXiv:2204.00408"
       ],
-      "reason": "GLUE・SQuAD上のタスク固有BERT型モデルの層・注意ヘッド・隠れユニットを共同で構造化枝刈りするCoFi。実際の推論速度改善は関連するが、現行の生成LLMやMoEサービングの直接評価ではない。モデル圧縮の歴史的先行研究として微妙。",
+      "reason": "CoFiはBERT系の分類・質問応答モデルに対し、注意層・順伝播層・ヘッド・中間次元・隠れ次元の多粒度マスクを同時学習して構造的枝刈りを行う。ACL 2022原著表1ではV100上のBERTbase比12.1倍の推論高速化を示し、モデル圧縮の一般的機構として関連する。ただし学習済みBERTのタスク特化枝刈りとGLUE/SQuADが中心で、自己回帰LLMの復号・KVキャッシュ・サービングの実測はないため境界候補。",
       "first_checked_at": "2026-10-10T19:43:31+00:00",
-      "last_checked_at": "2026-10-10T19:43:31+00:00",
+      "last_checked_at": "2026-10-11T03:55:09+00:00",
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "Structured Pruning Learns Compact and Accurate Models"

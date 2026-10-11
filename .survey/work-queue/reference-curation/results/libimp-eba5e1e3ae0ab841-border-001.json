@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-eba5e1e3ae0ab841-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2204.00408",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2204.00408",
+    "identity_tokens": [
+      "arXiv:2204.00408"
+    ],
+    "reason": "CoFiはBERT系の分類・質問応答モデルに対し、注意層・順伝播層・ヘッド・中間次元・隠れ次元の多粒度マスクを同時学習して構造的枝刈りを行う。ACL 2022原著表1ではV100上のBERTbase比12.1倍の推論高速化を示し、モデル圧縮の一般的機構として関連する。ただし学習済みBERTのタスク特化枝刈りとGLUE/SQuADが中心で、自己回帰LLMの復号・KVキャッシュ・サービングの実測はないため境界候補。",
+    "first_checked_at": "2026-10-10T19:43:31+00:00",
+    "last_checked_at": "2026-10-11T03:55:09+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Structured Pruning Learns Compact and Accurate Models"
+  },
+  "processed_at": "2026-10-11T03:55:09+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-eba5e1e3ae0a",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
