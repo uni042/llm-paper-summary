@@ -1,0 +1,27 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261012-0033-scheduled-chat-30/r01/relevance-003",
+  "reference_main_sha": "2f41bd6982f5ece8d2ad4f95389e535aee67e8ad",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2203.14680",
+      "identity_tokens": [
+        "arxiv:2203.14680",
+        "doi:10.48550/arxiv.2203.14680"
+      ],
+      "title": "Transformer Feed-Forward Layers Build Predictions by Promoting Concepts in the Vocabulary Space",
+      "reason": "TransformerのFFNが語彙空間でどの概念を押し上げるかを解析し、その解釈結果をGPT-2の毒性抑制と単純な早期終了規則に利用する。要旨では平均約20%の計算節約を報告しており推論計算量の削減との接点はあるが、中心はモデル内部の予測形成と解釈可能性であり、推論エンジンの実行方式、GPUカーネル、メモリ階層、要求スケジューリングの研究ではない。したがって収録判断は境界的。",
+      "source_url": "https://arxiv.org/abs/2203.14680",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-12T00:38:52+09:00",
+      "last_checked_at": "2026-10-12T00:38:52+09:00",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance",
+      "worklist_rank": 3
+    }
+  ]
+}
