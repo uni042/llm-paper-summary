@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-87f8b98b061fb9c3-border-001",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2601.02535",
+  "reason": "論文の主目的は複数生成文から品質の高い代表文を選ぶ推論時の出力選択であり、GPU/CPU資源配置やLLMサービングの実行制御ではない。節2ではn-gram類似度グラフとスペクトル分割による代表選択、節3では100トークン間隔の早期候補枝刈りを提案する。生成回数や追加判定モデルの費用を削減する接点はあるが、主実験はCNN/DailyMail・HumanEval・Math-500の出力品質評価であり、実機のGPU推論遅延・スループット・KVメモリを中心に測定していないため境界候補。",
+  "title": "ModeX: Evaluator-Free Best-of-N Selection for Open-Ended Generation",
+  "identity_tokens": [
+    "arxiv:2601.02535",
+    "https://arxiv.org/abs/2601.02535"
+  ],
+  "linked_from": [],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-87f8b98b061f",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}
