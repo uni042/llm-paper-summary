@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-11T13:50:04+00:00",
+  "generated_at": "2026-10-11T14:23:04+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -1797,37 +1797,9 @@
       "worker_run_key": "20261011-1645-scheduled-chat-45/r01"
     },
     {
-      "canonical_id": "arXiv:2511.00606",
-      "title": "SpecDiff-2: Scaling Diffusion Drafter Alignment For Faster Speculative Decoding",
-      "source_url": "https://arxiv.org/abs/2511.00606",
-      "returned_at": "2026-10-11T13:48:54+00:00",
-      "return_count": 7,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 0 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 6990,
-        "body_paragraphs": 32,
-        "method_chars": 2191,
-        "method_paragraphs": 9,
-        "evaluation_chars": 0,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "評価説明量 0 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_4d5564c514848191972ca8e79e4fd648--2025-2511.00606-specdiff-2-returned-research-repair-20261011-2230-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_4d5564c514848191972ca8e79e4fd648--2025-2511.00606-specdiff-2-returned-research-repair-20261011-2230-scheduled-chat-30-r01.json",
-      "worker_run_key": "20261011-2230-scheduled-chat-30/r01"
-    },
-    {
       "canonical_id": "arXiv:2203.14680",
-      "title": "Transformer Feed-Forward Layers Build Predictions by Promoting Concepts in the Vocabulary Space",
-      "source_url": "https://arxiv.org/html/2203.14680v3",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-11T13:48:55+00:00",
       "return_count": 6,
       "assigned_worker": "scheduled-chat-45",
@@ -1853,8 +1825,8 @@
     },
     {
       "canonical_id": "arXiv:2608.14191",
-      "title": "KV Cache Compression Through the Lens of Transform Coding",
-      "source_url": "https://arxiv.org/abs/2608.14191",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-11T13:48:56+00:00",
       "return_count": 4,
       "assigned_worker": "scheduled-chat-30",
@@ -1878,6 +1850,34 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-c6c8da308a23--libfile_ab7f4334dc8081919c081bc177384c7b--2026-2608.14191-aatc-returned-research-repair-20261011-2030-scheduled-chat-30-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-c6c8da308a23--libfile_ab7f4334dc8081919c081bc177384c7b--2026-2608.14191-aatc-returned-research-repair-20261011-2030-scheduled-chat-30-r01.json",
       "worker_run_key": "20261011-2030-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2511.00606",
+      "title": "SpecDiff-2: Scaling Diffusion Drafter Alignment For Faster Speculative Decoding",
+      "source_url": "https://arxiv.org/abs/2511.00606",
+      "returned_at": "2026-10-11T14:23:04+00:00",
+      "return_count": 8,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 0 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 6990,
+        "body_paragraphs": 32,
+        "method_chars": 2191,
+        "method_paragraphs": 9,
+        "evaluation_chars": 0,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "評価説明量 0 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-44f5a30c1a59--libfile_4d5564c514848191972ca8e79e4fd648--2025-2511.00606-specdiff-2-returned-research-repair-20261011-2230-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-44f5a30c1a59--libfile_4d5564c514848191972ca8e79e4fd648--2025-2511.00606-specdiff-2-returned-research-repair-20261011-2230-scheduled-chat-30-r01.json",
+      "worker_run_key": "20261011-2230-scheduled-chat-30/r01"
     }
   ]
 }
