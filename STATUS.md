@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-10-11 17:23:13 JST**
+> 自動生成: **2026-10-11 17:51:15 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -13,9 +13,9 @@
 |---|---:|
 | 収録候補論文数 | **1116** |
 | 未claim Research job | **1116** |
-| 直近24hのResearch処理完了 | **106** |
+| 直近24hのResearch処理完了 | **105** |
 | 最終Research処理完了 | **10-11 14:55:00 JST** |
-| 最終Discovery探索完了 | **10-11 16:49:51 JST** |
+| 最終Discovery探索完了 | **10-11 17:00:00 JST** |
 | 整合性異常 | **0** |
 
 ## 16KB未満論文サマリーの再監査
@@ -55,8 +55,8 @@
 | 処理済み | **18681** |
 | 未処理Discovery候補 | **106416** |
 | 収録済み | **1800** |
-| Research / Audit候補へ昇格済み | **945** |
-| 無関係として除外 | **11391** |
+| Research / Audit候補へ昇格済み | **944** |
+| 無関係として除外 | **11392** |
 | 微妙として除外 | **4545** |
 
 ### 探索候補の事前フィルタリング（可逆）
@@ -89,7 +89,7 @@
 
 - 消化率: **14.9%**
 - 現在の生在庫: 後方references **50274件** / 前方引用 **57891件**。後方候補を優先し、前方プールは後方プールに存在する同一identityを保持しません。
-- 前方・後方を統合してidentity重複を除いた未処理面は **107658件**。そこから既にResearch / Audit候補へ昇格したidentityを除いた値が上表の未処理Discovery候補です。
+- 前方・後方を統合してidentity重複を除いた未処理面は **107657件**。そこから既にResearch / Audit候補へ昇格したidentityを除いた値が上表の未処理Discovery候補です。
 - 処理済み = 収録済み + Research / Audit候補へ昇格済み + 無関係 + 微妙。前方引用・後方referencesの出自は区別せず、DOI/arXiv/title aliasを統合して数えます。
 - STATUS生成時にpaper実体、Research/Audit job、relevance台帳、現在の前方/後方候補からゼロベースで再計算します。
 
@@ -116,7 +116,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **10-11 11:48:02 JST（5時間35分前）** |
+| 最終maintenance完了 | **10-11 11:48:02 JST（6時間3分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **passed** |
 | health | **issues_found** |
@@ -136,19 +136,19 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 指標 | 現在値 |
 |---|---:|
-| 直近6hのResearch完了 | **15** |
-| 直近6hのDiscovery run | **12** |
-| 直近6hのDiscovery本文確認・分類 | **97** |
+| 直近6hのResearch完了 | **10** |
+| 直近6hのDiscovery run | **13** |
+| 直近6hのDiscovery本文確認・分類 | **98** |
 | 最終Research完了 | **10-11 14:55:00 JST** |
-| 最終Discovery完了 | **10-11 16:49:51 JST** |
+| 最終Discovery完了 | **10-11 17:00:00 JST** |
 
 ### 最新Library-first run
 
 - Research: **10-11 14:55:00 JST** / worker — / run 20261011-1455-scheduled-chat-00/r01 / 成果 **1件**
   - evidence: .survey/import-inbox/results/research/libfile_817500f7dee481918bba61280a9e7445--2023-2212.10511-adaptive-retrieval-research-20261011-1455-scheduled-chat-00-r01.json
-- Discovery: **10-11 16:49:51 JST** / worker codex-local / run b113-a68c009-p01
-  - 本文確認・分類 **20件** / accept **2件** / unrelated+borderline **18件**
-  - evidence: .survey/import-inbox/results/discovery/b113-a68c009-p01--0352f2655c912ecbf121d6569feca9cad0898aef6a86917ce40c0974930e0bc7--b113-part-01.json
+- Discovery: **10-11 17:00:00 JST** / worker scheduled-chat-00 / run 20261011-1700-scheduled-chat-00/r01
+  - 本文確認・分類 **1件** / accept **0件** / unrelated+borderline **1件**
+  - evidence: .survey/import-inbox/results/discovery/libfile_1f575e966af081918773bcd82e72d034--discovery-20261011-1700-scheduled-chat-00-research-prescreen-r01.json
 
 ### Codex探索成果の反映状況
 
