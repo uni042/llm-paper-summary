@@ -1,0 +1,27 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261011-1900-scheduled-chat-00/r01/relevance-26",
+  "reference_main_sha": "d88730e7270f4ff62b77c65a43b8060ce9435122",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:1807.08887",
+      "identity_tokens": [
+        "arXiv:1807.08887",
+        "arxiv:1807.08887"
+      ],
+      "title": "Supporting Very Large Models using Automatic Dataflow Graph Partitioning",
+      "reason": "本文§2〜5でTofuがテンソル演算子の意味記述TDLと再帰探索により複数GPUの分割・通信量を最小化する技術的貢献を確認した。汎用の演算子分割・モデル並列はLLM実行にも関連し得る一方、§7の実証は8基K80でのWide ResNetとRNNの学習反復、逆伝播、更新を対象とし、LLMや推論サービングの性能を検証していない。学習単独の凍結範囲を考慮して境界候補とする。",
+      "source_url": "https://arxiv.org/html/1807.08887v2",
+      "body_check": "research_fulltext_relevance_review: §§3–5のTDLと再帰的通信費用最小化、§7.1–7.2の8×K80、WResNet/RNNの全学習反復と25–400%学習処理量改善を確認。LLM推論評価なし。",
+      "first_checked_at": "2026-10-11T19:02:42+09:00",
+      "last_checked_at": "2026-10-11T19:02:42+09:00",
+      "linked_from": [],
+      "origin": "research_postread_relevance",
+      "worklist_rank": 26
+    }
+  ]
+}
