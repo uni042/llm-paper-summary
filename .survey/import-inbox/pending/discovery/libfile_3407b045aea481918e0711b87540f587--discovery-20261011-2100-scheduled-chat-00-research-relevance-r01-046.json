@@ -1,0 +1,27 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261011-2100-scheduled-chat-00/r01",
+  "reference_main_sha": "ff2c19ca1a1859265ace13c512c4dcb01f4c7920",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2512.22234",
+      "identity_tokens": [
+        "arxiv:2512.22234",
+        "https://arxiv.org/abs/2512.22234"
+      ],
+      "title": "DiRL: An Efficient Post-Training Framework for Diffusion Language Models",
+      "reason": "タイトルが明示する研究対象は拡散言語モデルの学習後訓練（post-training）フレームワークであり、推論時の実行カーネル、KVキャッシュ、モデルオフロード、サービング、推論要求のスケジューリングではない。現行の学習単独研究凍結方針に従い、タイトル先行走査で対象外とした。本文・要旨は未読であるため、技術的な副次的推論高速化の有無まで断定していない。",
+      "source_url": "https://arxiv.org/abs/2512.22234",
+      "body_check": "title_screen_only; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-10-11T21:13:54+09:00",
+      "last_checked_at": "2026-10-11T21:13:54+09:00",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance",
+      "worklist_rank": 46
+    }
+  ]
+}
