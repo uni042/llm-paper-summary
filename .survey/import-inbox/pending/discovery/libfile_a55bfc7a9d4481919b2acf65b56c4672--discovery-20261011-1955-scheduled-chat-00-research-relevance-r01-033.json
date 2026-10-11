@@ -1,0 +1,26 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261011-1955-scheduled-chat-00/r01",
+  "reference_main_sha": "c502d13432fb448564f470da620b7c76d27236ad",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2102.08124",
+      "identity_tokens": [
+        "arXiv:2102.08124"
+      ],
+      "title": "Accelerated Sparse Neural Training: A Provable and Efficient Method to Find N:M Transposable Masks",
+      "reason": "転置してもN:M疎性を満たすマスクを最小費用流と近似算法で求め、前向き・逆向き両方の疎行列演算を高速化する。推論時の疎演算にも関係するが、主要貢献は学習の逆伝播とマスク更新であり、LLM推論基盤やサービングの直接評価はないため境界候補。",
+      "source_url": "https://arxiv.org/abs/2102.08124",
+      "body_check": "research_fulltext_relevance_review: arXiv v2 §1で逆伝播に必要なW^Tの疎性を問題化、§3でmask-diversity、§4で転置可能マスクと近似、§5でAdaPruneを確認。評価は視覚・言語モデルの疎学習と行列演算で、LLM生成の実機遅延は未評価。",
+      "first_checked_at": "2026-10-11T19:55:08+09:00",
+      "last_checked_at": "2026-10-11T19:55:08+09:00",
+      "linked_from": [],
+      "origin": "research_postread_relevance",
+      "worklist_rank": 33
+    }
+  ]
+}
