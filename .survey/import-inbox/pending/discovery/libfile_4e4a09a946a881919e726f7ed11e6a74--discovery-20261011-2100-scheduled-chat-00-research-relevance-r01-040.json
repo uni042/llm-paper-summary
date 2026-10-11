@@ -1,0 +1,27 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261011-2100-scheduled-chat-00/r01",
+  "reference_main_sha": "ff2c19ca1a1859265ace13c512c4dcb01f4c7920",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2512.09487",
+      "identity_tokens": [
+        "arxiv:2512.09487",
+        "https://arxiv.org/abs/2512.09487"
+      ],
+      "title": "RouteRAG: Efficient Retrieval-Augmented Generation from Text and Graph via Reinforcement Learning",
+      "reason": "本文の節3は強化学習によって文章検索・グラフ検索・回答の選択方策を獲得する二段階学習を主題とする。節4では検索時間を報酬に加えると7Bモデルの平均検索回数が2.70から2.25へ減り、回答F1は59.5から60.6へ改善する。ただし改善対象は検索方策と回答品質であり、GPU推論カーネル、LLMサービングの要求スケジューラ、KVキャッシュやモデルオフロードの最適化ではない。推論時の外部検索回数という資源指標との接点はあるため完全無関係ではなく境界候補とする。",
+      "source_url": "https://arxiv.org/abs/2512.09487",
+      "body_check": "research_fulltext_relevance_review: arXiv HTML v1 の節3.2.1（検索時間を用いた学習報酬）、節4.1〜4.4（5質問応答課題、検索回数2.25対2.70、回答F1、構成要素除去）、節5と付録Aを確認。主題は強化学習した検索方策。",
+      "first_checked_at": "2026-10-11T21:09:53+09:00",
+      "last_checked_at": "2026-10-11T21:09:53+09:00",
+      "linked_from": [],
+      "origin": "research_postread_relevance",
+      "worklist_rank": 40
+    }
+  ]
+}
