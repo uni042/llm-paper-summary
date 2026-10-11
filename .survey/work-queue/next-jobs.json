@@ -9,17 +9,17 @@
       "ready": 2
     },
     "research": {
-      "superseded": 241,
-      "ready": 1129,
+      "superseded": 246,
+      "ready": 1124,
       "deferred": 8,
       "completed": 22,
       "rejected": 1
     }
   },
   "claiming": {
-    "ready_research_audit": 1131,
+    "ready_research_audit": 1126,
     "actively_claimed": 0,
-    "claimable": 1131
+    "claimable": 1126
   },
   "next_jobs": [
     {
@@ -79,20 +79,6 @@
       "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. Return blocked with retrieval evidence only after the ordered official full-text routes have been exhausted without enough primary evidence; do not stop merely because the first successful fetch is incomplete."
     },
     {
-      "job_id": "job-research-71546c6f99841e86",
-      "type": "research",
-      "lane": null,
-      "priority": 1430,
-      "canonical_id": "arXiv:1802.05799",
-      "title": "Horovod: fast and easy distributed deep learning in TensorFlow",
-      "source_url": "https://arxiv.org/abs/1802.05799",
-      "paper_path": "papers/inference/99-other-inference-systems/2018-1802.05799-horovod-fast-and-easy-distributed-deep-learning-in-tensorflow.md",
-      "workflow_version": 10,
-      "artifact_transport": "structured_record_v10",
-      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. A technically successful full-text fetch is not sufficient when tables, appendices, or other evidence needed for the five slots are missing; continue through the ordered official full-text routes and use the next route only to fill the missing primary evidence. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
-      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. Return blocked with retrieval evidence only after the ordered official full-text routes have been exhausted without enough primary evidence; do not stop merely because the first successful fetch is incomplete."
-    },
-    {
       "job_id": "job-research-bc60b31a22c860c6",
       "type": "research",
       "lane": null,
@@ -121,14 +107,28 @@
       "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. Return blocked with retrieval evidence only after the ordered official full-text routes have been exhausted without enough primary evidence; do not stop merely because the first successful fetch is incomplete."
     },
     {
-      "job_id": "job-research-84cbcdc38af71be2",
+      "job_id": "job-research-c04987fa3b7c3a45",
       "type": "research",
       "lane": null,
-      "priority": 859,
-      "canonical_id": "arXiv:2503.20215",
-      "title": "Qwen2.5-Omni Technical Report",
-      "source_url": "https://arxiv.org/abs/2503.20215",
-      "paper_path": "papers/inference/99-other-inference-systems/2025-2503.20215-qwen2-5-omni-technical-report.md",
+      "priority": 805,
+      "canonical_id": "arXiv:2105.03824",
+      "title": "FNet: Mixing Tokens with Fourier Transforms",
+      "source_url": "https://arxiv.org/abs/2105.03824",
+      "paper_path": "papers/inference/99-other-inference-systems/2021-2105.03824-fnet-mixing-tokens-with-fourier-transforms.md",
+      "workflow_version": 10,
+      "artifact_transport": "structured_record_v10",
+      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. A technically successful full-text fetch is not sufficient when tables, appendices, or other evidence needed for the five slots are missing; continue through the ordered official full-text routes and use the next route only to fill the missing primary evidence. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. Return blocked with retrieval evidence only after the ordered official full-text routes have been exhausted without enough primary evidence; do not stop merely because the first successful fetch is incomplete."
+    },
+    {
+      "job_id": "job-research-d3b312cc925137a9",
+      "type": "research",
+      "lane": null,
+      "priority": 768,
+      "canonical_id": "DOI:10.18653/v1/D19-1633",
+      "title": "Mask-Predict: Parallel Decoding of Conditional Masked Language Models",
+      "source_url": "https://doi.org/10.18653/v1/D19-1633",
+      "paper_path": "papers/inference/99-other-inference-systems/2019-0bc18ef37a7d-mask-predict-parallel-decoding-of-conditional-masked-language-models.md",
       "workflow_version": 10,
       "artifact_transport": "structured_record_v10",
       "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. A technically successful full-text fetch is not sufficient when tables, appendices, or other evidence needed for the five slots are missing; continue through the ordered official full-text routes and use the next route only to fill the missing primary evidence. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
@@ -149,5 +149,5 @@
       "completion": "Submit 0-5 strong candidates. Empty is valid."
     }
   ],
-  "generated_at": "2026-10-11T02:48:52+00:00"
+  "generated_at": "2026-10-11T03:57:43+00:00"
 }
