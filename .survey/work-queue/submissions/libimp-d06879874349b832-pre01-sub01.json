@@ -1,0 +1,232 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Reason Only When Needed: Efficient Generative Reward Modeling via Model-Internal Uncertainty",
+      "source_url": "https://arxiv.org/abs/2604.10072",
+      "year": 2026,
+      "published": "2026-04-11",
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "citation_count": 15,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Recent advancements in the Generative Reward Model (GRM) have demonstrated its potential to enhance the reasoning abilities of LLMs through Chain-of-Thought (CoT) prompting. Despite these gains, existing implementations of GRM suffer from two critical limitations. First, CoT prompting is applied indiscriminately to all inputs regardless of their inherent complexity. This introduces unnecessary computational costs for tasks amenable to fast, direct inference. Second, existing approaches primarily rely on voting-based mechanisms to evaluate CoT outputs, which often lack granularity and precision in assessing reasoning quality. In this paper, we propose E-GRM, an efficient generative reward modeling framework grounded in model-internal uncertainty. E-GRM leverages the convergence behavior of parallel model generations to estimate uncertainty and selectively trigger CoT reasoning only when needed, without relying on handcrafted features or task-dependent signals. To improve reward fidelity, we introduce a lightweight discriminative scorer trained with a hybrid regression--ranking objective to provide fine-grained evaluation of reasoning paths. Experiments on multiple reasoning benchmarks show that E-GRM substantially reduces inference cost while consistently improving answer accuracy, demonstrating that model-internal uncertainty is an effective and general signal for efficient reasoning-aware reward modeling.",
+      "identifiers": [
+        "SemanticScholar:f15070d48b1ec5a90a9eb67ba1beb67e7cfa674d"
+      ],
+      "semantic_scholar_id": "f15070d48b1ec5a90a9eb67ba1beb67e7cfa674d",
+      "canonical_id": "arXiv:2604.10072",
+      "arxiv_id": "2604.10072",
+      "doi": "10.48550/arXiv.2604.10072",
+      "authors": [
+        "Chao Xue",
+        "Yaoyu Wang",
+        "Meng-Qiao Liu",
+        "Di Liang",
+        "Xin-hao Han",
+        "Peiyang Liu",
+        "Xianjie Wu",
+        "Chenyao Lu",
+        "Lei Jiang",
+        "Yu Lu",
+        "Hai-Bo Shi",
+        "Shuang Liang",
+        "Min-Long Peng",
+        "F. Salim"
+      ],
+      "priority": 125,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 10,
+        "citations": 15,
+        "citation_count": 15,
+        "total": 125,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 183,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      },
+      "reason": "The reward model avoids costly chain-of-thought on easy inputs by using internal uncertainty to decide when to reason.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Polynormer: Polynomial-Expressive Graph Transformer in Linear Time",
+      "source_url": "https://arxiv.org/abs/2403.01232",
+      "year": 2024,
+      "published": "2024-03-02",
+      "venue": "International Conference on Learning Representations",
+      "citation_count": 111,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Graph transformers (GTs) have emerged as a promising architecture that is theoretically more expressive than message-passing graph neural networks (GNNs). However, typical GT models have at least quadratic complexity and thus cannot scale to large graphs. While there are several linear GTs recently proposed, they still lag behind GNN counterparts on several popular graph datasets, which poses a critical concern on their practical expressivity. To balance the trade-off between expressivity and scalability of GTs, we propose Polynormer, a polynomial-expressive GT model with linear complexity. Polynormer is built upon a novel base model that learns a high-degree polynomial on input features. To enable the base model permutation equivariant, we integrate it with graph topology and node features separately, resulting in local and global equivariant attention models. Consequently, Polynormer adopts a linear local-to-global attention scheme to learn high-degree equivariant polynomials whose coefficients are controlled by attention scores. Polynormer has been evaluated on $13$ homophilic and heterophilic datasets, including large graphs with millions of nodes. Our extensive experiment results show that Polynormer outperforms state-of-the-art GNN and GT baselines on most datasets, even without the use of nonlinear activation functions.",
+      "identifiers": [
+        "SemanticScholar:9c1628f73689e5a2e0ddcd4da3d93492085b9e36"
+      ],
+      "semantic_scholar_id": "9c1628f73689e5a2e0ddcd4da3d93492085b9e36",
+      "canonical_id": "arXiv:2403.01232",
+      "arxiv_id": "2403.01232",
+      "doi": "10.48550/arXiv.2403.01232",
+      "authors": [
+        "Chenhui Deng",
+        "Zichao Yue",
+        "Zhi-Ru Zhang"
+      ],
+      "priority": 121,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 111,
+        "citation_count": 111,
+        "total": 121,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 953,
+        "matched_prestigious_venue": "International Conference on Learning Representations"
+      },
+      "reason": "Polynormer gives graph transformers linear complexity through local-to-global attention, a concrete attention-scaling method.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Confidence-Calibrated Small-Large Language Model Collaboration for Cost-Efficient Reasoning",
+      "source_url": "https://arxiv.org/abs/2603.03752",
+      "year": 2026,
+      "published": "2026-03-04",
+      "venue": "Conference of the European Chapter of the Association for Computational Linguistics",
+      "citation_count": 6,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLMs) demonstrate superior reasoning capabilities compared to small language models (SLMs), but incur substantially higher costs. We propose COllaborative REAsoner (COREA), a system that cascades an SLM with an LLM to achieve a balance between accuracy and cost in complex reasoning tasks. COREA first attempts to answer questions using the SLM, which outputs both an answer and a verbalized confidence score. Questions with confidence below a predefined threshold are deferred to the LLM for more accurate resolution. We introduce a reinforcement learning-based training algorithm that aligns the SLM's confidence through an additional confidence calibration reward. Extensive experiments demonstrate that our method jointly improves the SLM's reasoning ability and confidence calibration across diverse datasets and model backbones. Compared to using the LLM alone, COREA reduces cost by 21.5% and 16.8% on out-of-domain math and non-math datasets, respectively, with only an absolute pass@1 drop within 2%.",
+      "identifiers": [
+        "SemanticScholar:046858ffec7540e60840e9fa234bd61612ae6cf6"
+      ],
+      "semantic_scholar_id": "046858ffec7540e60840e9fa234bd61612ae6cf6",
+      "canonical_id": "arXiv:2603.03752",
+      "arxiv_id": "2603.03752",
+      "doi": "10.18653/v1/2026.eacl-long.208",
+      "authors": [
+        "Chuang Zhang",
+        "Zizhen Zhu",
+        "Yi Wei",
+        "Bing Tian",
+        "Junyi Liu",
+        "He Wang",
+        "Wang Xavier",
+        "Yaxiao Liu"
+      ],
+      "priority": 116,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 10,
+        "citations": 6,
+        "citation_count": 6,
+        "total": 116,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 221,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      },
+      "reason": "COREA uses a small model first and routes low-confidence cases to a large model to balance reasoning quality and cost.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "PolaFormer: Polarity-aware Linear Attention for Vision Transformers",
+      "source_url": "https://arxiv.org/abs/2501.15061",
+      "year": 2025,
+      "published": "2025-01-25",
+      "venue": "International Conference on Learning Representations",
+      "citation_count": 104,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Linear attention has emerged as a promising alternative to softmax-based attention, leveraging kernelized feature maps to reduce complexity from quadratic to linear in sequence length. However, the non-negative constraint on feature maps and the relaxed exponential function used in approximation lead to significant information loss compared to the original query-key dot products, resulting in less discriminative attention maps with higher entropy. To address the missing interactions driven by negative values in query-key pairs, we propose a polarity-aware linear attention mechanism that explicitly models both same-signed and opposite-signed query-key interactions, ensuring comprehensive coverage of relational information. Furthermore, to restore the spiky properties of attention maps, we provide a theoretical analysis proving the existence of a class of element-wise functions (with positive first and second derivatives) that can reduce entropy in the attention distribution. For simplicity, and recognizing the distinct contributions of each dimension, we employ a learnable power function for rescaling, allowing strong and weak attention signals to be effectively separated. Extensive experiments demonstrate that the proposed PolaFormer improves performance on various vision tasks, enhancing both expressiveness and efficiency by up to 4.6%.",
+      "identifiers": [
+        "SemanticScholar:9f1cb6cbcfa1e3e862861d9a945c1eed25f2f50e"
+      ],
+      "semantic_scholar_id": "9f1cb6cbcfa1e3e862861d9a945c1eed25f2f50e",
+      "canonical_id": "arXiv:2501.15061",
+      "arxiv_id": "2501.15061",
+      "doi": "10.48550/arXiv.2501.15061",
+      "authors": [
+        "Wei-Kang Meng",
+        "Ya-Dan Luo",
+        "Xin Li",
+        "Dongmei Jiang",
+        "Zheng Zhang"
+      ],
+      "priority": 114,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 104,
+        "citation_count": 104,
+        "total": 114,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 624,
+        "matched_prestigious_venue": "International Conference on Learning Representations"
+      },
+      "reason": "PolaFormer uses linear attention to reduce sequence complexity and reports an efficiency improvement.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Can LLMs Predict Their Own Failures? Self-Awareness via Internal Circuits",
+      "source_url": "https://arxiv.org/abs/2512.20578",
+      "year": 2025,
+      "published": "2025-12-23",
+      "venue": "arXiv.org",
+      "citation_count": 13,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLMs) generate fluent and complex outputs but often fail to recognize their own mistakes and hallucinations. Existing approaches typically rely on external judges, multi-sample consistency, or text-based self-critique, which incur additional compute or correlate weakly with true correctness. We ask: can LLMs predict their own failures by inspecting internal states during inference? We introduce Gnosis, a lightweight self-awareness mechanism that enables frozen LLMs to perform intrinsic self-verification by decoding signals from hidden states and attention patterns. Gnosis passively observes internal traces, compresses them into fixed-budget descriptors, and predicts correctness with negligible inference cost, adding only ~5M parameters and operating independently of sequence length. Across math reasoning, open-domain question answering, and academic knowledge benchmarks, and over frozen backbones ranging from 1.7B to 20B parameters, Gnosis consistently outperforms strong internal baselines and large external judges in both accuracy and calibration. Moreover, it generalizes zero-shot to partial generations, enabling early detection of failing trajectories and compute-aware control. These results show that reliable correctness cues are intrinsic to generation process and can be extracted efficiently without external supervision.",
+      "identifiers": [
+        "SemanticScholar:4eed8b3ebd30e24af52a654d4b6cdafa7ce32d59"
+      ],
+      "semantic_scholar_id": "4eed8b3ebd30e24af52a654d4b6cdafa7ce32d59",
+      "canonical_id": "arXiv:2512.20578",
+      "arxiv_id": "2512.20578",
+      "doi": "10.48550/arXiv.2512.20578",
+      "authors": [
+        "Amirhosein Ghasemabadi",
+        "Di Niu"
+      ],
+      "priority": 113,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 13,
+        "citation_count": 13,
+        "total": 113,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 292,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Gnosis predicts correctness from internal states at negligible inference cost and enables early compute-aware control.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-d06879874349",
+    "round": "libimp-d06879874349b832-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 5,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-d06879874349b832-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-d06879874349b832-pre01.json",
+    "receipt": "sha256:c2f2bf2d5f4b75f9c946c6f95128232707d636e837b0f40c4891ac0c6c4eff5f"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-d06879874349",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
