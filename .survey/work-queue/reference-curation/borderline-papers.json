@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-11T05:37:01+00:00",
-  "record_count": 4624,
+  "updated_at": "2026-10-11T05:42:40+00:00",
+  "record_count": 4626,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -70709,6 +70709,32 @@
       ],
       "borderline_recheck_count": 0,
       "title": "Is Prosody Encoded in the Neural Audio Codec Mimi?"
+    },
+    "arXiv:2511.19097": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2511.19097",
+      "identity_tokens": [
+        "arXiv:2511.19097"
+      ],
+      "reason": "一次要旨では、思考の部分手順を軽量専用モデルで並列生成し、段階別報酬と連鎖的な強化学習で統合する。推論3.8倍高速化・処理率68%改善を主張する一方、主眼は推論サーバーの資源管理やカーネル最適化ではなく、RLHFの推論過程の分解・報酬帰属・推論品質である。並列生成のシステム実装と比較条件を本文で確認するまでは、推論基盤としての直接的貢献が十分と断定できず境界候補とする。",
+      "first_checked_at": "2026-10-11T05:42:39+00:00",
+      "last_checked_at": "2026-10-11T05:42:39+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "DeCoRL: Decoupling Reasoning Chains via Parallel Sub-Step Generation and Cascaded Reinforcement for Interpretable and Scalable RLHF"
+    },
+    "arXiv:2608.26005": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.26005",
+      "identity_tokens": [
+        "arXiv:2608.26005"
+      ],
+      "reason": "一次要旨では、音声対話モデルの情報記憶と感情・人格記憶を分離した二系統の検索・更新と、音声ストリーミング中の記憶入出力を提案する。検索134ミリ秒という実時間性を示すが、中心的評価は記憶検索精度・人物属性・対話品質であり、LLM推論エンジンの階層メモリ、KVキャッシュ、MoE、GPUサービング最適化とは直接一致しない。対話エージェント記憶の周辺システムとして境界候補とする。",
+      "first_checked_at": "2026-10-11T05:42:40+00:00",
+      "last_checked_at": "2026-10-11T05:42:40+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "VoiceMem: Streaming Dual-Brain Memory for Real-Time Interaction"
     }
   }
 }
