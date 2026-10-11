@@ -35,10 +35,15 @@
   "selection_reason": "gated linear recurrenceとlocal attentionを混合し、global attentionの系列長に伴うKV memory増加を避けるlanguage model architecture。14Bまでscaleし、推論でTransformerより低latency・高throughputを示すため対象内。",
   "semantic_scholar_id": "d53fe76bd2795a19ddf52d012917782f6f6f2c1e",
   "source_url": "https://arxiv.org/abs/2402.19427",
-  "status": "ready",
+  "status": "superseded",
   "title": "Griffin: Mixing Gated Linear Recurrences with Local Attention for Efficient Language Models",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2024
+  "year": 2024,
+  "superseded_at": "2026-10-11T04:20:19+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2024-2402.19427-griffin-mixing-gated-linear-recurrences-with-local-attention-for-efficie.md",
+  "represented_canonical_id": "arXiv:2402.19427",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
