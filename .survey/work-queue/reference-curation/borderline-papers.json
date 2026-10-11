@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-11T06:45:23+00:00",
-  "record_count": 4636,
+  "updated_at": "2026-10-11T06:51:28+00:00",
+  "record_count": 4637,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -70158,9 +70158,9 @@
         "DOI:10.18653/v1/d19-1633",
         "arXiv:1904.09324"
       ],
-      "reason": "条件付きマスク言語モデルで翻訳文全体を並列予測し、低信頼語を反復して再生成する非自己回帰の高速復号方式。復号速度への直接寄与があるため無関係とはしない。ただし評価対象は2019年の機械翻訳専用モデルであり、現行の大規模生成LLMの推論サービングやKVキャッシュ、実行基盤への適用は要旨から確認できないため、LLM推論サーベイでは境界的とする。",
+      "reason": "EMNLP-IJCNLP 2019の一次要旨は、機械翻訳用の条件付きマスク言語モデルで全目標語を並列予測し、信頼度の低い語を反復的に再マスク・再生成する復号方式を提案する。固定反復回数で非自己回帰翻訳のBLEUを改善し逐次Transformerより高速とするため、並列復号の基礎研究として推論計算と関連する。ただし対象は翻訳用エンコーダ・デコーダであり、現代の自己回帰LLMサービング、KVキャッシュ、推論基盤の実測改善を直接評価していない。LLM推論サーベイの中心対象と断定せずborderlineとする。",
       "first_checked_at": "2026-10-10T13:56:27+00:00",
-      "last_checked_at": "2026-10-10T13:56:27+00:00",
+      "last_checked_at": "2026-10-11T06:51:28+00:00",
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "Mask-Predict: Parallel Decoding of Conditional Masked Language Models"
@@ -70889,6 +70889,19 @@
       ],
       "borderline_recheck_count": 0,
       "title": "Counterfactual VLA: Self-Reflective Vision-Language-Action Model with Adaptive Reasoning"
+    },
+    "arXiv:1909.08053": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:1909.08053",
+      "identity_tokens": [
+        "arXiv:1909.08053"
+      ],
+      "reason": "原著の一次要旨が掲げる主目的は巨大Transformerの分散学習であり、層内の行列分割と通信演算をPyTorchに追加して8.3Bモデルを512 GPUで学習し、15.1 PFLOPS・76%スケーリング効率を測る。現行サーベイの通常Researchでは学習専用高速化を凍結範囲としている。一方、層内テンソル並列の構成は分散LLM推論の重み分割と通信設計にも直接転用可能な基礎技術なので、完全な無関係とは断定せずborderlineに保留する。論文の主評価は学習性能であり、オンライン推論のトークン遅延・同時要求処理・KVキャッシュ性能を直接測定した成果ではない。",
+      "first_checked_at": "2026-10-11T06:51:25+00:00",
+      "last_checked_at": "2026-10-11T06:51:27+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Megatron-LM: Training Multi-Billion Parameter Language Models Using Model Parallelism"
     }
   }
 }
