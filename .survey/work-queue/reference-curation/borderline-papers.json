@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-11T15:41:14+00:00",
-  "record_count": 4655,
+  "updated_at": "2026-10-11T15:49:55+00:00",
+  "record_count": 4656,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -71105,11 +71105,12 @@
       "classification": "borderline",
       "canonical_id": "arXiv:2202.08906",
       "identity_tokens": [
+        "DOI:10.48550/arxiv.2202.08906",
         "arXiv:2202.08906"
       ],
-      "reason": "一次要旨は疎な混合専門家モデルの学習不安定性と微調整時の汎化性能を主問題とし、2690億パラメータのST-MoE-32Bを構築して推論課題の正答率を比較する。ルータ設計と専門家数は推論時の実行構造にも関係するが、要旨で報告する主要貢献は学習の安定化・転移学習性能であり、推論サービング、KVメモリ、エキスパート配置、実測推論遅延の直接最適化ではない。学習単独最適化は現在凍結中のため、MoE推論との接点を持つ境界候補とする。",
+      "reason": "疎な専門家混合モデル（MoE）を安定に学習・転移する設計を中心とし、2690億パラメータの疎モデルを320億パラメータの密モデルと同程度の演算費用で運用する構成を報告する。MoEの活性化演算量という推論効率に関係する側面はある一方、要旨の主要評価は学習安定性と転移学習の品質であり、専門家配置・通信・推論実行基盤の最適化を直接検証するものではない。MoE関連の境界候補として保留する。",
       "first_checked_at": "2026-10-11T13:06:21+00:00",
-      "last_checked_at": "2026-10-11T13:06:21+00:00",
+      "last_checked_at": "2026-10-11T15:49:55+00:00",
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "ST-MoE: Designing Stable and Transferable Sparse Expert Models"
@@ -71154,6 +71155,20 @@
       ],
       "borderline_recheck_count": 0,
       "title": "Risk-Calibrated Uncertainty-Aware Edge–Cloud Scheduling for Reliable Multi-Tenant Ml Inference"
+    },
+    "arXiv:2203.14680": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2203.14680",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2203.14680",
+        "arXiv:2203.14680"
+      ],
+      "reason": "TransformerのFFNが語彙空間でどの概念を押し上げるかを解析し、その解釈結果をGPT-2の毒性抑制と単純な早期終了規則に利用する。要旨では平均約20%の計算節約を報告しており推論計算量の削減との接点はあるが、中心はモデル内部の予測形成と解釈可能性であり、推論エンジンの実行方式、GPUカーネル、メモリ階層、要求スケジューリングの研究ではない。したがって収録判断は境界的。",
+      "first_checked_at": "2026-10-11T15:49:54+00:00",
+      "last_checked_at": "2026-10-11T15:49:54+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Transformer Feed-Forward Layers Build Predictions by Promoting Concepts in the Vocabulary Space"
     }
   }
 }

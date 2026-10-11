@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-7031e45a3686dc95-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2202.08906",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2202.08906",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2202.08906",
+      "arXiv:2202.08906"
+    ],
+    "reason": "疎な専門家混合モデル（MoE）を安定に学習・転移する設計を中心とし、2690億パラメータの疎モデルを320億パラメータの密モデルと同程度の演算費用で運用する構成を報告する。MoEの活性化演算量という推論効率に関係する側面はある一方、要旨の主要評価は学習安定性と転移学習の品質であり、専門家配置・通信・推論実行基盤の最適化を直接検証するものではない。MoE関連の境界候補として保留する。",
+    "first_checked_at": "2026-10-11T13:06:21+00:00",
+    "last_checked_at": "2026-10-11T15:49:55+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "ST-MoE: Designing Stable and Transferable Sparse Expert Models"
+  },
+  "processed_at": "2026-10-11T15:49:55+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-7031e45a3686",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
