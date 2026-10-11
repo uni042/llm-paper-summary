@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-4ac5e71d44f673ea-unrel-013",
+  "operation": "mark_unrelated",
+  "canonical_id": "DOI:10.1109/TPAMI.2026.3693108",
+  "reason": "Instance-Dependent Early Stoppingは既に学習済み例をbackpropagationから除くtraining-data pruningで、abstractではLLM supervised fine-tuningの計算削減も扱う。推論時ではなくtraining-only efficiencyのため対象外。",
+  "title": "Instance-Dependent Early Stopping for Adaptive Data Pruning",
+  "identity_tokens": [
+    "doi:10.1109/tpami.2026.3693108",
+    "PRIMARY:https://scholars.hkbu.edu.hk/en/publications/instance-dependent-early-stopping-for-adaptive-data-pruning/"
+  ],
+  "linked_from": [
+    "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-4ac5e71d44f6",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}
