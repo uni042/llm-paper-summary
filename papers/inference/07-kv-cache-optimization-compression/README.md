@@ -16,7 +16,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 方向は異なるが、いずれも**KV cacheがdecode時のmemory容量やmemory bandwidthのボトルネックになることを直接緩和する**研究として扱う。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（194本）
+## 自動生成の論文一覧（195本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -360,6 +360,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 - **2026-08 · [PuzzleKV: Page-Wise Low-Rank Decomposition for KV Cache Compression](2026-2608.23843-puzzlekv-page-wise-low-rank-kv-compression.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   PagedAttentionの固定長ページごとにKVを独立低ランク分解し、密ページと因子化ページを復元なしで同時に注意計算することで、学習不要のままKV容量を約60%へ削減する。
+
+- **2026-08 · [PatchKV: Efficient KV Cache Recovery for Dynamically Edited LLM Contexts](2026-2609.26219-patchkv-efficient-kv-cache-recovery-for-dynamically-edited-llm-contexts.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  単純な接頭辞キャッシュでは最初の不一致以降を全再計算し、無条件再利用では古い因果状態を持ち込むという二者択一になる。編集位置からの距離に基づく局所的な修復範囲、過去に収集した注意重みから見つける遠方の重要ブロック、保存時に決めたブロック別の量子化精度を組み合わせる。
 
 - **2026-08 · [PAGE: Partition-Aware Gated KV-Cache Eviction](2026-2609.22157-page-partition-aware-gated-kv-cache-eviction.md)**  
   実装：[✓](https://github.com/pankajkumar6002/PAGE) ・ リポジトリ内被引用：0  

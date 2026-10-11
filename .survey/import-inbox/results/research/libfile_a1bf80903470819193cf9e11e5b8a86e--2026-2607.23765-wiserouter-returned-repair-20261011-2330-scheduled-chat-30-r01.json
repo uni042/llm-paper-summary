@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "631c2d7a0e8f42e76fddacf935755b60d7b62ec107c87ef6ff48b2dc0dd00d2b",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_a1bf80903470819193cf9e11e5b8a86e--2026-2607.23765-wiserouter-returned-repair-20261011-2330-scheduled-chat-30-r01.md",
+  "canonical_id": "arXiv:2607.23765",
+  "worker_completed_at": "2026-10-11T23:35:24+09:00",
+  "worker_run_key": "20261011-2330-scheduled-chat-30/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 6252,
+    "body_paragraphs": 35,
+    "method_chars": 2303,
+    "method_paragraphs": 13,
+    "evaluation_chars": 0,
+    "limitation_chars": 803,
+    "insufficiency_flags": [
+      "評価説明量 0 < 500"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 評価説明量 0 < 500"
+  ],
+  "processed_at": "2026-10-11T14:48:32+00:00"
+}

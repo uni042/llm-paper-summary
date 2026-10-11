@@ -32,9 +32,14 @@
   "selection_reason": "長時間agentの文脈編集時にoffloaded KVのsuffixを局所回復して全再計算を避ける。KV offload/recomputation系統へ非常に直接的な最新差分。",
   "semantic_scholar_id": "892a63b6dc07b5110f8346609206f48975177d1c",
   "source_url": "https://arxiv.org/abs/2609.26219",
-  "status": "ready",
+  "status": "superseded",
   "title": "PatchKV: Efficient KV Cache Recovery for Dynamically Edited LLM Contexts",
   "type": "research",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-10-11T14:49:31+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2609.26219-patchkv-efficient-kv-cache-recovery-for-dynamically-edited-llm-contexts.md",
+  "represented_canonical_id": "arXiv:2609.26219",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

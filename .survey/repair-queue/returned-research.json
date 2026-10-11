@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-11T14:42:41+00:00",
+  "generated_at": "2026-10-11T14:49:31+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 97,
+  "count": 94,
   "entries": [
     {
       "canonical_id": "arXiv:2606.24506",
@@ -530,38 +530,6 @@
       "worker_run_key": "20261004-0700-scheduled-chat-00/r02"
     },
     {
-      "canonical_id": "arXiv:2609.26219",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-04T02:57:53+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "日本語比率 50.6% < 70%"
-      ],
-      "quality_metrics": null,
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_53ee6eec213481919d5ec0a1e2066bc8--2026-2609.26219-patchkv.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_53ee6eec213481919d5ec0a1e2066bc8--2026-2609.26219-patchkv.json",
-      "worker_run_key": "20261004-0400-scheduled-chat-00/r02"
-    },
-    {
-      "canonical_id": "arXiv:2609.08135",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-04T03:01:22+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "日本語比率 59.1% < 70%"
-      ],
-      "quality_metrics": null,
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_6c0e22379a78819182b2518ee4dc062e--2026-kbbq.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_6c0e22379a78819182b2518ee4dc062e--2026-kbbq.json",
-      "worker_run_key": "20261004-0700-scheduled-chat-00/r01"
-    },
-    {
       "canonical_id": "arXiv:2608.28444",
       "title": null,
       "source_url": null,
@@ -834,22 +802,6 @@
       "worker_run_key": "20261006-1130-scheduled-chat-30/r02"
     },
     {
-      "canonical_id": "arXiv:2601.19139",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-06T12:50:39+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "日本語比率 66.9% < 70%"
-      ],
-      "quality_metrics": null,
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-eb89f5a968d8--libfile_382eb759f810819192b16fd9d535ff6f--2601.19139-vllm-mlx.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-eb89f5a968d8--libfile_382eb759f810819192b16fd9d535ff6f--2601.19139-vllm-mlx.json",
-      "worker_run_key": "20261006-1400-scheduled-chat-00/r02"
-    },
-    {
       "canonical_id": "arXiv:2603.24517",
       "title": null,
       "source_url": null,
@@ -880,22 +832,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-00dda5d36d91--libfile_0dca008279cc819185c8fbbcf094a81b--2602.22603-sidequest.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-00dda5d36d91--libfile_0dca008279cc819185c8fbbcf094a81b--2602.22603-sidequest.json",
       "worker_run_key": "20261006-1030-scheduled-chat-30/r01"
-    },
-    {
-      "canonical_id": "arXiv:2607.23765",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-06T16:13:06+00:00",
-      "return_count": 4,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "日本語比率 56.0% < 70%"
-      ],
-      "quality_metrics": null,
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-251ca153f01d--libfile_3cc79a5ab610819186a71420387e4308--2607.23765-wiserouter.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-251ca153f01d--libfile_3cc79a5ab610819186a71420387e4308--2607.23765-wiserouter.json",
-      "worker_run_key": "20261006-1630-scheduled-chat-30/r02"
     },
     {
       "canonical_id": "arXiv:2510.00615",
@@ -1886,8 +1822,8 @@
     },
     {
       "canonical_id": "arXiv:2312.04927",
-      "title": "Zoology: Measuring and Improving Recall in Efficient Language Models",
-      "source_url": "https://arxiv.org/html/2312.04927v1",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-11T14:39:27+00:00",
       "return_count": 1,
       "assigned_worker": "scheduled-chat-30",
@@ -1911,6 +1847,33 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_295c5cde2fb4819195b8acd3e30f2ee3--2023-2312.04927-zoology-research-20261011-1756-scheduled-chat-00-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_295c5cde2fb4819195b8acd3e30f2ee3--2023-2312.04927-zoology-research-20261011-1756-scheduled-chat-00-r01.json",
       "worker_run_key": "20261011-1756-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2607.23765",
+      "title": "WISERouter: LLM Routing with Workload Budget Constraint",
+      "source_url": "https://arxiv.org/abs/2607.23765",
+      "returned_at": "2026-10-11T14:48:32+00:00",
+      "return_count": 5,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 0 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 6252,
+        "body_paragraphs": 35,
+        "method_chars": 2303,
+        "method_paragraphs": 13,
+        "evaluation_chars": 0,
+        "limitation_chars": 803,
+        "insufficiency_flags": [
+          "評価説明量 0 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_a1bf80903470819193cf9e11e5b8a86e--2026-2607.23765-wiserouter-returned-repair-20261011-2330-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_a1bf80903470819193cf9e11e5b8a86e--2026-2607.23765-wiserouter-returned-repair-20261011-2330-scheduled-chat-30-r01.json",
+      "worker_run_key": "20261011-2330-scheduled-chat-30/r01"
     }
   ]
 }
