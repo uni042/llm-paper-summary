@@ -1,0 +1,330 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local",
+  "run_key": "codex-discovery-b98-20261011-p01",
+  "reference_main_sha": "6bd57ba0de26351c33cf8a261517947063e2f459",
+  "record_count": 20,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2112.04267",
+      "identity_tokens": [
+        "arXiv:2112.04267"
+      ],
+      "title": "Implicit Neural Representations for Image Compression",
+      "reason": "The arXiv abstract studies INRs as an image-compression pipeline with quantization, entropy coding, and faster per-image fitting; these compression mechanisms are adjacent to model compression, but the measured target is image coding rather than LLM inference.",
+      "source_url": "https://arxiv.org/abs/2112.04267v2",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-11T01:01:28Z",
+      "last_checked_at": "2026-10-11T01:01:36Z",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2004.07320-training-with-quantization-noise-for-extreme-model-compression.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3506695",
+      "identity_tokens": [
+        "DOI:10.1145/3506695"
+      ],
+      "title": "An Empirical Study of the Impact of Hyperparameter Tuning and Model Optimization on the Performance Properties of Deep Neural Networks",
+      "reason": "The paper concerns how tuning and model-optimization choices change DNN performance properties, including deployment latency and model size; its empirical scope is general DNNs rather than LLM serving, so transfer to the target system remains uncertain. Primary-source retrieval failure: ACM DL primary DOI page returned HTTP 403 Forbidden; no primary abstract was retrieved from that page.",
+      "source_url": "https://doi.org/10.1145/3506695",
+      "body_check": "source_unavailable; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-10-11T01:01:28Z",
+      "last_checked_at": "2026-10-11T01:01:36Z",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2004.07320-training-with-quantization-noise-for-extreme-model-compression.md"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2008.05000",
+      "identity_tokens": [
+        "arXiv:2008.05000"
+      ],
+      "title": "Degree-Quant: Quantization-Aware Training for Graph Neural Networks",
+      "reason": "Degree-Quant trains quantized graph neural networks for low-precision inference and reports CPU speedups from INT8 arithmetic, making inference quantization and runtime efficiency its explicit subject.",
+      "source_url": "https://arxiv.org/abs/2008.05000v3",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-11T00:59:47Z",
+      "last_checked_at": "2026-10-11T00:59:48Z",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2004.07320-training-with-quantization-noise-for-extreme-model-compression.md"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2011.00241",
+      "identity_tokens": [
+        "arXiv:2011.00241"
+      ],
+      "title": "Methods for Pruning Deep Neural Networks",
+      "reason": "This survey reviews deep-network pruning methods as a route to reducing model redundancy and resource demands; the abstract presents pruning as model compression, a transferable efficiency mechanism for inference models.",
+      "source_url": "https://arxiv.org/abs/2011.00241v2",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-11T01:01:28Z",
+      "last_checked_at": "2026-10-11T01:01:36Z",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2004.07320-training-with-quantization-noise-for-extreme-model-compression.md"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2203.11086",
+      "identity_tokens": [
+        "arXiv:2203.11086"
+      ],
+      "title": "Overcoming Oscillations in Quantization-Aware Training",
+      "reason": "The abstract links low-bit quantization-aware training to inference accuracy in efficient networks and proposes oscillation-dampening/freezing methods to preserve 3–4-bit model quality, directly supporting quantized deployment.",
+      "source_url": "https://arxiv.org/abs/2203.11086v2",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-11T01:01:28Z",
+      "last_checked_at": "2026-10-11T01:01:36Z",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2004.07320-training-with-quantization-noise-for-extreme-model-compression.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1911.00623",
+      "identity_tokens": [
+        "arXiv:1911.00623"
+      ],
+      "title": "On-Device Machine Learning: An Algorithms and Learning Theory Perspective",
+      "reason": "Although the survey frames on-device ML as resource-constrained, its stated subject is on-device training, online learning, and model adaptation; it does not address efficient inference or an inference execution system.",
+      "source_url": "https://arxiv.org/abs/1911.00623v2",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-11T00:59:47Z",
+      "last_checked_at": "2026-10-11T00:59:48Z",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2004.07320-training-with-quantization-noise-for-extreme-model-compression.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2404.09554",
+      "identity_tokens": [
+        "arXiv:2404.09554"
+      ],
+      "title": "Explainable Generative AI (GenXAI): a survey, conceptualization, and research agenda",
+      "reason": "The survey organizes explainability needs and methods for generative AI; the abstract mentions cost as one explanation desideratum but does not study inference-system cost reduction or execution efficiency.",
+      "source_url": "https://arxiv.org/abs/2404.09554v1",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-11T01:01:28Z",
+      "last_checked_at": "2026-10-11T01:01:36Z",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2302.10866-hyena-hierarchy-towards-larger-convolutional-language-models.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2306.09818",
+      "identity_tokens": [
+        "arXiv:2306.09818"
+      ],
+      "title": "HiNeRV: Video Compression with Hierarchical Encoding-based Neural Representation",
+      "reason": "HiNeRV combines neural video compression with pruning and quantization, but its target is rate-distortion performance of a video codec; the abstract does not connect its compression pipeline to LLM inference systems.",
+      "source_url": "https://arxiv.org/abs/2306.09818v3",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-11T01:01:28Z",
+      "last_checked_at": "2026-10-11T01:01:36Z",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2004.07320-training-with-quantization-noise-for-extreme-model-compression.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.05184",
+      "identity_tokens": [
+        "arXiv:2607.05184"
+      ],
+      "title": "Rethinking On-Policy Self-Distillation for Thinking Models",
+      "reason": "The paper studies how privileged self-distillation affects thinking-model accuracy and correction behavior during training; its abstract reports degradation rather than an inference-efficiency mechanism.",
+      "source_url": "https://arxiv.org/abs/2607.05184v1",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-11T01:01:28Z",
+      "last_checked_at": "2026-10-11T01:01:36Z",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2502.04463-training-language-models-to-reason-efficiently.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1038/s42256-025-01165-w",
+      "identity_tokens": [
+        "DOI:10.1038/s42256-025-01165-w"
+      ],
+      "title": "Modelling drug-induced cellular perturbation responses with a biologically informed dual-branch transformer",
+      "reason": "The publisher abstract describes XPert, a dual-branch transformer for predicting drug-induced cellular gene-expression changes and dose–time responses; its purpose is biological prediction, not inference-system efficiency.",
+      "source_url": "https://doi.org/10.1038/s42256-025-01165-w",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-11T01:01:28Z",
+      "last_checked_at": "2026-10-11T01:01:36Z",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2302.10866-hyena-hierarchy-towards-larger-convolutional-language-models.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2512.07533",
+      "identity_tokens": [
+        "arXiv:2512.07533"
+      ],
+      "title": "VulnLLM-R: Specialized Reasoning LLM with Agent Scaffold for Vulnerability Detection",
+      "reason": "VulnLLM-R adds a specialized reasoning model and agent scaffold for vulnerability detection; the abstract focuses on security-detection performance and does not identify serving, latency, or compute-efficiency contributions.",
+      "source_url": "https://arxiv.org/abs/2512.07533v1",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-11T01:01:28Z",
+      "last_checked_at": "2026-10-11T01:01:36Z",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2502.04463-training-language-models-to-reason-efficiently.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.14806",
+      "identity_tokens": [
+        "arXiv:2604.14806"
+      ],
+      "title": "Listen, Pause, and Reason: Toward Perception-Grounded Hybrid Reasoning for Audio Understanding",
+      "reason": "The abstract presents a perception-grounded hybrid reasoning model for audio understanding; it focuses on audio task reasoning and perception quality without a concrete inference-efficiency or runtime contribution.",
+      "source_url": "https://arxiv.org/abs/2604.14806v1",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-11T01:01:28Z",
+      "last_checked_at": "2026-10-11T01:01:36Z",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2502.04463-training-language-models-to-reason-efficiently.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1002/wcms.70064",
+      "identity_tokens": [
+        "DOI:10.1002/wcms.70064"
+      ],
+      "title": "Breaking the Barriers of Molecular Dynamics With Deep‐Learning: Opportunities, Pitfalls, and How to Navigate Them",
+      "reason": "This review concerns using deep learning to address accuracy, speed, and sampling limits in molecular-dynamics simulations; its computational target is scientific simulation, not LLM inference or model-serving infrastructure.",
+      "source_url": "https://doi.org/10.1002/wcms.70064",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-11T01:01:28Z",
+      "last_checked_at": "2026-10-11T01:01:36Z",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2204.09656-a-fast-post-training-pruning-framework-for-transformers.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.17958",
+      "identity_tokens": [
+        "arXiv:2601.17958"
+      ],
+      "title": "TensorLens: End-to-End Transformer Analysis via High-Order Attention Tensors",
+      "reason": "TensorLens is an analysis method for interpreting transformer attention tensors; the abstract emphasizes model analysis and explanations, not reduced inference cost or a more efficient execution path.",
+      "source_url": "https://arxiv.org/abs/2601.17958v1",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-11T01:01:28Z",
+      "last_checked_at": "2026-10-11T01:01:36Z",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2302.10866-hyena-hierarchy-towards-larger-convolutional-language-models.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2409.17808",
+      "identity_tokens": [
+        "arXiv:2409.17808"
+      ],
+      "title": "Generative Modeling of Molecular Dynamics Trajectories",
+      "reason": "The paper uses generative models as surrogate models for molecular-dynamics trajectories and related scientific tasks; it targets molecular simulation rather than LLM inference efficiency.",
+      "source_url": "https://arxiv.org/abs/2409.17808v1",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-11T01:01:28Z",
+      "last_checked_at": "2026-10-11T01:01:36Z",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2302.10866-hyena-hierarchy-towards-larger-convolutional-language-models.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.3390/ijms262210925",
+      "identity_tokens": [
+        "DOI:10.3390/ijms262210925"
+      ],
+      "title": "Advances in Artificial Intelligence (AI) Models and Generative Algorithms Represent a New Paradigm for Genomics Research",
+      "reason": "The registered title identifies a broad genomics review, but the MDPI primary article page could not be retrieved, so its abstract-based relevance could not be established. Primary-source retrieval failure: The DOI-resolved MDPI page (https://www.mdpi.com/1422-0067/26/22/10925) returned HTTP 429 Too Many Requests; a subsequent publisher-page attempt returned HTTP 429. Abstract not available from the primary page.",
+      "source_url": "https://doi.org/10.3390/ijms262210925",
+      "body_check": "source_unavailable; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-10-11T01:01:28Z",
+      "last_checked_at": "2026-10-11T01:01:36Z",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2302.10866-hyena-hierarchy-towards-larger-convolutional-language-models.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1101/2024.08.26.609813",
+      "identity_tokens": [
+        "DOI:10.1101/2024.08.26.609813"
+      ],
+      "title": "Learning transcriptome architecture from sequence with a long-context RNA foundation model",
+      "reason": "The registered title identifies a long-context RNA foundation model, but the bioRxiv primary page could not be fetched; without its abstract, its system-efficiency connection cannot be determined. Primary-source retrieval failure: The DOI's primary bioRxiv page (https://www.biorxiv.org/content/10.1101/2024.08.26.609813v1) returned an internal fetch error with no HTTP status exposed; no status is inferred.",
+      "source_url": "https://doi.org/10.1101/2024.08.26.609813",
+      "body_check": "source_unavailable; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-10-11T01:01:28Z",
+      "last_checked_at": "2026-10-11T01:01:36Z",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2302.10866-hyena-hierarchy-towards-larger-convolutional-language-models.md"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2512.19905",
+      "identity_tokens": [
+        "arXiv:2512.19905"
+      ],
+      "title": "Demystifying LLM-as-a-Judge: Analytically Tractable Model for Inference-Time Scaling",
+      "reason": "The paper explicitly analyzes inference-time scaling for LLM-as-a-judge systems; this connects allocation of additional inference compute to judge behavior and is a direct inference-time resource-scaling topic.",
+      "source_url": "https://arxiv.org/abs/2512.19905v3",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-11T01:01:28Z",
+      "last_checked_at": "2026-10-11T01:01:36Z",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2502.04463-training-language-models-to-reason-efficiently.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.07789",
+      "identity_tokens": [
+        "arXiv:2603.07789"
+      ],
+      "title": "SGI: Structured 2D Gaussians for Efficient and Compact Large Image Representation",
+      "reason": "SGI compresses structured 2D Gaussian image representations and speeds their fitting; its abstract concerns image representation and reconstruction, not LLM model compression or serving.",
+      "source_url": "https://arxiv.org/abs/2603.07789v2",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-11T01:01:28Z",
+      "last_checked_at": "2026-10-11T01:01:36Z",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2004.07320-training-with-quantization-noise-for-extreme-model-compression.md"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2602.09591",
+      "identity_tokens": [
+        "arXiv:2602.09591"
+      ],
+      "title": "On the Optimal Reasoning Length for RL-Trained Language Models",
+      "reason": "The paper directly studies how reasoning length relates to accuracy in RL-trained language models at inference time, making reasoning-token allocation and test-time compute the central subject.",
+      "source_url": "https://arxiv.org/abs/2602.09591v3",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-11T01:01:28Z",
+      "last_checked_at": "2026-10-11T01:01:36Z",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2502.04463-training-language-models-to-reason-efficiently.md"
+      ]
+    }
+  ]
+}
