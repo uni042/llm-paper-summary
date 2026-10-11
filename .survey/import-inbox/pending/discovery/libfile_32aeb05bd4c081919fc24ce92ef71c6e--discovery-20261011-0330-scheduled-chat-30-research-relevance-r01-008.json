@@ -1,0 +1,26 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261011-0330-scheduled-chat-30/r01/research-relevance-008",
+  "reference_main_sha": "d5369f8d5b0b7f74a639e90f5eb92a18716df72d",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2006.02464",
+      "identity_tokens": [
+        "arXiv:2006.02464"
+      ],
+      "title": "Serving DNNs like Clockwork: Performance Predictability from the Bottom Up",
+      "reason": "原著20ページを確認。中央制御器がモデル重みのGPUロード（LOAD）とDNN実行（INFER）の開始時刻・締切を決め、ワーカーの暗黙の選択を排除して尾部遅延を抑えるモデルサービング研究である。ResNet50やその他の固定形状DNN、TVMコンパイルモデル、V100 GPUでの検証が主で、自己回帰LLMの出力長変動、KVキャッシュ成長、トークン単位バッチングは直接評価されていない。LLMサービングの設計思想に関係する基礎研究だが、現行LLM推論システムの直接評価ではないため境界扱い。",
+      "source_url": "https://arxiv.org/abs/2006.02464",
+      "body_check": "research_fulltext_relevance_review: original arXiv v2 PDF sections 2-6, especially fixed-shape DNN inference, controller LOAD/INFER scheduling, ResNet50/V100 evaluation and §6 comparisons; LLM decoding not evaluated",
+      "first_checked_at": "2026-10-11T03:36:00+09:00",
+      "last_checked_at": "2026-10-11T03:36:00+09:00",
+      "linked_from": [],
+      "origin": "research_postread_relevance",
+      "worklist_rank": 8
+    }
+  ]
+}
