@@ -32,10 +32,15 @@
   "selection_reason": "KV evictionのhead別budgetとtoken selectionをend-to-end学習し、LongBenchで15% KV保持でもnear-losslessを報告するため、KV cache圧縮・長文推論系統を更新する。",
   "semantic_scholar_id": "9dbefa4becfe4a6ae3decde6fabad3ab975cde52",
   "source_url": "https://www.semanticscholar.org/paper/9dbefa4becfe4a6ae3decde6fabad3ab975cde52",
-  "status": "ready",
+  "status": "superseded",
   "title": "LKV: End-to-End Learning of Head-wise Budgets and Token Selection for LLM KV Cache Eviction",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-10-11T23:46:18+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2605.06676-lkv-end-to-end-learning-of-head-wise-budgets-and-token-selection-for-llm.md",
+  "represented_canonical_id": "arXiv:2605.06676",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
