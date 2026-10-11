@@ -1,0 +1,25 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261011-1700-scheduled-chat-00/r01",
+  "reference_main_sha": "788db1cb5f12f9dbb2e8bf6c5cea75aedee21db4",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2303.05511",
+      "identity_tokens": ["arXiv:2303.05511", "DOI:10.1109/CVPR52729.2023.00976"],
+      "title": "Scaling up GANs for Text-to-Image Synthesis",
+      "reason": "タイトルと割当jobの対象説明が示す中心課題は、GANによる文章条件付き画像合成と512px画像生成の高速化である。LLM、Transformer言語モデル、LLM推論サービング、学習時メモリ階層やMoEシステムの最適化を主題としない。画像生成器の実行速度改善をLLM推論技術の直接研究と誤認しないため除外する。",
+      "source_url": "https://arxiv.org/abs/2303.05511",
+      "body_check": "title_screen_only; abstract_not_read; body_not_read; assignment_job_title_and_selection_reason_checked",
+      "first_checked_at": "2026-10-11T17:08:59+09:00",
+      "last_checked_at": "2026-10-11T17:08:59+09:00",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance",
+      "worklist_rank": 3,
+      "research_job_id": "job-research-77e116c3da561871"
+    }
+  ]
+}
