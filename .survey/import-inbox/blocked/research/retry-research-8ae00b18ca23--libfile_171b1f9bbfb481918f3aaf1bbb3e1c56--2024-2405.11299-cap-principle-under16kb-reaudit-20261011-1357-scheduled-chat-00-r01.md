@@ -97,6 +97,8 @@ references_total: 115
 quality_body_chars: 4972
 quality_method_chars: 2583
 quality_eval_chars: 751
+last_audited: null
+audit_version: 0
 ---
 
 # The CAP Principle for LLM Serving：長文脈サービングの三軸による技術分類
