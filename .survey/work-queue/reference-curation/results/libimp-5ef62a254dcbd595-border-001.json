@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-5ef62a254dcbd595-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2506.01844",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2506.01844",
+    "identity_tokens": [
+      "arXiv:2506.01844"
+    ],
+    "reason": "一次要旨では低価格のロボット向け視覚・言語・動作モデルを小型化し、単一GPU学習とCPUを含む端末配備を目指す。知覚・動作予測と動作実行を分離する非同期推論基盤も提案し応答性を改善するが、評価対象は主にロボット操作であり、一般的なLLMサービング、KVキャッシュ、GPUカーネル、分散推論の汎用方式ではない。推論実行制御への技術的関連はあるため境界的とする。",
+    "first_checked_at": "2026-10-12T14:50:11+00:00",
+    "last_checked_at": "2026-10-12T14:50:11+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "SmolVLA: A Vision-Language-Action Model for Affordable and Efficient Robotics"
+  },
+  "processed_at": "2026-10-12T14:50:11+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-5ef62a254dcb",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

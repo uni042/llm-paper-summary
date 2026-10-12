@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-5ef62a254dcbd595-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2402.09906",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2402.09906",
+    "identity_tokens": [
+      "arXiv:2402.09906"
+    ],
+    "reason": "一次要旨では生成と埋め込みを一つの言語モデルへ統合する命令調整法が主貢献である。長文書の検索拡張生成で別の検索モデルが不要となり60%以上の高速化を報告するため推論時の構成削減に関連するが、サービング基盤、カーネル、キャッシュ管理、オフロードの直接的なシステム方式を検証する研究ではない。学習手法中心かつ推論効率への副次的寄与として境界的とする。",
+    "first_checked_at": "2026-10-10T18:48:04+00:00",
+    "last_checked_at": "2026-10-12T14:50:11+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Generative Representational Instruction Tuning"
+  },
+  "processed_at": "2026-10-12T14:50:12+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-5ef62a254dcb",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

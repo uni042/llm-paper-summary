@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-12T13:50:19+00:00",
-  "record_count": 4679,
+  "updated_at": "2026-10-12T14:50:12+00:00",
+  "record_count": 4682,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -70343,9 +70343,9 @@
       "identity_tokens": [
         "arXiv:2402.09906"
       ],
-      "reason": "主たる貢献は生成と埋込みを単一モデルで扱う指示学習GRITと、その埋込み・生成品質である。要旨には検索モデルと生成モデルを統合して長文書RAGを60%以上高速化するシステム上の結果も含まれる。推論速度の評価は関連するが、学習手法が主であり、推論ランタイムの配置・KV管理・オフロードに関する独立した手法ではないため境界扱い。",
+      "reason": "一次要旨では生成と埋め込みを一つの言語モデルへ統合する命令調整法が主貢献である。長文書の検索拡張生成で別の検索モデルが不要となり60%以上の高速化を報告するため推論時の構成削減に関連するが、サービング基盤、カーネル、キャッシュ管理、オフロードの直接的なシステム方式を検証する研究ではない。学習手法中心かつ推論効率への副次的寄与として境界的とする。",
       "first_checked_at": "2026-10-10T18:48:04+00:00",
-      "last_checked_at": "2026-10-10T18:48:04+00:00",
+      "last_checked_at": "2026-10-12T14:50:11+00:00",
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "Generative Representational Instruction Tuning"
@@ -71523,6 +71523,49 @@
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "Competition-Level Code Generation with AlphaCode"
+    },
+    "arXiv:2205.08084": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2205.08084",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2205.08084",
+        "arXiv:2205.08084",
+        "semanticscholar:cbf3bf8f541f5b446c59c8deacbcc18527768c75"
+      ],
+      "reason": "一次要旨では産業用推薦の検索・順位付け・説明生成を一つの事前学習言語モデルへ統合することが中心で、少数パラメータのプロンプト調整による適応を主張する。一方で低遅延配備のための後段相互作用（late interaction）、早期終了（early exiting）、パラメータ共有、枝刈りを明示し、推論時間とモデルサイズの削減を目的とする実装上の寄与もある。LLM一般の推論基盤ではなく推薦用途に密着した最適化なので、無関係とはせず境界的関連として保留する。",
+      "first_checked_at": "2026-10-12T14:50:10+00:00",
+      "last_checked_at": "2026-10-12T14:50:10+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "M6-Rec: Generative Pretrained Language Models are Open-Ended Recommender Systems"
+    },
+    "arXiv:2506.01844": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2506.01844",
+      "identity_tokens": [
+        "arXiv:2506.01844"
+      ],
+      "reason": "一次要旨では低価格のロボット向け視覚・言語・動作モデルを小型化し、単一GPU学習とCPUを含む端末配備を目指す。知覚・動作予測と動作実行を分離する非同期推論基盤も提案し応答性を改善するが、評価対象は主にロボット操作であり、一般的なLLMサービング、KVキャッシュ、GPUカーネル、分散推論の汎用方式ではない。推論実行制御への技術的関連はあるため境界的とする。",
+      "first_checked_at": "2026-10-12T14:50:11+00:00",
+      "last_checked_at": "2026-10-12T14:50:11+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "SmolVLA: A Vision-Language-Action Model for Affordable and Efficient Robotics"
+    },
+    "arXiv:2412.11664": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2412.11664",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2412.11664",
+        "arXiv:2412.11664",
+        "semanticscholar:2cd94b619034ae0226f4391e3ff628fe9ce780a1"
+      ],
+      "reason": "一次要旨で示されるC3oTは、長い思考過程を圧縮器で短縮し、長短双方を用いた条件付き学習と条件付き推論で短い思考過程から回答する方式である。生成思考を50%以上短縮し回答能力を維持するという報告は復号トークン数削減に結びつくが、主要貢献は推論過程の学習・生成戦略であり、GPUサービング、メモリ階層、推論カーネルの性能測定を要旨から確認できない。推論費用への間接的関連を残し境界的とした。",
+      "first_checked_at": "2026-10-12T14:50:12+00:00",
+      "last_checked_at": "2026-10-12T14:50:12+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "C3oT: Generating Shorter Chain-of-Thought without Compromising Effectiveness"
     }
   }
 }
