@@ -1,34 +1,63 @@
 ---
-canonical_id: "DOI:10.52202/085713-2984"
-title: "Sim-LLM: Optimizing LLM Inference at the Edge through Inter-Task KV Reuse"
-summary: "エッジサーバーへ届く意味的に類似した推論要求を照合し、先行要求の上位層KVキャッシュを再利用することでプリフィル計算とキャッシュ重複を削減する。局所性鋭敏ハッシュ、KV_Manager、サーバー間タスク原型表を組み合わせ、A40/A100でスループットとメモリ使用量を評価した。"
-list_summary: "類似要求の埋め込みをLSHで照合して過去要求の上位層KVを再利用し、隣接エッジサーバーへ処理を振り分けることで、プリフィル再計算とキャッシュ重複を抑える。"
+canonical_id: DOI:10.52202/085713-2984
+title: 'Sim-LLM: Optimizing LLM Inference at the Edge through Inter-Task KV Reuse'
+summary: エッジサーバーへ届く意味的に類似した推論要求を照合し、先行要求の上位層KVキャッシュを再利用することでプリフィル計算とキャッシュ重複を削減する。局所性鋭敏ハッシュ、KV_Manager、サーバー間タスク原型表を組み合わせ、A40/A100でスループットとメモリ使用量を評価した。
+list_summary: 類似要求の埋め込みをLSHで照合して過去要求の上位層KVを再利用し、隣接エッジサーバーへ処理を振り分けることで、プリフィル再計算とキャッシュ重複を抑える。
 authors:
-  - "Ruikun Luo"
-  - "Changwei Gu"
-  - "Qiang He"
-  - "Feifei Chen"
-  - "Song Wu"
-  - "Hai Jin"
-  - "Yun Yang"
-published: "2025-12"
-publication: "Advances in Neural Information Processing Systems 38 (NeurIPS 2025), Main Conference Track"
-publication_type: "国際会議論文"
-publication_status: "査読付き会議録掲載"
-source: "https://proceedings.nips.cc/paper_files/paper/2025/file/80b677bb4d17f77220be88e1d1fdebde-Paper-Conference.pdf"
+- Ruikun Luo
+- Changwei Gu
+- Qiang He
+- Feifei Chen
+- Song Wu
+- Hai Jin
+- Yun Yang
+published: 2025-12
+publication: Advances in Neural Information Processing Systems 38 (NeurIPS 2025), Main Conference Track
+publication_type: 国際会議論文
+publication_status: 査読付き会議録掲載
+source: https://proceedings.nips.cc/paper_files/paper/2025/file/80b677bb4d17f77220be88e1d1fdebde-Paper-Conference.pdf
 sources:
-  - "https://proceedings.nips.cc/paper_files/paper/2025/file/80b677bb4d17f77220be88e1d1fdebde-Paper-Conference.pdf"
-  - "https://proceedings.nips.cc/paper_files/paper/2025/hash/80b677bb4d17f77220be88e1d1fdebde-Abstract-Conference.html"
-implementation: "単一ノードA100 80GBと、4台×各4基A40 40GBのエッジサーバー構成で評価。LSHによるタスク照合、上位層KV_Manager、層サンドイッチ、サーバー間原型表・要求転送を実装。論文が公式コードURLを明記。"
-code: "https://github.com/CGCL-codes/SimLLM"
-last_checked: "2026-10-13"
-worker_completed_at: "2026-10-13T06:30:44+09:00"
-worker_run_key: "20261013-0630-scheduled-chat-30/r01"
-reference_main_sha: "0e29c55e48a7682385552e4c2703d420a450e6f3"
-research_job_id: "job-research-0cbc4e1bd74e7688"
-lineage: "10-kv-cache-offload-recomputation"
+- https://proceedings.nips.cc/paper_files/paper/2025/file/80b677bb4d17f77220be88e1d1fdebde-Paper-Conference.pdf
+- https://proceedings.nips.cc/paper_files/paper/2025/hash/80b677bb4d17f77220be88e1d1fdebde-Abstract-Conference.html
+implementation: 単一ノードA100 80GBと、4台×各4基A40 40GBのエッジサーバー構成で評価。LSHによるタスク照合、上位層KV_Manager、層サンドイッチ、サーバー間原型表・要求転送を実装。論文が公式コードURLを明記。
+code: https://github.com/CGCL-codes/SimLLM
+last_checked: '2026-10-13'
+worker_completed_at: '2026-10-13T06:30:44+09:00'
+worker_run_key: 20261013-0630-scheduled-chat-30/r01
+reference_main_sha: 0e29c55e48a7682385552e4c2703d420a450e6f3
+research_job_id: job-research-0cbc4e1bd74e7688
+lineage: 10-kv-cache-offload-recomputation
 last_audited: null
 audit_version: 0
+references:
+- canonical_id: arXiv:2205.14135
+- canonical_id: DOI:10.1145/3600006.3613165
+- canonical_id: arXiv:2405.14366
+- canonical_id: DOI:10.1145/3651890.3672274
+- canonical_id: arXiv:2308.16137
+- canonical_id: arXiv:2310.01801
+- canonical_id: arXiv:2401.02385
+  arxiv_id: '2401.02385'
+- canonical_id: arXiv:2405.05254
+- canonical_id: arXiv:2405.12981
+- canonical_id: arXiv:2307.09288
+  arxiv_id: '2307.09288'
+- canonical_id: arXiv:2403.17297
+  arxiv_id: '2403.17297'
+- canonical_id: arXiv:2309.17453
+- canonical_id: arXiv:2306.14048
+- canonical_id: arXiv:2405.14256
+- canonical_id: arXiv:2401.02669
+  arxiv_id: '2401.02669'
+- canonical_id: arXiv:2404.09526
+- canonical_id: arXiv:2404.14469
+- canonical_id: arXiv:2305.17118
+- canonical_id: arXiv:2401.18079
+- canonical_id: arXiv:2405.03917
+- canonical_id: arXiv:2406.10774
+references_checked_at: '2026-10-12'
+references_source: primary-pdf-reference-section
+references_total: 59
 ---
 
 # Sim-LLM：意味的に似た要求のKVを再利用するエッジ推論

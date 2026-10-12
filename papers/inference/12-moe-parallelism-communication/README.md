@@ -32,7 +32,7 @@ MoEの専門家並列、テンソル並列との混成、all-to-all通信、専�
 ### 注目：直近12か月・リポジトリ内で被引用（2025-11〜2026-10）
 
 - **2026-02 · [Step 3.5 Flash: Open Frontier-Level Intelligence with 11B Active Parameters](2026-2602.10604-step-3-5-flash-open-frontier-level-intelligence-with-11b-active-paramete.md)**  
-  実装：[✓](https://github.com/stepfun-ai/Step-3.5-Flash) ・ リポジトリ内被引用：4  
+  実装：[✓](https://github.com/stepfun-ai/Step-3.5-Flash) ・ リポジトリ内被引用：5  
   長文脈への対応では、512トークンの滑動窓注意（Sliding Window 注意機構、SWA）を3層、全注意を1層とする交互配置を使う。
 
 - **2025-11 · [GPU-Initiated Networking for NCCL](2025-2511.15076-gpu-initiated-networking-for-nccl.md)**  
