@@ -1,0 +1,38 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-45",
+  "run_key": "20261012-1745-scheduled-chat-45/r01-research-prescreen",
+  "reference_main_sha": "dca3683070aacf3b38cbf45f9a02d8e66b39fdd0",
+  "record_count": 2,
+  "records": [
+    {
+      "origin": "research_prescreen_relevance",
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2402.12289",
+      "identity_tokens": ["arxiv:2402.12289"],
+      "title": "DriveVLM: The Convergence of Autonomous Driving and Large Vision-Language Models",
+      "reason": "一次要旨が扱う中心課題は自動運転の複雑な道路状況の理解と計画であり、DriveVLMは場面記述・場面分析・階層的計画、DriveVLM-Dualは従来型の自動運転パイプラインとの統合を提案する。計算量が大きいことには言及するが、LLM推論基盤のKVキャッシュ、サービング、量子化、GPU実行、階層メモリの新しい効率化機構を主たる技術貢献として提示していない。車載応用の知覚・計画性能を評価する論文なので、本サーベイの推論システム対象から除外する。",
+      "source_url": "https://arxiv.org/abs/2402.12289",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-12T17:45:00+09:00",
+      "last_checked_at": "2026-10-12T17:45:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 2
+    },
+    {
+      "origin": "research_prescreen_relevance",
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2210.13452",
+      "identity_tokens": ["arxiv:2210.13452", "doi:10.1109/tpami.2023.3329173"],
+      "title": "MetaFormer Baselines for Vision",
+      "reason": "一次要旨の目的は視覚モデルのトークン混合器とネットワーク骨格の寄与を比較し、ImageNet-1K分類でIdentityFormer・RandFormer・ConvFormer・CAFormerとStarReLUの性能を評価することである。StarReLUの演算量削減には触れるが、対象は画像認識アーキテクチャであり、LLMの推論サービング、KVメモリ、MoE配置、長文生成カーネルの実行効率を直接改善する研究ではない。したがって本サーベイの推論システム範囲から除外する。",
+      "source_url": "https://arxiv.org/abs/2210.13452",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-12T17:45:00+09:00",
+      "last_checked_at": "2026-10-12T17:45:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 4
+    }
+  ]
+}
