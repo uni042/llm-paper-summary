@@ -33,10 +33,15 @@
   "selection_reason": "LLM重みを1bitへ圧縮して保存・推論計算量を削減する極低bit量子化方式で、学習過程を伴うものの最終適用先は明示的にLLM deployment/inference compressionであるため対象。",
   "semantic_scholar_id": "bc107fc7af12344342b4d80d81650577e9e9845f",
   "source_url": "https://arxiv.org/abs/2402.11295",
-  "status": "ready",
+  "status": "superseded",
   "title": "OneBit: Towards Extremely Low-bit Large Language Models",
   "type": "research",
   "venue": "Neural Information Processing Systems",
   "workflow_version": 10,
-  "year": 2024
+  "year": 2024,
+  "superseded_at": "2026-10-12T08:45:24+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2024-2402.11295-onebit-towards-extremely-low-bit-large-language-models.md",
+  "represented_canonical_id": "arXiv:2402.11295",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
