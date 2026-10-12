@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-12T03:31:18+00:00",
+  "generated_at": "2026-10-12T03:39:33+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 57,
+  "count": 54,
   "entries": [
     {
       "canonical_id": "DOI:10.1145/3714983.3714987",
@@ -1019,31 +1019,6 @@
       "worker_run_key": "20261012-0604-scheduled-chat-00/r01"
     },
     {
-      "canonical_id": "arXiv:2608.28444",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-12T03:20:05+00:00",
-      "return_count": 6,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "長文定型文の再利用を検出: .survey/import-inbox/pending/research/retry-research-dfc37413d217--libfile_3689a52175e881919fddf988c25bb40a--2026-2608.28444-swa-returned-repair-20261012-1130-scheduled-chat-30-r01.md と 14 段落 / 2969文字 (100.0%) が完全一致"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 4766,
-        "body_paragraphs": 27,
-        "method_chars": 950,
-        "method_paragraphs": 5,
-        "evaluation_chars": 1844,
-        "limitation_chars": 354,
-        "insufficiency_flags": []
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-0cb7585d3477--libfile_c7c3015224888191817548ff66f62a2f--2026-2608.28444-swa-returned-repair-20261012-1130-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-0cb7585d3477--libfile_c7c3015224888191817548ff66f62a2f--2026-2608.28444-swa-returned-repair-20261012-1130-scheduled-chat-30-r01.json",
-      "worker_run_key": "20261012-1130-scheduled-chat-30/r01"
-    },
-    {
       "canonical_id": "arXiv:2311.14652",
       "title": null,
       "source_url": null,
@@ -1125,66 +1100,9 @@
       "worker_run_key": "20261012-0300-scheduled-chat-00/r01"
     },
     {
-      "canonical_id": "arXiv:2605.07243",
-      "title": "SpecBlock: Block-Iterative Speculative Decoding with Dynamic Tree Drafting",
-      "source_url": "https://arxiv.org/html/2605.07243v2",
-      "returned_at": "2026-10-12T03:31:13+00:00",
-      "return_count": 3,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 0 < 500",
-        "長文定型文の再利用を検出: .survey/import-inbox/pending/research/retry-research-d81b892a7adf--retry-quality-20261012-04--libfile_a180ffffe4048191ae9202c652055bc5--2026-2605.07243-specblock-research-20261012-0310-scheduled-chat-00-r01.md と 24 段落 / 5324文字 (100.0%) が完全一致"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 7267,
-        "body_paragraphs": 38,
-        "method_chars": 3093,
-        "method_paragraphs": 16,
-        "evaluation_chars": 0,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "評価説明量 0 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-988b7a43ac0e--libfile_a180ffffe4048191ae9202c652055bc5--2026-2605.07243-specblock-research-20261012-0310-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-988b7a43ac0e--libfile_a180ffffe4048191ae9202c652055bc5--2026-2605.07243-specblock-research-20261012-0310-scheduled-chat-00-r01.json",
-      "worker_run_key": "20261012-0310-scheduled-chat-00/r01"
-    },
-    {
-      "canonical_id": "arXiv:2604.02047",
-      "title": "Goose: Anisotropic Speculation Trees for Training-Free Speculative Decoding",
-      "source_url": "https://arxiv.org/html/2604.02047v2",
-      "returned_at": "2026-10-12T03:31:14+00:00",
-      "return_count": 3,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 250 < 500",
-        "長文定型文の再利用を検出: .survey/import-inbox/pending/research/retry-research-eddac2456912--retry-quality-20261012-01--libfile_95f949bbb72c8191a7a9f3eb576c5c64--2026-2604.02047-goose-research-20261012-0355-scheduled-chat-00-r01.md と 20 段落 / 4554文字 (100.0%) が完全一致"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 6542,
-        "body_paragraphs": 34,
-        "method_chars": 2451,
-        "method_paragraphs": 12,
-        "evaluation_chars": 250,
-        "limitation_chars": 514,
-        "insufficiency_flags": [
-          "評価説明量 250 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-9f574c682681--libfile_95f949bbb72c8191a7a9f3eb576c5c64--2026-2604.02047-goose-research-20261012-0355-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-9f574c682681--libfile_95f949bbb72c8191a7a9f3eb576c5c64--2026-2604.02047-goose-research-20261012-0355-scheduled-chat-00-r01.json",
-      "worker_run_key": "20261012-0355-scheduled-chat-00/r01"
-    },
-    {
       "canonical_id": "arXiv:2609.35621",
-      "title": "Cartridges++: KV Cache Compression without Off-Context Derailment",
-      "source_url": "https://arxiv.org/pdf/2609.35621v1",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-12T03:31:15+00:00",
       "return_count": 4,
       "assigned_worker": "scheduled-chat-30",
@@ -1213,8 +1131,8 @@
     },
     {
       "canonical_id": "arXiv:2403.06988",
-      "title": "Guiding LLMs The Right Way: Fast, Non-Invasive Constrained Generation",
-      "source_url": "https://arxiv.org/pdf/2403.06988",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-12T03:31:16+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-45",
@@ -1240,8 +1158,8 @@
     },
     {
       "canonical_id": "arXiv:2507.19635",
-      "title": "Efficient and Scalable Agentic AI with Heterogeneous Systems",
-      "source_url": "https://arxiv.org/pdf/2507.19635v1",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-12T03:31:17+00:00",
       "return_count": 4,
       "assigned_worker": "scheduled-chat-45",
