@@ -35,10 +35,15 @@
   "selection_reason": "dynamic projectionによるlong-range attentionとlocal short-term attentionを組み合わせ、sequence lengthに対して線形複雑度を実現する。autoregressive language modelingを含み、同一hardwareでfull-attention版の3倍長いsequenceを扱いながら高速化するため言語モデル推論効率の対象。",
   "semantic_scholar_id": "1a883522f3c0051d70be1f8cbdb8989a77395006",
   "source_url": "https://arxiv.org/abs/2107.02192",
-  "status": "ready",
+  "status": "superseded",
   "title": "Long-Short Transformer: Efficient Transformers for Language and Vision",
   "type": "research",
   "venue": "Neural Information Processing Systems",
   "workflow_version": 10,
-  "year": 2021
+  "year": 2021,
+  "superseded_at": "2026-10-12T18:54:38+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2021-2107.02192-long-short-transformer-efficient-transformers-for-language-and-vision.md",
+  "represented_canonical_id": "arXiv:2107.02192",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

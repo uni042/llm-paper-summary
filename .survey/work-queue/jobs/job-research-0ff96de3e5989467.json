@@ -35,10 +35,15 @@
   "selection_reason": "視覚エンコーダが出す多数の視覚トークンを、最大最小多様性問題として余弦距離で選別し、残りをLLMへ入力する前または中間層で削除する推論時最適化。LLaVA 1.5/1.6とLLaVA-NeXT-Videoを16データセットで比較し、GPUメモリと推論遅延を削減するため、マルチモーダルLLM推論効率化の対象。",
   "semantic_scholar_id": "4465715eeaee19283aaf96a557ac6682fdd09217",
   "source_url": "https://arxiv.org/abs/2503.02175",
-  "status": "ready",
+  "status": "superseded",
   "title": "DivPrune: Diversity-based Visual Token Pruning for Large Multimodal Models",
   "type": "research",
   "venue": "Computer Vision and Pattern Recognition",
   "workflow_version": 10,
-  "year": 2025
+  "year": 2025,
+  "superseded_at": "2026-10-12T18:54:38+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2025-2503.02175-divprune-diversity-based-visual-token-pruning-for-large-multimodal-model.md",
+  "represented_canonical_id": "arXiv:2503.02175",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
