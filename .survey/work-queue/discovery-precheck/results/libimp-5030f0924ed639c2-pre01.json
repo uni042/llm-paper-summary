@@ -1,0 +1,1049 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-5030f0924ed639c2-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-5030f0924ed6",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "DOI:10.1007/s11432-024-4144-y",
+    "DOI:10.1609/aaai.v39i22.34567",
+    "arXiv:2306.01768",
+    "arXiv:2411.03934",
+    "arXiv:2503.18377",
+    "arXiv:2507.16323",
+    "arXiv:2507.18007",
+    "arXiv:2509.04534",
+    "arXiv:2509.12159",
+    "arXiv:2604.15009",
+    "arXiv:2608.00077",
+    "arXiv:2610.05305"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 12,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": false,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "3c1c4a6173a735a4622fed38e5183cb5ab4cbe0e",
+  "raw_search_result_count": 12,
+  "retrieval_duplicate_filtered_count": 1,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 11,
+  "provider_progress": {
+    "requested_count": 12,
+    "status_counts": {
+      "allowed": 11,
+      "filtered_by_snapshot": 1,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-12T23:58:52.526210+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "DOI:10.1007/s11432-024-4144-y",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.1609/aaai.v39i22.34567",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2306.01768",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2306.01768"
+    },
+    {
+      "requested_id": "arXiv:2411.03934",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2503.18377",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2507.16323",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2507.18007",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2509.04534",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2509.12159",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2604.15009",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2608.00077",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.05305",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Towards Faster Language Model Inference Using Mixture-of-Experts Flow Matching",
+      "source_url": "https://arxiv.org/abs/2604.15009",
+      "year": 2026,
+      "published": "2026-04-16",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Flow matching retains the generation quality of diffusion models while enabling substantially faster inference, making it a compelling paradigm for generative modeling. However, when applied to language modeling, it exhibits fundamental limitations in representing complex latent distributions with irregular geometries, such as anisotropy and multimodality. To address these challenges, we propose a mixture-of-experts flow matching (MoE-FM) framework, which captures complex global transport geometries in latent space by decomposing them into locally specialized vector fields. Building on MoE-FM, we develop a non-autoregressive (NAR) language modeling approach, named YAN, instantiated with both Transformer and Mamba architectures. Across multiple downstream tasks, YAN achieves generation quality on par with both autoregressive (AR) and diffusion-based NAR language models, while requiring as few as three sampling steps. This yields a $40\\times$ speedup over AR baselines and up to a $10^3\\times$ speedup over diffusion language models, demonstrating substantial efficiency advantages for language modeling.",
+      "identifiers": [
+        "SemanticScholar:421c40542a05685588d87cd65ffaea6e860cb697"
+      ],
+      "semantic_scholar_id": "421c40542a05685588d87cd65ffaea6e860cb697",
+      "canonical_id": "arXiv:2604.15009",
+      "arxiv_id": "2604.15009",
+      "doi": "10.48550/arXiv.2604.15009",
+      "authors": [
+        "Ai-Hua Li"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 179,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Beyond Accuracy: Auditing Spatial Provenance in Visual Token Pruning for OCR-Critical MLLM Inference",
+      "source_url": "https://arxiv.org/abs/2608.00077",
+      "year": 2026,
+      "published": "2026-07-29",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Visual-token pruning is usually judged by answer quality at a fixed retention budget. For text-rich multimodal large language models (MLLMs), this protocol can miss a distinct failure: an answer remains correct even when no retained token is locally traceable to the small OCR region that supports it. We turn this blind spot into an evidence-risk audit that couples answer behavior with geometric token-origin provenance, interventions, and realized cost; transparent training-free selectors isolate controlled operating points. On locked image-disjoint confirmation, Qwen Target at 30% retention has observed accuracy 0.786 versus 0.783 for Full (paired image-cluster difference +0.003, 95% CI [-0.014, +0.020]), yet same-budget Target, Random, and Grid retain sharply different positive-support coverage: 0.620, 0.270, and 0.318. Across Qwen3-VL-8B, LLaVA-1.5-7B, and InternVL3.5-8B, matched controls, interventions, detector tests, and external methods reveal model-specific quality-risk-traceability frontiers that accuracy alone does not expose. Materialized prefixes yield up to 4.32x batch-prefill speedup and 76.4% lower incremental peak memory; full-validation TextVQA and DocVQA further show that favorable target-verification points do not imply task-general compression. Visual-token pruning should therefore report surviving spatial provenance and realized cost alongside quality and compression.",
+      "identifiers": [
+        "SemanticScholar:8f32f0cb12108d82b9c6d6d94abe7f150f1f1094"
+      ],
+      "semantic_scholar_id": "8f32f0cb12108d82b9c6d6d94abe7f150f1f1094",
+      "canonical_id": "arXiv:2608.00077",
+      "arxiv_id": "2608.00077",
+      "authors": [
+        "Fei-Xiang Liu",
+        "Qiang Qiu",
+        "Hao Zhang",
+        "Xinyue Wang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 75,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Characterizing Parallelism Strategies in LLM Inference: Fundamental Compute-Communication Trade-offs",
+      "source_url": "https://arxiv.org/abs/2610.05305",
+      "year": 2026,
+      "published": "2026-10-04",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Model (LLM) inference has become the dominant workload in modern AI systems, requiring serving infrastructures to maximize throughput while meeting strict latency Service-Level Objectives (SLOs). Since state-of-the-art LLMs exceed the compute and memory capacity of a single GPU, inference is commonly distributed across multiple GPUs using tensor parallelism (TP), pipeline parallelism (PP), or hybrid parallelism (HB). However, selecting the most effective parallelism strategy remains challenging due to complex interactions among computation, communication, pipeline utilization, sequence length, batch size, and model architecture. Existing approaches largely rely on empirical evaluation and provide limited analytical insight into the trade-offs among these strategies, particularly across the distinct prefill and decoding phases of inference. In this paper, we present a unified analytical framework for modeling distributed LLM inference under TP, PP, and HB. The framework decomposes end-to-end latency into computation, inter-GPU communication, and pipeline bubble overhead, and derives analytical models that capture TP collective communication, PP point-to-point communication, and pipeline utilization as functions of hardware, model, and workload characteristics. The model further characterizes the differing execution behavior of prefill and decoding, explaining why PP-oriented configurations favor compute-intensive prefill while TP-oriented configurations reduce decoding latency by eliminating pipeline bubbles. Experiments with modern LLMs on multi-GPU platforms validate the model and confirm the fundamental compute-communication trade-off across parallelism strategies. The framework provides practical guidance for parallelism selection, capacity planning, and optimization of future LLM serving systems.",
+      "identifiers": [
+        "SemanticScholar:b71af44810d9287d22180138dee051f574450193"
+      ],
+      "semantic_scholar_id": "b71af44810d9287d22180138dee051f574450193",
+      "canonical_id": "arXiv:2610.05305",
+      "arxiv_id": "2610.05305",
+      "authors": [
+        "Javad Mirzaei",
+        "Jeebak Mitra"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 8,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Cloud Native System for LLM Inference Serving",
+      "source_url": "https://arxiv.org/abs/2507.18007",
+      "year": 2025,
+      "published": "2025-07-24",
+      "venue": "arXiv.org",
+      "citation_count": 8,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Models (LLMs) are revolutionizing numerous industries, but their substantial computational demands create challenges for efficient deployment, particularly in cloud environments. Traditional approaches to inference serving often struggle with resource inefficiencies, leading to high operational costs, latency issues, and limited scalability. This article explores how Cloud Native technologies, such as containerization, microservices, and dynamic scheduling, can fundamentally improve LLM inference serving. By leveraging these technologies, we demonstrate how a Cloud Native system enables more efficient resource allocation, reduces latency, and enhances throughput in high-demand scenarios. Through real-world evaluations using Kubernetes-based autoscaling, we show that Cloud Native architectures can dynamically adapt to workload fluctuations, mitigating performance bottlenecks while optimizing LLM inference serving performance. This discussion provides a broader perspective on how Cloud Native frameworks could reshape the future of scalable LLM inference serving, offering key insights for researchers, practitioners, and industry leaders in cloud computing and artificial intelligence.",
+      "identifiers": [
+        "SemanticScholar:6375d9a66e28c98ea85bfdcff3325e61a7cabdeb"
+      ],
+      "semantic_scholar_id": "6375d9a66e28c98ea85bfdcff3325e61a7cabdeb",
+      "canonical_id": "arXiv:2507.18007",
+      "arxiv_id": "2507.18007",
+      "doi": "10.48550/arXiv.2507.18007",
+      "authors": [
+        "Min-Xian Xu",
+        "Junhan Liao",
+        "Jing-Feng Wu",
+        "Yi-Yuan He",
+        "Ke-Jiang Ye",
+        "Cheng-Zhong Xu"
+      ],
+      "priority": 8,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 8,
+        "citation_count": 8,
+        "total": 8,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 445,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Quantized Large Language Models in Biomedical Natural Language Processing: Evaluation and Recommendation",
+      "source_url": "https://arxiv.org/abs/2509.04534",
+      "year": 2025,
+      "published": "2025-09-04",
+      "venue": "arXiv.org",
+      "citation_count": 6,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models have demonstrated remarkable capabilities in biomedical natural language processing, yet their rapid growth in size and computational requirements present a major barrier to adoption in healthcare settings where data privacy precludes cloud deployment and resources are limited. In this study, we systematically evaluated the impact of quantization on 12 state-of-the-art large language models, including both general-purpose and biomedical-specific models, across eight benchmark datasets covering four key tasks: named entity recognition, relation extraction, multi-label classification, and question answering. We show that quantization substantially reduces GPU memory requirements-by up to 75%-while preserving model performance across diverse tasks, enabling the deployment of 70B-parameter models on 40GB consumer-grade GPUs. In addition, domain-specific knowledge and responsiveness to advanced prompting methods are largely maintained. These findings provide significant practical and guiding value, highlighting quantization as a practical and effective strategy for enabling the secure, local deployment of large yet high-capacity language models in biomedical contexts, bridging the gap between technical advances in AI and real-world clinical translation.",
+      "identifiers": [
+        "SemanticScholar:63644288a4e2100be08dfd3f950f2a327f7fa274"
+      ],
+      "semantic_scholar_id": "63644288a4e2100be08dfd3f950f2a327f7fa274",
+      "canonical_id": "arXiv:2509.04534",
+      "arxiv_id": "2509.04534",
+      "doi": "10.48550/arXiv.2509.04534",
+      "authors": [
+        "Zai-Fu Zhan",
+        "Shuang Zhou",
+        "Min Zeng",
+        "Kai Yu",
+        "Mei-Jia Song",
+        "Xiaoyin Chen",
+        "Jun Wang",
+        "Yu Hou",
+        "Rui Zhang"
+      ],
+      "priority": 6,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 6,
+        "citation_count": 6,
+        "total": 6,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 403,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "EfficientUICoder: A Bidirectional Token Compression Framework for Efficient MLLM-Based UI Code Generation",
+      "source_url": "https://arxiv.org/abs/2509.12159",
+      "year": 2025,
+      "published": "2025-09-15",
+      "venue": "Proc. ACM Softw. Eng.",
+      "citation_count": 5,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Multimodal Large Language Models (MLLMs) have demonstrated exceptional performance in UI2Code tasks (i.e., generating code from UI mockups), significantly enhancing website development efficiency. However, UI2Code tasks incur substantially higher computational overhead compared to traditional code generation tasks. This overhead is primarily driven by the large number of input image tokens required to represent complex visual designs and the extensive volume of output code tokens needed to describe complete webpage structures. In this paper, we conduct a comprehensive preliminary study on popular MLLMs for UI2Code tasks, identifying significant redundancies in both image and code tokens. We observe that these redundancies not only exacerbate computational complexity but also hinder the model’s ability to focus on key UI elements, leading to excessively lengthy and often invalid HTML files. To address these challenges, we propose EfficientUICoder, a bidirectional compression framework designed for efficient UI code generation. First, we introduce an Element and Layout-aware Token Compression method, which preserves essential UI element and layout information by detecting element regions and constructing a UI element tree for efficient representation. Second, we design a Region-aware Token Refinement strategy that refines selected tokens by leveraging attention scores to evaluate semantic importance, discarding low-attention tokens from selected regions while integrating high-attention tokens from unselected regions. Third, we develop an Adaptive Duplicate Token Suppression mechanism, which dynamically modulates token probabilities during decoding by tracking HTML/CSS code structure frequencies and applying exponential penalty strategies to minimize repetitive generation. Extensive experiments demonstrate that EfficientUICoder achieves a 55%-60% compression ratio without compromising the quality of the generated webpages, effectively reducing output code redundancy. In terms of efficiency, EfficientUICoder achieves superior improvements, reducing computational cost by up to 44.9%, generated tokens by up to 41.4%, prefill time by up to 46.6%, and inference time by up to 48.8% on 34B-level MLLMs. Code is available at https://github.com/WebPAI/EfficientUICoder.",
+      "identifiers": [
+        "SemanticScholar:490e40695554910680fbe3d0cab6f491827f0f31"
+      ],
+      "semantic_scholar_id": "490e40695554910680fbe3d0cab6f491827f0f31",
+      "canonical_id": "arXiv:2509.12159",
+      "arxiv_id": "2509.12159",
+      "doi": "10.1145/3808114",
+      "authors": [
+        "Jingyu Xiao",
+        "Zhongyi Zhang",
+        "Yuxuan Wan",
+        "Yin-Tong Huo",
+        "Yang Liu",
+        "M. Lyu"
+      ],
+      "priority": 5,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 5,
+        "citation_count": 5,
+        "total": 5,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 392,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "CMN: a co-designed neural architecture search for efficient computing-in-memory-based mixture-of-experts",
+      "source_url": "https://doi.org/10.1007/s11432-024-4144-y",
+      "year": 2024,
+      "published": "2024-09-24",
+      "venue": "Science China Information Sciences",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Artificial intelligence (AI) has experienced substantial advancements recently, notably with the advent of large-scale language models (LLMs) employing mixture-of-experts (MoE) techniques, exhibiting human-like cognitive skills. As a promising hardware solution for edge MoE implementations, the computing-in-memory (CIM) architecture collocates memory and computing within a single device, significantly reducing the data movement and the associated energy consumption. However, due to diverse edge application scenarios and constraints, determining the optimal network structures for MoE, such as the expert’s location, quantity, and dimension on CIM systems remains elusive. To this end, we introduce a software-hardware co-designed neural architecture search (NAS) framework, CIM-based MoE NAS (CMN), focusing on identifying a high-performing MoE structure under specific hardware constraints. The results of the NYUD-v2 dataset segmentation on the RRAM (SRAM) CIM system reveal that CMN can discover optimized MoE configurations under energy, latency, and performance constraints, achieving 29.67× (43.10×) energy savings, 175.44×(109.89×) speedup, and 12.24× smaller model size compared to the baseline MoE-enabled Visual Transformer, respectively. This co-design opens up an avenue toward high-performance MoE deployments in edge CIM systems.",
+      "identifiers": [
+        "SemanticScholar:3ecc23c56cb21063c5d900deb7edade939dc10db"
+      ],
+      "semantic_scholar_id": "3ecc23c56cb21063c5d900deb7edade939dc10db",
+      "doi": "10.1007/s11432-024-4144-y",
+      "canonical_id": "DOI:10.1007/s11432-024-4144-y",
+      "authors": [
+        "Shi-Hao Han",
+        "Si-Shuo Liu",
+        "Shucheng Du",
+        "Mingzi Li",
+        "Zi-Jian Ye",
+        "Xiaoxin Xu",
+        "Yi Li",
+        "Zhong-Rui Wang",
+        "Da-Shan Shang"
+      ],
+      "priority": 3,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 3,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 748,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Multi-Branch Self-Drafting for LLM Inference Acceleration",
+      "source_url": "https://doi.org/10.1609/aaai.v39i22.34567",
+      "year": 2025,
+      "published": "2025-04-11",
+      "venue": "AAAI Conference on Artificial Intelligence",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The autoregressive decoding paradigm endows large language models (LLMs) with superior language generation capabilities; however, its step-by-step decoding process inherently limits decoding speed. To mitigate these constraints, the prevalent “draft and validation” strategy enables parallel validation of candidate drafts, allowing LLMs to decode multiple tokens simultaneously during one model forward propagation. However, existing methodologies for obtaining drafts often incur additional overhead in communication or training process, or statistical biases from the corpus. To this end, we propose an innovative draft generation and maintenance approach that leverages the capabilities of LLM itself. Specifically, we extend the autoregressive decoding paradigm to a multi-branch drafting procedure, which can efficiently generate draft sequences without any additional models or training process, while preserving the quality of the generated content by maintaining LLM parameters. Experiments across various open-source benchmarks show that our method generates 2.0 to 3.2 tokens per forward step and achieves around 2 times improvement of end-to-end throughput compared to the autoregressive decoding strategy.",
+      "identifiers": [
+        "SemanticScholar:fdedfa2d21f7bf899976e6aed2a5312350f7f1e5"
+      ],
+      "semantic_scholar_id": "fdedfa2d21f7bf899976e6aed2a5312350f7f1e5",
+      "doi": "10.1609/aaai.v39i22.34567",
+      "canonical_id": "DOI:10.1609/aaai.v39i22.34567",
+      "authors": [
+        "Zi-Peng Gao",
+        "Qing-Rong Xia",
+        "Tong Xu",
+        "Xin-Yu Duan",
+        "Zhi Zheng",
+        "Zhe-Feng Wang",
+        "En-Hong Chen"
+      ],
+      "priority": 3,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 3,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 549,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "SpeLLM: Character-Level Multi-Head Decoding",
+      "source_url": "https://arxiv.org/abs/2507.16323",
+      "year": 2025,
+      "published": "2025-07-22",
+      "venue": "arXiv.org",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Scaling LLM vocabulary is often used to reduce input sequence length and alleviate attention's quadratic cost. Yet, current LLM architectures impose a critical bottleneck to this procedure: the output projection layer scales linearly with vocabulary size, rendering substantial expansion impractical. We propose SpeLLM, a method that decouples input and output vocabularies by predicting character-level strings through multiple output heads. In SpeLLM, each of the $k$ linear heads predicts a single character simultaneously, enabling the model to represent a much larger output space using smaller, independent linear heads. We present a self-distillation approach for converting a standard LLM to a SpeLLM. Our experiments with four pre-trained LLMs show their SpeLLM variants achieve competitive performance on downstream tasks while reducing runtime by 5.1% on average across models. Our approach provides a potential avenue for reducing LLM costs, while increasing support for underrepresented languages and domains.",
+      "identifiers": [
+        "SemanticScholar:7fdcee5399f7ea0198b080801a1af19612aed37e"
+      ],
+      "semantic_scholar_id": "7fdcee5399f7ea0198b080801a1af19612aed37e",
+      "canonical_id": "arXiv:2507.16323",
+      "arxiv_id": "2507.16323",
+      "doi": "10.48550/arXiv.2507.16323",
+      "authors": [
+        "Amit Ben Artzy",
+        "Roy Schwartz"
+      ],
+      "priority": 3,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 3,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 447,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Interactions Across Blocks in Post-Training Quantization of Large Language Models",
+      "source_url": "https://arxiv.org/abs/2411.03934",
+      "year": 2024,
+      "published": "2024-11-06",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Post-training quantization is widely employed to reduce the computational demands of neural networks. Typically, individual substructures, such as layers or blocks of layers, are quantized with the objective of minimizing quantization errors in their pre-activations by fine-tuning the corresponding weights. Deriving this local objective from the global objective of minimizing task loss involves two key simplifications: assuming substructures are mutually independent and ignoring the knowledge of subsequent substructures as well as the task loss. In this work, we assess the effects of these simplifications on weight-only quantization of large language models. We introduce two multi-block fine-tuning strategies and compare them against the baseline of fine-tuning single transformer blocks. The first captures correlations of weights across blocks by jointly optimizing multiple quantized blocks. The second incorporates knowledge of subsequent blocks by minimizing the error in downstream pre-activations rather than focusing solely on the quantized block. Our findings indicate that the effectiveness of these methods depends on the specific network model, with no impact on some models but demonstrating significant benefits for others.",
+      "identifiers": [
+        "SemanticScholar:9ae1e946776937a6211626da1a2687df28ad0b60"
+      ],
+      "semantic_scholar_id": "9ae1e946776937a6211626da1a2687df28ad0b60",
+      "canonical_id": "arXiv:2411.03934",
+      "arxiv_id": "2411.03934",
+      "doi": "10.48550/arXiv.2411.03934",
+      "authors": [
+        "Khasmamad Shabanovi",
+        "L. Wiest",
+        "Vladimir Golkov",
+        "Daniel Cremers",
+        "T. Pfeil"
+      ],
+      "priority": 2,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 2,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 705,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Maximum Redundancy Pruning: A Principle-Driven Layerwise Sparsity Allocation for LLMs",
+      "source_url": "https://arxiv.org/abs/2503.18377",
+      "year": 2025,
+      "published": "2025-03-24",
+      "venue": "ACM Multimedia",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLMs) have demonstrated impressive capabilities, but their enormous size poses significant challenges for deployment in real-world applications. To address this issue, researchers have sought to apply network pruning techniques to LLMs. A critical challenge in pruning is the allocation of sparsity for each layer. Recent sparsity allocation methods are often based on heuristics or search that can easily lead to suboptimal performance. In this paper, we conducted an extensive investigation into various LLMs and revealed three significant discoveries: (1) the Layerwise Pruning Sensitivity (LPS) of LLMs is highly non-uniform, (2) the choice of pruning metric affects LPS, and (3) the performance of a sparse model is related to the uniformity of its layerwise redundancy level. Based on these discoveries, we propose that the layerwise sparsity of LLMs should adhere to three principles: non-uniformity, pruning metric dependency, and uniform layerwise redundancy level in the pruned model. To this end, we proposed Maximum Redundancy Pruning (MRP), an iterative pruning algorithm that prunes in the most redundant layers (i.e., those with the highest non-outlier ratio) at each iteration. The achieved layerwise sparsity aligns with the outlined principles. We conducted extensive experiments on publicly available LLMs, including LLaMA2 and OPT, on various benchmarks. The experimental results validate the effectiveness of MRP, demonstrating its superiority over previous methods.",
+      "identifiers": [
+        "SemanticScholar:61a67a5bf7ef842b6fb60cf9cc4fd92d14968862"
+      ],
+      "semantic_scholar_id": "61a67a5bf7ef842b6fb60cf9cc4fd92d14968862",
+      "canonical_id": "arXiv:2503.18377",
+      "arxiv_id": "2503.18377",
+      "doi": "10.1145/3746027.3755683",
+      "authors": [
+        "Chang Gao",
+        "Kang Zhao",
+        "Runqi Wang",
+        "Jian-Fei Chen",
+        "Liping Jing"
+      ],
+      "priority": 2,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 2,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 567,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2604.15009",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2604.15009",
+        "id:SemanticScholar:421c40542a05685588d87cd65ffaea6e860cb697",
+        "id:arXiv:2604.15009",
+        "title:towards faster language model inference using mixtureofexperts flow matching",
+        "url:https://arxiv.org/abs/2604.15009"
+      ],
+      "record": {
+        "title": "Towards Faster Language Model Inference Using Mixture-of-Experts Flow Matching",
+        "source_url": "https://arxiv.org/abs/2604.15009",
+        "year": 2026,
+        "published": "2026-04-16",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Flow matching retains the generation quality of diffusion models while enabling substantially faster inference, making it a compelling paradigm for generative modeling. However, when applied to language modeling, it exhibits fundamental limitations in representing complex latent distributions with irregular geometries, such as anisotropy and multimodality. To address these challenges, we propose a mixture-of-experts flow matching (MoE-FM) framework, which captures complex global transport geometries in latent space by decomposing them into locally specialized vector fields. Building on MoE-FM, we develop a non-autoregressive (NAR) language modeling approach, named YAN, instantiated with both Transformer and Mamba architectures. Across multiple downstream tasks, YAN achieves generation quality on par with both autoregressive (AR) and diffusion-based NAR language models, while requiring as few as three sampling steps. This yields a $40\\times$ speedup over AR baselines and up to a $10^3\\times$ speedup over diffusion language models, demonstrating substantial efficiency advantages for language modeling.",
+        "identifiers": [
+          "SemanticScholar:421c40542a05685588d87cd65ffaea6e860cb697"
+        ],
+        "semantic_scholar_id": "421c40542a05685588d87cd65ffaea6e860cb697",
+        "canonical_id": "arXiv:2604.15009",
+        "arxiv_id": "2604.15009",
+        "doi": "10.48550/arXiv.2604.15009",
+        "authors": [
+          "Ai-Hua Li"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 179,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.00077",
+      "identity_tokens": [
+        "id:SemanticScholar:8f32f0cb12108d82b9c6d6d94abe7f150f1f1094",
+        "id:arXiv:2608.00077",
+        "title:beyond accuracy auditing spatial provenance in visual token pruning for ocrcritical mllm inference",
+        "url:https://arxiv.org/abs/2608.00077"
+      ],
+      "record": {
+        "title": "Beyond Accuracy: Auditing Spatial Provenance in Visual Token Pruning for OCR-Critical MLLM Inference",
+        "source_url": "https://arxiv.org/abs/2608.00077",
+        "year": 2026,
+        "published": "2026-07-29",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Visual-token pruning is usually judged by answer quality at a fixed retention budget. For text-rich multimodal large language models (MLLMs), this protocol can miss a distinct failure: an answer remains correct even when no retained token is locally traceable to the small OCR region that supports it. We turn this blind spot into an evidence-risk audit that couples answer behavior with geometric token-origin provenance, interventions, and realized cost; transparent training-free selectors isolate controlled operating points. On locked image-disjoint confirmation, Qwen Target at 30% retention has observed accuracy 0.786 versus 0.783 for Full (paired image-cluster difference +0.003, 95% CI [-0.014, +0.020]), yet same-budget Target, Random, and Grid retain sharply different positive-support coverage: 0.620, 0.270, and 0.318. Across Qwen3-VL-8B, LLaVA-1.5-7B, and InternVL3.5-8B, matched controls, interventions, detector tests, and external methods reveal model-specific quality-risk-traceability frontiers that accuracy alone does not expose. Materialized prefixes yield up to 4.32x batch-prefill speedup and 76.4% lower incremental peak memory; full-validation TextVQA and DocVQA further show that favorable target-verification points do not imply task-general compression. Visual-token pruning should therefore report surviving spatial provenance and realized cost alongside quality and compression.",
+        "identifiers": [
+          "SemanticScholar:8f32f0cb12108d82b9c6d6d94abe7f150f1f1094"
+        ],
+        "semantic_scholar_id": "8f32f0cb12108d82b9c6d6d94abe7f150f1f1094",
+        "canonical_id": "arXiv:2608.00077",
+        "arxiv_id": "2608.00077",
+        "authors": [
+          "Fei-Xiang Liu",
+          "Qiang Qiu",
+          "Hao Zhang",
+          "Xinyue Wang"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 75,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.05305",
+      "identity_tokens": [
+        "id:SemanticScholar:b71af44810d9287d22180138dee051f574450193",
+        "id:arXiv:2610.05305",
+        "title:characterizing parallelism strategies in llm inference fundamental computecommunication tradeoffs",
+        "url:https://arxiv.org/abs/2610.05305"
+      ],
+      "record": {
+        "title": "Characterizing Parallelism Strategies in LLM Inference: Fundamental Compute-Communication Trade-offs",
+        "source_url": "https://arxiv.org/abs/2610.05305",
+        "year": 2026,
+        "published": "2026-10-04",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large Language Model (LLM) inference has become the dominant workload in modern AI systems, requiring serving infrastructures to maximize throughput while meeting strict latency Service-Level Objectives (SLOs). Since state-of-the-art LLMs exceed the compute and memory capacity of a single GPU, inference is commonly distributed across multiple GPUs using tensor parallelism (TP), pipeline parallelism (PP), or hybrid parallelism (HB). However, selecting the most effective parallelism strategy remains challenging due to complex interactions among computation, communication, pipeline utilization, sequence length, batch size, and model architecture. Existing approaches largely rely on empirical evaluation and provide limited analytical insight into the trade-offs among these strategies, particularly across the distinct prefill and decoding phases of inference. In this paper, we present a unified analytical framework for modeling distributed LLM inference under TP, PP, and HB. The framework decomposes end-to-end latency into computation, inter-GPU communication, and pipeline bubble overhead, and derives analytical models that capture TP collective communication, PP point-to-point communication, and pipeline utilization as functions of hardware, model, and workload characteristics. The model further characterizes the differing execution behavior of prefill and decoding, explaining why PP-oriented configurations favor compute-intensive prefill while TP-oriented configurations reduce decoding latency by eliminating pipeline bubbles. Experiments with modern LLMs on multi-GPU platforms validate the model and confirm the fundamental compute-communication trade-off across parallelism strategies. The framework provides practical guidance for parallelism selection, capacity planning, and optimization of future LLM serving systems.",
+        "identifiers": [
+          "SemanticScholar:b71af44810d9287d22180138dee051f574450193"
+        ],
+        "semantic_scholar_id": "b71af44810d9287d22180138dee051f574450193",
+        "canonical_id": "arXiv:2610.05305",
+        "arxiv_id": "2610.05305",
+        "authors": [
+          "Javad Mirzaei",
+          "Jeebak Mitra"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 8,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2507.18007",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2507.18007",
+        "id:SemanticScholar:6375d9a66e28c98ea85bfdcff3325e61a7cabdeb",
+        "id:arXiv:2507.18007",
+        "title:cloud native system for llm inference serving",
+        "url:https://arxiv.org/abs/2507.18007"
+      ],
+      "record": {
+        "title": "Cloud Native System for LLM Inference Serving",
+        "source_url": "https://arxiv.org/abs/2507.18007",
+        "year": 2025,
+        "published": "2025-07-24",
+        "venue": "arXiv.org",
+        "citation_count": 8,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large Language Models (LLMs) are revolutionizing numerous industries, but their substantial computational demands create challenges for efficient deployment, particularly in cloud environments. Traditional approaches to inference serving often struggle with resource inefficiencies, leading to high operational costs, latency issues, and limited scalability. This article explores how Cloud Native technologies, such as containerization, microservices, and dynamic scheduling, can fundamentally improve LLM inference serving. By leveraging these technologies, we demonstrate how a Cloud Native system enables more efficient resource allocation, reduces latency, and enhances throughput in high-demand scenarios. Through real-world evaluations using Kubernetes-based autoscaling, we show that Cloud Native architectures can dynamically adapt to workload fluctuations, mitigating performance bottlenecks while optimizing LLM inference serving performance. This discussion provides a broader perspective on how Cloud Native frameworks could reshape the future of scalable LLM inference serving, offering key insights for researchers, practitioners, and industry leaders in cloud computing and artificial intelligence.",
+        "identifiers": [
+          "SemanticScholar:6375d9a66e28c98ea85bfdcff3325e61a7cabdeb"
+        ],
+        "semantic_scholar_id": "6375d9a66e28c98ea85bfdcff3325e61a7cabdeb",
+        "canonical_id": "arXiv:2507.18007",
+        "arxiv_id": "2507.18007",
+        "doi": "10.48550/arXiv.2507.18007",
+        "authors": [
+          "Min-Xian Xu",
+          "Junhan Liao",
+          "Jing-Feng Wu",
+          "Yi-Yuan He",
+          "Ke-Jiang Ye",
+          "Cheng-Zhong Xu"
+        ],
+        "priority": 8,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 8,
+          "citation_count": 8,
+          "total": 8,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 445,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2509.04534",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2509.04534",
+        "id:SemanticScholar:63644288a4e2100be08dfd3f950f2a327f7fa274",
+        "id:arXiv:2509.04534",
+        "title:quantized large language models in biomedical natural language processing evaluation and recommendation",
+        "url:https://arxiv.org/abs/2509.04534"
+      ],
+      "record": {
+        "title": "Quantized Large Language Models in Biomedical Natural Language Processing: Evaluation and Recommendation",
+        "source_url": "https://arxiv.org/abs/2509.04534",
+        "year": 2025,
+        "published": "2025-09-04",
+        "venue": "arXiv.org",
+        "citation_count": 6,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large language models have demonstrated remarkable capabilities in biomedical natural language processing, yet their rapid growth in size and computational requirements present a major barrier to adoption in healthcare settings where data privacy precludes cloud deployment and resources are limited. In this study, we systematically evaluated the impact of quantization on 12 state-of-the-art large language models, including both general-purpose and biomedical-specific models, across eight benchmark datasets covering four key tasks: named entity recognition, relation extraction, multi-label classification, and question answering. We show that quantization substantially reduces GPU memory requirements-by up to 75%-while preserving model performance across diverse tasks, enabling the deployment of 70B-parameter models on 40GB consumer-grade GPUs. In addition, domain-specific knowledge and responsiveness to advanced prompting methods are largely maintained. These findings provide significant practical and guiding value, highlighting quantization as a practical and effective strategy for enabling the secure, local deployment of large yet high-capacity language models in biomedical contexts, bridging the gap between technical advances in AI and real-world clinical translation.",
+        "identifiers": [
+          "SemanticScholar:63644288a4e2100be08dfd3f950f2a327f7fa274"
+        ],
+        "semantic_scholar_id": "63644288a4e2100be08dfd3f950f2a327f7fa274",
+        "canonical_id": "arXiv:2509.04534",
+        "arxiv_id": "2509.04534",
+        "doi": "10.48550/arXiv.2509.04534",
+        "authors": [
+          "Zai-Fu Zhan",
+          "Shuang Zhou",
+          "Min Zeng",
+          "Kai Yu",
+          "Mei-Jia Song",
+          "Xiaoyin Chen",
+          "Jun Wang",
+          "Yu Hou",
+          "Rui Zhang"
+        ],
+        "priority": 6,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 6,
+          "citation_count": 6,
+          "total": 6,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 403,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2509.12159",
+      "identity_tokens": [
+        "id:DOI:10.1145/3808114",
+        "id:SemanticScholar:490e40695554910680fbe3d0cab6f491827f0f31",
+        "id:arXiv:2509.12159",
+        "title:efficientuicoder a bidirectional token compression framework for efficient mllmbased ui code generation",
+        "url:https://arxiv.org/abs/2509.12159"
+      ],
+      "record": {
+        "title": "EfficientUICoder: A Bidirectional Token Compression Framework for Efficient MLLM-Based UI Code Generation",
+        "source_url": "https://arxiv.org/abs/2509.12159",
+        "year": 2025,
+        "published": "2025-09-15",
+        "venue": "Proc. ACM Softw. Eng.",
+        "citation_count": 5,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Multimodal Large Language Models (MLLMs) have demonstrated exceptional performance in UI2Code tasks (i.e., generating code from UI mockups), significantly enhancing website development efficiency. However, UI2Code tasks incur substantially higher computational overhead compared to traditional code generation tasks. This overhead is primarily driven by the large number of input image tokens required to represent complex visual designs and the extensive volume of output code tokens needed to describe complete webpage structures. In this paper, we conduct a comprehensive preliminary study on popular MLLMs for UI2Code tasks, identifying significant redundancies in both image and code tokens. We observe that these redundancies not only exacerbate computational complexity but also hinder the model’s ability to focus on key UI elements, leading to excessively lengthy and often invalid HTML files. To address these challenges, we propose EfficientUICoder, a bidirectional compression framework designed for efficient UI code generation. First, we introduce an Element and Layout-aware Token Compression method, which preserves essential UI element and layout information by detecting element regions and constructing a UI element tree for efficient representation. Second, we design a Region-aware Token Refinement strategy that refines selected tokens by leveraging attention scores to evaluate semantic importance, discarding low-attention tokens from selected regions while integrating high-attention tokens from unselected regions. Third, we develop an Adaptive Duplicate Token Suppression mechanism, which dynamically modulates token probabilities during decoding by tracking HTML/CSS code structure frequencies and applying exponential penalty strategies to minimize repetitive generation. Extensive experiments demonstrate that EfficientUICoder achieves a 55%-60% compression ratio without compromising the quality of the generated webpages, effectively reducing output code redundancy. In terms of efficiency, EfficientUICoder achieves superior improvements, reducing computational cost by up to 44.9%, generated tokens by up to 41.4%, prefill time by up to 46.6%, and inference time by up to 48.8% on 34B-level MLLMs. Code is available at https://github.com/WebPAI/EfficientUICoder.",
+        "identifiers": [
+          "SemanticScholar:490e40695554910680fbe3d0cab6f491827f0f31"
+        ],
+        "semantic_scholar_id": "490e40695554910680fbe3d0cab6f491827f0f31",
+        "canonical_id": "arXiv:2509.12159",
+        "arxiv_id": "2509.12159",
+        "doi": "10.1145/3808114",
+        "authors": [
+          "Jingyu Xiao",
+          "Zhongyi Zhang",
+          "Yuxuan Wan",
+          "Yin-Tong Huo",
+          "Yang Liu",
+          "M. Lyu"
+        ],
+        "priority": 5,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 5,
+          "citation_count": 5,
+          "total": 5,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 392,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1007/s11432-024-4144-y",
+      "identity_tokens": [
+        "id:DOI:10.1007/s11432-024-4144-y",
+        "id:SemanticScholar:3ecc23c56cb21063c5d900deb7edade939dc10db",
+        "title:cmn a codesigned neural architecture search for efficient computinginmemorybased mixtureofexperts",
+        "url:https://doi.org/10.1007/s11432-024-4144-y"
+      ],
+      "record": {
+        "title": "CMN: a co-designed neural architecture search for efficient computing-in-memory-based mixture-of-experts",
+        "source_url": "https://doi.org/10.1007/s11432-024-4144-y",
+        "year": 2024,
+        "published": "2024-09-24",
+        "venue": "Science China Information Sciences",
+        "citation_count": 3,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Artificial intelligence (AI) has experienced substantial advancements recently, notably with the advent of large-scale language models (LLMs) employing mixture-of-experts (MoE) techniques, exhibiting human-like cognitive skills. As a promising hardware solution for edge MoE implementations, the computing-in-memory (CIM) architecture collocates memory and computing within a single device, significantly reducing the data movement and the associated energy consumption. However, due to diverse edge application scenarios and constraints, determining the optimal network structures for MoE, such as the expert’s location, quantity, and dimension on CIM systems remains elusive. To this end, we introduce a software-hardware co-designed neural architecture search (NAS) framework, CIM-based MoE NAS (CMN), focusing on identifying a high-performing MoE structure under specific hardware constraints. The results of the NYUD-v2 dataset segmentation on the RRAM (SRAM) CIM system reveal that CMN can discover optimized MoE configurations under energy, latency, and performance constraints, achieving 29.67× (43.10×) energy savings, 175.44×(109.89×) speedup, and 12.24× smaller model size compared to the baseline MoE-enabled Visual Transformer, respectively. This co-design opens up an avenue toward high-performance MoE deployments in edge CIM systems.",
+        "identifiers": [
+          "SemanticScholar:3ecc23c56cb21063c5d900deb7edade939dc10db"
+        ],
+        "semantic_scholar_id": "3ecc23c56cb21063c5d900deb7edade939dc10db",
+        "doi": "10.1007/s11432-024-4144-y",
+        "canonical_id": "DOI:10.1007/s11432-024-4144-y",
+        "authors": [
+          "Shi-Hao Han",
+          "Si-Shuo Liu",
+          "Shucheng Du",
+          "Mingzi Li",
+          "Zi-Jian Ye",
+          "Xiaoxin Xu",
+          "Yi Li",
+          "Zhong-Rui Wang",
+          "Da-Shan Shang"
+        ],
+        "priority": 3,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 3,
+          "citation_count": 3,
+          "total": 3,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 748,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1609/aaai.v39i22.34567",
+      "identity_tokens": [
+        "id:DOI:10.1609/aaai.v39i22.34567",
+        "id:SemanticScholar:fdedfa2d21f7bf899976e6aed2a5312350f7f1e5",
+        "title:multibranch selfdrafting for llm inference acceleration",
+        "url:https://doi.org/10.1609/aaai.v39i22.34567"
+      ],
+      "record": {
+        "title": "Multi-Branch Self-Drafting for LLM Inference Acceleration",
+        "source_url": "https://doi.org/10.1609/aaai.v39i22.34567",
+        "year": 2025,
+        "published": "2025-04-11",
+        "venue": "AAAI Conference on Artificial Intelligence",
+        "citation_count": 3,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The autoregressive decoding paradigm endows large language models (LLMs) with superior language generation capabilities; however, its step-by-step decoding process inherently limits decoding speed. To mitigate these constraints, the prevalent “draft and validation” strategy enables parallel validation of candidate drafts, allowing LLMs to decode multiple tokens simultaneously during one model forward propagation. However, existing methodologies for obtaining drafts often incur additional overhead in communication or training process, or statistical biases from the corpus. To this end, we propose an innovative draft generation and maintenance approach that leverages the capabilities of LLM itself. Specifically, we extend the autoregressive decoding paradigm to a multi-branch drafting procedure, which can efficiently generate draft sequences without any additional models or training process, while preserving the quality of the generated content by maintaining LLM parameters. Experiments across various open-source benchmarks show that our method generates 2.0 to 3.2 tokens per forward step and achieves around 2 times improvement of end-to-end throughput compared to the autoregressive decoding strategy.",
+        "identifiers": [
+          "SemanticScholar:fdedfa2d21f7bf899976e6aed2a5312350f7f1e5"
+        ],
+        "semantic_scholar_id": "fdedfa2d21f7bf899976e6aed2a5312350f7f1e5",
+        "doi": "10.1609/aaai.v39i22.34567",
+        "canonical_id": "DOI:10.1609/aaai.v39i22.34567",
+        "authors": [
+          "Zi-Peng Gao",
+          "Qing-Rong Xia",
+          "Tong Xu",
+          "Xin-Yu Duan",
+          "Zhi Zheng",
+          "Zhe-Feng Wang",
+          "En-Hong Chen"
+        ],
+        "priority": 3,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 3,
+          "citation_count": 3,
+          "total": 3,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 549,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2507.16323",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2507.16323",
+        "id:SemanticScholar:7fdcee5399f7ea0198b080801a1af19612aed37e",
+        "id:arXiv:2507.16323",
+        "title:spellm characterlevel multihead decoding",
+        "url:https://arxiv.org/abs/2507.16323"
+      ],
+      "record": {
+        "title": "SpeLLM: Character-Level Multi-Head Decoding",
+        "source_url": "https://arxiv.org/abs/2507.16323",
+        "year": 2025,
+        "published": "2025-07-22",
+        "venue": "arXiv.org",
+        "citation_count": 3,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Scaling LLM vocabulary is often used to reduce input sequence length and alleviate attention's quadratic cost. Yet, current LLM architectures impose a critical bottleneck to this procedure: the output projection layer scales linearly with vocabulary size, rendering substantial expansion impractical. We propose SpeLLM, a method that decouples input and output vocabularies by predicting character-level strings through multiple output heads. In SpeLLM, each of the $k$ linear heads predicts a single character simultaneously, enabling the model to represent a much larger output space using smaller, independent linear heads. We present a self-distillation approach for converting a standard LLM to a SpeLLM. Our experiments with four pre-trained LLMs show their SpeLLM variants achieve competitive performance on downstream tasks while reducing runtime by 5.1% on average across models. Our approach provides a potential avenue for reducing LLM costs, while increasing support for underrepresented languages and domains.",
+        "identifiers": [
+          "SemanticScholar:7fdcee5399f7ea0198b080801a1af19612aed37e"
+        ],
+        "semantic_scholar_id": "7fdcee5399f7ea0198b080801a1af19612aed37e",
+        "canonical_id": "arXiv:2507.16323",
+        "arxiv_id": "2507.16323",
+        "doi": "10.48550/arXiv.2507.16323",
+        "authors": [
+          "Amit Ben Artzy",
+          "Roy Schwartz"
+        ],
+        "priority": 3,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 3,
+          "citation_count": 3,
+          "total": 3,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 447,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2411.03934",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2411.03934",
+        "id:SemanticScholar:9ae1e946776937a6211626da1a2687df28ad0b60",
+        "id:arXiv:2411.03934",
+        "title:interactions across blocks in posttraining quantization of large language models",
+        "url:https://arxiv.org/abs/2411.03934"
+      ],
+      "record": {
+        "title": "Interactions Across Blocks in Post-Training Quantization of Large Language Models",
+        "source_url": "https://arxiv.org/abs/2411.03934",
+        "year": 2024,
+        "published": "2024-11-06",
+        "venue": "arXiv.org",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Post-training quantization is widely employed to reduce the computational demands of neural networks. Typically, individual substructures, such as layers or blocks of layers, are quantized with the objective of minimizing quantization errors in their pre-activations by fine-tuning the corresponding weights. Deriving this local objective from the global objective of minimizing task loss involves two key simplifications: assuming substructures are mutually independent and ignoring the knowledge of subsequent substructures as well as the task loss. In this work, we assess the effects of these simplifications on weight-only quantization of large language models. We introduce two multi-block fine-tuning strategies and compare them against the baseline of fine-tuning single transformer blocks. The first captures correlations of weights across blocks by jointly optimizing multiple quantized blocks. The second incorporates knowledge of subsequent blocks by minimizing the error in downstream pre-activations rather than focusing solely on the quantized block. Our findings indicate that the effectiveness of these methods depends on the specific network model, with no impact on some models but demonstrating significant benefits for others.",
+        "identifiers": [
+          "SemanticScholar:9ae1e946776937a6211626da1a2687df28ad0b60"
+        ],
+        "semantic_scholar_id": "9ae1e946776937a6211626da1a2687df28ad0b60",
+        "canonical_id": "arXiv:2411.03934",
+        "arxiv_id": "2411.03934",
+        "doi": "10.48550/arXiv.2411.03934",
+        "authors": [
+          "Khasmamad Shabanovi",
+          "L. Wiest",
+          "Vladimir Golkov",
+          "Daniel Cremers",
+          "T. Pfeil"
+        ],
+        "priority": 2,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 2,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 705,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2503.18377",
+      "identity_tokens": [
+        "id:DOI:10.1145/3746027.3755683",
+        "id:SemanticScholar:61a67a5bf7ef842b6fb60cf9cc4fd92d14968862",
+        "id:arXiv:2503.18377",
+        "title:maximum redundancy pruning a principledriven layerwise sparsity allocation for llms",
+        "url:https://arxiv.org/abs/2503.18377"
+      ],
+      "record": {
+        "title": "Maximum Redundancy Pruning: A Principle-Driven Layerwise Sparsity Allocation for LLMs",
+        "source_url": "https://arxiv.org/abs/2503.18377",
+        "year": 2025,
+        "published": "2025-03-24",
+        "venue": "ACM Multimedia",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large language models (LLMs) have demonstrated impressive capabilities, but their enormous size poses significant challenges for deployment in real-world applications. To address this issue, researchers have sought to apply network pruning techniques to LLMs. A critical challenge in pruning is the allocation of sparsity for each layer. Recent sparsity allocation methods are often based on heuristics or search that can easily lead to suboptimal performance. In this paper, we conducted an extensive investigation into various LLMs and revealed three significant discoveries: (1) the Layerwise Pruning Sensitivity (LPS) of LLMs is highly non-uniform, (2) the choice of pruning metric affects LPS, and (3) the performance of a sparse model is related to the uniformity of its layerwise redundancy level. Based on these discoveries, we propose that the layerwise sparsity of LLMs should adhere to three principles: non-uniformity, pruning metric dependency, and uniform layerwise redundancy level in the pruned model. To this end, we proposed Maximum Redundancy Pruning (MRP), an iterative pruning algorithm that prunes in the most redundant layers (i.e., those with the highest non-outlier ratio) at each iteration. The achieved layerwise sparsity aligns with the outlined principles. We conducted extensive experiments on publicly available LLMs, including LLaMA2 and OPT, on various benchmarks. The experimental results validate the effectiveness of MRP, demonstrating its superiority over previous methods.",
+        "identifiers": [
+          "SemanticScholar:61a67a5bf7ef842b6fb60cf9cc4fd92d14968862"
+        ],
+        "semantic_scholar_id": "61a67a5bf7ef842b6fb60cf9cc4fd92d14968862",
+        "canonical_id": "arXiv:2503.18377",
+        "arxiv_id": "2503.18377",
+        "doi": "10.1145/3746027.3755683",
+        "authors": [
+          "Chang Gao",
+          "Kang Zhao",
+          "Runqi Wang",
+          "Jian-Fei Chen",
+          "Liping Jing"
+        ],
+        "priority": 2,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 2,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 567,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:d09571e8b63120d4af9399574599dd44eea55e67a60ee2cfcc9b078adf36be71",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}
