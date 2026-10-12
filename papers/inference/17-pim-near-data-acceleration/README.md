@@ -111,7 +111,7 @@
 
 - **2024-03 · [NeuPIMs: NPU-PIM Heterogeneous Acceleration for Batched LLM Inferencing](2024-2403.00579-neupims-npu-pim-heterogeneous-acceleration-for-batched-llm-inferencing.md)**  
   実装：[✓](https://github.com/casys-kaist/NeuPIMs) ・ リポジトリ内被引用：5  
-  NeuPIMsは、複数の大規模言語モデル（LLM）推論要求をまとめて処理するとき、行列積中心の計算と注意機構のメモリ帯域中心の計算が交互に現れる問題を、ニューラル処理装置（NPU）とメモリ内処理（PIM）の異種構成で改善するシステム研究である。
+  GPT3系列4規模とShareGPT・Alpacaの系列長分布を使ったサイクル精度シミュレーションで、GPUのみ比約3倍、NPUのみ比2.4倍、単純なNPU/PIM統合比1.6倍の処理量を報告した。
 
 ### 4年前（2022-11〜2023-10）
 
