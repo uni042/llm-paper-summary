@@ -35,10 +35,15 @@
   "selection_reason": "Video-LLMを用いた連続視覚言語ナビゲーションにおいて、直近8対話ターンのKVキャッシュを再利用し、古い映像履歴を3次元ボクセルの重複除去で圧縮する二層文脈管理を提案する。逐次プリフィル再計算を抑え、視覚トークンをR2Rで32%、RxRで30%削減しつつ低遅延を維持するため、マルチモーダルLLM推論時のKV管理・トークン圧縮として対象に含める。",
   "semantic_scholar_id": "0c409e36467d3828252fb958bd4497226d4ac968",
   "source_url": "https://arxiv.org/abs/2507.05240",
-  "status": "ready",
+  "status": "superseded",
   "title": "StreamVLN: Streaming Vision-and-Language Navigation via SlowFast Context Modeling",
   "type": "research",
   "venue": "IEEE International Conference on Robotics and Automation",
   "workflow_version": 10,
-  "year": 2025
+  "year": 2025,
+  "superseded_at": "2026-10-12T21:47:55+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2507.05240-streamvln-streaming-vision-and-language-navigation-via-slowfast-context-.md",
+  "represented_canonical_id": "arXiv:2507.05240",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

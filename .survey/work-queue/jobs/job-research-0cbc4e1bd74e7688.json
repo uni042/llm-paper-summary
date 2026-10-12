@@ -35,10 +35,15 @@
   "selection_reason": "Sim-LLMは類似タスク間でKV cacheを再利用し、edge LLM inferenceのGPU memory使用を減らしてthroughputとbatch容量を上げる。",
   "semantic_scholar_id": "e51dab8952aa3cf7ae2ce7331ed47d01e7f5612c",
   "source_url": "https://doi.org/10.52202/085713-2984",
-  "status": "ready",
+  "status": "superseded",
   "title": "Sim-LLM: Optimizing LLM Inference at the Edge through Inter-Task KV Reuse",
   "type": "research",
   "venue": "Neural Information Processing Systems",
   "workflow_version": 10,
-  "year": 2025
+  "year": 2025,
+  "superseded_at": "2026-10-12T21:47:55+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/10-kv-cache-offload-recomputation/2025-5e060858489e-sim-llm-optimizing-llm-inference-at-the-edge-through-inter-task-kv-reuse.md",
+  "represented_canonical_id": "DOI:10.52202/085713-2984",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

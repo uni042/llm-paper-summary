@@ -35,10 +35,15 @@
   "selection_reason": "9Bのomni-modal LLMをedgeで12GB未満RAMに収め、visual 16x/audio 5x token圧縮、LLM backboneのtext-only低rate decoding、軽量speech decoder分離によりreal-time full-duplex推論を実現する。推論architecture・token budget・latency/memory制約が方式設計の直接対象なので収録対象。",
   "semantic_scholar_id": "5a62204836ba4210cdb9a22d602312f32a49130c",
   "source_url": "https://arxiv.org/abs/2604.27393",
-  "status": "ready",
+  "status": "superseded",
   "title": "MiniCPM-o 4.5: Towards Real-Time Full-Duplex Omni-Modal Interaction",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-10-12T21:47:55+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2026-2604.27393-minicpm-o-4-5-towards-real-time-full-duplex-omni-modal-interaction.md",
+  "represented_canonical_id": "arXiv:2604.27393",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

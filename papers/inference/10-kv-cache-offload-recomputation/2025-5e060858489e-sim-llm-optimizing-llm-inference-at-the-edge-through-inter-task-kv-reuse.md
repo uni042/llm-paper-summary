@@ -27,6 +27,8 @@ worker_run_key: "20261013-0630-scheduled-chat-30/r01"
 reference_main_sha: "0e29c55e48a7682385552e4c2703d420a450e6f3"
 research_job_id: "job-research-0cbc4e1bd74e7688"
 lineage: "10-kv-cache-offload-recomputation"
+last_audited: null
+audit_version: 0
 ---
 
 # Sim-LLM：意味的に似た要求のKVを再利用するエッジ推論
