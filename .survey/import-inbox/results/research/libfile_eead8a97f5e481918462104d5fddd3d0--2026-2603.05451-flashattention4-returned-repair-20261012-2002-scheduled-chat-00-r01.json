@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "39bcb6f05efd128ca3e2a826472b04e0aa29ae9afeae62c9cb8edb4877c54696",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_eead8a97f5e481918462104d5fddd3d0--2026-2603.05451-flashattention4-returned-repair-20261012-2002-scheduled-chat-00-r01.md",
+  "canonical_id": "arXiv:2603.05451",
+  "worker_completed_at": "2026-10-12T20:07:45+09:00",
+  "worker_run_key": "20261012-2002-scheduled-chat-00/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 5162,
+    "body_paragraphs": 24,
+    "method_chars": 2063,
+    "method_paragraphs": 10,
+    "evaluation_chars": 1303,
+    "limitation_chars": 393,
+    "insufficiency_flags": []
+  },
+  "failures": [
+    "長文定型文の再利用を検出: papers/inference/09-kernel-runtime-compilation/2026-2603.05451-flashattention-4-algorithm-and-kernel-pipelining-co-design-for-asymmetri.md と 19 段落 / 4442文字 (100.0%) が完全一致"
+  ],
+  "processed_at": "2026-10-12T12:00:55+00:00"
+}

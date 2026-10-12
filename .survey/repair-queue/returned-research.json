@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-12T11:55:15+00:00",
+  "generated_at": "2026-10-12T12:01:51+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -269,22 +269,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-97ee9f2dc9c2--libfile_54f27b0becdc81919c7e97422419c095--1811.03115-blockwise-parallel-decoding(1).md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-97ee9f2dc9c2--libfile_54f27b0becdc81919c7e97422419c095--1811.03115-blockwise-parallel-decoding-1.json",
       "worker_run_key": "20261006-0700-scheduled-chat-00/r01"
-    },
-    {
-      "canonical_id": "arXiv:2607.29591",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-06T16:17:13+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "日本語比率 64.6% < 70%"
-      ],
-      "quality_metrics": null,
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-4f71a46b2c49--libfile_83bf42cc3aa08191b70ced95a7bb283b--2607.29591-reskv.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-4f71a46b2c49--libfile_83bf42cc3aa08191b70ced95a7bb283b--2607.29591-reskv.json",
-      "worker_run_key": "20261006-1900-scheduled-chat-00/r01"
     },
     {
       "canonical_id": "arXiv:2608.25053",
@@ -769,33 +753,6 @@
       "worker_run_key": "20261012-0245-scheduled-chat-45/r01"
     },
     {
-      "canonical_id": "arXiv:2608.01631",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-12T03:26:15+00:00",
-      "return_count": 4,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 127 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 8409,
-        "body_paragraphs": 44,
-        "method_chars": 1885,
-        "method_paragraphs": 10,
-        "evaluation_chars": 127,
-        "limitation_chars": 805,
-        "insufficiency_flags": [
-          "評価説明量 127 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-77acf6e52d24--libfile_98c2b6acb2188191ba489dfc3dcf6ca2--2026-2608.01631-answer-evidence-gap-research-20261012-0300-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-77acf6e52d24--libfile_98c2b6acb2188191ba489dfc3dcf6ca2--2026-2608.01631-answer-evidence-gap-research-20261012-0300-scheduled-chat-00-r01.json",
-      "worker_run_key": "20261012-0300-scheduled-chat-00/r01"
-    },
-    {
       "canonical_id": "arXiv:2403.06988",
       "title": null,
       "source_url": null,
@@ -877,33 +834,6 @@
       "worker_run_key": "20261012-1930-scheduled-chat-30/r01"
     },
     {
-      "canonical_id": "arXiv:2607.10987",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-12T11:43:00+00:00",
-      "return_count": 4,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 207 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5935,
-        "body_paragraphs": 31,
-        "method_chars": 1848,
-        "method_paragraphs": 10,
-        "evaluation_chars": 207,
-        "limitation_chars": 686,
-        "insufficiency_flags": [
-          "評価説明量 207 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_179794e149488191be1f608628329cd5--2026-2607.10987-aaflow-plus-returned-research-repair-20261012-1600-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_179794e149488191be1f608628329cd5--2026-2607.10987-aaflow-plus-returned-research-repair-20261012-1600-scheduled-chat-00-r01.json",
-      "worker_run_key": "20261012-1600-scheduled-chat-00/r01"
-    },
-    {
       "canonical_id": "arXiv:2603.10087",
       "title": null,
       "source_url": null,
@@ -930,8 +860,8 @@
     },
     {
       "canonical_id": "arXiv:2608.04991",
-      "title": "RAC: Reference-Aware Activation Compression for Communication-Efficient Split LLM Inference",
-      "source_url": "https://arxiv.org/html/2608.04991",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-12T11:52:13+00:00",
       "return_count": 6,
       "assigned_worker": "scheduled-chat-00",
@@ -952,6 +882,85 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_80ad364ed1888191a4a203aa4450ea49--2026-2608.04991-rac-returned-repair-20261012-2002-scheduled-chat-00-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_80ad364ed1888191a4a203aa4450ea49--2026-2608.04991-rac-returned-repair-20261012-2002-scheduled-chat-00-r01.json",
       "worker_run_key": "20261012-2002-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2607.29591",
+      "title": "ResKV: Reconstructing Omitted Attention Contributions for Fixed-Budget KV Cache Compression",
+      "source_url": "https://arxiv.org/abs/2607.29591",
+      "returned_at": "2026-10-12T12:00:19+00:00",
+      "return_count": 3,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 186 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 6100,
+        "body_paragraphs": 34,
+        "method_chars": 2152,
+        "method_paragraphs": 12,
+        "evaluation_chars": 186,
+        "limitation_chars": 754,
+        "insufficiency_flags": [
+          "評価説明量 186 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_c963a3ef4724819183bf701109ed56a5--2026-2607.29591-reskv-returned-research-repair-20261012-1800-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_c963a3ef4724819183bf701109ed56a5--2026-2607.29591-reskv-returned-research-repair-20261012-1800-scheduled-chat-00-r01.json",
+      "worker_run_key": "20261012-1800-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2603.05451",
+      "title": "FlashAttention-4: Algorithm and Kernel Pipelining Co-Design for Asymmetric Hardware Scaling",
+      "source_url": "https://arxiv.org/pdf/2603.05451",
+      "returned_at": "2026-10-12T12:00:55+00:00",
+      "return_count": 5,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "長文定型文の再利用を検出: papers/inference/09-kernel-runtime-compilation/2026-2603.05451-flashattention-4-algorithm-and-kernel-pipelining-co-design-for-asymmetri.md と 19 段落 / 4442文字 (100.0%) が完全一致"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5162,
+        "body_paragraphs": 24,
+        "method_chars": 2063,
+        "method_paragraphs": 10,
+        "evaluation_chars": 1303,
+        "limitation_chars": 393,
+        "insufficiency_flags": []
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_eead8a97f5e481918462104d5fddd3d0--2026-2603.05451-flashattention4-returned-repair-20261012-2002-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_eead8a97f5e481918462104d5fddd3d0--2026-2603.05451-flashattention4-returned-repair-20261012-2002-scheduled-chat-00-r01.json",
+      "worker_run_key": "20261012-2002-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2607.10987",
+      "title": "[AAFLOW+] Stateful Operator Abstraction with Zero-Copy Distributed KV Cache Orchestration for Multi-Agent Workflows",
+      "source_url": "https://arxiv.org/abs/2607.10987",
+      "returned_at": "2026-10-12T12:00:55+00:00",
+      "return_count": 5,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 207 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5935,
+        "body_paragraphs": 31,
+        "method_chars": 1848,
+        "method_paragraphs": 10,
+        "evaluation_chars": 207,
+        "limitation_chars": 686,
+        "insufficiency_flags": [
+          "評価説明量 207 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-ca310e8143eb--libfile_179794e149488191be1f608628329cd5--2026-2607.10987-aaflow-plus-returned-research-repair-20261012-1600-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-ca310e8143eb--libfile_179794e149488191be1f608628329cd5--2026-2607.10987-aaflow-plus-returned-research-repair-20261012-1600-scheduled-chat-00-r01.json",
+      "worker_run_key": "20261012-1600-scheduled-chat-00/r01"
     }
   ]
 }
