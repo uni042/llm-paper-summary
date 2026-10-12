@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-12T12:49:53+00:00",
+  "generated_at": "2026-10-12T12:55:36+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 42,
+  "count": 41,
   "entries": [
     {
       "canonical_id": "DOI:10.1145/3714983.3714987",
@@ -934,33 +934,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-ca310e8143eb--libfile_179794e149488191be1f608628329cd5--2026-2607.10987-aaflow-plus-returned-research-repair-20261012-1600-scheduled-chat-00-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-ca310e8143eb--libfile_179794e149488191be1f608628329cd5--2026-2607.10987-aaflow-plus-returned-research-repair-20261012-1600-scheduled-chat-00-r01.json",
       "worker_run_key": "20261012-1600-scheduled-chat-00/r01"
-    },
-    {
-      "canonical_id": "arXiv:2607.29591",
-      "title": "ResKV: Reconstructing Omitted Attention Contributions for Fixed-Budget KV Cache Compression",
-      "source_url": "https://arxiv.org/abs/2607.29591",
-      "returned_at": "2026-10-12T12:49:53+00:00",
-      "return_count": 4,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 186 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 6100,
-        "body_paragraphs": 34,
-        "method_chars": 2152,
-        "method_paragraphs": 12,
-        "evaluation_chars": 186,
-        "limitation_chars": 754,
-        "insufficiency_flags": [
-          "評価説明量 186 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-4ad80f421771--libfile_c963a3ef4724819183bf701109ed56a5--2026-2607.29591-reskv-returned-research-repair-20261012-1800-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-4ad80f421771--libfile_c963a3ef4724819183bf701109ed56a5--2026-2607.29591-reskv-returned-research-repair-20261012-1800-scheduled-chat-00-r01.json",
-      "worker_run_key": "20261012-1800-scheduled-chat-00/r01"
     }
   ]
 }
