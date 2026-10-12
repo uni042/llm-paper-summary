@@ -1,7 +1,7 @@
 # Scheduled worker :45 worklist
 
 Worker: `scheduled-chat-45`  
-Generated: `2026-10-12T13:11:36+00:00`
+Generated: `2026-10-12T13:44:22+00:00`
 
 このページはこのworker専用の再構築可能な選択索引です。他のScheduled worker用ページとは候補を重複させません（十分な在庫がある場合）。
 正本は `.survey/work-queue/jobs/`、claim、論文実体、relevance ledgerです。処理直前に最新正本を再確認してください。
@@ -220,8 +220,8 @@ ready総数: **1023** / 未claim総数: **1022** / このworker向け: **200**
 
 ## リスト入り判定待ち Discovery候補
 
-未判定総数: **113155** / このworker向け: **500**
-事前選別: **quarantine** / 暫定隔離 **107664** / 監査再投入 **0** / 機械規則適用後 **109815** / 選抜率 **5.0%** （候補の正本は保持。隔離はunrelated判定ではない）
+未判定総数: **113154** / このworker向け: **500**
+事前選別: **quarantine** / 暫定隔離 **107663** / 監査再投入 **0** / 機械規則適用後 **109814** / 選抜率 **5.0%** （候補の正本は保持。隔離はunrelated判定ではない）
 
 | # | priority | 系統内引用最多 | 系統内引用合計 | identity | title | published | venue | 全被引用 | 参照関係 | 系統候補 | source |
 |---:|---:|---:|---:|---|---|---|---|---:|---:|---|---|
@@ -511,7 +511,7 @@ ready総数: **1023** / 未claim総数: **1022** / このworker向け: **200**
 | 284 | 107 | 7 | 9 | arXiv:2512.21627 | AstraNav-Memory: Contexts Compression for Long Memory | 2025-12-25 | arXiv.org | 7 | 9 | KV cache memory management / streaming inference / attention sinks / length extrapolation, inference-systems | [source](https://arxiv.org/abs/2512.21627) |
 | 285 | 101 | 7 | 9 | arXiv:2605.25969 | Triplet-Block Diffusion RWKV | 2026-05-25 | arXiv.org | 1 | 9 | Inference / Parallel and Non-Autoregressive Decoding, diffusion language models / masked diffusion / parallel decoding / AR-to-diffusion conversion, state space models / selective SSM / recurrent inference / hardware-aware sequence modeling, 大規模モデル学習／分散学習メモリ最適化／DeepSpeed, 拡散型LLM推論 / 近似KVキャッシュ / 並列復号 | [source](https://arxiv.org/abs/2605.25969) |
 | 286 | 10 | 7 | 9 | arXiv:2604.16395 | Stream2LLM: Overlap Context Streaming and Prefill for Reduced Time-to-First-Token (TTFT) | 2026-03-29 | arXiv.org | 0 | 9 | LLM Serving / Scheduling / Disaggregation | [source](https://arxiv.org/abs/2604.16395) |
-| 287 | 10 | 7 | 8 | arXiv:2609.27396 | When Parallel Drafter Meets Parallel Speculative Decoding | 2026-09-23 |  | 0 | 8 | inference-systems, speculative decoding / parallel drafting / diffusion-inspired language modeling, 投機的デコード / 分布保存型デコード高速化, 投機的デコードにおける自己回帰ドラフトと並列ドラフトの折衷, 投機的復号 / EAGLE, 投機的復号 / 無損失復号高速化 | [source](https://arxiv.org/abs/2609.27396) |
+| 287 | 101 | 7 | 8 | arXiv:2609.27396 | When Parallel Drafter Meets Parallel Speculative Decoding | 2026-09-23 |  | 1 | 8 | inference-systems, speculative decoding / parallel drafting / diffusion-inspired language modeling, 投機的デコード / 分布保存型デコード高速化, 投機的デコードにおける自己回帰ドラフトと並列ドラフトの折衷, 投機的復号 / EAGLE, 投機的復号 / 無損失復号高速化 | [source](https://arxiv.org/abs/2609.27396) |
 | 288 | 101 | 7 | 8 | arXiv:2607.06827 | Compress the Cache, Not the Speech Embedding: KV Compression for Efficient Speech LLMs | 2026-07-07 | arXiv.org | 1 | 8 | KV cache compression / cross-layer state merging, KV cache eviction / heavy hitters / sparse attention / efficient inference, KV cache memory management / streaming inference / attention sinks / length extrapolation, KV cache quantization / long-context inference / activation compression, LLM Serving / Scheduling / Disaggregation, inference-systems | [source](https://arxiv.org/abs/2607.06827) |
 | 289 | 107 | 7 | 8 | arXiv:2605.28051 | Beyond Surrogate Gradients: Fully Differentiable Token Pruning for Vision-Language Models | 2026-05-27 | arXiv.org | 7 | 8 | 07-kv-cache-optimization-compression | [source](https://arxiv.org/abs/2605.28051) |
 | 290 | 6 | 7 | 8 | arXiv:2410.13060 | AERO: Entropy-Guided Framework for Private LLM Inference | 2024-10-16 |  | 6 | 8 | KV cache memory management / streaming inference / attention sinks / length extrapolation | [source](https://arxiv.org/abs/2410.13060) |

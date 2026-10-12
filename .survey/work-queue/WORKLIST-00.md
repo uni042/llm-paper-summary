@@ -1,7 +1,7 @@
 # Scheduled worker :00 worklist
 
 Worker: `scheduled-chat-00`  
-Generated: `2026-10-12T13:11:36+00:00`
+Generated: `2026-10-12T13:44:22+00:00`
 
 このページはこのworker専用の再構築可能な選択索引です。他のScheduled worker用ページとは候補を重複させません（十分な在庫がある場合）。
 正本は `.survey/work-queue/jobs/`、claim、論文実体、relevance ledgerです。処理直前に最新正本を再確認してください。
@@ -220,8 +220,8 @@ ready総数: **1023** / 未claim総数: **1022** / このworker向け: **200**
 
 ## リスト入り判定待ち Discovery候補
 
-未判定総数: **113155** / このworker向け: **500**
-事前選別: **quarantine** / 暫定隔離 **107664** / 監査再投入 **0** / 機械規則適用後 **109815** / 選抜率 **5.0%** （候補の正本は保持。隔離はunrelated判定ではない）
+未判定総数: **113154** / このworker向け: **500**
+事前選別: **quarantine** / 暫定隔離 **107663** / 監査再投入 **0** / 機械規則適用後 **109814** / 選抜率 **5.0%** （候補の正本は保持。隔離はunrelated判定ではない）
 
 | # | priority | 系統内引用最多 | 系統内引用合計 | identity | title | published | venue | 全被引用 | 参照関係 | 系統候補 | source |
 |---:|---:|---:|---:|---|---|---|---|---:|---:|---|---|
@@ -365,7 +365,7 @@ ready総数: **1023** / 未claim総数: **1022** / このworker向け: **200**
 | 138 | 102 | 8 | 19 | arXiv:2512.21911 | Accelerate Speculative Decoding with Sparse Computation in Verification | 2025-12-26 | arXiv.org | 2 | 19 | Adaptive Expert Computation / Compression, KV cache memory management / streaming inference / attention sinks / length extrapolation, KVキャッシュ最適化／適応圧縮, MoE inference systems / expert parallelism / model compression / knowledge distillation, Speculative Decoding, survey-speculative-decoding, 投機的復号 / EAGLE, 投機的復号 / 無損失復号高速化, 疎注意 / KVキャッシュ選択 / 長文脈推論 | [source](https://arxiv.org/abs/2512.21911) |
 | 139 | 102 | 8 | 19 | arXiv:2512.07011 | Block Sparse Flash Attention | 2025-12-07 | arXiv.org | 2 | 19 | KV cache memory management / streaming inference / attention sinks / length extrapolation, inference-systems, long-context inference / dynamic sparse attention / prefill acceleration, sparse attention / long-context Transformer, 正確な注意計算 / 入出力指向注意 / GPUカーネル最適化 / FlashAttention, 注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層, 疎注意 / KVキャッシュ選択 / 長文脈推論 | [source](https://arxiv.org/abs/2512.07011) |
 | 140 | 101 | 8 | 19 | arXiv:2604.00235 | MAC-Attention: a Match-Amend-Complete Scheme for Fast and Accurate Attention Computation | 2026-03-31 | arXiv.org | 1 | 19 | 02-hardware-accelerators, 07-kv-cache-optimization-compression, KV cache memory management / streaming inference / attention sinks / length extrapolation, KV cache quantization / long-context inference / activation compression, KVキャッシュ最適化／適応圧縮, LLM Serving / Scheduling / Disaggregation, inference-systems, 正確な注意計算 / 入出力指向注意 / GPUカーネル最適化 / FlashAttention, 注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層, 疎注意 / KVキャッシュ選択 / 長文脈推論 | [source](https://arxiv.org/abs/2604.00235) |
-| 141 | 18 | 8 | 18 | arXiv:2412.20677 | Align Attention Heads Before Merging Them: An Effective Way for Converting MHA to GQA | 2024-12-30 | Conference on Empirical Methods in Natural Language Processing | 8 | 18 | 07-kv-cache-optimization-compression, Inference / Structured Model Compression and Pruning, KV cache quantization / long-context inference / activation compression, inference-systems, kv-cache-optimization-compression | [source](https://arxiv.org/abs/2412.20677) |
+| 141 | 19 | 8 | 18 | arXiv:2412.20677 | Align Attention Heads Before Merging Them: An Effective Way for Converting MHA to GQA | 2024-12-30 | Conference on Empirical Methods in Natural Language Processing | 9 | 18 | 07-kv-cache-optimization-compression, Inference / Structured Model Compression and Pruning, KV cache quantization / long-context inference / activation compression, inference-systems, kv-cache-optimization-compression | [source](https://arxiv.org/abs/2412.20677) |
 | 142 | 7 | 8 | 17 | SemanticScholar:bd49df3cab623e34f6378b18c6c61c486e8c2cd2 | BumbleBee : Dynamic KV-Cache Streaming Submodular Summarization for Infinite-Context Transformers |  |  | 7 | 17 | 07-kv-cache-optimization-compression, KV cache memory management / streaming inference / attention sinks / length extrapolation, LLM Serving / Scheduling / Disaggregation, Offload / Hierarchical Memory, inference-systems, 注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層 | [source](https://www.semanticscholar.org/paper/bd49df3cab623e34f6378b18c6c61c486e8c2cd2) |
 | 143 | 101 | 8 | 17 | arXiv:2602.18931 | WANSpec: Leveraging Global Compute Capacity for LLM Inference | 2026-02-21 | arXiv.org | 1 | 17 | LLM Serving / Scheduling / Disaggregation, LLM serving / energy management / cluster scheduling / dynamic reconfiguration, Speculative Decoding, inference-systems, speculative decoding / heterogeneous CPU-GPU inference / consumer hardware, survey-speculative-decoding, 投機的デコード / 分布保存型デコード高速化, 投機的復号 / 無損失復号高速化, 注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層 | [source](https://arxiv.org/abs/2602.18931) |
 | 144 | 106 | 8 | 17 | arXiv:2605.07363 | MISA: Mixture of Indexer Sparse Attention for Long-Context LLM Inference | 2026-05-08 | arXiv.org | 6 | 17 | 13-sparse-attention, KV cache memory management / streaming inference / attention sinks / length extrapolation, kv-cache-optimization-compression, sparse attention / long-context Transformer, 分散学習 / 混合専門家モデル / 自動シャーディング / SPMD, 疎注意 / KVキャッシュ選択 / 長文脈推論, 疎注意／長文脈学習 | [source](https://arxiv.org/abs/2605.07363) |

@@ -1,7 +1,7 @@
 # Scheduled worker :30 worklist
 
 Worker: `scheduled-chat-30`  
-Generated: `2026-10-12T13:11:36+00:00`
+Generated: `2026-10-12T13:44:22+00:00`
 
 このページはこのworker専用の再構築可能な選択索引です。他のScheduled worker用ページとは候補を重複させません（十分な在庫がある場合）。
 正本は `.survey/work-queue/jobs/`、claim、論文実体、relevance ledgerです。処理直前に最新正本を再確認してください。
@@ -220,8 +220,8 @@ ready総数: **1023** / 未claim総数: **1022** / このworker向け: **200**
 
 ## リスト入り判定待ち Discovery候補
 
-未判定総数: **113155** / このworker向け: **500**
-事前選別: **quarantine** / 暫定隔離 **107664** / 監査再投入 **0** / 機械規則適用後 **109815** / 選抜率 **5.0%** （候補の正本は保持。隔離はunrelated判定ではない）
+未判定総数: **113154** / このworker向け: **500**
+事前選別: **quarantine** / 暫定隔離 **107663** / 監査再投入 **0** / 機械規則適用後 **109814** / 選抜率 **5.0%** （候補の正本は保持。隔離はunrelated判定ではない）
 
 | # | priority | 系統内引用最多 | 系統内引用合計 | identity | title | published | venue | 全被引用 | 参照関係 | 系統候補 | source |
 |---:|---:|---:|---:|---|---|---|---|---:|---:|---|---|
@@ -629,7 +629,7 @@ ready総数: **1023** / 未claim総数: **1022** / このworker向け: **200**
 | 402 | 2 | 6 | 8 | DOI:10.1109/ACCESS.2026.3715276 | Neuro-Elastic: A Unified Framework for Hardware-Aware Adaptive Quantization and Dynamic Sparsity in Real-Time Edge Intent Prediction | 2026 | IEEE Access | 2 | 8 | 99-other-inference-systems, Sparse Attention, 重み専用量子化 / 推論カーネル | [source](https://doi.org/10.1109/ACCESS.2026.3715276) |
 | 403 | 101 | 6 | 8 | arXiv:2603.02874 | Retrievit: In-context Retrieval Capabilities of Transformers, State Space Models, and Hybrid Architectures | 2026-03-03 | Trans. Mach. Learn. Res. | 1 | 8 | state space models / selective SSM / recurrent inference / hardware-aware sequence modeling | [source](https://arxiv.org/abs/2603.02874) |
 | 404 | 8 | 6 | 8 | arXiv:2406.17989 | Learning Neural Networks with Sparse Activations | 2024-06-26 | Annual Conference Computational Learning Theory | 8 | 8 | state space models / selective SSM / recurrent inference / hardware-aware sequence modeling | [source](https://arxiv.org/abs/2406.17989) |
-| 405 | 36 | 6 | 8 | arXiv:2409.13652 | OATS: Outlier-Aware Pruning Through Sparse and Low Rank Decomposition | 2024-09-20 | International Conference on Learning Representations | 26 | 8 | Inference / Structured Model Compression and Pruning, inference-systems | [source](https://arxiv.org/abs/2409.13652) |
+| 405 | 37 | 6 | 8 | arXiv:2409.13652 | OATS: Outlier-Aware Pruning Through Sparse and Low Rank Decomposition | 2024-09-20 | International Conference on Learning Representations | 27 | 8 | Inference / Structured Model Compression and Pruning, inference-systems | [source](https://arxiv.org/abs/2409.13652) |
 | 406 | 10 | 6 | 8 | arXiv:2512.13751 | MIDUS: Memory-Infused Depth Up-Scaling | 2025-12-15 | arXiv.org | 0 | 8 | dense-to-MoE conversion / conditional FFN computation / expert routing, 正確な注意計算 / 入出力指向注意 / GPUカーネル最適化 / FlashAttention | [source](https://arxiv.org/abs/2512.13751) |
 | 407 | 10 | 6 | 8 | arXiv:2607.24667 | Eviction as Estimation: A Fixed-Lag Smoothing View of Test-Time Memory, and When Measuring Beats Accumulating | 2026-07-27 | arXiv.org | 0 | 8 | 07-kv-cache-optimization-compression, KV cache eviction / heavy hitters / sparse attention / efficient inference, KV cache memory management / streaming inference / attention sinks / length extrapolation, KV-cache compression / attention-based token selection / long-context inference, KVキャッシュ最適化／適応圧縮, Long-context serving / KV cache benchmark | [source](https://arxiv.org/abs/2607.24667) |
 | 408 | 42 | 6 | 8 | arXiv:2403.16899 | State Space Models as Foundation Models: A Control Theoretic Overview | 2024-03-25 | American Control Conference | 42 | 8 | state space models / selective SSM / recurrent inference / hardware-aware sequence modeling | [source](https://arxiv.org/abs/2403.16899) |
