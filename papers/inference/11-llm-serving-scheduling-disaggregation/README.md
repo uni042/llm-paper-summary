@@ -3,7 +3,7 @@
 複数requestを複数GPU / nodeで処理するLLM servingについて、request順、batch、prefill / decodeのGPU配分、KV再利用・転送、request移動などを調整し、latencyとresource効率を改善する研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（331本）
+## 自動生成の論文一覧（333本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -181,6 +181,10 @@
 - **2026-02 · [Pancake: Hierarchical Memory System for Multi-Agent LLM Serving](2026-2602.21477-pancake-hierarchical-agentic-memory.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
   動的なエージェント記憶向けに多段インデックスキャッシュ、複数エージェント協調インデックス、CPU-GPU協調を統合し、既存メモリ基盤比で端から端まで平均4.29倍超の性能向上を示す。
+
+- **2026-02 · [GORGO: Online Tuning for Cross-Region Network-Aware LLM Serving](2026-2602.11688-gorgo-online-tuning-for-cross-region-network-aware-llm-serving.md)**  
+  実装：[✓](https://github.com/atoniolo76/GORGO) ・ リポジトリ内被引用：2  
+  接頭辞再利用率だけを最大化すると負荷が一部のサーバーへ集中し、空いているサーバーを選ぶだけでは長い接頭辞を再計算してしまう。地域間の通信遅延が数十〜数百ミリ秒以上変動する場合、二つの指標だけを考慮する方式では、最初のトークンが返るまでの時間を適切に見積もれない。
 
 - **2026-01 · [Towards Resiliency in Large Language Model Serving with KevlarFlow](2026-2601.22438-kevlarflow-resilient-llm-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
@@ -555,6 +559,10 @@
 - **2026-07 · [X-CoSD: Communication-Efficient Cross-Vocabulary Collaborative Speculative Decoding](2026-2609.09166-x-cosd-cross-vocabulary-collaborative-speculative-decoding.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   端末SLMとサーバLLMの語彙が異なっても、残差分布を共通語彙・LLM専用語彙へ分け、少数の置換候補だけを通信して厳密な協調投機的デコードを行う方式。
+
+- **2026-07 · [Talaria: Session-Aware Serverless Serving of Hundred-Billion-Parameter LLMs](2026-2607.17181-talaria-session-aware-serverless-serving-of-hundred-billion-parameter-ll.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  単発要求の待ち時間やGPU利用率だけを最適化する方式は、ツールを使うエージェントの連続呼出しには必ずしも適さない。機構を無効化したラウンド型基準と比較し、セッション完了時間の中央値を1000秒から189秒、95パーセンタイルを2296秒から867秒へ短縮した。
 
 - **2026-07 · [SPORK: Self-Speculative Forking to Accelerate Agentic LLM Inference](2026-2607.03333-spork-self-speculative-forking-agentic-llm.md)**  
   実装：[✓](https://github.com/baihuajun24/spork) ・ リポジトリ内被引用：0  

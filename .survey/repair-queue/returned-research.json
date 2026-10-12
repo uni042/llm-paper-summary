@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-12T02:14:24+00:00",
+  "generated_at": "2026-10-12T02:28:39+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 69,
+  "count": 66,
   "entries": [
     {
       "canonical_id": "arXiv:2311.14652",
@@ -79,22 +79,6 @@
       "worker_run_key": "20261003-0645-scheduled-chat-45"
     },
     {
-      "canonical_id": "arXiv:2507.15465",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-03T02:25:34+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "frontmatter.source が空"
-      ],
-      "quality_metrics": null,
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_9c7814efdf4081919d75c4c6a6d1eb29--2025-2507.15465-rethinking-llm-inference-bottlenecks.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_9c7814efdf4081919d75c4c6a6d1eb29--2025-2507.15465-rethinking-llm-inference-bottlenecks.json",
-      "worker_run_key": "20261002-2029-scheduled-chat-30"
-    },
-    {
       "canonical_id": "arXiv:2402.12052",
       "title": null,
       "source_url": null,
@@ -127,22 +111,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_d2c7976fcde08191bd856ffca3cff03e--lln-attention-2311.13541.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_d2c7976fcde08191bd856ffca3cff03e--lln-attention-2311.13541.json",
       "worker_run_key": "20261003-0934-scheduled-chat-30"
-    },
-    {
-      "canonical_id": "arXiv:2404.00242",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-03T02:48:28+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "日本語比率 50.7% < 70%"
-      ],
-      "quality_metrics": null,
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_e10c1efcdd84819198377afcff1314af--2024-2404.00242-deft.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_e10c1efcdd84819198377afcff1314af--2024-2404.00242-deft.json",
-      "worker_run_key": "20261002-2345-scheduled-chat-45"
     },
     {
       "canonical_id": "arXiv:2608.21952",
@@ -319,22 +287,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_8328128f442081918ba7c1d0e0cd753d--2026-2607.04181-cocoscale.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_8328128f442081918ba7c1d0e0cd753d--2026-2607.04181-cocoscale.json",
       "worker_run_key": "20261004-0400-scheduled-chat-00/r01"
-    },
-    {
-      "canonical_id": "arXiv:2607.17181",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-04T02:17:54+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "日本語比率 34.4% < 70%"
-      ],
-      "quality_metrics": null,
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_3282cf9e48148191ab1c3fc01d22bcfe--2026-talaria.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_3282cf9e48148191ab1c3fc01d22bcfe--2026-talaria.json",
-      "worker_run_key": "20261004-0700-scheduled-chat-00/r02"
     },
     {
       "canonical_id": "arXiv:2608.04991",
@@ -1218,33 +1170,6 @@
       "worker_run_key": "20261011-1700-scheduled-chat-00/r01"
     },
     {
-      "canonical_id": "arXiv:2607.23765",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-11T15:07:41+00:00",
-      "return_count": 6,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 0 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 6252,
-        "body_paragraphs": 35,
-        "method_chars": 2303,
-        "method_paragraphs": 13,
-        "evaluation_chars": 0,
-        "limitation_chars": 803,
-        "insufficiency_flags": [
-          "評価説明量 0 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-15d9f100adfe--libfile_a1bf80903470819193cf9e11e5b8a86e--2026-2607.23765-wiserouter-returned-repair-20261011-2330-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-15d9f100adfe--libfile_a1bf80903470819193cf9e11e5b8a86e--2026-2607.23765-wiserouter-returned-repair-20261011-2330-scheduled-chat-30-r01.json",
-      "worker_run_key": "20261011-2330-scheduled-chat-30/r01"
-    },
-    {
       "canonical_id": "arXiv:2312.04927",
       "title": null,
       "source_url": null,
@@ -1464,8 +1389,8 @@
     },
     {
       "canonical_id": "arXiv:2507.19635",
-      "title": "Efficient and Scalable Agentic AI with Heterogeneous Systems",
-      "source_url": "https://arxiv.org/pdf/2507.19635v1",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-12T02:11:49+00:00",
       "return_count": 3,
       "assigned_worker": "scheduled-chat-45",
@@ -1488,6 +1413,33 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_39ef7c1cb4408191b1322741ee174067--2025-2507.19635-heterogeneous-agentic-ai-returned-repair-20261012-0345-scheduled-chat-45-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_39ef7c1cb4408191b1322741ee174067--2025-2507.19635-heterogeneous-agentic-ai-returned-repair-20261012-0345-scheduled-chat-45-r01.json",
       "worker_run_key": "20261012-0345-scheduled-chat-45/r01"
+    },
+    {
+      "canonical_id": "arXiv:2507.15465",
+      "title": "Rethinking LLM Inference Bottlenecks: Insights from Latent Attention and Mixture-of-Experts",
+      "source_url": "https://arxiv.org/pdf/2507.15465",
+      "returned_at": "2026-10-12T02:27:29+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5480,
+        "body_paragraphs": 29,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 1288,
+        "limitation_chars": 611,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_8c90c9791ab481919a8364f6c7779d87--2025-2507.15465-rethinking-llm-inference-bottlenecks-metadata-repair-20261012-0245-scheduled-chat-45-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_8c90c9791ab481919a8364f6c7779d87--2025-2507.15465-rethinking-llm-inference-bottlenecks-metadata-repair-20261012-0245-scheduled-chat-45-r01.json",
+      "worker_run_key": "20261012-0245-scheduled-chat-45/r01"
     }
   ]
 }
