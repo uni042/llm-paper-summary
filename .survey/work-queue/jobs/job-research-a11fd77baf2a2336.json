@@ -35,10 +35,15 @@
   "selection_reason": "LATMは高価なLLMで再利用可能toolを一度生成し、以後は軽量LLMがcached toolを使う二段構成とfunctional cacheを導入する。streaming requestでtoolを再利用して平均serving/inference costを下げることを明示し、GPT-4 maker + GPT-3.5 userでGPT-4単独相当性能を低コストで示すためagentic inference efficiency対象。",
   "semantic_scholar_id": "32dcd0887537cece54e214f531d2c384470b023f",
   "source_url": "https://arxiv.org/abs/2305.17126",
-  "status": "ready",
+  "status": "superseded",
   "title": "Large Language Models as Tool Makers",
   "type": "research",
   "venue": "International Conference on Learning Representations",
   "workflow_version": 10,
-  "year": 2023
+  "year": 2023,
+  "superseded_at": "2026-10-12T03:07:26+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2305.17126-large-language-models-as-tool-makers.md",
+  "represented_canonical_id": "arXiv:2305.17126",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

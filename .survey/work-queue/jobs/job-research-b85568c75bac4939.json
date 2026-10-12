@@ -28,10 +28,15 @@
   "selection_reason": "エージェント型promptでは同一内容がturnごとに位置を変えて現れprefix cacheが無効化される一方、MLAは位置非依存latent KVと小さいRoPE成分へ分解できる点を利用する。IrminsulはSGLang radix cacheをcontent-hash keyingへ拡張し、chunk境界と位置差に応じてRoPE成分だけを補正するMLA-native PICを提案する。3種のMLA-MoE deploymentで最大約83%のprompt tokenをexact-prefix以上に再利用し、cache hit当たりprefill energyを63%削減しており、MLAとagentic servingのキャッシュ設計として価値がある。",
   "semantic_scholar_id": "a90ce0eaebf122f01b07acd8163b7400862b79ab",
   "source_url": "https://arxiv.org/abs/2605.05696",
-  "status": "ready",
+  "status": "superseded",
   "title": "Irminsul: MLA-Native Position-Independent Caching for Agentic LLM Serving",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-10-12T03:07:26+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/14-agentic-inference-serving-runtime/2026-2605.05696-irminsul-mla-native-position-independent-caching-for-agentic-llm-serving.md",
+  "represented_canonical_id": "arXiv:2605.05696",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
