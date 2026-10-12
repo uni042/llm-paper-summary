@@ -1,0 +1,26 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-45",
+  "run_key": "20261013-0145-scheduled-chat-45/r01-research-prescreen-013",
+  "reference_main_sha": "b5fce0a4f5ba093d1af1542f771570592e9d5235",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2601.01885",
+      "identity_tokens": [
+        "arxiv:2601.01885"
+      ],
+      "title": "Agentic Memory: Learning Unified Long-Term and Short-Term Memory Management for Large Language Model Agents",
+      "reason": "AgeMemは長期・短期記憶の保存、検索、更新、要約、破棄をLLMエージェントの道具操作として統合し、段階的強化学習とステップ単位GRPOで行動方策を学ぶ。5種類の長期タスクで記憶品質と文脈利用効率を改善するが、中心はエージェントの方策学習であり、推論サービングのGPU/CPU/SSD階層やKVキャッシュの転送コストを直接最適化する研究ではない。文脈管理に関連するため境界的とする。",
+      "source_url": "https://arxiv.org/abs/2601.01885",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T01:54:32+09:00",
+      "last_checked_at": "2026-10-13T01:54:32+09:00",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance",
+      "worklist_rank": 13
+    }
+  ]
+}
