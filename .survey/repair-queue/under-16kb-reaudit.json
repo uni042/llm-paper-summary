@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-11T13:28:16.804701+00:00",
+  "generated_at": "2026-10-12T02:17:10.340990+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
@@ -7,9 +7,9 @@
   "minimum_japanese_ratio": 0.8,
   "count": 8,
   "worker_counts": {
-    "scheduled-chat-00": 2,
+    "scheduled-chat-00": 3,
     "scheduled-chat-30": 3,
-    "scheduled-chat-45": 3
+    "scheduled-chat-45": 2
   },
   "entries": [
     {
@@ -92,7 +92,7 @@
       "file_bytes": 12280,
       "source_sha256": "5c5ebcda8aa68c601f22288eac3ffe4a616c59de11a4f1b5cb0d264e165f9a69",
       "source_git_blob_sha": "aa2f4ec004900e7292d58e5da54cdea2b429c351",
-      "assigned_worker": "scheduled-chat-30",
+      "assigned_worker": "scheduled-chat-00",
       "semantic_status": "pending",
       "mechanical_status": "FAIL",
       "japanese_ratio": 0.943721,
@@ -150,6 +150,26 @@
       "warnings": []
     },
     {
+      "path": "papers/inference/99-other-inference-systems/2023-2310.04836-dual-grained-quantization-efficient-fine-grained-quantization-for-llm.md",
+      "canonical_id": "arXiv:2310.04836",
+      "title": "Dual Grained Quantization: Efficient Fine-Grained Quantization for LLM",
+      "file_bytes": 14345,
+      "source_sha256": "c1b845d14b61902822039dbb2b000d2fde34e0e9e0cb737ca6f0e6192ae8f849",
+      "source_git_blob_sha": "b765fbc1964218b46a711a7b92609834c393bb54",
+      "assigned_worker": "scheduled-chat-30",
+      "semantic_status": "pending",
+      "mechanical_status": "PASS",
+      "japanese_ratio": 0.976576,
+      "quality_metrics": {
+        "body_chars": 4177,
+        "method_chars": 1565,
+        "evaluation_chars": 824,
+        "limitation_chars": 379
+      },
+      "mechanical_failures": [],
+      "warnings": []
+    },
+    {
       "path": "papers/training/03-pipeline-parallel-modular-training/2026-2608.07974-zerolock-concurrent-memory-efficient-llm-training-via-modular-update-decoupling.md",
       "canonical_id": "arXiv:2608.07974",
       "title": "ZeroLock: Concurrent Memory-Efficient LLM Training via Modular Update Decoupling",
@@ -172,26 +192,6 @@
       "warnings": [
         "日本語比率 73.1% < 警告基準 80%"
       ]
-    },
-    {
-      "path": "papers/inference/07-kv-cache-optimization-compression/2026-2608.13263-vtoken-token-level-virtualization-for-reclaimable-kv-caches.md",
-      "canonical_id": "arXiv:2608.13263",
-      "title": "vToken: Token-Level Virtualization for Reclaimable KV Caches",
-      "file_bytes": 14708,
-      "source_sha256": "582e72e6230219ed23a26b11a6eec2de402ccd304de218f89f398c207679b2cb",
-      "source_git_blob_sha": "ac066b45be4b3d1efefa0fa2fde428402e6b8d81",
-      "assigned_worker": "scheduled-chat-45",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.948764,
-      "quality_metrics": {
-        "body_chars": 3583,
-        "method_chars": 1009,
-        "evaluation_chars": 548,
-        "limitation_chars": 244
-      },
-      "mechanical_failures": [],
-      "warnings": []
     }
   ]
 }
