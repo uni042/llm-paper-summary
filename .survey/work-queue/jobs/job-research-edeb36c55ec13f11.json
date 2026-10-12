@@ -35,10 +35,15 @@
   "selection_reason": "超長文脈LLMのattentionを1-pass streamingとsketchで近似し、K/V全保持を避けてsublinear spaceへ落とすメモリ効率化方式で、長文脈推論の対象範囲に該当する。",
   "semantic_scholar_id": "5a41001f766f07484de4590134b695abd5fb4251",
   "source_url": "https://arxiv.org/abs/2311.14652",
-  "status": "ready",
+  "status": "superseded",
   "title": "One Pass Streaming Algorithm for Super Long Token Attention Approximation in Sublinear Space",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2023
+  "year": 2023,
+  "superseded_at": "2026-10-12T11:15:43+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2023-2311.14652-one-pass-streaming-algorithm-for-super-long-token-attention-approximatio.md",
+  "represented_canonical_id": "arXiv:2311.14652",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

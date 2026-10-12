@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-12T11:06:35+00:00",
+  "generated_at": "2026-10-12T11:15:43+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 49,
+  "count": 45,
   "entries": [
     {
       "canonical_id": "DOI:10.1145/3714983.3714987",
@@ -838,33 +838,6 @@
       "worker_run_key": "20261012-0604-scheduled-chat-00/r01"
     },
     {
-      "canonical_id": "arXiv:2311.14652",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-12T03:26:13+00:00",
-      "return_count": 3,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 427 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 3853,
-        "body_paragraphs": 24,
-        "method_chars": 1352,
-        "method_paragraphs": 8,
-        "evaluation_chars": 427,
-        "limitation_chars": 447,
-        "insufficiency_flags": [
-          "評価説明量 427 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-5d016a83bc65--libfile_a623fa77b9a88191acb100cac6436df6--2023-2311.14652-streaming-attention-returned-research-repair-20261011-2345-scheduled-chat-45-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-5d016a83bc65--libfile_a623fa77b9a88191acb100cac6436df6--2023-2311.14652-streaming-attention-returned-research-repair-20261011-2345-scheduled-chat.json",
-      "worker_run_key": "20261011-2345-scheduled-chat-45/r01"
-    },
-    {
       "canonical_id": "arXiv:2507.15465",
       "title": null,
       "source_url": null,
@@ -998,87 +971,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_4118fbb215c88191ac2b83279471d16b--2026-2609.35621-cartridges-plus-plus-returned-repair-20261012-1930-scheduled-chat-30-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_4118fbb215c88191ac2b83279471d16b--2026-2609.35621-cartridges-plus-plus-returned-repair-20261012-1930-scheduled-chat-30-r01.json",
       "worker_run_key": "20261012-1930-scheduled-chat-30/r01"
-    },
-    {
-      "canonical_id": "arXiv:2603.10087",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-12T11:00:45+00:00",
-      "return_count": 8,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 6617,
-        "body_paragraphs": 33,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 1590,
-        "limitation_chars": 869,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-3d0cec3ede73--libfile_fcdf59ea65bc81919bc1d8522232bb29--2026-2603.10087-pooling-engram-cxl-returned-repair-20261012-1904-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-3d0cec3ede73--libfile_fcdf59ea65bc81919bc1d8522232bb29--2026-2603.10087-pooling-engram-cxl-returned-repair-20261012-1904-scheduled-chat-00-r01.json",
-      "worker_run_key": "20261012-1904-scheduled-chat-00/r01"
-    },
-    {
-      "canonical_id": "arXiv:2608.04991",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-12T11:00:45+00:00",
-      "return_count": 5,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 0 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 6057,
-        "body_paragraphs": 29,
-        "method_chars": 1975,
-        "method_paragraphs": 9,
-        "evaluation_chars": 0,
-        "limitation_chars": 770,
-        "insufficiency_flags": [
-          "評価説明量 0 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-04e083c7535a--libfile_63ae2b5f356481919aa9de0b909a4d72--2026-2608.04991-rac-returned-research-repair-20261012-1904-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-04e083c7535a--libfile_63ae2b5f356481919aa9de0b909a4d72--2026-2608.04991-rac-returned-research-repair-20261012-1904-scheduled-chat-00-r01.json",
-      "worker_run_key": "20261012-1904-scheduled-chat-00/r01"
-    },
-    {
-      "canonical_id": "arXiv:2603.05451",
-      "title": "FlashAttention-4: Algorithm and Kernel Pipelining Co-Design for Asymmetric Hardware Scaling",
-      "source_url": "https://arxiv.org/pdf/2603.05451",
-      "returned_at": "2026-10-12T11:06:35+00:00",
-      "return_count": 4,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 0 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 6842,
-        "body_paragraphs": 33,
-        "method_chars": 2783,
-        "method_paragraphs": 12,
-        "evaluation_chars": 0,
-        "limitation_chars": 796,
-        "insufficiency_flags": [
-          "評価説明量 0 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-7fe650a737d4--libfile_963a8f9ecfdc8191aa5858cea429d58a--2026-2603.05451-flashattention4-returned-repair-20261012-1904-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-7fe650a737d4--libfile_963a8f9ecfdc8191aa5858cea429d58a--2026-2603.05451-flashattention4-returned-repair-20261012-1904-scheduled-chat-00-r01.json",
-      "worker_run_key": "20261012-1904-scheduled-chat-00/r01"
     }
   ]
 }
