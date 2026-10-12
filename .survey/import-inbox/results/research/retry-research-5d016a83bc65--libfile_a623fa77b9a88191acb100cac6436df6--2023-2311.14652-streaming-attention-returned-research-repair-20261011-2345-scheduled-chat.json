@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "431276a38a9a8004c3dd2c03597d43735de82c71abb206a4aa2522fc783b16e4",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/retry-research-5d016a83bc65--libfile_a623fa77b9a88191acb100cac6436df6--2023-2311.14652-streaming-attention-returned-research-repair-20261011-2345-scheduled-chat-45-r01.md",
+  "canonical_id": "arXiv:2311.14652",
+  "worker_completed_at": "2026-10-11T23:51:52+09:00",
+  "worker_run_key": "20261011-2345-scheduled-chat-45/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 3853,
+    "body_paragraphs": 24,
+    "method_chars": 1352,
+    "method_paragraphs": 8,
+    "evaluation_chars": 427,
+    "limitation_chars": 447,
+    "insufficiency_flags": [
+      "評価説明量 427 < 500"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 評価説明量 427 < 500"
+  ],
+  "processed_at": "2026-10-12T03:26:13+00:00"
+}

@@ -31,6 +31,8 @@ reference_main_sha: aa1dda12534e05482735c87bc167570cc7d58e05
 worklist_rank: 75
 quality_self_review_passed: true
 quality_self_review_version: '2026-10-07'
+last_audited: null
+audit_version: 0
 ---
 
 # Cartridges++：圧縮KVキャッシュを文書外質問で安全に使うための二つの介入
