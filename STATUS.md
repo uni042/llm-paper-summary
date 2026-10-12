@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-10-13 06:35:06 JST**
+> 自動生成: **2026-10-13 06:39:14 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -55,9 +55,9 @@
 | 処理済み | **18762** |
 | 未処理Discovery候補 | **114043** |
 | 収録済み | **1938** |
-| Research / Audit候補へ昇格済み | **806** |
-| 無関係として除外 | **11443** |
-| 微妙として除外 | **4575** |
+| Research / Audit候補へ昇格済み | **799** |
+| 無関係として除外 | **11444** |
+| 微妙として除外 | **4581** |
 
 ### 探索候補の事前フィルタリング（可逆）
 
@@ -88,8 +88,8 @@
 - 全数との差は暫定隔離数。元候補・引用プール・relevance判定台帳は削除せず、現在の候補identityから再計算する。
 
 - 消化率: **14.1%**
-- 現在の生在庫: 後方references **51472件** / 前方引用 **64305件**。後方候補を優先し、前方プールは後方プールに存在する同一identityを保持しません。
-- 前方・後方を統合してidentity重複を除いた未処理面は **115159件**。そこから既にResearch / Audit候補へ昇格したidentityを除いた値が上表の未処理Discovery候補です。
+- 現在の生在庫: 後方references **51471件** / 前方引用 **64305件**。後方候補を優先し、前方プールは後方プールに存在する同一identityを保持しません。
+- 前方・後方を統合してidentity重複を除いた未処理面は **115152件**。そこから既にResearch / Audit候補へ昇格したidentityを除いた値が上表の未処理Discovery候補です。
 - 処理済み = 収録済み + Research / Audit候補へ昇格済み + 無関係 + 微妙。前方引用・後方referencesの出自は区別せず、DOI/arXiv/title aliasを統合して数えます。
 - STATUS生成時にpaper実体、Research/Audit job、relevance台帳、現在の前方/後方候補からゼロベースで再計算します。
 
@@ -116,7 +116,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **10-12 09:14:43 JST（21時間20分前）** |
+| 最終maintenance完了 | **10-12 09:14:43 JST（21時間24分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **passed** |
 | health | **issues_found** |
@@ -137,8 +137,8 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 | 指標 | 現在値 |
 |---|---:|
 | 直近6hのResearch完了 | **14** |
-| 直近6hのDiscovery run | **21** |
-| 直近6hのDiscovery本文確認・分類 | **24** |
+| 直近6hのDiscovery run | **33** |
+| 直近6hのDiscovery本文確認・分類 | **47** |
 | 最終Research完了 | **10-13 05:02:23 JST** |
 | 最終Discovery完了 | **10-13 05:56:00 JST** |
 
@@ -148,7 +148,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
   - evidence: .survey/import-inbox/results/research/libfile_a84e6c6232c88191a6e004d4a3ce4943--2025-2511.15927-diffumamba-research-20261013-0500-scheduled-chat-00-r01.json
 - Discovery: **10-13 05:56:00 JST** / worker scheduled-chat-00 / run 20261013-0556-scheduled-chat-00/r01-research-prescreen-042
   - 本文確認・分類 **1件** / accept **0件** / unrelated+borderline **1件**
-  - evidence: .survey/import-inbox/pending/discovery/libfile-file_00000000458481fab6aff1286083f9ac--discovery-20261013-0556-scheduled-chat-00-research-relevance-r01-042.json
+  - evidence: .survey/import-inbox/results/discovery/libfile-file_00000000458481fab6aff1286083f9ac--discovery-20261013-0556-scheduled-chat-00-research-relevance-r01-042.json
 
 ### Codex探索成果の反映状況
 
