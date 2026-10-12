@@ -442,7 +442,7 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
 
 - **2024-09 · [TwinPilots: A New Computing Paradigm for GPU-CPU Parallel LLM Inference](2024-3688351.3689164-twinpilots-a-new-computing-paradigm-for-gpu-cpu-parallel-llm-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：12  
-  TwinPilotsはTransformer処理ごとにCPU計算とGPU転送・計算の速さを比較し、CPU計算とPCIe転送を並行させてGPUオフロードの生成待ちを減らす。
+  TwinPilotsは、モデルの重みと鍵・値キャッシュ（KVキャッシュ）が画像処理装置（GPU）の高帯域幅メモリに収まらない状況で、中央処理装置（CPU）を単なる重みの保管先ではなく、GPUと並行する計算装置として扱う推論方式である。
 
 - **2024-09 · [Cambricon-LLM: A Chiplet-Based Hybrid Architecture for On-Device Inference of 70B LLM](2024-2409.15654-cambricon-llm-chiplet-flash-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：9  
