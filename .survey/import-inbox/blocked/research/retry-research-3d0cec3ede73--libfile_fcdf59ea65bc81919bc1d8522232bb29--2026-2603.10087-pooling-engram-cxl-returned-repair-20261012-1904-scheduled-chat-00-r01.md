@@ -42,6 +42,8 @@ repair_reason: "prior blocked_quality: Japanese prose ratio 51.0% below 70%; ind
 reference_main_sha: "552ff0f6f6b386e51ec0b5d4b92d3dc38161b819"
 quality_self_review_passed: true
 quality_self_review_version: "PAPER-QUALITY-GUIDE-2026-10-07"
+last_audited: null
+audit_version: 0
 ---
 
 # Pooling Engram Conditional Memory in Large Language Models using CXL：条件付き記憶の共有メモリ化

@@ -29,7 +29,7 @@ CPU DRAMやSSD/NVMeへparameter・optimizer state・activationを退避するこ
 
 - **2026-08 · [ZeroLock: Concurrent Memory-Efficient LLM Training via Modular Update Decoupling](2026-2608.07974-zerolock-concurrent-memory-efficient-llm-training-via-modular-update-decoupling.md)**  
   実装：[✓](https://anonymous.4open.science/r/unlock_trainer-105B) ・ リポジトリ内被引用：0  
-  モデルを複数チャンクへ分け、各チャンクを局所目的関数で独立更新して下流の逆伝播待ちと下流更新中の長時間の活性値保持を減らし、パイプライン並列のメモリ・通信・バブルを減らす微調整方式。
+  大規模言語モデルを連続した層群へ分割し、各段の予測分布に局所損失を与えることで段間の逆伝播依存を切る方式。三段の実機試験では、PipeDreamに対する最大段のピークメモリを26.5%削減し、標準条件の処理量を4.9%改善した。ただし、同一段の内部では通常の逆伝播を行い、推論高速化の手法ではない。
 
 ### 3年前（2023-11〜2024-10）
 
