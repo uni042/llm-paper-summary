@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-12T10:58:05+00:00",
-  "record_count": 11546,
+  "updated_at": "2026-10-12T10:59:23+00:00",
+  "record_count": 11547,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -28929,9 +28929,9 @@
       "identity_tokens": [
         "arXiv:2402.12289"
       ],
-      "reason": "自動運転の状況認識・計画とVLMを従来の運転パイプラインへ組み込むDriveVLM-Dualが主題。評価はnuScenes、SUP-AD、実車での運転能力であり、LLM推論エンジンや資源管理の性能を測るものではない。",
+      "reason": "一次要旨が扱う中心課題は自動運転の複雑な道路状況の理解と計画であり、DriveVLMは場面記述・場面分析・階層的計画、DriveVLM-Dualは従来型の自動運転パイプラインとの統合を提案する。計算量が大きいことには言及するが、LLM推論基盤のKVキャッシュ、サービング、量子化、GPU実行、階層メモリの新しい効率化機構を主たる技術貢献として提示していない。車載応用の知覚・計画性能を評価する論文なので、本サーベイの推論システム対象から除外する。",
       "first_checked_at": "2026-10-05T02:49:32+00:00",
-      "last_checked_at": "2026-10-11T14:41:42+00:00",
+      "last_checked_at": "2026-10-12T10:59:23+00:00",
       "linked_from": [],
       "title": "DriveVLM: The Convergence of Autonomous Driving and Large Vision-Language Models"
     },
@@ -164866,9 +164866,9 @@
         "arXiv:2210.13452",
         "semanticscholar:fc4cbc7a75f5a3bbca59db5513231555f078fe78"
       ],
-      "reason": "著者らは画像認識向けMetaFormerのトークン混合器を恒等写像・乱数行列・畳み込み・注意機構へ置換して比較し、ImageNet-1K分類でIdentityFormerが80%超、CAFormerが85.5%を達成すると報告する。StarReLUで活性化関数の演算量を71%減らす結果もあるが、実証対象は画像分類・物体検出等の視覚モデルの構造設計である。LLM推論エンジン、KVキャッシュ、GPU/CPUオフロード、言語モデルサービングの直接的な実装・評価は一次要旨で示されず、現行の推論システムサーベイから除外する。",
+      "reason": "一次要旨の目的は視覚モデルのトークン混合器とネットワーク骨格の寄与を比較し、ImageNet-1K分類でIdentityFormer・RandFormer・ConvFormer・CAFormerとStarReLUの性能を評価することである。StarReLUの演算量削減には触れるが、対象は画像認識アーキテクチャであり、LLMの推論サービング、KVメモリ、MoE配置、長文生成カーネルの実行効率を直接改善する研究ではない。したがって本サーベイの推論システム範囲から除外する。",
       "first_checked_at": "2026-10-11T20:48:40+00:00",
-      "last_checked_at": "2026-10-11T20:48:40+00:00",
+      "last_checked_at": "2026-10-12T10:59:23+00:00",
       "linked_from": [],
       "title": "MetaFormer Baselines for Vision"
     },
@@ -165125,6 +165125,19 @@
       "last_checked_at": "2026-10-12T10:58:05+00:00",
       "linked_from": [],
       "title": "MobileCLIP: Fast Image-Text Models through Multi-Modal Reinforced Training"
+    },
+    "arXiv:2203.11086": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2203.11086",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2203.11086",
+        "arXiv:2203.11086"
+      ],
+      "reason": "原著要旨の中心は量子化認識学習中の重みが隣接量子化格子間で振動する現象と、振動抑制・反復重み凍結という学習アルゴリズムである。評価はMobileNetV2/V3・EfficientNet-liteのImageNet画像分類で、3～4ビット量子化の精度改善を測る。LLM向け推論カーネル、サービング遅延、メモリ階層などの実行基盤は直接対象としておらず、学習アルゴリズム中心の凍結範囲に当たる。",
+      "first_checked_at": "2026-10-12T10:59:20+00:00",
+      "last_checked_at": "2026-10-12T10:59:20+00:00",
+      "linked_from": [],
+      "title": "Overcoming Oscillations in Quantization-Aware Training"
     }
   }
 }
