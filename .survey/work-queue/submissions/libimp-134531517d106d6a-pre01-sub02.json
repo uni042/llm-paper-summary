@@ -1,0 +1,104 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "EdgeMM: Multi-Core CPU with Heterogeneous AI-Extension and Activation-aware Weight Pruning for Multimodal LLMs at Edge",
+      "source_url": "https://arxiv.org/abs/2505.10782",
+      "year": 2025,
+      "published": "2025-05-16",
+      "venue": "Design Automation Conference",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Emerging multimodal LLMs (MLLMs) exhibit strong cross-modality perception and reasoning capabilities and hold great potential for various applications at edge. However, MLLMs typically consist of a compute-intensive modality encoder and a memory-bound LLM decoder, leading to distinct bottlenecks for hardware designs. In this work, we present a multi-core CPU solution with heterogeneous AI extensions, which are based on either the compute-centric systolic array or memory-centric digital compute-in-memory (CIM) coprocessors. In addition, dynamic activation-aware weight pruning and bandwidth management are developed to enhance bandwidth efficiency and core utilization, improving overall performance. We implemented our solution using commercial 22nm technology. For representative MLLMs, our evaluations show EdgeMM can achieve $2.84 \\times$ performance speedup compared to laptop 3060 GPU.",
+      "identifiers": [
+        "SemanticScholar:0483feff02c67f63d7c4fab646bb663a3e871b88"
+      ],
+      "semantic_scholar_id": "0483feff02c67f63d7c4fab646bb663a3e871b88",
+      "canonical_id": "arXiv:2505.10782",
+      "arxiv_id": "2505.10782",
+      "doi": "10.1109/DAC63849.2025.11132644",
+      "authors": [
+        "Kangbo Bai",
+        "Le Ye",
+        "Ru Huang",
+        "Tian-Yu Jia"
+      ],
+      "priority": 3,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 3,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 514,
+        "matched_prestigious_venue": null
+      },
+      "reason": "The abstract combines a multi-core edge CPU, heterogeneous AI extensions, and activation-aware weight pruning specifically for multimodal LLM inference, directly targeting constrained edge execution.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "QWHA: Quantization-Aware Walsh-Hadamard Adaptation for Parameter-Efficient Fine-Tuning on Large Language Models",
+      "source_url": "https://arxiv.org/abs/2509.17428",
+      "year": 2025,
+      "published": "2025-09-22",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The demand for efficient deployment of large language models (LLMs) has driven interest in quantization, which reduces inference cost, and parameter-efficient fine-tuning (PEFT), which lowers training overhead. This motivated the development of quantization-aware PEFT to produce accurate yet efficient quantized models. In this setting, reducing quantization error prior to fine-tuning is crucial for achieving high model accuracy. However, existing methods that rely on low-rank adaptation suffer from limited representational capacity. Recent Fourier-related transform (FT)-based adapters offer greater representational power than low-rank adapters, but their direct integration into quantized models often results in ineffective error reduction and increased computational overhead. To overcome these limitations, we propose QWHA, a method that integrates FT-based adapters into quantized models by employing the Walsh-Hadamard Transform (WHT) as the transform kernel, together with a novel adapter initialization scheme incorporating adaptive parameter selection and value refinement. We demonstrate that QWHA effectively mitigates quantization errors while facilitating fine-tuning, and that its design substantially reduces computational cost. Experimental results show that QWHA consistently outperforms baselines in low-bit quantization accuracy and achieves significant training speedups over existing FT-based adapters. The code is available at https://github.com/vantaa89/qwha.",
+      "identifiers": [
+        "SemanticScholar:04f9eca52d67b876ef4a7acb8647c74b054a3d64"
+      ],
+      "semantic_scholar_id": "04f9eca52d67b876ef4a7acb8647c74b054a3d64",
+      "canonical_id": "arXiv:2509.17428",
+      "arxiv_id": "2509.17428",
+      "doi": "10.48550/arXiv.2509.17428",
+      "authors": [
+        "Hyesung Jeon",
+        "Seojun Lee",
+        "Beomseok Kang",
+        "Yulhwa Kim",
+        "Jae-Joon Kim"
+      ],
+      "priority": 1,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 1,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 385,
+        "matched_prestigious_venue": null
+      },
+      "reason": "The primary abstract states that quantization reduces LLM inference cost and presents quantization-aware PEFT to produce accurate, efficient quantized models. Its method includes fine-tuning, but the stated deployment/inference-efficiency connection is explicit, so retain for later Research screening.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-134531517d10",
+    "round": "libimp-134531517d106d6a-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 7,
+    "round_submission_count": 2,
+    "round_submission_index": 2,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-134531517d106d6a-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-134531517d106d6a-pre01.json",
+    "receipt": "sha256:0803892786882aa6c9fea733bf91dde8dcdcab1ea5450dac1683235bbeedddc3"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-134531517d10",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
