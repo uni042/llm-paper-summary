@@ -1,0 +1,24 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261011-2357-scheduled-chat-00/r01/relevance-054",
+  "reference_main_sha": "d71f65d09135c35f6e9a64c77ce81aa130753cc5",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.19932",
+      "identity_tokens": ["arxiv:2605.19932", "doi:10.48550/arxiv.2605.19932"],
+      "title": "PEEK: Context Map as an Orientation Cache for Long-Context LLM Agents",
+      "reason": "繰り返し同じ外部文書群を扱うエージェントのシステムプロンプトに固定長の文脈地図を常駐させ、Distillerが実行軌跡から再利用可能な文脈知識を抽出し、Cartographerが項目単位で更新し、Evictorがトークン予算を守る。OOLONGやCL-benchで正答率、反復回数、モデル呼出し費用を改善するが、対象はエージェントの文脈理解・タスク品質と推論時プロンプト管理であり、KVキャッシュやGPU・メモリ階層、LLMサービングの実行基盤を直接最適化する研究ではない。推論費用削減との接点はあるため無関係ではなく境界候補とする。",
+      "source_url": "https://arxiv.org/pdf/2605.19932",
+      "body_check": "research_fulltext_relevance_review: arXiv v1の本文§1〜4（文脈地図の5分類、Distiller/Cartographer/Evictorの処理、OOLONG・CL-benchの実験条件と表1）を確認。エージェント側の意味的な文脈キャッシュでありモデルレベルKVキャッシュではないことを確認。",
+      "first_checked_at": "2026-10-12T00:01:00+09:00",
+      "last_checked_at": "2026-10-12T00:01:00+09:00",
+      "linked_from": [],
+      "origin": "research_postread_relevance",
+      "worklist_rank": 54
+    }
+  ]
+}
