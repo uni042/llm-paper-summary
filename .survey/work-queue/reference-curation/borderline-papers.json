@@ -2,7 +2,7 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-12T15:14:02+00:00",
+  "updated_at": "2026-10-12T16:50:17+00:00",
   "record_count": 4687,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
@@ -71492,9 +71492,9 @@
         "DOI:10.48550/arxiv.1606.09274",
         "arXiv:1606.09274"
       ],
-      "reason": "原著要旨では、2016年のニューラル機械翻訳モデル（2億超のパラメータ）に対して、重みのクラス別閾値が異なる三種の大きさ基準剪定を比較し、40%剪定では翻訳性能の低下が小さく、再学習後は80%剪定でも元の性能を回復または上回ると報告する。重み圧縮という推論時メモリ削減に通じる古典的技術ではあるが、評価対象は当時の機械翻訳モデルであり、現行LLMの推論サービング、GPUカーネル、実測トークン処理量への直接寄与は要旨から確認できないため境界扱い。",
+      "reason": "一次論文の要旨は2016年のニューラル機械翻訳モデルの重みを大きさに基づいて40%から最大80%剪定し、再学習後の翻訳品質を保持する結果を述べる。モデル保存量削減は推論効率の歴史的背景として関連するが、LLM・Transformer向け推論システムではなく、実機レイテンシやスループットの改善も要旨にはない。古典的なモデル圧縮研究として境界的関連に留める。",
       "first_checked_at": "2026-10-12T10:58:04+00:00",
-      "last_checked_at": "2026-10-12T10:58:04+00:00",
+      "last_checked_at": "2026-10-12T16:50:17+00:00",
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "Compression of Neural Machine Translation Models via Pruning"
@@ -71592,9 +71592,9 @@
       "identity_tokens": [
         "arXiv:2306.07174"
       ],
-      "reason": "一次要旨で確認できるLongMemの主眼は、凍結した基盤LLMを記憶符号化器とし、残差側ネットワークが長期記憶を検索・読出しする構成によって長文脈の言語モデリング品質を高めることである。65,000トークンの長期記憶を扱うが、GPUメモリ階層、KVキャッシュ退避、サービング処理量、カーネル高速化の独立したシステム貢献は要旨から確認できない。記憶管理との関連はあるため境界的とし、推論システムの直接的寄与としての収録は保留する。",
+      "reason": "一次論文の要旨は、凍結した言語モデルを記憶符号器とし、残差側ネットワークが過去文脈のKV表現を検索・読出しするLongMemを提案する。65kトークン相当の長期記憶やChapterBreak・文脈内学習の精度向上が主要評価であり、GPUメモリ階層、推論スループット、KVキャッシュの容量・転送の独立したシステム性能は要旨から確認できない。外部記憶という技術的関連はあるが、モデル能力向上が主目的のため境界的関連として保留。",
       "first_checked_at": "2026-10-12T14:56:01+00:00",
-      "last_checked_at": "2026-10-12T14:56:01+00:00",
+      "last_checked_at": "2026-10-12T16:50:16+00:00",
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "Augmenting Language Models with Long-Term Memory"

@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-99c754d4db2891b9-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:1606.09274",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:1606.09274",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.1606.09274",
+      "arXiv:1606.09274"
+    ],
+    "reason": "一次論文の要旨は2016年のニューラル機械翻訳モデルの重みを大きさに基づいて40%から最大80%剪定し、再学習後の翻訳品質を保持する結果を述べる。モデル保存量削減は推論効率の歴史的背景として関連するが、LLM・Transformer向け推論システムではなく、実機レイテンシやスループットの改善も要旨にはない。古典的なモデル圧縮研究として境界的関連に留める。",
+    "first_checked_at": "2026-10-12T10:58:04+00:00",
+    "last_checked_at": "2026-10-12T16:50:17+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Compression of Neural Machine Translation Models via Pruning"
+  },
+  "processed_at": "2026-10-12T16:50:17+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-99c754d4db28",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
