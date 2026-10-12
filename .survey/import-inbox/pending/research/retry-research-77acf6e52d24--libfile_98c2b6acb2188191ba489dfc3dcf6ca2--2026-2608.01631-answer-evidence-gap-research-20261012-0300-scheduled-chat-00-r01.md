@@ -29,6 +29,8 @@ worker_completed_at: '2026-10-12T03:04:12+09:00'
 worker_run_key: 20261012-0300-scheduled-chat-00/r01
 quality_self_review_passed: true
 quality_self_review_version: PAPER-QUALITY-GUIDE-v-current
+last_audited: null
+audit_version: 0
 ---
 
 # Does Accuracy Equal Evidence? — KVキャッシュ圧縮における推論根拠の保持を測る

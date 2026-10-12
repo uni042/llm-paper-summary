@@ -35,10 +35,15 @@
   "selection_reason": "DARTがMLLM推論時の重複visual tokenをtraining-freeで削減し、FlashAttention互換のままprefill/総時間を直接短縮するため対象。",
   "semantic_scholar_id": "6567c0e4f7bfb009e05b29bdc4e5b4ef94b40469",
   "source_url": "https://arxiv.org/abs/2502.11494",
-  "status": "ready",
+  "status": "superseded",
   "title": "Stop Looking for Important Tokens in Multimodal Language Models: Duplication Matters More",
   "type": "research",
   "venue": "Conference on Empirical Methods in Natural Language Processing",
   "workflow_version": 10,
-  "year": 2025
+  "year": 2025,
+  "superseded_at": "2026-10-12T02:47:01+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2025-2502.11494-stop-looking-for-important-tokens-in-multimodal-language-models-duplicat.md",
+  "represented_canonical_id": "arXiv:2502.11494",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

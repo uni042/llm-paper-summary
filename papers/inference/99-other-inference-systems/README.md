@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（449本）
+## 自動生成の論文一覧（452本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -850,6 +850,10 @@
   実装：[✓](https://github.com/Zanette-Labs/efficient-reasoning) ・ リポジトリ内被引用：5  
   長い思考過程を生成する推論モデルは、難しい問題で高い正答率を得られる一方、簡単な問題でも冗長な検討を続けることがある。本論文は、正答を優先したまま正解応答の長さに罰則を与えるオンライン強化学習を提案する。7Bの5タスク平均では、長さ罰則 $\alpha=0.2$ の場合、基準モデルに対して生成トークン数が51.58%、正答率が95.94%となった。
 
+- **2025-01 · [Titans: Learning to Memorize at Test Time](2025-2501.00663-titans-learning-to-memorize-at-test-time.md)**  
+  実装：✓ ・ リポジトリ内被引用：5  
+  長い系列を処理する言語モデルでは、直近の情報を精密に参照する短期記憶と、遠い過去から重要な情報を残す長期記憶の両立が難しい。一方、線形再帰型モデルは過去を小さな状態へ圧縮できるが、重要な出来事をどのように選択して長く保持するかに制約がある。
+
 - **2024-11 · [Context Parallelism for Scalable Million-Token Inference](2024-2411.01783-context-parallelism-for-scalable-million-token-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：5  
   本研究は、巨大な言語モデルの推論において、長い入力を処理する最初の一回の待ち時間を短縮する文脈並列（context parallelism）の実装を扱う。提案の中心は、リング状の通信で鍵・値を巡回させるpass-KVと、逆に問い合わせを巡回させるpass-Qを、推論段階と既存キャッシュの割合に応じて切り替えることである。
@@ -1037,6 +1041,10 @@
 - **2025-03 · [PIPO: Pipelined Offloading for Efficient Inference on Consumer Devices](2025-2504.03664-pipo-pipelined-offloading-for-efficient-inference-on-consumer-devices.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   CPU/NVMeオフロードを計算・重み読込・KV読込/保存の細粒度タスクへ分解し、転送パイプラインとINT4 CUDAカーネルで6GB RTX 3060上のGPU利用率を90%超へ高める。
+
+- **2025-02 · [Stop Looking for Important Tokens in Multimodal Language Models: Duplication Matters More](2025-2502.11494-stop-looking-for-important-tokens-in-multimodal-language-models-duplicat.md)**  
+  実装：[✓](https://github.com/ZichenWen1/DART) ・ リポジトリ内被引用：0  
+  従来は注意重みを使って重要そうなトークンを残す方式が多かった。LLaVA-Next-7Bの画像トークンを2880から320へ削減した条件では、総推論時間が36分16秒から18分13秒、事前充填時間が22分51秒から7分38秒へ短縮し、鍵値キャッシュは1512.1MBから168.0MBへ減少した。
 
 - **2025-02 · [AutoHete: An Automatic and Efficient Heterogeneous Training System for LLMs](2025-2503.01890-autohete-an-automatic-and-efficient-heterogeneous-training-system-for-llms.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -1339,6 +1347,10 @@
 - **2024-02 · [Training-Free Long-Context Scaling of Large Language Models](2024-2402.17463-training-free-long-context-scaling-of-large-language-models.md)**  
   実装：[✓](https://github.com/HKUNLP/ChunkLlama) ・ リポジトリ内被引用：2  
   二重チャンク注意（Dual Chunk 注意機構、以下DCA）は、回転位置埋め込み（Rotary Position Embedding、以下RoPE）を用いた大規模言語モデルが、事前学習時より長い系列で位置関係を見失う問題に対する推論時の注意計算の変更である。最後の比較は特定の閉形式4課題の平均であり、汎用能力の94%を意味しない。
+
+- **2024-02 · [Small Models, Big Insights: Leveraging Slim Proxy Models To Decide When and What to Retrieve for LLMs](2024-2402.12052-small-models-big-insights-leveraging-slim-proxy-models-to-decide-when-an.md)**  
+  実装：[✓](https://github.com/plageon/SlimPlm) ・ リポジトリ内被引用：2  
+  従来の自己評価型方式は大型言語モデル自身に暫定回答や判断を作らせるため、検索要否を知る段階で高価な大型モデル推論が増える。
 
 - **2024-02 · [LQER: Low-Rank Quantization Error Reconstruction for LLMs](2024-2402.02446-lqer-low-rank-quantization-error-reconstruction-for-llms.md)**  
   実装：[✓](https://github.com/ChengZhang-98/lqer) ・ リポジトリ内被引用：2  

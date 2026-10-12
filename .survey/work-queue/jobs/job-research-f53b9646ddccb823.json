@@ -35,10 +35,15 @@
   "selection_reason": "attentionの二次コストを避けつつ固定サイズのneural long-term memoryをtest timeに更新し、fast inferenceと長文脈保持を両立するarchitecture。2M超contextでの評価を含み、長文脈LLM推論のmemory/compute効率へ直接関係するため対象内。",
   "semantic_scholar_id": "5e7a795d89910634f001cc3a631023f1dd4e2e23",
   "source_url": "https://arxiv.org/abs/2501.00663",
-  "status": "ready",
+  "status": "superseded",
   "title": "Titans: Learning to Memorize at Test Time",
   "type": "research",
   "venue": "Neural Information Processing Systems",
   "workflow_version": 10,
-  "year": 2024
+  "year": 2024,
+  "superseded_at": "2026-10-12T02:47:01+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2025-2501.00663-titans-learning-to-memorize-at-test-time.md",
+  "represented_canonical_id": "arXiv:2501.00663",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

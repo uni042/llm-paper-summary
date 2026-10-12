@@ -37,6 +37,8 @@ worker_id: 'scheduled-chat-00'
 worker_run_key: '20261012-0310-scheduled-chat-00/r01'
 quality_self_review_passed: true
 quality_self_review_version: '2026-10-07'
+last_audited: null
+audit_version: 0
 ---
 
 # SpecBlock：依存関係を維持するブロック反復型投機的復号
