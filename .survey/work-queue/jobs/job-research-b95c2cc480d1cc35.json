@@ -33,10 +33,15 @@
   "selection_reason": "低ビットLLMの行列積をCPU上のtable lookup中心へ変換し、端末推論の計算・メモリ効率を直接改善する実行方式なので対象。",
   "semantic_scholar_id": "9531660804967f5fc089f73750716677f57c9b6f",
   "source_url": "https://arxiv.org/abs/2407.00088",
-  "status": "ready",
+  "status": "superseded",
   "title": "T-MAC: CPU Renaissance via Table Lookup for Low-Bit LLM Deployment on Edge",
   "type": "research",
   "venue": "European Conference on Computer Systems",
   "workflow_version": 10,
-  "year": 2024
+  "year": 2024,
+  "superseded_at": "2026-10-12T02:59:50+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/09-kernel-runtime-compilation/2024-2407.00088-t-mac-cpu-renaissance-via-table-lookup-for-low-bit-llm-deployment-on-edg.md",
+  "represented_canonical_id": "arXiv:2407.00088",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

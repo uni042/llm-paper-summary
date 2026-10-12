@@ -35,10 +35,15 @@
   "selection_reason": "MLLMのvisual projectorで出力visual token数を柔軟に減らし、後段LLMの計算・memory・throughputを直接改善する設計。本文ではLLMがMLLM計算量の大半を占め、visual token数がresponse generation効率を左右すると明示し、C-Abstractor/D-Abstractorでlocalityを保ちながらtoken数を制御するためVLM推論効率の対象。",
   "semantic_scholar_id": "4f5654ec1dfc04478be42d03eee8e6db6bd9ca14",
   "source_url": "https://arxiv.org/abs/2312.06742",
-  "status": "ready",
+  "status": "superseded",
   "title": "Honeybee: Locality-Enhanced Projector for Multimodal LLM",
   "type": "research",
   "venue": "Computer Vision and Pattern Recognition",
   "workflow_version": 10,
-  "year": 2023
+  "year": 2023,
+  "superseded_at": "2026-10-12T02:59:50+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2023-2312.06742-honeybee-locality-enhanced-projector-for-multimodal-llm.md",
+  "represented_canonical_id": "arXiv:2312.06742",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

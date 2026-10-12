@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-12T02:52:49+00:00",
+  "generated_at": "2026-10-12T02:59:50+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,24 +12,8 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 66,
+  "count": 65,
   "entries": [
-    {
-      "canonical_id": "arXiv:2407.00088",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-03T02:06:15+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "日本語比率 52.7% < 70%"
-      ],
-      "quality_metrics": null,
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_3bfb85b9fd3081919cfc5f57326d9e69--2024-2407.00088-t-mac.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_3bfb85b9fd3081919cfc5f57326d9e69--2024-2407.00088-t-mac.json",
-      "worker_run_key": "scheduled-chat-00-20261003T0300JST"
-    },
     {
       "canonical_id": "DOI:10.1145/3714983.3714987",
       "title": null,
@@ -493,22 +477,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-21041f85cbab--libfile_4a96a08b50708191b87e5fb961a1a282--2607.06763-trees-from-marginals.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-21041f85cbab--libfile_4a96a08b50708191b87e5fb961a1a282--2607.06763-trees-from-marginals.json",
       "worker_run_key": "20261006-2000-scheduled-chat-00/r01"
-    },
-    {
-      "canonical_id": "arXiv:2312.06742",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-07T09:02:24+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "日本語比率 64.9% < 70%"
-      ],
-      "quality_metrics": null,
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-99bf900f9c31--libfile_8c2ebc480ed48191bd587ec5544d0e3f--2023-2312.06742-honeybee.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-99bf900f9c31--libfile_8c2ebc480ed48191bd587ec5544d0e3f--2023-2312.06742-honeybee.json",
-      "worker_run_key": "20261007-1604-scheduled-chat-00/r01"
     },
     {
       "canonical_id": "DOI:10.1109/ISCA59077.2024.00082",
@@ -1389,34 +1357,9 @@
       "worker_run_key": "20261011-2345-scheduled-chat-45/r01"
     },
     {
-      "canonical_id": "arXiv:2608.28444",
-      "title": "Sliding-window beats linear attention",
-      "source_url": "https://arxiv.org/abs/2608.28444",
-      "returned_at": "2026-10-12T02:51:31+00:00",
-      "return_count": 4,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "長文定型文の再利用を検出: .survey/import-inbox/pending/research/libfile_c7c3015224888191817548ff66f62a2f--2026-2608.28444-swa-returned-repair-20261012-1130-scheduled-chat-30-r01.md と 14 段落 / 2969文字 (100.0%) が完全一致"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 4766,
-        "body_paragraphs": 27,
-        "method_chars": 950,
-        "method_paragraphs": 5,
-        "evaluation_chars": 1844,
-        "limitation_chars": 354,
-        "insufficiency_flags": []
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_3689a52175e881919fddf988c25bb40a--2026-2608.28444-swa-returned-repair-20261012-1130-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_3689a52175e881919fddf988c25bb40a--2026-2608.28444-swa-returned-repair-20261012-1130-scheduled-chat-30-r01.json",
-      "worker_run_key": "20261012-1130-scheduled-chat-30/r01"
-    },
-    {
       "canonical_id": "arXiv:2604.13519",
-      "title": "ToolSpec: Accelerating Tool Calling via Schema-Aware and Retrieval-Augmented Speculative Decoding",
-      "source_url": "https://arxiv.org/abs/2604.13519",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-12T02:51:32+00:00",
       "return_count": 3,
       "assigned_worker": "scheduled-chat-30",
@@ -1440,8 +1383,8 @@
     },
     {
       "canonical_id": "arXiv:2403.06988",
-      "title": "Guiding LLMs The Right Way: Fast, Non-Invasive Constrained Generation",
-      "source_url": "https://arxiv.org/pdf/2403.06988",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-12T02:51:54+00:00",
       "return_count": 1,
       "assigned_worker": "scheduled-chat-45",
@@ -1464,6 +1407,58 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_b3bb7d155164819186274de0541fdca5--2024-2403.06988-domino-constrained-decoding-20261012-0033-scheduled-chat-30-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_b3bb7d155164819186274de0541fdca5--2024-2403.06988-domino-constrained-decoding-20261012-0033-scheduled-chat-30-r01.json",
       "worker_run_key": "20261012-0033-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2608.28444",
+      "title": "Sliding-window beats linear attention",
+      "source_url": "https://arxiv.org/abs/2608.28444",
+      "returned_at": "2026-10-12T02:57:59+00:00",
+      "return_count": 5,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "長文定型文の再利用を検出: .survey/import-inbox/pending/research/retry-research-dfc37413d217--libfile_3689a52175e881919fddf988c25bb40a--2026-2608.28444-swa-returned-repair-20261012-1130-scheduled-chat-30-r01.md と 14 段落 / 2969文字 (100.0%) が完全一致"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 4766,
+        "body_paragraphs": 27,
+        "method_chars": 950,
+        "method_paragraphs": 5,
+        "evaluation_chars": 1844,
+        "limitation_chars": 354,
+        "insufficiency_flags": []
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_c7c3015224888191817548ff66f62a2f--2026-2608.28444-swa-returned-repair-20261012-1130-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_c7c3015224888191817548ff66f62a2f--2026-2608.28444-swa-returned-repair-20261012-1130-scheduled-chat-30-r01.json",
+      "worker_run_key": "20261012-1130-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2606.00735",
+      "title": "ViBE: Co-Optimizing Workload Skew and Hardware Variability for MoE Serving",
+      "source_url": "https://arxiv.org/abs/2606.00735",
+      "returned_at": "2026-10-12T02:58:00+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 141 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5846,
+        "body_paragraphs": 33,
+        "method_chars": 1813,
+        "method_paragraphs": 10,
+        "evaluation_chars": 141,
+        "limitation_chars": 565,
+        "insufficiency_flags": [
+          "評価説明量 141 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_cbeac3de72288191b3a79f776274b69c--2026-2606.00735-vibe-research-20261012-0604-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_cbeac3de72288191b3a79f776274b69c--2026-2606.00735-vibe-research-20261012-0604-scheduled-chat-00-r01.json",
+      "worker_run_key": "20261012-0604-scheduled-chat-00/r01"
     }
   ]
 }
