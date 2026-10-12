@@ -1,0 +1,26 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-45",
+  "run_key": "20261013-0245-scheduled-chat-45/r01-research-prescreen-010",
+  "reference_main_sha": "26684ff48973271aa7a47a45bba4e74841e375d0",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2006.16362",
+      "identity_tokens": [
+        "arxiv:2006.16362"
+      ],
+      "title": "Multi-Head Attention: Collaborate Instead of Concatenate",
+      "reason": "複数注意ヘッドで鍵・問い合わせ射影が冗長なことを分析し、共有射影とヘッド別混合で鍵・問い合わせ投影のパラメータを約4分の1に圧縮する。推論時の重み容量低減に接点はあるが、一次要旨の主評価は機械翻訳・言語理解・画像認識であり、LLMサービング、KVキャッシュ、実測推論遅延の改善を直接検証した研究ではないため境界判定。",
+      "source_url": "https://arxiv.org/abs/2006.16362",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T02:50:00+09:00",
+      "last_checked_at": "2026-10-13T02:50:00+09:00",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance",
+      "worklist_rank": 10
+    }
+  ]
+}
