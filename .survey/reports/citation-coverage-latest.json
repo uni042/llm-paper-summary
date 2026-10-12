@@ -1,16 +1,16 @@
 {
   "schema_version": 1,
   "reference_audit_version": 1,
-  "checked_at": "2026-10-12T22:03:16+00:00",
+  "checked_at": "2026-10-12T22:14:45+00:00",
   "summary": {
-    "total": 1949,
-    "complete": 1946,
-    "incomplete": 3
+    "total": 1953,
+    "complete": 1949,
+    "incomplete": 4
   },
   "families": {
     "inference": {
-      "total": 1910,
-      "complete": 1907
+      "total": 1914,
+      "complete": 1910
     },
     "training": {
       "total": 25,
@@ -22,6 +22,11 @@
     }
   },
   "incomplete": [
+    {
+      "path": "papers/inference/07-kv-cache-optimization-compression/2026-ec9fa0b99268-hqekv-towards-hybrid-quantization-and-eviction-for-kv-cache-in-long-cont.md",
+      "canonical_id": "DOI:10.18653/v1/2026.findings-acl.201",
+      "reason": "missing structured reference audit metadata"
+    },
     {
       "path": "papers/inference/10-kv-cache-offload-recomputation/2026-2605.18071-kvdrive-holistic-multi-tier-kv-cache-management.md",
       "canonical_id": "arXiv:2605.18071",
