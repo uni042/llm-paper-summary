@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-12T09:45:36+00:00",
-  "record_count": 11545,
+  "updated_at": "2026-10-12T10:58:05+00:00",
+  "record_count": 11546,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -163096,11 +163096,12 @@
       "classification": "unrelated",
       "canonical_id": "arXiv:2301.09474",
       "identity_tokens": [
+        "DOI:10.48550/arxiv.2301.09474",
         "arXiv:2301.09474"
       ],
-      "reason": "DIFFormerはデータ集合の各インスタンス間の拡散強度をエネルギー関数から推定する汎用グラフ／データ表現学習用符号器であり、一次要旨が列挙する評価先は大規模グラフのノード分類、半教師あり画像・テキスト分類、時空間予測である。LLMの生成推論、サービング、KVキャッシュ、GPUカーネル、オフロードの直接的なシステム最適化を対象としないため現行サーベイの対象外。",
+      "reason": "原著要旨ではエネルギー制約付き拡散に基づくグラフ上のペアワイズ結合強度を推定し、線形計算量版を含むグラフ表現エンコーダを提案する。主な用途はノード分類、半教師あり画像・テキスト分類、時空間ダイナミクス予測であり、LLMの生成推論・KVキャッシュ・サービング実装に対する寄与を示さない。",
       "first_checked_at": "2026-10-11T00:45:52+00:00",
-      "last_checked_at": "2026-10-11T00:45:52+00:00",
+      "last_checked_at": "2026-10-12T10:58:05+00:00",
       "linked_from": [],
       "title": "DIFFormer: Scalable (Graph) Transformers Induced by Energy Constrained Diffusion"
     },
@@ -164136,18 +164137,6 @@
       "linked_from": [],
       "title": "Degree-Quant: Quantization-Aware Training for Graph Neural Networks"
     },
-    "arXiv:2509.25140": {
-      "classification": "unrelated",
-      "canonical_id": "arXiv:2509.25140",
-      "identity_tokens": [
-        "arXiv:2509.25140"
-      ],
-      "reason": "LLMエージェントが推論履歴を記憶して自己改善する手法であり、タイトルからはLLM推論のハードウェア・サービング・メモリ階層・計算効率を直接扱う研究ではない。エージェントの行動・記憶学習の課題として対象外。",
-      "first_checked_at": "2026-10-11T07:45:45+00:00",
-      "last_checked_at": "2026-10-11T07:46:55+00:00",
-      "linked_from": [],
-      "title": "ReasoningBank: Scaling Agent Self-Evolving with Reasoning Memory"
-    },
     "arXiv:2303.05511": {
       "classification": "unrelated",
       "canonical_id": "arXiv:2303.05511",
@@ -165110,6 +165099,32 @@
       "last_checked_at": "2026-10-11T21:44:20+00:00",
       "linked_from": [],
       "title": "PolaFormer: Polarity-aware Linear Attention for Vision Transformers"
+    },
+    "arXiv:2011.00241": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2011.00241",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2011.00241",
+        "arXiv:2011.00241"
+      ],
+      "reason": "原著要旨は150件超の一般深層ニューラルネットワーク剪定研究を、大きさ基準・クラスタリング・感度分析に分類するレビューである。代表比較はAlexNet、ResNet、DenseNet、VGGの画像認識とImageNet/CIFAR10であり、LLM推論・サービング・KVメモリ・MoE等への直接的なシステム技術貢献を扱わないため現行サーベイ対象外。",
+      "first_checked_at": "2026-10-12T10:58:02+00:00",
+      "last_checked_at": "2026-10-12T10:58:02+00:00",
+      "linked_from": [],
+      "title": "Methods for Pruning Deep Neural Networks"
+    },
+    "arXiv:2311.17049": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2311.17049",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2311.17049",
+        "arXiv:2311.17049"
+      ],
+      "reason": "原著要旨はモバイル向けCLIP画像・テキスト埋め込みモデルの蒸留学習と画像分類・検索の遅延精度トレードオフを改善する。MobileCLIP-S2の2.3倍高速化はCLIP画像テキストエンコーダの推論に関するもので、自己回帰LLMの生成サービング、KVキャッシュ、MoE推論・推論基盤を対象としないため現行サーベイの範囲外。",
+      "first_checked_at": "2026-10-12T10:58:05+00:00",
+      "last_checked_at": "2026-10-12T10:58:05+00:00",
+      "linked_from": [],
+      "title": "MobileCLIP: Fast Image-Text Models through Multi-Modal Reinforced Training"
     }
   }
 }

@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-81aa8bb57ae02fa9-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2412.00081",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2412.00081",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2412.00081",
+      "arXiv:2412.00081"
+    ],
+    "reason": "原著要旨は微調整済みモデルの層別重み差分を特異値分解し、タスク特異ベクトルを低ランク圧縮してモデル統合時のタスク干渉を減らすTSV-C/TSV-Mを提案する。重み差分の保存圧縮と統合後の単一モデル実行には間接的に関連するが、主要寄与はモデル統合の精度・干渉制御であり、LLMサービングの遅延、KV、オフロード、実行時処理量の直接最適化ではないため境界扱い。",
+    "first_checked_at": "2026-10-12T10:58:04+00:00",
+    "last_checked_at": "2026-10-12T10:58:04+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Task Singular Vectors: Reducing Task Interference in Model Merging"
+  },
+  "processed_at": "2026-10-12T10:58:04+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-81aa8bb57ae0",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

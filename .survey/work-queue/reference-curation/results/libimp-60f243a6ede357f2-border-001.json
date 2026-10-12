@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-60f243a6ede357f2-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2509.25140",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2509.25140",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2509.25140",
+      "arXiv:2509.25140"
+    ],
+    "reason": "一次要旨によると、ReasoningBankはウェブ操作・ソフトウェア開発エージェントの成功・失敗履歴から再利用可能な推論方針を抽出して長期記憶に保存し、次のタスクで関連方針を検索する。MaTTSは一タスクに複数の経験生成を割り当て、得た対照的経験を記憶の改善へ還元する。エージェントの推論時記憶利用・タスク効率には関連する一方、GPU実行基盤、KVキャッシュ、推論メモリ階層、トークン処理量、サービングの遅延・帯域を直接最適化する研究ではないため、現行の推論システムサーベイへの収録適格性は境界的と判断する。",
+    "first_checked_at": "2026-10-12T10:58:03+00:00",
+    "last_checked_at": "2026-10-12T10:58:03+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "ReasoningBank: Scaling Agent Self-Evolving with Reasoning Memory"
+  },
+  "processed_at": "2026-10-12T10:58:03+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-60f243a6ede3",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

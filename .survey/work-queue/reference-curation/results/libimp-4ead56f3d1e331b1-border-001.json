@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-4ead56f3d1e331b1-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2309.14393",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2309.14393",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2309.14393",
+      "arXiv:2309.14393",
+      "semanticscholar:32479758dc9ff9820828a12aa7f3d066f187dc1c"
+    ],
+    "reason": "原著要旨はdense/MoE型LLMの学習・推論・実験・保存を通じた運用時・製造時の炭素排出量を事前推定するLLMCarbonを提案し、GPU以外の資源も考慮して既存mlco2より予測精度を改善する。推論資源・電力の評価と隣接するが、GPUカーネル、メモリ階層、KV、MoE実行配置、サービング性能を直接改善する方式ではなく、炭素フットプリントのモデリングが中心のため境界扱い。",
+    "first_checked_at": "2026-10-12T01:47:05+00:00",
+    "last_checked_at": "2026-10-12T10:58:03+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "LLMCarbon: Modeling the end-to-end Carbon Footprint of Large Language Models"
+  },
+  "processed_at": "2026-10-12T10:58:03+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-4ead56f3d1e3",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
