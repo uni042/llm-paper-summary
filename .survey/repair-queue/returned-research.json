@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-12T09:59:50+00:00",
+  "generated_at": "2026-10-12T10:50:15+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 51,
+  "count": 49,
   "entries": [
     {
       "canonical_id": "DOI:10.1145/3714983.3714987",
@@ -205,22 +205,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_8328128f442081918ba7c1d0e0cd753d--2026-2607.04181-cocoscale.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_8328128f442081918ba7c1d0e0cd753d--2026-2607.04181-cocoscale.json",
       "worker_run_key": "20261004-0400-scheduled-chat-00/r01"
-    },
-    {
-      "canonical_id": "arXiv:2608.04991",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-04T03:09:40+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "日本語比率 60.0% < 70%"
-      ],
-      "quality_metrics": null,
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_a592605af33c8191add2bafca6402084--2026-2608.04991-rac.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_a592605af33c8191add2bafca6402084--2026-2608.04991-rac.json",
-      "worker_run_key": "20261004-1000-scheduled-chat-00/r01"
     },
     {
       "canonical_id": "arXiv:2607.01444",
@@ -605,33 +589,6 @@
       "worker_run_key": "20261008-0047-interactive-under16kb-reverse-reaudit/r01"
     },
     {
-      "canonical_id": "arXiv:2603.10087",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-08T14:26:32+00:00",
-      "return_count": 4,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 279 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 2816,
-        "body_paragraphs": 19,
-        "method_chars": 807,
-        "method_paragraphs": 6,
-        "evaluation_chars": 279,
-        "limitation_chars": 309,
-        "insufficiency_flags": [
-          "評価説明量 279 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-303b68390714--libfile_609cefc875e08191880ef28d9d03d2fd--2603.10087-pooling-engram-cxl.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-303b68390714--libfile_609cefc875e08191880ef28d9d03d2fd--2603.10087-pooling-engram-cxl.json",
-      "worker_run_key": "20261007-1735-scheduled-chat-30/r01"
-    },
-    {
       "canonical_id": "arXiv:2603.05451",
       "title": null,
       "source_url": null,
@@ -1014,36 +971,6 @@
       "worker_run_key": "20261012-0300-scheduled-chat-00/r01"
     },
     {
-      "canonical_id": "arXiv:2609.35621",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-12T03:31:15+00:00",
-      "return_count": 4,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700",
-        "説明不足トリガー: 評価説明量 0 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5552,
-        "body_paragraphs": 30,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 0,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700",
-          "評価説明量 0 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-a392cfbf54c5--libfile_98d910774d2c8191be1093331f8d703a--2026-2609.35621-cartridges-plus-plus-research-20261012-0900-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-a392cfbf54c5--libfile_98d910774d2c8191be1093331f8d703a--2026-2609.35621-cartridges-plus-plus-research-20261012-0900-scheduled-chat-00-r01.json",
-      "worker_run_key": "20261012-0900-scheduled-chat-00/r01"
-    },
-    {
       "canonical_id": "arXiv:2403.06988",
       "title": null,
       "source_url": null,
@@ -1098,32 +1025,58 @@
       "worker_run_key": "20261012-0345-scheduled-chat-45/r01"
     },
     {
-      "canonical_id": "DOI:10.1145/3773772",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-12T09:46:37+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-45",
+      "canonical_id": "arXiv:2608.04991",
+      "title": "RAC: Reference-Aware Activation Compression for Communication-Efficient Split LLM Inference",
+      "source_url": "https://arxiv.org/html/2608.04991",
+      "returned_at": "2026-10-12T10:49:01+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-00",
       "reason": "blocked_quality",
       "failures": [
-        "説明不足トリガー: 評価説明量 108 < 500"
+        "説明不足トリガー: 評価説明量 0 < 500"
       ],
       "quality_metrics": {
         "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 7776,
-        "body_paragraphs": 38,
-        "method_chars": 2689,
-        "method_paragraphs": 11,
-        "evaluation_chars": 108,
-        "limitation_chars": 0,
+        "body_chars": 6057,
+        "body_paragraphs": 29,
+        "method_chars": 1975,
+        "method_paragraphs": 9,
+        "evaluation_chars": 0,
+        "limitation_chars": 770,
         "insufficiency_flags": [
-          "評価説明量 108 < 500",
-          "限界説明量 0 < 推奨 120"
+          "評価説明量 0 < 500"
         ]
       },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_0b24dd1ae4008191959e2420965757c2--2025-doi-10.1145.3773772-mooncake-research-20261012-1745-scheduled-chat-45-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_0b24dd1ae4008191959e2420965757c2--2025-doi-10.1145.3773772-mooncake-research-20261012-1745-scheduled-chat-45-r01.json",
-      "worker_run_key": "20261012-1745-scheduled-chat-45/r01"
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_166157120bc481919cb0d70a9ce86198--2026-2608.04991-rac-returned-research-repair-20261012-1904-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_166157120bc481919cb0d70a9ce86198--2026-2608.04991-rac-returned-research-repair-20261012-1904-scheduled-chat-00-r01.json",
+      "worker_run_key": "20261012-1904-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2603.10087",
+      "title": "Pooling Engram Conditional Memory in Large Language Models using CXL",
+      "source_url": "https://arxiv.org/pdf/2603.10087",
+      "returned_at": "2026-10-12T10:49:25+00:00",
+      "return_count": 5,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 6617,
+        "body_paragraphs": 33,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 1590,
+        "limitation_chars": 869,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_6314533ac0d48191b8ec39b37981c7f4--2026-2603.10087-pooling-engram-cxl-returned-repair-20261012-1904-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_6314533ac0d48191b8ec39b37981c7f4--2026-2603.10087-pooling-engram-cxl-returned-repair-20261012-1904-scheduled-chat-00-r01.json",
+      "worker_run_key": "20261012-1904-scheduled-chat-00/r01"
     }
   ]
 }
