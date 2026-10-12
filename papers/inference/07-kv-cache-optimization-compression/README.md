@@ -16,7 +16,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 方向は異なるが、いずれも**KV cacheがdecode時のmemory容量やmemory bandwidthのボトルネックになることを直接緩和する**研究として扱う。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（203本）
+## 自動生成の論文一覧（204本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -190,6 +190,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 - **2026-06 · [CompressKV: Semantic-Retrieval-Guided KV-Cache Compression for Resource-Efficient Long-Context LLM Inference](2026-2606.24467-compresskv-semantic-retrieval-guided-compression.md)**  
   実装：[✓](https://github.com/TUDa-HWAI/CompressKV) ・ リポジトリ内被引用：1  
   CompressKVは、意味的証拠を検索する注意ヘッドだけでKVトークンを選び、層ごとの追い出し感度で容量を配分して、同じKV予算で長文品質を保つ。
+
+- **2026-05 · [RateQuant: Optimal Mixed-Precision KV Cache Quantization via Rate-Distortion Theory](2026-2605.06675-ratequant-optimal-mixed-precision-kv-cache-quantization-via-rate-distort.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  各ヘッドの損失勾配に基づく重要度と、量子化器固有の指数型ビット数・歪み関係を校正し、逆水充填法と整数ビットの限界利得選択で配分を決める。Qwen3/Llama3の5モデルと3種類の量子化器で評価し、平均4ビット時のTurboQuantにおける量子化劣化回復率は5モデル平均75.7%。
 
 - **2026-05 · [KARA: Efficient Reasoning LLM Serving via Sliding-Window KV Cache Compression](2026-2607.01237-kara-sliding-window-kv-compression.md)**  
   実装：✓ ・ リポジトリ内被引用：1  

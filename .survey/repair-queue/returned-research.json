@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-12T11:15:43+00:00",
+  "generated_at": "2026-10-12T11:46:25+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 45,
+  "count": 44,
   "entries": [
     {
       "canonical_id": "DOI:10.1145/3714983.3714987",
@@ -191,22 +191,6 @@
       "worker_run_key": "research-revalidation-arxiv-2601.19908-20261003t225905jst"
     },
     {
-      "canonical_id": "arXiv:2607.04181",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-03T22:17:57+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "日本語比率 38.4% < 70%"
-      ],
-      "quality_metrics": null,
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_8328128f442081918ba7c1d0e0cd753d--2026-2607.04181-cocoscale.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_8328128f442081918ba7c1d0e0cd753d--2026-2607.04181-cocoscale.json",
-      "worker_run_key": "20261004-0400-scheduled-chat-00/r01"
-    },
-    {
       "canonical_id": "arXiv:2607.01444",
       "title": null,
       "source_url": null,
@@ -287,22 +271,6 @@
       "worker_run_key": "20261006-0700-scheduled-chat-00/r01"
     },
     {
-      "canonical_id": "arXiv:2605.06675",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-06T12:50:38+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "日本語比率 62.4% < 70%"
-      ],
-      "quality_metrics": null,
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-e1abd90fb246--libfile_ec184df894648191ae4dfb6fb559b059--2605.06675-ratequant.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-e1abd90fb246--libfile_ec184df894648191ae4dfb6fb559b059--2605.06675-ratequant.json",
-      "worker_run_key": "20261006-1130-scheduled-chat-30/r02"
-    },
-    {
       "canonical_id": "arXiv:2603.24517",
       "title": null,
       "source_url": null,
@@ -333,22 +301,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-4f71a46b2c49--libfile_83bf42cc3aa08191b70ced95a7bb283b--2607.29591-reskv.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-4f71a46b2c49--libfile_83bf42cc3aa08191b70ced95a7bb283b--2607.29591-reskv.json",
       "worker_run_key": "20261006-1900-scheduled-chat-00/r01"
-    },
-    {
-      "canonical_id": "arXiv:2607.10987",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-06T16:29:57+00:00",
-      "return_count": 3,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "日本語比率 59.6% < 70%"
-      ],
-      "quality_metrics": null,
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-d9bae9be63f7--libfile_7fbe1f1d99388191962b43f85790415a--2607.10987-aaflow-plus.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-d9bae9be63f7--libfile_7fbe1f1d99388191962b43f85790415a--2607.10987-aaflow-plus.json",
-      "worker_run_key": "20261006-1530-scheduled-chat-30/r02"
     },
     {
       "canonical_id": "arXiv:2604.16957",
@@ -971,6 +923,58 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_4118fbb215c88191ac2b83279471d16b--2026-2609.35621-cartridges-plus-plus-returned-repair-20261012-1930-scheduled-chat-30-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_4118fbb215c88191ac2b83279471d16b--2026-2609.35621-cartridges-plus-plus-returned-repair-20261012-1930-scheduled-chat-30-r01.json",
       "worker_run_key": "20261012-1930-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2607.10987",
+      "title": "[AAFLOW+] Stateful Operator Abstraction with Zero-Copy Distributed KV Cache Orchestration for Multi-Agent Workflows",
+      "source_url": "https://arxiv.org/abs/2607.10987",
+      "returned_at": "2026-10-12T11:43:00+00:00",
+      "return_count": 4,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 207 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5935,
+        "body_paragraphs": 31,
+        "method_chars": 1848,
+        "method_paragraphs": 10,
+        "evaluation_chars": 207,
+        "limitation_chars": 686,
+        "insufficiency_flags": [
+          "評価説明量 207 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_179794e149488191be1f608628329cd5--2026-2607.10987-aaflow-plus-returned-research-repair-20261012-1600-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_179794e149488191be1f608628329cd5--2026-2607.10987-aaflow-plus-returned-research-repair-20261012-1600-scheduled-chat-00-r01.json",
+      "worker_run_key": "20261012-1600-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2603.10087",
+      "title": "Pooling Engram Conditional Memory in Large Language Models using CXL",
+      "source_url": "https://arxiv.org/pdf/2603.10087",
+      "returned_at": "2026-10-12T11:45:13+00:00",
+      "return_count": 9,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2026-2603.10087-pooling-engram-conditional-memory-in-large-language-models-using-cxl.md と 21 段落 / 5146文字 (100.0%) が完全一致"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5050,
+        "body_paragraphs": 21,
+        "method_chars": 1679,
+        "method_paragraphs": 8,
+        "evaluation_chars": 1364,
+        "limitation_chars": 430,
+        "insufficiency_flags": []
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_691bccf8083c81918eb99dec6cf84f47--2026-2603.10087-pooling-engram-cxl-returned-repair-20261012-2002-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_691bccf8083c81918eb99dec6cf84f47--2026-2603.10087-pooling-engram-cxl-returned-repair-20261012-2002-scheduled-chat-00-r01.json",
+      "worker_run_key": "20261012-2002-scheduled-chat-00/r01"
     }
   ]
 }

@@ -3,7 +3,7 @@
 複数requestを複数GPU / nodeで処理するLLM servingについて、request順、batch、prefill / decodeのGPU配分、KV再利用・転送、request移動などを調整し、latencyとresource効率を改善する研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（334本）
+## 自動生成の論文一覧（335本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -611,6 +611,10 @@
 - **2026-07 · [DeltaServe: Host-Agnostic Co-Serving of Inference and Fine-Tuning for LLMs](2026-2607.28848-deltaserve-inference-finetuning-coserving.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   LoRA微調整の順伝播を既存推論バッチへSLO予算内で混ぜ、逆伝播を層境界でプリエンプト可能な別プロセスへ分離することで、推論GPUの空き計算資源を微調整へ転用する外付け共存実行方式。
+
+- **2026-07 · [CoCoScale: Leveraging Layer-wise Scaling to Unlock the Potential of Online LLM Serving](2026-2607.04181-cocoscale-leveraging-layer-wise-scaling-to-unlock-the-potential-of-onlin.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  複数のモデルを提供するクラスタでは、人気モデルへの要求が急増しても、別のモデルに割り当てたGPUが遊休に近いことがある。4基のNVIDIA H20上で実負荷トレースを再生した評価では、従来のインスタンス単位の増設に比べ拡張遅延を97.9〜99.3%短縮し、比較した全モデル・トレースでSLO達成率100%を示した。
 
 - **2026-07 · [BlockServe: Block-Grained Continuous Batching for High-Throughput Diffusion LLM Serving](2026-2607.08930-blockserve-diffusion-llm-continuous-batching.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
