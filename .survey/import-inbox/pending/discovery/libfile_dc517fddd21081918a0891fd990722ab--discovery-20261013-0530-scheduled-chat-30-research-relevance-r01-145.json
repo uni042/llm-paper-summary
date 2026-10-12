@@ -1,0 +1,27 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261013-0530-scheduled-chat-30/r01-research-relevance-145",
+  "reference_main_sha": "5ae2eefabd8257f71f6df875069a1f5835be49f2",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2407.04656",
+      "identity_tokens": [
+        "arxiv:2407.04656"
+      ],
+      "title": "Lazarus: Resilient and Elastic Training of Mixture-of-Experts Models with Adaptive Expert Placement",
+      "reason": "一次要旨で、LazarusはMoE学習の障害回復を目的に、expertの負荷偏りを緩和する複製配置、回復確率を最大化する配置最適化、障害後も残存ノードを活用する柔軟なtoken dispatcherを提案すると確認した。障害頻発時最大5.7倍、スポットインスタンス障害履歴で3.4倍の改善はMoE学習処理に関する結果であり、オンラインMoE推論のexpertキャッシュ、遅延、スループットを直接測定していない。expert配置技術は推論への概念的関連性があるものの、現在の推論中心の凍結スコープでは微妙とする。",
+      "source_url": "https://arxiv.org/abs/2407.04656",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T05:30:57+09:00",
+      "last_checked_at": "2026-10-13T05:30:57+09:00",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance",
+      "research_job_id": "job-research-49e4dd271f3e368e",
+      "worklist_rank": 145
+    }
+  ]
+}
