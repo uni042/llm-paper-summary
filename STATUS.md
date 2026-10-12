@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-10-13 06:02:45 JST**
+> 自動生成: **2026-10-13 06:28:22 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -51,9 +51,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 探索候補総数 | **132777** |
+| 探索候補総数 | **132805** |
 | 処理済み | **18762** |
-| 未処理Discovery候補 | **114015** |
+| 未処理Discovery候補 | **114043** |
 | 収録済み | **1938** |
 | Research / Audit候補へ昇格済み | **806** |
 | 無関係として除外 | **11443** |
@@ -63,33 +63,33 @@
 
 | 判定段階 | 件数 |
 |---|---:|
-| 未処理候補（フィルタ前） | **114015** |
-| 機械規則による暫定隔離 | **2100** |
-| 拡張機械規則による追加隔離 | **1279** |
-| 機械規則通過後 | **110636** |
-| 系統内前方引用スコアによる選抜保留 | **105104** |
-| 暫定隔離合計 | **108483** |
-| **読解可能候補（隔離後）** | **5532** |
+| 未処理候補（フィルタ前） | **114043** |
+| 機械規則による暫定隔離 | **2099** |
+| 拡張機械規則による追加隔離 | **1281** |
+| 機械規則通過後 | **110663** |
+| 系統内前方引用スコアによる選抜保留 | **105129** |
+| 暫定隔離合計 | **108509** |
+| **読解可能候補（隔離後）** | **5534** |
 | 前方引用が同一系統で2本以上の候補 | **14593** |
 | 前方引用が同一系統で3本以上の候補 | **7080** |
 
 - 選抜順: **同一系統の前方引用本数（最多系統）→系統内引用合計→技術的関連語→従来の優先度**。
-- 可逆選抜: **quarantine** / 機械規則通過候補から **5.0%** / 目標 **5532件**（監査復活枠なし）。
+- 可逆選抜: **quarantine** / 機械規則通過候補から **5.0%** / 目標 **5534件**（監査復活枠なし）。
 
 ### 拡張規則の判定と適用状況
 
 - 拡張規則モード: **quarantine**
-- 拡張規則に一致した候補: **1279件**（基本規則との重複を除去）
-- 実際の追加隔離: **1279件**
-- 分野別内訳: **{'expanded_domain:clinical_applications': 96, 'expanded_domain:content_moderation': 18, 'expanded_domain:educational_legal_applications': 24, 'expanded_domain:environmental_applications': 8, 'expanded_domain:financial_applications': 51, 'expanded_domain:geoscience_applications': 57, 'expanded_domain:materials_applications': 30, 'expanded_domain:vision_applications': 995}**
+- 拡張規則に一致した候補: **1281件**（基本規則との重複を除去）
+- 実際の追加隔離: **1281件**
+- 分野別内訳: **{'expanded_domain:clinical_applications': 96, 'expanded_domain:content_moderation': 18, 'expanded_domain:educational_legal_applications': 24, 'expanded_domain:environmental_applications': 8, 'expanded_domain:financial_applications': 51, 'expanded_domain:geoscience_applications': 57, 'expanded_domain:materials_applications': 30, 'expanded_domain:vision_applications': 997}**
 - 拡張規則がshadowの場合は件数だけを測定し隔離には含めない。quarantineの場合は上記の隔離合計へ算入する。一次論文・候補台帳は削除せず、隔離候補の自動監査再投入は行わない。
 
 - モード: 規則 **quarantine** / 教師あり分類器は撤去済み。
 - 全数との差は暫定隔離数。元候補・引用プール・relevance判定台帳は削除せず、現在の候補identityから再計算する。
 
 - 消化率: **14.1%**
-- 現在の生在庫: 後方references **51412件** / 前方引用 **64305件**。後方候補を優先し、前方プールは後方プールに存在する同一identityを保持しません。
-- 前方・後方を統合してidentity重複を除いた未処理面は **115129件**。そこから既にResearch / Audit候補へ昇格したidentityを除いた値が上表の未処理Discovery候補です。
+- 現在の生在庫: 後方references **51472件** / 前方引用 **64305件**。後方候補を優先し、前方プールは後方プールに存在する同一identityを保持しません。
+- 前方・後方を統合してidentity重複を除いた未処理面は **115159件**。そこから既にResearch / Audit候補へ昇格したidentityを除いた値が上表の未処理Discovery候補です。
 - 処理済み = 収録済み + Research / Audit候補へ昇格済み + 無関係 + 微妙。前方引用・後方referencesの出自は区別せず、DOI/arXiv/title aliasを統合して数えます。
 - STATUS生成時にpaper実体、Research/Audit job、relevance台帳、現在の前方/後方候補からゼロベースで再計算します。
 
@@ -116,7 +116,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **10-12 09:14:43 JST（20時間48分前）** |
+| 最終maintenance完了 | **10-12 09:14:43 JST（21時間13分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **passed** |
 | health | **issues_found** |
@@ -136,7 +136,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 指標 | 現在値 |
 |---|---:|
-| 直近6hのResearch完了 | **17** |
+| 直近6hのResearch完了 | **14** |
 | 直近6hのDiscovery run | **20** |
 | 直近6hのDiscovery本文確認・分類 | **23** |
 | 最終Research完了 | **10-13 05:02:23 JST** |
