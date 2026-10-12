@@ -35,10 +35,15 @@
   "selection_reason": "各学習stepで逐次verificationを模擬し、verification headと最初のreject位置に応じた重み付けでdraftを訓練する。一次要旨はdraft architecture・target・推論手順を変更せず受理長とwall-clock speedupを改善すると説明し、学習の最終適用がLLM speculative inferenceなのでaccept。",
   "semantic_scholar_id": "2d1ad40dfe5086102d7d742ac6d2b7ed23e10514",
   "source_url": "https://arxiv.org/abs/2608.30135",
-  "status": "ready",
+  "status": "superseded",
   "title": "Verification-Aware Training for Speculative Decoding",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-10-12T21:58:10+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/05-speculative-decoding-moe/2026-2608.30135-verification-aware-training-for-speculative-decoding.md",
+  "represented_canonical_id": "arXiv:2608.30135",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
