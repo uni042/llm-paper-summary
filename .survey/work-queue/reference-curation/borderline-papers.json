@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-12T14:50:12+00:00",
-  "record_count": 4682,
+  "updated_at": "2026-10-12T14:54:02+00:00",
+  "record_count": 4683,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -70971,11 +70971,13 @@
       "classification": "borderline",
       "canonical_id": "arXiv:2512.06688",
       "identity_tokens": [
-        "arXiv:2512.06688"
+        "DOI:10.48550/arxiv.2512.06688",
+        "arXiv:2512.06688",
+        "semanticscholar:5e364810740f92046868a4ddb7a1b30576439e4d"
       ],
-      "reason": "本文§2〜4で、暗黙の利用者嗜好を推論するデータセットと強化微調整、利用者履歴を最大2048トークンの可読な記憶M_iへ逐次更新する方式を確認。32k履歴に対して入力16分の1で選好質問の正答率を維持する利点はあるが、主目的・評価指標は個人化の回答正確性であり、KVキャッシュ、GPU演算、サービング配置や推論基盤の性能制御を提案していない。記憶の圧縮が入力トークン量を減らすため境界候補とする。",
+      "reason": "一次要旨の中心は、暗黙の利用者嗜好を扱う個人化データセットと、強化学習による個人化能力改善である。一方で会話履歴全体32kトークンの代わりに2kトークンの可読なエージェント記憶を用い、入力トークン数16分の1で個人化精度55%を報告するため、外部記憶の圧縮・文脈量削減と隣接する。しかし主な評価指標は個人化の正答率であり、LLM推論基盤のGPUメモリ、KVキャッシュ、実時間遅延の最適化を直接評価した要旨ではないため境界的とした。",
       "first_checked_at": "2026-10-11T10:43:47+00:00",
-      "last_checked_at": "2026-10-11T10:43:47+00:00",
+      "last_checked_at": "2026-10-12T14:54:02+00:00",
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "PersonaMem-v2: Towards Personalized Intelligence via Learning Implicit User Personas and Agentic Memory"
@@ -71566,6 +71568,21 @@
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "C3oT: Generating Shorter Chain-of-Thought without Compromising Effectiveness"
+    },
+    "arXiv:2502.09601": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2502.09601",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2502.09601",
+        "arXiv:2502.09601",
+        "semanticscholar:2039018e618ccc34744addf94c2ab8ad141d7f24"
+      ],
+      "reason": "一次要旨は長い思考過程の推論費用を減らすため、モデルのパラメータ空間で思考長を制御する方向を同定し、長短の思考過程で調整するCoT-Valveを提案する。QwQ-32B-PreviewのGSM8Kで生成思考741→225トークン、正答率95.07→94.92%と報告するため推論時の生成計算量削減に関連する。ただし貢献は推論ランタイムやKVキャッシュ・カーネルの実装ではなく、モデル調整と推論内容の長さ制御にあるため、システムサーベイでは境界的な関連として保留する。",
+      "first_checked_at": "2026-10-12T14:54:00+00:00",
+      "last_checked_at": "2026-10-12T14:54:00+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "CoT-Valve: Length-Compressible Chain-of-Thought Tuning"
     }
   }
 }

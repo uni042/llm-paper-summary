@@ -2,7 +2,7 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-12T14:51:19+00:00",
+  "updated_at": "2026-10-12T14:54:01+00:00",
   "record_count": 11545,
   "records": {
     "arXiv:2303.08774": {
@@ -5208,9 +5208,9 @@
       "identity_tokens": [
         "DOI:10.1145/3600006.3613145"
       ],
-      "reason": "GEMINI is a distributed training system for checkpointing model states in host CPU memory and recovering training after failures. Its checkpoint placement and network-traffic scheduling improve recovery speed while preserving training throughput; the paper explicitly targets static synchronous training. It does not study inference-time execution or serving and is outside the inference-focused scope.",
+      "reason": "タイトルで明示された研究対象は、分散学習の障害復旧をメモリ内チェックポイントで高速化する仕組みである。推論サービングやLLM実行時のKVキャッシュ・推論用階層メモリ管理ではなく、現行サーベイで凍結中の学習専用システム技術なのでタイトル段階で対象外とした。一次要旨と本文は確認していない。",
       "first_checked_at": "2026-09-30T09:52:33+00:00",
-      "last_checked_at": "2026-10-03T15:16:51+00:00",
+      "last_checked_at": "2026-10-12T14:54:01+00:00",
       "linked_from": [
         "worker-worklist-30 discovery_review rank 264",
         "workers/discovery-02/ready/20260927-u-wave9/manifest.json#candidate[8]"
