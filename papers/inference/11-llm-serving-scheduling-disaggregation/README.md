@@ -11,7 +11,7 @@
 ### 注目：直近12か月・リポジトリ内で被引用（2025-11〜2026-10）
 
 - **2025-11 · [Mooncake: A KVCache-centric Disaggregated Architecture for LLM Serving](2024-2407.00079-mooncake-kvcache-centric-disaggregated-architecture.md)**  
-  実装：[✓](https://github.com/kvcache-ai/Mooncake) ・ リポジトリ内被引用：230  
+  実装：[✓](https://github.com/kvcache-ai/Mooncake) ・ リポジトリ内被引用：231  
   Mooncakeは、大規模言語モデル（Large Language モデル、LLM）の推論サービスで、GPUの計算能力とメモリを同時に効率よく使うための分散サービング基盤である。中心にあるのは、KVの所在と移動費用を知る全体スケジューラ（Global Scheduler）であるConductorである。
 
 - **2025-11 · [Continnum: Efficient and Robust Multi-Turn LLM Agent Scheduling with KV Cache Time-to-Live](2025-2511.02230-continuum-agent-kv-cache-ttl-scheduling.md)**  
@@ -978,6 +978,10 @@
   実装：✓ ・ リポジトリ内被引用：7  
   画像符号化・入力処理・デコードを異種段階として扱い、負荷とSLOに応じてE+P+D、EP+D、ED+Pを選ぶ混成分離と段階別バッチ・二重ストリームを組み合わせ、マルチモーダル配信のグッドプットを高める。
 
+- **2025-05 · [AReaL: A Large-Scale Asynchronous Reinforcement Learning System for Language Reasoning](2025-2505.24298-areal-a-large-scale-asynchronous-reinforcement-learning-system-for-langu.md)**  
+  実装：[✓](https://github.com/inclusionAI/AReaL) ・ リポジトリ内被引用：7  
+  AReaLは、長い推論列を生成する大規模推論モデル（大規模推論モデル（Large Reasoning モデル; LRM））の強化学習（強化学習（reinforcement learning; RL））で、ロールアウト生成とパラメータ更新を同じバッチ障壁で交互実行する同期方式をやめ、生成GPU群と学習GPU群を完全に分離する学習システムである。
+
 - **2025-10 · [FlexPipe: Adapting Dynamic LLM Serving Through Inflight Pipeline Refactoring in Fragmented Serverless Clusters](2025-2510.11938-flexpipe-adapting-dynamic-llm-serving-through-inflight-pipeline-refactoring-in-fragmented-serverless-clusters.md)**  
   実装：✓ ・ リポジトリ内被引用：6  
   断片化したserverless GPU上でパイプライン 段を実行中に細分化・統合し、KV整合性を保ちながら負荷変動へ追随するFlexPipe。
@@ -985,10 +989,6 @@
 - **2025-08 · [InternVL3.5: Advancing Open-Source Multimodal Models in Versatility, Reasoning, and Efficiency](2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md)**  
   実装：[✓](https://github.com/OpenGVLab/InternVL) ・ リポジトリ内被引用：6  
   推論効率に直接関係する二つの提案は、視覚解像度ルータ（Visual Resolution Router; ViR）と視覚・言語分離配置（Decoupled Vision-Language Deployment; DvD）である。最後の値は通常配置の4.05倍である。
-
-- **2025-05 · [AReaL: A Large-Scale Asynchronous Reinforcement Learning System for Language Reasoning](2025-2505.24298-areal-a-large-scale-asynchronous-reinforcement-learning-system-for-langu.md)**  
-  実装：[✓](https://github.com/inclusionAI/AReaL) ・ リポジトリ内被引用：6  
-  AReaLは、長い推論列を生成する大規模推論モデル（大規模推論モデル（Large Reasoning モデル; LRM））の強化学習（強化学習（reinforcement learning; RL））で、ロールアウト生成とパラメータ更新を同じバッチ障壁で交互実行する同期方式をやめ、生成GPU群と学習GPU群を完全に分離する学習システムである。
 
 - **2025-04 · [Apt-Serve: Adaptive Request Scheduling on Hybrid Cache for Scalable LLM Inference Serving](2025-2504.07494-apt-serve-hybrid-cache-adaptive-scheduling.md)**  
   実装：[✓](https://github.com/eddiegaoo/Apt-Serve) ・ リポジトリ内被引用：6  
@@ -1323,7 +1323,7 @@
 ### 4年前（2022-11〜2023-10）
 
 - **2023-09 · [Efficient Memory Management for Large Language Model Serving with PagedAttention](2023-2309.06180-vllm-pagedattention-efficient-memory-management.md)**  
-  実装：[✓](https://github.com/vllm-project/vllm) ・ リポジトリ内被引用：941  
+  実装：[✓](https://github.com/vllm-project/vllm) ・ リポジトリ内被引用：942  
   vLLMは、要求ごとに大きな連続領域を予約していたKVキャッシュを固定長ブロックへ分解し、論理的な並びとGPU上の物理配置を分離する。必要なブロックだけ動的に割り当て、同じ接頭辞のKVを共有することで、限られたGPUメモリへより多くの要求を同時に載せる。
 
 - **2023-02 · [AlpaServe: Statistical Multiplexing with Model Parallelism for Deep Learning Serving](2023-2302.11665-alpaserve.md)**  
