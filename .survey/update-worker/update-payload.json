@@ -1,46 +1,83 @@
 {
   "schema_version": 1,
-  "attempt_id": "library-import-maint-20261009T0940-cache-topk-ollama",
+  "attempt_id": "library-import-20261012-maint-0830-three-days-batch01",
   "kind": "framework_llm_update",
   "artifacts": [
     {
       "path": "framework-updates/inference-engines/llama-cpp/README.md",
-      "expected_blob_sha": "3167c67afb17913b2c48120c40ebdbb0d7ecbd5f",
+      "expected_blob_sha": "8e090954899c35868a3f053e3f5b3bf231f4a63d",
       "edits": [
         {
           "op": "insert_after_once",
           "anchor": "## 主要更新\n\n",
-          "text": "### 2026-10-09 — b11513：CUDAの上位k件選択（Top-k）の形状別最適化\n\n- CUDAの上位k件選択で行数・列数に応じて複数の選択アルゴリズムを使い分ける。Qwen4Expの34,816トークン条件では演算単体の実行時間が5,761.8→941.8 ms（約6.12倍）となったが、**モデル全体が6倍高速になるわけではない**。DGX Station GB300でのQwen3.8-Flash-Nextのプリフィルは1,755.8→2,852.8 tok/s（約1.625倍）、通常生成は100.08→99.89 tok/sでほぼ不変。Windows RTX 5090での形状別正当性試験527/527通過、RTX 4070 SUPERでの実速度は未計測。\n- 公式資料: [開発ビルド b11513](https://github.com/ggml-org/llama.cpp/releases/tag/b11513)、[PR #28713](https://github.com/ggml-org/llama.cpp/pull/28713)。\n\n### 2026-10-08〜09 — b11480 / b11507：CPU退避したMoE専門家のGPUキャッシュ\n\n- CPU RAMへ退避した混合専門家（Mixture of Experts、MoE）の重みをGPU側の最近使用順（LRU）キャッシュへ保持し、キャッシュを外れた専門家をCPUから転送する。実装フラグは `--moe-cache-mib N`（GPUごとのMiB）。b11507では層分割型の複数GPUへ拡張。小バッチ（最大32トークン）で効果がある経路であり、2026-09-05時点の**Draft PR**にあった `--moe-expert-cache` と混同しない。\n- 公式の単一GPU試験（Qwen3.8-Flash-Next Q4_0、93.7GiB、CPU側に専門家65.4GiB、EPYC 7742）ではRTX 4090の生成25.0→39.4 tok/s（1.57倍、キャッシュ6,544MiB）、RTX 5090で30.8→54.5 tok/s（1.77倍）。RTX 4090×2では34.78→60.38 tok/s（1.74倍）だが、プリフィルは440.7→402.0 tok/s（約9%低下）。15,000MiB指定で生成64.39 tok/sに改善した一方、プリフィル321.5 tok/sまで低下。これらは該当モデル・接続条件での比較で、キャッシュ常駐量は他の層やKVキャッシュとGPUメモリを競合する。\n- Windows 11／RTX 4070 SUPER 12GB／RAM 32GBでは同規模93.7GiBモデルを保持できないため速度倍率は外挿しない。より小型のMoEでGPU空き容量と転送条件を測定する必要がある。\n- 公式資料: [b11480](https://github.com/ggml-org/llama.cpp/releases/tag/b11480)、[PR #29887](https://github.com/ggml-org/llama.cpp/pull/29887)、[b11507](https://github.com/ggml-org/llama.cpp/releases/tag/b11507)、[PR #30112](https://github.com/ggml-org/llama.cpp/pull/30112)。\n\n"
+          "text": "### 2026-10-12 — llama.cpp b11559 / b11558：OpenCL改善\n- b11559: OpenCL版FlashAttentionがkey次元512とGQA4/GQA8に対応。gpt-oss-20b MXFP4のOpenCL限定ベンチマークでは16.59→29.01トークン/秒（1.75倍）。**NVIDIA CUDAへ同倍率を外挿しない**。[公式版](https://github.com/ggml-org/llama.cpp/releases/tag/b11559)、[PR #30266](https://github.com/ggml-org/llama.cpp/pull/30266)。\n- b11558: OpenCL版の巨大量子化重み、ブロードキャストとRMSNormの不整合を修正。速度の定量値は未報告。[公式版](https://github.com/ggml-org/llama.cpp/releases/tag/b11558)、[PR #30310](https://github.com/ggml-org/llama.cpp/pull/30310)。\n\n### 2026-10-11 — llama.cpp b11554〜b11556：新モデルとMoE\n- b11556: Prism Bonsai 2 27Bの重み変換・読み込みに対応。ただし配布形式の全てで標準版完全互換を実証したものではない。[PR #29600](https://github.com/ggml-org/llama.cpp/pull/29600)。\n- b11555: AVX2 CPU上のF16C命令判定修正。CUDAの速度改善とは別。[PR #30270](https://github.com/ggml-org/llama.cpp/pull/30270)。\n- b11554: VulkanのMoE重複expert ID処理を効率化。報告速度改善は約1%でありCUDAに適用できない。[PR #29998](https://github.com/ggml-org/llama.cpp/pull/29998)。\n\n### 2026-10-10〜11 — llama.cpp b11538 / b11540 / b11541 / b11551 / b11552\n- b11552: 並列要求で利用中のスロットのプロンプトキャッシュを誤上書きし得る問題を修正。[PR #30295](https://github.com/ggml-org/llama.cpp/pull/30295)。\n- b11551: MiniCPM-V 4.7の画像・動画入力向け3D RoPE等を先行実装。[PR #29416](https://github.com/ggml-org/llama.cpp/pull/29416)。\n- b11540: Intel Arc / SYCL / MXFP4 MoEの限定条件でデコード1.91〜2.02倍。NVIDIA CUDAでの改善を意味しない。[PR #29809](https://github.com/ggml-org/llama.cpp/pull/29809)。\n- b11541: OpenCL低ビットMoE行列積の更新。[公式版](https://github.com/ggml-org/llama.cpp/releases/tag/b11541)。\n- b11538: Windows MSVC/CUDAで丸め一致性を修正。生成速度の向上は未検証。[PR #30229](https://github.com/ggml-org/llama.cpp/pull/30229)。\n- Windows MLとllama.cpp/GGUFの実験的統合（10月7日）。既存CLIの自動置換ではない。[Microsoft公式](https://devblogs.microsoft.com/foundry-on-windows/build-on-winml-oct-7-26/)。\n\n"
         }
       ]
     },
     {
       "path": "framework-updates/inference-engines/ollama/README.md",
-      "expected_blob_sha": "a268fd06eb225b682ba7191814415fcfe533d8fc",
+      "expected_blob_sha": "47817b5e60dbaec18d4be20bc90ebbdda05203bf",
       "edits": [
         {
           "op": "insert_after_once",
           "anchor": "## 主要更新\n\n",
-          "text": "### 2026-10-08 — Ollama v0.40.1：WindowsのClef Flash読込み互換性修正\n\n- Windows環境の古いlibc++で2GiB超のファイルオフセットが32ビットへ切り詰められ、`clef-flash` の判定ヘッドを誤読して `/v1/systemone` が `Clef: non-finite logit` で失敗する問題を、64ビットのファイルシークへ修正。Windows 11のCPU経路で失敗から正常なHTTP 200への復帰が確認された。\n- **特定モデルの読込み不具合修正であり、一般のQwen系モデル、レシートOCR、CUDA推論速度の改善を意味しない**。同PRにGPU経路全体の再試験はない。\n- 公式資料: [正式版 v0.40.1](https://github.com/ollama/ollama/releases/tag/v0.40.1)、[PR #18777](https://github.com/ollama/ollama/pull/18777)。\n\n"
+          "text": "### 2026-10-11 — Ollama v0.40.3：モデル自動移行を一時停止\n- v0.40.2で導入した既存モデルのバックグラウンド互換性移行は、埋め込みモデルなどでのAPI要求・GC負荷を避けるため一時停止。生成速度やVRAMの普遍的改善値は未報告。[公式版](https://github.com/ollama/ollama/releases/tag/v0.40.3)、[PR #18908](https://github.com/ollama/ollama/pull/18908)。\n\n### 2026-10-09 — Ollama v0.40.2：ローカルモデル形式移行\n- 形式移行とバックアップにより一時的にディスク容量を消費し得る。**v0.40.3では自動移行が一時停止中**のため現行動作と区別する。[公式版](https://github.com/ollama/ollama/releases/tag/v0.40.2)。\n\n"
+        }
+      ]
+    },
+    {
+      "path": "framework-updates/inference-engines/exllama/README.md",
+      "expected_blob_sha": "ed9b697b03e8cdc7c51a801e425f9ceb58798906",
+      "edits": [
+        {
+          "op": "insert_after_once",
+          "anchor": "## 主要更新\n\n",
+          "text": "### 2026-10-11 — ExLlamaV3 v1.6.1\n- GDN/KDA/Mambaドラフトの固定VRAM負荷を削減し、再帰型ドラフト、DFlashのスライディング注意、ドラフトとlong-ngramの混合投機的復号などを追加。Windows 11 / RTX 4070 SUPERでの速度・メモリ節約量は未確認。[公式版](https://github.com/turboderp-org/exllamav3/releases/tag/v1.6.1)。\n\n"
+        }
+      ]
+    },
+    {
+      "path": "llm-releases/gemma.md",
+      "expected_blob_sha": "987b13d1f4446b6aa0c4a8b8eb4faa6aaf67e9b8",
+      "edits": [
+        {
+          "op": "insert_after_once",
+          "anchor": "|---|---|---|---|\n",
+          "text": "| 2026-10-06 | EmbeddingGemma 2 | Gemma 4系のマルチモーダル埋め込みモデル（総約7.4億パラメータ、768次元、文脈8192）。768/512/256/128次元に対応。FP16ではNaN・精度低下の懸念があり、公式はBF16/FP32を推奨。生成LLMではなく検索・分類向け。 | https://huggingface.co/google/embeddinggemma-2 |\n"
+        }
+      ]
+    },
+    {
+      "path": "llm-releases/mistral.md",
+      "expected_blob_sha": "a85eb9e8d191b788da6084d71056dd80cab64259",
+      "edits": [
+        {
+          "op": "replace_once",
+          "old": "1T total / 49B activeのnative multimodal flagship。2026-10-07時点ではAPIのpublic previewが利用可能で、model weightsは10月末公開予定のためopen-weight配布済みとは扱わない。",
+          "new": "約1.05T total / 52B activeのnative multimodal flagship（2026-10-12公式情報再照合）。APIのpublic previewが利用可能で、model weightsは10月末公開予定のためopen-weight配布済みとは扱わない。"
         }
       ]
     },
     {
       "path": "framework-updates/README.md",
-      "expected_blob_sha": "4054413431aa2a14128538c1163bfa9acb70022c",
+      "expected_blob_sha": "35b363e0910203061e804616de4f5c6b06894ff0",
       "edits": [
         {
           "op": "replace_once",
-          "old": "- フレームワーク差分の最終確認: **2026-10-08**",
-          "new": "- フレームワーク差分の最終確認: **2026-10-09**"
+          "old": "- フレームワーク差分の最終確認: **2026-10-09**",
+          "new": "- フレームワーク差分の最終確認: **2026-10-12**"
         },
         {
           "op": "insert_after_once",
           "anchor": "## 最新更新\n\n",
-          "text": "### 2026-10-09 — llama.cpp / Ollamaの主要更新（新モデル公開0件）\n\n- **llama.cpp b11480 / b11507**: CPUへ退避したMoE専門家をGPUのLRUキャッシュへ保持。新オプション `--moe-cache-mib`、複数GPU対応。RTX 4090×2の限定ベンチマークでは生成1.74倍に対しプリフィル約9%低下。RAM 32GB環境へ93.7GiBモデルの実測は外挿不可。[b11480](https://github.com/ggml-org/llama.cpp/releases/tag/b11480) / [b11507](https://github.com/ggml-org/llama.cpp/releases/tag/b11507)\n- **llama.cpp b11513**: CUDA上位k件選択カーネル（Top-k）を形状別に最適化。演算単体約6.12倍でも生成速度はほぼ不変、対象モデルのプリフィル約1.625倍。[b11513](https://github.com/ggml-org/llama.cpp/releases/tag/b11513)\n- **Ollama v0.40.1**: Windows環境におけるClef Flashの2GiB超ファイルオフセットの読込み不具合を修正。一般LLMの推論高速化ではない。[正式版](https://github.com/ollama/ollama/releases/tag/v0.40.1)\n\n"
+          "text": "### 2026-10-10〜12 — 推論基盤・モデル更新\n- **Ollama v0.40.3**: v0.40.2の自動モデル移行を処理負荷対策で一時停止。[Ollama](inference-engines/ollama/)\n- **llama.cpp b11538〜b11559**: Windowsの丸め修正、Intel SYCLのMoE最適化、OpenCL FlashAttention、MiniCPM-V 4.7先行対応、並列サーバー整合性など。限定環境の実測値をCUDAへ外挿しない。[llama.cpp](inference-engines/llama-cpp/)\n- **ExLlamaV3 v1.6.1**: ドラフトとVRAM管理を更新。Windows RTX 4070 SUPER実測は未確認。[ExLlama](inference-engines/exllama/)\n- **モデル**: EmbeddingGemma 2の重み公開、Mistral Large 4の有効520億パラメータの正式情報、MiniCPM-V 4.7のチェックポイント確認を反映。[Gemma](../llm-releases/gemma.md) / [Mistral](../llm-releases/mistral.md) / [MiniCPM](../llm-releases/minicpm.md)\n\n"
         }
       ]
+    },
+    {
+      "path": "llm-releases/minicpm.md",
+      "content": "# MiniCPM系モデルの公開情報\n\n公式チェックポイントと推論器の先行対応を区別して記録する。\n\n| 確認日 | モデル | 公開状況・留保 | 公式リンク |\n|---|---|---|---|\n| 2026-10-12 | MiniCPM-V 4.7 35B-A3B | OpenBMBの公式BF16チェックポイントを確認。モデルカード未掲載のためライセンス・性能・文脈長・厳密な有効パラメータ数は未検証。**確認日は公開日を意味しない**。llama.cpp b11551の対応を全形式の完全動作保証と扱わない。 | https://huggingface.co/openbmb/MiniCPM-V-4.7-35B-A3B |\n"
     }
   ],
-  "summary": "2026-10-09 08:30 framework maintenance: llama.cpp MoE GPU cache and CUDA TOP_K; Ollama Windows Clef Flash 64-bit seek."
+  "summary": "Consolidate 2026-10-10 to 2026-10-12 Library maintenance updates across 7 framework/LLM files"
 }
