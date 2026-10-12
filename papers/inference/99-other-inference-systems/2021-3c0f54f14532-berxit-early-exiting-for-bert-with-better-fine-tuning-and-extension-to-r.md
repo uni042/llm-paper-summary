@@ -2,37 +2,44 @@
 canonical_id: DOI:10.18653/v1/2021.eacl-main.8
 doi: 10.18653/v1/2021.eacl-main.8
 title: 'BERxiT: Early Exiting for BERT with Better Fine-Tuning and Extension to Regression'
-summary: >-
-  BERxiTはBERT系の双方向Transformerを用いる分類・回帰推論で、入力ごとに必要な層数だけを実行する早期終了方式である。各層に予測器を設け、最終層の品質と中間層の品質を交互に最適化するAlternating微調整と、隠れ状態から予測の確かさを学習するLearning-to-Exitを組み合わせる。分類だけでなく回帰へ早期終了を広げ、BERTBASEのGLUE試験集合では、例えばSST-2で元の得点の98%を保ちながら実行層数を65%削減した。単一P100・バッチ1での実験であり、生成型LLMのトークン逐次復号の高速化を直接示した研究ではない。
-list_summary: >-
-  BERT系推論の中間層に出口を付け、最終層と全層の損失を交互に最適化し、隠れ状態から終了可否を学習することで、分類・回帰の入力別計算量を削減する。
+summary: BERxiTはBERT系の双方向Transformerを用いる分類・回帰推論で、入力ごとに必要な層数だけを実行する早期終了方式である。各層に予測器を設け、最終層の品質と中間層の品質を交互に最適化するAlternating微調整と、隠れ状態から予測の確かさを学習するLearning-to-Exitを組み合わせる。分類だけでなく回帰へ早期終了を広げ、BERTBASEのGLUE試験集合では、例えばSST-2で元の得点の98%を保ちながら実行層数を65%削減した。単一P100・バッチ1での実験であり、生成型LLMのトークン逐次復号の高速化を直接示した研究ではない。
+list_summary: BERT系推論の中間層に出口を付け、最終層と全層の損失を交互に最適化し、隠れ状態から終了可否を学習することで、分類・回帰の入力別計算量を削減する。
 authors:
-  - Ji Xin
-  - Raphael Tang
-  - Yaoliang Yu
-  - Jimmy Lin
-published: '2021-04'
-publication: 'Proceedings of EACL 2021, Main Volume, pp. 91–104'
-publication_type: '査読付き国際会議論文'
-publication_status: 'published'
+- Ji Xin
+- Raphael Tang
+- Yaoliang Yu
+- Jimmy Lin
+published: 2021-04
+publication: Proceedings of EACL 2021, Main Volume, pp. 91–104
+publication_type: 査読付き国際会議論文
+publication_status: published
 source: https://aclanthology.org/2021.eacl-main.8.pdf
 sources:
-  - https://aclanthology.org/2021.eacl-main.8.pdf
-  - https://aclanthology.org/2021.eacl-main.8/
-implementation: >-
-  Hugging Face Transformersを改変したBERT、RoBERTa、ALBERT、DistilBERTの早期終了実装。著者が公式コードを公開している。主な実験は単一NVIDIA P100、CUDA 10.1、推論バッチ1で実施した。
+- https://aclanthology.org/2021.eacl-main.8.pdf
+- https://aclanthology.org/2021.eacl-main.8/
+implementation: Hugging Face Transformersを改変したBERT、RoBERTa、ALBERT、DistilBERTの早期終了実装。著者が公式コードを公開している。主な実験は単一NVIDIA P100、CUDA 10.1、推論バッチ1で実施した。
 code: https://github.com/castorini/berxit
 last_checked: '2026-10-12'
 worker_id: scheduled-chat-00
 worker_completed_at: '2026-10-12T13:01:00+09:00'
-worker_run_key: '20261012-1300-scheduled-chat-00/r01'
+worker_run_key: 20261012-1300-scheduled-chat-00/r01
 quality_self_review_passed: true
-quality_self_review_version: 'library-paper-quality-2026-10-07'
+quality_self_review_version: library-paper-quality-2026-10-07
 research_relevance: accept
-research_relevance_note: >-
-  推論時の実行層数削減というシステム効率の直接的貢献があるため収録する。ただし対象は主としてBERT系の双方向エンコーダであり、自己回帰生成型LLMのデコード性能へ一般化しない。
+research_relevance_note: 推論時の実行層数削減というシステム効率の直接的貢献があるため収録する。ただし対象は主としてBERT系の双方向エンコーダであり、自己回帰生成型LLMのデコード性能へ一般化しない。
 last_audited: null
 audit_version: 0
+references:
+- canonical_id: arXiv:2002.08307
+  arxiv_id: '2002.08307'
+- canonical_id: arXiv:2004.12993
+- canonical_id: arXiv:1909.11556
+- canonical_id: arXiv:1909.05840
+- canonical_id: arXiv:2004.02178
+- canonical_id: arXiv:2006.04152
+references_checked_at: '2026-10-12'
+references_source: primary-pdf-reference-section
+references_total: 1
 ---
 
 # BERxiT：BERT系推論の交互微調整と学習型早期終了
