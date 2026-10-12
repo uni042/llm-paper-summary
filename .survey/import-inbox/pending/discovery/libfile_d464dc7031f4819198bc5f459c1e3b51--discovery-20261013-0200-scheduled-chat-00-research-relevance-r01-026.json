@@ -1,0 +1,26 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261013-0200-scheduled-chat-00/r01-research-prescreen-026",
+  "reference_main_sha": "0d931858f274e8129d702573cf05a8595aceea1b",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2601.10011",
+      "identity_tokens": [
+        "arxiv:2601.10011"
+      ],
+      "title": "Memo-SQL: Structured Decomposition and Experience-Driven Self-Correction for Training-Free NL2SQL",
+      "reason": "Memo-SQLは自然言語からSQLへの変換において、構造化分解と過去の誤り修正事例の検索で自己修正を行い、BIRDで68.5%の実行正解率を報告する。テスト時の多候補生成の計算資源を10分の1以下に減らすという推論費用面の効果はあるが、主要貢献はNL2SQLのアプリケーション推論戦略であり、GPU推論基盤、KVキャッシュ、階層メモリ、カーネル最適化は直接扱わない。境界的として保留する。",
+      "source_url": "https://arxiv.org/abs/2601.10011",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T02:03:29+09:00",
+      "last_checked_at": "2026-10-13T02:03:29+09:00",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance",
+      "worklist_rank": 26
+    }
+  ]
+}
