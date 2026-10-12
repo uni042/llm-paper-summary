@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（482本）
+## 自動生成の論文一覧（484本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -691,6 +691,10 @@
 - **2026-04 · [Serving Chain-structured Jobs with Large Memory Footprints with Application to Large Foundation Model Serving](2026-2604.14993-serving-chain-structured-jobs-with-large-memory-footprints-with-application-to-large-foundation-model-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   分散パイプライン型の大規模言語モデル推論を、モデルブロック配置、鍵値キャッシュ容量配分、オンライン負荷分散からなるサーバ鎖構成問題として定式化し、実サービング評価で平均応答時間を六十三から七十七パーセント削減する。
+
+- **2026-04 · [Reason Only When Needed: Efficient Generative Reward Modeling via Model-Internal Uncertainty](2026-2604.10072-reason-only-when-needed-efficient-generative-reward-modeling-via-model-i.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  難しい質問には段階的な思考連鎖（Chain-of-Thought、CoT）が有効だが、簡単な質問にも毎回長い思考を生成すると、回答に至るまでの生成トークン数と推論費用が増える。ただし最初の並列生成は無料ではなく、バッチやGPU配置を含む実システム全体で同じ節約率になるとは限らない。
 
 - **2026-04 · [KV Cache Offloading for Context-Intensive Tasks](2026-2604.08426-kv-cache-offloading-for-context-intensive-tasks.md)**  
   実装：[✓](https://github.com/yandex-research/context-intensive-kv-offloading) ・ リポジトリ内被引用：0  
@@ -1495,6 +1499,10 @@
 - **2024-06 · [Adam-mini: Use Fewer Learning Rates To Gain More](2024-2406.16793-adam-mini-use-fewer-learning-rates-to-gain-more.md)**  
   実装：[✓](https://github.com/zyushun/Adam-mini) ・ リポジトリ内被引用：0  
   大規模言語モデルの事前学習や追加学習では、モデル重みだけでなく勾配とオプティマイザ（optimizer）の内部状態がGPUメモリを消費する。CPUへのオフロードや分散シャーディングは容量不足を緩和できる一方、転送・同期の追加費用が発生する。
+
+- **2024-02 · [Guiding LLMs The Right Way: Fast, Non-Invasive Constrained Generation](2024-2403.06988-guiding-llms-the-right-way-fast-non-invasive-constrained-generation.md)**  
+  実装：[✓](https://github.com/eth-sri/domino) ・ リポジトリ内被引用：0  
+  制約付き復号（constrained デコード）は、各生成段階で許される次トークンを文法で絞り、出力の構文的な妥当性を保証する。これが単なる書式上の違いにとどまらず、推論問題の正解率を損なうことを本論文は実験で示した。提案するDOMINOは、文法を解釈する字句解析器（scanner）と構文解析器（parser）を分ける。
 
 - **2024-01 · [Infini-gram: Scaling Unbounded n-gram Language Models to a Trillion Tokens](2024-2401.17377-infini-gram-scaling-unbounded-n-gram-language-models-to-a-trillion-token.md)**  
   実装：[✓](https://github.com/liujch1998/infini-gram) ・ リポジトリ内被引用：0  

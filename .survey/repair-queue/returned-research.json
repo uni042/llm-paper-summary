@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-12T17:00:08+00:00",
+  "generated_at": "2026-10-12T17:45:29+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 35,
+  "count": 34,
   "entries": [
     {
       "canonical_id": "DOI:10.1145/3714983.3714987",
@@ -600,33 +600,6 @@
       "worker_run_key": "20261012-0245-scheduled-chat-45/r01"
     },
     {
-      "canonical_id": "arXiv:2403.06988",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-12T03:31:16+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 0 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5003,
-        "body_paragraphs": 29,
-        "method_chars": 1704,
-        "method_paragraphs": 9,
-        "evaluation_chars": 0,
-        "limitation_chars": 716,
-        "insufficiency_flags": [
-          "評価説明量 0 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-a8e26c29599f--libfile_b3bb7d155164819186274de0541fdca5--2024-2403.06988-domino-constrained-decoding-20261012-0033-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-a8e26c29599f--libfile_b3bb7d155164819186274de0541fdca5--2024-2403.06988-domino-constrained-decoding-20261012-0033-scheduled-chat-30-r01.json",
-      "worker_run_key": "20261012-0033-scheduled-chat-30/r01"
-    },
-    {
       "canonical_id": "arXiv:2507.19635",
       "title": null,
       "source_url": null,
@@ -757,8 +730,8 @@
     },
     {
       "canonical_id": "arXiv:2107.00910",
-      "title": "Learned Token Pruning for Transformers",
-      "source_url": "https://arxiv.org/abs/2107.00910",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-12T17:00:08+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-45",

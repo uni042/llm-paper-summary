@@ -35,10 +35,15 @@
   "selection_reason": "DOMINOはLLMのサブワード語彙と文脈自由文法の終端記号の境界不一致により、制約付き生成が出力品質とスループットを落とす問題を解決する。文字単位オートマトンから語彙整列済みサブターミナル木を事前構築し、オンラインパーサで合法トークンを高速選択、制約付きの先読み復号を併用する。Mistral-7BのJSON形式GSM8Kで単純制約の30.8%から最小侵襲方式41.8%へ回復し、無制約比ほぼゼロの追加負荷から最大約2倍の高速化を示す、生成時の実行アルゴリズム研究。",
   "semantic_scholar_id": "b95ca121a606da32180ab8bb0c0c58bf19b1499b",
   "source_url": "https://arxiv.org/abs/2403.06988",
-  "status": "ready",
+  "status": "superseded",
   "title": "Guiding LLMs The Right Way: Fast, Non-Invasive Constrained Generation",
   "type": "research",
   "venue": "International Conference on Machine Learning",
   "workflow_version": 10,
-  "year": 2024
+  "year": 2024,
+  "superseded_at": "2026-10-12T17:45:29+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2024-2403.06988-guiding-llms-the-right-way-fast-non-invasive-constrained-generation.md",
+  "represented_canonical_id": "arXiv:2403.06988",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
