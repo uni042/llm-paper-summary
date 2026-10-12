@@ -45,11 +45,16 @@
   "selection_reason": "ConMoEはexpert pruning/weight mergingではなく、保持expertをprototypeとして元expert参照を決定的に再割当するtraining-free compression。router interfaceを維持したままexpert poolを縮小し、DeepSeek-MoE-16Bで25%/50% routed-expert reduction時に強いbaselineを上回るため、Compression系統の設計差分として有用。",
   "semantic_scholar_id": "42b7c8a0c903582afcb1c7981c1080e2e5a9fedf",
   "source_url": "https://arxiv.org/abs/2605.29350",
-  "status": "ready",
+  "status": "superseded",
   "status_submission": ".survey/work-queue/submissions/research/attempt-1c66e86fb01d69f8806768c4.json",
   "title": "ConMoE: Expert-Pool Consolidation via Prototype Reassignment for MoE Compression",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-10-12T23:47:53+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2026-2605.29350-conmoe-expert-pool-consolidation-via-prototype-reassignment-for-moe-comp.md",
+  "represented_canonical_id": "arXiv:2605.29350",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

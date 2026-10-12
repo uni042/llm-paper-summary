@@ -28,10 +28,15 @@
   "selection_reason": "multi-turn agent/tool-call servingで会話状態をrequest間に永続化し、KV cacheを差分更新するstateful inference architectureを提示する。radix prefix cacheとprompt-lookup speculative decodingを組み合わせ、vLLM/SGLang比較で6-turn時2.1x、35-turn中央値4.2xのper-turn高速化を報告しており、agentic workloadのKV lifecycle管理という未収録のsystem軸を補完する。",
   "semantic_scholar_id": "a5ab5970e642c0ee05201f1cf3c24f70bd0a6777",
   "source_url": "https://arxiv.org/abs/2605.26289",
-  "status": "ready",
+  "status": "superseded",
   "title": "Stateful Inference for Low-Latency Multi-Agent Tool Calling",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-10-12T23:47:53+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/14-agentic-inference-serving-runtime/2026-2605.26289-stateful-inference-for-low-latency-multi-agent-tool-calling.md",
+  "represented_canonical_id": "arXiv:2605.26289",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
