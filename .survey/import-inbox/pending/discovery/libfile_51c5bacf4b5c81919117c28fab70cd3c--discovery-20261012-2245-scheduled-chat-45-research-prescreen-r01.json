@@ -1,0 +1,58 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-45",
+  "run_key": "20261012-2245-scheduled-chat-45/r01-research-prescreen",
+  "reference_main_sha": "521bb70dc726203dd4c1db4ef4054d033d3db282",
+  "record_count": 3,
+  "records": [
+    {
+      "canonical_id": "arXiv:2506.01844",
+      "identity_tokens": [
+        "arXiv:2506.01844"
+      ],
+      "title": "SmolVLA: A Vision-Language-Action Model for Affordable and Efficient Robotics",
+      "source_url": "https://arxiv.org/abs/2506.01844",
+      "classification": "borderline",
+      "worklist_rank": 2,
+      "reason": "一次要旨では低価格のロボット向け視覚・言語・動作モデルを小型化し、単一GPU学習とCPUを含む端末配備を目指す。知覚・動作予測と動作実行を分離する非同期推論基盤も提案し応答性を改善するが、評価対象は主にロボット操作であり、一般的なLLMサービング、KVキャッシュ、GPUカーネル、分散推論の汎用方式ではない。推論実行制御への技術的関連はあるため境界的とする。",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-12T22:51:47+09:00",
+      "last_checked_at": "2026-10-12T22:51:47+09:00",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance"
+    },
+    {
+      "canonical_id": "arXiv:2402.09906",
+      "identity_tokens": [
+        "arXiv:2402.09906"
+      ],
+      "title": "Generative Representational Instruction Tuning",
+      "source_url": "https://arxiv.org/abs/2402.09906",
+      "classification": "borderline",
+      "worklist_rank": 5,
+      "reason": "一次要旨では生成と埋め込みを一つの言語モデルへ統合する命令調整法が主貢献である。長文書の検索拡張生成で別の検索モデルが不要となり60%以上の高速化を報告するため推論時の構成削減に関連するが、サービング基盤、カーネル、キャッシュ管理、オフロードの直接的なシステム方式を検証する研究ではない。学習手法中心かつ推論効率への副次的寄与として境界的とする。",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-12T22:51:47+09:00",
+      "last_checked_at": "2026-10-12T22:51:47+09:00",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance"
+    },
+    {
+      "canonical_id": "arXiv:2404.15159",
+      "identity_tokens": [
+        "arXiv:2404.15159"
+      ],
+      "title": "MixLoRA: Enhancing Large Language Models Fine-Tuning with LoRA-based Mixture of Experts",
+      "source_url": "https://arxiv.org/abs/2404.15159",
+      "classification": "accept",
+      "worklist_rank": 17,
+      "reason": "一次要旨はLoRA専門家を用いた複数課題向け微調整が中心だが、学習と推論の双方でMoEの計算・メモリ制約を緩和する高スループット実行基盤を独立して提案し、GPUメモリ40%削減およびトークン計算遅延30%削減を報告する。推論時の実行効率改善を明示する直接的システム貢献があるため収録候補とする。数値の再現条件と推論部分の独立性はResearch本文読解で要検証。",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-12T22:51:47+09:00",
+      "last_checked_at": "2026-10-12T22:51:47+09:00",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance"
+    }
+  ]
+}
