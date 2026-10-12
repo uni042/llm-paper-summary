@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-12T14:54:01+00:00",
-  "record_count": 11545,
+  "updated_at": "2026-10-12T14:56:03+00:00",
+  "record_count": 11544,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -163842,18 +163842,6 @@
       ],
       "title": "JavisGPT: A Unified Multi-modal LLM for Sounding-Video Comprehension and Generation"
     },
-    "arXiv:2508.19828": {
-      "classification": "unrelated",
-      "canonical_id": "arXiv:2508.19828",
-      "identity_tokens": [
-        "arXiv:2508.19828"
-      ],
-      "reason": "強化学習によるLLMエージェントの記憶利用・管理が主題であり、GPU推論やKVキャッシュなどの計算機メモリ管理を対象としない。推論システムサーベイの直接対象外。",
-      "first_checked_at": "2026-10-11T07:45:37+00:00",
-      "last_checked_at": "2026-10-11T07:46:55+00:00",
-      "linked_from": [],
-      "title": "Memory-R1: Enhancing Large Language Model Agents to Manage and Utilize Memories via Reinforcement Learning"
-    },
     "DOI:10.1109/tip.2026.3715328": {
       "classification": "unrelated",
       "canonical_id": "DOI:10.1109/tip.2026.3715328",
@@ -164109,9 +164097,9 @@
         "DOI:10.1109/cvpr52729.2023.00976",
         "arXiv:2303.05511"
       ],
-      "reason": "タイトルと割当jobの対象説明が示す中心課題は、GANによる文章条件付き画像合成と512px画像生成の高速化である。LLM、Transformer言語モデル、LLM推論サービング、学習時メモリ階層やMoEシステムの最適化を主題としない。画像生成器の実行速度改善をLLM推論技術の直接研究と誤認しないため除外する。",
+      "reason": "タイトルで明示されている研究対象はテキストから画像を生成するGANの規模拡大であり、LLMの推論実行、KVキャッシュ、GPUサービング、効率的な言語モデル学習システムへの技術的貢献を主題としていない。タイトル段階で対象外と判断した。",
       "first_checked_at": "2026-10-11T08:49:39+00:00",
-      "last_checked_at": "2026-10-11T08:49:39+00:00",
+      "last_checked_at": "2026-10-12T14:56:02+00:00",
       "linked_from": [],
       "title": "Scaling up GANs for Text-to-Image Synthesis"
     },
@@ -164327,9 +164315,9 @@
       "identity_tokens": [
         "arXiv:2203.10314"
       ],
-      "reason": "LiDAR点群の三次元物体検出向けにボクセル集合注意を導入する視覚認識モデルの研究。計算量削減の記述はあるが、適用先は点群検出でありLLMの推論・学習システムではない。KITTIとWaymoの物体検出精度を評価する。",
+      "reason": "タイトルで明示された研究対象は点群からの三次元物体検出であり、LLMの推論・サービング・効率的学習基盤や汎用注意カーネルの最適化ではない。Transformerという名称だけでは本サーベイのシステム対象とは認められないためタイトル段階で除外した。",
       "first_checked_at": "2026-10-11T14:41:43+00:00",
-      "last_checked_at": "2026-10-11T14:41:43+00:00",
+      "last_checked_at": "2026-10-12T14:56:00+00:00",
       "linked_from": [],
       "title": "Voxel Set Transformer: A Set-to-Set Approach to 3D Object Detection from Point Clouds"
     },

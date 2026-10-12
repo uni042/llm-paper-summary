@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-7aeceb8bdd2077e1-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2411.17465",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2411.17465",
+    "identity_tokens": [
+      "DOI:10.1109/cvpr52734.2025.01816",
+      "arXiv:2411.17465",
+      "semanticscholar:02128b757f31f1385c9b839201783ceae5cd2088"
+    ],
+    "reason": "一次要旨の主目的は画面画像を理解して操作するGUI視覚エージェントの構築で、画面要素の接続グラフに基づく視覚トークン選択、視覚・言語・行動履歴の混在系列、指示追従データの整備を提案する。トークン選択により冗長な視覚トークン33%削減、学習時1.4倍の高速化を報告するため効率化の技術要素はあるが、主要評価は画面上の対象位置特定・GUI操作であり、LLM汎用推論ランタイムやGPUサービング性能の独立した寄与は要旨から確定できない。効率面の関連性を残して境界的とした。",
+    "first_checked_at": "2026-10-11T03:46:34+00:00",
+    "last_checked_at": "2026-10-12T14:56:00+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "ShowUI: One Vision-Language-Action Model for GUI Visual Agent"
+  },
+  "processed_at": "2026-10-12T14:56:01+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-7aeceb8bdd20",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

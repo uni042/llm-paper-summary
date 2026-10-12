@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-12T14:54:02+00:00",
-  "record_count": 4683,
+  "updated_at": "2026-10-12T14:56:03+00:00",
+  "record_count": 4685,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -70629,11 +70629,13 @@
       "classification": "borderline",
       "canonical_id": "arXiv:2411.17465",
       "identity_tokens": [
-        "arXiv:2411.17465"
+        "DOI:10.1109/cvpr52734.2025.01816",
+        "arXiv:2411.17465",
+        "semanticscholar:02128b757f31f1385c9b839201783ceae5cd2088"
       ],
-      "reason": "画面操作エージェントを主対象とし、Qwen2-VL-2Bを画面上の要素定位と操作系列に適合させる研究。画面パッチのRGB連結成分に基づく視覚トークン選択は自己注意の計算削減に直接関係するため無関係とは断定できない。一方、原著図9の1.5倍は学習速度であり、推論時に選択を有効にするとScreenspotの定位精度は70.4から64.9へ低下する。汎用LLM推論サーバーの速度・メモリ最適化を主要な最終評価とする研究ではないため境界候補。",
+      "reason": "一次要旨の主目的は画面画像を理解して操作するGUI視覚エージェントの構築で、画面要素の接続グラフに基づく視覚トークン選択、視覚・言語・行動履歴の混在系列、指示追従データの整備を提案する。トークン選択により冗長な視覚トークン33%削減、学習時1.4倍の高速化を報告するため効率化の技術要素はあるが、主要評価は画面上の対象位置特定・GUI操作であり、LLM汎用推論ランタイムやGPUサービング性能の独立した寄与は要旨から確定できない。効率面の関連性を残して境界的とした。",
       "first_checked_at": "2026-10-11T03:46:34+00:00",
-      "last_checked_at": "2026-10-11T03:46:34+00:00",
+      "last_checked_at": "2026-10-12T14:56:00+00:00",
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "ShowUI: One Vision-Language-Action Model for GUI Visual Agent"
@@ -71583,6 +71585,34 @@
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "CoT-Valve: Length-Compressible Chain-of-Thought Tuning"
+    },
+    "arXiv:2306.07174": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2306.07174",
+      "identity_tokens": [
+        "arXiv:2306.07174"
+      ],
+      "reason": "一次要旨で確認できるLongMemの主眼は、凍結した基盤LLMを記憶符号化器とし、残差側ネットワークが長期記憶を検索・読出しする構成によって長文脈の言語モデリング品質を高めることである。65,000トークンの長期記憶を扱うが、GPUメモリ階層、KVキャッシュ退避、サービング処理量、カーネル高速化の独立したシステム貢献は要旨から確認できない。記憶管理との関連はあるため境界的とし、推論システムの直接的寄与としての収録は保留する。",
+      "first_checked_at": "2026-10-12T14:56:01+00:00",
+      "last_checked_at": "2026-10-12T14:56:01+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Augmenting Language Models with Long-Term Memory"
+    },
+    "arXiv:2508.19828": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2508.19828",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2508.19828",
+        "arXiv:2508.19828",
+        "semanticscholar:9df0947ec8a14c43e69f3b72ece5e9af2b8e8215"
+      ],
+      "reason": "一次要旨での主貢献は、外部記憶へのADD・UPDATE・DELETE・NOOP操作を選ぶMemory Managerと、関連記憶を選択して回答するAnswer Agentを、PPO/GRPOの結果報酬で学習する方式である。記憶管理を実行時に行う点は関連するが、報告の中心は少数の質問応答例での回答品質・汎化であり、KVキャッシュ、CPU/GPU/SSD階層、メモリ転送量、サービング遅延の最適化を直接実証するものではない。外部記憶管理という隣接領域として境界的と判定した。",
+      "first_checked_at": "2026-10-12T14:56:03+00:00",
+      "last_checked_at": "2026-10-12T14:56:03+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Memory-R1: Enhancing Large Language Model Agents to Manage and Utilize Memories via Reinforcement Learning"
     }
   }
 }
