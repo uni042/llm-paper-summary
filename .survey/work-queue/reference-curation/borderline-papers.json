@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-12T14:56:03+00:00",
-  "record_count": 4685,
+  "updated_at": "2026-10-12T15:14:02+00:00",
+  "record_count": 4687,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -71613,6 +71613,32 @@
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "Memory-R1: Enhancing Large Language Model Agents to Manage and Utilize Memories via Reinforcement Learning"
+    },
+    "arXiv:2006.16362": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2006.16362",
+      "identity_tokens": [
+        "arXiv:2006.16362"
+      ],
+      "reason": "一次要旨は、複数注意ヘッドのキー・クエリ投影の冗長性を減らす共有射影のモデル構造を提案し、投影パラメータを4分の1に削減しつつ同等の精度と速度を維持すると述べる。推論ランタイム、KV管理、GPUカーネル、分散実行等のシステム機構は要旨から確認できず、主な貢献はモデルアーキテクチャと学習済み重みの再パラメータ化にあるため、現行サーベイでは境界的とする。",
+      "first_checked_at": "2026-10-12T15:14:02+00:00",
+      "last_checked_at": "2026-10-12T15:14:02+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Multi-Head Attention: Collaborate Instead of Concatenate"
+    },
+    "arXiv:2411.00774": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2411.00774",
+      "identity_tokens": [
+        "arXiv:2411.00774"
+      ],
+      "reason": "一次要旨で確認できる主貢献は、既存テキストLLMの重みを凍結したまま音声入出力を結合するモデル構造と、8 GPU・約6万件の複数ターンQ&Aを用いる三段階学習、および二重音声対話の学習である。低遅延の音声応答は述べるが、推論スケジューラ、KV管理、オフロード、カーネル等の直接的なシステム機構や、比較条件付きの推論効率評価は要旨から確定できない。音声対話のモデル・学習寄りのため現行推論システムサーベイでは境界的とする。",
+      "first_checked_at": "2026-10-12T15:14:02+00:00",
+      "last_checked_at": "2026-10-12T15:14:02+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Freeze-Omni: A Smart and Low Latency Speech-to-speech Dialogue Model with Frozen LLM"
     }
   }
 }
