@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a8737671bc499bd1-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2605.27441",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2605.27441",
+    "identity_tokens": [
+      "arXiv:2605.27441"
+    ],
+    "reason": "一次要旨は産業用検索の複数のクエリ理解機能を一つの小型言語モデルによるスキーマ制約生成へ統合し、自動アノテーションと蒸留を行うQuery Illuminatorを提案する。限られたGPUと低遅延制約での運用費用削減は推論効率に接するが、主な技術貢献は検索タスクの統合・教師データ生成とモデル能力の改善であり、汎用LLM推論ランタイム自体の新しい最適化は要旨で確認できない。",
+    "first_checked_at": "2026-10-12T19:45:24+00:00",
+    "last_checked_at": "2026-10-12T19:45:24+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "A Unified Structured Query Understanding Framework for Industrial Semantic Search"
+  },
+  "processed_at": "2026-10-12T19:45:24+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a8737671bc49",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

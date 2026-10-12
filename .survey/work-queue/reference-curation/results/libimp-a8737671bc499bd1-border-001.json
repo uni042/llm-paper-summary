@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a8737671bc499bd1-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2605.06320",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2605.06320",
+    "identity_tokens": [
+      "arXiv:2605.06320"
+    ],
+    "reason": "一次要旨は、言語エージェントの協働作業においてタスク依存関係と担当者を共有グラフで逐次更新し、無駄な通信・トークン消費・ファイル競合を減らすLATTEを提案する。壁時計時間とトークン費用の削減は実行効率に関係するが、主機構はエージェント間の作業調整であり、モデル推論時の計算資源管理、KVキャッシュ、低水準サービング機構を直接改善するものではない。",
+    "first_checked_at": "2026-10-12T19:45:23+00:00",
+    "last_checked_at": "2026-10-12T19:45:23+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Improving the Efficiency of Language Agent Teams with Adaptive Task Graphs"
+  },
+  "processed_at": "2026-10-12T19:45:24+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a8737671bc49",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

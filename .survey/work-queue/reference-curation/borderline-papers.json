@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-12T18:50:00+00:00",
-  "record_count": 4690,
+  "updated_at": "2026-10-12T19:45:24+00:00",
+  "record_count": 4693,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -71678,6 +71678,45 @@
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "Sia: Heterogeneity-aware, goodput-optimized ML-cluster scheduling"
+    },
+    "arXiv:2605.06320": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.06320",
+      "identity_tokens": [
+        "arXiv:2605.06320"
+      ],
+      "reason": "一次要旨は、言語エージェントの協働作業においてタスク依存関係と担当者を共有グラフで逐次更新し、無駄な通信・トークン消費・ファイル競合を減らすLATTEを提案する。壁時計時間とトークン費用の削減は実行効率に関係するが、主機構はエージェント間の作業調整であり、モデル推論時の計算資源管理、KVキャッシュ、低水準サービング機構を直接改善するものではない。",
+      "first_checked_at": "2026-10-12T19:45:23+00:00",
+      "last_checked_at": "2026-10-12T19:45:23+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Improving the Efficiency of Language Agent Teams with Adaptive Task Graphs"
+    },
+    "arXiv:2605.27480": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.27480",
+      "identity_tokens": [
+        "arXiv:2605.27480"
+      ],
+      "reason": "一次要旨はLLMサービングを要求単位で計測し、運用・製造由来の生物多様性影響と回答品質を同時に評価するBIRDSを提案する。モデル・GPU・地域・要求負荷によるサービング設計の比較指標として関連するが、提案の中心は環境影響の定量評価であり、推論スケジューラやGPU実行の高速化・メモリ削減を直接実装する研究ではない。",
+      "first_checked_at": "2026-10-12T19:45:24+00:00",
+      "last_checked_at": "2026-10-12T19:45:24+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "BIRDS: Characterizing and Understanding Biodiversity Impact of Large Language Model Serving"
+    },
+    "arXiv:2605.27441": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.27441",
+      "identity_tokens": [
+        "arXiv:2605.27441"
+      ],
+      "reason": "一次要旨は産業用検索の複数のクエリ理解機能を一つの小型言語モデルによるスキーマ制約生成へ統合し、自動アノテーションと蒸留を行うQuery Illuminatorを提案する。限られたGPUと低遅延制約での運用費用削減は推論効率に接するが、主な技術貢献は検索タスクの統合・教師データ生成とモデル能力の改善であり、汎用LLM推論ランタイム自体の新しい最適化は要旨で確認できない。",
+      "first_checked_at": "2026-10-12T19:45:24+00:00",
+      "last_checked_at": "2026-10-12T19:45:24+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "A Unified Structured Query Understanding Framework for Industrial Semantic Search"
     }
   }
 }
