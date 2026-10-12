@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-12T02:17:10.340990+00:00",
+  "generated_at": "2026-10-12T02:31:23.666125+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
@@ -150,26 +150,6 @@
       "warnings": []
     },
     {
-      "path": "papers/inference/99-other-inference-systems/2023-2310.04836-dual-grained-quantization-efficient-fine-grained-quantization-for-llm.md",
-      "canonical_id": "arXiv:2310.04836",
-      "title": "Dual Grained Quantization: Efficient Fine-Grained Quantization for LLM",
-      "file_bytes": 14345,
-      "source_sha256": "c1b845d14b61902822039dbb2b000d2fde34e0e9e0cb737ca6f0e6192ae8f849",
-      "source_git_blob_sha": "b765fbc1964218b46a711a7b92609834c393bb54",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.976576,
-      "quality_metrics": {
-        "body_chars": 4177,
-        "method_chars": 1565,
-        "evaluation_chars": 824,
-        "limitation_chars": 379
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
       "path": "papers/training/03-pipeline-parallel-modular-training/2026-2608.07974-zerolock-concurrent-memory-efficient-llm-training-via-modular-update-decoupling.md",
       "canonical_id": "arXiv:2608.07974",
       "title": "ZeroLock: Concurrent Memory-Efficient LLM Training via Modular Update Decoupling",
@@ -192,6 +172,26 @@
       "warnings": [
         "日本語比率 73.1% < 警告基準 80%"
       ]
+    },
+    {
+      "path": "papers/inference/99-other-inference-systems/2023-2310.04836-dual-grained-quantization-efficient-fine-grained-quantization-for-llm.md",
+      "canonical_id": "arXiv:2310.04836",
+      "title": "Dual Grained Quantization: Efficient Fine-Grained Quantization for LLM",
+      "file_bytes": 16510,
+      "source_sha256": "25da2f34a2ce73f0e2db783df44de1eabeebe79859fcb9679e3c23d91ba6c792",
+      "source_git_blob_sha": "ff3244b23b258f90b30d54395ae52713ccfa3cda",
+      "assigned_worker": "scheduled-chat-30",
+      "semantic_status": "pending",
+      "mechanical_status": "PASS",
+      "japanese_ratio": 0.976576,
+      "quality_metrics": {
+        "body_chars": 4177,
+        "method_chars": 1565,
+        "evaluation_chars": 824,
+        "limitation_chars": 379
+      },
+      "mechanical_failures": [],
+      "warnings": []
     }
   ]
 }
