@@ -30,6 +30,8 @@ worker_id: 'scheduled-chat-00'
 worker_run_key: '20261012-0355-scheduled-chat-00/r01'
 quality_self_review_passed: true
 quality_self_review_version: '2026-10-07'
+last_audited: null
+audit_version: 0
 ---
 
 # Goose：候補源ごとの受理確率差を利用する非対称木の投機的復号

@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-12T03:14:27+00:00",
+  "generated_at": "2026-10-12T03:21:13+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 58,
+  "count": 57,
   "entries": [
     {
       "canonical_id": "DOI:10.1145/3714983.3714987",
@@ -745,34 +745,6 @@
       "worker_run_key": "20261007-1735-scheduled-chat-30/r01"
     },
     {
-      "canonical_id": "arXiv:2609.11716",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-08T15:23:08+00:00",
-      "return_count": 3,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 213 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5826,
-        "body_paragraphs": 32,
-        "method_chars": 2323,
-        "method_paragraphs": 13,
-        "evaluation_chars": 213,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "評価説明量 213 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-a322f7afd082--libfile_b82530221664819199274d4fa3934c4a--2026-2609.11716-why-ptq-works-repair-20261008-1111-scheduled-chat-00.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-a322f7afd082--libfile_b82530221664819199274d4fa3934c4a--2026-2609.11716-why-ptq-works-repair-20261008-1111-scheduled-chat-00.json",
-      "worker_run_key": "20261008-1111-scheduled-chat-00/r01"
-    },
-    {
       "canonical_id": "DOI:10.1109/HCS59251.2023.10254711",
       "title": null,
       "source_url": null,
@@ -1049,64 +1021,6 @@
       "worker_run_key": "20261012-0245-scheduled-chat-45/r01"
     },
     {
-      "canonical_id": "arXiv:2609.35621",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-12T02:36:17+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700",
-        "説明不足トリガー: 評価説明量 0 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5552,
-        "body_paragraphs": 30,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 0,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700",
-          "評価説明量 0 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_98d910774d2c8191be1093331f8d703a--2026-2609.35621-cartridges-plus-plus-research-20261012-0900-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_98d910774d2c8191be1093331f8d703a--2026-2609.35621-cartridges-plus-plus-research-20261012-0900-scheduled-chat-00-r01.json",
-      "worker_run_key": "20261012-0900-scheduled-chat-00/r01"
-    },
-    {
-      "canonical_id": "arXiv:2605.07243",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-12T02:36:18+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 0 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 7267,
-        "body_paragraphs": 38,
-        "method_chars": 3093,
-        "method_paragraphs": 16,
-        "evaluation_chars": 0,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "評価説明量 0 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_a180ffffe4048191ae9202c652055bc5--2026-2605.07243-specblock-research-20261012-0310-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_a180ffffe4048191ae9202c652055bc5--2026-2605.07243-specblock-research-20261012-0310-scheduled-chat-00-r01.json",
-      "worker_run_key": "20261012-0310-scheduled-chat-00/r01"
-    },
-    {
       "canonical_id": "arXiv:2311.14652",
       "title": null,
       "source_url": null,
@@ -1186,61 +1100,9 @@
       "worker_run_key": "20261012-0033-scheduled-chat-30/r01"
     },
     {
-      "canonical_id": "arXiv:2608.28444",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-12T02:57:59+00:00",
-      "return_count": 5,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "長文定型文の再利用を検出: .survey/import-inbox/pending/research/retry-research-dfc37413d217--libfile_3689a52175e881919fddf988c25bb40a--2026-2608.28444-swa-returned-repair-20261012-1130-scheduled-chat-30-r01.md と 14 段落 / 2969文字 (100.0%) が完全一致"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 4766,
-        "body_paragraphs": 27,
-        "method_chars": 950,
-        "method_paragraphs": 5,
-        "evaluation_chars": 1844,
-        "limitation_chars": 354,
-        "insufficiency_flags": []
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_c7c3015224888191817548ff66f62a2f--2026-2608.28444-swa-returned-repair-20261012-1130-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_c7c3015224888191817548ff66f62a2f--2026-2608.28444-swa-returned-repair-20261012-1130-scheduled-chat-30-r01.json",
-      "worker_run_key": "20261012-1130-scheduled-chat-30/r01"
-    },
-    {
-      "canonical_id": "arXiv:2606.00735",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-12T02:58:00+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 141 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5846,
-        "body_paragraphs": 33,
-        "method_chars": 1813,
-        "method_paragraphs": 10,
-        "evaluation_chars": 141,
-        "limitation_chars": 565,
-        "insufficiency_flags": [
-          "評価説明量 141 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_cbeac3de72288191b3a79f776274b69c--2026-2606.00735-vibe-research-20261012-0604-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_cbeac3de72288191b3a79f776274b69c--2026-2606.00735-vibe-research-20261012-0604-scheduled-chat-00-r01.json",
-      "worker_run_key": "20261012-0604-scheduled-chat-00/r01"
-    },
-    {
       "canonical_id": "arXiv:2604.02047",
-      "title": "Goose: Anisotropic Speculation Trees for Training-Free Speculative Decoding",
-      "source_url": "https://arxiv.org/html/2604.02047v2",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-12T03:13:24+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-45",
@@ -1264,8 +1126,8 @@
     },
     {
       "canonical_id": "arXiv:2608.01631",
-      "title": "Does Accuracy Equal Evidence? Reasoning Faithfulness under KV Cache Compression",
-      "source_url": "https://arxiv.org/pdf/2608.01631",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-12T03:13:25+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-30",
@@ -1286,6 +1148,108 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-quality-20261012-02--libfile_98c2b6acb2188191ba489dfc3dcf6ca2--2026-2608.01631-answer-evidence-gap-research-20261012-0300-scheduled-chat-00-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-quality-20261012-02--libfile_98c2b6acb2188191ba489dfc3dcf6ca2--2026-2608.01631-answer-evidence-gap-research-20261012-0300-scheduled-chat-00-r01.json",
       "worker_run_key": "20261012-0300-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2609.35621",
+      "title": "Cartridges++: KV Cache Compression without Off-Context Derailment",
+      "source_url": "https://arxiv.org/pdf/2609.35621v1",
+      "returned_at": "2026-10-12T03:20:02+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "長文定型文の再利用を検出: .survey/import-inbox/pending/research/retry-research-a392cfbf54c5--libfile_98d910774d2c8191be1093331f8d703a--2026-2609.35621-cartridges-plus-plus-research-20261012-0900-scheduled-chat-00-r01.md と 19 段落 / 4542文字 (100.0%) が完全一致"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5552,
+        "body_paragraphs": 30,
+        "method_chars": 1151,
+        "method_paragraphs": 6,
+        "evaluation_chars": 1574,
+        "limitation_chars": 579,
+        "insufficiency_flags": []
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-quality-20261012-03--libfile_98d910774d2c8191be1093331f8d703a--2026-2609.35621-cartridges-plus-plus-research-20261012-0900-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-quality-20261012-03--libfile_98d910774d2c8191be1093331f8d703a--2026-2609.35621-cartridges-plus-plus-research-20261012-0900-scheduled-chat-00-r01.json",
+      "worker_run_key": "20261012-0900-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2605.07243",
+      "title": "SpecBlock: Block-Iterative Speculative Decoding with Dynamic Tree Drafting",
+      "source_url": "https://arxiv.org/html/2605.07243v2",
+      "returned_at": "2026-10-12T03:20:03+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "長文定型文の再利用を検出: .survey/import-inbox/pending/research/retry-research-988b7a43ac0e--libfile_a180ffffe4048191ae9202c652055bc5--2026-2605.07243-specblock-research-20261012-0310-scheduled-chat-00-r01.md と 24 段落 / 5324文字 (100.0%) が完全一致"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 7267,
+        "body_paragraphs": 38,
+        "method_chars": 3093,
+        "method_paragraphs": 16,
+        "evaluation_chars": 1572,
+        "limitation_chars": 742,
+        "insufficiency_flags": []
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-quality-20261012-04--libfile_a180ffffe4048191ae9202c652055bc5--2026-2605.07243-specblock-research-20261012-0310-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-quality-20261012-04--libfile_a180ffffe4048191ae9202c652055bc5--2026-2605.07243-specblock-research-20261012-0310-scheduled-chat-00-r01.json",
+      "worker_run_key": "20261012-0310-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2606.00735",
+      "title": "ViBE: Co-Optimizing Workload Skew and Hardware Variability for MoE Serving",
+      "source_url": "https://arxiv.org/abs/2606.00735",
+      "returned_at": "2026-10-12T03:20:04+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 141 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5846,
+        "body_paragraphs": 33,
+        "method_chars": 1813,
+        "method_paragraphs": 10,
+        "evaluation_chars": 141,
+        "limitation_chars": 565,
+        "insufficiency_flags": [
+          "評価説明量 141 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-070a02a87119--libfile_cbeac3de72288191b3a79f776274b69c--2026-2606.00735-vibe-research-20261012-0604-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-070a02a87119--libfile_cbeac3de72288191b3a79f776274b69c--2026-2606.00735-vibe-research-20261012-0604-scheduled-chat-00-r01.json",
+      "worker_run_key": "20261012-0604-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2608.28444",
+      "title": "Sliding-window beats linear attention",
+      "source_url": "https://arxiv.org/abs/2608.28444",
+      "returned_at": "2026-10-12T03:20:05+00:00",
+      "return_count": 6,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "長文定型文の再利用を検出: .survey/import-inbox/pending/research/retry-research-dfc37413d217--libfile_3689a52175e881919fddf988c25bb40a--2026-2608.28444-swa-returned-repair-20261012-1130-scheduled-chat-30-r01.md と 14 段落 / 2969文字 (100.0%) が完全一致"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 4766,
+        "body_paragraphs": 27,
+        "method_chars": 950,
+        "method_paragraphs": 5,
+        "evaluation_chars": 1844,
+        "limitation_chars": 354,
+        "insufficiency_flags": []
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-0cb7585d3477--libfile_c7c3015224888191817548ff66f62a2f--2026-2608.28444-swa-returned-repair-20261012-1130-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-0cb7585d3477--libfile_c7c3015224888191817548ff66f62a2f--2026-2608.28444-swa-returned-repair-20261012-1130-scheduled-chat-30-r01.json",
+      "worker_run_key": "20261012-1130-scheduled-chat-30/r01"
     }
   ]
 }
