@@ -1,31 +1,55 @@
 ---
 canonical_id: DOI:10.18653/v1/2025.emnlp-main.986
 title: 'Speculative Streaming: Efficient and Scalable Speculative Decoding with Multi-Stream Attention'
-summary: 'Speculative Streamingは大規模言語モデル本体の上位層に複数の推測残差ストリームを追加し、前回候補の検証と次回候補の生成を同じ順伝播で並行実行する。木状候補の早期枝刈りと小規模アダプタにより、別のドラフトモデルを保持せずにVicunaやLlama-2のMT-Benchで約2.93～3.35倍の壁時計速度向上を報告する。'
-list_summary: '本体モデルの上位層に複数の推測ストリームを組み込み、候補検証と次候補生成を同一順伝播で重ねるSpeculative Streamingを提案。木状候補の早期枝刈りと小型アダプタで復号を高速化する。'
+summary: Speculative Streamingは大規模言語モデル本体の上位層に複数の推測残差ストリームを追加し、前回候補の検証と次回候補の生成を同じ順伝播で並行実行する。木状候補の早期枝刈りと小規模アダプタにより、別のドラフトモデルを保持せずにVicunaやLlama-2のMT-Benchで約2.93～3.35倍の壁時計速度向上を報告する。
+list_summary: 本体モデルの上位層に複数の推測ストリームを組み込み、候補検証と次候補生成を同一順伝播で重ねるSpeculative Streamingを提案。木状候補の早期枝刈りと小型アダプタで復号を高速化する。
 authors:
-  - Nikhil Bhendawade
-  - Irina Belousova
-  - Qichen Fu
-  - Henry Mason
-  - Antonie Lin
-  - Mohammad Rastegari
-  - Mahyar Najibi
-published: '2025-11'
-publication: 'Proceedings of the 2025 Conference on Empirical Methods in Natural Language Processing (EMNLP 2025), pp. 19536–19559'
-publication_type: '国際会議論文'
-publication_status: '査読付き会議採録'
-source: 'https://aclanthology.org/2025.emnlp-main.986/'
+- Nikhil Bhendawade
+- Irina Belousova
+- Qichen Fu
+- Henry Mason
+- Antonie Lin
+- Mohammad Rastegari
+- Mahyar Najibi
+published: 2025-11
+publication: Proceedings of the 2025 Conference on Empirical Methods in Natural Language Processing (EMNLP 2025), pp. 19536–19559
+publication_type: 国際会議論文
+publication_status: 査読付き会議採録
+source: https://aclanthology.org/2025.emnlp-main.986/
 sources:
-  - 'https://aclanthology.org/2025.emnlp-main.986/'
-  - 'https://aclanthology.org/2025.emnlp-main.986.pdf'
-implementation: 'デコーダ上位Ns層に複数ストリーム注意（MSA）と低ランクアダプタを組み込み、推測木の検証と次候補生成を統合。A100 80GB単一GPU、FP16、バッチ1、温度0でVicuna・Llama-2等を評価。論文中で公式コード配布先は確認できない。'
+- https://aclanthology.org/2025.emnlp-main.986/
+- https://aclanthology.org/2025.emnlp-main.986.pdf
+implementation: デコーダ上位Ns層に複数ストリーム注意（MSA）と低ランクアダプタを組み込み、推測木の検証と次候補生成を統合。A100 80GB単一GPU、FP16、バッチ1、温度0でVicuna・Llama-2等を評価。論文中で公式コード配布先は確認できない。
 code: null
 last_checked: '2026-10-13'
 worker_completed_at: '2026-10-13T07:33:30+09:00'
-worker_run_key: '20261013-0730-scheduled-chat-30/r01'
+worker_run_key: 20261013-0730-scheduled-chat-30/r01
 last_audited: null
 audit_version: 0
+references:
+- canonical_id: arXiv:2404.14219
+  arxiv_id: '2404.14219'
+- canonical_id: arXiv:2402.11809
+- canonical_id: arXiv:2401.07851
+- canonical_id: arXiv:2307.02628
+- canonical_id: arXiv:2206.01861
+- canonical_id: arXiv:2404.02258
+- canonical_id: arXiv:2210.17323
+- canonical_id: arXiv:2306.03078
+- canonical_id: arXiv:2310.08461
+- canonical_id: DOI:10.48550/arxiv.2302.01318
+- canonical_id: arXiv:2401.15077
+- canonical_id: arXiv:2301.00774
+- canonical_id: arXiv:2306.11695
+- canonical_id: arXiv:2308.04623
+- canonical_id: arXiv:2402.05109
+- canonical_id: arXiv:1811.03115
+- canonical_id: arXiv:2211.17192
+- canonical_id: arXiv:2310.15141
+- canonical_id: arXiv:2311.08252
+references_checked_at: '2026-10-12'
+references_source: primary-pdf-reference-section
+references_total: 1
 ---
 
 # Speculative Streaming: Efficient and Scalable Speculative Decoding with Multi-Stream Attention
