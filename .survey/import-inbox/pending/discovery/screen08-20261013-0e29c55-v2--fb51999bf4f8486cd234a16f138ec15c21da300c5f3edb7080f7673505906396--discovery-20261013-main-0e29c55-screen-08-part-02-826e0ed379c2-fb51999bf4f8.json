@@ -1,0 +1,399 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-luna-primary-source-screen",
+  "run_key": "discovery-20261013-main-0e29c55-screen-08-part-02-826e0ed379c2",
+  "reference_main_sha": "0e29c55e48a7682385552e4c2703d420a450e6f3",
+  "record_count": 20,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2607.02907",
+      "identity_tokens": [
+        "arXiv:2607.02907",
+        "DOI:10.48550/arXiv.2607.02907",
+        "SemanticScholar:274ac7edd2aa9be9697709329eac3a397c50f081"
+      ],
+      "title": "ProLaViT: Learning Progressive Latent Visual Thoughts in Structured Latent Space",
+      "reason": "ProLaViT replaces explicit visual-generation reasoning with latent-space derivation and says it avoids inference-time tools, but the abstract does not quantify runtime, token, memory, or throughput savings.",
+      "source_url": "https://arxiv.org/abs/2607.02907",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-12T21:45:50Z",
+      "last_checked_at": "2026-10-12T21:45:50Z",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2502.21074-codi-compressing-chain-of-thought-into-continuous-space-via-self-distill.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.27684",
+      "identity_tokens": [
+        "arXiv:2606.27684",
+        "DOI:10.1145/3770855.3817855",
+        "SemanticScholar:05efaaf3c52a3e03cec450b74d4526c76f7cd95a"
+      ],
+      "title": "Intuition-Guided Latent Reasoning for LLM-Based Recommendation",
+      "reason": "IntuRec improves latent reasoning trajectories for recommender quality; the abstract does not establish a connection to LLM runtime or serving efficiency.",
+      "source_url": "https://arxiv.org/abs/2606.27684",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-12T21:45:50Z",
+      "last_checked_at": "2026-10-12T21:45:50Z",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2502.21074-codi-compressing-chain-of-thought-into-continuous-space-via-self-distill.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.24636",
+      "identity_tokens": [
+        "arXiv:2606.24636",
+        "DOI:10.48550/arXiv.2606.24636",
+        "SemanticScholar:13235fb434a6b4f5e758db2fd6aa473477331a5f"
+      ],
+      "title": "CineCap: Structured Reasoning with Spatio-Temporal Anchors for Cinematographic Video Captioning",
+      "reason": "CineCap improves cinematographic video-caption quality and benchmark performance without a stated inference-system efficiency contribution.",
+      "source_url": "https://arxiv.org/abs/2606.24636",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-12T21:45:50Z",
+      "last_checked_at": "2026-10-12T21:45:50Z",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.16449-moviechat-from-dense-token-to-sparse-memory-for-long-video-understanding.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.17924",
+      "identity_tokens": [
+        "arXiv:2606.17924",
+        "DOI:10.48550/arXiv.2606.17924",
+        "SemanticScholar:bba2cf431d516faf3fd94350b9ee2dced44d65ae"
+      ],
+      "title": "PearlVLA: Progressive Embodied Action-Plan Refinement in Latent Space",
+      "reason": "Primary-text Sections 4.3 and Appendix C report that K=3 refinement raises policy-query latency from 156.6 to 198.7 ms on OpenVLA and adds 391 GFLOPs; the paper trades extra inference compute for VLA success quality rather than improving inference efficiency.",
+      "source_url": "https://arxiv.org/abs/2606.17924",
+      "body_check": "primary_text_read; relevant sections recorded in body_review",
+      "first_checked_at": "2026-10-12T21:45:50Z",
+      "last_checked_at": "2026-10-12T21:45:50Z",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2502.21074-codi-compressing-chain-of-thought-into-continuous-space-via-self-distill.md"
+      ],
+      "body_review": {
+        "full_text_read": true,
+        "full_text_url": "https://arxiv.org/html/2606.17924",
+        "sections": [
+          "4.3",
+          "Appendix C"
+        ],
+        "findings": "K=3 increases OpenVLA query latency by 42.1 ms and GR00T N1.5 by 42.0 ms, adding 391 GFLOPs; outside the efficiency-improvement scope."
+      }
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2606.13707",
+      "identity_tokens": [
+        "arXiv:2606.13707",
+        "DOI:10.48550/arXiv.2606.13707",
+        "SemanticScholar:07ef99f203b26fb3926eca74583db90ee1f8e44f"
+      ],
+      "title": "Orchestra-o1: Omnimodal Agent Orchestration",
+      "reason": "Orchestra-o1 uses parallel subtask execution to improve multimodal-agent inference latency and cost-effectiveness; primary text Section 3.1 explicitly optimizes task utility under latency and monetary budgets.",
+      "source_url": "https://arxiv.org/abs/2606.13707",
+      "body_check": "primary_text_read; relevant sections recorded in body_review",
+      "first_checked_at": "2026-10-12T21:45:50Z",
+      "last_checked_at": "2026-10-12T21:45:50Z",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2509.17765-qwen3-omni-technical-report.md"
+      ],
+      "body_review": {
+        "full_text_read": true,
+        "full_text_url": "https://arxiv.org/html/2606.13707",
+        "sections": [
+          "3.1",
+          "3.2"
+        ],
+        "findings": "Agent orchestration optimizes utility under latency and cost budgets and uses parallel execution; relevant systems contribution."
+      }
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.11260",
+      "identity_tokens": [
+        "arXiv:2606.11260",
+        "DOI:10.48550/arXiv.2606.11260",
+        "SemanticScholar:45d273b35311ace843c860271cc1a1a0442b06aa"
+      ],
+      "title": "RAIL: Rethinking Auditory Intelligence in Large Audio-Language Models with a CHC-Grounded Benchmark",
+      "reason": "RAIL is a cognitive-capability benchmark for audio-language models; it measures behavior rather than inference efficiency.",
+      "source_url": "https://arxiv.org/abs/2606.11260",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-12T21:45:50Z",
+      "last_checked_at": "2026-10-12T21:45:50Z",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2509.17765-qwen3-omni-technical-report.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.08656",
+      "identity_tokens": [
+        "arXiv:2606.08656",
+        "DOI:10.48550/arXiv.2606.08656",
+        "SemanticScholar:f7f69a8454829cfd41e5002e8256f60ea370f92b"
+      ],
+      "title": "From Player to Master: Enhancing Test-Time Learning of LLM Agents via Reinforcement Learning over Memory",
+      "reason": "MemoPilot trains memory updates with multi-turn GRPO to improve game-playing outcomes; no inference-system efficiency mechanism is claimed.",
+      "source_url": "https://arxiv.org/abs/2606.08656",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-12T21:45:50Z",
+      "last_checked_at": "2026-10-12T21:45:50Z",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2506.15841-mem1-learning-to-synergize-memory-and-reasoning-for-efficient-long-horiz.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.07473",
+      "identity_tokens": [
+        "arXiv:2606.07473",
+        "DOI:10.48550/arXiv.2606.07473",
+        "SemanticScholar:8cccd6cf1eb1ad18fc888b227b47a98350edfa5c"
+      ],
+      "title": "Whisper Hallucination Detection and Mitigation via Hidden Representation Steering and Sparse AutoEncoders",
+      "reason": "Whisper hidden-representation steering reduces an ASR hallucination metric; it is an audio-task quality intervention, not an LLM inference-systems contribution.",
+      "source_url": "https://arxiv.org/abs/2606.07473",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-12T21:45:50Z",
+      "last_checked_at": "2026-10-12T21:45:50Z",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2509.17765-qwen3-omni-technical-report.md"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2606.03557",
+      "identity_tokens": [
+        "arXiv:2606.03557",
+        "DOI:10.48550/arXiv.2606.03557",
+        "SemanticScholar:bae3fd8b8f347cf0d97b7a132afe64634db84e0d"
+      ],
+      "title": "From Prompt to Service: An SLM-Based Agent Orchestration Gateway for AI-Driven Virtual Worlds",
+      "reason": "The gateway routes prompts with an edge SLM and separates routing from response generation; its primary abstract reports practical low-latency routing on edge hardware and improved efficiency versus using one model for both roles.",
+      "source_url": "https://arxiv.org/abs/2606.03557",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-12T21:45:50Z",
+      "last_checked_at": "2026-10-12T21:45:50Z",
+      "linked_from": [
+        "papers/inference/08-edge-on-device-llm-systems/2024-2407.18921-mobile-edge-intelligence-for-large-language-models-a-contemporary-survey.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.01925",
+      "identity_tokens": [
+        "arXiv:2606.01925",
+        "DOI:10.48550/arXiv.2606.01925",
+        "SemanticScholar:077dd8d636bb15b0ffe776b4d014ea05a6393b23"
+      ],
+      "title": "QoEReasoner: An Agentic Reasoning Framework for Automated and Explainable QoE Diagnosis in RANs",
+      "reason": "QoEReasoner reduces human diagnosis time for radio-network faults, but this is application workflow automation rather than LLM inference or serving efficiency.",
+      "source_url": "https://arxiv.org/abs/2606.01925",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-12T21:45:50Z",
+      "last_checked_at": "2026-10-12T21:45:50Z",
+      "linked_from": [
+        "papers/inference/08-edge-on-device-llm-systems/2024-2407.18921-mobile-edge-intelligence-for-large-language-models-a-contemporary-survey.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/CVPRF71909.2026.00911",
+      "identity_tokens": [
+        "DOI:10.1109/CVPRF71909.2026.00911",
+        "SemanticScholar:76150e659902f0fb1c93a292865224441e10893e"
+      ],
+      "title": "Uncertainty-Guided Graph Formulation via MWIS for Token Pruning in LVLMs",
+      "reason": "The DOI and title identify an IEEE CVPR 2026 token-pruning paper relevant to LVLM inference, but the official publisher abstract could not be retrieved; without primary abstract text the contribution cannot be reliably classified.",
+      "source_url": "https://doi.org/10.1109/CVPRF71909.2026.00911",
+      "body_check": "source_unavailable; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-10-12T21:45:50Z",
+      "last_checked_at": "2026-10-12T21:45:50Z",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2502.11494-stop-looking-for-important-tokens-in-multimodal-language-models-duplicat.md",
+        "papers/inference/99-other-inference-systems/2025-2503.02175-divprune-diversity-based-visual-token-pruning-for-large-multimodal-model.md"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2606.00756",
+      "identity_tokens": [
+        "arXiv:2606.00756",
+        "DOI:10.48550/arXiv.2606.00756",
+        "SemanticScholar:ad439c4e967aa0bdee70b5f95ec09a3d2149e5e4"
+      ],
+      "title": "CoMIC: Collaborative Memory and Insights Circulation for Long-Horizon LLM Agents in Cloud-Edge Systems",
+      "reason": "CoMIC bounds edge-agent context through hierarchical summaries and selective history re-expansion while offloading reflection asynchronously; primary-text Sections 1, 3.2, and 4.2 describe resource-constrained edge execution and reduced context consumption.",
+      "source_url": "https://arxiv.org/abs/2606.00756",
+      "body_check": "primary_text_read; relevant sections recorded in body_review",
+      "first_checked_at": "2026-10-12T21:45:50Z",
+      "last_checked_at": "2026-10-12T21:45:50Z",
+      "linked_from": [
+        "papers/inference/08-edge-on-device-llm-systems/2024-2407.18921-mobile-edge-intelligence-for-large-language-models-a-contemporary-survey.md"
+      ],
+      "body_review": {
+        "full_text_read": true,
+        "full_text_url": "https://arxiv.org/html/2606.00756",
+        "sections": [
+          "1",
+          "3.2",
+          "4.2"
+        ],
+        "findings": "Asynchronous cloud reflection with summarized and selectively re-expanded edge history bounds context; relevant systems contribution."
+      }
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.00384",
+      "identity_tokens": [
+        "arXiv:2606.00384",
+        "DOI:10.48550/arXiv.2606.00384",
+        "SemanticScholar:e487c5980e7da4b9a8e17b74bf962c68cf737572"
+      ],
+      "title": "VESTA: Visual Exploration with Statistical Tool Agents",
+      "reason": "VESTA dynamically creates statistical-analysis tools for scientific modeling; the paper targets data-analysis capability, not language-model serving efficiency.",
+      "source_url": "https://arxiv.org/abs/2606.00384",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-12T21:45:50Z",
+      "last_checked_at": "2026-10-12T21:45:50Z",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2305.17126-large-language-models-as-tool-makers.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.29440",
+      "identity_tokens": [
+        "arXiv:2605.29440",
+        "DOI:10.48550/arXiv.2605.29440",
+        "SemanticScholar:7ae43be04bfa9a05ff327022b5eb7905083e7694"
+      ],
+      "title": "SkillBrew: Multi-Objective Curation of Skill Banks for LLM Agents",
+      "reason": "SkillBrew removes redundant, outdated, or harmful entries from growing LLM skill banks, which may reduce retrieval and prompt load; the abstract does not establish inference-time token or latency savings.",
+      "source_url": "https://arxiv.org/abs/2605.29440",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-12T21:45:50Z",
+      "last_checked_at": "2026-10-12T21:45:50Z",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2026-2601.02553-simplemem-efficient-lifelong-memory-for-llm-agents.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.30161",
+      "identity_tokens": [
+        "arXiv:2605.30161",
+        "DOI:10.48550/arXiv.2605.30161",
+        "SemanticScholar:b71337d1c4d768922574180eff5dd3e606559876"
+      ],
+      "title": "Why Far Looks Up: Probing Spatial Representation in Vision-Language Models",
+      "reason": "Why Far Looks Up analyzes spatial representation biases in VLMs and proposes a benchmark, not inference or serving efficiency.",
+      "source_url": "https://arxiv.org/abs/2605.30161",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-12T21:45:50Z",
+      "last_checked_at": "2026-10-12T21:45:50Z",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2412.04468-nvila-efficient-frontier-visual-language-models.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.22013",
+      "identity_tokens": [
+        "arXiv:2605.22013",
+        "DOI:10.1145/3799902.3811081",
+        "SemanticScholar:842a547ac117a795581213b1366de6650343c9bb"
+      ],
+      "title": "PointLLM-R: Enhancing 3D Point Cloud Reasoning via Chain-of-Thought",
+      "reason": "PointLLM-R improves 3D point-cloud reasoning through curated chain-of-thought training data; the abstract gives no inference-efficiency mechanism.",
+      "source_url": "https://arxiv.org/abs/2605.22013",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-12T21:45:50Z",
+      "last_checked_at": "2026-10-12T21:45:50Z",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2406.11816-videollm-online-online-video-large-language-model-for-streaming-video.md"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2605.22078",
+      "identity_tokens": [
+        "arXiv:2605.22078",
+        "DOI:10.48550/arXiv.2605.22078",
+        "SemanticScholar:049cddf6491129e2c53b9b735c6b4ce880deb796"
+      ],
+      "title": "Enhancing Visual Token Representations for Video Large Language Models via Training-Free Spatial-Temporal Pooling and Gridding",
+      "reason": "ST-GridPool is a training-free temporal-spatial visual-token pooling method for Video-LLMs, directly reducing input-token computation while preserving spatiotemporal information.",
+      "source_url": "https://arxiv.org/abs/2605.22078",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-12T21:45:50Z",
+      "last_checked_at": "2026-10-12T21:45:50Z",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2412.04468-nvila-efficient-frontier-visual-language-models.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.22823",
+      "identity_tokens": [
+        "arXiv:2605.22823",
+        "DOI:10.48550/arXiv.2605.22823",
+        "SemanticScholar:3ac1de6de5b6e08f6896fd320d9eacaae4f3bf94"
+      ],
+      "title": "Which Way Did It Move? Diagnosing and Overcoming Directional Motion Blindness in Video-LLMs",
+      "reason": "MoDirect diagnoses directional-motion understanding and improves VLM accuracy through instruction tuning; the contribution is capability training, not runtime efficiency.",
+      "source_url": "https://arxiv.org/abs/2605.22823",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-12T21:45:50Z",
+      "last_checked_at": "2026-10-12T21:45:50Z",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2412.04468-nvila-efficient-frontier-visual-language-models.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.21132",
+      "identity_tokens": [
+        "arXiv:2605.21132",
+        "DOI:10.48550/arXiv.2605.21132",
+        "SemanticScholar:68e53f1a5f1c257418a7c69f441bdff234d6b088"
+      ],
+      "title": "SurgOnAir: Hierarchy-Aware Real-Time Surgical Video Commentary",
+      "reason": "SurgOnAir streams frames into narration tokens in real time without future access, a potentially relevant low-latency VLM execution pattern; the abstract does not quantify latency or compute savings.",
+      "source_url": "https://arxiv.org/abs/2605.21132",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-12T21:45:50Z",
+      "last_checked_at": "2026-10-12T21:45:50Z",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2406.11816-videollm-online-online-video-large-language-model-for-streaming-video.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.19846",
+      "identity_tokens": [
+        "arXiv:2605.19846",
+        "DOI:10.48550/arXiv.2605.19846",
+        "SemanticScholar:65f02502439099eb8dea1163bebb37cfe92c9128"
+      ],
+      "title": "FineBench: Benchmarking and Enhancing Vision-Language Models for Fine-grained Human Activity Understanding",
+      "reason": "FineBench and FineAgent improve and evaluate fine-grained human-activity understanding; the abstract does not establish inference-system efficiency.",
+      "source_url": "https://arxiv.org/abs/2605.19846",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-12T21:45:50Z",
+      "last_checked_at": "2026-10-12T21:45:50Z",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.16449-moviechat-from-dense-token-to-sparse-memory-for-long-video-understanding.md"
+      ]
+    }
+  ]
+}
+
