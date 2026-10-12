@@ -1,0 +1,26 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-45",
+  "run_key": "20261013-0245-scheduled-chat-45/r01-research-prescreen-014",
+  "reference_main_sha": "26684ff48973271aa7a47a45bba4e74841e375d0",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2512.04678",
+      "identity_tokens": [
+        "arxiv:2512.04678"
+      ],
+      "title": "Reward Forcing: Efficient Streaming Video Generation with Rewarded Distribution Matching Distillation",
+      "reason": "拡散型動画生成モデルの長時間動画を対象に、EMAで更新する注意シンクと報酬付き分布整合蒸留を提案。H100上23.1 FPSの動画生成速度は報告されるが、主対象は動画拡散モデルの画質・動きの改善であり、LLMのトークン生成・サービング・KV管理ではない。",
+      "source_url": "https://arxiv.org/abs/2512.04678",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T02:53:21+09:00",
+      "last_checked_at": "2026-10-13T02:53:21+09:00",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance",
+      "worklist_rank": 14
+    }
+  ]
+}
