@@ -1,0 +1,25 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-45",
+  "run_key": "20261012-1845-scheduled-chat-45/r01-research-relevance-008",
+  "reference_main_sha": "fee4340e043bed3c6ff2050e343803e7ed324ff2",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2509.25140",
+      "identity_tokens": ["arxiv:2509.25140", "doi:10.48550/arxiv.2509.25140"],
+      "title": "ReasoningBank: Scaling Agent Self-Evolving with Reasoning Memory",
+      "reason": "一次要旨によると、ReasoningBankはウェブ操作・ソフトウェア開発エージェントの成功・失敗履歴から再利用可能な推論方針を抽出して長期記憶に保存し、次のタスクで関連方針を検索する。MaTTSは一タスクに複数の経験生成を割り当て、得た対照的経験を記憶の改善へ還元する。エージェントの推論時記憶利用・タスク効率には関連する一方、GPU実行基盤、KVキャッシュ、推論メモリ階層、トークン処理量、サービングの遅延・帯域を直接最適化する研究ではないため、現行の推論システムサーベイへの収録適格性は境界的と判断する。",
+      "source_url": "https://arxiv.org/abs/2509.25140",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-12T18:49:00+09:00",
+      "last_checked_at": "2026-10-12T18:49:00+09:00",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance",
+      "research_job_id": "job-research-ab5d3c588ea883cc",
+      "worklist_rank": 8
+    }
+  ]
+}
