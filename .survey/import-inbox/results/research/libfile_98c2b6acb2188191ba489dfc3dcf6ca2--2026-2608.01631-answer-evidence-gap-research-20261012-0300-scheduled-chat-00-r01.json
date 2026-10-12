@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "4d6bbe5f8b08231de57bb2528b19d9e4829c57364b863b4e6625a528c4016aac",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_98c2b6acb2188191ba489dfc3dcf6ca2--2026-2608.01631-answer-evidence-gap-research-20261012-0300-scheduled-chat-00-r01.md",
+  "canonical_id": "arXiv:2608.01631",
+  "worker_completed_at": "2026-10-12T03:04:12+09:00",
+  "worker_run_key": "20261012-0300-scheduled-chat-00/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 8409,
+    "body_paragraphs": 44,
+    "method_chars": 1885,
+    "method_paragraphs": 10,
+    "evaluation_chars": 127,
+    "limitation_chars": 805,
+    "insufficiency_flags": [
+      "評価説明量 127 < 500"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 評価説明量 127 < 500"
+  ],
+  "processed_at": "2026-10-12T02:36:16+00:00"
+}
