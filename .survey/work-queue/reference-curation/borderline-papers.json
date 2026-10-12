@@ -2,7 +2,7 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-12T10:59:22+00:00",
+  "updated_at": "2026-10-12T13:50:19+00:00",
   "record_count": 4679,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
@@ -31539,11 +31539,12 @@
       "classification": "borderline",
       "canonical_id": "arXiv:2002.08307",
       "identity_tokens": [
+        "DOI:10.18653/v1/2020.repl4nlp-1.18",
         "arXiv:2002.08307"
       ],
-      "reason": "本文の§2〜§5を確認。BERT-Baseの重みの大きさに基づく枝刈りを30〜90%まで実施し、GLUEの転移学習への影響を測る。30〜40%の重み除去は精度を保つが、中心的な研究質問は事前学習情報の転移と微調整前後の枝刈り可能性であり、自己回帰LLM推論のサービング性能・速度・メモリ転送の実測最適化ではない。圧縮技術として関連するが、現在のLLM推論システム収録では境界的。",
+      "reason": "一次要旨はBERTの事前学習段階で重みを30～40%枝刈りしても転移性能を保てる条件と、枝刈り強度を上げた場合の事前学習損失・下流転移性能悪化を研究する。圧縮は配置時メモリ削減に関係するが、実測の推論遅延、GPUカーネル、疎行列実行、LLMサービング方式を主要貢献として検証していない。圧縮品質の知見として関連するものの、推論システムの直接最適化としては境界的。",
       "first_checked_at": "2026-10-05T16:34:20+00:00",
-      "last_checked_at": "2026-10-11T07:46:55+00:00",
+      "last_checked_at": "2026-10-12T13:50:19+00:00",
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "Compressing BERT: Studying the Effects of Weight Pruning on Transfer Learning"
@@ -71452,21 +71453,6 @@
       "borderline_recheck_count": 0,
       "title": "ado: a Python framework for computational experimentation and benchmarking"
     },
-    "SemanticScholar:7945684818786fcb32cf92bace2566d7d6bc8945": {
-      "classification": "borderline",
-      "canonical_id": "SemanticScholar:7945684818786fcb32cf92bace2566d7d6bc8945",
-      "identity_tokens": [
-        "SemanticScholar:7945684818786fcb32cf92bace2566d7d6bc8945",
-        "semanticscholar:7945684818786fcb32cf92bace2566d7d6bc8945",
-        "title:legoos-a-disseminated-distributed-os-for-hardware-resource-disaggregation"
-      ],
-      "reason": "OSDI 2018の一次要旨では、計算・メモリ・ストレージをネットワーク接続された独立資源へ分離し、各資源の監視機構を分散させるsplitkernelとLegoOSを提案する。遠隔メモリ管理と資源分離はLLMの階層メモリ・推論サービングに対する基盤的な関連性を持つが、論文の直接の評価対象は汎用OS・資源充填・故障率であり、LLM推論・KVキャッシュ・MoE・推論カーネルの性能を評価しない。無関係と切り捨てず境界候補に分類し、関連研究として必要な場合に参照する。",
-      "first_checked_at": "2026-10-12T09:45:36+00:00",
-      "last_checked_at": "2026-10-12T09:45:36+00:00",
-      "linked_from": [],
-      "borderline_recheck_count": 0,
-      "title": "LegoOS: A Disseminated, Distributed OS for Hardware Resource Disaggregation"
-    },
     "arXiv:2509.25140": {
       "classification": "borderline",
       "canonical_id": "arXiv:2509.25140",
@@ -71522,6 +71508,21 @@
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "Trust or Escalate: LLM Judges with Provable Guarantees for Human Agreement"
+    },
+    "arXiv:2203.07814": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2203.07814",
+      "identity_tokens": [
+        "DOI:10.1126/science.abq1158",
+        "SemanticScholar:5cbe278b65a81602a864184bbca37de91448a5f5",
+        "arXiv:2203.07814"
+      ],
+      "reason": "原著の一次要旨は、競技プログラミングでの正答率を上げるための大規模なプログラム候補生成、実行挙動に基づくフィルタリング、学習データ整備を主要貢献とし、Codeforcesでの順位を評価する。推論時の多数候補サンプリングには計算資源上の関心があるが、GPUカーネル、サービング遅延、メモリ階層、バッチ処理、実行時オフロード等を高速化するシステム方式を一次要旨からは確認できない。能力向上が主眼のため即収録ではなく境界的と判断。",
+      "first_checked_at": "2026-10-12T13:50:16+00:00",
+      "last_checked_at": "2026-10-12T13:50:16+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Competition-Level Code Generation with AlphaCode"
     }
   }
 }
