@@ -34,13 +34,13 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   実装：[✓](https://github.com/mirage-project/mirage) ・ リポジトリ内被引用：9  
   演算子単位の多数カーネル起動をSM粒度の依存グラフへ分解し、単一常駐巨大カーネル内の分散スケジューラで演算・通信・タスク間パイプラインを重ね、vLLM/SGLang比で最大1.7倍の推論遅延改善を示す。
 
+- **2026-03 · [FlashAttention-4: Algorithm and Kernel Pipelining Co-Design for Asymmetric Hardware Scaling](2026-2603.05451-flashattention-4-algorithm-and-kernel-pipelining-co-design-for-asymmetri.md)**  
+  実装：[✓](https://github.com/Dao-AILab/flash-attention/tree/main/flash_attn/cute) ・ リポジトリ内被引用：8  
+  FlashAttention-4は、NVIDIA Blackwell世代のB200でテンソルコアの行列積性能が大きく増加した一方、共有メモリの読出し帯域や指数関数演算器の性能が同じ比率では伸びないことに対応する注意カーネルである。FlashAttention-4は前向き・逆向きの処理を別々に設計し、行列積、softmax、メモリ転送、勾配集約を重ね合わせる。
+
 - **2025-12 · [SonicMoE: Accelerating MoE with IO and Tile-aware Optimizations](2025-2512.14080-sonicmoe-accelerating-moe-with-io-and-tile-aware-optimizations.md)**  
   実装：[✓](https://github.com/Dao-AILab/sonic-moe) ・ リポジトリ内被引用：8  
   SonicMoEは混合専門家モデル（Mixture-of-Experts、MoE）の学習を対象に、専門家の細粒度化と高疎性化によって生じる三種類の非効率を同時に減らす。ICLR 2026正式版では、7B級の細粒度MoEでScatterMoEに対する活性値メモリ削減45%、Hopper世代GPUでの計算処理量1.86倍を報告する。
-
-- **2026-03 · [FlashAttention-4: Algorithm and Kernel Pipelining Co-Design for Asymmetric Hardware Scaling](2026-2603.05451-flashattention-4-algorithm-and-kernel-pipelining-co-design-for-asymmetri.md)**  
-  実装：[✓](https://github.com/Dao-AILab/flash-attention/tree/main/flash_attn/cute) ・ リポジトリ内被引用：7  
-  FlashAttention-4は、NVIDIA Blackwell世代のB200でテンソルコアの行列積性能が大きく増加した一方、共有メモリの読出し帯域や指数関数演算器の性能が同じ比率では伸びないことに対応する注意カーネルである。FlashAttention-4は前向き・逆向きの処理を別々に設計し、行列積、softmax、メモリ転送、勾配集約を重ね合わせる。
 
 - **2026-04 · [Open-TQ-Metal: Fused Compressed-Domain Attention for Long-Context LLM Inference on Apple Silicon](2026-2604.16957-open-tq-metal-fused-compressed-domain-attention-for-long-context-llm-inf.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
@@ -299,16 +299,16 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 ### 8年前（2018-11〜2019-10）
 
 - **2019-06 · [Triton: An Intermediate Language and Compiler for Tiled Neural Network Computations](2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md)**  
-  実装：[✓](https://github.com/triton-lang/triton) ・ リポジトリ内被引用：70  
+  実装：[✓](https://github.com/triton-lang/triton) ・ リポジトリ内被引用：71  
   深層学習の演算を高速なGPUカーネルにするには、数式を記述するだけでは足りない。入力配列のどの部分をまとめて読み出し、何回再利用し、どのスレッドに配り、いつ共有メモリへ移すかによって性能が大きく変わる。既存のcuBLASやcuDNNが対象とする標準演算なら高性能な実装を利用できるが、新しい行列演算や不規則な参照を伴う演算では、そのまま使えない。
 
 - **2019-10 · [Structured Pruning of Large Language Models](2019-1910.04732-structured-pruning-of-large-language-models.md)**  
-  実装：[✓](https://github.com/asappresearch/flop) ・ リポジトリ内被引用：10  
+  実装：[✓](https://github.com/asappresearch/flop) ・ リポジトリ内被引用：11  
   FLOP（Factorized Low-rank Pruning、因子化低ランク枝刈り）は、重みを個別にゼロ化する非構造的な枝刈りでは、パラメータ数を減らしても一般的な計算装置で速度が上がりにくいという問題に取り組む。
 
 ### 9年前（2017-11〜2018-10）
 
 - **2018-05 · [Online normalizer calculation for softmax](2018-1805.02867-online-normalizer-calculation-for-softmax.md)**  
-  実装：[✓](https://github.com/NVIDIA/online-softmax) ・ リポジトリ内被引用：26  
+  実装：[✓](https://github.com/NVIDIA/online-softmax) ・ リポジトリ内被引用：27  
   本論文は、数値的に安全なソフトマックスの出力を変えずに、入力配列を読み直す回数を減らす「オンライン正規化子（online normalizer）」を提案する。著者らのTesla V100での単精度実装では、ソフトマックス単体で最大約1.3倍の高速化が報告される。
 <!-- survey:auto:end -->
