@@ -2,7 +2,7 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-12T14:50:11+00:00",
+  "updated_at": "2026-10-12T14:51:19+00:00",
   "record_count": 11545,
   "records": {
     "arXiv:2303.08774": {
@@ -164831,9 +164831,9 @@
         "arXiv:2210.13452",
         "semanticscholar:fc4cbc7a75f5a3bbca59db5513231555f078fe78"
       ],
-      "reason": "一次要旨の目的は視覚モデルのトークン混合器とネットワーク骨格の寄与を比較し、ImageNet-1K分類でIdentityFormer・RandFormer・ConvFormer・CAFormerとStarReLUの性能を評価することである。StarReLUの演算量削減には触れるが、対象は画像認識アーキテクチャであり、LLMの推論サービング、KVメモリ、MoE配置、長文生成カーネルの実行効率を直接改善する研究ではない。したがって本サーベイの推論システム範囲から除外する。",
+      "reason": "タイトルで明示されている研究対象は画像認識向けMetaFormerのベースライン構成であり、LLM推論・サービング・メモリ階層・量子化・分散実行のシステム技術を主題としていない。タイトル段階で対象外と判断した。",
       "first_checked_at": "2026-10-11T20:48:40+00:00",
-      "last_checked_at": "2026-10-12T10:59:23+00:00",
+      "last_checked_at": "2026-10-12T14:51:19+00:00",
       "linked_from": [],
       "title": "MetaFormer Baselines for Vision"
     },
