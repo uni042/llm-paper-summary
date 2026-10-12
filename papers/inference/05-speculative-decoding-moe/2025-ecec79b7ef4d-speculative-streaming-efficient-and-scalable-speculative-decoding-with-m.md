@@ -24,6 +24,8 @@ code: null
 last_checked: '2026-10-13'
 worker_completed_at: '2026-10-13T07:33:30+09:00'
 worker_run_key: '20261013-0730-scheduled-chat-30/r01'
+last_audited: null
+audit_version: 0
 ---
 
 # Speculative Streaming: Efficient and Scalable Speculative Decoding with Multi-Stream Attention
