@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "4b4484f176d2d8ee75967390cfc9147ae5b10c53a02ef799557aca635b45762e",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_32e2822232848191b6d9a190e5940d17--2020-2008.02496-convbert-research-20261012-2335-scheduled-chat-00-r01.md",
+  "canonical_id": "arXiv:2008.02496",
+  "worker_completed_at": "2026-10-12T23:37:00+09:00",
+  "worker_run_key": "20261012-2326-scheduled-chat-00/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 5256,
+    "body_paragraphs": 25,
+    "method_chars": 1231,
+    "method_paragraphs": 7,
+    "evaluation_chars": 0,
+    "limitation_chars": 0,
+    "insufficiency_flags": [
+      "評価説明量 0 < 500",
+      "限界説明量 0 < 推奨 120"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 評価説明量 0 < 500"
+  ],
+  "processed_at": "2026-10-12T14:59:09+00:00"
+}

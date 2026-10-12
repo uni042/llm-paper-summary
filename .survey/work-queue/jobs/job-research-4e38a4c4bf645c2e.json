@@ -35,10 +35,15 @@
   "selection_reason": "Transformer注意演算のsoftmaxを2の指数・低精度演算・オンライン正規化に置換し、専用アクセラレータ上で7nm回路を評価。比較実装に対しPE面積0.90倍、エネルギー効率2.35倍、BERTタスク精度ほぼ維持を示し、推論カーネル・ハードウェア協調設計に該当。",
   "semantic_scholar_id": "b080ba53a471348e7e76234decdf14e730fea7db",
   "source_url": "https://arxiv.org/abs/2103.09301",
-  "status": "ready",
+  "status": "superseded",
   "title": "Softermax: Hardware/Software Co-Design of an Efficient Softmax for Transformers",
   "type": "research",
   "venue": "Design Automation Conference",
   "workflow_version": 10,
-  "year": 2021
+  "year": 2021,
+  "superseded_at": "2026-10-12T15:00:59+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2021-2103.09301-softermax-hardware-software-co-design-of-an-efficient-softmax-for-transf.md",
+  "represented_canonical_id": "arXiv:2103.09301",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
