@@ -30,6 +30,8 @@ worker_run_key: "20261011-2345-scheduled-chat-45/r01"
 returned_research_repair: true
 returned_research_original_run_key: "20261003-0730-scheduled-chat-30"
 reference_main_sha: "724f874ba6f26ab3c89536ffab4d4e36b15b712f"
+last_audited: null
+audit_version: 0
 ---
 
 # 超長系列注意計算の劣線形空間・ストリーミング近似

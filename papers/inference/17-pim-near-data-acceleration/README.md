@@ -24,7 +24,7 @@
 - [08-edge-on-device-llm-systems](../08-edge-on-device-llm-systems/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（21本）
+## 自動生成の論文一覧（22本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -80,6 +80,10 @@
 - **2026-03 · [PIM-SHERPA: Software Method for On-device LLM Inference by Resolving PIM Memory Attribute and Layout Inconsistencies](2026-2603.09216-pim-sherpa-software-method-for-on-device-llm-inference-by-resolving-pim-memory-attribute-and-layout-inconsistencies.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   PIM向け重みを一つだけ保持し、キャッシュ可能バッファへの実行時並べ替えで前処理と生成の属性・配置矛盾を解消してDRAM容量を約半減する。
+
+- **2025-11 · [Sangam: Chiplet-Based DRAM-PIM Accelerator with CXL Integration for LLM Inferencing](2025-2511.12286-sangam-chiplet-based-dram-pim-accelerator-with-cxl-integration-for-llm-i.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  LLMの復号段階では、一つの出力トークンを作るたびに大きな重み行列と過去のKVキャッシュを読み出す。バッチが小さいと行列積は実質的に行列とベクトルの積になり、GPUの大量の演算器を十分に使えないまま外部メモリの帯域が律速になる。GPUを使わずに推論する構成と、計算集約的な処理をGPUへ任せる協調構成の両方を設計対象とする。
 
 ### 2年前（2024-11〜2025-10）
 
