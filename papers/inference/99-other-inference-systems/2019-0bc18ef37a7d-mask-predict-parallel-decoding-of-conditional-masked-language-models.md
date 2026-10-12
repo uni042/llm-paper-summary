@@ -35,6 +35,8 @@ references:
   - canonical_id: arXiv:1810.04805
   - canonical_id: arXiv:1711.02281
   - canonical_id: arXiv:1802.06901
+last_audited: null
+audit_version: 0
 ---
 
 # Mask-Predict：低信頼語の選択的再予測による並列翻訳復号
