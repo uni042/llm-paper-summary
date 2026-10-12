@@ -1,0 +1,231 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "CritiqueDriveVLM: From Verifier-Guided Reinforcement Learning to Latent Thought Distillation for Autonomous Driving",
+      "source_url": "https://arxiv.org/abs/2607.04179",
+      "year": 2026,
+      "published": "2026-07-05",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "End-to-end Vision-Language Models (VLMs) show immense potential in autonomous driving. However, standard Supervised Fine-Tuning (SFT) often suffers from reasoning hallucinations and conservative biases. While traditional tool-augmented frameworks and Chain-of-Thought (CoT) approaches mitigate these issues, they incur exorbitant token consumption and unacceptable latency, rendering real-time deployment impractical. To resolve this reliability-efficiency trade-off, we propose CritiqueDriveVLM, a novel unified three-stage framework internalizing reasoning directly into the VLM. First, we introduce Critique-Driven Multi-Turn Reinforcement Learning (RL) guided by a multi-dimensional verifier. By providing granular scalar feedback and a multi-turn penalty, we force the policy to internalize logical deduction, cultivating a robust System-2 Teacher that achieves high accuracy without fragile external tools. Subsequently, we propose Latent Thought Distillation to overcome the latency bottleneck. By aligning the Student's latent representations with the Teacher's fully converged reasoning states, we compress deep logical capabilities into a fast, CoT-free System-1 Student. Extensive experiments on the widely-used DriveLMM-01 benchmark demonstrate remarkable improvements. Compared to the base model, our tool-free Teacher significantly boosts Multiple Choice Quality (MCQ) from 55.54% to a state-of-the-art 76.54%. Crucially, our distilled Student preserves competitive reasoning depth while drastically minimizing generation length to an average of merely 28 tokens. This slashes inference latency by 88% (from 3482 ms to 416 ms), paving a highly robust pathway for low-latency autonomous driving.Our source code is available at https://github.com/MICLAB-BUPT/CritiqueDriveVLM.",
+      "identifiers": [
+        "SemanticScholar:617d6c36b2eff092f77d9e70e065c6f16f447b9c"
+      ],
+      "semantic_scholar_id": "617d6c36b2eff092f77d9e70e065c6f16f447b9c",
+      "canonical_id": "arXiv:2607.04179",
+      "arxiv_id": "2607.04179",
+      "doi": "10.48550/arXiv.2607.04179",
+      "authors": [
+        "Zhao-Hong Liu",
+        "Hao Ye",
+        "Xian-Lin Zhang",
+        "Meng-Shi Qi"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 99,
+        "matched_prestigious_venue": null
+      },
+      "reason": "CritiqueDriveVLM distills reasoning into a 28-token student and reports 88% lower inference latency (3482 ms to 416 ms) for autonomous-driving VLM decisions.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Large Language Model Enhanced Differentiable Trajectory Planning for IoT-Enabled Autonomous Driving",
+      "source_url": "https://arxiv.org/abs/2607.10438",
+      "year": 2026,
+      "published": "2026-07-11",
+      "venue": "IEEE Internet of Things Journal",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Autonomous driving planning is a key component of IoT-enabled intelligent transportation systems, requiring vehicles to generate safe, efficient, and executable trajectories in complex urban environments from multisource contextual information. While imitation learning (IL) has shown promise on large-scale datasets, IL-based planners still suffer from limited coverage of complex long-tail interactions, weak consistency with downstream constrained refinement, and insufficient use of high-level scene semantics under real-time constraints. To address these issues, this article proposes a large language model (LLM) enhanced differentiable trajectory planning framework for IoT-enabled autonomous driving. Specifically, we introduce a surrounding agent centric data augmentation strategy to reorganize surrounding agent trajectories as additional planning supervision, thereby improving the training distribution without collecting additional raw data. We further design a complexity-aware asynchronous LLM-based semantic enhancement module to extract scene-related high-level semantic features with controlled online overhead. In addition, a differentiable optimization module is incorporated to refine generated trajectories with explicit residual penalties while backpropagating optimization gradients to the upstream planner. Experiments show that the proposed method achieves the best overall scores of 83.63 and 78.29 on the nuPlan closed-loop nonreactive and reactive Hard20 benchmarks, respectively, and CARLA-ROS tests further verify its online deployment and real time closed-loop execution capability.",
+      "identifiers": [
+        "SemanticScholar:565ac2c3fb93a8b6fd21e0cd8d4fc3543f195829"
+      ],
+      "semantic_scholar_id": "565ac2c3fb93a8b6fd21e0cd8d4fc3543f195829",
+      "canonical_id": "arXiv:2607.10438",
+      "arxiv_id": "2607.10438",
+      "doi": "10.1109/JIOT.2026.3711819",
+      "authors": [
+        "Shihao Zhang",
+        "Jing Yang",
+        "Zi-Yu Song",
+        "Zheng Lin",
+        "Sunil Prajapat",
+        "Zhaochen Xia",
+        "H. Ghayvat",
+        "Hai-Tao Ding",
+        "L. Y. Por",
+        "Ashok Kumar Das"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 93,
+        "matched_prestigious_venue": null
+      },
+      "reason": "The autonomous-driving planner uses asynchronous semantic enrichment with controlled online overhead and reports real-time closed-loop deployment, an explicit latency-constrained inference path.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "CORVUS: Context Optimization and Reduction Via Underlying Synchronization for LLM Coding Agents",
+      "source_url": "https://arxiv.org/abs/2607.22711",
+      "year": 2026,
+      "published": "2026-07-20",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "LLM coding agents operate by constructing trajectories that accumulate reasoning, tool calls, and results to enable multi-step decision-making. However, the conventional append-only trajectory architecture found in practice tightly couples file-read actions with their observations, capturing snapshots that become permanently fixed in the chronological history. As files change through agent edits or concurrent human modifications, these snapshots become stale, causing reasoning errors and causing agents to redundantly re-read files, with each re-read appending yet another copy to the trajectory. To mitigate this, we propose CORVUS, a novel trajectory architecture that decouples file-read actions from their observations by maintaining a synchronized registry of relevant files and injecting only their current contents at each reasoning cycle. This structural change produces significantly lighter-weight trajectories that remain synchronized with the actual codebase state by construction, eliminating redundant file copies and stale snapshots that bloat conventional trajectories. We evaluated CORVUS on SWE- POLYBENCH_VERIFIED and SWE-BENCH PRO across four LLMs, achieving 9-50% reduction in average input tokens per task, 15-32% shorter final prompts, and up to 37% fewer reasoning cycles while maintaining comparable pass rates.",
+      "identifiers": [
+        "SemanticScholar:8a5e35d6b16b22faa55021dff11b7b98e88fb69c"
+      ],
+      "semantic_scholar_id": "8a5e35d6b16b22faa55021dff11b7b98e88fb69c",
+      "canonical_id": "arXiv:2607.22711",
+      "arxiv_id": "2607.22711",
+      "doi": "10.48550/arXiv.2607.22711",
+      "authors": [
+        "Ming-Wei Zheng",
+        "David OBrien",
+        "Siwei Cui",
+        "Pardis Pashakhanloo",
+        "Rajdeep Mukherjee",
+        "Myeongsoo Kim",
+        "Sachit Kuhar"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 84,
+        "matched_prestigious_venue": null
+      },
+      "reason": "CORVUS replaces stale append-only read snapshots with synchronized file context, reducing average input tokens 9–50% and reasoning cycles up to 37% in coding-agent inference.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "MKG-attention: Budget-aware multimodal graph retrieval for faithful video question answering",
+      "source_url": "https://doi.org/10.1016/j.neucom.2026.134854",
+      "year": 2026,
+      "published": "2026-08-01",
+      "venue": "Neurocomputing",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": null,
+      "identifiers": [
+        "SemanticScholar:573deac0c049f284bdf519377d2744061d306d39"
+      ],
+      "semantic_scholar_id": "573deac0c049f284bdf519377d2744061d306d39",
+      "doi": "10.1016/j.neucom.2026.134854",
+      "canonical_id": "DOI:10.1016/j.neucom.2026.134854",
+      "authors": [
+        "Asad Khan",
+        "Zafar Ali",
+        "Guilin Qi",
+        "Kaibalya Prasad Bhuyan",
+        "P. Kefalas"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 72,
+        "matched_prestigious_venue": null
+      },
+      "reason": "MKG-Attention localizes and sparsely injects evidence under fixed online budgets and selectively verifies high-risk answers, directly controlling VideoQA inference context and cost.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "SkillZip: Contract-Preserving Graph Compression for Scalable Agent Skill Libraries",
+      "source_url": "https://arxiv.org/abs/2608.05604",
+      "year": 2026,
+      "published": "2026-08-06",
+      "venue": null,
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Models (LLMs) increasingly act as agents whose procedural knowledge is stored in reusable skill packages and loaded at inference time. As skill libraries grow, a central challenge is to expose the smallest sufficient executable context under a limited context budget. Existing systems struggle to reuse routines below the whole-skill level, preserve procedural contracts during compression, keep compressed routines executable and expandable, and update the compressed library as skills evolve. These challenges reveal a unit mismatch: skills are retrieved as packages, compressed as text, and converted into execution graphs only after retrieval, whereas reliable reuse requires a contract-bearing procedural unit. We propose SkillZip, an execution-aware procedural abstraction framework that performs contract-preserving compression over section-level graphs. SkillZip rewrites recurring contract-valid motifs into reversible ported macros while preserving boundary signatures, dependency closure, verifier reachability, and source-level expansion. At inference time, it hydrates a compact, dependency-closed context and expands macros only when required. ReZip further integrates new skills and revises risky macros using execution evidence. Comprehensive experiments1 on technical and embodied agent benchmarks show SkillZip consistently outperforms the strongest baseline by up to 12.2 points, while achieving a 3.46x compression ratio with 99.2% dependency preservation and 98.7% verifier reachability. Scaling analyses further confirm robust retrieval across skill libraries ranging from 200 to 100K skills.",
+      "identifiers": [
+        "SemanticScholar:bc385adeaecf7990d86e32ff193411c137ce84af"
+      ],
+      "semantic_scholar_id": "bc385adeaecf7990d86e32ff193411c137ce84af",
+      "canonical_id": "arXiv:2608.05604",
+      "arxiv_id": "2608.05604",
+      "authors": [
+        "Xingyu Tan",
+        "Xiao-Yang Wang",
+        "Qing Liu",
+        "Xi-Wei Xu",
+        "Xin Yuan",
+        "Liming Zhu",
+        "Wen-Jie Zhang"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 67,
+        "matched_prestigious_venue": null
+      },
+      "reason": "SkillZip compresses reusable skill graphs into dependency-closed context and expands macros only when needed, reducing inference-time prompt context for large agent skill libraries.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-04ee77c9cde5",
+    "round": "libimp-04ee77c9cde53188-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 7,
+    "round_submission_count": 2,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-04ee77c9cde53188-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-04ee77c9cde53188-pre01.json",
+    "receipt": "sha256:314bdca5553fd24b6938ab11b1e377d3e8bb11a15093132d78006aa82d43cde3"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-04ee77c9cde5",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
