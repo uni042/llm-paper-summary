@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-12T11:46:25+00:00",
+  "generated_at": "2026-10-12T11:55:15+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 44,
+  "count": 42,
   "entries": [
     {
       "canonical_id": "DOI:10.1145/3714983.3714987",
@@ -271,22 +271,6 @@
       "worker_run_key": "20261006-0700-scheduled-chat-00/r01"
     },
     {
-      "canonical_id": "arXiv:2603.24517",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-06T13:07:40+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "日本語比率 61.5% < 70%"
-      ],
-      "quality_metrics": null,
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-db5ca9f425c1--libfile_9780444fdf908191ba8eed1e897b311b--2603.24517-avo.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-db5ca9f425c1--libfile_9780444fdf908191ba8eed1e897b311b--2603.24517-avo.json",
-      "worker_run_key": "20261006-2030-scheduled-chat-30/r01"
-    },
-    {
       "canonical_id": "arXiv:2607.29591",
       "title": null,
       "source_url": null,
@@ -303,22 +287,6 @@
       "worker_run_key": "20261006-1900-scheduled-chat-00/r01"
     },
     {
-      "canonical_id": "arXiv:2604.16957",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-06T16:37:20+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "日本語比率 66.6% < 70%"
-      ],
-      "quality_metrics": null,
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-f3b145c1aa40--libfile_0c6b73674e4c8191a4e7fcdd3fb07d7a--2604.16957-open-tq-metal.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-f3b145c1aa40--libfile_0c6b73674e4c8191a4e7fcdd3fb07d7a--2604.16957-open-tq-metal.json",
-      "worker_run_key": "20261006-2000-scheduled-chat-00/r02"
-    },
-    {
       "canonical_id": "arXiv:2608.25053",
       "title": null,
       "source_url": null,
@@ -332,22 +300,6 @@
       "quality_metrics": null,
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-1ec64e6cfe35--libfile_b998da9ea6388191b46c5212d5ab38d0--2608.25053-hydra.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-1ec64e6cfe35--libfile_b998da9ea6388191b46c5212d5ab38d0--2608.25053-hydra.json",
-      "worker_run_key": "20261006-2000-scheduled-chat-00/r01"
-    },
-    {
-      "canonical_id": "arXiv:2607.06763",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-07T05:26:39+00:00",
-      "return_count": 3,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "日本語比率 59.7% < 70%"
-      ],
-      "quality_metrics": null,
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-21041f85cbab--libfile_4a96a08b50708191b87e5fb961a1a282--2607.06763-trees-from-marginals.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-21041f85cbab--libfile_4a96a08b50708191b87e5fb961a1a282--2607.06763-trees-from-marginals.json",
       "worker_run_key": "20261006-2000-scheduled-chat-00/r01"
     },
     {
@@ -926,8 +878,8 @@
     },
     {
       "canonical_id": "arXiv:2607.10987",
-      "title": "[AAFLOW+] Stateful Operator Abstraction with Zero-Copy Distributed KV Cache Orchestration for Multi-Agent Workflows",
-      "source_url": "https://arxiv.org/abs/2607.10987",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-12T11:43:00+00:00",
       "return_count": 4,
       "assigned_worker": "scheduled-chat-00",
@@ -953,8 +905,8 @@
     },
     {
       "canonical_id": "arXiv:2603.10087",
-      "title": "Pooling Engram Conditional Memory in Large Language Models using CXL",
-      "source_url": "https://arxiv.org/pdf/2603.10087",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-12T11:45:13+00:00",
       "return_count": 9,
       "assigned_worker": "scheduled-chat-00",
@@ -974,6 +926,31 @@
       },
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_691bccf8083c81918eb99dec6cf84f47--2026-2603.10087-pooling-engram-cxl-returned-repair-20261012-2002-scheduled-chat-00-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_691bccf8083c81918eb99dec6cf84f47--2026-2603.10087-pooling-engram-cxl-returned-repair-20261012-2002-scheduled-chat-00-r01.json",
+      "worker_run_key": "20261012-2002-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2608.04991",
+      "title": "RAC: Reference-Aware Activation Compression for Communication-Efficient Split LLM Inference",
+      "source_url": "https://arxiv.org/html/2608.04991",
+      "returned_at": "2026-10-12T11:52:13+00:00",
+      "return_count": 6,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2026-2608.04991-rac-reference-aware-activation-compression-for-communication-efficient-s.md と 20 段落 / 4626文字 (100.0%) が完全一致"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 4939,
+        "body_paragraphs": 23,
+        "method_chars": 1581,
+        "method_paragraphs": 8,
+        "evaluation_chars": 1735,
+        "limitation_chars": 396,
+        "insufficiency_flags": []
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_80ad364ed1888191a4a203aa4450ea49--2026-2608.04991-rac-returned-repair-20261012-2002-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_80ad364ed1888191a4a203aa4450ea49--2026-2608.04991-rac-returned-repair-20261012-2002-scheduled-chat-00-r01.json",
       "worker_run_key": "20261012-2002-scheduled-chat-00/r01"
     }
   ]

@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "708e7ea190a79142f4b601d1b29d548b2fe6825b033a47173b2a84653ea15297",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_80ad364ed1888191a4a203aa4450ea49--2026-2608.04991-rac-returned-repair-20261012-2002-scheduled-chat-00-r01.md",
+  "canonical_id": "arXiv:2608.04991",
+  "worker_completed_at": "2026-10-12T20:07:45+09:00",
+  "worker_run_key": "20261012-2002-scheduled-chat-00/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 4939,
+    "body_paragraphs": 23,
+    "method_chars": 1581,
+    "method_paragraphs": 8,
+    "evaluation_chars": 1735,
+    "limitation_chars": 396,
+    "insufficiency_flags": []
+  },
+  "failures": [
+    "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2026-2608.04991-rac-reference-aware-activation-compression-for-communication-efficient-s.md と 20 段落 / 4626文字 (100.0%) が完全一致"
+  ],
+  "processed_at": "2026-10-12T11:52:13+00:00"
+}
