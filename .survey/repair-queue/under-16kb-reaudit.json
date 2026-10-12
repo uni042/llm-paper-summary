@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-10-12T05:46:24.071706+00:00",
+  "generated_at": "2026-10-12T11:02:54.465536+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 7,
+  "count": 6,
   "worker_counts": {
     "scheduled-chat-00": 2,
-    "scheduled-chat-30": 3,
+    "scheduled-chat-30": 2,
     "scheduled-chat-45": 2
   },
   "entries": [
@@ -92,7 +92,7 @@
       "file_bytes": 12962,
       "source_sha256": "7339d45eab389550de731537c7d36627aebdc75a270dab101b94bfd899cb2660",
       "source_git_blob_sha": "5166ab3aea106a5261f0e4caeea36b7bb9205d47",
-      "assigned_worker": "scheduled-chat-30",
+      "assigned_worker": "scheduled-chat-45",
       "semantic_status": "pending",
       "mechanical_status": "PASS",
       "japanese_ratio": 0.990361,
@@ -126,30 +126,6 @@
         "16KB未満再監査: 評価説明量 495 < 500"
       ],
       "warnings": []
-    },
-    {
-      "path": "papers/training/03-pipeline-parallel-modular-training/2026-2608.07974-zerolock-concurrent-memory-efficient-llm-training-via-modular-update-decoupling.md",
-      "canonical_id": "arXiv:2608.07974",
-      "title": "ZeroLock: Concurrent Memory-Efficient LLM Training via Modular Update Decoupling",
-      "file_bytes": 14460,
-      "source_sha256": "41b976413defcbc4b422a87489771f106d56efbf4f19ce2f08fcfc4787539a3d",
-      "source_git_blob_sha": "611d9f257d4b0f946eece5eb52cc50c364cc848e",
-      "assigned_worker": "scheduled-chat-45",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.730608,
-      "quality_metrics": {
-        "body_chars": 4296,
-        "method_chars": 1235,
-        "evaluation_chars": 1071,
-        "limitation_chars": 350
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 日本語比率 73.1% < 80%"
-      ],
-      "warnings": [
-        "日本語比率 73.1% < 警告基準 80%"
-      ]
     },
     {
       "path": "papers/inference/99-other-inference-systems/2023-2310.04836-dual-grained-quantization-efficient-fine-grained-quantization-for-llm.md",
