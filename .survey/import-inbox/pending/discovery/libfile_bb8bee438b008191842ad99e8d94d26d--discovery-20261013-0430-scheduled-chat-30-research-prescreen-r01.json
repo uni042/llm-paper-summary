@@ -1,0 +1,74 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261013-0430-scheduled-chat-30/r01-research-prescreen",
+  "reference_main_sha": "534844bec3f03588d10b6938cc54bc31d507d349",
+  "record_count": 4,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.06320",
+      "identity_tokens": [
+        "arxiv:2605.06320"
+      ],
+      "title": "Improving the Efficiency of Language Agent Teams with Adaptive Task Graphs",
+      "reason": "一次要旨は、言語エージェントの協働作業においてタスク依存関係と担当者を共有グラフで逐次更新し、無駄な通信・トークン消費・ファイル競合を減らすLATTEを提案する。壁時計時間とトークン費用の削減は実行効率に関係するが、主機構はエージェント間の作業調整であり、モデル推論時の計算資源管理、KVキャッシュ、低水準サービング機構を直接改善するものではない。",
+      "source_url": "https://arxiv.org/abs/2605.06320",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T04:30:00+09:00",
+      "last_checked_at": "2026-10-13T04:30:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 49,
+      "origin": "research_prescreen_relevance"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.27480",
+      "identity_tokens": [
+        "arxiv:2605.27480"
+      ],
+      "title": "BIRDS: Characterizing and Understanding Biodiversity Impact of Large Language Model Serving",
+      "reason": "一次要旨はLLMサービングを要求単位で計測し、運用・製造由来の生物多様性影響と回答品質を同時に評価するBIRDSを提案する。モデル・GPU・地域・要求負荷によるサービング設計の比較指標として関連するが、提案の中心は環境影響の定量評価であり、推論スケジューラやGPU実行の高速化・メモリ削減を直接実装する研究ではない。",
+      "source_url": "https://arxiv.org/abs/2605.27480",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T04:30:00+09:00",
+      "last_checked_at": "2026-10-13T04:30:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 66,
+      "origin": "research_prescreen_relevance"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.27441",
+      "identity_tokens": [
+        "arxiv:2605.27441"
+      ],
+      "title": "A Unified Structured Query Understanding Framework for Industrial Semantic Search",
+      "reason": "一次要旨は産業用検索の複数のクエリ理解機能を一つの小型言語モデルによるスキーマ制約生成へ統合し、自動アノテーションと蒸留を行うQuery Illuminatorを提案する。限られたGPUと低遅延制約での運用費用削減は推論効率に接するが、主な技術貢献は検索タスクの統合・教師データ生成とモデル能力の改善であり、汎用LLM推論ランタイム自体の新しい最適化は要旨で確認できない。",
+      "source_url": "https://arxiv.org/abs/2605.27441",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T04:30:00+09:00",
+      "last_checked_at": "2026-10-13T04:30:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 68,
+      "origin": "research_prescreen_relevance"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.05532",
+      "identity_tokens": [
+        "arxiv:2605.05532"
+      ],
+      "title": "A Few Good Clauses: Comparing LLMs vs Domain-Trained Small Language Models on Structured Contract Extraction",
+      "reason": "一次要旨は法律契約からの構造化情報抽出に特化した小型MoEモデルと汎用大型モデルのF1・抽出精度・利用料金を比較する応用評価である。78～97%の推論費用低下はモデル選択による業務費用差であり、KVキャッシュ管理、推論カーネル、分散サービング、オフロード等のシステム技術への直接的貢献は提示されていない。",
+      "source_url": "https://arxiv.org/abs/2605.05532",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T04:30:00+09:00",
+      "last_checked_at": "2026-10-13T04:30:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 73,
+      "origin": "research_prescreen_relevance"
+    }
+  ]
+}
