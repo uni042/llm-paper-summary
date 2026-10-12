@@ -35,10 +35,15 @@
   "selection_reason": "SWE-Prunerはコーディングエージェントの長いリポジトリ観測文脈を、現在の修正目標から生成したfocus hintと0.6Bの軽量skimmerで行単位に選択・圧縮する。トークン単位削除で構文を壊す従来圧縮と異なり、SWE-Bench Verifiedでトークン23〜38%削減し成功率を1.2〜1.4ポイント改善、SWE-QAでは最大54.4%削減。LLMのプリフィル入力トークン量・API費用を減らす推論時コンテキスト圧縮であり、推論効率サーベイ対象。",
   "semantic_scholar_id": "dacac5766fc96ca71a2a48590bbe6673e4360b88",
   "source_url": "https://arxiv.org/abs/2601.16746",
-  "status": "ready",
+  "status": "superseded",
   "title": "SWE-Pruner: Self-Adaptive Context Pruning for Coding Agents",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-10-12T21:02:40+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2026-2601.16746-swe-pruner-self-adaptive-context-pruning-for-coding-agents.md",
+  "represented_canonical_id": "arXiv:2601.16746",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
