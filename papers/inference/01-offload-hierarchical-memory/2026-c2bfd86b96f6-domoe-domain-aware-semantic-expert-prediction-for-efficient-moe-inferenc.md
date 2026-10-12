@@ -29,6 +29,8 @@ reference_main_sha: aa1dda12534e05482735c87bc167570cc7d58e05
 worklist_rank: 77
 quality_self_review_passed: true
 quality_self_review_version: '2026-10-07'
+last_audited: null
+audit_version: 0
 ---
 
 # DoMoE：分野別意味検索で専門家オフロードの予測費用を削減する

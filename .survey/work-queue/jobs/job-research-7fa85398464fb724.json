@@ -35,10 +35,15 @@
   "selection_reason": "連続video stream上でtemporal alignment・long context・real-time dialogueを実現するLIVE frameworkに、実環境stream向けmodel responseを高速化するoptimized inference pipelineを含む。Llama-2/3ベースVideoLLM-onlineがA100で5分videoのstreaming dialogueを平均10 FPS超で処理し、online multimodal LLM推論pipelineを直接扱うため対象内。",
   "semantic_scholar_id": "d019f8a137f62cd2c08ef42be54bbb980a8362f2",
   "source_url": "https://arxiv.org/abs/2406.11816",
-  "status": "ready",
+  "status": "superseded",
   "title": "VideoLLM-online: Online Video Large Language Model for Streaming Video",
   "type": "research",
   "venue": "Computer Vision and Pattern Recognition",
   "workflow_version": 10,
-  "year": 2024
+  "year": 2024,
+  "superseded_at": "2026-10-12T01:56:49+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2406.11816-videollm-online-online-video-large-language-model-for-streaming-video.md",
+  "represented_canonical_id": "arXiv:2406.11816",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

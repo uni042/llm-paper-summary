@@ -35,10 +35,15 @@
   "selection_reason": "dense 4-bit baseとsparse 4-bit residualへinlier/outlierを分解し、ZipperEngineでsparse block計算をdense 4-bit GEMMへ融合する推論向け量子化。LLaMA3/Qwen3でnear-FP16精度とW16A16比最大1.24x高速化を報告。",
   "semantic_scholar_id": "eefc0bade8ebf89c718fb7114a77a92909e79b5d",
   "source_url": "https://arxiv.org/abs/2606.15652",
-  "status": "ready",
+  "status": "superseded",
   "title": "MosaicQuant: Inlier-Outlier Disaggregation for Unified 4-Bit LLM Quantization",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-10-12T01:56:49+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/16-weight-quantization-compression/2026-2606.15652-mosaicquant-inlier-outlier-disaggregation-for-unified-4-bit-llm-quantiza.md",
+  "represented_canonical_id": "arXiv:2606.15652",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

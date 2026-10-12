@@ -3,7 +3,7 @@
 GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE expert**をCPU memory、peer GPU HBM、SSD / Flashなどへ置き、必要な部分だけGPUへ移す、CPU/GPUで分担して計算する、storage側で計算する研究をまとめる。KV cache固有のoffloadは [KV Cache Offload / Recomputation](../10-kv-cache-offload-recomputation/) に分離する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（115本）
+## 自動生成の論文一覧（116本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -203,6 +203,10 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
 - **2026-08 · [DynaNDE: Dynamic Near-Data Expert Scheduling for Batched MoE Inference](2026-2609.00407-dynande-near-data-expert-scheduling.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   DynaNDEは、専門家ごとのトークン数・演算性能・重み転送・キャッシュ再利用を遅延モデルで比較し、各層をNPU実行とNDP実行へ動的分割して転送待ちを減らす。
+
+- **2026-08 · [DoMoE: Domain-Aware Semantic Expert Prediction for Efficient MoE Inference Under Expert Offloading](2026-c2bfd86b96f6-domoe-domain-aware-semantic-expert-prediction-for-efficient-moe-inferenc.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  GPUメモリに収まらない環境では、使わない専門家をホストメモリに置き、必要なものを転送する。専門家が実際に選ばれてから読み込むと、GPUが転送待ちで止まるため、将来選ばれる専門家を予測して先読み（プリフェッチ）する。
 
 - **2026-08 · [Cacheable by Design? Training Mixture-of-Experts Routers for Locality Against the Edge Memory-Bandwidth Wall: A Pre-Registered Negative Result with a Systems Measurement Study](2026-2608.18261-cacheable-by-design-expert-locality.md)**  
   実装：[✓](https://github.com/Shriniwas410/cacheable-by-design) ・ リポジトリ内被引用：0  

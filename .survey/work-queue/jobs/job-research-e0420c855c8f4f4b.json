@@ -35,10 +35,15 @@
   "selection_reason": "生成済みKVキャッシュを直接PRMへ渡しtrajectory再encodeを避け、scoring costをO(L^2)からO(L)へ削減する。最大5000x FLOPs、37x latency、34x memory削減を報告し、agentic inferenceでのKV再利用を直接扱う。",
   "semantic_scholar_id": "431f81e9621ffaea17639ecc30a10311ebb53a2e",
   "source_url": "https://arxiv.org/abs/2607.09153",
-  "status": "ready",
+  "status": "superseded",
   "title": "KV-PRM: Efficient Process Reward Modeling via KV-Cache Transfer for Multi-Agent Test-Time Scaling",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-10-12T01:56:49+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.09153-kv-prm-efficient-process-reward-modeling-via-kv-cache-transfer-for-multi.md",
+  "represented_canonical_id": "arXiv:2607.09153",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
