@@ -78,6 +78,23 @@ llama.cppの主要な機能・性能更新を継続的に記録する集約ペ�
 
 ## 主要更新
 
+### 2026-10-12 — llama.cpp b11559 / b11558：OpenCL改善
+- b11559: OpenCL版FlashAttentionがkey次元512とGQA4/GQA8に対応。gpt-oss-20b MXFP4のOpenCL限定ベンチマークでは16.59→29.01トークン/秒（1.75倍）。**NVIDIA CUDAへ同倍率を外挿しない**。[公式版](https://github.com/ggml-org/llama.cpp/releases/tag/b11559)、[PR #30266](https://github.com/ggml-org/llama.cpp/pull/30266)。
+- b11558: OpenCL版の巨大量子化重み、ブロードキャストとRMSNormの不整合を修正。速度の定量値は未報告。[公式版](https://github.com/ggml-org/llama.cpp/releases/tag/b11558)、[PR #30310](https://github.com/ggml-org/llama.cpp/pull/30310)。
+
+### 2026-10-11 — llama.cpp b11554〜b11556：新モデルとMoE
+- b11556: Prism Bonsai 2 27Bの重み変換・読み込みに対応。ただし配布形式の全てで標準版完全互換を実証したものではない。[PR #29600](https://github.com/ggml-org/llama.cpp/pull/29600)。
+- b11555: AVX2 CPU上のF16C命令判定修正。CUDAの速度改善とは別。[PR #30270](https://github.com/ggml-org/llama.cpp/pull/30270)。
+- b11554: VulkanのMoE重複expert ID処理を効率化。報告速度改善は約1%でありCUDAに適用できない。[PR #29998](https://github.com/ggml-org/llama.cpp/pull/29998)。
+
+### 2026-10-10〜11 — llama.cpp b11538 / b11540 / b11541 / b11551 / b11552
+- b11552: 並列要求で利用中のスロットのプロンプトキャッシュを誤上書きし得る問題を修正。[PR #30295](https://github.com/ggml-org/llama.cpp/pull/30295)。
+- b11551: MiniCPM-V 4.7の画像・動画入力向け3D RoPE等を先行実装。[PR #29416](https://github.com/ggml-org/llama.cpp/pull/29416)。
+- b11540: Intel Arc / SYCL / MXFP4 MoEの限定条件でデコード1.91〜2.02倍。NVIDIA CUDAでの改善を意味しない。[PR #29809](https://github.com/ggml-org/llama.cpp/pull/29809)。
+- b11541: OpenCL低ビットMoE行列積の更新。[公式版](https://github.com/ggml-org/llama.cpp/releases/tag/b11541)。
+- b11538: Windows MSVC/CUDAで丸め一致性を修正。生成速度の向上は未検証。[PR #30229](https://github.com/ggml-org/llama.cpp/pull/30229)。
+- Windows MLとllama.cpp/GGUFの実験的統合（10月7日）。既存CLIの自動置換ではない。[Microsoft公式](https://devblogs.microsoft.com/foundry-on-windows/build-on-winml-oct-7-26/)。
+
 ### 2026-10-09 — b11513：CUDAの上位k件選択（Top-k）の形状別最適化
 
 - CUDAの上位k件選択で行数・列数に応じて複数の選択アルゴリズムを使い分ける。Qwen4Expの34,816トークン条件では演算単体の実行時間が5,761.8→941.8 ms（約6.12倍）となったが、**モデル全体が6倍高速になるわけではない**。DGX Station GB300でのQwen3.8-Flash-Nextのプリフィルは1,755.8→2,852.8 tok/s（約1.625倍）、通常生成は100.08→99.89 tok/sでほぼ不変。Windows RTX 5090での形状別正当性試験527/527通過、RTX 4070 SUPERでの実速度は未計測。

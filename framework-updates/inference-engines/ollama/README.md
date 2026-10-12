@@ -27,6 +27,12 @@ Ollamaの主要な機能・性能更新を継続的に記録する集約ペー�
 
 ## 主要更新
 
+### 2026-10-11 — Ollama v0.40.3：モデル自動移行を一時停止
+- v0.40.2で導入した既存モデルのバックグラウンド互換性移行は、埋め込みモデルなどでのAPI要求・GC負荷を避けるため一時停止。生成速度やVRAMの普遍的改善値は未報告。[公式版](https://github.com/ollama/ollama/releases/tag/v0.40.3)、[PR #18908](https://github.com/ollama/ollama/pull/18908)。
+
+### 2026-10-09 — Ollama v0.40.2：ローカルモデル形式移行
+- 形式移行とバックアップにより一時的にディスク容量を消費し得る。**v0.40.3では自動移行が一時停止中**のため現行動作と区別する。[公式版](https://github.com/ollama/ollama/releases/tag/v0.40.2)。
+
 ### 2026-10-08 — Ollama v0.40.1：WindowsのClef Flash読込み互換性修正
 
 - Windows環境の古いlibc++で2GiB超のファイルオフセットが32ビットへ切り詰められ、`clef-flash` の判定ヘッドを誤読して `/v1/systemone` が `Clef: non-finite logit` で失敗する問題を、64ビットのファイルシークへ修正。Windows 11のCPU経路で失敗から正常なHTTP 200への復帰が確認された。

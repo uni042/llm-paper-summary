@@ -28,6 +28,9 @@ ExLlamaV2には期間内の本質的更新がなく、後継のExLlamaV3を同�
 
 ## 主要更新
 
+### 2026-10-11 — ExLlamaV3 v1.6.1
+- GDN/KDA/Mambaドラフトの固定VRAM負荷を削減し、再帰型ドラフト、DFlashのスライディング注意、ドラフトとlong-ngramの混合投機的復号などを追加。Windows 11 / RTX 4070 SUPERでの速度・メモリ節約量は未確認。[公式版](https://github.com/turboderp-org/exllamav3/releases/tag/v1.6.1)。
+
 ### 2026-10-08 JST — ExLlamaV3 v1.6.0（正式公開、UTC 2026-10-07）
 
 - **CPU退避とメモリ使用量を改善**: AVX2対応CPUでの重み・専門家のCPU退避（offloading）を高速化し、CPUコアの割当・固定（pinning）を既定で最適化。システムRAMの追加使用量も削減した。比較可能な公式速度倍率・RAM削減量はリリースノートに記載されていないため断定しない。

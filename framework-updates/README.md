@@ -2,7 +2,7 @@
 
 主要LLMフレームワークで起きた、**推論速度・学習速度・memory使用量・GPU間通信・offload方式を実質的に変える更新**を、このページから追えるように継続管理する。
 
-- フレームワーク差分の最終確認: **2026-10-09**
+- フレームワーク差分の最終確認: **2026-10-12**
 - 用語・可読性の最終監査: **2026-09-07**
 
 この2つは分けて扱う。2026-10-02の差分確認で、TensorRT Edge-LLMとvLLM-Omniを独立した継続監視対象へ追加した。TensorRT-LLM / vLLM本体とは別ページで、edge / physical-AI推論とomni-modality multi-stage serving固有の主要更新を追跡する。
@@ -67,6 +67,12 @@
 ---
 
 ## 最新更新
+
+### 2026-10-10〜12 — 推論基盤・モデル更新
+- **Ollama v0.40.3**: v0.40.2の自動モデル移行を処理負荷対策で一時停止。[Ollama](inference-engines/ollama/)
+- **llama.cpp b11538〜b11559**: Windowsの丸め修正、Intel SYCLのMoE最適化、OpenCL FlashAttention、MiniCPM-V 4.7先行対応、並列サーバー整合性など。限定環境の実測値をCUDAへ外挿しない。[llama.cpp](inference-engines/llama-cpp/)
+- **ExLlamaV3 v1.6.1**: ドラフトとVRAM管理を更新。Windows RTX 4070 SUPER実測は未確認。[ExLlama](inference-engines/exllama/)
+- **モデル**: EmbeddingGemma 2の重み公開、Mistral Large 4の有効520億パラメータの正式情報、MiniCPM-V 4.7のチェックポイント確認を反映。[Gemma](../llm-releases/gemma.md) / [Mistral](../llm-releases/mistral.md) / [MiniCPM](../llm-releases/minicpm.md)
 
 ### 2026-10-09 — llama.cpp / Ollamaの主要更新（新モデル公開0件）
 

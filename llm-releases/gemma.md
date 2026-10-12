@@ -6,6 +6,7 @@ Gemmaは重み公開（open-weight）モデル群なので、API専用modelと�
 
 | リリース日 | モデル | 簡単な説明 | 公式リンク |
 |---|---|---|---|
+| 2026-10-06 | EmbeddingGemma 2 | Gemma 4系のマルチモーダル埋め込みモデル（総約7.4億パラメータ、768次元、文脈8192）。768/512/256/128次元に対応。FP16ではNaN・精度低下の懸念があり、公式はBF16/FP32を推奨。生成LLMではなく検索・分類向け。 | https://huggingface.co/google/embeddinggemma-2 |
 | 2026-06-03 | Gemma 4 12B Unified | Gemma 4世代の12B級Unifiedモデル。複数用途・入力形式を1つのmodel familyへまとめる後続releaseとして追加。12B級は大規模MoEより総weight量が小さく、量子化すればローカルGPU / unified-memory machineでも比較的扱いやすいサイズ帯。 | https://ai.google.dev/gemma/docs/releases |
 | 2026-04-16 | Gemma 4 MTP | E2B、E4B、31B、26B-A4B向けにMTP（Multi-Token Prediction; 複数token予測）headを持つvariantを追加。通常の次1 token予測に加えて複数token先の候補を作り、対応runtimeでは投機的デコードへ利用できる。 | https://ai.google.dev/gemma/docs/releases |
 | 2026-03-31 | Gemma 4 | E2B、E4B、31B、26B-A4Bを含むGemma 4世代。毎tokenほぼ全weightを使うdense modelと、一部expertだけを使うMoEを同じfamilyに含むopen-weightリリース。 | https://ai.google.dev/gemma/docs/releases |

@@ -1,18 +1,27 @@
 {
   "schema_version": 1,
   "ok": true,
-  "attempt_id": "library-import-maint-20261009T0940-cache-topk-ollama",
+  "attempt_id": "library-import-20261012-maint-0830-three-days-batch01",
   "kind": "framework_llm_update",
   "updated_paths": [
     "framework-updates/inference-engines/llama-cpp/README.md",
     "framework-updates/inference-engines/ollama/README.md",
-    "framework-updates/README.md"
+    "framework-updates/inference-engines/exllama/README.md",
+    "llm-releases/gemma.md",
+    "llm-releases/mistral.md",
+    "framework-updates/README.md",
+    "llm-releases/minicpm.md"
   ],
-  "created_paths": [],
+  "created_paths": [
+    "llm-releases/minicpm.md"
+  ],
   "updated_existing_paths": [
     "framework-updates/inference-engines/llama-cpp/README.md",
     "framework-updates/inference-engines/ollama/README.md",
+    "framework-updates/inference-engines/exllama/README.md",
+    "llm-releases/gemma.md",
+    "llm-releases/mistral.md",
     "framework-updates/README.md"
   ],
-  "summary": "2026-10-09 08:30 framework maintenance: llama.cpp MoE GPU cache and CUDA TOP_K; Ollama Windows Clef Flash 64-bit seek."
+  "summary": "Consolidate 2026-10-10 to 2026-10-12 Library maintenance updates across 7 framework/LLM files"
 }
