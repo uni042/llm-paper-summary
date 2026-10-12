@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-29b6d9e42f015c47-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2606.17924",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2606.17924",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2606.17924",
+      "SemanticScholar:bba2cf431d516faf3fd94350b9ee2dced44d65ae",
+      "arXiv:2606.17924"
+    ],
+    "reason": "Primary-text Sections 4.3 and Appendix C report that K=3 refinement raises policy-query latency from 156.6 to 198.7 ms on OpenVLA and adds 391 GFLOPs; the paper trades extra inference compute for VLA success quality rather than improving inference efficiency.",
+    "first_checked_at": "2026-10-12T22:18:02+00:00",
+    "last_checked_at": "2026-10-12T22:18:02+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2025-2502.21074-codi-compressing-chain-of-thought-into-continuous-space-via-self-distill.md"
+    ],
+    "title": "PearlVLA: Progressive Embodied Action-Plan Refinement in Latent Space"
+  },
+  "processed_at": "2026-10-12T22:18:03+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-29b6d9e42f01",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

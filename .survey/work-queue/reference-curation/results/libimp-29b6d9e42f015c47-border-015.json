@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-29b6d9e42f015c47-border-015",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2605.21132",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2605.21132",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2605.21132",
+      "SemanticScholar:68e53f1a5f1c257418a7c69f441bdff234d6b088",
+      "arXiv:2605.21132"
+    ],
+    "reason": "SurgOnAir streams frames into narration tokens in real time without future access, a potentially relevant low-latency VLM execution pattern; the abstract does not quantify latency or compute savings.",
+    "first_checked_at": "2026-10-12T22:18:02+00:00",
+    "last_checked_at": "2026-10-12T22:18:02+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2406.11816-videollm-online-online-video-large-language-model-for-streaming-video.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "SurgOnAir: Hierarchy-Aware Real-Time Surgical Video Commentary"
+  },
+  "processed_at": "2026-10-12T22:18:02+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-29b6d9e42f01",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

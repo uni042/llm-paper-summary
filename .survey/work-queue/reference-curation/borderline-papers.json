@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-12T21:39:42+00:00",
-  "record_count": 4702,
+  "updated_at": "2026-10-12T22:18:02+00:00",
+  "record_count": 4708,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -71834,6 +71834,108 @@
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "Rethinking the Role of Entropy in Optimizing Tool-Use Behaviors for Large Language Model Agents"
+    },
+    "arXiv:2607.27881": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2607.27881",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2607.27881",
+        "SemanticScholar:7185163bbc453f38ccb6b20ef1b54f45e125f538",
+        "arXiv:2607.27881"
+      ],
+      "reason": "RoboBRIDGE asynchronously updates perception and replans to avoid execution stalls in deployed VLA robots, but the abstract gives no latency, throughput, memory, or model-serving efficiency evidence.",
+      "first_checked_at": "2026-10-12T22:17:57+00:00",
+      "last_checked_at": "2026-10-12T22:17:57+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2305.17126-large-language-models-as-tool-makers.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "RoboBRIDGE: A Modular Framework for Bridging Policies to Robust Real-World Robotic Agents"
+    },
+    "DOI:10.1109/tpami.2026.3718245": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/tpami.2026.3718245",
+      "identity_tokens": [
+        "DOI:10.1109/tpami.2026.3718245",
+        "SemanticScholar:a54bd69aa751389cf0f0bb7566234e6633589c25"
+      ],
+      "reason": "The DOI identifies an IEEE TPAMI SparseVLM+ paper whose stated topic is inference-time visual-token sparsification, but the official IEEE abstract page could not be retrieved in this screen; primary abstract evidence is therefore unavailable.",
+      "first_checked_at": "2026-10-12T22:17:57+00:00",
+      "last_checked_at": "2026-10-12T22:17:57+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.06742-honeybee-locality-enhanced-projector-for-multimodal-llm.md",
+        "papers/inference/99-other-inference-systems/2025-2502.11494-stop-looking-for-important-tokens-in-multimodal-language-models-duplicat.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "SparseVLM+: Visual Token Sparsification With Improved Text-Visual Attention Pattern"
+    },
+    "arXiv:2607.02907": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2607.02907",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2607.02907",
+        "SemanticScholar:274ac7edd2aa9be9697709329eac3a397c50f081",
+        "arXiv:2607.02907"
+      ],
+      "reason": "ProLaViT replaces explicit visual-generation reasoning with latent-space derivation and says it avoids inference-time tools, but the abstract does not quantify runtime, token, memory, or throughput savings.",
+      "first_checked_at": "2026-10-12T22:18:01+00:00",
+      "last_checked_at": "2026-10-12T22:18:01+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2502.21074-codi-compressing-chain-of-thought-into-continuous-space-via-self-distill.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "ProLaViT: Learning Progressive Latent Visual Thoughts in Structured Latent Space"
+    },
+    "DOI:10.1109/cvprf71909.2026.00911": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/cvprf71909.2026.00911",
+      "identity_tokens": [
+        "DOI:10.1109/cvprf71909.2026.00911",
+        "SemanticScholar:76150e659902f0fb1c93a292865224441e10893e"
+      ],
+      "reason": "The DOI and title identify an IEEE CVPR 2026 token-pruning paper relevant to LVLM inference, but the official publisher abstract could not be retrieved; without primary abstract text the contribution cannot be reliably classified.",
+      "first_checked_at": "2026-10-12T22:18:01+00:00",
+      "last_checked_at": "2026-10-12T22:18:01+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2502.11494-stop-looking-for-important-tokens-in-multimodal-language-models-duplicat.md",
+        "papers/inference/99-other-inference-systems/2025-2503.02175-divprune-diversity-based-visual-token-pruning-for-large-multimodal-model.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Uncertainty-Guided Graph Formulation via MWIS for Token Pruning in LVLMs"
+    },
+    "arXiv:2605.29440": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.29440",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2605.29440",
+        "SemanticScholar:7ae43be04bfa9a05ff327022b5eb7905083e7694",
+        "arXiv:2605.29440"
+      ],
+      "reason": "SkillBrew removes redundant, outdated, or harmful entries from growing LLM skill banks, which may reduce retrieval and prompt load; the abstract does not establish inference-time token or latency savings.",
+      "first_checked_at": "2026-10-12T22:18:01+00:00",
+      "last_checked_at": "2026-10-12T22:18:01+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2026-2601.02553-simplemem-efficient-lifelong-memory-for-llm-agents.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "SkillBrew: Multi-Objective Curation of Skill Banks for LLM Agents"
+    },
+    "arXiv:2605.21132": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.21132",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2605.21132",
+        "SemanticScholar:68e53f1a5f1c257418a7c69f441bdff234d6b088",
+        "arXiv:2605.21132"
+      ],
+      "reason": "SurgOnAir streams frames into narration tokens in real time without future access, a potentially relevant low-latency VLM execution pattern; the abstract does not quantify latency or compute savings.",
+      "first_checked_at": "2026-10-12T22:18:02+00:00",
+      "last_checked_at": "2026-10-12T22:18:02+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2406.11816-videollm-online-online-video-large-language-model-for-streaming-video.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "SurgOnAir: Hierarchy-Aware Real-Time Surgical Video Commentary"
     }
   }
 }

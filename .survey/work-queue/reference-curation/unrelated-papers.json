@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-12T21:39:42+00:00",
-  "record_count": 11547,
+  "updated_at": "2026-10-12T22:18:05+00:00",
+  "record_count": 11570,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -165135,6 +165135,370 @@
       "last_checked_at": "2026-10-12T21:38:02+00:00",
       "linked_from": [],
       "title": "Polynormer: Polynomial-Expressive Graph Transformer in Linear Time"
+    },
+    "arXiv:2604.14862": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.14862",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2604.14862",
+        "SemanticScholar:a97224fcbd68d3937d5b113189c9ea105f6434fa",
+        "arXiv:2604.14862"
+      ],
+      "reason": "Schema-key wording changes answer quality under grammar projection, but the paper studies instruction semantics and benchmark accuracy rather than inference-system efficiency.",
+      "first_checked_at": "2026-10-12T22:17:57+00:00",
+      "last_checked_at": "2026-10-12T22:17:57+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2403.06988-guiding-llms-the-right-way-fast-non-invasive-constrained-generation.md"
+      ],
+      "title": "Schema-Key Wording as an Instruction Channel in Structured Generation under Constrained Decoding"
+    },
+    "DOI:10.1016/j.neucom.2026.133140": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1016/j.neucom.2026.133140",
+      "identity_tokens": [
+        "DOI:10.1016/j.neucom.2026.133140",
+        "SemanticScholar:6752051d087b928e9eb07a83d9fde30c923a6171"
+      ],
+      "reason": "The study compares compact Autoformer, Informer, and PatchTST variants for general time-series forecasting; it does not target LLM inference or serving.",
+      "first_checked_at": "2026-10-12T22:17:58+00:00",
+      "last_checked_at": "2026-10-12T22:17:58+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2021-2107.02192-long-short-transformer-efficient-transformers-for-language-and-vision.md"
+      ],
+      "title": "Compact transformer variants for synthetic time series forecasting"
+    },
+    "arXiv:2511.16655": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2511.16655",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2511.16655",
+        "SemanticScholar:3e3403758516d6cdfa14fd00d97562aa2dabb0d0",
+        "arXiv:2511.16655"
+      ],
+      "reason": "NoSense and VSC-Repeat critique spatial-supersensing benchmarks and shortcut behavior; they do not contribute inference-system efficiency.",
+      "first_checked_at": "2026-10-12T22:17:58+00:00",
+      "last_checked_at": "2026-10-12T22:17:58+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.16449-moviechat-from-dense-token-to-sparse-memory-for-long-video-understanding.md"
+      ],
+      "title": "Solving Spatial Supersensing Without Spatial Supersensing"
+    },
+    "arXiv:2608.13113": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.13113",
+      "identity_tokens": [
+        "SemanticScholar:077febe2d06991c3452650871956932508854754",
+        "arXiv:2608.13113"
+      ],
+      "reason": "EgoMonth is a long-video memory benchmark for MLLM capability evaluation, not a serving or inference-efficiency method.",
+      "first_checked_at": "2026-10-12T22:17:58+00:00",
+      "last_checked_at": "2026-10-12T22:17:58+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.16449-moviechat-from-dense-token-to-sparse-memory-for-long-video-understanding.md"
+      ],
+      "title": "EgoMonth: A Month-Level Egocentric Video Benchmark for Long-Term Spatiotemporal Memory"
+    },
+    "arXiv:2608.07068": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.07068",
+      "identity_tokens": [
+        "SemanticScholar:f200a0ecc88183a8ecd90dc5cbc79dd1adbd2934",
+        "arXiv:2608.07068"
+      ],
+      "reason": "MemOPD reconstructs aligned on-policy states and packs teacher scoring to speed actor computation during training; the measured speedup is training-only.",
+      "first_checked_at": "2026-10-12T22:17:59+00:00",
+      "last_checked_at": "2026-10-12T22:17:59+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2502.12110-a-mem-agentic-memory-for-llm-agents.md",
+        "papers/inference/99-other-inference-systems/2025-2506.15841-mem1-learning-to-synergize-memory-and-reasoning-for-efficient-long-horiz.md"
+      ],
+      "title": "MemOPD: On-Policy Distillation through Memory State Alignment for Long-Horizon Agents"
+    },
+    "arXiv:2608.00743": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.00743",
+      "identity_tokens": [
+        "SemanticScholar:4316afaae9379eba317a9d017393f6ab77ecd1ae",
+        "arXiv:2608.00743"
+      ],
+      "reason": "LUT improves latent visual reasoning through trajectory distillation and policy optimization; its reported contribution is training and answer quality, not runtime efficiency.",
+      "first_checked_at": "2026-10-12T22:17:59+00:00",
+      "last_checked_at": "2026-10-12T22:17:59+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2502.21074-codi-compressing-chain-of-thought-into-continuous-space-via-self-distill.md"
+      ],
+      "title": "LUT: Latent Utility Training for Visual Reasoning"
+    },
+    "arXiv:2607.23332": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.23332",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2607.23332",
+        "SemanticScholar:d011e5a14f3cd778a1d775087d25874779d329f5",
+        "arXiv:2607.23332"
+      ],
+      "reason": "AllocBench measures whether agents allocate tools judiciously across abstract and script-writing tasks; it evaluates capability rather than inference or serving systems.",
+      "first_checked_at": "2026-10-12T22:17:59+00:00",
+      "last_checked_at": "2026-10-12T22:17:59+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2305.17126-large-language-models-as-tool-makers.md"
+      ],
+      "title": "AllocBench: Measuring Online Tool Allocation Capability in LLM Agents"
+    },
+    "arXiv:2607.10611": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.10611",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2607.10611",
+        "SemanticScholar:c9f435b193874b21ee70f4a772a4236ae3d67f7e",
+        "arXiv:2607.10611"
+      ],
+      "reason": "M+Adam improves low-precision LLM pretraining with additive and multiplicative weight updates; its efficiency contribution is training-only.",
+      "first_checked_at": "2026-10-12T22:17:59+00:00",
+      "last_checked_at": "2026-10-12T22:17:59+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2110.02861-8-bit-optimizers-via-block-wise-quantization.md"
+      ],
+      "title": "M+Adam: Low-Precision Training via Additive-Multiplicative Optimization"
+    },
+    "DOI:10.64898/2026.07.07.736795": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.64898/2026.07.07.736795",
+      "identity_tokens": [
+        "DOI:10.64898/2026.07.07.736795",
+        "SemanticScholar:4d4ef227c3617b14b99ae78b90c6b500973520d1"
+      ],
+      "reason": "Weight locking seeks to prevent misuse-oriented fine-tuning of genomic foundation models; the work is a biosecurity and training-robustness study, not an inference-efficiency contribution.",
+      "first_checked_at": "2026-10-12T22:18:00+00:00",
+      "last_checked_at": "2026-10-12T22:18:00+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2110.02861-8-bit-optimizers-via-block-wise-quantization.md"
+      ],
+      "title": "Safeguarding open-weight genomic foundation models through weight locking"
+    },
+    "arXiv:2607.04319": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.04319",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2607.04319",
+        "SemanticScholar:c1b949f55204bd9a6959a183fb924c2f94df58e8",
+        "arXiv:2607.04319"
+      ],
+      "reason": "Legible-by-Construction changes attention and feed-forward representations for interpretability while preserving benchmark quality; it does not claim inference-system efficiency.",
+      "first_checked_at": "2026-10-12T22:18:00+00:00",
+      "last_checked_at": "2026-10-12T22:18:00+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2203.14680-transformer-feed-forward-layers-build-predictions-by-promoting-concepts-.md"
+      ],
+      "title": "Legible-by-Construction: Attention and End-to-End Transformers"
+    },
+    "arXiv:2607.04432": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.04432",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2607.04432",
+        "SemanticScholar:2e7d132358ce0fd3925946b8a1a617877761b4f1",
+        "arXiv:2607.04432"
+      ],
+      "reason": "The paper analyzes hidden-channel transfer and safety-related representation alignment, not serving or runtime efficiency.",
+      "first_checked_at": "2026-10-12T22:18:00+00:00",
+      "last_checked_at": "2026-10-12T22:18:00+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2203.14680-transformer-feed-forward-layers-build-predictions-by-promoting-concepts-.md"
+      ],
+      "title": "Covert Trait Propagation Is Representation Alignment: Mechanistic Evidence from Hidden-Channel Distillation"
+    },
+    "arXiv:2606.27684": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.27684",
+      "identity_tokens": [
+        "DOI:10.1145/3770855.3817855",
+        "SemanticScholar:05efaaf3c52a3e03cec450b74d4526c76f7cd95a",
+        "arXiv:2606.27684"
+      ],
+      "reason": "IntuRec improves latent reasoning trajectories for recommender quality; the abstract does not establish a connection to LLM runtime or serving efficiency.",
+      "first_checked_at": "2026-10-12T22:18:02+00:00",
+      "last_checked_at": "2026-10-12T22:18:02+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2502.21074-codi-compressing-chain-of-thought-into-continuous-space-via-self-distill.md"
+      ],
+      "title": "Intuition-Guided Latent Reasoning for LLM-Based Recommendation"
+    },
+    "arXiv:2606.24636": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.24636",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2606.24636",
+        "SemanticScholar:13235fb434a6b4f5e758db2fd6aa473477331a5f",
+        "arXiv:2606.24636"
+      ],
+      "reason": "CineCap improves cinematographic video-caption quality and benchmark performance without a stated inference-system efficiency contribution.",
+      "first_checked_at": "2026-10-12T22:18:02+00:00",
+      "last_checked_at": "2026-10-12T22:18:02+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.16449-moviechat-from-dense-token-to-sparse-memory-for-long-video-understanding.md"
+      ],
+      "title": "CineCap: Structured Reasoning with Spatio-Temporal Anchors for Cinematographic Video Captioning"
+    },
+    "arXiv:2606.17924": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.17924",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2606.17924",
+        "SemanticScholar:bba2cf431d516faf3fd94350b9ee2dced44d65ae",
+        "arXiv:2606.17924"
+      ],
+      "reason": "Primary-text Sections 4.3 and Appendix C report that K=3 refinement raises policy-query latency from 156.6 to 198.7 ms on OpenVLA and adds 391 GFLOPs; the paper trades extra inference compute for VLA success quality rather than improving inference efficiency.",
+      "first_checked_at": "2026-10-12T22:18:02+00:00",
+      "last_checked_at": "2026-10-12T22:18:02+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2502.21074-codi-compressing-chain-of-thought-into-continuous-space-via-self-distill.md"
+      ],
+      "title": "PearlVLA: Progressive Embodied Action-Plan Refinement in Latent Space"
+    },
+    "arXiv:2606.11260": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.11260",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2606.11260",
+        "SemanticScholar:45d273b35311ace843c860271cc1a1a0442b06aa",
+        "arXiv:2606.11260"
+      ],
+      "reason": "RAIL is a cognitive-capability benchmark for audio-language models; it measures behavior rather than inference efficiency.",
+      "first_checked_at": "2026-10-12T22:18:03+00:00",
+      "last_checked_at": "2026-10-12T22:18:03+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2509.17765-qwen3-omni-technical-report.md"
+      ],
+      "title": "RAIL: Rethinking Auditory Intelligence in Large Audio-Language Models with a CHC-Grounded Benchmark"
+    },
+    "arXiv:2606.08656": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.08656",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2606.08656",
+        "SemanticScholar:f7f69a8454829cfd41e5002e8256f60ea370f92b",
+        "arXiv:2606.08656"
+      ],
+      "reason": "MemoPilot trains memory updates with multi-turn GRPO to improve game-playing outcomes; no inference-system efficiency mechanism is claimed.",
+      "first_checked_at": "2026-10-12T22:18:03+00:00",
+      "last_checked_at": "2026-10-12T22:18:03+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2506.15841-mem1-learning-to-synergize-memory-and-reasoning-for-efficient-long-horiz.md"
+      ],
+      "title": "From Player to Master: Enhancing Test-Time Learning of LLM Agents via Reinforcement Learning over Memory"
+    },
+    "arXiv:2606.07473": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.07473",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2606.07473",
+        "SemanticScholar:8cccd6cf1eb1ad18fc888b227b47a98350edfa5c",
+        "arXiv:2606.07473"
+      ],
+      "reason": "Whisper hidden-representation steering reduces an ASR hallucination metric; it is an audio-task quality intervention, not an LLM inference-systems contribution.",
+      "first_checked_at": "2026-10-12T22:18:03+00:00",
+      "last_checked_at": "2026-10-12T22:18:03+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2509.17765-qwen3-omni-technical-report.md"
+      ],
+      "title": "Whisper Hallucination Detection and Mitigation via Hidden Representation Steering and Sparse AutoEncoders"
+    },
+    "arXiv:2606.01925": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.01925",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2606.01925",
+        "SemanticScholar:077dd8d636bb15b0ffe776b4d014ea05a6393b23",
+        "arXiv:2606.01925"
+      ],
+      "reason": "QoEReasoner reduces human diagnosis time for radio-network faults, but this is application workflow automation rather than LLM inference or serving efficiency.",
+      "first_checked_at": "2026-10-12T22:18:04+00:00",
+      "last_checked_at": "2026-10-12T22:18:04+00:00",
+      "linked_from": [
+        "papers/inference/08-edge-on-device-llm-systems/2024-2407.18921-mobile-edge-intelligence-for-large-language-models-a-contemporary-survey.md"
+      ],
+      "title": "QoEReasoner: An Agentic Reasoning Framework for Automated and Explainable QoE Diagnosis in RANs"
+    },
+    "arXiv:2606.00384": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.00384",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2606.00384",
+        "SemanticScholar:e487c5980e7da4b9a8e17b74bf962c68cf737572",
+        "arXiv:2606.00384"
+      ],
+      "reason": "VESTA dynamically creates statistical-analysis tools for scientific modeling; the paper targets data-analysis capability, not language-model serving efficiency.",
+      "first_checked_at": "2026-10-12T22:18:04+00:00",
+      "last_checked_at": "2026-10-12T22:18:04+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2305.17126-large-language-models-as-tool-makers.md"
+      ],
+      "title": "VESTA: Visual Exploration with Statistical Tool Agents"
+    },
+    "arXiv:2605.30161": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.30161",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2605.30161",
+        "SemanticScholar:b71337d1c4d768922574180eff5dd3e606559876",
+        "arXiv:2605.30161"
+      ],
+      "reason": "Why Far Looks Up analyzes spatial representation biases in VLMs and proposes a benchmark, not inference or serving efficiency.",
+      "first_checked_at": "2026-10-12T22:18:04+00:00",
+      "last_checked_at": "2026-10-12T22:18:04+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2412.04468-nvila-efficient-frontier-visual-language-models.md"
+      ],
+      "title": "Why Far Looks Up: Probing Spatial Representation in Vision-Language Models"
+    },
+    "arXiv:2605.22013": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.22013",
+      "identity_tokens": [
+        "DOI:10.1145/3799902.3811081",
+        "SemanticScholar:842a547ac117a795581213b1366de6650343c9bb",
+        "arXiv:2605.22013"
+      ],
+      "reason": "PointLLM-R improves 3D point-cloud reasoning through curated chain-of-thought training data; the abstract gives no inference-efficiency mechanism.",
+      "first_checked_at": "2026-10-12T22:18:04+00:00",
+      "last_checked_at": "2026-10-12T22:18:04+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2406.11816-videollm-online-online-video-large-language-model-for-streaming-video.md"
+      ],
+      "title": "PointLLM-R: Enhancing 3D Point Cloud Reasoning via Chain-of-Thought"
+    },
+    "arXiv:2605.22823": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.22823",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2605.22823",
+        "SemanticScholar:3ac1de6de5b6e08f6896fd320d9eacaae4f3bf94",
+        "arXiv:2605.22823"
+      ],
+      "reason": "MoDirect diagnoses directional-motion understanding and improves VLM accuracy through instruction tuning; the contribution is capability training, not runtime efficiency.",
+      "first_checked_at": "2026-10-12T22:18:05+00:00",
+      "last_checked_at": "2026-10-12T22:18:05+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2412.04468-nvila-efficient-frontier-visual-language-models.md"
+      ],
+      "title": "Which Way Did It Move? Diagnosing and Overcoming Directional Motion Blindness in Video-LLMs"
+    },
+    "arXiv:2605.19846": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.19846",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2605.19846",
+        "SemanticScholar:65f02502439099eb8dea1163bebb37cfe92c9128",
+        "arXiv:2605.19846"
+      ],
+      "reason": "FineBench and FineAgent improve and evaluate fine-grained human-activity understanding; the abstract does not establish inference-system efficiency.",
+      "first_checked_at": "2026-10-12T22:18:05+00:00",
+      "last_checked_at": "2026-10-12T22:18:05+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.16449-moviechat-from-dense-token-to-sparse-memory-for-long-video-understanding.md"
+      ],
+      "title": "FineBench: Benchmarking and Enhancing Vision-Language Models for Fine-grained Human Activity Understanding"
     }
   }
 }

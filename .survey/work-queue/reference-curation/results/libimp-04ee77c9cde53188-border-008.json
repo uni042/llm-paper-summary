@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-04ee77c9cde53188-border-008",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1109/tpami.2026.3718245",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1109/tpami.2026.3718245",
+    "identity_tokens": [
+      "DOI:10.1109/tpami.2026.3718245",
+      "SemanticScholar:a54bd69aa751389cf0f0bb7566234e6633589c25"
+    ],
+    "reason": "The DOI identifies an IEEE TPAMI SparseVLM+ paper whose stated topic is inference-time visual-token sparsification, but the official IEEE abstract page could not be retrieved in this screen; primary abstract evidence is therefore unavailable.",
+    "first_checked_at": "2026-10-12T22:17:57+00:00",
+    "last_checked_at": "2026-10-12T22:17:57+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2312.06742-honeybee-locality-enhanced-projector-for-multimodal-llm.md",
+      "papers/inference/99-other-inference-systems/2025-2502.11494-stop-looking-for-important-tokens-in-multimodal-language-models-duplicat.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "SparseVLM+: Visual Token Sparsification With Improved Text-Visual Attention Pattern"
+  },
+  "processed_at": "2026-10-12T22:17:57+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-04ee77c9cde5",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

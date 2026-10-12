@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-04ee77c9cde53188-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2608.13113",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2608.13113",
+    "identity_tokens": [
+      "SemanticScholar:077febe2d06991c3452650871956932508854754",
+      "arXiv:2608.13113"
+    ],
+    "reason": "EgoMonth is a long-video memory benchmark for MLLM capability evaluation, not a serving or inference-efficiency method.",
+    "first_checked_at": "2026-10-12T22:17:58+00:00",
+    "last_checked_at": "2026-10-12T22:17:58+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2307.16449-moviechat-from-dense-token-to-sparse-memory-for-long-video-understanding.md"
+    ],
+    "title": "EgoMonth: A Month-Level Egocentric Video Benchmark for Long-Term Spatiotemporal Memory"
+  },
+  "processed_at": "2026-10-12T22:17:59+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-04ee77c9cde5",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

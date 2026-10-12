@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-04ee77c9cde53188-unrel-006",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2608.00743",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2608.00743",
+    "identity_tokens": [
+      "SemanticScholar:4316afaae9379eba317a9d017393f6ab77ecd1ae",
+      "arXiv:2608.00743"
+    ],
+    "reason": "LUT improves latent visual reasoning through trajectory distillation and policy optimization; its reported contribution is training and answer quality, not runtime efficiency.",
+    "first_checked_at": "2026-10-12T22:17:59+00:00",
+    "last_checked_at": "2026-10-12T22:17:59+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2025-2502.21074-codi-compressing-chain-of-thought-into-continuous-space-via-self-distill.md"
+    ],
+    "title": "LUT: Latent Utility Training for Visual Reasoning"
+  },
+  "processed_at": "2026-10-12T22:17:59+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-04ee77c9cde5",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

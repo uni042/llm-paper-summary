@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-29b6d9e42f015c47-border-009",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1109/cvprf71909.2026.00911",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1109/cvprf71909.2026.00911",
+    "identity_tokens": [
+      "DOI:10.1109/cvprf71909.2026.00911",
+      "SemanticScholar:76150e659902f0fb1c93a292865224441e10893e"
+    ],
+    "reason": "The DOI and title identify an IEEE CVPR 2026 token-pruning paper relevant to LVLM inference, but the official publisher abstract could not be retrieved; without primary abstract text the contribution cannot be reliably classified.",
+    "first_checked_at": "2026-10-12T22:18:01+00:00",
+    "last_checked_at": "2026-10-12T22:18:01+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2025-2502.11494-stop-looking-for-important-tokens-in-multimodal-language-models-duplicat.md",
+      "papers/inference/99-other-inference-systems/2025-2503.02175-divprune-diversity-based-visual-token-pruning-for-large-multimodal-model.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Uncertainty-Guided Graph Formulation via MWIS for Token Pruning in LVLMs"
+  },
+  "processed_at": "2026-10-12T22:18:01+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-29b6d9e42f01",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

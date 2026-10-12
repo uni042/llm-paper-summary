@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-29b6d9e42f015c47-unrel-008",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2606.01925",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2606.01925",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2606.01925",
+      "SemanticScholar:077dd8d636bb15b0ffe776b4d014ea05a6393b23",
+      "arXiv:2606.01925"
+    ],
+    "reason": "QoEReasoner reduces human diagnosis time for radio-network faults, but this is application workflow automation rather than LLM inference or serving efficiency.",
+    "first_checked_at": "2026-10-12T22:18:04+00:00",
+    "last_checked_at": "2026-10-12T22:18:04+00:00",
+    "linked_from": [
+      "papers/inference/08-edge-on-device-llm-systems/2024-2407.18921-mobile-edge-intelligence-for-large-language-models-a-contemporary-survey.md"
+    ],
+    "title": "QoEReasoner: An Agentic Reasoning Framework for Automated and Explainable QoE Diagnosis in RANs"
+  },
+  "processed_at": "2026-10-12T22:18:04+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-29b6d9e42f01",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
