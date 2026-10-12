@@ -1,36 +1,49 @@
 ---
 canonical_id: DOI:10.24963/ijcai.2026/657
 title: 'DoMoE: Domain-Aware Semantic Expert Prediction for Efficient MoE Inference Under Expert Offloading'
-summary: 'DoMoEは、GPUメモリに収まらない混合専門家モデルの推論で、次に必要な専門家重みの先読み精度と予測計算量を同時に改善する。分野別の専門家経路表を事前作成し、入力の事前充填中に適切な表を選び、復号時には意味的に近い過去トークンの経路から専門家を予測する。さらに複数層先の予測間隔を調整して検索費用を削減する。単一L40 GPU上の4モデル・3種の負荷で、意味検索型の比較方式FMoEに対し平均1.32倍の生成処理量と1.22倍の専門家命中率を報告する。'
-list_summary: '分野別のトークン・専門家経路表と複数層先の適応的予測を組み合わせ、MoE専門家の先読み時に検索費用と転送ミスを抑え、FMoE比で平均処理量1.32倍を示す。'
+summary: DoMoEは、GPUメモリに収まらない混合専門家モデルの推論で、次に必要な専門家重みの先読み精度と予測計算量を同時に改善する。分野別の専門家経路表を事前作成し、入力の事前充填中に適切な表を選び、復号時には意味的に近い過去トークンの経路から専門家を予測する。さらに複数層先の予測間隔を調整して検索費用を削減する。単一L40 GPU上の4モデル・3種の負荷で、意味検索型の比較方式FMoEに対し平均1.32倍の生成処理量と1.22倍の専門家命中率を報告する。
+list_summary: 分野別のトークン・専門家経路表と複数層先の適応的予測を組み合わせ、MoE専門家の先読み時に検索費用と転送ミスを抑え、FMoE比で平均処理量1.32倍を示す。
 authors:
-  - Yao Mu
-  - Fahao Chen
-  - Wenbin Zhu
-  - Mengying Zhao
-  - Zhaoyan Shen
-  - Dongxiao Yu
-published: '2026-08'
-publication: 'Proceedings of the Thirty-Fifth International Joint Conference on Artificial Intelligence (IJCAI-26), Main Track, pp. 5901-5909'
+- Yao Mu
+- Fahao Chen
+- Wenbin Zhu
+- Mengying Zhao
+- Zhaoyan Shen
+- Dongxiao Yu
+published: 2026-08
+publication: Proceedings of the Thirty-Fifth International Joint Conference on Artificial Intelligence (IJCAI-26), Main Track, pp. 5901-5909
 publication_type: 査読付き国際会議論文
 publication_status: published
 doi: 10.24963/ijcai.2026/657
 source: https://www.ijcai.org/proceedings/2026/0657.pdf
 sources:
-  - https://www.ijcai.org/proceedings/2026/0657.pdf
-  - https://www.ijcai.org/proceedings/2026/657
-implementation: '著者らはMoE-Infinityを基盤に約4000行の変更を加え、分野別経路表・分野照合・適応的専門家予測を実装してNVIDIA L40 GPUで評価した。FMoEは公式公開実装がないため著者らが再実装した。DoMoE自身の公式コード公開URLは確認した一次資料に記載されていない。'
+- https://www.ijcai.org/proceedings/2026/0657.pdf
+- https://www.ijcai.org/proceedings/2026/657
+implementation: 著者らはMoE-Infinityを基盤に約4000行の変更を加え、分野別経路表・分野照合・適応的専門家予測を実装してNVIDIA L40 GPUで評価した。FMoEは公式公開実装がないため著者らが再実装した。DoMoE自身の公式コード公開URLは確認した一次資料に記載されていない。
 code: null
 last_checked: '2026-10-12'
 worker_id: scheduled-chat-00
 worker_completed_at: '2026-10-12T09:00:10+09:00'
-worker_run_key: '20261012-0900-scheduled-chat-00/r01'
+worker_run_key: 20261012-0900-scheduled-chat-00/r01
 reference_main_sha: aa1dda12534e05482735c87bc167570cc7d58e05
 worklist_rank: 77
 quality_self_review_passed: true
 quality_self_review_version: '2026-10-07'
 last_audited: null
 audit_version: 0
+references:
+- canonical_id: arXiv:2310.09832
+  arxiv_id: '2310.09832'
+- canonical_id: arXiv:2505.03804
+- canonical_id: arXiv:2402.14800
+- canonical_id: arXiv:2310.02410
+- canonical_id: arXiv:2408.10284
+- canonical_id: arXiv:2308.12066
+- canonical_id: arXiv:2406.08155
+- canonical_id: arXiv:2411.01433
+references_checked_at: '2026-10-12'
+references_source: primary-pdf-reference-section
+references_total: 1
 ---
 
 # DoMoE：分野別意味検索で専門家オフロードの予測費用を削減する

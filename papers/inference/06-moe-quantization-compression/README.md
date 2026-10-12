@@ -49,7 +49,7 @@ MoEの大部分を占めるexpert重みを**低bit化、pruning、precision切�
   しかし、推論環境には多数の専門家の重みを保持する必要があり、GPUメモリ・ホストメモリ・ストレージ容量が大きくなる。専門家を丸ごと削除すると特化した能力を失い、複数専門家を単純に統合すると固有の知識が平均化される。
 
 - **2025-05 · [MoEQuant: Enhancing Quantization for Mixture-of-Experts Large Language Models via Expert-Balanced Sampling and Affinity Guidance](2025-2505.03804-moequant-enhancing-quantization-for-mixture-of-experts-large-language-models-via.md)**  
-  実装：[✓](https://github.com/chenzx921020/MoEQuant) ・ リポジトリ内被引用：8  
+  実装：[✓](https://github.com/chenzx921020/MoEQuant) ・ リポジトリ内被引用：9  
   MoEQuantは、混合専門家モデル（Mixture of エキスパート、MoE）を低ビットの重みで動かすときに生じる、専門家間の較正例不足と専門家内の入力重要度の違いを同時に扱う学習後量子化（Post-学習 量子化、PTQ）の枠組みである。
 
 - **2025-06 · [EAQuant: Enhancing Post-Training Quantization for MoE Models via Expert-Aware Optimization](2025-2506.13329-eaquant-enhancing-post-training-quantization-for-moe-models.md)**  
@@ -75,7 +75,7 @@ MoEの大部分を占めるexpert重みを**低bit化、pruning、precision切�
   第一に、専門家ごとに必要な重み精度が異なるため、全専門家を同じビット幅へ量子化する必要はない。原著表4のMixtral 8×7Bでは、平均2.54ビットのPMQだけで平均ゼロショット正解率67.50%、保存重み16.24GB、活性化パラメータ4.53GB、基準比1.63倍の速度となる。
 
 - **2024-06 · [QuantMoE-Bench: Examining Post-Training Quantization for Mixture-of-Experts](2024-2406.08155-examining-post-training-quantization-for-mixture-of-experts-a-benchmark.md)**  
-  実装：[✓](https://github.com/UNITES-Lab/moe-quantization) ・ リポジトリ内被引用：19  
+  実装：[✓](https://github.com/UNITES-Lab/moe-quantization) ・ リポジトリ内被引用：20  
   一律ビット幅ではなく、注意層・共有専門家・使用頻度・ブロック位置・線形重みの外れ値を手掛かりに精度を配分する効果を、同じ平均ビット予算で比較したベンチマーク。
 
 - **2024-05 · [A Provably Effective Method for Pruning Experts in Fine-tuned Sparse Mixture-of-Experts](2024-2405.16646-provably-effective-pruning-finetuned-sparse-moe.md)**  
@@ -89,7 +89,7 @@ MoEの大部分を占めるexpert重みを**低bit化、pruning、precision切�
 ### 4年前（2022-11〜2023-10）
 
 - **2023-10 · [Mixture of Quantized Experts (MoQE): Complementary Effect of Low-bit Quantization and Robustness](2023-2310.02410-mixture-of-quantized-experts-moqe-complementary-effect-of-low-bit-quantization-a.md)**  
-  実装：✓ ・ リポジトリ内被引用：25  
+  実装：✓ ・ リポジトリ内被引用：26  
   MoQEは、モデル容量の大半を占める専門家FFNだけを2〜8ビット化し、注意・共有FFNは高精度に残して、品質を守りながら保存量と重み帯域を減らす。
 
 - **2023-10 · [QMoE: Practical Sub-1-Bit Compression of Trillion-Parameter Models](2023-2310.16795-qmoe-practical-sub-1-bit-compression-of-trillion-parameter-models.md)**  
