@@ -1,0 +1,27 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261012-0033-scheduled-chat-30/r01/relevance-009",
+  "reference_main_sha": "2f41bd6982f5ece8d2ad4f95389e535aee67e8ad",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2406.11816",
+      "identity_tokens": [
+        "arxiv:2406.11816",
+        "doi:10.48550/arxiv.2406.11816"
+      ],
+      "title": "VideoLLM-online: Online Video Large Language Model for Streaming Video",
+      "reason": "連続映像ストリームで時刻に整合した対話を可能にするLIVE方式を提案し、ストリーミング向け学習目的・注釈データ変換・推論パイプライン最適化を組み合わせる。A100で5分映像の対話を平均10 FPS超で処理する実時間評価があり、ストリーミング推論処理との接点はある。ただし主題は映像言語モデルの学習・認識・キャプション・予測性能であり、汎用LLM推論エンジンや階層メモリ管理の新規機構ではないため境界候補とする。",
+      "source_url": "https://arxiv.org/abs/2406.11816",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-12T00:38:52+09:00",
+      "last_checked_at": "2026-10-12T00:38:52+09:00",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance",
+      "worklist_rank": 9
+    }
+  ]
+}
