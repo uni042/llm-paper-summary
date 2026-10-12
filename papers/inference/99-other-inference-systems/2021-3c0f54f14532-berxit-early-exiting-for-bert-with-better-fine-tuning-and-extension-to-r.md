@@ -31,6 +31,8 @@ quality_self_review_version: 'library-paper-quality-2026-10-07'
 research_relevance: accept
 research_relevance_note: >-
   推論時の実行層数削減というシステム効率の直接的貢献があるため収録する。ただし対象は主としてBERT系の双方向エンコーダであり、自己回帰生成型LLMのデコード性能へ一般化しない。
+last_audited: null
+audit_version: 0
 ---
 
 # BERxiT：BERT系推論の交互微調整と学習型早期終了

@@ -35,10 +35,15 @@
   "selection_reason": "TreeSparkは、半自己回帰draftモデルDSparkの親条件付きMarkov分布を使ってspeculative decodingのdraft treeを展開し、受理確率を校正した経路生存確率で各roundの木サイズを適応制御する。targetモデルの検証計算を抑えながら受理draft token数と単一要求の復号速度を評価しており、LLM推論時の効率化に該当する。評価上の改善は記載のQwen3モデル、負荷、Python研究用harnessの範囲であり、本番continuous-batching全体への一般化は未確認である。",
   "semantic_scholar_id": "f99810e97c3e9cf1ed6d187f11ad80e83f5fe5c6",
   "source_url": "https://arxiv.org/abs/2609.22098",
-  "status": "ready",
+  "status": "superseded",
   "title": "TreeSpark: Calibrated, Load-Adaptive Draft Trees for Semi-Autoregressive Speculative Decoding",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-10-12T04:53:06+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/05-speculative-decoding-moe/2026-2609.22098-treespark-calibrated-load-adaptive-draft-trees-for-semi-autoregressive-s.md",
+  "represented_canonical_id": "arXiv:2609.22098",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
