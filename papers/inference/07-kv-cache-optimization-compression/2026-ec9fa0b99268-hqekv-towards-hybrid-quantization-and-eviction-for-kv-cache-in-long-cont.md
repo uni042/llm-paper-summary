@@ -28,6 +28,8 @@ worker_run_key: "20261013-0630-scheduled-chat-30/r01"
 reference_main_sha: "0e29c55e48a7682385552e4c2703d420a450e6f3"
 research_job_id: "job-research-a5a8c5a3f3498233"
 lineage: "07-kv-cache-optimization-compression"
+last_audited: null
+audit_version: 0
 ---
 
 # HqeKV：重要度に応じて量子化と削除を併用する長文脈KVキャッシュ圧縮

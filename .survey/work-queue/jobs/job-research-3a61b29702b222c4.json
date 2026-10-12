@@ -35,10 +35,15 @@
   "selection_reason": "Transformer inferenceの二次的sequence-length costを直接問題化し、layerごとのlearned thresholdで低attention tokenを除去する。FLOPs最大2.1x削減、CPU 1.9x/GPU 2.0x throughput改善を実測しており直接対象。",
   "semantic_scholar_id": "c156b1b30e3dd9284615e5304f2fb2826c09d0ff",
   "source_url": "https://arxiv.org/abs/2107.00910",
-  "status": "ready",
+  "status": "superseded",
   "title": "Learned Token Pruning for Transformers",
   "type": "research",
   "venue": "Knowledge Discovery and Data Mining",
   "workflow_version": 10,
-  "year": 2021
+  "year": 2021,
+  "superseded_at": "2026-10-12T22:07:57+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2022-2107.00910-learned-token-pruning-for-transformers.md",
+  "represented_canonical_id": "arXiv:2107.00910",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
