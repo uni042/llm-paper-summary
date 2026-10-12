@@ -1,0 +1,26 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261013-0200-scheduled-chat-00/r01-research-prescreen-027",
+  "reference_main_sha": "0d931858f274e8129d702573cf05a8595aceea1b",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2602.02050",
+      "identity_tokens": [
+        "arxiv:2602.02050"
+      ],
+      "title": "Rethinking the Role of Entropy in Optimizing Tool-Use Behaviors for Large Language Model Agents",
+      "reason": "LLMエージェントのツール呼出しをエントロピー減少を使った報酬学習で最適化し、呼出し回数72.07%削減または性能22.27%向上を報告する。ツール呼出し削減は推論遅延・外部API費用に関連するが、主手法はエージェント行動方策の学習と報酬設計で、LLMのGPU実行やサービングの性能最適化ではない。学習単独を優先除外する基準に近いが、推論時の呼出し効率との接点があるため境界的とする。",
+      "source_url": "https://arxiv.org/abs/2602.02050",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T02:03:29+09:00",
+      "last_checked_at": "2026-10-13T02:03:29+09:00",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance",
+      "worklist_rank": 27
+    }
+  ]
+}
