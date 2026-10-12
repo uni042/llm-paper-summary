@@ -1,0 +1,29 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261012-2339-scheduled-chat-30/r01-research-prescreen-003",
+  "reference_main_sha": "28180d0171fea378c066f0faa2ba081c064661d4",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2411.17465",
+      "identity_tokens": [
+        "arxiv:2411.17465",
+        "semanticscholar:02128b757f31f1385c9b839201783ceae5cd2088",
+        "doi:10.1109/cvpr52734.2025.01816"
+      ],
+      "title": "ShowUI: One Vision-Language-Action Model for GUI Visual Agent",
+      "reason": "一次要旨の主目的は画面画像を理解して操作するGUI視覚エージェントの構築で、画面要素の接続グラフに基づく視覚トークン選択、視覚・言語・行動履歴の混在系列、指示追従データの整備を提案する。トークン選択により冗長な視覚トークン33%削減、学習時1.4倍の高速化を報告するため効率化の技術要素はあるが、主要評価は画面上の対象位置特定・GUI操作であり、LLM汎用推論ランタイムやGPUサービング性能の独立した寄与は要旨から確定できない。効率面の関連性を残して境界的とした。",
+      "source_url": "https://arxiv.org/abs/2411.17465",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-12T23:43:59+09:00",
+      "last_checked_at": "2026-10-12T23:43:59+09:00",
+      "linked_from": [],
+      "worklist_rank": 6,
+      "research_job_id": "job-research-68a6c697668d5180",
+      "origin": "research_prescreen_relevance"
+    }
+  ]
+}
