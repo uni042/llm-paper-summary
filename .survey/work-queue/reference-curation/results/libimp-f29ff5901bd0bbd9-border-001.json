@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-f29ff5901bd0bbd9-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2305.17126",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2305.17126",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2305.17126",
+      "arXiv:2305.17126"
+    ],
+    "reason": "高性能モデルが再利用可能な外部ツールを作成し、軽量モデルがそのツールを繰り返し利用する二段構成LATMを提案する。作成済みツールを機能キャッシュとして保存し、複数のBig-Bench系推論課題に初期作成費用を償却してGPT-4同士の構成より平均推論費用を下げる。モデル呼出し費用と再利用という実行時最適化の接点はあるが、中心はエージェントの問題解決とツール生成で、KVキャッシュやGPU/CPUオフロード等の低層推論システムを扱わないため境界候補とする。",
+    "first_checked_at": "2026-10-12T01:47:06+00:00",
+    "last_checked_at": "2026-10-12T01:47:06+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Large Language Models as Tool Makers"
+  },
+  "processed_at": "2026-10-12T01:47:06+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f29ff5901bd0",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

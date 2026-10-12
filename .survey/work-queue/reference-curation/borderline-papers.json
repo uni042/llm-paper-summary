@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-11T21:44:19+00:00",
-  "record_count": 4668,
+  "updated_at": "2026-10-12T01:47:06+00:00",
+  "record_count": 4673,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -71368,6 +71368,76 @@
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "ROMA: Real-time Omni-Multimodal Assistant with Interactive Streaming Understanding"
+    },
+    "arXiv:2602.09591": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2602.09591",
+      "identity_tokens": [
+        "arXiv:2602.09591"
+      ],
+      "reason": "本文§3〜4の主研究は、RLOO-LP・ALP・DRPOなどの長さ制御報酬を変えて強化学習済み方策を多数作り、数学・コード生成で出力長と正答率の非単調な関係、および最頻解正答率とサンプル正答率の乖離を解析するもの。生成トークン数と推論費用には関連するが、推論時の実行基盤・復号器・KVキャッシュ・計算/メモリオフロード等の直接の最適化技術を提案・評価していない。学習単独研究の現行凍結範囲に近いため境界候補とする。",
+      "first_checked_at": "2026-10-12T01:47:04+00:00",
+      "last_checked_at": "2026-10-12T01:47:04+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "On the Optimal Reasoning Length for RL-Trained Language Models"
+    },
+    "arXiv:2406.11816": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2406.11816",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2406.11816",
+        "arXiv:2406.11816"
+      ],
+      "reason": "連続映像ストリームで時刻に整合した対話を可能にするLIVE方式を提案し、ストリーミング向け学習目的・注釈データ変換・推論パイプライン最適化を組み合わせる。A100で5分映像の対話を平均10 FPS超で処理する実時間評価があり、ストリーミング推論処理との接点はある。ただし主題は映像言語モデルの学習・認識・キャプション・予測性能であり、汎用LLM推論エンジンや階層メモリ管理の新規機構ではないため境界候補とする。",
+      "first_checked_at": "2026-10-12T01:47:04+00:00",
+      "last_checked_at": "2026-10-12T01:47:04+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "VideoLLM-online: Online Video Large Language Model for Streaming Video"
+    },
+    "arXiv:2309.14393": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2309.14393",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2309.14393",
+        "arXiv:2309.14393",
+        "semanticscholar:32479758dc9ff9820828a12aa7f3d066f187dc1c"
+      ],
+      "reason": "密モデルと混合専門家（MoE）モデルの学習・推論・実験・保存に由来する運用時および製造由来の炭素排出量を推定するLLMCarbonを提案し、既存mlco2が扱わないMoE構成やCPU/GPU以外の要因を含めて推定精度を高める。LLM推論時の資源・エネルギー費用を定量化する計測・予測研究としてサーベイ周辺には関連するが、実行時のスケジューリング、キャッシュ管理、オフロード、カーネル高速化を新規に提案・検証するものではないため、即収録ではなく境界候補とする。",
+      "first_checked_at": "2026-10-12T01:47:05+00:00",
+      "last_checked_at": "2026-10-12T01:47:05+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "LLMCarbon: Modeling the end-to-end Carbon Footprint of Large Language Models"
+    },
+    "arXiv:2605.19932": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.19932",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2605.19932",
+        "arXiv:2605.19932"
+      ],
+      "reason": "繰り返し同じ外部文書群を扱うエージェントのシステムプロンプトに固定長の文脈地図を常駐させ、Distillerが実行軌跡から再利用可能な文脈知識を抽出し、Cartographerが項目単位で更新し、Evictorがトークン予算を守る。OOLONGやCL-benchで正答率、反復回数、モデル呼出し費用を改善するが、対象はエージェントの文脈理解・タスク品質と推論時プロンプト管理であり、KVキャッシュやGPU・メモリ階層、LLMサービングの実行基盤を直接最適化する研究ではない。推論費用削減との接点はあるため無関係ではなく境界候補とする。",
+      "first_checked_at": "2026-10-12T01:47:06+00:00",
+      "last_checked_at": "2026-10-12T01:47:06+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "PEEK: Context Map as an Orientation Cache for Long-Context LLM Agents"
+    },
+    "arXiv:2305.17126": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2305.17126",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2305.17126",
+        "arXiv:2305.17126"
+      ],
+      "reason": "高性能モデルが再利用可能な外部ツールを作成し、軽量モデルがそのツールを繰り返し利用する二段構成LATMを提案する。作成済みツールを機能キャッシュとして保存し、複数のBig-Bench系推論課題に初期作成費用を償却してGPT-4同士の構成より平均推論費用を下げる。モデル呼出し費用と再利用という実行時最適化の接点はあるが、中心はエージェントの問題解決とツール生成で、KVキャッシュやGPU/CPUオフロード等の低層推論システムを扱わないため境界候補とする。",
+      "first_checked_at": "2026-10-12T01:47:06+00:00",
+      "last_checked_at": "2026-10-12T01:47:06+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Large Language Models as Tool Makers"
     }
   }
 }
