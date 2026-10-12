@@ -1,0 +1,363 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-luna-primary-source-screen",
+  "run_key": "discovery-20261013-main-0e29c55-screen-08-part-01-826e0ed379c2",
+  "reference_main_sha": "0e29c55e48a7682385552e4c2703d420a450e6f3",
+  "record_count": 20,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.14862",
+      "identity_tokens": [
+        "arXiv:2604.14862",
+        "DOI:10.48550/arXiv.2604.14862",
+        "SemanticScholar:a97224fcbd68d3937d5b113189c9ea105f6434fa"
+      ],
+      "title": "Schema-Key Wording as an Instruction Channel in Structured Generation under Constrained Decoding",
+      "reason": "Schema-key wording changes answer quality under grammar projection, but the paper studies instruction semantics and benchmark accuracy rather than inference-system efficiency.",
+      "source_url": "https://arxiv.org/abs/2604.14862",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-12T21:45:50Z",
+      "last_checked_at": "2026-10-12T21:45:50Z",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2403.06988-guiding-llms-the-right-way-fast-non-invasive-constrained-generation.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1016/j.neucom.2026.133140",
+      "identity_tokens": [
+        "DOI:10.1016/j.neucom.2026.133140",
+        "SemanticScholar:6752051d087b928e9eb07a83d9fde30c923a6171"
+      ],
+      "title": "Compact transformer variants for synthetic time series forecasting",
+      "reason": "The study compares compact Autoformer, Informer, and PatchTST variants for general time-series forecasting; it does not target LLM inference or serving.",
+      "source_url": "https://doi.org/10.1016/j.neucom.2026.133140",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-12T21:45:50Z",
+      "last_checked_at": "2026-10-12T21:45:50Z",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2021-2107.02192-long-short-transformer-efficient-transformers-for-language-and-vision.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2511.16655",
+      "identity_tokens": [
+        "arXiv:2511.16655",
+        "DOI:10.48550/arXiv.2511.16655",
+        "SemanticScholar:3e3403758516d6cdfa14fd00d97562aa2dabb0d0"
+      ],
+      "title": "Solving Spatial Supersensing Without Spatial Supersensing",
+      "reason": "NoSense and VSC-Repeat critique spatial-supersensing benchmarks and shortcut behavior; they do not contribute inference-system efficiency.",
+      "source_url": "https://arxiv.org/abs/2511.16655",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-12T21:45:50Z",
+      "last_checked_at": "2026-10-12T21:45:50Z",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.16449-moviechat-from-dense-token-to-sparse-memory-for-long-video-understanding.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.13113",
+      "identity_tokens": [
+        "arXiv:2608.13113",
+        "SemanticScholar:077febe2d06991c3452650871956932508854754"
+      ],
+      "title": "EgoMonth: A Month-Level Egocentric Video Benchmark for Long-Term Spatiotemporal Memory",
+      "reason": "EgoMonth is a long-video memory benchmark for MLLM capability evaluation, not a serving or inference-efficiency method.",
+      "source_url": "https://arxiv.org/abs/2608.13113",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-12T21:45:50Z",
+      "last_checked_at": "2026-10-12T21:45:50Z",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.16449-moviechat-from-dense-token-to-sparse-memory-for-long-video-understanding.md"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2608.10430",
+      "identity_tokens": [
+        "arXiv:2608.10430",
+        "SemanticScholar:6c3a12cc9a82f3cda50c4f19ecc8fe1880219f98"
+      ],
+      "title": "Actionable Hallucination Detection: Translating Latent Uncertainty into Agentic Critique",
+      "reason": "Latent Critic applies a low-rank adapter concurrently with generation to detect tool-call hallucinations without a secondary inference loop, directly reducing agent correction-path latency.",
+      "source_url": "https://arxiv.org/abs/2608.10430",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-12T21:45:50Z",
+      "last_checked_at": "2026-10-12T21:45:50Z",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2403.06988-guiding-llms-the-right-way-fast-non-invasive-constrained-generation.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.07068",
+      "identity_tokens": [
+        "arXiv:2608.07068",
+        "SemanticScholar:f200a0ecc88183a8ecd90dc5cbc79dd1adbd2934"
+      ],
+      "title": "MemOPD: On-Policy Distillation through Memory State Alignment for Long-Horizon Agents",
+      "reason": "MemOPD reconstructs aligned on-policy states and packs teacher scoring to speed actor computation during training; the measured speedup is training-only.",
+      "source_url": "https://arxiv.org/abs/2608.07068",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-12T21:45:50Z",
+      "last_checked_at": "2026-10-12T21:45:50Z",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2502.12110-a-mem-agentic-memory-for-llm-agents.md",
+        "papers/inference/99-other-inference-systems/2025-2506.15841-mem1-learning-to-synergize-memory-and-reasoning-for-efficient-long-horiz.md"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2608.07088",
+      "identity_tokens": [
+        "arXiv:2608.07088",
+        "SemanticScholar:caaf13295985b750d83758b600a723f44ed4a4fc"
+      ],
+      "title": "RoRA: Role-Oriented Regional Allocation for Visual Token Pruning in MLLMs",
+      "reason": "RoRA allocates visual-token budgets by semantic regions and reports 24.6% lower end-to-end MLLM inference time at 66.7% pruning on H800.",
+      "source_url": "https://arxiv.org/abs/2608.07088",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-12T21:45:50Z",
+      "last_checked_at": "2026-10-12T21:45:50Z",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2502.11494-stop-looking-for-important-tokens-in-multimodal-language-models-duplicat.md"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2608.05604",
+      "identity_tokens": [
+        "arXiv:2608.05604",
+        "SemanticScholar:bc385adeaecf7990d86e32ff193411c137ce84af"
+      ],
+      "title": "SkillZip: Contract-Preserving Graph Compression for Scalable Agent Skill Libraries",
+      "reason": "SkillZip compresses reusable skill graphs into dependency-closed context and expands macros only when needed, reducing inference-time prompt context for large agent skill libraries.",
+      "source_url": "https://arxiv.org/abs/2608.05604",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-12T21:45:50Z",
+      "last_checked_at": "2026-10-12T21:45:50Z",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2506.15841-mem1-learning-to-synergize-memory-and-reasoning-for-efficient-long-horiz.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.00743",
+      "identity_tokens": [
+        "arXiv:2608.00743",
+        "SemanticScholar:4316afaae9379eba317a9d017393f6ab77ecd1ae"
+      ],
+      "title": "LUT: Latent Utility Training for Visual Reasoning",
+      "reason": "LUT improves latent visual reasoning through trajectory distillation and policy optimization; its reported contribution is training and answer quality, not runtime efficiency.",
+      "source_url": "https://arxiv.org/abs/2608.00743",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-12T21:45:50Z",
+      "last_checked_at": "2026-10-12T21:45:50Z",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2502.21074-codi-compressing-chain-of-thought-into-continuous-space-via-self-distill.md"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1016/j.neucom.2026.134854",
+      "identity_tokens": [
+        "DOI:10.1016/j.neucom.2026.134854",
+        "SemanticScholar:573deac0c049f284bdf519377d2744061d306d39"
+      ],
+      "title": "MKG-attention: Budget-aware multimodal graph retrieval for faithful video question answering",
+      "reason": "MKG-Attention localizes and sparsely injects evidence under fixed online budgets and selectively verifies high-risk answers, directly controlling VideoQA inference context and cost.",
+      "source_url": "https://doi.org/10.1016/j.neucom.2026.134854",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-12T21:45:50Z",
+      "last_checked_at": "2026-10-12T21:45:50Z",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2406.11816-videollm-online-online-video-large-language-model-for-streaming-video.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2607.27881",
+      "identity_tokens": [
+        "arXiv:2607.27881",
+        "DOI:10.48550/arXiv.2607.27881",
+        "SemanticScholar:7185163bbc453f38ccb6b20ef1b54f45e125f538"
+      ],
+      "title": "RoboBRIDGE: A Modular Framework for Bridging Policies to Robust Real-World Robotic Agents",
+      "reason": "RoboBRIDGE asynchronously updates perception and replans to avoid execution stalls in deployed VLA robots, but the abstract gives no latency, throughput, memory, or model-serving efficiency evidence.",
+      "source_url": "https://arxiv.org/abs/2607.27881",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-12T21:45:50Z",
+      "last_checked_at": "2026-10-12T21:45:50Z",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2305.17126-large-language-models-as-tool-makers.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/TPAMI.2026.3718245",
+      "identity_tokens": [
+        "DOI:10.1109/TPAMI.2026.3718245",
+        "SemanticScholar:a54bd69aa751389cf0f0bb7566234e6633589c25"
+      ],
+      "title": "SparseVLM+: Visual Token Sparsification With Improved Text-Visual Attention Pattern",
+      "reason": "The DOI identifies an IEEE TPAMI SparseVLM+ paper whose stated topic is inference-time visual-token sparsification, but the official IEEE abstract page could not be retrieved in this screen; primary abstract evidence is therefore unavailable.",
+      "source_url": "https://doi.org/10.1109/TPAMI.2026.3718245",
+      "body_check": "source_unavailable; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-10-12T21:45:50Z",
+      "last_checked_at": "2026-10-12T21:45:50Z",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.06742-honeybee-locality-enhanced-projector-for-multimodal-llm.md",
+        "papers/inference/99-other-inference-systems/2025-2502.11494-stop-looking-for-important-tokens-in-multimodal-language-models-duplicat.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.23332",
+      "identity_tokens": [
+        "arXiv:2607.23332",
+        "DOI:10.48550/arXiv.2607.23332",
+        "SemanticScholar:d011e5a14f3cd778a1d775087d25874779d329f5"
+      ],
+      "title": "AllocBench: Measuring Online Tool Allocation Capability in LLM Agents",
+      "reason": "AllocBench measures whether agents allocate tools judiciously across abstract and script-writing tasks; it evaluates capability rather than inference or serving systems.",
+      "source_url": "https://arxiv.org/abs/2607.23332",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-12T21:45:50Z",
+      "last_checked_at": "2026-10-12T21:45:50Z",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2305.17126-large-language-models-as-tool-makers.md"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2607.22711",
+      "identity_tokens": [
+        "arXiv:2607.22711",
+        "DOI:10.48550/arXiv.2607.22711",
+        "SemanticScholar:8a5e35d6b16b22faa55021dff11b7b98e88fb69c"
+      ],
+      "title": "CORVUS: Context Optimization and Reduction Via Underlying Synchronization for LLM Coding Agents",
+      "reason": "CORVUS replaces stale append-only read snapshots with synchronized file context, reducing average input tokens 9–50% and reasoning cycles up to 37% in coding-agent inference.",
+      "source_url": "https://arxiv.org/abs/2607.22711",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-12T21:45:50Z",
+      "last_checked_at": "2026-10-12T21:45:50Z",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2025-2510.00615-acon-optimizing-context-compression-for-long-horizon-llm-agents.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.10611",
+      "identity_tokens": [
+        "arXiv:2607.10611",
+        "DOI:10.48550/arXiv.2607.10611",
+        "SemanticScholar:c9f435b193874b21ee70f4a772a4236ae3d67f7e"
+      ],
+      "title": "M+Adam: Low-Precision Training via Additive-Multiplicative Optimization",
+      "reason": "M+Adam improves low-precision LLM pretraining with additive and multiplicative weight updates; its efficiency contribution is training-only.",
+      "source_url": "https://arxiv.org/abs/2607.10611",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-12T21:45:50Z",
+      "last_checked_at": "2026-10-12T21:45:50Z",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2110.02861-8-bit-optimizers-via-block-wise-quantization.md"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2607.10438",
+      "identity_tokens": [
+        "arXiv:2607.10438",
+        "DOI:10.1109/JIOT.2026.3711819",
+        "SemanticScholar:565ac2c3fb93a8b6fd21e0cd8d4fc3543f195829"
+      ],
+      "title": "Large Language Model Enhanced Differentiable Trajectory Planning for IoT-Enabled Autonomous Driving",
+      "reason": "The autonomous-driving planner uses asynchronous semantic enrichment with controlled online overhead and reports real-time closed-loop deployment, an explicit latency-constrained inference path.",
+      "source_url": "https://arxiv.org/abs/2607.10438",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-12T21:45:50Z",
+      "last_checked_at": "2026-10-12T21:45:50Z",
+      "linked_from": [
+        "papers/inference/08-edge-on-device-llm-systems/2024-2407.18921-mobile-edge-intelligence-for-large-language-models-a-contemporary-survey.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.64898/2026.07.07.736795",
+      "identity_tokens": [
+        "DOI:10.64898/2026.07.07.736795",
+        "SemanticScholar:4d4ef227c3617b14b99ae78b90c6b500973520d1"
+      ],
+      "title": "Safeguarding open-weight genomic foundation models through weight locking",
+      "reason": "Weight locking seeks to prevent misuse-oriented fine-tuning of genomic foundation models; the work is a biosecurity and training-robustness study, not an inference-efficiency contribution.",
+      "source_url": "https://doi.org/10.64898/2026.07.07.736795",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-12T21:45:50Z",
+      "last_checked_at": "2026-10-12T21:45:50Z",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2110.02861-8-bit-optimizers-via-block-wise-quantization.md"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2607.04179",
+      "identity_tokens": [
+        "arXiv:2607.04179",
+        "DOI:10.48550/arXiv.2607.04179",
+        "SemanticScholar:617d6c36b2eff092f77d9e70e065c6f16f447b9c"
+      ],
+      "title": "CritiqueDriveVLM: From Verifier-Guided Reinforcement Learning to Latent Thought Distillation for Autonomous Driving",
+      "reason": "CritiqueDriveVLM distills reasoning into a 28-token student and reports 88% lower inference latency (3482 ms to 416 ms) for autonomous-driving VLM decisions.",
+      "source_url": "https://arxiv.org/abs/2607.04179",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-12T21:45:50Z",
+      "last_checked_at": "2026-10-12T21:45:50Z",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2502.21074-codi-compressing-chain-of-thought-into-continuous-space-via-self-distill.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.04319",
+      "identity_tokens": [
+        "arXiv:2607.04319",
+        "DOI:10.48550/arXiv.2607.04319",
+        "SemanticScholar:c1b949f55204bd9a6959a183fb924c2f94df58e8"
+      ],
+      "title": "Legible-by-Construction: Attention and End-to-End Transformers",
+      "reason": "Legible-by-Construction changes attention and feed-forward representations for interpretability while preserving benchmark quality; it does not claim inference-system efficiency.",
+      "source_url": "https://arxiv.org/abs/2607.04319",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-12T21:45:50Z",
+      "last_checked_at": "2026-10-12T21:45:50Z",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2203.14680-transformer-feed-forward-layers-build-predictions-by-promoting-concepts-.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.04432",
+      "identity_tokens": [
+        "arXiv:2607.04432",
+        "DOI:10.48550/arXiv.2607.04432",
+        "SemanticScholar:2e7d132358ce0fd3925946b8a1a617877761b4f1"
+      ],
+      "title": "Covert Trait Propagation Is Representation Alignment: Mechanistic Evidence from Hidden-Channel Distillation",
+      "reason": "The paper analyzes hidden-channel transfer and safety-related representation alignment, not serving or runtime efficiency.",
+      "source_url": "https://arxiv.org/abs/2607.04432",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-12T21:45:50Z",
+      "last_checked_at": "2026-10-12T21:45:50Z",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2203.14680-transformer-feed-forward-layers-build-predictions-by-promoting-concepts-.md"
+      ]
+    }
+  ]
+}
+
