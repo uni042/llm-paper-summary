@@ -88,6 +88,10 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
   実装：✓ ・ リポジトリ内被引用：3  
   VeriCacheは圧縮KVで候補を生成し、完全KVをCPU／共有ストアから読み込んで最初の不一致を検証・訂正し、品質を保ったまま復元帯域とGPU計算を要求間で重ねる方式。
 
+- **2026-05 · [Runtime-Certified Bounded-Error Quantized Attention](2026-2605.20868-runtime-certified-bounded-error-quantized-attention.md)**  
+  実装：[✓](https://github.com/DeanoC/certified-quantized-attention) ・ リポジトリ内被引用：3  
+  GPUではINT8/INT4 KV、CPUではFP16原本を保持し、各生成ステップで注意誤差上界を検証して危険時だけ高精度へ段階復帰する品質保証付きKV圧縮。
+
 - **2026-04 · [HybridGen: Efficient LLM Generative Inference via CPU-GPU Hybrid Computing](2026-2604.18529-hybridgen-efficient-llm-generative-inference-via-cpu-gpu-hybrid-computing.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
   HybridGenはKVをCPU/GPUへ分けて各側で注意を計算しGPUで正規化し、次層CPU計算・PCIe転送・GPU計算も重ねて長文デコードの転送／CPU律速を減らす方式。
@@ -131,10 +135,6 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
 - **2026-06 · [SparseX: Efficient Segment-Level KV Cache Sharing for Interleaved LLM Serving](2026-2606.01751-sparsex-segment-level-kv-sharing.md)**  
   実装：[✓](https://github.com/MemTensor/SparseX) ・ リポジトリ内被引用：2  
   任意位置の再利用区間をRoPEで位置整合し、新しく追加された質問側の注意から重要トークンだけを選んでKVを再計算することで、会話・検索拡張生成・複数エージェントの文脈共有を高速化するvLLM統合方式。
-
-- **2026-05 · [Runtime-Certified Bounded-Error Quantized Attention](2026-2605.20868-runtime-certified-bounded-error-quantized-attention.md)**  
-  実装：[✓](https://github.com/DeanoC/certified-quantized-attention) ・ リポジトリ内被引用：2  
-  GPUではINT8/INT4 KV、CPUではFP16原本を保持し、各生成ステップで注意誤差上界を検証して危険時だけ高精度へ段階復帰する品質保証付きKV圧縮。
 
 - **2025-11 · [LiteCache: A Query Similarity-Driven, GPU-Centric KVCache Subsystem for Efficient LLM Inference](2025-2511.14510-litecache-gpu-centric-kv-offloading.md)**  
   実装：✓ ・ リポジトリ内被引用：2  

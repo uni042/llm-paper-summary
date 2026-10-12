@@ -319,7 +319,7 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
   可変長入力の固定長分割、量子化外れ値のCPU/GPU分離、ブロック単位の異種プロセッサ配置を組み合わせ、スマートフォンNPUでLLMプリフィルを高速化する。
 
 - **2025-02 · [PIM Is All You Need: A CXL-Enabled GPU-Free System for Large Language Model Inference](2025-2502.07578-cent-cxl-pim-gpu-free-llm.md)**  
-  実装：[✓](https://github.com/Yufeng98/CENT) ・ リポジトリ内被引用：15  
+  実装：[✓](https://github.com/Yufeng98/CENT) ・ リポジトリ内被引用：16  
   CXL接続のメモリ内・メモリ近傍演算装置だけで大規模言語モデル推論を実行し、A100基準で処理量2.3倍、エネルギー効率2.3倍、費用当たり生成量5.2倍を報告。
 
 - **2024-11 · [MoE-Lightning: High-Throughput MoE Inference on Memory-constrained GPUs](2024-2411.11217-moe-lightning-high-throughput-moe-inference-with-cpu-gpu-i-o-pipelining.md)**  

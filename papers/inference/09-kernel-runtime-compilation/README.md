@@ -135,7 +135,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   プリフィルとデコードの注意を同一SMで並行実行するSM認識型GPUカーネルにより、注意計算を平均28%、サービング処理量を最大22%改善する。
 
 - **2024-12 · [Flex Attention: A Programming Model for Generating Optimized Attention Kernels](2024-2412.05496-flexattention-a-programming-model-for-generating-optimized-attention-kernels.md)**  
-  実装：[✓](https://github.com/pytorch/pytorch) ・ リポジトリ内被引用：14  
+  実装：[✓](https://github.com/pytorch/pytorch) ・ リポジトリ内被引用：15  
   高速な融合注意カーネルを「注意変種ごとに手書きする」方式から、利用者が意味だけを書きコンパイラが高速カーネルへ落とす方式へ変える。
 
 - **2025-10 · [KTransformers: Unleashing the Full Potential of CPU/GPU Hybrid Inference for MoE Models](2025-b4e11ada8105-ktransformers-unleashing-the-full-potential-of-cpu-gpu-hybrid-inference-.md)**  
@@ -189,7 +189,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   しかし、数千の個別化モデルを同時提供する場合、アダプタの保存先、要求ごとの重み切替、系列長に応じて伸びる鍵・値キャッシュ、異なる低ランク行列を使う要求のバッチ化が問題になる。アダプタを基盤モデルへ統合して個別のモデル重みを作る方式では、基盤部分を要求間で共有してまとめて計算する機会を失う。
 
 - **2024-02 · [Simple linear attention language models balance the recall-throughput tradeoff](2024-2402.18668-simple-linear-attention-language-models-balance-the-recall-throughput-tr.md)**  
-  実装：[✓](https://github.com/HazyResearch/based) ・ リポジトリ内被引用：9  
+  実装：[✓](https://github.com/HazyResearch/based) ・ リポジトリ内被引用：10  
   通常のソフトマックス注意（softmax 注意機構）は、入力文脈に含まれる特定の情報を後から正確に参照する再取得（recall）に強い。モデル規模360M～1.3B、最大50Bトークンの学習、単一NVIDIA H100での実行測定を行い、1.3B・バッチ128・1024トークン生成でFlashAttention-2比最大24倍の処理量を報告する。
 
 - **2024-05 · [Mirage: A Multi-Level Superoptimizer for Tensor Programs](2024-2405.05751-mirage-a-multi-level-superoptimizer-for-tensor-programs.md)**  
@@ -228,6 +228,10 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   実装：[✓](https://github.com/agiresearch/AIOS) ・ リポジトリ内被引用：3  
   従来のエージェント枠組みでは、各エージェントがLLMやツールを直接呼び出し、GPUメモリの不足、競合するAPI呼び出し、長時間要求の独占を個別に処理しがちだった。AIOSはエージェントアプリケーションと資源管理を分離し、専用のAIOSカーネルを通じてサービスを提供する。
 
+- **2023-12 · [An LLM Compiler for Parallel Function Calling](2023-2312.04511-an-llm-compiler-for-parallel-function-calling.md)**  
+  実装：[✓](https://github.com/SqueezeAILab/LLMCompiler) ・ リポジトリ内被引用：3  
+  言語モデルに検索、計算、データ取得などの外部関数を使わせる場合、素朴な方式では「一つの関数を呼ぶ、結果を読む、次の関数を決める」という往復を繰り返す。HotpotQAでは逐次方式ReAct比1.80倍、Movie Recommendationでは3.74倍、依存付きParallelQAでは最大2.27倍の遅延改善を報告する。
+
 - **2024-10 · [SageAttention: Accurate 8-Bit Attention for Plug-and-play Inference Acceleration](2024-2410.02367-sageattention-accurate-8-bit-attention-for-plug-and-play-inference-accel.md)**  
   実装：[✓](https://github.com/thu-ml/SageAttention) ・ リポジトリ内被引用：2  
   一般的なモデル量子化は全結合層の重み・活性へ集中するが、長い文脈では注意行列を計算するQKᵀと、注意重みを値へ適用するPVの行列積が大きな費用を占める。RTX 4090での注意カーネルの演算性能は、FlashAttention-2比で概ね2.1倍、xformers比で概ね2.7倍と報告される。
@@ -239,10 +243,6 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - **2024-02 · [QUICK: Quantization-aware Interleaving and Conflict-free Kernel for efficient LLM inference](2024-2402.10076-quick-quantization-aware-interleaving-and-conflict-free-kernel-for-effic.md)**  
   実装：[✓](https://github.com/SqueezeBits/QUICK) ・ リポジトリ内被引用：2  
   4ビットに量子化した大規模言語モデルでは、重みの保存容量を減らせても、行列積の際には高精度の活性値と掛け合わせるために重みを半精度へ戻す処理が必要になる。原著の行列積単体の比較ではバッチ256でAutoAWQのカーネル比1.33〜1.91倍、モデル生成の比較では最大1.94倍の処理量を報告した。
-
-- **2023-12 · [An LLM Compiler for Parallel Function Calling](2023-2312.04511-an-llm-compiler-for-parallel-function-calling.md)**  
-  実装：[✓](https://github.com/SqueezeAILab/LLMCompiler) ・ リポジトリ内被引用：2  
-  言語モデルに検索、計算、データ取得などの外部関数を使わせる場合、素朴な方式では「一つの関数を呼ぶ、結果を読む、次の関数を決める」という往復を繰り返す。HotpotQAでは逐次方式ReAct比1.80倍、Movie Recommendationでは3.74倍、依存付きParallelQAでは最大2.27倍の遅延改善を報告する。
 
 ### 4年前（2022-11〜2023-10）
 

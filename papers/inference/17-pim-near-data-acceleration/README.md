@@ -104,17 +104,17 @@
   KV容量と注意帯域を同時拡張できるDIMM-PIMへデコード注意を分離し、GPU全結合層と重畳してHBM-PIM比最大5.15倍のスループットを得る。
 
 - **2025-02 · [PAPI: Exploiting Dynamic Parallelism in Large Language Model Decoding with a Processing-In-Memory-Enabled Computing System](2025-2502.15470-papi-exploiting-dynamic-parallelism-in-large-language-model-decoding-wit.md)**  
-  実装：✓ ・ リポジトリ内被引用：1  
+  実装：✓ ・ リポジトリ内被引用：2  
   PAPIは、大規模言語モデルの復号時に生じる同じ全結合層でも並列度によって計算律速とメモリ律速が入れ替わる現象を、実行先の動的選択へ結び付けたメモリ内処理（Processing-in-メモリ、PIM）型の異種計算機構である。
 
 ### 3年前（2023-11〜2024-10）
 
 - **2024-04 · [AttAcc! Unleashing the Power of PIM for Batched Transformer-based Generative Model Inference](2024-attacc-unleashing-the-power-of-pim-for-batched-transformer-based-generative-model-inference.md)**  
-  実装：[✓](https://github.com/scale-snu/attacc_simulator) ・ リポジトリ内被引用：16  
+  実装：[✓](https://github.com/scale-snu/attacc_simulator) ・ リポジトリ内被引用：17  
   GPUではバッチ化しても帯域律速の注意だけが残る点を狙い、FCをxPU、KV注意をHBM-PIMへ分担するAttAcc。bank-level PIM、head-level パイプライン、FFN co-processingを組み合わせ、175Bで同容量GPU系比最大2.81倍の性能・2.67倍のエネルギー効率を報告する。
 
 - **2024-03 · [NeuPIMs: NPU-PIM Heterogeneous Acceleration for Batched LLM Inferencing](2024-2403.00579-neupims-npu-pim-heterogeneous-acceleration-for-batched-llm-inferencing.md)**  
-  実装：[✓](https://github.com/casys-kaist/NeuPIMs) ・ リポジトリ内被引用：5  
+  実装：[✓](https://github.com/casys-kaist/NeuPIMs) ・ リポジトリ内被引用：6  
   GPT3系列4規模とShareGPT・Alpacaの系列長分布を使ったサイクル精度シミュレーションで、GPUのみ比約3倍、NPUのみ比2.4倍、単純なNPU/PIM統合比1.6倍の処理量を報告した。
 
 ### 4年前（2022-11〜2023-10）
@@ -126,6 +126,6 @@
 ### 5年前（2021-11〜2022-10）
 
 - **2022-04 · [TransPIM: A Memory-based Acceleration via Software-Hardware Co-Design for Transformer](2022-392657209cc9-transpim-a-memory-based-acceleration-via-software-hardware-co-design-for.md)**  
-  実装：✓ ・ リポジトリ内被引用：10  
+  実装：✓ ・ リポジトリ内被引用：11  
   高帯域メモリ（High Bandwidth メモリ、HBM）の近くへ演算を移すメモリ内処理（Processing-in-メモリ、PIM）やメモリ近傍計算（Near-メモリ Computing、NMC）は有力だが、従来の方式をそのままTransformerへ適用しても層間のデータ再配置や注意機構の削減演算が律速になる。
 <!-- survey:auto:end -->
