@@ -1,0 +1,178 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local",
+  "run_key": "discovery-20261013-main-ffb5fc1-screen-10-part-03",
+  "reference_main_sha": "345d3d9d0d47a20e8fb6a7de862a787282867166",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.19533",
+      "identity_tokens": [
+        "arXiv:2505.19533",
+        "DOI:10.48550/arXiv.2505.19533"
+      ],
+      "title": "ExAnte: A Benchmark for Ex-Ante Inference in Large Language Models",
+      "reason": "The paper is an ex-ante inference benchmark of LLM decision behavior, not a benchmark of latency, throughput, memory, or hardware execution efficiency.",
+      "source_url": "https://arxiv.org/abs/2505.19533",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-12T23:45:57Z",
+      "last_checked_at": "2026-10-12T23:45:57Z",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2212.10511-when-not-to-trust-language-models-investigating-effectiveness-of-paramet.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2407.09044",
+      "identity_tokens": [
+        "arXiv:2407.09044",
+        "DOI:10.1109/IROS58592.2024.10802349"
+      ],
+      "title": "Sensorimotor Attention and Language-based Regressions in Shared Latent Variables for Integrating Robot Motion Learning and LLM",
+      "reason": "The paper studies language and sensorimotor latent variables for robot motion learning; its LLM use is part of a robotics application rather than inference systems efficiency.",
+      "source_url": "https://arxiv.org/abs/2407.09044",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-12T23:46:01Z",
+      "last_checked_at": "2026-10-12T23:46:01Z",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.07711",
+      "identity_tokens": [
+        "arXiv:2505.07711",
+        "DOI:10.48550/arXiv.2505.07711"
+      ],
+      "title": "Circuit Partitioning Using Large Language Models for Quantum Compilation and Simulations",
+      "reason": "The paper uses LLMs to partition quantum circuits for compilation/simulation; the abstract evaluates task accuracy, not LLM inference runtime or resource efficiency.",
+      "source_url": "https://arxiv.org/abs/2505.07711",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-12T23:46:03Z",
+      "last_checked_at": "2026-10-12T23:46:03Z",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2508.17610",
+      "identity_tokens": [
+        "arXiv:2508.17610",
+        "DOI:10.48550/arXiv.2508.17610"
+      ],
+      "title": "Less Is More? Examining Fairness in Pruned Large Language Models for Summarising Opinions",
+      "reason": "The abstract studies fairness effects of pruning LLMs for opinion summarization and proposes pruning to improve fairness; it does not establish efficiency as the contribution or evaluation target.",
+      "source_url": "https://arxiv.org/abs/2508.17610",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-12T23:46:05Z",
+      "last_checked_at": "2026-10-12T23:46:05Z",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2301.00774-sparsegpt-massive-language-models-can-be-accurately-pruned-in-one-shot.md"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2505.21171",
+      "identity_tokens": [
+        "arXiv:2505.21171",
+        "DOI:10.48550/arXiv.2505.21171"
+      ],
+      "title": "M-Wanda: Improving One-Shot Pruning for Multilingual LLMs",
+      "reason": "M-Wanda proposes layerwise one-shot LLM pruning with language-aware activation statistics to preserve multilingual capability under sparsity, directly compressing inference models.",
+      "source_url": "https://arxiv.org/abs/2505.21171",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-12T23:46:07Z",
+      "last_checked_at": "2026-10-12T23:46:07Z",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2301.00774-sparsegpt-massive-language-models-can-be-accurately-pruned-in-one-shot.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2510.19592",
+      "identity_tokens": [
+        "arXiv:2510.19592",
+        "DOI:10.48550/arXiv.2510.19592"
+      ],
+      "title": "Decomposed Attention Fusion in MLLMs for Training-Free Video Reasoning Segmentation",
+      "reason": "DecAF refines MLLM attention maps for video segmentation accuracy without retraining; the contribution is a downstream segmentation method, with no inference efficiency target established.",
+      "source_url": "https://arxiv.org/abs/2510.19592",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-12T23:46:10Z",
+      "last_checked_at": "2026-10-12T23:46:10Z",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.16449-moviechat-from-dense-token-to-sparse-memory-for-long-video-understanding.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/2026.acl-long.325",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2026.acl-long.325"
+      ],
+      "title": "Planning-Guided Tutoring with Assessment-Driven Memory for Pedagogical LLM Tutors",
+      "reason": "The ACL abstract proposes planning and assessment-driven memory to improve pedagogical tutoring conversations; it is an education application and quality contribution, not serving efficiency.",
+      "source_url": "https://aclanthology.org/2026.acl-long.325/",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-12T23:46:13Z",
+      "last_checked_at": "2026-10-12T23:47:37Z",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2604.07911",
+      "identity_tokens": [
+        "arXiv:2604.07911",
+        "DOI:10.48550/arXiv.2604.07911"
+      ],
+      "title": "Dynamic Attentional Context Scoping: Agent-Triggered Focus Sessions for Isolated Per-Agent Steering in Multi-Agent LLM Orchestration",
+      "reason": "The abstract proposes per-agent context isolation and reports context-efficiency ratios for multi-agent LLM orchestration; its connection to reducing inference context/compute is plausible, but deployment and inference-cost evidence remains abstract-level.",
+      "source_url": "https://arxiv.org/abs/2604.07911",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-12T23:46:15Z",
+      "last_checked_at": "2026-10-12T23:46:15Z",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2026-2602.22603-sidequest-model-driven-kv-cache-management-for-long-horizon-agentic-reas.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2511.17194",
+      "identity_tokens": [
+        "arXiv:2511.17194"
+      ],
+      "title": "Progressive Behavioral Drift through Compression Valleys in Large Language Models",
+      "reason": "The paper exploits attention sinks and compression valleys for activation-space behavioral attacks; this is an LLM security vulnerability study, not inference optimization.",
+      "source_url": "https://arxiv.org/abs/2511.17194",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-12T23:46:18Z",
+      "last_checked_at": "2026-10-12T23:46:18Z",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3652892.3700758",
+      "identity_tokens": [
+        "DOI:10.1145/3652892.3700758"
+      ],
+      "title": "Menos: Split Fine-Tuning Large Language Models with Efficient GPU Memory Sharing",
+      "reason": "The ACM abstract is a split fine-tuning system that shares model/GPU memory during training across clients; it addresses fine-tuning rather than inference.",
+      "source_url": "https://iqua.ece.utoronto.ca/papers/chenghao-middleware24.pdf",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-12T23:46:20Z",
+      "last_checked_at": "2026-10-12T23:46:20Z",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2110.02861-8-bit-optimizers-via-block-wise-quantization.md"
+      ]
+    }
+  ]
+}
+
