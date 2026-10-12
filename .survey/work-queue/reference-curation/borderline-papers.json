@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-12T21:38:05+00:00",
-  "record_count": 4700,
+  "updated_at": "2026-10-12T21:39:42+00:00",
+  "record_count": 4702,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -70395,9 +70395,9 @@
       "identity_tokens": [
         "arXiv:2409.12961"
       ],
-      "reason": "原著要旨は画像・動画・3D場面を任意解像度で扱うOryxViTと、要求に応じて視覚トークンを1〜16倍圧縮する動的圧縮器を提案する。視覚トークン数削減はマルチモーダル推論の入力計算・長文脈効率と関係するが、中心的な成果は画像・動画・3D認識の能力改善とデータ整備であり、GPUメモリ管理、LLMサービング、デコード処理率などのシステム評価は要旨で明確でないため境界とする。",
+      "reason": "一次論文の要旨は任意解像度を扱う視覚符号器と、要求に応じて視覚トークンを1倍から16倍圧縮する動的圧縮器を提案する。長時間動画の入力トークン削減は推論計算量・文脈長に関連するが、主な評価は画像・動画・3Dの認識性能であり、LLM一般の推論ランタイム、GPU実測スループット、KVキャッシュ削減の独立した評価は要旨から確認できない。多モーダル前処理の効率化として境界的関連に分類。",
       "first_checked_at": "2026-10-10T21:46:56+00:00",
-      "last_checked_at": "2026-10-10T21:46:56+00:00",
+      "last_checked_at": "2026-10-12T21:39:41+00:00",
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "Oryx MLLM: On-Demand Spatial-Temporal Understanding at Arbitrary Resolution"
@@ -71607,9 +71607,9 @@
       "identity_tokens": [
         "arXiv:2411.00774"
       ],
-      "reason": "一次要旨で確認できる主貢献は、既存テキストLLMの重みを凍結したまま音声入出力を結合するモデル構造と、8 GPU・約6万件の複数ターンQ&Aを用いる三段階学習、および二重音声対話の学習である。低遅延の音声応答は述べるが、推論スケジューラ、KV管理、オフロード、カーネル等の直接的なシステム機構や、比較条件付きの推論効率評価は要旨から確定できない。音声対話のモデル・学習寄りのため現行推論システムサーベイでは境界的とする。",
+      "reason": "一次論文の要旨は、凍結LLMへ音声入出力を追加する三段階学習と全二重音声対話を提案し、低遅延な音声応答を達成する。低遅延は明示されるものの、主貢献は音声対話アーキテクチャと学習資源削減・能力保持であり、汎用LLM推論ランタイムのカーネル、サービング、メモリオフロードの新方式は要旨から確認できない。音声ストリーミング推論への関連性を残して保留。",
       "first_checked_at": "2026-10-12T15:14:02+00:00",
-      "last_checked_at": "2026-10-12T15:14:02+00:00",
+      "last_checked_at": "2026-10-12T21:39:39+00:00",
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "Freeze-Omni: A Smart and Low Latency Speech-to-speech Dialogue Model with Frozen LLM"
@@ -71737,9 +71737,9 @@
       "identity_tokens": [
         "arXiv:2601.01885"
       ],
-      "reason": "一次要旨は長期・短期記憶の保存・検索・要約・削除をエージェントのツール行動として統一し、段階的強化学習で選択方針を学ぶ。文脈使用効率には関係するが、学習されたエージェントの能力改善が中心であり、推論基盤の実測高速化・KVキャッシュ最適化は要旨から確認できない。",
+      "reason": "AgeMemは長期・短期記憶の保存、検索、更新、要約、破棄をLLMエージェントの道具操作として統合し、段階的強化学習とステップ単位GRPOで行動方策を学ぶ。5種類の長期タスクで記憶品質と文脈利用効率を改善するが、中心はエージェントの方策学習であり、推論サービングのGPU/CPU/SSD階層やKVキャッシュの転送コストを直接最適化する研究ではない。文脈管理に関連するため境界的とする。",
       "first_checked_at": "2026-10-12T21:37:59+00:00",
-      "last_checked_at": "2026-10-12T21:37:59+00:00",
+      "last_checked_at": "2026-10-12T21:39:42+00:00",
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "Agentic Memory: Learning Unified Long-Term and Short-Term Memory Management for Large Language Model Agents"
@@ -71808,6 +71808,32 @@
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "Lazarus: Resilient and Elastic Training of Mixture-of-Experts Models with Adaptive Expert Placement"
+    },
+    "arXiv:2601.10011": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2601.10011",
+      "identity_tokens": [
+        "arXiv:2601.10011"
+      ],
+      "reason": "Memo-SQLは自然言語からSQLへの変換において、構造化分解と過去の誤り修正事例の検索で自己修正を行い、BIRDで68.5%の実行正解率を報告する。テスト時の多候補生成の計算資源を10分の1以下に減らすという推論費用面の効果はあるが、主要貢献はNL2SQLのアプリケーション推論戦略であり、GPU推論基盤、KVキャッシュ、階層メモリ、カーネル最適化は直接扱わない。境界的として保留する。",
+      "first_checked_at": "2026-10-12T21:39:40+00:00",
+      "last_checked_at": "2026-10-12T21:39:40+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Memo-SQL: Structured Decomposition and Experience-Driven Self-Correction for Training-Free NL2SQL"
+    },
+    "arXiv:2602.02050": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2602.02050",
+      "identity_tokens": [
+        "arXiv:2602.02050"
+      ],
+      "reason": "LLMエージェントのツール呼出しをエントロピー減少を使った報酬学習で最適化し、呼出し回数72.07%削減または性能22.27%向上を報告する。ツール呼出し削減は推論遅延・外部API費用に関連するが、主手法はエージェント行動方策の学習と報酬設計で、LLMのGPU実行やサービングの性能最適化ではない。学習単独を優先除外する基準に近いが、推論時の呼出し効率との接点があるため境界的とする。",
+      "first_checked_at": "2026-10-12T21:39:41+00:00",
+      "last_checked_at": "2026-10-12T21:39:41+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Rethinking the Role of Entropy in Optimizing Tool-Use Behaviors for Large Language Model Agents"
     }
   }
 }
