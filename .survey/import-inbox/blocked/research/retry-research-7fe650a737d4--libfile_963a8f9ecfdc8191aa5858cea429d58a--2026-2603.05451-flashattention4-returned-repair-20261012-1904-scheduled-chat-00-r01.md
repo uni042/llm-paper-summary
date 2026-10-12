@@ -35,6 +35,8 @@ repair_reason: "prior blocked_quality: evaluation prose too short (310 < 500); r
 reference_main_sha: "552ff0f6f6b386e51ec0b5d4b92d3dc38161b819"
 quality_self_review_passed: true
 quality_self_review_version: "PAPER-QUALITY-GUIDE-2026-10-07"
+last_audited: null
+audit_version: 0
 ---
 
 # FlashAttention-4：Blackwellの非対称な演算性能向上に対応した注意カーネル

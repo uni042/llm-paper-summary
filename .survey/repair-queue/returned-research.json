@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-12T11:01:22+00:00",
+  "generated_at": "2026-10-12T11:06:35+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -1000,36 +1000,9 @@
       "worker_run_key": "20261012-1930-scheduled-chat-30/r01"
     },
     {
-      "canonical_id": "arXiv:2603.05451",
-      "title": "FlashAttention-4: Algorithm and Kernel Pipelining Co-Design for Asymmetric Hardware Scaling",
-      "source_url": "https://arxiv.org/pdf/2603.05451",
-      "returned_at": "2026-10-12T11:00:44+00:00",
-      "return_count": 3,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 0 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 6842,
-        "body_paragraphs": 33,
-        "method_chars": 2783,
-        "method_paragraphs": 12,
-        "evaluation_chars": 0,
-        "limitation_chars": 796,
-        "insufficiency_flags": [
-          "評価説明量 0 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_963a8f9ecfdc8191aa5858cea429d58a--2026-2603.05451-flashattention4-returned-repair-20261012-1904-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_963a8f9ecfdc8191aa5858cea429d58a--2026-2603.05451-flashattention4-returned-repair-20261012-1904-scheduled-chat-00-r01.json",
-      "worker_run_key": "20261012-1904-scheduled-chat-00/r01"
-    },
-    {
       "canonical_id": "arXiv:2603.10087",
-      "title": "Pooling Engram Conditional Memory in Large Language Models using CXL",
-      "source_url": "https://arxiv.org/pdf/2603.10087",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-12T11:00:45+00:00",
       "return_count": 8,
       "assigned_worker": "scheduled-chat-00",
@@ -1055,8 +1028,8 @@
     },
     {
       "canonical_id": "arXiv:2608.04991",
-      "title": "RAC: Reference-Aware Activation Compression for Communication-Efficient Split LLM Inference",
-      "source_url": "https://arxiv.org/html/2608.04991",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-12T11:00:45+00:00",
       "return_count": 5,
       "assigned_worker": "scheduled-chat-00",
@@ -1078,6 +1051,33 @@
       },
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-04e083c7535a--libfile_63ae2b5f356481919aa9de0b909a4d72--2026-2608.04991-rac-returned-research-repair-20261012-1904-scheduled-chat-00-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-04e083c7535a--libfile_63ae2b5f356481919aa9de0b909a4d72--2026-2608.04991-rac-returned-research-repair-20261012-1904-scheduled-chat-00-r01.json",
+      "worker_run_key": "20261012-1904-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2603.05451",
+      "title": "FlashAttention-4: Algorithm and Kernel Pipelining Co-Design for Asymmetric Hardware Scaling",
+      "source_url": "https://arxiv.org/pdf/2603.05451",
+      "returned_at": "2026-10-12T11:06:35+00:00",
+      "return_count": 4,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 0 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 6842,
+        "body_paragraphs": 33,
+        "method_chars": 2783,
+        "method_paragraphs": 12,
+        "evaluation_chars": 0,
+        "limitation_chars": 796,
+        "insufficiency_flags": [
+          "評価説明量 0 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-7fe650a737d4--libfile_963a8f9ecfdc8191aa5858cea429d58a--2026-2603.05451-flashattention4-returned-repair-20261012-1904-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-7fe650a737d4--libfile_963a8f9ecfdc8191aa5858cea429d58a--2026-2603.05451-flashattention4-returned-repair-20261012-1904-scheduled-chat-00-r01.json",
       "worker_run_key": "20261012-1904-scheduled-chat-00/r01"
     }
   ]
