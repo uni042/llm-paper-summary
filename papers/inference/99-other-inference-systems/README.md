@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（479本）
+## 自動生成の論文一覧（480本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -1875,6 +1875,10 @@
 - **2019-11 · [Mask-Predict: Parallel Decoding of Conditional Masked Language Models](2019-0bc18ef37a7d-mask-predict-parallel-decoding-of-conditional-masked-language-models.md)**  
   実装：[✓](https://github.com/facebookresearch/Mask-Predict) ・ リポジトリ内被引用：1  
   翻訳文全体を毎回捨てる反復改良方式とは異なり、高信頼の語を固定して低信頼位置へ文脈を提供する点が中心的な設計である。
+
+- **2020-08 · [ConvBERT: Improving BERT with Span-based Dynamic Convolution](2020-2008.02496-convbert-improving-bert-with-span-based-dynamic-convolution.md)**  
+  実装：[✓](https://github.com/yitu-opensource/ConvBert) ・ リポジトリ内被引用：0  
+  BERTの多頭自己注意は、すべてのヘッドで全トークン対の関係を計算する。しかし自然言語では局所的な構文・語彙の結び付きが重要であり、実際に多くのヘッドの注意行列は対角線付近へ集中する。遠方トークンをほとんど参照しないヘッドでも、全系列の二次元注意行列を構築するのは計算上の無駄である。
 
 - **2020-06 · [Funnel-Transformer: Filtering out Sequential Redundancy for Efficient Language Processing](2020-2006.03236-funnel-transformer-filtering-out-sequential-redundancy-for-efficient-lan.md)**  
   実装：[✓](https://github.com/laiguokun/Funnel-Transformer) ・ リポジトリ内被引用：0  

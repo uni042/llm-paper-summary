@@ -35,10 +35,15 @@
   "selection_reason": "self-attention headの一部をspan-based dynamic convolutionへ置換するmixed attentionで計算を削減し、ConvBERT-baseがELECTRA-baseより低training costで高性能、small modelでは推論効率改善を狙うため対象。",
   "semantic_scholar_id": "2a218786f4615b82389f78472e7ff22e6ce57490",
   "source_url": "https://arxiv.org/abs/2008.02496",
-  "status": "ready",
+  "status": "superseded",
   "title": "ConvBERT: Improving BERT with Span-based Dynamic Convolution",
   "type": "research",
   "venue": "Neural Information Processing Systems",
   "workflow_version": 10,
-  "year": 2020
+  "year": 2020,
+  "superseded_at": "2026-10-12T15:29:42+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2020-2008.02496-convbert-improving-bert-with-span-based-dynamic-convolution.md",
+  "represented_canonical_id": "arXiv:2008.02496",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
