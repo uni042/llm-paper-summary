@@ -1,0 +1,26 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-45",
+  "run_key": "20261013-0145-scheduled-chat-45/r01-research-prescreen-012",
+  "reference_main_sha": "b5fce0a4f5ba093d1af1542f771570592e9d5235",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2512.18746",
+      "identity_tokens": [
+        "arxiv:2512.18746"
+      ],
+      "title": "MemEvolve: Meta-Evolution of Agent Memory Systems",
+      "reason": "EvolveLabのencode/store/retrieve/manageモジュールを探索空間にして、エージェントの経験知識と記憶アーキテクチャを共同で進化させる。SmolAgentやFlash-Searcherのタスク性能を最大17.06%改善するが、評価軸はエージェントの課題成功率と記憶設計の転移であり、GPU推論実行基盤のキャッシュ配置、転送、スケジューリングを直接評価していない。長期記憶管理の概念は関連するため境界的とする。",
+      "source_url": "https://arxiv.org/abs/2512.18746",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T01:54:32+09:00",
+      "last_checked_at": "2026-10-13T01:54:32+09:00",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance",
+      "worklist_rank": 12
+    }
+  ]
+}
