@@ -1,0 +1,217 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-luna-primary-source-screen",
+  "run_key": "discovery-20261013-main-0e29c55-screen-08-part-03-826e0ed379c2",
+  "reference_main_sha": "0e29c55e48a7682385552e4c2703d420a450e6f3",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.20476",
+      "identity_tokens": [
+        "arXiv:2605.20476",
+        "DOI:10.48550/arXiv.2605.20476",
+        "SemanticScholar:71c20411e86a5310ffaaad8a63ee4f0da4c29291"
+      ],
+      "title": "Goodbye Drift: Anchored Tree Sampling for Long-Horizon Video-to-Video Generation",
+      "reason": "Primary-text Sections 1–2.1 confirm ATS is an inference-time tree sampler for long-horizon video-to-video generation; its target is video-generation quality and drift, not LLM inference systems.",
+      "source_url": "https://arxiv.org/abs/2605.20476",
+      "body_check": "primary_text_read; relevant sections recorded in body_review",
+      "first_checked_at": "2026-10-12T21:45:50Z",
+      "last_checked_at": "2026-10-12T21:45:50Z",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-0bc18ef37a7d-mask-predict-parallel-decoding-of-conditional-masked-language-models.md"
+      ],
+      "body_review": {
+        "full_text_read": true,
+        "full_text_url": "https://arxiv.org/html/2605.20476",
+        "sections": [
+          "1",
+          "2.1"
+        ],
+        "findings": "Inference-time scheduling targets video-to-video generation, outside the LLM inference-systems scope."
+      }
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.17204",
+      "identity_tokens": [
+        "arXiv:2605.17204",
+        "DOI:10.48550/arXiv.2605.17204",
+        "SemanticScholar:1b1a40c218d97bb68f8ebea2ad7f5ca52f1347c4"
+      ],
+      "title": "Event-Grounded Sparse Autoencoders for Vision-Language-Action Policies",
+      "reason": "Event-grounded sparse autoencoders explain and intervene on VLA policy behavior; the abstract emphasizes interpretability and safety limits, not serving efficiency.",
+      "source_url": "https://arxiv.org/abs/2605.17204",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-12T21:45:50Z",
+      "last_checked_at": "2026-10-12T21:45:50Z",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2203.14680-transformer-feed-forward-layers-build-predictions-by-promoting-concepts-.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.17448",
+      "identity_tokens": [
+        "arXiv:2605.17448",
+        "DOI:10.48550/arXiv.2605.17448",
+        "SemanticScholar:d0a730b52a9e03563a1bb1143fc7d50bdf7f256e"
+      ],
+      "title": "Self-Improving CAD Generation Agents with Finite Element Analysis as Feedback",
+      "reason": "The CAD agent work uses FEA feedback to improve engineering-artifact quality; it does not target inference-system efficiency.",
+      "source_url": "https://arxiv.org/abs/2605.17448",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-12T21:45:50Z",
+      "last_checked_at": "2026-10-12T21:45:50Z",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2406.11816-videollm-online-online-video-large-language-model-for-streaming-video.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/JIOT.2026.3668085",
+      "identity_tokens": [
+        "DOI:10.1109/JIOT.2026.3668085",
+        "SemanticScholar:5bd317548d254c411b70ae4afa4351bff66b4294"
+      ],
+      "title": "Multimodal Large Language Models for Perception in Autonomous Driving: Architecture, Taxonomy, and Challenges",
+      "reason": "This DOI resolves to an IEEE Internet of Things Journal survey about MLLM perception in autonomous driving, but the official IEEE abstract page could not be retrieved to establish whether it contains a concrete inference-efficiency system contribution.",
+      "source_url": "https://doi.org/10.1109/JIOT.2026.3668085",
+      "body_check": "source_unavailable; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-10-12T21:45:50Z",
+      "last_checked_at": "2026-10-12T21:45:50Z",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.06742-honeybee-locality-enhanced-projector-for-multimodal-llm.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.13037",
+      "identity_tokens": [
+        "arXiv:2605.13037",
+        "DOI:10.48550/arXiv.2605.13037",
+        "SemanticScholar:f69a05973e40f0b3a712cd96cf0a3f39cb3b926f"
+      ],
+      "title": "MAP: A Map-then-Act Paradigm for Long-Horizon Interactive Agent Reasoning",
+      "reason": "MAP constructs reusable environment maps before execution; primary-text Sections 3.1–3.2 show it can bypass repeated rule verification, but it also spends an explicit exploration phase and reports no inference latency or resource measurements.",
+      "source_url": "https://arxiv.org/abs/2605.13037",
+      "body_check": "primary_text_read; relevant sections recorded in body_review",
+      "first_checked_at": "2026-10-12T21:45:50Z",
+      "last_checked_at": "2026-10-12T21:45:50Z",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2502.12110-a-mem-agentic-memory-for-llm-agents.md",
+        "papers/inference/99-other-inference-systems/2025-2506.15841-mem1-learning-to-synergize-memory-and-reasoning-for-efficient-long-horiz.md"
+      ],
+      "body_review": {
+        "full_text_read": true,
+        "full_text_url": "https://arxiv.org/html/2605.13037",
+        "sections": [
+          "3.1",
+          "3.2"
+        ],
+        "findings": "Reusable maps may avoid repeated rule checks but add exploration and lack runtime/resource measurements; borderline."
+      }
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.11396",
+      "identity_tokens": [
+        "arXiv:2605.11396",
+        "DOI:10.48550/arXiv.2605.11396",
+        "SemanticScholar:65426207fdc2cb8ee6642812e1ebd530f430e249"
+      ],
+      "title": "MuonQ: Enhancing Low-Bit Muon Quantization via Directional Fidelity Optimization",
+      "reason": "MuonQ reduces optimizer-state memory for 4-bit Muon pretraining; its contribution is training-only and does not optimize inference weights or serving.",
+      "source_url": "https://arxiv.org/abs/2605.11396",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-12T21:45:50Z",
+      "last_checked_at": "2026-10-12T21:45:50Z",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2110.02861-8-bit-optimizers-via-block-wise-quantization.md"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2605.11722",
+      "identity_tokens": [
+        "arXiv:2605.11722",
+        "DOI:10.48550/arXiv.2605.11722",
+        "SemanticScholar:b8bd4c4af8cd89c9b27517519c4b4ecbcc2fbe2c"
+      ],
+      "title": "EPIC: Efficient Predicate-Guided Inference-Time Control for Compositional Text-to-Image Generation",
+      "reason": "EPIC routes failed predicates to targeted editing or resampling and reports accuracy gains with fewer MLLM calls and tokens than RAISE; primary-text Appendix C.4 documents the cost-normalized inference comparison.",
+      "source_url": "https://arxiv.org/abs/2605.11722",
+      "body_check": "primary_text_read; relevant sections recorded in body_review",
+      "first_checked_at": "2026-10-12T21:45:50Z",
+      "last_checked_at": "2026-10-12T21:45:50Z",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2412.04468-nvila-efficient-frontier-visual-language-models.md"
+      ],
+      "body_review": {
+        "full_text_read": true,
+        "full_text_url": "https://arxiv.org/html/2605.11722",
+        "sections": [
+          "Appendix C.4",
+          "Appendix C.5"
+        ],
+        "findings": "Cost-normalized comparison reports fewer MLLM calls and tokens than RAISE; relevant efficiency contribution."
+      }
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.20436",
+      "identity_tokens": [
+        "arXiv:2607.20436",
+        "DOI:10.48550/arXiv.2607.20436",
+        "SemanticScholar:5602979c78e1c12055cdc78a3e505a08c77899e4"
+      ],
+      "title": "Routing Subspaces: Auditing Evaluation-to-Deployment Mismatch in Fine-Tuned Language Models",
+      "reason": "Routing Subspaces audits evaluation-to-deployment safety mismatch and edits model activations; it is a safety diagnostic, not an inference-efficiency contribution.",
+      "source_url": "https://arxiv.org/abs/2607.20436",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-12T21:45:50Z",
+      "last_checked_at": "2026-10-12T21:45:50Z",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2203.14680-transformer-feed-forward-layers-build-predictions-by-promoting-concepts-.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.07766",
+      "identity_tokens": [
+        "arXiv:2605.07766",
+        "DOI:10.48550/arXiv.2605.07766",
+        "SemanticScholar:f0cd02056ecc7b28990523ffaa6fb2575c3f63e9"
+      ],
+      "title": "Head Similarity: Modeling Structured Whole-Head Appearance Beyond Face Recognition",
+      "reason": "Head Similarity proposes an appearance-sensitive face/head recognition formulation and benchmark; it is an independent vision application.",
+      "source_url": "https://arxiv.org/abs/2605.07766",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-12T21:45:50Z",
+      "last_checked_at": "2026-10-12T21:45:50Z",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2509.17765-qwen3-omni-technical-report.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.64898/2026.05.05.723022",
+      "identity_tokens": [
+        "DOI:10.64898/2026.05.05.723022",
+        "SemanticScholar:f7c96417f598082dc7cf0b04106573a55d3ec041"
+      ],
+      "title": "A Brain-Inspired Framework for Memory Prioritization in Neural Networks Based on Valence",
+      "reason": "The DOI identifies a bioRxiv framework for prioritizing salient memory in neural networks and improving long-context recall, but the official bioRxiv abstract page returned 403 in this screen; no primary abstract could be preserved.",
+      "source_url": "https://doi.org/10.64898/2026.05.05.723022",
+      "body_check": "source_unavailable; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-10-12T21:45:50Z",
+      "last_checked_at": "2026-10-12T21:45:50Z",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2501.00663-titans-learning-to-memorize-at-test-time.md"
+      ]
+    }
+  ]
+}
+
