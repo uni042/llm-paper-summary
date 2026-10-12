@@ -1,35 +1,57 @@
 ---
-canonical_id: "DOI:10.18653/v1/2026.findings-acl.201"
-title: "HqeKV: Towards Hybrid Quantization and Eviction for KV Cache in Long-Context LLM Inference"
-summary: "長文脈LLM推論で肥大化するキー・値キャッシュに対し、注意重みと値ベクトルの値域から重要度を算出し、16・4・2・1ビット保持と削除を混合する圧縮方式。オフライン探索で精度配分を決め、同じ記憶予算でのLongBench品質を改善する。"
-list_summary: "注意重みと値ベクトルの値域を併用してKVキャッシュを順位付けし、16/4/2/1ビットと削除の配分を自動探索することで、長文脈推論のメモリ制約下で生成品質を改善する。"
+canonical_id: DOI:10.18653/v1/2026.findings-acl.201
+title: 'HqeKV: Towards Hybrid Quantization and Eviction for KV Cache in Long-Context LLM Inference'
+summary: 長文脈LLM推論で肥大化するキー・値キャッシュに対し、注意重みと値ベクトルの値域から重要度を算出し、16・4・2・1ビット保持と削除を混合する圧縮方式。オフライン探索で精度配分を決め、同じ記憶予算でのLongBench品質を改善する。
+list_summary: 注意重みと値ベクトルの値域を併用してKVキャッシュを順位付けし、16/4/2/1ビットと削除の配分を自動探索することで、長文脈推論のメモリ制約下で生成品質を改善する。
 authors:
-  - "He Wang"
-  - "Yu Gu"
-  - "Fangfang Li"
-  - "Zhigang Wang"
-  - "Zhenghao Liu"
-  - "Ning Wang"
-  - "Xiaohua Li"
-  - "Ge Yu"
-published: "2026-07"
-publication: "Findings of the Association for Computational Linguistics: ACL 2026, pp. 4138-4153"
-publication_type: "国際会議論文"
-publication_status: "査読付き会議録掲載"
-source: "https://aclanthology.org/2026.findings-acl.201.pdf"
+- He Wang
+- Yu Gu
+- Fangfang Li
+- Zhigang Wang
+- Zhenghao Liu
+- Ning Wang
+- Xiaohua Li
+- Ge Yu
+published: 2026-07
+publication: 'Findings of the Association for Computational Linguistics: ACL 2026, pp. 4138-4153'
+publication_type: 国際会議論文
+publication_status: 査読付き会議録掲載
+source: https://aclanthology.org/2026.findings-acl.201.pdf
 sources:
-  - "https://aclanthology.org/2026.findings-acl.201.pdf"
-  - "https://aclanthology.org/2026.findings-acl.201/"
-implementation: "論文はRTX A6000 48GBでLlama-3.1-8B-InstructとQwen3-8Bを評価。量子化値の密な格納と逆量子化・行列積を融合する専用GPUカーネルを使用。著者が本文に公式実装リポジトリを明記。"
-code: "https://github.com/skywclouds/HqeKV"
-last_checked: "2026-10-13"
-worker_completed_at: "2026-10-13T06:30:44+09:00"
-worker_run_key: "20261013-0630-scheduled-chat-30/r01"
-reference_main_sha: "0e29c55e48a7682385552e4c2703d420a450e6f3"
-research_job_id: "job-research-a5a8c5a3f3498233"
-lineage: "07-kv-cache-optimization-compression"
+- https://aclanthology.org/2026.findings-acl.201.pdf
+- https://aclanthology.org/2026.findings-acl.201/
+implementation: 論文はRTX A6000 48GBでLlama-3.1-8B-InstructとQwen3-8Bを評価。量子化値の密な格納と逆量子化・行列積を融合する専用GPUカーネルを使用。著者が本文に公式実装リポジトリを明記。
+code: https://github.com/skywclouds/HqeKV
+last_checked: '2026-10-13'
+worker_completed_at: '2026-10-13T06:30:44+09:00'
+worker_run_key: 20261013-0630-scheduled-chat-30/r01
+reference_main_sha: 0e29c55e48a7682385552e4c2703d420a450e6f3
+research_job_id: job-research-a5a8c5a3f3498233
+lineage: 07-kv-cache-optimization-compression
 last_audited: null
 audit_version: 0
+references:
+- canonical_id: arXiv:2305.17118
+- canonical_id: arXiv:2402.18096
+- canonical_id: arXiv:2405.14256
+- canonical_id: arXiv:2503.18599
+- canonical_id: arXiv:2306.14048
+- canonical_id: arXiv:2401.18079
+- canonical_id: arXiv:2406.02069
+- canonical_id: arXiv:2405.06219
+- canonical_id: arXiv:2512.14946
+- canonical_id: arXiv:2407.12820
+- canonical_id: OpenReview:EQgEMAD4kv
+- canonical_id: arXiv:2310.19102
+- canonical_id: arXiv:2402.02750
+- canonical_id: arXiv:2309.17453
+- canonical_id: arXiv:2404.14469
+- canonical_id: arXiv:2405.16406
+- canonical_id: arXiv:2403.04643
+- canonical_id: arXiv:2407.21018
+references_checked_at: '2026-10-12'
+references_source: primary-pdf-reference-section
+references_total: 2
 ---
 
 # HqeKV：重要度に応じて量子化と削除を併用する長文脈KVキャッシュ圧縮
