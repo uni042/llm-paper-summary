@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-12T04:49:54+00:00",
-  "record_count": 4674,
+  "updated_at": "2026-10-12T09:45:36+00:00",
+  "record_count": 4675,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -71451,6 +71451,21 @@
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "ado: a Python framework for computational experimentation and benchmarking"
+    },
+    "SemanticScholar:7945684818786fcb32cf92bace2566d7d6bc8945": {
+      "classification": "borderline",
+      "canonical_id": "SemanticScholar:7945684818786fcb32cf92bace2566d7d6bc8945",
+      "identity_tokens": [
+        "SemanticScholar:7945684818786fcb32cf92bace2566d7d6bc8945",
+        "semanticscholar:7945684818786fcb32cf92bace2566d7d6bc8945",
+        "title:legoos-a-disseminated-distributed-os-for-hardware-resource-disaggregation"
+      ],
+      "reason": "OSDI 2018の一次要旨では、計算・メモリ・ストレージをネットワーク接続された独立資源へ分離し、各資源の監視機構を分散させるsplitkernelとLegoOSを提案する。遠隔メモリ管理と資源分離はLLMの階層メモリ・推論サービングに対する基盤的な関連性を持つが、論文の直接の評価対象は汎用OS・資源充填・故障率であり、LLM推論・KVキャッシュ・MoE・推論カーネルの性能を評価しない。無関係と切り捨てず境界候補に分類し、関連研究として必要な場合に参照する。",
+      "first_checked_at": "2026-10-12T09:45:36+00:00",
+      "last_checked_at": "2026-10-12T09:45:36+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "LegoOS: A Disseminated, Distributed OS for Hardware Resource Disaggregation"
     }
   }
 }
