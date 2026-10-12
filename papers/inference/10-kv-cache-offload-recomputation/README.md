@@ -443,7 +443,7 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
   一覧用要約：Aqa（リポジトリではAqua）は同一NVLink/NVSwitch領域内の余剰GPUメモリを、他の推論ジョブのKVキャッシュや推論状態の高速退避先として貸し借りする。貸し手・借り手の事前分類、モデル配置、弾力的テンソル管理、公平な先取りスケジューリングを組み合わせ、要求集中時の初回応答時間と処理率を改善する。
 
 - **2024-10 · [Fast State Restoration in LLM Serving with HCache](2024-2410.05004-hcache-fast-state-restoration-llm-serving.md)**  
-  実装：✓ ・ リポジトリ内被引用：8  
+  実装：✓ ・ リポジトリ内被引用：9  
   GPUから追い出した会話状態を、巨大なKVキャッシュそのものでも元トークン列でもなく中間活性として保存し、I/Oと再計算を重ねて高速にKVへ復元する状態再利用方式。
 
 ### 4年前（2022-11〜2023-10）

@@ -155,7 +155,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   OpenSHMEM通信をTritonへ統合し、計算・通信・メモリアクセスをPythonから細粒度に重ね合わせ、8〜64 GPUで分散カーネルを高速化するコンパイラ拡張。
 
 - **2025-03 · [Medusa: Accelerating Serverless LLM Inference with Materialization](2025-8c4404f09758-medusa-accelerating-serverless-llm-inference-with-materialization.md)**  
-  実装：[✓](https://github.com/thustorage/Medusa) ・ リポジトリ内被引用：7  
+  実装：[✓](https://github.com/thustorage/Medusa) ・ リポジトリ内被引用：8  
   Medusaは、大規模言語モデル（large language モデル; LLM）を必要なときだけ起動するサーバーレス推論において、モデル重みの読み込み以外にも無視できない起動費用があることに着目したシステム論文である。
 
 - **2025-06 · [FlashMoE: Fast Distributed MoE in a Single Kernel](2025-2506.04667-flashmoe-fast-distributed-moe-in-a-single-kernel.md)**  
@@ -251,7 +251,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 ### 4年前（2022-11〜2023-10）
 
 - **2023-10 · [Deja Vu: Contextual Sparsity for Efficient LLMs at Inference Time](2023-2310.17157-deja-vu-contextual-sparsity-for-efficient-llms-at-inference-time.md)**  
-  実装：[✓](https://github.com/FMInference/DejaVu) ・ リポジトリ内被引用：36  
+  実装：[✓](https://github.com/FMInference/DejaVu) ・ リポジトリ内被引用：37  
   密なモデルから常に同じ重みを削除する静的枝刈りでは、入力に応じて必要な知識が変わるため、文章生成や文脈内学習の品質を損ない得る。
 
 - **2023-09 · [Flash-LLM: Enabling Cost-Effective and Highly-Efficient Large Generative Model Inference with Unstructured Sparsity](2023-2309.10285-flash-llm-enabling-cost-effective-and-highly-efficient-large-generative-.md)**  

@@ -528,7 +528,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   DLMの復号済みトークンK/Vを1ステップ遅延して再利用し、未確定位置だけを再計算することで、学習なしに2〜10倍級の推論高速化を実現する。
 
 - **2025-04 · [TurboQuant: Online Vector Quantization with Near-optimal Distortion Rate](2025-2504.19874-turboquant-online-vector-quantization-with-near-optimal-distortion-rate.md)**  
-  実装：✓ ・ リポジトリ内被引用：17  
+  実装：✓ ・ リポジトリ内被引用：18  
   TurboQuantは、高次元ベクトルを入力データセットに合わせて学習し直さずに低ビット化する、オンライン量子化方式である。理論面では、復元二乗誤差と内積誤差の両方について、ビット幅bに対して概ね4のマイナスb乗で減る上界を示し、情報理論的な下限との差が最大約2.7倍の定数内であると証明する。
 
 - **2024-11 · [DroidSpeak: KV Cache Sharing for Cross-LLM Communication and Multi-LLM Serving](2024-2411.02820-droidspeak-kv-cache-sharing-for-cross-llm-communication-and-multi-llm-se.md)**  
@@ -615,6 +615,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   実装：[✓](https://github.com/XIANGLONGYAN/ReCalKV) ・ リポジトリ内被引用：4  
   ReCalKVは、大規模言語モデルの長文推論で増大する鍵・値キャッシュ（KVキャッシュ）を、保存する隠れ次元の低ランク化によって削減する学習後圧縮方式である。既存の低ランクKV圧縮であるPaluと比較し、LLaMA-2-7BのKVを70%圧縮したとき、6つのゼロショット質問応答課題の平均はReCalKVが59.90%、Paluが52.14%だった。
 
+- **2025-05 · [PM-KVQ: Progressive Mixed-precision KV Cache Quantization for Long-CoT LLMs](2025-2505.18610-pm-kvq-progressive-mixed-precision-kv-cache-quantization-for-long-cot-llms.md)**  
+  実装：[✓](https://github.com/thu-nics/PM-KVQ) ・ リポジトリ内被引用：4  
+  KVを16→8→4→2bitと必要時だけ段階圧縮し、層感度とRoPE位置補間校正で長CoTの累積量子化誤差を抑えるPM-KVQ。
+
 - **2025-04 · [Accelerating LLM Inference Throughput via Asynchronous KV Cache Prefetching](2025-2504.06319-asynchronous-kv-cache-prefetching.md)**  
   実装：[✓](https://github.com/alibaba/vllm_xformers_prefetch) ・ リポジトリ内被引用：4  
   本研究は、大規模言語モデルの自己回帰復号において、鍵値キャッシュ（KV キャッシュ）を高帯域メモリ（HBM）から読み込む間にGPUの実行単位が待たされる問題を対象とする。鍵値を削除・量子化・オフロードして保存容量を減らすのではなく、現在の鍵値ブロックを使った注意演算と、次に必要なブロックのHBMから二次キャッシュ（L2 キャッシュ）への転送を重ねる。
@@ -622,10 +626,6 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 - **2025-10 · [Attention Is All You Need for KV Cache in Diffusion LLMs](2025-2510.14973-attention-is-all-you-need-for-kv-cache-in-diffusion-llms.md)**  
   実装：[✓](https://github.com/VILA-Lab/Elastic-Cache) ・ リポジトリ内被引用：3  
   従来の安全な実装は、各復号段階ですべての位置と層のクエリ・キー・値を再計算するが、変化の少ない状態まで繰り返し計算するため遅い。提案方式は、左側の未確定位置を中心とする移動窓で新しいトークンを予測し、窓外MASKのKVを再利用する。
-
-- **2025-05 · [PM-KVQ: Progressive Mixed-precision KV Cache Quantization for Long-CoT LLMs](2025-2505.18610-pm-kvq-progressive-mixed-precision-kv-cache-quantization-for-long-cot-llms.md)**  
-  実装：[✓](https://github.com/thu-nics/PM-KVQ) ・ リポジトリ内被引用：3  
-  KVを16→8→4→2bitと必要時だけ段階圧縮し、層感度とRoPE位置補間校正で長CoTの累積量子化誤差を抑えるPM-KVQ。
 
 - **2025-09 · [d²Cache: Accelerating Diffusion-Based LLMs via Dual Adaptive Caching](2025-2509.23094-d2cache-dual-adaptive-caching-diffusion-llm.md)**  
   実装：[✓](https://github.com/Kamichanw/d2Cache) ・ リポジトリ内被引用：2  
@@ -658,11 +658,11 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   プロンプト末尾の観測窓から各注意ヘッドが将来参照する位置を推定し、重要KVだけをクラスタ単位で残して長文復号を軽量化する手法。
 
 - **2024-02 · [KIVI: A Tuning-Free Asymmetric 2bit Quantization for KV Cache](2024-2402.02750-kivi.md)**  
-  実装：[✓](https://github.com/jy-yuan/KIVI) ・ リポジトリ内被引用：157  
+  実装：[✓](https://github.com/jy-yuan/KIVI) ・ リポジトリ内被引用：158  
   キーはチャネル単位、値はトークン単位で2ビット量子化し、直近KVだけ高精度保持することで追加学習なしにKVメモリと帯域を削減し最大3.47倍のスループットを得る。
 
 - **2024-01 · [KVQuant: Towards 10 Million Context Length LLM Inference with KV Cache Quantization](2024-2401.18079-kvquant.md)**  
-  実装：[✓](https://github.com/SqueezeAILab/KVQuant) ・ リポジトリ内被引用：153  
+  実装：[✓](https://github.com/SqueezeAILab/KVQuant) ・ リポジトリ内被引用：154  
   Key分布に合わせたチャネル別・RoPE前・非一様・外れ値分離量子化で、3ビットKVを約4.8倍圧縮しつつパープレキシティ悪化0.1未満を実現する。
 
 - **2024-06 · [PyramidKV: Dynamic KV Cache Compression based on Pyramidal Information Funneling](2024-2406.02069-pyramidkv.md)**  
@@ -670,7 +670,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   注意の層間集約パターンに合わせてKV予算を下層から上層へ逓減させ、同じ総メモリで固定予算型より長文脈性能を保つKVキャッシュ圧縮法。
 
 - **2024-06 · [InfiniGen: Efficient Generative Inference of Large Language Models with Dynamic KV Cache Management](2024-2406.19707-infinigen-dynamic-kv-cache-management.md)**  
-  実装：[✓](https://github.com/snu-comparch/InfiniGen) ・ リポジトリ内被引用：90  
+  実装：[✓](https://github.com/snu-comparch/InfiniGen) ・ リポジトリ内被引用：91  
   CPU側の全KVキャッシュから次レイヤーで重要なトークンだけを予測してGPUへ先読みし、長文オフロード推論のPCIe転送を削減して最大3.00倍高速化する。
 
 - **2024-10 · [DuoAttention: Efficient Long-Context LLM Inference with Retrieval and Streaming Heads](2024-2410.10819-duoattention-efficient-long-context-llm-inference-with-retrieval-and-str.md)**  
@@ -682,7 +682,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   注意ヘッドごとの集中度に応じて同一層内のKV保持予算を再配分し、既存Top-k圧縮の総容量を変えずに追い出し損失を下げる手法。
 
 - **2024-03 · [GEAR: An Efficient KV Cache Compression Recipe for Near-Lossless Generative Inference of LLM](2024-2403.05527-gear-an-efficient-kv-cache-compression-recipe-for-near-lossless-generati.md)**  
-  実装：[✓](https://github.com/HaoKang-Timmy/GEAR) ・ リポジトリ内被引用：47  
+  実装：[✓](https://github.com/HaoKang-Timmy/GEAR) ・ リポジトリ内被引用：48  
   GEARは、自己回帰生成で増え続けるKVキャッシュを高い圧縮率で保持しつつ、単純な低ビット量子化で生じる生成品質の崩壊を抑えるための圧縮法である。
 
 - **2024-02 · [Hydragen: High-Throughput LLM Inference with Shared Prefixes](2024-2402.05099-hydragen-high-throughput-llm-inference-shared-prefixes.md)**  
@@ -698,7 +698,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   系列が長くなると鍵値キャッシュ（KVキャッシュ）の容量と読出し量が増え、GPUのメモリ容量・帯域を圧迫する。さらに混合専門家モデル（Mixture-of-Experts、MoE）を一部の前向き全結合層へ導入し、総パラメータ容量とトークン当たりの有効計算量を分離する。
 
 - **2024-02 · [No Token Left Behind: Reliable KV Cache Compression via Importance-Aware Mixed Precision Quantization](2024-2402.18096-no-token-left-behind-reliable-kv-cache-compression-via-importance-aware-.md)**  
-  実装：✓ ・ リポジトリ内被引用：29  
+  実装：✓ ・ リポジトリ内被引用：30  
   自己回帰推論の鍵・値キャッシュ（KVキャッシュ）は、生成済みの各トークンの中間状態を再利用して再計算を避ける一方、必要容量が同時要求数と文脈長にほぼ比例して増える。提案する混合精度KVキャッシュ（MiKV）は、重要トークンを高精度で保持し、従来なら追い出すトークンも2〜4ビットで保存する。
 
 - **2024-03 · [ALISA: Accelerating Large Language Model Inference via Sparsity-Aware KV Caching](2024-2403.17312-alisa-accelerating-large-language-model-inference-via-sparsity-aware-kv-caching.md)**  
@@ -717,6 +717,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   実装：[✓](https://github.com/AkideLiu/MiniCache) ・ リポジトリ内被引用：24  
   MiniCacheは層内のトークン選別や低ビット化だけでなく、隣り合う層のあいだにも冗長性があると観察し、中層以降で同じ位置のKV状態を共有表現へ統合する。
 
+- **2024-03 · [Dynamic Memory Compression: Retrofitting LLMs for Accelerated Inference](2024-2403.09636-dynamic-memory-compression-retrofitting-llms-for-accelerated-inference.md)**  
+  実装：[✓](https://github.com/NVIDIA/Megatron-LM/tree/DMC) ・ リポジトリ内被引用：23  
+  動的メモリ圧縮（動的 メモリ Compression; DMC）は、過去トークンを「残す／捨てる」の二択にせず、各注意ヘッドが新しいキー・値（Key-Value; KV）を新規スロットへ追加するか、直前のスロットへ重み付きで結合するかを学習する。これにより、内容・層・ヘッドごとに必要な時間解像度を変えながらKVキャッシュをオンライン圧縮する。
+
 - **2024-02 · [ChunkAttention: Efficient Self-Attention with Prefix-Aware KV Cache and Two-Phase Partition](2024-2402.15220-chunkattention-efficient-self-attention-with-prefix-aware-kv-cache-and-t.md)**  
   実装：[✓](https://github.com/microsoft/chunk-attention) ・ リポジトリ内被引用：23  
   ChunkAttentionは、同じ言語モデルを複数の利用者・アプリケーションへ提供する際に、要求の先頭で共有されるシステム指示や少数例を計算と記憶の両面で再利用する推論用注意機構である。
@@ -724,10 +728,6 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 - **2024-03 · [Keyformer: KV Cache reduction through key tokens selection for Efficient Generative Inference](2024-2403.09054-keyformer-kv-cache-reduction-through-key-tokens-selection-for-efficient-.md)**  
   実装：[✓](https://github.com/d-matrix-ai/keyformer-llm) ・ リポジトリ内被引用：21  
   Keyformerは、生成中に増え続ける鍵値キャッシュ（KVキャッシュ）を、重要な過去トークンだけへ圧縮する方式である。著者らは、注意重みの約90%が過去トークンの一部に集中するという観察から、すべての履歴を保持する必要はないと考える。
-
-- **2024-03 · [Dynamic Memory Compression: Retrofitting LLMs for Accelerated Inference](2024-2403.09636-dynamic-memory-compression-retrofitting-llms-for-accelerated-inference.md)**  
-  実装：[✓](https://github.com/NVIDIA/Megatron-LM/tree/DMC) ・ リポジトリ内被引用：21  
-  動的メモリ圧縮（動的 メモリ Compression; DMC）は、過去トークンを「残す／捨てる」の二択にせず、各注意ヘッドが新しいキー・値（Key-Value; KV）を新規スロットへ追加するか、直前のスロットへ重み付きで結合するかを学習する。これにより、内容・層・ヘッドごとに必要な時間解像度を変えながらKVキャッシュをオンライン圧縮する。
 
 - **2024-02 · [GliDe with a CaPE: A Low-Hassle Method to Accelerate Speculative Decoding](2024-2402.02082-glide-with-a-cape-a-low-hassle-method-to-accelerate-speculative-decoding.md)**  
   実装：✓ ・ リポジトリ内被引用：21  
@@ -832,20 +832,20 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   先頭数トークンを注意シンクとして固定保持し、直近トークンだけをローリングKVキャッシュに残すことで、再学習なしに一定メモリで400万トークン超のストリーミング生成を安定化する。
 
 - **2023-06 · [H2O: Heavy-Hitter Oracle for Efficient Generative Inference of Large Language Models](2023-2306.14048-h2o.md)**  
-  実装：[✓](https://github.com/FMInference/H2O) ・ リポジトリ内被引用：272  
+  実装：[✓](https://github.com/FMInference/H2O) ・ リポジトリ内被引用：274  
   累積注意のヘビーヒッターと最新トークンを動的保持し、20%程度のKV予算で品質を維持しながらメモリ・スループットを改善する。
 
 - **2023-10 · [Model Tells You What to Discard: Adaptive KV Cache Compression for LLMs](2023-2310.01801-fastgen.md)**  
-  実装：[✓](https://github.com/machilusZ/FastGen) ・ リポジトリ内被引用：115  
+  実装：[✓](https://github.com/machilusZ/FastGen) ・ リポジトリ内被引用：116  
   FastGenは注意ヘッドごとの構造を一度だけ診断してKVキャッシュ保持方針を変え、追加学習なしでメモリ削減と長系列生成の高速化を両立する。
 
 - **2023-05 · [Scissorhands: Exploiting the Persistence of Importance Hypothesis for LLM KV Cache Compression at Test Time](2023-2305.17118-scissorhands.md)**  
-  実装：✓ ・ リポジトリ内被引用：84  
+  実装：✓ ・ リポジトリ内被引用：85  
   Scissorhandsは、過去の注意重みが大きかったトークンは将来の生成でも高い注意を受けやすいという「重要性の持続性仮説（Persistence of Importance Hypothesis）」を提案する。
 
 ### 7年前（2019-11〜2020-10）
 
 - **2019-11 · [Fast Transformer Decoding: One Write-Head is All You Need](2019-1911.02150-multi-query-attention.md)**  
-  実装：✓ ・ リポジトリ内被引用：141  
+  実装：✓ ・ リポジトリ内被引用：142  
   複数問い合わせ注意（Multi-Query 注意機構; MQA）は、問い合わせ側の8ヘッドを維持したまま、鍵と値だけを全ヘッドで1組へ共有する。長い履歴を毎生成ステップで読む増分復号のメモリ転送を減らし、TPUv2でのWMT英独翻訳のデコーダ測定を46から3.8マイクロ秒／出力トークンへ短縮した。
 <!-- survey:auto:end -->

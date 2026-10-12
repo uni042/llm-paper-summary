@@ -417,7 +417,7 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
   MoE-Infinityは、混合専門家モデル（Mixture of エキスパート、MoE）の重みが単一GPUのメモリに収まらない場合に、ホスト主記憶から専門家重みを転送する時間を削減する推論システムである。
 
 - **2023-12 · [LLM in a flash: Efficient Large Language Model Inference with Limited Memory](2023-2312.11514-llm-in-a-flash-efficient-large-language-model-inference-with-limited-memory.md)**  
-  実装：✓ ・ リポジトリ内被引用：80  
+  実装：✓ ・ リポジトリ内被引用：81  
   LLM in a flashは、モデル重み全体を端末の主記憶（DRAM）へ保持できない場合に、フラッシュストレージを重みの大容量置き場として利用し、トークン生成ごとに必要な重みだけを読み込む推論方式である。
 
 - **2023-12 · [Fast Inference of Mixture-of-Experts Language Models with Offloading](2023-2312.17238-fast-inference-of-mixture-of-experts-language-models-with-offloading.md)**  
@@ -457,7 +457,7 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
   一般keyを最近傍探索可能な空間へ写像し、重要な注意先だけをPrioritized DCIで選んで、再学習なしにCPU長文注意を高速化する方式。
 
 - **2024-10 · [Optimizing Mixture-of-Experts Inference Time Combining Model Deployment and Communication Scheduling](2024-2410.17043-aurora-moe-deployment-communication-scheduling.md)**  
-  実装：✓ ・ リポジトリ内被引用：2  
+  実装：✓ ・ リポジトリ内被引用：3  
   MoEのエキスパート配置・異種GPU割当・全対全通信順序を共同最適化し、4クラスタ条件を理論化して異種同居では二部マッチング近似を用い、最大3.54倍高速化する。
 
 - **2024-05 · [MoNDE: Mixture of Near-Data Experts for Large-Scale Sparse Models](2024-2405.18832-monde-mixture-of-experts-neural-network-inference-with-near-data-processing.md)**  
@@ -471,7 +471,7 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
 ### 4年前（2022-11〜2023-10）
 
 - **2023-03 · [FlexGen: High-Throughput Generative Inference of Large Language Models with a Single GPU](2023-2303.06865-flexgen-high-throughput-generative-inference-of-large-language-models-with-a-single-gpu.md)**  
-  実装：[✓](https://github.com/FMInference/FlexGen) ・ リポジトリ内被引用：348  
+  実装：[✓](https://github.com/FMInference/FlexGen) ・ リポジトリ内被引用：350  
   FlexGenは巨大LLMの重み・中間活性・KVキャッシュをGPU・CPU・SSDへ分け、計算順序とバッチでI/Oを使い回して単一GPUの生成スループットを高める。
 
 ### 5年前（2021-11〜2022-10）
