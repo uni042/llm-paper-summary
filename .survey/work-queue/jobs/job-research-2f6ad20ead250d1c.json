@@ -35,10 +35,15 @@
   "selection_reason": "Transformer FFNのprediction形成を解析し、その知見を使ったsimple early-exit ruleで平均20%の計算を削減する。GPT-2で推論時計算削減を直接示すためadaptive inferenceとして対象内。",
   "semantic_scholar_id": "cf36236015c9f93f15bfafbf282f69e08bdc9c16",
   "source_url": "https://arxiv.org/abs/2203.14680",
-  "status": "ready",
+  "status": "superseded",
   "title": "Transformer Feed-Forward Layers Build Predictions by Promoting Concepts in the Vocabulary Space",
   "type": "research",
   "venue": "Conference on Empirical Methods in Natural Language Processing",
   "workflow_version": 10,
-  "year": 2022
+  "year": 2022,
+  "superseded_at": "2026-10-12T03:14:27+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2022-2203.14680-transformer-feed-forward-layers-build-predictions-by-promoting-concepts-.md",
+  "represented_canonical_id": "arXiv:2203.14680",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

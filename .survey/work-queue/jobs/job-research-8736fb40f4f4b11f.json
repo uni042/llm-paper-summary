@@ -35,10 +35,15 @@
   "selection_reason": "事前学習Transformerから上位層等を削除してモデルサイズと推論時間・メモリを削減し、BERT/RoBERTa/XLNetで最大40%削減時にも元性能の最大98.2%を維持するため、推論向け構造pruningとして対象。",
   "semantic_scholar_id": "39f8cc684f09ea2b43767f5b9590896774802759",
   "source_url": "https://arxiv.org/abs/2004.03844",
-  "status": "ready",
+  "status": "superseded",
   "title": "On the effect of dropping layers of pre-trained transformer models",
   "type": "research",
   "venue": "Computer Speech and Language",
   "workflow_version": 10,
-  "year": 2020
+  "year": 2020,
+  "superseded_at": "2026-10-12T03:14:27+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2020-2004.03844-on-the-effect-of-dropping-layers-of-pre-trained-transformer-models.md",
+  "represented_canonical_id": "arXiv:2004.03844",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
