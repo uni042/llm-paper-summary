@@ -1,0 +1,26 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261012-2326-scheduled-chat-00/r01-research-prescreen-003",
+  "reference_main_sha": "5ae87bdca3638d96064215bd739a86b02ce866f0",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2306.07174",
+      "identity_tokens": [
+        "arxiv:2306.07174"
+      ],
+      "title": "Augmenting Language Models with Long-Term Memory",
+      "reason": "一次要旨で確認できるLongMemの主眼は、凍結した基盤LLMを記憶符号化器とし、残差側ネットワークが長期記憶を検索・読出しする構成によって長文脈の言語モデリング品質を高めることである。65,000トークンの長期記憶を扱うが、GPUメモリ階層、KVキャッシュ退避、サービング処理量、カーネル高速化の独立したシステム貢献は要旨から確認できない。記憶管理との関連はあるため境界的とし、推論システムの直接的寄与としての収録は保留する。",
+      "source_url": "https://arxiv.org/abs/2306.07174",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-12T23:33:52+09:00",
+      "last_checked_at": "2026-10-12T23:33:52+09:00",
+      "linked_from": [],
+      "worklist_rank": 7,
+      "origin": "research_prescreen_relevance"
+    }
+  ]
+}
