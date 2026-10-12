@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-12T22:19:21+00:00",
-  "record_count": 11576,
+  "updated_at": "2026-10-12T23:56:03+00:00",
+  "record_count": 11592,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -165595,6 +165595,248 @@
         "papers/inference/99-other-inference-systems/2025-2509.17765-qwen3-omni-technical-report.md"
       ],
       "title": "Head Similarity: Modeling Structured Whole-Head Appearance Beyond Face Recognition"
+    },
+    "arXiv:2409.02423": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2409.02423",
+      "identity_tokens": [
+        "DOI:10.1109/ccgrid59990.2024.00031",
+        "arXiv:2409.02423"
+      ],
+      "reason": "The abstract explicitly targets LLM training through hybrid GPU compression; training-only acceleration is outside the inference-focused scope.",
+      "first_checked_at": "2026-10-12T23:55:55+00:00",
+      "last_checked_at": "2026-10-12T23:55:55+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2110.02861-8-bit-optimizers-via-block-wise-quantization.md",
+        "papers/training/01-training-offload-memory-systems/2021-2104.07857-zero-infinity-breaking-the-gpu-memory-wall-for-extreme-scale-deep-learning.md"
+      ],
+      "title": "Accelerating Large Language Model Training with Hybrid GPU-based Compression"
+    },
+    "arXiv:2505.16670": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.16670",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2505.16670",
+        "arXiv:2505.16670"
+      ],
+      "reason": "The abstract frames bit-flip methods as an inference-cost attack against LLMs; it studies an attack/threat rather than a system technique that improves inference efficiency.",
+      "first_checked_at": "2026-10-12T23:55:55+00:00",
+      "last_checked_at": "2026-10-12T23:55:55+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md",
+        "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md"
+      ],
+      "title": "BitHydra: Towards Bit-flip Inference Cost Attack against Large Language Models"
+    },
+    "arXiv:2501.07237": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2501.07237",
+      "identity_tokens": [
+        "arXiv:2501.07237"
+      ],
+      "reason": "GWT compresses optimizer state for large language model training, an explicitly training-only efficiency target.",
+      "first_checked_at": "2026-10-12T23:55:56+00:00",
+      "last_checked_at": "2026-10-12T23:55:56+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2110.02861-8-bit-optimizers-via-block-wise-quantization.md",
+        "papers/inference/99-other-inference-systems/2024-2406.16793-adam-mini-use-fewer-learning-rates-to-gain-more.md"
+      ],
+      "title": "GWT: Scalable Optimizer State Compression for Large Language Model Training"
+    },
+    "arXiv:2502.17214": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2502.17214",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2502.17214",
+        "arXiv:2502.17214"
+      ],
+      "reason": "CoT-UQ targets response-wise uncertainty quantification using chain-of-thought, an output reliability objective rather than inference-system efficiency.",
+      "first_checked_at": "2026-10-12T23:55:56+00:00",
+      "last_checked_at": "2026-10-12T23:55:56+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2404.10136-language-model-cascades-token-level-uncertainty-and-beyond.md"
+      ],
+      "title": "CoT-UQ: Improving Response-wise Uncertainty Quantification in LLMs with Chain-of-Thought"
+    },
+    "arXiv:2510.00967": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2510.00967",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2510.00967",
+        "arXiv:2510.00967"
+      ],
+      "reason": "The paper applies tool-augmented LLMs and agentic reinforcement learning to quantum assembly-code generation; quantum compilation is the application, not an LLM inference efficiency method.",
+      "first_checked_at": "2026-10-12T23:55:56+00:00",
+      "last_checked_at": "2026-10-12T23:55:56+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+      ],
+      "title": "QUASAR: Quantum Assembly Code Generation Using Tool-Augmented LLMs via Agentic RL"
+    },
+    "arXiv:2403.04024": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2403.04024",
+      "identity_tokens": [
+        "DOI:10.1016/j.media.2024.103383",
+        "arXiv:2403.04024"
+      ],
+      "reason": "The paper uses LLMs to create annotated chest X-ray data for downstream classification; this is a medical data/application workflow, not inference systems efficiency.",
+      "first_checked_at": "2026-10-12T23:55:57+00:00",
+      "last_checked_at": "2026-10-12T23:55:57+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+      ],
+      "title": "Enhancing chest X-ray datasets with privacy-preserving large language models and multi-type annotations: a data-driven approach for improved classification"
+    },
+    "arXiv:2508.05545": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2508.05545",
+      "identity_tokens": [
+        "DOI:10.1109/tps-isa67132.2025.00025",
+        "arXiv:2508.05545"
+      ],
+      "reason": "The paper evaluates LLM capability and risk for PII redaction, an application/safety assessment without a concrete inference execution optimization.",
+      "first_checked_at": "2026-10-12T23:55:57+00:00",
+      "last_checked_at": "2026-10-12T23:55:57+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "title": "PRvL: Quantifying the Capabilities and Risks of Large Language Models for PII Redaction"
+    },
+    "arXiv:2505.19533": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.19533",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2505.19533",
+        "arXiv:2505.19533"
+      ],
+      "reason": "The paper is an ex-ante inference benchmark of LLM decision behavior, not a benchmark of latency, throughput, memory, or hardware execution efficiency.",
+      "first_checked_at": "2026-10-12T23:55:58+00:00",
+      "last_checked_at": "2026-10-12T23:55:58+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2212.10511-when-not-to-trust-language-models-investigating-effectiveness-of-paramet.md"
+      ],
+      "title": "ExAnte: A Benchmark for Ex-Ante Inference in Large Language Models"
+    },
+    "arXiv:2407.09044": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2407.09044",
+      "identity_tokens": [
+        "DOI:10.1109/iros58592.2024.10802349",
+        "arXiv:2407.09044"
+      ],
+      "reason": "The paper studies language and sensorimotor latent variables for robot motion learning; its LLM use is part of a robotics application rather than inference systems efficiency.",
+      "first_checked_at": "2026-10-12T23:55:59+00:00",
+      "last_checked_at": "2026-10-12T23:55:59+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md"
+      ],
+      "title": "Sensorimotor Attention and Language-based Regressions in Shared Latent Variables for Integrating Robot Motion Learning and LLM"
+    },
+    "arXiv:2505.07711": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.07711",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2505.07711",
+        "arXiv:2505.07711"
+      ],
+      "reason": "The paper uses LLMs to partition quantum circuits for compilation/simulation; the abstract evaluates task accuracy, not LLM inference runtime or resource efficiency.",
+      "first_checked_at": "2026-10-12T23:55:59+00:00",
+      "last_checked_at": "2026-10-12T23:55:59+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "title": "Circuit Partitioning Using Large Language Models for Quantum Compilation and Simulations"
+    },
+    "arXiv:2508.17610": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2508.17610",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2508.17610",
+        "arXiv:2508.17610"
+      ],
+      "reason": "The abstract studies fairness effects of pruning LLMs for opinion summarization and proposes pruning to improve fairness; it does not establish efficiency as the contribution or evaluation target.",
+      "first_checked_at": "2026-10-12T23:55:59+00:00",
+      "last_checked_at": "2026-10-12T23:55:59+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2301.00774-sparsegpt-massive-language-models-can-be-accurately-pruned-in-one-shot.md"
+      ],
+      "title": "Less Is More? Examining Fairness in Pruned Large Language Models for Summarising Opinions"
+    },
+    "arXiv:2510.19592": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2510.19592",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2510.19592",
+        "arXiv:2510.19592"
+      ],
+      "reason": "DecAF refines MLLM attention maps for video segmentation accuracy without retraining; the contribution is a downstream segmentation method, with no inference efficiency target established.",
+      "first_checked_at": "2026-10-12T23:56:00+00:00",
+      "last_checked_at": "2026-10-12T23:56:00+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.16449-moviechat-from-dense-token-to-sparse-memory-for-long-video-understanding.md"
+      ],
+      "title": "Decomposed Attention Fusion in MLLMs for Training-Free Video Reasoning Segmentation"
+    },
+    "DOI:10.18653/v1/2026.acl-long.325": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/2026.acl-long.325",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2026.acl-long.325"
+      ],
+      "reason": "The ACL abstract proposes planning and assessment-driven memory to improve pedagogical tutoring conversations; it is an education application and quality contribution, not serving efficiency.",
+      "first_checked_at": "2026-10-12T23:56:00+00:00",
+      "last_checked_at": "2026-10-12T23:56:00+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ],
+      "title": "Planning-Guided Tutoring with Assessment-Driven Memory for Pedagogical LLM Tutors"
+    },
+    "arXiv:2511.17194": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2511.17194",
+      "identity_tokens": [
+        "arXiv:2511.17194"
+      ],
+      "reason": "The paper exploits attention sinks and compression valleys for activation-space behavioral attacks; this is an LLM security vulnerability study, not inference optimization.",
+      "first_checked_at": "2026-10-12T23:56:00+00:00",
+      "last_checked_at": "2026-10-12T23:56:00+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md"
+      ],
+      "title": "Progressive Behavioral Drift through Compression Valleys in Large Language Models"
+    },
+    "DOI:10.1145/3652892.3700758": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3652892.3700758",
+      "identity_tokens": [
+        "DOI:10.1145/3652892.3700758"
+      ],
+      "reason": "The ACM abstract is a split fine-tuning system that shares model/GPU memory during training across clients; it addresses fine-tuning rather than inference.",
+      "first_checked_at": "2026-10-12T23:56:01+00:00",
+      "last_checked_at": "2026-10-12T23:56:01+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2110.02861-8-bit-optimizers-via-block-wise-quantization.md"
+      ],
+      "title": "Menos: Split Fine-Tuning Large Language Models with Efficient GPU Memory Sharing"
+    },
+    "arXiv:2411.06581": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2411.06581",
+      "identity_tokens": [
+        "DOI:10.1109/twc.2026.3711528",
+        "arXiv:2411.06581"
+      ],
+      "reason": "The abstract confines HAFLQ to federated fine-tuning: quantization, client-resource adaptation, communication savings, and aggregation convergence are training-time concerns rather than LLM inference execution.",
+      "first_checked_at": "2026-10-12T23:56:03+00:00",
+      "last_checked_at": "2026-10-12T23:56:03+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2404.14294-a-survey-on-efficient-inference-for-large-language-models.md",
+        "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md",
+        "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md",
+        "papers/inference/99-other-inference-systems/2023-2301.00774-sparsegpt-massive-language-models-can-be-accurately-pruned-in-one-shot.md"
+      ],
+      "title": "HAFLQ: Heterogeneous Adaptive Federated LoRA Fine-tuned LLM with Quantization"
     }
   }
 }

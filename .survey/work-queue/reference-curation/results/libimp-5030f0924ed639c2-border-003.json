@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-5030f0924ed639c2-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1109/lca.2026.3665202",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1109/lca.2026.3665202",
+    "identity_tokens": [
+      "DOI:10.1109/lca.2026.3665202"
+    ],
+    "reason": "The title identifies attention-workload distribution on PIM-enabled LLM inference systems, a plausible hardware allocation contribution. The primary DOI route was inaccessible and the abstract was not retrieved, so the mechanism and efficiency evidence remain unverified; retain as borderline pending the primary abstract.",
+    "first_checked_at": "2026-10-12T23:56:02+00:00",
+    "last_checked_at": "2026-10-12T23:56:02+00:00",
+    "linked_from": [
+      "papers/inference/17-pim-near-data-acceleration/2025-2502.15470-papi-exploiting-dynamic-parallelism-in-large-language-model-decoding-wit.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "DAWN: Efficient Distribution of Attention Workload in PIM-Enabled Systems for LLM Inference"
+  },
+  "processed_at": "2026-10-12T23:56:02+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-5030f0924ed6",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

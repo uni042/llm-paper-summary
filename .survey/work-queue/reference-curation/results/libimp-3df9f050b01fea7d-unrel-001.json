@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-3df9f050b01fea7d-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2505.19533",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2505.19533",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2505.19533",
+      "arXiv:2505.19533"
+    ],
+    "reason": "The paper is an ex-ante inference benchmark of LLM decision behavior, not a benchmark of latency, throughput, memory, or hardware execution efficiency.",
+    "first_checked_at": "2026-10-12T23:55:58+00:00",
+    "last_checked_at": "2026-10-12T23:55:58+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2212.10511-when-not-to-trust-language-models-investigating-effectiveness-of-paramet.md"
+    ],
+    "title": "ExAnte: A Benchmark for Ex-Ante Inference in Large Language Models"
+  },
+  "processed_at": "2026-10-12T23:55:58+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-3df9f050b01f",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

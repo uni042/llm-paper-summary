@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-3df9f050b01fea7d-border-007",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2604.07911",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2604.07911",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2604.07911",
+      "arXiv:2604.07911"
+    ],
+    "reason": "The abstract proposes per-agent context isolation and reports context-efficiency ratios for multi-agent LLM orchestration; its connection to reducing inference context/compute is plausible, but deployment and inference-cost evidence remains abstract-level.",
+    "first_checked_at": "2026-10-12T23:55:58+00:00",
+    "last_checked_at": "2026-10-12T23:55:58+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2026-2602.22603-sidequest-model-driven-kv-cache-management-for-long-horizon-agentic-reas.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Dynamic Attentional Context Scoping: Agent-Triggered Focus Sessions for Isolated Per-Agent Steering in Multi-Agent LLM Orchestration"
+  },
+  "processed_at": "2026-10-12T23:55:58+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-3df9f050b01f",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

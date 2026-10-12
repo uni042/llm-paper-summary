@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-134531517d106d6a-border-007",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1109/aiotc66747.2025.11198785",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1109/aiotc66747.2025.11198785",
+    "identity_tokens": [
+      "DOI:10.1109/aiotc66747.2025.11198785"
+    ],
+    "reason": "The title describes LoRA fine-tuning for tiny language models under constrained deployment but does not establish an inference-time systems-efficiency contribution. The primary DOI route was inaccessible and the abstract was not retrieved; retain as borderline pending the primary abstract.",
+    "first_checked_at": "2026-10-12T23:55:54+00:00",
+    "last_checked_at": "2026-10-12T23:55:54+00:00",
+    "linked_from": [
+      "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md",
+      "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Laplacian-Regularized LoRA Fine-Tuning for Augmenting Pragmatic Inference in Tiny Language Models Under Constrained Deployment Settings"
+  },
+  "processed_at": "2026-10-12T23:55:54+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-134531517d10",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-134531517d106d6a-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.3389/fpsyg.2025.1591618",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.3389/fpsyg.2025.1591618",
+    "identity_tokens": [
+      "DOI:10.3389/fpsyg.2025.1591618"
+    ],
+    "reason": "The title describes memory retrieval for generative agents using cross-attention networks, but does not establish a systems-efficiency contribution. The official Frontiers URL returned an access error and no primary abstract was retrieved; retain as borderline pending the primary abstract.",
+    "first_checked_at": "2026-10-12T23:55:53+00:00",
+    "last_checked_at": "2026-10-12T23:55:53+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2021-2112.07916-longt5-efficient-text-to-text-transformer-for-long-sequences.md",
+      "papers/inference/99-other-inference-systems/2023-2305.16300-landmark-attention-random-access-infinite-context-length-for-transformer.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Enhancing memory retrieval in generative agents through LLM-trained cross attention networks"
+  },
+  "processed_at": "2026-10-12T23:55:53+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-134531517d10",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
