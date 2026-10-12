@@ -1,42 +1,43 @@
 ---
 canonical_id: DOI:10.18653/v1/D19-1633
-doi: '10.18653/v1/D19-1633'
+doi: 10.18653/v1/D19-1633
 arxiv_id: null
 arxiv_categories:
   primary: null
   cross_list: []
 title: 'Mask-Predict: Parallel Decoding of Conditional Masked Language Models'
 authors:
-  - Marjan Ghazvininejad
-  - Omer Levy
-  - Yinhan Liu
-  - Luke Zettlemoyer
+- Marjan Ghazvininejad
+- Omer Levy
+- Yinhan Liu
+- Luke Zettlemoyer
 published: '2019-11-03'
-publication: 'Proceedings of EMNLP-IJCNLP 2019, pp. 6112–6121'
+publication: Proceedings of EMNLP-IJCNLP 2019, pp. 6112–6121
 publication_type: conference
 publication_status: published
 source: https://aclanthology.org/D19-1633/
 sources:
-  - https://aclanthology.org/D19-1633/
-  - https://aclanthology.org/D19-1633.pdf
-  - https://github.com/facebookresearch/Mask-Predict
-implementation: '著者が公開したMask-Predict実装はfairseq系の条件付きマスク言語モデルと反復復号を対象とする。原著の速度測定は翻訳モデルとデータを読み込んだ後、同一GPU上でバッチ10文を翻訳する条件で行われる。'
+- https://aclanthology.org/D19-1633/
+- https://aclanthology.org/D19-1633.pdf
+- https://github.com/facebookresearch/Mask-Predict
+implementation: 著者が公開したMask-Predict実装はfairseq系の条件付きマスク言語モデルと反復復号を対象とする。原著の速度測定は翻訳モデルとデータを読み込んだ後、同一GPU上でバッチ10文を翻訳する条件で行われる。
 code: https://github.com/facebookresearch/Mask-Predict
-summary: '条件付きマスク言語モデル（CMLM）で翻訳先の任意位置を双方向文脈から並列予測し、低信頼トークンだけを反復的に隠して再生成するMask-Predictを提案する。WMT14英独で10反復のbaseモデルは英→独27.03 BLEUを達成し、同じ論文の自己回帰base基準27.74 BLEUに接近する。4反復なら25.94 BLEUで、反復型の先行方式の10反復21.61 BLEUを上回る。復号速度と翻訳品質の交換条件、目標長推定・教師蒸留への依存も定量的に示す。'
-list_summary: '条件付き双方向マスク言語モデルを用い、低信頼な翻訳語だけを反復再予測して固定回数の並列復号で自己回帰翻訳に近い品質を得る。'
+summary: 条件付きマスク言語モデル（CMLM）で翻訳先の任意位置を双方向文脈から並列予測し、低信頼トークンだけを反復的に隠して再生成するMask-Predictを提案する。WMT14英独で10反復のbaseモデルは英→独27.03 BLEUを達成し、同じ論文の自己回帰base基準27.74 BLEUに接近する。4反復なら25.94 BLEUで、反復型の先行方式の10反復21.61 BLEUを上回る。復号速度と翻訳品質の交換条件、目標長推定・教師蒸留への依存も定量的に示す。
+list_summary: 条件付き双方向マスク言語モデルを用い、低信頼な翻訳語だけを反復再予測して固定回数の並列復号で自己回帰翻訳に近い品質を得る。
 last_checked: '2026-10-12'
 worker_id: scheduled-chat-45
 worker_completed_at: '2026-10-12T14:44:00+09:00'
-worker_run_key: '20261012-1441-scheduled-chat-45/r01'
-reference_main_sha: '92f30e79822a20f629010e2c999b3aacc621fd26'
-lineage: 'Inference / Parallel and Non-Autoregressive Decoding'
+worker_run_key: 20261012-1441-scheduled-chat-45/r01
+reference_main_sha: 92f30e79822a20f629010e2c999b3aacc621fd26
+lineage: Inference / Parallel and Non-Autoregressive Decoding
 references:
-  - canonical_id: arXiv:1706.03762
-  - canonical_id: arXiv:1810.04805
-  - canonical_id: arXiv:1711.02281
-  - canonical_id: arXiv:1802.06901
+- canonical_id: arXiv:1901.10430
+  arxiv_id: '1810.04805'
 last_audited: null
 audit_version: 0
+references_checked_at: '2026-10-12'
+references_source: primary-pdf-reference-section
+references_total: 1
 ---
 
 # Mask-Predict：低信頼語の選択的再予測による並列翻訳復号
