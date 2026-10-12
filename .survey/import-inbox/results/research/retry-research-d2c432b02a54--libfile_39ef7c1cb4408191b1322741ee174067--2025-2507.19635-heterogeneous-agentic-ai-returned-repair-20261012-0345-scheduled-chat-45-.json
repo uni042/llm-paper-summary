@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "eb8018005671b93827cabb668da4fa12a47f2c344a36c47daedbdd1126b90be6",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/retry-research-d2c432b02a54--libfile_39ef7c1cb4408191b1322741ee174067--2025-2507.19635-heterogeneous-agentic-ai-returned-repair-20261012-0345-scheduled-chat-45-r01.md",
+  "canonical_id": "arXiv:2507.19635",
+  "worker_completed_at": "2026-10-12T03:51:00+09:00",
+  "worker_run_key": "20261012-0345-scheduled-chat-45/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 6019,
+    "body_paragraphs": 30,
+    "method_chars": 2458,
+    "method_paragraphs": 12,
+    "evaluation_chars": 357,
+    "limitation_chars": 668,
+    "insufficiency_flags": [
+      "評価説明量 357 < 500"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 評価説明量 357 < 500"
+  ],
+  "processed_at": "2026-10-12T03:31:17+00:00"
+}
