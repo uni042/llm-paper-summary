@@ -2,7 +2,7 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-12T20:48:21+00:00",
+  "updated_at": "2026-10-12T21:35:17+00:00",
   "record_count": 4694,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
@@ -71354,9 +71354,9 @@
       "identity_tokens": [
         "arXiv:2602.09591"
       ],
-      "reason": "本文§3〜4の主研究は、RLOO-LP・ALP・DRPOなどの長さ制御報酬を変えて強化学習済み方策を多数作り、数学・コード生成で出力長と正答率の非単調な関係、および最頻解正答率とサンプル正答率の乖離を解析するもの。生成トークン数と推論費用には関連するが、推論時の実行基盤・復号器・KVキャッシュ・計算/メモリオフロード等の直接の最適化技術を提案・評価していない。学習単独研究の現行凍結範囲に近いため境界候補とする。",
+      "reason": "一次要旨では、強化学習で訓練した言語モデルの思考系列の長さと数学・コード課題の正答率の非単調な関係を分析し、サンプル正解率と最頻回答の正解率を比較する。生成長と計算費用には関係するが、主な寄与は学習方法・推論長の経験的特性の解明であり、推論サービング、キャッシュ、実行基盤の具体的なシステム改良を示していないため、推論効率との関連はあるものの現行収録範囲では境界的と判定した。",
       "first_checked_at": "2026-10-12T01:47:04+00:00",
-      "last_checked_at": "2026-10-12T01:47:04+00:00",
+      "last_checked_at": "2026-10-12T21:35:17+00:00",
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "On the Optimal Reasoning Length for RL-Trained Language Models"
