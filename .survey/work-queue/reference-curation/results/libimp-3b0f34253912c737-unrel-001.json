@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-3b0f34253912c737-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:1807.08887",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:1807.08887",
+    "identity_tokens": [
+      "arXiv:1807.08887"
+    ],
+    "reason": "Tofuはデータフロー演算子を座標関数として表し、再帰探索でGPU間通信を最小化するよう演算グラフを分割する。ただし一次要旨の実験対象は8GPUでの巨大CNN・RNNの学習で、報告された25〜400%の高速化も学習処理である。LLM推論、サービング、復号時メモリ階層への最終適用を示さないため現行の推論システムサーベイ対象外。",
+    "first_checked_at": "2026-10-12T18:49:59+00:00",
+    "last_checked_at": "2026-10-12T18:49:59+00:00",
+    "linked_from": [],
+    "title": "Supporting Very Large Models using Automatic Dataflow Graph Partitioning"
+  },
+  "processed_at": "2026-10-12T18:49:59+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-3b0f34253912",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

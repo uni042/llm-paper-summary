@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-6fd6b3d34c97cb2f-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2305.14152",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2305.14152",
+    "identity_tokens": [
+      "arXiv:2305.14152"
+    ],
+    "reason": "PEQAは4bit未満の量子化LLMで量子化尺度だけを更新し、微調整時の最適化器メモリを節約する。量子化形式を保ったまま配備できる利点はあるが、一次要旨の主貢献と実験は低ビット微調整・モデル能力の回復で、推論カーネルや実測サービング効率ではない。",
+    "first_checked_at": "2026-10-11T13:05:06+00:00",
+    "last_checked_at": "2026-10-12T18:49:59+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Memory-Efficient Fine-Tuning of Compressed Large Language Models via sub-4-bit Integer Quantization"
+  },
+  "processed_at": "2026-10-12T18:50:00+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-6fd6b3d34c97",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

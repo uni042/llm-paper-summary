@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-12T17:45:22+00:00",
-  "record_count": 11545,
+  "updated_at": "2026-10-12T18:50:00+00:00",
+  "record_count": 11547,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -9715,20 +9715,6 @@
         ".survey/work-queue/worker-worklist-00.json"
       ],
       "title": "Binarized Neural Networks: Training Deep Neural Networks with Weights and Activations Constrained to +1 or -1"
-    },
-    "DOI:10.1145/3600006.3613175": {
-      "classification": "unrelated",
-      "canonical_id": "DOI:10.1145/3600006.3613175",
-      "identity_tokens": [
-        "DOI:10.1145/3600006.3613175"
-      ],
-      "reason": "SiaはGPUの異種性と訓練ジョブの弾力的な並列規模変更を同時に扱う深層学習クラスタの訓練ジョブスケジューラである。一次要旨が報告する30〜93%のジョブ完了時間短縮とGPU時間12〜55%削減は訓練ジョブを対象としており、LLM推論要求の処理、KVキャッシュ、生成遅延、推論サービングを直接評価していない。現在凍結中の学習単独最適化に該当するため除外する。",
-      "first_checked_at": "2026-10-03T15:16:51+00:00",
-      "last_checked_at": "2026-10-12T17:45:20+00:00",
-      "linked_from": [
-        "workers/discovery-02/ready/20260927-u-wave5/manifest.json#candidate[8]"
-      ],
-      "title": "Sia: Heterogeneity-aware, goodput-optimized ML-cluster scheduling"
     },
     "arXiv:1601.06733": {
       "classification": "unrelated",
@@ -165116,6 +165102,42 @@
       "last_checked_at": "2026-10-12T17:45:22+00:00",
       "linked_from": [],
       "title": "MiniLLM: On-Policy Distillation of Large Language Models"
+    },
+    "arXiv:2512.04678": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2512.04678",
+      "identity_tokens": [
+        "arXiv:2512.04678"
+      ],
+      "reason": "拡散型動画生成モデルの長時間動画を対象に、EMAで更新する注意シンクと報酬付き分布整合蒸留を提案。H100上23.1 FPSの動画生成速度は報告されるが、主対象は動画拡散モデルの画質・動きの改善であり、LLMのトークン生成・サービング・KV管理ではない。",
+      "first_checked_at": "2026-10-12T18:49:58+00:00",
+      "last_checked_at": "2026-10-12T18:49:58+00:00",
+      "linked_from": [],
+      "title": "Reward Forcing: Efficient Streaming Video Generation with Rewarded Distribution Matching Distillation"
+    },
+    "arXiv:1807.08887": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1807.08887",
+      "identity_tokens": [
+        "arXiv:1807.08887"
+      ],
+      "reason": "Tofuはデータフロー演算子を座標関数として表し、再帰探索でGPU間通信を最小化するよう演算グラフを分割する。ただし一次要旨の実験対象は8GPUでの巨大CNN・RNNの学習で、報告された25〜400%の高速化も学習処理である。LLM推論、サービング、復号時メモリ階層への最終適用を示さないため現行の推論システムサーベイ対象外。",
+      "first_checked_at": "2026-10-12T18:49:59+00:00",
+      "last_checked_at": "2026-10-12T18:49:59+00:00",
+      "linked_from": [],
+      "title": "Supporting Very Large Models using Automatic Dataflow Graph Partitioning"
+    },
+    "arXiv:2601.13742": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.13742",
+      "identity_tokens": [
+        "arXiv:2601.13742"
+      ],
+      "reason": "一次論文（ACL Anthology）の要旨は、音声特徴を安価に抽出してテキスト化し、LLM判定器が内容・声質・韻律の各次元を評価するTRACEと人手の判断基準HCoTを提案する。主目的は音声対音声システムの評価精度・人間評価との一致であり、LLMの推論実行基盤、メモリ、サービング、GPUカーネルの最適化を研究対象としていない。評価器の利用料金が低いことだけでは推論システムの技術貢献とはみなさない。",
+      "first_checked_at": "2026-10-12T18:50:00+00:00",
+      "last_checked_at": "2026-10-12T18:50:00+00:00",
+      "linked_from": [],
+      "title": "Hearing Between the Lines: Unlocking the Reasoning Power of LLMs for Speech Evaluation"
     }
   }
 }
