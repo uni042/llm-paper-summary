@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-10-12T02:31:23.666125+00:00",
+  "generated_at": "2026-10-12T05:46:24.071706+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 8,
+  "count": 7,
   "worker_counts": {
-    "scheduled-chat-00": 3,
+    "scheduled-chat-00": 2,
     "scheduled-chat-30": 3,
     "scheduled-chat-45": 2
   },
@@ -84,28 +84,6 @@
       "warnings": [
         "日本語比率 73.8% < 警告基準 80%"
       ]
-    },
-    {
-      "path": "papers/inference/01-offload-hierarchical-memory/2024-3688351.3689164-twinpilots-a-new-computing-paradigm-for-gpu-cpu-parallel-llm-inference.md",
-      "canonical_id": "DOI:10.1145/3688351.3689164",
-      "title": "TwinPilots: A New Computing Paradigm for GPU-CPU Parallel LLM Inference",
-      "file_bytes": 12280,
-      "source_sha256": "5c5ebcda8aa68c601f22288eac3ffe4a616c59de11a4f1b5cb0d264e165f9a69",
-      "source_git_blob_sha": "aa2f4ec004900e7292d58e5da54cdea2b429c351",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.943721,
-      "quality_metrics": {
-        "body_chars": 3249,
-        "method_chars": 977,
-        "evaluation_chars": 270,
-        "limitation_chars": 241
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 評価説明量 270 < 500"
-      ],
-      "warnings": []
     },
     {
       "path": "papers/inference/17-pim-near-data-acceleration/2026-h3-attn.md",
