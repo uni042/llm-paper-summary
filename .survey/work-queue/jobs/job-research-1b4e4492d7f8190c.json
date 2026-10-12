@@ -32,10 +32,15 @@
   "selection_reason": "Combines precomputed RAG KV caches with selective recomputation to recover cross-chunk context; reports 2.66-9.39x TTFT reduction versus full attention while improving normalized F1 at low recomputation ratios.",
   "semantic_scholar_id": "8597d67b45b002e34b43678758cc503ce3cfda66",
   "source_url": "https://www.semanticscholar.org/paper/8597d67b45b002e34b43678758cc503ce3cfda66",
-  "status": "ready",
+  "status": "superseded",
   "title": "From Prefix Cache to Fusion RAG Cache: Accelerating LLM Inference in Retrieval-Augmented Generation",
   "type": "research",
   "venue": "Proc. ACM Manag. Data",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-10-12T20:55:25+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/13-sparse-attention/2026-2601.12904-from-prefix-cache-to-fusion-rag-cache-accelerating-llm-inference-in-retr.md",
+  "represented_canonical_id": "arXiv:2601.12904",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
