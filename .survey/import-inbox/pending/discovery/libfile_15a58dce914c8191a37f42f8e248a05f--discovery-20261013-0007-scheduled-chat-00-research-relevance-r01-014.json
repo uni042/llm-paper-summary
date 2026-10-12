@@ -1,0 +1,26 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261012-2359-scheduled-chat-00/r01-research-prescreen-014",
+  "reference_main_sha": "ad19902cd044b38a2b278d00e39f40b203be14c2",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2006.16362",
+      "identity_tokens": [
+        "arxiv:2006.16362"
+      ],
+      "title": "Multi-Head Attention: Collaborate Instead of Concatenate",
+      "reason": "一次要旨は、複数注意ヘッドのキー・クエリ投影の冗長性を減らす共有射影のモデル構造を提案し、投影パラメータを4分の1に削減しつつ同等の精度と速度を維持すると述べる。推論ランタイム、KV管理、GPUカーネル、分散実行等のシステム機構は要旨から確認できず、主な貢献はモデルアーキテクチャと学習済み重みの再パラメータ化にあるため、現行サーベイでは境界的とする。",
+      "source_url": "https://arxiv.org/abs/2006.16362",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T00:07:35+09:00",
+      "last_checked_at": "2026-10-13T00:07:35+09:00",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance",
+      "worklist_rank": 14
+    }
+  ]
+}
