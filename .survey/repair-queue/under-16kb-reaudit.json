@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-10-12T11:02:54.465536+00:00",
+  "generated_at": "2026-10-12T11:32:48.581495+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 6,
+  "count": 5,
   "worker_counts": {
     "scheduled-chat-00": 2,
-    "scheduled-chat-30": 2,
+    "scheduled-chat-30": 1,
     "scheduled-chat-45": 2
   },
   "entries": [
@@ -125,26 +125,6 @@
       "mechanical_failures": [
         "16KB未満再監査: 評価説明量 495 < 500"
       ],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2023-2310.04836-dual-grained-quantization-efficient-fine-grained-quantization-for-llm.md",
-      "canonical_id": "arXiv:2310.04836",
-      "title": "Dual Grained Quantization: Efficient Fine-Grained Quantization for LLM",
-      "file_bytes": 16510,
-      "source_sha256": "25da2f34a2ce73f0e2db783df44de1eabeebe79859fcb9679e3c23d91ba6c792",
-      "source_git_blob_sha": "ff3244b23b258f90b30d54395ae52713ccfa3cda",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.976576,
-      "quality_metrics": {
-        "body_chars": 4177,
-        "method_chars": 1565,
-        "evaluation_chars": 824,
-        "limitation_chars": 379
-      },
-      "mechanical_failures": [],
       "warnings": []
     }
   ]
