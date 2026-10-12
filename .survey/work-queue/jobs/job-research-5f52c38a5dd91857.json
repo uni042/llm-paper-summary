@@ -35,10 +35,15 @@
   "selection_reason": "弱い安価LLMで簡単なqueryを処理し、難問だけ強い高価LLMへ送るcascadeで推論API costを削減する。GPT-3.5/GPT-4 reasoningで強model単独に近い性能を40% costで達成するためinference routing/cascade対象。",
   "semantic_scholar_id": "00cccb9065f0a59e845d5b4d360ce31cf25036be",
   "source_url": "https://arxiv.org/abs/2310.03094",
-  "status": "ready",
+  "status": "superseded",
   "title": "Large Language Model Cascades with Mixture of Thoughts Representations for Cost-efficient Reasoning",
   "type": "research",
   "venue": "International Conference on Learning Representations",
   "workflow_version": 10,
-  "year": 2023
+  "year": 2023,
+  "superseded_at": "2026-10-12T15:09:09+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2024-2310.03094-large-language-model-cascades-with-mixture-of-thought-representations-fo.md",
+  "represented_canonical_id": "arXiv:2310.03094",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

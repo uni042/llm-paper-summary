@@ -35,10 +35,15 @@
   "selection_reason": "NVILAは高解像度画像・長動画をscale-then-compress方式で処理し、visual tokenを圧縮してVLMのdeployment効率を改善する。training/fine-tuningだけでなくprefill latencyを1.6–2.2倍、decoding latencyを1.2–2.8倍改善しており、multimodal LLM推論効率を直接評価するため対象内。",
   "semantic_scholar_id": "7929ce6d325e7be6976f321765106d4384e08aab",
   "source_url": "https://arxiv.org/abs/2412.04468",
-  "status": "ready",
+  "status": "superseded",
   "title": "NVILA: Efficient Frontier Visual Language Models",
   "type": "research",
   "venue": "Computer Vision and Pattern Recognition",
   "workflow_version": 10,
-  "year": 2024
+  "year": 2024,
+  "superseded_at": "2026-10-12T15:09:09+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2024-2412.04468-nvila-efficient-frontier-visual-language-models.md",
+  "represented_canonical_id": "arXiv:2412.04468",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-12T15:01:00+00:00",
+  "generated_at": "2026-10-12T15:09:09+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 42,
+  "count": 39,
   "entries": [
     {
       "canonical_id": "DOI:10.1145/3714983.3714987",
@@ -622,33 +622,6 @@
       "worker_run_key": "20261011-1700-scheduled-chat-00/r01"
     },
     {
-      "canonical_id": "arXiv:2412.04468",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-11T15:07:43+00:00",
-      "return_count": 4,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 0 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 4343,
-        "body_paragraphs": 21,
-        "method_chars": 2184,
-        "method_paragraphs": 10,
-        "evaluation_chars": 0,
-        "limitation_chars": 669,
-        "insufficiency_flags": [
-          "評価説明量 0 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-6c76ea4dc9f2--libfile_e42e2fc32000819196ce2b8bd51ee319--2024-2412.04468-nvila-efficiency-research-20261011-1605-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-6c76ea4dc9f2--libfile_e42e2fc32000819196ce2b8bd51ee319--2024-2412.04468-nvila-efficiency-research-20261011-1605-scheduled-chat-00-r01.json",
-      "worker_run_key": "20261011-1605-scheduled-chat-00/r01"
-    },
-    {
       "canonical_id": "arXiv:2601.04719",
       "title": null,
       "source_url": null,
@@ -697,33 +670,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_79b879895234819185968e0f57f55e30--2026-2604.13519-toolspec-returned-repair-20261012-1130-scheduled-chat-30-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_79b879895234819185968e0f57f55e30--2026-2604.13519-toolspec-returned-repair-20261012-1130-scheduled-chat-30-r01.json",
       "worker_run_key": "20261012-1130-scheduled-chat-30/r01"
-    },
-    {
-      "canonical_id": "arXiv:2606.00735",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-12T03:20:04+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 141 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5846,
-        "body_paragraphs": 33,
-        "method_chars": 1813,
-        "method_paragraphs": 10,
-        "evaluation_chars": 141,
-        "limitation_chars": 565,
-        "insufficiency_flags": [
-          "評価説明量 141 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-070a02a87119--libfile_cbeac3de72288191b3a79f776274b69c--2026-2606.00735-vibe-research-20261012-0604-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-070a02a87119--libfile_cbeac3de72288191b3a79f776274b69c--2026-2606.00735-vibe-research-20261012-0604-scheduled-chat-00-r01.json",
-      "worker_run_key": "20261012-0604-scheduled-chat-00/r01"
     },
     {
       "canonical_id": "arXiv:2507.15465",
@@ -909,36 +855,9 @@
       "worker_run_key": "20261012-2002-scheduled-chat-00/r01"
     },
     {
-      "canonical_id": "arXiv:2607.10987",
+      "canonical_id": "arXiv:2008.02496",
       "title": null,
       "source_url": null,
-      "returned_at": "2026-10-12T12:00:55+00:00",
-      "return_count": 5,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 207 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5935,
-        "body_paragraphs": 31,
-        "method_chars": 1848,
-        "method_paragraphs": 10,
-        "evaluation_chars": 207,
-        "limitation_chars": 686,
-        "insufficiency_flags": [
-          "評価説明量 207 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-ca310e8143eb--libfile_179794e149488191be1f608628329cd5--2026-2607.10987-aaflow-plus-returned-research-repair-20261012-1600-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-ca310e8143eb--libfile_179794e149488191be1f608628329cd5--2026-2607.10987-aaflow-plus-returned-research-repair-20261012-1600-scheduled-chat-00-r01.json",
-      "worker_run_key": "20261012-1600-scheduled-chat-00/r01"
-    },
-    {
-      "canonical_id": "arXiv:2008.02496",
-      "title": "ConvBERT: Improving BERT with Span-based Dynamic Convolution",
-      "source_url": "https://arxiv.org/pdf/2008.02496",
       "returned_at": "2026-10-12T14:59:09+00:00",
       "return_count": 1,
       "assigned_worker": "scheduled-chat-30",

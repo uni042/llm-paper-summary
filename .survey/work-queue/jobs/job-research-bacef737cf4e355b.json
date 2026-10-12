@@ -35,10 +35,15 @@
   "selection_reason": "明示的CoTを連続潜在空間へ圧縮して推論時のreasoning token列を短縮するLLM reasoning efficiency研究。GSM8kで明示CoT性能を維持しつつ3.1x圧縮を報告し、生成token削減が推論計算へ直接効くため対象。",
   "semantic_scholar_id": "bf04a4f09c19ec0ebaeadff5f78832626673fc00",
   "source_url": "https://arxiv.org/abs/2502.21074",
-  "status": "ready",
+  "status": "superseded",
   "title": "CODI: Compressing Chain-of-Thought into Continuous Space via Self-Distillation",
   "type": "research",
   "venue": "Conference on Empirical Methods in Natural Language Processing",
   "workflow_version": 10,
-  "year": 2025
+  "year": 2025,
+  "superseded_at": "2026-10-12T15:09:09+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2025-2502.21074-codi-compressing-chain-of-thought-into-continuous-space-via-self-distill.md",
+  "represented_canonical_id": "arXiv:2502.21074",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
