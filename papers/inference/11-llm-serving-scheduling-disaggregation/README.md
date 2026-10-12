@@ -10,6 +10,10 @@
 
 ### 注目：直近12か月・リポジトリ内で被引用（2025-11〜2026-10）
 
+- **2025-11 · [Mooncake: A KVCache-centric Disaggregated Architecture for LLM Serving](2024-2407.00079-mooncake-kvcache-centric-disaggregated-architecture.md)**  
+  実装：[✓](https://github.com/kvcache-ai/Mooncake) ・ リポジトリ内被引用：229  
+  Mooncakeは、大規模言語モデル（Large Language モデル、LLM）の推論サービスで、GPUの計算能力とメモリを同時に効率よく使うための分散サービング基盤である。中心にあるのは、KVの所在と移動費用を知る全体スケジューラ（Global Scheduler）であるConductorである。
+
 - **2025-11 · [Continnum: Efficient and Robust Multi-Turn LLM Agent Scheduling with KV Cache Time-to-Live](2025-2511.02230-continuum-agent-kv-cache-ttl-scheduling.md)**  
   実装：[✓](https://github.com/Hanchenli/vllm-continuum) ・ リポジトリ内被引用：34  
   ツール呼出しを挟む多ターンLLMエージェントで、ツール待ち時間・KV再構築費用・残りターンを見てKVキャッシュの保持期限を動的に決め、短い待ちではGPUに固定し長い待ちでは解放してターン間待ちを減らすスケジューラ。
@@ -813,10 +817,6 @@
   GPU障害後も任意数のGPUでテンソル並列推論を継続し、KVキャッシュ配置・注意計算・要求割当を均衡化しながら状態復旧を高速化する。
 
 ### 2年前（2024-11〜2025-10）
-
-- **2025-02 · [Mooncake: Trading More Storage for Less Computation — A KVCache-centric Architecture for Serving LLM Chatbot](2024-2407.00079-mooncake-kvcache-centric-disaggregated-architecture.md)**  
-  実装：[✓](https://github.com/kvcache-ai/Mooncake) ・ リポジトリ内被引用：217  
-  同じシステム指示や過去の会話が次の要求でも現れる場合、その部分の鍵・値キャッシュ（KV キャッシュ）を再利用すれば、既に行った注意計算を省ける。遅延制約を守る要求容量が基準方式より59～498%増え、分散キャッシュの命中率が局所キャッシュ比で最大2.36倍、事前入力処理のGPU計算時間が最大48%減った。
 
 - **2025-02 · [Autellix: An Efficient Serving Engine for LLM Agents as General Programs](2025-2502.13965-autellix-agent-program-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：48  

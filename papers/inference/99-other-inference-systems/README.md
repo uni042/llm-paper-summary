@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（476本）
+## 自動生成の論文一覧（479本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -455,6 +455,10 @@
 - **2026-08 · [MARCH: Scaling Recurrent Memory with Content-Routed State Anchors](2026-2608.12435-march-scaling-recurrent-memory-with-content-routed-state-anchors.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   MARCHは、再帰型言語モデルの「過去を固定サイズの状態に圧縮するため、後から古い情報を取り出しにくい」という問題を、累積再帰状態の履歴保存と内容に基づく検索で緩和する構造である。過去状態の読出しには追加費用があり、128KではTop-4の疎ルーティングが密なMARCHの学習処理量を2倍超に改善する。
+
+- **2026-08 · [MAPLE: MoE Adaptive Plug-and-play Layer-wise Expert allocation](2026-2608.15299-maple-moe-adaptive-plug-and-play-layer-wise-expert-allocation.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  層によって専門家数を減らしたときの精度劣化が異なるにもかかわらず、一律に削ると重要な層の計算能力まで失う。DeepSeek-MoE-16B、DeepSeek-V2-Lite、Moonlight-16B-A3B、OLMoE-1B-7Bの4モデルを、ルーティング対象専門家の総活性数を元の75%とする条件で評価した。
 
 - **2026-08 · [M-LoRA: Efficient Serving for Concurrent LoRA Adapters with Memory-Aware Speculative Scheduler on Single GPU](2026-bbf40b71b5e2-m-lora-efficient-serving-for-concurrent-lora-adapters-with-memory-aware-speculative-scheduler-on-single-gpu.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -1005,6 +1009,10 @@
 - **2025-06 · [StoreLLM: Energy Efficient Large Language Model Inference with Permanently Pre-stored Attention Matrices](2026-d42c81b62392-storellm-energy-efficient-large-language-model-inference-with-permanently-pre-stored-attention-matrices.md)**  
   実装：[✓](https://github.com/StoreLLM/StoreLLM/) ・ リポジトリ内被引用：2  
   語彙トークンの注意行列を先に計算してSSDへ蓄え、頻出分だけDRAMへ置き、要求ごとに遅延を守りながら読出しか再計算かを選ぶ方式である。
+
+- **2025-06 · [MEM1: Learning to Synergize Memory and Reasoning for Efficient Long-Horizon Agents](2025-2506.15841-mem1-learning-to-synergize-memory-and-reasoning-for-efficient-long-horiz.md)**  
+  実装：[✓](https://github.com/MIT-MI/MEM1) ・ リポジトリ内被引用：2  
+  従来の全履歴追記方式では、過去の検索結果が毎ターンのプロンプトへ残るため、文脈長に比例して鍵値キャッシュの容量が増え、注意計算や再入力の費用も高くなる。16目標の多段質問応答では、Qwen2.5-14B-Instructの完全一致数0.567に対しMEM1は1.97、ピークトークン数は3,840に対し1,040、推論時間は29.7秒に対し8.70秒だった。
 
 - **2025-05 · [Speeding up Model Loading with fastsafetensors](2025-2505.23072-speeding-up-model-loading-with-fastsafetensors.md)**  
   実装：[✓](https://github.com/foundation-model-stack/fastsafetensors) ・ リポジトリ内被引用：2  
@@ -1773,6 +1781,10 @@
 - **2021-02 · [Nyströmformer: A Nyström-Based Algorithm for Approximating Self-Attention](2021-2102.03902-nystr-mformer-a-nystr-m-based-algorithm-for-approximating-self-attention.md)**  
   実装：[✓](https://github.com/mlpen/Nystromformer) ・ リポジトリ内被引用：8  
   標準的な自己注意（self-注意機構）は、系列長nのすべてのトークン対の類似度を計算するため、n×nの注意行列を作る。系列が2倍になると注意行列の要素数は4倍となり、長い文書を扱うTransformerでは計算量とメモリ容量が問題になる。
+
+- **2021-10 · [8-bit Optimizers via Block-wise Quantization](2021-2110.02861-8-bit-optimizers-via-block-wise-quantization.md)**  
+  実装：[✓](https://github.com/bitsandbytes-foundation/bitsandbytes) ・ リポジトリ内被引用：6  
+  Dettmersらは、この状態を8ビットへ縮めても32ビット版に近い学習品質を維持する方式を提案した。原著表1では1.5Bパラメータ言語モデルで32ビットAdamと8ビットAdamの困惑度がともに9.0で、後者は8.5GBのGPUメモリを節約した。
 
 - **2020-12 · [Fast Transformers with Clustered Attention](2020-2007.04825-fast-transformers-with-clustered-attention.md)**  
   実装：[✓](https://github.com/idiap/fast-transformers) ・ リポジトリ内被引用：6  

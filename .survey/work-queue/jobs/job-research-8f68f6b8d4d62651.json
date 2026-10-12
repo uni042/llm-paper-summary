@@ -55,10 +55,15 @@
   "selection_reason": "MAPLEはpretrained MoEの重みを変えず、layer sensitivityからexpert budgetを非一様配分するplug-and-play方式。75% expert budgetで品質を維持・改善し、SGLang実装でsingle-GPU latency 32.2%減・throughput 47.4%増を報告しており、適応的expert数配分の実測系として価値が高い。",
   "semantic_scholar_id": "05250a5790da9dc61ebd05cf3b88f06d5ca753fc",
   "source_url": "https://arxiv.org/abs/2608.15299",
-  "status": "ready",
+  "status": "superseded",
   "status_submission": ".survey/work-queue/submissions/research/attempt-3930d1453c4e909421448ada.json",
   "title": "MAPLE: MoE Adaptive Plug-and-play Layer-wise Expert allocation",
   "type": "research",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-10-12T15:22:43+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2026-2608.15299-maple-moe-adaptive-plug-and-play-layer-wise-expert-allocation.md",
+  "represented_canonical_id": "arXiv:2608.15299",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

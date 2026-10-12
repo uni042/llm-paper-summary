@@ -36,10 +36,15 @@
   "selection_reason": "KVキャッシュ中心の分離型LLM配信でprefill/decode間KV転送と階層メモリ利用を直接扱う。",
   "semantic_scholar_id": "f3d401f01aa5cb2eb3974196efda8895d06610c7",
   "source_url": "https://doi.org/10.1145/3773772",
-  "status": "ready",
+  "status": "superseded",
   "title": "Mooncake: A KVCache-centric Disaggregated Architecture for LLM Serving",
   "type": "research",
   "venue": "ACM Transactions on Storage",
   "workflow_version": 10,
-  "year": 2024
+  "year": 2024,
+  "superseded_at": "2026-10-12T15:22:43+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2407.00079-mooncake-kvcache-centric-disaggregated-architecture.md",
+  "represented_canonical_id": "arXiv:2407.00079",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
