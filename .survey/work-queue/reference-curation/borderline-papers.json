@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-12T21:35:17+00:00",
-  "record_count": 4694,
+  "updated_at": "2026-10-12T21:38:05+00:00",
+  "record_count": 4700,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -65359,9 +65359,9 @@
       "identity_tokens": [
         "arXiv:2512.18746"
       ],
-      "reason": "EvolveLabのencode/store/retrieve/manageモジュールを探索空間にして、エージェントの経験知識と記憶アーキテクチャを共同で進化させる。SmolAgentやFlash-Searcherのタスク性能を最大17.06%改善するが、評価軸はエージェントの課題成功率と記憶設計の転移であり、GPU推論実行基盤のキャッシュ配置、転送、スケジューリングを直接評価していない。長期記憶管理の概念は関連するため境界的とする。",
+      "reason": "一次要旨はエージェントの経験と記憶アーキテクチャを共同進化させるMemEvolveおよび12種類の記憶システムを統一したEvolveLabを提案し、タスク成功率向上を主に評価する。検索・記憶管理は広義の推論効率に接続するが、GPU実行時メモリやLLM推論カーネル最適化は主貢献ではない。",
       "first_checked_at": "2026-10-07T08:53:52+00:00",
-      "last_checked_at": "2026-10-12T17:45:23+00:00",
+      "last_checked_at": "2026-10-12T21:37:59+00:00",
       "linked_from": [
         "papers/inference/14-agentic-inference-serving-runtime/2025-2501.13956-zep-a-temporal-knowledge-graph-architecture-for-agent-memory.md"
       ],
@@ -70616,9 +70616,9 @@
       "identity_tokens": [
         "arXiv:2601.08815"
       ],
-      "reason": "Agent Contractsは入出力仕様、トークン/API呼出し/時間の予算、成功条件を契約として形式化し、親子エージェントの予算保存則と実行停止を規定する。本文第4〜8節では複数呼出し間の監視と委譲を検証し、反復コードレビューでトークン34,606から3,461への削減を示すが、成功率60.0%から52.9%への差もある。単一LLM呼出し中の強制制御はできず、主題はエージェント運用統治であって推論カーネル・メモリ階層・GPUサービングではないため境界的。",
+      "reason": "一次要旨は入出力・資源予算・時間制限・成功条件を形式契約で統合し、複数エージェントへの予算委譲で保存則を保証する。反復作業でトークン90%削減を報告するが、対象はエージェントの資源統治であり、LLM推論エンジンの性能改善そのものではない。",
       "first_checked_at": "2026-10-11T03:32:19+00:00",
-      "last_checked_at": "2026-10-11T03:32:19+00:00",
+      "last_checked_at": "2026-10-12T21:38:01+00:00",
       "linked_from": [
         ".survey/work-queue/WORKLIST-30.md"
       ],
@@ -71008,9 +71008,9 @@
       "identity_tokens": [
         "arXiv:2512.05665"
       ],
-      "reason": "ILVRはマルチモーダル推論中の画像再符号化を避け、潜在視覚状態をテキスト生成と交互に扱う。計算費用の問題に触れるが、主要な貢献と評価は視覚推論品質・中間知覚表現の学習であり、LLM推論サービングのメモリ階層・カーネル・実測処理量最適化ではない。",
+      "reason": "一次要旨は視覚画像を毎段再符号化せず、潜在表現と文章を交互生成し、選択的な視覚特徴教師信号で推論性能を改善する。再符号化費用の削減は推論効率と関係するが、主要貢献は多モーダル推論モデルと学習方式であり、汎用LLM推論ランタイム最適化ではない。",
       "first_checked_at": "2026-10-11T11:49:06+00:00",
-      "last_checked_at": "2026-10-11T11:49:06+00:00",
+      "last_checked_at": "2026-10-12T21:38:00+00:00",
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "Interleaved Latent Visual Reasoning with Selective Perceptual Modeling"
@@ -71021,12 +71021,12 @@
       "identity_tokens": [
         "arXiv:2102.08124"
       ],
-      "reason": "転置してもN:M疎性を満たすマスクを最小費用流と近似算法で求め、前向き・逆向き両方の疎行列演算を高速化する。推論時の疎演算にも関係するが、主要貢献は学習の逆伝播とマスク更新であり、LLM推論基盤やサービングの直接評価はないため境界候補。",
+      "reason": "一次要旨はN:M構造化疎行列を前向き・逆伝播の双方に適用する転置可能マスクと最小費用流近似を提案する。推論時の疎行列演算にもつながるが、中心は疎学習高速化であり、LLM固有の推論システム評価は示されない。",
       "first_checked_at": "2026-10-11T11:49:07+00:00",
-      "last_checked_at": "2026-10-11T11:49:07+00:00",
+      "last_checked_at": "2026-10-12T21:38:00+00:00",
       "linked_from": [],
       "borderline_recheck_count": 0,
-      "title": "Accelerated Sparse Neural Training: A Provable and Efficient Method to Find N:M Transposable Masks"
+      "title": "Accelerated Sparse Neural Training: A Provable and Efficient Method to Find N: M Transposable Masks"
     },
     "arXiv:2512.09487": {
       "classification": "borderline",
@@ -71113,9 +71113,9 @@
       "identity_tokens": [
         "arXiv:2511.00413"
       ],
-      "reason": "一次要旨は、ツール呼出しなどで分岐したエージェント軌跡の共有接頭辞をDFSで直列化し、順伝播・逆伝播の重複を削減する学習処理を提案する。密モデルとMoEの教師あり微調整・強化学習で最大6.2倍の学習高速化を報告するが、推論サービング、実行時キャッシュ、GPU推論カーネルへの具体的な最終適用は一次要旨で確認できない。現行サーベイでは学習単独高速化が凍結範囲のためResearch対象にせず、技術的関連性がある境界候補として保存する。",
+      "reason": "arXiv一次要旨は分岐したエージェント軌跡の共通接頭辞を一度だけ計算し、Tree PackingとGradient Restorationにより前向き・逆向きの重複計算を減らす学習エンジンを提案する。接頭辞再利用という計算システム技術は推論のprefix cacheと概念的に近いが、実測高速化と勾配復元は教師あり微調整・強化学習の訓練過程を対象とする。現行の学習単独最適化凍結方針により通常Researchのacceptとはしない。",
       "first_checked_at": "2026-10-11T14:27:36+00:00",
-      "last_checked_at": "2026-10-11T14:27:36+00:00",
+      "last_checked_at": "2026-10-12T21:38:04+00:00",
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "Tree Training: Accelerating Agentic LLMs Training via Shared Prefix Reuse"
@@ -71341,9 +71341,9 @@
       "identity_tokens": [
         "arXiv:2601.10323"
       ],
-      "reason": "一次要旨では、連続音声・映像を同期単位へまとめ、軽量な発話判定ヘッドで応答開始と内容生成を分離する。逐次入力を扱う実時間実行との接点はあるが、主要貢献は複数感覚の理解モデル、発話判断、二段階学習と12ベンチマークでの対話品質であり、推論サービングのスケジューラ、GPUカーネル、階層メモリや資源効率の定量的な改善を一次要旨から確認できないため境界的とする。",
+      "reason": "一次要旨は音声・動画の連続入力を時間同期単位で扱い、応答開始を軽量ヘッドで制御するリアルタイム多モーダル助手を提案する。ストリーミング入力処理と応答タイミングは推論実行に関係するが、主な評価は12の理解・応答ベンチマークであり、LLM基盤のGPUカーネルやサービング高速化ではない。",
       "first_checked_at": "2026-10-11T21:44:19+00:00",
-      "last_checked_at": "2026-10-11T21:44:19+00:00",
+      "last_checked_at": "2026-10-12T21:38:01+00:00",
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "ROMA: Real-time Omni-Multimodal Assistant with Interactive Streaming Understanding"
@@ -71383,9 +71383,9 @@
         "arXiv:2309.14393",
         "semanticscholar:32479758dc9ff9820828a12aa7f3d066f187dc1c"
       ],
-      "reason": "原著要旨はdense/MoE型LLMの学習・推論・実験・保存を通じた運用時・製造時の炭素排出量を事前推定するLLMCarbonを提案し、GPU以外の資源も考慮して既存mlco2より予測精度を改善する。推論資源・電力の評価と隣接するが、GPUカーネル、メモリ階層、KV、MoE実行配置、サービング性能を直接改善する方式ではなく、炭素フットプリントのモデリングが中心のため境界扱い。",
+      "reason": "一次要旨は密モデルと専門家混合モデルの学習・推論・保管・実体炭素を含む排出量予測を改善する。LLM運用の資源・費用評価と関係する一方、推論の高速化・メモリ階層・サービング制御の新しい実装技術を提案するものではない。",
       "first_checked_at": "2026-10-12T01:47:05+00:00",
-      "last_checked_at": "2026-10-12T10:58:03+00:00",
+      "last_checked_at": "2026-10-12T21:38:00+00:00",
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "LLMCarbon: Modeling the end-to-end Carbon Footprint of Large Language Models"
@@ -71646,9 +71646,9 @@
       "identity_tokens": [
         "arXiv:2510.18234"
       ],
-      "reason": "DeepEncoderとDeepSeek3B-MoE-A570Mを用いて文書を画像トークンへ写像し、視覚100〜800トークン/ページ程度のOCR再構成と、光学的な長文脈圧縮の可能性を検証する。10倍未満の圧縮でOCR精度97%、20倍で約60%を報告するが、主実験は文書OCRと学習データ生成であり、既存LLMのKVキャッシュ・GPUサービング・メモリ階層を直接最適化した測定ではない。推論文脈の圧縮に将来接続し得るため境界的とする。",
+      "reason": "一次要旨は長文を二次元画像へ写像して視覚トークンへ圧縮する方式を提案し、10倍未満でOCR精度97%、20倍で約60%を報告する。入力トークン削減は推論メモリ・文脈長に関連するが、主評価は光学文字認識とデータ生成であり、LLMサービングの独立した性能評価は要旨から確認できない。",
       "first_checked_at": "2026-10-12T17:45:22+00:00",
-      "last_checked_at": "2026-10-12T17:45:22+00:00",
+      "last_checked_at": "2026-10-12T21:37:59+00:00",
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "DeepSeek-OCR: Contexts Optical Compression"
@@ -71730,6 +71730,84 @@
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "Role-Based Fault Tolerance System for LLM RL Post-Training"
+    },
+    "arXiv:2601.01885": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2601.01885",
+      "identity_tokens": [
+        "arXiv:2601.01885"
+      ],
+      "reason": "一次要旨は長期・短期記憶の保存・検索・要約・削除をエージェントのツール行動として統一し、段階的強化学習で選択方針を学ぶ。文脈使用効率には関係するが、学習されたエージェントの能力改善が中心であり、推論基盤の実測高速化・KVキャッシュ最適化は要旨から確認できない。",
+      "first_checked_at": "2026-10-12T21:37:59+00:00",
+      "last_checked_at": "2026-10-12T21:37:59+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Agentic Memory: Learning Unified Long-Term and Short-Term Memory Management for Large Language Model Agents"
+    },
+    "arXiv:2604.26256": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2604.26256",
+      "identity_tokens": [
+        "arXiv:2604.26256"
+      ],
+      "reason": "一次要旨は強化学習後学習のロールアウト長尾待ちを解消する複数方策版の非同期生成を提案し、訓練スループットを2〜3倍、産業規模の訓練を2〜4倍改善する。推論生成オーケストレーションの技術は関係するが、主目的・評価は学習系であり、推論サービング単体の改善として収録する根拠は要旨では限定的。",
+      "first_checked_at": "2026-10-12T21:38:01+00:00",
+      "last_checked_at": "2026-10-12T21:38:01+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "DORA: A Scalable Asynchronous Reinforcement Learning System for Language Model Training"
+    },
+    "arXiv:2303.03982": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2303.03982",
+      "identity_tokens": [
+        "arXiv:2303.03982"
+      ],
+      "reason": "S4状態空間モデルの隠れ状態初期化・リセットを並列化し、部分観測強化学習環境でRNN比5倍超の実行速度を報告。系列推論の計算効率は関連するが、対象は強化学習エージェントの制御系列で、LLM復号・推論基盤の性能評価はない。",
+      "first_checked_at": "2026-10-12T21:38:03+00:00",
+      "last_checked_at": "2026-10-12T21:38:03+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Structured State Space Models for In-Context Reinforcement Learning"
+    },
+    "arXiv:2605.20473": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.20473",
+      "identity_tokens": [
+        "arXiv:2605.20473"
+      ],
+      "reason": "一次要旨で、DiffCodeGenは複数のコード候補を生成し、既存テスト不要の被覆率誘導ファジングで入力を合成、候補間の実行結果をクラスタ化して最大クラスタの代表解を選ぶと確認した。候補選択時に追加LLM呼出しを不要にして推論時トークン消費と所要時間を減らすが、主たる貢献はコード生成問題の解答選択・検証手続きであり、汎用LLMサービング、GPU実行、KVキャッシュ、モデル並列化等の推論基盤そのものを最適化する方式ではない。推論時費用削減との接点はあるため対象外と断定せず微妙とする。",
+      "first_checked_at": "2026-10-12T21:38:03+00:00",
+      "last_checked_at": "2026-10-12T21:38:03+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Code Generation by Differential Test Time Scaling"
+    },
+    "arXiv:2605.22502": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.22502",
+      "identity_tokens": [
+        "arXiv:2605.22502"
+      ],
+      "reason": "arXiv一次要旨では外部のエージェント・オーケストレーションを小型モデルの重みに学習で内在化させ、手続き的な旅行予約・サポート・保険申請で大規模モデル依存の呼び出し費用を減らす。推論費用削減の応用はあるが、主機構は合成会話データによる手続き知識の学習・モデル置換であり、汎用LLM推論ランタイム、GPUメモリ階層、分散サービングの新しい実装技術は要旨に示されていない。",
+      "first_checked_at": "2026-10-12T21:38:04+00:00",
+      "last_checked_at": "2026-10-12T21:38:04+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Compiling Agentic Workflows into LLM Weights: Near-Frontier Quality at Two Orders of Magnitude Less Cost"
+    },
+    "arXiv:2407.04656": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2407.04656",
+      "identity_tokens": [
+        "arXiv:2407.04656"
+      ],
+      "reason": "一次要旨で、LazarusはMoE学習の障害回復を目的に、expertの負荷偏りを緩和する複製配置、回復確率を最大化する配置最適化、障害後も残存ノードを活用する柔軟なtoken dispatcherを提案すると確認した。障害頻発時最大5.7倍、スポットインスタンス障害履歴で3.4倍の改善はMoE学習処理に関する結果であり、オンラインMoE推論のexpertキャッシュ、遅延、スループットを直接測定していない。expert配置技術は推論への概念的関連性があるものの、現在の推論中心の凍結スコープでは微妙とする。",
+      "first_checked_at": "2026-10-12T21:38:05+00:00",
+      "last_checked_at": "2026-10-12T21:38:05+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Lazarus: Resilient and Elastic Training of Mixture-of-Experts Models with Adaptive Expert Placement"
     }
   }
 }

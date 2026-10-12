@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-12T19:45:24+00:00",
-  "record_count": 11548,
+  "updated_at": "2026-10-12T21:38:02+00:00",
+  "record_count": 11549,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -5158,21 +5158,6 @@
         "worker-worklist-30 discovery_review rank 251"
       ],
       "title": "Hexa-MoE: Efficient and Heterogeneous-aware Training for Mixture-of-Experts"
-    },
-    "arXiv:2604.26256": {
-      "classification": "unrelated",
-      "canonical_id": "arXiv:2604.26256",
-      "identity_tokens": [
-        "arXiv:2604.26256"
-      ],
-      "reason": "題名から主題が言語モデル訓練の非同期強化学習システムであることが明白で、推論専用のシステム最適化ではない。学習専用最適化の凍結規則により先行除外する。",
-      "first_checked_at": "2026-09-30T09:52:33+00:00",
-      "last_checked_at": "2026-10-11T00:44:46+00:00",
-      "linked_from": [
-        "worker-worklist-30 discovery_review rank 429",
-        "workers/discovery-02/ready/20260927-u-wave10/manifest.json#candidate[5]"
-      ],
-      "title": "DORA: A Scalable Asynchronous Reinforcement Learning System for Language Model Training"
     },
     "arXiv:2605.28184": {
       "classification": "unrelated",
@@ -165059,9 +165044,9 @@
         "DOI:10.48550/arxiv.2311.17049",
         "arXiv:2311.17049"
       ],
-      "reason": "原著要旨はモバイル向けCLIP画像・テキスト埋め込みモデルの蒸留学習と画像分類・検索の遅延精度トレードオフを改善する。MobileCLIP-S2の2.3倍高速化はCLIP画像テキストエンコーダの推論に関するもので、自己回帰LLMの生成サービング、KVキャッシュ、MoE推論・推論基盤を対象としないため現行サーベイの範囲外。",
+      "reason": "一次要旨は携帯端末向け画像・テキスト表現モデルの学習データ強化と分類・検索時の遅延精度トレードオフを扱う。効率改善はあるが対象はCLIP系視覚エンコーダであり、LLM生成推論基盤やサービングの直接的な技術貢献ではない。",
       "first_checked_at": "2026-10-12T10:58:05+00:00",
-      "last_checked_at": "2026-10-12T10:58:05+00:00",
+      "last_checked_at": "2026-10-12T21:38:02+00:00",
       "linked_from": [],
       "title": "MobileCLIP: Fast Image-Text Models through Multi-Modal Reinforced Training"
     },
@@ -165072,9 +165057,9 @@
         "DOI:10.48550/arxiv.2203.11086",
         "arXiv:2203.11086"
       ],
-      "reason": "原著要旨の中心は量子化認識学習中の重みが隣接量子化格子間で振動する現象と、振動抑制・反復重み凍結という学習アルゴリズムである。評価はMobileNetV2/V3・EfficientNet-liteのImageNet画像分類で、3～4ビット量子化の精度改善を測る。LLM向け推論カーネル、サービング遅延、メモリ階層などの実行基盤は直接対象としておらず、学習アルゴリズム中心の凍結範囲に当たる。",
+      "reason": "一次要旨での主貢献はMobileNet/EfficientNetの低ビット量子化対応学習で生じる重み振動を、振動抑制と反復的な重み凍結で防ぐこと。LLM推論ランタイムや推論時のシステム性能ではなく、学習の精度劣化対策を扱う。",
       "first_checked_at": "2026-10-12T10:59:20+00:00",
-      "last_checked_at": "2026-10-12T10:59:20+00:00",
+      "last_checked_at": "2026-10-12T21:38:02+00:00",
       "linked_from": [],
       "title": "Overcoming Oscillations in Quantization-Aware Training"
     },
@@ -165150,6 +165135,30 @@
       "last_checked_at": "2026-10-12T19:45:24+00:00",
       "linked_from": [],
       "title": "A Few Good Clauses: Comparing LLMs vs Domain-Trained Small Language Models on Structured Contract Extraction"
+    },
+    "arXiv:2405.19885": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2405.19885",
+      "identity_tokens": [
+        "arXiv:2405.19885"
+      ],
+      "reason": "一次要旨で、FCNetはロボット軌跡の低周波成分を短時間フーリエ変換で表現し、FFTとSliding DFTでロボット方策のリアルタイム逐次推論を効率化すると確認した。評価はD4RLと実ロボットの移動・制御であり、Transformer比較も身体化学習のロボット方策モデルに限られる。LLMの生成、LLM推論サービス、KVキャッシュ、MoE、LLMのGPU推論基盤への適用・実測を提示していないため、本サーベイの対象外と判断する。",
+      "first_checked_at": "2026-10-12T21:37:57+00:00",
+      "last_checked_at": "2026-10-12T21:37:57+00:00",
+      "linked_from": [],
+      "title": "Fourier Controller Networks for Real-Time Decision-Making in Embodied Learning"
+    },
+    "arXiv:2403.01232": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2403.01232",
+      "identity_tokens": [
+        "arXiv:2403.01232"
+      ],
+      "reason": "一次要旨はグラフTransformerの表現能力と線形計算量を両立するグラフ学習モデルを扱い、13のグラフデータセットで評価する。LLMの生成推論、GPUサービング、KVキャッシュ、MoE等の対象と直接一致しない。",
+      "first_checked_at": "2026-10-12T21:38:02+00:00",
+      "last_checked_at": "2026-10-12T21:38:02+00:00",
+      "linked_from": [],
+      "title": "Polynormer: Polynomial-Expressive Graph Transformer in Linear Time"
     }
   }
 }

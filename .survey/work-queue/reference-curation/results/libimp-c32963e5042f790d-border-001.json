@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-c32963e5042f790d-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2605.22502",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2605.22502",
+    "identity_tokens": [
+      "arXiv:2605.22502"
+    ],
+    "reason": "arXiv一次要旨では外部のエージェント・オーケストレーションを小型モデルの重みに学習で内在化させ、手続き的な旅行予約・サポート・保険申請で大規模モデル依存の呼び出し費用を減らす。推論費用削減の応用はあるが、主機構は合成会話データによる手続き知識の学習・モデル置換であり、汎用LLM推論ランタイム、GPUメモリ階層、分散サービングの新しい実装技術は要旨に示されていない。",
+    "first_checked_at": "2026-10-12T21:38:04+00:00",
+    "last_checked_at": "2026-10-12T21:38:04+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Compiling Agentic Workflows into LLM Weights: Near-Frontier Quality at Two Orders of Magnitude Less Cost"
+  },
+  "processed_at": "2026-10-12T21:38:05+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-c32963e5042f",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-7306d6eb530ef65e-border-006",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2102.08124",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2102.08124",
+    "identity_tokens": [
+      "arXiv:2102.08124"
+    ],
+    "reason": "一次要旨はN:M構造化疎行列を前向き・逆伝播の双方に適用する転置可能マスクと最小費用流近似を提案する。推論時の疎行列演算にもつながるが、中心は疎学習高速化であり、LLM固有の推論システム評価は示されない。",
+    "first_checked_at": "2026-10-11T11:49:07+00:00",
+    "last_checked_at": "2026-10-12T21:38:00+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Accelerated Sparse Neural Training: A Provable and Efficient Method to Find N: M Transposable Masks"
+  },
+  "processed_at": "2026-10-12T21:38:00+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-7306d6eb530e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-7306d6eb530ef65e-border-008",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2512.05665",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2512.05665",
+    "identity_tokens": [
+      "arXiv:2512.05665"
+    ],
+    "reason": "一次要旨は視覚画像を毎段再符号化せず、潜在表現と文章を交互生成し、選択的な視覚特徴教師信号で推論性能を改善する。再符号化費用の削減は推論効率と関係するが、主要貢献は多モーダル推論モデルと学習方式であり、汎用LLM推論ランタイム最適化ではない。",
+    "first_checked_at": "2026-10-11T11:49:06+00:00",
+    "last_checked_at": "2026-10-12T21:38:00+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Interleaved Latent Visual Reasoning with Selective Perceptual Modeling"
+  },
+  "processed_at": "2026-10-12T21:38:00+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-7306d6eb530e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

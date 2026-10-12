@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-7306d6eb530ef65e-border-005",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2309.14393",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2309.14393",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2309.14393",
+      "arXiv:2309.14393",
+      "semanticscholar:32479758dc9ff9820828a12aa7f3d066f187dc1c"
+    ],
+    "reason": "一次要旨は密モデルと専門家混合モデルの学習・推論・保管・実体炭素を含む排出量予測を改善する。LLM運用の資源・費用評価と関係する一方、推論の高速化・メモリ階層・サービング制御の新しい実装技術を提案するものではない。",
+    "first_checked_at": "2026-10-12T01:47:05+00:00",
+    "last_checked_at": "2026-10-12T21:38:00+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "LLMCarbon: Modeling the end-to-end Carbon Footprint of Large Language Models"
+  },
+  "processed_at": "2026-10-12T21:38:00+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-7306d6eb530e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
