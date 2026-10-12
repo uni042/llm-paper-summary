@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-c84ef77c46c3e1c5-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2510.18234",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2510.18234",
+    "identity_tokens": [
+      "arXiv:2510.18234"
+    ],
+    "reason": "DeepEncoderとDeepSeek3B-MoE-A570Mを用いて文書を画像トークンへ写像し、視覚100〜800トークン/ページ程度のOCR再構成と、光学的な長文脈圧縮の可能性を検証する。10倍未満の圧縮でOCR精度97%、20倍で約60%を報告するが、主実験は文書OCRと学習データ生成であり、既存LLMのKVキャッシュ・GPUサービング・メモリ階層を直接最適化した測定ではない。推論文脈の圧縮に将来接続し得るため境界的とする。",
+    "first_checked_at": "2026-10-12T17:45:22+00:00",
+    "last_checked_at": "2026-10-12T17:45:22+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "DeepSeek-OCR: Contexts Optical Compression"
+  },
+  "processed_at": "2026-10-12T17:45:23+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-c84ef77c46c3",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

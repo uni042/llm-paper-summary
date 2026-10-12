@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-12T15:14:02+00:00",
-  "record_count": 11544,
+  "updated_at": "2026-10-12T17:45:22+00:00",
+  "record_count": 11545,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -9722,9 +9722,9 @@
       "identity_tokens": [
         "DOI:10.1145/3600006.3613175"
       ],
-      "reason": "題名の対象は機械学習クラスタのgoodput最適化スケジューリングであり、LLM推論の要求処理ではなく学習クラスタのジョブ配置を中心とする。現行の学習専用最適化凍結規則により先行除外する。",
+      "reason": "SiaはGPUの異種性と訓練ジョブの弾力的な並列規模変更を同時に扱う深層学習クラスタの訓練ジョブスケジューラである。一次要旨が報告する30〜93%のジョブ完了時間短縮とGPU時間12〜55%削減は訓練ジョブを対象としており、LLM推論要求の処理、KVキャッシュ、生成遅延、推論サービングを直接評価していない。現在凍結中の学習単独最適化に該当するため除外する。",
       "first_checked_at": "2026-10-03T15:16:51+00:00",
-      "last_checked_at": "2026-10-11T00:44:45+00:00",
+      "last_checked_at": "2026-10-12T17:45:20+00:00",
       "linked_from": [
         "workers/discovery-02/ready/20260927-u-wave5/manifest.json#candidate[8]"
       ],
@@ -165104,6 +165104,18 @@
       "last_checked_at": "2026-10-12T13:50:18+00:00",
       "linked_from": [],
       "title": "LegoOS: A Disseminated, Distributed OS for Hardware Resource Disaggregation"
+    },
+    "arXiv:2306.08543": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2306.08543",
+      "identity_tokens": [
+        "arXiv:2306.08543"
+      ],
+      "reason": "MiniLLMは教師LLMから小型学生モデルへ知識を移す際、順方向KLではなく逆方向KLとオンポリシー最適化を用い、学生の生成品質や較正を改善する訓練手法である。小型化は将来の推論費用低減につながり得るが、一次要旨の中心的貢献と実験は蒸留学習の目的関数・生成品質であり、推論実行時のメモリ階層、サービング、カーネル、処理量の直接最適化ではない。学習単独研究を凍結する現行対象から除外する。",
+      "first_checked_at": "2026-10-12T17:45:22+00:00",
+      "last_checked_at": "2026-10-12T17:45:22+00:00",
+      "linked_from": [],
+      "title": "MiniLLM: On-Policy Distillation of Large Language Models"
     }
   }
 }

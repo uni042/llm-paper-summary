@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-12T17:43:49+00:00",
-  "record_count": 4687,
+  "updated_at": "2026-10-12T17:45:23+00:00",
+  "record_count": 4689,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -65359,9 +65359,9 @@
       "identity_tokens": [
         "arXiv:2512.18746"
       ],
-      "reason": "The full paper evolves LLM-agent memory architectures and improves task performance, but its reported results do not establish reduced inference tokens, latency, or compute; relationship is plausible but not demonstrated.",
+      "reason": "EvolveLabのencode/store/retrieve/manageモジュールを探索空間にして、エージェントの経験知識と記憶アーキテクチャを共同で進化させる。SmolAgentやFlash-Searcherのタスク性能を最大17.06%改善するが、評価軸はエージェントの課題成功率と記憶設計の転移であり、GPU推論実行基盤のキャッシュ配置、転送、スケジューリングを直接評価していない。長期記憶管理の概念は関連するため境界的とする。",
       "first_checked_at": "2026-10-07T08:53:52+00:00",
-      "last_checked_at": "2026-10-07T08:53:52+00:00",
+      "last_checked_at": "2026-10-12T17:45:23+00:00",
       "linked_from": [
         "papers/inference/14-agentic-inference-serving-runtime/2025-2501.13956-zep-a-temporal-knowledge-graph-architecture-for-agent-memory.md"
       ],
@@ -71028,19 +71028,6 @@
       "borderline_recheck_count": 0,
       "title": "Interleaved Latent Visual Reasoning with Selective Perceptual Modeling"
     },
-    "arXiv:2306.08543": {
-      "classification": "borderline",
-      "canonical_id": "arXiv:2306.08543",
-      "identity_tokens": [
-        "arXiv:2306.08543"
-      ],
-      "reason": "MiniLLMは教師LLMから小型学生モデルへ知識を移すため、逆向きKLとオンポリシー最適化を提案する。小型化は将来の推論費用に間接的に寄与するが、主要な比較は生成品質、露出バイアス、較正、長文生成能力であり、推論システムや実測レイテンシの直接最適化ではない。",
-      "first_checked_at": "2026-10-11T11:49:07+00:00",
-      "last_checked_at": "2026-10-11T11:49:07+00:00",
-      "linked_from": [],
-      "borderline_recheck_count": 0,
-      "title": "MiniLLM: On-Policy Distillation of Large Language Models"
-    },
     "arXiv:2102.08124": {
       "classification": "borderline",
       "canonical_id": "arXiv:2102.08124",
@@ -71639,6 +71626,45 @@
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "Freeze-Omni: A Smart and Low Latency Speech-to-speech Dialogue Model with Frozen LLM"
+    },
+    "arXiv:2511.19575": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2511.19575",
+      "identity_tokens": [
+        "arXiv:2511.19575"
+      ],
+      "reason": "HunyuanOCRは約1BパラメータのOCR専用視覚言語モデルを提案し、文字検出・文書解析・抽出・翻訳を一つのエンドツーエンド構成に統合する。vLLMによる高性能配備に言及するが、一次要旨の主な貢献はモデル設計、データ・強化学習、OCRベンチマークであり、推論システムの独自アルゴリズムや定量的なカーネル・オフロード改善を中心に据えない。後継のHunyuanOCR-1.5は投機的復号の高速化を明示しており別identityとしてResearch対象に残す。",
+      "first_checked_at": "2026-10-12T17:45:20+00:00",
+      "last_checked_at": "2026-10-12T17:45:20+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "HunyuanOCR Technical Report"
+    },
+    "arXiv:2512.18706": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2512.18706",
+      "identity_tokens": [
+        "arXiv:2512.18706"
+      ],
+      "reason": "X-Talkは音声区間検出・音声強調・音声認識・感情/環境音分析とLLMの検索拡張生成やツール使用を疎結合に組み合わせ、カスケード式音声対話で1秒未満の遅延を目指すオープンソース枠組みである。低遅延の実行パイプライン設計は推論システムに接するが、一次要旨の主眼は音声対話機能のモジュール統合とエンドツーエンド音声モデルとの比較であり、LLMのGPUスケジューリングやKVメモリの効率化を直接主張しない。システム境界の研究として保留する。",
+      "first_checked_at": "2026-10-12T17:45:21+00:00",
+      "last_checked_at": "2026-10-12T17:45:21+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "X-Talk: On the Underestimated Potential of Modular Speech-to-Speech Dialogue System"
+    },
+    "arXiv:2510.18234": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2510.18234",
+      "identity_tokens": [
+        "arXiv:2510.18234"
+      ],
+      "reason": "DeepEncoderとDeepSeek3B-MoE-A570Mを用いて文書を画像トークンへ写像し、視覚100〜800トークン/ページ程度のOCR再構成と、光学的な長文脈圧縮の可能性を検証する。10倍未満の圧縮でOCR精度97%、20倍で約60%を報告するが、主実験は文書OCRと学習データ生成であり、既存LLMのKVキャッシュ・GPUサービング・メモリ階層を直接最適化した測定ではない。推論文脈の圧縮に将来接続し得るため境界的とする。",
+      "first_checked_at": "2026-10-12T17:45:22+00:00",
+      "last_checked_at": "2026-10-12T17:45:22+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "DeepSeek-OCR: Contexts Optical Compression"
     }
   }
 }

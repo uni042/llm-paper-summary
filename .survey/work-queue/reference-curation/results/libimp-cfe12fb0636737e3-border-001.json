@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-cfe12fb0636737e3-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2512.18746",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2512.18746",
+    "identity_tokens": [
+      "arXiv:2512.18746"
+    ],
+    "reason": "EvolveLabのencode/store/retrieve/manageモジュールを探索空間にして、エージェントの経験知識と記憶アーキテクチャを共同で進化させる。SmolAgentやFlash-Searcherのタスク性能を最大17.06%改善するが、評価軸はエージェントの課題成功率と記憶設計の転移であり、GPU推論実行基盤のキャッシュ配置、転送、スケジューリングを直接評価していない。長期記憶管理の概念は関連するため境界的とする。",
+    "first_checked_at": "2026-10-07T08:53:52+00:00",
+    "last_checked_at": "2026-10-12T17:45:23+00:00",
+    "linked_from": [
+      "papers/inference/14-agentic-inference-serving-runtime/2025-2501.13956-zep-a-temporal-knowledge-graph-architecture-for-agent-memory.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "MemEvolve: Meta-Evolution of Agent Memory Systems"
+  },
+  "processed_at": "2026-10-12T17:45:23+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-cfe12fb06367",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
