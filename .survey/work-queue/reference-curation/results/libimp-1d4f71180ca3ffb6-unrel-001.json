@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-1d4f71180ca3ffb6-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2605.20476",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2605.20476",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2605.20476",
+      "SemanticScholar:71c20411e86a5310ffaaad8a63ee4f0da4c29291",
+      "arXiv:2605.20476"
+    ],
+    "reason": "Primary-text Sections 1–2.1 confirm ATS is an inference-time tree sampler for long-horizon video-to-video generation; its target is video-generation quality and drift, not LLM inference systems.",
+    "first_checked_at": "2026-10-12T22:19:20+00:00",
+    "last_checked_at": "2026-10-12T22:19:20+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2019-0bc18ef37a7d-mask-predict-parallel-decoding-of-conditional-masked-language-models.md"
+    ],
+    "title": "Goodbye Drift: Anchored Tree Sampling for Long-Horizon Video-to-Video Generation"
+  },
+  "processed_at": "2026-10-12T22:19:20+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-1d4f71180ca3",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

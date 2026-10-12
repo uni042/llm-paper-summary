@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-12T22:18:05+00:00",
-  "record_count": 11570,
+  "updated_at": "2026-10-12T22:19:21+00:00",
+  "record_count": 11576,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -165499,6 +165499,102 @@
         "papers/inference/99-other-inference-systems/2023-2307.16449-moviechat-from-dense-token-to-sparse-memory-for-long-video-understanding.md"
       ],
       "title": "FineBench: Benchmarking and Enhancing Vision-Language Models for Fine-grained Human Activity Understanding"
+    },
+    "arXiv:2605.20476": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.20476",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2605.20476",
+        "SemanticScholar:71c20411e86a5310ffaaad8a63ee4f0da4c29291",
+        "arXiv:2605.20476"
+      ],
+      "reason": "Primary-text Sections 1–2.1 confirm ATS is an inference-time tree sampler for long-horizon video-to-video generation; its target is video-generation quality and drift, not LLM inference systems.",
+      "first_checked_at": "2026-10-12T22:19:20+00:00",
+      "last_checked_at": "2026-10-12T22:19:20+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-0bc18ef37a7d-mask-predict-parallel-decoding-of-conditional-masked-language-models.md"
+      ],
+      "title": "Goodbye Drift: Anchored Tree Sampling for Long-Horizon Video-to-Video Generation"
+    },
+    "arXiv:2605.17204": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.17204",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2605.17204",
+        "SemanticScholar:1b1a40c218d97bb68f8ebea2ad7f5ca52f1347c4",
+        "arXiv:2605.17204"
+      ],
+      "reason": "Event-grounded sparse autoencoders explain and intervene on VLA policy behavior; the abstract emphasizes interpretability and safety limits, not serving efficiency.",
+      "first_checked_at": "2026-10-12T22:19:20+00:00",
+      "last_checked_at": "2026-10-12T22:19:20+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2203.14680-transformer-feed-forward-layers-build-predictions-by-promoting-concepts-.md"
+      ],
+      "title": "Event-Grounded Sparse Autoencoders for Vision-Language-Action Policies"
+    },
+    "arXiv:2605.17448": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.17448",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2605.17448",
+        "SemanticScholar:d0a730b52a9e03563a1bb1143fc7d50bdf7f256e",
+        "arXiv:2605.17448"
+      ],
+      "reason": "The CAD agent work uses FEA feedback to improve engineering-artifact quality; it does not target inference-system efficiency.",
+      "first_checked_at": "2026-10-12T22:19:20+00:00",
+      "last_checked_at": "2026-10-12T22:19:20+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2406.11816-videollm-online-online-video-large-language-model-for-streaming-video.md"
+      ],
+      "title": "Self-Improving CAD Generation Agents with Finite Element Analysis as Feedback"
+    },
+    "arXiv:2605.11396": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.11396",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2605.11396",
+        "SemanticScholar:65426207fdc2cb8ee6642812e1ebd530f430e249",
+        "arXiv:2605.11396"
+      ],
+      "reason": "MuonQ reduces optimizer-state memory for 4-bit Muon pretraining; its contribution is training-only and does not optimize inference weights or serving.",
+      "first_checked_at": "2026-10-12T22:19:21+00:00",
+      "last_checked_at": "2026-10-12T22:19:21+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2110.02861-8-bit-optimizers-via-block-wise-quantization.md"
+      ],
+      "title": "MuonQ: Enhancing Low-Bit Muon Quantization via Directional Fidelity Optimization"
+    },
+    "arXiv:2607.20436": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.20436",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2607.20436",
+        "SemanticScholar:5602979c78e1c12055cdc78a3e505a08c77899e4",
+        "arXiv:2607.20436"
+      ],
+      "reason": "Routing Subspaces audits evaluation-to-deployment safety mismatch and edits model activations; it is a safety diagnostic, not an inference-efficiency contribution.",
+      "first_checked_at": "2026-10-12T22:19:21+00:00",
+      "last_checked_at": "2026-10-12T22:19:21+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2203.14680-transformer-feed-forward-layers-build-predictions-by-promoting-concepts-.md"
+      ],
+      "title": "Routing Subspaces: Auditing Evaluation-to-Deployment Mismatch in Fine-Tuned Language Models"
+    },
+    "arXiv:2605.07766": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.07766",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2605.07766",
+        "SemanticScholar:f0cd02056ecc7b28990523ffaa6fb2575c3f63e9",
+        "arXiv:2605.07766"
+      ],
+      "reason": "Head Similarity proposes an appearance-sensitive face/head recognition formulation and benchmark; it is an independent vision application.",
+      "first_checked_at": "2026-10-12T22:19:21+00:00",
+      "last_checked_at": "2026-10-12T22:19:21+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2509.17765-qwen3-omni-technical-report.md"
+      ],
+      "title": "Head Similarity: Modeling Structured Whole-Head Appearance Beyond Face Recognition"
     }
   }
 }
