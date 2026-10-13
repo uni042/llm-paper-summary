@@ -1,6 +1,6 @@
 {
   "schema_version": 3,
-  "active_count": 2018,
+  "active_count": 2022,
   "papers": {
     "arXiv:2101.06840": {
       "path": "papers/inference/01-offload-hierarchical-memory/2021-2101.06840-zero-offload-democratizing-billion-scale-model-training.md",
@@ -4601,7 +4601,7 @@
       "identifiers": [
         "DOI:10.18653/v1/2026.acl-long.859"
       ],
-      "source_hash": "8e372926d4a7bac9d00faac42242ebe9a339f2aab7f5239e7d02718bdc7431bf"
+      "source_hash": "4694dfc22bb480a1effad560082f44a6820eb39246ad422f076c57829f3d6ec0"
     },
     "DOI:10.1145/3793230.3837769": {
       "path": "papers/inference/07-kv-cache-optimization-compression/2026-5497c425b6df-to-keep-or-not-to-keep-learning-kv-cache-retention-in-disaggregated-llm-.md",
@@ -5563,6 +5563,13 @@
         "arXiv:2411.17089"
       ],
       "source_hash": "a0868cce18a6430fc43c8e78348200506af043cfa28aa5514be4b619d9a81990"
+    },
+    "DOI:10.18653/v1/2024.emnlp-main.1169": {
+      "path": "papers/inference/10-kv-cache-offload-recomputation/2024-fa73d8b64a60-memorize-step-by-step-efficient-long-context-prefilling-with-incremental.md",
+      "identifiers": [
+        "DOI:10.18653/v1/2024.emnlp-main.1169"
+      ],
+      "source_hash": "256dee2712fdbfe6b7eaac048deab45f9a593f02f15d575cf91254fedd0d6552"
     },
     "arXiv:2501.01792": {
       "path": "papers/inference/10-kv-cache-offload-recomputation/2025-2501.01792-throughput-oriented-llm-inference-via-kv-activation-hybrid-caching-with-a-single-gpu.md",
@@ -9364,6 +9371,13 @@
       ],
       "source_hash": "843857f1c139115e5ab6a7b2d5bf9b12d8be14bf0cf4202394c45fd3b3551029"
     },
+    "arXiv:2504.16795": {
+      "path": "papers/inference/13-sparse-attention/2025-2504.16795-hardware-aligned-hierarchical-sparse-attention-for-efficient-long-term-m.md",
+      "identifiers": [
+        "arXiv:2504.16795"
+      ],
+      "source_hash": "0b17ad0919588de47da2a3ffa03327b65ae7546c0ff24599036c820b8d7dfaaf"
+    },
     "arXiv:2506.08889": {
       "path": "papers/inference/13-sparse-attention/2025-2506.08889-seerattention-r-sparse-attention-adaptation-for-long-reasoning.md",
       "identifiers": [
@@ -11171,6 +11185,13 @@
       ],
       "source_hash": "2c3c66388e14acd9654a63bbc1c685079f99a157a95367c8f770f437ac45637f"
     },
+    "DOI:10.52202/068431-1143": {
+      "path": "papers/inference/99-other-inference-systems/2022-0ed2662d9eee-iron-private-inference-on-transformers.md",
+      "identifiers": [
+        "DOI:10.52202/068431-1143"
+      ],
+      "source_hash": "5a8553e381e687651cb5f1b530d29ba69be0513e21ca41c163f50283bc011aa1"
+    },
     "arXiv:2105.03824": {
       "path": "papers/inference/99-other-inference-systems/2022-2105.03824-fnet-mixing-tokens-with-fourier-transforms.md",
       "identifiers": [
@@ -12839,6 +12860,13 @@
         "arXiv:2506.17615"
       ],
       "source_hash": "bf03f65da25c0caf589d23425f5c0df97081669fffec4de25031809565384c90"
+    },
+    "arXiv:2507.01299": {
+      "path": "papers/inference/99-other-inference-systems/2025-2507.01299-la-rosa-enhancing-llm-efficiency-via-layerwise-rotated-sparse-activation.md",
+      "identifiers": [
+        "arXiv:2507.01299"
+      ],
+      "source_hash": "69c95a86351c68b3d450c774e7c3e927c094867de2502b7b486ef3387ee366ff"
     },
     "arXiv:2507.11941": {
       "path": "papers/inference/99-other-inference-systems/2025-2507.11941-blockbpe-parallel-bpe-tokenization.md",
@@ -16100,6 +16128,7 @@
     "arXiv:2411.01142": "arXiv:2411.01142",
     "arXiv:2411.09317": "arXiv:2411.09317",
     "arXiv:2411.17089": "arXiv:2411.17089",
+    "DOI:10.18653/v1/2024.emnlp-main.1169": "DOI:10.18653/v1/2024.emnlp-main.1169",
     "arXiv:2501.01792": "arXiv:2501.01792",
     "arXiv:2502.12574": "arXiv:2502.12574",
     "DOI:10.52202/085713-4461": "arXiv:2502.16002",
@@ -16882,6 +16911,7 @@
     "arXiv:2502.20766": "arXiv:2502.20766",
     "arXiv:2503.16428": "arXiv:2503.16428",
     "arXiv:2504.16083": "arXiv:2504.16083",
+    "arXiv:2504.16795": "arXiv:2504.16795",
     "DOI:10.48550/arxiv.2506.08889": "arXiv:2506.08889",
     "arXiv:2506.08889": "arXiv:2506.08889",
     "arXiv:2507.08143": "arXiv:2507.08143",
@@ -17219,6 +17249,7 @@
     "arXiv:2112.07916": "arXiv:2112.07916",
     "DOI:10.18653/v1/2021.eacl-main.8": "DOI:10.18653/v1/2021.eacl-main.8",
     "DOI:10.18653/v1/2021.sustainlp-1.5": "DOI:10.18653/v1/2021.sustainlp-1.5",
+    "DOI:10.52202/068431-1143": "DOI:10.52202/068431-1143",
     "DOI:10.18653/v1/2022.naacl-main.319": "arXiv:2105.03824",
     "arXiv:2105.03824": "arXiv:2105.03824",
     "arXiv:2107.00910": "arXiv:2107.00910",
@@ -17502,6 +17533,7 @@
     "arXiv:2506.15841": "arXiv:2506.15841",
     "DOI:10.48550/arxiv.2506.17615": "arXiv:2506.17615",
     "arXiv:2506.17615": "arXiv:2506.17615",
+    "arXiv:2507.01299": "arXiv:2507.01299",
     "arXiv:2507.11941": "arXiv:2507.11941",
     "DOI:10.48550/arxiv.2508.06526": "arXiv:2508.06526",
     "arXiv:2508.06526": "arXiv:2508.06526",

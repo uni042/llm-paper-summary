@@ -35,10 +35,15 @@
   "selection_reason": "The ACL abstract introduces incremental memory and decremental chunks for long-context prefill, reporting 1.45x faster processing and 23.3% lower GPU memory than fixed-size memory.",
   "semantic_scholar_id": "73a8e44af924fa6f54cf797224655d18b14e26e3",
   "source_url": "https://doi.org/10.18653/v1/2024.emnlp-main.1169",
-  "status": "ready",
+  "status": "superseded",
   "title": "Memorize Step by Step: Efficient Long-Context Prefilling with Incremental Memory and Decremental Chunk",
   "type": "research",
   "venue": "Conference on Empirical Methods in Natural Language Processing",
   "workflow_version": 10,
-  "year": 2024
+  "year": 2024,
+  "superseded_at": "2026-10-13T12:57:39+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/10-kv-cache-offload-recomputation/2024-fa73d8b64a60-memorize-step-by-step-efficient-long-context-prefilling-with-incremental.md",
+  "represented_canonical_id": "DOI:10.18653/v1/2024.emnlp-main.1169",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

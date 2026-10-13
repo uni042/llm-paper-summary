@@ -21,7 +21,7 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
 実行場所やmemory tierは異なるが、共通して**KVをlocal GPU HBMだけへ固定すると容量や転送帯域が限界になる問題を避ける、またはその限界を定量化する**研究として扱う。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（105本）
+## 自動生成の論文一覧（106本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -411,6 +411,10 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
 - **2025-01 · [Throughput-Oriented LLM Inference via KV-Activation Hybrid Caching with A Single GPU](2025-2501.01792-throughput-oriented-llm-inference-via-kv-activation-hybrid-caching-with-a-single-gpu.md)**  
   実装：[✓](https://github.com/casys-kaist/Capture) ・ リポジトリ内被引用：1  
   過去トークンをKVまたは小さい中間活性値で混在保存し、重み転送中に活性値からKVを再生成して、PCIe転送量とGPU再計算量の大きい方を抑える方式。
+
+- **2024-11 · [Memorize Step by Step: Efficient Long-Context Prefilling with Incremental Memory and Decremental Chunk](2024-fa73d8b64a60-memorize-step-by-step-efficient-long-context-prefilling-with-incremental.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  既存の反復圧縮方式は文書を複数の入力塊へ分け、圧縮済みKVを一定サイズのメモリとして引き継ぐ。NVIDIA A800上のLLaMA2-7BとSnapKVを用いた条件では、固定サイズのメモリ方式に比べて初回トークン時間（Time To First Token; TTFT）を最大1.45倍改善し、GPUメモリを最大23.3%削減した。
 
 ### 3年前（2023-11〜2024-10）
 

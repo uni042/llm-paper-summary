@@ -24,6 +24,8 @@ list_summary: "Transformerの秘匿推論を、準同型暗号行列積の密な
 last_checked: "2026-10-13"
 worker_completed_at: "2026-10-13T13:41:45+09:00"
 worker_run_key: "20261013-1330-scheduled-chat-30/r01"
+last_audited: null
+audit_version: 0
 ---
 
 # Iron: Private Inference on Transformers

@@ -29,6 +29,8 @@ last_checked: "2026-10-13"
 worker_completed_at: "2026-10-13T14:36:43+09:00"
 worker_run_key: "20261013-1430-scheduled-chat-30/r01"
 lineage: "10-kv-cache-offload-recomputation"
+last_audited: null
+audit_version: 0
 ---
 
 # Memorize Step by Step：増分メモリと減分チャンクによる長文前処理の効率化
