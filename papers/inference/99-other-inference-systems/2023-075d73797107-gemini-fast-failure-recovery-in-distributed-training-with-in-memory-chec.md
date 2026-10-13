@@ -1,37 +1,120 @@
 ---
-canonical_id: 'DOI:10.1145/3600006.3613145'
+canonical_id: DOI:10.1145/3600006.3613145
 title: 'GEMINI: Fast Failure Recovery in Distributed Training with In-Memory Checkpoints'
 authors:
-  - Zhuang Wang
-  - Zhen Jia
-  - Shuai Zheng
-  - Zhen Zhang
-  - Xinwei Fu
-  - T. S. Eugene Ng
-  - Yida Wang
+- Zhuang Wang
+- Zhen Jia
+- Shuai Zheng
+- Zhen Zhang
+- Xinwei Fu
+- T. S. Eugene Ng
+- Yida Wang
 published: '2023-10-23'
-publication: 'Proceedings of the 29th ACM Symposium on Operating Systems Principles (SOSP 2023), pp. 364–381'
+publication: Proceedings of the 29th ACM Symposium on Operating Systems Principles (SOSP 2023), pp. 364–381
 publication_type: conference
 publication_status: published
-summary: 'GEMINIは大規模な同期分散学習の障害復旧を対象に、直近の学習状態を複数計算ノードのCPUメモリへ複製し、遠隔永続ストレージの帯域制約を回避する。ノード数と複製数から回復可能性を高めるグループ・環状の混合配置を決め、学習通信の空き時間へ小分けしたチェックポイント転送を重ねる。16台のA100搭載p4d上の100Bモデルでは、1反復62秒に対しメモリへの保存は3秒未満で、毎反復の保存が可能だった。遠隔ストレージの高頻度保存方式と比べ、対象障害条件の平均無駄時間を13倍超削減した。一方、同時故障で全複製を失うと永続ストレージへ後退し、実際の障害復旧には直列化・再起動などの数分単位の追加費用が残る。'
-list_summary: '分散学習のチェックポイントをCPUメモリへ最適に複製し、学習通信の空き時間に分割転送することで、毎反復保存と障害時の13倍超の無駄時間削減を実現する。'
-source: 'https://www.cs.rice.edu/~eugeneng/papers/SOSP23.pdf'
+summary: GEMINIは大規模な同期分散学習の障害復旧を対象に、直近の学習状態を複数計算ノードのCPUメモリへ複製し、遠隔永続ストレージの帯域制約を回避する。ノード数と複製数から回復可能性を高めるグループ・環状の混合配置を決め、学習通信の空き時間へ小分けしたチェックポイント転送を重ねる。16台のA100搭載p4d上の100Bモデルでは、1反復62秒に対しメモリへの保存は3秒未満で、毎反復の保存が可能だった。遠隔ストレージの高頻度保存方式と比べ、対象障害条件の平均無駄時間を13倍超削減した。一方、同時故障で全複製を失うと永続ストレージへ後退し、実際の障害復旧には直列化・再起動などの数分単位の追加費用が残る。
+list_summary: 分散学習のチェックポイントをCPUメモリへ最適に複製し、学習通信の空き時間に分割転送することで、毎反復保存と障害時の13倍超の無駄時間削減を実現する。
+source: https://www.cs.rice.edu/~eugeneng/papers/SOSP23.pdf
 sources:
-  - 'https://www.cs.rice.edu/~eugeneng/papers/SOSP23.pdf'
-  - 'https://www.amazon.science/publications/gemini-fast-failure-recovery-in-distributed-training-with-in-memory-checkpoints'
-  - 'https://doi.org/10.1145/3600006.3613145'
-implementation: 'DeepSpeed v0.7.3のZeRO-3学習へworker/root agent、etcdの状態共有、EC2 Auto Scaling Groupによるノード交換、CPUメモリへの複製配置、128MBのGPU通信バッファを用いる分割転送を組み込んだ。主実験はAWS p4d.24xlarge 16台（A100 40GB×128、400Gbps EFA）とFSx集約20Gbps。'
+- https://www.cs.rice.edu/~eugeneng/papers/SOSP23.pdf
+- https://www.amazon.science/publications/gemini-fast-failure-recovery-in-distributed-training-with-in-memory-checkpoints
+- https://doi.org/10.1145/3600006.3613145
+implementation: DeepSpeed v0.7.3のZeRO-3学習へworker/root agent、etcdの状態共有、EC2 Auto Scaling Groupによるノード交換、CPUメモリへの複製配置、128MBのGPU通信バッファを用いる分割転送を組み込んだ。主実験はAWS p4d.24xlarge 16台（A100 40GB×128、400Gbps EFA）とFSx集約20Gbps。
 code: null
 last_checked: '2026-10-13'
 worker_id: scheduled-chat-45
 scheduled_slot: '45'
 worker_completed_at: '2026-10-13T12:48:03+09:00'
-worker_run_key: '20261013-1245-scheduled-chat-45/r01'
-reference_main_sha: '85beca11b2f8af18a4cb780553f42903049e11e0'
+worker_run_key: 20261013-1245-scheduled-chat-45/r01
+reference_main_sha: 85beca11b2f8af18a4cb780553f42903049e11e0
 quality_self_review_passed: true
 quality_self_review_version: '2026-10-07'
 last_audited: null
 audit_version: 0
+references:
+- canonical_id: DOI:10.1145/3492321.3519584
+  doi: 10.1145/3492321.3519584
+- canonical_id: DOI:10.1145/3236367.3236381
+  doi: 10.1145/3236367.3236381
+- canonical_id: arXiv:1512.01274
+  arxiv_id: '1512.01274'
+- canonical_id: arXiv:2204.02311
+  arxiv_id: '2204.02311'
+- canonical_id: arXiv:1810.04805
+  arxiv_id: '1810.04805'
+- canonical_id: DOI:10.1145/2342356.2342360
+  doi: 10.1145/2342356.2342360
+- canonical_id: DOI:10.1145/2018436.2018477
+  doi: 10.1145/2018436.2018477
+- canonical_id: DOI:10.1109/cvpr.2016.90
+  doi: 10.1109/cvpr.2016.90
+- canonical_id: SemanticScholar:d79a26226393f687ddbc375e32055b40b8ad8d38
+- canonical_id: DOI:10.5555/3488766.3488792
+  doi: 10.5555/3488766.3488792
+- canonical_id: arXiv:1412.6980
+  arxiv_id: '1412.6980'
+- canonical_id: arXiv:2205.05198
+  arxiv_id: '2205.05198'
+- canonical_id: DOI:10.1109/tpds.2019.2928289
+  doi: 10.1109/tpds.2019.2928289
+- canonical_id: arXiv:1907.11692
+  arxiv_id: '1907.11692'
+- canonical_id: arXiv:1609.07843
+  arxiv_id: '1609.07843'
+- canonical_id: DOI:10.1145/3341301.3359646
+  doi: 10.1145/3341301.3359646
+- canonical_id: DOI:10.1145/3458817.3476209
+  doi: 10.1145/3458817.3476209
+- canonical_id: DOI:10.1109/ccgrid49817.2020.00-76
+  doi: 10.1109/ccgrid49817.2020.00-76
+- canonical_id: arXiv:2303.08774
+  arxiv_id: '2303.08774'
+- canonical_id: DOI:10.1109/sc41405.2020.00045
+  doi: 10.1109/sc41405.2020.00045
+- canonical_id: DOI:10.1109/tkde.2009.191
+  doi: 10.1109/tkde.2009.191
+- canonical_id: DOI:10.1145/3341301.3359642
+  doi: 10.1145/3341301.3359642
+- canonical_id: DOI:10.1109/71.730527
+  doi: 10.1109/71.730527
+- canonical_id: DOI:10.1109/icpp.2013.17
+  doi: 10.1109/icpp.2013.17
+- canonical_id: DOI:10.1109/sc41405.2020.00024
+  doi: 10.1109/sc41405.2020.00024
+- canonical_id: DOI:10.1145/3394486.3406703
+  doi: 10.1145/3394486.3406703
+- canonical_id: arXiv:2211.05100
+  arxiv_id: '2211.05100'
+- canonical_id: arXiv:1802.05799
+  arxiv_id: '1802.05799'
+- canonical_id: arXiv:1909.08053
+  arxiv_id: '1909.08053'
+- canonical_id: arXiv:2201.11990
+  arxiv_id: '2201.11990'
+- canonical_id: DOI:10.1109/cvpr.2016.308
+  doi: 10.1109/cvpr.2016.308
+- canonical_id: DOI:10.1109/dsn48987.2021.00043
+  doi: 10.1109/dsn48987.2021.00043
+- canonical_id: DOI:10.1145/2807591.2807666
+  doi: 10.1145/2807591.2807666
+- canonical_id: DOI:10.1109/hpca.2015.7056044
+  doi: 10.1109/hpca.2015.7056044
+- canonical_id: DOI:10.1145/3552326.3567505
+  doi: 10.1145/3552326.3567505
+- canonical_id: DOI:10.1109/tpds.2021.3064966
+  doi: 10.1109/tpds.2021.3064966
+- canonical_id: DOI:10.1109/icassp.2013.6638950
+  doi: 10.1109/icassp.2013.6638950
+- canonical_id: arXiv:2205.01068
+  arxiv_id: '2205.01068'
+- canonical_id: DOI:10.1145/3405671.3405810
+  doi: 10.1145/3405671.3405810
+- canonical_id: DOI:10.14778/3561261.3561265
+  doi: 10.14778/3561261.3561265
+references_checked_at: '2026-10-13'
+references_source: crossref-deposited-reference-metadata
+references_total: 89
 ---
 
 # GEMINI：CPUメモリの冗長チェックポイントで大規模分散学習を高速復旧する
