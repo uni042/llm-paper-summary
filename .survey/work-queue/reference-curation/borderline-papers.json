@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-13T22:33:21+00:00",
-  "record_count": 4905,
+  "updated_at": "2026-10-13T22:34:21+00:00",
+  "record_count": 4906,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -75495,6 +75495,35 @@
       ],
       "borderline_recheck_count": 0,
       "title": "DASA: Distribution-Aware Sparse Attention for Accelerating Diffusion Transformer"
+    },
+    "arXiv:2605.20600": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.20600",
+      "identity_tokens": [
+        "arXiv:2605.20600"
+      ],
+      "reason": "HeadKV compresses KV cache for autoregressive image generation; its full text cites NLP cache methods and LLaMA-derived visual models, but evaluates only visual generation, leaving transfer to LLM serving unestablished.",
+      "first_checked_at": "2026-10-13T22:34:21+00:00",
+      "last_checked_at": "2026-10-13T22:34:21+00:00",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2024-2406.13035-d2o-dynamic-discriminative-operations-for-efficient-long-context-inference.md",
+        "papers/inference/07-kv-cache-optimization-compression/2023-2306.14048-h2o.md",
+        "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md",
+        "papers/inference/07-kv-cache-optimization-compression/2023-2310.01801-fastgen.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2401.18079-kvquant.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2404.14469-snapkv.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.14366-minicache-kv-cache-compression-in-depth-dimension-for-large-language-mod.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2406.02069-pyramidkv.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2406.11430-l2-kv-compression.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2407.11550-ada-kv.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2410.10819-duoattention-efficient-long-context-llm-inference-with-retrieval-and-str.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2410.19258-not-all-heads-matter-a-head-level-kv-cache-compression-method-with-integ.md",
+        "papers/inference/07-kv-cache-optimization-compression/2025-2502.03805-criticalkv-optimizing-kv-cache-eviction-from-an-output-perturbation-perspective.md",
+        "papers/inference/99-other-inference-systems/2022-2206.01861-zeroquant-efficient-and-affordable-post-training-quantization-for-large-.md",
+        "papers/inference/99-other-inference-systems/2025-2504.15364-keydiff-key-similarity-based-kv-cache-eviction-for-long-context-llm-inference-in-resource-constrained-environments.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Head-Aware Key-Value Compression for Efficient Autoregressive Image Generation"
     }
   }
 }
