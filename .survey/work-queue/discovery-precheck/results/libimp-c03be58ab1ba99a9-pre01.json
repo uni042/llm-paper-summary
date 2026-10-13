@@ -1,0 +1,874 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-c03be58ab1ba99a9-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-c03be58ab1ba",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "DOI:10.1016/j.neunet.2024.106164",
+    "DOI:10.1109/comst.2025.3587225",
+    "DOI:10.1162/tacl.a.39",
+    "arXiv:2311.08623",
+    "arXiv:2405.15025",
+    "arXiv:2411.03697",
+    "arXiv:2505.00019",
+    "arXiv:2506.15556",
+    "arXiv:2509.01920"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 9,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "f59aad98729fada3d1faf2bdcd8b7f5153f3aa7c",
+  "raw_search_result_count": 9,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 9,
+  "provider_progress": {
+    "requested_count": 9,
+    "status_counts": {
+      "allowed": 9,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-13T21:17:15.629888+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "DOI:10.1016/j.neunet.2024.106164",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.1109/comst.2025.3587225",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.1162/tacl.a.39",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2311.08623",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2405.15025",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2411.03697",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2505.00019",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2506.15556",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2509.01920",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "DEED: Dynamic Early Exit on Decoder for Accelerating Encoder-Decoder Transformer Models",
+      "source_url": "https://arxiv.org/abs/2311.08623",
+      "year": 2023,
+      "published": "2023-11-15",
+      "venue": "NAACL-HLT",
+      "citation_count": 12,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Encoder-decoder transformer models have achieved great success on various vision-language (VL) tasks, but they suffer from high inference latency. Typically, the decoder takes up most of the latency because of the auto-regressive decoding. To accelerate the inference, we propose an approach of performing Dynamic Early Exit on Decoder (DEED). We build a multi-exit encoder-decoder transformer model which is trained with deep supervision so that each of its decoder layers is capable of generating plausible predictions. In addition, we leverage simple yet practical techniques, including shared generation head and adaptation modules, to keep accuracy when exiting at shallow decoder layers. Based on the multi-exit model, we perform step-level dynamic early exit during inference, where the model may decide to use fewer decoder layers based on its confidence of the current layer at each individual decoding step. Considering different number of decoder layers may be used at different decoding steps, we compute deeper-layer decoder features of previous decoding steps just-in-time, which ensures the features from different decoding steps are semantically aligned. We evaluate our approach with two state-of-the-art encoder-decoder transformer models on various VL tasks. We show our approach can reduce overall inference latency by 30%-60% with comparable or even higher accuracy compared to baselines.",
+      "identifiers": [
+        "SemanticScholar:81b7d8a9311c1f2d20fd1bc1d0d9835ce19d4b24"
+      ],
+      "semantic_scholar_id": "81b7d8a9311c1f2d20fd1bc1d0d9835ce19d4b24",
+      "canonical_id": "arXiv:2311.08623",
+      "arxiv_id": "2311.08623",
+      "doi": "10.48550/arXiv.2311.08623",
+      "authors": [
+        "Peng Tang",
+        "Pengkai Zhu",
+        "Tian Li",
+        "Srikar Appalaraju",
+        "Vijay Mahadevan",
+        "R. Manmatha"
+      ],
+      "priority": 12,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 12,
+        "citation_count": 12,
+        "total": 12,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1063,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "TALE: Token-Adaptive Low-Rank KVCache Approximation with Reconstruction Elimination",
+      "source_url": "https://doi.org/10.1162/tacl.a.39",
+      "year": 2025,
+      "published": null,
+      "venue": "Transactions of the Association for Computational Linguistics",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "\n KVCache, by storing key-value pairs for reuse, has been crucial for enhancing inference efficiency for large language models (LLMs). However, the increasing memory demands of KVCache, especially with recent trends of longer input sequences, present a major challenge. In this work, we propose an innovative token-adaptive low-rank approximation strategy for KVCache compression. By applying varying ranks based on token significance, our method compresses KVCache efficiently while retaining critical information. Moreover, we introduce a lazy approximation technique, which approximates lazily only when needed, alongside a reconstruction-free design to bypass costly recalculations. Combined with multi-level quantization, this method reduces KVCache size by 9.1× on the Llama-3.1-8B model, with minimal performance degradation on complex tasks such as GSM8K. Moreover, our custom attention implementation shows up to 2× latency reduction compared to the conventional method in long context scenarios. The code is publicly available.",
+      "identifiers": [
+        "SemanticScholar:7921b2bd977084f49cf0d0602c5a3301b72ae10f"
+      ],
+      "semantic_scholar_id": "7921b2bd977084f49cf0d0602c5a3301b72ae10f",
+      "doi": "10.1162/tacl.a.39",
+      "canonical_id": "DOI:10.1162/tacl.a.39",
+      "authors": [
+        "Jaeseong Lee",
+        "Seung-won Hwang",
+        "Aurick Qiao",
+        "Daniel F. Campos",
+        "Zhewei Yao",
+        "Yuxiong He"
+      ],
+      "priority": 12,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 12,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 469,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      }
+    },
+    {
+      "title": "Edge-Enhanced Intelligence: A Comprehensive Survey of Large Language Models and Edge-Cloud Computing Synergy",
+      "source_url": "https://doi.org/10.1109/COMST.2025.3587225",
+      "year": 2026,
+      "published": null,
+      "venue": "IEEE Communications Surveys and Tutorials",
+      "citation_count": 11,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLMs) (e.g., ChatGPT, GPT-4 and Sora) have fundamentally transformed our daily lives, catalyzing breakthroughs in natural language processing, computer vision and revolutionizing human-computer interactions. However, their transformative potential is hindered by immense computational resources required. To address this challenge, the integration of LLMs with edge-cloud computing has become a focal point in advancing the capabilities of artificial intelligence. This survey comprehensively exploits the landscape of edge-enhanced intelligence, specifically focusing on the synergy between LLMs and edge-cloud computing. We delve into the evolution of LLMs, architectural intricacies, and the computational challenges associated with deploying them in edge environments from the aspects of data, computing power, model training and inference. Furthermore, we exploit the bidirectional symbiotic relationship between edge-cloud computing and LLMs from two key aspects: edge-cloud computing empowered LLMs (Edge4LLMs) and LLMs driven edge-cloud computing (LLMs4Edge). After that, we examine the dynamic collaboration between edge-cloud computing and LLMs, highlighting the complementary roles in optimizing the efficiency, real-time, and scalability of intelligent applications. Through an extensive review of existing research and practical implementations, this survey offers insights into the current state of edge-enhanced intelligence, identifies key challenges, and proposes potential avenues for future research and development. This survey aims to provide a comprehensive understanding of the emerging paradigm of edge-enhanced intelligence for LLMs, thereby fostering informed discussions and inspiring advancements in this field.",
+      "identifiers": [
+        "SemanticScholar:ebb13007d456d6816867fd3dad0da081800bad2d"
+      ],
+      "semantic_scholar_id": "ebb13007d456d6816867fd3dad0da081800bad2d",
+      "doi": "10.1109/COMST.2025.3587225",
+      "canonical_id": "DOI:10.1109/COMST.2025.3587225",
+      "authors": [
+        "Xiu-Hua Li",
+        "Hui Li",
+        "Chuan Sun",
+        "Qilin Fan",
+        "Zhu Han",
+        "Victor C. M. Leung"
+      ],
+      "priority": 11,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 11,
+        "citation_count": 11,
+        "total": 11,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 104,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "DDK: Dynamic structure pruning based on differentiable search and recursive knowledge distillation for BERT",
+      "source_url": "https://doi.org/10.1016/j.neunet.2024.106164",
+      "year": 2024,
+      "published": "2024-02-01",
+      "venue": "Neural Networks",
+      "citation_count": 11,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large-scale pre-trained models, such as BERT, have demonstrated outstanding performance in Natural Language Processing (NLP). Nevertheless, the high number of parameters in these models has increased the demand for hardware storage and computational resources while posing a challenge for their practical deployment. In this article, we propose a combined method of model pruning and knowledge distillation to compress and accelerate large-scale pre-trained language models. Specifically, we introduce a dynamic structure pruning method based on differentiable search and recursive knowledge distillation to automatically prune the BERT model, named DDK. We define the search space for network pruning as all feed-forward layer channels and self-attention heads at each layer of the network, and utilize differentiable methods to determine their optimal number. Additionally, we design a recursive knowledge distillation method that employs adaptive weighting to extract the most important features from multiple intermediate layers of the teacher model and fuse them to supervise the student network learning. Our experimental results on the GLUE benchmark dataset and ablation analysis demonstrate that our proposed method outperforms other advanced methods in terms of average performance.",
+      "identifiers": [
+        "SemanticScholar:def19d645b55d8edfc4e840d77b7f5014972c906"
+      ],
+      "semantic_scholar_id": "def19d645b55d8edfc4e840d77b7f5014972c906",
+      "doi": "10.1016/j.neunet.2024.106164",
+      "canonical_id": "DOI:10.1016/j.neunet.2024.106164",
+      "authors": [
+        "Zhou Zhang",
+        "Yang Lu",
+        "Tengfei Wang",
+        "Xing Wei",
+        "Zhenchun Wei"
+      ],
+      "priority": 11,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 11,
+        "citation_count": 11,
+        "total": 11,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 985,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "OAC: Output-adaptive Calibration for Accurate Post-training Quantization",
+      "source_url": "https://arxiv.org/abs/2405.15025",
+      "year": 2024,
+      "published": "2024-05-23",
+      "venue": "AAAI Conference on Artificial Intelligence",
+      "citation_count": 11,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Deployment of Large Language Models (LLMs) has major computational costs, due to their rapidly expanding size. Compression of LLMs reduces the memory footprint, latency, and energy required for their inference. Post-training Quantization (PTQ) techniques have been developed to compress LLMs while avoiding expensive re-training. Most PTQ approaches formulate the quantization error based on a layer-wise Euclidean loss, ignoring the model output. Then, each layer is calibrated using its layer-wise Hessian to update the weights towards minimizing the quantization error. The Hessian is also used for detecting the most salient weights to quantization. Such PTQ approaches are prone to accuracy drop in low-precision quantization. We propose Output-adaptive Calibration (OAC) to incorporate the model output in the calibration process. We formulate the quantization error based on the distortion of the output cross-entropy loss. OAC approximates the output-adaptive Hessian for each layer under reasonable assumptions to reduce the computational complexity. The output-adaptive Hessians are used to update the weight matrices and detect the salient weights towards maintaining the model output. Our proposed method outperforms the state-of-the-art baselines such as SpQR and BiLLM, especially, at extreme low-precision (2-bit and binary) quantization.",
+      "identifiers": [
+        "SemanticScholar:507b6ca97ff1fe33367e34b5b259af1292185d59"
+      ],
+      "semantic_scholar_id": "507b6ca97ff1fe33367e34b5b259af1292185d59",
+      "canonical_id": "arXiv:2405.15025",
+      "arxiv_id": "2405.15025",
+      "doi": "10.1609/aaai.v39i16.33807",
+      "authors": [
+        "Ali Edalati",
+        "Alireza Ghaffari",
+        "Mahsa Ghazvini Nejad",
+        "Lu Hou",
+        "Boxing Chen",
+        "M. Asgharian",
+        "Vahid Partovi Nia"
+      ],
+      "priority": 11,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 11,
+        "citation_count": 11,
+        "total": 11,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 873,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "TATAA: Programmable Mixed-Precision Transformer Acceleration with a Transformable Arithmetic Architecture",
+      "source_url": "https://arxiv.org/abs/2411.03697",
+      "year": 2024,
+      "published": "2024-11-06",
+      "venue": "ACM Transactions on Reconfigurable Technology and Systems",
+      "citation_count": 11,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Modern transformer-based deep neural networks present unique technical challenges for effective acceleration in real-world applications. Apart from the vast amount of linear operations needed due to their sizes, modern transformer models are increasingly reliance on precise non-linear computations that make traditional low-bitwidth quantization methods and fixed-dataflow matrix accelerators ineffective for end-to-end acceleration. To address this need to accelerate both linear and non-linear operations in a unified and programmable framework, this article introduces TATAA. TATAA employs 8-bit integer (int8) arithmetic for quantized linear layer operations through post-training quantization, while it relies on bfloat16 floating-point arithmetic to approximate non-linear layers of a transformer model. TATAA hardware features a transformable arithmetic architecture that supports both formats during runtime with minimal overhead, enabling it to switch between a systolic array mode for int8 matrix multiplications and a SIMD mode for vectorized bfloat16 operations. An end-to-end compiler is presented to enable flexible mapping from emerging transformer models to the proposed hardware. Experimental results indicate that our mixed-precision design incurs only 0.14% to 1.16% accuracy drop when compared with the pre-trained single-precision transformer models across a range of vision, language, and generative text applications. Our prototype implementation on the Alveo U280 FPGA currently achieves 2,935.2 GOPS throughput on linear layers and a maximum of 189.5 GFLOPS for non-linear operations, outperforming related works by up to \\(1.45\\times\\) in end-to-end throughput and \\(2.29\\times\\) in DSP efficiency, while achieving \\(2.19\\times\\) higher power efficiency than modern NVIDIA RTX4090 GPU.",
+      "identifiers": [
+        "SemanticScholar:11f14a070ea5b51f825e9a86ab5de254e4948d69"
+      ],
+      "semantic_scholar_id": "11f14a070ea5b51f825e9a86ab5de254e4948d69",
+      "canonical_id": "arXiv:2411.03697",
+      "arxiv_id": "2411.03697",
+      "doi": "10.1145/3714416",
+      "authors": [
+        "Jia-Jun Wu",
+        "Mo Song",
+        "Jingmin Zhao",
+        "Yi-Zhao Gao",
+        "Jia Li",
+        "Hayden Kwok-Hay So"
+      ],
+      "priority": 11,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 11,
+        "citation_count": 11,
+        "total": 11,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 706,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "An Empirical Study on Prompt Compression for Large Language Models",
+      "source_url": "https://arxiv.org/abs/2505.00019",
+      "year": 2025,
+      "published": "2025-04-24",
+      "venue": "arXiv.org",
+      "citation_count": 11,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Prompt engineering enables Large Language Models (LLMs) to perform a variety of tasks. However, lengthy prompts significantly increase computational complexity and economic costs. To address this issue, we study six prompt compression methods for LLMs, aiming to reduce prompt length while maintaining LLM response quality. In this paper, we present a comprehensive analysis covering aspects such as generation performance, model hallucinations, efficacy in multimodal tasks, word omission analysis, and more. We evaluate these methods across 13 datasets, including news, scientific articles, commonsense QA, math QA, long-context QA, and VQA datasets. Our experiments reveal that prompt compression has a greater impact on LLM performance in long contexts compared to short ones. In the Longbench evaluation, moderate compression even enhances LLM performance. Our code and data is available at https://github.com/3DAgentWorld/Toolkit-for-Prompt-Compression.",
+      "identifiers": [
+        "SemanticScholar:3cca2ceb61a0e8ebfd00479c2fba722489ba1476"
+      ],
+      "semantic_scholar_id": "3cca2ceb61a0e8ebfd00479c2fba722489ba1476",
+      "canonical_id": "arXiv:2505.00019",
+      "arxiv_id": "2505.00019",
+      "doi": "10.48550/arXiv.2505.00019",
+      "authors": [
+        "Zheng Zhang",
+        "Jin-Yi Li",
+        "Yi-Huai Lan",
+        "Xiangwei Wang",
+        "Hao Wang"
+      ],
+      "priority": 11,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 11,
+        "citation_count": 11,
+        "total": 11,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 537,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "PredGen: Accelerated Inference of Large Language Models through Input-Time Speculation for Real-Time Speech Interaction",
+      "source_url": "https://arxiv.org/abs/2506.15556",
+      "year": 2025,
+      "published": "2025-06-18",
+      "venue": "arXiv.org",
+      "citation_count": 11,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Models (LLMs) are widely used in real-time voice chat applications, typically in combination with text-to-speech (TTS) systems to generate audio responses. However, their large size often leads to noticeable latency between the end of user input and the start of audio output, resulting in suboptimal user experiences. This latency is particularly evident when LLMs are deployed as single-user voice assistants on consumer-grade hardware with limited computing capacity. We discovered that this latency is primarily dominated by the time it takes for the LLMs to generate the first sentence, which is required as input by the TTS systems that synthesize audio responses on a sentence-by-sentence basis. To address this bottleneck, we propose Predictive Generation (PredGen), a novel framework that mitigates-or even eliminates-this delay through speculative decoding at input time. PredGen generates candidate responses while the user is still speaking, enabling the system to begin TTS processing with minimal delay. Simulated experiments on the Lmsys and MT-Bench datasets show that the proposed method can effectively reduce the latency by around 2x across a wide range of use cases, while incurring only minimal additional computation cost at input time-computation that would otherwise go unused.",
+      "identifiers": [
+        "SemanticScholar:4380d52d7377ba72eb89500991cddf16655305c8"
+      ],
+      "semantic_scholar_id": "4380d52d7377ba72eb89500991cddf16655305c8",
+      "canonical_id": "arXiv:2506.15556",
+      "arxiv_id": "2506.15556",
+      "doi": "10.48550/arXiv.2506.15556",
+      "authors": [
+        "Shufan Li",
+        "Aditya Grover"
+      ],
+      "priority": 11,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 11,
+        "citation_count": 11,
+        "total": 11,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 482,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Dynamic Speculative Agent Planning",
+      "source_url": "https://arxiv.org/abs/2509.01920",
+      "year": 2025,
+      "published": "2025-09-02",
+      "venue": "arXiv.org",
+      "citation_count": 11,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Despite their remarkable success in complex tasks propelling widespread adoption, large language-model-based agents still face critical deployment challenges due to prohibitive latency and inference costs. While recent work has explored various methods to accelerate inference, existing approaches suffer from significant limitations: they either fail to preserve performance fidelity, require extensive offline training of router modules, or incur excessive operational costs. Moreover, they provide minimal user control over the tradeoff between acceleration and other performance metrics. To address these gaps, we introduce Dynamic Speculative Planning (DSP), an asynchronous online reinforcement learning framework that provides lossless acceleration with substantially reduced costs without requiring additional pre-deployment preparation. DSP explicitly optimizes a joint objective balancing end-to-end latency against dollar cost, allowing practitioners to adjust a single parameter that steers the system toward faster responses, cheaper operation, or any point along this continuum. Experiments on two standard agent benchmarks demonstrate that DSP achieves comparable efficiency to the fastest lossless acceleration method while reducing total cost by 30% and unnecessary cost up to 60%. Our code and data are available through https://github.com/guanyilin428/Dynamic-Speculative-Planning.",
+      "identifiers": [
+        "SemanticScholar:10bbaa649c9bd6d9cede70ff06a69ec2ca14a892"
+      ],
+      "semantic_scholar_id": "10bbaa649c9bd6d9cede70ff06a69ec2ca14a892",
+      "canonical_id": "arXiv:2509.01920",
+      "arxiv_id": "2509.01920",
+      "doi": "10.48550/arXiv.2509.01920",
+      "authors": [
+        "Yi-Lin Guan",
+        "Qing Lan",
+        "Sun Fei",
+        "Dujian Ding",
+        "Devang Acharya",
+        "Chi Wang",
+        "W. Wang",
+        "Wenyue Hua"
+      ],
+      "priority": 11,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 11,
+        "citation_count": 11,
+        "total": 11,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 406,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2311.08623",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2311.08623",
+        "id:SemanticScholar:81b7d8a9311c1f2d20fd1bc1d0d9835ce19d4b24",
+        "id:arXiv:2311.08623",
+        "title:deed dynamic early exit on decoder for accelerating encoderdecoder transformer models",
+        "url:https://arxiv.org/abs/2311.08623"
+      ],
+      "record": {
+        "title": "DEED: Dynamic Early Exit on Decoder for Accelerating Encoder-Decoder Transformer Models",
+        "source_url": "https://arxiv.org/abs/2311.08623",
+        "year": 2023,
+        "published": "2023-11-15",
+        "venue": "NAACL-HLT",
+        "citation_count": 12,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Encoder-decoder transformer models have achieved great success on various vision-language (VL) tasks, but they suffer from high inference latency. Typically, the decoder takes up most of the latency because of the auto-regressive decoding. To accelerate the inference, we propose an approach of performing Dynamic Early Exit on Decoder (DEED). We build a multi-exit encoder-decoder transformer model which is trained with deep supervision so that each of its decoder layers is capable of generating plausible predictions. In addition, we leverage simple yet practical techniques, including shared generation head and adaptation modules, to keep accuracy when exiting at shallow decoder layers. Based on the multi-exit model, we perform step-level dynamic early exit during inference, where the model may decide to use fewer decoder layers based on its confidence of the current layer at each individual decoding step. Considering different number of decoder layers may be used at different decoding steps, we compute deeper-layer decoder features of previous decoding steps just-in-time, which ensures the features from different decoding steps are semantically aligned. We evaluate our approach with two state-of-the-art encoder-decoder transformer models on various VL tasks. We show our approach can reduce overall inference latency by 30%-60% with comparable or even higher accuracy compared to baselines.",
+        "identifiers": [
+          "SemanticScholar:81b7d8a9311c1f2d20fd1bc1d0d9835ce19d4b24"
+        ],
+        "semantic_scholar_id": "81b7d8a9311c1f2d20fd1bc1d0d9835ce19d4b24",
+        "canonical_id": "arXiv:2311.08623",
+        "arxiv_id": "2311.08623",
+        "doi": "10.48550/arXiv.2311.08623",
+        "authors": [
+          "Peng Tang",
+          "Pengkai Zhu",
+          "Tian Li",
+          "Srikar Appalaraju",
+          "Vijay Mahadevan",
+          "R. Manmatha"
+        ],
+        "priority": 12,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 12,
+          "citation_count": 12,
+          "total": 12,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 1063,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1162/tacl.a.39",
+      "identity_tokens": [
+        "id:DOI:10.1162/tacl.a.39",
+        "id:SemanticScholar:7921b2bd977084f49cf0d0602c5a3301b72ae10f",
+        "title:tale tokenadaptive lowrank kvcache approximation with reconstruction elimination",
+        "url:https://doi.org/10.1162/tacl.a.39"
+      ],
+      "record": {
+        "title": "TALE: Token-Adaptive Low-Rank KVCache Approximation with Reconstruction Elimination",
+        "source_url": "https://doi.org/10.1162/tacl.a.39",
+        "year": 2025,
+        "published": null,
+        "venue": "Transactions of the Association for Computational Linguistics",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "\n KVCache, by storing key-value pairs for reuse, has been crucial for enhancing inference efficiency for large language models (LLMs). However, the increasing memory demands of KVCache, especially with recent trends of longer input sequences, present a major challenge. In this work, we propose an innovative token-adaptive low-rank approximation strategy for KVCache compression. By applying varying ranks based on token significance, our method compresses KVCache efficiently while retaining critical information. Moreover, we introduce a lazy approximation technique, which approximates lazily only when needed, alongside a reconstruction-free design to bypass costly recalculations. Combined with multi-level quantization, this method reduces KVCache size by 9.1× on the Llama-3.1-8B model, with minimal performance degradation on complex tasks such as GSM8K. Moreover, our custom attention implementation shows up to 2× latency reduction compared to the conventional method in long context scenarios. The code is publicly available.",
+        "identifiers": [
+          "SemanticScholar:7921b2bd977084f49cf0d0602c5a3301b72ae10f"
+        ],
+        "semantic_scholar_id": "7921b2bd977084f49cf0d0602c5a3301b72ae10f",
+        "doi": "10.1162/tacl.a.39",
+        "canonical_id": "DOI:10.1162/tacl.a.39",
+        "authors": [
+          "Jaeseong Lee",
+          "Seung-won Hwang",
+          "Aurick Qiao",
+          "Daniel F. Campos",
+          "Zhewei Yao",
+          "Yuxiong He"
+        ],
+        "priority": 12,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 12,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 469,
+          "matched_prestigious_venue": "Association for Computational Linguistics"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/comst.2025.3587225",
+      "identity_tokens": [
+        "id:DOI:10.1109/comst.2025.3587225",
+        "id:SemanticScholar:ebb13007d456d6816867fd3dad0da081800bad2d",
+        "title:edgeenhanced intelligence a comprehensive survey of large language models and edgecloud computing synergy",
+        "url:https://doi.org/10.1109/COMST.2025.3587225"
+      ],
+      "record": {
+        "title": "Edge-Enhanced Intelligence: A Comprehensive Survey of Large Language Models and Edge-Cloud Computing Synergy",
+        "source_url": "https://doi.org/10.1109/COMST.2025.3587225",
+        "year": 2026,
+        "published": null,
+        "venue": "IEEE Communications Surveys and Tutorials",
+        "citation_count": 11,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large language models (LLMs) (e.g., ChatGPT, GPT-4 and Sora) have fundamentally transformed our daily lives, catalyzing breakthroughs in natural language processing, computer vision and revolutionizing human-computer interactions. However, their transformative potential is hindered by immense computational resources required. To address this challenge, the integration of LLMs with edge-cloud computing has become a focal point in advancing the capabilities of artificial intelligence. This survey comprehensively exploits the landscape of edge-enhanced intelligence, specifically focusing on the synergy between LLMs and edge-cloud computing. We delve into the evolution of LLMs, architectural intricacies, and the computational challenges associated with deploying them in edge environments from the aspects of data, computing power, model training and inference. Furthermore, we exploit the bidirectional symbiotic relationship between edge-cloud computing and LLMs from two key aspects: edge-cloud computing empowered LLMs (Edge4LLMs) and LLMs driven edge-cloud computing (LLMs4Edge). After that, we examine the dynamic collaboration between edge-cloud computing and LLMs, highlighting the complementary roles in optimizing the efficiency, real-time, and scalability of intelligent applications. Through an extensive review of existing research and practical implementations, this survey offers insights into the current state of edge-enhanced intelligence, identifies key challenges, and proposes potential avenues for future research and development. This survey aims to provide a comprehensive understanding of the emerging paradigm of edge-enhanced intelligence for LLMs, thereby fostering informed discussions and inspiring advancements in this field.",
+        "identifiers": [
+          "SemanticScholar:ebb13007d456d6816867fd3dad0da081800bad2d"
+        ],
+        "semantic_scholar_id": "ebb13007d456d6816867fd3dad0da081800bad2d",
+        "doi": "10.1109/COMST.2025.3587225",
+        "canonical_id": "DOI:10.1109/COMST.2025.3587225",
+        "authors": [
+          "Xiu-Hua Li",
+          "Hui Li",
+          "Chuan Sun",
+          "Qilin Fan",
+          "Zhu Han",
+          "Victor C. M. Leung"
+        ],
+        "priority": 11,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 11,
+          "citation_count": 11,
+          "total": 11,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 104,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1016/j.neunet.2024.106164",
+      "identity_tokens": [
+        "id:DOI:10.1016/j.neunet.2024.106164",
+        "id:SemanticScholar:def19d645b55d8edfc4e840d77b7f5014972c906",
+        "title:ddk dynamic structure pruning based on differentiable search and recursive knowledge distillation for bert",
+        "url:https://doi.org/10.1016/j.neunet.2024.106164"
+      ],
+      "record": {
+        "title": "DDK: Dynamic structure pruning based on differentiable search and recursive knowledge distillation for BERT",
+        "source_url": "https://doi.org/10.1016/j.neunet.2024.106164",
+        "year": 2024,
+        "published": "2024-02-01",
+        "venue": "Neural Networks",
+        "citation_count": 11,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large-scale pre-trained models, such as BERT, have demonstrated outstanding performance in Natural Language Processing (NLP). Nevertheless, the high number of parameters in these models has increased the demand for hardware storage and computational resources while posing a challenge for their practical deployment. In this article, we propose a combined method of model pruning and knowledge distillation to compress and accelerate large-scale pre-trained language models. Specifically, we introduce a dynamic structure pruning method based on differentiable search and recursive knowledge distillation to automatically prune the BERT model, named DDK. We define the search space for network pruning as all feed-forward layer channels and self-attention heads at each layer of the network, and utilize differentiable methods to determine their optimal number. Additionally, we design a recursive knowledge distillation method that employs adaptive weighting to extract the most important features from multiple intermediate layers of the teacher model and fuse them to supervise the student network learning. Our experimental results on the GLUE benchmark dataset and ablation analysis demonstrate that our proposed method outperforms other advanced methods in terms of average performance.",
+        "identifiers": [
+          "SemanticScholar:def19d645b55d8edfc4e840d77b7f5014972c906"
+        ],
+        "semantic_scholar_id": "def19d645b55d8edfc4e840d77b7f5014972c906",
+        "doi": "10.1016/j.neunet.2024.106164",
+        "canonical_id": "DOI:10.1016/j.neunet.2024.106164",
+        "authors": [
+          "Zhou Zhang",
+          "Yang Lu",
+          "Tengfei Wang",
+          "Xing Wei",
+          "Zhenchun Wei"
+        ],
+        "priority": 11,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 11,
+          "citation_count": 11,
+          "total": 11,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 985,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2405.15025",
+      "identity_tokens": [
+        "id:DOI:10.1609/aaai.v39i16.33807",
+        "id:SemanticScholar:507b6ca97ff1fe33367e34b5b259af1292185d59",
+        "id:arXiv:2405.15025",
+        "title:oac outputadaptive calibration for accurate posttraining quantization",
+        "url:https://arxiv.org/abs/2405.15025"
+      ],
+      "record": {
+        "title": "OAC: Output-adaptive Calibration for Accurate Post-training Quantization",
+        "source_url": "https://arxiv.org/abs/2405.15025",
+        "year": 2024,
+        "published": "2024-05-23",
+        "venue": "AAAI Conference on Artificial Intelligence",
+        "citation_count": 11,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Deployment of Large Language Models (LLMs) has major computational costs, due to their rapidly expanding size. Compression of LLMs reduces the memory footprint, latency, and energy required for their inference. Post-training Quantization (PTQ) techniques have been developed to compress LLMs while avoiding expensive re-training. Most PTQ approaches formulate the quantization error based on a layer-wise Euclidean loss, ignoring the model output. Then, each layer is calibrated using its layer-wise Hessian to update the weights towards minimizing the quantization error. The Hessian is also used for detecting the most salient weights to quantization. Such PTQ approaches are prone to accuracy drop in low-precision quantization. We propose Output-adaptive Calibration (OAC) to incorporate the model output in the calibration process. We formulate the quantization error based on the distortion of the output cross-entropy loss. OAC approximates the output-adaptive Hessian for each layer under reasonable assumptions to reduce the computational complexity. The output-adaptive Hessians are used to update the weight matrices and detect the salient weights towards maintaining the model output. Our proposed method outperforms the state-of-the-art baselines such as SpQR and BiLLM, especially, at extreme low-precision (2-bit and binary) quantization.",
+        "identifiers": [
+          "SemanticScholar:507b6ca97ff1fe33367e34b5b259af1292185d59"
+        ],
+        "semantic_scholar_id": "507b6ca97ff1fe33367e34b5b259af1292185d59",
+        "canonical_id": "arXiv:2405.15025",
+        "arxiv_id": "2405.15025",
+        "doi": "10.1609/aaai.v39i16.33807",
+        "authors": [
+          "Ali Edalati",
+          "Alireza Ghaffari",
+          "Mahsa Ghazvini Nejad",
+          "Lu Hou",
+          "Boxing Chen",
+          "M. Asgharian",
+          "Vahid Partovi Nia"
+        ],
+        "priority": 11,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 11,
+          "citation_count": 11,
+          "total": 11,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 873,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2411.03697",
+      "identity_tokens": [
+        "id:DOI:10.1145/3714416",
+        "id:SemanticScholar:11f14a070ea5b51f825e9a86ab5de254e4948d69",
+        "id:arXiv:2411.03697",
+        "title:tataa programmable mixedprecision transformer acceleration with a transformable arithmetic architecture",
+        "url:https://arxiv.org/abs/2411.03697"
+      ],
+      "record": {
+        "title": "TATAA: Programmable Mixed-Precision Transformer Acceleration with a Transformable Arithmetic Architecture",
+        "source_url": "https://arxiv.org/abs/2411.03697",
+        "year": 2024,
+        "published": "2024-11-06",
+        "venue": "ACM Transactions on Reconfigurable Technology and Systems",
+        "citation_count": 11,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Modern transformer-based deep neural networks present unique technical challenges for effective acceleration in real-world applications. Apart from the vast amount of linear operations needed due to their sizes, modern transformer models are increasingly reliance on precise non-linear computations that make traditional low-bitwidth quantization methods and fixed-dataflow matrix accelerators ineffective for end-to-end acceleration. To address this need to accelerate both linear and non-linear operations in a unified and programmable framework, this article introduces TATAA. TATAA employs 8-bit integer (int8) arithmetic for quantized linear layer operations through post-training quantization, while it relies on bfloat16 floating-point arithmetic to approximate non-linear layers of a transformer model. TATAA hardware features a transformable arithmetic architecture that supports both formats during runtime with minimal overhead, enabling it to switch between a systolic array mode for int8 matrix multiplications and a SIMD mode for vectorized bfloat16 operations. An end-to-end compiler is presented to enable flexible mapping from emerging transformer models to the proposed hardware. Experimental results indicate that our mixed-precision design incurs only 0.14% to 1.16% accuracy drop when compared with the pre-trained single-precision transformer models across a range of vision, language, and generative text applications. Our prototype implementation on the Alveo U280 FPGA currently achieves 2,935.2 GOPS throughput on linear layers and a maximum of 189.5 GFLOPS for non-linear operations, outperforming related works by up to \\(1.45\\times\\) in end-to-end throughput and \\(2.29\\times\\) in DSP efficiency, while achieving \\(2.19\\times\\) higher power efficiency than modern NVIDIA RTX4090 GPU.",
+        "identifiers": [
+          "SemanticScholar:11f14a070ea5b51f825e9a86ab5de254e4948d69"
+        ],
+        "semantic_scholar_id": "11f14a070ea5b51f825e9a86ab5de254e4948d69",
+        "canonical_id": "arXiv:2411.03697",
+        "arxiv_id": "2411.03697",
+        "doi": "10.1145/3714416",
+        "authors": [
+          "Jia-Jun Wu",
+          "Mo Song",
+          "Jingmin Zhao",
+          "Yi-Zhao Gao",
+          "Jia Li",
+          "Hayden Kwok-Hay So"
+        ],
+        "priority": 11,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 11,
+          "citation_count": 11,
+          "total": 11,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 706,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2505.00019",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2505.00019",
+        "id:SemanticScholar:3cca2ceb61a0e8ebfd00479c2fba722489ba1476",
+        "id:arXiv:2505.00019",
+        "title:an empirical study on prompt compression for large language models",
+        "url:https://arxiv.org/abs/2505.00019"
+      ],
+      "record": {
+        "title": "An Empirical Study on Prompt Compression for Large Language Models",
+        "source_url": "https://arxiv.org/abs/2505.00019",
+        "year": 2025,
+        "published": "2025-04-24",
+        "venue": "arXiv.org",
+        "citation_count": 11,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Prompt engineering enables Large Language Models (LLMs) to perform a variety of tasks. However, lengthy prompts significantly increase computational complexity and economic costs. To address this issue, we study six prompt compression methods for LLMs, aiming to reduce prompt length while maintaining LLM response quality. In this paper, we present a comprehensive analysis covering aspects such as generation performance, model hallucinations, efficacy in multimodal tasks, word omission analysis, and more. We evaluate these methods across 13 datasets, including news, scientific articles, commonsense QA, math QA, long-context QA, and VQA datasets. Our experiments reveal that prompt compression has a greater impact on LLM performance in long contexts compared to short ones. In the Longbench evaluation, moderate compression even enhances LLM performance. Our code and data is available at https://github.com/3DAgentWorld/Toolkit-for-Prompt-Compression.",
+        "identifiers": [
+          "SemanticScholar:3cca2ceb61a0e8ebfd00479c2fba722489ba1476"
+        ],
+        "semantic_scholar_id": "3cca2ceb61a0e8ebfd00479c2fba722489ba1476",
+        "canonical_id": "arXiv:2505.00019",
+        "arxiv_id": "2505.00019",
+        "doi": "10.48550/arXiv.2505.00019",
+        "authors": [
+          "Zheng Zhang",
+          "Jin-Yi Li",
+          "Yi-Huai Lan",
+          "Xiangwei Wang",
+          "Hao Wang"
+        ],
+        "priority": 11,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 11,
+          "citation_count": 11,
+          "total": 11,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 537,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2506.15556",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2506.15556",
+        "id:SemanticScholar:4380d52d7377ba72eb89500991cddf16655305c8",
+        "id:arXiv:2506.15556",
+        "title:predgen accelerated inference of large language models through inputtime speculation for realtime speech interaction",
+        "url:https://arxiv.org/abs/2506.15556"
+      ],
+      "record": {
+        "title": "PredGen: Accelerated Inference of Large Language Models through Input-Time Speculation for Real-Time Speech Interaction",
+        "source_url": "https://arxiv.org/abs/2506.15556",
+        "year": 2025,
+        "published": "2025-06-18",
+        "venue": "arXiv.org",
+        "citation_count": 11,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large Language Models (LLMs) are widely used in real-time voice chat applications, typically in combination with text-to-speech (TTS) systems to generate audio responses. However, their large size often leads to noticeable latency between the end of user input and the start of audio output, resulting in suboptimal user experiences. This latency is particularly evident when LLMs are deployed as single-user voice assistants on consumer-grade hardware with limited computing capacity. We discovered that this latency is primarily dominated by the time it takes for the LLMs to generate the first sentence, which is required as input by the TTS systems that synthesize audio responses on a sentence-by-sentence basis. To address this bottleneck, we propose Predictive Generation (PredGen), a novel framework that mitigates-or even eliminates-this delay through speculative decoding at input time. PredGen generates candidate responses while the user is still speaking, enabling the system to begin TTS processing with minimal delay. Simulated experiments on the Lmsys and MT-Bench datasets show that the proposed method can effectively reduce the latency by around 2x across a wide range of use cases, while incurring only minimal additional computation cost at input time-computation that would otherwise go unused.",
+        "identifiers": [
+          "SemanticScholar:4380d52d7377ba72eb89500991cddf16655305c8"
+        ],
+        "semantic_scholar_id": "4380d52d7377ba72eb89500991cddf16655305c8",
+        "canonical_id": "arXiv:2506.15556",
+        "arxiv_id": "2506.15556",
+        "doi": "10.48550/arXiv.2506.15556",
+        "authors": [
+          "Shufan Li",
+          "Aditya Grover"
+        ],
+        "priority": 11,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 11,
+          "citation_count": 11,
+          "total": 11,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 482,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2509.01920",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2509.01920",
+        "id:SemanticScholar:10bbaa649c9bd6d9cede70ff06a69ec2ca14a892",
+        "id:arXiv:2509.01920",
+        "title:dynamic speculative agent planning",
+        "url:https://arxiv.org/abs/2509.01920"
+      ],
+      "record": {
+        "title": "Dynamic Speculative Agent Planning",
+        "source_url": "https://arxiv.org/abs/2509.01920",
+        "year": 2025,
+        "published": "2025-09-02",
+        "venue": "arXiv.org",
+        "citation_count": 11,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Despite their remarkable success in complex tasks propelling widespread adoption, large language-model-based agents still face critical deployment challenges due to prohibitive latency and inference costs. While recent work has explored various methods to accelerate inference, existing approaches suffer from significant limitations: they either fail to preserve performance fidelity, require extensive offline training of router modules, or incur excessive operational costs. Moreover, they provide minimal user control over the tradeoff between acceleration and other performance metrics. To address these gaps, we introduce Dynamic Speculative Planning (DSP), an asynchronous online reinforcement learning framework that provides lossless acceleration with substantially reduced costs without requiring additional pre-deployment preparation. DSP explicitly optimizes a joint objective balancing end-to-end latency against dollar cost, allowing practitioners to adjust a single parameter that steers the system toward faster responses, cheaper operation, or any point along this continuum. Experiments on two standard agent benchmarks demonstrate that DSP achieves comparable efficiency to the fastest lossless acceleration method while reducing total cost by 30% and unnecessary cost up to 60%. Our code and data are available through https://github.com/guanyilin428/Dynamic-Speculative-Planning.",
+        "identifiers": [
+          "SemanticScholar:10bbaa649c9bd6d9cede70ff06a69ec2ca14a892"
+        ],
+        "semantic_scholar_id": "10bbaa649c9bd6d9cede70ff06a69ec2ca14a892",
+        "canonical_id": "arXiv:2509.01920",
+        "arxiv_id": "2509.01920",
+        "doi": "10.48550/arXiv.2509.01920",
+        "authors": [
+          "Yi-Lin Guan",
+          "Qing Lan",
+          "Sun Fei",
+          "Dujian Ding",
+          "Devang Acharya",
+          "Chi Wang",
+          "W. Wang",
+          "Wenyue Hua"
+        ],
+        "priority": 11,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 11,
+          "citation_count": 11,
+          "total": 11,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 406,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:808ad554c5d6815d1e7689fc38d0c0bebb26b11fc0c463719c712b08d95735b8",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}
