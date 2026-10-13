@@ -1,0 +1,363 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local",
+  "run_key": "codex-discovery-screen32-20261014-263777-part-02",
+  "reference_main_sha": "263777fff2d5747dce43f92126afba13d87dce1f",
+  "record_count": 20,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2511.10390",
+      "identity_tokens": [
+        "arXiv:2511.10390",
+        "SemanticScholar:5c94d82e55a1778ae2c976b87988297aee2cb7ba",
+        "DOI:10.48550/arXiv.2511.10390"
+      ],
+      "title": "MonkeyOCR v1.5 Technical Report: Unlocking Robust Document Parsing for Complex Patterns",
+      "reason": "MonkeyOCR v1.5 addresses robust document parsing and benchmark quality. Its primary abstract does not establish a contribution to general LLM serving or inference efficiency.",
+      "source_url": "https://arxiv.org/abs/2511.10390",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T16:37:12Z",
+      "last_checked_at": "2026-10-13T16:37:12Z",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2510.18234-deepseek-ocr-contexts-optical-compression.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.hcc.2025.100300",
+      "identity_tokens": [
+        "DOI:10.1016/j.hcc.2025.100300",
+        "SemanticScholar:186b33f6f093c18dae11ad3d6aa6d9d0305992c3"
+      ],
+      "title": "On protecting the data privacy of Large Language Models (LLMs) and LLM agents: A literature review",
+      "reason": "Identity is verified from DOI/title. The official publisher abstract was not retrieved: the Elsevier DOI page returned HTTP 403 and the publisher PDF/search snippet exposed only a partial abstract, insufficient for screening. Kept borderline pending a complete primary abstract.",
+      "source_url": "https://doi.org/10.1016/j.hcc.2025.100300",
+      "body_check": "source_unavailable; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-10-13T16:37:12Z",
+      "last_checked_at": "2026-10-13T16:37:12Z",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-0ed2662d9eee-iron-private-inference-on-transformers.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/TMC.2025.3570376",
+      "identity_tokens": [
+        "DOI:10.1109/TMC.2025.3570376",
+        "SemanticScholar:fdbaa2e1fa498b6cf2fd1c527171d74cfd044152"
+      ],
+      "title": "Enhancing Stability and Resource Efficiency in LLM Training for Edge-Assisted Mobile Systems",
+      "reason": "Identity is verified from DOI/title. IEEE Xplore’s official page did not expose the abstract in this retrieval (JavaScript/robot verification); the accessible ResearchGate result is secondary and was not used as abstract evidence. The title suggests training-only edge resource efficiency, so the unresolved inference/deployment connection remains borderline.",
+      "source_url": "https://doi.org/10.1109/TMC.2025.3570376",
+      "body_check": "source_unavailable; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-10-13T16:37:12Z",
+      "last_checked_at": "2026-10-13T16:37:12Z",
+      "linked_from": [
+        "papers/inference/08-edge-on-device-llm-systems/2023-2309.04255-llmcad-fast-and-scalable-on-device-large-language-model-inference.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.09959",
+      "identity_tokens": [
+        "arXiv:2605.09959",
+        "SemanticScholar:e5f4d8707986be68c6ebbc2319a579530b34af9c",
+        "DOI:10.48550/arXiv.2605.09959"
+      ],
+      "title": "G-Zero: Self-Play for Open-Ended Generation from Zero Data",
+      "reason": "G-Zero studies self-play training for open-ended generation; its contribution is training data and capability growth, not inference/deployment efficiency.",
+      "source_url": "https://arxiv.org/abs/2605.09959",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T16:37:12Z",
+      "last_checked_at": "2026-10-13T16:37:12Z",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2026-2601.09260-efficient-paths-and-dense-rewards-probabilistic-flow-reasoning-for-large.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2603.28376",
+      "identity_tokens": [
+        "arXiv:2603.28376",
+        "SemanticScholar:4b7c1f9b7a50f504229958b877b80af58d1bc55f",
+        "DOI:10.48550/arXiv.2603.28376"
+      ],
+      "title": "Marco DeepResearch: Unlocking Efficient Deep Research Agents via Verification-Centric Design",
+      "reason": "Marco DeepResearch proposes verification-centric design for research agents and frames the system as efficient, but the abstract does not quantify or specify a direct reduction in inference tokens, latency, or compute. Its agent-system connection remains plausible but unclear.",
+      "source_url": "https://arxiv.org/abs/2603.28376",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T16:37:12Z",
+      "last_checked_at": "2026-10-13T16:37:12Z",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1909.08053-megatron-lm-training-multi-billion-parameter-language-models-using-model.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.13032",
+      "identity_tokens": [
+        "arXiv:2603.13032",
+        "SemanticScholar:742e4180e490ee4702d0a92d2443d694298383dd",
+        "DOI:10.48550/arXiv.2603.13032"
+      ],
+      "title": "Multimodal OCR: Parse Anything from Documents",
+      "reason": "Multimodal OCR targets document understanding/parsing with a compact specialized model; the abstract does not identify an LLM systems or serving technique beyond this standalone application.",
+      "source_url": "https://arxiv.org/abs/2603.13032",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T16:37:12Z",
+      "last_checked_at": "2026-10-13T16:37:12Z",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2510.18234-deepseek-ocr-contexts-optical-compression.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1007/s44443-025-00302-0",
+      "identity_tokens": [
+        "DOI:10.1007/s44443-025-00302-0",
+        "SemanticScholar:9430823c4286673a646dadb6551f2c6519eec1bb"
+      ],
+      "title": "Advances in object detection for autonomous driving using mmwave radar and camera: A comprehensive survey",
+      "reason": "The Springer survey concerns mmWave-radar/camera object detection for autonomous driving, not LLM inference or serving.",
+      "source_url": "https://doi.org/10.1007/s44443-025-00302-0",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T16:37:12Z",
+      "last_checked_at": "2026-10-13T16:37:12Z",
+      "linked_from": [
+        "papers/inference/08-edge-on-device-llm-systems/2023-2309.04255-llmcad-fast-and-scalable-on-device-large-language-model-inference.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.17030",
+      "identity_tokens": [
+        "arXiv:2606.17030",
+        "SemanticScholar:50a37c68c2c78cdd926048155e0ed73f0b1c285a",
+        "DOI:10.48550/arXiv.2606.17030"
+      ],
+      "title": "Qwen-RobotWorld Technical Report: Unifying Embodied World Modeling through Language-Conditioned Video Generation",
+      "reason": "Qwen-RobotWorld studies embodied world modeling and video generation for robotics; the abstract describes capability/modeling rather than inference efficiency.",
+      "source_url": "https://arxiv.org/abs/2606.17030",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T16:37:12Z",
+      "last_checked_at": "2026-10-13T16:37:12Z",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1909.08053-megatron-lm-training-multi-billion-parameter-language-models-using-model.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.20023",
+      "identity_tokens": [
+        "arXiv:2606.20023",
+        "SemanticScholar:40506814219bb63005d1a14942fb60f4f68eb74e",
+        "DOI:10.48550/arXiv.2606.20023"
+      ],
+      "title": "When Lower Privileges Suffice: Investigating Over-Privileged Tool Selection in LLM Agents",
+      "reason": "The paper analyzes over-privileged tool selection and security in LLM agents; it does not propose a model-execution efficiency method.",
+      "source_url": "https://arxiv.org/abs/2606.20023",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T16:37:12Z",
+      "last_checked_at": "2026-10-13T16:37:12Z",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1909.08053-megatron-lm-training-multi-billion-parameter-language-models-using-model.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.27286",
+      "identity_tokens": [
+        "arXiv:2605.27286",
+        "SemanticScholar:c5e05bbee5088edf0106788885102867e7054894",
+        "DOI:10.48550/arXiv.2605.27286"
+      ],
+      "title": "Falcon-X: A Time Series Foundation Model for Heterogeneous Multivariate Modeling",
+      "reason": "Falcon-X is a time-series forecasting foundation model and focuses on heterogeneous time-series modeling, outside LLM inference systems.",
+      "source_url": "https://arxiv.org/abs/2605.27286",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T16:37:12Z",
+      "last_checked_at": "2026-10-13T16:37:12Z",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1909.08053-megatron-lm-training-multi-billion-parameter-language-models-using-model.md"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2605.11856",
+      "identity_tokens": [
+        "arXiv:2605.11856",
+        "SemanticScholar:475a22b6e9953c80d45964656df329c28f883f4b",
+        "DOI:10.48550/arXiv.2605.11856"
+      ],
+      "title": "UniVLR: Unifying Text and Vision in Visual Latent Reasoning for Multimodal LLMs",
+      "reason": "UniVLR replaces extended textual reasoning with visual latent reasoning and the abstract explicitly reports fewer generated reasoning tokens; this directly reduces multimodal LLM inference output burden.",
+      "source_url": "https://arxiv.org/abs/2605.11856",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T16:37:12Z",
+      "last_checked_at": "2026-10-13T16:37:12Z",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2510.18234-deepseek-ocr-contexts-optical-compression.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.10679",
+      "identity_tokens": [
+        "arXiv:2601.10679",
+        "SemanticScholar:cc6b39ccf1607371d317ed391dcf24da4af9d313",
+        "DOI:10.48550/arXiv.2601.10679"
+      ],
+      "title": "Are Your Reasoning Models Reasoning or Guessing? A Mechanistic Analysis of Hierarchical Reasoning Models",
+      "reason": "The paper mechanistically analyzes hierarchical reasoning-model behavior and accuracy; it does not contribute an inference efficiency technique.",
+      "source_url": "https://arxiv.org/abs/2601.10679",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T16:37:12Z",
+      "last_checked_at": "2026-10-13T16:37:12Z",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2512.24601-recursive-language-models.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3786335.3813151",
+      "identity_tokens": [
+        "DOI:10.1145/3786335.3813151",
+        "SemanticScholar:e0691bcd311eb02f493bf916520ee90e669d7a70"
+      ],
+      "title": "FLASC: Federated LoRA with Sparse Communication",
+      "reason": "Identity is verified from DOI/title. The official ACM Digital Library page returned HTTP 403, and the search retrieval did not expose a publisher abstract. FLASC’s title suggests sparse-communication federated LoRA, but without a primary abstract its relation to training-only versus inference efficiency cannot be established.",
+      "source_url": "https://doi.org/10.1145/3786335.3813151",
+      "body_check": "source_unavailable; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-10-13T16:37:12Z",
+      "last_checked_at": "2026-10-13T16:37:12Z",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.14152-memory-efficient-fine-tuning-of-compressed-large-language-models-via-sub.md"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1109/SP63933.2026.00048",
+      "identity_tokens": [
+        "DOI:10.1109/SP63933.2026.00048",
+        "SemanticScholar:dfdc4eea57065c54519aeb4dad928f67995b5b9d"
+      ],
+      "title": "Euston: Efficient and User-Friendly Secure Transformer Inference with Non-Interactivity",
+      "reason": "Euston develops secure transformer inference without interaction rounds and its official IEEE abstract reports up to 8.8× faster inference than prior work; this directly improves inference latency and deployment practicality.",
+      "source_url": "https://doi.org/10.1109/SP63933.2026.00048",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T16:37:12Z",
+      "last_checked_at": "2026-10-13T16:37:12Z",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-0ed2662d9eee-iron-private-inference-on-transformers.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1016/j.engappai.2026.113947",
+      "identity_tokens": [
+        "DOI:10.1016/j.engappai.2026.113947",
+        "SemanticScholar:fdea0eb6babc30ea6d6fd3d360b01d1fc24a959d"
+      ],
+      "title": "Transformers meet hyperspectral imaging: A comprehensive study of models, challenges and open problems",
+      "reason": "The verified publisher title is a survey of transformers for hyperspectral imaging, a separate vision modality/application with no indicated LLM inference-system contribution. The retrieved publisher page did not provide a complete abstract excerpt for screening.",
+      "source_url": "https://doi.org/10.1016/j.engappai.2026.113947",
+      "body_check": "title_screen_only; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-10-13T16:37:12Z",
+      "last_checked_at": "2026-10-13T16:37:12Z",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.07982-a-survey-of-techniques-for-optimizing-transformer-inference.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.13758",
+      "identity_tokens": [
+        "arXiv:2602.13758",
+        "SemanticScholar:1b7cfb06097ab5b7220b348e576ab06b8b445a03",
+        "DOI:10.1145/3770855.3817510"
+      ],
+      "title": "OmniScience: A Large-scale Multi-modal Dataset for Scientific Image Understanding",
+      "reason": "OmniScience introduces a scientific-image dataset and benchmark for image understanding; this is a capability/data resource rather than a model-execution efficiency contribution.",
+      "source_url": "https://arxiv.org/abs/2602.13758",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T16:37:12Z",
+      "last_checked_at": "2026-10-13T16:37:12Z",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2510.18234-deepseek-ocr-contexts-optical-compression.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.15188",
+      "identity_tokens": [
+        "arXiv:2605.15188",
+        "SemanticScholar:02e0b07ce5d626e321530a04d1113ae9f0c64451",
+        "DOI:10.48550/arXiv.2605.15188"
+      ],
+      "title": "FutureSim: Replaying World Events to Evaluate Adaptive Agents",
+      "reason": "FutureSim is an evaluation benchmark for adaptive-agent behavior; its primary abstract describes replaying events and measuring adaptation, not reducing inference cost.",
+      "source_url": "https://arxiv.org/abs/2605.15188",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T16:37:12Z",
+      "last_checked_at": "2026-10-13T16:37:12Z",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2512.24601-recursive-language-models.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.13860",
+      "identity_tokens": [
+        "arXiv:2604.13860",
+        "SemanticScholar:6c4a8b107c34c3ac2440f6d77f9c7a6f4c9dfe7c",
+        "DOI:10.48550/arXiv.2604.13860"
+      ],
+      "title": "\"AI Psychosis\" in Context: How Conversation History Shapes LLM Responses to Delusional Beliefs",
+      "reason": "The primary abstract studies how conversation history affects LLM responses to delusional beliefs, a safety/behavior evaluation rather than an efficiency technique.",
+      "source_url": "https://arxiv.org/abs/2604.13860",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T16:37:12Z",
+      "last_checked_at": "2026-10-13T16:37:12Z",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2512.24601-recursive-language-models.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.3390/jcp6020063",
+      "identity_tokens": [
+        "DOI:10.3390/jcp6020063",
+        "SemanticScholar:2080fa7f8e91a29bdc4b9c804626d754c2c64da7"
+      ],
+      "title": "Securing the Cognitive Layer: A Survey on Security Threats, Defenses, and Privacy-Preserving Architectures for LLM-IoT Integration",
+      "reason": "The MDPI review surveys security/privacy for LLM-IoT and explicitly discusses compression, resource constraints, and edge deployment. It offers a systems-relevant overview, but does not itself establish a concrete new inference-efficiency mechanism or measured gain.",
+      "source_url": "https://doi.org/10.3390/jcp6020063",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T16:37:12Z",
+      "last_checked_at": "2026-10-13T16:37:12Z",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-0ed2662d9eee-iron-private-inference-on-transformers.md"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2602.24134",
+      "identity_tokens": [
+        "arXiv:2602.24134",
+        "SemanticScholar:07102592576dfc50c91c0f066669666cddb78d79",
+        "DOI:10.48550/arXiv.2602.24134"
+      ],
+      "title": "AgenticOCR: Parsing Only What You Need for Efficient Retrieval-Augmented Generation",
+      "reason": "AgenticOCR performs query-driven, on-demand visual-region parsing instead of sending full pages to the generator; the abstract says this reduces extraneous context and improves visual-RAG efficiency, directly lowering model-side input burden.",
+      "source_url": "https://arxiv.org/abs/2602.24134",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T16:37:12Z",
+      "last_checked_at": "2026-10-13T16:37:12Z",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2510.18234-deepseek-ocr-contexts-optical-compression.md"
+      ]
+    }
+  ]
+}
