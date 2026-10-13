@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-13T07:51:16+00:00",
-  "record_count": 11731,
+  "updated_at": "2026-10-13T08:54:02+00:00",
+  "record_count": 11746,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -167992,6 +167992,255 @@
       "last_checked_at": "2026-10-13T07:51:16+00:00",
       "linked_from": [],
       "title": "ABot-N1: Toward a General Visual Language Navigation Foundation Model"
+    },
+    "DOI:10.1109/tfuzz.2025.3594229": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/tfuzz.2025.3594229",
+      "identity_tokens": [
+        "DOI:10.1109/tfuzz.2025.3594229"
+      ],
+      "reason": "CoLLM coordinates large and small models with fuzzy decision-making and self-reflection for industrial decision tasks; its abstract-level target is decision quality, not serving/runtime efficiency.",
+      "first_checked_at": "2026-10-13T08:53:54+00:00",
+      "last_checked_at": "2026-10-13T08:53:54+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md",
+        "papers/inference/99-other-inference-systems/2024-2404.14618-hybrid-llm-cost-efficient-and-quality-aware-query-routing.md"
+      ],
+      "title": "CoLLM: Industrial Large–Small Model Collaboration With Fuzzy Decision-Making Agent and Self-Reflection"
+    },
+    "arXiv:2603.25661": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.25661",
+      "identity_tokens": [
+        "arXiv:2603.25661"
+      ],
+      "reason": "The official arXiv abstract for the assigned ID describes parameter-space merging and regularized supervised fine-tuning for VLA adaptation; this is a training-cost contribution, not inference acceleration despite the packet title.",
+      "first_checked_at": "2026-10-13T08:53:54+00:00",
+      "last_checked_at": "2026-10-13T08:53:54+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2025-2505.22618-fast-dllm-kv-cache-parallel-decoding.md",
+        "papers/inference/15-inference-simulation-emulation/2024-2409.12514-tinyvla-towards-fast-data-efficient-vision-language-action-models-for-ro.md",
+        "papers/inference/99-other-inference-systems/2025-2503.09573-block-diffusion-interpolating-between-autoregressive-and-diffusion-langu.md",
+        "papers/inference/99-other-inference-systems/2025-2508.09192-diffusion-llms-can-do-faster-than-ar-inference-via-discrete-diffusion-fo.md",
+        "papers/inference/99-other-inference-systems/2025-2508.15487-dream-7b-diffusion-large-language-models.md"
+      ],
+      "title": "Fast-dVLA: Accelerating Discrete Diffusion VLA to Real-Time Performance"
+    },
+    "arXiv:2603.22458": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.22458",
+      "identity_tokens": [
+        "arXiv:2603.22458"
+      ],
+      "reason": "MinerU-Diffusion reframes document OCR as inverse rendering and evaluates recognition quality; the abstract does not establish a connection to LLM inference or general serving efficiency.",
+      "first_checked_at": "2026-10-13T08:53:55+00:00",
+      "last_checked_at": "2026-10-13T08:53:55+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2025-2505.15781-dkv-cache-delayed-kv-diffusion-language-models.md",
+        "papers/inference/07-kv-cache-optimization-compression/2025-2505.22618-fast-dllm-kv-cache-parallel-decoding.md",
+        "papers/inference/07-kv-cache-optimization-compression/2025-2506.06295-dllm-cache-adaptive-caching.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md",
+        "papers/inference/99-other-inference-systems/2025-2503.09573-block-diffusion-interpolating-between-autoregressive-and-diffusion-langu.md",
+        "papers/inference/99-other-inference-systems/2025-2505.21467-flashdlm-accelerating-diffusion-language-model-inference.md",
+        "papers/inference/99-other-inference-systems/2025-2509.26328-fast-dllm-v2-block-diffusion-hierarchical-cache.md",
+        "papers/inference/99-other-inference-systems/2026-2406.03736-your-absorbing-discrete-diffusion-secretly-models-the-conditional-distri.md"
+      ],
+      "title": "MinerU-Diffusion: Rethinking Document OCR as Inverse Rendering via Diffusion Decoding"
+    },
+    "arXiv:2603.20155": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.20155",
+      "identity_tokens": [
+        "arXiv:2603.20155"
+      ],
+      "reason": "Discrete MMD is used to distill discrete diffusion models; the abstract concerns model training/distillation quality and does not give an inference/runtime systems contribution.",
+      "first_checked_at": "2026-10-13T08:53:55+00:00",
+      "last_checked_at": "2026-10-13T08:53:55+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2503.09573-block-diffusion-interpolating-between-autoregressive-and-diffusion-langu.md"
+      ],
+      "title": "Beyond Single Tokens: Distilling Discrete Diffusion Models via Discrete MMD"
+    },
+    "DOI:10.1073/pnas.2526192123": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1073/pnas.2526192123",
+      "identity_tokens": [
+        "DOI:10.1073/pnas.2526192123"
+      ],
+      "reason": "The PNAS perspective concerns epidemic forecasting foundation models, outbreak data, and public-health preparedness; it does not contribute to LLM inference or serving systems.",
+      "first_checked_at": "2026-10-13T08:53:55+00:00",
+      "last_checked_at": "2026-10-13T08:53:55+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2021-2110.01786-moefication.md",
+        "papers/inference/99-other-inference-systems/2021-2112.06905-glam-efficient-scaling-of-language-models-with-mixture-of-experts.md"
+      ],
+      "title": "Toward AI foundation models for epidemics: Promise, challenges, and paths forward"
+    },
+    "arXiv:2603.08055": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.08055",
+      "identity_tokens": [
+        "arXiv:2603.08055"
+      ],
+      "reason": "Speed3R is a sparse feed-forward 3D reconstruction model for visual reconstruction; its domain-specific application does not establish an LLM/VLM systems connection.",
+      "first_checked_at": "2026-10-13T08:53:56+00:00",
+      "last_checked_at": "2026-10-13T08:53:56+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2306.14048-h2o.md",
+        "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2412.03213-clusterkv-manipulating-llm-kv-cache-in-semantic-space-for-recallable-com.md",
+        "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md",
+        "papers/inference/13-sparse-attention/2024-2406.10774-quest.md",
+        "papers/inference/13-sparse-attention/2024-2410.13276-seerattention.md",
+        "papers/inference/13-sparse-attention/2025-2502.11089-native-sparse-attention-hardware-aligned-and-natively-trainable-sparse-a.md",
+        "papers/inference/13-sparse-attention/2025-2502.13189-moba.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+      ],
+      "title": "Speed3R: Sparse Feed-forward 3D Reconstruction Models"
+    },
+    "arXiv:2603.06743": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.06743",
+      "identity_tokens": [
+        "arXiv:2603.06743"
+      ],
+      "reason": "StableDRL stabilizes reinforcement-learning post-training for diffusion language models; the abstract focuses on training optimization, not inference-system efficiency.",
+      "first_checked_at": "2026-10-13T08:53:56+00:00",
+      "last_checked_at": "2026-10-13T08:53:56+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2509.26328-fast-dllm-v2-block-diffusion-hierarchical-cache.md",
+        "papers/inference/99-other-inference-systems/2026-2406.03736-your-absorbing-discrete-diffusion-secretly-models-the-conditional-distri.md"
+      ],
+      "title": "Stabilizing Reinforcement Learning for Diffusion Language Models"
+    },
+    "arXiv:2603.05078": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.05078",
+      "identity_tokens": [
+        "arXiv:2603.05078"
+      ],
+      "reason": "MoRe is a feed-forward 4D scene-reconstruction model for monocular video; its efficiency claim is scoped to that visual reconstruction application, with no LLM/VLM system connection.",
+      "first_checked_at": "2026-10-13T08:53:56+00:00",
+      "last_checked_at": "2026-10-13T08:53:56+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2409.09086-inf-mllm-efficient-streaming-inference.md"
+      ],
+      "title": "MoRe: Motion-aware Feed-forward 4D Reconstruction Transformer"
+    },
+    "arXiv:2603.01549": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.01549",
+      "identity_tokens": [
+        "arXiv:2603.01549"
+      ],
+      "reason": "Pri4R adds an auxiliary point-track prediction head during VLA training and explicitly states that the original inference architecture is unchanged with no inference overhead; the contribution is task performance via training supervision.",
+      "first_checked_at": "2026-10-13T08:53:58+00:00",
+      "last_checked_at": "2026-10-13T08:53:58+00:00",
+      "linked_from": [
+        "papers/inference/15-inference-simulation-emulation/2024-2409.12514-tinyvla-towards-fast-data-efficient-vision-language-action-models-for-ro.md"
+      ],
+      "title": "Pri4R: Learning World Dynamics for Vision-Language-Action Models with Privileged 4D Representation"
+    },
+    "arXiv:2602.11686": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.11686",
+      "identity_tokens": [
+        "arXiv:2602.11686"
+      ],
+      "reason": "LAER-MoE re-layouts experts and schedules communication to speed MoE training; the abstract explicitly evaluates training systems, not inference.",
+      "first_checked_at": "2026-10-13T08:53:59+00:00",
+      "last_checked_at": "2026-10-13T08:53:59+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2022-2205.10034-moesys-a-distributed-and-efficient-mixture-of-experts-training-and-inference-system-for-internet-services.md",
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2201.05596-deepspeed-moe-inference-compression.md",
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2202.09368-expert-choice-routing.md",
+        "papers/inference/12-moe-parallelism-communication/2021-2101.03961-switch-transformers-scaling-to-trillion-parameter-models-with-simple-and.md",
+        "papers/inference/12-moe-parallelism-communication/2022-2206.03382-tutel-adaptive-mixture-of-experts-at-scale.md",
+        "papers/inference/12-moe-parallelism-communication/2022-2210.17223-accelerating-distributed-moe-training-and-inference-with-lina.md",
+        "papers/inference/99-other-inference-systems/2017-1701.06538-outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts.md",
+        "papers/inference/99-other-inference-systems/2021-2104.04473-efficient-large-scale-language-model-training-on-gpu-clusters-using-mega.md",
+        "papers/inference/99-other-inference-systems/2025-2502.19811-comet-fine-grained-computation-communication-overlapping-for-mixture-of-experts.md",
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md",
+        "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md",
+        "papers/training/02-distributed-heterogeneous-moe-training/2023-2304.03946-flexmoe-scaling-large-scale-sparse-pre-trained-model-training-via-dynamic-device.md",
+        "papers/training/02-distributed-heterogeneous-moe-training/2024-2404.19429-lancet.md",
+        "papers/training/02-distributed-heterogeneous-moe-training/2025-2504.14960-moe-parallel-folding-heterogeneous-parallelism-mappings-for-efficient-large-scal.md"
+      ],
+      "title": "LAER-MoE: Load-Adaptive Expert Re-layout for Efficient Mixture-of-Experts Training"
+    },
+    "arXiv:2602.08984": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.08984",
+      "identity_tokens": [
+        "arXiv:2602.08984"
+      ],
+      "reason": "Next Concept Prediction changes the pretraining objective to improve model benchmark scores; it does not claim a concrete inference-efficiency or serving contribution.",
+      "first_checked_at": "2026-10-13T08:53:59+00:00",
+      "last_checked_at": "2026-10-13T08:53:59+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2404.19737-better-faster-large-language-models-via-multi-token-prediction.md"
+      ],
+      "title": "Next Concept Prediction in Discrete Latent Space Leads to Stronger Language Models"
+    },
+    "DOI:10.1186/s13045-026-01781-y": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1186/s13045-026-01781-y",
+      "identity_tokens": [
+        "DOI:10.1186/s13045-026-01781-y"
+      ],
+      "reason": "The review concerns precision-oncology use cases, RAG/HITL clinical workflows, and governance; it addresses application safety and deployment practice rather than inference-system mechanisms.",
+      "first_checked_at": "2026-10-13T08:53:59+00:00",
+      "last_checked_at": "2026-10-13T08:53:59+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2021-2110.01786-moefication.md",
+        "papers/inference/12-moe-parallelism-communication/2021-2101.03961-switch-transformers-scaling-to-trillion-parameter-models-with-simple-and.md",
+        "papers/inference/99-other-inference-systems/2024-2407.06204-a-survey-on-mixture-of-experts-in-large-language-models.md"
+      ],
+      "title": "Implementing generative artificial intelligence in precision oncology: safety, governance, and significance"
+    },
+    "DOI:10.1016/j.jmapro.2025.11.035": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1016/j.jmapro.2025.11.035",
+      "identity_tokens": [
+        "DOI:10.1016/j.jmapro.2025.11.035"
+      ],
+      "reason": "The review applies NLP/LLMs to alloy discovery, manufacturing parameters, and materials-property prediction; its target is materials science rather than model inference or serving efficiency.",
+      "first_checked_at": "2026-10-13T08:54:01+00:00",
+      "last_checked_at": "2026-10-13T08:54:01+00:00",
+      "linked_from": [
+        "papers/survey/09-edge-llm/2025-2410.11845-edge-llm-review.md"
+      ],
+      "title": "AI-powered language models for alloy design and laser-based manufacturing: A review of NLP applications in materials science"
+    },
+    "arXiv:2511.14751": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2511.14751",
+      "identity_tokens": [
+        "arXiv:2511.14751"
+      ],
+      "reason": "Co-Me accelerates visual-geometric transformers for 3D perception/reconstruction; the abstract does not connect its token merging to LLM/VLM inference systems.",
+      "first_checked_at": "2026-10-13T08:54:02+00:00",
+      "last_checked_at": "2026-10-13T08:54:02+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-2412.05496-flexattention-a-programming-model-for-generating-optimized-attention-kernels.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+      ],
+      "title": "Co-Me: Confidence-Guided Token Merging for Visual Geometric Transformers"
+    },
+    "DOI:10.1016/j.eswa.2026.131117": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1016/j.eswa.2026.131117",
+      "identity_tokens": [
+        "DOI:10.1016/j.eswa.2026.131117"
+      ],
+      "reason": "PolypMoE routes image features among CNN, Transformer, and Mamba experts for colon-polyp segmentation; its target is medical-image task accuracy, not LLM/MoE inference systems.",
+      "first_checked_at": "2026-10-13T08:54:02+00:00",
+      "last_checked_at": "2026-10-13T08:54:02+00:00",
+      "linked_from": [
+        "papers/inference/12-moe-parallelism-communication/2022-2206.03382-tutel-adaptive-mixture-of-experts-at-scale.md"
+      ],
+      "title": "A colon polyp segmentation network via collaborative decision-making of mixture of experts"
     }
   }
 }

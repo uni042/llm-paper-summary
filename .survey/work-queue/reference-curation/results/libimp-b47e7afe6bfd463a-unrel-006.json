@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-b47e7afe6bfd463a-unrel-006",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2603.20155",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2603.20155",
+    "identity_tokens": [
+      "arXiv:2603.20155"
+    ],
+    "reason": "Discrete MMD is used to distill discrete diffusion models; the abstract concerns model training/distillation quality and does not give an inference/runtime systems contribution.",
+    "first_checked_at": "2026-10-13T08:53:55+00:00",
+    "last_checked_at": "2026-10-13T08:53:55+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2025-2503.09573-block-diffusion-interpolating-between-autoregressive-and-diffusion-langu.md"
+    ],
+    "title": "Beyond Single Tokens: Distilling Discrete Diffusion Models via Discrete MMD"
+  },
+  "processed_at": "2026-10-13T08:53:55+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-b47e7afe6bfd",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

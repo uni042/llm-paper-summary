@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-13T07:26:47+00:00",
-  "record_count": 4827,
+  "updated_at": "2026-10-13T08:54:01+00:00",
+  "record_count": 4841,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -73837,6 +73837,248 @@
       ],
       "borderline_recheck_count": 0,
       "title": "High-Throughput, Cost-Effective Billion-Scale Vector Search with a Single GPU"
+    },
+    "DOI:10.1109/iotaai70471.2026.11607731": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/iotaai70471.2026.11607731",
+      "identity_tokens": [
+        "DOI:10.1109/iotaai70471.2026.11607731"
+      ],
+      "reason": "The IEEE Xplore page for DOI 10.1109/IoTAAI70471.2026.11607731 was inaccessible; although the packet title indicates KV-cache placement for cloud serving, no registered-publisher abstract was retrievable for evidence-based classification.",
+      "first_checked_at": "2026-10-13T08:53:52+00:00",
+      "last_checked_at": "2026-10-13T08:53:52+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.04437-vattention-virtual-memory-kv-management.md",
+        "papers/inference/10-kv-cache-offload-recomputation/2024-2310.07240-cachegen.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2403.02310-sarathi-serve-chunked-prefills-stall-free-scheduling.md",
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "CacheCast: Learning-Guided KV Cache Placement for Multi-Tenant Cloud LLM Serving"
+    },
+    "DOI:10.1109/jas.2026.125993": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/jas.2026.125993",
+      "identity_tokens": [
+        "DOI:10.1109/jas.2026.125993"
+      ],
+      "reason": "The publisher abstract surveys agentic AI algorithms and disaggregated asynchronous RL training infrastructure and identifies efficiency as an open challenge; it is a broad survey rather than a concrete systems mechanism or benchmark.",
+      "first_checked_at": "2026-10-13T08:53:52+00:00",
+      "last_checked_at": "2026-10-13T08:53:52+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2505.24298-areal-a-large-scale-asynchronous-reinforcement-learning-system-for-langu.md",
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2502.12110-a-mem-agentic-memory-for-llm-agents.md",
+        "papers/inference/99-other-inference-systems/2023-2307.15337-skeleton-of-thought-prompting-llms-for-efficient-parallel-generation.md",
+        "papers/inference/99-other-inference-systems/2024-2310.03094-large-language-model-cascades-with-mixture-of-thought-representations-fo.md",
+        "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Understanding Agentic AI: Algorithms and Infrastructure"
+    },
+    "arXiv:2603.15500": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2603.15500",
+      "identity_tokens": [
+        "arXiv:2603.15500"
+      ],
+      "reason": "The paper studies strategic information allocation during LLM reasoning under uncertainty; the abstract suggests test-time resource allocation, but a concrete serving, decoding, or systems-efficiency mechanism is not established.",
+      "first_checked_at": "2026-10-13T08:53:53+00:00",
+      "last_checked_at": "2026-10-13T08:53:53+00:00",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2025-2504.15895-dynamic-early-exit-in-reasoning-models.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Understanding Reasoning in LLMs through Strategic Information Allocation under Uncertainty"
+    },
+    "arXiv:2603.06228": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2603.06228",
+      "identity_tokens": [
+        "arXiv:2603.06228"
+      ],
+      "reason": "Spatially sparse linear attention is applied to low-latency event-based object detection; this is a concrete efficient attention method, but the abstract does not establish applicability to LLM/VLM inference.",
+      "first_checked_at": "2026-10-13T08:53:53+00:00",
+      "last_checked_at": "2026-10-13T08:53:53+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md",
+        "papers/inference/99-other-inference-systems/2023-2303.06349-resurrecting-recurrent-neural-networks-for-long-sequences.md",
+        "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md",
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md",
+        "papers/inference/99-other-inference-systems/2024-2312.06635-gated-linear-attention-transformers-with-hardware-efficient-training.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Low-latency Event-based Object Detection with Spatially-Sparse Linear Attention"
+    },
+    "DOI:10.1145/3811839.3811859": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3811839.3811859",
+      "identity_tokens": [
+        "DOI:10.1145/3811839.3811859"
+      ],
+      "reason": "The ACM DOI page for 10.1145/3811839.3811859 could not be retrieved (403 Forbidden), and no publisher abstract was available; the supplied title/metadata suggest generic business decision policy learning but cannot establish the paper-specific contribution.",
+      "first_checked_at": "2026-10-13T08:53:53+00:00",
+      "last_checked_at": "2026-10-13T08:53:53+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2512.20210-predictive-lora-serverless-inference.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Structured State Representation and Constraint-Guided Policy Learning for Intelligent Business Decision Systems"
+    },
+    "DOI:10.1109/tcad.2025.3601526": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/tcad.2025.3601526",
+      "identity_tokens": [
+        "DOI:10.1109/tcad.2025.3601526"
+      ],
+      "reason": "The IEEE Xplore page for DOI 10.1109/TCAD.2025.3601526 was inaccessible; the packet title indicates a transformer CIM accelerator, but no registered-publisher abstract could be verified.",
+      "first_checked_at": "2026-10-13T08:53:57+00:00",
+      "last_checked_at": "2026-10-13T08:53:57+00:00",
+      "linked_from": [
+        "papers/inference/17-pim-near-data-acceleration/2022-392657209cc9-transpim-a-memory-based-acceleration-via-software-hardware-co-design-for.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "COMET-3D: Compute-in-Memory-Based Transformer Accelerator With Optimized Pipeline and 3D Heterogeneous Integration"
+    },
+    "DOI:10.1109/ted.2026.3659106": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/ted.2026.3659106",
+      "identity_tokens": [
+        "DOI:10.1109/ted.2026.3659106"
+      ],
+      "reason": "The IEEE Xplore page for DOI 10.1109/TED.2026.3659106 was inaccessible; the packet title identifies a 3-D DRAM survey, but no registered-publisher abstract was available to verify a relevant memory-system connection.",
+      "first_checked_at": "2026-10-13T08:53:57+00:00",
+      "last_checked_at": "2026-10-13T08:53:57+00:00",
+      "linked_from": [
+        "papers/inference/17-pim-near-data-acceleration/2025-stratum-system-hardware-co-design-with-tiered-monolithic-3d-stackable-dram-for-efficient-moe-serving.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Monolithically Stackable 1T1C 3-D DRAM: A Technical Survey"
+    },
+    "arXiv:2602.20214": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2602.20214",
+      "identity_tokens": [
+        "arXiv:2602.20214"
+      ],
+      "reason": "The abstract describes an auditable execution kernel with capability isolation and energy-budget governance for AI agents and reports latency/throughput; its concrete connection is agent runtime integrity rather than LLM inference efficiency.",
+      "first_checked_at": "2026-10-13T08:53:58+00:00",
+      "last_checked_at": "2026-10-13T08:53:58+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-2403.16971-aios-llm-agent-operating-system.md",
+        "papers/inference/14-agentic-inference-serving-runtime/2026-2602.09345-agentcgroup-understanding-and-controlling-os-resources-of-ai-agents.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Right to History: A Sovereignty Kernel for Verifiable AI Agent Execution"
+    },
+    "arXiv:2602.06039": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2602.06039",
+      "identity_tokens": [
+        "arXiv:2602.06039"
+      ],
+      "reason": "DyTopo routes inter-agent messages over dynamically rebuilt sparse communication graphs and improves reasoning accuracy, but its abstract does not quantify communication-cost or runtime savings.",
+      "first_checked_at": "2026-10-13T08:53:58+00:00",
+      "last_checked_at": "2026-10-13T08:53:58+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md",
+        "papers/inference/12-moe-parallelism-communication/2021-2101.03961-switch-transformers-scaling-to-trillion-parameter-models-with-simple-and.md",
+        "papers/inference/13-sparse-attention/2020-2003.05997-efficient-content-based-sparse-attention-with-routing-transformers.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "DyTopo: Dynamic Topology Routing for Multi-Agent Reasoning via Semantic Matching"
+    },
+    "DOI:10.1016/j.engmed.2026.100123": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.engmed.2026.100123",
+      "identity_tokens": [
+        "DOI:10.1016/j.engmed.2026.100123"
+      ],
+      "reason": "The publisher review surveys medical imaging foundation models and names lightweight edge inference as a future direction, but it does not present a concrete inference/runtime or serving mechanism.",
+      "first_checked_at": "2026-10-13T08:54:00+00:00",
+      "last_checked_at": "2026-10-13T08:54:00+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2201.05596-deepspeed-moe-inference-compression.md",
+        "papers/inference/99-other-inference-systems/2017-1701.06538-outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts.md",
+        "papers/inference/99-other-inference-systems/2024-2401.15947-moe-llava-mixture-of-experts-for-large-vision-language-models.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Foundation models in medical imaging: A review"
+    },
+    "arXiv:2511.13912": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2511.13912",
+      "identity_tokens": [
+        "arXiv:2511.13912"
+      ],
+      "reason": "The abstract co-designs SSMs with compute-in-memory hardware for real-time event vision/audio, a concrete low-energy sequence-compute system but not an LLM inference workload.",
+      "first_checked_at": "2026-10-13T08:54:00+00:00",
+      "last_checked_at": "2026-10-13T08:54:00+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2403.19887-jamba-a-hybrid-transformer-mamba-language-model.md",
+        "papers/inference/19-inference-evaluation-benchmarking/2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md",
+        "papers/inference/99-other-inference-systems/2023-2303.06349-resurrecting-recurrent-neural-networks-for-long-sequences.md",
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md",
+        "papers/inference/99-other-inference-systems/2024-2312.06635-gated-linear-attention-transformers-with-hardware-efficient-training.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Compute-in-memory implementation of state space models for event sequence processing"
+    },
+    "DOI:10.1145/3746252.3761120": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3746252.3761120",
+      "identity_tokens": [
+        "DOI:10.1145/3746252.3761120"
+      ],
+      "reason": "The ACM Digital Library publisher page for DOI 10.1145/3746252.3761120 returned 403 Forbidden, so the primary abstract could not be read; the title suggests legal reasoning but is insufficient for final relevance classification.",
+      "first_checked_at": "2026-10-13T08:54:00+00:00",
+      "last_checked_at": "2026-10-13T08:54:00+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2310.06201-compressing-context-to-enhance-inference-efficiency-of-large-language-mo.md",
+        "papers/inference/99-other-inference-systems/2023-2310.06839-longllmlingua-accelerating-and-enhancing-llms-in-long-context-scenarios-.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "SyLeR: A Framework for Explicit Syllogistic Legal Reasoning in Large Language Models"
+    },
+    "arXiv:2606.06240": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.06240",
+      "identity_tokens": [
+        "arXiv:2606.06240"
+      ],
+      "reason": "TOKI specifies consistency and provenance semantics for persistent agent memory writes; it is a memory-system correctness contribution, while the abstract gives no material inference-efficiency benefit.",
+      "first_checked_at": "2026-10-13T08:54:01+00:00",
+      "last_checked_at": "2026-10-13T08:54:01+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2501.13956-zep-a-temporal-knowledge-graph-architecture-for-agent-memory.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "TOKI: A Bitemporal Operator Algebra for Contradiction Resolution in LLM-Agent Persistent Memory"
+    },
+    "DOI:10.1109/eitce70137.2026.11634378": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/eitce70137.2026.11634378",
+      "identity_tokens": [
+        "DOI:10.1109/eitce70137.2026.11634378"
+      ],
+      "reason": "The IEEE Xplore publisher page for DOI 10.1109/EITCE70137.2026.11634378 could not be retrieved (URL inaccessible through the source fetcher); title and DOI are known, but no registered-publisher abstract was available to verify the claimed KV-cache routing contribution.",
+      "first_checked_at": "2026-10-13T08:54:01+00:00",
+      "last_checked_at": "2026-10-13T08:54:01+00:00",
+      "linked_from": [
+        "papers/inference/10-kv-cache-offload-recomputation/2024-2310.07240-cachegen.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2311.18677-splitwise-efficient-generative-llm-inference-phase-splitting.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.09670-distserve-disaggregating-prefill-decoding-goodput.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2403.02310-sarathi-serve-chunked-prefills-stall-free-scheduling.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2408.15792-efficient-llm-scheduling-learning-to-rank.md",
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "CacheRoute: KV-Cache-Aware Routing for LLM Backend Services on Kubernetes"
     }
   }
 }

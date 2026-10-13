@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-d307c88acc414922-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2602.20214",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2602.20214",
+    "identity_tokens": [
+      "arXiv:2602.20214"
+    ],
+    "reason": "The abstract describes an auditable execution kernel with capability isolation and energy-budget governance for AI agents and reports latency/throughput; its concrete connection is agent runtime integrity rather than LLM inference efficiency.",
+    "first_checked_at": "2026-10-13T08:53:58+00:00",
+    "last_checked_at": "2026-10-13T08:53:58+00:00",
+    "linked_from": [
+      "papers/inference/09-kernel-runtime-compilation/2024-2403.16971-aios-llm-agent-operating-system.md",
+      "papers/inference/14-agentic-inference-serving-runtime/2026-2602.09345-agentcgroup-understanding-and-controlling-os-resources-of-ai-agents.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Right to History: A Sovereignty Kernel for Verifiable AI Agent Execution"
+  },
+  "processed_at": "2026-10-13T08:53:58+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d307c88acc41",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

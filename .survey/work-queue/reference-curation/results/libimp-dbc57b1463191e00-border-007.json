@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-dbc57b1463191e00-border-007",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1109/eitce70137.2026.11634378",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1109/eitce70137.2026.11634378",
+    "identity_tokens": [
+      "DOI:10.1109/eitce70137.2026.11634378"
+    ],
+    "reason": "The IEEE Xplore publisher page for DOI 10.1109/EITCE70137.2026.11634378 could not be retrieved (URL inaccessible through the source fetcher); title and DOI are known, but no registered-publisher abstract was available to verify the claimed KV-cache routing contribution.",
+    "first_checked_at": "2026-10-13T08:54:01+00:00",
+    "last_checked_at": "2026-10-13T08:54:01+00:00",
+    "linked_from": [
+      "papers/inference/10-kv-cache-offload-recomputation/2024-2310.07240-cachegen.md",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2311.18677-splitwise-efficient-generative-llm-inference-phase-splitting.md",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.09670-distserve-disaggregating-prefill-decoding-goodput.md",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2403.02310-sarathi-serve-chunked-prefills-stall-free-scheduling.md",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2408.15792-efficient-llm-scheduling-learning-to-rank.md",
+      "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+      "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "CacheRoute: KV-Cache-Aware Routing for LLM Backend Services on Kubernetes"
+  },
+  "processed_at": "2026-10-13T08:54:01+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-dbc57b146319",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
