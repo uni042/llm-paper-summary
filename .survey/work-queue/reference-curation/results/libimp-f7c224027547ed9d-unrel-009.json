@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-f7c224027547ed9d-unrel-009",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2510.19210",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2510.19210",
+    "identity_tokens": [
+      "arXiv:2510.19210"
+    ],
+    "reason": "MoE-GS applies mixture-of-experts to dynamic Gaussian splatting, an image/graphics application rather than LLM inference or shared serving infrastructure.",
+    "first_checked_at": "2026-10-13T00:49:49+00:00",
+    "last_checked_at": "2026-10-13T00:49:49+00:00",
+    "linked_from": [
+      "papers/inference/12-moe-parallelism-communication/2021-2101.03961-switch-transformers-scaling-to-trillion-parameter-models-with-simple-and.md",
+      "papers/inference/99-other-inference-systems/2017-1701.06538-outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts.md",
+      "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md"
+    ],
+    "title": "MoE-GS: Mixture of Experts for Dynamic Gaussian Splatting"
+  },
+  "processed_at": "2026-10-13T00:49:49+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f7c224027547",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

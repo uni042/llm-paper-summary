@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-f7c224027547ed9d-unrel-007",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2307.01292",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2307.01292",
+    "identity_tokens": [
+      "arXiv:2307.01292"
+    ],
+    "reason": "PSML fingerprints and secures inference-serving systems. The primary abstract establishes a security contribution, not a concrete performance or resource-efficiency mechanism.",
+    "first_checked_at": "2026-10-13T00:49:49+00:00",
+    "last_checked_at": "2026-10-13T00:49:49+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2020-2006.02464-serving-dnns-like-clockwork-performance-predictability-from-the-bottom-u.md"
+    ],
+    "title": "Pareto-Secure Machine Learning (PSML): Fingerprinting and Securing Inference Serving Systems"
+  },
+  "processed_at": "2026-10-13T00:49:49+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f7c224027547",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

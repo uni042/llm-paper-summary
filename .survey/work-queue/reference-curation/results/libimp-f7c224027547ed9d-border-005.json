@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-f7c224027547ed9d-border-005",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2503.09819",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2503.09819",
+    "identity_tokens": [
+      "arXiv:2503.09819"
+    ],
+    "reason": "Attention-guided retrieval improves long-context reasoning quality, but the primary abstract does not establish a concrete serving, memory, or inference-cost reduction.",
+    "first_checked_at": "2026-10-13T00:49:47+00:00",
+    "last_checked_at": "2026-10-13T00:49:47+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md",
+      "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md",
+      "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md",
+      "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Attention Reveals More Than Tokens: Training-Free Long-Context Reasoning with Attention-guided Retrieval"
+  },
+  "processed_at": "2026-10-13T00:49:48+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f7c224027547",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-53164a7c13145a9a-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2410.21338",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2410.21338",
+    "identity_tokens": [
+      "arXiv:2410.21338"
+    ],
+    "reason": "FinTeamExperts uses role-specialized MoEs for financial analysis; the abstract focuses on domain capability, without a measured serving or inference efficiency mechanism.",
+    "first_checked_at": "2026-10-13T00:49:40+00:00",
+    "last_checked_at": "2026-10-13T00:49:40+00:00",
+    "linked_from": [
+      "papers/inference/12-moe-parallelism-communication/2021-2101.03961-switch-transformers-scaling-to-trillion-parameter-models-with-simple-and.md",
+      "papers/inference/99-other-inference-systems/2021-2112.06905-glam-efficient-scaling-of-language-models-with-mixture-of-experts.md",
+      "papers/inference/99-other-inference-systems/2022-2202.08906-st-moe-designing-stable-and-transferable-sparse-expert-models.md",
+      "papers/inference/99-other-inference-systems/2024-2407.06204-a-survey-on-mixture-of-experts-in-large-language-models.md"
+    ],
+    "title": "FinTeamExperts: Role Specialized MOEs For Financial Analysis"
+  },
+  "processed_at": "2026-10-13T00:49:40+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-53164a7c1314",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

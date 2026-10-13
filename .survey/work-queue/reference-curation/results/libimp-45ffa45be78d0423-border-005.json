@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-45ffa45be78d0423-border-005",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2410.09407",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2410.09407",
+    "identity_tokens": [
+      "arXiv:2410.09407"
+    ],
+    "reason": "CAMPHOR studies collaborative on-device agents for planning and reasoning; the abstract gives a plausible edge resource-constrained setting, but does not clearly establish a concrete system-level efficiency mechanism.",
+    "first_checked_at": "2026-10-13T00:49:37+00:00",
+    "last_checked_at": "2026-10-13T00:49:37+00:00",
+    "linked_from": [
+      "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md",
+      "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md",
+      "papers/inference/99-other-inference-systems/2023-2304.08467-learning-to-compress-prompts-with-gist-tokens.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "CAMPHOR: Collaborative Agents for Multi-input Planning and High-Order Reasoning On Device"
+  },
+  "processed_at": "2026-10-13T00:49:37+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-45ffa45be78d",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
