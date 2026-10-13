@@ -1,0 +1,26 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261013-1230-scheduled-chat-30/r01",
+  "reference_main_sha": "969f27e647ee04a3ad473eda3af44b7e50372a47",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2006.16362",
+      "identity_tokens": [
+        "arxiv:2006.16362"
+      ],
+      "title": "Multi-Head Attention: Collaborate Instead of Concatenate",
+      "reason": "一次要旨では、注意ヘッド間で重複するキー・クエリ射影を共有する協調型多頭注意を提案し、事前学習済み注意層を再パラメータ化して同等精度・速度でキー/クエリ射影を4分の1にできると報告する。モデル重みの圧縮には直接関連するが、主貢献は注意層の構造と学習済み重みの表現変更であり、推論基盤のメモリ管理やサービング処理の最適化ではない。",
+      "source_url": "https://arxiv.org/abs/2006.16362",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T12:36:40+09:00",
+      "last_checked_at": "2026-10-13T12:36:40+09:00",
+      "linked_from": [],
+      "worklist_rank": 9,
+      "origin": "research_prescreen_relevance"
+    }
+  ]
+}
