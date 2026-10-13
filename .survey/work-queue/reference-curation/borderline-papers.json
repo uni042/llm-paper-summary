@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-13T07:25:21+00:00",
-  "record_count": 4819,
+  "updated_at": "2026-10-13T07:26:47+00:00",
+  "record_count": 4827,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -73704,6 +73704,139 @@
       ],
       "borderline_recheck_count": 0,
       "title": "Graph Spatiotemporal Attention-Based Collaborative Demand Forecasting for Multi-Level Supply Chains"
+    },
+    "arXiv:2603.25406": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2603.25406",
+      "identity_tokens": [
+        "arXiv:2603.25406"
+      ],
+      "reason": "The abstract describes a diffusion VLA model and parallel refinement for robotics, but provides no concrete inference-efficiency, serving, or systems benchmark result.",
+      "first_checked_at": "2026-10-13T07:26:43+00:00",
+      "last_checked_at": "2026-10-13T07:26:43+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2025-2506.06295-dllm-cache-adaptive-caching.md",
+        "papers/inference/99-other-inference-systems/2025-2508.15487-dream-7b-diffusion-large-language-models.md",
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "MMaDA-VLA: Large Diffusion Vision-Language-Action Model with Unified Multi-Modal Instruction and Generation"
+    },
+    "DOI:10.1016/j.acalib.2026.103218": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.acalib.2026.103218",
+      "identity_tokens": [
+        "DOI:10.1016/j.acalib.2026.103218"
+      ],
+      "reason": "The official publisher abstract route failed. The supplied title concerns GenAI governance in academic libraries and does not establish an inference-systems connection.",
+      "first_checked_at": "2026-10-13T07:26:43+00:00",
+      "last_checked_at": "2026-10-13T07:26:43+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md",
+        "papers/inference/19-inference-evaluation-benchmarking/2023-2310.03003-from-words-to-watts-benchmarking-the-energy-costs-of-large-language-mode.md",
+        "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2023-2305.11627-llm-pruner-on-the-structural-pruning-of-large-language-models.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "A strategic framework for responsible GenAI adoption: Balancing sustainability and institutional risks in academic libraries"
+    },
+    "DOI:10.1016/j.array.2026.100739": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.array.2026.100739",
+      "identity_tokens": [
+        "DOI:10.1016/j.array.2026.100739"
+      ],
+      "reason": "The publisher abstract could not be retrieved. A broad VLM architecture review might include efficient inference designs, but the title alone leaves the systems relevance uncertain.",
+      "first_checked_at": "2026-10-13T07:26:44+00:00",
+      "last_checked_at": "2026-10-13T07:26:44+00:00",
+      "linked_from": [
+        "papers/inference/15-inference-simulation-emulation/2024-2409.12514-tinyvla-towards-fast-data-efficient-vision-language-action-models-for-ro.md",
+        "papers/inference/99-other-inference-systems/2024-2401.15947-moe-llava-mixture-of-experts-for-large-vision-language-models.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "A systematic review of vision language models: Comprehensive analysis of architectures, applications, datasets and challenges towards robust multimodal intelligence"
+    },
+    "DOI:10.1016/j.ese.2026.100684": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.ese.2026.100684",
+      "identity_tokens": [
+        "DOI:10.1016/j.ese.2026.100684"
+      ],
+      "reason": "The official publisher abstract route failed. Sustainable prompt engineering could relate to inference energy, but no primary abstract evidence was available to establish that link.",
+      "first_checked_at": "2026-10-13T07:26:44+00:00",
+      "last_checked_at": "2026-10-13T07:26:44+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2412.19442-a-survey-on-large-language-model-acceleration-based-on-kv-cache-manageme.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2311.18677-splitwise-efficient-generative-llm-inference-phase-splitting.md",
+        "papers/inference/99-other-inference-systems/2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md",
+        "papers/survey/07-speculative-decoding/2024-2401.07851-speculative-decoding-survey.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Green prompt engineering for sustainable generative AI"
+    },
+    "DOI:10.1109/mcom.001.2500258": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/mcom.001.2500258",
+      "identity_tokens": [
+        "DOI:10.1109/mcom.001.2500258"
+      ],
+      "reason": "The official IEEE abstract route failed. Distributed 6G management/orchestration may involve edge systems, but the supplied title does not confirm an LLM inference or serving contribution.",
+      "first_checked_at": "2026-10-13T07:26:47+00:00",
+      "last_checked_at": "2026-10-13T07:26:47+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2403.09636-dynamic-memory-compression-retrofitting-llms-for-accelerated-inference.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "DMO-GPT: An Intent-Driven Framework for Distributed 6G Management and Orchestration"
+    },
+    "DOI:10.1038/s41598-025-29370-y": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1038/s41598-025-29370-y",
+      "identity_tokens": [
+        "DOI:10.1038/s41598-025-29370-y"
+      ],
+      "reason": "The official publisher abstract route failed. Trust-aware mobile-edge healthcare optimization is adjacent to edge systems, but the title does not verify a connection to LLM inference efficiency.",
+      "first_checked_at": "2026-10-13T07:26:47+00:00",
+      "last_checked_at": "2026-10-13T07:26:47+00:00",
+      "linked_from": [
+        "papers/survey/09-edge-llm/2025-2410.11845-edge-llm-review.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "AI-embedded IoT healthcare optimization with trust-aware mobile edge computing"
+    },
+    "DOI:10.1038/s41598-025-31896-0": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1038/s41598-025-31896-0",
+      "identity_tokens": [
+        "DOI:10.1038/s41598-025-31896-0"
+      ],
+      "reason": "The publisher abstract route was blocked by Nature/DOI redirection. LLM decoding energy is a plausible target-systems connection, but the primary abstract could not be independently read in this run.",
+      "first_checked_at": "2026-10-13T07:26:47+00:00",
+      "last_checked_at": "2026-10-13T07:26:47+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2022-2211.17192-speculative-decoding.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2408.00741-dynamollm.md",
+        "papers/inference/99-other-inference-systems/2021-2104.04473-efficient-large-scale-language-model-training-on-gpu-clusters-using-mega.md",
+        "papers/inference/99-other-inference-systems/2024-ad611bbc0cdc-characterizing-power-management-opportunities-for-llms-in-the-cloud.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Impact of decoding strategies on GPU energy usage in large language model text generation"
+    },
+    "DOI:10.1145/3769799": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3769799",
+      "identity_tokens": [
+        "DOI:10.1145/3769799"
+      ],
+      "reason": "The ACM abstract route could not be retrieved. The supplied title suggests GPU kernels and high-throughput vector search that could support AI retrieval, but the primary abstract was unavailable for confirmation.",
+      "first_checked_at": "2026-10-13T07:26:47+00:00",
+      "last_checked_at": "2026-10-13T07:26:47+00:00",
+      "linked_from": [
+        "papers/inference/10-kv-cache-offload-recomputation/2024-2310.07240-cachegen.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "High-Throughput, Cost-Effective Billion-Scale Vector Search with a Single GPU"
     }
   }
 }

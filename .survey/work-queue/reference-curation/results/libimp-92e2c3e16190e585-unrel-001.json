@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-92e2c3e16190e585-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2601.10242",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2601.10242",
+    "identity_tokens": [
+      "arXiv:2601.10242"
+    ],
+    "reason": "The abstract analyzes representation and output behavior in looped transformers, without an inference-efficiency or systems contribution.",
+    "first_checked_at": "2026-10-13T07:26:48+00:00",
+    "last_checked_at": "2026-10-13T07:26:48+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2025-2507.10524-mixture-of-recursions-learning-dynamic-recursive-depths-for-adaptive-tok.md",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+    ],
+    "title": "Loop as a Bridge: Can Looped Transformers Truly Link Representation Space and Natural Language Outputs?"
+  },
+  "processed_at": "2026-10-13T07:26:48+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-92e2c3e16190",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
