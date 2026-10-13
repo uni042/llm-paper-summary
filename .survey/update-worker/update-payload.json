@@ -1,83 +1,52 @@
 {
   "schema_version": 1,
-  "attempt_id": "library-import-20261012-maint-0830-three-days-batch01",
+  "attempt_id": "library-import-20261013-0830-20261013T110045698Z",
   "kind": "framework_llm_update",
   "artifacts": [
     {
       "path": "framework-updates/inference-engines/llama-cpp/README.md",
-      "expected_blob_sha": "8e090954899c35868a3f053e3f5b3bf231f4a63d",
+      "expected_blob_sha": "d42801489f6127d476579c26a545e09dea53ede3",
       "edits": [
         {
           "op": "insert_after_once",
           "anchor": "## 主要更新\n\n",
-          "text": "### 2026-10-12 — llama.cpp b11559 / b11558：OpenCL改善\n- b11559: OpenCL版FlashAttentionがkey次元512とGQA4/GQA8に対応。gpt-oss-20b MXFP4のOpenCL限定ベンチマークでは16.59→29.01トークン/秒（1.75倍）。**NVIDIA CUDAへ同倍率を外挿しない**。[公式版](https://github.com/ggml-org/llama.cpp/releases/tag/b11559)、[PR #30266](https://github.com/ggml-org/llama.cpp/pull/30266)。\n- b11558: OpenCL版の巨大量子化重み、ブロードキャストとRMSNormの不整合を修正。速度の定量値は未報告。[公式版](https://github.com/ggml-org/llama.cpp/releases/tag/b11558)、[PR #30310](https://github.com/ggml-org/llama.cpp/pull/30310)。\n\n### 2026-10-11 — llama.cpp b11554〜b11556：新モデルとMoE\n- b11556: Prism Bonsai 2 27Bの重み変換・読み込みに対応。ただし配布形式の全てで標準版完全互換を実証したものではない。[PR #29600](https://github.com/ggml-org/llama.cpp/pull/29600)。\n- b11555: AVX2 CPU上のF16C命令判定修正。CUDAの速度改善とは別。[PR #30270](https://github.com/ggml-org/llama.cpp/pull/30270)。\n- b11554: VulkanのMoE重複expert ID処理を効率化。報告速度改善は約1%でありCUDAに適用できない。[PR #29998](https://github.com/ggml-org/llama.cpp/pull/29998)。\n\n### 2026-10-10〜11 — llama.cpp b11538 / b11540 / b11541 / b11551 / b11552\n- b11552: 並列要求で利用中のスロットのプロンプトキャッシュを誤上書きし得る問題を修正。[PR #30295](https://github.com/ggml-org/llama.cpp/pull/30295)。\n- b11551: MiniCPM-V 4.7の画像・動画入力向け3D RoPE等を先行実装。[PR #29416](https://github.com/ggml-org/llama.cpp/pull/29416)。\n- b11540: Intel Arc / SYCL / MXFP4 MoEの限定条件でデコード1.91〜2.02倍。NVIDIA CUDAでの改善を意味しない。[PR #29809](https://github.com/ggml-org/llama.cpp/pull/29809)。\n- b11541: OpenCL低ビットMoE行列積の更新。[公式版](https://github.com/ggml-org/llama.cpp/releases/tag/b11541)。\n- b11538: Windows MSVC/CUDAで丸め一致性を修正。生成速度の向上は未検証。[PR #30229](https://github.com/ggml-org/llama.cpp/pull/30229)。\n- Windows MLとllama.cpp/GGUFの実験的統合（10月7日）。既存CLIの自動置換ではない。[Microsoft公式](https://devblogs.microsoft.com/foundry-on-windows/build-on-winml-oct-7-26/)。\n\n"
+          "text": "### 2026-10-13 — llama.cpp b11569〜b11577：MoE・CUDA注意・判定モデル対応\n- **b11569（10/12公開）**: Metal版の専門家混合（MoE）行列積 `MUL_MAT_ID` で同一専門家IDが重複する場合の出力不整合を修正し、不要な起動タイルを削減。限定ベンチマークでは入力処理が約0.5〜2%向上、逐次生成はほぼ不変。**Metal限定でありWindows CUDAの高速化とは別**。[公式版](https://github.com/ggml-org/llama.cpp/releases/tag/b11569)\n- **b11572／b11577**: vLLM D3系の判定モデル対応を追加し、後続版で複数系列の問題を修正。一般の会話モデル全体の速度改善ではない。[b11572](https://github.com/ggml-org/llama.cpp/releases/tag/b11572)／[b11577](https://github.com/ggml-org/llama.cpp/releases/tag/b11577)\n- **b11576（10/13公開）**: head size 512のキャッシュなし注意機構でCUDA `FLASH_ATTN_EXT` がCPUへフォールバックすることがある不具合を、鍵・値とマスクのパディングにより修正。対象形状でのみGPU経路回復を見込める。Windows向けCUDA配布物もあるが、一般モデルの一律高速化倍率は未報告。[公式版](https://github.com/ggml-org/llama.cpp/releases/tag/b11576)\n- **b11574**: Snapdragon Hexagon NPU向けコピー・連結等を最適化し、メモリ同期の問題も修正。**NVIDIA CUDAには直接適用されない**。[公式版](https://github.com/ggml-org/llama.cpp/releases/tag/b11574)\n\n"
         }
       ]
     },
     {
       "path": "framework-updates/inference-engines/ollama/README.md",
-      "expected_blob_sha": "47817b5e60dbaec18d4be20bc90ebbdda05203bf",
+      "expected_blob_sha": "7c8785f733bffa304a0722f151be70cc30fcbf00",
       "edits": [
         {
           "op": "insert_after_once",
           "anchor": "## 主要更新\n\n",
-          "text": "### 2026-10-11 — Ollama v0.40.3：モデル自動移行を一時停止\n- v0.40.2で導入した既存モデルのバックグラウンド互換性移行は、埋め込みモデルなどでのAPI要求・GC負荷を避けるため一時停止。生成速度やVRAMの普遍的改善値は未報告。[公式版](https://github.com/ollama/ollama/releases/tag/v0.40.3)、[PR #18908](https://github.com/ollama/ollama/pull/18908)。\n\n### 2026-10-09 — Ollama v0.40.2：ローカルモデル形式移行\n- 形式移行とバックアップにより一時的にディスク容量を消費し得る。**v0.40.3では自動移行が一時停止中**のため現行動作と区別する。[公式版](https://github.com/ollama/ollama/releases/tag/v0.40.2)。\n\n"
+          "text": "### 2026-10-13 — Ollama v0.40.4-rc0（公開候補版）\n- 内蔵llama.cppをb11521へ更新し、判定モデルとEmbeddingGemma 2の対応を追加。モデル情報・読み込み済みモデルの再利用、Apple SiliconのMLXで投機的復号の巻き戻し後の再帰状態を圧縮する処理、Codex上のローカルモデル表示なども含む。\n- **安定版ではない**。内蔵b11521はllama.cpp単独版b11577とは異なる。MLX更新による性能をWindows CUDAへ外挿しない。全モデル共通の実測速度倍率は未報告。[公式候補版](https://github.com/ollama/ollama/releases/tag/v0.40.4-rc0)\n\n"
         }
       ]
     },
     {
-      "path": "framework-updates/inference-engines/exllama/README.md",
-      "expected_blob_sha": "ed9b697b03e8cdc7c51a801e425f9ceb58798906",
+      "path": "framework-updates/inference-engines/vllm/README.md",
+      "expected_blob_sha": "a40eb62aff0d8ce767b7a279d104cd2b0bf2a9b2",
       "edits": [
         {
           "op": "insert_after_once",
           "anchor": "## 主要更新\n\n",
-          "text": "### 2026-10-11 — ExLlamaV3 v1.6.1\n- GDN/KDA/Mambaドラフトの固定VRAM負荷を削減し、再帰型ドラフト、DFlashのスライディング注意、ドラフトとlong-ngramの混合投機的復号などを追加。Windows 11 / RTX 4070 SUPERでの速度・メモリ節約量は未確認。[公式版](https://github.com/turboderp-org/exllamav3/releases/tag/v1.6.1)。\n\n"
+          "text": "### 2026-10-12 — ReplaySSM：状態空間モデルの再帰状態保持最適化（研究・統合進展）\n- 状態空間モデル（SSM）の再帰状態を定期的な状態保存と直近入力のバッファへ分け、毎トークンの巨大状態書き戻しを減らす。投機的復号で候補を棄却するときは入力バッファの位置を巻き戻す。再帰的な量子化誤差を防ぐ高精度状態と低精度読み出し複製も提案。\n- B300/H100等の**限定条件**ではバッチ256のカーネル1.46〜1.80倍、復号ステップ全体1.20〜1.47倍、バッチ512の120B級で投機的復号処理量が既存vLLM比1.85〜2.10倍。**バッチ1では改善なし**。\n- 上流vLLMへの統合はMamba2の標準復号経路が中心。GDN・投機的復号の一部は未統合の公開プルリクエストや研究用分岐にあり、全機能が標準安定版ですぐ利用できるわけではない。[NVIDIA解説](https://developer.nvidia.com/blog/replayssm-rethinking-state-storage-for-faster-hybrid-model-decoding/)／[論文](https://arxiv.org/abs/2610.13778)／[実装](https://github.com/Johnny-Liou/ReplaySSM)\n\n"
         }
       ]
     },
     {
-      "path": "llm-releases/gemma.md",
-      "expected_blob_sha": "987b13d1f4446b6aa0c4a8b8eb4faa6aaf67e9b8",
+      "path": "framework-updates/inference-engines/tensorrt-llm/README.md",
+      "expected_blob_sha": "eec1cb2067e80e42913b4ce451bfc1f54ccee654",
       "edits": [
         {
           "op": "insert_after_once",
-          "anchor": "|---|---|---|---|\n",
-          "text": "| 2026-10-06 | EmbeddingGemma 2 | Gemma 4系のマルチモーダル埋め込みモデル（総約7.4億パラメータ、768次元、文脈8192）。768/512/256/128次元に対応。FP16ではNaN・精度低下の懸念があり、公式はBF16/FP32を推奨。生成LLMではなく検索・分類向け。 | https://huggingface.co/google/embeddinggemma-2 |\n"
+          "anchor": "## 主要更新\n\n",
+          "text": "### 2026-10-12 — ReplaySSMの再帰状態最適化（研究・統合状況）\n- SSMの状態更新を定期保存・入力バッファ再生で代替し、投機的復号の巻き戻しと低精度状態読み出しを高速化する研究。NVIDIAの技術記事でTensorRT-LLMを含む関連基盤への適用を紹介。\n- B300/H100等で大規模バッチの復号ステップが最大1.47倍、対象120B級の投機的復号が1.85〜2.10倍という**研究評価**であり、**バッチ1では改善なし**。標準安定版のTensorRT-LLM全モデル・全経路で同倍率が利用可能という意味ではない。[NVIDIA解説](https://developer.nvidia.com/blog/replayssm-rethinking-state-storage-for-faster-hybrid-model-decoding/)／[原著](https://arxiv.org/abs/2610.13778)／[実装](https://github.com/Johnny-Liou/ReplaySSM)\n\n"
         }
       ]
-    },
-    {
-      "path": "llm-releases/mistral.md",
-      "expected_blob_sha": "a85eb9e8d191b788da6084d71056dd80cab64259",
-      "edits": [
-        {
-          "op": "replace_once",
-          "old": "1T total / 49B activeのnative multimodal flagship。2026-10-07時点ではAPIのpublic previewが利用可能で、model weightsは10月末公開予定のためopen-weight配布済みとは扱わない。",
-          "new": "約1.05T total / 52B activeのnative multimodal flagship（2026-10-12公式情報再照合）。APIのpublic previewが利用可能で、model weightsは10月末公開予定のためopen-weight配布済みとは扱わない。"
-        }
-      ]
-    },
-    {
-      "path": "framework-updates/README.md",
-      "expected_blob_sha": "35b363e0910203061e804616de4f5c6b06894ff0",
-      "edits": [
-        {
-          "op": "replace_once",
-          "old": "- フレームワーク差分の最終確認: **2026-10-09**",
-          "new": "- フレームワーク差分の最終確認: **2026-10-12**"
-        },
-        {
-          "op": "insert_after_once",
-          "anchor": "## 最新更新\n\n",
-          "text": "### 2026-10-10〜12 — 推論基盤・モデル更新\n- **Ollama v0.40.3**: v0.40.2の自動モデル移行を処理負荷対策で一時停止。[Ollama](inference-engines/ollama/)\n- **llama.cpp b11538〜b11559**: Windowsの丸め修正、Intel SYCLのMoE最適化、OpenCL FlashAttention、MiniCPM-V 4.7先行対応、並列サーバー整合性など。限定環境の実測値をCUDAへ外挿しない。[llama.cpp](inference-engines/llama-cpp/)\n- **ExLlamaV3 v1.6.1**: ドラフトとVRAM管理を更新。Windows RTX 4070 SUPER実測は未確認。[ExLlama](inference-engines/exllama/)\n- **モデル**: EmbeddingGemma 2の重み公開、Mistral Large 4の有効520億パラメータの正式情報、MiniCPM-V 4.7のチェックポイント確認を反映。[Gemma](../llm-releases/gemma.md) / [Mistral](../llm-releases/mistral.md) / [MiniCPM](../llm-releases/minicpm.md)\n\n"
-        }
-      ]
-    },
-    {
-      "path": "llm-releases/minicpm.md",
-      "content": "# MiniCPM系モデルの公開情報\n\n公式チェックポイントと推論器の先行対応を区別して記録する。\n\n| 確認日 | モデル | 公開状況・留保 | 公式リンク |\n|---|---|---|---|\n| 2026-10-12 | MiniCPM-V 4.7 35B-A3B | OpenBMBの公式BF16チェックポイントを確認。モデルカード未掲載のためライセンス・性能・文脈長・厳密な有効パラメータ数は未検証。**確認日は公開日を意味しない**。llama.cpp b11551の対応を全形式の完全動作保証と扱わない。 | https://huggingface.co/openbmb/MiniCPM-V-4.7-35B-A3B |\n"
     }
   ],
-  "summary": "Consolidate 2026-10-10 to 2026-10-12 Library maintenance updates across 7 framework/LLM files"
+  "summary": "2026-10-13 08:30 JST Library updates: llama.cpp b11569-11577, Ollama v0.40.4-rc0, ReplaySSM integration status"
 }
