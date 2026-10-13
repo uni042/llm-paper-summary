@@ -1,0 +1,235 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Beyond Confidence: Adaptive and Coherent Decoding for Diffusion Language Models",
+      "source_url": "https://arxiv.org/abs/2512.02044",
+      "year": 2025,
+      "published": "2025-11-26",
+      "venue": "arXiv.org",
+      "citation_count": 10,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Diffusion Language Models (DLMs) have recently achieved significant success due to their any-order generation capabilities. However, existing inference methods typically rely on local, immediate-step metrics such as confidence or entropy which inherently lack a more reliable perspective. This limitation frequently leads to inconsistent sampling trajectories and suboptimal generation quality. To address this, we propose Coherent Contextual Decoding (CCD), a novel inference framework built upon two core innovations. First, CCD employs a trajectory rectification mechanism that leverages historical context to enhance sequence coherence, enabling the early rejection of suboptimal paths. We demonstrate that this mechanism is theoretically equivalent to modeling the consistency of historical steps via the conditional mutual information between context and token predictions. Building on this theoretical insight, we further address the inefficiency of conventional uniform decoding budgets. Instead of rigid allocations based on diffusion steps, we introduce an adaptive sampling strategy that dynamically adjusts the unmasking budget for each step according to our consistency metric. Consequently, our method significantly improves the quality of generation trajectories while accelerating the sampling process. Empirically, our method achieves a simultaneous enhancement in both inference speed and performance across diverse benchmarks on Dream and LLaDA, delivering up to 3.48x speedup alongside 3.91% performance improvement.",
+      "identifiers": [
+        "SemanticScholar:f77ba99099e53a6accfd14b15e15cbe6b016a2a6"
+      ],
+      "semantic_scholar_id": "f77ba99099e53a6accfd14b15e15cbe6b016a2a6",
+      "canonical_id": "arXiv:2512.02044",
+      "arxiv_id": "2512.02044",
+      "doi": "10.48550/arXiv.2512.02044",
+      "authors": [
+        "Ke Chen",
+        "Zi-Rui Liu",
+        "Xi-Jia Tao",
+        "Hui Liu",
+        "Xin-Yu Fu",
+        "Sui-Yun Zhang",
+        "Dandan Tu",
+        "Lingpeng Kong",
+        "Rui Liu",
+        "Hao-Liang Li"
+      ],
+      "priority": 110,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 10,
+        "citation_count": 10,
+        "total": 110,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 321,
+        "matched_prestigious_venue": null
+      },
+      "reason": "CCD rectifies diffusion-language-model sampling trajectories and adaptively budgets unmasking steps; the abstract reports up to 3.48x faster inference.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Skip a Layer or Loop It? Learning Program-of-Layers in LLMs",
+      "source_url": "https://arxiv.org/abs/2606.06574",
+      "year": 2026,
+      "published": "2026-06-04",
+      "venue": "arXiv.org",
+      "citation_count": 10,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLMs) perform inference by following a fixed depth and order, non-recurrent execution of all layers. We reveal the wide existence of training-free, flexible, dynamic program-of-layers (PoLar), where pretrained layers can be packed as modules and then skipped or looped to form a customized program for each input. For most inputs, substantially shorter program executions can achieve the same or better accuracy, while incorrect predictions of the original LLM can be corrected by alternative programs with fewer layers. These observations indicate that inference admits multiple valid latent computations beyond the standard forward pass. To efficiently achieve PoLar in practice, we propose a lightweight PoLar prediction network, which learns to generate execution programs that dynamically skip or repeat pretrained layers for each input. Experiments on mathematical reasoning benchmarks demonstrate that PoLar consistently improves accuracy over standard inference and prior dynamic-depth methods, often while executing fewer layers, and that these gains persist under out-of-distribution evaluation. Our results suggest that fixed-depth execution captures only a narrow subset of an LLM's latent reasoning capacity.",
+      "identifiers": [
+        "SemanticScholar:89d20514985e9b5eaf5353a844d7e87db0f53734"
+      ],
+      "semantic_scholar_id": "89d20514985e9b5eaf5353a844d7e87db0f53734",
+      "canonical_id": "arXiv:2606.06574",
+      "arxiv_id": "2606.06574",
+      "doi": "10.48550/arXiv.2606.06574",
+      "authors": [
+        "Zi-Yue Li",
+        "Yang Li",
+        "Tianyi Zhou"
+      ],
+      "priority": 110,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 10,
+        "citation_count": 10,
+        "total": 110,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 131,
+        "matched_prestigious_venue": null
+      },
+      "reason": "PoLar dynamically skips or repeats pretrained LLM layers per input and reports comparable or better accuracy with fewer executed layers, directly targeting inference compute.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Fast and Expressive Multi-Byte Prediction with Probabilistic Circuits",
+      "source_url": "https://arxiv.org/abs/2511.11346",
+      "year": 2025,
+      "published": "2025-11-14",
+      "venue": null,
+      "citation_count": 9,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Multi-token prediction (MTP) is a prominent strategy to significantly speed up generation in large language models (LLMs), especially in byte-level LLMs, which are tokeniser-free but prohibitively slow. However, many existing MTP methods either assume independence between future tokens, sacrificing expressiveness, or generate tokens one at a time within the window, increasing latency. In this work, we investigate the trade-off between expressiveness and latency in MTP within the framework of probabilistic circuits (PCs). Our framework, MTPC, allows one to explore different ways to encode the joint distributions over future tokens by selecting circuit architectures, generalising classical models such as (hierarchical) mixture models, hidden Markov models, and tensor networks. We show the efficacy of MTPC by retrofitting existing byte-level LLMs, such as EvaByte, and byte-fied subword models, such as Llama3.2 3B. Our experiments show that, when combined with speculative decoding, MTPC substantially speeds up generation compared to MTP with independence assumptions, while guaranteeing to retain the performance of the original verifier LLM. We also rigorously study the optimal trade-off between expressiveness and latency when exploring the possible parameterisations of MTPC, such as PC architectures and partial layer sharing between the verifier and draft LLMs.",
+      "identifiers": [
+        "SemanticScholar:6b92c06f28784c64d1567f57423f19786aa7f873"
+      ],
+      "semantic_scholar_id": "6b92c06f28784c64d1567f57423f19786aa7f873",
+      "canonical_id": "arXiv:2511.11346",
+      "arxiv_id": "2511.11346",
+      "authors": [
+        "Andreas Grivas",
+        "Lorenzo Loconte",
+        "Emile van Krieken",
+        "Piotr Nawrot",
+        "Yu Zhao",
+        "Euan Wielewski",
+        "Pasquale Minervini",
+        "E. Ponti",
+        "Antonio Vergari"
+      ],
+      "priority": 109,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 9,
+        "citation_count": 9,
+        "total": 109,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 333,
+        "matched_prestigious_venue": null
+      },
+      "reason": "MTPC models joint future-byte distributions for multi-token prediction and reports faster generation with speculative decoding while preserving verifier performance.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Optimal Self-Consistency for Efficient Reasoning with Large Language Models",
+      "source_url": "https://arxiv.org/abs/2511.12309",
+      "year": 2025,
+      "published": "2025-11-15",
+      "venue": "arXiv.org",
+      "citation_count": 9,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Self-consistency (SC) is a widely used test-time inference technique for improving performance in chain-of-thought reasoning. It consists of generating multiple responses, or ``samples\", from a large language model (LLM) and selecting the most frequent answer. This procedure can naturally be viewed as a majority vote or empirical mode estimation. Despite its effectiveness, self-consistency is prohibitively expensive at scale when naively applied to datasets, and it lacks a unified theoretical understanding of sample efficiency and scaling behavior. In this paper, we provide the first comprehensive analysis of SC's scaling behavior and its variants, drawing on mode estimation and voting theory. We derive and empirically validate power law scaling for self-consistency across datasets, and analyze the sample efficiency for fixed-allocation and dynamic-allocation sampling schemes. From these insights, we introduce Blend-ASC, a novel variant of self-consistency that dynamically allocates samples to questions during inference, achieving state-of-the-art sample efficiency. Our approach uses 4.8 times fewer samples than vanilla SC on average, outperforming both fixed- and dynamic-allocation SC baselines, thereby demonstrating the superiority of our approach in terms of efficiency. In contrast to existing variants, we note that Blend-ASC is hyperparameter-free, supports batching, and can fit any budget of samples, ensuring it can be easily applied to any self-consistency application.",
+      "identifiers": [
+        "SemanticScholar:316cdfe851a54d205268ef660021084c2f94a0d5"
+      ],
+      "semantic_scholar_id": "316cdfe851a54d205268ef660021084c2f94a0d5",
+      "canonical_id": "arXiv:2511.12309",
+      "arxiv_id": "2511.12309",
+      "doi": "10.48550/arXiv.2511.12309",
+      "authors": [
+        "A. Feng",
+        "Marius Alonso",
+        "Ambroise Odonnat",
+        "Vasilii Feofanov",
+        "I. Redko"
+      ],
+      "priority": 109,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 9,
+        "citation_count": 9,
+        "total": 109,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 332,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Blend-ASC allocates self-consistency samples dynamically and uses 4.8x fewer samples on average, directly reducing test-time LLM reasoning work.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Leveraging historical information to boost retrieval-augmented generation in conversations",
+      "source_url": "https://doi.org/10.1016/j.ipm.2025.104449",
+      "year": 2026,
+      "published": "2026-03-01",
+      "venue": "Information Processing & Management",
+      "citation_count": 9,
+      "citation_count_source": "semantic_scholar",
+      "abstract": null,
+      "identifiers": [
+        "SemanticScholar:b5f42632997f7f9ee9728eac077aefa122c62fd2"
+      ],
+      "semantic_scholar_id": "b5f42632997f7f9ee9728eac077aefa122c62fd2",
+      "doi": "10.1016/j.ipm.2025.104449",
+      "canonical_id": "DOI:10.1016/j.ipm.2025.104449",
+      "authors": [
+        "Fengran Mo",
+        "Yi-Fan Gao",
+        "Zhuofeng Wu",
+        "Xin Liu",
+        "Pei Chen",
+        "Zheng Li",
+        "Zhengyang Wang",
+        "Xian Li",
+        "Meng Jiang",
+        "Jian-yun Nie"
+      ],
+      "priority": 109,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 9,
+        "citation_count": 9,
+        "total": 109,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 226,
+        "matched_prestigious_venue": null
+      },
+      "reason": "The primary abstract proposes training-free ways to reuse prior search results and conversational history in RAG, directly addressing context handling and retrieval-generation efficiency in an LLM-backed system.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-dbc57b146319",
+    "round": "libimp-dbc57b1463191e00-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 12,
+    "round_submission_count": 3,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-dbc57b1463191e00-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-dbc57b1463191e00-pre01.json",
+    "receipt": "sha256:f583edfe2ed123c1f6cf651f99319949a9fefffb04d015ecf717b24a95ea2901"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-dbc57b146319",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

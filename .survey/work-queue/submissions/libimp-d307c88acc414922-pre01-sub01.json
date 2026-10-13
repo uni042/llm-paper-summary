@@ -1,0 +1,105 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "SweetSpot: An Analytical Model for Predicting Energy Efficiency of LLM Inference",
+      "source_url": "https://arxiv.org/abs/2602.05695",
+      "year": 2026,
+      "published": "2026-02-05",
+      "venue": "International Conference on Performance Engineering",
+      "citation_count": 8,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Models (LLMs) inference is central to modern AI applications, dominating worldwide datacenter workloads, making it critical to predict its energy footprint. Existing approaches estimate energy consumption as a simple linear function of input and output sequence. However, by analyzing the autoregressive structure of Transformers, which implies a fundamentally non-linear relationship between input and output sequence lengths and energy consumption, we demonstrate the existence of a generation energy minima. Peak efficiency occurs with short-to-moderate inputs and medium-length outputs, while efficiency drops sharply for long inputs or very short outputs. Consequently, we propose SweetSpot, an analytical model derived from the computational and memory-access complexity of the Transformer architecture, which accurately characterizes the efficiency curve as a function of input and output lengths. To assess accuracy, we measure energy consumption using TensorRT-LLM on NVIDIA H100 GPUs across a diverse set of LLMs ranging from 1B to 9B parameters, including OPT, LLaMA, Gemma, Falcon, Qwen2, and Granite. We test input and output lengths from 64 to 4096 tokens and achieve a mean MAPE of 1.79%. Our results show that aligning sequence lengths with these efficiency ''sweet spots'' reduce energy usage, up to 33.41x, enabling informed truncation, summarization, and adaptive generation strategies in production systems.",
+      "identifiers": [
+        "SemanticScholar:9550415314824eb06a46c1a81d62d054f681987c"
+      ],
+      "semantic_scholar_id": "9550415314824eb06a46c1a81d62d054f681987c",
+      "canonical_id": "arXiv:2602.05695",
+      "arxiv_id": "2602.05695",
+      "doi": "10.1145/3777884.3797011",
+      "authors": [
+        "Hiari Pizzini Cavagna",
+        "Andrea Proia",
+        "Giacomo Madella",
+        "Giovanni B. Esposito",
+        "Francesco Antici",
+        "Daniele Cesarini",
+        "Z. Kiziltan",
+        "Andrea Bartolini"
+      ],
+      "priority": 108,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 8,
+        "citation_count": 8,
+        "total": 108,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 250,
+        "matched_prestigious_venue": null
+      },
+      "reason": "SweetSpot models LLM inference energy across prompt and output lengths and validates it on TensorRT-LLM/H100, providing a systems benchmark/model for energy-aware deployment.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "WildCat: Near-Linear Attention in Theory and Practice",
+      "source_url": "https://arxiv.org/abs/2602.10056",
+      "year": 2026,
+      "published": "2026-02-10",
+      "venue": "arXiv.org",
+      "citation_count": 8,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "We introduce WildCat, a high-accuracy, low-cost approach to compressing the attention mechanism in neural networks. While attention is a staple of modern network architectures, it is also notoriously expensive to deploy due to resource requirements that scale quadratically with the input sequence length $n$. WildCat avoids these quadratic costs by only attending over a small weighted coreset. Crucially, we select the coreset using a fast but spectrally-accurate subsampling algorithm -- randomly pivoted Cholesky -- and weight the elements optimally to minimise reconstruction error. Remarkably, given bounded inputs, WildCat approximates exact attention with super-polynomial $O(n^{-\\sqrt{\\log(\\log(n))}})$ error decay while running in near-linear $O(n^{1+o(1)})$ time. In contrast, prior practical approximations either lack error guarantees or require quadratic runtime to guarantee such high fidelity. We couple this advance with a GPU-optimized PyTorch implementation and a suite of benchmark experiments demonstrating the benefits of WildCat for image generation, image classification, and language model KV cache compression.",
+      "identifiers": [
+        "SemanticScholar:f5760043dea928223dcae34e58f320483034bfef"
+      ],
+      "semantic_scholar_id": "f5760043dea928223dcae34e58f320483034bfef",
+      "canonical_id": "arXiv:2602.10056",
+      "arxiv_id": "2602.10056",
+      "doi": "10.48550/arXiv.2602.10056",
+      "authors": [
+        "T. Schröder",
+        "L. Mackey"
+      ],
+      "priority": 108,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 8,
+        "citation_count": 8,
+        "total": 108,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 245,
+        "matched_prestigious_venue": null
+      },
+      "reason": "WildCat approximates attention in near-linear time and includes GPU implementation and language-model KV-cache compression experiments, directly targeting attention and cache cost.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-d307c88acc41",
+    "round": "libimp-d307c88acc414922-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 2,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-d307c88acc414922-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-d307c88acc414922-pre01.json",
+    "receipt": "sha256:a4430af8b5c5f0f92db52d04aa9b8de842ba4fe455f79db852f8b8675fd90f8b"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-d307c88acc41",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

@@ -1,0 +1,115 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "LatentSkill: From In-Context Textual Skills to In-Weight Latent Skills for LLM Agents",
+      "source_url": "https://arxiv.org/abs/2606.06087",
+      "year": 2026,
+      "published": "2026-06-04",
+      "venue": "arXiv.org",
+      "citation_count": 8,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Agent systems increasingly use textual skills to encode reusable task procedures, but injecting these skills into the prompt at every step incurs substantial context overhead and exposes skill content as plaintext. We present LatentSkill, a framework that converts textual skills into plug-and-play LoRA adapters through a pretrained hypernetwork. LatentSkill stores skill knowledge in weight space rather than context space, removing per-step skill tokens while preserving modular loading, scaling, and composition. On ALFWorld and Search-QA, LatentSkill outperforms the corresponding in-context skill baseline while using substantially fewer prefill tokens: it improves ALFWorld success by 21.4 and 13.4 points on the seen and unseen splits with 63.9% fewer prefill tokens on average, and improves Search-QA exact match by 3.0 points while using 71.8% fewer tokens per step. Further analysis shows that generated skill LoRAs form a structured semantic geometry, can be continuously modulated via the LoRA scaling coefficient, and can be composed through parameter-space arithmetic when skill components are aligned. These findings suggest that weight-space skills provide an efficient, modular, and less exposed substrate for extending LLM agents.",
+      "identifiers": [
+        "SemanticScholar:18a8ee09a6eb7203837165ad682a82a39e60eb42"
+      ],
+      "semantic_scholar_id": "18a8ee09a6eb7203837165ad682a82a39e60eb42",
+      "canonical_id": "arXiv:2606.06087",
+      "arxiv_id": "2606.06087",
+      "doi": "10.48550/arXiv.2606.06087",
+      "authors": [
+        "Ao Yu",
+        "Chenyue Zhou",
+        "Tian-Yi Xu",
+        "Zihan Guo",
+        "Shan Rong",
+        "Zhi-Hui Fu",
+        "Jun Wang",
+        "Wei-Wen Liu",
+        "Yong Yu",
+        "Wei-Nan Zhang",
+        "Jianghao Lin"
+      ],
+      "priority": 108,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 8,
+        "citation_count": 8,
+        "total": 108,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 131,
+        "matched_prestigious_venue": null
+      },
+      "reason": "LatentSkill transfers prompt skills into loadable LoRA weights and reports 63.9–71.8% fewer prefill tokens per step, directly reducing agent inference context cost.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Agent Memory: Characterization and System Implications of Stateful Long-Horizon Workloads",
+      "source_url": "https://arxiv.org/abs/2606.06448",
+      "year": 2026,
+      "published": "2026-06-04",
+      "venue": "arXiv.org",
+      "citation_count": 8,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "LLM agents are increasingly deployed on long-horizon tasks requiring sustained reasoning over extended interaction histories. Realizing this at scale requires agents to persistently store, retrieve, and update their own memory across sessions. A rich ecosystem of agent memory systems has emerged spanning flat retrieval, LLM-mediated extraction, consolidating fact stores, and agentic control flows. Yet, their system-level behavior remains uncharacterized. We present the first systems characterization of agent memory. First, we introduce a system-oriented taxonomy classifying agent memory systems along four axes. Second, we build a phase-aware profiling harness attributing cost to construction, retrieval, and generation. Third, we characterize ten representative systems across two benchmark suites, uncovering how design choices shift cost across the write and read paths. Finally, we derive 10 system recommendations covering construction scheduling, capability floors, amortization via query volume, freshness-latency tradeoffs, and fleet-scale management.",
+      "identifiers": [
+        "SemanticScholar:453fe21f545a9b7f885aea2ee9165e4ada4e144f"
+      ],
+      "semantic_scholar_id": "453fe21f545a9b7f885aea2ee9165e4ada4e144f",
+      "canonical_id": "arXiv:2606.06448",
+      "arxiv_id": "2606.06448",
+      "doi": "10.48550/arXiv.2606.06448",
+      "authors": [
+        "Yasmine Omri",
+        "Ziyun Gan",
+        "Zachary Broveak",
+        "Robin Geens",
+        "Ze-Xue He",
+        "A. Pentland",
+        "Marian Verhelst",
+        "T. Weissman",
+        "Thierry Tambe"
+      ],
+      "priority": 108,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 8,
+        "citation_count": 8,
+        "total": 108,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 131,
+        "matched_prestigious_venue": null
+      },
+      "reason": "The paper characterizes construction, retrieval, and generation costs across agent-memory systems and derives scheduling, amortization, freshness-latency, and fleet-management recommendations.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-dbc57b146319",
+    "round": "libimp-dbc57b1463191e00-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 12,
+    "round_submission_count": 3,
+    "round_submission_index": 3,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-dbc57b1463191e00-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-dbc57b1463191e00-pre01.json",
+    "receipt": "sha256:f583edfe2ed123c1f6cf651f99319949a9fefffb04d015ecf717b24a95ea2901"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-dbc57b146319",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
