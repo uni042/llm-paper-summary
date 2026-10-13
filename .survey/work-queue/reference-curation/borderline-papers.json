@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-13T01:58:21+00:00",
-  "record_count": 4760,
+  "updated_at": "2026-10-13T02:26:15+00:00",
+  "record_count": 4761,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -72767,6 +72767,21 @@
       ],
       "borderline_recheck_count": 0,
       "title": "Stop Wasting your Cache! Bringing Machine Learning into Cache Computing"
+    },
+    "arXiv:2601.08058": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2601.08058",
+      "identity_tokens": [
+        "arXiv:2601.08058"
+      ],
+      "reason": "The abstract proposes latent-feature interventions to elicit chain-of-thought reasoning efficiently, but does not specify or measure reduced token use, latency, or compute; the runtime-efficiency connection remains unsubstantiated at abstract screen.",
+      "first_checked_at": "2026-10-13T02:26:15+00:00",
+      "last_checked_at": "2026-10-13T02:26:15+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2502.09601-cot-valve-length-compressible-chain-of-thought-tuning.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Triggering Chain-of-Thought via Latent Feature Interventions in Large Language Models"
     }
   }
 }
