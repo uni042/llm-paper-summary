@@ -1,0 +1,26 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-45",
+  "run_key": "20261014-0345-scheduled-chat-45/r01",
+  "reference_main_sha": "53f10a38feecd9b9efeb82fbc5205dc6cca61287",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.10430",
+      "identity_tokens": [
+        "arxiv:2608.10430"
+      ],
+      "title": "Actionable Hallucination Detection: Translating Latent Uncertainty into Agentic Critique",
+      "reason": "作業一覧のタイトルは幻覚の検出・検証を主題としており、モデル推論時の計算・メモリ・処理能力・カーネル・サービングスケジューリングの最適化を直接扱うことを示していない。関連性が明確に低いタイトル先行除外とし、詳細本文の未確認を明示する。",
+      "source_url": "https://arxiv.org/abs/2608.10430",
+      "body_check": "title_screen_only; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-10-14T03:58:16+09:00",
+      "last_checked_at": "2026-10-14T03:58:16+09:00",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance",
+      "worklist_rank": 67
+    }
+  ]
+}
