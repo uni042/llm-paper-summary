@@ -16,7 +16,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 方向は異なるが、いずれも**KV cacheがdecode時のmemory容量やmemory bandwidthのボトルネックになることを直接緩和する**研究として扱う。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（215本）
+## 自動生成の論文一覧（216本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -536,6 +536,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 - **2026-01 · [GPU-Accelerated INT8 Quantization for KV Cache Compression in Large Language Models](2026-2601.04719-gpu-accelerated-int8-quantization-for-kv-cache-compression-in-large-lang.md)**  
   実装：[✓](https://github.com/MaanasTaneja/cuda-kv-cache-compression) ・ リポジトリ内被引用：0  
   再計算を避けるため、各層・各注意ヘッドの過去の鍵と値を保持するKVキャッシュ（KV キャッシュ）が必要になる。そこで本論文は、FP32の鍵・値行列をINT8へ変換する列別量子化と、その変換処理を高速化するCUDAカーネルを実装・比較する。
+
+- **2025-11 · [Lethe: Layer- and Time-Adaptive KV Cache Pruning for Reasoning-Intensive LLM Serving](2025-2511.06029-lethe-layer-and-time-adaptive-kv-cache-pruning-for-reasoning-intensive-l.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  Letheは、長い思考過程を文章として生成する大規模言語モデル（LLM）の推論時に、鍵・値キャッシュ（KVキャッシュ）を保持し続けることによるメモリ消費と注意計算の増大を抑える方式である。
 
 ### 2年前（2024-11〜2025-10）
 

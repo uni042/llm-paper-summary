@@ -35,10 +35,15 @@
   "selection_reason": "Lethe prunes KV entries adaptively by layer and generation time for reasoning-heavy serving; the mechanism targets cache memory and decode latency in long LLM generations.",
   "semantic_scholar_id": "ce7628e9428ec7a94005d237f06a814c45a5f9ee",
   "source_url": "https://arxiv.org/abs/2511.06029",
-  "status": "ready",
+  "status": "superseded",
   "title": "Lethe: Layer- and Time-Adaptive KV Cache Pruning for Reasoning-Intensive LLM Serving",
   "type": "research",
   "venue": "AAAI Conference on Artificial Intelligence",
   "workflow_version": 10,
-  "year": 2025
+  "year": 2025,
+  "superseded_at": "2026-10-13T17:52:27+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2025-2511.06029-lethe-layer-and-time-adaptive-kv-cache-pruning-for-reasoning-intensive-l.md",
+  "represented_canonical_id": "arXiv:2511.06029",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
