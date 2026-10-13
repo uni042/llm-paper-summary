@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-13T18:20:53+00:00",
-  "record_count": 4864,
+  "updated_at": "2026-10-13T18:22:08+00:00",
+  "record_count": 4865,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -74489,6 +74489,22 @@
       ],
       "borderline_recheck_count": 0,
       "title": "Measure Before You Manage: Evaluating Agent Working Memory in Coding Agents"
+    },
+    "DOI:10.1145/3841298.3841307": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3841298.3841307",
+      "identity_tokens": [
+        "DOI:10.1145/3841298.3841307",
+        "SemanticScholar:ae45f1a906beaecb005db520936864eb4fa5ec7b"
+      ],
+      "reason": "The ACM DOI/title metadata and author publication record identify a workshop report, but ACM DL returned HTTP 403 and the abstract could not be verified at the publisher. Available description suggests discussion of IR/RAG and agentic search, but no specific mechanism or efficiency outcome can be screened.",
+      "first_checked_at": "2026-10-13T18:22:08+00:00",
+      "last_checked_at": "2026-10-13T18:22:08+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2512.24601-recursive-language-models.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Report on the Search Futures Workshop at ECIR 2026"
     }
   }
 }

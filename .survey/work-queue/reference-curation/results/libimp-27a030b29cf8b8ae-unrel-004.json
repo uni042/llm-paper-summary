@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-27a030b29cf8b8ae-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2605.25233",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2605.25233",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2605.25233",
+      "SemanticScholar:4a1a55464b7a5defe7afa2568ae952386b3595c1",
+      "arXiv:2605.25233"
+    ],
+    "reason": "Meta-Agent generates and verifies multi-agent workflows and improves task success/recovery; the abstract does not establish a latency, throughput, memory, or serving-efficiency contribution.",
+    "first_checked_at": "2026-10-13T18:22:09+00:00",
+    "last_checked_at": "2026-10-13T18:22:09+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2025-2512.24601-recursive-language-models.md"
+    ],
+    "title": "Meta-Agent: From Task Descriptions to Verified Multi-Agent Systems"
+  },
+  "processed_at": "2026-10-13T18:22:09+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-27a030b29cf8",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

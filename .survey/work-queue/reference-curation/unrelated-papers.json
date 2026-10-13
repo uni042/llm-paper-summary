@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-13T18:20:58+00:00",
-  "record_count": 11832,
+  "updated_at": "2026-10-13T18:22:10+00:00",
+  "record_count": 11840,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -169600,6 +169600,134 @@
         "papers/inference/07-kv-cache-optimization-compression/2026-2607.02770-gemma-4-technical-report.md"
       ],
       "title": "Do Sparse Autoencoders Learn Meaningful Concept Hierarchies?"
+    },
+    "arXiv:2606.09788": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.09788",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2606.09788",
+        "SemanticScholar:674c1cba3a38e13c0770d33811e5373f75146e88",
+        "arXiv:2606.09788"
+      ],
+      "reason": "POTATR is a lightweight, faster image-to-graph table-extraction model, but its optimization is for document OCR/table extraction rather than LLM inference or serving.",
+      "first_checked_at": "2026-10-13T18:22:08+00:00",
+      "last_checked_at": "2026-10-13T18:22:08+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2510.18234-deepseek-ocr-contexts-optical-compression.md"
+      ],
+      "title": "POTATR: A Lightweight Image-to-Graph Model for Page-Level Table Extraction"
+    },
+    "arXiv:2605.26712": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.26712",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2605.26712",
+        "SemanticScholar:f3a21b4375c5054f85457454637816d881e98742",
+        "arXiv:2605.26712"
+      ],
+      "reason": "METATR is a multilingual automatic-text-recognition benchmark; it evaluates OCR/vLLM application quality and does not propose LLM serving optimization.",
+      "first_checked_at": "2026-10-13T18:22:08+00:00",
+      "last_checked_at": "2026-10-13T18:22:08+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2510.18234-deepseek-ocr-contexts-optical-compression.md"
+      ],
+      "title": "METATR: A Multilingual, Evolving Benchmark for Automatic Text Recognition"
+    },
+    "arXiv:2605.25233": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.25233",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2605.25233",
+        "SemanticScholar:4a1a55464b7a5defe7afa2568ae952386b3595c1",
+        "arXiv:2605.25233"
+      ],
+      "reason": "Meta-Agent generates and verifies multi-agent workflows and improves task success/recovery; the abstract does not establish a latency, throughput, memory, or serving-efficiency contribution.",
+      "first_checked_at": "2026-10-13T18:22:09+00:00",
+      "last_checked_at": "2026-10-13T18:22:09+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2512.24601-recursive-language-models.md"
+      ],
+      "title": "Meta-Agent: From Task Descriptions to Verified Multi-Agent Systems"
+    },
+    "arXiv:2605.16630": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.16630",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2605.16630",
+        "SemanticScholar:6736f3c09a269bd91055043a51bb9474bd46dfab",
+        "arXiv:2605.16630"
+      ],
+      "reason": "PrivScope filters local-to-cloud agent payloads to limit disclosure and preserve task utility; the reported seconds of local overhead accompany a privacy control, not an efficiency improvement.",
+      "first_checked_at": "2026-10-13T18:22:09+00:00",
+      "last_checked_at": "2026-10-13T18:22:09+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-0ed2662d9eee-iron-private-inference-on-transformers.md"
+      ],
+      "title": "PrivScope: Task-scoped Disclosure Control for Hybrid Agentic Systems"
+    },
+    "arXiv:2605.15181": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.15181",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2605.15181",
+        "SemanticScholar:2ab439ca08421cea06949d1f3eef2e53e539f24d",
+        "arXiv:2605.15181"
+      ],
+      "reason": "The planner/orchestrator learns multi-step image-editing workflows; it targets editing quality and task execution rather than LLM inference infrastructure.",
+      "first_checked_at": "2026-10-13T18:22:09+00:00",
+      "last_checked_at": "2026-10-13T18:22:09+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2510.18234-deepseek-ocr-contexts-optical-compression.md"
+      ],
+      "title": "From Plans to Pixels: Learning to Plan and Orchestrate for Open-Ended Image Editing"
+    },
+    "arXiv:2604.22226": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.22226",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2604.22226",
+        "SemanticScholar:4299fb89ef299ff3e418de6af0dc5b5c28964b90",
+        "arXiv:2604.22226"
+      ],
+      "reason": "SportsTime and CoTR improve temporal evidence grounding for sports-video MLLMs; the contribution is domain reasoning quality, not inference-system efficiency.",
+      "first_checked_at": "2026-10-13T18:22:10+00:00",
+      "last_checked_at": "2026-10-13T18:22:10+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2510.18234-deepseek-ocr-contexts-optical-compression.md"
+      ],
+      "title": "Towards Temporal Compositional Reasoning in Long-Form Sports Videos"
+    },
+    "arXiv:2604.20549": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.20549",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2604.20549",
+        "SemanticScholar:820995a60dd3eb1f2707efb200ba8763b2567c11",
+        "arXiv:2604.20549"
+      ],
+      "reason": "The paper selects multilingual pretraining data using cross-lingual quality classifiers and improves model training outcomes; it is data/training methodology rather than inference runtime.",
+      "first_checked_at": "2026-10-13T18:22:10+00:00",
+      "last_checked_at": "2026-10-13T18:22:10+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1909.08053-megatron-lm-training-multi-billion-parameter-language-models-using-model.md"
+      ],
+      "title": "Toward Cross-Lingual Quality Classifiers for Multilingual Pretraining Data Selection"
+    },
+    "arXiv:2604.11575": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.11575",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2604.11575",
+        "SemanticScholar:49518bb3ade956e629838a933f28b30237ebac37",
+        "arXiv:2604.11575"
+      ],
+      "reason": "MIXAR scales a pixel-based multilingual generative language model and evaluates language capabilities; it does not present a serving or inference-efficiency mechanism.",
+      "first_checked_at": "2026-10-13T18:22:10+00:00",
+      "last_checked_at": "2026-10-13T18:22:10+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2511.11346-fast-and-expressive-multi-byte-prediction-with-probabilistic-circuits.md"
+      ],
+      "title": "MIXAR: Scaling Autoregressive Pixel-based Language Models to Multiple Languages and Scripts"
     }
   }
 }

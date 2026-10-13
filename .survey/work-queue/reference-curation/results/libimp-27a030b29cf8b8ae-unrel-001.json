@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-27a030b29cf8b8ae-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2606.09788",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2606.09788",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2606.09788",
+      "SemanticScholar:674c1cba3a38e13c0770d33811e5373f75146e88",
+      "arXiv:2606.09788"
+    ],
+    "reason": "POTATR is a lightweight, faster image-to-graph table-extraction model, but its optimization is for document OCR/table extraction rather than LLM inference or serving.",
+    "first_checked_at": "2026-10-13T18:22:08+00:00",
+    "last_checked_at": "2026-10-13T18:22:08+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2025-2510.18234-deepseek-ocr-contexts-optical-compression.md"
+    ],
+    "title": "POTATR: A Lightweight Image-to-Graph Model for Page-Level Table Extraction"
+  },
+  "processed_at": "2026-10-13T18:22:08+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-27a030b29cf8",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

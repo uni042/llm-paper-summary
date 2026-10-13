@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-27a030b29cf8b8ae-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2605.26712",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2605.26712",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2605.26712",
+      "SemanticScholar:f3a21b4375c5054f85457454637816d881e98742",
+      "arXiv:2605.26712"
+    ],
+    "reason": "METATR is a multilingual automatic-text-recognition benchmark; it evaluates OCR/vLLM application quality and does not propose LLM serving optimization.",
+    "first_checked_at": "2026-10-13T18:22:08+00:00",
+    "last_checked_at": "2026-10-13T18:22:08+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2025-2510.18234-deepseek-ocr-contexts-optical-compression.md"
+    ],
+    "title": "METATR: A Multilingual, Evolving Benchmark for Automatic Text Recognition"
+  },
+  "processed_at": "2026-10-13T18:22:09+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-27a030b29cf8",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
