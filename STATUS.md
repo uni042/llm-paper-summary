@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-10-13 23:30:49 JST**
+> 自動生成: **2026-10-13 23:45:30 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -13,9 +13,9 @@
 |---|---:|
 | 収録候補論文数 | **1148** |
 | 未claim Research job | **1148** |
-| 直近24hのResearch処理完了 | **115** |
+| 直近24hのResearch処理完了 | **114** |
 | 最終Research処理完了 | **10-13 21:08:59 JST** |
-| 最終Discovery探索完了 | **10-13 22:00:00 JST** |
+| 最終Discovery探索完了 | **10-13 23:30:00 JST** |
 | 整合性異常 | **0** |
 
 ## 16KB未満論文サマリーの再監査
@@ -116,7 +116,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **10-13 12:49:04 JST（10時間41分前）** |
+| 最終maintenance完了 | **10-13 12:49:04 JST（10時間56分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **passed** |
 | health | **issues_found** |
@@ -137,18 +137,18 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 | 指標 | 現在値 |
 |---|---:|
 | 直近6hのResearch完了 | **22** |
-| 直近6hのDiscovery run | **27** |
-| 直近6hのDiscovery本文確認・分類 | **102** |
+| 直近6hのDiscovery run | **28** |
+| 直近6hのDiscovery本文確認・分類 | **103** |
 | 最終Research完了 | **10-13 21:08:59 JST** |
-| 最終Discovery完了 | **10-13 22:00:00 JST** |
+| 最終Discovery完了 | **10-13 23:30:00 JST** |
 
 ### 最新Library-first run
 
 - Research: **10-13 21:08:59 JST** / worker — / run 20261013-2100-scheduled-chat-00/r02 / 成果 **1件**
   - evidence: .survey/import-inbox/results/research/libfile_d396dc73cf788191add86ab72ddc6c50--2026-2603.03752-corea-confidence-calibrated-cascade-research-20261013-2100-scheduled-chat-00-r02.json
-- Discovery: **10-13 22:00:00 JST** / worker scheduled-chat-00 / run 20261013-2200-scheduled-chat-00/r01
+- Discovery: **10-13 23:30:00 JST** / worker scheduled-chat-30 / run 20261013-2330-scheduled-chat-30/r01
   - 本文確認・分類 **1件** / accept **0件** / unrelated+borderline **1件**
-  - evidence: .survey/import-inbox/results/discovery/libfile_32011eb1f8a481918be7afce4617fbba--discovery-20261013-2200-scheduled-chat-00-research-relevance-r01-002-v2.json
+  - evidence: .survey/import-inbox/results/discovery/libfile_470b31b3dec48191ac977e69b5947297--discovery-20261013-2330-scheduled-chat-30-research-relevance-r01-015.json
 
 ### Codex探索成果の反映状況
 
