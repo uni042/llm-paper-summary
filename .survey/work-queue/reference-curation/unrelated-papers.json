@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-13T09:49:08+00:00",
-  "record_count": 11759,
+  "updated_at": "2026-10-13T10:40:03+00:00",
+  "record_count": 11760,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -168473,6 +168473,20 @@
         "papers/inference/99-other-inference-systems/2025-2505.00949-llama-nemotron-efficient-reasoning-models.md"
       ],
       "title": "Trustworthy AI in Digital Health: A Comprehensive Review of Robustness and Explainability"
+    },
+    "arXiv:2606.10577": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.10577",
+      "identity_tokens": [
+        "arXiv:2606.10577",
+        "id:arXiv:2606.10577",
+        "url:https://arxiv.org/abs/2606.10577"
+      ],
+      "reason": "タイトルは視覚と言語に基づくロボットのゼロショット航法をツール呼出しの枠組みとして構築する研究であることを明示する。研究対象はロボットの移動意思決定であり、生成型LLMの実行カーネル、KVメモリ、分散推論基盤の効率化を主題としないため、タイトル段階の対象外とする。要旨と本文は未確認。",
+      "first_checked_at": "2026-10-13T10:40:03+00:00",
+      "last_checked_at": "2026-10-13T10:40:03+00:00",
+      "linked_from": [],
+      "title": "AgenticNav: Zero-Shot Vision-and-Language Navigation as a Tool-Calling Harness"
     }
   }
 }
