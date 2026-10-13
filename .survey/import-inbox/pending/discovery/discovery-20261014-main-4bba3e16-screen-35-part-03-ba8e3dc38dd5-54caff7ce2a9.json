@@ -1,0 +1,275 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local",
+  "run_key": "discovery-20261014-main-4bba3e16-screen-35-part-03-ba8e3dc38dd5",
+  "reference_main_sha": "4bba3e16e28ffec296859cc4a13067b89791e2e4",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.24477",
+      "identity_tokens": [
+        "arXiv:2603.24477",
+        "2603.24477",
+        "10.48550/arXiv.2603.24477",
+        "ccbc025cfbed572a92ccaaf5befac794441683d1",
+        "SemanticScholar:ccbc025cfbed572a92ccaaf5befac794441683d1"
+      ],
+      "title": "Composer 2 Technical Report",
+      "reason": "Composer 2 is a model-training and coding-benchmark report; the abstract gives no inference/system-efficiency contribution.",
+      "source_url": "https://arxiv.org/abs/2603.24477",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T19:16:28.231603+00:00",
+      "last_checked_at": "2026-10-13T19:16:28.231603+00:00",
+      "linked_from": [
+        "papers/inference/12-moe-parallelism-communication/2021-2101.03961-switch-transformers-scaling-to-trillion-parameter-models-with-simple-and.md",
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md",
+        "papers/inference/15-inference-simulation-emulation/2017-1712.05889-ray-a-distributed-framework-for-emerging-ai-applications.md",
+        "papers/inference/99-other-inference-systems/2017-1701.06538-outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts.md",
+        "papers/inference/99-other-inference-systems/2019-1909.08053-megatron-lm-training-multi-billion-parameter-language-models-using-model.md",
+        "papers/inference/99-other-inference-systems/2023-2310.01889-ring-attention-blockwise-transformers.md",
+        "papers/inference/99-other-inference-systems/2024-2404.19737-better-faster-large-language-models-via-multi-token-prediction.md",
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2602.23699",
+      "identity_tokens": [
+        "arXiv:2602.23699",
+        "2602.23699",
+        "10.48550/arXiv.2602.23699",
+        "32b229563458ab668ebe838372501ce890dae936",
+        "SemanticScholar:32b229563458ab668ebe838372501ce890dae936"
+      ],
+      "title": "HiDrop: Hierarchical Vision Token Reduction in MLLMs via Late Injection, Concave Pyramid Pruning, and Early Exit",
+      "reason": "HiDrop prunes MLLM visual tokens with adaptive layer-aware schedules and early exit, reporting efficient inference as well as faster training.",
+      "source_url": "https://arxiv.org/abs/2602.23699",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T19:16:28.231603+00:00",
+      "last_checked_at": "2026-10-13T19:16:28.231603+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2501.03895-llava-mini-efficient-image-and-video-large-multimodal-models-with-one-vi.md",
+        "papers/inference/99-other-inference-systems/2023-2312.06742-honeybee-locality-enhanced-projector-for-multimodal-llm.md",
+        "papers/inference/99-other-inference-systems/2024-2403.06764-an-image-is-worth-1-2-tokens-after-layer-2-plug-and-play-inference-accel.md",
+        "papers/inference/99-other-inference-systems/2024-2410.04417-sparsevlm-visual-token-sparsification-for-efficient-vision-language-mode.md",
+        "papers/inference/99-other-inference-systems/2024-2410.17247-pyramiddrop-accelerating-your-large-vision-language-models-via-pyramid-v.md",
+        "papers/inference/99-other-inference-systems/2024-2412.00876-dynamic-llava-efficient-multimodal-large-language-models-via-dynamic-vis.md"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2511.21103",
+      "identity_tokens": [
+        "arXiv:2511.21103",
+        "2511.21103",
+        "10.48550/arXiv.2511.21103",
+        "513e0c794e3a6f7eee576bbed5e1e73e3be80573",
+        "SemanticScholar:513e0c794e3a6f7eee576bbed5e1e73e3be80573"
+      ],
+      "title": "From Bits to Rounds: Parallel Decoding with Exploration for Diffusion Language Models",
+      "reason": "Explore-Then-Exploit changes diffusion-LM token selection to increase information per decoding round and reduce rounds without quality loss.",
+      "source_url": "https://arxiv.org/abs/2511.21103",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T19:16:28.231603+00:00",
+      "last_checked_at": "2026-10-13T19:16:28.231603+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2025-2505.22618-fast-dllm-kv-cache-parallel-decoding.md",
+        "papers/inference/07-kv-cache-optimization-compression/2025-2506.06295-dllm-cache-adaptive-caching.md",
+        "papers/inference/99-other-inference-systems/2025-2503.09573-block-diffusion-interpolating-between-autoregressive-and-diffusion-langu.md",
+        "papers/inference/99-other-inference-systems/2025-2508.15487-dream-7b-diffusion-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2026-2406.03736-your-absorbing-discrete-diffusion-secretly-models-the-conditional-distri.md"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2006.04862",
+      "identity_tokens": [
+        "arXiv:2006.04862",
+        "2006.04862",
+        "40ca4fcfffa7ca9aa9b7ff06ecf3cd0436712d78",
+        "SemanticScholar:40ca4fcfffa7ca9aa9b7ff06ecf3cd0436712d78"
+      ],
+      "title": "$O(n)$ Connections are Expressive Enough: Universal Approximability of Sparse Transformers",
+      "reason": "The paper proves sparse attention with O(n) connections per layer can retain universal approximation while reducing dense attention connections from n².",
+      "source_url": "https://arxiv.org/abs/2006.04862",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T19:16:28.231603+00:00",
+      "last_checked_at": "2026-10-13T19:16:28.231603+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2003.05997-efficient-content-based-sparse-attention-with-routing-transformers.md",
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md",
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md",
+        "papers/inference/99-other-inference-systems/2019-1905.07799-adaptive-attention-span-in-transformers.md",
+        "papers/inference/99-other-inference-systems/2019-1911.02972-blockwise-self-attention-for-long-document-understanding.md",
+        "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2605.27365",
+      "identity_tokens": [
+        "arXiv:2605.27365",
+        "2605.27365",
+        "10.48550/arXiv.2605.27365",
+        "ae2fbe593787f8f3eea929d3c1a0e611c3997a07",
+        "SemanticScholar:ae2fbe593787f8f3eea929d3c1a0e611c3997a07"
+      ],
+      "title": "LocateAnything: Fast and High-Quality Vision-Language Grounding with Parallel Box Decoding",
+      "reason": "LocateAnything decodes geometric box elements in parallel rather than serial tokens, improving VLM decoding throughput and localization quality.",
+      "source_url": "https://arxiv.org/abs/2605.27365",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T19:16:28.231603+00:00",
+      "last_checked_at": "2026-10-13T19:16:28.231603+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2024-2401.10774-medusa-multiple-decoding-heads.md",
+        "papers/inference/07-kv-cache-optimization-compression/2025-2505.22618-fast-dllm-kv-cache-parallel-decoding.md",
+        "papers/inference/07-kv-cache-optimization-compression/2025-2511.08923-tidar-think-in-diffusion-talk-in-autoregression.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md",
+        "papers/inference/99-other-inference-systems/2024-2404.19737-better-faster-large-language-models-via-multi-token-prediction.md",
+        "papers/inference/99-other-inference-systems/2025-2503.09573-block-diffusion-interpolating-between-autoregressive-and-diffusion-langu.md",
+        "papers/inference/99-other-inference-systems/2025-2508.09192-diffusion-llms-can-do-faster-than-ar-inference-via-discrete-diffusion-fo.md",
+        "papers/inference/99-other-inference-systems/2025-2508.15487-dream-7b-diffusion-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2025-2509.26328-fast-dllm-v2-block-diffusion-hierarchical-cache.md"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2511.18793",
+      "identity_tokens": [
+        "arXiv:2511.18793",
+        "2511.18793",
+        "10.1145/3774904.3792797",
+        "2daa1fc5b1a6ec780b951131c92f907446860e90",
+        "SemanticScholar:2daa1fc5b1a6ec780b951131c92f907446860e90"
+      ],
+      "title": "NEZHA: A Zero-sacrifice and Hyperspeed Decoding Architecture for Generative Recommendations",
+      "reason": "NEZHA integrates a draft head and lightweight verifier into generative-recommendation LLMs to accelerate decoding without separate draft-model overhead.",
+      "source_url": "https://arxiv.org/abs/2511.18793",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T19:16:28.231603+00:00",
+      "last_checked_at": "2026-10-13T19:16:28.231603+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2022-2211.17192-speculative-decoding.md",
+        "papers/inference/05-speculative-decoding-moe/2023-2311.08252-rest-retrieval-speculative-decoding.md",
+        "papers/inference/05-speculative-decoding-moe/2024-2401.15077-eagle-feature-speculative-sampling.md",
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md",
+        "papers/inference/99-other-inference-systems/2024-2404.19737-better-faster-large-language-models-via-multi-token-prediction.md"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2506.10967",
+      "identity_tokens": [
+        "arXiv:2506.10967",
+        "2506.10967",
+        "10.48550/arXiv.2506.10967",
+        "3b23dd0634e7de523598df0a907a5bf558eb9c88",
+        "SemanticScholar:3b23dd0634e7de523598df0a907a5bf558eb9c88"
+      ],
+      "title": "Beyond Attention or Similarity: Maximizing Conditional Diversity for Token Pruning in MLLMs",
+      "reason": "CDPruner selects instruction-relevant diverse visual tokens for MLLMs and reports 95% fewer FLOPs and 78% lower CUDA latency while retaining accuracy.",
+      "source_url": "https://arxiv.org/abs/2506.10967",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T19:16:28.231603+00:00",
+      "last_checked_at": "2026-10-13T19:16:28.231603+00:00",
+      "linked_from": [
+        "papers/inference/12-moe-parallelism-communication/2024-2408.10188-longvila-scaling-long-context-visual-language-models-for-long-videos.md",
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2501.03895-llava-mini-efficient-image-and-video-large-multimodal-models-with-one-vi.md",
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+        "papers/inference/99-other-inference-systems/2023-2311.17043-llama-vid-an-image-is-worth-2-tokens-in-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2024-2403.06764-an-image-is-worth-1-2-tokens-after-layer-2-plug-and-play-inference-accel.md",
+        "papers/inference/99-other-inference-systems/2024-2403.15388-llava-prumerge-adaptive-token-reduction-for-efficient-large-multimodal-m.md",
+        "papers/inference/99-other-inference-systems/2024-2410.04417-sparsevlm-visual-token-sparsification-for-efficient-vision-language-mode.md",
+        "papers/inference/99-other-inference-systems/2024-2410.17247-pyramiddrop-accelerating-your-large-vision-language-models-via-pyramid-v.md",
+        "papers/inference/99-other-inference-systems/2025-2502.11494-stop-looking-for-important-tokens-in-multimodal-language-models-duplicat.md",
+        "papers/inference/99-other-inference-systems/2025-2503.02175-divprune-diversity-based-visual-token-pruning-for-large-multimodal-model.md"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2602.08024",
+      "identity_tokens": [
+        "arXiv:2602.08024",
+        "2602.08024",
+        "10.48550/arXiv.2602.08024",
+        "017bde5eb3aa3d3ffe50dfcc97bd648220884f97",
+        "SemanticScholar:017bde5eb3aa3d3ffe50dfcc97bd648220884f97"
+      ],
+      "title": "FlashVID: Efficient Video Large Language Models via Training-free Tree-based Spatiotemporal Token Merging",
+      "reason": "FlashVID performs training-free spatiotemporal token merging for VLLM inference, retaining performance with 10% of visual tokens and enabling 10x more frames.",
+      "source_url": "https://arxiv.org/abs/2602.08024",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T19:16:28.231603+00:00",
+      "last_checked_at": "2026-10-13T19:16:28.231603+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md",
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2501.03895-llava-mini-efficient-image-and-video-large-multimodal-models-with-one-vi.md",
+        "papers/inference/99-other-inference-systems/2023-2305.13245-gqa.md",
+        "papers/inference/99-other-inference-systems/2023-2311.17043-llama-vid-an-image-is-worth-2-tokens-in-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2024-2403.06764-an-image-is-worth-1-2-tokens-after-layer-2-plug-and-play-inference-accel.md",
+        "papers/inference/99-other-inference-systems/2024-2403.15388-llava-prumerge-adaptive-token-reduction-for-efficient-large-multimodal-m.md",
+        "papers/inference/99-other-inference-systems/2024-2410.04417-sparsevlm-visual-token-sparsification-for-efficient-vision-language-mode.md",
+        "papers/inference/99-other-inference-systems/2024-2410.17247-pyramiddrop-accelerating-your-large-vision-language-models-via-pyramid-v.md",
+        "papers/inference/99-other-inference-systems/2024-2410.17434-longvu-spatiotemporal-adaptive-compression-for-long-video-language-under.md",
+        "papers/inference/99-other-inference-systems/2024-2411.15024-dycoke-dynamic-compression-of-tokens-for-fast-video-large-language-model.md",
+        "papers/inference/99-other-inference-systems/2025-2503.02175-divprune-diversity-based-visual-token-pruning-for-large-multimodal-model.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2512.04540",
+      "identity_tokens": [
+        "arXiv:2512.04540",
+        "2512.04540",
+        "10.48550/arXiv.2512.04540",
+        "f3664cc7be8902355007b3eeda7c4eae251fb321",
+        "SemanticScholar:f3664cc7be8902355007b3eeda7c4eae251fb321"
+      ],
+      "title": "VideoMem: Enhancing Ultra-Long Video Understanding via Adaptive Memory Management",
+      "reason": "VideoMem proposes adaptive video memory and reports long-video task gains; its stated efficiency mechanisms concern training/sample use, leaving inference-system savings unclear.",
+      "source_url": "https://arxiv.org/abs/2512.04540",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T19:16:28.231603+00:00",
+      "last_checked_at": "2026-10-13T19:16:28.231603+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md",
+        "papers/inference/12-moe-parallelism-communication/2024-2408.10188-longvila-scaling-long-context-visual-language-models-for-long-videos.md",
+        "papers/inference/99-other-inference-systems/2023-2307.16449-moviechat-from-dense-token-to-sparse-memory-for-long-video-understanding.md",
+        "papers/inference/99-other-inference-systems/2023-2311.17043-llama-vid-an-image-is-worth-2-tokens-in-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2024-2410.17434-longvu-spatiotemporal-adaptive-compression-for-long-video-language-under.md",
+        "papers/inference/99-other-inference-systems/2024-2412.04468-nvila-efficient-frontier-visual-language-models.md"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2511.07396",
+      "identity_tokens": [
+        "arXiv:2511.07396",
+        "2511.07396",
+        "10.48550/arXiv.2511.07396",
+        "c42e3975bd4ac0cf3c98bee718de14d79464d908",
+        "SemanticScholar:c42e3975bd4ac0cf3c98bee718de14d79464d908"
+      ],
+      "title": "C3PO: Optimized Large Language Model Cascades with Probabilistic Cost Constraints for Reasoning",
+      "reason": "C3PO optimizes cascaded LLM inference under probabilistic cost constraints and reports better accuracy-cost efficiency than cascade baselines.",
+      "source_url": "https://arxiv.org/abs/2511.07396",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T19:16:28.231603+00:00",
+      "last_checked_at": "2026-10-13T19:16:28.231603+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2024-2401.10480-escape-sky-high-cost-early-stopping-self-consistency-for-multi-step-reas.md",
+        "papers/inference/99-other-inference-systems/2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md",
+        "papers/inference/99-other-inference-systems/2023-2305.11860-let-s-sample-step-by-step-adaptive-consistency-for-efficient-reasoning-a.md",
+        "papers/inference/99-other-inference-systems/2023-2311.08692-routing-to-the-expert-efficient-reward-guided-ensemble-of-large-language.md",
+        "papers/inference/99-other-inference-systems/2024-2310.03094-large-language-model-cascades-with-mixture-of-thought-representations-fo.md",
+        "papers/inference/99-other-inference-systems/2024-2404.10136-language-model-cascades-token-level-uncertainty-and-beyond.md",
+        "papers/inference/99-other-inference-systems/2024-2404.14618-hybrid-llm-cost-efficient-and-quality-aware-query-routing.md",
+        "papers/inference/99-other-inference-systems/2024-2412.11664-c3ot-generating-shorter-chain-of-thought-without-compromising-effectiven.md",
+        "papers/inference/99-other-inference-systems/2025-2502.21074-codi-compressing-chain-of-thought-into-continuous-space-via-self-distill.md"
+      ]
+    }
+  ]
+}
