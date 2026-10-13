@@ -1,7 +1,7 @@
 # Scheduled worker :45 worklist
 
 Worker: `scheduled-chat-45`  
-Generated: `2026-10-13T15:01:13+00:00`
+Generated: `2026-10-13T15:31:45+00:00`
 
 このページはこのworker専用の再構築可能な選択索引です。他のScheduled worker用ページとは候補を重複させません（十分な在庫がある場合）。
 正本は `.survey/work-queue/jobs/`、claim、論文実体、relevance ledgerです。処理直前に最新正本を再確認してください。
@@ -711,7 +711,7 @@ ready総数: **1150** / 未claim総数: **1149** / このworker向け: **200**
 | 484 | 107 | 6 | 6 | arXiv:2604.13349 | When Less Latent Leads to Better Relay: Information-Preserving Compression for Latent Multi-Agent LLM Collaboration | 2026-04-14 | arXiv.org | 7 | 6 | 07-kv-cache-optimization-compression, KV cache memory management / streaming inference / attention sinks / length extrapolation, KV cache quantization / long-context inference / activation compression | [source](https://arxiv.org/abs/2604.13349) |
 | 485 | 101 | 6 | 6 | arXiv:2602.01901 | Q Cache: Visual Attention is Valuable in Less than Half of Decode Layers for Multimodal Large Language Model | 2026-02-02 | AAAI Conference on Artificial Intelligence | 1 | 6 | 12-multimodal-inference, 正確な注意計算 / 入出力指向注意 / GPUカーネル最適化 / FlashAttention, 注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層 | [source](https://arxiv.org/abs/2602.01901) |
 | 486 | 63 | 6 | 6 | arXiv:2211.11152 | You Need Multiple Exiting: Dynamic Early Exiting for Accelerating Unified Vision Language Model | 2022-11-21 | Computer Vision and Pattern Recognition | 63 | 6 | 15-inference-early-exit | [source](https://arxiv.org/abs/2211.11152) |
-| 487 | 18 | 6 | 6 | arXiv:2508.13305 | Prune2Drive: A Plug-and-Play Framework for Accelerating Vision-Language Models in Autonomous Driving | 2025-08-18 | arXiv.org | 18 | 6 | 正確な注意計算 / 入出力指向注意 / GPUカーネル最適化 / FlashAttention, 注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層 | [source](https://arxiv.org/abs/2508.13305) |
+| 487 | 17 | 6 | 6 | DOI:10.48550/arXiv.2211.13955 | MPCViT: Searching for MPC-friendly Vision Transformer with Heterogeneous Attention | 2022-11-25 | arXiv.org | 17 | 6 | Inference / Structured Model Compression and Pruning | [source](https://doi.org/10.48550/arXiv.2211.13955) |
 | 488 | 500 | 6 | 6 | arXiv:2206.02680 | Separable Self-attention for Mobile Vision Transformers | 2022-06-06 | Trans. Mach. Learn. Res. | 500 | 6 | Training / Optimizer State Quantization and Memory Reduction, sparse attention / long-context Transformer | [source](https://arxiv.org/abs/2206.02680) |
 | 489 | 102 | 6 | 6 | arXiv:2602.03134 | SwiftVLM: Efficient Vision-Language Model Inference via Cross-Layer Token Bypass | 2026-02-03 | arXiv.org | 2 | 6 | 注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層 | [source](https://arxiv.org/abs/2602.03134) |
 | 490 | 11 | 6 | 6 | arXiv:2405.19279 | Understanding and Minimising Outlier Features in Neural Network Training | 2024-05-29 | arXiv.org | 11 | 6 | sparse attention / long-context Transformer, state space models / selective SSM / recurrent inference / hardware-aware sequence modeling, 注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層 | [source](https://arxiv.org/abs/2405.19279) |
