@@ -1,0 +1,100 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "BrickDL: Graph-Level Optimizations for DNNs with Fine-Grained Data Blocking on GPUs",
+      "source_url": "https://doi.org/10.1145/3673038.3673046",
+      "year": 2024,
+      "published": "2024-08-12",
+      "venue": "International Conference on Parallel Processing",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The end-to-end performance of deep learning model inference is often limited by excess data movement on GPUs. To reduce data movement, existing deep learning frameworks apply graph-level optimizations such as operator fusion to exploit data reuse across operators in deep learning graphs. Such optimizations are limited and cannot optimize arbitrary chains of compute- and time-intensive operations, including convolutions. To address these limitations, this paper presents BrickDL, a deep learning inference library that implements merged execution of a sequence of layers as an orthogonal approach to existing graph-level optimizations. BrickDL additionally employs fine-grain blocking using a brick data layout that further optimizes data locality on GPUs. We implement merged execution with the abstraction of bricks using two approaches – padded bricks and memoized bricks, and develop a performance model to choose between them using static analysis. Merged execution with bricks demonstrates performance gains on well-known deep learning models as compared to PyTorch JIT, TensorFlow XLA, and cuDNN baselines on NVIDIA A100 GPU. We also characterize the performance of the proposed optimizations with microbenchmarks and gain insights into their applicability and tradeoffs.",
+      "identifiers": [
+        "SemanticScholar:125611379bc7fd03ebdeea69e97ef95cde5ecead"
+      ],
+      "semantic_scholar_id": "125611379bc7fd03ebdeea69e97ef95cde5ecead",
+      "doi": "10.1145/3673038.3673046",
+      "canonical_id": "DOI:10.1145/3673038.3673046",
+      "authors": [
+        "Mahesh Lakshminarasimhan",
+        "Mary Hall",
+        "Samuel Williams",
+        "O. Antepara"
+      ],
+      "priority": 3,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 3,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 792,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Primary paper describes graph-level fused execution/data blocking to improve GPU memory locality and end-to-end inference performance.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "ShareDAB-DETR: Memory-Efficient Object Detection through CentralBank Parameter Sharing",
+      "source_url": "https://doi.org/10.5220/0014452400004084",
+      "year": 2026,
+      "published": null,
+      "venue": "International Conference on Computer Vision Theory and Applications",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": ": Transformer-based object detectors achieve state-of-the-art accuracy but require substantial memory, making deployment on edge devices impractical. We introduce CentralBank, a novel parameter sharing mechanism that consolidates all transformer projection weights into a single memory-efficient table accessed through deterministic offset mapping. Applied to DAB-DETR, our approach achieves up to 84% reduction in trans-former parameters (19.67M to 3.21M) and 67% reduction in training memory while retaining 99% of baseline accuracy (41.8 vs 42.2 AP on COCO). Unlike traditional compression methods, CentralBank is integrated at the architectural level, requiring no post-training optimization. Our best configuration achieves 41.8 AP with only 8.65M transformer parameters and 2.5 GB training memory, enabling practical deployment on edge devices. Extensive evaluation across five configurations reveals that larger hidden dimensions (512 vs 256) provide superior parameter efficiency, achieving an 11.2:1 parameter-to-FLOP reduction ratio. ShareDAB-DETR demonstrates that architectural parameter sharing can effectively bridge the gap between transformer performance and edge deployment constraints.",
+      "identifiers": [
+        "SemanticScholar:effd18a88fd4b4a64671ebf4ba8595955225ee0f"
+      ],
+      "semantic_scholar_id": "effd18a88fd4b4a64671ebf4ba8595955225ee0f",
+      "doi": "10.5220/0014452400004084",
+      "canonical_id": "DOI:10.5220/0014452400004084",
+      "authors": [
+        "Khaled Chikh",
+        "Roberto Cavicchioli",
+        "Alessandro Capotondi"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 104,
+        "matched_prestigious_venue": null
+      },
+      "reason": "SciTePress primary abstract describes transformer parameter sharing with large parameter/memory reductions and edge-device deployment; the system-efficiency connection is explicit.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-af97812faa74",
+    "round": "libimp-af97812faa74ab2f-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 12,
+    "round_submission_count": 3,
+    "round_submission_index": 3,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-af97812faa74ab2f-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-af97812faa74ab2f-pre01.json",
+    "receipt": "sha256:6fba9534a4214b8e5480ef6bb9a50c78df3f6eb33e3238db8890396ded15a941"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-af97812faa74",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

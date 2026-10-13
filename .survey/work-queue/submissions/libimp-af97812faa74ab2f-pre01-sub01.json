@@ -1,0 +1,231 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Less, but Better: Efficient Multilingual Expansion for LLMs via Layer-wise Mixture-of-Experts",
+      "source_url": "https://arxiv.org/abs/2505.22582",
+      "year": 2025,
+      "published": "2025-05-28",
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "citation_count": 18,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Continually expanding new languages for existing large language models (LLMs) is a promising yet challenging approach to building powerful multilingual LLMs. The biggest challenge is to make the model continuously learn new languages while preserving the proficient ability of old languages. To achieve this, recent work utilizes the Mixture-of-Experts (MoE) architecture to expand new languages by adding new experts and avoid catastrophic forgetting of old languages by routing corresponding tokens to the original model backbone (old experts). Although intuitive, this kind of method is parameter-costly when expanding new languages and still inevitably impacts the performance of old languages. To address these limitations, we analyze the language characteristics of different layers in LLMs and propose a layer-wise expert allocation algorithm (LayerMoE) to determine the appropriate number of new experts for each layer. Specifically, we find different layers in LLMs exhibit different representation similarities between languages and then utilize the similarity as the indicator to allocate experts for each layer, i.e., the higher similarity, the fewer experts. Additionally, to further mitigate the forgetting of old languages, we add a classifier in front of the router network on the layers with higher similarity to guide the routing of old language tokens. Experimental results show that our method outperforms the previous state-of-the-art baseline with 60% fewer experts in the single-expansion setting and with 33.3% fewer experts in the lifelong-expansion setting, demonstrating the effectiveness of our method.",
+      "identifiers": [
+        "SemanticScholar:adad9043d8f7714f428637d3530dd32e03729a27"
+      ],
+      "semantic_scholar_id": "adad9043d8f7714f428637d3530dd32e03729a27",
+      "canonical_id": "arXiv:2505.22582",
+      "arxiv_id": "2505.22582",
+      "doi": "10.48550/arXiv.2505.22582",
+      "authors": [
+        "Xue Zhang",
+        "Yun-Long Liang",
+        "Fan-Dong Meng",
+        "Songming Zhang",
+        "Yu-Feng Chen",
+        "Jin-An Xu",
+        "Jie Zhou"
+      ],
+      "priority": 28,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 18,
+        "citation_count": 18,
+        "total": 28,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 503,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      },
+      "reason": "The method reduces expert counts in continual LLM expansion (60%/33.3% fewer experts); model-size and inference efficiency are directly relevant.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "ETA-VLA: Efficient Token Adaptation via Temporal Fusion and Intra-LLM Sparsification for Vision-Language-Action Models",
+      "source_url": "https://arxiv.org/abs/2603.25766",
+      "year": 2026,
+      "published": "2026-03-26",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The integration of Vision-Language-Action (VLA) models into autonomous driving systems offers a unified framework for interpreting complex scenes and executing control commands. However, the necessity to incorporate historical multi-view frames for accurate temporal reasoning imposes a severe computational burden, primarily driven by the quadratic complexity of self-attention mechanisms in Large Language Models (LLMs). To alleviate this bottleneck, we propose ETA-VLA, an Efficient Token Adaptation framework for VLA models. ETA-VLA processes the past $n$ frames of multi-view images and introduces a novel Intra-LLM Sparse Aggregator (ILSA). Drawing inspiration from human driver attention allocation, ILSA dynamically identifies and prunes redundant visual tokens guided by textual queries and temporal consistency. Specifically, we utilize a text-guided scoring mechanism alongside a diversity-preserving sparsification strategy to select a sparse subset of critical tokens, ensuring comprehensive awareness of the driving scene. Extensive experiments on the NAVSIM v2 demonstrate that ETA-VLA achieves driving performance comparable to state-of-the-art baselines while reducing computational FLOPs by approximately 32\\%. Notably, our method prunes 85% of visual tokens and reduces inference FLOPs by 61\\%, but still retaining 94% of the original accuracy on the NAVSIM v2 benchmark.",
+      "identifiers": [
+        "SemanticScholar:137b25f0643de63e8ce9d8da5f8bb31c93fc228f"
+      ],
+      "semantic_scholar_id": "137b25f0643de63e8ce9d8da5f8bb31c93fc228f",
+      "canonical_id": "arXiv:2603.25766",
+      "arxiv_id": "2603.25766",
+      "doi": "10.48550/arXiv.2603.25766",
+      "authors": [
+        "Yi-Ru Wang",
+        "An-Qing Jiang",
+        "Shuo Wang",
+        "Yuwen Heng",
+        "Zichong Gu",
+        "Hao Sun"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 201,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Temporal token fusion and pruning reduce visual tokens and inference FLOPs while preserving driving accuracy.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Elastic Spiking Transformers for Efficient Gesture Understanding",
+      "source_url": "https://arxiv.org/abs/2605.13869",
+      "year": 2026,
+      "published": "2026-05-04",
+      "venue": "IEEE International Conference on Automatic Face & Gesture Recognition",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Spiking Neural Networks (SNNs), and particularly Spiking Transformers, have recently emerged as a promising solution for energy-efficient processing of event-based sensor data in healthcare applications. However, existing architectures are inherently rigid, being trained and deployed as static networks with fixed parameter counts and computational graphs. This rigidity presents a critical bottleneck for deployment on neuromorphic hardware (e.g., Loihi, Spinnaker), where on-chip hardware limitations often force the use of smaller, lower-accuracy models that sacrifice representational capacity and accuracy. To bridge this gap, we introduce the Elastic Spiking Transformer, a novel architecture that embeds runtime adaptability directly into the spiking paradigm. Drawing inspiration from Matryoshka-style representation learning, our framework introduces nested elasticity within the Feature Extractor, Spiking Self-Attention, and Feed-Forward blocks. By training a single “universal” model with granularity-aware weight sharing, we enable dynamic slicing of network width and attention heads during inference without retraining. This elasticity offers a unique dual advantage in the SNN domain. First, it solves the memory-constrained problem by allowing the model to instantly scale its parameter footprint to fit diverse hardware specifications without retraining. Second, and crucially, we show that elasticity in SNNs not only lowers synaptic weight counts but also directly lowers the total spike firing rate. By dynamically reducing the number of active neurons, our approach achieves a proportional reduction in synaptic operations, unavailable to standard artificial neural networks. We validate our approach on standard benchmarks (CIFAR10/100, CIFAR10-DVS) and the novel EHWGesture clinical gesture understanding dataset. Our results demonstrate that a single Elastic Spiking Transformer spans a wide range of complexity trade-offs, matching or surpassing the accuracy of independently trained baselines while enabling adaptive, realtime gesture recognition on resource-constrained edge devices.",
+      "identifiers": [
+        "SemanticScholar:37337a95372c3aa3aa6159f85d297c251a42ca91"
+      ],
+      "semantic_scholar_id": "37337a95372c3aa3aa6159f85d297c251a42ca91",
+      "canonical_id": "arXiv:2605.13869",
+      "arxiv_id": "2605.13869",
+      "doi": "10.1109/FG67764.2026.11556944",
+      "authors": [
+        "A. Ancilotto",
+        "G. Amprimo",
+        "S. Di Carlo",
+        "Elisabetta Farella"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 162,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Dynamic width/head selection fits hardware memory budgets and lowers synaptic operations for edge inference.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Toward Scalable LLM-Based Multi-Agent Collaboration: A Dynamic Task Graph Approach with Asynchronous Parallel Execution",
+      "source_url": "https://doi.org/10.3390/electronics15112475",
+      "year": 2026,
+      "published": "2026-06-04",
+      "venue": "Electronics",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Deploying Large Language Models (LLMs) in collaborative multi-agent settings represents a promising frontier for complex AI problem-solving, yet the field lacks systematic mechanisms to manage the inherent coordination overhead and resource contention that arise at scale. Existing LLM-based Multi-Agent System (MAS) frameworks predominantly adopt sequential or loosely coupled execution models, which fail to exploit the parallelism potential of modern computing environments and limit overall system throughput. To bridge this gap, this paper presents DynTaskMAS, a framework that redefines task orchestration in LLM-based MASs through a dynamic task graph abstraction. Rather than treating tasks as static pipelines, DynTaskMAS continuously models task interdependencies at runtime, enabling opportunistic parallel execution while preserving logical correctness. The architecture integrates four synergistic components: a runtime task decomposition module that captures evolving dependencies among subtasks; a scheduling engine that dispatches ready tasks to available agents without centralized bottlenecks; a context propagation layer that maintains shared semantic state across concurrently executing agents; and a self-tuning workflow controller that adapts execution priorities based on observed system load. Together, these components address a core tension in LLM-based MAS design, balancing agent autonomy with coordinated efficiency. Evaluations across tasks of varying complexity confirm that DynTaskMAS delivers substantial gains in execution efficiency (21.3–33.0% reduction), resource utilization (from 65% to 88%), and agent scalability (3.47× throughput with 16 concurrent agents) compared to sequential baselines. This work offers a generalizable architectural blueprint for next-generation LLM-based Multi-Agent Systems operating under real-world dynamic and resource-constrained conditions.",
+      "identifiers": [
+        "SemanticScholar:7ec6060e98d13b0f99c6c43270843b60bcf17e70"
+      ],
+      "semantic_scholar_id": "7ec6060e98d13b0f99c6c43270843b60bcf17e70",
+      "doi": "10.3390/electronics15112475",
+      "canonical_id": "DOI:10.3390/electronics15112475",
+      "authors": [
+        "Jun-Wei Yu",
+        "Yepeng Ding",
+        "Jiani Dai",
+        "Junjun Zheng",
+        "Jing-Chi Wu",
+        "Hiroyuki Sato"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 131,
+        "matched_prestigious_venue": null
+      },
+      "reason": "The MDPI publisher page provides the title and abstract. DynTaskMAS uses a runtime task graph, asynchronous ready-task scheduling, and semantic context routing; the abstract reports lower execution time/token transfer and increased GPU utilization in LLM-agent execution.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Don't Run with Scissors: Pruning Breaks VLA Models but They Can Be Recovered",
+      "source_url": "https://arxiv.org/abs/2510.08464",
+      "year": 2025,
+      "published": "2025-10-09",
+      "venue": "arXiv.org",
+      "citation_count": 9,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Vision-Language-Action (VLA) models have advanced robotic capabilities but remain challenging to deploy on resource-limited hardware. Pruning has enabled efficient compression of large language models (LLMs), yet it is largely understudied in robotics. Surprisingly, we observe that pruning VLA models leads to drastic degradation and increased safety violations. We introduce GLUESTICK, a post-pruning recovery method that restores much of the original model's functionality while retaining sparsity benefits. Our method performs a one-time interpolation between the dense and pruned models in weight-space to compute a corrective term. This correction is used during inference by each pruned layer to recover lost capabilities with minimal overhead. GLUESTICK requires no additional training, is agnostic to the pruning algorithm, and introduces a single hyperparameter that controls the tradeoff between efficiency and accuracy. Across diverse VLA architectures and tasks in manipulation and navigation, GLUESTICK achieves competitive memory efficiency while substantially recovering success rates and reducing safety violations. Additional material can be found at: https://gluestick-vla.github.io/.",
+      "identifiers": [
+        "SemanticScholar:26af14e8b743c4ed534cf72b3e60ade1cd4d9562"
+      ],
+      "semantic_scholar_id": "26af14e8b743c4ed534cf72b3e60ade1cd4d9562",
+      "canonical_id": "arXiv:2510.08464",
+      "arxiv_id": "2510.08464",
+      "doi": "10.48550/arXiv.2510.08464",
+      "authors": [
+        "Jason Jabbour",
+        "Dong-Ki Kim",
+        "M. Smith",
+        "Jay Patrikar",
+        "Radhika Ghosal",
+        "You-Hui Wang",
+        "Ali Agha",
+        "V. Reddi",
+        "Shayegan Omidshafiei"
+      ],
+      "priority": 9,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 9,
+        "citation_count": 9,
+        "total": 9,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 369,
+        "matched_prestigious_venue": null
+      },
+      "reason": "The abstract studies VLA pruning and recovery with retained memory-efficiency benefits and low inference overhead.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-af97812faa74",
+    "round": "libimp-af97812faa74ab2f-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 12,
+    "round_submission_count": 3,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-af97812faa74ab2f-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-af97812faa74ab2f-pre01.json",
+    "receipt": "sha256:6fba9534a4214b8e5480ef6bb9a50c78df3f6eb33e3238db8890396ded15a941"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-af97812faa74",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

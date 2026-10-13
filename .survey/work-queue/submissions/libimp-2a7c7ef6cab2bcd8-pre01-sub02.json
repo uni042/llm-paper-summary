@@ -1,0 +1,222 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Machine Learning Fleet Efficiency: Analyzing and Optimizing Large-Scale Google TPU Systems with ML Productivity Goodput",
+      "source_url": "https://arxiv.org/abs/2502.06982",
+      "year": 2025,
+      "published": "2025-02-10",
+      "venue": "arXiv.org",
+      "citation_count": 7,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Recent years have seen the emergence of machine learning (ML) workloads deployed in warehouse-scale computing (WSC) settings, also known as ML fleets. As the computational demands placed on ML fleets have increased due to the rise of large models and growing demand for ML applications, it has become increasingly critical to measure and improve the efficiency of such systems. However, there is not yet an established methodology to characterize ML fleet performance and identify potential performance optimizations accordingly. This paper presents a large-scale analysis of an ML fleet based on Google's TPUs, introducing a framework to capture fleet-wide efficiency, systematically evaluate performance characteristics, and identify optimization strategies for the fleet. We begin by defining an ML fleet, outlining its components, and analyzing an example Google ML fleet in production comprising thousands of accelerators running diverse workloads. Our study reveals several critical insights: first, ML fleets extend beyond the hardware layer, with model, data, framework, compiler, and scheduling layers significantly impacting performance; second, the heterogeneous nature of ML fleets poses challenges in characterizing individual workload performance; and third, traditional utilization-based metrics prove insufficient for ML fleet characterization. To address these challenges, we present the\"ML Productivity Goodput\"(MPG) metric to measure ML fleet efficiency. We show how to leverage this metric to characterize the fleet across the ML system stack. We also present methods to identify and optimize performance bottlenecks using MPG, providing strategies for managing warehouse-scale ML systems in general. Lastly, we demonstrate quantitative evaluations from applying these methods to a real ML fleet for internal-facing Google TPU workloads, where we observed tangible improvements.",
+      "identifiers": [
+        "SemanticScholar:309ae8fb9be79207445c437841f186ba164bdd07"
+      ],
+      "semantic_scholar_id": "309ae8fb9be79207445c437841f186ba164bdd07",
+      "canonical_id": "arXiv:2502.06982",
+      "arxiv_id": "2502.06982",
+      "doi": "10.48550/arXiv.2502.06982",
+      "authors": [
+        "Arissa Wongpanich",
+        "Tayo Oguntebi",
+        "José Paredes",
+        "Yu Emma Wang",
+        "P. Phothilimthana",
+        "Ritwika Mitra",
+        "Zongwei Zhou",
+        "Naveen Kumar",
+        "V. Reddi"
+      ],
+      "priority": 7,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 7,
+        "citation_count": 7,
+        "total": 7,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 610,
+        "matched_prestigious_venue": null
+      },
+      "reason": "ML Productivity Goodput measures and improves production accelerator-fleet efficiency across hardware, model, data, framework, compiler and scheduling layers.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "HARVEST: Towards Efficient Sparse DNN Accelerators using Programmable Thresholds",
+      "source_url": "https://doi.org/10.1109/VLSID60093.2024.00044",
+      "year": 2024,
+      "published": "2024-01-06",
+      "venue": "International Conference on VLSI Design",
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Although DNNs have become the AI standard due to algorithmic advancements, their computational and memory demands pose challenges for their deployment on edge devices. Extensive research has explored optimizations to efficiently run DNN models on resource-constrained mobile devices, encompassing both software and hardware enhancements. Sparsity exploitation is a prominent optimization technique that aims to boost DNN inference efficiency and speed by eliminating redundant MAC operations resulting from zero operands. In this paper, we propose HARVEST, a hardware-software co-design approach that utilizes existing sparsity engines in accelerators to introduce sparsity in DNN weights and activations during inference. This technique involves two methods: (1) Activation sparsity is achieved by applying thresholds to intermediate activations. These thresholds are determined based on constraints and statistics of the activations stored in the accelerator’s SRAM banks. This approach applies thresholding to all layer types, including convolution, element-wise, fully connected, attention, normalization layers, and non-linear activation functions, thereby increasing sparsity without any additional overhead in terms of area and power. (2) Weight sparsity is introduced before deployment using customized thresholds for each layer. These methods collectively reduce memory and compute energy consumption, leading to improvements in accelerator energy efficiency, at the cost of minimal accuracy loss. Results on state-of-the-art Transformer and CNN models demonstrate a gain of up to 61% and 80% in activation and weight sparsity, respectively. Exploiting this sparsity, an in-house fully-sparse accelerator provides up to 24%, 36%, and 32% reductions in memory, compute, and overall accelerator energy, respectively, for minimal (< 0.5%) loss in accuracy. Furthermore, HARVEST provides up to 32% and 36% reduction in memory and compute cycle count during DNN inference, leading to increased throughput.",
+      "identifiers": [
+        "SemanticScholar:2898cf98cf13cd95113138c78035b4a21dc3339d"
+      ],
+      "semantic_scholar_id": "2898cf98cf13cd95113138c78035b4a21dc3339d",
+      "doi": "10.1109/VLSID60093.2024.00044",
+      "canonical_id": "DOI:10.1109/VLSID60093.2024.00044",
+      "authors": [
+        "Soumendu Kumar Ghosh",
+        "Shamik Kundu",
+        "Arnab Raha",
+        "Deepak A. Mathaikutty",
+        "Vijay Raghunathan"
+      ],
+      "priority": 4,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 4,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1011,
+        "matched_prestigious_venue": null
+      },
+      "reason": "The conference paper proposes activation/weight thresholds to reduce accelerator memory/compute energy and cycle count.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "PeakEngine: A Deterministic On-the-Fly Pruning Neural Network Accelerator for Hearing Instruments",
+      "source_url": "https://doi.org/10.1109/TVLSI.2023.3300910",
+      "year": 2024,
+      "published": "2024-01-01",
+      "venue": "IEEE Transactions on Very Large Scale Integration (vlsi) Systems",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Recurrent neural networks (RNNs) are well-suited for sequential tasks such as speech enhancement (SE). However, their performance comes with high-computational complexity and latency. This impedes their deployment to battery-powered and resource-constrained hearing instruments (HIs) that need to operate for 16–18 h daily at only a few milliwatts (mW). In this article, we introduce PeakEngine, a configurable ASIC accelerator that decreases the amount of computation and memory accesses, and thus latency, in a gated recurrent unit (GRU) by means of adaptive inference. The reduction is achieved by on-the-fly pruning that selects the top <inline-formula> <tex-math notation=\"LaTeX\">$K$ </tex-math></inline-formula> elements based on magnitudes of delta changes across timesteps from both input and hidden state sequences. Since <inline-formula> <tex-math notation=\"LaTeX\">$K$ </tex-math></inline-formula> is constant, it results in a deterministic execution time. PeakEngine is synthesized in a 22-nm CMOS process, and the simulations show that it dissipates <inline-formula> <tex-math notation=\"LaTeX\">$11.83 ~\\mu \\text{J}$ </tex-math></inline-formula> per inference for the baseline (unpruned) network and only 4.14–<inline-formula> <tex-math notation=\"LaTeX\">$5.04 ~\\mu \\text{J}$ </tex-math></inline-formula> for the pruned networks, with maximum acceptable degradation to no degradation in the improvement in audio quality and intelligibility. Moreover, the inference is on average sped up 2.2–<inline-formula> <tex-math notation=\"LaTeX\">$2.97\\times $ </tex-math></inline-formula>, hence meeting the real-time requirements imposed by a HI application. To the best of our knowledge, PeakEngine is the first ASIC accelerator for deterministic and dynamic pruning in RNNs targeting HIs and SE.",
+      "identifiers": [
+        "SemanticScholar:d567142e0e277a12e6b5a16e4babd4aab117f6f7"
+      ],
+      "semantic_scholar_id": "d567142e0e277a12e6b5a16e4babd4aab117f6f7",
+      "doi": "10.1109/TVLSI.2023.3300910",
+      "canonical_id": "DOI:10.1109/TVLSI.2023.3300910",
+      "authors": [
+        "Zuzana Jelčicová",
+        "Evangelia Kasapaki",
+        "Oskar Andersson",
+        "J. Sparsø"
+      ],
+      "priority": 2,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 2,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1016,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Author manuscript in DTU institutional repository carries the IEEE DOI and abstract; deterministic on-the-fly pruning reduces ASIC inference energy and latency for hearing devices.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "TIP-Search: Time-Predictable Inference Scheduling for Market Prediction under Uncertain Load",
+      "source_url": "https://arxiv.org/abs/2506.08026",
+      "year": 2025,
+      "published": "2025-05-30",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Real-time market prediction services need correct predictions before a decision deadline; a correct prediction delivered late is not usable. TIP-Search studies time-predictable inference scheduling over fixed market predictors under uncertain load. It filters conformal latency-quantile feasible models, dispatches over finite workers, and uses shielded constrained online experts to trade accuracy, queue pressure, and deadline risk. On the optimized deployable pool, TIP-Search reaches 0.994 raw accuracy and 0.991 timely accuracy. On official TLOB FI-2010 h=10, TIP-Search++ raises timely accuracy from 0.156 to 0.239 and deadline satisfaction from 0.391 to 0.962. In matched h10 profiled systems replay, OCO-ACPO reaches 0.303 timely accuracy and 0.951 deadline satisfaction, with paired gains over RAMSIS/SneakPeek/utility-style comparators of $+0.00285$ timely accuracy ($p=0.0118$) and $+0.0146$ deadline satisfaction ($p=1.5{\\times}10^{-5}$). SA-OCO-ACPO improves timely/deadline service by 0.188--0.417 over CPO under nonstationary stress. The claim is a systems scheduling result, not a broad LOB classifier leaderboard.",
+      "identifiers": [
+        "SemanticScholar:78470575239e46b5a8a19ca11b425874c3083866"
+      ],
+      "semantic_scholar_id": "78470575239e46b5a8a19ca11b425874c3083866",
+      "canonical_id": "arXiv:2506.08026",
+      "arxiv_id": "2506.08026",
+      "doi": "10.48550/arXiv.2506.08026",
+      "authors": [
+        "Xibai Wang"
+      ],
+      "priority": 1,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 1,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 501,
+        "matched_prestigious_venue": null
+      },
+      "reason": "The method filters latency-quantile-feasible models and dispatches over finite workers to trade accuracy, queue pressure and deadline risk.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Hybrid RIS-Aided Digital Over-the-Air Computing for Edge AI Inference: Joint Feature Quantization and Active-Passive Beamforming Design",
+      "source_url": "https://arxiv.org/abs/2509.21201",
+      "year": 2025,
+      "published": "2025-09-25",
+      "venue": "IEEE Transactions on Communications",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The vision of 6G networks aims to enable edge inference by leveraging ubiquitously deployed artificial intelligence (AI) models, facilitating intelligent environmental perception for a wide range of applications. A critical operation in edge inference is for an edge node (EN) to aggregate multi-view sensory features extracted by distributed agents, thereby boosting perception accuracy. Over-the-air computing (AirComp) emerges as a promising technique for rapid feature aggregation by exploiting the waveform superposition property of analog-modulated signals, which is, however, incompatible with existing digital communication systems. Meanwhile, hybrid reconfigurable intelligent surface (RIS), a novel RIS architecture capable of simultaneous signal amplification and reflection, exhibits potential for enhancing AirComp. Therefore, this paper proposes a Hybrid RIS-aided Digital AirComp (HRD-AirComp) scheme, which employs vector quantization to map high-dimensional features into discrete codewords that are digitally modulated into symbols for wireless transmission. By judiciously adjusting the AirComp transceivers and hybrid RIS reflection to control signal superposition across agents, the EN can estimate the aggregated features from the received signals. To endow HRD-AirComp with a task-oriented design principle, we derive a surrogate function for inference accuracy that characterizes the impact of feature quantization and over-the-air aggregation. Based on this surrogate, we formulate an optimization problem targeting inference accuracy maximization, and develop an efficient algorithm to jointly optimize the quantization bit allocation, agent transmission coefficients, EN receiving beamforming, and hybrid RIS reflection beamforming. Experimental results demonstrate that the proposed HRD-AirComp outperforms state-of-the-art digital AirComp baselines in terms of both inference accuracy and uncertainty, achieving performance close to the idealized case with perfect feature aggregation.",
+      "identifiers": [
+        "SemanticScholar:fcdba534ac791f922a8f6941acc465db0b4bdd46"
+      ],
+      "semantic_scholar_id": "fcdba534ac791f922a8f6941acc465db0b4bdd46",
+      "canonical_id": "arXiv:2509.21201",
+      "arxiv_id": "2509.21201",
+      "doi": "10.1109/TCOMM.2026.3674171",
+      "authors": [
+        "Yang Fu",
+        "Peng Qin",
+        "Li-Ming Chen",
+        "Xian-Chao Zhang",
+        "Yifei Wang"
+      ],
+      "priority": 1,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 1,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 383,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Quantized feature aggregation and joint communication/beamforming optimization target edge-AI inference under wireless constraints.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-2a7c7ef6cab2",
+    "round": "libimp-2a7c7ef6cab2bcd8-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 12,
+    "round_submission_count": 3,
+    "round_submission_index": 2,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-2a7c7ef6cab2bcd8-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-2a7c7ef6cab2bcd8-pre01.json",
+    "receipt": "sha256:2564cbb880c4aec002778e486cb4d84b76b9489449820540c2aa1d6497d72e1d"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-2a7c7ef6cab2",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

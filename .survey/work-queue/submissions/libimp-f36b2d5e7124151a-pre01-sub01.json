@@ -1,0 +1,153 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "MambaVoiceCloning: Efficient and Expressive Text-to-Speech via State-Space Modeling and Diffusion Control",
+      "source_url": "https://arxiv.org/abs/2604.00292",
+      "year": 2026,
+      "published": "2026-03-31",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "MambaVoiceCloning (MVC) asks whether the conditioning path of diffusion-based TTS can be made fully SSM-only at inference, removing all attention and explicit RNN-style recurrence layers across text, rhythm, and prosody, while preserving or improving quality under controlled conditions. MVC combines a gated bidirectional Mamba text encoder, a Temporal Bi-Mamba supervised by a lightweight alignment teacher discarded after training, and an Expressive Mamba with AdaLN modulation, yielding linear-time O(T) conditioning with bounded activation memory and practical finite look-ahead streaming. Unlike prior Mamba-TTS systems that remain hybrid at inference, MVC removes attention-based duration and style modules under a fixed StyleTTS2 mel-diffusion-vocoder backbone. Trained on LJSpeech/LibriTTS and evaluated on VCTK, CSS10 (ES/DE/FR), and long-form Gutenberg passages, MVC achieves modest but statistically reliable gains over StyleTTS2, VITS, and Mamba-attention hybrids in MOS/CMOS, F0 RMSE, MCD, and WER, while reducing encoder parameters to 21M and improving throughput by 1.6x. Diffusion remains the dominant latency source, but SSM-only conditioning improves memory footprint, stability, and deployability.",
+      "identifiers": [
+        "SemanticScholar:d2389c436f804a59fb8573ac8e4cec4f7a1f7412"
+      ],
+      "semantic_scholar_id": "d2389c436f804a59fb8573ac8e4cec4f7a1f7412",
+      "canonical_id": "arXiv:2604.00292",
+      "arxiv_id": "2604.00292",
+      "doi": "10.48550/arXiv.2604.00292",
+      "authors": [
+        "Sahil Kumar",
+        "Namrata Patel",
+        "Honggang Wang",
+        "You-Shan Zhang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 196,
+        "matched_prestigious_venue": null
+      },
+      "reason": "SSM-only TTS conditioning targets linear-time inference and bounded activation memory and reports throughput gains.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Capturing Token Tendencies for Training-Free Token Pruning in Multimodal Large Language Models",
+      "source_url": "https://arxiv.org/abs/2607.28341",
+      "year": 2026,
+      "published": "2026-07-30",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "While visual token pruning is essential for efficient Multimodal Large Language Models (MLLMs), existing training-free methods suffer from a critical limitation: they rely on static, instantaneous heuristics to perform irreversible filtering. This approach ignores the hierarchical nature of MLLMs, where token importance often evolves dynamically rather than remaining fixed across layers. Consequently, tokens essential for deep-layer reasoning are often prematurely discarded by shallow-layer estimates. To address this, we propose Trend-aware Pruning, a novel framework that elevates pruning from a local snapshot decision to a temporal trajectory modeling problem. Instead of relying on isolated scores, our method captures the momentum of attention flow. This enables a dynamic rectification mechanism that selectively reactivates\"late-blooming\"tokens, those initially undervalued but exhibiting rising semantic importance, thereby preventing the loss of critical visual cues. Extensive experiments demonstrate that our approach achieves a superior efficiency-performance trade-off across diverse multimodal tasks. Notably, it reduces visual tokens by over 77.8%, retaining only approximately 23 tokens in the final layer while maintaining competitive performance, offering a robust and reversible solution for high-efficiency multimodal inference.",
+      "identifiers": [
+        "SemanticScholar:2c73683d8159c4738d86745c4e29d3af0037bd07"
+      ],
+      "semantic_scholar_id": "2c73683d8159c4738d86745c4e29d3af0037bd07",
+      "canonical_id": "arXiv:2607.28341",
+      "arxiv_id": "2607.28341",
+      "doi": "10.48550/arXiv.2607.28341",
+      "authors": [
+        "Jie Ma",
+        "Zhi-Ke Qiu",
+        "Jie Gao",
+        "Jia-Yi Ji",
+        "Qianyu Chen",
+        "Xiao-Shuai Sun",
+        "Rong-Rong Ji"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 75,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Training-free MLLM token pruning reduces visual-token compute while retaining competitive task performance.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Less Context, Same Performance: A RAG Framework for Resource-Efficient LLM-Based Clinical NLP",
+      "source_url": "https://arxiv.org/abs/2505.20320",
+      "year": 2025,
+      "published": "2025-05-23",
+      "venue": "arXiv.org",
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Long text classification is challenging for Large Language Models (LLMs) due to token limits and high computational costs. This study explores whether a Retrieval Augmented Generation (RAG) approach using only the most relevant text segments can match the performance of processing entire clinical notes with large context LLMs. We begin by splitting clinical documents into smaller chunks, converting them into vector embeddings, and storing these in a FAISS index. We then retrieve the top 4,000 words most pertinent to the classification query and feed these consolidated segments into an LLM. We evaluated three LLMs (GPT4o, LLaMA, and Mistral) on a surgical complication identification task. Metrics such as AUC ROC, precision, recall, and F1 showed no statistically significant differences between the RAG based approach and whole-text processing (p>0.05p>0.05). These findings indicate that RAG can significantly reduce token usage without sacrificing classification accuracy, providing a scalable and cost effective solution for analyzing lengthy clinical documents.",
+      "identifiers": [
+        "SemanticScholar:1016672514f8d7788f1c775f8ba541364557c281"
+      ],
+      "semantic_scholar_id": "1016672514f8d7788f1c775f8ba541364557c281",
+      "canonical_id": "arXiv:2505.20320",
+      "arxiv_id": "2505.20320",
+      "doi": "10.48550/arXiv.2505.20320",
+      "authors": [
+        "S. Cheetirala",
+        "Ganesh Raut",
+        "Dhavalkumar Patel",
+        "Fabio Sanatana",
+        "Robert Freeman",
+        "M. Levin",
+        "G. Nadkarni",
+        "Omar R. Dawkins",
+        "Reba Miller",
+        "R. Steinhagen",
+        "E. Klang",
+        "P. Timsina"
+      ],
+      "priority": 4,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 4,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 508,
+        "matched_prestigious_venue": null
+      },
+      "reason": "The RAG method reduces long-context LLM input/token work while preserving clinical text classification performance.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-f36b2d5e7124",
+    "round": "libimp-f36b2d5e7124151a-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 3,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-f36b2d5e7124151a-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-f36b2d5e7124151a-pre01.json",
+    "receipt": "sha256:60de05f45bfe69fd3549eeeff130a89ceb3518b049e6ee50068c66db6a678052"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-f36b2d5e7124",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
