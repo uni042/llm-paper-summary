@@ -1,0 +1,27 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261013-1930-scheduled-chat-30/r01/research-relevance-title-035",
+  "reference_main_sha": "df1e54299253121b022271294c687c1ffc4caa81",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.10577",
+      "identity_tokens": [
+        "id:arXiv:2606.10577",
+        "url:https://arxiv.org/abs/2606.10577"
+      ],
+      "title": "AgenticNav: Zero-Shot Vision-and-Language Navigation as a Tool-Calling Harness",
+      "reason": "タイトルは視覚と言語に基づくロボットのゼロショット航法をツール呼出しの枠組みとして構築する研究であることを明示する。研究対象はロボットの移動意思決定であり、生成型LLMの実行カーネル、KVメモリ、分散推論基盤の効率化を主題としないため、タイトル段階の対象外とする。要旨と本文は未確認。",
+      "source_url": "https://arxiv.org/abs/2606.10577",
+      "body_check": "title_screen_only; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-10-13T19:35:17+09:00",
+      "last_checked_at": "2026-10-13T19:35:17+09:00",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance",
+      "worklist_rank": 35
+    }
+  ]
+}
