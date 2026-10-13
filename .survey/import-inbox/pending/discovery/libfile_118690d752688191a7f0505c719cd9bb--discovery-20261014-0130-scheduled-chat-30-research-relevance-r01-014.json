@@ -1,0 +1,26 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261014-0130-scheduled-chat-30/r01",
+  "reference_main_sha": "abf33724d6a6e59ac34230a18324cce60ff43d9d",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2112.06749",
+      "identity_tokens": [
+        "arxiv:2112.06749"
+      ],
+      "title": "Step-unrolled Denoising Autoencoders for Text Generation",
+      "reason": "自己回帰を用いない反復的なトークン改良による文章生成を提案し、従来の拡散型生成より少ない反復回数と翻訳品質を報告する。並列復号の基本方式として関連性はあるが、現代の大規模生成モデルの推論速度や配信システムの実装・評価は要旨から確認できないため境界候補に残す。",
+      "source_url": "https://arxiv.org/abs/2112.06749",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T01:30:00+09:00",
+      "last_checked_at": "2026-10-14T01:30:00+09:00",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance",
+      "worklist_rank": 14
+    }
+  ]
+}
