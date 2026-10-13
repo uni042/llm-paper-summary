@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-13T22:56:17+00:00",
-  "record_count": 4920,
+  "updated_at": "2026-10-13T23:22:09+00:00",
+  "record_count": 4925,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -75880,6 +75880,71 @@
       ],
       "borderline_recheck_count": 0,
       "title": "PiLLM: Resource-Efficient LLM Inference Using Workload Prediction"
+    },
+    "DOI:10.1109/bigdata66926.2025.11402259": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/bigdata66926.2025.11402259",
+      "identity_tokens": [
+        "DOI:10.1109/bigdata66926.2025.11402259"
+      ],
+      "reason": "DOI/title identify a disaggregated LLM-serving system, but the official IEEE page did not load through the retrieval tool. Without the primary abstract, the adaptive-parallel mechanism and its serving-efficiency contribution cannot be verified; borderline is retained.",
+      "first_checked_at": "2026-10-13T23:22:07+00:00",
+      "last_checked_at": "2026-10-13T23:22:07+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "APSys: Disaggregated LLM Serving System with an Adaptive Parallel Strategy"
+    },
+    "DOI:10.1109/globecom59602.2025.11432593": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/globecom59602.2025.11432593",
+      "identity_tokens": [
+        "DOI:10.1109/globecom59602.2025.11432593"
+      ],
+      "reason": "Identity/title were confirmed from the DOI and institutional publication record, and the official IEEE Xplore URL was tried. Its abstract could not be retrieved past the JavaScript/robot gate, so the edge/server speculative-decoding details and efficiency contribution remain unverified from primary text.",
+      "first_checked_at": "2026-10-13T23:22:08+00:00",
+      "last_checked_at": "2026-10-13T23:22:08+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Device-Server Collaborative Speculative Decoding for Real-Time LLM Streaming"
+    },
+    "DOI:10.1109/asru65441.2025.11434611": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/asru65441.2025.11434611",
+      "identity_tokens": [
+        "DOI:10.1109/asru65441.2025.11434611"
+      ],
+      "reason": "DOI/title identity is resolved, and the IEEE publisher endpoint was attempted. The primary abstract was inaccessible; secondary summaries suggest LLM quantization, but they are not used to decide relevance, so the candidate remains borderline pending primary text.",
+      "first_checked_at": "2026-10-13T23:22:08+00:00",
+      "last_checked_at": "2026-10-13T23:22:08+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "OOQ: Outlier-Oriented Quantization for Efficient Large Language Models"
+    },
+    "DOI:10.1145/3772052.3772261": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3772052.3772261",
+      "identity_tokens": [
+        "DOI:10.1145/3772052.3772261"
+      ],
+      "reason": "The DOI and title resolve to an edge model-serving paper, but the ACM primary abstract/full text was not retrievable through the attempted DOI route. The model/domain and whether its checkpointed inference system applies to LLM serving remain unconfirmed, so borderline is retained.",
+      "first_checked_at": "2026-10-13T23:22:08+00:00",
+      "last_checked_at": "2026-10-13T23:22:08+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "CIS: Checkpointed Inference for Data Drift-Resilient Model Serving at Edge Servers"
+    },
+    "DOI:10.1109/iccd65941.2025.00044": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/iccd65941.2025.00044",
+      "identity_tokens": [
+        "DOI:10.1109/iccd65941.2025.00044"
+      ],
+      "reason": "DOI/title identity matches the candidate, and the IEEE Xplore route was attempted but unavailable. The primary abstract could not substantiate the proposed adaptive sparse KV-cache mechanism or its inference efficiency claims; secondary summaries are not used as substitutes.",
+      "first_checked_at": "2026-10-13T23:22:09+00:00",
+      "last_checked_at": "2026-10-13T23:22:09+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "DualSpar: A Dual-Granularity Memory Framework with Adaptive Sparsity for Efficient LLM Inference"
     }
   }
 }

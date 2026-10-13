@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-dce28c71cc61d8a5-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1109/bigdata66926.2025.11402259",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1109/bigdata66926.2025.11402259",
+    "identity_tokens": [
+      "DOI:10.1109/bigdata66926.2025.11402259"
+    ],
+    "reason": "DOI/title identify a disaggregated LLM-serving system, but the official IEEE page did not load through the retrieval tool. Without the primary abstract, the adaptive-parallel mechanism and its serving-efficiency contribution cannot be verified; borderline is retained.",
+    "first_checked_at": "2026-10-13T23:22:07+00:00",
+    "last_checked_at": "2026-10-13T23:22:07+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "APSys: Disaggregated LLM Serving System with an Adaptive Parallel Strategy"
+  },
+  "processed_at": "2026-10-13T23:22:08+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-dce28c71cc61",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
