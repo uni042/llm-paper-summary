@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-d5e1a092c12bcad7-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2011.00241",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2011.00241",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2011.00241",
+      "arXiv:2011.00241"
+    ],
+    "reason": "一次要旨では、深層ニューラルネットの枝刈り研究150件超を大きさ・クラスタリング・感度分析で分類し、AlexNet、ResNet、DenseNet、VGGの画像分類精度と圧縮率を比較する。LLM/Transformerの推論システムやサービング、MoE、KVキャッシュを対象とせず、比較の中心は画像分類用CNNの圧縮である。",
+    "first_checked_at": "2026-10-12T10:58:02+00:00",
+    "last_checked_at": "2026-10-13T03:44:22+00:00",
+    "linked_from": [],
+    "title": "Methods for Pruning Deep Neural Networks"
+  },
+  "processed_at": "2026-10-13T03:44:22+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d5e1a092c12b",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

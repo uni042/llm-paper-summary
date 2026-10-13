@@ -2,7 +2,7 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-13T01:58:26+00:00",
+  "updated_at": "2026-10-13T03:44:22+00:00",
   "record_count": 11692,
   "records": {
     "arXiv:2303.08774": {
@@ -165007,9 +165007,9 @@
         "DOI:10.48550/arxiv.2011.00241",
         "arXiv:2011.00241"
       ],
-      "reason": "原著要旨は150件超の一般深層ニューラルネットワーク剪定研究を、大きさ基準・クラスタリング・感度分析に分類するレビューである。代表比較はAlexNet、ResNet、DenseNet、VGGの画像認識とImageNet/CIFAR10であり、LLM推論・サービング・KVメモリ・MoE等への直接的なシステム技術貢献を扱わないため現行サーベイ対象外。",
+      "reason": "一次要旨では、深層ニューラルネットの枝刈り研究150件超を大きさ・クラスタリング・感度分析で分類し、AlexNet、ResNet、DenseNet、VGGの画像分類精度と圧縮率を比較する。LLM/Transformerの推論システムやサービング、MoE、KVキャッシュを対象とせず、比較の中心は画像分類用CNNの圧縮である。",
       "first_checked_at": "2026-10-12T10:58:02+00:00",
-      "last_checked_at": "2026-10-12T10:58:02+00:00",
+      "last_checked_at": "2026-10-13T03:44:22+00:00",
       "linked_from": [],
       "title": "Methods for Pruning Deep Neural Networks"
     },

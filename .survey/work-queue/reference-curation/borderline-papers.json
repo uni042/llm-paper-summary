@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-13T02:49:12+00:00",
-  "record_count": 4766,
+  "updated_at": "2026-10-13T03:44:22+00:00",
+  "record_count": 4767,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -71495,9 +71495,9 @@
         "SemanticScholar:5cbe278b65a81602a864184bbca37de91448a5f5",
         "arXiv:2203.07814"
       ],
-      "reason": "原著の一次要旨は、競技プログラミングでの正答率を上げるための大規模なプログラム候補生成、実行挙動に基づくフィルタリング、学習データ整備を主要貢献とし、Codeforcesでの順位を評価する。推論時の多数候補サンプリングには計算資源上の関心があるが、GPUカーネル、サービング遅延、メモリ階層、バッチ処理、実行時オフロード等を高速化するシステム方式を一次要旨からは確認できない。能力向上が主眼のため即収録ではなく境界的と判断。",
+      "reason": "一次要旨では、競技プログラミングの未知問題に対して大量のコード候補を生成し、プログラムの振る舞いでフィルタして少数の提出候補へ絞るAlphaCodeを提案する。大規模な推論時サンプリングと候補選別という計算効率の接点はあるが、主な貢献はコード生成の問題解決能力と探索方策であり、GPUサービング、KVキャッシュ、MoE実行基盤の最適化を評価していない。",
       "first_checked_at": "2026-10-12T13:50:16+00:00",
-      "last_checked_at": "2026-10-12T13:50:16+00:00",
+      "last_checked_at": "2026-10-13T03:44:22+00:00",
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "Competition-Level Code Generation with AlphaCode"
@@ -71566,9 +71566,9 @@
       "identity_tokens": [
         "arXiv:2306.07174"
       ],
-      "reason": "一次論文の要旨は、凍結した言語モデルを記憶符号器とし、残差側ネットワークが過去文脈のKV表現を検索・読出しするLongMemを提案する。65kトークン相当の長期記憶やChapterBreak・文脈内学習の精度向上が主要評価であり、GPUメモリ階層、推論スループット、KVキャッシュの容量・転送の独立したシステム性能は要旨から確認できない。外部記憶という技術的関連はあるが、モデル能力向上が主目的のため境界的関連として保留。",
+      "reason": "一次要旨では、凍結した言語モデルをメモリエンコーダとして使い、適応的な側枝ネットワークで過去文脈を検索・読出しするLongMemを提案する。65,000トークン相当の長期記憶を保持する外部メモリ設計は推論時の文脈利用と関連するが、主評価は長文言語モデル性能と文脈内学習であり、GPU KVキャッシュ圧縮・階層オフロード・サービング遅延の改善ではない。",
       "first_checked_at": "2026-10-12T14:56:01+00:00",
-      "last_checked_at": "2026-10-12T16:50:16+00:00",
+      "last_checked_at": "2026-10-13T03:44:19+00:00",
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "Augmenting Language Models with Long-Term Memory"
@@ -72862,6 +72862,19 @@
       ],
       "borderline_recheck_count": 0,
       "title": "FADFNet: A fine-tunable and adaptive decomposition-fusion network for cross-dataset low-dose CT and low-dose PET image reconstruction"
+    },
+    "arXiv:2208.00406": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2208.00406",
+      "identity_tokens": [
+        "arXiv:2208.00406"
+      ],
+      "reason": "一次要旨では、学習・推論プログラムの電力消費と地域別CO2排出換算を計測するPythonパッケージeco2AIを公開する。LLM推論のエネルギー効率測定にも転用可能な計測技術だが、研究対象は機械学習全般の消費電力・排出量追跡であり、LLMモデルの演算・転送・サービングを高速化する方式ではない。",
+      "first_checked_at": "2026-10-13T03:44:20+00:00",
+      "last_checked_at": "2026-10-13T03:44:20+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Eco2AI: carbon emissions tracking of machine learning models as the first step towards sustainable AI"
     }
   }
 }
