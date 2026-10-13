@@ -1,8 +1,8 @@
 {
   "schema_version": 3,
-  "updated_at": "2026-10-13T00:21:16+00:00",
-  "last_run_key": "library-import-f49bea70a06f",
-  "last_round": "libimp-f49bea70a06fbd9e-pre01",
+  "updated_at": "2026-10-13T00:56:58+00:00",
+  "last_run_key": "library-import-f7c224027547",
+  "last_round": "libimp-f7c224027547ed9d-pre01",
   "paper_stock_zero_count": 3,
   "consecutive_empty_rounds": 0,
   "last_empty_round_reason": null,
@@ -10,118 +10,6 @@
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
   "history": [
-    {
-      "round_identity": "precheck:20260924T020210JST-scheduled-chat-00-backward-r1",
-      "precheck_request_id": "20260924T020210JST-scheduled-chat-00-backward-r1",
-      "run_key": "20260924T020210JST-scheduled-chat-00",
-      "round": "20260924T020210JST-scheduled-chat-00-backward-r1",
-      "axis": "preload-backward-structured-references",
-      "query_summary": "Backward-reference curation from the repository structured-reference pool; evaluated the canonical schema-v3 allowed records and selected high-value inference/serving omissions.",
-      "provider": "repository_references",
-      "source_url": "repository://structured-references",
-      "citation_direction": "backward",
-      "seed_canonical_id": null,
-      "preload_id": "preload-fc83ee7da7a72c0df27b",
-      "candidate_count": 20,
-      "duplicate_filtered_count": 0,
-      "final_duplicate_filtered_count": 0,
-      "accepted_count": 3,
-      "accepted_canonical_ids": [
-        "OpenReview:02f3mUtqnM",
-        "arXiv:2211.10017",
-        "arXiv:2010.13887"
-      ],
-      "duplicate_canonical_ids": [],
-      "next_axis_hint": null,
-      "source_submission": "work-queue/submissions/20260924T020210JST-scheduled-chat-00-backward-r1-submit.json",
-      "source_submissions": [
-        "work-queue/submissions/20260924T020210JST-scheduled-chat-00-backward-r1-submit.json"
-      ],
-      "round_submission_indices": [
-        1
-      ],
-      "round_submission_count": 1,
-      "round_accounted": true,
-      "novel_candidate_count": 20,
-      "post_final_dedupe_count": 20,
-      "duplicate_ratio": 0.0,
-      "final_duplicate_ratio": 0.0,
-      "round_complete": true
-    },
-    {
-      "round_identity": "precheck:20260924T020210JST-scheduled-chat-00-direct-forward-2",
-      "precheck_request_id": "20260924T020210JST-scheduled-chat-00-direct-forward-2",
-      "run_key": "20260924T020210JST-scheduled-chat-00",
-      "round": "20260924T020210JST-scheduled-chat-00-forward-r2",
-      "axis": "forward citations of KVLink efficient KV cache reuse",
-      "query_summary": "Forward-citation preload for KVLink, formally re-filtered by schema-v3 precheck; selected recent high-value KV-cache, routing, RAG-cache, and agentic-serving systems.",
-      "provider": "semantic_scholar",
-      "source_url": "https://api.semanticscholar.org/graph/v1/paper/ARXIV:2502.16002/citations?fields=title,abstract,year,externalIds,url,publicationDate&limit=100",
-      "citation_direction": "forward",
-      "seed_canonical_id": "arXiv:2502.16002",
-      "preload_id": "preload-279710d2459727616545",
-      "candidate_count": 20,
-      "duplicate_filtered_count": 0,
-      "final_duplicate_filtered_count": 0,
-      "accepted_count": 5,
-      "accepted_canonical_ids": [
-        "arXiv:2602.11688",
-        "arXiv:2602.06502",
-        "arXiv:2602.01519",
-        "arXiv:2601.12904",
-        "arXiv:2509.21301"
-      ],
-      "duplicate_canonical_ids": [],
-      "next_axis_hint": null,
-      "source_submission": "work-queue/submissions/20260924T020210JST-scheduled-chat-00-forward-r2-submit.json",
-      "source_submissions": [
-        "work-queue/submissions/20260924T020210JST-scheduled-chat-00-forward-r2-submit.json"
-      ],
-      "round_submission_indices": [
-        1
-      ],
-      "round_submission_count": 1,
-      "round_accounted": true,
-      "novel_candidate_count": 20,
-      "post_final_dedupe_count": 20,
-      "duplicate_ratio": 0.0,
-      "final_duplicate_ratio": 0.0,
-      "round_complete": true
-    },
-    {
-      "round_identity": "precheck:20260924T020210JST-scheduled-chat-00-direct-backward-1",
-      "precheck_request_id": "20260924T020210JST-scheduled-chat-00-direct-backward-1",
-      "run_key": "20260924T020210JST-scheduled-chat-00",
-      "round": "20260924T020210JST-scheduled-chat-00-direct-backward-recovery1",
-      "axis": "preload-backward-structured-references",
-      "query_summary": "Recovery of the duplicate direct-take backward precheck after the required forward-citation round was durably completed. No additional candidates are submitted because the same preload candidates were already evaluated in backward-r1.",
-      "provider": "repository_references",
-      "source_url": "repository://structured-references",
-      "citation_direction": "backward",
-      "seed_canonical_id": null,
-      "preload_id": "preload-fc83ee7da7a72c0df27b",
-      "candidate_count": 20,
-      "duplicate_filtered_count": 20,
-      "final_duplicate_filtered_count": 0,
-      "accepted_count": 0,
-      "accepted_canonical_ids": [],
-      "duplicate_canonical_ids": [],
-      "next_axis_hint": null,
-      "source_submission": "work-queue/submissions/20260924T020210JST-scheduled-chat-00-direct-backward-recovery1.json",
-      "source_submissions": [
-        "work-queue/submissions/20260924T020210JST-scheduled-chat-00-direct-backward-recovery1.json"
-      ],
-      "round_submission_indices": [
-        1
-      ],
-      "round_submission_count": 1,
-      "round_accounted": true,
-      "novel_candidate_count": 0,
-      "post_final_dedupe_count": 0,
-      "duplicate_ratio": 1.0,
-      "final_duplicate_ratio": 0.0,
-      "round_complete": true
-    },
     {
       "round_identity": "precheck:20260924T014100JST-worker-915241-forward-r7",
       "precheck_request_id": "20260924T014100JST-worker-915241-forward-r7",
@@ -13543,6 +13431,110 @@
       "duplicate_ratio": 0.0,
       "final_duplicate_ratio": 0.0,
       "round_complete": true
+    },
+    {
+      "round_identity": "precheck:libimp-45ffa45be78d0423-pre01",
+      "precheck_request_id": "libimp-45ffa45be78d0423-pre01",
+      "run_key": "library-import-45ffa45be78d",
+      "round": "libimp-45ffa45be78d0423-pre01",
+      "axis": "library-candidate-intake",
+      "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。",
+      "provider": "candidate_id_lookup",
+      "source_url": "identifier://approved-public-apis",
+      "citation_direction": null,
+      "seed_canonical_id": null,
+      "preload_id": null,
+      "candidate_count": 3,
+      "duplicate_filtered_count": 0,
+      "final_duplicate_filtered_count": 0,
+      "accepted_count": 3,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": null,
+      "source_submission": "work-queue/submissions/libimp-45ffa45be78d0423-pre01-sub01.json",
+      "source_submissions": [
+        "work-queue/submissions/libimp-45ffa45be78d0423-pre01-sub01.json"
+      ],
+      "round_submission_indices": [
+        1
+      ],
+      "round_submission_count": 1,
+      "round_accounted": true,
+      "novel_candidate_count": 3,
+      "post_final_dedupe_count": 3,
+      "duplicate_ratio": 0.0,
+      "final_duplicate_ratio": 0.0,
+      "round_complete": true
+    },
+    {
+      "round_identity": "precheck:libimp-53164a7c13145a9a-pre01",
+      "precheck_request_id": "libimp-53164a7c13145a9a-pre01",
+      "run_key": "library-import-53164a7c1314",
+      "round": "libimp-53164a7c13145a9a-pre01",
+      "axis": "library-candidate-intake",
+      "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。",
+      "provider": "candidate_id_lookup",
+      "source_url": "identifier://approved-public-apis",
+      "citation_direction": null,
+      "seed_canonical_id": null,
+      "preload_id": null,
+      "candidate_count": 5,
+      "duplicate_filtered_count": 0,
+      "final_duplicate_filtered_count": 0,
+      "accepted_count": 5,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": null,
+      "source_submission": "work-queue/submissions/libimp-53164a7c13145a9a-pre01-sub01.json",
+      "source_submissions": [
+        "work-queue/submissions/libimp-53164a7c13145a9a-pre01-sub01.json"
+      ],
+      "round_submission_indices": [
+        1
+      ],
+      "round_submission_count": 1,
+      "round_accounted": true,
+      "novel_candidate_count": 5,
+      "post_final_dedupe_count": 5,
+      "duplicate_ratio": 0.0,
+      "final_duplicate_ratio": 0.0,
+      "round_complete": true
+    },
+    {
+      "round_identity": "precheck:libimp-f7c224027547ed9d-pre01",
+      "precheck_request_id": "libimp-f7c224027547ed9d-pre01",
+      "run_key": "library-import-f7c224027547",
+      "round": "libimp-f7c224027547ed9d-pre01",
+      "axis": "library-candidate-intake",
+      "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。",
+      "provider": "candidate_id_lookup",
+      "source_url": "identifier://approved-public-apis",
+      "citation_direction": null,
+      "seed_canonical_id": null,
+      "preload_id": null,
+      "candidate_count": 10,
+      "duplicate_filtered_count": 5,
+      "final_duplicate_filtered_count": 0,
+      "accepted_count": 5,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": null,
+      "source_submission": "work-queue/submissions/libimp-f7c224027547ed9d-pre01-sub01.json",
+      "source_submissions": [
+        "work-queue/submissions/libimp-f7c224027547ed9d-pre01-sub01.json",
+        "work-queue/submissions/libimp-f7c224027547ed9d-pre01-sub02.json"
+      ],
+      "round_submission_indices": [
+        1,
+        2
+      ],
+      "round_submission_count": 2,
+      "round_accounted": true,
+      "novel_candidate_count": 5,
+      "post_final_dedupe_count": 5,
+      "duplicate_ratio": 0.5,
+      "final_duplicate_ratio": 0.0,
+      "round_complete": true
     }
   ],
   "axes": {
@@ -21914,16 +21906,16 @@
       "next_axis_hint": "今回runで新着、storage/hierarchical memory、MoE、network/runtime、scheduling/kernel、agent/multimodal、speculative/length predictionを横断済み。次回は新着差分とforward/backward citationから再開する"
     },
     "library-candidate-intake": {
-      "last_run_key": "library-import-f49bea70a06f",
-      "rounds": 260,
-      "candidate_count": 1108,
-      "duplicate_filtered_count": 540,
-      "novel_candidate_count": 568,
+      "last_run_key": "library-import-f7c224027547",
+      "rounds": 263,
+      "candidate_count": 1126,
+      "duplicate_filtered_count": 545,
+      "novel_candidate_count": 581,
       "final_duplicate_filtered_count": 5,
-      "post_final_dedupe_count": 563,
-      "accepted_count": 563,
-      "duplicate_ratio": 0.48736462093862815,
-      "final_duplicate_ratio": 0.008802816901408451,
+      "post_final_dedupe_count": 576,
+      "accepted_count": 576,
+      "duplicate_ratio": 0.48401420959147423,
+      "final_duplicate_ratio": 0.008605851979345954,
       "next_axis_hint": null
     },
     "explicit-library-accept": {
