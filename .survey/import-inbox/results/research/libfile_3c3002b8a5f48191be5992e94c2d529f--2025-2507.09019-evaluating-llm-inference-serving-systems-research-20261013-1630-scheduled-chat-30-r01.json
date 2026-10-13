@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "12583c6e92edb05e87b34515b547c8cb08ce6723a9114300abb0909339b48cc8",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_3c3002b8a5f48191be5992e94c2d529f--2025-2507.09019-evaluating-llm-inference-serving-systems-research-20261013-1630-scheduled-chat-30-r01.md",
+  "canonical_id": "arXiv:2507.09019",
+  "worker_completed_at": "2026-10-13T16:33:48+09:00",
+  "worker_run_key": "20261013-1630-scheduled-chat-30/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 5730,
+    "body_paragraphs": 34,
+    "method_chars": 0,
+    "method_paragraphs": 0,
+    "evaluation_chars": 0,
+    "limitation_chars": 0,
+    "insufficiency_flags": [
+      "手法説明量 0 < 700",
+      "評価説明量 0 < 500",
+      "限界説明量 0 < 推奨 120"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 手法説明量 0 < 700",
+    "説明不足トリガー: 評価説明量 0 < 500"
+  ],
+  "processed_at": "2026-10-13T07:53:43+00:00"
+}

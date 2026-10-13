@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "4b424cbad8a2b45f751e51b740905d5af3616076e42324fa5bcf7a9abbf6cccf",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_0d843633be608191aebcfba882c56f47--2026-2601.09260-cot-flow-research-20261013-1600-scheduled-chat-00-r01.md",
+  "canonical_id": "arXiv:2601.09260",
+  "worker_completed_at": "2026-10-13T16:06:16+09:00",
+  "worker_run_key": "20261013-1600-scheduled-chat-00/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 4244,
+    "body_paragraphs": 22,
+    "method_chars": 0,
+    "method_paragraphs": 0,
+    "evaluation_chars": 219,
+    "limitation_chars": 0,
+    "insufficiency_flags": [
+      "手法説明量 0 < 700",
+      "評価説明量 219 < 500",
+      "限界説明量 0 < 推奨 120"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 手法説明量 0 < 700",
+    "説明不足トリガー: 評価説明量 219 < 500"
+  ],
+  "processed_at": "2026-10-13T07:53:42+00:00"
+}
