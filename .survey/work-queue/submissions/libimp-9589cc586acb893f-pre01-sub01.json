@@ -1,0 +1,237 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "AsyncTool: Evaluating the Asynchronous Function Calling Capability under Multi-Task Scenarios",
+      "source_url": "https://arxiv.org/abs/2605.27995",
+      "year": 2026,
+      "published": "2026-05-27",
+      "venue": "arXiv.org",
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language model (LLM)-based agents have shown strong capabilities in using external tools to solve complex tasks. However, existing evaluations often overlook the temporal dimension of tool use, especially the impact of tool response latency, and are usually limited to single-task settings. In real-world applications, multiple tasks often need to be executed concurrently, and overall efficiency depends on whether an agent can use idle time while waiting for tool responses. We refer to this capability as asynchronous tool calling. To evaluate it, we propose AsyncTool, a benchmark for assessing LLM-based agents in interactive multi-task tool-use environments with delayed tool feedback. AsyncTool presents multiple heterogeneous tasks simultaneously and simulates realistic tool response latency during execution. Using a hybrid data evolution strategy, we construct a diverse asynchronous multitasking dataset that covers multiple scenarios and tool-use patterns. We evaluate models at the step, sub-task, and task levels, and introduce efficiency-oriented metrics to measure task coordination and completion efficiency. Extensive experiments show that delayed tool feedback poses substantial challenges to current agents and leads to clear performance degradation. Models that better coordinate task switching, dependency tracking, and state maintenance achieve stronger performance on AsyncTool. Our analysis identifies key failure modes of current tool-using agents and provides practical insights for designing future systems with stronger temporal reasoning and coordination capabilities.",
+      "identifiers": [
+        "SemanticScholar:2ab449df3741fd8cd3c563f74c049ad03de54eb0"
+      ],
+      "semantic_scholar_id": "2ab449df3741fd8cd3c563f74c049ad03de54eb0",
+      "canonical_id": "arXiv:2605.27995",
+      "arxiv_id": "2605.27995",
+      "doi": "10.48550/arXiv.2605.27995",
+      "authors": [
+        "Kou Shi",
+        "Ziao Zhang",
+        "Shi-Ting Huang",
+        "Avery Nie",
+        "Zhen Fang",
+        "Qiuchen Wang",
+        "Lin Chen",
+        "Huaian Chen",
+        "Ze-Hui Chen",
+        "Feng Zhao"
+      ],
+      "priority": 104,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 104,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 139,
+        "matched_prestigious_venue": null
+      },
+      "reason": "AsyncTool measures LLM-agent coordination under tool-response latency and concurrent tasks, with efficiency-oriented completion metrics; this directly addresses runtime behavior and latency hiding in tool-using systems.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Limited Reasoning Space: The cage of long-horizon reasoning in LLMs",
+      "source_url": "https://arxiv.org/abs/2602.19281",
+      "year": 2026,
+      "published": "2026-02-22",
+      "venue": "arXiv.org",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The test-time compute strategy, such as Chain-of-Thought (CoT), has significantly enhanced the ability of large language models to solve complex tasks like logical reasoning. However, empirical studies indicate that simply increasing the compute budget can sometimes lead to a collapse in test-time performance when employing typical task decomposition strategies such as CoT. This work hypothesizes that reasoning failures with larger compute budgets stem from static planning methods, which hardly perceive the intrinsic boundaries of LLM reasoning. We term it as the Limited Reasoning Space hypothesis and perform theoretical analysis through the lens of a non-autonomous stochastic dynamical system. This insight suggests that there is an optimal range for compute budgets; over-planning can lead to redundant feedback and may even impair reasoning capabilities. To exploit the compute-scaling benefits and suppress over-planning, this work proposes Halo, a model predictive control framework for LLM planning. Halo is designed for long-horizon tasks with reason-based planning and crafts an entropy-driven dual controller, which adopts a Measure-then-Plan strategy to achieve controllable reasoning. Experimental results demonstrate that Halo outperforms static baselines on complex long-horizon tasks by dynamically regulating planning at the reasoning boundary.",
+      "identifiers": [
+        "SemanticScholar:fc43f97dcdc742520da54ec1c08d7248b7892311"
+      ],
+      "semantic_scholar_id": "fc43f97dcdc742520da54ec1c08d7248b7892311",
+      "canonical_id": "arXiv:2602.19281",
+      "arxiv_id": "2602.19281",
+      "doi": "10.48550/arXiv.2602.19281",
+      "authors": [
+        "Zhen-Yu Li",
+        "Guanlin Wu",
+        "Cheems Wang",
+        "Yong-Qiang Zhao"
+      ],
+      "priority": 103,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 103,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 233,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Halo dynamically regulates LLM test-time planning at an inferred reasoning boundary to avoid redundant over-planning while using compute scaling; this directly targets allocation of inference-time reasoning compute.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "DyGeoVLN: Infusing Dynamic Geometry Foundation Model into Vision-Language Navigation",
+      "source_url": "https://arxiv.org/abs/2603.21269",
+      "year": 2026,
+      "published": "2026-03-22",
+      "venue": "arXiv.org",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Vision-language Navigation (VLN) requires an agent to understand visual observations and language instructions to navigate in unseen environments. Most existing approaches rely on static scene assumptions and struggle to generalize in dynamic, real-world scenarios. To address this challenge, we propose DyGeoVLN, a dynamic geometry-aware VLN framework. Our method infuses a dynamic geometry foundation model into the VLN framework through cross-branch feature fusion to enable explicit 3D spatial representation and visual-semantic reasoning. To efficiently compress historical token information in long-horizon, dynamic navigation, we further introduce a novel pose-free and adaptive-resolution token-pruning strategy. This strategy can remove spatio-temporal redundant tokens to reduce inference cost. Extensive experiments demonstrate that our approach achieves state-of-the-art performance on multiple benchmarks and exhibits strong robustness in real-world environments.",
+      "identifiers": [
+        "SemanticScholar:ddbf39a597e2ab6839f088d57cced92417657c03"
+      ],
+      "semantic_scholar_id": "ddbf39a597e2ab6839f088d57cced92417657c03",
+      "canonical_id": "arXiv:2603.21269",
+      "arxiv_id": "2603.21269",
+      "doi": "10.48550/arXiv.2603.21269",
+      "authors": [
+        "Xiang-Cheng Liu",
+        "Hang Zheng",
+        "Jeil Jeong",
+        "Minsung Yoon",
+        "Lingjin Zhao",
+        "Zhi-De Zhong",
+        "Hao-Ang Li",
+        "Sung-Eui Yoon"
+      ],
+      "priority": 103,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 103,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 205,
+        "matched_prestigious_venue": null
+      },
+      "reason": "DyGeoVLN compresses long-horizon navigation history with adaptive token pruning and explicitly says redundant spatiotemporal tokens are removed to reduce inference cost; this is a concrete token-efficiency mechanism.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "SpikeVLA: Vision-Language-Action Models with Spiking Neural Networks",
+      "source_url": "https://arxiv.org/abs/2606.27807",
+      "year": 2026,
+      "published": "2026-06-26",
+      "venue": "arXiv.org",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Vision-Language-Action (VLA) models have become a dominant paradigm for embodied intelligence. However, most existing approaches are built on large-scale transformers, resulting in substantial inference latency and energy consumption that limit their practical deployment in low-power, real-time scenarios. We propose SpikeVLA, a spiking VLA architecture for embodied navigation with energy-efficient inference, consisting of three key components. (i) A spiking vision encoder, Spike-V, that replaces dense continuous layers with event-driven spiking layers to reduce the energy consumption of visual representation learning. (ii) A multi-modal spiking large language model, Spike-L, that reformulates cross-modal reasoning with spiking dynamics and token-level event-driven sparsity to further lower computational cost. (iii) A spiking action policy network, Spike-A employs Laplacian-kernel population coding with a multi-layer fully connected SNN, and decodes spiking activities into stable and robust continuous control with energy-efficient inference under low-power constraints. Experiments on navigation and robotic control tasks show that SpikeVLA significantly reduces energy consumption and computational cost while maintaining competitive performance, highlighting its potential for low-power, real-time embodied intelligence.",
+      "identifiers": [
+        "SemanticScholar:96b35f4ec32c20fe1e42d608204c5b8b7a5d5281"
+      ],
+      "semantic_scholar_id": "96b35f4ec32c20fe1e42d608204c5b8b7a5d5281",
+      "canonical_id": "arXiv:2606.27807",
+      "arxiv_id": "2606.27807",
+      "doi": "10.48550/arXiv.2606.27807",
+      "authors": [
+        "Rui-Qi Song",
+        "Dujun Nie",
+        "Si-Yu Teng",
+        "Bai-Yong Ding",
+        "Xiaotong Zhang",
+        "Dong Li",
+        "Chen-Ming Zhang",
+        "Yu-Chen Li",
+        "Hangbin Wu",
+        "Long Chen"
+      ],
+      "priority": 103,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 103,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 109,
+        "matched_prestigious_venue": null
+      },
+      "reason": "SpikeVLA replaces dense transformer computation with event-driven spiking vision, language, and action components and explicitly reports lower inference energy and computational cost for low-power real-time deployment.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Protein Language Models Diverge from Natural Language: Comparative Analysis and Improved Inference",
+      "source_url": "https://arxiv.org/abs/2602.20449",
+      "year": 2026,
+      "published": "2026-02-24",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Modern Protein Language Models (PLMs) apply transformer-based model architectures from natural language processing to biological sequences, predicting a variety of protein functions and properties. However, protein language has key differences from natural language, such as a rich functional space despite a vocabulary of only 20 amino acids. These differences motivate research into how transformer-based architectures operate differently in the protein domain and how we can better leverage PLMs to solve protein-related tasks. In this work, we begin by directly comparing how the distribution of information stored across layers of attention heads differs between the protein and natural language domain. Furthermore, we adapt a simple early-exit technique-originally used in the natural language domain to improve efficiency at the cost of performance-to achieve both increased accuracy and substantial efficiency gains in protein non-structural property prediction by allowing the model to automatically select protein representations from the intermediate layers of the PLMs for the specific task and protein at hand. We achieve performance gains ranging from 0.4 to 7.01 percentage points while simultaneously improving efficiency by over 10 percent across models and non-structural prediction tasks. Our work opens up an area of research directly comparing how language models change behavior when moved into the protein domain and advances language modeling in biological domains.",
+      "identifiers": [
+        "SemanticScholar:8f9395e4f42c28b21abf5aefe8081d371c44b3f6"
+      ],
+      "semantic_scholar_id": "8f9395e4f42c28b21abf5aefe8081d371c44b3f6",
+      "canonical_id": "arXiv:2602.20449",
+      "arxiv_id": "2602.20449",
+      "doi": "10.48550/arXiv.2602.20449",
+      "authors": [
+        "Anna Hart",
+        "Chi Han",
+        "Jeonghwan Kim",
+        "Huimin Zhao",
+        "Heng Ji"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 231,
+        "matched_prestigious_venue": null
+      },
+      "reason": "The paper adapts early exit to protein language models and reports over 10% inference-efficiency improvement alongside accuracy gains; this is a concrete transformer inference-compute method, though its demonstrated domain is protein prediction.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-9589cc586acb",
+    "round": "libimp-9589cc586acb893f-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 9,
+    "round_submission_count": 2,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-9589cc586acb893f-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-9589cc586acb893f-pre01.json",
+    "receipt": "sha256:d29b2008b3660baaa4fffd6f58e50965247c622e0d8fdf6e247b94561cc490aa"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-9589cc586acb",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
