@@ -1,0 +1,62 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-luna-primary-source-screen",
+  "run_key": "discovery-20261013-main-db9b-screen-14-part-02",
+  "reference_main_sha": "64e5affce1ec4b6fd24e5f4319581c976fde692a",
+  "record_count": 3,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2506.05850",
+      "identity_tokens": [
+        "arXiv:2506.05850",
+        "SemanticScholar:66c64979954c4ac2d2f6d96126eedd60a51cae85"
+      ],
+      "title": "Cross-lingual Collapse: How Language-Centric Foundation Models Shape Reasoning in Large Language Models",
+      "reason": "The work studies language drift and reasoning quality during RL training; it does not target inference-system efficiency.",
+      "source_url": "https://arxiv.org/abs/2506.05850",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T01:29:37+00:00",
+      "last_checked_at": "2026-10-13T01:29:37+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2512.24977",
+      "identity_tokens": [
+        "arXiv:2512.24977",
+        "SemanticScholar:692da6d2f18abbcdbd4675836fd23bc3bdff28a4"
+      ],
+      "title": "SymSeqBench: a unified framework for the generation and analysis of rule-based symbolic sequences and datasets",
+      "reason": "SymSeqBench is a software toolkit and benchmark for symbolic sequence learning; the abstract does not identify LLM inference or system-efficiency improvements.",
+      "source_url": "https://arxiv.org/abs/2512.24977",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T01:29:37+00:00",
+      "last_checked_at": "2026-10-13T01:29:37+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2608.04515",
+      "identity_tokens": [
+        "arXiv:2608.04515",
+        "SemanticScholar:e4e427652d600541f561e71a5939ba1fc7568d38"
+      ],
+      "title": "CARVE: Cross-Slice Anisotropic Reallocation of Visual Evidence for Efficient 3D Medical Volume Understanding",
+      "reason": "CARVE compresses visual tokens before LLM inference, removing roughly 80% while retaining benchmark performance; this directly reduces inference input/computation for multimodal LLMs.",
+      "source_url": "https://arxiv.org/abs/2608.04515",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T01:29:37+00:00",
+      "last_checked_at": "2026-10-13T01:29:37+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2026-2604.18260-geometry-guided-3d-visual-token-pruning-for-video-language-models.md"
+      ]
+    }
+  ]
+}
+
