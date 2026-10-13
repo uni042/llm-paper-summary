@@ -1,0 +1,27 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261013-1930-scheduled-chat-30/r01/research-relevance-title-030",
+  "reference_main_sha": "df1e54299253121b022271294c687c1ffc4caa81",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.18112",
+      "identity_tokens": [
+        "id:arXiv:2606.18112",
+        "url:https://arxiv.org/abs/2606.18112"
+      ],
+      "title": "Qwen-RobotNav Technical Report: A Scalable Navigation Model Designed for an Agentic Navigation System",
+      "reason": "タイトルはロボットの自律移動を行うナビゲーションモデルの技術報告であることを明示する。最終適用先がロボットの航法システムであり、LLMトークン生成のサービング、KVキャッシュ、MoE推論、GPUメモリ階層の最適化を示すタイトルではないため、Researchの先行タイトル除外とする。要旨と本文は未確認。",
+      "source_url": "https://arxiv.org/abs/2606.18112",
+      "body_check": "title_screen_only; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-10-13T19:35:17+09:00",
+      "last_checked_at": "2026-10-13T19:35:17+09:00",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance",
+      "worklist_rank": 30
+    }
+  ]
+}
