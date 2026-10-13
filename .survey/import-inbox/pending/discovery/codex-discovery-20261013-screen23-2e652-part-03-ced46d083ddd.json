@@ -1,0 +1,220 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local",
+  "run_key": "codex-discovery-20261013-screen23-2e652-part-03",
+  "reference_main_sha": "2e652754bf895f3441f6e47a9105da61400788a4",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.10242",
+      "identity_tokens": [
+        "arXiv:2601.10242"
+      ],
+      "title": "Loop as a Bridge: Can Looped Transformers Truly Link Representation Space and Natural Language Outputs?",
+      "reason": "The abstract analyzes representation and output behavior in looped transformers, without an inference-efficiency or systems contribution.",
+      "source_url": "https://arxiv.org/abs/2601.10242",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T07:18:38Z",
+      "last_checked_at": "2026-10-13T07:18:38Z",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2025-2507.10524-mixture-of-recursions-learning-dynamic-recursive-depths-for-adaptive-tok.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+      ],
+      "source_version": "v1",
+      "abstract_evidence_excerpt": "Large Language Models (LLMs) often exhibit a gap between their internal knowledge and their explicit linguistic outputs. In this report,",
+      "abstract_evidence_sha256": "828eaf2f92fd960879d1d4bc252f97b04534a434195327bf7f762eb465243167"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2601.07832",
+      "identity_tokens": [
+        "arXiv:2601.07832"
+      ],
+      "title": "MHLA: Restoring Expressivity of Linear Attention via Token-Level Multi-Head",
+      "reason": "The abstract proposes linear-complexity multi-head linear attention to address quadratic attention cost while retaining expressivity.",
+      "source_url": "https://arxiv.org/abs/2601.07832",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T07:18:38Z",
+      "last_checked_at": "2026-10-13T07:18:38Z",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2021-2103.02143-random-feature-attention.md",
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md",
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md",
+        "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md",
+        "papers/inference/99-other-inference-systems/2021-2102.03902-nystr-mformer-a-nystr-m-based-algorithm-for-approximating-self-attention.md",
+        "papers/inference/99-other-inference-systems/2022-2202.10447-transformer-quality-in-linear-time.md",
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+        "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08621-retentive-network-a-successor-to-transformer-for-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md",
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md",
+        "papers/inference/99-other-inference-systems/2024-2312.06635-gated-linear-attention-transformers-with-hardware-efficient-training.md",
+        "papers/inference/99-other-inference-systems/2024-2404.05892-eagle-and-finch-rwkv-with-matrix-valued-states-and-dynamic-recurrence.md",
+        "papers/inference/99-other-inference-systems/2024-2412.06464-gated-delta-networks-improving-mamba2-with-delta-rule.md"
+      ],
+      "source_version": "v2",
+      "abstract_evidence_excerpt": "While the Transformer architecture dominates many fields, its quadratic self-attention complexity hinders its use in large-scale applications. Linear attention offers",
+      "abstract_evidence_sha256": "f380761d0466b2714ffbb5f8da62227e39b2616428de2ca1124524715a5ca635"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.04876",
+      "identity_tokens": [
+        "arXiv:2601.04876"
+      ],
+      "title": "ChronosAudio: A Comprehensive Long-Audio Benchmark for Evaluating Audio-Large Language Models",
+      "reason": "The abstract introduces a long-audio understanding benchmark and diagnoses model quality degradation; it does not propose an inference systems optimization.",
+      "source_url": "https://arxiv.org/abs/2601.04876",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T07:18:38Z",
+      "last_checked_at": "2026-10-13T07:18:38Z",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md",
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md",
+        "papers/inference/99-other-inference-systems/2024-2404.07143-leave-no-context-behind-efficient-infinite-context-transformers-with-infini-attention.md"
+      ],
+      "source_version": "v2",
+      "abstract_evidence_excerpt": "Although Audio Large Language Models (ALLMs) have witnessed substantial advancements, their long audio understanding capabilities remain unexplored. A plethora of",
+      "abstract_evidence_sha256": "696f2c8e53cc7828c1b470609fc26bd260a30c07f7d36262ad9aaacd7dd3ffff"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/MCOM.001.2500258",
+      "identity_tokens": [
+        "DOI:10.1109/MCOM.001.2500258"
+      ],
+      "title": "DMO-GPT: An Intent-Driven Framework for Distributed 6G Management and Orchestration",
+      "reason": "The official IEEE abstract route failed. Distributed 6G management/orchestration may involve edge systems, but the supplied title does not confirm an LLM inference or serving contribution.",
+      "source_url": "https://doi.org/10.1109/MCOM.001.2500258",
+      "body_check": "source_unavailable; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-10-13T07:18:38Z",
+      "last_checked_at": "2026-10-13T07:18:38Z",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2403.09636-dynamic-memory-compression-retrofitting-llms-for-accelerated-inference.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2512.18196",
+      "identity_tokens": [
+        "arXiv:2512.18196"
+      ],
+      "title": "LogicReward: Incentivizing LLM Reasoning via Step-Wise Logical Supervision",
+      "reason": "The abstract proposes step-wise logical reward supervision for model training; it does not address inference, serving, or runtime efficiency.",
+      "source_url": "https://arxiv.org/abs/2512.18196",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T07:18:38Z",
+      "last_checked_at": "2026-10-13T07:18:38Z",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2505.00949-llama-nemotron-efficient-reasoning-models.md"
+      ],
+      "source_version": "v2",
+      "abstract_evidence_excerpt": "Although LLMs exhibit strong reasoning capabilities, existing training methods largely depend on outcome-based feedback, which can produce correct answers with",
+      "abstract_evidence_sha256": "e947fa0073705df1ed234620ab23f1cf76c63dae01c0fa19bd1166e79d5cf84a"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2512.15586",
+      "identity_tokens": [
+        "arXiv:2512.15586"
+      ],
+      "title": "Bolmo: Byteifying the Next Generation of Language Models",
+      "reason": "The abstract presents byte-level LLMs and explicitly reports practical inference speeds alongside a low-cost model conversion procedure.",
+      "source_url": "https://arxiv.org/abs/2512.15586",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T07:18:38Z",
+      "last_checked_at": "2026-10-13T07:18:38Z",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2024-2401.10774-medusa-multiple-decoding-heads.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md",
+        "papers/inference/99-other-inference-systems/2024-2404.19737-better-faster-large-language-models-via-multi-token-prediction.md",
+        "papers/inference/99-other-inference-systems/2024-2412.06464-gated-delta-networks-improving-mamba2-with-delta-rule.md"
+      ],
+      "source_version": "v2",
+      "abstract_evidence_excerpt": "Recent advances in generative AI have been largely driven by large language models (LLMs), deep neural networks that operate over",
+      "abstract_evidence_sha256": "d030dcbd2db3c131101eed84722e3cd28d3b4f0a51b95b55a8ddf5e58e537468"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1038/s41598-025-29370-y",
+      "identity_tokens": [
+        "DOI:10.1038/s41598-025-29370-y"
+      ],
+      "title": "AI-embedded IoT healthcare optimization with trust-aware mobile edge computing",
+      "reason": "The official publisher abstract route failed. Trust-aware mobile-edge healthcare optimization is adjacent to edge systems, but the title does not verify a connection to LLM inference efficiency.",
+      "source_url": "https://doi.org/10.1038/s41598-025-29370-y",
+      "body_check": "source_unavailable; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-10-13T07:18:38Z",
+      "last_checked_at": "2026-10-13T07:18:38Z",
+      "linked_from": [
+        "papers/survey/09-edge-llm/2025-2410.11845-edge-llm-review.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1038/s41598-025-31896-0",
+      "identity_tokens": [
+        "DOI:10.1038/s41598-025-31896-0"
+      ],
+      "title": "Impact of decoding strategies on GPU energy usage in large language model text generation",
+      "reason": "The publisher abstract route was blocked by Nature/DOI redirection. LLM decoding energy is a plausible target-systems connection, but the primary abstract could not be independently read in this run.",
+      "source_url": "https://doi.org/10.1038/s41598-025-31896-0",
+      "body_check": "source_unavailable; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-10-13T07:18:38Z",
+      "last_checked_at": "2026-10-13T07:18:38Z",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2022-2211.17192-speculative-decoding.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2408.00741-dynamollm.md",
+        "papers/inference/99-other-inference-systems/2021-2104.04473-efficient-large-scale-language-model-training-on-gpu-clusters-using-mega.md",
+        "papers/inference/99-other-inference-systems/2024-ad611bbc0cdc-characterizing-power-management-opportunities-for-llms-in-the-cloud.md"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2512.09616",
+      "identity_tokens": [
+        "arXiv:2512.09616"
+      ],
+      "title": "Rethinking Chain-of-Thought Reasoning for Videos",
+      "reason": "The abstract reports compressed visual tokens and concise reasoning for video MLLMs, with improved inference efficiency across benchmarks.",
+      "source_url": "https://arxiv.org/abs/2512.09616",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T07:18:38Z",
+      "last_checked_at": "2026-10-13T07:18:38Z",
+      "linked_from": [
+        "papers/inference/12-moe-parallelism-communication/2024-2408.10188-longvila-scaling-long-context-visual-language-models-for-long-videos.md",
+        "papers/inference/13-sparse-attention/2020-2012.09852-spatten-efficient-sparse-attention-architecture-with-cascade-token-and-head-pruning.md",
+        "papers/inference/99-other-inference-systems/2022-2107.00910-learned-token-pruning-for-transformers.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md",
+        "papers/inference/99-other-inference-systems/2024-2403.06764-an-image-is-worth-1-2-tokens-after-layer-2-plug-and-play-inference-accel.md",
+        "papers/inference/99-other-inference-systems/2024-2403.15388-llava-prumerge-adaptive-token-reduction-for-efficient-large-multimodal-m.md",
+        "papers/inference/99-other-inference-systems/2024-2405.05803-boosting-multimodal-large-language-models-with-visual-tokens-withdrawal-.md",
+        "papers/inference/99-other-inference-systems/2024-2410.04417-sparsevlm-visual-token-sparsification-for-efficient-vision-language-mode.md",
+        "papers/inference/99-other-inference-systems/2024-2411.15024-dycoke-dynamic-compression-of-tokens-for-fast-video-large-language-model.md",
+        "papers/inference/99-other-inference-systems/2024-2412.04468-nvila-efficient-frontier-visual-language-models.md"
+      ],
+      "source_version": "v1",
+      "abstract_evidence_excerpt": "Chain-of-thought (CoT) reasoning has been highly successful in solving complex tasks in natural language processing, and recent multimodal large language",
+      "abstract_evidence_sha256": "7cf355a67acf10e222db39b3462f888daf7a9bb0bcd53427625a84c579b34f9c"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3769799",
+      "identity_tokens": [
+        "DOI:10.1145/3769799"
+      ],
+      "title": "High-Throughput, Cost-Effective Billion-Scale Vector Search with a Single GPU",
+      "reason": "The ACM abstract route could not be retrieved. The supplied title suggests GPU kernels and high-throughput vector search that could support AI retrieval, but the primary abstract was unavailable for confirmation.",
+      "source_url": "https://doi.org/10.1145/3769799",
+      "body_check": "source_unavailable; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-10-13T07:18:38Z",
+      "last_checked_at": "2026-10-13T07:18:38Z",
+      "linked_from": [
+        "papers/inference/10-kv-cache-offload-recomputation/2024-2310.07240-cachegen.md"
+      ]
+    }
+  ]
+}
