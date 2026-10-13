@@ -1,0 +1,253 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local",
+  "run_key": "discovery-20261013-409f-screen-20-part-01",
+  "reference_main_sha": "df3997bbd2f9d25697f10b538d7f00f7a191636a",
+  "record_count": 20,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2602.04640",
+      "identity_tokens": [
+        "arXiv:2602.04640",
+        "SemanticScholar:7b87329d63df292a5102c017130b029f4df9b8d9",
+        "DOI:10.1145/3786161.3788456"
+      ],
+      "title": "Towards Structured, State-Aware, and Execution-Grounded Reasoning for Software Engineering Agents",
+      "reason": "The position paper is adjacent to agent execution architecture, but its abstract gives no measured efficiency or serving result; primary full text was not read in this screen.",
+      "source_url": "https://arxiv.org/abs/2602.04640",
+      "body_check": "abstract_screen_only; body_not_read"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3779219",
+      "identity_tokens": [
+        "DOI:10.1145/3779219",
+        "SemanticScholar:599c27a3333605649161d905c21060d190becf2d"
+      ],
+      "title": "Emotionally Controllable Audio-driven Talking Face Generation",
+      "reason": "Crossref/ORCID metadata identifies the ACM article, but ACM Digital Library returned Internal Error and the DOI URL was inaccessible; the secondary abstract suggests talking-face generation rather than LLM serving.",
+      "source_url": "https://dl.acm.org/doi/10.1145/3779219",
+      "body_check": "source_unavailable; abstract_not_read; body_not_read"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/TCYB.2025.3625757",
+      "identity_tokens": [
+        "DOI:10.1109/TCYB.2025.3625757",
+        "SemanticScholar:0db1e1c8eaab9c978fdbc31b3432d9872411e0ac"
+      ],
+      "title": "S 3 CD: A Self-Supervised Semantic Change Detection Method by Mining Transition Patterns and Consistency in Remote Sensing Images",
+      "reason": "PubMed provides DOI/title metadata and an abstract, but the IEEE Xplore page returned an inaccessible-URL error; source-unavailable borderline is retained under the official-source rule.",
+      "source_url": "https://ieeexplore.ieee.org/document/3625757",
+      "body_check": "source_unavailable; abstract_not_read; body_not_read"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.25195",
+      "identity_tokens": [
+        "arXiv:2609.25195",
+        "SemanticScholar:23253417ca79d36db2f20e0e24e379b0b3ffad00"
+      ],
+      "title": "Qwen-Audio-Agent Technical Report",
+      "reason": "Primary HTML §§2–4 confirms asynchronous foreground/background task coordination and reports matched-turn latency reductions plus higher task success; this is a concrete agent-serving/orchestration efficiency contribution.",
+      "source_url": "https://arxiv.org/html/2609.25195",
+      "body_check": "primary_full_text_read; Primary HTML §§2–4 confirms asynchronous foreground/background task coordination and reports matched-turn latency reductions plus higher task success; this is a concrete agent-serving/orchestration efficiency contribution."
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.06476",
+      "identity_tokens": [
+        "arXiv:2609.06476",
+        "SemanticScholar:d7b75e2a10493f6b31b52e9b931127ca95fec9bc"
+      ],
+      "title": "One MLLM, One Call: Efficient Zero-Shot Vision-and-Language Navigation via Spatial-Aware Waypoints",
+      "reason": "Primary HTML §IV-D compares complete per-step latency: 19.58 s versus 24.82 s and 37.72 s for named baselines; it directly tests a one-call efficiency design.",
+      "source_url": "https://arxiv.org/html/2609.06476",
+      "body_check": "primary_full_text_read; Primary HTML §IV-D compares complete per-step latency: 19.58 s versus 24.82 s and 37.72 s for named baselines; it directly tests a one-call efficiency design."
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.05279",
+      "identity_tokens": [
+        "arXiv:2609.05279",
+        "SemanticScholar:879ec3cbf8d465799d00e3c252db2ebaffa1233b"
+      ],
+      "title": "Testing Interchangeability in LLM Agent Teams",
+      "reason": "This is a multi-agent coordination-efficiency measurement relevant to agent systems, but the abstract does not identify model-serving or inference-cost improvements; further full-text screening is needed.",
+      "source_url": "https://arxiv.org/abs/2609.05279",
+      "body_check": "abstract_screen_only; body_not_read"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.04203",
+      "identity_tokens": [
+        "arXiv:2609.04203",
+        "SemanticScholar:31a2748d4df251b9eb35e1177f2425b6a749808d"
+      ],
+      "title": "Temporal Self-Distillation: Learning Visual State Tracking in Videos Without Supervision",
+      "reason": "The method is a visual-state-tracking self-distillation technique and explicitly reports no added inference cost, but the abstract gives no efficiency improvement; possible relevance requires full-text review.",
+      "source_url": "https://arxiv.org/abs/2609.04203",
+      "body_check": "abstract_screen_only; body_not_read"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.22214",
+      "identity_tokens": [
+        "arXiv:2609.22214",
+        "SemanticScholar:7880240fc139fa7ac9bbd88788a12e6c9fcdac3c",
+        "DOI:10.21437/mlcslm.2026-8"
+      ],
+      "title": "The Bairong System for MLC-SLM 2026: Dynamic Question-Aware Evidence Routing for Multilingual Conversational Speech Understanding",
+      "reason": "Question-aware evidence routing for speech QA may reduce unnecessary modality processing, but the abstract reports accuracy only and no measured compute or latency effect.",
+      "source_url": "https://arxiv.org/abs/2609.22214",
+      "body_check": "abstract_screen_only; body_not_read"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.01111",
+      "identity_tokens": [
+        "arXiv:2609.01111",
+        "SemanticScholar:5755723c7e46c9890885d93bc6cd1471147d3cd4"
+      ],
+      "title": "ClinTraceBench: Source-Verifiable Longitudinal Clinical Reasoning over EHR-Derived Dialogues",
+      "reason": "The primary abstract evaluates history-representation strategies and reports an explicit cost/performance Pareto comparison for LLM reasoning; this is a concrete inference-cost finding relevant for further Research reading.",
+      "source_url": "https://arxiv.org/abs/2609.01111",
+      "body_check": "primary_full_text_read; The primary abstract evaluates history-representation strategies and reports an explicit cost/performance Pareto comparison for LLM reasoning; this is a concrete inference-cost finding relevant for further Research reading."
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.knosys.2026.116979",
+      "identity_tokens": [
+        "DOI:10.1016/j.knosys.2026.116979",
+        "SemanticScholar:e353320f2429f1aecf58f7528bae2577c6c9f0e8"
+      ],
+      "title": "Beyond static frequency decomposition: Dynamic time frequency mixing for time series forecasting",
+      "reason": "Search metadata exposes an efficiency claim for time-series forecasting, but the official ScienceDirect record returned a cache-miss error and its abstract could not be verified from a publisher source.",
+      "source_url": "https://www.sciencedirect.com/science/article/pii/S0950705126002090",
+      "body_check": "source_unavailable; abstract_not_read; body_not_read"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.30396",
+      "identity_tokens": [
+        "arXiv:2608.30396",
+        "SemanticScholar:4d14f15cd02961ecb413bef7463d945a40462039"
+      ],
+      "title": "Scaffolding Foundation Models into Physical-World Agents Pushes the Frontier of Long-Horizon Navigation",
+      "reason": "The abstract identifies an agentic orchestration framework and says the VLM is inefficient at repeated navigation grounding, but it reports navigation success rather than a measured compute or serving improvement.",
+      "source_url": "https://arxiv.org/abs/2608.30396",
+      "body_check": "abstract_screen_only; body_not_read"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.30622",
+      "identity_tokens": [
+        "arXiv:2608.30622",
+        "SemanticScholar:8f400ca1ea3ece21964cd0bf57da2c7b93e7342e"
+      ],
+      "title": "Textual Acoustic Grounding for Generalizable LLM-Based Deepfake Voice Detection",
+      "reason": "The abstract makes a resource-efficiency claim for a task-specific audio classifier, but gives no inference cost/latency measures; relation to LLM-serving work is weak.",
+      "source_url": "https://arxiv.org/abs/2608.30622",
+      "body_check": "abstract_screen_only; body_not_read"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.00342",
+      "identity_tokens": [
+        "arXiv:2609.00342",
+        "SemanticScholar:a65315f5d3ce617732b913b213ee15bf45692ce7"
+      ],
+      "title": "SlideBank: A Persistent Hierarchical Evidence Bank for Consistent Whole-Slide Reasoning",
+      "reason": "Primary HTML reports runtime falling from 94.3 s for one query to 5.9 s per query across a sequence, approaching 2.73 s online; this is a concrete cache/evidence-reuse efficiency result.",
+      "source_url": "https://arxiv.org/html/2609.00342",
+      "body_check": "primary_full_text_read; Primary HTML reports runtime falling from 94.3 s for one query to 5.9 s per query across a sequence, approaching 2.73 s online; this is a concrete cache/evidence-reuse efficiency result."
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2608.29641",
+      "identity_tokens": [
+        "arXiv:2608.29641",
+        "SemanticScholar:705c7fe9583de1f6d79937690959b03dba0e5d63"
+      ],
+      "title": "Harness-RL: Black-Box Reinforcement Learning with Action-Args Decoupling for Central-Agent Multi-Agent Harnesses",
+      "reason": "The abstract proposes structured RL for central-agent multi-agent harnesses and captures parallel sessions and tool execution; its architecture is plausibly relevant to agent execution/serving, though the abstract reports F1 rather than cost.",
+      "source_url": "https://arxiv.org/abs/2608.29641",
+      "body_check": "primary_full_text_read; The abstract proposes structured RL for central-agent multi-agent harnesses and captures parallel sessions and tool execution; its architecture is plausibly relevant to agent execution/serving, though the abstract reports F1 rather than cost."
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.27265",
+      "identity_tokens": [
+        "arXiv:2608.27265",
+        "SemanticScholar:8039b5315798c406ccd424af0644e5bd84070f2d"
+      ],
+      "title": "SCIT: Testing Causal Cache Carriers in Latent Chain-of-Thought Models",
+      "reason": "The abstract analyzes KV/cache mechanism behavior and compact latent reasoning, but provides no serving or inference-efficiency result; full text may clarify systems significance.",
+      "source_url": "https://arxiv.org/abs/2608.27265",
+      "body_check": "abstract_screen_only; body_not_read"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1098/rsta.2026.0061",
+      "identity_tokens": [
+        "DOI:10.1098/rsta.2026.0061",
+        "SemanticScholar:9ac532fc40f88d06a3ced086e94906b167a32cdf"
+      ],
+      "title": "Uncertainty-aware large language models: a scoping review of conformal prediction methods.",
+      "reason": "The DOI and article identity are verified from Crossref and the university record, but the Royal Society publisher URL returned an inaccessible-URL error; no official abstract was available.",
+      "source_url": "https://royalsocietypublishing.org/doi/10.1098/rsta.2026.0061",
+      "body_check": "source_unavailable; abstract_not_read; body_not_read"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.24368",
+      "identity_tokens": [
+        "arXiv:2608.24368",
+        "SemanticScholar:93a43aad22653ec0a93b73f8cb3e8dda3a360515"
+      ],
+      "title": "From State to Action: OODA-Tool for Reliable Multi-Turn Tool Use",
+      "reason": "The abstract describes an agent execution framework and improved task success but does not report computational cost, latency, or serving gains.",
+      "source_url": "https://arxiv.org/abs/2608.24368",
+      "body_check": "abstract_screen_only; body_not_read"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.24794",
+      "identity_tokens": [
+        "arXiv:2608.24794",
+        "SemanticScholar:627862a7c8a7099693b7f6f127095e9d24843af5"
+      ],
+      "title": "CAFE: Self-Improving Search Agents Need Co-Evolving Feedback",
+      "reason": "The abstract concerns an agentic search training framework, a neighboring lineage, but reports quality/hallucination rather than inference cost or system efficiency.",
+      "source_url": "https://arxiv.org/abs/2608.24794",
+      "body_check": "abstract_screen_only; body_not_read"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2608.23045",
+      "identity_tokens": [
+        "arXiv:2608.23045",
+        "SemanticScholar:e978faaafba559443a44a6006104a342d8d94c79"
+      ],
+      "title": "From Inertia to Objectivity: Improving Deep Research Agents with Noise Isolation",
+      "reason": "Primary HTML §6.3 quantifies total tokens falling from 219.8k to 147.3k per GAIA query; the method isolates contexts during research-agent triage and validation, directly reducing inference cost.",
+      "source_url": "https://arxiv.org/html/2608.23045",
+      "body_check": "primary_full_text_read; Primary HTML §6.3 quantifies total tokens falling from 219.8k to 147.3k per GAIA query; the method isolates contexts during research-agent triage and validation, directly reducing inference cost."
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.23664",
+      "identity_tokens": [
+        "arXiv:2608.23664",
+        "SemanticScholar:f37857072bf04fd405c7bd40ca6168e33842368d"
+      ],
+      "title": "Scaling Reinforcement Learning for Diffusion Models via Velocity Matching",
+      "reason": "The abstract reports lower diffusion-model reward-fine-tuning training cost, but not LLM inference or serving; the broader model-training efficiency link is adjacent and merits downstream judgment.",
+      "source_url": "https://arxiv.org/abs/2608.23664",
+      "body_check": "abstract_screen_only; body_not_read"
+    }
+  ]
+}
+
