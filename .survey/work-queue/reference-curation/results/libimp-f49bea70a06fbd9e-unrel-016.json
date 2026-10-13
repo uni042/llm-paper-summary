@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-f49bea70a06fbd9e-unrel-016",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2501.04686",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2501.04686",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2501.04686",
+      "arXiv:2501.04686"
+    ],
+    "reason": "The official arXiv version history for arXiv:2501.04686 identifies the candidate title as v1 (submitted 2025-01-08) and the current v6 title as “Unlocking Multimodal Mathematical Reasoning via Process Reward Model” (2025-10-05); both pages share the same author and version history. The v1/v6 abstracts describe URSA training data, a trained multimodal reasoning model, and a process verifier that improves test-time performance, but do not establish inference-efficiency or serving-system improvements. Keep unrelated under the screening criterion.",
+    "first_checked_at": "2026-10-13T00:16:02+00:00",
+    "last_checked_at": "2026-10-13T00:16:02+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+    ],
+    "title": "Unlocking Multimodal Mathematical Reasoning via Process Reward Model"
+  },
+  "processed_at": "2026-10-13T00:16:03+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f49bea70a06f",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

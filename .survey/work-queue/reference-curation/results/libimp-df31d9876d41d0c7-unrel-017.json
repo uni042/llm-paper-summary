@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-df31d9876d41d0c7-unrel-017",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2306.17693",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2306.17693",
+    "identity_tokens": [
+      "arXiv:2306.17693"
+    ],
+    "reason": "Thompson samplingをGFlowNetsの探索改善へ適用する研究で、推論システム効率との具体的接続がない。",
+    "first_checked_at": "2026-10-13T00:15:58+00:00",
+    "last_checked_at": "2026-10-13T00:15:58+00:00",
+    "linked_from": [
+      "papers/inference/15-inference-simulation-emulation/2017-1712.05889-ray-a-distributed-framework-for-emerging-ai-applications.md"
+    ],
+    "title": "Thompson sampling for improved exploration in GFlowNets"
+  },
+  "processed_at": "2026-10-13T00:15:58+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-df31d9876d41",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

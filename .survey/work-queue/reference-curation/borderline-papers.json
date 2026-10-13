@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-12T23:56:03+00:00",
-  "record_count": 4725,
+  "updated_at": "2026-10-13T00:15:59+00:00",
+  "record_count": 4733,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -72206,6 +72206,128 @@
       ],
       "borderline_recheck_count": 0,
       "title": "A Pruning Framework for Bias Mitigation in Large Language Models"
+    },
+    "arXiv:2309.12673": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2309.12673",
+      "identity_tokens": [
+        "arXiv:2309.12673"
+      ],
+      "reason": "Sparse Modern Hopfield Modelは疎な連想記憶モデルを提案する。疎性が計算・メモリ効率へつながる可能性はあるが、LLM推論システムへの適用は要旨で確定できない。",
+      "first_checked_at": "2026-10-13T00:15:53+00:00",
+      "last_checked_at": "2026-10-13T00:15:53+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md",
+        "papers/inference/99-other-inference-systems/2019-1911.02972-blockwise-self-attention-for-long-document-understanding.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "On Sparse Modern Hopfield Model"
+    },
+    "DOI:10.1109/jstars.2023.3316302": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/jstars.2023.3316302",
+      "identity_tokens": [
+        "DOI:10.1109/jstars.2023.3316302"
+      ],
+      "reason": "題名・登録DOIはremote-sensing foundation modelsのsurveyと確認できるが、IEEE一次ページから要旨を取得できなかった。本文内容を推定せずborderlineに保持する。 一次要旨の取得不能を理由にborderlineを維持する。",
+      "first_checked_at": "2026-10-13T00:15:54+00:00",
+      "last_checked_at": "2026-10-13T00:15:54+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Brain-Inspired Remote Sensing Foundation Models and Open Problems: A Comprehensive Survey"
+    },
+    "arXiv:2504.09795": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2504.09795",
+      "identity_tokens": [
+        "arXiv:2504.09795"
+      ],
+      "reason": "VDocRAGは視覚文書のRAG性能を改善し、情報をdense token表現へ圧縮するが、推論コスト・レイテンシへの効果は要旨で示されない。",
+      "first_checked_at": "2026-10-13T00:15:58+00:00",
+      "last_checked_at": "2026-10-13T00:15:58+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+        "papers/inference/99-other-inference-systems/2023-2212.10511-when-not-to-trust-language-models-investigating-effectiveness-of-paramet.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "VDocRAG: Retrieval-Augmented Generation over Visually-Rich Documents"
+    },
+    "DOI:10.1109/tnsre.2023.3299355": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/tnsre.2023.3299355",
+      "identity_tokens": [
+        "DOI:10.1109/tnsre.2023.3299355"
+      ],
+      "reason": "題名からMI-EEG/BCI向けデコード手法と同定でき、対象外の可能性が高い。IEEE一次ページでは題名を確認したが要旨を取得できず、技術内容は未確認。 一次要旨の取得不能を理由にborderlineを維持する。",
+      "first_checked_at": "2026-10-13T00:15:59+00:00",
+      "last_checked_at": "2026-10-13T00:15:59+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2019-1901.10430-pay-less-attention-with-lightweight-and-dynamic-convolutions.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "A Temporal Dependency Learning CNN With Attention Mechanism for MI-EEG Decoding"
+    },
+    "DOI:10.1109/tpds.2021.3138825": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/tpds.2021.3138825",
+      "identity_tokens": [
+        "DOI:10.1109/tpds.2021.3138825"
+      ],
+      "reason": "題名は分散GPUクラスタ上のdeep-learning job向け資源推定・スケジューリングを示す。対象外の学習ジョブ管理と思われるが、IEEE一次要旨へ到達できず内容を確認できないため、要旨取得不能としてborderlineに保持する。",
+      "first_checked_at": "2026-10-13T00:15:59+00:00",
+      "last_checked_at": "2026-10-13T00:15:59+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2020-2008.12260-pollux-co-adaptive-cluster-scheduling-for-goodput-optimized-deep-learnin.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Liquid: Intelligent Resource Estimation and Network-Efficient Scheduling for Deep Learning Jobs on Distributed GPU Clusters"
+    },
+    "arXiv:2506.10943": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2506.10943",
+      "identity_tokens": [
+        "arXiv:2506.10943"
+      ],
+      "reason": "Self-Adapting Language Modelsはモデルのtest-time適応を扱い推論段階に関係するが、計算量・レイテンシ削減への貢献は要旨から確定できない。",
+      "first_checked_at": "2026-10-13T00:15:59+00:00",
+      "last_checked_at": "2026-10-13T00:15:59+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Self-Adapting Language Models"
+    },
+    "arXiv:2506.17811": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2506.17811",
+      "identity_tokens": [
+        "arXiv:2506.17811"
+      ],
+      "reason": "RoboMonkeyはVLAのtest-time samplingとverificationを拡張する。推論時計算に直接関係するが、効率化より性能向上・計算増加の可能性が残りborderlineとする。",
+      "first_checked_at": "2026-10-13T00:15:59+00:00",
+      "last_checked_at": "2026-10-13T00:15:59+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "RoboMonkey: Scaling Test-Time Sampling and Verification for Vision-Language-Action Models"
+    },
+    "arXiv:2307.03402": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2307.03402",
+      "identity_tokens": [
+        "arXiv:2307.03402"
+      ],
+      "reason": "異なる計算容量に対応するsemantic communication設計で計算制約を扱うが、LLM推論システムや一般的serving最適化への適用は要旨で不明瞭。",
+      "first_checked_at": "2026-10-13T00:15:59+00:00",
+      "last_checked_at": "2026-10-13T00:15:59+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2021-2107.02192-long-short-transformer-efficient-transformers-for-language-and-vision.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Swin Transformer-Based Dynamic Semantic Communication for Multi-User With Different Computing Capacity"
     }
   }
 }
