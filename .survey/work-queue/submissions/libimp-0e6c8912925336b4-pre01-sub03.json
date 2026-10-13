@@ -1,0 +1,239 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Rethinking Latency Denial-of-Service: Attacking the LLM Serving Framework, Not the Model",
+      "source_url": "https://arxiv.org/abs/2602.07878",
+      "year": 2026,
+      "published": "2026-02-08",
+      "venue": "arXiv.org",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "LLM inference is inherently expensive, even a modest slowdown can translate into substantial operating costs and severe availability risks. Recently, a growing body of research known as latency attacks focuses on crafting inputs to trigger worst-case output lengths. However, we report a contrary finding that these algorithmic-level latency attacks are largely ineffective against modern LLM serving systems. We reveal that system-level optimization such as continuous batching provides a logical isolation to mitigate contagious latency impact on co-located users. Thus, in this paper, we shift our focus from the algorithm to the system layer, and introduce a new Fill and Squeeze attack strategy targeting the state transition of the scheduler. ``Fill''first exhausts the global KV cache to induce Head-of-Line blocking, while ``Squeeze''forces the system into repetitive preemption. By manipulating output lengths using different attack prompts, and leveraging side-channel probing of memory status, we demonstrate that the attack can succeed in a practical black-box setting with much less cost. Extensive evaluations on vLLM indicate up to $75-742\\times$ TTFT degradation relative to benign baselines and $1.5-4\\times$ average slowdown on Time Per Output Token compared to existing attacks with 30-40% lower attack cost. Code: https://github.com/Phil-Fan/FS-attack",
+      "identifiers": [
+        "SemanticScholar:6ed4303875d6770fb1bccd4854cb0dd7f3ffacab"
+      ],
+      "semantic_scholar_id": "6ed4303875d6770fb1bccd4854cb0dd7f3ffacab",
+      "canonical_id": "arXiv:2602.07878",
+      "arxiv_id": "2602.07878",
+      "doi": "10.48550/arXiv.2602.07878",
+      "authors": [
+        "Tian-Yi Wang",
+        "Hua Fan",
+        "Yuanchao Shu",
+        "Peng Cheng",
+        "Cong Wang"
+      ],
+      "priority": 103,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 103,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 247,
+        "matched_prestigious_venue": null
+      },
+      "reason": "The work analyzes serving scheduler/KV-cache behavior, TTFT, and latency under adversarial load.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Scaling Attention via Feature Sparsity",
+      "source_url": "https://arxiv.org/abs/2603.22300",
+      "year": 2026,
+      "published": "2026-03-17",
+      "venue": "arXiv.org",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Scaling Transformers to ultra-long contexts is bottlenecked by the $O(n^2 d)$ cost of self-attention. Existing methods reduce this cost along the sequence axis through local windows, kernel approximations, or token-level sparsity, but these approaches consistently degrade accuracy. In this paper, we instead explore an orthogonal axis: feature sparsity. We propose Sparse Feature Attention (SFA), where queries and keys are represented as $k$-sparse codes that preserve high-dimensional expressivity while reducing the cost of attention from $\\Theta(n^2 d)$ to $\\Theta(n^2 k^2/d)$. To make this efficient at scale, we introduce FlashSFA, an IO-aware kernel that extends FlashAttention to operate directly on sparse overlaps without materializing dense score matrices. Across GPT-2 and Qwen3 pretraining, SFA matches dense baselines while improving speed by up to $2.5\\times$ and reducing FLOPs and KV-cache by nearly 50\\%. On synthetic and downstream benchmarks, SFA preserves retrieval accuracy and robustness at long contexts, outperforming short-embedding baselines that collapse feature diversity. These results establish feature-level sparsity as a complementary and underexplored axis for efficient attention, enabling Transformers to scale to orders-of-magnitude longer contexts with minimal quality loss. Code is available at https://github.com/YannX1e/Sparse-Feature-Attention.",
+      "identifiers": [
+        "SemanticScholar:394cde758d116b8eb595b735af37a3f6f871167d"
+      ],
+      "semantic_scholar_id": "394cde758d116b8eb595b735af37a3f6f871167d",
+      "canonical_id": "arXiv:2603.22300",
+      "arxiv_id": "2603.22300",
+      "doi": "10.48550/arXiv.2603.22300",
+      "authors": [
+        "Yan Xie",
+        "Tiansheng Wen",
+        "Tan Huang",
+        "Bo Chen",
+        "Chen-Yu You",
+        "Stefanie Jegelka",
+        "Yi-Fei Wang"
+      ],
+      "priority": 103,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 103,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 210,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Sparse feature attention and an IO-aware kernel reduce attention cost, FLOPs, KV cache, and improve speed.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "HiCI: Hierarchical Construction-Integration for Long-Context Attention",
+      "source_url": "https://arxiv.org/abs/2603.20843",
+      "year": 2026,
+      "published": "2026-03-21",
+      "venue": "arXiv.org",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Long-context language modeling is commonly framed as a scalability challenge of token-level attention, yet local-to-global information structuring remains largely implicit in existing approaches. Drawing on cognitive theories of discourse comprehension, we propose HiCI (Hierarchical Construction--Integration), a hierarchical attention module that constructs segment-level representations, integrates them into a shared global context, and broadcasts both to condition segment-level attention. We validate HiCI through parameter-efficient adaptation of LLaMA-2 with only<5.5% additional parameters, extending context from 4K to 100K tokens (7B) and 64K tokens (13B). Across language modeling, retrieval, and instruction-following benchmarks, HiCI yields consistent improvements over strong baselines, including matching proprietary models on topic retrieval and surpassing GPT-3.5-Turbo-16K on code comprehension. These results demonstrate the effectiveness of explicit hierarchical structuring as an inductive bias for long-context modeling.",
+      "identifiers": [
+        "SemanticScholar:09e2745f472ad37fbe8b53b71b4098815fdcab08"
+      ],
+      "semantic_scholar_id": "09e2745f472ad37fbe8b53b71b4098815fdcab08",
+      "canonical_id": "arXiv:2603.20843",
+      "arxiv_id": "2603.20843",
+      "doi": "10.48550/arXiv.2603.20843",
+      "authors": [
+        "Xiang-Yun Zeng",
+        "Qi Xu",
+        "Yun-Ke Wang",
+        "Chang Xu"
+      ],
+      "priority": 103,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 103,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 206,
+        "matched_prestigious_venue": null
+      },
+      "reason": "HiCI changes long-context attention structure and extends context length with modest parameter overhead.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "QMoP: Query Guided Mixture-of-Projector for Efficient Visual Token Compression",
+      "source_url": "https://arxiv.org/abs/2603.21232",
+      "year": 2026,
+      "published": "2026-03-22",
+      "venue": "arXiv.org",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Multimodal large language models suffer from severe computational and memory bottlenecks, as the number of visual tokens far exceeds that of textual tokens. While recent methods employ projector modules to align and compress visual tokens into text-aligned features, they typically depend on fixed heuristics that limit adaptability across diverse scenarios. In this paper, we first propose Query Guided Mixture-of-Projector (QMoP), a novel and flexible framework that adaptively compresses visual tokens via three collaborative branches: (1) a pooling-based branch for coarse-grained global semantics, (2) a resampler branch for extracting high-level semantic representations, and (3) a pruning-based branch for fine-grained token selection to preserve critical visual detail. To adaptively coordinate these branches, we introduce the Query Guided Router (QGR), which dynamically selects and weights the outputs from different branches based on both visual input and textual queries. A Mixture-of-Experts-style fusion mechanism is designed to aggregate the outputs, harnessing the strengths of each strategy while suppressing noise. To systematically evaluate the effects of Visual Token Compression, we also develop VTCBench, a dedicated benchmark for evaluating the information loss induced by visual token compression. Extensive experiments demonstrate that despite relying on fundamental compression modules, QMoP outperforms strong baselines and delivers significant savings in memory, computation, and inference time.",
+      "identifiers": [
+        "SemanticScholar:f0c7504afd077f3c62638e5d0a85ffacff9f7329"
+      ],
+      "semantic_scholar_id": "f0c7504afd077f3c62638e5d0a85ffacff9f7329",
+      "canonical_id": "arXiv:2603.21232",
+      "arxiv_id": "2603.21232",
+      "doi": "10.48550/arXiv.2603.21232",
+      "authors": [
+        "Zhong-Yang Li",
+        "Ya-Qian Li",
+        "F. Fang",
+        "Rinyoichi Takezoe",
+        "Zi-Hao Bo",
+        "Chengyao Qian",
+        "Mo Guang",
+        "Gui-Xu Zhang",
+        "Kai-Wen Long"
+      ],
+      "priority": 103,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 103,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 205,
+        "matched_prestigious_venue": null
+      },
+      "reason": "QMoP adaptively compresses MLLM visual tokens and reports savings in memory, computation, and inference time.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "OneComp: One-Line Revolution for Generative AI Model Compression",
+      "source_url": "https://arxiv.org/abs/2603.28845",
+      "year": 2026,
+      "published": "2026-03-30",
+      "venue": "arXiv.org",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Deploying foundation models is increasingly constrained by memory footprint, latency, and hardware costs. Post-training compression can mitigate these bottlenecks by reducing the precision of model parameters without significantly degrading performance; however, its practical implementation remains challenging as practitioners navigate a fragmented landscape of quantization algorithms, precision budgets, data-driven calibration strategies, and hardware-dependent execution regimes. We present OneComp, an open-source compression framework that transforms this expert workflow into a reproducible, resource-adaptive pipeline. Given a model identifier and available hardware, OneComp automatically inspects the model, plans mixed-precision assignments, and executes progressive quantization stages, ranging from layer-wise compression to block-wise refinement and global refinement. A key architectural choice is treating the first quantized checkpoint as a deployable pivot, ensuring that each subsequent stage improves the same model and that quality increases as more compute is invested. By converting state-of-the-art compression research into an extensible, open-source, hardware-aware pipeline, OneComp bridges the gap between algorithmic innovation and production-grade model deployment.",
+      "identifiers": [
+        "SemanticScholar:79af49a84b915c4adc7f830b4a3f42dc494b8141"
+      ],
+      "semantic_scholar_id": "79af49a84b915c4adc7f830b4a3f42dc494b8141",
+      "canonical_id": "arXiv:2603.28845",
+      "arxiv_id": "2603.28845",
+      "doi": "10.48550/arXiv.2603.28845",
+      "authors": [
+        "Yuma Ichikawa",
+        "Keiji Kimura",
+        "Akihiro Yoshida",
+        "Yudai Fujimoto",
+        "Hiroki Tokura",
+        "Yamato Arai",
+        "Yoshiyuki Ishii",
+        "Yusei Kawakami",
+        "Genki Shikada",
+        "Achille Jacquemond",
+        "Yoshihiko Fujisawa",
+        "Katsuki Fujisawa",
+        "Takumi Honda",
+        "Akira Sakai"
+      ],
+      "priority": 103,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 103,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 197,
+        "matched_prestigious_venue": null
+      },
+      "reason": "OneComp is a resource-adaptive mixed-precision compression and deployment pipeline addressing footprint and latency.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-0e6c89129253",
+    "round": "libimp-0e6c8912925336b4-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 18,
+    "round_submission_count": 4,
+    "round_submission_index": 3,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-0e6c8912925336b4-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-0e6c8912925336b4-pre01.json",
+    "receipt": "sha256:71328fcb2fe268b57e6dac4e3a377b8f52b31ff0736c9a2b8ac51df32bf6a2e7"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-0e6c89129253",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

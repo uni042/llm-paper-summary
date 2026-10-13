@@ -1,0 +1,202 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "SpecEyes: Accelerating Agentic Multimodal LLMs via Speculative Perception and Planning",
+      "source_url": "https://arxiv.org/abs/2603.23483",
+      "year": 2026,
+      "published": "2026-03-24",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Agentic multimodal large language models (MLLMs) (e.g., OpenAI o3 and Gemini Agentic Vision) achieve remarkable reasoning capabilities through iterative visual tool invocation. However, the cascaded perception, reasoning, and tool-calling loops introduce significant sequential overhead. This overhead, termed agentic depth, incurs prohibitive latency and seriously limits system-level concurrency. To this end, we propose SpecEyes, an agentic-level speculative acceleration framework that breaks this sequential bottleneck. Our key insight is that a lightweight, tool-free MLLM can serve as a speculative planner to predict the execution trajectory, enabling early termination of expensive tool chains without sacrificing accuracy. To regulate this speculative planning, we introduce a cognitive gating mechanism based on answer separability, which quantifies the model's confidence for self-verification without requiring oracle labels. Furthermore, we design a heterogeneous parallel funnel that exploits the stateless concurrency of the small model to mask the stateful serial execution of the large model, maximizing system throughput. Extensive experiments on V* Bench, HR-Bench, and POPE demonstrate that SpecEyes achieves 1.1-3.35x speedup over the agentic baseline while preserving or even improving accuracy (up to +6.7%), thereby boosting serving throughput under concurrent workloads.",
+      "identifiers": [
+        "SemanticScholar:fb1c77781b0b3e1042a3f2d3228d25c23a9a7c1b"
+      ],
+      "semantic_scholar_id": "fb1c77781b0b3e1042a3f2d3228d25c23a9a7c1b",
+      "canonical_id": "arXiv:2603.23483",
+      "arxiv_id": "2603.23483",
+      "doi": "10.48550/arXiv.2603.23483",
+      "authors": [
+        "Hao-Yu Huang",
+        "Jin-Fa Huang",
+        "Zhongwei Wan",
+        "Xia-Wu Zheng",
+        "Rongrong Ji",
+        "Jiebo Luo"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 203,
+        "matched_prestigious_venue": null
+      },
+      "reason": "SpecEyes uses speculative planning and heterogeneous parallel execution to reduce agentic MLLM latency and improve throughput.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "SpecTr-GBV: Multi-Draft Block Verification Accelerating Speculative Decoding",
+      "source_url": "https://arxiv.org/abs/2604.25925",
+      "year": 2026,
+      "published": "2026-04-01",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Autoregressive language models suffer from high inference latency due to their sequential decoding nature. Speculative decoding (SD) mitigates this by employing a lightweight draft model to propose candidate tokens, which are selectively verified by a larger target model. While existing methods either adopt multi-draft strategies to increase acceptance rates or block verification techniques to jointly verify multiple tokens, they remain limited by treating these improvements in isolation. In this work, we propose SpecTr-GBV, a novel SD method that unifies multi-draft and greedy block verification (GBV) into a single framework. By formulating the verification step as an optimal transport problem over draft and target token blocks, SpecTr-GBV improves both theoretical efficiency and empirical performance. We theoretically prove that SpecTr-GBV achieves the optimal expected acceptance length physically attainable within the framework of i.i.d. draft generation, and this bound improves as the number of drafts increases. Empirically, we evaluate SpecTr-GBV across five datasets and four baselines. Our method achieves superior speedup and significantly higher block efficiency while preserving output quality. In addition, we perform comprehensive ablation studies to evaluate the impact of various hyperparameters in the model.",
+      "identifiers": [
+        "SemanticScholar:99041da4ebbc8a288bb910b09275cd6401e197b4"
+      ],
+      "semantic_scholar_id": "99041da4ebbc8a288bb910b09275cd6401e197b4",
+      "canonical_id": "arXiv:2604.25925",
+      "arxiv_id": "2604.25925",
+      "doi": "10.48550/arXiv.2604.25925",
+      "authors": [
+        "Yi-Jun Lin",
+        "Jinhao Sheng",
+        "Qingyu Cai",
+        "Feng Zhou"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 195,
+        "matched_prestigious_venue": null
+      },
+      "reason": "SpecTr-GBV combines multi-draft and block verification for speculative decoding.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "EdgeRazor: A Lightweight Framework for Large Language Models via Mixed-Precision Quantization-Aware Distillation",
+      "source_url": "https://arxiv.org/abs/2605.04062",
+      "year": 2026,
+      "published": "2026-04-10",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Quantization has emerged as a mainstream approach for deploying Large Language Models (LLMs) on resource-constrained devices, yet compressing precision below 4-bit typically causes severe performance degradation or prohibitive retraining costs. In this paper, we propose EdgeRazor, a lightweight framework for LLMs via Mixed-Precision Quantization-Aware Distillation. It contains three modules: Structural Quantization with Mixed Precision for fine-grained control of bit-widths, Layer-Adaptive Feature Distillation that dynamically selects the most informative features for alignment, and Entropy-Aware KL Divergence for forward-reverse balance on both human-annotated and distilled datasets. Evaluations conducted on MobileLLM and Qwen families show that under weight-activation quantization, the 1.88-bit Qwen3-0.6B-EdgeRazor outperforms the state-of-the-art 2-bit baselines by 11.27 and surpasses the strongest 3-bit baselines by 4.38, while the quantized MobileLLM-350M-EdgeRazor requires a training budget 4-10$\\times$ lower than the leading quantization-aware training method. In terms of efficiency, EdgeRazor achieves higher compression ratios at all bit-widths, and the 1.58-bit Qwen3-0.6B-EdgeRazor reduces storage from 1.11 GB to 0.19 GB while accelerating decoding by 15.16$\\times$ over the 16-bit baseline. These results empirically validate the effectiveness and efficiency of EdgeRazor. The codes can be accessed from \\href{https://github.com/zhangsq-nju/EdgeRazor}{GitHub} and \\href{https://huggingface.co/collections/zhangsq-nju/edgerazor-nbit}{Huggingface}.",
+      "identifiers": [
+        "SemanticScholar:92c2b59c4b8763721e90d80421cff2a183c02f3c"
+      ],
+      "semantic_scholar_id": "92c2b59c4b8763721e90d80421cff2a183c02f3c",
+      "canonical_id": "arXiv:2605.04062",
+      "arxiv_id": "2605.04062",
+      "doi": "10.48550/arXiv.2605.04062",
+      "authors": [
+        "Shuhao Zhang",
+        "Lei Huang",
+        "Xia Deng",
+        "Xin Zou",
+        "Chen-Han Wu",
+        "Nan Li",
+        "Shao-Qiu Zhang",
+        "Zhi-Hua Zhou"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 186,
+        "matched_prestigious_venue": null
+      },
+      "reason": "EdgeRazor quantizes LLMs and reports storage and decoding-speed improvements for edge deployment.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "SpikingBrain2.0: Brain-Inspired Foundation Models for Efficient Long-Context and Cross-Platform Inference",
+      "source_url": "https://arxiv.org/abs/2604.22575",
+      "year": 2026,
+      "published": "2026-04-24",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Scaling context length is reshaping large-model development, yet full-attention Transformers suffer from prohibitive computation and inference bottlenecks at long sequences. A key challenge is to design foundation models that maintain performance and long-context efficiency with minimal training overhead. We introduce SpikingBrain2.0 (SpB2.0), a 5B model that advances both architecture and training efficiency of its predecessor. Our contributions are two-fold. (1) Architectural Innovation: We propose Dual-Space Sparse Attention (DSSA), an inter-layer hybrid of Sparse Softmax Attention (MoBA) and Sparse Linear Attention (SSE), achieving an improved performance-efficiency trade-off for long-context modeling. SpB2.0 further supports dual quantization paths: INT8-Spiking coding enables sparse event-driven computation, while FP8 coding accelerates inference on modern GPUs. (2) Enhanced Training Strategy: We develop an optimized Transformer-to-Hybrid (T2H) pipeline with dual conversion paths for LLMs and VLMs using curated open-source data. Empirically, SpB2.0-5B and SpB2.0-VL-5B recover most of the base Transformer (Qwen3-4B) capability with under 7k A100 GPU hours. SpB2.0 achieves a 10.13x TTFT speedup at 4M context and supports over 10M tokens on 8 A100 GPUs under vLLM, where full-attention models exceed memory limits. It also demonstrates strong cross-platform compatibility, enabling FP8 GPU inference (2.52x speedup at 250k) and efficient neuromorphic execution (64.31% sparsity, with 70.6% and 46.5% area and power reduction at 500MHz). Overall, SpikingBrain2.0 provides a practical pathway for lightweight, multimodal, spiking foundation models, highlighting the potential of combining brain-inspired mechanisms with efficient architectures for resource-constrained and edge scenarios.",
+      "identifiers": [
+        "SemanticScholar:f897b7bf1bb5ce6330e07de5fee80b981dfd3ae5"
+      ],
+      "semantic_scholar_id": "f897b7bf1bb5ce6330e07de5fee80b981dfd3ae5",
+      "canonical_id": "arXiv:2604.22575",
+      "arxiv_id": "2604.22575",
+      "doi": "10.48550/arXiv.2604.22575",
+      "authors": [
+        "Yu-Qi Pan",
+        "Jing-Hao Zhuang",
+        "Yu-Peng Feng",
+        "Fang-Zhi Zhong",
+        "Siyu Ding",
+        "Xue-Rui Qiu",
+        "Shao-Wei Gu",
+        "Bo-Han Sun",
+        "Zhiyong Qin",
+        "Yibo Zhong",
+        "L. Ouyang",
+        "Kun Yang",
+        "Ze-Hao Liu",
+        "Yuhong Chou",
+        "Shurong Wang",
+        "Anjie Hu",
+        "Han Xu",
+        "Bo Xu",
+        "Guo-Qi Li"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 172,
+        "matched_prestigious_venue": null
+      },
+      "reason": "SpikingBrain2.0 combines sparse attention and quantization and reports long-context inference speed and memory results.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-c12c67f4fd94",
+    "round": "libimp-c12c67f4fd941a4f-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 4,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-c12c67f4fd941a4f-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-c12c67f4fd941a4f-pre01.json",
+    "receipt": "sha256:8c5abfac8321facaca743fae5af5c74cf8c057fdf9c65ef408363fc583f22451"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-c12c67f4fd94",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

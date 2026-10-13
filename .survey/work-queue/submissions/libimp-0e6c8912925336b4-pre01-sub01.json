@@ -1,0 +1,221 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "ScaleBITS: Scalable Bitwidth Search for Hardware-Aligned Mixed-Precision LLMs",
+      "source_url": "https://arxiv.org/abs/2602.17698",
+      "year": 2026,
+      "published": "2026-02-06",
+      "venue": "arXiv.org",
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Post-training weight quantization is crucial for reducing the memory and inference cost of large language models (LLMs), yet pushing the average precision below 4 bits remains challenging due to highly non-uniform weight sensitivity and the lack of principled precision allocation. Existing solutions use irregular fine-grained mixed-precision with high runtime overhead or rely on heuristics or highly constrained precision allocation strategies. In this work, we propose ScaleBITS, a mixed-precision quantization framework that enables automated, fine-grained bitwidth allocation under a memory budget while preserving hardware efficiency. Guided by a new sensitivity analysis, we introduce a hardware-aligned, block-wise weight partitioning scheme, powered by bi-directional channel reordering. We formulate global bitwidth allocation as a constrained optimization problem and develop a scalable approximation to the greedy algorithm, enabling end-to-end principled allocation. Experiments show that ScaleBITS significantly improves over uniform-precision quantization (up to +36%) and outperforms state-of-the-art sensitivity-aware baselines (up to +13%) in ultra-low-bit regime, without adding runtime overhead.",
+      "identifiers": [
+        "SemanticScholar:e18ce2625232cd7f6c0514f8018812f374d842f3"
+      ],
+      "semantic_scholar_id": "e18ce2625232cd7f6c0514f8018812f374d842f3",
+      "canonical_id": "arXiv:2602.17698",
+      "arxiv_id": "2602.17698",
+      "doi": "10.48550/arXiv.2602.17698",
+      "authors": [
+        "Xinlin Li",
+        "Timothy Chou",
+        "Josh Fromm",
+        "Zichang Liu",
+        "Yunjie Pan",
+        "Christina Fragouli"
+      ],
+      "priority": 104,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 104,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 249,
+        "matched_prestigious_venue": null
+      },
+      "reason": "ScaleBITS allocates hardware-aligned mixed precision under memory budgets without adding runtime overhead.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Nearly Optimal Attention Coresets",
+      "source_url": "https://arxiv.org/abs/2605.05602",
+      "year": 2026,
+      "published": "2026-05-07",
+      "venue": "arXiv.org",
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "We consider the problem of estimating the Attention mechanism in small space, and prove the existence of coresets for it of nearly optimal size. Specifically, we show that for any set of unit-norm keys and values $(K,V)$ in $\\mathbb{R}^d$, there exists a subset $(K',V')$ of size at most $O({\\sqrt{d} e^{\\rho+o(\\rho)}/\\varepsilon})$ such that \\[ \\left\\| \\operatorname{Attn}(q,K,V)- \\operatorname{Attn}(q,K',V') \\right\\| \\le \\varepsilon \\] simultaneously for all queries whose norm is bounded by $\\rho$. This outperforms the best known results for this problem. We also offer an improved lower bound showing that $\\varepsilon$-coresets must have size $\\Omega({\\sqrt{d} e^{\\rho}/\\epsilon})$.",
+      "identifiers": [
+        "SemanticScholar:ac88dcfe309b5b2d24cc08618f372cc2684f4f64"
+      ],
+      "semantic_scholar_id": "ac88dcfe309b5b2d24cc08618f372cc2684f4f64",
+      "canonical_id": "arXiv:2605.05602",
+      "arxiv_id": "2605.05602",
+      "doi": "10.48550/arXiv.2605.05602",
+      "authors": [
+        "Edo Liberty",
+        "Alexandr Andoni",
+        "Eldar Kleiner"
+      ],
+      "priority": 104,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 104,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 159,
+        "matched_prestigious_venue": null
+      },
+      "reason": "The paper establishes small-space approximation of attention, a direct memory-efficiency connection.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Syncopate: Efficient Multi-GPU AI Kernels via Automatic Chunk-Centric Compute-Communication Overlap",
+      "source_url": "https://arxiv.org/abs/2601.20595",
+      "year": 2026,
+      "published": "2026-01-28",
+      "venue": null,
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Communication has become a first-order bottleneck in large-scale GPU workloads, and existing distributed compilers address it mainly by overlapping whole compute and communication kernels at the stream level. This coarse granularity incurs extra kernel launches, forces device-wide synchronizations at kernel boundaries, and leaves substantial slack when the slowest tile or kernel stretches the communication tail. We present Syncopate, a compiler and runtime that enables automatic fine-grained overlap inside a single fused kernel. Syncopate introduces a communication chunk abstraction that decouples communication granularity from kernel structure and backend mechanisms, allowing chunk-level plans to be ported from existing distributed compilers, written directly by users, or instantiated from reusable templates. Given a local Triton kernel and a chunk schedule, Syncopate performs transformations to align computation with chunk availability. Implemented as a source-to-source compiler on Triton, Syncopate delivers an average end-to-end speedup of 1.3$\\times$ and up to 4.7$\\times$ on multi-GPU workloads. Our code is open-sourced at https://github.com/tie-pilot-qxw/syncopate.",
+      "identifiers": [
+        "SemanticScholar:33ad8ec702fa05e4255fbbc7e16c7ce2292e71de"
+      ],
+      "semantic_scholar_id": "33ad8ec702fa05e4255fbbc7e16c7ce2292e71de",
+      "canonical_id": "arXiv:2601.20595",
+      "arxiv_id": "2601.20595",
+      "authors": [
+        "Xin-Wei Qiang",
+        "Yue Guan",
+        "Zheng-Ding Hu",
+        "Keren Zhou",
+        "Yufei Ding",
+        "Adnan Aziz"
+      ],
+      "priority": 103,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 103,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 258,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Syncopate is a compiler/runtime for fine-grained multi-GPU compute-communication overlap.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "L3: Large Lookup Layers",
+      "source_url": "https://arxiv.org/abs/2601.21461",
+      "year": 2026,
+      "published": "2026-01-29",
+      "venue": "arXiv.org",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Modern sparse language models typically achieve sparsity through Mixture-of-Experts (MoE) layers, which dynamically route tokens to dense MLP\"experts.\"However, dynamic hard routing has a number of drawbacks, such as potentially poor hardware efficiency and needing auxiliary losses for stable training. In contrast, the tokenizer embedding table, which is natively sparse, largely avoids these issues by selecting a single embedding per token at the cost of not having contextual information. In this work, we introduce the Large Lookup Layer (L$^3$), which generalizes embedding tables to model decoder layers as a means of further scaling sparsity. L$^3$ layers use static token-based routing to aggregate a set of learned embeddings per token in a context-dependent way, allowing the model to efficiently balance memory and compute by caching information in embeddings. L$^3$ has two main components: (1) a systems-friendly architecture that allows for fast training and CPU-offloaded inference with no overhead, and (2) an information-theoretic embedding allocation algorithm that effectively balances speed and quality. We empirically test L$^3$ by training transformers with up to 2.6B active parameters and find that L$^3$ strongly outperforms both dense models and iso-sparse MoEs in both language modeling and downstream tasks.",
+      "identifiers": [
+        "SemanticScholar:4166a547ff0e1acd8986437a5b4b9f2f422707f8"
+      ],
+      "semantic_scholar_id": "4166a547ff0e1acd8986437a5b4b9f2f422707f8",
+      "canonical_id": "arXiv:2601.21461",
+      "arxiv_id": "2601.21461",
+      "doi": "10.48550/arXiv.2601.21461",
+      "authors": [
+        "Albert Tseng",
+        "C. De Sa"
+      ],
+      "priority": 103,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 103,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 257,
+        "matched_prestigious_venue": null
+      },
+      "reason": "L3 describes a systems-friendly architecture with CPU-offloaded inference.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Sparse Attention as Compact Kernel Regression",
+      "source_url": "https://arxiv.org/abs/2601.22766",
+      "year": 2026,
+      "published": "2026-01-30",
+      "venue": "arXiv.org",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Recent work has revealed a link between self-attention mechanisms in transformers and test-time kernel regression via the Nadaraya-Watson estimator, with standard softmax attention corresponding to a Gaussian kernel. However, a kernel-theoretic understanding of sparse attention mechanisms is currently missing. In this paper, we establish a formal correspondence between sparse attention and compact (bounded support) kernels. We show that normalized ReLU and sparsemax attention arise from Epanechnikov kernel regression under fixed and adaptive normalizations, respectively. More generally, we demonstrate that widely used kernels in nonparametric density estimation -- including Epanechnikov, biweight, and triweight -- correspond to $\\alpha$-entmax attention with $\\alpha = 1 + \\frac{1}{n}$ for $n \\in \\mathbb{N}$, while the softmax/Gaussian relationship emerges in the limit $n \\to \\infty$. This unified perspective explains how sparsity naturally emerges from kernel design and provides principled alternatives to heuristic top-$k$ attention and other associative memory mechanisms. Experiments with a kernel-regression-based variant of transformers -- Memory Mosaics -- show that kernel-based sparse attention achieves competitive performance on language modeling, in-context learning, and length generalization tasks, offering a principled framework for designing attention mechanisms.",
+      "identifiers": [
+        "SemanticScholar:e2334d03e8426da7ca21a2e1bda36ac8f67a0f54"
+      ],
+      "semantic_scholar_id": "e2334d03e8426da7ca21a2e1bda36ac8f67a0f54",
+      "canonical_id": "arXiv:2601.22766",
+      "arxiv_id": "2601.22766",
+      "doi": "10.48550/arXiv.2601.22766",
+      "authors": [
+        "Saul Santos",
+        "Nuno Gonccalves",
+        "Daniel C. McNamee",
+        "Marcos Vinícius Treviso",
+        "André F. T. Martins"
+      ],
+      "priority": 103,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 103,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 256,
+        "matched_prestigious_venue": null
+      },
+      "reason": "The paper studies sparse attention formulations and alternatives to heuristic top-k attention.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-0e6c89129253",
+    "round": "libimp-0e6c8912925336b4-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 18,
+    "round_submission_count": 4,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-0e6c8912925336b4-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-0e6c8912925336b4-pre01.json",
+    "receipt": "sha256:71328fcb2fe268b57e6dac4e3a377b8f52b31ff0736c9a2b8ac51df32bf6a2e7"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-0e6c89129253",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

@@ -1,0 +1,220 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Exact Flow Linear Attention: Exact Solution from Continuous-Time Dynamics",
+      "source_url": "https://arxiv.org/abs/2512.12602",
+      "year": 2025,
+      "published": "2025-12-14",
+      "venue": null,
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "In this paper, we introduce Exact Flow Linear Attention~(EFLA), an exact-flow formulation of delta-rule linear attention. We show that the delta-rule update can be interpreted as an explicit Euler discretization of an underlying continuous-time system. EFLA replaces this first-order update with the exact closed-form flow. By exploiting the rank-1 structure of the dynamics matrix, both the matrix exponential and the input integral collapse to a simple update that preserves delta-rule linear attention's algebraic structure, parameter count, linear-time complexity, and chunkwise parallelism. This attention mechanism removes the Euler discretization error of the delta-rule dynamics without introducing additional parameters. Experiments on robustness tests, language modeling benchmarks, and the MAD synthetic benchmark show that EFLA improves stability under corrupted and high-energy inputs, reduces perplexity, and achieves stronger downstream performance compared to SSM and Euler-style baselines. These results establish exact-flow integration as a principled and scalable update mechanism for delta-rule linear attention.",
+      "identifiers": [
+        "SemanticScholar:7016587ec92805544197140b06677dfb96310c90"
+      ],
+      "semantic_scholar_id": "7016587ec92805544197140b06677dfb96310c90",
+      "canonical_id": "arXiv:2512.12602",
+      "arxiv_id": "2512.12602",
+      "authors": [
+        "Jing-Di Lei",
+        "Di Zhang",
+        "Soujanya Poria"
+      ],
+      "priority": 104,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 104,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 303,
+        "matched_prestigious_venue": null
+      },
+      "reason": "The arXiv primary record describes linear-time attention with chunkwise parallelism; DOI resolves to arXiv.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Autoregressive Image Generation Needs Only a Few Lines of Cached Tokens",
+      "source_url": "https://arxiv.org/abs/2512.04857",
+      "year": 2025,
+      "published": "2025-12-04",
+      "venue": "arXiv.org",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Autoregressive (AR) visual generation has emerged as a powerful paradigm for image and multimodal synthesis, owing to its scalability and generality. However, existing AR image generation suffers from severe memory bottlenecks due to the need to cache all previously generated visual tokens during decoding, leading to both high storage requirements and low throughput. In this paper, we introduce \\textbf{LineAR}, a novel, training-free progressive key-value (KV) cache compression pipeline for autoregressive image generation. By fully exploiting the intrinsic characteristics of visual attention, LineAR manages the cache at the line level using a 2D view, preserving the visual dependency regions while progressively evicting less-informative tokens that are harmless for subsequent line generation, guided by inter-line attention. LineAR enables efficient autoregressive (AR) image generation by utilizing only a few lines of cache, achieving both memory savings and throughput speedup, while maintaining or even improving generation quality. Extensive experiments across six autoregressive image generation models, including class-conditional and text-to-image generation, validate its effectiveness and generality. LineAR improves ImageNet FID from 2.77 to 2.68 and COCO FID from 23.85 to 22.86 on LlamaGen-XL and Janus-Pro-1B, while retaining only 1/6 KV cache. It also improves DPG on Lumina-mGPT-768 with just 1/8 KV cache. Additionally, LineAR achieves significant memory and throughput gains, including up to 67.61% memory reduction and 7.57x speedup on LlamaGen-XL, and 39.66% memory reduction and 5.62x speedup on Janus-Pro-7B.",
+      "identifiers": [
+        "SemanticScholar:f41456437797b11fd52811e98ee3117b833928ef"
+      ],
+      "semantic_scholar_id": "f41456437797b11fd52811e98ee3117b833928ef",
+      "canonical_id": "arXiv:2512.04857",
+      "arxiv_id": "2512.04857",
+      "doi": "10.48550/arXiv.2512.04857",
+      "authors": [
+        "Ziran Qin",
+        "Youru Lv",
+        "Mingbao Lin",
+        "Zeren Zhang",
+        "Changyi Gan",
+        "Tieyuan Chen",
+        "Weiyao Lin"
+      ],
+      "priority": 103,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 103,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 313,
+        "matched_prestigious_venue": null
+      },
+      "reason": "LineAR compresses autoregressive visual-generation KV cache and reports memory and throughput gains.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "KV Admission: Learning What to Write for Efficient Long-Context LLM Inference",
+      "source_url": "https://arxiv.org/abs/2512.17452",
+      "year": 2025,
+      "published": "2025-12-19",
+      "venue": null,
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Long-context LLM inference is bottlenecked by the quadratic attention complexity and linear Key-Value (KV) cache growth. Prior approaches mitigate this via post-hoc selection or eviction but overlook the root inefficiency: indiscriminate token admission. In this paper, we formalize KV management as a causal system of three primitives: KV Admission, Selection, and Eviction. We instantiate KV Admission via Write-Gated KV (WG-KV), a lightweight mechanism that learns to predict token utility before cache entry. By filtering out redundant states early to maintain a compact global cache alongside a sliding local cache, WG-KV significantly reduces memory usage and accelerates both prefill and decode phases. Our results demonstrate that learning what to write is a principled and practical recipe for efficient long-context inference. Code is available at https://github.com/EMCLab-Sinica/WG-KV.",
+      "identifiers": [
+        "SemanticScholar:327d3bb056e1456bb96ff711a2ec54317ca61feb"
+      ],
+      "semantic_scholar_id": "327d3bb056e1456bb96ff711a2ec54317ca61feb",
+      "canonical_id": "arXiv:2512.17452",
+      "arxiv_id": "2512.17452",
+      "authors": [
+        "Yen-Chieh Huang",
+        "P. Hsiu",
+        "Rui Fang",
+        "Ming-Syan Chen"
+      ],
+      "priority": 103,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 103,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 298,
+        "matched_prestigious_venue": null
+      },
+      "reason": "KV Admission reduces cache writes, memory use, and prefill/decode cost for long-context inference.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "RepetitionCurse: Measuring and Understanding Router Imbalance in Mixture-of-Experts LLMs under DoS Stress",
+      "source_url": "https://arxiv.org/abs/2512.23995",
+      "year": 2025,
+      "published": "2025-12-30",
+      "venue": "arXiv.org",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Mixture-of-Experts architectures have become the standard for scaling large language models due to their superior parameter efficiency. To accommodate the growing number of experts in practice, modern inference systems commonly adopt expert parallelism to distribute experts across devices. However, the absence of explicit load balancing constraints during inference allows adversarial inputs to trigger severe routing concentration. We demonstrate that out-of-distribution prompts can manipulate the routing strategy such that all tokens are consistently routed to the same set of top-$k$ experts, which creates computational bottlenecks on certain devices while forcing others to idle. This converts an efficiency mechanism into a denial-of-service attack vector, leading to violations of service-level agreements for time to first token. We propose RepetitionCurse, a low-cost black-box strategy to exploit this vulnerability. By identifying a universal flaw in MoE router behavior, RepetitionCurse constructs adversarial prompts using simple repetitive token patterns in a model-agnostic manner. On widely deployed MoE models like Mixtral-8x7B, our method increases end-to-end inference latency by 3.063x, degrading service availability significantly.",
+      "identifiers": [
+        "SemanticScholar:b9fd049c8f61a728e9e837f34696bdae4aaa1305"
+      ],
+      "semantic_scholar_id": "b9fd049c8f61a728e9e837f34696bdae4aaa1305",
+      "canonical_id": "arXiv:2512.23995",
+      "arxiv_id": "2512.23995",
+      "doi": "10.48550/arXiv.2512.23995",
+      "authors": [
+        "Ruixuan Huang",
+        "Qing-Yue Wang",
+        "Hantao Huang",
+        "Yu-Dong Gao",
+        "Dong Chen",
+        "Shuai Wang",
+        "Wei Wang"
+      ],
+      "priority": 103,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 103,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 287,
+        "matched_prestigious_venue": null
+      },
+      "reason": "The paper measures routing concentration, device imbalance, TTFT, and inference latency in MoE serving.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "When to Think Fast and Slow? AMOR: Adaptive Entropy Gate for Hybrid Models",
+      "source_url": "https://arxiv.org/abs/2602.13215",
+      "year": 2026,
+      "published": "2026-01-22",
+      "venue": null,
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Recurrent-attention hybrids aim to combine the efficiency of recurrence with the contextual recall of attention, but existing approaches typically apply attention uniformly across all positions, even when the recurrent state alone is sufficient for accurate prediction. We introduce AMOR (Adaptive Metacognitive Output Router), a post-hoc hybrid architecture that selectively invokes attention based on predictive uncertainty. A recurrent backbone is augmented with entropy-gated attention blocks that activate only when the model's output entropy exceeds a dynamic threshold derived from a running batch median and scaled standard deviation. The resulting binary gate requires no learned routing parameters. Pretrained from scratch on FineWeb-Edu and with attention invoked on only ~40% of positions, one of the AMOR variants (Mamba2 or Gated DeltaNet backbones) achieves the highest eight-task common-sense reasoning average at each scale among pure recurrent, pure attention, and fixed-schedule hybrid models. AMOR also improves retrieval performance over pure recurrent models while remaining competitive against fixed-schedule hybrids. Additionally, AMOR retains the long-context robustness of its recurrent backbones, where the Transformer and other hybrid architectures degrade under distribution shift. These results suggest that when attention is applied matters as much as how much: selectively allocating attention based on predictive uncertainty improves accuracy, robustness, and efficiency, offering a simple alternative to uniform or fixed routing strategies.",
+      "identifiers": [
+        "SemanticScholar:8ef34187d81dbce9783d45361b30e289c6e9de7d"
+      ],
+      "semantic_scholar_id": "8ef34187d81dbce9783d45361b30e289c6e9de7d",
+      "canonical_id": "arXiv:2602.13215",
+      "arxiv_id": "2602.13215",
+      "authors": [
+        "Zheng Haoran",
+        "Sha-Ni Chen"
+      ],
+      "priority": 103,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 103,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 264,
+        "matched_prestigious_venue": null
+      },
+      "reason": "AMOR dynamically gates attention computation based on uncertainty to improve efficiency.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-530c9ea948b6",
+    "round": "libimp-530c9ea948b6da71-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 15,
+    "round_submission_count": 3,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-530c9ea948b6da71-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-530c9ea948b6da71-pre01.json",
+    "receipt": "sha256:02dadda55fae37c8c4ddf2583f18d2d0c33a096c077744e804fcb3051dfb94d0"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-530c9ea948b6",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
