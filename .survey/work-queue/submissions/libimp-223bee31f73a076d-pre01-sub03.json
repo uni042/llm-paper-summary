@@ -1,0 +1,216 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Structured Pruning of LLMs for Resource-Constrained Devices: A Survey",
+      "source_url": "https://doi.org/10.1109/GCWOT69191.2026.11499662",
+      "year": 2026,
+      "published": "2026-02-11",
+      "venue": "2026 Global Conference on Wireless and Optical Technologies (GCWOT)",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The size of large language models have been increased massively and this makes it harder to run them in a resource-constrained environments. To address this issue, many optimizations techniques have emergered with pruning LLMs being one of them. Structured pruning, a branch of pruning category, compresses LLMs by removing entire groups of parameters structurally with the requirement of further finetuning or pretraining to recover the performance when required. This survey paper offers a comprehensive analysis focused solely on the structured pruning of large language models. 25 papers in this category were examined, out of which 18 represent widely recognized methods and 7 are recent approaches. To organize these methods, a four-dimensional taxonomy based on pruning granularity, importance estimation, recovery strategy, and pruning schedule is introduced. The analysis shows clear trends: the dominance of component-level pruning, gradient-based importance scores, parameter-efficient tuning, and one-shot pruning across the four dimensions, respectively. Finally, the emerging trends, challenges, and future directions are discussed. This survey aims to guide researchers and engineers seeking efficient ways to bring large language models to resource-constrained environments.",
+      "identifiers": [
+        "SemanticScholar:3d2a24d4cbd74bc74178cd4d6fe95db498b9e089"
+      ],
+      "semantic_scholar_id": "3d2a24d4cbd74bc74178cd4d6fe95db498b9e089",
+      "doi": "10.1109/GCWOT69191.2026.11499662",
+      "canonical_id": "DOI:10.1109/GCWOT69191.2026.11499662",
+      "authors": [
+        "Danish Ahmed",
+        "Ghulam Abbas"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 244,
+        "matched_prestigious_venue": null
+      },
+      "reason": "The IEEE abstract surveys structured LLM pruning methods for resource-constrained deployment, a concrete model-size and inference-resource efficiency path.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "WiSparse: Boosting LLM Inference Efficiency with Weight-Aware Mixed Activation Sparsity",
+      "source_url": "https://arxiv.org/abs/2602.14452",
+      "year": 2026,
+      "published": "2026-02-16",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Models (LLMs) offer strong capabilities but incur high inference costs due to dense computation and memory access. Training-free activation sparsity is a promising approach for efficient LLM inference, yet existing methods often rely solely on activation information and uniform sparsity ratios. This overlooks the critical interplay with weights and inter-block sensitivity variation, leading to suboptimal performance. We identify two key phenomena in modern LLMs: 1) less significant activations may align with highly important weights, and 2) sparsity sensitivity varies non-monotonically across model blocks. We propose Weight-aware Mixed-Granularity Training-free Activation Sparsity (WiSparse), which leverages both activation and weight information for adaptive sparsity allocation. Specifically, we introduce a weight-aware mechanism integrating activation magnitudes with precomputed weight norms to accurately identify salient channels. This is combined with a mixed-granularity allocation scheme: a global budget is distributed across blocks via evolutionary search to protect sensitive regions, then refined within blocks to minimize reconstruction error. We improve sparse kernels and demonstrate effectiveness on three representative models. Notably, at 50% sparsity, WiSparse preserves 97% of Llama3.1's dense performance, surpassing the strongest baseline by 2.23 percentage points while achieving a 21.4% acceleration in end-to-end inference speed. Our research advances the limits of training-free approaches for efficient LLM inference, pushing the boundaries of achievable speedup without training.",
+      "identifiers": [
+        "SemanticScholar:c2b3901590bc22ceeba27c5d11b38e746c4a3645"
+      ],
+      "semantic_scholar_id": "c2b3901590bc22ceeba27c5d11b38e746c4a3645",
+      "canonical_id": "arXiv:2602.14452",
+      "arxiv_id": "2602.14452",
+      "doi": "10.48550/arXiv.2602.14452",
+      "authors": [
+        "Lei Chen",
+        "Yuan Meng",
+        "Xiaoyu Zhan",
+        "Zhi Wang",
+        "Wen-Wu Zhu"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 239,
+        "matched_prestigious_venue": null
+      },
+      "reason": "WiSparse uses weight-aware, mixed-granularity activation sparsity and improved sparse kernels to lower LLM inference computation.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "CLAA: Cross-Layer Attention Aggregation for Accelerating LLM Prefill",
+      "source_url": "https://arxiv.org/abs/2602.16054",
+      "year": 2026,
+      "published": "2026-02-17",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The prefill stage in long-context LLM inference remains a computational bottleneck. Recent token-ranking heuristics accelerate inference by selectively processing a subset of semantically relevant tokens. However, existing methods suffer from unstable token importance estimation, often varying between layers. Evaluating token-ranking quality independently from heuristic-specific architectures is challenging. To address this, we introduce an Answer-Informed Oracle, which defines ground-truth token importance by measuring attention from generated answers back to the prompt. This oracle reveals that existing heuristics exhibit high variance across layers: rankings can degrade sharply at specific layers, a failure mode invisible to end-to-end benchmarks. The diagnosis suggests a simple fix: aggregate scores across layers rather than relying on any single one. We implement this as Cross-Layer Attention Aggregation (CLAA), which closes the gap to the oracle upper bound and reduces Time-to-First-Token (TTFT) by up to 39\\% compared to the Full KV Cache baseline.",
+      "identifiers": [
+        "SemanticScholar:a3e1e15e169ad378d001f6143eedcc88c4fe1095"
+      ],
+      "semantic_scholar_id": "a3e1e15e169ad378d001f6143eedcc88c4fe1095",
+      "canonical_id": "arXiv:2602.16054",
+      "arxiv_id": "2602.16054",
+      "doi": "10.48550/arXiv.2602.16054",
+      "authors": [
+        "Bradley McDanel",
+        "Steven Li",
+        "Harshit Khaitan"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 238,
+        "matched_prestigious_venue": null
+      },
+      "reason": "CLAA aggregates token-importance scores across layers for LLM prefill and reports up to 39% lower TTFT.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Mitigating the impact of activation smoothing on weights: A channel permutation and smoothing-based LLMs quantization method",
+      "source_url": "https://doi.org/10.1007/s44443-026-00541-9",
+      "year": 2026,
+      "published": "2026-03-05",
+      "venue": "Journal of King Saud University: Computer and Information Sciences",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Quantization has emerged as an effective technique to reduce the memory requirement of Large Language Models (LLMs). However, we observed that activation smoothing destroys the original flat distribution of weights and existing methods struggle to smooth activation outliers with extremely large magnitudes, resulting in increased quantization errors. To overcome these challenges, we propose CHAMP-Q, a novel quantization method that relies on two strategies: (1) To mitigate the impact of activation smoothing on weights, a multi-dimensional feature-aware channel permutation (MFCP) strategy is designed to alleviate intra-group weight variances by permuting similar channels to adjacent positions in the weight matrix, thereby reducing the group-wise weight quantization error. (2) To reduce the quantization errors caused by activation outliers, a hybrid numerical smoothing (HNS) strategy is proposed to suppress activation outliers by selectively applying different smoothing strategies based on their magnitudes. Furthermore, we implement a W4A8 quantization framework. The experimental results demonstrate that CHAMP-Q enables 4-bit weight and 8-bit activation quantization with less accuracy degradation compared to existing outlier smoothing methods, and achieves up to 1.74×\\documentclass[12pt]{minimal} \\usepackage{amsmath} \\usepackage{wasysym} \\usepackage{amsfonts} \\usepackage{amssymb} \\usepackage{amsbsy} \\usepackage{mathrsfs} \\usepackage{upgreek} \\setlength{\\oddsidemargin}{-69pt} \\begin{document}$$\\times $$\\end{document} memory savings and 1.45×\\documentclass[12pt]{minimal} \\usepackage{amsmath} \\usepackage{wasysym} \\usepackage{amsfonts} \\usepackage{amssymb} \\usepackage{amsbsy} \\usepackage{mathrsfs} \\usepackage{upgreek} \\setlength{\\oddsidemargin}{-69pt} \\begin{document}$$\\times $$\\end{document} inference speedup compared to the original model.",
+      "identifiers": [
+        "SemanticScholar:a4a5e81acdb258db085ea58846c35adb3d8d1d0f"
+      ],
+      "semantic_scholar_id": "a4a5e81acdb258db085ea58846c35adb3d8d1d0f",
+      "doi": "10.1007/s44443-026-00541-9",
+      "canonical_id": "DOI:10.1007/s44443-026-00541-9",
+      "authors": [
+        "Yan Guan",
+        "Yunhe Cui",
+        "Langtao Zhao",
+        "Guowei Shen",
+        "Yi Chen",
+        "Chun Guo"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 222,
+        "matched_prestigious_venue": null
+      },
+      "reason": "The Springer abstract reports W4A8 LLM quantization, 1.74x memory savings, and 1.45x inference speedup; this is directly about deployment efficiency.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "TIDE: Token-Informed Depth Execution for Per-Token Early Exit in LLM Inference",
+      "source_url": "https://arxiv.org/abs/2603.21365",
+      "year": 2026,
+      "published": "2026-03-22",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models run every token through every layer, regardless of difficulty. We present TIDE, a post-training system that attaches tiny learned routers at periodic checkpoint layers and, at inference time, selects the earliest layer whose hidden state has converged for each token. TIDE requires no model retraining, works with any HuggingFace causal LM, auto-detects GPU architecture, and supports float32, float16, and bfloat16 through fused CUDA kernels. On an NVIDIA A100 with DeepSeek R1 Distill 8B, TIDE achieves 100% prefill exit rate (5% of tokens exit at layer 11, the remaining at layer 31), reduces prefill latency by 7.2%, and increases single-batch throughput by 6.6%. During autoregressive decoding, 98-99% of tokens exit early while the model correctly solves a multi-step math problem with 95 unique output tokens. On Qwen3 8B (36 layers), throughput improves by 8.1% at batch size 8. Calibration on 2,000 WikiText samples takes under 3 minutes and produces a ~4 MB router checkpoint. The system comprises 1,308 lines of Python and 1,081 lines of CUDA/C++ with 74 passing tests. Code: https://github.com/RightNow-AI/TIDE",
+      "identifiers": [
+        "SemanticScholar:bd038c420afdf0d3cab0cc55598404bad716b897"
+      ],
+      "semantic_scholar_id": "bd038c420afdf0d3cab0cc55598404bad716b897",
+      "canonical_id": "arXiv:2603.21365",
+      "arxiv_id": "2603.21365",
+      "doi": "10.48550/arXiv.2603.21365",
+      "authors": [
+        "Jaber Jaber",
+        "Osama Jaber"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 205,
+        "matched_prestigious_venue": null
+      },
+      "reason": "TIDE performs token-wise early exit during LLM inference; the abstract reports lower prefill latency and higher throughput.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-223bee31f73a",
+    "round": "libimp-223bee31f73a076d-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 18,
+    "round_submission_count": 4,
+    "round_submission_index": 3,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-223bee31f73a076d-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-223bee31f73a076d-pre01.json",
+    "receipt": "sha256:79866c10fb596006510e5c305215d4486441568bcc0f5d1b159c7f0c37230e5c"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-223bee31f73a",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

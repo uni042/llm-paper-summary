@@ -1,0 +1,226 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "RaBiT: Residual-Aware Binarization Training for Accurate and Efficient LLMs",
+      "source_url": "https://arxiv.org/abs/2602.05367",
+      "year": 2026,
+      "published": "2026-02-05",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Efficient deployment of large language models (LLMs) requires extreme quantization, forcing a critical trade-off between low-bit efficiency and performance. Residual binarization enables hardware-friendly, matmul-free inference by stacking binary ($\\pm$1) layers, but is plagued by pathological feature co-adaptation. We identify a key failure mode, which we term inter-path adaptation: during quantization-aware training (QAT), parallel residual binary paths learn redundant features, degrading the error-compensation structure and limiting the expressive capacity of the model. While prior work relies on heuristic workarounds (e.g., path freezing) that constrain the solution space, we propose RaBiT, a novel quantization framework that resolves co-adaptation by algorithmically enforcing a residual hierarchy. Its core mechanism sequentially derives each binary path from a single shared full-precision weight, which ensures that every path corrects the error of the preceding one. This process is stabilized by a robust initialization that prioritizes functional preservation over mere weight approximation. RaBiT redefines the 2-bit accuracy-efficiency frontier: it achieves state-of-the-art performance, rivals even hardware-intensive Vector Quantization (VQ) methods, and delivers a $4.49\\times$ inference speed-up over full-precision models on an RTX 4090. Code is available at https://github.com/SamsungLabs/RaBiT.",
+      "identifiers": [
+        "SemanticScholar:2cb69d01a3d87e036be86ead4d06e7f3727de919"
+      ],
+      "semantic_scholar_id": "2cb69d01a3d87e036be86ead4d06e7f3727de919",
+      "canonical_id": "arXiv:2602.05367",
+      "arxiv_id": "2602.05367",
+      "doi": "10.48550/arXiv.2602.05367",
+      "authors": [
+        "Youngcheon You",
+        "Banseok Lee",
+        "Minseop Choi",
+        "Seonyoung Kim",
+        "Hyochan Chong",
+        "Changdong Kim",
+        "Youngmin Kim",
+        "DongKyu Kim"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 250,
+        "matched_prestigious_venue": null
+      },
+      "reason": "RaBiT addresses residual co-adaptation in binary LLM inference and develops a hardware-friendly low-bit model representation.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "SDFP: Speculative Decoding with FIT-Pruned Models for Training-Free and Plug-and-Play LLM Acceleration",
+      "source_url": "https://arxiv.org/abs/2602.05499",
+      "year": 2026,
+      "published": "2026-02-05",
+      "venue": "International Conference on Intelligent Computing",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLMs) underpin interactive multimedia applications such as captioning, retrieval, recommendation, and creative content generation, yet their autoregressive decoding incurs substantial latency. Speculative decoding reduces latency using a lightweight draft model, but deployment is often limited by the cost and complexity of acquiring, tuning, and maintaining an effective draft model. Recent approaches usually require auxiliary training or specialization, and even training-free methods incur costly search or optimization. We propose SDFP, a fully training-free and plug-and-play framework that builds the draft model via Fisher Information Trace (FIT)-based layer pruning of a given LLM. Using layer sensitivity as a proxy for output perturbation, SDFP removes low-impact layers to obtain a compact draft while preserving compatibility with the original model for standard speculative verification. SDFP needs no additional training, hyperparameter tuning, or separately maintained drafts, enabling rapid, deployment-friendly draft construction. Across benchmarks, SDFP delivers 1.32x-1.5x decoding speedup without altering the target model's output distribution, supporting low-latency multimedia applications.",
+      "identifiers": [
+        "SemanticScholar:02b2c2b7152ebe8cbd0a46127df56deac974475c"
+      ],
+      "semantic_scholar_id": "02b2c2b7152ebe8cbd0a46127df56deac974475c",
+      "canonical_id": "arXiv:2602.05499",
+      "arxiv_id": "2602.05499",
+      "doi": "10.48550/arXiv.2602.05499",
+      "authors": [
+        "Hanyu Wei",
+        "Zunhai Su",
+        "Peng Lu",
+        "Chao Li",
+        "Spandan Tiwari",
+        "Ashish Sirasao",
+        "Yu-Han Dong"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 250,
+        "matched_prestigious_venue": null
+      },
+      "reason": "SDFP constructs speculative-decoding draft models by pruning layers, directly reducing draft inference latency and deployment overhead.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "FlattenGPT: Depth Compression for Transformer with Layer Flattening",
+      "source_url": "https://arxiv.org/abs/2602.08858",
+      "year": 2026,
+      "published": "2026-02-09",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Recent works have indicated redundancy across transformer blocks, prompting the research of depth compression to prune less crucial blocks. However, current ways of entire-block pruning suffer from risks of discarding meaningful cues learned in those blocks, leading to substantial performance degradation. As another line of model compression, channel pruning can better preserve performance, while it cannot reduce model depth and is challenged by inconsistent pruning ratios for individual layers. To pursue better model compression and acceleration, this paper proposes \\textbf{FlattenGPT}, a novel way to detect and reduce depth-wise redundancies. By flatting two adjacent blocks into one, it compresses the network depth, meanwhile enables more effective parameter redundancy detection and removal. FlattenGPT allows to preserve the knowledge learned in all blocks, and remains consistent with the original transformer architecture. Extensive experiments demonstrate that FlattenGPT enhances model efficiency with a decent trade-off to performance. It outperforms existing pruning methods in both zero-shot accuracies and WikiText-2 perplexity across various model types and parameter sizes. On LLaMA-2/3 and Qwen-1.5 models, FlattenGPT retains 90-96\\% of zero-shot performance with a compression ratio of 20\\%. It also outperforms other pruning methods in accelerating LLM inference, making it promising for enhancing the efficiency of transformers.",
+      "identifiers": [
+        "SemanticScholar:1b4cac85ad83643ecfbbca57edc6f7e20806783a"
+      ],
+      "semantic_scholar_id": "1b4cac85ad83643ecfbbca57edc6f7e20806783a",
+      "canonical_id": "arXiv:2602.08858",
+      "arxiv_id": "2602.08858",
+      "doi": "10.48550/arXiv.2602.08858",
+      "authors": [
+        "Rui-Han Xu",
+        "Qing-Pei Guo",
+        "Yao Zhu",
+        "Xiangyang Ji",
+        "Ming Yang",
+        "Shiliang Zhang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 246,
+        "matched_prestigious_venue": null
+      },
+      "reason": "FlattenGPT reduces transformer depth by merging adjacent blocks and targets model compression and acceleration; this is an inference-model efficiency technique.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "LittleBit-2: Maximizing the Spectral Energy Gain in Sub-1-Bit LLMs via Latent Geometry Alignment",
+      "source_url": "https://arxiv.org/abs/2603.00042",
+      "year": 2026,
+      "published": "2026-02-09",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "We identify the Spectral Energy Gain in extreme model compression, where low-rank binary approximations outperform tiny-rank floating-point baselines for heavy-tailed spectra. However, prior attempts fail to realize this potential, trailing state-of-the-art 1-bit methods. We attribute this degradation to Latent Geometry Misalignment: standard singular vectors exhibit high coherence (spiky distribution), the worst-case geometry for binary quantization. To realize this gain, we propose LittleBit-2, a framework employing Internal Latent Rotation and Joint Iterative Quantization (Joint-ITQ). This approach acts as a geometric preconditioner, aligning coherent latent distributions with the binary hypercube with zero inference overhead. Empirically, LittleBit-2 establishes a new state-of-the-art in the sub-1-bit regime (1$\\sim$0.1 bpp) on Llama-2 and Llama-3, matching the fidelity of leading 1-bit baselines.",
+      "identifiers": [
+        "SemanticScholar:5326c2f83b154258146ba0f421b2c271c4d3b25d"
+      ],
+      "semantic_scholar_id": "5326c2f83b154258146ba0f421b2c271c4d3b25d",
+      "canonical_id": "arXiv:2603.00042",
+      "arxiv_id": "2603.00042",
+      "authors": [
+        "Banseok Lee",
+        "Youngmin Kim"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 246,
+        "matched_prestigious_venue": null
+      },
+      "reason": "LittleBit-2 is a sub-1-bit LLM quantization method; the abstract explicitly reports no inference overhead while targeting extreme model compression.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "LLM-CoOpt: A Co-Design and Optimization Framework for Efficient LLM Inference on Heterogeneous Platforms",
+      "source_url": "https://arxiv.org/abs/2602.09323",
+      "year": 2026,
+      "published": "2026-02-10",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Major challenges in LLMs inference remain frequent memory bandwidth bottlenecks, computational redundancy, and inefficiencies in long-sequence processing. To address these issues, we propose LLM-CoOpt, a comprehensive algorithmhardware co-design framework aimed at improving both throughput and latency in LLM inference. LLM-CoOpt integrates three key strategies: (1) Key-Value Cache Optimization, termed Opt-KV, which improves memory access efficiency by optimizing both KV cache write and read paths, and introduces FP8 quantization to reduce memory footprint while maintaining accuracy; (2) Grouped-Query Attention for Computational Efficiency, termed Opt-GQA, which reduces the overall computational complexity by restructuring multi-head self-attention into grouped-query attention with shared key-value projections, enabling higher throughput and lower resource consumption; (3) Paged Attention for Long- Sequence Processing, termed Opt-Pa, which adopts a two-step strategy to first segment long sequences into manageable chunks and then apply lazy memory mapping and computation, significantly reducing memory pressure and improving performance on long-context inputs.Experiments on the LLaMa-13BGPTQ model demonstrate that LLM-CoOpt increases inference throughput by up to 13.43%, reduces latency by up to 16.79%, and maintains model accuracy. These results confirm that LLM-CoOpt provides a practical, high-performance optimization path for real-world inference of large-scale language models.",
+      "identifiers": [
+        "SemanticScholar:4d953e45da1b2b0f1e66147eeaec0edaef18b489"
+      ],
+      "semantic_scholar_id": "4d953e45da1b2b0f1e66147eeaec0edaef18b489",
+      "canonical_id": "arXiv:2602.09323",
+      "arxiv_id": "2602.09323",
+      "doi": "10.48550/arXiv.2602.09323",
+      "authors": [
+        "Jie Kong",
+        "Wei Wang",
+        "Jiehan Zhou",
+        "Chen Yu"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 245,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Opt-KV, Opt-GQA, and paged long-sequence processing target KV access, attention work, and memory pressure; the abstract reports throughput and latency gains.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-223bee31f73a",
+    "round": "libimp-223bee31f73a076d-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 18,
+    "round_submission_count": 4,
+    "round_submission_index": 2,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-223bee31f73a076d-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-223bee31f73a076d-pre01.json",
+    "receipt": "sha256:79866c10fb596006510e5c305215d4486441568bcc0f5d1b159c7f0c37230e5c"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-223bee31f73a",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
