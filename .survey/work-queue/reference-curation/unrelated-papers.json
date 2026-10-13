@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-13T16:56:18+00:00",
-  "record_count": 11800,
+  "updated_at": "2026-10-13T17:44:44+00:00",
+  "record_count": 11801,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -169100,6 +169100,18 @@
         "papers/inference/99-other-inference-systems/2025-2512.24601-recursive-language-models.md"
       ],
       "title": "\"AI Psychosis\" in Context: How Conversation History Shapes LLM Responses to Delusional Beliefs"
+    },
+    "arXiv:2606.30367": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.30367",
+      "identity_tokens": [
+        "arXiv:2606.30367"
+      ],
+      "reason": "タイトル段階で視覚と言語を用いるナビゲーションの世界・行動モデリングを主題とする論文と判別。LLM推論基盤、モデルのメモリ・演算・通信・量子化・並列実行・学習基盤の効率化を直接扱うと判断できないため、一次本文へ進む前に対象外とした。抽象と本文は未読であり、詳細な方法や数値は判断根拠に用いていない。",
+      "first_checked_at": "2026-10-13T17:44:44+00:00",
+      "last_checked_at": "2026-10-13T17:44:44+00:00",
+      "linked_from": [],
+      "title": "FutureNav: Unified World-Action Modeling for Vision-and-Language Navigation"
     }
   }
 }
