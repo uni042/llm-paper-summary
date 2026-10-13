@@ -1,0 +1,27 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261013-1930-scheduled-chat-30/r01/research-relevance-014",
+  "reference_main_sha": "df1e54299253121b022271294c687c1ffc4caa81",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2303.03982",
+      "identity_tokens": [
+        "id:arXiv:2303.03982",
+        "url:https://arxiv.org/abs/2303.03982"
+      ],
+      "title": "Structured State Space Models for In-Context Reinforcement Learning",
+      "reason": "一次要旨では、構造化状態空間モデルS4の隠れ状態を並列に初期化・リセットできるよう変更し、部分観測の強化学習環境で再帰型モデルより5倍超速い推論を報告する。評価対象は連続制御と文脈内強化学習であり、テキストLLMの生成・配信・KVキャッシュ・MoE推論を対象にしたシステム最適化ではないため対象外とする。",
+      "source_url": "https://arxiv.org/abs/2303.03982",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T19:30:34+09:00",
+      "last_checked_at": "2026-10-13T19:30:34+09:00",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance",
+      "worklist_rank": 14
+    }
+  ]
+}
