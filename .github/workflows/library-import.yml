@@ -277,10 +277,21 @@ jobs:
               fi
               echo "Post-re-audit STATUS push race on attempt ${attempt}; regenerating."
             done
-            [ "$status_after_reaudit_ok" -eq 1 ] || {
-              echo 'STATUS refresh after under-16KB queue publication failed.' >&2
-              exit 1
-            }
+            if [ "$status_after_reaudit_ok" -ne 1 ]; then
+              echo 'STATUS refresh after under-16KB queue publication did not publish after five attempts.' >&2
+              active_status_runs="$(gh run list \
+                --repo "${GITHUB_REPOSITORY}" \
+                --workflow status-dashboard.yml \
+                --limit 20 \
+                --json status \
+                --jq '[.[] | select(.status == "queued" or .status == "in_progress" or .status == "pending")] | length')"
+              if [ "${active_status_runs:-0}" -eq 0 ]; then
+                echo 'Dispatching the dedicated status dashboard as a non-blocking fallback.'
+                gh workflow run status-dashboard.yml --repo "${GITHUB_REPOSITORY}" --ref main
+              else
+                echo "A status dashboard run is already active (${active_status_runs}); import results remain durable."
+              fi
+            fi
           fi
 
           if [ "${relevance_rc:-0}" -ne 0 ]; then
