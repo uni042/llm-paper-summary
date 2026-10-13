@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-13T09:37:55+00:00",
+  "generated_at": "2026-10-13T09:53:27+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -871,32 +871,31 @@
       "worker_run_key": "20261013-1630-scheduled-chat-30/r01"
     },
     {
-      "canonical_id": "arXiv:2603.12996",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-13T08:53:36+00:00",
-      "return_count": 2,
+      "canonical_id": "arXiv:2307.07982",
+      "title": "A Survey of Techniques for Optimizing Transformer Inference",
+      "source_url": "https://arxiv.org/pdf/2307.07982",
+      "returned_at": "2026-10-13T09:50:48+00:00",
+      "return_count": 1,
       "assigned_worker": "scheduled-chat-00",
       "reason": "blocked_quality",
       "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700"
+        "説明不足トリガー: 評価説明量 479 < 500"
       ],
       "quality_metrics": {
         "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 7369,
-        "body_paragraphs": 36,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 821,
-        "limitation_chars": 0,
+        "body_chars": 7691,
+        "body_paragraphs": 39,
+        "method_chars": 3914,
+        "method_paragraphs": 18,
+        "evaluation_chars": 479,
+        "limitation_chars": 835,
         "insufficiency_flags": [
-          "手法説明量 0 < 700",
-          "限界説明量 0 < 推奨 120"
+          "評価説明量 479 < 500"
         ]
       },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-cc234d9e091e--libfile_fcbeba27bf64819188a63a9876094912--2026-2603.12996-dapd-dependency-aware-parallel-decoding-research-20261013-1730-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-cc234d9e091e--libfile_fcbeba27bf64819188a63a9876094912--2026-2603.12996-dapd-dependency-aware-parallel-decoding-research-20261013-1730-scheduled-.json",
-      "worker_run_key": "20261013-1730-scheduled-chat-30/r01"
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_e0306af82aec8191ba417d86fbc9f889--2023-2307.07982-survey-optimizing-transformer-inference-research-20261013-1745-scheduled-chat-45-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_e0306af82aec8191ba417d86fbc9f889--2023-2307.07982-survey-optimizing-transformer-inference-research-20261013-1745-scheduled-chat-45-r01.json",
+      "worker_run_key": "20261013-1745-scheduled-chat-45/r01"
     }
   ]
 }
