@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-13T09:53:27+00:00",
+  "generated_at": "2026-10-13T09:58:33+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -874,8 +874,8 @@
       "canonical_id": "arXiv:2307.07982",
       "title": "A Survey of Techniques for Optimizing Transformer Inference",
       "source_url": "https://arxiv.org/pdf/2307.07982",
-      "returned_at": "2026-10-13T09:50:48+00:00",
-      "return_count": 1,
+      "returned_at": "2026-10-13T09:58:33+00:00",
+      "return_count": 2,
       "assigned_worker": "scheduled-chat-00",
       "reason": "blocked_quality",
       "failures": [
@@ -893,8 +893,8 @@
           "評価説明量 479 < 500"
         ]
       },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_e0306af82aec8191ba417d86fbc9f889--2023-2307.07982-survey-optimizing-transformer-inference-research-20261013-1745-scheduled-chat-45-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_e0306af82aec8191ba417d86fbc9f889--2023-2307.07982-survey-optimizing-transformer-inference-research-20261013-1745-scheduled-chat-45-r01.json",
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-5ffacc6cef11--libfile_e0306af82aec8191ba417d86fbc9f889--2023-2307.07982-survey-optimizing-transformer-inference-research-20261013-1745-scheduled-chat-45-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-5ffacc6cef11--libfile_e0306af82aec8191ba417d86fbc9f889--2023-2307.07982-survey-optimizing-transformer-inference-research-20261013-1745-scheduled-.json",
       "worker_run_key": "20261013-1745-scheduled-chat-45/r01"
     }
   ]

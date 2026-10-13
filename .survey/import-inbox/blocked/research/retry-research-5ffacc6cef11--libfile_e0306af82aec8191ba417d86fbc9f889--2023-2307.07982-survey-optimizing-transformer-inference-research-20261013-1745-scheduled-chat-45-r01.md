@@ -31,6 +31,8 @@ last_checked: '2026-10-13'
 worker_completed_at: '2026-10-13T17:49:26+09:00'
 worker_run_key: '20261013-1745-scheduled-chat-45/r01'
 reference_main_sha: '3b806be4ccdf3435008a7a5c94d2ecc1bacff86e'
+last_audited: null
+audit_version: 0
 ---
 
 # A Survey of Techniques for Optimizing Transformer Inference
