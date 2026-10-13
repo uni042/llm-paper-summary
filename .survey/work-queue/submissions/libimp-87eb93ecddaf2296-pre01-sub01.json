@@ -1,0 +1,227 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Rotation-Aligned Key Channel Pruning for Efficient Vision-Language Model Inference",
+      "source_url": "https://arxiv.org/abs/2605.19218",
+      "year": 2026,
+      "published": "2026-05-19",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Vision-Language Models suffer severe KV cache pressure at inference, as a single image often encodes into thousands of tokens. Most existing methods exploit token sparsity through token pruning, but permanently discarding visual content causes substantial degradation on fine-grained perception tasks. This motivates a complementary axis, feature sparsity: under a fixed KV cache budget, compressing the channel dimension preserves more visual tokens at the same memory cost. Prior Key channel pruning methods, however, face a structural trade-off: token-wise channel pruning is expressive but unstructured and slow, while head-wise approach is hardware-friendly but less robust. We resolve this with RotateK, a rotation-based structured Key channel pruning framework. RotateK applies an online PCA-based rotation that aligns token-dependent channel importance into a shared low-dimensional subspace, enabling accurate pruning under lightweight head-wise masks; a fused Triton attention kernel operates directly on sparse-channel Keys for efficient decoding. Experiments on two representative VLM backbones show that RotateK consistently outperforms prior Key channel pruning in both accuracy and decoding latency, while joint token-channel pruning improves over token-only baselines at matched KV cache budgets.",
+      "identifiers": [
+        "SemanticScholar:493d28c7ddebc41e1b3295ac9f8d06948695bcb8"
+      ],
+      "semantic_scholar_id": "493d28c7ddebc41e1b3295ac9f8d06948695bcb8",
+      "canonical_id": "arXiv:2605.19218",
+      "arxiv_id": "2605.19218",
+      "doi": "10.48550/arXiv.2605.19218",
+      "authors": [
+        "Beomseok Kang",
+        "Dongwon Jo",
+        "Jiwon Song",
+        "Donghwee Son",
+        "Jae-Joon kim"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 147,
+        "matched_prestigious_venue": null
+      },
+      "reason": "RotateK reduces VLM KV-cache pressure using structured key-channel pruning and a fused attention kernel to improve decoding latency.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "GEM: GPU-Variability-Aware Expert to GPU Mapping for MoE Systems",
+      "source_url": "https://arxiv.org/abs/2605.19945",
+      "year": 2026,
+      "published": "2026-05-19",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Mixture-of-Expert (MoE) models enable efficient inference by employing smaller experts and activating only a subset of them per token. MoE serving engines distribute experts across multiple GPUs and route tokens to appropriate GPUs at inference time based on experts activated. They process tokens in lock-step fashion, where tokens within a batch must finish processing before proceeding to the next layer. This synchronization barrier acts as a critical bottleneck because the performance of MoE models is limited by the straggler GPU that finishes last. Stragglers emerge when too many heavily used experts are placed on the same GPU or the slowest GPU. While prior works place experts that balance token loads across GPUs, they all overlook GPU variability and often place highly used experts on the slowest GPUs. We propose GEM, GPU-variability-aware Expert Mapping, a framework for GPU variability-aware expert to GPU mapping for MoE models. GEM exploits two insights. First, we must place experts such that each GPU receives non-uniform token loads based on their variability and they all finish processing a layer at about the same time. Our studies show that there are two types of experts: consistent that are used most of the time and temporal that are often used together for the remaining time. Our second insight is that we must place simultaneously used consistent and temporal experts on different GPUs and avoid placing them on slower GPUs to reduce slowdown. GEM gathers the variability profile of GPUs for each model and task and uses the token load distributions per task to map experts to GPUs. Our experiments show that GEM improves end-to-end latency by 7.9% on average and by up to 16.5% compared to the baseline.",
+      "identifiers": [
+        "SemanticScholar:d97e4f5a1838a0c2682f7955747893eddbf7f092"
+      ],
+      "semantic_scholar_id": "d97e4f5a1838a0c2682f7955747893eddbf7f092",
+      "canonical_id": "arXiv:2605.19945",
+      "arxiv_id": "2605.19945",
+      "doi": "10.48550/arXiv.2605.19945",
+      "authors": [
+        "Sourish Wawdhane",
+        "Avinash Kumar",
+        "Poulami Das"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 147,
+        "matched_prestigious_venue": null
+      },
+      "reason": "GEM maps MoE experts across heterogeneous GPUs based on expert/token and GPU variability to reduce straggler-driven inference latency.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "DynaFlow: Transparent and Flexible Intra-Device Parallelism via Programmable Operator Scheduling",
+      "source_url": "https://arxiv.org/abs/2605.21603",
+      "year": 2026,
+      "published": "2026-05-20",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Intra-device parallelism addresses resource under-utilization in ML inference and training by overlapping the execution of operators with different resource usage. However, its wide adoption is hindered by a fundamental conflict with the static, sequential programming model of existing frameworks. Integrating these strategies requires invasive, model-specific code overhauls, representing an intractable engineering cost. This is further amplified by the high sensitivity of strategies to execution contexts (e.g., workload, model architecture, hardware), forcing developers to implement and maintain multiple specialized solutions. To address this, we propose DynaFlow, a framework that enables the transparent and flexible integration of intra-device parallelism by decoupling the logical model definition from the physical execution schedule. DynaFlow introduces a flexible frontend with annotations for graph partitioning and a programmable interface for defining custom intra-device parallelism strategies. Its efficient backend manages complex control/data-flow asynchronously, uses custom memory management to eliminate copy overheads, and preserves compatibility with optimizations like CUDA Graphs and TorchInductor. We demonstrate that DynaFlow can integrate representative parallelism strategies into 6 state-of-the-art ML systems with minimal code changes, achieving up to a 1.29x throughput improvement. DynaFlow is publicly available at https://github.com/uw-syfi/DynaFlow.",
+      "identifiers": [
+        "SemanticScholar:8734fbcd70c8494e3fa12edb6f72051094f239d6"
+      ],
+      "semantic_scholar_id": "8734fbcd70c8494e3fa12edb6f72051094f239d6",
+      "canonical_id": "arXiv:2605.21603",
+      "arxiv_id": "2605.21603",
+      "doi": "10.48550/arXiv.2605.21603",
+      "authors": [
+        "Yinxu Pan",
+        "Yi-Le Gu",
+        "Jinbin Luo",
+        "Yi-Bo Wu",
+        "Zi-Ren Wang",
+        "Hong-Tao Zhang",
+        "Zi-Yi Xu",
+        "Shengkai Lin",
+        "Baris Kasikci",
+        "Stephanie Wang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 146,
+        "matched_prestigious_venue": null
+      },
+      "reason": "DynaFlow exposes programmable operator scheduling and asynchronous runtime support to integrate intra-device parallelism, reporting throughput gains across ML systems.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "EntmaxKV: Support-Aware Decoding for Entmax Attention",
+      "source_url": "https://arxiv.org/abs/2605.21649",
+      "year": 2026,
+      "published": "2026-05-20",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Long-context decoding is increasingly limited by KV-cache memory traffic as each generated token attends over a cache whose size grows linearly with context length. Existing sparse decoding methods reduce this cost by selecting subsets of tokens or pages, but are designed for softmax attention, whose dense tails make any truncation discard nonzero probability mass. In contrast, $\\alpha$-entmax produces exact zeros, turning sparse decoding from dense-tail approximation into support recovery: if the selected candidates contain the entmax support, sparse decoding remains exact. While recent entmax kernels enable efficient training, they do not address the autoregressive decoding bottleneck, where dense inference still streams the full KV cache before sparsity is known. In this work, we introduce EntmaxKV, an entmax-native sparse decoding framework that exploits sparsity before KV pages are loaded. EntmaxKV combines query-aware page scoring, support-aware candidate selection, and sparse entmax attention. We analyze truncation error through the dropped probability mass $\\delta$, showing that output error is controlled by $\\delta$ and vanishes when the entmax support is recovered. We further introduce a Gaussian-aware entmax selector that estimates the entmax threshold from lightweight page statistics, adapting the selected budget to the score distribution. Empirically, EntmaxKV drops less probability mass, retains more support tokens, and achieves lower output error than softmax-based sparse decoding at matched KV budgets. On long-context and language modeling benchmarks, it closely matches full-cache entmax while using a small fraction of the KV cache, achieving up to $2.88\\times$ (softmax) and $5.5\\times$ (entmax) speedup over full attention baselines as well as over $2\\times$ speedup over softmax and entmax top-k at 1M context length.",
+      "identifiers": [
+        "SemanticScholar:0bfa62f714808885d27cbc4c6d65796df196813d"
+      ],
+      "semantic_scholar_id": "0bfa62f714808885d27cbc4c6d65796df196813d",
+      "canonical_id": "arXiv:2605.21649",
+      "arxiv_id": "2605.21649",
+      "doi": "10.48550/arXiv.2605.21649",
+      "authors": [
+        "Gonçalo Duarte",
+        "Miguel Couceiro",
+        "Marcos V. Treviso"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 146,
+        "matched_prestigious_venue": null
+      },
+      "reason": "EntmaxKV uses support-aware sparse decoding to reduce KV traffic and accelerate long-context autoregressive inference.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Meta-Soft: Leveraging Composable Meta-Tokens for Context-Preserving KV Cache Compression",
+      "source_url": "https://arxiv.org/abs/2605.22337",
+      "year": 2026,
+      "published": "2026-05-21",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The KV cache used in large language models has linearly growing time complexity, so LLMs face memory blow-up and reduced decoding efficiency when they process long contexts. Current KV Cache eviction has become an important research direction; however, existing methods based on fixed Soft Tokens (e.g., Judge Q) rely on a static parameter set as the query to evaluate the importance of KV pairs, so they cannot adapt dynamically to different input prompts, and they cannot precisely capture complex and changing task relevance. Also, evicted KV pairs are discarded permanently, so this causes irreversible information loss and context breaks. To address this problem, we propose Meta-Soft, a dynamic compression framework based on probe-driven context integration. Specifically, we build a meta-library with a learnable orthogonal basis matrix $\\mathcal{L}$, and we use a selector network with Gumbel-Softmax to produce differentiable sparse combination weights, so we dynamically synthesize the most targeted $k$ Soft Tokens from the input prompt features. We append these Soft Tokens to the end of the input sequence to probe key information. We also introduce an attention-flow based integration mechanism, which redistributes the semantic information of removed tokens into retained tokens, and this keeps the dropped context information effectively. Experiments on multiple datasets show that our method outperforms existing state-of-the-art eviction methods and provides a new solution for KV Cache compression.",
+      "identifiers": [
+        "SemanticScholar:88a8c6861db10e3dfdfc2dff7d0c94663855aff8"
+      ],
+      "semantic_scholar_id": "88a8c6861db10e3dfdfc2dff7d0c94663855aff8",
+      "canonical_id": "arXiv:2605.22337",
+      "arxiv_id": "2605.22337",
+      "doi": "10.48550/arXiv.2605.22337",
+      "authors": [
+        "Weihao Luo",
+        "Yi Huang",
+        "Song-Chen Ma",
+        "Huanyu Qu",
+        "Jiang Cai",
+        "Ming-Kun Xu"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 145,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Meta-Soft dynamically synthesizes soft tokens and redistributes information from evicted tokens for LLM KV-cache compression.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-87eb93ecddaf",
+    "round": "libimp-87eb93ecddaf2296-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 9,
+    "round_submission_count": 2,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-87eb93ecddaf2296-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-87eb93ecddaf2296-pre01.json",
+    "receipt": "sha256:2caf02f2220c4897b1a0fcdb98fa44a16b96a425140c84baea8d43e5d064fea6"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-87eb93ecddaf",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

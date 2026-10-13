@@ -1,0 +1,181 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Gated Subspace Inference for Transformer Acceleration",
+      "source_url": "https://arxiv.org/abs/2605.03109",
+      "year": 2026,
+      "published": "2026-05-04",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "A method is presented for accelerating inference in transformer language models by exploiting the low effective rank of the token activation manifold at each layer. The method decomposes each activation vector into a subspace component and a residual, computes the linear-layer output on the subspace component via a cached low-rank weight image at reduced memory bandwidth, and applies a per-token gate that determines whether the residual correction is computed or skipped. The gate ensures that the output distribution is preserved to within a controllable tolerance. Validation on three model families (GPT-2 124M, GPT-J 6B, OPT 6.7B) on AMD MI300X demonstrates effective speedups of 3.0x to 10.5x on linear-layer weight reads with perplexity ratios below 1.00 and top-1 token agreement above 98%. The method requires no retraining, no architectural modification, and no approximation of the attention mechanism. At the operating point (k = 256, {\\epsilon} = 0.05) on GPT-J 14 6B, the accelerated model produces character-for-character identical output to the baseline.",
+      "identifiers": [
+        "SemanticScholar:973fffa2c66a7b41721d901de067d7971a43b634"
+      ],
+      "semantic_scholar_id": "973fffa2c66a7b41721d901de067d7971a43b634",
+      "canonical_id": "arXiv:2605.03109",
+      "arxiv_id": "2605.03109",
+      "doi": "10.48550/arXiv.2605.03109",
+      "authors": [
+        "Stephen Thomas"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 162,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Gated Subspace Inference skips selected residual work using a low-rank activation representation and reports transformer inference speedups with controlled output error.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Enabling Performant and Flexible Model-Internal Observability for LLM Inference",
+      "source_url": "https://arxiv.org/abs/2605.11093",
+      "year": 2026,
+      "published": "2026-05-11",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Today's inference-time workloads increasingly depend on timely access to a model's internal states. We present DMI-Lib, a high-speed deep model inspector that treats internal observability as a first-class systems primitive, decoupling it from the inference hot path via an asynchronous observability substrate built from Ring^2, a GPU-CPU memory abstraction for capturing and staging tensors, and a policy-controlled host backend that exports them. DMI-Lib enables the placement of observation points across a rich space of internal signals and diverse inference backends while preserving serving optimizations and adhering to tight GPU memory budgets. Our experiments demonstrate that DMI-Lib incurs only 0.4%--6.8% overhead in offline batch inference and an average of 6% in moderate online serving, reducing latency overhead by 2x-15x compared to existing baselines with similar observability features. DMI-Lib is open-sourced at https://github.com/ProjectDMX/DMI.",
+      "identifiers": [
+        "SemanticScholar:6bb13e882a1d75a735afe6be88862ed0e3d6a150"
+      ],
+      "semantic_scholar_id": "6bb13e882a1d75a735afe6be88862ed0e3d6a150",
+      "canonical_id": "arXiv:2605.11093",
+      "arxiv_id": "2605.11093",
+      "doi": "10.48550/arXiv.2605.11093",
+      "authors": [
+        "Nengneng Yu",
+        "Sixian Xiong",
+        "Yi-Bo Zhao",
+        "Wei Wang",
+        "Zaoxing Liu"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 155,
+        "matched_prestigious_venue": null
+      },
+      "reason": "DMI-Lib captures model-internal tensors while preserving serving optimizations and measures low overhead in batch inference and online serving.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Diagnosing Overhead in Dispatch Operations: Cross-architecture Observatory",
+      "source_url": "https://arxiv.org/abs/2605.20982",
+      "year": 2026,
+      "published": "2026-05-20",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "AlltoAll dispatch is the dominant bottleneck of MoE expert parallelism, and the interconnect community has responded with four families of mitigations: predictive sample placement, adaptive expert relayout, hierarchical collectives, and EP-aware topology. All four rest on two assumptions about the workload: that routing imbalance is correctable by the system layer, and that the mock-token benchmarks evaluating them faithfully represent production routing. We introduce DODOCO to test both, instrumenting five open MoE checkpoints that span today's sequence-mixer designs (MHA, MLA, GQA, Gated DeltaNet and Mamba-2 SSM) under a factorial grid of six data conditions and a matched expert-parallelism scan on H100 clusters. Both assumptions fail. Scaling EP leaves per-expert load concentration essentially unchanged: the straggler is intrinsic to the routing decision the model makes, not to how its experts land on ranks. Mock tokens overestimate routing imbalance by up to a factor of 2.35, and the error is a level offset rather than a trend: it stays flat across a $32\\times$ batch-size sweep. Skewing the synthetic distribution toward realism (Zipf) widens the gap instead of closing it. A third pattern organizes the results: the architectures separate into a data-resilient band (MHA, Mamba-2), whose routing approaches uniform on real text, and a persistently concentrated band (MLA, GDN), with GQA intermediate. These bands, not the EP degree or the mock-data profile, are the right workload input to AlltoAll-aware interconnect and dispatch design.",
+      "identifiers": [
+        "SemanticScholar:bf54d63d502d6c0c58d823823d609b8981021ddc"
+      ],
+      "semantic_scholar_id": "bf54d63d502d6c0c58d823823d609b8981021ddc",
+      "canonical_id": "arXiv:2605.20982",
+      "arxiv_id": "2605.20982",
+      "doi": "10.48550/arXiv.2605.20982",
+      "authors": [
+        "Bole Ma",
+        "Jan Eitzinger",
+        "H. Köstler",
+        "G. Wellein"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 146,
+        "matched_prestigious_venue": null
+      },
+      "reason": "DODOCO measures MoE expert dispatch under realistic routing and shows workload properties that should guide all-to-all interconnect and dispatch design.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Streaming Communication in Multi-Agent Reasoning",
+      "source_url": "https://arxiv.org/abs/2606.05158",
+      "year": 2026,
+      "published": "2026-06-03",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Multi-agent reasoning systems adopt a\"generate-then-transfer\"paradigm that forces end-to-end latency to scale linearly with pipeline depth. We introduce StreamMA, a multi-agent reasoning system that streams each reasoning step to downstream agents as soon as it is generated, pipelining adjacent agents and thus reducing latency. Surprisingly, this pipelining also improves effectiveness: because multi-step reasoning quality is non-uniform and early steps are more reliable than later ones, working with these reliable early steps instead of the full chain prevents error-prone late steps from misleading downstream agents. We formalize both advantages with the first closed-form joint analysis of stream, serial, and single protocols, deriving the effectiveness ordering, speedup upper bound, and cost ratio. Across eight reasoning benchmarks spanning mathematics, science, and code, two frontier LLMs (Claude Opus 4.6 and GPT-5.4), and three topologies (Chain, Tree, Graph), StreamMA outperforms both baselines (avg. +7.3 pp, max +22.4 pp on HMMT 2026; Claude Opus 4.6-high). Beyond these contributions, we discover a\"step-level scaling law\": increasing per-agent steps consistently improves both effectiveness and efficiency, a new scaling dimension orthogonal to and composable with agent-count scaling.",
+      "identifiers": [
+        "SemanticScholar:002269ec7a44c187ebac889f3fbfb224e8a517d1"
+      ],
+      "semantic_scholar_id": "002269ec7a44c187ebac889f3fbfb224e8a517d1",
+      "canonical_id": "arXiv:2606.05158",
+      "arxiv_id": "2606.05158",
+      "doi": "10.48550/arXiv.2606.05158",
+      "authors": [
+        "Zhen Yang",
+        "Xiao-Gang Xu",
+        "Wen Wang",
+        "Cong Chen",
+        "Xander Xu",
+        "Ying-Cong Chen"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 132,
+        "matched_prestigious_venue": null
+      },
+      "reason": "StreamMA pipelines multi-agent reasoning to reduce latency and analyzes communication cost across agent topologies, a systems-level inference improvement.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-1ed8fa64451d",
+    "round": "libimp-1ed8fa64451db004-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 14,
+    "round_submission_count": 3,
+    "round_submission_index": 3,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-1ed8fa64451db004-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-1ed8fa64451db004-pre01.json",
+    "receipt": "sha256:ac7abc775c34f221d727010e6bd09b21acbec1b29bc3d63d02b0727fa6fbcc1b"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-1ed8fa64451d",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

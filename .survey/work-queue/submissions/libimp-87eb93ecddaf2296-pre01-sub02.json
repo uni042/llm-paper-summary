@@ -1,0 +1,176 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Approaching I/O-optimality for Approximate Attention",
+      "source_url": "https://arxiv.org/abs/2605.23751",
+      "year": 2026,
+      "published": "2026-05-22",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "We revisit the I/O complexity of attention in large language models. Given query-key-value matrices $Q,K,V\\in\\mathbb{R}^{n\\times d}$, and a machine with fast memory size $M$, the goal is to compute the\"attention matrix\"$A=\\text{softmax}(Q K ^{\\top}/\\sqrt{d}) V$ with the minimal number of data transfers between fast and slow memory. Existing methods in the literature, most notably FlashAttention and its variants, incur an I/O cost that depends quadratically on $n$, while a trivial lower bound only requires $\\Omega(nd)$ I/O's to read the inputs and write the output. In this work, we present a technique for computing attention where the I/O cost only depends almost-linearly on $n$ in most parameter regimes. This is achieved by developing I/O-efficient algorithms inspired by the recent approximate attention framework of Alman and Song. We also prove corresponding lower bounds in each parameter regime to show that our algorithms are indeed close to I/O-optimal.",
+      "identifiers": [
+        "SemanticScholar:ef8c9b98f627033176709cef274a0934a9bfa550"
+      ],
+      "semantic_scholar_id": "ef8c9b98f627033176709cef274a0934a9bfa550",
+      "canonical_id": "arXiv:2605.23751",
+      "arxiv_id": "2605.23751",
+      "doi": "10.48550/arXiv.2605.23751",
+      "authors": [
+        "P. Papp",
+        "Aleksandros Sobczyk",
+        "Anastasios Zouzias"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 144,
+        "matched_prestigious_venue": null
+      },
+      "reason": "This paper develops I/O-efficient approximate attention algorithms and lower bounds for LLM computation, directly addressing data movement and attention cost.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Polynomial Context-Truncation Sensitivity in Autoregressive Language Models: Sequential Wyner-Ziv Bounds for KV Cache Compression",
+      "source_url": "https://arxiv.org/abs/2605.25085",
+      "year": 2026,
+      "published": "2026-05-24",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "We study the rate-distortion limits of online KV cache compression in autoregressive language models, formulating it as sequential Wyner-Ziv source coding on the filtration induced by the model, with the next-step query as decoder side information. Empirically, across four models spanning two families and $0.5$-$3$B parameters, we find that the next-token distribution's sensitivity to context truncation decays \\emph{polynomially} rather than \\emph{geometrically}: a power law improves on an exponential fit by an order of magnitude in extrapolation, the fitted exponent is recovered independently from a sink-plus-recent KL measurement, and the decay is verified to be free of positional-encoding artifacts by a position-preserving ablation. Under a corresponding \\emph{polynomial truncation-sensitivity} assumption, our main result characterizes the per-token memory requirement of \\emph{suffix-only} cache policies: a sliding-window scheme attains distortion $\\varepsilon$ with window $w = O(\\varepsilon^{-1/\\alpha})$, and -- under an additional two-sided Bayes-risk condition -- a converse shows $w = \\Omega(\\varepsilon^{-1/\\alpha})$ is necessary within this policy class, so the scaling is $\\Theta(\\varepsilon^{-1/\\alpha})$ for suffix-only policies. Whether recurrent or propagating cache summaries can beat this scaling is left open. An explicit block-Markov scheme achieves the upper bound; its rate-of-convergence exponent matches the converse under additional forward-decay and regularity hypotheses (not implied by truncation sensitivity alone), and differs by a factor of two otherwise. Empirically, the polynomial law predicts the degradation curves of concrete cache policies: recency-based eviction (sliding, sink-plus-recent) suppresses distortion by roughly two orders of magnitude over random retention at equal budget, with a power-law decay in the budget.",
+      "identifiers": [
+        "SemanticScholar:72528764d652e3119a95989ea8b45c654db31ae1"
+      ],
+      "semantic_scholar_id": "72528764d652e3119a95989ea8b45c654db31ae1",
+      "canonical_id": "arXiv:2605.25085",
+      "arxiv_id": "2605.25085",
+      "doi": "10.48550/arXiv.2605.25085",
+      "authors": [
+        "M. Kim"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 142,
+        "matched_prestigious_venue": null
+      },
+      "reason": "The paper characterizes context-truncation sensitivity and memory bounds for online KV-cache compression in autoregressive language models.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "SonicSampler: Unified Tile-Aware Kernels for LLM Sampling and Speculative Verification",
+      "source_url": "https://arxiv.org/abs/2607.20475",
+      "year": 2026,
+      "published": "2026-05-24",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Sampling in LLM inference comprises a combinatorial set of logit processing, token selection, and verification operations for speculative decoding. However, existing implementations either accelerate only subsets of this pipeline, rely on multiple kernel launches, or assume homogeneous sampling behavior across a batch, limiting support for dynamic serving workloads and preventing efficient CUDA Graph execution. We present $\\textbf{SonicSampler}$, a unified suite of tile-aware Triton kernels that vertically fuses the complete sampling pipeline into a fixed, workload-aware execution model. Our kernels support dynamic per-request sampling behaviors, including grammar-constrained decoding, repetition, frequency and presence penalties, logit bias, temperature scaling, top-$k$ / top-$p$ / min-$p$ filtering, and speculative verification - within a single batched kernel while remaining fully CUDA Graph-compatible. Central to our approach is a novel hierarchical two-stage top-$k$ algorithm that achieves up to $\\textbf{10x speedup}$ over competitive baselines and exploits the low-entropy structure of LLM outputs to enable efficient selection over large vocabularies. Across heterogeneous speculative decoding workloads, SonicSampler achieves up to $\\textbf{16x speedup}$ over state-of-the-art baselines while preserving flexible batched execution.",
+      "identifiers": [
+        "SemanticScholar:d13f12c64a5387ec55f9824546a5d4885dc13d1a"
+      ],
+      "semantic_scholar_id": "d13f12c64a5387ec55f9824546a5d4885dc13d1a",
+      "canonical_id": "arXiv:2607.20475",
+      "arxiv_id": "2607.20475",
+      "doi": "10.48550/arXiv.2607.20475",
+      "authors": [
+        "Pragaash Ponnusamy",
+        "Shivam Sahni",
+        "Jue Wang",
+        "Tri Dao"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 142,
+        "matched_prestigious_venue": null
+      },
+      "reason": "SonicSampler fuses LLM sampling and speculative verification into CUDA-Graph-compatible kernels and reports substantial sampling/verification speedups.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "GAPS: Global-Aware Prediction-driven Scheduling for Large-Scale LLM Inference",
+      "source_url": "https://doi.org/10.65109/YPTR3460",
+      "year": 2026,
+      "published": "2026-05-25",
+      "venue": "Proceedings of the 25th International Conference on Autonomous Agents and Multiagent Systems",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Serving large language models (LLMs) poses major challenges for cluster schedulers due to highly variable request sizes, strict latency constraints, and dynamic load fluctuations. Existing approaches either optimize local routing or rely on reactive migration, but they often lack a unified design that combines global awareness with predictive foresight. This work presents GAPS, a Globally-Aware Predictive Scheduler for LLM inference clusters. GAPS integrates online monitoring with lightweight, bias-aware prediction to anticipate queueing delays, and complements this with selective request rebalancing to alleviate transient hotspots. The design jointly prevents tail amplification and mitigates imbalance with minimal migration overhead. GAPS is implemented in a discrete-event simulator and evaluated on both code-oriented and conversational workloads. Experimental results show that GAPS reduces P99 latency by up to 25% and lowers SLO violation rates by 10--15% compared with state-of-the-art baselines. Scalability experiments confirm stable improvements as cluster size grows, prediction robustness experiments demonstrate resilience under 30--40% error, and ablation studies highlight the necessity of combining prediction, rebalancing, and global awareness. Complexity analysis further shows that GAPS operates in polynomial time, ensuring scalability without prohibitive scheduling overhead. Overall, the findings indicate that global awareness and predictive scheduling are key to robust and efficient LLM inference, offering a practical design for next-generation AI service clusters.",
+      "identifiers": [
+        "SemanticScholar:5eb9d75e1053b27c587dc7f08a6888cd10797d6d"
+      ],
+      "semantic_scholar_id": "5eb9d75e1053b27c587dc7f08a6888cd10797d6d",
+      "doi": "10.65109/YPTR3460",
+      "canonical_id": "DOI:10.65109/YPTR3460",
+      "authors": [
+        "Zhengyu Liu",
+        "Fan Zhang",
+        "Feng-Zhe Zhang",
+        "Shuai-Kang Hou"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 141,
+        "matched_prestigious_venue": null
+      },
+      "reason": "The official IFAAMAS AAMAS 2026 paper presents a global-aware LLM cluster scheduler combining online monitoring, bias-corrected prediction, request assignment, and selective migration. Its discrete-event simulation on code and conversational workloads reports reduced P99 latency and SLO violations, directly addressing large-scale LLM inference serving; the evidence is simulation-based, not production deployment.",
+      "library_body_check": "body_read; primary_full_text_reviewed",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-87eb93ecddaf",
+    "round": "libimp-87eb93ecddaf2296-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 9,
+    "round_submission_count": 2,
+    "round_submission_index": 2,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-87eb93ecddaf2296-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-87eb93ecddaf2296-pre01.json",
+    "receipt": "sha256:2caf02f2220c4897b1a0fcdb98fa44a16b96a425140c84baea8d43e5d064fea6"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-87eb93ecddaf",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

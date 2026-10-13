@@ -1,0 +1,233 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Optimizing Long-context LLM Serving via Fine-grained Sequence Parallelism",
+      "source_url": "https://arxiv.org/abs/2511.06247",
+      "year": 2025,
+      "published": "2025-11-09",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "With the advancement of large language models (LLMs), their context windows have rapidly expanded. To meet diverse demands from varying-length requests in online services, existing state-of-the-art systems tune the sequence parallelism (SP) allocation. However, current dynamic SP allocation lacks flexibility to (1) support stage-specific parallelism requirements in LLM inference, (2) mitigate the global latency degradation from excessive SP allocation, and (3) exploit resource fragments arising from SP size variation. To tackle this problem, we propose Chunkwise Dynamic Sequence Parallelism (CDSP), a fine-grained parallelism strategy that assigns SP sizes across \\textit{intra-request} token segments. Based on CDSP, we build Tetris, an LLM serving system that (1) efficiently integrates CDSP into disaggregated cluster to satisfy parallelism heterogeneity, (2) dynamically regulates SP size expansion based on real-time load conditions, and (3) adaptively explores chunking plans to utilize fragmented resources while meeting per-request demands. Compared with state-of-the-art systems, Tetris achieves up to 4.35$\\times$ lower time-to-first-token (TTFT) under max sustainable loads, reduces median time-between-tokens (TBT) by up to 40.1\\%, and increases the max request capacity by up to 45\\%.",
+      "identifiers": [
+        "SemanticScholar:e7488527756e435789e0169e42d958f6a1015354"
+      ],
+      "semantic_scholar_id": "e7488527756e435789e0169e42d958f6a1015354",
+      "canonical_id": "arXiv:2511.06247",
+      "arxiv_id": "2511.06247",
+      "doi": "10.48550/arXiv.2511.06247",
+      "authors": [
+        "Cong Li",
+        "Yuzhe Yang",
+        "Xuegui Zheng",
+        "Qifan Yang",
+        "Yijin Guan",
+        "Si-Ze Zheng",
+        "Li-Wen Chang",
+        "Shu-Fan Liu",
+        "Xin Liu",
+        "Guangyu Sun"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 338,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Tetris uses fine-grained, request-level sequence-parallel allocation and dynamic resource planning to improve long-context LLM serving; arXiv records that this version was withdrawn, which does not change the paper’s technical relevance.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "ACL: Aligned Contrastive Learning Improves BERT and Multi-exit BERT Fine-tuning",
+      "source_url": "https://arxiv.org/abs/2602.03563",
+      "year": 2026,
+      "published": "2026-02-03",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Despite its success in self-supervised learning, contrastive learning is less studied in the supervised setting. In this work, we first use a set of pilot experiments to show that in the supervised setting, the cross-entropy loss objective (CE) and the contrastive learning objective often conflict with each other, thus hindering the applications of CL in supervised settings. To resolve this problem, we introduce a novel \\underline{A}ligned \\underline{C}ontrastive \\underline{L}earning (ACL) framework. First, ACL-Embed regards label embeddings as extra augmented samples with different labels and employs contrastive learning to align the label embeddings with its samples'representations. Second, to facilitate the optimization of ACL-Embed objective combined with the CE loss, we propose ACL-Grad, which will discard the ACL-Embed term if the two objectives are in conflict. To further enhance the performances of intermediate exits of multi-exit BERT, we further propose cross-layer ACL (ACL-CL), which is to ask the teacher exit to guide the optimization of student shallow exits. Extensive experiments on the GLUE benchmark results in the following takeaways: (a) ACL-BRT outperforms or performs comparably with CE and CE+SCL on the GLUE tasks; (b) ACL, especially CL-ACL, significantly surpasses the baseline methods on the fine-tuning of multi-exit BERT, thus providing better quality-speed tradeoffs for low-latency applications.",
+      "identifiers": [
+        "SemanticScholar:69b4ef8f1cc747a93979529296540117406f766c"
+      ],
+      "semantic_scholar_id": "69b4ef8f1cc747a93979529296540117406f766c",
+      "canonical_id": "arXiv:2602.03563",
+      "arxiv_id": "2602.03563",
+      "doi": "10.48550/arXiv.2602.03563",
+      "authors": [
+        "Liz Li",
+        "Wei Zhu"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 252,
+        "matched_prestigious_venue": null
+      },
+      "reason": "The full text improves intermediate exits in multi-exit BERT, a concrete early-exit quality/latency trade-off for low-latency transformer inference.",
+      "library_body_check": "body_read; primary_full_text_reviewed",
+      "library_source_run_file": null
+    },
+    {
+      "title": "SimpleTool: Parallel Decoding for Real-Time LLM Function Calling",
+      "source_url": "https://arxiv.org/abs/2603.00030",
+      "year": 2026,
+      "published": "2026-02-04",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "LLM-based function calling enables intelligent agents to interact with external tools and environments, yet autoregressive decoding imposes a fundamental latency bottleneck that limits real-time applications such as embodied intelligence, game AI, and interactive avatars (e.g., 10 Hz control frequency). We observe that function calling differs fundamentally from free-form text generation: structured outputs exhibit substantial token redundancy (delimiters, parameter names), and arguments exhibit weak causal dependencies. Crucially, these two properties must be exploited jointly to achieve real-time performance. We present SimpleTool, which introduces special tokens that serve a dual role: compressing low-entropy tokens (4-6x reduction) while acting as mode selectors that enable independent parallel generation of function name and arguments. This synergistic design achieves 3-6x end-to-end speedup (up to 9.6x) with only +8.2% parallelization overhead. Experiments on five benchmarks across Qwen-series models (0.5B-14B) demonstrate substantial speedup while maintaining competitive or improved accuracy. On Mobile Actions, ST-Qwen-0.5B outperforms Google's FunctionGemma in both accuracy and latency consistency. With quantization on consumer-grade GPU, SimpleTool achieves 61.2ms P50 latency, enabling 16 Hz real-time control at 4B model scale, bridging the gap between LLM function calling and latency-critical real-world deployment.",
+      "identifiers": [
+        "SemanticScholar:996186b9fa743093936bae789c2c01ebfea98f6a"
+      ],
+      "semantic_scholar_id": "996186b9fa743093936bae789c2c01ebfea98f6a",
+      "canonical_id": "arXiv:2603.00030",
+      "arxiv_id": "2603.00030",
+      "doi": "10.48550/arXiv.2603.00030",
+      "authors": [
+        "Xiao Shi",
+        "Jiaxin Wan",
+        "Linkang Dong",
+        "Wei Jiang",
+        "Yue Liu",
+        "Zengfeng Huang"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 251,
+        "matched_prestigious_venue": null
+      },
+      "reason": "SimpleTool uses structured-output token compression and parallel decoding to reduce LLM function-calling latency for interactive applications.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "RRAttention: Dynamic Block Sparse Attention via Per-Head Round-Robin Shifts for Long-Context Inference",
+      "source_url": "https://arxiv.org/abs/2602.05853",
+      "year": 2026,
+      "published": "2026-02-05",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The quadratic complexity of attention mechanisms poses a critical bottleneck for large language models processing long contexts. While dynamic sparse attention methods offer input-adaptive efficiency, they face fundamental trade-offs: requiring preprocessing, lacking global evaluation, violating query independence, or incurring high computational overhead. We present RRAttention, a novel dynamic sparse attention method that simultaneously achieves all desirable properties through a head \\underline{r}ound-\\underline{r}obin (RR) sampling strategy. By rotating query sampling positions across attention heads within each stride, RRAttention maintains query independence while enabling efficient global pattern discovery with stride-level aggregation. Our method reduces complexity from $O(L^2)$ to $O(L^2/S^2)$ and employs adaptive Top-$\\tau$ selection for optimal sparsity. Extensive experiments on natural language understanding (HELMET) and multimodal video comprehension (Video-MME) demonstrate that RRAttention recovers over 99\\% of full attention performance while computing only half of the attention blocks, achieving 2.4$\\times$ speedup at 128K context length and outperforming existing dynamic sparse attention methods.",
+      "identifiers": [
+        "SemanticScholar:8c99e76d42086d6cf5d3d7a7fcf86e517a4ccb38"
+      ],
+      "semantic_scholar_id": "8c99e76d42086d6cf5d3d7a7fcf86e517a4ccb38",
+      "canonical_id": "arXiv:2602.05853",
+      "arxiv_id": "2602.05853",
+      "doi": "10.48550/arXiv.2602.05853",
+      "authors": [
+        "Si-Ran Liu",
+        "Guo-Xia Wang",
+        "Sai Wang",
+        "Jinle Zeng",
+        "Haoyang Xie",
+        "Siyu Lou",
+        "Jiabin Yang",
+        "Dian-Hai Yu",
+        "Haifeng Wang",
+        "Chao-Fei Yang"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 250,
+        "matched_prestigious_venue": null
+      },
+      "reason": "RRAttention uses per-head round-robin sampling for dynamic sparse attention and reports long-context speedup while retaining attention quality.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Adaptive Load Balancing for Multi-Tier LLM Inference with Dynamic Model Routing",
+      "source_url": "https://doi.org/10.1109/SoutheastCon63549.2026.11476301",
+      "year": 2026,
+      "published": "2026-02-20",
+      "venue": "SoutheastCon",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Model (LLM) inference systems face critical challenges in balancing latency, cost, and quality across heterogeneous GPU infrastructure. Existing approaches rely on static routing policies or simple load balancing, resulting in suboptimal resource utilization, high tail latencies, and excessive operational costs. This paper presents an adaptive load balancing framework for multi-tier LLM inference that dynamically routes requests based on real-time system state, request characteristics, and learned performance patterns. Our approach employs reinforcement learning to jointly optimize latency, cost, and Service Level Objective (SLO) compliance across edge, mid-tier, and cloud GPU resources. Experimental evaluation on a realistic workload of 5,000 requests demonstrates that our adaptive router reduces average latency by $\\mathbf{5 1. 1 8 \\%}$ and total operational cost by $\\mathbf{7 0. 0 8 \\%}$ compared to round-robin baseline, while achieving 12.02 percentage points fewer SLO violations. The system achieves these improvements through intelligent tier assignment that matches request complexity to appropriate model capacity.",
+      "identifiers": [
+        "SemanticScholar:e7e66c886e8bcd05b505d85af00e60730b3d8f51"
+      ],
+      "semantic_scholar_id": "e7e66c886e8bcd05b505d85af00e60730b3d8f51",
+      "doi": "10.1109/SoutheastCon63549.2026.11476301",
+      "canonical_id": "DOI:10.1109/SoutheastCon63549.2026.11476301",
+      "authors": [
+        "Tejas Pravinbhai Patel",
+        "Chaitanya Kulkarni",
+        "Sandeep Shivam",
+        "Amit Kumar Padhy",
+        "Viswanathan Ranganathan",
+        "S. Bayyavarapu"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 235,
+        "matched_prestigious_venue": null
+      },
+      "reason": "The IEEE abstract describes adaptive request routing across edge, mid-tier, and cloud LLM inference resources, optimizing latency, cost, and SLO compliance.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-7f4a0fb7a5a8",
+    "round": "libimp-7f4a0fb7a5a8065d-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 14,
+    "round_submission_count": 3,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-7f4a0fb7a5a8065d-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-7f4a0fb7a5a8065d-pre01.json",
+    "receipt": "sha256:0d1b61ec685ec7e0373beb1f2b9952092ecb43818c590e9de0cd4c6ae84343c5"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-7f4a0fb7a5a8",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

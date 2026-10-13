@@ -1,0 +1,187 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Exploring CXL-based KV Cache Storage for LLM Serving",
+      "source_url": "https://www.semanticscholar.org/paper/beb9d034f9accbff20525bddf9d345fb799805b1",
+      "year": null,
+      "published": null,
+      "venue": null,
+      "citation_count": 11,
+      "citation_count_source": "semantic_scholar",
+      "abstract": null,
+      "identifiers": [
+        "SemanticScholar:beb9d034f9accbff20525bddf9d345fb799805b1"
+      ],
+      "semantic_scholar_id": "beb9d034f9accbff20525bddf9d345fb799805b1",
+      "canonical_id": "SemanticScholar:beb9d034f9accbff20525bddf9d345fb799805b1",
+      "authors": [
+        "Yupeng Tang",
+        "Run-Xi Cheng",
+        "Ping Zhou",
+        "Tongping Liu",
+        "Fei Liu",
+        "Wei Tang",
+        "Kyoung-ryun Bae",
+        "Jianjun Chen",
+        "Wu Xiang",
+        "Rui Shi"
+      ],
+      "priority": 11,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 11,
+        "citation_count": 11,
+        "total": 11,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": null,
+        "matched_prestigious_venue": null
+      },
+      "reason": "The NeurIPS ML-for-Systems workshop paper evaluates CXL KV-cache storage, showing serving batch/throughput and GPU-resource benefits under memory constraints.",
+      "library_body_check": "body_read; primary_full_text_reviewed",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Samoyeds: Accelerating MoE Models with Structured Sparsity Leveraging Sparse Tensor Cores",
+      "source_url": "https://arxiv.org/abs/2503.10725",
+      "year": 2025,
+      "published": "2025-03-13",
+      "venue": "European Conference on Computer Systems",
+      "citation_count": 10,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The escalating size of Mixture-of-Experts (MoE) based Large Language Models (LLMs) presents significant computational and memory challenges, necessitating innovative solutions to enhance efficiency without compromising model accuracy. Structured sparsity emerges as a compelling strategy to address these challenges by leveraging the emerging sparse computing hardware. Prior works mainly focus on the sparsity in model parameters, neglecting the inherent sparse patterns in activations. This oversight can lead to additional computational costs associated with activations, potentially resulting in suboptimal performance. This paper presents Samoyeds, an innovative acceleration system for MoE LLMs utilizing Sparse Tensor Cores (SpTCs). Samoyeds is the first to apply sparsity simultaneously to both activations and model parameters. It introduces a bespoke sparse data format tailored for MoE computation and develops a specialized sparse-sparse matrix multiplication kernel. Furthermore, Samoyeds incorporates systematic optimizations specifically designed for the execution of dual-side structured sparse MoE LLMs on SpTCs, further enhancing system performance. Evaluations show that Samoyeds outperforms SOTA works by up to 1.99× at the kernel level and 1.58× at the model level. Moreover, it enhances memory efficiency, increasing maximum supported batch sizes by 4.41× on average. Additionally, Samoyeds surpasses existing SOTA structured sparse solutions in both model accuracy and hardware portability.",
+      "identifiers": [
+        "SemanticScholar:340ab414c7c60e40e439941ca81610374f48becd"
+      ],
+      "semantic_scholar_id": "340ab414c7c60e40e439941ca81610374f48becd",
+      "canonical_id": "arXiv:2503.10725",
+      "arxiv_id": "2503.10725",
+      "doi": "10.1145/3689031.3717455",
+      "authors": [
+        "Chenpeng Wu",
+        "Qiqi Gu",
+        "Heng Shi",
+        "Jian-Guo Yao",
+        "Hai-Bing Guan"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 10,
+        "citation_count": 10,
+        "total": 10,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 579,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Samoyeds co-designs structured sparsity, sparse matrix kernels, and execution for MoE LLMs, reporting model speed and memory-capacity gains.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "RAC: Request-adaptive Configuration for Efficient Speculative Decoding",
+      "source_url": "https://doi.org/10.65109/SGXL4097",
+      "year": 2026,
+      "published": "2026-05-25",
+      "venue": "Proceedings of the 25th International Conference on Autonomous Agents and Multiagent Systems",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Speculative decoding enhances the inference efficiency of large language models by employing a lightweight draft model to generate candidate tokens, which are then verified in parallel by the target model. However, existing approaches typically use fixed speculative configurations—such as the draft model and speculative length—across similar requests, neglecting semantic and structural differences. This limits acceleration potential and reduces adaptability to diverse, dynamic real-world scenarios. To address this, we propose a reinforcement learning-based method called Request-Adaptive Configuration selection (RAC). By formulating speculative configuration selection as a Markov decision process, RAC dynamically determines the optimal draft model and speculative length for each incoming request. It integrates static request features with historical execution feedback to enable fine-grained, request-level inference optimization. Experiments on various text generation benchmarks demonstrate that RAC achieves maximum speedups of 2.02× and 1.37× over autoregressive decoding and vanilla speculative decoding, respectively.",
+      "identifiers": [
+        "SemanticScholar:1f44997f067d28ae279e23f5bf141715a0e18eb7"
+      ],
+      "semantic_scholar_id": "1f44997f067d28ae279e23f5bf141715a0e18eb7",
+      "doi": "10.65109/SGXL4097",
+      "canonical_id": "DOI:10.65109/SGXL4097",
+      "authors": [
+        "Jinhao Sheng",
+        "Xiao Huang",
+        "Hongxin Wei",
+        "Feng Zhou"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 141,
+        "matched_prestigious_venue": null
+      },
+      "reason": "The official IFAAMAS AAMAS 2026 Extended Abstract confirms RAC uses request features and historical execution feedback in an RL/MDP policy to select draft model and speculative length per request. Its text-generation benchmark results report maximum speedups of 2.02× over autoregressive decoding and 1.37× over vanilla speculative decoding; this is a direct LLM inference-efficiency contribution.",
+      "library_body_check": "body_read; primary_full_text_reviewed",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Hurwitz Quaternion Multiplicative Quantization for KV Cache Compression",
+      "source_url": "https://arxiv.org/abs/2605.27646",
+      "year": 2026,
+      "published": "2026-05-26",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "We propose \\textbf{Hurwitz Quaternion Multiplicative Quantization (HQMQ)}, a \\textbf{calibration-free} method for KV cache compression of large language models. HQMQ treats each 4-element chunk of K or V as a quaternion and quantizes its unit direction to the \\emph{product} $q_p \\cdot q_s$, where $q_p$ ranges over the 24-element Hurwitz group $2T$ (the 24 vertices of the 24-cell on $S^3$, pairwise angle $60^\\circ$) and $q_s$ ranges over a per-(layer, head) secondary codebook of $S$ \\emph{random} unit quaternions. The multiplicative composition yields $24S$ effective codewords at $S$ stored parameters; random initialization suffices because left-multiplication is an $S^3$ isometry, so seeded codebooks vary in end-task ppl by $<1.5\\%$. A per-batch median-multiplier outlier extraction step ($C{=}3$, no calibration) handles modern outlier-heavy architectures. We evaluate on five modern open models: Mistral-7B (dense MHA), Llama-3-8B and Qwen2.5-7B and Qwen3-8B (dense GQA), and gpt-oss-20b (sparse MoE). On Mistral-7B and Qwen3-8B, HQMQ matches fp16 within $0.02$--$0.03$ ppl points at $\\sim$5 bits. On Qwen2.5-7B and Qwen3-8B, where naive int4 collapses to $10^4{+}$ ppl, HQMQ + Med3$\\times$ recovers fp16 quality within $0.02$--$0.10$ ppl points at $\\sim$5 bits. HQMQ Pareto-dominates naive int by $3$--$1900\\times$ at matched bits across all five models, and downstream zero-shot accuracy matches fp16 at $3.79$ bits on Mistral. Against the strongest calibrated KV-quantization baseline, HQMQ at $3.79$ bits matches KIVI-4 ($\\sim 4.5$ bits) within ${\\sim}1$ pt on CoQA, $0.6$ pts on TruthfulQA, and $2.3$ pts on GSM8K, at $16\\%$ fewer bits and without a calibration pass. At the storage level, HQMQ delivers up to $5.05\\times$ KV compression, shrinking a Llama-3-70B 128k-context cache from 43 GB to 8.5 GB.",
+      "identifiers": [
+        "SemanticScholar:2fc1f6374f533613f57f10a0caf6df133ed63af0"
+      ],
+      "semantic_scholar_id": "2fc1f6374f533613f57f10a0caf6df133ed63af0",
+      "canonical_id": "arXiv:2605.27646",
+      "arxiv_id": "2605.27646",
+      "doi": "10.48550/arXiv.2605.27646",
+      "authors": [
+        "Kabir Swain",
+        "Si-Jie Han",
+        "D. Weidele",
+        "Mauro Martino",
+        "David D. Cox",
+        "Antonio Torralba"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 140,
+        "matched_prestigious_venue": null
+      },
+      "reason": "HQMQ applies calibration-free quaternion multiplicative quantization to LLM KV caches, reporting up to 5.05× cache compression with quality retention.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-7f4a0fb7a5a8",
+    "round": "libimp-7f4a0fb7a5a8065d-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 14,
+    "round_submission_count": 3,
+    "round_submission_index": 3,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-7f4a0fb7a5a8065d-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-7f4a0fb7a5a8065d-pre01.json",
+    "receipt": "sha256:0d1b61ec685ec7e0373beb1f2b9952092ecb43818c590e9de0cd4c6ae84343c5"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-7f4a0fb7a5a8",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
