@@ -1,0 +1,722 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-8d19d7733e763786-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-8d19d7733e76",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "DOI:10.1109/isca66397.2026.00182",
+    "arXiv:2511.05722",
+    "arXiv:2602.03036",
+    "arXiv:2602.03814",
+    "arXiv:2602.03955",
+    "arXiv:2604.17304",
+    "arXiv:2604.19398"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 7,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "d0c64ad1c0abf1b9ea6ec6cb7e401c334e2867f0",
+  "raw_search_result_count": 7,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 7,
+  "provider_progress": {
+    "requested_count": 7,
+    "status_counts": {
+      "allowed": 7,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-13T06:34:19.424976+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "DOI:10.1109/isca66397.2026.00182",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2511.05722",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2602.03036",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2602.03814",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2602.03955",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2604.17304",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2604.19398",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "OckBench: Measuring the Efficiency of LLM Reasoning",
+      "source_url": "https://arxiv.org/abs/2511.05722",
+      "year": 2025,
+      "published": "2025-11-07",
+      "venue": "arXiv.org",
+      "citation_count": 12,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLMs) such as GPT-5 and Gemini 3 have pushed the frontier of automated reasoning and code generation. Yet current benchmarks emphasize accuracy and output quality, neglecting a critical dimension: efficiency of token usage. The token efficiency is highly variable in practical. Models solving the same problem with similar accuracy can exhibit up to a \\textbf{5.0$\\times$} difference in token length, leading to massive gap of model reasoning ability. Such variance exposes significant redundancy, highlighting the critical need for a standardized benchmark to quantify the gap of token efficiency. Thus, we introduce OckBench, the first benchmark that jointly measures accuracy and token efficiency across reasoning and coding tasks. Our evaluation reveals that token efficiency remains largely unoptimized across current models, significantly inflating serving costs and latency. These findings provide a concrete roadmap for the community to optimize the latent reasoning ability, token efficiency. Ultimately, we argue for an evaluation paradigm shift: tokens must not be multiplied beyond necessity. Our benchmarks are available at https://ockbench.github.io/.",
+      "identifiers": [
+        "SemanticScholar:1baf5d6a9aa42375692d24ddd1e1de25f1ce17f5"
+      ],
+      "semantic_scholar_id": "1baf5d6a9aa42375692d24ddd1e1de25f1ce17f5",
+      "canonical_id": "arXiv:2511.05722",
+      "arxiv_id": "2511.05722",
+      "doi": "10.48550/arXiv.2511.05722",
+      "authors": [
+        "Zheng-Xiao Du",
+        "Hao Kang",
+        "Song Han",
+        "Tushar Krishna",
+        "Li-Geng Zhu"
+      ],
+      "priority": 112,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 12,
+        "citation_count": 12,
+        "total": 112,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 340,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "LatentMem: Customizing Latent Memory for Multi-Agent Systems",
+      "source_url": "https://arxiv.org/abs/2602.03036",
+      "year": 2026,
+      "published": "2026-02-03",
+      "venue": "arXiv.org",
+      "citation_count": 12,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language model (LLM)-powered multi-agent systems (MAS) demonstrate remarkable collective intelligence, wherein multi-agent memory serves as a pivotal mechanism for continual adaptation. However, existing multi-agent memory designs remain constrained by two fundamental bottlenecks: (i) memory homogenization arising from the absence of role-aware customization, and (ii) information overload induced by excessively fine-grained memory entries. To address these limitations, we propose LatentMem, a learnable multi-agent memory framework designed to customize agent-specific memories in a token-efficient manner. Specifically, LatentMem comprises an experience bank that stores raw interaction trajectories in a lightweight form, and a memory composer that synthesizes compact latent memories conditioned on retrieved experience and agent-specific contexts. Further, we introduce Latent Memory Policy Optimization (LMPO), which propagates task-level optimization signals through latent memories to the composer, encouraging it to produce compact and high-utility representations. Extensive experiments across diverse benchmarks and mainstream MAS frameworks show that LatentMem achieves a performance gain of up to $19.36$% over vanilla settings and consistently outperforms existing memory architectures, without requiring any modifications to the underlying frameworks.",
+      "identifiers": [
+        "SemanticScholar:dfd9cf2191e91dbd6ceb683831d0d554916b0b56"
+      ],
+      "semantic_scholar_id": "dfd9cf2191e91dbd6ceb683831d0d554916b0b56",
+      "canonical_id": "arXiv:2602.03036",
+      "arxiv_id": "2602.03036",
+      "doi": "10.48550/arXiv.2602.03036",
+      "authors": [
+        "Muxin Fu",
+        "Guibin Zhang",
+        "Xiangyuan Xue",
+        "Ya-Fu Li",
+        "Zefeng He",
+        "Siyuan Huang",
+        "Xiaoye Qu",
+        "Yu Cheng",
+        "Yang Yang"
+      ],
+      "priority": 112,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 12,
+        "citation_count": 12,
+        "total": 112,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 252,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Conformal Thinking: Risk Control for Reasoning on a Compute Budget",
+      "source_url": "https://arxiv.org/abs/2602.03814",
+      "year": 2026,
+      "published": "2026-02-03",
+      "venue": "arXiv.org",
+      "citation_count": 12,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Reasoning Large Language Models (LLMs) enable test-time scaling, with dataset-level accuracy improving as the token budget increases, motivating adaptive reasoning -- spending tokens when they improve reliability and stopping early when additional computation is unlikely to help. However, setting the token budget, as well as the threshold for adaptive reasoning, is a practical challenge that entails a fundamental risk-accuracy trade-off. We re-frame the budget setting problem as risk control, limiting the error rate while minimizing compute. Our framework introduces an upper threshold that stops reasoning when the model is confident (risking incorrect output) and a novel parametric lower threshold that preemptively stops unsolvable instances (risking premature stoppage). Given a target risk and a validation set, we use distribution-free risk control to optimally specify these stopping mechanisms. For scenarios with multiple budget controlling criteria, we incorporate an efficiency loss to select the most computationally efficient exiting mechanism. Empirical results across diverse reasoning tasks and models demonstrate the effectiveness of our risk control approach, demonstrating computational efficiency gains from the lower threshold and ensemble stopping mechanisms while adhering to the user-specified risk target.",
+      "identifiers": [
+        "SemanticScholar:97d8b24e6bab5b16732cda0cce7b75c66f474cf1"
+      ],
+      "semantic_scholar_id": "97d8b24e6bab5b16732cda0cce7b75c66f474cf1",
+      "canonical_id": "arXiv:2602.03814",
+      "arxiv_id": "2602.03814",
+      "doi": "10.48550/arXiv.2602.03814",
+      "authors": [
+        "Xi Wang",
+        "Anushri Suresh",
+        "Alvin Zhang",
+        "Rishi More",
+        "William Jurayj",
+        "Benjamin Van Durme",
+        "Mehrdad Farajtabar",
+        "Daniel Khashabi",
+        "Eric T. Nalisnick"
+      ],
+      "priority": 112,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 12,
+        "citation_count": 12,
+        "total": 112,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 252,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "AgentArk: Distilling Multi-Agent Intelligence into a Single LLM Agent",
+      "source_url": "https://arxiv.org/abs/2602.03955",
+      "year": 2026,
+      "published": "2026-02-03",
+      "venue": "arXiv.org",
+      "citation_count": 12,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "While large language model (LLM) multi-agent systems achieve superior reasoning performance through iterative debate, practical deployment is limited by their high computational cost and error propagation. This paper proposes AgentArk, a novel framework to distill multi-agent dynamics into the weights of a single model, effectively transforming explicit test-time interactions into implicit model capabilities. This equips a single agent with the intelligence of multi-agent systems while remaining computationally efficient. Specifically, we investigate three hierarchical distillation strategies across various models, tasks, scaling, and scenarios: reasoning-enhanced fine-tuning; trajectory-based augmentation; and process-aware distillation. By shifting the burden of computation from inference to training, the distilled models preserve the efficiency of one agent while exhibiting strong reasoning and self-correction performance of multiple agents. They further demonstrate enhanced robustness and generalization across diverse reasoning tasks. We hope this work can shed light on future research on efficient and robust multi-agent development. Our code is at https://github.com/AIFrontierLab/AgentArk.",
+      "identifiers": [
+        "SemanticScholar:25f612200a3821c71b99819cd671f2e60df5b470"
+      ],
+      "semantic_scholar_id": "25f612200a3821c71b99819cd671f2e60df5b470",
+      "canonical_id": "arXiv:2602.03955",
+      "arxiv_id": "2602.03955",
+      "doi": "10.48550/arXiv.2602.03955",
+      "authors": [
+        "Yinyi Luo",
+        "Yiqiao Jin",
+        "Weicheng Yu",
+        "Mengqi Zhang",
+        "Srijan Kumar",
+        "Xiaoxiao Li",
+        "Wei-Jie Xu",
+        "Xin Chen",
+        "Jin-Dong Wang"
+      ],
+      "priority": 112,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 12,
+        "citation_count": 12,
+        "total": 112,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 252,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Efficient Test-Time Scaling via Temporal Reasoning Aggregation",
+      "source_url": "https://arxiv.org/abs/2604.17304",
+      "year": 2026,
+      "published": "2026-04-19",
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Test-time scaling improves the reasoning performance of large language models but often results in token-inefficient overthinking, where models continue reasoning beyond what is necessary for a correct answer. Existing dynamic early-exit methods typically rely on single-step confidence signals, which are often unreliable for detecting reasoning convergence in multi-step settings. To mitigate this limitation, we propose TRACE, a training-free framework for efficient test-time scaling that determines when to terminate reasoning based on temporal aggregation of multi-step evidence rather than instantaneous signals. TRACE detects reasoning convergence over time by aggregating two complementary signals across recent reasoning steps: answer consistency, capturing the persistence of predicted answers, and confidence trajectory, modeling the temporal evolution of model confidence. Benefiting from these two factors, TRACE can accurately determine whether the reasoning process has converged, thereby promptly halting inference and effectively avoiding redundant reasoning steps. Extensive experiments on multiple challenging benchmarks show that TRACE reduces reasoning token usage by 25-30% on average while maintaining accuracy within 1-2% of full-length reasoning, consistently outperforming existing dynamic reasoning methods.",
+      "identifiers": [
+        "SemanticScholar:1e3d1bd6b5cd3d5a1b9ac7c146500bd6864ffdc5"
+      ],
+      "semantic_scholar_id": "1e3d1bd6b5cd3d5a1b9ac7c146500bd6864ffdc5",
+      "canonical_id": "arXiv:2604.17304",
+      "arxiv_id": "2604.17304",
+      "doi": "10.48550/arXiv.2604.17304",
+      "authors": [
+        "Jia-Kun Li",
+        "Xing-Wei He",
+        "Ke-Fan Li",
+        "Hong-Zheng Chai",
+        "Hong Yu",
+        "Yuan Yuan"
+      ],
+      "priority": 112,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 10,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 112,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 177,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      }
+    },
+    {
+      "title": "GRASPrune: Global Gating for Budgeted Structured Pruning of Large Language Models",
+      "source_url": "https://arxiv.org/abs/2604.19398",
+      "year": 2026,
+      "published": "2026-04-21",
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLMs) are expensive to serve because model parameters, attention computation, and KV caches impose substantial memory and latency costs. We present GRASPrune, a structured pruning framework applied after pretraining that jointly prunes FFN channels and KV head groups under a single global budget. Instead of learning importance scores without constraints and applying the budget only after training, GRASPrune learns lightweight gate scores with a projected straight-through estimator that enforces a hard mask satisfying the budget at every step while keeping the backbone weights frozen. After the mask is fixed, we calibrate scaling factors on the retained units to mitigate scale mismatch caused by pruning, and fold these factors into the pruned weights to obtain a smaller dense checkpoint with no extra parameters at inference. On LLaMA-2-7B, GRASPrune removes 50% of parameters and achieves 12.18 perplexity on WikiText-2 while maintaining competitive average zero-shot accuracy on five benchmarks, using four epochs on 512 unlabeled calibration sequences on a single NVIDIA A100 80GB GPU without any full model fine-tuning.",
+      "identifiers": [
+        "SemanticScholar:d523074ef7571166eedfd5d003862930bfbd4b4f"
+      ],
+      "semantic_scholar_id": "d523074ef7571166eedfd5d003862930bfbd4b4f",
+      "canonical_id": "arXiv:2604.19398",
+      "arxiv_id": "2604.19398",
+      "doi": "10.48550/arXiv.2604.19398",
+      "authors": [
+        "Ziyang Wang",
+        "Jiang-Feng Xiao",
+        "Chuan Xiao",
+        "Ruoxiang Li",
+        "Rui Mao",
+        "Jianbin Qin"
+      ],
+      "priority": 112,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 10,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 112,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 175,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      }
+    },
+    {
+      "title": "Bridging Efficiency and Scalability in Llm System Via 3D Hybrid Pim With 2D in-Transit Computation",
+      "source_url": "https://doi.org/10.1109/ISCA66397.2026.00182",
+      "year": 2026,
+      "published": "2026-06-01",
+      "venue": "International Symposium on Computer Architecture",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Models (LLMs) have transformed society, but their computational and energy needs hinder efficient inference. The memory wall, the growing processor-memory speed disparity, remains a critical bottleneck for LLM. While Process-in-Memory (PIM) architectures address this challenge by co-locating computation with memory, achieving $\\mathbf{5}-\\mathbf{2 0} \\times$ higher bandwidth than GPUs, existing scalable PIM solutions face critical trade-offs in flexibility, capacity, and efficiency when handling LLMs' dynamic memory-compute patterns and operator diversity. DRAM-PIM suffers from inter-bank communication overhead despite its vector parallelism. SRAM-PIM offers sub10ns latency for matrix operation but is constrained by limited capacity. This work introduces CompAir, a scalable PIM architecture that integrates DRAM-PIM and SRAM-PIM with hybrid bonding, enabling efficient linear computations while unlocking multi-granularity data pathways. We further develop CompAirNoC, an advanced network-on-chip (NoC) with an embedded arithmetic logic unit that performs non-linear operations during data movement. Such a design offloads the centralized communication bottleneck in the channel level to distributed banks, simultaneously reducing communication overhead and area cost for scalability. Finally, we develop a hierarchical Instruction Set Architecture that ensures both flexibility and programmability of the hybrid PIM. Experiments show CompAir delivers 1.83-7.98× faster prefill and $\\mathbf{1. 9 5 - 6. 2 8} \\times$ faster decoding versus state-ofthe-art PIM designs, with $\\mathbf{3. 5 2} \\times$ lower energy than GPU-PIM hybrids. This work presents the first systematic exploration of hybrid DRAM-PIM and SRAM-PIM architectures with innetwork computation, paving the way towards a scalable PIM system for LLM inference.",
+      "identifiers": [
+        "SemanticScholar:ebcbc373ce76f2bea28b8a98fab51f67ce0c76b5"
+      ],
+      "semantic_scholar_id": "ebcbc373ce76f2bea28b8a98fab51f67ce0c76b5",
+      "doi": "10.1109/ISCA66397.2026.00182",
+      "canonical_id": "DOI:10.1109/ISCA66397.2026.00182",
+      "authors": [
+        "Hongyi Li",
+        "Song-Chen Ma",
+        "Huanyu Qu",
+        "Wei-Hao Zhang",
+        "Jia Chen",
+        "Junfeng Lin",
+        "Feng-Bin Tu",
+        "Rong Zhao"
+      ],
+      "priority": 112,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 10,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 112,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 134,
+        "matched_prestigious_venue": "International Symposium on Computer Architecture"
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2511.05722",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2511.05722",
+        "id:SemanticScholar:1baf5d6a9aa42375692d24ddd1e1de25f1ce17f5",
+        "id:arXiv:2511.05722",
+        "title:ockbench measuring the efficiency of llm reasoning",
+        "url:https://arxiv.org/abs/2511.05722"
+      ],
+      "record": {
+        "title": "OckBench: Measuring the Efficiency of LLM Reasoning",
+        "source_url": "https://arxiv.org/abs/2511.05722",
+        "year": 2025,
+        "published": "2025-11-07",
+        "venue": "arXiv.org",
+        "citation_count": 12,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large language models (LLMs) such as GPT-5 and Gemini 3 have pushed the frontier of automated reasoning and code generation. Yet current benchmarks emphasize accuracy and output quality, neglecting a critical dimension: efficiency of token usage. The token efficiency is highly variable in practical. Models solving the same problem with similar accuracy can exhibit up to a \\textbf{5.0$\\times$} difference in token length, leading to massive gap of model reasoning ability. Such variance exposes significant redundancy, highlighting the critical need for a standardized benchmark to quantify the gap of token efficiency. Thus, we introduce OckBench, the first benchmark that jointly measures accuracy and token efficiency across reasoning and coding tasks. Our evaluation reveals that token efficiency remains largely unoptimized across current models, significantly inflating serving costs and latency. These findings provide a concrete roadmap for the community to optimize the latent reasoning ability, token efficiency. Ultimately, we argue for an evaluation paradigm shift: tokens must not be multiplied beyond necessity. Our benchmarks are available at https://ockbench.github.io/.",
+        "identifiers": [
+          "SemanticScholar:1baf5d6a9aa42375692d24ddd1e1de25f1ce17f5"
+        ],
+        "semantic_scholar_id": "1baf5d6a9aa42375692d24ddd1e1de25f1ce17f5",
+        "canonical_id": "arXiv:2511.05722",
+        "arxiv_id": "2511.05722",
+        "doi": "10.48550/arXiv.2511.05722",
+        "authors": [
+          "Zheng-Xiao Du",
+          "Hao Kang",
+          "Song Han",
+          "Tushar Krishna",
+          "Li-Geng Zhu"
+        ],
+        "priority": 112,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 12,
+          "citation_count": 12,
+          "total": 112,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 340,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2602.03036",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2602.03036",
+        "id:SemanticScholar:dfd9cf2191e91dbd6ceb683831d0d554916b0b56",
+        "id:arXiv:2602.03036",
+        "title:latentmem customizing latent memory for multiagent systems",
+        "url:https://arxiv.org/abs/2602.03036"
+      ],
+      "record": {
+        "title": "LatentMem: Customizing Latent Memory for Multi-Agent Systems",
+        "source_url": "https://arxiv.org/abs/2602.03036",
+        "year": 2026,
+        "published": "2026-02-03",
+        "venue": "arXiv.org",
+        "citation_count": 12,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large language model (LLM)-powered multi-agent systems (MAS) demonstrate remarkable collective intelligence, wherein multi-agent memory serves as a pivotal mechanism for continual adaptation. However, existing multi-agent memory designs remain constrained by two fundamental bottlenecks: (i) memory homogenization arising from the absence of role-aware customization, and (ii) information overload induced by excessively fine-grained memory entries. To address these limitations, we propose LatentMem, a learnable multi-agent memory framework designed to customize agent-specific memories in a token-efficient manner. Specifically, LatentMem comprises an experience bank that stores raw interaction trajectories in a lightweight form, and a memory composer that synthesizes compact latent memories conditioned on retrieved experience and agent-specific contexts. Further, we introduce Latent Memory Policy Optimization (LMPO), which propagates task-level optimization signals through latent memories to the composer, encouraging it to produce compact and high-utility representations. Extensive experiments across diverse benchmarks and mainstream MAS frameworks show that LatentMem achieves a performance gain of up to $19.36$% over vanilla settings and consistently outperforms existing memory architectures, without requiring any modifications to the underlying frameworks.",
+        "identifiers": [
+          "SemanticScholar:dfd9cf2191e91dbd6ceb683831d0d554916b0b56"
+        ],
+        "semantic_scholar_id": "dfd9cf2191e91dbd6ceb683831d0d554916b0b56",
+        "canonical_id": "arXiv:2602.03036",
+        "arxiv_id": "2602.03036",
+        "doi": "10.48550/arXiv.2602.03036",
+        "authors": [
+          "Muxin Fu",
+          "Guibin Zhang",
+          "Xiangyuan Xue",
+          "Ya-Fu Li",
+          "Zefeng He",
+          "Siyuan Huang",
+          "Xiaoye Qu",
+          "Yu Cheng",
+          "Yang Yang"
+        ],
+        "priority": 112,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 12,
+          "citation_count": 12,
+          "total": 112,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 252,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2602.03814",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2602.03814",
+        "id:SemanticScholar:97d8b24e6bab5b16732cda0cce7b75c66f474cf1",
+        "id:arXiv:2602.03814",
+        "title:conformal thinking risk control for reasoning on a compute budget",
+        "url:https://arxiv.org/abs/2602.03814"
+      ],
+      "record": {
+        "title": "Conformal Thinking: Risk Control for Reasoning on a Compute Budget",
+        "source_url": "https://arxiv.org/abs/2602.03814",
+        "year": 2026,
+        "published": "2026-02-03",
+        "venue": "arXiv.org",
+        "citation_count": 12,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Reasoning Large Language Models (LLMs) enable test-time scaling, with dataset-level accuracy improving as the token budget increases, motivating adaptive reasoning -- spending tokens when they improve reliability and stopping early when additional computation is unlikely to help. However, setting the token budget, as well as the threshold for adaptive reasoning, is a practical challenge that entails a fundamental risk-accuracy trade-off. We re-frame the budget setting problem as risk control, limiting the error rate while minimizing compute. Our framework introduces an upper threshold that stops reasoning when the model is confident (risking incorrect output) and a novel parametric lower threshold that preemptively stops unsolvable instances (risking premature stoppage). Given a target risk and a validation set, we use distribution-free risk control to optimally specify these stopping mechanisms. For scenarios with multiple budget controlling criteria, we incorporate an efficiency loss to select the most computationally efficient exiting mechanism. Empirical results across diverse reasoning tasks and models demonstrate the effectiveness of our risk control approach, demonstrating computational efficiency gains from the lower threshold and ensemble stopping mechanisms while adhering to the user-specified risk target.",
+        "identifiers": [
+          "SemanticScholar:97d8b24e6bab5b16732cda0cce7b75c66f474cf1"
+        ],
+        "semantic_scholar_id": "97d8b24e6bab5b16732cda0cce7b75c66f474cf1",
+        "canonical_id": "arXiv:2602.03814",
+        "arxiv_id": "2602.03814",
+        "doi": "10.48550/arXiv.2602.03814",
+        "authors": [
+          "Xi Wang",
+          "Anushri Suresh",
+          "Alvin Zhang",
+          "Rishi More",
+          "William Jurayj",
+          "Benjamin Van Durme",
+          "Mehrdad Farajtabar",
+          "Daniel Khashabi",
+          "Eric T. Nalisnick"
+        ],
+        "priority": 112,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 12,
+          "citation_count": 12,
+          "total": 112,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 252,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2602.03955",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2602.03955",
+        "id:SemanticScholar:25f612200a3821c71b99819cd671f2e60df5b470",
+        "id:arXiv:2602.03955",
+        "title:agentark distilling multiagent intelligence into a single llm agent",
+        "url:https://arxiv.org/abs/2602.03955"
+      ],
+      "record": {
+        "title": "AgentArk: Distilling Multi-Agent Intelligence into a Single LLM Agent",
+        "source_url": "https://arxiv.org/abs/2602.03955",
+        "year": 2026,
+        "published": "2026-02-03",
+        "venue": "arXiv.org",
+        "citation_count": 12,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "While large language model (LLM) multi-agent systems achieve superior reasoning performance through iterative debate, practical deployment is limited by their high computational cost and error propagation. This paper proposes AgentArk, a novel framework to distill multi-agent dynamics into the weights of a single model, effectively transforming explicit test-time interactions into implicit model capabilities. This equips a single agent with the intelligence of multi-agent systems while remaining computationally efficient. Specifically, we investigate three hierarchical distillation strategies across various models, tasks, scaling, and scenarios: reasoning-enhanced fine-tuning; trajectory-based augmentation; and process-aware distillation. By shifting the burden of computation from inference to training, the distilled models preserve the efficiency of one agent while exhibiting strong reasoning and self-correction performance of multiple agents. They further demonstrate enhanced robustness and generalization across diverse reasoning tasks. We hope this work can shed light on future research on efficient and robust multi-agent development. Our code is at https://github.com/AIFrontierLab/AgentArk.",
+        "identifiers": [
+          "SemanticScholar:25f612200a3821c71b99819cd671f2e60df5b470"
+        ],
+        "semantic_scholar_id": "25f612200a3821c71b99819cd671f2e60df5b470",
+        "canonical_id": "arXiv:2602.03955",
+        "arxiv_id": "2602.03955",
+        "doi": "10.48550/arXiv.2602.03955",
+        "authors": [
+          "Yinyi Luo",
+          "Yiqiao Jin",
+          "Weicheng Yu",
+          "Mengqi Zhang",
+          "Srijan Kumar",
+          "Xiaoxiao Li",
+          "Wei-Jie Xu",
+          "Xin Chen",
+          "Jin-Dong Wang"
+        ],
+        "priority": 112,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 12,
+          "citation_count": 12,
+          "total": 112,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 252,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2604.17304",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2604.17304",
+        "id:SemanticScholar:1e3d1bd6b5cd3d5a1b9ac7c146500bd6864ffdc5",
+        "id:arXiv:2604.17304",
+        "title:efficient testtime scaling via temporal reasoning aggregation",
+        "url:https://arxiv.org/abs/2604.17304"
+      ],
+      "record": {
+        "title": "Efficient Test-Time Scaling via Temporal Reasoning Aggregation",
+        "source_url": "https://arxiv.org/abs/2604.17304",
+        "year": 2026,
+        "published": "2026-04-19",
+        "venue": "Annual Meeting of the Association for Computational Linguistics",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Test-time scaling improves the reasoning performance of large language models but often results in token-inefficient overthinking, where models continue reasoning beyond what is necessary for a correct answer. Existing dynamic early-exit methods typically rely on single-step confidence signals, which are often unreliable for detecting reasoning convergence in multi-step settings. To mitigate this limitation, we propose TRACE, a training-free framework for efficient test-time scaling that determines when to terminate reasoning based on temporal aggregation of multi-step evidence rather than instantaneous signals. TRACE detects reasoning convergence over time by aggregating two complementary signals across recent reasoning steps: answer consistency, capturing the persistence of predicted answers, and confidence trajectory, modeling the temporal evolution of model confidence. Benefiting from these two factors, TRACE can accurately determine whether the reasoning process has converged, thereby promptly halting inference and effectively avoiding redundant reasoning steps. Extensive experiments on multiple challenging benchmarks show that TRACE reduces reasoning token usage by 25-30% on average while maintaining accuracy within 1-2% of full-length reasoning, consistently outperforming existing dynamic reasoning methods.",
+        "identifiers": [
+          "SemanticScholar:1e3d1bd6b5cd3d5a1b9ac7c146500bd6864ffdc5"
+        ],
+        "semantic_scholar_id": "1e3d1bd6b5cd3d5a1b9ac7c146500bd6864ffdc5",
+        "canonical_id": "arXiv:2604.17304",
+        "arxiv_id": "2604.17304",
+        "doi": "10.48550/arXiv.2604.17304",
+        "authors": [
+          "Jia-Kun Li",
+          "Xing-Wei He",
+          "Ke-Fan Li",
+          "Hong-Zheng Chai",
+          "Hong Yu",
+          "Yuan Yuan"
+        ],
+        "priority": 112,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 10,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 112,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 177,
+          "matched_prestigious_venue": "Association for Computational Linguistics"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2604.19398",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2604.19398",
+        "id:SemanticScholar:d523074ef7571166eedfd5d003862930bfbd4b4f",
+        "id:arXiv:2604.19398",
+        "title:grasprune global gating for budgeted structured pruning of large language models",
+        "url:https://arxiv.org/abs/2604.19398"
+      ],
+      "record": {
+        "title": "GRASPrune: Global Gating for Budgeted Structured Pruning of Large Language Models",
+        "source_url": "https://arxiv.org/abs/2604.19398",
+        "year": 2026,
+        "published": "2026-04-21",
+        "venue": "Annual Meeting of the Association for Computational Linguistics",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large language models (LLMs) are expensive to serve because model parameters, attention computation, and KV caches impose substantial memory and latency costs. We present GRASPrune, a structured pruning framework applied after pretraining that jointly prunes FFN channels and KV head groups under a single global budget. Instead of learning importance scores without constraints and applying the budget only after training, GRASPrune learns lightweight gate scores with a projected straight-through estimator that enforces a hard mask satisfying the budget at every step while keeping the backbone weights frozen. After the mask is fixed, we calibrate scaling factors on the retained units to mitigate scale mismatch caused by pruning, and fold these factors into the pruned weights to obtain a smaller dense checkpoint with no extra parameters at inference. On LLaMA-2-7B, GRASPrune removes 50% of parameters and achieves 12.18 perplexity on WikiText-2 while maintaining competitive average zero-shot accuracy on five benchmarks, using four epochs on 512 unlabeled calibration sequences on a single NVIDIA A100 80GB GPU without any full model fine-tuning.",
+        "identifiers": [
+          "SemanticScholar:d523074ef7571166eedfd5d003862930bfbd4b4f"
+        ],
+        "semantic_scholar_id": "d523074ef7571166eedfd5d003862930bfbd4b4f",
+        "canonical_id": "arXiv:2604.19398",
+        "arxiv_id": "2604.19398",
+        "doi": "10.48550/arXiv.2604.19398",
+        "authors": [
+          "Ziyang Wang",
+          "Jiang-Feng Xiao",
+          "Chuan Xiao",
+          "Ruoxiang Li",
+          "Rui Mao",
+          "Jianbin Qin"
+        ],
+        "priority": 112,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 10,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 112,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 175,
+          "matched_prestigious_venue": "Association for Computational Linguistics"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/isca66397.2026.00182",
+      "identity_tokens": [
+        "id:DOI:10.1109/isca66397.2026.00182",
+        "id:SemanticScholar:ebcbc373ce76f2bea28b8a98fab51f67ce0c76b5",
+        "title:bridging efficiency and scalability in llm system via 3d hybrid pim with 2d intransit computation",
+        "url:https://doi.org/10.1109/ISCA66397.2026.00182"
+      ],
+      "record": {
+        "title": "Bridging Efficiency and Scalability in Llm System Via 3D Hybrid Pim With 2D in-Transit Computation",
+        "source_url": "https://doi.org/10.1109/ISCA66397.2026.00182",
+        "year": 2026,
+        "published": "2026-06-01",
+        "venue": "International Symposium on Computer Architecture",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large Language Models (LLMs) have transformed society, but their computational and energy needs hinder efficient inference. The memory wall, the growing processor-memory speed disparity, remains a critical bottleneck for LLM. While Process-in-Memory (PIM) architectures address this challenge by co-locating computation with memory, achieving $\\mathbf{5}-\\mathbf{2 0} \\times$ higher bandwidth than GPUs, existing scalable PIM solutions face critical trade-offs in flexibility, capacity, and efficiency when handling LLMs' dynamic memory-compute patterns and operator diversity. DRAM-PIM suffers from inter-bank communication overhead despite its vector parallelism. SRAM-PIM offers sub10ns latency for matrix operation but is constrained by limited capacity. This work introduces CompAir, a scalable PIM architecture that integrates DRAM-PIM and SRAM-PIM with hybrid bonding, enabling efficient linear computations while unlocking multi-granularity data pathways. We further develop CompAirNoC, an advanced network-on-chip (NoC) with an embedded arithmetic logic unit that performs non-linear operations during data movement. Such a design offloads the centralized communication bottleneck in the channel level to distributed banks, simultaneously reducing communication overhead and area cost for scalability. Finally, we develop a hierarchical Instruction Set Architecture that ensures both flexibility and programmability of the hybrid PIM. Experiments show CompAir delivers 1.83-7.98× faster prefill and $\\mathbf{1. 9 5 - 6. 2 8} \\times$ faster decoding versus state-ofthe-art PIM designs, with $\\mathbf{3. 5 2} \\times$ lower energy than GPU-PIM hybrids. This work presents the first systematic exploration of hybrid DRAM-PIM and SRAM-PIM architectures with innetwork computation, paving the way towards a scalable PIM system for LLM inference.",
+        "identifiers": [
+          "SemanticScholar:ebcbc373ce76f2bea28b8a98fab51f67ce0c76b5"
+        ],
+        "semantic_scholar_id": "ebcbc373ce76f2bea28b8a98fab51f67ce0c76b5",
+        "doi": "10.1109/ISCA66397.2026.00182",
+        "canonical_id": "DOI:10.1109/ISCA66397.2026.00182",
+        "authors": [
+          "Hongyi Li",
+          "Song-Chen Ma",
+          "Huanyu Qu",
+          "Wei-Hao Zhang",
+          "Jia Chen",
+          "Junfeng Lin",
+          "Feng-Bin Tu",
+          "Rong Zhao"
+        ],
+        "priority": 112,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 10,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 112,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 134,
+          "matched_prestigious_venue": "International Symposium on Computer Architecture"
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:26180cc7c9d895031402190411ef1be2b05ebbd028cbfd7fc1e90dc7c139a4a2",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

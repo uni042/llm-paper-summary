@@ -1,0 +1,816 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-bdb160667d4652a7-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-bdb160667d46",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "DOI:10.1109/hpca68181.2026.11408564",
+    "arXiv:2601.02674",
+    "arXiv:2601.03649",
+    "arXiv:2602.13052",
+    "arXiv:2602.13165",
+    "arXiv:2602.22942",
+    "arXiv:2604.17091",
+    "arXiv:2604.19572"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 8,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "d0c64ad1c0abf1b9ea6ec6cb7e401c334e2867f0",
+  "raw_search_result_count": 8,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 8,
+  "provider_progress": {
+    "requested_count": 8,
+    "status_counts": {
+      "allowed": 8,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-13T06:34:13.130345+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "DOI:10.1109/hpca68181.2026.11408564",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2601.02674",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2601.03649",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2602.13052",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2602.13165",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2602.22942",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2604.17091",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2604.19572",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "ARIADNE: Adaptive UVM Management for Efficient GPU Memory Oversubscription",
+      "source_url": "https://doi.org/10.1109/HPCA68181.2026.11408564",
+      "year": 2026,
+      "published": "2026-01-31",
+      "venue": "International Symposium on High-Performance Computer Architecture",
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Unified Virtual Memory (UVM) simplifies GPU programming and supports memory oversubscription, but suffers from severe performance degradation under high memory pressure due to page fault overhead and thrashing. Existing approaches such as prefetching, access counter-based migration, and dynamic Zero-copy offer limited benefits and often require hardware or compiler modifications, undermining UVM's portability and ease of deployment. We present ARIADNE, a runtime UVM management framework that preserves UVM's GPU memory abstraction while ensuring high and robust performance under memory oversubscription. ARIADNE is guided by three principles: (1) pipelined fault handling to hide migration latency, (2) Sharing Degree, a runtime metric that captures thread-level access locality without requiring hardware or compiler changes, to inform placement decisions, and (3) dynamic placement of memory regions between GPU memory and Zero-copy based on real-time access patterns. Implemented entirely within NVIDIA's UVM driver, ARIADNE requires no recompilation or hardware modifications and applies transparently to any executable or closed-source GPU UVM applications. Our experimental results show that ARIADNE delivers average speedups of $1.9 \\times, 5.0 \\times$, and $4.8 \\times$ over a state-of-the-art method at $\\text{1 3 0 \\%, ~} \\text{1 7 5 \\%}$, and 300 % oversubscription, respectively, while effectively preventing thrashing and maintaining near-linear performance scaling.",
+      "identifiers": [
+        "SemanticScholar:c5ac30e30dedcfdf05afe6e4f5d4c3876b941192"
+      ],
+      "semantic_scholar_id": "c5ac30e30dedcfdf05afe6e4f5d4c3876b941192",
+      "doi": "10.1109/HPCA68181.2026.11408564",
+      "canonical_id": "DOI:10.1109/HPCA68181.2026.11408564",
+      "authors": [
+        "Hyunkyu Shin",
+        "Seongtae Bang",
+        "Hyun-moon Park",
+        "Daehoon Kim"
+      ],
+      "priority": 114,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 10,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 114,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 255,
+        "matched_prestigious_venue": "High-Performance Computer Architecture"
+      }
+    },
+    {
+      "title": "Iterative Structured Pruning for Large Language Models with Multi-Domain Calibration",
+      "source_url": "https://arxiv.org/abs/2601.02674",
+      "year": 2026,
+      "published": "2026-01-06",
+      "venue": "Conference of the European Chapter of the Association for Computational Linguistics",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Models (LLMs) have achieved remarkable success across a wide spectrum of natural language processing tasks. However, their ever-growing scale introduces significant barriers to real-world deployment, including substantial computational overhead, memory footprint, and inference latency. While model pruning presents a viable solution to these challenges, existing unstructured pruning techniques often yield irregular sparsity patterns that necessitate specialized hardware or software support. In this work, we explore structured pruning, which eliminates entire architectural components and maintains compatibility with standard hardware accelerators. We introduce a novel structured pruning framework that leverages a hybrid multi-domain calibration set and an iterative calibration strategy to effectively identify and remove redundant channels. Extensive experiments on various models across diverse downstream tasks show that our approach achieves significant compression with minimal performance degradation.",
+      "identifiers": [
+        "SemanticScholar:da29b33362a3ade0553155f472175b917d40709d"
+      ],
+      "semantic_scholar_id": "da29b33362a3ade0553155f472175b917d40709d",
+      "canonical_id": "arXiv:2601.02674",
+      "arxiv_id": "2601.02674",
+      "doi": "10.48550/arXiv.2601.02674",
+      "authors": [
+        "Guang-Xin Wu",
+        "Hao Zhang",
+        "Zhibin Zhang",
+        "J. Guo",
+        "Xue-Qi Cheng"
+      ],
+      "priority": 113,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 10,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 113,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 280,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      }
+    },
+    {
+      "title": "SyncThink: A Training-Free Strategy to Align Inference Termination with Reasoning Saturation",
+      "source_url": "https://arxiv.org/abs/2601.03649",
+      "year": 2026,
+      "published": "2026-01-07",
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Chain-of-Thought (CoT) prompting improves reasoning but often produces long and redundant traces that substantially increase inference cost. We present SyncThink, a training-free and plug-and-play decoding method that reduces CoT overhead without modifying model weights. We find that answer tokens attend weakly to early reasoning and instead focus on the special token\"/think\", indicating an information bottleneck. Building on this observation, SyncThink monitors the model's own reasoning-transition signal and terminates reasoning. Experiments on GSM8K, MMLU, GPQA, and BBH across three DeepSeek-R1 distilled models show that SyncThink achieves 62.00 percent average Top-1 accuracy using 656 generated tokens and 28.68 s latency, compared to 61.22 percent, 2141 tokens, and 92.01 s for full CoT decoding. On long-horizon tasks such as GPQA, SyncThink can further yield up to +8.1 absolute accuracy by preventing over-thinking.",
+      "identifiers": [
+        "SemanticScholar:d730098a63807a6da6aabc9f066b74be0fbe1cba"
+      ],
+      "semantic_scholar_id": "d730098a63807a6da6aabc9f066b74be0fbe1cba",
+      "canonical_id": "arXiv:2601.03649",
+      "arxiv_id": "2601.03649",
+      "doi": "10.48550/arXiv.2601.03649",
+      "authors": [
+        "Gengyang Li",
+        "Wang Cai",
+        "Yifeng Gao",
+        "Yunfang Wu"
+      ],
+      "priority": 113,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 10,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 113,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 279,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      }
+    },
+    {
+      "title": "Asynchronous Verified Semantic Caching for Tiered LLM Architectures",
+      "source_url": "https://arxiv.org/abs/2602.13165",
+      "year": 2026,
+      "published": "2026-02-13",
+      "venue": "EuroMLSys@EuroSys",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLMs) now sit in the critical path of search, assistance, and agentic workflows, making semantic caching essential for reducing inference cost and latency. Production deployments typically use a tiered static-dynamic design: a static cache of curated, offline-vetted responses mined from logs, backed by a dynamic cache populated online. In practice, both tiers are commonly governed by a single embedding similarity threshold, which induces a hard tradeoff: conservative thresholds miss safe reuse opportunities, while aggressive thresholds risk serving semantically incorrect responses. We introduce Krites, an asynchronous, LLM-judged caching policy that expands static coverage without changing serving decisions. On the critical path, Krites behaves exactly like a standard static-threshold policy. When the nearest static neighbor of the prompt falls just below the static threshold, Krites asynchronously invokes an LLM judge to verify whether the static response is acceptable for the new prompt. Approved matches are promoted into the dynamic cache, allowing future repeats and paraphrases to reuse curated static answers and expanding static reach over time. In oracle-based trace-driven simulations on conversational and search workloads, Krites increases the fraction of requests served with curated static answers (direct static hits plus verified promotions) by up to 2.4× on conversational traffic and 3.9× on search-style queries relative to tuned baselines, with unchanged critical-path latency for the request that triggered verification.",
+      "identifiers": [
+        "SemanticScholar:36da8b983358464fbea7d332a1af58add0be0fb3"
+      ],
+      "semantic_scholar_id": "36da8b983358464fbea7d332a1af58add0be0fb3",
+      "canonical_id": "arXiv:2602.13165",
+      "arxiv_id": "2602.13165",
+      "doi": "10.1145/3805621.3807627",
+      "authors": [
+        "Asmita Singh",
+        "Haozhe Wang",
+        "Laxmi Naga Santosh Attaluri",
+        "T. Chiam",
+        "Weihua Zhu"
+      ],
+      "priority": 113,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 10,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 113,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 242,
+        "matched_prestigious_venue": "EuroSys"
+      }
+    },
+    {
+      "title": "ClawMobile: Rethinking Smartphone-Native Agentic Systems",
+      "source_url": "https://arxiv.org/abs/2602.22942",
+      "year": 2026,
+      "published": "2026-02-26",
+      "venue": "EuroMLSys@EuroSys",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Smartphones represent a uniquely challenging environment for agentic systems. Unlike cloud or desktop settings, mobile devices combine constrained execution contexts, fragmented control interfaces, and rapidly changing application states. As large language models (LLMs) evolve from conversational assistants to action-oriented agents, achieving reliable smartphone-native autonomy requires rethinking how reasoning and control are composed. We introduce ClawMobile as a concrete exploration of this design space. ClawMobile adopts a hierarchical architecture that separates high-level language reasoning from structured, deterministic control pathways, improving execution stability and reproducibility on real devices. Using ClawMobile as a case study, we distill the design principles for mobile LLM runtimes and identify key challenges in efficiency, adaptability, and stability. We argue that building robust smartphone-native agentic systems demands principled coordination between probabilistic planning and deterministic system interfaces. The implementation is open-sourced 1 to facilitate future exploration.",
+      "identifiers": [
+        "SemanticScholar:16eb39ea21ab89b67ca5823351a10543294c266d"
+      ],
+      "semantic_scholar_id": "16eb39ea21ab89b67ca5823351a10543294c266d",
+      "canonical_id": "arXiv:2602.22942",
+      "arxiv_id": "2602.22942",
+      "doi": "10.1145/3805621.3807655",
+      "authors": [
+        "Hongchao Du",
+        "Shang-Yu Wu",
+        "Qiao Li",
+        "Riwei Pan",
+        "Jinheng Li",
+        "You-Cheng Sun",
+        "Chun Jason Xue"
+      ],
+      "priority": 113,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 10,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 113,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 229,
+        "matched_prestigious_venue": "EuroSys"
+      }
+    },
+    {
+      "title": "Quantization-Aware Collaborative Inference for Large Embodied AI Models",
+      "source_url": "https://arxiv.org/abs/2602.13052",
+      "year": 2026,
+      "published": "2026-02-13",
+      "venue": "arXiv.org",
+      "citation_count": 12,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large artificial intelligence models (LAIMs) are increasingly regarded as a core intelligence engine for embodied AI applications. However, the massive parameter scale and computational demands of LAIMs pose significant challenges for resource-limited embodied agents. To address this issue, we investigate quantization-aware collaborative inference (co-inference) for embodied AI systems. First, we develop a tractable approximation for quantization-induced inference distortion. Based on this approximation, we derive lower and upper bounds on the quantization rate-inference distortion function, characterizing its dependence on LAIM statistics, including the quantization bit-width. Next, we formulate a joint quantization bit-width and computation frequency design problem under delay and energy constraints, aiming to minimize the distortion upper bound while ensuring tightness through the corresponding lower bound. Extensive evaluations validate the proposed distortion approximation, the derived rate-distortion bounds, and the effectiveness of the proposed joint design. Particularly, simulations and real-world testbed experiments demonstrate the effectiveness of the proposed joint design in balancing inference quality, latency, and energy consumption in edge embodied AI systems.",
+      "identifiers": [
+        "SemanticScholar:d164f06400ab8e204fa8fa0329379b9b5e215543"
+      ],
+      "semantic_scholar_id": "d164f06400ab8e204fa8fa0329379b9b5e215543",
+      "canonical_id": "arXiv:2602.13052",
+      "arxiv_id": "2602.13052",
+      "doi": "10.48550/arXiv.2602.13052",
+      "authors": [
+        "Zhonghao Lyu",
+        "Ming Xiao",
+        "Mikael Skoglund",
+        "M. Debbah",
+        "H. V. Poor"
+      ],
+      "priority": 112,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 12,
+        "citation_count": 12,
+        "total": 112,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 242,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "GenericAgent: A Token-Efficient Self-Evolving LLM Agent via Contextual Information Density Maximization (V1.0)",
+      "source_url": "https://arxiv.org/abs/2604.17091",
+      "year": 2026,
+      "published": "2026-04-18",
+      "venue": "arXiv.org",
+      "citation_count": 12,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Long-horizon large language model (LLM) agents are fundamentally limited by context. As interactions become longer, tool descriptions, retrieved memories, and raw environmental feedback accumulate and push out the information needed for decision-making. At the same time, useful experience gained from tasks is often lost across episodes. We argue that long-horizon performance is determined not by context length, but by how much decision-relevant information is maintained within a finite context budget. We present GenericAgent (GA), a general-purpose, self-evolving LLM agent system built around a single principle: context information density maximization. GA implements this through four closely connected components: a minimal atomic tool set that keeps the interface simple, a hierarchical on-demand memory that only shows a small high-level view by default, a self-evolution mechanism that turns verified past trajectories into reusable SOPs and executable code, and a context truncation and compression layer that maintains information density during long executions. Across task completion, tool use efficiency, memory effectiveness, self-evolution, and web browsing, GA consistently outperforms leading agent systems while using significantly fewer tokens and interactions, and it continues to evolve over time. Project: https://github.com/lsdefine/GenericAgent",
+      "identifiers": [
+        "SemanticScholar:fe7d2540488c131d292afcb27f2aeef09bf5298a"
+      ],
+      "semantic_scholar_id": "fe7d2540488c131d292afcb27f2aeef09bf5298a",
+      "canonical_id": "arXiv:2604.17091",
+      "arxiv_id": "2604.17091",
+      "doi": "10.48550/arXiv.2604.17091",
+      "authors": [
+        "Jiaqing Liang",
+        "Jinyi Han",
+        "Weijia Li",
+        "Xin-Yi Wang",
+        "Zhou Zhang",
+        "Zishang Jiang",
+        "Ying Liao",
+        "Ting-Wei Li",
+        "Ying Huang",
+        "Hao Shen",
+        "Hanyu Wu",
+        "Fang-Yu Guo",
+        "Keyi Wang",
+        "Z. Hong",
+        "Zhiyu Lu",
+        "Li-Ping Ma",
+        "Si-Hang Jiang",
+        "Yanghua Xiao"
+      ],
+      "priority": 112,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 12,
+        "citation_count": 12,
+        "total": 112,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 178,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "A Self-Evolving Framework for Efficient Terminal Agents via Observational Context Compression",
+      "source_url": "https://arxiv.org/abs/2604.19572",
+      "year": 2026,
+      "published": "2026-04-21",
+      "venue": "arXiv.org",
+      "citation_count": 12,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "As terminal agents scale to long-horizon, multi-turn workflows, a key bottleneck is not merely limited context length, but the accumulation of noisy terminal observations in the interaction history. Retaining raw observations preserves useful environment feedback, but also leads to context saturation and high token cost; conversely, naive compression may discard task-critical signals needed for subsequent actions. Because terminal environments are highly heterogeneous across repositories, commands, and execution states, heuristic-based or fixed-prompt compression methods are difficult to generalize. We propose TACO, a plug-and-play, training-free, self-evolving Terminal Agent Compression framework for existing terminal agents. TACO automatically discovers, refines, and reuses structured compression rules from interaction trajectories, enabling workflow-adaptive filtering of low-value terminal outputs while preserving task-relevant observations. Experiments on TerminalBench (TB 1.0 and TB 2.0) and four additional terminal-related benchmarks, including SWE-Bench Lite, CompileBench, DevEval, and CRUST-Bench, show that TACO consistently improves task performance and token efficiency across agent scaffolds and backbone models. On TerminalBench, TACO yields 1%-4% accuracy gains across strong agentic models and improves accuracy by around 2%-3% under the same token budget. On additional terminal-related benchmarks, it reduces total token consumption while maintaining or improving task success rates. These results suggest that self-evolving, workflow-adaptive observation compression is an effective path toward more reliable and efficient long-horizon terminal agents. The code is publicly available at https://github.com/multimodal-art-projection/TACO.",
+      "identifiers": [
+        "SemanticScholar:05be28a0d815ce1f815a706b39ae6805c9ad363b"
+      ],
+      "semantic_scholar_id": "05be28a0d815ce1f815a706b39ae6805c9ad363b",
+      "canonical_id": "arXiv:2604.19572",
+      "arxiv_id": "2604.19572",
+      "doi": "10.48550/arXiv.2604.19572",
+      "authors": [
+        "Jin-Cheng Ren",
+        "Siwei Wu",
+        "Yi-Zhi Li",
+        "Kang Zhu",
+        "Shucai Xu",
+        "Bo-Yu Feng",
+        "Ru Yuan",
+        "Wei Zhang",
+        "R. Batista-Navarro",
+        "Jian Yang",
+        "Cheng-Hua Lin"
+      ],
+      "priority": 112,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 12,
+        "citation_count": 12,
+        "total": 112,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 175,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:DOI:10.1109/hpca68181.2026.11408564",
+      "identity_tokens": [
+        "id:DOI:10.1109/hpca68181.2026.11408564",
+        "id:SemanticScholar:c5ac30e30dedcfdf05afe6e4f5d4c3876b941192",
+        "title:ariadne adaptive uvm management for efficient gpu memory oversubscription",
+        "url:https://doi.org/10.1109/HPCA68181.2026.11408564"
+      ],
+      "record": {
+        "title": "ARIADNE: Adaptive UVM Management for Efficient GPU Memory Oversubscription",
+        "source_url": "https://doi.org/10.1109/HPCA68181.2026.11408564",
+        "year": 2026,
+        "published": "2026-01-31",
+        "venue": "International Symposium on High-Performance Computer Architecture",
+        "citation_count": 4,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Unified Virtual Memory (UVM) simplifies GPU programming and supports memory oversubscription, but suffers from severe performance degradation under high memory pressure due to page fault overhead and thrashing. Existing approaches such as prefetching, access counter-based migration, and dynamic Zero-copy offer limited benefits and often require hardware or compiler modifications, undermining UVM's portability and ease of deployment. We present ARIADNE, a runtime UVM management framework that preserves UVM's GPU memory abstraction while ensuring high and robust performance under memory oversubscription. ARIADNE is guided by three principles: (1) pipelined fault handling to hide migration latency, (2) Sharing Degree, a runtime metric that captures thread-level access locality without requiring hardware or compiler changes, to inform placement decisions, and (3) dynamic placement of memory regions between GPU memory and Zero-copy based on real-time access patterns. Implemented entirely within NVIDIA's UVM driver, ARIADNE requires no recompilation or hardware modifications and applies transparently to any executable or closed-source GPU UVM applications. Our experimental results show that ARIADNE delivers average speedups of $1.9 \\times, 5.0 \\times$, and $4.8 \\times$ over a state-of-the-art method at $\\text{1 3 0 \\%, ~} \\text{1 7 5 \\%}$, and 300 % oversubscription, respectively, while effectively preventing thrashing and maintaining near-linear performance scaling.",
+        "identifiers": [
+          "SemanticScholar:c5ac30e30dedcfdf05afe6e4f5d4c3876b941192"
+        ],
+        "semantic_scholar_id": "c5ac30e30dedcfdf05afe6e4f5d4c3876b941192",
+        "doi": "10.1109/HPCA68181.2026.11408564",
+        "canonical_id": "DOI:10.1109/HPCA68181.2026.11408564",
+        "authors": [
+          "Hyunkyu Shin",
+          "Seongtae Bang",
+          "Hyun-moon Park",
+          "Daehoon Kim"
+        ],
+        "priority": 114,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 10,
+          "citations": 4,
+          "citation_count": 4,
+          "total": 114,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 255,
+          "matched_prestigious_venue": "High-Performance Computer Architecture"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2601.02674",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2601.02674",
+        "id:SemanticScholar:da29b33362a3ade0553155f472175b917d40709d",
+        "id:arXiv:2601.02674",
+        "title:iterative structured pruning for large language models with multidomain calibration",
+        "url:https://arxiv.org/abs/2601.02674"
+      ],
+      "record": {
+        "title": "Iterative Structured Pruning for Large Language Models with Multi-Domain Calibration",
+        "source_url": "https://arxiv.org/abs/2601.02674",
+        "year": 2026,
+        "published": "2026-01-06",
+        "venue": "Conference of the European Chapter of the Association for Computational Linguistics",
+        "citation_count": 3,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large Language Models (LLMs) have achieved remarkable success across a wide spectrum of natural language processing tasks. However, their ever-growing scale introduces significant barriers to real-world deployment, including substantial computational overhead, memory footprint, and inference latency. While model pruning presents a viable solution to these challenges, existing unstructured pruning techniques often yield irregular sparsity patterns that necessitate specialized hardware or software support. In this work, we explore structured pruning, which eliminates entire architectural components and maintains compatibility with standard hardware accelerators. We introduce a novel structured pruning framework that leverages a hybrid multi-domain calibration set and an iterative calibration strategy to effectively identify and remove redundant channels. Extensive experiments on various models across diverse downstream tasks show that our approach achieves significant compression with minimal performance degradation.",
+        "identifiers": [
+          "SemanticScholar:da29b33362a3ade0553155f472175b917d40709d"
+        ],
+        "semantic_scholar_id": "da29b33362a3ade0553155f472175b917d40709d",
+        "canonical_id": "arXiv:2601.02674",
+        "arxiv_id": "2601.02674",
+        "doi": "10.48550/arXiv.2601.02674",
+        "authors": [
+          "Guang-Xin Wu",
+          "Hao Zhang",
+          "Zhibin Zhang",
+          "J. Guo",
+          "Xue-Qi Cheng"
+        ],
+        "priority": 113,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 10,
+          "citations": 3,
+          "citation_count": 3,
+          "total": 113,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 280,
+          "matched_prestigious_venue": "Association for Computational Linguistics"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2601.03649",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2601.03649",
+        "id:SemanticScholar:d730098a63807a6da6aabc9f066b74be0fbe1cba",
+        "id:arXiv:2601.03649",
+        "title:syncthink a trainingfree strategy to align inference termination with reasoning saturation",
+        "url:https://arxiv.org/abs/2601.03649"
+      ],
+      "record": {
+        "title": "SyncThink: A Training-Free Strategy to Align Inference Termination with Reasoning Saturation",
+        "source_url": "https://arxiv.org/abs/2601.03649",
+        "year": 2026,
+        "published": "2026-01-07",
+        "venue": "Annual Meeting of the Association for Computational Linguistics",
+        "citation_count": 3,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Chain-of-Thought (CoT) prompting improves reasoning but often produces long and redundant traces that substantially increase inference cost. We present SyncThink, a training-free and plug-and-play decoding method that reduces CoT overhead without modifying model weights. We find that answer tokens attend weakly to early reasoning and instead focus on the special token\"/think\", indicating an information bottleneck. Building on this observation, SyncThink monitors the model's own reasoning-transition signal and terminates reasoning. Experiments on GSM8K, MMLU, GPQA, and BBH across three DeepSeek-R1 distilled models show that SyncThink achieves 62.00 percent average Top-1 accuracy using 656 generated tokens and 28.68 s latency, compared to 61.22 percent, 2141 tokens, and 92.01 s for full CoT decoding. On long-horizon tasks such as GPQA, SyncThink can further yield up to +8.1 absolute accuracy by preventing over-thinking.",
+        "identifiers": [
+          "SemanticScholar:d730098a63807a6da6aabc9f066b74be0fbe1cba"
+        ],
+        "semantic_scholar_id": "d730098a63807a6da6aabc9f066b74be0fbe1cba",
+        "canonical_id": "arXiv:2601.03649",
+        "arxiv_id": "2601.03649",
+        "doi": "10.48550/arXiv.2601.03649",
+        "authors": [
+          "Gengyang Li",
+          "Wang Cai",
+          "Yifeng Gao",
+          "Yunfang Wu"
+        ],
+        "priority": 113,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 10,
+          "citations": 3,
+          "citation_count": 3,
+          "total": 113,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 279,
+          "matched_prestigious_venue": "Association for Computational Linguistics"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2602.13165",
+      "identity_tokens": [
+        "id:DOI:10.1145/3805621.3807627",
+        "id:SemanticScholar:36da8b983358464fbea7d332a1af58add0be0fb3",
+        "id:arXiv:2602.13165",
+        "title:asynchronous verified semantic caching for tiered llm architectures",
+        "url:https://arxiv.org/abs/2602.13165"
+      ],
+      "record": {
+        "title": "Asynchronous Verified Semantic Caching for Tiered LLM Architectures",
+        "source_url": "https://arxiv.org/abs/2602.13165",
+        "year": 2026,
+        "published": "2026-02-13",
+        "venue": "EuroMLSys@EuroSys",
+        "citation_count": 3,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large language models (LLMs) now sit in the critical path of search, assistance, and agentic workflows, making semantic caching essential for reducing inference cost and latency. Production deployments typically use a tiered static-dynamic design: a static cache of curated, offline-vetted responses mined from logs, backed by a dynamic cache populated online. In practice, both tiers are commonly governed by a single embedding similarity threshold, which induces a hard tradeoff: conservative thresholds miss safe reuse opportunities, while aggressive thresholds risk serving semantically incorrect responses. We introduce Krites, an asynchronous, LLM-judged caching policy that expands static coverage without changing serving decisions. On the critical path, Krites behaves exactly like a standard static-threshold policy. When the nearest static neighbor of the prompt falls just below the static threshold, Krites asynchronously invokes an LLM judge to verify whether the static response is acceptable for the new prompt. Approved matches are promoted into the dynamic cache, allowing future repeats and paraphrases to reuse curated static answers and expanding static reach over time. In oracle-based trace-driven simulations on conversational and search workloads, Krites increases the fraction of requests served with curated static answers (direct static hits plus verified promotions) by up to 2.4× on conversational traffic and 3.9× on search-style queries relative to tuned baselines, with unchanged critical-path latency for the request that triggered verification.",
+        "identifiers": [
+          "SemanticScholar:36da8b983358464fbea7d332a1af58add0be0fb3"
+        ],
+        "semantic_scholar_id": "36da8b983358464fbea7d332a1af58add0be0fb3",
+        "canonical_id": "arXiv:2602.13165",
+        "arxiv_id": "2602.13165",
+        "doi": "10.1145/3805621.3807627",
+        "authors": [
+          "Asmita Singh",
+          "Haozhe Wang",
+          "Laxmi Naga Santosh Attaluri",
+          "T. Chiam",
+          "Weihua Zhu"
+        ],
+        "priority": 113,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 10,
+          "citations": 3,
+          "citation_count": 3,
+          "total": 113,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 242,
+          "matched_prestigious_venue": "EuroSys"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2602.22942",
+      "identity_tokens": [
+        "id:DOI:10.1145/3805621.3807655",
+        "id:SemanticScholar:16eb39ea21ab89b67ca5823351a10543294c266d",
+        "id:arXiv:2602.22942",
+        "title:clawmobile rethinking smartphonenative agentic systems",
+        "url:https://arxiv.org/abs/2602.22942"
+      ],
+      "record": {
+        "title": "ClawMobile: Rethinking Smartphone-Native Agentic Systems",
+        "source_url": "https://arxiv.org/abs/2602.22942",
+        "year": 2026,
+        "published": "2026-02-26",
+        "venue": "EuroMLSys@EuroSys",
+        "citation_count": 3,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Smartphones represent a uniquely challenging environment for agentic systems. Unlike cloud or desktop settings, mobile devices combine constrained execution contexts, fragmented control interfaces, and rapidly changing application states. As large language models (LLMs) evolve from conversational assistants to action-oriented agents, achieving reliable smartphone-native autonomy requires rethinking how reasoning and control are composed. We introduce ClawMobile as a concrete exploration of this design space. ClawMobile adopts a hierarchical architecture that separates high-level language reasoning from structured, deterministic control pathways, improving execution stability and reproducibility on real devices. Using ClawMobile as a case study, we distill the design principles for mobile LLM runtimes and identify key challenges in efficiency, adaptability, and stability. We argue that building robust smartphone-native agentic systems demands principled coordination between probabilistic planning and deterministic system interfaces. The implementation is open-sourced 1 to facilitate future exploration.",
+        "identifiers": [
+          "SemanticScholar:16eb39ea21ab89b67ca5823351a10543294c266d"
+        ],
+        "semantic_scholar_id": "16eb39ea21ab89b67ca5823351a10543294c266d",
+        "canonical_id": "arXiv:2602.22942",
+        "arxiv_id": "2602.22942",
+        "doi": "10.1145/3805621.3807655",
+        "authors": [
+          "Hongchao Du",
+          "Shang-Yu Wu",
+          "Qiao Li",
+          "Riwei Pan",
+          "Jinheng Li",
+          "You-Cheng Sun",
+          "Chun Jason Xue"
+        ],
+        "priority": 113,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 10,
+          "citations": 3,
+          "citation_count": 3,
+          "total": 113,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 229,
+          "matched_prestigious_venue": "EuroSys"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2602.13052",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2602.13052",
+        "id:SemanticScholar:d164f06400ab8e204fa8fa0329379b9b5e215543",
+        "id:arXiv:2602.13052",
+        "title:quantizationaware collaborative inference for large embodied ai models",
+        "url:https://arxiv.org/abs/2602.13052"
+      ],
+      "record": {
+        "title": "Quantization-Aware Collaborative Inference for Large Embodied AI Models",
+        "source_url": "https://arxiv.org/abs/2602.13052",
+        "year": 2026,
+        "published": "2026-02-13",
+        "venue": "arXiv.org",
+        "citation_count": 12,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large artificial intelligence models (LAIMs) are increasingly regarded as a core intelligence engine for embodied AI applications. However, the massive parameter scale and computational demands of LAIMs pose significant challenges for resource-limited embodied agents. To address this issue, we investigate quantization-aware collaborative inference (co-inference) for embodied AI systems. First, we develop a tractable approximation for quantization-induced inference distortion. Based on this approximation, we derive lower and upper bounds on the quantization rate-inference distortion function, characterizing its dependence on LAIM statistics, including the quantization bit-width. Next, we formulate a joint quantization bit-width and computation frequency design problem under delay and energy constraints, aiming to minimize the distortion upper bound while ensuring tightness through the corresponding lower bound. Extensive evaluations validate the proposed distortion approximation, the derived rate-distortion bounds, and the effectiveness of the proposed joint design. Particularly, simulations and real-world testbed experiments demonstrate the effectiveness of the proposed joint design in balancing inference quality, latency, and energy consumption in edge embodied AI systems.",
+        "identifiers": [
+          "SemanticScholar:d164f06400ab8e204fa8fa0329379b9b5e215543"
+        ],
+        "semantic_scholar_id": "d164f06400ab8e204fa8fa0329379b9b5e215543",
+        "canonical_id": "arXiv:2602.13052",
+        "arxiv_id": "2602.13052",
+        "doi": "10.48550/arXiv.2602.13052",
+        "authors": [
+          "Zhonghao Lyu",
+          "Ming Xiao",
+          "Mikael Skoglund",
+          "M. Debbah",
+          "H. V. Poor"
+        ],
+        "priority": 112,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 12,
+          "citation_count": 12,
+          "total": 112,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 242,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2604.17091",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2604.17091",
+        "id:SemanticScholar:fe7d2540488c131d292afcb27f2aeef09bf5298a",
+        "id:arXiv:2604.17091",
+        "title:genericagent a tokenefficient selfevolving llm agent via contextual information density maximization v10",
+        "url:https://arxiv.org/abs/2604.17091"
+      ],
+      "record": {
+        "title": "GenericAgent: A Token-Efficient Self-Evolving LLM Agent via Contextual Information Density Maximization (V1.0)",
+        "source_url": "https://arxiv.org/abs/2604.17091",
+        "year": 2026,
+        "published": "2026-04-18",
+        "venue": "arXiv.org",
+        "citation_count": 12,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Long-horizon large language model (LLM) agents are fundamentally limited by context. As interactions become longer, tool descriptions, retrieved memories, and raw environmental feedback accumulate and push out the information needed for decision-making. At the same time, useful experience gained from tasks is often lost across episodes. We argue that long-horizon performance is determined not by context length, but by how much decision-relevant information is maintained within a finite context budget. We present GenericAgent (GA), a general-purpose, self-evolving LLM agent system built around a single principle: context information density maximization. GA implements this through four closely connected components: a minimal atomic tool set that keeps the interface simple, a hierarchical on-demand memory that only shows a small high-level view by default, a self-evolution mechanism that turns verified past trajectories into reusable SOPs and executable code, and a context truncation and compression layer that maintains information density during long executions. Across task completion, tool use efficiency, memory effectiveness, self-evolution, and web browsing, GA consistently outperforms leading agent systems while using significantly fewer tokens and interactions, and it continues to evolve over time. Project: https://github.com/lsdefine/GenericAgent",
+        "identifiers": [
+          "SemanticScholar:fe7d2540488c131d292afcb27f2aeef09bf5298a"
+        ],
+        "semantic_scholar_id": "fe7d2540488c131d292afcb27f2aeef09bf5298a",
+        "canonical_id": "arXiv:2604.17091",
+        "arxiv_id": "2604.17091",
+        "doi": "10.48550/arXiv.2604.17091",
+        "authors": [
+          "Jiaqing Liang",
+          "Jinyi Han",
+          "Weijia Li",
+          "Xin-Yi Wang",
+          "Zhou Zhang",
+          "Zishang Jiang",
+          "Ying Liao",
+          "Ting-Wei Li",
+          "Ying Huang",
+          "Hao Shen",
+          "Hanyu Wu",
+          "Fang-Yu Guo",
+          "Keyi Wang",
+          "Z. Hong",
+          "Zhiyu Lu",
+          "Li-Ping Ma",
+          "Si-Hang Jiang",
+          "Yanghua Xiao"
+        ],
+        "priority": 112,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 12,
+          "citation_count": 12,
+          "total": 112,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 178,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2604.19572",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2604.19572",
+        "id:SemanticScholar:05be28a0d815ce1f815a706b39ae6805c9ad363b",
+        "id:arXiv:2604.19572",
+        "title:a selfevolving framework for efficient terminal agents via observational context compression",
+        "url:https://arxiv.org/abs/2604.19572"
+      ],
+      "record": {
+        "title": "A Self-Evolving Framework for Efficient Terminal Agents via Observational Context Compression",
+        "source_url": "https://arxiv.org/abs/2604.19572",
+        "year": 2026,
+        "published": "2026-04-21",
+        "venue": "arXiv.org",
+        "citation_count": 12,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "As terminal agents scale to long-horizon, multi-turn workflows, a key bottleneck is not merely limited context length, but the accumulation of noisy terminal observations in the interaction history. Retaining raw observations preserves useful environment feedback, but also leads to context saturation and high token cost; conversely, naive compression may discard task-critical signals needed for subsequent actions. Because terminal environments are highly heterogeneous across repositories, commands, and execution states, heuristic-based or fixed-prompt compression methods are difficult to generalize. We propose TACO, a plug-and-play, training-free, self-evolving Terminal Agent Compression framework for existing terminal agents. TACO automatically discovers, refines, and reuses structured compression rules from interaction trajectories, enabling workflow-adaptive filtering of low-value terminal outputs while preserving task-relevant observations. Experiments on TerminalBench (TB 1.0 and TB 2.0) and four additional terminal-related benchmarks, including SWE-Bench Lite, CompileBench, DevEval, and CRUST-Bench, show that TACO consistently improves task performance and token efficiency across agent scaffolds and backbone models. On TerminalBench, TACO yields 1%-4% accuracy gains across strong agentic models and improves accuracy by around 2%-3% under the same token budget. On additional terminal-related benchmarks, it reduces total token consumption while maintaining or improving task success rates. These results suggest that self-evolving, workflow-adaptive observation compression is an effective path toward more reliable and efficient long-horizon terminal agents. The code is publicly available at https://github.com/multimodal-art-projection/TACO.",
+        "identifiers": [
+          "SemanticScholar:05be28a0d815ce1f815a706b39ae6805c9ad363b"
+        ],
+        "semantic_scholar_id": "05be28a0d815ce1f815a706b39ae6805c9ad363b",
+        "canonical_id": "arXiv:2604.19572",
+        "arxiv_id": "2604.19572",
+        "doi": "10.48550/arXiv.2604.19572",
+        "authors": [
+          "Jin-Cheng Ren",
+          "Siwei Wu",
+          "Yi-Zhi Li",
+          "Kang Zhu",
+          "Shucai Xu",
+          "Bo-Yu Feng",
+          "Ru Yuan",
+          "Wei Zhang",
+          "R. Batista-Navarro",
+          "Jian Yang",
+          "Cheng-Hua Lin"
+        ],
+        "priority": 112,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 12,
+          "citation_count": 12,
+          "total": 112,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 175,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:1707383f6d1ff2da2645c9f307ba9cc0b8c3c2f3cb8c27efc0500b59dd72cb61",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}
