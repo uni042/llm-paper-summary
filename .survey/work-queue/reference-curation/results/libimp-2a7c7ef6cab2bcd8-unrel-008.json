@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-2a7c7ef6cab2bcd8-unrel-008",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2406.05794",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2406.05794",
+    "identity_tokens": [
+      "SemanticScholar:755bf404a7e8a81df53172abd3fdb5ff8e31ecf3",
+      "arXiv:2406.05794"
+    ],
+    "reason": "The abstract focuses on QA answerability, relevance and interpretability; it does not report an inference-system efficiency mechanism.",
+    "first_checked_at": "2026-10-13T01:21:54+00:00",
+    "last_checked_at": "2026-10-13T01:21:54+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2310.04408-recomp-improving-retrieval-augmented-lms-with-compression-and-selective-.md"
+    ],
+    "title": "RE-RAG: Improving Open-Domain QA Performance and Interpretability with Relevance Estimator in Retrieval-Augmented Generation"
+  },
+  "processed_at": "2026-10-13T01:21:54+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-2a7c7ef6cab2",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

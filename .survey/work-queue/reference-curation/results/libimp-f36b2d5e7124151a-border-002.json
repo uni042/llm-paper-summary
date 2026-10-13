@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-f36b2d5e7124151a-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2601.01244",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2601.01244",
+    "identity_tokens": [
+      "SemanticScholar:c58db26fd120ca6407a74eba98ea7ea9d4195a4b",
+      "arXiv:2601.01244"
+    ],
+    "reason": "The abstract concerns a specific language-model adaptation/training recipe; efficiency of inference or serving is not established.",
+    "first_checked_at": "2026-10-13T01:21:59+00:00",
+    "last_checked_at": "2026-10-13T01:21:59+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Racka: Efficient Hungarian LLM Adaptation on Academic Infrastructure"
+  },
+  "processed_at": "2026-10-13T01:22:00+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f36b2d5e7124",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

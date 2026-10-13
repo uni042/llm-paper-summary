@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-13T00:49:49+00:00",
-  "record_count": 11656,
+  "updated_at": "2026-10-13T01:22:00+00:00",
+  "record_count": 11663,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -166792,6 +166792,111 @@
         "papers/inference/99-other-inference-systems/2023-2310.06839-longllmlingua-accelerating-and-enhancing-llms-in-long-context-scenarios-.md"
       ],
       "title": "Rank It, Then Ask It: Input Reranking for Maximizing the Performance of LLMs on Symmetric Tasks"
+    },
+    "arXiv:2504.05364": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2504.05364",
+      "identity_tokens": [
+        "SemanticScholar:6ad18cc60032205c26f4eeddb04f64abad56e8a4",
+        "arXiv:2504.05364"
+      ],
+      "reason": "The abstract evaluates efficient positional encodings for symbolic music generation; no connection to inference-system/runtime efficiency is stated.",
+      "first_checked_at": "2026-10-13T01:21:54+00:00",
+      "last_checked_at": "2026-10-13T01:21:54+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md"
+      ],
+      "title": "Of All StrIPEs: Investigating Structure-Informed Positional Encoding for Efficient Music Generation"
+    },
+    "arXiv:2406.05794": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2406.05794",
+      "identity_tokens": [
+        "SemanticScholar:755bf404a7e8a81df53172abd3fdb5ff8e31ecf3",
+        "arXiv:2406.05794"
+      ],
+      "reason": "The abstract focuses on QA answerability, relevance and interpretability; it does not report an inference-system efficiency mechanism.",
+      "first_checked_at": "2026-10-13T01:21:54+00:00",
+      "last_checked_at": "2026-10-13T01:21:54+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2310.04408-recomp-improving-retrieval-augmented-lms-with-compression-and-selective-.md"
+      ],
+      "title": "RE-RAG: Improving Open-Domain QA Performance and Interpretability with Relevance Estimator in Retrieval-Augmented Generation"
+    },
+    "DOI:10.1109/aaiml67890.2026.11498105": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/aaiml67890.2026.11498105",
+      "identity_tokens": [
+        "DOI:10.1109/aaiml67890.2026.11498105",
+        "SemanticScholar:9eccacab4c6dcdd89ac65037b8fcdfd3a6d26a20"
+      ],
+      "reason": "Author-affiliated Centre Borelli publication record gives the exact title, venue and abstract. It describes embedding-space augmentation and fine-tuning for press-release generation quality, with no inference-system, serving, runtime, or resource-efficiency contribution.",
+      "first_checked_at": "2026-10-13T01:21:57+00:00",
+      "last_checked_at": "2026-10-13T01:21:57+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13245-gqa.md"
+      ],
+      "title": "Improving Thematic Balance in Press Release Generation with GMMs and Dimensionality Reduction"
+    },
+    "arXiv:2508.09586": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2508.09586",
+      "identity_tokens": [
+        "SemanticScholar:e4647a1e07d00250db2e1d3c3cf66105437fae7a",
+        "arXiv:2508.09586"
+      ],
+      "reason": "The abstract targets complex game/decision-making agents and reports task success, without a system-efficiency contribution.",
+      "first_checked_at": "2026-10-13T01:21:57+00:00",
+      "last_checked_at": "2026-10-13T01:21:57+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+      ],
+      "title": "EvoCurr: Self-evolving Curriculum with Behavior Code Generation for Complex Decision-making"
+    },
+    "DOI:10.30574/wjarr.2025.26.3.2491": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.30574/wjarr.2025.26.3.2491",
+      "identity_tokens": [
+        "DOI:10.30574/wjarr.2025.26.3.2491",
+        "SemanticScholar:19c579a6b5eb293f18cff937664dbd68b98c152e"
+      ],
+      "reason": "The journal publisher page gives the exact article title and abstract. It proposes an LLM-based fraud-detection application for social-engineering threats; no inference/runtime/serving optimization is described.",
+      "first_checked_at": "2026-10-13T01:21:58+00:00",
+      "last_checked_at": "2026-10-13T01:21:58+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md"
+      ],
+      "title": "Real-Time Fraud Detection Using Large Language Models: A Context-Aware System for Mitigating Social Engineering Threats"
+    },
+    "DOI:10.33480/jitk.v12i1.7963": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.33480/jitk.v12i1.7963",
+      "identity_tokens": [
+        "DOI:10.33480/jitk.v12i1.7963",
+        "SemanticScholar:a97afd1cbdf299e838be531346c04d7c94061839"
+      ],
+      "reason": "The publisher abstract describes structured pruning of SqueezeNet specifically for MRI brain-tumor classification in resource-constrained medical settings. It does not establish a connection to LLM inference systems or a general serving/runtime technique, so this application-specific CNN result is outside the survey scope.",
+      "first_checked_at": "2026-10-13T01:21:58+00:00",
+      "last_checked_at": "2026-10-13T01:21:58+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2204.00408-structured-pruning-learns-compact-and-accurate-models.md"
+      ],
+      "title": "EFFICIENT MRI-BASED BRAIN TUMOR CLASSIFICATION USING PRUNED SQUEEZENET ARCHITECTURE"
+    },
+    "arXiv:2602.23438": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.23438",
+      "identity_tokens": [
+        "SemanticScholar:3a7cc6605d0a75669885bc46b4c0cc3406d14e4b",
+        "arXiv:2602.23438"
+      ],
+      "reason": "The work concerns preference modeling and layout-generation quality, not inference-system efficiency.",
+      "first_checked_at": "2026-10-13T01:22:00+00:00",
+      "last_checked_at": "2026-10-13T01:22:00+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md"
+      ],
+      "title": "DesignSense: A Human Preference Dataset and Reward Modeling Framework for Graphic Layout Generation"
     }
   }
 }

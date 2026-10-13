@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-2a7c7ef6cab2bcd8-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2407.00809",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2407.00809",
+    "identity_tokens": [
+      "SemanticScholar:b3dbaa36fd1173ec0cdeec28f0ae1a3c74343574",
+      "arXiv:2407.00809"
+    ],
+    "reason": "KNO claims low-memory operator learning and fewer parameters, but its target is scientific operator learning rather than inference systems/serving.",
+    "first_checked_at": "2026-10-13T01:21:52+00:00",
+    "last_checked_at": "2026-10-13T01:21:52+00:00",
+    "linked_from": [
+      "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Kernel Neural Operators (KNOs) for Scalable, Memory-efficient, Geometrically-flexible Operator Learning"
+  },
+  "processed_at": "2026-10-13T01:21:53+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-2a7c7ef6cab2",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

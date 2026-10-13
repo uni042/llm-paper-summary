@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-af97812faa74ab2f-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2508.09586",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2508.09586",
+    "identity_tokens": [
+      "SemanticScholar:e4647a1e07d00250db2e1d3c3cf66105437fae7a",
+      "arXiv:2508.09586"
+    ],
+    "reason": "The abstract targets complex game/decision-making agents and reports task success, without a system-efficiency contribution.",
+    "first_checked_at": "2026-10-13T01:21:57+00:00",
+    "last_checked_at": "2026-10-13T01:21:57+00:00",
+    "linked_from": [
+      "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+    ],
+    "title": "EvoCurr: Self-evolving Curriculum with Behavior Code Generation for Complex Decision-making"
+  },
+  "processed_at": "2026-10-13T01:21:58+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-af97812faa74",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
