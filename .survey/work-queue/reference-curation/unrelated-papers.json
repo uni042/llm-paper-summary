@@ -2,7 +2,7 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-13T10:44:17+00:00",
+  "updated_at": "2026-10-13T10:45:30+00:00",
   "record_count": 11765,
   "records": {
     "arXiv:2303.08774": {
@@ -28902,9 +28902,9 @@
         "arXiv:2402.12289",
         "semanticscholar:758c2dc290c037a6f211ec503beee70abe2d1197"
       ],
-      "reason": "一次要旨で示される主な貢献は、自動運転の複雑な交通状況を視覚言語モデルで記述・分析し、階層的な運転計画へつなぐDriveVLMと、従来の自動運転パイプラインを組み合わせるDriveVLM-Dualである。実車・nuScenes等での運転理解と計画の有効性が評価対象であり、LLM推論のGPUカーネル、実行時メモリ、量子化、サービング基盤の改善が主貢献ではない。計算負荷への言及はあるが、サーベイの推論システム技術への直接的寄与を一次要旨から確認できないため対象外。",
+      "reason": "一次要旨では、都市の複雑な運転場面の理解・階層計画に視覚言語モデルを組み込み、従来の自動運転系と融合するDriveVLM-Dualを実車とnuScenes/SUP-ADで検証する。モデルの計算負荷にも触れるが、最終成果は自動運転の知覚・計画・実車動作であり、一般的なLLM推論カーネル、サービング、階層メモリ、MoEの効率化は研究対象ではない。",
       "first_checked_at": "2026-10-05T02:49:32+00:00",
-      "last_checked_at": "2026-10-12T14:50:11+00:00",
+      "last_checked_at": "2026-10-13T10:45:29+00:00",
       "linked_from": [],
       "title": "DriveVLM: The Convergence of Autonomous Driving and Large Vision-Language Models"
     },
@@ -164262,11 +164262,13 @@
       "classification": "unrelated",
       "canonical_id": "arXiv:2203.10314",
       "identity_tokens": [
-        "arXiv:2203.10314"
+        "arXiv:2203.10314",
+        "id:arXiv:2203.10314",
+        "url:https://arxiv.org/abs/2203.10314"
       ],
-      "reason": "タイトルで明示された研究対象は点群からの三次元物体検出であり、LLMの推論・サービング・効率的学習基盤や汎用注意カーネルの最適化ではない。Transformerという名称だけでは本サーベイのシステム対象とは認められないためタイトル段階で除外した。",
+      "reason": "一次要旨で対象は点群からの三次元物体検出と確認した。VoxSeTはボクセル内の点集合に潜在符号を介した二段の交差注意を適用し、KITTIとWaymoの検出性能を評価する。注意計算の線形化という一般的な技術要素はあるが、対象モデルは三次元知覚用であり、LLM推論・サービング・KVキャッシュ管理・MoE推論の技術貢献は示されないためunrelatedとする。",
       "first_checked_at": "2026-10-11T14:41:43+00:00",
-      "last_checked_at": "2026-10-12T14:56:00+00:00",
+      "last_checked_at": "2026-10-13T10:45:29+00:00",
       "linked_from": [],
       "title": "Voxel Set Transformer: A Set-to-Set Approach to 3D Object Detection from Point Clouds"
     },
@@ -165072,11 +165074,13 @@
       "classification": "unrelated",
       "canonical_id": "arXiv:2512.04678",
       "identity_tokens": [
-        "arXiv:2512.04678"
+        "arXiv:2512.04678",
+        "id:arXiv:2512.04678",
+        "url:https://arxiv.org/abs/2512.04678"
       ],
-      "reason": "拡散型動画生成モデルの長時間動画を対象に、EMAで更新する注意シンクと報酬付き分布整合蒸留を提案。H100上23.1 FPSの動画生成速度は報告されるが、主対象は動画拡散モデルの画質・動きの改善であり、LLMのトークン生成・サービング・KV管理ではない。",
+      "reason": "一次要旨で、EMA-Sinkによる過去動画フレームの集約と、動きの品質報酬を用いる分布一致蒸留により、単一H100で23.1 FPSのストリーミング動画生成を目指す研究と確認した。最終成果は動画拡散モデルの生成品質と映像フレーム速度であり、テキストLLMの復号、推論サービング、MoE、KVキャッシュ最適化の実証を含まないためunrelatedとする。",
       "first_checked_at": "2026-10-12T18:49:58+00:00",
-      "last_checked_at": "2026-10-12T18:49:58+00:00",
+      "last_checked_at": "2026-10-13T10:45:30+00:00",
       "linked_from": [],
       "title": "Reward Forcing: Efficient Streaming Video Generation with Rewarded Distribution Matching Distillation"
     },

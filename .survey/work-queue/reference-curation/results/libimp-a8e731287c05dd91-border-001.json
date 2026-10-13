@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a8e731287c05dd91-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2411.17465",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2411.17465",
+    "identity_tokens": [
+      "DOI:10.1109/cvpr52734.2025.01816",
+      "arXiv:2411.17465",
+      "id:arXiv:2411.17465",
+      "semanticscholar:02128b757f31f1385c9b839201783ceae5cd2088",
+      "url:https://arxiv.org/abs/2411.17465"
+    ],
+    "reason": "一次要旨では、GUIスクリーンショットを接続グラフと見なす視覚トークン選択で冗長トークンを33%削減し、1.4倍の処理高速化を報告する。一方、研究の主対象はGUIエージェントの視覚位置特定と操作学習であり、報告された効率化もGUI固有の入力構造と訓練設定に強く依存する。一般LLM推論基盤への直接的な貢献は限定的だが、視覚トークン削減は推論効率にも接続し得るためborderlineとする。",
+    "first_checked_at": "2026-10-11T03:46:34+00:00",
+    "last_checked_at": "2026-10-13T10:45:30+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "ShowUI: One Vision-Language-Action Model for GUI Visual Agent"
+  },
+  "processed_at": "2026-10-13T10:45:30+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a8e731287c05",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-13T10:44:17+00:00",
-  "record_count": 4850,
+  "updated_at": "2026-10-13T10:45:30+00:00",
+  "record_count": 4851,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -70631,11 +70631,13 @@
       "identity_tokens": [
         "DOI:10.1109/cvpr52734.2025.01816",
         "arXiv:2411.17465",
-        "semanticscholar:02128b757f31f1385c9b839201783ceae5cd2088"
+        "id:arXiv:2411.17465",
+        "semanticscholar:02128b757f31f1385c9b839201783ceae5cd2088",
+        "url:https://arxiv.org/abs/2411.17465"
       ],
-      "reason": "一次要旨の主目的は画面画像を理解して操作するGUI視覚エージェントの構築で、画面要素の接続グラフに基づく視覚トークン選択、視覚・言語・行動履歴の混在系列、指示追従データの整備を提案する。トークン選択により冗長な視覚トークン33%削減、学習時1.4倍の高速化を報告するため効率化の技術要素はあるが、主要評価は画面上の対象位置特定・GUI操作であり、LLM汎用推論ランタイムやGPUサービング性能の独立した寄与は要旨から確定できない。効率面の関連性を残して境界的とした。",
+      "reason": "一次要旨では、GUIスクリーンショットを接続グラフと見なす視覚トークン選択で冗長トークンを33%削減し、1.4倍の処理高速化を報告する。一方、研究の主対象はGUIエージェントの視覚位置特定と操作学習であり、報告された効率化もGUI固有の入力構造と訓練設定に強く依存する。一般LLM推論基盤への直接的な貢献は限定的だが、視覚トークン削減は推論効率にも接続し得るためborderlineとする。",
       "first_checked_at": "2026-10-11T03:46:34+00:00",
-      "last_checked_at": "2026-10-12T14:56:00+00:00",
+      "last_checked_at": "2026-10-13T10:45:30+00:00",
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "ShowUI: One Vision-Language-Action Model for GUI Visual Agent"
@@ -74256,6 +74258,21 @@
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "Step-unrolled Denoising Autoencoders for Text Generation"
+    },
+    "arXiv:2405.19209": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2405.19209",
+      "identity_tokens": [
+        "arXiv:2405.19209",
+        "id:arXiv:2405.19209",
+        "url:https://arxiv.org/abs/2405.19209"
+      ],
+      "reason": "一次要旨では、長時間動画から質問に関連するキーフレームを段階的に選び、複数粒度の木構造へ整理してLLMへ入力する。EgoSchemaとNExT-QAでは回答精度と推論時間の改善を報告するが、最終適用先は動画質問応答であり、汎用LLMの推論カーネル・KVキャッシュ・分散サービングを改善する機構は示していない。動画入力の削減という推論効率面には関連するため、完全な無関係ではなくborderlineとする。",
+      "first_checked_at": "2026-10-13T10:45:29+00:00",
+      "last_checked_at": "2026-10-13T10:45:29+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "VideoTree: Adaptive Tree-based Video Representation for LLM Reasoning on Long Videos"
     }
   }
 }
