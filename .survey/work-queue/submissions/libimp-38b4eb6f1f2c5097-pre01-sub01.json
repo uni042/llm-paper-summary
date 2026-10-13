@@ -1,0 +1,236 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "UniQL: Unified Quantization and Low-rank Compression for Adaptive Edge LLMs",
+      "source_url": "https://arxiv.org/abs/2512.03383",
+      "year": 2025,
+      "published": "2025-12-03",
+      "venue": "arXiv.org",
+      "citation_count": 6,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Deploying large language models (LLMs) on mobile platforms faces significant challenges due to the limited memory and shared computational resources of the device. Resource availability may be an issue as it is directly impacted by the current device workload, adding to the uncertainty of model deployment. We introduce UniQL, a unified post-training quantization and low-rank compression framework with on-device configurable pruning rates for edge LLMs. UniQL is a general framework that integrates quantization and low-rank compression for Transformers, State Space Models (SSMs), and hybrid models to support diverse edge applications. In our proposed joint framework, we introduce an efficient structured weight-sorting method that speeds up computation by 20x, quantization-aware singular value decomposition (SVD) to minimize quantization errors, state-aware weight sorting for SSMs, and a fused rotary positional embedding (RoPE) kernel for pruned models. Our framework performs weight-sorting, fine-tuning, and quantization in the cloud in a single-pass workflow, while enabling on-device configurable pruning rates up to 35%. Our experiments show that quantized and pruned models achieve a memory reduction of 4x-5.7x and a token-throughput improvement of 2.7x-3.4x, maintaining accuracy within 5% of the original models at 15% pruning across Transformers (Llama3 and Qwen2.5), SSMs (Mamba2), and hybrid models (Nemotron-H and Bamba-v2). The code and quantized models are available at: https://github.com/enyac-group/UniQL.",
+      "identifiers": [
+        "SemanticScholar:269f7ad57057c29ce92e766d5efb61deebefcbc2"
+      ],
+      "semantic_scholar_id": "269f7ad57057c29ce92e766d5efb61deebefcbc2",
+      "canonical_id": "arXiv:2512.03383",
+      "arxiv_id": "2512.03383",
+      "doi": "10.48550/arXiv.2512.03383",
+      "authors": [
+        "Hung-Yueh Chiang",
+        "Chi-Chih Chang",
+        "Yu-Chen Lu",
+        "Chien-Yu Lin",
+        "Kai-Chiang Wu",
+        "Mohamed S. Abdelfattah",
+        "Diana Marculescu"
+      ],
+      "priority": 106,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 6,
+        "citation_count": 6,
+        "total": 106,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 314,
+        "matched_prestigious_venue": null
+      },
+      "reason": "The abstract reports 4x–5.7x memory reduction and 2.7x–3.4x token-throughput gains for edge LLM deployment.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Parallel Token Prediction for Language Models",
+      "source_url": "https://arxiv.org/abs/2512.21323",
+      "year": 2025,
+      "published": "2025-12-24",
+      "venue": "arXiv.org",
+      "citation_count": 6,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Autoregressive decoding in language models is inherently slow, generating only one token per forward pass. We propose Parallel Token Prediction (PTP), a general-purpose framework for predicting multiple tokens in a single model call. PTP moves the source of randomness from post-hoc sampling to random input variables, making future tokens deterministic functions of those inputs and thus jointly predictable in a single forward pass. We prove that a single PTP call can represent arbitrary dependencies between tokens. PTP is trained by distilling an existing model or through inverse autoregressive training without a teacher. Experimentally, PTP achieves a 2.4x speedup on a diverse-task speculative decoding benchmark. We provide code and checkpoints at https://github.com/mandt-lab/ptp.",
+      "identifiers": [
+        "SemanticScholar:38c5addc6beec271b0001bc189ff47963fac1a44"
+      ],
+      "semantic_scholar_id": "38c5addc6beec271b0001bc189ff47963fac1a44",
+      "canonical_id": "arXiv:2512.21323",
+      "arxiv_id": "2512.21323",
+      "doi": "10.48550/arXiv.2512.21323",
+      "authors": [
+        "Felix Draxler",
+        "Justus C. Will",
+        "Farrin Marouf Sofian",
+        "Theofanis Karaletsos",
+        "Sameer Singh",
+        "Stephan Mandt"
+      ],
+      "priority": 106,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 6,
+        "citation_count": 6,
+        "total": 106,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 293,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Parallel token prediction reduces autoregressive forward passes and reports measured acceleration on speculative decoding.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Overcoming Joint Intractability with Lossless Hierarchical Speculative Decoding",
+      "source_url": "https://arxiv.org/abs/2601.05724",
+      "year": 2026,
+      "published": "2026-01-09",
+      "venue": "arXiv.org",
+      "citation_count": 6,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Verification is a key bottleneck in improving inference speed while maintaining distribution fidelity in Speculative Decoding. Recent work has shown that sequence-level verification leads to a higher number of accepted tokens compared to token-wise verification. However, existing solutions often rely on surrogate approximations or are constrained by partial information, struggling with joint intractability. In this work, we propose Hierarchical Speculative Decoding (HSD), a provably lossless verification method that significantly boosts the expected number of accepted tokens and overcomes joint intractability by balancing excess and deficient probability mass across accessible branches. Our extensive large-scale experiments demonstrate that HSD yields consistent improvements in acceptance rates across diverse model families and benchmarks. Moreover, its strong explainability and generality make it readily integrable into a wide range of speculative decoding frameworks. Notably, integrating HSD into EAGLE-3 yields over a 12% performance gain, establishing state-of-the-art decoding efficiency without compromising distribution fidelity. Code is available at https://github.com/ZhouYuxuanYX/Hierarchical-Speculative-Decoding.",
+      "identifiers": [
+        "SemanticScholar:b0a14b1ded47338ca71d55015319919e0378bbb7"
+      ],
+      "semantic_scholar_id": "b0a14b1ded47338ca71d55015319919e0378bbb7",
+      "canonical_id": "arXiv:2601.05724",
+      "arxiv_id": "2601.05724",
+      "doi": "10.48550/arXiv.2601.05724",
+      "authors": [
+        "Yuxuan Zhou",
+        "Fei Huang",
+        "Heng Li",
+        "Fengyi Wu",
+        "Tian-Yu Wang",
+        "Jian-Wei Zhang",
+        "Jun-Yang Lin",
+        "Zhi-Qi Cheng"
+      ],
+      "priority": 106,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 6,
+        "citation_count": 6,
+        "total": 106,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 277,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Hierarchical speculative verification directly raises accepted tokens and decoding efficiency while preserving the target distribution.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Scaling LLM Speculative Decoding: Non-Autoregressive Forecasting in Large-Batch Scenarios",
+      "source_url": "https://arxiv.org/abs/2511.20340",
+      "year": 2025,
+      "published": "2025-11-25",
+      "venue": "AAAI Conference on Artificial Intelligence",
+      "citation_count": 5,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Speculative decoding accelerates LLM inference by utilizing otherwise idle computational resources during memory-to-chip data transfer. Current speculative decoding methods typically assume a considerable amount of available computing power, then generate a complex and massive draft tree using a small autoregressive language model to improve overall prediction accuracy. However, methods like batching have been widely applied in mainstream model inference systems as a superior alternative to speculative decoding, as they compress the available idle computing power. Therefore, performing speculative decoding with low verification resources and low scheduling costs has become an important research problem. We believe that more capable models that allow for parallel generation on draft sequences are what we truly need. Recognizing the fundamental nature of draft models to only generate sequences of limited length, we propose SpecFormer, a novel architecture that integrates unidirectional and bidirectional attention mechanisms. SpecFormer combines the autoregressive model’s ability to extract information from the entire input sequence with the parallel generation benefits of non-autoregressive models. This design eliminates the reliance on large prefix trees and achieves consistent acceleration, even in large-batch scenarios. Through lossless speculative decoding experiments across models of various scales, we demonstrate that SpecFormer sets a new standard for scaling LLM inference with lower training demands and reduced computational costs.",
+      "identifiers": [
+        "SemanticScholar:e46fbef4246e9c45ab2f41913be5ebd6e15e7331"
+      ],
+      "semantic_scholar_id": "e46fbef4246e9c45ab2f41913be5ebd6e15e7331",
+      "canonical_id": "arXiv:2511.20340",
+      "arxiv_id": "2511.20340",
+      "doi": "10.48550/arXiv.2511.20340",
+      "authors": [
+        "Luo-He Shi",
+        "Z. Li",
+        "Le-Fei Zhang",
+        "Baoyuan Qi",
+        "Guoming Liu",
+        "Hai Zhao"
+      ],
+      "priority": 105,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 5,
+        "citation_count": 5,
+        "total": 105,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 322,
+        "matched_prestigious_venue": null
+      },
+      "reason": "The method directly accelerates LLM inference in large-batch settings and reduces computational costs.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Can Vision-Language Models Handle Long-Context Code? An Empirical Study on Visual Compression",
+      "source_url": "https://arxiv.org/abs/2602.00746",
+      "year": 2026,
+      "published": "2026-01-31",
+      "venue": "arXiv.org",
+      "citation_count": 5,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Models (LLMs) struggle with long-context code due to window limitations. Existing textual code compression methods mitigate this via selective filtering but often disrupt dependency closure, causing semantic fragmentation. To address this, we introduce LongCodeOCR, a visual compression framework that renders code into compressed two-dimensional image sequences for Vision-Language Models (VLMs). By preserving a global view, this approach avoids the dependency breakage inherent in filtering. We systematically evaluate LongCodeOCR against the state-of-the-art LongCodeZip across four benchmarks spanning code summarization, code question answering, and code completion. Our results demonstrate that visual code compression serves as a viable alternative for tasks requiring global understanding. At comparable compression ratios ($\\sim$1.7$\\times$), LongCodeOCR improves CompScore on Long Module Summarization by 36.85 points over LongCodeZip. At a 1M-token context length with Glyph (a specialized 9B VLM), LongCodeOCR maintains higher accuracy than LongCodeZip while operating at about 4$\\times$ higher compression. Moreover, compared with LongCodeZip, LongCodeOCR drastically reduces compression-stage overhead (reducing latency from $\\sim$4.3 hours to $\\sim$1 minute at 1M tokens). Finally, our results characterize a fundamental coverage--fidelity trade-off: visual code compression retains broader context coverage to support global dependencies, yet faces fidelity bottlenecks on exactness-critical tasks; by contrast, textual code compression preserves symbol-level precision while sacrificing structural coverage.",
+      "identifiers": [
+        "SemanticScholar:90f1cde40cef2fc5b8aa4ccfbc8e7f30a8d08216"
+      ],
+      "semantic_scholar_id": "90f1cde40cef2fc5b8aa4ccfbc8e7f30a8d08216",
+      "canonical_id": "arXiv:2602.00746",
+      "arxiv_id": "2602.00746",
+      "doi": "10.48550/arXiv.2602.00746",
+      "authors": [
+        "Jianping Zhong",
+        "Guo-Chang Li",
+        "Chen Zhi",
+        "Jun-Xiao Han",
+        "Zhen Qin",
+        "Xin-Kui Zhao",
+        "Nan Wang",
+        "Shui-Guang Deng",
+        "Jian-Wei Yin"
+      ],
+      "priority": 105,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 5,
+        "citation_count": 5,
+        "total": 105,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 255,
+        "matched_prestigious_venue": null
+      },
+      "reason": "The abstract presents a VLM long-context compression pipeline that reduces context/compression cost; retain for reading its inference-efficiency tradeoffs.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-38b4eb6f1f2c",
+    "round": "libimp-38b4eb6f1f2c5097-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 13,
+    "round_submission_count": 3,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-38b4eb6f1f2c5097-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-38b4eb6f1f2c5097-pre01.json",
+    "receipt": "sha256:a8b339f6599bf735163d34e39a094609bc6211b3e93b5e41a6b4b2b8ebc7897a"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-38b4eb6f1f2c",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

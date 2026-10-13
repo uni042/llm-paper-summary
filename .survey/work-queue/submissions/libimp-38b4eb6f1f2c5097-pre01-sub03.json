@@ -1,0 +1,149 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "TERMINATOR: Learning Optimal Exit Points for Early Stopping in Chain-of-Thought Reasoning",
+      "source_url": "https://arxiv.org/abs/2603.12529",
+      "year": 2026,
+      "published": "2026-03-13",
+      "venue": "arXiv.org",
+      "citation_count": 5,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Reasoning Models (LRMs) achieve impressive performance on complex reasoning tasks via Chain-of-Thought (CoT) reasoning, which enables them to generate intermediate thinking tokens before arriving at the final answer. However, LRMs often suffer from significant overthinking, spending excessive compute time even after the answer is generated early on. Prior work has identified the existence of an optimal reasoning length such that truncating reasoning at this point significantly shortens CoT outputs with virtually no change in performance. However, determining optimal CoT lengths for practical datasets is highly non-trivial as they are fully task and model-dependent. In this paper, we precisely address this and design Terminator, an early-exit strategy for LRMs at inference to mitigate overthinking. The central idea underpinning Terminator is that the first arrival of an LRM's final answer is often predictable, and we leverage these first answer positions to create a novel dataset of optimal reasoning lengths to train Terminator. Powered by this approach, Terminator achieves significant reductions in CoT lengths of 14%-55% on average across four challenging practical datasets: MATH-500, AIME 2025, HumanEval, and GPQA, while outperforming current state-of-the-art methods and reducing inference latency by more than 2x compared to the original LRM.",
+      "identifiers": [
+        "SemanticScholar:f2e5242a241a45fd89eb9216a66ed4f8c1571a1d"
+      ],
+      "semantic_scholar_id": "f2e5242a241a45fd89eb9216a66ed4f8c1571a1d",
+      "canonical_id": "arXiv:2603.12529",
+      "arxiv_id": "2603.12529",
+      "doi": "10.48550/arXiv.2603.12529",
+      "authors": [
+        "Alliot Nagle",
+        "Jakhongir Saydaliev",
+        "Dhia Garbaya",
+        "Michael Gastpar",
+        "A. Makkuva",
+        "Hyeji Kim"
+      ],
+      "priority": 105,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 5,
+        "citation_count": 5,
+        "total": 105,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 214,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Its learned early-exit policy reduces generated reasoning tokens and measured LRM inference latency.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "DIVERSED: Relaxed Speculative Decoding via Dynamic Ensemble Verification",
+      "source_url": "https://arxiv.org/abs/2604.07622",
+      "year": 2026,
+      "published": "2026-04-08",
+      "venue": "arXiv.org",
+      "citation_count": 5,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Speculative decoding is an effective technique for accelerating large language model inference by drafting multiple tokens in parallel. In practice, its speedup is often bottlenecked by a rigid verification step that strictly enforces the accepted token distribution to exactly match the target model. This constraint leads to the rejection of many plausible tokens, lowering the acceptance rate and limiting overall time speedup. To overcome this limitation, we propose Dynamic Verification Relaxed Speculative Decoding (DIVERSED), a relaxed verification framework that improves time efficiency while preserving generation quality. DIVERSED learns an ensemble-based verifier that blends the draft and target model distributions with a task-dependent and context-dependent weight. We provide theoretical justification for our approach and demonstrate empirically that DIVERSED achieves substantially higher inference efficiency compared to standard speculative decoding methods. Code is available at: https://github.com/comeusr/diversed.",
+      "identifiers": [
+        "SemanticScholar:7a76b93ad4a6b65e859efb434bfbcd01e9380025"
+      ],
+      "semantic_scholar_id": "7a76b93ad4a6b65e859efb434bfbcd01e9380025",
+      "canonical_id": "arXiv:2604.07622",
+      "arxiv_id": "2604.07622",
+      "doi": "10.48550/arXiv.2604.07622",
+      "authors": [
+        "Ziyi Wang",
+        "Siva Rajesh Kasa",
+        "S. AnkithM.",
+        "Santhosh Kumar Kasa",
+        "Jiaru Zou",
+        "Sumit Negi",
+        "Ruqi Zhang",
+        "Nan Jiang",
+        "Qi-Fan Song"
+      ],
+      "priority": 105,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 5,
+        "citation_count": 5,
+        "total": 105,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 188,
+        "matched_prestigious_venue": null
+      },
+      "reason": "The method directly improves LLM speculative verification and inference speed while preserving generation quality.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Improving Visual Token Reduction via Rectifying Distortions for Efficient Multimodal LLM Inference",
+      "source_url": "https://arxiv.org/abs/2606.01711",
+      "year": 2026,
+      "published": "2026-06-01",
+      "venue": "arXiv.org",
+      "citation_count": 5,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Recent advancements in Multimodal Large Language Models (MLLMs) have achieved remarkable success in vision-language tasks, yet the quadratic computational complexity arising from the vast number of visual tokens incurs significant memory and latency bottlenecks. While visual token reduction (VTR) strategies have been explored to mitigate this burden, existing methods overlook the positional and attentional consistency between the full and reduced sequences, resulting in a distorted representation. To this end, we propose RESTORE, a novel VTR framework that rectifies the positional and attentional distortions while maintaining efficiency. Specifically, we present a simple yet effective calibration method that restores lost visual attention by augmenting attention weights based on relative distances. We also introduce a distinctive anchor selection for token merging to mitigate information loss during feature averaging. Experimental results on multiple benchmarks demonstrate that our method consistently improves the accuracy of various reduction methods, achieving state-of-the-art performance while maintaining computational efficiency. Project page is available at https://cvlab.yonsei.ac.kr/projects/RESTORE",
+      "identifiers": [
+        "SemanticScholar:520ba8851fe0453ca99d42a77e51c62aa592821a"
+      ],
+      "semantic_scholar_id": "520ba8851fe0453ca99d42a77e51c62aa592821a",
+      "canonical_id": "arXiv:2606.01711",
+      "arxiv_id": "2606.01711",
+      "doi": "10.48550/arXiv.2606.01711",
+      "authors": [
+        "H. Cho",
+        "Donghyeon Baek",
+        "Yewon Kim",
+        "Bumsub Ham"
+      ],
+      "priority": 105,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 5,
+        "citation_count": 5,
+        "total": 105,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 134,
+        "matched_prestigious_venue": null
+      },
+      "reason": "The paper directly reduces visual-token attention cost in MLLM inference and reports maintained compute efficiency.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-38b4eb6f1f2c",
+    "round": "libimp-38b4eb6f1f2c5097-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 13,
+    "round_submission_count": 3,
+    "round_submission_index": 3,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-38b4eb6f1f2c5097-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-38b4eb6f1f2c5097-pre01.json",
+    "receipt": "sha256:a8b339f6599bf735163d34e39a094609bc6211b3e93b5e41a6b4b2b8ebc7897a"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-38b4eb6f1f2c",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

@@ -1,0 +1,236 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "A Comprehensive Study on Visual Token Redundancy for Discrete Diffusion-Based Multimodal Large Language Models",
+      "source_url": "https://arxiv.org/abs/2511.15098",
+      "year": 2025,
+      "published": "2025-11-19",
+      "venue": "2026 IEEE/CVF Conference on Computer Vision and Pattern Recognition- FINDINGS Track (CVPRF)",
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Discrete diffusion-based multimodal large language models (dMLLMs) have emerged as a promising alternative to autoregressive MLLMs thanks to their advantages in parallel decoding and bidirectional context modeling, but most existing dMLLMs incur significant computational overhead during inference due to the full-sequence attention computation in each denoising step. Pioneering studies attempt to resolve this issue from a modality-agnostic perspective via key-value cache optimization or efficient sampling but most of them overlook modality-specific visual token redundancy. In this work, we conduct a comprehensive study on how visual token redundancy evolves with different dMLLM architectures and tasks and how visual token pruning affects dMLLM responses and efficiency. Specifically, our study reveals that visual redundancy emerges only in from-scratch dMLLMs while handling long-answer tasks. In addition, we validate that visual token pruning introduces non-negligible information loss in dMLLMs and only from-scratch dM-LLMs can recover the lost information progressively during late denoising steps. Furthermore, our study shows that layer-skipping is promising for accelerating AR-to-diffusion dMLLMs, whereas progressive or late-step pruning is more effective for from-scratch dMLLMs. Overall, this work offers a new perspective on efficiency optimization for dM-LLMs, greatly advancing their applicability across various multimodal understanding tasks.",
+      "identifiers": [
+        "SemanticScholar:1781c5967acd82e7016e7091a6a2f88c2bffae55"
+      ],
+      "semantic_scholar_id": "1781c5967acd82e7016e7091a6a2f88c2bffae55",
+      "canonical_id": "arXiv:2511.15098",
+      "arxiv_id": "2511.15098",
+      "doi": "10.1109/CVPRF71909.2026.00275",
+      "authors": [
+        "Duo Li",
+        "Zuhao Yang",
+        "Xiao-Qin Zhang",
+        "Ling Shao",
+        "Shi-Jian Lu"
+      ],
+      "priority": 104,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 104,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 328,
+        "matched_prestigious_venue": null
+      },
+      "reason": "It evaluates inference-time acceleration methods for multimodal language models and identifies architecture-specific effective pruning strategies.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "gpu_ext: Extensible OS Policies for GPUs via eBPF",
+      "source_url": "https://arxiv.org/abs/2512.12615",
+      "year": 2025,
+      "published": "2025-12-14",
+      "venue": "arXiv.org",
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Performance in modern GPU-centric systems increasingly depends on resource management policies, including memory placement, scheduling, and observability. However, uniform policies typically yield suboptimal performance across diverse workloads. Existing approaches present a tradeoff: user-space runtimes provide programmability and flexibility but lack cross-tenant visibility and fine-grained control of hardware resources; meanwhile, modifications to the OS kernel introduce significant complexity and safety risks. To address this, we argue that the GPU driver and device layer should provide an extensible OS interface for policy enforcement. While the emerging eBPF technology shows potential, directly applying existing host-side eBPF is insufficient because they lack visibility and control into critical device-side events, and directly embedding policy code into GPU kernels could compromise safety and efficiency. We propose gpu_ext, an eBPF-based runtime that treats the GPU driver and device as a programmable OS subsystem. gpu_ext extends GPU drivers by exposing safe programmable hooks and introduces a device-side eBPF runtime capable of executing verified policy logic within GPU kernels, enabling coherent and transparent policies. Evaluation across realistic workloads including inference, training, and vector search demonstrates that gpu_ext improves throughput by up to 4.8x and reduces tail latency by up to 2x, incurring low overhead, without modifying or restarting applications",
+      "identifiers": [
+        "SemanticScholar:60d496724d1480d9a0bfa737e81a417493c19126"
+      ],
+      "semantic_scholar_id": "60d496724d1480d9a0bfa737e81a417493c19126",
+      "canonical_id": "arXiv:2512.12615",
+      "arxiv_id": "2512.12615",
+      "doi": "10.48550/arXiv.2512.12615",
+      "authors": [
+        "Yu-Sheng Zheng",
+        "Tong Yu",
+        "Yi-Wei Yang",
+        "Ming-Hui Jiang",
+        "Xiangyu Gao",
+        "Jian-Chang Su",
+        "Yan-Peng Hu",
+        "Wen-An Mao",
+        "Wei Zhang",
+        "Dan Williams",
+        "Andi Quinn"
+      ],
+      "priority": 104,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 104,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 303,
+        "matched_prestigious_venue": null
+      },
+      "reason": "This is GPU runtime/OS infrastructure with direct inference performance evidence, alongside training and vector-search workloads.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "MS-SSM: A Multi-Scale State Space Model for Efficient Sequence Modeling",
+      "source_url": "https://arxiv.org/abs/2512.23824",
+      "year": 2025,
+      "published": "2025-12-29",
+      "venue": "arXiv.org",
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "State-space models (SSMs) have recently attention as an efficient alternative to computationally expensive attention-based models for sequence modeling. They rely on linear recurrences to integrate information over time, enabling fast inference, parallelizable training, and control over recurrence stability. However, traditional SSMs often suffer from limited effective memory, requiring larger state sizes for improved recall. Moreover, existing SSMs struggle to capture multi-scale dependencies, which are essential for modeling complex structures in time series, images, and natural language. This paper introduces a multi-scale SSM framework that addresses these limitations by representing sequence dynamics across multiple resolution and processing each resolution with specialized state-space dynamics. By capturing both fine-grained, high-frequency patterns and coarse, global trends, MS-SSM enhances memory efficiency and long-range modeling. We further introduce an input-dependent scale-mixer, enabling dynamic information fusion across resolutions. The proposed approach significantly improves sequence modeling, particularly in long-range and hierarchical tasks, while maintaining computational efficiency. Extensive experiments on benchmarks, including Long Range Arena, hierarchical reasoning, time series classification, and image recognition, demonstrate that MS-SSM consistently outperforms prior SSM-based models, highlighting the benefits of multi-resolution processing in state-space architectures.",
+      "identifiers": [
+        "SemanticScholar:5d9d7798a3cd111112242d8079e2d07f1efc5a8a"
+      ],
+      "semantic_scholar_id": "5d9d7798a3cd111112242d8079e2d07f1efc5a8a",
+      "canonical_id": "arXiv:2512.23824",
+      "arxiv_id": "2512.23824",
+      "doi": "10.48550/arXiv.2512.23824",
+      "authors": [
+        "Mahdi Karami",
+        "Ali Behrouz",
+        "Pei-Lin Zhong",
+        "Razvan Pascanu",
+        "V. Mirrokni"
+      ],
+      "priority": 104,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 104,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 288,
+        "matched_prestigious_venue": null
+      },
+      "reason": "The paper proposes an efficient sequence-model architecture with explicit fast-inference and memory-efficiency motivation; retain as a broad foundational candidate.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Elastic Attention: Test-time Adaptive Sparsity Ratios for Efficient Transformers",
+      "source_url": "https://arxiv.org/abs/2601.17367",
+      "year": 2026,
+      "published": "2026-01-24",
+      "venue": "arXiv.org",
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The quadratic complexity of standard attention mechanisms poses a significant scalability bottleneck for large language models (LLMs) in long-context scenarios. While hybrid attention strategies that combine sparse and full attention within a single model offer a viable solution, they typically employ static computation ratios (i.e., fixed proportions of sparse versus full attention) and fail to adapt to the varying sparsity sensitivities of downstream tasks during inference. To address this issue, we propose Elastic Attention, which allows the model to dynamically adjust its overall sparsity based on the input. This is achieved by integrating a lightweight Attention Router into the existing pretrained model, which dynamically assigns each attention head to different computation modes. Within only 12 hours of training on 8xA800 GPUs, our method enables models to achieve both strong performance and efficient inference. Experiments across three long-context benchmarks on widely-used LLMs demonstrate the superiority of our method.",
+      "identifiers": [
+        "SemanticScholar:b7acb754d902bd3a5c950fb9a478c4a1f21dec6c"
+      ],
+      "semantic_scholar_id": "b7acb754d902bd3a5c950fb9a478c4a1f21dec6c",
+      "canonical_id": "arXiv:2601.17367",
+      "arxiv_id": "2601.17367",
+      "doi": "10.48550/arXiv.2601.17367",
+      "authors": [
+        "Zecheng Tang",
+        "Quantong Qiu",
+        "Yi Yang",
+        "Zhi Hong",
+        "Haiyan Xiang",
+        "Kebin Liu",
+        "Qing-Qing Dang",
+        "Jun-Tao Li",
+        "Min Zhang"
+      ],
+      "priority": 104,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 104,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 262,
+        "matched_prestigious_venue": null
+      },
+      "reason": "The router selects per-input attention computation modes to improve long-context Transformer inference efficiency.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Pruning as a Cooperative Game: Surrogate-Assisted Layer Contribution Estimation for Large Language Models",
+      "source_url": "https://arxiv.org/abs/2602.07804",
+      "year": 2026,
+      "published": "2026-02-08",
+      "venue": "arXiv.org",
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "While large language models (LLMs) demonstrate impressive performance across various tasks, their deployment in real-world scenarios is still constrained by high computational demands. Layer-wise pruning, a commonly employed strategy to mitigate inference costs, can partially address this challenge. However, existing approaches generally depend on static heuristic rules and fail to account for the interdependencies among layers, thereby limiting the effectiveness of the pruning process. To this end, this paper proposes a game-theoretic framework that formulates layer pruning as a cooperative game in which each layer acts as a player and model performance serves as the utility. As computing exact Shapley values is computationally infeasible for large language models (LLMs), we propose using a lightweight surrogate network to estimate layer-wise marginal contributions. This network can predict LLM performance for arbitrary layer combinations at a low computational cost. Additionally, we employ stratified Monte Carlo mask sampling to further reduce the cost of Sharpley value estimation. This approach captures inter-layer dependencies and dynamically identifies critical layers for pruning. Extensive experiments demonstrate the consistent superiority of our method in terms of perplexity and zero-shot accuracy, achieving more efficient and effective layer-wise pruning for large language models.",
+      "identifiers": [
+        "SemanticScholar:e9fa344321be864f4e4d36e377debd18f26d946c"
+      ],
+      "semantic_scholar_id": "e9fa344321be864f4e4d36e377debd18f26d946c",
+      "canonical_id": "arXiv:2602.07804",
+      "arxiv_id": "2602.07804",
+      "doi": "10.48550/arXiv.2602.07804",
+      "authors": [
+        "Xuan Ding",
+        "Pengyu Tong",
+        "Ran-Jie Duan",
+        "Yun-Jian Zhang",
+        "Rui Sun",
+        "Yao Zhu"
+      ],
+      "priority": 104,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 104,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 247,
+        "matched_prestigious_venue": null
+      },
+      "reason": "The method makes model pruning computationally tractable and targets reduction of LLM inference cost.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-1311e83e7be7",
+    "round": "libimp-1311e83e7be7c929-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 14,
+    "round_submission_count": 3,
+    "round_submission_index": 2,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-1311e83e7be7c929-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-1311e83e7be7c929-pre01.json",
+    "receipt": "sha256:99c01300b26fdfcb4549064adfe61bb0ef3e8e9a0910a3a8663b173ead9db817"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-1311e83e7be7",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

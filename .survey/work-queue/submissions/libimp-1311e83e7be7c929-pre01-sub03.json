@@ -1,0 +1,194 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "QUOKA: Query-Oriented KV Selection For Efficient LLM Prefill",
+      "source_url": "https://arxiv.org/abs/2602.08722",
+      "year": 2026,
+      "published": "2026-02-09",
+      "venue": "arXiv.org",
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "We present QUOKA: Query-oriented KV selection for efficient attention, a training-free and hardware agnostic sparse attention algorithm for accelerating transformer inference under chunked prefill. While many queries focus on a smaller group of keys in the attention operator, we observe that queries with low cosine similarity with respect to the mean query interact more strongly with more keys and have the greatest contribution to final attention logits. By prioritizing these low cosine similarity queries, the behavior of full attention during the prefill stage can be closely approximated. QUOKA leverages this observation, accelerating attention by (1) first retaining a small set of representative queries and (2) then subselectin the keys most aligned with those queries. Through experiments on Needle-In-A-Haystack, LongBench, RULER, and Math500, we show that, while realizing a 3x reduction in time-to-first-token, 5x speedup in attention on Nvidia GPUs and up to nearly a 7x speedup on Intel Xeon CPUs, QUOKA achieves near-baseline accuracy, utilizing 88% fewer key-value pairs per attention evaluation.",
+      "identifiers": [
+        "SemanticScholar:c703d8ded12a5b92f1608ef6da2e51fcab0e3187"
+      ],
+      "semantic_scholar_id": "c703d8ded12a5b92f1608ef6da2e51fcab0e3187",
+      "canonical_id": "arXiv:2602.08722",
+      "arxiv_id": "2602.08722",
+      "doi": "10.48550/arXiv.2602.08722",
+      "authors": [
+        "Dalton Jones",
+        "Junyoung Park",
+        "Matthew J. Morse",
+        "Min-Gu Lee",
+        "Christopher Lott",
+        "Harper Langston"
+      ],
+      "priority": 104,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 104,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 246,
+        "matched_prestigious_venue": null
+      },
+      "reason": "The method directly accelerates attention/prefill and reduces KV pairs while retaining near-baseline quality.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "HAWK: Head Importance-Aware Visual Token Pruning in Multimodal Models",
+      "source_url": "https://arxiv.org/abs/2604.07812",
+      "year": 2026,
+      "published": "2026-04-09",
+      "venue": "arXiv.org",
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "In multimodal large language models (MLLMs), the surge of visual tokens significantly increases the inference time and computational overhead, making them impractical for real-time or resource-constrained applications. Visual token pruning is a promising strategy for reducing the cost of MLLM inference by removing redundant visual tokens. Existing research usually assumes that all attention heads contribute equally to the visual interpretation. However, our study reveals that different heads may capture distinct visual semantics and inherently play distinct roles in visual processing. In light of this observation, we propose HAWK, a head importance-aware visual token pruning method that perceives the varying importance of attention heads in visual tasks to maximize the retention of crucial tokens. By leveraging head importance weights and text-guided attention to assess visual token significance, HAWK effectively retains task-relevant visual tokens while removing redundant ones. The proposed HAWK is entirely training-free and can be seamlessly applied to various MLLMs. Extensive experiments on multiple mainstream vision-language benchmarks demonstrate that HAWK achieves state-of-the-art accuracy. When applied to Qwen2.5-VL, HAWK retains 96.0% of the original accuracy after pruning 80.2% of the visual tokens. Additionally, it reduces end-to-end latency to 74.4% of the original and further decreases GPU memory usage across the tested models. The code is available at https://github.com/peppery77/HAWK.git.",
+      "identifiers": [
+        "SemanticScholar:3dde95b945f3fcb3b08abe6720c947b9277aa4ae"
+      ],
+      "semantic_scholar_id": "3dde95b945f3fcb3b08abe6720c947b9277aa4ae",
+      "canonical_id": "arXiv:2604.07812",
+      "arxiv_id": "2604.07812",
+      "doi": "10.48550/arXiv.2604.07812",
+      "authors": [
+        "Qi-Hui Zhu",
+        "Tao Zhang",
+        "Yucheng Wang",
+        "Zi-Jian Wen",
+        "Meng-Jie Zhang",
+        "Shuang Chen",
+        "Xiao-Bin Tan",
+        "Jian Yang",
+        "Yang Liu",
+        "Zhen-Hua Dong",
+        "Xianzhi Yu",
+        "Yi-Yu Pan"
+      ],
+      "priority": 104,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 104,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 187,
+        "matched_prestigious_venue": null
+      },
+      "reason": "The abstract reports token pruning for MLLM inference, retaining 96% accuracy after pruning 80.2% of visual tokens.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Memory-Bound but Not Bandwidth-Limited: The Physical AI Inference Gap in Batch-1 LLM Decode",
+      "source_url": "https://arxiv.org/abs/2605.30571",
+      "year": 2026,
+      "published": "2026-05-28",
+      "venue": "arXiv.org",
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Physical AI systems, including robots, autonomous vehicles, embodied agents and edge copilots, often run a different inference workload from cloud LLM serving: single-stream, batch-1 autoregressive decode, where one robot, camera feed or user session waits on the next token. This workload is usually described as memory-bandwidth-bound. Each decode step streams model weights and the active KV cache, so latency should scale with peak HBM bandwidth. We show that this account is true but incomplete. We measure batch-1 decode for three 7 to 8B-class GQA transformers across four NVIDIA GPUs: H100 SXM5, A100-80GB SXM4, L40S and L4. We evaluate context lengths from 2048 to 16384, producing 44 valid cells under a controlled bf16 SDPA setup. The achieved fraction of peak HBM bandwidth falls as peak bandwidth rises. On the headline Qwen-2.5-7B ctx=2048 cell, an L4 reaches roughly 81 percent of its analytic memory floor, while an H100 reaches only 27 percent. Physical-AI decode is memory-dominated, but faster memory does not translate into proportional latency gains. We test the missing term with a CUDA Graphs A/B experiment. On H100 at ctx=2048, CUDA Graphs improves decode latency by 1.259x across N=10 fresh sessions, with a 95 percent bootstrap confidence interval of 1.253 to 1.267. On L4, the same intervention gives only 1.028x. This isolates a launch-side overhead that becomes visible on fast GPUs but remains mostly hidden on slower, bandwidth-bound GPUs. The deployment implication is that memory savings matter only when the runtime realises them. On L4, bf16 decode sits close to the memory floor, but common quantised paths do not recover the expected 4x weight-traffic reduction: bnb-nf4 reaches 59.36 ms/step and AutoAWQ+Marlin reaches 45.24 ms/step from a 62.32 ms bf16 baseline. GPTQ+ExLlamaV2, with Ada-tuned int4 kernels, reaches 17.36 ms/step.",
+      "identifiers": [
+        "SemanticScholar:5640c581c22aac610469dda4e61e01b71540ba9c"
+      ],
+      "semantic_scholar_id": "5640c581c22aac610469dda4e61e01b71540ba9c",
+      "canonical_id": "arXiv:2605.30571",
+      "arxiv_id": "2605.30571",
+      "doi": "10.48550/arXiv.2605.30571",
+      "authors": [
+        "J. Chen"
+      ],
+      "priority": 104,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 104,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 138,
+        "matched_prestigious_venue": null
+      },
+      "reason": "This is a direct inference-performance measurement study of latency, memory bandwidth, runtime launch overhead, and quantization kernels.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "ThoughtFold: Folding Reasoning Chains via Introspective Preference Learning",
+      "source_url": "https://arxiv.org/abs/2606.03503",
+      "year": 2026,
+      "published": "2026-06-02",
+      "venue": "arXiv.org",
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Reasoning Models (LRMs) have achieved remarkable progress thanks to Reinforcement Learning with Verifiable Rewards (RLVR) on Chain-of-Thoughts (CoTs). However, since long CoTs naturally contain trial and errors and mainstream RLVR approaches choose outcome-correct CoT trajectories for memorization, the redundant explorations in long CoTs are inevitably reinforced, which results in the over-thinking issues of LRMs. Previous attempts to resolve this issue mainly give more advantage to shorter trajectories, yet their learning signals are still outcome-based and cannot reduce the memorization of redundant explorations in long CoTs. Therefore, we propose ThoughtFold, a framework that leverages fine-grained preference learning to mitigate redundant explorations for efficient reasoning. ThoughtFold employs an introspective strategy to identify redundancy within each correct trajectory, which yields a spectrum of candidate sub-trajectories. Leveraging this spectrum, we introduce a masked preference optimization objective that explicitly penalizes redundant explorations and encourages the model to directly bridge essential reasoning segments, effectively folding its reasoning chains into a more concise path. Extensive experiments show that ThoughtFold significantly enhances efficiency. It reduces the token usage of DeepSeek-R1-Distill-Qwen-7B by approximately 56% while maintaining state-of-the-art accuracy.",
+      "identifiers": [
+        "SemanticScholar:d477180af29b5183a1e410ba0579b843e9443a44"
+      ],
+      "semantic_scholar_id": "d477180af29b5183a1e410ba0579b843e9443a44",
+      "canonical_id": "arXiv:2606.03503",
+      "arxiv_id": "2606.03503",
+      "doi": "10.48550/arXiv.2606.03503",
+      "authors": [
+        "Ziyang Liu",
+        "Xueda Shen",
+        "Yuzhe Gu",
+        "Songyang Gao",
+        "Kui-Kun Liu",
+        "Guangran Cheng",
+        "Chengqi Lyu",
+        "Da-Hua Lin",
+        "Wen-Wei Zhang",
+        "Kai Chen"
+      ],
+      "priority": 104,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 104,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 133,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Reducing generated reasoning tokens lowers LLM inference computation and latency for reasoning models.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-1311e83e7be7",
+    "round": "libimp-1311e83e7be7c929-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 14,
+    "round_submission_count": 3,
+    "round_submission_index": 3,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-1311e83e7be7c929-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-1311e83e7be7c929-pre01.json",
+    "receipt": "sha256:99c01300b26fdfcb4549064adfe61bb0ef3e8e9a0910a3a8663b173ead9db817"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-1311e83e7be7",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

@@ -1,0 +1,229 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "MaverIQ: Fingerprint-Guided Extrapolation and Fragmentation-Aware Layering for Intent-Based LLM Serving",
+      "source_url": "https://doi.org/10.1145/3712285.3759867",
+      "year": 2025,
+      "published": "2025-11-15",
+      "venue": "International Conference on Software Composition",
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Models (LLMs) are becoming ubiquitous across industries, where applications demand they fulfill diverse user intents. However, developers currently face the challenge of manually exploring numerous deployment configurations—combinations of parallelism and compression techniques that impact resource usage, latency, cost, and accuracy—to meet these intents. Previous works automate configuration selection and deployment, but, they (a) rely on expensive profiling, and (b) suboptimally utilize the fragmented resource availability in multi-tenant GPU clusters, inflating operational costs for the provider. Moreover, none of these solutions tailors deployment configuration decisions to diverse user intents. We present MaverIQ, an LLM inference serving system that exposes an intuitive interface allowing users to express their intent (e.g., minimize latency, meet cost target). MaverIQ automatically translates the intent into the best configuration and deploys it on behalf of the user, while minimizing the operational cost for the provider. To reduce profiling costs, MaverIQ introduces and observes a compact proxy of the LLM, called fingerprint, under a few configurations, and uses novel analytical models to extrapolate the observed fingerprint data to the full LLM. To optimize the cost for the provider, we leverage our key observation that, unlike training, distributing LLM layers across GPUs in an uneven manner has little impact on the overall inference latency. Our novel deployment algorithm exploits this insight to enable MaverIQ to utilize the fragmented cluster resources. Through rigorous empirical evaluation, we show that MaverIQ reduces profiling cost by 7-15 × compared to state-of-the-art baselines. Lastly, across various LLMs, traces, and loads, MaverIQ best meets user intents while reducing operational cost for the provider by 3.8-8.3 ×. Our code is available at https://github.com/UT-SysML/MaverIQ.",
+      "identifiers": [
+        "SemanticScholar:c6dcea0a0ab4f13b68bff884174faa491aa58cdf"
+      ],
+      "semantic_scholar_id": "c6dcea0a0ab4f13b68bff884174faa491aa58cdf",
+      "doi": "10.1145/3712285.3759867",
+      "canonical_id": "DOI:10.1145/3712285.3759867",
+      "authors": [
+        "Dimitrios Liakopoulos",
+        "Prasoon Sinha",
+        "Tianrui Hu",
+        "Myungjin Lee",
+        "N. Yadwadkar"
+      ],
+      "priority": 104,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 104,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 332,
+        "matched_prestigious_venue": null
+      },
+      "reason": "The ACM abstract describes an inference-serving system that reduces profiling overhead and improves provider resource utilization.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "ADMM-Q: An Improved Hessian-based Weight Quantizer for Post-Training Quantization of Large Language Models",
+      "source_url": "https://arxiv.org/abs/2605.11222",
+      "year": 2026,
+      "published": "2026-05-11",
+      "venue": "arXiv.org",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Quantization is an effective strategy to reduce the storage and computation footprint of large language models (LLMs). Post-training quantization (PTQ) is a leading approach for compressing LLMs. Popular weight quantization procedures, including GPTQ and RTN, suffer in model utility, especially at aggressive quantization levels (sub-4-bit). We propose ADMM-Q, a novel weight quantization algorithm that considers the layer-wise quantization problem. Our algorithm is based on a combinatorial variant of the Alternating Direction Method of Multipliers (ADMM). Our operator-splitting procedure updates weights continuously to minimize the layer-wise reconstruction error, while gradually enforcing the quantization constraints with convergence guarantees. We propose additional algorithmic enhancements (e.g., penalty scheduling, preconditioning, and a local search post-processing step) to make ADMM-Q efficient at LLM scale. ADMM-Q is modular and can be used as a drop-in replacement for any weight quantizer within existing quantization pipelines: ADMM-Q is fully composable with existing techniques including range clipping, learned or random rotations, and activation scaling. Using ADMM-Q in place of GPTQ on Qwen3-8B, we decrease WikiText-2 perplexity in: (i) the W3A16 weight-only setting (12.85 $\\rightarrow$ 10.06); (ii) the W4A8 SmoothQuant procedure (9.29 $\\rightarrow$ 8.68); and (iii) the W2A4KV4 SpinQuant procedure (66.11 $\\rightarrow$ 19.42).",
+      "identifiers": [
+        "SemanticScholar:c05d94a1fec3f5e43d033f3a406cf3a1aed37827"
+      ],
+      "semantic_scholar_id": "c05d94a1fec3f5e43d033f3a406cf3a1aed37827",
+      "canonical_id": "arXiv:2605.11222",
+      "arxiv_id": "2605.11222",
+      "doi": "10.48550/arXiv.2605.11222",
+      "authors": [
+        "Ryan Lucas",
+        "Mehdi Makni",
+        "Xiang Meng",
+        "Adam Deng",
+        "R. Mazumder"
+      ],
+      "priority": 103,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 103,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 155,
+        "matched_prestigious_venue": null
+      },
+      "reason": "The method is a drop-in weight PTQ algorithm that improves language-model quality at low bit widths and reduces model storage/computation.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Search Your Block Floating Point Scales!",
+      "source_url": "https://arxiv.org/abs/2605.12464",
+      "year": 2026,
+      "published": "2026-05-12",
+      "venue": "arXiv.org",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Quantization has emerged as a standard technique for accelerating inference for generative models by enabling faster low-precision computations and reduced memory transfers. Recently, GPU accelerators have added first-class support for microscaling Block Floating Point (BFP) formats. Standard BFP algorithms use a fixed scale based on the maximum magnitude of the block. We observe that this scale choice can be suboptimal with respect to quantization errors. In this work, we propose ScaleSearch, an alternative strategy for selecting these scale factors: using a fine-grained search leveraging the mantissa bits in microscaling formats to minimize the quantization error for the given distribution. ScaleSearch can be integrated with existing quantization methods such as Post Training Quantization and low-precision attention, and is shown to improve their performance. Additionally, we introduce ScaleSearchAttention, an accelerated NVFP4-based attention algorithm, which uses ScaleSearch and adapted prior techniques to ensure near-0 performance loss for causal language modeling. Experiments show that ScaleSearch reduces quantization error by 27% for NVFP4 and improves language model PTQ by up to 15 points for MATH500 (Qwen3-8B), while ScaleSearchAttention improves Wikitext-2 PPL by upto 0.77 points for Llama 3.1 70B. The proposed methods closely match baseline performance while providing quantization accuracy improvements.",
+      "identifiers": [
+        "SemanticScholar:484049a6df531d2907d80018b348e37766351ed8"
+      ],
+      "semantic_scholar_id": "484049a6df531d2907d80018b348e37766351ed8",
+      "canonical_id": "arXiv:2605.12464",
+      "arxiv_id": "2605.12464",
+      "doi": "10.48550/arXiv.2605.12464",
+      "authors": [
+        "Tanmaey Gupta",
+        "Hayden Prairie",
+        "Xiao-Xia Wu",
+        "Reyna Abhyankar",
+        "Qing-Yang Wu",
+        "Austin Silveria",
+        "Pragaash Ponnusamy",
+        "Jue Wang",
+        "B. Athiwaratkun",
+        "Leon Song",
+        "Tri Dao",
+        "Daniel Y. Fu",
+        "Christopher De Sa"
+      ],
+      "priority": 103,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 103,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 154,
+        "matched_prestigious_venue": null
+      },
+      "reason": "The method directly improves low-precision attention and LLM post-training quantization performance.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "The Quantization Benefits of Residual-Free Transformers",
+      "source_url": "https://arxiv.org/abs/2605.25880",
+      "year": 2026,
+      "published": "2026-05-25",
+      "venue": "arXiv.org",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large-scale transformer training and deployment are increasingly constrained by the transfer of activations, gradients, and optimizer states across accelerators. Low-bit quantization offers a natural remedy, but transformer activations are often heavy-tailed and outlier-dominated, making simple quantization highly lossy. We show that this difficulty is not only a property of the quantizer, but also of the architecture. Specifically, residual connections can drive transformer activations away from Gaussianity during training. Using controlled comparisons between residual and residual-free transformers, we demonstrate that this effect leads to substantially higher quantization error and accuracy degradation at low precision in residual models. We explain the phenomenon through an excess kurtosis analysis, showing that residual mixing can amplify non-Gaussianity, whereas dense mixing in residual-free contracts non-Gaussianity. We then show that residual-free transformers can be made trainable using orthogonal initialization, spectral or second-order optimization, and depth-aware scaling of attention temperature. In language tasks, while there is a small drop in full precision performance, these models retain near-Gaussian activations and exhibit significantly improved robustness to low-bit quantization. Our results identify an accuracy--compressibility trade-off in transformer design and motivate architecture-level approaches to quantization-friendly foundation models.",
+      "identifiers": [
+        "SemanticScholar:18e2c8d38c9ab7fa29ee10bd809ccd84d75f8e7e"
+      ],
+      "semantic_scholar_id": "18e2c8d38c9ab7fa29ee10bd809ccd84d75f8e7e",
+      "canonical_id": "arXiv:2605.25880",
+      "arxiv_id": "2605.25880",
+      "doi": "10.48550/arXiv.2605.25880",
+      "authors": [
+        "Yi-Ping Ji",
+        "Mahalakshmi Sabanayagam",
+        "Peyman Moghadam",
+        "Hemanth Saratchandran",
+        "Simon Lucey"
+      ],
+      "priority": 103,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 103,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 141,
+        "matched_prestigious_venue": null
+      },
+      "reason": "The architecture-level quantization result supports lower-precision model execution and compression for language tasks.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "The Shape of Overthinking: Backtracking Bursts in Long Reasoning Traces",
+      "source_url": "https://arxiv.org/abs/2605.27965",
+      "year": 2026,
+      "published": "2026-05-27",
+      "venue": "arXiv.org",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Reasoning models often generate long traces in which useful self-correction and unproductive revision are hard to distinguish. We study this distinction through backtracking dynamics: local reconsideration, retraction, or re-derivation inside long-form reasoning traces. On 6{,}000 Qwen3-8B AIME traces, we annotate segment-level backtrack severity and analyze event timing, normalized depth, and local burst structure. We find that early isolated repair is often compatible with correct reasoning, whereas incorrect traces more often show moderate-to-severe backtracks that persist and cluster late. Cross-corpus checks show the same qualitative asymmetry across additional model/domain pairs. Filtering analyses instantiate the signal as a prefix-causal selective early-exit policy: at shallow and intermediate depths, burst-aware filtering outperforms fixed length-based filtering while using only prefix-available features. Moderate length cutoffs remain strong completed-trace baselines, but burst-aware control provides a deployable mechanism for separating recoverable repair from likely instability.",
+      "identifiers": [
+        "SemanticScholar:9004fac613cf9953db2a2828c7eadee7e995878d"
+      ],
+      "semantic_scholar_id": "9004fac613cf9953db2a2828c7eadee7e995878d",
+      "canonical_id": "arXiv:2605.27965",
+      "arxiv_id": "2605.27965",
+      "doi": "10.48550/arXiv.2605.27965",
+      "authors": [
+        "Navid Rezazadeh",
+        "Arash Gholami Davoodi"
+      ],
+      "priority": 103,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 103,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 139,
+        "matched_prestigious_venue": null
+      },
+      "reason": "The abstract develops a deployable inference-time control to reduce likely unproductive reasoning computation.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-f771880f8d1e",
+    "round": "libimp-f771880f8d1ee04e-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 7,
+    "round_submission_count": 2,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-f771880f8d1ee04e-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-f771880f8d1ee04e-pre01.json",
+    "receipt": "sha256:41a9616d4340b71673eea39b7b6673615dca03a232bc9504fcc86421628fc647"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-f771880f8d1e",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
