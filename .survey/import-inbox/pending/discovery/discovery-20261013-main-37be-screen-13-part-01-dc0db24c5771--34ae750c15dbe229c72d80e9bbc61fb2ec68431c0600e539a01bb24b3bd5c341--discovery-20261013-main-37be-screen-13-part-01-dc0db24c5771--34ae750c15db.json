@@ -1,0 +1,353 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-luna-primary-source-screen",
+  "run_key": "discovery-20261013-main-37be-screen-13-part-01-dc0db24c5771",
+  "reference_main_sha": "e699ad7669f4e244df841092797a27e73427969b",
+  "record_count": 20,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.3390/computers15100679",
+      "identity_tokens": [
+        "DOI:10.3390/computers15100679",
+        "SemanticScholar:e772fcb14896a3a329ff5a34dc22b4f41ba95764"
+      ],
+      "title": "Adaptation-Preserving Structured Pruning for Efficient Transfer Learning in Deep Neural Networks",
+      "reason": "MDPI issue page confirms title, DOI, authors and abstract opening; pruning is evaluated for model parameters/FLOPs and Raspberry Pi inference.",
+      "source_url": "https://www.mdpi.com/2073-431X/15/10",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T01:01:27Z",
+      "last_checked_at": "2026-10-13T01:05:50Z",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2107.00910-learned-token-pruning-for-transformers.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/HPEC55821.2022.9926390",
+      "identity_tokens": [
+        "DOI:10.1109/HPEC55821.2022.9926390",
+        "SemanticScholar:9160175e3cc86b4097635f8e4c4825b1aa869ded"
+      ],
+      "title": "DASH: Scheduling Deep Learning Workloads on Multi-Generational GPU-Accelerated Clusters",
+      "reason": "DASH is confirmed as an IEEE HPEC 2022 paper by the official HPEC proceedings contents and the IEEE page URL maps to document 9926390. The Xplore fetch returned a robot-verification page (JavaScript required), so no publisher abstract could be read; abstract mirror was not treated as primary evidence.",
+      "source_url": "https://ieeexplore.ieee.org/document/9926390/",
+      "body_check": "source_unavailable; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-10-13T01:14:22Z",
+      "last_checked_at": "2026-10-13T01:14:22Z",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2018-1806.03377-pipedream-generalized-pipeline-parallelism-for-dnn-training.md"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2405.19257",
+      "identity_tokens": [
+        "arXiv:2405.19257",
+        "SemanticScholar:a93e6fc397072ff739b921c2aa78bc726831108f"
+      ],
+      "title": "Hybrid-Parallel: Achieving High Performance and Energy Efficient Distributed Inference on Robots",
+      "reason": "Fine-grained local-operator parallelism overlaps computation and transmission to reduce inference time and energy on robotic IoT.",
+      "source_url": "https://arxiv.org/abs/2405.19257",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T01:01:27Z",
+      "last_checked_at": "2026-10-13T01:05:50Z",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2104.04473-efficient-large-scale-language-model-training-on-gpu-clusters-using-mega.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.14778/3665844.3665849",
+      "identity_tokens": [
+        "DOI:10.14778/3665844.3665849",
+        "SemanticScholar:20abd2883ba9aeb32cc8f09b9d1ec240d5b85bbb"
+      ],
+      "title": "SplitDF: Splitting Dataframes for Memory-Efficient Data Analysis",
+      "reason": "PVLDB paper targets dataframe memory usage (19\u201361% reduction), but the abstract limits the system to data-analysis libraries and does not connect it to inference/serving.",
+      "source_url": "https://www.vldb.org/pvldb/vol17/p2175-kakaraparthy.pdf",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T01:01:27Z",
+      "last_checked_at": "2026-10-13T01:05:50Z",
+      "linked_from": [
+        "papers/inference/15-inference-simulation-emulation/2017-1712.05889-ray-a-distributed-framework-for-emerging-ai-applications.md"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1109/TVLSI.2023.3300910",
+      "identity_tokens": [
+        "DOI:10.1109/TVLSI.2023.3300910",
+        "SemanticScholar:d567142e0e277a12e6b5a16e4babd4aab117f6f7"
+      ],
+      "title": "PeakEngine: A Deterministic On-the-Fly Pruning Neural Network Accelerator for Hearing Instruments",
+      "reason": "Author manuscript in DTU institutional repository carries the IEEE DOI and abstract; deterministic on-the-fly pruning reduces ASIC inference energy and latency for hearing devices.",
+      "source_url": "https://orbit.dtu.dk/files/338102633/PeakEngine_A_Deterministic_On-the-Fly_Pruning_Neural_Network_Accelerator_for_Hearing_Instruments.pdf",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T01:01:27Z",
+      "last_checked_at": "2026-10-13T01:05:50Z",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2012.09852-spatten-efficient-sparse-attention-architecture-with-cascade-token-and-head-pruning.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2407.00809",
+      "identity_tokens": [
+        "arXiv:2407.00809",
+        "SemanticScholar:b3dbaa36fd1173ec0cdeec28f0ae1a3c74343574"
+      ],
+      "title": "Kernel Neural Operators (KNOs) for Scalable, Memory-efficient, Geometrically-flexible Operator Learning",
+      "reason": "KNO claims low-memory operator learning and fewer parameters, but its target is scientific operator learning rather than inference systems/serving.",
+      "source_url": "https://arxiv.org/abs/2407.00809",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T01:01:27Z",
+      "last_checked_at": "2026-10-13T01:05:50Z",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2504.05364",
+      "identity_tokens": [
+        "arXiv:2504.05364",
+        "SemanticScholar:6ad18cc60032205c26f4eeddb04f64abad56e8a4"
+      ],
+      "title": "Of All StrIPEs: Investigating Structure-Informed Positional Encoding for Efficient Music Generation",
+      "reason": "The abstract evaluates efficient positional encodings for symbolic music generation; no connection to inference-system/runtime efficiency is stated.",
+      "source_url": "https://arxiv.org/abs/2504.05364",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T01:01:27Z",
+      "last_checked_at": "2026-10-13T01:05:50Z",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2506.08026",
+      "identity_tokens": [
+        "arXiv:2506.08026",
+        "SemanticScholar:78470575239e46b5a8a19ca11b425874c3083866"
+      ],
+      "title": "TIP-Search: Time-Predictable Inference Scheduling for Market Prediction under Uncertain Load",
+      "reason": "The method filters latency-quantile-feasible models and dispatches over finite workers to trade accuracy, queue pressure and deadline risk.",
+      "source_url": "https://arxiv.org/abs/2506.08026",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T01:01:27Z",
+      "last_checked_at": "2026-10-13T01:05:50Z",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2020-2006.02464-serving-dnns-like-clockwork-performance-predictability-from-the-bottom-u.md"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2509.19592",
+      "identity_tokens": [
+        "arXiv:2509.19592",
+        "SemanticScholar:508d758598b5adb2de6031ec6d5702caa8202c69"
+      ],
+      "title": "Frame-Stacked Local Transformers For Efficient Multi-Codebook Speech Generation",
+      "reason": "The paper compares autoregressive and MaskGIT local transformers for multicodebook speech decoding and reports deployment-oriented speed/quality tradeoffs.",
+      "source_url": "https://arxiv.org/abs/2509.19592",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T01:01:27Z",
+      "last_checked_at": "2026-10-13T01:05:50Z",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2410.00037-moshi-a-speech-text-foundation-model-for-real-time-dialogue.md"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1109/VLSID60093.2024.00044",
+      "identity_tokens": [
+        "DOI:10.1109/VLSID60093.2024.00044",
+        "SemanticScholar:2898cf98cf13cd95113138c78035b4a21dc3339d"
+      ],
+      "title": "HARVEST: Towards Efficient Sparse DNN Accelerators using Programmable Thresholds",
+      "reason": "The conference paper proposes activation/weight thresholds to reduce accelerator memory/compute energy and cycle count.",
+      "source_url": "https://openreview.net/forum?id=BFt0YYLXxO",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T01:01:27Z",
+      "last_checked_at": "2026-10-13T01:05:50Z",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2012.09852-spatten-efficient-sparse-attention-architecture-with-cascade-token-and-head-pruning.md"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2412.04786",
+      "identity_tokens": [
+        "arXiv:2412.04786",
+        "SemanticScholar:0a04d8dc47ba2ccba1ff4f5c4c221789c7ae3dc7"
+      ],
+      "title": "Slicing Vision Transformer for Flexible Inference",
+      "reason": "One trained ViT supplies subnets for changing resource constraints without changing the original structure.",
+      "source_url": "https://arxiv.org/abs/2412.04786",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T01:01:27Z",
+      "last_checked_at": "2026-10-13T01:05:50Z",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2310.07707-matformer-nested-transformer-for-elastic-inference.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/CAI68641.2026.11536420",
+      "identity_tokens": [
+        "DOI:10.1109/CAI68641.2026.11536420",
+        "SemanticScholar:1a1b04c6ceac892c35da623b9d91641fe569c034"
+      ],
+      "title": "The Evolution of Kubernetes Architecture for General-Purpose AI Systems (GPAIS)",
+      "reason": "The DOI and supplied title are listed for the 2026 IEEE Conference on Artificial Intelligence; Xplore abstract/document/11536420 remains inaccessible through the browser. The exact primary abstract was not retrieved, so relevance cannot be finalized from a third-party summary.",
+      "source_url": "https://ieeexplore.ieee.org/abstract/document/11536420",
+      "body_check": "source_unavailable; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-10-13T01:14:22Z",
+      "last_checked_at": "2026-10-13T01:14:22Z",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2104.04473-efficient-large-scale-language-model-training-on-gpu-clusters-using-mega.md"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2502.06982",
+      "identity_tokens": [
+        "arXiv:2502.06982",
+        "SemanticScholar:309ae8fb9be79207445c437841f186ba164bdd07"
+      ],
+      "title": "Machine Learning Fleet Efficiency: Analyzing and Optimizing Large-Scale Google TPU Systems with ML Productivity Goodput",
+      "reason": "ML Productivity Goodput measures and improves production accelerator-fleet efficiency across hardware, model, data, framework, compiler and scheduling layers.",
+      "source_url": "https://arxiv.org/abs/2502.06982",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T01:01:27Z",
+      "last_checked_at": "2026-10-13T01:05:50Z",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2017-1701.06538-outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts.md"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2509.21201",
+      "identity_tokens": [
+        "arXiv:2509.21201",
+        "SemanticScholar:fcdba534ac791f922a8f6941acc465db0b4bdd46"
+      ],
+      "title": "Hybrid RIS-Aided Digital Over-the-Air Computing for Edge AI Inference: Joint Feature Quantization and Active-Passive Beamforming Design",
+      "reason": "Quantized feature aggregation and joint communication/beamforming optimization target edge-AI inference under wireless constraints.",
+      "source_url": "https://arxiv.org/abs/2509.21201",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T01:01:27Z",
+      "last_checked_at": "2026-10-13T01:05:50Z",
+      "linked_from": [
+        "papers/inference/08-edge-on-device-llm-systems/2024-2407.18921-mobile-edge-intelligence-for-large-language-models-a-contemporary-survey.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/CLOUD53861.2021.00022",
+      "identity_tokens": [
+        "DOI:10.1109/CLOUD53861.2021.00022",
+        "SemanticScholar:a9b4082225da33ed9a91e474b3255ef77811bd1e"
+      ],
+      "title": "ChatCache: A Hierarchical Semantic Redundancy Cache System for Conversational Services at Edge",
+      "reason": "The official IEEE CLOUD 2021 program and IEEE Xplore document 9582161 route corroborate the title/venue; Xplore returned a JavaScript robot-verification page, leaving the primary abstract unread.",
+      "source_url": "https://ieeexplore.ieee.org/document/9582161/",
+      "body_check": "source_unavailable; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-10-13T01:14:22Z",
+      "last_checked_at": "2026-10-13T01:14:22Z",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1910.06188-q8bert-quantized-8bit-bert.md",
+        "papers/inference/99-other-inference-systems/2020-2005.14187-hat-hardware-aware-transformers-for-efficient-natural-language-processin.md"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1109/COINS69995.2026.11715604",
+      "identity_tokens": [
+        "DOI:10.1109/COINS69995.2026.11715604",
+        "SemanticScholar:68f789a62e8d2f3f63a12e800e12459f1fac10da"
+      ],
+      "title": "Energy and Area Efficient Systolic Accelerator for Sparse Neural Networks",
+      "reason": "IEEE Xplore abstract reports zero-skipping systolic hardware and lower energy/higher throughput for sparse DNN computation.",
+      "source_url": "https://ieeexplore.ieee.org/abstract/document/11715604",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T01:01:27Z",
+      "last_checked_at": "2026-10-13T01:05:50Z",
+      "linked_from": [
+        "papers/inference/15-inference-simulation-emulation/2020-2002.10941-a3-accelerating-attention-mechanisms-in-neural-networks-with-approximati.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/IJCNN64981.2025.11229295",
+      "identity_tokens": [
+        "DOI:10.1109/IJCNN64981.2025.11229295",
+        "SemanticScholar:a20cef8cbd3c19fe76db4f053ab81a833ced3980"
+      ],
+      "title": "HIM-RAG: A Heuristic Framework for Iterative Multi-Source Retrieval-Augmented Generation",
+      "reason": "The IJCNN 2025 proceedings contents and DOI metadata index confirm this title/DOI. IEEE Xplore abstract/document/11229295 returned HTTP 418; with the primary abstract unavailable, the fit of this RAG method to inference-system efficiency cannot be determined.",
+      "source_url": "https://ieeexplore.ieee.org/abstract/document/11229295",
+      "body_check": "source_unavailable; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-10-13T01:14:22Z",
+      "last_checked_at": "2026-10-13T01:14:22Z",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2212.10511-when-not-to-trust-language-models-investigating-effectiveness-of-paramet.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2406.05794",
+      "identity_tokens": [
+        "arXiv:2406.05794",
+        "SemanticScholar:755bf404a7e8a81df53172abd3fdb5ff8e31ecf3"
+      ],
+      "title": "RE-RAG: Improving Open-Domain QA Performance and Interpretability with Relevance Estimator in Retrieval-Augmented Generation",
+      "reason": "The abstract focuses on QA answerability, relevance and interpretability; it does not report an inference-system efficiency mechanism.",
+      "source_url": "https://arxiv.org/abs/2406.05794",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T01:01:27Z",
+      "last_checked_at": "2026-10-13T01:05:50Z",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2310.04408-recomp-improving-retrieval-augmented-lms-with-compression-and-selective-.md"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2604.14690",
+      "identity_tokens": [
+        "arXiv:2604.14690",
+        "SemanticScholar:90018989c04a09c0c4a6f0ef48e3b7da8f50aa14"
+      ],
+      "title": "Switching Efficiency: A Novel Framework for Dissecting AI Data Center Network Efficiency",
+      "reason": "The framework analyzes communication-efficiency bottlenecks in LLM-training data-center networks and design choices.",
+      "source_url": "https://arxiv.org/abs/2604.14690",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T01:01:27Z",
+      "last_checked_at": "2026-10-13T01:05:50Z",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2104.04473-efficient-large-scale-language-model-training-on-gpu-clusters-using-mega.md",
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2606.16896",
+      "identity_tokens": [
+        "arXiv:2606.16896",
+        "SemanticScholar:9d4bbfa56badc089ec197750bf23a74ec4f63b49"
+      ],
+      "title": "Neural dynamical systems on ferroelectric compute-in-memory for real-time forecasting",
+      "reason": "Ferroelectric compute-in-memory implementation reports real-time inference with sub-watt operation, lower area and per-layer latency.",
+      "source_url": "https://arxiv.org/abs/2606.16896",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T01:01:27Z",
+      "last_checked_at": "2026-10-13T01:05:50Z",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md",
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ]
+    }
+  ]
+}
