@@ -35,10 +35,15 @@
   "selection_reason": "AsyncFC overlaps LLM decoding with tool execution and parallelizes independent calls, reducing end-to-end agent latency without model changes.",
   "semantic_scholar_id": "199ef50b5e41f6528618919181b00be65a5fe989",
   "source_url": "https://arxiv.org/abs/2605.15077",
-  "status": "ready",
+  "status": "superseded",
   "title": "Concurrency without Model Changes: Future-based Asynchronous Function Calling for LLMs",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-10-13T13:12:08+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2026-2605.15077-concurrency-without-model-changes-future-based-asynchronous-function-cal.md",
+  "represented_canonical_id": "arXiv:2605.15077",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

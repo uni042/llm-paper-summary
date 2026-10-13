@@ -34,6 +34,8 @@ reference_main_sha: f71ec57a7acbc58980f67b7eba383cae9a2a9752
 references:
   - canonical_id: arXiv:1909.08053
     arxiv_id: '1909.08053'
+last_audited: null
+audit_version: 0
 ---
 
 # EnergyLens: Predictive Energy-Aware Exploration for Multi-GPU LLM Inference Optimization
