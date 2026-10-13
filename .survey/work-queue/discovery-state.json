@@ -1,8 +1,8 @@
 {
   "schema_version": 3,
-  "updated_at": "2026-10-13T20:51:00+00:00",
-  "last_run_key": "library-import-fcf28c0c07bf",
-  "last_round": "libimp-fcf28c0c07bf0478-pre01",
+  "updated_at": "2026-10-13T21:08:10+00:00",
+  "last_run_key": "library-import-66be87659e79",
+  "last_round": "libimp-66be87659e79f9cd-pre01",
   "paper_stock_zero_count": 3,
   "consecutive_empty_rounds": 0,
   "last_empty_round_reason": null,
@@ -10,84 +10,6 @@
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
   "history": [
-    {
-      "round_identity": "legacy:2026-09-19T16:00:00+09:00:specialist-agent-multimodal-6",
-      "precheck_request_id": null,
-      "run_key": "2026-09-19T16:00:00+09:00",
-      "round": "specialist-agent-multimodal-6",
-      "axis": "agentic serving・multimodal serving・stateful runtime",
-      "query_summary": "agentic/multi-turn servingとmultimodal servingを独立検索。Policy-Driven Runtime Layer、HeteroServe、AGENTSERVESIM、GoodServe、RPS/TCM-Serve等はcanonical identityで既知。security寄りAgenTEEは今回のinference performance survey主対象から外し、弱い候補で埋めなかった。",
-      "provider": null,
-      "source_url": null,
-      "citation_direction": null,
-      "seed_canonical_id": null,
-      "preload_id": null,
-      "candidate_count": 5,
-      "duplicate_filtered_count": 5,
-      "final_duplicate_filtered_count": 0,
-      "accepted_count": 0,
-      "accepted_canonical_ids": [],
-      "duplicate_canonical_ids": [
-        "arXiv:2605.27744",
-        "arXiv:2603.12707",
-        "arXiv:2606.09613",
-        "arXiv:2605.16867",
-        "arXiv:2603.26498"
-      ],
-      "next_axis_hint": "最後にspeculative decoding・deterministic inference・output-length predictionのsystems経路を確認する",
-      "source_submission": "work-queue/submissions/discovery/2026-09-19T16-00-00+09-00-specialist-agent-multimodal-6.json",
-      "source_submissions": [
-        "work-queue/submissions/discovery/2026-09-19T16-00-00+09-00-specialist-agent-multimodal-6.json"
-      ],
-      "round_submission_indices": [
-        1
-      ],
-      "round_submission_count": 1,
-      "round_accounted": true,
-      "novel_candidate_count": 0,
-      "post_final_dedupe_count": 0,
-      "duplicate_ratio": 1.0,
-      "final_duplicate_ratio": 0.0,
-      "round_complete": true
-    },
-    {
-      "round_identity": "legacy:2026-09-19T16:00:00+09:00:specialist-cpu-heterogeneous-10",
-      "precheck_request_id": null,
-      "run_key": "2026-09-19T16:00:00+09:00",
-      "round": "specialist-cpu-heterogeneous-10",
-      "axis": "CPU-only・CPU/GPU heterogeneous inference runtime",
-      "query_summary": "CPU-only/CPU-GPU heterogeneous inferenceを独立確認。HybridGen、ATSInfer、Cache-Resident LLM等はcanonical identityで既知。新規強候補なし。",
-      "provider": null,
-      "source_url": null,
-      "citation_direction": null,
-      "seed_canonical_id": null,
-      "preload_id": null,
-      "candidate_count": 3,
-      "duplicate_filtered_count": 3,
-      "final_duplicate_filtered_count": 0,
-      "accepted_count": 0,
-      "accepted_canonical_ids": [],
-      "duplicate_canonical_ids": [
-        "arXiv:2604.18529",
-        "arXiv:2607.10183",
-        "arXiv:2606.25353"
-      ],
-      "next_axis_hint": "energy/power-aware servingへ移る",
-      "source_submission": "work-queue/submissions/discovery/2026-09-19T16-00-00+09-00-specialist-cpu-heterogeneous-10.json",
-      "source_submissions": [
-        "work-queue/submissions/discovery/2026-09-19T16-00-00+09-00-specialist-cpu-heterogeneous-10.json"
-      ],
-      "round_submission_indices": [
-        1
-      ],
-      "round_submission_count": 1,
-      "round_accounted": true,
-      "novel_candidate_count": 0,
-      "post_final_dedupe_count": 0,
-      "duplicate_ratio": 1.0,
-      "final_duplicate_ratio": 0.0,
-      "round_complete": true
-    },
     {
       "round_identity": "legacy:2026-09-19T16:00:00+09:00:specialist-energy-saturation-11",
       "precheck_request_id": null,
@@ -13534,6 +13456,84 @@
       "duplicate_ratio": 0.7142857142857143,
       "final_duplicate_ratio": 0.0,
       "round_complete": true
+    },
+    {
+      "round_identity": "precheck:libimp-399fa6858b9f2860-pre01",
+      "precheck_request_id": "libimp-399fa6858b9f2860-pre01",
+      "run_key": "library-import-399fa6858b9f",
+      "round": "libimp-399fa6858b9f2860-pre01",
+      "axis": "library-candidate-intake",
+      "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。",
+      "provider": "candidate_id_lookup",
+      "source_url": "identifier://approved-public-apis",
+      "citation_direction": null,
+      "seed_canonical_id": null,
+      "preload_id": null,
+      "candidate_count": 15,
+      "duplicate_filtered_count": 10,
+      "final_duplicate_filtered_count": 0,
+      "accepted_count": 5,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": null,
+      "source_submission": "work-queue/submissions/libimp-399fa6858b9f2860-pre01-sub01.json",
+      "source_submissions": [
+        "work-queue/submissions/libimp-399fa6858b9f2860-pre01-sub01.json",
+        "work-queue/submissions/libimp-399fa6858b9f2860-pre01-sub02.json",
+        "work-queue/submissions/libimp-399fa6858b9f2860-pre01-sub03.json"
+      ],
+      "round_submission_indices": [
+        1,
+        2,
+        3
+      ],
+      "round_submission_count": 3,
+      "round_accounted": true,
+      "novel_candidate_count": 5,
+      "post_final_dedupe_count": 5,
+      "duplicate_ratio": 0.6666666666666666,
+      "final_duplicate_ratio": 0.0,
+      "round_complete": true
+    },
+    {
+      "round_identity": "precheck:libimp-66be87659e79f9cd-pre01",
+      "precheck_request_id": "libimp-66be87659e79f9cd-pre01",
+      "run_key": "library-import-66be87659e79",
+      "round": "libimp-66be87659e79f9cd-pre01",
+      "axis": "library-candidate-intake",
+      "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。",
+      "provider": "candidate_id_lookup",
+      "source_url": "identifier://approved-public-apis",
+      "citation_direction": null,
+      "seed_canonical_id": null,
+      "preload_id": null,
+      "candidate_count": 18,
+      "duplicate_filtered_count": 15,
+      "final_duplicate_filtered_count": 0,
+      "accepted_count": 3,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": null,
+      "source_submission": "work-queue/submissions/libimp-66be87659e79f9cd-pre01-sub01.json",
+      "source_submissions": [
+        "work-queue/submissions/libimp-66be87659e79f9cd-pre01-sub01.json",
+        "work-queue/submissions/libimp-66be87659e79f9cd-pre01-sub02.json",
+        "work-queue/submissions/libimp-66be87659e79f9cd-pre01-sub03.json",
+        "work-queue/submissions/libimp-66be87659e79f9cd-pre01-sub04.json"
+      ],
+      "round_submission_indices": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "round_submission_count": 4,
+      "round_accounted": true,
+      "novel_candidate_count": 3,
+      "post_final_dedupe_count": 3,
+      "duplicate_ratio": 0.8333333333333334,
+      "final_duplicate_ratio": 0.0,
+      "round_complete": true
     }
   ],
   "axes": {
@@ -21905,16 +21905,16 @@
       "next_axis_hint": "今回runで新着、storage/hierarchical memory、MoE、network/runtime、scheduling/kernel、agent/multimodal、speculative/length predictionを横断済み。次回は新着差分とforward/backward citationから再開する"
     },
     "library-candidate-intake": {
-      "last_run_key": "library-import-fcf28c0c07bf",
-      "rounds": 304,
-      "candidate_count": 1478,
-      "duplicate_filtered_count": 800,
-      "novel_candidate_count": 678,
+      "last_run_key": "library-import-66be87659e79",
+      "rounds": 306,
+      "candidate_count": 1511,
+      "duplicate_filtered_count": 825,
+      "novel_candidate_count": 686,
       "final_duplicate_filtered_count": 5,
-      "post_final_dedupe_count": 673,
-      "accepted_count": 673,
-      "duplicate_ratio": 0.5412719891745602,
-      "final_duplicate_ratio": 0.007374631268436578,
+      "post_final_dedupe_count": 681,
+      "accepted_count": 681,
+      "duplicate_ratio": 0.5459960291197882,
+      "final_duplicate_ratio": 0.007288629737609329,
       "next_axis_hint": null
     },
     "explicit-library-accept": {
