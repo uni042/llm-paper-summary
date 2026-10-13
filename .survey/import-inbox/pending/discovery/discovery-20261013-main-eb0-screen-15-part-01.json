@@ -1,0 +1,375 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-luna-primary-source-screen",
+  "run_key": "discovery-20261013-main-eb0-screen-15-part-01",
+  "reference_main_sha": "eb0ce45a4430a4fc960799506d8a51e94a772ec6",
+  "record_count": 20,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.3837/tiis.2021.03.006",
+      "identity_tokens": [
+        "DOI:10.3837/tiis.2021.03.006",
+        "SemanticScholar:0d5c5b7153495a88a8c5584f7171278aa166586b"
+      ],
+      "title": "Empirical Performance Evaluation of Communication Libraries for Multi-GPU based Distributed Deep Learning in a Container Environment",
+      "reason": "The paper evaluates distributed deep-learning communication stacks and reports large latency reductions from CUDA-aware OpenMPI and NCCL; this is directly about accelerator communication and runtime efficiency.",
+      "source_url": "https://scholarworks.sookmyung.ac.kr/item/87e3b56b-731b-4bd6-b84f-f2cf36119ab9",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T01:51:28+00:00",
+      "last_checked_at": "2026-10-13T01:51:28+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2018-1802.05799-horovod-fast-and-easy-distributed-deep-learning-in-tensorflow.md"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2405.14730",
+      "identity_tokens": [
+        "DOI:10.48550/arXiv.2405.14730",
+        "SemanticScholar:a3e8bf139e6c74dc1d5ec55b85ef856349eed09d",
+        "arXiv:2405.14730"
+      ],
+      "title": "Embedding Compression for Efficient Re-Identification",
+      "reason": "Embedding quantization, structured pruning, slicing, and low-rank representations reduce stored ReID embedding size by up to 96x. Although evaluated in an application domain, this is a direct memory/storage-efficiency technique.",
+      "source_url": "https://arxiv.org/abs/2405.14730",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T01:51:28+00:00",
+      "last_checked_at": "2026-10-13T01:51:28+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2023-2307.13304-quip-2-bit-quantization-of-large-language-models-with-guarantees.md",
+        "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2406.07475",
+      "identity_tokens": [
+        "DOI:10.48550/arXiv.2406.07475",
+        "DOI:10.48550/arxiv.2406.07475",
+        "SemanticScholar:00a1683e0adbd5e56aa4f83d49091c5542d29179",
+        "arXiv:2406.07475"
+      ],
+      "title": "Partially Observed Trajectory Inference using Optimal Transport and a Dynamics Prior",
+      "reason": "This is a trajectory-inference methodology using optimal transport and latent dynamics; the abstract gives no ML-serving or systems-efficiency contribution.",
+      "source_url": "https://arxiv.org/abs/2406.07475",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T01:51:28+00:00",
+      "last_checked_at": "2026-10-13T01:51:28+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2410.08289",
+      "identity_tokens": [
+        "DOI:10.48550/arXiv.2410.08289",
+        "SemanticScholar:f4dde304454f251a05836a745fb9d258dc399be9",
+        "arXiv:2410.08289"
+      ],
+      "title": "Increasing the Difficulty of Automatically Generated Questions via Reinforcement Learning with Synthetic Preference",
+      "reason": "The contribution is cost-effective domain dataset generation for cultural-heritage question answering, not AI inference or systems performance.",
+      "source_url": "https://arxiv.org/abs/2410.08289",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T01:51:28+00:00",
+      "last_checked_at": "2026-10-13T01:51:28+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2503.15838",
+      "identity_tokens": [
+        "DOI:10.1145/3744916.3773143",
+        "SemanticScholar:df47c135fe0b3122133e0caa9a9ab7418ba678cf",
+        "arXiv:2503.15838"
+      ],
+      "title": "Enhancing LLM Code Generation with Ensembles: A Similarity-Based Selection Approach",
+      "reason": "The method improves code-generation selection quality by sampling multiple candidates; its abstract reports no inference-cost or serving-efficiency result.",
+      "source_url": "https://arxiv.org/abs/2503.15838",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T01:51:28+00:00",
+      "last_checked_at": "2026-10-13T01:51:28+00:00",
+      "linked_from": [
+        "papers/inference/12-moe-parallelism-communication/2021-2101.03961-switch-transformers-scaling-to-trillion-parameter-models-with-simple-and.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.12667",
+      "identity_tokens": [
+        "DOI:10.48550/arXiv.2505.12667",
+        "SemanticScholar:f3fbaceeff1aad6883b8ca20f43e031440467416",
+        "arXiv:2505.12667"
+      ],
+      "title": "Safe-Sora: Safe Text-to-Video Generation via Graphical Watermarking",
+      "reason": "The contribution is watermarking and safety for generated video, rather than inference/runtime efficiency.",
+      "source_url": "https://arxiv.org/abs/2505.12667",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T01:51:28+00:00",
+      "last_checked_at": "2026-10-13T01:51:28+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md",
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2506.02279",
+      "identity_tokens": [
+        "DOI:10.48550/arXiv.2506.02279",
+        "SemanticScholar:34bf7f3428487cf408ab21dffd4601bc03047e7d",
+        "arXiv:2506.02279"
+      ],
+      "title": "ImpRAG: Retrieval-Augmented Generation with Implicit Queries",
+      "reason": "This is a plausible inference-serving RAG architecture change: it shares model parameters and a forward pass across retrieval/generation, although the abstract reports task quality rather than a measured speedup.",
+      "source_url": "https://arxiv.org/abs/2506.02279",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T01:51:28+00:00",
+      "last_checked_at": "2026-10-13T01:51:28+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13245-gqa.md"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2507.12988",
+      "identity_tokens": [
+        "DOI:10.1109/ICCV51701.2025.00473",
+        "SemanticScholar:f6339839803256fb091d553f5d349db98bf39ed1",
+        "arXiv:2507.12988"
+      ],
+      "title": "Variance-Based Pruning for Accelerating and Compressing Trained Networks",
+      "reason": "Structured one-shot pruning reduces compute, model size, and measured inference time with limited fine-tuning, a direct model deployment efficiency contribution.",
+      "source_url": "https://arxiv.org/abs/2507.12988",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T01:51:28+00:00",
+      "last_checked_at": "2026-10-13T01:51:28+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2404.02258-mixture-of-depths-dynamically-allocating-compute-in-transformer-based-la.md"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2508.01505",
+      "identity_tokens": [
+        "DOI:10.1109/DAC63849.2025.11132572",
+        "SemanticScholar:a64982e140034a7895c81cf8ff345c976a9330ab",
+        "arXiv:2508.01505"
+      ],
+      "title": "ESM: A Framework for Building Effective Surrogate Models for Hardware-Aware Neural Architecture Search",
+      "reason": "The framework builds efficient hardware-aware latency surrogate models and accounts for the cost of dataset/model generation, directly supporting hardware-conscious model selection.",
+      "source_url": "https://arxiv.org/abs/2508.01505",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T01:51:28+00:00",
+      "last_checked_at": "2026-10-13T01:51:28+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2005.14187-hat-hardware-aware-transformers-for-efficient-natural-language-processin.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2509.06155",
+      "identity_tokens": [
+        "DOI:10.48550/arXiv.2509.06155",
+        "SemanticScholar:5e63d8d16f358ef7b4af0f268bb1e53a2701e3dd",
+        "arXiv:2509.06155"
+      ],
+      "title": "UniVerse-1: Unified Audio-Video Generation via Stitching of Experts",
+      "reason": "The stated efficiency gain is avoiding training from scratch for audio-video model construction; this is a training-only efficiency contribution and the rest is generation quality.",
+      "source_url": "https://arxiv.org/abs/2509.06155",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T01:51:28+00:00",
+      "last_checked_at": "2026-10-13T01:51:28+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2503.20215-qwen2-5-omni-technical-report.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2509.06723",
+      "identity_tokens": [
+        "DOI:10.48550/arXiv.2509.06723",
+        "SemanticScholar:a00ff759337e35251715ea88f1b095ae140f55b8",
+        "arXiv:2509.06723"
+      ],
+      "title": "Zo3T: Zero-Shot 3D-Aware Trajectory-Guided Image-to-Video Generation via Test-Time Training",
+      "reason": "The abstract presents a test-time-training video-generation quality method without a demonstrated serving/runtime efficiency improvement.",
+      "source_url": "https://arxiv.org/abs/2509.06723",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T01:51:28+00:00",
+      "last_checked_at": "2026-10-13T01:51:28+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-2410.02367-sageattention-accurate-8-bit-attention-for-plug-and-play-inference-accel.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2509.14373",
+      "identity_tokens": [
+        "DOI:10.48550/arXiv.2509.14373",
+        "SemanticScholar:d2f0d3a934fb54b145a59b8a5228e9d2ea60929f",
+        "arXiv:2509.14373"
+      ],
+      "title": "CodeLSI: Leveraging Foundation Models for Automated Code Generation with Low-Rank Optimization and Domain-Specific Instruction Tuning",
+      "reason": "Low-rank optimization lowers pretraining/fine-tuning costs for domain-specific code generation; the reported efficiency is training-side, not inference or serving.",
+      "source_url": "https://arxiv.org/abs/2509.14373",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T01:51:28+00:00",
+      "last_checked_at": "2026-10-13T01:51:28+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md",
+        "papers/inference/99-other-inference-systems/2022-2207.00032-deepspeed-inference-enabling-efficient-inference-of-transformer-models-at-unprecedented-scale.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2510.01858",
+      "identity_tokens": [
+        "DOI:10.48550/arXiv.2510.01858",
+        "SemanticScholar:1f418d4dcc59d850c65e43234d38cfdb1ab84ea3",
+        "arXiv:2510.01858"
+      ],
+      "title": "Compositional meta-learning through probabilistic task inference",
+      "reason": "The paper studies compositional meta-learning and task inference; the abstract reports learning/data efficiency but no inference systems or resource result.",
+      "source_url": "https://arxiv.org/abs/2510.01858",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T01:51:28+00:00",
+      "last_checked_at": "2026-10-13T01:51:28+00:00",
+      "linked_from": [
+        "papers/inference/12-moe-parallelism-communication/2021-2101.03961-switch-transformers-scaling-to-trillion-parameter-models-with-simple-and.md",
+        "papers/inference/99-other-inference-systems/2017-1701.06538-outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts.md"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2510.04087",
+      "identity_tokens": [
+        "DOI:10.21203/rs.3.rs-7594024/v1",
+        "SemanticScholar:cb0f1ddbf072e1595c4c34539bc161f21826d308",
+        "arXiv:2510.04087"
+      ],
+      "title": "Best of mini-N in-loop Sampling: A Contextual Quality Reward Model for Reliable and Efficient Best-of-N Sampling",
+      "reason": "An adaptive Best-of-N sampling budget with calibrated early exit is explicitly evaluated as an inference accelerator and reduces generation time.",
+      "source_url": "https://arxiv.org/abs/2510.04087",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T01:51:28+00:00",
+      "last_checked_at": "2026-10-13T01:51:28+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2022-2211.17192-speculative-decoding.md"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2512.07486",
+      "identity_tokens": [
+        "DOI:10.48550/arXiv.2512.07486",
+        "SemanticScholar:7653e800e8c049dd2d131095c7a26e3f3797a3d6",
+        "arXiv:2512.07486"
+      ],
+      "title": "Materium: An Autoregressive Approach for Material Generation",
+      "reason": "Autoregressive crystal generation is reported to train and generate faster than diffusion approaches; the inference-speed comparison is a plausible model-efficiency connection despite its materials-generation target.",
+      "source_url": "https://arxiv.org/abs/2512.07486",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T01:51:28+00:00",
+      "last_checked_at": "2026-10-13T01:51:28+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+        "papers/inference/99-other-inference-systems/2023-2305.13245-gqa.md"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2601.08311",
+      "identity_tokens": [
+        "DOI:10.48550/arXiv.2601.08311",
+        "SemanticScholar:af67be7bbcb32fb31ae49482e315c095d92fbf50",
+        "arXiv:2601.08311"
+      ],
+      "title": "Enhancing Image Quality Assessment Ability of LMMs via Retrieval-Augmented Generation",
+      "reason": "A training-free retrieval framework is positioned as a resource-efficient alternative to computationally expensive LMM fine-tuning, a plausible serving/resource efficiency connection.",
+      "source_url": "https://arxiv.org/abs/2601.08311",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T01:51:28+00:00",
+      "last_checked_at": "2026-10-13T01:51:28+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2601.21964",
+      "identity_tokens": [
+        "DOI:10.48550/arXiv.2601.21964",
+        "SemanticScholar:30a5cd54c22186b82def6811ff6775d932d730a9",
+        "arXiv:2601.21964"
+      ],
+      "title": "From Tokens to Blocks: A Block-Diffusion Perspective on Molecular Generation",
+      "reason": "Block-diffusion molecular generation reports a 6.6x inference-efficiency speedup while retaining molecular generation performance.",
+      "source_url": "https://arxiv.org/abs/2601.21964",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T01:51:28+00:00",
+      "last_checked_at": "2026-10-13T01:51:28+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2503.09573-block-diffusion-interpolating-between-autoregressive-and-diffusion-langu.md"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2602.13289",
+      "identity_tokens": [
+        "DOI:10.48550/arXiv.2602.13289",
+        "SemanticScholar:91aa80a14411665f264f44d49cb148e1f05ee92d",
+        "arXiv:2602.13289"
+      ],
+      "title": "Evaluating the Impact of Post-Training Quantization on Reliable VQA with Multimodal LLMs",
+      "reason": "This directly evaluates post-training quantization of multimodal LLMs and reports a large reduction in memory demand with a reliability tradeoff.",
+      "source_url": "https://arxiv.org/abs/2602.13289",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T01:51:28+00:00",
+      "last_checked_at": "2026-10-13T01:51:28+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2024-2402.16775-a-comprehensive-evaluation-of-quantization-strategies-for-large-language.md"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2607.06111",
+      "identity_tokens": [
+        "DOI:10.48550/arXiv.2607.06111",
+        "SemanticScholar:920f28db4fb82d2d1a114b9ac79ac8adcfda2288",
+        "arXiv:2607.06111"
+      ],
+      "title": "LLM-Guided Measurement Credibility Correction for Trustworthy Industrial Process Inference",
+      "reason": "The proposed pre-inference measurement correction is lightweight and reports online parameter and latency costs, making it a plausible inference-pipeline efficiency result.",
+      "source_url": "https://arxiv.org/abs/2607.06111",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T01:51:28+00:00",
+      "last_checked_at": "2026-10-13T01:51:28+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3706594.3726983",
+      "identity_tokens": [
+        "DOI:10.1145/3706594.3726983",
+        "SemanticScholar:fb41e7e319760cf3af6058e688d1314c3d29f9d6"
+      ],
+      "title": "Stop Wasting your Cache! Bringing Machine Learning into Cache Computing",
+      "reason": "Crossref API and DOI resolver requests were inaccessible; the ACM publisher article page returned HTTP 403 Forbidden. Identity/title are supported by the author-affiliated repository record, but publisher abstract retrieval failed; therefore this is retained as source_unavailable under the screening contract.",
+      "source_url": "https://dl.acm.org/doi/10.1145/3706594.3726983",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T01:51:28+00:00",
+      "last_checked_at": "2026-10-13T01:51:28+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2101.01321-i-bert-integer-only-bert-quantization.md"
+      ]
+    }
+  ]
+}
