@@ -1,0 +1,1719 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-0e6c8912925336b4-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-0e6c89129253",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "DOI:10.3390/s26041101",
+    "arXiv:2601.20595",
+    "arXiv:2601.21461",
+    "arXiv:2601.22766",
+    "arXiv:2601.23278",
+    "arXiv:2602.01778",
+    "arXiv:2602.02680",
+    "arXiv:2602.05809",
+    "arXiv:2602.07878",
+    "arXiv:2602.17698",
+    "arXiv:2603.20843",
+    "arXiv:2603.21232",
+    "arXiv:2603.22300",
+    "arXiv:2603.28845",
+    "arXiv:2604.14825",
+    "arXiv:2604.26963",
+    "arXiv:2605.05602",
+    "arXiv:2605.09463"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 18,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "544a4409df07494e677c344c74797c0da4acbbd9",
+  "raw_search_result_count": 18,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 18,
+  "provider_progress": {
+    "requested_count": 18,
+    "status_counts": {
+      "allowed": 18,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-13T20:22:25.603019+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "DOI:10.3390/s26041101",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2601.20595",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2601.21461",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2601.22766",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2601.23278",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2602.01778",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2602.02680",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2602.05809",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2602.07878",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2602.17698",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2603.20843",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2603.21232",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2603.22300",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2603.28845",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2604.14825",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2604.26963",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2605.05602",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2605.09463",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "ScaleBITS: Scalable Bitwidth Search for Hardware-Aligned Mixed-Precision LLMs",
+      "source_url": "https://arxiv.org/abs/2602.17698",
+      "year": 2026,
+      "published": "2026-02-06",
+      "venue": "arXiv.org",
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Post-training weight quantization is crucial for reducing the memory and inference cost of large language models (LLMs), yet pushing the average precision below 4 bits remains challenging due to highly non-uniform weight sensitivity and the lack of principled precision allocation. Existing solutions use irregular fine-grained mixed-precision with high runtime overhead or rely on heuristics or highly constrained precision allocation strategies. In this work, we propose ScaleBITS, a mixed-precision quantization framework that enables automated, fine-grained bitwidth allocation under a memory budget while preserving hardware efficiency. Guided by a new sensitivity analysis, we introduce a hardware-aligned, block-wise weight partitioning scheme, powered by bi-directional channel reordering. We formulate global bitwidth allocation as a constrained optimization problem and develop a scalable approximation to the greedy algorithm, enabling end-to-end principled allocation. Experiments show that ScaleBITS significantly improves over uniform-precision quantization (up to +36%) and outperforms state-of-the-art sensitivity-aware baselines (up to +13%) in ultra-low-bit regime, without adding runtime overhead.",
+      "identifiers": [
+        "SemanticScholar:e18ce2625232cd7f6c0514f8018812f374d842f3"
+      ],
+      "semantic_scholar_id": "e18ce2625232cd7f6c0514f8018812f374d842f3",
+      "canonical_id": "arXiv:2602.17698",
+      "arxiv_id": "2602.17698",
+      "doi": "10.48550/arXiv.2602.17698",
+      "authors": [
+        "Xinlin Li",
+        "Timothy Chou",
+        "Josh Fromm",
+        "Zichang Liu",
+        "Yunjie Pan",
+        "Christina Fragouli"
+      ],
+      "priority": 104,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 104,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 249,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Nearly Optimal Attention Coresets",
+      "source_url": "https://arxiv.org/abs/2605.05602",
+      "year": 2026,
+      "published": "2026-05-07",
+      "venue": "arXiv.org",
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "We consider the problem of estimating the Attention mechanism in small space, and prove the existence of coresets for it of nearly optimal size. Specifically, we show that for any set of unit-norm keys and values $(K,V)$ in $\\mathbb{R}^d$, there exists a subset $(K',V')$ of size at most $O({\\sqrt{d} e^{\\rho+o(\\rho)}/\\varepsilon})$ such that \\[ \\left\\| \\operatorname{Attn}(q,K,V)- \\operatorname{Attn}(q,K',V') \\right\\| \\le \\varepsilon \\] simultaneously for all queries whose norm is bounded by $\\rho$. This outperforms the best known results for this problem. We also offer an improved lower bound showing that $\\varepsilon$-coresets must have size $\\Omega({\\sqrt{d} e^{\\rho}/\\epsilon})$.",
+      "identifiers": [
+        "SemanticScholar:ac88dcfe309b5b2d24cc08618f372cc2684f4f64"
+      ],
+      "semantic_scholar_id": "ac88dcfe309b5b2d24cc08618f372cc2684f4f64",
+      "canonical_id": "arXiv:2605.05602",
+      "arxiv_id": "2605.05602",
+      "doi": "10.48550/arXiv.2605.05602",
+      "authors": [
+        "Edo Liberty",
+        "Alexandr Andoni",
+        "Eldar Kleiner"
+      ],
+      "priority": 104,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 104,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 159,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Syncopate: Efficient Multi-GPU AI Kernels via Automatic Chunk-Centric Compute-Communication Overlap",
+      "source_url": "https://arxiv.org/abs/2601.20595",
+      "year": 2026,
+      "published": "2026-01-28",
+      "venue": null,
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Communication has become a first-order bottleneck in large-scale GPU workloads, and existing distributed compilers address it mainly by overlapping whole compute and communication kernels at the stream level. This coarse granularity incurs extra kernel launches, forces device-wide synchronizations at kernel boundaries, and leaves substantial slack when the slowest tile or kernel stretches the communication tail. We present Syncopate, a compiler and runtime that enables automatic fine-grained overlap inside a single fused kernel. Syncopate introduces a communication chunk abstraction that decouples communication granularity from kernel structure and backend mechanisms, allowing chunk-level plans to be ported from existing distributed compilers, written directly by users, or instantiated from reusable templates. Given a local Triton kernel and a chunk schedule, Syncopate performs transformations to align computation with chunk availability. Implemented as a source-to-source compiler on Triton, Syncopate delivers an average end-to-end speedup of 1.3$\\times$ and up to 4.7$\\times$ on multi-GPU workloads. Our code is open-sourced at https://github.com/tie-pilot-qxw/syncopate.",
+      "identifiers": [
+        "SemanticScholar:33ad8ec702fa05e4255fbbc7e16c7ce2292e71de"
+      ],
+      "semantic_scholar_id": "33ad8ec702fa05e4255fbbc7e16c7ce2292e71de",
+      "canonical_id": "arXiv:2601.20595",
+      "arxiv_id": "2601.20595",
+      "authors": [
+        "Xin-Wei Qiang",
+        "Yue Guan",
+        "Zheng-Ding Hu",
+        "Keren Zhou",
+        "Yufei Ding",
+        "Adnan Aziz"
+      ],
+      "priority": 103,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 103,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 258,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "L3: Large Lookup Layers",
+      "source_url": "https://arxiv.org/abs/2601.21461",
+      "year": 2026,
+      "published": "2026-01-29",
+      "venue": "arXiv.org",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Modern sparse language models typically achieve sparsity through Mixture-of-Experts (MoE) layers, which dynamically route tokens to dense MLP\"experts.\"However, dynamic hard routing has a number of drawbacks, such as potentially poor hardware efficiency and needing auxiliary losses for stable training. In contrast, the tokenizer embedding table, which is natively sparse, largely avoids these issues by selecting a single embedding per token at the cost of not having contextual information. In this work, we introduce the Large Lookup Layer (L$^3$), which generalizes embedding tables to model decoder layers as a means of further scaling sparsity. L$^3$ layers use static token-based routing to aggregate a set of learned embeddings per token in a context-dependent way, allowing the model to efficiently balance memory and compute by caching information in embeddings. L$^3$ has two main components: (1) a systems-friendly architecture that allows for fast training and CPU-offloaded inference with no overhead, and (2) an information-theoretic embedding allocation algorithm that effectively balances speed and quality. We empirically test L$^3$ by training transformers with up to 2.6B active parameters and find that L$^3$ strongly outperforms both dense models and iso-sparse MoEs in both language modeling and downstream tasks.",
+      "identifiers": [
+        "SemanticScholar:4166a547ff0e1acd8986437a5b4b9f2f422707f8"
+      ],
+      "semantic_scholar_id": "4166a547ff0e1acd8986437a5b4b9f2f422707f8",
+      "canonical_id": "arXiv:2601.21461",
+      "arxiv_id": "2601.21461",
+      "doi": "10.48550/arXiv.2601.21461",
+      "authors": [
+        "Albert Tseng",
+        "C. De Sa"
+      ],
+      "priority": 103,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 103,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 257,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Sparse Attention as Compact Kernel Regression",
+      "source_url": "https://arxiv.org/abs/2601.22766",
+      "year": 2026,
+      "published": "2026-01-30",
+      "venue": "arXiv.org",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Recent work has revealed a link between self-attention mechanisms in transformers and test-time kernel regression via the Nadaraya-Watson estimator, with standard softmax attention corresponding to a Gaussian kernel. However, a kernel-theoretic understanding of sparse attention mechanisms is currently missing. In this paper, we establish a formal correspondence between sparse attention and compact (bounded support) kernels. We show that normalized ReLU and sparsemax attention arise from Epanechnikov kernel regression under fixed and adaptive normalizations, respectively. More generally, we demonstrate that widely used kernels in nonparametric density estimation -- including Epanechnikov, biweight, and triweight -- correspond to $\\alpha$-entmax attention with $\\alpha = 1 + \\frac{1}{n}$ for $n \\in \\mathbb{N}$, while the softmax/Gaussian relationship emerges in the limit $n \\to \\infty$. This unified perspective explains how sparsity naturally emerges from kernel design and provides principled alternatives to heuristic top-$k$ attention and other associative memory mechanisms. Experiments with a kernel-regression-based variant of transformers -- Memory Mosaics -- show that kernel-based sparse attention achieves competitive performance on language modeling, in-context learning, and length generalization tasks, offering a principled framework for designing attention mechanisms.",
+      "identifiers": [
+        "SemanticScholar:e2334d03e8426da7ca21a2e1bda36ac8f67a0f54"
+      ],
+      "semantic_scholar_id": "e2334d03e8426da7ca21a2e1bda36ac8f67a0f54",
+      "canonical_id": "arXiv:2601.22766",
+      "arxiv_id": "2601.22766",
+      "doi": "10.48550/arXiv.2601.22766",
+      "authors": [
+        "Saul Santos",
+        "Nuno Gonccalves",
+        "Daniel C. McNamee",
+        "Marcos Vinícius Treviso",
+        "André F. T. Martins"
+      ],
+      "priority": 103,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 103,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 256,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "FOCUS: DLLMs Know How to Tame Their Compute Bound",
+      "source_url": "https://arxiv.org/abs/2601.23278",
+      "year": 2026,
+      "published": "2026-01-30",
+      "venue": "arXiv.org",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Diffusion Large Language Models (DLLMs) offer a compelling alternative to Auto-Regressive models, but their deployment is constrained by high decoding cost. In this work, we identify a key inefficiency in DLLM decoding: while computation is parallelized over token blocks, only a small subset of tokens is decodable at each diffusion step, causing most compute to be wasted on non-decodable tokens. We further observe a strong correlation between attention-derived token importance and token-wise decoding probability. Based on this insight, we propose FOCUS, an inference system designed for DLLMs. By dynamically focusing computation on decodable tokens and evicting non-decodable ones on-the-fly, FOCUS increases the effective batch size, alleviating compute limitations and enabling scalable throughput. Empirical evaluations demonstrate that FOCUS achieves up to 3.52$\\times$ throughput improvement over the production-grade engine LMDeploy in large-batch settings, while preserving or improving generation quality across multiple benchmarks.",
+      "identifiers": [
+        "SemanticScholar:f26f4728ffbb127ec84cc7981a04428f04940633"
+      ],
+      "semantic_scholar_id": "f26f4728ffbb127ec84cc7981a04428f04940633",
+      "canonical_id": "arXiv:2601.23278",
+      "arxiv_id": "2601.23278",
+      "doi": "10.48550/arXiv.2601.23278",
+      "authors": [
+        "Kai-Huan Liang",
+        "Xin Tan",
+        "An Zhong",
+        "Hong Xu",
+        "Marco Canini"
+      ],
+      "priority": 103,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 103,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 256,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Dynamic Micro-Batch and Token-Budget Scheduling for IoT-Scale Pipeline-Parallel LLM Inference",
+      "source_url": "https://doi.org/10.3390/s26041101",
+      "year": 2026,
+      "published": "2026-02-01",
+      "venue": "Italian National Conference on Sensors",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models in IoT–edge–cloud settings face bursty, heterogeneous requests that make pipeline-parallel inference prone to micro-batch imbalance and communication stalls, causing GPU idle time and SLO violations. We propose a runtime-adaptive scheduler that jointly tunes token budgets and micro-batch counts to balance prefill/decode workloads and minimize pipeline bubbles under changing compute and network conditions. On a four-node pipeline-parallel cluster across Llama-2-13b and Qwen2.5-14b at 100/1000 Mbps, our method outperforms vLLM and SGLang, reducing GPU idle time by up to 55% and improving throughput by up to 1.61 × while improving TTFT/ITL SLO satisfaction. These results show that dynamic scheduling is essential for scalable, latency-stable LLM inference in IoT–edge–cloud environments.",
+      "identifiers": [
+        "SemanticScholar:4156ff1bee3fdff0c526dadb0afefd62ce562a87"
+      ],
+      "semantic_scholar_id": "4156ff1bee3fdff0c526dadb0afefd62ce562a87",
+      "doi": "10.3390/s26041101",
+      "canonical_id": "DOI:10.3390/s26041101",
+      "authors": [
+        "Juncheol Ahn",
+        "Yubin Son",
+        "Daemin Kim",
+        "Sejin Park"
+      ],
+      "priority": 103,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 103,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 254,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Data Distribution Matters: A Data-Centric Perspective on Context Compression for Large Language Model",
+      "source_url": "https://arxiv.org/abs/2602.01778",
+      "year": 2026,
+      "published": "2026-02-02",
+      "venue": "arXiv.org",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The deployment of Large Language Models (LLMs) in long-context scenarios is hindered by computational inefficiency and significant information redundancy. Although recent advancements have widely adopted context compression to address these challenges, existing research only focus on model-side improvements, the impact of the data distribution itself on context compression remains largely unexplored. To bridge this gap, we are the first to adopt a data-centric perspective to systematically investigate how data distribution impacts compression quality, including two dimensions: input data and intrinsic data (i.e., the model's internal pretrained knowledge). We evaluate the semantic integrity of compressed representations using an autoencoder-based framework to systematically investigate it. Our experimental results reveal that: (1) encoder-measured input entropy negatively correlates with compression quality, while decoder-measured entropy shows no significant relationship under a frozen-decoder setting; and (2) the gap between intrinsic data of the encoder and decoder significantly diminishes compression gains, which is hard to mitigate. Based on these findings, we further present practical guidelines to optimize compression gains.",
+      "identifiers": [
+        "SemanticScholar:d6fe558b7072b7b50487febda581c8cf9e8487e2"
+      ],
+      "semantic_scholar_id": "d6fe558b7072b7b50487febda581c8cf9e8487e2",
+      "canonical_id": "arXiv:2602.01778",
+      "arxiv_id": "2602.01778",
+      "doi": "10.48550/arXiv.2602.01778",
+      "authors": [
+        "Kangtao Lv",
+        "Jiwei Tang",
+        "Langming Liu",
+        "Haibin Chen",
+        "Weidong Zhang",
+        "Shilei Liu",
+        "Yong-Wei Wang",
+        "Yujin Yuan",
+        "Wenbo Su",
+        "Bo Zheng"
+      ],
+      "priority": 103,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 103,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 253,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "FlexRank: Nested Low-Rank Knowledge Decomposition for Adaptive Model Deployment",
+      "source_url": "https://arxiv.org/abs/2602.02680",
+      "year": 2026,
+      "published": "2026-02-02",
+      "venue": "arXiv.org",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The growing scale of deep neural networks, encompassing large language models (LLMs) and vision transformers (ViTs), has made training from scratch prohibitively expensive and deployment increasingly costly. These models are often used as computational monoliths with fixed cost, hindering adaptive deployment across different cost budgets. We argue that nested components, ordered by importance, can be extracted from pretrained models and selectively activated within the available computational budget. To this end, our proposed FlexRank method leverages low-rank weight decomposition with nested, importance-based consolidation to extract submodels of increasing capabilities. Our approach enables a\"train-once, deploy-everywhere\"paradigm offering a graceful trade-off between cost and performance without training from scratch for each budget - advancing practical deployment of large models.",
+      "identifiers": [
+        "SemanticScholar:6d912d6693e6eba99cc59ddc2b92b3727eea647b"
+      ],
+      "semantic_scholar_id": "6d912d6693e6eba99cc59ddc2b92b3727eea647b",
+      "canonical_id": "arXiv:2602.02680",
+      "arxiv_id": "2602.02680",
+      "doi": "10.48550/arXiv.2602.02680",
+      "authors": [
+        "Riccardo Zaccone",
+        "Stefanos Laskaridis",
+        "Marco Ciccone",
+        "Samuel Horváth"
+      ],
+      "priority": 103,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 103,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 253,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Focus-Scan-Refine: From Human Visual Perception to Efficient Visual Token Pruning",
+      "source_url": "https://arxiv.org/abs/2602.05809",
+      "year": 2026,
+      "published": "2026-02-05",
+      "venue": "arXiv.org",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Vision-language models (VLMs) often generate massive visual tokens that greatly increase inference latency and memory footprint; while training-free token pruning offers a practical remedy, existing methods still struggle to balance local evidence and global context under aggressive compression. We propose Focus-Scan-Refine (FSR), a human-inspired, plug-and-play pruning framework that mimics how humans answer visual questions: focus on key evidence, then scan globally if needed, and refine the scanned context by aggregating relevant details. FSR first focuses on key evidence by combining visual importance with instruction relevance, avoiding the bias toward visually salient but query-irrelevant regions. It then scans for complementary context conditioned on the focused set, selecting tokens that are most different from the focused evidence. Finally, FSR refines the scanned context by aggregating nearby informative tokens into the scan anchors via similarity-based assignment and score-weighted merging, without increasing the token budget. Extensive experiments across multiple VLM backbones and vision-language benchmarks show that FSR consistently improves the accuracy-efficiency trade-off over existing state-of-the-art pruning methods. The source codes can be found at https://github.com/ILOT-code/FSR.",
+      "identifiers": [
+        "SemanticScholar:a1047da25d280a53cc064ab3877b280a707f78b0"
+      ],
+      "semantic_scholar_id": "a1047da25d280a53cc064ab3877b280a707f78b0",
+      "canonical_id": "arXiv:2602.05809",
+      "arxiv_id": "2602.05809",
+      "doi": "10.48550/arXiv.2602.05809",
+      "authors": [
+        "Enwei Tong",
+        "Yuan-Chao Bai",
+        "Yao Zhu",
+        "Jun-Jun Jiang",
+        "Xian-Ming Liu"
+      ],
+      "priority": 103,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 103,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 250,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Rethinking Latency Denial-of-Service: Attacking the LLM Serving Framework, Not the Model",
+      "source_url": "https://arxiv.org/abs/2602.07878",
+      "year": 2026,
+      "published": "2026-02-08",
+      "venue": "arXiv.org",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "LLM inference is inherently expensive, even a modest slowdown can translate into substantial operating costs and severe availability risks. Recently, a growing body of research known as latency attacks focuses on crafting inputs to trigger worst-case output lengths. However, we report a contrary finding that these algorithmic-level latency attacks are largely ineffective against modern LLM serving systems. We reveal that system-level optimization such as continuous batching provides a logical isolation to mitigate contagious latency impact on co-located users. Thus, in this paper, we shift our focus from the algorithm to the system layer, and introduce a new Fill and Squeeze attack strategy targeting the state transition of the scheduler. ``Fill''first exhausts the global KV cache to induce Head-of-Line blocking, while ``Squeeze''forces the system into repetitive preemption. By manipulating output lengths using different attack prompts, and leveraging side-channel probing of memory status, we demonstrate that the attack can succeed in a practical black-box setting with much less cost. Extensive evaluations on vLLM indicate up to $75-742\\times$ TTFT degradation relative to benign baselines and $1.5-4\\times$ average slowdown on Time Per Output Token compared to existing attacks with 30-40% lower attack cost. Code: https://github.com/Phil-Fan/FS-attack",
+      "identifiers": [
+        "SemanticScholar:6ed4303875d6770fb1bccd4854cb0dd7f3ffacab"
+      ],
+      "semantic_scholar_id": "6ed4303875d6770fb1bccd4854cb0dd7f3ffacab",
+      "canonical_id": "arXiv:2602.07878",
+      "arxiv_id": "2602.07878",
+      "doi": "10.48550/arXiv.2602.07878",
+      "authors": [
+        "Tian-Yi Wang",
+        "Hua Fan",
+        "Yuanchao Shu",
+        "Peng Cheng",
+        "Cong Wang"
+      ],
+      "priority": 103,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 103,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 247,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Scaling Attention via Feature Sparsity",
+      "source_url": "https://arxiv.org/abs/2603.22300",
+      "year": 2026,
+      "published": "2026-03-17",
+      "venue": "arXiv.org",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Scaling Transformers to ultra-long contexts is bottlenecked by the $O(n^2 d)$ cost of self-attention. Existing methods reduce this cost along the sequence axis through local windows, kernel approximations, or token-level sparsity, but these approaches consistently degrade accuracy. In this paper, we instead explore an orthogonal axis: feature sparsity. We propose Sparse Feature Attention (SFA), where queries and keys are represented as $k$-sparse codes that preserve high-dimensional expressivity while reducing the cost of attention from $\\Theta(n^2 d)$ to $\\Theta(n^2 k^2/d)$. To make this efficient at scale, we introduce FlashSFA, an IO-aware kernel that extends FlashAttention to operate directly on sparse overlaps without materializing dense score matrices. Across GPT-2 and Qwen3 pretraining, SFA matches dense baselines while improving speed by up to $2.5\\times$ and reducing FLOPs and KV-cache by nearly 50\\%. On synthetic and downstream benchmarks, SFA preserves retrieval accuracy and robustness at long contexts, outperforming short-embedding baselines that collapse feature diversity. These results establish feature-level sparsity as a complementary and underexplored axis for efficient attention, enabling Transformers to scale to orders-of-magnitude longer contexts with minimal quality loss. Code is available at https://github.com/YannX1e/Sparse-Feature-Attention.",
+      "identifiers": [
+        "SemanticScholar:394cde758d116b8eb595b735af37a3f6f871167d"
+      ],
+      "semantic_scholar_id": "394cde758d116b8eb595b735af37a3f6f871167d",
+      "canonical_id": "arXiv:2603.22300",
+      "arxiv_id": "2603.22300",
+      "doi": "10.48550/arXiv.2603.22300",
+      "authors": [
+        "Yan Xie",
+        "Tiansheng Wen",
+        "Tan Huang",
+        "Bo Chen",
+        "Chen-Yu You",
+        "Stefanie Jegelka",
+        "Yi-Fei Wang"
+      ],
+      "priority": 103,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 103,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 210,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "HiCI: Hierarchical Construction-Integration for Long-Context Attention",
+      "source_url": "https://arxiv.org/abs/2603.20843",
+      "year": 2026,
+      "published": "2026-03-21",
+      "venue": "arXiv.org",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Long-context language modeling is commonly framed as a scalability challenge of token-level attention, yet local-to-global information structuring remains largely implicit in existing approaches. Drawing on cognitive theories of discourse comprehension, we propose HiCI (Hierarchical Construction--Integration), a hierarchical attention module that constructs segment-level representations, integrates them into a shared global context, and broadcasts both to condition segment-level attention. We validate HiCI through parameter-efficient adaptation of LLaMA-2 with only<5.5% additional parameters, extending context from 4K to 100K tokens (7B) and 64K tokens (13B). Across language modeling, retrieval, and instruction-following benchmarks, HiCI yields consistent improvements over strong baselines, including matching proprietary models on topic retrieval and surpassing GPT-3.5-Turbo-16K on code comprehension. These results demonstrate the effectiveness of explicit hierarchical structuring as an inductive bias for long-context modeling.",
+      "identifiers": [
+        "SemanticScholar:09e2745f472ad37fbe8b53b71b4098815fdcab08"
+      ],
+      "semantic_scholar_id": "09e2745f472ad37fbe8b53b71b4098815fdcab08",
+      "canonical_id": "arXiv:2603.20843",
+      "arxiv_id": "2603.20843",
+      "doi": "10.48550/arXiv.2603.20843",
+      "authors": [
+        "Xiang-Yun Zeng",
+        "Qi Xu",
+        "Yun-Ke Wang",
+        "Chang Xu"
+      ],
+      "priority": 103,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 103,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 206,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "QMoP: Query Guided Mixture-of-Projector for Efficient Visual Token Compression",
+      "source_url": "https://arxiv.org/abs/2603.21232",
+      "year": 2026,
+      "published": "2026-03-22",
+      "venue": "arXiv.org",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Multimodal large language models suffer from severe computational and memory bottlenecks, as the number of visual tokens far exceeds that of textual tokens. While recent methods employ projector modules to align and compress visual tokens into text-aligned features, they typically depend on fixed heuristics that limit adaptability across diverse scenarios. In this paper, we first propose Query Guided Mixture-of-Projector (QMoP), a novel and flexible framework that adaptively compresses visual tokens via three collaborative branches: (1) a pooling-based branch for coarse-grained global semantics, (2) a resampler branch for extracting high-level semantic representations, and (3) a pruning-based branch for fine-grained token selection to preserve critical visual detail. To adaptively coordinate these branches, we introduce the Query Guided Router (QGR), which dynamically selects and weights the outputs from different branches based on both visual input and textual queries. A Mixture-of-Experts-style fusion mechanism is designed to aggregate the outputs, harnessing the strengths of each strategy while suppressing noise. To systematically evaluate the effects of Visual Token Compression, we also develop VTCBench, a dedicated benchmark for evaluating the information loss induced by visual token compression. Extensive experiments demonstrate that despite relying on fundamental compression modules, QMoP outperforms strong baselines and delivers significant savings in memory, computation, and inference time.",
+      "identifiers": [
+        "SemanticScholar:f0c7504afd077f3c62638e5d0a85ffacff9f7329"
+      ],
+      "semantic_scholar_id": "f0c7504afd077f3c62638e5d0a85ffacff9f7329",
+      "canonical_id": "arXiv:2603.21232",
+      "arxiv_id": "2603.21232",
+      "doi": "10.48550/arXiv.2603.21232",
+      "authors": [
+        "Zhong-Yang Li",
+        "Ya-Qian Li",
+        "F. Fang",
+        "Rinyoichi Takezoe",
+        "Zi-Hao Bo",
+        "Chengyao Qian",
+        "Mo Guang",
+        "Gui-Xu Zhang",
+        "Kai-Wen Long"
+      ],
+      "priority": 103,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 103,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 205,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "OneComp: One-Line Revolution for Generative AI Model Compression",
+      "source_url": "https://arxiv.org/abs/2603.28845",
+      "year": 2026,
+      "published": "2026-03-30",
+      "venue": "arXiv.org",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Deploying foundation models is increasingly constrained by memory footprint, latency, and hardware costs. Post-training compression can mitigate these bottlenecks by reducing the precision of model parameters without significantly degrading performance; however, its practical implementation remains challenging as practitioners navigate a fragmented landscape of quantization algorithms, precision budgets, data-driven calibration strategies, and hardware-dependent execution regimes. We present OneComp, an open-source compression framework that transforms this expert workflow into a reproducible, resource-adaptive pipeline. Given a model identifier and available hardware, OneComp automatically inspects the model, plans mixed-precision assignments, and executes progressive quantization stages, ranging from layer-wise compression to block-wise refinement and global refinement. A key architectural choice is treating the first quantized checkpoint as a deployable pivot, ensuring that each subsequent stage improves the same model and that quality increases as more compute is invested. By converting state-of-the-art compression research into an extensible, open-source, hardware-aware pipeline, OneComp bridges the gap between algorithmic innovation and production-grade model deployment.",
+      "identifiers": [
+        "SemanticScholar:79af49a84b915c4adc7f830b4a3f42dc494b8141"
+      ],
+      "semantic_scholar_id": "79af49a84b915c4adc7f830b4a3f42dc494b8141",
+      "canonical_id": "arXiv:2603.28845",
+      "arxiv_id": "2603.28845",
+      "doi": "10.48550/arXiv.2603.28845",
+      "authors": [
+        "Yuma Ichikawa",
+        "Keiji Kimura",
+        "Akihiro Yoshida",
+        "Yudai Fujimoto",
+        "Hiroki Tokura",
+        "Yamato Arai",
+        "Yoshiyuki Ishii",
+        "Yusei Kawakami",
+        "Genki Shikada",
+        "Achille Jacquemond",
+        "Yoshihiko Fujisawa",
+        "Katsuki Fujisawa",
+        "Takumi Honda",
+        "Akira Sakai"
+      ],
+      "priority": 103,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 103,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 197,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "MARS: Efficient, Adaptive Co-Scheduling for Heterogeneous Agentic Systems",
+      "source_url": "https://arxiv.org/abs/2604.26963",
+      "year": 2026,
+      "published": "2026-04-14",
+      "venue": "arXiv.org",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLMs) are increasingly deployed as the execution core of autonomous agents rather than as standalone text generators. Agentic workloads induce a temporal shift from single-turn inference to multi-turn LLM-tool loops, and a spatial shift from chat-scale, GPU-only execution to repository-scale, GPU-CPU co-located execution. Consequently, coordinating heterogeneous resource demands of agentic execution has emerged as a critical system challenge. We design and implement MARS, an efficient and adaptive co-scheduling system that globally coordinates heterogeneous agentic workloads under coupled GPU-CPU resource pressure. By establishing holistic visibility across GPU inference and CPU tool execution via a unified information stream, an external control plane in MARS decouples admission from execution to prevent heterogeneous resource oversubscription. An internal agent-centric scheduler further minimizes the end-to-end critical path by prioritizing latency-sensitive continuations and adaptively retaining KV cache state only when warm resumption yields a latency benefit. Our evaluations show that MARS reduces end-to-end latency by up to 5.94x while maintaining nearly maximal system throughput. We further integrate MARS as the serving backend for the OpenHands coding agent framework, demonstrating its real-world effectiveness by accelerating end-to-end task completion time by up to 1.87x. Our source code is publicly available at https://github.com/Afterglow231/MARS_preview .",
+      "identifiers": [
+        "SemanticScholar:42ef6b25bb64254b181f9697239cd6dc200224f1"
+      ],
+      "semantic_scholar_id": "42ef6b25bb64254b181f9697239cd6dc200224f1",
+      "canonical_id": "arXiv:2604.26963",
+      "arxiv_id": "2604.26963",
+      "doi": "10.48550/arXiv.2604.26963",
+      "authors": [
+        "Yi-Fei Wang",
+        "Han-Cheng Ye",
+        "Yechen Xu",
+        "Cong Guo",
+        "Chi-Yue Wei",
+        "Qin-Si Wang",
+        "Dong-Ting Li",
+        "Tingjun Chen",
+        "Hai Li",
+        "Dan-Yang Zhuo",
+        "Yi-Ran Chen"
+      ],
+      "priority": 103,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 103,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 182,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Nautilus: An Auto-Scheduling Tensor Compiler for Efficient Tiled GPU Kernels",
+      "source_url": "https://arxiv.org/abs/2604.14825",
+      "year": 2026,
+      "published": "2026-04-16",
+      "venue": "arXiv.org",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "We present Nautilus, a novel tensor compiler that moves toward fully automated math-to-kernel optimization. Nautilus compiles a high-level algebraic specification of tensor operators into efficient tiled GPU kernels. Nautilus's successive lowering design allows high-level optimizations, expression rewrites, and tile optimizations to be jointly applied in a single end-to-end system. Nautilus presents a novel auto-scheduler that discovers sequences of high-level optimizations, while preserving the regular program structure needed by tile optimizers. Nautilus's auto-scheduler captures complex interactions and trade-offs in the high-level optimizations, including aggressive global transformations like advanced reduction fusion. Nautilus is the first end-to-end tensor compiler capable of starting from a math-like description of attention and automatically discovering FlashAttention-3-like kernels, offloading the entire burden of optimization from the programmer to the compiler. Across five transformer-based models and 150 evaluation configurations on NVIDIA GH200 and RTX 5090 GPUs, Nautilus achieves up to 23% higher throughput than state-of-the-art compilers on GH200 and up to 42% on RTX 5090, while matching or exceeding manually written cuDNN kernels on many long-sequence configurations.",
+      "identifiers": [
+        "SemanticScholar:1e5916054f1d32faccbe447cf0ecd6ac9c0bce76"
+      ],
+      "semantic_scholar_id": "1e5916054f1d32faccbe447cf0ecd6ac9c0bce76",
+      "canonical_id": "arXiv:2604.14825",
+      "arxiv_id": "2604.14825",
+      "doi": "10.48550/arXiv.2604.14825",
+      "authors": [
+        "Yi-Fan Zhao",
+        "Yuchen Yang",
+        "Matei Budiu",
+        "Sasa Misailovic"
+      ],
+      "priority": 103,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 103,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 180,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Beyond Position Bias: Shifting Context Compression from Position-Driven to Semantic-Driven",
+      "source_url": "https://arxiv.org/abs/2605.09463",
+      "year": 2026,
+      "published": "2026-05-10",
+      "venue": "arXiv.org",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Models (LLMs) have demonstrated exceptional performance across diverse tasks. However, their deployment in long-context scenarios faces high computational overhead and information redundancy. While soft prompt compression has emerged as a promising way to mitigate these costs by compressing sequences into compact embeddings, existing paradigms remain fundamentally constrained by position bias: they primarily rely on learnable tokens insertion at fixed positions or group tokens according to their physical token layout, thereby inducing performance instability and semantic fragmentation. To overcome this bottleneck, we propose Semantic Consistency Context Compression (SeCo), a method that shifts context compression from position-driven to semantic-driven. Rather than constraint by physical token layout, SeCo dynamically anchors compression directly in the semantic space by selecting query-relevant tokens as semantic centers and aggregating remaining tokens via consistency-weighted merging. This design inherently preserves semantic consistency while eliminating position bias. Extensive experiments on 14 benchmarks across two backbone models demonstrate that SeCo consistently shows superiority in downstream tasks, inference latency, and out-of-domain robustness. The code is available at https://anonymous.4open.science/r/seco-EE5E.",
+      "identifiers": [
+        "SemanticScholar:40b5c9699df466bdfcfedfe67cd402f606104f64"
+      ],
+      "semantic_scholar_id": "40b5c9699df466bdfcfedfe67cd402f606104f64",
+      "canonical_id": "arXiv:2605.09463",
+      "arxiv_id": "2605.09463",
+      "doi": "10.48550/arXiv.2605.09463",
+      "authors": [
+        "Jiwei Tang",
+        "Zhi-Jing Huang",
+        "Xinyu Crystina Zhang",
+        "Chen Zhang",
+        "Jianxing Yu",
+        "Li-Bin Zheng",
+        "Rui Meng",
+        "Jianqin Yin"
+      ],
+      "priority": 103,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 103,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 156,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2602.17698",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2602.17698",
+        "id:SemanticScholar:e18ce2625232cd7f6c0514f8018812f374d842f3",
+        "id:arXiv:2602.17698",
+        "title:scalebits scalable bitwidth search for hardwarealigned mixedprecision llms",
+        "url:https://arxiv.org/abs/2602.17698"
+      ],
+      "record": {
+        "title": "ScaleBITS: Scalable Bitwidth Search for Hardware-Aligned Mixed-Precision LLMs",
+        "source_url": "https://arxiv.org/abs/2602.17698",
+        "year": 2026,
+        "published": "2026-02-06",
+        "venue": "arXiv.org",
+        "citation_count": 4,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Post-training weight quantization is crucial for reducing the memory and inference cost of large language models (LLMs), yet pushing the average precision below 4 bits remains challenging due to highly non-uniform weight sensitivity and the lack of principled precision allocation. Existing solutions use irregular fine-grained mixed-precision with high runtime overhead or rely on heuristics or highly constrained precision allocation strategies. In this work, we propose ScaleBITS, a mixed-precision quantization framework that enables automated, fine-grained bitwidth allocation under a memory budget while preserving hardware efficiency. Guided by a new sensitivity analysis, we introduce a hardware-aligned, block-wise weight partitioning scheme, powered by bi-directional channel reordering. We formulate global bitwidth allocation as a constrained optimization problem and develop a scalable approximation to the greedy algorithm, enabling end-to-end principled allocation. Experiments show that ScaleBITS significantly improves over uniform-precision quantization (up to +36%) and outperforms state-of-the-art sensitivity-aware baselines (up to +13%) in ultra-low-bit regime, without adding runtime overhead.",
+        "identifiers": [
+          "SemanticScholar:e18ce2625232cd7f6c0514f8018812f374d842f3"
+        ],
+        "semantic_scholar_id": "e18ce2625232cd7f6c0514f8018812f374d842f3",
+        "canonical_id": "arXiv:2602.17698",
+        "arxiv_id": "2602.17698",
+        "doi": "10.48550/arXiv.2602.17698",
+        "authors": [
+          "Xinlin Li",
+          "Timothy Chou",
+          "Josh Fromm",
+          "Zichang Liu",
+          "Yunjie Pan",
+          "Christina Fragouli"
+        ],
+        "priority": 104,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 4,
+          "citation_count": 4,
+          "total": 104,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 249,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.05602",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2605.05602",
+        "id:SemanticScholar:ac88dcfe309b5b2d24cc08618f372cc2684f4f64",
+        "id:arXiv:2605.05602",
+        "title:nearly optimal attention coresets",
+        "url:https://arxiv.org/abs/2605.05602"
+      ],
+      "record": {
+        "title": "Nearly Optimal Attention Coresets",
+        "source_url": "https://arxiv.org/abs/2605.05602",
+        "year": 2026,
+        "published": "2026-05-07",
+        "venue": "arXiv.org",
+        "citation_count": 4,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "We consider the problem of estimating the Attention mechanism in small space, and prove the existence of coresets for it of nearly optimal size. Specifically, we show that for any set of unit-norm keys and values $(K,V)$ in $\\mathbb{R}^d$, there exists a subset $(K',V')$ of size at most $O({\\sqrt{d} e^{\\rho+o(\\rho)}/\\varepsilon})$ such that \\[ \\left\\| \\operatorname{Attn}(q,K,V)- \\operatorname{Attn}(q,K',V') \\right\\| \\le \\varepsilon \\] simultaneously for all queries whose norm is bounded by $\\rho$. This outperforms the best known results for this problem. We also offer an improved lower bound showing that $\\varepsilon$-coresets must have size $\\Omega({\\sqrt{d} e^{\\rho}/\\epsilon})$.",
+        "identifiers": [
+          "SemanticScholar:ac88dcfe309b5b2d24cc08618f372cc2684f4f64"
+        ],
+        "semantic_scholar_id": "ac88dcfe309b5b2d24cc08618f372cc2684f4f64",
+        "canonical_id": "arXiv:2605.05602",
+        "arxiv_id": "2605.05602",
+        "doi": "10.48550/arXiv.2605.05602",
+        "authors": [
+          "Edo Liberty",
+          "Alexandr Andoni",
+          "Eldar Kleiner"
+        ],
+        "priority": 104,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 4,
+          "citation_count": 4,
+          "total": 104,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 159,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2601.20595",
+      "identity_tokens": [
+        "id:SemanticScholar:33ad8ec702fa05e4255fbbc7e16c7ce2292e71de",
+        "id:arXiv:2601.20595",
+        "title:syncopate efficient multigpu ai kernels via automatic chunkcentric computecommunication overlap",
+        "url:https://arxiv.org/abs/2601.20595"
+      ],
+      "record": {
+        "title": "Syncopate: Efficient Multi-GPU AI Kernels via Automatic Chunk-Centric Compute-Communication Overlap",
+        "source_url": "https://arxiv.org/abs/2601.20595",
+        "year": 2026,
+        "published": "2026-01-28",
+        "venue": null,
+        "citation_count": 3,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Communication has become a first-order bottleneck in large-scale GPU workloads, and existing distributed compilers address it mainly by overlapping whole compute and communication kernels at the stream level. This coarse granularity incurs extra kernel launches, forces device-wide synchronizations at kernel boundaries, and leaves substantial slack when the slowest tile or kernel stretches the communication tail. We present Syncopate, a compiler and runtime that enables automatic fine-grained overlap inside a single fused kernel. Syncopate introduces a communication chunk abstraction that decouples communication granularity from kernel structure and backend mechanisms, allowing chunk-level plans to be ported from existing distributed compilers, written directly by users, or instantiated from reusable templates. Given a local Triton kernel and a chunk schedule, Syncopate performs transformations to align computation with chunk availability. Implemented as a source-to-source compiler on Triton, Syncopate delivers an average end-to-end speedup of 1.3$\\times$ and up to 4.7$\\times$ on multi-GPU workloads. Our code is open-sourced at https://github.com/tie-pilot-qxw/syncopate.",
+        "identifiers": [
+          "SemanticScholar:33ad8ec702fa05e4255fbbc7e16c7ce2292e71de"
+        ],
+        "semantic_scholar_id": "33ad8ec702fa05e4255fbbc7e16c7ce2292e71de",
+        "canonical_id": "arXiv:2601.20595",
+        "arxiv_id": "2601.20595",
+        "authors": [
+          "Xin-Wei Qiang",
+          "Yue Guan",
+          "Zheng-Ding Hu",
+          "Keren Zhou",
+          "Yufei Ding",
+          "Adnan Aziz"
+        ],
+        "priority": 103,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 3,
+          "citation_count": 3,
+          "total": 103,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 258,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2601.21461",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2601.21461",
+        "id:SemanticScholar:4166a547ff0e1acd8986437a5b4b9f2f422707f8",
+        "id:arXiv:2601.21461",
+        "title:l3 large lookup layers",
+        "url:https://arxiv.org/abs/2601.21461"
+      ],
+      "record": {
+        "title": "L3: Large Lookup Layers",
+        "source_url": "https://arxiv.org/abs/2601.21461",
+        "year": 2026,
+        "published": "2026-01-29",
+        "venue": "arXiv.org",
+        "citation_count": 3,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Modern sparse language models typically achieve sparsity through Mixture-of-Experts (MoE) layers, which dynamically route tokens to dense MLP\"experts.\"However, dynamic hard routing has a number of drawbacks, such as potentially poor hardware efficiency and needing auxiliary losses for stable training. In contrast, the tokenizer embedding table, which is natively sparse, largely avoids these issues by selecting a single embedding per token at the cost of not having contextual information. In this work, we introduce the Large Lookup Layer (L$^3$), which generalizes embedding tables to model decoder layers as a means of further scaling sparsity. L$^3$ layers use static token-based routing to aggregate a set of learned embeddings per token in a context-dependent way, allowing the model to efficiently balance memory and compute by caching information in embeddings. L$^3$ has two main components: (1) a systems-friendly architecture that allows for fast training and CPU-offloaded inference with no overhead, and (2) an information-theoretic embedding allocation algorithm that effectively balances speed and quality. We empirically test L$^3$ by training transformers with up to 2.6B active parameters and find that L$^3$ strongly outperforms both dense models and iso-sparse MoEs in both language modeling and downstream tasks.",
+        "identifiers": [
+          "SemanticScholar:4166a547ff0e1acd8986437a5b4b9f2f422707f8"
+        ],
+        "semantic_scholar_id": "4166a547ff0e1acd8986437a5b4b9f2f422707f8",
+        "canonical_id": "arXiv:2601.21461",
+        "arxiv_id": "2601.21461",
+        "doi": "10.48550/arXiv.2601.21461",
+        "authors": [
+          "Albert Tseng",
+          "C. De Sa"
+        ],
+        "priority": 103,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 3,
+          "citation_count": 3,
+          "total": 103,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 257,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2601.22766",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2601.22766",
+        "id:SemanticScholar:e2334d03e8426da7ca21a2e1bda36ac8f67a0f54",
+        "id:arXiv:2601.22766",
+        "title:sparse attention as compact kernel regression",
+        "url:https://arxiv.org/abs/2601.22766"
+      ],
+      "record": {
+        "title": "Sparse Attention as Compact Kernel Regression",
+        "source_url": "https://arxiv.org/abs/2601.22766",
+        "year": 2026,
+        "published": "2026-01-30",
+        "venue": "arXiv.org",
+        "citation_count": 3,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Recent work has revealed a link between self-attention mechanisms in transformers and test-time kernel regression via the Nadaraya-Watson estimator, with standard softmax attention corresponding to a Gaussian kernel. However, a kernel-theoretic understanding of sparse attention mechanisms is currently missing. In this paper, we establish a formal correspondence between sparse attention and compact (bounded support) kernels. We show that normalized ReLU and sparsemax attention arise from Epanechnikov kernel regression under fixed and adaptive normalizations, respectively. More generally, we demonstrate that widely used kernels in nonparametric density estimation -- including Epanechnikov, biweight, and triweight -- correspond to $\\alpha$-entmax attention with $\\alpha = 1 + \\frac{1}{n}$ for $n \\in \\mathbb{N}$, while the softmax/Gaussian relationship emerges in the limit $n \\to \\infty$. This unified perspective explains how sparsity naturally emerges from kernel design and provides principled alternatives to heuristic top-$k$ attention and other associative memory mechanisms. Experiments with a kernel-regression-based variant of transformers -- Memory Mosaics -- show that kernel-based sparse attention achieves competitive performance on language modeling, in-context learning, and length generalization tasks, offering a principled framework for designing attention mechanisms.",
+        "identifiers": [
+          "SemanticScholar:e2334d03e8426da7ca21a2e1bda36ac8f67a0f54"
+        ],
+        "semantic_scholar_id": "e2334d03e8426da7ca21a2e1bda36ac8f67a0f54",
+        "canonical_id": "arXiv:2601.22766",
+        "arxiv_id": "2601.22766",
+        "doi": "10.48550/arXiv.2601.22766",
+        "authors": [
+          "Saul Santos",
+          "Nuno Gonccalves",
+          "Daniel C. McNamee",
+          "Marcos Vinícius Treviso",
+          "André F. T. Martins"
+        ],
+        "priority": 103,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 3,
+          "citation_count": 3,
+          "total": 103,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 256,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2601.23278",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2601.23278",
+        "id:SemanticScholar:f26f4728ffbb127ec84cc7981a04428f04940633",
+        "id:arXiv:2601.23278",
+        "title:focus dllms know how to tame their compute bound",
+        "url:https://arxiv.org/abs/2601.23278"
+      ],
+      "record": {
+        "title": "FOCUS: DLLMs Know How to Tame Their Compute Bound",
+        "source_url": "https://arxiv.org/abs/2601.23278",
+        "year": 2026,
+        "published": "2026-01-30",
+        "venue": "arXiv.org",
+        "citation_count": 3,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Diffusion Large Language Models (DLLMs) offer a compelling alternative to Auto-Regressive models, but their deployment is constrained by high decoding cost. In this work, we identify a key inefficiency in DLLM decoding: while computation is parallelized over token blocks, only a small subset of tokens is decodable at each diffusion step, causing most compute to be wasted on non-decodable tokens. We further observe a strong correlation between attention-derived token importance and token-wise decoding probability. Based on this insight, we propose FOCUS, an inference system designed for DLLMs. By dynamically focusing computation on decodable tokens and evicting non-decodable ones on-the-fly, FOCUS increases the effective batch size, alleviating compute limitations and enabling scalable throughput. Empirical evaluations demonstrate that FOCUS achieves up to 3.52$\\times$ throughput improvement over the production-grade engine LMDeploy in large-batch settings, while preserving or improving generation quality across multiple benchmarks.",
+        "identifiers": [
+          "SemanticScholar:f26f4728ffbb127ec84cc7981a04428f04940633"
+        ],
+        "semantic_scholar_id": "f26f4728ffbb127ec84cc7981a04428f04940633",
+        "canonical_id": "arXiv:2601.23278",
+        "arxiv_id": "2601.23278",
+        "doi": "10.48550/arXiv.2601.23278",
+        "authors": [
+          "Kai-Huan Liang",
+          "Xin Tan",
+          "An Zhong",
+          "Hong Xu",
+          "Marco Canini"
+        ],
+        "priority": 103,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 3,
+          "citation_count": 3,
+          "total": 103,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 256,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.3390/s26041101",
+      "identity_tokens": [
+        "id:DOI:10.3390/s26041101",
+        "id:SemanticScholar:4156ff1bee3fdff0c526dadb0afefd62ce562a87",
+        "title:dynamic microbatch and tokenbudget scheduling for iotscale pipelineparallel llm inference",
+        "url:https://doi.org/10.3390/s26041101"
+      ],
+      "record": {
+        "title": "Dynamic Micro-Batch and Token-Budget Scheduling for IoT-Scale Pipeline-Parallel LLM Inference",
+        "source_url": "https://doi.org/10.3390/s26041101",
+        "year": 2026,
+        "published": "2026-02-01",
+        "venue": "Italian National Conference on Sensors",
+        "citation_count": 3,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large language models in IoT–edge–cloud settings face bursty, heterogeneous requests that make pipeline-parallel inference prone to micro-batch imbalance and communication stalls, causing GPU idle time and SLO violations. We propose a runtime-adaptive scheduler that jointly tunes token budgets and micro-batch counts to balance prefill/decode workloads and minimize pipeline bubbles under changing compute and network conditions. On a four-node pipeline-parallel cluster across Llama-2-13b and Qwen2.5-14b at 100/1000 Mbps, our method outperforms vLLM and SGLang, reducing GPU idle time by up to 55% and improving throughput by up to 1.61 × while improving TTFT/ITL SLO satisfaction. These results show that dynamic scheduling is essential for scalable, latency-stable LLM inference in IoT–edge–cloud environments.",
+        "identifiers": [
+          "SemanticScholar:4156ff1bee3fdff0c526dadb0afefd62ce562a87"
+        ],
+        "semantic_scholar_id": "4156ff1bee3fdff0c526dadb0afefd62ce562a87",
+        "doi": "10.3390/s26041101",
+        "canonical_id": "DOI:10.3390/s26041101",
+        "authors": [
+          "Juncheol Ahn",
+          "Yubin Son",
+          "Daemin Kim",
+          "Sejin Park"
+        ],
+        "priority": 103,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 3,
+          "citation_count": 3,
+          "total": 103,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 254,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2602.01778",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2602.01778",
+        "id:SemanticScholar:d6fe558b7072b7b50487febda581c8cf9e8487e2",
+        "id:arXiv:2602.01778",
+        "title:data distribution matters a datacentric perspective on context compression for large language model",
+        "url:https://arxiv.org/abs/2602.01778"
+      ],
+      "record": {
+        "title": "Data Distribution Matters: A Data-Centric Perspective on Context Compression for Large Language Model",
+        "source_url": "https://arxiv.org/abs/2602.01778",
+        "year": 2026,
+        "published": "2026-02-02",
+        "venue": "arXiv.org",
+        "citation_count": 3,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The deployment of Large Language Models (LLMs) in long-context scenarios is hindered by computational inefficiency and significant information redundancy. Although recent advancements have widely adopted context compression to address these challenges, existing research only focus on model-side improvements, the impact of the data distribution itself on context compression remains largely unexplored. To bridge this gap, we are the first to adopt a data-centric perspective to systematically investigate how data distribution impacts compression quality, including two dimensions: input data and intrinsic data (i.e., the model's internal pretrained knowledge). We evaluate the semantic integrity of compressed representations using an autoencoder-based framework to systematically investigate it. Our experimental results reveal that: (1) encoder-measured input entropy negatively correlates with compression quality, while decoder-measured entropy shows no significant relationship under a frozen-decoder setting; and (2) the gap between intrinsic data of the encoder and decoder significantly diminishes compression gains, which is hard to mitigate. Based on these findings, we further present practical guidelines to optimize compression gains.",
+        "identifiers": [
+          "SemanticScholar:d6fe558b7072b7b50487febda581c8cf9e8487e2"
+        ],
+        "semantic_scholar_id": "d6fe558b7072b7b50487febda581c8cf9e8487e2",
+        "canonical_id": "arXiv:2602.01778",
+        "arxiv_id": "2602.01778",
+        "doi": "10.48550/arXiv.2602.01778",
+        "authors": [
+          "Kangtao Lv",
+          "Jiwei Tang",
+          "Langming Liu",
+          "Haibin Chen",
+          "Weidong Zhang",
+          "Shilei Liu",
+          "Yong-Wei Wang",
+          "Yujin Yuan",
+          "Wenbo Su",
+          "Bo Zheng"
+        ],
+        "priority": 103,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 3,
+          "citation_count": 3,
+          "total": 103,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 253,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2602.02680",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2602.02680",
+        "id:SemanticScholar:6d912d6693e6eba99cc59ddc2b92b3727eea647b",
+        "id:arXiv:2602.02680",
+        "title:flexrank nested lowrank knowledge decomposition for adaptive model deployment",
+        "url:https://arxiv.org/abs/2602.02680"
+      ],
+      "record": {
+        "title": "FlexRank: Nested Low-Rank Knowledge Decomposition for Adaptive Model Deployment",
+        "source_url": "https://arxiv.org/abs/2602.02680",
+        "year": 2026,
+        "published": "2026-02-02",
+        "venue": "arXiv.org",
+        "citation_count": 3,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The growing scale of deep neural networks, encompassing large language models (LLMs) and vision transformers (ViTs), has made training from scratch prohibitively expensive and deployment increasingly costly. These models are often used as computational monoliths with fixed cost, hindering adaptive deployment across different cost budgets. We argue that nested components, ordered by importance, can be extracted from pretrained models and selectively activated within the available computational budget. To this end, our proposed FlexRank method leverages low-rank weight decomposition with nested, importance-based consolidation to extract submodels of increasing capabilities. Our approach enables a\"train-once, deploy-everywhere\"paradigm offering a graceful trade-off between cost and performance without training from scratch for each budget - advancing practical deployment of large models.",
+        "identifiers": [
+          "SemanticScholar:6d912d6693e6eba99cc59ddc2b92b3727eea647b"
+        ],
+        "semantic_scholar_id": "6d912d6693e6eba99cc59ddc2b92b3727eea647b",
+        "canonical_id": "arXiv:2602.02680",
+        "arxiv_id": "2602.02680",
+        "doi": "10.48550/arXiv.2602.02680",
+        "authors": [
+          "Riccardo Zaccone",
+          "Stefanos Laskaridis",
+          "Marco Ciccone",
+          "Samuel Horváth"
+        ],
+        "priority": 103,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 3,
+          "citation_count": 3,
+          "total": 103,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 253,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2602.05809",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2602.05809",
+        "id:SemanticScholar:a1047da25d280a53cc064ab3877b280a707f78b0",
+        "id:arXiv:2602.05809",
+        "title:focusscanrefine from human visual perception to efficient visual token pruning",
+        "url:https://arxiv.org/abs/2602.05809"
+      ],
+      "record": {
+        "title": "Focus-Scan-Refine: From Human Visual Perception to Efficient Visual Token Pruning",
+        "source_url": "https://arxiv.org/abs/2602.05809",
+        "year": 2026,
+        "published": "2026-02-05",
+        "venue": "arXiv.org",
+        "citation_count": 3,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Vision-language models (VLMs) often generate massive visual tokens that greatly increase inference latency and memory footprint; while training-free token pruning offers a practical remedy, existing methods still struggle to balance local evidence and global context under aggressive compression. We propose Focus-Scan-Refine (FSR), a human-inspired, plug-and-play pruning framework that mimics how humans answer visual questions: focus on key evidence, then scan globally if needed, and refine the scanned context by aggregating relevant details. FSR first focuses on key evidence by combining visual importance with instruction relevance, avoiding the bias toward visually salient but query-irrelevant regions. It then scans for complementary context conditioned on the focused set, selecting tokens that are most different from the focused evidence. Finally, FSR refines the scanned context by aggregating nearby informative tokens into the scan anchors via similarity-based assignment and score-weighted merging, without increasing the token budget. Extensive experiments across multiple VLM backbones and vision-language benchmarks show that FSR consistently improves the accuracy-efficiency trade-off over existing state-of-the-art pruning methods. The source codes can be found at https://github.com/ILOT-code/FSR.",
+        "identifiers": [
+          "SemanticScholar:a1047da25d280a53cc064ab3877b280a707f78b0"
+        ],
+        "semantic_scholar_id": "a1047da25d280a53cc064ab3877b280a707f78b0",
+        "canonical_id": "arXiv:2602.05809",
+        "arxiv_id": "2602.05809",
+        "doi": "10.48550/arXiv.2602.05809",
+        "authors": [
+          "Enwei Tong",
+          "Yuan-Chao Bai",
+          "Yao Zhu",
+          "Jun-Jun Jiang",
+          "Xian-Ming Liu"
+        ],
+        "priority": 103,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 3,
+          "citation_count": 3,
+          "total": 103,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 250,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2602.07878",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2602.07878",
+        "id:SemanticScholar:6ed4303875d6770fb1bccd4854cb0dd7f3ffacab",
+        "id:arXiv:2602.07878",
+        "title:rethinking latency denialofservice attacking the llm serving framework not the model",
+        "url:https://arxiv.org/abs/2602.07878"
+      ],
+      "record": {
+        "title": "Rethinking Latency Denial-of-Service: Attacking the LLM Serving Framework, Not the Model",
+        "source_url": "https://arxiv.org/abs/2602.07878",
+        "year": 2026,
+        "published": "2026-02-08",
+        "venue": "arXiv.org",
+        "citation_count": 3,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "LLM inference is inherently expensive, even a modest slowdown can translate into substantial operating costs and severe availability risks. Recently, a growing body of research known as latency attacks focuses on crafting inputs to trigger worst-case output lengths. However, we report a contrary finding that these algorithmic-level latency attacks are largely ineffective against modern LLM serving systems. We reveal that system-level optimization such as continuous batching provides a logical isolation to mitigate contagious latency impact on co-located users. Thus, in this paper, we shift our focus from the algorithm to the system layer, and introduce a new Fill and Squeeze attack strategy targeting the state transition of the scheduler. ``Fill''first exhausts the global KV cache to induce Head-of-Line blocking, while ``Squeeze''forces the system into repetitive preemption. By manipulating output lengths using different attack prompts, and leveraging side-channel probing of memory status, we demonstrate that the attack can succeed in a practical black-box setting with much less cost. Extensive evaluations on vLLM indicate up to $75-742\\times$ TTFT degradation relative to benign baselines and $1.5-4\\times$ average slowdown on Time Per Output Token compared to existing attacks with 30-40% lower attack cost. Code: https://github.com/Phil-Fan/FS-attack",
+        "identifiers": [
+          "SemanticScholar:6ed4303875d6770fb1bccd4854cb0dd7f3ffacab"
+        ],
+        "semantic_scholar_id": "6ed4303875d6770fb1bccd4854cb0dd7f3ffacab",
+        "canonical_id": "arXiv:2602.07878",
+        "arxiv_id": "2602.07878",
+        "doi": "10.48550/arXiv.2602.07878",
+        "authors": [
+          "Tian-Yi Wang",
+          "Hua Fan",
+          "Yuanchao Shu",
+          "Peng Cheng",
+          "Cong Wang"
+        ],
+        "priority": 103,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 3,
+          "citation_count": 3,
+          "total": 103,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 247,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2603.22300",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2603.22300",
+        "id:SemanticScholar:394cde758d116b8eb595b735af37a3f6f871167d",
+        "id:arXiv:2603.22300",
+        "title:scaling attention via feature sparsity",
+        "url:https://arxiv.org/abs/2603.22300"
+      ],
+      "record": {
+        "title": "Scaling Attention via Feature Sparsity",
+        "source_url": "https://arxiv.org/abs/2603.22300",
+        "year": 2026,
+        "published": "2026-03-17",
+        "venue": "arXiv.org",
+        "citation_count": 3,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Scaling Transformers to ultra-long contexts is bottlenecked by the $O(n^2 d)$ cost of self-attention. Existing methods reduce this cost along the sequence axis through local windows, kernel approximations, or token-level sparsity, but these approaches consistently degrade accuracy. In this paper, we instead explore an orthogonal axis: feature sparsity. We propose Sparse Feature Attention (SFA), where queries and keys are represented as $k$-sparse codes that preserve high-dimensional expressivity while reducing the cost of attention from $\\Theta(n^2 d)$ to $\\Theta(n^2 k^2/d)$. To make this efficient at scale, we introduce FlashSFA, an IO-aware kernel that extends FlashAttention to operate directly on sparse overlaps without materializing dense score matrices. Across GPT-2 and Qwen3 pretraining, SFA matches dense baselines while improving speed by up to $2.5\\times$ and reducing FLOPs and KV-cache by nearly 50\\%. On synthetic and downstream benchmarks, SFA preserves retrieval accuracy and robustness at long contexts, outperforming short-embedding baselines that collapse feature diversity. These results establish feature-level sparsity as a complementary and underexplored axis for efficient attention, enabling Transformers to scale to orders-of-magnitude longer contexts with minimal quality loss. Code is available at https://github.com/YannX1e/Sparse-Feature-Attention.",
+        "identifiers": [
+          "SemanticScholar:394cde758d116b8eb595b735af37a3f6f871167d"
+        ],
+        "semantic_scholar_id": "394cde758d116b8eb595b735af37a3f6f871167d",
+        "canonical_id": "arXiv:2603.22300",
+        "arxiv_id": "2603.22300",
+        "doi": "10.48550/arXiv.2603.22300",
+        "authors": [
+          "Yan Xie",
+          "Tiansheng Wen",
+          "Tan Huang",
+          "Bo Chen",
+          "Chen-Yu You",
+          "Stefanie Jegelka",
+          "Yi-Fei Wang"
+        ],
+        "priority": 103,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 3,
+          "citation_count": 3,
+          "total": 103,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 210,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2603.20843",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2603.20843",
+        "id:SemanticScholar:09e2745f472ad37fbe8b53b71b4098815fdcab08",
+        "id:arXiv:2603.20843",
+        "title:hici hierarchical constructionintegration for longcontext attention",
+        "url:https://arxiv.org/abs/2603.20843"
+      ],
+      "record": {
+        "title": "HiCI: Hierarchical Construction-Integration for Long-Context Attention",
+        "source_url": "https://arxiv.org/abs/2603.20843",
+        "year": 2026,
+        "published": "2026-03-21",
+        "venue": "arXiv.org",
+        "citation_count": 3,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Long-context language modeling is commonly framed as a scalability challenge of token-level attention, yet local-to-global information structuring remains largely implicit in existing approaches. Drawing on cognitive theories of discourse comprehension, we propose HiCI (Hierarchical Construction--Integration), a hierarchical attention module that constructs segment-level representations, integrates them into a shared global context, and broadcasts both to condition segment-level attention. We validate HiCI through parameter-efficient adaptation of LLaMA-2 with only<5.5% additional parameters, extending context from 4K to 100K tokens (7B) and 64K tokens (13B). Across language modeling, retrieval, and instruction-following benchmarks, HiCI yields consistent improvements over strong baselines, including matching proprietary models on topic retrieval and surpassing GPT-3.5-Turbo-16K on code comprehension. These results demonstrate the effectiveness of explicit hierarchical structuring as an inductive bias for long-context modeling.",
+        "identifiers": [
+          "SemanticScholar:09e2745f472ad37fbe8b53b71b4098815fdcab08"
+        ],
+        "semantic_scholar_id": "09e2745f472ad37fbe8b53b71b4098815fdcab08",
+        "canonical_id": "arXiv:2603.20843",
+        "arxiv_id": "2603.20843",
+        "doi": "10.48550/arXiv.2603.20843",
+        "authors": [
+          "Xiang-Yun Zeng",
+          "Qi Xu",
+          "Yun-Ke Wang",
+          "Chang Xu"
+        ],
+        "priority": 103,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 3,
+          "citation_count": 3,
+          "total": 103,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 206,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2603.21232",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2603.21232",
+        "id:SemanticScholar:f0c7504afd077f3c62638e5d0a85ffacff9f7329",
+        "id:arXiv:2603.21232",
+        "title:qmop query guided mixtureofprojector for efficient visual token compression",
+        "url:https://arxiv.org/abs/2603.21232"
+      ],
+      "record": {
+        "title": "QMoP: Query Guided Mixture-of-Projector for Efficient Visual Token Compression",
+        "source_url": "https://arxiv.org/abs/2603.21232",
+        "year": 2026,
+        "published": "2026-03-22",
+        "venue": "arXiv.org",
+        "citation_count": 3,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Multimodal large language models suffer from severe computational and memory bottlenecks, as the number of visual tokens far exceeds that of textual tokens. While recent methods employ projector modules to align and compress visual tokens into text-aligned features, they typically depend on fixed heuristics that limit adaptability across diverse scenarios. In this paper, we first propose Query Guided Mixture-of-Projector (QMoP), a novel and flexible framework that adaptively compresses visual tokens via three collaborative branches: (1) a pooling-based branch for coarse-grained global semantics, (2) a resampler branch for extracting high-level semantic representations, and (3) a pruning-based branch for fine-grained token selection to preserve critical visual detail. To adaptively coordinate these branches, we introduce the Query Guided Router (QGR), which dynamically selects and weights the outputs from different branches based on both visual input and textual queries. A Mixture-of-Experts-style fusion mechanism is designed to aggregate the outputs, harnessing the strengths of each strategy while suppressing noise. To systematically evaluate the effects of Visual Token Compression, we also develop VTCBench, a dedicated benchmark for evaluating the information loss induced by visual token compression. Extensive experiments demonstrate that despite relying on fundamental compression modules, QMoP outperforms strong baselines and delivers significant savings in memory, computation, and inference time.",
+        "identifiers": [
+          "SemanticScholar:f0c7504afd077f3c62638e5d0a85ffacff9f7329"
+        ],
+        "semantic_scholar_id": "f0c7504afd077f3c62638e5d0a85ffacff9f7329",
+        "canonical_id": "arXiv:2603.21232",
+        "arxiv_id": "2603.21232",
+        "doi": "10.48550/arXiv.2603.21232",
+        "authors": [
+          "Zhong-Yang Li",
+          "Ya-Qian Li",
+          "F. Fang",
+          "Rinyoichi Takezoe",
+          "Zi-Hao Bo",
+          "Chengyao Qian",
+          "Mo Guang",
+          "Gui-Xu Zhang",
+          "Kai-Wen Long"
+        ],
+        "priority": 103,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 3,
+          "citation_count": 3,
+          "total": 103,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 205,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2603.28845",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2603.28845",
+        "id:SemanticScholar:79af49a84b915c4adc7f830b4a3f42dc494b8141",
+        "id:arXiv:2603.28845",
+        "title:onecomp oneline revolution for generative ai model compression",
+        "url:https://arxiv.org/abs/2603.28845"
+      ],
+      "record": {
+        "title": "OneComp: One-Line Revolution for Generative AI Model Compression",
+        "source_url": "https://arxiv.org/abs/2603.28845",
+        "year": 2026,
+        "published": "2026-03-30",
+        "venue": "arXiv.org",
+        "citation_count": 3,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Deploying foundation models is increasingly constrained by memory footprint, latency, and hardware costs. Post-training compression can mitigate these bottlenecks by reducing the precision of model parameters without significantly degrading performance; however, its practical implementation remains challenging as practitioners navigate a fragmented landscape of quantization algorithms, precision budgets, data-driven calibration strategies, and hardware-dependent execution regimes. We present OneComp, an open-source compression framework that transforms this expert workflow into a reproducible, resource-adaptive pipeline. Given a model identifier and available hardware, OneComp automatically inspects the model, plans mixed-precision assignments, and executes progressive quantization stages, ranging from layer-wise compression to block-wise refinement and global refinement. A key architectural choice is treating the first quantized checkpoint as a deployable pivot, ensuring that each subsequent stage improves the same model and that quality increases as more compute is invested. By converting state-of-the-art compression research into an extensible, open-source, hardware-aware pipeline, OneComp bridges the gap between algorithmic innovation and production-grade model deployment.",
+        "identifiers": [
+          "SemanticScholar:79af49a84b915c4adc7f830b4a3f42dc494b8141"
+        ],
+        "semantic_scholar_id": "79af49a84b915c4adc7f830b4a3f42dc494b8141",
+        "canonical_id": "arXiv:2603.28845",
+        "arxiv_id": "2603.28845",
+        "doi": "10.48550/arXiv.2603.28845",
+        "authors": [
+          "Yuma Ichikawa",
+          "Keiji Kimura",
+          "Akihiro Yoshida",
+          "Yudai Fujimoto",
+          "Hiroki Tokura",
+          "Yamato Arai",
+          "Yoshiyuki Ishii",
+          "Yusei Kawakami",
+          "Genki Shikada",
+          "Achille Jacquemond",
+          "Yoshihiko Fujisawa",
+          "Katsuki Fujisawa",
+          "Takumi Honda",
+          "Akira Sakai"
+        ],
+        "priority": 103,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 3,
+          "citation_count": 3,
+          "total": 103,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 197,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2604.26963",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2604.26963",
+        "id:SemanticScholar:42ef6b25bb64254b181f9697239cd6dc200224f1",
+        "id:arXiv:2604.26963",
+        "title:mars efficient adaptive coscheduling for heterogeneous agentic systems",
+        "url:https://arxiv.org/abs/2604.26963"
+      ],
+      "record": {
+        "title": "MARS: Efficient, Adaptive Co-Scheduling for Heterogeneous Agentic Systems",
+        "source_url": "https://arxiv.org/abs/2604.26963",
+        "year": 2026,
+        "published": "2026-04-14",
+        "venue": "arXiv.org",
+        "citation_count": 3,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large language models (LLMs) are increasingly deployed as the execution core of autonomous agents rather than as standalone text generators. Agentic workloads induce a temporal shift from single-turn inference to multi-turn LLM-tool loops, and a spatial shift from chat-scale, GPU-only execution to repository-scale, GPU-CPU co-located execution. Consequently, coordinating heterogeneous resource demands of agentic execution has emerged as a critical system challenge. We design and implement MARS, an efficient and adaptive co-scheduling system that globally coordinates heterogeneous agentic workloads under coupled GPU-CPU resource pressure. By establishing holistic visibility across GPU inference and CPU tool execution via a unified information stream, an external control plane in MARS decouples admission from execution to prevent heterogeneous resource oversubscription. An internal agent-centric scheduler further minimizes the end-to-end critical path by prioritizing latency-sensitive continuations and adaptively retaining KV cache state only when warm resumption yields a latency benefit. Our evaluations show that MARS reduces end-to-end latency by up to 5.94x while maintaining nearly maximal system throughput. We further integrate MARS as the serving backend for the OpenHands coding agent framework, demonstrating its real-world effectiveness by accelerating end-to-end task completion time by up to 1.87x. Our source code is publicly available at https://github.com/Afterglow231/MARS_preview .",
+        "identifiers": [
+          "SemanticScholar:42ef6b25bb64254b181f9697239cd6dc200224f1"
+        ],
+        "semantic_scholar_id": "42ef6b25bb64254b181f9697239cd6dc200224f1",
+        "canonical_id": "arXiv:2604.26963",
+        "arxiv_id": "2604.26963",
+        "doi": "10.48550/arXiv.2604.26963",
+        "authors": [
+          "Yi-Fei Wang",
+          "Han-Cheng Ye",
+          "Yechen Xu",
+          "Cong Guo",
+          "Chi-Yue Wei",
+          "Qin-Si Wang",
+          "Dong-Ting Li",
+          "Tingjun Chen",
+          "Hai Li",
+          "Dan-Yang Zhuo",
+          "Yi-Ran Chen"
+        ],
+        "priority": 103,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 3,
+          "citation_count": 3,
+          "total": 103,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 182,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2604.14825",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2604.14825",
+        "id:SemanticScholar:1e5916054f1d32faccbe447cf0ecd6ac9c0bce76",
+        "id:arXiv:2604.14825",
+        "title:nautilus an autoscheduling tensor compiler for efficient tiled gpu kernels",
+        "url:https://arxiv.org/abs/2604.14825"
+      ],
+      "record": {
+        "title": "Nautilus: An Auto-Scheduling Tensor Compiler for Efficient Tiled GPU Kernels",
+        "source_url": "https://arxiv.org/abs/2604.14825",
+        "year": 2026,
+        "published": "2026-04-16",
+        "venue": "arXiv.org",
+        "citation_count": 3,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "We present Nautilus, a novel tensor compiler that moves toward fully automated math-to-kernel optimization. Nautilus compiles a high-level algebraic specification of tensor operators into efficient tiled GPU kernels. Nautilus's successive lowering design allows high-level optimizations, expression rewrites, and tile optimizations to be jointly applied in a single end-to-end system. Nautilus presents a novel auto-scheduler that discovers sequences of high-level optimizations, while preserving the regular program structure needed by tile optimizers. Nautilus's auto-scheduler captures complex interactions and trade-offs in the high-level optimizations, including aggressive global transformations like advanced reduction fusion. Nautilus is the first end-to-end tensor compiler capable of starting from a math-like description of attention and automatically discovering FlashAttention-3-like kernels, offloading the entire burden of optimization from the programmer to the compiler. Across five transformer-based models and 150 evaluation configurations on NVIDIA GH200 and RTX 5090 GPUs, Nautilus achieves up to 23% higher throughput than state-of-the-art compilers on GH200 and up to 42% on RTX 5090, while matching or exceeding manually written cuDNN kernels on many long-sequence configurations.",
+        "identifiers": [
+          "SemanticScholar:1e5916054f1d32faccbe447cf0ecd6ac9c0bce76"
+        ],
+        "semantic_scholar_id": "1e5916054f1d32faccbe447cf0ecd6ac9c0bce76",
+        "canonical_id": "arXiv:2604.14825",
+        "arxiv_id": "2604.14825",
+        "doi": "10.48550/arXiv.2604.14825",
+        "authors": [
+          "Yi-Fan Zhao",
+          "Yuchen Yang",
+          "Matei Budiu",
+          "Sasa Misailovic"
+        ],
+        "priority": 103,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 3,
+          "citation_count": 3,
+          "total": 103,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 180,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.09463",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2605.09463",
+        "id:SemanticScholar:40b5c9699df466bdfcfedfe67cd402f606104f64",
+        "id:arXiv:2605.09463",
+        "title:beyond position bias shifting context compression from positiondriven to semanticdriven",
+        "url:https://arxiv.org/abs/2605.09463"
+      ],
+      "record": {
+        "title": "Beyond Position Bias: Shifting Context Compression from Position-Driven to Semantic-Driven",
+        "source_url": "https://arxiv.org/abs/2605.09463",
+        "year": 2026,
+        "published": "2026-05-10",
+        "venue": "arXiv.org",
+        "citation_count": 3,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large Language Models (LLMs) have demonstrated exceptional performance across diverse tasks. However, their deployment in long-context scenarios faces high computational overhead and information redundancy. While soft prompt compression has emerged as a promising way to mitigate these costs by compressing sequences into compact embeddings, existing paradigms remain fundamentally constrained by position bias: they primarily rely on learnable tokens insertion at fixed positions or group tokens according to their physical token layout, thereby inducing performance instability and semantic fragmentation. To overcome this bottleneck, we propose Semantic Consistency Context Compression (SeCo), a method that shifts context compression from position-driven to semantic-driven. Rather than constraint by physical token layout, SeCo dynamically anchors compression directly in the semantic space by selecting query-relevant tokens as semantic centers and aggregating remaining tokens via consistency-weighted merging. This design inherently preserves semantic consistency while eliminating position bias. Extensive experiments on 14 benchmarks across two backbone models demonstrate that SeCo consistently shows superiority in downstream tasks, inference latency, and out-of-domain robustness. The code is available at https://anonymous.4open.science/r/seco-EE5E.",
+        "identifiers": [
+          "SemanticScholar:40b5c9699df466bdfcfedfe67cd402f606104f64"
+        ],
+        "semantic_scholar_id": "40b5c9699df466bdfcfedfe67cd402f606104f64",
+        "canonical_id": "arXiv:2605.09463",
+        "arxiv_id": "2605.09463",
+        "doi": "10.48550/arXiv.2605.09463",
+        "authors": [
+          "Jiwei Tang",
+          "Zhi-Jing Huang",
+          "Xinyu Crystina Zhang",
+          "Chen Zhang",
+          "Jianxing Yu",
+          "Li-Bin Zheng",
+          "Rui Meng",
+          "Jianqin Yin"
+        ],
+        "priority": 103,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 3,
+          "citation_count": 3,
+          "total": 103,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 156,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:71328fcb2fe268b57e6dac4e3a377b8f52b31ff0736c9a2b8ac51df32bf6a2e7",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}
