@@ -1,0 +1,26 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261014-0200-scheduled-chat-00/r02",
+  "reference_main_sha": "bec4ef5cc0a87305a0b2bf24eb17c4e6aecfa04a",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.30367",
+      "identity_tokens": [
+        "arxiv:2606.30367"
+      ],
+      "title": "FutureNav: Unified World-Action Modeling for Vision-and-Language Navigation",
+      "reason": "タイトル段階で視覚と言語を用いるナビゲーションの世界・行動モデリングを主題とする論文と判別。LLM推論基盤、モデルのメモリ・演算・通信・量子化・並列実行・学習基盤の効率化を直接扱うと判断できないため、一次本文へ進む前に対象外とした。抽象と本文は未読であり、詳細な方法や数値は判断根拠に用いていない。",
+      "source_url": "https://arxiv.org/abs/2606.30367",
+      "body_check": "title_screen_only; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-10-14T02:11:33+09:00",
+      "last_checked_at": "2026-10-14T02:11:33+09:00",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance",
+      "worklist_rank": 55
+    }
+  ]
+}
