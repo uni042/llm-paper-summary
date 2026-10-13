@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-13T04:24:23+00:00",
-  "record_count": 4797,
+  "updated_at": "2026-10-13T05:18:17+00:00",
+  "record_count": 4807,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -73321,6 +73321,184 @@
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "Scaling Reinforcement Learning for Diffusion Models via Velocity Matching"
+    },
+    "DOI:10.1016/j.array.2025.100652": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.array.2025.100652",
+      "identity_tokens": [
+        "DOI:10.1016/j.array.2025.100652",
+        "SemanticScholar:d5c13ba5500cd8ef35eff126d437b1f8a60f030f"
+      ],
+      "reason": "The publisher review covers compression, distillation, quantization, architecture and data-center strategies for reducing AI energy use; relevant efficiency methods are synthesized, though the scope is broad.",
+      "first_checked_at": "2026-10-13T05:18:15+00:00",
+      "last_checked_at": "2026-10-13T05:18:15+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2403.14123-ai-and-memory-wall.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Green AI techniques for reducing energy consumption in AI systems"
+    },
+    "DOI:10.1007/s10791-026-10021-3": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1007/s10791-026-10021-3",
+      "identity_tokens": [
+        "DOI:10.1007/s10791-026-10021-3",
+        "SemanticScholar:99b75e3c5f37419d8deb641f0a07221f95cc1afe"
+      ],
+      "reason": "The publisher abstract reviews compression, NAS, distillation and lightweight Transformer designs for edge intelligence under resource constraints, but is broad and not LLM-specific.",
+      "first_checked_at": "2026-10-13T05:18:16+00:00",
+      "last_checked_at": "2026-10-13T05:18:16+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md",
+        "papers/inference/13-sparse-attention/2024-2407.02490-minference.md",
+        "papers/inference/16-weight-quantization-compression/2023-2306.00978-awq.md",
+        "papers/inference/99-other-inference-systems/2020-2005.14187-hat-hardware-aware-transformers-for-efficient-natural-language-processin.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "A comprehensive review of lightweight deep learning models for edge computing with future directions"
+    },
+    "arXiv:2604.14149": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2604.14149",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2604.14149",
+        "SemanticScholar:14be5a43fbb4ee94e53c66ae49ce9b5f0bcc711d",
+        "arXiv:2604.14149"
+      ],
+      "reason": "The abstract for One Token per Highly Selective Frame: Towards Extreme Compression for Long Video Understanding has an adjacent or weak systems-efficiency connection, but does not establish a clear contribution to LLM inference or serving efficiency.",
+      "first_checked_at": "2026-10-13T05:18:16+00:00",
+      "last_checked_at": "2026-10-13T05:18:16+00:00",
+      "linked_from": [
+        "papers/inference/12-moe-parallelism-communication/2024-2408.10188-longvila-scaling-long-context-visual-language-models-for-long-videos.md",
+        "papers/inference/13-sparse-attention/2025-2504.16083-mminference-accelerating-pre-filling-for-long-context-vlms-via-modality-.md",
+        "papers/inference/99-other-inference-systems/2023-2307.16449-moviechat-from-dense-token-to-sparse-memory-for-long-video-understanding.md",
+        "papers/inference/99-other-inference-systems/2023-2311.17043-llama-vid-an-image-is-worth-2-tokens-in-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2024-2410.17434-longvu-spatiotemporal-adaptive-compression-for-long-video-language-under.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "One Token per Highly Selective Frame: Towards Extreme Compression for Long Video Understanding"
+    },
+    "arXiv:2605.14950": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.14950",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2605.14950",
+        "SemanticScholar:39be2396adefb288f058853bf4d0a2debdb19165",
+        "arXiv:2605.14950"
+      ],
+      "reason": "Evo-Depth reports smaller model size, lower GPU memory use and higher inference frequency for a lightweight VLA model; its deployment domain is robotics.",
+      "first_checked_at": "2026-10-13T05:18:16+00:00",
+      "last_checked_at": "2026-10-13T05:18:16+00:00",
+      "linked_from": [
+        "papers/inference/15-inference-simulation-emulation/2024-2409.12514-tinyvla-towards-fast-data-efficient-vision-language-action-models-for-ro.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Evo-Depth: A Lightweight Depth-Enhanced Vision-Language-Action Model"
+    },
+    "DOI:10.1016/j.ijepes.2026.111940": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.ijepes.2026.111940",
+      "identity_tokens": [
+        "DOI:10.1016/j.ijepes.2026.111940",
+        "SemanticScholar:1d6ab2fe5be21a2762d80abb4bb440d5007553a2"
+      ],
+      "reason": "The publisher highlights concern shifting latency-tolerant data-center workloads for grid demand response. The computing-workload scheduling connection is adjacent, while the focus is power-system flexibility.",
+      "first_checked_at": "2026-10-13T05:18:16+00:00",
+      "last_checked_at": "2026-10-13T05:18:16+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-ad611bbc0cdc-characterizing-power-management-opportunities-for-llms-in-the-cloud.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Data center workload flexibility for power system demand response: Evidence from Alibaba traces"
+    },
+    "arXiv:2603.08251": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2603.08251",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2603.08251",
+        "SemanticScholar:bdde72d71f685d5467bebde6114973776c6a27bc",
+        "arXiv:2603.08251"
+      ],
+      "reason": "The abstract for Not All Queries Need Deep Thought: CoFiCot for Adaptive Coarse-to-fine Stateful Refinement has an adjacent or weak systems-efficiency connection, but does not establish a clear contribution to LLM inference or serving efficiency.",
+      "first_checked_at": "2026-10-13T05:18:17+00:00",
+      "last_checked_at": "2026-10-13T05:18:17+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2025-2510.02345-dynamic-expert-clustering-structured-compression.md",
+        "papers/inference/99-other-inference-systems/2025-2502.12067-tokenskip-controllable-chain-of-thought-compression-in-llms.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Not All Queries Need Deep Thought: CoFiCot for Adaptive Coarse-to-fine Stateful Refinement"
+    },
+    "arXiv:2602.21185": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2602.21185",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2602.21185",
+        "SemanticScholar:46b330ea722acdb5bf824842257ded7f5d244bee",
+        "arXiv:2602.21185"
+      ],
+      "reason": "The abstract for The Diffusion Duality, Chapter II: Ψ-Samplers and Efficient Curriculum has an adjacent or weak systems-efficiency connection, but does not establish a clear contribution to LLM inference or serving efficiency.",
+      "first_checked_at": "2026-10-13T05:18:17+00:00",
+      "last_checked_at": "2026-10-13T05:18:17+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2026-2406.03736-your-absorbing-discrete-diffusion-secretly-models-the-conditional-distri.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "The Diffusion Duality, Chapter II: Ψ-Samplers and Efficient Curriculum"
+    },
+    "arXiv:2512.17319": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2512.17319",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2512.17319",
+        "SemanticScholar:623f709c32502faead8d63a969c7180177fbe18b",
+        "arXiv:2512.17319"
+      ],
+      "reason": "The abstract introduces a remote-sensing MLLM benchmark and evaluates perception and reasoning; no serving or compute-efficiency contribution is described.",
+      "first_checked_at": "2026-10-13T05:18:17+00:00",
+      "last_checked_at": "2026-10-13T05:18:17+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md",
+        "papers/inference/99-other-inference-systems/2024-2403.15447-decoding-compressed-trust-scrutinizing-the-trustworthiness-of-efficient-.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "A Benchmark for Ultra-High-Resolution Remote Sensing MLLMs"
+    },
+    "DOI:10.1109/isca66397.2026.00066": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/isca66397.2026.00066",
+      "identity_tokens": [
+        "DOI:10.1109/isca66397.2026.00066",
+        "SemanticScholar:b268004ea7bd0d873cdf59144916ed307fc50492"
+      ],
+      "reason": "The title and available bibliographic summary concern genome-analysis architecture rather than LLM inference. IEEE Xplore DOI page retrieval was inaccessible, so the abstract could not be checked and relevance is borderline.",
+      "first_checked_at": "2026-10-13T05:18:17+00:00",
+      "last_checked_at": "2026-10-13T05:18:17+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2024-2409.15654-cambricon-llm-chiplet-flash-inference.md",
+        "papers/inference/17-pim-near-data-acceleration/2026-21d5070d498a-aif-accelerating-on-device-llm-inference-using-in-flash-processing.md",
+        "papers/training/01-training-offload-memory-systems/2024-2403.06664-smart-infinity-fast-large-language-model-training-using-near-storage-processing-.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "GRAINS: Enabling High-Performance and Low-Cost Graph-Based Genome Analysis via Storage-Aware Algorithm-Architecture Co-Design"
+    },
+    "arXiv:2602.02556": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2602.02556",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2602.02556",
+        "SemanticScholar:4ea636caf1426792d1fdbdcdd651c5c2f627ee33",
+        "arXiv:2602.02556"
+      ],
+      "reason": "The abstract for Beyond Experience Retrieval: Learning to Generate Utility-Optimized Structured Experience for Frozen LLMs has an adjacent or weak systems-efficiency connection, but does not establish a clear contribution to LLM inference or serving efficiency.",
+      "first_checked_at": "2026-10-13T05:18:17+00:00",
+      "last_checked_at": "2026-10-13T05:18:17+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.05516-pensieve-stateful-large-language-model-serving.md",
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2502.12110-a-mem-agentic-memory-for-llm-agents.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Beyond Experience Retrieval: Learning to Generate Utility-Optimized Structured Experience for Frozen LLMs"
     }
   }
 }

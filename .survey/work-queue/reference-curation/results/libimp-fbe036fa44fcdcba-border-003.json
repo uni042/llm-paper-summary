@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-fbe036fa44fcdcba-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2604.14149",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2604.14149",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2604.14149",
+      "SemanticScholar:14be5a43fbb4ee94e53c66ae49ce9b5f0bcc711d",
+      "arXiv:2604.14149"
+    ],
+    "reason": "The abstract for One Token per Highly Selective Frame: Towards Extreme Compression for Long Video Understanding has an adjacent or weak systems-efficiency connection, but does not establish a clear contribution to LLM inference or serving efficiency.",
+    "first_checked_at": "2026-10-13T05:18:16+00:00",
+    "last_checked_at": "2026-10-13T05:18:16+00:00",
+    "linked_from": [
+      "papers/inference/12-moe-parallelism-communication/2024-2408.10188-longvila-scaling-long-context-visual-language-models-for-long-videos.md",
+      "papers/inference/13-sparse-attention/2025-2504.16083-mminference-accelerating-pre-filling-for-long-context-vlms-via-modality-.md",
+      "papers/inference/99-other-inference-systems/2023-2307.16449-moviechat-from-dense-token-to-sparse-memory-for-long-video-understanding.md",
+      "papers/inference/99-other-inference-systems/2023-2311.17043-llama-vid-an-image-is-worth-2-tokens-in-large-language-models.md",
+      "papers/inference/99-other-inference-systems/2024-2410.17434-longvu-spatiotemporal-adaptive-compression-for-long-video-language-under.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "One Token per Highly Selective Frame: Towards Extreme Compression for Long Video Understanding"
+  },
+  "processed_at": "2026-10-13T05:18:16+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-fbe036fa44fc",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
