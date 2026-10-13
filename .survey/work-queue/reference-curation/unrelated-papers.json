@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-13T09:35:46+00:00",
-  "record_count": 11755,
+  "updated_at": "2026-10-13T09:37:05+00:00",
+  "record_count": 11759,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -168396,6 +168396,81 @@
         "papers/inference/99-other-inference-systems/2023-2307.09702-efficient-guided-generation-for-large-language-models.md"
       ],
       "title": "The Structured Output Benchmark: A Multi-Source Benchmark for Evaluating Structured Output Quality in Large Language Models"
+    },
+    "arXiv:2603.15330": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.15330",
+      "identity_tokens": [
+        "SemanticScholar:9868da0bcb0a9615a9f39f6c98ed26e137eee305",
+        "arXiv:2603.15330"
+      ],
+      "reason": "MeMix maintains O(1) recurrent state for streaming 3D reconstruction, but the abstract is specific to reconstruction models and provides no connection to LLM/VLM serving or language-model memory.",
+      "first_checked_at": "2026-10-13T09:37:04+00:00",
+      "last_checked_at": "2026-10-13T09:37:04+00:00",
+      "linked_from": [
+        "papers/inference/12-moe-parallelism-communication/2021-2101.03961-switch-transformers-scaling-to-trillion-parameter-models-with-simple-and.md",
+        "papers/inference/99-other-inference-systems/2017-1701.06538-outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08621-retentive-network-a-successor-to-transformer-for-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md",
+        "papers/inference/99-other-inference-systems/2024-2407.04620-learning-to-learn-at-test-time-rnns-with-expressive-hidden-states.md",
+        "papers/inference/99-other-inference-systems/2024-2412.06464-gated-delta-networks-improving-mamba2-with-delta-rule.md",
+        "papers/inference/99-other-inference-systems/2025-2501.00663-titans-learning-to-memorize-at-test-time.md"
+      ],
+      "title": "MeMix: Writing Less, Remembering More for Streaming 3D Reconstruction"
+    },
+    "arXiv:2603.12989": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.12989",
+      "identity_tokens": [
+        "SemanticScholar:78e2b7969ceb315fd1f008eae55a85d368810025",
+        "arXiv:2603.12989"
+      ],
+      "reason": "Test-Time Attention Purification removes LVLM backdoors through activation/attention intervention; its stated objective is defense and model behavior, not inference efficiency.",
+      "first_checked_at": "2026-10-13T09:37:05+00:00",
+      "last_checked_at": "2026-10-13T09:37:05+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2311.17043-llama-vid-an-image-is-worth-2-tokens-in-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2024-2403.06764-an-image-is-worth-1-2-tokens-after-layer-2-plug-and-play-inference-accel.md",
+        "papers/inference/99-other-inference-systems/2024-2403.15388-llava-prumerge-adaptive-token-reduction-for-efficient-large-multimodal-m.md",
+        "papers/inference/99-other-inference-systems/2024-2405.05803-boosting-multimodal-large-language-models-with-visual-tokens-withdrawal-.md",
+        "papers/inference/99-other-inference-systems/2024-2410.04417-sparsevlm-visual-token-sparsification-for-efficient-vision-language-mode.md"
+      ],
+      "title": "Test-Time Attention Purification for Backdoored Large Vision Language Models"
+    },
+    "arXiv:2603.06745": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.06745",
+      "identity_tokens": [
+        "SemanticScholar:cd614a084248a1dc1ed02d1d2146beb2c6d914d5",
+        "arXiv:2603.06745"
+      ],
+      "reason": "DIRECTER adjusts steering strength through KV-cache scaling to improve instruction-following quality; its abstract frames the gain as behavioral quality and gives no serving-efficiency target.",
+      "first_checked_at": "2026-10-13T09:37:05+00:00",
+      "last_checked_at": "2026-10-13T09:37:05+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2305.17118-scissorhands.md",
+        "papers/inference/07-kv-cache-optimization-compression/2023-2310.01801-fastgen.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2404.04793-squeezeattention-2d-management-of-kv-cache-in-llm-inference-via-layer-wi.md",
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+        "papers/inference/99-other-inference-systems/2022-2211.05102-efficiently-scaling-transformer-inference.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+      ],
+      "title": "Enhancing Instruction Following of LLMs via Activation Steering with Dynamic Rejection"
+    },
+    "arXiv:2608.02238": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.02238",
+      "identity_tokens": [
+        "SemanticScholar:6c6befa5561c60c8cf91714f919b5b44a339f622",
+        "arXiv:2608.02238"
+      ],
+      "reason": "The review concerns robustness, explainability, fairness, and privacy in digital health; it does not present a concrete inference/runtime optimization.",
+      "first_checked_at": "2026-10-13T09:37:05+00:00",
+      "last_checked_at": "2026-10-13T09:37:05+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2505.00949-llama-nemotron-efficient-reasoning-models.md"
+      ],
+      "title": "Trustworthy AI in Digital Health: A Comprehensive Review of Robustness and Explainability"
     }
   }
 }
