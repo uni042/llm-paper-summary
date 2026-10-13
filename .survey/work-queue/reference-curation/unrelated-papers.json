@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-13T20:41:52+00:00",
-  "record_count": 11880,
+  "updated_at": "2026-10-13T20:57:41+00:00",
+  "record_count": 11881,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -170613,6 +170613,32 @@
         "papers/inference/99-other-inference-systems/2025-2405.16406-spinquant-llm-quantization-with-learned-rotations.md"
       ],
       "title": "Decomposing MXFP4 quantization error for LLM reinforcement learning: reducible bias, recoverable deadzone, and an irreducible floor"
+    },
+    "arXiv:2510.04136": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2510.04136",
+      "identity_tokens": [
+        "arXiv:2510.04136",
+        "id:arXiv:2510.04136",
+        "url:https://arxiv.org/abs/2510.04136"
+      ],
+      "reason": "The abstract’s target is audio-visual speech recognition accuracy/robustness using a frozen LLM as an application component; it does not report LLM serving or inference-system efficiency.",
+      "first_checked_at": "2026-10-13T20:57:41+00:00",
+      "last_checked_at": "2026-10-13T20:57:41+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2025-2507.10524-mixture-of-recursions-learning-dynamic-recursive-depths-for-adaptive-tok.md",
+        "papers/inference/12-moe-parallelism-communication/2021-2101.03961-switch-transformers-scaling-to-trillion-parameter-models-with-simple-and.md",
+        "papers/inference/99-other-inference-systems/2017-1701.06538-outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts.md",
+        "papers/inference/99-other-inference-systems/2021-2112.06905-glam-efficient-scaling-of-language-models-with-mixture-of-experts.md",
+        "papers/inference/99-other-inference-systems/2023-2310.07707-matformer-nested-transformer-for-elastic-inference.md",
+        "papers/inference/99-other-inference-systems/2023-2312.06742-honeybee-locality-enhanced-projector-for-multimodal-llm.md",
+        "papers/inference/99-other-inference-systems/2024-2401.15947-moe-llava-mixture-of-experts-for-large-vision-language-models.md",
+        "papers/inference/99-other-inference-systems/2024-2409.02060-olmoe-open-mixture-of-experts-language-models.md",
+        "papers/inference/99-other-inference-systems/2024-2409.06666-llama-omni-seamless-speech-interaction-with-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2024-2410.14731-matryoshkakv-adaptive-kv-compression-via-trainable-orthogonal-projection.md",
+        "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md"
+      ],
+      "title": "MoME: Mixture of Matryoshka Experts for Audio-Visual Speech Recognition"
     }
   }
 }

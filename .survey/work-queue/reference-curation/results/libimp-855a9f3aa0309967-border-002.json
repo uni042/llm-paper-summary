@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-855a9f3aa0309967-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2504.10368",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2504.10368",
+    "identity_tokens": [
+      "arXiv:2504.10368",
+      "id:arXiv:2504.10368",
+      "url:https://arxiv.org/abs/2504.10368"
+    ],
+    "reason": "This paper studies reasoning capability and benchmark inefficiency, but the abstract frames the finding as model reasoning behavior and does not establish a concrete serving/system optimization method.",
+    "first_checked_at": "2026-10-13T20:57:40+00:00",
+    "last_checked_at": "2026-10-13T20:57:40+00:00",
+    "linked_from": [
+      "papers/inference/04-conditional-computation/2025-2504.15895-dynamic-early-exit-in-reasoning-models.md",
+      "papers/inference/19-inference-evaluation-benchmarking/2024-2401.10480-escape-sky-high-cost-early-stopping-self-consistency-for-multi-step-reas.md",
+      "papers/inference/99-other-inference-systems/2024-2412.18547-token-budget-aware-llm-reasoning.md",
+      "papers/inference/99-other-inference-systems/2025-2502.04463-training-language-models-to-reason-efficiently.md",
+      "papers/inference/99-other-inference-systems/2025-2502.09601-cot-valve-length-compressible-chain-of-thought-tuning.md",
+      "papers/inference/99-other-inference-systems/2025-2502.12067-tokenskip-controllable-chain-of-thought-compression-in-llms.md",
+      "papers/inference/99-other-inference-systems/2025-2502.21074-codi-compressing-chain-of-thought-into-continuous-space-via-self-distill.md",
+      "papers/inference/99-other-inference-systems/2025-2503.04697-l1-controlling-how-long-a-reasoning-model-thinks-with-reinforcement-lear.md",
+      "papers/inference/99-other-inference-systems/2025-2504.09858-reasoning-models-can-be-effective-without-thinking.md",
+      "papers/inference/99-other-inference-systems/2025-2505.00949-llama-nemotron-efficient-reasoning-models.md",
+      "papers/inference/99-other-inference-systems/2025-2505.13417-adaptthink-reasoning-models-can-learn-when-to-think.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Exploring the System 1 Thinking Capability of Large Reasoning Models"
+  },
+  "processed_at": "2026-10-13T20:57:41+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-855a9f3aa030",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
