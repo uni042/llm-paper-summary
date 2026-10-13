@@ -1,0 +1,225 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Language Modeling with Hyperspherical Flows",
+      "source_url": "https://arxiv.org/abs/2605.11125",
+      "year": 2026,
+      "published": "2026-05-11",
+      "venue": "arXiv.org",
+      "citation_count": 19,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Discrete Diffusion Language Models progressed rapidly as an alternative to autoregressive (AR) models, motivated by their parallel generation abilities. However, for tractability, discrete diffusion models sample from a factorized distribution, which is less expressive than AR. Recent Flow Language Models (FLMs) apply continuous flows to language, transporting noise to data with a deterministic ODE that avoids factorized sampling. FLMs operate on one-hot vectors whose dimension scales with the vocabulary size, making FLMs costly to train. Moreover, since all distinct one-hot embeddings are equidistant in $\\ell_2$, adding Gaussian noise does not have a clear semantic interpretation (unlike images, where Gaussian noise progressively degrades structure). We introduce $\\mathbb{S}$-FLM, a latent FLM in the hypersphere. $\\mathbb{S}$-FLM generates sequences by rotating vectors in $\\mathbb{S}^{d-1}$ along a velocity field learned with cross-entropy, avoiding the overhead of materializing one-hot vectors. Previous FLMs match AR in Generative Perplexity (Gen.\\ PPL), but samples with high likelihood are not necessarily correct in verifiable domains such as math and code. $\\mathbb{S}$-FLM substantially improves continuous flow language models on large-vocabulary reasoning and closes the gap to masked diffusion under standard-temperature sampling ($T=1$), while a gap remains under optimized low-temperature ($T=0.1$) decoding.",
+      "identifiers": [
+        "SemanticScholar:45c920ce3ce60be4198eeab2e8724309d5f8b15b"
+      ],
+      "semantic_scholar_id": "45c920ce3ce60be4198eeab2e8724309d5f8b15b",
+      "canonical_id": "arXiv:2605.11125",
+      "arxiv_id": "2605.11125",
+      "doi": "10.48550/arXiv.2605.11125",
+      "authors": [
+        "Justin Deschenaux",
+        "Caglar Gulcehre"
+      ],
+      "priority": 119,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 19,
+        "citation_count": 19,
+        "total": 119,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 155,
+        "matched_prestigious_venue": null
+      },
+      "reason": "The paper targets representation overhead in language generation; the abstract does not quantify runtime or memory improvements.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Probabilistic Tiny Recursive Model",
+      "source_url": "https://arxiv.org/abs/2605.19943",
+      "year": 2026,
+      "published": "2026-05-19",
+      "venue": "arXiv.org",
+      "citation_count": 15,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Tiny Recursive Models (TRM) solve complex reasoning tasks with a fraction of the parameters of modern large language models (LLMs) by iteratively refining a latent state and final answer. While powerful, their deterministic recursion can lead to convergence at suboptimal solutions, without escape mechanism. A common workaround relies on task-specific input perturbations at test time combined with answer aggregation via voting. We introduce Probabilistic TRM (PTRM), a task-agnostic framework for test-time compute scaling that addresses this limitation through stochastic exploration. PTRM injects Gaussian noise at each deep recursion step, enabling parallel trajectories to explore diverse solution basins, and selects among them using the model's existing Q head (used for early stopping in the original TRM). Without requiring retraining or task-specific augmentations, PTRM enables substantial accuracy gains across benchmarks, including Sudoku-Extreme (87.4% to 98.75%) and on various puzzles from Pencil Puzzle Bench (62.6% to 91.2%). On the latter, PTRM achieves nearly double the accuracy of frontier LLMs (91.2% vs. 55.1%) at less than 0.0001x the cost, using only 7M parameters.",
+      "identifiers": [
+        "SemanticScholar:c6e38ba0cbc9aeb0ec28124036c31190739b78a8"
+      ],
+      "semantic_scholar_id": "c6e38ba0cbc9aeb0ec28124036c31190739b78a8",
+      "canonical_id": "arXiv:2605.19943",
+      "arxiv_id": "2605.19943",
+      "doi": "10.48550/arXiv.2605.19943",
+      "authors": [
+        "Amin Sghaier",
+        "Alipanah Parviz",
+        "Alexia Jolicoeur-Martineau"
+      ],
+      "priority": 115,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 15,
+        "citation_count": 15,
+        "total": 115,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 147,
+        "matched_prestigious_venue": null
+      },
+      "reason": "PTRM reports puzzle reasoning at low cost using a tiny recursive model, but its scope is task-specific model capability rather than general LLM-serving systems.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "DySL-VLA: Efficient Vision-Language-Action Model Inference via Dynamic-Static Layer-Skipping for Robot Manipulation",
+      "source_url": "https://arxiv.org/abs/2602.22896",
+      "year": 2026,
+      "published": "2026-02-26",
+      "venue": "arXiv.org",
+      "citation_count": 14,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Vision-Language-Action (VLA) models have shown remarkable success in robotic tasks like manipulation by fusing a language model's reasoning with a vision model's 3D understanding. However, their high computational cost remains a major obstacle for real-world applications that require real-time performance. We observe that the actions within a task have varying levels of importance: critical steps demand high precision, while less important ones can tolerate more variance. Leveraging this insight, we propose DySL-VLA, a novel framework that addresses computational cost by dynamically skipping VLA layers based on each action's importance. DySL-VLA categorizes its layers into two types: informative layers, which are consistently executed, and incremental layers, which can be selectively skipped. To intelligently skip layers without sacrificing accuracy, we invent a prior-post skipping guidance mechanism to determine when to initiate layer-skipping. We also propose a skip-aware two-stage knowledge distillation algorithm to efficiently train a standard VLA into a DySL-VLA. Our experiments indicate that DySL-VLA achieves 2.1% improvement in success length over Deer-VLA on the Calvin dataset, while simultaneously reducing trainable parameters by a factor of 85.7 and providing a 3.75x speedup relative to the RoboFlamingo baseline at iso-accuracy. Our code is available on https://github.com/PKU-SEC-Lab/DYSL_VLA.",
+      "identifiers": [
+        "SemanticScholar:d2ed13e00f4d99b7d70d130796a5978ef791061a"
+      ],
+      "semantic_scholar_id": "d2ed13e00f4d99b7d70d130796a5978ef791061a",
+      "canonical_id": "arXiv:2602.22896",
+      "arxiv_id": "2602.22896",
+      "doi": "10.48550/arXiv.2602.22896",
+      "authors": [
+        "Zebin Yang",
+        "Yijiahao Qi",
+        "Tong Xie",
+        "Bo Yu",
+        "Shao-Shan Liu",
+        "Meng Li"
+      ],
+      "priority": 114,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 14,
+        "citation_count": 14,
+        "total": 114,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 229,
+        "matched_prestigious_venue": null
+      },
+      "reason": "DySL-VLA selectively skips model layers at inference and reports 3.75x speedup at iso-accuracy, a direct inference-efficiency technique for VLA systems.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "XLM: A Python package for non-autoregressive language models",
+      "source_url": "https://arxiv.org/abs/2512.17065",
+      "year": 2025,
+      "published": "2025-12-18",
+      "venue": "Conference of the European Chapter of the Association for Computational Linguistics",
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "In recent years, there has been a resurgence of interest in non-autoregressive text generation in the context of general language modeling. Unlike the well-established autoregressive language modeling paradigm, which has a plethora of standard training and inference libraries, implementations of non-autoregressive language modeling have largely been bespoke making it difficult to perform systematic comparisons of different methods. Moreover, each non-autoregressive language model typically requires it own data collation, loss, and prediction logic, making it challenging to reuse common components. In this work, we present the XLM python package, which is designed to make implementing small non-autoregressive language models faster with a secondary goal of providing a suite of small pre-trained models (through a companion xlm-models package) that can be used by the research community. The code is available at https://github.com/dhruvdcoder/xlm-core.",
+      "identifiers": [
+        "SemanticScholar:680abb95a05b110fc05606dc2bfdf61cbd73ef6d"
+      ],
+      "semantic_scholar_id": "680abb95a05b110fc05606dc2bfdf61cbd73ef6d",
+      "canonical_id": "arXiv:2512.17065",
+      "arxiv_id": "2512.17065",
+      "doi": "10.48550/arXiv.2512.17065",
+      "authors": [
+        "Dhruvesh Patel",
+        "Durga Prasad Maram",
+        "S. Chintha",
+        "Benjamin Rozonoyer",
+        "Andrew McCallum"
+      ],
+      "priority": 114,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 10,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 114,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 299,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      },
+      "reason": "XLM supports implementations and systematic comparisons of non-autoregressive language models, serving as infrastructure for parallel-generation models.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Routing with Generated Data: Annotation-Free LLM Skill Estimation and Expert Selection",
+      "source_url": "https://arxiv.org/abs/2601.09692",
+      "year": 2026,
+      "published": "2026-01-14",
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Model (LLM) routers dynamically select optimal models for given inputs. Existing approaches typically assume access to ground-truth labeled data, which is often unavailable in practice, especially when user request distributions are heterogeneous and unknown. We introduce Routing with Generated Data (RGD), a challenging setting in which routers are trained exclusively on generated queries and answers produced from high-level task descriptions by generator LLMs. We evaluate query-answer routers (using both queries and labels) and query-only routers across four diverse benchmarks and 12 models, finding that query-answer routers degrade faster than query-only routers as generator quality decreases. Our analysis reveals two crucial characteristics of effective generators: they must accurately respond to their own questions, and their questions must produce sufficient performance differentiation among the model pool. We then show how filtering for these characteristics can improve the quality of generated data. We further propose CASCAL, a novel query-only router that estimates model correctness through consensus voting and identifies model-specific skill niches via hierarchical clustering. CASCAL is substantially more robust to generator quality, outperforming the best query-answer router by 4.6% absolute accuracy when trained on weak generator data.",
+      "identifiers": [
+        "SemanticScholar:c9a1cf4c065248761cbfd940dcd07dbc290ce26b"
+      ],
+      "semantic_scholar_id": "c9a1cf4c065248761cbfd940dcd07dbc290ce26b",
+      "canonical_id": "arXiv:2601.09692",
+      "arxiv_id": "2601.09692",
+      "doi": "10.48550/arXiv.2601.09692",
+      "authors": [
+        "Tianyi Niu",
+        "J. Chen",
+        "Genta Indra Winata",
+        "Shi-Xiong Zhang",
+        "Supriyo Chakraborty",
+        "Sambit Sahu",
+        "Yue Zhang",
+        "Elias Stengel-Eskin",
+        "Mohit Bansal"
+      ],
+      "priority": 114,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 10,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 114,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 272,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      },
+      "reason": "The work develops model routing and expert selection, a serving strategy, though the abstract emphasizes accuracy robustness rather than cost or latency.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-7a105e499f7f",
+    "round": "libimp-7a105e499f7f773b-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 11,
+    "round_submission_count": 3,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-7a105e499f7f773b-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-7a105e499f7f773b-pre01.json",
+    "receipt": "sha256:f108c173e716d9d63d79c70f4344808e21257e4ea03a07365a4fc902405f1a5d"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-7a105e499f7f",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
