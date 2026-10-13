@@ -30,6 +30,8 @@ worker_run_key: '20261013-1245-scheduled-chat-45/r01'
 reference_main_sha: '85beca11b2f8af18a4cb780553f42903049e11e0'
 quality_self_review_passed: true
 quality_self_review_version: '2026-10-07'
+last_audited: null
+audit_version: 0
 ---
 
 # GEMINI：CPUメモリの冗長チェックポイントで大規模分散学習を高速復旧する
