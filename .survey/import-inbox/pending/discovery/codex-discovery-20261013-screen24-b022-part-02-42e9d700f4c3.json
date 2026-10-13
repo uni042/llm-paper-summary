@@ -1,0 +1,456 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local",
+  "run_key": "codex-discovery-20261013-screen24-b022-part-02",
+  "reference_main_sha": "2e652754bf895f3441f6e47a9105da61400788a4",
+  "record_count": 20,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/IoTAAI70471.2026.11607731",
+      "identity_tokens": [
+        "DOI:10.1109/IoTAAI70471.2026.11607731"
+      ],
+      "title": "CacheCast: Learning-Guided KV Cache Placement for Multi-Tenant Cloud LLM Serving",
+      "reason": "The IEEE Xplore page for DOI 10.1109/IoTAAI70471.2026.11607731 was inaccessible; although the packet title indicates KV-cache placement for cloud serving, no registered-publisher abstract was retrievable for evidence-based classification.",
+      "source_url": "https://ieeexplore.ieee.org/document/11607731",
+      "body_check": "source_unavailable; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-10-13T07:46:47Z",
+      "last_checked_at": "2026-10-13T07:46:47Z",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.04437-vattention-virtual-memory-kv-management.md",
+        "papers/inference/10-kv-cache-offload-recomputation/2024-2310.07240-cachegen.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2403.02310-sarathi-serve-chunked-prefills-stall-free-scheduling.md",
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md"
+      ],
+      "source_version": "publisher page/abstract as available at retrieval"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2604.23950",
+      "identity_tokens": [
+        "arXiv:2604.23950"
+      ],
+      "title": "LearnPruner: Rethinking Attention-based Token Pruning in Vision Language Models",
+      "reason": "LearnPruner targets attention-based token reduction in vision-language models, an inference-time compute-saving mechanism for multimodal LLMs.",
+      "source_url": "https://arxiv.org/abs/2604.23950",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T07:46:47Z",
+      "last_checked_at": "2026-10-13T07:46:47Z",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2403.06764-an-image-is-worth-1-2-tokens-after-layer-2-plug-and-play-inference-accel.md",
+        "papers/inference/99-other-inference-systems/2024-2410.04417-sparsevlm-visual-token-sparsification-for-efficient-vision-language-mode.md",
+        "papers/inference/99-other-inference-systems/2024-2410.17247-pyramiddrop-accelerating-your-large-vision-language-models-via-pyramid-v.md",
+        "papers/inference/99-other-inference-systems/2024-2412.00876-dynamic-llava-efficient-multimodal-large-language-models-via-dynamic-vis.md",
+        "papers/inference/99-other-inference-systems/2025-2502.11494-stop-looking-for-important-tokens-in-multimodal-language-models-duplicat.md",
+        "papers/inference/99-other-inference-systems/2025-2503.02175-divprune-diversity-based-visual-token-pruning-for-large-multimodal-model.md"
+      ],
+      "source_version": "current arXiv version shown on official abstract page; submitted/revision history checked at retrieval",
+      "abstract_evidence_excerpt": "Vision-Language Models (VLMs) have recently demonstrated remarkable capabilities in visual understanding and reasoning, but they also impose significant computational burdens due to long visual sequence inputs. Recent works address this issue by pruning unimportant visual tokens, achieving substantial computational reduction while maintaining model performance. The core of token pruning lies in determining token impo",
+      "abstract_evidence_sha256": "f59ef0bfee601a4f6d467792141ee8c8d8a0b6f473603ef9d5d1d616b1131a65"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2604.24447",
+      "identity_tokens": [
+        "arXiv:2604.24447"
+      ],
+      "title": "Characterizing Vision-Language-Action Models across XPUs: Constraints and Acceleration for On-Robot Deployment",
+      "reason": "The paper characterizes VLA inference constraints across accelerator types and develops acceleration methods for on-robot deployment, directly addressing edge inference systems.",
+      "source_url": "https://arxiv.org/abs/2604.24447",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T07:46:47Z",
+      "last_checked_at": "2026-10-13T07:46:47Z",
+      "linked_from": [
+        "papers/inference/15-inference-simulation-emulation/2024-2409.12514-tinyvla-towards-fast-data-efficient-vision-language-action-models-for-ro.md",
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+        "papers/inference/99-other-inference-systems/2024-2410.04417-sparsevlm-visual-token-sparsification-for-efficient-vision-language-mode.md"
+      ],
+      "source_version": "current arXiv version shown on official abstract page; submitted/revision history checked at retrieval",
+      "abstract_evidence_excerpt": "Vision-Language-Action (VLA) models are promising for generalist robot control, but on-robot deployment is bottlenecked by real-time inference under tight cost and energy budgets. Most prior evaluations rely on desktop-grade GPUs, obscuring the trade-offs and opportunities offered by heterogeneous edge accelerators (GPUs/XPUs/NPUs). We present a systematic analysis for low-cost VLA deployment via model-hardware co-ch",
+      "abstract_evidence_sha256": "b58935c749a624c71ff99331ce62489c0c1b0d60974009b72276afa1abd98f8a"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2604.22709",
+      "identity_tokens": [
+        "arXiv:2604.22709"
+      ],
+      "title": "Thinking Without Words: Efficient Latent Reasoning with Abstract Chain-of-Thought",
+      "reason": "Abstract chain-of-thought uses latent reasoning to reduce explicit token generation while preserving reasoning performance, directly lowering test-time decoding work.",
+      "source_url": "https://arxiv.org/abs/2604.22709",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T07:46:47Z",
+      "last_checked_at": "2026-10-13T07:46:47Z",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2304.08467-learning-to-compress-prompts-with-gist-tokens.md",
+        "papers/inference/99-other-inference-systems/2024-2412.13171-compressed-chain-of-thought-efficient-reasoning-through-dense-representa.md",
+        "papers/inference/99-other-inference-systems/2025-2502.21074-codi-compressing-chain-of-thought-into-continuous-space-via-self-distill.md",
+        "papers/inference/99-other-inference-systems/2025-2503.04697-l1-controlling-how-long-a-reasoning-model-thinks-with-reinforcement-lear.md"
+      ],
+      "source_version": "current arXiv version shown on official abstract page; submitted/revision history checked at retrieval",
+      "abstract_evidence_excerpt": "While long, explicit chains-of-thought (CoT) have proven effective on complex reasoning tasks, they are costly to generate during inference. Non-verbal reasoning methods have emerged with shorter generation lengths by leveraging continuous representations, yet their performance lags behind verbalized CoT. We propose $\\textbf{Abstract Chain-of-Thought}$, a discrete latent reasoning post-training mechanism in which the",
+      "abstract_evidence_sha256": "b74629e03c2380c0d4ae838cc7b9b16ca59dd3bff1bfde79e2bdb128a41a5ca8"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2604.20796",
+      "identity_tokens": [
+        "arXiv:2604.20796"
+      ],
+      "title": "LLaDA2.0-Uni: Unifying Multimodal Understanding and Generation with Diffusion Large Language Model",
+      "reason": "LLaDA2.0-Uni uses a discrete-diffusion LLM with parallel decoding, prefix-aware inference optimizations, and few-step distillation, directly addressing multimodal generation efficiency.",
+      "source_url": "https://arxiv.org/abs/2604.20796",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T07:46:47Z",
+      "last_checked_at": "2026-10-13T07:46:47Z",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md",
+        "papers/inference/99-other-inference-systems/2025-2503.09573-block-diffusion-interpolating-between-autoregressive-and-diffusion-langu.md"
+      ],
+      "source_version": "current arXiv version shown on official abstract page; submitted/revision history checked at retrieval",
+      "abstract_evidence_excerpt": "We present LLaDA2.0-Uni, a unified discrete diffusion large language model (dLLM) that supports multimodal understanding and generation within a natively integrated framework. Its architecture combines a fully semantic discrete tokenizer, a MoE-based dLLM backbone, and a diffusion decoder. By discretizing continuous visual inputs via SigLIP-VQ, the model enables block-level masked diffusion for both text and vision i",
+      "abstract_evidence_sha256": "dac34a3a82c93129bc747f05eb415f3c750b3a8614a3cd02296092a7befba528"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2604.04745",
+      "identity_tokens": [
+        "arXiv:2604.04745"
+      ],
+      "title": "The Energy Cost of Execution-Idle in GPU Clusters",
+      "reason": "The study measures execution-idle GPU energy in deployed clusters and evaluates downscaling and load-imbalance prototypes, directly informing energy-efficient accelerator runtime management.",
+      "source_url": "https://arxiv.org/abs/2604.04745",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T07:46:47Z",
+      "last_checked_at": "2026-10-13T07:46:47Z",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2025-2506.02634-kvcache-cache-in-the-wild-characterizing-and-optimizing-kvcache-cache-at.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2402.18789-flexllm-token-level-co-serving-of-llm-inference-and-finetuning.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2408.00741-dynamollm.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2505.04021-prism-gpu-sharing-multi-llm-serving.md",
+        "papers/inference/19-inference-evaluation-benchmarking/2023-2310.03003-from-words-to-watts-benchmarking-the-energy-costs-of-large-language-mode.md",
+        "papers/inference/19-inference-evaluation-benchmarking/2024-2401.17644-burstgpt-real-world-llm-serving-workload-dataset.md",
+        "papers/inference/99-other-inference-systems/2025-2504.17674-energy-considerations-of-large-language-model-inference-and-efficiency-o.md"
+      ],
+      "source_version": "current arXiv version shown on official abstract page; submitted/revision history checked at retrieval",
+      "abstract_evidence_excerpt": "GPUs are becoming a major contributor to data center power, yet unlike CPUs, they can remain at high power even when visible activity is near zero. We call this state execution-idle. Using per-second telemetry from a large academic AI cluster, we characterize execution-idle as a recurring low-activity yet high-power state in real deployments. Across diverse workloads and multiple GPU generations, it accounts for 19.7",
+      "abstract_evidence_sha256": "6744128c90ff8b847236a1506c85160b381947242bab24878b014523dd70777d"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2604.02965",
+      "identity_tokens": [
+        "arXiv:2604.02965"
+      ],
+      "title": "Open-Loop Planning, Closed-Loop Verification: Speculative Verification for VLA",
+      "reason": "SV-VLA combines long-horizon action chunks with a lightweight verifier and replans only when needed, explicitly targeting the high inference cost of VLA control.",
+      "source_url": "https://arxiv.org/abs/2604.02965",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T07:46:47Z",
+      "last_checked_at": "2026-10-13T07:46:47Z",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2022-2211.17192-speculative-decoding.md",
+        "papers/inference/05-speculative-decoding-moe/2023-2302.01318-speculative-sampling.md",
+        "papers/inference/05-speculative-decoding-moe/2023-2305.09781-specinfer-tree-speculative-inference.md",
+        "papers/inference/05-speculative-decoding-moe/2023-2308.04623-accelerating-llm-inference-with-staged-speculative-decoding.md",
+        "papers/inference/05-speculative-decoding-moe/2024-2401.15077-eagle-feature-speculative-sampling.md"
+      ],
+      "source_version": "current arXiv version shown on official abstract page; submitted/revision history checked at retrieval",
+      "abstract_evidence_excerpt": "Vision-Language-Action (VLA) models, as large foundation models for embodied control, have shown strong performance in manipulation tasks. However, their performance comes at high inference cost. To improve efficiency, recent methods adopt action chunking, which predicts a sequence of future actions for open-loop execution. Although effective for reducing computation, open-loop execution is sensitive to environmental",
+      "abstract_evidence_sha256": "001440fd43542b325dd840b12ad9ee7d3aa4c23a62b10ccad3b1a7898a3fd09a"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/JAS.2026.125993",
+      "identity_tokens": [
+        "DOI:10.1109/JAS.2026.125993"
+      ],
+      "title": "Understanding Agentic AI: Algorithms and Infrastructure",
+      "reason": "The publisher abstract surveys agentic AI algorithms and disaggregated asynchronous RL training infrastructure and identifies efficiency as an open challenge; it is a broad survey rather than a concrete systems mechanism or benchmark.",
+      "source_url": "https://www.ieee-jas.com/article/doi/10.1109/JAS.2026.125993?pageType=en",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T07:46:47Z",
+      "last_checked_at": "2026-10-13T07:46:47Z",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2505.24298-areal-a-large-scale-asynchronous-reinforcement-learning-system-for-langu.md",
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2502.12110-a-mem-agentic-memory-for-llm-agents.md",
+        "papers/inference/99-other-inference-systems/2023-2307.15337-skeleton-of-thought-prompting-llms-for-efficient-parallel-generation.md",
+        "papers/inference/99-other-inference-systems/2024-2310.03094-large-language-model-cascades-with-mixture-of-thought-representations-fo.md",
+        "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md"
+      ],
+      "source_version": "publisher page/abstract as available at retrieval",
+      "abstract_evidence_excerpt": "The rapid evolution of large language models (LLMs) towards autonomous Agentic artificial intelligence (AI) necessitates a systemic overhaul across algorithms, infrastructure, and architectures. This paper presents a unified view of the “Agentic AI Infrastructure,” connecting research threads often studied in isolation.",
+      "abstract_evidence_sha256": "b6d97d90d1c0e0a0233244981dee75d6836ee8562aa0ee465d5e23c7b7ef8f8f"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/TFUZZ.2025.3594229",
+      "identity_tokens": [
+        "DOI:10.1109/TFUZZ.2025.3594229"
+      ],
+      "title": "CoLLM: Industrial Large–Small Model Collaboration With Fuzzy Decision-Making Agent and Self-Reflection",
+      "reason": "CoLLM coordinates large and small models with fuzzy decision-making and self-reflection for industrial decision tasks; its abstract-level target is decision quality, not serving/runtime efficiency.",
+      "source_url": "https://doi.org/10.1109/TFUZZ.2025.3594229",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T07:46:47Z",
+      "last_checked_at": "2026-10-13T07:46:47Z",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md",
+        "papers/inference/99-other-inference-systems/2024-2404.14618-hybrid-llm-cost-efficient-and-quality-aware-query-routing.md"
+      ],
+      "source_version": "publisher page/abstract as available at retrieval",
+      "abstract_evidence_excerpt": "In industrial applications, large models have exhibited superior generalization capabilities that are unattainable with smaller models. However, when faced with edge scenarios and highly diverse industrial samples, their deployment remains challenging due to high computational costs and unreliable output. To address these challenges, we propose a large–small model collaborative framework (CoLLM), which dynamically se",
+      "abstract_evidence_sha256": "e3d571850c23c27168a0e3eb5dfb03f7fbfc1fefb5dda97b6c6ec6ef9a6eaf79"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.25661",
+      "identity_tokens": [
+        "arXiv:2603.25661"
+      ],
+      "title": "Fast-dVLA: Accelerating Discrete Diffusion VLA to Real-Time Performance",
+      "reason": "The official arXiv abstract for the assigned ID describes parameter-space merging and regularized supervised fine-tuning for VLA adaptation; this is a training-cost contribution, not inference acceleration despite the packet title.",
+      "source_url": "https://arxiv.org/abs/2603.25661",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T07:46:47Z",
+      "last_checked_at": "2026-10-13T07:46:47Z",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2025-2505.22618-fast-dllm-kv-cache-parallel-decoding.md",
+        "papers/inference/15-inference-simulation-emulation/2024-2409.12514-tinyvla-towards-fast-data-efficient-vision-language-action-models-for-ro.md",
+        "papers/inference/99-other-inference-systems/2025-2503.09573-block-diffusion-interpolating-between-autoregressive-and-diffusion-langu.md",
+        "papers/inference/99-other-inference-systems/2025-2508.09192-diffusion-llms-can-do-faster-than-ar-inference-via-discrete-diffusion-fo.md",
+        "papers/inference/99-other-inference-systems/2025-2508.15487-dream-7b-diffusion-large-language-models.md"
+      ],
+      "source_version": "current arXiv version shown on official abstract page; submitted/revision history checked at retrieval",
+      "abstract_evidence_excerpt": "This paper proposes a novel approach to address the challenge that pretrained VLA models often fail to effectively improve performance and reduce adaptation costs during standard supervised finetuning (SFT). Some advanced finetuning methods with auxiliary training objectives can improve performance and reduce the number of convergence steps. However, they typically incur significant computational overhead due to the ",
+      "abstract_evidence_sha256": "f7d8e412d843c9abb893be3e67c6fb14047cb19777110dbfe71f1861a5ab4031"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2603.21957",
+      "identity_tokens": [
+        "arXiv:2603.21957"
+      ],
+      "title": "Unified Spatiotemporal Token Compression for Video-LLMs at Ultra-Low Retention",
+      "reason": "The paper compresses spatial and temporal tokens in Video-LLMs at very low retention, directly reducing multimodal inference sequence cost.",
+      "source_url": "https://arxiv.org/abs/2603.21957",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T07:46:47Z",
+      "last_checked_at": "2026-10-13T07:46:47Z",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md",
+        "papers/inference/99-other-inference-systems/2023-2311.17043-llama-vid-an-image-is-worth-2-tokens-in-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2024-2403.06764-an-image-is-worth-1-2-tokens-after-layer-2-plug-and-play-inference-accel.md",
+        "papers/inference/99-other-inference-systems/2024-2403.15388-llava-prumerge-adaptive-token-reduction-for-efficient-large-multimodal-m.md",
+        "papers/inference/99-other-inference-systems/2024-2410.04417-sparsevlm-visual-token-sparsification-for-efficient-vision-language-mode.md",
+        "papers/inference/99-other-inference-systems/2024-2410.17247-pyramiddrop-accelerating-your-large-vision-language-models-via-pyramid-v.md",
+        "papers/inference/99-other-inference-systems/2024-2411.15024-dycoke-dynamic-compression-of-tokens-for-fast-video-large-language-model.md",
+        "papers/inference/99-other-inference-systems/2024-2412.04468-nvila-efficient-frontier-visual-language-models.md",
+        "papers/inference/99-other-inference-systems/2025-2502.11494-stop-looking-for-important-tokens-in-multimodal-language-models-duplicat.md",
+        "papers/inference/99-other-inference-systems/2025-2503.02175-divprune-diversity-based-visual-token-pruning-for-large-multimodal-model.md"
+      ],
+      "source_version": "current arXiv version shown on official abstract page; submitted/revision history checked at retrieval",
+      "abstract_evidence_excerpt": "Video large language models (Video-LLMs) face high computational costs due to large volumes of visual tokens. Existing token compression methods typically adopt a two-stage spatiotemporal compression strategy, relying on stage-specific metrics and an implicit assumption of spatiotemporal separability. Under extremely low retention ratios, however, such approaches often result in unbalanced allocation and loss of visu",
+      "abstract_evidence_sha256": "bf93ff731dcaa9834455f3468e3bb83cab4ebf4446b4b79e6dd03c0710f3bbcb"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.22458",
+      "identity_tokens": [
+        "arXiv:2603.22458"
+      ],
+      "title": "MinerU-Diffusion: Rethinking Document OCR as Inverse Rendering via Diffusion Decoding",
+      "reason": "MinerU-Diffusion reframes document OCR as inverse rendering and evaluates recognition quality; the abstract does not establish a connection to LLM inference or general serving efficiency.",
+      "source_url": "https://arxiv.org/abs/2603.22458",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T07:46:47Z",
+      "last_checked_at": "2026-10-13T07:46:47Z",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2025-2505.15781-dkv-cache-delayed-kv-diffusion-language-models.md",
+        "papers/inference/07-kv-cache-optimization-compression/2025-2505.22618-fast-dllm-kv-cache-parallel-decoding.md",
+        "papers/inference/07-kv-cache-optimization-compression/2025-2506.06295-dllm-cache-adaptive-caching.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md",
+        "papers/inference/99-other-inference-systems/2025-2503.09573-block-diffusion-interpolating-between-autoregressive-and-diffusion-langu.md",
+        "papers/inference/99-other-inference-systems/2025-2505.21467-flashdlm-accelerating-diffusion-language-model-inference.md",
+        "papers/inference/99-other-inference-systems/2025-2509.26328-fast-dllm-v2-block-diffusion-hierarchical-cache.md",
+        "papers/inference/99-other-inference-systems/2026-2406.03736-your-absorbing-discrete-diffusion-secretly-models-the-conditional-distri.md"
+      ],
+      "source_version": "current arXiv version shown on official abstract page; submitted/revision history checked at retrieval",
+      "abstract_evidence_excerpt": "Optical character recognition (OCR) has evolved from line-level transcription to structured document parsing, requiring models to recover long-form sequences containing layout, tables, and formulas. Despite recent advances in vision-language models, most existing systems rely on autoregressive decoding, which introduces sequential latency and amplifies error propagation in long documents. In this work, we revisit doc",
+      "abstract_evidence_sha256": "5161c15b31cae73e0ca9eefe8aa7e01baf771f2087ea12c25dcd0276482a28c4"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.20155",
+      "identity_tokens": [
+        "arXiv:2603.20155"
+      ],
+      "title": "Beyond Single Tokens: Distilling Discrete Diffusion Models via Discrete MMD",
+      "reason": "Discrete MMD is used to distill discrete diffusion models; the abstract concerns model training/distillation quality and does not give an inference/runtime systems contribution.",
+      "source_url": "https://arxiv.org/abs/2603.20155",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T07:46:47Z",
+      "last_checked_at": "2026-10-13T07:46:47Z",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2503.09573-block-diffusion-interpolating-between-autoregressive-and-diffusion-langu.md"
+      ],
+      "source_version": "current arXiv version shown on official abstract page; submitted/revision history checked at retrieval",
+      "abstract_evidence_excerpt": "It is currently difficult to distill discrete diffusion models. In contrast, continuous diffusion literature has many distillation approaches methods that can reduce sampling steps to a handful. Our method, Discrete Moment Matching Distillation (D-MMD), leverages ideas that have been highly successful in the continuous domain. Whereas previous discrete distillation methods collapse, D-MMD maintains high quality and d",
+      "abstract_evidence_sha256": "373f543531b2208fa85c86908c81931a28694cee7213d1ce8108043262948d01"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2603.15500",
+      "identity_tokens": [
+        "arXiv:2603.15500"
+      ],
+      "title": "Understanding Reasoning in LLMs through Strategic Information Allocation under Uncertainty",
+      "reason": "The paper studies strategic information allocation during LLM reasoning under uncertainty; the abstract suggests test-time resource allocation, but a concrete serving, decoding, or systems-efficiency mechanism is not established.",
+      "source_url": "https://arxiv.org/abs/2603.15500",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T07:46:47Z",
+      "last_checked_at": "2026-10-13T07:46:47Z",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2025-2504.15895-dynamic-early-exit-in-reasoning-models.md"
+      ],
+      "source_version": "current arXiv version shown on official abstract page; submitted/revision history checked at retrieval",
+      "abstract_evidence_excerpt": "LLMs often exhibit Aha moments such as self-correction after tokens like\"Wait,\"yet the underlying mechanism remains unclear. Standard LLMs collapse mainly through silent divergence, where trajectories drift from the correct answer yet remain locally coherent, so no explicit error triggers reactive self-correction. We introduce an information-theoretic framework that separates reasoning into procedural advancement and",
+      "abstract_evidence_sha256": "e3bbf31ddda5807468f009fa4f6ecc77209dd27930bc3c5d05edda85609649fc"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1073/pnas.2526192123",
+      "identity_tokens": [
+        "DOI:10.1073/pnas.2526192123"
+      ],
+      "title": "Toward AI foundation models for epidemics: Promise, challenges, and paths forward",
+      "reason": "The PNAS perspective concerns epidemic forecasting foundation models, outbreak data, and public-health preparedness; it does not contribute to LLM inference or serving systems.",
+      "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13037875/",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T07:46:47Z",
+      "last_checked_at": "2026-10-13T07:46:47Z",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2021-2110.01786-moefication.md",
+        "papers/inference/99-other-inference-systems/2021-2112.06905-glam-efficient-scaling-of-language-models-with-mixture-of-experts.md"
+      ],
+      "source_version": "publisher page/abstract as available at retrieval",
+      "abstract_evidence_excerpt": "Foundation models—large AI systems pretrained on broad, heterogeneous data—are transforming scientific discovery. These models (e.g., GPT, GenCast, AlphaFold) excel at learning generalizable representations and adapting to new tasks with limited data. Yet, epidemic modeling has not experienced a comparable transformation. Traditional models remain pathogen-specific and often struggle to generate rapid insights during",
+      "abstract_evidence_sha256": "36a05abb9bdb470eb421af799862f17798f50b2cfc190e1917836683f8a58f2b"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.08055",
+      "identity_tokens": [
+        "arXiv:2603.08055"
+      ],
+      "title": "Speed3R: Sparse Feed-forward 3D Reconstruction Models",
+      "reason": "Speed3R is a sparse feed-forward 3D reconstruction model for visual reconstruction; its domain-specific application does not establish an LLM/VLM systems connection.",
+      "source_url": "https://arxiv.org/abs/2603.08055",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T07:46:47Z",
+      "last_checked_at": "2026-10-13T07:46:47Z",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2306.14048-h2o.md",
+        "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2412.03213-clusterkv-manipulating-llm-kv-cache-in-semantic-space-for-recallable-com.md",
+        "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md",
+        "papers/inference/13-sparse-attention/2024-2406.10774-quest.md",
+        "papers/inference/13-sparse-attention/2024-2410.13276-seerattention.md",
+        "papers/inference/13-sparse-attention/2025-2502.11089-native-sparse-attention-hardware-aligned-and-natively-trainable-sparse-a.md",
+        "papers/inference/13-sparse-attention/2025-2502.13189-moba.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+      ],
+      "source_version": "current arXiv version shown on official abstract page; submitted/revision history checked at retrieval",
+      "abstract_evidence_excerpt": "While recent feed-forward 3D reconstruction models accelerate 3D reconstruction by jointly inferring dense geometry and camera poses in a single pass, their reliance on dense attention imposes a quadratic complexity, creating a prohibitive computational bottleneck that severely limits inference speed. To resolve this, we introduce Speed3R, an end-to-end trainable model inspired by the core principle of Structure-from",
+      "abstract_evidence_sha256": "8dc3a43ce640b32f5b5c9fad77a3b9bd668bb0cb9811792e204a930c65f9db9c"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2603.06228",
+      "identity_tokens": [
+        "arXiv:2603.06228"
+      ],
+      "title": "Low-latency Event-based Object Detection with Spatially-Sparse Linear Attention",
+      "reason": "Spatially sparse linear attention is applied to low-latency event-based object detection; this is a concrete efficient attention method, but the abstract does not establish applicability to LLM/VLM inference.",
+      "source_url": "https://arxiv.org/abs/2603.06228",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T07:46:47Z",
+      "last_checked_at": "2026-10-13T07:46:47Z",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md",
+        "papers/inference/99-other-inference-systems/2023-2303.06349-resurrecting-recurrent-neural-networks-for-long-sequences.md",
+        "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md",
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md",
+        "papers/inference/99-other-inference-systems/2024-2312.06635-gated-linear-attention-transformers-with-hardware-efficient-training.md"
+      ],
+      "primary_title": "Low-Latency Event-Based Object Detection with Spatially-Sparse Linear Attention",
+      "source_version": "current arXiv version shown on official abstract page; submitted/revision history checked at retrieval",
+      "abstract_evidence_excerpt": "Event cameras provide sequential visual data with spatial sparsity and high temporal resolution, making them attractive for low-latency object detection. Existing asynchronous event-based neural networks exploit this low-latency advantage by updating predictions event by event, but still suffer from two bottlenecks: recurrent architectures are difficult to train efficiently on long sequences, and improving accuracy o",
+      "abstract_evidence_sha256": "5c365c133fa2bbea4d77e73db53f68f4a88772d97ccbccb2c38163c46f782107"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.06743",
+      "identity_tokens": [
+        "arXiv:2603.06743"
+      ],
+      "title": "Stabilizing Reinforcement Learning for Diffusion Language Models",
+      "reason": "StableDRL stabilizes reinforcement-learning post-training for diffusion language models; the abstract focuses on training optimization, not inference-system efficiency.",
+      "source_url": "https://arxiv.org/abs/2603.06743",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T07:46:47Z",
+      "last_checked_at": "2026-10-13T07:46:47Z",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2509.26328-fast-dllm-v2-block-diffusion-hierarchical-cache.md",
+        "papers/inference/99-other-inference-systems/2026-2406.03736-your-absorbing-discrete-diffusion-secretly-models-the-conditional-distri.md"
+      ],
+      "source_version": "current arXiv version shown on official abstract page; submitted/revision history checked at retrieval",
+      "abstract_evidence_excerpt": "Group Relative Policy Optimization (GRPO) is highly effective for post-training autoregressive (AR) language models, yet its direct application to diffusion large language models (dLLMs) often triggers reward collapse. We identify two sources of incompatibility. First, GRPO relies on importance ratios defined by sequence probabilities, which are intractable in dLLMs and must be estimated (e.g., via ELBO-based or mean",
+      "abstract_evidence_sha256": "4198331a7dc27ad1a0a6b34815d52f66316702e4411b7ce5743bb11a05da3883"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3811839.3811859",
+      "identity_tokens": [
+        "DOI:10.1145/3811839.3811859"
+      ],
+      "title": "Structured State Representation and Constraint-Guided Policy Learning for Intelligent Business Decision Systems",
+      "reason": "The ACM DOI page for 10.1145/3811839.3811859 could not be retrieved (403 Forbidden), and no publisher abstract was available; the supplied title/metadata suggest generic business decision policy learning but cannot establish the paper-specific contribution.",
+      "source_url": "https://dl.acm.org/doi/10.1145/3811839.3811859",
+      "body_check": "source_unavailable; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-10-13T07:46:47Z",
+      "last_checked_at": "2026-10-13T07:46:47Z",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2512.20210-predictive-lora-serverless-inference.md"
+      ],
+      "source_version": "publisher page/abstract as available at retrieval"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.05078",
+      "identity_tokens": [
+        "arXiv:2603.05078"
+      ],
+      "title": "MoRe: Motion-aware Feed-forward 4D Reconstruction Transformer",
+      "reason": "MoRe is a feed-forward 4D scene-reconstruction model for monocular video; its efficiency claim is scoped to that visual reconstruction application, with no LLM/VLM system connection.",
+      "source_url": "https://arxiv.org/abs/2603.05078",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T07:46:47Z",
+      "last_checked_at": "2026-10-13T07:46:47Z",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2409.09086-inf-mllm-efficient-streaming-inference.md"
+      ],
+      "source_version": "current arXiv version shown on official abstract page; submitted/revision history checked at retrieval",
+      "abstract_evidence_excerpt": "Reconstructing dynamic 4D scenes remains challenging due to the presence of moving objects that corrupt camera pose estimation. Existing optimization methods alleviate this issue with additional supervision, but they are mostly computationally expensive and impractical in real-time applications. To address these limitations, we propose MoRe, a feedforward 4D reconstruction network that efficiently recovers dynamic 3D",
+      "abstract_evidence_sha256": "3607bcc1b9e77199c360e276e22f959cf22635cd8595e781951ee8e5a932ef16"
+    }
+  ]
+}
