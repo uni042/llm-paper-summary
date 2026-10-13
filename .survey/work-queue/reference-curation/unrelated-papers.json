@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-13T18:22:10+00:00",
-  "record_count": 11840,
+  "updated_at": "2026-10-13T18:47:22+00:00",
+  "record_count": 11841,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -169728,6 +169728,18 @@
         "papers/inference/99-other-inference-systems/2025-2511.11346-fast-and-expressive-multi-byte-prediction-with-probabilistic-circuits.md"
       ],
       "title": "MIXAR: Scaling Autoregressive Pixel-based Language Models to Multiple Languages and Scripts"
+    },
+    "arXiv:2512.00041": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2512.00041",
+      "identity_tokens": [
+        "arXiv:2512.00041"
+      ],
+      "reason": "タイトルに示される主題は屋内の視覚言語ナビゲーション向け世界想像であり、ロボットの経路・行動推定に関する応用研究である。LLM推論の実行基盤、KVキャッシュ、メモリ階層、演算カーネル、モデル圧縮、MoE配信、分散推論の効率化を主題とすることはタイトルから認められないため、本文読解前のタイトル先行除外とする。要旨と本文の技術内容は未確認。",
+      "first_checked_at": "2026-10-13T18:47:22+00:00",
+      "last_checked_at": "2026-10-13T18:47:22+00:00",
+      "linked_from": [],
+      "title": "VISTAv2: World Imagination for Indoor Vision-and-Language Navigation"
     }
   }
 }
