@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-214fb7d808aec92e-unrel-008",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2410.08821",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2410.08821",
+    "identity_tokens": [
+      "SemanticScholar:c896ab9fd8d829a80c2abcfe98d3f6d1b3c7f502",
+      "arXiv:2410.08821"
+    ],
+    "reason": "DeepNote improves adaptive retrieval and answer quality for RAG; the abstract does not identify lower inference latency, memory, or compute usage.",
+    "first_checked_at": "2026-10-13T01:51:41+00:00",
+    "last_checked_at": "2026-10-13T01:51:41+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md",
+      "papers/inference/99-other-inference-systems/2023-2212.10511-when-not-to-trust-language-models-investigating-effectiveness-of-paramet.md"
+    ],
+    "title": "DeepNote: Note-Centric Deep Retrieval-Augmented Generation"
+  },
+  "processed_at": "2026-10-13T01:51:41+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-214fb7d808ae",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

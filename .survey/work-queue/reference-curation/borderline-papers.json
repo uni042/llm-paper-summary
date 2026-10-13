@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-13T01:22:00+00:00",
-  "record_count": 4753,
+  "updated_at": "2026-10-13T01:51:38+00:00",
+  "record_count": 4758,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -72655,6 +72655,86 @@
       ],
       "borderline_recheck_count": 0,
       "title": "Possibility of HPC Application on Cloud Infrastructure by Container Cluster"
+    },
+    "arXiv:2509.21359": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2509.21359",
+      "identity_tokens": [
+        "SemanticScholar:fd06e315159814684e224651e510af1db7482d9a",
+        "arXiv:2509.21359"
+      ],
+      "reason": "The method values and filters retrieved contexts at inference time and predicts context influence to reduce poor context processing; this is a direct RAG inference context-selection mechanism.",
+      "first_checked_at": "2026-10-13T01:51:37+00:00",
+      "last_checked_at": "2026-10-13T01:51:37+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2310.04408-recomp-improving-retrieval-augmented-lms-with-compression-and-selective-.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Influence Guided Context Selection for Effective Retrieval-Augmented Generation"
+    },
+    "arXiv:2610.11270": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.11270",
+      "identity_tokens": [
+        "SemanticScholar:745f5545b162d42a03c4b6b84d181fecc59526a8",
+        "arXiv:2610.11270"
+      ],
+      "reason": "The paper improves conversational memory formation and downstream answer quality, but the abstract does not report reduced latency, memory footprint, or compute use.",
+      "first_checked_at": "2026-10-13T01:51:37+00:00",
+      "last_checked_at": "2026-10-13T01:51:37+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2502.12110-a-mem-agentic-memory-for-llm-agents.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Gated Memory: Admission-Controlled Memory Formation for Conversational AI"
+    },
+    "arXiv:2205.09869": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2205.09869",
+      "identity_tokens": [
+        "SemanticScholar:f512507e98f20528a21af522b7f63f2d16ba6841",
+        "arXiv:2205.09869"
+      ],
+      "reason": "Transformer with Memory Replay reports reduced wall-clock overhead and runtime efficiency, but its stated goal is sample-efficient pretraining and the abstract does not establish a target inference-system efficiency gain.",
+      "first_checked_at": "2026-10-13T01:51:38+00:00",
+      "last_checked_at": "2026-10-13T01:51:38+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Transformer with Memory Replay"
+    },
+    "arXiv:2603.17069": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2603.17069",
+      "identity_tokens": [
+        "SemanticScholar:073df931079ddcfe3f9f192d01733340b9795bb1",
+        "arXiv:2603.17069"
+      ],
+      "reason": "The paper's two-stream fall-detection architecture explicitly lowers latency and energy per inference on a Raspberry Pi edge gateway; this is direct edge-inference efficiency.",
+      "first_checked_at": "2026-10-13T01:51:38+00:00",
+      "last_checked_at": "2026-10-13T01:51:38+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Edge-Efficient Two-Stream Multimodal Architecture for Non-Intrusive Bathroom Fall Detection"
+    },
+    "arXiv:2505.13181": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2505.13181",
+      "identity_tokens": [
+        "SemanticScholar:755d1beaf9d53f1975d907cc31cbe918d5c799c2",
+        "arXiv:2505.13181"
+      ],
+      "reason": "SLED simplifies speech-language-model architecture and states that it maintains inference efficiency, but the abstract focuses on synthesis quality in a speech-specific application; the system-efficiency link remains limited.",
+      "first_checked_at": "2026-10-13T01:51:38+00:00",
+      "last_checked_at": "2026-10-13T01:51:38+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2410.00037-moshi-a-speech-text-foundation-model-for-real-time-dialogue.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Efficient Speech Language Modeling via Energy Distance in Continuous Latent Space"
     }
   }
 }

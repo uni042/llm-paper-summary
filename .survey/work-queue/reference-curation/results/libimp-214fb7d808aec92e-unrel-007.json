@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-214fb7d808aec92e-unrel-007",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2404.04854",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2404.04854",
+    "identity_tokens": [
+      "SemanticScholar:d29da6f2d904a47bc3569fbf708f03f094de3512",
+      "arXiv:2404.04854"
+    ],
+    "reason": "The paper generates synthetic charts for cybersecurity honeyfiles using Transformer/autoencoder models; the contribution is a security application, not inference efficiency.",
+    "first_checked_at": "2026-10-13T01:51:40+00:00",
+    "last_checked_at": "2026-10-13T01:51:40+00:00",
+    "linked_from": [
+      "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md"
+    ],
+    "title": "Contextual Chart Generation for Cyber Deception"
+  },
+  "processed_at": "2026-10-13T01:51:40+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-214fb7d808ae",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

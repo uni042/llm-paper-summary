@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-13T01:22:00+00:00",
-  "record_count": 11663,
+  "updated_at": "2026-10-13T01:51:43+00:00",
+  "record_count": 11674,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -166897,6 +166897,174 @@
         "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md"
       ],
       "title": "DesignSense: A Human Preference Dataset and Reward Modeling Framework for Graphic Layout Generation"
+    },
+    "arXiv:2507.12367": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2507.12367",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2507.12367",
+        "SemanticScholar:40dccfac40613f0de8f308abae36ae9ea344e962",
+        "arXiv:2507.12367"
+      ],
+      "reason": "The abstract presents a benchmark for version-conditioned code generation and tests LLM/agent/RAG correctness; it evaluates application quality rather than inference-system efficiency.",
+      "first_checked_at": "2026-10-13T01:51:39+00:00",
+      "last_checked_at": "2026-10-13T01:51:39+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md"
+      ],
+      "title": "GitChameleon 2.0: Evaluating AI Code Generation Against Python Library Version Incompatibilities"
+    },
+    "arXiv:2509.17138": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2509.17138",
+      "identity_tokens": [
+        "SemanticScholar:73f12089f8fda4946edfb82333f6595c6c132027",
+        "arXiv:2509.17138"
+      ],
+      "reason": "The abstract studies cognitive-psychology memory effects in LLM behavior; this is model behavior analysis rather than system efficiency.",
+      "first_checked_at": "2026-10-13T01:51:39+00:00",
+      "last_checked_at": "2026-10-13T01:51:39+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md"
+      ],
+      "title": "Analyzing Memory Effects in Large Language Models through the lens of Cognitive Psychology"
+    },
+    "DOI:10.1038/s41598-025-86840-z": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1038/s41598-025-86840-z",
+      "identity_tokens": [
+        "DOI:10.1038/s41598-025-86840-z",
+        "SemanticScholar:a3fdb2e08bd0a632184918ea9b177144f478c18d"
+      ],
+      "reason": "The abstract evaluates deep-learning molecular-generation models for EGFR drug discovery; this is a domain application, not inference-system efficiency.",
+      "first_checked_at": "2026-10-13T01:51:39+00:00",
+      "last_checked_at": "2026-10-13T01:51:39+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "title": "Screening of multi deep learning-based de novo molecular generation models and their application for specific target molecular generation"
+    },
+    "arXiv:2404.04854": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2404.04854",
+      "identity_tokens": [
+        "SemanticScholar:d29da6f2d904a47bc3569fbf708f03f094de3512",
+        "arXiv:2404.04854"
+      ],
+      "reason": "The paper generates synthetic charts for cybersecurity honeyfiles using Transformer/autoencoder models; the contribution is a security application, not inference efficiency.",
+      "first_checked_at": "2026-10-13T01:51:40+00:00",
+      "last_checked_at": "2026-10-13T01:51:40+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md"
+      ],
+      "title": "Contextual Chart Generation for Cyber Deception"
+    },
+    "arXiv:2410.08821": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2410.08821",
+      "identity_tokens": [
+        "SemanticScholar:c896ab9fd8d829a80c2abcfe98d3f6d1b3c7f502",
+        "arXiv:2410.08821"
+      ],
+      "reason": "DeepNote improves adaptive retrieval and answer quality for RAG; the abstract does not identify lower inference latency, memory, or compute usage.",
+      "first_checked_at": "2026-10-13T01:51:41+00:00",
+      "last_checked_at": "2026-10-13T01:51:41+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md",
+        "papers/inference/99-other-inference-systems/2023-2212.10511-when-not-to-trust-language-models-investigating-effectiveness-of-paramet.md"
+      ],
+      "title": "DeepNote: Note-Centric Deep Retrieval-Augmented Generation"
+    },
+    "arXiv:2504.17137": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2504.17137",
+      "identity_tokens": [
+        "SemanticScholar:1f3332443c19238a2799f9f9c7878c97b76b4ad2",
+        "arXiv:2504.17137"
+      ],
+      "reason": "MIRAGE contributes a dataset and metrics for RAG evaluation; benchmarking quality is not itself an inference-system efficiency contribution.",
+      "first_checked_at": "2026-10-13T01:51:41+00:00",
+      "last_checked_at": "2026-10-13T01:51:41+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md",
+        "papers/inference/99-other-inference-systems/2023-2212.10511-when-not-to-trust-language-models-investigating-effectiveness-of-paramet.md"
+      ],
+      "title": "MIRAGE: A Metric-Intensive Benchmark for Retrieval-Augmented Generation Evaluation"
+    },
+    "arXiv:2506.20167": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2506.20167",
+      "identity_tokens": [
+        "SemanticScholar:7182ffd6df84fc334cf8534cfe8d71d0633bbf39",
+        "arXiv:2506.20167"
+      ],
+      "reason": "SEED uses an encoder and frozen LLM for time-series forecasting; the abstract emphasizes prediction performance and modularity, not reduced system cost.",
+      "first_checked_at": "2026-10-13T01:51:41+00:00",
+      "last_checked_at": "2026-10-13T01:51:41+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md"
+      ],
+      "title": "SEED: A Structural Encoder for Embedding-Driven Decoding in Time Series Prediction with LLMs"
+    },
+    "arXiv:2512.23713": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2512.23713",
+      "identity_tokens": [
+        "SemanticScholar:067a8f9d89e871d76665be0c90fbb7cfe8653f08",
+        "arXiv:2512.23713"
+      ],
+      "reason": "The paper evaluates Bangla-to-Python code generation with iterative self-correction and multilingual agents; it is an application benchmark, not inference systems optimization.",
+      "first_checked_at": "2026-10-13T01:51:42+00:00",
+      "last_checked_at": "2026-10-13T01:51:42+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+      ],
+      "title": "PyBangla at BLP-2025 Task 2: Enhancing Bangla-to-Python Code Generation with Iterative Self-Correction and Multilingual Agents"
+    },
+    "arXiv:2503.04830": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2503.04830",
+      "identity_tokens": [
+        "SemanticScholar:f2f1a200f179778319ac1cf8ea8e36fabfa1562b",
+        "arXiv:2503.04830"
+      ],
+      "reason": "The abstract improves factual grounding and citation experience for an e-commerce conversational agent; scalable inference is mentioned as a deployment property, but no system-efficiency method or gain is established.",
+      "first_checked_at": "2026-10-13T01:51:42+00:00",
+      "last_checked_at": "2026-10-13T01:51:42+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+      ],
+      "title": "Cite Before You Speak: Enhancing Context-Response Grounding in E-commerce Conversational LLM-Agents"
+    },
+    "arXiv:2506.05850": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2506.05850",
+      "identity_tokens": [
+        "SemanticScholar:66c64979954c4ac2d2f6d96126eedd60a51cae85",
+        "arXiv:2506.05850"
+      ],
+      "reason": "The work studies language drift and reasoning quality during RL training; it does not target inference-system efficiency.",
+      "first_checked_at": "2026-10-13T01:51:42+00:00",
+      "last_checked_at": "2026-10-13T01:51:42+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md"
+      ],
+      "title": "Cross-lingual Collapse: How Language-Centric Foundation Models Shape Reasoning in Large Language Models"
+    },
+    "arXiv:2512.24977": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2512.24977",
+      "identity_tokens": [
+        "SemanticScholar:692da6d2f18abbcdbd4675836fd23bc3bdff28a4",
+        "arXiv:2512.24977"
+      ],
+      "reason": "SymSeqBench is a software toolkit and benchmark for symbolic sequence learning; the abstract does not identify LLM inference or system-efficiency improvements.",
+      "first_checked_at": "2026-10-13T01:51:43+00:00",
+      "last_checked_at": "2026-10-13T01:51:43+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "title": "SymSeqBench: a unified framework for the generation and analysis of rule-based symbolic sequences and datasets"
     }
   }
 }

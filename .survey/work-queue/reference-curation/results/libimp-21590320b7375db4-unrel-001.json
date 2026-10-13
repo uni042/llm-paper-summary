@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-21590320b7375db4-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2506.05850",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2506.05850",
+    "identity_tokens": [
+      "SemanticScholar:66c64979954c4ac2d2f6d96126eedd60a51cae85",
+      "arXiv:2506.05850"
+    ],
+    "reason": "The work studies language drift and reasoning quality during RL training; it does not target inference-system efficiency.",
+    "first_checked_at": "2026-10-13T01:51:42+00:00",
+    "last_checked_at": "2026-10-13T01:51:42+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md"
+    ],
+    "title": "Cross-lingual Collapse: How Language-Centric Foundation Models Shape Reasoning in Large Language Models"
+  },
+  "processed_at": "2026-10-13T01:51:43+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-21590320b737",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
