@@ -1,0 +1,273 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local",
+  "run_key": "discovery-20261014-main-ed62-screen-45-part-02-repair-01",
+  "reference_main_sha": "4261fe58193dbc07fc1208280b6db759ea2960eb",
+  "record_count": 20,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2602.00372",
+      "identity_tokens": [
+        "arXiv:2602.00372"
+      ],
+      "title": "Post-Training Probability Manifold Correction via Structured SVD Pruning and Self-Referential Distillation",
+      "reason": "SparseKD uses structured SVD pruning with self-distillation; the abstract reports 15-65% parameter reduction and identifies reduced dense inference computation.",
+      "source_url": "https://arxiv.org/abs/2602.00372",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T08:10:02+09:00",
+      "last_checked_at": "2026-10-14T08:10:02+09:00"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1145/3774934.3786419",
+      "identity_tokens": [
+        "DOI:10.1145/3774934.3786419"
+      ],
+      "title": "RoMeo: Mitigating Dual-dimensional Outliers with Rotated Mixed Precision Quantization",
+      "reason": "The official PPoPP abstract connects dual-dimensional mixed-precision quantization with LLM serving and reports up to 2.10x end-to-end speedup.",
+      "source_url": "https://ppopp26.sigplan.org/details/PPoPP-2026-papers/9/RoMeo-Mitigating-Dual-dimensional-Outliers-with-Rotated-Mixed-Precision-Quantization",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T08:10:02+09:00",
+      "last_checked_at": "2026-10-14T08:10:02+09:00"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2601.18401",
+      "identity_tokens": [
+        "arXiv:2601.18401"
+      ],
+      "title": "Superlinear Multi-Step Attention",
+      "reason": "The paper proposes subquadratic attention for long-context language models and reports decoding throughput at million-token contexts.",
+      "source_url": "https://arxiv.org/abs/2601.18401",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T08:10:02+09:00",
+      "last_checked_at": "2026-10-14T08:10:02+09:00"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2601.17334",
+      "identity_tokens": [
+        "arXiv:2601.17334"
+      ],
+      "title": "Power-based Partial Attention: Bridging Linear-Complexity and Full Attention",
+      "reason": "PPA interpolates between linear-window and full attention and reports comparable results at subquadratic complexity, a direct attention-efficiency contribution.",
+      "source_url": "https://arxiv.org/abs/2601.17334",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T08:10:02+09:00",
+      "last_checked_at": "2026-10-14T08:10:02+09:00"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2601.14279",
+      "identity_tokens": [
+        "arXiv:2601.14279"
+      ],
+      "title": "On the Limits of Learned Importance Scoring for KV Cache Compression",
+      "reason": "SIP evaluates an LLM KV-cache compression scorer and documents its limitations against simple baselines; negative results directly inform inference cache design.",
+      "source_url": "https://arxiv.org/abs/2601.14279",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T08:10:02+09:00",
+      "last_checked_at": "2026-10-14T08:10:02+09:00"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2601.06463",
+      "identity_tokens": [
+        "arXiv:2601.06463"
+      ],
+      "title": "Gecko: An Efficient Neural Architecture Inherently Processing Sequences with Arbitrary Lengths",
+      "reason": "Gecko proposes a sequence architecture with sliding-chunk attention and adaptive working memory, reporting long-context scalability; this is a directly relevant transformer alternative.",
+      "source_url": "https://arxiv.org/abs/2601.06463",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T08:10:02+09:00",
+      "last_checked_at": "2026-10-14T08:10:02+09:00"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1109/CCNC65079.2026.11366259",
+      "identity_tokens": [
+        "DOI:10.1109/CCNC65079.2026.11366259"
+      ],
+      "title": "Toward Cost-Efficient LLM Serving: A System-Level Memory Optimization Approach",
+      "reason": "The IEEE abstract describes LLM-serving memory management and scheduling across VRAM/DRAM/NVMe, reporting throughput, latency, and VRAM improvements.",
+      "source_url": "https://ieeexplore.ieee.org/document/11366259/",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T08:10:02+09:00",
+      "last_checked_at": "2026-10-14T08:10:02+09:00"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.48550/arXiv.2601.02455",
+      "identity_tokens": [
+        "DOI:10.48550/arXiv.2601.02455",
+        "arXiv:2601.02455"
+      ],
+      "title": "Dynamic Quantization Error Propagation in Encoder-Decoder ASR Quantization",
+      "reason": "The primary abstract targets encoder-decoder speech-recognition models and word-error rate; it does not establish LLM inference efficiency.",
+      "source_url": "https://arxiv.org/abs/2601.02455",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T08:10:02+09:00",
+      "last_checked_at": "2026-10-14T08:10:02+09:00"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1007/s11432-024-4487-8",
+      "identity_tokens": [
+        "DOI:10.1007/s11432-024-4487-8"
+      ],
+      "title": "Mico: efficient query scheduling for multi-cloud deployed LLM inference service",
+      "reason": "The Springer abstract studies multi-cloud LLM inference scheduling and flexible batching, reporting reduced KV-cache use and higher service throughput.",
+      "source_url": "https://link.springer.com/article/10.1007/s11432-024-4487-8",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T08:10:02+09:00",
+      "last_checked_at": "2026-10-14T08:10:02+09:00"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1016/j.neunet.2026.108619",
+      "identity_tokens": [
+        "DOI:10.1016/j.neunet.2026.108619"
+      ],
+      "title": "FRM-PTQ: Feature relationship matching enhanced low-bit post-training quantization for large language models",
+      "reason": "The Elsevier abstract describes low-bit LLM PTQ with customized quantization kernels and reports 2x throughput with reduced memory use.",
+      "source_url": "https://www.sciencedirect.com/science/article/pii/S089360802600081X",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T08:10:02+09:00",
+      "last_checked_at": "2026-10-14T08:10:02+09:00"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.18653/v1/2026.acl-long.2145",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2026.acl-long.2145"
+      ],
+      "title": "EDSD: Entropy-Driven Design for Faster Speculative Decoding",
+      "reason": "The ACL abstract ties entropy-guided draft training and design to speculative decoding and reports a 4.1% speedup against prior methods.",
+      "source_url": "https://aclanthology.org/2026.acl-long.2145/",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T08:10:02+09:00",
+      "last_checked_at": "2026-10-14T08:10:02+09:00"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.18653/v1/2026.acl-long.46",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2026.acl-long.46"
+      ],
+      "title": "RoBSA: RoPE-based Blockwise Sparse Multi-head Latent Attention",
+      "reason": "The ACL abstract targets sparse MLA attention during LLM decoding and reports up to 2.55x lower end-to-end inference latency.",
+      "source_url": "https://aclanthology.org/2026.acl-long.46/",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T08:10:02+09:00",
+      "last_checked_at": "2026-10-14T08:10:02+09:00"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2512.21651",
+      "identity_tokens": [
+        "arXiv:2512.21651"
+      ],
+      "title": "Rethinking Output Alignment For 1-bit Post-Training Quantization of Large Language Models",
+      "reason": "This paper develops output-aligned 1-bit PTQ for LLM deployment, directly targeting low-memory, low-compute quantized inference.",
+      "source_url": "https://arxiv.org/abs/2512.21651",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T08:10:02+09:00",
+      "last_checked_at": "2026-10-14T08:10:02+09:00"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2512.19606",
+      "identity_tokens": [
+        "arXiv:2512.19606"
+      ],
+      "title": "RAPID-LLM: Resilience-Aware Performance analysis of Infrastructure for Distributed LLM Training and Inference",
+      "reason": "The framework models inference operators, memory, interconnect congestion, and feasibility to compare deployment choices; this is a direct systems-performance evaluation contribution.",
+      "source_url": "https://arxiv.org/abs/2512.19606",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T08:10:02+09:00",
+      "last_checked_at": "2026-10-14T08:10:02+09:00"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2512.15550",
+      "identity_tokens": [
+        "arXiv:2512.15550"
+      ],
+      "title": "CTkvr: KV Cache Retrieval for Long-Context LLMs via Centroid then Token Indexing",
+      "reason": "CTkvr targets KV-cache memory access and long-context decoding latency through two-stage retrieval.",
+      "source_url": "https://arxiv.org/abs/2512.15550",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T08:10:02+09:00",
+      "last_checked_at": "2026-10-14T08:10:02+09:00"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2512.14481",
+      "identity_tokens": [
+        "arXiv:2512.14481"
+      ],
+      "title": "SASQ: Static Activation Scaling for Quantization-Aware Training in Large Language Models",
+      "reason": "SASQ targets static activation quantization for efficient LLM deployment, avoiding dynamic quantization overhead while retaining model accuracy.",
+      "source_url": "https://arxiv.org/abs/2512.14481",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T08:10:02+09:00",
+      "last_checked_at": "2026-10-14T08:10:02+09:00"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2512.13751",
+      "identity_tokens": [
+        "arXiv:2512.13751"
+      ],
+      "title": "MIDUS: Memory-Infused Depth Up-Scaling",
+      "reason": "MIDUS provides retrieval-based residual capacity rather than duplicated dense FFN branches and reports performance and efficiency improvements.",
+      "source_url": "https://arxiv.org/abs/2512.13751",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T08:10:02+09:00",
+      "last_checked_at": "2026-10-14T08:10:02+09:00"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.48550/arXiv.2512.12744",
+      "identity_tokens": [
+        "DOI:10.48550/arXiv.2512.12744",
+        "arXiv:2512.12744"
+      ],
+      "title": "Resting Neurons, Active Insights: Improving Input Sparsification for Large Language Models",
+      "reason": "The official arXiv v4 record under the DOI-matched ID describes SPON for reliable activation-sparse LLM inference; its input title differs, so the stable arXiv ID resolves the same work.",
+      "source_url": "https://arxiv.org/abs/2512.12744",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T08:10:02+09:00",
+      "last_checked_at": "2026-10-14T08:10:02+09:00"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.48550/arXiv.2512.10054",
+      "identity_tokens": [
+        "DOI:10.48550/arXiv.2512.10054",
+        "arXiv:2512.10054"
+      ],
+      "title": "Parallel Decoder Transformer: Model-Internal Parallel Decoding with Speculative Invariance via Note Conditioning",
+      "reason": "The official arXiv v3 title differs from the selected input title under the same DOI-matched ID. It proposes model-intrinsic parallel generation, a directly relevant decoding architecture, but explicitly says training and held-out evaluation are in progress and reports no positive empirical result.",
+      "source_url": "https://arxiv.org/abs/2512.10054",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T08:10:02+09:00",
+      "last_checked_at": "2026-10-14T08:10:02+09:00"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2512.07782",
+      "identity_tokens": [
+        "arXiv:2512.07782"
+      ],
+      "title": "GatedFWA: Linear Flash Windowed Attention with Gated Associative Memory",
+      "reason": "GatedFWA combines linear-time windowed attention with a fused kernel for autoregressive language models, targeting sequence-length compute and I/O efficiency.",
+      "source_url": "https://arxiv.org/abs/2512.07782",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T08:10:02+09:00",
+      "last_checked_at": "2026-10-14T08:10:02+09:00"
+    }
+  ]
+}
