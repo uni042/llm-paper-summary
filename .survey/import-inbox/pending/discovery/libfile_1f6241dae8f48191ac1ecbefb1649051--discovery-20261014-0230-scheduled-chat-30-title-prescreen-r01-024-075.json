@@ -1,0 +1,90 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261014-0230-scheduled-chat-30/r01",
+  "reference_main_sha": "7ee5177c17abc40ca3086e347b92d6a8a11cfd6c",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.10120",
+      "identity_tokens": [
+        "arxiv:2601.10120"
+      ],
+      "title": "TopoDIM: One-shot Topology Generation of Diverse Interaction Modes for Multi-Agent Systems",
+      "reason": "題名の対象は複数エージェントの相互作用モードを表すトポロジーの一回生成であり、LLM推論カーネル、KVキャッシュ、モデル配信、GPUメモリ階層を最終目的とする研究ではない。タイトルだけから対象外と判断し、手法や実験結果については断定しない。",
+      "source_url": "https://arxiv.org/abs/2601.10120",
+      "body_check": "title_screen_only; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-10-14T02:43:19+09:00",
+      "last_checked_at": "2026-10-14T02:43:19+09:00",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance",
+      "worklist_rank": 24
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2501.15061",
+      "identity_tokens": [
+        "arxiv:2501.15061"
+      ],
+      "title": "PolaFormer: Polarity-aware Linear Attention for Vision Transformers",
+      "reason": "題名で視覚Transformer用の極性考慮線形注意を対象と明示しており、主な対象は画像認識向け視覚モデルの注意機構である。言語モデルの生成・サービング・KV管理を対象とすることは題名から読み取れないため、現行のLLM推論システム調査から先行除外する。",
+      "source_url": "https://arxiv.org/abs/2501.15061",
+      "body_check": "title_screen_only; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-10-14T02:43:19+09:00",
+      "last_checked_at": "2026-10-14T02:43:19+09:00",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance",
+      "worklist_rank": 25
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.10383",
+      "identity_tokens": [
+        "arxiv:2607.10383"
+      ],
+      "title": "ABot-N1: Toward a General Visual Language Navigation Foundation Model",
+      "reason": "題名の主題は視覚と言語を用いるナビゲーション基盤モデルの構築であり、LLM推論の実行・配信・メモリ管理の効率化を直接の対象としていない。ロボットの経路探索・視覚ナビゲーションモデルに関する研究として先行除外する。",
+      "source_url": "https://arxiv.org/abs/2607.10383",
+      "body_check": "title_screen_only; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-10-14T02:43:19+09:00",
+      "last_checked_at": "2026-10-14T02:43:19+09:00",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance",
+      "worklist_rank": 57
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.10438",
+      "identity_tokens": [
+        "arxiv:2607.10438"
+      ],
+      "title": "Large Language Model Enhanced Differentiable Trajectory Planning for IoT-Enabled Autonomous Driving",
+      "reason": "題名が示す主目的はIoT対応自動運転の微分可能な軌道計画をLLMで強化することである。LLMを応用する計画・制御タスクであり、モデル推論の配信・計算資源・量子化・オフロードを最終目的とする研究ではないため先行除外する。",
+      "source_url": "https://arxiv.org/abs/2607.10438",
+      "body_check": "title_screen_only; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-10-14T02:43:19+09:00",
+      "last_checked_at": "2026-10-14T02:43:19+09:00",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance",
+      "worklist_rank": 70
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.11722",
+      "identity_tokens": [
+        "arxiv:2605.11722"
+      ],
+      "title": "EPIC: Efficient Predicate-Guided Inference-Time Control for Compositional Text-to-Image Generation",
+      "reason": "題名で対象を複合的なテキストから画像への生成制御と明示しており、画像生成の構成条件を推論時に満たすことが主題である。LLMのトークン復号・サービング・GPUメモリ効率を扱う論文とは研究対象が異なるため先行除外する。",
+      "source_url": "https://arxiv.org/abs/2605.11722",
+      "body_check": "title_screen_only; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-10-14T02:43:19+09:00",
+      "last_checked_at": "2026-10-14T02:43:19+09:00",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance",
+      "worklist_rank": 75
+    }
+  ]
+}

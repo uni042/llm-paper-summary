@@ -1,0 +1,26 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261014-0330-scheduled-chat-30/r01",
+  "reference_main_sha": "e51fd94eae873aceefe9121879d35f106fec06bc",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2512.17065",
+      "identity_tokens": [
+        "arxiv:2512.17065"
+      ],
+      "title": "XLM: A Python package for non-autoregressive language models",
+      "reason": "非自己回帰型言語モデルごとに異なるデータ整形・損失・予測器を、Harness、DataModule、Hydra構成で交換可能にするPython研究用パッケージ。本文第5節の実演は挿入型言語モデルの小規模な星形グラフ経路生成、第6節は小型モデルの再現比較である。推論予測器は提供するが、LLM配信エンジン、GPUカーネル、KV管理、実測推論高速化を主要貢献としていない。非自己回帰モデルの実験基盤として関連はあるため保留する。",
+      "source_url": "https://arxiv.org/abs/2512.17065",
+      "body_check": "research_fulltext_relevance_review: 原著第4節のHarness・DataModule・設定管理、第5節のILM実装、第6節の小型モデル実験を確認。研究開発ツールが主題で、推論システム最適化としての効果は未評価。",
+      "first_checked_at": "2026-10-14T03:30:51+09:00",
+      "last_checked_at": "2026-10-14T03:30:51+09:00",
+      "linked_from": [],
+      "origin": "research_postread_relevance",
+      "worklist_rank": 28
+    }
+  ]
+}

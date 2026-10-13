@@ -1,0 +1,26 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-45",
+  "run_key": "20261014-0345-scheduled-chat-45/r01",
+  "reference_main_sha": "53f10a38feecd9b9efeb82fbc5205dc6cca61287",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.27807",
+      "identity_tokens": [
+        "arxiv:2606.27807"
+      ],
+      "title": "SpikeVLA: Vision-Language-Action Models with Spiking Neural Networks",
+      "reason": "原著要旨ではSpike-V（視覚符号器）、Spike-L（スパイク型マルチモーダル言語モデル）、Spike-A（行動制御器）を組み合わせ、ロボット航法・制御の省電力推論を狙う。トークン単位のイベント駆動疎性と推論エネルギー削減は効率化に関連するが、主目的はロボット向け新規VLAアーキテクチャとタスク性能であり、一般のLLMサービング、KV管理、推論カーネルの横断的改善は要旨に示されない。対象境界のため保留。",
+      "source_url": "https://arxiv.org/abs/2606.27807",
+      "body_check": "abstract_screen_only; body_not_read; arxiv abstract: Spike-V, Spike-L, Spike-A and embodied navigation/control energy efficiency",
+      "first_checked_at": "2026-10-14T03:51:19+09:00",
+      "last_checked_at": "2026-10-14T03:51:19+09:00",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance",
+      "worklist_rank": 62
+    }
+  ]
+}

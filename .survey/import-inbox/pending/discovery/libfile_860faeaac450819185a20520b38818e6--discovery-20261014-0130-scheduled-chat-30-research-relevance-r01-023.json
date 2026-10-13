@@ -1,0 +1,26 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261014-0130-scheduled-chat-30/r01",
+  "reference_main_sha": "abf33724d6a6e59ac34230a18324cce60ff43d9d",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2601.02535",
+      "identity_tokens": [
+        "arxiv:2601.02535"
+      ],
+      "title": "ModeX: Evaluator-Free Best-of-N Selection for Open-Ended Generation",
+      "reason": "複数の生成候補を類似度グラフとスペクトルクラスタリングでまとめ、外部の評価モデルなしに代表解を選ぶ。軽量版は途中で候補経路を間引き、追加生成費用を抑える。推論時計算配分には接するが、GPUカーネルやサービング基盤の改善が主目的ではなく、出力選択品質が中心のため境界候補。",
+      "source_url": "https://arxiv.org/abs/2601.02535",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T01:30:00+09:00",
+      "last_checked_at": "2026-10-14T01:30:00+09:00",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance",
+      "worklist_rank": 23
+    }
+  ]
+}

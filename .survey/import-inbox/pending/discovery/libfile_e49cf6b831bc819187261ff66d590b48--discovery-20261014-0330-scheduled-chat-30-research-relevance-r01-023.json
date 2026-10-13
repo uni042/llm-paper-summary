@@ -1,0 +1,26 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261014-0330-scheduled-chat-30/r01",
+  "reference_main_sha": "e51fd94eae873aceefe9121879d35f106fec06bc",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2603.26435",
+      "identity_tokens": [
+        "arxiv:2603.26435"
+      ],
+      "title": "Wattchmen: Watching the Wattchers – High Fidelity, Flexible GPU Energy Modeling",
+      "reason": "GPUの命令別エネルギー推定のため、微小ベンチマークの命令出現数と消費電力量を非負連立方程式で解く。V100・A100・H100を含む16のGPGPU・グラフ解析・HPC・機械学習ワークロードで誤差を測り、エネルギー帰属を細分化する。GPUカーネル効率・電力評価には転用可能だが、LLM推論のKVキャッシュ、MoE、復号、サービングに固有の実装や評価を主題としない。一般GPUシステム測定法として隣接分野に保留する。",
+      "source_url": "https://arxiv.org/abs/2603.26435",
+      "body_check": "research_fulltext_relevance_review: 原著第1節の目的と第3節の命令別エネルギー推定、第5節以降のGPGPU/HPC/MLワークロード評価を確認。LLMサービング固有の寄与ではない。",
+      "first_checked_at": "2026-10-14T03:30:51+09:00",
+      "last_checked_at": "2026-10-14T03:30:51+09:00",
+      "linked_from": [],
+      "origin": "research_postread_relevance",
+      "worklist_rank": 23
+    }
+  ]
+}

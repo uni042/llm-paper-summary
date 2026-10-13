@@ -1,0 +1,26 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-45",
+  "run_key": "20261014-0045-scheduled-chat-45/r01-rank012",
+  "reference_main_sha": "970311c7bb44e50d3845b3687d8b1915dc03ef2a",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2403.18421",
+      "identity_tokens": [
+        "arxiv:2403.18421"
+      ],
+      "title": "BioMedLM: A 2.7B Parameter Language Model Trained On Biomedical Text",
+      "reason": "生物医学コーパスで学習した2.7Bのドメイン特化言語モデルと医療質問応答性能を報告する。モデル学習のハードウェア設定は記述されるが、新しいLLM学習・推論システム最適化技術を提案する研究ではない。",
+      "source_url": "https://arxiv.org/abs/2403.18421",
+      "body_check": "abstract_screen_only; body_not_read; 原著書誌と概要から医療領域向け言語モデルとタスク性能が主貢献であることを確認。",
+      "first_checked_at": "2026-10-14T00:52:13+09:00",
+      "last_checked_at": "2026-10-14T00:52:13+09:00",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance",
+      "worklist_rank": 12
+    }
+  ]
+}
