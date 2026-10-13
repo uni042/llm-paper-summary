@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ca076e9459f6db35-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2602.04640",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2602.04640",
+    "identity_tokens": [
+      "DOI:10.1145/3786161.3788456",
+      "SemanticScholar:7b87329d63df292a5102c017130b029f4df9b8d9",
+      "arXiv:2602.04640"
+    ],
+    "reason": "The position paper is adjacent to agent execution architecture, but its abstract gives no measured efficiency or serving result; primary full text was not read in this screen.",
+    "first_checked_at": "2026-10-13T04:24:19+00:00",
+    "last_checked_at": "2026-10-13T04:24:19+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Towards Structured, State-Aware, and Execution-Grounded Reasoning for Software Engineering Agents"
+  },
+  "processed_at": "2026-10-13T04:24:19+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ca076e9459f6",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

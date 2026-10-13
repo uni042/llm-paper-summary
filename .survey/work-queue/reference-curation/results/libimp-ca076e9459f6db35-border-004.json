@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ca076e9459f6db35-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2609.05279",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2609.05279",
+    "identity_tokens": [
+      "SemanticScholar:879ec3cbf8d465799d00e3c252db2ebaffa1233b",
+      "arXiv:2609.05279"
+    ],
+    "reason": "This is a multi-agent coordination-efficiency measurement relevant to agent systems, but the abstract does not identify model-serving or inference-cost improvements; further full-text screening is needed.",
+    "first_checked_at": "2026-10-13T04:24:20+00:00",
+    "last_checked_at": "2026-10-13T04:24:20+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Testing Interchangeability in LLM Agent Teams"
+  },
+  "processed_at": "2026-10-13T04:24:20+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ca076e9459f6",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
