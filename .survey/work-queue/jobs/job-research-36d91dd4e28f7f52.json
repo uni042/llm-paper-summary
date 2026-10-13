@@ -28,10 +28,15 @@
   "selection_reason": "Distinct multi-model serving design enabling shared decode execution via common frozen decode modules and model-agnostic routing; reports throughput-per-GPU gains and supports quantized shared decoding.",
   "semantic_scholar_id": "3d388db0b33fb6a242d41ae4b0f9b4dbe06ca052",
   "source_url": "https://arxiv.org/abs/2603.02599",
-  "status": "ready",
+  "status": "superseded",
   "title": "SUN: Shared Use of Next-token Prediction for Efficient Multi-LLM Disaggregated Serving",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-10-13T02:51:37+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2603.02599-sun-shared-use-of-next-token-prediction-for-efficient-multi-llm-disaggre.md",
+  "represented_canonical_id": "arXiv:2603.02599",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

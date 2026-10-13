@@ -3,7 +3,7 @@
 複数requestを複数GPU / nodeで処理するLLM servingについて、request順、batch、prefill / decodeのGPU配分、KV再利用・転送、request移動などを調整し、latencyとresource効率を改善する研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（338本）
+## 自動生成の論文一覧（340本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -282,6 +282,10 @@
   実装：✓ ・ リポジトリ内被引用：1  
   実運用LLM基盤で、要求をKV位置とGPU負荷に応じて振り分け、プリフィル/デコードを分離し、GPU〜分散ストレージのKV階層・高速読込・投機的復号を統合して待ち時間と容量負荷を減らす。
 
+- **2026-05 · [PRISM: Fast Online LLM Serving via Scheduling-Memory Co-design](2026-2605.08581-prism-fast-online-llm-serving-via-scheduling-memory-co-design.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  共通のシステム指示、同じ検索文書、ツール定義などの区間が何度も現れ、末尾だけが要求ごとに変わる。著者らは単一NVIDIA A800 80GB上のSGLangで実装し、Qwen3-4B-Instruct-2507およびLlama2-13Bを評価した。
+
 - **2026-05 · [Nitsum: Serving Tiered LLM Requests with Adaptive Tensor Parallelism](2026-2605.05467-nitsum-adaptive-tensor-parallelism-tiered-slo.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   多階層SLOの負荷変動に応じてテンソル並列度、プリフィル/デコードGPU配分、要求スケジューリングを同時に切り替え、重み再読込不要化と高速KV移行で再構成をミリ秒級に抑えるLLMサービング方式。
@@ -321,6 +325,10 @@
 - **2026-03 · [TCM-Serve: Modality-aware Scheduling for Multimodal Large Language Model Inference](2026-2603.26498-rps-serve-modality-aware-scheduling.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   プリフィル遅延とKV占有量からマルチモーダル要求を3資源クラスへ分け、クラス別キューとエージング付き優先制御で巨大動画による先頭待ちを抑え、平均TTFTを54%、遅延重視要求で78.5%削減する。
+
+- **2026-03 · [SUN: Shared Use of Next-token Prediction for Efficient Multi-LLM Disaggregated Serving](2026-2603.02599-sun-shared-use-of-next-token-prediction-for-efficient-multi-llm-disaggre.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  通常の分離配信（disaggregated serving）は、入力を一括処理するプリフィル（プリフィル）と、出力を1トークンずつ生成するデコード（デコード）を異なるGPUへ割り当てる。
 
 - **2026-03 · [SageSched: Efficient LLM Scheduling Confronting Demand Uncertainty and Hybridity](2026-2603.07917-sagesched-demand-uncertainty-hybrid-cost-scheduling.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
