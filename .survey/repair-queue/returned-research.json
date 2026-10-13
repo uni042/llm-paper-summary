@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-13T06:51:21+00:00",
+  "generated_at": "2026-10-13T06:59:42+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -760,8 +760,8 @@
       "canonical_id": "arXiv:2608.12114",
       "title": "The Ingestion Tax: Adopting File-Backed Weights in Tensor Frameworks",
       "source_url": "https://arxiv.org/html/2608.12114v1",
-      "returned_at": "2026-10-13T06:48:40+00:00",
-      "return_count": 1,
+      "returned_at": "2026-10-13T06:59:41+00:00",
+      "return_count": 2,
       "assigned_worker": "scheduled-chat-45",
       "reason": "blocked_quality",
       "failures": [
@@ -779,8 +779,8 @@
           "評価説明量 394 < 500"
         ]
       },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_68c7919974bc8191979ab7131c8435f9--2026-2608.12114-ingestion-tax-metadata-repair-20261013-1445-scheduled-chat-45-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_68c7919974bc8191979ab7131c8435f9--2026-2608.12114-ingestion-tax-metadata-repair-20261013-1445-scheduled-chat-45-r01.json",
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-9a7672998899--libfile_68c7919974bc8191979ab7131c8435f9--2026-2608.12114-ingestion-tax-metadata-repair-20261013-1445-scheduled-chat-45-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-9a7672998899--libfile_68c7919974bc8191979ab7131c8435f9--2026-2608.12114-ingestion-tax-metadata-repair-20261013-1445-scheduled-chat-45-r01.json",
       "worker_run_key": "20261013-1445-scheduled-chat-45/r01"
     }
   ]
