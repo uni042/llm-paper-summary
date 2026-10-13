@@ -1,0 +1,27 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261013-1930-scheduled-chat-30/r01/research-relevance-017",
+  "reference_main_sha": "df1e54299253121b022271294c687c1ffc4caa81",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2112.06749",
+      "identity_tokens": [
+        "id:arXiv:2112.06749",
+        "url:https://arxiv.org/abs/2112.06749"
+      ],
+      "title": "Step-unrolled Denoising Autoencoders for Text Generation",
+      "reason": "一次要旨では、自己回帰ではなく乱数初期トークン列に改善演算子を反復適用するSUNDAEを提案し、従来の拡散型方式より少ない反復でテキストを生成する。反復回数の削減は復号アルゴリズムに関係するが、主評価はWMT14英独翻訳と無条件言語生成の品質であり、現代LLMの推論サービング・カーネル・GPU実測性能への直接適用は要旨だけでは確定できないため境界的とする。",
+      "source_url": "https://arxiv.org/abs/2112.06749",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T19:30:34+09:00",
+      "last_checked_at": "2026-10-13T19:30:34+09:00",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance",
+      "worklist_rank": 17
+    }
+  ]
+}
