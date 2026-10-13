@@ -35,10 +35,15 @@
   "selection_reason": "長文脈を2D視覚表現へ写像して視覚tokenへ圧縮し、DeepEncoderは高解像度入力でもactivationを抑えつつ管理可能なtoken数へ縮約する。10x未満の圧縮でOCR精度97%、20xでも約60%を維持し、長文脈LLMのcontext/token budget圧縮へ直接つながるため対象。",
   "semantic_scholar_id": "5e8b50dd5ed9851a541d337a4d9cfa9b75c0a33c",
   "source_url": "https://arxiv.org/abs/2510.18234",
-  "status": "ready",
+  "status": "superseded",
   "title": "DeepSeek-OCR: Contexts Optical Compression",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2025
+  "year": 2025,
+  "superseded_at": "2026-10-13T12:07:46+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2025-2510.18234-deepseek-ocr-contexts-optical-compression.md",
+  "represented_canonical_id": "arXiv:2510.18234",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

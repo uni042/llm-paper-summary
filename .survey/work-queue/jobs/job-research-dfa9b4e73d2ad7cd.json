@@ -35,10 +35,15 @@
   "selection_reason": "residual streamからKVをbit-identicalに再構成し、5KB/tokenの残差checkpointでKV cacheを置換するKV-Directを提案。メモリと推論時間を評価。",
   "semantic_scholar_id": "45072890ed0fa71cbfea7179f2d45a11d19f1c9f",
   "source_url": "https://arxiv.org/abs/2603.19664",
-  "status": "ready",
+  "status": "superseded",
   "title": "The Residual Stream Is All You Need: On the Redundancy of the KV Cache in Transformer Inference",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-10-13T12:07:46+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2603.19664-the-residual-stream-is-all-you-need-on-the-redundancy-of-the-kv-cache-in.md",
+  "represented_canonical_id": "arXiv:2603.19664",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

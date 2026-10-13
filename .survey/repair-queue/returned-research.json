@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-13T11:16:00+00:00",
+  "generated_at": "2026-10-13T12:07:46+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 35,
+  "count": 36,
   "entries": [
     {
       "canonical_id": "DOI:10.1145/3714983.3714987",
@@ -782,6 +782,33 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-9a7672998899--libfile_68c7919974bc8191979ab7131c8435f9--2026-2608.12114-ingestion-tax-metadata-repair-20261013-1445-scheduled-chat-45-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-9a7672998899--libfile_68c7919974bc8191979ab7131c8435f9--2026-2608.12114-ingestion-tax-metadata-repair-20261013-1445-scheduled-chat-45-r01.json",
       "worker_run_key": "20261013-1445-scheduled-chat-45/r01"
+    },
+    {
+      "canonical_id": "arXiv:2605.26558",
+      "title": "Cassandra: Enabling Reasoning LLMs at Edge via Self-Speculative Decoding",
+      "source_url": "https://arxiv.org/abs/2605.26558",
+      "returned_at": "2026-10-13T12:06:16+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 247 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 7407,
+        "body_paragraphs": 35,
+        "method_chars": 2775,
+        "method_paragraphs": 14,
+        "evaluation_chars": 247,
+        "limitation_chars": 743,
+        "insufficiency_flags": [
+          "評価説明量 247 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_1be295ce9f2c81919cdbb12381eb9af2--2026-2605.26558-cassandra-edge-self-speculative-decoding-research-20261013-1630-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_1be295ce9f2c81919cdbb12381eb9af2--2026-2605.26558-cassandra-edge-self-speculative-decoding-research-20261013-1630-scheduled-chat-30-r01.json",
+      "worker_run_key": "20261013-1630-scheduled-chat-30/r01"
     }
   ]
 }
