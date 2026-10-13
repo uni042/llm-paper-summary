@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-13T10:43:02+00:00",
+  "generated_at": "2026-10-13T10:54:28+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 39,
+  "count": 38,
   "entries": [
     {
       "canonical_id": "DOI:10.1145/3714983.3714987",
@@ -869,33 +869,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-b2e1db3635b1--libfile_3c3002b8a5f48191be5992e94c2d529f--2025-2507.09019-evaluating-llm-inference-serving-systems-research-20261013-1630-scheduled-chat-30-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-b2e1db3635b1--libfile_3c3002b8a5f48191be5992e94c2d529f--2025-2507.09019-evaluating-llm-inference-serving-systems-research-20261013-1630-scheduled.json",
       "worker_run_key": "20261013-1630-scheduled-chat-30/r01"
-    },
-    {
-      "canonical_id": "arXiv:2307.07982",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-13T09:58:33+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 479 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 7691,
-        "body_paragraphs": 39,
-        "method_chars": 3914,
-        "method_paragraphs": 18,
-        "evaluation_chars": 479,
-        "limitation_chars": 835,
-        "insufficiency_flags": [
-          "評価説明量 479 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-5ffacc6cef11--libfile_e0306af82aec8191ba417d86fbc9f889--2023-2307.07982-survey-optimizing-transformer-inference-research-20261013-1745-scheduled-chat-45-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-5ffacc6cef11--libfile_e0306af82aec8191ba417d86fbc9f889--2023-2307.07982-survey-optimizing-transformer-inference-research-20261013-1745-scheduled-.json",
-      "worker_run_key": "20261013-1745-scheduled-chat-45/r01"
     }
   ]
 }
