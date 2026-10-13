@@ -1,0 +1,238 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "AdaSD: Adaptive Speculative Decoding for Efficient Language Model Inference",
+      "source_url": "https://arxiv.org/abs/2512.11280",
+      "year": 2025,
+      "published": "2025-12-12",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLMs) have achieved remarkable performance across a wide range of tasks, but their increasing parameter sizes significantly slow down inference. Speculative decoding mitigates this issue by leveraging a smaller draft model to predict candidate tokens, which are then verified by a larger target model. However, existing approaches often require additional training, extensive hyperparameter tuning, or prior analysis of models and tasks before deployment. In this paper, we propose Adaptive Speculative Decoding (AdaSD), a hyperparameter-free decoding scheme that dynamically adjusts generation length and acceptance criteria during inference. AdaSD introduces two adaptive components: one to determine when to stop candidate token generation and the other to decide token acceptance, updated in real time based on token entropy and Jensen-Shannon distance. This approach eliminates the need for pre-analysis or fine-tuning and is compatible with off-the-shelf models. Experiments on benchmark datasets demonstrate that AdaSD achieves up to 1.46x speedup over vanilla speculative decoding while limiting accuracy degradation to under 1.8%, making it a practical solution for efficient and adaptive LLM inference.",
+      "identifiers": [
+        "SemanticScholar:26f4a042ec714cf609559d274c56a7092055b56b"
+      ],
+      "semantic_scholar_id": "26f4a042ec714cf609559d274c56a7092055b56b",
+      "canonical_id": "arXiv:2512.11280",
+      "arxiv_id": "2512.11280",
+      "doi": "10.48550/arXiv.2512.11280",
+      "authors": [
+        "Kuan Lu",
+        "Ding-Yong Hong",
+        "Pang-Feng Liu",
+        "Jan-Jan Wu"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 305,
+        "matched_prestigious_venue": null
+      },
+      "reason": "AdaSD adapts speculative draft length and acceptance online and reports up to 1.46x speedup over vanilla speculative decoding with limited accuracy loss.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "OOPS: Outlier-aware and quadratic programming based structured pruning for large language models",
+      "source_url": "https://doi.org/10.1016/j.neunet.2025.108332",
+      "year": 2025,
+      "published": "2025-11-01",
+      "venue": "Neural Networks",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The large model size and resource consumption of Large Language Models (LLMs) limit their deployment and application in many scenarios. Structured pruning offers a solution to this challenge. Based on the need for retraining after pruning, structured pruning methods for LLMs fall into two categories: retraining-free and retraining-based. Retraining-free methods often result in significant performance degradation, while retraining-based methods may require substantial computational resources. To address these limitations, we propose a structured pruning framework named OOPS (Outlier-aware and quadratic prOgramming based Structured Pruning). It comprises three key components: outlier-aware pruning unit selection, quadratic programming based reconstruction, and layer-wise distillation. By employing the first two components, OOPS prunes models without the requirement of retraining, outperforming existing retraining-free methods. When further incorporating layer-wise distillation to train the pruned layers individually, OOPS surpasses other retraining-based methods with lower computational costs. We evaluate the effectiveness of OOPS on 11 models from 4 LLM families across multiple tasks, demonstrating its superior performance compared to state-of-the-art methods in both retraining-free and retraining-based settings.",
+      "identifiers": [
+        "SemanticScholar:f958a460552ec334c2410c81af5d6b5aa03752d1"
+      ],
+      "semantic_scholar_id": "f958a460552ec334c2410c81af5d6b5aa03752d1",
+      "doi": "10.1016/j.neunet.2025.108332",
+      "canonical_id": "DOI:10.1016/j.neunet.2025.108332",
+      "authors": [
+        "Jiateng Wei",
+        "Siqi Li",
+        "Jingyang Xiang",
+        "Jiandang Yang",
+        "Jun Chen",
+        "Xiaobin Wei",
+        "Yun-Liang Jiang",
+        "Yong Liu"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 346,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Elsevier’s ScienceDirect abstract describes OOPS structured pruning with reconstruction/distillation to reduce LLM size; it directly targets deployment constraints and lower-cost pruning recovery.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "TapOut: A Bandit-Based Approach to Dynamic Speculative Decoding",
+      "source_url": "https://arxiv.org/abs/2511.02017",
+      "year": 2025,
+      "published": "2025-11-03",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Speculative decoding accelerates LLMs by using a lightweight draft model to generate tokens autoregressively before verifying them in parallel with a larger target model. However, determining the optimal number of tokens to draft remains a key challenge limiting the approach's effectiveness. Dynamic speculative decoding aims to intelligently decide how many tokens to draft to achieve maximum speedups. Existing methods often rely on hand-tuned, sensitive thresholds (e.g., token entropy), which are costly to set and generalize poorly across models and domains. We propose TapOut, an online, training-free, plug-and-play algorithm for dynamic speculation policy selection using multi-armed bandits. Our approach employs a meta-algorithm that selects among multiple parameter-free dynamic speculation strategies based on past reward and exploration. We conduct extensive experiments across diverse model pairs and datasets, showing that TapOut achieves competitive or superior speedups compared to well-established dynamic speculation baselines without any hyperparameter tuning.",
+      "identifiers": [
+        "SemanticScholar:88e67dcb93fb4983ad3b6ccebfde1934741d23be"
+      ],
+      "semantic_scholar_id": "88e67dcb93fb4983ad3b6ccebfde1934741d23be",
+      "canonical_id": "arXiv:2511.02017",
+      "arxiv_id": "2511.02017",
+      "doi": "10.48550/arXiv.2511.02017",
+      "authors": [
+        "Aditya Sridhar",
+        "Nish Sinnadurai",
+        "Sean Lie",
+        "Vithursan Thangarasa"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 344,
+        "matched_prestigious_venue": null
+      },
+      "reason": "TapOut adapts speculative-decoding policy online from reward and reports competitive/superior speedups without threshold tuning, directly improving inference execution.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "EcoSpa: Efficient Transformer Training with Coupled Sparsity",
+      "source_url": "https://arxiv.org/abs/2511.11641",
+      "year": 2025,
+      "published": "2025-11-09",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Transformers have become the backbone of modern AI, yet their high computational demands pose critical system challenges. While sparse training offers efficiency gains, existing methods fail to preserve critical structural relationships between weight matrices that interact multiplicatively in attention and feed-forward layers. This oversight leads to performance degradation at high sparsity levels. We introduce EcoSpa, an efficient structured sparse training method that jointly evaluates and sparsifies coupled weight matrix pairs, preserving their interaction patterns through aligned row/column removal. EcoSpa introduces a new granularity for calibrating structural component importance and performs coupled estimation and sparsification across both pre-training and fine-tuning scenarios. Evaluations demonstrate substantial improvements: EcoSpa enables efficient training of LLaMA-1B with 50\\% memory reduction and 21\\% faster training, achieves $2.2\\times$ model compression on GPT-2-Medium with $2.4$ lower perplexity, and delivers $1.6\\times$ inference speedup. The approach uses standard PyTorch operations, requiring no custom hardware or kernels, making efficient transformer training accessible on commodity hardware.",
+      "identifiers": [
+        "SemanticScholar:b7605a0e6491aa938605304d42315c57945bbebc"
+      ],
+      "semantic_scholar_id": "b7605a0e6491aa938605304d42315c57945bbebc",
+      "canonical_id": "arXiv:2511.11641",
+      "arxiv_id": "2511.11641",
+      "doi": "10.48550/arXiv.2511.11641",
+      "authors": [
+        "Jinqi Xiao",
+        "Cheng Luo",
+        "Ling-Yi Huang",
+        "Cheng Yang",
+        "Yang Sui",
+        "Huy Phan",
+        "Xiao Zang",
+        "Yi-Biao Ying",
+        "Zhe-Xiang Tang",
+        "Anima Anandkumar",
+        "Bo Yuan"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 338,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Beyond training efficiency, EcoSpa reports compressed GPT-2 and 1.6x inference speedup from coupled sparsity; this is a concrete model/runtime efficiency contribution.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "OmniSparse: Training-Aware Fine-Grained Sparse Attention for Long-Video MLLMs",
+      "source_url": "https://arxiv.org/abs/2511.12201",
+      "year": 2025,
+      "published": "2025-11-15",
+      "venue": "AAAI Conference on Artificial Intelligence",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Existing sparse attention methods primarily target inference-time acceleration by selecting critical tokens under predefined sparsity patterns. However, they often fail to bridge the training–inference gap and lack the capacity for fine-grained token selection across multiple dimensions—such as queries, key-values (KV), and heads—leading to suboptimal performance and acceleration gains.\nIn this paper, we introduce OmniSparse, a training-aware fine-grained sparse attention of long-video MLLMs, which is applied in both training and inference with dynamic token budget allocation. Specifically, OmniSparse contains three adaptive and complementary mechanisms: (1) query selection as lazy-active classification, aiming to retain active queries that capture broader semantic similarity, while discarding most of lazy ones that focus on limited local context and exhibit high functional redundancy with their neighbors, (2) KV selection with head-level dynamic budget allocation, where a shared budget is determined based on the flattest head and applied uniformly across all heads to ensure attention recall after selection, and (3) KV cache slimming to alleviate head-level redundancy, which selectively fetches visual KV cache according to the head-level decoding query pattern.\nExperimental results demonstrate that OmniSparse can achieve comparable performance with full attention, achieving 2.7x speedup during prefill and 2.4x memory reduction for decoding.",
+      "identifiers": [
+        "SemanticScholar:5f2ccc915902fdef88518b4dbfc2f5eb33f3f70b"
+      ],
+      "semantic_scholar_id": "5f2ccc915902fdef88518b4dbfc2f5eb33f3f70b",
+      "canonical_id": "arXiv:2511.12201",
+      "arxiv_id": "2511.12201",
+      "doi": "10.48550/arXiv.2511.12201",
+      "authors": [
+        "Feng Chen",
+        "Ye-Fei He",
+        "Shao-Xuan He",
+        "Yuan-Yu He",
+        "Jing Liu",
+        "Le-Quan Lin",
+        "Akide Liu",
+        "Zhaoyang Li",
+        "Ji-Yuan Zhang",
+        "Zhenbang Sun",
+        "Bo-Han Zhuang",
+        "Qi Wu"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 332,
+        "matched_prestigious_venue": null
+      },
+      "reason": "OmniSparse dynamically budgets queries/KV and slims visual KV cache for long-video MLLM inference; the abstract reports prefill speed and decoding-memory gains.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-399fa6858b9f",
+    "round": "libimp-399fa6858b9f2860-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 15,
+    "round_submission_count": 3,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-399fa6858b9f2860-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-399fa6858b9f2860-pre01.json",
+    "receipt": "sha256:7511145cf53894e328abdff79e2aee55853b5d86e13fa64f844f41606d3d9a29"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-399fa6858b9f",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

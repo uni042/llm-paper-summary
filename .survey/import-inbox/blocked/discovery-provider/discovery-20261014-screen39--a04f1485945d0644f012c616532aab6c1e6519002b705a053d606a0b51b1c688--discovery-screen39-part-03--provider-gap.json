@@ -2,64 +2,10 @@
   "schema_version": 2,
   "artifact_type": "discovery_run",
   "worker_id": "codex-screen-39",
-  "run_key": "discovery-20261014-main-462ff25-screen-39-part-03",
+  "run_key": "discovery-20261014-main-462ff25-screen-39-part-03::provider-gap",
   "reference_main_sha": "462ff25f399e502a56b366fb56b8707f9e5039f8",
-  "record_count": 10,
+  "record_count": 8,
   "records": [
-    {
-      "classification": "unrelated",
-      "canonical_id": "arXiv:2510.04136",
-      "identity_tokens": [
-        "id:arXiv:2510.04136",
-        "url:https://arxiv.org/abs/2510.04136"
-      ],
-      "title": "MoME: Mixture of Matryoshka Experts for Audio-Visual Speech Recognition",
-      "reason": "The abstract’s target is audio-visual speech recognition accuracy/robustness using a frozen LLM as an application component; it does not report LLM serving or inference-system efficiency.",
-      "source_url": "https://arxiv.org/abs/2510.04136",
-      "body_check": "abstract_screen_only; body_not_read",
-      "first_checked_at": "2026-10-13T20:52Z",
-      "last_checked_at": "2026-10-13T20:52Z",
-      "linked_from": [
-        "papers/inference/07-kv-cache-optimization-compression/2025-2507.10524-mixture-of-recursions-learning-dynamic-recursive-depths-for-adaptive-tok.md",
-        "papers/inference/12-moe-parallelism-communication/2021-2101.03961-switch-transformers-scaling-to-trillion-parameter-models-with-simple-and.md",
-        "papers/inference/99-other-inference-systems/2017-1701.06538-outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts.md",
-        "papers/inference/99-other-inference-systems/2021-2112.06905-glam-efficient-scaling-of-language-models-with-mixture-of-experts.md",
-        "papers/inference/99-other-inference-systems/2023-2310.07707-matformer-nested-transformer-for-elastic-inference.md",
-        "papers/inference/99-other-inference-systems/2023-2312.06742-honeybee-locality-enhanced-projector-for-multimodal-llm.md",
-        "papers/inference/99-other-inference-systems/2024-2401.15947-moe-llava-mixture-of-experts-for-large-vision-language-models.md",
-        "papers/inference/99-other-inference-systems/2024-2409.02060-olmoe-open-mixture-of-experts-language-models.md",
-        "papers/inference/99-other-inference-systems/2024-2409.06666-llama-omni-seamless-speech-interaction-with-large-language-models.md",
-        "papers/inference/99-other-inference-systems/2024-2410.14731-matryoshkakv-adaptive-kv-compression-via-trainable-orthogonal-projection.md",
-        "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md"
-      ]
-    },
-    {
-      "classification": "borderline",
-      "canonical_id": "arXiv:2504.10368",
-      "identity_tokens": [
-        "id:arXiv:2504.10368",
-        "url:https://arxiv.org/abs/2504.10368"
-      ],
-      "title": "Exploring the System 1 Thinking Capability of Large Reasoning Models",
-      "reason": "This paper studies reasoning capability and benchmark inefficiency, but the abstract frames the finding as model reasoning behavior and does not establish a concrete serving/system optimization method.",
-      "source_url": "https://arxiv.org/abs/2504.10368",
-      "body_check": "abstract_screen_only; body_not_read",
-      "first_checked_at": "2026-10-13T20:52Z",
-      "last_checked_at": "2026-10-13T20:52Z",
-      "linked_from": [
-        "papers/inference/04-conditional-computation/2025-2504.15895-dynamic-early-exit-in-reasoning-models.md",
-        "papers/inference/19-inference-evaluation-benchmarking/2024-2401.10480-escape-sky-high-cost-early-stopping-self-consistency-for-multi-step-reas.md",
-        "papers/inference/99-other-inference-systems/2024-2412.18547-token-budget-aware-llm-reasoning.md",
-        "papers/inference/99-other-inference-systems/2025-2502.04463-training-language-models-to-reason-efficiently.md",
-        "papers/inference/99-other-inference-systems/2025-2502.09601-cot-valve-length-compressible-chain-of-thought-tuning.md",
-        "papers/inference/99-other-inference-systems/2025-2502.12067-tokenskip-controllable-chain-of-thought-compression-in-llms.md",
-        "papers/inference/99-other-inference-systems/2025-2502.21074-codi-compressing-chain-of-thought-into-continuous-space-via-self-distill.md",
-        "papers/inference/99-other-inference-systems/2025-2503.04697-l1-controlling-how-long-a-reasoning-model-thinks-with-reinforcement-lear.md",
-        "papers/inference/99-other-inference-systems/2025-2504.09858-reasoning-models-can-be-effective-without-thinking.md",
-        "papers/inference/99-other-inference-systems/2025-2505.00949-llama-nemotron-efficient-reasoning-models.md",
-        "papers/inference/99-other-inference-systems/2025-2505.13417-adaptthink-reasoning-models-can-learn-when-to-think.md"
-      ]
-    },
     {
       "classification": "accept",
       "canonical_id": "arXiv:2405.17052",
@@ -297,5 +243,17 @@
         "papers/inference/99-other-inference-systems/2024-2407.08608-flashattention-3-fast-and-accurate-attention-with-asynchrony-and-low-pre.md"
       ]
     }
+  ],
+  "parent_run_key": "discovery-20261014-main-462ff25-screen-39-part-03",
+  "provider_gap_from": ".survey/import-inbox/waiting/discovery/discovery-20261014-screen39--a04f1485945d0644f012c616532aab6c1e6519002b705a053d606a0b51b1c688--discovery-screen39-part-03.json",
+  "provider_gap_ids": [
+    "DOI:10.52202/085713-1372",
+    "arXiv:2405.17052",
+    "arXiv:2505.18698",
+    "arXiv:2506.11104",
+    "arXiv:2509.00388",
+    "arXiv:2510.11236",
+    "arXiv:2510.20984",
+    "arXiv:2510.26843"
   ]
 }

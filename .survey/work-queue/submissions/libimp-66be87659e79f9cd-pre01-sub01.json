@@ -1,0 +1,222 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "DASH: Dynamic Audio-Driven Semantic Chunking for Efficient Omnimodal Token Compression",
+      "source_url": "https://arxiv.org/abs/2603.15685",
+      "year": 2026,
+      "published": "2026-03-15",
+      "venue": "arXiv.org",
+      "citation_count": 5,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Omnimodal large language models (OmniLLMs) jointly process audio and visual streams, but the resulting long multimodal token sequences make inference prohibitively expensive. Existing compression methods typically rely on fixed window partitioning and attention-based pruning, which overlook the piecewise semantic structure of audio-visual signals and become fragile under aggressive token reduction. We propose Dynamic Audio-driven Semantic cHunking (DASH), a training-free framework that aligns token compression with semantic structure. DASH treats audio embeddings as a semantic anchor and detects boundary candidates via cosine-similarity discontinuities, inducing dynamic, variable-length segments that approximate the underlying piecewise-coherent organization of the sequence. These boundaries are projected onto video tokens as a soft temporally co-registered segmentation prior. Within each segment, token retention is determined by a tri-signal importance estimator that fuses structural boundary cues, representational distinctiveness, and attention-based salience, mitigating the sparsity bias of attention-only selection. This structure-aware allocation preserves transition-critical tokens while reducing redundant regions. Extensive experiments on AVUT, VideoMME, and WorldSense demonstrate that DASH maintains competitive or superior accuracy while achieving higher compression ratios compared to prior methods. Code is available at: https://github.com/laychou666/DASH.",
+      "identifiers": [
+        "SemanticScholar:0cc482943707366c14009e5e0c02b65ef1fb1057"
+      ],
+      "semantic_scholar_id": "0cc482943707366c14009e5e0c02b65ef1fb1057",
+      "canonical_id": "arXiv:2603.15685",
+      "arxiv_id": "2603.15685",
+      "doi": "10.48550/arXiv.2603.15685",
+      "authors": [
+        "Bing-Zhou Li",
+        "Tao Huang"
+      ],
+      "priority": 105,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 5,
+        "citation_count": 5,
+        "total": 105,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 212,
+        "matched_prestigious_venue": null
+      },
+      "reason": "DASH segments audio-visual tokens by semantic boundaries and selectively retains tokens; the abstract directly targets multimodal inference cost and reports compression with competitive accuracy.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "From Context to EDUs: Faithful and Structured Context Compression via Elementary Discourse Unit Decomposition",
+      "source_url": "https://arxiv.org/abs/2512.14244",
+      "year": 2025,
+      "published": "2025-12-16",
+      "venue": "arXiv.org",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Managing extensive context remains a critical bottleneck for Large Language Models (LLMs), particularly in applications like long-document question answering and autonomous agents where lengthy inputs incur high computational costs and introduce noise. Existing compression techniques often disrupt local coherence through discrete token removal or rely on implicit latent encoding that suffers from positional bias and incompatibility with closed-source APIs. To address these limitations, we introduce the EDU-based Context Compressor, a novel explicit compression framework designed to preserve both global structure and fine-grained details. Our approach reformulates context compression as a structure-then-select process. First, our LingoEDU transforms linear text into a structural relation tree of Elementary Discourse Units (EDUs) which are anchored strictly to source indices to eliminate hallucination. Second, a lightweight ranking module selects query-relevant sub-trees for linearization. To rigorously evaluate structural understanding, we release StructBench, a manually annotated dataset of 248 diverse documents. Empirical results demonstrate that our method achieves state-of-the-art structural prediction accuracy and significantly outperforms frontier LLMs while reducing costs. Furthermore, our structure-aware compression substantially enhances performance across downstream tasks ranging from long-context tasks to complex Deep Search scenarios.",
+      "identifiers": [
+        "SemanticScholar:5f787424000ef65587bf97c8c9fb2527fd4ed918"
+      ],
+      "semantic_scholar_id": "5f787424000ef65587bf97c8c9fb2527fd4ed918",
+      "canonical_id": "arXiv:2512.14244",
+      "arxiv_id": "2512.14244",
+      "doi": "10.48550/arXiv.2512.14244",
+      "authors": [
+        "Yiqing Zhou",
+        "Yu Lei",
+        "Shuzheng Si",
+        "Qing Sun",
+        "Wei Wang",
+        "Yifei Wu",
+        "Hao Wen",
+        "Gang Chen",
+        "Fanchao Qi",
+        "Maosong Sun"
+      ],
+      "priority": 103,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 103,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 301,
+        "matched_prestigious_venue": null
+      },
+      "reason": "The EDU-based compressor selects query-relevant discourse subtrees to reduce long-context cost while preserving source structure, a concrete inference-context compression method.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "On the Limits of Layer Pruning for Generative Reasoning in Large Language Models",
+      "source_url": "https://arxiv.org/abs/2602.01997",
+      "year": 2026,
+      "published": "2026-02-02",
+      "venue": null,
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Recent work has shown that layer pruning can effectively compress large language models (LLMs) while retaining strong performance on classification benchmarks, often with little or no finetuning. In contrast, generative reasoning tasks, such as GSM8K and HumanEval\\textsuperscript{+}, exhibit substantially weaker recovery. We show that beyond surface-level text degradation, pruning leads to a loss of key algorithmic capabilities, including arithmetic computation and balanced parenthesis generation. Under realistic post-training constraints, using a single 80GB GPU and without access to pretraining-scale data or compute, we evaluate a simple recovery strategy based on supervised finetuning with self-generated responses. This approach recovers up to 90\\% of baseline performance on classification tasks, but recovery for generative reasoning remains limited. We further find that this gap persists even under a favorable task-aligned recovery setting, where pruned models are fully finetuned on self-generated GSM8K responses, suggesting that the degradation is not merely due to generic instruction data or parameter-efficient tuning. As complementary evidence, we analyze a depth-pruned model trained with nearly 100B post-pruning tokens and find that deficits persist even on simple arithmetic tasks that do not require multi-step generation. Overall, we characterize practical recovery limits of layer pruning for generative reasoning and provide guidance on when depth reduction is effective under constrained post-training regimes.",
+      "identifiers": [
+        "SemanticScholar:4ec4ce8f55e3656f6f75f974e4464d758af5bb6f"
+      ],
+      "semantic_scholar_id": "4ec4ce8f55e3656f6f75f974e4464d758af5bb6f",
+      "canonical_id": "arXiv:2602.01997",
+      "arxiv_id": "2602.01997",
+      "authors": [
+        "Safal Shrestha",
+        "Anubhav Shrestha",
+        "Aadim Nepal",
+        "Minwu Kim",
+        "Keith Ross"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 253,
+        "matched_prestigious_venue": null
+      },
+      "reason": "The arXiv primary record for this arXiv-issued DOI evaluates when depth pruning preserves generative reasoning under practical post-training limits; this is directly relevant evidence about inference-size reduction tradeoffs.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Post-Training Quantization of OpenPangu Models for Efficient Deployment on Atlas A2",
+      "source_url": "https://arxiv.org/abs/2512.23367",
+      "year": 2025,
+      "published": "2025-12-29",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Huawei's openPangu-Embedded-1B and openPangu-Embedded-7B are variants of the openPangu large language model, designed for efficient deployment on Ascend NPUs. The 7B variant supports three distinct Chain-of-Thought (CoT) reasoning paradigms, namely slow_think, auto_think, and no_think, while the 1B variant operates exclusively in the no_think mode, which employs condensed reasoning for higher efficiency. Although CoT reasoning enhances capability, the generation of extended reasoning traces introduces substantial memory and latency overheads, posing challenges for practical deployment on Ascend NPUs. This paper addresses these computational constraints by leveraging low-bit quantization, which transforms FP16 computations into more efficient integer arithmetic. We introduce a unified low-bit inference framework, supporting INT8 (W8A8) and W4A8 quantization, specifically optimized for openPangu-Embedded models on the Atlas A2. Our comprehensive evaluation on code generation benchmarks (HumanEval and MBPP) demonstrates the efficacy of this approach. INT8 quantization consistently preserves over 90\\% of the FP16 baseline accuracy and achieves a 1.5x prefill speedup on the Atlas A2. Furthermore, W4A8 quantization significantly reduces memory consumption, albeit with a moderate trade-off in accuracy. These findings collectively indicate that low-bit quantization effectively facilitates efficient CoT reasoning on Ascend NPUs, maintaining high model fidelity.",
+      "identifiers": [
+        "SemanticScholar:a6f84c5e43de49a7ca2f5a459fd0cc5c6d4c5564"
+      ],
+      "semantic_scholar_id": "a6f84c5e43de49a7ca2f5a459fd0cc5c6d4c5564",
+      "canonical_id": "arXiv:2512.23367",
+      "arxiv_id": "2512.23367",
+      "doi": "10.48550/arXiv.2512.23367",
+      "authors": [
+        "Yilun Luo",
+        "Hua Zheng",
+        "Haoqian Meng",
+        "Wen-Yuan Liu",
+        "Peng Zhang"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 288,
+        "matched_prestigious_venue": null
+      },
+      "reason": "The paper optimizes low-bit inference on Ascend Atlas A2 and reports prefill speedup and lower memory use for OpenPangu models.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "You Only Need Your Transformer 25% of the Time: Meaning-First Execution for Eliminating Unnecessary Inference",
+      "source_url": "https://arxiv.org/abs/2601.00847",
+      "year": 2025,
+      "published": "2025-12-29",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Modern AI inference systems treat transformer execution as mandatory, conflating model capability with execution necessity. We reframe inference as a control-plane decision problem: determining when execution is necessary versus when correctness can be preserved through alternative pathways. We introduce Meaning-First Execution (MFEE), a control-plane architecture implementing this framework, selectively invoking transformer inference only when required. MFEE operates as a gating layer above existing stacks without modifying models, weights, or parameters. Across 1,000 diverse prompts under deterministic decoding, MFEE achieves 78.1% execution reduction while maintaining 100% exact-match equivalence for invoked executions. Comparative evaluation reveals pattern-based routers achieve at most 53.3% avoidance with correctness failures, while MFEE reaches 100% avoidance with zero failures through semantic analysis. We prove this limitation via Theorem 1: any router operating solely on finite feature maps cannot simultaneously guarantee zero false skips and positive avoidance on feature-collision pairs. These results establish execution governance as a foundational layer in ML systems infrastructure, orthogonal to model-level optimization techniques.",
+      "identifiers": [
+        "SemanticScholar:aa2816697c63e6da4b3f10203e4949d7df0a11dc"
+      ],
+      "semantic_scholar_id": "aa2816697c63e6da4b3f10203e4949d7df0a11dc",
+      "canonical_id": "arXiv:2601.00847",
+      "arxiv_id": "2601.00847",
+      "doi": "10.48550/arXiv.2601.00847",
+      "authors": [
+        "Ryan Shamim"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 288,
+        "matched_prestigious_venue": null
+      },
+      "reason": "MFEE gates unnecessary model executions and reports reduced execution count with exact-match equivalence, a concrete inference-work reduction.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-66be87659e79",
+    "round": "libimp-66be87659e79f9cd-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 18,
+    "round_submission_count": 4,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-66be87659e79f9cd-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-66be87659e79f9cd-pre01.json",
+    "receipt": "sha256:8ac3b0f1dfcc180cbc0ed371576430286af041353b63ffb1e9d326782e85dc36"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-66be87659e79",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
