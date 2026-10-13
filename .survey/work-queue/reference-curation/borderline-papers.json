@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-13T06:31:15+00:00",
-  "record_count": 4813,
+  "updated_at": "2026-10-13T06:32:25+00:00",
+  "record_count": 4814,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -73603,6 +73603,23 @@
       ],
       "borderline_recheck_count": 0,
       "title": "Adaptive Loops and Memory in Transformers: Think Harder or Know More?"
+    },
+    "arXiv:2604.08468": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2604.08468",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2604.08468",
+        "SemanticScholar:84277627a53d81f0e4741a28dedd906645d4ec74",
+        "arXiv:2604.08468"
+      ],
+      "reason": "Test-time adaptation improves quality; no inference-efficiency reduction is shown.",
+      "first_checked_at": "2026-10-13T06:32:25+00:00",
+      "last_checked_at": "2026-10-13T06:32:25+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2025-2509.16105-diep-differentiable-expert-pruning.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "TTVS: Boosting Self-Exploring Reinforcement Learning via Test-time Variational Synthesis"
     }
   }
 }
