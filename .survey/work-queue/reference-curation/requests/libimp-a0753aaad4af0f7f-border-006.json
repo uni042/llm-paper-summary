@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-a0753aaad4af0f7f-border-006",
+  "operation": "mark_borderline",
+  "canonical_id": "DOI:10.48550/arXiv.2504.03889",
+  "reason": "Full text Sections 3, 4 and Appendix A.14 (Efficiency and Limitations) report >12% heads ablatable within 1% MMLU accuracy. The authors explicitly state the focus is understanding inactive heads, not implementing efficient inference; dynamic head removal costs are unmeasured.",
+  "title": "Using Attention Sinks to Identify and Evaluate Dormant Heads in Pretrained LLMs",
+  "identity_tokens": [
+    "DOI:10.48550/arXiv.2504.03889",
+    "arXiv:2504.03889"
+  ],
+  "linked_from": [
+    "papers/inference/07-kv-cache-optimization-compression/2019-1911.02150-multi-query-attention.md",
+    "papers/inference/07-kv-cache-optimization-compression/2023-2305.17118-scissorhands.md",
+    "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md",
+    "papers/inference/07-kv-cache-optimization-compression/2023-2310.01801-fastgen.md",
+    "papers/inference/07-kv-cache-optimization-compression/2024-2406.12335-attention-score-is-not-all-you-need-for-token-importance-indicator-in-kv.md",
+    "papers/inference/99-other-inference-systems/2019-1905.09418-analyzing-multi-head-self-attention-specialized-heads-do-the-heavy-lifti.md",
+    "papers/inference/99-other-inference-systems/2019-1905.10650-are-sixteen-heads-really-better-than-one.md",
+    "papers/inference/99-other-inference-systems/2023-2305.13245-gqa.md",
+    "papers/inference/99-other-inference-systems/2024-2402.17762-massive-activations-in-large-language-models.md",
+    "papers/inference/99-other-inference-systems/2024-2403.06764-an-image-is-worth-1-2-tokens-after-layer-2-plug-and-play-inference-accel.md",
+    "papers/inference/99-other-inference-systems/2024-2404.02258-mixture-of-depths-dynamically-allocating-compute-in-transformer-based-la.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a0753aaad4af",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}
