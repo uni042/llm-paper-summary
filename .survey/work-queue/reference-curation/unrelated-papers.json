@@ -2,7 +2,7 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-13T09:37:05+00:00",
+  "updated_at": "2026-10-13T09:49:08+00:00",
   "record_count": 11759,
   "records": {
     "arXiv:2303.08774": {
@@ -163175,9 +163175,9 @@
       "identity_tokens": [
         "arXiv:2601.04359"
       ],
-      "reason": "一次要旨を確認。PackCacheは自動回帰型の動画生成で、条件画像・テキストを意味アンカーとして残し、過去フレームへの注意の時間減衰と三次元位置埋め込みを使って動画フレームのKVキャッシュを圧縮する。48フレームの動画生成を1.7～2.2倍高速化するが、評価対象は画像・動画トークンの生成であり、LLMのテキスト生成、LLMサービング、MoE、GPU/CPUオフロードの直接的な実装・性能評価を示さない。KV削除という技術的隣接性はあるが現行LLM推論サーベイの対象外とする。",
+      "reason": "対象は自己回帰型の動画生成における視覚フレーム用KVキャッシュの小型化であり、言語モデルのテキスト推論、LLMサービング、MoE、LLM向けKV最適化の実証を主題としない。タイトル段階で対象外と判断。",
       "first_checked_at": "2026-10-11T01:52:00+00:00",
-      "last_checked_at": "2026-10-11T01:52:00+00:00",
+      "last_checked_at": "2026-10-13T09:49:08+00:00",
       "linked_from": [],
       "title": "PackCache: A Training-Free Acceleration Method for Unified Autoregressive Video Generation via Compact KV-Cache"
     },
@@ -164029,11 +164029,13 @@
       "classification": "unrelated",
       "canonical_id": "arXiv:2008.05000",
       "identity_tokens": [
-        "arXiv:2008.05000"
+        "arXiv:2008.05000",
+        "id:arXiv:2008.05000",
+        "url:https://arxiv.org/abs/2008.05000"
       ],
-      "reason": "タイトルに示された対象はグラフニューラルネットワークの量子化対応学習であり、大規模言語モデルの推論、サービング、KVキャッシュ、MoE、オフロード、推論カーネルを対象としていない。グラフモデルの学習最適化は現在の推論システム収録範囲外である。",
+      "reason": "一次要旨では、グラフニューラルネットワークの頂点次数に依存する量子化誤差へ対処する量子化考慮学習を提案し、六つのグラフデータセットとCPU上のINT8推論を評価している。低精度推論自体は一般技術だが、対象はGNN特有のグラフ演算で、LLMの重み量子化・KVキャッシュ・生成推論やサービングへの適用を示さないためunrelatedとする。",
       "first_checked_at": "2026-10-11T07:45:44+00:00",
-      "last_checked_at": "2026-10-12T15:14:02+00:00",
+      "last_checked_at": "2026-10-13T09:49:07+00:00",
       "linked_from": [],
       "title": "Degree-Quant: Quantization-Aware Training for Graph Neural Networks"
     },

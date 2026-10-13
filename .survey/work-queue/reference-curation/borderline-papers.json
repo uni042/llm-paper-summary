@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-13T09:37:04+00:00",
-  "record_count": 4849,
+  "updated_at": "2026-10-13T09:49:06+00:00",
+  "record_count": 4850,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -74227,6 +74227,22 @@
       ],
       "borderline_recheck_count": 0,
       "title": "Modular Memory is the Key to Continual Learning Agents"
+    },
+    "arXiv:2208.07120": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2208.07120",
+      "identity_tokens": [
+        "DOI:10.1145/3551349.3556964",
+        "arXiv:2208.07120",
+        "id:arXiv:2208.07120",
+        "url:https://arxiv.org/abs/2208.07120"
+      ],
+      "reason": "原著はCodeBERT/GraphCodeBERT（125M級の双方向符号化器）を対象に、層数・隠れ次元・注意頭数・FFN次元・語彙数を遺伝的アルゴリズムで探索し、教師の予測から蒸留して3MBへ縮小する。CPU上のコード脆弱性予測とコードクローン検出で実推論4.31倍/4.15倍という効率化を示すため圧縮技術として関連する。一方、主対象はIDE向けのBERT系コード分類モデルであり、生成型LLMのデコード、KVキャッシュ、推論サービング、MoEなど本サーベイの中心対象を評価していない。推論への一般化可能性はあるが直接的なLLM推論システム貢献は境界的なのでborderlineとする。",
+      "first_checked_at": "2026-10-13T09:49:06+00:00",
+      "last_checked_at": "2026-10-13T09:49:06+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Compressing Pre-trained Models of Code into 3 MB"
     }
   }
 }
