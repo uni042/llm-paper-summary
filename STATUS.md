@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-10-13 17:12:00 JST**
+> 自動生成: **2026-10-13 17:26:31 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -64,10 +64,10 @@
 | 判定段階 | 件数 |
 |---|---:|
 | 未処理候補（フィルタ前） | **114133** |
-| 機械規則による暫定隔離 | **2091** |
-| 拡張機械規則による追加隔離 | **1289** |
-| 機械規則通過後 | **110753** |
-| 系統内前方引用スコアによる選抜保留 | **105215** |
+| 機械規則による暫定隔離 | **2092** |
+| 拡張機械規則による追加隔離 | **1291** |
+| 機械規則通過後 | **110750** |
+| 系統内前方引用スコアによる選抜保留 | **105212** |
 | 暫定隔離合計 | **108595** |
 | **読解可能候補（隔離後）** | **5538** |
 | 前方引用が同一系統で2本以上の候補 | **14693** |
@@ -79,9 +79,9 @@
 ### 拡張規則の判定と適用状況
 
 - 拡張規則モード: **quarantine**
-- 拡張規則に一致した候補: **1289件**（基本規則との重複を除去）
-- 実際の追加隔離: **1289件**
-- 分野別内訳: **{'expanded_domain:clinical_applications': 97, 'expanded_domain:content_moderation': 21, 'expanded_domain:educational_legal_applications': 25, 'expanded_domain:environmental_applications': 8, 'expanded_domain:financial_applications': 50, 'expanded_domain:geoscience_applications': 56, 'expanded_domain:materials_applications': 30, 'expanded_domain:vision_applications': 1002}**
+- 拡張規則に一致した候補: **1291件**（基本規則との重複を除去）
+- 実際の追加隔離: **1291件**
+- 分野別内訳: **{'expanded_domain:clinical_applications': 99, 'expanded_domain:content_moderation': 21, 'expanded_domain:educational_legal_applications': 25, 'expanded_domain:environmental_applications': 8, 'expanded_domain:financial_applications': 50, 'expanded_domain:geoscience_applications': 56, 'expanded_domain:materials_applications': 30, 'expanded_domain:vision_applications': 1002}**
 - 拡張規則がshadowの場合は件数だけを測定し隔離には含めない。quarantineの場合は上記の隔離合計へ算入する。一次論文・候補台帳は削除せず、隔離候補の自動監査再投入は行わない。
 
 - モード: 規則 **quarantine** / 教師あり分類器は撤去済み。
@@ -116,7 +116,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **10-13 12:49:04 JST（4時間22分前）** |
+| 最終maintenance完了 | **10-13 12:49:04 JST（4時間37分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **passed** |
 | health | **issues_found** |
