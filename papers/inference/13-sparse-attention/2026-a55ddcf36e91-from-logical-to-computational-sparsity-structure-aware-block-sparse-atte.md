@@ -1,32 +1,57 @@
 ---
 canonical_id: DOI:10.18653/v1/2026.acl-long.1189
 title: 'From Logical to Computational Sparsity: Structure-Aware Block-Sparse Attention for Long Code Completion'
-summary: 'SabreCoderはコードの構文木・依存関係・チャンク類似度から疎な注意行列を構築し、Tritonのブロック疎カーネルへ写像する。単なるマスク削減を実際のGPU演算省略につなぎ、RTX 3090上の長文コード補完で密注意比45～55%の初回トークン遅延削減を報告する。'
-list_summary: 'コードの構文・依存・類似関係を四種の注意マスクに統合し、GPU実行可能なブロック疎注意へ写像するSabreCoderを提案。長文コード補完で初回トークン遅延を密注意比45～55%削減した。'
+summary: SabreCoderはコードの構文木・依存関係・チャンク類似度から疎な注意行列を構築し、Tritonのブロック疎カーネルへ写像する。単なるマスク削減を実際のGPU演算省略につなぎ、RTX 3090上の長文コード補完で密注意比45～55%の初回トークン遅延削減を報告する。
+list_summary: コードの構文・依存・類似関係を四種の注意マスクに統合し、GPU実行可能なブロック疎注意へ写像するSabreCoderを提案。長文コード補完で初回トークン遅延を密注意比45～55%削減した。
 authors:
-  - Yanli Wang
-  - Yanlin Wang
-  - Bowen Zhang
-  - Yiwei Zhang
-  - Daya Guo
-  - Jiachi Chen
-  - Hongyu Zhang
-  - Zibin Zheng
-published: '2026-07'
-publication: 'Proceedings of the 64th Annual Meeting of the Association for Computational Linguistics (ACL 2026), Volume 1, pp. 25927–25942'
-publication_type: '国際会議論文'
-publication_status: '査読付き会議採録'
-source: 'https://aclanthology.org/2026.acl-long.1189/'
+- Yanli Wang
+- Yanlin Wang
+- Bowen Zhang
+- Yiwei Zhang
+- Daya Guo
+- Jiachi Chen
+- Hongyu Zhang
+- Zibin Zheng
+published: 2026-07
+publication: Proceedings of the 64th Annual Meeting of the Association for Computational Linguistics (ACL 2026), Volume 1, pp. 25927–25942
+publication_type: 国際会議論文
+publication_status: 査読付き会議採録
+source: https://aclanthology.org/2026.acl-long.1189/
 sources:
-  - 'https://aclanthology.org/2026.acl-long.1189/'
-  - 'https://aclanthology.org/2026.acl-long.1189.pdf'
-implementation: 'tree-sitterでコードを構文チャンクに分割し、依存グラフ・チャンク埋め込みから疎な注意マスクを作成。Tritonでブロック疎注意カーネルを実装し、単一RTX 3090（24GB）、FP16で評価。著者は公式コードとデータを公開している。'
-code: 'https://github.com/DeepSoftwareAnalytics/SabreCoder'
+- https://aclanthology.org/2026.acl-long.1189/
+- https://aclanthology.org/2026.acl-long.1189.pdf
+implementation: tree-sitterでコードを構文チャンクに分割し、依存グラフ・チャンク埋め込みから疎な注意マスクを作成。Tritonでブロック疎注意カーネルを実装し、単一RTX 3090（24GB）、FP16で評価。著者は公式コードとデータを公開している。
+code: https://github.com/DeepSoftwareAnalytics/SabreCoder
 last_checked: '2026-10-13'
 worker_completed_at: '2026-10-13T07:31:46+09:00'
-worker_run_key: '20261013-0730-scheduled-chat-30/r01'
+worker_run_key: 20261013-0730-scheduled-chat-30/r01
 last_audited: null
 audit_version: 0
+references:
+- canonical_id: DOI:10.1145/3315508.3329973
+- canonical_id: arXiv:2403.10059
+  arxiv_id: '2403.10059'
+- canonical_id: arXiv:2407.02490
+- canonical_id: arXiv:2306.14048
+- canonical_id: DOI:10.1145/3651890.3672274
+- canonical_id: arXiv:2307.08691
+- canonical_id: arXiv:2407.08608
+- canonical_id: arXiv:2205.14135
+- canonical_id: arXiv:2305.16300
+- canonical_id: arXiv:2307.06945
+- canonical_id: arXiv:2312.06635
+- canonical_id: arXiv:2309.00071
+- canonical_id: arXiv:2503.16428
+- canonical_id: arXiv:2309.17453
+- canonical_id: arXiv:1904.10509
+- canonical_id: arXiv:2211.05102
+- canonical_id: arXiv:1805.02867
+- canonical_id: arXiv:2007.14062
+- canonical_id: arXiv:2009.14794
+- canonical_id: arXiv:2001.04451
+references_checked_at: '2026-10-13'
+references_source: primary-pdf-reference-section
+references_total: 2
 ---
 
 # From Logical to Computational Sparsity: Structure-Aware Block-Sparse Attention for Long Code Completion
