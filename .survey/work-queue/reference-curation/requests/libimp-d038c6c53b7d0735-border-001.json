@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-d038c6c53b7d0735-border-001",
+  "operation": "mark_borderline",
+  "canonical_id": "SemanticScholar:a5fa6e7565dca654eab9372ace4b1ba7f63655f7",
+  "reason": "長文を分割して重要部分を選択し、BERTの固定長窓へ集約することで、文書長に依存しない作業メモリ使用量を実現する。長文入力の推論メモリ効率は直接の対象だが、自己回帰LLMの生成・KVキャッシュや現代の配信基盤を扱わず、主評価は質問応答と分類であるため境界候補とする。",
+  "title": "CogLTX: Applying BERT to Long Texts",
+  "identity_tokens": [
+    "semanticscholar:a5fa6e7565dca654eab9372ace4b1ba7f63655f7"
+  ],
+  "linked_from": [],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d038c6c53b7d",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}
