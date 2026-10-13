@@ -1,0 +1,227 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "VideoTree: Adaptive Tree-based Video Representation for LLM Reasoning on Long Videos",
+      "source_url": "https://arxiv.org/abs/2405.19209",
+      "year": 2024,
+      "published": "2024-05-29",
+      "venue": "Computer Vision and Pattern Recognition",
+      "citation_count": 320,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Long-form video understanding is complicated by the high redundancy of video data and the abundance of query-irrelevant information. To tackle these challenges, we propose VideoTree, a training-free framework which builds a query-adaptive and hierarchical video representation for LLM reasoning over long-form videos. First, VideoTree extracts query-relevant information from the input video through an iterative process, progressively refining the selection of keyframes based on their relevance to the query. Furthermore, VideoTree leverages the inherent hierarchical structure of long video data, which is often overlooked by existing LLM-based methods. Specifically, we incorporate multi-granularity information into a tree-based representation, allowing VideoTree to extract query-relevant details from long videos in a coarse-to-fine manner. This enables the model to effectively handle a wide range of video queries with varying levels of detail. Finally, VideoTree aggregates the hierarchical query-relevant information within the tree structure and feeds it into an LLM reasoning model to answer the query. Our experiments show that our method improves both reasoning accuracy and efficiency. Specifically, VideoTree outperforms existing training-free approaches on EgoSchema and NExT-QA with less inference time, achieving 61.1% and 75.6% accuracy on the test set without additional video-specific training. Moreover, on the long split of Video-MME (average 44 minutes), VideoTree achieves better performance than GPT-4V and many other MLLMs that were extensively trained on video data.",
+      "identifiers": [
+        "SemanticScholar:b2092ea6163c06136b807ce4fc13781d94de1510"
+      ],
+      "semantic_scholar_id": "b2092ea6163c06136b807ce4fc13781d94de1510",
+      "canonical_id": "arXiv:2405.19209",
+      "arxiv_id": "2405.19209",
+      "doi": "10.1109/CVPR52734.2025.00311",
+      "authors": [
+        "Ziyang Wang",
+        "Shoubin Yu",
+        "Elias Stengel-Eskin",
+        "Jaehong Yoon",
+        "Feng Cheng",
+        "Gedas Bertasius",
+        "Mohit Bansal"
+      ],
+      "priority": 320,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 320,
+        "citation_count": 320,
+        "total": 320,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 867,
+        "matched_prestigious_venue": null
+      },
+      "reason": "VideoTree builds a training-free, query-adaptive hierarchy of long-video frames for LLM reasoning, targeting redundant video context at inference; it is a concrete inference-time representation method.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Let Multimodal Embedders Learn When to Augment Query via Adaptive Query Augmentation",
+      "source_url": "https://arxiv.org/abs/2511.02358",
+      "year": 2025,
+      "published": "2025-11-04",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Query augmentation makes queries more meaningful by appending further information to the queries to find relevant documents. Current studies have proposed Large Language Model (LLM)-based embedders, which learn representation for embedding and generation for query augmentation in a multi-task manner by leveraging the generative capabilities of LLM. During inference, these jointly trained embedders have conducted query augmentation followed by embedding, showing effective results. However, augmenting every query leads to substantial embedding latency and query augmentation can be detrimental to performance for some queries. Also, previous methods have not been explored in multimodal environments. To tackle these problems, we propose M-Solomon, a universal multimodal embedder that can adaptively determine when to augment queries. Our approach first divides the queries of the training datasets into two groups at the dataset level. One includes queries that require augmentation and the other includes queries that do not. Then, we introduces a synthesis process that generates appropriate augmentations for queries that require them by leveraging a powerful Multimodal LLM (MLLM). Next, we present adaptive query augmentation. Through this step, M-Solomon can conduct query augmentation only when necessary by learning to generate synthetic augmentations with the prefix /augment for queries that demand them and to generate the simple string /embed for others. Experimental results showed that M-Solomon not only surpassed the baseline without augmentation by a large margin but also outperformed the baseline that always used augmentation, providing much faster embedding latency.",
+      "identifiers": [
+        "SemanticScholar:cb2b0a3a70cc98cd1d1e77fce3de79284cb72c3f"
+      ],
+      "semantic_scholar_id": "cb2b0a3a70cc98cd1d1e77fce3de79284cb72c3f",
+      "canonical_id": "arXiv:2511.02358",
+      "arxiv_id": "2511.02358",
+      "doi": "10.48550/arXiv.2511.02358",
+      "authors": [
+        "Wongyum Kim",
+        "Ho-Chang Lee",
+        "SangHak Lee",
+        "Yoonsung Kim",
+        "Jaehyun Park"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 343,
+        "matched_prestigious_venue": null
+      },
+      "reason": "M-Solomon adaptively skips query augmentation when it would add embedding latency, a direct inference-time efficiency mechanism in LLM-based multimodal retrieval embedders.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "A Benchmark for Procedural Memory Retrieval in Language Agents",
+      "source_url": "https://arxiv.org/abs/2511.21730",
+      "year": 2025,
+      "published": "2025-11-21",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Current AI agents excel in familiar settings, but fail sharply when faced with novel tasks with unseen vocabularies -- a core limitation of procedural memory systems. We present the first benchmark that isolates procedural memory retrieval from task execution, evaluating whether agents can recognize functionally equivalent procedures that span different object instantiations. Using ALFWorld, we construct dual corpora of expert and LLM-generated trajectories and evaluate six retrieval methods using systematically stratified queries. Our results expose a clear generalization cliff: embedding-based methods perform strongly on familiar contexts, yet degrade considerably on novel ones, while LLM-generated procedural abstractions demonstrate reliable cross-context transfer. Controlled ablations show that although embeddings capture some lexical-level abstraction, they fundamentally treat procedures as unordered bags of words, discarding temporal structure necessary for cross-context transfer. Corpus scale delivers far larger gains than representation enrichment, revealing an architectural ceiling in current encoders. Our benchmark offers the first diagnostic framework separating genuine procedural understanding from surface-level memorization and gives tools for developing retrieval systems capable of dependable generalization. Resources available at our GitHub repository (https://github.com/qpiai/Proced_mem_bench).",
+      "identifiers": [
+        "SemanticScholar:c818fdd429cd44a4f8d5fc392123957e76627ec2"
+      ],
+      "semantic_scholar_id": "c818fdd429cd44a4f8d5fc392123957e76627ec2",
+      "canonical_id": "arXiv:2511.21730",
+      "arxiv_id": "2511.21730",
+      "doi": "10.48550/arXiv.2511.21730",
+      "authors": [
+        "Ishant Kohar",
+        "Aswanth Krishnan"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 326,
+        "matched_prestigious_venue": null
+      },
+      "reason": "This benchmark isolates procedural-memory retrieval for language agents and compares retrieval/LLM-generated abstractions across contexts, making inference-time agent memory retrieval a plausible connection for full-text review.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Limits of Confidence in Diffusion",
+      "source_url": "https://arxiv.org/abs/2609.20581",
+      "year": 2026,
+      "published": "2026-09-17",
+      "venue": null,
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Discrete diffusion, including remasking and uniform-state samplers, generate a sequence by writing multiple token positions per step, drawing each from a per-position distribution and choosing which positions to write from those same distributions. For domains of general interest (pixels, phonemes, or words) there are inherent dependencies between tokens. We show that a step matches the training distribution only when the positions it writes are conditionally independent given the tokens already fixed, that no product of per-position distributions can match a dependent group, and that per-position distributions do not determine whether a group is dependent: two joint distributions can have identical per-position marginals while differing in which combinations of values occur. On ScanAndAdd, a synthetic task whose joint distribution is available in closed form, we verify that every group of two or more undetermined positions a confidence ranking writes is dependent, and measure the generated distribution to be $29\\times$ the sampling-noise floor total variation while per-sample metrics are $1.0$.",
+      "identifiers": [
+        "SemanticScholar:b3ac2988385be2b37847af9c75c2f8676161a257"
+      ],
+      "semantic_scholar_id": "b3ac2988385be2b37847af9c75c2f8676161a257",
+      "canonical_id": "arXiv:2609.20581",
+      "arxiv_id": "2609.20581",
+      "authors": [
+        "Russ Webb",
+        "Amitis Shidani",
+        "Alice Bizeul",
+        "D. Busbridge"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 26,
+        "matched_prestigious_venue": null
+      },
+      "reason": "The work analyzes distributional correctness of multi-token discrete-diffusion updates, including word sequences, directly examining the sampling mechanism used at inference in diffusion language models.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Mid-Harness: Scaling Actions Between Model and Harness for Terminal Agents",
+      "source_url": "https://arxiv.org/abs/2609.39982",
+      "year": 2026,
+      "published": "2026-09-30",
+      "venue": null,
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Terminal agents act through stochastic model generations, yet the ability to generate a useful action does not ensure its reliable execution. A poor command (e.g., wrong package install) can change the environment in ways that hinder subsequent progress, even when the model could generate a better alternative. We investigate whether allocating test-time compute at the model-harness boundary can improve action reliability and trajectory success, and what makes this allocation effective. To study these questions, we introduce Mid-Harness, which samples and verifies candidate actions before forwarding one for execution, while keeping the generator and harness unchanged. With a TMAX-9B generator, more action sampling yields little benefit under weak verification, whereas a capable verifier can exploit useful alternatives from the same generator. On TerminalBench-Lite, a GPT-5.6 Sol verifier raises Pass@1 from 50.00% for the base agent to 68.03% with 8 sampled actions. When the same TMAX-9B model serves as the verifier, pairwise verification performs best among the evaluated verification mechanisms. Distilling responses from the stronger verifier into TMAX-9B further improves Pass@1, while leaving the action generator unchanged. With TMAX-9B on TerminalBench-Lite, combining action and trajectory scaling reaches higher success at lower estimated token cost than generating more trajectories alone. Mid-Harness also improves performance across additional models, benchmarks, and harnesses. These findings identify action scaling as a promising target for test-time compute scaling in terminal agents.",
+      "identifiers": [
+        "SemanticScholar:8dc9ac99c7676c4961712f299842c4fe8e95a359"
+      ],
+      "semantic_scholar_id": "8dc9ac99c7676c4961712f299842c4fe8e95a359",
+      "canonical_id": "arXiv:2609.39982",
+      "arxiv_id": "2609.39982",
+      "authors": [
+        "Minki Kang",
+        "Ryo Hachiuma",
+        "Shao-Kun Zhang",
+        "Subhashree Radhakrishnan",
+        "Yong-Gan Fu",
+        "Jin-Dong Jiang",
+        "Ming-Jie Liu",
+        "Ehsan Hosseini-Asl",
+        "Yi Dong",
+        "Yu-Chiang Frank Wang",
+        "Byung-Kwan Lee"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 13,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Mid-Harness evaluates test-time action sampling and verification at the model/harness boundary and reports better success at lower estimated token cost, directly matching inference-time compute/runtime efficiency.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-30f2c008192f",
+    "round": "libimp-30f2c008192f4e61-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 6,
+    "round_submission_count": 2,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-30f2c008192f4e61-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-30f2c008192f4e61-pre01.json",
+    "receipt": "sha256:4ee470f3b6e8103386bb5e1cbadfbdc7a042f8006dbbfb097f1401aad19ce4ff"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-30f2c008192f",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
