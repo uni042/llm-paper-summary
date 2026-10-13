@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-13T01:51:38+00:00",
-  "record_count": 4758,
+  "updated_at": "2026-10-13T01:58:21+00:00",
+  "record_count": 4760,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -72735,6 +72735,38 @@
       ],
       "borderline_recheck_count": 0,
       "title": "Efficient Speech Language Modeling via Energy Distance in Continuous Latent Space"
+    },
+    "DOI:10.1117/12.2654191": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1117/12.2654191",
+      "identity_tokens": [
+        "DOI:10.1117/12.2654191",
+        "SemanticScholar:05161bc2cf0ee2800e773b1d7d317b575419f1e3"
+      ],
+      "reason": "Crossref/DOI metadata retrieval was inaccessible and the SPIE Digital Library article page returned an internal fetch error. The DOI/title appear in a paper copy indexed from the authors’ institutional repository, but the official publisher abstract could not be retrieved; retained as source_unavailable.",
+      "first_checked_at": "2026-10-13T01:58:17+00:00",
+      "last_checked_at": "2026-10-13T01:58:17+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2102.03902-nystr-mformer-a-nystr-m-based-algorithm-for-approximating-self-attention.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Space-filling curves for modeling spatial context in transformer-based whole slide image classification"
+    },
+    "DOI:10.1145/3706594.3726983": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3706594.3726983",
+      "identity_tokens": [
+        "DOI:10.1145/3706594.3726983",
+        "SemanticScholar:fb41e7e319760cf3af6058e688d1314c3d29f9d6"
+      ],
+      "reason": "Crossref API and DOI resolver requests were inaccessible; the ACM publisher article page returned HTTP 403 Forbidden. Identity/title are supported by the author-affiliated repository record, but publisher abstract retrieval failed; therefore this is retained as source_unavailable under the screening contract.",
+      "first_checked_at": "2026-10-13T01:58:21+00:00",
+      "last_checked_at": "2026-10-13T01:58:21+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2101.01321-i-bert-integer-only-bert-quantization.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Stop Wasting your Cache! Bringing Machine Learning into Cache Computing"
     }
   }
 }

@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-78e18b106b764f4c-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2410.07589",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2410.07589",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2410.07589",
+      "SemanticScholar:a7af50aa647b7e5092b4daf7728e37717c73c502",
+      "arXiv:2410.07589"
+    ],
+    "reason": "This paper studies fairness failure modes in RAG rather than efficiency or systems behavior.",
+    "first_checked_at": "2026-10-13T01:58:18+00:00",
+    "last_checked_at": "2026-10-13T01:58:18+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2310.04408-recomp-improving-retrieval-augmented-lms-with-compression-and-selective-.md"
+    ],
+    "title": "No Free Lunch: Retrieval-Augmented Generation Undermines Fairness in LLMs, Even for Vigilant Users"
+  },
+  "processed_at": "2026-10-13T01:58:19+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-78e18b106b76",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-13T01:51:43+00:00",
-  "record_count": 11674,
+  "updated_at": "2026-10-13T01:58:26+00:00",
+  "record_count": 11692,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -167065,6 +167065,297 @@
         "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
       ],
       "title": "SymSeqBench: a unified framework for the generation and analysis of rule-based symbolic sequences and datasets"
+    },
+    "arXiv:2401.07525": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2401.07525",
+      "identity_tokens": [
+        "DOI:10.1109/icassp48485.2024.10447647",
+        "SemanticScholar:0ca63571c54f9efb8ea8301c5e09caaad0ce4dd2",
+        "arXiv:2401.07525"
+      ],
+      "reason": "The contribution is domain-specific person-job matching and multitask pretraining, without an inference or systems efficiency result.",
+      "first_checked_at": "2026-10-13T01:58:16+00:00",
+      "last_checked_at": "2026-10-13T01:58:16+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2006.03236-funnel-transformer-filtering-out-sequential-redundancy-for-efficient-lan.md"
+      ],
+      "title": "TAROT: A Hierarchical Framework with Multitask Co-Pretraining on Semi-Structured Data towards Effective Person-Job Fit"
+    },
+    "arXiv:2508.16261": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2508.16261",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2508.16261",
+        "SemanticScholar:b07ee4903dc59af8b4ab7925e9888d11c9dd7725",
+        "arXiv:2508.16261"
+      ],
+      "reason": "This is a survey/taxonomy of federated LLM tuning and model access, not a new measured system-efficiency method.",
+      "first_checked_at": "2026-10-13T01:58:16+00:00",
+      "last_checked_at": "2026-10-13T01:58:16+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2004.03844-on-the-effect-of-dropping-layers-of-pre-trained-transformer-models.md"
+      ],
+      "title": "On the Evolution of Federated Post-Training Large Language Models: A Model Accessibility View"
+    },
+    "DOI:10.14744/lhhs.2026.81418": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.14744/lhhs.2026.81418",
+      "identity_tokens": [
+        "DOI:10.14744/lhhs.2026.81418",
+        "SemanticScholar:58c633ff0c78875029d234d95547e5ae68592e50"
+      ],
+      "reason": "This is a systematic review/meta-analysis of diagnostic performance; it studies application quality and clinical comparison, not inference or system efficiency.",
+      "first_checked_at": "2026-10-13T01:58:18+00:00",
+      "last_checked_at": "2026-10-13T01:58:18+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md"
+      ],
+      "title": "A Systematic Review and Meta-Analysis of Diagnostic Performance Comparison between DeepSeek and Physicians"
+    },
+    "arXiv:2410.07589": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2410.07589",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2410.07589",
+        "SemanticScholar:a7af50aa647b7e5092b4daf7728e37717c73c502",
+        "arXiv:2410.07589"
+      ],
+      "reason": "This paper studies fairness failure modes in RAG rather than efficiency or systems behavior.",
+      "first_checked_at": "2026-10-13T01:58:18+00:00",
+      "last_checked_at": "2026-10-13T01:58:18+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2310.04408-recomp-improving-retrieval-augmented-lms-with-compression-and-selective-.md"
+      ],
+      "title": "No Free Lunch: Retrieval-Augmented Generation Undermines Fairness in LLMs, Even for Vigilant Users"
+    },
+    "arXiv:2412.04432": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2412.04432",
+      "identity_tokens": [
+        "DOI:10.1109/cvpr52734.2025.01270",
+        "SemanticScholar:f9d727d2cd57bd7e96007368ff2fb3c49fa2ed1d",
+        "arXiv:2412.04432"
+      ],
+      "reason": "The contribution is a video representation/tokenizer for comprehension and generation, with benchmark quality results but no stated efficiency effect.",
+      "first_checked_at": "2026-10-13T01:58:19+00:00",
+      "last_checked_at": "2026-10-13T01:58:19+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2311.17043-llama-vid-an-image-is-worth-2-tokens-in-large-language-models.md"
+      ],
+      "title": "Divot: Diffusion Powers Video Tokenizer for Comprehension and Generation"
+    },
+    "arXiv:2503.13988": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2503.13988",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2503.13988",
+        "SemanticScholar:99a5974a72ea5d7adf2682fdd2c27c1f485c493f",
+        "arXiv:2503.13988"
+      ],
+      "reason": "This is a domain-specific Ukrainian exam adaptation study; PEFT is a means to improve task performance, with no serving/inference efficiency evaluation.",
+      "first_checked_at": "2026-10-13T01:58:19+00:00",
+      "last_checked_at": "2026-10-13T01:58:19+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2023-2312.11514-llm-in-a-flash-efficient-large-language-model-inference-with-limited-memory.md",
+        "papers/inference/99-other-inference-systems/2023-2305.13245-gqa.md"
+      ],
+      "title": "Empowering Smaller Models: Tuning LLaMA and Gemma with Chain-of-Thought for Ukrainian Exam Tasks"
+    },
+    "arXiv:2505.21072": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.21072",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2505.21072",
+        "SemanticScholar:e50ef82f320bf6172619b6a09f4099a77edd451e",
+        "arXiv:2505.21072"
+      ],
+      "reason": "The paper contributes uncertainty estimation and hallucination detection for RAG quality; it reports no systems-efficiency improvement.",
+      "first_checked_at": "2026-10-13T01:58:19+00:00",
+      "last_checked_at": "2026-10-13T01:58:19+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2212.10511-when-not-to-trust-language-models-investigating-effectiveness-of-paramet.md"
+      ],
+      "title": "Faithfulness-Aware Uncertainty Quantification for Fact-Checking the Output of Retrieval Augmented Generation"
+    },
+    "arXiv:2605.17561": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.17561",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2605.17561",
+        "SemanticScholar:61e86438e85e71568ec2598b01fd9dae792c6216",
+        "arXiv:2605.17561"
+      ],
+      "reason": "The work automates customer-support classification and fix generation for bug reports; results concern application accuracy, not AI system efficiency.",
+      "first_checked_at": "2026-10-13T01:58:20+00:00",
+      "last_checked_at": "2026-10-13T01:58:20+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+      ],
+      "title": "Automated Root-Cause Subclassification and No-Code Fix Generation for Invalid Bug Reports"
+    },
+    "DOI:10.1093/nsr/nwaf039": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1093/nsr/nwaf039",
+      "identity_tokens": [
+        "DOI:10.1093/nsr/nwaf039",
+        "SemanticScholar:30cf9fe12911040804032a2a6dce00b54a1860fc"
+      ],
+      "reason": "A clinical glucose-monitoring transformer and its downstream predictive tasks are the focus; no model serving or resource-efficiency contribution is claimed.",
+      "first_checked_at": "2026-10-13T01:58:20+00:00",
+      "last_checked_at": "2026-10-13T01:58:20+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2021-2101.06840-zero-offload-democratizing-billion-scale-model-training.md",
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ],
+      "title": "A pretrained transformer model for decoding individual glucose dynamics from continuous glucose monitoring data"
+    },
+    "arXiv:2108.10168": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2108.10168",
+      "identity_tokens": [
+        "SemanticScholar:c07506e0dec92b2cc7552b810c82d90de3c92aa9",
+        "arXiv:2108.10168"
+      ],
+      "reason": "This is a metric/evaluation method for generated code quality rather than a code-generation system efficiency method.",
+      "first_checked_at": "2026-10-13T01:58:21+00:00",
+      "last_checked_at": "2026-10-13T01:58:21+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2005.08025-intellicode-compose-code-generation-using-transformer.md"
+      ],
+      "title": "CGEMs: A Metric Model for Automatic Code Generation using GPT-3"
+    },
+    "arXiv:2406.07475": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2406.07475",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2406.07475",
+        "SemanticScholar:00a1683e0adbd5e56aa4f83d49091c5542d29179",
+        "arXiv:2406.07475"
+      ],
+      "reason": "This is a trajectory-inference methodology using optimal transport and latent dynamics; the abstract gives no ML-serving or systems-efficiency contribution.",
+      "first_checked_at": "2026-10-13T01:58:22+00:00",
+      "last_checked_at": "2026-10-13T01:58:22+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "title": "Partially Observed Trajectory Inference using Optimal Transport and a Dynamics Prior"
+    },
+    "arXiv:2410.08289": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2410.08289",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2410.08289",
+        "SemanticScholar:f4dde304454f251a05836a745fb9d258dc399be9",
+        "arXiv:2410.08289"
+      ],
+      "reason": "The contribution is cost-effective domain dataset generation for cultural-heritage question answering, not AI inference or systems performance.",
+      "first_checked_at": "2026-10-13T01:58:22+00:00",
+      "last_checked_at": "2026-10-13T01:58:22+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+      ],
+      "title": "Increasing the Difficulty of Automatically Generated Questions via Reinforcement Learning with Synthetic Preference"
+    },
+    "arXiv:2503.15838": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2503.15838",
+      "identity_tokens": [
+        "DOI:10.1145/3744916.3773143",
+        "SemanticScholar:df47c135fe0b3122133e0caa9a9ab7418ba678cf",
+        "arXiv:2503.15838"
+      ],
+      "reason": "The method improves code-generation selection quality by sampling multiple candidates; its abstract reports no inference-cost or serving-efficiency result.",
+      "first_checked_at": "2026-10-13T01:58:23+00:00",
+      "last_checked_at": "2026-10-13T01:58:23+00:00",
+      "linked_from": [
+        "papers/inference/12-moe-parallelism-communication/2021-2101.03961-switch-transformers-scaling-to-trillion-parameter-models-with-simple-and.md"
+      ],
+      "title": "Enhancing LLM Code Generation with Ensembles: A Similarity-Based Selection Approach"
+    },
+    "arXiv:2505.12667": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.12667",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2505.12667",
+        "SemanticScholar:f3fbaceeff1aad6883b8ca20f43e031440467416",
+        "arXiv:2505.12667"
+      ],
+      "reason": "The contribution is watermarking and safety for generated video, rather than inference/runtime efficiency.",
+      "first_checked_at": "2026-10-13T01:58:23+00:00",
+      "last_checked_at": "2026-10-13T01:58:23+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md",
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "title": "Safe-Sora: Safe Text-to-Video Generation via Graphical Watermarking"
+    },
+    "arXiv:2509.06155": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2509.06155",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2509.06155",
+        "SemanticScholar:5e63d8d16f358ef7b4af0f268bb1e53a2701e3dd",
+        "arXiv:2509.06155"
+      ],
+      "reason": "The stated efficiency gain is avoiding training from scratch for audio-video model construction; this is a training-only efficiency contribution and the rest is generation quality.",
+      "first_checked_at": "2026-10-13T01:58:24+00:00",
+      "last_checked_at": "2026-10-13T01:58:24+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2503.20215-qwen2-5-omni-technical-report.md"
+      ],
+      "title": "UniVerse-1: Unified Audio-Video Generation via Stitching of Experts"
+    },
+    "arXiv:2509.06723": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2509.06723",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2509.06723",
+        "SemanticScholar:a00ff759337e35251715ea88f1b095ae140f55b8",
+        "arXiv:2509.06723"
+      ],
+      "reason": "The abstract presents a test-time-training video-generation quality method without a demonstrated serving/runtime efficiency improvement.",
+      "first_checked_at": "2026-10-13T01:58:25+00:00",
+      "last_checked_at": "2026-10-13T01:58:25+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-2410.02367-sageattention-accurate-8-bit-attention-for-plug-and-play-inference-accel.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+      ],
+      "title": "Zo3T: Zero-Shot 3D-Aware Trajectory-Guided Image-to-Video Generation via Test-Time Training"
+    },
+    "arXiv:2509.14373": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2509.14373",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2509.14373",
+        "SemanticScholar:d2f0d3a934fb54b145a59b8a5228e9d2ea60929f",
+        "arXiv:2509.14373"
+      ],
+      "reason": "Low-rank optimization lowers pretraining/fine-tuning costs for domain-specific code generation; the reported efficiency is training-side, not inference or serving.",
+      "first_checked_at": "2026-10-13T01:58:25+00:00",
+      "last_checked_at": "2026-10-13T01:58:25+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md",
+        "papers/inference/99-other-inference-systems/2022-2207.00032-deepspeed-inference-enabling-efficient-inference-of-transformer-models-at-unprecedented-scale.md"
+      ],
+      "title": "CodeLSI: Leveraging Foundation Models for Automated Code Generation with Low-Rank Optimization and Domain-Specific Instruction Tuning"
+    },
+    "arXiv:2510.01858": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2510.01858",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2510.01858",
+        "SemanticScholar:1f418d4dcc59d850c65e43234d38cfdb1ab84ea3",
+        "arXiv:2510.01858"
+      ],
+      "reason": "The paper studies compositional meta-learning and task inference; the abstract reports learning/data efficiency but no inference systems or resource result.",
+      "first_checked_at": "2026-10-13T01:58:26+00:00",
+      "last_checked_at": "2026-10-13T01:58:26+00:00",
+      "linked_from": [
+        "papers/inference/12-moe-parallelism-communication/2021-2101.03961-switch-transformers-scaling-to-trillion-parameter-models-with-simple-and.md",
+        "papers/inference/99-other-inference-systems/2017-1701.06538-outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts.md"
+      ],
+      "title": "Compositional meta-learning through probabilistic task inference"
     }
   }
 }

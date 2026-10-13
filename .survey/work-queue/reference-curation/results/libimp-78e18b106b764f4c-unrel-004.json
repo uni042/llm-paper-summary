@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-78e18b106b764f4c-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2503.13988",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2503.13988",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2503.13988",
+      "SemanticScholar:99a5974a72ea5d7adf2682fdd2c27c1f485c493f",
+      "arXiv:2503.13988"
+    ],
+    "reason": "This is a domain-specific Ukrainian exam adaptation study; PEFT is a means to improve task performance, with no serving/inference efficiency evaluation.",
+    "first_checked_at": "2026-10-13T01:58:19+00:00",
+    "last_checked_at": "2026-10-13T01:58:19+00:00",
+    "linked_from": [
+      "papers/inference/01-offload-hierarchical-memory/2023-2312.11514-llm-in-a-flash-efficient-large-language-model-inference-with-limited-memory.md",
+      "papers/inference/99-other-inference-systems/2023-2305.13245-gqa.md"
+    ],
+    "title": "Empowering Smaller Models: Tuning LLaMA and Gemma with Chain-of-Thought for Ukrainian Exam Tasks"
+  },
+  "processed_at": "2026-10-13T01:58:19+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-78e18b106b76",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
