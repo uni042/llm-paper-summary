@@ -36,6 +36,8 @@ worker_id: "scheduled-chat-00"
 worker_run_key: "20261013-1600-scheduled-chat-00/r01"
 worklist_rank: 39
 reference_main_sha: "0acb4f1ea05a3caf8722f19b047289935f7e1f8d"
+last_audited: null
+audit_version: 0
 ---
 
 # TAPPA：注意パターンの時間的予測可能性をKV圧縮と層枝刈りへ利用
