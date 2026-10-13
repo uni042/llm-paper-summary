@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-13T21:12:10+00:00",
-  "record_count": 11886,
+  "updated_at": "2026-10-13T21:31:19+00:00",
+  "record_count": 11889,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -163187,11 +163187,11 @@
       "identity_tokens": [
         "arXiv:2204.13767"
       ],
-      "reason": "一次要旨で、三角形に縮小する変数別注意機構を用いた多変量時系列の長期予測であることを確認。対象は予測対象変数ごとの時系列依存性と時系列予測精度であり、LLMの推論・学習基盤やサービング最適化への適用・評価がない。",
+      "reason": "時系列予測専用の三角形パッチ注意と変数別パラメータを用い、複数変数の長期予測精度・線形計算量を評価する。LLMの学習・推論基盤ではなく、時系列モデルの構造・予測タスクを研究する。",
       "first_checked_at": "2026-10-11T02:48:44+00:00",
-      "last_checked_at": "2026-10-11T10:43:45+00:00",
+      "last_checked_at": "2026-10-13T21:31:13+00:00",
       "linked_from": [],
-      "title": "Triformer: Triangular, Variable-Specific Attentions for Long Sequence Multivariate Time Series Forecasting--Full Version"
+      "title": "Triformer: Triangular, Variable-Specific Attentions for Long Sequence Multivariate Time Series Forecasting-Full Version"
     },
     "DOI:10.1109/tcsvt.2026.3661516": {
       "classification": "unrelated",
@@ -164756,9 +164756,9 @@
         "arXiv:2601.18496",
         "semanticscholar:651de358537e09001f21efd2c800c7f7631167b6"
       ],
-      "reason": "医療質問応答のために複数段の医療検索データ合成、難易度に応じたツール呼出し回数への罰則、推論中の仮説検証モニタを組み合わせ、7種の医療ベンチマークで基盤モデルより平均9.79%改善したとする。呼出し回数抑制と文脈劣化の防止には推論運用上の接点があるが、提案の主眼は医療推論の正答率と証拠利用の改善であり、一般的なLLMサービング基盤・GPUメモリ階層・カーネル実行技術の性能改善を評価していないため対象外とする。",
+      "reason": "医療質問応答向けに多段検索データ合成、難度依存のツール呼出し罰則、推論中の仮説検証モニターを組み合わせ、医療7ベンチマークの正答性能を平均9.79%改善する。ツール呼出し数の制御はあるが、主目的は医療知識・推論の正確性で、LLM実行エンジンやメモリ階層、計算カーネル、分散配信のシステム効率を提案・評価する研究ではない。",
       "first_checked_at": "2026-10-11T20:48:39+00:00",
-      "last_checked_at": "2026-10-11T20:48:39+00:00",
+      "last_checked_at": "2026-10-13T21:31:14+00:00",
       "linked_from": [],
       "title": "DEEPMED: Building a Medical DeepResearch Agent via Multi-hop Med-Search Data and Turn-Controlled Agentic Training & Inference"
     },
@@ -164998,9 +164998,9 @@
       "identity_tokens": [
         "arXiv:2501.15061"
       ],
-      "reason": "一次要旨で確認した主要機構は、クエリとキーの同符号・異符号の相互作用を分離する極性認識型線形注意と、学習可能なべき関数による注意分布の尖鋭化である。評価対象は画像認識などの視覚Transformerで、報告する最大4.6%の改善は視覚タスクの表現力・効率であり、LLM推論・生成サービング・KVキャッシュ・オフロードへの適用や直接のシステム実装貢献を一次要旨から確認できないため現行対象外とする。",
+      "reason": "題名で視覚Transformer用の極性考慮線形注意を対象と明示しており、主な対象は画像認識向け視覚モデルの注意機構である。言語モデルの生成・サービング・KV管理を対象とすることは題名から読み取れないため、現行のLLM推論システム調査から先行除外する。",
       "first_checked_at": "2026-10-11T21:44:20+00:00",
-      "last_checked_at": "2026-10-11T21:44:20+00:00",
+      "last_checked_at": "2026-10-13T21:31:15+00:00",
       "linked_from": [],
       "title": "PolaFormer: Polarity-aware Linear Attention for Vision Transformers"
     },
@@ -165089,9 +165089,9 @@
       "identity_tokens": [
         "arXiv:2601.13742"
       ],
-      "reason": "一次論文（ACL Anthology）の要旨は、音声特徴を安価に抽出してテキスト化し、LLM判定器が内容・声質・韻律の各次元を評価するTRACEと人手の判断基準HCoTを提案する。主目的は音声対音声システムの評価精度・人間評価との一致であり、LLMの推論実行基盤、メモリ、サービング、GPUカーネルの最適化を研究対象としていない。評価器の利用料金が低いことだけでは推論システムの技術貢献とはみなさない。",
+      "reason": "音声対音声生成の評価を、音響特徴を文章化してLLM審査器へ渡す方式で人間評価に近づける研究。評価対象は音声出力の品質であり、推論エンジンの演算・記憶・配信スケジューリング・KV管理を提案していない。音声評価手法の研究として本サーベイの中心範囲外。",
       "first_checked_at": "2026-10-12T18:50:00+00:00",
-      "last_checked_at": "2026-10-12T18:50:00+00:00",
+      "last_checked_at": "2026-10-13T21:31:12+00:00",
       "linked_from": [],
       "title": "Hearing Between the Lines: Unlocking the Reasoning Power of LLMs for Speech Evaluation"
     },
@@ -167984,9 +167984,9 @@
       "identity_tokens": [
         "arXiv:2607.10383"
       ],
-      "reason": "対象は視覚言語ナビゲーション基盤モデルの構築・移動タスクであり、LLM推論システムの高速化・圧縮・メモリ管理を主題としない。タイトル段階で対象外と判断。",
+      "reason": "題名の主題は視覚と言語を用いるナビゲーション基盤モデルの構築であり、LLM推論の実行・配信・メモリ管理の効率化を直接の対象としていない。ロボットの経路探索・視覚ナビゲーションモデルに関する研究として先行除外する。",
       "first_checked_at": "2026-10-13T07:51:16+00:00",
-      "last_checked_at": "2026-10-13T07:51:16+00:00",
+      "last_checked_at": "2026-10-13T21:31:16+00:00",
       "linked_from": [],
       "title": "ABot-N1: Toward a General Visual Language Navigation Foundation Model"
     },
@@ -168559,9 +168559,9 @@
       "identity_tokens": [
         "arXiv:2403.18421"
       ],
-      "reason": "タイトルが生物医学テキストで訓練した領域特化言語モデルの開発を主題としている。推論実行基盤やモデル圧縮・サービングの最適化ではない。",
+      "reason": "生物医学コーパスで学習した2.7Bのドメイン特化言語モデルと医療質問応答性能を報告する。モデル学習のハードウェア設定は記述されるが、新しいLLM学習・推論システム最適化技術を提案する研究ではない。",
       "first_checked_at": "2026-10-13T13:47:00+00:00",
-      "last_checked_at": "2026-10-13T13:47:00+00:00",
+      "last_checked_at": "2026-10-13T21:31:19+00:00",
       "linked_from": [],
       "title": "BioMedLM: A 2.7B Parameter Language Model Trained On Biomedical Text"
     },
@@ -170771,6 +170771,42 @@
         "papers/inference/99-other-inference-systems/2024-2402.01771-blackmamba-mixture-of-experts-for-state-space-models.md"
       ],
       "title": "Mamba State-Space Models Can Be Strong Downstream Learners"
+    },
+    "arXiv:2601.10120": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.10120",
+      "identity_tokens": [
+        "arXiv:2601.10120"
+      ],
+      "reason": "題名の対象は複数エージェントの相互作用モードを表すトポロジーの一回生成であり、LLM推論カーネル、KVキャッシュ、モデル配信、GPUメモリ階層を最終目的とする研究ではない。タイトルだけから対象外と判断し、手法や実験結果については断定しない。",
+      "first_checked_at": "2026-10-13T21:31:15+00:00",
+      "last_checked_at": "2026-10-13T21:31:15+00:00",
+      "linked_from": [],
+      "title": "TopoDIM: One-shot Topology Generation of Diverse Interaction Modes for Multi-Agent Systems"
+    },
+    "arXiv:2607.10438": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.10438",
+      "identity_tokens": [
+        "arXiv:2607.10438"
+      ],
+      "reason": "題名が示す主目的はIoT対応自動運転の微分可能な軌道計画をLLMで強化することである。LLMを応用する計画・制御タスクであり、モデル推論の配信・計算資源・量子化・オフロードを最終目的とする研究ではないため先行除外する。",
+      "first_checked_at": "2026-10-13T21:31:16+00:00",
+      "last_checked_at": "2026-10-13T21:31:16+00:00",
+      "linked_from": [],
+      "title": "Large Language Model Enhanced Differentiable Trajectory Planning for IoT-Enabled Autonomous Driving"
+    },
+    "arXiv:2605.11722": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.11722",
+      "identity_tokens": [
+        "arXiv:2605.11722"
+      ],
+      "reason": "題名で対象を複合的なテキストから画像への生成制御と明示しており、画像生成の構成条件を推論時に満たすことが主題である。LLMのトークン復号・サービング・GPUメモリ効率を扱う論文とは研究対象が異なるため先行除外する。",
+      "first_checked_at": "2026-10-13T21:31:16+00:00",
+      "last_checked_at": "2026-10-13T21:31:16+00:00",
+      "linked_from": [],
+      "title": "EPIC: Efficient Predicate-Guided Inference-Time Control for Compositional Text-to-Image Generation"
     }
   }
 }

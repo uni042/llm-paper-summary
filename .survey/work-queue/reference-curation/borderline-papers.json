@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-13T21:12:09+00:00",
-  "record_count": 4896,
+  "updated_at": "2026-10-13T21:31:18+00:00",
+  "record_count": 4899,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -70343,9 +70343,9 @@
       "identity_tokens": [
         "arXiv:2402.09906"
       ],
-      "reason": "一次要旨では生成と埋込みを一つのGritLMに統合する学習方式を提案し、別々の検索・生成モデルを不要にすることで長文RAGの高速化（60%超）を報告する。ただし主な寄与はモデルの指示チューニングと能力統合であり、推論スケジューラ・KV管理・GPUカーネルなどの実行基盤の直接設計ではない。",
+      "reason": "生成と埋め込みを一つの言語モデルに統合し、長文検索拡張生成の処理を別々のモデルを用いる場合より60%超高速化したと報告する。実行時にモデルを共用する利点は推論効率に接するが、主たる研究対象は指示学習と表現能力であり、GPUメモリ階層・スケジューリング・配信カーネルの新規手法ではないため境界候補とする。",
       "first_checked_at": "2026-10-10T18:48:04+00:00",
-      "last_checked_at": "2026-10-13T06:45:21+00:00",
+      "last_checked_at": "2026-10-13T21:31:18+00:00",
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "Generative Representational Instruction Tuning"
@@ -70395,9 +70395,9 @@
       "identity_tokens": [
         "arXiv:2409.12961"
       ],
-      "reason": "一次論文の要旨は任意解像度を扱う視覚符号器と、要求に応じて視覚トークンを1倍から16倍圧縮する動的圧縮器を提案する。長時間動画の入力トークン削減は推論計算量・文脈長に関連するが、主な評価は画像・動画・3Dの認識性能であり、LLM一般の推論ランタイム、GPU実測スループット、KVキャッシュ削減の独立した評価は要旨から確認できない。多モーダル前処理の効率化として境界的関連に分類。",
+      "reason": "可変解像度の視覚符号化器OryxViTと1〜16倍の動的視覚トークン圧縮を提案し、長い動画・画像・3D理解の精度を重視するマルチモーダルモデル。入力トークン削減にはシステム関連性があるが、主たる評価は視覚理解性能でLLMサービング基盤の性能評価ではない。",
       "first_checked_at": "2026-10-10T21:46:56+00:00",
-      "last_checked_at": "2026-10-12T21:39:41+00:00",
+      "last_checked_at": "2026-10-13T21:31:11+00:00",
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "Oryx MLLM: On-Demand Spatial-Temporal Understanding at Arbitrary Resolution"
@@ -71067,9 +71067,9 @@
       "identity_tokens": [
         "arXiv:2601.02535"
       ],
-      "reason": "ModeXは複数生成候補の意味類似度グラフを構築し、スペクトルクラスタリングで多数派に近い候補を選ぶ。追加の報酬モデルやLLM推論を必要とせず、Lite版は早期枝刈りで選択計算を削減するため推論費用に関連するが、主要対象は開放型生成の回答選択精度であり、GPUサービング、カーネル、キャッシュ最適化ではない。境界的として保留する。",
+      "reason": "複数の生成候補を類似度グラフとスペクトルクラスタリングでまとめ、外部の評価モデルなしに代表解を選ぶ。軽量版は途中で候補経路を間引き、追加生成費用を抑える。推論時計算配分には接するが、GPUカーネルやサービング基盤の改善が主目的ではなく、出力選択品質が中心のため境界候補。",
       "first_checked_at": "2026-10-11T13:05:07+00:00",
-      "last_checked_at": "2026-10-12T17:43:49+00:00",
+      "last_checked_at": "2026-10-13T21:31:14+00:00",
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "ModeX: Evaluator-Free Best-of-N Selection for Open-Ended Generation"
@@ -72798,9 +72798,9 @@
       "identity_tokens": [
         "arXiv:2208.00406"
       ],
-      "reason": "一次要旨では、学習・推論プログラムの電力消費と地域別CO2排出換算を計測するPythonパッケージeco2AIを公開する。LLM推論のエネルギー効率測定にも転用可能な計測技術だが、研究対象は機械学習全般の消費電力・排出量追跡であり、LLMモデルの演算・転送・サービングを高速化する方式ではない。",
+      "reason": "汎用の機械学習実行について消費電力と地域別CO2排出量を計測するPythonパッケージであり、LLM専用の学習・推論スケジューラ、カーネル、メモリ配置の最適化は提案しない。電力計測基盤として周辺関連性はあるため保留。",
       "first_checked_at": "2026-10-13T03:44:20+00:00",
-      "last_checked_at": "2026-10-13T03:44:20+00:00",
+      "last_checked_at": "2026-10-13T21:31:13+00:00",
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "Eco2AI: carbon emissions tracking of machine learning models as the first step towards sustainable AI"
@@ -75296,6 +75296,45 @@
       ],
       "borderline_recheck_count": 0,
       "title": "DeltaFormer: Unlock the state space of Transformer"
+    },
+    "arXiv:2603.26435": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2603.26435",
+      "identity_tokens": [
+        "arXiv:2603.26435"
+      ],
+      "reason": "GPUの命令別エネルギー推定のため、微小ベンチマークの命令出現数と消費電力量を非負連立方程式で解く。V100・A100・H100を含む16のGPGPU・グラフ解析・HPC・機械学習ワークロードで誤差を測り、エネルギー帰属を細分化する。GPUカーネル効率・電力評価には転用可能だが、LLM推論のKVキャッシュ、MoE、復号、サービングに固有の実装や評価を主題としない。一般GPUシステム測定法として隣接分野に保留する。",
+      "first_checked_at": "2026-10-13T21:31:12+00:00",
+      "last_checked_at": "2026-10-13T21:31:12+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Wattchmen: Watching the Wattchers – High Fidelity, Flexible GPU Energy Modeling"
+    },
+    "arXiv:2512.17065": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2512.17065",
+      "identity_tokens": [
+        "arXiv:2512.17065"
+      ],
+      "reason": "非自己回帰型言語モデルごとに異なるデータ整形・損失・予測器を、Harness、DataModule、Hydra構成で交換可能にするPython研究用パッケージ。本文第5節の実演は挿入型言語モデルの小規模な星形グラフ経路生成、第6節は小型モデルの再現比較である。推論予測器は提供するが、LLM配信エンジン、GPUカーネル、KV管理、実測推論高速化を主要貢献としていない。非自己回帰モデルの実験基盤として関連はあるため保留する。",
+      "first_checked_at": "2026-10-13T21:31:17+00:00",
+      "last_checked_at": "2026-10-13T21:31:17+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "XLM: A Python package for non-autoregressive language models"
+    },
+    "arXiv:2606.27807": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.27807",
+      "identity_tokens": [
+        "arXiv:2606.27807"
+      ],
+      "reason": "原著要旨ではSpike-V（視覚符号器）、Spike-L（スパイク型マルチモーダル言語モデル）、Spike-A（行動制御器）を組み合わせ、ロボット航法・制御の省電力推論を狙う。トークン単位のイベント駆動疎性と推論エネルギー削減は効率化に関連するが、主目的はロボット向け新規VLAアーキテクチャとタスク性能であり、一般のLLMサービング、KV管理、推論カーネルの横断的改善は要旨に示されない。対象境界のため保留。",
+      "first_checked_at": "2026-10-13T21:31:18+00:00",
+      "last_checked_at": "2026-10-13T21:31:18+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "SpikeVLA: Vision-Language-Action Models with Spiking Neural Networks"
     }
   }
 }

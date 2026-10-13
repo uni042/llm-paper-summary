@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e7e59f9cb60a4292-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2402.09906",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2402.09906",
+    "identity_tokens": [
+      "arXiv:2402.09906"
+    ],
+    "reason": "生成と埋め込みを一つの言語モデルに統合し、長文検索拡張生成の処理を別々のモデルを用いる場合より60%超高速化したと報告する。実行時にモデルを共用する利点は推論効率に接するが、主たる研究対象は指示学習と表現能力であり、GPUメモリ階層・スケジューリング・配信カーネルの新規手法ではないため境界候補とする。",
+    "first_checked_at": "2026-10-10T18:48:04+00:00",
+    "last_checked_at": "2026-10-13T21:31:18+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Generative Representational Instruction Tuning"
+  },
+  "processed_at": "2026-10-13T21:31:18+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e7e59f9cb60a",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
