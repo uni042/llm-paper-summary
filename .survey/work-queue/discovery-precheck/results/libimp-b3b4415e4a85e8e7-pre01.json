@@ -1,0 +1,299 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-b3b4415e4a85e8e7-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-b3b4415e4a85",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2511.15950",
+    "arXiv:2607.01108"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 2,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "9f13a1316e68221449a5100cf7a60319bee8dfc9",
+  "raw_search_result_count": 2,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 2,
+  "provider_progress": {
+    "requested_count": 2,
+    "status_counts": {
+      "allowed": 2,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-13T18:23:25.125502+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2511.15950",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2607.01108",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "A Scalable NorthPole System with End-to-End Vertical Integration for Low-Latency and Energy-Efficient LLM Inference",
+      "source_url": "https://arxiv.org/abs/2511.15950",
+      "year": 2025,
+      "published": "2025-11-20",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "A vertically integrated, end-to-end, research prototype system combines 288 NorthPole neural inference accelerator cards, offline training algorithms, a high-performance runtime stack, and a containerized inference pipeline to deliver a scalable and efficient cloud inference service. The system delivers 115 peta-ops at 4-bit integer precision and 3.7 PB/s of memory bandwidth across 18 2U servers, while consuming only 30 kW of power and weighing 730 kg in a 0.67 m^2 42U rack footprint. The system can run 3 simultaneous instances of the 8-billion-parameter open-source IBM Granite-3.3-8b-instruct model at 2,048 context length with 28 simultaneous users and a per-user inter-token latency of 2.8 ms. The system is scalable, modular, and reconfigurable, supporting various model sizes and context lengths, and is ideal for deploying agentic workflows for enterprise AI applications in existing data center (cloud, on-prem) environments. For example, the system can support 18 instances of a 3-billion-parameter model or a single instance of a 70-billion-parameter model.",
+      "identifiers": [
+        "SemanticScholar:cff8ef0814ee3e11fcdded8893553e84e2c7fc0f"
+      ],
+      "semantic_scholar_id": "cff8ef0814ee3e11fcdded8893553e84e2c7fc0f",
+      "canonical_id": "arXiv:2511.15950",
+      "arxiv_id": "2511.15950",
+      "doi": "10.48550/arXiv.2511.15950",
+      "authors": [
+        "Michael V. DeBole",
+        "R. Appuswamy",
+        "Neil McGlohon",
+        "B. Taba",
+        "S. Esser",
+        "F. Akopyan",
+        "John V. Arthur",
+        "Arnon Amir",
+        "Alexander Andreopoulos",
+        "Peter J. Carlson",
+        "Andrew S. Cassidy",
+        "Pallab Datta",
+        "M. Flickner",
+        "Rajamohan Gandhasri",
+        "Guillaume J. Garreau",
+        "Megumi Ito",
+        "Jennifer L. Klamo",
+        "J. Kusnitz",
+        "Nathaniel J. McClatchey",
+        "Jeffrey L. McKinstry",
+        "T. K. Nayak",
+        "Carlos Ortega Otero",
+        "Hartmut Penner",
+        "W. Risk",
+        "Jun Sawada",
+        "Jay Sivagnaname",
+        "Daniel F. Smith",
+        "Rafael Sousa",
+        "Ignacio Terrizzano",
+        "Takanori Ueda",
+        "Trent A. Gray-Donald",
+        "David D. Cox",
+        "D. Modha"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 327,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "NPUsper: Eliminating Redundant Computation for Real-Time Whisper on Mobile NPUs",
+      "source_url": "https://arxiv.org/abs/2607.01108",
+      "year": 2026,
+      "published": "2026-07-01",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "We present NPUsper, a live transcription system that makes Whisper efficient on mobile NPUs by eliminating redundant computation. To avoid the heavy padding used by prior streaming systems, NPUsper detects hallucinated tokens online from temporal patterns in decoder cross-attention, allowing each inference round to process short audio inputs with minimal carryover. For efficient mobile-NPU execution, we propose controlled unrolling, which executes autoregressive decoding as K-step chunk graphs, removing unnecessary KV-cache computation and reducing graph-dispatch overhead. NPUsper achieves up to 4.84x lower per-word latency, up to 33.2x lower time-to-first-token (TTFT), and up to 88.64% lower average power consumption compared with baselines, while maintaining comparable transcription accuracy. The code is available at https://github.com/npusper/NPUsper.",
+      "identifiers": [
+        "SemanticScholar:2726c1d9ee30a898ddb7d979d425db7ebe90131c"
+      ],
+      "semantic_scholar_id": "2726c1d9ee30a898ddb7d979d425db7ebe90131c",
+      "canonical_id": "arXiv:2607.01108",
+      "arxiv_id": "2607.01108",
+      "doi": "10.48550/arXiv.2607.01108",
+      "authors": [
+        "Sihyeon Lee",
+        "Hojeong Lee",
+        "Sungwon Woo",
+        "Cheng-Po Yan",
+        "Suman Banerjee",
+        "Seyeon Kim"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 104,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2511.15950",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2511.15950",
+        "id:SemanticScholar:cff8ef0814ee3e11fcdded8893553e84e2c7fc0f",
+        "id:arXiv:2511.15950",
+        "title:a scalable northpole system with endtoend vertical integration for lowlatency and energyefficient llm inference",
+        "url:https://arxiv.org/abs/2511.15950"
+      ],
+      "record": {
+        "title": "A Scalable NorthPole System with End-to-End Vertical Integration for Low-Latency and Energy-Efficient LLM Inference",
+        "source_url": "https://arxiv.org/abs/2511.15950",
+        "year": 2025,
+        "published": "2025-11-20",
+        "venue": "arXiv.org",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "A vertically integrated, end-to-end, research prototype system combines 288 NorthPole neural inference accelerator cards, offline training algorithms, a high-performance runtime stack, and a containerized inference pipeline to deliver a scalable and efficient cloud inference service. The system delivers 115 peta-ops at 4-bit integer precision and 3.7 PB/s of memory bandwidth across 18 2U servers, while consuming only 30 kW of power and weighing 730 kg in a 0.67 m^2 42U rack footprint. The system can run 3 simultaneous instances of the 8-billion-parameter open-source IBM Granite-3.3-8b-instruct model at 2,048 context length with 28 simultaneous users and a per-user inter-token latency of 2.8 ms. The system is scalable, modular, and reconfigurable, supporting various model sizes and context lengths, and is ideal for deploying agentic workflows for enterprise AI applications in existing data center (cloud, on-prem) environments. For example, the system can support 18 instances of a 3-billion-parameter model or a single instance of a 70-billion-parameter model.",
+        "identifiers": [
+          "SemanticScholar:cff8ef0814ee3e11fcdded8893553e84e2c7fc0f"
+        ],
+        "semantic_scholar_id": "cff8ef0814ee3e11fcdded8893553e84e2c7fc0f",
+        "canonical_id": "arXiv:2511.15950",
+        "arxiv_id": "2511.15950",
+        "doi": "10.48550/arXiv.2511.15950",
+        "authors": [
+          "Michael V. DeBole",
+          "R. Appuswamy",
+          "Neil McGlohon",
+          "B. Taba",
+          "S. Esser",
+          "F. Akopyan",
+          "John V. Arthur",
+          "Arnon Amir",
+          "Alexander Andreopoulos",
+          "Peter J. Carlson",
+          "Andrew S. Cassidy",
+          "Pallab Datta",
+          "M. Flickner",
+          "Rajamohan Gandhasri",
+          "Guillaume J. Garreau",
+          "Megumi Ito",
+          "Jennifer L. Klamo",
+          "J. Kusnitz",
+          "Nathaniel J. McClatchey",
+          "Jeffrey L. McKinstry",
+          "T. K. Nayak",
+          "Carlos Ortega Otero",
+          "Hartmut Penner",
+          "W. Risk",
+          "Jun Sawada",
+          "Jay Sivagnaname",
+          "Daniel F. Smith",
+          "Rafael Sousa",
+          "Ignacio Terrizzano",
+          "Takanori Ueda",
+          "Trent A. Gray-Donald",
+          "David D. Cox",
+          "D. Modha"
+        ],
+        "priority": 102,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 102,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 327,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2607.01108",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2607.01108",
+        "id:SemanticScholar:2726c1d9ee30a898ddb7d979d425db7ebe90131c",
+        "id:arXiv:2607.01108",
+        "title:npusper eliminating redundant computation for realtime whisper on mobile npus",
+        "url:https://arxiv.org/abs/2607.01108"
+      ],
+      "record": {
+        "title": "NPUsper: Eliminating Redundant Computation for Real-Time Whisper on Mobile NPUs",
+        "source_url": "https://arxiv.org/abs/2607.01108",
+        "year": 2026,
+        "published": "2026-07-01",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "We present NPUsper, a live transcription system that makes Whisper efficient on mobile NPUs by eliminating redundant computation. To avoid the heavy padding used by prior streaming systems, NPUsper detects hallucinated tokens online from temporal patterns in decoder cross-attention, allowing each inference round to process short audio inputs with minimal carryover. For efficient mobile-NPU execution, we propose controlled unrolling, which executes autoregressive decoding as K-step chunk graphs, removing unnecessary KV-cache computation and reducing graph-dispatch overhead. NPUsper achieves up to 4.84x lower per-word latency, up to 33.2x lower time-to-first-token (TTFT), and up to 88.64% lower average power consumption compared with baselines, while maintaining comparable transcription accuracy. The code is available at https://github.com/npusper/NPUsper.",
+        "identifiers": [
+          "SemanticScholar:2726c1d9ee30a898ddb7d979d425db7ebe90131c"
+        ],
+        "semantic_scholar_id": "2726c1d9ee30a898ddb7d979d425db7ebe90131c",
+        "canonical_id": "arXiv:2607.01108",
+        "arxiv_id": "2607.01108",
+        "doi": "10.48550/arXiv.2607.01108",
+        "authors": [
+          "Sihyeon Lee",
+          "Hojeong Lee",
+          "Sungwon Woo",
+          "Cheng-Po Yan",
+          "Suman Banerjee",
+          "Seyeon Kim"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 104,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:de634141585c9b840f2969d7d8c24322d09061cdab53f77299140b8350a71c66",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}
