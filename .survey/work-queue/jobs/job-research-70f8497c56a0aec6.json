@@ -35,10 +35,15 @@
   "selection_reason": "BERT各層で重要度の低いword-vectorを段階的に除去し、後段Transformerのsequence lengthを縮めて推論時間を直接削減する。GLUEで精度低下1%未満のままBERT最大4.5倍、ALBERT最大6.8倍の推論時間削減を報告しており直接対象。",
   "semantic_scholar_id": "4510d9ad22f474c30c530ae7f886ec4d42402d68",
   "source_url": "https://arxiv.org/abs/2001.08950",
-  "status": "ready",
+  "status": "superseded",
   "title": "PoWER-BERT: Accelerating BERT inference for Classification Tasks",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2020
+  "year": 2020,
+  "superseded_at": "2026-10-13T13:20:46+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2020-2001.08950-power-bert-accelerating-bert-inference-via-progressive-word-vector-elimi.md",
+  "represented_canonical_id": "arXiv:2001.08950",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

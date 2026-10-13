@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（544本）
+## 自動生成の論文一覧（547本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -97,6 +97,10 @@
 - **2026-01 · [Ministral 3](2026-2601.08584-ministral-3.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
   著者らはこの方式を段階蒸留（Cascade Distillation）と呼ぶ。したがって「全評価項目で教師と同等」ではない。
+
+- **2025-12 · [Recursive Language Models](2025-2512.24601-recursive-language-models.md)**  
+  実装：[✓](https://github.com/alexzhang13/rlm) ・ リポジトリ内被引用：2  
+  再帰型言語モデル（Recursive Language モデル; RLM）は、長い入力を大規模言語モデルの注意窓へ丸ごと入れる代わりに、持続的なプログラム実行環境の変数として保存し、モデル自身がコードを生成して入力の必要箇所を調査・分割・変換する推論方式である。
 
 - **2025-12 · [Kitsune: Enabling Dataflow Execution on GPUs with Spatial Pipelines](2025-2502.18403-kitsune-enabling-dataflow-execution-on-gpus-with-spatial-pipelines.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
@@ -815,6 +819,10 @@
 - **2026-03 · [CSAttention: Centroid-Scoring Attention for Accelerating LLM Inference](2026-2604.08584-csattention-centroid-scoring-attention-for-accelerating-llm-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   長文脈の自己注意では、現在の問い合わせベクトルと過去の鍵ベクトルとの内積を計算し、対応する値を重み付き集約する。多くの鍵の寄与が小さいため、一部の鍵だけを使う疎注意で演算量と転送量を削減できる。しかし95%もの鍵を捨てる場合、実際に重要な鍵を取りこぼすと正答率が急落する。鍵の全件走査をオンラインで繰り返さない設計である。
+
+- **2026-03 · [Confidence-Calibrated Small-Large Language Model Collaboration for Cost-Efficient Reasoning](2026-2603.03752-confidence-calibrated-small-large-language-model-collaboration-for-cost-.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  本論文は、小型言語モデル（SLM）にまず問題を解かせ、答えへの自己申告確信度が低いときだけ大型言語モデル（LLM）へ委譲する二段推論方式COREAを提案する。大型モデル単独との比較で、領域外の数理問題では推定費用21.5%減・正答率1.7ポイント減、非数理問題では16.8%減・正答率1.7ポイント減となった。
 
 - **2026-03 · [Characterizing Performance-Energy Trade-offs of Large Language Models in Multi-Request Workflows](2026-2604.09611-characterizing-performance-energy-trade-offs-of-large-language-models-in.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -2119,6 +2127,10 @@
 - **2020-05 · [IntelliCode Compose: Code Generation using Transformer](2020-2005.08025-intellicode-compose-code-generation-using-transformer.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
   IntelliCode Composeは、統合開発環境（IDE）で入力途中のプログラムから一行規模の補完候補を提示するクラウド型のコード生成システムである。ただし編集類似度は84.1%から78.0%へ下がる。
+
+- **2020-01 · [PoWER-BERT: Accelerating BERT Inference via Progressive Word-vector Elimination](2020-2001.08950-power-bert-accelerating-bert-inference-via-progressive-word-vector-elimi.md)**  
+  実装：[✓](https://github.com/IBM/PoWER-BERT) ・ リポジトリ内被引用：1  
+  方式は二つの判断を分離する。原著のK80 GPU、Keras、バッチ128（RACEのみ32）の評価では、BERTBASE比で各課題2.0～4.5倍の推論時間短縮を報告する。
 
 - **2019-11 · [Mask-Predict: Parallel Decoding of Conditional Masked Language Models](2019-0bc18ef37a7d-mask-predict-parallel-decoding-of-conditional-masked-language-models.md)**  
   実装：[✓](https://github.com/facebookresearch/Mask-Predict) ・ リポジトリ内被引用：1  

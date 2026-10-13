@@ -35,10 +35,15 @@
   "selection_reason": "長文promptを外部環境として扱い、LLM自身が部分列をプログラム的に調査・分解し再帰呼出しする推論時スケーリング（inference-time scaling）方式。context windowを大幅に超える入力を同程度のcostで扱うため、agentic inference/runtimeの対象。",
   "semantic_scholar_id": "a267af44051ea607afe39c5bf9282cf7a1e7291d",
   "source_url": "https://arxiv.org/abs/2512.24601",
-  "status": "ready",
+  "status": "superseded",
   "title": "Recursive Language Models",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2025
+  "year": 2025,
+  "superseded_at": "2026-10-13T13:20:46+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2025-2512.24601-recursive-language-models.md",
+  "represented_canonical_id": "arXiv:2512.24601",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
