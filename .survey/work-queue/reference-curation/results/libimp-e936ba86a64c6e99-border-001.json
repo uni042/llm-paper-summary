@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e936ba86a64c6e99-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2112.06749",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2112.06749",
+    "identity_tokens": [
+      "arXiv:2112.06749",
+      "id:arXiv:2112.06749",
+      "url:https://arxiv.org/abs/2112.06749"
+    ],
+    "reason": "一次要旨では、自己回帰ではなく乱数初期トークン列に改善演算子を反復適用するSUNDAEを提案し、従来の拡散型方式より少ない反復でテキストを生成する。反復回数の削減は復号アルゴリズムに関係するが、主評価はWMT14英独翻訳と無条件言語生成の品質であり、現代LLMの推論サービング・カーネル・GPU実測性能への直接適用は要旨だけでは確定できないため境界的とする。",
+    "first_checked_at": "2026-10-13T10:44:16+00:00",
+    "last_checked_at": "2026-10-13T10:44:16+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Step-unrolled Denoising Autoencoders for Text Generation"
+  },
+  "processed_at": "2026-10-13T10:44:16+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e936ba86a64c",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

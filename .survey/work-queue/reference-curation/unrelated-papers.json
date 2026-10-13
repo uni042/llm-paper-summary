@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-13T10:42:58+00:00",
-  "record_count": 11763,
+  "updated_at": "2026-10-13T10:44:17+00:00",
+  "record_count": 11765,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -165132,11 +165132,13 @@
       "classification": "unrelated",
       "canonical_id": "arXiv:2403.01232",
       "identity_tokens": [
-        "arXiv:2403.01232"
+        "arXiv:2403.01232",
+        "id:arXiv:2403.01232",
+        "url:https://arxiv.org/abs/2403.01232"
       ],
-      "reason": "一次要旨はグラフTransformerの表現能力と線形計算量を両立するグラフ学習モデルを扱い、13のグラフデータセットで評価する。LLMの生成推論、GPUサービング、KVキャッシュ、MoE等の対象と直接一致しない。",
+      "reason": "一次要旨では、大規模グラフのノード特徴とトポロジーを局所・大域の同変注意で組み合わせ、多項式表現力を保ちながら線形計算量を実現するグラフトランスフォーマーを提案する。13のグラフデータセットでノード予測を評価しており、対象はグラフ機械学習であって生成型LLM推論やサービングの実行基盤ではないため対象外とする。",
       "first_checked_at": "2026-10-12T21:38:02+00:00",
-      "last_checked_at": "2026-10-12T21:38:02+00:00",
+      "last_checked_at": "2026-10-13T10:44:15+00:00",
       "linked_from": [],
       "title": "Polynormer: Polynomial-Expressive Graph Transformer in Linear Time"
     },
@@ -168531,6 +168533,34 @@
       "last_checked_at": "2026-10-13T10:42:58+00:00",
       "linked_from": [],
       "title": "VLingNav: Embodied Navigation with Adaptive Reasoning and Visual-Assisted Linguistic Memory"
+    },
+    "arXiv:2303.03982": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2303.03982",
+      "identity_tokens": [
+        "arXiv:2303.03982",
+        "id:arXiv:2303.03982",
+        "url:https://arxiv.org/abs/2303.03982"
+      ],
+      "reason": "一次要旨では、構造化状態空間モデルS4の隠れ状態を並列に初期化・リセットできるよう変更し、部分観測の強化学習環境で再帰型モデルより5倍超速い推論を報告する。評価対象は連続制御と文脈内強化学習であり、テキストLLMの生成・配信・KVキャッシュ・MoE推論を対象にしたシステム最適化ではないため対象外とする。",
+      "first_checked_at": "2026-10-13T10:44:14+00:00",
+      "last_checked_at": "2026-10-13T10:44:14+00:00",
+      "linked_from": [],
+      "title": "Structured State Space Models for In-Context Reinforcement Learning"
+    },
+    "arXiv:2412.00081": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2412.00081",
+      "identity_tokens": [
+        "arXiv:2412.00081",
+        "id:arXiv:2412.00081",
+        "url:https://arxiv.org/abs/2412.00081"
+      ],
+      "reason": "一次要旨では、タスク別モデル差分の層行列を特異値分解し、特異ベクトルの干渉を測って複数タスクのモデル統合を改善する。TSV-Compressは差分表現を元の10%へ縮小して99%の精度を保持すると報告するが、目的はモデル統合時の干渉低減と差分圧縮であり、実行時LLM推論の速度・KVメモリ・サービング効率を検証する研究ではない。",
+      "first_checked_at": "2026-10-13T10:44:17+00:00",
+      "last_checked_at": "2026-10-13T10:44:17+00:00",
+      "linked_from": [],
+      "title": "Task Singular Vectors: Reducing Task Interference in Model Merging"
     }
   }
 }

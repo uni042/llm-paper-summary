@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-13T10:42:58+00:00",
-  "record_count": 4851,
+  "updated_at": "2026-10-13T10:44:17+00:00",
+  "record_count": 4850,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -70962,11 +70962,13 @@
       "identity_tokens": [
         "DOI:10.48550/arxiv.2512.06688",
         "arXiv:2512.06688",
-        "semanticscholar:5e364810740f92046868a4ddb7a1b30576439e4d"
+        "id:arXiv:2512.06688",
+        "semanticscholar:5e364810740f92046868a4ddb7a1b30576439e4d",
+        "url:https://arxiv.org/abs/2512.06688"
       ],
-      "reason": "暗黙的な利用者選好の推定データセットと強化微調整、可読なエージェント記憶を提案。会話履歴32kトークンの代わりに約2kトークンの記憶を使い入力トークンを16分の1にしたとの要旨上の効率指標はあるが、主目的は個人化の正解率向上で、GPU推論基盤、KV管理、サービング遅延の機構評価ではないため境界判定。",
+      "reason": "一次要旨では、300超の状況における個人化対話から暗黙の好みを推定するベンチマークと、利用者ごとに可読な記憶を更新するエージェントを扱う。約3.2万トークンの会話履歴を約2千トークンの記憶に縮約して入力トークンを16分の1とし、個人化精度55%を報告する点は推論時の文脈節約に関係する。ただし主目的は個人化能力・記憶学習であり、KVキャッシュ、GPUメモリ、サービング性能を最適化するシステムの実測は要旨から確認できないため境界的とする。",
       "first_checked_at": "2026-10-11T10:43:47+00:00",
-      "last_checked_at": "2026-10-12T18:49:59+00:00",
+      "last_checked_at": "2026-10-13T10:44:13+00:00",
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "PersonaMem-v2: Towards Personalized Intelligence via Learning Implicit User Personas and Agentic Memory"
@@ -71449,20 +71451,6 @@
       "borderline_recheck_count": 0,
       "title": "ReasoningBank: Scaling Agent Self-Evolving with Reasoning Memory"
     },
-    "arXiv:2412.00081": {
-      "classification": "borderline",
-      "canonical_id": "arXiv:2412.00081",
-      "identity_tokens": [
-        "DOI:10.48550/arxiv.2412.00081",
-        "arXiv:2412.00081"
-      ],
-      "reason": "原著要旨は微調整済みモデルの層別重み差分を特異値分解し、タスク特異ベクトルを低ランク圧縮してモデル統合時のタスク干渉を減らすTSV-C/TSV-Mを提案する。重み差分の保存圧縮と統合後の単一モデル実行には間接的に関連するが、主要寄与はモデル統合の精度・干渉制御であり、LLMサービングの遅延、KV、オフロード、実行時処理量の直接最適化ではないため境界扱い。",
-      "first_checked_at": "2026-10-12T10:58:04+00:00",
-      "last_checked_at": "2026-10-12T10:58:04+00:00",
-      "linked_from": [],
-      "borderline_recheck_count": 0,
-      "title": "Task Singular Vectors: Reducing Task Interference in Model Merging"
-    },
     "arXiv:1606.09274": {
       "classification": "borderline",
       "canonical_id": "arXiv:1606.09274",
@@ -71762,19 +71750,6 @@
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "DORA: A Scalable Asynchronous Reinforcement Learning System for Language Model Training"
-    },
-    "arXiv:2303.03982": {
-      "classification": "borderline",
-      "canonical_id": "arXiv:2303.03982",
-      "identity_tokens": [
-        "arXiv:2303.03982"
-      ],
-      "reason": "S4状態空間モデルの隠れ状態初期化・リセットを並列化し、部分観測強化学習環境でRNN比5倍超の実行速度を報告。系列推論の計算効率は関連するが、対象は強化学習エージェントの制御系列で、LLM復号・推論基盤の性能評価はない。",
-      "first_checked_at": "2026-10-12T21:38:03+00:00",
-      "last_checked_at": "2026-10-12T21:38:03+00:00",
-      "linked_from": [],
-      "borderline_recheck_count": 0,
-      "title": "Structured State Space Models for In-Context Reinforcement Learning"
     },
     "arXiv:2605.20473": {
       "classification": "borderline",
@@ -74266,6 +74241,21 @@
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "CoMoL: Efficient Mixture of LoRA Experts via Dynamic Core Space Merging"
+    },
+    "arXiv:2112.06749": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2112.06749",
+      "identity_tokens": [
+        "arXiv:2112.06749",
+        "id:arXiv:2112.06749",
+        "url:https://arxiv.org/abs/2112.06749"
+      ],
+      "reason": "一次要旨では、自己回帰ではなく乱数初期トークン列に改善演算子を反復適用するSUNDAEを提案し、従来の拡散型方式より少ない反復でテキストを生成する。反復回数の削減は復号アルゴリズムに関係するが、主評価はWMT14英独翻訳と無条件言語生成の品質であり、現代LLMの推論サービング・カーネル・GPU実測性能への直接適用は要旨だけでは確定できないため境界的とする。",
+      "first_checked_at": "2026-10-13T10:44:16+00:00",
+      "last_checked_at": "2026-10-13T10:44:16+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Step-unrolled Denoising Autoencoders for Text Generation"
     }
   }
 }
