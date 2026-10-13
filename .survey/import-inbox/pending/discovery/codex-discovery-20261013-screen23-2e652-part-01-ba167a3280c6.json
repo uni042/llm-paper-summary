@@ -1,0 +1,437 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local",
+  "run_key": "codex-discovery-20261013-screen23-2e652-part-01",
+  "reference_main_sha": "2e652754bf895f3441f6e47a9105da61400788a4",
+  "record_count": 20,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1145/3772052.3772206",
+      "identity_tokens": [
+        "DOI:10.1145/3772052.3772206"
+      ],
+      "title": "Understanding Diffusion Model Serving in Production: A Top-Down Analysis of Workload, Scheduling, and Resource Efficiency",
+      "reason": "The publisher abstract describes production diffusion-model serving, global cache coordination, dynamic scaling, prefetching, cost-aware scheduling, and measured latency/model-load reductions.",
+      "source_url": "https://doi.org/10.1145/3772052.3772206",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T07:18:38Z",
+      "last_checked_at": "2026-10-13T07:18:38Z",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2403.17312-alisa-accelerating-large-language-model-inference-via-sparsity-aware-kv-caching.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2406.19707-infinigen-dynamic-kv-cache-management.md",
+        "papers/inference/09-kernel-runtime-compilation/2024-2311.03285-s-lora-serving-thousands-of-concurrent-lora-adapters.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2020-2006.02464-serving-dnns-like-clockwork-performance-predictability-from-the-bottom-u.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2020-2008.12260-pollux-co-adaptive-cluster-scheduling-for-goodput-optimized-deep-learnin.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2311.15566-spotserve-preemptible-instance-serving.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2311.18677-splitwise-efficient-generative-llm-inference-phase-splitting.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2404.02015-muxserve-flexible-spatial-temporal-multiplexing-for-multiple-llm-serving.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2406.03243-llumnix-dynamic-scheduling-live-migration.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2406.17565-memserve-context-caching-disaggregated-serving.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2407.00047-qlm-queue-management-slo-oriented-llm-serving.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2408.00741-dynamollm.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2510.11938-flexpipe-adapting-dynamic-llm-serving-through-inflight-pipeline-refactoring-in-fragmented-serverless-clusters.md",
+        "papers/inference/99-other-inference-systems/2024-2401.11240-caraserve-cpu-assisted-lora-serving.md"
+      ],
+      "source_version": "ACM SoCC '25",
+      "abstract_evidence_excerpt": "This paper presents a comprehensive analysis of diffusion model serving challenges in production cloud environments.",
+      "abstract_evidence_sha256": "3b276d74f8e4e7f55c285643ece09b21eba6fe9b471a23e038c57639417562a5"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2511.07876",
+      "identity_tokens": [
+        "arXiv:2511.07876"
+      ],
+      "title": "LoopLLM: Transferable Energy-Latency Attacks in LLMs via Repetitive Generation",
+      "reason": "The abstract studies crafted prompts that drive repetitive LLM decoding to maximum output, directly measuring inference energy and latency behavior.",
+      "source_url": "https://arxiv.org/abs/2511.07876",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T07:18:38Z",
+      "last_checked_at": "2026-10-13T07:18:38Z",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2023-2310.03003-from-words-to-watts-benchmarking-the-energy-costs-of-large-language-mode.md"
+      ],
+      "source_version": "v1",
+      "abstract_evidence_excerpt": "As large language models (LLMs) scale, their inference incurs substantial computational resources, exposing them to energy-latency attacks, where crafted prompts",
+      "abstract_evidence_sha256": "c70909151063864c25f83724e8cdd483ff28a360b8042398b0626f7d8cb1b4cc"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2511.11663",
+      "identity_tokens": [
+        "arXiv:2511.11663"
+      ],
+      "title": "SpecQuant: Spectral Decomposition and Adaptive Truncation for Ultra-Low-Bit LLMs Quantization",
+      "reason": "The abstract proposes ultra-low-bit LLM weight/activation quantization with adaptive inference truncation, lower memory use, and faster inference.",
+      "source_url": "https://arxiv.org/abs/2511.11663",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T07:18:38Z",
+      "last_checked_at": "2026-10-13T07:18:38Z",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md",
+        "papers/inference/16-weight-quantization-compression/2023-2306.00978-awq.md",
+        "papers/inference/16-weight-quantization-compression/2023-2307.13304-quip-2-bit-quantization-of-large-language-models-with-guarantees.md",
+        "papers/inference/16-weight-quantization-compression/2024-2406.01721-duquant-distributing-outliers-via-dual-transformation-makes-stronger-quantized-llms.md",
+        "papers/inference/99-other-inference-systems/2024-2402.04396-quip-even-better-llm-quantization-with-hadamard-incoherence-and-lattice-.md",
+        "papers/inference/99-other-inference-systems/2024-2404.00456-quarot-outlier-free-4-bit-inference-in-rotated-llms.md",
+        "papers/inference/99-other-inference-systems/2025-2405.16406-spinquant-llm-quantization-with-learned-rotations.md"
+      ],
+      "source_version": "v2",
+      "abstract_evidence_excerpt": "The emergence of accurate open large language models (LLMs) has sparked a push for advanced quantization techniques to enable efficient",
+      "abstract_evidence_sha256": "49e2b69f3f5c7735f80ca8906ed2852826fdb2771b656e9818289ce1b6137f96"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2511.05650",
+      "identity_tokens": [
+        "arXiv:2511.05650"
+      ],
+      "title": "Optimizing Diversity and Quality through Base-Aligned Model Collaboration",
+      "reason": "The abstract presents inference-time token-level routing between base and aligned LLMs; this is a concrete decoding/runtime method, even though its objective is output diversity and quality.",
+      "source_url": "https://arxiv.org/abs/2511.05650",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T07:18:38Z",
+      "last_checked_at": "2026-10-13T07:18:38Z",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2022-2211.17192-speculative-decoding.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2411.02820-droidspeak-kv-cache-sharing-for-cross-llm-communication-and-multi-llm-se.md",
+        "papers/inference/99-other-inference-systems/2017-1701.06538-outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts.md"
+      ],
+      "source_version": "v2",
+      "abstract_evidence_excerpt": "Alignment has greatly improved large language models (LLMs)'output quality at the cost of diversity, yielding highly similar outputs across generations,",
+      "abstract_evidence_sha256": "d7738c0e9ab1c009ef8cabf995dfc583b1a1fdc84a271dd7540071b645b90265"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.icte.2025.10.015",
+      "identity_tokens": [
+        "DOI:10.1016/j.icte.2025.10.015"
+      ],
+      "title": "Advancements in neural network acceleration: a comprehensive review",
+      "reason": "The title indicates a broad neural-network acceleration review, but the official publisher abstract could not be retrieved in this run; scope relative to LLM inference systems is unresolved.",
+      "source_url": "https://doi.org/10.1016/j.icte.2025.10.015",
+      "body_check": "source_unavailable; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-10-13T07:18:38Z",
+      "last_checked_at": "2026-10-13T07:18:38Z",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md",
+        "papers/inference/13-sparse-attention/2020-2012.09852-spatten-efficient-sparse-attention-architecture-with-cascade-token-and-head-pruning.md",
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+        "papers/inference/99-other-inference-systems/2023-2301.00774-sparsegpt-massive-language-models-can-be-accurately-pruned-in-one-shot.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/JSSC.2025.3556008",
+      "identity_tokens": [
+        "DOI:10.1109/JSSC.2025.3556008"
+      ],
+      "title": "Hybrid SRAM/ROM Compute-in-Memory Architecture for High Task-Level Energy Efficiency in Transformer Models With 8928-kb/mm² Density in 28nm CMOS",
+      "reason": "The title describes a transformer compute-in-memory architecture and suggests hardware relevance, but the official IEEE abstract route could not be retrieved to confirm its contribution.",
+      "source_url": "https://doi.org/10.1109/JSSC.2025.3556008",
+      "body_check": "source_unavailable; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-10-13T07:18:38Z",
+      "last_checked_at": "2026-10-13T07:18:38Z",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2306.14048-h2o.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2407.21018-think-thinner-key-cache-by-query-driven-pruning.md",
+        "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2606.05711",
+      "identity_tokens": [
+        "arXiv:2606.05711"
+      ],
+      "title": "Beyond tokens: a unified framework for latent communication in LLM-based multi-agent systems",
+      "reason": "The abstract identifies text-token communication cost in LLM multi-agent systems and surveys latent states including KV caches as an alternative communication path.",
+      "source_url": "https://arxiv.org/abs/2606.05711",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T07:18:38Z",
+      "last_checked_at": "2026-10-13T07:18:38Z",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2306.14048-h2o.md",
+        "papers/inference/07-kv-cache-optimization-compression/2025-2510.03215-cache-to-cache-direct-semantic-communication-between-large-language-mode.md",
+        "papers/inference/07-kv-cache-optimization-compression/2026-2602.01053-lragent-multilora-agent-kv-sharing.md",
+        "papers/inference/07-kv-cache-optimization-compression/2026-2603.28018-edge-llm-handover-kv-transfer-prefill.md",
+        "papers/inference/07-kv-cache-optimization-compression/2026-2607.10987-aaflow-stateful-operator-abstraction-with-zero-copy-distributed-kv-cache.md",
+        "papers/inference/10-kv-cache-offload-recomputation/2026-2603.04428-persistent-q4-agent-kv-cache.md",
+        "papers/inference/10-kv-cache-offload-recomputation/2026-2604.03143-tokendance-collective-kv-sharing-multi-agent.md",
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2511.20639-latent-collaboration-in-multi-agent-systems.md",
+        "papers/inference/99-other-inference-systems/2026-2603.13289-relaycaching-accelerating-llm-collaboration-via-decoding-kv-cache-reuse.md"
+      ],
+      "source_version": "v3",
+      "abstract_evidence_excerpt": "Multi-agent systems built on large language models (LLMs) have become a prevailing paradigm for tackling complex reasoning, planning, and tool-use",
+      "abstract_evidence_sha256": "74af62e0d602072cc34a2ea8e1d2bdb0d83e49f054b60c9195067079d31431f4"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.06054",
+      "identity_tokens": [
+        "arXiv:2606.06054"
+      ],
+      "title": "Beyond Similarity: Trustworthy Memory Search for Personal AI Agents",
+      "reason": "The abstract focuses on trustworthy personal-agent memory admission and security threats; it does not claim inference, serving, or memory-runtime efficiency.",
+      "source_url": "https://arxiv.org/abs/2606.06054",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T07:18:38Z",
+      "last_checked_at": "2026-10-13T07:18:38Z",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2501.13956-zep-a-temporal-knowledge-graph-architecture-for-agent-memory.md",
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2502.12110-a-mem-agentic-memory-for-llm-agents.md",
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+      ],
+      "source_version": "v1",
+      "abstract_evidence_excerpt": "Personal AI agents increasingly rely on long-term memory to provide persistent personalization across sessions. However, existing memory pipelines are largely",
+      "abstract_evidence_sha256": "459131c67bb098bea4453c9a5704a2da5635e2d7ec626dff8dc357a856cb856d"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.05152",
+      "identity_tokens": [
+        "arXiv:2606.05152"
+      ],
+      "title": "Reinforcement Learning from Rich Feedback with Distributional DAgger",
+      "reason": "The abstract develops a DAgger-style reinforcement-learning training objective and policy-improvement guarantees, without an inference or serving systems contribution.",
+      "source_url": "https://arxiv.org/abs/2606.05152",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T07:18:38Z",
+      "last_checked_at": "2026-10-13T07:18:38Z",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2025-2504.15895-dynamic-early-exit-in-reasoning-models.md",
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md",
+        "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md"
+      ],
+      "source_version": "v2",
+      "abstract_evidence_excerpt": "Reasoning models have advanced rapidly, but the dominant reinforcement learning from verifiable rewards (RLVR) recipe remains surprisingly narrow: sample many",
+      "abstract_evidence_sha256": "47657b2383126a1760d527d103362e2ac3060ee86c3a813bce2a2fd5b59c4700"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/CAIBDA70336.2026.11621567",
+      "identity_tokens": [
+        "DOI:10.1109/CAIBDA70336.2026.11621567"
+      ],
+      "title": "MemWeave: An Adaptive Framework for Long-Term Agent Knowledge Management via Unified Graph and Vector Memory",
+      "reason": "The DOI publisher abstract could not be retrieved. Agent memory management is a plausible systems adjacency, but the supplied title alone does not establish an inference-efficiency contribution.",
+      "source_url": "https://doi.org/10.1109/CAIBDA70336.2026.11621567",
+      "body_check": "source_unavailable; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-10-13T07:18:38Z",
+      "last_checked_at": "2026-10-13T07:18:38Z",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2501.13956-zep-a-temporal-knowledge-graph-architecture-for-agent-memory.md",
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.00564",
+      "identity_tokens": [
+        "arXiv:2606.00564"
+      ],
+      "title": "Decomposed On-Policy Distillation for Vision-Language Reasoning: Steering Gradients for Visual Grounding",
+      "reason": "The abstract concerns training-time on-policy distillation and visual grounding quality for VLM reasoning, not inference or serving efficiency.",
+      "source_url": "https://arxiv.org/abs/2606.00564",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T07:18:38Z",
+      "last_checked_at": "2026-10-13T07:18:38Z",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2024-2407.14679-compact-language-models-via-pruning-and-knowledge-distillation.md"
+      ],
+      "source_version": "v1",
+      "abstract_evidence_excerpt": "While on-policy distillation offers dense supervision for training small reasoning models, its optimization dynamics in the multimodal domain remain under-explored.",
+      "abstract_evidence_sha256": "4d09eaeda003bfdd27541ff29eacdbdd4e72c7fbc9797894c61e027bfa60b1fc"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2606.00198",
+      "identity_tokens": [
+        "arXiv:2606.00198"
+      ],
+      "title": "BAGEN: Are LLM Agents Budget-Aware?",
+      "reason": "The abstract frames agent resource budgets as a control signal and measures internal computation and external action budgets, a concrete test-time resource-management contribution.",
+      "source_url": "https://arxiv.org/abs/2606.00198",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T07:18:38Z",
+      "last_checked_at": "2026-10-13T07:18:38Z",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2311.15436-learning-to-skip-for-language-modeling.md"
+      ],
+      "source_version": "latest at retrieval",
+      "abstract_evidence_excerpt": "While agents are increasingly spending more resources, today agent cost is mostly measured only after execution. A Budget-Aware Agent (BAGEN)",
+      "abstract_evidence_sha256": "8c8617c7ab3beffb8715922bbde5e9bdd4e3e4042e93789a1a9d8f60d7d0bcc7"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.22765",
+      "identity_tokens": [
+        "arXiv:2605.22765"
+      ],
+      "title": "Uniform Diffusion Models Revisited: Leave-One-Out Denoiser and Absorbing State Reformulation",
+      "reason": "The abstract gives convergence analysis and denoiser reformulation for diffusion models; it does not present a systems or runtime-efficiency method.",
+      "source_url": "https://arxiv.org/abs/2605.22765",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T07:18:38Z",
+      "last_checked_at": "2026-10-13T07:18:38Z",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2026-2406.03736-your-absorbing-discrete-diffusion-secretly-models-the-conditional-distri.md"
+      ],
+      "source_version": "v1",
+      "abstract_evidence_excerpt": "Discrete diffusion models are often trained through clean-data prediction, but the prediction can be used in different ways to define",
+      "abstract_evidence_sha256": "f542e05b246fcdc93c4cd6d44a501e4369b2925f249eef00027e2eab27b4a701"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2605.07260",
+      "identity_tokens": [
+        "arXiv:2605.07260"
+      ],
+      "title": "When Are Experts Misrouted? Counterfactual Routing Analysis in Mixture-of-Experts Language Models",
+      "reason": "The abstract evaluates MoE token-to-expert routing and shows equal-compute alternatives can improve routing on fragile tokens, directly addressing inference-time expert routing.",
+      "source_url": "https://arxiv.org/abs/2605.07260",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T07:18:38Z",
+      "last_checked_at": "2026-10-13T07:18:38Z",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2202.09368-expert-choice-routing.md",
+        "papers/inference/02-adaptive-expert-computation-compression/2026-2602.02443-expert-sample-test-time-scaling.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md",
+        "papers/inference/12-moe-parallelism-communication/2021-2101.03961-switch-transformers-scaling-to-trillion-parameter-models-with-simple-and.md",
+        "papers/inference/99-other-inference-systems/2017-1701.06538-outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts.md",
+        "papers/inference/99-other-inference-systems/2024-2409.02060-olmoe-open-mixture-of-experts-language-models.md",
+        "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md"
+      ],
+      "source_version": "v1",
+      "abstract_evidence_excerpt": "Mixture-of-Experts (MoE) language models route each token to a small subset of experts, but whether the routes selected by a",
+      "abstract_evidence_sha256": "c48a9f8386840585ae9d2539f8bf7df3b25b97c87a6841fac77cd980398c30b1"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2604.25917",
+      "identity_tokens": [
+        "arXiv:2604.25917"
+      ],
+      "title": "Recursive Multi-Agent Systems",
+      "reason": "The abstract reports a recursive latent-space multi-agent framework with 1.2–2.4x end-to-end inference speedup and 34.6–75.6% lower token use than text-based alternatives.",
+      "source_url": "https://arxiv.org/abs/2604.25917",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T07:18:38Z",
+      "last_checked_at": "2026-10-13T07:18:38Z",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2025-2507.10524-mixture-of-recursions-learning-dynamic-recursive-depths-for-adaptive-tok.md",
+        "papers/inference/07-kv-cache-optimization-compression/2025-2510.03215-cache-to-cache-direct-semantic-communication-between-large-language-mode.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md",
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2502.05171-scaling-up-test-time-compute-with-latent-reasoning-a-recurrent-depth-app.md"
+      ],
+      "source_version": "v2",
+      "abstract_evidence_excerpt": "Recursive or looped language models have recently emerged as a new scaling axis by iteratively refining the same model computation",
+      "abstract_evidence_sha256": "7a47339b5b6a06a69d4f8aaf02c5792b98553dfd35d9aaa8c38b3dda75267e93"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.11581",
+      "identity_tokens": [
+        "arXiv:2604.11581"
+      ],
+      "title": "Hidden Measurement Error in LLM Pipelines Distorts Annotation, Evaluation, and Benchmarking",
+      "reason": "The abstract studies statistical measurement error in LLM annotation and benchmark pipelines; evaluation rigor is its contribution, not systems performance or efficiency.",
+      "source_url": "https://arxiv.org/abs/2604.11581",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T07:18:38Z",
+      "last_checked_at": "2026-10-13T07:18:38Z",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2506.09501-understanding-and-mitigating-numerical-sources-of-nondeterminism-in-llm-inference.md"
+      ],
+      "source_version": "v6",
+      "abstract_evidence_excerpt": "LLM evaluations drive which models get deployed, what safety standards get adopted, which research conclusions get published, and how projections",
+      "abstract_evidence_sha256": "153045219b692063d994130fa7a64cc967b6635b19a35c122c7c6b2d6656a248"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2604.02985",
+      "identity_tokens": [
+        "arXiv:2604.02985"
+      ],
+      "title": "Prompt Compression in the Wild: Measuring Latency, Rate Adherence, and Quality for Faster LLM Inference",
+      "reason": "The abstract measures prompt-compression overhead against LLM decoding latency, memory use, and end-to-end speed on several GPU classes.",
+      "source_url": "https://arxiv.org/abs/2604.02985",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T07:18:38Z",
+      "last_checked_at": "2026-10-13T07:18:38Z",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2404.14294-a-survey-on-efficient-inference-for-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2023-2307.06945-in-context-autoencoder-for-context-compression-in-a-large-language-model.md",
+        "papers/inference/99-other-inference-systems/2023-2307.15337-skeleton-of-thought-prompting-llms-for-efficient-parallel-generation.md",
+        "papers/inference/99-other-inference-systems/2023-2310.06201-compressing-context-to-enhance-inference-efficiency-of-large-language-mo.md",
+        "papers/inference/99-other-inference-systems/2023-2310.06839-longllmlingua-accelerating-and-enhancing-llms-in-long-context-scenarios-.md",
+        "papers/inference/99-other-inference-systems/2024-2405.13792-xrag-extreme-context-compression-for-retrieval-augmented-generation-with.md"
+      ],
+      "source_version": "v1",
+      "abstract_evidence_excerpt": "With the wide adoption of language models for IR -- and specifically RAG systems -- the latency of the underlying",
+      "abstract_evidence_sha256": "75ccf64ae2e4efe2c0623f0da59250a6e96a6dbfc1c319bd1696592588aac93c"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.iotcps.2026.04.002",
+      "identity_tokens": [
+        "DOI:10.1016/j.iotcps.2026.04.002"
+      ],
+      "title": "A review on LLMs for IoT ecosystem: State-of-the-art, lightweight models, use cases, key challenges, future directions",
+      "reason": "The official publisher abstract route failed. The supplied title suggests a broad LLM-for-IoT review that may cover lightweight and edge deployment, but system-level inference relevance cannot be confirmed from the primary abstract.",
+      "source_url": "https://doi.org/10.1016/j.iotcps.2026.04.002",
+      "body_check": "source_unavailable; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-10-13T07:18:38Z",
+      "last_checked_at": "2026-10-13T07:18:38Z",
+      "linked_from": [
+        "papers/inference/08-edge-on-device-llm-systems/2024-2407.18921-mobile-edge-intelligence-for-large-language-models-a-contemporary-survey.md",
+        "papers/inference/08-edge-on-device-llm-systems/2025-d6d0a70f5bc4-edgeshard-efficient-llm-inference-via-collaborative-edge-computing.md",
+        "papers/inference/99-other-inference-systems/2025-2501.09410-moe-optimizing-collaborative-inference-for-edge-large-language-models.md",
+        "papers/survey/09-edge-llm/2025-2410.11845-edge-llm-review.md"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2603.28342",
+      "identity_tokens": [
+        "arXiv:2603.28342"
+      ],
+      "title": "Kernel-Smith: A Unified Recipe for Evolutionary Kernel Optimization",
+      "reason": "The abstract presents GPU kernel generation and optimization with measured speedups on KernelBench and transfers to production inference systems including SGLang and LMDeploy.",
+      "source_url": "https://arxiv.org/abs/2603.28342",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T07:18:38Z",
+      "last_checked_at": "2026-10-13T07:18:38Z",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2025-2509.07506-astra-a-multi-agent-system-for-gpu-kernel-performance-optimization.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md",
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2502.10517-kernelbench-can-llms-write-efficient-gpu-kernels.md"
+      ],
+      "source_version": "v2",
+      "abstract_evidence_excerpt": "We present Kernel-Smith, a framework for high-performance GPU kernel and operator generation that combines a stable evaluation-driven evolutionary agent with",
+      "abstract_evidence_sha256": "ffd6e7f40ea09f6f2c9c7869d6767396c81fe546308b93b4636079c240874079"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3821966.3822002",
+      "identity_tokens": [
+        "DOI:10.1145/3821966.3822002"
+      ],
+      "title": "Graph Spatiotemporal Attention-Based Collaborative Demand Forecasting for Multi-Level Supply Chains",
+      "reason": "The DOI publisher abstract route could not be retrieved, so the supplied supply-chain forecasting title cannot be checked against primary evidence for any systems connection.",
+      "source_url": "https://doi.org/10.1145/3821966.3822002",
+      "body_check": "source_unavailable; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-10-13T07:18:38Z",
+      "last_checked_at": "2026-10-13T07:18:38Z",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2512.20210-predictive-lora-serverless-inference.md"
+      ]
+    }
+  ]
+}
