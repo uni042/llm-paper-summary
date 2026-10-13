@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-30f2c008192f4e61-border-008",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1002/wcms.70058",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1002/wcms.70058",
+    "identity_tokens": [
+      "DOI:10.1002/wcms.70058",
+      "SemanticScholar:a1469a806ddb6f55075ce3d695ab0901f1388208"
+    ],
+    "reason": "The DOI page returned “Internal Error” with one line and no abstract. The confirmed title describes a quantum-chemistry framework, but primary-source evidence is missing, so the batch records a source-unavailable borderline.",
+    "first_checked_at": "2026-10-13T03:49:31+00:00",
+    "last_checked_at": "2026-10-13T03:49:31+00:00",
+    "linked_from": [
+      "papers/inference/15-inference-simulation-emulation/2017-1712.05889-ray-a-distributed-framework-for-emerging-ai-applications.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Fragme∩t: An Open-Source Framework for Multiscale Quantum Chemistry Based on Fragmentation"
+  },
+  "processed_at": "2026-10-13T03:49:31+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-30f2c008192f",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-30f2c008192f4e61-border-012",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1109/tsmc.2026.3704902",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1109/tsmc.2026.3704902",
+    "identity_tokens": [
+      "DOI:10.1109/tsmc.2026.3704902",
+      "SemanticScholar:35489297d4e58b5a925de8741050055e799325aa"
+    ],
+    "reason": "The DOI page returned “URL is not accessible via this tool” and no primary abstract. The title indicates a review of multiagent LLM systems; its connection to inference/serving scope remains unconfirmed.",
+    "first_checked_at": "2026-10-13T03:49:32+00:00",
+    "last_checked_at": "2026-10-13T03:49:32+00:00",
+    "linked_from": [
+      "papers/inference/14-agentic-inference-serving-runtime/2025-2502.12110-a-mem-agentic-memory-for-llm-agents.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Safe and Scalable Collaboration in Multiagent LLM Systems: A Comprehensive Review"
+  },
+  "processed_at": "2026-10-13T03:49:32+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-30f2c008192f",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

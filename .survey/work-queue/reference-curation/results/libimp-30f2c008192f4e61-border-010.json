@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-30f2c008192f4e61-border-010",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1145/3777912.3839793",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1145/3777912.3839793",
+    "identity_tokens": [
+      "DOI:10.1145/3777912.3839793",
+      "SemanticScholar:4e2318815bc805fcb56e67b4181344532eed320c"
+    ],
+    "reason": "The DOI page returned “Internal Error” with one line and no abstract. The title suggests a study of video-based conversational interaction with GenAI, but primary evidence is needed to resolve relevance to LLM inference systems.",
+    "first_checked_at": "2026-10-13T03:49:31+00:00",
+    "last_checked_at": "2026-10-13T03:49:31+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2406.11816-videollm-online-online-video-large-language-model-for-streaming-video.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Can You See Me, GenAI? Characterizing Video-Based Conversational Interaction with Generative AI"
+  },
+  "processed_at": "2026-10-13T03:49:31+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-30f2c008192f",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

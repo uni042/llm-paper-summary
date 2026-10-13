@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-13T03:44:22+00:00",
-  "record_count": 4767,
+  "updated_at": "2026-10-13T03:49:32+00:00",
+  "record_count": 4779,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -72875,6 +72875,198 @@
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "Eco2AI: carbon emissions tracking of machine learning models as the first step towards sustainable AI"
+    },
+    "DOI:10.1016/j.knosys.2025.115045": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.knosys.2025.115045",
+      "identity_tokens": [
+        "DOI:10.1016/j.knosys.2025.115045",
+        "SemanticScholar:4932fc1c9b9ede41d1252efd9003c19ca69cb011"
+      ],
+      "reason": "The confirmed DOI and title indicate dynamic-graph representation learning, but the publisher page returned “URL is not accessible via this tool”; without its primary abstract, any connection to LLM inference/serving remains unresolved.",
+      "first_checked_at": "2026-10-13T03:49:28+00:00",
+      "last_checked_at": "2026-10-13T03:49:28+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2105.03824-fnet-mixing-tokens-with-fourier-transforms.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "FDMDyG: Frequency domain-driven multi-scale continuous-time dynamic graph representation learning"
+    },
+    "DOI:10.1109/gcwcn66157.2025.11448404": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/gcwcn66157.2025.11448404",
+      "identity_tokens": [
+        "DOI:10.1109/gcwcn66157.2025.11448404",
+        "SemanticScholar:3454199b88cef5581d4c016ff86d19d5ad1738f7"
+      ],
+      "reason": "The confirmed title concerns multi-cloud CRM analytics and LLM data synchronization, but the DOI page returned “URL is not accessible via this tool”; the primary abstract could not establish a contribution to LLM inference/serving.",
+      "first_checked_at": "2026-10-13T03:49:29+00:00",
+      "last_checked_at": "2026-10-13T03:49:29+00:00",
+      "linked_from": [
+        "papers/inference/08-edge-on-device-llm-systems/2025-d6d0a70f5bc4-edgeshard-efficient-llm-inference-via-collaborative-edge-computing.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Adaptive Multi-Cloud Infrastructure for CRM Analytics: Real-Time ML and Data Sync with LLMs"
+    },
+    "DOI:10.1109/icstsn67075.2025.11397886": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/icstsn67075.2025.11397886",
+      "identity_tokens": [
+        "DOI:10.1109/icstsn67075.2025.11397886",
+        "SemanticScholar:3398d5c43b245fc0345c337ed230ebdacd52c63c"
+      ],
+      "reason": "The publisher URL returned “Internal Error” with one line and no abstract. The confirmed title suggests a compiler for data workflows, but its relation to LLM inference/serving cannot be resolved from primary evidence.",
+      "first_checked_at": "2026-10-13T03:49:29+00:00",
+      "last_checked_at": "2026-10-13T03:49:29+00:00",
+      "linked_from": [
+        "papers/inference/15-inference-simulation-emulation/2017-1712.05889-ray-a-distributed-framework-for-emerging-ai-applications.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Compiler-Enhanced Language for Scalable Data Workflows"
+    },
+    "DOI:10.1145/3768292.3770442": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3768292.3770442",
+      "identity_tokens": [
+        "DOI:10.1145/3768292.3770442",
+        "SemanticScholar:3c312dde75096c774cf8c6beae5776cd80cf7b07"
+      ],
+      "reason": "The DOI page returned “Internal Error” with one line and no abstract. The title suggests a post-training method for autoregressive models, but the primary abstract is needed to assess any inference-time relevance.",
+      "first_checked_at": "2026-10-13T03:49:29+00:00",
+      "last_checked_at": "2026-10-13T03:49:29+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-0bc18ef37a7d-mask-predict-parallel-decoding-of-conditional-masked-language-models.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Discrete Flow Matching is a Surprisingly Effective Post-training Method to Address Compound Error in Autoregressive Models"
+    },
+    "DOI:10.3389/fdgth.2025.1702082": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.3389/fdgth.2025.1702082",
+      "identity_tokens": [
+        "DOI:10.3389/fdgth.2025.1702082",
+        "SemanticScholar:f34635966a9722b4f66979cc2a315cf4ee40fddd"
+      ],
+      "reason": "The DOI page returned “Internal Error” with one line and no abstract. The title indicates LLM extraction for radiology reports, but the primary abstract is needed to judge any inference/serving contribution.",
+      "first_checked_at": "2026-10-13T03:49:30+00:00",
+      "last_checked_at": "2026-10-13T03:49:30+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2110.02861-8-bit-optimizers-via-block-wise-quantization.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Open LLM-based actionable incidental finding extraction from [18F]fluorodeoxyglucose PET-CT radiology reports"
+    },
+    "DOI:10.5753/webmedia.2025.16082": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.5753/webmedia.2025.16082",
+      "identity_tokens": [
+        "DOI:10.5753/webmedia.2025.16082",
+        "SemanticScholar:68bb09e7ee02b1d942a6fd9df7b74eab5a807195"
+      ],
+      "reason": "The DOI page returned “URL is not accessible via this tool” and no primary abstract. The title identifies a systematic review of Brazilian sign-language recognition; source unavailability prevents confirming its scope and any LLM-system relation.",
+      "first_checked_at": "2026-10-13T03:49:30+00:00",
+      "last_checked_at": "2026-10-13T03:49:30+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2019-1901.10430-pay-less-attention-with-lightweight-and-dynamic-convolutions.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "AI-Based Approaches for Brazilian Sign Language Recognition: A Systematic Literature Review: Insights on Methods, Metrics, and Resources for LIBRAS Recognition"
+    },
+    "DOI:10.1109/fie63693.2025.11328653": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/fie63693.2025.11328653",
+      "identity_tokens": [
+        "DOI:10.1109/fie63693.2025.11328653",
+        "SemanticScholar:be32863c327688e5a72308d1f0dd5e76b5dd0f2a"
+      ],
+      "reason": "The DOI page returned “Internal Error” with one line and no abstract. The title concerns LLM grading fairness and rubric effects, but the primary abstract was unavailable to resolve its relation to inference systems.",
+      "first_checked_at": "2026-10-13T03:49:30+00:00",
+      "last_checked_at": "2026-10-13T03:49:30+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2104.04473-efficient-large-scale-language-model-training-on-gpu-clusters-using-mega.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Can LLMs be Fair Graders? Only if You Bribe Them with the Right Rubric"
+    },
+    "DOI:10.1002/wcms.70058": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1002/wcms.70058",
+      "identity_tokens": [
+        "DOI:10.1002/wcms.70058",
+        "SemanticScholar:a1469a806ddb6f55075ce3d695ab0901f1388208"
+      ],
+      "reason": "The DOI page returned “Internal Error” with one line and no abstract. The confirmed title describes a quantum-chemistry framework, but primary-source evidence is missing, so the batch records a source-unavailable borderline.",
+      "first_checked_at": "2026-10-13T03:49:31+00:00",
+      "last_checked_at": "2026-10-13T03:49:31+00:00",
+      "linked_from": [
+        "papers/inference/15-inference-simulation-emulation/2017-1712.05889-ray-a-distributed-framework-for-emerging-ai-applications.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Fragme∩t: An Open-Source Framework for Multiscale Quantum Chemistry Based on Fragmentation"
+    },
+    "DOI:10.1016/j.ecmx.2025.101391": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.ecmx.2025.101391",
+      "identity_tokens": [
+        "DOI:10.1016/j.ecmx.2025.101391",
+        "SemanticScholar:be03ab00e90f42dc7e3c4849cbbfe84e3756e0c4"
+      ],
+      "reason": "The DOI page returned “URL is not accessible via this tool” and no primary abstract. The confirmed title concerns tidal-energy forecasting, but its relevance cannot be established without the publisher abstract.",
+      "first_checked_at": "2026-10-13T03:49:31+00:00",
+      "last_checked_at": "2026-10-13T03:49:31+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2105.03824-fnet-mixing-tokens-with-fourier-transforms.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Veliformer: A periodicity-preserving model for short-term tidal energy forecasting in optimal power flow"
+    },
+    "DOI:10.1145/3777912.3839793": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3777912.3839793",
+      "identity_tokens": [
+        "DOI:10.1145/3777912.3839793",
+        "SemanticScholar:4e2318815bc805fcb56e67b4181344532eed320c"
+      ],
+      "reason": "The DOI page returned “Internal Error” with one line and no abstract. The title suggests a study of video-based conversational interaction with GenAI, but primary evidence is needed to resolve relevance to LLM inference systems.",
+      "first_checked_at": "2026-10-13T03:49:31+00:00",
+      "last_checked_at": "2026-10-13T03:49:31+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2406.11816-videollm-online-online-video-large-language-model-for-streaming-video.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Can You See Me, GenAI? Characterizing Video-Based Conversational Interaction with Generative AI"
+    },
+    "DOI:10.1109/tmc.2026.3700660": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/tmc.2026.3700660",
+      "identity_tokens": [
+        "DOI:10.1109/tmc.2026.3700660",
+        "SemanticScholar:b8bdb72549002f7312a2f809d39b576bfb643d04"
+      ],
+      "reason": "The DOI page returned “URL is not accessible via this tool” and no primary abstract. Although the title mentions latency in semantic-communication edge networks, its relation to LLM inference/serving cannot be verified.",
+      "first_checked_at": "2026-10-13T03:49:31+00:00",
+      "last_checked_at": "2026-10-13T03:49:31+00:00",
+      "linked_from": [
+        "papers/inference/08-edge-on-device-llm-systems/2024-2407.18921-mobile-edge-intelligence-for-large-language-models-a-contemporary-survey.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Lyapunov-Guided Latency Optimization in Semantic Communication Empowered Edge Networks"
+    },
+    "DOI:10.1109/tsmc.2026.3704902": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/tsmc.2026.3704902",
+      "identity_tokens": [
+        "DOI:10.1109/tsmc.2026.3704902",
+        "SemanticScholar:35489297d4e58b5a925de8741050055e799325aa"
+      ],
+      "reason": "The DOI page returned “URL is not accessible via this tool” and no primary abstract. The title indicates a review of multiagent LLM systems; its connection to inference/serving scope remains unconfirmed.",
+      "first_checked_at": "2026-10-13T03:49:32+00:00",
+      "last_checked_at": "2026-10-13T03:49:32+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2502.12110-a-mem-agentic-memory-for-llm-agents.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Safe and Scalable Collaboration in Multiagent LLM Systems: A Comprehensive Review"
     }
   }
 }
