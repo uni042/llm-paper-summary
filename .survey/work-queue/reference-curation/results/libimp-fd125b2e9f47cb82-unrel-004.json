@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-fd125b2e9f47cb82-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2203.10314",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2203.10314",
+    "identity_tokens": [
+      "arXiv:2203.10314",
+      "id:arXiv:2203.10314",
+      "url:https://arxiv.org/abs/2203.10314"
+    ],
+    "reason": "点群をボクセル化して集合注意を用いる3次元物体検出モデル。KITTI・Waymoでの物体検出が評価対象であり、LLMの言語生成・復号、KVキャッシュ、推論サービング、分散実行への適用を示さない。線形計算量の注意機構という共通語だけでは本サーベイの対象に含めない。",
+    "first_checked_at": "2026-10-11T14:41:43+00:00",
+    "last_checked_at": "2026-10-13T15:47:56+00:00",
+    "linked_from": [],
+    "title": "Voxel Set Transformer: A Set-to-Set Approach to 3D Object Detection from Point Clouds"
+  },
+  "processed_at": "2026-10-13T15:47:56+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-fd125b2e9f47",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

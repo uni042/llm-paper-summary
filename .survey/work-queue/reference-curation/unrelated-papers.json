@@ -2,7 +2,7 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-13T14:44:27+00:00",
+  "updated_at": "2026-10-13T15:47:56+00:00",
   "record_count": 11770,
   "records": {
     "arXiv:2303.08774": {
@@ -164046,9 +164046,9 @@
         "DOI:10.1109/cvpr52729.2023.00976",
         "arXiv:2303.05511"
       ],
-      "reason": "タイトルで明示されている研究対象はテキストから画像を生成するGANの規模拡大であり、LLMの推論実行、KVキャッシュ、GPUサービング、効率的な言語モデル学習システムへの技術的貢献を主題としていない。タイトル段階で対象外と判断した。",
+      "reason": "GigaGANはテキストから画像を生成する敵対的生成ネットワーク（GAN）の容量拡張と画像合成速度を評価する。512px画像を0.13秒で生成するが、自己回帰LLMの推論エンジン、KVキャッシュ、量子化、オフロード、サービングの最適化ではない。画像生成モデルのアーキテクチャ研究として除外する。",
       "first_checked_at": "2026-10-11T08:49:39+00:00",
-      "last_checked_at": "2026-10-12T14:56:02+00:00",
+      "last_checked_at": "2026-10-13T15:47:56+00:00",
       "linked_from": [],
       "title": "Scaling up GANs for Text-to-Image Synthesis"
     },
@@ -164266,9 +164266,9 @@
         "id:arXiv:2203.10314",
         "url:https://arxiv.org/abs/2203.10314"
       ],
-      "reason": "一次要旨で対象は点群からの三次元物体検出と確認した。VoxSeTはボクセル内の点集合に潜在符号を介した二段の交差注意を適用し、KITTIとWaymoの検出性能を評価する。注意計算の線形化という一般的な技術要素はあるが、対象モデルは三次元知覚用であり、LLM推論・サービング・KVキャッシュ管理・MoE推論の技術貢献は示されないためunrelatedとする。",
+      "reason": "点群をボクセル化して集合注意を用いる3次元物体検出モデル。KITTI・Waymoでの物体検出が評価対象であり、LLMの言語生成・復号、KVキャッシュ、推論サービング、分散実行への適用を示さない。線形計算量の注意機構という共通語だけでは本サーベイの対象に含めない。",
       "first_checked_at": "2026-10-11T14:41:43+00:00",
-      "last_checked_at": "2026-10-13T10:45:29+00:00",
+      "last_checked_at": "2026-10-13T15:47:56+00:00",
       "linked_from": [],
       "title": "Voxel Set Transformer: A Set-to-Set Approach to 3D Object Detection from Point Clouds"
     },

@@ -2,7 +2,7 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-13T14:44:27+00:00",
+  "updated_at": "2026-10-13T15:47:55+00:00",
   "record_count": 4848,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
@@ -70635,9 +70635,9 @@
         "semanticscholar:02128b757f31f1385c9b839201783ceae5cd2088",
         "url:https://arxiv.org/abs/2411.17465"
       ],
-      "reason": "一次要旨では、GUIスクリーンショットを接続グラフと見なす視覚トークン選択で冗長トークンを33%削減し、1.4倍の処理高速化を報告する。一方、研究の主対象はGUIエージェントの視覚位置特定と操作学習であり、報告された効率化もGUI固有の入力構造と訓練設定に強く依存する。一般LLM推論基盤への直接的な貢献は限定的だが、視覚トークン削減は推論効率にも接続し得るためborderlineとする。",
+      "reason": "GUI画像を連結グラフとして扱う視覚トークン選択により冗長トークンを33%減らし、報告された1.4倍高速化は学習過程の値である。視覚言語行動モデルの入力圧縮・計算削減には関連するが、LLM推論配信の実測高速化やメモリ階層の一般化を主目的としないため境界判定とする。",
       "first_checked_at": "2026-10-11T03:46:34+00:00",
-      "last_checked_at": "2026-10-13T10:45:30+00:00",
+      "last_checked_at": "2026-10-13T15:47:55+00:00",
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "ShowUI: One Vision-Language-Action Model for GUI Visual Agent"
@@ -74223,9 +74223,9 @@
         "id:arXiv:2405.19209",
         "url:https://arxiv.org/abs/2405.19209"
       ],
-      "reason": "一次要旨では、長時間動画から質問に関連するキーフレームを段階的に選び、複数粒度の木構造へ整理してLLMへ入力する。EgoSchemaとNExT-QAでは回答精度と推論時間の改善を報告するが、最終適用先は動画質問応答であり、汎用LLMの推論カーネル・KVキャッシュ・分散サービングを改善する機構は示していない。動画入力の削減という推論効率面には関連するため、完全な無関係ではなくborderlineとする。",
+      "reason": "長時間動画のフレームを質問に応じて階層的に選択し、LLMへ入力することで動画質問応答の精度と推論時間を改善する。LLMの前処理・入力削減として推論費用に関係するが、GPUカーネルやKV管理、一般的なLLMサービング基盤を直接改良する研究ではない。動画向け入力選択の効率研究として境界判定に保持する。",
       "first_checked_at": "2026-10-13T10:45:29+00:00",
-      "last_checked_at": "2026-10-13T10:45:29+00:00",
+      "last_checked_at": "2026-10-13T15:47:55+00:00",
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "VideoTree: Adaptive Tree-based Video Representation for LLM Reasoning on Long Videos"
