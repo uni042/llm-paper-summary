@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-4ac3d1e30ae29ddd-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1109/iraset68627.2026.11538727",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1109/iraset68627.2026.11538727",
+    "identity_tokens": [
+      "DOI:10.1109/iraset68627.2026.11538727"
+    ],
+    "reason": "The packet identifies a survey on efficient long-context transformers and deployment, but IEEE Xplore did not expose its DOI page abstract in this retrieval session.",
+    "first_checked_at": "2026-10-13T22:54:53+00:00",
+    "last_checked_at": "2026-10-13T22:54:53+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2019-1911.02150-multi-query-attention.md",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md",
+      "papers/inference/12-moe-parallelism-communication/2021-2101.03961-switch-transformers-scaling-to-trillion-parameter-models-with-simple-and.md",
+      "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md",
+      "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md",
+      "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md",
+      "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+      "papers/inference/99-other-inference-systems/2022-2211.05102-efficiently-scaling-transformer-inference.md",
+      "papers/inference/99-other-inference-systems/2023-2305.13245-gqa.md",
+      "papers/inference/99-other-inference-systems/2023-2307.02486-longnet-scaling-transformers-to-1-000-000-000-tokens.md",
+      "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md",
+      "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md",
+      "papers/inference/99-other-inference-systems/2024-2407.08608-flashattention-3-fast-and-accurate-attention-with-asynchrony-and-low-pre.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Beyond Attention Complexity: A Survey of Efficient and Frugal Transformers for Long-Context Deployment"
+  },
+  "processed_at": "2026-10-13T22:54:53+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-4ac3d1e30ae2",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

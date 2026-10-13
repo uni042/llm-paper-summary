@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-13T22:33:22+00:00",
-  "record_count": 11895,
+  "updated_at": "2026-10-13T22:54:54+00:00",
+  "record_count": 11898,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -170955,6 +170955,72 @@
         "papers/survey/03-inference-engines/2025-2505.01658-survey-inference-engines-large-language-models.md"
       ],
       "title": "FastGRPO: Accelerating Policy Optimization via Concurrency-aware Speculative Decoding and Online Draft Learning"
+    },
+    "arXiv:2605.13262": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.13262",
+      "identity_tokens": [
+        "arXiv:2605.13262"
+      ],
+      "reason": "Chem-GMNet targets molecular-property prediction and its abstract evaluates MoleculeNet endpoints; it does not establish a contribution to LLM inference or serving efficiency.",
+      "first_checked_at": "2026-10-13T22:54:54+00:00",
+      "last_checked_at": "2026-10-13T22:54:54+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md",
+        "papers/inference/99-other-inference-systems/2023-2302.10866-hyena-hierarchy-towards-larger-convolutional-language-models.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08621-retentive-network-a-successor-to-transformer-for-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md",
+        "papers/inference/99-other-inference-systems/2024-2312.06635-gated-linear-attention-transformers-with-hardware-efficient-training.md",
+        "papers/inference/99-other-inference-systems/2024-2412.06464-gated-delta-networks-improving-mamba2-with-delta-rule.md"
+      ],
+      "title": "Chem-GMNet: A Sphere-Native Geometric Transformer for Molecular Property Prediction"
+    },
+    "arXiv:2605.10643": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.10643",
+      "identity_tokens": [
+        "arXiv:2605.10643"
+      ],
+      "reason": "Full text describes a recurrent language-model architecture and reports training viability, not serving efficiency; its limitations state sequential Python execution makes per-step cost above Transformer/GDN baselines and it is not deployable.",
+      "first_checked_at": "2026-10-13T22:54:54+00:00",
+      "last_checked_at": "2026-10-13T22:54:54+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md",
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md",
+        "papers/inference/99-other-inference-systems/2024-2312.06635-gated-linear-attention-transformers-with-hardware-efficient-training.md",
+        "papers/inference/99-other-inference-systems/2024-2402.19427-griffin-mixing-gated-linear-recurrences-with-local-attention-for-efficie.md",
+        "papers/inference/99-other-inference-systems/2024-2404.07143-leave-no-context-behind-efficient-infinite-context-transformers-with-infini-attention.md",
+        "papers/inference/99-other-inference-systems/2024-2407.04620-learning-to-learn-at-test-time-rnns-with-expressive-hidden-states.md",
+        "papers/inference/99-other-inference-systems/2024-2412.06464-gated-delta-networks-improving-mamba2-with-delta-rule.md",
+        "papers/inference/99-other-inference-systems/2025-2501.00663-titans-learning-to-memorize-at-test-time.md"
+      ],
+      "title": "A Single-Layer Model Can Do Language Modeling"
+    },
+    "arXiv:2605.11005": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.11005",
+      "identity_tokens": [
+        "arXiv:2605.11005"
+      ],
+      "reason": "DisagMoE is explicitly a MoE training system; its measured speedup is training efficiency, which the screening rules exclude absent an inference-system contribution.",
+      "first_checked_at": "2026-10-13T22:54:54+00:00",
+      "last_checked_at": "2026-10-13T22:54:54+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2201.05596-deepspeed-moe-inference-compression.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2504.02263-megascale-infer-disaggregated-expert-parallelism.md",
+        "papers/inference/12-moe-parallelism-communication/2021-2101.03961-switch-transformers-scaling-to-trillion-parameter-models-with-simple-and.md",
+        "papers/inference/12-moe-parallelism-communication/2022-2206.03382-tutel-adaptive-mixture-of-experts-at-scale.md",
+        "papers/inference/99-other-inference-systems/2017-1701.06538-outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts.md",
+        "papers/inference/99-other-inference-systems/2019-1909.08053-megatron-lm-training-multi-billion-parameter-language-models-using-model.md",
+        "papers/inference/99-other-inference-systems/2021-2104.04473-efficient-large-scale-language-model-training-on-gpu-clusters-using-mega.md",
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+        "papers/inference/99-other-inference-systems/2025-2502.19811-comet-fine-grained-computation-communication-overlapping-for-mixture-of-experts.md",
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md",
+        "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md",
+        "papers/training/02-distributed-heterogeneous-moe-training/2024-2404.19429-lancet.md",
+        "papers/training/02-distributed-heterogeneous-moe-training/2025-2504.03871-hetermoe-efficient-training-of-mixture-of-experts-models-on-heterogeneous-gpus.md"
+      ],
+      "title": "DisagMoE: Computation-Communication overlapped MoE Training via Disaggregated AF-Pipe Parallelism"
     }
   }
 }
