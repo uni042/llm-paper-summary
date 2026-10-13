@@ -1,0 +1,967 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-fbe036fa44fcdcba-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-fbe036fa44fc",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2601.10120",
+    "arXiv:2601.17982",
+    "arXiv:2602.04789",
+    "arXiv:2603.00573",
+    "arXiv:2603.12996",
+    "arXiv:2603.26435",
+    "arXiv:2604.05149",
+    "arXiv:2604.05404",
+    "arXiv:2604.10352",
+    "arXiv:2606.06036"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 10,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "04031cc0e5b75c867af06109ce51730570fed33a",
+  "raw_search_result_count": 10,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 10,
+  "provider_progress": {
+    "requested_count": 10,
+    "status_counts": {
+      "allowed": 10,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-13T05:22:22.523262+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2601.10120",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2601.17982",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2602.04789",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2603.00573",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2603.12996",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2603.26435",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2604.05149",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2604.05404",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2604.10352",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2606.06036",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Dependency-Aware Parallel Decoding via Attention for Diffusion LLMs",
+      "source_url": "https://arxiv.org/abs/2603.12996",
+      "year": 2026,
+      "published": "2026-03-13",
+      "venue": "arXiv.org",
+      "citation_count": 15,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Parallel decoding for Diffusion LLMs (dLLMs) is difficult because each denoising step provides only token-wise marginal distributions, while unmasking multiple tokens simultaneously requires accounting for inter-token dependencies. We propose Dependency-Aware Parallel Decoding (DAPD), a simple, training-free decoding method that uses self-attention to induce a conditional dependency graph over masked tokens. At each iteration, edges in this graph capture strong token interactions, while non-edges indicate weak dependence. Parallel decoding is then reduced to selecting an independent set on the graph and unmasking the selected tokens in parallel. This avoids co-updating strongly coupled tokens without auxiliary models or retraining. Experiments on LLaDA and Dream show that DAPD improves the accuracy-steps trade-off over existing methods and enables more globally distributed parallel updates that better exploit the any-order generation capability of dLLMs. The project is available at https://ai-isl.github.io/dapd",
+      "identifiers": [
+        "SemanticScholar:55ccdb0ed071063f7fe963933c51b92abd5a60a7"
+      ],
+      "semantic_scholar_id": "55ccdb0ed071063f7fe963933c51b92abd5a60a7",
+      "canonical_id": "arXiv:2603.12996",
+      "arxiv_id": "2603.12996",
+      "doi": "10.48550/arXiv.2603.12996",
+      "authors": [
+        "Bumjun Kim",
+        "Dongjae Jeon",
+        "Moongyu Jeon",
+        "Albert No"
+      ],
+      "priority": 115,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 15,
+        "citation_count": 15,
+        "total": 115,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 214,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "EvolveRouter: Co-Evolving Routing and Prompt for Multi-Agent Question Answering",
+      "source_url": "https://arxiv.org/abs/2604.05149",
+      "year": 2026,
+      "published": "2026-04-06",
+      "venue": "arXiv.org",
+      "citation_count": 15,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language model agents often exhibit complementary strengths, making routing a promising approach for multi-agent question answering. However, existing routing methods remain limited in two important ways: they typically optimize over a fixed pool of agents without improving the agents themselves, and they often rely on rigid collaboration schemes that cannot adapt the number of participating agents to the query. We propose EvolveRouter, a trainable framework that addresses both limitations by jointly improving agent quality and collaboration structure. First, EvolveRouter couples graph-based query routing with targeted instruction refinement in a closed-loop co-evolution process, allowing router diagnostics to guide agent improvement while refined agents provide cleaner supervision for routing. Second, it introduces an adaptive inference strategy that dynamically determines the effective collaboration size for each query through router-weighted answer agreement. Together, these designs enable more capable and more efficient multi-agent reasoning. Experiments on five question answering benchmarks show that EvolveRouter consistently outperforms SOTA routing baselines in both F1 and exact match, while further analysis confirms the benefits of closed-loop refinement and adaptive collaboration.",
+      "identifiers": [
+        "SemanticScholar:9f2b832a02e4a327a1412d23ea4bde6e310b928d"
+      ],
+      "semantic_scholar_id": "9f2b832a02e4a327a1412d23ea4bde6e310b928d",
+      "canonical_id": "arXiv:2604.05149",
+      "arxiv_id": "2604.05149",
+      "doi": "10.48550/arXiv.2604.05149",
+      "authors": [
+        "Jia-Tan Huang",
+        "Zhe-Yuan Zhang",
+        "Kai-Wen Shi",
+        "Yan-Fang Ye",
+        "Chu-Xu Zhang"
+      ],
+      "priority": 115,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 15,
+        "citation_count": 15,
+        "total": 115,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 190,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "TopoDIM: One-shot Topology Generation of Diverse Interaction Modes for Multi-Agent Systems",
+      "source_url": "https://arxiv.org/abs/2601.10120",
+      "year": 2026,
+      "published": "2026-01-15",
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "citation_count": 5,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Optimizing communication topology in LLM-based multi-agent system is critical for enabling collective intelligence. Existing methods mainly rely on spatio-temporal interaction paradigms, where the sequential execution of multi-round dialogues incurs high latency and computation. Motivated by the recent insights that evaluation and debate mechanisms can improve problem-solving in multi-agent systems, we propose TopoDIM, a framework for one-shot Topology generation with Diverse Interaction Modes. Designed for decentralized execution to enhance adaptability and privacy, TopoDIM enables agents to autonomously construct heterogeneous communication without iterative coordination, achieving token efficiency and improved task performance. Experiments demonstrate that TopoDIM reduces total token consumption by 46.41% while improving average performance by 1.50% over state-of-the-art methods. Moreover, the framework exhibits strong adaptability in organizing communication among heterogeneous agents. Code is available at: https://github.com/Sundiasy/TopoDIM.",
+      "identifiers": [
+        "SemanticScholar:a18281009fb856e8a0de7e09a74046e6edad7601"
+      ],
+      "semantic_scholar_id": "a18281009fb856e8a0de7e09a74046e6edad7601",
+      "canonical_id": "arXiv:2601.10120",
+      "arxiv_id": "2601.10120",
+      "doi": "10.48550/arXiv.2601.10120",
+      "authors": [
+        "Rui Sun",
+        "Jie Ding",
+        "Chenghua Gong",
+        "Tianjun Gu",
+        "Yihang Jiang",
+        "Juyuan Zhang",
+        "Liming Pan",
+        "Lin-Yuan Lu"
+      ],
+      "priority": 115,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 10,
+        "citations": 5,
+        "citation_count": 5,
+        "total": 115,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 271,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      }
+    },
+    {
+      "title": "Wattchmen: Watching the Wattchers – High Fidelity, Flexible GPU Energy Modeling",
+      "source_url": "https://arxiv.org/abs/2603.26435",
+      "year": 2026,
+      "published": "2026-03-27",
+      "venue": "International Conference on Supercomputing",
+      "citation_count": 5,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Modern GPU-rich HPC systems are increasingly becoming energy-constrained. Thus, understanding an application’s energy consumption becomes essential. Unfortunately, current GPU energy attribution techniques are either inaccurate, inflexible, or outdated. Therefore, we propose Wattchmen , a flexible methodology for measuring, attributing, and predicting GPU energy consumption. We construct a per-instruction energy model using a diverse set of microbenchmarks to systematically quantify the energy consumption of GPU instructions, enabling finer-grain prediction and energy consumption breakdowns for applications. Compared with the state-of-the-art systems like AccelWattch (32%) and Guser (25%), across 16 popular GPGPU, graph analytics, HPC, and ML workloads, Wattchmen reduces the mean absolute percent error (MAPE) to 14% on V100 GPUs. Furthermore, we show that Wattchmen provides similar MAPEs for water-cooled V100s (15%) and extends to later architectures, including air-cooled A100 (11%) and H100 (12%) GPUs. Finally, to further demonstrate Wattchmen ’s value, we apply it to applications such as Backprop and QMCPACK, where Wattchmen ’s insights enable energy reductions of up to 35%.",
+      "identifiers": [
+        "SemanticScholar:b4db0f10dc562771af28947aacf35364a2895cdd"
+      ],
+      "semantic_scholar_id": "b4db0f10dc562771af28947aacf35364a2895cdd",
+      "canonical_id": "arXiv:2603.26435",
+      "arxiv_id": "2603.26435",
+      "doi": "10.1145/3797905.3800514",
+      "authors": [
+        "Brandon Tran",
+        "Matthias Maiterth",
+        "Woong Shin",
+        "Matthew D. Sinclair",
+        "Shivaram Venkataraman"
+      ],
+      "priority": 115,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 10,
+        "citations": 5,
+        "citation_count": 5,
+        "total": 115,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 200,
+        "matched_prestigious_venue": "Supercomputing"
+      }
+    },
+    {
+      "title": "ClawVM: Harness-Managed Virtual Memory for Stateful Tool-Using LLM Agents",
+      "source_url": "https://arxiv.org/abs/2604.10352",
+      "year": 2026,
+      "published": "2026-04-11",
+      "venue": "EuroMLSys@EuroSys",
+      "citation_count": 5,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Stateful tool-using LLM agents treat the context window as working memory, yet today's agent harnesses manage residency and durability as best-effort, causing recurring failures: lost state after compaction, bypassed flushes on reset, and destructive writeback. We present ClawVM, a virtual memory layer that manages state as typed pages with minimum-fidelity invariants, multi-resolution representations under a token budget, and validated writeback at every lifecycle boundary. Because the harness already assembles prompts, mediates tools, and observes lifecycle events, it is the natural enforcement point; placing the contract there makes residency and durability deterministic and auditable. Across synthetic workloads, 12 real-session traces, and adversarial stress tests, ClawVM eliminates all policy-controllable faults whenever the minimum-fidelity set fits within the token budget, confirmed by an offline oracle, and adds median < 50 μs of policy-engine overhead per turn.",
+      "identifiers": [
+        "SemanticScholar:bca21c3d2107a959d2b52d53e41cc1ea2c745f8c"
+      ],
+      "semantic_scholar_id": "bca21c3d2107a959d2b52d53e41cc1ea2c745f8c",
+      "canonical_id": "arXiv:2604.10352",
+      "arxiv_id": "2604.10352",
+      "doi": "10.1145/3805621.3807648",
+      "authors": [
+        "Mofasshara Rafique",
+        "Laurent Bindschaedler"
+      ],
+      "priority": 115,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 10,
+        "citations": 5,
+        "citation_count": 5,
+        "total": 115,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 185,
+        "matched_prestigious_venue": "EuroSys"
+      }
+    },
+    {
+      "title": "Light Forcing: Accelerating Autoregressive Video Diffusion via Sparse Attention",
+      "source_url": "https://arxiv.org/abs/2602.04789",
+      "year": 2026,
+      "published": "2026-02-04",
+      "venue": "arXiv.org",
+      "citation_count": 14,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Advanced autoregressive (AR) video generation models have improved visual fidelity and interactivity, but the quadratic complexity of attention remains a primary bottleneck for efficient deployment. While existing sparse attention solutions have shown promise on bidirectional models, we identify that applying these solutions to AR models leads to considerable performance degradation for two reasons: isolated consideration of chunk generation and insufficient utilization of past informative context. Motivated by these observations, we propose \\textsc{Light Forcing}, the \\textit{first} sparse attention solution tailored for AR video generation models. It incorporates a \\textit{Chunk-Aware Growth} mechanism to quantitatively estimate the contribution of each chunk, which determines their sparsity allocation. This progressive sparsity increase strategy enables the current chunk to inherit prior knowledge in earlier chunks during generation. Additionally, we introduce a \\textit{Hierarchical Sparse Attention} to capture informative historical and local context in a coarse-to-fine manner. Such two-level mask selection strategy (i.e., frame and block level) can adaptively handle diverse attention patterns. Extensive experiments demonstrate that our method outperforms existing sparse attention in quality (e.g., 84.5 on VBench) and efficiency (e.g., $1.2{\\sim}1.3\\times$ end-to-end speedup). Combined with other efficient solutions, \\textsc{Light Forcing} further achieves a $2.0{\\sim}3.0\\times$ end-to-end speedup across diverse GPUs (e.g., 27.4\\,FPS on RTX 5090 and 33.9\\,FPS on H100). Code is released via this \\href{https://github.com/chengtao-lv/LightForcing}{link}.",
+      "identifiers": [
+        "SemanticScholar:3dab083c1a34c25ec726bf726d1c73ca33cbc9cc"
+      ],
+      "semantic_scholar_id": "3dab083c1a34c25ec726bf726d1c73ca33cbc9cc",
+      "canonical_id": "arXiv:2602.04789",
+      "arxiv_id": "2602.04789",
+      "doi": "10.48550/arXiv.2602.04789",
+      "authors": [
+        "Cheng-Tao Lv",
+        "Yu-Meng Shi",
+        "Yu-Shi Huang",
+        "Rui-Hao Gong",
+        "Shen Ren",
+        "Wenya Wang"
+      ],
+      "priority": 114,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 14,
+        "citation_count": 14,
+        "total": 114,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 251,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Memory is Reconstructed, Not Retrieved: Graph Memory for LLM Agents",
+      "source_url": "https://arxiv.org/abs/2606.06036",
+      "year": 2026,
+      "published": "2026-06-04",
+      "venue": "arXiv.org",
+      "citation_count": 14,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Despite recent progress, LLM agents still struggle with reasoning over long interaction histories. While current memory-augmented agents rely on a static retrieve-then-reason paradigm, this rigid pipeline design prevents them from dynamically adapting memory access to intermediate evidence discovered during inference. To bridge this gap, we propose MRAgent, a framework that combines an associative memory graph with an active reconstruction mechanism. We represent memory as a Cue-Tag-Content graph, where associative tags serve as semantic bridges connecting fine-grained cues to memory contents. Operating on this structure, our active reconstruction mechanism integrates LLM reasoning directly into memory access, allowing the agent to iteratively explore and prune retrieval paths based on accumulated evidence. This ensures that memory retrieval is dynamically adapted to the reasoning context while avoiding combinatorial explosion caused by unconstrained expansion. Experiments on the LoCoMo benchmark and LongMemEval benchmark demonstrate significant improvements over strong baselines (up to 23%), while substantially reducing token and runtime cost, highlighting the effectiveness of active and associative reconstruction for long-horizon memory reasoning.",
+      "identifiers": [
+        "SemanticScholar:2896a4bcdae0034452477155b4fa9c6ef8fb2c89"
+      ],
+      "semantic_scholar_id": "2896a4bcdae0034452477155b4fa9c6ef8fb2c89",
+      "canonical_id": "arXiv:2606.06036",
+      "arxiv_id": "2606.06036",
+      "doi": "10.48550/arXiv.2606.06036",
+      "authors": [
+        "Shuo Ji",
+        "Yi-Bo Li",
+        "Bryan Hooi"
+      ],
+      "priority": 114,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 14,
+        "citation_count": 14,
+        "total": 114,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 131,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "SD-E2: Semantic Exploration for Reasoning Under Token Budgets",
+      "source_url": "https://arxiv.org/abs/2601.17982",
+      "year": 2026,
+      "published": "2026-01-25",
+      "venue": "Conference of the European Chapter of the Association for Computational Linguistics",
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Small language models (SLMs) struggle with complex reasoning because exploration is expensive under tight compute budgets. We introduce Semantic Diversity-Exploration-Exploitation (SD-E$^2$), a reinforcement learning framework that makes exploration explicit by optimizing semantic diversity in generated reasoning trajectories. Using a frozen sentence-embedding model, SD-E$^2$ assigns a diversity reward that captures (i) the coverage of semantically distinct solution strategies and (ii) their average pairwise dissimilarity in embedding space, rather than surface-form novelty. This diversity reward is combined with outcome correctness and solution efficiency in a z-score-normalized multi-objective objective that stabilizes training. On GSM8K, SD-E$^2$ surpasses the base Qwen2.5-3B-Instruct and strong GRPO baselines (GRPO-CFL and GRPO-CFEE) by +27.4, +5.2, and +1.5 percentage points, respectively, while discovering on average 9.8 semantically distinct strategies per question. We further improve MedMCQA to 49.64% versus 38.37% for the base model and show gains on the harder AIME benchmark (1983-2025), reaching 13.28% versus 6.74% for the base. These results indicate that rewarding semantic novelty yields a more compute-efficient exploration-exploitation signal for training reasoning-capable SLMs. By introducing cognitive adaptation-adjusting the reasoning process structure rather than per-token computation-SD-E$^2$ offers a complementary path to efficiency gains in resource-constrained models.",
+      "identifiers": [
+        "SemanticScholar:b43acd6a7b372be98011161cde51dbc20b65a6fb"
+      ],
+      "semantic_scholar_id": "b43acd6a7b372be98011161cde51dbc20b65a6fb",
+      "canonical_id": "arXiv:2601.17982",
+      "arxiv_id": "2601.17982",
+      "doi": "10.48550/arXiv.2601.17982",
+      "authors": [
+        "Kshitij Mishra",
+        "Nils Lukas",
+        "S. Lahlou"
+      ],
+      "priority": 114,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 10,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 114,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 261,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      }
+    },
+    {
+      "title": "CoMoL: Efficient Mixture of LoRA Experts via Dynamic Core Space Merging",
+      "source_url": "https://arxiv.org/abs/2603.00573",
+      "year": 2026,
+      "published": "2026-02-28",
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLMs) achieve remarkable performance on diverse downstream and domain-specific tasks via parameter-efficient fine-tuning (PEFT). However, existing PEFT methods, particularly MoE-LoRA architectures, suffer from limited parameter efficiency and coarse-grained adaptation due to the proliferation of LoRA experts and instance-level routing. To address these issues, we propose Core Space Mixture of LoRA (\\textbf{CoMoL}), a novel MoE-LoRA framework that incorporates expert diversity, parameter efficiency, and fine-grained adaptation. Specifically, CoMoL introduces two key components: core space experts and core space routing. Core space experts store each expert in a compact core matrix, preserving diversity while controlling parameter growth. Core space routing dynamically selects and activates the appropriate core experts for each token, enabling fine-grained, input-adaptive routing. Activated core experts are then merged via a soft-merging strategy into a single core expert, which is combined with a shared LoRA to form a specialized LoRA module. Besides, the routing network is projected into the same low-rank space as the LoRA matrices, further reducing parameter overhead without compromising expressiveness. Extensive experiments demonstrate that CoMoL retains the adaptability of MoE-LoRA architectures while achieving parameter efficiency comparable to standard LoRA, consistently outperforming existing methods across multiple tasks.",
+      "identifiers": [
+        "SemanticScholar:dfd983f11dcf6f726f979b54e911640492ad87e2"
+      ],
+      "semantic_scholar_id": "dfd983f11dcf6f726f979b54e911640492ad87e2",
+      "canonical_id": "arXiv:2603.00573",
+      "arxiv_id": "2603.00573",
+      "doi": "10.48550/arXiv.2603.00573",
+      "authors": [
+        "Jie Cao",
+        "Zhen-Xuan Fan",
+        "Zhuo-Nan Wang",
+        "Tianwei Lin",
+        "Ziyuan Zhao",
+        "Rolan Yan",
+        "Wen-Qiao Zhang",
+        "Fei-Fei Shao",
+        "Hongwei Wang",
+        "Jun Xiao",
+        "Si-Liang Tang"
+      ],
+      "priority": 114,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 10,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 114,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 227,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      }
+    },
+    {
+      "title": "Beyond Accuracy: Unveiling Inefficiency Patterns in Tool-Integrated Reasoning",
+      "source_url": "https://arxiv.org/abs/2604.05404",
+      "year": 2026,
+      "published": "2026-04-07",
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "In real-world Tool-Integrated Reasoning (TIR) scenarios, where LLMs interleave reasoning with external tool calls, a major source of inefficiency is that the toolcalls create pauses between LLM requests and cause KV-Cache eviction, forcing recomputation. Also, the long, unfiltered response returned by external tools inflates the KV-Cache, so each decode step spends more time loading the growing cache and thus becomes steadily slower as context length increases. However, existing efficiency metrics like token counts and toolcall counts fail to capture the real model inference latency. To address this, we introduce PTE (Prefill Token Equivalents), a hardware-aware TIR-efficiency metric that unifies internal reasoning and external tool-use costs while explicitly accounting for non-reusable KV-Cache and long-tool-response scenarios. Validation in a high-concurrency industrial setting indicates that PTE aligns significantly better with wall-clock latency than standard token counts, while maintaining consistent efficiency rankings across diverse hardware profiles. We conduct extensive experiments across five TIR benchmarks, quantify their PTE costs, and identify four inefficiency patterns that appear in TIR. We also discover that trajectories with higher PTE costs tend to have lower reasoning correctness, indicating that simply using more tools does not improve the quality of the answer.",
+      "identifiers": [
+        "SemanticScholar:574a081b7a37f107446c65be2c7712ed8d35af7f"
+      ],
+      "semantic_scholar_id": "574a081b7a37f107446c65be2c7712ed8d35af7f",
+      "canonical_id": "arXiv:2604.05404",
+      "arxiv_id": "2604.05404",
+      "doi": "10.48550/arXiv.2604.05404",
+      "authors": [
+        "Qi-Sheng Su",
+        "Shi-Ting Huang",
+        "Zhen Fang",
+        "Zian Chen",
+        "Ze-Hui Chen",
+        "Feng Zhao"
+      ],
+      "priority": 114,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 10,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 114,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 189,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2603.12996",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2603.12996",
+        "id:SemanticScholar:55ccdb0ed071063f7fe963933c51b92abd5a60a7",
+        "id:arXiv:2603.12996",
+        "title:dependencyaware parallel decoding via attention for diffusion llms",
+        "url:https://arxiv.org/abs/2603.12996"
+      ],
+      "record": {
+        "title": "Dependency-Aware Parallel Decoding via Attention for Diffusion LLMs",
+        "source_url": "https://arxiv.org/abs/2603.12996",
+        "year": 2026,
+        "published": "2026-03-13",
+        "venue": "arXiv.org",
+        "citation_count": 15,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Parallel decoding for Diffusion LLMs (dLLMs) is difficult because each denoising step provides only token-wise marginal distributions, while unmasking multiple tokens simultaneously requires accounting for inter-token dependencies. We propose Dependency-Aware Parallel Decoding (DAPD), a simple, training-free decoding method that uses self-attention to induce a conditional dependency graph over masked tokens. At each iteration, edges in this graph capture strong token interactions, while non-edges indicate weak dependence. Parallel decoding is then reduced to selecting an independent set on the graph and unmasking the selected tokens in parallel. This avoids co-updating strongly coupled tokens without auxiliary models or retraining. Experiments on LLaDA and Dream show that DAPD improves the accuracy-steps trade-off over existing methods and enables more globally distributed parallel updates that better exploit the any-order generation capability of dLLMs. The project is available at https://ai-isl.github.io/dapd",
+        "identifiers": [
+          "SemanticScholar:55ccdb0ed071063f7fe963933c51b92abd5a60a7"
+        ],
+        "semantic_scholar_id": "55ccdb0ed071063f7fe963933c51b92abd5a60a7",
+        "canonical_id": "arXiv:2603.12996",
+        "arxiv_id": "2603.12996",
+        "doi": "10.48550/arXiv.2603.12996",
+        "authors": [
+          "Bumjun Kim",
+          "Dongjae Jeon",
+          "Moongyu Jeon",
+          "Albert No"
+        ],
+        "priority": 115,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 15,
+          "citation_count": 15,
+          "total": 115,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 214,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2604.05149",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2604.05149",
+        "id:SemanticScholar:9f2b832a02e4a327a1412d23ea4bde6e310b928d",
+        "id:arXiv:2604.05149",
+        "title:evolverouter coevolving routing and prompt for multiagent question answering",
+        "url:https://arxiv.org/abs/2604.05149"
+      ],
+      "record": {
+        "title": "EvolveRouter: Co-Evolving Routing and Prompt for Multi-Agent Question Answering",
+        "source_url": "https://arxiv.org/abs/2604.05149",
+        "year": 2026,
+        "published": "2026-04-06",
+        "venue": "arXiv.org",
+        "citation_count": 15,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large language model agents often exhibit complementary strengths, making routing a promising approach for multi-agent question answering. However, existing routing methods remain limited in two important ways: they typically optimize over a fixed pool of agents without improving the agents themselves, and they often rely on rigid collaboration schemes that cannot adapt the number of participating agents to the query. We propose EvolveRouter, a trainable framework that addresses both limitations by jointly improving agent quality and collaboration structure. First, EvolveRouter couples graph-based query routing with targeted instruction refinement in a closed-loop co-evolution process, allowing router diagnostics to guide agent improvement while refined agents provide cleaner supervision for routing. Second, it introduces an adaptive inference strategy that dynamically determines the effective collaboration size for each query through router-weighted answer agreement. Together, these designs enable more capable and more efficient multi-agent reasoning. Experiments on five question answering benchmarks show that EvolveRouter consistently outperforms SOTA routing baselines in both F1 and exact match, while further analysis confirms the benefits of closed-loop refinement and adaptive collaboration.",
+        "identifiers": [
+          "SemanticScholar:9f2b832a02e4a327a1412d23ea4bde6e310b928d"
+        ],
+        "semantic_scholar_id": "9f2b832a02e4a327a1412d23ea4bde6e310b928d",
+        "canonical_id": "arXiv:2604.05149",
+        "arxiv_id": "2604.05149",
+        "doi": "10.48550/arXiv.2604.05149",
+        "authors": [
+          "Jia-Tan Huang",
+          "Zhe-Yuan Zhang",
+          "Kai-Wen Shi",
+          "Yan-Fang Ye",
+          "Chu-Xu Zhang"
+        ],
+        "priority": 115,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 15,
+          "citation_count": 15,
+          "total": 115,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 190,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2601.10120",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2601.10120",
+        "id:SemanticScholar:a18281009fb856e8a0de7e09a74046e6edad7601",
+        "id:arXiv:2601.10120",
+        "title:topodim oneshot topology generation of diverse interaction modes for multiagent systems",
+        "url:https://arxiv.org/abs/2601.10120"
+      ],
+      "record": {
+        "title": "TopoDIM: One-shot Topology Generation of Diverse Interaction Modes for Multi-Agent Systems",
+        "source_url": "https://arxiv.org/abs/2601.10120",
+        "year": 2026,
+        "published": "2026-01-15",
+        "venue": "Annual Meeting of the Association for Computational Linguistics",
+        "citation_count": 5,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Optimizing communication topology in LLM-based multi-agent system is critical for enabling collective intelligence. Existing methods mainly rely on spatio-temporal interaction paradigms, where the sequential execution of multi-round dialogues incurs high latency and computation. Motivated by the recent insights that evaluation and debate mechanisms can improve problem-solving in multi-agent systems, we propose TopoDIM, a framework for one-shot Topology generation with Diverse Interaction Modes. Designed for decentralized execution to enhance adaptability and privacy, TopoDIM enables agents to autonomously construct heterogeneous communication without iterative coordination, achieving token efficiency and improved task performance. Experiments demonstrate that TopoDIM reduces total token consumption by 46.41% while improving average performance by 1.50% over state-of-the-art methods. Moreover, the framework exhibits strong adaptability in organizing communication among heterogeneous agents. Code is available at: https://github.com/Sundiasy/TopoDIM.",
+        "identifiers": [
+          "SemanticScholar:a18281009fb856e8a0de7e09a74046e6edad7601"
+        ],
+        "semantic_scholar_id": "a18281009fb856e8a0de7e09a74046e6edad7601",
+        "canonical_id": "arXiv:2601.10120",
+        "arxiv_id": "2601.10120",
+        "doi": "10.48550/arXiv.2601.10120",
+        "authors": [
+          "Rui Sun",
+          "Jie Ding",
+          "Chenghua Gong",
+          "Tianjun Gu",
+          "Yihang Jiang",
+          "Juyuan Zhang",
+          "Liming Pan",
+          "Lin-Yuan Lu"
+        ],
+        "priority": 115,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 10,
+          "citations": 5,
+          "citation_count": 5,
+          "total": 115,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 271,
+          "matched_prestigious_venue": "Association for Computational Linguistics"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2603.26435",
+      "identity_tokens": [
+        "id:DOI:10.1145/3797905.3800514",
+        "id:SemanticScholar:b4db0f10dc562771af28947aacf35364a2895cdd",
+        "id:arXiv:2603.26435",
+        "title:wattchmen watching the wattchers high fidelity flexible gpu energy modeling",
+        "url:https://arxiv.org/abs/2603.26435"
+      ],
+      "record": {
+        "title": "Wattchmen: Watching the Wattchers – High Fidelity, Flexible GPU Energy Modeling",
+        "source_url": "https://arxiv.org/abs/2603.26435",
+        "year": 2026,
+        "published": "2026-03-27",
+        "venue": "International Conference on Supercomputing",
+        "citation_count": 5,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Modern GPU-rich HPC systems are increasingly becoming energy-constrained. Thus, understanding an application’s energy consumption becomes essential. Unfortunately, current GPU energy attribution techniques are either inaccurate, inflexible, or outdated. Therefore, we propose Wattchmen , a flexible methodology for measuring, attributing, and predicting GPU energy consumption. We construct a per-instruction energy model using a diverse set of microbenchmarks to systematically quantify the energy consumption of GPU instructions, enabling finer-grain prediction and energy consumption breakdowns for applications. Compared with the state-of-the-art systems like AccelWattch (32%) and Guser (25%), across 16 popular GPGPU, graph analytics, HPC, and ML workloads, Wattchmen reduces the mean absolute percent error (MAPE) to 14% on V100 GPUs. Furthermore, we show that Wattchmen provides similar MAPEs for water-cooled V100s (15%) and extends to later architectures, including air-cooled A100 (11%) and H100 (12%) GPUs. Finally, to further demonstrate Wattchmen ’s value, we apply it to applications such as Backprop and QMCPACK, where Wattchmen ’s insights enable energy reductions of up to 35%.",
+        "identifiers": [
+          "SemanticScholar:b4db0f10dc562771af28947aacf35364a2895cdd"
+        ],
+        "semantic_scholar_id": "b4db0f10dc562771af28947aacf35364a2895cdd",
+        "canonical_id": "arXiv:2603.26435",
+        "arxiv_id": "2603.26435",
+        "doi": "10.1145/3797905.3800514",
+        "authors": [
+          "Brandon Tran",
+          "Matthias Maiterth",
+          "Woong Shin",
+          "Matthew D. Sinclair",
+          "Shivaram Venkataraman"
+        ],
+        "priority": 115,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 10,
+          "citations": 5,
+          "citation_count": 5,
+          "total": 115,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 200,
+          "matched_prestigious_venue": "Supercomputing"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2604.10352",
+      "identity_tokens": [
+        "id:DOI:10.1145/3805621.3807648",
+        "id:SemanticScholar:bca21c3d2107a959d2b52d53e41cc1ea2c745f8c",
+        "id:arXiv:2604.10352",
+        "title:clawvm harnessmanaged virtual memory for stateful toolusing llm agents",
+        "url:https://arxiv.org/abs/2604.10352"
+      ],
+      "record": {
+        "title": "ClawVM: Harness-Managed Virtual Memory for Stateful Tool-Using LLM Agents",
+        "source_url": "https://arxiv.org/abs/2604.10352",
+        "year": 2026,
+        "published": "2026-04-11",
+        "venue": "EuroMLSys@EuroSys",
+        "citation_count": 5,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Stateful tool-using LLM agents treat the context window as working memory, yet today's agent harnesses manage residency and durability as best-effort, causing recurring failures: lost state after compaction, bypassed flushes on reset, and destructive writeback. We present ClawVM, a virtual memory layer that manages state as typed pages with minimum-fidelity invariants, multi-resolution representations under a token budget, and validated writeback at every lifecycle boundary. Because the harness already assembles prompts, mediates tools, and observes lifecycle events, it is the natural enforcement point; placing the contract there makes residency and durability deterministic and auditable. Across synthetic workloads, 12 real-session traces, and adversarial stress tests, ClawVM eliminates all policy-controllable faults whenever the minimum-fidelity set fits within the token budget, confirmed by an offline oracle, and adds median < 50 μs of policy-engine overhead per turn.",
+        "identifiers": [
+          "SemanticScholar:bca21c3d2107a959d2b52d53e41cc1ea2c745f8c"
+        ],
+        "semantic_scholar_id": "bca21c3d2107a959d2b52d53e41cc1ea2c745f8c",
+        "canonical_id": "arXiv:2604.10352",
+        "arxiv_id": "2604.10352",
+        "doi": "10.1145/3805621.3807648",
+        "authors": [
+          "Mofasshara Rafique",
+          "Laurent Bindschaedler"
+        ],
+        "priority": 115,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 10,
+          "citations": 5,
+          "citation_count": 5,
+          "total": 115,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 185,
+          "matched_prestigious_venue": "EuroSys"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2602.04789",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2602.04789",
+        "id:SemanticScholar:3dab083c1a34c25ec726bf726d1c73ca33cbc9cc",
+        "id:arXiv:2602.04789",
+        "title:light forcing accelerating autoregressive video diffusion via sparse attention",
+        "url:https://arxiv.org/abs/2602.04789"
+      ],
+      "record": {
+        "title": "Light Forcing: Accelerating Autoregressive Video Diffusion via Sparse Attention",
+        "source_url": "https://arxiv.org/abs/2602.04789",
+        "year": 2026,
+        "published": "2026-02-04",
+        "venue": "arXiv.org",
+        "citation_count": 14,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Advanced autoregressive (AR) video generation models have improved visual fidelity and interactivity, but the quadratic complexity of attention remains a primary bottleneck for efficient deployment. While existing sparse attention solutions have shown promise on bidirectional models, we identify that applying these solutions to AR models leads to considerable performance degradation for two reasons: isolated consideration of chunk generation and insufficient utilization of past informative context. Motivated by these observations, we propose \\textsc{Light Forcing}, the \\textit{first} sparse attention solution tailored for AR video generation models. It incorporates a \\textit{Chunk-Aware Growth} mechanism to quantitatively estimate the contribution of each chunk, which determines their sparsity allocation. This progressive sparsity increase strategy enables the current chunk to inherit prior knowledge in earlier chunks during generation. Additionally, we introduce a \\textit{Hierarchical Sparse Attention} to capture informative historical and local context in a coarse-to-fine manner. Such two-level mask selection strategy (i.e., frame and block level) can adaptively handle diverse attention patterns. Extensive experiments demonstrate that our method outperforms existing sparse attention in quality (e.g., 84.5 on VBench) and efficiency (e.g., $1.2{\\sim}1.3\\times$ end-to-end speedup). Combined with other efficient solutions, \\textsc{Light Forcing} further achieves a $2.0{\\sim}3.0\\times$ end-to-end speedup across diverse GPUs (e.g., 27.4\\,FPS on RTX 5090 and 33.9\\,FPS on H100). Code is released via this \\href{https://github.com/chengtao-lv/LightForcing}{link}.",
+        "identifiers": [
+          "SemanticScholar:3dab083c1a34c25ec726bf726d1c73ca33cbc9cc"
+        ],
+        "semantic_scholar_id": "3dab083c1a34c25ec726bf726d1c73ca33cbc9cc",
+        "canonical_id": "arXiv:2602.04789",
+        "arxiv_id": "2602.04789",
+        "doi": "10.48550/arXiv.2602.04789",
+        "authors": [
+          "Cheng-Tao Lv",
+          "Yu-Meng Shi",
+          "Yu-Shi Huang",
+          "Rui-Hao Gong",
+          "Shen Ren",
+          "Wenya Wang"
+        ],
+        "priority": 114,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 14,
+          "citation_count": 14,
+          "total": 114,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 251,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2606.06036",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2606.06036",
+        "id:SemanticScholar:2896a4bcdae0034452477155b4fa9c6ef8fb2c89",
+        "id:arXiv:2606.06036",
+        "title:memory is reconstructed not retrieved graph memory for llm agents",
+        "url:https://arxiv.org/abs/2606.06036"
+      ],
+      "record": {
+        "title": "Memory is Reconstructed, Not Retrieved: Graph Memory for LLM Agents",
+        "source_url": "https://arxiv.org/abs/2606.06036",
+        "year": 2026,
+        "published": "2026-06-04",
+        "venue": "arXiv.org",
+        "citation_count": 14,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Despite recent progress, LLM agents still struggle with reasoning over long interaction histories. While current memory-augmented agents rely on a static retrieve-then-reason paradigm, this rigid pipeline design prevents them from dynamically adapting memory access to intermediate evidence discovered during inference. To bridge this gap, we propose MRAgent, a framework that combines an associative memory graph with an active reconstruction mechanism. We represent memory as a Cue-Tag-Content graph, where associative tags serve as semantic bridges connecting fine-grained cues to memory contents. Operating on this structure, our active reconstruction mechanism integrates LLM reasoning directly into memory access, allowing the agent to iteratively explore and prune retrieval paths based on accumulated evidence. This ensures that memory retrieval is dynamically adapted to the reasoning context while avoiding combinatorial explosion caused by unconstrained expansion. Experiments on the LoCoMo benchmark and LongMemEval benchmark demonstrate significant improvements over strong baselines (up to 23%), while substantially reducing token and runtime cost, highlighting the effectiveness of active and associative reconstruction for long-horizon memory reasoning.",
+        "identifiers": [
+          "SemanticScholar:2896a4bcdae0034452477155b4fa9c6ef8fb2c89"
+        ],
+        "semantic_scholar_id": "2896a4bcdae0034452477155b4fa9c6ef8fb2c89",
+        "canonical_id": "arXiv:2606.06036",
+        "arxiv_id": "2606.06036",
+        "doi": "10.48550/arXiv.2606.06036",
+        "authors": [
+          "Shuo Ji",
+          "Yi-Bo Li",
+          "Bryan Hooi"
+        ],
+        "priority": 114,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 14,
+          "citation_count": 14,
+          "total": 114,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 131,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2601.17982",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2601.17982",
+        "id:SemanticScholar:b43acd6a7b372be98011161cde51dbc20b65a6fb",
+        "id:arXiv:2601.17982",
+        "title:sde2 semantic exploration for reasoning under token budgets",
+        "url:https://arxiv.org/abs/2601.17982"
+      ],
+      "record": {
+        "title": "SD-E2: Semantic Exploration for Reasoning Under Token Budgets",
+        "source_url": "https://arxiv.org/abs/2601.17982",
+        "year": 2026,
+        "published": "2026-01-25",
+        "venue": "Conference of the European Chapter of the Association for Computational Linguistics",
+        "citation_count": 4,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Small language models (SLMs) struggle with complex reasoning because exploration is expensive under tight compute budgets. We introduce Semantic Diversity-Exploration-Exploitation (SD-E$^2$), a reinforcement learning framework that makes exploration explicit by optimizing semantic diversity in generated reasoning trajectories. Using a frozen sentence-embedding model, SD-E$^2$ assigns a diversity reward that captures (i) the coverage of semantically distinct solution strategies and (ii) their average pairwise dissimilarity in embedding space, rather than surface-form novelty. This diversity reward is combined with outcome correctness and solution efficiency in a z-score-normalized multi-objective objective that stabilizes training. On GSM8K, SD-E$^2$ surpasses the base Qwen2.5-3B-Instruct and strong GRPO baselines (GRPO-CFL and GRPO-CFEE) by +27.4, +5.2, and +1.5 percentage points, respectively, while discovering on average 9.8 semantically distinct strategies per question. We further improve MedMCQA to 49.64% versus 38.37% for the base model and show gains on the harder AIME benchmark (1983-2025), reaching 13.28% versus 6.74% for the base. These results indicate that rewarding semantic novelty yields a more compute-efficient exploration-exploitation signal for training reasoning-capable SLMs. By introducing cognitive adaptation-adjusting the reasoning process structure rather than per-token computation-SD-E$^2$ offers a complementary path to efficiency gains in resource-constrained models.",
+        "identifiers": [
+          "SemanticScholar:b43acd6a7b372be98011161cde51dbc20b65a6fb"
+        ],
+        "semantic_scholar_id": "b43acd6a7b372be98011161cde51dbc20b65a6fb",
+        "canonical_id": "arXiv:2601.17982",
+        "arxiv_id": "2601.17982",
+        "doi": "10.48550/arXiv.2601.17982",
+        "authors": [
+          "Kshitij Mishra",
+          "Nils Lukas",
+          "S. Lahlou"
+        ],
+        "priority": 114,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 10,
+          "citations": 4,
+          "citation_count": 4,
+          "total": 114,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 261,
+          "matched_prestigious_venue": "Association for Computational Linguistics"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2603.00573",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2603.00573",
+        "id:SemanticScholar:dfd983f11dcf6f726f979b54e911640492ad87e2",
+        "id:arXiv:2603.00573",
+        "title:comol efficient mixture of lora experts via dynamic core space merging",
+        "url:https://arxiv.org/abs/2603.00573"
+      ],
+      "record": {
+        "title": "CoMoL: Efficient Mixture of LoRA Experts via Dynamic Core Space Merging",
+        "source_url": "https://arxiv.org/abs/2603.00573",
+        "year": 2026,
+        "published": "2026-02-28",
+        "venue": "Annual Meeting of the Association for Computational Linguistics",
+        "citation_count": 4,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large language models (LLMs) achieve remarkable performance on diverse downstream and domain-specific tasks via parameter-efficient fine-tuning (PEFT). However, existing PEFT methods, particularly MoE-LoRA architectures, suffer from limited parameter efficiency and coarse-grained adaptation due to the proliferation of LoRA experts and instance-level routing. To address these issues, we propose Core Space Mixture of LoRA (\\textbf{CoMoL}), a novel MoE-LoRA framework that incorporates expert diversity, parameter efficiency, and fine-grained adaptation. Specifically, CoMoL introduces two key components: core space experts and core space routing. Core space experts store each expert in a compact core matrix, preserving diversity while controlling parameter growth. Core space routing dynamically selects and activates the appropriate core experts for each token, enabling fine-grained, input-adaptive routing. Activated core experts are then merged via a soft-merging strategy into a single core expert, which is combined with a shared LoRA to form a specialized LoRA module. Besides, the routing network is projected into the same low-rank space as the LoRA matrices, further reducing parameter overhead without compromising expressiveness. Extensive experiments demonstrate that CoMoL retains the adaptability of MoE-LoRA architectures while achieving parameter efficiency comparable to standard LoRA, consistently outperforming existing methods across multiple tasks.",
+        "identifiers": [
+          "SemanticScholar:dfd983f11dcf6f726f979b54e911640492ad87e2"
+        ],
+        "semantic_scholar_id": "dfd983f11dcf6f726f979b54e911640492ad87e2",
+        "canonical_id": "arXiv:2603.00573",
+        "arxiv_id": "2603.00573",
+        "doi": "10.48550/arXiv.2603.00573",
+        "authors": [
+          "Jie Cao",
+          "Zhen-Xuan Fan",
+          "Zhuo-Nan Wang",
+          "Tianwei Lin",
+          "Ziyuan Zhao",
+          "Rolan Yan",
+          "Wen-Qiao Zhang",
+          "Fei-Fei Shao",
+          "Hongwei Wang",
+          "Jun Xiao",
+          "Si-Liang Tang"
+        ],
+        "priority": 114,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 10,
+          "citations": 4,
+          "citation_count": 4,
+          "total": 114,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 227,
+          "matched_prestigious_venue": "Association for Computational Linguistics"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2604.05404",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2604.05404",
+        "id:SemanticScholar:574a081b7a37f107446c65be2c7712ed8d35af7f",
+        "id:arXiv:2604.05404",
+        "title:beyond accuracy unveiling inefficiency patterns in toolintegrated reasoning",
+        "url:https://arxiv.org/abs/2604.05404"
+      ],
+      "record": {
+        "title": "Beyond Accuracy: Unveiling Inefficiency Patterns in Tool-Integrated Reasoning",
+        "source_url": "https://arxiv.org/abs/2604.05404",
+        "year": 2026,
+        "published": "2026-04-07",
+        "venue": "Annual Meeting of the Association for Computational Linguistics",
+        "citation_count": 4,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "In real-world Tool-Integrated Reasoning (TIR) scenarios, where LLMs interleave reasoning with external tool calls, a major source of inefficiency is that the toolcalls create pauses between LLM requests and cause KV-Cache eviction, forcing recomputation. Also, the long, unfiltered response returned by external tools inflates the KV-Cache, so each decode step spends more time loading the growing cache and thus becomes steadily slower as context length increases. However, existing efficiency metrics like token counts and toolcall counts fail to capture the real model inference latency. To address this, we introduce PTE (Prefill Token Equivalents), a hardware-aware TIR-efficiency metric that unifies internal reasoning and external tool-use costs while explicitly accounting for non-reusable KV-Cache and long-tool-response scenarios. Validation in a high-concurrency industrial setting indicates that PTE aligns significantly better with wall-clock latency than standard token counts, while maintaining consistent efficiency rankings across diverse hardware profiles. We conduct extensive experiments across five TIR benchmarks, quantify their PTE costs, and identify four inefficiency patterns that appear in TIR. We also discover that trajectories with higher PTE costs tend to have lower reasoning correctness, indicating that simply using more tools does not improve the quality of the answer.",
+        "identifiers": [
+          "SemanticScholar:574a081b7a37f107446c65be2c7712ed8d35af7f"
+        ],
+        "semantic_scholar_id": "574a081b7a37f107446c65be2c7712ed8d35af7f",
+        "canonical_id": "arXiv:2604.05404",
+        "arxiv_id": "2604.05404",
+        "doi": "10.48550/arXiv.2604.05404",
+        "authors": [
+          "Qi-Sheng Su",
+          "Shi-Ting Huang",
+          "Zhen Fang",
+          "Zian Chen",
+          "Ze-Hui Chen",
+          "Feng Zhao"
+        ],
+        "priority": 114,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 10,
+          "citations": 4,
+          "citation_count": 4,
+          "total": 114,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 189,
+          "matched_prestigious_venue": "Association for Computational Linguistics"
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:beffd67ba6a5be9016a895829a324f3a5fa8160aa027a9b5c3b9e66409fbaef6",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}
