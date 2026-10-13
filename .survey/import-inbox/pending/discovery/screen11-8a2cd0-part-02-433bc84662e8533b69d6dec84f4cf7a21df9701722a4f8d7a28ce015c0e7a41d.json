@@ -1,0 +1,335 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-luna-primary-source-screen",
+  "run_key": "discovery-20261013-main-8a2cd0-screen-11-part-02",
+  "reference_main_sha": "8a2cd0d53c0104d2db775392134df94288344e85",
+  "record_count": 20,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2212.10017",
+      "identity_tokens": [
+        "arXiv:2212.10017"
+      ],
+      "title": "Unveiling Code Pre-Trained Models: Investigating Syntax and Semantics Capacities",
+      "reason": "コード事前学習モデルの構文・意味能力を調査する分析であり、推論システム効率への接続がない。",
+      "source_url": "https://arxiv.org/abs/2212.10017",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T00:09:35Z",
+      "last_checked_at": "2026-10-13T00:09:35Z",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2005.08025-intellicode-compose-code-generation-using-transformer.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2408.15676",
+      "identity_tokens": [
+        "arXiv:2408.15676"
+      ],
+      "title": "VoxInstruct: Expressive Human Instruction-to-Speech Generation with Unified Multilingual Codec Language Modelling",
+      "reason": "VoxInstructは音声生成品質・表現力を目指す音声応用で、一次要旨に推論効率の具体的改善はない。",
+      "source_url": "https://arxiv.org/abs/2408.15676",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T00:09:35Z",
+      "last_checked_at": "2026-10-13T00:09:35Z",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2201.12674",
+      "identity_tokens": [
+        "arXiv:2201.12674"
+      ],
+      "title": "Rewiring with Positional Encodings for Graph Neural Networks",
+      "reason": "グラフニューラルネットワーク向け位置符号化・グラフ再配線の手法であり、LLM推論・servingへの具体的接続がない。",
+      "source_url": "https://arxiv.org/abs/2201.12674",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T00:09:35Z",
+      "last_checked_at": "2026-10-13T00:09:35Z",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2309.12673",
+      "identity_tokens": [
+        "arXiv:2309.12673"
+      ],
+      "title": "On Sparse Modern Hopfield Model",
+      "reason": "Sparse Modern Hopfield Modelは疎な連想記憶モデルを提案する。疎性が計算・メモリ効率へつながる可能性はあるが、LLM推論システムへの適用は要旨で確定できない。",
+      "source_url": "https://arxiv.org/abs/2309.12673",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T00:09:35Z",
+      "last_checked_at": "2026-10-13T00:09:35Z",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md",
+        "papers/inference/99-other-inference-systems/2019-1911.02972-blockwise-self-attention-for-long-document-understanding.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2503.10270",
+      "identity_tokens": [
+        "arXiv:2503.10270"
+      ],
+      "title": "EEdit ⚡: Rethinking the Spatial and Temporal Redundancy for Efficient Image Editing",
+      "reason": "EEdit optimizes a specialized image-editing application; despite its efficiency objective, the abstract does not establish a direct connection to LLM inference systems.",
+      "source_url": "https://arxiv.org/abs/2503.10270",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T00:09:35Z",
+      "last_checked_at": "2026-10-13T00:09:35Z",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2106.15434",
+      "identity_tokens": [
+        "arXiv:2106.15434"
+      ],
+      "title": "Zoo-Tuning: Adaptive Transfer from a Zoo of Models",
+      "reason": "Zoo-Tuningはモデル群からの適応的転移・tuningを扱う学習手法で、推論時のシステム効率化ではない。",
+      "source_url": "https://arxiv.org/abs/2106.15434",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T00:09:35Z",
+      "last_checked_at": "2026-10-13T00:09:35Z",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2017-1701.06538-outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2309.10537",
+      "identity_tokens": [
+        "arXiv:2309.10537"
+      ],
+      "title": "FoleyGen: Visually-Guided Audio Generation",
+      "reason": "FoleyGenは映像から音声を生成する独立したマルチモーダル応用であり、推論効率の改善を要旨で主張しない。",
+      "source_url": "https://arxiv.org/abs/2309.10537",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T00:09:35Z",
+      "last_checked_at": "2026-10-13T00:09:35Z",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2206.04685",
+      "identity_tokens": [
+        "arXiv:2206.04685"
+      ],
+      "title": "Predictive Exit: Prediction of Fine-Grained Early Exits for Computation- and Energy-Efficient Inference",
+      "reason": "Predictive Exitは細粒度のearly exitで推論計算とエネルギーを削減することを明示する直接的な推論効率化手法。",
+      "source_url": "https://arxiv.org/abs/2206.04685",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T00:09:35Z",
+      "last_checked_at": "2026-10-13T00:09:35Z",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2011.14203-edgebert-sentence-level-energy-optimizations-for-latency-aware-multi-tas.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2205.12231",
+      "identity_tokens": [
+        "arXiv:2205.12231"
+      ],
+      "title": "ASSET",
+      "reason": "ASSETは高解像度のsemantic scene editingを行う視覚生成アプリケーションで、推論システム効率への寄与は要旨に示されない。",
+      "source_url": "https://arxiv.org/abs/2205.12231",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T00:09:35Z",
+      "last_checked_at": "2026-10-13T00:09:35Z",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md",
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md",
+        "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.3390/app12031316",
+      "identity_tokens": [
+        "DOI:10.3390/app12031316"
+      ],
+      "title": "Transformer-Based Graph Convolutional Network for Sentiment Analysis",
+      "reason": "MDPI一次要旨はTransformer/GCNをsentiment analysisへ適用し、データセット性能を比較する応用研究と説明する。",
+      "source_url": "https://www.mdpi.com/2076-3417/12/3/1316",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T00:09:35Z",
+      "last_checked_at": "2026-10-13T00:09:35Z",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2017-1701.06538-outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.3390/app15148103",
+      "identity_tokens": [
+        "DOI:10.3390/app15148103"
+      ],
+      "title": "Large Language Models: A Structured Taxonomy and Review of Challenges, Limitations, Solutions, and Future Directions",
+      "reason": "MDPI一次要旨はLLMの技術・倫理・社会的課題を広く整理するsurveyで、推論効率化技術を提案しない。",
+      "source_url": "https://www.mdpi.com/2076-3417/15/14/8103",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T00:09:41Z",
+      "last_checked_at": "2026-10-13T00:09:41Z",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2104.04473-efficient-large-scale-language-model-training-on-gpu-clusters-using-mega.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/JSTARS.2023.3316302",
+      "identity_tokens": [
+        "DOI:10.1109/JSTARS.2023.3316302"
+      ],
+      "title": "Brain-Inspired Remote Sensing Foundation Models and Open Problems: A Comprehensive Survey",
+      "reason": "題名・登録DOIはremote-sensing foundation modelsのsurveyと確認できるが、IEEE一次ページから要旨を取得できなかった。本文内容を推定せずborderlineに保持する。 一次要旨の取得不能を理由にborderlineを維持する。",
+      "source_url": "https://doi.org/10.1109/JSTARS.2023.3316302",
+      "body_check": "source_unavailable; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-10-13T00:09:41Z",
+      "last_checked_at": "2026-10-13T00:09:41Z",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1177/17562848241227031",
+      "identity_tokens": [
+        "DOI:10.1177/17562848241227031"
+      ],
+      "title": "Large language models: a primer and gastroenterology applications",
+      "reason": "SAGE一次要旨はgastroenterology向けLLMの技術紹介と医療応用・導入障壁を扱うreviewで、推論効率化は目的でない。",
+      "source_url": "https://journals.sagepub.com/doi/10.1177/17562848241227031",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T00:09:41Z",
+      "last_checked_at": "2026-10-13T00:09:41Z",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2305.17126-large-language-models-as-tool-makers.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2208.02879",
+      "identity_tokens": [
+        "arXiv:2208.02879"
+      ],
+      "title": "PointConvFormer: Revenge of the Point-based Convolution",
+      "reason": "PointConvFormerは点群認識向けの視覚アーキテクチャであり、対象システムのLLM推論効率との接続がない。",
+      "source_url": "https://arxiv.org/abs/2208.02879",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T00:09:41Z",
+      "last_checked_at": "2026-10-13T00:09:41Z",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2019-1901.10430-pay-less-attention-with-lightweight-and-dynamic-convolutions.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2410.06806",
+      "identity_tokens": [
+        "arXiv:2410.06806"
+      ],
+      "title": "QuadMamba: Learning Quadtree-based Selective Scan for Visual State Space Model",
+      "reason": "QuadMambaはquadtree scanで視覚State Space Modelを改善する画像タスク向け手法であり、LLM推論servingを扱わない。",
+      "source_url": "https://arxiv.org/abs/2410.06806",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T00:09:41Z",
+      "last_checked_at": "2026-10-13T00:09:41Z",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md",
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.08807",
+      "identity_tokens": [
+        "arXiv:2505.08807"
+      ],
+      "title": "Security of Internet of Agents: Attacks and Countermeasures",
+      "reason": "Internet of Agentsの攻撃・防御・プライバシーを整理するsecurity surveyで、推論効率化が主題でない。",
+      "source_url": "https://arxiv.org/abs/2505.08807",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T00:09:41Z",
+      "last_checked_at": "2026-10-13T00:09:41Z",
+      "linked_from": [
+        "papers/inference/08-edge-on-device-llm-systems/2024-2407.18921-mobile-edge-intelligence-for-large-language-models-a-contemporary-survey.md"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2505.13000",
+      "identity_tokens": [
+        "arXiv:2505.13000"
+      ],
+      "title": "DualCodec: A Low-Frame-Rate, Semantically-Enhanced Neural Audio Codec for Speech Generation",
+      "reason": "DualCodecは低frame-rate codecによりspeech generation効率を改善すると一次要旨で明記し、逐次生成token数を削る推論効率の機構に直接関わる。",
+      "source_url": "https://arxiv.org/abs/2505.13000",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T00:09:41Z",
+      "last_checked_at": "2026-10-13T00:09:41Z",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2410.00037-moshi-a-speech-text-foundation-model-for-real-time-dialogue.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2501.12431",
+      "identity_tokens": [
+        "arXiv:2501.12431"
+      ],
+      "title": "Modality Interactive Mixture-of-Experts for Fake News Detection",
+      "reason": "Modality Interactive MoEはfake-news detection向け応用モデルであり、LLM servingや推論効率を対象にしていない。",
+      "source_url": "https://arxiv.org/abs/2501.12431",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T00:09:41Z",
+      "last_checked_at": "2026-10-13T00:09:41Z",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2017-1701.06538-outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts.md",
+        "papers/inference/99-other-inference-systems/2022-2202.08906-st-moe-designing-stable-and-transferable-sparse-expert-models.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2306.17693",
+      "identity_tokens": [
+        "arXiv:2306.17693"
+      ],
+      "title": "Thompson sampling for improved exploration in GFlowNets",
+      "reason": "Thompson samplingをGFlowNetsの探索改善へ適用する研究で、推論システム効率との具体的接続がない。",
+      "source_url": "https://arxiv.org/abs/2306.17693",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T00:09:41Z",
+      "last_checked_at": "2026-10-13T00:09:41Z",
+      "linked_from": [
+        "papers/inference/15-inference-simulation-emulation/2017-1712.05889-ray-a-distributed-framework-for-emerging-ai-applications.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2310.13486",
+      "identity_tokens": [
+        "arXiv:2310.13486"
+      ],
+      "title": "Mind the instructions: a holistic evaluation of consistency and interactions in prompt-based learning",
+      "reason": "prompt-based learningの一貫性・相互作用を評価する研究であり、モデル能力評価が中心。",
+      "source_url": "https://arxiv.org/abs/2310.13486",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T00:09:41Z",
+      "last_checked_at": "2026-10-13T00:09:41Z",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md"
+      ]
+    }
+  ]
+}
