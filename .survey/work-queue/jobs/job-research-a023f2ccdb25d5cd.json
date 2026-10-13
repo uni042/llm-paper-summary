@@ -35,10 +35,15 @@
   "selection_reason": "The abstract proposes training-free self-speculative decoding for low-batch edge inference, using pruning and mantissa truncation for draft generation and hardware support to reduce conversion overhead; it reports up to 2.41x speedup and more tokens per memory budget.",
   "semantic_scholar_id": "9a1e65876d63ffbfaf4328cf50dc3a1a8c85168b",
   "source_url": "https://arxiv.org/abs/2605.26558",
-  "status": "ready",
+  "status": "superseded",
   "title": "Cassandra: Enabling Reasoning LLMs at Edge via Self-Speculative Decoding",
   "type": "research",
   "venue": "International Symposium on Computer Architecture",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-10-13T15:52:33+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/05-speculative-decoding-moe/2026-2605.26558-cassandra-enabling-reasoning-llms-at-edge-via-self-speculative-decoding.md",
+  "represented_canonical_id": "arXiv:2605.26558",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

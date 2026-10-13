@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-13T13:48:53+00:00",
+  "generated_at": "2026-10-13T15:52:33+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 43,
+  "count": 42,
   "entries": [
     {
       "canonical_id": "DOI:10.1145/3714983.3714987",
@@ -784,33 +784,6 @@
       "worker_run_key": "20261013-1445-scheduled-chat-45/r01"
     },
     {
-      "canonical_id": "DOI:10.18653/v1/2026.acl-long.1342",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-13T13:27:38+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 420 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 7421,
-        "body_paragraphs": 46,
-        "method_chars": 1614,
-        "method_paragraphs": 10,
-        "evaluation_chars": 420,
-        "limitation_chars": 616,
-        "insufficiency_flags": [
-          "評価説明量 420 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-2585feb004e0--libfile_e47568d139fc8191857e8a9e210117f4--2026-laco-layerwise-compensation-pruned-llm-research-20261013-1430-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-2585feb004e0--libfile_e47568d139fc8191857e8a9e210117f4--2026-laco-layerwise-compensation-pruned-llm-research-20261013-1430-scheduled-chat-30-r01.json",
-      "worker_run_key": "20261013-1430-scheduled-chat-30/r01"
-    },
-    {
       "canonical_id": "DOI:10.18653/v1/2021.naacl-main.463",
       "title": null,
       "source_url": null,
@@ -895,34 +868,6 @@
       "worker_run_key": "20261013-1400-scheduled-chat-00/r01"
     },
     {
-      "canonical_id": "arXiv:2604.10352",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-13T13:36:39+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 380 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5252,
-        "body_paragraphs": 29,
-        "method_chars": 1300,
-        "method_paragraphs": 7,
-        "evaluation_chars": 380,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "評価説明量 380 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-3b19ef370fa1--libfile_ff56743440988191b93def4c59d6a93c--2026-2604.10352-clawvm-harness-virtual-memory-research-20261013-1445-scheduled-chat-45-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-3b19ef370fa1--libfile_ff56743440988191b93def4c59d6a93c--2026-2604.10352-clawvm-harness-virtual-memory-research-20261013-1445-scheduled-chat-45-r0.json",
-      "worker_run_key": "20261013-1445-scheduled-chat-45/r01"
-    },
-    {
       "canonical_id": "DOI:10.18653/v1/2025.findings-naacl.462",
       "title": null,
       "source_url": null,
@@ -951,33 +896,6 @@
       "worker_run_key": "20261013-0730-scheduled-chat-30/r01"
     },
     {
-      "canonical_id": "arXiv:2605.26558",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-13T13:36:40+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 247 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 7407,
-        "body_paragraphs": 35,
-        "method_chars": 2775,
-        "method_paragraphs": 14,
-        "evaluation_chars": 247,
-        "limitation_chars": 743,
-        "insufficiency_flags": [
-          "評価説明量 247 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-d0bc573bc1a5--libfile_1be295ce9f2c81919cdbb12381eb9af2--2026-2605.26558-cassandra-edge-self-speculative-decoding-research-20261013-1630-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-d0bc573bc1a5--libfile_1be295ce9f2c81919cdbb12381eb9af2--2026-2605.26558-cassandra-edge-self-speculative-decoding-research-20261013-1630-scheduled.json",
-      "worker_run_key": "20261013-1630-scheduled-chat-30/r01"
-    },
-    {
       "canonical_id": "arXiv:2605.14249",
       "title": null,
       "source_url": null,
@@ -1004,6 +922,60 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-f44d6caca28e--libfile_9117b6b35de08191ba6aaa20ca4a9c34--2026-2605.14249-energylens-research-20261013-1300-scheduled-chat-00-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-f44d6caca28e--libfile_9117b6b35de08191ba6aaa20ca4a9c34--2026-2605.14249-energylens-research-20261013-1300-scheduled-chat-00-r01.json",
       "worker_run_key": "20261013-1300-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "DOI:10.18653/v1/2026.acl-long.1342",
+      "title": "LaCo: Layer-wise Compensation for Pruned Large Language Models",
+      "source_url": "https://aclanthology.org/2026.acl-long.1342.pdf",
+      "returned_at": "2026-10-13T15:49:04+00:00",
+      "return_count": 3,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 154 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 4379,
+        "body_paragraphs": 27,
+        "method_chars": 1202,
+        "method_paragraphs": 7,
+        "evaluation_chars": 154,
+        "limitation_chars": 608,
+        "insufficiency_flags": [
+          "評価説明量 154 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_100cdec9b5e88191b68288e5b2c58e76--2026-laco-layerwise-compensation-returned-repair-20261013-2357-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_100cdec9b5e88191b68288e5b2c58e76--2026-laco-layerwise-compensation-returned-repair-20261013-2357-scheduled-chat-00-r01.json",
+      "worker_run_key": "20261013-2357-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2605.15206",
+      "title": "AgentStop: Terminating Local AI Agents Early to Save Energy in Consumer Devices",
+      "source_url": "https://arxiv.org/pdf/2605.15206",
+      "returned_at": "2026-10-13T15:51:20+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 156 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5693,
+        "body_paragraphs": 36,
+        "method_chars": 1038,
+        "method_paragraphs": 7,
+        "evaluation_chars": 156,
+        "limitation_chars": 879,
+        "insufficiency_flags": [
+          "評価説明量 156 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_ae96f206c8d881918b2bae69f0af502b--2026-2605.15206-agentstop-local-agent-energy-research-20261014-0030-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_ae96f206c8d881918b2bae69f0af502b--2026-2605.15206-agentstop-local-agent-energy-research-20261014-0030-scheduled-chat-30-r01.json",
+      "worker_run_key": "20261014-0030-scheduled-chat-30/r01"
     }
   ]
 }
