@@ -1,36 +1,64 @@
 ---
-canonical_id: "DOI:10.18653/v1/2024.emnlp-main.1169"
-title: "Memorize Step by Step: Efficient Long-Context Prefilling with Incremental Memory and Decremental Chunk"
-summary: "長文入力を分割してKVキャッシュを逐次圧縮する前処理で、序盤の保持領域を小さくし徐々に増やす増分メモリと、保持領域の増大に合わせて入力塊を縮める減分チャンクを組み合わせる。固定長メモリ方式と比較し、A800上のSnapKV条件で初回トークン時間を最大1.45倍短縮し、ピークGPUメモリを最大23.3%削減する。ただし長文検索では先頭情報の消失が起こり、通常の全注意と同品質ではない。"
-list_summary: "長文前処理の圧縮KV保持量を段階的に増やし、入力塊を縮めて注意計算量とピークGPUメモリを削減する。"
+canonical_id: DOI:10.18653/v1/2024.emnlp-main.1169
+title: 'Memorize Step by Step: Efficient Long-Context Prefilling with Incremental Memory and Decremental Chunk'
+summary: 長文入力を分割してKVキャッシュを逐次圧縮する前処理で、序盤の保持領域を小さくし徐々に増やす増分メモリと、保持領域の増大に合わせて入力塊を縮める減分チャンクを組み合わせる。固定長メモリ方式と比較し、A800上のSnapKV条件で初回トークン時間を最大1.45倍短縮し、ピークGPUメモリを最大23.3%削減する。ただし長文検索では先頭情報の消失が起こり、通常の全注意と同品質ではない。
+list_summary: 長文前処理の圧縮KV保持量を段階的に増やし、入力塊を縮めて注意計算量とピークGPUメモリを削減する。
 authors:
-  - "Zhiyuan Zeng"
-  - "Qipeng Guo"
-  - "Xiaoran Liu"
-  - "Zhangyue Yin"
-  - "Wentao Shu"
-  - "Mianqiu Huang"
-  - "Bo Wang"
-  - "Yunhua Zhou"
-  - "Linlin Li"
-  - "Qun Liu"
-  - "Xipeng Qiu"
-published: "2024-11"
-publication: "EMNLP 2024, pp. 21021–21034"
-publication_type: "国際会議査読論文"
-publication_status: "published"
-source: "https://aclanthology.org/2024.emnlp-main.1169/"
+- Zhiyuan Zeng
+- Qipeng Guo
+- Xiaoran Liu
+- Zhangyue Yin
+- Wentao Shu
+- Mianqiu Huang
+- Bo Wang
+- Yunhua Zhou
+- Linlin Li
+- Qun Liu
+- Xipeng Qiu
+published: 2024-11
+publication: EMNLP 2024, pp. 21021–21034
+publication_type: 国際会議査読論文
+publication_status: published
+source: https://aclanthology.org/2024.emnlp-main.1169/
 sources:
-  - "https://aclanthology.org/2024.emnlp-main.1169/"
-  - "https://aclanthology.org/2024.emnlp-main.1169.pdf"
-implementation: "著者らはCollie上で長文の反復圧縮を実装し、StreamingLLMとSnapKVをKV削減器として組み合わせている。論文の倫理声明ではMITライセンスでコード公開予定と記載するが、確認した一次資料には特定の公式実装リポジトリURLがない。"
+- https://aclanthology.org/2024.emnlp-main.1169/
+- https://aclanthology.org/2024.emnlp-main.1169.pdf
+implementation: 著者らはCollie上で長文の反復圧縮を実装し、StreamingLLMとSnapKVをKV削減器として組み合わせている。論文の倫理声明ではMITライセンスでコード公開予定と記載するが、確認した一次資料には特定の公式実装リポジトリURLがない。
 code: null
-last_checked: "2026-10-13"
-worker_completed_at: "2026-10-13T14:36:43+09:00"
-worker_run_key: "20261013-1430-scheduled-chat-30/r01"
-lineage: "10-kv-cache-offload-recomputation"
+last_checked: '2026-10-13'
+worker_completed_at: '2026-10-13T14:36:43+09:00'
+worker_run_key: 20261013-1430-scheduled-chat-30/r01
+lineage: 10-kv-cache-offload-recomputation
 last_audited: null
 audit_version: 0
+references:
+- canonical_id: arXiv:2405.12981
+  arxiv_id: '2405.12981'
+- canonical_id: arXiv:2305.17118
+- canonical_id: arXiv:2402.06262
+- canonical_id: arXiv:2404.07143
+- canonical_id: arXiv:2305.13245
+- canonical_id: arXiv:2306.14048
+- canonical_id: arXiv:2401.18079
+- canonical_id: DOI:10.48550/arxiv.2405.04434
+- canonical_id: arXiv:2405.14366
+- canonical_id: arXiv:2205.14135
+- canonical_id: arXiv:2305.16300
+- canonical_id: arXiv:2307.06945
+- canonical_id: arXiv:2405.05254
+- canonical_id: arXiv:2310.01801
+- canonical_id: arXiv:2208.07339
+- canonical_id: arXiv:2402.02750
+- canonical_id: arXiv:2309.17453
+- canonical_id: arXiv:2404.14469
+- canonical_id: arXiv:1911.02150
+- canonical_id: arXiv:1904.10509
+- canonical_id: arXiv:2304.11062
+- canonical_id: arXiv:2007.04825
+- canonical_id: arXiv:2001.04451
+references_checked_at: '2026-10-13'
+references_source: primary-pdf-reference-section
+references_total: 1
 ---
 
 # Memorize Step by Step：増分メモリと減分チャンクによる長文前処理の効率化

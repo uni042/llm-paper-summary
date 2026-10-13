@@ -1,31 +1,45 @@
 ---
-canonical_id: "DOI:10.52202/068431-1143"
-title: "Iron: Private Inference on Transformers"
+canonical_id: DOI:10.52202/068431-1143
+title: 'Iron: Private Inference on Transformers'
 authors:
-  - "Meng Hao"
-  - "Hongwei Li"
-  - "Hanxiao Chen"
-  - "Pengzhi Xing"
-  - "Guowen Xu"
-  - "Tianwei Zhang"
-published: "2022-11"
-publication: "Advances in Neural Information Processing Systems 35 (NeurIPS 2022), pp.15718-15731"
-publication_type: "査読付き会議論文"
-publication_status: "published"
-source: "https://papers.neurips.cc/paper_files/paper/2022/file/64e2449d74f84e5b1a5c96ba7b3d308e-Paper-Conference.pdf"
+- Meng Hao
+- Hongwei Li
+- Hanxiao Chen
+- Pengzhi Xing
+- Guowen Xu
+- Tianwei Zhang
+published: 2022-11
+publication: Advances in Neural Information Processing Systems 35 (NeurIPS 2022), pp.15718-15731
+publication_type: 査読付き会議論文
+publication_status: published
+source: https://papers.neurips.cc/paper_files/paper/2022/file/64e2449d74f84e5b1a5c96ba7b3d308e-Paper-Conference.pdf
 sources:
-  - "https://papers.neurips.cc/paper_files/paper/2022/file/64e2449d74f84e5b1a5c96ba7b3d308e-Paper-Conference.pdf"
-  - "https://proceedings.neurips.cc/paper/2022/hash/64e2449d74f84e5b1a5c96ba7b3d308e-Abstract.html"
-  - "https://doi.org/10.52202/068431-1143"
+- https://papers.neurips.cc/paper_files/paper/2022/file/64e2449d74f84e5b1a5c96ba7b3d308e-Paper-Conference.pdf
+- https://proceedings.neurips.cc/paper/2022/hash/64e2449d74f84e5b1a5c96ba7b3d308e-Abstract.html
+- https://doi.org/10.52202/068431-1143
 code: null
-implementation: "C++、Microsoft SEAL、EMP Toolkit、EzPCを用いて暗号化されたTransformerの演算を実装。公開コードの正規リポジトリは本稿作成時に未確認。"
-summary: "Ironはクライアントの入力とサーバーのTransformer重みを双方に秘匿したまま推論する二者計算方式。BFV準同型暗号の多項式へ行列を密に詰める専用行列積と、Softmax・GELU・LayerNormの秘匿計算を最適化する。BERT-TinyからLargeまでのLAN想定評価でSIRNN比の通信量3.47～14.11分の1、実行時間3.30～11.83分の1を報告。一般の平文LLM推論のGPU高速化ではない。"
-list_summary: "Transformerの秘匿推論を、準同型暗号行列積の密な多項式パッキングと非線形演算の専用二者計算で高速化。BERTのLAN評価でSIRNN比3.30～11.83倍の実行時間短縮。"
-last_checked: "2026-10-13"
-worker_completed_at: "2026-10-13T13:41:45+09:00"
-worker_run_key: "20261013-1330-scheduled-chat-30/r01"
+implementation: C++、Microsoft SEAL、EMP Toolkit、EzPCを用いて暗号化されたTransformerの演算を実装。公開コードの正規リポジトリは本稿作成時に未確認。
+summary: Ironはクライアントの入力とサーバーのTransformer重みを双方に秘匿したまま推論する二者計算方式。BFV準同型暗号の多項式へ行列を密に詰める専用行列積と、Softmax・GELU・LayerNormの秘匿計算を最適化する。BERT-TinyからLargeまでのLAN想定評価でSIRNN比の通信量3.47～14.11分の1、実行時間3.30～11.83分の1を報告。一般の平文LLM推論のGPU高速化ではない。
+list_summary: Transformerの秘匿推論を、準同型暗号行列積の密な多項式パッキングと非線形演算の専用二者計算で高速化。BERTのLAN評価でSIRNN比3.30～11.83倍の実行時間短縮。
+last_checked: '2026-10-13'
+worker_completed_at: '2026-10-13T13:41:45+09:00'
+worker_run_key: 20261013-1330-scheduled-chat-30/r01
 last_audited: null
 audit_version: 0
+references:
+- canonical_id: arXiv:2201.05889
+  arxiv_id: '2201.05889'
+- canonical_id: arXiv:1606.08415
+  arxiv_id: '1606.08415'
+- canonical_id: arXiv:1908.08962
+  arxiv_id: '1908.08962'
+- canonical_id: arXiv:2101.01321
+- canonical_id: arXiv:1909.05840
+- canonical_id: arXiv:2109.04838
+- canonical_id: arXiv:1905.10650
+references_checked_at: '2026-10-13'
+references_source: primary-pdf-reference-section
+references_total: 50
 ---
 
 # Iron: Private Inference on Transformers
