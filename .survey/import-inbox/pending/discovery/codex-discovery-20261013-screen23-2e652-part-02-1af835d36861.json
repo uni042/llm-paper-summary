@@ -1,0 +1,455 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local",
+  "run_key": "codex-discovery-20261013-screen23-2e652-part-02",
+  "reference_main_sha": "2e652754bf895f3441f6e47a9105da61400788a4",
+  "record_count": 20,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2603.25406",
+      "identity_tokens": [
+        "arXiv:2603.25406"
+      ],
+      "title": "MMaDA-VLA: Large Diffusion Vision-Language-Action Model with Unified Multi-Modal Instruction and Generation",
+      "reason": "The abstract describes a diffusion VLA model and parallel refinement for robotics, but provides no concrete inference-efficiency, serving, or systems benchmark result.",
+      "source_url": "https://arxiv.org/abs/2603.25406",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T07:18:38Z",
+      "last_checked_at": "2026-10-13T07:18:38Z",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2025-2506.06295-dllm-cache-adaptive-caching.md",
+        "papers/inference/99-other-inference-systems/2025-2508.15487-dream-7b-diffusion-large-language-models.md",
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ],
+      "source_version": "v3",
+      "abstract_evidence_excerpt": "Vision-Language-Action (VLA) models map visual observations and natural-language instructions to robot actions; however, hierarchical and autoregressive paradigms often incur architectural",
+      "abstract_evidence_sha256": "45adca77651b3f7b37fcfb1a792de32edec883291feeb6266ff893e7f585dc2f"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.23994",
+      "identity_tokens": [
+        "arXiv:2603.23994"
+      ],
+      "title": "Understanding the Challenges in Iterative Generative Optimization with LLMs",
+      "reason": "The abstract analyzes design choices for iterative LLM-driven artifact optimization and agent learning loops; it does not target model inference or runtime systems.",
+      "source_url": "https://arxiv.org/abs/2603.23994",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T07:18:38Z",
+      "last_checked_at": "2026-10-13T07:18:38Z",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2025-2509.07506-astra-a-multi-agent-system-for-gpu-kernel-performance-optimization.md",
+        "papers/inference/09-kernel-runtime-compilation/2025-2509.14279-towards-robust-agentic-cuda-kernel-benchmarking-verification-and-optimization.md",
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md",
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2502.10517-kernelbench-can-llms-write-efficient-gpu-kernels.md",
+        "papers/inference/99-other-inference-systems/2025-2506.15841-mem1-learning-to-synergize-memory-and-reasoning-for-efficient-long-horiz.md"
+      ],
+      "source_version": "v2",
+      "abstract_evidence_excerpt": "Generative optimization uses large language models (LLMs) to iteratively improve artifacts (such as code, workflows or prompts) using execution feedback.",
+      "abstract_evidence_sha256": "614a2e89b15b489ac05f8e40ff85b2588700e1725090f26f9ab8a24a6aaca859"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2603.12634",
+      "identity_tokens": [
+        "arXiv:2603.12634"
+      ],
+      "title": "Spend Less, Reason Better: Budget-Aware Value Tree Search for LLM Agents",
+      "reason": "The abstract proposes a training-free inference-time tree search that prunes redundant tool calls under explicit token/tool budgets and benchmarks compute-efficient reasoning.",
+      "source_url": "https://arxiv.org/abs/2603.12634",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T07:18:38Z",
+      "last_checked_at": "2026-10-13T07:18:38Z",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2506.04301-cost-dynamic-reasoning.md",
+        "papers/inference/99-other-inference-systems/2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md",
+        "papers/inference/99-other-inference-systems/2024-2412.18547-token-budget-aware-llm-reasoning.md"
+      ],
+      "source_version": "v1",
+      "abstract_evidence_excerpt": "Test-time scaling has become a dominant paradigm for improving LLM agent reliability, yet current approaches treat compute as an abundant",
+      "abstract_evidence_sha256": "184342c8fa5e252df6b194f86fd4801da3defbce6e21465b6b6fccd72f0782cb"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2603.01236",
+      "identity_tokens": [
+        "arXiv:2603.01236"
+      ],
+      "title": "AgilePruner: An Empirical Study of Attention and Diversity for Adaptive Visual Token Pruning in Large Vision-Language Models",
+      "reason": "The abstract studies adaptive visual-token pruning in large vision-language models to reduce the computational overhead of long visual-token sequences.",
+      "source_url": "https://arxiv.org/abs/2603.01236",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T07:18:38Z",
+      "last_checked_at": "2026-10-13T07:18:38Z",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+        "papers/inference/99-other-inference-systems/2024-2403.06764-an-image-is-worth-1-2-tokens-after-layer-2-plug-and-play-inference-accel.md",
+        "papers/inference/99-other-inference-systems/2024-2403.15388-llava-prumerge-adaptive-token-reduction-for-efficient-large-multimodal-m.md",
+        "papers/inference/99-other-inference-systems/2024-2410.04417-sparsevlm-visual-token-sparsification-for-efficient-vision-language-mode.md",
+        "papers/inference/99-other-inference-systems/2024-2410.17247-pyramiddrop-accelerating-your-large-vision-language-models-via-pyramid-v.md",
+        "papers/inference/99-other-inference-systems/2025-2503.02175-divprune-diversity-based-visual-token-pruning-for-large-multimodal-model.md"
+      ],
+      "source_version": "v1",
+      "abstract_evidence_excerpt": "Large Vision-Language Models (LVLMs) have adopted visual token pruning strategies to mitigate substantial computational overhead incurred by extensive visual token",
+      "abstract_evidence_sha256": "2c5d2053f11aded2c256fb4e0830f420d18a0a78aebaeb5bcc8e2d992aa918f5"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.acalib.2026.103218",
+      "identity_tokens": [
+        "DOI:10.1016/j.acalib.2026.103218"
+      ],
+      "title": "A strategic framework for responsible GenAI adoption: Balancing sustainability and institutional risks in academic libraries",
+      "reason": "The official publisher abstract route failed. The supplied title concerns GenAI governance in academic libraries and does not establish an inference-systems connection.",
+      "source_url": "https://doi.org/10.1016/j.acalib.2026.103218",
+      "body_check": "source_unavailable; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-10-13T07:18:38Z",
+      "last_checked_at": "2026-10-13T07:18:38Z",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md",
+        "papers/inference/19-inference-evaluation-benchmarking/2023-2310.03003-from-words-to-watts-benchmarking-the-energy-costs-of-large-language-mode.md",
+        "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2023-2305.11627-llm-pruner-on-the-structural-pruning-of-large-language-models.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.array.2026.100739",
+      "identity_tokens": [
+        "DOI:10.1016/j.array.2026.100739"
+      ],
+      "title": "A systematic review of vision language models: Comprehensive analysis of architectures, applications, datasets and challenges towards robust multimodal intelligence",
+      "reason": "The publisher abstract could not be retrieved. A broad VLM architecture review might include efficient inference designs, but the title alone leaves the systems relevance uncertain.",
+      "source_url": "https://doi.org/10.1016/j.array.2026.100739",
+      "body_check": "source_unavailable; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-10-13T07:18:38Z",
+      "last_checked_at": "2026-10-13T07:18:38Z",
+      "linked_from": [
+        "papers/inference/15-inference-simulation-emulation/2024-2409.12514-tinyvla-towards-fast-data-efficient-vision-language-action-models-for-ro.md",
+        "papers/inference/99-other-inference-systems/2024-2401.15947-moe-llava-mixture-of-experts-for-large-vision-language-models.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.ese.2026.100684",
+      "identity_tokens": [
+        "DOI:10.1016/j.ese.2026.100684"
+      ],
+      "title": "Green prompt engineering for sustainable generative AI",
+      "reason": "The official publisher abstract route failed. Sustainable prompt engineering could relate to inference energy, but no primary abstract evidence was available to establish that link.",
+      "source_url": "https://doi.org/10.1016/j.ese.2026.100684",
+      "body_check": "source_unavailable; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-10-13T07:18:38Z",
+      "last_checked_at": "2026-10-13T07:18:38Z",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2412.19442-a-survey-on-large-language-model-acceleration-based-on-kv-cache-manageme.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2311.18677-splitwise-efficient-generative-llm-inference-phase-splitting.md",
+        "papers/inference/99-other-inference-systems/2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md",
+        "papers/survey/07-speculative-decoding/2024-2401.07851-speculative-decoding-survey.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.22505",
+      "identity_tokens": [
+        "arXiv:2602.22505"
+      ],
+      "title": "Sharp Convergence Rates for Masked Diffusion Models",
+      "reason": "The abstract proves convergence properties for masked diffusion samplers; it does not describe an implementation, runtime optimization, or systems evaluation.",
+      "source_url": "https://arxiv.org/abs/2602.22505",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T07:18:38Z",
+      "last_checked_at": "2026-10-13T07:18:38Z",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-0bc18ef37a7d-mask-predict-parallel-decoding-of-conditional-masked-language-models.md",
+        "papers/inference/99-other-inference-systems/2026-2406.03736-your-absorbing-discrete-diffusion-secretly-models-the-conditional-distri.md"
+      ],
+      "source_version": "v1",
+      "abstract_evidence_excerpt": "Discrete diffusion models have achieved strong empirical performance in text and other symbolic domains, with masked (absorbing-rate) variants emerging as",
+      "abstract_evidence_sha256": "b215891b46ee255ae0f0b51c8bcabe5cc7dc3520102aeee1c92e3b3a980cf55f"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2602.22663",
+      "identity_tokens": [
+        "arXiv:2602.22663"
+      ],
+      "title": "Rethinking the Practicality of Vision-language-action Model: A Comprehensive Benchmark and An Improved Baseline",
+      "reason": "The abstract introduces an improved VLA baseline designed for practical deployment on consumer-grade GPUs and benchmarks end-to-end robotic models across real and simulated environments.",
+      "source_url": "https://arxiv.org/abs/2602.22663",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T07:18:38Z",
+      "last_checked_at": "2026-10-13T07:18:38Z",
+      "linked_from": [
+        "papers/inference/15-inference-simulation-emulation/2024-2409.12514-tinyvla-towards-fast-data-efficient-vision-language-action-models-for-ro.md"
+      ],
+      "source_version": "v3",
+      "abstract_evidence_excerpt": "Vision-Language-Action (VLA) models have emerged as a generalist robotic agent. However, existing VLAs are hindered by excessive parameter scales, prohibitive",
+      "abstract_evidence_sha256": "b36c2cc677f042d03403bdf4143a284689a2b2428e8f577c03db7fb6647d2d8f"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2602.18176",
+      "identity_tokens": [
+        "arXiv:2602.18176"
+      ],
+      "title": "Improving Sampling for Masked Diffusion Models via Information Gain",
+      "reason": "The abstract proposes a training-free information-gain decoding sampler for masked diffusion models and evaluates its generation performance.",
+      "source_url": "https://arxiv.org/abs/2602.18176",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T07:18:38Z",
+      "last_checked_at": "2026-10-13T07:18:38Z",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2025-2505.22618-fast-dllm-kv-cache-parallel-decoding.md",
+        "papers/inference/99-other-inference-systems/2025-2508.15487-dream-7b-diffusion-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2025-2509.26328-fast-dllm-v2-block-diffusion-hierarchical-cache.md"
+      ],
+      "source_version": "v3",
+      "abstract_evidence_excerpt": "Masked Diffusion Models (MDMs) enable flexible decoding orders, yet existing samplers remain largely greedy, selecting locally certain tokens without accounting",
+      "abstract_evidence_sha256": "979379a61f996af7d0017a5dc4a4c9cbc1a8c847c3b667608cc43688a6db4f67"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2602.13953",
+      "identity_tokens": [
+        "arXiv:2602.13953"
+      ],
+      "title": "QuRL: Efficient Reinforcement Learning with Quantized Rollout",
+      "reason": "The abstract accelerates autoregressive LLM rollout workers in RL training with INT8/FP8 quantization, reporting 20–80% faster rollouts.",
+      "source_url": "https://arxiv.org/abs/2602.13953",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T07:18:38Z",
+      "last_checked_at": "2026-10-13T07:18:38Z",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2402.02750-kivi.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2505.24298-areal-a-large-scale-asynchronous-reinforcement-learning-system-for-langu.md",
+        "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md",
+        "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md",
+        "papers/inference/16-weight-quantization-compression/2023-2307.13304-quip-2-bit-quantization-of-large-language-models-with-guarantees.md",
+        "papers/inference/16-weight-quantization-compression/2024-2402.15319-gptvq-the-blessing-of-dimensionality-for-llm-quantization.md",
+        "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2023-2301.00774-sparsegpt-massive-language-models-can-be-accurately-pruned-in-one-shot.md",
+        "papers/inference/99-other-inference-systems/2023-2305.17888-llm-qat-data-free-quantization-aware-training-for-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2023-2308.13137-omniquant-omnidirectionally-calibrated-quantization-for-large-language-m.md",
+        "papers/inference/99-other-inference-systems/2024-2401.06118-extreme-compression-of-large-language-models-via-additive-quantization.md",
+        "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md"
+      ],
+      "source_version": "v1",
+      "abstract_evidence_excerpt": "Reinforcement learning with verifiable rewards (RLVR) has become a trending paradigm for training reasoning large language models (LLMs). However, due",
+      "abstract_evidence_sha256": "3b902671ab166e6f8607ff8414885fac41a622159a249b4ea6b9f4ba475b5817"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.48550/arXiv.2602.12262",
+      "identity_tokens": [
+        "DOI:10.48550/arXiv.2602.12262"
+      ],
+      "title": "T3D: Few-Step Diffusion Language Models via Trajectory Self-Distillation with Direct Discriminative Optimization",
+      "reason": "The abstract distills diffusion LMs for few-step decoding to reduce inference steps while preserving reasoning and code-generation performance.",
+      "source_url": "https://doi.org/10.48550/arXiv.2602.12262",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T07:18:38Z",
+      "last_checked_at": "2026-10-13T07:18:38Z",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2023-2312.11514-llm-in-a-flash-efficient-large-language-model-inference-with-limited-memory.md",
+        "papers/inference/07-kv-cache-optimization-compression/2025-2505.15781-dkv-cache-delayed-kv-diffusion-language-models.md",
+        "papers/inference/07-kv-cache-optimization-compression/2025-2505.22618-fast-dllm-kv-cache-parallel-decoding.md",
+        "papers/inference/07-kv-cache-optimization-compression/2025-2506.06295-dllm-cache-adaptive-caching.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.15234-towards-efficient-generative-large-language-model-serving-a-survey-from-.md",
+        "papers/inference/99-other-inference-systems/2025-2503.09573-block-diffusion-interpolating-between-autoregressive-and-diffusion-langu.md",
+        "papers/inference/99-other-inference-systems/2025-2505.21467-flashdlm-accelerating-diffusion-language-model-inference.md",
+        "papers/inference/99-other-inference-systems/2025-2508.09192-diffusion-llms-can-do-faster-than-ar-inference-via-discrete-diffusion-fo.md",
+        "papers/inference/99-other-inference-systems/2025-2508.15487-dream-7b-diffusion-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2025-2509.26328-fast-dllm-v2-block-diffusion-hierarchical-cache.md"
+      ],
+      "primary_title": "Few-Step Diffusion Language Models via Trajectory Self-Distillation",
+      "source_version": "v4",
+      "abstract_evidence_excerpt": "Diffusion large language models (DLLMs) have emerged as powerful generative models with the promise of fast text generation through parallel",
+      "abstract_evidence_sha256": "e85594e5a8156373bebf26e9488d4ef7f0aa51a9730859e5729b501da94eee69"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.05446",
+      "identity_tokens": [
+        "arXiv:2602.05446"
+      ],
+      "title": "DiLLS: Interactive Diagnosis of LLM-based Multi-agent Systems via Layered Summary of Agent Behaviors",
+      "reason": "The abstract presents an interactive diagnostic system to help developers understand multi-agent failures; efficiency gains concern debugging work, not model inference or serving.",
+      "source_url": "https://arxiv.org/abs/2602.05446",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T07:18:38Z",
+      "last_checked_at": "2026-10-13T07:18:38Z",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.15337-skeleton-of-thought-prompting-llms-for-efficient-parallel-generation.md"
+      ],
+      "source_version": "v1",
+      "abstract_evidence_excerpt": "Large language model (LLM)-based multi-agent systems have demonstrated impressive capabilities in handling complex tasks. However, the complexity of agentic behaviors",
+      "abstract_evidence_sha256": "fe6cd9544c29824d255fa4ba0a9b690c1a1cd271dbc0f71577dbbc5ecf0e888b"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2602.03067",
+      "identity_tokens": [
+        "arXiv:2602.03067"
+      ],
+      "title": "FlashSinkhorn: IO-Aware Entropic Optimal Transport",
+      "reason": "The abstract presents IO-aware GPU kernels with fused tiling and large measured speedups; it is a concrete GPU-kernel optimization contribution.",
+      "source_url": "https://arxiv.org/abs/2602.03067",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T07:18:38Z",
+      "last_checked_at": "2026-10-13T07:18:38Z",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2018-1805.02867-online-normalizer-calculation-for-softmax.md",
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+      ],
+      "primary_title": "FlashSinkhorn: IO-Aware Entropic Optimal Transport on GPU",
+      "source_version": "v3",
+      "abstract_evidence_excerpt": "Entropic optimal transport (EOT) via Sinkhorn iterations is widely used in modern machine learning, yet GPU solvers remain inefficient at",
+      "abstract_evidence_sha256": "cd962bebc55ac3471bb92a0de5b6d7d502693a15c8845790b27a709e097ceb87"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2602.03839",
+      "identity_tokens": [
+        "arXiv:2602.03839"
+      ],
+      "title": "Understanding and Exploiting Weight Update Sparsity for Communication-Efficient Distributed RL",
+      "reason": "The abstract reduces communication between RL trainers and inference workers by transmitting only low-precision weight updates that affect forward passes.",
+      "source_url": "https://arxiv.org/abs/2602.03839",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T07:18:38Z",
+      "last_checked_at": "2026-10-13T07:18:38Z",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md",
+        "papers/training/03-pipeline-parallel-modular-training/2024-2405.01481-nemo-aligner.md"
+      ],
+      "source_version": "v2",
+      "abstract_evidence_excerpt": "Bandwidth-constrained distributed reinforcement learning (RL) post-training of large language models is bottlenecked by two channels: weight synchronization from trainers to",
+      "abstract_evidence_sha256": "3bd6aed5c350c041bb7556225f1a4d0da013e3ab3847ddf7264b5f9fccf5f31c"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2602.01842",
+      "identity_tokens": [
+        "arXiv:2602.01842"
+      ],
+      "title": "Prism: Efficient Test-Time Scaling via Hierarchical Search and Self-Verification for Discrete Diffusion Language Models",
+      "reason": "The abstract proposes efficient test-time scaling for diffusion LMs by pruning/reallocating compute and reports a performance-efficiency trade-off with fewer function evaluations.",
+      "source_url": "https://arxiv.org/abs/2602.01842",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T07:18:38Z",
+      "last_checked_at": "2026-10-13T07:18:38Z",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2025-2505.22618-fast-dllm-kv-cache-parallel-decoding.md",
+        "papers/inference/99-other-inference-systems/2025-2508.15487-dream-7b-diffusion-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2026-2406.03736-your-absorbing-discrete-diffusion-secretly-models-the-conditional-distri.md"
+      ],
+      "source_version": "v3",
+      "abstract_evidence_excerpt": "Inference-time compute has re-emerged as a practical way to improve LLM reasoning. Most test-time scaling (TTS) algorithms rely on autoregressive",
+      "abstract_evidence_sha256": "6d56c539ddf54b1825c452c74e7d5c53a0441dc8563e01fad3d8bb8ce42f0eed"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2601.22954",
+      "identity_tokens": [
+        "arXiv:2601.22954"
+      ],
+      "title": "Residual Context Diffusion Language Models",
+      "reason": "The abstract recycles otherwise discarded token computation in diffusion LMs and reports improved generation with minimal additional compute.",
+      "source_url": "https://arxiv.org/abs/2601.22954",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T07:18:38Z",
+      "last_checked_at": "2026-10-13T07:18:38Z",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2025-2505.22618-fast-dllm-kv-cache-parallel-decoding.md",
+        "papers/inference/99-other-inference-systems/2025-2508.09192-diffusion-llms-can-do-faster-than-ar-inference-via-discrete-diffusion-fo.md",
+        "papers/inference/99-other-inference-systems/2025-2508.15487-dream-7b-diffusion-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2025-2509.26328-fast-dllm-v2-block-diffusion-hierarchical-cache.md"
+      ],
+      "source_version": "v2",
+      "abstract_evidence_excerpt": "Diffusion Large Language Models (dLLMs) have emerged as a promising alternative to purely autoregressive language models because they can decode",
+      "abstract_evidence_sha256": "6177b8db948f0f861befab707f152779861594f3c0ca7991b9599f732f5c9bc8"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2601.22069",
+      "identity_tokens": [
+        "arXiv:2601.22069"
+      ],
+      "title": "VTC-R1: Vision-Text Compression for Efficient Long-Context Reasoning",
+      "reason": "The abstract proposes vision-text compression for long-context reasoning and reports 3.4x token compression and 2.7x end-to-end inference speedup.",
+      "source_url": "https://arxiv.org/abs/2601.22069",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T07:18:38Z",
+      "last_checked_at": "2026-10-13T07:18:38Z",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2025-2504.15895-dynamic-early-exit-in-reasoning-models.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md",
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md",
+        "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md",
+        "papers/inference/99-other-inference-systems/2024-2412.11664-c3ot-generating-shorter-chain-of-thought-without-compromising-effectiven.md",
+        "papers/inference/99-other-inference-systems/2025-2502.09601-cot-valve-length-compressible-chain-of-thought-tuning.md",
+        "papers/inference/99-other-inference-systems/2025-2502.12067-tokenskip-controllable-chain-of-thought-compression-in-llms.md",
+        "papers/inference/99-other-inference-systems/2025-2504.09858-reasoning-models-can-be-effective-without-thinking.md"
+      ],
+      "source_version": "v2",
+      "abstract_evidence_excerpt": "Long-context reasoning has significantly empowered large language models (LLMs) to tackle complex tasks, yet it introduces severe efficiency bottlenecks due",
+      "abstract_evidence_sha256": "64ce9ae82486d93e208f80bc7b7bd2909c856a8d1f6225578ea737215496d2e0"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.20730",
+      "identity_tokens": [
+        "arXiv:2601.20730"
+      ],
+      "title": "AgentLongBench: A Controllable Long Benchmark For Long-Contexts Agents via Environment Rollouts",
+      "reason": "The abstract introduces a benchmark for long-context agent interaction and token demands, without proposing an inference or serving optimization.",
+      "source_url": "https://arxiv.org/abs/2601.20730",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T07:18:38Z",
+      "last_checked_at": "2026-10-13T07:18:38Z",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2410.10819-duoattention-efficient-long-context-llm-inference-with-retrieval-and-str.md",
+        "papers/inference/13-sparse-attention/2024-2412.10319-scbench-a-kv-cache-centric-analysis-of-long-context-methods.md",
+        "papers/inference/13-sparse-attention/2025-2502.11089-native-sparse-attention-hardware-aligned-and-natively-trainable-sparse-a.md",
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2502.12110-a-mem-agentic-memory-for-llm-agents.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md",
+        "papers/inference/99-other-inference-systems/2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2025-2506.15841-mem1-learning-to-synergize-memory-and-reasoning-for-efficient-long-horiz.md"
+      ],
+      "source_version": "v3",
+      "abstract_evidence_excerpt": "The evolution of Large Language Models (LLMs) into autonomous agents necessitates the management of extensive, dynamic contexts. Current benchmarks, however,",
+      "abstract_evidence_sha256": "c7452f32fe94915e06076f2e248ce1d5eb955366a70198784763394fcb8fc69a"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2601.14888",
+      "identity_tokens": [
+        "arXiv:2601.14888"
+      ],
+      "title": "What Makes Low-Bit Quantization-Aware Training Work for Reasoning LLMs? A Systematic Study",
+      "reason": "The abstract studies low-bit quantization-aware training for reasoning LLMs, explicitly motivated by slow, token-inefficient inference and post-training quantization.",
+      "source_url": "https://arxiv.org/abs/2601.14888",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T07:18:38Z",
+      "last_checked_at": "2026-10-13T07:18:38Z",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md",
+        "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md",
+        "papers/inference/16-weight-quantization-compression/2024-2402.10631-bitdistiller-unleashing-the-potential-of-sub-4-bit-llms-via-self-distill.md",
+        "papers/inference/16-weight-quantization-compression/2024-2406.01721-duquant-distributing-outliers-via-dual-transformation-makes-stronger-quantized-llms.md",
+        "papers/inference/99-other-inference-systems/2024-2402.05445-accurate-lora-finetuning-quantization-of-llms-via-information-retention.md",
+        "papers/inference/99-other-inference-systems/2024-2404.00456-quarot-outlier-free-4-bit-inference-in-rotated-llms.md"
+      ],
+      "source_version": "v1",
+      "abstract_evidence_excerpt": "Reasoning models excel at complex tasks such as coding and mathematics, yet their inference is often slow and token-inefficient. To",
+      "abstract_evidence_sha256": "b555f1ccfbc3c25886193aedeb402bbb65f1617902b172cacd6ebc95d2feac9b"
+    }
+  ]
+}
