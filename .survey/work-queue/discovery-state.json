@@ -1,8 +1,8 @@
 {
   "schema_version": 3,
-  "updated_at": "2026-10-13T09:44:54+00:00",
-  "last_run_key": "library-import-3fa24a4824b0",
-  "last_round": "libimp-3fa24a4824b07236-pre01",
+  "updated_at": "2026-10-13T17:11:26+00:00",
+  "last_run_key": "library-import-e790c6cb87d1",
+  "last_round": "libimp-e790c6cb87d1b369-pre01",
   "paper_stock_zero_count": 3,
   "consecutive_empty_rounds": 0,
   "last_empty_round_reason": null,
@@ -10,79 +10,6 @@
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
   "history": [
-    {
-      "round_identity": "precheck:20260924T070008Z-scheduled-chat-00-a3f91c-take1",
-      "precheck_request_id": "20260924T070008Z-scheduled-chat-00-a3f91c-take1",
-      "run_key": "scheduled-chat-00-20260924T070008Z-a3f91c",
-      "round": "20260924T070008Z-scheduled-chat-00-a3f91c-take1",
-      "axis": "backward references of DistServe disaggregated prefill-decode LLM serving",
-      "query_summary": "DistServeの正規schema v3後方引用20件を軽量評価し、LLM/Transformer servingの実装・scheduler・SLO系統へ直接接続する強候補のみ採用。",
-      "provider": "semantic_scholar",
-      "source_url": "https://api.semanticscholar.org/graph/v1/paper/ARXIV:2401.09670/references?fields=paperId,title,abstract,year,venue,externalIds,url,publicationDate&limit=100",
-      "citation_direction": "backward",
-      "seed_canonical_id": "arXiv:2401.09670",
-      "preload_id": "preload-711f4ea295ec7a7fdcd5",
-      "candidate_count": 20,
-      "duplicate_filtered_count": 0,
-      "final_duplicate_filtered_count": 0,
-      "accepted_count": 2,
-      "accepted_canonical_ids": [
-        "arXiv:2010.05680",
-        "arXiv:2006.02464"
-      ],
-      "duplicate_canonical_ids": [],
-      "next_axis_hint": null,
-      "source_submission": "work-queue/submissions/20260924T070200Z-scheduled-chat-00-a3f91c-r1.json",
-      "source_submissions": [
-        "work-queue/submissions/20260924T070200Z-scheduled-chat-00-a3f91c-r1.json"
-      ],
-      "round_submission_indices": [
-        1
-      ],
-      "round_submission_count": 1,
-      "round_accounted": true,
-      "novel_candidate_count": 20,
-      "post_final_dedupe_count": 20,
-      "duplicate_ratio": 0.0,
-      "final_duplicate_ratio": 0.0,
-      "round_complete": true
-    },
-    {
-      "round_identity": "precheck:20260924T070300Z-scheduled-chat-00-a3f91c-r2",
-      "precheck_request_id": "20260924T070300Z-scheduled-chat-00-a3f91c-r2",
-      "run_key": "scheduled-chat-00-20260924T070008Z-a3f91c",
-      "round": "20260924T070300Z-scheduled-chat-00-a3f91c-r2",
-      "axis": "forward citations of FlexGen offload and hierarchical-memory LLM inference",
-      "query_summary": "FlexGenの前方引用を正規schema v3で200件までページ送りし、未収録20件を軽量評価。直近のLLM systemsとしてweight-transfer bottleneckを実装評価した強候補を採用。",
-      "provider": "semantic_scholar",
-      "source_url": "https://api.semanticscholar.org/graph/v1/paper/ARXIV:2303.06865/citations?fields=paperId,title,abstract,year,venue,externalIds,url,publicationDate&limit=100",
-      "citation_direction": "forward",
-      "seed_canonical_id": "arXiv:2303.06865",
-      "preload_id": null,
-      "candidate_count": 20,
-      "duplicate_filtered_count": 20,
-      "final_duplicate_filtered_count": 0,
-      "accepted_count": 0,
-      "accepted_canonical_ids": [
-        "arXiv:2609.25442"
-      ],
-      "duplicate_canonical_ids": [],
-      "next_axis_hint": null,
-      "source_submission": "work-queue/submissions/20260924T070400Z-scheduled-chat-00-a3f91c-r2.json",
-      "source_submissions": [
-        "work-queue/submissions/20260924T070400Z-scheduled-chat-00-a3f91c-r2.json"
-      ],
-      "round_submission_indices": [
-        1
-      ],
-      "round_submission_count": 1,
-      "round_accounted": true,
-      "novel_candidate_count": 0,
-      "post_final_dedupe_count": 0,
-      "duplicate_ratio": 1.0,
-      "final_duplicate_ratio": 0.0,
-      "round_complete": true
-    },
     {
       "round_identity": "precheck:20260924T070530Z-scheduled-chat-00-a3f91c-r3",
       "precheck_request_id": "20260924T070530Z-scheduled-chat-00-a3f91c-r3",
@@ -13526,6 +13453,76 @@
       "duplicate_ratio": 0.0,
       "final_duplicate_ratio": 0.0,
       "round_complete": true
+    },
+    {
+      "round_identity": "precheck:libimp-97be7be746319a4a-pre01",
+      "precheck_request_id": "libimp-97be7be746319a4a-pre01",
+      "run_key": "library-import-97be7be74631",
+      "round": "libimp-97be7be746319a4a-pre01",
+      "axis": "library-candidate-intake",
+      "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。",
+      "provider": "candidate_id_lookup",
+      "source_url": "identifier://approved-public-apis",
+      "citation_direction": null,
+      "seed_canonical_id": null,
+      "preload_id": null,
+      "candidate_count": 6,
+      "duplicate_filtered_count": 5,
+      "final_duplicate_filtered_count": 0,
+      "accepted_count": 1,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": null,
+      "source_submission": "work-queue/submissions/libimp-97be7be746319a4a-pre01-sub01.json",
+      "source_submissions": [
+        "work-queue/submissions/libimp-97be7be746319a4a-pre01-sub01.json",
+        "work-queue/submissions/libimp-97be7be746319a4a-pre01-sub02.json"
+      ],
+      "round_submission_indices": [
+        1,
+        2
+      ],
+      "round_submission_count": 2,
+      "round_accounted": true,
+      "novel_candidate_count": 1,
+      "post_final_dedupe_count": 1,
+      "duplicate_ratio": 0.8333333333333334,
+      "final_duplicate_ratio": 0.0,
+      "round_complete": true
+    },
+    {
+      "round_identity": "precheck:libimp-e790c6cb87d1b369-pre01",
+      "precheck_request_id": "libimp-e790c6cb87d1b369-pre01",
+      "run_key": "library-import-e790c6cb87d1",
+      "round": "libimp-e790c6cb87d1b369-pre01",
+      "axis": "library-candidate-intake",
+      "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。",
+      "provider": "candidate_id_lookup",
+      "source_url": "identifier://approved-public-apis",
+      "citation_direction": null,
+      "seed_canonical_id": null,
+      "preload_id": null,
+      "candidate_count": 3,
+      "duplicate_filtered_count": 0,
+      "final_duplicate_filtered_count": 0,
+      "accepted_count": 3,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": null,
+      "source_submission": "work-queue/submissions/libimp-e790c6cb87d1b369-pre01-sub01.json",
+      "source_submissions": [
+        "work-queue/submissions/libimp-e790c6cb87d1b369-pre01-sub01.json"
+      ],
+      "round_submission_indices": [
+        1
+      ],
+      "round_submission_count": 1,
+      "round_accounted": true,
+      "novel_candidate_count": 3,
+      "post_final_dedupe_count": 3,
+      "duplicate_ratio": 0.0,
+      "final_duplicate_ratio": 0.0,
+      "round_complete": true
     }
   ],
   "axes": {
@@ -21897,16 +21894,16 @@
       "next_axis_hint": "今回runで新着、storage/hierarchical memory、MoE、network/runtime、scheduling/kernel、agent/multimodal、speculative/length predictionを横断済み。次回は新着差分とforward/backward citationから再開する"
     },
     "library-candidate-intake": {
-      "last_run_key": "library-import-3fa24a4824b0",
-      "rounds": 287,
-      "candidate_count": 1320,
-      "duplicate_filtered_count": 685,
-      "novel_candidate_count": 635,
+      "last_run_key": "library-import-e790c6cb87d1",
+      "rounds": 289,
+      "candidate_count": 1329,
+      "duplicate_filtered_count": 690,
+      "novel_candidate_count": 639,
       "final_duplicate_filtered_count": 5,
-      "post_final_dedupe_count": 630,
-      "accepted_count": 630,
-      "duplicate_ratio": 0.5189393939393939,
-      "final_duplicate_ratio": 0.007874015748031496,
+      "post_final_dedupe_count": 634,
+      "accepted_count": 634,
+      "duplicate_ratio": 0.5191873589164786,
+      "final_duplicate_ratio": 0.00782472613458529,
       "next_axis_hint": null
     },
     "explicit-library-accept": {
