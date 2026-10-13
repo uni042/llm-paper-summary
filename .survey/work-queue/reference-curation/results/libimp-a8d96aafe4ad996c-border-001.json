@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a8d96aafe4ad996c-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2011.00241",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2011.00241",
+    "identity_tokens": [
+      "arXiv:2011.00241"
+    ],
+    "reason": "150件超の汎用DNN枝刈り研究を大きさ・クラスタリング・感度に分類するサーベイ。AlexNet、ResNet、DenseNet、VGG等が中心で、LLM学習・推論システム固有のメモリ階層やGPU実装の比較ではない。関連技術の背景文献として保留。",
+    "first_checked_at": "2026-10-13T16:47:54+00:00",
+    "last_checked_at": "2026-10-13T16:47:54+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Methods for Pruning Deep Neural Networks"
+  },
+  "processed_at": "2026-10-13T16:47:54+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a8d96aafe4ad",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

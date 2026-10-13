@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-13T16:45:36+00:00",
-  "record_count": 4848,
+  "updated_at": "2026-10-13T16:47:54+00:00",
+  "record_count": 4849,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -74230,6 +74230,19 @@
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "VideoTree: Adaptive Tree-based Video Representation for LLM Reasoning on Long Videos"
+    },
+    "arXiv:2011.00241": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2011.00241",
+      "identity_tokens": [
+        "arXiv:2011.00241"
+      ],
+      "reason": "150件超の汎用DNN枝刈り研究を大きさ・クラスタリング・感度に分類するサーベイ。AlexNet、ResNet、DenseNet、VGG等が中心で、LLM学習・推論システム固有のメモリ階層やGPU実装の比較ではない。関連技術の背景文献として保留。",
+      "first_checked_at": "2026-10-13T16:47:54+00:00",
+      "last_checked_at": "2026-10-13T16:47:54+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Methods for Pruning Deep Neural Networks"
     }
   }
 }
