@@ -1,7 +1,7 @@
 # Scheduled worker :30 worklist
 
 Worker: `scheduled-chat-30`  
-Generated: `2026-10-13T13:57:41+00:00`
+Generated: `2026-10-13T14:35:39+00:00`
 
 このページはこのworker専用の再構築可能な選択索引です。他のScheduled worker用ページとは候補を重複させません（十分な在庫がある場合）。
 正本は `.survey/work-queue/jobs/`、claim、論文実体、relevance ledgerです。処理直前に最新正本を再確認してください。
@@ -627,7 +627,7 @@ ready総数: **1150** / 未claim総数: **1149** / このworker向け: **200**
 | 400 | 6 | 6 | 9 | arXiv:2504.06323 | Mosaic: Composite Projection Pruning for Resource-efficient LLMs | 2025-04-08 | Future generations computer systems | 6 | 9 | Weight Quantization / Compression, inference-systems, 注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層, 重み専用量子化 / 推論カーネル | [source](https://arxiv.org/abs/2504.06323) |
 | 401 | 48 | 6 | 9 | DOI:10.52202/068431-2026 | Improving Transformer with an Admixture of Attention Heads | 2022 | Neural Information Processing Systems | 38 | 9 | inference-systems, sparse attention / long-context Transformer | [source](https://doi.org/10.52202/068431-2026) |
 | 402 | 10 | 6 | 9 | arXiv:2608.24973 | Resource-Efficient Pruning for Transformer via Low-Rank Importance Estimation | 2026-08-25 | IEEE Transactions on Emerging Topics in Computational Intelligence | 0 | 9 | Inference / Structured Model Compression and Pruning, inference-systems, 重み専用量子化 / 推論カーネル | [source](https://arxiv.org/abs/2608.24973) |
-| 403 | 1 | 6 | 9 | arXiv:2505.00624 | FineScope : Precision Pruning for Domain-Specialized Large Language Models Using SAE-Guided Self-Data Cultivation | 2025-05-01 | arXiv.org | 1 | 9 | Inference / Structured Model Compression and Pruning, inference-systems, post-training quantization / second-order compression / weight-only LLM inference | [source](https://doi.org/10.48550/arXiv.2505.00624) |
+| 403 | 2 | 6 | 9 | arXiv:2510.23652 | The Structural Scalpel: Automated Contiguous Layer Pruning for Large Language Models | 2025-10-25 | arXiv.org | 2 | 9 | arXiv:2405.16406のICLR 2025採録版。, inference-systems, post-training quantization / second-order compression / weight-only LLM inference | [source](https://arxiv.org/abs/2510.23652) |
 | 404 | 44 | 6 | 9 | SemanticScholar:5271353b3eeccd342536818b59105d04d70942da | Accelerating the Training of Large Language Models using Efficient Activation Rematerialization and Optimal Hybrid Parallelism | 2024 | USENIX Annual Technical Conference | 34 | 9 | Training Offload / Memory Systems, 大規模モデル学習／分散学習メモリ最適化／DeepSpeed, 注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層 | [source](https://www.semanticscholar.org/paper/5271353b3eeccd342536818b59105d04d70942da) |
 | 405 | 114 | 6 | 9 | arXiv:2512.14256 | TEMP: A Memory Efficient Physical-Aware Tensor Partition-Mapping Framework on Wafer-Scale Chips | 2025-12-16 | International Symposium on High-Performance Computer Architecture | 4 | 9 | Ring Attention / sequence parallelism / exact distributed attention, distributed attention / sequence parallelism / blockwise attention / long-context transformers, serving-scheduling, 分散学習 / 混合専門家モデル / 自動シャーディング / SPMD, 注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層 | [source](https://arxiv.org/abs/2512.14256) |
 | 406 | 10 | 6 | 9 | arXiv:2609.01962 | Post-Training Ternarization of Qwen3-4B Capability, Effective Bit Budget, Storage Compression, and Deployment | 2026-09-02 |  | 0 | 9 | post-training quantization / second-order compression / weight-only LLM inference, 重み専用量子化 / 推論カーネル | [source](https://arxiv.org/abs/2609.01962) |
