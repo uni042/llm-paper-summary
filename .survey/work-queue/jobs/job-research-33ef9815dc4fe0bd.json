@@ -35,10 +35,15 @@
   "selection_reason": "CUREはblock-parallel draftの低信頼位置だけに代替tokenのrepair枝を追加し、target modelが木全体を一括検証した後、repair枝が勝てばdraft KV cacheを再同期する推論時のspeculative-decoding手法である。本文のQwen3-8B評価ではsingle-path parallel draftに対しaccepted lengthがコード課題で4.2–7.5%増え、target-only autoregressive decoding比で2.66–3.49倍の速度を報告しており、LLM推論効率化に該当する。ただしCUREのTPOTはparallel draft比で1.40–1.61倍高く、追加検証計算が並列draft自体を速くするわけではない。単一GPU・greedy・限定ベンチマークでの報告として扱う。",
   "semantic_scholar_id": "53c9c0974ac55525e885c05c26677b5a10024542",
   "source_url": "https://arxiv.org/abs/2608.00531",
-  "status": "ready",
+  "status": "superseded",
   "title": "CURE: Local Uncertainty Repair for Block-Parallel Speculative Decoding",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-10-13T13:28:53+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/05-speculative-decoding-moe/2026-2608.00531-cure-local-uncertainty-repair-for-block-parallel-speculative-decoding.md",
+  "represented_canonical_id": "arXiv:2608.00531",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

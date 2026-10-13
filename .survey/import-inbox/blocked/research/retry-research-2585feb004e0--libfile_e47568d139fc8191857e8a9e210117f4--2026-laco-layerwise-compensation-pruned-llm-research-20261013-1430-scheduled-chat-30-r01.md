@@ -24,6 +24,8 @@ last_checked: "2026-10-13"
 worker_completed_at: "2026-10-13T14:37:30+09:00"
 worker_run_key: "20261013-1430-scheduled-chat-30/r01"
 lineage: "16-weight-quantization-compression"
+last_audited: null
+audit_version: 0
 ---
 
 # LaCo：枝刈り済み大規模言語モデルを層別に補償する低メモリ回復手法
