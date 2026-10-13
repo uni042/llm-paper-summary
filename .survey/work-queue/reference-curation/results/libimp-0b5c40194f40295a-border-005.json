@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-0b5c40194f40295a-border-005",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1145/3787470.3787478",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1145/3787470.3787478",
+    "identity_tokens": [
+      "DOI:10.1145/3787470.3787478",
+      "SemanticScholar:6b594cfa9ab60a10cd47c4a196e08cef60b30822"
+    ],
+    "reason": "The survey explicitly discusses RAG retrieval latency and agent tool use, but its taxonomy and synthesis do not provide a concrete serving, caching, or inference-cost mechanism to evaluate.",
+    "first_checked_at": "2026-10-13T09:35:39+00:00",
+    "last_checked_at": "2026-10-13T09:35:39+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md",
+      "papers/inference/99-other-inference-systems/2024-2404.12457-ragcache-efficient-knowledge-caching-for-retrieval-augmented-generation.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Unifying Knowledge in Agentic LLMs: Concepts, Methods, and Recent Advancements"
+  },
+  "processed_at": "2026-10-13T09:35:40+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-0b5c40194f40",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-13T08:54:01+00:00",
-  "record_count": 4841,
+  "updated_at": "2026-10-13T09:35:44+00:00",
+  "record_count": 4847,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -74079,6 +74079,116 @@
       ],
       "borderline_recheck_count": 0,
       "title": "CacheRoute: KV-Cache-Aware Routing for LLM Backend Services on Kubernetes"
+    },
+    "DOI:10.1145/3787470.3787478": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3787470.3787478",
+      "identity_tokens": [
+        "DOI:10.1145/3787470.3787478",
+        "SemanticScholar:6b594cfa9ab60a10cd47c4a196e08cef60b30822"
+      ],
+      "reason": "The survey explicitly discusses RAG retrieval latency and agent tool use, but its taxonomy and synthesis do not provide a concrete serving, caching, or inference-cost mechanism to evaluate.",
+      "first_checked_at": "2026-10-13T09:35:39+00:00",
+      "last_checked_at": "2026-10-13T09:35:39+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md",
+        "papers/inference/99-other-inference-systems/2024-2404.12457-ragcache-efficient-knowledge-caching-for-retrieval-augmented-generation.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Unifying Knowledge in Agentic LLMs: Concepts, Methods, and Recent Advancements"
+    },
+    "arXiv:2512.17011": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2512.17011",
+      "identity_tokens": [
+        "SemanticScholar:88d45265e01b179314d3d2aa7c206087682e3efd",
+        "arXiv:2512.17011"
+      ],
+      "reason": "The paper slims and quantizes an equivariant jet-tagging transformer to save compute in particle-physics analysis; the hardware/model-compression connection is plausible, but the abstract does not establish transfer to LLM/VLM inference.",
+      "first_checked_at": "2026-10-13T09:35:40+00:00",
+      "last_checked_at": "2026-10-13T09:35:40+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2023-2310.16836-llm-fp4-4-bit-floating-point-quantized-transformers.md",
+        "papers/inference/99-other-inference-systems/2024-2402.17764-the-era-of-1-bit-llms-all-large-language-models-are-in-1-58-bits.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Economical Jet Taggers -- Equivariant, Slim, and Quantized"
+    },
+    "arXiv:2606.01435": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.01435",
+      "identity_tokens": [
+        "SemanticScholar:a39c7c5a1d6ec972147ba96752b65fd75a76cd0d",
+        "arXiv:2606.01435"
+      ],
+      "reason": "The two-stage evidence-extraction/policy-execution interface improves long-context memory-answer accuracy, but its reported contribution is reliability/accuracy and does not show lower cache use, latency, or compute.",
+      "first_checked_at": "2026-10-13T09:35:40+00:00",
+      "last_checked_at": "2026-10-13T09:35:40+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2501.13956-zep-a-temporal-knowledge-graph-architecture-for-agent-memory.md",
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md",
+        "papers/inference/99-other-inference-systems/2023-2310.04408-recomp-improving-retrieval-augmented-lms-with-compression-and-selective-.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Reliable Post-Retrieval Assembly for Agent Memory: Separating Evidence Extraction from Policy Execution"
+    },
+    "arXiv:2605.22786": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.22786",
+      "identity_tokens": [
+        "SemanticScholar:8a01248caa80174984a6e123597143030286fef7",
+        "arXiv:2605.22786"
+      ],
+      "reason": "LCGuard transforms shared KV representations to prevent sensitive-input reconstruction while preserving task quality; this is a security layer for efficient latent communication, but the abstract gives no memory, bandwidth, or latency gain.",
+      "first_checked_at": "2026-10-13T09:35:43+00:00",
+      "last_checked_at": "2026-10-13T09:35:43+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2025-2502.03805-criticalkv-optimizing-kv-cache-eviction-from-an-output-perturbation-perspective.md",
+        "papers/inference/07-kv-cache-optimization-compression/2025-2510.03215-cache-to-cache-direct-semantic-communication-between-large-language-mode.md",
+        "papers/inference/10-kv-cache-offload-recomputation/2026-2604.03143-tokendance-collective-kv-sharing-multi-agent.md",
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2507.07400-kvflow.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "LCGuard: Latent Communication Guard for Safe KV Sharing in Multi-Agent Systems"
+    },
+    "arXiv:2605.15514": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.15514",
+      "identity_tokens": [
+        "SemanticScholar:ac4103c097e74e90c5a49266907229db5913069d",
+        "arXiv:2605.15514"
+      ],
+      "reason": "The paper proves long-context RoPE failures and analyzes base scaling, informing positional-encoding design; it proposes no replacement mechanism or measured inference-efficiency improvement.",
+      "first_checked_at": "2026-10-13T09:35:44+00:00",
+      "last_checked_at": "2026-10-13T09:35:44+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md",
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+        "papers/inference/99-other-inference-systems/2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2023-2310.01889-ring-attention-blockwise-transformers.md",
+        "papers/inference/99-other-inference-systems/2024-2312.04455-fortify-the-shortest-stave-in-attention-enhancing-context-awareness-of-l.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "RoPE Distinguishes Neither Positions Nor Tokens in Long Contexts, Provably"
+    },
+    "DOI:10.1007/s11831-026-10546-2": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1007/s11831-026-10546-2",
+      "identity_tokens": [
+        "DOI:10.1007/s11831-026-10546-2",
+        "SemanticScholar:aa3a63a6e320f47e9c68bf234bbfcd1dd065a42b"
+      ],
+      "reason": "The Springer review covers low-power hardware, compression, edge computing, and energy metrics, but it is a broad synthesis rather than a concrete LLM-serving or runtime mechanism.",
+      "first_checked_at": "2026-10-13T09:35:44+00:00",
+      "last_checked_at": "2026-10-13T09:35:44+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2408.05235-slo-aware-gpu-frequency-scaling-for-energy-efficient-llm-inference-serving.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-778bb2a31fb4-throttll-em-predictive-gpu-throttling-for-energy-efficient-llm-inference.md",
+        "papers/inference/99-other-inference-systems/2023-2301.00774-sparsegpt-massive-language-models-can-be-accurately-pruned-in-one-shot.md",
+        "papers/inference/99-other-inference-systems/2025-2504.17674-energy-considerations-of-large-language-model-inference-and-efficiency-o.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Green Artificial Intelligence: A Comprehensive Review of Metrics, Tools, Challenges, Trends, and Future Prospects"
     }
   }
 }
