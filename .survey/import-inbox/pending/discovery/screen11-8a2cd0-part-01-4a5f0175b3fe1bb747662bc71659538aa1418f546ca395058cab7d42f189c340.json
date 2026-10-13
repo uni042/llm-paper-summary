@@ -1,0 +1,340 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-luna-primary-source-screen",
+  "run_key": "discovery-20261013-main-8a2cd0-screen-11-part-01",
+  "reference_main_sha": "8a2cd0d53c0104d2db775392134df94288344e85",
+  "record_count": 20,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2412.15691",
+      "identity_tokens": [
+        "arXiv:2412.15691"
+      ],
+      "title": "Exploiting Multimodal Spatial-temporal Patterns for Video Object Tracking",
+      "reason": "STTrackはマルチモーダル動画の対象追跡性能を改善する視覚タスク向け手法で、LLM推論・配信効率への接続は要旨にない。",
+      "source_url": "https://arxiv.org/abs/2412.15691",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T00:09:23Z",
+      "last_checked_at": "2026-10-13T00:09:23Z",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2110.02797",
+      "identity_tokens": [
+        "arXiv:2110.02797"
+      ],
+      "title": "Adversarial Robustness Comparison of Vision Transformer and MLP-Mixer to CNNs",
+      "reason": "対象はViT/MLP-MixerとCNNの敵対的頑健性比較であり、攻撃耐性評価が中心で推論効率を扱わない。",
+      "source_url": "https://arxiv.org/abs/2110.02797",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T00:09:23Z",
+      "last_checked_at": "2026-10-13T00:09:23Z",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2504.09795",
+      "identity_tokens": [
+        "arXiv:2504.09795"
+      ],
+      "title": "VDocRAG: Retrieval-Augmented Generation over Visually-Rich Documents",
+      "reason": "VDocRAGは視覚文書のRAG性能を改善し、情報をdense token表現へ圧縮するが、推論コスト・レイテンシへの効果は要旨で示されない。",
+      "source_url": "https://arxiv.org/abs/2504.09795",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T00:09:23Z",
+      "last_checked_at": "2026-10-13T00:09:23Z",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+        "papers/inference/99-other-inference-systems/2023-2212.10511-when-not-to-trust-language-models-investigating-effectiveness-of-paramet.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2506.00045",
+      "identity_tokens": [
+        "arXiv:2506.00045"
+      ],
+      "title": "ACE-Step: A Step Towards Music Generation Foundation Model",
+      "reason": "ACE-Step reports fast music generation, but this is a standalone music-generation application; the abstract gives no direct connection to LLM inference infrastructure.",
+      "source_url": "https://arxiv.org/abs/2506.00045",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T00:09:23Z",
+      "last_checked_at": "2026-10-13T00:09:23Z",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2503.20215-qwen2-5-omni-technical-report.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2303.14651",
+      "identity_tokens": [
+        "arXiv:2303.14651"
+      ],
+      "title": "You Only Segment Once: Towards Real-Time Panoptic Segmentation",
+      "reason": "YOSOはリアルタイムpanoptic segmentation向け視覚アプリケーションで、対象技術であるLLM推論システムとの直接接続がない。",
+      "source_url": "https://arxiv.org/abs/2303.14651",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T00:09:23Z",
+      "last_checked_at": "2026-10-13T00:09:23Z",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2019-1901.10430-pay-less-attention-with-lightweight-and-dynamic-convolutions.md",
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md",
+        "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md",
+        "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/TNSRE.2023.3299355",
+      "identity_tokens": [
+        "DOI:10.1109/TNSRE.2023.3299355"
+      ],
+      "title": "A Temporal Dependency Learning CNN With Attention Mechanism for MI-EEG Decoding",
+      "reason": "題名からMI-EEG/BCI向けデコード手法と同定でき、対象外の可能性が高い。IEEE一次ページでは題名を確認したが要旨を取得できず、技術内容は未確認。 一次要旨の取得不能を理由にborderlineを維持する。",
+      "source_url": "https://ieeexplore.ieee.org/abstract/document/10196350",
+      "body_check": "source_unavailable; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-10-13T00:09:23Z",
+      "last_checked_at": "2026-10-13T00:09:23Z",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2019-1901.10430-pay-less-attention-with-lightweight-and-dynamic-convolutions.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2503.01183",
+      "identity_tokens": [
+        "arXiv:2503.01183"
+      ],
+      "title": "DiffRhythm: Blazingly Fast and Embarrassingly Simple End-to-End Full-Length Song Generation with Latent Diffusion",
+      "reason": "DiffRhythm accelerates full-length music synthesis as an independent audio-generation application; no direct LLM inference/serving connection is established.",
+      "source_url": "https://arxiv.org/abs/2503.01183",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T00:09:23Z",
+      "last_checked_at": "2026-10-13T00:09:23Z",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/TPDS.2021.3138825",
+      "identity_tokens": [
+        "DOI:10.1109/TPDS.2021.3138825"
+      ],
+      "title": "Liquid: Intelligent Resource Estimation and Network-Efficient Scheduling for Deep Learning Jobs on Distributed GPU Clusters",
+      "reason": "題名は分散GPUクラスタ上のdeep-learning job向け資源推定・スケジューリングを示す。対象外の学習ジョブ管理と思われるが、IEEE一次要旨へ到達できず内容を確認できないため、要旨取得不能としてborderlineに保持する。",
+      "source_url": "https://doi.org/10.1109/TPDS.2021.3138825",
+      "body_check": "source_unavailable; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-10-13T00:09:23Z",
+      "last_checked_at": "2026-10-13T00:09:23Z",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2020-2008.12260-pollux-co-adaptive-cluster-scheduling-for-goodput-optimized-deep-learnin.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2506.10943",
+      "identity_tokens": [
+        "arXiv:2506.10943"
+      ],
+      "title": "Self-Adapting Language Models",
+      "reason": "Self-Adapting Language Modelsはモデルのtest-time適応を扱い推論段階に関係するが、計算量・レイテンシ削減への貢献は要旨から確定できない。",
+      "source_url": "https://arxiv.org/abs/2506.10943",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T00:09:23Z",
+      "last_checked_at": "2026-10-13T00:09:23Z",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1901.02244",
+      "identity_tokens": [
+        "arXiv:1901.02244"
+      ],
+      "title": "Crossbow: Scaling Deep Learning with Small Batch Sizes on Multi-GPU Servers",
+      "reason": "Crossbowは小batchを用いたmulti-GPUでの深層学習スケーリングを扱う学習システムである。",
+      "source_url": "https://arxiv.org/abs/1901.02244",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T00:09:23Z",
+      "last_checked_at": "2026-10-13T00:09:23Z",
+      "linked_from": [
+        "papers/inference/15-inference-simulation-emulation/2017-1712.05889-ray-a-distributed-framework-for-emerging-ai-applications.md",
+        "papers/inference/99-other-inference-systems/2018-1802.05799-horovod-fast-and-easy-distributed-deep-learning-in-tensorflow.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2103.16748",
+      "identity_tokens": [
+        "arXiv:2103.16748"
+      ],
+      "title": "Dual Contrastive Loss and Attention for GANs",
+      "reason": "GAN向け対照損失・attentionによる生成品質の改善を扱い、推論効率を対象にしていない。",
+      "source_url": "https://arxiv.org/abs/2103.16748",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T00:09:29Z",
+      "last_checked_at": "2026-10-13T00:09:29Z",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2019-1901.10430-pay-less-attention-with-lightweight-and-dynamic-convolutions.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2402.16480",
+      "identity_tokens": [
+        "arXiv:2402.16480"
+      ],
+      "title": "Unveiling ChatGPT’s Usage in Open Source Projects: A Mining-based Study",
+      "reason": "オープンソース開発におけるChatGPT利用を分析する実証研究であり、モデル実行基盤の効率化を提案しない。",
+      "source_url": "https://arxiv.org/abs/2402.16480",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T00:09:29Z",
+      "last_checked_at": "2026-10-13T00:09:29Z",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2005.08025-intellicode-compose-code-generation-using-transformer.md"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1609/aaai.v36i10.21354",
+      "identity_tokens": [
+        "DOI:10.1609/aaai.v36i10.21354"
+      ],
+      "title": "Selecting Optimal Context Sentences for Event-Event Relation Extraction",
+      "reason": "AAAI一次要旨では重要文を選び短い文書へpackしてTransformerの入力長制約に対応する。推論入力tokenを絞る具体的手法として関連する。",
+      "source_url": "https://ojs.aaai.org/index.php/AAAI/article/view/21354",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T00:09:29Z",
+      "last_checked_at": "2026-10-13T00:09:29Z",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md",
+        "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.16984",
+      "identity_tokens": [
+        "arXiv:2505.16984"
+      ],
+      "title": "UFT: Unifying Supervised and Reinforcement Fine-Tuning",
+      "reason": "UFTはsupervised/RL fine-tuningを統合する学習手法であり、推論時の効率化ではない。",
+      "source_url": "https://arxiv.org/abs/2505.16984",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T00:09:29Z",
+      "last_checked_at": "2026-10-13T00:09:29Z",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2506.17811",
+      "identity_tokens": [
+        "arXiv:2506.17811"
+      ],
+      "title": "RoboMonkey: Scaling Test-Time Sampling and Verification for Vision-Language-Action Models",
+      "reason": "RoboMonkeyはVLAのtest-time samplingとverificationを拡張する。推論時計算に直接関係するが、効率化より性能向上・計算増加の可能性が残りborderlineとする。",
+      "source_url": "https://arxiv.org/abs/2506.17811",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T00:09:29Z",
+      "last_checked_at": "2026-10-13T00:09:29Z",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2110.05841",
+      "identity_tokens": [
+        "arXiv:2110.05841"
+      ],
+      "title": "Relative Molecule Self-Attention Transformer",
+      "reason": "Relative molecule self-attention transformerは分子表現・予測の応用研究であり、LLM推論効率への具体的接続がない。",
+      "source_url": "https://arxiv.org/abs/2110.05841",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T00:09:29Z",
+      "last_checked_at": "2026-10-13T00:09:29Z",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2018-1802.05799-horovod-fast-and-easy-distributed-deep-learning-in-tensorflow.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2501.04686",
+      "identity_tokens": [
+        "arXiv:2501.04686",
+        "DOI:10.48550/arXiv.2501.04686"
+      ],
+      "title": "Unlocking Multimodal Mathematical Reasoning via Process Reward Model",
+      "reason": "The official arXiv version history for arXiv:2501.04686 identifies the candidate title as v1 (submitted 2025-01-08) and the current v6 title as “Unlocking Multimodal Mathematical Reasoning via Process Reward Model” (2025-10-05); both pages share the same author and version history. The v1/v6 abstracts describe URSA training data, a trained multimodal reasoning model, and a process verifier that improves test-time performance, but do not establish inference-efficiency or serving-system improvements. Keep unrelated under the screening criterion.",
+      "source_url": "https://arxiv.org/abs/2501.04686",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T00:09:29Z",
+      "last_checked_at": "2026-10-13T00:10:13Z",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2307.03402",
+      "identity_tokens": [
+        "arXiv:2307.03402"
+      ],
+      "title": "Swin Transformer-Based Dynamic Semantic Communication for Multi-User With Different Computing Capacity",
+      "reason": "異なる計算容量に対応するsemantic communication設計で計算制約を扱うが、LLM推論システムや一般的serving最適化への適用は要旨で不明瞭。",
+      "source_url": "https://arxiv.org/abs/2307.03402",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T00:09:29Z",
+      "last_checked_at": "2026-10-13T00:09:29Z",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2021-2107.02192-long-short-transformer-efficient-transformers-for-language-and-vision.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.14146",
+      "identity_tokens": [
+        "arXiv:2505.14146"
+      ],
+      "title": "s3: You Don't Need That Much Data to Train a Search Agent via RL",
+      "reason": "s3はRLによるsearch agentの学習データ効率を扱う。改善対象は学習であり推論基盤ではない。",
+      "source_url": "https://arxiv.org/abs/2505.14146",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T00:09:29Z",
+      "last_checked_at": "2026-10-13T00:09:29Z",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md",
+        "papers/inference/15-inference-simulation-emulation/2017-1712.05889-ray-a-distributed-framework-for-emerging-ai-applications.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md",
+        "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/2025.acl-long.1355",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2025.acl-long.1355"
+      ],
+      "title": "AgentGym: Evaluating and Training Large Language Model-based Agents across Diverse Environments",
+      "reason": "AgentGymはLLM agentのbenchmark・学習環境を提供する評価研究であり、推論効率化の機構を提案しない。",
+      "source_url": "https://aclanthology.org/2025.acl-long.1355/",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T00:09:29Z",
+      "last_checked_at": "2026-10-13T00:09:29Z",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md"
+      ]
+    }
+  ]
+}
