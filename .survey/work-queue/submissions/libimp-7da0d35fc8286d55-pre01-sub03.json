@@ -1,0 +1,241 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "MemSearcher: Training LLMs to Reason, Search and Manage Memory via End-to-End Reinforcement Learning",
+      "source_url": "https://arxiv.org/abs/2511.02805",
+      "year": 2025,
+      "published": "2025-11-04",
+      "venue": "arXiv.org",
+      "citation_count": 25,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "LLM-based search agents often concatenate the full interaction history into the context, producing long and noisy inputs, and increasing compute cost and GPU memory overhead. To address this issue, we propose MemSearcher, an agent framework that maintains a compact memory during multi-turn interactions, retaining only question-relevant information and thereby keeping the context length stable across turns. Training MemSearcher is challenging because each trajectory spans multiple turns under different LLM contexts, making each turn an independent optimization target in reinforcement learning. We introduce multi-context GRPO, which propagates trajectory-level advantages to all turns for end-to-end optimization. Experiments demonstrate that MemSearcher outperforms strong history-concatenation (ReAct-style) baselines on a range of public datasets while maintaining nearly constant token counts across multi-turn interactions. The code and models will be publicly available at https://github.com/icip-cas/MemSearcher",
+      "identifiers": [
+        "SemanticScholar:4dd45d17faca005b6efb369f8dd40d285613e7da"
+      ],
+      "semantic_scholar_id": "4dd45d17faca005b6efb369f8dd40d285613e7da",
+      "canonical_id": "arXiv:2511.02805",
+      "arxiv_id": "2511.02805",
+      "doi": "10.48550/arXiv.2511.02805",
+      "authors": [
+        "Qian-Hao Yuan",
+        "Jie Lou",
+        "Zichao Li",
+        "Jiawei Chen",
+        "Yaojie Lu",
+        "Hong-Yu Lin",
+        "Le Sun",
+        "De-Bing Zhang",
+        "Xian-Pei Han"
+      ],
+      "priority": 125,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 25,
+        "citation_count": 25,
+        "total": 125,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 343,
+        "matched_prestigious_venue": null
+      },
+      "reason": "MemSearcher keeps a compact query-relevant memory rather than concatenating interaction histories, stabilizing context length, token use, and GPU-memory costs.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "From Prompts to Power: Measuring the Energy Footprint of LLM Inference",
+      "source_url": "https://arxiv.org/abs/2511.05597",
+      "year": 2025,
+      "published": "2025-11-05",
+      "venue": "arXiv.org",
+      "citation_count": 25,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The rapid expansion of Large Language Models (LLMs) has introduced unprecedented energy demands, extending beyond training to large-scale inference workloads that often dominate total lifecycle consumption. Deploying these models requires energy-intensive GPU infrastructure, and in some cases has even prompted plans to power data centers with nuclear energy. Despite this growing relevance, systematic analyses of inference energy consumption remain limited. In this work, we present a large-scale measurement-based study comprising over 32,500 measurements across 21 GPU configurations and 155 model architectures, from small open-source models to frontier systems. Using the vLLM inference engine, we quantify energy usage at the prompt level and identify how architectural and operational factors shape energy demand. Building on these insights, we develop a predictive model that accurately estimates inference energy consumption across unseen architectures and hardware, and implement it as a browser extension to raise awareness of the environmental impact of generative AI.",
+      "identifiers": [
+        "SemanticScholar:bc505b308420cec64025d20ae7a00e494a97022e"
+      ],
+      "semantic_scholar_id": "bc505b308420cec64025d20ae7a00e494a97022e",
+      "canonical_id": "arXiv:2511.05597",
+      "arxiv_id": "2511.05597",
+      "doi": "10.48550/arXiv.2511.05597",
+      "authors": [
+        "Francisco Caravaca",
+        "Ángel Cuevas",
+        "R. C. Rumín"
+      ],
+      "priority": 125,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 25,
+        "citation_count": 25,
+        "total": 125,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 342,
+        "matched_prestigious_venue": null
+      },
+      "reason": "The study measures prompt-level inference energy across 21 GPU configurations and 155 model architectures using vLLM, providing direct system-efficiency evidence.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Fast-ThinkAct: Efficient Vision-Language-Action Reasoning via Verbalizable Latent Planning",
+      "source_url": "https://arxiv.org/abs/2601.09708",
+      "year": 2026,
+      "published": "2026-01-14",
+      "venue": "arXiv.org",
+      "citation_count": 25,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Vision-Language-Action (VLA) tasks require reasoning over complex visual scenes and executing adaptive actions in dynamic environments. While recent studies on reasoning VLAs show that explicit chain-of-thought (CoT) can improve generalization, they suffer from high inference latency due to lengthy reasoning traces. We propose Fast-ThinkAct, an efficient reasoning framework that achieves compact yet performant planning through verbalizable latent reasoning. Fast-ThinkAct learns to reason efficiently with latent CoTs by distilling from a teacher, driven by a preference-guided objective to align manipulation trajectories that transfers both linguistic and visual planning capabilities for embodied control. This enables reasoning-enhanced policy learning that effectively connects compact reasoning to action execution. Extensive experiments across diverse embodied manipulation and reasoning benchmarks demonstrate that Fast-ThinkAct achieves strong performance with up to 89.3% reduced inference latency over state-of-the-art reasoning VLAs, while maintaining effective long-horizon planning, few-shot adaptation, and failure recovery.",
+      "identifiers": [
+        "SemanticScholar:34bb730be497273a7b413710b82213063b07e3c5"
+      ],
+      "semantic_scholar_id": "34bb730be497273a7b413710b82213063b07e3c5",
+      "canonical_id": "arXiv:2601.09708",
+      "arxiv_id": "2601.09708",
+      "doi": "10.48550/arXiv.2601.09708",
+      "authors": [
+        "Chi-Pin Huang",
+        "Yun-Ze Man",
+        "Zhi-Ding Yu",
+        "Min-Hung Chen",
+        "Jan Kautz",
+        "Y. Wang",
+        "Fu-En Yang"
+      ],
+      "priority": 125,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 25,
+        "citation_count": 25,
+        "total": 125,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 272,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Fast-ThinkAct replaces lengthy explicit reasoning with compact latent planning for VLA models and reports up to 89.3% reduced inference latency.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "OmniSIFT: Modality-Asymmetric Token Compression for Efficient Omni-modal Large Language Models",
+      "source_url": "https://arxiv.org/abs/2602.04804",
+      "year": 2026,
+      "published": "2026-02-04",
+      "venue": "arXiv.org",
+      "citation_count": 25,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Omni-modal Large Language Models (Omni-LLMs) have demonstrated strong capabilities in audio-video understanding tasks. However, their reliance on long multimodal token sequences leads to substantial computational overhead. Despite this challenge, token compression methods designed for Omni-LLMs remain limited. To bridge this gap, we propose OmniSIFT (Omni-modal Spatio-temporal Informed Fine-grained Token compression), a modality-asymmetric token compression framework tailored for Omni-LLMs. Specifically, OmniSIFT adopts a two-stage compression strategy: (i) a spatio-temporal video pruning module that removes video redundancy arising from both intra-frame structure and inter-frame overlap, and (ii) a vision-guided audio selection module that filters audio tokens. The entire framework is optimized end-to-end via a differentiable straight-through estimator. Extensive experiments on five representative benchmarks demonstrate the efficacy and robustness of OmniSIFT. Notably, for Qwen2.5-Omni-7B, OmniSIFT introduces only 4.85M parameters while maintaining lower latency than training-free baselines such as OmniZip. With merely 25% of the original token context, OmniSIFT consistently outperforms all compression baselines and even surpasses the performance of the full-token model on several tasks.",
+      "identifiers": [
+        "SemanticScholar:cd71c07f979e392491778cc9d1f68e6a1cbf34e2"
+      ],
+      "semantic_scholar_id": "cd71c07f979e392491778cc9d1f68e6a1cbf34e2",
+      "canonical_id": "arXiv:2602.04804",
+      "arxiv_id": "2602.04804",
+      "doi": "10.48550/arXiv.2602.04804",
+      "authors": [
+        "Yue Ding",
+        "Yiyan Ji",
+        "Jun-Gang Li",
+        "Xuyang Liu",
+        "Xinlong Chen",
+        "Jun-Fei Wu",
+        "Bozhou Li",
+        "Bo-Han Zeng",
+        "Yang Shi",
+        "Yushuo Guan",
+        "Yuan-Xing Zhang",
+        "Jia-Heng Liu",
+        "Qiang Liu",
+        "Pengfei Wan",
+        "Liang Wang"
+      ],
+      "priority": 125,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 25,
+        "citation_count": 25,
+        "total": 125,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 251,
+        "matched_prestigious_venue": null
+      },
+      "reason": "OmniSIFT prunes video tokens and filters audio tokens in omni-modal LLMs, achieving lower latency with 25% of the original token context.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Hybrid Token Compression for Vision-Language Models",
+      "source_url": "https://arxiv.org/abs/2512.08240",
+      "year": 2025,
+      "published": "2025-12-09",
+      "venue": null,
+      "citation_count": 23,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Vision-language models (VLMs) rely on hundreds of visual tokens, leading to high computational and memory costs. Existing compression methods face a trade-off: continuous compression can weaken high-level semantics, while discrete quantization may lose fine-grained appearance details. We introduce HTC-VLM, a hybrid visual token compression framework that disentangles semantics and appearance through two complementary pathways. A continuous pathway preserves detailed ViT patch features, while a discrete pathway provides semantic anchors using MGVQ quantization represented by four tokens. The two pathways are fused into a 580-token hybrid sequence and compressed into a single token using a disentanglement attention mask and abottleneck. Under the same one-token output budget, HTC-VLM achieves 87.2% average performance retention across seven benchmarks (GQA, VQAv2, MMBench, MME, POPE, SEED-Bench, and ScienceQA-Image), outperforming the leading continuous baseline at 81.0%. Attention analysis shows that the compressed token prioritizes discrete anchors, supporting their role as semantic guidance. We further study token-budget scaling, cross-architecture generalization, inference efficiency, robustness to codebook and masking variations, and the information-theoretic properties of the hybrid bottleneck. These results show that combining continuous appearance features with discrete semantic anchors enables effective extreme visual token compression for efficient VLMs.",
+      "identifiers": [
+        "SemanticScholar:fbaafefcebd9fcf3bbbc772cbab3b2bf882a2c36"
+      ],
+      "semantic_scholar_id": "fbaafefcebd9fcf3bbbc772cbab3b2bf882a2c36",
+      "canonical_id": "arXiv:2512.08240",
+      "arxiv_id": "2512.08240",
+      "authors": [
+        "Jusheng Zhang",
+        "Xiao-Yang Guo",
+        "Tong-Yu Mo",
+        "Qinhan Lv",
+        "Wen-Hao Chai",
+        "Jian Wang",
+        "Ke-Ze Wang",
+        "Liang Lin"
+      ],
+      "priority": 123,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 23,
+        "citation_count": 23,
+        "total": 123,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 308,
+        "matched_prestigious_venue": null
+      },
+      "reason": "HTC-VLM compresses VLM visual tokens into a compact hybrid sequence and studies inference efficiency under severe token budgets.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-7da0d35fc828",
+    "round": "libimp-7da0d35fc8286d55-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 16,
+    "round_submission_count": 4,
+    "round_submission_index": 3,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-7da0d35fc8286d55-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-7da0d35fc8286d55-pre01.json",
+    "receipt": "sha256:ef8320f75b12b01fd734fdc0d6666ac3e7e39a6169aaa57b6a4bce874811cb28"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-7da0d35fc828",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

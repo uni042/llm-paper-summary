@@ -1,0 +1,149 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Beyond Attention or Similarity: Maximizing Conditional Diversity for Token Pruning in MLLMs",
+      "source_url": "https://arxiv.org/abs/2506.10967",
+      "year": 2025,
+      "published": "2025-06-12",
+      "venue": "Neural Information Processing Systems",
+      "citation_count": 110,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "In multimodal large language models (MLLMs), the length of input visual tokens is often significantly greater than that of their textual counterparts, leading to a high inference cost. Many works aim to address this issue by removing redundant visual tokens. However, current approaches either rely on attention-based pruning, which retains numerous duplicate tokens, or use similarity-based pruning, overlooking the instruction relevance, consequently causing suboptimal performance. In this paper, we go beyond attention or similarity by proposing a novel visual token pruning method named CDPruner, which maximizes the conditional diversity of retained tokens. We first define the conditional similarity between visual tokens conditioned on the instruction, and then reformulate the token pruning problem with determinantal point process (DPP) to maximize the conditional diversity of the selected subset. The proposed CDPruner is training-free and model-agnostic, allowing easy application to various MLLMs. Extensive experiments across diverse MLLMs show that CDPruner establishes new state-of-the-art on various vision-language benchmarks. By maximizing conditional diversity through DPP, the selected subset better represents the input images while closely adhering to user instructions, thereby preserving strong performance even with high reduction ratios. When applied to LLaVA, CDPruner reduces FLOPs by 95\\% and CUDA latency by 78\\%, while maintaining 94\\% of the original accuracy. Our code is available at https://github.com/Theia-4869/CDPruner.",
+      "identifiers": [
+        "SemanticScholar:3b23dd0634e7de523598df0a907a5bf558eb9c88"
+      ],
+      "semantic_scholar_id": "3b23dd0634e7de523598df0a907a5bf558eb9c88",
+      "canonical_id": "arXiv:2506.10967",
+      "arxiv_id": "2506.10967",
+      "doi": "10.48550/arXiv.2506.10967",
+      "authors": [
+        "Qi-Zhe Zhang",
+        "Meng-Zhen Liu",
+        "Li-Chen Li",
+        "Ming Lu",
+        "Yuan Zhang",
+        "Junwen Pan",
+        "Qi She",
+        "Shang-Hang Zhang"
+      ],
+      "priority": 120,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 110,
+        "citation_count": 110,
+        "total": 120,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 488,
+        "matched_prestigious_venue": "Neural Information Processing Systems"
+      },
+      "reason": "CDPruner selects instruction-relevant diverse visual tokens for MLLMs and reports 95% fewer FLOPs and 78% lower CUDA latency while retaining accuracy.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "FlashVID: Efficient Video Large Language Models via Training-free Tree-based Spatiotemporal Token Merging",
+      "source_url": "https://arxiv.org/abs/2602.08024",
+      "year": 2026,
+      "published": "2026-02-08",
+      "venue": "arXiv.org",
+      "citation_count": 20,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Although Video Large Language Models (VLLMs) have shown remarkable capabilities in video understanding, they are required to process high volumes of visual tokens, causing significant computational inefficiency. Existing VLLMs acceleration frameworks usually compress spatial and temporal redundancy independently, which overlooks the spatiotemporal relationships, thereby leading to suboptimal spatiotemporal compression. The highly correlated visual features are likely to change in spatial position, scale, orientation, and other attributes over time due to the dynamic nature of video. Building on this insight, we introduce FlashVID, a training-free inference acceleration framework for VLLMs. Specifically, FlashVID utilizes Attention and Diversity-based Token Selection (ADTS) to select the most representative tokens for basic video representation, then applies Tree-based Spatiotemporal Token Merging (TSTM) for fine-grained spatiotemporal redundancy elimination. Extensive experiments conducted on three representative VLLMs across five video understanding benchmarks demonstrate the effectiveness and generalization of our method. Notably, by retaining only 10% of visual tokens, FlashVID preserves 99.1% of the performance of LLaVA-OneVision. Consequently, FlashVID can serve as a training-free and plug-and-play module for extending long video frames, which enables a 10x increase in video frame input to Qwen2.5-VL, resulting in a relative improvement of 8.6% within the same computational budget. Code is available at https://github.com/Fanziyang-v/FlashVID.",
+      "identifiers": [
+        "SemanticScholar:017bde5eb3aa3d3ffe50dfcc97bd648220884f97"
+      ],
+      "semantic_scholar_id": "017bde5eb3aa3d3ffe50dfcc97bd648220884f97",
+      "canonical_id": "arXiv:2602.08024",
+      "arxiv_id": "2602.08024",
+      "doi": "10.48550/arXiv.2602.08024",
+      "authors": [
+        "Ziyang Fan",
+        "Ke Chen",
+        "Ruilong Xing",
+        "Yu-Lin Li",
+        "Li Jiang",
+        "Zhuo-Tao Tian"
+      ],
+      "priority": 120,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 20,
+        "citation_count": 20,
+        "total": 120,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 247,
+        "matched_prestigious_venue": null
+      },
+      "reason": "FlashVID performs training-free spatiotemporal token merging for VLLM inference, retaining performance with 10% of visual tokens and enabling 10x more frames.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "C3PO: Optimized Large Language Model Cascades with Probabilistic Cost Constraints for Reasoning",
+      "source_url": "https://arxiv.org/abs/2511.07396",
+      "year": 2025,
+      "published": "2025-11-10",
+      "venue": "Neural Information Processing Systems",
+      "citation_count": 10,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLMs) have achieved impressive results on complex reasoning tasks, but their high inference cost remains a major barrier to real-world deployment. A promising solution is to use cascaded inference, where small, cheap models handle easy queries, and only the hardest examples are escalated to more powerful models. However, existing cascade methods typically rely on supervised training with labeled data, offer no theoretical generalization guarantees, and provide limited control over test-time computational cost. We introduce C3PO (Cost Controlled Cascaded Prediction Optimization), a self-supervised framework for optimizing LLM cascades under probabilistic cost constraints. By focusing on minimizing regret with respect to the most powerful model (MPM), C3PO avoids the need for labeled data by constructing a cascade using only unlabeled model outputs. It leverages conformal prediction to bound the probability that inference cost exceeds a user-specified budget. We provide theoretical guarantees on both cost control and generalization error, and show that our optimization procedure is effective even with small calibration sets. Empirically, C3PO achieves state-of-the-art performance across a diverse set of reasoning benchmarks including GSM8K, MATH-500, BigBench-Hard and AIME, outperforming strong LLM cascading baselines in both accuracy and cost-efficiency. Our results demonstrate that principled, label-free cascade optimization can enable scalable LLM deployment.",
+      "identifiers": [
+        "SemanticScholar:c42e3975bd4ac0cf3c98bee718de14d79464d908"
+      ],
+      "semantic_scholar_id": "c42e3975bd4ac0cf3c98bee718de14d79464d908",
+      "canonical_id": "arXiv:2511.07396",
+      "arxiv_id": "2511.07396",
+      "doi": "10.48550/arXiv.2511.07396",
+      "authors": [
+        "Antonios Valkanas",
+        "Soumyasundar Pal",
+        "P. Rumiantsev",
+        "Yingxue Zhang",
+        "Mark Coates"
+      ],
+      "priority": 120,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 10,
+        "citations": 10,
+        "citation_count": 10,
+        "total": 120,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 337,
+        "matched_prestigious_venue": "Neural Information Processing Systems"
+      },
+      "reason": "C3PO optimizes cascaded LLM inference under probabilistic cost constraints and reports better accuracy-cost efficiency than cascade baselines.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-9872e6112fa6",
+    "round": "libimp-9872e6112fa62de5-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 8,
+    "round_submission_count": 2,
+    "round_submission_index": 2,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-9872e6112fa62de5-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-9872e6112fa62de5-pre01.json",
+    "receipt": "sha256:8c7d1d08689e57a618e32ad5135e0264ee5a07e2eca0466e679ef187fd41990c"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-9872e6112fa6",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

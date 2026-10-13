@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Read As Human: Compressing Context via Parallelizable Close Reading and Skimming",
+      "source_url": "https://arxiv.org/abs/2602.01840",
+      "year": 2026,
+      "published": "2026-02-02",
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "citation_count": 13,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Models (LLMs) demonstrate exceptional capability across diverse tasks. However, their deployment in long-context scenarios is hindered by two challenges: computational inefficiency and redundant information. We propose RAM (Read As HuMan), a context compression framework that adopts an adaptive hybrid reading strategy, to address these challenges. Inspired by human reading behavior (i.e., close reading important content while skimming less relevant content), RAM partitions the context into segments and encodes them with the input query in parallel. High-relevance segments are fully retained (close reading), while low-relevance ones are query-guided compressed into compact summary vectors (skimming). Both explicit textual segments and implicit summary vectors are concatenated and fed into decoder to achieve both superior performance and natural language format interpretability. To refine the decision boundary between close reading and skimming, we further introduce a contrastive learning objective based on positive and negative query-segment pairs. Experiments demonstrate that RAM outperforms existing baselines on multiple question answering and summarization benchmarks across two backbones, while delivering up to a 12x end-to-end speedup on long inputs (average length 16K; maximum length 32K).",
+      "identifiers": [
+        "SemanticScholar:7d5e625bb1bf6f7dcadb58b81d96b2ec1d720a09"
+      ],
+      "semantic_scholar_id": "7d5e625bb1bf6f7dcadb58b81d96b2ec1d720a09",
+      "canonical_id": "arXiv:2602.01840",
+      "arxiv_id": "2602.01840",
+      "doi": "10.48550/arXiv.2602.01840",
+      "authors": [
+        "Jiwei Tang",
+        "Shilei Liu",
+        "Zhicheng Zhang",
+        "Qingsong Lv",
+        "Run-Song Zhao",
+        "Tingwei Lu",
+        "Langming Liu",
+        "Haibin Chen",
+        "Yujin Yuan",
+        "Hai-Tao Zheng",
+        "Wenbo Su",
+        "Bo Zheng"
+      ],
+      "priority": 123,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 10,
+        "citations": 13,
+        "citation_count": 13,
+        "total": 123,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 253,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      },
+      "reason": "RAM compresses low-relevance context segments while processing segments in parallel and reports up to 12x end-to-end speedup on long inputs.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-7da0d35fc828",
+    "round": "libimp-7da0d35fc8286d55-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 16,
+    "round_submission_count": 4,
+    "round_submission_index": 4,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-7da0d35fc8286d55-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-7da0d35fc8286d55-pre01.json",
+    "receipt": "sha256:ef8320f75b12b01fd734fdc0d6666ac3e7e39a6169aaa57b6a4bce874811cb28"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-7da0d35fc828",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

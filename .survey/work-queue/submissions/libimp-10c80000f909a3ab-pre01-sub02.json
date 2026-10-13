@@ -1,0 +1,189 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "ATTNPO: Attention-Guided Process Supervision for Efficient Reasoning",
+      "source_url": "https://arxiv.org/abs/2602.09953",
+      "year": 2026,
+      "published": "2026-02-10",
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "citation_count": 27,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large reasoning models trained with reinforcement learning and verifiable rewards (RLVR) achieve strong performance on complex reasoning tasks, yet often overthink, generating redundant reasoning without performance gains. Existing trajectory-level length penalties often fail to effectively shorten reasoning length and degrade accuracy, as they uniformly treat all reasoning steps and lack fine-grained signals to distinguish redundancy from necessity. Meanwhile, process-supervised methods are typically resource-intensive and suffer from inaccurate credit assignment. To address these issues, we propose ATTNPO, a low-overhead process-supervised RL framework that leverages the model's intrinsic attention signals for step-level credit assignment. We first identify a set of special attention heads that naturally focus on essential steps while suppressing redundant ones. By leveraging the attention scores of these heads, We then employ two sub-strategies to mitigate overthinking by discouraging redundant steps while preserving accuracy by reducing penalties on essential steps. Experimental results show that ATTNPO substantially reduces reasoning length while significantly improving performance across 9 benchmarks.",
+      "identifiers": [
+        "SemanticScholar:8a5dd3ce102489262bae665d1eef7067c11e91c1"
+      ],
+      "semantic_scholar_id": "8a5dd3ce102489262bae665d1eef7067c11e91c1",
+      "canonical_id": "arXiv:2602.09953",
+      "arxiv_id": "2602.09953",
+      "doi": "10.48550/arXiv.2602.09953",
+      "authors": [
+        "S. Nie",
+        "Siyu Ding",
+        "Wenyuan Zhang",
+        "Lin-Hao Yu",
+        "Tianmeng Yang",
+        "Yao Chen",
+        "Tingwen Liu",
+        "Weichong Yin",
+        "Yu Sun",
+        "Hua Wu"
+      ],
+      "priority": 137,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 10,
+        "citations": 27,
+        "citation_count": 27,
+        "total": 137,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 245,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      },
+      "reason": "ATTNPO uses attention-derived step-level supervision to suppress redundant reasoning while preserving essential steps, reducing reasoning length while improving benchmark performance.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "The NLP Cookbook: Modern Recipes for Transformer Based Deep Learning Architectures",
+      "source_url": "https://arxiv.org/abs/2104.10640",
+      "year": 2021,
+      "published": "2021-03-23",
+      "venue": "IEEE Access",
+      "citation_count": 136,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "In recent years, Natural Language Processing (NLP) models have achieved phenomenal success in linguistic and semantic tasks like text classification, machine translation, cognitive dialogue systems, information retrieval via Natural Language Understanding (NLU), and Natural Language Generation (NLG). This feat is primarily attributed due to the seminal Transformer architecture, leading to designs such as BERT, GPT (I, II, III), etc. Although these large-size models have achieved unprecedented performances, they come at high computational costs. Consequently, some of the recent NLP architectures have utilized concepts of transfer learning, pruning, quantization, and knowledge distillation to achieve moderate model sizes while keeping nearly similar performances as achieved by their predecessors. Additionally, to mitigate the data size challenge raised by language models from a knowledge extraction perspective, Knowledge Retrievers have been built to extricate explicit data documents from a large corpus of databases with greater efficiency and accuracy. Recent research has also focused on superior inference by providing efficient attention to longer input sequences. In this paper, we summarize and examine the current state-of-the-art (SOTA) NLP models that have been employed for numerous NLP tasks for optimal performance and efficiency. We provide a detailed understanding and functioning of the different architectures, a taxonomy of NLP designs, comparative evaluations, and future directions in NLP.",
+      "identifiers": [
+        "SemanticScholar:d88c1255876b62fb5f5a8b292098ca430710a540"
+      ],
+      "semantic_scholar_id": "d88c1255876b62fb5f5a8b292098ca430710a540",
+      "canonical_id": "arXiv:2104.10640",
+      "arxiv_id": "2104.10640",
+      "doi": "10.1109/ACCESS.2021.3077350",
+      "authors": [
+        "S. Singh",
+        "A. Mahmood"
+      ],
+      "priority": 136,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 136,
+        "citation_count": 136,
+        "total": 136,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 2030,
+        "matched_prestigious_venue": null
+      },
+      "reason": "The NLP survey explicitly covers pruning, quantization, distillation, efficient retrieval, and efficient long-sequence attention as ways to reduce model and inference cost.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Poolingformer: Long Document Modeling with Pooling Attention",
+      "source_url": "https://arxiv.org/abs/2105.04371",
+      "year": 2021,
+      "published": "2021-05-10",
+      "venue": "International Conference on Machine Learning",
+      "citation_count": 123,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "In this paper, we introduce a two-level attention schema, Poolingformer, for long document modeling. Its first level uses a smaller sliding window pattern to aggregate information from neighbors. Its second level employs a larger window to increase receptive fields with pooling attention to reduce both computational cost and memory consumption. We first evaluate Poolingformer on two long sequence QA tasks: the monolingual NQ and the multilingual TyDi QA. Experimental results show that Poolingformer sits atop three official leaderboards measured by F1, outperforming previous state-of-the-art models by 1.9 points (79.8 vs. 77.9) on NQ long answer, 1.9 points (79.5 vs. 77.6) on TyDi QA passage answer, and 1.6 points (67.6 vs. 66.0) on TyDi QA minimal answer. We further evaluate Poolingformer on a long sequence summarization task. Experimental results on the arXiv benchmark continue to demonstrate its superior performance.",
+      "identifiers": [
+        "SemanticScholar:e32a12b14e212506115cc6804667b3d8297917e1"
+      ],
+      "semantic_scholar_id": "e32a12b14e212506115cc6804667b3d8297917e1",
+      "canonical_id": "arXiv:2105.04371",
+      "arxiv_id": "2105.04371",
+      "authors": [
+        "Hang Zhang",
+        "Yeyun Gong",
+        "Ye-Long Shen",
+        "Weisheng Li",
+        "Jiancheng Lv",
+        "Nan Duan",
+        "Wei-Zhu Chen"
+      ],
+      "priority": 133,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 123,
+        "citation_count": 123,
+        "total": 133,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1982,
+        "matched_prestigious_venue": "International Conference on Machine Learning"
+      },
+      "reason": "Poolingformer reduces computational cost and memory for long-document attention using pooled windows and evaluates long-sequence QA and summarization.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "NeuReasoner: Towards Explainable, Controllable, and Unified Reasoning via Mixture-of-Neurons",
+      "source_url": "https://arxiv.org/abs/2604.02972",
+      "year": 2026,
+      "published": "2026-04-03",
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "citation_count": 23,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Reasoning Models (LRMs) have recently achieved remarkable success in complex reasoning tasks. However, closer scrutiny reveals persistent failure modes compromising performance and cost: I) Intra-step level, marked by calculation or derivation errors; II) Inter-step level, involving oscillation and stagnation; and III) Instance level, causing maladaptive over-thinking. Existing endeavors target isolated levels without unification, while their black-box nature and reliance on RL hinder explainability and controllability. To bridge these gaps, we conduct an in-depth white-box analysis, identifying key neurons (Mixture of Neurons, MoN) and their fluctuation patterns associated with distinct failures. Building upon these insights, we propose NeuReasoner, an explainable, controllable, and unified reasoning framework driven by MoN. Technically, NeuReasoner integrates lightweight MLPs for failure detection with a special token-triggered self-correction mechanism learned via SFT. During inference, special tokens are inserted upon failure detection to actuate controllable remedial behaviors. Extensive evaluations across six benchmarks, six backbone models (8B~70B) against nine competitive baselines, demonstrate that NeuReasoner achieves performance gains of up to 27.0% while reducing token consumption by 19.6% ~ 63.3%.",
+      "identifiers": [
+        "SemanticScholar:52d8155b6f6a72eb0ac21399ac1395ae481b65cb"
+      ],
+      "semantic_scholar_id": "52d8155b6f6a72eb0ac21399ac1395ae481b65cb",
+      "canonical_id": "arXiv:2604.02972",
+      "arxiv_id": "2604.02972",
+      "doi": "10.48550/arXiv.2604.02972",
+      "authors": [
+        "Hao-Nan Dong",
+        "Kehan Jiang",
+        "Haoran Ye",
+        "Wenhao Zhu",
+        "Zhao-Lu Kang",
+        "Guo-Jie Song"
+      ],
+      "priority": 133,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 10,
+        "citations": 23,
+        "citation_count": 23,
+        "total": 133,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 193,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      },
+      "reason": "NeuReasoner uses lightweight failure detection and self-correction to reduce reasoning token consumption by 19.6–63.3% while improving results.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-10c80000f909",
+    "round": "libimp-10c80000f909a3ab-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 9,
+    "round_submission_count": 2,
+    "round_submission_index": 2,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-10c80000f909a3ab-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-10c80000f909a3ab-pre01.json",
+    "receipt": "sha256:358ef267903b3e106aaca27f37e7ded85ed0780cf6871120a0c5f7f1c2d134c3"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-10c80000f909",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

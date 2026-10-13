@@ -1,0 +1,237 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "CRISP: Compressed Reasoning via Iterative Self-Policy Distillation",
+      "source_url": "https://arxiv.org/abs/2603.05433",
+      "year": 2026,
+      "published": "2026-03-05",
+      "venue": null,
+      "citation_count": 51,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Reasoning models often generate far more tokens than a task requires, which raises inference cost and can compound errors. We introduce CRISP (Compressed Reasoning via Iterative Self-Policy Distillation), an on-policy self-distillation method that teaches a model to reason more concisely by distilling its own concise behavior back into itself. The method uses a single idea: condition the same model on a\"be concise\"instruction to obtain teacher logits, then minimize the per-token reverse KL divergence between the student and this teacher on the student's own rollouts. It requires no ground-truth answers, no token budgets, and no difficulty estimators. The reverse-KL objective is naturally difficulty-adaptive: it compresses easy problems aggressively while preserving the reasoning steps that hard problems require. On Qwen3-14B, CRISP cuts reasoning length by up to 56% on MATH-500 and 38% on the harder AIME 2024, while improving MATH-500 accuracy by up to 3.3 points over the base model and holding AIME 2024 accuracy within about one point. This behavior generalizes across model sizes and families: Qwen3-8B shows the same compression with accuracy preserved, and DeepSeek-R1-Distill-Llama-8B improves accuracy on all five benchmarks while shortening its responses. General capabilities are preserved across all three models. Code is available at https://github.com/HJSang/OPSD_Reasoning_Compression.",
+      "identifiers": [
+        "SemanticScholar:390fb8754aa828c3b2861237e823a9336a217851"
+      ],
+      "semantic_scholar_id": "390fb8754aa828c3b2861237e823a9336a217851",
+      "canonical_id": "arXiv:2603.05433",
+      "arxiv_id": "2603.05433",
+      "authors": [
+        "He-Jian Sang",
+        "Yuanda Xu",
+        "Zheng-Ze Zhou",
+        "Ran He",
+        "Zhipeng Wang",
+        "Jiacheng Sun"
+      ],
+      "priority": 151,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 51,
+        "citation_count": 51,
+        "total": 151,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 222,
+        "matched_prestigious_venue": null
+      },
+      "reason": "The current arXiv version of this record (CRISP) distills concise on-policy reasoning and reports up to 56% shorter reasoning on MATH-500 with maintained or improved accuracy.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "O-Mem: Omni Memory System for Personalized, Long Horizon, Self-Evolving Agents",
+      "source_url": "https://arxiv.org/abs/2511.13593",
+      "year": 2025,
+      "published": "2025-11-17",
+      "venue": "arXiv.org",
+      "citation_count": 32,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Recent advancements in LLM-powered agents have demonstrated significant potential in generating human-like responses; however, they continue to face challenges in maintaining long-term interactions within complex environments, primarily due to limitations in contextual consistency and dynamic personalization. Existing memory systems often depend on semantic grouping prior to retrieval, which can overlook semantically irrelevant yet critical user information and introduce retrieval noise. In this report, we propose the initial design of O-Mem, a novel memory framework based on active user profiling that dynamically extracts and updates user characteristics and event records from their proactive interactions with agents. O-Mem supports hierarchical retrieval of persona attributes and topic-related context, enabling more adaptive and coherent personalized responses. O-Mem achieves 51.67% on the public LoCoMo benchmark, a nearly 3% improvement upon LangMem,the previous state-of-the-art, and it achieves 62.99% on PERSONAMEM, a 3.5% improvement upon A-Mem,the previous state-of-the-art. O-Mem also boosts token and interaction response time efficiency compared to previous memory frameworks. Our work opens up promising directions for developing efficient and human-like personalized AI assistants in the future.",
+      "identifiers": [
+        "SemanticScholar:c206fa4de7437be1baec612226985b58b0787b74"
+      ],
+      "semantic_scholar_id": "c206fa4de7437be1baec612226985b58b0787b74",
+      "canonical_id": "arXiv:2511.13593",
+      "arxiv_id": "2511.13593",
+      "doi": "10.48550/arXiv.2511.13593",
+      "authors": [
+        "Piao-Hong Wang",
+        "Motong Tian",
+        "Jiaxian Li",
+        "Yuan Liang",
+        "Yuqing Wang",
+        "Qianben Chen",
+        "Tiannan Wang",
+        "Zhi-Cong Lu",
+        "Jiawei Ma",
+        "Y. Jiang",
+        "Wangchunshu Zhou"
+      ],
+      "priority": 132,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 32,
+        "citation_count": 32,
+        "total": 132,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 330,
+        "matched_prestigious_venue": null
+      },
+      "reason": "O-Mem uses hierarchical retrieval and active profiling for agent memory; the abstract reports improved token and response-time efficiency.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Learning Unmasking Policies for Diffusion Language Models",
+      "source_url": "https://arxiv.org/abs/2512.09106",
+      "year": 2025,
+      "published": "2025-12-09",
+      "venue": "arXiv.org",
+      "citation_count": 31,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Diffusion (Large) Language Models (dLLMs) now match the downstream performance of their autoregressive counterparts on many tasks, while holding the promise of being more efficient during inference. One critical design aspect of dLLMs is the sampling procedure that selects which tokens to unmask at each diffusion step. Indeed, recent work has found that heuristic strategies such as confidence thresholding improve both sample quality and token throughput compared to random unmasking. However, such heuristics have downsides: they require manual tuning, and we observe that their performance degrades with larger block sizes. In this work, we instead propose to train sampling procedures using reinforcement learning. Specifically, we formalize masked diffusion sampling as a Markov decision process in which the dLLM serves as the environment, and propose a lightweight policy based on a single-layer transformer that maps dLLM token confidences to unmasking decisions. Our experiments show that these trained policies match the performance of state-of-the-art heuristics when combined with semi-autoregressive (block) generation, while outperforming them in the full-diffusion setting.",
+      "identifiers": [
+        "SemanticScholar:6739048e9defde817b93ceca9d756a98cb94f535"
+      ],
+      "semantic_scholar_id": "6739048e9defde817b93ceca9d756a98cb94f535",
+      "canonical_id": "arXiv:2512.09106",
+      "arxiv_id": "2512.09106",
+      "doi": "10.48550/arXiv.2512.09106",
+      "authors": [
+        "Metod Jazbec",
+        "Theo X. Olausson",
+        "Louis Béthune",
+        "Pierre Ablin",
+        "Michael Kirchhof",
+        "João Monteiro",
+        "V. Turrisi",
+        "Jason Ramapuram",
+        "Marco Cuturi"
+      ],
+      "priority": 131,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 31,
+        "citation_count": 31,
+        "total": 131,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 308,
+        "matched_prestigious_venue": null
+      },
+      "reason": "The paper learns a lightweight unmasking policy for diffusion LMs and reports faster inference-quality tradeoffs than heuristic decoding, especially in full-diffusion generation.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "FoE: Forest of Errors Makes the First Solution the Best in Large Reasoning Models",
+      "source_url": "https://arxiv.org/abs/2604.02967",
+      "year": 2026,
+      "published": "2026-04-03",
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "citation_count": 19,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Recent Large Reasoning Models (LRMs) like DeepSeek-R1 have demonstrated remarkable success in complex reasoning tasks, exhibiting human-like patterns in exploring multiple alternative solutions. Upon closer inspection, however, we uncover a surprising phenomenon: The First is The Best, where alternative solutions are not merely suboptimal but potentially detrimental. This observation challenges widely accepted test-time scaling laws, leading us to hypothesize that errors within the reasoning path scale concurrently with test time. Through comprehensive empirical analysis, we characterize errors as a forest-structured Forest of Errors (FoE) and conclude that FoE makes the First the Best, which is underpinned by rigorous theoretical analysis. Leveraging these insights, we propose RED, a self-guided efficient reasoning framework comprising two components: I) Refining First, which suppresses FoE growth in the first solution; and II) Discarding Subs, which prunes subsequent FoE via dual-consistency. Extensive experiments across five benchmarks and six backbone models demonstrate that RED outperforms eight competitive baselines, achieving performance gains of up to 19.0% while reducing token consumption by 37.7% ~ 70.4%. Moreover, comparative experiments on FoE metrics shed light on how RED achieves effectiveness.",
+      "identifiers": [
+        "SemanticScholar:6bcf24e59bf763273e6315bdcfdacc724072b0cc"
+      ],
+      "semantic_scholar_id": "6bcf24e59bf763273e6315bdcfdacc724072b0cc",
+      "canonical_id": "arXiv:2604.02967",
+      "arxiv_id": "2604.02967",
+      "doi": "10.48550/arXiv.2604.02967",
+      "authors": [
+        "Kehan Jiang",
+        "Hao-Nan Dong",
+        "Zhao-Lu Kang",
+        "Zhengzhou Zhu",
+        "Guo-Jie Song"
+      ],
+      "priority": 129,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 10,
+        "citations": 19,
+        "citation_count": 19,
+        "total": 129,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 193,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      },
+      "reason": "RED suppresses unnecessary alternative reasoning paths and reports 37.7–70.4% lower token consumption alongside accuracy gains.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Less Is More, but Where? Dynamic Token Compression via LLM-Guided Keyframe Prior",
+      "source_url": "https://arxiv.org/abs/2512.06866",
+      "year": 2025,
+      "published": "2025-12-07",
+      "venue": "Neural Information Processing Systems",
+      "citation_count": 18,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Recent advances in Video Large Language Models (VLLMs) have achieved remarkable video understanding capabilities, yet face critical efficiency bottlenecks due to quadratic computational growth with lengthy visual token sequences of long videos. While existing keyframe sampling methods can improve temporal modeling efficiency, additional computational cost is introduced before feature encoding, and the binary frame selection paradigm is found suboptimal. Therefore, in this work, we propose Dynamic Token compression via LLM-guided Keyframe prior (DyToK), a training-free paradigm that enables dynamic token compression by harnessing VLLMs'inherent attention mechanisms. Our analysis reveals that VLLM attention layers naturally encoding query-conditioned keyframe priors, by which DyToK dynamically adjusts per-frame token retention ratios, prioritizing semantically rich frames while suppressing redundancies. Extensive experiments demonstrate that DyToK achieves state-of-the-art efficiency-accuracy tradeoffs. DyToK shows plug-and-play compatibility with existing compression methods, such as VisionZip and FastV, attaining 4.3x faster inference while preserving accuracy across multiple VLLMs, such as LLaVA-OneVision and Qwen2.5-VL. Code is available at https://github.com/yu-lin-li/DyToK .",
+      "identifiers": [
+        "SemanticScholar:1a967e8c5c9d0a3e099b7194a19642a434f7b767"
+      ],
+      "semantic_scholar_id": "1a967e8c5c9d0a3e099b7194a19642a434f7b767",
+      "canonical_id": "arXiv:2512.06866",
+      "arxiv_id": "2512.06866",
+      "doi": "10.48550/arXiv.2512.06866",
+      "authors": [
+        "Yu-Lin Li",
+        "Haokun Gui",
+        "Ziyang Fan",
+        "Jun-Jie Wang",
+        "Bin Kang",
+        "Bin Chen",
+        "Zhuo-Tao Tian"
+      ],
+      "priority": 128,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 10,
+        "citations": 18,
+        "citation_count": 18,
+        "total": 128,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 310,
+        "matched_prestigious_venue": "Neural Information Processing Systems"
+      },
+      "reason": "DyToK dynamically compresses VLLM visual tokens using query-conditioned keyframe priors and reports 4.3x faster inference with preserved accuracy.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-7da0d35fc828",
+    "round": "libimp-7da0d35fc8286d55-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 16,
+    "round_submission_count": 4,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-7da0d35fc8286d55-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-7da0d35fc8286d55-pre01.json",
+    "receipt": "sha256:ef8320f75b12b01fd734fdc0d6666ac3e7e39a6169aaa57b6a4bce874811cb28"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-7da0d35fc828",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
