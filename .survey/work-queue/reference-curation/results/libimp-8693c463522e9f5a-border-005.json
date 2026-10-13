@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-8693c463522e9f5a-border-005",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1101/2025.10.18.680935",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1101/2025.10.18.680935",
+    "identity_tokens": [
+      "DOI:10.1101/2025.10.18.680935",
+      "SemanticScholar:537602beb7a0fe6490443cddb74fd475769b6d22"
+    ],
+    "reason": "The input identifies the bioRxiv preprint and DOI, but its official bioRxiv landing page did not expose the abstract through the available retrieval; the available secondary abstract describes protein-ensemble prediction, with no LLM serving connection. Keep borderline because primary abstract confirmation is missing.",
+    "first_checked_at": "2026-10-13T18:20:46+00:00",
+    "last_checked_at": "2026-10-13T18:20:46+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2019-1909.08053-megatron-lm-training-multi-billion-parameter-language-models-using-model.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Advancing Protein Ensemble Predictions Across the Order–Disorder Continuum"
+  },
+  "processed_at": "2026-10-13T18:20:46+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-8693c463522e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

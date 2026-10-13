@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-b3b4415e4a85e8e7-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2603.17945",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2603.17945",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2603.17945",
+      "SemanticScholar:0429b8a0b52976f5a8ab9f61782e04eed10cd47f",
+      "arXiv:2603.17945"
+    ],
+    "reason": "ShapleyLaw studies multilingual model scaling and language contribution under training; it does not propose an execution-system optimization.",
+    "first_checked_at": "2026-10-13T18:20:54+00:00",
+    "last_checked_at": "2026-10-13T18:20:54+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2019-1909.08053-megatron-lm-training-multi-billion-parameter-language-models-using-model.md"
+    ],
+    "title": "ShapleyLaw: A Game-Theoretic Approach to Multilingual Scaling Laws"
+  },
+  "processed_at": "2026-10-13T18:20:54+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-b3b4415e4a85",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

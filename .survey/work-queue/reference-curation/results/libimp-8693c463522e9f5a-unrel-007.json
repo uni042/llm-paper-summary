@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-8693c463522e9f5a-unrel-007",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2601.00364",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2601.00364",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2601.00364",
+      "SemanticScholar:3cfc694b28e0d08f46ea747e430ed3bce5d67550",
+      "arXiv:2601.00364"
+    ],
+    "reason": "The study concerns mixed-language data effects in LLM pretraining; it does not propose an inference, serving, memory, or runtime optimization.",
+    "first_checked_at": "2026-10-13T18:20:48+00:00",
+    "last_checked_at": "2026-10-13T18:20:48+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2019-1909.08053-megatron-lm-training-multi-billion-parameter-language-models-using-model.md"
+    ],
+    "title": "The Role of Mixed-Language Documents for Multilingual Large Language Model Pretraining"
+  },
+  "processed_at": "2026-10-13T18:20:48+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-8693c463522e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

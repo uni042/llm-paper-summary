@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-8693c463522e9f5a-unrel-015",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2601.16018",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2601.16018",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2601.16018",
+      "SemanticScholar:60778436004209d24ee817bef392deae2c93dfcd",
+      "arXiv:2601.16018"
+    ],
+    "reason": "Mecellem builds Turkish legal-domain language models through scratch training and continual pretraining; it is a domain-modeling application, not inference-system optimization.",
+    "first_checked_at": "2026-10-13T18:20:51+00:00",
+    "last_checked_at": "2026-10-13T18:20:51+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2019-1909.08053-megatron-lm-training-multi-billion-parameter-language-models-using-model.md"
+    ],
+    "title": "Mecellem Models: Turkish Models Trained from Scratch and Continually Pre-trained for the Legal Domain"
+  },
+  "processed_at": "2026-10-13T18:20:51+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-8693c463522e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

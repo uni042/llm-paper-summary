@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-8693c463522e9f5a-unrel-014",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2403.10228",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2403.10228",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2403.10228",
+      "SemanticScholar:0afefc171b8e37bf27604ab7868acf65fb8faf0d",
+      "arXiv:2403.10228"
+    ],
+    "reason": "HawkEye trains video-text LLMs for video grounding; the abstract describes task capability and training, with no LLM serving/runtime efficiency mechanism.",
+    "first_checked_at": "2026-10-13T18:20:50+00:00",
+    "last_checked_at": "2026-10-13T18:20:50+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2307.16449-moviechat-from-dense-token-to-sparse-memory-for-long-video-understanding.md"
+    ],
+    "title": "HawkEye: Training Video-Text LLMs for Grounding Text in Videos"
+  },
+  "processed_at": "2026-10-13T18:20:50+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-8693c463522e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

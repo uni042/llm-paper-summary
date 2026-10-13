@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-13T17:44:44+00:00",
-  "record_count": 11801,
+  "updated_at": "2026-10-13T18:20:58+00:00",
+  "record_count": 11832,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -169112,6 +169112,494 @@
       "last_checked_at": "2026-10-13T17:44:44+00:00",
       "linked_from": [],
       "title": "FutureNav: Unified World-Action Modeling for Vision-and-Language Navigation"
+    },
+    "arXiv:2601.14352": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.14352",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2601.14352",
+        "SemanticScholar:f53d7b06e55ce26f6b4fd5f3e6ec968eaacb47b3",
+        "arXiv:2601.14352"
+      ],
+      "reason": "RoboBrain 2.5 improves 3D grounding and temporal progress estimates for robot manipulation; the abstract reports embodied-task capability, not LLM inference runtime, memory, serving, or throughput.",
+      "first_checked_at": "2026-10-13T18:20:46+00:00",
+      "last_checked_at": "2026-10-13T18:20:46+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1909.08053-megatron-lm-training-multi-billion-parameter-language-models-using-model.md"
+      ],
+      "title": "RoboBrain 2.5: Depth in Sight, Time in Mind"
+    },
+    "arXiv:2602.01244": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.01244",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2602.01244",
+        "SemanticScholar:4dcbb47133e5acdf927611a7fc6c6680c53e796e",
+        "arXiv:2602.01244"
+      ],
+      "reason": "TerminalTraj creates executable Docker environments and verified agent trajectories, improving terminal-task training/evaluation; its reported gains are task success and test-time scaling, not inference-system efficiency.",
+      "first_checked_at": "2026-10-13T18:20:46+00:00",
+      "last_checked_at": "2026-10-13T18:20:46+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1909.08053-megatron-lm-training-multi-billion-parameter-language-models-using-model.md"
+      ],
+      "title": "Large-Scale Terminal Agentic Trajectory Generation from Dockerized Environments"
+    },
+    "arXiv:2601.08393": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.08393",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2601.08393",
+        "SemanticScholar:0034972f24a586eb5d1d871e9890939bca24230d",
+        "arXiv:2601.08393"
+      ],
+      "reason": "SSO constrains weights and updates and is parallelized in Megatron to stabilize large-model pretraining; the contribution is training optimization and stability rather than inference/serving efficiency.",
+      "first_checked_at": "2026-10-13T18:20:47+00:00",
+      "last_checked_at": "2026-10-13T18:20:47+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1909.08053-megatron-lm-training-multi-billion-parameter-language-models-using-model.md"
+      ],
+      "title": "Controlled LLM Training on Spectral Sphere"
+    },
+    "arXiv:2602.10983": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.10983",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2602.10983",
+        "SemanticScholar:429db547b61fe1b68c80446052661bde48a4821f",
+        "arXiv:2602.10983"
+      ],
+      "reason": "The hierarchical world-model/VLA pair synthesizes visual subtasks for robot manipulation and OOD generalization; it is an embodied application without an inference-system efficiency contribution.",
+      "first_checked_at": "2026-10-13T18:20:47+00:00",
+      "last_checked_at": "2026-10-13T18:20:47+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1909.08053-megatron-lm-training-multi-billion-parameter-language-models-using-model.md"
+      ],
+      "title": "Scaling World Model for Hierarchical Manipulation Policies"
+    },
+    "DOI:10.1177/16094069251404329": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1177/16094069251404329",
+      "identity_tokens": [
+        "DOI:10.1177/16094069251404329",
+        "SemanticScholar:5a6f3804a0849c992ccffb3b82793152d6f07cf8"
+      ],
+      "reason": "The SAGE abstract proposes a 20-question disclosure heuristic for reporting AI use in qualitative research; it concerns research transparency, not LLM execution efficiency.",
+      "first_checked_at": "2026-10-13T18:20:47+00:00",
+      "last_checked_at": "2026-10-13T18:20:47+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1909.08053-megatron-lm-training-multi-billion-parameter-language-models-using-model.md"
+      ],
+      "title": "Generative AI in Qualitative Research and Related Transparency Problems: A Novel Heuristic for Disclosing Uses of AI"
+    },
+    "arXiv:2601.00364": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.00364",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2601.00364",
+        "SemanticScholar:3cfc694b28e0d08f46ea747e430ed3bce5d67550",
+        "arXiv:2601.00364"
+      ],
+      "reason": "The study concerns mixed-language data effects in LLM pretraining; it does not propose an inference, serving, memory, or runtime optimization.",
+      "first_checked_at": "2026-10-13T18:20:48+00:00",
+      "last_checked_at": "2026-10-13T18:20:48+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1909.08053-megatron-lm-training-multi-billion-parameter-language-models-using-model.md"
+      ],
+      "title": "The Role of Mixed-Language Documents for Multilingual Large Language Model Pretraining"
+    },
+    "DOI:10.1038/s42005-025-02342-4": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1038/s42005-025-02342-4",
+      "identity_tokens": [
+        "DOI:10.1038/s42005-025-02342-4",
+        "SemanticScholar:3856b73eadd42121cd630111df38002fc94a84dd"
+      ],
+      "reason": "NeuralDEM uses neural operators and auxiliary physics fields to accelerate discrete-element simulations to real time; this is industrial particle simulation, not LLM inference infrastructure.",
+      "first_checked_at": "2026-10-13T18:20:48+00:00",
+      "last_checked_at": "2026-10-13T18:20:48+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1909.08053-megatron-lm-training-multi-billion-parameter-language-models-using-model.md"
+      ],
+      "title": "NeuralDEM for real time simulations of industrial particular flows"
+    },
+    "arXiv:2511.01066": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2511.01066",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2511.01066",
+        "SemanticScholar:ebf3e286c40e8991f3ab67dbc8886cd69a0cbb8a",
+        "arXiv:2511.01066"
+      ],
+      "reason": "HPLT 3.0 supplies multilingual pretraining corpora, filtering pipelines, and models; the contribution is training data/resource coverage rather than system efficiency.",
+      "first_checked_at": "2026-10-13T18:20:48+00:00",
+      "last_checked_at": "2026-10-13T18:20:48+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1909.08053-megatron-lm-training-multi-billion-parameter-language-models-using-model.md"
+      ],
+      "title": "HPLT 3.0: Very Large-Scale Multilingual Resources for LLMs and MT. Mono- and Bi-lingual Data, Multilingual Evaluation, and Pre-Trained Models"
+    },
+    "arXiv:2602.20685": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.20685",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2602.20685",
+        "SemanticScholar:cfceff22b6068963c6322089aa6c814eebd0776a",
+        "arXiv:2602.20685"
+      ],
+      "reason": "RAYNOVA changes autoregressive world-model representation and reports video-generation throughput for driving scenarios; the target is visual world modeling, not LLM inference/serving.",
+      "first_checked_at": "2026-10-13T18:20:49+00:00",
+      "last_checked_at": "2026-10-13T18:20:49+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1909.08053-megatron-lm-training-multi-billion-parameter-language-models-using-model.md"
+      ],
+      "title": "RAYNOVA: Scale-Temporal Autoregressive World Modeling in Ray Space"
+    },
+    "arXiv:2601.15014": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.15014",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2601.15014",
+        "SemanticScholar:61c53dd98bd03f433fd9b757b94a38dc4e7df3ca",
+        "arXiv:2601.15014"
+      ],
+      "reason": "The paper proves parameter and sequence complexity bounds for transformers solving nonparametric regression; it is learning-theory efficiency, not an LLM runtime/system technique.",
+      "first_checked_at": "2026-10-13T18:20:49+00:00",
+      "last_checked_at": "2026-10-13T18:20:49+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1909.08053-megatron-lm-training-multi-billion-parameter-language-models-using-model.md"
+      ],
+      "title": "Efficient and Minimax Optimal In-context Nonparametric Regression with Transformers"
+    },
+    "arXiv:2601.07628": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.07628",
+      "identity_tokens": [
+        "SemanticScholar:e4116a568fea763ba1753a700a61a93033f38d56",
+        "arXiv:2601.07628"
+      ],
+      "reason": "D-PDLP distributes a mathematical optimization solver over multiple GPUs; its target is linear programming rather than LLM inference or its serving stack.",
+      "first_checked_at": "2026-10-13T18:20:49+00:00",
+      "last_checked_at": "2026-10-13T18:20:49+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1909.08053-megatron-lm-training-multi-billion-parameter-language-models-using-model.md"
+      ],
+      "title": "D-PDLP: Scaling PDLP to Distributed Multi-GPU Systems"
+    },
+    "arXiv:2512.23422": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2512.23422",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2512.23422",
+        "SemanticScholar:d179bd2b74655c5fd59ec88872f63c1372344c78",
+        "arXiv:2512.23422"
+      ],
+      "reason": "Entropy-guided token dropout changes autoregressive model training on limited-domain data; it addresses training-data efficiency rather than inference execution.",
+      "first_checked_at": "2026-10-13T18:20:50+00:00",
+      "last_checked_at": "2026-10-13T18:20:50+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1909.08053-megatron-lm-training-multi-billion-parameter-language-models-using-model.md"
+      ],
+      "title": "Entropy-Guided Token Dropout: Training Autoregressive Language Models with Limited Domain Data"
+    },
+    "arXiv:2403.10228": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2403.10228",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2403.10228",
+        "SemanticScholar:0afefc171b8e37bf27604ab7868acf65fb8faf0d",
+        "arXiv:2403.10228"
+      ],
+      "reason": "HawkEye trains video-text LLMs for video grounding; the abstract describes task capability and training, with no LLM serving/runtime efficiency mechanism.",
+      "first_checked_at": "2026-10-13T18:20:50+00:00",
+      "last_checked_at": "2026-10-13T18:20:50+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.16449-moviechat-from-dense-token-to-sparse-memory-for-long-video-understanding.md"
+      ],
+      "title": "HawkEye: Training Video-Text LLMs for Grounding Text in Videos"
+    },
+    "arXiv:2601.16018": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.16018",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2601.16018",
+        "SemanticScholar:60778436004209d24ee817bef392deae2c93dfcd",
+        "arXiv:2601.16018"
+      ],
+      "reason": "Mecellem builds Turkish legal-domain language models through scratch training and continual pretraining; it is a domain-modeling application, not inference-system optimization.",
+      "first_checked_at": "2026-10-13T18:20:51+00:00",
+      "last_checked_at": "2026-10-13T18:20:51+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1909.08053-megatron-lm-training-multi-billion-parameter-language-models-using-model.md"
+      ],
+      "title": "Mecellem Models: Turkish Models Trained from Scratch and Continually Pre-trained for the Legal Domain"
+    },
+    "arXiv:2602.19171": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.19171",
+      "identity_tokens": [
+        "SemanticScholar:a9320e866b40bbf10fc9fb269cf98918e0f08add",
+        "arXiv:2602.19171"
+      ],
+      "reason": "HistCAD introduces constraint-aware CAD histories for evaluating editability; it does not address LLM inference or compute infrastructure.",
+      "first_checked_at": "2026-10-13T18:20:51+00:00",
+      "last_checked_at": "2026-10-13T18:20:51+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2026-2607.02770-gemma-4-technical-report.md"
+      ],
+      "title": "HistCAD: Constraint-Aware Parametric CAD Histories for Evaluating Editability"
+    },
+    "arXiv:2604.10390": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.10390",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2604.10390",
+        "SemanticScholar:e034281914e22d7d2094a10cd2f7681f44a86efc",
+        "arXiv:2604.10390"
+      ],
+      "reason": "LLM-PRISM characterizes silent GPU data corruption during LLM training; it is a training reliability study rather than an inference efficiency method.",
+      "first_checked_at": "2026-10-13T18:20:51+00:00",
+      "last_checked_at": "2026-10-13T18:20:51+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1909.08053-megatron-lm-training-multi-billion-parameter-language-models-using-model.md"
+      ],
+      "title": "LLM-PRISM: Characterizing Silent Data Corruption from Permanent GPU Faults in LLM Training"
+    },
+    "arXiv:2603.25687": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.25687",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2603.25687",
+        "SemanticScholar:af53926051f5208debf627ae2408cd399c7e206e",
+        "arXiv:2603.25687"
+      ],
+      "reason": "The work studies scaling laws for continual weather emulation training; its domain and contribution do not concern LLM inference systems.",
+      "first_checked_at": "2026-10-13T18:20:52+00:00",
+      "last_checked_at": "2026-10-13T18:20:52+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1909.08053-megatron-lm-training-multi-billion-parameter-language-models-using-model.md"
+      ],
+      "title": "On Neural Scaling Laws for Weather Emulation through Continual Training"
+    },
+    "arXiv:2608.05013": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.05013",
+      "identity_tokens": [
+        "SemanticScholar:76d0469cebf3a874cad8faecea8ee7fa80ccd9f3",
+        "arXiv:2608.05013"
+      ],
+      "reason": "OneDayAgent provides a long-horizon agent harness for task evaluation; the abstract targets reliability and capability assessment rather than systems throughput, latency, or memory efficiency.",
+      "first_checked_at": "2026-10-13T18:20:54+00:00",
+      "last_checked_at": "2026-10-13T18:20:54+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2026-2606.06448-agent-memory-characterization-and-system-implications-of-stateful-long-h.md"
+      ],
+      "title": "OneDayAgent: Towards a Long-Horizon Harness for Autonomous Agents"
+    },
+    "arXiv:2603.17945": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.17945",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2603.17945",
+        "SemanticScholar:0429b8a0b52976f5a8ab9f61782e04eed10cd47f",
+        "arXiv:2603.17945"
+      ],
+      "reason": "ShapleyLaw studies multilingual model scaling and language contribution under training; it does not propose an execution-system optimization.",
+      "first_checked_at": "2026-10-13T18:20:54+00:00",
+      "last_checked_at": "2026-10-13T18:20:54+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1909.08053-megatron-lm-training-multi-billion-parameter-language-models-using-model.md"
+      ],
+      "title": "ShapleyLaw: A Game-Theoretic Approach to Multilingual Scaling Laws"
+    },
+    "arXiv:2602.22423": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.22423",
+      "identity_tokens": [
+        "DOI:10.1109/ipdps65963.2026.00110",
+        "SemanticScholar:f5e52361723fcacc74bc5ebef1faa6c10b235e7f",
+        "arXiv:2602.22423"
+      ],
+      "reason": "CARAT co-tunes RPC and caching for parallel file systems, but the abstract targets generic HPC file I/O and establishes no LLM inference/serving connection.",
+      "first_checked_at": "2026-10-13T18:20:54+00:00",
+      "last_checked_at": "2026-10-13T18:20:54+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1909.08053-megatron-lm-training-multi-billion-parameter-language-models-using-model.md"
+      ],
+      "title": "CARAT: Client-Side Adaptive RPC and Cache Co-Tuning for Parallel File Systems"
+    },
+    "DOI:10.1186/s12911-026-03366-8": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1186/s12911-026-03366-8",
+      "identity_tokens": [
+        "DOI:10.1186/s12911-026-03366-8",
+        "SemanticScholar:eb58fb323d188a31ae355911a8ca2b86e849afe5"
+      ],
+      "reason": "The Springer Nature abstract evaluates local fine-tuning of LLMs for clinical extraction and question answering across EHR datasets; this is a clinical application/generalization study, not an inference-system efficiency contribution.",
+      "first_checked_at": "2026-10-13T18:20:55+00:00",
+      "last_checked_at": "2026-10-13T18:20:55+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1909.08053-megatron-lm-training-multi-billion-parameter-language-models-using-model.md"
+      ],
+      "title": "Evaluating large language models for clinical note processing: local fine-tuning and internal-external validation using electronic health records from South Asia"
+    },
+    "arXiv:2602.20433": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.20433",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2602.20433",
+        "SemanticScholar:6e8bc61fefd9c4dfce67b1a3784e396cb38b6c37",
+        "arXiv:2602.20433"
+      ],
+      "reason": "This work analyzes geometry/performance/training relationships in language models but presents no concrete serving, runtime, cache, or inference-efficiency mechanism in the abstract.",
+      "first_checked_at": "2026-10-13T18:20:55+00:00",
+      "last_checked_at": "2026-10-13T18:20:55+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1909.08053-megatron-lm-training-multi-billion-parameter-language-models-using-model.md"
+      ],
+      "title": "Disentangling Geometry, Performance, and Training in Language Models"
+    },
+    "arXiv:2601.07326": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.07326",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2601.07326",
+        "SemanticScholar:1bbcef1a21952d2c2fb9c74c9851b052ca799880",
+        "arXiv:2601.07326"
+      ],
+      "reason": "The paper analyzes convergence rates for AdamW-style Shampoo optimizers; it concerns training optimization theory rather than LLM inference systems.",
+      "first_checked_at": "2026-10-13T18:20:55+00:00",
+      "last_checked_at": "2026-10-13T18:20:55+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1909.08053-megatron-lm-training-multi-billion-parameter-language-models-using-model.md"
+      ],
+      "title": "Convergence Rate Analysis of the AdamW-style Shampoo: Unifying One-Sided and Two-Sided Preconditioning"
+    },
+    "arXiv:2512.21749": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2512.21749",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2512.21749",
+        "SemanticScholar:e086edc85a4cb042d89de1eec5e750c85fbb847b",
+        "arXiv:2512.21749"
+      ],
+      "reason": "The paper studies approximation properties of GELU feedforward networks; it does not connect the theory to LLM serving or practical inference efficiency.",
+      "first_checked_at": "2026-10-13T18:20:56+00:00",
+      "last_checked_at": "2026-10-13T18:20:56+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1909.08053-megatron-lm-training-multi-billion-parameter-language-models-using-model.md"
+      ],
+      "title": "Approximation Capabilities of Feedforward Neural Networks with GELU Activations"
+    },
+    "DOI:10.64509/jicn.12.39": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.64509/jicn.12.39",
+      "identity_tokens": [
+        "DOI:10.64509/jicn.12.39",
+        "SemanticScholar:6ad56a3a4addee8425776321826d3c48f7918ba0"
+      ],
+      "reason": "The publisher abstract proposes hierarchical synchronization and topology selection to improve distributed training over heterogeneous WAN nodes; it is training efficiency, outside the inference-system focus.",
+      "first_checked_at": "2026-10-13T18:20:56+00:00",
+      "last_checked_at": "2026-10-13T18:20:56+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1909.08053-megatron-lm-training-multi-billion-parameter-language-models-using-model.md"
+      ],
+      "title": "Optimizing Distributed Training in Computing Power Networks: A Heterogeneity-aware Approach"
+    },
+    "arXiv:2511.10333": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2511.10333",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2511.10333",
+        "SemanticScholar:55d7cbb1d75daec777beb254e6c4bed76c30a208",
+        "arXiv:2511.10333"
+      ],
+      "reason": "EDGC compresses gradients to reduce communication during LLM training; it does not address inference execution.",
+      "first_checked_at": "2026-10-13T18:20:56+00:00",
+      "last_checked_at": "2026-10-13T18:20:56+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1909.08053-megatron-lm-training-multi-billion-parameter-language-models-using-model.md"
+      ],
+      "title": "EDGC: Entropy-driven Dynamic Gradient Compression for Efficient LLM Training"
+    },
+    "arXiv:2511.03844": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2511.03844",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2511.03844",
+        "SemanticScholar:e4a9da6552b6346f8ca0b770464c3579662415fb",
+        "arXiv:2511.03844"
+      ],
+      "reason": "ASAP automatically tunes large-scale LLM training configurations and reports training performance gains; the optimization target is training, not serving/inference.",
+      "first_checked_at": "2026-10-13T18:20:57+00:00",
+      "last_checked_at": "2026-10-13T18:20:57+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1909.08053-megatron-lm-training-multi-billion-parameter-language-models-using-model.md"
+      ],
+      "title": "ASAP: an Agentic Solution to Auto-optimize Performance of Large-Scale LLM Training"
+    },
+    "arXiv:2607.15079": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.15079",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2607.15079",
+        "SemanticScholar:4a6aced770cd279008eb87b3d15bb0c6ce99fc29",
+        "arXiv:2607.15079"
+      ],
+      "reason": "BrainPilot coordinates agents for neuroscience research with evidence graphs and audits; this is a domain application and reliability framework, not a serving-efficiency method.",
+      "first_checked_at": "2026-10-13T18:20:57+00:00",
+      "last_checked_at": "2026-10-13T18:20:57+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2510.18234-deepseek-ocr-contexts-optical-compression.md"
+      ],
+      "title": "BrainPilot: Automating Brain Discovery with Agentic Research"
+    },
+    "DOI:10.64898/2026.06.23.734132": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.64898/2026.06.23.734132",
+      "identity_tokens": [
+        "DOI:10.64898/2026.06.23.734132",
+        "SemanticScholar:fba3ff0dd2bc39edfeb489c6df5eb558d20afcdf"
+      ],
+      "reason": "The bioRxiv study compares autonomous and human-led AI research across scientific case studies; it evaluates agent capability, not LLM runtime or serving efficiency.",
+      "first_checked_at": "2026-10-13T18:20:57+00:00",
+      "last_checked_at": "2026-10-13T18:20:57+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2510.18234-deepseek-ocr-contexts-optical-compression.md"
+      ],
+      "title": "Practical Use of Advanced AI Frameworks on Real-Life Scientific Problems: Three Case Studies"
+    },
+    "arXiv:2606.24281": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.24281",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2606.24281",
+        "SemanticScholar:6ec05f62305603a785066ae32ae1d58f61f6adfe",
+        "arXiv:2606.24281"
+      ],
+      "reason": "CALIBER calibrates pre/post-reasoning confidence and reduces calibration error; its target is answer reliability, not computational efficiency.",
+      "first_checked_at": "2026-10-13T18:20:58+00:00",
+      "last_checked_at": "2026-10-13T18:20:58+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2026-2603.03752-confidence-calibrated-small-large-language-model-collaboration-for-cost-.md"
+      ],
+      "title": "CALIBER: Calibrating Confidence Before and After Reasoning in Language Models"
+    },
+    "arXiv:2606.22994": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.22994",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2606.22994",
+        "SemanticScholar:46401fe1d819c66c19498966fce52af3d30fc585",
+        "arXiv:2606.22994"
+      ],
+      "reason": "The study proposes an evaluation protocol for sparse-autoencoder feature hierarchies; it concerns interpretability quality, not LLM inference systems.",
+      "first_checked_at": "2026-10-13T18:20:58+00:00",
+      "last_checked_at": "2026-10-13T18:20:58+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2026-2607.02770-gemma-4-technical-report.md"
+      ],
+      "title": "Do Sparse Autoencoders Learn Meaningful Concept Hierarchies?"
     }
   }
 }

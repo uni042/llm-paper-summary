@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-b3b4415e4a85e8e7-unrel-007",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2601.07326",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2601.07326",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2601.07326",
+      "SemanticScholar:1bbcef1a21952d2c2fb9c74c9851b052ca799880",
+      "arXiv:2601.07326"
+    ],
+    "reason": "The paper analyzes convergence rates for AdamW-style Shampoo optimizers; it concerns training optimization theory rather than LLM inference systems.",
+    "first_checked_at": "2026-10-13T18:20:55+00:00",
+    "last_checked_at": "2026-10-13T18:20:55+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2019-1909.08053-megatron-lm-training-multi-billion-parameter-language-models-using-model.md"
+    ],
+    "title": "Convergence Rate Analysis of the AdamW-style Shampoo: Unifying One-Sided and Two-Sided Preconditioning"
+  },
+  "processed_at": "2026-10-13T18:20:56+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-b3b4415e4a85",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

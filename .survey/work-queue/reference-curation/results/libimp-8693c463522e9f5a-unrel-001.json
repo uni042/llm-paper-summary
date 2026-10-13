@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-8693c463522e9f5a-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2601.14352",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2601.14352",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2601.14352",
+      "SemanticScholar:f53d7b06e55ce26f6b4fd5f3e6ec968eaacb47b3",
+      "arXiv:2601.14352"
+    ],
+    "reason": "RoboBrain 2.5 improves 3D grounding and temporal progress estimates for robot manipulation; the abstract reports embodied-task capability, not LLM inference runtime, memory, serving, or throughput.",
+    "first_checked_at": "2026-10-13T18:20:46+00:00",
+    "last_checked_at": "2026-10-13T18:20:46+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2019-1909.08053-megatron-lm-training-multi-billion-parameter-language-models-using-model.md"
+    ],
+    "title": "RoboBrain 2.5: Depth in Sight, Time in Mind"
+  },
+  "processed_at": "2026-10-13T18:20:46+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-8693c463522e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
