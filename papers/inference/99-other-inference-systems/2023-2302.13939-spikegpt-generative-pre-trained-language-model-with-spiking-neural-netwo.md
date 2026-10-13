@@ -27,6 +27,8 @@ code: 'https://github.com/ridgerchu/SpikeGPT'
 last_checked: '2026-10-14'
 worker_completed_at: '2026-10-14T07:00:00+09:00'
 worker_run_key: '20261014-0645-scheduled-chat-45/r01'
+last_audited: null
+audit_version: 0
 ---
 
 # SpikeGPT：二値スパイク活性と再帰的RWKVを組み合わせた言語生成モデル
