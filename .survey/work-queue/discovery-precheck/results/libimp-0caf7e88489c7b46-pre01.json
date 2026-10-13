@@ -1,0 +1,1206 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-0caf7e88489c7b46-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-0caf7e88489c",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2601.14888",
+    "arXiv:2601.22069",
+    "arXiv:2601.22954",
+    "arXiv:2602.01842",
+    "arXiv:2602.03067",
+    "arXiv:2602.03839",
+    "arXiv:2602.12262",
+    "arXiv:2602.13953",
+    "arXiv:2602.18176",
+    "arXiv:2602.22663",
+    "arXiv:2603.01236",
+    "arXiv:2603.12634"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 12,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "924f7558008bb26604bae718ef9ef6588f5fd48e",
+  "raw_search_result_count": 12,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 12,
+  "provider_progress": {
+    "requested_count": 12,
+    "status_counts": {
+      "allowed": 12,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-13T07:29:02.653332+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2601.14888",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2601.22069",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2601.22954",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2602.01842",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2602.03067",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2602.03839",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2602.12262",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2602.13953",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2602.18176",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2602.22663",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2603.01236",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2603.12634",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "QuRL: Efficient Reinforcement Learning with Quantized Rollout",
+      "source_url": "https://arxiv.org/abs/2602.13953",
+      "year": 2026,
+      "published": "2026-02-15",
+      "venue": "arXiv.org",
+      "citation_count": 10,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Reinforcement learning with verifiable rewards (RLVR) has become a trending paradigm for training reasoning large language models (LLMs). However, due to the autoregressive decoding nature of LLMs, the rollout process becomes the efficiency bottleneck of RL training, consisting of up to 70\\% of the total training time. In this work, we propose Quantized Reinforcement Learning (QuRL) that uses a quantized actor for accelerating the rollout. We address two challenges in QuRL. First, we propose Adaptive Clipping Range (ACR) that dynamically adjusts the clipping ratio based on the policy ratio between the full-precision actor and the quantized actor, which is essential for mitigating long-term training collapse. Second, we identify the weight update problem, where weight changes between RL steps are extremely small, making it difficult for the quantization operation to capture them effectively. We mitigate this problem through the invariant scaling technique that reduces quantization noise and increases weight update. We evaluate our method with INT8 and FP8 quantization experiments on DeepScaleR and DAPO, and achieve 20% to 80% faster rollout during training.",
+      "identifiers": [
+        "SemanticScholar:447146e90657a8030b696ae2aa4360d9ab169fc6"
+      ],
+      "semantic_scholar_id": "447146e90657a8030b696ae2aa4360d9ab169fc6",
+      "canonical_id": "arXiv:2602.13953",
+      "arxiv_id": "2602.13953",
+      "doi": "10.48550/arXiv.2602.13953",
+      "authors": [
+        "Yuhang Li",
+        "Reena Elangovan",
+        "Xin Dong",
+        "Priyadarshini Panda",
+        "Brucek Khailany"
+      ],
+      "priority": 110,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 10,
+        "citation_count": 10,
+        "total": 110,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 240,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Improving Sampling for Masked Diffusion Models via Information Gain",
+      "source_url": "https://arxiv.org/abs/2602.18176",
+      "year": 2026,
+      "published": "2026-02-20",
+      "venue": "arXiv.org",
+      "citation_count": 10,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Masked Diffusion Models (MDMs) enable flexible decoding orders, yet existing samplers remain largely greedy, selecting locally certain tokens without accounting for their downstream effects. We show that this myopia can increase cumulative uncertainty and lead to suboptimal generation. To address this, we propose the **Info-Gain Sampler**, a training-free decoding method that uses the bidirectional structure of MDMs to balance immediate uncertainty with the information gained over remaining masked positions. Across reasoning, coding, creative writing, and image generation tasks, Info-Gain Sampler consistently outperforms existing MDM samplers, improving average reasoning accuracy by 2.9--11.6 percentage points and achieving a 62.8% average win rate in creative writing. The code is available at https://github.com/yks23/Information-Gain-Sampler.",
+      "identifiers": [
+        "SemanticScholar:f88c1d5decfd2fe980dacbeb9752925448db8f5c"
+      ],
+      "semantic_scholar_id": "f88c1d5decfd2fe980dacbeb9752925448db8f5c",
+      "canonical_id": "arXiv:2602.18176",
+      "arxiv_id": "2602.18176",
+      "doi": "10.48550/arXiv.2602.18176",
+      "authors": [
+        "Kai Yang",
+        "Jayden Teoh",
+        "Kai-Cheng Yang",
+        "Yi-Tong Zhang",
+        "Alex Lamb"
+      ],
+      "priority": 110,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 10,
+        "citation_count": 10,
+        "total": 110,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 235,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "What Makes Low-Bit Quantization-Aware Training Work for Reasoning LLMs? A Systematic Study",
+      "source_url": "https://arxiv.org/abs/2601.14888",
+      "year": 2026,
+      "published": "2026-01-21",
+      "venue": "arXiv.org",
+      "citation_count": 9,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Reasoning models excel at complex tasks such as coding and mathematics, yet their inference is often slow and token-inefficient. To improve the inference efficiency, post-training quantization (PTQ) usually comes with the cost of large accuracy drops, especially for reasoning tasks under low-bit settings. In this study, we present a systematic empirical study of quantization-aware training (QAT) for reasoning models. Our key findings include: (1) Knowledge distillation is a robust objective for reasoning models trained via either supervised fine-tuning or reinforcement learning; (2) PTQ provides a strong initialization for QAT, improving accuracy while reducing training cost; (3) Reinforcement learning remains feasible for quantized models given a viable cold start and yields additional gains; and (4) Aligning the PTQ calibration domain with the QAT training domain accelerates convergence and often improves the final accuracy. Finally, we consolidate these findings into an optimized workflow (Reasoning-QAT), and show that it consistently outperforms state-of-the-art PTQ methods across multiple LLM backbones and reasoning datasets. For instance, on Qwen3-0.6B, it surpasses GPTQ by 44.53% on MATH-500 and consistently recovers performance in the 2-bit regime.",
+      "identifiers": [
+        "SemanticScholar:2d808de92c6eff192fcd66820902319f82ac4904"
+      ],
+      "semantic_scholar_id": "2d808de92c6eff192fcd66820902319f82ac4904",
+      "canonical_id": "arXiv:2601.14888",
+      "arxiv_id": "2601.14888",
+      "doi": "10.48550/arXiv.2601.14888",
+      "authors": [
+        "Keyu Lv",
+        "Manyi Zhang",
+        "Xiaobo Xia",
+        "Jingchen Ni",
+        "Shan-Nan Yan",
+        "Xianzhi Yu",
+        "Lu Hou",
+        "Chun Yuan",
+        "Hao-Li Bai"
+      ],
+      "priority": 109,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 9,
+        "citation_count": 9,
+        "total": 109,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 265,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "VTC-R1: Vision-Text Compression for Efficient Long-Context Reasoning",
+      "source_url": "https://arxiv.org/abs/2601.22069",
+      "year": 2026,
+      "published": "2026-01-29",
+      "venue": "arXiv.org",
+      "citation_count": 9,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Long-context reasoning has significantly empowered large language models (LLMs) to tackle complex tasks, yet it introduces severe efficiency bottlenecks due to the computational complexity. Existing efficient approaches often rely on complex additional training or external models for compression, which limits scalability and discards critical fine-grained information. In this paper, we propose VTC-R1, a new efficient reasoning paradigm that integrates vision-text compression into the reasoning process. Instead of processing lengthy textual traces, VTC-R1 renders intermediate reasoning segments into compact images, which are iteratively fed back into vision-language models as\"optical memory.\"We construct a training dataset based on OpenR1-Math-220K achieving 3.4x token compression and fine-tune representative VLMs-Glyph and Qwen3-VL. Extensive experiments on benchmarks such as MATH500, AIME25, AMC23 and GPQA-D demonstrate that VTC-R1 consistently outperforms standard long-context reasoning. Furthermore, our approach significantly improves inference efficiency, achieving 2.7x speedup in end-to-end latency, highlighting its potential as a scalable solution for reasoning-intensive applications. Our code is available at https://github.com/w-yibo/VTC-R1.",
+      "identifiers": [
+        "SemanticScholar:4404e8e7db1bb7b124cd9b416fac032f2c735806"
+      ],
+      "semantic_scholar_id": "4404e8e7db1bb7b124cd9b416fac032f2c735806",
+      "canonical_id": "arXiv:2601.22069",
+      "arxiv_id": "2601.22069",
+      "doi": "10.48550/arXiv.2601.22069",
+      "authors": [
+        "Yi-Bo Wang",
+        "Yong-Cheng Jing",
+        "Shunyu Liu",
+        "Hao Guan",
+        "Rong-Cheng Tu",
+        "Cheng-Yu Wang",
+        "Jun Huang",
+        "Dacheng Tao"
+      ],
+      "priority": 109,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 9,
+        "citation_count": 9,
+        "total": 109,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 257,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Residual Context Diffusion Language Models",
+      "source_url": "https://arxiv.org/abs/2601.22954",
+      "year": 2026,
+      "published": "2026-01-30",
+      "venue": "arXiv.org",
+      "citation_count": 9,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Diffusion Large Language Models (dLLMs) have emerged as a promising alternative to purely autoregressive language models because they can decode multiple tokens in parallel. However, state-of-the-art block-wise dLLMs rely on a\"remasking\"mechanism that decodes only the most confident tokens and discards the rest, effectively wasting computation. We demonstrate that recycling computation from the discarded tokens is beneficial, as these tokens retain contextual information useful for subsequent decoding iterations. In light of this, we propose Residual Context Diffusion (RCD), a module that converts these discarded token representations into contextual residuals and injects them back for the next denoising step. RCD uses a decoupled two-stage training pipeline to bypass the memory bottlenecks associated with backpropagation. We validate our method on both long CoT reasoning (SDAR) and short CoT instruction following (LLaDA) models. We demonstrate that a standard dLLM can be efficiently converted to the RCD paradigm with merely ~300 million tokens. RCD consistently improves frontier dLLMs by 4-11 percentage points in accuracy with minimal extra computation overhead across a wide range of benchmarks. Notably, on the most challenging AIME tasks, RCD nearly doubles baseline accuracy and attains up to 4-5x fewer denoising steps at baseline's peak accuracy.",
+      "identifiers": [
+        "SemanticScholar:701d2e200ddb6e78fd7529170b453c0d2c556c12"
+      ],
+      "semantic_scholar_id": "701d2e200ddb6e78fd7529170b453c0d2c556c12",
+      "canonical_id": "arXiv:2601.22954",
+      "arxiv_id": "2601.22954",
+      "doi": "10.48550/arXiv.2601.22954",
+      "authors": [
+        "Yuezhou Hu",
+        "Harman M. Singh",
+        "Monishwaran Maheswaran",
+        "Hao-Cheng Xi",
+        "C. Hooper",
+        "Jintao Zhang",
+        "Aditya Tomar",
+        "Michael W. Mahoney",
+        "Sewon Min",
+        "Mehrdad Farajtabar",
+        "Kurt Keutzer",
+        "Amir Gholami",
+        "Chen-Feng Xu"
+      ],
+      "priority": 109,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 9,
+        "citation_count": 9,
+        "total": 109,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 256,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Prism: Efficient Test-Time Scaling via Hierarchical Search and Self-Verification for Discrete Diffusion Language Models",
+      "source_url": "https://arxiv.org/abs/2602.01842",
+      "year": 2026,
+      "published": "2026-02-02",
+      "venue": "arXiv.org",
+      "citation_count": 9,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Inference-time compute has re-emerged as a practical way to improve LLM reasoning. Most test-time scaling (TTS) algorithms rely on autoregressive decoding, which is ill-suited to discrete diffusion language models (dLLMs) due to their parallel decoding over the entire sequence. As a result, developing effective and efficient TTS methods to unlock dLLMs'full generative potential remains an underexplored challenge. To address this, we propose Prism (Pruning, Remasking, and Integrated Self-verification Method), an efficient TTS framework for dLLMs that (i) performs Hierarchical Trajectory Search (HTS) which dynamically prunes and reallocates compute in an early-to-mid denoising window, (ii) introduces Local branching with partial remasking to explore diverse implementations while preserving high-confidence tokens, and (iii) replaces external verifiers with Self-Verified Feedback (SVF) obtained via self-evaluation prompts on intermediate completions. Across four mathematical reasoning and code generation benchmarks on three dLLMs, including LLaDA 8B Instruct, Dream 7B Instruct, and LLaDA 2.0-mini, our Prism achieves a favorable performance-efficiency trade-off, matching best-of-N performance with substantially fewer function evaluations (NFE). The code is released at https://github.com/viiika/Prism.",
+      "identifiers": [
+        "SemanticScholar:7eacc23efeff03928c20319405a7aa9222a8099c"
+      ],
+      "semantic_scholar_id": "7eacc23efeff03928c20319405a7aa9222a8099c",
+      "canonical_id": "arXiv:2602.01842",
+      "arxiv_id": "2602.01842",
+      "doi": "10.48550/arXiv.2602.01842",
+      "authors": [
+        "Jinbin Bai",
+        "Yi-Xuan Li",
+        "Yuchen Zhu",
+        "Yi Xin",
+        "Qingyu Shi",
+        "Ao-Song Feng",
+        "Xiao-Hong Liu",
+        "Mo-Lei Tao",
+        "Jian-Ru Xue",
+        "Xiang-Tai Li",
+        "Ming-Hsuan Yang"
+      ],
+      "priority": 109,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 9,
+        "citation_count": 9,
+        "total": 109,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 253,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "FlashSinkhorn: IO-Aware Entropic Optimal Transport",
+      "source_url": "https://arxiv.org/abs/2602.03067",
+      "year": 2026,
+      "published": "2026-02-03",
+      "venue": "arXiv.org",
+      "citation_count": 9,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Entropic optimal transport (EOT) via Sinkhorn iterations is widely used in modern machine learning, yet GPU solvers remain inefficient at scale. Tensorized implementations suffer quadratic HBM traffic from dense $n\\times m$ interactions, while existing online backends avoid storing dense matrices but still rely on generic tiled map-reduce reduction kernels with limited fusion. We present \\textbf{FlashSinkhorn}, an IO-aware EOT solver for squared Euclidean cost that rewrites stabilized log-domain Sinkhorn updates as row-wise LogSumExp reductions of biased dot-product scores, the same normalization as transformer attention. This enables FlashAttention-style fusion and tiling: fused Triton kernels stream tiles through on-chip SRAM and update dual potentials in a single pass, substantially reducing HBM IO per iteration while retaining linear-memory operations. We further provide streaming kernels for transport application, enabling scalable first- and second-order optimization. On A100 GPUs, FlashSinkhorn achieves up to $32\\times$ forward-pass and $161\\times$ end-to-end speedups over state-of-the-art online baselines on point-cloud OT, improves scalability on OT-based downstream tasks. For reproducibility, we release an open-source implementation at https://github.com/ot-triton-lab/flash-sinkhorn .",
+      "identifiers": [
+        "SemanticScholar:b050b5c7aef6c2ee1b27a63dfc05f986c65d6352"
+      ],
+      "semantic_scholar_id": "b050b5c7aef6c2ee1b27a63dfc05f986c65d6352",
+      "canonical_id": "arXiv:2602.03067",
+      "arxiv_id": "2602.03067",
+      "doi": "10.48550/arXiv.2602.03067",
+      "authors": [
+        "Felix X.-F. Ye",
+        "Xing-Jie Li",
+        "An Yu",
+        "Ming-Ching Chang",
+        "Linsong Chu",
+        "Davis Wertheimer"
+      ],
+      "priority": 109,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 9,
+        "citation_count": 9,
+        "total": 109,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 252,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Understanding and Exploiting Weight Update Sparsity for Communication-Efficient Distributed RL",
+      "source_url": "https://arxiv.org/abs/2602.03839",
+      "year": 2026,
+      "published": "2026-02-03",
+      "venue": "arXiv.org",
+      "citation_count": 9,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Bandwidth-constrained distributed reinforcement learning (RL) post-training of large language models is bottlenecked by two channels: weight synchronization from trainers to inference workers, and gradient or pseudo-gradient synchronization across trainers. We find that approximately 99% of per-step weight updates are invisible after the BF16 cast used by standard training and inference forward passes. We explain this sparsity by showing that, at typical RL post-training learning rates, Adam updates often fall below the local BF16 rounding threshold. We turn this observation into an algorithmic principle called compute-visible sparsification: transmit only updates that would change the next forward pass. PULSE (Precision-gated Updates for Low-precision Sparse Exchange) turns this principle into two communication algorithms: PULSESync sends lossless sparse BF16 weight patches from trainers to inference workers, and PULSELoCo sparsifies DiLoCo-style FP32 pseudo-gradient synchronization with error feedback. Over bandwidth-constrained commodity networks, PULSESync cuts weight-synchronization communication by over 100x while reconstructing trainer weights bit-identically. PULSELoCo matches DiLoCo across four models while reducing trainer-to-trainer communication by over 17x versus DiLoCo and over 100x versus DDP in the largest evaluated setting.",
+      "identifiers": [
+        "SemanticScholar:4552886e4e1073760e2e273ffa72246b83d8c7b3"
+      ],
+      "semantic_scholar_id": "4552886e4e1073760e2e273ffa72246b83d8c7b3",
+      "canonical_id": "arXiv:2602.03839",
+      "arxiv_id": "2602.03839",
+      "doi": "10.48550/arXiv.2602.03839",
+      "authors": [
+        "Erfan Miahi",
+        "Eugene Belilovsky"
+      ],
+      "priority": 109,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 9,
+        "citation_count": 9,
+        "total": 109,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 252,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Rethinking the Practicality of Vision-language-action Model: A Comprehensive Benchmark and An Improved Baseline",
+      "source_url": "https://arxiv.org/abs/2602.22663",
+      "year": 2026,
+      "published": "2026-02-26",
+      "venue": "IEEE International Conference on Robotics and Automation",
+      "citation_count": 9,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Vision-Language-Action (VLA) models have emerged as a generalist robotic agent. However, existing VLAs are hindered by excessive parameter scales, prohibitive pre-training requirements, and limited applicability to diverse embodiments. To improve the practicality of VLAs, we propose a comprehensive benchmark and an improved baseline. First, we propose CEBench, a new benchmark spanning diverse embodiments in both simulation and the real world with consideration of domain randomization. We collect 14.4k simulated trajectories and 1.6k real-world expert-curated trajectories to support training on CEBench. Second, using CEBench as our testbed, we study three critical aspects of VLAs’ practicality and offer several key findings. Informed by these findings, we introduce LLaVA-VLA, a lightweight yet powerful VLA designed for practical deployment on consumer-grade GPUs. Architecturally, it integrates a compact VLM backbone with multi-view perception, proprioceptive tokenization, and action chunking. To eliminate reliance on costly pre-training, LLaVA-VLA adopts a two-stage training paradigm including post-training and fine-tuning. Furthermore, LLaVA-VLA extends the action space to unify navigation and manipulation. Experiments across embodiments demonstrate the capabilities of generalization and versatility of LLaVA-VLA , while real-world mobile manipulation experiments establish it as the first end-to-end VLA model for mobile manipulation. We will open-source all datasets, codes, and checkpoints upon acceptance to foster reproducibility and future research.",
+      "identifiers": [
+        "SemanticScholar:e21af5a78efcb3ea516d4c8188e6ca3349990234"
+      ],
+      "semantic_scholar_id": "e21af5a78efcb3ea516d4c8188e6ca3349990234",
+      "canonical_id": "arXiv:2602.22663",
+      "arxiv_id": "2602.22663",
+      "doi": "10.1109/ICRA57385.2026.11696071",
+      "authors": [
+        "Wen-Xuan Song",
+        "Jia-Yi Chen",
+        "Xiao-Quan Sun",
+        "Hua-Shuo Lei",
+        "Yi-Kai Qin",
+        "Wei Zhao",
+        "Pengxiang Ding",
+        "Han Zhao",
+        "Tong-Xin Wang",
+        "Peng-Xu Hou",
+        "Zhi-De Zhong",
+        "Hao-Dong Yan",
+        "Dong-Lin Wang",
+        "Jun Ma",
+        "Hao-Ang Li"
+      ],
+      "priority": 109,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 9,
+        "citation_count": 9,
+        "total": 109,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 229,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "AgilePruner: An Empirical Study of Attention and Diversity for Adaptive Visual Token Pruning in Large Vision-Language Models",
+      "source_url": "https://arxiv.org/abs/2603.01236",
+      "year": 2026,
+      "published": "2026-03-01",
+      "venue": "arXiv.org",
+      "citation_count": 9,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Vision-Language Models (LVLMs) have adopted visual token pruning strategies to mitigate substantial computational overhead incurred by extensive visual token sequences. While prior works primarily focus on either attention-based or diversity-based pruning methods, in-depth analysis of these approaches'characteristics and limitations remains largely unexplored. In this work, we conduct thorough empirical analysis using effective rank (erank) as a measure of feature diversity and attention score entropy to investigate visual token processing mechanisms and analyze the strengths and weaknesses of each approach. Our analysis reveals two insights: (1) Our erank-based quantitative analysis shows that many diversity-oriented pruning methods preserve substantially less feature diversity than intended; moreover, analysis using the CHAIR dataset reveals that the diversity they do retain is closely tied to increased hallucination frequency compared to attention-based pruning. (2) We further observe that attention-based approaches are more effective on simple images where visual evidence is concentrated, while diversity-based methods better handle complex images with distributed features. Building on these empirical insights, we show that incorporating image-aware adjustments into existing hybrid pruning strategies consistently improves their performance. We also provide a minimal instantiation of our empirical findings through a simple adaptive pruning mechanism, which achieves strong and reliable performance across standard benchmarks as well as hallucination-specific evaluations. Our project page available at https://cvsp-lab.github.io/AgilePruner.",
+      "identifiers": [
+        "SemanticScholar:7691ef3b6f8f40cce32c33961b0af39efedaedba"
+      ],
+      "semantic_scholar_id": "7691ef3b6f8f40cce32c33961b0af39efedaedba",
+      "canonical_id": "arXiv:2603.01236",
+      "arxiv_id": "2603.01236",
+      "doi": "10.48550/arXiv.2603.01236",
+      "authors": [
+        "Changwoo Baek",
+        "J. Song",
+        "Sohyeon Kim",
+        "Kyeongbo Kong"
+      ],
+      "priority": 109,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 9,
+        "citation_count": 9,
+        "total": 109,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 226,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Spend Less, Reason Better: Budget-Aware Value Tree Search for LLM Agents",
+      "source_url": "https://arxiv.org/abs/2603.12634",
+      "year": 2026,
+      "published": "2026-03-13",
+      "venue": "arXiv.org",
+      "citation_count": 9,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Test-time scaling has become a dominant paradigm for improving LLM agent reliability, yet current approaches treat compute as an abundant resource, allowing agents to exhaust token and tool budgets on redundant steps or dead-end trajectories. Existing budget-aware methods either require expensive fine-tuning or rely on coarse, trajectory-level heuristics that cannot intervene mid-execution. We propose the Budget-Aware Value Tree (BAVT), a training-free inference-time framework that models multi-hop reasoning as a dynamic search tree guided by step-level value estimation within a single LLM backbone. Another key innovation is a budget-conditioned node selection mechanism that uses the remaining resource ratio as a natural scaling exponent over node values, providing a principled, parameter-free transition from broad exploration to greedy exploitation as the budget depletes. To combat the well-known overconfidence of LLM self-evaluation, BAVT employs a residual value predictor that scores relative progress rather than absolute state quality, enabling reliable pruning of uninformative or redundant tool calls. We further provide a theoretical convergence guarantee, proving that BAVT reaches a terminal answer with probability at least $1-\\epsilon$ under an explicit finite budget bound. Extensive evaluations on four multi-hop QA benchmarks across two model families demonstrate that BAVT consistently outperforms parallel sampling baselines. Most notably, BAVT under strict low-budget constraints surpasses baseline performance at $4\\times$ the resource allocation, establishing that intelligent budget management fundamentally outperforms brute-force compute scaling.",
+      "identifiers": [
+        "SemanticScholar:f5ad8d7c437c5759fc2b7aa8b69068578b07c8a1"
+      ],
+      "semantic_scholar_id": "f5ad8d7c437c5759fc2b7aa8b69068578b07c8a1",
+      "canonical_id": "arXiv:2603.12634",
+      "arxiv_id": "2603.12634",
+      "doi": "10.48550/arXiv.2603.12634",
+      "authors": [
+        "Yushu Li",
+        "Wen-Long Deng",
+        "Jiajin Li",
+        "Xiao-Xiao Li"
+      ],
+      "priority": 109,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 9,
+        "citation_count": 9,
+        "total": 109,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 214,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Few-Step Diffusion Language Models via Trajectory Self-Distillation",
+      "source_url": "https://arxiv.org/abs/2602.12262",
+      "year": 2026,
+      "published": "2026-02-12",
+      "venue": null,
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Diffusion large language models (DLLMs) have emerged as powerful generative models with the promise of fast text generation through parallel decoding. However, realizing this potential in practice remains challenging: reducing the number of decoding steps, typically causes a substantial degradation in output quality due to token factorization error. To alleviate this, we propose a self-distillation framework that trains a few-step student to match the generative trajectory of a full-step teacher. We theoretically and empirically show that trajectory-level supervision mitigates this factorization error, thereby enabling effective few-step decoding. We further incorporate Direct Discriminative Optimization (DDO), a reverse-KL objective that encourages mode-seeking toward the teacher's modes, yielding stronger performance on challenging reasoning tasks. Across reasoning and code-generation benchmarks, our method substantially narrows the gap between few-step and full-step decoding. The source code is available at https://github.com/Tyrion58/T3D.",
+      "identifiers": [
+        "SemanticScholar:70c9a96851c320c769e2ba83ab6e49437d1cb0ff"
+      ],
+      "semantic_scholar_id": "70c9a96851c320c769e2ba83ab6e49437d1cb0ff",
+      "canonical_id": "arXiv:2602.12262",
+      "arxiv_id": "2602.12262",
+      "authors": [
+        "Tun-Yu Zhang",
+        "Xin-Xi Zhang",
+        "Li-Gong Han",
+        "Hai-Zhou Shi",
+        "Xiaoxiao He",
+        "Zhuo-Wei Li",
+        "Hao Wang",
+        "Kai Xu",
+        "Akash Srivastava",
+        "Chen-Guang Mao",
+        "Vladimir Pavlovic",
+        "Dimitris N. Metaxas"
+      ],
+      "priority": 103,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 103,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 243,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2602.13953",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2602.13953",
+        "id:SemanticScholar:447146e90657a8030b696ae2aa4360d9ab169fc6",
+        "id:arXiv:2602.13953",
+        "title:qurl efficient reinforcement learning with quantized rollout",
+        "url:https://arxiv.org/abs/2602.13953"
+      ],
+      "record": {
+        "title": "QuRL: Efficient Reinforcement Learning with Quantized Rollout",
+        "source_url": "https://arxiv.org/abs/2602.13953",
+        "year": 2026,
+        "published": "2026-02-15",
+        "venue": "arXiv.org",
+        "citation_count": 10,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Reinforcement learning with verifiable rewards (RLVR) has become a trending paradigm for training reasoning large language models (LLMs). However, due to the autoregressive decoding nature of LLMs, the rollout process becomes the efficiency bottleneck of RL training, consisting of up to 70\\% of the total training time. In this work, we propose Quantized Reinforcement Learning (QuRL) that uses a quantized actor for accelerating the rollout. We address two challenges in QuRL. First, we propose Adaptive Clipping Range (ACR) that dynamically adjusts the clipping ratio based on the policy ratio between the full-precision actor and the quantized actor, which is essential for mitigating long-term training collapse. Second, we identify the weight update problem, where weight changes between RL steps are extremely small, making it difficult for the quantization operation to capture them effectively. We mitigate this problem through the invariant scaling technique that reduces quantization noise and increases weight update. We evaluate our method with INT8 and FP8 quantization experiments on DeepScaleR and DAPO, and achieve 20% to 80% faster rollout during training.",
+        "identifiers": [
+          "SemanticScholar:447146e90657a8030b696ae2aa4360d9ab169fc6"
+        ],
+        "semantic_scholar_id": "447146e90657a8030b696ae2aa4360d9ab169fc6",
+        "canonical_id": "arXiv:2602.13953",
+        "arxiv_id": "2602.13953",
+        "doi": "10.48550/arXiv.2602.13953",
+        "authors": [
+          "Yuhang Li",
+          "Reena Elangovan",
+          "Xin Dong",
+          "Priyadarshini Panda",
+          "Brucek Khailany"
+        ],
+        "priority": 110,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 10,
+          "citation_count": 10,
+          "total": 110,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 240,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2602.18176",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2602.18176",
+        "id:SemanticScholar:f88c1d5decfd2fe980dacbeb9752925448db8f5c",
+        "id:arXiv:2602.18176",
+        "title:improving sampling for masked diffusion models via information gain",
+        "url:https://arxiv.org/abs/2602.18176"
+      ],
+      "record": {
+        "title": "Improving Sampling for Masked Diffusion Models via Information Gain",
+        "source_url": "https://arxiv.org/abs/2602.18176",
+        "year": 2026,
+        "published": "2026-02-20",
+        "venue": "arXiv.org",
+        "citation_count": 10,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Masked Diffusion Models (MDMs) enable flexible decoding orders, yet existing samplers remain largely greedy, selecting locally certain tokens without accounting for their downstream effects. We show that this myopia can increase cumulative uncertainty and lead to suboptimal generation. To address this, we propose the **Info-Gain Sampler**, a training-free decoding method that uses the bidirectional structure of MDMs to balance immediate uncertainty with the information gained over remaining masked positions. Across reasoning, coding, creative writing, and image generation tasks, Info-Gain Sampler consistently outperforms existing MDM samplers, improving average reasoning accuracy by 2.9--11.6 percentage points and achieving a 62.8% average win rate in creative writing. The code is available at https://github.com/yks23/Information-Gain-Sampler.",
+        "identifiers": [
+          "SemanticScholar:f88c1d5decfd2fe980dacbeb9752925448db8f5c"
+        ],
+        "semantic_scholar_id": "f88c1d5decfd2fe980dacbeb9752925448db8f5c",
+        "canonical_id": "arXiv:2602.18176",
+        "arxiv_id": "2602.18176",
+        "doi": "10.48550/arXiv.2602.18176",
+        "authors": [
+          "Kai Yang",
+          "Jayden Teoh",
+          "Kai-Cheng Yang",
+          "Yi-Tong Zhang",
+          "Alex Lamb"
+        ],
+        "priority": 110,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 10,
+          "citation_count": 10,
+          "total": 110,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 235,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2601.14888",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2601.14888",
+        "id:SemanticScholar:2d808de92c6eff192fcd66820902319f82ac4904",
+        "id:arXiv:2601.14888",
+        "title:what makes lowbit quantizationaware training work for reasoning llms a systematic study",
+        "url:https://arxiv.org/abs/2601.14888"
+      ],
+      "record": {
+        "title": "What Makes Low-Bit Quantization-Aware Training Work for Reasoning LLMs? A Systematic Study",
+        "source_url": "https://arxiv.org/abs/2601.14888",
+        "year": 2026,
+        "published": "2026-01-21",
+        "venue": "arXiv.org",
+        "citation_count": 9,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Reasoning models excel at complex tasks such as coding and mathematics, yet their inference is often slow and token-inefficient. To improve the inference efficiency, post-training quantization (PTQ) usually comes with the cost of large accuracy drops, especially for reasoning tasks under low-bit settings. In this study, we present a systematic empirical study of quantization-aware training (QAT) for reasoning models. Our key findings include: (1) Knowledge distillation is a robust objective for reasoning models trained via either supervised fine-tuning or reinforcement learning; (2) PTQ provides a strong initialization for QAT, improving accuracy while reducing training cost; (3) Reinforcement learning remains feasible for quantized models given a viable cold start and yields additional gains; and (4) Aligning the PTQ calibration domain with the QAT training domain accelerates convergence and often improves the final accuracy. Finally, we consolidate these findings into an optimized workflow (Reasoning-QAT), and show that it consistently outperforms state-of-the-art PTQ methods across multiple LLM backbones and reasoning datasets. For instance, on Qwen3-0.6B, it surpasses GPTQ by 44.53% on MATH-500 and consistently recovers performance in the 2-bit regime.",
+        "identifiers": [
+          "SemanticScholar:2d808de92c6eff192fcd66820902319f82ac4904"
+        ],
+        "semantic_scholar_id": "2d808de92c6eff192fcd66820902319f82ac4904",
+        "canonical_id": "arXiv:2601.14888",
+        "arxiv_id": "2601.14888",
+        "doi": "10.48550/arXiv.2601.14888",
+        "authors": [
+          "Keyu Lv",
+          "Manyi Zhang",
+          "Xiaobo Xia",
+          "Jingchen Ni",
+          "Shan-Nan Yan",
+          "Xianzhi Yu",
+          "Lu Hou",
+          "Chun Yuan",
+          "Hao-Li Bai"
+        ],
+        "priority": 109,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 9,
+          "citation_count": 9,
+          "total": 109,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 265,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2601.22069",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2601.22069",
+        "id:SemanticScholar:4404e8e7db1bb7b124cd9b416fac032f2c735806",
+        "id:arXiv:2601.22069",
+        "title:vtcr1 visiontext compression for efficient longcontext reasoning",
+        "url:https://arxiv.org/abs/2601.22069"
+      ],
+      "record": {
+        "title": "VTC-R1: Vision-Text Compression for Efficient Long-Context Reasoning",
+        "source_url": "https://arxiv.org/abs/2601.22069",
+        "year": 2026,
+        "published": "2026-01-29",
+        "venue": "arXiv.org",
+        "citation_count": 9,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Long-context reasoning has significantly empowered large language models (LLMs) to tackle complex tasks, yet it introduces severe efficiency bottlenecks due to the computational complexity. Existing efficient approaches often rely on complex additional training or external models for compression, which limits scalability and discards critical fine-grained information. In this paper, we propose VTC-R1, a new efficient reasoning paradigm that integrates vision-text compression into the reasoning process. Instead of processing lengthy textual traces, VTC-R1 renders intermediate reasoning segments into compact images, which are iteratively fed back into vision-language models as\"optical memory.\"We construct a training dataset based on OpenR1-Math-220K achieving 3.4x token compression and fine-tune representative VLMs-Glyph and Qwen3-VL. Extensive experiments on benchmarks such as MATH500, AIME25, AMC23 and GPQA-D demonstrate that VTC-R1 consistently outperforms standard long-context reasoning. Furthermore, our approach significantly improves inference efficiency, achieving 2.7x speedup in end-to-end latency, highlighting its potential as a scalable solution for reasoning-intensive applications. Our code is available at https://github.com/w-yibo/VTC-R1.",
+        "identifiers": [
+          "SemanticScholar:4404e8e7db1bb7b124cd9b416fac032f2c735806"
+        ],
+        "semantic_scholar_id": "4404e8e7db1bb7b124cd9b416fac032f2c735806",
+        "canonical_id": "arXiv:2601.22069",
+        "arxiv_id": "2601.22069",
+        "doi": "10.48550/arXiv.2601.22069",
+        "authors": [
+          "Yi-Bo Wang",
+          "Yong-Cheng Jing",
+          "Shunyu Liu",
+          "Hao Guan",
+          "Rong-Cheng Tu",
+          "Cheng-Yu Wang",
+          "Jun Huang",
+          "Dacheng Tao"
+        ],
+        "priority": 109,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 9,
+          "citation_count": 9,
+          "total": 109,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 257,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2601.22954",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2601.22954",
+        "id:SemanticScholar:701d2e200ddb6e78fd7529170b453c0d2c556c12",
+        "id:arXiv:2601.22954",
+        "title:residual context diffusion language models",
+        "url:https://arxiv.org/abs/2601.22954"
+      ],
+      "record": {
+        "title": "Residual Context Diffusion Language Models",
+        "source_url": "https://arxiv.org/abs/2601.22954",
+        "year": 2026,
+        "published": "2026-01-30",
+        "venue": "arXiv.org",
+        "citation_count": 9,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Diffusion Large Language Models (dLLMs) have emerged as a promising alternative to purely autoregressive language models because they can decode multiple tokens in parallel. However, state-of-the-art block-wise dLLMs rely on a\"remasking\"mechanism that decodes only the most confident tokens and discards the rest, effectively wasting computation. We demonstrate that recycling computation from the discarded tokens is beneficial, as these tokens retain contextual information useful for subsequent decoding iterations. In light of this, we propose Residual Context Diffusion (RCD), a module that converts these discarded token representations into contextual residuals and injects them back for the next denoising step. RCD uses a decoupled two-stage training pipeline to bypass the memory bottlenecks associated with backpropagation. We validate our method on both long CoT reasoning (SDAR) and short CoT instruction following (LLaDA) models. We demonstrate that a standard dLLM can be efficiently converted to the RCD paradigm with merely ~300 million tokens. RCD consistently improves frontier dLLMs by 4-11 percentage points in accuracy with minimal extra computation overhead across a wide range of benchmarks. Notably, on the most challenging AIME tasks, RCD nearly doubles baseline accuracy and attains up to 4-5x fewer denoising steps at baseline's peak accuracy.",
+        "identifiers": [
+          "SemanticScholar:701d2e200ddb6e78fd7529170b453c0d2c556c12"
+        ],
+        "semantic_scholar_id": "701d2e200ddb6e78fd7529170b453c0d2c556c12",
+        "canonical_id": "arXiv:2601.22954",
+        "arxiv_id": "2601.22954",
+        "doi": "10.48550/arXiv.2601.22954",
+        "authors": [
+          "Yuezhou Hu",
+          "Harman M. Singh",
+          "Monishwaran Maheswaran",
+          "Hao-Cheng Xi",
+          "C. Hooper",
+          "Jintao Zhang",
+          "Aditya Tomar",
+          "Michael W. Mahoney",
+          "Sewon Min",
+          "Mehrdad Farajtabar",
+          "Kurt Keutzer",
+          "Amir Gholami",
+          "Chen-Feng Xu"
+        ],
+        "priority": 109,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 9,
+          "citation_count": 9,
+          "total": 109,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 256,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2602.01842",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2602.01842",
+        "id:SemanticScholar:7eacc23efeff03928c20319405a7aa9222a8099c",
+        "id:arXiv:2602.01842",
+        "title:prism efficient testtime scaling via hierarchical search and selfverification for discrete diffusion language models",
+        "url:https://arxiv.org/abs/2602.01842"
+      ],
+      "record": {
+        "title": "Prism: Efficient Test-Time Scaling via Hierarchical Search and Self-Verification for Discrete Diffusion Language Models",
+        "source_url": "https://arxiv.org/abs/2602.01842",
+        "year": 2026,
+        "published": "2026-02-02",
+        "venue": "arXiv.org",
+        "citation_count": 9,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Inference-time compute has re-emerged as a practical way to improve LLM reasoning. Most test-time scaling (TTS) algorithms rely on autoregressive decoding, which is ill-suited to discrete diffusion language models (dLLMs) due to their parallel decoding over the entire sequence. As a result, developing effective and efficient TTS methods to unlock dLLMs'full generative potential remains an underexplored challenge. To address this, we propose Prism (Pruning, Remasking, and Integrated Self-verification Method), an efficient TTS framework for dLLMs that (i) performs Hierarchical Trajectory Search (HTS) which dynamically prunes and reallocates compute in an early-to-mid denoising window, (ii) introduces Local branching with partial remasking to explore diverse implementations while preserving high-confidence tokens, and (iii) replaces external verifiers with Self-Verified Feedback (SVF) obtained via self-evaluation prompts on intermediate completions. Across four mathematical reasoning and code generation benchmarks on three dLLMs, including LLaDA 8B Instruct, Dream 7B Instruct, and LLaDA 2.0-mini, our Prism achieves a favorable performance-efficiency trade-off, matching best-of-N performance with substantially fewer function evaluations (NFE). The code is released at https://github.com/viiika/Prism.",
+        "identifiers": [
+          "SemanticScholar:7eacc23efeff03928c20319405a7aa9222a8099c"
+        ],
+        "semantic_scholar_id": "7eacc23efeff03928c20319405a7aa9222a8099c",
+        "canonical_id": "arXiv:2602.01842",
+        "arxiv_id": "2602.01842",
+        "doi": "10.48550/arXiv.2602.01842",
+        "authors": [
+          "Jinbin Bai",
+          "Yi-Xuan Li",
+          "Yuchen Zhu",
+          "Yi Xin",
+          "Qingyu Shi",
+          "Ao-Song Feng",
+          "Xiao-Hong Liu",
+          "Mo-Lei Tao",
+          "Jian-Ru Xue",
+          "Xiang-Tai Li",
+          "Ming-Hsuan Yang"
+        ],
+        "priority": 109,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 9,
+          "citation_count": 9,
+          "total": 109,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 253,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2602.03067",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2602.03067",
+        "id:SemanticScholar:b050b5c7aef6c2ee1b27a63dfc05f986c65d6352",
+        "id:arXiv:2602.03067",
+        "title:flashsinkhorn ioaware entropic optimal transport",
+        "url:https://arxiv.org/abs/2602.03067"
+      ],
+      "record": {
+        "title": "FlashSinkhorn: IO-Aware Entropic Optimal Transport",
+        "source_url": "https://arxiv.org/abs/2602.03067",
+        "year": 2026,
+        "published": "2026-02-03",
+        "venue": "arXiv.org",
+        "citation_count": 9,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Entropic optimal transport (EOT) via Sinkhorn iterations is widely used in modern machine learning, yet GPU solvers remain inefficient at scale. Tensorized implementations suffer quadratic HBM traffic from dense $n\\times m$ interactions, while existing online backends avoid storing dense matrices but still rely on generic tiled map-reduce reduction kernels with limited fusion. We present \\textbf{FlashSinkhorn}, an IO-aware EOT solver for squared Euclidean cost that rewrites stabilized log-domain Sinkhorn updates as row-wise LogSumExp reductions of biased dot-product scores, the same normalization as transformer attention. This enables FlashAttention-style fusion and tiling: fused Triton kernels stream tiles through on-chip SRAM and update dual potentials in a single pass, substantially reducing HBM IO per iteration while retaining linear-memory operations. We further provide streaming kernels for transport application, enabling scalable first- and second-order optimization. On A100 GPUs, FlashSinkhorn achieves up to $32\\times$ forward-pass and $161\\times$ end-to-end speedups over state-of-the-art online baselines on point-cloud OT, improves scalability on OT-based downstream tasks. For reproducibility, we release an open-source implementation at https://github.com/ot-triton-lab/flash-sinkhorn .",
+        "identifiers": [
+          "SemanticScholar:b050b5c7aef6c2ee1b27a63dfc05f986c65d6352"
+        ],
+        "semantic_scholar_id": "b050b5c7aef6c2ee1b27a63dfc05f986c65d6352",
+        "canonical_id": "arXiv:2602.03067",
+        "arxiv_id": "2602.03067",
+        "doi": "10.48550/arXiv.2602.03067",
+        "authors": [
+          "Felix X.-F. Ye",
+          "Xing-Jie Li",
+          "An Yu",
+          "Ming-Ching Chang",
+          "Linsong Chu",
+          "Davis Wertheimer"
+        ],
+        "priority": 109,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 9,
+          "citation_count": 9,
+          "total": 109,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 252,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2602.03839",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2602.03839",
+        "id:SemanticScholar:4552886e4e1073760e2e273ffa72246b83d8c7b3",
+        "id:arXiv:2602.03839",
+        "title:understanding and exploiting weight update sparsity for communicationefficient distributed rl",
+        "url:https://arxiv.org/abs/2602.03839"
+      ],
+      "record": {
+        "title": "Understanding and Exploiting Weight Update Sparsity for Communication-Efficient Distributed RL",
+        "source_url": "https://arxiv.org/abs/2602.03839",
+        "year": 2026,
+        "published": "2026-02-03",
+        "venue": "arXiv.org",
+        "citation_count": 9,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Bandwidth-constrained distributed reinforcement learning (RL) post-training of large language models is bottlenecked by two channels: weight synchronization from trainers to inference workers, and gradient or pseudo-gradient synchronization across trainers. We find that approximately 99% of per-step weight updates are invisible after the BF16 cast used by standard training and inference forward passes. We explain this sparsity by showing that, at typical RL post-training learning rates, Adam updates often fall below the local BF16 rounding threshold. We turn this observation into an algorithmic principle called compute-visible sparsification: transmit only updates that would change the next forward pass. PULSE (Precision-gated Updates for Low-precision Sparse Exchange) turns this principle into two communication algorithms: PULSESync sends lossless sparse BF16 weight patches from trainers to inference workers, and PULSELoCo sparsifies DiLoCo-style FP32 pseudo-gradient synchronization with error feedback. Over bandwidth-constrained commodity networks, PULSESync cuts weight-synchronization communication by over 100x while reconstructing trainer weights bit-identically. PULSELoCo matches DiLoCo across four models while reducing trainer-to-trainer communication by over 17x versus DiLoCo and over 100x versus DDP in the largest evaluated setting.",
+        "identifiers": [
+          "SemanticScholar:4552886e4e1073760e2e273ffa72246b83d8c7b3"
+        ],
+        "semantic_scholar_id": "4552886e4e1073760e2e273ffa72246b83d8c7b3",
+        "canonical_id": "arXiv:2602.03839",
+        "arxiv_id": "2602.03839",
+        "doi": "10.48550/arXiv.2602.03839",
+        "authors": [
+          "Erfan Miahi",
+          "Eugene Belilovsky"
+        ],
+        "priority": 109,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 9,
+          "citation_count": 9,
+          "total": 109,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 252,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2602.22663",
+      "identity_tokens": [
+        "id:DOI:10.1109/icra57385.2026.11696071",
+        "id:SemanticScholar:e21af5a78efcb3ea516d4c8188e6ca3349990234",
+        "id:arXiv:2602.22663",
+        "title:rethinking the practicality of visionlanguageaction model a comprehensive benchmark and an improved baseline",
+        "url:https://arxiv.org/abs/2602.22663"
+      ],
+      "record": {
+        "title": "Rethinking the Practicality of Vision-language-action Model: A Comprehensive Benchmark and An Improved Baseline",
+        "source_url": "https://arxiv.org/abs/2602.22663",
+        "year": 2026,
+        "published": "2026-02-26",
+        "venue": "IEEE International Conference on Robotics and Automation",
+        "citation_count": 9,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Vision-Language-Action (VLA) models have emerged as a generalist robotic agent. However, existing VLAs are hindered by excessive parameter scales, prohibitive pre-training requirements, and limited applicability to diverse embodiments. To improve the practicality of VLAs, we propose a comprehensive benchmark and an improved baseline. First, we propose CEBench, a new benchmark spanning diverse embodiments in both simulation and the real world with consideration of domain randomization. We collect 14.4k simulated trajectories and 1.6k real-world expert-curated trajectories to support training on CEBench. Second, using CEBench as our testbed, we study three critical aspects of VLAs’ practicality and offer several key findings. Informed by these findings, we introduce LLaVA-VLA, a lightweight yet powerful VLA designed for practical deployment on consumer-grade GPUs. Architecturally, it integrates a compact VLM backbone with multi-view perception, proprioceptive tokenization, and action chunking. To eliminate reliance on costly pre-training, LLaVA-VLA adopts a two-stage training paradigm including post-training and fine-tuning. Furthermore, LLaVA-VLA extends the action space to unify navigation and manipulation. Experiments across embodiments demonstrate the capabilities of generalization and versatility of LLaVA-VLA , while real-world mobile manipulation experiments establish it as the first end-to-end VLA model for mobile manipulation. We will open-source all datasets, codes, and checkpoints upon acceptance to foster reproducibility and future research.",
+        "identifiers": [
+          "SemanticScholar:e21af5a78efcb3ea516d4c8188e6ca3349990234"
+        ],
+        "semantic_scholar_id": "e21af5a78efcb3ea516d4c8188e6ca3349990234",
+        "canonical_id": "arXiv:2602.22663",
+        "arxiv_id": "2602.22663",
+        "doi": "10.1109/ICRA57385.2026.11696071",
+        "authors": [
+          "Wen-Xuan Song",
+          "Jia-Yi Chen",
+          "Xiao-Quan Sun",
+          "Hua-Shuo Lei",
+          "Yi-Kai Qin",
+          "Wei Zhao",
+          "Pengxiang Ding",
+          "Han Zhao",
+          "Tong-Xin Wang",
+          "Peng-Xu Hou",
+          "Zhi-De Zhong",
+          "Hao-Dong Yan",
+          "Dong-Lin Wang",
+          "Jun Ma",
+          "Hao-Ang Li"
+        ],
+        "priority": 109,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 9,
+          "citation_count": 9,
+          "total": 109,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 229,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2603.01236",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2603.01236",
+        "id:SemanticScholar:7691ef3b6f8f40cce32c33961b0af39efedaedba",
+        "id:arXiv:2603.01236",
+        "title:agilepruner an empirical study of attention and diversity for adaptive visual token pruning in large visionlanguage models",
+        "url:https://arxiv.org/abs/2603.01236"
+      ],
+      "record": {
+        "title": "AgilePruner: An Empirical Study of Attention and Diversity for Adaptive Visual Token Pruning in Large Vision-Language Models",
+        "source_url": "https://arxiv.org/abs/2603.01236",
+        "year": 2026,
+        "published": "2026-03-01",
+        "venue": "arXiv.org",
+        "citation_count": 9,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large Vision-Language Models (LVLMs) have adopted visual token pruning strategies to mitigate substantial computational overhead incurred by extensive visual token sequences. While prior works primarily focus on either attention-based or diversity-based pruning methods, in-depth analysis of these approaches'characteristics and limitations remains largely unexplored. In this work, we conduct thorough empirical analysis using effective rank (erank) as a measure of feature diversity and attention score entropy to investigate visual token processing mechanisms and analyze the strengths and weaknesses of each approach. Our analysis reveals two insights: (1) Our erank-based quantitative analysis shows that many diversity-oriented pruning methods preserve substantially less feature diversity than intended; moreover, analysis using the CHAIR dataset reveals that the diversity they do retain is closely tied to increased hallucination frequency compared to attention-based pruning. (2) We further observe that attention-based approaches are more effective on simple images where visual evidence is concentrated, while diversity-based methods better handle complex images with distributed features. Building on these empirical insights, we show that incorporating image-aware adjustments into existing hybrid pruning strategies consistently improves their performance. We also provide a minimal instantiation of our empirical findings through a simple adaptive pruning mechanism, which achieves strong and reliable performance across standard benchmarks as well as hallucination-specific evaluations. Our project page available at https://cvsp-lab.github.io/AgilePruner.",
+        "identifiers": [
+          "SemanticScholar:7691ef3b6f8f40cce32c33961b0af39efedaedba"
+        ],
+        "semantic_scholar_id": "7691ef3b6f8f40cce32c33961b0af39efedaedba",
+        "canonical_id": "arXiv:2603.01236",
+        "arxiv_id": "2603.01236",
+        "doi": "10.48550/arXiv.2603.01236",
+        "authors": [
+          "Changwoo Baek",
+          "J. Song",
+          "Sohyeon Kim",
+          "Kyeongbo Kong"
+        ],
+        "priority": 109,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 9,
+          "citation_count": 9,
+          "total": 109,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 226,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2603.12634",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2603.12634",
+        "id:SemanticScholar:f5ad8d7c437c5759fc2b7aa8b69068578b07c8a1",
+        "id:arXiv:2603.12634",
+        "title:spend less reason better budgetaware value tree search for llm agents",
+        "url:https://arxiv.org/abs/2603.12634"
+      ],
+      "record": {
+        "title": "Spend Less, Reason Better: Budget-Aware Value Tree Search for LLM Agents",
+        "source_url": "https://arxiv.org/abs/2603.12634",
+        "year": 2026,
+        "published": "2026-03-13",
+        "venue": "arXiv.org",
+        "citation_count": 9,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Test-time scaling has become a dominant paradigm for improving LLM agent reliability, yet current approaches treat compute as an abundant resource, allowing agents to exhaust token and tool budgets on redundant steps or dead-end trajectories. Existing budget-aware methods either require expensive fine-tuning or rely on coarse, trajectory-level heuristics that cannot intervene mid-execution. We propose the Budget-Aware Value Tree (BAVT), a training-free inference-time framework that models multi-hop reasoning as a dynamic search tree guided by step-level value estimation within a single LLM backbone. Another key innovation is a budget-conditioned node selection mechanism that uses the remaining resource ratio as a natural scaling exponent over node values, providing a principled, parameter-free transition from broad exploration to greedy exploitation as the budget depletes. To combat the well-known overconfidence of LLM self-evaluation, BAVT employs a residual value predictor that scores relative progress rather than absolute state quality, enabling reliable pruning of uninformative or redundant tool calls. We further provide a theoretical convergence guarantee, proving that BAVT reaches a terminal answer with probability at least $1-\\epsilon$ under an explicit finite budget bound. Extensive evaluations on four multi-hop QA benchmarks across two model families demonstrate that BAVT consistently outperforms parallel sampling baselines. Most notably, BAVT under strict low-budget constraints surpasses baseline performance at $4\\times$ the resource allocation, establishing that intelligent budget management fundamentally outperforms brute-force compute scaling.",
+        "identifiers": [
+          "SemanticScholar:f5ad8d7c437c5759fc2b7aa8b69068578b07c8a1"
+        ],
+        "semantic_scholar_id": "f5ad8d7c437c5759fc2b7aa8b69068578b07c8a1",
+        "canonical_id": "arXiv:2603.12634",
+        "arxiv_id": "2603.12634",
+        "doi": "10.48550/arXiv.2603.12634",
+        "authors": [
+          "Yushu Li",
+          "Wen-Long Deng",
+          "Jiajin Li",
+          "Xiao-Xiao Li"
+        ],
+        "priority": 109,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 9,
+          "citation_count": 9,
+          "total": 109,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 214,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2602.12262",
+      "identity_tokens": [
+        "id:SemanticScholar:70c9a96851c320c769e2ba83ab6e49437d1cb0ff",
+        "id:arXiv:2602.12262",
+        "title:fewstep diffusion language models via trajectory selfdistillation",
+        "url:https://arxiv.org/abs/2602.12262"
+      ],
+      "record": {
+        "title": "Few-Step Diffusion Language Models via Trajectory Self-Distillation",
+        "source_url": "https://arxiv.org/abs/2602.12262",
+        "year": 2026,
+        "published": "2026-02-12",
+        "venue": null,
+        "citation_count": 3,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Diffusion large language models (DLLMs) have emerged as powerful generative models with the promise of fast text generation through parallel decoding. However, realizing this potential in practice remains challenging: reducing the number of decoding steps, typically causes a substantial degradation in output quality due to token factorization error. To alleviate this, we propose a self-distillation framework that trains a few-step student to match the generative trajectory of a full-step teacher. We theoretically and empirically show that trajectory-level supervision mitigates this factorization error, thereby enabling effective few-step decoding. We further incorporate Direct Discriminative Optimization (DDO), a reverse-KL objective that encourages mode-seeking toward the teacher's modes, yielding stronger performance on challenging reasoning tasks. Across reasoning and code-generation benchmarks, our method substantially narrows the gap between few-step and full-step decoding. The source code is available at https://github.com/Tyrion58/T3D.",
+        "identifiers": [
+          "SemanticScholar:70c9a96851c320c769e2ba83ab6e49437d1cb0ff"
+        ],
+        "semantic_scholar_id": "70c9a96851c320c769e2ba83ab6e49437d1cb0ff",
+        "canonical_id": "arXiv:2602.12262",
+        "arxiv_id": "2602.12262",
+        "authors": [
+          "Tun-Yu Zhang",
+          "Xin-Xi Zhang",
+          "Li-Gong Han",
+          "Hai-Zhou Shi",
+          "Xiaoxiao He",
+          "Zhuo-Wei Li",
+          "Hao Wang",
+          "Kai Xu",
+          "Akash Srivastava",
+          "Chen-Guang Mao",
+          "Vladimir Pavlovic",
+          "Dimitris N. Metaxas"
+        ],
+        "priority": 103,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 3,
+          "citation_count": 3,
+          "total": 103,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 243,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:9096f1eb5683896618aeab6e0f926f129647559f771aae778acea5b390571d55",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}
