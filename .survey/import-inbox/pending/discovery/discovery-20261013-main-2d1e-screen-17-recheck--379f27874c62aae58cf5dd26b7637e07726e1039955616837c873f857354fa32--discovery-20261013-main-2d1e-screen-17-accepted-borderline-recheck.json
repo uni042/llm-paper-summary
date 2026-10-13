@@ -1,0 +1,258 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local",
+  "run_key": "discovery-20261013-main-2d1e-screen-17-recheck",
+  "reference_main_sha": "2d1e5db829dac297b921aabf9227f8e52bb0660c",
+  "record_count": 14,
+  "source_check_timestamps_basis": "Only the current primary-source recheck timestamps are recoverable; original first-check timestamps were not retained. first_checked_at is the earliest retained verification for this handoff artifact, and last_checked_at is the same observed recheck.",
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2605.27995",
+      "identity_tokens": [
+        "arXiv:2605.27995",
+        "DOI:10.48550/arXiv.2605.27995",
+        "SemanticScholar:2ab449df3741fd8cd3c563f74c049ad03de54eb0"
+      ],
+      "title": "AsyncTool: Evaluating the Asynchronous Function Calling Capability under Multi-Task Scenarios",
+      "reason": "AsyncTool measures LLM-agent coordination under tool-response latency and concurrent tasks, with efficiency-oriented completion metrics; this directly addresses runtime behavior and latency hiding in tool-using systems.",
+      "source_url": "https://arxiv.org/abs/2605.27995",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T02:44:44Z",
+      "last_checked_at": "2026-10-13T02:44:44Z",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2506.13585-minimax-m1-scaling-test-time-compute-efficiently-with-lightning-attentio.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/AIHCIR67580.2025.11405267",
+      "identity_tokens": [
+        "DOI:10.1109/AIHCIR67580.2025.11405267",
+        "SemanticScholar:02743ff9ebf220b009eb336048e8992fa99d0b11"
+      ],
+      "title": "Query-based Collaborative Multimodal Token Pruning for Audio-Visual Question Answering",
+      "reason": "The IEEE Xplore record for DOI 10.1109/AIHCIR67580.2025.11405267 could not expose its abstract: the official page returned a JavaScript/robot-verification gate. Search-index metadata associates the DOI and title, but no primary abstract was readable, so relevance of the reported multimodal token pruning could not be confirmed.",
+      "source_url": "https://ieeexplore.ieee.org/document/11405267",
+      "body_check": "source_unavailable; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-10-13T02:44:44Z",
+      "last_checked_at": "2026-10-13T02:44:44Z",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2107.00910-learned-token-pruning-for-transformers.md"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2606.27807",
+      "identity_tokens": [
+        "arXiv:2606.27807",
+        "DOI:10.48550/arXiv.2606.27807",
+        "SemanticScholar:96b35f4ec32c20fe1e42d608204c5b8b7a5d5281"
+      ],
+      "title": "SpikeVLA: Vision-Language-Action Models with Spiking Neural Networks",
+      "reason": "SpikeVLA replaces dense transformer computation with event-driven spiking vision, language, and action components and explicitly reports lower inference energy and computational cost for low-power real-time deployment.",
+      "source_url": "https://arxiv.org/abs/2606.27807",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T02:44:44Z",
+      "last_checked_at": "2026-10-13T02:44:44Z",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2507.05240-streamvln-streaming-vision-and-language-navigation-via-slowfast-context-.md"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2603.21269",
+      "identity_tokens": [
+        "arXiv:2603.21269",
+        "DOI:10.48550/arXiv.2603.21269",
+        "SemanticScholar:ddbf39a597e2ab6839f088d57cced92417657c03"
+      ],
+      "title": "DyGeoVLN: Infusing Dynamic Geometry Foundation Model into Vision-Language Navigation",
+      "reason": "DyGeoVLN compresses long-horizon navigation history with adaptive token pruning and explicitly says redundant spatiotemporal tokens are removed to reduce inference cost; this is a concrete token-efficiency mechanism.",
+      "source_url": "https://arxiv.org/abs/2603.21269",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T02:44:44Z",
+      "last_checked_at": "2026-10-13T02:44:44Z",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2507.05240-streamvln-streaming-vision-and-language-navigation-via-slowfast-context-.md"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2602.19281",
+      "identity_tokens": [
+        "arXiv:2602.19281",
+        "DOI:10.48550/arXiv.2602.19281",
+        "SemanticScholar:fc43f97dcdc742520da54ec1c08d7248b7892311"
+      ],
+      "title": "Limited Reasoning Space: The cage of long-horizon reasoning in LLMs",
+      "reason": "Halo dynamically regulates LLM test-time planning at an inferred reasoning boundary to avoid redundant over-planning while using compute scaling; this directly targets allocation of inference-time reasoning compute.",
+      "source_url": "https://arxiv.org/abs/2602.19281",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T02:44:49Z",
+      "last_checked_at": "2026-10-13T02:44:49Z",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2502.09601-cot-valve-length-compressible-chain-of-thought-tuning.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.01848",
+      "identity_tokens": [
+        "arXiv:2608.01848",
+        "SemanticScholar:d11351775b57bf25b31de3cfdc40eb0726183fcd"
+      ],
+      "title": "Decoupling semantics from vision: A framework for faithful visual-text compression evaluation",
+      "reason": "The paper evaluates visual-text compression quality for long-context MLLMs and exposes limitations in downstream-based metrics. This is adjacent to reducing context tokens, but it supplies an evaluation framework rather than an inference compression method.",
+      "source_url": "https://arxiv.org/abs/2608.01848",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T02:44:49Z",
+      "last_checked_at": "2026-10-13T02:44:49Z",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2506.13585-minimax-m1-scaling-test-time-compute-efficiently-with-lightning-attentio.md"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2607.29600",
+      "identity_tokens": [
+        "arXiv:2607.29600",
+        "DOI:10.48550/arXiv.2607.29600",
+        "SemanticScholar:f2c8152d4174ed4f6fb30fed28bd0c01f937f9b8"
+      ],
+      "title": "HAM-VLN: Harnessing Hierarchical Agentic Memory for Zero-Shot Vision-and-Language Navigation",
+      "reason": "HAM-VLN bounds retained waypoint history and retrieves older memory selectively, requiring no additional LLM calls and reporting over 65% shorter context; this is a concrete reduction in prompt-token and inference-context cost.",
+      "source_url": "https://arxiv.org/abs/2607.29600",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T02:44:49Z",
+      "last_checked_at": "2026-10-13T02:44:49Z",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2507.05240-streamvln-streaming-vision-and-language-navigation-via-slowfast-context-.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.3390/fi18080393",
+      "identity_tokens": [
+        "DOI:10.3390/fi18080393",
+        "SemanticScholar:881c45cc61ca36f4af044a086ca78c2ffbba610b"
+      ],
+      "title": "Large Language Models for Future Internet Ecosystems: A Taxonomy-Based Review of Smart IoT, Edge Intelligence, and Autonomous AI",
+      "reason": "The MDPI review directly discusses LLM deployment across edge/IoT systems and synthesizes latency, energy, and resource constraints, but it is a taxonomy review rather than a concrete system or efficiency method.",
+      "source_url": "https://www.mdpi.com/1999-5903/18/8/393",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T02:44:49Z",
+      "last_checked_at": "2026-10-13T02:44:49Z",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2107.00910-learned-token-pruning-for-transformers.md"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2606.20458",
+      "identity_tokens": [
+        "arXiv:2606.20458",
+        "DOI:10.48550/arXiv.2606.20458",
+        "SemanticScholar:a66d6002a14799624e389879a516e8d389bda270"
+      ],
+      "title": "Slow Brain, Fast Planner: Latency-Resilient VLM-Augmented Urban Navigation",
+      "reason": "The VLM-Planner interface explicitly accommodates 1–3 second VLM response latency while preserving a 5–20 Hz urban control loop through trajectory-level fusion; this is a concrete latency-resilient runtime design.",
+      "source_url": "https://arxiv.org/abs/2606.20458",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T02:44:56Z",
+      "last_checked_at": "2026-10-13T02:44:56Z",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2507.05240-streamvln-streaming-vision-and-language-navigation-via-slowfast-context-.md"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2605.22036",
+      "identity_tokens": [
+        "arXiv:2605.22036",
+        "DOI:10.48550/arXiv.2605.22036",
+        "SemanticScholar:19549e1c6d0ef085c9343edb41abdb903d0864c4"
+      ],
+      "title": "GA-VLN: Geometry-Aware BEV Representation for Efficient Vision-Language Navigation",
+      "reason": "GA-VLN replaces dense RGB patch sequences with a compact geometry-aware BEV representation and explicitly addresses token redundancy and computational overhead in MLLM-based navigation.",
+      "source_url": "https://arxiv.org/abs/2605.22036",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T02:44:56Z",
+      "last_checked_at": "2026-10-13T02:44:56Z",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2507.05240-streamvln-streaming-vision-and-language-navigation-via-slowfast-context-.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.asoc.2026.114567",
+      "identity_tokens": [
+        "DOI:10.1016/j.asoc.2026.114567",
+        "SemanticScholar:adbd4ed8ff7597b6553b1fa9ef13190437592792"
+      ],
+      "title": "BiSGR-Att: A sequence recommendation model based on bidirectional simplified gated recurrent network with linear attention",
+      "reason": "The DOI and title resolve to Elsevier's ScienceDirect record for Applied Soft Computing 190 (March 2026), article 114567, but the publisher page returned HTTP 403 in retrieval and exposed no abstract. With only bibliographic metadata available, the sequence-recommendation model's relevance to LLM inference efficiency cannot be established.",
+      "source_url": "https://www.sciencedirect.com/science/article/pii/S1568494626000153",
+      "body_check": "source_unavailable; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-10-13T02:44:56Z",
+      "last_checked_at": "2026-10-13T02:44:56Z",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2402.19427-griffin-mixing-gated-linear-recurrences-with-local-attention-for-efficie.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.media.2026.104016",
+      "identity_tokens": [
+        "DOI:10.1016/j.media.2026.104016",
+        "SemanticScholar:7a4791e7500f3ebb479939818731ec47a7fc0e3c"
+      ],
+      "title": "FADFNet: A fine-tunable and adaptive decomposition-fusion network for cross-dataset low-dose CT and low-dose PET image reconstruction",
+      "reason": "The DOI and title resolve to Elsevier's ScienceDirect record for Medical Image Analysis, article 104016, but the publisher page returned HTTP 403 in retrieval and exposed no abstract. The supplied pool abstract was not treated as primary-source evidence; relevance remains unverified.",
+      "source_url": "https://www.sciencedirect.com/science/article/pii/S136184152600085X",
+      "body_check": "source_unavailable; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-10-13T02:44:56Z",
+      "last_checked_at": "2026-10-13T02:44:56Z",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2024-2402.13499-benchmarking-and-dissecting-the-nvidia-hopper-gpu-architecture.md"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2602.23153",
+      "identity_tokens": [
+        "arXiv:2602.23153",
+        "DOI:10.48550/arXiv.2602.23153",
+        "SemanticScholar:b778a0ca8a44eb5ccf5e63811042a784779c194b"
+      ],
+      "title": "Efficient Encoder-Free Fourier-based 3D Large Multimodal Model",
+      "reason": "Fase3D removes a heavy pretrained visual encoder and uses compact superpoints, FFT-based context modeling, token merging, and low-cost adapters; the abstract explicitly reports lower computation and parameter count for a 3D LMM.",
+      "source_url": "https://arxiv.org/abs/2602.23153",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T02:45:01Z",
+      "last_checked_at": "2026-10-13T02:45:01Z",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2105.03824-fnet-mixing-tokens-with-fourier-transforms.md"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2602.20449",
+      "identity_tokens": [
+        "arXiv:2602.20449",
+        "DOI:10.48550/arXiv.2602.20449",
+        "SemanticScholar:8f9395e4f42c28b21abf5aefe8081d371c44b3f6"
+      ],
+      "title": "Protein Language Models Diverge from Natural Language: Comparative Analysis and Improved Inference",
+      "reason": "The paper adapts early exit to protein language models and reports over 10% inference-efficiency improvement alongside accuracy gains; this is a concrete transformer inference-compute method, though its demonstrated domain is protein prediction.",
+      "source_url": "https://arxiv.org/abs/2602.20449",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T02:45:01Z",
+      "last_checked_at": "2026-10-13T02:45:01Z",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-3c0f54f14532-berxit-early-exiting-for-bert-with-better-fine-tuning-and-extension-to-r.md"
+      ]
+    }
+  ]
+}
