@@ -92,7 +92,7 @@
   Mono3D DRAM＋近メモリ処理をGPUと統合し、層ごとの遅延差を8-階層化、話題別の高頻度 専門家配置へ利用してGPU比最大8.29倍の復号スループットを示す。
 
 - **2025-09 · [Combating the Memory Walls: Optimization Pathways for Long-Context Agentic LLM Inference](2025-2509.09505-combating-the-memory-walls-optimization-pathways-for-long-context-agentic-llm-inference.md)**  
-  実装：✓ ・ リポジトリ内被引用：5  
+  実装：✓ ・ リポジトリ内被引用：6  
   長文脈エージェント推論の帯域・容量の二重メモリ壁に対し、平坦化シストリック配列、非対称4ビット量子化、FlashAttention専用支援を共同設計し、シミュレーションでA100比最大2.23倍、TPU v6e比最大4.70倍のスループットを示す。
 
 - **2025-06 · [AiF: Accelerating On-Device LLM Inference Using In-Flash Processing](2026-21d5070d498a-aif-accelerating-on-device-llm-inference-using-in-flash-processing.md)**  
