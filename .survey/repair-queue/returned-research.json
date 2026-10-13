@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-13T23:02:44+00:00",
+  "generated_at": "2026-10-13T23:09:49+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -1035,8 +1035,8 @@
       "canonical_id": "arXiv:2302.13939",
       "title": "SpikeGPT: Generative Pre-trained Language Model with Spiking Neural Networks",
       "source_url": "https://arxiv.org/html/2302.13939v5",
-      "returned_at": "2026-10-13T22:59:10+00:00",
-      "return_count": 1,
+      "returned_at": "2026-10-13T23:09:07+00:00",
+      "return_count": 2,
       "assigned_worker": "scheduled-chat-30",
       "reason": "blocked_quality",
       "failures": [
@@ -1052,16 +1052,16 @@
         "limitation_chars": 630,
         "insufficiency_flags": []
       },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_1643dacabf5081918f8c4f94130ef4dc--2023-2302.13939-spikegpt-spiking-rwkv-research-20261014-0645-scheduled-chat-45-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_1643dacabf5081918f8c4f94130ef4dc--2023-2302.13939-spikegpt-spiking-rwkv-research-20261014-0645-scheduled-chat-45-r01.json",
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-0a8d20f2211d--libfile_1643dacabf5081918f8c4f94130ef4dc--2023-2302.13939-spikegpt-spiking-rwkv-research-20261014-0645-scheduled-chat-45-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-0a8d20f2211d--libfile_1643dacabf5081918f8c4f94130ef4dc--2023-2302.13939-spikegpt-spiking-rwkv-research-20261014-0645-scheduled-chat-45-r01.json",
       "worker_run_key": "20261014-0645-scheduled-chat-45/r01"
     },
     {
       "canonical_id": "arXiv:2103.14636",
       "title": "A Practical Survey on Faster and Lighter Transformers",
       "source_url": "https://arxiv.org/html/2103.14636v2",
-      "returned_at": "2026-10-13T23:01:29+00:00",
-      "return_count": 1,
+      "returned_at": "2026-10-13T23:09:08+00:00",
+      "return_count": 2,
       "assigned_worker": "scheduled-chat-45",
       "reason": "blocked_quality",
       "failures": [
@@ -1080,8 +1080,8 @@
           "限界説明量 0 < 推奨 120"
         ]
       },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_a95f7fbefd2c819196a0104ee41e23cb--2023-2103.14636-practical-survey-faster-lighter-transformers-research-20261014-0730-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_a95f7fbefd2c819196a0104ee41e23cb--2023-2103.14636-practical-survey-faster-lighter-transformers-research-20261014-0730-scheduled-chat-30-r01.json",
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-597572674b03--libfile_a95f7fbefd2c819196a0104ee41e23cb--2023-2103.14636-practical-survey-faster-lighter-transformers-research-20261014-0730-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-597572674b03--libfile_a95f7fbefd2c819196a0104ee41e23cb--2023-2103.14636-practical-survey-faster-lighter-transformers-research-20261014-0730-sched.json",
       "worker_run_key": "20261014-0730-scheduled-chat-30/r01"
     }
   ]
