@@ -1,0 +1,270 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-screen-40",
+  "run_key": "discovery-20261014-screen40-part-03",
+  "reference_main_sha": "cbea893212a98a2874194952e9335cd1e3752e03",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.48550/arXiv.2406.00209",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2406.00209",
+        "id:arXiv:2406.00209",
+        "url:https://doi.org/10.48550/arXiv.2406.00209"
+      ],
+      "title": "Mamba State-Space Models Can Be Strong Downstream Learners",
+      "reason": "The abstract studies fine-tuning stability and recurrent dynamics, not model inference efficiency or serving systems.",
+      "source_url": "https://arxiv.org/abs/2406.00209",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T21:08:00Z",
+      "last_checked_at": "2026-10-13T21:08:00Z",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2403.19887-jamba-a-hybrid-transformer-mamba-language-model.md",
+        "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md",
+        "papers/inference/19-inference-evaluation-benchmarking/2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md",
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+        "papers/inference/99-other-inference-systems/2022-2212.09720-the-case-for-4-bit-precision-k-bit-inference-scaling-laws.md",
+        "papers/inference/99-other-inference-systems/2022-2212.14052-hungry-hungry-hippos-towards-language-modeling-with-state-space-models.md",
+        "papers/inference/99-other-inference-systems/2023-2303.06349-resurrecting-recurrent-neural-networks-for-long-sequences.md",
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md",
+        "papers/inference/99-other-inference-systems/2024-2402.01771-blackmamba-mixture-of-experts-for-state-space-models.md"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2311.08623",
+      "identity_tokens": [
+        "id:arXiv:2311.08623",
+        "url:https://arxiv.org/abs/2311.08623"
+      ],
+      "title": "DEED: Dynamic Early Exit on Decoder for Accelerating Encoder-Decoder Transformer Models",
+      "reason": "DEED dynamically exits decoder layers during inference and reports 30–60% lower latency with comparable quality, a direct Transformer acceleration method.",
+      "source_url": "https://arxiv.org/abs/2311.08623",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T21:08:00Z",
+      "last_checked_at": "2026-10-13T21:08:00Z",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1905.10650-are-sixteen-heads-really-better-than-one.md",
+        "papers/inference/99-other-inference-systems/2020-2002.08307-compressing-bert-studying-the-effects-of-weight-pruning-on-transfer-lear.md",
+        "papers/inference/99-other-inference-systems/2020-2004.02178-fastbert-a-self-distilling-bert-with-adaptive-inference-time.md",
+        "papers/inference/99-other-inference-systems/2020-2004.12993-deebert-dynamic-early-exiting-for-accelerating-bert-inference.md",
+        "papers/inference/99-other-inference-systems/2020-2006.04152-bert-loses-patience-fast-and-robust-inference-with-early-exit.md",
+        "papers/inference/99-other-inference-systems/2021-3c0f54f14532-berxit-early-exiting-for-bert-with-better-fine-tuning-and-extension-to-r.md"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1162/tacl.a.39",
+      "identity_tokens": [
+        "id:DOI:10.1162/tacl.a.39",
+        "url:https://doi.org/10.1162/tacl.a.39"
+      ],
+      "title": "TALE: Token-Adaptive Low-Rank KVCache Approximation with Reconstruction Elimination",
+      "reason": "TALE combines token-adaptive low-rank compression, lazy approximation, and reconstruction-free caching to reduce cache size and long-context latency.",
+      "source_url": "https://doi.org/10.1162/tacl.a.39",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T21:08:00Z",
+      "last_checked_at": "2026-10-13T21:08:00Z",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2306.14048-h2o.md",
+        "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2401.18079-kvquant.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2402.02750-kivi.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.05254-yoco.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.12981-cross-layer-attention.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2408.05646-eigen-attention-attention-in-low-rank-space-for-kv-cache-compression.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2410.03111-lorc-low-rank-compression-for-llms-kv-cache-with-a-progressive-compression-strategy.md",
+        "papers/inference/10-kv-cache-offload-recomputation/2024-2410.21465-shadowkv-low-rank-key-value-offload.md",
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+        "papers/inference/99-other-inference-systems/2023-2305.13245-gqa.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md",
+        "papers/survey/03-inference-engines/2024-2402.16363-llm-inference-unveiled.md"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1109/COMST.2025.3587225",
+      "identity_tokens": [
+        "id:DOI:10.1109/comst.2025.3587225",
+        "url:https://doi.org/10.1109/COMST.2025.3587225"
+      ],
+      "title": "Edge-Enhanced Intelligence: A Comprehensive Survey of Large Language Models and Edge-Cloud Computing Synergy",
+      "reason": "The IEEE survey explicitly reviews edge-cloud compute, training/inference deployment, and methods to optimize efficiency, real-time behavior, and scalability of LLM applications.",
+      "source_url": "https://doi.org/10.1109/COMST.2025.3587225",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T21:08:00Z",
+      "last_checked_at": "2026-10-13T21:08:00Z",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2023-2312.11514-llm-in-a-flash-efficient-large-language-model-inference-with-limited-memory.md",
+        "papers/inference/08-edge-on-device-llm-systems/2024-2407.18921-mobile-edge-intelligence-for-large-language-models-a-contemporary-survey.md",
+        "papers/inference/08-edge-on-device-llm-systems/2025-d6d0a70f5bc4-edgeshard-efficient-llm-inference-via-collaborative-edge-computing.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2302.11665-alpaserve.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.02669-infinite-llm-distattention-distributed-kvcache.md",
+        "papers/inference/16-weight-quantization-compression/2023-2306.00978-awq.md",
+        "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2023-2301.00774-sparsegpt-massive-language-models-can-be-accurately-pruned-in-one-shot.md",
+        "papers/inference/99-other-inference-systems/2023-2305.11627-llm-pruner-on-the-structural-pruning-of-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2023-2305.17888-llm-qat-data-free-quantization-aware-training-for-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2023-2305.18403-loraprune-structured-pruning-meets-low-rank-parameter-efficient-fine-tun.md",
+        "papers/inference/99-other-inference-systems/2023-2306.11695-a-simple-and-effective-pruning-approach-for-large-language-models.md"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2509.01920",
+      "identity_tokens": [
+        "id:arXiv:2509.01920",
+        "url:https://arxiv.org/abs/2509.01920"
+      ],
+      "title": "Dynamic Speculative Agent Planning",
+      "reason": "DSP performs online speculative planning and jointly tunes end-to-end latency and dollar cost, reducing unnecessary inference expense while preserving output fidelity.",
+      "source_url": "https://arxiv.org/abs/2509.01920",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T21:08:00Z",
+      "last_checked_at": "2026-10-13T21:08:00Z",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2022-2211.17192-speculative-decoding.md",
+        "papers/inference/05-speculative-decoding-moe/2023-2310.07177-online-speculative-decoding.md",
+        "papers/inference/05-speculative-decoding-moe/2024-2401.10774-medusa-multiple-decoding-heads.md",
+        "papers/inference/05-speculative-decoding-moe/2024-2401.15077-eagle-feature-speculative-sampling.md",
+        "papers/inference/05-speculative-decoding-moe/2024-2406.16858-eagle-2.md",
+        "papers/inference/05-speculative-decoding-moe/2024-2408.11850-pearl-parallel-speculative-decoding-with-adaptive-draft-length.md",
+        "papers/inference/99-other-inference-systems/2023-2310.08461-distillspec-improving-speculative-decoding-via-knowledge-distillation.md"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2506.15556",
+      "identity_tokens": [
+        "id:arXiv:2506.15556",
+        "url:https://arxiv.org/abs/2506.15556"
+      ],
+      "title": "PredGen: Accelerated Inference of Large Language Models through Input-Time Speculation for Real-Time Speech Interaction",
+      "reason": "PredGen speculates during user input to reduce first-sentence wait and speech response latency with little extra compute, directly optimizing interactive inference.",
+      "source_url": "https://arxiv.org/abs/2506.15556",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T21:08:00Z",
+      "last_checked_at": "2026-10-13T21:08:00Z",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2022-2211.17192-speculative-decoding.md",
+        "papers/inference/05-speculative-decoding-moe/2023-2312.11462-cascade-speculative-drafting-for-even-faster-llm-inference.md",
+        "papers/inference/05-speculative-decoding-moe/2024-2401.10774-medusa-multiple-decoding-heads.md",
+        "papers/inference/05-speculative-decoding-moe/2024-2401.15077-eagle-feature-speculative-sampling.md",
+        "papers/inference/05-speculative-decoding-moe/2024-2402.02057-lookahead-decoding.md",
+        "papers/inference/05-speculative-decoding-moe/2024-2406.16858-eagle-2.md",
+        "papers/inference/99-other-inference-systems/2024-2403.00835-cllms-consistency-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2024-2408.16725-mini-omni-language-models-can-hear-talk-while-thinking-in-streaming.md",
+        "papers/inference/99-other-inference-systems/2024-2409.06666-llama-omni-seamless-speech-interaction-with-large-language-models.md"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2505.00019",
+      "identity_tokens": [
+        "id:arXiv:2505.00019",
+        "url:https://arxiv.org/abs/2505.00019"
+      ],
+      "title": "An Empirical Study on Prompt Compression for Large Language Models",
+      "reason": "The empirical study evaluates prompt-compression techniques that reduce input token length and computational/economic cost while measuring quality tradeoffs in long-context tasks.",
+      "source_url": "https://arxiv.org/abs/2505.00019",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T21:08:00Z",
+      "last_checked_at": "2026-10-13T21:08:00Z",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2305.17118-scissorhands.md",
+        "papers/inference/07-kv-cache-optimization-compression/2023-2306.14048-h2o.md",
+        "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2305.13144-response-length-perception-and-sequence-scheduling-an-llm-empowered-llm-inference-pipeline.md",
+        "papers/inference/19-inference-evaluation-benchmarking/2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md",
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+        "papers/inference/99-other-inference-systems/2023-2303.06349-resurrecting-recurrent-neural-networks-for-long-sequences.md",
+        "papers/inference/99-other-inference-systems/2023-2305.11627-llm-pruner-on-the-structural-pruning-of-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2023-2307.06945-in-context-autoencoder-for-context-compression-in-a-large-language-model.md",
+        "papers/inference/99-other-inference-systems/2023-2310.06201-compressing-context-to-enhance-inference-efficiency-of-large-language-mo.md",
+        "papers/inference/99-other-inference-systems/2023-2310.06839-longllmlingua-accelerating-and-enhancing-llms-in-long-context-scenarios-.md"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2411.03697",
+      "identity_tokens": [
+        "id:arXiv:2411.03697",
+        "url:https://arxiv.org/abs/2411.03697"
+      ],
+      "title": "TATAA: Programmable Mixed-Precision Transformer Acceleration with a Transformable Arithmetic Architecture",
+      "reason": "TATAA combines int8 linear operations and bfloat16 nonlinear operations in a programmable FPGA architecture and compiler, improving end-to-end Transformer throughput and power efficiency.",
+      "source_url": "https://arxiv.org/abs/2411.03697",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T21:08:00Z",
+      "last_checked_at": "2026-10-13T21:08:00Z",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2024-2401.03868-flightllm-efficient-large-language-model-inference-with-a-complete-mappi.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.04437-vattention-virtual-memory-kv-management.md",
+        "papers/inference/15-inference-simulation-emulation/2020-2002.10941-a3-accelerating-attention-mechanisms-in-neural-networks-with-approximati.md",
+        "papers/inference/99-other-inference-systems/2020-2007.08563-ftrans-energy-efficient-acceleration-of-transformers-using-fpga.md",
+        "papers/inference/99-other-inference-systems/2021-2101.01321-i-bert-integer-only-bert-quantization.md",
+        "papers/inference/99-other-inference-systems/2021-2103.09301-softermax-hardware-software-co-design-of-an-efficient-softmax-for-transf.md",
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+        "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2023-2312.15159-understanding-the-potential-of-fpga-based-spatial-acceleration-for-large.md"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2405.15025",
+      "identity_tokens": [
+        "id:arXiv:2405.15025",
+        "url:https://arxiv.org/abs/2405.15025"
+      ],
+      "title": "OAC: Output-adaptive Calibration for Accurate Post-training Quantization",
+      "reason": "OAC adapts post-training quantization to model-output distortion and improves low-bit LLM accuracy, supporting compressed inference with lower memory and compute.",
+      "source_url": "https://arxiv.org/abs/2405.15025",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T21:08:00Z",
+      "last_checked_at": "2026-10-13T21:08:00Z",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2023-2306.00978-awq.md",
+        "papers/inference/16-weight-quantization-compression/2023-2306.03078-spqr-a-sparse-quantized-representation-for-near-lossless-llm-weight-compression.md",
+        "papers/inference/16-weight-quantization-compression/2023-2306.07629-squeezellm-dense-and-sparse-quantization.md",
+        "papers/inference/16-weight-quantization-compression/2023-2307.13304-quip-2-bit-quantization-of-large-language-models-with-guarantees.md",
+        "papers/inference/16-weight-quantization-compression/2023-2310.00034-pb-llm-partially-binarized-large-language-models.md",
+        "papers/inference/16-weight-quantization-compression/2024-2402.04291-billm-pushing-the-limit-of-post-training-quantization-for-llms.md",
+        "papers/inference/16-weight-quantization-compression/2024-2402.10631-bitdistiller-unleashing-the-potential-of-sub-4-bit-llms-via-self-distill.md",
+        "papers/inference/99-other-inference-systems/2022-2206.01861-zeroquant-efficient-and-affordable-post-training-quantization-for-large-.md",
+        "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2023-2305.14152-memory-efficient-fine-tuning-of-compressed-large-language-models-via-sub.md",
+        "papers/inference/99-other-inference-systems/2023-2305.17888-llm-qat-data-free-quantization-aware-training-for-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2023-2308.13137-omniquant-omnidirectionally-calibrated-quantization-for-large-language-m.md",
+        "papers/inference/99-other-inference-systems/2024-2401.06118-extreme-compression-of-large-language-models-via-additive-quantization.md",
+        "papers/inference/99-other-inference-systems/2024-2402.04396-quip-even-better-llm-quantization-with-hadamard-incoherence-and-lattice-.md"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1016/j.neunet.2024.106164",
+      "identity_tokens": [
+        "id:DOI:10.1016/j.neunet.2024.106164",
+        "url:https://doi.org/10.1016/j.neunet.2024.106164"
+      ],
+      "title": "DDK: Dynamic structure pruning based on differentiable search and recursive knowledge distillation for BERT",
+      "reason": "DDK combines differentiable structured pruning of BERT channels/heads with recursive distillation to reduce storage and computation for practical inference.",
+      "source_url": "https://doi.org/10.1016/j.neunet.2024.106164",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T21:08:00Z",
+      "last_checked_at": "2026-10-13T21:08:00Z",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2019-1910.04732-structured-pruning-of-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2019-1905.09418-analyzing-multi-head-self-attention-specialized-heads-do-the-heavy-lifti.md",
+        "papers/inference/99-other-inference-systems/2019-1905.10650-are-sixteen-heads-really-better-than-one.md",
+        "papers/inference/99-other-inference-systems/2019-1909.11556-reducing-transformer-depth-on-demand-with-structured-dropout.md",
+        "papers/inference/99-other-inference-systems/2020-2002.08307-compressing-bert-studying-the-effects-of-weight-pruning-on-transfer-lear.md",
+        "papers/inference/99-other-inference-systems/2021-2109.04838-block-pruning-for-faster-transformers.md",
+        "papers/inference/99-other-inference-systems/2022-2204.00408-structured-pruning-learns-compact-and-accurate-models.md"
+      ]
+    }
+  ]
+}
