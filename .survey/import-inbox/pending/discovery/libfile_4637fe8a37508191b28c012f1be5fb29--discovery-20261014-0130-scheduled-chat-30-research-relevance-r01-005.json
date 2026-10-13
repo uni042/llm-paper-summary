@@ -1,0 +1,26 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261014-0130-scheduled-chat-30/r01",
+  "reference_main_sha": "abf33724d6a6e59ac34230a18324cce60ff43d9d",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2509.25140",
+      "identity_tokens": [
+        "arxiv:2509.25140"
+      ],
+      "title": "ReasoningBank: Scaling Agent Self-Evolving with Reasoning Memory",
+      "reason": "エージェントの成功・失敗履歴から再利用可能な推論方略を抽出し、試験時の複数経験から記憶を改善する。再試行の減少など実行効率への影響があり得る一方、主評価はウェブ操作とソフトウェア開発タスクの能力で、LLM実行エンジンやメモリ転送の性能評価ではない。エージェント記憶という隣接領域として境界扱い。",
+      "source_url": "https://arxiv.org/abs/2509.25140",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T01:30:00+09:00",
+      "last_checked_at": "2026-10-14T01:30:00+09:00",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance",
+      "worklist_rank": 5
+    }
+  ]
+}
