@@ -1,0 +1,1597 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-bddf0e24194c80b2-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-bddf0e24194c",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2605.25969",
+    "arXiv:2605.27786",
+    "arXiv:2605.28769",
+    "arXiv:2605.29157",
+    "arXiv:2605.29233",
+    "arXiv:2605.30126",
+    "arXiv:2605.30753",
+    "arXiv:2605.31367",
+    "arXiv:2605.31457",
+    "arXiv:2605.31598",
+    "arXiv:2606.00724",
+    "arXiv:2606.01294",
+    "arXiv:2606.01412",
+    "arXiv:2606.03075",
+    "arXiv:2606.04446",
+    "arXiv:2606.07710",
+    "arXiv:2606.09862"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 17,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "462ff25f399e502a56b366fb56b8707f9e5039f8",
+  "raw_search_result_count": 17,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 17,
+  "provider_progress": {
+    "requested_count": 17,
+    "status_counts": {
+      "allowed": 17,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-13T20:45:51.888806+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2605.25969",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2605.27786",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2605.28769",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2605.29157",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2605.29233",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2605.30126",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2605.30753",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2605.31367",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2605.31457",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2605.31598",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2606.00724",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2606.01294",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2606.01412",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2606.03075",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2606.04446",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2606.07710",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2606.09862",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Triplet-Block Diffusion RWKV",
+      "source_url": "https://arxiv.org/abs/2605.25969",
+      "year": 2026,
+      "published": "2026-05-25",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Causal Transformer language models suffer from strictly sequential decoding and a quadratic per-step attention cost. While linear-time causal models and discrete diffusion models each address these weaknesses, their integration remains inherently inconsistent: diffusion requires bidirectional attention, while causal models are unidirectional. To unify these architectures, we propose $B^3D-RWKV$, a diffusion RWKV variant that integrates the model's $O(L)$ inference efficiency with parallel, bidirectional discrete-diffusion through a \\emph{triplet-block layout} method. $B^3D-RWKV-7.2B$ reaches comparable accuracy on an 8-task suite versus existing models while significantly outperforming baselines in decoding throughput with an average of $\\mathbf{1.6\\times}$ speedup.",
+      "identifiers": [
+        "SemanticScholar:06f9ba9221effb2fedcdf74b88c69aa4fb0d6923"
+      ],
+      "semantic_scholar_id": "06f9ba9221effb2fedcdf74b88c69aa4fb0d6923",
+      "canonical_id": "arXiv:2605.25969",
+      "arxiv_id": "2605.25969",
+      "doi": "10.48550/arXiv.2605.25969",
+      "authors": [
+        "Keng-Hung Lin",
+        "Yingyue Luo",
+        "Zhao-Long Su",
+        "Yunya Song",
+        "Anyi Rao"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 141,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Locality-Aware Redundancy Pruning for LLM Depth Compression",
+      "source_url": "https://arxiv.org/abs/2605.27786",
+      "year": 2026,
+      "published": "2026-05-27",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models are known to contain representational redundancy across network depth, making depth pruning an effective approach for improving inference efficiency. Existing one-shot pruning methods rely on local layer importance or fixed redundancy assumptions across architectures. We propose Locality-Aware Redundancy Pruning (LoRP), a training-free one-shot depth pruning framework guided by representation locality. We show that inter-layer redundancy can be either localized or globally distributed depending on the LLM architecture. To characterize this phenomenon, we introduce Representation Locality Score (RLS), derived from global inter-layer hidden-state similarity. Using a small calibration set, LoRP computes pairwise layer similarity, clusters layers by representational similarity, and allocates pruning according to residual intra-cluster redundancy. Experiments across diverse LLM families show improvements in both perplexity and downstream task accuracy. Official github repository: https://github.com/daniel-eai/LoRP-Locality-Aware-Redundancy-Pruning/",
+      "identifiers": [
+        "SemanticScholar:e905931edec7ecd2b2b883e68aa89115a2439144"
+      ],
+      "semantic_scholar_id": "e905931edec7ecd2b2b883e68aa89115a2439144",
+      "canonical_id": "arXiv:2605.27786",
+      "arxiv_id": "2605.27786",
+      "doi": "10.48550/arXiv.2605.27786",
+      "authors": [
+        "Vincent-Daniel Yun",
+        "Youngrae Kim",
+        "Woo-Sang Lim",
+        "Youngjin Heo",
+        "Minkyu Kim",
+        "Sun-Woo Lee"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 139,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Multi-Mixer Models: Flexible Sequence Modeling with Shared Representations",
+      "source_url": "https://arxiv.org/abs/2605.28769",
+      "year": 2026,
+      "published": "2026-05-27",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Softmax attention is the cornerstone of modern large language models, but its memory scales linearly and compute quadratically with sequence length. Linear recurrent models, such as linear attention and state space models, have become widely studied as alternatives to attention due to their linear compute and constant memory. While these sub-quadratic token mixing methods, or mixers, achieve promising efficiency gains and competitive results on a wide range of benchmarks, current linear recurrent models still lag behind on tasks that require long-context retrieval or in-context learning. A growing body of work studies hybrid architectures that attempt to mitigate these trade-offs by statically interleaving or merging attention and recurrent blocks. In this work, we explore a new axis of developing hybrid models: across the token sequence. We propose Oryx, a hybrid model that can, throughout a sequence, flexibly switch between different mixers, for example quadratic attention for rich context utilization and linear recurrences for efficient generation. Oryx ties at least 90% of its parameters across mixers, enabling attention and recurrent modes to operate over shared internal representations. We validate our design with Mamba-2 and Gated DeltaNet variants, up to 1.4B models. Under fixed token budgets and a mixed-training strategy, Oryx achieves comparable or better performance than its single-mixer baselines. At the 1.4B scale, all instances of Oryx outperform their respective baselines by at least 0.7 percentage points on averaged language modeling tasks. On retrieval tasks, Oryx achieves performance comparable to the Transformer baseline even when processing only a tiny fraction (<10%) of the tokens in attention mode. These results suggest that attention and linear recurrent models can share internal representations, and motivate sequence-axis hybridization as a promising direction.",
+      "identifiers": [
+        "SemanticScholar:3bdb2ef4f6545cf2c2a16a7efc644d027c6df88c"
+      ],
+      "semantic_scholar_id": "3bdb2ef4f6545cf2c2a16a7efc644d027c6df88c",
+      "canonical_id": "arXiv:2605.28769",
+      "arxiv_id": "2605.28769",
+      "doi": "10.48550/arXiv.2605.28769",
+      "authors": [
+        "Kevin Y. Li",
+        "Asher Trockman",
+        "A. Suresh",
+        "Zi-Teng Sun"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 139,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Parallax: Parameterized Local Linear Attention for Language Modeling",
+      "source_url": "https://arxiv.org/abs/2605.29157",
+      "year": 2026,
+      "published": "2026-05-27",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Models (LLMs) have become the central paradigm in artificial intelligence, yet the core computational primitive of attention has remained structurally unchanged. Local Linear Attention (LLA) is an attention mechanism derived from nonparametric statistics in the test-time regression framework. In contrast to prior research on efficient attention variants, LLA upgrades the local constant estimate in softmax attention to a local linear estimate, yielding provably superior bias-variance tradeoffs for associative memory. However, LLA has not been scaled in LLM pretraining due to computational and numerical stability concerns. We introduce Parallax, a parameterized Local Linear Attention that is scalable for LLMs. Parallax eliminates the numerical solver in LLA and learns an extra query-like projector that probes the KV covariance. We place Parallax within a family of attention mechanisms connected by the bandwidth, the probe construction and the affine structure. We propose a hardware-aware algorithm that increases the arithmetic intensity over FlashAttention, shifting attention into a more compute bound regime. Our prototype decode kernel matches or outperforms FlashAttention 2/3 across diverse batch sizes and context lengths. We pretrain Parallax at 0.6B and 1.7B scales and find consistent perplexity improvements throughout pretraining with gains that transfer to downstream benchmarks. The advantage persists under both parameter-matched and compute-matched controls, demonstrating a Pareto improvement. We perform careful pretraining ablations and identify a novel phenomenon whereby Muon unlocks the capacity of Parallax. To our knowledge, this is the first empirical demonstration of strong architecture-optimizer codesign for attention mechanisms in the architecture research literature.",
+      "identifiers": [
+        "SemanticScholar:acd6bb37712be184fab70ea727ea47f76e6f2101"
+      ],
+      "semantic_scholar_id": "acd6bb37712be184fab70ea727ea47f76e6f2101",
+      "canonical_id": "arXiv:2605.29157",
+      "arxiv_id": "2605.29157",
+      "doi": "10.48550/arXiv.2605.29157",
+      "authors": [
+        "Yifei Zuo",
+        "Dhruv Pai",
+        "Zhi-Chen Zeng",
+        "Alec Dewulf",
+        "Shuming Hu",
+        "Zhao-Ran Wang"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 139,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "BlockBatch: Multi-Scale Consensus Decoding for Efficient Diffusion Language Model Inference",
+      "source_url": "https://arxiv.org/abs/2605.29233",
+      "year": 2026,
+      "published": "2026-05-28",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Diffusion language models (dLLMs) generate text by iteratively denoising multiple token positions in parallel, offering an attractive alternative to strictly autoregressive decoding. In practice, however, block-wise dLLM inference exposes a difficult granularity trade-off: small blocks preserve local conditioning but require many denoising steps, whereas large blocks expose more parallelism but can make premature commitments and accumulate cache error. Existing acceleration methods typically choose a single block size per request, leaving the complementarity among block sizes unused. We show that block size itself is a useful branching dimension. Different block sizes induce related but non-identical KV-cache trajectories: branches often share an initial prefix, bifurcate at semantically decisive positions, and later agree on syntactically lightweight tokens. Motivated by this structure, we propose BlockBatch, a training-free online inference framework that executes multiple block-size branches for the same request inside a batched forward pass. BlockBatch coordinates these branches through confidence-gated token merging, leader-based synchronization, and periodic full-sequence refreshes that re-anchor local block updates to a globally consistent KV state. Across 3 representative dLLMs and 4 datasets, BlockBatch reduces denoising NFEs by 26.6\\% on average and achieves a 1.33$\\times$ average end-to-end speedup over Fast-dLLM while preserving accuracy. These results identify block-size diversity as a practical and previously underexplored axis for branch-parallel dLLM inference.",
+      "identifiers": [
+        "SemanticScholar:b2f74b9493f1dd63ae20ece94aaf85b9d170c0cf"
+      ],
+      "semantic_scholar_id": "b2f74b9493f1dd63ae20ece94aaf85b9d170c0cf",
+      "canonical_id": "arXiv:2605.29233",
+      "arxiv_id": "2605.29233",
+      "doi": "10.48550/arXiv.2605.29233",
+      "authors": [
+        "Xiaoyou Wu",
+        "Cheng-Jhih Shih",
+        "Bin Ji",
+        "Yong Liu",
+        "Y. Lin"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 138,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "PARCEL: Pool-Anchored Resampling with Conditioned Elastic Queries for Efficient Vision-Language Understanding",
+      "source_url": "https://arxiv.org/abs/2605.30126",
+      "year": 2026,
+      "published": "2026-05-28",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Vision-Language Models (LVLMs) map visual inputs into dense token sequences, imposing a quadratic computational bottleneck for inference. Elastic visual-token compression addresses this by training a single model that can run at multiple visual-token budgets. However, existing approaches struggle under aggressive compression. Spatial-only compression, as in nested pooling, behaves as an imperfect low-pass filter and induces spectral aliasing that obscures fine-grained detail. Query-only compression, as in nested query resampling, replaces explicit grid-aligned tokens with non-local summaries and substantially degrades spatial grounding. To resolve this representational conflict, we introduce PARCEL (Pool-Anchored Resampling with Conditioned Elastic Queries for Efficient Vision-Language Understanding), a visual tokenization architecture that dynamically partitions the labor of feature extraction. PARCEL establishes spatial pool tokens as low-frequency layout anchors and conditions elastic query tokens on these anchors through Pool-Conditioned Query Resampling. This encourages query tokens to focus on complementary visual features rather than redundant spatial mapping. Extensive evaluations across 27 benchmarks show that PARCEL improves the performance-efficiency Pareto frontier, consistently outperforming existing matryoshka baselines across visual-token budgets while preserving the\"train once, deploy anywhere\"paradigm.",
+      "identifiers": [
+        "SemanticScholar:3949439230eb67662fb1e165252e669b0e897133"
+      ],
+      "semantic_scholar_id": "3949439230eb67662fb1e165252e669b0e897133",
+      "canonical_id": "arXiv:2605.30126",
+      "arxiv_id": "2605.30126",
+      "doi": "10.48550/arXiv.2605.30126",
+      "authors": [
+        "S. Kuzucu",
+        "A. Tonioni",
+        "Vasile Lup",
+        "B. Schiele",
+        "Federico Tombari",
+        "Muhammad Ferjad Naeem"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 138,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Efficient Diffusion LLMs via Temporal-Spatial Parallel Decoding and Confidence Extrapolation",
+      "source_url": "https://arxiv.org/abs/2605.30753",
+      "year": 2026,
+      "published": "2026-05-29",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Diffusion-based large language models (dLLMs) support parallel text generation via iterative denoising, yet inference remains latency-heavy because many steps are spent on redundant refinement and repeated remasking of tokens whose final values are already determined. Prior acceleration methods mainly depend on step-local confidence heuristics or fixed schedules, which are sensitive to prompt and task variation and ignore strong positional effects within a sequence. We cast diffusion decoding as a dynamic control problem and show that token-wise denoising trajectories provide the key signal for reliable control. We propose a trace-aware decoding framework with two components. First, Temporal-Spatial Parallel Decoding (TSPD) uses a lightweight temporalspatial controller that consumes per-token trajectory features, including confidence, entropy, and momentum, together with token position, to decide when a token has converged and can be safely fixed. Second, we introduce Confidence Extrapolation (CE), a training-free state-space module that forecasts future logit trends with uncertainty to support proactive decisions, including safe look-ahead and targeted stabilization when trajectories are oscillatory or underconfident. Together, TSPD and CE reduce unnecessary denoising iterations while preserving output quality, and they compose cleanly with system optimizations such as KV caching.",
+      "identifiers": [
+        "SemanticScholar:38f14b7360f4b0becc6e4bd16419a2ac7b31d93f"
+      ],
+      "semantic_scholar_id": "38f14b7360f4b0becc6e4bd16419a2ac7b31d93f",
+      "canonical_id": "arXiv:2605.30753",
+      "arxiv_id": "2605.30753",
+      "doi": "10.48550/arXiv.2605.30753",
+      "authors": [
+        "Ze-Kai Li",
+        "Ji Liu",
+        "Yiqing Huang",
+        "Zi-Qiong Liu",
+        "Dong Li",
+        "E. Barsoum"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 137,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Trading Complexity for Expressivity Through Structured Generalized Linear Token Mixing",
+      "source_url": "https://arxiv.org/abs/2605.31367",
+      "year": 2026,
+      "published": "2026-05-29",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Token mixing layers play a key role in how language models can learn and generate long-range dependencies. Their efficiency relies on the necessary trade-off between decoding speed and the memory requirements, along with the cache size. Considering causal generation, this paper explores new trade-offs thanks to a unified framework which separates two crucial features: (i) the direct influence of inputs on outputs in one generation step; (ii) the recurrent propagation of information through past outputs. This framework encompasses major architectures such as attention and state-space models, but also generalizes the recurrence equations by allowing each state to depend on multiple past states rather than only the immediate predecessor. By introducing structure, we design new recurrence patterns that provably achieve the desired complexity, while providing theoretical insights on their expressivity -- trading runtime for expressivity in a principled way. Empirical validation is performed on synthetic tasks, along with language modeling. Together, these results provide a unified toolkit for the understanding and design of efficient and expressive token mixers across model families.",
+      "identifiers": [
+        "SemanticScholar:4a9620381d790b6a3a6e212bd5bea7f58b792547"
+      ],
+      "semantic_scholar_id": "4a9620381d790b6a3a6e212bd5bea7f58b792547",
+      "canonical_id": "arXiv:2605.31367",
+      "arxiv_id": "2605.31367",
+      "doi": "10.48550/arXiv.2605.31367",
+      "authors": [
+        "Erwan Fagnou",
+        "Paul Caillon",
+        "Blaise Delattre",
+        "Alexandre Allauzen"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 137,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "VisionPulse: Dynamic Visual Sparsity for Efficient Multimodal Reasoning",
+      "source_url": "https://arxiv.org/abs/2605.31457",
+      "year": 2026,
+      "published": "2026-05-29",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "With the rapid advancement of large multimodal models (LMMs), inference-time overhead has become a key bottleneck for real-world deployment. Existing methods typically prune visual tokens at prefill, assuming the required visual evidence remains static during reasoning. However, we empirically show that visual evidence is strongly step-dependent: only a sparse subset of visual tokens is critical at each decoding step, and the critical set evolves across reasoning. Furthermore, we identify a coupled bottleneck where redundant visual context can steer the model toward query-irrelevant regions, lengthening the reasoning trace. Guided by these insights, we propose VisionPulse, a step-wise visual token pruning framework during reasoning. VisionPulse computes a lightweight visual attention mass to estimate the step-wise retention budget by exploiting its strong positive correlation with LMMs'effective visual token usage and retain only the most critical tokens under this budget. By enforcing visual sparsity during reasoning, VisionPulse filters redundant visual context while preserving relevant visual evidence, shortening reasoning traces naturally. Extensive experiments show that VisionPulse only retains 5% of visual tokens per step with reasoning traces shortened by 11.2%, while keeping accuracy almost unchanged.",
+      "identifiers": [
+        "SemanticScholar:8ca56d80ff32ff046efa7012deaafff1091c470d"
+      ],
+      "semantic_scholar_id": "8ca56d80ff32ff046efa7012deaafff1091c470d",
+      "canonical_id": "arXiv:2605.31457",
+      "arxiv_id": "2605.31457",
+      "doi": "10.48550/arXiv.2605.31457",
+      "authors": [
+        "Heng Xu",
+        "Sheng Jin",
+        "Yan-Biao Ma",
+        "Zhiwu Lu"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 137,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Linear Scaling Video VLMs for Long Video Understanding",
+      "source_url": "https://arxiv.org/abs/2605.31598",
+      "year": 2026,
+      "published": "2026-05-29",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Video vision-language models (VLMs) are increasingly used in long-horizon and streaming settings, yet most video encoders still rely on spatiotemporal self-attention, causing compute and latency to grow quadratically with the number of frames. Existing efficiency methods improve scalability but often lose accuracy relative to full self-attention, for example through aggressive frame/token dropping or coarse attention approximations. We introduce StateKV, an inference-time method that adapts pretrained long-video VLMs to linear-time video prefill by carrying cross-frame context in a fixed-capacity, importance-based recurrent state, paired with a second full per-frame cache used for decoding. Across three long-video benchmarks and seven models spanning three families and multiple scales, StateKV remains close to full self-attention and consistently outperforms dominant sliding-window / recency-based streaming approximations, without fine-tuning or architectural changes. StateKV also reduces video-prefill cost measured FLOPs, enabling stronger accuracy at a fixed compute budget by running larger models. These results suggest a practical step toward scalable long-video understanding.",
+      "identifiers": [
+        "SemanticScholar:a4a6e64bd1e9f1f00a55e47e041acf33bb56d3e8"
+      ],
+      "semantic_scholar_id": "a4a6e64bd1e9f1f00a55e47e041acf33bb56d3e8",
+      "canonical_id": "arXiv:2605.31598",
+      "arxiv_id": "2605.31598",
+      "doi": "10.48550/arXiv.2605.31598",
+      "authors": [
+        "Cristobal Eyzaguirre",
+        "Jia-Jun Wu",
+        "Juan Carlos Niebles"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 137,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "WaveFilter: Enhancing the Long-Context Capability of Diffusion LLMs via Wavelet-Guided KV Cache Filtering",
+      "source_url": "https://arxiv.org/abs/2606.00724",
+      "year": 2026,
+      "published": "2026-05-30",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Diffusion Large Language Models (DLMs) have demonstrated significant advantages across various tasks. However, constrained by their multi-step iterative inference mechanism, their computational overhead and inference latency in long-context tasks have become core bottlenecks restricting their large-scale deployment. When processing long sequences, existing Key-Value (KV) caching mechanisms often face a dilemma where generation quality degrades drastically, where the core challenge lies in precisely and efficiently filtering critical tokens within ultra-long contexts. Inspired by the human reading process, we propose \\textbf{WaveFilter}, a universal and training-free caching framework. This framework innovatively introduces the wavelet transform for decomposition of long sequences to achieve precise identification of key tokens, based on which a sparse KV Cache is constructed to compute the final contextual representation. Experimental results demonstrate that WaveFilter, as a plug-and-play generic framework, significantly enhances the performance of existing mainstream KV Cache methods in complex long-context tasks.",
+      "identifiers": [
+        "SemanticScholar:b0316a91d7c92779f1e18bed591bdaa7d4a8577f"
+      ],
+      "semantic_scholar_id": "b0316a91d7c92779f1e18bed591bdaa7d4a8577f",
+      "canonical_id": "arXiv:2606.00724",
+      "arxiv_id": "2606.00724",
+      "doi": "10.48550/arXiv.2606.00724",
+      "authors": [
+        "Jinnan Yang",
+        "Yan Wang",
+        "Zhenkai Bi",
+        "Ke Wu",
+        "Xiaojie Li",
+        "Jungang Lou",
+        "Zechao Li",
+        "Jing Liu"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 136,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Don't Read Everything: A Curvature-Conditioned Query for Linear Attention",
+      "source_url": "https://arxiv.org/abs/2606.01294",
+      "year": 2026,
+      "published": "2026-05-31",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Linear attention reduces the quadratic cost of softmax attention by maintaining a recurrent fast-weight state, but it consistently lags on in-context retrieval and long-context tasks. Existing remedies act on the write side of memory through gating, delta updates, or kernel feature maps, but the read step is left unchanged: every past key contributes additively to the output, so useful targets are diluted by the bulk of stored vectors. We borrow one specific piece of softmax's geometry to construct a cheap read-time contraction of the query. A second-order Taylor expansion of the softmax log-partition at the isotropic-attention point gives a local quadratic model whose curvature coincides with the running key covariance, a quantity that can be maintained with the same recurrent/chunkwise mechanism as the linear-attention state. The associated linear operator contracts the query along the high-variance directions of memory before it reads the state. We call this mechanism Curvature-Conditioned Query (CCQ). CCQ modifies only the read step and is composable with any linear-attention backbone. Attached to GLA and Gated DeltaNet, it improves perplexity, zero-shot downstream accuracy, S-NIAH retrieval at and beyond the training context, length-extrapolation perplexity from 4K to 20K, and LongBench accuracy.",
+      "identifiers": [
+        "SemanticScholar:149e20f38a94f484d4c1b4fffa8b5639d1be3c57"
+      ],
+      "semantic_scholar_id": "149e20f38a94f484d4c1b4fffa8b5639d1be3c57",
+      "canonical_id": "arXiv:2606.01294",
+      "arxiv_id": "2606.01294",
+      "doi": "10.48550/arXiv.2606.01294",
+      "authors": [
+        "D. Le",
+        "Thong Nguyen",
+        "Cong-Duy T. Nguyen",
+        "A. Lưu"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 135,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "GPTQ-intrinsic LoRA: A Near-optimal Algorithm for Low-precision Quantization with Low-rank Adaptation",
+      "source_url": "https://arxiv.org/abs/2606.01412",
+      "year": 2026,
+      "published": "2026-05-31",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Post-training quantization is widely used for compressing large neural networks, but aggressive low-bit quantization can significantly degrade model quality. A common remedy is to augment the quantized weights with a low-rank correction, leading to approximations of the form $W\\approx Q+LR$. In this paper, we study this low-precision plus low-rank representation through the layer-wise reconstruction objective $\\|XW-X(Q+LR)\\|_F^2$, where $X$ is a calibration matrix. We establish, to our knowledge, the first information-theoretic lower bounds for this problem under finite-alphabet and bounded low-rank compensation constraints. We then propose GPTQ-intrinsic LoRA, a training-free algorithm that incorporates the low-rank correction directly into a GPTQ-style quantization pass by appropriately augmenting the calibration Hessian. For the choice $L=V_r$, where $V_r$ contains the top right singular vectors of $X$, we prove layer-wise reconstruction error bounds in which the usual GPTQ dependence on $\\|X\\|_F^2$ is replaced by the rank-$r$ residual $\\|X-X_r\\|_F^2$, up to regularization terms. Under natural structural assumptions, these bounds match the information-theoretic lower bounds in their dominant scaling, up to constants and mild factors. We also introduce Bid-Up, a fixed-grid quantization refinement step that can be alternated with optimal low-rank compensation with guaranteed non-increasing layer-wise reconstruction error. Experiments on Qwen3 language models and DeiT vision transformers show that GPTQ-intrinsic LoRA improves over GPTQ and GPTQ followed by low-rank compensation, with additional gains from refinement loops.",
+      "identifiers": [
+        "SemanticScholar:1bf46c55f67c8c35c303239b4983ba62a763f17e"
+      ],
+      "semantic_scholar_id": "1bf46c55f67c8c35c303239b4983ba62a763f17e",
+      "canonical_id": "arXiv:2606.01412",
+      "arxiv_id": "2606.01412",
+      "doi": "10.48550/arXiv.2606.01412",
+      "authors": [
+        "Shi-Hao Zhang",
+        "R. Saab"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 135,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Blurry Window Attention",
+      "source_url": "https://arxiv.org/abs/2606.09862",
+      "year": 2026,
+      "published": "2026-05-31",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The Softmax Attention operation in Transformer language models has a quadratic complexity in the sequence length and a growing state size in the form of KV cache, which becomes a bottleneck in long context scenarios. To overcome this limitation, alternative architectures with linear complexity and finite state size have been introduced, such as State-Space Models (SSMs), Linear Attention (LA), and Attention with Bounded-memory Control (ABC). Though linear models achieve similar language perplexity as Transformers, they are still behind in tasks which require retrieval or recall of specific information. In this work, we introduce Blurry Window Attention (BLA) a novel ABC method inspired by SSMs. BLA stores a frequency window from which a blurry KV history is reconstructed via interpolation using Dirichlet kernels. BLA can be understood as a generalization of Sliding Window Attention (SWA) depending on the Dirichlet kernels resolution or as a special case of the Gated Slot Attention (GSA), where the decay factor is implemented with Dirichlet kernels. We describe in details the theory and efficient implementation of BLA. On the Multi-Query Associate Recall (MQAR) synthetic task, we show that the state efficiency of BLA is 8$\\times$ better than SWA and is competitive with popular linear attention models, and in the RegBench synthetic task, only BLA and SWA improve their performance as the state size grows among the linear models we tested.",
+      "identifiers": [
+        "SemanticScholar:905c59a217f7438210a0b042c354a7ca2d8a3173"
+      ],
+      "semantic_scholar_id": "905c59a217f7438210a0b042c354a7ca2d8a3173",
+      "canonical_id": "arXiv:2606.09862",
+      "arxiv_id": "2606.09862",
+      "doi": "10.48550/arXiv.2606.09862",
+      "authors": [
+        "Axel Laborieux",
+        "Christos Sourmpis",
+        "Juan Gabriel Kostelec",
+        "Qinghai Guo"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 135,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "TGV-KV: Text-Grounded KV Eviction for Vision-Language Models",
+      "source_url": "https://arxiv.org/abs/2606.03075",
+      "year": 2026,
+      "published": "2026-06-02",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Vision-Language Models (VLMs) inherit the auto-regressive generation paradigm and cache the keys and values (KV) of all previous tokens to accelerate inference, resulting in memory consumption that scales linearly with context length. This issue is particularly pronounced in VLMs due to substantial redundancy in the visual modality. Although KV cache eviction approaches can effectively reduce inference memory, they often incur significant performance degradation in VLMs, as most are designed for language models and overlook the inherent gap between text and vision. By systematically analyzing the modality gap in VLMs in this work, we argue that the importance of visual information should be grounded in textual guidance and accordingly propose a Text-Grounded KV Eviction method for VLMs (TGV-KV). TGV-KV comprises three submodules: (1) Text-Vision Budgeting (TVB) assigns budget to each layer based on the mutual information interaction. (2) Text-Weighted Ranking (TWR) assesses the priority of text and ranks vision importance based on weighted text-image attention. (3) Text-Prioritised Retention (TPR) policy strategically preserves text KV to avoid acute information loss. We evaluate TGV-KV across five models with different sizes and architectures, showing that TGV-KV preserves 99.2% full-KV accuracy on the VizWiz-VQA task with LLaVA-NeXT and boosts end-to-end throughput by 52.6% with an extreme retention budget of 5%. Code is available at https://github.com/Danielement321/TGV-KV.",
+      "identifiers": [
+        "SemanticScholar:c695e4f8c0c58b75cd8592bcc9b591175c6733b2"
+      ],
+      "semantic_scholar_id": "c695e4f8c0c58b75cd8592bcc9b591175c6733b2",
+      "canonical_id": "arXiv:2606.03075",
+      "arxiv_id": "2606.03075",
+      "doi": "10.48550/arXiv.2606.03075",
+      "authors": [
+        "Jizhihui Liu",
+        "Ruizi Han",
+        "Miao Zhang",
+        "Rui Shao",
+        "Xue-Bo Liu",
+        "Weili Guan",
+        "Yaowei Wang"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 133,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "D^2SD: Accelerating Speculative Decoding with Dual Diffusion Draft Models",
+      "source_url": "https://arxiv.org/abs/2606.04446",
+      "year": 2026,
+      "published": "2026-06-03",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Speculative decoding accelerates autoregressive large language model inference by drafting multiple tokens and verifying them in a single target-model forward pass. Recent diffusion-based drafters generate an entire block of tokens in parallel but usually commit to a single draft sequence per verification: once the first mismatch occurs, all subsequent draft tokens are discarded, resulting in a limited acceptance rate. Naively batching more draft candidate sequences only introduces a marginal improvement, as redundant or poorly placed branches increase the cost of drafting and verification without proportionally increasing the number of accepted tokens. We propose D^2SD, a dual diffusion draft speculative decoding framework that organizes candidates into a confidence-guided prefix tree, where the first diffusion drafter generates a block along with per-position confidence scores that are used to identify the most likely rejection boundary and select the top-K prefix ranges for recovery; the second variable-prefix diffusion drafter re-anchors at each selected prefix and proposes alternative continuations in one batched pass; the resulting shared-prefix candidates are jointly verified via cascade attention. Empirically, D^2SD shows clear improvements over both the underlying diffusion approach and strong autoregressive speculative decoding baselines.",
+      "identifiers": [
+        "SemanticScholar:94ffb9a0b41915326a8831094a5331a282eb190d"
+      ],
+      "semantic_scholar_id": "94ffb9a0b41915326a8831094a5331a282eb190d",
+      "canonical_id": "arXiv:2606.04446",
+      "arxiv_id": "2606.04446",
+      "doi": "10.48550/arXiv.2606.04446",
+      "authors": [
+        "Liyuan Zhang",
+        "Jia-Rui Zhang",
+        "Jinwei Yao",
+        "Ran Yan",
+        "Yuchen Yang",
+        "Jiahao Zhang",
+        "Tong-Kai Yang",
+        "Yi Wu",
+        "Binhang Yuan"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 132,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "WhiFlash: Accelerating Speculative Decoding with Token-Level Cross-Paradigm Routing",
+      "source_url": "https://arxiv.org/abs/2606.07710",
+      "year": 2026,
+      "published": "2026-06-05",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The autoregressive nature of large language models (LLMs) remains a significant bottleneck for inference, particularly in complex agentic workloads. While speculative decoding (SD) accelerates inference, current approaches rely on static drafting paradigms, utilising either autoregressive drafting models for reasoning or diffusion-based parallel drafting models for structured outputs. We empirically find that drafting accuracy fluctuates dramatically within a single sequence, leaving significant performance unrealised by static paradigms and coarse-grained routing. To address this volatility, we introduce WhiFlash, the first cross-paradigm SD method that unifies autoregressive and diffusion-based parallel drafting under a single token-level controller. WhiFlash adopts a fine-grained routing mechanism that employs either a lightweight entropy-based or a learned neural policy, both parametrised to provide a tunable balance between expected token gain and latency. To make high-frequency switching computationally viable, we introduce novel cache-management optimisations, Lazy Catch-up and KV-only Prefill, reducing switching overhead to below 7% of per-round latency. By capitalising on the complementary strengths of fundamentally distinct drafting architectures, WhiFlash achieves significantly higher acceptance lengths, yielding category-specific throughput gains of up to 69.6% over the state-of-the-art autoregressive EAGLE-3 and 37.3% over the diffusion-based DFlash.",
+      "identifiers": [
+        "SemanticScholar:950c6355bc4de1196369764d83d55675ea08a049"
+      ],
+      "semantic_scholar_id": "950c6355bc4de1196369764d83d55675ea08a049",
+      "canonical_id": "arXiv:2606.07710",
+      "arxiv_id": "2606.07710",
+      "doi": "10.48550/arXiv.2606.07710",
+      "authors": [
+        "Youngjin Kwon",
+        "Miles Williams",
+        "Rui Li",
+        "Alexandros Kouris",
+        "Stylianos I. Venieris"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 130,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2605.25969",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2605.25969",
+        "id:SemanticScholar:06f9ba9221effb2fedcdf74b88c69aa4fb0d6923",
+        "id:arXiv:2605.25969",
+        "title:tripletblock diffusion rwkv",
+        "url:https://arxiv.org/abs/2605.25969"
+      ],
+      "record": {
+        "title": "Triplet-Block Diffusion RWKV",
+        "source_url": "https://arxiv.org/abs/2605.25969",
+        "year": 2026,
+        "published": "2026-05-25",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Causal Transformer language models suffer from strictly sequential decoding and a quadratic per-step attention cost. While linear-time causal models and discrete diffusion models each address these weaknesses, their integration remains inherently inconsistent: diffusion requires bidirectional attention, while causal models are unidirectional. To unify these architectures, we propose $B^3D-RWKV$, a diffusion RWKV variant that integrates the model's $O(L)$ inference efficiency with parallel, bidirectional discrete-diffusion through a \\emph{triplet-block layout} method. $B^3D-RWKV-7.2B$ reaches comparable accuracy on an 8-task suite versus existing models while significantly outperforming baselines in decoding throughput with an average of $\\mathbf{1.6\\times}$ speedup.",
+        "identifiers": [
+          "SemanticScholar:06f9ba9221effb2fedcdf74b88c69aa4fb0d6923"
+        ],
+        "semantic_scholar_id": "06f9ba9221effb2fedcdf74b88c69aa4fb0d6923",
+        "canonical_id": "arXiv:2605.25969",
+        "arxiv_id": "2605.25969",
+        "doi": "10.48550/arXiv.2605.25969",
+        "authors": [
+          "Keng-Hung Lin",
+          "Yingyue Luo",
+          "Zhao-Long Su",
+          "Yunya Song",
+          "Anyi Rao"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 141,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.27786",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2605.27786",
+        "id:SemanticScholar:e905931edec7ecd2b2b883e68aa89115a2439144",
+        "id:arXiv:2605.27786",
+        "title:localityaware redundancy pruning for llm depth compression",
+        "url:https://arxiv.org/abs/2605.27786"
+      ],
+      "record": {
+        "title": "Locality-Aware Redundancy Pruning for LLM Depth Compression",
+        "source_url": "https://arxiv.org/abs/2605.27786",
+        "year": 2026,
+        "published": "2026-05-27",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large language models are known to contain representational redundancy across network depth, making depth pruning an effective approach for improving inference efficiency. Existing one-shot pruning methods rely on local layer importance or fixed redundancy assumptions across architectures. We propose Locality-Aware Redundancy Pruning (LoRP), a training-free one-shot depth pruning framework guided by representation locality. We show that inter-layer redundancy can be either localized or globally distributed depending on the LLM architecture. To characterize this phenomenon, we introduce Representation Locality Score (RLS), derived from global inter-layer hidden-state similarity. Using a small calibration set, LoRP computes pairwise layer similarity, clusters layers by representational similarity, and allocates pruning according to residual intra-cluster redundancy. Experiments across diverse LLM families show improvements in both perplexity and downstream task accuracy. Official github repository: https://github.com/daniel-eai/LoRP-Locality-Aware-Redundancy-Pruning/",
+        "identifiers": [
+          "SemanticScholar:e905931edec7ecd2b2b883e68aa89115a2439144"
+        ],
+        "semantic_scholar_id": "e905931edec7ecd2b2b883e68aa89115a2439144",
+        "canonical_id": "arXiv:2605.27786",
+        "arxiv_id": "2605.27786",
+        "doi": "10.48550/arXiv.2605.27786",
+        "authors": [
+          "Vincent-Daniel Yun",
+          "Youngrae Kim",
+          "Woo-Sang Lim",
+          "Youngjin Heo",
+          "Minkyu Kim",
+          "Sun-Woo Lee"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 139,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.28769",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2605.28769",
+        "id:SemanticScholar:3bdb2ef4f6545cf2c2a16a7efc644d027c6df88c",
+        "id:arXiv:2605.28769",
+        "title:multimixer models flexible sequence modeling with shared representations",
+        "url:https://arxiv.org/abs/2605.28769"
+      ],
+      "record": {
+        "title": "Multi-Mixer Models: Flexible Sequence Modeling with Shared Representations",
+        "source_url": "https://arxiv.org/abs/2605.28769",
+        "year": 2026,
+        "published": "2026-05-27",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Softmax attention is the cornerstone of modern large language models, but its memory scales linearly and compute quadratically with sequence length. Linear recurrent models, such as linear attention and state space models, have become widely studied as alternatives to attention due to their linear compute and constant memory. While these sub-quadratic token mixing methods, or mixers, achieve promising efficiency gains and competitive results on a wide range of benchmarks, current linear recurrent models still lag behind on tasks that require long-context retrieval or in-context learning. A growing body of work studies hybrid architectures that attempt to mitigate these trade-offs by statically interleaving or merging attention and recurrent blocks. In this work, we explore a new axis of developing hybrid models: across the token sequence. We propose Oryx, a hybrid model that can, throughout a sequence, flexibly switch between different mixers, for example quadratic attention for rich context utilization and linear recurrences for efficient generation. Oryx ties at least 90% of its parameters across mixers, enabling attention and recurrent modes to operate over shared internal representations. We validate our design with Mamba-2 and Gated DeltaNet variants, up to 1.4B models. Under fixed token budgets and a mixed-training strategy, Oryx achieves comparable or better performance than its single-mixer baselines. At the 1.4B scale, all instances of Oryx outperform their respective baselines by at least 0.7 percentage points on averaged language modeling tasks. On retrieval tasks, Oryx achieves performance comparable to the Transformer baseline even when processing only a tiny fraction (<10%) of the tokens in attention mode. These results suggest that attention and linear recurrent models can share internal representations, and motivate sequence-axis hybridization as a promising direction.",
+        "identifiers": [
+          "SemanticScholar:3bdb2ef4f6545cf2c2a16a7efc644d027c6df88c"
+        ],
+        "semantic_scholar_id": "3bdb2ef4f6545cf2c2a16a7efc644d027c6df88c",
+        "canonical_id": "arXiv:2605.28769",
+        "arxiv_id": "2605.28769",
+        "doi": "10.48550/arXiv.2605.28769",
+        "authors": [
+          "Kevin Y. Li",
+          "Asher Trockman",
+          "A. Suresh",
+          "Zi-Teng Sun"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 139,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.29157",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2605.29157",
+        "id:SemanticScholar:acd6bb37712be184fab70ea727ea47f76e6f2101",
+        "id:arXiv:2605.29157",
+        "title:parallax parameterized local linear attention for language modeling",
+        "url:https://arxiv.org/abs/2605.29157"
+      ],
+      "record": {
+        "title": "Parallax: Parameterized Local Linear Attention for Language Modeling",
+        "source_url": "https://arxiv.org/abs/2605.29157",
+        "year": 2026,
+        "published": "2026-05-27",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large Language Models (LLMs) have become the central paradigm in artificial intelligence, yet the core computational primitive of attention has remained structurally unchanged. Local Linear Attention (LLA) is an attention mechanism derived from nonparametric statistics in the test-time regression framework. In contrast to prior research on efficient attention variants, LLA upgrades the local constant estimate in softmax attention to a local linear estimate, yielding provably superior bias-variance tradeoffs for associative memory. However, LLA has not been scaled in LLM pretraining due to computational and numerical stability concerns. We introduce Parallax, a parameterized Local Linear Attention that is scalable for LLMs. Parallax eliminates the numerical solver in LLA and learns an extra query-like projector that probes the KV covariance. We place Parallax within a family of attention mechanisms connected by the bandwidth, the probe construction and the affine structure. We propose a hardware-aware algorithm that increases the arithmetic intensity over FlashAttention, shifting attention into a more compute bound regime. Our prototype decode kernel matches or outperforms FlashAttention 2/3 across diverse batch sizes and context lengths. We pretrain Parallax at 0.6B and 1.7B scales and find consistent perplexity improvements throughout pretraining with gains that transfer to downstream benchmarks. The advantage persists under both parameter-matched and compute-matched controls, demonstrating a Pareto improvement. We perform careful pretraining ablations and identify a novel phenomenon whereby Muon unlocks the capacity of Parallax. To our knowledge, this is the first empirical demonstration of strong architecture-optimizer codesign for attention mechanisms in the architecture research literature.",
+        "identifiers": [
+          "SemanticScholar:acd6bb37712be184fab70ea727ea47f76e6f2101"
+        ],
+        "semantic_scholar_id": "acd6bb37712be184fab70ea727ea47f76e6f2101",
+        "canonical_id": "arXiv:2605.29157",
+        "arxiv_id": "2605.29157",
+        "doi": "10.48550/arXiv.2605.29157",
+        "authors": [
+          "Yifei Zuo",
+          "Dhruv Pai",
+          "Zhi-Chen Zeng",
+          "Alec Dewulf",
+          "Shuming Hu",
+          "Zhao-Ran Wang"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 139,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.29233",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2605.29233",
+        "id:SemanticScholar:b2f74b9493f1dd63ae20ece94aaf85b9d170c0cf",
+        "id:arXiv:2605.29233",
+        "title:blockbatch multiscale consensus decoding for efficient diffusion language model inference",
+        "url:https://arxiv.org/abs/2605.29233"
+      ],
+      "record": {
+        "title": "BlockBatch: Multi-Scale Consensus Decoding for Efficient Diffusion Language Model Inference",
+        "source_url": "https://arxiv.org/abs/2605.29233",
+        "year": 2026,
+        "published": "2026-05-28",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Diffusion language models (dLLMs) generate text by iteratively denoising multiple token positions in parallel, offering an attractive alternative to strictly autoregressive decoding. In practice, however, block-wise dLLM inference exposes a difficult granularity trade-off: small blocks preserve local conditioning but require many denoising steps, whereas large blocks expose more parallelism but can make premature commitments and accumulate cache error. Existing acceleration methods typically choose a single block size per request, leaving the complementarity among block sizes unused. We show that block size itself is a useful branching dimension. Different block sizes induce related but non-identical KV-cache trajectories: branches often share an initial prefix, bifurcate at semantically decisive positions, and later agree on syntactically lightweight tokens. Motivated by this structure, we propose BlockBatch, a training-free online inference framework that executes multiple block-size branches for the same request inside a batched forward pass. BlockBatch coordinates these branches through confidence-gated token merging, leader-based synchronization, and periodic full-sequence refreshes that re-anchor local block updates to a globally consistent KV state. Across 3 representative dLLMs and 4 datasets, BlockBatch reduces denoising NFEs by 26.6\\% on average and achieves a 1.33$\\times$ average end-to-end speedup over Fast-dLLM while preserving accuracy. These results identify block-size diversity as a practical and previously underexplored axis for branch-parallel dLLM inference.",
+        "identifiers": [
+          "SemanticScholar:b2f74b9493f1dd63ae20ece94aaf85b9d170c0cf"
+        ],
+        "semantic_scholar_id": "b2f74b9493f1dd63ae20ece94aaf85b9d170c0cf",
+        "canonical_id": "arXiv:2605.29233",
+        "arxiv_id": "2605.29233",
+        "doi": "10.48550/arXiv.2605.29233",
+        "authors": [
+          "Xiaoyou Wu",
+          "Cheng-Jhih Shih",
+          "Bin Ji",
+          "Yong Liu",
+          "Y. Lin"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 138,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.30126",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2605.30126",
+        "id:SemanticScholar:3949439230eb67662fb1e165252e669b0e897133",
+        "id:arXiv:2605.30126",
+        "title:parcel poolanchored resampling with conditioned elastic queries for efficient visionlanguage understanding",
+        "url:https://arxiv.org/abs/2605.30126"
+      ],
+      "record": {
+        "title": "PARCEL: Pool-Anchored Resampling with Conditioned Elastic Queries for Efficient Vision-Language Understanding",
+        "source_url": "https://arxiv.org/abs/2605.30126",
+        "year": 2026,
+        "published": "2026-05-28",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large Vision-Language Models (LVLMs) map visual inputs into dense token sequences, imposing a quadratic computational bottleneck for inference. Elastic visual-token compression addresses this by training a single model that can run at multiple visual-token budgets. However, existing approaches struggle under aggressive compression. Spatial-only compression, as in nested pooling, behaves as an imperfect low-pass filter and induces spectral aliasing that obscures fine-grained detail. Query-only compression, as in nested query resampling, replaces explicit grid-aligned tokens with non-local summaries and substantially degrades spatial grounding. To resolve this representational conflict, we introduce PARCEL (Pool-Anchored Resampling with Conditioned Elastic Queries for Efficient Vision-Language Understanding), a visual tokenization architecture that dynamically partitions the labor of feature extraction. PARCEL establishes spatial pool tokens as low-frequency layout anchors and conditions elastic query tokens on these anchors through Pool-Conditioned Query Resampling. This encourages query tokens to focus on complementary visual features rather than redundant spatial mapping. Extensive evaluations across 27 benchmarks show that PARCEL improves the performance-efficiency Pareto frontier, consistently outperforming existing matryoshka baselines across visual-token budgets while preserving the\"train once, deploy anywhere\"paradigm.",
+        "identifiers": [
+          "SemanticScholar:3949439230eb67662fb1e165252e669b0e897133"
+        ],
+        "semantic_scholar_id": "3949439230eb67662fb1e165252e669b0e897133",
+        "canonical_id": "arXiv:2605.30126",
+        "arxiv_id": "2605.30126",
+        "doi": "10.48550/arXiv.2605.30126",
+        "authors": [
+          "S. Kuzucu",
+          "A. Tonioni",
+          "Vasile Lup",
+          "B. Schiele",
+          "Federico Tombari",
+          "Muhammad Ferjad Naeem"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 138,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.30753",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2605.30753",
+        "id:SemanticScholar:38f14b7360f4b0becc6e4bd16419a2ac7b31d93f",
+        "id:arXiv:2605.30753",
+        "title:efficient diffusion llms via temporalspatial parallel decoding and confidence extrapolation",
+        "url:https://arxiv.org/abs/2605.30753"
+      ],
+      "record": {
+        "title": "Efficient Diffusion LLMs via Temporal-Spatial Parallel Decoding and Confidence Extrapolation",
+        "source_url": "https://arxiv.org/abs/2605.30753",
+        "year": 2026,
+        "published": "2026-05-29",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Diffusion-based large language models (dLLMs) support parallel text generation via iterative denoising, yet inference remains latency-heavy because many steps are spent on redundant refinement and repeated remasking of tokens whose final values are already determined. Prior acceleration methods mainly depend on step-local confidence heuristics or fixed schedules, which are sensitive to prompt and task variation and ignore strong positional effects within a sequence. We cast diffusion decoding as a dynamic control problem and show that token-wise denoising trajectories provide the key signal for reliable control. We propose a trace-aware decoding framework with two components. First, Temporal-Spatial Parallel Decoding (TSPD) uses a lightweight temporalspatial controller that consumes per-token trajectory features, including confidence, entropy, and momentum, together with token position, to decide when a token has converged and can be safely fixed. Second, we introduce Confidence Extrapolation (CE), a training-free state-space module that forecasts future logit trends with uncertainty to support proactive decisions, including safe look-ahead and targeted stabilization when trajectories are oscillatory or underconfident. Together, TSPD and CE reduce unnecessary denoising iterations while preserving output quality, and they compose cleanly with system optimizations such as KV caching.",
+        "identifiers": [
+          "SemanticScholar:38f14b7360f4b0becc6e4bd16419a2ac7b31d93f"
+        ],
+        "semantic_scholar_id": "38f14b7360f4b0becc6e4bd16419a2ac7b31d93f",
+        "canonical_id": "arXiv:2605.30753",
+        "arxiv_id": "2605.30753",
+        "doi": "10.48550/arXiv.2605.30753",
+        "authors": [
+          "Ze-Kai Li",
+          "Ji Liu",
+          "Yiqing Huang",
+          "Zi-Qiong Liu",
+          "Dong Li",
+          "E. Barsoum"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 137,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.31367",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2605.31367",
+        "id:SemanticScholar:4a9620381d790b6a3a6e212bd5bea7f58b792547",
+        "id:arXiv:2605.31367",
+        "title:trading complexity for expressivity through structured generalized linear token mixing",
+        "url:https://arxiv.org/abs/2605.31367"
+      ],
+      "record": {
+        "title": "Trading Complexity for Expressivity Through Structured Generalized Linear Token Mixing",
+        "source_url": "https://arxiv.org/abs/2605.31367",
+        "year": 2026,
+        "published": "2026-05-29",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Token mixing layers play a key role in how language models can learn and generate long-range dependencies. Their efficiency relies on the necessary trade-off between decoding speed and the memory requirements, along with the cache size. Considering causal generation, this paper explores new trade-offs thanks to a unified framework which separates two crucial features: (i) the direct influence of inputs on outputs in one generation step; (ii) the recurrent propagation of information through past outputs. This framework encompasses major architectures such as attention and state-space models, but also generalizes the recurrence equations by allowing each state to depend on multiple past states rather than only the immediate predecessor. By introducing structure, we design new recurrence patterns that provably achieve the desired complexity, while providing theoretical insights on their expressivity -- trading runtime for expressivity in a principled way. Empirical validation is performed on synthetic tasks, along with language modeling. Together, these results provide a unified toolkit for the understanding and design of efficient and expressive token mixers across model families.",
+        "identifiers": [
+          "SemanticScholar:4a9620381d790b6a3a6e212bd5bea7f58b792547"
+        ],
+        "semantic_scholar_id": "4a9620381d790b6a3a6e212bd5bea7f58b792547",
+        "canonical_id": "arXiv:2605.31367",
+        "arxiv_id": "2605.31367",
+        "doi": "10.48550/arXiv.2605.31367",
+        "authors": [
+          "Erwan Fagnou",
+          "Paul Caillon",
+          "Blaise Delattre",
+          "Alexandre Allauzen"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 137,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.31457",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2605.31457",
+        "id:SemanticScholar:8ca56d80ff32ff046efa7012deaafff1091c470d",
+        "id:arXiv:2605.31457",
+        "title:visionpulse dynamic visual sparsity for efficient multimodal reasoning",
+        "url:https://arxiv.org/abs/2605.31457"
+      ],
+      "record": {
+        "title": "VisionPulse: Dynamic Visual Sparsity for Efficient Multimodal Reasoning",
+        "source_url": "https://arxiv.org/abs/2605.31457",
+        "year": 2026,
+        "published": "2026-05-29",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "With the rapid advancement of large multimodal models (LMMs), inference-time overhead has become a key bottleneck for real-world deployment. Existing methods typically prune visual tokens at prefill, assuming the required visual evidence remains static during reasoning. However, we empirically show that visual evidence is strongly step-dependent: only a sparse subset of visual tokens is critical at each decoding step, and the critical set evolves across reasoning. Furthermore, we identify a coupled bottleneck where redundant visual context can steer the model toward query-irrelevant regions, lengthening the reasoning trace. Guided by these insights, we propose VisionPulse, a step-wise visual token pruning framework during reasoning. VisionPulse computes a lightweight visual attention mass to estimate the step-wise retention budget by exploiting its strong positive correlation with LMMs'effective visual token usage and retain only the most critical tokens under this budget. By enforcing visual sparsity during reasoning, VisionPulse filters redundant visual context while preserving relevant visual evidence, shortening reasoning traces naturally. Extensive experiments show that VisionPulse only retains 5% of visual tokens per step with reasoning traces shortened by 11.2%, while keeping accuracy almost unchanged.",
+        "identifiers": [
+          "SemanticScholar:8ca56d80ff32ff046efa7012deaafff1091c470d"
+        ],
+        "semantic_scholar_id": "8ca56d80ff32ff046efa7012deaafff1091c470d",
+        "canonical_id": "arXiv:2605.31457",
+        "arxiv_id": "2605.31457",
+        "doi": "10.48550/arXiv.2605.31457",
+        "authors": [
+          "Heng Xu",
+          "Sheng Jin",
+          "Yan-Biao Ma",
+          "Zhiwu Lu"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 137,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.31598",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2605.31598",
+        "id:SemanticScholar:a4a6e64bd1e9f1f00a55e47e041acf33bb56d3e8",
+        "id:arXiv:2605.31598",
+        "title:linear scaling video vlms for long video understanding",
+        "url:https://arxiv.org/abs/2605.31598"
+      ],
+      "record": {
+        "title": "Linear Scaling Video VLMs for Long Video Understanding",
+        "source_url": "https://arxiv.org/abs/2605.31598",
+        "year": 2026,
+        "published": "2026-05-29",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Video vision-language models (VLMs) are increasingly used in long-horizon and streaming settings, yet most video encoders still rely on spatiotemporal self-attention, causing compute and latency to grow quadratically with the number of frames. Existing efficiency methods improve scalability but often lose accuracy relative to full self-attention, for example through aggressive frame/token dropping or coarse attention approximations. We introduce StateKV, an inference-time method that adapts pretrained long-video VLMs to linear-time video prefill by carrying cross-frame context in a fixed-capacity, importance-based recurrent state, paired with a second full per-frame cache used for decoding. Across three long-video benchmarks and seven models spanning three families and multiple scales, StateKV remains close to full self-attention and consistently outperforms dominant sliding-window / recency-based streaming approximations, without fine-tuning or architectural changes. StateKV also reduces video-prefill cost measured FLOPs, enabling stronger accuracy at a fixed compute budget by running larger models. These results suggest a practical step toward scalable long-video understanding.",
+        "identifiers": [
+          "SemanticScholar:a4a6e64bd1e9f1f00a55e47e041acf33bb56d3e8"
+        ],
+        "semantic_scholar_id": "a4a6e64bd1e9f1f00a55e47e041acf33bb56d3e8",
+        "canonical_id": "arXiv:2605.31598",
+        "arxiv_id": "2605.31598",
+        "doi": "10.48550/arXiv.2605.31598",
+        "authors": [
+          "Cristobal Eyzaguirre",
+          "Jia-Jun Wu",
+          "Juan Carlos Niebles"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 137,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2606.00724",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2606.00724",
+        "id:SemanticScholar:b0316a91d7c92779f1e18bed591bdaa7d4a8577f",
+        "id:arXiv:2606.00724",
+        "title:wavefilter enhancing the longcontext capability of diffusion llms via waveletguided kv cache filtering",
+        "url:https://arxiv.org/abs/2606.00724"
+      ],
+      "record": {
+        "title": "WaveFilter: Enhancing the Long-Context Capability of Diffusion LLMs via Wavelet-Guided KV Cache Filtering",
+        "source_url": "https://arxiv.org/abs/2606.00724",
+        "year": 2026,
+        "published": "2026-05-30",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Diffusion Large Language Models (DLMs) have demonstrated significant advantages across various tasks. However, constrained by their multi-step iterative inference mechanism, their computational overhead and inference latency in long-context tasks have become core bottlenecks restricting their large-scale deployment. When processing long sequences, existing Key-Value (KV) caching mechanisms often face a dilemma where generation quality degrades drastically, where the core challenge lies in precisely and efficiently filtering critical tokens within ultra-long contexts. Inspired by the human reading process, we propose \\textbf{WaveFilter}, a universal and training-free caching framework. This framework innovatively introduces the wavelet transform for decomposition of long sequences to achieve precise identification of key tokens, based on which a sparse KV Cache is constructed to compute the final contextual representation. Experimental results demonstrate that WaveFilter, as a plug-and-play generic framework, significantly enhances the performance of existing mainstream KV Cache methods in complex long-context tasks.",
+        "identifiers": [
+          "SemanticScholar:b0316a91d7c92779f1e18bed591bdaa7d4a8577f"
+        ],
+        "semantic_scholar_id": "b0316a91d7c92779f1e18bed591bdaa7d4a8577f",
+        "canonical_id": "arXiv:2606.00724",
+        "arxiv_id": "2606.00724",
+        "doi": "10.48550/arXiv.2606.00724",
+        "authors": [
+          "Jinnan Yang",
+          "Yan Wang",
+          "Zhenkai Bi",
+          "Ke Wu",
+          "Xiaojie Li",
+          "Jungang Lou",
+          "Zechao Li",
+          "Jing Liu"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 136,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2606.01294",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2606.01294",
+        "id:SemanticScholar:149e20f38a94f484d4c1b4fffa8b5639d1be3c57",
+        "id:arXiv:2606.01294",
+        "title:dont read everything a curvatureconditioned query for linear attention",
+        "url:https://arxiv.org/abs/2606.01294"
+      ],
+      "record": {
+        "title": "Don't Read Everything: A Curvature-Conditioned Query for Linear Attention",
+        "source_url": "https://arxiv.org/abs/2606.01294",
+        "year": 2026,
+        "published": "2026-05-31",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Linear attention reduces the quadratic cost of softmax attention by maintaining a recurrent fast-weight state, but it consistently lags on in-context retrieval and long-context tasks. Existing remedies act on the write side of memory through gating, delta updates, or kernel feature maps, but the read step is left unchanged: every past key contributes additively to the output, so useful targets are diluted by the bulk of stored vectors. We borrow one specific piece of softmax's geometry to construct a cheap read-time contraction of the query. A second-order Taylor expansion of the softmax log-partition at the isotropic-attention point gives a local quadratic model whose curvature coincides with the running key covariance, a quantity that can be maintained with the same recurrent/chunkwise mechanism as the linear-attention state. The associated linear operator contracts the query along the high-variance directions of memory before it reads the state. We call this mechanism Curvature-Conditioned Query (CCQ). CCQ modifies only the read step and is composable with any linear-attention backbone. Attached to GLA and Gated DeltaNet, it improves perplexity, zero-shot downstream accuracy, S-NIAH retrieval at and beyond the training context, length-extrapolation perplexity from 4K to 20K, and LongBench accuracy.",
+        "identifiers": [
+          "SemanticScholar:149e20f38a94f484d4c1b4fffa8b5639d1be3c57"
+        ],
+        "semantic_scholar_id": "149e20f38a94f484d4c1b4fffa8b5639d1be3c57",
+        "canonical_id": "arXiv:2606.01294",
+        "arxiv_id": "2606.01294",
+        "doi": "10.48550/arXiv.2606.01294",
+        "authors": [
+          "D. Le",
+          "Thong Nguyen",
+          "Cong-Duy T. Nguyen",
+          "A. Lưu"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 135,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2606.01412",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2606.01412",
+        "id:SemanticScholar:1bf46c55f67c8c35c303239b4983ba62a763f17e",
+        "id:arXiv:2606.01412",
+        "title:gptqintrinsic lora a nearoptimal algorithm for lowprecision quantization with lowrank adaptation",
+        "url:https://arxiv.org/abs/2606.01412"
+      ],
+      "record": {
+        "title": "GPTQ-intrinsic LoRA: A Near-optimal Algorithm for Low-precision Quantization with Low-rank Adaptation",
+        "source_url": "https://arxiv.org/abs/2606.01412",
+        "year": 2026,
+        "published": "2026-05-31",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Post-training quantization is widely used for compressing large neural networks, but aggressive low-bit quantization can significantly degrade model quality. A common remedy is to augment the quantized weights with a low-rank correction, leading to approximations of the form $W\\approx Q+LR$. In this paper, we study this low-precision plus low-rank representation through the layer-wise reconstruction objective $\\|XW-X(Q+LR)\\|_F^2$, where $X$ is a calibration matrix. We establish, to our knowledge, the first information-theoretic lower bounds for this problem under finite-alphabet and bounded low-rank compensation constraints. We then propose GPTQ-intrinsic LoRA, a training-free algorithm that incorporates the low-rank correction directly into a GPTQ-style quantization pass by appropriately augmenting the calibration Hessian. For the choice $L=V_r$, where $V_r$ contains the top right singular vectors of $X$, we prove layer-wise reconstruction error bounds in which the usual GPTQ dependence on $\\|X\\|_F^2$ is replaced by the rank-$r$ residual $\\|X-X_r\\|_F^2$, up to regularization terms. Under natural structural assumptions, these bounds match the information-theoretic lower bounds in their dominant scaling, up to constants and mild factors. We also introduce Bid-Up, a fixed-grid quantization refinement step that can be alternated with optimal low-rank compensation with guaranteed non-increasing layer-wise reconstruction error. Experiments on Qwen3 language models and DeiT vision transformers show that GPTQ-intrinsic LoRA improves over GPTQ and GPTQ followed by low-rank compensation, with additional gains from refinement loops.",
+        "identifiers": [
+          "SemanticScholar:1bf46c55f67c8c35c303239b4983ba62a763f17e"
+        ],
+        "semantic_scholar_id": "1bf46c55f67c8c35c303239b4983ba62a763f17e",
+        "canonical_id": "arXiv:2606.01412",
+        "arxiv_id": "2606.01412",
+        "doi": "10.48550/arXiv.2606.01412",
+        "authors": [
+          "Shi-Hao Zhang",
+          "R. Saab"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 135,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2606.09862",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2606.09862",
+        "id:SemanticScholar:905c59a217f7438210a0b042c354a7ca2d8a3173",
+        "id:arXiv:2606.09862",
+        "title:blurry window attention",
+        "url:https://arxiv.org/abs/2606.09862"
+      ],
+      "record": {
+        "title": "Blurry Window Attention",
+        "source_url": "https://arxiv.org/abs/2606.09862",
+        "year": 2026,
+        "published": "2026-05-31",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The Softmax Attention operation in Transformer language models has a quadratic complexity in the sequence length and a growing state size in the form of KV cache, which becomes a bottleneck in long context scenarios. To overcome this limitation, alternative architectures with linear complexity and finite state size have been introduced, such as State-Space Models (SSMs), Linear Attention (LA), and Attention with Bounded-memory Control (ABC). Though linear models achieve similar language perplexity as Transformers, they are still behind in tasks which require retrieval or recall of specific information. In this work, we introduce Blurry Window Attention (BLA) a novel ABC method inspired by SSMs. BLA stores a frequency window from which a blurry KV history is reconstructed via interpolation using Dirichlet kernels. BLA can be understood as a generalization of Sliding Window Attention (SWA) depending on the Dirichlet kernels resolution or as a special case of the Gated Slot Attention (GSA), where the decay factor is implemented with Dirichlet kernels. We describe in details the theory and efficient implementation of BLA. On the Multi-Query Associate Recall (MQAR) synthetic task, we show that the state efficiency of BLA is 8$\\times$ better than SWA and is competitive with popular linear attention models, and in the RegBench synthetic task, only BLA and SWA improve their performance as the state size grows among the linear models we tested.",
+        "identifiers": [
+          "SemanticScholar:905c59a217f7438210a0b042c354a7ca2d8a3173"
+        ],
+        "semantic_scholar_id": "905c59a217f7438210a0b042c354a7ca2d8a3173",
+        "canonical_id": "arXiv:2606.09862",
+        "arxiv_id": "2606.09862",
+        "doi": "10.48550/arXiv.2606.09862",
+        "authors": [
+          "Axel Laborieux",
+          "Christos Sourmpis",
+          "Juan Gabriel Kostelec",
+          "Qinghai Guo"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 135,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2606.03075",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2606.03075",
+        "id:SemanticScholar:c695e4f8c0c58b75cd8592bcc9b591175c6733b2",
+        "id:arXiv:2606.03075",
+        "title:tgvkv textgrounded kv eviction for visionlanguage models",
+        "url:https://arxiv.org/abs/2606.03075"
+      ],
+      "record": {
+        "title": "TGV-KV: Text-Grounded KV Eviction for Vision-Language Models",
+        "source_url": "https://arxiv.org/abs/2606.03075",
+        "year": 2026,
+        "published": "2026-06-02",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Vision-Language Models (VLMs) inherit the auto-regressive generation paradigm and cache the keys and values (KV) of all previous tokens to accelerate inference, resulting in memory consumption that scales linearly with context length. This issue is particularly pronounced in VLMs due to substantial redundancy in the visual modality. Although KV cache eviction approaches can effectively reduce inference memory, they often incur significant performance degradation in VLMs, as most are designed for language models and overlook the inherent gap between text and vision. By systematically analyzing the modality gap in VLMs in this work, we argue that the importance of visual information should be grounded in textual guidance and accordingly propose a Text-Grounded KV Eviction method for VLMs (TGV-KV). TGV-KV comprises three submodules: (1) Text-Vision Budgeting (TVB) assigns budget to each layer based on the mutual information interaction. (2) Text-Weighted Ranking (TWR) assesses the priority of text and ranks vision importance based on weighted text-image attention. (3) Text-Prioritised Retention (TPR) policy strategically preserves text KV to avoid acute information loss. We evaluate TGV-KV across five models with different sizes and architectures, showing that TGV-KV preserves 99.2% full-KV accuracy on the VizWiz-VQA task with LLaVA-NeXT and boosts end-to-end throughput by 52.6% with an extreme retention budget of 5%. Code is available at https://github.com/Danielement321/TGV-KV.",
+        "identifiers": [
+          "SemanticScholar:c695e4f8c0c58b75cd8592bcc9b591175c6733b2"
+        ],
+        "semantic_scholar_id": "c695e4f8c0c58b75cd8592bcc9b591175c6733b2",
+        "canonical_id": "arXiv:2606.03075",
+        "arxiv_id": "2606.03075",
+        "doi": "10.48550/arXiv.2606.03075",
+        "authors": [
+          "Jizhihui Liu",
+          "Ruizi Han",
+          "Miao Zhang",
+          "Rui Shao",
+          "Xue-Bo Liu",
+          "Weili Guan",
+          "Yaowei Wang"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 133,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2606.04446",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2606.04446",
+        "id:SemanticScholar:94ffb9a0b41915326a8831094a5331a282eb190d",
+        "id:arXiv:2606.04446",
+        "title:d2sd accelerating speculative decoding with dual diffusion draft models",
+        "url:https://arxiv.org/abs/2606.04446"
+      ],
+      "record": {
+        "title": "D^2SD: Accelerating Speculative Decoding with Dual Diffusion Draft Models",
+        "source_url": "https://arxiv.org/abs/2606.04446",
+        "year": 2026,
+        "published": "2026-06-03",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Speculative decoding accelerates autoregressive large language model inference by drafting multiple tokens and verifying them in a single target-model forward pass. Recent diffusion-based drafters generate an entire block of tokens in parallel but usually commit to a single draft sequence per verification: once the first mismatch occurs, all subsequent draft tokens are discarded, resulting in a limited acceptance rate. Naively batching more draft candidate sequences only introduces a marginal improvement, as redundant or poorly placed branches increase the cost of drafting and verification without proportionally increasing the number of accepted tokens. We propose D^2SD, a dual diffusion draft speculative decoding framework that organizes candidates into a confidence-guided prefix tree, where the first diffusion drafter generates a block along with per-position confidence scores that are used to identify the most likely rejection boundary and select the top-K prefix ranges for recovery; the second variable-prefix diffusion drafter re-anchors at each selected prefix and proposes alternative continuations in one batched pass; the resulting shared-prefix candidates are jointly verified via cascade attention. Empirically, D^2SD shows clear improvements over both the underlying diffusion approach and strong autoregressive speculative decoding baselines.",
+        "identifiers": [
+          "SemanticScholar:94ffb9a0b41915326a8831094a5331a282eb190d"
+        ],
+        "semantic_scholar_id": "94ffb9a0b41915326a8831094a5331a282eb190d",
+        "canonical_id": "arXiv:2606.04446",
+        "arxiv_id": "2606.04446",
+        "doi": "10.48550/arXiv.2606.04446",
+        "authors": [
+          "Liyuan Zhang",
+          "Jia-Rui Zhang",
+          "Jinwei Yao",
+          "Ran Yan",
+          "Yuchen Yang",
+          "Jiahao Zhang",
+          "Tong-Kai Yang",
+          "Yi Wu",
+          "Binhang Yuan"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 132,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2606.07710",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2606.07710",
+        "id:SemanticScholar:950c6355bc4de1196369764d83d55675ea08a049",
+        "id:arXiv:2606.07710",
+        "title:whiflash accelerating speculative decoding with tokenlevel crossparadigm routing",
+        "url:https://arxiv.org/abs/2606.07710"
+      ],
+      "record": {
+        "title": "WhiFlash: Accelerating Speculative Decoding with Token-Level Cross-Paradigm Routing",
+        "source_url": "https://arxiv.org/abs/2606.07710",
+        "year": 2026,
+        "published": "2026-06-05",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The autoregressive nature of large language models (LLMs) remains a significant bottleneck for inference, particularly in complex agentic workloads. While speculative decoding (SD) accelerates inference, current approaches rely on static drafting paradigms, utilising either autoregressive drafting models for reasoning or diffusion-based parallel drafting models for structured outputs. We empirically find that drafting accuracy fluctuates dramatically within a single sequence, leaving significant performance unrealised by static paradigms and coarse-grained routing. To address this volatility, we introduce WhiFlash, the first cross-paradigm SD method that unifies autoregressive and diffusion-based parallel drafting under a single token-level controller. WhiFlash adopts a fine-grained routing mechanism that employs either a lightweight entropy-based or a learned neural policy, both parametrised to provide a tunable balance between expected token gain and latency. To make high-frequency switching computationally viable, we introduce novel cache-management optimisations, Lazy Catch-up and KV-only Prefill, reducing switching overhead to below 7% of per-round latency. By capitalising on the complementary strengths of fundamentally distinct drafting architectures, WhiFlash achieves significantly higher acceptance lengths, yielding category-specific throughput gains of up to 69.6% over the state-of-the-art autoregressive EAGLE-3 and 37.3% over the diffusion-based DFlash.",
+        "identifiers": [
+          "SemanticScholar:950c6355bc4de1196369764d83d55675ea08a049"
+        ],
+        "semantic_scholar_id": "950c6355bc4de1196369764d83d55675ea08a049",
+        "canonical_id": "arXiv:2606.07710",
+        "arxiv_id": "2606.07710",
+        "doi": "10.48550/arXiv.2606.07710",
+        "authors": [
+          "Youngjin Kwon",
+          "Miles Williams",
+          "Rui Li",
+          "Alexandros Kouris",
+          "Stylianos I. Venieris"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 130,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:0012493bfd133028a65a5544419869012f5cbefc57f0c8c497e98a4309f4c793",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

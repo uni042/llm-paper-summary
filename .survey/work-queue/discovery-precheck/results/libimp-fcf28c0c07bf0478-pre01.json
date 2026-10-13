@@ -1,0 +1,721 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-fcf28c0c07bf0478-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-fcf28c0c07bf",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2605.15250",
+    "arXiv:2605.15491",
+    "arXiv:2605.15609",
+    "arXiv:2605.17447",
+    "arXiv:2605.19726",
+    "arXiv:2605.24168",
+    "arXiv:2605.24697"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 7,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "462ff25f399e502a56b366fb56b8707f9e5039f8",
+  "raw_search_result_count": 7,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 7,
+  "provider_progress": {
+    "requested_count": 7,
+    "status_counts": {
+      "allowed": 7,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-13T20:45:27.543816+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2605.15250",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2605.15491",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2605.15609",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2605.17447",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2605.19726",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2605.24168",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2605.24697",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "PSD: Pushing the Pareto Frontier of Diffusion LLMs via Parallel Speculative Decoding",
+      "source_url": "https://arxiv.org/abs/2605.15609",
+      "year": 2026,
+      "published": "2026-05-15",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Diffusion large language models (dLLMs) generate text by iteratively denoising masked token sequences. Although dLLMs can predict all masked positions in parallel within each step, the large number of denoising iterations still makes inference expensive. This cost can be reduced spatially by unmasking multiple tokens per step, or temporally by collapsing multiple denoising steps into one verification call. We propose Parallel Speculative Decoding (PSD), a training-free framework that jointly improves inference along both axes. Using the confidence scores from a single forward pass, PSD selects positions to unmask via a configurable, adaptive unmasking policy and constructs multi-depth speculative drafts without extra model calls. A final batched verification pass then applies hierarchical acceptance, keeping the deepest draft that remains consistent with the updated predictions. Experiments on three dLLMs across reasoning and code generation tasks show that PSD achieves favorable trade-offs between inference efficiency and generation quality, reaching up to $5.5\\times$ tokens per forward pass with accuracy comparable to greedy decoding.",
+      "identifiers": [
+        "SemanticScholar:06de692d612c9bf2f3dd0b43c733ebd9b70f499d"
+      ],
+      "semantic_scholar_id": "06de692d612c9bf2f3dd0b43c733ebd9b70f499d",
+      "canonical_id": "arXiv:2605.15609",
+      "arxiv_id": "2605.15609",
+      "doi": "10.48550/arXiv.2605.15609",
+      "authors": [
+        "Sheng-Yin Sun",
+        "Yiming Li",
+        "Ren-Xi Liu",
+        "Xin-Qi Li",
+        "Hui-Ling Zhen",
+        "Wei-Zhe Lin",
+        "Chen Chen",
+        "Xian-Zhi Yu",
+        "Ming-Xuan Yuan",
+        "Chen Ma"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 151,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "GQLA: Group-Query Latent Attention for Hardware-Adaptive Large Language Model Decoding",
+      "source_url": "https://arxiv.org/abs/2605.15250",
+      "year": 2026,
+      "published": "2026-05-14",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Multi-head Latent Attention (MLA), the attention used in DeepSeek-V2/V3, jointly compresses keys and values into a low-rank latent and matches the H100 roofline almost perfectly. Its trained weights, however, expose only one decoding path - an absorbed MQA form - which ties efficient inference to H100-class compute-bandwidth ratios, forfeits tensor parallelism along the head axis, and yields no Multi-Token Prediction (MTP) gain on commodity inference GPUs such as the export-restricted H20. We propose Group-Query Latent Attention (GQLA), a minimal modification of MLA whose trained weights expose two algebraically equivalent decoding paths over the same parameters: an MQA-absorb path identical to MLA's, and a GQA path with a per-group expanded cache. The runtime picks the path that matches the target hardware - no retraining, no custom kernels - so a single set of GQLA weights pins the rooflines of both H100 (MQA-absorb, s_q=1) and H20 (GQA + MTP, s_q=2), while supporting up to 8-way zero-redundancy tensor parallelism on the GQA path. To avoid pretraining from scratch we extend TransMLA into TransGQLA, which converts a pretrained GQA checkpoint into a GQLA model; on LLaMA-3-8B it compresses the per-token KV cache to 28.125% of the GQA baseline on the MQA-absorb path while structurally preserving GQA-level traffic on the per-group path.",
+      "identifiers": [
+        "SemanticScholar:a950fdee79e5281521fd316e69eec54db1f4fe6f"
+      ],
+      "semantic_scholar_id": "a950fdee79e5281521fd316e69eec54db1f4fe6f",
+      "canonical_id": "arXiv:2605.15250",
+      "arxiv_id": "2605.15250",
+      "doi": "10.48550/arXiv.2605.15250",
+      "authors": [
+        "Fan-Xu Meng"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 152,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Ghosted Layers: Unconstrained Activation Alignment for Recovering Layer-Pruned LLMs",
+      "source_url": "https://arxiv.org/abs/2605.15491",
+      "year": 2026,
+      "published": "2026-05-15",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Layer pruning removes entire Transformer decoder blocks from large language models, but introduces a mismatch between the hidden state received by the next surviving layer and the distribution it was trained to process, leading to significant performance degradation. We propose Ghosted Layers, a training-free recovery module that addresses this issue by solving a boundary activation alignment problem. Our method derives a closed-form optimal linear operator from a small calibration set to reconstruct the activation discrepancy introduced by the pruned layers. We show that this solution corresponds to the unconstrained optimum of the alignment objective, whereas existing methods are restricted to constrained solutions over limited operator subspaces. Experiments across multiple LLM backbones and pruning strategies demonstrate that our method consistently improves accuracy and perplexity over prior training-free baselines, while preserving the efficiency gains of layer pruning. Official code repository: https://github.com/daniel-eai/ghosted_layers_official_repository/.",
+      "identifiers": [
+        "SemanticScholar:d962e0c10b5792c025ec49ba994f952ee065f540"
+      ],
+      "semantic_scholar_id": "d962e0c10b5792c025ec49ba994f952ee065f540",
+      "canonical_id": "arXiv:2605.15491",
+      "arxiv_id": "2605.15491",
+      "doi": "10.48550/arXiv.2605.15491",
+      "authors": [
+        "Vincent-Daniel Yun",
+        "Junhyuk Jo",
+        "Sai Praneeth Karimireddy",
+        "Sun-Woo Lee"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 151,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "FastOCR: Dynamic Visual Fixation via KV Cache Pruning for Efficient Document Parsing",
+      "source_url": "https://arxiv.org/abs/2605.17447",
+      "year": 2026,
+      "published": "2026-05-17",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Vision-Language Models (VLMs) have shown strong promise on Optical Character Recognition (OCR), yet the sheer number of visual tokens required to encode dense documents incurs prohibitive inference cost. Existing pruning methods rely on physical eviction, e.g., permanently discarding visual tokens during the prefill stage. While effective for natural images, this strategy fundamentally breaks down on OCR, where virtually every visual token may correspond to a character or structural element, and any irreversible loss leads to catastrophic accuracy degradation. We observe that, although document images appear globally dense and seemingly unprunable, the model's attention to them is in fact temporally sparse: at each decoding step it concentrates on a small region that shifts gradually across steps, much as a human reader fixates on successive words rather than perceiving an entire page at once. Motivated by this Dynamic Visual Fixation phenomenon, we recast the intractable global pruning problem as a tractable local, dynamic one and propose FastOCR, a training-free framework with two complementary modules. Specifically, Focal-Guided Pruning identifies a small set of focal layers and selects the most task-relevant visual tokens from them at each step, while Cross-Step Fixation Reuse exploits the gradual shift of fixation to warm-start each step from the previous one. By dynamically adjusting which tokens are attended rather than evicting any from the cache, FastOCR avoids permanent information loss. Extensive experiments show that FastOCR serves as a plug-and-play acceleration module, generalizing consistently across five VLMs of varying sizes and architectures. On Qwen2.5-VL, FastOCR retains 98% of the unpruned model's accuracy while attending to only 5% of the visual tokens per decoding step, reducing attention latency by 3.0$\\times$.",
+      "identifiers": [
+        "SemanticScholar:57a35dea84bd85b8245d4a13b4010c4c013c0b80"
+      ],
+      "semantic_scholar_id": "57a35dea84bd85b8245d4a13b4010c4c013c0b80",
+      "canonical_id": "arXiv:2605.17447",
+      "arxiv_id": "2605.17447",
+      "doi": "10.48550/arXiv.2605.17447",
+      "authors": [
+        "Zi-Han Tang",
+        "Leqi Shen",
+        "Hui Chen",
+        "Ao Wang",
+        "Ben Wan",
+        "Yan Feng",
+        "Ke Zhang",
+        "Sicheng Zhao",
+        "Tongxuan Liu",
+        "Gui-Guang Ding"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 149,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Efficient Long-Context Modeling in Diffusion Language Models via Block Approximate Sparse Attention",
+      "source_url": "https://arxiv.org/abs/2605.19726",
+      "year": 2026,
+      "published": "2026-05-19",
+      "venue": "2026 IEEE/CVF Conference on Computer Vision and Pattern Recognition- FINDINGS Track (CVPRF)",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Diffusion Language Models (DLMs) enable globally coherent, bidirectional, and controllable text generation, offering advantages over traditional autoregressive LLMs, while scaling to ultra-long sequences remains costly. Many existing block-sparse attention methods select blocks by fixed sampling patterns over the high-resolution attention space, e.g. tail-regions or anti-diagonal stripes. Such prior-driven sampling can miss salient tokens and introduce instability under distribution shifts. In this paper, we propose the Block Approximate Sparse Attention framework (BA-Att) with block-wise pre-downsampled operation, which identifies informative regions within a compact downsampled spaces, avoiding reliance on brittle positional priors. To analyze its theoretical behavior, we define an oracle postdownsample attention map and formalize the approximation error between pre- and post-downsample schemes. Based on this insight, we introduce a lightweight normsorting module and a covariance-compensated correction that approximates full covariance using diagonal QK variances, reducing large computational complexity. Extensive experiments show that our operator achieves up to 6.95× acceleration over FlashAttention in attention computation, and maintains near full-attention performance at 50% sparsity across language models, multi-modal language models, and video generation models, demonstrating strong efficiency and generalization.",
+      "identifiers": [
+        "SemanticScholar:672dfa32805ea52bedfee62d20e703f8316b4645"
+      ],
+      "semantic_scholar_id": "672dfa32805ea52bedfee62d20e703f8316b4645",
+      "canonical_id": "arXiv:2605.19726",
+      "arxiv_id": "2605.19726",
+      "doi": "10.1109/CVPRF71909.2026.00278",
+      "authors": [
+        "Wenhui Zhang",
+        "Yi-Ming Wu",
+        "Huan Wang",
+        "Yao Liu",
+        "Huanzhang Dou",
+        "Sen-Qiao Yang",
+        "Sitong Wu",
+        "Han Zhao",
+        "Jiaya Jia"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 147,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Inference Time Context Sparsity: Illusion or Opportunity?",
+      "source_url": "https://arxiv.org/abs/2605.24168",
+      "year": 2026,
+      "published": "2026-05-22",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Sparsity has long been a central theme in LLM efficiency, but its role in context processing remains unresolved. As LLM workloads shift toward longer contexts and agentic interactions, the compute and memory bottlenecks of attention become increasingly critical, raising the question of whether these constraints are fundamental. Our position is that these constraints are artificial and unnecessary, and that the future of LLM inference lies in extreme but principled sparsity along the context dimension. This position is supported by several strands of empirical and theoretical evidence. First, we find the insistence on dense attention unreasonable, since in a long context a query effectively projects O(N) attention information into a hidden space of dimension d<<N, making the process inherently lossy. Second, we perform an extensive study of sparsity in LLMs spanning 20 models across five model families, varying context lengths, and different sparsity levels. We empirically demonstrate a strong trend: current LLMs, despite not being trained for context sparsity, are remarkably robust to inference-time decode sparsity across tasks of varying complexity, including retrieval, multi-hop QA, mathematical reasoning, and agentic coding. Importantly, we also show that current hardware is already sufficient to realize substantial gains from this sparsity. For example, our sparse decode kernels accelerate large-context processing by up to 10x over FlashInfer at 50x sparsity levels on hardware such as the H100. Overall, these results position extreme context sparsity not as a heuristic, but as a principled foundation for LLM inference, training, and architecture design: one that is both feasible and beneficial, and a compelling direction for future systems.",
+      "identifiers": [
+        "SemanticScholar:7e60d4afb71abbd738c1d156fdf8a94ecca29469"
+      ],
+      "semantic_scholar_id": "7e60d4afb71abbd738c1d156fdf8a94ecca29469",
+      "canonical_id": "arXiv:2605.24168",
+      "arxiv_id": "2605.24168",
+      "doi": "10.48550/arXiv.2605.24168",
+      "authors": [
+        "Sahil Joshi",
+        "Prithvi Dixit",
+        "Agniva Chowdhury",
+        "Anshumali Shrivastava",
+        "Joseph E. Gonzalez",
+        "Ion Stoica",
+        "Kumar Krishna Agrawal",
+        "Aditya Desai"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 144,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "The Path Matters: Learning a Token-Commitment Policy for Diffusion Language Models",
+      "source_url": "https://arxiv.org/abs/2605.24697",
+      "year": 2026,
+      "published": "2026-05-23",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Diffusion large language models promise faster generation by refining many token positions in parallel, but this parallelism introduces a hidden control problem: which proposed tokens should be transferred into the partially decoded sequence at each step? We refer to this decision as token commitment. Existing frozen-generator decoders largely rely on hand-designed confidence rules or block-specific acceptance filters. We argue that token commitment can instead be learned as a reusable trace-state policy. We introduce TraceLock, a lightweight plug-in controller that instantiates this policy for a frozen diffusion language model. Since oracle commitment times are unavailable, TraceLock derives self-supervision from future stability: at decoding step t, a proposed token for position i is labeled stable if it matches the final token at position i after the full decoding trace completes. The controller scores variable-length trace states and decides which active token proposals should be committed to the partially decoded sequence. Once trained for a given frozen backbone, the controller can be deployed across local-window widths, generation lengths, and step budgets without retraining or per-setting calibration. Experiments on question answering, mathematical reasoning, and code generation show that TraceLock improves the quality-step tradeoff over heuristic and learned baselines, with particularly stable behavior under cross-setting deployment. Diagnostic analyses show that its decisions are not reducible to scalar confidence, suggesting that frozen diffusion language models expose a learnable space of commitment trajectories beyond confidence-based decoding. Code is available at https://github.com/BobSun98/TraceLock.",
+      "identifiers": [
+        "SemanticScholar:4cc9002801246ec09a9817525669d3385b9e8bc5"
+      ],
+      "semantic_scholar_id": "4cc9002801246ec09a9817525669d3385b9e8bc5",
+      "canonical_id": "arXiv:2605.24697",
+      "arxiv_id": "2605.24697",
+      "doi": "10.48550/arXiv.2605.24697",
+      "authors": [
+        "Bo-Han Sun",
+        "Max Zhu",
+        "Francesco Caso",
+        "Jin-Dong Gu",
+        "Jun-Chi Yu",
+        "P. Torr",
+        "Pietro Liò",
+        "Jia-Lin Yu"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 143,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2605.15609",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2605.15609",
+        "id:SemanticScholar:06de692d612c9bf2f3dd0b43c733ebd9b70f499d",
+        "id:arXiv:2605.15609",
+        "title:psd pushing the pareto frontier of diffusion llms via parallel speculative decoding",
+        "url:https://arxiv.org/abs/2605.15609"
+      ],
+      "record": {
+        "title": "PSD: Pushing the Pareto Frontier of Diffusion LLMs via Parallel Speculative Decoding",
+        "source_url": "https://arxiv.org/abs/2605.15609",
+        "year": 2026,
+        "published": "2026-05-15",
+        "venue": "arXiv.org",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Diffusion large language models (dLLMs) generate text by iteratively denoising masked token sequences. Although dLLMs can predict all masked positions in parallel within each step, the large number of denoising iterations still makes inference expensive. This cost can be reduced spatially by unmasking multiple tokens per step, or temporally by collapsing multiple denoising steps into one verification call. We propose Parallel Speculative Decoding (PSD), a training-free framework that jointly improves inference along both axes. Using the confidence scores from a single forward pass, PSD selects positions to unmask via a configurable, adaptive unmasking policy and constructs multi-depth speculative drafts without extra model calls. A final batched verification pass then applies hierarchical acceptance, keeping the deepest draft that remains consistent with the updated predictions. Experiments on three dLLMs across reasoning and code generation tasks show that PSD achieves favorable trade-offs between inference efficiency and generation quality, reaching up to $5.5\\times$ tokens per forward pass with accuracy comparable to greedy decoding.",
+        "identifiers": [
+          "SemanticScholar:06de692d612c9bf2f3dd0b43c733ebd9b70f499d"
+        ],
+        "semantic_scholar_id": "06de692d612c9bf2f3dd0b43c733ebd9b70f499d",
+        "canonical_id": "arXiv:2605.15609",
+        "arxiv_id": "2605.15609",
+        "doi": "10.48550/arXiv.2605.15609",
+        "authors": [
+          "Sheng-Yin Sun",
+          "Yiming Li",
+          "Ren-Xi Liu",
+          "Xin-Qi Li",
+          "Hui-Ling Zhen",
+          "Wei-Zhe Lin",
+          "Chen Chen",
+          "Xian-Zhi Yu",
+          "Ming-Xuan Yuan",
+          "Chen Ma"
+        ],
+        "priority": 102,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 102,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 151,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.15250",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2605.15250",
+        "id:SemanticScholar:a950fdee79e5281521fd316e69eec54db1f4fe6f",
+        "id:arXiv:2605.15250",
+        "title:gqla groupquery latent attention for hardwareadaptive large language model decoding",
+        "url:https://arxiv.org/abs/2605.15250"
+      ],
+      "record": {
+        "title": "GQLA: Group-Query Latent Attention for Hardware-Adaptive Large Language Model Decoding",
+        "source_url": "https://arxiv.org/abs/2605.15250",
+        "year": 2026,
+        "published": "2026-05-14",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Multi-head Latent Attention (MLA), the attention used in DeepSeek-V2/V3, jointly compresses keys and values into a low-rank latent and matches the H100 roofline almost perfectly. Its trained weights, however, expose only one decoding path - an absorbed MQA form - which ties efficient inference to H100-class compute-bandwidth ratios, forfeits tensor parallelism along the head axis, and yields no Multi-Token Prediction (MTP) gain on commodity inference GPUs such as the export-restricted H20. We propose Group-Query Latent Attention (GQLA), a minimal modification of MLA whose trained weights expose two algebraically equivalent decoding paths over the same parameters: an MQA-absorb path identical to MLA's, and a GQA path with a per-group expanded cache. The runtime picks the path that matches the target hardware - no retraining, no custom kernels - so a single set of GQLA weights pins the rooflines of both H100 (MQA-absorb, s_q=1) and H20 (GQA + MTP, s_q=2), while supporting up to 8-way zero-redundancy tensor parallelism on the GQA path. To avoid pretraining from scratch we extend TransMLA into TransGQLA, which converts a pretrained GQA checkpoint into a GQLA model; on LLaMA-3-8B it compresses the per-token KV cache to 28.125% of the GQA baseline on the MQA-absorb path while structurally preserving GQA-level traffic on the per-group path.",
+        "identifiers": [
+          "SemanticScholar:a950fdee79e5281521fd316e69eec54db1f4fe6f"
+        ],
+        "semantic_scholar_id": "a950fdee79e5281521fd316e69eec54db1f4fe6f",
+        "canonical_id": "arXiv:2605.15250",
+        "arxiv_id": "2605.15250",
+        "doi": "10.48550/arXiv.2605.15250",
+        "authors": [
+          "Fan-Xu Meng"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 152,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.15491",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2605.15491",
+        "id:SemanticScholar:d962e0c10b5792c025ec49ba994f952ee065f540",
+        "id:arXiv:2605.15491",
+        "title:ghosted layers unconstrained activation alignment for recovering layerpruned llms",
+        "url:https://arxiv.org/abs/2605.15491"
+      ],
+      "record": {
+        "title": "Ghosted Layers: Unconstrained Activation Alignment for Recovering Layer-Pruned LLMs",
+        "source_url": "https://arxiv.org/abs/2605.15491",
+        "year": 2026,
+        "published": "2026-05-15",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Layer pruning removes entire Transformer decoder blocks from large language models, but introduces a mismatch between the hidden state received by the next surviving layer and the distribution it was trained to process, leading to significant performance degradation. We propose Ghosted Layers, a training-free recovery module that addresses this issue by solving a boundary activation alignment problem. Our method derives a closed-form optimal linear operator from a small calibration set to reconstruct the activation discrepancy introduced by the pruned layers. We show that this solution corresponds to the unconstrained optimum of the alignment objective, whereas existing methods are restricted to constrained solutions over limited operator subspaces. Experiments across multiple LLM backbones and pruning strategies demonstrate that our method consistently improves accuracy and perplexity over prior training-free baselines, while preserving the efficiency gains of layer pruning. Official code repository: https://github.com/daniel-eai/ghosted_layers_official_repository/.",
+        "identifiers": [
+          "SemanticScholar:d962e0c10b5792c025ec49ba994f952ee065f540"
+        ],
+        "semantic_scholar_id": "d962e0c10b5792c025ec49ba994f952ee065f540",
+        "canonical_id": "arXiv:2605.15491",
+        "arxiv_id": "2605.15491",
+        "doi": "10.48550/arXiv.2605.15491",
+        "authors": [
+          "Vincent-Daniel Yun",
+          "Junhyuk Jo",
+          "Sai Praneeth Karimireddy",
+          "Sun-Woo Lee"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 151,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.17447",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2605.17447",
+        "id:SemanticScholar:57a35dea84bd85b8245d4a13b4010c4c013c0b80",
+        "id:arXiv:2605.17447",
+        "title:fastocr dynamic visual fixation via kv cache pruning for efficient document parsing",
+        "url:https://arxiv.org/abs/2605.17447"
+      ],
+      "record": {
+        "title": "FastOCR: Dynamic Visual Fixation via KV Cache Pruning for Efficient Document Parsing",
+        "source_url": "https://arxiv.org/abs/2605.17447",
+        "year": 2026,
+        "published": "2026-05-17",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Vision-Language Models (VLMs) have shown strong promise on Optical Character Recognition (OCR), yet the sheer number of visual tokens required to encode dense documents incurs prohibitive inference cost. Existing pruning methods rely on physical eviction, e.g., permanently discarding visual tokens during the prefill stage. While effective for natural images, this strategy fundamentally breaks down on OCR, where virtually every visual token may correspond to a character or structural element, and any irreversible loss leads to catastrophic accuracy degradation. We observe that, although document images appear globally dense and seemingly unprunable, the model's attention to them is in fact temporally sparse: at each decoding step it concentrates on a small region that shifts gradually across steps, much as a human reader fixates on successive words rather than perceiving an entire page at once. Motivated by this Dynamic Visual Fixation phenomenon, we recast the intractable global pruning problem as a tractable local, dynamic one and propose FastOCR, a training-free framework with two complementary modules. Specifically, Focal-Guided Pruning identifies a small set of focal layers and selects the most task-relevant visual tokens from them at each step, while Cross-Step Fixation Reuse exploits the gradual shift of fixation to warm-start each step from the previous one. By dynamically adjusting which tokens are attended rather than evicting any from the cache, FastOCR avoids permanent information loss. Extensive experiments show that FastOCR serves as a plug-and-play acceleration module, generalizing consistently across five VLMs of varying sizes and architectures. On Qwen2.5-VL, FastOCR retains 98% of the unpruned model's accuracy while attending to only 5% of the visual tokens per decoding step, reducing attention latency by 3.0$\\times$.",
+        "identifiers": [
+          "SemanticScholar:57a35dea84bd85b8245d4a13b4010c4c013c0b80"
+        ],
+        "semantic_scholar_id": "57a35dea84bd85b8245d4a13b4010c4c013c0b80",
+        "canonical_id": "arXiv:2605.17447",
+        "arxiv_id": "2605.17447",
+        "doi": "10.48550/arXiv.2605.17447",
+        "authors": [
+          "Zi-Han Tang",
+          "Leqi Shen",
+          "Hui Chen",
+          "Ao Wang",
+          "Ben Wan",
+          "Yan Feng",
+          "Ke Zhang",
+          "Sicheng Zhao",
+          "Tongxuan Liu",
+          "Gui-Guang Ding"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 149,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.19726",
+      "identity_tokens": [
+        "id:DOI:10.1109/cvprf71909.2026.00278",
+        "id:SemanticScholar:672dfa32805ea52bedfee62d20e703f8316b4645",
+        "id:arXiv:2605.19726",
+        "title:efficient longcontext modeling in diffusion language models via block approximate sparse attention",
+        "url:https://arxiv.org/abs/2605.19726"
+      ],
+      "record": {
+        "title": "Efficient Long-Context Modeling in Diffusion Language Models via Block Approximate Sparse Attention",
+        "source_url": "https://arxiv.org/abs/2605.19726",
+        "year": 2026,
+        "published": "2026-05-19",
+        "venue": "2026 IEEE/CVF Conference on Computer Vision and Pattern Recognition- FINDINGS Track (CVPRF)",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Diffusion Language Models (DLMs) enable globally coherent, bidirectional, and controllable text generation, offering advantages over traditional autoregressive LLMs, while scaling to ultra-long sequences remains costly. Many existing block-sparse attention methods select blocks by fixed sampling patterns over the high-resolution attention space, e.g. tail-regions or anti-diagonal stripes. Such prior-driven sampling can miss salient tokens and introduce instability under distribution shifts. In this paper, we propose the Block Approximate Sparse Attention framework (BA-Att) with block-wise pre-downsampled operation, which identifies informative regions within a compact downsampled spaces, avoiding reliance on brittle positional priors. To analyze its theoretical behavior, we define an oracle postdownsample attention map and formalize the approximation error between pre- and post-downsample schemes. Based on this insight, we introduce a lightweight normsorting module and a covariance-compensated correction that approximates full covariance using diagonal QK variances, reducing large computational complexity. Extensive experiments show that our operator achieves up to 6.95× acceleration over FlashAttention in attention computation, and maintains near full-attention performance at 50% sparsity across language models, multi-modal language models, and video generation models, demonstrating strong efficiency and generalization.",
+        "identifiers": [
+          "SemanticScholar:672dfa32805ea52bedfee62d20e703f8316b4645"
+        ],
+        "semantic_scholar_id": "672dfa32805ea52bedfee62d20e703f8316b4645",
+        "canonical_id": "arXiv:2605.19726",
+        "arxiv_id": "2605.19726",
+        "doi": "10.1109/CVPRF71909.2026.00278",
+        "authors": [
+          "Wenhui Zhang",
+          "Yi-Ming Wu",
+          "Huan Wang",
+          "Yao Liu",
+          "Huanzhang Dou",
+          "Sen-Qiao Yang",
+          "Sitong Wu",
+          "Han Zhao",
+          "Jiaya Jia"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 147,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.24168",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2605.24168",
+        "id:SemanticScholar:7e60d4afb71abbd738c1d156fdf8a94ecca29469",
+        "id:arXiv:2605.24168",
+        "title:inference time context sparsity illusion or opportunity",
+        "url:https://arxiv.org/abs/2605.24168"
+      ],
+      "record": {
+        "title": "Inference Time Context Sparsity: Illusion or Opportunity?",
+        "source_url": "https://arxiv.org/abs/2605.24168",
+        "year": 2026,
+        "published": "2026-05-22",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Sparsity has long been a central theme in LLM efficiency, but its role in context processing remains unresolved. As LLM workloads shift toward longer contexts and agentic interactions, the compute and memory bottlenecks of attention become increasingly critical, raising the question of whether these constraints are fundamental. Our position is that these constraints are artificial and unnecessary, and that the future of LLM inference lies in extreme but principled sparsity along the context dimension. This position is supported by several strands of empirical and theoretical evidence. First, we find the insistence on dense attention unreasonable, since in a long context a query effectively projects O(N) attention information into a hidden space of dimension d<<N, making the process inherently lossy. Second, we perform an extensive study of sparsity in LLMs spanning 20 models across five model families, varying context lengths, and different sparsity levels. We empirically demonstrate a strong trend: current LLMs, despite not being trained for context sparsity, are remarkably robust to inference-time decode sparsity across tasks of varying complexity, including retrieval, multi-hop QA, mathematical reasoning, and agentic coding. Importantly, we also show that current hardware is already sufficient to realize substantial gains from this sparsity. For example, our sparse decode kernels accelerate large-context processing by up to 10x over FlashInfer at 50x sparsity levels on hardware such as the H100. Overall, these results position extreme context sparsity not as a heuristic, but as a principled foundation for LLM inference, training, and architecture design: one that is both feasible and beneficial, and a compelling direction for future systems.",
+        "identifiers": [
+          "SemanticScholar:7e60d4afb71abbd738c1d156fdf8a94ecca29469"
+        ],
+        "semantic_scholar_id": "7e60d4afb71abbd738c1d156fdf8a94ecca29469",
+        "canonical_id": "arXiv:2605.24168",
+        "arxiv_id": "2605.24168",
+        "doi": "10.48550/arXiv.2605.24168",
+        "authors": [
+          "Sahil Joshi",
+          "Prithvi Dixit",
+          "Agniva Chowdhury",
+          "Anshumali Shrivastava",
+          "Joseph E. Gonzalez",
+          "Ion Stoica",
+          "Kumar Krishna Agrawal",
+          "Aditya Desai"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 144,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.24697",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2605.24697",
+        "id:SemanticScholar:4cc9002801246ec09a9817525669d3385b9e8bc5",
+        "id:arXiv:2605.24697",
+        "title:the path matters learning a tokencommitment policy for diffusion language models",
+        "url:https://arxiv.org/abs/2605.24697"
+      ],
+      "record": {
+        "title": "The Path Matters: Learning a Token-Commitment Policy for Diffusion Language Models",
+        "source_url": "https://arxiv.org/abs/2605.24697",
+        "year": 2026,
+        "published": "2026-05-23",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Diffusion large language models promise faster generation by refining many token positions in parallel, but this parallelism introduces a hidden control problem: which proposed tokens should be transferred into the partially decoded sequence at each step? We refer to this decision as token commitment. Existing frozen-generator decoders largely rely on hand-designed confidence rules or block-specific acceptance filters. We argue that token commitment can instead be learned as a reusable trace-state policy. We introduce TraceLock, a lightweight plug-in controller that instantiates this policy for a frozen diffusion language model. Since oracle commitment times are unavailable, TraceLock derives self-supervision from future stability: at decoding step t, a proposed token for position i is labeled stable if it matches the final token at position i after the full decoding trace completes. The controller scores variable-length trace states and decides which active token proposals should be committed to the partially decoded sequence. Once trained for a given frozen backbone, the controller can be deployed across local-window widths, generation lengths, and step budgets without retraining or per-setting calibration. Experiments on question answering, mathematical reasoning, and code generation show that TraceLock improves the quality-step tradeoff over heuristic and learned baselines, with particularly stable behavior under cross-setting deployment. Diagnostic analyses show that its decisions are not reducible to scalar confidence, suggesting that frozen diffusion language models expose a learnable space of commitment trajectories beyond confidence-based decoding. Code is available at https://github.com/BobSun98/TraceLock.",
+        "identifiers": [
+          "SemanticScholar:4cc9002801246ec09a9817525669d3385b9e8bc5"
+        ],
+        "semantic_scholar_id": "4cc9002801246ec09a9817525669d3385b9e8bc5",
+        "canonical_id": "arXiv:2605.24697",
+        "arxiv_id": "2605.24697",
+        "doi": "10.48550/arXiv.2605.24697",
+        "authors": [
+          "Bo-Han Sun",
+          "Max Zhu",
+          "Francesco Caso",
+          "Jin-Dong Gu",
+          "Jun-Chi Yu",
+          "P. Torr",
+          "Pietro Liò",
+          "Jia-Lin Yu"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 143,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:1f9d531954bd3f744b1e492ee19c4dd04338602abbbce71afa33ec928b5c2868",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}
