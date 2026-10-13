@@ -1,0 +1,27 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261013-1930-scheduled-chat-30/r01/research-relevance-011",
+  "reference_main_sha": "df1e54299253121b022271294c687c1ffc4caa81",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2512.06688",
+      "identity_tokens": [
+        "id:arXiv:2512.06688",
+        "url:https://arxiv.org/abs/2512.06688"
+      ],
+      "title": "PersonaMem-v2: Towards Personalized Intelligence via Learning Implicit User Personas and Agentic Memory",
+      "reason": "一次要旨では、300超の状況における個人化対話から暗黙の好みを推定するベンチマークと、利用者ごとに可読な記憶を更新するエージェントを扱う。約3.2万トークンの会話履歴を約2千トークンの記憶に縮約して入力トークンを16分の1とし、個人化精度55%を報告する点は推論時の文脈節約に関係する。ただし主目的は個人化能力・記憶学習であり、KVキャッシュ、GPUメモリ、サービング性能を最適化するシステムの実測は要旨から確認できないため境界的とする。",
+      "source_url": "https://arxiv.org/abs/2512.06688",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T19:30:34+09:00",
+      "last_checked_at": "2026-10-13T19:30:34+09:00",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance",
+      "worklist_rank": 11
+    }
+  ]
+}
