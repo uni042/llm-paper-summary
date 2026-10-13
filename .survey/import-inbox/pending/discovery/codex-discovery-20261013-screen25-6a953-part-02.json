@@ -1,0 +1,466 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local",
+  "run_key": "codex-discovery-20261013-screen25-6a953-part-02",
+  "reference_main_sha": "6a953c40e1452388c9b56785da3a0c06091cf065",
+  "record_count": 20,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2605.23445",
+      "identity_tokens": [
+        "arXiv:2605.23445",
+        "SemanticScholar:ad4f21d1742560439337a40bedc9e799d0434487"
+      ],
+      "title": "DFSAttn: Dynamic Fine-grained Sparse Attention for Efficient Video Generation",
+      "reason": "DFSAttn uses Hilbert token reordering, hierarchical block scoring, and cached adaptive masks for GPU-efficient sparse attention; it reports up to 2.1x video-generation speedup.",
+      "source_url": "https://arxiv.org/abs/2605.23445",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T09:28:53Z",
+      "last_checked_at": "2026-10-13T09:28:53Z",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2306.14048-h2o.md",
+        "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md",
+        "papers/inference/13-sparse-attention/2024-2407.02490-minference.md",
+        "papers/inference/13-sparse-attention/2025-2502.20766-flexprefill-a-context-aware-sparse-attention-mechanism-for-efficient-long-context-inference.md",
+        "papers/inference/13-sparse-attention/2025-2503.16428-xattention-block-sparse-attention-with-antidiagonal-scoring.md",
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+      ],
+      "source_version": "current arXiv abstract-page version at retrieval; version history visible on page where available",
+      "abstract_evidence_excerpt": "Diffusion transformers have achieved remarkable success in high-quality video generation, yet their reliance on spatiotemporal 3D full attention incurs prohibitive computational cost due to the quadratic complexity of attention. Block sparse attention is a common approach to mitigate this by focusing computation on important regions. However, attention maps in DiTs exhibit inherently dynamic and fine-grained sparsity, which causes existing block sparse attention methods to degrade significantly in quality, especially at high sparsity ratios. In this paper, we revisit block sparse attention and derive a theoretical lower bound on attention recall to characterize the key factors governing its ",
+      "abstract_evidence_sha256": "988122ec761728b16ffb9f63979481a0b3cdac2b4fa0b53c86f7db32f8423979"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.22786",
+      "identity_tokens": [
+        "arXiv:2605.22786",
+        "SemanticScholar:8a01248caa80174984a6e123597143030286fef7"
+      ],
+      "title": "LCGuard: Latent Communication Guard for Safe KV Sharing in Multi-Agent Systems",
+      "reason": "LCGuard transforms shared KV representations to prevent sensitive-input reconstruction while preserving task quality; this is a security layer for efficient latent communication, but the abstract gives no memory, bandwidth, or latency gain.",
+      "source_url": "https://arxiv.org/abs/2605.22786",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T09:28:53Z",
+      "last_checked_at": "2026-10-13T09:28:53Z",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2025-2502.03805-criticalkv-optimizing-kv-cache-eviction-from-an-output-perturbation-perspective.md",
+        "papers/inference/07-kv-cache-optimization-compression/2025-2510.03215-cache-to-cache-direct-semantic-communication-between-large-language-mode.md",
+        "papers/inference/10-kv-cache-offload-recomputation/2026-2604.03143-tokendance-collective-kv-sharing-multi-agent.md",
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2507.07400-kvflow.md"
+      ],
+      "source_version": "current arXiv abstract-page version at retrieval; version history visible on page where available",
+      "abstract_evidence_excerpt": "Large language model (LLM)-based multi-agent systems increasingly rely on intermediate communication to coordinate complex tasks. While most existing systems communicate through natural language, recent work shows that latent communication, particularly through transformer key-value (KV) caches, can improve efficiency and preserve richer task-relevant information. However, KV caches also encode contextual inputs, intermediate reasoning states, and agent-specific information, creating an opaque channel through which sensitive content may propagate across agents without explicit textual disclosure. To address this, we introduce \\textbf{LCGuard} (Latent Communication Guard), a framework for saf",
+      "abstract_evidence_sha256": "ed381b328ac06db3e4dadaef060235e7877d097e3c44607158216914341a2dd0"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.15514",
+      "identity_tokens": [
+        "arXiv:2605.15514",
+        "SemanticScholar:ac4103c097e74e90c5a49266907229db5913069d"
+      ],
+      "title": "RoPE Distinguishes Neither Positions Nor Tokens in Long Contexts, Provably",
+      "reason": "The paper proves long-context RoPE failures and analyzes base scaling, informing positional-encoding design; it proposes no replacement mechanism or measured inference-efficiency improvement.",
+      "source_url": "https://arxiv.org/abs/2605.15514",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T09:28:53Z",
+      "last_checked_at": "2026-10-13T09:28:53Z",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md",
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+        "papers/inference/99-other-inference-systems/2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2023-2310.01889-ring-attention-blockwise-transformers.md",
+        "papers/inference/99-other-inference-systems/2024-2312.04455-fortify-the-shortest-stave-in-attention-enhancing-context-awareness-of-l.md"
+      ],
+      "source_version": "current arXiv abstract-page version at retrieval; version history visible on page where available",
+      "abstract_evidence_excerpt": "We identify intrinsic limitations of Rotary Positional Embeddings (RoPE) in Transformer-based long-context language models. Our theoretical analysis abstracts away from the specific content of the context and depends only on its length. We prove that as context length increases, RoPE-based attention becomes unpredictable and loses two properties that are central to its effectiveness. First, it loses its locality bias: RoPE is no more likely to favor nearer positions than substantially farther ones. Second, it loses consistency in token relevance: a key vector that receives a higher attention score than an alternative at one position may receive a lower score at another. In both cases, the pr",
+      "abstract_evidence_sha256": "e8a22dc6e0f2170859cf0a7e1085ddedbea73a91e630b08d16a4ba7b7910a1ef"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.15403",
+      "identity_tokens": [
+        "arXiv:2605.15403",
+        "SemanticScholar:fa2eeef744f3bae76a634eec0ff8e65db0faceae"
+      ],
+      "title": "ϕ-Balancing for Mixture-of-Experts Training",
+      "reason": "ϕ-balancing optimizes population-level expert utilization during MoE training; the abstract does not connect the method to inference routing or serving-time efficiency.",
+      "source_url": "https://arxiv.org/abs/2605.15403",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T09:28:53Z",
+      "last_checked_at": "2026-10-13T09:28:53Z",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2201.05596-deepspeed-moe-inference-compression.md",
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2202.09368-expert-choice-routing.md",
+        "papers/inference/02-adaptive-expert-computation-compression/2024-2406.13233-adamoe-token-adaptive-routing-with-null-experts-for-mixture-of-experts-language-.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md",
+        "papers/inference/12-moe-parallelism-communication/2021-2101.03961-switch-transformers-scaling-to-trillion-parameter-models-with-simple-and.md",
+        "papers/inference/99-other-inference-systems/2017-1701.06538-outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts.md",
+        "papers/inference/99-other-inference-systems/2024-2407.06204-a-survey-on-mixture-of-experts-in-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2024-2409.02060-olmoe-open-mixture-of-experts-language-models.md",
+        "papers/inference/99-other-inference-systems/unknown-7f27cb4187bc-harder-task-needs-more-experts-dynamic-routing-in-moe-models.md",
+        "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md"
+      ],
+      "source_version": "current arXiv abstract-page version at retrieval; version history visible on page where available",
+      "abstract_evidence_excerpt": "Mixture-of-Experts (MoE) models rely on balanced expert utilization to fully realize their scalability. However, existing load-balancing methods are largely heuristic and operate on noisy mini-batch assignment statistics, introducing bias relative to population-level objectives. We propose $\\phi$-balancing, a principled framework that directly targets population-level expert balance by minimizing a strictly convex, symmetric, and differentiable potential of the expected routing distribution. Using convex duality, we derive an equivalent min-max formulation and obtain a simple online algorithm via mirror descent, yielding an efficient EMA-based routing adjustment with negligible overhead. Acr",
+      "abstract_evidence_sha256": "c54793964a321ffb688ba3dab61d6b95898732ed0114c885d15af427529345db"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2605.13778",
+      "identity_tokens": [
+        "arXiv:2605.13778",
+        "SemanticScholar:3bbe15695a466fcb789a2492b63d2f86b407ca1a"
+      ],
+      "title": "Realtime-VLA FLASH: Speculative Inference Framework for Diffusion-based VLAs",
+      "reason": "Realtime-VLA FLASH uses a lightweight draft and parallel Action Expert verification to avoid full diffusion-VLA calls during replanning; it cuts average action-inference latency to 19.1 ms (3.04x speedup).",
+      "source_url": "https://arxiv.org/abs/2605.13778",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T09:28:53Z",
+      "last_checked_at": "2026-10-13T09:28:53Z",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2024-2401.15077-eagle-feature-speculative-sampling.md",
+        "papers/inference/05-speculative-decoding-moe/2024-2406.16858-eagle-2.md",
+        "papers/inference/05-speculative-decoding-moe/2025-2503.01840-eagle-3.md",
+        "papers/inference/15-inference-simulation-emulation/2024-2409.12514-tinyvla-towards-fast-data-efficient-vision-language-action-models-for-ro.md"
+      ],
+      "source_version": "current arXiv abstract-page version at retrieval; version history visible on page where available",
+      "abstract_evidence_excerpt": "Diffusion-based vision-language-action models (dVLAs) are promising for embodied intelligence but are fundamentally limited in real-time deployment by the high latency of full inference. We propose Realtime-VLA FLASH, a speculative inference framework that eliminates most full inference calls during replanning by introducing a lightweight draft model with parallel verification via the main model's Action Expert and a phase-aware fallback mechanism that reverts to the full inference pipeline when needed. This design enables low-latency, high-frequency replanning without sacrificing reliability. Experiments show that on LIBERO, FLASH largely preserves task performance by replacing many 58.0 ms",
+      "abstract_evidence_sha256": "52a873fa6400514f236c8dc0a90bdbb63ab10fa2b32c97a9fffc34303e5c246a"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2605.13810",
+      "identity_tokens": [
+        "arXiv:2605.13810",
+        "SemanticScholar:ae7363cf12e4d8e60cad10349a938e4c5a00af6e"
+      ],
+      "title": "Provable Quantization with Randomized Hadamard Transform",
+      "reason": "Dithered randomized Hadamard quantization gives near-optimal error bounds at O(d log d) instead of dense O(d²) rotation cost; the abstract names KV-cache compression as an application.",
+      "source_url": "https://arxiv.org/abs/2605.13810",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T09:28:53Z",
+      "last_checked_at": "2026-10-13T09:28:53Z",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2025-2504.19874-turboquant-online-vector-quantization-with-near-optimal-distortion-rate.md",
+        "papers/inference/99-other-inference-systems/2024-2402.04396-quip-even-better-llm-quantization-with-hadamard-incoherence-and-lattice-.md",
+        "papers/inference/99-other-inference-systems/2024-2404.00456-quarot-outlier-free-4-bit-inference-in-rotated-llms.md"
+      ],
+      "source_version": "current arXiv abstract-page version at retrieval; version history visible on page where available",
+      "abstract_evidence_excerpt": "Vector quantization via random projection followed by scalar quantization is a fundamental primitive in machine learning, with applications ranging from similarity search to federated learning and KV cache compression. While dense random rotations yield clean theoretical guarantees, they require $\\Theta(d^2)$ time. The randomized Hadamard transform $HD$ reduces this cost to $O(d \\log d)$, but its discrete structure complicates analysis and leads to weaker or purely empirical compression guarantees. In this work, we study a variant of this approach: dithered quantization with a single randomized Hadamard transform. Specifically, the quantizer applies $HD$ to the input vector and subtracts a r",
+      "abstract_evidence_sha256": "24aa8d01d64558d11de2c8fcb8a17de62684f2dff70c07e50542787a6d9bd3f6"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2605.11864",
+      "identity_tokens": [
+        "arXiv:2605.11864",
+        "SemanticScholar:2afc7217f31582349f3ade80112bcdce146cfb39"
+      ],
+      "title": "Very Efficient Listwise Multimodal Reranking for Long Documents",
+      "reason": "ZipRerank shortens visual input and scores candidates in one forward pass instead of autoregressive reranking; this directly lowers multimodal LLM reranking latency for long-document retrieval.",
+      "source_url": "https://arxiv.org/abs/2605.11864",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T09:28:53Z",
+      "last_checked_at": "2026-10-13T09:28:53Z",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2306.14048-h2o.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2404.14469-snapkv.md",
+        "papers/inference/13-sparse-attention/2024-2406.10774-quest.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md",
+        "papers/inference/99-other-inference-systems/2024-2407.12820-pqcache-product-quantization-based-kvcache-for-long-context-llm-inferenc.md",
+        "papers/inference/99-other-inference-systems/2024-2410.04417-sparsevlm-visual-token-sparsification-for-efficient-vision-language-mode.md"
+      ],
+      "source_version": "current arXiv abstract-page version at retrieval; version history visible on page where available",
+      "abstract_evidence_excerpt": "Listwise reranking is a key yet computationally expensive component in vision-centric retrieval and multimodal retrieval-augmented generation (M-RAG) over long documents. While recent VLM-based rerankers achieve strong accuracy, their practicality is often limited by long visual-token sequences and multi-step autoregressive decoding. We propose ZipRerank, a highly efficient listwise multimodal reranker that directly addresses both bottlenecks. It reduces input length via a lightweight query-image early interaction mechanism and eliminates autoregressive decoding by scoring all candidates in a single forward pass. To enable effective learning, ZipRerank adopts a two-stage training strategy: (",
+      "abstract_evidence_sha256": "94674cb402ae8f9e6b37f2ab186e7c6f12f3a652aafccd36a0c5ed38154235b5"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2605.07933",
+      "identity_tokens": [
+        "arXiv:2605.07933",
+        "SemanticScholar:534fd89fa1c5cf1a0f4b94670c19b32dd7d5319b"
+      ],
+      "title": "How to Train Your Latent Diffusion Language Model Jointly With the Latent Space",
+      "reason": "LDLM jointly learns a latent space for parallel denoising of whole text sequences; its 2–13x faster generation makes it a concrete alternative inference architecture for language generation.",
+      "source_url": "https://arxiv.org/abs/2605.07933",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T09:28:53Z",
+      "last_checked_at": "2026-10-13T09:28:53Z",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2025-2505.22618-fast-dllm-kv-cache-parallel-decoding.md"
+      ],
+      "source_version": "current arXiv abstract-page version at retrieval; version history visible on page where available",
+      "abstract_evidence_excerpt": "Latent diffusion models offer an attractive alternative to discrete diffusion for non-autoregressive text generation by operating on continuous text representations and denoising entire sequences in parallel. The major challenge in latent diffusion modeling is constructing a suitable latent space. In this work, we present the Latent Diffusion Language Model (LDLM), in which the latent encoder, diffusion model, and decoder are trained jointly. LDLM builds its latent space by reshaping the representations of a pre-trained language model with a trainable encoder, yielding latents that are easy to both denoise and decode into tokens. We show that naive joint training produces a low-quality diffu",
+      "abstract_evidence_sha256": "b8c16ac09bd8a9b257e4222479b89765f7a4b7b3a911369e29bcfb0dba477345"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1016/j.eswa.2025.130991",
+      "identity_tokens": [
+        "DOI:10.1016/j.eswa.2025.130991",
+        "SemanticScholar:6e0618b88d3545f5dc0574bc756f5d8d6500d820"
+      ],
+      "title": "CSLLM: Code-Specific Large Language Models - A Survey",
+      "reason": "The publisher abstract surveys code-model architectures, training, prompting, and evaluation; despite mentioning model complexity, it offers no specific inference/serving optimization mechanism.",
+      "source_url": "https://www.sciencedirect.com/science/article/abs/pii/S0957417425046068",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T09:28:53Z",
+      "last_checked_at": "2026-10-13T09:28:53Z",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-ad611bbc0cdc-characterizing-power-management-opportunities-for-llms-in-the-cloud.md",
+        "papers/survey/09-edge-llm/2025-2410.11845-edge-llm-review.md"
+      ],
+      "source_version": "publisher abstract (ScienceDirect; retrieved 2026-10-13)",
+      "abstract_evidence_excerpt": "Large Language Models (LLMs) have fundamentally changed code engineering by automating code generation, completion, debugging, and optimization. This literature review investigates code-specific LLM architectures, training paradigms, fine-tuning techniques, benchmark datasets, and evaluations; it synthesizes model accuracy and reliability and identifies computational complexity among open challenges.",
+      "abstract_evidence_sha256": "06c7b235d63e132749eaed9fba6054cf60b3559522800b4625917553cb5a6705"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1038/s42256-026-01232-w",
+      "identity_tokens": [
+        "DOI:10.1038/s42256-026-01232-w",
+        "SemanticScholar:2ac02b784d78ce62008982fedc6558c4e9853bed"
+      ],
+      "title": "Towards the explainability of protein language models",
+      "reason": "The Nature review organizes explainability methods for protein language models and protein research; its goal is interpretability, not LLM/VLM inference efficiency.",
+      "source_url": "https://www.nature.com/articles/s42256-026-01232-w",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T09:28:53Z",
+      "last_checked_at": "2026-10-13T09:28:53Z",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1905.09418-analyzing-multi-head-self-attention-specialized-heads-do-the-heavy-lifti.md"
+      ],
+      "source_version": "version of record published 2026-05-11",
+      "abstract_evidence_excerpt": "Artificial intelligence models are transforming protein research, but their underlying working principles remain unclear. Here we survey explainable AI methods for protein language models and organize them around training data, user-provided inputs, model architecture, and input–output relationships.",
+      "abstract_evidence_sha256": "574c8a7b8e5845dd6427083f753d2bb08dbc6306fc20e26ac7b7406925e4f656"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/TMC.2025.3636100",
+      "identity_tokens": [
+        "DOI:10.1109/TMC.2025.3636100",
+        "SemanticScholar:889d98b5a715d0b2ac1cf781832d4f5388ff3ebe"
+      ],
+      "title": "Fault-Tolerant Aware Task Offloading Based on Reinforcement Learning in Mobile Edge Computing",
+      "reason": "The paper schedules fault-tolerant tasks in generic mobile-edge computing using reinforcement learning; the abstract does not identify LLM inference or a language-model serving workload.",
+      "source_url": "https://arxiv.org/abs/10.1109/TMC.2025.3636100",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T09:28:53Z",
+      "last_checked_at": "2026-10-13T09:28:53Z",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2403.01876-dejavu-kv-cache-streaming-for-fast-fault-tolerant-generative-llm-serving.md"
+      ],
+      "source_version": "current arXiv abstract-page version at retrieval; version history visible on page where available",
+      "abstract_evidence_excerpt": "In recent years, Mobile Edge Computing (MEC) has been widely used for latency-sensitive tasks, but task scheduling in dynamic edge environments still faces two key challenges. First, edge devices are prone to failures, and existing fault-tolerance mechanisms lack task-aware modeling, making it hard to ensure timeliness and reliability under failures. Second, due to limited perception, high communication costs, and complex task structures, current scheduling strategies still struggle with adaptability and stability in dynamic systems. In this paper, we propose a Fault-Tolerant Discrete Soft Actor-Critic scheduling algorithm (FT-DSAC). Initially, we design a Primary-Backup-based Fault-Tolerant",
+      "abstract_evidence_sha256": "4cb47351c6651a3ae4d8773ce36a3ec34dc5c96db973dd67baabde271741cb3a"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2604.27151",
+      "identity_tokens": [
+        "arXiv:2604.27151",
+        "SemanticScholar:447343e3d9c7d3d02bc681f6dc50b6eb7bc5a66e"
+      ],
+      "title": "Step-level Optimization for Efficient Computer-use Agents",
+      "reason": "The event-driven cascade runs a small policy by default and escalates only when stuck/milestone monitors detect risk; this allocates fewer expensive multimodal-model calls in long GUI-agent tasks.",
+      "source_url": "https://arxiv.org/abs/2604.27151",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T09:28:53Z",
+      "last_checked_at": "2026-10-13T09:28:53Z",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md",
+        "papers/inference/99-other-inference-systems/2024-2404.14618-hybrid-llm-cost-efficient-and-quality-aware-query-routing.md"
+      ],
+      "source_version": "current arXiv abstract-page version at retrieval; version history visible on page where available",
+      "abstract_evidence_excerpt": "Computer-use agents provide a promising path toward general software automation because they can interact directly with arbitrary graphical user interfaces instead of relying on brittle, application-specific integrations. Despite recent advances in benchmark performance, strong computer-use agents remain expensive and slow in practice, since most systems invoke large multimodal models at nearly every interaction step. We argue that this uniform allocation of compute is fundamentally inefficient for long-horizon GUI tasks. Such trajectories are highly heterogeneous: many steps are routine and can be handled reliably by smaller, cheaper policies, while errors tend to concentrate at a relativel",
+      "abstract_evidence_sha256": "fa23fdbeb2bf4a5691263466533dfc342861429f1f4fd1ea0b92ba9f644d7595"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.25359",
+      "identity_tokens": [
+        "arXiv:2604.25359",
+        "SemanticScholar:86d913a5415328e8db4adf76009a441cda0cfb20"
+      ],
+      "title": "The Structured Output Benchmark: A Multi-Source Benchmark for Evaluating Structured Output Quality in Large Language Models",
+      "reason": "SOB measures structured-output correctness across text, image, and audio inputs; it is a quality benchmark and does not measure runtime or propose an efficiency method.",
+      "source_url": "https://arxiv.org/abs/2604.25359",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T09:28:53Z",
+      "last_checked_at": "2026-10-13T09:28:53Z",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md",
+        "papers/inference/99-other-inference-systems/2023-2307.09702-efficient-guided-generation-for-large-language-models.md"
+      ],
+      "source_version": "current arXiv abstract-page version at retrieval; version history visible on page where available",
+      "abstract_evidence_excerpt": "Large Language Models are increasingly being deployed to extract structured data from unstructured and semi-structured sources: parsing invoices, medical records, and converting PDF documents to database entries. Yet existing benchmarks for structured output generation either focus on schema compliance alone, or evaluate value correctness within a single source domain. We introduce SOB (The Structured Output Benchmark), a multi-source benchmark spanning three source modalities: native text, images, and audio conversations. All models receive a text-normalized representation of their context regardless of source modality; this deliberate design isolates structured-output capability from raw v",
+      "abstract_evidence_sha256": "aa7cad25ae8cba782d7c0e515046aefc3d80e2865f5619f3e290509ab3351452"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2604.20938",
+      "identity_tokens": [
+        "arXiv:2604.20938",
+        "SemanticScholar:4f7cb5d5bd23820f11a60275ddb2fb554b1e9ec1"
+      ],
+      "title": "HARBOR: Automated Harness Optimization",
+      "reason": "HARBOR applies cost-aware constrained Bayesian optimization to harness flags such as context compaction, tool caching, trajectory reuse, and speculative prediction; it directly searches agent-runtime configurations.",
+      "source_url": "https://arxiv.org/abs/2604.20938",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T09:28:53Z",
+      "last_checked_at": "2026-10-13T09:28:53Z",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2602.21477-pancake-hierarchical-agentic-memory.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2603.18897-paste-pattern-aware-speculative-tool-execution.md",
+        "papers/inference/99-other-inference-systems/2024-2404.14618-hybrid-llm-cost-efficient-and-quality-aware-query-routing.md"
+      ],
+      "source_version": "current arXiv abstract-page version at retrieval; version history visible on page where available",
+      "abstract_evidence_excerpt": "Long-horizon language-model agents are dominated, in lines of code and in operational complexity, not by their underlying model but by the harness that wraps it: context compaction, tool caching, semantic memory, trajectory reuse, speculative tool prediction, and the glue that binds the model to a sandboxed execution environment. We argue that harness design is a first-class machine-learning problem and that automated configuration search dominates manual stacking once the flag space exceeds a handful of bits. We defend this claim in two steps. First, we formalize automated harness optimization as constrained noisy Bayesian optimization over a mixed-variable, cost-heterogeneous configuration",
+      "abstract_evidence_sha256": "8850ea1bec214da8f6d3e990020d47acd5c8e2e49b7cc0be7c44d9482f3ee81e"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2604.13349",
+      "identity_tokens": [
+        "arXiv:2604.13349",
+        "SemanticScholar:1e7ae20af25c9992951223a15f71fb4ee18d339b"
+      ],
+      "title": "When Less Latent Leads to Better Relay: Information-Preserving Compression for Latent Multi-Agent LLM Collaboration",
+      "reason": "Orthogonal BackFill compresses inter-agent KV relays while restoring low-rank discarded information; it retains 9.9–20.2% of prompt KV and reports 4.7x lower bandwidth with limited latency overhead.",
+      "source_url": "https://arxiv.org/abs/2604.13349",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T09:28:53Z",
+      "last_checked_at": "2026-10-13T09:28:53Z",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2305.17118-scissorhands.md",
+        "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2401.18079-kvquant.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2407.15891-razorattention-efficient-kv-cache-compression-through-retrieval-heads.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2410.19258-not-all-heads-matter-a-head-level-kv-cache-compression-method-with-integ.md"
+      ],
+      "source_version": "current arXiv abstract-page version at retrieval; version history visible on page where available",
+      "abstract_evidence_excerpt": "Multi-agent LLM systems are moving beyond discrete-token messages toward richer relays that preserve internal state. Recent work such as LatentMAS transmits full key-value (KV) caches between agents but pays a high memory and communication cost. We adapt KV-cache eviction to this setting and introduce \\textbf{Orthogonal BackFill (OBF)}, which injects a low-rank residual from the discarded KV states back into the retained ones, orthogonal to what is already kept. With only $9.9\\%$-$20.2\\%$ of the prompt KV retained, compressed relay cuts bandwidth by $4.7\\times$ and GPU memory by $8\\%$ at under $5\\%$ wall-clock overhead, and stays close to full relay in accuracy across nine benchmarks, ahead ",
+      "abstract_evidence_sha256": "fa9ea470490b04b7c5689834a7b11c5123a29d389353684a91b8107bf311062d"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2604.10103",
+      "identity_tokens": [
+        "arXiv:2604.10103",
+        "SemanticScholar:5673c59aeb1290e05a788c865b611d20496ab95f"
+      ],
+      "title": "Long-Horizon Streaming Video Generation via Hybrid Attention with Decoupled Distillation",
+      "reason": "Hybrid Forcing combines compact linear temporal KV state with block-sparse local attention for streaming diffusion; it reports real-time 832x480 generation at 29.5 FPS on one H100.",
+      "source_url": "https://arxiv.org/abs/2604.10103",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T09:28:53Z",
+      "last_checked_at": "2026-10-13T09:28:53Z",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md",
+        "papers/inference/09-kernel-runtime-compilation/2024-2412.05496-flexattention-a-programming-model-for-generating-optimized-attention-kernels.md",
+        "papers/inference/13-sparse-attention/2025-2502.11089-native-sparse-attention-hardware-aligned-and-natively-trainable-sparse-a.md",
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md"
+      ],
+      "source_version": "current arXiv abstract-page version at retrieval; version history visible on page where available",
+      "abstract_evidence_excerpt": "Streaming video generation (SVG) distills a pretrained bidirectional video diffusion model into an autoregressive model equipped with sliding window attention (SWA). However, SWA inevitably loses distant history during long video generation, and its computational overhead remains a critical challenge to real-time deployment. In this work, we propose Hybrid Forcing, which jointly optimizes temporal information retention and computational efficiency through a hybrid attention design. First, we introduce lightweight linear temporal attention to preserve long-range dependencies beyond the sliding window. In particular, we maintain a compact key-value state to incrementally absorb evicted tokens,",
+      "abstract_evidence_sha256": "cc0685605642842b2337239c21463199ac5e9c82622a452d29f746c6dcab68e4"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2604.02119",
+      "identity_tokens": [
+        "arXiv:2604.02119",
+        "SemanticScholar:41d7bdb65ba04a7327cb89f6c3a00f7424d2c34a"
+      ],
+      "title": "AA-SVD : Anchored and Adaptive SVD for Large Language Model Compression",
+      "reason": "AA-SVD uses anchored adaptive low-rank factorization to compress billion-parameter LLMs without retraining; the target is model storage/memory and practical inference deployment.",
+      "source_url": "https://arxiv.org/abs/2604.02119",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T09:28:53Z",
+      "last_checked_at": "2026-10-13T09:28:53Z",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md",
+        "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md",
+        "papers/inference/16-weight-quantization-compression/2023-2306.00978-awq.md",
+        "papers/inference/16-weight-quantization-compression/2024-2401.15024-slicegpt-compress-large-language-models-by-deleting-rows-and-columns.md",
+        "papers/inference/99-other-inference-systems/2023-2301.00774-sparsegpt-massive-language-models-can-be-accurately-pruned-in-one-shot.md",
+        "papers/inference/99-other-inference-systems/2023-2305.11627-llm-pruner-on-the-structural-pruning-of-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2023-2306.11695-a-simple-and-effective-pruning-approach-for-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2023-2312.05821-asvd-activation-aware-singular-value-decomposition-for-compressing-large.md",
+        "papers/inference/99-other-inference-systems/2024-2403.03853-shortgpt-layers-in-large-language-models-are-more-redundant-than-you-exp.md"
+      ],
+      "source_version": "current arXiv abstract-page version at retrieval; version history visible on page where available",
+      "abstract_evidence_excerpt": "We introduce a fast low-rank factorization-based framework for compressing large language models that enables rapid compression of billion-parameter models without retraining. Unlike existing factorization-based approaches that optimize only on the original inputs, ignoring distribution shifts from upstream compression and thus propagating errors forward, or those that rely only on shifted inputs and risk drifting away from the original outputs, our approach accounts for both. Beyond individual layer compression, we further refine each transformer block end-to-end, minimizing block-level output distortion and allowing compressed layers to jointly compensate for accumulated errors. By anchori",
+      "abstract_evidence_sha256": "50fb285199a2a1e809a18c45f600be115036e7b57a6da5c0e9b24025ede37235"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1007/s11831-026-10546-2",
+      "identity_tokens": [
+        "DOI:10.1007/s11831-026-10546-2",
+        "SemanticScholar:aa3a63a6e320f47e9c68bf234bbfcd1dd065a42b"
+      ],
+      "title": "Green Artificial Intelligence: A Comprehensive Review of Metrics, Tools, Challenges, Trends, and Future Prospects",
+      "reason": "The Springer review covers low-power hardware, compression, edge computing, and energy metrics, but it is a broad synthesis rather than a concrete LLM-serving or runtime mechanism.",
+      "source_url": "https://link.springer.com/article/10.1007/s11831-026-10546-2",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T09:28:53Z",
+      "last_checked_at": "2026-10-13T09:28:53Z",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2408.05235-slo-aware-gpu-frequency-scaling-for-energy-efficient-llm-inference-serving.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-778bb2a31fb4-throttll-em-predictive-gpu-throttling-for-energy-efficient-llm-inference.md",
+        "papers/inference/99-other-inference-systems/2023-2301.00774-sparsegpt-massive-language-models-can-be-accurately-pruned-in-one-shot.md",
+        "papers/inference/99-other-inference-systems/2025-2504.17674-energy-considerations-of-large-language-model-inference-and-efficiency-o.md"
+      ],
+      "source_version": "version of record published 2026-04-01",
+      "abstract_evidence_excerpt": "Green Artificial Intelligence (Green AI), as a new generation of intelligent technologies, aims to reduce energy consumption and optimize computational efficiency, opening new horizons in the development of algorithms, hardware, and machine learning-based infrastructures. This review article, with a focus on technological innovations in this field, examines advanced solutions in the design of low-power architectures, model compression algorithms, utilization of specialized hardware such as TPUs and Spiking Neural Networks (SNNs), and the application of edge computing to lower energy costs and enhance efficiency. Moreover, intelligent tools for evaluating energy consumption, carbon footprint,",
+      "abstract_evidence_sha256": "799a2633748c955362f1083c498c9e438b490444bb8d6d99dbae4c04f13788e0"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2603.28565",
+      "identity_tokens": [
+        "arXiv:2603.28565",
+        "SemanticScholar:36122ae2c1ca79130cfbeac191ba14d8d6a89ced"
+      ],
+      "title": "StreamingVLA: Streaming Vision-Language-Action Model with Action Flow Matching and Adaptive Early Observation",
+      "reason": "StreamingVLA overlaps observation, action generation, and execution with action-flow matching and saliency-aware early observation; it reports 2.4x latency speedup and 6.5x fewer execution halts on edge VLA use.",
+      "source_url": "https://arxiv.org/abs/2603.28565",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T09:28:53Z",
+      "last_checked_at": "2026-10-13T09:28:53Z",
+      "linked_from": [
+        "papers/inference/15-inference-simulation-emulation/2024-2409.12514-tinyvla-towards-fast-data-efficient-vision-language-action-models-for-ro.md"
+      ],
+      "source_version": "current arXiv abstract-page version at retrieval; version history visible on page where available",
+      "abstract_evidence_excerpt": "Vision-language-action (VLA) models have demonstrated exceptional performance in natural language-driven perception and control. However, the high computational cost of VLA models poses significant efficiency challenges, particularly for resource-constrained edge platforms in real-world deployments. However, since different stages of VLA (observation, action generation and execution) must proceed sequentially, and wait for the completion of the preceding stage, the system suffers from frequent halting and high latency. To address this, We conduct a systematic analysis to identify the challenges for fast and fluent generation, and propose enabling VLAs with the ability to asynchronously paral",
+      "abstract_evidence_sha256": "8cb3e475d7fd648f550dc9d4de9f2208d4b521c10e15944643255f08f176839f"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2603.25053",
+      "identity_tokens": [
+        "arXiv:2603.25053",
+        "SemanticScholar:0d4ff71629698943892251c008807f75848f386a"
+      ],
+      "title": "GaussFusion: Improving 3D Reconstruction in the Wild with A Geometry-Informed Video Generator",
+      "reason": "GaussFusion includes a real-time 15-FPS variant of geometry-informed video generation for 3D reconstruction; this is a concrete generative-runtime performance result, though its application is specialized vision.",
+      "source_url": "https://arxiv.org/abs/2603.25053",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T09:28:53Z",
+      "last_checked_at": "2026-10-13T09:28:53Z",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2207.00032-deepspeed-inference-enabling-efficient-inference-of-transformer-models-at-unprecedented-scale.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+      ],
+      "source_version": "current arXiv abstract-page version at retrieval; version history visible on page where available",
+      "abstract_evidence_excerpt": "We present GaussFusion, a novel approach for improving 3D Gaussian splatting (3DGS) reconstructions in the wild through geometry-informed video generation. GaussFusion mitigates common 3DGS artifacts, including floaters, flickering, and blur caused by camera pose errors, incomplete coverage, and noisy geometry initialization. Unlike prior RGB-based approaches limited to a single reconstruction pipeline, our method introduces a geometry-informed video-to-video generator that refines 3DGS renderings across both optimization-based and feed-forward methods. Given an existing reconstruction, we render a Gaussian primitive video buffer encoding depth, normals, opacity, and covariance, which the ge",
+      "abstract_evidence_sha256": "aa4b9d4547189d9ac49c0251dcb3972cdb392a5dda10afc5ba83c13e8ba5ce7d"
+    }
+  ]
+}
