@@ -1,0 +1,1069 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-a0753aaad4af0f7f-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-a0753aaad4af",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "DOI:10.1109/access.2026.3664226",
+    "arXiv:2402.05948",
+    "arXiv:2505.07861",
+    "arXiv:2505.15774",
+    "arXiv:2507.06087",
+    "arXiv:2508.08531",
+    "arXiv:2509.05276",
+    "arXiv:2510.17196",
+    "arXiv:2510.18863",
+    "arXiv:2510.24606",
+    "arXiv:2511.05534"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 11,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "76164f40c1669927e2239432f91c2af882c738c5",
+  "raw_search_result_count": 11,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 11,
+  "provider_progress": {
+    "requested_count": 11,
+    "status_counts": {
+      "allowed": 11,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-13T23:47:14.412394+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "DOI:10.1109/access.2026.3664226",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2402.05948",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2505.07861",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2505.15774",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2507.06087",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2508.08531",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2509.05276",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2510.17196",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2510.18863",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2510.24606",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2511.05534",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Minimizing Response Latency in LLM-Based Agent Systems: A Comprehensive Survey",
+      "source_url": "https://doi.org/10.1109/ACCESS.2026.3664226",
+      "year": 2026,
+      "published": null,
+      "venue": "IEEE Access",
+      "citation_count": 7,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The advent of Large Language Model (LLM)-based agent systems represents a significant paradigm shift in Artificial Intelligence, enabling unprecedented capabilities in autonomous reasoning, planning, and interaction. However, the transformative potential of these agents is fundamentally constrained by a critical operational challenge: high response latency. This latency, which impairs usability, restricts real-time applicability, and challenges economic viability, is a paramount barrier to their widespread adoption in complex, real-world scenarios. This survey provides a comprehensive and structured analysis of the multifaceted latency problem in LLM-based agent systems. We present a structured taxonomy that deconstructs end-to-end latency into its constituent sources, offering a holistic view of the entire agent stack. Our review spans four primary layers of optimization: 1) Core LLM Inference, covering techniques to accelerate the foundational model, including quantization, pruning, efficient attention mechanisms, and speculative decoding; 2) Agent-Level Frameworks, detailing strategies to refine the agent’s cognitive loop, such as accelerating planning cycles, optimizing tool use, and implementing latency-aware memory management; 3) System-Level and Infrastructure, encompassing optimizations for the underlying deployment environment, including advanced serving systems, hardware acceleration, dynamic resource allocation, and distributed architectures; and 4) Multi-Agent Systems, addressing specialized methods for mitigating communication and coordination overhead in collaborative agent ensembles. We identify key unresolved challenges and outline promising future research directions—including hardware-software co-design, novel agent architectures, and AI-driven system orchestration—to guide the ongoing quest for ultra-low latency intelligent systems.",
+      "identifiers": [
+        "SemanticScholar:d711897c1a52fe18534804322b5f87a9c35e4a66"
+      ],
+      "semantic_scholar_id": "d711897c1a52fe18534804322b5f87a9c35e4a66",
+      "doi": "10.1109/ACCESS.2026.3664226",
+      "canonical_id": "DOI:10.1109/ACCESS.2026.3664226",
+      "authors": [
+        "G. Park",
+        "Seonghyeon Lee",
+        "Yeonsu Park"
+      ],
+      "priority": 7,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 7,
+        "citation_count": 7,
+        "total": 7,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 104,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "DE3-BERT: Distance-Enhanced Early Exiting for BERT based on Prototypical Networks",
+      "source_url": "https://arxiv.org/abs/2402.05948",
+      "year": 2024,
+      "published": "2024-02-03",
+      "venue": "arXiv.org",
+      "citation_count": 7,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Early exiting has demonstrated its effectiveness in accelerating the inference of pre-trained language models like BERT by dynamically adjusting the number of layers executed. However, most existing early exiting methods only consider local information from an individual test sample to determine their exiting indicators, failing to leverage the global information offered by sample population. This leads to suboptimal estimation of prediction correctness, resulting in erroneous exiting decisions. To bridge the gap, we explore the necessity of effectively combining both local and global information to ensure reliable early exiting during inference. Purposefully, we leverage prototypical networks to learn class prototypes and devise a distance metric between samples and class prototypes. This enables us to utilize global information for estimating the correctness of early predictions. On this basis, we propose a novel Distance-Enhanced Early Exiting framework for BERT (DE$^3$-BERT). DE$^3$-BERT implements a hybrid exiting strategy that supplements classic entropy-based local information with distance-based global information to enhance the estimation of prediction correctness for more reliable early exiting decisions. Extensive experiments on the GLUE benchmark demonstrate that DE$^3$-BERT consistently outperforms state-of-the-art models under different speed-up ratios with minimal storage or computational overhead, yielding a better trade-off between model performance and inference efficiency. Additionally, an in-depth analysis further validates the generality and interpretability of our method.",
+      "identifiers": [
+        "SemanticScholar:753ef415e825c8b5752cd3502280ae8276ef0225"
+      ],
+      "semantic_scholar_id": "753ef415e825c8b5752cd3502280ae8276ef0225",
+      "canonical_id": "arXiv:2402.05948",
+      "arxiv_id": "2402.05948",
+      "doi": "10.48550/arXiv.2402.05948",
+      "authors": [
+        "Jia-Ning He",
+        "Qi Zhang",
+        "Weiping Ding",
+        "Duoqian Miao",
+        "Jun Zhao",
+        "Liang Hu",
+        "Long-Bing Cao"
+      ],
+      "priority": 7,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 7,
+        "citation_count": 7,
+        "total": 7,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 983,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Scalable LLM Reasoning Acceleration with Low-rank Distillation",
+      "source_url": "https://arxiv.org/abs/2505.07861",
+      "year": 2025,
+      "published": "2025-05-08",
+      "venue": null,
+      "citation_count": 7,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Due to long generations, large language model (LLM) math reasoning demands significant computational resources and time. While many existing efficient inference methods have been developed with excellent performance preservation on language tasks, they often severely degrade math performance. In this paper, we propose Caprese, a resource-efficient distillation method to recover lost capabilities from deploying efficient inference methods, focused primarily in feedforward blocks. With original weights unperturbed, roughly 1% of additional parameters, and only 20K synthetic training samples, we are able to recover much if not all of the reasoning capabilities lost from efficient inference for thinking LLMs and without harm to language tasks for instruct LLMs. Moreover, Caprese slashes the number of active parameters (~2B cut for Gemma 2 9B and Llama 3.1 8B) and integrates cleanly into existing model layers to reduce latency (>16% time-to-next-token reduction) while encouraging response brevity (up to 8.5% fewer tokens).",
+      "identifiers": [
+        "SemanticScholar:3404a22197e1ca5c502f2caf95d74c4c7dad3e5a"
+      ],
+      "semantic_scholar_id": "3404a22197e1ca5c502f2caf95d74c4c7dad3e5a",
+      "canonical_id": "arXiv:2505.07861",
+      "arxiv_id": "2505.07861",
+      "authors": [
+        "Harry Dong",
+        "Bilge Acun",
+        "Beidi Chen",
+        "Yuejie Chi"
+      ],
+      "priority": 7,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 7,
+        "citation_count": 7,
+        "total": 7,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 523,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Beyond Hard and Soft: Hybrid Context Compression for Balancing Local and Global Information Retention",
+      "source_url": "https://arxiv.org/abs/2505.15774",
+      "year": 2025,
+      "published": "2025-05-21",
+      "venue": "arXiv.org",
+      "citation_count": 7,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Models (LLMs) encounter significant challenges in long-sequence inference due to computational inefficiency and redundant processing, driving interest in context compression techniques. Existing methods often rely on token importance to perform hard local compression or encode context into latent representations for soft global compression. However, the uneven distribution of textual content relevance and the diversity of demands for user instructions mean these approaches frequently lead to the loss of potentially valuable information. To address this, we propose $\\textbf{Hy}$brid $\\textbf{Co}$ntext $\\textbf{Co}$mpression (HyCo$_2$) for LLMs, which integrates both global and local perspectives to guide context compression while retaining both the essential semantics and critical details for task completion. Specifically, we employ a hybrid adapter to refine global semantics with the global view, based on the observation that different adapters excel at different tasks. Then we incorporate a classification layer that assigns a retention probability to each context token based on the local view, determining whether it should be retained or discarded. To foster a balanced integration of global and local compression, we introduce auxiliary paraphrasing and completion pretraining before instruction tuning. This promotes a synergistic integration that emphasizes instruction-relevant information while preserving essential local details, ultimately balancing local and global information retention in context compression. Experiments show that our HyCo$_2$ method significantly enhances long-text reasoning while reducing token usage. It improves the performance of various LLM series by an average of 13.1\\% across seven knowledge-intensive QA benchmarks. Moreover, HyCo$_2$ matches the performance of uncompressed methods while reducing token consumption by 88.8\\%.",
+      "identifiers": [
+        "SemanticScholar:a897c1f5f14a610d23aa316a8b99559c5ec0c03b"
+      ],
+      "semantic_scholar_id": "a897c1f5f14a610d23aa316a8b99559c5ec0c03b",
+      "canonical_id": "arXiv:2505.15774",
+      "arxiv_id": "2505.15774",
+      "doi": "10.48550/arXiv.2505.15774",
+      "authors": [
+        "Huanxuan Liao",
+        "Wenji Hu",
+        "Yao Xu",
+        "Shi-Zhu He",
+        "Jun Zhao",
+        "Kang Liu"
+      ],
+      "priority": 7,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 7,
+        "citation_count": 7,
+        "total": 7,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 510,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "CoRE: Enhancing Metacognition with Label-free Self-evaluation in LRMs",
+      "source_url": "https://arxiv.org/abs/2507.06087",
+      "year": 2025,
+      "published": "2025-07-08",
+      "venue": "arXiv.org",
+      "citation_count": 7,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large reasoning models (LRMs) have demonstrated impressive capabilities in domains like mathematics and program synthesis. Despite their strong performance, LRMs often exhibit overthinking -- excessive and redundant reasoning steps that introduce inefficiencies during inference. This phenomenon raises an important question for LRM self-evaluation: How can a model autonomously assess the correctness of its own reasoning trajectory without external labels? To address this, we propose Chain-of-Reasoning Embedding (CoRE), a series of hidden states in latent space to enable label-free self-evaluation on intermediate reasoning steps of LRMs, so as to enhance metacognition abilities for improved reasoning efficiency. By analyzing the geometric properties of the CoRE trajectories, we reveal that redundant reasoning usually presents cyclical fluctuations, which correspond to repetitive and unconscious reflection/exploration. Leveraging this insight, we further introduce a training-free, label-free self-evaluation framework, CoRE-Eval, to detect such patterns and dynamically determine whether to terminate reasoning early. Extensive experiments on mathematical reasoning benchmarks (GSM8K, MATH-500, and AIME) and across model sizes from 7B to 32B demonstrate that CoRE-Eval reduces chain-of-thought length by 13.7% to 33.2% while improving answer accuracy by around 10%, achieving 70.0% accuracy on the challenging AIME benchmark with the 32B model.",
+      "identifiers": [
+        "SemanticScholar:a0d0fad4ddda6d83444205dfee44bb25de31ac2c"
+      ],
+      "semantic_scholar_id": "a0d0fad4ddda6d83444205dfee44bb25de31ac2c",
+      "canonical_id": "arXiv:2507.06087",
+      "arxiv_id": "2507.06087",
+      "doi": "10.48550/arXiv.2507.06087",
+      "authors": [
+        "Haoxi Li",
+        "Sikai Bai",
+        "Jie M. Zhang",
+        "Song Guo"
+      ],
+      "priority": 7,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 7,
+        "citation_count": 7,
+        "total": 7,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 462,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Profiling Large Language Model Inference on Apple Silicon: A Quantization Perspective",
+      "source_url": "https://arxiv.org/abs/2508.08531",
+      "year": 2025,
+      "published": "2025-08-12",
+      "venue": "arXiv.org",
+      "citation_count": 7,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "A systematic understanding of Apple Silicon is lacking in the current landscape of hardware efficiency; research focus is largely centered on accelerating GPUs for large-scale training or inference on CUDA devices. This paper investigates Apple Silicon's unique memory architecture that offers a unified memory integrating CPU and GPU memory and its implications for on-device LLM inference. We decipher myths about whether Apple Silicon is efficient for on-device inference compared to competitors such as NVIDIA GPUs by directly conducting latency and throughput comparison benchmarks. We explain the performance gap between them through profiling low level hardware metrics - ALU utilization, memory bandwidth, buffer usage, cache residency etc. at runtime. We draw several insights regarding performance bottlenecks such as dequantization overhead, compute throughput and memory bandwidth. We debunk existing false claims regarding large language model inference such as compressing models to lower bit precision is a defacto promise for faster inference across all hardware platforms. We find that the large unified memory enables Apple Silicon to be both cost effective and efficient against NVIDIA GPUs for ultra large language models. Our large scale evaluation on 5 hardware testbeds incorporating three Apple M-series devices: M2 Ultra, M2 Max and M4 Pro and two NVIDIA GPUs: NVIDIA RTX A6000, a multi GPU setup with 2xNVIDIA RTX A6000, 5 model scales ranging from 8B to 405B parameters and 14 quantization schemes gives an understanding of how Apple Silicon fits within the paradigm of on-device LLM inference. Our analysis reveals multiple resource interdependencies and unexpected findings, while also quantifying established insights. To the best of our knowledge, this study makes the first attempt to present a thorough characterization and analysis of Apple Silicon for on-device inference.",
+      "identifiers": [
+        "SemanticScholar:70662b4a4a5f239f17ec2414944bf2e46eb62dfc"
+      ],
+      "semantic_scholar_id": "70662b4a4a5f239f17ec2414944bf2e46eb62dfc",
+      "canonical_id": "arXiv:2508.08531",
+      "arxiv_id": "2508.08531",
+      "doi": "10.48550/arXiv.2508.08531",
+      "authors": [
+        "A. Benazir",
+        "F. Lin"
+      ],
+      "priority": 7,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 7,
+        "citation_count": 7,
+        "total": 7,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 427,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "SpikingBrain: Spiking Brain-inspired Large Models",
+      "source_url": "https://arxiv.org/abs/2509.05276",
+      "year": 2025,
+      "published": "2025-09-05",
+      "venue": "Trans. Mach. Learn. Res.",
+      "citation_count": 7,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Mainstream Transformer-based large language models face major efficiency bottlenecks: training computation scales quadratically with sequence length, and inference memory grows linearly, limiting long-context processing. Building large models on non-NVIDIA platforms also poses challenges for stable and efficient training. To address this, we introduce SpikingBrain, a family of brain-inspired models designed for efficient long-context training and inference. SpikingBrain leverages the MetaX GPU cluster and focuses on three aspects: (1) Model Architecture: linear and hybrid-linear attention architectures with adaptive spiking neurons; (2) Algorithmic Optimizations: an efficient, conversion-based training pipeline and a dedicated spike coding framework; (3) System Engineering: customized training frameworks, operator libraries, and parallelism strategies tailored to MetaX hardware. Using these techniques, we develop two models: SpikingBrain-7B, a linear LLM, and SpikingBrain-76B, a hybrid-linear MoE LLM. These models demonstrate the feasibility of large-scale LLM development on non-NVIDIA platforms, and training remains stable for weeks on hundreds of MetaX GPUs with Model FLOPs Utilization at expected levels. SpikingBrain achieves performance comparable to open-source Transformer baselines while using only about 150B tokens for continual pre-training. Our models also significantly improve long-context efficiency and deliver inference with (partially) constant memory and event-driven spiking behavior. For example, SpikingBrain-7B attains over 100x speedup in Time to First Token for 4M-token sequences. Furthermore, the proposed spiking scheme achieves 69.15 percent sparsity, enabling low-power operation. Overall, this work demonstrates the potential of brain-inspired mechanisms to drive the next generation of efficient and scalable large model design.",
+      "identifiers": [
+        "SemanticScholar:af02f432602bea410427399069ed8e7f5250c3e0"
+      ],
+      "semantic_scholar_id": "af02f432602bea410427399069ed8e7f5250c3e0",
+      "canonical_id": "arXiv:2509.05276",
+      "arxiv_id": "2509.05276",
+      "authors": [
+        "Yu-Qi Pan",
+        "Yu Feng",
+        "J. Zhuang",
+        "Siyuan Ding",
+        "Han Xu",
+        "Ze-Hao Liu",
+        "Bo-Han Sun",
+        "Yu-Hong Chou",
+        "Xue-Rui Qiu",
+        "A. Deng",
+        "Anjie Hu",
+        "Shu-Rong Wang",
+        "Peng Zhou",
+        "Man Yao",
+        "Ji-Bin Wu",
+        "Jian Yang",
+        "Bo-Xing Xu",
+        "Guo-Qi Li"
+      ],
+      "priority": 7,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 7,
+        "citation_count": 7,
+        "total": 7,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 403,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "EffiReasonTrans: RL-Optimized Reasoning for Code Translation",
+      "source_url": "https://arxiv.org/abs/2510.18863",
+      "year": 2025,
+      "published": "2025-10-21",
+      "venue": "IEEE Transactions on Software Engineering",
+      "citation_count": 7,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Code translation is a crucial task in software development and maintenance. While recent advancements in Large Language Models (LLMs) have improved automated code translation accuracy, these gains often come at the cost of increased inference latency—hindering real-world development workflows that involve human-in-the-loop inspection. To address this trade-off, we propose EffiReasonTrans, a training framework designed to improve translation accuracy while balancing inference latency. We first construct a high-quality reasoning-augmented dataset by prompting a stronger language model DeepSeek-R1 to generate intermediate reasoning and target translations. Each (source code, reasoning, target code) triplet undergoes automated syntax and functionality checks to ensure reliability. Based on this dataset, we employ a two-stage training strategy: supervised fine-tuning on reasoning-augmented samples, followed by reinforcement learning to further enhance accuracy, which also helps balance inference latency. We evaluate EffiReasonTrans on six translation pairs. Experimental results show that EffiReasonTrans consistently improves translation accuracy (up to +49.2% CA and +27.8% CodeBLEU compared to the base model), while reducing the number of generated tokens (up to -19.3%) and lowering inference latency in most cases (up to -29.0%). Ablation studies further confirm the complementary benefits of the two-stage training framework. Additionally, EffiReasonTrans shows improvements of translation accuracy when integrated into agent-based frameworks. Our code and data are available at https://github.com/DeepSoftwareAnalytics/EffiReasonTrans.",
+      "identifiers": [
+        "SemanticScholar:6aa8fbc88756c071cc35737aeb950efd093f52fe"
+      ],
+      "semantic_scholar_id": "6aa8fbc88756c071cc35737aeb950efd093f52fe",
+      "canonical_id": "arXiv:2510.18863",
+      "arxiv_id": "2510.18863",
+      "doi": "10.1109/TSE.2026.3693795",
+      "authors": [
+        "Yan-Lin Wang",
+        "Rongyi Ou",
+        "Yan-Lin Wang",
+        "Ming-Wei Liu",
+        "Jia-Chi Chen",
+        "En-Sheng Shi",
+        "Xi-Lin Liu",
+        "Yu-Chi Ma",
+        "Zi-Bin Zheng"
+      ],
+      "priority": 7,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 7,
+        "citation_count": 7,
+        "total": 7,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 357,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "FlowMM: Cross-Modal Information Flow Guided KV Cache Merging for Efficient Multimodal Context Inference",
+      "source_url": "https://arxiv.org/abs/2511.05534",
+      "year": 2025,
+      "published": "2025-10-29",
+      "venue": "arXiv.org",
+      "citation_count": 7,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Traditional KV cache eviction strategies, which discard less critical KV-pairs based on attention scores, often degrade generation quality, causing context loss or hallucinations. Recent efforts shift toward KV merging, merging eviction tokens with retention tokens based on similarity. However, in multimodal scenarios, distributional biases across modality tokens and attentional biases in cross-modal interactions limit its effectiveness. This work introduces FlowMM, an adaptive framework for cross-modal information flow-guided multimodal KV cache merging. FlowMM leverages cross-modal information flow to dynamically apply layer-specific merging strategies, capturing modality-specific patterns while preserving contextual integrity. Furthermore, we introduce a sensitivity-adaptive token matching mechanism that jointly evaluates token similarity and task-critical sensitivity, merging low-risk tokens while safeguarding high-sensitivity ones. Extensive experiments across diverse leading MLLMs show that FlowMM reduces KV cache memory by 80% to 95% and decoding latency by 1.3-1.8x, while maintaining competitive task performance.",
+      "identifiers": [
+        "SemanticScholar:48c22f941a2ce9ab305aa46910f166dc42f784c1"
+      ],
+      "semantic_scholar_id": "48c22f941a2ce9ab305aa46910f166dc42f784c1",
+      "canonical_id": "arXiv:2511.05534",
+      "arxiv_id": "2511.05534",
+      "doi": "10.48550/arXiv.2511.05534",
+      "authors": [
+        "Kun-Xi Li",
+        "Yufan Xiong",
+        "Zhong-Hua Jiang",
+        "Yi-Yun Zhou",
+        "Zhao-De Wang",
+        "Chengfei Lv",
+        "Shengyu Zhang"
+      ],
+      "priority": 7,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 7,
+        "citation_count": 7,
+        "total": 7,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 349,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Understanding and Improving Length Generalization in Hierarchical Sparse Attention Models",
+      "source_url": "https://arxiv.org/abs/2510.17196",
+      "year": 2025,
+      "published": "2025-10-20",
+      "venue": "arXiv.org",
+      "citation_count": 6,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Effectively processing long contexts is a critical challenge for language models. While standard Transformers are limited by quadratic complexity and poor length extrapolation, alternative architectures like sliding window attention and state space models sacrifice the ability to effectively utilize the full context due to their fixed-size memory. Chunk-based sparse attention has emerged as a promising paradigm for extreme length generalization, yet the key architectural principles underpinning its success are not yet fully understood. In this work, we present a systematic dissection of these models to identify the core components driving their performance. Through a unified framework and comprehensive ablation studies, we demonstrate that a combination of three design principles is critical: (1) an expressive, non-linear Chunk Encoder with a dedicated CLS token to produce representations for retrieval; (2) a Bypassing Residual Path to stably integrate retrieved global information without it being overridden by the local residual stream; and (3) enforced selection sparsity during pre-training to bridge the train-test distribution gap. We provide a theoretical motivation for intra-chunk information processing and landmark generation. By combining these principles, we establish a new state-of-the-art for training-free length extrapolation, successfully generalizing models trained on a 4K context to 32 million tokens on RULER and BABILong. Our findings provide a clear and empirically-grounded set of design principles for developing future, highly-capable long-context language models.",
+      "identifiers": [
+        "SemanticScholar:1facfefafcaa191129ba367ae245eb525420a9d5"
+      ],
+      "semantic_scholar_id": "1facfefafcaa191129ba367ae245eb525420a9d5",
+      "canonical_id": "arXiv:2510.17196",
+      "arxiv_id": "2510.17196",
+      "doi": "10.48550/arXiv.2510.17196",
+      "authors": [
+        "Jiaqi Leng",
+        "Xiang Hu",
+        "Junxiong Wang",
+        "Jianguo Li",
+        "Wei Wu",
+        "Yu-Cheng Lu"
+      ],
+      "priority": 6,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 6,
+        "citation_count": 6,
+        "total": 6,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 358,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Long-Context Modeling with Dynamic Hierarchical Sparse Attention for Memory-Constrained LLM Inference",
+      "source_url": "https://arxiv.org/abs/2510.24606",
+      "year": 2025,
+      "published": "2025-10-28",
+      "venue": null,
+      "citation_count": 6,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The quadratic cost of attention limits the scalability of long-context LLMs, especially under limited hardware memory budgets. While attention is often sparse, existing static sparse methods cannot adapt to task- or input-dependent variations, and recent dynamic approaches rely on predefined templates or heuristics that may sacrifice generality. We propose Dynamic Hierarchical Sparse Attention (DHSA), a data-driven framework that predicts attention sparsity online while keeping the LLM backbone frozen. DHSA performs hierarchical routing by estimating importance at the chunk level and propagating it to token-level interactions, preserving causally important dependencies while enabling efficient sparsification. Across Needle-in-a-Haystack test, LongBench and RULER, DHSA maintains near-dense accuracy in highly sparse regimes, achieving 12--20% relative accuracy gains over Block Sparse Attention at comparable prefill cost. With a memory-efficient tiled backend, DHSA delivers up to $10\\times$ prefill speedup at 128K context length. On LLaMA-3.1-8B (4-bit), DHSA scales to 100K context on a single 24GB GPU, where dense attention fails. We provide complementary GPU and CPU backends, enabling DHSA to run across diverse hardware environments and multiple open-weight model families. These results demonstrate DHSA as an efficient and adaptable solution for memory-constrained long-context LLM inference.",
+      "identifiers": [
+        "SemanticScholar:df7c39b6e45d5d5b5848462809ffb9c2de42750b"
+      ],
+      "semantic_scholar_id": "df7c39b6e45d5d5b5848462809ffb9c2de42750b",
+      "canonical_id": "arXiv:2510.24606",
+      "arxiv_id": "2510.24606",
+      "authors": [
+        "Siheng Xiong",
+        "Joe Zou",
+        "F. Fekri",
+        "Yae Jee Cho"
+      ],
+      "priority": 6,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 6,
+        "citation_count": 6,
+        "total": 6,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 350,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:DOI:10.1109/access.2026.3664226",
+      "identity_tokens": [
+        "id:DOI:10.1109/access.2026.3664226",
+        "id:SemanticScholar:d711897c1a52fe18534804322b5f87a9c35e4a66",
+        "title:minimizing response latency in llmbased agent systems a comprehensive survey",
+        "url:https://doi.org/10.1109/ACCESS.2026.3664226"
+      ],
+      "record": {
+        "title": "Minimizing Response Latency in LLM-Based Agent Systems: A Comprehensive Survey",
+        "source_url": "https://doi.org/10.1109/ACCESS.2026.3664226",
+        "year": 2026,
+        "published": null,
+        "venue": "IEEE Access",
+        "citation_count": 7,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The advent of Large Language Model (LLM)-based agent systems represents a significant paradigm shift in Artificial Intelligence, enabling unprecedented capabilities in autonomous reasoning, planning, and interaction. However, the transformative potential of these agents is fundamentally constrained by a critical operational challenge: high response latency. This latency, which impairs usability, restricts real-time applicability, and challenges economic viability, is a paramount barrier to their widespread adoption in complex, real-world scenarios. This survey provides a comprehensive and structured analysis of the multifaceted latency problem in LLM-based agent systems. We present a structured taxonomy that deconstructs end-to-end latency into its constituent sources, offering a holistic view of the entire agent stack. Our review spans four primary layers of optimization: 1) Core LLM Inference, covering techniques to accelerate the foundational model, including quantization, pruning, efficient attention mechanisms, and speculative decoding; 2) Agent-Level Frameworks, detailing strategies to refine the agent’s cognitive loop, such as accelerating planning cycles, optimizing tool use, and implementing latency-aware memory management; 3) System-Level and Infrastructure, encompassing optimizations for the underlying deployment environment, including advanced serving systems, hardware acceleration, dynamic resource allocation, and distributed architectures; and 4) Multi-Agent Systems, addressing specialized methods for mitigating communication and coordination overhead in collaborative agent ensembles. We identify key unresolved challenges and outline promising future research directions—including hardware-software co-design, novel agent architectures, and AI-driven system orchestration—to guide the ongoing quest for ultra-low latency intelligent systems.",
+        "identifiers": [
+          "SemanticScholar:d711897c1a52fe18534804322b5f87a9c35e4a66"
+        ],
+        "semantic_scholar_id": "d711897c1a52fe18534804322b5f87a9c35e4a66",
+        "doi": "10.1109/ACCESS.2026.3664226",
+        "canonical_id": "DOI:10.1109/ACCESS.2026.3664226",
+        "authors": [
+          "G. Park",
+          "Seonghyeon Lee",
+          "Yeonsu Park"
+        ],
+        "priority": 7,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 7,
+          "citation_count": 7,
+          "total": 7,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 104,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2402.05948",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2402.05948",
+        "id:SemanticScholar:753ef415e825c8b5752cd3502280ae8276ef0225",
+        "id:arXiv:2402.05948",
+        "title:de3bert distanceenhanced early exiting for bert based on prototypical networks",
+        "url:https://arxiv.org/abs/2402.05948"
+      ],
+      "record": {
+        "title": "DE3-BERT: Distance-Enhanced Early Exiting for BERT based on Prototypical Networks",
+        "source_url": "https://arxiv.org/abs/2402.05948",
+        "year": 2024,
+        "published": "2024-02-03",
+        "venue": "arXiv.org",
+        "citation_count": 7,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Early exiting has demonstrated its effectiveness in accelerating the inference of pre-trained language models like BERT by dynamically adjusting the number of layers executed. However, most existing early exiting methods only consider local information from an individual test sample to determine their exiting indicators, failing to leverage the global information offered by sample population. This leads to suboptimal estimation of prediction correctness, resulting in erroneous exiting decisions. To bridge the gap, we explore the necessity of effectively combining both local and global information to ensure reliable early exiting during inference. Purposefully, we leverage prototypical networks to learn class prototypes and devise a distance metric between samples and class prototypes. This enables us to utilize global information for estimating the correctness of early predictions. On this basis, we propose a novel Distance-Enhanced Early Exiting framework for BERT (DE$^3$-BERT). DE$^3$-BERT implements a hybrid exiting strategy that supplements classic entropy-based local information with distance-based global information to enhance the estimation of prediction correctness for more reliable early exiting decisions. Extensive experiments on the GLUE benchmark demonstrate that DE$^3$-BERT consistently outperforms state-of-the-art models under different speed-up ratios with minimal storage or computational overhead, yielding a better trade-off between model performance and inference efficiency. Additionally, an in-depth analysis further validates the generality and interpretability of our method.",
+        "identifiers": [
+          "SemanticScholar:753ef415e825c8b5752cd3502280ae8276ef0225"
+        ],
+        "semantic_scholar_id": "753ef415e825c8b5752cd3502280ae8276ef0225",
+        "canonical_id": "arXiv:2402.05948",
+        "arxiv_id": "2402.05948",
+        "doi": "10.48550/arXiv.2402.05948",
+        "authors": [
+          "Jia-Ning He",
+          "Qi Zhang",
+          "Weiping Ding",
+          "Duoqian Miao",
+          "Jun Zhao",
+          "Liang Hu",
+          "Long-Bing Cao"
+        ],
+        "priority": 7,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 7,
+          "citation_count": 7,
+          "total": 7,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 983,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2505.07861",
+      "identity_tokens": [
+        "id:SemanticScholar:3404a22197e1ca5c502f2caf95d74c4c7dad3e5a",
+        "id:arXiv:2505.07861",
+        "title:scalable llm reasoning acceleration with lowrank distillation",
+        "url:https://arxiv.org/abs/2505.07861"
+      ],
+      "record": {
+        "title": "Scalable LLM Reasoning Acceleration with Low-rank Distillation",
+        "source_url": "https://arxiv.org/abs/2505.07861",
+        "year": 2025,
+        "published": "2025-05-08",
+        "venue": null,
+        "citation_count": 7,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Due to long generations, large language model (LLM) math reasoning demands significant computational resources and time. While many existing efficient inference methods have been developed with excellent performance preservation on language tasks, they often severely degrade math performance. In this paper, we propose Caprese, a resource-efficient distillation method to recover lost capabilities from deploying efficient inference methods, focused primarily in feedforward blocks. With original weights unperturbed, roughly 1% of additional parameters, and only 20K synthetic training samples, we are able to recover much if not all of the reasoning capabilities lost from efficient inference for thinking LLMs and without harm to language tasks for instruct LLMs. Moreover, Caprese slashes the number of active parameters (~2B cut for Gemma 2 9B and Llama 3.1 8B) and integrates cleanly into existing model layers to reduce latency (>16% time-to-next-token reduction) while encouraging response brevity (up to 8.5% fewer tokens).",
+        "identifiers": [
+          "SemanticScholar:3404a22197e1ca5c502f2caf95d74c4c7dad3e5a"
+        ],
+        "semantic_scholar_id": "3404a22197e1ca5c502f2caf95d74c4c7dad3e5a",
+        "canonical_id": "arXiv:2505.07861",
+        "arxiv_id": "2505.07861",
+        "authors": [
+          "Harry Dong",
+          "Bilge Acun",
+          "Beidi Chen",
+          "Yuejie Chi"
+        ],
+        "priority": 7,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 7,
+          "citation_count": 7,
+          "total": 7,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 523,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2505.15774",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2505.15774",
+        "id:SemanticScholar:a897c1f5f14a610d23aa316a8b99559c5ec0c03b",
+        "id:arXiv:2505.15774",
+        "title:beyond hard and soft hybrid context compression for balancing local and global information retention",
+        "url:https://arxiv.org/abs/2505.15774"
+      ],
+      "record": {
+        "title": "Beyond Hard and Soft: Hybrid Context Compression for Balancing Local and Global Information Retention",
+        "source_url": "https://arxiv.org/abs/2505.15774",
+        "year": 2025,
+        "published": "2025-05-21",
+        "venue": "arXiv.org",
+        "citation_count": 7,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large Language Models (LLMs) encounter significant challenges in long-sequence inference due to computational inefficiency and redundant processing, driving interest in context compression techniques. Existing methods often rely on token importance to perform hard local compression or encode context into latent representations for soft global compression. However, the uneven distribution of textual content relevance and the diversity of demands for user instructions mean these approaches frequently lead to the loss of potentially valuable information. To address this, we propose $\\textbf{Hy}$brid $\\textbf{Co}$ntext $\\textbf{Co}$mpression (HyCo$_2$) for LLMs, which integrates both global and local perspectives to guide context compression while retaining both the essential semantics and critical details for task completion. Specifically, we employ a hybrid adapter to refine global semantics with the global view, based on the observation that different adapters excel at different tasks. Then we incorporate a classification layer that assigns a retention probability to each context token based on the local view, determining whether it should be retained or discarded. To foster a balanced integration of global and local compression, we introduce auxiliary paraphrasing and completion pretraining before instruction tuning. This promotes a synergistic integration that emphasizes instruction-relevant information while preserving essential local details, ultimately balancing local and global information retention in context compression. Experiments show that our HyCo$_2$ method significantly enhances long-text reasoning while reducing token usage. It improves the performance of various LLM series by an average of 13.1\\% across seven knowledge-intensive QA benchmarks. Moreover, HyCo$_2$ matches the performance of uncompressed methods while reducing token consumption by 88.8\\%.",
+        "identifiers": [
+          "SemanticScholar:a897c1f5f14a610d23aa316a8b99559c5ec0c03b"
+        ],
+        "semantic_scholar_id": "a897c1f5f14a610d23aa316a8b99559c5ec0c03b",
+        "canonical_id": "arXiv:2505.15774",
+        "arxiv_id": "2505.15774",
+        "doi": "10.48550/arXiv.2505.15774",
+        "authors": [
+          "Huanxuan Liao",
+          "Wenji Hu",
+          "Yao Xu",
+          "Shi-Zhu He",
+          "Jun Zhao",
+          "Kang Liu"
+        ],
+        "priority": 7,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 7,
+          "citation_count": 7,
+          "total": 7,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 510,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2507.06087",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2507.06087",
+        "id:SemanticScholar:a0d0fad4ddda6d83444205dfee44bb25de31ac2c",
+        "id:arXiv:2507.06087",
+        "title:core enhancing metacognition with labelfree selfevaluation in lrms",
+        "url:https://arxiv.org/abs/2507.06087"
+      ],
+      "record": {
+        "title": "CoRE: Enhancing Metacognition with Label-free Self-evaluation in LRMs",
+        "source_url": "https://arxiv.org/abs/2507.06087",
+        "year": 2025,
+        "published": "2025-07-08",
+        "venue": "arXiv.org",
+        "citation_count": 7,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large reasoning models (LRMs) have demonstrated impressive capabilities in domains like mathematics and program synthesis. Despite their strong performance, LRMs often exhibit overthinking -- excessive and redundant reasoning steps that introduce inefficiencies during inference. This phenomenon raises an important question for LRM self-evaluation: How can a model autonomously assess the correctness of its own reasoning trajectory without external labels? To address this, we propose Chain-of-Reasoning Embedding (CoRE), a series of hidden states in latent space to enable label-free self-evaluation on intermediate reasoning steps of LRMs, so as to enhance metacognition abilities for improved reasoning efficiency. By analyzing the geometric properties of the CoRE trajectories, we reveal that redundant reasoning usually presents cyclical fluctuations, which correspond to repetitive and unconscious reflection/exploration. Leveraging this insight, we further introduce a training-free, label-free self-evaluation framework, CoRE-Eval, to detect such patterns and dynamically determine whether to terminate reasoning early. Extensive experiments on mathematical reasoning benchmarks (GSM8K, MATH-500, and AIME) and across model sizes from 7B to 32B demonstrate that CoRE-Eval reduces chain-of-thought length by 13.7% to 33.2% while improving answer accuracy by around 10%, achieving 70.0% accuracy on the challenging AIME benchmark with the 32B model.",
+        "identifiers": [
+          "SemanticScholar:a0d0fad4ddda6d83444205dfee44bb25de31ac2c"
+        ],
+        "semantic_scholar_id": "a0d0fad4ddda6d83444205dfee44bb25de31ac2c",
+        "canonical_id": "arXiv:2507.06087",
+        "arxiv_id": "2507.06087",
+        "doi": "10.48550/arXiv.2507.06087",
+        "authors": [
+          "Haoxi Li",
+          "Sikai Bai",
+          "Jie M. Zhang",
+          "Song Guo"
+        ],
+        "priority": 7,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 7,
+          "citation_count": 7,
+          "total": 7,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 462,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2508.08531",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2508.08531",
+        "id:SemanticScholar:70662b4a4a5f239f17ec2414944bf2e46eb62dfc",
+        "id:arXiv:2508.08531",
+        "title:profiling large language model inference on apple silicon a quantization perspective",
+        "url:https://arxiv.org/abs/2508.08531"
+      ],
+      "record": {
+        "title": "Profiling Large Language Model Inference on Apple Silicon: A Quantization Perspective",
+        "source_url": "https://arxiv.org/abs/2508.08531",
+        "year": 2025,
+        "published": "2025-08-12",
+        "venue": "arXiv.org",
+        "citation_count": 7,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "A systematic understanding of Apple Silicon is lacking in the current landscape of hardware efficiency; research focus is largely centered on accelerating GPUs for large-scale training or inference on CUDA devices. This paper investigates Apple Silicon's unique memory architecture that offers a unified memory integrating CPU and GPU memory and its implications for on-device LLM inference. We decipher myths about whether Apple Silicon is efficient for on-device inference compared to competitors such as NVIDIA GPUs by directly conducting latency and throughput comparison benchmarks. We explain the performance gap between them through profiling low level hardware metrics - ALU utilization, memory bandwidth, buffer usage, cache residency etc. at runtime. We draw several insights regarding performance bottlenecks such as dequantization overhead, compute throughput and memory bandwidth. We debunk existing false claims regarding large language model inference such as compressing models to lower bit precision is a defacto promise for faster inference across all hardware platforms. We find that the large unified memory enables Apple Silicon to be both cost effective and efficient against NVIDIA GPUs for ultra large language models. Our large scale evaluation on 5 hardware testbeds incorporating three Apple M-series devices: M2 Ultra, M2 Max and M4 Pro and two NVIDIA GPUs: NVIDIA RTX A6000, a multi GPU setup with 2xNVIDIA RTX A6000, 5 model scales ranging from 8B to 405B parameters and 14 quantization schemes gives an understanding of how Apple Silicon fits within the paradigm of on-device LLM inference. Our analysis reveals multiple resource interdependencies and unexpected findings, while also quantifying established insights. To the best of our knowledge, this study makes the first attempt to present a thorough characterization and analysis of Apple Silicon for on-device inference.",
+        "identifiers": [
+          "SemanticScholar:70662b4a4a5f239f17ec2414944bf2e46eb62dfc"
+        ],
+        "semantic_scholar_id": "70662b4a4a5f239f17ec2414944bf2e46eb62dfc",
+        "canonical_id": "arXiv:2508.08531",
+        "arxiv_id": "2508.08531",
+        "doi": "10.48550/arXiv.2508.08531",
+        "authors": [
+          "A. Benazir",
+          "F. Lin"
+        ],
+        "priority": 7,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 7,
+          "citation_count": 7,
+          "total": 7,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 427,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2509.05276",
+      "identity_tokens": [
+        "id:SemanticScholar:af02f432602bea410427399069ed8e7f5250c3e0",
+        "id:arXiv:2509.05276",
+        "title:spikingbrain spiking braininspired large models",
+        "url:https://arxiv.org/abs/2509.05276"
+      ],
+      "record": {
+        "title": "SpikingBrain: Spiking Brain-inspired Large Models",
+        "source_url": "https://arxiv.org/abs/2509.05276",
+        "year": 2025,
+        "published": "2025-09-05",
+        "venue": "Trans. Mach. Learn. Res.",
+        "citation_count": 7,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Mainstream Transformer-based large language models face major efficiency bottlenecks: training computation scales quadratically with sequence length, and inference memory grows linearly, limiting long-context processing. Building large models on non-NVIDIA platforms also poses challenges for stable and efficient training. To address this, we introduce SpikingBrain, a family of brain-inspired models designed for efficient long-context training and inference. SpikingBrain leverages the MetaX GPU cluster and focuses on three aspects: (1) Model Architecture: linear and hybrid-linear attention architectures with adaptive spiking neurons; (2) Algorithmic Optimizations: an efficient, conversion-based training pipeline and a dedicated spike coding framework; (3) System Engineering: customized training frameworks, operator libraries, and parallelism strategies tailored to MetaX hardware. Using these techniques, we develop two models: SpikingBrain-7B, a linear LLM, and SpikingBrain-76B, a hybrid-linear MoE LLM. These models demonstrate the feasibility of large-scale LLM development on non-NVIDIA platforms, and training remains stable for weeks on hundreds of MetaX GPUs with Model FLOPs Utilization at expected levels. SpikingBrain achieves performance comparable to open-source Transformer baselines while using only about 150B tokens for continual pre-training. Our models also significantly improve long-context efficiency and deliver inference with (partially) constant memory and event-driven spiking behavior. For example, SpikingBrain-7B attains over 100x speedup in Time to First Token for 4M-token sequences. Furthermore, the proposed spiking scheme achieves 69.15 percent sparsity, enabling low-power operation. Overall, this work demonstrates the potential of brain-inspired mechanisms to drive the next generation of efficient and scalable large model design.",
+        "identifiers": [
+          "SemanticScholar:af02f432602bea410427399069ed8e7f5250c3e0"
+        ],
+        "semantic_scholar_id": "af02f432602bea410427399069ed8e7f5250c3e0",
+        "canonical_id": "arXiv:2509.05276",
+        "arxiv_id": "2509.05276",
+        "authors": [
+          "Yu-Qi Pan",
+          "Yu Feng",
+          "J. Zhuang",
+          "Siyuan Ding",
+          "Han Xu",
+          "Ze-Hao Liu",
+          "Bo-Han Sun",
+          "Yu-Hong Chou",
+          "Xue-Rui Qiu",
+          "A. Deng",
+          "Anjie Hu",
+          "Shu-Rong Wang",
+          "Peng Zhou",
+          "Man Yao",
+          "Ji-Bin Wu",
+          "Jian Yang",
+          "Bo-Xing Xu",
+          "Guo-Qi Li"
+        ],
+        "priority": 7,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 7,
+          "citation_count": 7,
+          "total": 7,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 403,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2510.18863",
+      "identity_tokens": [
+        "id:DOI:10.1109/tse.2026.3693795",
+        "id:SemanticScholar:6aa8fbc88756c071cc35737aeb950efd093f52fe",
+        "id:arXiv:2510.18863",
+        "title:effireasontrans rloptimized reasoning for code translation",
+        "url:https://arxiv.org/abs/2510.18863"
+      ],
+      "record": {
+        "title": "EffiReasonTrans: RL-Optimized Reasoning for Code Translation",
+        "source_url": "https://arxiv.org/abs/2510.18863",
+        "year": 2025,
+        "published": "2025-10-21",
+        "venue": "IEEE Transactions on Software Engineering",
+        "citation_count": 7,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Code translation is a crucial task in software development and maintenance. While recent advancements in Large Language Models (LLMs) have improved automated code translation accuracy, these gains often come at the cost of increased inference latency—hindering real-world development workflows that involve human-in-the-loop inspection. To address this trade-off, we propose EffiReasonTrans, a training framework designed to improve translation accuracy while balancing inference latency. We first construct a high-quality reasoning-augmented dataset by prompting a stronger language model DeepSeek-R1 to generate intermediate reasoning and target translations. Each (source code, reasoning, target code) triplet undergoes automated syntax and functionality checks to ensure reliability. Based on this dataset, we employ a two-stage training strategy: supervised fine-tuning on reasoning-augmented samples, followed by reinforcement learning to further enhance accuracy, which also helps balance inference latency. We evaluate EffiReasonTrans on six translation pairs. Experimental results show that EffiReasonTrans consistently improves translation accuracy (up to +49.2% CA and +27.8% CodeBLEU compared to the base model), while reducing the number of generated tokens (up to -19.3%) and lowering inference latency in most cases (up to -29.0%). Ablation studies further confirm the complementary benefits of the two-stage training framework. Additionally, EffiReasonTrans shows improvements of translation accuracy when integrated into agent-based frameworks. Our code and data are available at https://github.com/DeepSoftwareAnalytics/EffiReasonTrans.",
+        "identifiers": [
+          "SemanticScholar:6aa8fbc88756c071cc35737aeb950efd093f52fe"
+        ],
+        "semantic_scholar_id": "6aa8fbc88756c071cc35737aeb950efd093f52fe",
+        "canonical_id": "arXiv:2510.18863",
+        "arxiv_id": "2510.18863",
+        "doi": "10.1109/TSE.2026.3693795",
+        "authors": [
+          "Yan-Lin Wang",
+          "Rongyi Ou",
+          "Yan-Lin Wang",
+          "Ming-Wei Liu",
+          "Jia-Chi Chen",
+          "En-Sheng Shi",
+          "Xi-Lin Liu",
+          "Yu-Chi Ma",
+          "Zi-Bin Zheng"
+        ],
+        "priority": 7,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 7,
+          "citation_count": 7,
+          "total": 7,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 357,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2511.05534",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2511.05534",
+        "id:SemanticScholar:48c22f941a2ce9ab305aa46910f166dc42f784c1",
+        "id:arXiv:2511.05534",
+        "title:flowmm crossmodal information flow guided kv cache merging for efficient multimodal context inference",
+        "url:https://arxiv.org/abs/2511.05534"
+      ],
+      "record": {
+        "title": "FlowMM: Cross-Modal Information Flow Guided KV Cache Merging for Efficient Multimodal Context Inference",
+        "source_url": "https://arxiv.org/abs/2511.05534",
+        "year": 2025,
+        "published": "2025-10-29",
+        "venue": "arXiv.org",
+        "citation_count": 7,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Traditional KV cache eviction strategies, which discard less critical KV-pairs based on attention scores, often degrade generation quality, causing context loss or hallucinations. Recent efforts shift toward KV merging, merging eviction tokens with retention tokens based on similarity. However, in multimodal scenarios, distributional biases across modality tokens and attentional biases in cross-modal interactions limit its effectiveness. This work introduces FlowMM, an adaptive framework for cross-modal information flow-guided multimodal KV cache merging. FlowMM leverages cross-modal information flow to dynamically apply layer-specific merging strategies, capturing modality-specific patterns while preserving contextual integrity. Furthermore, we introduce a sensitivity-adaptive token matching mechanism that jointly evaluates token similarity and task-critical sensitivity, merging low-risk tokens while safeguarding high-sensitivity ones. Extensive experiments across diverse leading MLLMs show that FlowMM reduces KV cache memory by 80% to 95% and decoding latency by 1.3-1.8x, while maintaining competitive task performance.",
+        "identifiers": [
+          "SemanticScholar:48c22f941a2ce9ab305aa46910f166dc42f784c1"
+        ],
+        "semantic_scholar_id": "48c22f941a2ce9ab305aa46910f166dc42f784c1",
+        "canonical_id": "arXiv:2511.05534",
+        "arxiv_id": "2511.05534",
+        "doi": "10.48550/arXiv.2511.05534",
+        "authors": [
+          "Kun-Xi Li",
+          "Yufan Xiong",
+          "Zhong-Hua Jiang",
+          "Yi-Yun Zhou",
+          "Zhao-De Wang",
+          "Chengfei Lv",
+          "Shengyu Zhang"
+        ],
+        "priority": 7,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 7,
+          "citation_count": 7,
+          "total": 7,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 349,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2510.17196",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2510.17196",
+        "id:SemanticScholar:1facfefafcaa191129ba367ae245eb525420a9d5",
+        "id:arXiv:2510.17196",
+        "title:understanding and improving length generalization in hierarchical sparse attention models",
+        "url:https://arxiv.org/abs/2510.17196"
+      ],
+      "record": {
+        "title": "Understanding and Improving Length Generalization in Hierarchical Sparse Attention Models",
+        "source_url": "https://arxiv.org/abs/2510.17196",
+        "year": 2025,
+        "published": "2025-10-20",
+        "venue": "arXiv.org",
+        "citation_count": 6,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Effectively processing long contexts is a critical challenge for language models. While standard Transformers are limited by quadratic complexity and poor length extrapolation, alternative architectures like sliding window attention and state space models sacrifice the ability to effectively utilize the full context due to their fixed-size memory. Chunk-based sparse attention has emerged as a promising paradigm for extreme length generalization, yet the key architectural principles underpinning its success are not yet fully understood. In this work, we present a systematic dissection of these models to identify the core components driving their performance. Through a unified framework and comprehensive ablation studies, we demonstrate that a combination of three design principles is critical: (1) an expressive, non-linear Chunk Encoder with a dedicated CLS token to produce representations for retrieval; (2) a Bypassing Residual Path to stably integrate retrieved global information without it being overridden by the local residual stream; and (3) enforced selection sparsity during pre-training to bridge the train-test distribution gap. We provide a theoretical motivation for intra-chunk information processing and landmark generation. By combining these principles, we establish a new state-of-the-art for training-free length extrapolation, successfully generalizing models trained on a 4K context to 32 million tokens on RULER and BABILong. Our findings provide a clear and empirically-grounded set of design principles for developing future, highly-capable long-context language models.",
+        "identifiers": [
+          "SemanticScholar:1facfefafcaa191129ba367ae245eb525420a9d5"
+        ],
+        "semantic_scholar_id": "1facfefafcaa191129ba367ae245eb525420a9d5",
+        "canonical_id": "arXiv:2510.17196",
+        "arxiv_id": "2510.17196",
+        "doi": "10.48550/arXiv.2510.17196",
+        "authors": [
+          "Jiaqi Leng",
+          "Xiang Hu",
+          "Junxiong Wang",
+          "Jianguo Li",
+          "Wei Wu",
+          "Yu-Cheng Lu"
+        ],
+        "priority": 6,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 6,
+          "citation_count": 6,
+          "total": 6,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 358,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2510.24606",
+      "identity_tokens": [
+        "id:SemanticScholar:df7c39b6e45d5d5b5848462809ffb9c2de42750b",
+        "id:arXiv:2510.24606",
+        "title:longcontext modeling with dynamic hierarchical sparse attention for memoryconstrained llm inference",
+        "url:https://arxiv.org/abs/2510.24606"
+      ],
+      "record": {
+        "title": "Long-Context Modeling with Dynamic Hierarchical Sparse Attention for Memory-Constrained LLM Inference",
+        "source_url": "https://arxiv.org/abs/2510.24606",
+        "year": 2025,
+        "published": "2025-10-28",
+        "venue": null,
+        "citation_count": 6,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The quadratic cost of attention limits the scalability of long-context LLMs, especially under limited hardware memory budgets. While attention is often sparse, existing static sparse methods cannot adapt to task- or input-dependent variations, and recent dynamic approaches rely on predefined templates or heuristics that may sacrifice generality. We propose Dynamic Hierarchical Sparse Attention (DHSA), a data-driven framework that predicts attention sparsity online while keeping the LLM backbone frozen. DHSA performs hierarchical routing by estimating importance at the chunk level and propagating it to token-level interactions, preserving causally important dependencies while enabling efficient sparsification. Across Needle-in-a-Haystack test, LongBench and RULER, DHSA maintains near-dense accuracy in highly sparse regimes, achieving 12--20% relative accuracy gains over Block Sparse Attention at comparable prefill cost. With a memory-efficient tiled backend, DHSA delivers up to $10\\times$ prefill speedup at 128K context length. On LLaMA-3.1-8B (4-bit), DHSA scales to 100K context on a single 24GB GPU, where dense attention fails. We provide complementary GPU and CPU backends, enabling DHSA to run across diverse hardware environments and multiple open-weight model families. These results demonstrate DHSA as an efficient and adaptable solution for memory-constrained long-context LLM inference.",
+        "identifiers": [
+          "SemanticScholar:df7c39b6e45d5d5b5848462809ffb9c2de42750b"
+        ],
+        "semantic_scholar_id": "df7c39b6e45d5d5b5848462809ffb9c2de42750b",
+        "canonical_id": "arXiv:2510.24606",
+        "arxiv_id": "2510.24606",
+        "authors": [
+          "Siheng Xiong",
+          "Joe Zou",
+          "F. Fekri",
+          "Yae Jee Cho"
+        ],
+        "priority": 6,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 6,
+          "citation_count": 6,
+          "total": 6,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 350,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:52d1e2a51a9a7838f9feb3fd59f0df423fba774af0591c669af691e6c818ac5e",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}
