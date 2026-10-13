@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-13T13:21:04+00:00",
-  "paper_count": 2027,
-  "edge_count": 24894,
+  "generated_at": "2026-10-13T13:23:52+00:00",
+  "paper_count": 2030,
+  "edge_count": 24904,
   "citation_counts": {
     "papers/inference/01-offload-hierarchical-memory/2021-2101.06840-zero-offload-democratizing-billion-scale-model-training.md": 7,
     "papers/inference/01-offload-hierarchical-memory/2022-2205.10034-moesys-a-distributed-and-efficient-mixture-of-experts-training-and-inference-system-for-internet-services.md": 22,
@@ -666,7 +666,7 @@
     "papers/inference/08-edge-on-device-llm-systems/2026-2609.21172-tierkv-long-context-on-device-llms-via-predictive-multi-tier-kv-caching.md": 0,
     "papers/inference/08-edge-on-device-llm-systems/2026-35c4f3816b37-vlmcache-efficient-on-device-vision-language-model-inference.md": 0,
     "papers/inference/09-kernel-runtime-compilation/2018-1805.02867-online-normalizer-calculation-for-softmax.md": 32,
-    "papers/inference/09-kernel-runtime-compilation/2019-1910.04732-structured-pruning-of-large-language-models.md": 13,
+    "papers/inference/09-kernel-runtime-compilation/2019-1910.04732-structured-pruning-of-large-language-models.md": 14,
     "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md": 77,
     "papers/inference/09-kernel-runtime-compilation/2020-2010.13887-lightseq-a-high-performance-inference-library-for-transformers.md": 19,
     "papers/inference/09-kernel-runtime-compilation/2021-2010.05680-turbotransformers-an-efficient-gpu-serving-system-for-transformer-models.md": 20,
@@ -1292,7 +1292,7 @@
     "papers/inference/13-sparse-attention/2026-delta.md": 3,
     "papers/inference/14-agentic-inference-serving-runtime/2025-2501.13956-zep-a-temporal-knowledge-graph-architecture-for-agent-memory.md": 7,
     "papers/inference/14-agentic-inference-serving-runtime/2025-2502.12110-a-mem-agentic-memory-for-llm-agents.md": 12,
-    "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md": 14,
+    "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md": 15,
     "papers/inference/14-agentic-inference-serving-runtime/2025-2505.05286-hexgen-flow-optimizing-llm-inference-request-scheduling-for-agentic-text.md": 8,
     "papers/inference/14-agentic-inference-serving-runtime/2025-2506.04301-cost-dynamic-reasoning.md": 9,
     "papers/inference/14-agentic-inference-serving-runtime/2025-2506.24045-agent-xpu-efficient-scheduling-of-agentic-llm-workloads-on-heterogeneous.md": 4,
@@ -1420,7 +1420,7 @@
     "papers/inference/17-pim-near-data-acceleration/2026-2609.16161-llm-inference-in-a-flash.md": 0,
     "papers/inference/17-pim-near-data-acceleration/2026-h3-attn.md": 0,
     "papers/inference/18-pipeline-native-cpu-inference/2026-2608.23841-pipeline-native-transformers.md": 0,
-    "papers/inference/19-inference-evaluation-benchmarking/2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md": 33,
+    "papers/inference/19-inference-evaluation-benchmarking/2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md": 34,
     "papers/inference/19-inference-evaluation-benchmarking/2023-2309.15789-large-language-model-routing-with-benchmark-datasets.md": 3,
     "papers/inference/19-inference-evaluation-benchmarking/2023-2310.03003-from-words-to-watts-benchmarking-the-energy-costs-of-large-language-mode.md": 9,
     "papers/inference/19-inference-evaluation-benchmarking/2024-2401.10480-escape-sky-high-cost-early-stopping-self-consistency-for-multi-step-reas.md": 3,
@@ -1460,14 +1460,15 @@
     "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md": 127,
     "papers/inference/99-other-inference-systems/2019-1905.07799-adaptive-attention-span-in-transformers.md": 21,
     "papers/inference/99-other-inference-systems/2019-1905.09418-analyzing-multi-head-self-attention-specialized-heads-do-the-heavy-lifti.md": 30,
-    "papers/inference/99-other-inference-systems/2019-1905.10650-are-sixteen-heads-really-better-than-one.md": 34,
+    "papers/inference/99-other-inference-systems/2019-1905.10650-are-sixteen-heads-really-better-than-one.md": 35,
     "papers/inference/99-other-inference-systems/2019-1907.05242-large-memory-layers-with-product-keys.md": 2,
-    "papers/inference/99-other-inference-systems/2019-1909.05840-q-bert-hessian-based-ultra-low-precision-quantization-of-bert.md": 36,
+    "papers/inference/99-other-inference-systems/2019-1909.05840-q-bert-hessian-based-ultra-low-precision-quantization-of-bert.md": 37,
     "papers/inference/99-other-inference-systems/2019-1909.08053-megatron-lm-training-multi-billion-parameter-language-models-using-model.md": 202,
     "papers/inference/99-other-inference-systems/2019-1909.11556-reducing-transformer-depth-on-demand-with-structured-dropout.md": 33,
     "papers/inference/99-other-inference-systems/2019-1910.06188-q8bert-quantized-8bit-bert.md": 13,
     "papers/inference/99-other-inference-systems/2019-1911.02972-blockwise-self-attention-for-long-document-understanding.md": 16,
     "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md": 83,
+    "papers/inference/99-other-inference-systems/2020-2001.08950-power-bert-accelerating-bert-inference-via-progressive-word-vector-elimi.md": 1,
     "papers/inference/99-other-inference-systems/2020-2002.08307-compressing-bert-studying-the-effects-of-weight-pruning-on-transfer-lear.md": 7,
     "papers/inference/99-other-inference-systems/2020-2002.11985-compressing-large-scale-transformer-based-models-a-case-study-on-bert.md": 5,
     "papers/inference/99-other-inference-systems/2020-2004.02178-fastbert-a-self-distilling-bert-with-adaptive-inference-time.md": 16,
@@ -1634,10 +1635,10 @@
     "papers/inference/99-other-inference-systems/2024-2404.03865-ffn-skipllm-a-hidden-gem-for-autoregressive-decoding-with-adaptive-feed-.md": 4,
     "papers/inference/99-other-inference-systems/2024-2404.05089-seer-moe-sparse-expert-efficiency-through-regularization-for-mixture-of-.md": 24,
     "papers/inference/99-other-inference-systems/2024-2404.05892-eagle-and-finch-rwkv-with-matrix-valued-states-and-dynamic-recurrence.md": 10,
-    "papers/inference/99-other-inference-systems/2024-2404.07143-leave-no-context-behind-efficient-infinite-context-transformers-with-infini-attention.md": 17,
+    "papers/inference/99-other-inference-systems/2024-2404.07143-leave-no-context-behind-efficient-infinite-context-transformers-with-infini-attention.md": 18,
     "papers/inference/99-other-inference-systems/2024-2404.07413-jetmoe-reaching-llama2-performance-with-0-1m-dollars.md": 13,
     "papers/inference/99-other-inference-systems/2024-2404.07904-hgrn2-gated-linear-rnns-with-state-expansion.md": 7,
-    "papers/inference/99-other-inference-systems/2024-2404.10136-language-model-cascades-token-level-uncertainty-and-beyond.md": 1,
+    "papers/inference/99-other-inference-systems/2024-2404.10136-language-model-cascades-token-level-uncertainty-and-beyond.md": 2,
     "papers/inference/99-other-inference-systems/2024-2404.12457-ragcache-efficient-knowledge-caching-for-retrieval-augmented-generation.md": 38,
     "papers/inference/99-other-inference-systems/2024-2404.14618-hybrid-llm-cost-efficient-and-quality-aware-query-routing.md": 17,
     "papers/inference/99-other-inference-systems/2024-2404.19737-better-faster-large-language-models-via-multi-token-prediction.md": 33,
@@ -1769,6 +1770,7 @@
     "papers/inference/99-other-inference-systems/2025-2512.22195-matkv-trading-compute-for-flash-storage-in-llm-inference.md": 0,
     "papers/inference/99-other-inference-systems/2025-2512.22234-dirl-an-efficient-post-training-framework-for-diffusion-language-models.md": 0,
     "papers/inference/99-other-inference-systems/2025-2512.23852-trellis-learning-to-compress-key-value-memory-in-attention-models.md": 0,
+    "papers/inference/99-other-inference-systems/2025-2512.24601-recursive-language-models.md": 2,
     "papers/inference/99-other-inference-systems/2025-6264cfc484ad-omnikv-dynamic-context-selection-for-efficient-long-context-llms.md": 7,
     "papers/inference/99-other-inference-systems/2026-0fd53670e945-symphony-enabling-compute-memory-disaggregation-in-llm-serving-systems.md": 2,
     "papers/inference/99-other-inference-systems/2026-161bea97e0de-towards-compute-aware-in-switch-computing-for-llms-tensor-parallelism-on-multi-gpu-systems.md": 1,
@@ -1806,6 +1808,7 @@
     "papers/inference/99-other-inference-systems/2026-2602.21140-revivemoe-fast-hardware-failure-recovery.md": 0,
     "papers/inference/99-other-inference-systems/2026-2603.02217-is-retraining-free-enough-the-necessity-of-router-calibration-for-effici.md": 1,
     "papers/inference/99-other-inference-systems/2026-2603.03681-evoprune-early-stage-visual-token-pruning-for-efficient-mllms.md": 0,
+    "papers/inference/99-other-inference-systems/2026-2603.03752-confidence-calibrated-small-large-language-model-collaboration-for-cost-.md": 0,
     "papers/inference/99-other-inference-systems/2026-2603.07770-arclight-a-lightweight-llm-inference-architecture-for-many-core-cpus.md": 1,
     "papers/inference/99-other-inference-systems/2026-2603.09023-pichay-demand-paging-context-windows.md": 0,
     "papers/inference/99-other-inference-systems/2026-2603.10087-pooling-engram-conditional-memory-in-large-language-models-using-cxl.md": 0,
@@ -9995,7 +9998,8 @@
       "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md",
       "papers/inference/99-other-inference-systems/2023-2305.13245-gqa.md",
       "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md",
-      "papers/inference/99-other-inference-systems/2024-2412.06464-gated-delta-networks-improving-mamba2-with-delta-rule.md"
+      "papers/inference/99-other-inference-systems/2024-2412.06464-gated-delta-networks-improving-mamba2-with-delta-rule.md",
+      "papers/inference/99-other-inference-systems/2025-2512.24601-recursive-language-models.md"
     ],
     "papers/inference/07-kv-cache-optimization-compression/2026-2602.23200-innerq-hardware-aware-tuning-free-quantization-of-kv-cache-for-large-lan.md": [
       "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md",
@@ -24098,6 +24102,11 @@
       "papers/inference/99-other-inference-systems/2019-1905.07799-adaptive-attention-span-in-transformers.md",
       "papers/inference/99-other-inference-systems/2019-1907.05242-large-memory-layers-with-product-keys.md"
     ],
+    "papers/inference/99-other-inference-systems/2020-2001.08950-power-bert-accelerating-bert-inference-via-progressive-word-vector-elimi.md": [
+      "papers/inference/09-kernel-runtime-compilation/2019-1910.04732-structured-pruning-of-large-language-models.md",
+      "papers/inference/99-other-inference-systems/2019-1905.10650-are-sixteen-heads-really-better-than-one.md",
+      "papers/inference/99-other-inference-systems/2019-1909.05840-q-bert-hessian-based-ultra-low-precision-quantization-of-bert.md"
+    ],
     "papers/inference/99-other-inference-systems/2020-2002.08307-compressing-bert-studying-the-effects-of-weight-pruning-on-transfer-lear.md": [
       "papers/inference/99-other-inference-systems/2019-1905.10650-are-sixteen-heads-really-better-than-one.md"
     ],
@@ -24156,6 +24165,7 @@
     ],
     "papers/inference/99-other-inference-systems/2020-2006.03236-funnel-transformer-filtering-out-sequential-redundancy-for-efficient-lan.md": [
       "papers/inference/11-llm-serving-scheduling-disaggregation/2019-1901.10430-pay-less-attention-with-lightweight-and-dynamic-convolutions.md",
+      "papers/inference/99-other-inference-systems/2020-2001.08950-power-bert-accelerating-bert-inference-via-progressive-word-vector-elimi.md",
       "papers/inference/99-other-inference-systems/2020-2004.11886-lite-transformer-with-long-short-range-attention.md"
     ],
     "papers/inference/99-other-inference-systems/2020-2006.04152-bert-loses-patience-fast-and-robust-inference-with-early-exit.md": [
@@ -27417,6 +27427,11 @@
       "papers/inference/99-other-inference-systems/2024-2412.06464-gated-delta-networks-improving-mamba2-with-delta-rule.md",
       "papers/inference/99-other-inference-systems/2025-2501.00663-titans-learning-to-memorize-at-test-time.md"
     ],
+    "papers/inference/99-other-inference-systems/2025-2512.24601-recursive-language-models.md": [
+      "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md",
+      "papers/inference/19-inference-evaluation-benchmarking/2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md",
+      "papers/inference/99-other-inference-systems/2024-2404.07143-leave-no-context-behind-efficient-infinite-context-transformers-with-infini-attention.md"
+    ],
     "papers/inference/99-other-inference-systems/2025-6264cfc484ad-omnikv-dynamic-context-selection-for-efficient-long-context-llms.md": [
       "papers/inference/01-offload-hierarchical-memory/2023-2303.06865-flexgen-high-throughput-generative-inference-of-large-language-models-with-a-single-gpu.md",
       "papers/inference/07-kv-cache-optimization-compression/2023-2305.17118-scissorhands.md",
@@ -27809,7 +27824,8 @@
       "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
       "papers/inference/99-other-inference-systems/2023-2304.08467-learning-to-compress-prompts-with-gist-tokens.md",
       "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md",
-      "papers/inference/99-other-inference-systems/2023-2310.06201-compressing-context-to-enhance-inference-efficiency-of-large-language-mo.md"
+      "papers/inference/99-other-inference-systems/2023-2310.06201-compressing-context-to-enhance-inference-efficiency-of-large-language-mo.md",
+      "papers/inference/99-other-inference-systems/2025-2512.24601-recursive-language-models.md"
     ],
     "papers/inference/99-other-inference-systems/2026-2602.18196-rat-train-dense-infer-sparse-recurrence-augmented-attention-for-dilated-.md": [
       "papers/inference/07-kv-cache-optimization-compression/2019-1911.02150-multi-query-attention.md",
@@ -27908,6 +27924,9 @@
       "papers/inference/99-other-inference-systems/2024-2410.17434-longvu-spatiotemporal-adaptive-compression-for-long-video-language-under.md",
       "papers/inference/99-other-inference-systems/2025-2502.11494-stop-looking-for-important-tokens-in-multimodal-language-models-duplicat.md",
       "papers/inference/99-other-inference-systems/2025-2503.02175-divprune-diversity-based-visual-token-pruning-for-large-multimodal-model.md"
+    ],
+    "papers/inference/99-other-inference-systems/2026-2603.03752-confidence-calibrated-small-large-language-model-collaboration-for-cost-.md": [
+      "papers/inference/99-other-inference-systems/2024-2404.10136-language-model-cascades-token-level-uncertainty-and-beyond.md"
     ],
     "papers/inference/99-other-inference-systems/2026-2603.07770-arclight-a-lightweight-llm-inference-architecture-for-many-core-cpus.md": [
       "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md",
