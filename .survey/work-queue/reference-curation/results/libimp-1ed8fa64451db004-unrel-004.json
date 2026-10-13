@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-1ed8fa64451db004-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2512.07503",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2512.07503",
+    "identity_tokens": [
+      "arXiv:2512.07503"
+    ],
+    "reason": "Full text scopes SJD++ to discrete autoregressive image-generation models and evaluates image latency/quality; no LLM inference or serving application is demonstrated.",
+    "first_checked_at": "2026-10-13T22:33:19+00:00",
+    "last_checked_at": "2026-10-13T22:33:19+00:00",
+    "linked_from": [
+      "papers/inference/05-speculative-decoding-moe/2022-2211.17192-speculative-decoding.md",
+      "papers/inference/05-speculative-decoding-moe/2023-2302.01318-speculative-sampling.md",
+      "papers/inference/05-speculative-decoding-moe/2023-2310.15141-spectr-fast-speculative-decoding-via-optimal-transport.md",
+      "papers/inference/05-speculative-decoding-moe/2024-2401.15077-eagle-feature-speculative-sampling.md",
+      "papers/inference/05-speculative-decoding-moe/2024-2402.02057-lookahead-decoding.md",
+      "papers/inference/07-kv-cache-optimization-compression/2023-2305.17118-scissorhands.md",
+      "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md",
+      "papers/inference/07-kv-cache-optimization-compression/2024-2405.14366-minicache-kv-cache-compression-in-depth-dimension-for-large-language-mod.md",
+      "papers/inference/07-kv-cache-optimization-compression/2024-2406.02069-pyramidkv.md",
+      "papers/inference/07-kv-cache-optimization-compression/2024-2406.11430-l2-kv-compression.md",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2404.14294-a-survey-on-efficient-inference-for-large-language-models.md",
+      "papers/inference/99-other-inference-systems/2024-2403.00835-cllms-consistency-large-language-models.md",
+      "papers/inference/99-other-inference-systems/2024-2404.19737-better-faster-large-language-models-via-multi-token-prediction.md"
+    ],
+    "title": "SJD++: Improved Speculative Jacobi Decoding for Training-free Acceleration of Discrete Auto-regressive Text-to-Image Generation"
+  },
+  "processed_at": "2026-10-13T22:33:19+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-1ed8fa64451d",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-13T21:31:18+00:00",
-  "record_count": 4899,
+  "updated_at": "2026-10-13T22:33:21+00:00",
+  "record_count": 4905,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -75335,6 +75335,166 @@
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "SpikeVLA: Vision-Language-Action Models with Spiking Neural Networks"
+    },
+    "DOI:10.1109/tpds.2025.3626974": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/tpds.2025.3626974",
+      "identity_tokens": [
+        "DOI:10.1109/tpds.2025.3626974"
+      ],
+      "reason": "The DOI/title metadata identifies a paper on KV-cache spillover for constrained-GPU LLM inference, a directly relevant topic, but the IEEE primary abstract page could not be retrieved in this screening session; retain pending primary abstract evidence.",
+      "first_checked_at": "2026-10-13T22:33:18+00:00",
+      "last_checked_at": "2026-10-13T22:33:18+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2023-2303.06865-flexgen-high-throughput-generative-inference-of-large-language-models-with-a-single-gpu.md",
+        "papers/inference/01-offload-hierarchical-memory/2023-2312.12456-powerinfer.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2402.02750-kivi.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.03917-coupled-quantization.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2305.13144-response-length-perception-and-sequence-scheduling-an-llm-empowered-llm-inference-pipeline.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2311.18677-splitwise-efficient-generative-llm-inference-phase-splitting.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.09670-distserve-disaggregating-prefill-decoding-goodput.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.11181-tetriinfer.md",
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+        "papers/inference/99-other-inference-systems/2022-2211.05102-efficiently-scaling-transformer-inference.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md",
+        "papers/inference/99-other-inference-systems/2023-2311.01282-flashdecoding-faster-large-language-model-inference-on-gpus.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Efficient KV Cache Spillover Management on Memory-Constrained GPU for LLM Inference"
+    },
+    "arXiv:2604.27201": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2604.27201",
+      "identity_tokens": [
+        "arXiv:2604.27201"
+      ],
+      "reason": "The paper separates think/no-think MLP experts, but its full text says inference keeps the same per-token computation pattern; shorter no-think answers may reduce total generated tokens, while serving-efficiency gains are not established.",
+      "first_checked_at": "2026-10-13T22:33:18+00:00",
+      "last_checked_at": "2026-10-13T22:33:18+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2402.02750-kivi.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md",
+        "papers/inference/09-kernel-runtime-compilation/2025-2504.11651-70-size-100-accuracy-lossless-llm-compression-for-efficient-gpu-inferenc.md",
+        "papers/inference/12-moe-parallelism-communication/2021-2101.03961-switch-transformers-scaling-to-trillion-parameter-models-with-simple-and.md",
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2503.16419-stop-overthinking-a-survey-on-efficient-reasoning-for-large-language-mod.md",
+        "papers/inference/99-other-inference-systems/2017-1701.06538-outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts.md",
+        "papers/inference/99-other-inference-systems/2022-2203.14680-transformer-feed-forward-layers-build-predictions-by-promoting-concepts-.md",
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+        "papers/inference/99-other-inference-systems/2025-2502.12067-tokenskip-controllable-chain-of-thought-compression-in-llms.md",
+        "papers/inference/99-other-inference-systems/2025-2502.18600-chain-of-draft-thinking-faster-by-writing-less.md",
+        "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Path-Lock Expert: Separating Reasoning Mode in Hybrid Thinking via Architecture-Level Separation"
+    },
+    "DOI:10.1145/3799719": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3799719",
+      "identity_tokens": [
+        "DOI:10.1145/3799719"
+      ],
+      "reason": "The DOI/title metadata identifies a stage-aware RISC-V LLM inference optimization framework, which is directly relevant, but the ACM primary article page returned 403 and no primary abstract/full text was retrievable; retain pending primary-source evidence.",
+      "first_checked_at": "2026-10-13T22:33:18+00:00",
+      "last_checked_at": "2026-10-13T22:33:18+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2022-2211.17192-speculative-decoding.md",
+        "papers/inference/05-speculative-decoding-moe/2024-2401.10774-medusa-multiple-decoding-heads.md",
+        "papers/inference/07-kv-cache-optimization-compression/2023-2310.01801-fastgen.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2403.09054-keyformer-kv-cache-reduction-through-key-tokens-selection-for-efficient-.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.14366-minicache-kv-cache-compression-in-depth-dimension-for-large-language-mod.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2406.02069-pyramidkv.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2412.03213-clusterkv-manipulating-llm-kv-cache-in-semantic-space-for-recallable-com.md",
+        "papers/inference/09-kernel-runtime-compilation/2025-pod-attention.md",
+        "papers/inference/10-kv-cache-offload-recomputation/2024-2310.07240-cachegen.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2308.16369-sarathi.md",
+        "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md",
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md",
+        "papers/inference/99-other-inference-systems/2024-2407.08608-flashattention-3-fast-and-accurate-attention-with-asynchrony-and-low-pre.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "VectorWeaver: A Stage-Aware Automated Optimization Framework for LLM Inference on Edge Platform"
+    },
+    "DOI:10.1109/isca66397.2026.00077": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/isca66397.2026.00077",
+      "identity_tokens": [
+        "DOI:10.1109/isca66397.2026.00077"
+      ],
+      "reason": "Bibliographic sources confirm the DOI/title for an edge-cloud LLM serving system, but the IEEE primary article page and abstract/full text were not retrievable here; retain pending primary evidence.",
+      "first_checked_at": "2026-10-13T22:33:21+00:00",
+      "last_checked_at": "2026-10-13T22:33:21+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2021-2101.06840-zero-offload-democratizing-billion-scale-model-training.md",
+        "papers/inference/08-edge-on-device-llm-systems/2025-d6d0a70f5bc4-edgeshard-efficient-llm-inference-via-collaborative-edge-computing.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2020-2006.02464-serving-dnns-like-clockwork-performance-predictability-from-the-bottom-u.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2302.11665-alpaserve.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2311.15566-spotserve-preemptible-instance-serving.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2311.18677-splitwise-efficient-generative-llm-inference-phase-splitting.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2403.02310-sarathi-serve-chunked-prefills-stall-free-scheduling.md",
+        "papers/inference/13-sparse-attention/2024-2407.02490-minference.md",
+        "papers/inference/13-sparse-attention/2024-2410.13276-seerattention.md",
+        "papers/inference/16-weight-quantization-compression/2023-2306.07629-squeezellm-dense-and-sparse-quantization.md",
+        "papers/inference/16-weight-quantization-compression/2024-2405.04532-qserve.md",
+        "papers/inference/99-other-inference-systems/2017-1701.06538-outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts.md",
+        "papers/inference/99-other-inference-systems/2022-2207.00032-deepspeed-inference-enabling-efficient-inference-of-transformer-models-at-unprecedented-scale.md",
+        "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2024-2403.01876-dejavu-kv-cache-streaming-for-fast-fault-tolerant-generative-llm-serving.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "DynoPipe: Heterogeneous Edge-Cloud LLM Serving with Dynamically Orchestrated Pipeline Boundaries"
+    },
+    "DOI:10.1109/isades69945.2026.11608080": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/isades69945.2026.11608080",
+      "identity_tokens": [
+        "DOI:10.1109/isades69945.2026.11608080"
+      ],
+      "reason": "The DOI/title metadata identifies a survey of distributed edge inference for LLMs and DNNs, but the IEEE primary abstract/full text was not retrievable; retain pending primary-source evidence.",
+      "first_checked_at": "2026-10-13T22:33:21+00:00",
+      "last_checked_at": "2026-10-13T22:33:21+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2022-2211.17192-speculative-decoding.md",
+        "papers/inference/05-speculative-decoding-moe/2026-2601.11652-wisp-distributed-speculative-serving-edge.md",
+        "papers/inference/08-edge-on-device-llm-systems/2025-d6d0a70f5bc4-edgeshard-efficient-llm-inference-via-collaborative-edge-computing.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.14351-serverlessllm-low-latency-serverless-inference.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2406.01566-helix-maxflow-heterogeneous-gpu-serving.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2505.17052-specedge-edge-assisted-speculative-serving.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2509.26182-parallax-decentralized-heterogeneous-serving.md",
+        "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md",
+        "papers/inference/16-weight-quantization-compression/2023-2306.00978-awq.md",
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+        "papers/inference/99-other-inference-systems/2023-2301.00774-sparsegpt-massive-language-models-can-be-accurately-pruned-in-one-shot.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Distributed Edge Inference for LLMs and DNNs: An Assessment of Optimization Techniques, Coverage Gaps, and Research Directions"
+    },
+    "DOI:10.1109/tcad.2025.3627864": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/tcad.2025.3627864",
+      "identity_tokens": [
+        "DOI:10.1109/tcad.2025.3627864"
+      ],
+      "reason": "The DOI/title metadata identifies an algorithm-hardware co-design for sparse attention in diffusion transformers, adjacent to efficient attention systems, but no IEEE primary abstract/full text was retrievable; retain pending primary-source evidence.",
+      "first_checked_at": "2026-10-13T22:33:21+00:00",
+      "last_checked_at": "2026-10-13T22:33:21+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md",
+        "papers/inference/13-sparse-attention/2020-2012.09852-spatten-efficient-sparse-attention-architecture-with-cascade-token-and-head-pruning.md",
+        "papers/inference/13-sparse-attention/2021-0aaecf5ce8bb-sanger-a-co-design-framework-for-enabling-sparse-attention-using-reconfi.md",
+        "papers/inference/13-sparse-attention/2024-2406.10774-quest.md",
+        "papers/inference/13-sparse-attention/2024-2407.02490-minference.md",
+        "papers/inference/15-inference-simulation-emulation/2020-2002.10941-a3-accelerating-attention-mechanisms-in-neural-networks-with-approximati.md",
+        "papers/inference/16-weight-quantization-compression/2023-olive-accelerating-large-language-models-via-hardware-friendly-outlier-victim-pair-quantization.md",
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md",
+        "papers/inference/99-other-inference-systems/2019-1911.02972-blockwise-self-attention-for-long-document-understanding.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md",
+        "papers/inference/99-other-inference-systems/2024-2409.10516-retrievalattention-accelerating-long-context-llm-inference-via-vector-re.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "DASA: Distribution-Aware Sparse Attention for Accelerating Diffusion Transformer"
     }
   }
 }
