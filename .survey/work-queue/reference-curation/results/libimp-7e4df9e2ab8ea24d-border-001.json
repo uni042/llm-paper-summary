@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-7e4df9e2ab8ea24d-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2509.25140",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2509.25140",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2509.25140",
+      "arXiv:2509.25140"
+    ],
+    "reason": "エージェントの成功・失敗履歴から再利用可能な推論方略を抽出し、試験時の複数経験から記憶を改善する。再試行の減少など実行効率への影響があり得る一方、主評価はウェブ操作とソフトウェア開発タスクの能力で、LLM実行エンジンやメモリ転送の性能評価ではない。エージェント記憶という隣接領域として境界扱い。",
+    "first_checked_at": "2026-10-12T10:58:03+00:00",
+    "last_checked_at": "2026-10-13T16:45:34+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "ReasoningBank: Scaling Agent Self-Evolving with Reasoning Memory"
+  },
+  "processed_at": "2026-10-13T16:45:34+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-7e4df9e2ab8e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

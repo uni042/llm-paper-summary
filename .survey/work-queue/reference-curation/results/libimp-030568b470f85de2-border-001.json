@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-030568b470f85de2-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2112.06749",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2112.06749",
+    "identity_tokens": [
+      "arXiv:2112.06749",
+      "id:arXiv:2112.06749",
+      "url:https://arxiv.org/abs/2112.06749"
+    ],
+    "reason": "自己回帰を用いない反復的なトークン改良による文章生成を提案し、従来の拡散型生成より少ない反復回数と翻訳品質を報告する。並列復号の基本方式として関連性はあるが、現代の大規模生成モデルの推論速度や配信システムの実装・評価は要旨から確認できないため境界候補に残す。",
+    "first_checked_at": "2026-10-13T10:44:16+00:00",
+    "last_checked_at": "2026-10-13T16:45:32+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Step-unrolled Denoising Autoencoders for Text Generation"
+  },
+  "processed_at": "2026-10-13T16:45:32+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-030568b470f8",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
