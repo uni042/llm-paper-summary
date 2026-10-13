@@ -1,0 +1,242 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Kernel-Smith: A Unified Recipe for Evolutionary Kernel Optimization",
+      "source_url": "https://arxiv.org/abs/2603.28342",
+      "year": 2026,
+      "published": "2026-03-30",
+      "venue": "arXiv.org",
+      "citation_count": 9,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "We present Kernel-Smith, a framework for high-performance GPU kernel and operator generation that combines a stable evaluation-driven evolutionary agent with an evolution-oriented post-training recipe. On the agent side, Kernel-Smith maintains a population of executable candidates and iteratively improves them using an archive of top-performing and diverse programs together with structured execution feedback on compilation, correctness, and speedup. To make this search reliable, we build backend-specific evaluation services for Triton on NVIDIA GPUs and Maca on MetaX GPUs. On the training side, we convert long-horizon evolution trajectories into step-centric supervision and reinforcement learning signals by retaining correctness-preserving, high-gain revisions, so that the model is optimized as a strong local improver inside the evolutionary loop rather than as a one-shot generator. Under a unified evolutionary protocol, Kernel-Smith-235B-RL achieves state-of-the-art overall performance on KernelBench with Nvidia Triton backend, attaining the best average speedup ratio and outperforming frontier proprietary models including Gemini-3.0-pro and Claude-4.6-opus. We further validate the framework on the MetaX MACA backend, where our Kernel-Smith-MACA-30B surpasses large-scale counterparts such as DeepSeek-V3.2-think and Qwen3-235B-2507-think, highlighting potential for seamless adaptation across heterogeneous platforms. Beyond benchmark results, the same workflow produces upstream contributions to production systems including SGLang and LMDeploy, demonstrating that LLM-driven kernel optimization can transfer from controlled evaluation to practical deployment.",
+      "identifiers": [
+        "SemanticScholar:a9898aff53a9632c18f6ef958e84e08056f0d0dc"
+      ],
+      "semantic_scholar_id": "a9898aff53a9632c18f6ef958e84e08056f0d0dc",
+      "canonical_id": "arXiv:2603.28342",
+      "arxiv_id": "2603.28342",
+      "doi": "10.48550/arXiv.2603.28342",
+      "authors": [
+        "He Du",
+        "Qi-Ming Ge",
+        "Jiakai Hu",
+        "Aijun Yang",
+        "Zheng-Zhou Cai",
+        "Zixian Huang",
+        "Shengkai Yuan",
+        "Qi Cheng",
+        "Xinchen Xie",
+        "Yicheng Chen",
+        "Yi-Ning Li",
+        "Jiaxing Xie",
+        "Hua Dong",
+        "Ya-Guang Wu",
+        "Xiang-Jun Huang",
+        "Jian Yang",
+        "Hui Wang",
+        "Bowen Zhou",
+        "Bo-Wen Li",
+        "Qi-Peng Guo",
+        "Kai Chen"
+      ],
+      "priority": 109,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 9,
+        "citation_count": 9,
+        "total": 109,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 197,
+        "matched_prestigious_venue": null
+      },
+      "reason": "The abstract presents GPU kernel generation and optimization with measured speedups on KernelBench and transfers to production inference systems including SGLang and LMDeploy.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Prompt Compression in the Wild: Measuring Latency, Rate Adherence, and Quality for Faster LLM Inference",
+      "source_url": "https://arxiv.org/abs/2604.02985",
+      "year": 2026,
+      "published": "2026-04-03",
+      "venue": "European Conference on Information Retrieval",
+      "citation_count": 9,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "With the wide adoption of language models for IR -- and specifically RAG systems -- the latency of the underlying LLM becomes a crucial bottleneck, since the long contexts of retrieved passages lead large prompts and therefore, compute increase. Prompt compression, which reduces the size of input prompts while aiming to preserve performance on downstream tasks, has established itself as a cost-effective and low-latency method for accelerating inference in large language models. However, its usefulness depends on whether the additional preprocessing time during generation is offset by faster decoding. We present the first systematic, large-scale study of this trade-off, with thousands of runs and 30,000 queries across several open-source LLMs and three GPU classes. Our evaluation separates compression overhead from decoding latency while tracking output quality and memory usage. LLMLingua achieves up to 18% end-to-end speed-ups, when prompt length, compression ratio, and hardware capacity are well matched, with response quality remaining statistically unchanged across summarization, code generation, and question answering tasks. Outside this operating window, however, the compression step dominates and cancels out the gains. We also show that effective compression can reduce memory usage enough to offload workloads from data center GPUs to commodity cards, with only a 0.3s increase in latency. Our open-source profiler predicts the latency break-even point for each model-hardware setup, providing practical guidance on when prompt compression delivers real-world benefits.",
+      "identifiers": [
+        "SemanticScholar:74816e9b4f6befbe4f5ed057527e174dd6a48980"
+      ],
+      "semantic_scholar_id": "74816e9b4f6befbe4f5ed057527e174dd6a48980",
+      "canonical_id": "arXiv:2604.02985",
+      "arxiv_id": "2604.02985",
+      "doi": "10.1007/978-3-032-21289-4_17",
+      "authors": [
+        "Cornelius Kummer",
+        "Lena Jurkschat",
+        "Michael Färber",
+        "Sahar Vahdati"
+      ],
+      "priority": 109,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 9,
+        "citation_count": 9,
+        "total": 109,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 193,
+        "matched_prestigious_venue": null
+      },
+      "reason": "The abstract measures prompt-compression overhead against LLM decoding latency, memory use, and end-to-end speed on several GPU classes.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Recursive Multi-Agent Systems",
+      "source_url": "https://arxiv.org/abs/2604.25917",
+      "year": 2026,
+      "published": "2026-04-28",
+      "venue": "arXiv.org",
+      "citation_count": 9,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Recursive or looped language models have recently emerged as a new scaling axis by iteratively refining the same model computation over latent states to deepen reasoning. We extend such scaling principle from a single model to multi-agent systems, and ask: Can agent collaboration itself be scaled through recursion? To this end, we introduce RecursiveMAS, a recursive multi-agent framework that casts the entire system as a unified latent-space recursive computation. RecursiveMAS connects heterogeneous agents as a collaboration loop through the lightweight RecursiveLink module, enabling in-distribution latent thoughts generation and cross-agent latent state transfer. To optimize our framework, we develop an inner-outer loop learning algorithm for iterative whole-system co-optimization through shared gradient-based credit assignment across recursion rounds. Theoretical analyses of runtime complexity and learning dynamics establish that RecursiveMAS is more efficient than standard text-based MAS and maintains stable gradients during recursive training. Empirically, we instantiate RecursiveMAS under 4 representative agent collaboration patterns and evaluate across 9 benchmarks spanning mathematics, science, medicine, search, and code generation. In comparison with advanced single/multi-agent and recursive computation baselines, RecursiveMAS consistently delivers an average accuracy improvement of 8.3%, together with 1.2$\\times$-2.4$\\times$ end-to-end inference speedup, and 34.6%-75.6% token usage reduction. Code and Data are provided in https://recursivemas.github.io.",
+      "identifiers": [
+        "SemanticScholar:797777f63417da747628cc3891f88ef7360d7b6f"
+      ],
+      "semantic_scholar_id": "797777f63417da747628cc3891f88ef7360d7b6f",
+      "canonical_id": "arXiv:2604.25917",
+      "arxiv_id": "2604.25917",
+      "doi": "10.48550/arXiv.2604.25917",
+      "authors": [
+        "Xi-Yuan Yang",
+        "Jiaru Zou",
+        "Rui Pan",
+        "Rui-Zhong Qiu",
+        "Pan Lu",
+        "Shizhe Diao",
+        "Jindong Jiang",
+        "Hang-Hang Tong",
+        "Tong Zhang",
+        "Markus J. Buehler",
+        "Jing-Rui He",
+        "James Zou"
+      ],
+      "priority": 109,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 9,
+        "citation_count": 9,
+        "total": 109,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 168,
+        "matched_prestigious_venue": null
+      },
+      "reason": "The abstract reports a recursive latent-space multi-agent framework with 1.2–2.4x end-to-end inference speedup and 34.6–75.6% lower token use than text-based alternatives.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "When Are Experts Misrouted? Counterfactual Routing Analysis in Mixture-of-Experts Language Models",
+      "source_url": "https://arxiv.org/abs/2605.07260",
+      "year": 2026,
+      "published": "2026-05-08",
+      "venue": "arXiv.org",
+      "citation_count": 9,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Mixture-of-Experts (MoE) language models route each token to a small subset of experts, but whether the routes selected by a trained top-$k$ router are good ones is rarely evaluated directly. Holding the model fixed, we compare each standard route against sampled equal-compute alternatives for the same token and score each by the next-token probability it assigns to the realized token in a verified reasoning trajectory. The result is sharply token-conditional: the standard router is well-aligned with route utility on confident tokens but uninformative on the fragile tokens that drive hard reasoning, where lower-loss equal-compute routes consistently exist inside the frozen model but are not selected. The same pattern holds across Qwen3-30B-A3B, GPT-OSS-20B, DeepSeek-V2-Lite, and OLMoE-1B-7B, and follows structurally from how standard top-$k$ training evaluates routing decisions: the language modeling loss scores only the executed route, and load balancing depends only on aggregate routing statistics. A minimal router-only update to the final-layer router, leaving every expert and every other router frozen, is sufficient to shift pass@K on AIME 2024+2025 and HMMT 2025 for both Qwen3-30B-A3B and GPT-OSS-20B, suggesting that at least part of the failure reflects router-reachable misallocation rather than expert capacity alone.",
+      "identifiers": [
+        "SemanticScholar:83b5dcfa0d4bd228b2040ac0c53ffe841d0c37c7"
+      ],
+      "semantic_scholar_id": "83b5dcfa0d4bd228b2040ac0c53ffe841d0c37c7",
+      "canonical_id": "arXiv:2605.07260",
+      "arxiv_id": "2605.07260",
+      "doi": "10.48550/arXiv.2605.07260",
+      "authors": [
+        "Youngsik Yoon",
+        "Si-Wei Wang",
+        "Wei Chen",
+        "Jungseul Ok"
+      ],
+      "priority": 109,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 9,
+        "citation_count": 9,
+        "total": 109,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 158,
+        "matched_prestigious_venue": null
+      },
+      "reason": "The abstract evaluates MoE token-to-expert routing and shows equal-compute alternatives can improve routing on fragile tokens, directly addressing inference-time expert routing.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Beyond tokens: a unified framework for latent communication in LLM-based multi-agent systems",
+      "source_url": "https://arxiv.org/abs/2606.05711",
+      "year": 2026,
+      "published": "2026-06-04",
+      "venue": "arXiv.org",
+      "citation_count": 9,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Multi-agent systems built on large language models (LLMs) have become a prevailing paradigm for tackling complex reasoning, planning, and tool-use tasks. The dominant communication protocol in such systems is natural language: agents exchange messages token-by-token, verbalising their internal reasoning so that peers can read, verify, and respond. While convenient and interpretable, this protocol suffers from three structural drawbacks -- high inference cost, irreversible information loss during discretization, and ambiguity/redundancy of natural language. A growing body of work therefore explores an alternative protocol -- latent communication -- in which agents exchange continuous representations (embeddings, hidden states, or KV-caches) directly, bypassing the bottleneck of text generation. This paper presents a unified framework for organising the rapidly expanding literature on latent communication. We analyse existing methods along three orthogonal axes: (1) WHAT information is communicated (Embeddings, Hidden States, KV-Caches, or other continuous state); (2) WHICH sender-receiver alignment is used (latent-space alignment and layer alignment); and (3) HOW the communicated information is fused into the receiver (concatenation, prepending, mathematical operations, cross-attention, or cache restoration). Under this 3-axis framework, we systematically categorise eighteen representative methods proposed between 2024 and 2026, identify five major design patterns, and surface a set of open challenges -- including cross-architecture alignment, security of latent channels, compression for edge deployment, and the relationship between latent communication and latent chain-of-thought. We hope that this framework both lowers the barrier to entry for new researchers and provides a vocabulary for comparing future work.",
+      "identifiers": [
+        "SemanticScholar:4835d37593a1d758a024ddabf4d1867b054b4655"
+      ],
+      "semantic_scholar_id": "4835d37593a1d758a024ddabf4d1867b054b4655",
+      "canonical_id": "arXiv:2606.05711",
+      "arxiv_id": "2606.05711",
+      "doi": "10.48550/arXiv.2606.05711",
+      "authors": [
+        "Ying-Zhu Liu"
+      ],
+      "priority": 109,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 9,
+        "citation_count": 9,
+        "total": 109,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 131,
+        "matched_prestigious_venue": null
+      },
+      "reason": "The abstract identifies text-token communication cost in LLM multi-agent systems and surveys latent states including KV caches as an alternative communication path.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-5acdcf23cf50",
+    "round": "libimp-5acdcf23cf502e0f-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 10,
+    "round_submission_count": 2,
+    "round_submission_index": 2,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-5acdcf23cf502e0f-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-5acdcf23cf502e0f-pre01.json",
+    "receipt": "sha256:1d13ecdeaa7c90da11102d7301db02d738487d7adb61d95b0ac8ca615287c07d"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-5acdcf23cf50",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

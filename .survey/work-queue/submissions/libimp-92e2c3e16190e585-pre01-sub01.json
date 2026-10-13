@@ -1,0 +1,151 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Rethinking Chain-of-Thought Reasoning for Videos",
+      "source_url": "https://arxiv.org/abs/2512.09616",
+      "year": 2025,
+      "published": "2025-12-10",
+      "venue": "arXiv.org",
+      "citation_count": 9,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Chain-of-thought (CoT) reasoning has been highly successful in solving complex tasks in natural language processing, and recent multimodal large language models (MLLMs) have extended this paradigm to video reasoning. However, these models typically build on lengthy reasoning chains and large numbers of input visual tokens. Motivated by empirical observations from our benchmark study, we hypothesize that concise reasoning combined with a reduced set of visual tokens can be sufficient for effective video reasoning. To evaluate this hypothesis, we design and validate an efficient post-training and inference framework that enhances a video MLLM's reasoning capability. Our framework enables models to operate on compressed visual tokens and generate brief reasoning traces prior to answering. The resulting models achieve substantially improved inference efficiency, deliver competitive performance across diverse benchmarks, and avoid reliance on manual CoT annotations or supervised fine-tuning. Collectively, our results suggest that long, human-like CoT reasoning may not be necessary for general video reasoning, and that concise reasoning can be both effective and efficient. Our code will be released at https://github.com/LaVi-Lab/Rethink_CoT_Video.",
+      "identifiers": [
+        "SemanticScholar:487731c10293c43c6a52333b7160ccb5d1868e4b"
+      ],
+      "semantic_scholar_id": "487731c10293c43c6a52333b7160ccb5d1868e4b",
+      "canonical_id": "arXiv:2512.09616",
+      "arxiv_id": "2512.09616",
+      "doi": "10.48550/arXiv.2512.09616",
+      "authors": [
+        "Yiwu Zhong",
+        "Zi-Yuan Hu",
+        "Yin Li",
+        "Liwei Wang"
+      ],
+      "priority": 109,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 9,
+        "citation_count": 9,
+        "total": 109,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 307,
+        "matched_prestigious_venue": null
+      },
+      "reason": "The abstract reports compressed visual tokens and concise reasoning for video MLLMs, with improved inference efficiency across benchmarks.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Bolmo: Byteifying the Next Generation of Language Models",
+      "source_url": "https://arxiv.org/abs/2512.15586",
+      "year": 2025,
+      "published": "2025-12-17",
+      "venue": "arXiv.org",
+      "citation_count": 9,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Recent advances in generative AI have been largely driven by large language models (LLMs), deep neural networks that operate over discrete units called tokens. To represent text, the vast majority of LLMs use words or word fragments as the tokens, known as subword tokenization. Subword tokenization obscures fine-grained information, which is problematic, especially for scientific data - such as computer code or biological sequences - where meaning depends on the individual characters. Models that instead operate directly on the byte encoding of text avoid these limitations, but until now they have lagged behind subword-based models in performance. Here we introduce Bolmo, a family of fully open byte-level LLMs that approach the capabilities of subword-based systems. Using a two-stage conversion procedure, we transform existing subword-based models into byte-level models with minimal additional training. The resulting models outperform prior byte-level approaches and excel on character-level reasoning tasks, while remaining competitive across standard benchmarks. By efficiently processing byte-level information, these models achieve practical inference speeds and can be adapted at low cost using the existing ecosystem around the source LLM. Our results remove a long-standing performance barrier to end-to-end byte-level language modeling, demonstrating that models operating on raw text encodings can scale competitively while offering advantages in domains requiring fine-grained textual understanding.",
+      "identifiers": [
+        "SemanticScholar:bcf94ad307cdaea3e72fe64ddf3cb710b1f0ef3a"
+      ],
+      "semantic_scholar_id": "bcf94ad307cdaea3e72fe64ddf3cb710b1f0ef3a",
+      "canonical_id": "arXiv:2512.15586",
+      "arxiv_id": "2512.15586",
+      "doi": "10.48550/arXiv.2512.15586",
+      "authors": [
+        "Benjamin Minixhofer",
+        "Tyler Murray",
+        "Tomasz Limisiewicz",
+        "Anna Korhonen",
+        "L. Zettlemoyer",
+        "Noah A. Smith",
+        "E. Ponti",
+        "Luca Soldaini",
+        "Valentin Hofmann"
+      ],
+      "priority": 109,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 9,
+        "citation_count": 9,
+        "total": 109,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 300,
+        "matched_prestigious_venue": null
+      },
+      "reason": "The abstract presents byte-level LLMs and explicitly reports practical inference speeds alongside a low-cost model conversion procedure.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "MHLA: Restoring Expressivity of Linear Attention via Token-Level Multi-Head",
+      "source_url": "https://arxiv.org/abs/2601.07832",
+      "year": 2026,
+      "published": "2026-01-12",
+      "venue": "arXiv.org",
+      "citation_count": 9,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "While the Transformer architecture dominates many fields, its quadratic self-attention complexity hinders its use in large-scale applications. Linear attention offers an efficient alternative, but its direct application often degrades performance, with existing fixes typically re-introducing computational overhead through extra modules (e.g., depthwise separable convolution) that defeat the original purpose. In this work, we identify a key failure mode in these methods: global context collapse, where the model loses representational diversity. To address this, we propose Multi-Head Linear Attention (MHLA), which preserves this diversity by computing attention within divided heads along the token dimension. We prove that MHLA maintains linear complexity while recovering much of the expressive power of softmax attention, and verify its effectiveness across multiple domains, achieving a 3.6\\% improvement on ImageNet classification, a 6.3\\% gain on NLP, a 12.6\\% improvement on image generation, and a 41\\% enhancement on video generation under the same time complexity.",
+      "identifiers": [
+        "SemanticScholar:e88a2fbbcdd3fb02515b5e9b2d696e7aba8d64d3"
+      ],
+      "semantic_scholar_id": "e88a2fbbcdd3fb02515b5e9b2d696e7aba8d64d3",
+      "canonical_id": "arXiv:2601.07832",
+      "arxiv_id": "2601.07832",
+      "doi": "10.48550/arXiv.2601.07832",
+      "authors": [
+        "Ke-Wei Zhang",
+        "Ye Huang",
+        "Yufan Deng",
+        "Jin-Cheng Yu",
+        "Jun-Song Chen",
+        "Huan Ling",
+        "En-Ze Xie",
+        "Da-Quan Zhou"
+      ],
+      "priority": 109,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 9,
+        "citation_count": 9,
+        "total": 109,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 274,
+        "matched_prestigious_venue": null
+      },
+      "reason": "The abstract proposes linear-complexity multi-head linear attention to address quadratic attention cost while retaining expressivity.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-92e2c3e16190",
+    "round": "libimp-92e2c3e16190e585-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 3,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-92e2c3e16190e585-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-92e2c3e16190e585-pre01.json",
+    "receipt": "sha256:0d9b0fc63e3f0a16a4f51867c7e98ca44ef91ae27e8015076183011e61b3876b"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-92e2c3e16190",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

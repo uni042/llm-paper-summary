@@ -1,0 +1,240 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "QuRL: Efficient Reinforcement Learning with Quantized Rollout",
+      "source_url": "https://arxiv.org/abs/2602.13953",
+      "year": 2026,
+      "published": "2026-02-15",
+      "venue": "arXiv.org",
+      "citation_count": 10,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Reinforcement learning with verifiable rewards (RLVR) has become a trending paradigm for training reasoning large language models (LLMs). However, due to the autoregressive decoding nature of LLMs, the rollout process becomes the efficiency bottleneck of RL training, consisting of up to 70\\% of the total training time. In this work, we propose Quantized Reinforcement Learning (QuRL) that uses a quantized actor for accelerating the rollout. We address two challenges in QuRL. First, we propose Adaptive Clipping Range (ACR) that dynamically adjusts the clipping ratio based on the policy ratio between the full-precision actor and the quantized actor, which is essential for mitigating long-term training collapse. Second, we identify the weight update problem, where weight changes between RL steps are extremely small, making it difficult for the quantization operation to capture them effectively. We mitigate this problem through the invariant scaling technique that reduces quantization noise and increases weight update. We evaluate our method with INT8 and FP8 quantization experiments on DeepScaleR and DAPO, and achieve 20% to 80% faster rollout during training.",
+      "identifiers": [
+        "SemanticScholar:447146e90657a8030b696ae2aa4360d9ab169fc6"
+      ],
+      "semantic_scholar_id": "447146e90657a8030b696ae2aa4360d9ab169fc6",
+      "canonical_id": "arXiv:2602.13953",
+      "arxiv_id": "2602.13953",
+      "doi": "10.48550/arXiv.2602.13953",
+      "authors": [
+        "Yuhang Li",
+        "Reena Elangovan",
+        "Xin Dong",
+        "Priyadarshini Panda",
+        "Brucek Khailany"
+      ],
+      "priority": 110,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 10,
+        "citation_count": 10,
+        "total": 110,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 240,
+        "matched_prestigious_venue": null
+      },
+      "reason": "The abstract accelerates autoregressive LLM rollout workers in RL training with INT8/FP8 quantization, reporting 20–80% faster rollouts.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Improving Sampling for Masked Diffusion Models via Information Gain",
+      "source_url": "https://arxiv.org/abs/2602.18176",
+      "year": 2026,
+      "published": "2026-02-20",
+      "venue": "arXiv.org",
+      "citation_count": 10,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Masked Diffusion Models (MDMs) enable flexible decoding orders, yet existing samplers remain largely greedy, selecting locally certain tokens without accounting for their downstream effects. We show that this myopia can increase cumulative uncertainty and lead to suboptimal generation. To address this, we propose the **Info-Gain Sampler**, a training-free decoding method that uses the bidirectional structure of MDMs to balance immediate uncertainty with the information gained over remaining masked positions. Across reasoning, coding, creative writing, and image generation tasks, Info-Gain Sampler consistently outperforms existing MDM samplers, improving average reasoning accuracy by 2.9--11.6 percentage points and achieving a 62.8% average win rate in creative writing. The code is available at https://github.com/yks23/Information-Gain-Sampler.",
+      "identifiers": [
+        "SemanticScholar:f88c1d5decfd2fe980dacbeb9752925448db8f5c"
+      ],
+      "semantic_scholar_id": "f88c1d5decfd2fe980dacbeb9752925448db8f5c",
+      "canonical_id": "arXiv:2602.18176",
+      "arxiv_id": "2602.18176",
+      "doi": "10.48550/arXiv.2602.18176",
+      "authors": [
+        "Kai Yang",
+        "Jayden Teoh",
+        "Kai-Cheng Yang",
+        "Yi-Tong Zhang",
+        "Alex Lamb"
+      ],
+      "priority": 110,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 10,
+        "citation_count": 10,
+        "total": 110,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 235,
+        "matched_prestigious_venue": null
+      },
+      "reason": "The abstract proposes a training-free information-gain decoding sampler for masked diffusion models and evaluates its generation performance.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "What Makes Low-Bit Quantization-Aware Training Work for Reasoning LLMs? A Systematic Study",
+      "source_url": "https://arxiv.org/abs/2601.14888",
+      "year": 2026,
+      "published": "2026-01-21",
+      "venue": "arXiv.org",
+      "citation_count": 9,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Reasoning models excel at complex tasks such as coding and mathematics, yet their inference is often slow and token-inefficient. To improve the inference efficiency, post-training quantization (PTQ) usually comes with the cost of large accuracy drops, especially for reasoning tasks under low-bit settings. In this study, we present a systematic empirical study of quantization-aware training (QAT) for reasoning models. Our key findings include: (1) Knowledge distillation is a robust objective for reasoning models trained via either supervised fine-tuning or reinforcement learning; (2) PTQ provides a strong initialization for QAT, improving accuracy while reducing training cost; (3) Reinforcement learning remains feasible for quantized models given a viable cold start and yields additional gains; and (4) Aligning the PTQ calibration domain with the QAT training domain accelerates convergence and often improves the final accuracy. Finally, we consolidate these findings into an optimized workflow (Reasoning-QAT), and show that it consistently outperforms state-of-the-art PTQ methods across multiple LLM backbones and reasoning datasets. For instance, on Qwen3-0.6B, it surpasses GPTQ by 44.53% on MATH-500 and consistently recovers performance in the 2-bit regime.",
+      "identifiers": [
+        "SemanticScholar:2d808de92c6eff192fcd66820902319f82ac4904"
+      ],
+      "semantic_scholar_id": "2d808de92c6eff192fcd66820902319f82ac4904",
+      "canonical_id": "arXiv:2601.14888",
+      "arxiv_id": "2601.14888",
+      "doi": "10.48550/arXiv.2601.14888",
+      "authors": [
+        "Keyu Lv",
+        "Manyi Zhang",
+        "Xiaobo Xia",
+        "Jingchen Ni",
+        "Shan-Nan Yan",
+        "Xianzhi Yu",
+        "Lu Hou",
+        "Chun Yuan",
+        "Hao-Li Bai"
+      ],
+      "priority": 109,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 9,
+        "citation_count": 9,
+        "total": 109,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 265,
+        "matched_prestigious_venue": null
+      },
+      "reason": "The abstract studies low-bit quantization-aware training for reasoning LLMs, explicitly motivated by slow, token-inefficient inference and post-training quantization.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "VTC-R1: Vision-Text Compression for Efficient Long-Context Reasoning",
+      "source_url": "https://arxiv.org/abs/2601.22069",
+      "year": 2026,
+      "published": "2026-01-29",
+      "venue": "arXiv.org",
+      "citation_count": 9,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Long-context reasoning has significantly empowered large language models (LLMs) to tackle complex tasks, yet it introduces severe efficiency bottlenecks due to the computational complexity. Existing efficient approaches often rely on complex additional training or external models for compression, which limits scalability and discards critical fine-grained information. In this paper, we propose VTC-R1, a new efficient reasoning paradigm that integrates vision-text compression into the reasoning process. Instead of processing lengthy textual traces, VTC-R1 renders intermediate reasoning segments into compact images, which are iteratively fed back into vision-language models as\"optical memory.\"We construct a training dataset based on OpenR1-Math-220K achieving 3.4x token compression and fine-tune representative VLMs-Glyph and Qwen3-VL. Extensive experiments on benchmarks such as MATH500, AIME25, AMC23 and GPQA-D demonstrate that VTC-R1 consistently outperforms standard long-context reasoning. Furthermore, our approach significantly improves inference efficiency, achieving 2.7x speedup in end-to-end latency, highlighting its potential as a scalable solution for reasoning-intensive applications. Our code is available at https://github.com/w-yibo/VTC-R1.",
+      "identifiers": [
+        "SemanticScholar:4404e8e7db1bb7b124cd9b416fac032f2c735806"
+      ],
+      "semantic_scholar_id": "4404e8e7db1bb7b124cd9b416fac032f2c735806",
+      "canonical_id": "arXiv:2601.22069",
+      "arxiv_id": "2601.22069",
+      "doi": "10.48550/arXiv.2601.22069",
+      "authors": [
+        "Yi-Bo Wang",
+        "Yong-Cheng Jing",
+        "Shunyu Liu",
+        "Hao Guan",
+        "Rong-Cheng Tu",
+        "Cheng-Yu Wang",
+        "Jun Huang",
+        "Dacheng Tao"
+      ],
+      "priority": 109,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 9,
+        "citation_count": 9,
+        "total": 109,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 257,
+        "matched_prestigious_venue": null
+      },
+      "reason": "The abstract proposes vision-text compression for long-context reasoning and reports 3.4x token compression and 2.7x end-to-end inference speedup.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Residual Context Diffusion Language Models",
+      "source_url": "https://arxiv.org/abs/2601.22954",
+      "year": 2026,
+      "published": "2026-01-30",
+      "venue": "arXiv.org",
+      "citation_count": 9,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Diffusion Large Language Models (dLLMs) have emerged as a promising alternative to purely autoregressive language models because they can decode multiple tokens in parallel. However, state-of-the-art block-wise dLLMs rely on a\"remasking\"mechanism that decodes only the most confident tokens and discards the rest, effectively wasting computation. We demonstrate that recycling computation from the discarded tokens is beneficial, as these tokens retain contextual information useful for subsequent decoding iterations. In light of this, we propose Residual Context Diffusion (RCD), a module that converts these discarded token representations into contextual residuals and injects them back for the next denoising step. RCD uses a decoupled two-stage training pipeline to bypass the memory bottlenecks associated with backpropagation. We validate our method on both long CoT reasoning (SDAR) and short CoT instruction following (LLaDA) models. We demonstrate that a standard dLLM can be efficiently converted to the RCD paradigm with merely ~300 million tokens. RCD consistently improves frontier dLLMs by 4-11 percentage points in accuracy with minimal extra computation overhead across a wide range of benchmarks. Notably, on the most challenging AIME tasks, RCD nearly doubles baseline accuracy and attains up to 4-5x fewer denoising steps at baseline's peak accuracy.",
+      "identifiers": [
+        "SemanticScholar:701d2e200ddb6e78fd7529170b453c0d2c556c12"
+      ],
+      "semantic_scholar_id": "701d2e200ddb6e78fd7529170b453c0d2c556c12",
+      "canonical_id": "arXiv:2601.22954",
+      "arxiv_id": "2601.22954",
+      "doi": "10.48550/arXiv.2601.22954",
+      "authors": [
+        "Yuezhou Hu",
+        "Harman M. Singh",
+        "Monishwaran Maheswaran",
+        "Hao-Cheng Xi",
+        "C. Hooper",
+        "Jintao Zhang",
+        "Aditya Tomar",
+        "Michael W. Mahoney",
+        "Sewon Min",
+        "Mehrdad Farajtabar",
+        "Kurt Keutzer",
+        "Amir Gholami",
+        "Chen-Feng Xu"
+      ],
+      "priority": 109,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 9,
+        "citation_count": 9,
+        "total": 109,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 256,
+        "matched_prestigious_venue": null
+      },
+      "reason": "The abstract recycles otherwise discarded token computation in diffusion LMs and reports improved generation with minimal additional compute.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-0caf7e88489c",
+    "round": "libimp-0caf7e88489c7b46-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 12,
+    "round_submission_count": 3,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-0caf7e88489c7b46-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-0caf7e88489c7b46-pre01.json",
+    "receipt": "sha256:9096f1eb5683896618aeab6e0f926f129647559f771aae778acea5b390571d55"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-0caf7e88489c",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
