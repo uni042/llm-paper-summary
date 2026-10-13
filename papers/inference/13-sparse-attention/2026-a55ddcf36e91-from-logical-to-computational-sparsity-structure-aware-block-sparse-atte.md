@@ -25,6 +25,8 @@ code: 'https://github.com/DeepSoftwareAnalytics/SabreCoder'
 last_checked: '2026-10-13'
 worker_completed_at: '2026-10-13T07:31:46+09:00'
 worker_run_key: '20261013-0730-scheduled-chat-30/r01'
+last_audited: null
+audit_version: 0
 ---
 
 # From Logical to Computational Sparsity: Structure-Aware Block-Sparse Attention for Long Code Completion
