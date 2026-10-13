@@ -1,7 +1,7 @@
 # Scheduled worker :30 worklist
 
 Worker: `scheduled-chat-30`  
-Generated: `2026-10-13T09:14:51+00:00`
+Generated: `2026-10-13T09:32:03+00:00`
 
 このページはこのworker専用の再構築可能な選択索引です。他のScheduled worker用ページとは候補を重複させません（十分な在庫がある場合）。
 正本は `.survey/work-queue/jobs/`、claim、論文実体、relevance ledgerです。処理直前に最新正本を再確認してください。
@@ -650,7 +650,7 @@ ready総数: **1183** / 未claim総数: **1182** / このworker向け: **200**
 | 423 | 10 | 6 | 8 | arXiv:2512.13751 | MIDUS: Memory-Infused Depth Up-Scaling | 2025-12-15 | arXiv.org | 0 | 8 | dense-to-MoE conversion / conditional FFN computation / expert routing, 正確な注意計算 / 入出力指向注意 / GPUカーネル最適化 / FlashAttention | [source](https://arxiv.org/abs/2512.13751) |
 | 424 | 10 | 6 | 8 | arXiv:2605.19506 | EventPrune: Cascaded Event-Assisted Token Pruning for Efficient First-Person Dynamic Spatial Reasoning | 2026-05-19 | arXiv.org | 0 | 8 | KV cache memory management / streaming inference / attention sinks / length extrapolation, 正確な注意計算 / 入出力指向注意 / GPUカーネル最適化 / FlashAttention | [source](https://arxiv.org/abs/2605.19506) |
 | 425 | 0 | 6 | 8 | arXiv:2511.00315 | Language Modeling With Factorization Memory | 2025-10-31 | arXiv.org | 0 | 8 | 正確な注意計算 / 入出力指向注意 / GPUカーネル最適化 / FlashAttention | [source](https://arxiv.org/abs/2511.00315) |
-| 426 | 10 | 6 | 8 | DOI:10.48550/arXiv.2510.10528 | Merlin's Whisper: Enabling Efficient Reasoning in Large Language Models via Black-box Persuasive Prompting | 2025-10-12 | Annual Meeting of the Association for Computational Linguistics | 0 | 8 | Conditional Computation | [source](https://arxiv.org/abs/2510.10528) |
+| 426 | 2 | 6 | 8 | DOI:10.1016/j.procs.2024.10.182 | Fused Transformers: Fused Information of Arabic long Article for Summarization | 2024 | International Conference on Arabic Computational Linguistics | 2 | 8 | inference-systems, sparse attention / long-context Transformer, 大規模モデル学習／分散学習メモリ最適化／DeepSpeed | [source](https://doi.org/10.1016/j.procs.2024.10.182) |
 | 427 | 0 | 6 | 8 | SemanticScholar:dcc238451cf07c14206004753e9da15e1e46619d | Language Models Need Sleep |  |  | 0 | 8 | 正確な注意計算 / 入出力指向注意 / GPUカーネル最適化 / FlashAttention | [source](https://www.semanticscholar.org/paper/dcc238451cf07c14206004753e9da15e1e46619d) |
 | 428 | 101 | 6 | 8 | arXiv:2606.01294 | Don't Read Everything: A Curvature-Conditioned Query for Linear Attention | 2026-05-31 | arXiv.org | 1 | 8 | state space models / selective SSM / recurrent inference / hardware-aware sequence modeling | [source](https://arxiv.org/abs/2606.01294) |
 | 429 | 5 | 6 | 8 | arXiv:2402.17507 | Interactive Multi-Head Self-Attention with Linear Complexity | 2024-02-27 | arXiv.org | 5 | 8 | sparse attention / long-context Transformer | [source](https://arxiv.org/abs/2402.17507) |

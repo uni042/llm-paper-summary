@@ -1,7 +1,7 @@
 # Scheduled worker :00 worklist
 
 Worker: `scheduled-chat-00`  
-Generated: `2026-10-13T09:14:51+00:00`
+Generated: `2026-10-13T09:32:03+00:00`
 
 このページはこのworker専用の再構築可能な選択索引です。他のScheduled worker用ページとは候補を重複させません（十分な在庫がある場合）。
 正本は `.survey/work-queue/jobs/`、claim、論文実体、relevance ledgerです。処理直前に最新正本を再確認してください。
@@ -519,7 +519,7 @@ ready総数: **1183** / 未claim総数: **1182** / このworker向け: **200**
 | 292 | 1 | 7 | 9 | SemanticScholar:5ba021e294c898420b72d475f62d80b6d3ae2fbb | O P S ERVE : Opportunistic LLM Inference over Fragmented GPU Capacity in HPC Systems |  |  | 1 | 9 | KV Cache Offload / Recomputation, LLM Serving / Scheduling / Disaggregation, dynamic-pd-disaggregation, llm-serving-scheduling-disaggregation | [source](https://www.semanticscholar.org/paper/5ba021e294c898420b72d475f62d80b6d3ae2fbb) |
 | 293 | 101 | 7 | 9 | arXiv:2512.14082 | A Unified Sparse Attention via Multi-Granularity Compression | 2025-12-16 | arXiv.org | 1 | 9 | KV cache memory management / streaming inference / attention sinks / length extrapolation, inference-systems, long-context inference / dynamic sparse attention / prefill acceleration, 注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層, 疎注意／長文脈学習 | [source](https://arxiv.org/abs/2512.14082) |
 | 294 | 10 | 7 | 9 | arXiv:2605.28053 | RW-TTT: Batched Serving for Request-Owned Test-Time Training State | 2026-05-27 | arXiv.org | 0 | 9 | LLM Serving / Scheduling / Disaggregation, LLM serving / workload co-location / scheduling / preemption / KV-cache management, LLM serving scheduling / chunked prefill / iteration-level scheduling / pipeline parallelism, LLM serving scheduling / hybrid QoS / KV cache management | [source](https://arxiv.org/abs/2605.28053) |
-| 295 | 15 | 7 | 9 | arXiv:2503.06362 | Adaptive Audio-Visual Speech Recognition via Matryoshka-Based Multimodal LLMs | 2025-03-09 | Automatic Speech Recognition & Understanding | 15 | 9 | 12-multimodal-inference | [source](https://arxiv.org/abs/2503.06362) |
+| 295 | 10 | 7 | 9 | DOI:10.48550/arXiv.2508.17627 | Stop Spinning Wheels: Mitigating LLM Overthinking via Mining Patterns for Early Reasoning Exit | 2025-08-25 | arXiv.org | 10 | 9 | Conditional Computation | [source](https://doi.org/10.48550/arXiv.2508.17627) |
 | 296 | 18 | 7 | 9 | arXiv:2410.01651 | Efficient Length-Generalizable Attention via Causal Retrieval for Long-Context Language Modeling | 2024-10-02 | International Conference on Machine Learning | 8 | 9 | KV cache memory management / streaming inference / attention sinks / length extrapolation, distributed attention / sequence parallelism / blockwise attention / long-context transformers, inference-systems, sparse attention / long-context Transformer, state space models / selective SSM / recurrent inference / hardware-aware sequence modeling, 正確な注意計算 / 入出力指向注意 / GPUカーネル最適化 / FlashAttention | [source](https://arxiv.org/abs/2410.01651) |
 | 297 | 1 | 7 | 9 | arXiv:2405.05957 | OpenBA-V2: Reaching 77.3% High Compression Ratio with Fast Multi-Stage Pruning | 2024-05-09 | arXiv.org | 1 | 9 | inference-systems, 大規模言語モデル重み量子化 / 混合精度 / 疎量子化 | [source](https://arxiv.org/abs/2405.05957) |
 | 298 | 112 | 7 | 9 | SemanticScholar:89654f548e541a8ef233be6585316ce6cc201535 | Structured Pruning Learns Compact and Accurate Models | 2021 |  | 112 | 9 | inference-systems | [source](https://www.semanticscholar.org/paper/89654f548e541a8ef233be6585316ce6cc201535) |
