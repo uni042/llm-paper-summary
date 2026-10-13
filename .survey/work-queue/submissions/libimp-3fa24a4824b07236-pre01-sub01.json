@@ -1,0 +1,185 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "STAC: Plug-and-Play Spatio-Temporal Aware Cache Compression for Streaming 3D Reconstruction",
+      "source_url": "https://arxiv.org/abs/2603.20284",
+      "year": 2026,
+      "published": "2026-03-18",
+      "venue": "arXiv.org",
+      "citation_count": 8,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Online 3D reconstruction from streaming inputs requires both long-term temporal consistency and efficient memory usage. Although causal variants of VGGT address this challenge through a key-value (KV) cache mechanism, the cache grows linearly with the stream length, creating a major memory bottleneck. Under limited memory budgets, early cache eviction significantly degrades reconstruction quality and temporal consistency. In this work, we observe that attention in causal transformers for 3D reconstruction exhibits intrinsic spatio-temporal sparsity. Based on this insight, we propose STAC, a Spatio-Temporally Aware Cache Compression framework for streaming 3D reconstruction with large causal transformers. STAC consists of three key components: (1) a Working Temporal Token Caching mechanism that preserves long-term informative tokens using decayed cumulative attention scores; (2) a Long-term Spatial Token Caching scheme that compresses spatially redundant tokens into voxel-aligned representations for memory-efficient storage; and (3) a Chunk-based Multi-frame Optimization strategy that jointly processes consecutive frames to improve temporal coherence and GPU efficiency. Extensive experiments show that STAC achieves state-of-the-art reconstruction quality while reducing memory consumption by nearly 10x and accelerating inference by 4x, substantially improving the scalability of real-time 3D reconstruction in streaming settings.",
+      "identifiers": [
+        "SemanticScholar:965256b0d8f7215a6e5ec81576b35ce6c49458d7"
+      ],
+      "semantic_scholar_id": "965256b0d8f7215a6e5ec81576b35ce6c49458d7",
+      "canonical_id": "arXiv:2603.20284",
+      "arxiv_id": "2603.20284",
+      "doi": "10.48550/arXiv.2603.20284",
+      "authors": [
+        "Runze Wang",
+        "Yuxuan Song",
+        "You-Cheng Cai",
+        "Li-Gang Liu"
+      ],
+      "priority": 108,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 8,
+        "citation_count": 8,
+        "total": 108,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 209,
+        "matched_prestigious_venue": null
+      },
+      "reason": "STAC compresses causal-transformer KV caches using temporal importance and voxel-aligned spatial tokens, with chunked GPU processing; its 10x lower memory and 4x faster inference are directly relevant cache/runtime mechanisms.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "GradMem: Learning to Write Context into Memory with Test-Time Gradient Descent",
+      "source_url": "https://arxiv.org/abs/2603.13875",
+      "year": 2026,
+      "published": "2026-03-14",
+      "venue": "arXiv.org",
+      "citation_count": 7,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Many large language model applications require conditioning on long contexts. Transformers typically support this by storing a large per-layer KV-cache of past activations, which incurs substantial memory overhead. A desirable alternative is compressive memory: read a context once, store it in a compact state, and answer many queries from that state. We study this in a context removal setting, where the model must generate an answer without access to the original context at inference time. We introduce GradMem, which writes context into memory via per-sample test-time optimization. Given a context, GradMem performs a few steps of gradient descent on a small set of prefix memory tokens while keeping model weights frozen. GradMem explicitly optimizes a model-level self-supervised context reconstruction loss, resulting in a loss-driven write operation with iterative error correction, unlike forward-only methods. On associative key--value retrieval, GradMem outperforms forward-only memory writers with the same memory size, and additional gradient steps scale capacity much more effectively than repeated forward writes. We further show that GradMem transfers beyond synthetic benchmarks: with pretrained language models, it attains competitive results on natural language tasks including bAbI and SQuAD variants, relying only on information encoded in memory.",
+      "identifiers": [
+        "SemanticScholar:82c0b4a4c4e9fd48077f97ece80956ae1e7d97b3"
+      ],
+      "semantic_scholar_id": "82c0b4a4c4e9fd48077f97ece80956ae1e7d97b3",
+      "canonical_id": "arXiv:2603.13875",
+      "arxiv_id": "2603.13875",
+      "doi": "10.48550/arXiv.2603.13875",
+      "authors": [
+        "Yuri Kuratov",
+        "M. Kairov",
+        "A. Bulatov",
+        "I. Rodkin",
+        "M. Burtsev"
+      ],
+      "priority": 107,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 7,
+        "citation_count": 7,
+        "total": 107,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 213,
+        "matched_prestigious_venue": null
+      },
+      "reason": "GradMem writes long context into a small set of optimized prefix-memory tokens, replacing a large persistent KV cache for repeated queries; it directly targets LLM context memory footprint.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Fine-Grained Post-Training Quantization for Large Vision Language Models with Quantization-Aware Integrated Gradients",
+      "source_url": "https://arxiv.org/abs/2603.17809",
+      "year": 2026,
+      "published": "2026-03-18",
+      "venue": "arXiv.org",
+      "citation_count": 7,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Vision Language Models (LVLMs) have achieved remarkable success in a range of downstream tasks that require multimodal interaction, but their capabilities come with substantial computational and memory overhead, which hinders practical deployment. Among numerous acceleration techniques, post-training quantization is a popular and effective strategy for reducing memory cost and accelerating inference. However, existing LVLM quantization methods typically measure token sensitivity at the modality level, which fails to capture the complex cross-token interactions and falls short in quantitatively measuring the quantization error at the token level. As tokens interact within the model, the distinction between modalities gradually diminishes, suggesting the need for fine-grained calibration. Inspired by axiomatic attribution in mechanistic interpretability, we introduce a fine-grained quantization strategy on Quantization-aware Integrated Gradients (QIG), which leverages integrated gradients to quantitatively evaluate token sensitivity and push the granularity from modality level to token level, reflecting both inter-modality and intra-modality dynamics. Extensive experiments on multiple LVLMs under both W4A8 and W3A16 settings show that our method improves accuracy across models and benchmarks with negligible latency overhead. For example, under 3-bit weight-only quantization, our method improves the average accuracy of LLaVA-onevision-7B by 1.60%, reducing the gap to its full-precision counterpart to only 1.33%. The code is available at https://github.com/ucas-xiang/QIG.",
+      "identifiers": [
+        "SemanticScholar:eaf9ae5b26f10bb8260eced2cbea061b544466bd"
+      ],
+      "semantic_scholar_id": "eaf9ae5b26f10bb8260eced2cbea061b544466bd",
+      "canonical_id": "arXiv:2603.17809",
+      "arxiv_id": "2603.17809",
+      "doi": "10.48550/arXiv.2603.17809",
+      "authors": [
+        "Zi-Wei Xiang",
+        "Fanhu Zeng",
+        "Hong-Jian Fang",
+        "Rui-Qi Wang",
+        "Renxing Chen",
+        "Ya-Nan Zhu",
+        "Yi Chen",
+        "Pei-Pei Yang",
+        "Xu-Yao Zhang"
+      ],
+      "priority": 107,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 7,
+        "citation_count": 7,
+        "total": 107,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 209,
+        "matched_prestigious_venue": null
+      },
+      "reason": "QIG-based post-training quantization scores token sensitivity to preserve LVLM accuracy at 3-bit weights with negligible latency overhead; it targets inference memory and deployment cost.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Compute-Optimal Resource Allocation for Distributed Large Language Model Inference in Cloud-Scale Intelligent Systems",
+      "source_url": "https://doi.org/10.1109/ISDFS69419.2026.11458958",
+      "year": 2026,
+      "published": "2026-03-19",
+      "venue": "International Symposium on Digital Forensics and Security",
+      "citation_count": 7,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Test-time compute scaling enables LLMs to improve reasoning by allocating additional inference resources. While techniques like best-of-N sampling and tree search show remarkable gains, existing work focuses on single-GPU scenarios, neglecting distributed deployment challenges. We introduce AdaptiScale, a framework for compute-optimal resource allocation in distributed LLM serving with test-time scaling. Our approach combines: (1) a lightweight difficulty estimator achieving 84% accuracy with <2ms latency, (2) hierarchical scheduling balancing parallel sampling across nodes, and (3) elastic scaling adapting cluster topology to workload patterns. Evaluation on GSM8K, MATH, and HumanEval using Mistral-7B on NVIDIA A4000 GPUs shows AdaptiScale achieves 20% higher throughput and 2.1 × better cost-efficiency versus static best-of-16 baseline. We achieve 67.2% accuracy on GSM8K (vs 65.1% static baseline) while reducing cost from $0.85 to $0.52 per 1000 requests. Simulated 4-node cluster deployment demonstrates 90% scaling efficiency, validating production viability for cost-effective reasoning-enhanced LLM deployment.",
+      "identifiers": [
+        "SemanticScholar:eec701afd7041e706a567f7861fde26326add9e6"
+      ],
+      "semantic_scholar_id": "eec701afd7041e706a567f7861fde26326add9e6",
+      "doi": "10.1109/ISDFS69419.2026.11458958",
+      "canonical_id": "DOI:10.1109/ISDFS69419.2026.11458958",
+      "authors": [
+        "Tejas Pravinbhai Patel",
+        "Sandeep Shivam",
+        "Viswanathan Ranganathan"
+      ],
+      "priority": 107,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 7,
+        "citation_count": 7,
+        "total": 107,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 208,
+        "matched_prestigious_venue": null
+      },
+      "reason": "AdaptiScale combines a <2 ms difficulty estimator, hierarchical multi-node scheduling, and elastic cluster scaling for test-time LLM inference; the abstract reports 20% higher throughput and 2.1x cost efficiency.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-3fa24a4824b0",
+    "round": "libimp-3fa24a4824b07236-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 4,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-3fa24a4824b07236-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-3fa24a4824b07236-pre01.json",
+    "receipt": "sha256:7cd54d45295873aee6225f40c17aea359fa409e8ea410d78811e5f07145bb245"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-3fa24a4824b0",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
