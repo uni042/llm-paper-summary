@@ -16,7 +16,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 方向は異なるが、いずれも**KV cacheがdecode時のmemory容量やmemory bandwidthのボトルネックになることを直接緩和する**研究として扱う。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（209本）
+## 自動生成の論文一覧（210本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -186,6 +186,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 - **2026-07 · [HiKV: Hierarchical Importance-Aware KV Cache with Hardware Acceleration for LLM Decoding](2026-2607.22389-hikv.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   HiKVは、長文脈デコードでKVキャッシュが外部メモリアクセスの大部分を占める問題に対し、トークン単位と要素単位という二つの独立した冗長性を順番に削るアルゴリズム・ハードウェア協調設計である。1%以内の精度低下という同一条件で外部メモリアクセスを平均7.17倍削減し、注意計算を平均5.70倍、最大7.95倍高速化し、エネルギーを80〜90%削減する。
+
+- **2026-06 · [ReasonAlloc: Hierarchical Decoding-Time KV Cache Budget Allocation for Reasoning Models](2026-2606.11164-reasonalloc-hierarchical-decoding-time-kv-cache-budget-allocation-for-re.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  ReasonAllocは、長い思考過程を逐次生成する推論モデルにおいて、復号中に増え続ける鍵・値キャッシュ（KVキャッシュ）の保持予算をどの層・どの注意頭へ割り当てるかを最適化する手法である。まずモデルごとに少数の入力を使って、各層が注意重みの93%を保持するのに必要な履歴トークン数を測り、層別の予算比率を事前校正する。
 
 - **2026-06 · [Multi-Segment Attention: Enabling Efficient KV-Cache Management for Faster Large Language Model Serving](2026-2606.02964-multi-segment-attention-enabling-efficient-kv-cache-management-for-faster-large-language-model-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：1  

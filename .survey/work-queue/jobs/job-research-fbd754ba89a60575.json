@@ -35,10 +35,15 @@
   "selection_reason": "ReasonAlloc is a training-free inference-time method that compresses reasoning-model KV caches by assigning nonuniform budgets across layers and dynamically across heads during autoregressive decoding. This directly targets serving memory and throughput constraints for long reasoning generations.",
   "semantic_scholar_id": "4ccc783aa6a8b6bffd47ebbe847673464e1e5d1a",
   "source_url": "https://arxiv.org/abs/2606.11164",
-  "status": "ready",
+  "status": "superseded",
   "title": "ReasonAlloc: Hierarchical Decoding-Time KV Cache Budget Allocation for Reasoning Models",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-10-13T03:48:45+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2606.11164-reasonalloc-hierarchical-decoding-time-kv-cache-budget-allocation-for-re.md",
+  "represented_canonical_id": "arXiv:2606.11164",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
