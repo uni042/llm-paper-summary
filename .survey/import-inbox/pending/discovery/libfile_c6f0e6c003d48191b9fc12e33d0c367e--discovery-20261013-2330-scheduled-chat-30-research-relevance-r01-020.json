@@ -1,0 +1,26 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261013-2330-scheduled-chat-30/r01",
+  "reference_main_sha": "cd8ac105a2508345eda7020aeb123495a98ef01e",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2511.21285",
+      "identity_tokens": [
+        "arxiv:2511.21285"
+      ],
+      "title": "PEFT-Bench: A Parameter-Efficient Fine-Tuning Methods Benchmark",
+      "reason": "自己回帰LLMに対するパラメータ効率のよい微調整方式を27のNLPデータセットで比較するベンチマーク。指標に推論速度も含むが、提案の中心は学習可能パラメータ数・学習メモリと性能の評価枠組みであり、新しい推論カーネル・実行スケジューラ・圧縮配信方式を示すものではない。凍結中の学習最適化領域の評価研究として除外する。",
+      "source_url": "https://arxiv.org/abs/2511.21285",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T23:36:16+09:00",
+      "last_checked_at": "2026-10-13T23:36:16+09:00",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance",
+      "worklist_rank": 20
+    }
+  ]
+}
