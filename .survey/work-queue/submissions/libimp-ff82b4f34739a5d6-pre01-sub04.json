@@ -1,0 +1,173 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Power-based Partial Attention: Bridging Linear-Complexity and Full Attention",
+      "source_url": "https://arxiv.org/abs/2601.17334",
+      "year": 2026,
+      "published": "2026-01-24",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "It is widely accepted from transformer research that\"attention is all we need\", but the amount of attention required has never been systematically quantified. Is quadratic $O(L^2)$ attention necessary, or is there a sub-quadratic attention mechanism that can achieve comparable performance? To answer this question, we introduce power-based partial attention (PPA), an attention mechanism of order $O(L^{1+p})$, where $0 \\leq p \\leq 1$, such that $p=0$ corresponds to sliding window attention with linear complexity, and $p=1$ corresponds to full attention. With this attention construction, we can explore how transformer architecture performance varies as a function of the attention scaling behavior controlled by $p$. The overall trend from our experiments shows an S-curve-like behavior where the performance transitions from sliding-window (linear-complexity) attention to full attention over a narrow window of $p$ values, and plateaus as $p$ approaches $1$. In our experiments, we show that there exists $0",
+      "identifiers": [
+        "SemanticScholar:e71eba1f1b0cd9341551698fec9f2e212f7ef000"
+      ],
+      "semantic_scholar_id": "e71eba1f1b0cd9341551698fec9f2e212f7ef000",
+      "canonical_id": "arXiv:2601.17334",
+      "arxiv_id": "2601.17334",
+      "doi": "10.48550/arXiv.2601.17334",
+      "authors": [
+        "Yu-Feng Huang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 262,
+        "matched_prestigious_venue": null
+      },
+      "reason": "PPA interpolates between linear-window and full attention and reports comparable results at subquadratic complexity, a direct attention-efficiency contribution.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Superlinear Multi-Step Attention",
+      "source_url": "https://arxiv.org/abs/2601.18401",
+      "year": 2026,
+      "published": "2026-01-26",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "In this paper, we propose \\textbf{Superlinear attention}, a fully trainable multi-step attention architecture that achieves subquadratic complexity for long sequences while preserving \\textbf{random context access} (a.k.a.\\ structural non-exclusion): no eligible token position is structurally excluded from being selected for attention. Superlinear attention reformulates standard causal self-attention as a multi-step search problem with $N$ steps, yielding an overall complexity of $O(L^{1+\\frac{1}{N}})$. To illustrate the architecture, we present a baseline $N=2$ implementation, which is algorithmically analogous to standard jump search. In this $O(L^{3/2})$ instantiation, the first step performs $O(L^{3/2})$ span-search to select relevant spans of the sequence, and the second step applies $O(L^{3/2})$ span-attention (standard attention restricted to the selected spans). In an upscaled $O(L^{1.54})$ configuration for robustness, we achieve an average decoding throughput of 114 tokens/sec at 1M context length and 80 tokens/sec at 10M context in our implementation on a modified 30B hybrid MoE model on a single B200 GPU. With limited training, we also obtain strong performance on the NIAH (Needle In A Haystack) task up to 256K context length, demonstrating that the routed span selection is learnable end-to-end. This paper emphasizes architectural formulation, scaling analysis, and systems feasibility, and presents initial validation; comprehensive quality evaluations across diverse long-context tasks are left to future work.",
+      "identifiers": [
+        "SemanticScholar:7b16e80bd02c8443d8c230362c3dd79734d7c9ed"
+      ],
+      "semantic_scholar_id": "7b16e80bd02c8443d8c230362c3dd79734d7c9ed",
+      "canonical_id": "arXiv:2601.18401",
+      "arxiv_id": "2601.18401",
+      "doi": "10.48550/arXiv.2601.18401",
+      "authors": [
+        "Yu-Feng Huang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 260,
+        "matched_prestigious_venue": null
+      },
+      "reason": "The paper proposes subquadratic attention for long-context language models and reports decoding throughput at million-token contexts.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "RoMeo: Mitigating Dual-dimensional Outliers with Rotated Mixed Precision Quantization",
+      "source_url": "https://doi.org/10.1145/3774934.3786419",
+      "year": 2026,
+      "published": "2026-01-28",
+      "venue": "ACM SIGPLAN Symposium on Principles & Practice of Parallel Programming",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Mixed precision quantization has been adopted to accelerate large language models (LLMs) serving by leveraging high-throughput low-precision compute units in GPUs while preserving outliers in higher precision to maintain model accuracy. However, existing methods focus on mitigating single-dimensional channel-wise outliers, leading to model accuracy degradation when scaled to 4-bit precision. In this paper, we present an algorithm-system co-design to effectively handle dual-dimensional outliers across both channel and token dimensions in LLMs. We introduce a novel rotation-based mixed precision quantization algorithm that suppresses and migrates channel-wise outliers to the token dimension. Based on this algorithm, we propose RoMeo, an efficient LLM serving system designed to overcome the unique system challenges posed by sparse computation pattern and dynamic outlier detection inherent in token-wise outlier handling. Extensive evaluations across various LLMs demonstrate that RoMeo improves quantized model accuracy by up to 5.17% compared to state-of-the-art methods QuaRot and MixQ, while maintaining efficiency comparable to uniform precision quantizations, achieving up to 2.10 × end-to-end speedup over half-precision baseline. RoMeo is available at https://github.com/thu-pacman/RoMeo.",
+      "identifiers": [
+        "SemanticScholar:b43f72f8f79e48cc6efae9d3aee8ac9ecf9ff5d0"
+      ],
+      "semantic_scholar_id": "b43f72f8f79e48cc6efae9d3aee8ac9ecf9ff5d0",
+      "doi": "10.1145/3774934.3786419",
+      "canonical_id": "DOI:10.1145/3774934.3786419",
+      "authors": [
+        "Qihao Zhang",
+        "Mingliang Tang",
+        "Mingshu Zhai",
+        "Kinman Lei",
+        "Ji-Dong Zhai"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 258,
+        "matched_prestigious_venue": null
+      },
+      "reason": "The official PPoPP abstract connects dual-dimensional mixed-precision quantization with LLM serving and reports up to 2.10x end-to-end speedup.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Post-Training Probability Manifold Correction via Structured SVD Pruning and Self-Referential Distillation",
+      "source_url": "https://arxiv.org/abs/2602.00372",
+      "year": 2026,
+      "published": "2026-01-30",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models are expensive to deploy. We introduce Sparse Knowledge Distillation (SparseKD), a post-training method that compresses transformer models by combining structured SVD pruning with self-referential knowledge distillation. The key insight is simple: instead of using an external teacher, the model teaches itself by matching its own probability distribution from before compression. This self-referential setup enables surprisingly strong quality recovery after aggressive pruning. Our experiments reveal an unexpected finding: self-referential distillation alone, applied post-training under an identical objective and fixed calibration dataset, improves model quality by 39% relative to the original converged checkpoint. When combined with structured pruning, SparseKD achieves 15-65% parameter reduction with acceptable quality trade-offs. Kernel profiling shows that speedups arise entirely from reduced dense matrix multiplication in feed-forward layers while attention remains unchanged, making this approach complementary to attention optimizations. We validate across two model families (0.6B and 3.8B parameters) with multi-seed experiments confirming high reproducibility. SparseKD requires no external super-teacher, no architectural changes, and no custom inference kernels, making it immediately deployable with existing infrastructure.",
+      "identifiers": [
+        "SemanticScholar:9477bc770855b773bac3d3cd3b07428af09919f5"
+      ],
+      "semantic_scholar_id": "9477bc770855b773bac3d3cd3b07428af09919f5",
+      "canonical_id": "arXiv:2602.00372",
+      "arxiv_id": "2602.00372",
+      "doi": "10.48550/arXiv.2602.00372",
+      "authors": [
+        "Aaron R. Flouro",
+        "Shawn P. Chadwick"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 256,
+        "matched_prestigious_venue": null
+      },
+      "reason": "SparseKD uses structured SVD pruning with self-distillation; the abstract reports 15-65% parameter reduction and identifies reduced dense inference computation.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-ff82b4f34739",
+    "round": "libimp-ff82b4f34739a5d6-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 19,
+    "round_submission_count": 4,
+    "round_submission_index": 4,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-ff82b4f34739a5d6-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-ff82b4f34739a5d6-pre01.json",
+    "receipt": "sha256:41e85712b959ec35a2502af35b0670634c5fc0e5dc61b1d46435a29d05db28a6"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-ff82b4f34739",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

@@ -1,0 +1,241 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Profiling Large Language Model Inference on Apple Silicon: A Quantization Perspective",
+      "source_url": "https://arxiv.org/abs/2508.08531",
+      "year": 2025,
+      "published": "2025-08-12",
+      "venue": "arXiv.org",
+      "citation_count": 7,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "A systematic understanding of Apple Silicon is lacking in the current landscape of hardware efficiency; research focus is largely centered on accelerating GPUs for large-scale training or inference on CUDA devices. This paper investigates Apple Silicon's unique memory architecture that offers a unified memory integrating CPU and GPU memory and its implications for on-device LLM inference. We decipher myths about whether Apple Silicon is efficient for on-device inference compared to competitors such as NVIDIA GPUs by directly conducting latency and throughput comparison benchmarks. We explain the performance gap between them through profiling low level hardware metrics - ALU utilization, memory bandwidth, buffer usage, cache residency etc. at runtime. We draw several insights regarding performance bottlenecks such as dequantization overhead, compute throughput and memory bandwidth. We debunk existing false claims regarding large language model inference such as compressing models to lower bit precision is a defacto promise for faster inference across all hardware platforms. We find that the large unified memory enables Apple Silicon to be both cost effective and efficient against NVIDIA GPUs for ultra large language models. Our large scale evaluation on 5 hardware testbeds incorporating three Apple M-series devices: M2 Ultra, M2 Max and M4 Pro and two NVIDIA GPUs: NVIDIA RTX A6000, a multi GPU setup with 2xNVIDIA RTX A6000, 5 model scales ranging from 8B to 405B parameters and 14 quantization schemes gives an understanding of how Apple Silicon fits within the paradigm of on-device LLM inference. Our analysis reveals multiple resource interdependencies and unexpected findings, while also quantifying established insights. To the best of our knowledge, this study makes the first attempt to present a thorough characterization and analysis of Apple Silicon for on-device inference.",
+      "identifiers": [
+        "SemanticScholar:70662b4a4a5f239f17ec2414944bf2e46eb62dfc"
+      ],
+      "semantic_scholar_id": "70662b4a4a5f239f17ec2414944bf2e46eb62dfc",
+      "canonical_id": "arXiv:2508.08531",
+      "arxiv_id": "2508.08531",
+      "doi": "10.48550/arXiv.2508.08531",
+      "authors": [
+        "A. Benazir",
+        "F. Lin"
+      ],
+      "priority": 7,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 7,
+        "citation_count": 7,
+        "total": 7,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 427,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Benchmarks LLM inference and quantization performance across Apple Silicon and GPU contexts.",
+      "library_body_check": "abstract_screen; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "SpikingBrain: Spiking Brain-inspired Large Models",
+      "source_url": "https://arxiv.org/abs/2509.05276",
+      "year": 2025,
+      "published": "2025-09-05",
+      "venue": "Trans. Mach. Learn. Res.",
+      "citation_count": 7,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Mainstream Transformer-based large language models face major efficiency bottlenecks: training computation scales quadratically with sequence length, and inference memory grows linearly, limiting long-context processing. Building large models on non-NVIDIA platforms also poses challenges for stable and efficient training. To address this, we introduce SpikingBrain, a family of brain-inspired models designed for efficient long-context training and inference. SpikingBrain leverages the MetaX GPU cluster and focuses on three aspects: (1) Model Architecture: linear and hybrid-linear attention architectures with adaptive spiking neurons; (2) Algorithmic Optimizations: an efficient, conversion-based training pipeline and a dedicated spike coding framework; (3) System Engineering: customized training frameworks, operator libraries, and parallelism strategies tailored to MetaX hardware. Using these techniques, we develop two models: SpikingBrain-7B, a linear LLM, and SpikingBrain-76B, a hybrid-linear MoE LLM. These models demonstrate the feasibility of large-scale LLM development on non-NVIDIA platforms, and training remains stable for weeks on hundreds of MetaX GPUs with Model FLOPs Utilization at expected levels. SpikingBrain achieves performance comparable to open-source Transformer baselines while using only about 150B tokens for continual pre-training. Our models also significantly improve long-context efficiency and deliver inference with (partially) constant memory and event-driven spiking behavior. For example, SpikingBrain-7B attains over 100x speedup in Time to First Token for 4M-token sequences. Furthermore, the proposed spiking scheme achieves 69.15 percent sparsity, enabling low-power operation. Overall, this work demonstrates the potential of brain-inspired mechanisms to drive the next generation of efficient and scalable large model design.",
+      "identifiers": [
+        "SemanticScholar:af02f432602bea410427399069ed8e7f5250c3e0"
+      ],
+      "semantic_scholar_id": "af02f432602bea410427399069ed8e7f5250c3e0",
+      "canonical_id": "arXiv:2509.05276",
+      "arxiv_id": "2509.05276",
+      "authors": [
+        "Yu-Qi Pan",
+        "Yu Feng",
+        "J. Zhuang",
+        "Siyuan Ding",
+        "Han Xu",
+        "Ze-Hao Liu",
+        "Bo-Han Sun",
+        "Yu-Hong Chou",
+        "Xue-Rui Qiu",
+        "A. Deng",
+        "Anjie Hu",
+        "Shu-Rong Wang",
+        "Peng Zhou",
+        "Man Yao",
+        "Ji-Bin Wu",
+        "Jian Yang",
+        "Bo-Xing Xu",
+        "Guo-Qi Li"
+      ],
+      "priority": 7,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 7,
+        "citation_count": 7,
+        "total": 7,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 403,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Presents a spiking brain-inspired large model with sparse/event-driven computation and reported long-context inference speedups.",
+      "library_body_check": "abstract_screen; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "EffiReasonTrans: RL-Optimized Reasoning for Code Translation",
+      "source_url": "https://arxiv.org/abs/2510.18863",
+      "year": 2025,
+      "published": "2025-10-21",
+      "venue": "IEEE Transactions on Software Engineering",
+      "citation_count": 7,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Code translation is a crucial task in software development and maintenance. While recent advancements in Large Language Models (LLMs) have improved automated code translation accuracy, these gains often come at the cost of increased inference latency—hindering real-world development workflows that involve human-in-the-loop inspection. To address this trade-off, we propose EffiReasonTrans, a training framework designed to improve translation accuracy while balancing inference latency. We first construct a high-quality reasoning-augmented dataset by prompting a stronger language model DeepSeek-R1 to generate intermediate reasoning and target translations. Each (source code, reasoning, target code) triplet undergoes automated syntax and functionality checks to ensure reliability. Based on this dataset, we employ a two-stage training strategy: supervised fine-tuning on reasoning-augmented samples, followed by reinforcement learning to further enhance accuracy, which also helps balance inference latency. We evaluate EffiReasonTrans on six translation pairs. Experimental results show that EffiReasonTrans consistently improves translation accuracy (up to +49.2% CA and +27.8% CodeBLEU compared to the base model), while reducing the number of generated tokens (up to -19.3%) and lowering inference latency in most cases (up to -29.0%). Ablation studies further confirm the complementary benefits of the two-stage training framework. Additionally, EffiReasonTrans shows improvements of translation accuracy when integrated into agent-based frameworks. Our code and data are available at https://github.com/DeepSoftwareAnalytics/EffiReasonTrans.",
+      "identifiers": [
+        "SemanticScholar:6aa8fbc88756c071cc35737aeb950efd093f52fe"
+      ],
+      "semantic_scholar_id": "6aa8fbc88756c071cc35737aeb950efd093f52fe",
+      "canonical_id": "arXiv:2510.18863",
+      "arxiv_id": "2510.18863",
+      "doi": "10.1109/TSE.2026.3693795",
+      "authors": [
+        "Yan-Lin Wang",
+        "Rongyi Ou",
+        "Yan-Lin Wang",
+        "Ming-Wei Liu",
+        "Jia-Chi Chen",
+        "En-Sheng Shi",
+        "Xi-Lin Liu",
+        "Yu-Chi Ma",
+        "Zi-Bin Zheng"
+      ],
+      "priority": 7,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 7,
+        "citation_count": 7,
+        "total": 7,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 357,
+        "matched_prestigious_venue": null
+      },
+      "reason": "EffiReasonTrans reduces generated tokens and inference latency for code translation while retaining task quality.",
+      "library_body_check": "abstract_screen; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "FlowMM: Cross-Modal Information Flow Guided KV Cache Merging for Efficient Multimodal Context Inference",
+      "source_url": "https://arxiv.org/abs/2511.05534",
+      "year": 2025,
+      "published": "2025-10-29",
+      "venue": "arXiv.org",
+      "citation_count": 7,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Traditional KV cache eviction strategies, which discard less critical KV-pairs based on attention scores, often degrade generation quality, causing context loss or hallucinations. Recent efforts shift toward KV merging, merging eviction tokens with retention tokens based on similarity. However, in multimodal scenarios, distributional biases across modality tokens and attentional biases in cross-modal interactions limit its effectiveness. This work introduces FlowMM, an adaptive framework for cross-modal information flow-guided multimodal KV cache merging. FlowMM leverages cross-modal information flow to dynamically apply layer-specific merging strategies, capturing modality-specific patterns while preserving contextual integrity. Furthermore, we introduce a sensitivity-adaptive token matching mechanism that jointly evaluates token similarity and task-critical sensitivity, merging low-risk tokens while safeguarding high-sensitivity ones. Extensive experiments across diverse leading MLLMs show that FlowMM reduces KV cache memory by 80% to 95% and decoding latency by 1.3-1.8x, while maintaining competitive task performance.",
+      "identifiers": [
+        "SemanticScholar:48c22f941a2ce9ab305aa46910f166dc42f784c1"
+      ],
+      "semantic_scholar_id": "48c22f941a2ce9ab305aa46910f166dc42f784c1",
+      "canonical_id": "arXiv:2511.05534",
+      "arxiv_id": "2511.05534",
+      "doi": "10.48550/arXiv.2511.05534",
+      "authors": [
+        "Kun-Xi Li",
+        "Yufan Xiong",
+        "Zhong-Hua Jiang",
+        "Yi-Yun Zhou",
+        "Zhao-De Wang",
+        "Chengfei Lv",
+        "Shengyu Zhang"
+      ],
+      "priority": 7,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 7,
+        "citation_count": 7,
+        "total": 7,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 349,
+        "matched_prestigious_venue": null
+      },
+      "reason": "FlowMM merges multimodal KV state and reports large cache reduction and decoding-latency improvement.",
+      "library_body_check": "abstract_screen; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Understanding and Improving Length Generalization in Hierarchical Sparse Attention Models",
+      "source_url": "https://arxiv.org/abs/2510.17196",
+      "year": 2025,
+      "published": "2025-10-20",
+      "venue": "arXiv.org",
+      "citation_count": 6,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Effectively processing long contexts is a critical challenge for language models. While standard Transformers are limited by quadratic complexity and poor length extrapolation, alternative architectures like sliding window attention and state space models sacrifice the ability to effectively utilize the full context due to their fixed-size memory. Chunk-based sparse attention has emerged as a promising paradigm for extreme length generalization, yet the key architectural principles underpinning its success are not yet fully understood. In this work, we present a systematic dissection of these models to identify the core components driving their performance. Through a unified framework and comprehensive ablation studies, we demonstrate that a combination of three design principles is critical: (1) an expressive, non-linear Chunk Encoder with a dedicated CLS token to produce representations for retrieval; (2) a Bypassing Residual Path to stably integrate retrieved global information without it being overridden by the local residual stream; and (3) enforced selection sparsity during pre-training to bridge the train-test distribution gap. We provide a theoretical motivation for intra-chunk information processing and landmark generation. By combining these principles, we establish a new state-of-the-art for training-free length extrapolation, successfully generalizing models trained on a 4K context to 32 million tokens on RULER and BABILong. Our findings provide a clear and empirically-grounded set of design principles for developing future, highly-capable long-context language models.",
+      "identifiers": [
+        "SemanticScholar:1facfefafcaa191129ba367ae245eb525420a9d5"
+      ],
+      "semantic_scholar_id": "1facfefafcaa191129ba367ae245eb525420a9d5",
+      "canonical_id": "arXiv:2510.17196",
+      "arxiv_id": "2510.17196",
+      "doi": "10.48550/arXiv.2510.17196",
+      "authors": [
+        "Jiaqi Leng",
+        "Xiang Hu",
+        "Junxiong Wang",
+        "Jianguo Li",
+        "Wei Wu",
+        "Yu-Cheng Lu"
+      ],
+      "priority": 6,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 6,
+        "citation_count": 6,
+        "total": 6,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 358,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Analyzes and improves length generalization for hierarchical sparse-attention models extending usable context length.",
+      "library_body_check": "abstract_screen; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-a0753aaad4af",
+    "round": "libimp-a0753aaad4af0f7f-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 11,
+    "round_submission_count": 3,
+    "round_submission_index": 2,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-a0753aaad4af0f7f-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-a0753aaad4af0f7f-pre01.json",
+    "receipt": "sha256:52d1e2a51a9a7838f9feb3fd59f0df423fba774af0591c669af691e6c818ac5e"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-a0753aaad4af",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

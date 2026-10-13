@@ -1,0 +1,113 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "SPECS: Faster Test-Time Scaling through Speculative Drafts",
+      "source_url": "https://arxiv.org/abs/2506.15733",
+      "year": 2025,
+      "published": "2025-06-15",
+      "venue": "arXiv.org",
+      "citation_count": 6,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Scaling test-time compute has driven the recent advances in the reasoning capabilities of large language models (LLMs), typically by allocating additional computation for more thorough exploration. However, increased compute often comes at the expense of higher user-facing latency, directly impacting user experience. Current test-time scaling methods primarily optimize for accuracy based on total compute resources (FLOPS), often overlooking latency constraints. To address this gap, we propose $\\texttt{SPECS}$, a latency-aware test-time scaling method inspired by speculative decoding. $\\texttt{SPECS}$~uses a smaller, faster model to generate candidate sequences efficiently, and evaluates these candidates using signals from both a larger target model and a dedicated reward model. We introduce new integration strategies, including reward-guided soft verification and a reward-based deferral mechanism. Empirical results on MATH500, AMC23 and OlympiadBench datasets show that $\\texttt{SPECS}$~matches or surpasses beam search accuracy while reducing latency by up to $\\sim$19.1\\%. Our theoretical analysis shows that our algorithm converges to the solution of a KL-regularized reinforcement learning objective with increasing beam width.",
+      "identifiers": [
+        "SemanticScholar:67a766f8ee567cad195795bfa8fd699583ebc79a"
+      ],
+      "semantic_scholar_id": "67a766f8ee567cad195795bfa8fd699583ebc79a",
+      "canonical_id": "arXiv:2506.15733",
+      "arxiv_id": "2506.15733",
+      "doi": "10.48550/arXiv.2506.15733",
+      "authors": [
+        "M. Cemri",
+        "Nived Rajaraman",
+        "Rishabh Tiwari",
+        "Xiaoxuan Liu",
+        "Kurt Keutzer",
+        "Ion Stoica",
+        "K. Ramchandran",
+        "Ahmad Beirami",
+        "Zi-Teng Sun"
+      ],
+      "priority": 6,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 6,
+        "citation_count": 6,
+        "total": 6,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 485,
+        "matched_prestigious_venue": null
+      },
+      "reason": "SPECS reduces test-time reasoning latency using latency-aware speculative drafts.",
+      "library_body_check": "abstract_screen; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "AnTKV: Anchor Token-Aware Sub-Bit Vector Quantization for KV Cache in Large Language Models",
+      "source_url": "https://arxiv.org/abs/2506.19505",
+      "year": 2025,
+      "published": "2025-06-24",
+      "venue": "arXiv.org",
+      "citation_count": 6,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Quantization has emerged as an effective and lightweight solution to reduce the memory footprint of the KV cache in Large Language Models. Nevertheless, minimizing the accuracy degradation caused by ultra-low-bit KV cache quantization remains a significant challenge. While scalar quantization is constrained by 1-bit bound, vector quantization exploits intra-vector correlations and enables sub-bit regimes, making it more suitable for ultra-low-bit quantization. To further mitigate quantization-induced degradation, we reveal that the degradation is highly uneven across tokens in attention quality. To investigate this unevenness, we introduce anchor score to measure each token's sensitivity to quantization. Our analysis and experiments show that preserving a small subset (1\\%) of tokens with the highest Anchor Score significantly mitigates accuracy loss under aggressive quantization. We propose AnTKV, a dual-stage framework that leverages anchor token-aware vector quantization to compress the KV cache. It combines offline token-aware centroids learning and online anchor token selection to balance compression and accuracy. To enable efficient deployment, we design an online anchor token selection kernel compatible with FlashAttention. It allows LLaMA3-8B to scale to 840K tokens on a single 80GB A100, while delivering up to $3.5\\times$ higher decoding throughput over the FP16 baseline. Experiments demonstrate that AnTKV matches or surpasses prior methods at 4-bit, and significantly reduce perplexity under ultra-low-bit quantization, achieving 6.32 at 1-bit on Mistral-7B, compared to 7.25 for CQ and 15.36 for KVQuant.",
+      "identifiers": [
+        "SemanticScholar:d9d4de72ddb0af577e332242ae3ca34772b80785"
+      ],
+      "semantic_scholar_id": "d9d4de72ddb0af577e332242ae3ca34772b80785",
+      "canonical_id": "arXiv:2506.19505",
+      "arxiv_id": "2506.19505",
+      "doi": "10.48550/arXiv.2506.19505",
+      "authors": [
+        "Zeyu Li",
+        "Chuanfu Xiao",
+        "Yang Wang",
+        "Xiang Liu",
+        "Zhen-Heng Tang",
+        "Bao-Tong Lu",
+        "Mao Yang",
+        "Xin-Yu Chen",
+        "Xiaowen Chu"
+      ],
+      "priority": 6,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 6,
+        "citation_count": 6,
+        "total": 6,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 476,
+        "matched_prestigious_venue": null
+      },
+      "reason": "AnTKV quantizes KV cache below one bit to reduce memory and increase LLM serving throughput/context capacity.",
+      "library_body_check": "abstract_screen; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-8cc17bb9e907",
+    "round": "libimp-8cc17bb9e907ad4b-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 7,
+    "round_submission_count": 2,
+    "round_submission_index": 2,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-8cc17bb9e907ad4b-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-8cc17bb9e907ad4b-pre01.json",
+    "receipt": "sha256:79a7ae07a33d3e26fbe4d2ff2c152167621e70f3f14448115eabc4b683205dd6"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-8cc17bb9e907",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

@@ -1,0 +1,219 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "SPECTRE: An FFT-Based Efficient Drop-In Replacement to Self-Attention for Long Contexts",
+      "source_url": "https://arxiv.org/abs/2502.18394",
+      "year": 2025,
+      "published": "2025-02-25",
+      "venue": null,
+      "citation_count": 11,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Long-context transformers face significant efficiency challenges due to the quadratic cost of self-attention. However, many modern applications-from multi-turn dialogue to high-resolution vision-require contexts spanning tens of thousands of tokens. We introduce SPECTRE, a method that replaces each attention head with a fast real FFT, a content-adaptive spectral gate, and an inverse FFT, reducing per-layer complexity from $\\mathcal{O}(L^{2})$ to $O(L\\log L)$ while preserving the surrounding architecture. We extend this efficiency to autoregressive generation through our Prefix-FFT cache and enhance local feature representation with an optional wavelet module that adds negligible computational overhead. Our experiments demonstrate that SPECTRE operates up to 7$\\times$ faster than FlashAttention-2 on 128k-token contexts while matching or exceeding baseline performance on PG-19 language modeling and ImageNet-1k classification tasks. SPECTRE achieves these improvements by adding fewer than 6\\% parameters to the base model, making hundred-kilotoken context processing feasible on commodity GPUs without specialized hardware.",
+      "identifiers": [
+        "SemanticScholar:fb89da519718ff64ac75a1f70671a2325133d7b9"
+      ],
+      "semantic_scholar_id": "fb89da519718ff64ac75a1f70671a2325133d7b9",
+      "canonical_id": "arXiv:2502.18394",
+      "arxiv_id": "2502.18394",
+      "authors": [
+        "Jacob Fein-Ashley",
+        "Neelesh Gupta",
+        "Rajgopal Kannan",
+        "Viktor K. Prasanna"
+      ],
+      "priority": 11,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 11,
+        "citation_count": 11,
+        "total": 11,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 595,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Current arXiv record resolves DOI alias to arXiv:2502.18394 and retitles this version SPECTRE; it proposes FFT attention and cached autoregressive inference with reported speedup.",
+      "library_body_check": "abstract_screen; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Switchable Decision: Dynamic Neural Generation Networks",
+      "source_url": "https://arxiv.org/abs/2405.04513",
+      "year": 2024,
+      "published": "2024-05-07",
+      "venue": "International Conference on Machine Learning",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Auto-regressive generation models achieve competitive performance across many different NLP tasks such as summarization, question answering, and classifications. However, they are also known for being slow in inference, which makes them challenging to deploy in real-time applications. We propose a switchable decision to accelerate inference by dynamically assigning computation resources for each data instance. Automatically making decisions on where to skip and how to balance quality and computation cost with constrained optimization, our dynamic neural generation networks enforce the efficient inference path and determine the optimized trade-off. Experiments across question answering, summarization, and classification benchmarks show that our method benefits from less computation cost during inference while keeping the same accuracy. Extensive experiments and ablation studies demonstrate that our method can be general, effective, and beneficial for many NLP tasks.",
+      "identifiers": [
+        "SemanticScholar:ecb6161293c19019545af97962d9bcd34d4ccc90"
+      ],
+      "semantic_scholar_id": "ecb6161293c19019545af97962d9bcd34d4ccc90",
+      "canonical_id": "arXiv:2405.04513",
+      "arxiv_id": "2405.04513",
+      "doi": "10.48550/arXiv.2405.04513",
+      "authors": [
+        "Shujian Zhang",
+        "Korawat Tanwisuth",
+        "Chengyue Gong",
+        "Pengcheng He",
+        "Mi Zhou"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 889,
+        "matched_prestigious_venue": "International Conference on Machine Learning"
+      },
+      "reason": "Introduces switchable compute for dynamic neural generation; the abstract identifies reduced computation/latency as the target.",
+      "library_body_check": "abstract_screen; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "FiRST: Finetuning Router-Selective Transformers for Input-Adaptive Latency Reduction",
+      "source_url": "https://arxiv.org/abs/2410.12513",
+      "year": 2024,
+      "published": "2024-10-16",
+      "venue": "Conference on Empirical Methods in Natural Language Processing",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Auto-regressive Large Language Models (LLMs) demonstrate remarkable performance across different domains such as vision and language processing. However, due to sequential processing through a stack of transformer layers, autoregressive decoding faces significant computation/latency challenges, particularly in resource-constrained environments like mobile and edge devices. Existing approaches in literature that aim to improve latency via skipping layers have two distinct flavors - 1) Early exit, and 2) Input-agnostic heuristics where tokens exit at pre-determined layers irrespective of input sequence. Both the above strategies have limitations - the former cannot be applied to handle KV Caching necessary for speed-ups in modern framework and the latter does not capture the variation in layer importance across tasks or more generally, across input sequences. To address both limitations, we propose FiRST, an algorithm that reduces inference latency by using layer-specific routers to select a subset of transformer layers adaptively for each input sequence - the prompt (during the prefill stage) decides which layers will be skipped during decoding. FiRST preserves compatibility with KV caching enabling faster inference while being quality-aware. FiRST is model-agnostic and can be easily enabled on any pre-trained LLM. Our approach reveals that input adaptivity is critical - indeed, different task-specific middle layers play a crucial role in evolving hidden representations depending on tasks. Extensive experiments show that FiRST significantly reduces latency while outperforming other layer selection strategies in quality metics. It retains competitive performance to base model (without layer skipping) and in some cases, even improves upon it. FiRST is thus a promising and efficient solution for LLM deployment in low-resource environments.",
+      "identifiers": [
+        "SemanticScholar:d41f1b7f7eff0794f18896dbc6fe09c86ef0a120"
+      ],
+      "semantic_scholar_id": "d41f1b7f7eff0794f18896dbc6fe09c86ef0a120",
+      "canonical_id": "arXiv:2410.12513",
+      "arxiv_id": "2410.12513",
+      "doi": "10.48550/arXiv.2410.12513",
+      "authors": [
+        "Akriti Jain",
+        "Saransh Sharma",
+        "Koyel Mukherjee",
+        "Soumyabrata Pal"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 727,
+        "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+      },
+      "reason": "FiRST adaptively skips transformer layers during decoding while preserving KV-cache compatibility; the abstract reports latency and quality evaluations.",
+      "library_body_check": "abstract_screen; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "A Survey of RWKV",
+      "source_url": "https://arxiv.org/abs/2412.14847",
+      "year": 2024,
+      "published": "2024-12-19",
+      "venue": "Neurocomputing",
+      "citation_count": 9,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The Receptance Weighted Key Value (RWKV) model offers a novel alternative to the Transformer architecture, merging the benefits of recurrent and attention-based systems. Unlike conventional Transformers, which depend heavily on self-attention, RWKV adeptly captures long-range dependencies with minimal computational demands. By utilizing a recurrent framework, RWKV addresses some computational inefficiencies found in Transformers, particularly in tasks with long sequences. RWKV has recently drawn considerable attention for its robust performance across multiple domains. Despite its growing popularity, no systematic review of the RWKV model exists. This paper seeks to fill this gap as the first comprehensive review of the RWKV architecture, its core principles, and its varied applications, such as natural language generation, natural language understanding, and computer vision. We assess how RWKV compares to traditional Transformer models, highlighting its capability to manage long sequences efficiently and lower computational costs. Furthermore, we explore the challenges RWKV encounters and propose potential directions for future research and advancement. We consistently maintain the related open-source materials at: https://github.com/MLGroupJLU/RWKV-Survey.",
+      "identifiers": [
+        "SemanticScholar:6aedfd296a62aa6c10e0dcc9d69304f50c2947c8"
+      ],
+      "semantic_scholar_id": "6aedfd296a62aa6c10e0dcc9d69304f50c2947c8",
+      "canonical_id": "arXiv:2412.14847",
+      "arxiv_id": "2412.14847",
+      "doi": "10.48550/arXiv.2412.14847",
+      "authors": [
+        "Zhiyuan Li",
+        "Tingyu Xia",
+        "Yi Chang",
+        "Yuan Wu"
+      ],
+      "priority": 9,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 9,
+        "citation_count": 9,
+        "total": 9,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 663,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Surveys RWKV recurrent architecture as a compute-efficient, long-sequence alternative to Transformer inference.",
+      "library_body_check": "abstract_screen; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Infinite Retrieval: Attention Enhanced LLMs in Long-Context Processing",
+      "source_url": "https://arxiv.org/abs/2502.12962",
+      "year": 2025,
+      "published": "2025-02-18",
+      "venue": "arXiv.org",
+      "citation_count": 9,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Limited by the context window size of Large Language Models(LLMs), handling various tasks with input tokens exceeding the upper limit has been challenging, whether it is a simple direct retrieval task or a complex multi-hop reasoning task. Although various methods have been proposed to enhance the long-context processing capabilities of LLMs, they either incur substantial post-training costs, or require additional tool modules(e.g.,RAG), or have not shown significant improvement in realistic tasks. Our work observes the correlation between the attention distribution and generated answers across each layer, and establishes the attention allocation aligns with retrieval-augmented capabilities through experiments. Drawing on the above insights, we propose a novel method InfiniRetri that leverages the LLMs's own attention information to enable accurate retrieval across inputs of infinitely length. Our evaluations indicate that InfiniRetri achieves 100% accuracy in the Needle-In-a-Haystack(NIH) test over 1M tokens using a 0.5B parameter model, surpassing other method or larger models and setting a new state-of-the-art(SOTA). Moreover, our method achieves significant performance improvements on real-world benchmarks, with a maximum 288% improvement. In addition, InfiniRetri can be applied to any Transformer-based LLMs without additional training and substantially reduces inference latency and compute overhead in long texts. In summary, our comprehensive studies show InfiniRetri's potential for practical applications and creates a paradigm for retrievaling information using LLMs own capabilities under infinite-length tokens. Code will be released in link.",
+      "identifiers": [
+        "SemanticScholar:4fc19621a17c17b871352ff00a8660dc76cf4e50"
+      ],
+      "semantic_scholar_id": "4fc19621a17c17b871352ff00a8660dc76cf4e50",
+      "canonical_id": "arXiv:2502.12962",
+      "arxiv_id": "2502.12962",
+      "doi": "10.48550/arXiv.2502.12962",
+      "authors": [
+        "Xiaoju Ye",
+        "Zhichun Wang",
+        "Jingyuan Wang"
+      ],
+      "priority": 9,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 9,
+        "citation_count": 9,
+        "total": 9,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 602,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Adds attention-enhanced retrieval to support long-context processing while reducing inference overhead.",
+      "library_body_check": "abstract_screen; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-36e5ec3dd589",
+    "round": "libimp-36e5ec3dd589bffe-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 13,
+    "round_submission_count": 3,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-36e5ec3dd589bffe-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-36e5ec3dd589bffe-pre01.json",
+    "receipt": "sha256:8fa394fbf608cfde67da9df7f20f42f7ccb1824376e49c54233061908919e57d"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-36e5ec3dd589",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

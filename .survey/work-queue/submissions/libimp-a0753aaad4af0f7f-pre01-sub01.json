@@ -1,0 +1,222 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Minimizing Response Latency in LLM-Based Agent Systems: A Comprehensive Survey",
+      "source_url": "https://doi.org/10.1109/ACCESS.2026.3664226",
+      "year": 2026,
+      "published": null,
+      "venue": "IEEE Access",
+      "citation_count": 7,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The advent of Large Language Model (LLM)-based agent systems represents a significant paradigm shift in Artificial Intelligence, enabling unprecedented capabilities in autonomous reasoning, planning, and interaction. However, the transformative potential of these agents is fundamentally constrained by a critical operational challenge: high response latency. This latency, which impairs usability, restricts real-time applicability, and challenges economic viability, is a paramount barrier to their widespread adoption in complex, real-world scenarios. This survey provides a comprehensive and structured analysis of the multifaceted latency problem in LLM-based agent systems. We present a structured taxonomy that deconstructs end-to-end latency into its constituent sources, offering a holistic view of the entire agent stack. Our review spans four primary layers of optimization: 1) Core LLM Inference, covering techniques to accelerate the foundational model, including quantization, pruning, efficient attention mechanisms, and speculative decoding; 2) Agent-Level Frameworks, detailing strategies to refine the agent’s cognitive loop, such as accelerating planning cycles, optimizing tool use, and implementing latency-aware memory management; 3) System-Level and Infrastructure, encompassing optimizations for the underlying deployment environment, including advanced serving systems, hardware acceleration, dynamic resource allocation, and distributed architectures; and 4) Multi-Agent Systems, addressing specialized methods for mitigating communication and coordination overhead in collaborative agent ensembles. We identify key unresolved challenges and outline promising future research directions—including hardware-software co-design, novel agent architectures, and AI-driven system orchestration—to guide the ongoing quest for ultra-low latency intelligent systems.",
+      "identifiers": [
+        "SemanticScholar:d711897c1a52fe18534804322b5f87a9c35e4a66"
+      ],
+      "semantic_scholar_id": "d711897c1a52fe18534804322b5f87a9c35e4a66",
+      "doi": "10.1109/ACCESS.2026.3664226",
+      "canonical_id": "DOI:10.1109/ACCESS.2026.3664226",
+      "authors": [
+        "G. Park",
+        "Seonghyeon Lee",
+        "Yeonsu Park"
+      ],
+      "priority": 7,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 7,
+        "citation_count": 7,
+        "total": 7,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 104,
+        "matched_prestigious_venue": null
+      },
+      "reason": "IEEE Access publisher record identifies the supplied DOI/title and abstract; survey covers LLM core inference, serving infrastructure, and multi-agent latency.",
+      "library_body_check": "abstract_screen; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "DE3-BERT: Distance-Enhanced Early Exiting for BERT based on Prototypical Networks",
+      "source_url": "https://arxiv.org/abs/2402.05948",
+      "year": 2024,
+      "published": "2024-02-03",
+      "venue": "arXiv.org",
+      "citation_count": 7,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Early exiting has demonstrated its effectiveness in accelerating the inference of pre-trained language models like BERT by dynamically adjusting the number of layers executed. However, most existing early exiting methods only consider local information from an individual test sample to determine their exiting indicators, failing to leverage the global information offered by sample population. This leads to suboptimal estimation of prediction correctness, resulting in erroneous exiting decisions. To bridge the gap, we explore the necessity of effectively combining both local and global information to ensure reliable early exiting during inference. Purposefully, we leverage prototypical networks to learn class prototypes and devise a distance metric between samples and class prototypes. This enables us to utilize global information for estimating the correctness of early predictions. On this basis, we propose a novel Distance-Enhanced Early Exiting framework for BERT (DE$^3$-BERT). DE$^3$-BERT implements a hybrid exiting strategy that supplements classic entropy-based local information with distance-based global information to enhance the estimation of prediction correctness for more reliable early exiting decisions. Extensive experiments on the GLUE benchmark demonstrate that DE$^3$-BERT consistently outperforms state-of-the-art models under different speed-up ratios with minimal storage or computational overhead, yielding a better trade-off between model performance and inference efficiency. Additionally, an in-depth analysis further validates the generality and interpretability of our method.",
+      "identifiers": [
+        "SemanticScholar:753ef415e825c8b5752cd3502280ae8276ef0225"
+      ],
+      "semantic_scholar_id": "753ef415e825c8b5752cd3502280ae8276ef0225",
+      "canonical_id": "arXiv:2402.05948",
+      "arxiv_id": "2402.05948",
+      "doi": "10.48550/arXiv.2402.05948",
+      "authors": [
+        "Jia-Ning He",
+        "Qi Zhang",
+        "Weiping Ding",
+        "Duoqian Miao",
+        "Jun Zhao",
+        "Liang Hu",
+        "Long-Bing Cao"
+      ],
+      "priority": 7,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 7,
+        "citation_count": 7,
+        "total": 7,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 983,
+        "matched_prestigious_venue": null
+      },
+      "reason": "DE3-BERT exits early from BERT inference and evaluates speed/accuracy tradeoffs on GLUE.",
+      "library_body_check": "abstract_screen; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Scalable LLM Reasoning Acceleration with Low-rank Distillation",
+      "source_url": "https://arxiv.org/abs/2505.07861",
+      "year": 2025,
+      "published": "2025-05-08",
+      "venue": null,
+      "citation_count": 7,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Due to long generations, large language model (LLM) math reasoning demands significant computational resources and time. While many existing efficient inference methods have been developed with excellent performance preservation on language tasks, they often severely degrade math performance. In this paper, we propose Caprese, a resource-efficient distillation method to recover lost capabilities from deploying efficient inference methods, focused primarily in feedforward blocks. With original weights unperturbed, roughly 1% of additional parameters, and only 20K synthetic training samples, we are able to recover much if not all of the reasoning capabilities lost from efficient inference for thinking LLMs and without harm to language tasks for instruct LLMs. Moreover, Caprese slashes the number of active parameters (~2B cut for Gemma 2 9B and Llama 3.1 8B) and integrates cleanly into existing model layers to reduce latency (>16% time-to-next-token reduction) while encouraging response brevity (up to 8.5% fewer tokens).",
+      "identifiers": [
+        "SemanticScholar:3404a22197e1ca5c502f2caf95d74c4c7dad3e5a"
+      ],
+      "semantic_scholar_id": "3404a22197e1ca5c502f2caf95d74c4c7dad3e5a",
+      "canonical_id": "arXiv:2505.07861",
+      "arxiv_id": "2505.07861",
+      "authors": [
+        "Harry Dong",
+        "Bilge Acun",
+        "Beidi Chen",
+        "Yuejie Chi"
+      ],
+      "priority": 7,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 7,
+        "citation_count": 7,
+        "total": 7,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 523,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Caprese distills thinking models to reduce active parameters and response latency/token count.",
+      "library_body_check": "abstract_screen; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Beyond Hard and Soft: Hybrid Context Compression for Balancing Local and Global Information Retention",
+      "source_url": "https://arxiv.org/abs/2505.15774",
+      "year": 2025,
+      "published": "2025-05-21",
+      "venue": "arXiv.org",
+      "citation_count": 7,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Models (LLMs) encounter significant challenges in long-sequence inference due to computational inefficiency and redundant processing, driving interest in context compression techniques. Existing methods often rely on token importance to perform hard local compression or encode context into latent representations for soft global compression. However, the uneven distribution of textual content relevance and the diversity of demands for user instructions mean these approaches frequently lead to the loss of potentially valuable information. To address this, we propose $\\textbf{Hy}$brid $\\textbf{Co}$ntext $\\textbf{Co}$mpression (HyCo$_2$) for LLMs, which integrates both global and local perspectives to guide context compression while retaining both the essential semantics and critical details for task completion. Specifically, we employ a hybrid adapter to refine global semantics with the global view, based on the observation that different adapters excel at different tasks. Then we incorporate a classification layer that assigns a retention probability to each context token based on the local view, determining whether it should be retained or discarded. To foster a balanced integration of global and local compression, we introduce auxiliary paraphrasing and completion pretraining before instruction tuning. This promotes a synergistic integration that emphasizes instruction-relevant information while preserving essential local details, ultimately balancing local and global information retention in context compression. Experiments show that our HyCo$_2$ method significantly enhances long-text reasoning while reducing token usage. It improves the performance of various LLM series by an average of 13.1\\% across seven knowledge-intensive QA benchmarks. Moreover, HyCo$_2$ matches the performance of uncompressed methods while reducing token consumption by 88.8\\%.",
+      "identifiers": [
+        "SemanticScholar:a897c1f5f14a610d23aa316a8b99559c5ec0c03b"
+      ],
+      "semantic_scholar_id": "a897c1f5f14a610d23aa316a8b99559c5ec0c03b",
+      "canonical_id": "arXiv:2505.15774",
+      "arxiv_id": "2505.15774",
+      "doi": "10.48550/arXiv.2505.15774",
+      "authors": [
+        "Huanxuan Liao",
+        "Wenji Hu",
+        "Yao Xu",
+        "Shi-Zhu He",
+        "Jun Zhao",
+        "Kang Liu"
+      ],
+      "priority": 7,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 7,
+        "citation_count": 7,
+        "total": 7,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 510,
+        "matched_prestigious_venue": null
+      },
+      "reason": "HyCo2 compresses local/global context while retaining information, reducing prompt tokens for LLM inference.",
+      "library_body_check": "abstract_screen; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "CoRE: Enhancing Metacognition with Label-free Self-evaluation in LRMs",
+      "source_url": "https://arxiv.org/abs/2507.06087",
+      "year": 2025,
+      "published": "2025-07-08",
+      "venue": "arXiv.org",
+      "citation_count": 7,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large reasoning models (LRMs) have demonstrated impressive capabilities in domains like mathematics and program synthesis. Despite their strong performance, LRMs often exhibit overthinking -- excessive and redundant reasoning steps that introduce inefficiencies during inference. This phenomenon raises an important question for LRM self-evaluation: How can a model autonomously assess the correctness of its own reasoning trajectory without external labels? To address this, we propose Chain-of-Reasoning Embedding (CoRE), a series of hidden states in latent space to enable label-free self-evaluation on intermediate reasoning steps of LRMs, so as to enhance metacognition abilities for improved reasoning efficiency. By analyzing the geometric properties of the CoRE trajectories, we reveal that redundant reasoning usually presents cyclical fluctuations, which correspond to repetitive and unconscious reflection/exploration. Leveraging this insight, we further introduce a training-free, label-free self-evaluation framework, CoRE-Eval, to detect such patterns and dynamically determine whether to terminate reasoning early. Extensive experiments on mathematical reasoning benchmarks (GSM8K, MATH-500, and AIME) and across model sizes from 7B to 32B demonstrate that CoRE-Eval reduces chain-of-thought length by 13.7% to 33.2% while improving answer accuracy by around 10%, achieving 70.0% accuracy on the challenging AIME benchmark with the 32B model.",
+      "identifiers": [
+        "SemanticScholar:a0d0fad4ddda6d83444205dfee44bb25de31ac2c"
+      ],
+      "semantic_scholar_id": "a0d0fad4ddda6d83444205dfee44bb25de31ac2c",
+      "canonical_id": "arXiv:2507.06087",
+      "arxiv_id": "2507.06087",
+      "doi": "10.48550/arXiv.2507.06087",
+      "authors": [
+        "Haoxi Li",
+        "Sikai Bai",
+        "Jie M. Zhang",
+        "Song Guo"
+      ],
+      "priority": 7,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 7,
+        "citation_count": 7,
+        "total": 7,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 462,
+        "matched_prestigious_venue": null
+      },
+      "reason": "CoRE self-evaluation enables reasoning models to terminate earlier, reducing chain length while preserving/improving accuracy.",
+      "library_body_check": "abstract_screen; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-a0753aaad4af",
+    "round": "libimp-a0753aaad4af0f7f-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 11,
+    "round_submission_count": 3,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-a0753aaad4af0f7f-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-a0753aaad4af0f7f-pre01.json",
+    "receipt": "sha256:52d1e2a51a9a7838f9feb3fd59f0df423fba774af0591c669af691e6c818ac5e"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-a0753aaad4af",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

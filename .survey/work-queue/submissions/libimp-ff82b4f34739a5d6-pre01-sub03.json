@@ -1,0 +1,224 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "FRM-PTQ: Feature relationship matching enhanced low-bit post-training quantization for large language models",
+      "source_url": "https://doi.org/10.1016/j.neunet.2026.108619",
+      "year": 2026,
+      "published": "2026-01-01",
+      "venue": "Neural Networks",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Post-Training Quantization (PTQ) has emerged as an effective approach to reduce memory and computational demands during LLMs inference. However, existing PTQ methods are highly sensitive to ultra-low-bit quantization with significant performance loss, which is further exacerbated by recently released advanced models like LLaMA-3 and LLaMA-3.1. To address this challenge, we propose a novel PTQ framework, termed FRM-PTQ, by introducing feature relationship matching. This approach integrates token-level relationship modeling and structure-level distribution alignment based on the intra-block self-distillation framework to effectively mitigate significant performance degradation caused by low-bit quantization. Unlike conventional MSE loss methods, which focus solely on point-to-point discrepancies, feature relationship matching captures feature representations in high-dimensional spaces to effectively bridge the representation gap between quantized and full-precision blocks. Additionally, we propose a multi-granularity per-group quantization technique featuring a customized kernel, designed based on the quantization sensitivity of decoder block, to further relieve the quantization performance degradation. Extensive experimental results demonstrate that our method achieves outstanding performance in the W4A4 low-bit scenario, maintaining near full-precision accuracy while delivering a 2 ×  throughput improvement and a 3.17 ×  memory reduction. This advantage is particularly evident in the latest models such as LLaMA-3, LLaMA-3.1 and Qwen2.5 models, as well as in the W3A3 extreme low-bit scenarios. Codes are available at https://github.com/HITSZ-Miao-Group/FRM.",
+      "identifiers": [
+        "SemanticScholar:b82b7c26a5d014fb946978b4f8c6ee05d02e01bb"
+      ],
+      "semantic_scholar_id": "b82b7c26a5d014fb946978b4f8c6ee05d02e01bb",
+      "doi": "10.1016/j.neunet.2026.108619",
+      "canonical_id": "DOI:10.1016/j.neunet.2026.108619",
+      "authors": [
+        "Chao Zeng",
+        "Jia-Qi Zhao",
+        "Miao Zhang",
+        "Li Wang",
+        "Wei-Li Guan",
+        "Liqiang Nie"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 285,
+        "matched_prestigious_venue": null
+      },
+      "reason": "The Elsevier abstract describes low-bit LLM PTQ with customized quantization kernels and reports 2x throughput with reduced memory use.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Mico: efficient query scheduling for multi-cloud deployed LLM inference service",
+      "source_url": "https://doi.org/10.1007/s11432-024-4487-8",
+      "year": 2026,
+      "published": "2026-01-04",
+      "venue": "Science China Information Sciences",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": null,
+      "identifiers": [
+        "SemanticScholar:8952f9fe14b1f6e781f281f76861ba0036f0d680"
+      ],
+      "semantic_scholar_id": "8952f9fe14b1f6e781f281f76861ba0036f0d680",
+      "doi": "10.1007/s11432-024-4487-8",
+      "canonical_id": "DOI:10.1007/s11432-024-4487-8",
+      "authors": [
+        "Peizhuang Cong",
+        "Tong Yang",
+        "Yuchao Zhang",
+        "Wendong Wang",
+        "Ke Xu"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 282,
+        "matched_prestigious_venue": null
+      },
+      "reason": "The Springer abstract studies multi-cloud LLM inference scheduling and flexible batching, reporting reduced KV-cache use and higher service throughput.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Toward Cost-Efficient LLM Serving: A System-Level Memory Optimization Approach",
+      "source_url": "https://doi.org/10.1109/CCNC65079.2026.11366259",
+      "year": 2026,
+      "published": "2026-01-09",
+      "venue": "Consumer Communications and Networking Conference",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Serving large-scale language models (LLMs) requires significant system resources, where GPU memory limits, system bottlenecks, and I/O delays collectively introduce substantial latency. We present MBALL (Memory BALLooner), a lightweight framework that jointly optimizes resource allocation across VRAM, DRAM, and NVMe storage to enable cost-efficient and sustainable inference. MBALL integrates task-aware scheduling and cooperative memory management to mitigate contention in real deployments. Experiments with state-of-the-art LLM workloads show that MBALL improves throughput by up to 60%, reduces latency by 35%, and lowers VRAM usage by 15%; results represent means over n=5 runs with 95% confidence intervals. MBALL provides a flexible design applicable across diverse industrial domains, including smart logistics, real-time customer services, and AI-driven IoT platforms, and offers empirical insights that can inform future system-level LLM optimization research. This paper describes the MBALL architecture and its core components, evaluates its performance against strong baselines, and demonstrates how it enables scalable and practical AI services in real deployments.",
+      "identifiers": [
+        "SemanticScholar:f01b5706e5d3165e1b98e62b1847aab99872ec76"
+      ],
+      "semantic_scholar_id": "f01b5706e5d3165e1b98e62b1847aab99872ec76",
+      "doi": "10.1109/CCNC65079.2026.11366259",
+      "canonical_id": "DOI:10.1109/CCNC65079.2026.11366259",
+      "authors": [
+        "Geunsik Lim"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 277,
+        "matched_prestigious_venue": null
+      },
+      "reason": "The IEEE abstract describes LLM-serving memory management and scheduling across VRAM/DRAM/NVMe, reporting throughput, latency, and VRAM improvements.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Gecko: An Efficient Neural Architecture Inherently Processing Sequences with Arbitrary Lengths",
+      "source_url": "https://arxiv.org/abs/2601.06463",
+      "year": 2026,
+      "published": "2026-01-10",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Designing a unified neural network to efficiently and inherently process sequential data with arbitrary lengths is a central and challenging problem in sequence modeling. The design choices in Transformer, including quadratic complexity and weak length extrapolation, have limited their ability to scale to long sequences. In this work, we propose Gecko, a neural architecture that inherits the design of Mega and Megalodon (exponential moving average with gated attention), and further introduces multiple technical components to improve its capability to capture long range dependencies, including timestep decay normalization, sliding chunk attention mechanism, and adaptive working memory. In a controlled pretraining comparison with Llama2 and Megalodon in the scale of 7 billion parameters and 2 trillion training tokens, Gecko achieves better efficiency and long-context scalability. Gecko reaches a training loss of 1.68, significantly outperforming Llama2-7B (1.75) and Megalodon-7B (1.70), and landing close to Llama2-13B (1.67). Notably, without relying on any context-extension techniques, Gecko exhibits inherent long-context processing and retrieval capabilities, stably handling sequences of up to 4 million tokens and retrieving information from contexts up to $4\\times$ longer than its attention window. Code: https://github.com/XuezheMax/gecko-llm",
+      "identifiers": [
+        "SemanticScholar:27ccee4f0f954382c7f779f6f93f0a52e910eaf0"
+      ],
+      "semantic_scholar_id": "27ccee4f0f954382c7f779f6f93f0a52e910eaf0",
+      "canonical_id": "arXiv:2601.06463",
+      "arxiv_id": "2601.06463",
+      "doi": "10.48550/arXiv.2601.06463",
+      "authors": [
+        "Xuezhe Ma",
+        "Shi-Cheng Wen",
+        "Ling-Hao Jin",
+        "Bilge Acun",
+        "Ruihang Lai",
+        "Bohan Hou",
+        "Will Lin",
+        "Hao Zhang",
+        "Song-Lin Yang",
+        "Ryan Lee",
+        "Meng-Xi Wu",
+        "Jonathan May",
+        "Luke S. Zettlemoyer",
+        "Carole-Jean Wu"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 276,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Gecko proposes a sequence architecture with sliding-chunk attention and adaptive working memory, reporting long-context scalability; this is a directly relevant transformer alternative.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "On the Limits of Learned Importance Scoring for KV Cache Compression",
+      "source_url": "https://arxiv.org/abs/2601.14279",
+      "year": 2026,
+      "published": "2026-01-13",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "We investigate learned KV cache compression through Speculative Importance Prediction (SIP), a 1.7M parameter non-query-aware scorer that predicts token importance from KV representations alone. Despite architectural sophistication (multi-horizon lookahead, cross-attention), SIP does not outperform simple baselines, including random selection, across 5 seeds, 4 retention levels, and 3 tasks. Key findings: (1) position-based heuristics (keep first 4 + last N tokens) match or exceed learned approaches; (2) prefill attention provides equivalent signal to complex learned scorers; (3) marginal information in KV representations beyond position and prefill attention appears limited for importance prediction. We hypothesize that circular dependence between future queries and generation trajectories contributes to this difficulty.",
+      "identifiers": [
+        "SemanticScholar:83ead3f68b34e8f0f704d2a9a086eb92ac764c00"
+      ],
+      "semantic_scholar_id": "83ead3f68b34e8f0f704d2a9a086eb92ac764c00",
+      "canonical_id": "arXiv:2601.14279",
+      "arxiv_id": "2601.14279",
+      "doi": "10.48550/arXiv.2601.14279",
+      "authors": [
+        "Brady Steele"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 273,
+        "matched_prestigious_venue": null
+      },
+      "reason": "SIP evaluates an LLM KV-cache compression scorer and documents its limitations against simple baselines; negative results directly inform inference cache design.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-ff82b4f34739",
+    "round": "libimp-ff82b4f34739a5d6-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 19,
+    "round_submission_count": 4,
+    "round_submission_index": 3,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-ff82b4f34739a5d6-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-ff82b4f34739a5d6-pre01.json",
+    "receipt": "sha256:41e85712b959ec35a2502af35b0670634c5fc0e5dc61b1d46435a29d05db28a6"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-ff82b4f34739",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

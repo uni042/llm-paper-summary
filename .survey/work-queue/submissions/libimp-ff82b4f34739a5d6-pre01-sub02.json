@@ -1,0 +1,231 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "MIDUS: Memory-Infused Depth Up-Scaling",
+      "source_url": "https://arxiv.org/abs/2512.13751",
+      "year": 2025,
+      "published": "2025-12-15",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Expanding pre-trained language models offers a practical way to increase capacity without training larger models from scratch. Depth Up-Scaling (DUS) does so by duplicating Transformer blocks and inserting them into a pre-trained backbone. This process also duplicates FFN-heavy blocks, increasing parameter and compute cost while adding capacity through a block-level dense residual branch. Yet prior work suggests that added capacity need not remain tied to dense FFN branches, while attention heads often play heterogeneous roles, motivating more efficient head-level residual corrections. We propose Memory-Infused Depth Up-Scaling (MIDUS), which replaces the duplicated FFN branches with memory layers and turns added depth into lightweight retrieval-based residual capacity. We introduce a Head-wise Memory Layer (HML), which combines multi-head product-key memory with Head-wise Implicit Value Expansion (HIVE). HML assigns each head a distinct key space, while HIVE realizes head-specific values from a shared latent bank through compact projections. Alongside empirical improvements in performance and efficiency, our head-importance and fixed-retrieval structural analyses characterize HML with HIVE as a structurally distinct, head-conditioned alternative to FFN-based residual expansion.",
+      "identifiers": [
+        "SemanticScholar:8c3a2eeb83e3fd398890ae7dd753d00dd283869d"
+      ],
+      "semantic_scholar_id": "8c3a2eeb83e3fd398890ae7dd753d00dd283869d",
+      "canonical_id": "arXiv:2512.13751",
+      "arxiv_id": "2512.13751",
+      "doi": "10.48550/arXiv.2512.13751",
+      "authors": [
+        "Taero Kim",
+        "Hoyoon Byun",
+        "Youngjun Choi",
+        "Sungrae Park",
+        "Kyungwoo Song"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 302,
+        "matched_prestigious_venue": null
+      },
+      "reason": "MIDUS provides retrieval-based residual capacity rather than duplicated dense FFN branches and reports performance and efficiency improvements.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "SASQ: Static Activation Scaling for Quantization-Aware Training in Large Language Models",
+      "source_url": "https://arxiv.org/abs/2512.14481",
+      "year": 2025,
+      "published": "2025-12-16",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLMs) excel at natural language tasks but face deployment challenges due to their growing size outpacing GPU memory advancements. Model quantization mitigates this issue by lowering weight and activation precision, but existing solutions face fundamental trade-offs: dynamic quantization incurs high computational overhead and poses deployment challenges on edge devices, while static quantization sacrifices accuracy. Existing approaches of quantization-aware training (QAT) further suffer from weight training costs. We propose SASQ: a lightweight QAT framework specifically tailored for activation quantization factors. SASQ exclusively optimizes only the quantization factors (without changing pre-trained weights), enabling static inference with high accuracy while maintaining deployment efficiency. SASQ adaptively truncates some outliers, thereby reducing the difficulty of quantization while preserving the distributional characteristics of the activations. SASQ not only surpasses existing SOTA quantization schemes but also outperforms the corresponding FP16 models. On LLaMA2-7B, it achieves 5.2% lower perplexity than QuaRot and 4.7% lower perplexity than the FP16 model on WikiText2.",
+      "identifiers": [
+        "SemanticScholar:375d1805d1693eafb762e482944d62ed5e66b52e"
+      ],
+      "semantic_scholar_id": "375d1805d1693eafb762e482944d62ed5e66b52e",
+      "canonical_id": "arXiv:2512.14481",
+      "arxiv_id": "2512.14481",
+      "doi": "10.48550/arXiv.2512.14481",
+      "authors": [
+        "Shizhuo Mao",
+        "Song Chen",
+        "Yi Kang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 301,
+        "matched_prestigious_venue": null
+      },
+      "reason": "SASQ targets static activation quantization for efficient LLM deployment, avoiding dynamic quantization overhead while retaining model accuracy.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "CTkvr: KV Cache Retrieval for Long-Context LLMs via Centroid then Token Indexing",
+      "source_url": "https://arxiv.org/abs/2512.15550",
+      "year": 2025,
+      "published": "2025-12-17",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLMs) are increasingly applied in long-context scenarios such as multi-turn conversations. However, long contexts pose significant challenges for inference efficiency, including high memory overhead from Key-Value (KV) cache and increased latency due to excessive memory accesses. Recent methods for dynamic KV selection struggle with trade-offs: block-level indexing degrades accuracy by retrieving irrelevant KV entries, while token-level indexing incurs high latency from inefficient retrieval mechanisms. In this paper, we propose CTKVR, a novel centroid-then-token KV retrieval scheme that addresses these limitations. CTKVR leverages a key observation: query vectors adjacent in position exhibit high similarity after Rotary Position Embedding (RoPE) and share most of their top-k KV cache entries. Based on this insight, CTKVR employs a two-stage retrieval strategy: lightweight centroids are precomputed during prefilling for centroid-grained indexing, followed by token-level refinement for precise KV retrieval. This approach balances retrieval efficiency and accuracy. To further enhance performance, we implement an optimized system for indexing construction and search using CPU-GPU co-execution. Experimentally, CTKVR achieves superior performance across multiple benchmarks with less than 1% accuracy degradation. Meanwhile, CTKVR delivers 3 times and 4 times throughput speedups on Llama-3-8B and Yi-9B at 96K context length across diverse GPU hardware.",
+      "identifiers": [
+        "SemanticScholar:83c7e2fdc882f0f2abcab77a59d9fa2bef6a020b"
+      ],
+      "semantic_scholar_id": "83c7e2fdc882f0f2abcab77a59d9fa2bef6a020b",
+      "canonical_id": "arXiv:2512.15550",
+      "arxiv_id": "2512.15550",
+      "doi": "10.48550/arXiv.2512.15550",
+      "authors": [
+        "Kuan Lu",
+        "Shuhang Lin",
+        "Sai Wu",
+        "Yichen Yao",
+        "Jun-Han Yang",
+        "Huan Li",
+        "Wei Chu",
+        "Ying-Hui Xu",
+        "Yuan Qi",
+        "Gang Chen"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 300,
+        "matched_prestigious_venue": null
+      },
+      "reason": "CTkvr targets KV-cache memory access and long-context decoding latency through two-stage retrieval.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "RAPID-LLM: Resilience-Aware Performance analysis of Infrastructure for Distributed LLM Training and Inference",
+      "source_url": "https://arxiv.org/abs/2512.19606",
+      "year": 2025,
+      "published": "2025-12-22",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "RAPID-LLM is a unified performance modeling framework for distributed large language model (LLM) training and inference on GPU clusters, without relying on deployment-specific traces or expensive cycle-level simulation for exploration. From a workload and hardware specification, it builds hardware-aware operator-level execution models that capture tiling, memory-hierarchy effects, communication, and memory feasibility under hybrid parallelism. Its backend simulates explicit multidimensional interconnects with congestion-aware routing and support for degraded and failed links, enabling scalable what-if analysis across topology, mapping, and hardware design choices. Across 124 evaluation cases spanning inference and dense, fully sharded, and mixture-of-experts training on A100 and H100 GPUs, RAPID-LLM achieves an overall mean absolute percentage error (MAPE) of 10.0\\%. Its network predictions stay within 8\\% of ns-3 on representative communication patterns. Case studies demonstrate how RAPID-LLM enables fast, systematic sweeps over hybrid-parallel configurations, quantifies sensitivity to link faults under realistic routing and congestion, and evaluates hypothetical GPU design variants including 3D-stacked HBM-on-GPU scenarios.",
+      "identifiers": [
+        "SemanticScholar:2a3e01f4ca061d6c27372e05013a1cae48dbc45a"
+      ],
+      "semantic_scholar_id": "2a3e01f4ca061d6c27372e05013a1cae48dbc45a",
+      "canonical_id": "arXiv:2512.19606",
+      "arxiv_id": "2512.19606",
+      "authors": [
+        "G. Karfakis",
+        "Lime Yao",
+        "Bin Chen",
+        "Faraz Tahmasebi",
+        "Saptarshi Mitra",
+        "Tian Pan",
+        "Hyoukjun Kwon",
+        "Puneet Gupta"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 295,
+        "matched_prestigious_venue": null
+      },
+      "reason": "The framework models inference operators, memory, interconnect congestion, and feasibility to compare deployment choices; this is a direct systems-performance evaluation contribution.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Rethinking Output Alignment For 1-bit Post-Training Quantization of Large Language Models",
+      "source_url": "https://arxiv.org/abs/2512.21651",
+      "year": 2025,
+      "published": "2025-12-25",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Models (LLMs) deliver strong performance across a wide range of NLP tasks, but their massive sizes hinder deployment on resource-constrained devices. To reduce their computational and memory burden, various compression techniques have been proposed, including quantization, pruning, and knowledge distillation. Among these, post-training quantization (PTQ) is widely adopted for its efficiency, as it requires no retraining and only a small dataset for calibration, enabling low-cost deployment. Recent advances for post-training quantization have demonstrated that even near 4-bit methods can maintain most of the original model performance. However, 1-bit quantization remains particularly challenging. A common strategy in 1-bit quantization is to determine binary weights by matching full-precision parameters, following a weight-driven criterion. However, this objective is not directly aligned with the quantized model's objective, which is to preserve the model's output behavior under the impact of quantization. A natural alternative is to adopt output-driven criteria that minimize discrepancies in model outputs using calibration data. Surprisingly, naive output-driven approaches often perform even worse in the 1-bit regime. In this paper, we show that this failure arises from two fundamental issues: error accumulation across layers and, more critically, \\emph{anisotropic distortion} of the representation space. Based on these insights, we propose a novel PTQ method for 1-bit LLMs that explicitly addresses these issues while maintaining computational efficiency. Extensive experiments demonstrate that our approach consistently outperforms existing 1-bit PTQ methods.",
+      "identifiers": [
+        "SemanticScholar:972b8392c4be8bf169d1507d4f9b54fe4af04521"
+      ],
+      "semantic_scholar_id": "972b8392c4be8bf169d1507d4f9b54fe4af04521",
+      "canonical_id": "arXiv:2512.21651",
+      "arxiv_id": "2512.21651",
+      "doi": "10.48550/arXiv.2512.21651",
+      "authors": [
+        "Dung Anh Hoang",
+        "Cuong Pham",
+        "Cuong C. Nguyen",
+        "Trung Le",
+        "Jianfei Cai",
+        "Thanh-Toan Do"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 292,
+        "matched_prestigious_venue": null
+      },
+      "reason": "This paper develops output-aligned 1-bit PTQ for LLM deployment, directly targeting low-memory, low-compute quantized inference.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-ff82b4f34739",
+    "round": "libimp-ff82b4f34739a5d6-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 19,
+    "round_submission_count": 4,
+    "round_submission_index": 2,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-ff82b4f34739a5d6-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-ff82b4f34739a5d6-pre01.json",
+    "receipt": "sha256:41e85712b959ec35a2502af35b0670634c5fc0e5dc61b1d46435a29d05db28a6"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-ff82b4f34739",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
