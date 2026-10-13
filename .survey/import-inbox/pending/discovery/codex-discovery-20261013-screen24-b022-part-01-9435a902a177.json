@@ -1,0 +1,450 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local",
+  "run_key": "codex-discovery-20261013-screen24-b022-part-01",
+  "reference_main_sha": "2e652754bf895f3441f6e47a9105da61400788a4",
+  "record_count": 20,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.engmed.2026.100123",
+      "identity_tokens": [
+        "DOI:10.1016/j.engmed.2026.100123"
+      ],
+      "title": "Foundation models in medical imaging: A review",
+      "reason": "The publisher review surveys medical imaging foundation models and names lightweight edge inference as a future direction, but it does not present a concrete inference/runtime or serving mechanism.",
+      "source_url": "https://www.sciencedirect.com/science/article/pii/S2950489926000047",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T07:46:47Z",
+      "last_checked_at": "2026-10-13T07:46:47Z",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2201.05596-deepspeed-moe-inference-compression.md",
+        "papers/inference/99-other-inference-systems/2017-1701.06538-outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts.md",
+        "papers/inference/99-other-inference-systems/2024-2401.15947-moe-llava-mixture-of-experts-for-large-vision-language-models.md"
+      ],
+      "source_version": "publisher page/abstract as available at retrieval",
+      "abstract_evidence_excerpt": "Foundation models (FMs), which are large-scale architectures pretrained on diverse datasets, are rapidly reshaping artificial intelligence (AI).",
+      "abstract_evidence_sha256": "980a49d2ecf79f7c3aba5d74ccb818533502c69e06207b16ba3e018f7c7ff7e8"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1016/j.ipm.2025.104449",
+      "identity_tokens": [
+        "DOI:10.1016/j.ipm.2025.104449"
+      ],
+      "title": "Leveraging historical information to boost retrieval-augmented generation in conversations",
+      "reason": "The primary abstract proposes training-free ways to reuse prior search results and conversational history in RAG, directly addressing context handling and retrieval-generation efficiency in an LLM-backed system.",
+      "source_url": "https://www.sciencedirect.com/science/article/pii/S0306457325003905",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T07:46:47Z",
+      "last_checked_at": "2026-10-13T07:46:47Z",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2023-2312.11514-llm-in-a-flash-efficient-large-language-model-inference-with-limited-memory.md"
+      ],
+      "source_version": "publisher page/abstract as available at retrieval",
+      "abstract_evidence_excerpt": "To effectively manage and utilize the information in conversations, we explore the feasibility of boosting response generation by leveraging historical information and propose several strategies to incorporate this information individually or in combination.",
+      "abstract_evidence_sha256": "766d3d6c06fd2077d6fd379d1b7a3daccf1449acce94d7f3a5b94811e5ae63f3"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1016/j.jmapro.2025.11.035",
+      "identity_tokens": [
+        "DOI:10.1016/j.jmapro.2025.11.035"
+      ],
+      "title": "AI-powered language models for alloy design and laser-based manufacturing: A review of NLP applications in materials science",
+      "reason": "The review applies NLP/LLMs to alloy discovery, manufacturing parameters, and materials-property prediction; its target is materials science rather than model inference or serving efficiency.",
+      "source_url": "https://www.sciencedirect.com/science/article/pii/S1526612525012526",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T07:46:47Z",
+      "last_checked_at": "2026-10-13T07:46:47Z",
+      "linked_from": [
+        "papers/survey/09-edge-llm/2025-2410.11845-edge-llm-review.md"
+      ],
+      "source_version": "publisher page/abstract as available at retrieval",
+      "abstract_evidence_excerpt": "The integration of Artificial Intelligence (AI)—particularly Natural Language Processing (NLP) and Large Language Models (LLMs)—is revolutionizing materials science and laser-based manufacturing by automating alloy discovery, optimizing process parameters, and predicting mechanical performance with unprecedented accuracy.",
+      "abstract_evidence_sha256": "5e3be94b06f2822f39f1866b18364c0cf78b3caa9a86dbc368f25e70263f0446"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2512.02044",
+      "identity_tokens": [
+        "arXiv:2512.02044"
+      ],
+      "title": "Beyond Confidence: Adaptive and Coherent Decoding for Diffusion Language Models",
+      "reason": "CCD rectifies diffusion-language-model sampling trajectories and adaptively budgets unmasking steps; the abstract reports up to 3.48x faster inference.",
+      "source_url": "https://arxiv.org/abs/2512.02044",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T07:46:47Z",
+      "last_checked_at": "2026-10-13T07:46:47Z",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2025-2510.02358-diffuspec-unlocking-diffusion-language-models-for-speculative-decoding.md",
+        "papers/inference/07-kv-cache-optimization-compression/2025-2505.15781-dkv-cache-delayed-kv-diffusion-language-models.md",
+        "papers/inference/07-kv-cache-optimization-compression/2025-2505.22618-fast-dllm-kv-cache-parallel-decoding.md",
+        "papers/inference/07-kv-cache-optimization-compression/2025-2506.06295-dllm-cache-adaptive-caching.md",
+        "papers/inference/07-kv-cache-optimization-compression/2025-2508.02558-sparse-dllm-dynamic-cache-eviction.md",
+        "papers/inference/99-other-inference-systems/2025-2508.15487-dream-7b-diffusion-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2026-2406.03736-your-absorbing-discrete-diffusion-secretly-models-the-conditional-distri.md"
+      ],
+      "source_version": "current arXiv version shown on official abstract page; submitted/revision history checked at retrieval",
+      "abstract_evidence_excerpt": "Diffusion Language Models (DLMs) have recently achieved significant success due to their any-order generation capabilities. However, existing inference methods typically rely on local, immediate-step metrics such as confidence or entropy which inherently lack a more reliable perspective. This limitation frequently leads to inconsistent sampling trajectories and suboptimal generation quality. To address this, we propo",
+      "abstract_evidence_sha256": "097c98af10311b5c30db7eff2eb3fc648f08387058e5ae38f92a1ffd99c5c28e"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2511.14751",
+      "identity_tokens": [
+        "arXiv:2511.14751"
+      ],
+      "title": "Co-Me: Confidence-Guided Token Merging for Visual Geometric Transformers",
+      "reason": "Co-Me accelerates visual-geometric transformers for 3D perception/reconstruction; the abstract does not connect its token merging to LLM/VLM inference systems.",
+      "source_url": "https://arxiv.org/abs/2511.14751",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T07:46:47Z",
+      "last_checked_at": "2026-10-13T07:46:47Z",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-2412.05496-flexattention-a-programming-model-for-generating-optimized-attention-kernels.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+      ],
+      "source_version": "current arXiv version shown on official abstract page; submitted/revision history checked at retrieval",
+      "abstract_evidence_excerpt": "We propose Confidence-Guided Token Merging (Co-Me), an acceleration mechanism for visual geometric transformers without retraining or finetuning the base model. Co-Me distilled a light-weight confidence predictor to rank tokens by uncertainty and selectively merge low-confidence ones, effectively reducing computation while maintaining spatial coverage. Compared to similarity-based merging or pruning, the confidence s",
+      "abstract_evidence_sha256": "ee9948cd5949ee581608471bb5fc60ee71fc6b769c530cda00e49c0a6e0f9844"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2511.13912",
+      "identity_tokens": [
+        "arXiv:2511.13912"
+      ],
+      "title": "Compute-in-memory implementation of state space models for event sequence processing",
+      "reason": "The abstract co-designs SSMs with compute-in-memory hardware for real-time event vision/audio, a concrete low-energy sequence-compute system but not an LLM inference workload.",
+      "source_url": "https://arxiv.org/abs/2511.13912",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T07:46:47Z",
+      "last_checked_at": "2026-10-13T07:46:47Z",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2403.19887-jamba-a-hybrid-transformer-mamba-language-model.md",
+        "papers/inference/19-inference-evaluation-benchmarking/2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md",
+        "papers/inference/99-other-inference-systems/2023-2303.06349-resurrecting-recurrent-neural-networks-for-long-sequences.md",
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md",
+        "papers/inference/99-other-inference-systems/2024-2312.06635-gated-linear-attention-transformers-with-hardware-efficient-training.md"
+      ],
+      "primary_title": "Compute-in-Memory Implementation of State Space Models for Event Sequence Processing",
+      "source_version": "current arXiv version shown on official abstract page; submitted/revision history checked at retrieval",
+      "abstract_evidence_excerpt": "State space models have recently emerged as a powerful framework for long sequence processing, outperforming traditional methods on diverse benchmarks. Fundamentally, state space models can generalize both recurrent and convolutional networks and have been shown to even capture key functions of biological systems. Here we report an approach to implement SSMs in energy-efficient compute-in-memory hardware to achieve r",
+      "abstract_evidence_sha256": "897a9c3e2fd6b91a4524e2a4f4d092d002aff6c8aaa6f0a4c505943f91296e11"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2511.12309",
+      "identity_tokens": [
+        "arXiv:2511.12309"
+      ],
+      "title": "Optimal Self-Consistency for Efficient Reasoning with Large Language Models",
+      "reason": "Blend-ASC allocates self-consistency samples dynamically and uses 4.8x fewer samples on average, directly reducing test-time LLM reasoning work.",
+      "source_url": "https://arxiv.org/abs/2511.12309",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T07:46:47Z",
+      "last_checked_at": "2026-10-13T07:46:47Z",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md",
+        "papers/inference/19-inference-evaluation-benchmarking/2024-2401.10480-escape-sky-high-cost-early-stopping-self-consistency-for-multi-step-reas.md",
+        "papers/inference/99-other-inference-systems/2023-2305.11860-let-s-sample-step-by-step-adaptive-consistency-for-efficient-reasoning-a.md"
+      ],
+      "source_version": "current arXiv version shown on official abstract page; submitted/revision history checked at retrieval",
+      "abstract_evidence_excerpt": "Self-consistency (SC) is a widely used test-time inference technique for improving performance in chain-of-thought reasoning. It consists of generating multiple responses, or ``samples\", from a large language model (LLM) and selecting the most frequent answer. This procedure can naturally be viewed as a majority vote or empirical mode estimation. Despite its effectiveness, self-consistency is prohibitively expensive ",
+      "abstract_evidence_sha256": "10e96f4e477e1cda09bd1bc1745b49882521a1ae948c8e51128c3ab804914b2d"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2511.11346",
+      "identity_tokens": [
+        "arXiv:2511.11346"
+      ],
+      "title": "Fast and Expressive Multi-Byte Prediction with Probabilistic Circuits",
+      "reason": "MTPC models joint future-byte distributions for multi-token prediction and reports faster generation with speculative decoding while preserving verifier performance.",
+      "source_url": "https://arxiv.org/abs/2511.11346",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T07:46:47Z",
+      "last_checked_at": "2026-10-13T07:46:47Z",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2022-2211.17192-speculative-decoding.md",
+        "papers/inference/05-speculative-decoding-moe/2023-2302.01318-speculative-sampling.md",
+        "papers/inference/05-speculative-decoding-moe/2023-2310.15141-spectr-fast-speculative-decoding-via-optimal-transport.md",
+        "papers/inference/05-speculative-decoding-moe/2024-2401.15077-eagle-feature-speculative-sampling.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2403.09636-dynamic-memory-compression-retrofitting-llms-for-accelerated-inference.md",
+        "papers/inference/99-other-inference-systems/2018-1802.06901-deterministic-non-autoregressive-neural-sequence-modeling-by-iterative-r.md",
+        "papers/inference/99-other-inference-systems/2018-1811.03115-blockwise-parallel-decoding-for-deep-autoregressive-models.md",
+        "papers/inference/99-other-inference-systems/2024-2402.05109-hydra-sequentially-dependent-draft-heads-for-medusa-decoding.md",
+        "papers/inference/99-other-inference-systems/2024-2404.19737-better-faster-large-language-models-via-multi-token-prediction.md",
+        "papers/survey/07-speculative-decoding/2024-2401.07851-speculative-decoding-survey.md"
+      ],
+      "source_version": "current arXiv version shown on official abstract page; submitted/revision history checked at retrieval",
+      "abstract_evidence_excerpt": "Multi-token prediction (MTP) is a prominent strategy to significantly speed up generation in large language models (LLMs), especially in byte-level LLMs, which are tokeniser-free but prohibitively slow. However, many existing MTP methods either assume independence between future tokens, sacrificing expressiveness, or generate tokens one at a time within the window, increasing latency. In this work, we investigate the",
+      "abstract_evidence_sha256": "5273546cc2940a174008e8b110a0f0c84b4f69e40a23af6f31c8a7385c27c82c"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3746252.3761120",
+      "identity_tokens": [
+        "DOI:10.1145/3746252.3761120"
+      ],
+      "title": "SyLeR: A Framework for Explicit Syllogistic Legal Reasoning in Large Language Models",
+      "reason": "The ACM Digital Library publisher page for DOI 10.1145/3746252.3761120 returned 403 Forbidden, so the primary abstract could not be read; the title suggests legal reasoning but is insufficient for final relevance classification.",
+      "source_url": "https://dl.acm.org/doi/10.1145/3746252.3761120",
+      "body_check": "source_unavailable; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-10-13T07:46:47Z",
+      "last_checked_at": "2026-10-13T07:46:47Z",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2310.06201-compressing-context-to-enhance-inference-efficiency-of-large-language-mo.md",
+        "papers/inference/99-other-inference-systems/2023-2310.06839-longllmlingua-accelerating-and-enhancing-llms-in-long-context-scenarios-.md"
+      ],
+      "source_version": "publisher page/abstract as available at retrieval"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2606.06087",
+      "identity_tokens": [
+        "arXiv:2606.06087"
+      ],
+      "title": "LatentSkill: From In-Context Textual Skills to In-Weight Latent Skills for LLM Agents",
+      "reason": "LatentSkill transfers prompt skills into loadable LoRA weights and reports 63.9–71.8% fewer prefill tokens per step, directly reducing agent inference context cost.",
+      "source_url": "https://arxiv.org/abs/2606.06087",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T07:46:47Z",
+      "last_checked_at": "2026-10-13T07:46:47Z",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2212.10511-when-not-to-trust-language-models-investigating-effectiveness-of-paramet.md",
+        "papers/inference/99-other-inference-systems/2023-2310.06839-longllmlingua-accelerating-and-enhancing-llms-in-long-context-scenarios-.md"
+      ],
+      "source_version": "current arXiv version shown on official abstract page; submitted/revision history checked at retrieval",
+      "abstract_evidence_excerpt": "Agent systems increasingly use textual skills to encode reusable task procedures, but injecting these skills into the prompt at every step incurs substantial context overhead and exposes skill content as plaintext. We present LatentSkill, a framework that converts textual skills into plug-and-play LoRA adapters through a pretrained hypernetwork. LatentSkill stores skill knowledge in weight space rather than context s",
+      "abstract_evidence_sha256": "d8151b3f9b2ab0927e4b9c617871950c2f326aa21106243d338ed860d579243a"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.06240",
+      "identity_tokens": [
+        "arXiv:2606.06240"
+      ],
+      "title": "TOKI: A Bitemporal Operator Algebra for Contradiction Resolution in LLM-Agent Persistent Memory",
+      "reason": "TOKI specifies consistency and provenance semantics for persistent agent memory writes; it is a memory-system correctness contribution, while the abstract gives no material inference-efficiency benefit.",
+      "source_url": "https://arxiv.org/abs/2606.06240",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T07:46:47Z",
+      "last_checked_at": "2026-10-13T07:46:47Z",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2501.13956-zep-a-temporal-knowledge-graph-architecture-for-agent-memory.md"
+      ],
+      "source_version": "current arXiv version shown on official abstract page; submitted/revision history checked at retrieval",
+      "abstract_evidence_excerpt": "Persistent memory for an LLM agent is a write-heavy substrate: every belief update is a versioned write, and a new claim may contradict a stored one. Production systems use four resolution heuristics (last-writer-wins, evidence-weighted merge, await-confirmation, per-rule policy), yet none declares the isolation level it assumes or the write-time anomalies it admits. We show that contradiction resolution is write-tim",
+      "abstract_evidence_sha256": "0c38dfb15bac10653373f353a76c7b5bb40784a87ae8a7d9fcef8b1030f6ba82"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2606.06448",
+      "identity_tokens": [
+        "arXiv:2606.06448"
+      ],
+      "title": "Agent Memory: Characterization and System Implications of Stateful Long-Horizon Workloads",
+      "reason": "The paper characterizes construction, retrieval, and generation costs across agent-memory systems and derives scheduling, amortization, freshness-latency, and fleet-management recommendations.",
+      "source_url": "https://arxiv.org/abs/2606.06448",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T07:46:47Z",
+      "last_checked_at": "2026-10-13T07:46:47Z",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md",
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2501.13956-zep-a-temporal-knowledge-graph-architecture-for-agent-memory.md",
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2502.12110-a-mem-agentic-memory-for-llm-agents.md",
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md",
+        "papers/inference/99-other-inference-systems/2026-2601.02553-simplemem-efficient-lifelong-memory-for-llm-agents.md"
+      ],
+      "source_version": "current arXiv version shown on official abstract page; submitted/revision history checked at retrieval",
+      "abstract_evidence_excerpt": "LLM agents are increasingly deployed on long-horizon tasks requiring sustained reasoning over extended interaction histories. Realizing this at scale requires agents to persistently store, retrieve, and update their own memory across sessions. A rich ecosystem of agent memory systems has emerged spanning flat retrieval, LLM-mediated extraction, consolidating fact stores, and agentic control flows. Yet, their system-l",
+      "abstract_evidence_sha256": "4c0fd4cc5678609b32a441b3276b6f411ed06b8048df38f90e0a045eaa6724bd"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2606.06574",
+      "identity_tokens": [
+        "arXiv:2606.06574"
+      ],
+      "title": "Skip a Layer or Loop It? Learning Program-of-Layers in LLMs",
+      "reason": "PoLar dynamically skips or repeats pretrained LLM layers per input and reports comparable or better accuracy with fewer executed layers, directly targeting inference compute.",
+      "source_url": "https://arxiv.org/abs/2606.06574",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T07:46:47Z",
+      "last_checked_at": "2026-10-13T07:46:47Z",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2024-layerskip-enabling-early-exit-inference-and-self-speculative-decoding.md",
+        "papers/inference/04-conditional-computation/2025-2503.23798-adaptive-layer-skipping-in-pre-trained-llms.md",
+        "papers/inference/07-kv-cache-optimization-compression/2025-2507.10524-mixture-of-recursions-learning-dynamic-recursive-depths-for-adaptive-tok.md",
+        "papers/inference/99-other-inference-systems/2019-1909.11556-reducing-transformer-depth-on-demand-with-structured-dropout.md",
+        "papers/inference/99-other-inference-systems/2020-2004.02178-fastbert-a-self-distilling-bert-with-adaptive-inference-time.md",
+        "papers/inference/99-other-inference-systems/2020-2004.12993-deebert-dynamic-early-exiting-for-accelerating-bert-inference.md",
+        "papers/inference/99-other-inference-systems/2020-2006.04152-bert-loses-patience-fast-and-robust-inference-with-early-exit.md",
+        "papers/inference/99-other-inference-systems/2024-2403.03853-shortgpt-layers-in-large-language-models-are-more-redundant-than-you-exp.md",
+        "papers/inference/99-other-inference-systems/2024-2404.02258-mixture-of-depths-dynamically-allocating-compute-in-transformer-based-la.md"
+      ],
+      "source_version": "current arXiv version shown on official abstract page; submitted/revision history checked at retrieval",
+      "abstract_evidence_excerpt": "Large language models (LLMs) perform inference by following a fixed depth and order, non-recurrent execution of all layers. We reveal the wide existence of training-free, flexible, dynamic program-of-layers (PoLar), where pretrained layers can be packed as modules and then skipped or looped to form a customized program for each input. For most inputs, substantially shorter program executions can achieve the same or b",
+      "abstract_evidence_sha256": "41f4df3d0753ca452f91dcc95a39d09de2a2b170cb746de788de400500c69905"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2606.04438",
+      "identity_tokens": [
+        "arXiv:2606.04438"
+      ],
+      "title": "LoopMoE: Unifying Iterative Computation with Mixture-of-Experts for Language Modeling",
+      "reason": "LoopMoE combines sparse expert routing with weight-shared iterative computation and evaluates matched per-token FLOPs, giving a concrete sparse-inference architecture.",
+      "source_url": "https://arxiv.org/abs/2606.04438",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T07:46:47Z",
+      "last_checked_at": "2026-10-13T07:46:47Z",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2023-2303.09752-colt5-faster-long-range-transformers-with-conditional-computation.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md",
+        "papers/inference/07-kv-cache-optimization-compression/2025-2507.10524-mixture-of-recursions-learning-dynamic-recursive-depths-for-adaptive-tok.md",
+        "papers/inference/12-moe-parallelism-communication/2021-2101.03961-switch-transformers-scaling-to-trillion-parameter-models-with-simple-and.md",
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2502.05171-scaling-up-test-time-compute-with-latent-reasoning-a-recurrent-depth-app.md",
+        "papers/inference/99-other-inference-systems/2024-2409.02060-olmoe-open-mixture-of-experts-language-models.md",
+        "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md"
+      ],
+      "source_version": "current arXiv version shown on official abstract page; submitted/revision history checked at retrieval",
+      "abstract_evidence_excerpt": "Mixture-of-Experts (MoE) and looped architectures scale models along two orthogonal axes, namely parameter capacity and effective depth. However, mainstream looped architectures rely on dense backbones that couple parameter count with per-token FLOPs, which makes it impossible to isolate the effect of iterative computation under matched budgets. To this end, we present LoopMoE, a looped MoE language model that integr",
+      "abstract_evidence_sha256": "67d8978817fa40241afa22f6ff610463e8748df6324c30387abe3e970106059b"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2606.01926",
+      "identity_tokens": [
+        "arXiv:2606.01926"
+      ],
+      "title": "Mitigating Bias in Locally Constrained Decoding via Tractable Proposals",
+      "reason": "The paper tensorizes finite-automaton constraints for GPU execution and builds globally constrained decoding proposals that converge with fewer SMC particles.",
+      "source_url": "https://arxiv.org/abs/2606.01926",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T07:46:47Z",
+      "last_checked_at": "2026-10-13T07:46:47Z",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.09702-efficient-guided-generation-for-large-language-models.md"
+      ],
+      "source_version": "current arXiv version shown on official abstract page; submitted/revision history checked at retrieval",
+      "abstract_evidence_excerpt": "Generations from large language models often fail to conform to desired constraints such as JSON schema. Existing locally constrained decoding (LCD) approaches enforce constraints by myopically masking out next tokens, resulting in biased sampling and degradation in performance. Recent work uses sequential Monte Carlo (SMC) methods to mitigate such biases, but designing effective proposal distributions or potential f",
+      "abstract_evidence_sha256": "697651a4edc07cf64c578dbacfba764a7a5114b5d90869033bd1f5f7814faf75"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/EITCE70137.2026.11634378",
+      "identity_tokens": [
+        "DOI:10.1109/EITCE70137.2026.11634378"
+      ],
+      "title": "CacheRoute: KV-Cache-Aware Routing for LLM Backend Services on Kubernetes",
+      "reason": "The IEEE Xplore publisher page for DOI 10.1109/EITCE70137.2026.11634378 could not be retrieved (URL inaccessible through the source fetcher); title and DOI are known, but no registered-publisher abstract was available to verify the claimed KV-cache routing contribution.",
+      "source_url": "https://ieeexplore.ieee.org/document/11634378",
+      "body_check": "source_unavailable; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-10-13T07:46:47Z",
+      "last_checked_at": "2026-10-13T07:46:47Z",
+      "linked_from": [
+        "papers/inference/10-kv-cache-offload-recomputation/2024-2310.07240-cachegen.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2311.18677-splitwise-efficient-generative-llm-inference-phase-splitting.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.09670-distserve-disaggregating-prefill-decoding-goodput.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2403.02310-sarathi-serve-chunked-prefills-stall-free-scheduling.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2408.15792-efficient-llm-scheduling-learning-to-rank.md",
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+      ],
+      "source_version": "publisher page/abstract as available at retrieval"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2605.30010",
+      "identity_tokens": [
+        "arXiv:2605.30010"
+      ],
+      "title": "EarlyTom: Early Token Compression Completes Fast Video Understanding",
+      "reason": "EarlyTom compresses visual tokens inside the Video-LLM vision encoder and reports lower TTFT and FLOPs while retaining baseline accuracy, directly improving deployment efficiency.",
+      "source_url": "https://arxiv.org/abs/2605.30010",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T07:46:47Z",
+      "last_checked_at": "2026-10-13T07:46:47Z",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md",
+        "papers/inference/99-other-inference-systems/2023-2311.17043-llama-vid-an-image-is-worth-2-tokens-in-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2024-2403.06764-an-image-is-worth-1-2-tokens-after-layer-2-plug-and-play-inference-accel.md",
+        "papers/inference/99-other-inference-systems/2024-2403.15388-llava-prumerge-adaptive-token-reduction-for-efficient-large-multimodal-m.md",
+        "papers/inference/99-other-inference-systems/2024-2410.04417-sparsevlm-visual-token-sparsification-for-efficient-vision-language-mode.md",
+        "papers/inference/99-other-inference-systems/2024-2410.17247-pyramiddrop-accelerating-your-large-vision-language-models-via-pyramid-v.md",
+        "papers/inference/99-other-inference-systems/2024-2411.15024-dycoke-dynamic-compression-of-tokens-for-fast-video-large-language-model.md"
+      ],
+      "source_version": "current arXiv version shown on official abstract page; submitted/revision history checked at retrieval",
+      "abstract_evidence_excerpt": "Video large language models (Video-LLMs) have demonstrated strong capabilities in video understanding tasks. However, their practical deployment is still hindered by the inefficiency introduced by processing massive amounts of visual tokens. Although recent approaches achieve extremely low token retention ratios while maintaining accuracy comparable to full-token baselines, most of them perform compression only at th",
+      "abstract_evidence_sha256": "a52a1dd1986f68e093d74df8c6129ad41e7937f37e06113b1079caa16f10fd94"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2605.23071",
+      "identity_tokens": [
+        "arXiv:2605.23071"
+      ],
+      "title": "The Efficiency Frontier: A Unified Framework for Cost–Performance Optimization in LLM Context Management",
+      "reason": "The framework jointly models task quality, token cost, and preprocessing reuse to choose LLM context-management strategies for deployment, directly addressing inference cost.",
+      "source_url": "https://arxiv.org/abs/2605.23071",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T07:46:47Z",
+      "last_checked_at": "2026-10-13T07:46:47Z",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.06945-in-context-autoencoder-for-context-compression-in-a-large-language-model.md",
+        "papers/inference/99-other-inference-systems/2023-2310.06839-longllmlingua-accelerating-and-enhancing-llms-in-long-context-scenarios-.md"
+      ],
+      "source_version": "current arXiv version shown on official abstract page; submitted/revision history checked at retrieval",
+      "abstract_evidence_excerpt": "Large language models (LLMs) increasingly rely on long-context processing, but expanding context windows introduces substantial computational and financial costs. Existing context reduction approaches, including retrieval and memory compression methods, are typically evaluated using performance and efficiency metrics independently, limiting systematic comparison and deployment-aware decision-making.This paper introdu",
+      "abstract_evidence_sha256": "654f9a25dc33716d11dee81b4c19af8097649b65d509673768b91c7ddfd07cd1"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2605.15206",
+      "identity_tokens": [
+        "arXiv:2605.15206"
+      ],
+      "title": "AgentStop: Terminating Local AI Agents Early to Save Energy in Consumer Devices",
+      "reason": "AgentStop proposes early termination of local agents to reduce energy on consumer devices, a direct edge/runtime efficiency mechanism.",
+      "source_url": "https://arxiv.org/abs/2605.15206",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T07:46:47Z",
+      "last_checked_at": "2026-10-13T07:46:47Z",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2506.04301-cost-dynamic-reasoning.md",
+        "papers/inference/99-other-inference-systems/2017-1701.06538-outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts.md",
+        "papers/inference/99-other-inference-systems/2020-2006.04152-bert-loses-patience-fast-and-robust-inference-with-early-exit.md",
+        "papers/inference/99-other-inference-systems/2024-2310.03094-large-language-model-cascades-with-mixture-of-thought-representations-fo.md",
+        "papers/inference/99-other-inference-systems/2024-2404.10136-language-model-cascades-token-level-uncertainty-and-beyond.md"
+      ],
+      "source_version": "current arXiv version shown on official abstract page; submitted/revision history checked at retrieval",
+      "abstract_evidence_excerpt": "Autonomous agents powered by large language models (LLMs) are increasingly used to automate complex, multi-step tasks such as coding or web-based question answering. While remote, cloud-based agents offer scalability and ease of deployment, they raise privacy concerns, depend on network connectivity, and incur recurring API costs. Deploying agents locally on user devices mitigates these issues by preserving data priv",
+      "abstract_evidence_sha256": "898b7f79658c510ad9a560a14f7b8f5c41e785c7695436108c668bf2b58dc8b6"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1016/j.eswa.2026.131117",
+      "identity_tokens": [
+        "DOI:10.1016/j.eswa.2026.131117"
+      ],
+      "title": "A colon polyp segmentation network via collaborative decision-making of mixture of experts",
+      "reason": "PolypMoE routes image features among CNN, Transformer, and Mamba experts for colon-polyp segmentation; its target is medical-image task accuracy, not LLM/MoE inference systems.",
+      "source_url": "https://www.sciencedirect.com/science/article/pii/S095741742600031X",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T07:46:47Z",
+      "last_checked_at": "2026-10-13T07:46:47Z",
+      "linked_from": [
+        "papers/inference/12-moe-parallelism-communication/2022-2206.03382-tutel-adaptive-mixture-of-experts-at-scale.md"
+      ],
+      "source_version": "publisher page/abstract as available at retrieval",
+      "abstract_evidence_excerpt": "Precise segmentation of colorectal polyps represents a pivotal task in endoscopic image analysis, with substantial clinical implications for early detection and intervention of gastrointestinal diseases.",
+      "abstract_evidence_sha256": "fbdcd0b1d14751dc269591925bb5708390a094cc06c4fcba608a45ea1d9c9a2a"
+    }
+  ]
+}
