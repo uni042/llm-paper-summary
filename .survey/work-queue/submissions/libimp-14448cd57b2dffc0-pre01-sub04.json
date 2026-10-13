@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "HACK++: Towards More Effective Head-Aware Key-Value Compression for Efficient Visual Autoregressive Modeling",
+      "source_url": "https://arxiv.org/abs/2606.08302",
+      "year": 2026,
+      "published": "2026-06-06",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Visual Autoregressive (VAR) models adopt a next-scale prediction paradigm, offering high-quality generation with substantially fewer decoding steps. However, existing VAR models suffer from significant attention complexity and severe memory overhead due to the accumulation of key-value (KV) caches across scales. In this paper, we tackle this challenge by introducing KV cache compression into the next-scale paradigm. We begin with an in-depth analysis of VAR attention and observe that attention heads can be stably divided into two functionally distinct categories: Contextual Heads focus on maintaining semantic consistency, while Structural Heads preserve spatial coherence. Their functional divergence makes existing one-size-fits-all compression methods perform poorly on VAR models. We further find that the two head types differ markedly in their reliance on historical scales, and that this reliance shifts across layers and generation steps, arguing for an adaptive cache budget allocation. To address these challenges, we propose HACK++, a training-free Head-Aware key-value Compression frameworK for VAR models. From a one-time offline calibration, HACK++ classifies head types and derives head-specific priors. At inference, it decouples attention from cache compression under independent budgets, bounding the current-scale attention cost while compressing the accumulated cache far more aggressively, via pattern-specific strategies and a reliance-aware budget allocation. Extensive experiments on multiple VAR models across text-to-image, class-conditional, and unified understanding-and-generation tasks validate the effectiveness and generalizability of HACK++. For example, on Infinity-2B/8B, HACK++ maintains near-lossless generation with only a 30% attention budget and a 10% cache budget, and remains robust even under a 1% cache budget.",
+      "identifiers": [
+        "SemanticScholar:ef700496beeebf3e7630931798843c97f730f0f5"
+      ],
+      "semantic_scholar_id": "ef700496beeebf3e7630931798843c97f730f0f5",
+      "canonical_id": "arXiv:2606.08302",
+      "arxiv_id": "2606.08302",
+      "doi": "10.48550/arXiv.2606.08302",
+      "authors": [
+        "Ziran Qin",
+        "Yu-Chen Jiang",
+        "Mingbao Lin",
+        "Youru Lv",
+        "Hang Guo",
+        "Wen Fei",
+        "Weiyao Lin"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 129,
+        "matched_prestigious_venue": null
+      },
+      "reason": "HACK++ allocates attention and KV-cache budgets by visual-attention-head function for visual autoregressive inference, enabling near-lossless generation with severe cache reduction.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-14448cd57b2d",
+    "round": "libimp-14448cd57b2dffc0-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 16,
+    "round_submission_count": 4,
+    "round_submission_index": 4,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-14448cd57b2dffc0-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-14448cd57b2dffc0-pre01.json",
+    "receipt": "sha256:cc7b5cc7029b6c57eae0c6b57a73cf56785893ddf126d735edb7d46a7b4c0c6c"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-14448cd57b2d",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

@@ -1,0 +1,227 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Collaborative Large Language Model Inference via Resource-Aware Parallel Speculative Decoding",
+      "source_url": "https://arxiv.org/abs/2511.01695",
+      "year": 2025,
+      "published": "2025-11-03",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The growing demand for on-device large language model (LLM) inference highlights the need for efficient mobile edge computing (MEC) solutions, especially in resource-constrained settings. Speculative decoding offers a promising solution by partitioning token generation between a lightweight draft model on mobile devices and a powerful target model on edge servers, but suffers from communication overhead and asynchronous delays. This paper is the first to propose a unified framework that jointly optimizes user association and resource allocation (UARA) to support efficient parallel speculative decoding. We solve the UARA problem using a multi-agent deep reinforcement learning algorithm. To evaluate our approach under realistic conditions, we conduct experiments using the Sionna simulator. Results show that our method achieves up to 28.0% and an average of 23.7% reduction in end-to-end latency without compromising inference accuracy, enabling scalable and low-latency LLM services in MEC systems.",
+      "identifiers": [
+        "SemanticScholar:4fa8d697961d80c07fe4806a09e919fb25b3f471"
+      ],
+      "semantic_scholar_id": "4fa8d697961d80c07fe4806a09e919fb25b3f471",
+      "canonical_id": "arXiv:2511.01695",
+      "arxiv_id": "2511.01695",
+      "doi": "10.48550/arXiv.2511.01695",
+      "authors": [
+        "Jungyeon Koh",
+        "Hyun Jong Yang"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 344,
+        "matched_prestigious_venue": null
+      },
+      "reason": "This framework jointly optimizes user association and resource allocation for mobile-edge parallel speculative decoding and reports lower end-to-end latency.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "INTERLACE: Interleaved Layer Pruning and Efficient Adaptation in Large Vision-Language Models",
+      "source_url": "https://arxiv.org/abs/2511.19676",
+      "year": 2025,
+      "published": "2025-11-24",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "We introduce INTERLACE, a novel framework that prunes redundant layers in VLMs while maintaining performance through sample-efficient finetuning. Existing layer pruning methods lead to significant performance drop when applied to VLMs. Instead, we analyze triplets of consecutive layers to identify local redundancy, removing the most redundant of the first two layers, finetune the remaining layer to compensate for the lost capacity, and freeze the third layer to serve as a stable anchor during finetuning. We found that this interleaved finetune-freeze design enables rapid convergence with minimal data after pruning. By finetuning only a subset of layers on just 1% of the FineVision dataset for one epoch, Interlace achieves 88.9% average performance retention after dropping 25% of the network, achieving SOTA performance. Our code is available at: https://github.com/pmadinei/Interlace.git",
+      "identifiers": [
+        "SemanticScholar:7519442225d88b6cee7d98858f72ab66ea879625"
+      ],
+      "semantic_scholar_id": "7519442225d88b6cee7d98858f72ab66ea879625",
+      "canonical_id": "arXiv:2511.19676",
+      "arxiv_id": "2511.19676",
+      "doi": "10.48550/arXiv.2511.19676",
+      "authors": [
+        "Parsa Madinei",
+        "Ryan Solgi",
+        "Zi-Qi Wen",
+        "Jonathan Skaza",
+        "Miguel P. Eckstein",
+        "Ramtin Pedarsani"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 323,
+        "matched_prestigious_venue": null
+      },
+      "reason": "INTERLACE prunes redundant VLM layers and uses selective fine-tuning to retain accuracy after reducing model depth, a concrete model-compression method.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "The Rise of Sparse Mixture-of-Experts: A Survey from Algorithmic Foundations to Decentralized Architectures and Vertical Domain Applications",
+      "source_url": "https://arxiv.org/abs/2602.08019",
+      "year": 2025,
+      "published": "2025-12-16",
+      "venue": "Journal of Computer Science and Artificial Intelligence",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The sparse Mixture of Experts (MoE) architecture has evolved as a powerful approach for scaling deep learning models to more parameters with comparable computation cost. As an important branch of large language model (LLM), MoE model only activate a subset of experts based on a routing network. This sparse conditional computation mechanism significantly improves computational efficiency, paving a promising path for greater scalability and cost-efficiency. It not only enhance downstream applications such as natural language processing, computer vision, and multimodal in various horizontal domains, but also exhibit broad applicability across vertical domains including medical diagnosis, autonomous driving, financial analysis, and business intelligence. Despite the growing popularity and application of MoE models across various domains, there lacks a systematic exploration of recent advancements of MoE in many important fields. Existing surveys on MoE suffer from limitations such as lack coverage or not extensively exploration of key areas. This survey seeks to fill these gaps. In this paper, Firstly, we examine the foundational principles of MoE, with an in-depth exploration of its core components—the routing network and expert network. Subsequently, we extend beyond the centralized paradigm to the decentralized paradigm, which unlocks the immense untapped potential of decentralized infrastructure, enables democratization of MoE development for broader communities, and delivers greater scalability and cost-efficiency. Furthermore we focus on exploring its vertical domain applications. Finally, we also identify key challenges and promising future research directions. To the best of our knowledge, this survey is currently the most comprehensive review in the field of MoE. We aim for this article to serve as a valuable resource for both researchers and practitioners, enabling them to navigate and stay up-to-date with the latest advancements.",
+      "identifiers": [
+        "SemanticScholar:92b37aca150d10d6ee766a69d4bf20f29120a038"
+      ],
+      "semantic_scholar_id": "92b37aca150d10d6ee766a69d4bf20f29120a038",
+      "canonical_id": "arXiv:2602.08019",
+      "arxiv_id": "2602.08019",
+      "doi": "10.54097/bvpfjj49",
+      "authors": [
+        "Dong Pan",
+        "Bingtao Li",
+        "Yongsheng Zheng",
+        "Jiren Ma",
+        "Victor Fei"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 301,
+        "matched_prestigious_venue": null
+      },
+      "reason": "The survey covers sparse conditional computation and decentralized MoE architectures, both directly connected to model compute efficiency and scalable serving.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Fast Inference of Visual Autoregressive Model with Adjacency-Adaptive Dynamical Draft Trees",
+      "source_url": "https://arxiv.org/abs/2512.21857",
+      "year": 2025,
+      "published": "2025-12-26",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Autoregressive (AR) image models achieve diffusion-level quality but suffer from sequential inference, requiring approximately 2,000 steps for a 576x576 image. Speculative decoding with draft trees accelerates LLMs yet underperforms on visual AR models due to spatially varying token prediction difficulty. We identify a key obstacle in applying speculative decoding to visual AR models: inconsistent acceptance rates across draft trees due to varying prediction difficulties in different image regions. We propose Adjacency-Adaptive Dynamical Draft Trees (ADT-Tree), an adjacency-adaptive dynamic draft tree that dynamically adjusts draft tree depth and width by leveraging adjacent token states and prior acceptance rates. ADT-Tree initializes via horizontal adjacency, then refines depth/width via bisectional adaptation, yielding deeper trees in simple regions and wider trees in complex ones. The empirical evaluations on MS-COCO 2017 and PartiPrompts demonstrate that ADT-Tree achieves speedups of 3.13xand 3.05x, respectively. Moreover, it integrates seamlessly with relaxed sampling methods such as LANTERN, enabling further acceleration. Code is available at https://github.com/Haodong-Lei-Ray/ADT-Tree.",
+      "identifiers": [
+        "SemanticScholar:fa40f244a3e54850f36110d6174211fa3f7e052f"
+      ],
+      "semantic_scholar_id": "fa40f244a3e54850f36110d6174211fa3f7e052f",
+      "canonical_id": "arXiv:2512.21857",
+      "arxiv_id": "2512.21857",
+      "doi": "10.48550/arXiv.2512.21857",
+      "authors": [
+        "Haodong Lei",
+        "Hong-Song Wang",
+        "Xin Geng",
+        "Liang Wang",
+        "Pan Zhou"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 291,
+        "matched_prestigious_venue": null
+      },
+      "reason": "ADT-Tree adapts speculative draft-tree depth and width to visual-token difficulty and reports roughly 3× faster visual autoregressive inference.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Accelerate Speculative Decoding with Sparse Computation in Verification",
+      "source_url": "https://arxiv.org/abs/2512.21911",
+      "year": 2025,
+      "published": "2025-12-26",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Speculative decoding accelerates autoregressive language model inference by verifying multiple draft tokens in parallel. However, the verification stage often becomes the dominant computational bottleneck, especially for long-context inputs and mixture-of-experts (MoE) models. Existing sparsification methods are designed primarily for standard token-by-token autoregressive decoding to remove substantial computational redundancy in LLMs. This work systematically adopts different sparse methods on the verification stage of the speculative decoding and identifies structured redundancy across multiple dimensions. Based on these observations, we propose a sparse verification framework that jointly sparsifies attention, FFN, and MoE components during the verification stage to reduce the dominant computation cost. The framework further incorporates an inter-draft token and inter-layer retrieval reuse strategy to further reduce redundant computation without introducing additional training. Extensive experiments across summarization, question answering, and mathematical reasoning datasets demonstrate that the proposed methods achieve favorable efficiency-accuracy trade-offs, while maintaining stable acceptance length.",
+      "identifiers": [
+        "SemanticScholar:f72acc122e2b2abb83ee6cc6eebdbb604be5477e"
+      ],
+      "semantic_scholar_id": "f72acc122e2b2abb83ee6cc6eebdbb604be5477e",
+      "canonical_id": "arXiv:2512.21911",
+      "arxiv_id": "2512.21911",
+      "doi": "10.48550/arXiv.2512.21911",
+      "authors": [
+        "Jikai Wang",
+        "Jian-Chao Tan",
+        "Yuxuan Hu",
+        "Jiayu Qin",
+        "Yerui Sun",
+        "Yu-Chen Xie",
+        "Xun-Liang Cai",
+        "Jun-Tao Li",
+        "Min Zhang"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 291,
+        "matched_prestigious_venue": null
+      },
+      "reason": "The method jointly sparsifies attention, FFN and MoE computation in speculative-token verification, directly addressing a known inference bottleneck without extra training.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-14448cd57b2d",
+    "round": "libimp-14448cd57b2dffc0-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 16,
+    "round_submission_count": 4,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-14448cd57b2dffc0-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-14448cd57b2dffc0-pre01.json",
+    "receipt": "sha256:cc7b5cc7029b6c57eae0c6b57a73cf56785893ddf126d735edb7d46a7b4c0c6c"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-14448cd57b2d",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

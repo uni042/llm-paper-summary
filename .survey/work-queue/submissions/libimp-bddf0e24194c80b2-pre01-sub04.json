@@ -1,0 +1,109 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "D^2SD: Accelerating Speculative Decoding with Dual Diffusion Draft Models",
+      "source_url": "https://arxiv.org/abs/2606.04446",
+      "year": 2026,
+      "published": "2026-06-03",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Speculative decoding accelerates autoregressive large language model inference by drafting multiple tokens and verifying them in a single target-model forward pass. Recent diffusion-based drafters generate an entire block of tokens in parallel but usually commit to a single draft sequence per verification: once the first mismatch occurs, all subsequent draft tokens are discarded, resulting in a limited acceptance rate. Naively batching more draft candidate sequences only introduces a marginal improvement, as redundant or poorly placed branches increase the cost of drafting and verification without proportionally increasing the number of accepted tokens. We propose D^2SD, a dual diffusion draft speculative decoding framework that organizes candidates into a confidence-guided prefix tree, where the first diffusion drafter generates a block along with per-position confidence scores that are used to identify the most likely rejection boundary and select the top-K prefix ranges for recovery; the second variable-prefix diffusion drafter re-anchors at each selected prefix and proposes alternative continuations in one batched pass; the resulting shared-prefix candidates are jointly verified via cascade attention. Empirically, D^2SD shows clear improvements over both the underlying diffusion approach and strong autoregressive speculative decoding baselines.",
+      "identifiers": [
+        "SemanticScholar:94ffb9a0b41915326a8831094a5331a282eb190d"
+      ],
+      "semantic_scholar_id": "94ffb9a0b41915326a8831094a5331a282eb190d",
+      "canonical_id": "arXiv:2606.04446",
+      "arxiv_id": "2606.04446",
+      "doi": "10.48550/arXiv.2606.04446",
+      "authors": [
+        "Liyuan Zhang",
+        "Jia-Rui Zhang",
+        "Jinwei Yao",
+        "Ran Yan",
+        "Yuchen Yang",
+        "Jiahao Zhang",
+        "Tong-Kai Yang",
+        "Yi Wu",
+        "Binhang Yuan"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 132,
+        "matched_prestigious_venue": null
+      },
+      "reason": "D²SD uses two diffusion drafters and shared-prefix candidate verification to improve speculative decoding acceptance and inference efficiency.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "WhiFlash: Accelerating Speculative Decoding with Token-Level Cross-Paradigm Routing",
+      "source_url": "https://arxiv.org/abs/2606.07710",
+      "year": 2026,
+      "published": "2026-06-05",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The autoregressive nature of large language models (LLMs) remains a significant bottleneck for inference, particularly in complex agentic workloads. While speculative decoding (SD) accelerates inference, current approaches rely on static drafting paradigms, utilising either autoregressive drafting models for reasoning or diffusion-based parallel drafting models for structured outputs. We empirically find that drafting accuracy fluctuates dramatically within a single sequence, leaving significant performance unrealised by static paradigms and coarse-grained routing. To address this volatility, we introduce WhiFlash, the first cross-paradigm SD method that unifies autoregressive and diffusion-based parallel drafting under a single token-level controller. WhiFlash adopts a fine-grained routing mechanism that employs either a lightweight entropy-based or a learned neural policy, both parametrised to provide a tunable balance between expected token gain and latency. To make high-frequency switching computationally viable, we introduce novel cache-management optimisations, Lazy Catch-up and KV-only Prefill, reducing switching overhead to below 7% of per-round latency. By capitalising on the complementary strengths of fundamentally distinct drafting architectures, WhiFlash achieves significantly higher acceptance lengths, yielding category-specific throughput gains of up to 69.6% over the state-of-the-art autoregressive EAGLE-3 and 37.3% over the diffusion-based DFlash.",
+      "identifiers": [
+        "SemanticScholar:950c6355bc4de1196369764d83d55675ea08a049"
+      ],
+      "semantic_scholar_id": "950c6355bc4de1196369764d83d55675ea08a049",
+      "canonical_id": "arXiv:2606.07710",
+      "arxiv_id": "2606.07710",
+      "doi": "10.48550/arXiv.2606.07710",
+      "authors": [
+        "Youngjin Kwon",
+        "Miles Williams",
+        "Rui Li",
+        "Alexandros Kouris",
+        "Stylianos I. Venieris"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 130,
+        "matched_prestigious_venue": null
+      },
+      "reason": "WhiFlash routes each token between autoregressive and diffusion draft models and adds cache optimizations to improve speculative-decoding throughput.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-bddf0e24194c",
+    "round": "libimp-bddf0e24194c80b2-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 17,
+    "round_submission_count": 4,
+    "round_submission_index": 4,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-bddf0e24194c80b2-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-bddf0e24194c80b2-pre01.json",
+    "receipt": "sha256:0012493bfd133028a65a5544419869012f5cbefc57f0c8c497e98a4309f4c793"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-bddf0e24194c",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

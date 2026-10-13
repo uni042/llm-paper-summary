@@ -1,0 +1,217 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "CUCo: An Agentic Framework for Compute and Communication Co-design",
+      "source_url": "https://arxiv.org/abs/2603.02376",
+      "year": 2026,
+      "published": "2026-03-02",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Computation and communication in distributed LLM training and inference are traditionally optimized in isolation; expert-crafted systems such as DeepEP, FLUX, and TokenWeave show the potential of co-design but require deep systems expertise and hardware-specific tuning; CUCo is an agentic framework that automates compute-communication co-design of CUDA kernels by combining a structured design-space formalization with a correctness-first fast-path agent for reliable baselines and an evolution-driven slow-path agent for high-performance strategies, achieving up to 1.57x speedup across four multi-GPU workloads and discovering a two-stream overlap strategy on a DeepSeek-V3 MoE layer that hides dispatch behind local compute at an LLM inference cost under $10 per workload.",
+      "identifiers": [
+        "SemanticScholar:1e56566fbd92ff5999dff15a41b9414e133d0162"
+      ],
+      "semantic_scholar_id": "1e56566fbd92ff5999dff15a41b9414e133d0162",
+      "canonical_id": "arXiv:2603.02376",
+      "arxiv_id": "2603.02376",
+      "doi": "10.48550/arXiv.2603.02376",
+      "authors": [
+        "Yoga Sri Varshan Varadharajan",
+        "Bo-Dun Hu",
+        "Saurabh Agarwal",
+        "Aditya Akella"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 225,
+        "matched_prestigious_venue": null
+      },
+      "reason": "CUCo automates compute/communication co-design for CUDA kernels in distributed LLM training and inference and reports up to 1.57× speedup across multi-GPU workloads.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Frequency-Modulated Visual Restoration for Matryoshka Large Multimodal Models",
+      "source_url": "https://arxiv.org/abs/2603.11220",
+      "year": 2026,
+      "published": "2026-03-11",
+      "venue": "2026 IEEE/CVF Conference on Computer Vision and Pattern Recognition- FINDINGS Track (CVPRF)",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Multimodal Models (LMMs) struggle to adapt varying computational budgets due to numerous visual tokens. Previous methods attempted to reduce the number of visual tokens before or within LLMs. However, these strategies inevitably result in the loss of visual semantic. To address these issues, we introduce FMVR, a plug-and-play and extremely simple Frequency-Modulated Visual Restoration strategy to boost the reasoning ability of LMMs under visual token reduction. Specifically, FMVR disentangles the visual representation of fewer visual tokens into low- and high-frequency components through AvgPool and MaxPool. The derived frequencies are subsequently modulated using lightweight learnable parameters. The high-frequency from AvgPool acts as a saliency filter to enhance saliency visual semantics, while the low-frequency from MaxPool acts as an anti-saliency filter to strengthen weak visual semantics. It enables the preservation of visual semantics dominated by few visual tokens and the restoration of diluted visual semantics. Additionally, we inject FMVR into Matryoshka Representation Learning to learn coarse-to-fine visual token sets, thus enabling to elastically adjust the number of visual tokens during inference while maintaining comparable performance. Experiments across 10 image-based and 4 video-based bench marks demonstrate that FMVR-LLaVA reduce the FLOPs of LLaVA-1.5-7B by 89%, while maintaining almost 100% of the original accuracy. Code: https://github.com/QingtaoPan/FMVR.",
+      "identifiers": [
+        "SemanticScholar:2ed7e8b84b7df190701e23d83c4ce8c95f931956"
+      ],
+      "semantic_scholar_id": "2ed7e8b84b7df190701e23d83c4ce8c95f931956",
+      "canonical_id": "arXiv:2603.11220",
+      "arxiv_id": "2603.11220",
+      "doi": "10.1109/CVPRF71909.2026.00931",
+      "authors": [
+        "Qing-Tao Pan",
+        "Zhi-Hao Dou",
+        "Shuo Li"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 216,
+        "matched_prestigious_venue": null
+      },
+      "reason": "FMVR restores visual semantics after token reduction and adapts token budgets at inference; its abstract reports 89% lower FLOPs with near-original accuracy.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "ASAP: Attention-Shift-Aware Pruning for Efficient LVLM Inference",
+      "source_url": "https://arxiv.org/abs/2603.14549",
+      "year": 2026,
+      "published": "2026-03-15",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "While Large Vision-Language Models (LVLMs) demonstrate exceptional multi-modal capabilities, the quadratic computational cost of processing high-resolution visual tokens remains a critical bottleneck. Though recent token reduction strategies attempt to accelerate inference, such methods inadequately exploit attention values and fail to address token redundancy. More critically, they overlook the ``attention shift''phenomenon inherent in LVLMs, which skews token attention scores. In this work, we propose ASAP, a novel training-free, KV-Cache-compatible pruning recipe that comprehensively addresses these limitations. First, we mitigate the attention shift by utilizing a dynamic bidirectional soft attention mask, ensuring the selection of genuinely informative tokens rather than naive attention-based selection. Second, we posit that high semantic redundancy within the token set degrades performance. We therefore introduce a weighted soft merging component that merges semantically similar tokens, preserving only the most feature-dense visual patches for subsequent layers. ASAP achieves virtually lossless compression of visual context, retaining 99.02% of the original LLaVA-NeXT-7B performance while aggressively slashing computational FLOPs by ~80%.",
+      "identifiers": [
+        "SemanticScholar:0e273fc7a51e893d72102d6ecefdca5ee868af55"
+      ],
+      "semantic_scholar_id": "0e273fc7a51e893d72102d6ecefdca5ee868af55",
+      "canonical_id": "arXiv:2603.14549",
+      "arxiv_id": "2603.14549",
+      "doi": "10.48550/arXiv.2603.14549",
+      "authors": [
+        "Surendra Pathak",
+        "Bo Han"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 212,
+        "matched_prestigious_venue": null
+      },
+      "reason": "ASAP uses training-free, KV-cache-compatible visual-token pruning and merging, reporting about 80% fewer FLOPs while retaining LVLM performance.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Hybrid Associative Memories",
+      "source_url": "https://arxiv.org/abs/2603.22325",
+      "year": 2026,
+      "published": "2026-03-20",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Recurrent neural networks (RNNs) and self-attention are both widely used sequence-mixing layers that maintain an internal memory. However, this memory is constructed using two orthogonal mechanisms: RNNs compress the entire past into a fixed-size state, whereas self-attention's state stores every past time step growing its state (the KV cache) linearly with the sequence length. This results in orthogonal strengths and weaknesses. Self-attention layers excel at retrieving information in the context but have large memory and computational costs, while RNNs are more efficient but degrade over longer contexts and underperform for precise recall tasks. Prior work combining these mechanisms has focused primarily on naively interleaving them to reduce computational cost without regard to their complementary mechanisms. We propose the Hybrid Associative Memory (HAM) layer, which combines self-attention and RNNs while leveraging their individual strengths: the RNN compresses the entire sequence, while attention supplements it *only* with information that is difficult for the RNN to predict, which is hence the most valuable information to explicitly store. HAM layers enable data-dependent growth of the KV cache, which can be precisely controlled by the user with a single, continuous threshold. We find that this fine-grained control of the KV cache growth rate has a smooth trade-off with loss and performance. Empirically, we show that our hybrid architecture offers strong, competitive performance relative to RNNs and Transformers even at substantially lower KV-cache usage.",
+      "identifiers": [
+        "SemanticScholar:578535084fc0686ad21653fff60385c0bb74c441"
+      ],
+      "semantic_scholar_id": "578535084fc0686ad21653fff60385c0bb74c441",
+      "canonical_id": "arXiv:2603.22325",
+      "arxiv_id": "2603.22325",
+      "doi": "10.48550/arXiv.2603.22325",
+      "authors": [
+        "Leon Lufkin",
+        "Tomas Figliolia",
+        "Beren Millidge",
+        "Kamesh Krishnamurthy"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 207,
+        "matched_prestigious_venue": null
+      },
+      "reason": "HAM combines recurrent compression with selective attention and exposes a threshold-controlled, data-dependent KV-cache growth rate, directly trading memory use against model quality.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Gumbel Distillation for Parallel Text Generation",
+      "source_url": "https://arxiv.org/abs/2603.22216",
+      "year": 2026,
+      "published": "2026-03-23",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The slow, sequential nature of autoregressive (AR) language models has driven the adoption of parallel decoding methods. However, these non-AR models often sacrifice generation quality as they struggle to model the complex joint distribution of token sequences. To narrow this performance gap, we introduce Gumbel Distillation, a novel distillation technique that enables parallel decoders to learn this distribution effectively. Our method leverages the Gumbel-Max trick to create a deterministic mapping from a latent Gumbel noise space to the output tokens of a high-performing AR teacher. As a model-agnostic technique, Gumbel Distillation seamlessly integrates with diverse parallel decoding architectures, including MDLM and BD3-LM. Experiments on LM1B and OpenWebText show that Gumbel Distillation substantially improves the generation quality of parallel language models, achieving a 30.0% improvement in MAUVE score and 10.5% in generative perplexity over MDLM trained on OpenWebText dataset. Code available at https://github.com/hxixixh/gumbel-distill.",
+      "identifiers": [
+        "SemanticScholar:758acebadd9b96d9838414abfa8d349df4814c88"
+      ],
+      "semantic_scholar_id": "758acebadd9b96d9838414abfa8d349df4814c88",
+      "canonical_id": "arXiv:2603.22216",
+      "arxiv_id": "2603.22216",
+      "doi": "10.48550/arXiv.2603.22216",
+      "authors": [
+        "Chi Zhang",
+        "Xixi Hu",
+        "Bo Liu",
+        "Qiang Liu"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 204,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Gumbel distillation teaches parallel decoders to model the joint output distribution of an autoregressive teacher; this directly supports parallel decoding architectures, though the abstract reports quality rather than latency.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-14448cd57b2d",
+    "round": "libimp-14448cd57b2dffc0-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 16,
+    "round_submission_count": 4,
+    "round_submission_index": 3,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-14448cd57b2dffc0-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-14448cd57b2dffc0-pre01.json",
+    "receipt": "sha256:cc7b5cc7029b6c57eae0c6b57a73cf56785893ddf126d735edb7d46a7b4c0c6c"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-14448cd57b2d",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
