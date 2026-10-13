@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-7a105e499f7f773b-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2605.21488",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2605.21488",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2605.21488",
+      "SemanticScholar:07ea9834bfa721bf1ec9ac8b60f866530d39ed25",
+      "arXiv:2605.21488"
+    ],
+    "reason": "The work studies iterative latent test-time compute scaling; the abstract does not establish net efficiency gains or a serving-system contribution.",
+    "first_checked_at": "2026-10-13T05:20:58+00:00",
+    "last_checked_at": "2026-10-13T05:20:58+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2025-2507.10524-mixture-of-recursions-learning-dynamic-recursive-depths-for-adaptive-tok.md",
+      "papers/inference/19-inference-evaluation-benchmarking/2025-2502.05171-scaling-up-test-time-compute-with-latent-reasoning-a-recurrent-depth-app.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Equilibrium Reasoners: Learning Attractors Enables Scalable Reasoning"
+  },
+  "processed_at": "2026-10-13T05:20:58+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-7a105e499f7f",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

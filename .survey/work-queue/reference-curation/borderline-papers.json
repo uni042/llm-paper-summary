@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-13T05:18:17+00:00",
-  "record_count": 4807,
+  "updated_at": "2026-10-13T05:20:58+00:00",
+  "record_count": 4810,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -73499,6 +73499,56 @@
       ],
       "borderline_recheck_count": 0,
       "title": "Beyond Experience Retrieval: Learning to Generate Utility-Optimized Structured Experience for Frozen LLMs"
+    },
+    "DOI:10.1109/icetis70504.2026.11633386": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/icetis70504.2026.11633386",
+      "identity_tokens": [
+        "DOI:10.1109/icetis70504.2026.11633386",
+        "SemanticScholar:cf555450d974dd9f9518e13eb9ef4922a88ae173"
+      ],
+      "reason": "The title identifies federated contrastive learning for IoT anomaly detection, an application paper rather than inference-system efficiency. IEEE Xplore DOI page retrieval was inaccessible, so the abstract could not be checked and relevance is borderline.",
+      "first_checked_at": "2026-10-13T05:20:58+00:00",
+      "last_checked_at": "2026-10-13T05:20:58+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2512.20210-predictive-lora-serverless-inference.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Federated Contrastive Representation Learning for IoT Anomaly Detection Under Heterogeneous Data"
+    },
+    "arXiv:2605.21488": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.21488",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2605.21488",
+        "SemanticScholar:07ea9834bfa721bf1ec9ac8b60f866530d39ed25",
+        "arXiv:2605.21488"
+      ],
+      "reason": "The work studies iterative latent test-time compute scaling; the abstract does not establish net efficiency gains or a serving-system contribution.",
+      "first_checked_at": "2026-10-13T05:20:58+00:00",
+      "last_checked_at": "2026-10-13T05:20:58+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2025-2507.10524-mixture-of-recursions-learning-dynamic-recursive-depths-for-adaptive-tok.md",
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2502.05171-scaling-up-test-time-compute-with-latent-reasoning-a-recurrent-depth-app.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Equilibrium Reasoners: Learning Attractors Enables Scalable Reasoning"
+    },
+    "DOI:10.1016/j.jmsy.2026.02.013": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.jmsy.2026.02.013",
+      "identity_tokens": [
+        "DOI:10.1016/j.jmsy.2026.02.013",
+        "SemanticScholar:dfed639d4aa40df5152227b64b66489e46ecd936"
+      ],
+      "reason": "The publisher abstract describes VLM and multi-agent methods for collaborative assembly; its contributions concern task execution and digital-twin workflows, not general inference efficiency.",
+      "first_checked_at": "2026-10-13T05:20:58+00:00",
+      "last_checked_at": "2026-10-13T05:20:58+00:00",
+      "linked_from": [
+        "papers/inference/15-inference-simulation-emulation/2024-2409.12514-tinyvla-towards-fast-data-efficient-vision-language-action-models-for-ro.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "From insight to action: Embodied multi-agent system integrating vision language model for digital twin-assisted human-robot collaborative assembly"
     }
   }
 }
