@@ -2,7 +2,7 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-13T10:41:40+00:00",
+  "updated_at": "2026-10-13T10:42:58+00:00",
   "record_count": 4851,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
@@ -71482,11 +71482,13 @@
       "canonical_id": "arXiv:2407.18370",
       "identity_tokens": [
         "DOI:10.48550/arxiv.2407.18370",
-        "arXiv:2407.18370"
+        "arXiv:2407.18370",
+        "id:arXiv:2407.18370",
+        "url:https://arxiv.org/abs/2407.18370"
       ],
-      "reason": "一次要旨で確認できる主題はLLMによる人間選好評価の信頼性保証であり、信頼度校正・模擬評価者・選択的な判定保留を中心とする。安価な判定モデルから高性能モデルへ必要時だけ段階的に切り替える方式は推論費用削減と関連する一方、研究の主目的は評価者と人間の判定一致保証であり、推論サービング基盤、KVキャッシュ、MoE配置、推論カーネル等のシステム最適化を直接扱わない。したがってサーベイの中核収録対象か判断が微妙として保留分類。",
+      "reason": "一次要旨では、LLMによる応答品質の審査を人間判断との一致保証付きで選択的に実施し、安価な判定モデルで確信が低い例だけ強い判定モデルへ送る段階的評価を提案する。モデル呼出しの費用配分という意味で推論時ルーティングに隣接するが、目的は審査の校正と人間一致率であり、汎用LLMサービングのスケジューリング・メモリ階層・トークン生成性能の改善を直接検証していないため境界的とする。",
       "first_checked_at": "2026-10-12T10:59:22+00:00",
-      "last_checked_at": "2026-10-12T10:59:22+00:00",
+      "last_checked_at": "2026-10-13T10:42:57+00:00",
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "Trust or Escalate: LLM Judges with Provable Guarantees for Human Agreement"
@@ -71830,11 +71832,13 @@
       "classification": "borderline",
       "canonical_id": "arXiv:2602.02050",
       "identity_tokens": [
-        "arXiv:2602.02050"
+        "arXiv:2602.02050",
+        "id:arXiv:2602.02050",
+        "url:https://arxiv.org/abs/2602.02050"
       ],
-      "reason": "LLMエージェントのツール呼出しをエントロピー減少を使った報酬学習で最適化し、呼出し回数72.07%削減または性能22.27%向上を報告する。ツール呼出し削減は推論遅延・外部API費用に関連するが、主手法はエージェント行動方策の学習と報酬設計で、LLMのGPU実行やサービングの性能最適化ではない。学習単独を優先除外する基準に近いが、推論時の呼出し効率との接点があるため境界的とする。",
+      "reason": "一次要旨では、長いエージェント実行軌跡で無駄なツール呼出しが増える問題に対し、エントロピー減少を報酬信号とする学習を提案する。疎な結果報酬で比較対象平均よりツール呼出し72.07%削減、密な過程報酬で性能22.27%改善を報告し、推論時のツール費用に関係する。ただし改善機構はエージェントの強化学習と行動選択であり、LLMの生成・GPU推論基盤・KVメモリの直接最適化ではないため境界的とする。",
       "first_checked_at": "2026-10-12T21:39:41+00:00",
-      "last_checked_at": "2026-10-12T21:39:41+00:00",
+      "last_checked_at": "2026-10-13T10:42:58+00:00",
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "Rethinking the Role of Entropy in Optimizing Tool-Use Behaviors for Large Language Model Agents"

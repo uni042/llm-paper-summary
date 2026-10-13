@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-13T10:41:41+00:00",
-  "record_count": 11762,
+  "updated_at": "2026-10-13T10:42:58+00:00",
+  "record_count": 11763,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -165020,11 +165020,13 @@
       "canonical_id": "arXiv:2311.17049",
       "identity_tokens": [
         "DOI:10.48550/arxiv.2311.17049",
-        "arXiv:2311.17049"
+        "arXiv:2311.17049",
+        "id:arXiv:2311.17049",
+        "url:https://arxiv.org/abs/2311.17049"
       ],
-      "reason": "一次要旨は携帯端末向け画像・テキスト表現モデルの学習データ強化と分類・検索時の遅延精度トレードオフを扱う。効率改善はあるが対象はCLIP系視覚エンコーダであり、LLM生成推論基盤やサービングの直接的な技術貢献ではない。",
+      "reason": "一次要旨では、携帯端末向けの画像・テキスト対照埋め込み器MobileCLIPを提案し、蒸留情報を補強データセットへ保持して学習効率を高める。MobileCLIP-S2は従来のViT-B/16系より2.3倍速いと報告するが、評価は画像分類と画像・テキスト検索であり、生成型LLMのトークン復号・KVキャッシュ・MoE配信ではないため対象外とする。",
       "first_checked_at": "2026-10-12T10:58:05+00:00",
-      "last_checked_at": "2026-10-12T21:38:02+00:00",
+      "last_checked_at": "2026-10-13T10:42:56+00:00",
       "linked_from": [],
       "title": "MobileCLIP: Fast Image-Text Models through Multi-Modal Reinforced Training"
     },
@@ -168515,6 +168517,20 @@
       "last_checked_at": "2026-10-13T10:41:41+00:00",
       "linked_from": [],
       "title": "Light Forcing: Accelerating Autoregressive Video Diffusion via Sparse Attention"
+    },
+    "arXiv:2601.08665": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.08665",
+      "identity_tokens": [
+        "arXiv:2601.08665",
+        "id:arXiv:2601.08665",
+        "url:https://arxiv.org/abs/2601.08665"
+      ],
+      "reason": "一次要旨では、視覚言語行動モデルによるロボット航法において、必要時のみ明示的推論を行う適応型思考連鎖と、過去の視覚観測を保持する言語記憶を組み合わせる。主目的は長期のロボット移動計画と未知環境への転移であり、LLMサービングやテキスト生成の推論カーネル・メモリ階層・量子化を対象とした性能評価ではないため対象外とする。",
+      "first_checked_at": "2026-10-13T10:42:58+00:00",
+      "last_checked_at": "2026-10-13T10:42:58+00:00",
+      "linked_from": [],
+      "title": "VLingNav: Embodied Navigation with Adaptive Reasoning and Visual-Assisted Linguistic Memory"
     }
   }
 }
