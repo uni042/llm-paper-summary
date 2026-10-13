@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "On the Impact of Intra-node Communication in the Performance of Supercomputer and Data Center Interconnection Networks",
+      "source_url": "https://arxiv.org/abs/2502.20965",
+      "year": 2025,
+      "published": "2025-02-28",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "In the last decade, specific-purpose computing and storage devices, such as GPUs, TPUs, or high-speed storage, have been incorporated into server nodes of Supercomputers and Data centers. The development of high-bandwidth memory (HBM) enabled a much more compact form factor for these devices, thus allowing the interconnection of several of them within a server node, typically using an intra-node interconnection network (e.g., PCIe, NVLink, or Infinity Fabric). These networks allow scaling up the number of specific computing and storage devices per node. Furthermore, the inter-node networks communicate thousands of these devices placed in different server nodes in a Supercomputer or Data Center. Unfortunately, the intra- and inter-node networks may become the system's bottleneck due to the increasing communication demand among accelerators of applications such as generative AI. Although current intra-node network designs alleviate this bottleneck by increasing the bandwidth of the intra-node network, we show in this paper that such a high bandwidth for intra-node communication may hinder the inter-node communication performance when traffic from outside the node arrives at the intra-node devices, resulting in interference with intra-node traffic. To analyze the impact of this interference, we have studied the communication operations of realistic traffic patterns exploiting intra-node communication. We have developed a generic intra- and inter-node simulation model based on OMNeT++ and modeled the mentioned communication operations. We have also performed extensive simulation experiments that confirm that increasing the intra-node network bandwidth and the number of computing devices per node (i.e., accelerators) is counterproductive to the inter-node communication performance.",
+      "identifiers": [
+        "SemanticScholar:3002826216c4ec0c8d07ba85b39d05ecff926e62"
+      ],
+      "semantic_scholar_id": "3002826216c4ec0c8d07ba85b39d05ecff926e62",
+      "canonical_id": "arXiv:2502.20965",
+      "arxiv_id": "2502.20965",
+      "authors": [
+        "Joaquin Tarraga-Moreno",
+        "J. Escudero-Sahuquillo",
+        "P. García",
+        "F. Quiles"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 592,
+        "matched_prestigious_venue": null
+      },
+      "reason": "This analyzes accelerator interconnect behavior in data centers and supercomputers, identifying how intra-node communication affects inter-node performance in AI workloads.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-78e18b106b76",
+    "round": "libimp-78e18b106b764f4c-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 11,
+    "round_submission_count": 3,
+    "round_submission_index": 3,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-78e18b106b764f4c-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-78e18b106b764f4c-pre01.json",
+    "receipt": "sha256:1a089262ca7fd734d38007536fbe482f86fa24a29b2f9a00bf7bc378a75698a4"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-78e18b106b76",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

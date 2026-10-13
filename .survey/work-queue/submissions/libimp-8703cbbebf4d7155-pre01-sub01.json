@@ -1,0 +1,227 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Enhancing Image Quality Assessment Ability of LMMs via Retrieval-Augmented Generation",
+      "source_url": "https://arxiv.org/abs/2601.08311",
+      "year": 2026,
+      "published": "2026-01-13",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Multimodal Models (LMMs) have recently shown remarkable promise in low-level visual perception tasks, particularly in Image Quality Assessment (IQA), demonstrating strong zero-shot capability. However, achieving state-of-the-art performance often requires computationally expensive fine-tuning methods, which aim to align the distribution of quality-related token in output with image quality levels. Inspired by recent training-free works for LMM, we introduce IQARAG, a novel, training-free framework that enhances LMMs'IQA ability. IQARAG leverages Retrieval-Augmented Generation (RAG) to retrieve some semantically similar but quality-variant reference images with corresponding Mean Opinion Scores (MOSs) for input image. These retrieved images and input image are integrated into a specific prompt. Retrieved images provide the LMM with a visual perception anchor for IQA task. IQARAG contains three key phases: Retrieval Feature Extraction, Image Retrieval, and Integration&Quality Score Generation. Extensive experiments across multiple diverse IQA datasets, including KADID, KonIQ, LIVE Challenge, and SPAQ, demonstrate that the proposed IQARAG effectively boosts the IQA performance of LMMs, offering a resource-efficient alternative to fine-tuning for quality assessment.",
+      "identifiers": [
+        "SemanticScholar:af67be7bbcb32fb31ae49482e315c095d92fbf50"
+      ],
+      "semantic_scholar_id": "af67be7bbcb32fb31ae49482e315c095d92fbf50",
+      "canonical_id": "arXiv:2601.08311",
+      "arxiv_id": "2601.08311",
+      "doi": "10.48550/arXiv.2601.08311",
+      "authors": [
+        "Kang Fu",
+        "Hui-Yu Duan",
+        "Zi-Cheng Zhang",
+        "Yu-Cheng Zhu",
+        "Jun Zhao",
+        "Xiong-Kuo Min",
+        "Jia Wang",
+        "Guang-Tao Zhai"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 273,
+        "matched_prestigious_venue": null
+      },
+      "reason": "A training-free retrieval framework is positioned as a resource-efficient alternative to computationally expensive LMM fine-tuning, a plausible serving/resource efficiency connection.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "ImpRAG: Retrieval-Augmented Generation with Implicit Queries",
+      "source_url": "https://arxiv.org/abs/2506.02279",
+      "year": 2025,
+      "published": "2025-06-02",
+      "venue": "Conference on Empirical Methods in Natural Language Processing",
+      "citation_count": 7,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Retrieval-Augmented Generation (RAG) systems traditionally treat retrieval and generation as separate processes, requiring explicit textual queries to connect them. This separation can limit the ability of models to generalize across diverse tasks. In this work, we propose a query-free RAG system, named ImpRAG, which integrates retrieval and generation into a unified model. ImpRAG allows models to implicitly express their information needs, eliminating the need for human-specified queries. By dividing pretrained decoder-only language models into specialized layer groups, ImpRAG optimizes retrieval and generation tasks simultaneously. Our approach employs a two-stage inference process, using the same model parameters and forward pass for both retrieval and generation, thereby minimizing the disparity between retrievers and language models. Experiments on 8 knowledge-intensive tasks demonstrate that ImpRAG achieves 3.6-11.5 improvements in exact match scores on unseen tasks with diverse formats, highlighting its effectiveness in enabling models to articulate their own information needs and generalize across tasks. Our analysis underscores the importance of balancing retrieval and generation parameters and leveraging generation perplexities as retrieval training objectives for enhanced performance.",
+      "identifiers": [
+        "SemanticScholar:34bf7f3428487cf408ab21dffd4601bc03047e7d"
+      ],
+      "semantic_scholar_id": "34bf7f3428487cf408ab21dffd4601bc03047e7d",
+      "canonical_id": "arXiv:2506.02279",
+      "arxiv_id": "2506.02279",
+      "doi": "10.48550/arXiv.2506.02279",
+      "authors": [
+        "Wenzheng Zhang",
+        "Xi Victoria Lin",
+        "K. Stratos",
+        "Wen-Tau Yih",
+        "Mingda Chen"
+      ],
+      "priority": 17,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 7,
+        "citation_count": 7,
+        "total": 17,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 498,
+        "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+      },
+      "reason": "This is a plausible inference-serving RAG architecture change: it shares model parameters and a forward pass across retrieval/generation, although the abstract reports task quality rather than a measured speedup.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Materium: An Autoregressive Approach for Material Generation",
+      "source_url": "https://arxiv.org/abs/2512.07486",
+      "year": 2025,
+      "published": "2025-12-08",
+      "venue": "Computational materials science",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "We present Materium: an autoregressive transformer for generating crystal structures that converts 3D material representations into token sequences. These sequences include elements with oxidation states, fractional coordinates and lattice parameters. Unlike diffusion approaches, which refine atomic positions iteratively through many denoising steps, Materium places atoms at precise fractional coordinates, enabling fast, scalable generation. With this design, the model can be trained in a few hours on a single GPU and generate samples much faster on GPUs and CPUs than diffusion-based approaches. The model was trained and evaluated using multiple properties as conditions, including fundamental properties, such as density and space group, as well as more practical targets, such as band gap and magnetic density. In both single and combined conditions, the model performs consistently well, producing candidates that align with the requested inputs.",
+      "identifiers": [
+        "SemanticScholar:7653e800e8c049dd2d131095c7a26e3f3797a3d6"
+      ],
+      "semantic_scholar_id": "7653e800e8c049dd2d131095c7a26e3f3797a3d6",
+      "canonical_id": "arXiv:2512.07486",
+      "arxiv_id": "2512.07486",
+      "doi": "10.48550/arXiv.2512.07486",
+      "authors": [
+        "Niklas Dobberstein",
+        "J. Hamaekers"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 309,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Autoregressive crystal generation is reported to train and generate faster than diffusion approaches; the inference-speed comparison is a plausible model-efficiency connection despite its materials-generation target.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "From Tokens to Blocks: A Block-Diffusion Perspective on Molecular Generation",
+      "source_url": "https://arxiv.org/abs/2601.21964",
+      "year": 2026,
+      "published": "2026-01-29",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Drug discovery can be viewed as a combinatorial search over an immense chemical space, motivating the development of deep generative models for de novo molecular design. Among these, GPT-based molecular language models (MLM) have shown strong molecular design performance by learning chemical syntax and semantics from large-scale data. However, existing MLMs face two fundamental limitations: they inadequately capture the graph-structured nature of molecules when formulated as next-token prediction problems, and they typically lack explicit mechanisms for target-aware generation. Here, we propose SoftMol, a unified framework that co-designs molecular representation, model architecture, and search strategy for target-aware molecular generation. SoftMol introduces soft fragments, a rule-free block representation of SMILES that enables diffusion-native modeling, and develops SoftBD, the first block-diffusion molecular language model that combines local bidirectional diffusion with autoregressive generation under molecular structural constraints. To favor generated molecules with high drug-likeness and synthetic accessibility, SoftBD is trained on a carefully curated dataset named ZINC-Curated. SoftMol further integrates a gated Monte Carlo tree search to assemble fragments in a target-aware manner. Experimental results show that, compared with current state-of-the-art models, SoftMol achieves 100% chemical validity, improves binding affinity by 9.7%, yields a 2-3x increase in molecular diversity, and delivers a 6.6x speedup in inference efficiency. Code is available at https://github.com/szu-aicourse/softmol",
+      "identifiers": [
+        "SemanticScholar:30a5cd54c22186b82def6811ff6775d932d730a9"
+      ],
+      "semantic_scholar_id": "30a5cd54c22186b82def6811ff6775d932d730a9",
+      "canonical_id": "arXiv:2601.21964",
+      "arxiv_id": "2601.21964",
+      "doi": "10.48550/arXiv.2601.21964",
+      "authors": [
+        "Qianwei Yang",
+        "Dong Xu",
+        "Zhang-Fan Yang",
+        "Si-Si Yuan",
+        "Ze-Xuan Zhu",
+        "Jian-Qiang Li",
+        "Jun-Kai Ji"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 257,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Block-diffusion molecular generation reports a 6.6x inference-efficiency speedup while retaining molecular generation performance.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Evaluating the Impact of Post-Training Quantization on Reliable VQA with Multimodal LLMs",
+      "source_url": "https://arxiv.org/abs/2602.13289",
+      "year": 2026,
+      "published": "2026-02-08",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Multimodal Large Language Models (MLLM) are increasingly deployed in domains where both reliability and efficiency are critical. However, current models remain overconfident, producing highly certain but incorrect answers. At the same time, their large size limits deployment on edge devices, necessitating compression. We study the intersection of these two challenges by analyzing how Post-Training Quantization (PTQ) compression affects both accuracy and reliability in Visual Question Answering (VQA). We evaluate two MLLMs, Qwen2-VL-7B and Idefics3-8B, quantized with data-free (HQQ) and data-aware (MBQ) methods across multiple bit widths. To counteract the reduction in reliability caused by quantization, we adapt the Selector confidence estimator for quantized multimodal settings and test its robustness across various quantization levels and out-of-distribution (OOD) scenarios. We find that PTQ degrades both accuracy and reliability. Data-aware methods soften the effect thereof. The Selector substantially mitigates the reliability impact. The combination of int4 MBQ and the Selector achieves the best efficiency-reliability trade-off, closing in on uncompressed performance at approx. 75% less memory demand. Overall, we present the first systematic study linking quantization and reliability in multimodal settings.",
+      "identifiers": [
+        "SemanticScholar:91aa80a14411665f264f44d49cb148e1f05ee92d"
+      ],
+      "semantic_scholar_id": "91aa80a14411665f264f44d49cb148e1f05ee92d",
+      "canonical_id": "arXiv:2602.13289",
+      "arxiv_id": "2602.13289",
+      "doi": "10.48550/arXiv.2602.13289",
+      "authors": [
+        "Paul Jonas Kurz",
+        "T. J. Wieczorek",
+        "Mohamed A. Abdelsalam",
+        "Rahaf Aljundi",
+        "Marcus Rohrbach"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 247,
+        "matched_prestigious_venue": null
+      },
+      "reason": "This directly evaluates post-training quantization of multimodal LLMs and reports a large reduction in memory demand with a reliability tradeoff.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-8703cbbebf4d",
+    "round": "libimp-8703cbbebf4d7155-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 11,
+    "round_submission_count": 3,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-8703cbbebf4d7155-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-8703cbbebf4d7155-pre01.json",
+    "receipt": "sha256:8f534d707465648d0f7fd87309e875a79af37a9149a4cfe87580921bc05383a6"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-8703cbbebf4d",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

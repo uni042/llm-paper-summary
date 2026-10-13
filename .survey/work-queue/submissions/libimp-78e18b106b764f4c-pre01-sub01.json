@@ -1,0 +1,222 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "LaCo: Layer-wise Compensation for Pruned Large Language Models",
+      "source_url": "https://doi.org/10.18653/v1/2026.acl-long.1342",
+      "year": 2026,
+      "published": null,
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Pruning is essential for the efficient deployment of Large Language Models (LLMs); however, it causes severe performance degradation due to the structural distortion induced by sparsity. Existing recovery strategies, such as LoRA, predominantly employ global fine-tuning, often overlooking the mechanistic root of this degradation: the layer-wise accumulation and amplification of local errors. To address this limitation, we propose LaCo ( La yer-wise Co mpensation), a framework that reori-ents the recovery paradigm from global adaptation to hierarchical representation alignment. By sequentially optimizing each layer to re-construct the model’s hidden states, LaCo effectively intercepts the error propagation chain at its source. Extensive experiments demonstrate that LaCo surpasses parameter-efficient baselines in both perplexity reduction and zero-shot reasoning. Notably, it reduces recovery-time memory usage to approximately 1 / 7 of the baseline and requires only 2,048 unlabeled samples to match a LoRA model trained on 50k examples—achieving a ∼ 25 × improvement in data efficiency.",
+      "identifiers": [
+        "SemanticScholar:44a9df12cbba7112e9dd40c39ffd95594d353cbd"
+      ],
+      "semantic_scholar_id": "44a9df12cbba7112e9dd40c39ffd95594d353cbd",
+      "doi": "10.18653/v1/2026.acl-long.1342",
+      "canonical_id": "DOI:10.18653/v1/2026.acl-long.1342",
+      "authors": [
+        "Yingen Liu",
+        "Fan Wu",
+        "Xuyan Pan",
+        "Ruihui Li",
+        "Zhuo Tang",
+        "Ken-Li Li"
+      ],
+      "priority": 11,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 11,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 104,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      },
+      "reason": "Layer-wise compensation repairs pruned LLMs and reports lower recovery memory and substantially improved data efficiency, directly tied to efficient LLM compression/recovery.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Regularization-based pruning of irrelevant weights in deep neural architectures",
+      "source_url": "https://arxiv.org/abs/2204.04977",
+      "year": 2022,
+      "published": "2022-04-11",
+      "venue": "Applied intelligence (Boston)",
+      "citation_count": 10,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Deep neural networks exploiting million parameters are currently the norm. This is a potential issue because of the great number of computations needed for training, and the possible loss of generalization performance of overparameterized networks. We propose in this paper a method for learning sparse neural topologies via a regularization approach that identifies nonrelevant weights in any type of layer (i.e., convolutional, fully connected, attention and embedding ones) and selectively shrinks their norm while performing a standard back-propagation update for relevant layers. This technique, which is an improvement of classical weight decay, is based on the definition of a regularization term that can be added to any loss function regardless of its form, resulting in a unified general framework exploitable in many different contexts. The actual elimination of parameters identified as irrelevant is handled by an iterative pruning algorithm. To explore the possibility of an interdisciplinary use of our proposed technique, we test it on six different image classification and natural language generation tasks, among which four are based on real datasets. We reach state-of-the-art performance in one out of four imaging tasks while obtaining results better than competitors for the others and one out of two of the considered language generation tasks, both in terms of compression and metrics.",
+      "identifiers": [
+        "SemanticScholar:831dd79646ff6c9497fd14e7ceda926381189b26"
+      ],
+      "semantic_scholar_id": "831dd79646ff6c9497fd14e7ceda926381189b26",
+      "canonical_id": "arXiv:2204.04977",
+      "arxiv_id": "2204.04977",
+      "doi": "10.1007/s10489-022-04353-y",
+      "authors": [
+        "Giovanni Bonetta",
+        "Matteo Ribero",
+        "R. Cancelliere"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 10,
+        "citation_count": 10,
+        "total": 10,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1646,
+        "matched_prestigious_venue": null
+      },
+      "reason": "A general neural-network sparsification and pruning method demonstrates compression across vision and language generation models, relevant to model deployment efficiency.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "M3KG-RAG: Multi-hop Multimodal Knowledge Graph-enhanced Retrieval-Augmented Generation",
+      "source_url": "https://arxiv.org/abs/2512.20136",
+      "year": 2025,
+      "published": "2025-12-23",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Retrieval-Augmented Generation (RAG) has recently been extended to multimodal settings, connecting multimodal large language models (MLLMs) with vast corpora of external knowledge such as multimodal knowledge graphs (MMKGs). Despite their recent success, multimodal RAG in the audio-visual domain remains challenging due to 1) limited modality coverage and multi-hop connectivity of existing MMKGs, and 2) retrieval based solely on similarity in a shared multimodal embedding space, which fails to filter out off-topic or redundant knowledge. To address these limitations, we propose M$^3$KG-RAG, a Multi-hop Multimodal Knowledge Graph-enhanced RAG that retrieves query-aligned audio-visual knowledge from MMKGs, improving reasoning depth and answer faithfulness in MLLMs. Specifically, we devise a lightweight multi-agent pipeline to construct multi-hop MMKG (M$^3$KG), which contains context-enriched triplets of multimodal entities, enabling modality-wise retrieval based on input queries. Furthermore, we introduce GRASP (Grounded Retrieval And Selective Pruning), which ensures precise entity grounding to the query, evaluates answer-supporting relevance, and prunes redundant context to retain only knowledge essential for response generation. Extensive experiments across diverse multimodal benchmarks demonstrate that M$^3$KG-RAG significantly enhances MLLMs'multimodal reasoning and grounding over existing approaches. Project website: https://kuai-lab.github.io/cvpr2026m3kgrag/",
+      "identifiers": [
+        "SemanticScholar:03efaa1d43d63545baf80baced1c47f399428ed0"
+      ],
+      "semantic_scholar_id": "03efaa1d43d63545baf80baced1c47f399428ed0",
+      "canonical_id": "arXiv:2512.20136",
+      "arxiv_id": "2512.20136",
+      "doi": "10.48550/arXiv.2512.20136",
+      "authors": [
+        "Hyeongcheol Park",
+        "Jiyoung Seo",
+        "Jaewon Mun",
+        "Hogun Park",
+        "Wonmin Byeon",
+        "S. Kim",
+        "Hyeonsoo Im",
+        "Jeungsub Lee",
+        "Sangpil Kim"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 294,
+        "matched_prestigious_venue": null
+      },
+      "reason": "The multimodal RAG method includes explicit context pruning and a lightweight retrieval pipeline; this is a plausible inference-context efficiency connection, though the abstract reports reasoning/grounding rather than measured latency.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Compressed learning-based onboard semantic compression for remote sensing platforms",
+      "source_url": "https://arxiv.org/abs/2409.01988",
+      "year": 2024,
+      "published": "2024-09-03",
+      "venue": "Environmental Remote Sensing",
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Earth observation (EO) plays a crucial role in creating and sustaining a resilient and prosperous society that has far reaching consequences for all life and the planet itself. Remote sensing platforms like satellites, airborne platforms, and more recently dones and UAVs are used for EO. They collect large amounts of data and this needs to be downlinked to Earth for further processing and analysis. Bottleneck for such high throughput acquisition is the downlink bandwidth. Data-centric solutions to image compression is required to address this deluge. In this work, semantic compression is studied through a compressed learning framework that utilizes only fast and sparse matrix-vector multiplication to encode the data. Camera noise and a communication channel are the considered sources of distortion. The complete semantic communication pipeline then consists of a learned low-complexity compression matrix that acts on the noisy camera output to generate onboard a vector of observations that is downlinked through a communication channel, processed through an unrolled network and then fed to a deep learning model performing the necessary downstream tasks; image classification is studied. Distortions are compensated by unrolling layers of NA-ALISTA with a wavelet sparsity prior. Decoding is thus a plug-n-play approach designed according to the camera/environment information and downstream task. The deep learning model for the downstream task is jointly fine-tuned with the compression matrix and the unrolled network through the loss function in an end-to-end fashion. It is shown that addition of a recovery loss along with the task dependent losses improves the downstream performance in noisy settings at low compression ratios.",
+      "identifiers": [
+        "SemanticScholar:f9e24123c414fdb0dfb541a48a6339dd93fdd70f"
+      ],
+      "semantic_scholar_id": "f9e24123c414fdb0dfb541a48a6339dd93fdd70f",
+      "canonical_id": "arXiv:2409.01988",
+      "arxiv_id": "2409.01988",
+      "doi": "10.1117/12.3031472",
+      "authors": [
+        "Protim Bhattacharjee",
+        "Peter Jung"
+      ],
+      "priority": 4,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 4,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 770,
+        "matched_prestigious_venue": null
+      },
+      "reason": "The compressed-learning pipeline performs onboard semantic compression for remote sensing and addresses downlink bandwidth with a low-complexity encoder and learned reconstruction.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Efficient Image Compression Using Advanced State Space Models",
+      "source_url": "https://arxiv.org/abs/2409.02743",
+      "year": 2024,
+      "published": "2024-09-04",
+      "venue": "IEEE International Workshop on Multimedia Signal Processing",
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Transformers have led to learning-based image compression methods that outperform traditional approaches. However, these methods often suffer from high complexity, limiting their practical application. To address this, various strategies such as knowledge distillation and lightweight architectures have been explored, aiming to enhance efficiency without significantly sacrificing performance. This paper proposes a State Space Model-based Image Compression (SSMIC) architecture. This novel architecture balances performance and computational efficiency, making it suitable for real-world applications. Experimental evaluations confirm the effectiveness of our model in achieving a superior BD-rate while significantly reducing computational complexity and latency compared to competitive learning-based image compression methods.",
+      "identifiers": [
+        "SemanticScholar:3aae0aa54961b30c82879c1e4d498ee840cd1118"
+      ],
+      "semantic_scholar_id": "3aae0aa54961b30c82879c1e4d498ee840cd1118",
+      "canonical_id": "arXiv:2409.02743",
+      "arxiv_id": "2409.02743",
+      "doi": "10.1109/MMSP61759.2024.10743882",
+      "authors": [
+        "B. Arezki",
+        "A. Mokraoui",
+        "Fang-Chen Feng"
+      ],
+      "priority": 4,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 4,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 769,
+        "matched_prestigious_venue": null
+      },
+      "reason": "This learned image-compression codec uses a state-space architecture and explicitly reports reduced computational complexity and latency versus competitive learned codecs; this is a plausible runtime/model-efficiency connection.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-78e18b106b76",
+    "round": "libimp-78e18b106b764f4c-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 11,
+    "round_submission_count": 3,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-78e18b106b764f4c-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-78e18b106b764f4c-pre01.json",
+    "receipt": "sha256:1a089262ca7fd734d38007536fbe482f86fa24a29b2f9a00bf7bc378a75698a4"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-78e18b106b76",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

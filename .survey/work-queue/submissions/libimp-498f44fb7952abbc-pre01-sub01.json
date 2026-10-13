@@ -1,0 +1,225 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "LASER: A Data-Centric Method for Low-Cost and Efficient SQL Rewriting based on SQL-GRPO",
+      "source_url": "https://arxiv.org/abs/2604.06804",
+      "year": 2026,
+      "published": "2026-04-08",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Query rewriting, the process of transforming queries into semantically equivalent yet more efficient variants, is crucial for database optimization. Existing solutions predominantly rely on either rule-based heuristics or Large Language Models (LLMs). However, traditional rule-based methods lack adaptability, while LLM-based approaches incur prohibitive inference costs and privacy risks. In contrast, Small Language Models (SLMs) present a compelling middle ground, potentially offering both flexibility and efficiency. However, the development of such compact models is severely bottlenecked by the scarcity of high-quality, domain-specific training data. To bridge this gap, we introduce LASER, a data-centric framework designed to empower small models for robust SQL optimization. First, to address the scarcity of existing benchmarks and the limited optimization headroom of generic synthetic queries, we construct SQL-MCTS, a large-scale corpus of complex slow queries. We employ an MCTS-based hybrid expansion strategy that combines rule-guided anti-patterns with LLM mutations to evolve structurally expressive seeds into execution-verified slow variants. Second, to enable the model to autonomously discover latency-aware rewriting patterns, we propose SQL-GRPO, a specialized alignment strategy adapted from Group Relative Policy Optimization. By integrating Anchored Group Advantage to refine advantage estimation and Complexity-Adaptive Dynamic Rollout to efficiently allocate exploration budgets, this approach effectively empowers compact models to master execution-based optimization logic. Implemented on Qwen3 models, LASER significantly outperforms rule-based systems and LLMs in execution efficiency, while exhibiting robust zero-shot transferability with minimal overhead.",
+      "identifiers": [
+        "SemanticScholar:c14bfff156078a9437c593629f1b4f4a0163257e"
+      ],
+      "semantic_scholar_id": "c14bfff156078a9437c593629f1b4f4a0163257e",
+      "canonical_id": "arXiv:2604.06804",
+      "arxiv_id": "2604.06804",
+      "doi": "10.48550/arXiv.2604.06804",
+      "authors": [
+        "Jiahui Li",
+        "Tongwang Wu",
+        "Yu-Ren Mao",
+        "Rong Kang",
+        "Tieying Zhang",
+        "Yun-Jun Gao"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 188,
+        "matched_prestigious_venue": null
+      },
+      "reason": "LASER uses compact language models for latency-aware SQL rewriting and reports improved query execution efficiency with low overhead, a direct database/inference systems contribution.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Fair Multi-Exit Framework for Facial Attribute Classification",
+      "source_url": "https://arxiv.org/abs/2301.02989",
+      "year": 2023,
+      "published": "2023-01-08",
+      "venue": "arXiv.org",
+      "citation_count": 6,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Fairness has become increasingly pivotal in facial recogni- tion. Without bias mitigation, deploying unfair AI would harm the interest of the underprivileged population. In this paper, we observe that though the higher accuracy that features from the deeper layer of a neural networks generally offer, fairness conditions deteriorate as we extract features from deeper layers. This phenomenon motivates us to extend the concept of multi-exit framework. Unlike existing works mainly focusing on accuracy, our multi-exit framework is fairness-oriented, where the internal classiﬁers are trained to be more accurate and fairer. During inference, any instance with high conﬁdence from an internal classiﬁer is allowed to exit early. Moreover, our framework can be applied to most existing fairness-aware frameworks. Experiment results show that the proposed framework can largely improve the fairness condition over the state-of-the-art in CelebA and UTK Face datasets.",
+      "identifiers": [
+        "SemanticScholar:23d591f36197aa2ae36d52d6828b38d0e4af4222"
+      ],
+      "semantic_scholar_id": "23d591f36197aa2ae36d52d6828b38d0e4af4222",
+      "canonical_id": "arXiv:2301.02989",
+      "arxiv_id": "2301.02989",
+      "doi": "10.48550/arXiv.2301.02989",
+      "authors": [
+        "Ching-Hao Chiu",
+        "Hao-Wei Chung",
+        "Yu-Jen Chen",
+        "Yiyu Shi",
+        "Tsung-Yi Ho"
+      ],
+      "priority": 6,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 6,
+        "citation_count": 6,
+        "total": 6,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1374,
+        "matched_prestigious_venue": null
+      },
+      "reason": "A multi-exit classifier permits early inference exit while targeting fair facial-attribute classification, a plausible compute-saving serving mechanism.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "E-3SFC: Communication-Efficient Federated Learning With Double-Way Features Synthesizing",
+      "source_url": "https://arxiv.org/abs/2502.03092",
+      "year": 2025,
+      "published": "2025-02-05",
+      "venue": "IEEE Transactions on Neural Networks and Learning Systems",
+      "citation_count": 5,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The exponential growth in model sizes has significantly increased the communication burden in federated learning (FL). Existing methods to alleviate this burden by transmitting compressed gradients often face high compression errors, which slow down the model’s convergence. To simultaneously achieve high compression effectiveness and lower compression errors, we study the gradient compression problem from a novel perspective. Specifically, we propose a systematical algorithm termed extended single-step synthetic features compressing (E-3SFC), which consists of three subcomponents, i.e., the single-step synthetic features compressor (3SFC), a double-way compression (DWC) algorithm, and a communication budget scheduler (BS). First, we regard the process of gradient computation of a model as decompressing gradients from corresponding inputs, while the inverse process is considered as compressing the gradients. Based on this, we introduce a novel gradient compression method termed 3SFC, which utilizes the model itself as a decompressor, leveraging training priors such as model weights and objective functions. The 3SFC compresses raw gradients into tiny synthetic features in a single-step simulation, incorporating error feedback (EF) to minimize overall compression errors. To further reduce communication overhead, 3SFC is extended to E-3SFC, allowing DWC and dynamic communication budget scheduling. Our theoretical analysis under both strongly convex and nonconvex conditions demonstrates that 3SFC achieves linear and sublinear convergence rates with aggregation noise. Extensive experiments across six datasets and six models reveal that 3SFC outperforms the state-of-the-art methods by up to 13.4% while reducing communication costs by 111.6 times. These findings suggest that 3SFC can significantly enhance communication efficiency in FL without compromising model performance.",
+      "identifiers": [
+        "SemanticScholar:644f70a4246c09aa6a9d4104d5682d6b529f3eef"
+      ],
+      "semantic_scholar_id": "644f70a4246c09aa6a9d4104d5682d6b529f3eef",
+      "canonical_id": "arXiv:2502.03092",
+      "arxiv_id": "2502.03092",
+      "doi": "10.1109/TNNLS.2025.3539869",
+      "authors": [
+        "Yu-Hao Zhou",
+        "Yuxin Tian",
+        "Mingjia Shi",
+        "Yuan-Xi Li",
+        "Ya-Nan Sun",
+        "Qing Ye",
+        "Jian-Cheng Lv"
+      ],
+      "priority": 5,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 5,
+        "citation_count": 5,
+        "total": 5,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 615,
+        "matched_prestigious_venue": null
+      },
+      "reason": "E-3SFC compresses federated-learning gradients and reports a 111.6x communication-cost reduction with maintained model performance; this is a strong distributed-learning communication-efficiency result.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Oasis: Data Curation and Assessment System for Pretraining of Large Language Models",
+      "source_url": "https://arxiv.org/abs/2311.12537",
+      "year": 2023,
+      "published": "2023-11-21",
+      "venue": "International Joint Conference on Artificial Intelligence",
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Data is one of the most critical elements in building a large language model. However, existing systems either fail to customize a corpus curation pipeline or neglect to leverage comprehensive corpus assessment for iterative optimization of the curation. To this end, we present a pretraining corpus curation and assessment platform called Oasis — a one-stop system for data quality improvement and quantification with user-friendly interactive interfaces. Specifically, the interactive modular rule filter module can devise customized rules according to explicit feedback. The debiased neural filter module builds the quality classification dataset in a negative-centric manner to remove the undesired bias. The adaptive document deduplication module could execute large-scale deduplication with limited memory resources. These three parts constitute the customized data curation module. And in the holistic data assessment module, a corpus can be assessed in local and global views, with three evaluation means including human, GPT-4, and heuristic metrics. We exhibit a complete process to use Oasis for the curation and assessment of pretraining data. In addition, an 800GB bilingual corpus curated by Oasis is publicly released.",
+      "identifiers": [
+        "SemanticScholar:e4f46c9362e109845db38a71382d4c72eb1aadd2"
+      ],
+      "semantic_scholar_id": "e4f46c9362e109845db38a71382d4c72eb1aadd2",
+      "canonical_id": "arXiv:2311.12537",
+      "arxiv_id": "2311.12537",
+      "doi": "10.48550/arXiv.2311.12537",
+      "authors": [
+        "Tong Zhou",
+        "Yubo Chen",
+        "Pengfei Cao",
+        "Kang Liu",
+        "Sheng-Ping Liu",
+        "Jun Zhao"
+      ],
+      "priority": 4,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 4,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1057,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Oasis is an LLM pretraining data platform with a large-scale deduplication component explicitly designed for limited memory.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Automatic XPath generation agents for vertical websites by LLMs",
+      "source_url": "https://doi.org/10.1007/s44443-025-00071-w",
+      "year": 2025,
+      "published": "2025-06-18",
+      "venue": "Journal of King Saud University: Computer and Information Sciences",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Extracting structured data from web pages has long been a challenging research topic, particularly for domain-specific data on vertical websites. The advent of large language models (LLMs) has introduced new possibilities for this task, enabling high-accuracy information extraction from individual pages. However, due to the substantial costs associated with LLMs, this approach is often economically impractical and difficult to scale in industrial applications. To address these challenges we propose a new framework that leverages a multi-task decomposition strategy, enabling LLMs, despite their limitations in handling structured information, to learn robust XPath expressions from seed pages and apply them to unseen web pages. Experimental results on various structured web data extraction datasets demonstrate that this framework achieves state-of-the-art accuracy for vertical websites with minimal LLM interactions. Furthermore, our approach significantly outperforms the top prompting-based methods, Reflexion and COT, improving F1 scores ranging from 14.84 to 23.86 percentage points across multiple datasets. The proposed framework not only boosts the accuracy and efficiency of structured data extraction from vertical websites, but also holds promise for adaptation across a range of industrial applications focused on extracting information from hierarchical data.",
+      "identifiers": [
+        "SemanticScholar:465c83475acd408b42fcbe3765138df42ffee38d"
+      ],
+      "semantic_scholar_id": "465c83475acd408b42fcbe3765138df42ffee38d",
+      "doi": "10.1007/s44443-025-00071-w",
+      "canonical_id": "DOI:10.1007/s44443-025-00071-w",
+      "authors": [
+        "Jing Huang",
+        "Jie Song"
+      ],
+      "priority": 3,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 3,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 482,
+        "matched_prestigious_venue": null
+      },
+      "reason": "The publisher abstract states that generated XPath expressions reduce repeated LLM calls on similar vertical pages and improve extraction efficiency while retaining strong accuracy.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-498f44fb7952",
+    "round": "libimp-498f44fb7952abbc-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 6,
+    "round_submission_count": 2,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-498f44fb7952abbc-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-498f44fb7952abbc-pre01.json",
+    "receipt": "sha256:3c4c4e86696399ae7d90429980b088e8112ed1b9c797b1dbd2da5c3ca80ce7e2"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-498f44fb7952",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

@@ -1,0 +1,224 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "QuaLA-MiniLM: a Quantized Length Adaptive MiniLM",
+      "source_url": "https://arxiv.org/abs/2210.17114",
+      "year": 2022,
+      "published": "2022-10-31",
+      "venue": "arXiv.org",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Limited computational budgets often prevent transformers from being used in production and from having their high accuracy utilized. A knowledge distillation approach addresses the computational efficiency by self-distilling BERT into a smaller transformer representation having fewer layers and smaller internal embedding. However, the performance of these models drops as we reduce the number of layers, notably in advanced NLP tasks such as span question answering. In addition, a separate model must be trained for each inference scenario with its distinct computational budget. Dynamic-TinyBERT tackles both limitations by partially implementing the Length Adaptive Transformer (LAT) technique onto TinyBERT, achieving x3 speedup over BERT-base with minimal accuracy loss. In this work, we expand the Dynamic-TinyBERT approach to generate a much more highly efficient model. We use MiniLM distillation jointly with the LAT method, and we further enhance the efficiency by applying low-bit quantization. Our quantized length-adaptive MiniLM model (QuaLA-MiniLM) is trained only once, dynamically fits any inference scenario, and achieves an accuracy-efficiency trade-off superior to any other efficient approaches per any computational budget on the SQuAD1.1 dataset (up to x8.8 speedup with<1% accuracy loss). The code to reproduce this work is publicly available on Github.",
+      "identifiers": [
+        "SemanticScholar:1bf11ea320dab2e93388a3dfad90c6cdd1d5f7f7"
+      ],
+      "semantic_scholar_id": "1bf11ea320dab2e93388a3dfad90c6cdd1d5f7f7",
+      "canonical_id": "arXiv:2210.17114",
+      "arxiv_id": "2210.17114",
+      "doi": "10.48550/arXiv.2210.17114",
+      "authors": [
+        "Shira Guskin",
+        "Moshe Wasserblat",
+        "Chang Wang",
+        "Haihao Shen"
+      ],
+      "priority": 3,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 3,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1443,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Quantized length-adaptive MiniLM adapts one model to varying inference budgets and reports up to 8.8x speedup at low accuracy loss.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Diffusion-based Symbolic Music Generation with Structured State Space Models",
+      "source_url": "https://arxiv.org/abs/2507.20128",
+      "year": 2025,
+      "published": "2025-07-27",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Recent advancements in diffusion models have significantly improved symbolic music generation. However, most approaches rely on transformer-based architectures with self-attention mechanisms, which are constrained by quadratic computational complexity, limiting scalability for long sequences. To address this, we propose Symbolic Music Diffusion with Mamba (SMDIM), a novel diffusion-based architecture integrating Structured State Space Models (SSMs) for efficient global context modeling and the Mamba-FeedForward-Attention Block (MFA) for precise local detail preservation. The MFA Block combines the linear complexity of Mamba layers, the non-linear refinement of FeedForward layers, and the fine-grained precision of self-attention mechanisms, achieving a balance between scalability and musical expressiveness. SMDIM achieves near-linear complexity, making it highly efficient for long-sequence tasks. Evaluated on diverse datasets, including FolkDB, a collection of traditional Chinese folk music that represents an underexplored domain in symbolic music generation, SMDIM outperforms state-of-the-art models in both generation quality and computational efficiency. Beyond symbolic music, SMDIM's architectural design demonstrates adaptability to a broad range of long-sequence generation tasks, offering a scalable and efficient solution for coherent sequence modeling.",
+      "identifiers": [
+        "SemanticScholar:950eaff34f790c458dc73a6fe55bd9be4c1379f3"
+      ],
+      "semantic_scholar_id": "950eaff34f790c458dc73a6fe55bd9be4c1379f3",
+      "canonical_id": "arXiv:2507.20128",
+      "arxiv_id": "2507.20128",
+      "doi": "10.48550/arXiv.2507.20128",
+      "authors": [
+        "Shenghua Yuan",
+        "Xing Tang",
+        "Jia-Tao Chen",
+        "Tianming Xie",
+        "Jing Wang",
+        "Bing Shi"
+      ],
+      "priority": 2,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 2,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 443,
+        "matched_prestigious_venue": null
+      },
+      "reason": "The abstract replaces quadratic self-attention with structured state-space modeling and reports near-linear complexity and improved computational efficiency for long sequences. The arXiv record also marks the paper withdrawn by its author; this status is retained for downstream quality review.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Unlocking Edge Fine-Tuning: A Sample-Efficient Language-Empowered Split Fine-Tuning Framework",
+      "source_url": "https://doi.org/10.32604/cmc.2025.074034",
+      "year": 2025,
+      "published": null,
+      "venue": "Computers, Materials &amp; Continua",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": ": The personalized fine-tuning of large language models (LLMs) on edge devices is severely constrained by limited computation resources. Although split federated learning alleviates on-device burdens, its effectiveness diminishes in few-shot reasoning scenarios due to the low data efficiency of conventional supervised fine-tuning, which leads to excessive communication overhead. To address this, we propose Language-Empowered Split Fine-Tuning (LESFT), a framework that integrates split architectures with a contrastive-inspired fine-tuning paradigm. LESFT simultaneously learns from multiple logically equivalent but linguistically diverse reasoning chains, providing richer supervisory signals and improving data efficiency. This process-oriented training allows more effective reasoning adaptation with fewer samples. Extensive experiments demonstrate that LESFT consistently outperforms strong baselines such as SplitLoRA in task accuracy. LESFT consistently outperforms strong baselines on GSM8K, CommonsenseQA, and AQUA_RAT, with the largest gains observed on Qwen2.5-3B. These results indicate that LESFT can effectively adapt large language models for reasoning tasks under the computational and communication constraints of edge environments.",
+      "identifiers": [
+        "SemanticScholar:f72d3ba94ef63f775ae486faff8596a9bcdd50b6"
+      ],
+      "semantic_scholar_id": "f72d3ba94ef63f775ae486faff8596a9bcdd50b6",
+      "doi": "10.32604/cmc.2025.074034",
+      "canonical_id": "DOI:10.32604/cmc.2025.074034",
+      "authors": [
+        "Zuyi Huang",
+        "Yue Wang",
+        "Jia Liu",
+        "Haodong Yi",
+        "Lejun Ai",
+        "Min Chen",
+        "Salman A. AlQahtani"
+      ],
+      "priority": 1,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 1,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 469,
+        "matched_prestigious_venue": null
+      },
+      "reason": "The publisher article addresses resource-constrained edge LLM fine-tuning through split federated architecture and sample efficiency, directly targeting computation and communication overhead.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Combining Relevance and Magnitude for Resource-Saving DNN Pruning",
+      "source_url": "https://arxiv.org/abs/2405.13088",
+      "year": 2024,
+      "published": "2024-05-21",
+      "venue": "IEEE Network",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Pruning neural networks, i.e., removing some of their parameters whilst retaining their accuracy, is one of the main ways to reduce the latency of a machine learning pipeline, especially in resource- and/or bandwidth-constrained scenarios. In this context, the pruning technique, i.e., how to choose the parameters to remove, is critical to the system performance. In this paper, we propose a novel pruning approach, called FlexRel and predicated upon combining training-time and inference-time information, namely, parameter magnitude and relevance, in order to improve the resulting accuracy whilst saving both computational resources and bandwidth. Our performance evaluation shows that FlexRel is able to achieve higher pruning factors, saving over 35% bandwidth for typical accuracy targets.",
+      "identifiers": [
+        "SemanticScholar:b8ee2e562a6d703110b1873ef0034e379eadb277"
+      ],
+      "semantic_scholar_id": "b8ee2e562a6d703110b1873ef0034e379eadb277",
+      "canonical_id": "arXiv:2405.13088",
+      "arxiv_id": "2405.13088",
+      "doi": "10.1109/MNET.2025.3556212",
+      "authors": [
+        "C. Chiasserini",
+        "F. Malandrino",
+        "Nuria Molner",
+        "Zhiqiang Zhao"
+      ],
+      "priority": 1,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 1,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 875,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Combining weight relevance with magnitude targets pruning under resource constraints and reports bandwidth savings, a direct model/system efficiency contribution.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Predicting Token Impact Towards Efficient Vision Transformer",
+      "source_url": "https://arxiv.org/abs/2305.14840",
+      "year": 2023,
+      "published": "2023-05-24",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Token filtering to reduce irrelevant tokens prior to self-attention is a straightforward way to enable efficient vision Transformer. This is the first work to view token filtering from a feature selection perspective, where we weigh the importance of a token according to how much it can change the loss once masked. If the loss changes greatly after masking a token of interest, it means that such a token has a significant impact on the final decision and is thus relevant. Otherwise, the token is less important for the final decision, so it can be filtered out. After applying the token filtering module generalized from the whole training data, the token number fed to the self-attention module can be obviously reduced in the inference phase, leading to much fewer computations in all the subsequent self-attention layers. The token filter can be realized using a very simple network, where we utilize multi-layer perceptron. Except for the uniqueness of performing token filtering only once from the very beginning prior to self-attention, the other core feature making our method different from the other token filters lies in the predictability of token impact from a feature selection point of view. The experiments show that the proposed method provides an efficient way to approach a light weighted model after optimized with a backbone by means of fine tune, which is easy to be deployed in comparison with the existing methods based on training from scratch.",
+      "identifiers": [
+        "SemanticScholar:a0a0c29e927fba02769dbe864d85dd758243655c"
+      ],
+      "semantic_scholar_id": "a0a0c29e927fba02769dbe864d85dd758243655c",
+      "canonical_id": "arXiv:2305.14840",
+      "arxiv_id": "2305.14840",
+      "doi": "10.48550/arXiv.2305.14840",
+      "authors": [
+        "Hong Wang",
+        "Su Yang",
+        "Xiao-Ke Huang",
+        "Weishan Zhang"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1238,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Token filtering reduces transformer inference sequence length and downstream attention computations, directly improving vision-transformer efficiency.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-78e18b106b76",
+    "round": "libimp-78e18b106b764f4c-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 11,
+    "round_submission_count": 3,
+    "round_submission_index": 2,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-78e18b106b764f4c-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-78e18b106b764f4c-pre01.json",
+    "receipt": "sha256:1a089262ca7fd734d38007536fbe482f86fa24a29b2f9a00bf7bc378a75698a4"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-78e18b106b76",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
