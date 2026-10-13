@@ -1,0 +1,150 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Look Back, Think Ahead: Visual Memory on Demand for Efficient Multimodal Reasoning",
+      "source_url": "https://arxiv.org/abs/2610.12060",
+      "year": 2026,
+      "published": "2026-10-08",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Processing long visual token sequences from high-resolution images makes multi-step reasoning computationally expensive for multimodal Large Language Models (MLLMs). Existing one-shot pruning and aggregation methods compress visual tokens into a fixed context before decoding. However, visual evidence needs can shift as reasoning unfolds, making it difficult for a fixed compressed context to retain all the details needed across stages. To address this challenge, we propose ViMoD, a lightweight framework that maintains a compact visual context while preserving access to original fine-grained evidence as reasoning needs evolve. Deformable Aggregation of Region-wise Tokens (DART) learns content-adaptive groups and aggregation capacities, constructing compact Coarse representations linked to recoverable original Fine tokens. Temporal Routing for Adaptive Contextual Evidence (TRACE) integrates decoding history to anticipate upcoming evidence needs and select, retain, or replace active Fine-token groups. Selected Fine tokens augment the persistent Coarse context in the frozen backbone, enabling stage-specific evidence access without continuously attending to all visual tokens. On Qwen3-VL-4B, ViMoD outperforms all evaluated baselines on all eight reasoning benchmarks at a 20% target visual token budget, improving the mean normalized score by 39.0% over the strongest evaluated one-shot baseline. These gains are achieved with only 0.0546% additional trainable parameters relative to the frozen backbone.",
+      "identifiers": [
+        "SemanticScholar:eb06cf450b4cd5a94884d6b1657d0edefe75defc"
+      ],
+      "semantic_scholar_id": "eb06cf450b4cd5a94884d6b1657d0edefe75defc",
+      "canonical_id": "arXiv:2610.12060",
+      "arxiv_id": "2610.12060",
+      "authors": [
+        "Yi-Cheng Xue",
+        "Han Wu",
+        "Ju-Feng Yang",
+        "Min-Jing Dong",
+        "Xing-Hao Chen",
+        "Han-Ting Chen",
+        "Jian-Yuan Guo"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 5,
+        "matched_prestigious_venue": null
+      },
+      "reason": "On-demand visual memory selection reduces redundant visual context processing in multimodal reasoning, a plausible inference-time compute and context-efficiency mechanism.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Composing Distributed Computations Through Task and Kernel Fusion",
+      "source_url": "https://arxiv.org/abs/2406.18109",
+      "year": 2024,
+      "published": "2024-06-26",
+      "venue": "International Conference on Architectural Support for Programming Languages and Operating Systems",
+      "citation_count": 7,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "We introduce Diffuse, a system that dynamically performs task and kernel fusion in distributed, task-based runtime systems. The key component of Diffuse is an intermediate representation of distributed computation that enables the necessary analyses for the fusion of distributed tasks to be performed in a scalable manner. We pair task fusion with a JIT compiler to fuse together the kernels within fused tasks. We show empirically that Diffuse's intermediate representation is general enough to be a target for two real-world, task-based libraries (cuPyNumeric and Legate Sparse), letting Diffuse find optimization opportunities across function and library boundaries. Diffuse accelerates unmodified applications developed by composing task-based libraries by 1.86x on average (geo-mean), and by between 0.93x--10.7x on up to 128 GPUs. Diffuse also finds optimization opportunities missed by the original application developers, enabling high-level Python programs to match or exceed the performance of an explicitly parallel MPI library.",
+      "identifiers": [
+        "SemanticScholar:59e03f09ee7213209e11e566b09dbb981d4dd620"
+      ],
+      "semantic_scholar_id": "59e03f09ee7213209e11e566b09dbb981d4dd620",
+      "canonical_id": "arXiv:2406.18109",
+      "arxiv_id": "2406.18109",
+      "doi": "10.1145/3669940.3707216",
+      "authors": [
+        "Rohan Yadav",
+        "Shiv Sundram",
+        "Wonchan Lee",
+        "Michael Garland",
+        "Michael Bauer",
+        "Alex Aiken",
+        "Fredrik Kjolstad"
+      ],
+      "priority": 7,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 7,
+        "citation_count": 7,
+        "total": 7,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 839,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Task and kernel fusion composes distributed computations while reducing dispatch/intermediate overhead, a reusable runtime/kernel execution technique directly relevant to inference systems.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Attention or Convolution: Transformer Encoders in Audio Language Models for Inference Efficiency",
+      "source_url": "https://arxiv.org/abs/2311.02772",
+      "year": 2023,
+      "published": "2023-11-05",
+      "venue": "2024 IEEE International Conference on Acoustics, Speech, and Signal Processing Workshops (ICASSPW)",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "In this paper, we show that a simple audio language model can achieve comparable inference efficiency to more complicated pre-trained models with speech transformer encoders. These speech transformers rely on mixing convolutional modules with self-attention modules. They achieve state-of- the-art performance on ASR with top efficiency. We first show that employing these speech transformers as an encoder significantly improves the efficiency of audio language models as well. However, our study shows that we can achieve comparable efficiency with advanced self-attention solely. We demonstrate that this simpler approach is particularly beneficial with a low-bit weight quantization technique of a neural network to improve efficiency. We hypothesize that it prevents propagating the errors between different quantized modules compared to recent speech transformers mixing quantized convolution and the quantized self-attention modules. Our study suggests that we could pay attention to the architecture of audio language language to improve their inference efficiency.",
+      "identifiers": [
+        "SemanticScholar:17eba059117dbf1aaa829afd171b7e94bf7da21f"
+      ],
+      "semantic_scholar_id": "17eba059117dbf1aaa829afd171b7e94bf7da21f",
+      "canonical_id": "arXiv:2311.02772",
+      "arxiv_id": "2311.02772",
+      "doi": "10.1109/ICASSPW62465.2024.10626117",
+      "authors": [
+        "Sungho Jeon",
+        "Ching-feng Yeh",
+        "Hakan Inan",
+        "Wei-Ning Hsu",
+        "Rashi Rungta",
+        "Yashar Mehdad",
+        "D. Bikel"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1073,
+        "matched_prestigious_venue": null
+      },
+      "reason": "The paper compares Transformer and convolution encoders for audio-language inference efficiency, directly evaluating inference-time architecture cost and performance.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-45ffa45be78d",
+    "round": "libimp-45ffa45be78d0423-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 3,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-45ffa45be78d0423-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-45ffa45be78d0423-pre01.json",
+    "receipt": "sha256:fd6bbde61ec877a22de2e85af552707f28e6d09d3e07caadaa7a83cb6a91a5c5"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-45ffa45be78d",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

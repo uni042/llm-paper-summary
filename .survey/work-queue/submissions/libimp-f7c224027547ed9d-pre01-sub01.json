@@ -1,0 +1,224 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Kunlun Anomaly Troubleshooter: Enabling Kernel-Level Anomaly Detection and Causal Reasoning for Large Model Distributed Inference",
+      "source_url": "https://arxiv.org/abs/2511.05978",
+      "year": 2025,
+      "published": "2025-11-08",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Anomaly troubleshooting for large model distributed inference (LMDI) remains a critical challenge. Resolving anomalies such as inference performance degradation or latency jitter in distributed system demands significant manual efforts from domain experts, resulting in extremely time-consuming diagnosis processes with relatively low accuracy. In this paper, we introduce Kunlun Anomaly Troubleshooter (KAT), the first anomaly troubleshooting framework tailored for LMDI. KAT addresses this problem through two core innovations. First, KAT exploits the synchronicity and consistency of GPU workers, innovatively leverages function trace data to precisely detect kernel-level anomalies and associated hardware components at nanosecond resolution. Second, KAT integrates these detection results into a domain-adapted LLM, delivering systematic causal reasoning and natural language interpretation of complex anomaly symptoms. Evaluations conducted in Alibaba Cloud Service production environment indicate that KAT achieves over 0.884 precision and 0.936 recall in anomaly detection, providing detail anomaly insights that significantly narrow down the diagnostic scope and improve both the efficiency and success rate of troubleshooting.",
+      "identifiers": [
+        "SemanticScholar:1ea0c06c38553b62c1339cc1ba785b9e511d9d6f"
+      ],
+      "semantic_scholar_id": "1ea0c06c38553b62c1339cc1ba785b9e511d9d6f",
+      "canonical_id": "arXiv:2511.05978",
+      "arxiv_id": "2511.05978",
+      "doi": "10.48550/arXiv.2511.05978",
+      "authors": [
+        "Yuyang Liu",
+        "Jingjing Cai",
+        "Jiayi Ren",
+        "Peng Zhou",
+        "Danyang Zhang",
+        "Yin Du",
+        "Shi-Jian Li"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 339,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Kernel-level anomaly detection and causal reasoning target failures in distributed large-model inference, a concrete serving/runtime reliability problem.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Keyword Matters: Unveiling the Energy Sensitivity of On-Device LLM Prompting",
+      "source_url": "https://arxiv.org/abs/2607.22568",
+      "year": 2026,
+      "published": "2026-05-31",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Models (LLMs) are increasingly deployed on mobile and embedded devices to improve privacy and reduce network latency. Yet on-device inference faces a fundamental constraint: high energy consumption on battery-powered, resource-limited hardware. While model compression and runtime acceleration have been widely studied, the effect of \\emph{prompt design} on energy efficiency remains underexplored. This paper presents an empirical study of the relationship between prompt wording and energy consumption for on-device LLMs. Using real power measurements collected on a smartphone, we quantify how linguistic features, particularly imperative keywords and instruction structure, affect decoding length and total energy. Our results show consistent energy differences across verbs and tasks, indicating that prompt engineering is a lightweight lever for improving energy efficiency.",
+      "identifiers": [
+        "SemanticScholar:e58af1525d82b13f4201294e5fb8a8efa77975b5"
+      ],
+      "semantic_scholar_id": "e58af1525d82b13f4201294e5fb8a8efa77975b5",
+      "canonical_id": "arXiv:2607.22568",
+      "arxiv_id": "2607.22568",
+      "doi": "10.48550/arXiv.2607.22568",
+      "authors": [
+        "Ruiyi Tao",
+        "Xiao-Long Tu",
+        "Haoxin Wang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 135,
+        "matched_prestigious_venue": null
+      },
+      "reason": "The study measures energy sensitivity of on-device LLM prompting, directly benchmarking inference energy and prompt-side deployment cost.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "SEIS: Self-Evolving Inference Systems",
+      "source_url": "https://arxiv.org/abs/2610.04646",
+      "year": 2026,
+      "published": "2026-10-03",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Inference systems determine how fast and how cheaply language models can be served, so making them faster has direct practical value. However, prior work focuses mostly on optimizing certain parts such as kernels or memory within the large system. In this work, we take a holistic approach and apply agentic self-evolution to optimize the whole system end-to-end. Our SEIS (Self-Evolving Inference Systems) autonomously optimizes the entire mini-sglang engine without human intervention through iterative sessions with inherited experiences and code changes. Serving Qwen3-0.6B on H100, the resulting engine reaches 3.27X the throughput of the original mini-sglang implementation and beats SOTA engines like vLLM, TensorRT-LLM, and SGLang in the single-request workload. The correctness of the optimized inference engine by SEIS is tested in terms of numerical difference and downstream accuracy on math and long-context retrieval tasks. The code and session histories show that the speedup comes from redesigning the whole engine and that building on earlier sessions beats independent attempts. These results suggest that agentic self-evolution can optimize a complex system end-to-end. The evaluation also has to evolve with the engine, and letting agents evolve it is a natural next step.",
+      "identifiers": [
+        "SemanticScholar:1a716edf85728ff75eefb6b40f04af721d2868db"
+      ],
+      "semantic_scholar_id": "1a716edf85728ff75eefb6b40f04af721d2868db",
+      "canonical_id": "arXiv:2610.04646",
+      "arxiv_id": "2610.04646",
+      "authors": [
+        "Zhen Xu",
+        "Jingyu Liu",
+        "Zong-Ze Li",
+        "Tahseen Rabbani",
+        "Ce Zhang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 10,
+        "matched_prestigious_venue": null
+      },
+      "reason": "SEIS explicitly studies self-evolving inference systems, a direct systems target; retain for detailed review because the primary abstract presents the system mechanism and runtime benefit as the central contribution.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "PRISM a diagnostic framework for parametric recall degradation in quantized large language models",
+      "source_url": "https://doi.org/10.1007/s10791-026-10580-5",
+      "year": 2026,
+      "published": "2026-10-06",
+      "venue": "Discover Computing",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Post-training quantization (PTQ) is the standard method for deploying large language models (LLMs), though it is widely assumed to degrade model quality uniformly. Although, this assumption masks how quantization uniquely affects different mechanisms, particularly the balance between a model’s internal parametric memory and its ability to utilize external context. Existing benchmarks primarily measure overall accuracy, failing to isolate these specific sources of knowledge degradation when bit-rates are reduced. To address this, we introduce PRISM (Precision-Resolved Inspection of Stored Memory), an efficient diagnostic framework that separates and measures these distinct capabilities on a single 8GB consumer GPU. PRISM isolates these effects by leveraging counterfactual knowledge-conflict probes, component-wise mixed-precision quantization, and leak-free comprehension probes. We evaluate this framework across multiple model families (Qwen2.5, Llama-3.2, Gemma-2) and diverse quantization schemes (round-to-nearest, NF4, GGUF, GPTQ). Our results demonstrate that open-ended parametric recall collapses under low-bit PTQ while verbatim copy-from-context remains robust; furthermore, component-wise probing reveals that MLP/FFN quantization drives this recall collapse far more than attention layers. Ultimately, these insights reveal that while closed-book benchmarks overstate quantization harm for simple retrieval tasks, complex multi-hop reasoning remains vulnerable, providing crucial nuance for deploying compressed LLMs. Clinical trial Not applicable.",
+      "identifiers": [
+        "SemanticScholar:bd70e70277380f9123fff6a0e1cf9bfcfda28d97"
+      ],
+      "semantic_scholar_id": "bd70e70277380f9123fff6a0e1cf9bfcfda28d97",
+      "doi": "10.1007/s10791-026-10580-5",
+      "canonical_id": "DOI:10.1007/s10791-026-10580-5",
+      "authors": [
+        "Swastik Vaish",
+        "Arpit Singh Gautam",
+        "Varun Tiwari",
+        "Jitendra Singh Yadav"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 7,
+        "matched_prestigious_venue": null
+      },
+      "reason": "PRISM diagnoses recall degradation caused by LLM quantization, directly supporting quality-aware low-bit deployment and efficient quantized inference.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Dual-QK: Sharp Queries and Flat Keys for Prunable 2-bit KV Caches",
+      "source_url": "https://arxiv.org/abs/2610.09827",
+      "year": 2026,
+      "published": "2026-10-07",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Long inputs and extended generation increase the storage and access costs of the key-value (KV) cache. Low-bit quantization reduces storage and memory traffic, while query-channel pruning can further reduce key-cache reads. Rotation-based quantization redistributes the energy of key outliers across channels. To maintain computational invariance, the same orthogonal transform must be applied to queries, preserving query-key dot products. However, this rotation can disperse query energy, weakening the separation between a few large components to retain and many small ones to prune. We introduce Dual-QK, which uses paired non-orthogonal query and key transforms to address this conflict. Using calibrated query and key statistics, Dual-QK combines partial key whitening with a query-aligned basis to balance key scales for INT2 quantization and concentrate query energy for dynamic channel pruning. Channel-0 protection and bucket-relative RoPE support low-bit accuracy over long contexts. Experiments on four models across five generative benchmarks and long-context retrieval tasks show improved accuracy over OSCAR on most tasks at 40% query-channel sparsity. At a 128K context, Dual-QK provides $6.8\\times$ KV-cache compression and an estimated $8.3\\times$ reduction in KV read volume relative to unpruned BF16. Under the evaluated configurations, our SGLang implementation achieves up to $3.75\\times$ the decoding throughput of unpruned BF16.",
+      "identifiers": [
+        "SemanticScholar:6f40390583cded8756fd8c388078708cb77a9753"
+      ],
+      "semantic_scholar_id": "6f40390583cded8756fd8c388078708cb77a9753",
+      "canonical_id": "arXiv:2610.09827",
+      "arxiv_id": "2610.09827",
+      "authors": [
+        "Sunjoo Whang",
+        "Jungjun Oh",
+        "Minsung Kim",
+        "Dongho Seo",
+        "Jian Shin",
+        "Gregory Kielian",
+        "Hoi-Jun Yoo",
+        "Sangjin Kim"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 6,
+        "matched_prestigious_venue": null
+      },
+      "reason": "The paper prunes 2-bit KV caches by shaping query/key representations, directly targeting inference-time attention memory and latency.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-f7c224027547",
+    "round": "libimp-f7c224027547ed9d-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 10,
+    "round_submission_count": 2,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-f7c224027547ed9d-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-f7c224027547ed9d-pre01.json",
+    "receipt": "sha256:b3cda099d2e8963c15760ce5014aad66dfd877f9b1bb2b943d5f5b24fce2f05e"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-f7c224027547",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
