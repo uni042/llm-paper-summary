@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-f01a82864d5bf9f3-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2608.26005",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2608.26005",
+    "identity_tokens": [
+      "arXiv:2608.26005"
+    ],
+    "reason": "原著第3節の二層schema–entity索引、左脳の事実記憶と右脳の感情・人格記憶の並列検索、発話中の照合・200–400msの先読み・400–500msの検索による134msの記憶検索は、対話型推論サービスのレイテンシー最適化に関連する。一方、主目的は音声エージェントの記憶品質・個人化・感情理解であり、モデルの復号カーネル、KV、量子化、汎用LLMサービングの性能を改善する研究ではない。Mem0等の検索バックエンド上のアプリケーション固有メモリ層であるため、現行サーベイの直接収録対象としては保留。なお原著HTML要旨とarXiv概要の人格評価改善幅に差があり、数値の無条件転載を避ける。",
+    "first_checked_at": "2026-10-11T05:42:40+00:00",
+    "last_checked_at": "2026-10-13T19:47:29+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "VoiceMem: Streaming Dual-Brain Memory for Real-Time Interaction"
+  },
+  "processed_at": "2026-10-13T19:47:29+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f01a82864d5b",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

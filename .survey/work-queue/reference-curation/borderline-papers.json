@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-13T19:24:40+00:00",
-  "record_count": 4868,
+  "updated_at": "2026-10-13T19:47:29+00:00",
+  "record_count": 4867,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -70721,9 +70721,9 @@
       "identity_tokens": [
         "arXiv:2608.26005"
       ],
-      "reason": "一次要旨で確認できる主貢献は、音声言語モデルの対話に対して情報記憶と感情・人物像記憶を並列に構築し、検索精度・個人化・感情応答を改善する記憶アーキテクチャである。検索遅延134msと音声区間検出待ち時間への収容、記憶バックエンドを交換できる分離配備という実行システム上の接点はある。一方、KVキャッシュ、GPUメモリ階層、推論カーネル、バッチ処理、MoE、量子化等の直接最適化ではなく、記憶の意味品質・対話体験を主評価とするため、現行サーベイでは境界候補とする。",
+      "reason": "原著第3節の二層schema–entity索引、左脳の事実記憶と右脳の感情・人格記憶の並列検索、発話中の照合・200–400msの先読み・400–500msの検索による134msの記憶検索は、対話型推論サービスのレイテンシー最適化に関連する。一方、主目的は音声エージェントの記憶品質・個人化・感情理解であり、モデルの復号カーネル、KV、量子化、汎用LLMサービングの性能を改善する研究ではない。Mem0等の検索バックエンド上のアプリケーション固有メモリ層であるため、現行サーベイの直接収録対象としては保留。なお原著HTML要旨とarXiv概要の人格評価改善幅に差があり、数値の無条件転載を避ける。",
       "first_checked_at": "2026-10-11T05:42:40+00:00",
-      "last_checked_at": "2026-10-11T17:49:18+00:00",
+      "last_checked_at": "2026-10-13T19:47:29+00:00",
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "VoiceMem: Streaming Dual-Brain Memory for Real-Time Interaction"
@@ -71113,19 +71113,6 @@
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "Demystifying LLM-as-a-Judge: Analytically Tractable Model for Inference-Time Scaling"
-    },
-    "arXiv:2511.00413": {
-      "classification": "borderline",
-      "canonical_id": "arXiv:2511.00413",
-      "identity_tokens": [
-        "arXiv:2511.00413"
-      ],
-      "reason": "arXiv一次要旨は分岐したエージェント軌跡の共通接頭辞を一度だけ計算し、Tree PackingとGradient Restorationにより前向き・逆向きの重複計算を減らす学習エンジンを提案する。接頭辞再利用という計算システム技術は推論のprefix cacheと概念的に近いが、実測高速化と勾配復元は教師あり微調整・強化学習の訓練過程を対象とする。現行の学習単独最適化凍結方針により通常Researchのacceptとはしない。",
-      "first_checked_at": "2026-10-11T14:27:36+00:00",
-      "last_checked_at": "2026-10-12T21:38:04+00:00",
-      "linked_from": [],
-      "borderline_recheck_count": 0,
-      "title": "Tree Training: Accelerating Agentic LLMs Training via Shared Prefix Reuse"
     },
     "DOI:10.1109/ecie69549.2026.11565531": {
       "classification": "borderline",

@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-13T19:24:40+00:00",
-  "record_count": 11855,
+  "updated_at": "2026-10-13T19:47:28+00:00",
+  "record_count": 11857,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -170034,6 +170034,30 @@
         "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
       ],
       "title": "Composer 2 Technical Report"
+    },
+    "arXiv:2511.00413": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2511.00413",
+      "identity_tokens": [
+        "arXiv:2511.00413"
+      ],
+      "reason": "タイトルが対象をエージェント型LLMの学習（Training）高速化と明記し、接頭辞の共有再利用も学習工程を目的とする。現在凍結中の学習単独最適化に該当し、LLM推論サービング、復号カーネル、KVキャッシュ運用の直接的な改善を主題としていないため、タイトル先行除外とする。",
+      "first_checked_at": "2026-10-13T19:47:26+00:00",
+      "last_checked_at": "2026-10-13T19:47:26+00:00",
+      "linked_from": [],
+      "title": "Tree Training: Accelerating Agentic LLMs Training via Shared Prefix Reuse"
+    },
+    "arXiv:2608.10430": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.10430",
+      "identity_tokens": [
+        "arXiv:2608.10430"
+      ],
+      "reason": "作業一覧のタイトルは幻覚の検出・検証を主題としており、モデル推論時の計算・メモリ・処理能力・カーネル・サービングスケジューリングの最適化を直接扱うことを示していない。関連性が明確に低いタイトル先行除外とし、詳細本文の未確認を明示する。",
+      "first_checked_at": "2026-10-13T19:47:28+00:00",
+      "last_checked_at": "2026-10-13T19:47:28+00:00",
+      "linked_from": [],
+      "title": "Actionable Hallucination Detection: Translating Latent Uncertainty into Agentic Critique"
     }
   }
 }
