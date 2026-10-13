@@ -1,0 +1,238 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "OckBench: Measuring the Efficiency of LLM Reasoning",
+      "source_url": "https://arxiv.org/abs/2511.05722",
+      "year": 2025,
+      "published": "2025-11-07",
+      "venue": "arXiv.org",
+      "citation_count": 12,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLMs) such as GPT-5 and Gemini 3 have pushed the frontier of automated reasoning and code generation. Yet current benchmarks emphasize accuracy and output quality, neglecting a critical dimension: efficiency of token usage. The token efficiency is highly variable in practical. Models solving the same problem with similar accuracy can exhibit up to a \\textbf{5.0$\\times$} difference in token length, leading to massive gap of model reasoning ability. Such variance exposes significant redundancy, highlighting the critical need for a standardized benchmark to quantify the gap of token efficiency. Thus, we introduce OckBench, the first benchmark that jointly measures accuracy and token efficiency across reasoning and coding tasks. Our evaluation reveals that token efficiency remains largely unoptimized across current models, significantly inflating serving costs and latency. These findings provide a concrete roadmap for the community to optimize the latent reasoning ability, token efficiency. Ultimately, we argue for an evaluation paradigm shift: tokens must not be multiplied beyond necessity. Our benchmarks are available at https://ockbench.github.io/.",
+      "identifiers": [
+        "SemanticScholar:1baf5d6a9aa42375692d24ddd1e1de25f1ce17f5"
+      ],
+      "semantic_scholar_id": "1baf5d6a9aa42375692d24ddd1e1de25f1ce17f5",
+      "canonical_id": "arXiv:2511.05722",
+      "arxiv_id": "2511.05722",
+      "doi": "10.48550/arXiv.2511.05722",
+      "authors": [
+        "Zheng-Xiao Du",
+        "Hao Kang",
+        "Song Han",
+        "Tushar Krishna",
+        "Li-Geng Zhu"
+      ],
+      "priority": 112,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 12,
+        "citation_count": 12,
+        "total": 112,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 340,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Benchmark measures reasoning/coding accuracy and token efficiency, relating excess tokens to serving cost and latency.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "LatentMem: Customizing Latent Memory for Multi-Agent Systems",
+      "source_url": "https://arxiv.org/abs/2602.03036",
+      "year": 2026,
+      "published": "2026-02-03",
+      "venue": "arXiv.org",
+      "citation_count": 12,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language model (LLM)-powered multi-agent systems (MAS) demonstrate remarkable collective intelligence, wherein multi-agent memory serves as a pivotal mechanism for continual adaptation. However, existing multi-agent memory designs remain constrained by two fundamental bottlenecks: (i) memory homogenization arising from the absence of role-aware customization, and (ii) information overload induced by excessively fine-grained memory entries. To address these limitations, we propose LatentMem, a learnable multi-agent memory framework designed to customize agent-specific memories in a token-efficient manner. Specifically, LatentMem comprises an experience bank that stores raw interaction trajectories in a lightweight form, and a memory composer that synthesizes compact latent memories conditioned on retrieved experience and agent-specific contexts. Further, we introduce Latent Memory Policy Optimization (LMPO), which propagates task-level optimization signals through latent memories to the composer, encouraging it to produce compact and high-utility representations. Extensive experiments across diverse benchmarks and mainstream MAS frameworks show that LatentMem achieves a performance gain of up to $19.36$% over vanilla settings and consistently outperforms existing memory architectures, without requiring any modifications to the underlying frameworks.",
+      "identifiers": [
+        "SemanticScholar:dfd9cf2191e91dbd6ceb683831d0d554916b0b56"
+      ],
+      "semantic_scholar_id": "dfd9cf2191e91dbd6ceb683831d0d554916b0b56",
+      "canonical_id": "arXiv:2602.03036",
+      "arxiv_id": "2602.03036",
+      "doi": "10.48550/arXiv.2602.03036",
+      "authors": [
+        "Muxin Fu",
+        "Guibin Zhang",
+        "Xiangyuan Xue",
+        "Ya-Fu Li",
+        "Zefeng He",
+        "Siyuan Huang",
+        "Xiaoye Qu",
+        "Yu Cheng",
+        "Yang Yang"
+      ],
+      "priority": 112,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 12,
+        "citation_count": 12,
+        "total": 112,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 252,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Compact role-specific latent memory directly targets token-efficient multi-agent memory.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Conformal Thinking: Risk Control for Reasoning on a Compute Budget",
+      "source_url": "https://arxiv.org/abs/2602.03814",
+      "year": 2026,
+      "published": "2026-02-03",
+      "venue": "arXiv.org",
+      "citation_count": 12,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Reasoning Large Language Models (LLMs) enable test-time scaling, with dataset-level accuracy improving as the token budget increases, motivating adaptive reasoning -- spending tokens when they improve reliability and stopping early when additional computation is unlikely to help. However, setting the token budget, as well as the threshold for adaptive reasoning, is a practical challenge that entails a fundamental risk-accuracy trade-off. We re-frame the budget setting problem as risk control, limiting the error rate while minimizing compute. Our framework introduces an upper threshold that stops reasoning when the model is confident (risking incorrect output) and a novel parametric lower threshold that preemptively stops unsolvable instances (risking premature stoppage). Given a target risk and a validation set, we use distribution-free risk control to optimally specify these stopping mechanisms. For scenarios with multiple budget controlling criteria, we incorporate an efficiency loss to select the most computationally efficient exiting mechanism. Empirical results across diverse reasoning tasks and models demonstrate the effectiveness of our risk control approach, demonstrating computational efficiency gains from the lower threshold and ensemble stopping mechanisms while adhering to the user-specified risk target.",
+      "identifiers": [
+        "SemanticScholar:97d8b24e6bab5b16732cda0cce7b75c66f474cf1"
+      ],
+      "semantic_scholar_id": "97d8b24e6bab5b16732cda0cce7b75c66f474cf1",
+      "canonical_id": "arXiv:2602.03814",
+      "arxiv_id": "2602.03814",
+      "doi": "10.48550/arXiv.2602.03814",
+      "authors": [
+        "Xi Wang",
+        "Anushri Suresh",
+        "Alvin Zhang",
+        "Rishi More",
+        "William Jurayj",
+        "Benjamin Van Durme",
+        "Mehrdad Farajtabar",
+        "Daniel Khashabi",
+        "Eric T. Nalisnick"
+      ],
+      "priority": 112,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 12,
+        "citation_count": 12,
+        "total": 112,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 252,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Risk-controlled stop thresholds reduce test-time reasoning compute while respecting target error rate.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "AgentArk: Distilling Multi-Agent Intelligence into a Single LLM Agent",
+      "source_url": "https://arxiv.org/abs/2602.03955",
+      "year": 2026,
+      "published": "2026-02-03",
+      "venue": "arXiv.org",
+      "citation_count": 12,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "While large language model (LLM) multi-agent systems achieve superior reasoning performance through iterative debate, practical deployment is limited by their high computational cost and error propagation. This paper proposes AgentArk, a novel framework to distill multi-agent dynamics into the weights of a single model, effectively transforming explicit test-time interactions into implicit model capabilities. This equips a single agent with the intelligence of multi-agent systems while remaining computationally efficient. Specifically, we investigate three hierarchical distillation strategies across various models, tasks, scaling, and scenarios: reasoning-enhanced fine-tuning; trajectory-based augmentation; and process-aware distillation. By shifting the burden of computation from inference to training, the distilled models preserve the efficiency of one agent while exhibiting strong reasoning and self-correction performance of multiple agents. They further demonstrate enhanced robustness and generalization across diverse reasoning tasks. We hope this work can shed light on future research on efficient and robust multi-agent development. Our code is at https://github.com/AIFrontierLab/AgentArk.",
+      "identifiers": [
+        "SemanticScholar:25f612200a3821c71b99819cd671f2e60df5b470"
+      ],
+      "semantic_scholar_id": "25f612200a3821c71b99819cd671f2e60df5b470",
+      "canonical_id": "arXiv:2602.03955",
+      "arxiv_id": "2602.03955",
+      "doi": "10.48550/arXiv.2602.03955",
+      "authors": [
+        "Yinyi Luo",
+        "Yiqiao Jin",
+        "Weicheng Yu",
+        "Mengqi Zhang",
+        "Srijan Kumar",
+        "Xiaoxiao Li",
+        "Wei-Jie Xu",
+        "Xin Chen",
+        "Jin-Dong Wang"
+      ],
+      "priority": 112,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 12,
+        "citation_count": 12,
+        "total": 112,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 252,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Distills multi-agent inference behavior into one model to retain single-agent inference cost.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Efficient Test-Time Scaling via Temporal Reasoning Aggregation",
+      "source_url": "https://arxiv.org/abs/2604.17304",
+      "year": 2026,
+      "published": "2026-04-19",
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Test-time scaling improves the reasoning performance of large language models but often results in token-inefficient overthinking, where models continue reasoning beyond what is necessary for a correct answer. Existing dynamic early-exit methods typically rely on single-step confidence signals, which are often unreliable for detecting reasoning convergence in multi-step settings. To mitigate this limitation, we propose TRACE, a training-free framework for efficient test-time scaling that determines when to terminate reasoning based on temporal aggregation of multi-step evidence rather than instantaneous signals. TRACE detects reasoning convergence over time by aggregating two complementary signals across recent reasoning steps: answer consistency, capturing the persistence of predicted answers, and confidence trajectory, modeling the temporal evolution of model confidence. Benefiting from these two factors, TRACE can accurately determine whether the reasoning process has converged, thereby promptly halting inference and effectively avoiding redundant reasoning steps. Extensive experiments on multiple challenging benchmarks show that TRACE reduces reasoning token usage by 25-30% on average while maintaining accuracy within 1-2% of full-length reasoning, consistently outperforming existing dynamic reasoning methods.",
+      "identifiers": [
+        "SemanticScholar:1e3d1bd6b5cd3d5a1b9ac7c146500bd6864ffdc5"
+      ],
+      "semantic_scholar_id": "1e3d1bd6b5cd3d5a1b9ac7c146500bd6864ffdc5",
+      "canonical_id": "arXiv:2604.17304",
+      "arxiv_id": "2604.17304",
+      "doi": "10.48550/arXiv.2604.17304",
+      "authors": [
+        "Jia-Kun Li",
+        "Xing-Wei He",
+        "Ke-Fan Li",
+        "Hong-Zheng Chai",
+        "Hong Yu",
+        "Yuan Yuan"
+      ],
+      "priority": 112,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 10,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 112,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 177,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      },
+      "reason": "Temporal convergence detection stops redundant reasoning, reducing tokens 25-30% while preserving accuracy.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-8d19d7733e76",
+    "round": "libimp-8d19d7733e763786-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 7,
+    "round_submission_count": 2,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-8d19d7733e763786-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-8d19d7733e763786-pre01.json",
+    "receipt": "sha256:26180cc7c9d895031402190411ef1be2b05ebbd028cbfd7fc1e90dc7c139a4a2"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-8d19d7733e76",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

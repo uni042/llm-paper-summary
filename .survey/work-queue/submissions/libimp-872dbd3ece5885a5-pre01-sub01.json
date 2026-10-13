@@ -1,0 +1,103 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "CLAG: Adaptive Memory Organization via Agent-Driven Clustering for Small Language Model Agents",
+      "source_url": "https://arxiv.org/abs/2603.15421",
+      "year": 2026,
+      "published": "2026-03-16",
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language model agents heavily rely on external memory to support knowledge reuse and complex reasoning tasks. Yet most memory systems store experiences in a single global retrieval pool which can gradually dilute or corrupt stored knowledge. This problem is especially pronounced for small language models (SLMs), which are highly vulnerable to irrelevant context. We introduce CLAG, a CLustering-based AGentic memory framework where an SLM agent actively organizes memory by clustering. CLAG employs an SLM-driven router to assign incoming memories to semantically coherent clusters and autonomously generates cluster-specific profiles, including topic summaries and descriptive tags, to establish each cluster as a self-contained functional unit. By performing localized evolution within these structured neighborhoods, CLAG effectively reduces cross-topic interference and enhances internal memory density. During retrieval, the framework utilizes a two-stage process that first filters relevant clusters via their profiles, thereby excluding distractors and reducing the search space. Experiments on multiple QA datasets with three SLM backbones show that CLAG consistently improves answer quality and robustness over prior memory systems for agents, remaining lightweight and efficient.",
+      "identifiers": [
+        "SemanticScholar:c24070eec9a8b76a3b459fc48fd5b70603a41054"
+      ],
+      "semantic_scholar_id": "c24070eec9a8b76a3b459fc48fd5b70603a41054",
+      "canonical_id": "arXiv:2603.15421",
+      "arxiv_id": "2603.15421",
+      "doi": "10.48550/arXiv.2603.15421",
+      "authors": [
+        "Taeyun Roh",
+        "Wonjun Jang",
+        "Jun-Ha Jung",
+        "Jaewook Kang"
+      ],
+      "priority": 112,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 10,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 112,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 211,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      },
+      "reason": "Clustered agent memory and two-stage retrieval reduce irrelevant context and search space.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "CascadeDebate: Multi-Agent Deliberation for Cost-Aware LLM Cascades",
+      "source_url": "https://arxiv.org/abs/2604.12262",
+      "year": 2026,
+      "published": "2026-04-14",
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Cascaded LLM systems coordinate models of varying sizes with human experts to balance accuracy, cost, and abstention under uncertainty. However, single-model tiers at each stage often struggle with ambiguous queries, triggering premature escalations to costlier models or experts due to under-confidence and inefficient compute scaling. CascadeDebate addresses this gap by inserting multi-agent deliberation directly at each tier's escalation boundary. Confidence-based routers activate lightweight agent ensembles only for uncertain cases, enabling consensus-driven resolution of ambiguities internally without invoking higher-cost upgrades. Our unified architecture alternates single-model inference with selective multi-agent deliberation across model scales, culminating in human experts as the final fallback. This design scales test-time compute dynamically according to query difficulty. Across five benchmarks spanning science, medicine, and general knowledge, CascadeDebate outperforms strong single-model cascades and standalone multi-agent systems by up to 26.75 percent. An online threshold optimizer proves essential, boosting accuracy by 20.98 to 52.33 percent relative improvement over fixed policies and enabling elastic adaptation to real-world distributions.",
+      "identifiers": [
+        "SemanticScholar:7aa0d4f6458362957ecf066dff866c6afbed02ef"
+      ],
+      "semantic_scholar_id": "7aa0d4f6458362957ecf066dff866c6afbed02ef",
+      "canonical_id": "arXiv:2604.12262",
+      "arxiv_id": "2604.12262",
+      "doi": "10.48550/arXiv.2604.12262",
+      "authors": [
+        "Raeyoung Chang",
+        "Dong-Uk Kwon",
+        "Jisoo Lee",
+        "Nikhil Verma"
+      ],
+      "priority": 112,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 10,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 112,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 182,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      },
+      "reason": "Selective multi-agent deliberation avoids unnecessary escalation to costlier models in LLM cascades.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-872dbd3ece58",
+    "round": "libimp-872dbd3ece5885a5-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 2,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-872dbd3ece5885a5-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-872dbd3ece5885a5-pre01.json",
+    "receipt": "sha256:e0d0b047f6b9c6fb8897343b1aabe66e7124583e1c804cdc6d74eccbc3cc1c8b"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-872dbd3ece58",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
