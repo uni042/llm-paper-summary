@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-559fba60e9674812-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2006.16362",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2006.16362",
+    "identity_tokens": [
+      "arXiv:2006.16362"
+    ],
+    "reason": "一次要旨では、注意ヘッド間で重複するキー・クエリ射影を共有する協調型多頭注意を提案し、事前学習済み注意層を再パラメータ化して同等精度・速度でキー/クエリ射影を4分の1にできると報告する。モデル重みの圧縮には直接関連するが、主貢献は注意層の構造と学習済み重みの表現変更であり、推論基盤のメモリ管理やサービング処理の最適化ではない。",
+    "first_checked_at": "2026-10-12T15:14:02+00:00",
+    "last_checked_at": "2026-10-13T06:45:20+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Multi-Head Attention: Collaborate Instead of Concatenate"
+  },
+  "processed_at": "2026-10-13T06:45:21+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-559fba60e967",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

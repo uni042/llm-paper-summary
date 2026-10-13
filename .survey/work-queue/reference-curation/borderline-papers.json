@@ -2,7 +2,7 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-13T06:32:25+00:00",
+  "updated_at": "2026-10-13T06:45:23+00:00",
   "record_count": 4814,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
@@ -70343,9 +70343,9 @@
       "identity_tokens": [
         "arXiv:2402.09906"
       ],
-      "reason": "一次要旨では生成と埋め込みを一つの言語モデルへ統合する命令調整法が主貢献である。長文書の検索拡張生成で別の検索モデルが不要となり60%以上の高速化を報告するため推論時の構成削減に関連するが、サービング基盤、カーネル、キャッシュ管理、オフロードの直接的なシステム方式を検証する研究ではない。学習手法中心かつ推論効率への副次的寄与として境界的とする。",
+      "reason": "一次要旨では生成と埋込みを一つのGritLMに統合する学習方式を提案し、別々の検索・生成モデルを不要にすることで長文RAGの高速化（60%超）を報告する。ただし主な寄与はモデルの指示チューニングと能力統合であり、推論スケジューラ・KV管理・GPUカーネルなどの実行基盤の直接設計ではない。",
       "first_checked_at": "2026-10-10T18:48:04+00:00",
-      "last_checked_at": "2026-10-12T14:50:11+00:00",
+      "last_checked_at": "2026-10-13T06:45:21+00:00",
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "Generative Representational Instruction Tuning"
@@ -71438,9 +71438,9 @@
         "DOI:10.48550/arxiv.2509.25140",
         "arXiv:2509.25140"
       ],
-      "reason": "一次要旨によると、ReasoningBankはウェブ操作・ソフトウェア開発エージェントの成功・失敗履歴から再利用可能な推論方針を抽出して長期記憶に保存し、次のタスクで関連方針を検索する。MaTTSは一タスクに複数の経験生成を割り当て、得た対照的経験を記憶の改善へ還元する。エージェントの推論時記憶利用・タスク効率には関連する一方、GPU実行基盤、KVキャッシュ、推論メモリ階層、トークン処理量、サービングの遅延・帯域を直接最適化する研究ではないため、現行の推論システムサーベイへの収録適格性は境界的と判断する。",
+      "reason": "一次要旨ではエージェントの成功・失敗経験から推論方略を抽出して外部メモリへ蓄え、推論時に検索・更新するReasoningBankとMaTTSを提案する。推論時メモリ利用には接点があるが、主眼はエージェントの課題達成能力と経験学習であり、LLM推論のメモリ階層・処理量・サービング性能の最適化は主題ではない。",
       "first_checked_at": "2026-10-12T10:58:03+00:00",
-      "last_checked_at": "2026-10-12T10:58:03+00:00",
+      "last_checked_at": "2026-10-13T06:45:21+00:00",
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "ReasoningBank: Scaling Agent Self-Evolving with Reasoning Memory"
@@ -71466,9 +71466,9 @@
         "DOI:10.48550/arxiv.1606.09274",
         "arXiv:1606.09274"
       ],
-      "reason": "一次論文の要旨は2016年のニューラル機械翻訳モデルの重みを大きさに基づいて40%から最大80%剪定し、再学習後の翻訳品質を保持する結果を述べる。モデル保存量削減は推論効率の歴史的背景として関連するが、LLM・Transformer向け推論システムではなく、実機レイテンシやスループットの改善も要旨にはない。古典的なモデル圧縮研究として境界的関連に留める。",
+      "reason": "一次要旨では2016年のニューラル機械翻訳モデルに対する3種類の重み絶対値枝刈りを比較し、再学習で80%枝刈り後の翻訳品質回復を示す。圧縮という技術的接点はあるが、対象は旧世代NMTの学習・圧縮で、LLM推論サービングや現代Transformer推論基盤への適用を直接検証していない。",
       "first_checked_at": "2026-10-12T10:58:04+00:00",
-      "last_checked_at": "2026-10-12T16:50:17+00:00",
+      "last_checked_at": "2026-10-13T06:45:21+00:00",
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "Compression of Neural Machine Translation Models via Pruning"
@@ -71510,9 +71510,9 @@
         "arXiv:2205.08084",
         "semanticscholar:cbf3bf8f541f5b446c59c8deacbcc18527768c75"
       ],
-      "reason": "一次要旨では産業用推薦の検索・順位付け・説明生成を一つの事前学習言語モデルへ統合することが中心で、少数パラメータのプロンプト調整による適応を主張する。一方で低遅延配備のための後段相互作用（late interaction）、早期終了（early exiting）、パラメータ共有、枝刈りを明示し、推論時間とモデルサイズの削減を目的とする実装上の寄与もある。LLM一般の推論基盤ではなく推薦用途に密着した最適化なので、無関係とはせず境界的関連として保留する。",
+      "reason": "一次要旨では、推薦・検索・ランキングを統合するM6ベースの推薦モデルを提案し、遅延相互作用、早期終了、パラメータ共有、枝刈りによって推論時間とモデルサイズを減らし、クラウドとモバイルで動作させる。実装効率への接点は明確だが、主目的は推薦ドメインの基盤モデル構築とタスク適応であり、汎用LLMサービングやGPU推論基盤の独立した最適化を主要成果としていない。",
       "first_checked_at": "2026-10-12T14:50:10+00:00",
-      "last_checked_at": "2026-10-12T14:50:10+00:00",
+      "last_checked_at": "2026-10-13T06:45:22+00:00",
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "M6-Rec: Generative Pretrained Language Models are Open-Ended Recommender Systems"
@@ -71523,9 +71523,9 @@
       "identity_tokens": [
         "arXiv:2506.01844"
       ],
-      "reason": "一次要旨では低価格のロボット向け視覚・言語・動作モデルを小型化し、単一GPU学習とCPUを含む端末配備を目指す。知覚・動作予測と動作実行を分離する非同期推論基盤も提案し応答性を改善するが、評価対象は主にロボット操作であり、一般的なLLMサービング、KVキャッシュ、GPUカーネル、分散推論の汎用方式ではない。推論実行制御への技術的関連はあるため境界的とする。",
+      "reason": "一次要旨では、ロボットの知覚・行動予測と実機動作を非同期化する推論実行構成を提案し、低価格GPU・CPUへの展開を目指す。ただし主目的はロボット行動モデルの構築と制御率改善であり、一般的なLLM推論サービング・KVキャッシュ・MoE基盤への直接的貢献は示されない。",
       "first_checked_at": "2026-10-12T14:50:11+00:00",
-      "last_checked_at": "2026-10-12T14:50:11+00:00",
+      "last_checked_at": "2026-10-13T06:45:21+00:00",
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "SmolVLA: A Vision-Language-Action Model for Affordable and Efficient Robotics"
@@ -71581,9 +71581,9 @@
         "arXiv:2508.19828",
         "semanticscholar:9df0947ec8a14c43e69f3b72ece5e9af2b8e8215"
       ],
-      "reason": "一次要旨での主貢献は、外部記憶へのADD・UPDATE・DELETE・NOOP操作を選ぶMemory Managerと、関連記憶を選択して回答するAnswer Agentを、PPO/GRPOの結果報酬で学習する方式である。記憶管理を実行時に行う点は関連するが、報告の中心は少数の質問応答例での回答品質・汎化であり、KVキャッシュ、CPU/GPU/SSD階層、メモリ転送量、サービング遅延の最適化を直接実証するものではない。外部記憶管理という隣接領域として境界的と判定した。",
+      "reason": "一次要旨では、外部メモリの追加・更新・削除・無操作を選ぶMemory Managerと、検索結果を使うAnswer AgentをPPO/GRPOで訓練する。LoCoMo、MSC、LongMemEvalでの回答性能向上が主目的であり、メモリ管理という名称は共有するものの、LLM実行時のKVキャッシュ、GPUメモリ階層、推論スケジューリングの改善を評価していない。",
       "first_checked_at": "2026-10-12T14:56:03+00:00",
-      "last_checked_at": "2026-10-12T14:56:03+00:00",
+      "last_checked_at": "2026-10-13T06:45:23+00:00",
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "Memory-R1: Enhancing Large Language Model Agents to Manage and Utilize Memories via Reinforcement Learning"
@@ -71594,9 +71594,9 @@
       "identity_tokens": [
         "arXiv:2006.16362"
       ],
-      "reason": "複数注意ヘッドで鍵・問い合わせ射影が冗長なことを分析し、共有射影とヘッド別混合で鍵・問い合わせ投影のパラメータを約4分の1に圧縮する。推論時の重み容量低減に接点はあるが、一次要旨の主評価は機械翻訳・言語理解・画像認識であり、LLMサービング、KVキャッシュ、実測推論遅延の改善を直接検証した研究ではないため境界判定。",
+      "reason": "一次要旨では、注意ヘッド間で重複するキー・クエリ射影を共有する協調型多頭注意を提案し、事前学習済み注意層を再パラメータ化して同等精度・速度でキー/クエリ射影を4分の1にできると報告する。モデル重みの圧縮には直接関連するが、主貢献は注意層の構造と学習済み重みの表現変更であり、推論基盤のメモリ管理やサービング処理の最適化ではない。",
       "first_checked_at": "2026-10-12T15:14:02+00:00",
-      "last_checked_at": "2026-10-12T18:50:00+00:00",
+      "last_checked_at": "2026-10-13T06:45:20+00:00",
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "Multi-Head Attention: Collaborate Instead of Concatenate"
@@ -71607,9 +71607,9 @@
       "identity_tokens": [
         "arXiv:2411.00774"
       ],
-      "reason": "一次論文の要旨は、凍結LLMへ音声入出力を追加する三段階学習と全二重音声対話を提案し、低遅延な音声応答を達成する。低遅延は明示されるものの、主貢献は音声対話アーキテクチャと学習資源削減・能力保持であり、汎用LLM推論ランタイムのカーネル、サービング、メモリオフロードの新方式は要旨から確認できない。音声ストリーミング推論への関連性を残して保留。",
+      "reason": "一次要旨では言語モデル本体を凍結して音声入出力を結合する三段階学習と二重音声対話を提案し、低遅延の音声応答を目指す。低遅延推論の応用はあるが、主たる寄与は音声モデル構築と学習方式であり、一般LLMサービングのスケジューリング・キャッシュ・オフロード最適化は明示されない。",
       "first_checked_at": "2026-10-12T15:14:02+00:00",
-      "last_checked_at": "2026-10-12T21:39:39+00:00",
+      "last_checked_at": "2026-10-13T06:45:22+00:00",
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "Freeze-Omni: A Smart and Low Latency Speech-to-speech Dialogue Model with Frozen LLM"

@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-8f44d15966037262-border-005",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:1606.09274",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:1606.09274",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.1606.09274",
+      "arXiv:1606.09274"
+    ],
+    "reason": "一次要旨では2016年のニューラル機械翻訳モデルに対する3種類の重み絶対値枝刈りを比較し、再学習で80%枝刈り後の翻訳品質回復を示す。圧縮という技術的接点はあるが、対象は旧世代NMTの学習・圧縮で、LLM推論サービングや現代Transformer推論基盤への適用を直接検証していない。",
+    "first_checked_at": "2026-10-12T10:58:04+00:00",
+    "last_checked_at": "2026-10-13T06:45:21+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Compression of Neural Machine Translation Models via Pruning"
+  },
+  "processed_at": "2026-10-13T06:45:22+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-8f44d1596603",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
