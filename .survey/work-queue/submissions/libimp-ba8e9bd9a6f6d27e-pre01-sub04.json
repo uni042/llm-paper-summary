@@ -1,0 +1,148 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Bringing RNNs Back to Efficient Open-Ended Video Understanding",
+      "source_url": "https://arxiv.org/abs/2507.02591",
+      "year": 2025,
+      "published": "2025-07-03",
+      "venue": "IEEE International Conference on Computer Vision",
+      "citation_count": 12,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The challenge of long video understanding lies in its high computational complexity and prohibitive memory cost, since the memory and computation required by transformer-based LLMs scale quadratically with input sequence length. We propose Auroralong to address this challenge by replacing the LLM component in MLLMs with a linear RNN language model that handles input sequence of arbitrary length with constant-size hidden states. To further increase throughput and efficiency, we combine visual token merge with linear RNN models by reordering the visual tokens by their sizes in ascending order. Despite having only $2 B$ parameters and being trained exclusively on public data, AuroraLong achieves performance comparable to Transformer-based models of similar size trained on private datasets across multiple video benchmarks. This demonstrates the potential of efficient, linear RNNs to democratize long video understanding by lowering its computational entry barrier. To our best knowledge, we are the first to use a linear RNN based LLM backbone in a LLaVA-like model for open-ended video understanding.",
+      "identifiers": [
+        "SemanticScholar:9d8e7f71f46ce2e90e2c71f5e905d95eca7e1d9a"
+      ],
+      "semantic_scholar_id": "9d8e7f71f46ce2e90e2c71f5e905d95eca7e1d9a",
+      "canonical_id": "arXiv:2507.02591",
+      "arxiv_id": "2507.02591",
+      "doi": "10.1109/ICCV51701.2025.02177",
+      "authors": [
+        "Wei-Li Xu",
+        "En-Xin Song",
+        "Wenhao Chai",
+        "Xuexiang Wen",
+        "Tianbo Ye",
+        "Gao-Ang Wang"
+      ],
+      "priority": 12,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 12,
+        "citation_count": 12,
+        "total": 12,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 467,
+        "matched_prestigious_venue": null
+      },
+      "reason": "AuroraLong replaces the Transformer backbone with a linear RNN having constant-size hidden state and uses visual-token merging to reduce long-video inference cost.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "GUI-KV: Efficient GUI Agents via KV Cache with Spatio-Temporal Awareness",
+      "source_url": "https://arxiv.org/abs/2510.00536",
+      "year": 2025,
+      "published": "2025-10-01",
+      "venue": "Trans. Mach. Learn. Res.",
+      "citation_count": 12,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Graphical user interface (GUI) agents built on vision-language models have emerged as a promising approach to automate human-computer workflows. However, they also face the inefficiency challenge as they process long sequences of high-resolution screenshots and solving long-horizon tasks, making inference slow, costly and memory-bound. While key-value (KV) caching can mitigate this, storing the full cache is prohibitive for image-heavy contexts. Existing cache-compression methods are sub-optimal as they do not account for the spatial and temporal redundancy of GUIs. In this work, we first analyze attention patterns in GUI agent workloads and find that, unlike in natural images, attention sparsity is uniformly high across all transformer layers. This insight motivates a simple uniform budget allocation strategy, which we show empirically outperforms more complex layer-varying schemes. Building on this, we introduce GUI-KV, a plug-and-play KV cache compression method for GUI agents that requires no retraining. GUI-KV combines two novel techniques: (i) spatial saliency guidance, which augments attention scores with the L2 norm of hidden states to better preserve semantically important visual tokens, and (ii) temporal redundancy scoring, which projects previous frames'keys onto the current frame's key subspace to preferentially prune redundant history. Across standard GUI agent benchmarks and models, GUI-KV outperforms competitive KV compression baselines, closely matching full-cache accuracy at modest budgets. Notably, in a 5-screenshot setting on the AgentNetBench benchmark, GUI-KV reduces decoding FLOPs by 38.9% while increasing step accuracy by 4.1% over the full-cache baseline. These results demonstrate that exploiting GUI-specific redundancies enables efficient and reliable agent performance.",
+      "identifiers": [
+        "SemanticScholar:b5e6a38593d5a6b55ec88b9f69a45a0f1526273b"
+      ],
+      "semantic_scholar_id": "b5e6a38593d5a6b55ec88b9f69a45a0f1526273b",
+      "canonical_id": "arXiv:2510.00536",
+      "arxiv_id": "2510.00536",
+      "doi": "10.48550/arXiv.2510.00536",
+      "authors": [
+        "Kung-Hsiang Huang",
+        "Haoyi Qiu",
+        "Yu-Tong Dai",
+        "Cai-Ming Xiong",
+        "Chien-Sheng Wu"
+      ],
+      "priority": 12,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 12,
+        "citation_count": 12,
+        "total": 12,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 377,
+        "matched_prestigious_venue": null
+      },
+      "reason": "GUI-KV compresses cache using GUI spatial and temporal redundancy and reports lower decoding FLOPs, directly improving VLM-agent inference efficiency.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "A Survey on Collaborating Small and Large Language Models for Performance, Cost-effectiveness, Cloud-edge Privacy, and Trustworthiness",
+      "source_url": "https://arxiv.org/abs/2510.13890",
+      "year": 2025,
+      "published": "2025-10-14",
+      "venue": "arXiv.org",
+      "citation_count": 12,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLMs) have achieved remarkable progress across domains and applications but face challenges such as high fine-tuning costs, inference latency, limited edge deployability, and reliability concerns. Small language models (SLMs), with compact, efficient, and adaptable features, offer promising solutions. Building on this potential, recent research explores collaborative frameworks that integrate their complementary strengths, leveraging SLMs'specialization and efficiency with LLMs'generalization and reasoning to address diverse objectives across tasks and deployment scenarios. Motivated by these developments, this paper presents a systematic survey of SLM-LLM collaboration from the perspective of collaboration objectives. We propose a taxonomy covering four goals: performance enhancement, cost-effectiveness, cloud-edge privacy, and trustworthiness. Under this framework, we review representative methods, summarize design paradigms, and outline open challenges and future directions toward efficient and secure SLM-LLM collaboration. The collected papers are available at https://github.com/FairyFali/SLMs-Survey.",
+      "identifiers": [
+        "SemanticScholar:3b8e77b3e81eed3b1c529108c2a953d9a811234b"
+      ],
+      "semantic_scholar_id": "3b8e77b3e81eed3b1c529108c2a953d9a811234b",
+      "canonical_id": "arXiv:2510.13890",
+      "arxiv_id": "2510.13890",
+      "doi": "10.48550/arXiv.2510.13890",
+      "authors": [
+        "Fali Wang",
+        "Jihai Chen",
+        "Shuhua Yang",
+        "Ali Al-Lawati",
+        "Li-Juan Tang",
+        "Hui Liu",
+        "Su-Hang Wang"
+      ],
+      "priority": 12,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 12,
+        "citation_count": 12,
+        "total": 12,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 364,
+        "matched_prestigious_venue": null
+      },
+      "reason": "This survey specifically organizes SLM-LLM collaboration around cost-effectiveness and edge deployment as well as performance, making system efficiency a central topic.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-ba8e9bd9a6f6",
+    "round": "libimp-ba8e9bd9a6f6d27e-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 18,
+    "round_submission_count": 4,
+    "round_submission_index": 4,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-ba8e9bd9a6f6d27e-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-ba8e9bd9a6f6d27e-pre01.json",
+    "receipt": "sha256:263fbe6aebbf9118f3eec5c752cd4b7469b1e4baf3a7f2652fe05ace0b4326db"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-ba8e9bd9a6f6",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

@@ -1,0 +1,227 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "DEED: Dynamic Early Exit on Decoder for Accelerating Encoder-Decoder Transformer Models",
+      "source_url": "https://arxiv.org/abs/2311.08623",
+      "year": 2023,
+      "published": "2023-11-15",
+      "venue": "NAACL-HLT",
+      "citation_count": 12,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Encoder-decoder transformer models have achieved great success on various vision-language (VL) tasks, but they suffer from high inference latency. Typically, the decoder takes up most of the latency because of the auto-regressive decoding. To accelerate the inference, we propose an approach of performing Dynamic Early Exit on Decoder (DEED). We build a multi-exit encoder-decoder transformer model which is trained with deep supervision so that each of its decoder layers is capable of generating plausible predictions. In addition, we leverage simple yet practical techniques, including shared generation head and adaptation modules, to keep accuracy when exiting at shallow decoder layers. Based on the multi-exit model, we perform step-level dynamic early exit during inference, where the model may decide to use fewer decoder layers based on its confidence of the current layer at each individual decoding step. Considering different number of decoder layers may be used at different decoding steps, we compute deeper-layer decoder features of previous decoding steps just-in-time, which ensures the features from different decoding steps are semantically aligned. We evaluate our approach with two state-of-the-art encoder-decoder transformer models on various VL tasks. We show our approach can reduce overall inference latency by 30%-60% with comparable or even higher accuracy compared to baselines.",
+      "identifiers": [
+        "SemanticScholar:81b7d8a9311c1f2d20fd1bc1d0d9835ce19d4b24"
+      ],
+      "semantic_scholar_id": "81b7d8a9311c1f2d20fd1bc1d0d9835ce19d4b24",
+      "canonical_id": "arXiv:2311.08623",
+      "arxiv_id": "2311.08623",
+      "doi": "10.48550/arXiv.2311.08623",
+      "authors": [
+        "Peng Tang",
+        "Pengkai Zhu",
+        "Tian Li",
+        "Srikar Appalaraju",
+        "Vijay Mahadevan",
+        "R. Manmatha"
+      ],
+      "priority": 12,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 12,
+        "citation_count": 12,
+        "total": 12,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1063,
+        "matched_prestigious_venue": null
+      },
+      "reason": "DEED dynamically exits decoder layers during inference and reports 30–60% lower latency with comparable quality, a direct Transformer acceleration method.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "TALE: Token-Adaptive Low-Rank KVCache Approximation with Reconstruction Elimination",
+      "source_url": "https://doi.org/10.1162/tacl.a.39",
+      "year": 2025,
+      "published": null,
+      "venue": "Transactions of the Association for Computational Linguistics",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "\n KVCache, by storing key-value pairs for reuse, has been crucial for enhancing inference efficiency for large language models (LLMs). However, the increasing memory demands of KVCache, especially with recent trends of longer input sequences, present a major challenge. In this work, we propose an innovative token-adaptive low-rank approximation strategy for KVCache compression. By applying varying ranks based on token significance, our method compresses KVCache efficiently while retaining critical information. Moreover, we introduce a lazy approximation technique, which approximates lazily only when needed, alongside a reconstruction-free design to bypass costly recalculations. Combined with multi-level quantization, this method reduces KVCache size by 9.1× on the Llama-3.1-8B model, with minimal performance degradation on complex tasks such as GSM8K. Moreover, our custom attention implementation shows up to 2× latency reduction compared to the conventional method in long context scenarios. The code is publicly available.",
+      "identifiers": [
+        "SemanticScholar:7921b2bd977084f49cf0d0602c5a3301b72ae10f"
+      ],
+      "semantic_scholar_id": "7921b2bd977084f49cf0d0602c5a3301b72ae10f",
+      "doi": "10.1162/tacl.a.39",
+      "canonical_id": "DOI:10.1162/tacl.a.39",
+      "authors": [
+        "Jaeseong Lee",
+        "Seung-won Hwang",
+        "Aurick Qiao",
+        "Daniel F. Campos",
+        "Zhewei Yao",
+        "Yuxiong He"
+      ],
+      "priority": 12,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 12,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 469,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      },
+      "reason": "TALE combines token-adaptive low-rank compression, lazy approximation, and reconstruction-free caching to reduce cache size and long-context latency.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Edge-Enhanced Intelligence: A Comprehensive Survey of Large Language Models and Edge-Cloud Computing Synergy",
+      "source_url": "https://doi.org/10.1109/COMST.2025.3587225",
+      "year": 2026,
+      "published": null,
+      "venue": "IEEE Communications Surveys and Tutorials",
+      "citation_count": 11,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLMs) (e.g., ChatGPT, GPT-4 and Sora) have fundamentally transformed our daily lives, catalyzing breakthroughs in natural language processing, computer vision and revolutionizing human-computer interactions. However, their transformative potential is hindered by immense computational resources required. To address this challenge, the integration of LLMs with edge-cloud computing has become a focal point in advancing the capabilities of artificial intelligence. This survey comprehensively exploits the landscape of edge-enhanced intelligence, specifically focusing on the synergy between LLMs and edge-cloud computing. We delve into the evolution of LLMs, architectural intricacies, and the computational challenges associated with deploying them in edge environments from the aspects of data, computing power, model training and inference. Furthermore, we exploit the bidirectional symbiotic relationship between edge-cloud computing and LLMs from two key aspects: edge-cloud computing empowered LLMs (Edge4LLMs) and LLMs driven edge-cloud computing (LLMs4Edge). After that, we examine the dynamic collaboration between edge-cloud computing and LLMs, highlighting the complementary roles in optimizing the efficiency, real-time, and scalability of intelligent applications. Through an extensive review of existing research and practical implementations, this survey offers insights into the current state of edge-enhanced intelligence, identifies key challenges, and proposes potential avenues for future research and development. This survey aims to provide a comprehensive understanding of the emerging paradigm of edge-enhanced intelligence for LLMs, thereby fostering informed discussions and inspiring advancements in this field.",
+      "identifiers": [
+        "SemanticScholar:ebb13007d456d6816867fd3dad0da081800bad2d"
+      ],
+      "semantic_scholar_id": "ebb13007d456d6816867fd3dad0da081800bad2d",
+      "doi": "10.1109/COMST.2025.3587225",
+      "canonical_id": "DOI:10.1109/COMST.2025.3587225",
+      "authors": [
+        "Xiu-Hua Li",
+        "Hui Li",
+        "Chuan Sun",
+        "Qilin Fan",
+        "Zhu Han",
+        "Victor C. M. Leung"
+      ],
+      "priority": 11,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 11,
+        "citation_count": 11,
+        "total": 11,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 104,
+        "matched_prestigious_venue": null
+      },
+      "reason": "The IEEE survey explicitly reviews edge-cloud compute, training/inference deployment, and methods to optimize efficiency, real-time behavior, and scalability of LLM applications.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "DDK: Dynamic structure pruning based on differentiable search and recursive knowledge distillation for BERT",
+      "source_url": "https://doi.org/10.1016/j.neunet.2024.106164",
+      "year": 2024,
+      "published": "2024-02-01",
+      "venue": "Neural Networks",
+      "citation_count": 11,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large-scale pre-trained models, such as BERT, have demonstrated outstanding performance in Natural Language Processing (NLP). Nevertheless, the high number of parameters in these models has increased the demand for hardware storage and computational resources while posing a challenge for their practical deployment. In this article, we propose a combined method of model pruning and knowledge distillation to compress and accelerate large-scale pre-trained language models. Specifically, we introduce a dynamic structure pruning method based on differentiable search and recursive knowledge distillation to automatically prune the BERT model, named DDK. We define the search space for network pruning as all feed-forward layer channels and self-attention heads at each layer of the network, and utilize differentiable methods to determine their optimal number. Additionally, we design a recursive knowledge distillation method that employs adaptive weighting to extract the most important features from multiple intermediate layers of the teacher model and fuse them to supervise the student network learning. Our experimental results on the GLUE benchmark dataset and ablation analysis demonstrate that our proposed method outperforms other advanced methods in terms of average performance.",
+      "identifiers": [
+        "SemanticScholar:def19d645b55d8edfc4e840d77b7f5014972c906"
+      ],
+      "semantic_scholar_id": "def19d645b55d8edfc4e840d77b7f5014972c906",
+      "doi": "10.1016/j.neunet.2024.106164",
+      "canonical_id": "DOI:10.1016/j.neunet.2024.106164",
+      "authors": [
+        "Zhou Zhang",
+        "Yang Lu",
+        "Tengfei Wang",
+        "Xing Wei",
+        "Zhenchun Wei"
+      ],
+      "priority": 11,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 11,
+        "citation_count": 11,
+        "total": 11,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 985,
+        "matched_prestigious_venue": null
+      },
+      "reason": "DDK combines differentiable structured pruning of BERT channels/heads with recursive distillation to reduce storage and computation for practical inference.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "OAC: Output-adaptive Calibration for Accurate Post-training Quantization",
+      "source_url": "https://arxiv.org/abs/2405.15025",
+      "year": 2024,
+      "published": "2024-05-23",
+      "venue": "AAAI Conference on Artificial Intelligence",
+      "citation_count": 11,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Deployment of Large Language Models (LLMs) has major computational costs, due to their rapidly expanding size. Compression of LLMs reduces the memory footprint, latency, and energy required for their inference. Post-training Quantization (PTQ) techniques have been developed to compress LLMs while avoiding expensive re-training. Most PTQ approaches formulate the quantization error based on a layer-wise Euclidean loss, ignoring the model output. Then, each layer is calibrated using its layer-wise Hessian to update the weights towards minimizing the quantization error. The Hessian is also used for detecting the most salient weights to quantization. Such PTQ approaches are prone to accuracy drop in low-precision quantization. We propose Output-adaptive Calibration (OAC) to incorporate the model output in the calibration process. We formulate the quantization error based on the distortion of the output cross-entropy loss. OAC approximates the output-adaptive Hessian for each layer under reasonable assumptions to reduce the computational complexity. The output-adaptive Hessians are used to update the weight matrices and detect the salient weights towards maintaining the model output. Our proposed method outperforms the state-of-the-art baselines such as SpQR and BiLLM, especially, at extreme low-precision (2-bit and binary) quantization.",
+      "identifiers": [
+        "SemanticScholar:507b6ca97ff1fe33367e34b5b259af1292185d59"
+      ],
+      "semantic_scholar_id": "507b6ca97ff1fe33367e34b5b259af1292185d59",
+      "canonical_id": "arXiv:2405.15025",
+      "arxiv_id": "2405.15025",
+      "doi": "10.1609/aaai.v39i16.33807",
+      "authors": [
+        "Ali Edalati",
+        "Alireza Ghaffari",
+        "Mahsa Ghazvini Nejad",
+        "Lu Hou",
+        "Boxing Chen",
+        "M. Asgharian",
+        "Vahid Partovi Nia"
+      ],
+      "priority": 11,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 11,
+        "citation_count": 11,
+        "total": 11,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 873,
+        "matched_prestigious_venue": null
+      },
+      "reason": "OAC adapts post-training quantization to model-output distortion and improves low-bit LLM accuracy, supporting compressed inference with lower memory and compute.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-c03be58ab1ba",
+    "round": "libimp-c03be58ab1ba99a9-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 9,
+    "round_submission_count": 2,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-c03be58ab1ba99a9-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-c03be58ab1ba99a9-pre01.json",
+    "receipt": "sha256:808ad554c5d6815d1e7689fc38d0c0bebb26b11fc0c463719c712b08d95735b8"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-c03be58ab1ba",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

@@ -1,0 +1,227 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Spotlight Attention: Towards Efficient LLM Generation via Non-linear Hashing-based KV Cache Retrieval",
+      "source_url": "https://arxiv.org/abs/2508.19740",
+      "year": 2025,
+      "published": "2025-08-27",
+      "venue": "Neural Information Processing Systems",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Reducing the key-value (KV) cache burden in Large Language Models (LLMs) significantly accelerates inference. Dynamically selecting critical KV caches during decoding helps maintain performance. Existing methods use random linear hashing to identify important tokens, but this approach is inefficient due to the orthogonal distribution of queries and keys within two narrow cones in LLMs. We introduce Spotlight Attention, a novel method that employs non-linear hashing functions to optimize the embedding distribution of queries and keys, enhancing coding efficiency and robustness. We also developed a lightweight, stable training framework using a Bradley-Terry ranking-based loss, enabling optimization of the non-linear hashing module on GPUs with 16GB memory in 8 hours. Experimental results show that Spotlight Attention drastically improves retrieval precision while shortening the length of the hash code at least 5$\\times$ compared to traditional linear hashing. Finally, we exploit the computational advantages of bitwise operations by implementing specialized CUDA kernels, achieving hashing retrieval for 512K tokens in under 100$\\mu$s on a single A100 GPU, with end-to-end throughput up to 3$\\times$ higher than vanilla decoding.",
+      "identifiers": [
+        "SemanticScholar:05aba32b812f84a5ee1c89c4223a8b3552bff245"
+      ],
+      "semantic_scholar_id": "05aba32b812f84a5ee1c89c4223a8b3552bff245",
+      "canonical_id": "arXiv:2508.19740",
+      "arxiv_id": "2508.19740",
+      "doi": "10.48550/arXiv.2508.19740",
+      "authors": [
+        "Wenhao Li",
+        "Yuxin Zhang",
+        "Gen Luo",
+        "Hai-Yuan Wan",
+        "Ziyang Gong",
+        "Fei Chao",
+        "Rong-Rong Ji"
+      ],
+      "priority": 13,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 13,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 412,
+        "matched_prestigious_venue": "Neural Information Processing Systems"
+      },
+      "reason": "Spotlight uses non-linear hashing and specialized CUDA kernels to retrieve relevant KV entries quickly, reducing cache burden and improving end-to-end throughput.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Hankel Singular Value Regularization for Highly Compressible State Space Models",
+      "source_url": "https://arxiv.org/abs/2510.22951",
+      "year": 2025,
+      "published": "2025-10-27",
+      "venue": "Neural Information Processing Systems",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Deep neural networks using state space models as layers are well suited for long-range sequence tasks but can be challenging to compress after training. We use that regularizing the sum of Hankel singular values of state space models leads to a fast decay of these singular values and thus to compressible models. To make the proposed Hankel singular value regularization scalable, we develop an algorithm to efficiently compute the Hankel singular values during training iterations by exploiting the specific block-diagonal structure of the system matrices that we use in our state space model parametrization. Experiments on Long Range Arena benchmarks demonstrate that the regularized state space layers are up to 10$\\times$ more compressible than standard state space layers while maintaining high accuracy.",
+      "identifiers": [
+        "SemanticScholar:7513501b227f7a4e80cb4b69f8b31d22aed7d8e3"
+      ],
+      "semantic_scholar_id": "7513501b227f7a4e80cb4b69f8b31d22aed7d8e3",
+      "canonical_id": "arXiv:2510.22951",
+      "arxiv_id": "2510.22951",
+      "doi": "10.48550/arXiv.2510.22951",
+      "authors": [
+        "Paul Schwerdtner",
+        "Jules Berman",
+        "Benjamin Peherstorfer"
+      ],
+      "priority": 13,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 13,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 351,
+        "matched_prestigious_venue": "Neural Information Processing Systems"
+      },
+      "reason": "Hankel singular-value regularization makes SSM layers substantially more compressible while preserving accuracy, enabling smaller sequence models; the efficiency link is model size and deployment resource reduction.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "RILQ: Rank-Insensitive LoRA-based Quantization Error Compensation for Boosting 2-bit Large Language Model Accuracy",
+      "source_url": "https://arxiv.org/abs/2412.01129",
+      "year": 2024,
+      "published": "2024-12-02",
+      "venue": "AAAI Conference on Artificial Intelligence",
+      "citation_count": 12,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Low-rank adaptation (LoRA) has become the dominant method for parameter-efficient LLM fine-tuning, with LoRA-based quantization error compensation (LQEC) emerging as a powerful tool for recovering accuracy in compressed LLMs. However, LQEC has underperformed in sub-4-bit scenarios, with no prior investigation into understanding this limitation. We propose RILQ (Rank-Insensitive LoRA-based Quantization Error Compensation) to boost 2-bit LLM accuracy. Based on rank analysis revealing model-wise activation discrepancy loss's rank-insensitive nature, RILQ employs this loss to adjust adapters cooperatively across layers, enabling robust error compensation with low-rank adapters. Evaluations on LLaMA-2 and LLaMA-3 demonstrate RILQ's consistent improvements in 2-bit quantized inference across various state-of-the-art quantizers and enhanced accuracy in task-specific fine-tuning. RILQ maintains computational efficiency comparable to existing LoRA methods, enabling adapter-merged weight-quantized LLM inference with significantly enhanced accuracy, making it a promising approach for boosting 2-bit LLM performance.",
+      "identifiers": [
+        "SemanticScholar:c939e388d918f17ea3f9a84324b28f97d7e1eb1e"
+      ],
+      "semantic_scholar_id": "c939e388d918f17ea3f9a84324b28f97d7e1eb1e",
+      "canonical_id": "arXiv:2412.01129",
+      "arxiv_id": "2412.01129",
+      "doi": "10.48550/arXiv.2412.01129",
+      "authors": [
+        "Geonho Lee",
+        "Janghwan Lee",
+        "S. Hong",
+        "Minsoo Kim",
+        "Euijai Ahn",
+        "Duhyeuk Chang",
+        "Jungwook Choi"
+      ],
+      "priority": 12,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 12,
+        "citation_count": 12,
+        "total": 12,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 680,
+        "matched_prestigious_venue": null
+      },
+      "reason": "RILQ adjusts adapters cooperatively across layers to recover accuracy in 2-bit quantized LLM inference while maintaining computational efficiency, directly supporting compressed deployment.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Hawkeye:Efficient Reasoning with Model Collaboration",
+      "source_url": "https://arxiv.org/abs/2504.00424",
+      "year": 2025,
+      "published": "2025-04-01",
+      "venue": "arXiv.org",
+      "citation_count": 12,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Chain-of-Thought (CoT) reasoning has demonstrated remarkable effectiveness in enhancing the reasoning abilities of large language models (LLMs). However, its efficiency remains a challenge due to the generation of excessive intermediate reasoning tokens, which introduce semantic redundancy and overly detailed reasoning steps. Moreover, computational expense and latency are significant concerns, as the cost scales with the number of output tokens, including those intermediate steps. In this work, we observe that most CoT tokens are unnecessary, and retaining only a small portion of them is sufficient for producing high-quality responses. Inspired by this, we propose HAWKEYE, a novel post-training and inference framework where a large model produces concise CoT instructions to guide a smaller model in response generation. HAWKEYE quantifies redundancy in CoT reasoning and distills high-density information via reinforcement learning. By leveraging these concise CoTs, HAWKEYE is able to expand responses while reducing token usage and computational cost significantly. Our evaluation shows that HAWKEYE can achieve comparable response quality using only 35% of the full CoTs, while improving clarity, coherence, and conciseness by approximately 10%. Furthermore, HAWKEYE can accelerate end-to-end reasoning by up to 3.4x on complex math tasks while reducing inference cost by up to 60%. HAWKEYE will be open-sourced and the models will be available soon.",
+      "identifiers": [
+        "SemanticScholar:18264e04721b87ca664e54cbd07e8ff1b2d683c1"
+      ],
+      "semantic_scholar_id": "18264e04721b87ca664e54cbd07e8ff1b2d683c1",
+      "canonical_id": "arXiv:2504.00424",
+      "arxiv_id": "2504.00424",
+      "doi": "10.48550/arXiv.2504.00424",
+      "authors": [
+        "Jian-Yu She",
+        "Zhuohao Li",
+        "Zhemin Huang",
+        "Qi Li",
+        "Pei-Ran Xu",
+        "Hao-Nan Li",
+        "Qi-Rong Ho"
+      ],
+      "priority": 12,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 12,
+        "citation_count": 12,
+        "total": 12,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 560,
+        "matched_prestigious_venue": null
+      },
+      "reason": "HAWKEYE condenses intermediate reasoning and guides a smaller model, reducing token use, latency, and inference cost while retaining answer quality.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "LoLA: Low-Rank Linear Attention With Sparse Caching",
+      "source_url": "https://arxiv.org/abs/2505.23666",
+      "year": 2025,
+      "published": "2025-05-29",
+      "venue": "Trans. Mach. Learn. Res.",
+      "citation_count": 12,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The per-token cost of transformer inference scales with context length, preventing its application to lifelong in-context learning. Linear attention is an efficient alternative that maintains a constant memory footprint, even on infinite context lengths. While this is a potential candidate for lifelong learning, it falls short in memory capacity. In this paper, we propose LoLA, a training-free augmentation to linear attention that boosts associative recall. LoLA distributes past key-value pairs from context into three memory systems: (i) recent pairs in a local sliding window cache; (ii) difficult-to-memorize pairs in a sparse, global cache; and (iii) generic pairs in the recurrent hidden state of linear attention. We show through ablations that our self-recall error metric is crucial to efficiently manage long-term associative memories. On pass-key retrieval tasks, LoLA improves the base model's performance from 0.6% to 97.4% accuracy. This is achieved with a 4.6x smaller cache than Llama-3.1 8B on 4K context length. LoLA also outperforms other 1B and 8B parameter subquadratic models on zero-shot commonsense reasoning tasks.",
+      "identifiers": [
+        "SemanticScholar:4b85bd2479cbbca6535159fa0d390697231aec3e"
+      ],
+      "semantic_scholar_id": "4b85bd2479cbbca6535159fa0d390697231aec3e",
+      "canonical_id": "arXiv:2505.23666",
+      "arxiv_id": "2505.23666",
+      "doi": "10.48550/arXiv.2505.23666",
+      "authors": [
+        "Luke McDermott",
+        "Robert W. Heath",
+        "Rahul Parhi"
+      ],
+      "priority": 12,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 12,
+        "citation_count": 12,
+        "total": 12,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 502,
+        "matched_prestigious_venue": null
+      },
+      "reason": "LoLA adds sparse long-term KV caching to linear attention and demonstrates smaller cache use with improved associative recall, directly addressing long-context memory efficiency.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-ba8e9bd9a6f6",
+    "round": "libimp-ba8e9bd9a6f6d27e-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 18,
+    "round_submission_count": 4,
+    "round_submission_index": 3,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-ba8e9bd9a6f6d27e-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-ba8e9bd9a6f6d27e-pre01.json",
+    "receipt": "sha256:263fbe6aebbf9118f3eec5c752cd4b7469b1e4baf3a7f2652fe05ace0b4326db"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-ba8e9bd9a6f6",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

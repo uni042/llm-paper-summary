@@ -1,0 +1,224 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Sparse-to-Dense: A Free Lunch for Lossless Acceleration of Video Understanding in LLMs",
+      "source_url": "https://arxiv.org/abs/2505.19155",
+      "year": 2025,
+      "published": "2025-05-25",
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Due to the auto-regressive nature of current video large language models (Video-LLMs), the inference latency increases as the input sequence length grows, posing challenges for the efficient processing of video sequences that are usually very long. We observe that during decoding, the attention scores of most tokens in Video-LLMs tend to be sparse and concentrated, with only certain tokens requiring comprehensive full attention. Based on this insight, we introduce Sparse-to-Dense (StD), a novel decoding strategy that integrates two distinct modules: one leveraging sparse top-K attention and the other employing dense full attention. These modules collaborate to accelerate Video-LLMs without loss. The fast (sparse) model speculatively decodes multiple tokens, while the slow (dense) model verifies them in parallel. StD is a tuning-free, plug-and-play solution that achieves up to a 1.94$\\times$ walltime speedup in video processing. It maintains model performance while enabling a seamless transition from a standard Video-LLM to a sparse Video-LLM with minimal code modifications.",
+      "identifiers": [
+        "SemanticScholar:08a81bee39870f31aaf239b71a969cf68c9cdbe9"
+      ],
+      "semantic_scholar_id": "08a81bee39870f31aaf239b71a969cf68c9cdbe9",
+      "canonical_id": "arXiv:2505.19155",
+      "arxiv_id": "2505.19155",
+      "doi": "10.48550/arXiv.2505.19155",
+      "authors": [
+        "Xuan Zhang",
+        "Cun-Xiao Du",
+        "Sicheng Yu",
+        "Jiawei Wu",
+        "Feng-Zhuo Zhang",
+        "Wei Gao",
+        "Qian Liu"
+      ],
+      "priority": 14,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 14,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 506,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      },
+      "reason": "Sparse-to-Dense combines sparse speculative decoding with dense verification to accelerate video-LLM decoding without loss, directly reducing inference wall time.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Adaptive Draft-Verification for Efficient Large Language Model Decoding",
+      "source_url": "https://arxiv.org/abs/2407.12021",
+      "year": 2024,
+      "published": "2024-06-27",
+      "venue": "AAAI Conference on Artificial Intelligence",
+      "citation_count": 13,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language model (LLM) decoding involves generating a sequence of tokens based on a given context, where each token is predicted one at a time using the model's learned probabilities. \n\nThe typical autoregressive decoding method requires a separate forward pass through the model for each token generated, which is computationally inefficient and poses challenges for deploying LLMs in latency-sensitive scenarios.\n\nThe main limitations of current decoding methods stem from their inefficiencies and resource demands. Existing approaches either necessitate fine-tuning smaller models, which is resource-intensive, or relying on fixed retrieval schemes to construct drafts for the next tokens, which lack adaptability and fail to generalize across different models and contexts.\n\nTo address these issues, we introduce a novel methodology called Adaptix, which accelerates LLM decoding without requiring fine-tuning. Our approach involves an adaptive draft-verification process that evolves over time to improve efficiency. We utilize a tri-gram matrix-based LLM representation to dynamically approximate the output distribution of the LLM, allowing the model to adjust to changing token probabilities during the decoding process. Additionally, we implement a draft construction mechanism that effectively balances exploration and exploitation, ensuring that the drafts generated are both diverse and close to the true output distribution of the LLM.\n\nThe importance of this design lies in its ability to optimize the draft distribution adaptively, leading to faster and more accurate decoding. Through extensive experiments on various benchmark datasets and LLM architectures, we demonstrate that Adaptix significantly accelerates the decoding process while maintaining high accuracy, making it suitable for deployment in a wide range of practical applications.",
+      "identifiers": [
+        "SemanticScholar:853a593768d0128b7104017e296028b9ae87ec27"
+      ],
+      "semantic_scholar_id": "853a593768d0128b7104017e296028b9ae87ec27",
+      "canonical_id": "arXiv:2407.12021",
+      "arxiv_id": "2407.12021",
+      "doi": "10.48550/arXiv.2407.12021",
+      "authors": [
+        "Xu-Kun Liu",
+        "Bowen Lei",
+        "Ruqi Zhang",
+        "Dongkuan Xu"
+      ],
+      "priority": 13,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 13,
+        "citation_count": 13,
+        "total": 13,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 838,
+        "matched_prestigious_venue": null
+      },
+      "reason": "ADED uses adaptive tri-gram draft verification without fine-tuning to reduce sequential decoding latency while maintaining accuracy, directly accelerating inference.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "FP4-Quantization: Lossless 4bit Quantization for Large Language Models",
+      "source_url": "https://doi.org/10.1109/JCC62314.2024.00017",
+      "year": 2024,
+      "published": "2024-07-15",
+      "venue": "Fall Joint Computer Conference",
+      "citation_count": 13,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models(LLMs) have demonstrated exceptional performance across a wide range of tasks. However, their extensive computational and storage requirements hinder their widespread deployment. To address this, low-bit quantization has emerged as a highly effective approach to reducing the inference cost of LLMs. Nevertheless, the existing repertoire of 4-bit quantization techniques is plagued by a substantial decline in model precision. In this paper, we introduce a novel 4-bit weight quantization method, FP4-Quantization, which leverages a 4-bit floating-point(FP4) representation that aligns better with the weight distribution characteristics of LLMs. Furthermore, it incorporates a Low-Rank Quantization Error Correction(LREC), involving progressive fine-tuning of low-rank parameters to rectify quantization errors, thereby enabling the achievement of precision-preserving 4-bit weight-only quantization. Our Experimental results on multiple zero-shot tasks demonstrate that FP4-Quantization achieves 4-bit weight quantization with an accuracy degradation of less than 0.5%.",
+      "identifiers": [
+        "SemanticScholar:44699a12d61e0fa6bccf2e635efb57f051e48e69"
+      ],
+      "semantic_scholar_id": "44699a12d61e0fa6bccf2e635efb57f051e48e69",
+      "doi": "10.1109/JCC62314.2024.00017",
+      "canonical_id": "DOI:10.1109/JCC62314.2024.00017",
+      "authors": [
+        "Jie Wang",
+        "Huan-Xi Liu",
+        "Da-Wei Feng",
+        "Jie Ding",
+        "Bo Ding"
+      ],
+      "priority": 13,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 13,
+        "citation_count": 13,
+        "total": 13,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 820,
+        "matched_prestigious_venue": null
+      },
+      "reason": "IEEE Xplore describes FP4 weight-only quantization with low-rank error correction that preserves accuracy below 0.5%, reducing LLM inference storage and cost.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Guided Speculative Inference for Efficient Test-Time Alignment of LLMs",
+      "source_url": "https://arxiv.org/abs/2506.04118",
+      "year": 2025,
+      "published": "2025-06-04",
+      "venue": "arXiv.org",
+      "citation_count": 13,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "We propose Guided Speculative Inference (GSI), a novel algorithm for efficient reward-guided decoding in large language models. GSI combines soft best-of-$n$ test-time scaling with a reward model $r(x,y)$ and speculative samples from a small auxiliary model $\\pi_S(y\\mid x)$. We provably approximate both the optimal tilted policy $\\pi_{\\beta,B}(y\\mid x) \\propto \\pi_B(y\\mid x)\\exp(\\beta\\,r(x,y))$ of soft best-of-$n$ under the base model $\\pi_B$, as well as the expected reward under the optimal policy. In experiments on reasoning benchmarks (MATH500, OlympiadBench, Minerva Math, MMLU-STEM, GSM8K) and across different model families, our method achieves higher accuracy than standard soft best-of-$n$ with $\\pi_S$ and reward-guided speculative decoding (Liao et al., 2025), and in certain settings even outperforms soft best-of-$n$ with $\\pi_B$, while reducing end-to-end latency by up to $28\\%$. The code is available at https://github.com/j-geuter/GSI .",
+      "identifiers": [
+        "SemanticScholar:c059189646ac8499574d861d2613c0d1b3baecc1"
+      ],
+      "semantic_scholar_id": "c059189646ac8499574d861d2613c0d1b3baecc1",
+      "canonical_id": "arXiv:2506.04118",
+      "arxiv_id": "2506.04118",
+      "doi": "10.48550/arXiv.2506.04118",
+      "authors": [
+        "Jonathan Geuter",
+        "Youssef Mroueh",
+        "David Alvarez-Melis"
+      ],
+      "priority": 13,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 13,
+        "citation_count": 13,
+        "total": 13,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 496,
+        "matched_prestigious_venue": null
+      },
+      "reason": "GSI combines reward-guided test-time scaling with speculative samples and reports up to 28% lower end-to-end latency, directly accelerating aligned inference.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Accurate and Efficient Fine-Tuning of Quantized Large Language Models Through Optimal Balance in Adaptation",
+      "source_url": "https://doi.org/10.1162/tacl.a.23",
+      "year": 2025,
+      "published": null,
+      "venue": "Transactions of the Association for Computational Linguistics",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "\n Large Language Models (LLMs) have demonstrated impressive performance across various domains. However, the enormous number of model parameters makes fine-tuning challenging, significantly limiting their application and deployment. Existing solutions combine parameter quantization with Low-Rank Adaptation (LoRA), reducing memory usage but causing performance degradation. Additionally, converting fine-tuned models to low-precision representations further degrades performance. In this paper, we identify an imbalance in fine-tuning quantized LLMs with LoRA: overly complex adapter inputs and outputs versus low effective trainability of the adapter, leading to underfitting during fine-tuning. Thus, we propose Quantized LLMs fine-tuning with Balanced Low-Rank Adaptation (Q-BLoRA), which simplifies the adapter’s inputs and outputs while increasing the adapter’s rank to alleviate underfitting during fine-tuning. For low-precision deployment, we propose Quantization-Aware fine-tuning with Balanced Low-Rank Adaptation (QA-BLoRA), which aligns with the block-wise quantization and facilitates quantization-aware fine-tuning of low-rank adaptation based on the parameter merging of Q-BLoRA. Both Q-BLoRA and QA-BLoRA are easily implemented and offer the following optimizations: (i) Q-BLoRA consistently achieves state-of-the-art accuracy compared to baselines and other variants; (ii) QA-BLoRA enables the direct generation of low-precision inference models, which exhibit significant performance improvements over other low-precision models. We validate the effectiveness of Q-BLoRA and QA-BLoRA across various models and scenarios. Code has been made available at https://github.com/xiaocaigou/qbaraqahira.",
+      "identifiers": [
+        "SemanticScholar:a212b0292a38c4bfcb87d3bca005c448e6853d7a"
+      ],
+      "semantic_scholar_id": "a212b0292a38c4bfcb87d3bca005c448e6853d7a",
+      "doi": "10.1162/tacl.a.23",
+      "canonical_id": "DOI:10.1162/tacl.a.23",
+      "authors": [
+        "Ao Shen",
+        "Zhi-Quan Lai",
+        "Qiang Wang",
+        "Xiong-Lve Li",
+        "Lizhi Zhang",
+        "Dongsheng Li",
+        "Jiaxi Li"
+      ],
+      "priority": 13,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 13,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 469,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      },
+      "reason": "Q-BLoRA improves memory-efficient quantized fine-tuning, while QA-BLoRA directly produces improved low-precision inference models; this deployment benefit supports relevance beyond training alone.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-ba8e9bd9a6f6",
+    "round": "libimp-ba8e9bd9a6f6d27e-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 18,
+    "round_submission_count": 4,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-ba8e9bd9a6f6d27e-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-ba8e9bd9a6f6d27e-pre01.json",
+    "receipt": "sha256:263fbe6aebbf9118f3eec5c752cd4b7469b1e4baf3a7f2652fe05ace0b4326db"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-ba8e9bd9a6f6",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

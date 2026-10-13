@@ -1,0 +1,228 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "CAOTE: KV Cache Selection for LLMs via Attention Output Error-Based Token Eviction",
+      "source_url": "https://arxiv.org/abs/2504.14051",
+      "year": 2025,
+      "published": "2025-04-18",
+      "venue": null,
+      "citation_count": 14,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "While long context support of large language models has extended their abilities, it also incurs challenges in memory and compute which becomes crucial bottlenecks in resource-restricted devices. Token eviction, a widely adopted post-training methodology designed to alleviate the bottlenecks by evicting less important tokens from the cache, typically uses attention scores as proxy metrics for token importance. However, one major limitation of attention score as a token-wise importance metrics is that it lacks the information about contribution of tokens to the attention output. In this paper, we propose a simple eviction criterion based on the contribution of cached tokens to attention outputs. Our method, CAOTE, optimizes for eviction error due to token eviction, by seamlessly integrating attention scores and value vectors. This is the first method which uses value tokens on top of attention-based eviction scores in closed-form. Additionally, CAOTE can act as a meta-heuristic method with flexible usage with any token eviction method. We show that CAOTE, when combined with the state-of-the-art attention score-based methods, always improves accuracies on the downstream task, indicating the importance of leveraging information from values during token eviction process.",
+      "identifiers": [
+        "SemanticScholar:6e46021518c97f01a7282815a935c7a87b8fef86"
+      ],
+      "semantic_scholar_id": "6e46021518c97f01a7282815a935c7a87b8fef86",
+      "canonical_id": "arXiv:2504.14051",
+      "arxiv_id": "2504.14051",
+      "authors": [
+        "Raghavv Goel",
+        "Junyoung Park",
+        "Mukul Gagrani",
+        "Dalton Jones",
+        "Matthew J. Morse",
+        "Harper Langston",
+        "Min-Gu Lee",
+        "Christopher Lott"
+      ],
+      "priority": 14,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 14,
+        "citation_count": 14,
+        "total": 14,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 543,
+        "matched_prestigious_venue": null
+      },
+      "reason": "CAOTE evicts cached tokens using their contribution to attention outputs, improving the accuracy of cache-reduction methods and directly targeting long-context inference memory.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "DynaPipe: Dynamic Layer Redistribution for Efficient Serving of LLMs with Pipeline Parallelism",
+      "source_url": "https://doi.org/10.52202/085713-4569",
+      "year": 2025,
+      "published": null,
+      "venue": "Neural Information Processing Systems",
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "To accelerate large language model (LLM) inference, pipeline parallelism partitions model layers into sequential stages, each assigned to a different device for concurrent execution. However, this method often suffers from pipeline bubbles caused by imbalanced computation in the tail stage. While upstream stages focus solely on layer-forward operations, the final stage must also handle additional post-processing tasks like sampling, which introduces significant latency. This discrepancy in workload leads to pipeline misalignment, forcing upstream stages to idle and degrading overall performance. Existing frameworks typically distribute layers evenly across stages without accounting for computational load differences. To address this, we propose DynaPipe , a dynamic layer redistribution scheme that adaptively balances computation by predicting execution latency in real time. Moreover, we introduce an asynchronous key-value (KV) cache migration coordinator to enable non-blocking layer redistribution during inference. Experiments on representative LLMs demonstrate that DynaPipe reduces average end-to-end request latency by 8% to 41% across diverse workloads, outperforming state-of-the-art pipeline parallelism systems. Our implementation is publicly available at https://github.com/xhx1022/DynaPipe .",
+      "identifiers": [
+        "SemanticScholar:32e899b049daefca933022e82fdd95b0ee74623c"
+      ],
+      "semantic_scholar_id": "32e899b049daefca933022e82fdd95b0ee74623c",
+      "doi": "10.52202/085713-4569",
+      "canonical_id": "DOI:10.52202/085713-4569",
+      "authors": [
+        "Hongxin Xu",
+        "Tianyu Guo",
+        "Xian-Wei Zhang"
+      ],
+      "priority": 14,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 14,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 469,
+        "matched_prestigious_venue": "Neural Information Processing Systems"
+      },
+      "reason": "DynaPipe predicts stage latency and redistributes layers online with asynchronous KV migration to reduce pipeline imbalance and request latency in LLM serving.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "RWKVQuant: Quantizing the RWKV Family with Proxy Guided Hybrid of Scalar and Vector Quantization",
+      "source_url": "https://arxiv.org/abs/2505.03803",
+      "year": 2025,
+      "published": "2025-05-02",
+      "venue": "International Conference on Machine Learning",
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "RWKV is a modern RNN architecture with comparable performance to Transformer, but still faces challenges when deployed to resource-constrained devices. Post Training Quantization (PTQ), which is a an essential technique to reduce model size and inference latency, has been widely used in Transformer models. However, it suffers significant degradation of performance when applied to RWKV. This paper investigates and identifies two key constraints inherent in the properties of RWKV: (1) Non-linear operators hinder the parameter-fusion of both smooth- and rotation-based quantization, introducing extra computation overhead. (2) The larger amount of uniformly distributed weights poses challenges for cluster-based quantization, leading to reduced accuracy. To this end, we propose RWKVQuant, a PTQ framework tailored for RWKV models, consisting of two novel techniques: (1) a coarse-to-fine proxy capable of adaptively selecting different quantization approaches by assessing the uniformity and identifying outliers in the weights, and (2) a codebook optimization algorithm that enhances the performance of cluster-based quantization methods for element-wise multiplication in RWKV. Experiments show that RWKVQuant can quantize RWKV-6-14B into about 3-bit with less than 1% accuracy loss and 2.14x speed up.",
+      "identifiers": [
+        "SemanticScholar:dc91b22f2b7f50ee241c412e5c91ce50afbde41e"
+      ],
+      "semantic_scholar_id": "dc91b22f2b7f50ee241c412e5c91ce50afbde41e",
+      "canonical_id": "arXiv:2505.03803",
+      "arxiv_id": "2505.03803",
+      "doi": "10.48550/arXiv.2505.03803",
+      "authors": [
+        "Chen Xu",
+        "Yuxuan Yue",
+        "Zu-Kang Xu",
+        "Xing Hu",
+        "Jiang-Yong Yu",
+        "Zhi-Xuan Chen",
+        "Si-Fan Zhou",
+        "Zhihang Yuan",
+        "Da-Wei Yang"
+      ],
+      "priority": 14,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 14,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 529,
+        "matched_prestigious_venue": "International Conference on Machine Learning"
+      },
+      "reason": "RWKVQuant combines proxy-guided scalar/vector quantization for RWKV and reports roughly 3-bit deployment with small accuracy loss and faster inference, a concrete model-compression contribution.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "AnchorAttention: Difference-Aware Sparse Attention with Stripe Granularity",
+      "source_url": "https://arxiv.org/abs/2505.23520",
+      "year": 2025,
+      "published": "2025-05-29",
+      "venue": "Conference on Empirical Methods in Natural Language Processing",
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Models (LLMs) with extended context lengths face significant computational challenges during the pre-filling phase, primarily due to the quadratic complexity of self-attention. Existing methods typically employ dynamic pattern matching and block-sparse low-level implementations. However, their reliance on local information for pattern identification fails to capture global contexts, and the coarse granularity of blocks leads to persistent internal sparsity, resulting in suboptimal accuracy and efficiency. To address these limitations, we propose \\textbf{AnchorAttention}, a difference-aware, dynamic sparse attention mechanism that efficiently identifies critical attention regions at a finer stripe granularity while adapting to global contextual information, achieving superior speed and accuracy. AnchorAttention comprises three key components: (1) \\textbf{Pattern-based Anchor Computation}, leveraging the commonalities present across all inputs to rapidly compute a set of near-maximum scores as the anchor; (2) \\textbf{Difference-aware Stripe Sparsity Identification}, performing difference-aware comparisons with the anchor to quickly obtain discrete coordinates of significant regions in a stripe-like sparsity pattern; (3) \\textbf{Fine-grained Sparse Computation}, replacing the traditional contiguous KV block loading approach with simultaneous discrete KV position loading to maximize sparsity rates while preserving full hardware computational potential. With its finer-grained sparsity strategy, \\textbf{AnchorAttention} achieves higher sparsity rates at the same recall level, significantly reducing computation time. Compared to previous state-of-the-art methods, at a text length of 128k, it achieves a speedup of 1.44$\\times$ while maintaining higher recall rates.",
+      "identifiers": [
+        "SemanticScholar:71855b38433e4c29c790e26cef1a33255e58f345"
+      ],
+      "semantic_scholar_id": "71855b38433e4c29c790e26cef1a33255e58f345",
+      "canonical_id": "arXiv:2505.23520",
+      "arxiv_id": "2505.23520",
+      "doi": "10.48550/arXiv.2505.23520",
+      "authors": [
+        "Yu Zhang",
+        "Dong Guo",
+        "Fang Wu",
+        "Guoliang Zhu",
+        "Dian Ding",
+        "Yi-Ming Zhang"
+      ],
+      "priority": 14,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 14,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 502,
+        "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+      },
+      "reason": "AnchorAttention identifies globally informed fine-grained sparse attention positions and reports faster 128k prefill with higher recall, directly reducing attention computation.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "TaDA: Training-free recipe for Decoding with Adaptive KV Cache Compression and Mean-centering",
+      "source_url": "https://arxiv.org/abs/2506.04642",
+      "year": 2025,
+      "published": "2025-06-05",
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The key-value (KV) cache in transformer models is a critical component for efficient decoding or inference, yet its memory demands scale poorly with sequence length, posing a major challenge for scalable deployment of large language models. Among several approaches to KV cache compression, quantization of key and value activations has been widely explored. Most KV cache quantization methods still need to manage sparse and noncontiguous outliers separately. To address this, we introduce TaDA, a training-free recipe for KV cache compression with quantization precision that adapts to error sensitivity across layers and a mean centering to eliminate separate outlier handling. Our approach yields substantial accuracy improvements for multiple models supporting various context lengths. Moreover, our approach does not need to separately manage outlier elements -- a persistent hurdle in most traditional quantization methods. Experiments on standard benchmarks demonstrate that our technique reduces KV cache memory footprint to 27% of the original 16-bit baseline while achieving comparable accuracy. Our method paves the way for scalable and high-performance reasoning in language models by potentially enabling inference for longer context length models, reasoning models, and longer chain of thoughts.",
+      "identifiers": [
+        "SemanticScholar:23c5cabc6ae421ae3dcf2ed36cf4411b71a98d3d"
+      ],
+      "semantic_scholar_id": "23c5cabc6ae421ae3dcf2ed36cf4411b71a98d3d",
+      "canonical_id": "arXiv:2506.04642",
+      "arxiv_id": "2506.04642",
+      "doi": "10.48550/arXiv.2506.04642",
+      "authors": [
+        "Vinay Joshi",
+        "P. Brahma",
+        "Zi-Cheng Liu",
+        "E. Barsoum"
+      ],
+      "priority": 14,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 14,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 495,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      },
+      "reason": "TaDA adaptively quantizes and mean-centers KV cache without separate outlier handling, reducing cache memory to 27% while retaining comparable accuracy for long-context inference.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-2340f219915d",
+    "round": "libimp-2340f219915d7d6b-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 15,
+    "round_submission_count": 3,
+    "round_submission_index": 2,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-2340f219915d7d6b-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-2340f219915d7d6b-pre01.json",
+    "receipt": "sha256:38865020a2f97769a079a3d24852a84bb9646d3dd6a391c74cc217bcb27091a3"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-2340f219915d",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
