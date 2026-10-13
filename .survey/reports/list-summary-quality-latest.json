@@ -5012,6 +5012,15 @@
       "warnings": []
     },
     {
+      "path": "papers/inference/07-kv-cache-optimization-compression/2026-2608.01247-restorekv-recovering-full-cache-behavior-under-aggressive-query-agnostic.md",
+      "status": "PASS",
+      "summary": "質問非依存KV削除に対し、全文脈を読む少数の学習済み復元トークンを同一KV容量予算に組み込み、強圧縮時の精度を回復する。",
+      "char_count": 60,
+      "japanese_ratio": 1.0,
+      "failures": [],
+      "warnings": []
+    },
+    {
       "path": "papers/inference/07-kv-cache-optimization-compression/2026-2608.01631-does-accuracy-equal-evidence-reasoning-faithfulness-under-kv-cache-compr.md",
       "status": "PASS",
       "summary": "KVキャッシュ圧縮11方式を固定思考列で比較し、正答率が維持されても根拠の整合性や誤情報への耐性が失われる「回答と証拠の乖離」を定量化する。",
@@ -9140,6 +9149,15 @@
       "warnings": []
     },
     {
+      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2603.02599-sun-shared-use-of-next-token-prediction-for-efficient-multi-llm-disaggre.md",
+      "status": "PASS",
+      "summary": "タスク固有プリフィルだけを学習して共通固定デコーダへ互換KVを渡し、異なる専門LLMのデコード要求を同じGPUプールでバッチ化・低ビット化する。",
+      "char_count": 72,
+      "japanese_ratio": 1.0,
+      "failures": [],
+      "warnings": []
+    },
+    {
       "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2603.06350-moeless-serverless-moe-serving.md",
       "status": "PASS",
       "summary": "分散MoE推論で次の層のエキスパート負荷を予測し、混雑するエキスパートだけを一時複製して複数GPUへ配置し、ルータを変えずに同期点での最遅GPU待ちを減らすサーバーレス提供システム。",
@@ -9486,6 +9504,15 @@
       "status": "PASS",
       "summary": "現在のGPU負荷だけでなく、配置後に残るモデル常駐・親出力局所性・接頭辞再利用を有限先読みで評価し、ワークフローDAGの次段階に有利な状態を残すスケジューラ。",
       "char_count": 79,
+      "japanese_ratio": 1.0,
+      "failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2605.08581-prism-fast-online-llm-serving-via-scheduling-memory-co-design.md",
+      "status": "PASS",
+      "summary": "再利用接頭辞の要求頻度と次バッチ需要を共有し、投入順序と基数木KV保持・退避を協調制御してオンラインLLMの末尾初回応答遅延を下げる。",
+      "char_count": 67,
       "japanese_ratio": 1.0,
       "failures": [],
       "warnings": []
@@ -15990,6 +16017,15 @@
       "warnings": []
     },
     {
+      "path": "papers/inference/99-other-inference-systems/2026-2604.22782-stochastic-kv-routing-enabling-adaptive-depth-wise-cache-sharing.md",
+      "status": "PASS",
+      "summary": "学習時に層間KV参照先を確率的に切り替え、推論時の任意の深さ方向キャッシュ共有に耐えるモデルを構築。8K文脈のQwen3-8B相当構成でKV容量を約4分の1に削減し、復号を約22%高速化した。",
+      "char_count": 96,
+      "japanese_ratio": 1.0,
+      "failures": [],
+      "warnings": []
+    },
+    {
       "path": "papers/inference/99-other-inference-systems/2026-2604.25777-specfed-accelerating-federated-llm-inference-with-speculative-decoding-and-compressed-transmission.md",
       "status": "PASS",
       "summary": "連合LLM投機的復号で上位K確率だけを送信し、2種の確率再構成と誤差上界により通信量を削減する方式。",
@@ -16059,6 +16095,15 @@
       "status": "PASS",
       "summary": "注意とMoE-FFNの演算・通信を別GPU群へ分離する価値を、負荷・モデル・SLO・ネットワークを横断して設計空間探索する。",
       "char_count": 62,
+      "japanese_ratio": 1.0,
+      "failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/99-other-inference-systems/2026-2605.28678-dream-r-multimodal-speculative-reasoning-with-rl-based-refined-drafting-.md",
+      "status": "PASS",
+      "summary": "画像を含む長い推論ステップを草案モデルで先読みし、肯定・否定確率による検証と整合性報酬で採択率を改善、失敗時の巻戻し付き並列実行で遅延を削減する。",
+      "char_count": 73,
       "japanese_ratio": 1.0,
       "failures": [],
       "warnings": []
@@ -16284,6 +16329,15 @@
       "status": "PASS",
       "summary": "協調スレッド配列ごとの依存配列・完了計数器・GPU間作業待ち行列で後段行列積をタイル単位に起動し、B200の2層行列積で最適マイクロバッチ比最大31.8%、テンソル並列比最大29.6%の遅延を削減する。",
       "char_count": 101,
+      "japanese_ratio": 1.0,
+      "failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/99-other-inference-systems/2026-2607.07964-kronq-llm-quantization-via-kronecker-factored-hessian.md",
+      "status": "PASS",
+      "summary": "入力共分散に加えて出力勾配共分散を用い、双方向回転・スケーリングと感度別混合精度で超低ビット量子化を安定化。LLaMA-3-70BのW2でPPL 7.93、単一GPUの7B〜13Bで復号1.25〜2.51倍。",
+      "char_count": 104,
       "japanese_ratio": 1.0,
       "failures": [],
       "warnings": []
