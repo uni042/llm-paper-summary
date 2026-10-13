@@ -27,6 +27,8 @@ implementation: '著者らはvLLM 0.4.1上でSpecCacheを実装し、2基のNVID
 last_checked: '2026-10-13'
 worker_completed_at: '2026-10-13T10:37:41+09:00'
 worker_run_key: '20261013-1030-scheduled-chat-30/r01'
+last_audited: null
+audit_version: 0
 ---
 
 # SpecCache: 軽量モデルの深層特徴で再計算箇所を選ぶ検索拡張生成向けKVキャッシュ再利用

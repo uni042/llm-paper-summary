@@ -19,6 +19,8 @@ implementation: 'Llama-68Mの出力エントロピーから候補窓を決め、
 last_checked: '2026-10-13'
 worker_completed_at: '2026-10-13T07:36:42+09:00'
 worker_run_key: '20261013-0730-scheduled-chat-30/r01'
+last_audited: null
+audit_version: 0
 ---
 
 # Hierarchical Speculative Decoding with Dynamic Windows for Efficient Language Model Inference

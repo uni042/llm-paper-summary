@@ -26,6 +26,8 @@ worker_id: scheduled-chat-00
 worker_run_key: 20261013-1400-scheduled-chat-00/r01
 worker_completed_at: '2026-10-13T14:06:20+09:00'
 reference_main_sha: b17d1974c668a660022c4d61b44769bd412253d3
+last_audited: null
+audit_version: 0
 ---
 
 # LightSeq：可変長Transformer推論の演算融合・探索・メモリ再利用
