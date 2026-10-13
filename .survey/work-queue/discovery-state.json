@@ -1,8 +1,8 @@
 {
   "schema_version": 3,
-  "updated_at": "2026-10-13T21:08:10+00:00",
-  "last_run_key": "library-import-66be87659e79",
-  "last_round": "libimp-66be87659e79f9cd-pre01",
+  "updated_at": "2026-10-13T21:24:27+00:00",
+  "last_run_key": "library-import-c03be58ab1ba",
+  "last_round": "libimp-c03be58ab1ba99a9-pre01",
   "paper_stock_zero_count": 3,
   "consecutive_empty_rounds": 0,
   "last_empty_round_reason": null,
@@ -10,124 +10,6 @@
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
   "history": [
-    {
-      "round_identity": "legacy:2026-09-19T16:00:00+09:00:specialist-energy-saturation-11",
-      "precheck_request_id": null,
-      "run_key": "2026-09-19T16:00:00+09:00",
-      "round": "specialist-energy-saturation-11",
-      "axis": "energy・power-aware serving・DVFS",
-      "query_summary": "energy/power-aware servingを独立確認。Festina、PALS、BiScale、phase-decoupled power controlはcanonical identityで既知。4ラウンド連続で新規強候補がなく、主要独立経路の収束を確認した。",
-      "provider": null,
-      "source_url": null,
-      "citation_direction": null,
-      "seed_canonical_id": null,
-      "preload_id": null,
-      "candidate_count": 4,
-      "duplicate_filtered_count": 4,
-      "final_duplicate_filtered_count": 0,
-      "accepted_count": 0,
-      "accepted_canonical_ids": [],
-      "duplicate_canonical_ids": [
-        "arXiv:2606.30391",
-        "arXiv:2605.21427",
-        "arXiv:2602.18755",
-        "arXiv:2609.11133"
-      ],
-      "next_axis_hint": "次回runは新着差分とforward/backward citationから再開する",
-      "source_submission": "work-queue/submissions/discovery/2026-09-19T16-00-00+09-00-specialist-energy-saturation-11.json",
-      "source_submissions": [
-        "work-queue/submissions/discovery/2026-09-19T16-00-00+09-00-specialist-energy-saturation-11.json"
-      ],
-      "round_submission_indices": [
-        1
-      ],
-      "round_submission_count": 1,
-      "round_accounted": true,
-      "novel_candidate_count": 0,
-      "post_final_dedupe_count": 0,
-      "duplicate_ratio": 1.0,
-      "final_duplicate_ratio": 0.0,
-      "round_complete": true
-    },
-    {
-      "round_identity": "legacy:2026-09-19T16:00:00+09:00:specialist-framework-control-8",
-      "precheck_request_id": null,
-      "run_key": "2026-09-19T16:00:00+09:00",
-      "round": "specialist-framework-control-8",
-      "axis": "serving framework control-plane・CPU-free runtime",
-      "query_summary": "vLLM/SGLang周辺のcontrol-plane/runtimeを再走査。Blink等の強いsystems結果はcanonical identityで既知で、新規強候補なし。",
-      "provider": null,
-      "source_url": null,
-      "citation_direction": null,
-      "seed_canonical_id": null,
-      "preload_id": null,
-      "candidate_count": 3,
-      "duplicate_filtered_count": 3,
-      "final_duplicate_filtered_count": 0,
-      "accepted_count": 0,
-      "accepted_canonical_ids": [],
-      "duplicate_canonical_ids": [
-        "arXiv:2604.07609",
-        "arXiv:2604.13327",
-        "arXiv:2608.13499"
-      ],
-      "next_axis_hint": "quantization/KV compressed-domain runtimeへ移る",
-      "source_submission": "work-queue/submissions/discovery/2026-09-19T16-00-00+09-00-specialist-framework-control-8.json",
-      "source_submissions": [
-        "work-queue/submissions/discovery/2026-09-19T16-00-00+09-00-specialist-framework-control-8.json"
-      ],
-      "round_submission_indices": [
-        1
-      ],
-      "round_submission_count": 1,
-      "round_accounted": true,
-      "novel_candidate_count": 0,
-      "post_final_dedupe_count": 0,
-      "duplicate_ratio": 1.0,
-      "final_duplicate_ratio": 0.0,
-      "round_complete": true
-    },
-    {
-      "round_identity": "legacy:2026-09-19T16:00:00+09:00:specialist-hierarchical-memory-2",
-      "precheck_request_id": null,
-      "run_key": "2026-09-19T16:00:00+09:00",
-      "round": "specialist-hierarchical-memory-2",
-      "axis": "SSD/NVMe・GPUDirect Storage・階層メモリ・PIM/CXL",
-      "query_summary": "新着軸から離れ、SSD/NVMe direct I/O、GPUDirect Storage、階層メモリ、PIM/CXLを独立検索した。DUAL-BLADE、PIM-SHERPA、Cache-Resident LLM、SHIELD、SPIN、SeKV等の強い候補はすべて月別canonical identity snapshotで既知と確認され、新規候補は残らなかった。",
-      "provider": null,
-      "source_url": null,
-      "citation_direction": null,
-      "seed_canonical_id": null,
-      "preload_id": null,
-      "candidate_count": 6,
-      "duplicate_filtered_count": 6,
-      "final_duplicate_filtered_count": 0,
-      "accepted_count": 0,
-      "accepted_canonical_ids": [],
-      "duplicate_canonical_ids": [
-        "arXiv:2604.26557",
-        "arXiv:2603.09216",
-        "arXiv:2606.25353",
-        "arXiv:2604.07396",
-        "arXiv:2604.26837",
-        "arXiv:2606.31145"
-      ],
-      "next_axis_hint": "次はMoE expert placement/cache/prefetchとdistributed serving network/collectiveへ移り、storage/hierarchical-memory検索を反復しない",
-      "source_submission": "work-queue/submissions/discovery/2026-09-19T16-00-00+09-00-specialist-hierarchical-memory-2.json",
-      "source_submissions": [
-        "work-queue/submissions/discovery/2026-09-19T16-00-00+09-00-specialist-hierarchical-memory-2.json"
-      ],
-      "round_submission_indices": [
-        1
-      ],
-      "round_submission_count": 1,
-      "round_accounted": true,
-      "novel_candidate_count": 0,
-      "post_final_dedupe_count": 0,
-      "duplicate_ratio": 1.0,
-      "final_duplicate_ratio": 0.0,
-      "round_complete": true
-    },
     {
       "round_identity": "legacy:2026-09-19T16:00:00+09:00:specialist-kv-quant-runtime-9",
       "precheck_request_id": null,
@@ -13534,6 +13416,120 @@
       "duplicate_ratio": 0.8333333333333334,
       "final_duplicate_ratio": 0.0,
       "round_complete": true
+    },
+    {
+      "round_identity": "precheck:libimp-2340f219915d7d6b-pre01",
+      "precheck_request_id": "libimp-2340f219915d7d6b-pre01",
+      "run_key": "library-import-2340f219915d",
+      "round": "libimp-2340f219915d7d6b-pre01",
+      "axis": "library-candidate-intake",
+      "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。",
+      "provider": "candidate_id_lookup",
+      "source_url": "identifier://approved-public-apis",
+      "citation_direction": null,
+      "seed_canonical_id": null,
+      "preload_id": null,
+      "candidate_count": 15,
+      "duplicate_filtered_count": 10,
+      "final_duplicate_filtered_count": 0,
+      "accepted_count": 5,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": null,
+      "source_submission": "work-queue/submissions/libimp-2340f219915d7d6b-pre01-sub01.json",
+      "source_submissions": [
+        "work-queue/submissions/libimp-2340f219915d7d6b-pre01-sub01.json",
+        "work-queue/submissions/libimp-2340f219915d7d6b-pre01-sub02.json",
+        "work-queue/submissions/libimp-2340f219915d7d6b-pre01-sub03.json"
+      ],
+      "round_submission_indices": [
+        1,
+        2,
+        3
+      ],
+      "round_submission_count": 3,
+      "round_accounted": true,
+      "novel_candidate_count": 5,
+      "post_final_dedupe_count": 5,
+      "duplicate_ratio": 0.6666666666666666,
+      "final_duplicate_ratio": 0.0,
+      "round_complete": true
+    },
+    {
+      "round_identity": "precheck:libimp-ba8e9bd9a6f6d27e-pre01",
+      "precheck_request_id": "libimp-ba8e9bd9a6f6d27e-pre01",
+      "run_key": "library-import-ba8e9bd9a6f6",
+      "round": "libimp-ba8e9bd9a6f6d27e-pre01",
+      "axis": "library-candidate-intake",
+      "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。",
+      "provider": "candidate_id_lookup",
+      "source_url": "identifier://approved-public-apis",
+      "citation_direction": null,
+      "seed_canonical_id": null,
+      "preload_id": null,
+      "candidate_count": 18,
+      "duplicate_filtered_count": 15,
+      "final_duplicate_filtered_count": 0,
+      "accepted_count": 3,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": null,
+      "source_submission": "work-queue/submissions/libimp-ba8e9bd9a6f6d27e-pre01-sub01.json",
+      "source_submissions": [
+        "work-queue/submissions/libimp-ba8e9bd9a6f6d27e-pre01-sub01.json",
+        "work-queue/submissions/libimp-ba8e9bd9a6f6d27e-pre01-sub02.json",
+        "work-queue/submissions/libimp-ba8e9bd9a6f6d27e-pre01-sub03.json",
+        "work-queue/submissions/libimp-ba8e9bd9a6f6d27e-pre01-sub04.json"
+      ],
+      "round_submission_indices": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "round_submission_count": 4,
+      "round_accounted": true,
+      "novel_candidate_count": 3,
+      "post_final_dedupe_count": 3,
+      "duplicate_ratio": 0.8333333333333334,
+      "final_duplicate_ratio": 0.0,
+      "round_complete": true
+    },
+    {
+      "round_identity": "precheck:libimp-c03be58ab1ba99a9-pre01",
+      "precheck_request_id": "libimp-c03be58ab1ba99a9-pre01",
+      "run_key": "library-import-c03be58ab1ba",
+      "round": "libimp-c03be58ab1ba99a9-pre01",
+      "axis": "library-candidate-intake",
+      "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。",
+      "provider": "candidate_id_lookup",
+      "source_url": "identifier://approved-public-apis",
+      "citation_direction": null,
+      "seed_canonical_id": null,
+      "preload_id": null,
+      "candidate_count": 9,
+      "duplicate_filtered_count": 5,
+      "final_duplicate_filtered_count": 0,
+      "accepted_count": 4,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": null,
+      "source_submission": "work-queue/submissions/libimp-c03be58ab1ba99a9-pre01-sub01.json",
+      "source_submissions": [
+        "work-queue/submissions/libimp-c03be58ab1ba99a9-pre01-sub01.json",
+        "work-queue/submissions/libimp-c03be58ab1ba99a9-pre01-sub02.json"
+      ],
+      "round_submission_indices": [
+        1,
+        2
+      ],
+      "round_submission_count": 2,
+      "round_accounted": true,
+      "novel_candidate_count": 4,
+      "post_final_dedupe_count": 4,
+      "duplicate_ratio": 0.5555555555555556,
+      "final_duplicate_ratio": 0.0,
+      "round_complete": true
     }
   ],
   "axes": {
@@ -21905,16 +21901,16 @@
       "next_axis_hint": "今回runで新着、storage/hierarchical memory、MoE、network/runtime、scheduling/kernel、agent/multimodal、speculative/length predictionを横断済み。次回は新着差分とforward/backward citationから再開する"
     },
     "library-candidate-intake": {
-      "last_run_key": "library-import-66be87659e79",
-      "rounds": 306,
-      "candidate_count": 1511,
-      "duplicate_filtered_count": 825,
-      "novel_candidate_count": 686,
+      "last_run_key": "library-import-c03be58ab1ba",
+      "rounds": 309,
+      "candidate_count": 1553,
+      "duplicate_filtered_count": 855,
+      "novel_candidate_count": 698,
       "final_duplicate_filtered_count": 5,
-      "post_final_dedupe_count": 681,
-      "accepted_count": 681,
-      "duplicate_ratio": 0.5459960291197882,
-      "final_duplicate_ratio": 0.007288629737609329,
+      "post_final_dedupe_count": 693,
+      "accepted_count": 693,
+      "duplicate_ratio": 0.5505473277527366,
+      "final_duplicate_ratio": 0.0071633237822349575,
       "next_axis_hint": null
     },
     "explicit-library-accept": {
