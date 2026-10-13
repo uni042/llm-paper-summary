@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-10-12T11:32:48.581495+00:00",
+  "generated_at": "2026-10-13T06:54:15.558612+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 5,
+  "count": 4,
   "worker_counts": {
     "scheduled-chat-00": 2,
     "scheduled-chat-30": 1,
-    "scheduled-chat-45": 2
+    "scheduled-chat-45": 1
   },
   "entries": [
     {
@@ -68,7 +68,7 @@
       "file_bytes": 11591,
       "source_sha256": "da888b53ee82e640f2477d11ae1e7189930d0245c88b475d792485cbf22b684c",
       "source_git_blob_sha": "bfaac5edecb3f5347981eca23eb75980c3e1721d",
-      "assigned_worker": "scheduled-chat-45",
+      "assigned_worker": "scheduled-chat-30",
       "semantic_status": "pending",
       "mechanical_status": "FAIL",
       "japanese_ratio": 0.737968,
@@ -103,28 +103,6 @@
         "limitation_chars": 0
       },
       "mechanical_failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/09-kernel-runtime-compilation/2026-2609.13612-attnfuse-a-composable-dsl-for-compiling-attentions-to-fused-gpu-kernels.md",
-      "canonical_id": "arXiv:2609.13612",
-      "title": "AttnFuse: A Composable DSL for Compiling Attentions to Fused GPU Kernels",
-      "file_bytes": 13092,
-      "source_sha256": "76f51572df4662a7738db02f4d1e8995d95e084efbba64ccd52578cf570444ff",
-      "source_git_blob_sha": "2f0e1c98dbb03dd94cc354bae828256f20a3d3a0",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.97209,
-      "quality_metrics": {
-        "body_chars": 3421,
-        "method_chars": 974,
-        "evaluation_chars": 495,
-        "limitation_chars": 288
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 評価説明量 495 < 500"
-      ],
       "warnings": []
     }
   ]
