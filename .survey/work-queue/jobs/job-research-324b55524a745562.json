@@ -35,10 +35,15 @@
   "selection_reason": "deployment時に大きすぎるBERTをweight pruningで圧縮し、どのpruning率までdownstream性能を保てるかを体系評価する。30–40% pruningではpre-training lossとtransfer性能を維持でき、taskごとの再pruning不要というdeployment向け圧縮知見を与えるため対象。",
   "semantic_scholar_id": "d9b824dbecbe3a1f0b1489f9e4521a532a63818d",
   "source_url": "https://arxiv.org/abs/2002.08307",
-  "status": "ready",
+  "status": "superseded",
   "title": "Compressing BERT: Studying the Effects of Weight Pruning on Transfer Learning",
   "type": "research",
   "venue": "Workshop on Representation Learning for NLP",
   "workflow_version": 10,
-  "year": 2020
+  "year": 2020,
+  "superseded_at": "2026-10-13T12:15:20+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2020-2002.08307-compressing-bert-studying-the-effects-of-weight-pruning-on-transfer-lear.md",
+  "represented_canonical_id": "arXiv:2002.08307",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

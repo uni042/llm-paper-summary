@@ -25,6 +25,8 @@ arxiv_categories:
 last_checked: '2026-10-13'
 worker_completed_at: '2026-10-13T16:30:56+09:00'
 worker_run_key: '20261013-1630-scheduled-chat-30/r01'
+last_audited: null
+audit_version: 0
 ---
 
 # Cassandra: Enabling Reasoning LLMs at Edge via Self-Speculative Decoding
