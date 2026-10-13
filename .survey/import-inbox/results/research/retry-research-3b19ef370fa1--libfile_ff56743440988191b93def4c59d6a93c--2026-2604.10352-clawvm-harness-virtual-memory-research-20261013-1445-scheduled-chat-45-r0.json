@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "db60d57b1c8995161018d6cf9031f548b479fdf01232cd77ca11d9f26a522b94",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/retry-research-3b19ef370fa1--libfile_ff56743440988191b93def4c59d6a93c--2026-2604.10352-clawvm-harness-virtual-memory-research-20261013-1445-scheduled-chat-45-r01.md",
+  "canonical_id": "arXiv:2604.10352",
+  "worker_completed_at": "2026-10-13T14:48:06+09:00",
+  "worker_run_key": "20261013-1445-scheduled-chat-45/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 5252,
+    "body_paragraphs": 29,
+    "method_chars": 1300,
+    "method_paragraphs": 7,
+    "evaluation_chars": 380,
+    "limitation_chars": 0,
+    "insufficiency_flags": [
+      "評価説明量 380 < 500",
+      "限界説明量 0 < 推奨 120"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 評価説明量 380 < 500"
+  ],
+  "processed_at": "2026-10-13T13:36:39+00:00"
+}
