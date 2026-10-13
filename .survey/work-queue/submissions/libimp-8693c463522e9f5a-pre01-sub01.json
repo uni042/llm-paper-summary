@@ -1,0 +1,114 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "From Completion to Editing: Unlocking Context-Aware Code Infilling via Search-and-Replace Instruction Tuning",
+      "source_url": "https://arxiv.org/abs/2601.13384",
+      "year": 2026,
+      "published": "2026-01-19",
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "citation_count": 8,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The dominant Fill-in-the-Middle (FIM) paradigm for code completion is constrained by its rigid inability to correct contextual errors and reliance on unaligned, insecure Base models. While Chat LLMs offer safety and Agentic workflows provide flexibility, they suffer from performance degradation and prohibitive latency, respectively. To resolve this dilemma, we propose Search-and-Replace Infilling (SRI), a framework that internalizes the agentic verification-and-editing mechanism into a unified, single-pass inference process. By structurally grounding edits via an explicit search phase, SRI harmonizes completion tasks with the instruction-following priors of Chat LLMs, extending the paradigm from static infilling to dynamic context-aware editing. We synthesize a high-quality dataset, SRI-200K, and fine-tune the SRI-Coder series. Extensive evaluations demonstrate that with minimal data (20k samples), SRI-Coder enables Chat models to surpass the completion performance of their Base counterparts. Crucially, unlike FIM-style tuning, SRI preserves general coding competencies and maintains inference latency comparable to standard FIM. We empower the entire Qwen3-Coder series with SRI, encouraging the developer community to leverage this framework for advanced auto-completion and assisted development.",
+      "identifiers": [
+        "SemanticScholar:581e24dbba3a700b881abb9b7296b7e45fdd70f1"
+      ],
+      "semantic_scholar_id": "581e24dbba3a700b881abb9b7296b7e45fdd70f1",
+      "canonical_id": "arXiv:2601.13384",
+      "arxiv_id": "2601.13384",
+      "doi": "10.48550/arXiv.2601.13384",
+      "authors": [
+        "Jia-Jun Zhang",
+        "Zeyu Cui",
+        "Jia-Xin Yang",
+        "Lei Zhang",
+        "Yu-Heng Jing",
+        "Ze-Yao Ma",
+        "Tianyi Bai",
+        "Zi-Lei Wang",
+        "Qiang Liu",
+        "Liang Wang",
+        "Binyuan Hui",
+        "Junyang Lin"
+      ],
+      "priority": 118,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 10,
+        "citations": 8,
+        "citation_count": 8,
+        "total": 118,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 267,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      },
+      "reason": "Search-and-Replace Infilling folds agentic verification/editing into a single-pass code-model inference path and reports latency comparable to ordinary FIM, directly addressing latency overhead in LLM-assisted execution.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Keyword search is all you need: Achieving RAG-Level Performance without vector databases using agentic tool use",
+      "source_url": "https://arxiv.org/abs/2602.23368",
+      "year": 2025,
+      "published": "2025-12-19",
+      "venue": "arXiv.org",
+      "citation_count": 12,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "While Retrieval-Augmented Generation (RAG) has proven effective for generating accurate, context-based responses based on existing knowledge bases, it presents several challenges including retrieval quality dependencies, integration complexity and cost. Recent advances in agentic-RAG and tool-augmented LLM architectures have introduced alternative approaches to information retrieval and processing. We question how much additional value vector databases and semantic search bring to RAG over simple, agentic keyword search in documents for question-answering. In this study, we conducted a systematic comparison between RAG-based systems and tool-augmented LLM agents, specifically evaluating their retrieval mechanisms and response quality when the agent only has access to basic keyword search tools. Our empirical analysis demonstrates that tool-based keyword search implementations within an agentic framework can attain over $90\\%$ of the performance metrics compared to traditional RAG systems without using a standing vector database. Our approach is simple to implement, cost effective, and is particularly useful in scenarios requiring frequent updates to knowledge bases.",
+      "identifiers": [
+        "SemanticScholar:1983a5ed0d6e5da6feb5963f687f0f808bc43155"
+      ],
+      "semantic_scholar_id": "1983a5ed0d6e5da6feb5963f687f0f808bc43155",
+      "canonical_id": "arXiv:2602.23368",
+      "arxiv_id": "2602.23368",
+      "doi": "10.48550/arXiv.2602.23368",
+      "authors": [
+        "S. Subramanian",
+        "Adewale Akinfaderin",
+        "Yanyan Zhang",
+        "Isha Singh",
+        "M. Khanuja",
+        "Sandeep Singh",
+        "Maira Ladeira Tanke"
+      ],
+      "priority": 112,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 12,
+        "citation_count": 12,
+        "total": 112,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 298,
+        "matched_prestigious_venue": null
+      },
+      "reason": "The paper replaces vector-database retrieval with keyword search plus agentic tool use while claiming RAG-level results; this is a concrete retrieval/inference-stack alternative that may reduce serving dependencies and overhead.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-8693c463522e",
+    "round": "libimp-8693c463522e9f5a-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 2,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-8693c463522e9f5a-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-8693c463522e9f5a-pre01.json",
+    "receipt": "sha256:ba22a6f0cc118c46a5d1657a62595fb49278f52bc2c1ee8466c5e9ce80c21fd1"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-8693c463522e",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
