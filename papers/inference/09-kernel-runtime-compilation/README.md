@@ -23,7 +23,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - [06-moe-quantization-compression](../06-moe-quantization-compression/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（73本）
+## 自動生成の論文一覧（74本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -115,6 +115,10 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - **2026-05 · [ViBE: Co-Optimizing Workload Skew and Hardware Variability for MoE Serving](2026-2606.00735-vibe-co-optimizing-workload-skew-and-hardware-variability-for-moe-servin.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   混合専門家モデル（Mixture of エキスパート; MoE）の分散推論では、入力トークンに応じて選択される専門家（専門家）が偏る。専門家並列（専門家 parallelism; EP）では各GPUが担当する専門家を処理した後に同期するため、あるGPUの処理が遅いと層全体が待たされる。したがってトークン数が等しくても実行時間は等しくならない。
+
+- **2026-05 · [ThriftAttention: Selective Mixed Precision for Long-Context FP4 Attention](2026-2605.23081-thriftattention-selective-mixed-precision-for-long-context-fp4-attention.md)**  
+  実装：[✓](https://github.com/joesharratt1229/ThriftAttention) ・ リポジトリ内被引用：0  
+  ThriftAttentionは、すべてを高精度に戻すのではなく、注意出力に強く影響する問い合わせ・鍵ブロックだけを16ビット浮動小数点（FP16）で計算し、残りをFP4に保つ学習不要の方式である。原著では全ブロック組の上位5%だけをFP16へ昇格させると、FP4とFP16の長文ベンチマーク得点差の平均89.1%を回復した。
 
 - **2026-05 · [Self-Pruned Key-Value Attention: Learning When to Write by Predicting Future Utility](2026-2605.14037-self-pruned-key-value-attention-learning-when-to-write-by-predicting-fut.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

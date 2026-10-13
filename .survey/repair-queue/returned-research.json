@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-13T22:09:08+00:00",
+  "generated_at": "2026-10-13T22:17:41+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -1008,8 +1008,8 @@
       "canonical_id": "arXiv:2607.22634",
       "title": "PRESTO: Prefix-Aligned Tree Drafting for Diffusion Speculative Decoding",
       "source_url": "https://arxiv.org/html/2607.22634v1",
-      "returned_at": "2026-10-13T22:04:43+00:00",
-      "return_count": 1,
+      "returned_at": "2026-10-13T22:16:28+00:00",
+      "return_count": 2,
       "assigned_worker": "scheduled-chat-45",
       "reason": "blocked_quality",
       "failures": [
@@ -1027,8 +1027,8 @@
           "手法説明量 0 < 700"
         ]
       },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_0d8f6dbce57c8191ab1662351a68d84d--2026-2607.22634-presto-prefix-aligned-tree-drafting-research-20261014-0300-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_0d8f6dbce57c8191ab1662351a68d84d--2026-2607.22634-presto-prefix-aligned-tree-drafting-research-20261014-0300-scheduled-chat-00-r01.json",
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-d6af7cc3d30c--libfile_0d8f6dbce57c8191ab1662351a68d84d--2026-2607.22634-presto-prefix-aligned-tree-drafting-research-20261014-0300-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-d6af7cc3d30c--libfile_0d8f6dbce57c8191ab1662351a68d84d--2026-2607.22634-presto-prefix-aligned-tree-drafting-research-20261014-0300-scheduled-chat.json",
       "worker_run_key": "20261014-0300-scheduled-chat-00/r01"
     }
   ]

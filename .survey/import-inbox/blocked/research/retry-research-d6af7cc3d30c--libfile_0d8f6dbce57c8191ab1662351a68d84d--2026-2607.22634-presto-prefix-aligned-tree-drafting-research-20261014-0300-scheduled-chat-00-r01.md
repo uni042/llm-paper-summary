@@ -32,6 +32,8 @@ code: null
 last_checked: "2026-10-14"
 worker_completed_at: "2026-10-14T03:00:00+09:00"
 worker_run_key: "20261014-0300-scheduled-chat-00/r01"
+last_audited: null
+audit_version: 0
 ---
 
 # PRESTO：拡散モデルの並列草稿を接頭辞に整合した候補木へ変換する
