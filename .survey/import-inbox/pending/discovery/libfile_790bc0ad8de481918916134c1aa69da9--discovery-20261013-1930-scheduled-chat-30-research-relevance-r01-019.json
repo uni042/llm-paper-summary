@@ -1,0 +1,27 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261013-1930-scheduled-chat-30/r01/research-relevance-019",
+  "reference_main_sha": "df1e54299253121b022271294c687c1ffc4caa81",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2407.18370",
+      "identity_tokens": [
+        "id:arXiv:2407.18370",
+        "url:https://arxiv.org/abs/2407.18370"
+      ],
+      "title": "Trust or Escalate: LLM Judges with Provable Guarantees for Human Agreement",
+      "reason": "一次要旨では、LLMによる応答品質の審査を人間判断との一致保証付きで選択的に実施し、安価な判定モデルで確信が低い例だけ強い判定モデルへ送る段階的評価を提案する。モデル呼出しの費用配分という意味で推論時ルーティングに隣接するが、目的は審査の校正と人間一致率であり、汎用LLMサービングのスケジューリング・メモリ階層・トークン生成性能の改善を直接検証していないため境界的とする。",
+      "source_url": "https://arxiv.org/abs/2407.18370",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T19:30:34+09:00",
+      "last_checked_at": "2026-10-13T19:30:34+09:00",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance",
+      "worklist_rank": 19
+    }
+  ]
+}
