@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-13T20:57:41+00:00",
-  "record_count": 11881,
+  "updated_at": "2026-10-13T21:12:10+00:00",
+  "record_count": 11886,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -170639,6 +170639,138 @@
         "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md"
       ],
       "title": "MoME: Mixture of Matryoshka Experts for Audio-Visual Speech Recognition"
+    },
+    "arXiv:2410.17477": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2410.17477",
+      "identity_tokens": [
+        "arXiv:2410.17477",
+        "id:arXiv:2410.17477",
+        "url:https://arxiv.org/abs/2410.17477"
+      ],
+      "reason": "The abstract studies how model architecture affects hallucination patterns; it does not propose or evaluate a concrete inference or serving efficiency method.",
+      "first_checked_at": "2026-10-13T21:12:07+00:00",
+      "last_checked_at": "2026-10-13T21:12:07+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2017-1701.06538-outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts.md",
+        "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md",
+        "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md",
+        "papers/inference/99-other-inference-systems/2023-2212.10511-when-not-to-trust-language-models-investigating-effectiveness-of-paramet.md",
+        "papers/inference/99-other-inference-systems/2023-2303.06349-resurrecting-recurrent-neural-networks-for-long-sequences.md",
+        "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md",
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md",
+        "papers/inference/99-other-inference-systems/2024-2402.19427-griffin-mixing-gated-linear-recurrences-with-local-attention-for-efficie.md",
+        "papers/inference/99-other-inference-systems/2024-2404.05892-eagle-and-finch-rwkv-with-matrix-valued-states-and-dynamic-recurrence.md",
+        "papers/inference/99-other-inference-systems/2024-2407.04620-learning-to-learn-at-test-time-rnns-with-expressive-hidden-states.md"
+      ],
+      "title": "Do Robot Snakes Dream like Electric Sheep? Investigating the Effects of Architectural Inductive Biases on Hallucination"
+    },
+    "arXiv:2509.17514": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2509.17514",
+      "identity_tokens": [
+        "arXiv:2509.17514",
+        "id:arXiv:2509.17514",
+        "url:https://arxiv.org/abs/2509.17514"
+      ],
+      "reason": "The abstract characterizes Mamba limitations on synthetic reasoning tasks and proposes no efficiency mechanism or measurement; the architectural comparison alone does not establish a systems-efficiency contribution.",
+      "first_checked_at": "2026-10-13T21:12:07+00:00",
+      "last_checked_at": "2026-10-13T21:12:07+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md",
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md",
+        "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08621-retentive-network-a-successor-to-transformer-for-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md",
+        "papers/inference/99-other-inference-systems/2024-2312.06635-gated-linear-attention-transformers-with-hardware-efficient-training.md",
+        "papers/inference/99-other-inference-systems/2024-2404.05892-eagle-and-finch-rwkv-with-matrix-valued-states-and-dynamic-recurrence.md"
+      ],
+      "title": "Achilles' Heel of Mamba: Essential difficulties of the Mamba architecture demonstrated by synthetic data"
+    },
+    "arXiv:2410.03159": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2410.03159",
+      "identity_tokens": [
+        "arXiv:2410.03159",
+        "id:arXiv:2410.03159",
+        "url:https://arxiv.org/abs/2410.03159"
+      ],
+      "reason": "WAVE improves time-series forecasting through a hybrid attention structure; the primary abstract does not establish an LLM or inference-system efficiency contribution.",
+      "first_checked_at": "2026-10-13T21:12:07+00:00",
+      "last_checked_at": "2026-10-13T21:12:07+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md",
+        "papers/inference/99-other-inference-systems/2022-2202.10447-transformer-quality-in-linear-time.md",
+        "papers/inference/99-other-inference-systems/2023-2303.06349-resurrecting-recurrent-neural-networks-for-long-sequences.md",
+        "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08621-retentive-network-a-successor-to-transformer-for-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2024-2312.06635-gated-linear-attention-transformers-with-hardware-efficient-training.md",
+        "papers/inference/99-other-inference-systems/2024-2404.07904-hgrn2-gated-linear-rnns-with-state-expansion.md"
+      ],
+      "title": "WAVE: Weighted Autoregressive Varying Gate for Time Series Forecasting"
+    },
+    "arXiv:2506.20251": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2506.20251",
+      "identity_tokens": [
+        "arXiv:2506.20251",
+        "id:arXiv:2506.20251",
+        "url:https://arxiv.org/abs/2506.20251"
+      ],
+      "reason": "Q-resafe assesses and patches safety behavior after quantization; its contribution targets safety alignment rather than inference efficiency or system performance.",
+      "first_checked_at": "2026-10-13T21:12:10+00:00",
+      "last_checked_at": "2026-10-13T21:12:10+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-2402.10076-quick-quantization-aware-interleaving-and-conflict-free-kernel-for-effic.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2310.18547-punica-multitenant-lora-serving.md",
+        "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md",
+        "papers/inference/16-weight-quantization-compression/2023-2306.00978-awq.md",
+        "papers/inference/16-weight-quantization-compression/2023-2306.03078-spqr-a-sparse-quantized-representation-for-near-lossless-llm-weight-compression.md",
+        "papers/inference/16-weight-quantization-compression/2023-2306.07629-squeezellm-dense-and-sparse-quantization.md",
+        "papers/inference/16-weight-quantization-compression/2023-2310.00034-pb-llm-partially-binarized-large-language-models.md",
+        "papers/inference/16-weight-quantization-compression/2023-2310.19102-atom-low-bit-quantization-for-efficient-and-accurate-llm-serving.md",
+        "papers/inference/16-weight-quantization-compression/2024-2402.10631-bitdistiller-unleashing-the-potential-of-sub-4-bit-llms-via-self-distill.md",
+        "papers/inference/16-weight-quantization-compression/2024-2406.01721-duquant-distributing-outliers-via-dual-transformation-makes-stronger-quantized-llms.md",
+        "papers/inference/99-other-inference-systems/2022-2206.01861-zeroquant-efficient-and-affordable-post-training-quantization-for-large-.md",
+        "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2023-2301.00774-sparsegpt-massive-language-models-can-be-accurately-pruned-in-one-shot.md",
+        "papers/inference/99-other-inference-systems/2023-2305.14152-memory-efficient-fine-tuning-of-compressed-large-language-models-via-sub.md",
+        "papers/inference/99-other-inference-systems/2023-2305.17888-llm-qat-data-free-quantization-aware-training-for-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2023-2308.13137-omniquant-omnidirectionally-calibrated-quantization-for-large-language-m.md",
+        "papers/inference/99-other-inference-systems/2024-2401.06118-extreme-compression-of-large-language-models-via-additive-quantization.md",
+        "papers/inference/99-other-inference-systems/2024-2402.11295-onebit-towards-extremely-low-bit-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2024-2402.17764-the-era-of-1-bit-llms-all-large-language-models-are-in-1-58-bits.md",
+        "papers/inference/99-other-inference-systems/2024-2403.15447-decoding-compressed-trust-scrutinizing-the-trustworthiness-of-efficient-.md",
+        "papers/inference/99-other-inference-systems/2024-2404.00456-quarot-outlier-free-4-bit-inference-in-rotated-llms.md",
+        "papers/inference/99-other-inference-systems/2025-2405.16406-spinquant-llm-quantization-with-learned-rotations.md"
+      ],
+      "title": "Q-resafe: Assessing Safety Risks and Quantization-aware Safety Patching for Quantized Large Language Models"
+    },
+    "DOI:10.48550/arxiv.2406.00209": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.48550/arxiv.2406.00209",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2406.00209",
+        "arXiv:2406.00209",
+        "id:DOI:10.48550/arxiv.2406.00209",
+        "id:arXiv:2406.00209",
+        "url:https://doi.org/10.48550/arXiv.2406.00209"
+      ],
+      "reason": "The abstract studies fine-tuning stability and recurrent dynamics, not model inference efficiency or serving systems.",
+      "first_checked_at": "2026-10-13T21:12:10+00:00",
+      "last_checked_at": "2026-10-13T21:12:10+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2403.19887-jamba-a-hybrid-transformer-mamba-language-model.md",
+        "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md",
+        "papers/inference/19-inference-evaluation-benchmarking/2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md",
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+        "papers/inference/99-other-inference-systems/2022-2212.09720-the-case-for-4-bit-precision-k-bit-inference-scaling-laws.md",
+        "papers/inference/99-other-inference-systems/2022-2212.14052-hungry-hungry-hippos-towards-language-modeling-with-state-space-models.md",
+        "papers/inference/99-other-inference-systems/2023-2303.06349-resurrecting-recurrent-neural-networks-for-long-sequences.md",
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md",
+        "papers/inference/99-other-inference-systems/2024-2402.01771-blackmamba-mixture-of-experts-for-state-space-models.md"
+      ],
+      "title": "Mamba State-Space Models Can Be Strong Downstream Learners"
     }
   }
 }
