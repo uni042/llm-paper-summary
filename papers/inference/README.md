@@ -1,6 +1,6 @@
 # 推論システム研究
 
-収録論文: **2009本**。
+収録論文: **2013本**。
 
 推論・serving・decoding・実行時memory / I/O・on-device実行など、**modelを使って出力を生成する段階の効率化**を目的とする研究を収録する。
 
@@ -34,7 +34,7 @@
 <!-- survey:auto:start -->
 ## 自動生成の収録状況
 
-推論論文：**2009本**。
+推論論文：**2013本**。
 
 | 系統 | 本数 |
 |---|---:|
@@ -53,9 +53,9 @@
 | [13-sparse-attention](13-sparse-attention/README.md) | 62 |
 | [14-agentic-inference-serving-runtime](14-agentic-inference-serving-runtime/README.md) | 41 |
 | [15-inference-simulation-emulation](15-inference-simulation-emulation/README.md) | 23 |
-| [16-weight-quantization-compression](16-weight-quantization-compression/README.md) | 43 |
+| [16-weight-quantization-compression](16-weight-quantization-compression/README.md) | 44 |
 | [17-pim-near-data-acceleration](17-pim-near-data-acceleration/README.md) | 22 |
 | [18-pipeline-native-cpu-inference](18-pipeline-native-cpu-inference/README.md) | 1 |
-| [19-inference-evaluation-benchmarking](19-inference-evaluation-benchmarking/README.md) | 32 |
-| [99-other-inference-systems](99-other-inference-systems/README.md) | 556 |
+| [19-inference-evaluation-benchmarking](19-inference-evaluation-benchmarking/README.md) | 33 |
+| [99-other-inference-systems](99-other-inference-systems/README.md) | 558 |
 <!-- survey:auto:end -->
