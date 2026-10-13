@@ -1,0 +1,26 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-45",
+  "run_key": "20261014-0345-scheduled-chat-45/r01",
+  "reference_main_sha": "53f10a38feecd9b9efeb82fbc5205dc6cca61287",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.26005",
+      "identity_tokens": [
+        "arxiv:2608.26005"
+      ],
+      "title": "VoiceMem: Streaming Dual-Brain Memory for Real-Time Interaction",
+      "reason": "原著第3節の二層schema–entity索引、左脳の事実記憶と右脳の感情・人格記憶の並列検索、発話中の照合・200–400msの先読み・400–500msの検索による134msの記憶検索は、対話型推論サービスのレイテンシー最適化に関連する。一方、主目的は音声エージェントの記憶品質・個人化・感情理解であり、モデルの復号カーネル、KV、量子化、汎用LLMサービングの性能を改善する研究ではない。Mem0等の検索バックエンド上のアプリケーション固有メモリ層であるため、現行サーベイの直接収録対象としては保留。なお原著HTML要旨とarXiv概要の人格評価改善幅に差があり、数値の無条件転載を避ける。",
+      "source_url": "https://arxiv.org/html/2608.26005v1",
+      "body_check": "research_fulltext_relevance_review: 第3.1節のschema/entity検索と候補縮小、第3.2節の人格記憶、第3.3節の4段階ストリーミング検索と134ms、第4.2節のバックエンド分離、第5節の記憶品質評価を確認。推論エンジンそのものではなく音声対話の記憶レイヤが中心。",
+      "first_checked_at": "2026-10-14T03:54:13+09:00",
+      "last_checked_at": "2026-10-14T03:54:13+09:00",
+      "linked_from": [],
+      "origin": "research_postread_relevance",
+      "worklist_rank": 66
+    }
+  ]
+}
