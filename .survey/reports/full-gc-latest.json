@@ -1,219 +1,175 @@
 {
   "schema_version": 3,
-  "checked_at": "2026-10-12T00:05:41.086548+00:00",
+  "checked_at": "2026-10-13T00:26:21.433239+00:00",
   "mode": "apply",
   "job_retention_days": 7,
   "transport_retention_days": 1,
-  "candidate_count": 199,
+  "candidate_count": 153,
   "candidate_counts_by_kind": {
-    "settled_submission": 35,
-    "settled_result": 35,
-    "settled_immutable_submission": 6,
-    "settled_immutable_result": 6,
-    "terminal_job": 107,
-    "terminal_claim": 10
+    "settled_submission": 13,
+    "settled_result": 13,
+    "settled_immutable_submission": 9,
+    "settled_immutable_result": 9,
+    "terminal_job": 84,
+    "terminal_claim": 21,
+    "settled_claim_request": 2,
+    "settled_claim_result": 2
   },
-  "deleted_count": 199,
+  "deleted_count": 153,
   "deleted": [
-    ".survey/work-queue/submissions/libimp-002da2a6db7d0b4c-pre01-sub01.json",
-    ".survey/work-queue/results/libimp-002da2a6db7d0b4c-pre01-sub01.json",
-    ".survey/work-queue/submissions/libimp-0077823f3ec87b2c-pre01-sub01.json",
-    ".survey/work-queue/results/libimp-0077823f3ec87b2c-pre01-sub01.json",
-    ".survey/work-queue/submissions/libimp-02e07e80581589a7-pre01-sub01.json",
-    ".survey/work-queue/results/libimp-02e07e80581589a7-pre01-sub01.json",
-    ".survey/work-queue/submissions/libimp-02e07e80581589a7-pre01-sub02.json",
-    ".survey/work-queue/results/libimp-02e07e80581589a7-pre01-sub02.json",
-    ".survey/work-queue/submissions/libimp-02e07e80581589a7-pre01-sub03.json",
-    ".survey/work-queue/results/libimp-02e07e80581589a7-pre01-sub03.json",
-    ".survey/work-queue/submissions/libimp-02e07e80581589a7-pre01-sub04.json",
-    ".survey/work-queue/results/libimp-02e07e80581589a7-pre01-sub04.json",
-    ".survey/work-queue/submissions/libimp-16febf58274da3cc-pre01-sub01.json",
-    ".survey/work-queue/results/libimp-16febf58274da3cc-pre01-sub01.json",
-    ".survey/work-queue/submissions/libimp-191ecf28271c34ae-pre01-sub01.json",
-    ".survey/work-queue/results/libimp-191ecf28271c34ae-pre01-sub01.json",
-    ".survey/work-queue/submissions/libimp-2202132da625f06c-pre01-sub01.json",
-    ".survey/work-queue/results/libimp-2202132da625f06c-pre01-sub01.json",
-    ".survey/work-queue/submissions/libimp-24ce3d56dae1d771-pre01-sub01.json",
-    ".survey/work-queue/results/libimp-24ce3d56dae1d771-pre01-sub01.json",
-    ".survey/work-queue/submissions/libimp-24ce3d56dae1d771-pre01-sub02.json",
-    ".survey/work-queue/results/libimp-24ce3d56dae1d771-pre01-sub02.json",
-    ".survey/work-queue/submissions/libimp-29fa0465a7f851e4-pre01-sub01.json",
-    ".survey/work-queue/results/libimp-29fa0465a7f851e4-pre01-sub01.json",
-    ".survey/work-queue/submissions/libimp-29fa0465a7f851e4-pre01-sub02.json",
-    ".survey/work-queue/results/libimp-29fa0465a7f851e4-pre01-sub02.json",
-    ".survey/work-queue/submissions/libimp-29fa0465a7f851e4-pre01-sub03.json",
-    ".survey/work-queue/results/libimp-29fa0465a7f851e4-pre01-sub03.json",
-    ".survey/work-queue/submissions/libimp-31da1f3d0112b144-pre01-sub01.json",
-    ".survey/work-queue/results/libimp-31da1f3d0112b144-pre01-sub01.json",
-    ".survey/work-queue/submissions/libimp-6151c3990068c8f4-pre01-sub01.json",
-    ".survey/work-queue/results/libimp-6151c3990068c8f4-pre01-sub01.json",
-    ".survey/work-queue/submissions/libimp-6151c3990068c8f4-pre01-sub02.json",
-    ".survey/work-queue/results/libimp-6151c3990068c8f4-pre01-sub02.json",
-    ".survey/work-queue/submissions/libimp-6151c3990068c8f4-pre01-sub03.json",
-    ".survey/work-queue/results/libimp-6151c3990068c8f4-pre01-sub03.json",
-    ".survey/work-queue/submissions/libimp-621819831a6edffd-pre01-sub01.json",
-    ".survey/work-queue/results/libimp-621819831a6edffd-pre01-sub01.json",
-    ".survey/work-queue/submissions/libimp-621819831a6edffd-pre01-sub02.json",
-    ".survey/work-queue/results/libimp-621819831a6edffd-pre01-sub02.json",
-    ".survey/work-queue/submissions/libimp-69954eee8cfec368-pre01-sub01.json",
-    ".survey/work-queue/results/libimp-69954eee8cfec368-pre01-sub01.json",
-    ".survey/work-queue/submissions/libimp-69954eee8cfec368-pre01-sub02.json",
-    ".survey/work-queue/results/libimp-69954eee8cfec368-pre01-sub02.json",
-    ".survey/work-queue/submissions/libimp-6f71a02220644722-pre01-sub01.json",
-    ".survey/work-queue/results/libimp-6f71a02220644722-pre01-sub01.json",
-    ".survey/work-queue/submissions/libimp-6f71a02220644722-pre01-sub02.json",
-    ".survey/work-queue/results/libimp-6f71a02220644722-pre01-sub02.json",
-    ".survey/work-queue/submissions/libimp-89e0c49557d9f8af-pre01-sub01.json",
-    ".survey/work-queue/results/libimp-89e0c49557d9f8af-pre01-sub01.json",
-    ".survey/work-queue/submissions/libimp-89e0c49557d9f8af-pre01-sub02.json",
-    ".survey/work-queue/results/libimp-89e0c49557d9f8af-pre01-sub02.json",
-    ".survey/work-queue/submissions/libimp-89e0c49557d9f8af-pre01-sub03.json",
-    ".survey/work-queue/results/libimp-89e0c49557d9f8af-pre01-sub03.json",
-    ".survey/work-queue/submissions/libimp-89e0c49557d9f8af-pre01-sub04.json",
-    ".survey/work-queue/results/libimp-89e0c49557d9f8af-pre01-sub04.json",
-    ".survey/work-queue/submissions/libimp-ac1ca94c832ad557-pre01-sub01.json",
-    ".survey/work-queue/results/libimp-ac1ca94c832ad557-pre01-sub01.json",
-    ".survey/work-queue/submissions/libimp-ac1ca94c832ad557-pre01-sub02.json",
-    ".survey/work-queue/results/libimp-ac1ca94c832ad557-pre01-sub02.json",
-    ".survey/work-queue/submissions/libimp-b7659cf2adc85b7f-pre01-sub01.json",
-    ".survey/work-queue/results/libimp-b7659cf2adc85b7f-pre01-sub01.json",
-    ".survey/work-queue/submissions/libimp-cbc27a11a942c1ed-pre01-sub01.json",
-    ".survey/work-queue/results/libimp-cbc27a11a942c1ed-pre01-sub01.json",
-    ".survey/work-queue/submissions/libimp-cbc27a11a942c1ed-pre01-sub02.json",
-    ".survey/work-queue/results/libimp-cbc27a11a942c1ed-pre01-sub02.json",
-    ".survey/work-queue/submissions/libimp-ccd23c55366846aa-pre01-sub01.json",
-    ".survey/work-queue/results/libimp-ccd23c55366846aa-pre01-sub01.json",
-    ".survey/work-queue/submissions/libimp-e4d71940aba7f5f1-pre01-sub01.json",
-    ".survey/work-queue/results/libimp-e4d71940aba7f5f1-pre01-sub01.json",
-    ".survey/work-queue/submissions/research/attempt-1676031a0252447c163dfc04.json",
-    ".survey/work-queue/results/research/attempt-1676031a0252447c163dfc04.json",
-    ".survey/work-queue/submissions/research/attempt-41945f240a7e297500403b5b.json",
-    ".survey/work-queue/results/research/attempt-41945f240a7e297500403b5b.json",
-    ".survey/work-queue/submissions/research/attempt-79e5f1bb5c89a9d7a83c30ec.json",
-    ".survey/work-queue/results/research/attempt-79e5f1bb5c89a9d7a83c30ec.json",
-    ".survey/work-queue/submissions/research/attempt-a952bf0b515b043bf649c82d.json",
-    ".survey/work-queue/results/research/attempt-a952bf0b515b043bf649c82d.json",
-    ".survey/work-queue/submissions/research/attempt-b9523ed098074392111e4480.json",
-    ".survey/work-queue/results/research/attempt-b9523ed098074392111e4480.json",
-    ".survey/work-queue/submissions/research/attempt-preload-bbe236542a88837d1cc581e9.json",
-    ".survey/work-queue/results/research/attempt-preload-bbe236542a88837d1cc581e9.json",
-    ".survey/work-queue/jobs/job-0218b60c3efe6c12.json",
-    ".survey/work-queue/jobs/job-0754ba9fa8cecf2e.json",
-    ".survey/work-queue/jobs/job-08a47dd96aec4d53.json",
-    ".survey/work-queue/jobs/job-102e90263a1450f4.json",
-    ".survey/work-queue/jobs/job-20f0e9b25a7d82c0.json",
-    ".survey/work-queue/jobs/job-232a117501154d74.json",
-    ".survey/work-queue/jobs/job-25eccba9b6abe192.json",
-    ".survey/work-queue/jobs/job-2913270cdda64228.json",
-    ".survey/work-queue/jobs/job-2fca5013bad41bf7.json",
-    ".survey/work-queue/jobs/job-39e31105aedd61a9.json",
-    ".survey/work-queue/jobs/job-46505f2da211de7b.json",
-    ".survey/work-queue/jobs/job-46839bcb89a60fb8.json",
-    ".survey/work-queue/jobs/job-4cc4585e7ecc2b74.json",
-    ".survey/work-queue/jobs/job-5c32bc3a3adba21a.json",
-    ".survey/work-queue/jobs/job-6114a3c9e2ed35cf.json",
-    ".survey/work-queue/jobs/job-67a3e19029bc9ebc.json",
-    ".survey/work-queue/jobs/job-6f84cd4162e3a176.json",
-    ".survey/work-queue/jobs/job-753ce5b33dcb161c.json",
-    ".survey/work-queue/jobs/job-7a163da8cb56934d.json",
-    ".survey/work-queue/jobs/job-9577b402658e1b4b.json",
-    ".survey/work-queue/jobs/job-969aa270f09d0257.json",
-    ".survey/work-queue/jobs/job-afd9b4d43ef7f271.json",
-    ".survey/work-queue/jobs/job-b672755bfb9ba0af.json",
-    ".survey/work-queue/jobs/job-c6c36c8af8fa2b82.json",
-    ".survey/work-queue/jobs/job-ccef48b1fba5aa40.json",
-    ".survey/work-queue/jobs/job-d1696a64da0a64a7.json",
-    ".survey/work-queue/jobs/job-d275592448b6c7a7.json",
-    ".survey/work-queue/jobs/job-d6eb07005b48dc8f.json",
-    ".survey/work-queue/jobs/job-da60271841eded6e.json",
-    ".survey/work-queue/jobs/job-de0f3dbdea7d6698.json",
-    ".survey/work-queue/jobs/job-dfab71a5e59120e1.json",
-    ".survey/work-queue/jobs/job-ecff8aadecacf1ed.json",
-    ".survey/work-queue/jobs/job-research-0c1bbffd7a195590.json",
-    ".survey/work-queue/jobs/job-research-0f8cc0c93811431b.json",
-    ".survey/work-queue/jobs/job-research-1264c1d92e2ef95d.json",
-    ".survey/work-queue/jobs/job-research-14a4152965323f92.json",
-    ".survey/work-queue/jobs/job-research-16e1b986271a0b9d.json",
-    ".survey/work-queue/jobs/job-research-1a4dbe8ea6b818de.json",
-    ".survey/work-queue/jobs/job-research-1de3acd83ab1eb9d.json",
-    ".survey/work-queue/jobs/job-research-1f8107492f55362b.json",
-    ".survey/work-queue/jobs/job-research-26539a1cc6234f61.json",
-    ".survey/work-queue/jobs/job-research-27e464e4e5e00de1.json",
-    ".survey/work-queue/jobs/job-research-280b7410174290e9.json",
-    ".survey/work-queue/jobs/job-research-2b08559ce4102c47.json",
-    ".survey/work-queue/jobs/job-research-2ebe76509c0b20ac.json",
-    ".survey/work-queue/jobs/job-research-354c911276d6d49d.json",
-    ".survey/work-queue/jobs/job-research-35be4d11c2c0464f.json",
-    ".survey/work-queue/jobs/job-research-3c0018659a66f214.json",
-    ".survey/work-queue/jobs/job-research-3c41560bf93206f5.json",
-    ".survey/work-queue/jobs/job-research-432972208f610250.json",
-    ".survey/work-queue/jobs/job-research-4415be2e25720d3a.json",
-    ".survey/work-queue/jobs/job-research-44a684e7391fb316.json",
-    ".survey/work-queue/jobs/job-research-4d5f1674d3e83f46.json",
-    ".survey/work-queue/jobs/job-research-4f82275d6e43a833.json",
-    ".survey/work-queue/jobs/job-research-535938f66efc4c79.json",
-    ".survey/work-queue/jobs/job-research-5bb5f53435a08e76.json",
-    ".survey/work-queue/jobs/job-research-5bd282d7c260721a.json",
-    ".survey/work-queue/jobs/job-research-609396d3e0b5eac2.json",
-    ".survey/work-queue/jobs/job-research-61f2388d652e7436.json",
-    ".survey/work-queue/jobs/job-research-6298315baf23d46c.json",
-    ".survey/work-queue/jobs/job-research-637493ea827470ce.json",
-    ".survey/work-queue/jobs/job-research-63bc8acd3f096a04.json",
-    ".survey/work-queue/jobs/job-research-648e5c15f6f9c519.json",
-    ".survey/work-queue/jobs/job-research-64f596fb42c2bf39.json",
-    ".survey/work-queue/jobs/job-research-668d29d1babd40c7.json",
-    ".survey/work-queue/jobs/job-research-673b3841fc632962.json",
-    ".survey/work-queue/jobs/job-research-676a3103d7f4fe42.json",
-    ".survey/work-queue/jobs/job-research-706c6126e515ac5e.json",
-    ".survey/work-queue/jobs/job-research-740a8ff224c7c3ee.json",
-    ".survey/work-queue/jobs/job-research-753e4f363c26365e.json",
-    ".survey/work-queue/jobs/job-research-77a37f9d7a937c97.json",
-    ".survey/work-queue/jobs/job-research-8336bf916cc1d939.json",
-    ".survey/work-queue/jobs/job-research-8551bea5951b9f04.json",
-    ".survey/work-queue/jobs/job-research-8c355bb6f9dcd079.json",
-    ".survey/work-queue/jobs/job-research-9aee3ce953b43bc0.json",
-    ".survey/work-queue/jobs/job-research-9c1d212f1dc11ae6.json",
-    ".survey/work-queue/jobs/job-research-9f29913899b17942.json",
-    ".survey/work-queue/jobs/job-research-a34b66775a399bd2.json",
-    ".survey/work-queue/jobs/job-research-a8d8d143f23a0820.json",
-    ".survey/work-queue/jobs/job-research-abafeb474f5e9dd8.json",
-    ".survey/work-queue/jobs/job-research-acf194d9da10b1af.json",
-    ".survey/work-queue/jobs/job-research-afa3db4dec3486e0.json",
-    ".survey/work-queue/jobs/job-research-b2d6c9e259c39ab3.json",
-    ".survey/work-queue/jobs/job-research-b50239bfe3239fe3.json",
-    ".survey/work-queue/jobs/job-research-b5931288896ecb5f.json",
-    ".survey/work-queue/jobs/job-research-b8d7341fd2a9565d.json",
-    ".survey/work-queue/jobs/job-research-bdcddce680082966.json",
-    ".survey/work-queue/jobs/job-research-be6432c24996c4d2.json",
-    ".survey/work-queue/jobs/job-research-c312adffcbd5fa76.json",
-    ".survey/work-queue/jobs/job-research-c6a902abf2eb5153.json",
-    ".survey/work-queue/jobs/job-research-cf624ab39be56123.json",
-    ".survey/work-queue/jobs/job-research-d045606021d22c61.json",
-    ".survey/work-queue/jobs/job-research-d6359b861fca686b.json",
-    ".survey/work-queue/jobs/job-research-da60fa0c40941d4d.json",
-    ".survey/work-queue/jobs/job-research-dd09f8f1ea8d4cc9.json",
-    ".survey/work-queue/jobs/job-research-dfcde3edcf70d50d.json",
-    ".survey/work-queue/jobs/job-research-dfebe801896dc950.json",
-    ".survey/work-queue/jobs/job-research-e37f81d7634eb52b.json",
-    ".survey/work-queue/jobs/job-research-e597416a6f67f662.json",
-    ".survey/work-queue/jobs/job-research-e888bdcf4d5ca2f3.json",
-    ".survey/work-queue/jobs/job-research-f2e323416158860a.json",
-    ".survey/work-queue/jobs/job-research-f4af9d97e0e75b64.json",
-    ".survey/work-queue/jobs/job-research-f5e6fd6025890d26.json",
-    ".survey/work-queue/jobs/job-research-f98752e71087c614.json",
-    ".survey/work-queue/jobs/job-research-fd167200c5ffe7f5.json",
-    ".survey/work-queue/jobs/job-research-fd4788affcd524bb.json",
-    ".survey/work-queue/jobs/job-research-fddaf776aa47ca5f.json",
-    ".survey/work-queue/claims/job-research-384393fce738e0be.json",
-    ".survey/work-queue/claims/job-research-38cf98b68843d7c7.json",
-    ".survey/work-queue/claims/job-research-4dc1463f3235b886.json",
-    ".survey/work-queue/claims/job-research-bec5c755173b872c.json",
-    ".survey/work-queue/claims/job-research-c64009d7663970de.json",
-    ".survey/work-queue/claims/job-research-c67c0a139707ac48.json",
-    ".survey/work-queue/claims/job-research-cd6b2c0b1a74df08.json",
-    ".survey/work-queue/claims/job-research-e55d5c0ff4de9aea.json",
-    ".survey/work-queue/claims/job-research-e83baeb4b866f9be.json",
-    ".survey/work-queue/claims/job-research-f844bb180f4f9fac.json"
+    ".survey/work-queue/submissions/libimp-17f6a1ee4caf6fcd-pre01-sub01.json",
+    ".survey/work-queue/results/libimp-17f6a1ee4caf6fcd-pre01-sub01.json",
+    ".survey/work-queue/submissions/libimp-292e10a07dc965b7-pre01-sub01.json",
+    ".survey/work-queue/results/libimp-292e10a07dc965b7-pre01-sub01.json",
+    ".survey/work-queue/submissions/libimp-2e3cca2d574e50ff-pre01-sub01.json",
+    ".survey/work-queue/results/libimp-2e3cca2d574e50ff-pre01-sub01.json",
+    ".survey/work-queue/submissions/libimp-4ac5e71d44f673ea-pre01-sub01.json",
+    ".survey/work-queue/results/libimp-4ac5e71d44f673ea-pre01-sub01.json",
+    ".survey/work-queue/submissions/libimp-6c6739e204ec9575-pre01-sub01.json",
+    ".survey/work-queue/results/libimp-6c6739e204ec9575-pre01-sub01.json",
+    ".survey/work-queue/submissions/libimp-6c6739e204ec9575-pre01-sub02.json",
+    ".survey/work-queue/results/libimp-6c6739e204ec9575-pre01-sub02.json",
+    ".survey/work-queue/submissions/libimp-b8e93d45907c1e07-pre01-sub01.json",
+    ".survey/work-queue/results/libimp-b8e93d45907c1e07-pre01-sub01.json",
+    ".survey/work-queue/submissions/libimp-bada7b8565efe629-pre01-sub01.json",
+    ".survey/work-queue/results/libimp-bada7b8565efe629-pre01-sub01.json",
+    ".survey/work-queue/submissions/libimp-c67269ff0aaf0f11-pre01-sub01.json",
+    ".survey/work-queue/results/libimp-c67269ff0aaf0f11-pre01-sub01.json",
+    ".survey/work-queue/submissions/libimp-d06879874349b832-pre01-sub01.json",
+    ".survey/work-queue/results/libimp-d06879874349b832-pre01-sub01.json",
+    ".survey/work-queue/submissions/libimp-eb9065ce5d7c1fb0-pre01-sub01.json",
+    ".survey/work-queue/results/libimp-eb9065ce5d7c1fb0-pre01-sub01.json",
+    ".survey/work-queue/submissions/libimp-fe09c3eb60fdbf71-pre01-sub01.json",
+    ".survey/work-queue/results/libimp-fe09c3eb60fdbf71-pre01-sub01.json",
+    ".survey/work-queue/submissions/libimp-fe09c3eb60fdbf71-pre01-sub02.json",
+    ".survey/work-queue/results/libimp-fe09c3eb60fdbf71-pre01-sub02.json",
+    ".survey/work-queue/submissions/research/attempt-1c66e86fb01d69f8806768c4.json",
+    ".survey/work-queue/results/research/attempt-1c66e86fb01d69f8806768c4.json",
+    ".survey/work-queue/submissions/research/attempt-20a5dda478e53293670ceefb.json",
+    ".survey/work-queue/results/research/attempt-20a5dda478e53293670ceefb.json",
+    ".survey/work-queue/submissions/research/attempt-3930d1453c4e909421448ada.json",
+    ".survey/work-queue/results/research/attempt-3930d1453c4e909421448ada.json",
+    ".survey/work-queue/submissions/research/attempt-3e625f867ada30709f9d971c.json",
+    ".survey/work-queue/results/research/attempt-3e625f867ada30709f9d971c.json",
+    ".survey/work-queue/submissions/research/attempt-7381d916bdd79b3e46aeb209.json",
+    ".survey/work-queue/results/research/attempt-7381d916bdd79b3e46aeb209.json",
+    ".survey/work-queue/submissions/research/attempt-838569c6f399cb046e74080e.json",
+    ".survey/work-queue/results/research/attempt-838569c6f399cb046e74080e.json",
+    ".survey/work-queue/submissions/research/attempt-ba794fbaa3ee0f39aef61a67.json",
+    ".survey/work-queue/results/research/attempt-ba794fbaa3ee0f39aef61a67.json",
+    ".survey/work-queue/submissions/research/attempt-d6d0f050a2bc6af8b178330b.json",
+    ".survey/work-queue/results/research/attempt-d6d0f050a2bc6af8b178330b.json",
+    ".survey/work-queue/submissions/research/attempt-preload-06399f8ef041c80fdeac63e6.json",
+    ".survey/work-queue/results/research/attempt-preload-06399f8ef041c80fdeac63e6.json",
+    ".survey/work-queue/jobs/job-05b0956e28b4c07e.json",
+    ".survey/work-queue/jobs/job-060ac1257ada4551.json",
+    ".survey/work-queue/jobs/job-08da2d58de7c6b0b.json",
+    ".survey/work-queue/jobs/job-0e52e718b180f6b9.json",
+    ".survey/work-queue/jobs/job-237bb447d0789cae.json",
+    ".survey/work-queue/jobs/job-364c0b53ba864773.json",
+    ".survey/work-queue/jobs/job-3baf3a53679f1e31.json",
+    ".survey/work-queue/jobs/job-495abd60f8d3ed51.json",
+    ".survey/work-queue/jobs/job-52a54556783f10ad.json",
+    ".survey/work-queue/jobs/job-52a5d3f20ea4e725.json",
+    ".survey/work-queue/jobs/job-5c3a12494f75c855.json",
+    ".survey/work-queue/jobs/job-5c7ec537494dbe37.json",
+    ".survey/work-queue/jobs/job-65636a5bff5a95a7.json",
+    ".survey/work-queue/jobs/job-6834ca7ab0842b9d.json",
+    ".survey/work-queue/jobs/job-686f06ca67786120.json",
+    ".survey/work-queue/jobs/job-6a4b28ca24a3c685.json",
+    ".survey/work-queue/jobs/job-700eb7a85d992104.json",
+    ".survey/work-queue/jobs/job-7d466a48a74279a1.json",
+    ".survey/work-queue/jobs/job-8599601fde487cfa.json",
+    ".survey/work-queue/jobs/job-887e3835886c7021.json",
+    ".survey/work-queue/jobs/job-936e4c1a0140a5df.json",
+    ".survey/work-queue/jobs/job-978413876b237f2e.json",
+    ".survey/work-queue/jobs/job-98a308aa5a249a43.json",
+    ".survey/work-queue/jobs/job-a2e02e2471db5a53.json",
+    ".survey/work-queue/jobs/job-a988d7de9a2297fb.json",
+    ".survey/work-queue/jobs/job-b1b5c1cc8d6d968b.json",
+    ".survey/work-queue/jobs/job-b783c2b929e803e0.json",
+    ".survey/work-queue/jobs/job-b873d9bb9150e406.json",
+    ".survey/work-queue/jobs/job-bed7eb9a0e9b078b.json",
+    ".survey/work-queue/jobs/job-c366ddbfadd47595.json",
+    ".survey/work-queue/jobs/job-c3a9b13752dd041d.json",
+    ".survey/work-queue/jobs/job-d01dfc714f5f0cc0.json",
+    ".survey/work-queue/jobs/job-dff7a3f8c2d0ad47.json",
+    ".survey/work-queue/jobs/job-e1a45a0b52cd08e9.json",
+    ".survey/work-queue/jobs/job-e66cb703d2ded379.json",
+    ".survey/work-queue/jobs/job-e8b29d9ad4479f5b.json",
+    ".survey/work-queue/jobs/job-f998e25b050a319c.json",
+    ".survey/work-queue/jobs/job-fe4c1c8cd87c3615.json",
+    ".survey/work-queue/jobs/job-research-054f48cedd19aa09.json",
+    ".survey/work-queue/jobs/job-research-0b62305d29ec3f07.json",
+    ".survey/work-queue/jobs/job-research-104c6f03600c88e3.json",
+    ".survey/work-queue/jobs/job-research-1432db026326ceba.json",
+    ".survey/work-queue/jobs/job-research-1cec9500e696429d.json",
+    ".survey/work-queue/jobs/job-research-1d91c2e733c3ea48.json",
+    ".survey/work-queue/jobs/job-research-1f63a2791ceb902e.json",
+    ".survey/work-queue/jobs/job-research-210537016fbfd307.json",
+    ".survey/work-queue/jobs/job-research-2e3a02b2844d2e58.json",
+    ".survey/work-queue/jobs/job-research-2fabeeb49fcc4f61.json",
+    ".survey/work-queue/jobs/job-research-38ab8b4a23adc71e.json",
+    ".survey/work-queue/jobs/job-research-3df12ec7758e6560.json",
+    ".survey/work-queue/jobs/job-research-402877c35b728f68.json",
+    ".survey/work-queue/jobs/job-research-4fdba40a700ef036.json",
+    ".survey/work-queue/jobs/job-research-509e803a4650e4cc.json",
+    ".survey/work-queue/jobs/job-research-53cac459e74fe05d.json",
+    ".survey/work-queue/jobs/job-research-53de425c7cce08ac.json",
+    ".survey/work-queue/jobs/job-research-5bbaf01e10993767.json",
+    ".survey/work-queue/jobs/job-research-621f7339aea4ca47.json",
+    ".survey/work-queue/jobs/job-research-659a613581e8490b.json",
+    ".survey/work-queue/jobs/job-research-6811082d3e827f08.json",
+    ".survey/work-queue/jobs/job-research-7377d8c33bb2a27e.json",
+    ".survey/work-queue/jobs/job-research-75aba5574c2305ac.json",
+    ".survey/work-queue/jobs/job-research-77ba527286cb2964.json",
+    ".survey/work-queue/jobs/job-research-7e0dbf0a2e59ee31.json",
+    ".survey/work-queue/jobs/job-research-7fd2984f35c5f2c0.json",
+    ".survey/work-queue/jobs/job-research-838d863213e6046f.json",
+    ".survey/work-queue/jobs/job-research-8d24bbbb0d745bcd.json",
+    ".survey/work-queue/jobs/job-research-907d7bef3c06431a.json",
+    ".survey/work-queue/jobs/job-research-9ffff7b3c686d070.json",
+    ".survey/work-queue/jobs/job-research-a08bd31b2c7a3131.json",
+    ".survey/work-queue/jobs/job-research-a81a92a4fe976e9f.json",
+    ".survey/work-queue/jobs/job-research-a91e83851d217617.json",
+    ".survey/work-queue/jobs/job-research-af933ce8660c5c43.json",
+    ".survey/work-queue/jobs/job-research-b271a7338d32f042.json",
+    ".survey/work-queue/jobs/job-research-b41f25f007b84d58.json",
+    ".survey/work-queue/jobs/job-research-bf73d09e9ff15cf1.json",
+    ".survey/work-queue/jobs/job-research-ce62af65aeeeb183.json",
+    ".survey/work-queue/jobs/job-research-d6808d3878e7c003.json",
+    ".survey/work-queue/jobs/job-research-dd75fd395bdd7f95.json",
+    ".survey/work-queue/jobs/job-research-e8f21f25c2f88f7c.json",
+    ".survey/work-queue/jobs/job-research-eba4933a6b9a63c3.json",
+    ".survey/work-queue/jobs/job-research-ed302f7ad8de9592.json",
+    ".survey/work-queue/jobs/job-research-f3c72d9135f32f02.json",
+    ".survey/work-queue/jobs/job-research-f6d914e349682ad9.json",
+    ".survey/work-queue/jobs/job-research-ff33bdbdc4dfa309.json",
+    ".survey/work-queue/claims/job-research-0752468d0c493a74.json",
+    ".survey/work-queue/claims/job-research-19ebd04771d99798.json",
+    ".survey/work-queue/claims/job-research-1b4e4492d7f8190c.json",
+    ".survey/work-queue/claims/job-research-1e9597cecaf6ec3b.json",
+    ".survey/work-queue/claims/job-research-352411c0dfdab5c8.json",
+    ".survey/work-queue/claims/job-research-52d0317097624bef.json",
+    ".survey/work-queue/claims/job-research-5b745b5e455d855b.json",
+    ".survey/work-queue/claims/job-research-72f5273058146903.json",
+    ".survey/work-queue/claims/job-research-7b20b235b85d5367.json",
+    ".survey/work-queue/claims/job-research-8c2ae7bcdcd47c9d.json",
+    ".survey/work-queue/claims/job-research-8f68f6b8d4d62651.json",
+    ".survey/work-queue/claims/job-research-979f96b1e5e1127f.json",
+    ".survey/work-queue/claims/job-research-a2179107ad5ddbe2.json",
+    ".survey/work-queue/claims/job-research-b85568c75bac4939.json",
+    ".survey/work-queue/claims/job-research-c338c792802f12de.json",
+    ".survey/work-queue/claims/job-research-cb7b62ec78d71f70.json",
+    ".survey/work-queue/claims/job-research-cdcee02b70ada423.json",
+    ".survey/work-queue/claims/job-research-d5278ec0af97bd4e.json",
+    ".survey/work-queue/claims/job-research-de017e41c2d8a0bb.json",
+    ".survey/work-queue/claims/job-research-e6e95e05f07deb20.json",
+    ".survey/work-queue/claims/job-research-f10be2e9a7bd04f7.json",
+    ".survey/work-queue/claim-requests/claim-20260914T040700Z-discovery-overflow-11d.json",
+    ".survey/work-queue/claim-results/claim-20260914T040700Z-discovery-overflow-11d.json",
+    ".survey/work-queue/claim-requests/claim-20260920T094600Z-scheduled-chat-llm-survey-turn9-09.json",
+    ".survey/work-queue/claim-results/claim-20260920T094600Z-scheduled-chat-llm-survey-turn9-09.json"
   ],
   "skipped": [
     {
@@ -249,15 +205,7 @@
       "reason": "immutable_job_not_terminal"
     },
     {
-      "path": ".survey/work-queue/submissions/research/attempt-1c66e86fb01d69f8806768c4.json",
-      "reason": "immutable_job_not_terminal"
-    },
-    {
       "path": ".survey/work-queue/submissions/research/attempt-1efa60058b1289154a08080b.json",
-      "reason": "immutable_job_not_terminal"
-    },
-    {
-      "path": ".survey/work-queue/submissions/research/attempt-20a5dda478e53293670ceefb.json",
       "reason": "immutable_job_not_terminal"
     },
     {
@@ -269,19 +217,11 @@
       "reason": "immutable_job_not_terminal"
     },
     {
-      "path": ".survey/work-queue/submissions/research/attempt-3930d1453c4e909421448ada.json",
-      "reason": "immutable_job_not_terminal"
-    },
-    {
       "path": ".survey/work-queue/submissions/research/attempt-3d6758672654eefba0bf8a1a.json",
       "reason": "immutable_job_not_terminal"
     },
     {
       "path": ".survey/work-queue/submissions/research/attempt-3e3fc61362f70b7c5d3289a3.json",
-      "reason": "immutable_job_not_terminal"
-    },
-    {
-      "path": ".survey/work-queue/submissions/research/attempt-3e625f867ada30709f9d971c.json",
       "reason": "immutable_job_not_terminal"
     },
     {
@@ -341,10 +281,6 @@
       "reason": "immutable_job_not_terminal"
     },
     {
-      "path": ".survey/work-queue/submissions/research/attempt-7381d916bdd79b3e46aeb209.json",
-      "reason": "immutable_job_not_terminal"
-    },
-    {
       "path": ".survey/work-queue/submissions/research/attempt-75ddf2ad82101b1a2d20f339.json",
       "reason": "immutable_job_not_terminal"
     },
@@ -374,10 +310,6 @@
     },
     {
       "path": ".survey/work-queue/submissions/research/attempt-7f37dbbf1fcc0bcb540d428a.json",
-      "reason": "immutable_job_not_terminal"
-    },
-    {
-      "path": ".survey/work-queue/submissions/research/attempt-838569c6f399cb046e74080e.json",
       "reason": "immutable_job_not_terminal"
     },
     {
@@ -441,10 +373,6 @@
       "reason": "immutable_job_not_terminal"
     },
     {
-      "path": ".survey/work-queue/submissions/research/attempt-ba794fbaa3ee0f39aef61a67.json",
-      "reason": "immutable_job_not_terminal"
-    },
-    {
       "path": ".survey/work-queue/submissions/research/attempt-bb698348ca635e022360ff70.json",
       "reason": "immutable_job_not_terminal"
     },
@@ -498,10 +426,6 @@
     },
     {
       "path": ".survey/work-queue/submissions/research/attempt-d5a5a7ee6bf19df57017272b.json",
-      "reason": "immutable_job_not_terminal"
-    },
-    {
-      "path": ".survey/work-queue/submissions/research/attempt-d6d0f050a2bc6af8b178330b.json",
       "reason": "immutable_job_not_terminal"
     },
     {
@@ -566,10 +490,6 @@
     },
     {
       "path": ".survey/work-queue/submissions/research/attempt-ff95dca6078ea45cc8614166.json",
-      "reason": "immutable_job_not_terminal"
-    },
-    {
-      "path": ".survey/work-queue/submissions/research/attempt-preload-06399f8ef041c80fdeac63e6.json",
       "reason": "immutable_job_not_terminal"
     },
     {
@@ -837,10 +757,6 @@
       "reason": "current_ready_or_unknown_job"
     },
     {
-      "path": ".survey/work-queue/claims/job-research-0752468d0c493a74.json",
-      "reason": "current_ready_or_unknown_job"
-    },
-    {
       "path": ".survey/work-queue/claims/job-research-08564236a7f9f91a.json",
       "reason": "current_ready_or_unknown_job"
     },
@@ -893,10 +809,6 @@
       "reason": "current_ready_or_unknown_job"
     },
     {
-      "path": ".survey/work-queue/claims/job-research-19ebd04771d99798.json",
-      "reason": "current_ready_or_unknown_job"
-    },
-    {
       "path": ".survey/work-queue/claims/job-research-1a48a3083b0b1499.json",
       "reason": "current_ready_or_unknown_job"
     },
@@ -905,19 +817,11 @@
       "reason": "current_ready_or_unknown_job"
     },
     {
-      "path": ".survey/work-queue/claims/job-research-1b4e4492d7f8190c.json",
-      "reason": "current_ready_or_unknown_job"
-    },
-    {
       "path": ".survey/work-queue/claims/job-research-1c0254220f4e6305.json",
       "reason": "current_ready_or_unknown_job"
     },
     {
       "path": ".survey/work-queue/claims/job-research-1da272e975b9b7ea.json",
-      "reason": "current_ready_or_unknown_job"
-    },
-    {
-      "path": ".survey/work-queue/claims/job-research-1e9597cecaf6ec3b.json",
       "reason": "current_ready_or_unknown_job"
     },
     {
@@ -986,10 +890,6 @@
     },
     {
       "path": ".survey/work-queue/claims/job-research-33e77bc7b58dbf7d.json",
-      "reason": "current_ready_or_unknown_job"
-    },
-    {
-      "path": ".survey/work-queue/claims/job-research-352411c0dfdab5c8.json",
       "reason": "current_ready_or_unknown_job"
     },
     {
@@ -1093,10 +993,6 @@
       "reason": "current_ready_or_unknown_job"
     },
     {
-      "path": ".survey/work-queue/claims/job-research-52d0317097624bef.json",
-      "reason": "current_ready_or_unknown_job"
-    },
-    {
       "path": ".survey/work-queue/claims/job-research-52d52c388638f7b6.json",
       "reason": "current_ready_or_unknown_job"
     },
@@ -1122,10 +1018,6 @@
     },
     {
       "path": ".survey/work-queue/claims/job-research-59e372dc16ca4938.json",
-      "reason": "current_ready_or_unknown_job"
-    },
-    {
-      "path": ".survey/work-queue/claims/job-research-5b745b5e455d855b.json",
       "reason": "current_ready_or_unknown_job"
     },
     {
@@ -1185,10 +1077,6 @@
       "reason": "current_ready_or_unknown_job"
     },
     {
-      "path": ".survey/work-queue/claims/job-research-72f5273058146903.json",
-      "reason": "current_ready_or_unknown_job"
-    },
-    {
       "path": ".survey/work-queue/claims/job-research-75eff2262d950b6f.json",
       "reason": "current_ready_or_unknown_job"
     },
@@ -1206,10 +1094,6 @@
     },
     {
       "path": ".survey/work-queue/claims/job-research-7a953bd800283329.json",
-      "reason": "current_ready_or_unknown_job"
-    },
-    {
-      "path": ".survey/work-queue/claims/job-research-7b20b235b85d5367.json",
       "reason": "current_ready_or_unknown_job"
     },
     {
@@ -1257,15 +1141,7 @@
       "reason": "current_ready_or_unknown_job"
     },
     {
-      "path": ".survey/work-queue/claims/job-research-8c2ae7bcdcd47c9d.json",
-      "reason": "current_ready_or_unknown_job"
-    },
-    {
       "path": ".survey/work-queue/claims/job-research-8f022c12e250de76.json",
-      "reason": "current_ready_or_unknown_job"
-    },
-    {
-      "path": ".survey/work-queue/claims/job-research-8f68f6b8d4d62651.json",
       "reason": "current_ready_or_unknown_job"
     },
     {
@@ -1286,10 +1162,6 @@
     },
     {
       "path": ".survey/work-queue/claims/job-research-96f762f925994ddf.json",
-      "reason": "current_ready_or_unknown_job"
-    },
-    {
-      "path": ".survey/work-queue/claims/job-research-979f96b1e5e1127f.json",
       "reason": "current_ready_or_unknown_job"
     },
     {
@@ -1338,10 +1210,6 @@
     },
     {
       "path": ".survey/work-queue/claims/job-research-a1c3413c4a8ae02e.json",
-      "reason": "current_ready_or_unknown_job"
-    },
-    {
-      "path": ".survey/work-queue/claims/job-research-a2179107ad5ddbe2.json",
       "reason": "current_ready_or_unknown_job"
     },
     {
@@ -1477,10 +1345,6 @@
       "reason": "current_ready_or_unknown_job"
     },
     {
-      "path": ".survey/work-queue/claims/job-research-b85568c75bac4939.json",
-      "reason": "current_ready_or_unknown_job"
-    },
-    {
       "path": ".survey/work-queue/claims/job-research-ba0d0353408169f6.json",
       "reason": "current_ready_or_unknown_job"
     },
@@ -1518,10 +1382,6 @@
     },
     {
       "path": ".survey/work-queue/claims/job-research-c0fbf2987a6da31f.json",
-      "reason": "current_ready_or_unknown_job"
-    },
-    {
-      "path": ".survey/work-queue/claims/job-research-c338c792802f12de.json",
       "reason": "current_ready_or_unknown_job"
     },
     {
@@ -1565,19 +1425,11 @@
       "reason": "current_ready_or_unknown_job"
     },
     {
-      "path": ".survey/work-queue/claims/job-research-cb7b62ec78d71f70.json",
-      "reason": "current_ready_or_unknown_job"
-    },
-    {
       "path": ".survey/work-queue/claims/job-research-cd4bfdc72f5fe696.json",
       "reason": "current_ready_or_unknown_job"
     },
     {
       "path": ".survey/work-queue/claims/job-research-cdc29bb5f1d5b9bc.json",
-      "reason": "current_ready_or_unknown_job"
-    },
-    {
-      "path": ".survey/work-queue/claims/job-research-cdcee02b70ada423.json",
       "reason": "current_ready_or_unknown_job"
     },
     {
@@ -1610,10 +1462,6 @@
     },
     {
       "path": ".survey/work-queue/claims/job-research-d41379318dda5663.json",
-      "reason": "current_ready_or_unknown_job"
-    },
-    {
-      "path": ".survey/work-queue/claims/job-research-d5278ec0af97bd4e.json",
       "reason": "current_ready_or_unknown_job"
     },
     {
@@ -1661,10 +1509,6 @@
       "reason": "current_ready_or_unknown_job"
     },
     {
-      "path": ".survey/work-queue/claims/job-research-de017e41c2d8a0bb.json",
-      "reason": "current_ready_or_unknown_job"
-    },
-    {
       "path": ".survey/work-queue/claims/job-research-dffda92b57382ab0.json",
       "reason": "current_ready_or_unknown_job"
     },
@@ -1682,10 +1526,6 @@
     },
     {
       "path": ".survey/work-queue/claims/job-research-e6152c2a3998faa6.json",
-      "reason": "current_ready_or_unknown_job"
-    },
-    {
-      "path": ".survey/work-queue/claims/job-research-e6e95e05f07deb20.json",
       "reason": "current_ready_or_unknown_job"
     },
     {
@@ -1730,10 +1570,6 @@
     },
     {
       "path": ".survey/work-queue/claims/job-research-f0bdaf32a417e98c.json",
-      "reason": "current_ready_or_unknown_job"
-    },
-    {
-      "path": ".survey/work-queue/claims/job-research-f10be2e9a7bd04f7.json",
       "reason": "current_ready_or_unknown_job"
     },
     {
@@ -1817,10 +1653,6 @@
       "reason": "claim_result_references_live_job"
     },
     {
-      "path": ".survey/work-queue/claim-requests/claim-20260914T040700Z-discovery-overflow-11d.json",
-      "reason": "claim_result_references_live_job"
-    },
-    {
       "path": ".survey/work-queue/claim-requests/claim-20260914T061900Z-discovery-overflow-19.json",
       "reason": "claim_result_references_live_job"
     },
@@ -1834,10 +1666,6 @@
     },
     {
       "path": ".survey/work-queue/claim-requests/claim-20260919T145500Z-scheduled-chat-llm-survey-run-03.json",
-      "reason": "claim_result_references_live_job"
-    },
-    {
-      "path": ".survey/work-queue/claim-requests/claim-20260920T094600Z-scheduled-chat-llm-survey-turn9-09.json",
       "reason": "claim_result_references_live_job"
     },
     {
