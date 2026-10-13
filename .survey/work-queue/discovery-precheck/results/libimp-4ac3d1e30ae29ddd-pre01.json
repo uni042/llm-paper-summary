@@ -1,0 +1,1198 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-4ac3d1e30ae29ddd-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-4ac3d1e30ae2",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2605.09516",
+    "arXiv:2605.09630",
+    "arXiv:2605.10268",
+    "arXiv:2605.10453",
+    "arXiv:2605.10655",
+    "arXiv:2605.12471",
+    "arXiv:2605.13080",
+    "arXiv:2605.14292",
+    "arXiv:2605.14844",
+    "arXiv:2605.15626",
+    "arXiv:2605.16839",
+    "arXiv:2605.18226",
+    "arXiv:2605.18848"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 13,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "83790c5cc8f0efacec95a3172d9e7e94a87d0e1b",
+  "raw_search_result_count": 13,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 13,
+  "provider_progress": {
+    "requested_count": 13,
+    "status_counts": {
+      "allowed": 13,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-13T22:58:09.410521+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2605.09516",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2605.09630",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2605.10268",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2605.10453",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2605.10655",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2605.12471",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2605.13080",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2605.14292",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2605.14844",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2605.15626",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2605.16839",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2605.18226",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2605.18848",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "BCJR-QAT: A Differentiable Relaxation of Trellis-Coded Weight Quantization",
+      "source_url": "https://arxiv.org/abs/2605.10655",
+      "year": 2026,
+      "published": "2026-05-11",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Trellis-coded quantization sets the current 2-bit post-training frontier for LLMs (QTIP), but pushing below the PTQ ceiling requires quantization-aware training, and QAT on a trellis is obstructed by the non-differentiable Viterbi argmax. We introduce BCJR-QAT, a relaxation that replaces the argmax with the BCJR forward-backward sum-product algorithm at temperature $T$, producing a soft codeword equal to the Boltzmann expectation over trellis paths, exactly differentiable, recovering the hard QTIP code as $T \\to 0$, and mathematically identical to the transfer-matrix computation for a 1D Ising-like spin chain. We contribute (i) a fused Triton kernel making BCJR tractable on a single consumer GPU ($6.57\\times$ speedup, fp32 parity); (ii) a quantitative drift-budget theory of when BCJR-QAT can escape the QTIP-PTQ Voronoi basin, verified across four experiments; and (iii) a positive empirical result on Llama-3.2-1B at 2 bpw under end-to-end forward-KL distillation: with the right schedule (skip the high-$T$ phase to avoid an overshoot we diagnose), single-layer BCJR-QAT beats QTIP-PTQ by $\\mathbf{-0.084}$ PPL on WikiText-2, and multi-layer compounding is super-additive.",
+      "identifiers": [
+        "SemanticScholar:c56d88ecc4ddea2a73f908044d8580eee51a8b4e"
+      ],
+      "semantic_scholar_id": "c56d88ecc4ddea2a73f908044d8580eee51a8b4e",
+      "canonical_id": "arXiv:2605.10655",
+      "arxiv_id": "2605.10655",
+      "doi": "10.48550/arXiv.2605.10655",
+      "authors": [
+        "Venugopalan Iyengar"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 155,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Mixture of Layers with Hybrid Attention",
+      "source_url": "https://arxiv.org/abs/2605.09516",
+      "year": 2026,
+      "published": "2026-05-10",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Standard Mixture-of-Experts (MoE) transformers route tokens to expert subnetworks within each layer, but the layer structure itself remains monolithic. We introduce Mixture of Layers (MoL), which replaces full-width transformer blocks (d_model) with K parallel thin blocks at reduced dimensionality (d_thin<<d_model), connected via learned down/up projections and composed via top-k block routing. Scaling sparse block routing to many blocks creates an attention coverage problem, as each block sees fewer tokens. We address this by introducing hybrid attention, which pairs one shared softmax block for global context with Gated DeltaNet linear attention in routed blocks.",
+      "identifiers": [
+        "SemanticScholar:0aca0f1031c6345afbc8a587b524bbc9cfa6b13d"
+      ],
+      "semantic_scholar_id": "0aca0f1031c6345afbc8a587b524bbc9cfa6b13d",
+      "canonical_id": "arXiv:2605.09516",
+      "arxiv_id": "2605.09516",
+      "doi": "10.48550/arXiv.2605.09516",
+      "authors": [
+        "Ivan Ternovtsii",
+        "Y. Bilak"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 156,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Scratchpad Patching: Decoupling Compute from Patch Size in Byte-Level Language Models",
+      "source_url": "https://arxiv.org/abs/2605.09630",
+      "year": 2026,
+      "published": "2026-05-10",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Tokenizer-free language models eliminate the tokenizer step of the language modeling pipeline by operating directly on bytes; patch-based variants further aggregate contiguous byte spans into patches for efficiency. However, the average patch size chosen at the model design stage governs a tight trade-off: larger patches reduce compute and KV-cache footprint, but degrade modeling quality. We trace this trade-off to patch lag: until a patch is fully observed, byte predictions within it must rely on a stale representation from the previous patch to preserve causality; this lag widens as patches grow larger. We introduce Scratchpad Patching (SP), which inserts transient scratchpads inside each patch to aggregate the bytes seen so far and refresh patch-level context for subsequent predictions. SP triggers scratchpads using next-byte prediction entropy, selectively allocating compute to information-dense regions and enabling post-hoc adjustment of inference-time compute. Across experiments on natural language and code, SP improves model quality at the same patch size; for example, even at $16$ bytes per patch, SP-augmented models match or closely approach the byte-level baseline on downstream evaluations while using a $16\\times$ smaller KV cache over patches and $3$-$4\\times$ less inference compute.",
+      "identifiers": [
+        "SemanticScholar:999cf59792831e0916e9fcc94d1a549b8dfeeb5f"
+      ],
+      "semantic_scholar_id": "999cf59792831e0916e9fcc94d1a549b8dfeeb5f",
+      "canonical_id": "arXiv:2605.09630",
+      "arxiv_id": "2605.09630",
+      "doi": "10.48550/arXiv.2605.09630",
+      "authors": [
+        "Lin Zheng",
+        "Vasilisa Bashlovkina",
+        "Tim Dozat",
+        "Dan Garrette",
+        "L. Rimell",
+        "Joshua Maynez"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 156,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "MemReread: Enhancing Agentic Long-Context Reasoning via Memory-Guided Rereading",
+      "source_url": "https://arxiv.org/abs/2605.10268",
+      "year": 2026,
+      "published": "2026-05-11",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Long-context reasoning tasks have motivated agent-memory approaches that process document chunks sequentially while maintaining a dynamically updated memory, avoiding the quadratic complexity of standard attention. Existing methods often rely on retrieval to recover information discarded during memory overwriting, but remain vulnerable to evidence loss during memory formation and interference from invalid queries. To overcome these limitations, we propose MemReread. Built upon streaming reading, it circumvents intermediate retrieval, triggering question decomposition and targeted rereading when the final memory is insufficient. By recovering indirect evidence that may have been prematurely discarded, MemReread enables non-linear reasoning while preserving the logical flow of document comprehension. We further introduce a reinforcement learning framework that improves length extrapolation and adaptively determines the number of rereading passes according to task complexity, enabling flexible control of computational overhead. Our MemReread-4B outperforms strong baselines on long-context reasoning tasks (e.g., +1.6pp v.s. DeepSeek-V4-Pro on 2WikiMultiHopQA) while maintaining linear time complexity with respect to context length.",
+      "identifiers": [
+        "SemanticScholar:ab5c91d0347eeda8df4b33ee0f7d6ec3aae8cd46"
+      ],
+      "semantic_scholar_id": "ab5c91d0347eeda8df4b33ee0f7d6ec3aae8cd46",
+      "canonical_id": "arXiv:2605.10268",
+      "arxiv_id": "2605.10268",
+      "doi": "10.48550/arXiv.2605.10268",
+      "authors": [
+        "Baibei Ji",
+        "Xiaoyang Weng",
+        "Jun-Tao Li",
+        "Ze-Cheng Tang",
+        "Yihang Lou",
+        "Min Zhang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 155,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "SlimSpec: Low-Rank Draft LM-Head for Accelerated Speculative Decoding",
+      "source_url": "https://arxiv.org/abs/2605.10453",
+      "year": 2026,
+      "published": "2026-05-11",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Speculative decoding speeds up autoregressive generation in Large Language Models (LLMs) through a two-step procedure, where a lightweight draft model proposes tokens which the target model then verifies in a single forward pass. Although the drafter network is small in modern architectures, its LM-head still performs projection to a large vocabulary, becoming one of the major computational bottlenecks. In prior work this issue has been predominantly addressed via static or dynamic vocabulary truncation. Yet mitigating the bottleneck, these methods bring in extra complexity, such as special vocabulary curation, sophisticated inference-time logic or modifications of the training setup. In this paper, we propose SlimSpec, a low-rank parameterization of the drafter's LM-head that compresses the inner representation rather than the output, preserving full vocabulary support. We evaluate our method with EAGLE-3 drafter across three target models and diverse benchmarks in both latency- and throughput-bound inference regimes. SlimSpec achieves $4\\text{-}5\\times$ acceleration over the standard LM-head architecture while maintaining a competitive acceptance length, surpassing existing methods by up to $8\\text{-}9\\%$ of the end-to-end speedup. Our method requires minimal adjustments of training and inference pipelines. Combined with the aforementioned speedup improvements, it makes SlimSpec a strong alternative across wide variety of draft LM-head architectures.",
+      "identifiers": [
+        "SemanticScholar:1bfe820e25fa5884176692dc7788f92b7ae3d187"
+      ],
+      "semantic_scholar_id": "1bfe820e25fa5884176692dc7788f92b7ae3d187",
+      "canonical_id": "arXiv:2605.10453",
+      "arxiv_id": "2605.10453",
+      "doi": "10.48550/arXiv.2605.10453",
+      "authors": [
+        "A. Plaksin",
+        "Sergei Krutikov",
+        "S. Skvortsov",
+        "A. Samarin"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 155,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "KV-Fold: One-Step KV-Cache Recurrence for Long-Context Inference",
+      "source_url": "https://arxiv.org/abs/2605.12471",
+      "year": 2026,
+      "published": "2026-05-12",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "We introduce KV-Fold, a simple, training-free long-context inference protocol that treats the key-value (KV) cache as the accumulator in a left fold over sequence chunks. At each step, the model processes the next chunk conditioned on the accumulated cache, appends the newly produced keys and values, and passes the enlarged cache forward; the same one-step update is applied repeatedly, analogous to foldl in functional programming. Building on the KV cache concatenation primitive introduced for latent multi-agent communication, we repurpose it as a chunk-to-chunk recurrence for long-context inference. When processing chunk t, the model attends to the KV cache carried from earlier chunks as a prefix, reusing its internal state across segments without modifying or retraining the model. Despite its simplicity, the induced recurrence is stable: per-step drift rises briefly and then saturates into a flat plateau that persists across deep chains. This plateau is insensitive to a 10,000x change in numerical precision, robust across chunk sizes, and consistent across model families. At the task level, KV-Fold preserves exact information over long distances. On a needle-in-a-haystack benchmark, it achieves 100% exact-match retrieval across 152 trials spanning contexts from 16K to 128K tokens and chain depths up to 511 on Llama-3.1-8B, while remaining within the memory limits of a single 40GB GPU. Compared to streaming methods, which trade fidelity for bounded memory, KV-Fold maintains long-range retrieval while operating as a sequence of tractable forward passes. Overall, our results show that frozen pretrained transformers already support a stable form of KV-cache recurrence, providing a practical route to long-context inference without architectural changes or training.",
+      "identifiers": [
+        "SemanticScholar:736ad238fb4c5a6899dec9c9f85a03f2367fefcf"
+      ],
+      "semantic_scholar_id": "736ad238fb4c5a6899dec9c9f85a03f2367fefcf",
+      "canonical_id": "arXiv:2605.12471",
+      "arxiv_id": "2605.12471",
+      "doi": "10.48550/arXiv.2605.12471",
+      "authors": [
+        "Alireza Nadali",
+        "Patrick Cooper",
+        "Ashutosh Trivedi",
+        "Alvaro Velasquez"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 154,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Gaze Attention: Query-Adaptive Visual Routing for Efficient Multimodal LLMs",
+      "source_url": "https://arxiv.org/abs/2605.13080",
+      "year": 2026,
+      "published": "2026-05-13",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "When humans describe a visual scene, they do not process the entire image uniformly; instead, they selectively fixate on regions relevant to their intended description. In contrast, current multimodal large language models (MLLMs) attend to all visual tokens, leading to diluted focus and unnecessary computational overhead. Existing efficiency methods often compress or discard visual information before generation, potentially losing details needed for later predictions. In this work, we introduce Gaze Attention, a mechanism that enables MLLMs to select visual regions according to the needs of each generation step. By grouping visual tokens into spatial regions and selecting those relevant to the current prediction, Gaze Attention reduces attention computation while focusing on relevant visual content. We further introduce learnable context tokens that summarize images or video frames, preserving global context under selective attention. Experiments on 13 image and 6 video understanding benchmarks demonstrate that Gaze Attention matches or surpasses dense-attention baselines while using up to 90% fewer visual KV entries. It also achieves higher average performance than KV-cache eviction baselines under matched visual KV budgets.",
+      "identifiers": [
+        "SemanticScholar:89d8af93a9e478bc3ce434f33e06a27967153a85"
+      ],
+      "semantic_scholar_id": "89d8af93a9e478bc3ce434f33e06a27967153a85",
+      "canonical_id": "arXiv:2605.13080",
+      "arxiv_id": "2605.13080",
+      "authors": [
+        "Junha Song",
+        "Byeong-Young Heo",
+        "Geonmo Gu",
+        "Jaegul Choo",
+        "Dong-Jun Han",
+        "Sangdoo Yun"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 153,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Exact Linear Attention",
+      "source_url": "https://arxiv.org/abs/2605.18848",
+      "year": 2026,
+      "published": "2026-05-13",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "This paper introduces Exact Linear Attention (ELA), a mechanism that achieves linear computational complexity for Transformer attention by exploiting the exact decomposition property of kernel functions, thereby eliminating approximation error. We identify and address two key limitations of prior linear attention -- gradient explosion and token attention dilution -- by imposing kernel constraints that ensure non-negativity, discriminability, and geometric interpretability. Several kernel functions are proposed, including the Hadamard Exp Kernel, Summation Squared Euclidean Distance Kernel, and Subtraction Squared Euclidean Distance Kernel, each tailored for specific attention behaviors. Beyond the core attention formulation, the paper presents three engineering innovations: (1) a Hyper-Link structure that replaces traditional residual connections to mitigate gradient degradation; (2) a Memory Lobe module based on bidirectional linear attention, which captures\"transformation flow\"across layers to implement qualitative memory and an implicit reinforcement learning paradigm; and (3) a routing-score-based bias mechanism for Mixture-of-Experts (MoE) to improve interpretability and semantic alignment. Experimental results demonstrate that ELA achieves up to 6x faster decoding speed and 75% reduction in KV cache memory usage compared to full attention, while maintaining comparable or superior training performance. The proposed memory module accelerates convergence and enhances generalization. Furthermore, we extend the linear attention principle to vision models, yielding YOLO-LAT, which attains up to 4.3x GPU inference speedup and 7.9x parameter reduction with competitive detection accuracy. These results underline the broad applicability of exact linear attention for scaling Transformer models to ultra-long sequences and efficient visual tasks.",
+      "identifiers": [
+        "SemanticScholar:b19e006bd60f07a40a1d8802464420dd6cba8bfb"
+      ],
+      "semantic_scholar_id": "b19e006bd60f07a40a1d8802464420dd6cba8bfb",
+      "canonical_id": "arXiv:2605.18848",
+      "arxiv_id": "2605.18848",
+      "doi": "10.48550/arXiv.2605.18848",
+      "authors": [
+        "Weinuo Ou"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 153,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Minimal-Intervention KV Retention via Set-Conditioned Diversity",
+      "source_url": "https://arxiv.org/abs/2605.14292",
+      "year": 2026,
+      "published": "2026-05-14",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "KV-cache compression at small budgets is a crowded design space spanning cache representation, head-wise routing, compression cadence, decoding behavior, and within-budget scoring. We study seven mechanisms across these five families under matched mean cache on long-form mathematical reasoning (MATH-500~\\cite{hendrycks2021math}) with two distilled-reasoning models (Qwen-7B and Llama-8B variants of DeepSeek-R1-Distill~\\cite{deepseek2025r1}) at budgets $b \\in \\{64, 128\\}$. All seven were rejected. We then propose $\\alpha$, a one-function modification to the TriAttention~\\cite{mao2026triattention} retention scorer that replaces argmax-top-$k$ with greedy facility-location-inspired selection under a V-space redundancy penalty controlled by a single weight $\\lambda$. A pre-registered protocol tunes $\\lambda$ on a frozen development split and confirms on a disjoint held-out split; with $\\lambda = 0.5$, $\\alpha$ clears Bonferroni on two of the four (model, budget) cells (Qwen $b{=}128$ and Llama $b{=}64$), no cell is significantly negative, and the pre-registered Branch~A triggers. The finding is asymmetric: a minimal scoring modification beat heavier structural redesigns in this regime, and the combined matched-memory, sympy-graded, held-out confirmation protocol is the evidence standard that made the asymmetry visible.",
+      "identifiers": [
+        "SemanticScholar:b5299a3ece7d8ef231e9b25a0f546079bc354427"
+      ],
+      "semantic_scholar_id": "b5299a3ece7d8ef231e9b25a0f546079bc354427",
+      "canonical_id": "arXiv:2605.14292",
+      "arxiv_id": "2605.14292",
+      "doi": "10.48550/arXiv.2605.14292",
+      "authors": [
+        "Libo Sun",
+        "P. Harn",
+        "Pei-Xiong He",
+        "Xi Qin"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 152,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "XFP: Quality-Targeted Adaptive Codebook Quantization with Sparse Outlier Separation for LLM Inference",
+      "source_url": "https://arxiv.org/abs/2605.14844",
+      "year": 2026,
+      "published": "2026-05-14",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "We introduce XFP, a dynamic weight quantizer for LLM inference that inverts the conventional workflow: the operator specifies reconstruction quality floors on per-channel cosine similarity (one strict floor for attention and shared experts, one lazy floor for routed-expert MoE); XFP determines codebook size, outlier budget, and packing per layer automatically -- no Hessian, no calibration data, no manual bit-width selection. Each weight matrix is decomposed into a sparse fp16 outlier residual and a dense sub-byte index tensor into a per-group learned codebook. Two storage modes share one auto-select frontend and one fused decode kernel: V2 (per-channel Lloyd) and V2a (shared library of L=32 codebooks per layer). On Qwen3.5-122B-A10B under V2, XFP reaches 138 tok/s single-stream decode on workstation hardware (RTX PRO 6000 Blackwell, TP=2) at 94.49% GSM8K strict-match (3 seeds, n=3957), and is 49% faster than Marlin INT4 at TP=1. For models that do not fit in the target memory envelope, we present the H-Process: a quality-driven iteration over the two cosine thresholds that finds the operating point at which the model just fits while still producing sensible output. Three constraints define its search space: the operator-set thresholds, an OOM boundary at quantize-on-load, and a garbage boundary in generation (cosine similarity steers; benches verify). On Qwen3.5-397B-A17B (512 routed experts/layer), the H-Process fits the full expert population into 2x96 GB at ~3.4 effective bits and delivers 100.9 tok/s long-output decode at 66.72% GSM8K strict-match on the full 1319-problem set (single seed at submission; multi-seed evaluation in progress), exceeding INT4 with routed-expert pruning on memory, throughput, and accuracy simultaneously.",
+      "identifiers": [
+        "SemanticScholar:30cb86b88c2f7ec942676da7627253b1b7a37da3"
+      ],
+      "semantic_scholar_id": "30cb86b88c2f7ec942676da7627253b1b7a37da3",
+      "canonical_id": "arXiv:2605.14844",
+      "arxiv_id": "2605.14844",
+      "doi": "10.48550/arXiv.2605.14844",
+      "authors": [
+        "T. Witt"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 152,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "IO-SVD: Input-Output Whitened SVD for Adaptive-Rank LLM Compression",
+      "source_url": "https://arxiv.org/abs/2605.15626",
+      "year": 2026,
+      "published": "2026-05-15",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models deliver strong performance across language and reasoning tasks, but their storage and compute costs remain major barriers to deployment in resource-constrained and latency-sensitive settings. SVD-based post-training compression offers a hardware-agnostic way to reduce model size and improve inference efficiency through low-rank factorization. However, existing methods often rely on input-only whitening spaces, homogeneous rank allocation, or loss-agnostic allocation heuristics, limiting their ability to preserve model quality under aggressive compression. We propose Input-Output Whitened SVD (IO-SVD), a post-training compression method that forms a KL-aware double-sided whitening space for model weights. Using a second-order expansion of the KL loss over the top-K token probabilities, IO-SVD constructs an output-side metric that captures predictive sensitivity, while input whitening captures activation statistics. We further introduce an efficient heterogeneous rank-allocation strategy that scores whitened singular components using first-order calibration loss estimates and prunes the least sensitive components under a global budget. Inspired by prior work that combines SVD truncation with quantization, we improve hybrid SVD-quantization compression through loss-aware remapping, which selects low-rank factor rows for 8-bit quantization based on the predicted loss change incurred by quantizing them. Extensive experiments across diverse LLM and VLM families, and inference-time analysis shows that IO-SVD compresses LLMs with minimal performance degradation while delivering practical inference speedups. Code is available at https://github.com/mint-vu/IO-SVD.git",
+      "identifiers": [
+        "SemanticScholar:7033c1b61a96184d84e7c502aa538009a01edc0f"
+      ],
+      "semantic_scholar_id": "7033c1b61a96184d84e7c502aa538009a01edc0f",
+      "canonical_id": "arXiv:2605.15626",
+      "arxiv_id": "2605.15626",
+      "doi": "10.48550/arXiv.2605.15626",
+      "authors": [
+        "Ali Abbasi",
+        "Chayne Thrash",
+        "Hao-Ran Qin",
+        "Hamed Pirsiavash",
+        "Soheil Kolouri"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 151,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "CompactAttention: Accelerating Chunked Prefill with Block-Union KV Selection",
+      "source_url": "https://arxiv.org/abs/2605.16839",
+      "year": 2026,
+      "published": "2026-05-16",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Chunked prefill has become a widely adopted serving strategy for long-context large language models, but efficient attention computation in this regime remains challenging. Existing sparse attention methods are primarily designed for one-shot prefill and do not translate efficiently to chunked prefill: block-sparse kernels lose efficiency when the query length is limited by the chunk size, while fine-grained pattern search becomes costly when repeated over the accumulated KV cache at every chunk. QUOKA, a recent method that directly targets chunked prefill, avoids sparse-kernel overhead but relies on query-subsampled, token-level KV selection, which can miss query-specific KV entries and introduce explicit KV-copy overhead. To address these limitations, we propose CompactAttention, a chunked-prefill attention mechanism based on Block-Union KV Selection. CompactAttention treats 2D block-sparse masks as KV-selection signals rather than direct sparse-kernel execution plans, and converts them into GQA-aware per-group KV block tables through Q-block union and intra-group union. This construction produces the minimal block tables that preserve all KV blocks selected by the input masks under paged execution constraints, enabling selected KV blocks to be accessed in place without explicit KV compaction. On LLaMA-3.1-8B-Instruct, CompactAttention maintains accuracy close to dense attention on the RULER benchmark while delivering up to 2.72$\\times$ attention speedup at 128K context length under chunked prefill.",
+      "identifiers": [
+        "SemanticScholar:e8ce26e2c2dd35ca76df7fb074aaaa35f4b04a7c"
+      ],
+      "semantic_scholar_id": "e8ce26e2c2dd35ca76df7fb074aaaa35f4b04a7c",
+      "canonical_id": "arXiv:2605.16839",
+      "arxiv_id": "2605.16839",
+      "doi": "10.48550/arXiv.2605.16839",
+      "authors": [
+        "Jiwon Song",
+        "Dongwon Jo",
+        "Beomseok Kang",
+        "Jae-Joon kim"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 150,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Context Memorization for Efficient Long Context Generation",
+      "source_url": "https://arxiv.org/abs/2605.18226",
+      "year": 2026,
+      "published": "2026-05-18",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Modern large language model (LLM) applications increasingly rely on long conditioning prefixes to control model behavior at inference time. While prefix-augmented inference is effective, it incurs two structural limitations: i) the prefix's influence fades as generation proceeds, and ii) attention computation over the prefix scales linearly with its length. Existing approaches either keep the prefix in attention while compressing it, or internalize it into model parameters through gradient-based training. The former still attends to the prefix at inference, while the latter is training-intensive and ill-suited to prefix updates. To address these issues, we propose attention-state memory, a training-free approach that externalizes the prefix into a lightweight, lookup-based memory of precomputed attention states between prefix and query tokens. On ManyICLBench with LLaMA-3.1-8B, our method improves accuracy over in-context learning at 1K-8K memory budgets while reducing attention latency by 1.36x at 8K, and surpasses full-attention RAG performance on NBA benchmark using only 20% of its memory footprint.",
+      "identifiers": [
+        "SemanticScholar:9452cddf65e7444bed98f89bdae702b5eb41fecf"
+      ],
+      "semantic_scholar_id": "9452cddf65e7444bed98f89bdae702b5eb41fecf",
+      "canonical_id": "arXiv:2605.18226",
+      "arxiv_id": "2605.18226",
+      "doi": "10.48550/arXiv.2605.18226",
+      "authors": [
+        "Yasuyuki Okoshi",
+        "Hao Chen",
+        "Guan-Xi Lu",
+        "Hong-Xiang Fan",
+        "Masato Motomura",
+        "Daichi Fujiki"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 148,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2605.10655",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2605.10655",
+        "id:SemanticScholar:c56d88ecc4ddea2a73f908044d8580eee51a8b4e",
+        "id:arXiv:2605.10655",
+        "title:bcjrqat a differentiable relaxation of trelliscoded weight quantization",
+        "url:https://arxiv.org/abs/2605.10655"
+      ],
+      "record": {
+        "title": "BCJR-QAT: A Differentiable Relaxation of Trellis-Coded Weight Quantization",
+        "source_url": "https://arxiv.org/abs/2605.10655",
+        "year": 2026,
+        "published": "2026-05-11",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Trellis-coded quantization sets the current 2-bit post-training frontier for LLMs (QTIP), but pushing below the PTQ ceiling requires quantization-aware training, and QAT on a trellis is obstructed by the non-differentiable Viterbi argmax. We introduce BCJR-QAT, a relaxation that replaces the argmax with the BCJR forward-backward sum-product algorithm at temperature $T$, producing a soft codeword equal to the Boltzmann expectation over trellis paths, exactly differentiable, recovering the hard QTIP code as $T \\to 0$, and mathematically identical to the transfer-matrix computation for a 1D Ising-like spin chain. We contribute (i) a fused Triton kernel making BCJR tractable on a single consumer GPU ($6.57\\times$ speedup, fp32 parity); (ii) a quantitative drift-budget theory of when BCJR-QAT can escape the QTIP-PTQ Voronoi basin, verified across four experiments; and (iii) a positive empirical result on Llama-3.2-1B at 2 bpw under end-to-end forward-KL distillation: with the right schedule (skip the high-$T$ phase to avoid an overshoot we diagnose), single-layer BCJR-QAT beats QTIP-PTQ by $\\mathbf{-0.084}$ PPL on WikiText-2, and multi-layer compounding is super-additive.",
+        "identifiers": [
+          "SemanticScholar:c56d88ecc4ddea2a73f908044d8580eee51a8b4e"
+        ],
+        "semantic_scholar_id": "c56d88ecc4ddea2a73f908044d8580eee51a8b4e",
+        "canonical_id": "arXiv:2605.10655",
+        "arxiv_id": "2605.10655",
+        "doi": "10.48550/arXiv.2605.10655",
+        "authors": [
+          "Venugopalan Iyengar"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 155,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.09516",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2605.09516",
+        "id:SemanticScholar:0aca0f1031c6345afbc8a587b524bbc9cfa6b13d",
+        "id:arXiv:2605.09516",
+        "title:mixture of layers with hybrid attention",
+        "url:https://arxiv.org/abs/2605.09516"
+      ],
+      "record": {
+        "title": "Mixture of Layers with Hybrid Attention",
+        "source_url": "https://arxiv.org/abs/2605.09516",
+        "year": 2026,
+        "published": "2026-05-10",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Standard Mixture-of-Experts (MoE) transformers route tokens to expert subnetworks within each layer, but the layer structure itself remains monolithic. We introduce Mixture of Layers (MoL), which replaces full-width transformer blocks (d_model) with K parallel thin blocks at reduced dimensionality (d_thin<<d_model), connected via learned down/up projections and composed via top-k block routing. Scaling sparse block routing to many blocks creates an attention coverage problem, as each block sees fewer tokens. We address this by introducing hybrid attention, which pairs one shared softmax block for global context with Gated DeltaNet linear attention in routed blocks.",
+        "identifiers": [
+          "SemanticScholar:0aca0f1031c6345afbc8a587b524bbc9cfa6b13d"
+        ],
+        "semantic_scholar_id": "0aca0f1031c6345afbc8a587b524bbc9cfa6b13d",
+        "canonical_id": "arXiv:2605.09516",
+        "arxiv_id": "2605.09516",
+        "doi": "10.48550/arXiv.2605.09516",
+        "authors": [
+          "Ivan Ternovtsii",
+          "Y. Bilak"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 156,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.09630",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2605.09630",
+        "id:SemanticScholar:999cf59792831e0916e9fcc94d1a549b8dfeeb5f",
+        "id:arXiv:2605.09630",
+        "title:scratchpad patching decoupling compute from patch size in bytelevel language models",
+        "url:https://arxiv.org/abs/2605.09630"
+      ],
+      "record": {
+        "title": "Scratchpad Patching: Decoupling Compute from Patch Size in Byte-Level Language Models",
+        "source_url": "https://arxiv.org/abs/2605.09630",
+        "year": 2026,
+        "published": "2026-05-10",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Tokenizer-free language models eliminate the tokenizer step of the language modeling pipeline by operating directly on bytes; patch-based variants further aggregate contiguous byte spans into patches for efficiency. However, the average patch size chosen at the model design stage governs a tight trade-off: larger patches reduce compute and KV-cache footprint, but degrade modeling quality. We trace this trade-off to patch lag: until a patch is fully observed, byte predictions within it must rely on a stale representation from the previous patch to preserve causality; this lag widens as patches grow larger. We introduce Scratchpad Patching (SP), which inserts transient scratchpads inside each patch to aggregate the bytes seen so far and refresh patch-level context for subsequent predictions. SP triggers scratchpads using next-byte prediction entropy, selectively allocating compute to information-dense regions and enabling post-hoc adjustment of inference-time compute. Across experiments on natural language and code, SP improves model quality at the same patch size; for example, even at $16$ bytes per patch, SP-augmented models match or closely approach the byte-level baseline on downstream evaluations while using a $16\\times$ smaller KV cache over patches and $3$-$4\\times$ less inference compute.",
+        "identifiers": [
+          "SemanticScholar:999cf59792831e0916e9fcc94d1a549b8dfeeb5f"
+        ],
+        "semantic_scholar_id": "999cf59792831e0916e9fcc94d1a549b8dfeeb5f",
+        "canonical_id": "arXiv:2605.09630",
+        "arxiv_id": "2605.09630",
+        "doi": "10.48550/arXiv.2605.09630",
+        "authors": [
+          "Lin Zheng",
+          "Vasilisa Bashlovkina",
+          "Tim Dozat",
+          "Dan Garrette",
+          "L. Rimell",
+          "Joshua Maynez"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 156,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.10268",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2605.10268",
+        "id:SemanticScholar:ab5c91d0347eeda8df4b33ee0f7d6ec3aae8cd46",
+        "id:arXiv:2605.10268",
+        "title:memreread enhancing agentic longcontext reasoning via memoryguided rereading",
+        "url:https://arxiv.org/abs/2605.10268"
+      ],
+      "record": {
+        "title": "MemReread: Enhancing Agentic Long-Context Reasoning via Memory-Guided Rereading",
+        "source_url": "https://arxiv.org/abs/2605.10268",
+        "year": 2026,
+        "published": "2026-05-11",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Long-context reasoning tasks have motivated agent-memory approaches that process document chunks sequentially while maintaining a dynamically updated memory, avoiding the quadratic complexity of standard attention. Existing methods often rely on retrieval to recover information discarded during memory overwriting, but remain vulnerable to evidence loss during memory formation and interference from invalid queries. To overcome these limitations, we propose MemReread. Built upon streaming reading, it circumvents intermediate retrieval, triggering question decomposition and targeted rereading when the final memory is insufficient. By recovering indirect evidence that may have been prematurely discarded, MemReread enables non-linear reasoning while preserving the logical flow of document comprehension. We further introduce a reinforcement learning framework that improves length extrapolation and adaptively determines the number of rereading passes according to task complexity, enabling flexible control of computational overhead. Our MemReread-4B outperforms strong baselines on long-context reasoning tasks (e.g., +1.6pp v.s. DeepSeek-V4-Pro on 2WikiMultiHopQA) while maintaining linear time complexity with respect to context length.",
+        "identifiers": [
+          "SemanticScholar:ab5c91d0347eeda8df4b33ee0f7d6ec3aae8cd46"
+        ],
+        "semantic_scholar_id": "ab5c91d0347eeda8df4b33ee0f7d6ec3aae8cd46",
+        "canonical_id": "arXiv:2605.10268",
+        "arxiv_id": "2605.10268",
+        "doi": "10.48550/arXiv.2605.10268",
+        "authors": [
+          "Baibei Ji",
+          "Xiaoyang Weng",
+          "Jun-Tao Li",
+          "Ze-Cheng Tang",
+          "Yihang Lou",
+          "Min Zhang"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 155,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.10453",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2605.10453",
+        "id:SemanticScholar:1bfe820e25fa5884176692dc7788f92b7ae3d187",
+        "id:arXiv:2605.10453",
+        "title:slimspec lowrank draft lmhead for accelerated speculative decoding",
+        "url:https://arxiv.org/abs/2605.10453"
+      ],
+      "record": {
+        "title": "SlimSpec: Low-Rank Draft LM-Head for Accelerated Speculative Decoding",
+        "source_url": "https://arxiv.org/abs/2605.10453",
+        "year": 2026,
+        "published": "2026-05-11",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Speculative decoding speeds up autoregressive generation in Large Language Models (LLMs) through a two-step procedure, where a lightweight draft model proposes tokens which the target model then verifies in a single forward pass. Although the drafter network is small in modern architectures, its LM-head still performs projection to a large vocabulary, becoming one of the major computational bottlenecks. In prior work this issue has been predominantly addressed via static or dynamic vocabulary truncation. Yet mitigating the bottleneck, these methods bring in extra complexity, such as special vocabulary curation, sophisticated inference-time logic or modifications of the training setup. In this paper, we propose SlimSpec, a low-rank parameterization of the drafter's LM-head that compresses the inner representation rather than the output, preserving full vocabulary support. We evaluate our method with EAGLE-3 drafter across three target models and diverse benchmarks in both latency- and throughput-bound inference regimes. SlimSpec achieves $4\\text{-}5\\times$ acceleration over the standard LM-head architecture while maintaining a competitive acceptance length, surpassing existing methods by up to $8\\text{-}9\\%$ of the end-to-end speedup. Our method requires minimal adjustments of training and inference pipelines. Combined with the aforementioned speedup improvements, it makes SlimSpec a strong alternative across wide variety of draft LM-head architectures.",
+        "identifiers": [
+          "SemanticScholar:1bfe820e25fa5884176692dc7788f92b7ae3d187"
+        ],
+        "semantic_scholar_id": "1bfe820e25fa5884176692dc7788f92b7ae3d187",
+        "canonical_id": "arXiv:2605.10453",
+        "arxiv_id": "2605.10453",
+        "doi": "10.48550/arXiv.2605.10453",
+        "authors": [
+          "A. Plaksin",
+          "Sergei Krutikov",
+          "S. Skvortsov",
+          "A. Samarin"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 155,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.12471",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2605.12471",
+        "id:SemanticScholar:736ad238fb4c5a6899dec9c9f85a03f2367fefcf",
+        "id:arXiv:2605.12471",
+        "title:kvfold onestep kvcache recurrence for longcontext inference",
+        "url:https://arxiv.org/abs/2605.12471"
+      ],
+      "record": {
+        "title": "KV-Fold: One-Step KV-Cache Recurrence for Long-Context Inference",
+        "source_url": "https://arxiv.org/abs/2605.12471",
+        "year": 2026,
+        "published": "2026-05-12",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "We introduce KV-Fold, a simple, training-free long-context inference protocol that treats the key-value (KV) cache as the accumulator in a left fold over sequence chunks. At each step, the model processes the next chunk conditioned on the accumulated cache, appends the newly produced keys and values, and passes the enlarged cache forward; the same one-step update is applied repeatedly, analogous to foldl in functional programming. Building on the KV cache concatenation primitive introduced for latent multi-agent communication, we repurpose it as a chunk-to-chunk recurrence for long-context inference. When processing chunk t, the model attends to the KV cache carried from earlier chunks as a prefix, reusing its internal state across segments without modifying or retraining the model. Despite its simplicity, the induced recurrence is stable: per-step drift rises briefly and then saturates into a flat plateau that persists across deep chains. This plateau is insensitive to a 10,000x change in numerical precision, robust across chunk sizes, and consistent across model families. At the task level, KV-Fold preserves exact information over long distances. On a needle-in-a-haystack benchmark, it achieves 100% exact-match retrieval across 152 trials spanning contexts from 16K to 128K tokens and chain depths up to 511 on Llama-3.1-8B, while remaining within the memory limits of a single 40GB GPU. Compared to streaming methods, which trade fidelity for bounded memory, KV-Fold maintains long-range retrieval while operating as a sequence of tractable forward passes. Overall, our results show that frozen pretrained transformers already support a stable form of KV-cache recurrence, providing a practical route to long-context inference without architectural changes or training.",
+        "identifiers": [
+          "SemanticScholar:736ad238fb4c5a6899dec9c9f85a03f2367fefcf"
+        ],
+        "semantic_scholar_id": "736ad238fb4c5a6899dec9c9f85a03f2367fefcf",
+        "canonical_id": "arXiv:2605.12471",
+        "arxiv_id": "2605.12471",
+        "doi": "10.48550/arXiv.2605.12471",
+        "authors": [
+          "Alireza Nadali",
+          "Patrick Cooper",
+          "Ashutosh Trivedi",
+          "Alvaro Velasquez"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 154,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.13080",
+      "identity_tokens": [
+        "id:SemanticScholar:89d8af93a9e478bc3ce434f33e06a27967153a85",
+        "id:arXiv:2605.13080",
+        "title:gaze attention queryadaptive visual routing for efficient multimodal llms",
+        "url:https://arxiv.org/abs/2605.13080"
+      ],
+      "record": {
+        "title": "Gaze Attention: Query-Adaptive Visual Routing for Efficient Multimodal LLMs",
+        "source_url": "https://arxiv.org/abs/2605.13080",
+        "year": 2026,
+        "published": "2026-05-13",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "When humans describe a visual scene, they do not process the entire image uniformly; instead, they selectively fixate on regions relevant to their intended description. In contrast, current multimodal large language models (MLLMs) attend to all visual tokens, leading to diluted focus and unnecessary computational overhead. Existing efficiency methods often compress or discard visual information before generation, potentially losing details needed for later predictions. In this work, we introduce Gaze Attention, a mechanism that enables MLLMs to select visual regions according to the needs of each generation step. By grouping visual tokens into spatial regions and selecting those relevant to the current prediction, Gaze Attention reduces attention computation while focusing on relevant visual content. We further introduce learnable context tokens that summarize images or video frames, preserving global context under selective attention. Experiments on 13 image and 6 video understanding benchmarks demonstrate that Gaze Attention matches or surpasses dense-attention baselines while using up to 90% fewer visual KV entries. It also achieves higher average performance than KV-cache eviction baselines under matched visual KV budgets.",
+        "identifiers": [
+          "SemanticScholar:89d8af93a9e478bc3ce434f33e06a27967153a85"
+        ],
+        "semantic_scholar_id": "89d8af93a9e478bc3ce434f33e06a27967153a85",
+        "canonical_id": "arXiv:2605.13080",
+        "arxiv_id": "2605.13080",
+        "authors": [
+          "Junha Song",
+          "Byeong-Young Heo",
+          "Geonmo Gu",
+          "Jaegul Choo",
+          "Dong-Jun Han",
+          "Sangdoo Yun"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 153,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.18848",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2605.18848",
+        "id:SemanticScholar:b19e006bd60f07a40a1d8802464420dd6cba8bfb",
+        "id:arXiv:2605.18848",
+        "title:exact linear attention",
+        "url:https://arxiv.org/abs/2605.18848"
+      ],
+      "record": {
+        "title": "Exact Linear Attention",
+        "source_url": "https://arxiv.org/abs/2605.18848",
+        "year": 2026,
+        "published": "2026-05-13",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "This paper introduces Exact Linear Attention (ELA), a mechanism that achieves linear computational complexity for Transformer attention by exploiting the exact decomposition property of kernel functions, thereby eliminating approximation error. We identify and address two key limitations of prior linear attention -- gradient explosion and token attention dilution -- by imposing kernel constraints that ensure non-negativity, discriminability, and geometric interpretability. Several kernel functions are proposed, including the Hadamard Exp Kernel, Summation Squared Euclidean Distance Kernel, and Subtraction Squared Euclidean Distance Kernel, each tailored for specific attention behaviors. Beyond the core attention formulation, the paper presents three engineering innovations: (1) a Hyper-Link structure that replaces traditional residual connections to mitigate gradient degradation; (2) a Memory Lobe module based on bidirectional linear attention, which captures\"transformation flow\"across layers to implement qualitative memory and an implicit reinforcement learning paradigm; and (3) a routing-score-based bias mechanism for Mixture-of-Experts (MoE) to improve interpretability and semantic alignment. Experimental results demonstrate that ELA achieves up to 6x faster decoding speed and 75% reduction in KV cache memory usage compared to full attention, while maintaining comparable or superior training performance. The proposed memory module accelerates convergence and enhances generalization. Furthermore, we extend the linear attention principle to vision models, yielding YOLO-LAT, which attains up to 4.3x GPU inference speedup and 7.9x parameter reduction with competitive detection accuracy. These results underline the broad applicability of exact linear attention for scaling Transformer models to ultra-long sequences and efficient visual tasks.",
+        "identifiers": [
+          "SemanticScholar:b19e006bd60f07a40a1d8802464420dd6cba8bfb"
+        ],
+        "semantic_scholar_id": "b19e006bd60f07a40a1d8802464420dd6cba8bfb",
+        "canonical_id": "arXiv:2605.18848",
+        "arxiv_id": "2605.18848",
+        "doi": "10.48550/arXiv.2605.18848",
+        "authors": [
+          "Weinuo Ou"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 153,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.14292",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2605.14292",
+        "id:SemanticScholar:b5299a3ece7d8ef231e9b25a0f546079bc354427",
+        "id:arXiv:2605.14292",
+        "title:minimalintervention kv retention via setconditioned diversity",
+        "url:https://arxiv.org/abs/2605.14292"
+      ],
+      "record": {
+        "title": "Minimal-Intervention KV Retention via Set-Conditioned Diversity",
+        "source_url": "https://arxiv.org/abs/2605.14292",
+        "year": 2026,
+        "published": "2026-05-14",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "KV-cache compression at small budgets is a crowded design space spanning cache representation, head-wise routing, compression cadence, decoding behavior, and within-budget scoring. We study seven mechanisms across these five families under matched mean cache on long-form mathematical reasoning (MATH-500~\\cite{hendrycks2021math}) with two distilled-reasoning models (Qwen-7B and Llama-8B variants of DeepSeek-R1-Distill~\\cite{deepseek2025r1}) at budgets $b \\in \\{64, 128\\}$. All seven were rejected. We then propose $\\alpha$, a one-function modification to the TriAttention~\\cite{mao2026triattention} retention scorer that replaces argmax-top-$k$ with greedy facility-location-inspired selection under a V-space redundancy penalty controlled by a single weight $\\lambda$. A pre-registered protocol tunes $\\lambda$ on a frozen development split and confirms on a disjoint held-out split; with $\\lambda = 0.5$, $\\alpha$ clears Bonferroni on two of the four (model, budget) cells (Qwen $b{=}128$ and Llama $b{=}64$), no cell is significantly negative, and the pre-registered Branch~A triggers. The finding is asymmetric: a minimal scoring modification beat heavier structural redesigns in this regime, and the combined matched-memory, sympy-graded, held-out confirmation protocol is the evidence standard that made the asymmetry visible.",
+        "identifiers": [
+          "SemanticScholar:b5299a3ece7d8ef231e9b25a0f546079bc354427"
+        ],
+        "semantic_scholar_id": "b5299a3ece7d8ef231e9b25a0f546079bc354427",
+        "canonical_id": "arXiv:2605.14292",
+        "arxiv_id": "2605.14292",
+        "doi": "10.48550/arXiv.2605.14292",
+        "authors": [
+          "Libo Sun",
+          "P. Harn",
+          "Pei-Xiong He",
+          "Xi Qin"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 152,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.14844",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2605.14844",
+        "id:SemanticScholar:30cb86b88c2f7ec942676da7627253b1b7a37da3",
+        "id:arXiv:2605.14844",
+        "title:xfp qualitytargeted adaptive codebook quantization with sparse outlier separation for llm inference",
+        "url:https://arxiv.org/abs/2605.14844"
+      ],
+      "record": {
+        "title": "XFP: Quality-Targeted Adaptive Codebook Quantization with Sparse Outlier Separation for LLM Inference",
+        "source_url": "https://arxiv.org/abs/2605.14844",
+        "year": 2026,
+        "published": "2026-05-14",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "We introduce XFP, a dynamic weight quantizer for LLM inference that inverts the conventional workflow: the operator specifies reconstruction quality floors on per-channel cosine similarity (one strict floor for attention and shared experts, one lazy floor for routed-expert MoE); XFP determines codebook size, outlier budget, and packing per layer automatically -- no Hessian, no calibration data, no manual bit-width selection. Each weight matrix is decomposed into a sparse fp16 outlier residual and a dense sub-byte index tensor into a per-group learned codebook. Two storage modes share one auto-select frontend and one fused decode kernel: V2 (per-channel Lloyd) and V2a (shared library of L=32 codebooks per layer). On Qwen3.5-122B-A10B under V2, XFP reaches 138 tok/s single-stream decode on workstation hardware (RTX PRO 6000 Blackwell, TP=2) at 94.49% GSM8K strict-match (3 seeds, n=3957), and is 49% faster than Marlin INT4 at TP=1. For models that do not fit in the target memory envelope, we present the H-Process: a quality-driven iteration over the two cosine thresholds that finds the operating point at which the model just fits while still producing sensible output. Three constraints define its search space: the operator-set thresholds, an OOM boundary at quantize-on-load, and a garbage boundary in generation (cosine similarity steers; benches verify). On Qwen3.5-397B-A17B (512 routed experts/layer), the H-Process fits the full expert population into 2x96 GB at ~3.4 effective bits and delivers 100.9 tok/s long-output decode at 66.72% GSM8K strict-match on the full 1319-problem set (single seed at submission; multi-seed evaluation in progress), exceeding INT4 with routed-expert pruning on memory, throughput, and accuracy simultaneously.",
+        "identifiers": [
+          "SemanticScholar:30cb86b88c2f7ec942676da7627253b1b7a37da3"
+        ],
+        "semantic_scholar_id": "30cb86b88c2f7ec942676da7627253b1b7a37da3",
+        "canonical_id": "arXiv:2605.14844",
+        "arxiv_id": "2605.14844",
+        "doi": "10.48550/arXiv.2605.14844",
+        "authors": [
+          "T. Witt"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 152,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.15626",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2605.15626",
+        "id:SemanticScholar:7033c1b61a96184d84e7c502aa538009a01edc0f",
+        "id:arXiv:2605.15626",
+        "title:iosvd inputoutput whitened svd for adaptiverank llm compression",
+        "url:https://arxiv.org/abs/2605.15626"
+      ],
+      "record": {
+        "title": "IO-SVD: Input-Output Whitened SVD for Adaptive-Rank LLM Compression",
+        "source_url": "https://arxiv.org/abs/2605.15626",
+        "year": 2026,
+        "published": "2026-05-15",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large language models deliver strong performance across language and reasoning tasks, but their storage and compute costs remain major barriers to deployment in resource-constrained and latency-sensitive settings. SVD-based post-training compression offers a hardware-agnostic way to reduce model size and improve inference efficiency through low-rank factorization. However, existing methods often rely on input-only whitening spaces, homogeneous rank allocation, or loss-agnostic allocation heuristics, limiting their ability to preserve model quality under aggressive compression. We propose Input-Output Whitened SVD (IO-SVD), a post-training compression method that forms a KL-aware double-sided whitening space for model weights. Using a second-order expansion of the KL loss over the top-K token probabilities, IO-SVD constructs an output-side metric that captures predictive sensitivity, while input whitening captures activation statistics. We further introduce an efficient heterogeneous rank-allocation strategy that scores whitened singular components using first-order calibration loss estimates and prunes the least sensitive components under a global budget. Inspired by prior work that combines SVD truncation with quantization, we improve hybrid SVD-quantization compression through loss-aware remapping, which selects low-rank factor rows for 8-bit quantization based on the predicted loss change incurred by quantizing them. Extensive experiments across diverse LLM and VLM families, and inference-time analysis shows that IO-SVD compresses LLMs with minimal performance degradation while delivering practical inference speedups. Code is available at https://github.com/mint-vu/IO-SVD.git",
+        "identifiers": [
+          "SemanticScholar:7033c1b61a96184d84e7c502aa538009a01edc0f"
+        ],
+        "semantic_scholar_id": "7033c1b61a96184d84e7c502aa538009a01edc0f",
+        "canonical_id": "arXiv:2605.15626",
+        "arxiv_id": "2605.15626",
+        "doi": "10.48550/arXiv.2605.15626",
+        "authors": [
+          "Ali Abbasi",
+          "Chayne Thrash",
+          "Hao-Ran Qin",
+          "Hamed Pirsiavash",
+          "Soheil Kolouri"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 151,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.16839",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2605.16839",
+        "id:SemanticScholar:e8ce26e2c2dd35ca76df7fb074aaaa35f4b04a7c",
+        "id:arXiv:2605.16839",
+        "title:compactattention accelerating chunked prefill with blockunion kv selection",
+        "url:https://arxiv.org/abs/2605.16839"
+      ],
+      "record": {
+        "title": "CompactAttention: Accelerating Chunked Prefill with Block-Union KV Selection",
+        "source_url": "https://arxiv.org/abs/2605.16839",
+        "year": 2026,
+        "published": "2026-05-16",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Chunked prefill has become a widely adopted serving strategy for long-context large language models, but efficient attention computation in this regime remains challenging. Existing sparse attention methods are primarily designed for one-shot prefill and do not translate efficiently to chunked prefill: block-sparse kernels lose efficiency when the query length is limited by the chunk size, while fine-grained pattern search becomes costly when repeated over the accumulated KV cache at every chunk. QUOKA, a recent method that directly targets chunked prefill, avoids sparse-kernel overhead but relies on query-subsampled, token-level KV selection, which can miss query-specific KV entries and introduce explicit KV-copy overhead. To address these limitations, we propose CompactAttention, a chunked-prefill attention mechanism based on Block-Union KV Selection. CompactAttention treats 2D block-sparse masks as KV-selection signals rather than direct sparse-kernel execution plans, and converts them into GQA-aware per-group KV block tables through Q-block union and intra-group union. This construction produces the minimal block tables that preserve all KV blocks selected by the input masks under paged execution constraints, enabling selected KV blocks to be accessed in place without explicit KV compaction. On LLaMA-3.1-8B-Instruct, CompactAttention maintains accuracy close to dense attention on the RULER benchmark while delivering up to 2.72$\\times$ attention speedup at 128K context length under chunked prefill.",
+        "identifiers": [
+          "SemanticScholar:e8ce26e2c2dd35ca76df7fb074aaaa35f4b04a7c"
+        ],
+        "semantic_scholar_id": "e8ce26e2c2dd35ca76df7fb074aaaa35f4b04a7c",
+        "canonical_id": "arXiv:2605.16839",
+        "arxiv_id": "2605.16839",
+        "doi": "10.48550/arXiv.2605.16839",
+        "authors": [
+          "Jiwon Song",
+          "Dongwon Jo",
+          "Beomseok Kang",
+          "Jae-Joon kim"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 150,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.18226",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2605.18226",
+        "id:SemanticScholar:9452cddf65e7444bed98f89bdae702b5eb41fecf",
+        "id:arXiv:2605.18226",
+        "title:context memorization for efficient long context generation",
+        "url:https://arxiv.org/abs/2605.18226"
+      ],
+      "record": {
+        "title": "Context Memorization for Efficient Long Context Generation",
+        "source_url": "https://arxiv.org/abs/2605.18226",
+        "year": 2026,
+        "published": "2026-05-18",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Modern large language model (LLM) applications increasingly rely on long conditioning prefixes to control model behavior at inference time. While prefix-augmented inference is effective, it incurs two structural limitations: i) the prefix's influence fades as generation proceeds, and ii) attention computation over the prefix scales linearly with its length. Existing approaches either keep the prefix in attention while compressing it, or internalize it into model parameters through gradient-based training. The former still attends to the prefix at inference, while the latter is training-intensive and ill-suited to prefix updates. To address these issues, we propose attention-state memory, a training-free approach that externalizes the prefix into a lightweight, lookup-based memory of precomputed attention states between prefix and query tokens. On ManyICLBench with LLaMA-3.1-8B, our method improves accuracy over in-context learning at 1K-8K memory budgets while reducing attention latency by 1.36x at 8K, and surpasses full-attention RAG performance on NBA benchmark using only 20% of its memory footprint.",
+        "identifiers": [
+          "SemanticScholar:9452cddf65e7444bed98f89bdae702b5eb41fecf"
+        ],
+        "semantic_scholar_id": "9452cddf65e7444bed98f89bdae702b5eb41fecf",
+        "canonical_id": "arXiv:2605.18226",
+        "arxiv_id": "2605.18226",
+        "doi": "10.48550/arXiv.2605.18226",
+        "authors": [
+          "Yasuyuki Okoshi",
+          "Hao Chen",
+          "Guan-Xi Lu",
+          "Hong-Xiang Fan",
+          "Masato Motomura",
+          "Daichi Fujiki"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 148,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:94f94bf5d7ee55bc30164634a76e9e8e609cf8c13d2d9f93f9485d0366cb7763",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

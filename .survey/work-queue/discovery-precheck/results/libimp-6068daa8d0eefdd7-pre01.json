@@ -1,0 +1,1023 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-6068daa8d0eefdd7-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-6068daa8d0ee",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "DOI:10.1109/icde65706.2026.00145",
+    "arXiv:2605.00789",
+    "arXiv:2605.01111",
+    "arXiv:2605.02262",
+    "arXiv:2605.03562",
+    "arXiv:2605.04263",
+    "arXiv:2605.04952",
+    "arXiv:2605.06046",
+    "arXiv:2605.06206",
+    "arXiv:2605.07985",
+    "arXiv:2605.09008"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 11,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "83790c5cc8f0efacec95a3172d9e7e94a87d0e1b",
+  "raw_search_result_count": 11,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 11,
+  "provider_progress": {
+    "requested_count": 11,
+    "status_counts": {
+      "allowed": 11,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-13T22:58:09.423697+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "DOI:10.1109/icde65706.2026.00145",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2605.00789",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2605.01111",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2605.02262",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2605.03562",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2605.04263",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2605.04952",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2605.06046",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2605.06206",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2605.07985",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2605.09008",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "BOND: A Co-Designed Framework for LLM-Powered Analytics Over Relational Data",
+      "source_url": "https://doi.org/10.1109/ICDE65706.2026.00145",
+      "year": 2026,
+      "published": "2026-05-01",
+      "venue": "IEEE International Conference on Data Engineering",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The integration of Large Language Models (LLMs) into database systems through SQL has made the data analytics workflow elegant. However, this integration introduces significant computational overhead, as conventional LLM inference is not optimized for relational workloads. Existing optimization techniques are often designed for unpredictable online request streams and treat the LLM engine as a black box, failing to leverage the prior knowledge of the entire data batch available in database operations. To bridge this gap, we propose BOND, a co-designed framework that deeply integrates batch-aware optimizations on both the inference engine and data organization sides. Specifically, BOND consists of two main components. First, a batch-efficient LLM inference engine indexes incoming prompts using a radix tree to identify shared prefix. Then, it models batch creation as a bin-packing problem, grouping computations to align with GPU hardware characteristics. As a result, it effectively mitigates tile-quantization effects. Second, a prefix-oriented data re-organizer optimizes the relational data before inference. This process uses a tree-based framework to find a data layout that maximizes prefix sharing and cache localities. Finally, these two components are bridged by a bubble-free task scheduler that ensures continuous GPU utilization in distributed environments. Experimental results show that our approach could reduce query execution time by up to 71.8%.",
+      "identifiers": [
+        "SemanticScholar:8884ab4f824588989707ccb32d7538f003750293"
+      ],
+      "semantic_scholar_id": "8884ab4f824588989707ccb32d7538f003750293",
+      "doi": "10.1109/ICDE65706.2026.00145",
+      "canonical_id": "DOI:10.1109/ICDE65706.2026.00145",
+      "authors": [
+        "Li-Xiang Chen",
+        "Qin Zheng",
+        "Zhicheng Pan",
+        "Cheng-Cheng Yang",
+        "Rong Zhang",
+        "Xuan Zhou"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 165,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Make Your LVLM KV Cache More Lightweight",
+      "source_url": "https://arxiv.org/abs/2605.00789",
+      "year": 2026,
+      "published": "2026-05-01",
+      "venue": "Trans. Mach. Learn. Res.",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Key-Value (KV) cache has become a de facto component of modern Large Vision-Language Models (LVLMs) for inference. While it enhances decoding efficiency in Large Language Models (LLMs), its direct adoption in LVLMs introduces substantial GPU memory overhead due to the large number of vision tokens processed during the prefill stage. To tackle this problem, we propose LightKV, a novel approach that reduces KV cache size by exploiting the redundancy among vision-token embeddings. Guided by text prompts, LightKV employs cross-modality message passing to aggregate informative messages across vision tokens and progressively compress them during prefill. This prompt-aware guidance distinguishes our method from prior vision-only compression strategies. We evaluate LightKV on eight open-source LVLMs across eight public benchmark datasets, e.g., MME and SeedBench. Experimental results demonstrate that with only 55% of the original vision tokens, LightKV (a) halves the vision-token KV cache size, (b) reduces computation by up to 40%, and (c) preserves general-purpose performance while significantly outperforming existing baselines.",
+      "identifiers": [
+        "SemanticScholar:9c9fa50789123ada374cf2256d1b30e29b730211"
+      ],
+      "semantic_scholar_id": "9c9fa50789123ada374cf2256d1b30e29b730211",
+      "canonical_id": "arXiv:2605.00789",
+      "arxiv_id": "2605.00789",
+      "doi": "10.48550/arXiv.2605.00789",
+      "authors": [
+        "Xihao Chen",
+        "Yangyang Guo",
+        "R. Zimmermann"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 165,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "When Less is Enough: Efficient Inference via Collaborative Reasoning",
+      "source_url": "https://arxiv.org/abs/2605.01111",
+      "year": 2026,
+      "published": "2026-05-01",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "In this work, we introduce DUET (Dual-model Efficient Two-stage inference), a collaborative inference framework in which a capable model and a lightweight model work together to solve a task. Relying on a single large model to perform end-to-end reasoning and prediction often incurs substantial inference cost. In contrast, DUET decomposes inference into two stages: the capable model produces a reasoning signal, and the lightweight model interprets this signal to generate the final answer, allowing reasoning-intensive computation to be handled by the capable model while non-reasoning-intensive components are delegated to the lightweight model without sacrificing task performance. To achieve this objective, we propose a length-penalized joint training objective that encourages the capable model to transmit only the information that is sufficient for the lightweight model to solve the task. As a result, DUET maintains strong reasoning performance with substantially lower inference cost than end-to-end inference using a large model alone, saving up to 60% of the large model's output tokens on challenging reasoning benchmarks, including AIME and GPQA.",
+      "identifiers": [
+        "SemanticScholar:1ca4e88d594fe8d615e775967506be85e059a2c0"
+      ],
+      "semantic_scholar_id": "1ca4e88d594fe8d615e775967506be85e059a2c0",
+      "canonical_id": "arXiv:2605.01111",
+      "arxiv_id": "2605.01111",
+      "doi": "10.48550/arXiv.2605.01111",
+      "authors": [
+        "Yi-Lei Chen",
+        "Sharut Gupta",
+        "Yannis Paschalidis",
+        "Ayush Sekhari",
+        "Aldo Pacchiano"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 165,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "WindowQuant: Mixed-Precision KV Cache Quantization Based on Window-Level Similarity for VLMs Inference Optimization",
+      "source_url": "https://arxiv.org/abs/2605.02262",
+      "year": 2026,
+      "published": "2026-05-04",
+      "venue": "ACM Transactions on Architecture and Code Optimization (TACO)",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Recently, video language models (VLMs) have been applied in various fields. However, the visual token sequence of the VLM is too long, which may cause intolerant inference latency and GPU memory usage. Existing methods propose mixed-precision quantization to the key-value (KV) cache in VLMs based on token granularity, which is time-consuming in the search process and hardware inefficient during computation. This article introduces a novel approach called WindowQuant, which employs window-adaptive mixed-precision quantization to optimize the KV cache. WindowQuant consists of two modules: window-level quantization search and window-level KV cache computation. Window-level quantization search quickly determines the optimal bit-width configuration of the KV cache windows based on the similarity scores between the corresponding visual token windows and the text prompt, maintaining the model accuracy. Furthermore, window-level KV cache computation reorders the KV cache windows before quantization, avoiding the hardware inefficiency caused by mixed-precision quantization in inference computation. Extensive experiments demonstrate that WindowQuant outperforms state-of-the-art VLM models and KV cache quantization methods on various datasets.",
+      "identifiers": [
+        "SemanticScholar:963c27005714397c5e689b039dab58c85a9f8efa"
+      ],
+      "semantic_scholar_id": "963c27005714397c5e689b039dab58c85a9f8efa",
+      "canonical_id": "arXiv:2605.02262",
+      "arxiv_id": "2605.02262",
+      "doi": "10.1145/3817053",
+      "authors": [
+        "Wei Tao",
+        "Xiaoyang Qu",
+        "Pei-Shuo Wang",
+        "Guo-Kuan Li",
+        "Jiguang Wan",
+        "Kai Lu",
+        "Jianzong Wang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 162,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "HeadQ: Model-Visible Distortion and Score-Space Correction for KV-Cache Quantization",
+      "source_url": "https://arxiv.org/abs/2605.03562",
+      "year": 2026,
+      "published": "2026-05-05",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "KV-cache quantizers usually optimize storage-space reconstruction, even though attention reads keys through logits and values through attention-weighted readout. We argue that persistent cache error should be measured in model-visible coordinates. For keys, the visible object is score error modulo constant shifts; this yields HeadQ, a key-side method that stores a low-rank residual side code in a calibration-learned query basis and applies it as an additive logit correction. For values, fixed-attention readout gives an $A^2$-weighted token-distortion surrogate. Across six models, Fisher/score-space error predicts attention KL far better than raw key MSE; same-budget counterexamples, null-space interventions, query-PCA controls, and wrong-sign HeadQ falsify storage-MSE alternatives. Matched Pythia checkpoints localize the main anomaly to a small-model low-entropy route-flip boundary. In K-only WikiText-103 decode experiments with dense values, HeadQ removes roughly $84$--$94\\%$ of the excess perplexity on the strongest 2-bit rows; in an auxiliary full-KV 2-bit composition, HeadQ plus an $A^2$ value policy improves all six models.",
+      "identifiers": [
+        "SemanticScholar:7ea97b650c5572a6d1eb425eb13cbdda744213f2"
+      ],
+      "semantic_scholar_id": "7ea97b650c5572a6d1eb425eb13cbdda744213f2",
+      "canonical_id": "arXiv:2605.03562",
+      "arxiv_id": "2605.03562",
+      "doi": "10.48550/arXiv.2605.03562",
+      "authors": [
+        "Jorge L. Ruiz Williams"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 161,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Parallel Prefix Verification for Speculative Generation",
+      "source_url": "https://arxiv.org/abs/2605.04263",
+      "year": 2026,
+      "published": "2026-05-05",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "We introduce PARSE (PArallel pRefix Speculative Engine), a speculative generation framework that accelerates large language model (LLM) inference by parallelizing prefix verification on a semantic level. Existing speculative decoding methods are fundamentally limited by token-level equivalence: the target model must verify each token, leading to short acceptance lengths and modest speedups. Moving to semantic or segment-level verification can substantially increase acceptance granularity, but prior approaches rely on sequential verification, introducing significant overhead and limiting practical gains. PARSE introduces parallel prefix verification, enabling semantic-level verification without sequential checks. Given a full draft from a draft model, the target model evaluates correctness across multiple prefixes in a single forward pass using a custom attention mask, directly identifying the maximal valid prefix. This eliminates sequential segment verification, and makes verification compute-efficient. PARSE is orthogonal to token-level speculative decoding and can be composed with it for additional gains. Across models and benchmarks, PARSE delivers $1.25\\times$ to $4.3\\times$ throughput gain over the target model, and $1.6\\times$ to $4.5\\times$ when composed with EAGLE-3, all with negligible accuracy degradation. This demonstrates parallel prefix verification as an effective, general approach to accelerating LLM inference.",
+      "identifiers": [
+        "SemanticScholar:1b04ececf8a40ece7e24658f40c9010ec5187e47"
+      ],
+      "semantic_scholar_id": "1b04ececf8a40ece7e24658f40c9010ec5187e47",
+      "canonical_id": "arXiv:2605.04263",
+      "arxiv_id": "2605.04263",
+      "doi": "10.48550/arXiv.2605.04263",
+      "authors": [
+        "Yun-Cheng Yao",
+        "Yuxuan Xia",
+        "Sheng-Jie Wang",
+        "Dan-Yang Zhuo"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 161,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Adaptive Inverted-Index Routing for Granular Mixtures-of-Experts",
+      "source_url": "https://arxiv.org/abs/2605.04952",
+      "year": 2026,
+      "published": "2026-05-06",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Sparse Mixture-of-experts (MoE) models enable scalable transformer architectures by activating only a subset of experts per token. Recent evidence suggests that performance improves with increasingly granular experts, i.e., many small experts instead of a few large ones. However, this regime substantially increases routing cost, which can dominate computation and memory. We introduce adaptive inverted-index routing for MoE (AIR-MoE), an inverted-index-inspired routing architecture based on vector quantization (VQ). In a first stage, AIR-MoE performs coarse shortlisting by assigning tokens to VQ codewords to construct a candidate set of experts. In a second stage, fine scoring computes exact routing scores restricted to this shortlist. This two-stage procedure approximates true top-K routing while avoiding full expert scoring and, in contrast to prior work, imposing no structural constraints on expert parameters. AIR-MoE serves as a drop-in replacement for standard routers and requires no modifications to the model architecture or loss function. We further provide a lower bound on the mass recall achieved by AIR-MoE that yields insights into the inner workings. Empirically, AIR-MoE improves the perplexity-FLOPs trade-off over existing MoE routers in regimes with up to more than a million tiny experts, and achieves consistent perplexity improvements over the best existing baseline.",
+      "identifiers": [
+        "SemanticScholar:e422b4c5ac9c21aa3a91c624680ff4edc44c4a9d"
+      ],
+      "semantic_scholar_id": "e422b4c5ac9c21aa3a91c624680ff4edc44c4a9d",
+      "canonical_id": "arXiv:2605.04952",
+      "arxiv_id": "2605.04952",
+      "doi": "10.48550/arXiv.2605.04952",
+      "authors": [
+        "Klaus-Rudolf Kladny",
+        "Maximilian Mordig",
+        "B. Schölkopf",
+        "M. Muehlebach"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 160,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Requests of a Feather Must Flock Together: Batch Size vs. Prefix Homogeneity in LLM Inference",
+      "source_url": "https://arxiv.org/abs/2605.06046",
+      "year": 2026,
+      "published": "2026-05-07",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Auto-regressive token generation in large language models is memory-bound because it requires\"attending to\"key and value tensors (KV cache) of all previous tokens. Prior work aims to improve the efficiency of this decode process by batching multiple requests together, and maximizing batch size subject to GPU memory constraints. The key observation of our work is that with prefix-sharing workloads, smaller, prefix-homogeneous batches -- where all requests share a common prefix -- can achieve higher decode throughput than larger, heterogeneous batches, due to better spatial and temporal locality during KV cache accesses. However, prefix-aware schedulers in state-of-the-art inference engines maximize prefix reuse within a batch only to reduce KV cache memory footprint, but do not stop batch formation at smaller homogeneous batches that could have performed better. Further, we show that shared prefix detection in existing schedulers relies on radix-tree traversals, incurring substantial CPU overhead that is often comparable to GPU execution time. This paper presents Feather, a prefix-aware scheduler that uses reinforcement learning (RL) to learn the optimal tradeoff between batch size and prefix homogeneity. We also introduce Chunked Hash Tree (CHT), a lightweight data structure that enables fast prefix detection and efficient request selection for the RL scheduler, avoiding expensive tree traversals. We integrate Feather into vLLM and SGLang, and our evaluation shows that Feather achieves 2--10$\\times$ higher end-to-end throughput as compared to existing schedulers, while doing no worse than the status quo when the workload does not have enough prefix sharing. Feather achieves these gains by reducing the total number of KV cache accesses, surpassing the performance of prefix-aware attention kernels that have the same goal.",
+      "identifiers": [
+        "SemanticScholar:68f4377e9a8cb07ba036eb818e0df744021646e2"
+      ],
+      "semantic_scholar_id": "68f4377e9a8cb07ba036eb818e0df744021646e2",
+      "canonical_id": "arXiv:2605.06046",
+      "arxiv_id": "2605.06046",
+      "doi": "10.48550/arXiv.2605.06046",
+      "authors": [
+        "Saksham Rathi",
+        "Preeti",
+        "Mythili Vutukuru"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 159,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Federation of Experts: Communication Efficient Distributed Inference for Large Language Models",
+      "source_url": "https://arxiv.org/abs/2605.06206",
+      "year": 2026,
+      "published": "2026-05-07",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Mixture of experts has emerged as the primary mechanism for making Large Language Models (LLMs) computationally efficient. However, in distributed settings, communicating token embeddings between experts is a significant bottleneck. We present the novel Federation of Experts (FoE) architecture. FoE restructures the MoE block of a transformer layer into multiple MoE clusters. Each cluster is responsible for only one of the KV heads and expert parallelism is applied between those experts. Between clusters, a sum synchronizes the post-attention residuals, which then drives routing and dispatch for the next MoE block. In a single-node setting, FoE completely eliminates all-to-all communication as all experts within a group are contained on the same GPU. In multi-node settings, FoE confines all-to-all communication to the intra-node fabric, thus significantly reducing communication overhead. An implementation of FoE finds that on LongBench, FoE significantly improves inference throughput and latency in both single-node and multi-node settings, reducing end-to-end prefill latency by up to 5.88x, TTFT by 3.66x, and TPOT by 1.53x. It does so while achieving comparable generation quality to a mixture of experts model of the same size and training configuration.",
+      "identifiers": [
+        "SemanticScholar:1da5da87856503400d5802fe6076e15d924ffe91"
+      ],
+      "semantic_scholar_id": "1da5da87856503400d5802fe6076e15d924ffe91",
+      "canonical_id": "arXiv:2605.06206",
+      "arxiv_id": "2605.06206",
+      "doi": "10.48550/arXiv.2605.06206",
+      "authors": [
+        "Muhammad Shahir Abdurrahman",
+        "Chunyuan Deng",
+        "Azalia Mirhoseini",
+        "Philip Levis"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 159,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Dooly: Configuration-Agnostic, Redundancy-Aware Profiling for LLM Inference Simulation",
+      "source_url": "https://arxiv.org/abs/2605.07985",
+      "year": 2026,
+      "published": "2026-05-08",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Selecting the optimal LLM inference configuration requires evaluation across hardware, serving engines, attention backends, and model architectures, since no single choice performs best across all workloads. Profile-based simulators are the standard tool, yet they hardcode their operation set to a specific configuration and re-profile every operation from scratch, making exploration prohibitively expensive. This cost stems from a missing structural understanding: every input dimension of each operation is fixed by the model configuration or determined by the incoming request. Many model-configuration values (e.g., head size, layer count) recur across models, so the same operation runs in many configurations; a single sweep over the request-dependent dimensions can serve them all. We present Dooly, which exploits this structure to achieve configuration-agnostic, redundancy-aware profiling. Dooly performs a single inference pass, labels each input dimension with its origin via taint propagation, and selectively profiles only operations absent from its latency database; stateful operations such as attention are isolated by reusing the serving engine's own initialization code, eliminating manual instrumentation. It builds latency regression models based on the database, which becomes a drop-in backend for existing simulators. Across two GPU platforms, three attention backends, and diverse model architectures, Dooly achieves simulation accuracy within 5% MAPE for TTFT and 8% for TPOT while reducing profiling GPU-hours by 56.4% across 12 models compared to the existing profiling approach. We have open-sourced Dooly at https://github.com/dooly-project.",
+      "identifiers": [
+        "SemanticScholar:2ff1f270cd4d5ae76aad31cafd5e1ec272f16323"
+      ],
+      "semantic_scholar_id": "2ff1f270cd4d5ae76aad31cafd5e1ec272f16323",
+      "canonical_id": "arXiv:2605.07985",
+      "arxiv_id": "2605.07985",
+      "doi": "10.48550/arXiv.2605.07985",
+      "authors": [
+        "Joo-Young Kim",
+        "Geon-Woo Kim",
+        "Anoop Rachakonda",
+        "Daehyeok Kim"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 158,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Relative Kinetic Utility: Calibrating Cross-Layer Credit for Global Structured LLM Pruning",
+      "source_url": "https://arxiv.org/abs/2605.09008",
+      "year": 2026,
+      "published": "2026-05-09",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Global structured pruning requires channels from different layers to compete under a shared sparsity budget, raising two coupled challenges: identifying which channels should be retained and making their scores comparable across layers. Raw channel scores can contain block-common scale that leaves within-block ordering unchanged but distorts model-wide competition. Our experiment indicates that similar layer-wise allocations can retain substantially different FFN channels, so layer allocation alone does not determine channel identity. Motivated by this separation, we introduce Global Relative Kinetic Utility (Global RKU), a label-free criterion that separates channel importance estimation from cross-layer comparison. Global RKU measures channel participation using a final-hidden-state activation-gradient signal, then applies block-relative normalization to mitigate block-common scale while preserving within-block ordering, requires only unlabeled calibration inputs, and produces a static pruning topology in a single calibration stage. Under questions-only calibration on Qwen-2.5-7B, RKU-GISP Mean3 margins are -0.98, +3.79, and +8.61 points at 30%, 40%, and 50% sparsity, respectively (average +3.81). Additional Qwen evaluations cover non-mathematical reasoning, recovery, held-out transfer, and physical deployment. Separately, replacing Wiki16K with questions-only Q16K improves RKU's Mean3 at every tested sparsity on Qwen, Llama, and Gemma. Our ablation study shows relative-normalization gains of 14.42 and 5.53 Mean3 points at 40% and 50% sparsity, respectively; the common-seed audit is positive in all 27 seed-task comparisons.",
+      "identifiers": [
+        "SemanticScholar:40acd7efed213e888934acbd566a1da73a032c79"
+      ],
+      "semantic_scholar_id": "40acd7efed213e888934acbd566a1da73a032c79",
+      "canonical_id": "arXiv:2605.09008",
+      "arxiv_id": "2605.09008",
+      "authors": [
+        "Tian-Hao Qian",
+        "Gui-Lin Qi",
+        "Jia-Yu Chen"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 157,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:DOI:10.1109/icde65706.2026.00145",
+      "identity_tokens": [
+        "id:DOI:10.1109/icde65706.2026.00145",
+        "id:SemanticScholar:8884ab4f824588989707ccb32d7538f003750293",
+        "title:bond a codesigned framework for llmpowered analytics over relational data",
+        "url:https://doi.org/10.1109/ICDE65706.2026.00145"
+      ],
+      "record": {
+        "title": "BOND: A Co-Designed Framework for LLM-Powered Analytics Over Relational Data",
+        "source_url": "https://doi.org/10.1109/ICDE65706.2026.00145",
+        "year": 2026,
+        "published": "2026-05-01",
+        "venue": "IEEE International Conference on Data Engineering",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The integration of Large Language Models (LLMs) into database systems through SQL has made the data analytics workflow elegant. However, this integration introduces significant computational overhead, as conventional LLM inference is not optimized for relational workloads. Existing optimization techniques are often designed for unpredictable online request streams and treat the LLM engine as a black box, failing to leverage the prior knowledge of the entire data batch available in database operations. To bridge this gap, we propose BOND, a co-designed framework that deeply integrates batch-aware optimizations on both the inference engine and data organization sides. Specifically, BOND consists of two main components. First, a batch-efficient LLM inference engine indexes incoming prompts using a radix tree to identify shared prefix. Then, it models batch creation as a bin-packing problem, grouping computations to align with GPU hardware characteristics. As a result, it effectively mitigates tile-quantization effects. Second, a prefix-oriented data re-organizer optimizes the relational data before inference. This process uses a tree-based framework to find a data layout that maximizes prefix sharing and cache localities. Finally, these two components are bridged by a bubble-free task scheduler that ensures continuous GPU utilization in distributed environments. Experimental results show that our approach could reduce query execution time by up to 71.8%.",
+        "identifiers": [
+          "SemanticScholar:8884ab4f824588989707ccb32d7538f003750293"
+        ],
+        "semantic_scholar_id": "8884ab4f824588989707ccb32d7538f003750293",
+        "doi": "10.1109/ICDE65706.2026.00145",
+        "canonical_id": "DOI:10.1109/ICDE65706.2026.00145",
+        "authors": [
+          "Li-Xiang Chen",
+          "Qin Zheng",
+          "Zhicheng Pan",
+          "Cheng-Cheng Yang",
+          "Rong Zhang",
+          "Xuan Zhou"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 165,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.00789",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2605.00789",
+        "id:SemanticScholar:9c9fa50789123ada374cf2256d1b30e29b730211",
+        "id:arXiv:2605.00789",
+        "title:make your lvlm kv cache more lightweight",
+        "url:https://arxiv.org/abs/2605.00789"
+      ],
+      "record": {
+        "title": "Make Your LVLM KV Cache More Lightweight",
+        "source_url": "https://arxiv.org/abs/2605.00789",
+        "year": 2026,
+        "published": "2026-05-01",
+        "venue": "Trans. Mach. Learn. Res.",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Key-Value (KV) cache has become a de facto component of modern Large Vision-Language Models (LVLMs) for inference. While it enhances decoding efficiency in Large Language Models (LLMs), its direct adoption in LVLMs introduces substantial GPU memory overhead due to the large number of vision tokens processed during the prefill stage. To tackle this problem, we propose LightKV, a novel approach that reduces KV cache size by exploiting the redundancy among vision-token embeddings. Guided by text prompts, LightKV employs cross-modality message passing to aggregate informative messages across vision tokens and progressively compress them during prefill. This prompt-aware guidance distinguishes our method from prior vision-only compression strategies. We evaluate LightKV on eight open-source LVLMs across eight public benchmark datasets, e.g., MME and SeedBench. Experimental results demonstrate that with only 55% of the original vision tokens, LightKV (a) halves the vision-token KV cache size, (b) reduces computation by up to 40%, and (c) preserves general-purpose performance while significantly outperforming existing baselines.",
+        "identifiers": [
+          "SemanticScholar:9c9fa50789123ada374cf2256d1b30e29b730211"
+        ],
+        "semantic_scholar_id": "9c9fa50789123ada374cf2256d1b30e29b730211",
+        "canonical_id": "arXiv:2605.00789",
+        "arxiv_id": "2605.00789",
+        "doi": "10.48550/arXiv.2605.00789",
+        "authors": [
+          "Xihao Chen",
+          "Yangyang Guo",
+          "R. Zimmermann"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 165,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.01111",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2605.01111",
+        "id:SemanticScholar:1ca4e88d594fe8d615e775967506be85e059a2c0",
+        "id:arXiv:2605.01111",
+        "title:when less is enough efficient inference via collaborative reasoning",
+        "url:https://arxiv.org/abs/2605.01111"
+      ],
+      "record": {
+        "title": "When Less is Enough: Efficient Inference via Collaborative Reasoning",
+        "source_url": "https://arxiv.org/abs/2605.01111",
+        "year": 2026,
+        "published": "2026-05-01",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "In this work, we introduce DUET (Dual-model Efficient Two-stage inference), a collaborative inference framework in which a capable model and a lightweight model work together to solve a task. Relying on a single large model to perform end-to-end reasoning and prediction often incurs substantial inference cost. In contrast, DUET decomposes inference into two stages: the capable model produces a reasoning signal, and the lightweight model interprets this signal to generate the final answer, allowing reasoning-intensive computation to be handled by the capable model while non-reasoning-intensive components are delegated to the lightweight model without sacrificing task performance. To achieve this objective, we propose a length-penalized joint training objective that encourages the capable model to transmit only the information that is sufficient for the lightweight model to solve the task. As a result, DUET maintains strong reasoning performance with substantially lower inference cost than end-to-end inference using a large model alone, saving up to 60% of the large model's output tokens on challenging reasoning benchmarks, including AIME and GPQA.",
+        "identifiers": [
+          "SemanticScholar:1ca4e88d594fe8d615e775967506be85e059a2c0"
+        ],
+        "semantic_scholar_id": "1ca4e88d594fe8d615e775967506be85e059a2c0",
+        "canonical_id": "arXiv:2605.01111",
+        "arxiv_id": "2605.01111",
+        "doi": "10.48550/arXiv.2605.01111",
+        "authors": [
+          "Yi-Lei Chen",
+          "Sharut Gupta",
+          "Yannis Paschalidis",
+          "Ayush Sekhari",
+          "Aldo Pacchiano"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 165,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.02262",
+      "identity_tokens": [
+        "id:DOI:10.1145/3817053",
+        "id:SemanticScholar:963c27005714397c5e689b039dab58c85a9f8efa",
+        "id:arXiv:2605.02262",
+        "title:windowquant mixedprecision kv cache quantization based on windowlevel similarity for vlms inference optimization",
+        "url:https://arxiv.org/abs/2605.02262"
+      ],
+      "record": {
+        "title": "WindowQuant: Mixed-Precision KV Cache Quantization Based on Window-Level Similarity for VLMs Inference Optimization",
+        "source_url": "https://arxiv.org/abs/2605.02262",
+        "year": 2026,
+        "published": "2026-05-04",
+        "venue": "ACM Transactions on Architecture and Code Optimization (TACO)",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Recently, video language models (VLMs) have been applied in various fields. However, the visual token sequence of the VLM is too long, which may cause intolerant inference latency and GPU memory usage. Existing methods propose mixed-precision quantization to the key-value (KV) cache in VLMs based on token granularity, which is time-consuming in the search process and hardware inefficient during computation. This article introduces a novel approach called WindowQuant, which employs window-adaptive mixed-precision quantization to optimize the KV cache. WindowQuant consists of two modules: window-level quantization search and window-level KV cache computation. Window-level quantization search quickly determines the optimal bit-width configuration of the KV cache windows based on the similarity scores between the corresponding visual token windows and the text prompt, maintaining the model accuracy. Furthermore, window-level KV cache computation reorders the KV cache windows before quantization, avoiding the hardware inefficiency caused by mixed-precision quantization in inference computation. Extensive experiments demonstrate that WindowQuant outperforms state-of-the-art VLM models and KV cache quantization methods on various datasets.",
+        "identifiers": [
+          "SemanticScholar:963c27005714397c5e689b039dab58c85a9f8efa"
+        ],
+        "semantic_scholar_id": "963c27005714397c5e689b039dab58c85a9f8efa",
+        "canonical_id": "arXiv:2605.02262",
+        "arxiv_id": "2605.02262",
+        "doi": "10.1145/3817053",
+        "authors": [
+          "Wei Tao",
+          "Xiaoyang Qu",
+          "Pei-Shuo Wang",
+          "Guo-Kuan Li",
+          "Jiguang Wan",
+          "Kai Lu",
+          "Jianzong Wang"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 162,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.03562",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2605.03562",
+        "id:SemanticScholar:7ea97b650c5572a6d1eb425eb13cbdda744213f2",
+        "id:arXiv:2605.03562",
+        "title:headq modelvisible distortion and scorespace correction for kvcache quantization",
+        "url:https://arxiv.org/abs/2605.03562"
+      ],
+      "record": {
+        "title": "HeadQ: Model-Visible Distortion and Score-Space Correction for KV-Cache Quantization",
+        "source_url": "https://arxiv.org/abs/2605.03562",
+        "year": 2026,
+        "published": "2026-05-05",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "KV-cache quantizers usually optimize storage-space reconstruction, even though attention reads keys through logits and values through attention-weighted readout. We argue that persistent cache error should be measured in model-visible coordinates. For keys, the visible object is score error modulo constant shifts; this yields HeadQ, a key-side method that stores a low-rank residual side code in a calibration-learned query basis and applies it as an additive logit correction. For values, fixed-attention readout gives an $A^2$-weighted token-distortion surrogate. Across six models, Fisher/score-space error predicts attention KL far better than raw key MSE; same-budget counterexamples, null-space interventions, query-PCA controls, and wrong-sign HeadQ falsify storage-MSE alternatives. Matched Pythia checkpoints localize the main anomaly to a small-model low-entropy route-flip boundary. In K-only WikiText-103 decode experiments with dense values, HeadQ removes roughly $84$--$94\\%$ of the excess perplexity on the strongest 2-bit rows; in an auxiliary full-KV 2-bit composition, HeadQ plus an $A^2$ value policy improves all six models.",
+        "identifiers": [
+          "SemanticScholar:7ea97b650c5572a6d1eb425eb13cbdda744213f2"
+        ],
+        "semantic_scholar_id": "7ea97b650c5572a6d1eb425eb13cbdda744213f2",
+        "canonical_id": "arXiv:2605.03562",
+        "arxiv_id": "2605.03562",
+        "doi": "10.48550/arXiv.2605.03562",
+        "authors": [
+          "Jorge L. Ruiz Williams"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 161,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.04263",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2605.04263",
+        "id:SemanticScholar:1b04ececf8a40ece7e24658f40c9010ec5187e47",
+        "id:arXiv:2605.04263",
+        "title:parallel prefix verification for speculative generation",
+        "url:https://arxiv.org/abs/2605.04263"
+      ],
+      "record": {
+        "title": "Parallel Prefix Verification for Speculative Generation",
+        "source_url": "https://arxiv.org/abs/2605.04263",
+        "year": 2026,
+        "published": "2026-05-05",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "We introduce PARSE (PArallel pRefix Speculative Engine), a speculative generation framework that accelerates large language model (LLM) inference by parallelizing prefix verification on a semantic level. Existing speculative decoding methods are fundamentally limited by token-level equivalence: the target model must verify each token, leading to short acceptance lengths and modest speedups. Moving to semantic or segment-level verification can substantially increase acceptance granularity, but prior approaches rely on sequential verification, introducing significant overhead and limiting practical gains. PARSE introduces parallel prefix verification, enabling semantic-level verification without sequential checks. Given a full draft from a draft model, the target model evaluates correctness across multiple prefixes in a single forward pass using a custom attention mask, directly identifying the maximal valid prefix. This eliminates sequential segment verification, and makes verification compute-efficient. PARSE is orthogonal to token-level speculative decoding and can be composed with it for additional gains. Across models and benchmarks, PARSE delivers $1.25\\times$ to $4.3\\times$ throughput gain over the target model, and $1.6\\times$ to $4.5\\times$ when composed with EAGLE-3, all with negligible accuracy degradation. This demonstrates parallel prefix verification as an effective, general approach to accelerating LLM inference.",
+        "identifiers": [
+          "SemanticScholar:1b04ececf8a40ece7e24658f40c9010ec5187e47"
+        ],
+        "semantic_scholar_id": "1b04ececf8a40ece7e24658f40c9010ec5187e47",
+        "canonical_id": "arXiv:2605.04263",
+        "arxiv_id": "2605.04263",
+        "doi": "10.48550/arXiv.2605.04263",
+        "authors": [
+          "Yun-Cheng Yao",
+          "Yuxuan Xia",
+          "Sheng-Jie Wang",
+          "Dan-Yang Zhuo"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 161,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.04952",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2605.04952",
+        "id:SemanticScholar:e422b4c5ac9c21aa3a91c624680ff4edc44c4a9d",
+        "id:arXiv:2605.04952",
+        "title:adaptive invertedindex routing for granular mixturesofexperts",
+        "url:https://arxiv.org/abs/2605.04952"
+      ],
+      "record": {
+        "title": "Adaptive Inverted-Index Routing for Granular Mixtures-of-Experts",
+        "source_url": "https://arxiv.org/abs/2605.04952",
+        "year": 2026,
+        "published": "2026-05-06",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Sparse Mixture-of-experts (MoE) models enable scalable transformer architectures by activating only a subset of experts per token. Recent evidence suggests that performance improves with increasingly granular experts, i.e., many small experts instead of a few large ones. However, this regime substantially increases routing cost, which can dominate computation and memory. We introduce adaptive inverted-index routing for MoE (AIR-MoE), an inverted-index-inspired routing architecture based on vector quantization (VQ). In a first stage, AIR-MoE performs coarse shortlisting by assigning tokens to VQ codewords to construct a candidate set of experts. In a second stage, fine scoring computes exact routing scores restricted to this shortlist. This two-stage procedure approximates true top-K routing while avoiding full expert scoring and, in contrast to prior work, imposing no structural constraints on expert parameters. AIR-MoE serves as a drop-in replacement for standard routers and requires no modifications to the model architecture or loss function. We further provide a lower bound on the mass recall achieved by AIR-MoE that yields insights into the inner workings. Empirically, AIR-MoE improves the perplexity-FLOPs trade-off over existing MoE routers in regimes with up to more than a million tiny experts, and achieves consistent perplexity improvements over the best existing baseline.",
+        "identifiers": [
+          "SemanticScholar:e422b4c5ac9c21aa3a91c624680ff4edc44c4a9d"
+        ],
+        "semantic_scholar_id": "e422b4c5ac9c21aa3a91c624680ff4edc44c4a9d",
+        "canonical_id": "arXiv:2605.04952",
+        "arxiv_id": "2605.04952",
+        "doi": "10.48550/arXiv.2605.04952",
+        "authors": [
+          "Klaus-Rudolf Kladny",
+          "Maximilian Mordig",
+          "B. Schölkopf",
+          "M. Muehlebach"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 160,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.06046",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2605.06046",
+        "id:SemanticScholar:68f4377e9a8cb07ba036eb818e0df744021646e2",
+        "id:arXiv:2605.06046",
+        "title:requests of a feather must flock together batch size vs prefix homogeneity in llm inference",
+        "url:https://arxiv.org/abs/2605.06046"
+      ],
+      "record": {
+        "title": "Requests of a Feather Must Flock Together: Batch Size vs. Prefix Homogeneity in LLM Inference",
+        "source_url": "https://arxiv.org/abs/2605.06046",
+        "year": 2026,
+        "published": "2026-05-07",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Auto-regressive token generation in large language models is memory-bound because it requires\"attending to\"key and value tensors (KV cache) of all previous tokens. Prior work aims to improve the efficiency of this decode process by batching multiple requests together, and maximizing batch size subject to GPU memory constraints. The key observation of our work is that with prefix-sharing workloads, smaller, prefix-homogeneous batches -- where all requests share a common prefix -- can achieve higher decode throughput than larger, heterogeneous batches, due to better spatial and temporal locality during KV cache accesses. However, prefix-aware schedulers in state-of-the-art inference engines maximize prefix reuse within a batch only to reduce KV cache memory footprint, but do not stop batch formation at smaller homogeneous batches that could have performed better. Further, we show that shared prefix detection in existing schedulers relies on radix-tree traversals, incurring substantial CPU overhead that is often comparable to GPU execution time. This paper presents Feather, a prefix-aware scheduler that uses reinforcement learning (RL) to learn the optimal tradeoff between batch size and prefix homogeneity. We also introduce Chunked Hash Tree (CHT), a lightweight data structure that enables fast prefix detection and efficient request selection for the RL scheduler, avoiding expensive tree traversals. We integrate Feather into vLLM and SGLang, and our evaluation shows that Feather achieves 2--10$\\times$ higher end-to-end throughput as compared to existing schedulers, while doing no worse than the status quo when the workload does not have enough prefix sharing. Feather achieves these gains by reducing the total number of KV cache accesses, surpassing the performance of prefix-aware attention kernels that have the same goal.",
+        "identifiers": [
+          "SemanticScholar:68f4377e9a8cb07ba036eb818e0df744021646e2"
+        ],
+        "semantic_scholar_id": "68f4377e9a8cb07ba036eb818e0df744021646e2",
+        "canonical_id": "arXiv:2605.06046",
+        "arxiv_id": "2605.06046",
+        "doi": "10.48550/arXiv.2605.06046",
+        "authors": [
+          "Saksham Rathi",
+          "Preeti",
+          "Mythili Vutukuru"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 159,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.06206",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2605.06206",
+        "id:SemanticScholar:1da5da87856503400d5802fe6076e15d924ffe91",
+        "id:arXiv:2605.06206",
+        "title:federation of experts communication efficient distributed inference for large language models",
+        "url:https://arxiv.org/abs/2605.06206"
+      ],
+      "record": {
+        "title": "Federation of Experts: Communication Efficient Distributed Inference for Large Language Models",
+        "source_url": "https://arxiv.org/abs/2605.06206",
+        "year": 2026,
+        "published": "2026-05-07",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Mixture of experts has emerged as the primary mechanism for making Large Language Models (LLMs) computationally efficient. However, in distributed settings, communicating token embeddings between experts is a significant bottleneck. We present the novel Federation of Experts (FoE) architecture. FoE restructures the MoE block of a transformer layer into multiple MoE clusters. Each cluster is responsible for only one of the KV heads and expert parallelism is applied between those experts. Between clusters, a sum synchronizes the post-attention residuals, which then drives routing and dispatch for the next MoE block. In a single-node setting, FoE completely eliminates all-to-all communication as all experts within a group are contained on the same GPU. In multi-node settings, FoE confines all-to-all communication to the intra-node fabric, thus significantly reducing communication overhead. An implementation of FoE finds that on LongBench, FoE significantly improves inference throughput and latency in both single-node and multi-node settings, reducing end-to-end prefill latency by up to 5.88x, TTFT by 3.66x, and TPOT by 1.53x. It does so while achieving comparable generation quality to a mixture of experts model of the same size and training configuration.",
+        "identifiers": [
+          "SemanticScholar:1da5da87856503400d5802fe6076e15d924ffe91"
+        ],
+        "semantic_scholar_id": "1da5da87856503400d5802fe6076e15d924ffe91",
+        "canonical_id": "arXiv:2605.06206",
+        "arxiv_id": "2605.06206",
+        "doi": "10.48550/arXiv.2605.06206",
+        "authors": [
+          "Muhammad Shahir Abdurrahman",
+          "Chunyuan Deng",
+          "Azalia Mirhoseini",
+          "Philip Levis"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 159,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.07985",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2605.07985",
+        "id:SemanticScholar:2ff1f270cd4d5ae76aad31cafd5e1ec272f16323",
+        "id:arXiv:2605.07985",
+        "title:dooly configurationagnostic redundancyaware profiling for llm inference simulation",
+        "url:https://arxiv.org/abs/2605.07985"
+      ],
+      "record": {
+        "title": "Dooly: Configuration-Agnostic, Redundancy-Aware Profiling for LLM Inference Simulation",
+        "source_url": "https://arxiv.org/abs/2605.07985",
+        "year": 2026,
+        "published": "2026-05-08",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Selecting the optimal LLM inference configuration requires evaluation across hardware, serving engines, attention backends, and model architectures, since no single choice performs best across all workloads. Profile-based simulators are the standard tool, yet they hardcode their operation set to a specific configuration and re-profile every operation from scratch, making exploration prohibitively expensive. This cost stems from a missing structural understanding: every input dimension of each operation is fixed by the model configuration or determined by the incoming request. Many model-configuration values (e.g., head size, layer count) recur across models, so the same operation runs in many configurations; a single sweep over the request-dependent dimensions can serve them all. We present Dooly, which exploits this structure to achieve configuration-agnostic, redundancy-aware profiling. Dooly performs a single inference pass, labels each input dimension with its origin via taint propagation, and selectively profiles only operations absent from its latency database; stateful operations such as attention are isolated by reusing the serving engine's own initialization code, eliminating manual instrumentation. It builds latency regression models based on the database, which becomes a drop-in backend for existing simulators. Across two GPU platforms, three attention backends, and diverse model architectures, Dooly achieves simulation accuracy within 5% MAPE for TTFT and 8% for TPOT while reducing profiling GPU-hours by 56.4% across 12 models compared to the existing profiling approach. We have open-sourced Dooly at https://github.com/dooly-project.",
+        "identifiers": [
+          "SemanticScholar:2ff1f270cd4d5ae76aad31cafd5e1ec272f16323"
+        ],
+        "semantic_scholar_id": "2ff1f270cd4d5ae76aad31cafd5e1ec272f16323",
+        "canonical_id": "arXiv:2605.07985",
+        "arxiv_id": "2605.07985",
+        "doi": "10.48550/arXiv.2605.07985",
+        "authors": [
+          "Joo-Young Kim",
+          "Geon-Woo Kim",
+          "Anoop Rachakonda",
+          "Daehyeok Kim"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 158,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.09008",
+      "identity_tokens": [
+        "id:SemanticScholar:40acd7efed213e888934acbd566a1da73a032c79",
+        "id:arXiv:2605.09008",
+        "title:relative kinetic utility calibrating crosslayer credit for global structured llm pruning",
+        "url:https://arxiv.org/abs/2605.09008"
+      ],
+      "record": {
+        "title": "Relative Kinetic Utility: Calibrating Cross-Layer Credit for Global Structured LLM Pruning",
+        "source_url": "https://arxiv.org/abs/2605.09008",
+        "year": 2026,
+        "published": "2026-05-09",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Global structured pruning requires channels from different layers to compete under a shared sparsity budget, raising two coupled challenges: identifying which channels should be retained and making their scores comparable across layers. Raw channel scores can contain block-common scale that leaves within-block ordering unchanged but distorts model-wide competition. Our experiment indicates that similar layer-wise allocations can retain substantially different FFN channels, so layer allocation alone does not determine channel identity. Motivated by this separation, we introduce Global Relative Kinetic Utility (Global RKU), a label-free criterion that separates channel importance estimation from cross-layer comparison. Global RKU measures channel participation using a final-hidden-state activation-gradient signal, then applies block-relative normalization to mitigate block-common scale while preserving within-block ordering, requires only unlabeled calibration inputs, and produces a static pruning topology in a single calibration stage. Under questions-only calibration on Qwen-2.5-7B, RKU-GISP Mean3 margins are -0.98, +3.79, and +8.61 points at 30%, 40%, and 50% sparsity, respectively (average +3.81). Additional Qwen evaluations cover non-mathematical reasoning, recovery, held-out transfer, and physical deployment. Separately, replacing Wiki16K with questions-only Q16K improves RKU's Mean3 at every tested sparsity on Qwen, Llama, and Gemma. Our ablation study shows relative-normalization gains of 14.42 and 5.53 Mean3 points at 40% and 50% sparsity, respectively; the common-seed audit is positive in all 27 seed-task comparisons.",
+        "identifiers": [
+          "SemanticScholar:40acd7efed213e888934acbd566a1da73a032c79"
+        ],
+        "semantic_scholar_id": "40acd7efed213e888934acbd566a1da73a032c79",
+        "canonical_id": "arXiv:2605.09008",
+        "arxiv_id": "2605.09008",
+        "authors": [
+          "Tian-Hao Qian",
+          "Gui-Lin Qi",
+          "Jia-Yu Chen"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 157,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:ed6e5abdc53aaab32b8f0971e9a12a141f18fc407270704ac2306fe798bd7ae0",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}
