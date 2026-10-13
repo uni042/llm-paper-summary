@@ -24,7 +24,7 @@
 - [10-kv-cache-offload-recomputation](../10-kv-cache-offload-recomputation/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（39本）
+## 自動生成の論文一覧（40本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -132,6 +132,10 @@
 - **2026-09 · [BIO-MEMART: Biometric-Aware KV Cache Memory for Multi-User LLM Agents](2026-2609.08566-bio-memart-biometric-aware-kv-cache-memory-for-multi-user-llm-agents.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   共有KVキャッシュ記憶を意味類似度だけで検索せず、生体認証で所有者候補を先に絞ってからMemArtの検索・KV再利用を行う物理ユーザー認可層。
+
+- **2026-08 · [TideRL: Boosting Agentic RL Goodput with Readiness-Aware Scheduling](2026-2608.10402-tiderl-boosting-agentic-rl-goodput-with-readiness-aware-scheduling.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  TideRLは、言語モデルを外部環境と何度も対話させて強化学習する際、GPUを稼働させるだけでは学習の進捗が増えないという問題を扱う。さらに一つの課題が終了するまでのターン数は予測しにくい。
 
 - **2026-08 · [AsymSpec: Context-Asymmetric Speculative Decoding for Agentic LLMs](2026-2608.26004-asymspec-context-asymmetric-speculative-decoding-for-agentic-llms.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
