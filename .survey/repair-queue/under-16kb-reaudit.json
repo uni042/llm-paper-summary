@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-10-13T12:35:36.060640+00:00",
+  "generated_at": "2026-10-13T22:20:29.168592+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 5,
+  "count": 6,
   "worker_counts": {
-    "scheduled-chat-00": 1,
+    "scheduled-chat-00": 2,
     "scheduled-chat-30": 2,
     "scheduled-chat-45": 2
   },
@@ -100,6 +100,26 @@
         "body_chars": 2413,
         "method_chars": 1072,
         "evaluation_chars": 505,
+        "limitation_chars": 0
+      },
+      "mechanical_failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/09-kernel-runtime-compilation/2026-2605.23081-thriftattention-selective-mixed-precision-for-long-context-fp4-attention.md",
+      "canonical_id": "arXiv:2605.23081",
+      "title": "ThriftAttention: Selective Mixed Precision for Long-Context FP4 Attention",
+      "file_bytes": 14036,
+      "source_sha256": "bbde5756c75d9546942a40ececbdb8c7936382afd944d62ca87b88945a40fefa",
+      "source_git_blob_sha": "59020354d7d0d4a824d9867bd61677ee2783b425",
+      "assigned_worker": "scheduled-chat-00",
+      "semantic_status": "pending",
+      "mechanical_status": "PASS",
+      "japanese_ratio": 0.916363,
+      "quality_metrics": {
+        "body_chars": 4358,
+        "method_chars": 1486,
+        "evaluation_chars": 1320,
         "limitation_chars": 0
       },
       "mechanical_failures": [],
