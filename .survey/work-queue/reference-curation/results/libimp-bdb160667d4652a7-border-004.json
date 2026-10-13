@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-bdb160667d4652a7-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2601.09159",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2601.09159",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2601.09159",
+      "SemanticScholar:caa041c9070ac3df6beb28e95a74d917087c2aff",
+      "arXiv:2601.09159"
+    ],
+    "reason": "Binary LLM text embeddings lower retrieval memory and latency (up to 16x memory reduction, 16.7x faster); LLM serving application is unverified.",
+    "first_checked_at": "2026-10-13T06:31:14+00:00",
+    "last_checked_at": "2026-10-13T06:31:14+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2024-2407.12820-pqcache-product-quantization-based-kvcache-for-long-context-llm-inferenc.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "LLMs Meet Isolation Kernel: Lightweight, Learning-free Binary Embeddings for Fast Retrieval"
+  },
+  "processed_at": "2026-10-13T06:31:15+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-bdb160667d46",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

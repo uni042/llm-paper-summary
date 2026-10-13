@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-13T03:44:22+00:00",
-  "record_count": 11692,
+  "updated_at": "2026-10-13T06:31:18+00:00",
+  "record_count": 11701,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -167356,6 +167356,158 @@
         "papers/inference/99-other-inference-systems/2017-1701.06538-outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts.md"
       ],
       "title": "Compositional meta-learning through probabilistic task inference"
+    },
+    "arXiv:2602.20091": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.20091",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2602.20091",
+        "SemanticScholar:289267e934ac7aabc5d463a8787d8ae7a0e02ae4",
+        "arXiv:2602.20091"
+      ],
+      "reason": "Studies RAG representations and answer behavior, without a serving or inference-efficiency mechanism.",
+      "first_checked_at": "2026-10-13T06:31:15+00:00",
+      "last_checked_at": "2026-10-13T06:31:15+00:00",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2024-2403.02181-not-all-layers-of-llms-are-necessary-during-inference.md",
+        "papers/inference/99-other-inference-systems/2023-2212.10511-when-not-to-trust-language-models-investigating-effectiveness-of-paramet.md"
+      ],
+      "title": "How Retrieved Context Shapes Internal Representations in RAG"
+    },
+    "arXiv:2602.20296": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.20296",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2602.20296",
+        "SemanticScholar:668ac0dacc7dc5d4b564c16e2acba8bf3e7b69c3",
+        "arXiv:2602.20296"
+      ],
+      "reason": "Title describes dataset decomposition as a curriculum-learning training strategy, not inference or serving efficiency; title-only exclusion.",
+      "first_checked_at": "2026-10-13T06:31:16+00:00",
+      "last_checked_at": "2026-10-13T06:31:16+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2506.04203-cascadia-cascade-serving-routing-deployment.md"
+      ],
+      "title": "Learning to Solve Complex Problems via Dataset Decomposition"
+    },
+    "DOI:10.1109/hpca68181.2026.11408617": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/hpca68181.2026.11408617",
+      "identity_tokens": [
+        "DOI:10.1109/hpca68181.2026.11408617",
+        "SemanticScholar:55efbce0b9e3252d69ba3b2827b772476db71a5c"
+      ],
+      "reason": "Dynamic encrypted keyword PIR system optimizes retrieval and I/O but is not about LLM inference or serving.",
+      "first_checked_at": "2026-10-13T06:31:16+00:00",
+      "last_checked_at": "2026-10-13T06:31:16+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2024-2403.06664-smart-infinity-fast-large-language-model-training-using-near-storage-processing-.md"
+      ],
+      "title": "Conflux: A High-Performance Keyword Private Retrieval System for Dynamic Datasets"
+    },
+    "DOI:10.1007/s11227-025-08191-w": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1007/s11227-025-08191-w",
+      "identity_tokens": [
+        "DOI:10.1007/s11227-025-08191-w",
+        "SemanticScholar:15fa11992f1c0837a5bd50e06751d9dcf2d7d7bb"
+      ],
+      "reason": "Title describes cross-modal feature fusion for multimodal models, an independent application/model task rather than LLM inference or serving systems; title-only exclusion.",
+      "first_checked_at": "2026-10-13T06:31:16+00:00",
+      "last_checked_at": "2026-10-13T06:31:16+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2021-2106.06899-top-k-attention.md",
+        "papers/inference/99-other-inference-systems/2021-c7730f7e7292-memory-efficient-transformers-via-top-k-attention.md"
+      ],
+      "title": "FTA-Net: integrating Fourier transform and top-k attention for cross-modal feature fusion"
+    },
+    "arXiv:2604.09168": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.09168",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2604.09168",
+        "SemanticScholar:4556732e2fc4be065889188d9483939485d6259d",
+        "arXiv:2604.09168"
+      ],
+      "reason": "Title identifies a visual-generation transformer architecture, not language-model inference or serving efficiency; title-only exclusion.",
+      "first_checked_at": "2026-10-13T06:31:17+00:00",
+      "last_checked_at": "2026-10-13T06:31:17+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2025-2507.10524-mixture-of-recursions-learning-dynamic-recursive-depths-for-adaptive-tok.md",
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2502.05171-scaling-up-test-time-compute-with-latent-reasoning-a-recurrent-depth-app.md",
+        "papers/inference/99-other-inference-systems/2023-2310.07707-matformer-nested-transformer-for-elastic-inference.md"
+      ],
+      "title": "ELT: Elastic Looped Transformers for Visual Generation"
+    },
+    "arXiv:2603.16859": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.16859",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2603.16859",
+        "SemanticScholar:524b09826d4f9d4ec77ec8ba05a4edcbe4256b5f",
+        "arXiv:2603.16859"
+      ],
+      "reason": "Title identifies a benchmark for audio-visual social interactivity, an output-quality evaluation rather than system efficiency; title-only exclusion.",
+      "first_checked_at": "2026-10-13T06:31:17+00:00",
+      "last_checked_at": "2026-10-13T06:31:17+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2024-2403.12544-affinequant-affine-transformation-quantization-for-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2025-2503.20215-qwen2-5-omni-technical-report.md",
+        "papers/inference/99-other-inference-systems/2025-2509.17765-qwen3-omni-technical-report.md"
+      ],
+      "title": "SocialOmni: Benchmarking Audio-Visual Social Interactivity in Omni Models"
+    },
+    "arXiv:2602.21157": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.21157",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2602.21157",
+        "SemanticScholar:d55271651dc000e0b6a4edfed3ddb0366eb040c4",
+        "arXiv:2602.21157"
+      ],
+      "reason": "Title identifies a vision-language-action embodied reasoning model; its stated focus is a robotics application, not inference/serving efficiency; title-only exclusion.",
+      "first_checked_at": "2026-10-13T06:31:17+00:00",
+      "last_checked_at": "2026-10-13T06:31:17+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-2412.05496-flexattention-a-programming-model-for-generating-optimized-attention-kernels.md"
+      ],
+      "title": "HALO: A Unified Vision-Language-Action Model for Embodied Multimodal Chain-of-Thought Reasoning"
+    },
+    "arXiv:2602.18532": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.18532",
+      "identity_tokens": [
+        "SemanticScholar:129d10ee70a316425169f994a880a4935c44c938",
+        "arXiv:2602.18532"
+      ],
+      "reason": "Title identifies a systematic study of vision-language-action models, an embodied-model application rather than LLM systems efficiency; title-only exclusion.",
+      "first_checked_at": "2026-10-13T06:31:17+00:00",
+      "last_checked_at": "2026-10-13T06:31:17+00:00",
+      "linked_from": [
+        "papers/inference/15-inference-simulation-emulation/2024-2409.12514-tinyvla-towards-fast-data-efficient-vision-language-action-models-for-ro.md"
+      ],
+      "title": "VLANeXt Family: A Systematic Study of VLA Models from Core Recipes to Emerging Paradigms"
+    },
+    "arXiv:2602.17835": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.17835",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2602.17835",
+        "SemanticScholar:67ac9bb58a5be7dd4f3caaa0364beb16c72011cf",
+        "arXiv:2602.17835"
+      ],
+      "reason": "Title identifies data selection for LLM fine-tuning, a training-data method rather than inference or serving efficiency; title-only exclusion.",
+      "first_checked_at": "2026-10-13T06:31:18+00:00",
+      "last_checked_at": "2026-10-13T06:31:18+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2024-2411.01016-moe-i2-compressing-mixture-of-experts-models-through-inter-expert-pruning-and-intra-expert-low-rank-decomposition.md",
+        "papers/inference/06-moe-quantization-compression/2025-2503.06881-resmoe-space-efficient-compression-of-mixture-of-experts-llms-via-residual-restoration.md",
+        "papers/inference/08-edge-on-device-llm-systems/2022-2207.00112-language-model-compression-with-weighted-low-rank-factorization.md",
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2511.20639-latent-collaboration-in-multi-agent-systems.md",
+        "papers/inference/99-other-inference-systems/2020-2002.11985-compressing-large-scale-transformer-based-models-a-case-study-on-bert.md",
+        "papers/inference/99-other-inference-systems/2024-2403.03853-shortgpt-layers-in-large-language-models-are-more-redundant-than-you-exp.md"
+      ],
+      "title": "Influence-Preserving Proxies for Gradient-Based Data Selection in LLM Fine-tuning"
     }
   }
 }

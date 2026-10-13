@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-13T05:20:58+00:00",
-  "record_count": 4810,
+  "updated_at": "2026-10-13T06:31:15+00:00",
+  "record_count": 4813,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -73549,6 +73549,60 @@
       ],
       "borderline_recheck_count": 0,
       "title": "From insight to action: Embodied multi-agent system integrating vision language model for digital twin-assisted human-robot collaborative assembly"
+    },
+    "arXiv:2601.09159": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2601.09159",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2601.09159",
+        "SemanticScholar:caa041c9070ac3df6beb28e95a74d917087c2aff",
+        "arXiv:2601.09159"
+      ],
+      "reason": "Binary LLM text embeddings lower retrieval memory and latency (up to 16x memory reduction, 16.7x faster); LLM serving application is unverified.",
+      "first_checked_at": "2026-10-13T06:31:14+00:00",
+      "last_checked_at": "2026-10-13T06:31:14+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2407.12820-pqcache-product-quantization-based-kvcache-for-long-context-llm-inferenc.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "LLMs Meet Isolation Kernel: Lightweight, Learning-free Binary Embeddings for Fast Retrieval"
+    },
+    "DOI:10.1109/cisce69494.2026.11504706": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/cisce69494.2026.11504706",
+      "identity_tokens": [
+        "DOI:10.1109/cisce69494.2026.11504706",
+        "SemanticScholar:6a8a4d1ce522550d205171640f92d2f9cdda0c91"
+      ],
+      "reason": "The DOI resolver route https://doi.org/10.1109/CISCE69494.2026.11504706 returned: Internal Error; URL is not accessible via the available retrieval tool. The primary abstract could not be retrieved, so no abstract-based relevance claim is made.",
+      "first_checked_at": "2026-10-13T06:31:15+00:00",
+      "last_checked_at": "2026-10-13T06:31:15+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2407.00047-qlm-queue-management-slo-oriented-llm-serving.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Zero-Copy Proxy Tunneling via Linux Splice for Cloud Infrastructure"
+    },
+    "arXiv:2603.08391": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2603.08391",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2603.08391",
+        "SemanticScholar:3ffaf8262349b449320f1759428fee26ae9c8915",
+        "arXiv:2603.08391"
+      ],
+      "reason": "Adaptive loops and memory alter transformer compute/storage; direct serving-efficiency benefit is not established by the abstract.",
+      "first_checked_at": "2026-10-13T06:31:15+00:00",
+      "last_checked_at": "2026-10-13T06:31:15+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2025-2507.10524-mixture-of-recursions-learning-dynamic-recursive-depths-for-adaptive-tok.md",
+        "papers/inference/99-other-inference-systems/2019-1907.05242-large-memory-layers-with-product-keys.md",
+        "papers/inference/99-other-inference-systems/2024-2404.02258-mixture-of-depths-dynamically-allocating-compute-in-transformer-based-la.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Adaptive Loops and Memory in Transformers: Think Harder or Know More?"
     }
   }
 }
