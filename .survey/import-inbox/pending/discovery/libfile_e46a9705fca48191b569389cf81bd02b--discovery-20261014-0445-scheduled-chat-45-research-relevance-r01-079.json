@@ -1,0 +1,26 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-45",
+  "run_key": "20261014-0445-scheduled-chat-45/r01",
+  "reference_main_sha": "e0c44ad5a4e74e297828bd011526f5ba470d5e14",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.neucom.2026.134854",
+      "identity_tokens": [
+        "doi:10.1016/j.neucom.2026.134854"
+      ],
+      "title": "MKG-attention: Budget-aware multimodal graph retrieval for faithful video question answering",
+      "reason": "一次要旨で、字幕中心の動画質問応答に対し時間窓の特定、個別マルチモーダル知識グラフの構築、質問条件付き証拠部分グラフ検索、証拠監査、制御付き生成を行うと確認。検索証拠を予算内へ圧縮する点は入力削減に関連するが、主評価対象は動画QAの忠実性であり、汎用LLM推論エンジン・KVキャッシュ・サービング・GPUカーネルの直接改善を示していないため境界的として保留。",
+      "source_url": "https://doi.org/10.1016/j.neucom.2026.134854",
+      "body_check": "abstract_screen_only; body_not_read; primary bibliographic abstract: subtitle-centric VideoQA, temporal localization, instance-level multimodal graph retrieval, compact evidence subgraph",
+      "first_checked_at": "2026-10-14T04:50:04+09:00",
+      "last_checked_at": "2026-10-14T04:50:04+09:00",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance",
+      "worklist_rank": 79
+    }
+  ]
+}
