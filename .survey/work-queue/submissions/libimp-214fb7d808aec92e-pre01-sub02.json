@@ -1,0 +1,77 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "From Features to Transformers: Redefining Ranking for Scalable Impact",
+      "source_url": "https://arxiv.org/abs/2502.03417",
+      "year": 2025,
+      "published": "2025-02-05",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "We present LiGR, a large-scale ranking framework developed at LinkedIn that brings state-of-the-art transformer-based modeling architectures into production. We introduce a modified transformer architecture that incorporates learned normalization and simultaneous set-wise attention to user history and ranked items. This architecture enables several breakthrough achievements, including: (1) the deprecation of most manually designed feature engineering, outperforming the prior state-of-the-art system using only few features (compared to hundreds in the baseline), (2) validation of the scaling law for ranking systems, showing improved performance with larger models, more training data, and longer context sequences, and (3) simultaneous joint scoring of items in a set-wise manner, leading to automated improvements in diversity. To enable efficient serving of large ranking models, we describe techniques to scale inference effectively using single-pass processing of user history and set-wise attention. We also summarize key insights from various ablation studies and A/B tests, highlighting the most impactful technical approaches.",
+      "identifiers": [
+        "SemanticScholar:718724a10b745fe8115bd20b0672440c9677ffed"
+      ],
+      "semantic_scholar_id": "718724a10b745fe8115bd20b0672440c9677ffed",
+      "canonical_id": "arXiv:2502.03417",
+      "arxiv_id": "2502.03417",
+      "doi": "10.48550/arXiv.2502.03417",
+      "authors": [
+        "Fedor Borisyuk",
+        "Lars Hertel",
+        "Ganesh Parameswaran",
+        "Gaurav Srivastava",
+        "Sudarshan Srinivasa Ramanujam",
+        "Borja Ocejo",
+        "Peng Du",
+        "Andrei Akterskii",
+        "Neil Daftary",
+        "Shao Tang",
+        "Daqi Sun",
+        "Qiang Charles Xiao",
+        "Deepesh Nathani",
+        "Mohit Kothari",
+        "Yun Dai",
+        "Guoyao Li",
+        "Aman Gupta"
+      ],
+      "priority": 1,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 1,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 615,
+        "matched_prestigious_venue": null
+      },
+      "reason": "The arXiv abstract describes single-pass history processing and set-wise attention for efficient serving of a large ranking model, directly relevant to inference serving. The arXiv record is marked withdrawn; this status is noted.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-214fb7d808ae",
+    "round": "libimp-214fb7d808aec92e-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 6,
+    "round_submission_count": 2,
+    "round_submission_index": 2,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-214fb7d808aec92e-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-214fb7d808aec92e-pre01.json",
+    "receipt": "sha256:f29cc9ffa4d1953118c0a4b3e5808f6b0371b65be7374ccd907e4e40e155f5a9"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-214fb7d808ae",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

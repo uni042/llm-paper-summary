@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "CARVE: Cross-Slice Anisotropic Reallocation of Visual Evidence for Efficient 3D Medical Volume Understanding",
+      "source_url": "https://arxiv.org/abs/2608.04515",
+      "year": 2026,
+      "published": "2026-08-05",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Slice-based MLLMs leverage mature 2D encoders by representing 3D volumes as sequences of 2D slices. However, this slice-wise formulation produces thousands of visual tokens that burden the LLM backbone, many of which capture overlapping visual evidence across adjacent slices. To understand how effectively a growing visual token budget improves performance, we perform scaling analyses on two 3D medical VQA benchmarks and find diminishing returns: cost keeps rising while accuracy saturates, and improving in-plane resolution is more effective than adding slices at comparable budgets. The budget should therefore be allocated more selectively rather than simply enlarged, yet most token compression methods are designed for 2D images or videos, where redundancy arises from spatial layout or temporal motion rather than from near-duplicate content along the depth axis. We present CARVE, a training-free framework that compresses visual tokens prior to LLM inference and casts token reduction as budget-constrained 2.5D allocation. CARVE partitions the depth axis into coherent windows and allocates tokens non-uniformly according to normalized cross-slice evidence. Under a shared budget, CARVE builds spatial anchors on representative slices and retrieves locally varying evidence from the full volume, then merges remaining eligible tokens into nearby anchors within each window. Removing roughly 80% of the visual tokens on Hulu-Med-7B, CARVE leads all compression baselines on every AMOS-MM report-generation metric, with 6.2 points higher retention of full-token quality than the strongest baseline, and preserves 98.1% of full-token performance across three VQA benchmarks.",
+      "identifiers": [
+        "SemanticScholar:e4e427652d600541f561e71a5939ba1fc7568d38"
+      ],
+      "semantic_scholar_id": "e4e427652d600541f561e71a5939ba1fc7568d38",
+      "canonical_id": "arXiv:2608.04515",
+      "arxiv_id": "2608.04515",
+      "authors": [
+        "Zhen-Yu Yi",
+        "Qiang Hu",
+        "Zhenhao Li",
+        "Jia-Xuan Zhao",
+        "Yu-Song Sun",
+        "Lichi Zhang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 69,
+        "matched_prestigious_venue": null
+      },
+      "reason": "CARVE compresses visual tokens before LLM inference, removing roughly 80% while retaining benchmark performance; this directly reduces inference input/computation for multimodal LLMs.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-21590320b737",
+    "round": "libimp-21590320b7375db4-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 1,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-21590320b7375db4-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-21590320b7375db4-pre01.json",
+    "receipt": "sha256:70cf0358698993fb985993874e1e9606db150aa94ed7768a538069a1f5770bf5"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-21590320b737",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
