@@ -1,0 +1,199 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local",
+  "run_key": "codex-discovery-screen33-20261014-3b8afc41",
+  "reference_main_sha": "3b8afc41f4325d4cb01d1915daa6c978d66d9367",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.09788",
+      "identity_tokens": [
+        "arXiv:2606.09788",
+        "DOI:10.48550/arxiv.2606.09788",
+        "SemanticScholar:674c1cba3a38e13c0770d33811e5373f75146e88",
+        "https://arxiv.org/abs/2606.09788"
+      ],
+      "title": "POTATR: A Lightweight Image-to-Graph Model for Page-Level Table Extraction",
+      "reason": "POTATR is a lightweight, faster image-to-graph table-extraction model, but its optimization is for document OCR/table extraction rather than LLM inference or serving.",
+      "source_url": "https://arxiv.org/abs/2606.09788",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T03:17:17+09:00",
+      "last_checked_at": "2026-10-14T03:17:17+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2510.18234-deepseek-ocr-contexts-optical-compression.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3841298.3841307",
+      "identity_tokens": [
+        "DOI:10.1145/3841298.3841307",
+        "SemanticScholar:ae45f1a906beaecb005db520936864eb4fa5ec7b",
+        "https://doi.org/10.1145/3841298.3841307"
+      ],
+      "title": "Report on the Search Futures Workshop at ECIR 2026",
+      "reason": "The ACM DOI/title metadata and author publication record identify a workshop report, but ACM DL returned HTTP 403 and the abstract could not be verified at the publisher. Available description suggests discussion of IR/RAG and agentic search, but no specific mechanism or efficiency outcome can be screened.",
+      "source_url": "https://dl.acm.org/doi/10.1145/3841298.3841307",
+      "body_check": "source_unavailable; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-10-14T03:17:17+09:00",
+      "last_checked_at": "2026-10-14T03:17:17+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2512.24601-recursive-language-models.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.26712",
+      "identity_tokens": [
+        "arXiv:2605.26712",
+        "DOI:10.48550/arxiv.2605.26712",
+        "SemanticScholar:f3a21b4375c5054f85457454637816d881e98742",
+        "https://arxiv.org/abs/2605.26712"
+      ],
+      "title": "METATR: A Multilingual, Evolving Benchmark for Automatic Text Recognition",
+      "reason": "METATR is a multilingual automatic-text-recognition benchmark; it evaluates OCR/vLLM application quality and does not propose LLM serving optimization.",
+      "source_url": "https://arxiv.org/abs/2605.26712",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T03:17:17+09:00",
+      "last_checked_at": "2026-10-14T03:17:17+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2510.18234-deepseek-ocr-contexts-optical-compression.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.25233",
+      "identity_tokens": [
+        "arXiv:2605.25233",
+        "DOI:10.48550/arxiv.2605.25233",
+        "SemanticScholar:4a1a55464b7a5defe7afa2568ae952386b3595c1",
+        "https://arxiv.org/abs/2605.25233"
+      ],
+      "title": "Meta-Agent: From Task Descriptions to Verified Multi-Agent Systems",
+      "reason": "Meta-Agent generates and verifies multi-agent workflows and improves task success/recovery; the abstract does not establish a latency, throughput, memory, or serving-efficiency contribution.",
+      "source_url": "https://arxiv.org/abs/2605.25233",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T03:17:17+09:00",
+      "last_checked_at": "2026-10-14T03:17:17+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2512.24601-recursive-language-models.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.16630",
+      "identity_tokens": [
+        "arXiv:2605.16630",
+        "DOI:10.48550/arxiv.2605.16630",
+        "SemanticScholar:6736f3c09a269bd91055043a51bb9474bd46dfab",
+        "https://arxiv.org/abs/2605.16630"
+      ],
+      "title": "PrivScope: Task-scoped Disclosure Control for Hybrid Agentic Systems",
+      "reason": "PrivScope filters local-to-cloud agent payloads to limit disclosure and preserve task utility; the reported seconds of local overhead accompany a privacy control, not an efficiency improvement.",
+      "source_url": "https://arxiv.org/abs/2605.16630",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T03:17:17+09:00",
+      "last_checked_at": "2026-10-14T03:17:17+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-0ed2662d9eee-iron-private-inference-on-transformers.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.15181",
+      "identity_tokens": [
+        "arXiv:2605.15181",
+        "DOI:10.48550/arxiv.2605.15181",
+        "SemanticScholar:2ab439ca08421cea06949d1f3eef2e53e539f24d",
+        "https://arxiv.org/abs/2605.15181"
+      ],
+      "title": "From Plans to Pixels: Learning to Plan and Orchestrate for Open-Ended Image Editing",
+      "reason": "The planner/orchestrator learns multi-step image-editing workflows; it targets editing quality and task execution rather than LLM inference infrastructure.",
+      "source_url": "https://arxiv.org/abs/2605.15181",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T03:17:17+09:00",
+      "last_checked_at": "2026-10-14T03:17:17+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2510.18234-deepseek-ocr-contexts-optical-compression.md"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2605.09968",
+      "identity_tokens": [
+        "arXiv:2605.09968",
+        "DOI:10.48550/arxiv.2605.09968",
+        "SemanticScholar:4478c3b1d0bebbdbf0a1c4f652c5a299206ab274",
+        "https://arxiv.org/abs/2605.09968"
+      ],
+      "title": "Consolidation-Expansion Operator Mechanics:A Unified Framework for Adaptive Learning",
+      "reason": "OpMech uses an order-gap signal to stop recursive language-model computation when further recursion is unlikely to change results, replacing fixed budgets and heuristic stopping with evidence-driven compute termination.",
+      "source_url": "https://arxiv.org/abs/2605.09968",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T03:17:17+09:00",
+      "last_checked_at": "2026-10-14T03:17:17+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2512.24601-recursive-language-models.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.22226",
+      "identity_tokens": [
+        "arXiv:2604.22226",
+        "DOI:10.48550/arxiv.2604.22226",
+        "SemanticScholar:4299fb89ef299ff3e418de6af0dc5b5c28964b90",
+        "https://arxiv.org/abs/2604.22226"
+      ],
+      "title": "Towards Temporal Compositional Reasoning in Long-Form Sports Videos",
+      "reason": "SportsTime and CoTR improve temporal evidence grounding for sports-video MLLMs; the contribution is domain reasoning quality, not inference-system efficiency.",
+      "source_url": "https://arxiv.org/abs/2604.22226",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T03:17:17+09:00",
+      "last_checked_at": "2026-10-14T03:17:17+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2510.18234-deepseek-ocr-contexts-optical-compression.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.20549",
+      "identity_tokens": [
+        "arXiv:2604.20549",
+        "DOI:10.48550/arxiv.2604.20549",
+        "SemanticScholar:820995a60dd3eb1f2707efb200ba8763b2567c11",
+        "https://arxiv.org/abs/2604.20549"
+      ],
+      "title": "Toward Cross-Lingual Quality Classifiers for Multilingual Pretraining Data Selection",
+      "reason": "The paper selects multilingual pretraining data using cross-lingual quality classifiers and improves model training outcomes; it is data/training methodology rather than inference runtime.",
+      "source_url": "https://arxiv.org/abs/2604.20549",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T03:17:17+09:00",
+      "last_checked_at": "2026-10-14T03:17:17+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1909.08053-megatron-lm-training-multi-billion-parameter-language-models-using-model.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.11575",
+      "identity_tokens": [
+        "arXiv:2604.11575",
+        "DOI:10.48550/arxiv.2604.11575",
+        "SemanticScholar:49518bb3ade956e629838a933f28b30237ebac37",
+        "https://arxiv.org/abs/2604.11575"
+      ],
+      "title": "MIXAR: Scaling Autoregressive Pixel-based Language Models to Multiple Languages and Scripts",
+      "reason": "MIXAR scales a pixel-based multilingual generative language model and evaluates language capabilities; it does not present a serving or inference-efficiency mechanism.",
+      "source_url": "https://arxiv.org/abs/2604.11575",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T03:17:17+09:00",
+      "last_checked_at": "2026-10-14T03:17:17+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2511.11346-fast-and-expressive-multi-byte-prediction-with-probabilistic-circuits.md"
+      ]
+    }
+  ]
+}
