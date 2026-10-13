@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-13T13:47:04+00:00",
-  "record_count": 11769,
+  "updated_at": "2026-10-13T14:44:27+00:00",
+  "record_count": 11770,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -164742,9 +164742,9 @@
         "arXiv:2511.21285",
         "semanticscholar:6c8f97f0dbfb37423ddb90075107aba860353d6d"
       ],
-      "reason": "タイトルがパラメータ効率的なファインチューニング手法のベンチマークと明示しており、対象は学習方式の比較である。LLM推論サービングや推論時の圧縮・並列化ではない。",
+      "reason": "自己回帰LLMに対するパラメータ効率のよい微調整方式を27のNLPデータセットで比較するベンチマーク。指標に推論速度も含むが、提案の中心は学習可能パラメータ数・学習メモリと性能の評価枠組みであり、新しい推論カーネル・実行スケジューラ・圧縮配信方式を示すものではない。凍結中の学習最適化領域の評価研究として除外する。",
       "first_checked_at": "2026-10-11T20:48:38+00:00",
-      "last_checked_at": "2026-10-13T13:47:03+00:00",
+      "last_checked_at": "2026-10-13T14:44:23+00:00",
       "linked_from": [],
       "title": "PEFT-Bench: A Parameter-Efficient Fine-Tuning Methods Benchmark"
     },
@@ -164770,9 +164770,9 @@
         "arXiv:2210.13452",
         "semanticscholar:fc4cbc7a75f5a3bbca59db5513231555f078fe78"
       ],
-      "reason": "一次要旨の対象はImageNet-1K画像分類の視覚モデル構造比較であり、IdentityFormer、RandFormer、ConvFormer、CAFormerやStarReLUの画像認識精度・演算を評価する。LLM推論システム、サービング、KVキャッシュ、推論基盤の改善を主張していない。",
+      "reason": "MetaFormerの恒等写像・乱数行列・畳み込み・自己注意による視覚バックボーンを比較し、ImageNet-1Kの分類精度（CAFormer 85.5%など）を主評価とする。活性化関数StarReLUの演算量削減はあるが、LLMの推論配信・KVキャッシュ・重みオフロード・生成復号への適用や評価は要旨にない。画像認識モデルの設計研究であり本サーベイのLLM推論システム範囲外。",
       "first_checked_at": "2026-10-11T20:48:40+00:00",
-      "last_checked_at": "2026-10-13T06:45:22+00:00",
+      "last_checked_at": "2026-10-13T14:44:26+00:00",
       "linked_from": [],
       "title": "MetaFormer Baselines for Vision"
     },
@@ -165026,9 +165026,9 @@
         "id:arXiv:2311.17049",
         "url:https://arxiv.org/abs/2311.17049"
       ],
-      "reason": "一次要旨では、携帯端末向けの画像・テキスト対照埋め込み器MobileCLIPを提案し、蒸留情報を補強データセットへ保持して学習効率を高める。MobileCLIP-S2は従来のViT-B/16系より2.3倍速いと報告するが、評価は画像分類と画像・テキスト検索であり、生成型LLMのトークン復号・KVキャッシュ・MoE配信ではないため対象外とする。",
+      "reason": "CLIP系の画像・テキスト対照学習エンコーダをモバイル向けに高速化し、MobileCLIP-S2でViT-B/16系比較対象に対する2.3倍の速度を報告する。主要機構は知識を強化データセットへ保存する学習方式で、評価も画像のゼロショット分類・検索である。LLMの自己回帰生成・推論配信・KV管理とは異なるモデル系列・用途のため対象外。",
       "first_checked_at": "2026-10-12T10:58:05+00:00",
-      "last_checked_at": "2026-10-13T10:42:56+00:00",
+      "last_checked_at": "2026-10-13T14:44:24+00:00",
       "linked_from": [],
       "title": "MobileCLIP: Fast Image-Text Models through Multi-Modal Reinforced Training"
     },
@@ -165140,9 +165140,9 @@
         "id:arXiv:2403.01232",
         "url:https://arxiv.org/abs/2403.01232"
       ],
-      "reason": "一次要旨では、大規模グラフのノード特徴とトポロジーを局所・大域の同変注意で組み合わせ、多項式表現力を保ちながら線形計算量を実現するグラフトランスフォーマーを提案する。13のグラフデータセットでノード予測を評価しており、対象はグラフ機械学習であって生成型LLM推論やサービングの実行基盤ではないため対象外とする。",
+      "reason": "グラフトランスフォーマーに局所・大域の置換同変注意を組み込み、高次多項式の表現力を線形計算量で得る研究。13の同質・異質グラフデータセットでGNN/GTを比較するもので、自然言語LLMの復号・推論メモリ・サービングへの評価はない。名称にTransformerと線形時間を含むが、最終適用先はグラフ学習である。",
       "first_checked_at": "2026-10-12T21:38:02+00:00",
-      "last_checked_at": "2026-10-13T10:44:15+00:00",
+      "last_checked_at": "2026-10-13T14:44:23+00:00",
       "linked_from": [],
       "title": "Polynormer: Polynomial-Expressive Graph Transformer in Linear Time"
     },
@@ -168613,6 +168613,18 @@
       "last_checked_at": "2026-10-13T13:47:04+00:00",
       "linked_from": [],
       "title": "Competition-level code generation with AlphaCode"
+    },
+    "arXiv:1606.09274": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1606.09274",
+      "identity_tokens": [
+        "arXiv:1606.09274"
+      ],
+      "reason": "2016年のニューラル機械翻訳モデルについて重みの大きさに基づく三種の枝刈り規則を比較し、WMT'14英独翻訳で40%削減と再学習後80%枝刈りを報告する。研究対象はLLM以前の翻訳モデルの重み圧縮・再学習であり、現行LLM推論システムの実行・サービング機構への直接貢献を示さない。学習側最適化は現在の収録範囲外。",
+      "first_checked_at": "2026-10-13T14:44:27+00:00",
+      "last_checked_at": "2026-10-13T14:44:27+00:00",
+      "linked_from": [],
+      "title": "Compression of Neural Machine Translation Models via Pruning"
     }
   }
 }

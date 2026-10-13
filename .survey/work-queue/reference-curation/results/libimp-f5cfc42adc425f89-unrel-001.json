@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-f5cfc42adc425f89-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:1606.09274",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:1606.09274",
+    "identity_tokens": [
+      "arXiv:1606.09274"
+    ],
+    "reason": "2016年のニューラル機械翻訳モデルについて重みの大きさに基づく三種の枝刈り規則を比較し、WMT'14英独翻訳で40%削減と再学習後80%枝刈りを報告する。研究対象はLLM以前の翻訳モデルの重み圧縮・再学習であり、現行LLM推論システムの実行・サービング機構への直接貢献を示さない。学習側最適化は現在の収録範囲外。",
+    "first_checked_at": "2026-10-13T14:44:27+00:00",
+    "last_checked_at": "2026-10-13T14:44:27+00:00",
+    "linked_from": [],
+    "title": "Compression of Neural Machine Translation Models via Pruning"
+  },
+  "processed_at": "2026-10-13T14:44:27+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f5cfc42adc42",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

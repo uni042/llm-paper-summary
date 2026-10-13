@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-093d59f7adcc247c-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2511.21285",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2511.21285",
+    "identity_tokens": [
+      "DOI:10.18653/v1/2026.eacl-long.140",
+      "arXiv:2511.21285",
+      "semanticscholar:6c8f97f0dbfb37423ddb90075107aba860353d6d"
+    ],
+    "reason": "自己回帰LLMに対するパラメータ効率のよい微調整方式を27のNLPデータセットで比較するベンチマーク。指標に推論速度も含むが、提案の中心は学習可能パラメータ数・学習メモリと性能の評価枠組みであり、新しい推論カーネル・実行スケジューラ・圧縮配信方式を示すものではない。凍結中の学習最適化領域の評価研究として除外する。",
+    "first_checked_at": "2026-10-11T20:48:38+00:00",
+    "last_checked_at": "2026-10-13T14:44:23+00:00",
+    "linked_from": [],
+    "title": "PEFT-Bench: A Parameter-Efficient Fine-Tuning Methods Benchmark"
+  },
+  "processed_at": "2026-10-13T14:44:23+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-093d59f7adcc",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
