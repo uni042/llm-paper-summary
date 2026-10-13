@@ -30,6 +30,8 @@ scheduled_slot: '00'
 reference_main_sha: 5fea9b82bf19b20bd45dc3eb6b448c907459a383
 research_origin: returned_research_repair
 returned_research_failure_addressed: '旧投稿の評価説明量420文字不足を、ACL原著の実験4節、表1〜5、限界6節を再読し評価条件・数値・逆転条件・資源交換を補足'
+last_audited: null
+audit_version: 0
 ---
 
 # LaCo：枝刈り済みLLMの層別表現補償
