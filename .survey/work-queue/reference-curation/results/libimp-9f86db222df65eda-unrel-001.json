@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-9f86db222df65eda-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2511.21285",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2511.21285",
+    "identity_tokens": [
+      "DOI:10.18653/v1/2026.eacl-long.140",
+      "arXiv:2511.21285",
+      "semanticscholar:6c8f97f0dbfb37423ddb90075107aba860353d6d"
+    ],
+    "reason": "タイトルがパラメータ効率的なファインチューニング手法のベンチマークと明示しており、対象は学習方式の比較である。LLM推論サービングや推論時の圧縮・並列化ではない。",
+    "first_checked_at": "2026-10-11T20:48:38+00:00",
+    "last_checked_at": "2026-10-13T13:47:03+00:00",
+    "linked_from": [],
+    "title": "PEFT-Bench: A Parameter-Efficient Fine-Tuning Methods Benchmark"
+  },
+  "processed_at": "2026-10-13T13:47:03+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-9f86db222df6",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

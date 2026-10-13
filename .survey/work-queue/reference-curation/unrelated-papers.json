@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-13T10:45:30+00:00",
-  "record_count": 11765,
+  "updated_at": "2026-10-13T13:47:04+00:00",
+  "record_count": 11769,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -28902,9 +28902,9 @@
         "arXiv:2402.12289",
         "semanticscholar:758c2dc290c037a6f211ec503beee70abe2d1197"
       ],
-      "reason": "一次要旨では、都市の複雑な運転場面の理解・階層計画に視覚言語モデルを組み込み、従来の自動運転系と融合するDriveVLM-Dualを実車とnuScenes/SUP-ADで検証する。モデルの計算負荷にも触れるが、最終成果は自動運転の知覚・計画・実車動作であり、一般的なLLM推論カーネル、サービング、階層メモリ、MoEの効率化は研究対象ではない。",
+      "reason": "タイトルが自動運転への視覚言語モデルの応用・融合を主題としており、LLM推論システムの性能・資源管理の最適化を示さない。",
       "first_checked_at": "2026-10-05T02:49:32+00:00",
-      "last_checked_at": "2026-10-13T10:45:29+00:00",
+      "last_checked_at": "2026-10-13T13:47:00+00:00",
       "linked_from": [],
       "title": "DriveVLM: The Convergence of Autonomous Driving and Large Vision-Language Models"
     },
@@ -164742,9 +164742,9 @@
         "arXiv:2511.21285",
         "semanticscholar:6c8f97f0dbfb37423ddb90075107aba860353d6d"
       ],
-      "reason": "自己回帰LLMのパラメータ効率のよい追加学習方式（PEFT）を27データセットと複数方式で統一比較する評価基盤を提案し、学習可能パラメータ数、推論速度、学習時メモリ量を組み合わせる費用指標も定義する。推論速度は評価指標に含まれるが、研究の中心は既存の微調整方式の再現可能な比較であり、推論ランタイムやキャッシュ、オフロード、分散サービングの新しいシステム最適化ではない。現行の学習単独範囲凍結方針により収録対象外とする。",
+      "reason": "タイトルがパラメータ効率的なファインチューニング手法のベンチマークと明示しており、対象は学習方式の比較である。LLM推論サービングや推論時の圧縮・並列化ではない。",
       "first_checked_at": "2026-10-11T20:48:38+00:00",
-      "last_checked_at": "2026-10-11T20:48:38+00:00",
+      "last_checked_at": "2026-10-13T13:47:03+00:00",
       "linked_from": [],
       "title": "PEFT-Bench: A Parameter-Efficient Fine-Tuning Methods Benchmark"
     },
@@ -168565,6 +168565,54 @@
       "last_checked_at": "2026-10-13T10:44:17+00:00",
       "linked_from": [],
       "title": "Task Singular Vectors: Reducing Task Interference in Model Merging"
+    },
+    "arXiv:2403.18421": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2403.18421",
+      "identity_tokens": [
+        "arXiv:2403.18421"
+      ],
+      "reason": "タイトルが生物医学テキストで訓練した領域特化言語モデルの開発を主題としている。推論実行基盤やモデル圧縮・サービングの最適化ではない。",
+      "first_checked_at": "2026-10-13T13:47:00+00:00",
+      "last_checked_at": "2026-10-13T13:47:00+00:00",
+      "linked_from": [],
+      "title": "BioMedLM: A 2.7B Parameter Language Model Trained On Biomedical Text"
+    },
+    "arXiv:2205.08084": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2205.08084",
+      "identity_tokens": [
+        "arXiv:2205.08084"
+      ],
+      "reason": "タイトルが生成型言語モデルを推薦システムとして利用するアプリケーション研究であると明示している。推論実行効率のシステム技術ではない。",
+      "first_checked_at": "2026-10-13T13:47:01+00:00",
+      "last_checked_at": "2026-10-13T13:47:01+00:00",
+      "linked_from": [],
+      "title": "M6-Rec: Generative Pretrained Language Models are Open-Ended Recommender Systems"
+    },
+    "arXiv:2512.10310": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2512.10310",
+      "identity_tokens": [
+        "arXiv:2512.10310"
+      ],
+      "reason": "タイトルの効率化対象は視覚言語ナビゲーションモデルの学習であり、現在のサーベイが扱うLLM推論基盤の実行時高速化・メモリ最適化ではない。",
+      "first_checked_at": "2026-10-13T13:47:01+00:00",
+      "last_checked_at": "2026-10-13T13:47:01+00:00",
+      "linked_from": [],
+      "title": "Efficient-VLN: A Training-Efficient Vision-Language Navigation Model"
+    },
+    "arXiv:2203.07814": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2203.07814",
+      "identity_tokens": [
+        "arXiv:2203.07814"
+      ],
+      "reason": "タイトルが競技プログラミングのコード生成能力を研究対象と明示している。LLMの推論実行基盤、量子化、メモリ階層、スケジューリング等の高速化手法ではない。",
+      "first_checked_at": "2026-10-13T13:47:04+00:00",
+      "last_checked_at": "2026-10-13T13:47:04+00:00",
+      "linked_from": [],
+      "title": "Competition-level code generation with AlphaCode"
     }
   }
 }

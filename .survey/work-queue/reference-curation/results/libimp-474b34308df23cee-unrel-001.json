@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-474b34308df23cee-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2205.08084",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2205.08084",
+    "identity_tokens": [
+      "arXiv:2205.08084"
+    ],
+    "reason": "タイトルが生成型言語モデルを推薦システムとして利用するアプリケーション研究であると明示している。推論実行効率のシステム技術ではない。",
+    "first_checked_at": "2026-10-13T13:47:01+00:00",
+    "last_checked_at": "2026-10-13T13:47:01+00:00",
+    "linked_from": [],
+    "title": "M6-Rec: Generative Pretrained Language Models are Open-Ended Recommender Systems"
+  },
+  "processed_at": "2026-10-13T13:47:01+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-474b34308df2",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
