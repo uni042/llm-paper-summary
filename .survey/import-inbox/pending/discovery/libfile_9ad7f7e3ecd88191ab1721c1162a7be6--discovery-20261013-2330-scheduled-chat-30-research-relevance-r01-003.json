@@ -1,0 +1,26 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261013-2330-scheduled-chat-30/r01",
+  "reference_main_sha": "cd8ac105a2508345eda7020aeb123495a98ef01e",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2210.13452",
+      "identity_tokens": [
+        "arxiv:2210.13452"
+      ],
+      "title": "MetaFormer Baselines for Vision",
+      "reason": "MetaFormerの恒等写像・乱数行列・畳み込み・自己注意による視覚バックボーンを比較し、ImageNet-1Kの分類精度（CAFormer 85.5%など）を主評価とする。活性化関数StarReLUの演算量削減はあるが、LLMの推論配信・KVキャッシュ・重みオフロード・生成復号への適用や評価は要旨にない。画像認識モデルの設計研究であり本サーベイのLLM推論システム範囲外。",
+      "source_url": "https://arxiv.org/abs/2210.13452",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-13T23:36:16+09:00",
+      "last_checked_at": "2026-10-13T23:36:16+09:00",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance",
+      "worklist_rank": 3
+    }
+  ]
+}
