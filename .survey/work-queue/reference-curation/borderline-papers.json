@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-13T09:49:06+00:00",
-  "record_count": 4850,
+  "updated_at": "2026-10-13T10:41:40+00:00",
+  "record_count": 4851,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -71032,11 +71032,13 @@
       "classification": "borderline",
       "canonical_id": "arXiv:2512.09487",
       "identity_tokens": [
-        "arXiv:2512.09487"
+        "arXiv:2512.09487",
+        "id:arXiv:2512.09487",
+        "url:https://arxiv.org/abs/2512.09487"
       ],
-      "reason": "arXiv一次要旨ではテキストとグラフの証拠を複数ターンで選択する検索拡張生成（RAG）を強化学習で最適化し、グラフ検索の高コストを踏まえ不要な検索を抑える二段階学習を提案する。検索呼び出し費用の削減は実行時効率に関係するが、主たる貢献は質問応答のための検索方策と学習であり、GPU推論ランタイムやKVキャッシュ・バッチ処理のシステム最適化ではない。",
+      "reason": "一次要旨では、テキストとグラフの検索を一つの生成方策で制御し、推論中にいつ推論・検索・回答するかを強化学習で最適化する。グラフ検索の高い費用を避ける二段階学習により不要な検索を減らす設計は推論時の外部検索費用に関連するが、主評価は5つの質問応答課題でのRAG品質であり、GPUサービング・KVキャッシュ・生成カーネルの実測最適化は要旨から確認できないため境界的とする。",
       "first_checked_at": "2026-10-11T13:05:05+00:00",
-      "last_checked_at": "2026-10-12T18:49:59+00:00",
+      "last_checked_at": "2026-10-13T10:41:38+00:00",
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "RouteRAG: Efficient Retrieval-Augmented Generation from Text and Graph via Reinforcement Learning"
@@ -71339,11 +71341,13 @@
       "classification": "borderline",
       "canonical_id": "arXiv:2601.10323",
       "identity_tokens": [
-        "arXiv:2601.10323"
+        "arXiv:2601.10323",
+        "id:arXiv:2601.10323",
+        "url:https://arxiv.org/abs/2601.10323"
       ],
-      "reason": "一次要旨は音声・動画の連続入力を時間同期単位で扱い、応答開始を軽量ヘッドで制御するリアルタイム多モーダル助手を提案する。ストリーミング入力処理と応答タイミングは推論実行に関係するが、主な評価は12の理解・応答ベンチマークであり、LLM基盤のGPUカーネルやサービング高速化ではない。",
+      "reason": "一次要旨では、連続する音声と動画フレームを同期した単位として扱い、軽量な発話開始ヘッドを生成部から分離することで、能動的な警告・実況と受動的な質問応答を統合する。リアルタイム処理の制御機構は推論時の応答開始に関係するが、12ベンチマークの主評価はマルチモーダル理解・応答能力であり、GPUカーネル・KVキャッシュ・サービングの速度やメモリ改善を主眼としないため境界的とする。",
       "first_checked_at": "2026-10-11T21:44:19+00:00",
-      "last_checked_at": "2026-10-12T21:38:01+00:00",
+      "last_checked_at": "2026-10-13T10:41:40+00:00",
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "ROMA: Real-time Omni-Multimodal Assistant with Interactive Streaming Understanding"
@@ -74243,6 +74247,21 @@
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "Compressing Pre-trained Models of Code into 3 MB"
+    },
+    "arXiv:2603.00573": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2603.00573",
+      "identity_tokens": [
+        "arXiv:2603.00573",
+        "id:arXiv:2603.00573",
+        "url:https://arxiv.org/abs/2603.00573"
+      ],
+      "reason": "一次要旨では、低ランク適応の複数専門家を小さな核行列として表現し、トークンごとに選択した核専門家を軟結合して一つのLoRAモジュールを構成する。専門家数増大に対するパラメータ効率と適応性能の改善はMoE推論に隣接するが、主目的はパラメータ効率の良いタスク適応であり、サービングの実測速度・通信・KVメモリ効率への寄与は要旨から確定できないため境界的とする。",
+      "first_checked_at": "2026-10-13T10:41:39+00:00",
+      "last_checked_at": "2026-10-13T10:41:39+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "CoMoL: Efficient Mixture of LoRA Experts via Dynamic Core Space Merging"
     }
   }
 }
