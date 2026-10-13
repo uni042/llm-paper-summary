@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-10c80000f909a3ab-unrel-007",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2203.16434",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2203.16434",
+    "identity_tokens": [
+      "9d4eb3a74c3b3cd196834e7cb04b6a0871cdf13d",
+      "DOI:10.1109/cvpr52688.2022.01595",
+      "SemanticScholar:9d4eb3a74c3b3cd196834e7cb04b6a0871cdf13d",
+      "arXiv:2203.16434"
+    ],
+    "reason": "TubeDETR addresses video grounding with text and reports task accuracy; no language-model serving or runtime efficiency contribution is stated.",
+    "first_checked_at": "2026-10-13T19:24:36+00:00",
+    "last_checked_at": "2026-10-13T19:24:36+00:00",
+    "linked_from": [
+      "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md",
+      "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md",
+      "papers/inference/99-other-inference-systems/2020-2004.11886-lite-transformer-with-long-short-range-attention.md",
+      "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md"
+    ],
+    "title": "TubeDETR: Spatio-Temporal Video Grounding with Transformers"
+  },
+  "processed_at": "2026-10-13T19:24:36+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-10c80000f909",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

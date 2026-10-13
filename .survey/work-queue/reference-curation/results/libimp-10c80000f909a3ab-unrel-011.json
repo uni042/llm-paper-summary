@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-10c80000f909a3ab-unrel-011",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2603.27538",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2603.27538",
+    "identity_tokens": [
+      "530db1b5821c0921f864f73db86e26b8e02aa191",
+      "DOI:10.48550/arxiv.2603.27538",
+      "SemanticScholar:530db1b5821c0921f864f73db86e26b8e02aa191",
+      "arXiv:2603.27538"
+    ],
+    "reason": "LongCat-Next introduces unified multimodal modeling and benchmark performance; the abstract does not claim inference/runtime efficiency.",
+    "first_checked_at": "2026-10-13T19:24:37+00:00",
+    "last_checked_at": "2026-10-13T19:24:37+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+      "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md",
+      "papers/inference/99-other-inference-systems/2024-2410.00037-moshi-a-speech-text-foundation-model-for-real-time-dialogue.md",
+      "papers/inference/99-other-inference-systems/2025-2509.17765-qwen3-omni-technical-report.md"
+    ],
+    "title": "LongCat-Next: Lexicalizing Modalities as Discrete Tokens"
+  },
+  "processed_at": "2026-10-13T19:24:38+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-10c80000f909",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-10c80000f909a3ab-border-006",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2407.13193",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2407.13193",
+    "identity_tokens": [
+      "DOI:10.1007/s10462-026-11605-7",
+      "SemanticScholar:d4a5c2ab2b459426869e1a3ab1550897b005303e",
+      "arXiv:2407.13193",
+      "d4a5c2ab2b459426869e1a3ab1550897b005303e"
+    ],
+    "reason": "The survey explicitly compares RAG accessibility and efficiency and discusses deployment, but it is a broad NLP taxonomy rather than a focused serving-system contribution.",
+    "first_checked_at": "2026-10-13T19:24:35+00:00",
+    "last_checked_at": "2026-10-13T19:24:35+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2212.10511-when-not-to-trust-language-models-investigating-effectiveness-of-paramet.md",
+      "papers/inference/99-other-inference-systems/2023-2305.01625-unlimiformer-long-range-transformers-with-unlimited-length-input.md",
+      "papers/inference/99-other-inference-systems/2023-2305.13245-gqa.md",
+      "papers/inference/99-other-inference-systems/2023-2310.04408-recomp-improving-retrieval-augmented-lms-with-compression-and-selective-.md",
+      "papers/inference/99-other-inference-systems/2024-2403.05676-piperag-fast-retrieval-augmented-generation-via-algorithm-system-co-desi.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Retrieval-Augmented Generation for Natural Language Processing: A Survey"
+  },
+  "processed_at": "2026-10-13T19:24:35+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-10c80000f909",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

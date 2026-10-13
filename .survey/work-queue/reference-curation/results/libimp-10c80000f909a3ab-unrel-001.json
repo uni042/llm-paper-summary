@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-10c80000f909a3ab-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2104.11227",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2104.11227",
+    "identity_tokens": [
+      "18863dbfa32eaa1ccdb56ff180e6ab079a7f1ec6",
+      "DOI:10.1109/iccv48922.2021.00675",
+      "SemanticScholar:18863dbfa32eaa1ccdb56ff180e6ab079a7f1ec6",
+      "arXiv:2104.11227"
+    ],
+    "reason": "Vision-only recognition architecture; efficiency comparisons are for video/image recognition, with no LLM-serving contribution.",
+    "first_checked_at": "2026-10-13T19:24:35+00:00",
+    "last_checked_at": "2026-10-13T19:24:35+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md",
+      "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md",
+      "papers/inference/99-other-inference-systems/2020-2006.03236-funnel-transformer-filtering-out-sequential-redundancy-for-efficient-lan.md",
+      "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md"
+    ],
+    "title": "Multiscale Vision Transformers"
+  },
+  "processed_at": "2026-10-13T19:24:35+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-10c80000f909",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

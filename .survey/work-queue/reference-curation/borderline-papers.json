@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-13T18:22:08+00:00",
-  "record_count": 4865,
+  "updated_at": "2026-10-13T19:24:40+00:00",
+  "record_count": 4868,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -74505,6 +74505,74 @@
       ],
       "borderline_recheck_count": 0,
       "title": "Report on the Search Futures Workshop at ECIR 2026"
+    },
+    "arXiv:2407.13193": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2407.13193",
+      "identity_tokens": [
+        "DOI:10.1007/s10462-026-11605-7",
+        "SemanticScholar:d4a5c2ab2b459426869e1a3ab1550897b005303e",
+        "arXiv:2407.13193",
+        "d4a5c2ab2b459426869e1a3ab1550897b005303e"
+      ],
+      "reason": "The survey explicitly compares RAG accessibility and efficiency and discusses deployment, but it is a broad NLP taxonomy rather than a focused serving-system contribution.",
+      "first_checked_at": "2026-10-13T19:24:35+00:00",
+      "last_checked_at": "2026-10-13T19:24:35+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2212.10511-when-not-to-trust-language-models-investigating-effectiveness-of-paramet.md",
+        "papers/inference/99-other-inference-systems/2023-2305.01625-unlimiformer-long-range-transformers-with-unlimited-length-input.md",
+        "papers/inference/99-other-inference-systems/2023-2305.13245-gqa.md",
+        "papers/inference/99-other-inference-systems/2023-2310.04408-recomp-improving-retrieval-augmented-lms-with-compression-and-selective-.md",
+        "papers/inference/99-other-inference-systems/2024-2403.05676-piperag-fast-retrieval-augmented-generation-via-algorithm-system-co-desi.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Retrieval-Augmented Generation for Natural Language Processing: A Survey"
+    },
+    "arXiv:2409.19886": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2409.19886",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2409.19886",
+        "SemanticScholar:aa1127172e8b01d94140357e06f31955dba47dab",
+        "aa1127172e8b01d94140357e06f31955dba47dab",
+        "arXiv:2409.19886"
+      ],
+      "reason": "RouterDC selects among LLMs and improves task accuracy, but the abstract does not measure inference latency, cost, or serving-resource efficiency.",
+      "first_checked_at": "2026-10-13T19:24:38+00:00",
+      "last_checked_at": "2026-10-13T19:24:38+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2023-2309.15789-large-language-model-routing-with-benchmark-datasets.md",
+        "papers/inference/99-other-inference-systems/2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md",
+        "papers/inference/99-other-inference-systems/2023-2311.08692-routing-to-the-expert-efficient-reward-guided-ensemble-of-large-language.md",
+        "papers/inference/99-other-inference-systems/2024-2310.03094-large-language-model-cascades-with-mixture-of-thought-representations-fo.md",
+        "papers/inference/99-other-inference-systems/2024-2404.10136-language-model-cascades-token-level-uncertainty-and-beyond.md",
+        "papers/inference/99-other-inference-systems/2024-2404.14618-hybrid-llm-cost-efficient-and-quality-aware-query-routing.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "RouterDC: Query-Based Router by Dual Contrastive Learning for Assembling Large Language Models"
+    },
+    "arXiv:2512.04540": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2512.04540",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2512.04540",
+        "SemanticScholar:f3664cc7be8902355007b3eeda7c4eae251fb321",
+        "arXiv:2512.04540",
+        "f3664cc7be8902355007b3eeda7c4eae251fb321"
+      ],
+      "reason": "VideoMem proposes adaptive video memory and reports long-video task gains; its stated efficiency mechanisms concern training/sample use, leaving inference-system savings unclear.",
+      "first_checked_at": "2026-10-13T19:24:40+00:00",
+      "last_checked_at": "2026-10-13T19:24:40+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md",
+        "papers/inference/12-moe-parallelism-communication/2024-2408.10188-longvila-scaling-long-context-visual-language-models-for-long-videos.md",
+        "papers/inference/99-other-inference-systems/2023-2307.16449-moviechat-from-dense-token-to-sparse-memory-for-long-video-understanding.md",
+        "papers/inference/99-other-inference-systems/2023-2311.17043-llama-vid-an-image-is-worth-2-tokens-in-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2024-2410.17434-longvu-spatiotemporal-adaptive-compression-for-long-video-language-under.md",
+        "papers/inference/99-other-inference-systems/2024-2412.04468-nvila-efficient-frontier-visual-language-models.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "VideoMem: Enhancing Ultra-Long Video Understanding via Adaptive Memory Management"
     }
   }
 }

@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-9872e6112fa62de5-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2603.24477",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2603.24477",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2603.24477",
+      "SemanticScholar:ccbc025cfbed572a92ccaaf5befac794441683d1",
+      "arXiv:2603.24477",
+      "ccbc025cfbed572a92ccaaf5befac794441683d1"
+    ],
+    "reason": "Composer 2 is a model-training and coding-benchmark report; the abstract gives no inference/system-efficiency contribution.",
+    "first_checked_at": "2026-10-13T19:24:40+00:00",
+    "last_checked_at": "2026-10-13T19:24:40+00:00",
+    "linked_from": [
+      "papers/inference/12-moe-parallelism-communication/2021-2101.03961-switch-transformers-scaling-to-trillion-parameter-models-with-simple-and.md",
+      "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md",
+      "papers/inference/15-inference-simulation-emulation/2017-1712.05889-ray-a-distributed-framework-for-emerging-ai-applications.md",
+      "papers/inference/99-other-inference-systems/2017-1701.06538-outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts.md",
+      "papers/inference/99-other-inference-systems/2019-1909.08053-megatron-lm-training-multi-billion-parameter-language-models-using-model.md",
+      "papers/inference/99-other-inference-systems/2023-2310.01889-ring-attention-blockwise-transformers.md",
+      "papers/inference/99-other-inference-systems/2024-2404.19737-better-faster-large-language-models-via-multi-token-prediction.md",
+      "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+    ],
+    "title": "Composer 2 Technical Report"
+  },
+  "processed_at": "2026-10-13T19:24:40+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-9872e6112fa6",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
