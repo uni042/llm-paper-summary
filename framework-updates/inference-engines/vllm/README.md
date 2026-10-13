@@ -102,6 +102,11 @@ vLLMの主要な機能・性能更新を継続的に記録する集約ページ�
 
 ## 主要更新
 
+### 2026-10-12 — ReplaySSM：状態空間モデルの再帰状態保持最適化（研究・統合進展）
+- 状態空間モデル（SSM）の再帰状態を定期的な状態保存と直近入力のバッファへ分け、毎トークンの巨大状態書き戻しを減らす。投機的復号で候補を棄却するときは入力バッファの位置を巻き戻す。再帰的な量子化誤差を防ぐ高精度状態と低精度読み出し複製も提案。
+- B300/H100等の**限定条件**ではバッチ256のカーネル1.46〜1.80倍、復号ステップ全体1.20〜1.47倍、バッチ512の120B級で投機的復号処理量が既存vLLM比1.85〜2.10倍。**バッチ1では改善なし**。
+- 上流vLLMへの統合はMamba2の標準復号経路が中心。GDN・投機的復号の一部は未統合の公開プルリクエストや研究用分岐にあり、全機能が標準安定版ですぐ利用できるわけではない。[NVIDIA解説](https://developer.nvidia.com/blog/replayssm-rethinking-state-storage-for-faster-hybrid-model-decoding/)／[論文](https://arxiv.org/abs/2610.13778)／[実装](https://github.com/Johnny-Liou/ReplaySSM)
+
 - **2026-06-15 — v0.23.0（released）**: CUDA Graphを途中で抜けられるbreakable graph、pipeline bubble削減、object storageを第2階層として使うmulti-tier KV cache、requestごとに異なるoffload policyを追加。[release](https://github.com/vllm-project/vllm/releases/tag/v0.23.0)
 
 - **2026-06-29 — v0.24.0（released）**: KV cacheが外部tierに存在するかを複数requestまとめて非同期確認する仕組み、NIXLによるprefill worker→decode workerへのKV直接転送、MoE通信backendのDeepEP v2、投機的デコード方式DFlashを追加。FlashInfer sparse-index cacheでTTFT 2〜4%、prefill planningでend-to-end throughput 4%、FP8行列積の不要padding回避で20%、MoE buffer前確保で9〜14%向上。[release](https://github.com/vllm-project/vllm/releases/tag/v0.24.0)

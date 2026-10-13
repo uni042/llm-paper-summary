@@ -78,6 +78,12 @@ llama.cppの主要な機能・性能更新を継続的に記録する集約ペ�
 
 ## 主要更新
 
+### 2026-10-13 — llama.cpp b11569〜b11577：MoE・CUDA注意・判定モデル対応
+- **b11569（10/12公開）**: Metal版の専門家混合（MoE）行列積 `MUL_MAT_ID` で同一専門家IDが重複する場合の出力不整合を修正し、不要な起動タイルを削減。限定ベンチマークでは入力処理が約0.5〜2%向上、逐次生成はほぼ不変。**Metal限定でありWindows CUDAの高速化とは別**。[公式版](https://github.com/ggml-org/llama.cpp/releases/tag/b11569)
+- **b11572／b11577**: vLLM D3系の判定モデル対応を追加し、後続版で複数系列の問題を修正。一般の会話モデル全体の速度改善ではない。[b11572](https://github.com/ggml-org/llama.cpp/releases/tag/b11572)／[b11577](https://github.com/ggml-org/llama.cpp/releases/tag/b11577)
+- **b11576（10/13公開）**: head size 512のキャッシュなし注意機構でCUDA `FLASH_ATTN_EXT` がCPUへフォールバックすることがある不具合を、鍵・値とマスクのパディングにより修正。対象形状でのみGPU経路回復を見込める。Windows向けCUDA配布物もあるが、一般モデルの一律高速化倍率は未報告。[公式版](https://github.com/ggml-org/llama.cpp/releases/tag/b11576)
+- **b11574**: Snapdragon Hexagon NPU向けコピー・連結等を最適化し、メモリ同期の問題も修正。**NVIDIA CUDAには直接適用されない**。[公式版](https://github.com/ggml-org/llama.cpp/releases/tag/b11574)
+
 ### 2026-10-12 — llama.cpp b11559 / b11558：OpenCL改善
 - b11559: OpenCL版FlashAttentionがkey次元512とGQA4/GQA8に対応。gpt-oss-20b MXFP4のOpenCL限定ベンチマークでは16.59→29.01トークン/秒（1.75倍）。**NVIDIA CUDAへ同倍率を外挿しない**。[公式版](https://github.com/ggml-org/llama.cpp/releases/tag/b11559)、[PR #30266](https://github.com/ggml-org/llama.cpp/pull/30266)。
 - b11558: OpenCL版の巨大量子化重み、ブロードキャストとRMSNormの不整合を修正。速度の定量値は未報告。[公式版](https://github.com/ggml-org/llama.cpp/releases/tag/b11558)、[PR #30310](https://github.com/ggml-org/llama.cpp/pull/30310)。

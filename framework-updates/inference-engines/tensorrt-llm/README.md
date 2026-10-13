@@ -40,6 +40,10 @@ TensorRT-LLMの主要な機能・性能更新を継続的に記録する集約�
 
 ## 主要更新
 
+### 2026-10-12 — ReplaySSMの再帰状態最適化（研究・統合状況）
+- SSMの状態更新を定期保存・入力バッファ再生で代替し、投機的復号の巻き戻しと低精度状態読み出しを高速化する研究。NVIDIAの技術記事でTensorRT-LLMを含む関連基盤への適用を紹介。
+- B300/H100等で大規模バッチの復号ステップが最大1.47倍、対象120B級の投機的復号が1.85〜2.10倍という**研究評価**であり、**バッチ1では改善なし**。標準安定版のTensorRT-LLM全モデル・全経路で同倍率が利用可能という意味ではない。[NVIDIA解説](https://developer.nvidia.com/blog/replayssm-rethinking-state-storage-for-faster-hybrid-model-decoding/)／[原著](https://arxiv.org/abs/2610.13778)／[実装](https://github.com/Johnny-Liou/ReplaySSM)
+
 ### 2026-06-10〜06-30 — rc18〜rc20
 
 - **GPU間memory共有基盤をCUDA IPCからVMM / MNNVLへ拡張**: VMM（Virtual Memory Management; GPU仮想memory管理）を使い、複数process / GPU間でmemory領域をより柔軟に共有・再配置できるようにする方向へ移行。

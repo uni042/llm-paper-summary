@@ -1,27 +1,20 @@
 {
   "schema_version": 1,
   "ok": true,
-  "attempt_id": "library-import-20261012-maint-0830-three-days-batch01",
+  "attempt_id": "library-import-20261013-0830-20261013T110045698Z",
   "kind": "framework_llm_update",
   "updated_paths": [
     "framework-updates/inference-engines/llama-cpp/README.md",
     "framework-updates/inference-engines/ollama/README.md",
-    "framework-updates/inference-engines/exllama/README.md",
-    "llm-releases/gemma.md",
-    "llm-releases/mistral.md",
-    "framework-updates/README.md",
-    "llm-releases/minicpm.md"
+    "framework-updates/inference-engines/vllm/README.md",
+    "framework-updates/inference-engines/tensorrt-llm/README.md"
   ],
-  "created_paths": [
-    "llm-releases/minicpm.md"
-  ],
+  "created_paths": [],
   "updated_existing_paths": [
     "framework-updates/inference-engines/llama-cpp/README.md",
     "framework-updates/inference-engines/ollama/README.md",
-    "framework-updates/inference-engines/exllama/README.md",
-    "llm-releases/gemma.md",
-    "llm-releases/mistral.md",
-    "framework-updates/README.md"
+    "framework-updates/inference-engines/vllm/README.md",
+    "framework-updates/inference-engines/tensorrt-llm/README.md"
   ],
-  "summary": "Consolidate 2026-10-10 to 2026-10-12 Library maintenance updates across 7 framework/LLM files"
+  "summary": "2026-10-13 08:30 JST Library updates: llama.cpp b11569-11577, Ollama v0.40.4-rc0, ReplaySSM integration status"
 }
