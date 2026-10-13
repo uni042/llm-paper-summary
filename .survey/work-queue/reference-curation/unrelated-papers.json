@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-13T16:47:54+00:00",
-  "record_count": 11769,
+  "updated_at": "2026-10-13T16:56:18+00:00",
+  "record_count": 11800,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -168612,6 +168612,494 @@
       "last_checked_at": "2026-10-13T14:44:27+00:00",
       "linked_from": [],
       "title": "Compression of Neural Machine Translation Models via Pruning"
+    },
+    "arXiv:2512.05853": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2512.05853",
+      "identity_tokens": [
+        "DOI:10.1109/cvprf71909.2026.00902",
+        "SemanticScholar:bb908720110c5d7065a3ab08a1709b033e242dc9",
+        "arXiv:2512.05853"
+      ],
+      "reason": "VRSA proposes a visual jailbreak attack against multimodal LLMs and evaluates attack success; it does not address inference efficiency.",
+      "first_checked_at": "2026-10-13T16:56:09+00:00",
+      "last_checked_at": "2026-10-13T16:56:09+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2510.18234-deepseek-ocr-contexts-optical-compression.md"
+      ],
+      "title": "VRSA: Jailbreaking Multimodal Large Language Models Through Visual Reasoning Sequential Attack"
+    },
+    "arXiv:2508.11408": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2508.11408",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2508.11408",
+        "SemanticScholar:804039e844664365265dca969ae612d32a992503",
+        "arXiv:2508.11408"
+      ],
+      "reason": "CHORD changes the balance of supervised fine-tuning and reinforcement learning during post-training; its contribution is training stability/capability, not inference-time efficiency.",
+      "first_checked_at": "2026-10-13T16:56:09+00:00",
+      "last_checked_at": "2026-10-13T16:56:09+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2506.13585-minimax-m1-scaling-test-time-compute-efficiently-with-lightning-attentio.md"
+      ],
+      "title": "On-Policy RL Meets Off-Policy Experts: Harmonizing Supervised Fine-Tuning and Reinforcement Learning via Dynamic Weighting"
+    },
+    "arXiv:2608.13262": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.13262",
+      "identity_tokens": [
+        "SemanticScholar:55d35e5f19d4d7b1f851e41124b21ea997f820ff",
+        "arXiv:2608.13262"
+      ],
+      "reason": "ORBIT studies time-series foundation-model training regimes and forecasting. Its training objective is noted as adding no inference cost, but it does not propose an inference optimization or target LLM serving.",
+      "first_checked_at": "2026-10-13T16:56:09+00:00",
+      "last_checked_at": "2026-10-13T16:56:09+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1909.08053-megatron-lm-training-multi-billion-parameter-language-models-using-model.md"
+      ],
+      "title": "Into the ORBIT for Time Series: Training Regimes for Foundation Models"
+    },
+    "arXiv:2606.04071": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.04071",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2606.04071",
+        "SemanticScholar:f5a3363d093839ccbb564c3d3860d2ac149fbe01",
+        "arXiv:2606.04071"
+      ],
+      "reason": "The paper studies covert influence and attribution across training/distillation/in-context interfaces; it is a security-risk analysis, not an efficiency contribution.",
+      "first_checked_at": "2026-10-13T16:56:10+00:00",
+      "last_checked_at": "2026-10-13T16:56:10+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2512.24601-recursive-language-models.md"
+      ],
+      "title": "Covert Influence Between Language Models"
+    },
+    "DOI:10.1371/journal.pone.0346343": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1371/journal.pone.0346343",
+      "identity_tokens": [
+        "DOI:10.1371/journal.pone.0346343",
+        "SemanticScholar:38e8b413e9c9be9e59c174b236a72172fa240b94"
+      ],
+      "reason": "The PLOS title identifies sonar-image detection of submarine pipelines/cables, a distinct non-LLM application. Only the title was needed to establish the subject mismatch; PLOS full text discusses lightweight YOLO for this sonar task, not LLM inference.",
+      "first_checked_at": "2026-10-13T16:56:10+00:00",
+      "last_checked_at": "2026-10-13T16:56:10+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.07982-a-survey-of-techniques-for-optimizing-transformer-inference.md"
+      ],
+      "title": "Detection of submarine pipeline and cable targets based on depth feature of high resolution sonar image"
+    },
+    "DOI:10.1038/s41598-025-30982-7": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1038/s41598-025-30982-7",
+      "identity_tokens": [
+        "DOI:10.1038/s41598-025-30982-7",
+        "SemanticScholar:afbbe00c8c105055e0287b9b03ebb0ab8670f2d0"
+      ],
+      "reason": "The Nature abstract evaluates OCR/VLM ability to mimic low-vision text recognition for accessibility assessment; this is a specialized application and does not contribute LLM inference-system efficiency.",
+      "first_checked_at": "2026-10-13T16:56:10+00:00",
+      "last_checked_at": "2026-10-13T16:56:10+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2510.18234-deepseek-ocr-contexts-optical-compression.md"
+      ],
+      "title": "VI-OCR: “Visually Impaired” optical character recognition pipeline for text accessibility assessment"
+    },
+    "arXiv:2512.09874": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2512.09874",
+      "identity_tokens": [
+        "DOI:10.1007/978-3-032-31583-0_7",
+        "SemanticScholar:4d8075e92232bad801e88f2dfba63240bf3b5b41",
+        "arXiv:2512.09874"
+      ],
+      "reason": "The primary abstract benchmarks PDF formula parsers for semantic extraction quality. It provides a document-processing benchmark, not an LLM runtime/serving efficiency contribution.",
+      "first_checked_at": "2026-10-13T16:56:10+00:00",
+      "last_checked_at": "2026-10-13T16:56:10+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2510.18234-deepseek-ocr-contexts-optical-compression.md"
+      ],
+      "title": "Benchmarking Document Parsers on Mathematical Formula Extraction from PDFs"
+    },
+    "arXiv:2512.01822": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2512.01822",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2512.01822",
+        "SemanticScholar:76c247ed80989c319d9f47967042eb225105ebce",
+        "arXiv:2512.01822"
+      ],
+      "reason": "InnoGym benchmarks the novelty and performance of agent solutions; it evaluates innovation and task outcomes rather than inference execution cost or system efficiency.",
+      "first_checked_at": "2026-10-13T16:56:11+00:00",
+      "last_checked_at": "2026-10-13T16:56:11+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2510.18234-deepseek-ocr-contexts-optical-compression.md"
+      ],
+      "title": "InnoGym: Benchmarking the Innovation Potential of AI Agents"
+    },
+    "SemanticScholar:3e2734025037fc626873c56e05ddb43ccccd3858": {
+      "classification": "unrelated",
+      "canonical_id": "SemanticScholar:3e2734025037fc626873c56e05ddb43ccccd3858",
+      "identity_tokens": [
+        "DOI:10.36227/techrxiv.23589741.v1",
+        "SemanticScholar:3e2734025037fc626873c56e05ddb43ccccd3858"
+      ],
+      "reason": "TechRxiv’s publisher abstract identifies this stable Semantic Scholar candidate as the DOI-linked general LLM survey. It synthesizes history, architecture, training and applications and lists computational-resource requirements as a challenge, without a concrete inference/runtime efficiency method.",
+      "first_checked_at": "2026-10-13T16:56:12+00:00",
+      "last_checked_at": "2026-10-13T16:56:12+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.14152-memory-efficient-fine-tuning-of-compressed-large-language-models-via-sub.md"
+      ],
+      "title": "A Survey on Large Language Models: Applications, Challenges, Limitations, and Practical Usage"
+    },
+    "arXiv:2511.04570": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2511.04570",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2511.04570",
+        "SemanticScholar:defa0607b6da690ddad8ec549d8116dda9405c29",
+        "arXiv:2511.04570"
+      ],
+      "reason": "The primary abstract introduces a video-generation reasoning paradigm and evaluates task accuracy; it does not describe a model-execution efficiency method or resource reduction.",
+      "first_checked_at": "2026-10-13T16:56:12+00:00",
+      "last_checked_at": "2026-10-13T16:56:12+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2510.18234-deepseek-ocr-contexts-optical-compression.md"
+      ],
+      "title": "Thinking with Video: Video Generation as a Promising Multimodal Reasoning Paradigm"
+    },
+    "arXiv:2605.09998": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.09998",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2605.09998",
+        "SemanticScholar:6a9320f6e52a64a977fbb253481fb2f53fe8c24a",
+        "arXiv:2605.09998"
+      ],
+      "reason": "Continual Harness improves embodied-agent task progress and button-press cost through online harness refinement; the abstract does not identify reduced model inference latency, tokens, memory, or serving resources.",
+      "first_checked_at": "2026-10-13T16:56:12+00:00",
+      "last_checked_at": "2026-10-13T16:56:12+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2512.24601-recursive-language-models.md"
+      ],
+      "title": "Continual Harness: Online Adaptation for Self-Improving Foundation Agents"
+    },
+    "DOI:10.2196/73846": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.2196/73846",
+      "identity_tokens": [
+        "DOI:10.2196/73846",
+        "SemanticScholar:d425041da832db77af542b9bbfade89254526291"
+      ],
+      "reason": "The JMIR review surveys wearable cardiovascular monitoring applications and deployment challenges. It does not contribute an LLM inference or serving efficiency method.",
+      "first_checked_at": "2026-10-13T16:56:12+00:00",
+      "last_checked_at": "2026-10-13T16:56:12+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.07982-a-survey-of-techniques-for-optimizing-transformer-inference.md"
+      ],
+      "title": "AI-Driven Real-Time Monitoring of Cardiovascular Conditions With Wearable Devices: Scoping Review"
+    },
+    "arXiv:2603.20278": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.20278",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2603.20278",
+        "SemanticScholar:0403c0994bf507cb55749543b411dd63ebf876a9",
+        "arXiv:2603.20278"
+      ],
+      "reason": "OpenResearcher is an offline corpus and trajectory-synthesis pipeline for training deep-research agents; its contribution concerns training data and reproducibility, not model inference/deployment efficiency.",
+      "first_checked_at": "2026-10-13T16:56:13+00:00",
+      "last_checked_at": "2026-10-13T16:56:13+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1909.08053-megatron-lm-training-multi-billion-parameter-language-models-using-model.md"
+      ],
+      "title": "OpenResearcher: A Fully Open Pipeline for Long-Horizon Deep Research Trajectory Synthesis"
+    },
+    "arXiv:2604.04771": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.04771",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2604.04771",
+        "SemanticScholar:948c99b32cbc0abdfadf5a8c11d51c3c938e2ac9",
+        "arXiv:2604.04771"
+      ],
+      "reason": "MinerU2.5-Pro focuses on data engineering, training, and document-parsing quality; the primary abstract does not establish a contribution to general LLM runtime or deployment efficiency.",
+      "first_checked_at": "2026-10-13T16:56:13+00:00",
+      "last_checked_at": "2026-10-13T16:56:13+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2510.18234-deepseek-ocr-contexts-optical-compression.md"
+      ],
+      "title": "MinerU2.5-Pro: Pushing the Limits of Data-Centric Document Parsing at Scale"
+    },
+    "arXiv:2604.27470": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.27470",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2604.27470",
+        "SemanticScholar:5ef12b2dea59171997b44fa7ff2affbeece8007a",
+        "arXiv:2604.27470"
+      ],
+      "reason": "HealthBench Professional evaluates clinical-chat quality and clinician alignment. Its primary abstract is about capability evaluation, not inference-system efficiency.",
+      "first_checked_at": "2026-10-13T16:56:13+00:00",
+      "last_checked_at": "2026-10-13T16:56:13+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2512.24601-recursive-language-models.md"
+      ],
+      "title": "HealthBench Professional: Evaluating Large Language Models on Real Clinician Chats"
+    },
+    "arXiv:2604.17308": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.17308",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2604.17308",
+        "SemanticScholar:6158fe73b7cb734c2561ae4b28f37f6ccdf54929",
+        "arXiv:2604.17308"
+      ],
+      "reason": "SkillFlow benchmarks lifelong skill discovery and evolution for agents; the abstract describes success/capability evaluation and gives no model execution-cost contribution.",
+      "first_checked_at": "2026-10-13T16:56:13+00:00",
+      "last_checked_at": "2026-10-13T16:56:13+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2026-2604.05404-beyond-accuracy-unveiling-inefficiency-patterns-in-tool-integrated-reaso.md"
+      ],
+      "title": "SkillFlow:Benchmarking Lifelong Skill Discovery and Evolution for Autonomous Agents"
+    },
+    "arXiv:2604.05516": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.05516",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2604.05516",
+        "SemanticScholar:25387a97c53a332161e540ef3f94e6bd519163c3",
+        "arXiv:2604.05516"
+      ],
+      "reason": "The paper improves long-horizon social simulation capacity through macro/micro state modeling; its contribution is application modeling rather than LLM inference or deployment efficiency.",
+      "first_checked_at": "2026-10-13T16:56:14+00:00",
+      "last_checked_at": "2026-10-13T16:56:14+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2510.18234-deepseek-ocr-contexts-optical-compression.md"
+      ],
+      "title": "Coupling Macro Dynamics and Micro States for Long-Horizon Social Simulation"
+    },
+    "DOI:10.1109/access.2025.3534098": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/access.2025.3534098",
+      "identity_tokens": [
+        "DOI:10.1109/access.2025.3534098",
+        "SemanticScholar:8551264f26f716a62a77e3e75232401d8d2fe054"
+      ],
+      "reason": "The verified IEEE title identifies an underwater-object-recognition survey, a distinct vision application; no LLM inference-system contribution is indicated by the title. IEEE Xplore’s official page required JavaScript/robot verification, so only title screening was used.",
+      "first_checked_at": "2026-10-13T16:56:14+00:00",
+      "last_checked_at": "2026-10-13T16:56:14+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.07982-a-survey-of-techniques-for-optimizing-transformer-inference.md"
+      ],
+      "title": "Advancing Underwater Vision: A Survey of Deep Learning Models for Underwater Object Recognition and Tracking"
+    },
+    "arXiv:2511.15065": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2511.15065",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2511.15065",
+        "SemanticScholar:fe76eb79893fa532bb1c61d7026125f08cf357aa",
+        "arXiv:2511.15065"
+      ],
+      "reason": "The primary abstract introduces and evaluates video-model reasoning on maze tasks; it reports task capability rather than a model-execution efficiency contribution.",
+      "first_checked_at": "2026-10-13T16:56:14+00:00",
+      "last_checked_at": "2026-10-13T16:56:14+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2510.18234-deepseek-ocr-contexts-optical-compression.md"
+      ],
+      "title": "Reasoning via Video: The First Evaluation of Video Models' Reasoning Abilities through Maze-Solving Tasks"
+    },
+    "arXiv:2511.10390": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2511.10390",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2511.10390",
+        "SemanticScholar:5c94d82e55a1778ae2c976b87988297aee2cb7ba",
+        "arXiv:2511.10390"
+      ],
+      "reason": "MonkeyOCR v1.5 addresses robust document parsing and benchmark quality. Its primary abstract does not establish a contribution to general LLM serving or inference efficiency.",
+      "first_checked_at": "2026-10-13T16:56:16+00:00",
+      "last_checked_at": "2026-10-13T16:56:16+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2510.18234-deepseek-ocr-contexts-optical-compression.md"
+      ],
+      "title": "MonkeyOCR v1.5 Technical Report: Unlocking Robust Document Parsing for Complex Patterns"
+    },
+    "arXiv:2605.09959": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.09959",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2605.09959",
+        "SemanticScholar:e5f4d8707986be68c6ebbc2319a579530b34af9c",
+        "arXiv:2605.09959"
+      ],
+      "reason": "G-Zero studies self-play training for open-ended generation; its contribution is training data and capability growth, not inference/deployment efficiency.",
+      "first_checked_at": "2026-10-13T16:56:16+00:00",
+      "last_checked_at": "2026-10-13T16:56:16+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2026-2601.09260-efficient-paths-and-dense-rewards-probabilistic-flow-reasoning-for-large.md"
+      ],
+      "title": "G-Zero: Self-Play for Open-Ended Generation from Zero Data"
+    },
+    "arXiv:2603.13032": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.13032",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2603.13032",
+        "SemanticScholar:742e4180e490ee4702d0a92d2443d694298383dd",
+        "arXiv:2603.13032"
+      ],
+      "reason": "Multimodal OCR targets document understanding/parsing with a compact specialized model; the abstract does not identify an LLM systems or serving technique beyond this standalone application.",
+      "first_checked_at": "2026-10-13T16:56:16+00:00",
+      "last_checked_at": "2026-10-13T16:56:16+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2510.18234-deepseek-ocr-contexts-optical-compression.md"
+      ],
+      "title": "Multimodal OCR: Parse Anything from Documents"
+    },
+    "DOI:10.1007/s44443-025-00302-0": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1007/s44443-025-00302-0",
+      "identity_tokens": [
+        "DOI:10.1007/s44443-025-00302-0",
+        "SemanticScholar:9430823c4286673a646dadb6551f2c6519eec1bb"
+      ],
+      "reason": "The Springer survey concerns mmWave-radar/camera object detection for autonomous driving, not LLM inference or serving.",
+      "first_checked_at": "2026-10-13T16:56:17+00:00",
+      "last_checked_at": "2026-10-13T16:56:17+00:00",
+      "linked_from": [
+        "papers/inference/08-edge-on-device-llm-systems/2023-2309.04255-llmcad-fast-and-scalable-on-device-large-language-model-inference.md"
+      ],
+      "title": "Advances in object detection for autonomous driving using mmwave radar and camera: A comprehensive survey"
+    },
+    "arXiv:2606.17030": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.17030",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2606.17030",
+        "SemanticScholar:50a37c68c2c78cdd926048155e0ed73f0b1c285a",
+        "arXiv:2606.17030"
+      ],
+      "reason": "Qwen-RobotWorld studies embodied world modeling and video generation for robotics; the abstract describes capability/modeling rather than inference efficiency.",
+      "first_checked_at": "2026-10-13T16:56:17+00:00",
+      "last_checked_at": "2026-10-13T16:56:17+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1909.08053-megatron-lm-training-multi-billion-parameter-language-models-using-model.md"
+      ],
+      "title": "Qwen-RobotWorld Technical Report: Unifying Embodied World Modeling through Language-Conditioned Video Generation"
+    },
+    "arXiv:2606.20023": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.20023",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2606.20023",
+        "SemanticScholar:40506814219bb63005d1a14942fb60f4f68eb74e",
+        "arXiv:2606.20023"
+      ],
+      "reason": "The paper analyzes over-privileged tool selection and security in LLM agents; it does not propose a model-execution efficiency method.",
+      "first_checked_at": "2026-10-13T16:56:17+00:00",
+      "last_checked_at": "2026-10-13T16:56:17+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1909.08053-megatron-lm-training-multi-billion-parameter-language-models-using-model.md"
+      ],
+      "title": "When Lower Privileges Suffice: Investigating Over-Privileged Tool Selection in LLM Agents"
+    },
+    "arXiv:2605.27286": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.27286",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2605.27286",
+        "SemanticScholar:c5e05bbee5088edf0106788885102867e7054894",
+        "arXiv:2605.27286"
+      ],
+      "reason": "Falcon-X is a time-series forecasting foundation model and focuses on heterogeneous time-series modeling, outside LLM inference systems.",
+      "first_checked_at": "2026-10-13T16:56:17+00:00",
+      "last_checked_at": "2026-10-13T16:56:17+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1909.08053-megatron-lm-training-multi-billion-parameter-language-models-using-model.md"
+      ],
+      "title": "Falcon-X: A Time Series Foundation Model for Heterogeneous Multivariate Modeling"
+    },
+    "arXiv:2601.10679": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.10679",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2601.10679",
+        "SemanticScholar:cc6b39ccf1607371d317ed391dcf24da4af9d313",
+        "arXiv:2601.10679"
+      ],
+      "reason": "The paper mechanistically analyzes hierarchical reasoning-model behavior and accuracy; it does not contribute an inference efficiency technique.",
+      "first_checked_at": "2026-10-13T16:56:17+00:00",
+      "last_checked_at": "2026-10-13T16:56:17+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2512.24601-recursive-language-models.md"
+      ],
+      "title": "Are Your Reasoning Models Reasoning or Guessing? A Mechanistic Analysis of Hierarchical Reasoning Models"
+    },
+    "DOI:10.1016/j.engappai.2026.113947": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1016/j.engappai.2026.113947",
+      "identity_tokens": [
+        "DOI:10.1016/j.engappai.2026.113947",
+        "SemanticScholar:fdea0eb6babc30ea6d6fd3d360b01d1fc24a959d"
+      ],
+      "reason": "The verified publisher title is a survey of transformers for hyperspectral imaging, a separate vision modality/application with no indicated LLM inference-system contribution. The retrieved publisher page did not provide a complete abstract excerpt for screening.",
+      "first_checked_at": "2026-10-13T16:56:18+00:00",
+      "last_checked_at": "2026-10-13T16:56:18+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.07982-a-survey-of-techniques-for-optimizing-transformer-inference.md"
+      ],
+      "title": "Transformers meet hyperspectral imaging: A comprehensive study of models, challenges and open problems"
+    },
+    "arXiv:2602.13758": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.13758",
+      "identity_tokens": [
+        "DOI:10.1145/3770855.3817510",
+        "SemanticScholar:1b7cfb06097ab5b7220b348e576ab06b8b445a03",
+        "arXiv:2602.13758"
+      ],
+      "reason": "OmniScience introduces a scientific-image dataset and benchmark for image understanding; this is a capability/data resource rather than a model-execution efficiency contribution.",
+      "first_checked_at": "2026-10-13T16:56:18+00:00",
+      "last_checked_at": "2026-10-13T16:56:18+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2510.18234-deepseek-ocr-contexts-optical-compression.md"
+      ],
+      "title": "OmniScience: A Large-scale Multi-modal Dataset for Scientific Image Understanding"
+    },
+    "arXiv:2605.15188": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.15188",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2605.15188",
+        "SemanticScholar:02e0b07ce5d626e321530a04d1113ae9f0c64451",
+        "arXiv:2605.15188"
+      ],
+      "reason": "FutureSim is an evaluation benchmark for adaptive-agent behavior; its primary abstract describes replaying events and measuring adaptation, not reducing inference cost.",
+      "first_checked_at": "2026-10-13T16:56:18+00:00",
+      "last_checked_at": "2026-10-13T16:56:18+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2512.24601-recursive-language-models.md"
+      ],
+      "title": "FutureSim: Replaying World Events to Evaluate Adaptive Agents"
+    },
+    "arXiv:2604.13860": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.13860",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2604.13860",
+        "SemanticScholar:6c4a8b107c34c3ac2440f6d77f9c7a6f4c9dfe7c",
+        "arXiv:2604.13860"
+      ],
+      "reason": "The primary abstract studies how conversation history affects LLM responses to delusional beliefs, a safety/behavior evaluation rather than an efficiency technique.",
+      "first_checked_at": "2026-10-13T16:56:18+00:00",
+      "last_checked_at": "2026-10-13T16:56:18+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2512.24601-recursive-language-models.md"
+      ],
+      "title": "\"AI Psychosis\" in Context: How Conversation History Shapes LLM Responses to Delusional Beliefs"
     }
   }
 }

@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-720e1181ed982e50-border-005",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2605.09650",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2605.09650",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2605.09650",
+      "SemanticScholar:43f0ca4fac9843f222f63518d4b0b8386ea70832",
+      "arXiv:2605.09650"
+    ],
+    "reason": "Workspace optimization reports 31% fewer environment actions for an agent harness, but this measures task interaction steps rather than model tokens, latency, compute, memory, or serving throughput; keep borderline because the agent-system connection is indirect.",
+    "first_checked_at": "2026-10-13T16:56:08+00:00",
+    "last_checked_at": "2026-10-13T16:56:08+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2025-2512.24601-recursive-language-models.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Workspace Optimization: How to Train Your Agent"
+  },
+  "processed_at": "2026-10-13T16:56:09+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-720e1181ed98",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

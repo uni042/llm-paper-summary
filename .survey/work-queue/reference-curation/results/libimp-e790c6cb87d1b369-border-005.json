@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e790c6cb87d1b369-border-005",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2603.28376",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2603.28376",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2603.28376",
+      "SemanticScholar:4b7c1f9b7a50f504229958b877b80af58d1bc55f",
+      "arXiv:2603.28376"
+    ],
+    "reason": "Marco DeepResearch proposes verification-centric design for research agents and frames the system as efficient, but the abstract does not quantify or specify a direct reduction in inference tokens, latency, or compute. Its agent-system connection remains plausible but unclear.",
+    "first_checked_at": "2026-10-13T16:56:15+00:00",
+    "last_checked_at": "2026-10-13T16:56:15+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2019-1909.08053-megatron-lm-training-multi-billion-parameter-language-models-using-model.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Marco DeepResearch: Unlocking Efficient Deep Research Agents via Verification-Centric Design"
+  },
+  "processed_at": "2026-10-13T16:56:15+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e790c6cb87d1",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

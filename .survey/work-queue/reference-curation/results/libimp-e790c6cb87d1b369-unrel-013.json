@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e790c6cb87d1b369-unrel-013",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1016/j.engappai.2026.113947",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1016/j.engappai.2026.113947",
+    "identity_tokens": [
+      "DOI:10.1016/j.engappai.2026.113947",
+      "SemanticScholar:fdea0eb6babc30ea6d6fd3d360b01d1fc24a959d"
+    ],
+    "reason": "The verified publisher title is a survey of transformers for hyperspectral imaging, a separate vision modality/application with no indicated LLM inference-system contribution. The retrieved publisher page did not provide a complete abstract excerpt for screening.",
+    "first_checked_at": "2026-10-13T16:56:18+00:00",
+    "last_checked_at": "2026-10-13T16:56:18+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2307.07982-a-survey-of-techniques-for-optimizing-transformer-inference.md"
+    ],
+    "title": "Transformers meet hyperspectral imaging: A comprehensive study of models, challenges and open problems"
+  },
+  "processed_at": "2026-10-13T16:56:18+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e790c6cb87d1",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-720e1181ed982e50-unrel-006",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1371/journal.pone.0346343",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1371/journal.pone.0346343",
+    "identity_tokens": [
+      "DOI:10.1371/journal.pone.0346343",
+      "SemanticScholar:38e8b413e9c9be9e59c174b236a72172fa240b94"
+    ],
+    "reason": "The PLOS title identifies sonar-image detection of submarine pipelines/cables, a distinct non-LLM application. Only the title was needed to establish the subject mismatch; PLOS full text discusses lightweight YOLO for this sonar task, not LLM inference.",
+    "first_checked_at": "2026-10-13T16:56:10+00:00",
+    "last_checked_at": "2026-10-13T16:56:10+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2307.07982-a-survey-of-techniques-for-optimizing-transformer-inference.md"
+    ],
+    "title": "Detection of submarine pipeline and cable targets based on depth feature of high resolution sonar image"
+  },
+  "processed_at": "2026-10-13T16:56:10+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-720e1181ed98",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
