@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-5acdcf23cf502e0f-border-005",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1109/caibda70336.2026.11621567",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1109/caibda70336.2026.11621567",
+    "identity_tokens": [
+      "DOI:10.1109/caibda70336.2026.11621567"
+    ],
+    "reason": "The DOI publisher abstract could not be retrieved. Agent memory management is a plausible systems adjacency, but the supplied title alone does not establish an inference-efficiency contribution.",
+    "first_checked_at": "2026-10-13T07:25:20+00:00",
+    "last_checked_at": "2026-10-13T07:25:20+00:00",
+    "linked_from": [
+      "papers/inference/14-agentic-inference-serving-runtime/2025-2501.13956-zep-a-temporal-knowledge-graph-architecture-for-agent-memory.md",
+      "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "MemWeave: An Adaptive Framework for Long-Term Agent Knowledge Management via Unified Graph and Vector Memory"
+  },
+  "processed_at": "2026-10-13T07:25:20+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-5acdcf23cf50",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

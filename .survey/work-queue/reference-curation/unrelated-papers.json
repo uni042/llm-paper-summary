@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-13T06:45:22+00:00",
-  "record_count": 11717,
+  "updated_at": "2026-10-13T07:25:22+00:00",
+  "record_count": 11722,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -167781,6 +167781,80 @@
         "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md"
       ],
       "title": "SAMoRA: Semantic-Aware Mixture of LoRA Experts for Task-Adaptive Learning"
+    },
+    "arXiv:2606.06054": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.06054",
+      "identity_tokens": [
+        "arXiv:2606.06054"
+      ],
+      "reason": "The abstract focuses on trustworthy personal-agent memory admission and security threats; it does not claim inference, serving, or memory-runtime efficiency.",
+      "first_checked_at": "2026-10-13T07:25:21+00:00",
+      "last_checked_at": "2026-10-13T07:25:21+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2501.13956-zep-a-temporal-knowledge-graph-architecture-for-agent-memory.md",
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2502.12110-a-mem-agentic-memory-for-llm-agents.md",
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+      ],
+      "title": "Beyond Similarity: Trustworthy Memory Search for Personal AI Agents"
+    },
+    "arXiv:2606.05152": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.05152",
+      "identity_tokens": [
+        "arXiv:2606.05152"
+      ],
+      "reason": "The abstract develops a DAgger-style reinforcement-learning training objective and policy-improvement guarantees, without an inference or serving systems contribution.",
+      "first_checked_at": "2026-10-13T07:25:21+00:00",
+      "last_checked_at": "2026-10-13T07:25:21+00:00",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2025-2504.15895-dynamic-early-exit-in-reasoning-models.md",
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md",
+        "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md"
+      ],
+      "title": "Reinforcement Learning from Rich Feedback with Distributional DAgger"
+    },
+    "arXiv:2606.00564": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.00564",
+      "identity_tokens": [
+        "arXiv:2606.00564"
+      ],
+      "reason": "The abstract concerns training-time on-policy distillation and visual grounding quality for VLM reasoning, not inference or serving efficiency.",
+      "first_checked_at": "2026-10-13T07:25:22+00:00",
+      "last_checked_at": "2026-10-13T07:25:22+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2024-2407.14679-compact-language-models-via-pruning-and-knowledge-distillation.md"
+      ],
+      "title": "Decomposed On-Policy Distillation for Vision-Language Reasoning: Steering Gradients for Visual Grounding"
+    },
+    "arXiv:2605.22765": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.22765",
+      "identity_tokens": [
+        "arXiv:2605.22765"
+      ],
+      "reason": "The abstract gives convergence analysis and denoiser reformulation for diffusion models; it does not present a systems or runtime-efficiency method.",
+      "first_checked_at": "2026-10-13T07:25:22+00:00",
+      "last_checked_at": "2026-10-13T07:25:22+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2026-2406.03736-your-absorbing-discrete-diffusion-secretly-models-the-conditional-distri.md"
+      ],
+      "title": "Uniform Diffusion Models Revisited: Leave-One-Out Denoiser and Absorbing State Reformulation"
+    },
+    "arXiv:2604.11581": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.11581",
+      "identity_tokens": [
+        "arXiv:2604.11581"
+      ],
+      "reason": "The abstract studies statistical measurement error in LLM annotation and benchmark pipelines; evaluation rigor is its contribution, not systems performance or efficiency.",
+      "first_checked_at": "2026-10-13T07:25:22+00:00",
+      "last_checked_at": "2026-10-13T07:25:22+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2506.09501-understanding-and-mitigating-numerical-sources-of-nondeterminism-in-llm-inference.md"
+      ],
+      "title": "Hidden Measurement Error in LLM Pipelines Distorts Annotation, Evaluation, and Benchmarking"
     }
   }
 }
