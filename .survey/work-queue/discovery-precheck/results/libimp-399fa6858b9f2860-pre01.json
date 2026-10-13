@@ -1,0 +1,1425 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-399fa6858b9f2860-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-399fa6858b9f",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "DOI:10.1016/j.neunet.2025.108332",
+    "DOI:10.1016/j.neunet.2025.108459",
+    "DOI:10.1145/3772052.3772207",
+    "arXiv:2407.10032",
+    "arXiv:2511.02017",
+    "arXiv:2511.11641",
+    "arXiv:2511.12201",
+    "arXiv:2511.17693",
+    "arXiv:2511.17809",
+    "arXiv:2512.11280",
+    "arXiv:2512.14082",
+    "arXiv:2512.19125",
+    "arXiv:2601.20357",
+    "arXiv:2604.05942",
+    "arXiv:2604.13634"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 15,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "cbea893212a98a2874194952e9335cd1e3752e03",
+  "raw_search_result_count": 15,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 15,
+  "provider_progress": {
+    "requested_count": 15,
+    "status_counts": {
+      "allowed": 15,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-13T21:02:14.522433+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "DOI:10.1016/j.neunet.2025.108332",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.1016/j.neunet.2025.108459",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.1145/3772052.3772207",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2407.10032",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2511.02017",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2511.11641",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2511.12201",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2511.17693",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2511.17809",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2512.11280",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2512.14082",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2512.19125",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2601.20357",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2604.05942",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2604.13634",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "AdaSD: Adaptive Speculative Decoding for Efficient Language Model Inference",
+      "source_url": "https://arxiv.org/abs/2512.11280",
+      "year": 2025,
+      "published": "2025-12-12",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLMs) have achieved remarkable performance across a wide range of tasks, but their increasing parameter sizes significantly slow down inference. Speculative decoding mitigates this issue by leveraging a smaller draft model to predict candidate tokens, which are then verified by a larger target model. However, existing approaches often require additional training, extensive hyperparameter tuning, or prior analysis of models and tasks before deployment. In this paper, we propose Adaptive Speculative Decoding (AdaSD), a hyperparameter-free decoding scheme that dynamically adjusts generation length and acceptance criteria during inference. AdaSD introduces two adaptive components: one to determine when to stop candidate token generation and the other to decide token acceptance, updated in real time based on token entropy and Jensen-Shannon distance. This approach eliminates the need for pre-analysis or fine-tuning and is compatible with off-the-shelf models. Experiments on benchmark datasets demonstrate that AdaSD achieves up to 1.46x speedup over vanilla speculative decoding while limiting accuracy degradation to under 1.8%, making it a practical solution for efficient and adaptive LLM inference.",
+      "identifiers": [
+        "SemanticScholar:26f4a042ec714cf609559d274c56a7092055b56b"
+      ],
+      "semantic_scholar_id": "26f4a042ec714cf609559d274c56a7092055b56b",
+      "canonical_id": "arXiv:2512.11280",
+      "arxiv_id": "2512.11280",
+      "doi": "10.48550/arXiv.2512.11280",
+      "authors": [
+        "Kuan Lu",
+        "Ding-Yong Hong",
+        "Pang-Feng Liu",
+        "Jan-Jan Wu"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 305,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "OOPS: Outlier-aware and quadratic programming based structured pruning for large language models",
+      "source_url": "https://doi.org/10.1016/j.neunet.2025.108332",
+      "year": 2025,
+      "published": "2025-11-01",
+      "venue": "Neural Networks",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The large model size and resource consumption of Large Language Models (LLMs) limit their deployment and application in many scenarios. Structured pruning offers a solution to this challenge. Based on the need for retraining after pruning, structured pruning methods for LLMs fall into two categories: retraining-free and retraining-based. Retraining-free methods often result in significant performance degradation, while retraining-based methods may require substantial computational resources. To address these limitations, we propose a structured pruning framework named OOPS (Outlier-aware and quadratic prOgramming based Structured Pruning). It comprises three key components: outlier-aware pruning unit selection, quadratic programming based reconstruction, and layer-wise distillation. By employing the first two components, OOPS prunes models without the requirement of retraining, outperforming existing retraining-free methods. When further incorporating layer-wise distillation to train the pruned layers individually, OOPS surpasses other retraining-based methods with lower computational costs. We evaluate the effectiveness of OOPS on 11 models from 4 LLM families across multiple tasks, demonstrating its superior performance compared to state-of-the-art methods in both retraining-free and retraining-based settings.",
+      "identifiers": [
+        "SemanticScholar:f958a460552ec334c2410c81af5d6b5aa03752d1"
+      ],
+      "semantic_scholar_id": "f958a460552ec334c2410c81af5d6b5aa03752d1",
+      "doi": "10.1016/j.neunet.2025.108332",
+      "canonical_id": "DOI:10.1016/j.neunet.2025.108332",
+      "authors": [
+        "Jiateng Wei",
+        "Siqi Li",
+        "Jingyang Xiang",
+        "Jiandang Yang",
+        "Jun Chen",
+        "Xiaobin Wei",
+        "Yun-Liang Jiang",
+        "Yong Liu"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 346,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "TapOut: A Bandit-Based Approach to Dynamic Speculative Decoding",
+      "source_url": "https://arxiv.org/abs/2511.02017",
+      "year": 2025,
+      "published": "2025-11-03",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Speculative decoding accelerates LLMs by using a lightweight draft model to generate tokens autoregressively before verifying them in parallel with a larger target model. However, determining the optimal number of tokens to draft remains a key challenge limiting the approach's effectiveness. Dynamic speculative decoding aims to intelligently decide how many tokens to draft to achieve maximum speedups. Existing methods often rely on hand-tuned, sensitive thresholds (e.g., token entropy), which are costly to set and generalize poorly across models and domains. We propose TapOut, an online, training-free, plug-and-play algorithm for dynamic speculation policy selection using multi-armed bandits. Our approach employs a meta-algorithm that selects among multiple parameter-free dynamic speculation strategies based on past reward and exploration. We conduct extensive experiments across diverse model pairs and datasets, showing that TapOut achieves competitive or superior speedups compared to well-established dynamic speculation baselines without any hyperparameter tuning.",
+      "identifiers": [
+        "SemanticScholar:88e67dcb93fb4983ad3b6ccebfde1934741d23be"
+      ],
+      "semantic_scholar_id": "88e67dcb93fb4983ad3b6ccebfde1934741d23be",
+      "canonical_id": "arXiv:2511.02017",
+      "arxiv_id": "2511.02017",
+      "doi": "10.48550/arXiv.2511.02017",
+      "authors": [
+        "Aditya Sridhar",
+        "Nish Sinnadurai",
+        "Sean Lie",
+        "Vithursan Thangarasa"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 344,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "EcoSpa: Efficient Transformer Training with Coupled Sparsity",
+      "source_url": "https://arxiv.org/abs/2511.11641",
+      "year": 2025,
+      "published": "2025-11-09",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Transformers have become the backbone of modern AI, yet their high computational demands pose critical system challenges. While sparse training offers efficiency gains, existing methods fail to preserve critical structural relationships between weight matrices that interact multiplicatively in attention and feed-forward layers. This oversight leads to performance degradation at high sparsity levels. We introduce EcoSpa, an efficient structured sparse training method that jointly evaluates and sparsifies coupled weight matrix pairs, preserving their interaction patterns through aligned row/column removal. EcoSpa introduces a new granularity for calibrating structural component importance and performs coupled estimation and sparsification across both pre-training and fine-tuning scenarios. Evaluations demonstrate substantial improvements: EcoSpa enables efficient training of LLaMA-1B with 50\\% memory reduction and 21\\% faster training, achieves $2.2\\times$ model compression on GPT-2-Medium with $2.4$ lower perplexity, and delivers $1.6\\times$ inference speedup. The approach uses standard PyTorch operations, requiring no custom hardware or kernels, making efficient transformer training accessible on commodity hardware.",
+      "identifiers": [
+        "SemanticScholar:b7605a0e6491aa938605304d42315c57945bbebc"
+      ],
+      "semantic_scholar_id": "b7605a0e6491aa938605304d42315c57945bbebc",
+      "canonical_id": "arXiv:2511.11641",
+      "arxiv_id": "2511.11641",
+      "doi": "10.48550/arXiv.2511.11641",
+      "authors": [
+        "Jinqi Xiao",
+        "Cheng Luo",
+        "Ling-Yi Huang",
+        "Cheng Yang",
+        "Yang Sui",
+        "Huy Phan",
+        "Xiao Zang",
+        "Yi-Biao Ying",
+        "Zhe-Xiang Tang",
+        "Anima Anandkumar",
+        "Bo Yuan"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 338,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "OmniSparse: Training-Aware Fine-Grained Sparse Attention for Long-Video MLLMs",
+      "source_url": "https://arxiv.org/abs/2511.12201",
+      "year": 2025,
+      "published": "2025-11-15",
+      "venue": "AAAI Conference on Artificial Intelligence",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Existing sparse attention methods primarily target inference-time acceleration by selecting critical tokens under predefined sparsity patterns. However, they often fail to bridge the training–inference gap and lack the capacity for fine-grained token selection across multiple dimensions—such as queries, key-values (KV), and heads—leading to suboptimal performance and acceleration gains.\nIn this paper, we introduce OmniSparse, a training-aware fine-grained sparse attention of long-video MLLMs, which is applied in both training and inference with dynamic token budget allocation. Specifically, OmniSparse contains three adaptive and complementary mechanisms: (1) query selection as lazy-active classification, aiming to retain active queries that capture broader semantic similarity, while discarding most of lazy ones that focus on limited local context and exhibit high functional redundancy with their neighbors, (2) KV selection with head-level dynamic budget allocation, where a shared budget is determined based on the flattest head and applied uniformly across all heads to ensure attention recall after selection, and (3) KV cache slimming to alleviate head-level redundancy, which selectively fetches visual KV cache according to the head-level decoding query pattern.\nExperimental results demonstrate that OmniSparse can achieve comparable performance with full attention, achieving 2.7x speedup during prefill and 2.4x memory reduction for decoding.",
+      "identifiers": [
+        "SemanticScholar:5f2ccc915902fdef88518b4dbfc2f5eb33f3f70b"
+      ],
+      "semantic_scholar_id": "5f2ccc915902fdef88518b4dbfc2f5eb33f3f70b",
+      "canonical_id": "arXiv:2511.12201",
+      "arxiv_id": "2511.12201",
+      "doi": "10.48550/arXiv.2511.12201",
+      "authors": [
+        "Feng Chen",
+        "Ye-Fei He",
+        "Shao-Xuan He",
+        "Yuan-Yu He",
+        "Jing Liu",
+        "Le-Quan Lin",
+        "Akide Liu",
+        "Zhaoyang Li",
+        "Ji-Yuan Zhang",
+        "Zhenbang Sun",
+        "Bo-Han Zhuang",
+        "Qi Wu"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 332,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Multiplexed Heterogeneous LLM Serving via Stage-Aligned Parallelism",
+      "source_url": "https://doi.org/10.1145/3772052.3772207",
+      "year": 2025,
+      "published": "2025-11-19",
+      "venue": "ACM Symposium on Cloud Computing",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Modern LLM serving workloads are increasingly heterogeneous, involving a growing portfolio of models with vastly different compute and memory requirements. Existing approaches to model serving-ranging from static GPU partitioning to dynamic reconfiguration and GPU multiplexing—fail to effectively support heterogeneity. In this paper, we introduce ParaFlex, a new system for serving heterogeneous LLMs that breaks from the conventional assumption of a single shared pipeline structure across models. Rather than aligning the layout of model pipelines, ParaFlex aligns the execution times of their stages, allowing models of different sizes and parallelism configurations to coexist efficiently on shared GPUs. Our design achieves high GPU utilization, high throughput, and low tail latency under bursty, mixed-model workloads.",
+      "identifiers": [
+        "SemanticScholar:b7b8ac8b725a396a1ac4723c1c35e804a33f29ae"
+      ],
+      "semantic_scholar_id": "b7b8ac8b725a396a1ac4723c1c35e804a33f29ae",
+      "doi": "10.1145/3772052.3772207",
+      "canonical_id": "DOI:10.1145/3772052.3772207",
+      "authors": [
+        "Tao Luo",
+        "Kelvin K. W. Ng",
+        "Zhen Ping Khor",
+        "Sidharth Sankhe",
+        "Boon Thau Loo",
+        "Vincent Liu"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 328,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "DeepCoT: Deep Continual Transformers for Real-Time Inference on Data Streams",
+      "source_url": "https://arxiv.org/abs/2511.17693",
+      "year": 2025,
+      "published": "2025-11-21",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Transformer-based models have dramatically increased their size and parameter count to tackle increasingly complex tasks. At the same time, there is a growing demand for high performance, low-latency inference on devices with limited resources. In particular, stream data inference is typically performed over a sliding temporal window, leading to highly redundant computations. While the recent Continual Transformers started addressing this issue, they can be effectively used only in shallow models, which limits their scope and generalization power. In this paper, we propose the Deep Continual Transformer (DeepCoT), a redundancy-free encoder attention mechanism that can be applied over existing deep encoder architectures with minimal changes. In our experiments over audio, video, and text streams, we show that DeepCoTs retain comparative performance to their non-continual baselines while offering a linear computational cost for all Transformer layers, which reduces up to two orders of magnitude in the running time compared to previous efficient models.",
+      "identifiers": [
+        "SemanticScholar:2be46bf0fd3c2855245dbbecee3c5d0e51e3cebc"
+      ],
+      "semantic_scholar_id": "2be46bf0fd3c2855245dbbecee3c5d0e51e3cebc",
+      "canonical_id": "arXiv:2511.17693",
+      "arxiv_id": "2511.17693",
+      "doi": "10.48550/arXiv.2511.17693",
+      "authors": [
+        "Ginés Carreto Picón",
+        "Pengyuan Zhou",
+        "Qi Zhang",
+        "Alexandros Iosifidis"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 326,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Adaptive Layer-Wise Transformations for Post-Training Quantization of Large Language Models",
+      "source_url": "https://arxiv.org/abs/2511.17809",
+      "year": 2025,
+      "published": "2025-11-21",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models require significant computational resources for deployment, making quantization essential for practical applications. However, the main obstacle to effective quantization lies in systematic outliers in activations and weights, which cause substantial LLM performance degradation, especially at low-bit settings. While existing transformation-based methods like affine and rotation transformations successfully mitigate outliers, they apply the homogeneous transformation setting, i.e., using the same transformation types across all layers, ignoring the heterogeneous distribution characteristics within LLMs. In this paper, we propose an adaptive transformation selection framework that systematically determines optimal transformations on a per-layer basis. To this end, we first formulate transformation selection as a differentiable optimization problem to achieve the accurate transformation type for each layer. However, searching for optimal layer-wise transformations for every model is computationally expensive. To this end, we establish the connection between weight distribution kurtosis and accurate transformation type. Specifically, we propose an outlier-guided layer selection method using robust $z$-score normalization that achieves comparable performance to differentiable search with significantly reduced overhead. Comprehensive experiments on LLaMA family models demonstrate that our adaptive approach consistently outperforms the widely-used fixed transformation settings. For example, our method achieves an improvement of up to 4.58 perplexity points and a 2.11% gain in average six-task zero-shot accuracy under aggressive W3A3K2V2 quantization settings for the LLaMA-3-8B model compared to the current best existing method, FlatQuant, demonstrating the necessity of heterogeneous transformation selection for optimal LLM quantization.",
+      "identifiers": [
+        "SemanticScholar:6a9de63cd6758a6badd009d3fc3cf94016b435c9"
+      ],
+      "semantic_scholar_id": "6a9de63cd6758a6badd009d3fc3cf94016b435c9",
+      "canonical_id": "arXiv:2511.17809",
+      "arxiv_id": "2511.17809",
+      "doi": "10.48550/arXiv.2511.17809",
+      "authors": [
+        "Cuong Pham",
+        "H. A. Dung",
+        "Cuong C. Nguyen",
+        "Trung Le",
+        "Gustavo Carneiro",
+        "Jianfei Cai",
+        "Thanh-Toan Do"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 326,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "fastiSSM: Fast inference of state space model with online model approximation in frequency-domain",
+      "source_url": "https://doi.org/10.1016/j.neunet.2025.108459",
+      "year": 2025,
+      "published": "2025-12-01",
+      "venue": "Neural Networks",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "State space model (SSM) is a promising structure for long sequence time-series forecasting (LSTF) and natural language processing (NLP) applications. Although it has demonstrated superior sequence modeling efficiency and ability to compete with and even outperform the traditional models, the large size of SSM leads to slow speed and excessive memory consumption for inference, prohibiting it from being used in applications with speed/memory/energy constraints, especially on devices with limited resources. In this work, we propose fastiSSM, which accelerates the inference of general SSMs through online model approximation. To overcome the computational efficiency and approximation accuracy challenges in existing model approximation methods for SSMs, we introduce two new techniques in fastiSSM. First, fastiSSM has a parameter-sharing structure in its continuous-time models. With this structure, only one model approximation is needed to generate the compact recurrences for fast inference, compared with multiple ones performed in traditional methods. This brings high model approximation efficiency for fastiSSM. Second, we introduce the frequency-domain based model approximation technique in fastiSSM by exploiting the linear time-invariant (LTI) property of SSM. It results in robust compact models and better error control in model approximation, and finally leads to fast and accurate inference. Comprehensive experiments are performed by comparing fastiSSM with both original recurrence and compact recurrence based inference methods on multiple LSTF and audio generation tasks. Experimental results confirm that fastiSSM is able to approximate SSMs with online computing efficiency and accelerate the inference effectively with marginal error. It outperforms the comparison methods in both model approximation efficiency and inference performance, making it a better choice to accelerate the inference of large-scale SSMs. The fastiSSM code is available as open source on GitHub.",
+      "identifiers": [
+        "SemanticScholar:3fc2004dc0f26a1e5f078273deb56815be222eac"
+      ],
+      "semantic_scholar_id": "3fc2004dc0f26a1e5f078273deb56815be222eac",
+      "doi": "10.1016/j.neunet.2025.108459",
+      "canonical_id": "DOI:10.1016/j.neunet.2025.108459",
+      "authors": [
+        "Jiaxuan Chen",
+        "Yancheng Xie",
+        "Hai Wang"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 316,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "A Unified Sparse Attention via Multi-Granularity Compression",
+      "source_url": "https://arxiv.org/abs/2512.14082",
+      "year": 2025,
+      "published": "2025-12-16",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Efficient long-context understanding and reasoning are increasingly vital for large language model (LLM) applications such as multi-turn dialogue and program analysis. However, the core self-attention mechanism scales quadratically with sequence length, creating a fundamental computational bottleneck. Existing sparse attention methods alleviate this issue but face trade-offs: training-based methods are costly and cannot be directly applied as acceleration plugins for other models, while inference-time methods often compromise efficiency or cross-modal generality. To address these limitations, we present UniSparse, a unified mechanism that introduces the notion of composite tokens--compact representations that aggregate multi-granularity contextual information. Building on this abstraction, UniSparse dynamically constructs sparse attention through multi-granularity compression and block-level selection, enabling efficient and hardware-friendly execution on GPU. Across multiple modalities and tasks ranging from synthetic benchmarks to real-world applications, UniSparse consistently surpasses state-of-the-art sparse attention methods (e.g., MInference, XAttention, FlexPrefill) in both accuracy and efficiency, achieving $\\ge$ 99% of full-attention accuracy and up to 2.61$\\times$ faster attention computation than FlashAttention.",
+      "identifiers": [
+        "SemanticScholar:f2ec47b8b299e8c6e87d2ef22f06b26e7a6a260f"
+      ],
+      "semantic_scholar_id": "f2ec47b8b299e8c6e87d2ef22f06b26e7a6a260f",
+      "canonical_id": "arXiv:2512.14082",
+      "arxiv_id": "2512.14082",
+      "doi": "10.48550/arXiv.2512.14082",
+      "authors": [
+        "Si-Ran Liu",
+        "Zane Cao",
+        "Yong-Chao He"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 301,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "SAP: Syntactic Attention Pruning for Transformer-based Language Models",
+      "source_url": "https://arxiv.org/abs/2512.19125",
+      "year": 2025,
+      "published": "2025-12-22",
+      "venue": "ACM Symposium on Applied Computing",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "This paper introduces Syntactic Attention Pruning (SAP), a novel method for effectively pruning attention heads in Transformer models. Unlike conventional approaches that rely solely on mathematical analysis of model weights and activations, SAP incorporates both the syntactic structure and attention patterns of sentences to guide the pruning process. By leveraging these linguistic features, SAP achieves performance comparable to state-of-the-art methods. To further improve robustness, we propose Candidate Filtering (CF), a mechanism that prioritizes heads based on their contribution to model performance, mitigating degradation during pruning. Experimental results indicate that SAP effectively preserves critical heads of a high density of strong attention values, outperforming existing head pruning strategies in retrain-free settings.",
+      "identifiers": [
+        "SemanticScholar:600c2d75144a8398209c793fba70055d3d1d33fc"
+      ],
+      "semantic_scholar_id": "600c2d75144a8398209c793fba70055d3d1d33fc",
+      "canonical_id": "arXiv:2512.19125",
+      "arxiv_id": "2512.19125",
+      "doi": "10.1145/3748522.3779793",
+      "authors": [
+        "Tzu-Yun Lee",
+        "Ding-Yong Hong",
+        "Jan-Jan Wu"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 295,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "LeanQuant: Accurate and Scalable Large Language Model Quantization with Loss-error-aware Grid",
+      "source_url": "https://arxiv.org/abs/2407.10032",
+      "year": 2024,
+      "published": "2024-07-14",
+      "venue": "International Conference on Learning Representations",
+      "citation_count": 30,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLMs) have shown immense potential across various domains, but their high memory requirements and inference costs remain critical challenges for deployment. Post-training quantization (PTQ) has emerged as a promising technique to reduce memory requirements and decoding latency. However, recent accurate quantization methods often depend on specialized computations or custom data formats to achieve better model quality, which limits their compatibility with popular frameworks, as they require dedicated inference kernels tailored to specific hardware and software platforms, hindering wider adoption. Furthermore, many competitive methods have high resource requirements and computational overhead for quantizing models, making it challenging to scale them to hundreds of billions of parameters. In response to these challenges, we propose LeanQuant (Loss-Error-Aware Network Quantization), a novel quantization method that is accurate, versatile, and scalable. In the existing popular iterative loss-error-based quantization framework, we identify a critical limitation in prior methods: the min-max affine quantization grid fails to preserve model quality due to outliers in inverse Hessian diagonals. To overcome this fundamental issue, we propose learning loss-error-aware grids, instead of using non-adaptive min-max affine grids. Our approach not only produces quantized models that are more accurate but also generalizes to a wider range of quantization types, including affine and non-uniform quantization, enhancing compatibility with more frameworks. Extensive experiments with recent LLMs demonstrate that LeanQuant is highly accurate, comparing favorably against competitive baselines in model quality, and scalable, achieving very accurate quantization of Llama-3.1 405B, one of the largest open-source LLMs to date, using two Quadro RTX 8000-48GB GPUs in 21 hours.",
+      "identifiers": [
+        "SemanticScholar:fe9e92fa7806117de6995105aa38f92d052ffe99"
+      ],
+      "semantic_scholar_id": "fe9e92fa7806117de6995105aa38f92d052ffe99",
+      "canonical_id": "arXiv:2407.10032",
+      "arxiv_id": "2407.10032",
+      "authors": [
+        "Tian-Yi Zhang",
+        "Anshumali Shrivastava"
+      ],
+      "priority": 40,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 30,
+        "citation_count": 30,
+        "total": 40,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 821,
+        "matched_prestigious_venue": "International Conference on Learning Representations"
+      }
+    },
+    {
+      "title": "TABED: Test-Time Adaptive Ensemble Drafting for Robust Speculative Decoding in LVLMs",
+      "source_url": "https://arxiv.org/abs/2601.20357",
+      "year": 2026,
+      "published": "2026-01-28",
+      "venue": "Conference of the European Chapter of the Association for Computational Linguistics",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Speculative decoding (SD) has proven effective for accelerating LLM inference by quickly generating draft tokens and verifying them in parallel. However, SD remains largely unexplored for Large Vision-Language Models (LVLMs), which extend LLMs to process both image and text prompts. To address this gap, we benchmark existing inference methods with small draft models on 11 datasets across diverse input scenarios and observe scenario-specific performance fluctuations. Motivated by these findings, we propose Test-time Adaptive Batched Ensemble Drafting (TABED), which dynamically ensembles multiple drafts obtained via batch inference by leveraging deviations from past ground truths available in the SD setting. The dynamic ensemble method achieves an average robust walltime speedup of 1.74x over autoregressive decoding and a 5% improvement over single drafting methods, while remaining training-free and keeping ensembling costs negligible through parameter sharing. With its plug-and-play compatibility, we further enhance TABED by integrating advanced verification and alternative drafting methods. Code and custom-trained models are available at https://github.com/furiosa-ai/TABED.",
+      "identifiers": [
+        "SemanticScholar:c5c45c07e95811d663ed87058aeda0b28c1c7db9"
+      ],
+      "semantic_scholar_id": "c5c45c07e95811d663ed87058aeda0b28c1c7db9",
+      "canonical_id": "arXiv:2601.20357",
+      "arxiv_id": "2601.20357",
+      "doi": "10.48550/arXiv.2601.20357",
+      "authors": [
+        "Minjae Lee",
+        "Wonjun Kang",
+        "Byeongkeun Ahn",
+        "Christian Classen",
+        "Kevin Galim",
+        "Seunghyuk Oh",
+        "Minghao Yan",
+        "H. Koo",
+        "Kangwook Lee"
+      ],
+      "priority": 20,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 10,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 20,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 258,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      }
+    },
+    {
+      "title": "BOSCH: Black-Box Binary Optimization for Short-Context Attention-Head Selection in LLMs",
+      "source_url": "https://arxiv.org/abs/2604.05942",
+      "year": 2026,
+      "published": "2026-04-07",
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Post-training hybridization of large language models (LLMs) often replaces quadratic self-attention with sliding-window attention (SWA) to reduce KV cache usage and improve latency. Existing hybridization schemes are typically defined either at the layer level (e.g., interleaving) or at the head level via static rankings from local to global. Layer-level schemes ignore that local and global dependencies are routed through heads within the same layer, while static head-level rankings suffer from entanglement: a head's local/global behavior can change after hybridization. We propose BOSCH, Black-box Binary Optimization for Short-context Head Selection, a training-free method that formulates the problem as a Large Neighborhood Search and decomposes it into three subproblems: (i) layer-importance detection via small-budget black-box probes, (ii) adaptive per-layer SWA-ratio assignment based on these sensitivities, and (iii) grouped head-level optimization within ratio buckets. Extensive experiments on 4 LLMs ranging from 1.7B to 30B parameters, across 4 SWA ratios, show that BOSCH consistently outperforms layer-level heuristics and 6 strong static head-level methods, with larger gains at higher SWA ratios. Under continual pretraining, BOSCH recover original long-context performance faster and to a higher level. Analysis of the selected heads reveals substantial turnover for BOSCH across different SWA ratios, underscoring the importance of performing head-level selection for each target ratio rather than relying on fixed locality rankings.",
+      "identifiers": [
+        "SemanticScholar:b5480cb0f0d58cd9439415a25538361dd0f59084"
+      ],
+      "semantic_scholar_id": "b5480cb0f0d58cd9439415a25538361dd0f59084",
+      "canonical_id": "arXiv:2604.05942",
+      "arxiv_id": "2604.05942",
+      "doi": "10.48550/arXiv.2604.05942",
+      "authors": [
+        "Abbas Ghaddar",
+        "I. Kobyzev",
+        "Boxing Chen",
+        "Yu-Fei Cui"
+      ],
+      "priority": 20,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 10,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 20,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 189,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      }
+    },
+    {
+      "title": "Calibrated Speculative Decoding: Frequency-Guided Candidate Selection for Efficient Inference",
+      "source_url": "https://arxiv.org/abs/2604.13634",
+      "year": 2026,
+      "published": "2026-04-15",
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Speculative decoding accelerates autoregressive generation by letting draft tokens bypass full verification, but conventional frameworks suffer from frequent false rejections, particularly when draft models produce semantically correct but lexically divergent outputs. In this paper, we present Calibrated Speculative Decoding (CSD), a training-free framework that recovers valid tokens discarded by standard verification. Guided by the principle of\"Frequency-Guided Candidate Selection and Probability-Guarded Acceptance,\"CSD incorporates two lightweight modules: Online Correction Memory, which aggregates historical rejections to propose recurring divergence patterns as rescue candidates, and Semantic Consistency Gating, which verifies candidate admissibility using probability ratios instead of exact token matching. Our evaluation across diverse large language models demonstrates that CSD outperforms existing methods, achieving a peak throughput speedup of 2.33x. CSD preserves model accuracy across all tasks while further boosting performance on complex reasoning datasets. These results establish CSD as a highly effective, lightweight solution for practical LLM deployments.",
+      "identifiers": [
+        "SemanticScholar:b93e282fb0b0a2746cd9514fae8ed2ec2301340d"
+      ],
+      "semantic_scholar_id": "b93e282fb0b0a2746cd9514fae8ed2ec2301340d",
+      "canonical_id": "arXiv:2604.13634",
+      "arxiv_id": "2604.13634",
+      "doi": "10.48550/arXiv.2604.13634",
+      "authors": [
+        "Xuwen Zhou",
+        "Fang-Xin Liu",
+        "Chao Wang",
+        "Xiaoyun Zheng",
+        "Hao Zheng",
+        "Ming He",
+        "Li Jiang",
+        "Haibing Guan"
+      ],
+      "priority": 20,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 10,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 20,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 181,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2512.11280",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2512.11280",
+        "id:SemanticScholar:26f4a042ec714cf609559d274c56a7092055b56b",
+        "id:arXiv:2512.11280",
+        "title:adasd adaptive speculative decoding for efficient language model inference",
+        "url:https://arxiv.org/abs/2512.11280"
+      ],
+      "record": {
+        "title": "AdaSD: Adaptive Speculative Decoding for Efficient Language Model Inference",
+        "source_url": "https://arxiv.org/abs/2512.11280",
+        "year": 2025,
+        "published": "2025-12-12",
+        "venue": "arXiv.org",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large language models (LLMs) have achieved remarkable performance across a wide range of tasks, but their increasing parameter sizes significantly slow down inference. Speculative decoding mitigates this issue by leveraging a smaller draft model to predict candidate tokens, which are then verified by a larger target model. However, existing approaches often require additional training, extensive hyperparameter tuning, or prior analysis of models and tasks before deployment. In this paper, we propose Adaptive Speculative Decoding (AdaSD), a hyperparameter-free decoding scheme that dynamically adjusts generation length and acceptance criteria during inference. AdaSD introduces two adaptive components: one to determine when to stop candidate token generation and the other to decide token acceptance, updated in real time based on token entropy and Jensen-Shannon distance. This approach eliminates the need for pre-analysis or fine-tuning and is compatible with off-the-shelf models. Experiments on benchmark datasets demonstrate that AdaSD achieves up to 1.46x speedup over vanilla speculative decoding while limiting accuracy degradation to under 1.8%, making it a practical solution for efficient and adaptive LLM inference.",
+        "identifiers": [
+          "SemanticScholar:26f4a042ec714cf609559d274c56a7092055b56b"
+        ],
+        "semantic_scholar_id": "26f4a042ec714cf609559d274c56a7092055b56b",
+        "canonical_id": "arXiv:2512.11280",
+        "arxiv_id": "2512.11280",
+        "doi": "10.48550/arXiv.2512.11280",
+        "authors": [
+          "Kuan Lu",
+          "Ding-Yong Hong",
+          "Pang-Feng Liu",
+          "Jan-Jan Wu"
+        ],
+        "priority": 102,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 102,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 305,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1016/j.neunet.2025.108332",
+      "identity_tokens": [
+        "id:DOI:10.1016/j.neunet.2025.108332",
+        "id:SemanticScholar:f958a460552ec334c2410c81af5d6b5aa03752d1",
+        "title:oops outlieraware and quadratic programming based structured pruning for large language models",
+        "url:https://doi.org/10.1016/j.neunet.2025.108332"
+      ],
+      "record": {
+        "title": "OOPS: Outlier-aware and quadratic programming based structured pruning for large language models",
+        "source_url": "https://doi.org/10.1016/j.neunet.2025.108332",
+        "year": 2025,
+        "published": "2025-11-01",
+        "venue": "Neural Networks",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The large model size and resource consumption of Large Language Models (LLMs) limit their deployment and application in many scenarios. Structured pruning offers a solution to this challenge. Based on the need for retraining after pruning, structured pruning methods for LLMs fall into two categories: retraining-free and retraining-based. Retraining-free methods often result in significant performance degradation, while retraining-based methods may require substantial computational resources. To address these limitations, we propose a structured pruning framework named OOPS (Outlier-aware and quadratic prOgramming based Structured Pruning). It comprises three key components: outlier-aware pruning unit selection, quadratic programming based reconstruction, and layer-wise distillation. By employing the first two components, OOPS prunes models without the requirement of retraining, outperforming existing retraining-free methods. When further incorporating layer-wise distillation to train the pruned layers individually, OOPS surpasses other retraining-based methods with lower computational costs. We evaluate the effectiveness of OOPS on 11 models from 4 LLM families across multiple tasks, demonstrating its superior performance compared to state-of-the-art methods in both retraining-free and retraining-based settings.",
+        "identifiers": [
+          "SemanticScholar:f958a460552ec334c2410c81af5d6b5aa03752d1"
+        ],
+        "semantic_scholar_id": "f958a460552ec334c2410c81af5d6b5aa03752d1",
+        "doi": "10.1016/j.neunet.2025.108332",
+        "canonical_id": "DOI:10.1016/j.neunet.2025.108332",
+        "authors": [
+          "Jiateng Wei",
+          "Siqi Li",
+          "Jingyang Xiang",
+          "Jiandang Yang",
+          "Jun Chen",
+          "Xiaobin Wei",
+          "Yun-Liang Jiang",
+          "Yong Liu"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 346,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2511.02017",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2511.02017",
+        "id:SemanticScholar:88e67dcb93fb4983ad3b6ccebfde1934741d23be",
+        "id:arXiv:2511.02017",
+        "title:tapout a banditbased approach to dynamic speculative decoding",
+        "url:https://arxiv.org/abs/2511.02017"
+      ],
+      "record": {
+        "title": "TapOut: A Bandit-Based Approach to Dynamic Speculative Decoding",
+        "source_url": "https://arxiv.org/abs/2511.02017",
+        "year": 2025,
+        "published": "2025-11-03",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Speculative decoding accelerates LLMs by using a lightweight draft model to generate tokens autoregressively before verifying them in parallel with a larger target model. However, determining the optimal number of tokens to draft remains a key challenge limiting the approach's effectiveness. Dynamic speculative decoding aims to intelligently decide how many tokens to draft to achieve maximum speedups. Existing methods often rely on hand-tuned, sensitive thresholds (e.g., token entropy), which are costly to set and generalize poorly across models and domains. We propose TapOut, an online, training-free, plug-and-play algorithm for dynamic speculation policy selection using multi-armed bandits. Our approach employs a meta-algorithm that selects among multiple parameter-free dynamic speculation strategies based on past reward and exploration. We conduct extensive experiments across diverse model pairs and datasets, showing that TapOut achieves competitive or superior speedups compared to well-established dynamic speculation baselines without any hyperparameter tuning.",
+        "identifiers": [
+          "SemanticScholar:88e67dcb93fb4983ad3b6ccebfde1934741d23be"
+        ],
+        "semantic_scholar_id": "88e67dcb93fb4983ad3b6ccebfde1934741d23be",
+        "canonical_id": "arXiv:2511.02017",
+        "arxiv_id": "2511.02017",
+        "doi": "10.48550/arXiv.2511.02017",
+        "authors": [
+          "Aditya Sridhar",
+          "Nish Sinnadurai",
+          "Sean Lie",
+          "Vithursan Thangarasa"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 344,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2511.11641",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2511.11641",
+        "id:SemanticScholar:b7605a0e6491aa938605304d42315c57945bbebc",
+        "id:arXiv:2511.11641",
+        "title:ecospa efficient transformer training with coupled sparsity",
+        "url:https://arxiv.org/abs/2511.11641"
+      ],
+      "record": {
+        "title": "EcoSpa: Efficient Transformer Training with Coupled Sparsity",
+        "source_url": "https://arxiv.org/abs/2511.11641",
+        "year": 2025,
+        "published": "2025-11-09",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Transformers have become the backbone of modern AI, yet their high computational demands pose critical system challenges. While sparse training offers efficiency gains, existing methods fail to preserve critical structural relationships between weight matrices that interact multiplicatively in attention and feed-forward layers. This oversight leads to performance degradation at high sparsity levels. We introduce EcoSpa, an efficient structured sparse training method that jointly evaluates and sparsifies coupled weight matrix pairs, preserving their interaction patterns through aligned row/column removal. EcoSpa introduces a new granularity for calibrating structural component importance and performs coupled estimation and sparsification across both pre-training and fine-tuning scenarios. Evaluations demonstrate substantial improvements: EcoSpa enables efficient training of LLaMA-1B with 50\\% memory reduction and 21\\% faster training, achieves $2.2\\times$ model compression on GPT-2-Medium with $2.4$ lower perplexity, and delivers $1.6\\times$ inference speedup. The approach uses standard PyTorch operations, requiring no custom hardware or kernels, making efficient transformer training accessible on commodity hardware.",
+        "identifiers": [
+          "SemanticScholar:b7605a0e6491aa938605304d42315c57945bbebc"
+        ],
+        "semantic_scholar_id": "b7605a0e6491aa938605304d42315c57945bbebc",
+        "canonical_id": "arXiv:2511.11641",
+        "arxiv_id": "2511.11641",
+        "doi": "10.48550/arXiv.2511.11641",
+        "authors": [
+          "Jinqi Xiao",
+          "Cheng Luo",
+          "Ling-Yi Huang",
+          "Cheng Yang",
+          "Yang Sui",
+          "Huy Phan",
+          "Xiao Zang",
+          "Yi-Biao Ying",
+          "Zhe-Xiang Tang",
+          "Anima Anandkumar",
+          "Bo Yuan"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 338,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2511.12201",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2511.12201",
+        "id:SemanticScholar:5f2ccc915902fdef88518b4dbfc2f5eb33f3f70b",
+        "id:arXiv:2511.12201",
+        "title:omnisparse trainingaware finegrained sparse attention for longvideo mllms",
+        "url:https://arxiv.org/abs/2511.12201"
+      ],
+      "record": {
+        "title": "OmniSparse: Training-Aware Fine-Grained Sparse Attention for Long-Video MLLMs",
+        "source_url": "https://arxiv.org/abs/2511.12201",
+        "year": 2025,
+        "published": "2025-11-15",
+        "venue": "AAAI Conference on Artificial Intelligence",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Existing sparse attention methods primarily target inference-time acceleration by selecting critical tokens under predefined sparsity patterns. However, they often fail to bridge the training–inference gap and lack the capacity for fine-grained token selection across multiple dimensions—such as queries, key-values (KV), and heads—leading to suboptimal performance and acceleration gains.\nIn this paper, we introduce OmniSparse, a training-aware fine-grained sparse attention of long-video MLLMs, which is applied in both training and inference with dynamic token budget allocation. Specifically, OmniSparse contains three adaptive and complementary mechanisms: (1) query selection as lazy-active classification, aiming to retain active queries that capture broader semantic similarity, while discarding most of lazy ones that focus on limited local context and exhibit high functional redundancy with their neighbors, (2) KV selection with head-level dynamic budget allocation, where a shared budget is determined based on the flattest head and applied uniformly across all heads to ensure attention recall after selection, and (3) KV cache slimming to alleviate head-level redundancy, which selectively fetches visual KV cache according to the head-level decoding query pattern.\nExperimental results demonstrate that OmniSparse can achieve comparable performance with full attention, achieving 2.7x speedup during prefill and 2.4x memory reduction for decoding.",
+        "identifiers": [
+          "SemanticScholar:5f2ccc915902fdef88518b4dbfc2f5eb33f3f70b"
+        ],
+        "semantic_scholar_id": "5f2ccc915902fdef88518b4dbfc2f5eb33f3f70b",
+        "canonical_id": "arXiv:2511.12201",
+        "arxiv_id": "2511.12201",
+        "doi": "10.48550/arXiv.2511.12201",
+        "authors": [
+          "Feng Chen",
+          "Ye-Fei He",
+          "Shao-Xuan He",
+          "Yuan-Yu He",
+          "Jing Liu",
+          "Le-Quan Lin",
+          "Akide Liu",
+          "Zhaoyang Li",
+          "Ji-Yuan Zhang",
+          "Zhenbang Sun",
+          "Bo-Han Zhuang",
+          "Qi Wu"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 332,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1145/3772052.3772207",
+      "identity_tokens": [
+        "id:DOI:10.1145/3772052.3772207",
+        "id:SemanticScholar:b7b8ac8b725a396a1ac4723c1c35e804a33f29ae",
+        "title:multiplexed heterogeneous llm serving via stagealigned parallelism",
+        "url:https://doi.org/10.1145/3772052.3772207"
+      ],
+      "record": {
+        "title": "Multiplexed Heterogeneous LLM Serving via Stage-Aligned Parallelism",
+        "source_url": "https://doi.org/10.1145/3772052.3772207",
+        "year": 2025,
+        "published": "2025-11-19",
+        "venue": "ACM Symposium on Cloud Computing",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Modern LLM serving workloads are increasingly heterogeneous, involving a growing portfolio of models with vastly different compute and memory requirements. Existing approaches to model serving-ranging from static GPU partitioning to dynamic reconfiguration and GPU multiplexing—fail to effectively support heterogeneity. In this paper, we introduce ParaFlex, a new system for serving heterogeneous LLMs that breaks from the conventional assumption of a single shared pipeline structure across models. Rather than aligning the layout of model pipelines, ParaFlex aligns the execution times of their stages, allowing models of different sizes and parallelism configurations to coexist efficiently on shared GPUs. Our design achieves high GPU utilization, high throughput, and low tail latency under bursty, mixed-model workloads.",
+        "identifiers": [
+          "SemanticScholar:b7b8ac8b725a396a1ac4723c1c35e804a33f29ae"
+        ],
+        "semantic_scholar_id": "b7b8ac8b725a396a1ac4723c1c35e804a33f29ae",
+        "doi": "10.1145/3772052.3772207",
+        "canonical_id": "DOI:10.1145/3772052.3772207",
+        "authors": [
+          "Tao Luo",
+          "Kelvin K. W. Ng",
+          "Zhen Ping Khor",
+          "Sidharth Sankhe",
+          "Boon Thau Loo",
+          "Vincent Liu"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 328,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2511.17693",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2511.17693",
+        "id:SemanticScholar:2be46bf0fd3c2855245dbbecee3c5d0e51e3cebc",
+        "id:arXiv:2511.17693",
+        "title:deepcot deep continual transformers for realtime inference on data streams",
+        "url:https://arxiv.org/abs/2511.17693"
+      ],
+      "record": {
+        "title": "DeepCoT: Deep Continual Transformers for Real-Time Inference on Data Streams",
+        "source_url": "https://arxiv.org/abs/2511.17693",
+        "year": 2025,
+        "published": "2025-11-21",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Transformer-based models have dramatically increased their size and parameter count to tackle increasingly complex tasks. At the same time, there is a growing demand for high performance, low-latency inference on devices with limited resources. In particular, stream data inference is typically performed over a sliding temporal window, leading to highly redundant computations. While the recent Continual Transformers started addressing this issue, they can be effectively used only in shallow models, which limits their scope and generalization power. In this paper, we propose the Deep Continual Transformer (DeepCoT), a redundancy-free encoder attention mechanism that can be applied over existing deep encoder architectures with minimal changes. In our experiments over audio, video, and text streams, we show that DeepCoTs retain comparative performance to their non-continual baselines while offering a linear computational cost for all Transformer layers, which reduces up to two orders of magnitude in the running time compared to previous efficient models.",
+        "identifiers": [
+          "SemanticScholar:2be46bf0fd3c2855245dbbecee3c5d0e51e3cebc"
+        ],
+        "semantic_scholar_id": "2be46bf0fd3c2855245dbbecee3c5d0e51e3cebc",
+        "canonical_id": "arXiv:2511.17693",
+        "arxiv_id": "2511.17693",
+        "doi": "10.48550/arXiv.2511.17693",
+        "authors": [
+          "Ginés Carreto Picón",
+          "Pengyuan Zhou",
+          "Qi Zhang",
+          "Alexandros Iosifidis"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 326,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2511.17809",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2511.17809",
+        "id:SemanticScholar:6a9de63cd6758a6badd009d3fc3cf94016b435c9",
+        "id:arXiv:2511.17809",
+        "title:adaptive layerwise transformations for posttraining quantization of large language models",
+        "url:https://arxiv.org/abs/2511.17809"
+      ],
+      "record": {
+        "title": "Adaptive Layer-Wise Transformations for Post-Training Quantization of Large Language Models",
+        "source_url": "https://arxiv.org/abs/2511.17809",
+        "year": 2025,
+        "published": "2025-11-21",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large language models require significant computational resources for deployment, making quantization essential for practical applications. However, the main obstacle to effective quantization lies in systematic outliers in activations and weights, which cause substantial LLM performance degradation, especially at low-bit settings. While existing transformation-based methods like affine and rotation transformations successfully mitigate outliers, they apply the homogeneous transformation setting, i.e., using the same transformation types across all layers, ignoring the heterogeneous distribution characteristics within LLMs. In this paper, we propose an adaptive transformation selection framework that systematically determines optimal transformations on a per-layer basis. To this end, we first formulate transformation selection as a differentiable optimization problem to achieve the accurate transformation type for each layer. However, searching for optimal layer-wise transformations for every model is computationally expensive. To this end, we establish the connection between weight distribution kurtosis and accurate transformation type. Specifically, we propose an outlier-guided layer selection method using robust $z$-score normalization that achieves comparable performance to differentiable search with significantly reduced overhead. Comprehensive experiments on LLaMA family models demonstrate that our adaptive approach consistently outperforms the widely-used fixed transformation settings. For example, our method achieves an improvement of up to 4.58 perplexity points and a 2.11% gain in average six-task zero-shot accuracy under aggressive W3A3K2V2 quantization settings for the LLaMA-3-8B model compared to the current best existing method, FlatQuant, demonstrating the necessity of heterogeneous transformation selection for optimal LLM quantization.",
+        "identifiers": [
+          "SemanticScholar:6a9de63cd6758a6badd009d3fc3cf94016b435c9"
+        ],
+        "semantic_scholar_id": "6a9de63cd6758a6badd009d3fc3cf94016b435c9",
+        "canonical_id": "arXiv:2511.17809",
+        "arxiv_id": "2511.17809",
+        "doi": "10.48550/arXiv.2511.17809",
+        "authors": [
+          "Cuong Pham",
+          "H. A. Dung",
+          "Cuong C. Nguyen",
+          "Trung Le",
+          "Gustavo Carneiro",
+          "Jianfei Cai",
+          "Thanh-Toan Do"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 326,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1016/j.neunet.2025.108459",
+      "identity_tokens": [
+        "id:DOI:10.1016/j.neunet.2025.108459",
+        "id:SemanticScholar:3fc2004dc0f26a1e5f078273deb56815be222eac",
+        "title:fastissm fast inference of state space model with online model approximation in frequencydomain",
+        "url:https://doi.org/10.1016/j.neunet.2025.108459"
+      ],
+      "record": {
+        "title": "fastiSSM: Fast inference of state space model with online model approximation in frequency-domain",
+        "source_url": "https://doi.org/10.1016/j.neunet.2025.108459",
+        "year": 2025,
+        "published": "2025-12-01",
+        "venue": "Neural Networks",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "State space model (SSM) is a promising structure for long sequence time-series forecasting (LSTF) and natural language processing (NLP) applications. Although it has demonstrated superior sequence modeling efficiency and ability to compete with and even outperform the traditional models, the large size of SSM leads to slow speed and excessive memory consumption for inference, prohibiting it from being used in applications with speed/memory/energy constraints, especially on devices with limited resources. In this work, we propose fastiSSM, which accelerates the inference of general SSMs through online model approximation. To overcome the computational efficiency and approximation accuracy challenges in existing model approximation methods for SSMs, we introduce two new techniques in fastiSSM. First, fastiSSM has a parameter-sharing structure in its continuous-time models. With this structure, only one model approximation is needed to generate the compact recurrences for fast inference, compared with multiple ones performed in traditional methods. This brings high model approximation efficiency for fastiSSM. Second, we introduce the frequency-domain based model approximation technique in fastiSSM by exploiting the linear time-invariant (LTI) property of SSM. It results in robust compact models and better error control in model approximation, and finally leads to fast and accurate inference. Comprehensive experiments are performed by comparing fastiSSM with both original recurrence and compact recurrence based inference methods on multiple LSTF and audio generation tasks. Experimental results confirm that fastiSSM is able to approximate SSMs with online computing efficiency and accelerate the inference effectively with marginal error. It outperforms the comparison methods in both model approximation efficiency and inference performance, making it a better choice to accelerate the inference of large-scale SSMs. The fastiSSM code is available as open source on GitHub.",
+        "identifiers": [
+          "SemanticScholar:3fc2004dc0f26a1e5f078273deb56815be222eac"
+        ],
+        "semantic_scholar_id": "3fc2004dc0f26a1e5f078273deb56815be222eac",
+        "doi": "10.1016/j.neunet.2025.108459",
+        "canonical_id": "DOI:10.1016/j.neunet.2025.108459",
+        "authors": [
+          "Jiaxuan Chen",
+          "Yancheng Xie",
+          "Hai Wang"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 316,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2512.14082",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2512.14082",
+        "id:SemanticScholar:f2ec47b8b299e8c6e87d2ef22f06b26e7a6a260f",
+        "id:arXiv:2512.14082",
+        "title:a unified sparse attention via multigranularity compression",
+        "url:https://arxiv.org/abs/2512.14082"
+      ],
+      "record": {
+        "title": "A Unified Sparse Attention via Multi-Granularity Compression",
+        "source_url": "https://arxiv.org/abs/2512.14082",
+        "year": 2025,
+        "published": "2025-12-16",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Efficient long-context understanding and reasoning are increasingly vital for large language model (LLM) applications such as multi-turn dialogue and program analysis. However, the core self-attention mechanism scales quadratically with sequence length, creating a fundamental computational bottleneck. Existing sparse attention methods alleviate this issue but face trade-offs: training-based methods are costly and cannot be directly applied as acceleration plugins for other models, while inference-time methods often compromise efficiency or cross-modal generality. To address these limitations, we present UniSparse, a unified mechanism that introduces the notion of composite tokens--compact representations that aggregate multi-granularity contextual information. Building on this abstraction, UniSparse dynamically constructs sparse attention through multi-granularity compression and block-level selection, enabling efficient and hardware-friendly execution on GPU. Across multiple modalities and tasks ranging from synthetic benchmarks to real-world applications, UniSparse consistently surpasses state-of-the-art sparse attention methods (e.g., MInference, XAttention, FlexPrefill) in both accuracy and efficiency, achieving $\\ge$ 99% of full-attention accuracy and up to 2.61$\\times$ faster attention computation than FlashAttention.",
+        "identifiers": [
+          "SemanticScholar:f2ec47b8b299e8c6e87d2ef22f06b26e7a6a260f"
+        ],
+        "semantic_scholar_id": "f2ec47b8b299e8c6e87d2ef22f06b26e7a6a260f",
+        "canonical_id": "arXiv:2512.14082",
+        "arxiv_id": "2512.14082",
+        "doi": "10.48550/arXiv.2512.14082",
+        "authors": [
+          "Si-Ran Liu",
+          "Zane Cao",
+          "Yong-Chao He"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 301,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2512.19125",
+      "identity_tokens": [
+        "id:DOI:10.1145/3748522.3779793",
+        "id:SemanticScholar:600c2d75144a8398209c793fba70055d3d1d33fc",
+        "id:arXiv:2512.19125",
+        "title:sap syntactic attention pruning for transformerbased language models",
+        "url:https://arxiv.org/abs/2512.19125"
+      ],
+      "record": {
+        "title": "SAP: Syntactic Attention Pruning for Transformer-based Language Models",
+        "source_url": "https://arxiv.org/abs/2512.19125",
+        "year": 2025,
+        "published": "2025-12-22",
+        "venue": "ACM Symposium on Applied Computing",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "This paper introduces Syntactic Attention Pruning (SAP), a novel method for effectively pruning attention heads in Transformer models. Unlike conventional approaches that rely solely on mathematical analysis of model weights and activations, SAP incorporates both the syntactic structure and attention patterns of sentences to guide the pruning process. By leveraging these linguistic features, SAP achieves performance comparable to state-of-the-art methods. To further improve robustness, we propose Candidate Filtering (CF), a mechanism that prioritizes heads based on their contribution to model performance, mitigating degradation during pruning. Experimental results indicate that SAP effectively preserves critical heads of a high density of strong attention values, outperforming existing head pruning strategies in retrain-free settings.",
+        "identifiers": [
+          "SemanticScholar:600c2d75144a8398209c793fba70055d3d1d33fc"
+        ],
+        "semantic_scholar_id": "600c2d75144a8398209c793fba70055d3d1d33fc",
+        "canonical_id": "arXiv:2512.19125",
+        "arxiv_id": "2512.19125",
+        "doi": "10.1145/3748522.3779793",
+        "authors": [
+          "Tzu-Yun Lee",
+          "Ding-Yong Hong",
+          "Jan-Jan Wu"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 295,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2407.10032",
+      "identity_tokens": [
+        "id:SemanticScholar:fe9e92fa7806117de6995105aa38f92d052ffe99",
+        "id:arXiv:2407.10032",
+        "title:leanquant accurate and scalable large language model quantization with losserroraware grid",
+        "url:https://arxiv.org/abs/2407.10032"
+      ],
+      "record": {
+        "title": "LeanQuant: Accurate and Scalable Large Language Model Quantization with Loss-error-aware Grid",
+        "source_url": "https://arxiv.org/abs/2407.10032",
+        "year": 2024,
+        "published": "2024-07-14",
+        "venue": "International Conference on Learning Representations",
+        "citation_count": 30,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large language models (LLMs) have shown immense potential across various domains, but their high memory requirements and inference costs remain critical challenges for deployment. Post-training quantization (PTQ) has emerged as a promising technique to reduce memory requirements and decoding latency. However, recent accurate quantization methods often depend on specialized computations or custom data formats to achieve better model quality, which limits their compatibility with popular frameworks, as they require dedicated inference kernels tailored to specific hardware and software platforms, hindering wider adoption. Furthermore, many competitive methods have high resource requirements and computational overhead for quantizing models, making it challenging to scale them to hundreds of billions of parameters. In response to these challenges, we propose LeanQuant (Loss-Error-Aware Network Quantization), a novel quantization method that is accurate, versatile, and scalable. In the existing popular iterative loss-error-based quantization framework, we identify a critical limitation in prior methods: the min-max affine quantization grid fails to preserve model quality due to outliers in inverse Hessian diagonals. To overcome this fundamental issue, we propose learning loss-error-aware grids, instead of using non-adaptive min-max affine grids. Our approach not only produces quantized models that are more accurate but also generalizes to a wider range of quantization types, including affine and non-uniform quantization, enhancing compatibility with more frameworks. Extensive experiments with recent LLMs demonstrate that LeanQuant is highly accurate, comparing favorably against competitive baselines in model quality, and scalable, achieving very accurate quantization of Llama-3.1 405B, one of the largest open-source LLMs to date, using two Quadro RTX 8000-48GB GPUs in 21 hours.",
+        "identifiers": [
+          "SemanticScholar:fe9e92fa7806117de6995105aa38f92d052ffe99"
+        ],
+        "semantic_scholar_id": "fe9e92fa7806117de6995105aa38f92d052ffe99",
+        "canonical_id": "arXiv:2407.10032",
+        "arxiv_id": "2407.10032",
+        "authors": [
+          "Tian-Yi Zhang",
+          "Anshumali Shrivastava"
+        ],
+        "priority": 40,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 30,
+          "citation_count": 30,
+          "total": 40,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 821,
+          "matched_prestigious_venue": "International Conference on Learning Representations"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2601.20357",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2601.20357",
+        "id:SemanticScholar:c5c45c07e95811d663ed87058aeda0b28c1c7db9",
+        "id:arXiv:2601.20357",
+        "title:tabed testtime adaptive ensemble drafting for robust speculative decoding in lvlms",
+        "url:https://arxiv.org/abs/2601.20357"
+      ],
+      "record": {
+        "title": "TABED: Test-Time Adaptive Ensemble Drafting for Robust Speculative Decoding in LVLMs",
+        "source_url": "https://arxiv.org/abs/2601.20357",
+        "year": 2026,
+        "published": "2026-01-28",
+        "venue": "Conference of the European Chapter of the Association for Computational Linguistics",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Speculative decoding (SD) has proven effective for accelerating LLM inference by quickly generating draft tokens and verifying them in parallel. However, SD remains largely unexplored for Large Vision-Language Models (LVLMs), which extend LLMs to process both image and text prompts. To address this gap, we benchmark existing inference methods with small draft models on 11 datasets across diverse input scenarios and observe scenario-specific performance fluctuations. Motivated by these findings, we propose Test-time Adaptive Batched Ensemble Drafting (TABED), which dynamically ensembles multiple drafts obtained via batch inference by leveraging deviations from past ground truths available in the SD setting. The dynamic ensemble method achieves an average robust walltime speedup of 1.74x over autoregressive decoding and a 5% improvement over single drafting methods, while remaining training-free and keeping ensembling costs negligible through parameter sharing. With its plug-and-play compatibility, we further enhance TABED by integrating advanced verification and alternative drafting methods. Code and custom-trained models are available at https://github.com/furiosa-ai/TABED.",
+        "identifiers": [
+          "SemanticScholar:c5c45c07e95811d663ed87058aeda0b28c1c7db9"
+        ],
+        "semantic_scholar_id": "c5c45c07e95811d663ed87058aeda0b28c1c7db9",
+        "canonical_id": "arXiv:2601.20357",
+        "arxiv_id": "2601.20357",
+        "doi": "10.48550/arXiv.2601.20357",
+        "authors": [
+          "Minjae Lee",
+          "Wonjun Kang",
+          "Byeongkeun Ahn",
+          "Christian Classen",
+          "Kevin Galim",
+          "Seunghyuk Oh",
+          "Minghao Yan",
+          "H. Koo",
+          "Kangwook Lee"
+        ],
+        "priority": 20,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 10,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 20,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 258,
+          "matched_prestigious_venue": "Association for Computational Linguistics"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2604.05942",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2604.05942",
+        "id:SemanticScholar:b5480cb0f0d58cd9439415a25538361dd0f59084",
+        "id:arXiv:2604.05942",
+        "title:bosch blackbox binary optimization for shortcontext attentionhead selection in llms",
+        "url:https://arxiv.org/abs/2604.05942"
+      ],
+      "record": {
+        "title": "BOSCH: Black-Box Binary Optimization for Short-Context Attention-Head Selection in LLMs",
+        "source_url": "https://arxiv.org/abs/2604.05942",
+        "year": 2026,
+        "published": "2026-04-07",
+        "venue": "Annual Meeting of the Association for Computational Linguistics",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Post-training hybridization of large language models (LLMs) often replaces quadratic self-attention with sliding-window attention (SWA) to reduce KV cache usage and improve latency. Existing hybridization schemes are typically defined either at the layer level (e.g., interleaving) or at the head level via static rankings from local to global. Layer-level schemes ignore that local and global dependencies are routed through heads within the same layer, while static head-level rankings suffer from entanglement: a head's local/global behavior can change after hybridization. We propose BOSCH, Black-box Binary Optimization for Short-context Head Selection, a training-free method that formulates the problem as a Large Neighborhood Search and decomposes it into three subproblems: (i) layer-importance detection via small-budget black-box probes, (ii) adaptive per-layer SWA-ratio assignment based on these sensitivities, and (iii) grouped head-level optimization within ratio buckets. Extensive experiments on 4 LLMs ranging from 1.7B to 30B parameters, across 4 SWA ratios, show that BOSCH consistently outperforms layer-level heuristics and 6 strong static head-level methods, with larger gains at higher SWA ratios. Under continual pretraining, BOSCH recover original long-context performance faster and to a higher level. Analysis of the selected heads reveals substantial turnover for BOSCH across different SWA ratios, underscoring the importance of performing head-level selection for each target ratio rather than relying on fixed locality rankings.",
+        "identifiers": [
+          "SemanticScholar:b5480cb0f0d58cd9439415a25538361dd0f59084"
+        ],
+        "semantic_scholar_id": "b5480cb0f0d58cd9439415a25538361dd0f59084",
+        "canonical_id": "arXiv:2604.05942",
+        "arxiv_id": "2604.05942",
+        "doi": "10.48550/arXiv.2604.05942",
+        "authors": [
+          "Abbas Ghaddar",
+          "I. Kobyzev",
+          "Boxing Chen",
+          "Yu-Fei Cui"
+        ],
+        "priority": 20,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 10,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 20,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 189,
+          "matched_prestigious_venue": "Association for Computational Linguistics"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2604.13634",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2604.13634",
+        "id:SemanticScholar:b93e282fb0b0a2746cd9514fae8ed2ec2301340d",
+        "id:arXiv:2604.13634",
+        "title:calibrated speculative decoding frequencyguided candidate selection for efficient inference",
+        "url:https://arxiv.org/abs/2604.13634"
+      ],
+      "record": {
+        "title": "Calibrated Speculative Decoding: Frequency-Guided Candidate Selection for Efficient Inference",
+        "source_url": "https://arxiv.org/abs/2604.13634",
+        "year": 2026,
+        "published": "2026-04-15",
+        "venue": "Annual Meeting of the Association for Computational Linguistics",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Speculative decoding accelerates autoregressive generation by letting draft tokens bypass full verification, but conventional frameworks suffer from frequent false rejections, particularly when draft models produce semantically correct but lexically divergent outputs. In this paper, we present Calibrated Speculative Decoding (CSD), a training-free framework that recovers valid tokens discarded by standard verification. Guided by the principle of\"Frequency-Guided Candidate Selection and Probability-Guarded Acceptance,\"CSD incorporates two lightweight modules: Online Correction Memory, which aggregates historical rejections to propose recurring divergence patterns as rescue candidates, and Semantic Consistency Gating, which verifies candidate admissibility using probability ratios instead of exact token matching. Our evaluation across diverse large language models demonstrates that CSD outperforms existing methods, achieving a peak throughput speedup of 2.33x. CSD preserves model accuracy across all tasks while further boosting performance on complex reasoning datasets. These results establish CSD as a highly effective, lightweight solution for practical LLM deployments.",
+        "identifiers": [
+          "SemanticScholar:b93e282fb0b0a2746cd9514fae8ed2ec2301340d"
+        ],
+        "semantic_scholar_id": "b93e282fb0b0a2746cd9514fae8ed2ec2301340d",
+        "canonical_id": "arXiv:2604.13634",
+        "arxiv_id": "2604.13634",
+        "doi": "10.48550/arXiv.2604.13634",
+        "authors": [
+          "Xuwen Zhou",
+          "Fang-Xin Liu",
+          "Chao Wang",
+          "Xiaoyun Zheng",
+          "Hao Zheng",
+          "Ming He",
+          "Li Jiang",
+          "Haibing Guan"
+        ],
+        "priority": 20,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 10,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 20,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 181,
+          "matched_prestigious_venue": "Association for Computational Linguistics"
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:7511145cf53894e328abdff79e2aee55853b5d86e13fa64f844f41606d3d9a29",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

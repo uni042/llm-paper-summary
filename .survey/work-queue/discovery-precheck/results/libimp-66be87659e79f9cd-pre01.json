@@ -1,0 +1,1705 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-66be87659e79f9cd-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-66be87659e79",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "DOI:10.1109/tc.2025.3628193",
+    "DOI:10.1109/tce.2025.3642866",
+    "arXiv:2512.14244",
+    "arXiv:2512.23367",
+    "arXiv:2601.00847",
+    "arXiv:2601.02888",
+    "arXiv:2601.11471",
+    "arXiv:2601.18383",
+    "arXiv:2601.21622",
+    "arXiv:2601.22488",
+    "arXiv:2601.23180",
+    "arXiv:2602.00942",
+    "arXiv:2602.01997",
+    "arXiv:2602.02544",
+    "arXiv:2602.02546",
+    "arXiv:2602.02891",
+    "arXiv:2602.03922",
+    "arXiv:2603.15685"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 18,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "cbea893212a98a2874194952e9335cd1e3752e03",
+  "raw_search_result_count": 18,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 18,
+  "provider_progress": {
+    "requested_count": 18,
+    "status_counts": {
+      "allowed": 18,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-13T21:02:08.219872+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "DOI:10.1109/tc.2025.3628193",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.1109/tce.2025.3642866",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2512.14244",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2512.23367",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2601.00847",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2601.02888",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2601.11471",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2601.18383",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2601.21622",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2601.22488",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2601.23180",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2602.00942",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2602.01997",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2602.02544",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2602.02546",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2602.02891",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2602.03922",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2603.15685",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "DASH: Dynamic Audio-Driven Semantic Chunking for Efficient Omnimodal Token Compression",
+      "source_url": "https://arxiv.org/abs/2603.15685",
+      "year": 2026,
+      "published": "2026-03-15",
+      "venue": "arXiv.org",
+      "citation_count": 5,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Omnimodal large language models (OmniLLMs) jointly process audio and visual streams, but the resulting long multimodal token sequences make inference prohibitively expensive. Existing compression methods typically rely on fixed window partitioning and attention-based pruning, which overlook the piecewise semantic structure of audio-visual signals and become fragile under aggressive token reduction. We propose Dynamic Audio-driven Semantic cHunking (DASH), a training-free framework that aligns token compression with semantic structure. DASH treats audio embeddings as a semantic anchor and detects boundary candidates via cosine-similarity discontinuities, inducing dynamic, variable-length segments that approximate the underlying piecewise-coherent organization of the sequence. These boundaries are projected onto video tokens as a soft temporally co-registered segmentation prior. Within each segment, token retention is determined by a tri-signal importance estimator that fuses structural boundary cues, representational distinctiveness, and attention-based salience, mitigating the sparsity bias of attention-only selection. This structure-aware allocation preserves transition-critical tokens while reducing redundant regions. Extensive experiments on AVUT, VideoMME, and WorldSense demonstrate that DASH maintains competitive or superior accuracy while achieving higher compression ratios compared to prior methods. Code is available at: https://github.com/laychou666/DASH.",
+      "identifiers": [
+        "SemanticScholar:0cc482943707366c14009e5e0c02b65ef1fb1057"
+      ],
+      "semantic_scholar_id": "0cc482943707366c14009e5e0c02b65ef1fb1057",
+      "canonical_id": "arXiv:2603.15685",
+      "arxiv_id": "2603.15685",
+      "doi": "10.48550/arXiv.2603.15685",
+      "authors": [
+        "Bing-Zhou Li",
+        "Tao Huang"
+      ],
+      "priority": 105,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 5,
+        "citation_count": 5,
+        "total": 105,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 212,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "From Context to EDUs: Faithful and Structured Context Compression via Elementary Discourse Unit Decomposition",
+      "source_url": "https://arxiv.org/abs/2512.14244",
+      "year": 2025,
+      "published": "2025-12-16",
+      "venue": "arXiv.org",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Managing extensive context remains a critical bottleneck for Large Language Models (LLMs), particularly in applications like long-document question answering and autonomous agents where lengthy inputs incur high computational costs and introduce noise. Existing compression techniques often disrupt local coherence through discrete token removal or rely on implicit latent encoding that suffers from positional bias and incompatibility with closed-source APIs. To address these limitations, we introduce the EDU-based Context Compressor, a novel explicit compression framework designed to preserve both global structure and fine-grained details. Our approach reformulates context compression as a structure-then-select process. First, our LingoEDU transforms linear text into a structural relation tree of Elementary Discourse Units (EDUs) which are anchored strictly to source indices to eliminate hallucination. Second, a lightweight ranking module selects query-relevant sub-trees for linearization. To rigorously evaluate structural understanding, we release StructBench, a manually annotated dataset of 248 diverse documents. Empirical results demonstrate that our method achieves state-of-the-art structural prediction accuracy and significantly outperforms frontier LLMs while reducing costs. Furthermore, our structure-aware compression substantially enhances performance across downstream tasks ranging from long-context tasks to complex Deep Search scenarios.",
+      "identifiers": [
+        "SemanticScholar:5f787424000ef65587bf97c8c9fb2527fd4ed918"
+      ],
+      "semantic_scholar_id": "5f787424000ef65587bf97c8c9fb2527fd4ed918",
+      "canonical_id": "arXiv:2512.14244",
+      "arxiv_id": "2512.14244",
+      "doi": "10.48550/arXiv.2512.14244",
+      "authors": [
+        "Yiqing Zhou",
+        "Yu Lei",
+        "Shuzheng Si",
+        "Qing Sun",
+        "Wei Wang",
+        "Yifei Wu",
+        "Hao Wen",
+        "Gang Chen",
+        "Fanchao Qi",
+        "Maosong Sun"
+      ],
+      "priority": 103,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 103,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 301,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "On the Limits of Layer Pruning for Generative Reasoning in Large Language Models",
+      "source_url": "https://arxiv.org/abs/2602.01997",
+      "year": 2026,
+      "published": "2026-02-02",
+      "venue": null,
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Recent work has shown that layer pruning can effectively compress large language models (LLMs) while retaining strong performance on classification benchmarks, often with little or no finetuning. In contrast, generative reasoning tasks, such as GSM8K and HumanEval\\textsuperscript{+}, exhibit substantially weaker recovery. We show that beyond surface-level text degradation, pruning leads to a loss of key algorithmic capabilities, including arithmetic computation and balanced parenthesis generation. Under realistic post-training constraints, using a single 80GB GPU and without access to pretraining-scale data or compute, we evaluate a simple recovery strategy based on supervised finetuning with self-generated responses. This approach recovers up to 90\\% of baseline performance on classification tasks, but recovery for generative reasoning remains limited. We further find that this gap persists even under a favorable task-aligned recovery setting, where pruned models are fully finetuned on self-generated GSM8K responses, suggesting that the degradation is not merely due to generic instruction data or parameter-efficient tuning. As complementary evidence, we analyze a depth-pruned model trained with nearly 100B post-pruning tokens and find that deficits persist even on simple arithmetic tasks that do not require multi-step generation. Overall, we characterize practical recovery limits of layer pruning for generative reasoning and provide guidance on when depth reduction is effective under constrained post-training regimes.",
+      "identifiers": [
+        "SemanticScholar:4ec4ce8f55e3656f6f75f974e4464d758af5bb6f"
+      ],
+      "semantic_scholar_id": "4ec4ce8f55e3656f6f75f974e4464d758af5bb6f",
+      "canonical_id": "arXiv:2602.01997",
+      "arxiv_id": "2602.01997",
+      "authors": [
+        "Safal Shrestha",
+        "Anubhav Shrestha",
+        "Aadim Nepal",
+        "Minwu Kim",
+        "Keith Ross"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 253,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Post-Training Quantization of OpenPangu Models for Efficient Deployment on Atlas A2",
+      "source_url": "https://arxiv.org/abs/2512.23367",
+      "year": 2025,
+      "published": "2025-12-29",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Huawei's openPangu-Embedded-1B and openPangu-Embedded-7B are variants of the openPangu large language model, designed for efficient deployment on Ascend NPUs. The 7B variant supports three distinct Chain-of-Thought (CoT) reasoning paradigms, namely slow_think, auto_think, and no_think, while the 1B variant operates exclusively in the no_think mode, which employs condensed reasoning for higher efficiency. Although CoT reasoning enhances capability, the generation of extended reasoning traces introduces substantial memory and latency overheads, posing challenges for practical deployment on Ascend NPUs. This paper addresses these computational constraints by leveraging low-bit quantization, which transforms FP16 computations into more efficient integer arithmetic. We introduce a unified low-bit inference framework, supporting INT8 (W8A8) and W4A8 quantization, specifically optimized for openPangu-Embedded models on the Atlas A2. Our comprehensive evaluation on code generation benchmarks (HumanEval and MBPP) demonstrates the efficacy of this approach. INT8 quantization consistently preserves over 90\\% of the FP16 baseline accuracy and achieves a 1.5x prefill speedup on the Atlas A2. Furthermore, W4A8 quantization significantly reduces memory consumption, albeit with a moderate trade-off in accuracy. These findings collectively indicate that low-bit quantization effectively facilitates efficient CoT reasoning on Ascend NPUs, maintaining high model fidelity.",
+      "identifiers": [
+        "SemanticScholar:a6f84c5e43de49a7ca2f5a459fd0cc5c6d4c5564"
+      ],
+      "semantic_scholar_id": "a6f84c5e43de49a7ca2f5a459fd0cc5c6d4c5564",
+      "canonical_id": "arXiv:2512.23367",
+      "arxiv_id": "2512.23367",
+      "doi": "10.48550/arXiv.2512.23367",
+      "authors": [
+        "Yilun Luo",
+        "Hua Zheng",
+        "Haoqian Meng",
+        "Wen-Yuan Liu",
+        "Peng Zhang"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 288,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "You Only Need Your Transformer 25% of the Time: Meaning-First Execution for Eliminating Unnecessary Inference",
+      "source_url": "https://arxiv.org/abs/2601.00847",
+      "year": 2025,
+      "published": "2025-12-29",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Modern AI inference systems treat transformer execution as mandatory, conflating model capability with execution necessity. We reframe inference as a control-plane decision problem: determining when execution is necessary versus when correctness can be preserved through alternative pathways. We introduce Meaning-First Execution (MFEE), a control-plane architecture implementing this framework, selectively invoking transformer inference only when required. MFEE operates as a gating layer above existing stacks without modifying models, weights, or parameters. Across 1,000 diverse prompts under deterministic decoding, MFEE achieves 78.1% execution reduction while maintaining 100% exact-match equivalence for invoked executions. Comparative evaluation reveals pattern-based routers achieve at most 53.3% avoidance with correctness failures, while MFEE reaches 100% avoidance with zero failures through semantic analysis. We prove this limitation via Theorem 1: any router operating solely on finite feature maps cannot simultaneously guarantee zero false skips and positive avoidance on feature-collision pairs. These results establish execution governance as a foundational layer in ML systems infrastructure, orthogonal to model-level optimization techniques.",
+      "identifiers": [
+        "SemanticScholar:aa2816697c63e6da4b3f10203e4949d7df0a11dc"
+      ],
+      "semantic_scholar_id": "aa2816697c63e6da4b3f10203e4949d7df0a11dc",
+      "canonical_id": "arXiv:2601.00847",
+      "arxiv_id": "2601.00847",
+      "doi": "10.48550/arXiv.2601.00847",
+      "authors": [
+        "Ryan Shamim"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 288,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "RPIQ: Residual-Projected Multi-Collaboration Closed-Loop and Single Instance Quantization for Visually Impaired Assistance",
+      "source_url": "https://arxiv.org/abs/2601.02888",
+      "year": 2026,
+      "published": "2026-01-06",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Visually impaired users face significant challenges in daily information access and real-time environmental perception, and there is an urgent need for intelligent assistive systems with accurate recognition capabilities. Although large-scale models provide effective solutions for perception and reasoning, their practical deployment on assistive devices is severely constrained by excessive memory consumption and high inference costs. Moreover, existing quantization strategies often ignore inter-block error accumulation, leading to degraded model stability. To address these challenges, this study proposes a novel quantization framework -- Residual-Projected Multi-Collaboration Closed-Loop and Single Instance Quantization(RPIQ), whose quantization process adopts a multi-collaborative closed-loop compensation scheme based on Single Instance Calibration and Gauss-Seidel Iterative Quantization. Experiments on various types of large-scale models, including language models such as OPT, Qwen, and LLaMA, as well as vision-language models such as CogVLM2, demonstrate that RPIQ can compress models to 4-bit representation while significantly reducing peak memory consumption (approximately 60%-75% reduction compared to original full-precision models). The method maintains performance highly close to full-precision models across multiple language and visual tasks, and exhibits excellent recognition and reasoning capabilities in key applications such as text understanding and visual question answering in complex scenarios. While verifying the effectiveness of RPIQ for deployment in real assistive systems, this study also advances the computational efficiency and reliability of large models, enabling them to provide visually impaired users with the required information accurately and rapidly.",
+      "identifiers": [
+        "SemanticScholar:8b4bfc95888f3ad62bacc634db5bbfbeb9e38bc7"
+      ],
+      "semantic_scholar_id": "8b4bfc95888f3ad62bacc634db5bbfbeb9e38bc7",
+      "canonical_id": "arXiv:2601.02888",
+      "arxiv_id": "2601.02888",
+      "doi": "10.48550/arXiv.2601.02888",
+      "authors": [
+        "Xuan-Yu Wang",
+        "Hai-Sen Su",
+        "Jing-Tao Zhang",
+        "Xiang-Xiang Wang",
+        "Yong-Bin Yu",
+        "Man-Ping Fan",
+        "Jia-Ling Xiao",
+        "Bo Gong",
+        "Si-Qi Chen",
+        "Ming-Sheng Cao",
+        "Li-Yong Ren",
+        "Zheng-Lin Yang"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 280,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Low-Rank Key Value Attention",
+      "source_url": "https://arxiv.org/abs/2601.11471",
+      "year": 2026,
+      "published": "2026-01-16",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The key-value (KV) cache is a primary memory bottleneck in Transformers. We propose Low-Rank Key-Value (LRKV) attention, which reduces KV cache memory by exploiting redundancy across attention heads, while being compute efficient. Each layer uses a shared full-rank KV projection augmented with low-rank, head-specific residuals, providing a continuous trade-off between complete sharing and full independence. After pretraining models of size 128M to 6.3B parameters, LRKV consistently achieves the lowest test loss among standard MHA, MQA/GQA, and MLA while using only 45-53\\% of MHA's KV cache. LRKV reaches equivalent baseline quality 18-25\\% faster (measured in training steps). After supervised midtraining, LRKV achieves the highest downstream task performance across ARC-Easy, ARC-Challenge, MMLU, GSM8K, and HumanEval benchmarks.",
+      "identifiers": [
+        "SemanticScholar:d18510ec53d350cf1b57e9280a705947b5b890b9"
+      ],
+      "semantic_scholar_id": "d18510ec53d350cf1b57e9280a705947b5b890b9",
+      "canonical_id": "arXiv:2601.11471",
+      "arxiv_id": "2601.11471",
+      "doi": "10.48550/arXiv.2601.11471",
+      "authors": [
+        "James O'Neill",
+        "R. Clancy",
+        "Mariia Matskevichus",
+        "Fergal Reid"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 270,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Dynamic Thinking-Token Selection for Efficient Reasoning in Large Reasoning Models",
+      "source_url": "https://arxiv.org/abs/2601.18383",
+      "year": 2026,
+      "published": "2026-01-26",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Reasoning Models (LRMs) excel at solving complex problems by explicitly generating a reasoning trace before deriving the final answer. However, these extended generations incur substantial memory footprint and computational overhead, bottlenecking LRMs'efficiency. This work uses attention maps to analyze the influence of reasoning traces and uncover an interesting phenomenon: only some decision-critical tokens in a reasoning trace steer the model toward the final answer, while the remaining tokens contribute negligibly. Building on this observation, we propose Dynamic Thinking-Token Selection (DynTS). This method identifies decision-critical tokens and retains only their associated Key-Value (KV) cache states during inference, evicting the remaining redundant entries to optimize efficiency.",
+      "identifiers": [
+        "SemanticScholar:0423e0d1687818b606e7103fd1a4a5ee45a7c26d"
+      ],
+      "semantic_scholar_id": "0423e0d1687818b606e7103fd1a4a5ee45a7c26d",
+      "canonical_id": "arXiv:2601.18383",
+      "arxiv_id": "2601.18383",
+      "doi": "10.48550/arXiv.2601.18383",
+      "authors": [
+        "Zhen-Yuan Guo",
+        "Tong Chen",
+        "Wenlong Meng",
+        "Chen Gong",
+        "Xing Yu",
+        "Cheng-Kun Wei",
+        "Wenzhi Chen"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 260,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "StarSD: One-for-Many Speculative Decoding",
+      "source_url": "https://arxiv.org/abs/2601.21622",
+      "year": 2026,
+      "published": "2026-01-29",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Speculative decoding accelerates autoregressive generation by separating token proposal from verification, but most existing approaches are designed for single-node execution and do not scale well to multi-accelerator clusters used for serving modern Large Language Models (LLMs). We present StarSD, a one-for-many speculative decoding framework that uses a single draft model to serve multiple target models across distributed nodes via a star topology. StarSD decouples drafting and verification, enabling effective sharing of draft computation, and preventing distributed accelerators from remaining idle under bursty workloads. We provide a system-level analysis that characterizes when and why a single draft model can remain fully utilized by multiple verifiers, yielding predictable latency and utilization gains. Extensive experiments in real-world distributed inference settings demonstrate that StarSD simplifies deployment and supports flexible resource allocation across heterogeneous accelerators, while maintaining output quality. These results indicate that StarSD is a practical and scalable framework for bringing speculative decoding to modern cloud and edge inference infrastructures.",
+      "identifiers": [
+        "SemanticScholar:0ea1042a8e14e5fd73f70ca50d4bd32b9bc95b36"
+      ],
+      "semantic_scholar_id": "0ea1042a8e14e5fd73f70ca50d4bd32b9bc95b36",
+      "canonical_id": "arXiv:2601.21622",
+      "arxiv_id": "2601.21622",
+      "doi": "10.48550/arXiv.2601.21622",
+      "authors": [
+        "Jun-Hao He",
+        "Fei-Ran You",
+        "Hong-Yang Du"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 257,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Elastic Spectral State Space Models for Train-Once Budgeted Inference",
+      "source_url": "https://arxiv.org/abs/2601.22488",
+      "year": 2026,
+      "published": "2026-01-30",
+      "venue": null,
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Modern sequence models are typically trained at a fixed computational capacity, while real-world applications require deployment across platforms with different resource constraints. Existing approaches either train or distill separate compact models for selected budgets, or use elastic architectures that shrink dimensions such as width, depth, Feed-Forward Network (FFN) size, or SSM state dimension. In this paper, we propose Elastic Spectral State Space Models (ES-SSM), a train-once, export-many sequence modeling framework that gains elasticity through spectral approximation of the SSM sequence operator. ES-SSM builds on Hankel spectral filtering for state space models, where long-range token mixing is represented through fixed Hankel spectral channels that define an operator-level approximation resolution. To make this spectral elasticity reliably deployable, ES-SSM combines input-adaptive channel-wise gates with budget dropout, training the same spectral prefixes that are used by compact models at inference time. This encourages low-index channels to become predictive on their own, while higher-index channels provide refinements for larger budgets. We evaluate ES-SSM across byte-level language modeling, Long Range Arena, Speech Commands V2, and offline reinforcement learning benchmarks. Across these settings, a single trained ES-SSM can be truncated to competitive compact models compared with modern Transformer and SSM baselines at similar parameter scales. Furthermore, by testing under various runtime budgets, we observe smooth and stable quality-cost curves over a wide range of truncation levels.",
+      "identifiers": [
+        "SemanticScholar:5a2ee52aea227dc1d8db8027b82dc8ce8e0056c6"
+      ],
+      "semantic_scholar_id": "5a2ee52aea227dc1d8db8027b82dc8ce8e0056c6",
+      "canonical_id": "arXiv:2601.22488",
+      "arxiv_id": "2601.22488",
+      "authors": [
+        "Da-Chuan Song",
+        "Ju Yin",
+        "Ze-Chen Hu",
+        "Xuan Wang"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 256,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "TriSpec: Ternary Speculative Decoding via Lightweight Proxy Verification",
+      "source_url": "https://arxiv.org/abs/2601.23180",
+      "year": 2026,
+      "published": "2026-01-30",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Inference efficiency in Large Language Models (LLMs) is fundamentally limited by their serial, autoregressive generation, especially as reasoning becomes a key capability and response sequences grow longer. Speculative decoding (SD) offers a powerful solution, providing significant speed-ups through its lightweight drafting and parallel verification mechanism. While existing work has nearly saturated improvements in draft effectiveness and efficiency, this paper advances SD from a new yet critical perspective: the verification cost. We propose TriSpec, a novel ternary SD framework that, at its core, introduces a lightweight proxy to significantly reduce computational cost by approving easily verifiable draft sequences and engaging the full target model only when encountering uncertain tokens. TriSpec can be integrated with state-of-the-art SD methods like EAGLE-3 to further reduce verification costs, achieving greater acceleration. Extensive experiments on the Qwen3 and DeepSeek-R1-Distill-Qwen/LLaMA families show that TriSpec achieves up to 35\\% speedup over standard SD, with up to 50\\% fewer target model invocations while maintaining comparable accuracy.",
+      "identifiers": [
+        "SemanticScholar:05fe3663002e116c296f825d14c44815fe2fdbd8"
+      ],
+      "semantic_scholar_id": "05fe3663002e116c296f825d14c44815fe2fdbd8",
+      "canonical_id": "arXiv:2601.23180",
+      "arxiv_id": "2601.23180",
+      "doi": "10.48550/arXiv.2601.23180",
+      "authors": [
+        "Hao-Yun Jiang",
+        "Junqi He",
+        "Feng Hong",
+        "Xinlong Yang",
+        "Jian-Wei Zhang",
+        "Zheng Li",
+        "Zhengyang Zhuge",
+        "Zhiyong Chen",
+        "Bo Han",
+        "Jun-Yang Lin",
+        "Jiangchao Yao"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 256,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "SPA-Cache: Singular Proxies for Adaptive Caching in Diffusion Language Models",
+      "source_url": "https://arxiv.org/abs/2602.02544",
+      "year": 2026,
+      "published": "2026-01-30",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "While Diffusion Language Models (DLMs) offer a flexible, arbitrary-order alternative to the autoregressive paradigm, their non-causal nature precludes standard KV caching, forcing costly hidden state recomputation at every decoding step. Existing DLM caching approaches reduce this cost by selective hidden state updates; however, they are still limited by (i) costly token-wise update identification heuristics and (ii) rigid, uniform budget allocation that fails to account for heterogeneous hidden state dynamics. To address these challenges, we present SPA-Cache that jointly optimizes update identification and budget allocation in DLM cache. First, we derive a low-dimensional singular proxy that enables the identification of update-critical tokens in a low-dimensional subspace, substantially reducing the overhead of update identification. Second, we introduce an adaptive strategy that allocates fewer updates to stable layers without degrading generation quality. Together, these contributions significantly improve the efficiency of DLMs, yielding up to an $8\\times$ throughput improvement over vanilla decoding and a $2$--$4\\times$ speedup over existing caching baselines.",
+      "identifiers": [
+        "SemanticScholar:0ac742b8591bf4f3734e22fc6f0337fe5c15644c"
+      ],
+      "semantic_scholar_id": "0ac742b8591bf4f3734e22fc6f0337fe5c15644c",
+      "canonical_id": "arXiv:2602.02544",
+      "arxiv_id": "2602.02544",
+      "doi": "10.48550/arXiv.2602.02544",
+      "authors": [
+        "Wenhao Sun",
+        "Rong-Cheng Tu",
+        "Yifu Ding",
+        "Zhao Jin",
+        "Jingyi Liao",
+        "Yong-Cheng Jing",
+        "Dacheng Tao"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 256,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "D2Quant: Accurate Low-bit Post-Training Weight Quantization for LLMs",
+      "source_url": "https://arxiv.org/abs/2602.02546",
+      "year": 2026,
+      "published": "2026-01-30",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLMs) deliver strong performance, but their high compute and memory costs make deployment difficult in resource-constrained scenarios. Weight-only post-training quantization (PTQ) is appealing, as it reduces memory usage and enables practical speedup without low-bit operators or specialized hardware. However, accuracy often degrades significantly in weight-only PTQ at sub-4-bit precision, and our analysis identifies two main causes: (1) down-projection matrices are a well-known quantization bottleneck, but maintaining their fidelity often requires extra bit-width; (2) weight quantization induces activation deviations, but effective correction strategies remain underexplored. To address these issues, we propose D$^2$Quant, a novel weight-only PTQ framework that improves quantization from both the weight and activation perspectives. On the weight side, we design a Dual-Scale Quantizer (DSQ) tailored to down-projection matrices, with an absorbable scaling factor that significantly improves accuracy without increasing the bit budget. On the activation side, we propose Deviation-Aware Correction (DAC), which incorporates a mean-shift correction within LayerNorm to mitigate quantization-induced activation distribution shifts. Extensive experiments across multiple LLM families and evaluation metrics show that D$^2$Quant delivers superior performance for weight-only PTQ at sub-4-bit precision. The code and models will be available at https://github.com/XIANGLONGYAN/D2Quant.",
+      "identifiers": [
+        "SemanticScholar:b646412896b94d9f17682ecf94a5c140c333494c"
+      ],
+      "semantic_scholar_id": "b646412896b94d9f17682ecf94a5c140c333494c",
+      "canonical_id": "arXiv:2602.02546",
+      "arxiv_id": "2602.02546",
+      "doi": "10.48550/arXiv.2602.02546",
+      "authors": [
+        "Xiang-Long Yan",
+        "Cheng-Zhu Bao",
+        "Zhiteng Li",
+        "Tian-Ao Zhang",
+        "Shao-Qiu Zhang",
+        "Ruo-Bing Xie",
+        "Samm Sun",
+        "Yu-Lun Zhang"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 256,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Bit-Serial Acceleration of LLM Inference With Mixture-of-Datatype Quantization",
+      "source_url": "https://doi.org/10.1109/TC.2025.3628193",
+      "year": 2026,
+      "published": "2026-02-01",
+      "venue": "IEEE transactions on computers",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLMs) have achieved significant breakthroughs on machine learning tasks. Yet the substantial memory footprint of LLMs significantly hinders their wide deployment. In this paper, we propose BitMoD, an algorithm-hardware co-design solution for efficient LLM deployment. On the algorithm side, BitMoD introduces “fine-grained data type adaptation”, which uses a different data type to quantize a group (e.g., 128) of weights and key-value-cache (KV-cache). Through the careful design of these data types, BitMoD is able to quantize LLM weights and KV-cache to sub-4-bit precision while maintaining high accuracy. On the hardware side, BitMoD employs the bit-serial computing to easily support multiple numerical precisions and data types, thus providing a flexible trade-off between model accuracy and hardware efficiency. Furthermore, we design low-cost hardware components to effectively handle online KV-cache quantization and per-group partial sum dequantization. Our evaluation on a diverse set of LLMs demonstrates that BitMoD significantly outperforms state-of-the-art LLM quantization methods on both discriminative and generative tasks. Combining the superior model performance with an efficient accelerator design, BitMoD surpasses the state-of-the-art LLM accelerator in terms of both hardware performance and energy efficiency.",
+      "identifiers": [
+        "SemanticScholar:0cd834e485b12cff6c6f35ae0e3fd3ab610399f0"
+      ],
+      "semantic_scholar_id": "0cd834e485b12cff6c6f35ae0e3fd3ab610399f0",
+      "doi": "10.1109/TC.2025.3628193",
+      "canonical_id": "DOI:10.1109/TC.2025.3628193",
+      "authors": [
+        "Yuzong Chen",
+        "Chi-Chih Chang",
+        "Xilai Dai",
+        "Ahmed Abouelhamayed",
+        "Marta Andronic",
+        "G. Constantinides",
+        "Mohamed S. Abdelfattah"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 254,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Efficient LLM Deployment in Consumer Electronics Applications via Resource-Aware and Salience-Guided Quantization",
+      "source_url": "https://doi.org/10.1109/TCE.2025.3642866",
+      "year": 2026,
+      "published": "2026-02-01",
+      "venue": "IEEE transactions on consumer electronics",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Models (LLMs) can stimulate intelligent functions on mobile devices in the applications of consumer electronics. However, it is challenging to deploy LLMs on mobile devices due to limited memory and computational resources that fluctuate as devices execute multiple AI tasks concurrently. Quantization is a widely adopted compression technique, but faces two major difficulties in practical deployment: 1) Existing quantization methods are unable to select suitable models for deployment according to the resource limitations of mobile devices; 2) Mixed-precision quantization-based methods utilize reinforcement learning and element-level quantization, which incurs substantial computational and memory costs on mobile devices. To this end, we propose Resource Awareness-Based Salience-Weighted Mixed-Precision Quantization (RAS-MQ). Specifically, RAS-MQ constructs a memory and latency computation incorporating model parameters and device constraints, then RAS-MQ employs integer linear programming for optimal per-layer bit-width allocation. Weight matrices are partitioned into groups with bit-widths assigned based on average saliency ranking. Furthermore, RAS-MQ applies training-free quantization range clipping to salient weights, which can improve representational capacity while reducing quantization error. Experiments on five zero-shot inference datasets, for the 2-bit quantization of LLaMA2-13B, RAS-MQ outperforms the state-of-the-art baseline (SqueezeLLM) by 0.85% in accuracy and reduces weight memory consumption from 24.5 GB to 4.1 GB, achieving a $5.98\\times $ compression ratio.",
+      "identifiers": [
+        "SemanticScholar:367d70cc0be2d3c46c6834346461878a77ac8ea1"
+      ],
+      "semantic_scholar_id": "367d70cc0be2d3c46c6834346461878a77ac8ea1",
+      "doi": "10.1109/TCE.2025.3642866",
+      "canonical_id": "DOI:10.1109/TCE.2025.3642866",
+      "authors": [
+        "Tian-Fu Pang",
+        "Ying-Chi Mao",
+        "Zhen-Xiang Pan",
+        "Rong-Zhi Qi",
+        "Benteng Zhang",
+        "Xiao-Ming He",
+        "Jie Wu"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 254,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "SALAAD: Sparse And Low-Rank Adaptation via ADMM for Large Language Model Inference",
+      "source_url": "https://arxiv.org/abs/2602.00942",
+      "year": 2026,
+      "published": "2026-02-01",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Modern large language models are increasingly deployed under compute and memory constraints, making flexible control of model capacity a central challenge. While sparse and low-rank structures naturally trade off capacity and performance, existing approaches often rely on heuristic designs that ignore layer and matrix heterogeneity or require model-specific architectural modifications. We propose SALAAD, a plug-and-play framework applicable to different model architectures that induces sparse and low-rank structures during training. By formulating structured weight learning under an augmented Lagrangian framework and introducing an adaptive controller that dynamically balances the training loss and structural constraints, SALAAD preserves the stability of standard training dynamics while enabling explicit control over the evolution of effective model capacity during training. Experiments across model scales show that SALAAD substantially reduces memory consumption during deployment while achieving performance comparable to ad-hoc methods. Moreover, a single training run yields a continuous spectrum of model capacities, enabling smooth and elastic deployment across diverse memory budgets without the need for retraining.",
+      "identifiers": [
+        "SemanticScholar:649b24ede8ba02f977e23d0742b7825d318cf932"
+      ],
+      "semantic_scholar_id": "649b24ede8ba02f977e23d0742b7825d318cf932",
+      "canonical_id": "arXiv:2602.00942",
+      "arxiv_id": "2602.00942",
+      "doi": "10.48550/arXiv.2602.00942",
+      "authors": [
+        "Hao Ma",
+        "Melis Ilayda Bal",
+        "Liang Zhang",
+        "Bing-Cong Li",
+        "Niao He",
+        "M. Zeilinger",
+        "M. Muehlebach"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 254,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "TraceNAS: Zero-shot LLM Pruning via Gradient Trace Correlation",
+      "source_url": "https://arxiv.org/abs/2602.02891",
+      "year": 2026,
+      "published": "2026-02-02",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Structured pruning is essential for efficient deployment of Large Language Models (LLMs). The varying sensitivity of LLM sub-blocks to pruning necessitates the identification of optimal non-uniformly pruned models. Existing methods evaluate the importance of layers, attention heads, or weight channels in isolation. Such localized focus ignores the complex global structural dependencies that exist across the model. Training-aware structured pruning addresses global dependencies, but its computational cost can be just as expensive as post-pruning training. To alleviate the computational burden of training-aware pruning and capture global structural dependencies, we propose TraceNAS, a training-free Neural Architecture Search (NAS) framework that jointly explores structured pruning of LLM depth and width. TraceNAS identifies pruned models that maintain a high degree of loss landscape alignment with the pretrained model using a scale-invariant zero-shot proxy, effectively selecting models that exhibit maximal performance potential during post-pruning training. TraceNAS is highly efficient, enabling high-fidelity discovery of pruned models on a single GPU in 8.5 hours, yielding a 10$\\times$ reduction in GPU-hours compared to training-aware methods. Evaluations on the Llama and Qwen families demonstrate that TraceNAS is competitive with training-aware baselines across commonsense and reasoning benchmarks.",
+      "identifiers": [
+        "SemanticScholar:3d8a3581a84d2976275bffce918b8d3021580c37"
+      ],
+      "semantic_scholar_id": "3d8a3581a84d2976275bffce918b8d3021580c37",
+      "canonical_id": "arXiv:2602.02891",
+      "arxiv_id": "2602.02891",
+      "doi": "10.48550/arXiv.2602.02891",
+      "authors": [
+        "Prajna G. Malettira",
+        "M. Nagaraj",
+        "Arjun Roy",
+        "Shubham Negi",
+        "Kaushik Roy"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 253,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Online Vector Quantized Attention",
+      "source_url": "https://arxiv.org/abs/2602.03922",
+      "year": 2026,
+      "published": "2026-02-03",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Standard sequence mixing layers used in language models struggle to balance efficiency and performance. Self-attention performs well on long context tasks but has expensive quadratic compute and linear memory costs, while linear attention and SSMs use only linear compute and constant memory but struggle with long context processing. In this paper, we develop a sequence mixing layer that aims to find a better compromise between memory-compute costs and long-context processing, which we call online vector-quantized (OVQ) attention. OVQ-attention requires linear compute costs and constant memory, but, unlike linear attention and SSMs, it uses a sparse memory update that allows it to greatly increase the size of its memory state and, consequently, memory capacity. We develop a theoretical basis for OVQ-attention based on Gaussian mixture regression, and we test it on a variety of synthetic long context tasks and on long context language modeling. OVQ-attention shows significant improvements over linear attention baselines and the original VQ-attention, on which OVQ-attention was inspired. It demonstrates competitive, and sometimes identical, performance to strong self-attention baselines up 64k sequence length, despite using a small fraction of the memory of full self-attention.",
+      "identifiers": [
+        "SemanticScholar:58ab230abf5d2da1c221e3430ce3bf4e962b270e"
+      ],
+      "semantic_scholar_id": "58ab230abf5d2da1c221e3430ce3bf4e962b270e",
+      "canonical_id": "arXiv:2602.03922",
+      "arxiv_id": "2602.03922",
+      "doi": "10.48550/arXiv.2602.03922",
+      "authors": [
+        "Nick Alonso",
+        "Tomas Figliolia",
+        "Beren Millidge"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 252,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2603.15685",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2603.15685",
+        "id:SemanticScholar:0cc482943707366c14009e5e0c02b65ef1fb1057",
+        "id:arXiv:2603.15685",
+        "title:dash dynamic audiodriven semantic chunking for efficient omnimodal token compression",
+        "url:https://arxiv.org/abs/2603.15685"
+      ],
+      "record": {
+        "title": "DASH: Dynamic Audio-Driven Semantic Chunking for Efficient Omnimodal Token Compression",
+        "source_url": "https://arxiv.org/abs/2603.15685",
+        "year": 2026,
+        "published": "2026-03-15",
+        "venue": "arXiv.org",
+        "citation_count": 5,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Omnimodal large language models (OmniLLMs) jointly process audio and visual streams, but the resulting long multimodal token sequences make inference prohibitively expensive. Existing compression methods typically rely on fixed window partitioning and attention-based pruning, which overlook the piecewise semantic structure of audio-visual signals and become fragile under aggressive token reduction. We propose Dynamic Audio-driven Semantic cHunking (DASH), a training-free framework that aligns token compression with semantic structure. DASH treats audio embeddings as a semantic anchor and detects boundary candidates via cosine-similarity discontinuities, inducing dynamic, variable-length segments that approximate the underlying piecewise-coherent organization of the sequence. These boundaries are projected onto video tokens as a soft temporally co-registered segmentation prior. Within each segment, token retention is determined by a tri-signal importance estimator that fuses structural boundary cues, representational distinctiveness, and attention-based salience, mitigating the sparsity bias of attention-only selection. This structure-aware allocation preserves transition-critical tokens while reducing redundant regions. Extensive experiments on AVUT, VideoMME, and WorldSense demonstrate that DASH maintains competitive or superior accuracy while achieving higher compression ratios compared to prior methods. Code is available at: https://github.com/laychou666/DASH.",
+        "identifiers": [
+          "SemanticScholar:0cc482943707366c14009e5e0c02b65ef1fb1057"
+        ],
+        "semantic_scholar_id": "0cc482943707366c14009e5e0c02b65ef1fb1057",
+        "canonical_id": "arXiv:2603.15685",
+        "arxiv_id": "2603.15685",
+        "doi": "10.48550/arXiv.2603.15685",
+        "authors": [
+          "Bing-Zhou Li",
+          "Tao Huang"
+        ],
+        "priority": 105,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 5,
+          "citation_count": 5,
+          "total": 105,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 212,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2512.14244",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2512.14244",
+        "id:SemanticScholar:5f787424000ef65587bf97c8c9fb2527fd4ed918",
+        "id:arXiv:2512.14244",
+        "title:from context to edus faithful and structured context compression via elementary discourse unit decomposition",
+        "url:https://arxiv.org/abs/2512.14244"
+      ],
+      "record": {
+        "title": "From Context to EDUs: Faithful and Structured Context Compression via Elementary Discourse Unit Decomposition",
+        "source_url": "https://arxiv.org/abs/2512.14244",
+        "year": 2025,
+        "published": "2025-12-16",
+        "venue": "arXiv.org",
+        "citation_count": 3,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Managing extensive context remains a critical bottleneck for Large Language Models (LLMs), particularly in applications like long-document question answering and autonomous agents where lengthy inputs incur high computational costs and introduce noise. Existing compression techniques often disrupt local coherence through discrete token removal or rely on implicit latent encoding that suffers from positional bias and incompatibility with closed-source APIs. To address these limitations, we introduce the EDU-based Context Compressor, a novel explicit compression framework designed to preserve both global structure and fine-grained details. Our approach reformulates context compression as a structure-then-select process. First, our LingoEDU transforms linear text into a structural relation tree of Elementary Discourse Units (EDUs) which are anchored strictly to source indices to eliminate hallucination. Second, a lightweight ranking module selects query-relevant sub-trees for linearization. To rigorously evaluate structural understanding, we release StructBench, a manually annotated dataset of 248 diverse documents. Empirical results demonstrate that our method achieves state-of-the-art structural prediction accuracy and significantly outperforms frontier LLMs while reducing costs. Furthermore, our structure-aware compression substantially enhances performance across downstream tasks ranging from long-context tasks to complex Deep Search scenarios.",
+        "identifiers": [
+          "SemanticScholar:5f787424000ef65587bf97c8c9fb2527fd4ed918"
+        ],
+        "semantic_scholar_id": "5f787424000ef65587bf97c8c9fb2527fd4ed918",
+        "canonical_id": "arXiv:2512.14244",
+        "arxiv_id": "2512.14244",
+        "doi": "10.48550/arXiv.2512.14244",
+        "authors": [
+          "Yiqing Zhou",
+          "Yu Lei",
+          "Shuzheng Si",
+          "Qing Sun",
+          "Wei Wang",
+          "Yifei Wu",
+          "Hao Wen",
+          "Gang Chen",
+          "Fanchao Qi",
+          "Maosong Sun"
+        ],
+        "priority": 103,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 3,
+          "citation_count": 3,
+          "total": 103,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 301,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2602.01997",
+      "identity_tokens": [
+        "id:SemanticScholar:4ec4ce8f55e3656f6f75f974e4464d758af5bb6f",
+        "id:arXiv:2602.01997",
+        "title:on the limits of layer pruning for generative reasoning in large language models",
+        "url:https://arxiv.org/abs/2602.01997"
+      ],
+      "record": {
+        "title": "On the Limits of Layer Pruning for Generative Reasoning in Large Language Models",
+        "source_url": "https://arxiv.org/abs/2602.01997",
+        "year": 2026,
+        "published": "2026-02-02",
+        "venue": null,
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Recent work has shown that layer pruning can effectively compress large language models (LLMs) while retaining strong performance on classification benchmarks, often with little or no finetuning. In contrast, generative reasoning tasks, such as GSM8K and HumanEval\\textsuperscript{+}, exhibit substantially weaker recovery. We show that beyond surface-level text degradation, pruning leads to a loss of key algorithmic capabilities, including arithmetic computation and balanced parenthesis generation. Under realistic post-training constraints, using a single 80GB GPU and without access to pretraining-scale data or compute, we evaluate a simple recovery strategy based on supervised finetuning with self-generated responses. This approach recovers up to 90\\% of baseline performance on classification tasks, but recovery for generative reasoning remains limited. We further find that this gap persists even under a favorable task-aligned recovery setting, where pruned models are fully finetuned on self-generated GSM8K responses, suggesting that the degradation is not merely due to generic instruction data or parameter-efficient tuning. As complementary evidence, we analyze a depth-pruned model trained with nearly 100B post-pruning tokens and find that deficits persist even on simple arithmetic tasks that do not require multi-step generation. Overall, we characterize practical recovery limits of layer pruning for generative reasoning and provide guidance on when depth reduction is effective under constrained post-training regimes.",
+        "identifiers": [
+          "SemanticScholar:4ec4ce8f55e3656f6f75f974e4464d758af5bb6f"
+        ],
+        "semantic_scholar_id": "4ec4ce8f55e3656f6f75f974e4464d758af5bb6f",
+        "canonical_id": "arXiv:2602.01997",
+        "arxiv_id": "2602.01997",
+        "authors": [
+          "Safal Shrestha",
+          "Anubhav Shrestha",
+          "Aadim Nepal",
+          "Minwu Kim",
+          "Keith Ross"
+        ],
+        "priority": 102,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 102,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 253,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2512.23367",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2512.23367",
+        "id:SemanticScholar:a6f84c5e43de49a7ca2f5a459fd0cc5c6d4c5564",
+        "id:arXiv:2512.23367",
+        "title:posttraining quantization of openpangu models for efficient deployment on atlas a2",
+        "url:https://arxiv.org/abs/2512.23367"
+      ],
+      "record": {
+        "title": "Post-Training Quantization of OpenPangu Models for Efficient Deployment on Atlas A2",
+        "source_url": "https://arxiv.org/abs/2512.23367",
+        "year": 2025,
+        "published": "2025-12-29",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Huawei's openPangu-Embedded-1B and openPangu-Embedded-7B are variants of the openPangu large language model, designed for efficient deployment on Ascend NPUs. The 7B variant supports three distinct Chain-of-Thought (CoT) reasoning paradigms, namely slow_think, auto_think, and no_think, while the 1B variant operates exclusively in the no_think mode, which employs condensed reasoning for higher efficiency. Although CoT reasoning enhances capability, the generation of extended reasoning traces introduces substantial memory and latency overheads, posing challenges for practical deployment on Ascend NPUs. This paper addresses these computational constraints by leveraging low-bit quantization, which transforms FP16 computations into more efficient integer arithmetic. We introduce a unified low-bit inference framework, supporting INT8 (W8A8) and W4A8 quantization, specifically optimized for openPangu-Embedded models on the Atlas A2. Our comprehensive evaluation on code generation benchmarks (HumanEval and MBPP) demonstrates the efficacy of this approach. INT8 quantization consistently preserves over 90\\% of the FP16 baseline accuracy and achieves a 1.5x prefill speedup on the Atlas A2. Furthermore, W4A8 quantization significantly reduces memory consumption, albeit with a moderate trade-off in accuracy. These findings collectively indicate that low-bit quantization effectively facilitates efficient CoT reasoning on Ascend NPUs, maintaining high model fidelity.",
+        "identifiers": [
+          "SemanticScholar:a6f84c5e43de49a7ca2f5a459fd0cc5c6d4c5564"
+        ],
+        "semantic_scholar_id": "a6f84c5e43de49a7ca2f5a459fd0cc5c6d4c5564",
+        "canonical_id": "arXiv:2512.23367",
+        "arxiv_id": "2512.23367",
+        "doi": "10.48550/arXiv.2512.23367",
+        "authors": [
+          "Yilun Luo",
+          "Hua Zheng",
+          "Haoqian Meng",
+          "Wen-Yuan Liu",
+          "Peng Zhang"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 288,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2601.00847",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2601.00847",
+        "id:SemanticScholar:aa2816697c63e6da4b3f10203e4949d7df0a11dc",
+        "id:arXiv:2601.00847",
+        "title:you only need your transformer 25 of the time meaningfirst execution for eliminating unnecessary inference",
+        "url:https://arxiv.org/abs/2601.00847"
+      ],
+      "record": {
+        "title": "You Only Need Your Transformer 25% of the Time: Meaning-First Execution for Eliminating Unnecessary Inference",
+        "source_url": "https://arxiv.org/abs/2601.00847",
+        "year": 2025,
+        "published": "2025-12-29",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Modern AI inference systems treat transformer execution as mandatory, conflating model capability with execution necessity. We reframe inference as a control-plane decision problem: determining when execution is necessary versus when correctness can be preserved through alternative pathways. We introduce Meaning-First Execution (MFEE), a control-plane architecture implementing this framework, selectively invoking transformer inference only when required. MFEE operates as a gating layer above existing stacks without modifying models, weights, or parameters. Across 1,000 diverse prompts under deterministic decoding, MFEE achieves 78.1% execution reduction while maintaining 100% exact-match equivalence for invoked executions. Comparative evaluation reveals pattern-based routers achieve at most 53.3% avoidance with correctness failures, while MFEE reaches 100% avoidance with zero failures through semantic analysis. We prove this limitation via Theorem 1: any router operating solely on finite feature maps cannot simultaneously guarantee zero false skips and positive avoidance on feature-collision pairs. These results establish execution governance as a foundational layer in ML systems infrastructure, orthogonal to model-level optimization techniques.",
+        "identifiers": [
+          "SemanticScholar:aa2816697c63e6da4b3f10203e4949d7df0a11dc"
+        ],
+        "semantic_scholar_id": "aa2816697c63e6da4b3f10203e4949d7df0a11dc",
+        "canonical_id": "arXiv:2601.00847",
+        "arxiv_id": "2601.00847",
+        "doi": "10.48550/arXiv.2601.00847",
+        "authors": [
+          "Ryan Shamim"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 288,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2601.02888",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2601.02888",
+        "id:SemanticScholar:8b4bfc95888f3ad62bacc634db5bbfbeb9e38bc7",
+        "id:arXiv:2601.02888",
+        "title:rpiq residualprojected multicollaboration closedloop and single instance quantization for visually impaired assistance",
+        "url:https://arxiv.org/abs/2601.02888"
+      ],
+      "record": {
+        "title": "RPIQ: Residual-Projected Multi-Collaboration Closed-Loop and Single Instance Quantization for Visually Impaired Assistance",
+        "source_url": "https://arxiv.org/abs/2601.02888",
+        "year": 2026,
+        "published": "2026-01-06",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Visually impaired users face significant challenges in daily information access and real-time environmental perception, and there is an urgent need for intelligent assistive systems with accurate recognition capabilities. Although large-scale models provide effective solutions for perception and reasoning, their practical deployment on assistive devices is severely constrained by excessive memory consumption and high inference costs. Moreover, existing quantization strategies often ignore inter-block error accumulation, leading to degraded model stability. To address these challenges, this study proposes a novel quantization framework -- Residual-Projected Multi-Collaboration Closed-Loop and Single Instance Quantization(RPIQ), whose quantization process adopts a multi-collaborative closed-loop compensation scheme based on Single Instance Calibration and Gauss-Seidel Iterative Quantization. Experiments on various types of large-scale models, including language models such as OPT, Qwen, and LLaMA, as well as vision-language models such as CogVLM2, demonstrate that RPIQ can compress models to 4-bit representation while significantly reducing peak memory consumption (approximately 60%-75% reduction compared to original full-precision models). The method maintains performance highly close to full-precision models across multiple language and visual tasks, and exhibits excellent recognition and reasoning capabilities in key applications such as text understanding and visual question answering in complex scenarios. While verifying the effectiveness of RPIQ for deployment in real assistive systems, this study also advances the computational efficiency and reliability of large models, enabling them to provide visually impaired users with the required information accurately and rapidly.",
+        "identifiers": [
+          "SemanticScholar:8b4bfc95888f3ad62bacc634db5bbfbeb9e38bc7"
+        ],
+        "semantic_scholar_id": "8b4bfc95888f3ad62bacc634db5bbfbeb9e38bc7",
+        "canonical_id": "arXiv:2601.02888",
+        "arxiv_id": "2601.02888",
+        "doi": "10.48550/arXiv.2601.02888",
+        "authors": [
+          "Xuan-Yu Wang",
+          "Hai-Sen Su",
+          "Jing-Tao Zhang",
+          "Xiang-Xiang Wang",
+          "Yong-Bin Yu",
+          "Man-Ping Fan",
+          "Jia-Ling Xiao",
+          "Bo Gong",
+          "Si-Qi Chen",
+          "Ming-Sheng Cao",
+          "Li-Yong Ren",
+          "Zheng-Lin Yang"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 280,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2601.11471",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2601.11471",
+        "id:SemanticScholar:d18510ec53d350cf1b57e9280a705947b5b890b9",
+        "id:arXiv:2601.11471",
+        "title:lowrank key value attention",
+        "url:https://arxiv.org/abs/2601.11471"
+      ],
+      "record": {
+        "title": "Low-Rank Key Value Attention",
+        "source_url": "https://arxiv.org/abs/2601.11471",
+        "year": 2026,
+        "published": "2026-01-16",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The key-value (KV) cache is a primary memory bottleneck in Transformers. We propose Low-Rank Key-Value (LRKV) attention, which reduces KV cache memory by exploiting redundancy across attention heads, while being compute efficient. Each layer uses a shared full-rank KV projection augmented with low-rank, head-specific residuals, providing a continuous trade-off between complete sharing and full independence. After pretraining models of size 128M to 6.3B parameters, LRKV consistently achieves the lowest test loss among standard MHA, MQA/GQA, and MLA while using only 45-53\\% of MHA's KV cache. LRKV reaches equivalent baseline quality 18-25\\% faster (measured in training steps). After supervised midtraining, LRKV achieves the highest downstream task performance across ARC-Easy, ARC-Challenge, MMLU, GSM8K, and HumanEval benchmarks.",
+        "identifiers": [
+          "SemanticScholar:d18510ec53d350cf1b57e9280a705947b5b890b9"
+        ],
+        "semantic_scholar_id": "d18510ec53d350cf1b57e9280a705947b5b890b9",
+        "canonical_id": "arXiv:2601.11471",
+        "arxiv_id": "2601.11471",
+        "doi": "10.48550/arXiv.2601.11471",
+        "authors": [
+          "James O'Neill",
+          "R. Clancy",
+          "Mariia Matskevichus",
+          "Fergal Reid"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 270,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2601.18383",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2601.18383",
+        "id:SemanticScholar:0423e0d1687818b606e7103fd1a4a5ee45a7c26d",
+        "id:arXiv:2601.18383",
+        "title:dynamic thinkingtoken selection for efficient reasoning in large reasoning models",
+        "url:https://arxiv.org/abs/2601.18383"
+      ],
+      "record": {
+        "title": "Dynamic Thinking-Token Selection for Efficient Reasoning in Large Reasoning Models",
+        "source_url": "https://arxiv.org/abs/2601.18383",
+        "year": 2026,
+        "published": "2026-01-26",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large Reasoning Models (LRMs) excel at solving complex problems by explicitly generating a reasoning trace before deriving the final answer. However, these extended generations incur substantial memory footprint and computational overhead, bottlenecking LRMs'efficiency. This work uses attention maps to analyze the influence of reasoning traces and uncover an interesting phenomenon: only some decision-critical tokens in a reasoning trace steer the model toward the final answer, while the remaining tokens contribute negligibly. Building on this observation, we propose Dynamic Thinking-Token Selection (DynTS). This method identifies decision-critical tokens and retains only their associated Key-Value (KV) cache states during inference, evicting the remaining redundant entries to optimize efficiency.",
+        "identifiers": [
+          "SemanticScholar:0423e0d1687818b606e7103fd1a4a5ee45a7c26d"
+        ],
+        "semantic_scholar_id": "0423e0d1687818b606e7103fd1a4a5ee45a7c26d",
+        "canonical_id": "arXiv:2601.18383",
+        "arxiv_id": "2601.18383",
+        "doi": "10.48550/arXiv.2601.18383",
+        "authors": [
+          "Zhen-Yuan Guo",
+          "Tong Chen",
+          "Wenlong Meng",
+          "Chen Gong",
+          "Xing Yu",
+          "Cheng-Kun Wei",
+          "Wenzhi Chen"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 260,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2601.21622",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2601.21622",
+        "id:SemanticScholar:0ea1042a8e14e5fd73f70ca50d4bd32b9bc95b36",
+        "id:arXiv:2601.21622",
+        "title:starsd oneformany speculative decoding",
+        "url:https://arxiv.org/abs/2601.21622"
+      ],
+      "record": {
+        "title": "StarSD: One-for-Many Speculative Decoding",
+        "source_url": "https://arxiv.org/abs/2601.21622",
+        "year": 2026,
+        "published": "2026-01-29",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Speculative decoding accelerates autoregressive generation by separating token proposal from verification, but most existing approaches are designed for single-node execution and do not scale well to multi-accelerator clusters used for serving modern Large Language Models (LLMs). We present StarSD, a one-for-many speculative decoding framework that uses a single draft model to serve multiple target models across distributed nodes via a star topology. StarSD decouples drafting and verification, enabling effective sharing of draft computation, and preventing distributed accelerators from remaining idle under bursty workloads. We provide a system-level analysis that characterizes when and why a single draft model can remain fully utilized by multiple verifiers, yielding predictable latency and utilization gains. Extensive experiments in real-world distributed inference settings demonstrate that StarSD simplifies deployment and supports flexible resource allocation across heterogeneous accelerators, while maintaining output quality. These results indicate that StarSD is a practical and scalable framework for bringing speculative decoding to modern cloud and edge inference infrastructures.",
+        "identifiers": [
+          "SemanticScholar:0ea1042a8e14e5fd73f70ca50d4bd32b9bc95b36"
+        ],
+        "semantic_scholar_id": "0ea1042a8e14e5fd73f70ca50d4bd32b9bc95b36",
+        "canonical_id": "arXiv:2601.21622",
+        "arxiv_id": "2601.21622",
+        "doi": "10.48550/arXiv.2601.21622",
+        "authors": [
+          "Jun-Hao He",
+          "Fei-Ran You",
+          "Hong-Yang Du"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 257,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2601.22488",
+      "identity_tokens": [
+        "id:SemanticScholar:5a2ee52aea227dc1d8db8027b82dc8ce8e0056c6",
+        "id:arXiv:2601.22488",
+        "title:elastic spectral state space models for trainonce budgeted inference",
+        "url:https://arxiv.org/abs/2601.22488"
+      ],
+      "record": {
+        "title": "Elastic Spectral State Space Models for Train-Once Budgeted Inference",
+        "source_url": "https://arxiv.org/abs/2601.22488",
+        "year": 2026,
+        "published": "2026-01-30",
+        "venue": null,
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Modern sequence models are typically trained at a fixed computational capacity, while real-world applications require deployment across platforms with different resource constraints. Existing approaches either train or distill separate compact models for selected budgets, or use elastic architectures that shrink dimensions such as width, depth, Feed-Forward Network (FFN) size, or SSM state dimension. In this paper, we propose Elastic Spectral State Space Models (ES-SSM), a train-once, export-many sequence modeling framework that gains elasticity through spectral approximation of the SSM sequence operator. ES-SSM builds on Hankel spectral filtering for state space models, where long-range token mixing is represented through fixed Hankel spectral channels that define an operator-level approximation resolution. To make this spectral elasticity reliably deployable, ES-SSM combines input-adaptive channel-wise gates with budget dropout, training the same spectral prefixes that are used by compact models at inference time. This encourages low-index channels to become predictive on their own, while higher-index channels provide refinements for larger budgets. We evaluate ES-SSM across byte-level language modeling, Long Range Arena, Speech Commands V2, and offline reinforcement learning benchmarks. Across these settings, a single trained ES-SSM can be truncated to competitive compact models compared with modern Transformer and SSM baselines at similar parameter scales. Furthermore, by testing under various runtime budgets, we observe smooth and stable quality-cost curves over a wide range of truncation levels.",
+        "identifiers": [
+          "SemanticScholar:5a2ee52aea227dc1d8db8027b82dc8ce8e0056c6"
+        ],
+        "semantic_scholar_id": "5a2ee52aea227dc1d8db8027b82dc8ce8e0056c6",
+        "canonical_id": "arXiv:2601.22488",
+        "arxiv_id": "2601.22488",
+        "authors": [
+          "Da-Chuan Song",
+          "Ju Yin",
+          "Ze-Chen Hu",
+          "Xuan Wang"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 256,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2601.23180",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2601.23180",
+        "id:SemanticScholar:05fe3663002e116c296f825d14c44815fe2fdbd8",
+        "id:arXiv:2601.23180",
+        "title:trispec ternary speculative decoding via lightweight proxy verification",
+        "url:https://arxiv.org/abs/2601.23180"
+      ],
+      "record": {
+        "title": "TriSpec: Ternary Speculative Decoding via Lightweight Proxy Verification",
+        "source_url": "https://arxiv.org/abs/2601.23180",
+        "year": 2026,
+        "published": "2026-01-30",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Inference efficiency in Large Language Models (LLMs) is fundamentally limited by their serial, autoregressive generation, especially as reasoning becomes a key capability and response sequences grow longer. Speculative decoding (SD) offers a powerful solution, providing significant speed-ups through its lightweight drafting and parallel verification mechanism. While existing work has nearly saturated improvements in draft effectiveness and efficiency, this paper advances SD from a new yet critical perspective: the verification cost. We propose TriSpec, a novel ternary SD framework that, at its core, introduces a lightweight proxy to significantly reduce computational cost by approving easily verifiable draft sequences and engaging the full target model only when encountering uncertain tokens. TriSpec can be integrated with state-of-the-art SD methods like EAGLE-3 to further reduce verification costs, achieving greater acceleration. Extensive experiments on the Qwen3 and DeepSeek-R1-Distill-Qwen/LLaMA families show that TriSpec achieves up to 35\\% speedup over standard SD, with up to 50\\% fewer target model invocations while maintaining comparable accuracy.",
+        "identifiers": [
+          "SemanticScholar:05fe3663002e116c296f825d14c44815fe2fdbd8"
+        ],
+        "semantic_scholar_id": "05fe3663002e116c296f825d14c44815fe2fdbd8",
+        "canonical_id": "arXiv:2601.23180",
+        "arxiv_id": "2601.23180",
+        "doi": "10.48550/arXiv.2601.23180",
+        "authors": [
+          "Hao-Yun Jiang",
+          "Junqi He",
+          "Feng Hong",
+          "Xinlong Yang",
+          "Jian-Wei Zhang",
+          "Zheng Li",
+          "Zhengyang Zhuge",
+          "Zhiyong Chen",
+          "Bo Han",
+          "Jun-Yang Lin",
+          "Jiangchao Yao"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 256,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2602.02544",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2602.02544",
+        "id:SemanticScholar:0ac742b8591bf4f3734e22fc6f0337fe5c15644c",
+        "id:arXiv:2602.02544",
+        "title:spacache singular proxies for adaptive caching in diffusion language models",
+        "url:https://arxiv.org/abs/2602.02544"
+      ],
+      "record": {
+        "title": "SPA-Cache: Singular Proxies for Adaptive Caching in Diffusion Language Models",
+        "source_url": "https://arxiv.org/abs/2602.02544",
+        "year": 2026,
+        "published": "2026-01-30",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "While Diffusion Language Models (DLMs) offer a flexible, arbitrary-order alternative to the autoregressive paradigm, their non-causal nature precludes standard KV caching, forcing costly hidden state recomputation at every decoding step. Existing DLM caching approaches reduce this cost by selective hidden state updates; however, they are still limited by (i) costly token-wise update identification heuristics and (ii) rigid, uniform budget allocation that fails to account for heterogeneous hidden state dynamics. To address these challenges, we present SPA-Cache that jointly optimizes update identification and budget allocation in DLM cache. First, we derive a low-dimensional singular proxy that enables the identification of update-critical tokens in a low-dimensional subspace, substantially reducing the overhead of update identification. Second, we introduce an adaptive strategy that allocates fewer updates to stable layers without degrading generation quality. Together, these contributions significantly improve the efficiency of DLMs, yielding up to an $8\\times$ throughput improvement over vanilla decoding and a $2$--$4\\times$ speedup over existing caching baselines.",
+        "identifiers": [
+          "SemanticScholar:0ac742b8591bf4f3734e22fc6f0337fe5c15644c"
+        ],
+        "semantic_scholar_id": "0ac742b8591bf4f3734e22fc6f0337fe5c15644c",
+        "canonical_id": "arXiv:2602.02544",
+        "arxiv_id": "2602.02544",
+        "doi": "10.48550/arXiv.2602.02544",
+        "authors": [
+          "Wenhao Sun",
+          "Rong-Cheng Tu",
+          "Yifu Ding",
+          "Zhao Jin",
+          "Jingyi Liao",
+          "Yong-Cheng Jing",
+          "Dacheng Tao"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 256,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2602.02546",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2602.02546",
+        "id:SemanticScholar:b646412896b94d9f17682ecf94a5c140c333494c",
+        "id:arXiv:2602.02546",
+        "title:d2quant accurate lowbit posttraining weight quantization for llms",
+        "url:https://arxiv.org/abs/2602.02546"
+      ],
+      "record": {
+        "title": "D2Quant: Accurate Low-bit Post-Training Weight Quantization for LLMs",
+        "source_url": "https://arxiv.org/abs/2602.02546",
+        "year": 2026,
+        "published": "2026-01-30",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large language models (LLMs) deliver strong performance, but their high compute and memory costs make deployment difficult in resource-constrained scenarios. Weight-only post-training quantization (PTQ) is appealing, as it reduces memory usage and enables practical speedup without low-bit operators or specialized hardware. However, accuracy often degrades significantly in weight-only PTQ at sub-4-bit precision, and our analysis identifies two main causes: (1) down-projection matrices are a well-known quantization bottleneck, but maintaining their fidelity often requires extra bit-width; (2) weight quantization induces activation deviations, but effective correction strategies remain underexplored. To address these issues, we propose D$^2$Quant, a novel weight-only PTQ framework that improves quantization from both the weight and activation perspectives. On the weight side, we design a Dual-Scale Quantizer (DSQ) tailored to down-projection matrices, with an absorbable scaling factor that significantly improves accuracy without increasing the bit budget. On the activation side, we propose Deviation-Aware Correction (DAC), which incorporates a mean-shift correction within LayerNorm to mitigate quantization-induced activation distribution shifts. Extensive experiments across multiple LLM families and evaluation metrics show that D$^2$Quant delivers superior performance for weight-only PTQ at sub-4-bit precision. The code and models will be available at https://github.com/XIANGLONGYAN/D2Quant.",
+        "identifiers": [
+          "SemanticScholar:b646412896b94d9f17682ecf94a5c140c333494c"
+        ],
+        "semantic_scholar_id": "b646412896b94d9f17682ecf94a5c140c333494c",
+        "canonical_id": "arXiv:2602.02546",
+        "arxiv_id": "2602.02546",
+        "doi": "10.48550/arXiv.2602.02546",
+        "authors": [
+          "Xiang-Long Yan",
+          "Cheng-Zhu Bao",
+          "Zhiteng Li",
+          "Tian-Ao Zhang",
+          "Shao-Qiu Zhang",
+          "Ruo-Bing Xie",
+          "Samm Sun",
+          "Yu-Lun Zhang"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 256,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/tc.2025.3628193",
+      "identity_tokens": [
+        "id:DOI:10.1109/tc.2025.3628193",
+        "id:SemanticScholar:0cd834e485b12cff6c6f35ae0e3fd3ab610399f0",
+        "title:bitserial acceleration of llm inference with mixtureofdatatype quantization",
+        "url:https://doi.org/10.1109/TC.2025.3628193"
+      ],
+      "record": {
+        "title": "Bit-Serial Acceleration of LLM Inference With Mixture-of-Datatype Quantization",
+        "source_url": "https://doi.org/10.1109/TC.2025.3628193",
+        "year": 2026,
+        "published": "2026-02-01",
+        "venue": "IEEE transactions on computers",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large language models (LLMs) have achieved significant breakthroughs on machine learning tasks. Yet the substantial memory footprint of LLMs significantly hinders their wide deployment. In this paper, we propose BitMoD, an algorithm-hardware co-design solution for efficient LLM deployment. On the algorithm side, BitMoD introduces “fine-grained data type adaptation”, which uses a different data type to quantize a group (e.g., 128) of weights and key-value-cache (KV-cache). Through the careful design of these data types, BitMoD is able to quantize LLM weights and KV-cache to sub-4-bit precision while maintaining high accuracy. On the hardware side, BitMoD employs the bit-serial computing to easily support multiple numerical precisions and data types, thus providing a flexible trade-off between model accuracy and hardware efficiency. Furthermore, we design low-cost hardware components to effectively handle online KV-cache quantization and per-group partial sum dequantization. Our evaluation on a diverse set of LLMs demonstrates that BitMoD significantly outperforms state-of-the-art LLM quantization methods on both discriminative and generative tasks. Combining the superior model performance with an efficient accelerator design, BitMoD surpasses the state-of-the-art LLM accelerator in terms of both hardware performance and energy efficiency.",
+        "identifiers": [
+          "SemanticScholar:0cd834e485b12cff6c6f35ae0e3fd3ab610399f0"
+        ],
+        "semantic_scholar_id": "0cd834e485b12cff6c6f35ae0e3fd3ab610399f0",
+        "doi": "10.1109/TC.2025.3628193",
+        "canonical_id": "DOI:10.1109/TC.2025.3628193",
+        "authors": [
+          "Yuzong Chen",
+          "Chi-Chih Chang",
+          "Xilai Dai",
+          "Ahmed Abouelhamayed",
+          "Marta Andronic",
+          "G. Constantinides",
+          "Mohamed S. Abdelfattah"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 254,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/tce.2025.3642866",
+      "identity_tokens": [
+        "id:DOI:10.1109/tce.2025.3642866",
+        "id:SemanticScholar:367d70cc0be2d3c46c6834346461878a77ac8ea1",
+        "title:efficient llm deployment in consumer electronics applications via resourceaware and salienceguided quantization",
+        "url:https://doi.org/10.1109/TCE.2025.3642866"
+      ],
+      "record": {
+        "title": "Efficient LLM Deployment in Consumer Electronics Applications via Resource-Aware and Salience-Guided Quantization",
+        "source_url": "https://doi.org/10.1109/TCE.2025.3642866",
+        "year": 2026,
+        "published": "2026-02-01",
+        "venue": "IEEE transactions on consumer electronics",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large Language Models (LLMs) can stimulate intelligent functions on mobile devices in the applications of consumer electronics. However, it is challenging to deploy LLMs on mobile devices due to limited memory and computational resources that fluctuate as devices execute multiple AI tasks concurrently. Quantization is a widely adopted compression technique, but faces two major difficulties in practical deployment: 1) Existing quantization methods are unable to select suitable models for deployment according to the resource limitations of mobile devices; 2) Mixed-precision quantization-based methods utilize reinforcement learning and element-level quantization, which incurs substantial computational and memory costs on mobile devices. To this end, we propose Resource Awareness-Based Salience-Weighted Mixed-Precision Quantization (RAS-MQ). Specifically, RAS-MQ constructs a memory and latency computation incorporating model parameters and device constraints, then RAS-MQ employs integer linear programming for optimal per-layer bit-width allocation. Weight matrices are partitioned into groups with bit-widths assigned based on average saliency ranking. Furthermore, RAS-MQ applies training-free quantization range clipping to salient weights, which can improve representational capacity while reducing quantization error. Experiments on five zero-shot inference datasets, for the 2-bit quantization of LLaMA2-13B, RAS-MQ outperforms the state-of-the-art baseline (SqueezeLLM) by 0.85% in accuracy and reduces weight memory consumption from 24.5 GB to 4.1 GB, achieving a $5.98\\times $ compression ratio.",
+        "identifiers": [
+          "SemanticScholar:367d70cc0be2d3c46c6834346461878a77ac8ea1"
+        ],
+        "semantic_scholar_id": "367d70cc0be2d3c46c6834346461878a77ac8ea1",
+        "doi": "10.1109/TCE.2025.3642866",
+        "canonical_id": "DOI:10.1109/TCE.2025.3642866",
+        "authors": [
+          "Tian-Fu Pang",
+          "Ying-Chi Mao",
+          "Zhen-Xiang Pan",
+          "Rong-Zhi Qi",
+          "Benteng Zhang",
+          "Xiao-Ming He",
+          "Jie Wu"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 254,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2602.00942",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2602.00942",
+        "id:SemanticScholar:649b24ede8ba02f977e23d0742b7825d318cf932",
+        "id:arXiv:2602.00942",
+        "title:salaad sparse and lowrank adaptation via admm for large language model inference",
+        "url:https://arxiv.org/abs/2602.00942"
+      ],
+      "record": {
+        "title": "SALAAD: Sparse And Low-Rank Adaptation via ADMM for Large Language Model Inference",
+        "source_url": "https://arxiv.org/abs/2602.00942",
+        "year": 2026,
+        "published": "2026-02-01",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Modern large language models are increasingly deployed under compute and memory constraints, making flexible control of model capacity a central challenge. While sparse and low-rank structures naturally trade off capacity and performance, existing approaches often rely on heuristic designs that ignore layer and matrix heterogeneity or require model-specific architectural modifications. We propose SALAAD, a plug-and-play framework applicable to different model architectures that induces sparse and low-rank structures during training. By formulating structured weight learning under an augmented Lagrangian framework and introducing an adaptive controller that dynamically balances the training loss and structural constraints, SALAAD preserves the stability of standard training dynamics while enabling explicit control over the evolution of effective model capacity during training. Experiments across model scales show that SALAAD substantially reduces memory consumption during deployment while achieving performance comparable to ad-hoc methods. Moreover, a single training run yields a continuous spectrum of model capacities, enabling smooth and elastic deployment across diverse memory budgets without the need for retraining.",
+        "identifiers": [
+          "SemanticScholar:649b24ede8ba02f977e23d0742b7825d318cf932"
+        ],
+        "semantic_scholar_id": "649b24ede8ba02f977e23d0742b7825d318cf932",
+        "canonical_id": "arXiv:2602.00942",
+        "arxiv_id": "2602.00942",
+        "doi": "10.48550/arXiv.2602.00942",
+        "authors": [
+          "Hao Ma",
+          "Melis Ilayda Bal",
+          "Liang Zhang",
+          "Bing-Cong Li",
+          "Niao He",
+          "M. Zeilinger",
+          "M. Muehlebach"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 254,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2602.02891",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2602.02891",
+        "id:SemanticScholar:3d8a3581a84d2976275bffce918b8d3021580c37",
+        "id:arXiv:2602.02891",
+        "title:tracenas zeroshot llm pruning via gradient trace correlation",
+        "url:https://arxiv.org/abs/2602.02891"
+      ],
+      "record": {
+        "title": "TraceNAS: Zero-shot LLM Pruning via Gradient Trace Correlation",
+        "source_url": "https://arxiv.org/abs/2602.02891",
+        "year": 2026,
+        "published": "2026-02-02",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Structured pruning is essential for efficient deployment of Large Language Models (LLMs). The varying sensitivity of LLM sub-blocks to pruning necessitates the identification of optimal non-uniformly pruned models. Existing methods evaluate the importance of layers, attention heads, or weight channels in isolation. Such localized focus ignores the complex global structural dependencies that exist across the model. Training-aware structured pruning addresses global dependencies, but its computational cost can be just as expensive as post-pruning training. To alleviate the computational burden of training-aware pruning and capture global structural dependencies, we propose TraceNAS, a training-free Neural Architecture Search (NAS) framework that jointly explores structured pruning of LLM depth and width. TraceNAS identifies pruned models that maintain a high degree of loss landscape alignment with the pretrained model using a scale-invariant zero-shot proxy, effectively selecting models that exhibit maximal performance potential during post-pruning training. TraceNAS is highly efficient, enabling high-fidelity discovery of pruned models on a single GPU in 8.5 hours, yielding a 10$\\times$ reduction in GPU-hours compared to training-aware methods. Evaluations on the Llama and Qwen families demonstrate that TraceNAS is competitive with training-aware baselines across commonsense and reasoning benchmarks.",
+        "identifiers": [
+          "SemanticScholar:3d8a3581a84d2976275bffce918b8d3021580c37"
+        ],
+        "semantic_scholar_id": "3d8a3581a84d2976275bffce918b8d3021580c37",
+        "canonical_id": "arXiv:2602.02891",
+        "arxiv_id": "2602.02891",
+        "doi": "10.48550/arXiv.2602.02891",
+        "authors": [
+          "Prajna G. Malettira",
+          "M. Nagaraj",
+          "Arjun Roy",
+          "Shubham Negi",
+          "Kaushik Roy"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 253,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2602.03922",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2602.03922",
+        "id:SemanticScholar:58ab230abf5d2da1c221e3430ce3bf4e962b270e",
+        "id:arXiv:2602.03922",
+        "title:online vector quantized attention",
+        "url:https://arxiv.org/abs/2602.03922"
+      ],
+      "record": {
+        "title": "Online Vector Quantized Attention",
+        "source_url": "https://arxiv.org/abs/2602.03922",
+        "year": 2026,
+        "published": "2026-02-03",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Standard sequence mixing layers used in language models struggle to balance efficiency and performance. Self-attention performs well on long context tasks but has expensive quadratic compute and linear memory costs, while linear attention and SSMs use only linear compute and constant memory but struggle with long context processing. In this paper, we develop a sequence mixing layer that aims to find a better compromise between memory-compute costs and long-context processing, which we call online vector-quantized (OVQ) attention. OVQ-attention requires linear compute costs and constant memory, but, unlike linear attention and SSMs, it uses a sparse memory update that allows it to greatly increase the size of its memory state and, consequently, memory capacity. We develop a theoretical basis for OVQ-attention based on Gaussian mixture regression, and we test it on a variety of synthetic long context tasks and on long context language modeling. OVQ-attention shows significant improvements over linear attention baselines and the original VQ-attention, on which OVQ-attention was inspired. It demonstrates competitive, and sometimes identical, performance to strong self-attention baselines up 64k sequence length, despite using a small fraction of the memory of full self-attention.",
+        "identifiers": [
+          "SemanticScholar:58ab230abf5d2da1c221e3430ce3bf4e962b270e"
+        ],
+        "semantic_scholar_id": "58ab230abf5d2da1c221e3430ce3bf4e962b270e",
+        "canonical_id": "arXiv:2602.03922",
+        "arxiv_id": "2602.03922",
+        "doi": "10.48550/arXiv.2602.03922",
+        "authors": [
+          "Nick Alonso",
+          "Tomas Figliolia",
+          "Beren Millidge"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 252,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:8ac3b0f1dfcc180cbc0ed371576430286af041353b63ffb1e9d326782e85dc36",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}
