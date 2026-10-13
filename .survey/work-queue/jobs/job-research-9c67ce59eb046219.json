@@ -35,10 +35,15 @@
   "selection_reason": "Tofu partitions large DNN operator graphs across GPUs, lowers per-GPU memory footprint, and reports 25%–400% training speedups. This concrete large-model graph-partitioning and memory technique is transferable to model-parallel systems.",
   "semantic_scholar_id": "7dd7198bb8a61dd22879068e8c4619b32f0470f8",
   "source_url": "https://arxiv.org/abs/1807.08887",
-  "status": "ready",
+  "status": "superseded",
   "title": "Supporting Very Large Models using Automatic Dataflow Graph Partitioning",
   "type": "research",
   "venue": "European Conference on Computer Systems",
   "workflow_version": 10,
-  "year": 2018
+  "year": 2018,
+  "superseded_at": "2026-10-13T12:48:02+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2019-1807.08887-supporting-very-large-models-using-automatic-dataflow-graph-partitioning.md",
+  "represented_canonical_id": "arXiv:1807.08887",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

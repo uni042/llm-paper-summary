@@ -21,6 +21,8 @@ implementation: 'BERT-base、6層DistilBERT、最大1,024トークン対応BERT�
 last_checked: '2026-10-13'
 worker_completed_at: '2026-10-13T10:40:59+09:00'
 worker_run_key: '20261013-1030-scheduled-chat-30/r01'
+last_audited: null
+audit_version: 0
 ---
 
 # TR-BERT：入力ごとにトークンの必要な計算深度を変えるBERT推論高速化

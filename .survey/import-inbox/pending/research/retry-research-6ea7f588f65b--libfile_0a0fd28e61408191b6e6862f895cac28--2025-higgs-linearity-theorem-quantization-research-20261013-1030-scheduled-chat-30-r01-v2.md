@@ -23,6 +23,8 @@ implementation: 'HIGGSの格子はCLVQで事前生成し、2～4ビットの1次
 last_checked: '2026-10-13'
 worker_completed_at: '2026-10-13T10:40:59+09:00'
 worker_run_key: '20261013-1030-scheduled-chat-30/r01'
+last_audited: null
+audit_version: 0
 ---
 
 # HIGGS：量子化誤差とモデル品質の関係を利用したデータ不要・層別ビット配分最適化

@@ -35,10 +35,15 @@
   "selection_reason": "量子化尺度のみを更新するPEQAにより、4ビット未満の重みを保持したまま学習時の更新対象と最適化器メモリを削減する。最大65B規模LLMの省メモリ微調整を扱うため、学習メモリ効率の収録候補。NeurIPS 2023論文。",
   "semantic_scholar_id": "a10843d1349fff8d2a7d9722f800802187fef67f",
   "source_url": "https://arxiv.org/abs/2305.14152",
-  "status": "ready",
+  "status": "superseded",
   "title": "Memory-Efficient Fine-Tuning of Compressed Large Language Models via sub-4-bit Integer Quantization",
   "type": "research",
   "venue": "Neural Information Processing Systems",
   "workflow_version": 10,
-  "year": 2023
+  "year": 2023,
+  "superseded_at": "2026-10-13T12:48:02+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2023-2305.14152-memory-efficient-fine-tuning-of-compressed-large-language-models-via-sub.md",
+  "represented_canonical_id": "arXiv:2305.14152",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
