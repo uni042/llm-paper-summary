@@ -1,34 +1,57 @@
 ---
 canonical_id: DOI:10.18653/v1/2026.acl-long.859
 title: 'SpecCache: Speculative KV Cache Reuse for Efficient RAG Serving'
-summary: '検索拡張生成の複数文書片に対し、軽量な推測モデルの深層隠れ状態ノルムから再計算すべきトークンを選び、意味的な連続区間補完と分かち書き器間の位置対応を経て対象モデルのKVキャッシュを選択的に更新する。A100上のvLLM実装で、全KV再計算と比べ初回トークン遅延を2.17～3.95倍、推論スループットを2.7～5.2倍改善したと報告する。'
-list_summary: '軽量推測モデルの深層状態から重要トークンを選び、意味区間補完・分かち書き器間対応を経てRAGのKVキャッシュを部分再計算し、初回トークン遅延を全再計算比2.17～3.95倍短縮する。'
+summary: 検索拡張生成の複数文書片に対し、軽量な推測モデルの深層隠れ状態ノルムから再計算すべきトークンを選び、意味的な連続区間補完と分かち書き器間の位置対応を経て対象モデルのKVキャッシュを選択的に更新する。A100上のvLLM実装で、全KV再計算と比べ初回トークン遅延を2.17～3.95倍、推論スループットを2.7～5.2倍改善したと報告する。
+list_summary: 軽量推測モデルの深層状態から重要トークンを選び、意味区間補完・分かち書き器間対応を経てRAGのKVキャッシュを部分再計算し、初回トークン遅延を全再計算比2.17～3.95倍短縮する。
 authors:
-  - Zijian Wen
-  - Tao Zhang
-  - Shuangwu Chen
-  - Shenghao Ye
-  - Yu Guo
-  - Qirui Chen
-  - Jingxian Shuai
-  - Yunpeng Hou
-  - Huasen He
-  - Jian Yang
-published: '2026-07'
+- Zijian Wen
+- Tao Zhang
+- Shuangwu Chen
+- Shenghao Ye
+- Yu Guo
+- Qirui Chen
+- Jingxian Shuai
+- Yunpeng Hou
+- Huasen He
+- Jian Yang
+published: 2026-07
 publication: 'Proceedings of the 64th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers), pp. 18861–18871'
-publication_type: '国際会議査読論文'
-publication_status: 'published'
-source: 'https://aclanthology.org/2026.acl-long.859/'
+publication_type: 国際会議査読論文
+publication_status: published
+source: https://aclanthology.org/2026.acl-long.859/
 sources:
-  - 'https://aclanthology.org/2026.acl-long.859/'
-  - 'https://aclanthology.org/2026.acl-long.859.pdf'
+- https://aclanthology.org/2026.acl-long.859/
+- https://aclanthology.org/2026.acl-long.859.pdf
 code: null
-implementation: '著者らはvLLM 0.4.1上でSpecCacheを実装し、2基のNVIDIA A100 40GBを用いたサーバーで測定した。一次論文の本文から公式公開コードのURLは確認できないためcodeはnullとする。'
+implementation: 著者らはvLLM 0.4.1上でSpecCacheを実装し、2基のNVIDIA A100 40GBを用いたサーバーで測定した。一次論文の本文から公式公開コードのURLは確認できないためcodeはnullとする。
 last_checked: '2026-10-13'
 worker_completed_at: '2026-10-13T10:37:41+09:00'
-worker_run_key: '20261013-1030-scheduled-chat-30/r01'
+worker_run_key: 20261013-1030-scheduled-chat-30/r01
 last_audited: null
 audit_version: 0
+references:
+- canonical_id: arXiv:2303.08774
+  arxiv_id: '2303.08774'
+- canonical_id: arXiv:2502.05202
+- canonical_id: arXiv:2406.12335
+- canonical_id: arXiv:2401.09670
+- canonical_id: arXiv:2203.16487
+- canonical_id: arXiv:2503.16525
+- canonical_id: DOI:10.1145/3600006.3613165
+- canonical_id: DOI:10.1145/3651890.3672274
+- canonical_id: arXiv:2405.16444
+- canonical_id: arXiv:2502.15734
+- canonical_id: arXiv:2410.15332
+- canonical_id: arXiv:2404.12457
+- canonical_id: DOI:10.48550/arxiv.2302.01318
+- canonical_id: arXiv:2502.16002
+- canonical_id: arXiv:2401.15077
+- canonical_id: arXiv:2312.07104
+- canonical_id: arXiv:2311.04934
+- canonical_id: arXiv:2211.17192
+references_checked_at: '2026-10-13'
+references_source: primary-pdf-reference-section
+references_total: 1
 ---
 
 # SpecCache: 軽量モデルの深層特徴で再計算箇所を選ぶ検索拡張生成向けKVキャッシュ再利用
