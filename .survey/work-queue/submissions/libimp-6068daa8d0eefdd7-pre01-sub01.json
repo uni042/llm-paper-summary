@@ -1,0 +1,221 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "BOND: A Co-Designed Framework for LLM-Powered Analytics Over Relational Data",
+      "source_url": "https://doi.org/10.1109/ICDE65706.2026.00145",
+      "year": 2026,
+      "published": "2026-05-01",
+      "venue": "IEEE International Conference on Data Engineering",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The integration of Large Language Models (LLMs) into database systems through SQL has made the data analytics workflow elegant. However, this integration introduces significant computational overhead, as conventional LLM inference is not optimized for relational workloads. Existing optimization techniques are often designed for unpredictable online request streams and treat the LLM engine as a black box, failing to leverage the prior knowledge of the entire data batch available in database operations. To bridge this gap, we propose BOND, a co-designed framework that deeply integrates batch-aware optimizations on both the inference engine and data organization sides. Specifically, BOND consists of two main components. First, a batch-efficient LLM inference engine indexes incoming prompts using a radix tree to identify shared prefix. Then, it models batch creation as a bin-packing problem, grouping computations to align with GPU hardware characteristics. As a result, it effectively mitigates tile-quantization effects. Second, a prefix-oriented data re-organizer optimizes the relational data before inference. This process uses a tree-based framework to find a data layout that maximizes prefix sharing and cache localities. Finally, these two components are bridged by a bubble-free task scheduler that ensures continuous GPU utilization in distributed environments. Experimental results show that our approach could reduce query execution time by up to 71.8%.",
+      "identifiers": [
+        "SemanticScholar:8884ab4f824588989707ccb32d7538f003750293"
+      ],
+      "semantic_scholar_id": "8884ab4f824588989707ccb32d7538f003750293",
+      "doi": "10.1109/ICDE65706.2026.00145",
+      "canonical_id": "DOI:10.1109/ICDE65706.2026.00145",
+      "authors": [
+        "Li-Xiang Chen",
+        "Qin Zheng",
+        "Zhicheng Pan",
+        "Cheng-Cheng Yang",
+        "Rong Zhang",
+        "Xuan Zhou"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 165,
+        "matched_prestigious_venue": null
+      },
+      "reason": "IEEE Xplore’s official record confirms BOND reduces query execution time through batch-aware LLM inference, prefix locality, bin packing, and scheduling.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Make Your LVLM KV Cache More Lightweight",
+      "source_url": "https://arxiv.org/abs/2605.00789",
+      "year": 2026,
+      "published": "2026-05-01",
+      "venue": "Trans. Mach. Learn. Res.",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Key-Value (KV) cache has become a de facto component of modern Large Vision-Language Models (LVLMs) for inference. While it enhances decoding efficiency in Large Language Models (LLMs), its direct adoption in LVLMs introduces substantial GPU memory overhead due to the large number of vision tokens processed during the prefill stage. To tackle this problem, we propose LightKV, a novel approach that reduces KV cache size by exploiting the redundancy among vision-token embeddings. Guided by text prompts, LightKV employs cross-modality message passing to aggregate informative messages across vision tokens and progressively compress them during prefill. This prompt-aware guidance distinguishes our method from prior vision-only compression strategies. We evaluate LightKV on eight open-source LVLMs across eight public benchmark datasets, e.g., MME and SeedBench. Experimental results demonstrate that with only 55% of the original vision tokens, LightKV (a) halves the vision-token KV cache size, (b) reduces computation by up to 40%, and (c) preserves general-purpose performance while significantly outperforming existing baselines.",
+      "identifiers": [
+        "SemanticScholar:9c9fa50789123ada374cf2256d1b30e29b730211"
+      ],
+      "semantic_scholar_id": "9c9fa50789123ada374cf2256d1b30e29b730211",
+      "canonical_id": "arXiv:2605.00789",
+      "arxiv_id": "2605.00789",
+      "doi": "10.48550/arXiv.2605.00789",
+      "authors": [
+        "Xihao Chen",
+        "Yangyang Guo",
+        "R. Zimmermann"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 165,
+        "matched_prestigious_venue": null
+      },
+      "reason": "LightKV compresses vision-token KV entries during LVLM prefill and reports lower cache memory and computation while preserving model performance.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "When Less is Enough: Efficient Inference via Collaborative Reasoning",
+      "source_url": "https://arxiv.org/abs/2605.01111",
+      "year": 2026,
+      "published": "2026-05-01",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "In this work, we introduce DUET (Dual-model Efficient Two-stage inference), a collaborative inference framework in which a capable model and a lightweight model work together to solve a task. Relying on a single large model to perform end-to-end reasoning and prediction often incurs substantial inference cost. In contrast, DUET decomposes inference into two stages: the capable model produces a reasoning signal, and the lightweight model interprets this signal to generate the final answer, allowing reasoning-intensive computation to be handled by the capable model while non-reasoning-intensive components are delegated to the lightweight model without sacrificing task performance. To achieve this objective, we propose a length-penalized joint training objective that encourages the capable model to transmit only the information that is sufficient for the lightweight model to solve the task. As a result, DUET maintains strong reasoning performance with substantially lower inference cost than end-to-end inference using a large model alone, saving up to 60% of the large model's output tokens on challenging reasoning benchmarks, including AIME and GPQA.",
+      "identifiers": [
+        "SemanticScholar:1ca4e88d594fe8d615e775967506be85e059a2c0"
+      ],
+      "semantic_scholar_id": "1ca4e88d594fe8d615e775967506be85e059a2c0",
+      "canonical_id": "arXiv:2605.01111",
+      "arxiv_id": "2605.01111",
+      "doi": "10.48550/arXiv.2605.01111",
+      "authors": [
+        "Yi-Lei Chen",
+        "Sharut Gupta",
+        "Yannis Paschalidis",
+        "Ayush Sekhari",
+        "Aldo Pacchiano"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 165,
+        "matched_prestigious_venue": null
+      },
+      "reason": "DUET delegates non-reasoning inference steps to a smaller model and reports up to 60% fewer large-model output tokens with maintained reasoning performance.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "WindowQuant: Mixed-Precision KV Cache Quantization Based on Window-Level Similarity for VLMs Inference Optimization",
+      "source_url": "https://arxiv.org/abs/2605.02262",
+      "year": 2026,
+      "published": "2026-05-04",
+      "venue": "ACM Transactions on Architecture and Code Optimization (TACO)",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Recently, video language models (VLMs) have been applied in various fields. However, the visual token sequence of the VLM is too long, which may cause intolerant inference latency and GPU memory usage. Existing methods propose mixed-precision quantization to the key-value (KV) cache in VLMs based on token granularity, which is time-consuming in the search process and hardware inefficient during computation. This article introduces a novel approach called WindowQuant, which employs window-adaptive mixed-precision quantization to optimize the KV cache. WindowQuant consists of two modules: window-level quantization search and window-level KV cache computation. Window-level quantization search quickly determines the optimal bit-width configuration of the KV cache windows based on the similarity scores between the corresponding visual token windows and the text prompt, maintaining the model accuracy. Furthermore, window-level KV cache computation reorders the KV cache windows before quantization, avoiding the hardware inefficiency caused by mixed-precision quantization in inference computation. Extensive experiments demonstrate that WindowQuant outperforms state-of-the-art VLM models and KV cache quantization methods on various datasets.",
+      "identifiers": [
+        "SemanticScholar:963c27005714397c5e689b039dab58c85a9f8efa"
+      ],
+      "semantic_scholar_id": "963c27005714397c5e689b039dab58c85a9f8efa",
+      "canonical_id": "arXiv:2605.02262",
+      "arxiv_id": "2605.02262",
+      "doi": "10.1145/3817053",
+      "authors": [
+        "Wei Tao",
+        "Xiaoyang Qu",
+        "Pei-Shuo Wang",
+        "Guo-Kuan Li",
+        "Jiguang Wan",
+        "Kai Lu",
+        "Jianzong Wang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 162,
+        "matched_prestigious_venue": null
+      },
+      "reason": "WindowQuant groups KV-cache quantization by visual-token windows and directly targets VLM inference latency, memory, and hardware efficiency.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "HeadQ: Model-Visible Distortion and Score-Space Correction for KV-Cache Quantization",
+      "source_url": "https://arxiv.org/abs/2605.03562",
+      "year": 2026,
+      "published": "2026-05-05",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "KV-cache quantizers usually optimize storage-space reconstruction, even though attention reads keys through logits and values through attention-weighted readout. We argue that persistent cache error should be measured in model-visible coordinates. For keys, the visible object is score error modulo constant shifts; this yields HeadQ, a key-side method that stores a low-rank residual side code in a calibration-learned query basis and applies it as an additive logit correction. For values, fixed-attention readout gives an $A^2$-weighted token-distortion surrogate. Across six models, Fisher/score-space error predicts attention KL far better than raw key MSE; same-budget counterexamples, null-space interventions, query-PCA controls, and wrong-sign HeadQ falsify storage-MSE alternatives. Matched Pythia checkpoints localize the main anomaly to a small-model low-entropy route-flip boundary. In K-only WikiText-103 decode experiments with dense values, HeadQ removes roughly $84$--$94\\%$ of the excess perplexity on the strongest 2-bit rows; in an auxiliary full-KV 2-bit composition, HeadQ plus an $A^2$ value policy improves all six models.",
+      "identifiers": [
+        "SemanticScholar:7ea97b650c5572a6d1eb425eb13cbdda744213f2"
+      ],
+      "semantic_scholar_id": "7ea97b650c5572a6d1eb425eb13cbdda744213f2",
+      "canonical_id": "arXiv:2605.03562",
+      "arxiv_id": "2605.03562",
+      "doi": "10.48550/arXiv.2605.03562",
+      "authors": [
+        "Jorge L. Ruiz Williams"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 161,
+        "matched_prestigious_venue": null
+      },
+      "reason": "The arXiv abstract addresses model-visible KV-cache quantization and reports gains at 2-bit cache budgets; the record is marked withdrawn by its author for ethical concerns, which is retained as source status.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-6068daa8d0ee",
+    "round": "libimp-6068daa8d0eefdd7-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 11,
+    "round_submission_count": 3,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-6068daa8d0eefdd7-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-6068daa8d0eefdd7-pre01.json",
+    "receipt": "sha256:ed6e5abdc53aaab32b8f0971e9a12a141f18fc407270704ac2306fe798bd7ae0"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-6068daa8d0ee",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

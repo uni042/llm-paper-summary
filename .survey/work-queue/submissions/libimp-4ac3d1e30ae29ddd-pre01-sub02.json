@@ -1,0 +1,215 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "KV-Fold: One-Step KV-Cache Recurrence for Long-Context Inference",
+      "source_url": "https://arxiv.org/abs/2605.12471",
+      "year": 2026,
+      "published": "2026-05-12",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "We introduce KV-Fold, a simple, training-free long-context inference protocol that treats the key-value (KV) cache as the accumulator in a left fold over sequence chunks. At each step, the model processes the next chunk conditioned on the accumulated cache, appends the newly produced keys and values, and passes the enlarged cache forward; the same one-step update is applied repeatedly, analogous to foldl in functional programming. Building on the KV cache concatenation primitive introduced for latent multi-agent communication, we repurpose it as a chunk-to-chunk recurrence for long-context inference. When processing chunk t, the model attends to the KV cache carried from earlier chunks as a prefix, reusing its internal state across segments without modifying or retraining the model. Despite its simplicity, the induced recurrence is stable: per-step drift rises briefly and then saturates into a flat plateau that persists across deep chains. This plateau is insensitive to a 10,000x change in numerical precision, robust across chunk sizes, and consistent across model families. At the task level, KV-Fold preserves exact information over long distances. On a needle-in-a-haystack benchmark, it achieves 100% exact-match retrieval across 152 trials spanning contexts from 16K to 128K tokens and chain depths up to 511 on Llama-3.1-8B, while remaining within the memory limits of a single 40GB GPU. Compared to streaming methods, which trade fidelity for bounded memory, KV-Fold maintains long-range retrieval while operating as a sequence of tractable forward passes. Overall, our results show that frozen pretrained transformers already support a stable form of KV-cache recurrence, providing a practical route to long-context inference without architectural changes or training.",
+      "identifiers": [
+        "SemanticScholar:736ad238fb4c5a6899dec9c9f85a03f2367fefcf"
+      ],
+      "semantic_scholar_id": "736ad238fb4c5a6899dec9c9f85a03f2367fefcf",
+      "canonical_id": "arXiv:2605.12471",
+      "arxiv_id": "2605.12471",
+      "doi": "10.48550/arXiv.2605.12471",
+      "authors": [
+        "Alireza Nadali",
+        "Patrick Cooper",
+        "Ashutosh Trivedi",
+        "Alvaro Velasquez"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 154,
+        "matched_prestigious_venue": null
+      },
+      "reason": "KV-Fold reuses accumulated KV state across chunks for long-context inference and reports retrieval within a single-GPU memory limit.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Gaze Attention: Query-Adaptive Visual Routing for Efficient Multimodal LLMs",
+      "source_url": "https://arxiv.org/abs/2605.13080",
+      "year": 2026,
+      "published": "2026-05-13",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "When humans describe a visual scene, they do not process the entire image uniformly; instead, they selectively fixate on regions relevant to their intended description. In contrast, current multimodal large language models (MLLMs) attend to all visual tokens, leading to diluted focus and unnecessary computational overhead. Existing efficiency methods often compress or discard visual information before generation, potentially losing details needed for later predictions. In this work, we introduce Gaze Attention, a mechanism that enables MLLMs to select visual regions according to the needs of each generation step. By grouping visual tokens into spatial regions and selecting those relevant to the current prediction, Gaze Attention reduces attention computation while focusing on relevant visual content. We further introduce learnable context tokens that summarize images or video frames, preserving global context under selective attention. Experiments on 13 image and 6 video understanding benchmarks demonstrate that Gaze Attention matches or surpasses dense-attention baselines while using up to 90% fewer visual KV entries. It also achieves higher average performance than KV-cache eviction baselines under matched visual KV budgets.",
+      "identifiers": [
+        "SemanticScholar:89d8af93a9e478bc3ce434f33e06a27967153a85"
+      ],
+      "semantic_scholar_id": "89d8af93a9e478bc3ce434f33e06a27967153a85",
+      "canonical_id": "arXiv:2605.13080",
+      "arxiv_id": "2605.13080",
+      "authors": [
+        "Junha Song",
+        "Byeong-Young Heo",
+        "Geonmo Gu",
+        "Jaegul Choo",
+        "Dong-Jun Han",
+        "Sangdoo Yun"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 153,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Gaze Attention selects relevant visual regions per generation step, reducing multimodal LLM attention work and visual KV entries.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Exact Linear Attention",
+      "source_url": "https://arxiv.org/abs/2605.18848",
+      "year": 2026,
+      "published": "2026-05-13",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "This paper introduces Exact Linear Attention (ELA), a mechanism that achieves linear computational complexity for Transformer attention by exploiting the exact decomposition property of kernel functions, thereby eliminating approximation error. We identify and address two key limitations of prior linear attention -- gradient explosion and token attention dilution -- by imposing kernel constraints that ensure non-negativity, discriminability, and geometric interpretability. Several kernel functions are proposed, including the Hadamard Exp Kernel, Summation Squared Euclidean Distance Kernel, and Subtraction Squared Euclidean Distance Kernel, each tailored for specific attention behaviors. Beyond the core attention formulation, the paper presents three engineering innovations: (1) a Hyper-Link structure that replaces traditional residual connections to mitigate gradient degradation; (2) a Memory Lobe module based on bidirectional linear attention, which captures\"transformation flow\"across layers to implement qualitative memory and an implicit reinforcement learning paradigm; and (3) a routing-score-based bias mechanism for Mixture-of-Experts (MoE) to improve interpretability and semantic alignment. Experimental results demonstrate that ELA achieves up to 6x faster decoding speed and 75% reduction in KV cache memory usage compared to full attention, while maintaining comparable or superior training performance. The proposed memory module accelerates convergence and enhances generalization. Furthermore, we extend the linear attention principle to vision models, yielding YOLO-LAT, which attains up to 4.3x GPU inference speedup and 7.9x parameter reduction with competitive detection accuracy. These results underline the broad applicability of exact linear attention for scaling Transformer models to ultra-long sequences and efficient visual tasks.",
+      "identifiers": [
+        "SemanticScholar:b19e006bd60f07a40a1d8802464420dd6cba8bfb"
+      ],
+      "semantic_scholar_id": "b19e006bd60f07a40a1d8802464420dd6cba8bfb",
+      "canonical_id": "arXiv:2605.18848",
+      "arxiv_id": "2605.18848",
+      "doi": "10.48550/arXiv.2605.18848",
+      "authors": [
+        "Weinuo Ou"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 153,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Exact Linear Attention claims linear-complexity Transformer attention and reports faster decoding and lower KV-cache use.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Minimal-Intervention KV Retention via Set-Conditioned Diversity",
+      "source_url": "https://arxiv.org/abs/2605.14292",
+      "year": 2026,
+      "published": "2026-05-14",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "KV-cache compression at small budgets is a crowded design space spanning cache representation, head-wise routing, compression cadence, decoding behavior, and within-budget scoring. We study seven mechanisms across these five families under matched mean cache on long-form mathematical reasoning (MATH-500~\\cite{hendrycks2021math}) with two distilled-reasoning models (Qwen-7B and Llama-8B variants of DeepSeek-R1-Distill~\\cite{deepseek2025r1}) at budgets $b \\in \\{64, 128\\}$. All seven were rejected. We then propose $\\alpha$, a one-function modification to the TriAttention~\\cite{mao2026triattention} retention scorer that replaces argmax-top-$k$ with greedy facility-location-inspired selection under a V-space redundancy penalty controlled by a single weight $\\lambda$. A pre-registered protocol tunes $\\lambda$ on a frozen development split and confirms on a disjoint held-out split; with $\\lambda = 0.5$, $\\alpha$ clears Bonferroni on two of the four (model, budget) cells (Qwen $b{=}128$ and Llama $b{=}64$), no cell is significantly negative, and the pre-registered Branch~A triggers. The finding is asymmetric: a minimal scoring modification beat heavier structural redesigns in this regime, and the combined matched-memory, sympy-graded, held-out confirmation protocol is the evidence standard that made the asymmetry visible.",
+      "identifiers": [
+        "SemanticScholar:b5299a3ece7d8ef231e9b25a0f546079bc354427"
+      ],
+      "semantic_scholar_id": "b5299a3ece7d8ef231e9b25a0f546079bc354427",
+      "canonical_id": "arXiv:2605.14292",
+      "arxiv_id": "2605.14292",
+      "doi": "10.48550/arXiv.2605.14292",
+      "authors": [
+        "Libo Sun",
+        "P. Harn",
+        "Pei-Xiong He",
+        "Xi Qin"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 152,
+        "matched_prestigious_venue": null
+      },
+      "reason": "The official arXiv v2 abstract reports a KV-cache retention-scoring change using a V-space redundancy penalty; it directly targets inference cache selection.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "XFP: Quality-Targeted Adaptive Codebook Quantization with Sparse Outlier Separation for LLM Inference",
+      "source_url": "https://arxiv.org/abs/2605.14844",
+      "year": 2026,
+      "published": "2026-05-14",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "We introduce XFP, a dynamic weight quantizer for LLM inference that inverts the conventional workflow: the operator specifies reconstruction quality floors on per-channel cosine similarity (one strict floor for attention and shared experts, one lazy floor for routed-expert MoE); XFP determines codebook size, outlier budget, and packing per layer automatically -- no Hessian, no calibration data, no manual bit-width selection. Each weight matrix is decomposed into a sparse fp16 outlier residual and a dense sub-byte index tensor into a per-group learned codebook. Two storage modes share one auto-select frontend and one fused decode kernel: V2 (per-channel Lloyd) and V2a (shared library of L=32 codebooks per layer). On Qwen3.5-122B-A10B under V2, XFP reaches 138 tok/s single-stream decode on workstation hardware (RTX PRO 6000 Blackwell, TP=2) at 94.49% GSM8K strict-match (3 seeds, n=3957), and is 49% faster than Marlin INT4 at TP=1. For models that do not fit in the target memory envelope, we present the H-Process: a quality-driven iteration over the two cosine thresholds that finds the operating point at which the model just fits while still producing sensible output. Three constraints define its search space: the operator-set thresholds, an OOM boundary at quantize-on-load, and a garbage boundary in generation (cosine similarity steers; benches verify). On Qwen3.5-397B-A17B (512 routed experts/layer), the H-Process fits the full expert population into 2x96 GB at ~3.4 effective bits and delivers 100.9 tok/s long-output decode at 66.72% GSM8K strict-match on the full 1319-problem set (single seed at submission; multi-seed evaluation in progress), exceeding INT4 with routed-expert pruning on memory, throughput, and accuracy simultaneously.",
+      "identifiers": [
+        "SemanticScholar:30cb86b88c2f7ec942676da7627253b1b7a37da3"
+      ],
+      "semantic_scholar_id": "30cb86b88c2f7ec942676da7627253b1b7a37da3",
+      "canonical_id": "arXiv:2605.14844",
+      "arxiv_id": "2605.14844",
+      "doi": "10.48550/arXiv.2605.14844",
+      "authors": [
+        "T. Witt"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 152,
+        "matched_prestigious_venue": null
+      },
+      "reason": "XFP performs adaptive sub-byte weight quantization for LLM inference and reports decode throughput and memory-fit results.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-4ac3d1e30ae2",
+    "round": "libimp-4ac3d1e30ae29ddd-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 13,
+    "round_submission_count": 3,
+    "round_submission_index": 2,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-4ac3d1e30ae29ddd-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-4ac3d1e30ae29ddd-pre01.json",
+    "receipt": "sha256:94f94bf5d7ee55bc30164634a76e9e8e609cf8c13d2d9f93f9485d0366cb7763"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-4ac3d1e30ae2",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

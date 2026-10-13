@@ -1,0 +1,109 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Long-Context Aware Upcycling: A New Frontier for Hybrid LLM Scaling",
+      "source_url": "https://arxiv.org/abs/2604.24715",
+      "year": 2026,
+      "published": "2026-04-27",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Hybrid sequence models that combine efficient Transformer components with linear sequence modeling blocks are a promising alternative to pure Transformers, but most are still pretrained from scratch and therefore fail to reuse existing Transformer checkpoints. We study upcycling as a practical path to convert pretrained Transformer LLMs into hybrid architectures while preserving short-context quality and improving long-context capability. We call our solution \\emph{HyLo} (HYbrid LOng-context): a long-context upcycling recipe that combines architectural adaptation with efficient Transformer blocks, Multi-Head Latent Attention (MLA), and linear blocks (Mamba2 or Gated DeltaNet), together with staged long-context training and teacher-guided distillation for stable optimization. HyLo extends usable context length by up to $32\\times$ through efficient post-training and reduces KV-cache memory by more than $90\\%$, enabling up to 2M-token prefill and decoding in our \\texttt{vLLM} inference stack, while comparable Llama baselines run out of memory beyond 64K context. Across 1B- and 3B-scale settings (Llama- and Qwen-based variants), HyLo delivers consistently strong short- and long-context performance and significantly outperforms state-of-the-art upcycled hybrid baselines on long-context evaluations such as RULER. Notably, at similar scale, HyLo-Qwen-1.7B trained on only 10B tokens significantly outperforms JetNemotron (trained on 400B tokens) on GSM8K, Lm-Harness common sense reasoning and RULER-64K.",
+      "identifiers": [
+        "SemanticScholar:c95bf21e359d9c4b17119c0d36cee8de848733fd"
+      ],
+      "semantic_scholar_id": "c95bf21e359d9c4b17119c0d36cee8de848733fd",
+      "canonical_id": "arXiv:2604.24715",
+      "arxiv_id": "2604.24715",
+      "doi": "10.48550/arXiv.2604.24715",
+      "authors": [
+        "Parsa Ashrafi Fashi",
+        "Utkarsh Saxena",
+        "Mehdi Rezagholizadeh",
+        "A. Jafari",
+        "Akash Haridas",
+        "Mingyu Yang",
+        "Vansh Bhatia",
+        "Guihong Li",
+        "Vikram V. Appia",
+        "E. Barsoum"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 169,
+        "matched_prestigious_venue": null
+      },
+      "reason": "HyLo combines efficient attention and linear blocks, reporting over 90% lower KV-cache memory and long-context operation in a vLLM inference stack.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "An Empirical Study of Speculative Decoding on Software Engineering Tasks",
+      "source_url": "https://arxiv.org/abs/2604.26469",
+      "year": 2026,
+      "published": "2026-04-29",
+      "venue": "Proceedings of the ACM on Software Engineering",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Models (LLMs) have become widely used for Software Engineering (SE) tasks, spanning from function-level code generation to complex repository-level workflows. However, the high latency of autoregressive inference remains a significant bottleneck, hindering their deployment in interactive environments. While Speculative Decoding (SD) offers a promising technique for lossless acceleration, prior research on long-context repository-level tasks and complex agentic interactions remains limited. To bridge this gap, we present a systematic empirical study to evaluate the effectiveness of SD in SE tasks. We benchmark a representative spectrum of strategies, encompassing both model-based and model-free methods, across generation, editing, and repair scenarios. Our empirical results show that SD provides clear acceleration potential for SE tasks, but its realized benefits jointly vary with model architecture and task scenario. Specifically, model-based approaches are well-suited for code generation, whereas model-free methods are better adapted to repository-level repair and editing scenarios. We further observe that the repetitiveness of SE tasks improves the performance of model-free methods, while complex agentic workflows can introduce repetitive failure modes that skew acceleration measurements. In contrast to natural language tasks, the higher predictability of SE tasks allows for more aggressive hyperparameter settings. Our findings provide practical guidance for selecting, configuring, and evaluating SD methods in SE scenarios.",
+      "identifiers": [
+        "SemanticScholar:88ea7de6ca271ba4655a951acb2365edf292f4cc"
+      ],
+      "semantic_scholar_id": "88ea7de6ca271ba4655a951acb2365edf292f4cc",
+      "canonical_id": "arXiv:2604.26469",
+      "arxiv_id": "2604.26469",
+      "doi": "10.1145/3832145",
+      "authors": [
+        "Yi-Jia Li",
+        "Junkai Chen",
+        "Xing Hu",
+        "Xin Xia"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 167,
+        "matched_prestigious_venue": null
+      },
+      "reason": "This primary-source empirical study benchmarks speculative decoding across software-engineering generation, editing, and repair tasks to improve LLM inference efficiency.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-c9c239abf1f4",
+    "round": "libimp-c9c239abf1f4d7cf-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 7,
+    "round_submission_count": 2,
+    "round_submission_index": 2,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-c9c239abf1f4d7cf-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-c9c239abf1f4d7cf-pre01.json",
+    "receipt": "sha256:fbd82fb40cf6855300054cdf8497356cbcb284cf5ec43098ede6e0f841365d36"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-c9c239abf1f4",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
