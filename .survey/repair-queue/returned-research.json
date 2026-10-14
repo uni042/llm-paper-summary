@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-14T11:51:51+00:00",
+  "generated_at": "2026-10-14T11:58:16+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 96,
+  "count": 98,
   "entries": [
     {
       "canonical_id": "DOI:10.1145/3714983.3714987",
@@ -1390,33 +1390,6 @@
       "worker_run_key": "20261013-2200-scheduled-chat-00/r01"
     },
     {
-      "canonical_id": "arXiv:2512.14244",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-14T10:41:37+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 175 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5541,
-        "body_paragraphs": 34,
-        "method_chars": 1610,
-        "method_paragraphs": 9,
-        "evaluation_chars": 175,
-        "limitation_chars": 752,
-        "insufficiency_flags": [
-          "評価説明量 175 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_510e63254f748191865cf57db14737e8--2025-2512.14244-lingoedu-structured-context-compression-research-20261014-1600-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_510e63254f748191865cf57db14737e8--2025-2512.14244-lingoedu-structured-context-compression-research-20261014-1600-scheduled-chat-00-r01.json",
-      "worker_run_key": "20261014-1600-scheduled-chat-00/r01"
-    },
-    {
       "canonical_id": "arXiv:2511.19676",
       "title": null,
       "source_url": null,
@@ -2310,8 +2283,8 @@
     },
     {
       "canonical_id": "arXiv:2512.24545",
-      "title": "More Than Bits: Multi-Envelope Double Binary Factorization for Extreme Quantization",
-      "source_url": "https://arxiv.org/abs/2512.24545",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-14T11:49:45+00:00",
       "return_count": 1,
       "assigned_worker": "scheduled-chat-45",
@@ -2335,8 +2308,8 @@
     },
     {
       "canonical_id": "arXiv:2603.13430",
-      "title": "Dynamic Sparse Attention: Access Patterns and Architecture",
-      "source_url": "https://arxiv.org/pdf/2603.13430",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-14T11:49:46+00:00",
       "return_count": 1,
       "assigned_worker": "scheduled-chat-45",
@@ -2360,8 +2333,8 @@
     },
     {
       "canonical_id": "arXiv:2603.02096",
-      "title": "FluxMem: Adaptive Hierarchical Memory for Streaming Video Understanding",
-      "source_url": "https://arxiv.org/html/2603.02096v1",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-14T11:49:47+00:00",
       "return_count": 1,
       "assigned_worker": "scheduled-chat-30",
@@ -2382,6 +2355,88 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_6c0ca3dcff7881919578ee715c8bc008--2026-2603.02096-fluxmem-hierarchical-streaming-video-memory-research-20261014-1745-scheduled-chat-45-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_6c0ca3dcff7881919578ee715c8bc008--2026-2603.02096-fluxmem-hierarchical-streaming-video-memory-research-20261014-1745-scheduled-chat-45-r01.json",
       "worker_run_key": "20261014-1745-scheduled-chat-45/r01"
+    },
+    {
+      "canonical_id": "arXiv:2512.14244",
+      "title": "From Context to EDUs: Faithful and Structured Context Compression via Elementary Discourse Unit Decomposition",
+      "source_url": "https://arxiv.org/abs/2512.14244",
+      "returned_at": "2026-10-14T11:57:08+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 175 < 500",
+        "長文定型文の再利用を検出: .survey/import-inbox/pending/research/retry-research-c61d5f8db535--libfile_510e63254f748191865cf57db14737e8--2025-2512.14244-lingoedu-structured-context-compression-research-20261014-1600-scheduled-chat-00-r01.md と 14 段落 / 3847文字 (100.0%) が完全一致"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5541,
+        "body_paragraphs": 34,
+        "method_chars": 1610,
+        "method_paragraphs": 9,
+        "evaluation_chars": 175,
+        "limitation_chars": 752,
+        "insufficiency_flags": [
+          "評価説明量 175 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_510e63254f748191865cf57db14737e8--2025-2512.14244-lingoedu-structured-context-compression-research-20261014-1600-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_510e63254f748191865cf57db14737e8--2025-2512.14244-lingoedu-structured-context-compression-research-20261014-1600-scheduled-chat-00-r01.json",
+      "worker_run_key": "20261014-1600-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2608.26005",
+      "title": "VoiceMem: Streaming Dual-Brain Memory for Real-Time Interaction",
+      "source_url": "https://arxiv.org/abs/2608.26005",
+      "returned_at": "2026-10-14T11:57:08+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2026-2608.26005-voicemem-streaming-dual-brain-memory-for-real-time-interaction.md と 14 段落 / 2941文字 (100.0%) が完全一致"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5805,
+        "body_paragraphs": 34,
+        "method_chars": 2238,
+        "method_paragraphs": 13,
+        "evaluation_chars": 1120,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_852b156b821c81919b3e879785532e3f--2026-2608.26005-voicemem-streaming-dual-brain-research-20261014-1600-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_852b156b821c81919b3e879785532e3f--2026-2608.26005-voicemem-streaming-dual-brain-research-20261014-1600-scheduled-chat-00-r01.json",
+      "worker_run_key": "20261014-1600-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2605.07260",
+      "title": "When Are Experts Misrouted? Counterfactual Routing Analysis in Mixture-of-Experts Language Models",
+      "source_url": "https://arxiv.org/html/2605.07260v1",
+      "returned_at": "2026-10-14T11:57:09+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2026-2605.07260-when-are-experts-misrouted-counterfactual-routing-analysis-in-mixture-of.md と 12 段落 / 2465文字 (100.0%) が完全一致"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5574,
+        "body_paragraphs": 36,
+        "method_chars": 1614,
+        "method_paragraphs": 10,
+        "evaluation_chars": 1127,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_d41a832820a88191bbead1b7d5f0eb10--2026-2605.07260-moe-counterfactual-routing-research-20261014-0845-scheduled-chat-45-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_d41a832820a88191bbead1b7d5f0eb10--2026-2605.07260-moe-counterfactual-routing-research-20261014-0845-scheduled-chat-45-r01.json",
+      "worker_run_key": "20261014-0845-scheduled-chat-45/r01"
     }
   ]
 }

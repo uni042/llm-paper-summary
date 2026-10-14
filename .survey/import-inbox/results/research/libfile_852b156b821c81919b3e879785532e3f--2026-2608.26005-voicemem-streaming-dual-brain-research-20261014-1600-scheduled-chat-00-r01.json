@@ -1,13 +1,12 @@
 {
   "schema_version": 1,
   "artifact_type": "research",
-  "status": "imported",
+  "status": "blocked_quality",
   "source_sha256": "4581273c1d8fe32f44afcee697c5aa8741ee4e55a447d68b7fe063ca9b415a27",
-  "canonical_id": "arXiv:2608.26005",
-  "paper_path": "papers/inference/99-other-inference-systems/2026-2608.26005-voicemem-streaming-dual-brain-memory-for-real-time-interaction.md",
-  "lineage": "99-other-inference-systems",
-  "audit_status": "WARN",
+  "normalized_source_sha256": null,
   "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_852b156b821c81919b3e879785532e3f--2026-2608.26005-voicemem-streaming-dual-brain-research-20261014-1600-scheduled-chat-00-r01.md",
+  "canonical_id": "arXiv:2608.26005",
   "worker_completed_at": "2026-10-14T16:08:13+09:00",
   "worker_run_key": "20261014-1600-scheduled-chat-00/r01",
   "quality_metrics": {
@@ -22,5 +21,8 @@
       "限界説明量 0 < 推奨 120"
     ]
   },
-  "processed_at": "2026-10-14T11:06:23+00:00"
+  "failures": [
+    "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2026-2608.26005-voicemem-streaming-dual-brain-memory-for-real-time-interaction.md と 14 段落 / 2941文字 (100.0%) が完全一致"
+  ],
+  "processed_at": "2026-10-14T11:57:08+00:00"
 }
