@@ -32,6 +32,8 @@ lineage: "99-other-inference-systems"
 references: []
 references_checked_at: "2026-10-14"
 references_source: "https://arxiv.org/html/2605.07260v1"
+last_audited: null
+audit_version: 0
 ---
 
 # When Are Experts Misrouted?：MoEの経路選択が難しいトークンで失敗する条件

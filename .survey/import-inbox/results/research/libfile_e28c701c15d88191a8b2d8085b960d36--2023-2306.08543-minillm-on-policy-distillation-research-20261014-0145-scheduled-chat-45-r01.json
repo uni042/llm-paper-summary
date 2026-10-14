@@ -1,13 +1,12 @@
 {
   "schema_version": 1,
   "artifact_type": "research",
-  "status": "imported",
+  "status": "blocked_quality",
   "source_sha256": "99a1273bbadb6aa5946be1d518c2bb689030b6c612f99856be25e53bc108d5c6",
-  "canonical_id": "arXiv:2306.08543",
-  "paper_path": "papers/inference/99-other-inference-systems/2023-2306.08543-minillm-on-policy-distillation-of-large-language-models.md",
-  "lineage": "99-other-inference-systems",
-  "audit_status": "PASS",
+  "normalized_source_sha256": null,
   "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_e28c701c15d88191a8b2d8085b960d36--2023-2306.08543-minillm-on-policy-distillation-research-20261014-0145-scheduled-chat-45-r01.md",
+  "canonical_id": "arXiv:2306.08543",
   "worker_completed_at": "2026-10-14T01:51:00+09:00",
   "worker_run_key": "20261014-0145-scheduled-chat-45/r01",
   "quality_metrics": {
@@ -20,5 +19,8 @@
     "limitation_chars": 923,
     "insufficiency_flags": []
   },
-  "processed_at": "2026-10-14T07:52:54+00:00"
+  "failures": [
+    "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2023-2306.08543-minillm-on-policy-distillation-of-large-language-models.md と 23 段落 / 5357文字 (100.0%) が完全一致"
+  ],
+  "processed_at": "2026-10-14T12:03:00+00:00"
 }
