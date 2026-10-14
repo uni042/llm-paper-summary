@@ -1,0 +1,30 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "discovery-20261014-main-e309-screen-51-part-02-0ad862bc1284::provider-gap",
+  "reference_main_sha": "01f84242b969f9e8c4364599996d1609cb4ea4b0",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.12142/ZTETJ.202402003",
+      "identity_tokens": [
+        "DOI:10.12142/ZTETJ.202402003",
+        "SemanticScholar:990cca64e27b0c29c80ae4aa6920db01913cc92f"
+      ],
+      "title": "Review of Evolution of Large Language Model Algorithms",
+      "reason": "The publisher abstract reviews LLM algorithm development and explicitly includes inference efficiency, distributed computation, memory and quantization.",
+      "source_url": "https://www.zte.com.cn/content/dam/zte-site/res-www-zte-com-cn/mediares/magazine/publication/com_cn/article/202402/3.pdf",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T01:11:26Z",
+      "last_checked_at": "2026-10-14T01:11:26Z",
+      "linked_from": []
+    }
+  ],
+  "parent_run_key": "discovery-20261014-main-e309-screen-51-part-02-0ad862bc1284",
+  "provider_gap_from": ".survey/import-inbox/waiting/discovery/discovery-20261014-main-e309-screen-51-part-02-0ad862bc1284-060888120939.json",
+  "provider_gap_ids": [
+    "DOI:10.12142/ztetj.202402003"
+  ]
+}
