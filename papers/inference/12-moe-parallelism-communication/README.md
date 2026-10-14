@@ -152,16 +152,20 @@ MoEの専門家並列、テンソル並列との混成、all-to-all通信、専�
   トークンと専門家の活性化親和性を事前学習し、専門家配置と要求・トークン配置を協調させてMoEの全対全通信を削減する推論方式。
 
 - **2025-09 · [GRACE-MoE: Grouping and Replication with Locality-Aware Routing for Efficient Distributed MoE Inference](2025-2509.25041-grace-moe-grouping-and-replication-with-locality-aware-routing-for-efficient-distributed-moe-inference.md)**  
-  実装：✓ ・ リポジトリ内被引用：5  
+  実装：✓ ・ リポジトリ内被引用：6  
   共活性に基づく階層専門家配置、動的複製、局所性・負荷認識ルーティング、階層疎通信を組み合わせ、分散MoE推論を最大4.66倍高速化するGRACE-MoE。
+
+- **2024-11 · [Communication Compression for Tensor Parallel LLM Inference](2024-2411.09510-communication-compression-for-tensor-parallel-llm-inference.md)**  
+  実装：✓ ・ リポジトリ内被引用：5  
+  テンソル並列の部分活性値を集合通信直前に細粒度量子化し、低帯域8×L4ではLlama2-70BのTTFTを最大約2.08倍改善する一方、高帯域A100では逆効果になる条件も示す。
+
+- **2025-08 · [Accelerating Edge Inference for Distributed MoE Models with Latency-Optimized Expert Placement](2025-2508.12851-dancemoe-latency-optimized-edge-expert-placement.md)**  
+  実装：✓ ・ リポジトリ内被引用：4  
+  活性化頻度とエントロピーに基づく専門家配置と費用認識型移行により、異種エッジMoE推論の遠隔通信と遅延を削減する。
 
 - **2025-03 · [Capacity-Aware Inference: Mitigating the Straggler Effect in Mixture of Experts](2025-2503.05066-capacity-aware-inference-mitigating-the-straggler-effect-in-mixture-of-experts.md)**  
   実装：[✓](https://github.com/CASE-Lab-UMD/Capacity-Aware-MoE) ・ リポジトリ内被引用：4  
   専門家並列（専門家 Parallelism; EP）では、平均トークン数が同じでも一部専門家に負荷が集中すると、その専門家を担当するGPUが同期点を支配する。Capacity-Aware Inferenceは各専門家へ容量上限を設け、低ゲートスコアの超過トークンを落とすか、同一GPU上の追加候補専門家へ逃がすことでこのストラグラー効果を抑える。
-
-- **2024-11 · [Communication Compression for Tensor Parallel LLM Inference](2024-2411.09510-communication-compression-for-tensor-parallel-llm-inference.md)**  
-  実装：✓ ・ リポジトリ内被引用：4  
-  テンソル並列の部分活性値を集合通信直前に細粒度量子化し、低帯域8×L4ではLlama2-70BのTTFTを最大約2.08倍改善する一方、高帯域A100では逆効果になる条件も示す。
 
 - **2025-10 · [ElasticMoE: An Efficient Auto Scaling Method for Mixture-of-Experts Models](2025-2510.02613-elasticmoe-an-efficient-auto-scaling-method-for-mixture-of-experts-model.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
@@ -171,12 +175,8 @@ MoEの専門家並列、テンソル並列との混成、all-to-all通信、専�
   実装：[✓](https://github.com/angerybob/HD-MoE) ・ リポジトリ内被引用：3  
   推論時には直近の専門家選択を用いて次層の負荷を予測し、過負荷になりそうな専門家を限られた時間内に事前配信し、追加通信を増やさない範囲でトークンを空いた節点へ振り分ける。
 
-- **2025-08 · [Accelerating Edge Inference for Distributed MoE Models with Latency-Optimized Expert Placement](2025-2508.12851-dancemoe-latency-optimized-edge-expert-placement.md)**  
-  実装：✓ ・ リポジトリ内被引用：3  
-  活性化頻度とエントロピーに基づく専門家配置と費用認識型移行により、異種エッジMoE推論の遠隔通信と遅延を削減する。
-
 - **2025-05 · [Occult: Optimizing Collaborative Communication across Experts for Accelerated Parallel MoE Training and Inference](2025-2505.13345-occult-collaborative-expert-communication.md)**  
-  実装：[✓](https://github.com/UNITES-Lab/Occult) ・ リポジトリ内被引用：1  
+  実装：[✓](https://github.com/UNITES-Lab/Occult) ・ リポジトリ内被引用：2  
   共活性化する専門家を同一GPUへ集約し、再索引付き疎行列積と協調剪定でトークン複製を減らすことで、MoEの全対全通信を削減し学習・推論を1.5倍超高速化する。
 
 ### 3年前（2023-11〜2024-10）
@@ -206,7 +206,7 @@ MoEの専門家並列、テンソル並列との混成、all-to-all通信、専�
   Tutelは、混合専門家モデル（Mixture-of-Experts; MoE）で反復ごとに変わる専門家負荷へ実行系を追従させる分散実行基盤である。固定の並列化方式や固定の通信・計算パイプラインは、この変動に対して一つの実行形態しか使えず、通信時間または専門家計算時間のどちらかを無駄にしやすい。
 
 - **2022-10 · [Accelerating Distributed MoE Training and Inference with Lina](2022-2210.17223-accelerating-distributed-moe-training-and-inference-with-lina.md)**  
-  実装：✓ ・ リポジトリ内被引用：16  
+  実装：✓ ・ リポジトリ内被引用：17  
   Linaは、分散した混合専門家モデル（Mixture of エキスパート、MoE）の通信を、学習と推論で異なる原因に分解して高速化するシステムである。論文の事前計測では、全対全通信が処理段階時間の平均34.1%、ある層の順伝播時間の74.9%を占め、通信中のGPU演算器利用率は平均3.7%にとどまった。
 
 ### 6年前（2020-11〜2021-10）
