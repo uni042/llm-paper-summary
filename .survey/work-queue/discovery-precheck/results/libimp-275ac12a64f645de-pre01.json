@@ -1,0 +1,506 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-275ac12a64f645de-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-275ac12a64f6",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "DOI:10.1109/compsac61105.2024.00066",
+    "SemanticScholar:960c518980cf8cf17132cc06a380c6c81ce24f6b",
+    "arXiv:2505.07596",
+    "arXiv:2510.12603",
+    "arXiv:2601.05038"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 5,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "4e82b3ec45ea1be874c1372060bcee49c28462ec",
+  "raw_search_result_count": 5,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 5,
+  "provider_progress": {
+    "requested_count": 5,
+    "status_counts": {
+      "allowed": 5,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-14T06:38:09.190181+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "DOI:10.1109/compsac61105.2024.00066",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "SemanticScholar:960c518980cf8cf17132cc06a380c6c81ce24f6b",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2505.07596",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2510.12603",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2601.05038",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "ArcAligner: Adaptive Recursive Aligner for Compressed Context Embeddings in RAG",
+      "source_url": "https://arxiv.org/abs/2601.05038",
+      "year": 2026,
+      "published": "2026-01-08",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Retrieval-Augmented Generation (RAG) helps LLMs stay accurate, but feeding long documents into a prompt makes the model slow and expensive. This has motivated context compression, ranging from token pruning and summarization to embedding-based compression. While researchers have tried''compressing''these documents into smaller summaries or mathematical embeddings, there is a catch: the more you compress the data, the more the LLM struggles to understand it. To address this challenge, we propose ArcAligner (Adaptive recursive context *Aligner*), a lightweight module integrated into the language model layers to help the model better utilize highly compressed context representations for downstream generation. It uses an adaptive''gating''system that only adds extra processing power when the information is complex, keeping the system fast. Across knowledge-intensive QA benchmarks, ArcAligner consistently beats compression baselines at comparable compression rates, especially on multi-hop and long-tail settings. The source code is publicly available.",
+      "identifiers": [
+        "SemanticScholar:04882703189344a12f5cdb48a661019e6c5da4ed"
+      ],
+      "semantic_scholar_id": "04882703189344a12f5cdb48a661019e6c5da4ed",
+      "canonical_id": "arXiv:2601.05038",
+      "arxiv_id": "2601.05038",
+      "doi": "10.48550/arXiv.2601.05038",
+      "authors": [
+        "Jianbo Li",
+        "Yi Jiang",
+        "Sendong Zhao",
+        "Bairui Hu",
+        "Haochun Wang",
+        "Bing Qin"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 279,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Reasoning in the Dark: Interleaved Vision-Text Reasoning in Latent Space",
+      "source_url": "https://arxiv.org/abs/2510.12603",
+      "year": 2025,
+      "published": "2025-10-14",
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "citation_count": 26,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Multimodal reasoning aims to enhance the capabilities of MLLMs by incorporating intermediate reasoning steps before reaching the final answer. It has evolved from text-only reasoning to the integration of visual information, enabling the thought process to be conveyed through both images and text. Despite its effectiveness, current multimodal reasoning methods depend on explicit reasoning steps that require labor-intensive vision-text annotations and inherently introduce significant inference latency. To address these issues, we introduce multimodal latent reasoning with the advantages of multimodal representation, reduced annotation, and inference efficiency. To facilitate it, we propose Interleaved Vision-Text Latent Reasoning (IVT-LR), which injects both visual and textual information in the reasoning process within the latent space. Specifically, IVT-LR represents each reasoning step by combining two implicit parts: latent text (the hidden states from the previous step) and latent vision (a set of selected image embeddings). We further introduce a progressive multi-stage training strategy to enable MLLMs to perform the above multimodal latent reasoning steps. Experiments on M$^3$CoT and ScienceQA demonstrate that our IVT-LR method achieves an average performance increase of 5.45\\% in accuracy, while simultaneously achieving a speed increase of over 5 times compared to existing approaches.",
+      "identifiers": [
+        "SemanticScholar:a4904dfe4348cfac742c8724a25c2c403d4db0e7"
+      ],
+      "semantic_scholar_id": "a4904dfe4348cfac742c8724a25c2c403d4db0e7",
+      "canonical_id": "arXiv:2510.12603",
+      "arxiv_id": "2510.12603",
+      "doi": "10.48550/arXiv.2510.12603",
+      "authors": [
+        "Chao Chen",
+        "Zhixin Ma",
+        "Yong-Qi Li",
+        "Yu-Peng Hu",
+        "Yinwei Wei",
+        "Wen-Jie Li",
+        "Liqiang Nie"
+      ],
+      "priority": 36,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 26,
+        "citation_count": 26,
+        "total": 36,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 365,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      }
+    },
+    {
+      "title": "Reinforced Internal-External Knowledge Synergistic Reasoning for Efficient Adaptive Search Agent",
+      "source_url": "https://arxiv.org/abs/2505.07596",
+      "year": 2025,
+      "published": "2025-05-12",
+      "venue": "arXiv.org",
+      "citation_count": 31,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Retrieval-augmented generation (RAG) is a common strategy to reduce hallucinations in Large Language Models (LLMs). While reinforcement learning (RL) can enable LLMs to act as search agents by activating retrieval capabilities, existing ones often underutilize their internal knowledge. This can lead to redundant retrievals, potential harmful knowledge conflicts, and increased inference latency. To address these limitations, an efficient and adaptive search agent capable of discerning optimal retrieval timing and synergistically integrating parametric (internal) and retrieved (external) knowledge is in urgent need. This paper introduces the Reinforced Internal-External Knowledge Synergistic Reasoning Agent (IKEA), which could indentify its own knowledge boundary and prioritize the utilization of internal knowledge, resorting to external search only when internal knowledge is deemed insufficient. This is achieved using a novel knowledge-boundary aware reward function and a knowledge-boundary aware training dataset. These are designed for internal-external knowledge synergy oriented RL, incentivizing the model to deliver accurate answers, minimize unnecessary retrievals, and encourage appropriate external searches when its own knowledge is lacking. Evaluations across multiple knowledge reasoning tasks demonstrate that IKEA significantly outperforms baseline methods, reduces retrieval frequency significantly, and exhibits robust generalization capabilities.",
+      "identifiers": [
+        "SemanticScholar:3a537f680591bb7d73ebdeeae5d3f3577e7fa6cc"
+      ],
+      "semantic_scholar_id": "3a537f680591bb7d73ebdeeae5d3f3577e7fa6cc",
+      "canonical_id": "arXiv:2505.07596",
+      "arxiv_id": "2505.07596",
+      "doi": "10.48550/arXiv.2505.07596",
+      "authors": [
+        "Ziyang Huang",
+        "Xiao-Wei Yuan",
+        "Yiming Ju",
+        "Jun Zhao",
+        "Kang Liu"
+      ],
+      "priority": 31,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 31,
+        "citation_count": 31,
+        "total": 31,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 520,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Effective Compression of Language Models by Combining Pruning and Knowledge Distillation",
+      "source_url": "https://doi.org/10.1109/COMPSAC61105.2024.00066",
+      "year": 2024,
+      "published": "2024-07-02",
+      "venue": "Annual International Computer Software and Applications Conference",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "In recent years, Transformer has become an important architecture in language models and has achieved high performance in many natural language processing tasks. However, deploying Transformer architectures efficiently faces challenges because of their large model size and high inference time. Weight pruning is a prominent model compression technique that removes some weights in a model. However, after pruning, Transformer models require repeating the whole training process, including pre-training on a large generalized dataset and fine-tuning on a small downstream dataset, to recover the accuracy. The whole training process takes a long time and requires many computation resources. To address the challenge, this work proposes a pruning method that combines with knowledge distillation to avoid a long re-training time while recovering the accuracy. We use the N:m pruning method that is extended from NVIDIA's 2:4 pruning to compress the Transformer model. After pruning, we retrain the model by leveraging knowledge distillation to make the pruned model learn from the dense model. With this method, the pruned model can achieve comparable accuracy by using only downstream datasets and take much less time than traditional retraining. The experimental results show that DistilBERT in a 1:4 structure can achieve comparable accuracy on the SQuAD v1.1 and v2.0 datasets and a $\\mathbf{1.7}\\times$ speedups in inference time compared to the original dense model.",
+      "identifiers": [
+        "SemanticScholar:184aff8c942135ca9a4d0ae428a5bcba7051065b"
+      ],
+      "semantic_scholar_id": "184aff8c942135ca9a4d0ae428a5bcba7051065b",
+      "doi": "10.1109/COMPSAC61105.2024.00066",
+      "canonical_id": "DOI:10.1109/COMPSAC61105.2024.00066",
+      "authors": [
+        "C. Chiu",
+        "Ding-Yong Hong",
+        "Pang-Feng Liu",
+        "Jan-Jan Wu"
+      ],
+      "priority": 2,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 2,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 834,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "How Important are Visual Features for Visual Grounding? It Depends.",
+      "source_url": "https://www.semanticscholar.org/paper/960c518980cf8cf17132cc06a380c6c81ce24f6b",
+      "year": 2021,
+      "published": null,
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": null,
+      "identifiers": [
+        "SemanticScholar:960c518980cf8cf17132cc06a380c6c81ce24f6b"
+      ],
+      "semantic_scholar_id": "960c518980cf8cf17132cc06a380c6c81ce24f6b",
+      "canonical_id": "SemanticScholar:960c518980cf8cf17132cc06a380c6c81ce24f6b",
+      "authors": [
+        "Fan Yang",
+        "Prashan Wanigasekara",
+        "Ming-Da Li",
+        "C. Su",
+        "E. Barut"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1931,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2601.05038",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2601.05038",
+        "id:SemanticScholar:04882703189344a12f5cdb48a661019e6c5da4ed",
+        "id:arXiv:2601.05038",
+        "title:arcaligner adaptive recursive aligner for compressed context embeddings in rag",
+        "url:https://arxiv.org/abs/2601.05038"
+      ],
+      "record": {
+        "title": "ArcAligner: Adaptive Recursive Aligner for Compressed Context Embeddings in RAG",
+        "source_url": "https://arxiv.org/abs/2601.05038",
+        "year": 2026,
+        "published": "2026-01-08",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Retrieval-Augmented Generation (RAG) helps LLMs stay accurate, but feeding long documents into a prompt makes the model slow and expensive. This has motivated context compression, ranging from token pruning and summarization to embedding-based compression. While researchers have tried''compressing''these documents into smaller summaries or mathematical embeddings, there is a catch: the more you compress the data, the more the LLM struggles to understand it. To address this challenge, we propose ArcAligner (Adaptive recursive context *Aligner*), a lightweight module integrated into the language model layers to help the model better utilize highly compressed context representations for downstream generation. It uses an adaptive''gating''system that only adds extra processing power when the information is complex, keeping the system fast. Across knowledge-intensive QA benchmarks, ArcAligner consistently beats compression baselines at comparable compression rates, especially on multi-hop and long-tail settings. The source code is publicly available.",
+        "identifiers": [
+          "SemanticScholar:04882703189344a12f5cdb48a661019e6c5da4ed"
+        ],
+        "semantic_scholar_id": "04882703189344a12f5cdb48a661019e6c5da4ed",
+        "canonical_id": "arXiv:2601.05038",
+        "arxiv_id": "2601.05038",
+        "doi": "10.48550/arXiv.2601.05038",
+        "authors": [
+          "Jianbo Li",
+          "Yi Jiang",
+          "Sendong Zhao",
+          "Bairui Hu",
+          "Haochun Wang",
+          "Bing Qin"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 279,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2510.12603",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2510.12603",
+        "id:SemanticScholar:a4904dfe4348cfac742c8724a25c2c403d4db0e7",
+        "id:arXiv:2510.12603",
+        "title:reasoning in the dark interleaved visiontext reasoning in latent space",
+        "url:https://arxiv.org/abs/2510.12603"
+      ],
+      "record": {
+        "title": "Reasoning in the Dark: Interleaved Vision-Text Reasoning in Latent Space",
+        "source_url": "https://arxiv.org/abs/2510.12603",
+        "year": 2025,
+        "published": "2025-10-14",
+        "venue": "Annual Meeting of the Association for Computational Linguistics",
+        "citation_count": 26,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Multimodal reasoning aims to enhance the capabilities of MLLMs by incorporating intermediate reasoning steps before reaching the final answer. It has evolved from text-only reasoning to the integration of visual information, enabling the thought process to be conveyed through both images and text. Despite its effectiveness, current multimodal reasoning methods depend on explicit reasoning steps that require labor-intensive vision-text annotations and inherently introduce significant inference latency. To address these issues, we introduce multimodal latent reasoning with the advantages of multimodal representation, reduced annotation, and inference efficiency. To facilitate it, we propose Interleaved Vision-Text Latent Reasoning (IVT-LR), which injects both visual and textual information in the reasoning process within the latent space. Specifically, IVT-LR represents each reasoning step by combining two implicit parts: latent text (the hidden states from the previous step) and latent vision (a set of selected image embeddings). We further introduce a progressive multi-stage training strategy to enable MLLMs to perform the above multimodal latent reasoning steps. Experiments on M$^3$CoT and ScienceQA demonstrate that our IVT-LR method achieves an average performance increase of 5.45\\% in accuracy, while simultaneously achieving a speed increase of over 5 times compared to existing approaches.",
+        "identifiers": [
+          "SemanticScholar:a4904dfe4348cfac742c8724a25c2c403d4db0e7"
+        ],
+        "semantic_scholar_id": "a4904dfe4348cfac742c8724a25c2c403d4db0e7",
+        "canonical_id": "arXiv:2510.12603",
+        "arxiv_id": "2510.12603",
+        "doi": "10.48550/arXiv.2510.12603",
+        "authors": [
+          "Chao Chen",
+          "Zhixin Ma",
+          "Yong-Qi Li",
+          "Yu-Peng Hu",
+          "Yinwei Wei",
+          "Wen-Jie Li",
+          "Liqiang Nie"
+        ],
+        "priority": 36,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 26,
+          "citation_count": 26,
+          "total": 36,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 365,
+          "matched_prestigious_venue": "Association for Computational Linguistics"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2505.07596",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2505.07596",
+        "id:SemanticScholar:3a537f680591bb7d73ebdeeae5d3f3577e7fa6cc",
+        "id:arXiv:2505.07596",
+        "title:reinforced internalexternal knowledge synergistic reasoning for efficient adaptive search agent",
+        "url:https://arxiv.org/abs/2505.07596"
+      ],
+      "record": {
+        "title": "Reinforced Internal-External Knowledge Synergistic Reasoning for Efficient Adaptive Search Agent",
+        "source_url": "https://arxiv.org/abs/2505.07596",
+        "year": 2025,
+        "published": "2025-05-12",
+        "venue": "arXiv.org",
+        "citation_count": 31,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Retrieval-augmented generation (RAG) is a common strategy to reduce hallucinations in Large Language Models (LLMs). While reinforcement learning (RL) can enable LLMs to act as search agents by activating retrieval capabilities, existing ones often underutilize their internal knowledge. This can lead to redundant retrievals, potential harmful knowledge conflicts, and increased inference latency. To address these limitations, an efficient and adaptive search agent capable of discerning optimal retrieval timing and synergistically integrating parametric (internal) and retrieved (external) knowledge is in urgent need. This paper introduces the Reinforced Internal-External Knowledge Synergistic Reasoning Agent (IKEA), which could indentify its own knowledge boundary and prioritize the utilization of internal knowledge, resorting to external search only when internal knowledge is deemed insufficient. This is achieved using a novel knowledge-boundary aware reward function and a knowledge-boundary aware training dataset. These are designed for internal-external knowledge synergy oriented RL, incentivizing the model to deliver accurate answers, minimize unnecessary retrievals, and encourage appropriate external searches when its own knowledge is lacking. Evaluations across multiple knowledge reasoning tasks demonstrate that IKEA significantly outperforms baseline methods, reduces retrieval frequency significantly, and exhibits robust generalization capabilities.",
+        "identifiers": [
+          "SemanticScholar:3a537f680591bb7d73ebdeeae5d3f3577e7fa6cc"
+        ],
+        "semantic_scholar_id": "3a537f680591bb7d73ebdeeae5d3f3577e7fa6cc",
+        "canonical_id": "arXiv:2505.07596",
+        "arxiv_id": "2505.07596",
+        "doi": "10.48550/arXiv.2505.07596",
+        "authors": [
+          "Ziyang Huang",
+          "Xiao-Wei Yuan",
+          "Yiming Ju",
+          "Jun Zhao",
+          "Kang Liu"
+        ],
+        "priority": 31,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 31,
+          "citation_count": 31,
+          "total": 31,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 520,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/compsac61105.2024.00066",
+      "identity_tokens": [
+        "id:DOI:10.1109/compsac61105.2024.00066",
+        "id:SemanticScholar:184aff8c942135ca9a4d0ae428a5bcba7051065b",
+        "title:effective compression of language models by combining pruning and knowledge distillation",
+        "url:https://doi.org/10.1109/COMPSAC61105.2024.00066"
+      ],
+      "record": {
+        "title": "Effective Compression of Language Models by Combining Pruning and Knowledge Distillation",
+        "source_url": "https://doi.org/10.1109/COMPSAC61105.2024.00066",
+        "year": 2024,
+        "published": "2024-07-02",
+        "venue": "Annual International Computer Software and Applications Conference",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "In recent years, Transformer has become an important architecture in language models and has achieved high performance in many natural language processing tasks. However, deploying Transformer architectures efficiently faces challenges because of their large model size and high inference time. Weight pruning is a prominent model compression technique that removes some weights in a model. However, after pruning, Transformer models require repeating the whole training process, including pre-training on a large generalized dataset and fine-tuning on a small downstream dataset, to recover the accuracy. The whole training process takes a long time and requires many computation resources. To address the challenge, this work proposes a pruning method that combines with knowledge distillation to avoid a long re-training time while recovering the accuracy. We use the N:m pruning method that is extended from NVIDIA's 2:4 pruning to compress the Transformer model. After pruning, we retrain the model by leveraging knowledge distillation to make the pruned model learn from the dense model. With this method, the pruned model can achieve comparable accuracy by using only downstream datasets and take much less time than traditional retraining. The experimental results show that DistilBERT in a 1:4 structure can achieve comparable accuracy on the SQuAD v1.1 and v2.0 datasets and a $\\mathbf{1.7}\\times$ speedups in inference time compared to the original dense model.",
+        "identifiers": [
+          "SemanticScholar:184aff8c942135ca9a4d0ae428a5bcba7051065b"
+        ],
+        "semantic_scholar_id": "184aff8c942135ca9a4d0ae428a5bcba7051065b",
+        "doi": "10.1109/COMPSAC61105.2024.00066",
+        "canonical_id": "DOI:10.1109/COMPSAC61105.2024.00066",
+        "authors": [
+          "C. Chiu",
+          "Ding-Yong Hong",
+          "Pang-Feng Liu",
+          "Jan-Jan Wu"
+        ],
+        "priority": 2,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 2,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 834,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:SemanticScholar:960c518980cf8cf17132cc06a380c6c81ce24f6b",
+      "identity_tokens": [
+        "id:SemanticScholar:960c518980cf8cf17132cc06a380c6c81ce24f6b",
+        "title:how important are visual features for visual grounding it depends",
+        "url:https://www.semanticscholar.org/paper/960c518980cf8cf17132cc06a380c6c81ce24f6b"
+      ],
+      "record": {
+        "title": "How Important are Visual Features for Visual Grounding? It Depends.",
+        "source_url": "https://www.semanticscholar.org/paper/960c518980cf8cf17132cc06a380c6c81ce24f6b",
+        "year": 2021,
+        "published": null,
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": null,
+        "identifiers": [
+          "SemanticScholar:960c518980cf8cf17132cc06a380c6c81ce24f6b"
+        ],
+        "semantic_scholar_id": "960c518980cf8cf17132cc06a380c6c81ce24f6b",
+        "canonical_id": "SemanticScholar:960c518980cf8cf17132cc06a380c6c81ce24f6b",
+        "authors": [
+          "Fan Yang",
+          "Prashan Wanigasekara",
+          "Ming-Da Li",
+          "C. Su",
+          "E. Barut"
+        ],
+        "priority": 0,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 0,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 1931,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:30ce64b3795dac1b54668e4e30ece753289630acced96f435df847bc224e2fca",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

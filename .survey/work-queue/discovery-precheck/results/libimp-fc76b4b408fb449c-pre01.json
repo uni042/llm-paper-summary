@@ -1,0 +1,678 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-fc76b4b408fb449c-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-fc76b4b408fb",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "DOI:10.1007/978-3-030-92185-9_30",
+    "DOI:10.1007/s10515-025-00560-2",
+    "SemanticScholar:31431c7eb3622e9b1412e224f140cc8dcd9e6708",
+    "arXiv:2304.11520",
+    "arXiv:2412.04917",
+    "arXiv:2510.04547",
+    "arXiv:2604.05601"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 7,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "4e82b3ec45ea1be874c1372060bcee49c28462ec",
+  "raw_search_result_count": 7,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 7,
+  "provider_progress": {
+    "requested_count": 7,
+    "status_counts": {
+      "allowed": 7,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-14T06:38:03.168141+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "DOI:10.1007/978-3-030-92185-9_30",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.1007/s10515-025-00560-2",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "SemanticScholar:31431c7eb3622e9b1412e224f140cc8dcd9e6708",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2304.11520",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2412.04917",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2510.04547",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2604.05601",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Processing Natural Language on Embedded Devices: How Well Do Transformer Models Perform?",
+      "source_url": "https://arxiv.org/abs/2304.11520",
+      "year": 2023,
+      "published": "2023-04-23",
+      "venue": "Proceedings of the 15th ACM/SPEC International Conference on Performance Engineering",
+      "citation_count": 20,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Voice-controlled systems are becoming ubiquitous in many IoT-specific applications such as home/industrial automation, automotive infotainment, and healthcare. While cloud-based voice services (\\eg Alexa, Siri) can leverage high-performance computing servers, some use cases (\\eg robotics, automotive infotainment) may require to execute the natural language processing (NLP) tasks offline, often on resource-constrained embedded devices. Transformer-based language models such as BERT and its variants are primarily developed with compute-heavy servers in mind. Despite the great performance of BERT models across various NLP tasks, their large size and numerous parameters pose substantial obstacles to offline computation on embedded systems. Lighter replacement of such language models (\\eg DistilBERT and TinyBERT) often sacrifice accuracy, particularly for complex NLP tasks. Until now, it is still unclear \\ca whether the state-of-the-art language models, \\viz BERT and its variants are deployable on embedded systems with a limited processor, memory, and battery power and \\cb if they do, what are the \"right'' set of configurations and parameters to choose for a given NLP task. This paper presents aperformance study of transformer language models under different hardware configurations and accuracy requirements and derives empirical observations about these resource/accuracy trade-offs. In particular, we study how the most commonly used BERT-based language models (\\viz BERT, RoBERTa, DistilBERT, and TinyBERT) perform on embedded systems. We tested them on \\textitfour off-the-shelf embedded platforms (\\hardware) with 2 GB and 4 GB memory (\\ie a total of \\textiteight hardware configurations) and \\textitfour datasets (\\ie HuRIC, GoEmotion, CoNLL, WNUT17) running various NLP tasks. Our study finds that executing complex NLP tasks (such as \"sentiment'' classification) on embedded systems isfeasible even without any GPUs (\\eg \\rpi with 2 GB of RAM). We release our implementations for community use. Our findings can help designers understand the deployability and performance of transformer language models, especially those based on BERT architectures.",
+      "identifiers": [
+        "SemanticScholar:e8b3f24a56ef11311cbed5e247061d195c1b4d50"
+      ],
+      "semantic_scholar_id": "e8b3f24a56ef11311cbed5e247061d195c1b4d50",
+      "canonical_id": "arXiv:2304.11520",
+      "arxiv_id": "2304.11520",
+      "doi": "10.1145/3629526.3645054",
+      "authors": [
+        "Souvik Sarkar",
+        "M. F. Babar",
+        "Md. Mahadi Hassan",
+        "M. Hasan",
+        "Shubhra Kanti Karmaker Santu"
+      ],
+      "priority": 20,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 20,
+        "citation_count": 20,
+        "total": 20,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1270,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "ID-Selection: Importance-Diversity Based Visual Token Selection for Efficient LVLM Inference",
+      "source_url": "https://arxiv.org/abs/2604.05601",
+      "year": 2026,
+      "published": "2026-04-07",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Recent advances have explored visual token pruning to accelerate the inference of large vision-language models (LVLMs). However, existing methods often struggle to balance token importance and diversity: importance-based methods tend to retain redundant tokens, whereas diversity-based methods may overlook informative ones. This trade-off becomes especially problematic under high reduction ratios, where preserving only a small subset of visual tokens is critical. To address this issue, we propose ID-Selection, a simple yet effective token selection strategy for efficient LVLM inference. The key idea is to couple importance estimation with diversity-aware iterative selection: each token is first assigned an importance score, after which high-scoring tokens are selected one by one while the scores of similar tokens are progressively suppressed. In this way, ID-Selection preserves informative tokens while reducing redundancy in a unified selection process. Extensive experiments across 5 LVLM backbones and 16 main benchmarks demonstrate that ID-Selection consistently achieves superior performance and efficiency, especially under extreme pruning ratios. For example, on LLaVA-1.5-7B, ID-Selection prunes 97.2% of visual tokens, retaining only 16 tokens, while reducing inference FLOPs by over 97% and preserving 91.8% of the original performance, all without additional training.",
+      "identifiers": [
+        "SemanticScholar:1663c8f5e8e66e403d67d2836ebf6993cc366b86"
+      ],
+      "semantic_scholar_id": "1663c8f5e8e66e403d67d2836ebf6993cc366b86",
+      "canonical_id": "arXiv:2604.05601",
+      "arxiv_id": "2604.05601",
+      "doi": "10.48550/arXiv.2604.05601",
+      "authors": [
+        "Zhaohong Huang",
+        "Wenjing Liu",
+        "Yuxin Zhang",
+        "Fei Chao",
+        "Rongrong Ji"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 190,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Continuous Speech Tokens Makes LLMs Robust Multi-Modality Learners",
+      "source_url": "https://arxiv.org/abs/2412.04917",
+      "year": 2024,
+      "published": "2024-12-06",
+      "venue": "arXiv.org",
+      "citation_count": 9,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Recent advances in GPT-4o like multi-modality models have demonstrated remarkable progress for direct speech-to-speech conversation, with real-time speech interaction experience and strong speech understanding ability. However, current research focuses on discrete speech tokens to align with discrete text tokens for language modelling, which depends on an audio codec with residual connections or independent group tokens, such a codec usually leverages large scale and diverse datasets training to ensure that the discrete speech codes have good representation for varied domain, noise, style data reconstruction as well as a well-designed codec quantizer and encoder-decoder architecture for discrete token language modelling. This paper introduces Flow-Omni, a continuous speech token based GPT-4o like model, capable of real-time speech interaction and low streaming latency. Specifically, first, instead of cross-entropy loss only, we combine flow matching loss with a pretrained autoregressive LLM and a small MLP network to predict the probability distribution of the continuous-valued speech tokens from speech prompt. second, we incorporated the continuous speech tokens to Flow-Omni multi-modality training, thereby achieving robust speech-to-speech performance with discrete text tokens and continuous speech tokens together. Experiments demonstrate that, compared to discrete text and speech multi-modality training and its variants, the continuous speech tokens mitigate robustness issues by avoiding the inherent flaws of discrete speech code's representation loss for LLM.",
+      "identifiers": [
+        "SemanticScholar:0e0ac1881c96ae53b0dd047cb2afe2c254889415"
+      ],
+      "semantic_scholar_id": "0e0ac1881c96ae53b0dd047cb2afe2c254889415",
+      "canonical_id": "arXiv:2412.04917",
+      "arxiv_id": "2412.04917",
+      "doi": "10.48550/arXiv.2412.04917",
+      "authors": [
+        "Ze Yuan",
+        "Yanqing Liu",
+        "Shujie Liu",
+        "Sheng Zhao"
+      ],
+      "priority": 9,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 9,
+        "citation_count": 9,
+        "total": 9,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 677,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Token and Head Adaptive Transformers for Efficient Natural Language Processing",
+      "source_url": "https://www.semanticscholar.org/paper/31431c7eb3622e9b1412e224f140cc8dcd9e6708",
+      "year": 2022,
+      "published": null,
+      "venue": "International Conference on Computational Linguistics",
+      "citation_count": 6,
+      "citation_count_source": "semantic_scholar",
+      "abstract": null,
+      "identifiers": [
+        "SemanticScholar:31431c7eb3622e9b1412e224f140cc8dcd9e6708"
+      ],
+      "semantic_scholar_id": "31431c7eb3622e9b1412e224f140cc8dcd9e6708",
+      "canonical_id": "SemanticScholar:31431c7eb3622e9b1412e224f140cc8dcd9e6708",
+      "authors": [
+        "Chonghan Lee",
+        "Md Fahim Faysal Khan",
+        "Rita Brugarolas Brufau",
+        "Ke Ding",
+        "Vijay Narayanan"
+      ],
+      "priority": 6,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 6,
+        "citation_count": 6,
+        "total": 6,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1566,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "PIONEER: improving the robustness of student models when compressing pre-trained models of code",
+      "source_url": "https://doi.org/10.1007/s10515-025-00560-2",
+      "year": 2025,
+      "published": "2025-09-23",
+      "venue": "International Conference on Automated Software Engineering",
+      "citation_count": 5,
+      "citation_count_source": "semantic_scholar",
+      "abstract": null,
+      "identifiers": [
+        "SemanticScholar:03ad45d4d5e5a3450780519e4c368872748be11a"
+      ],
+      "semantic_scholar_id": "03ad45d4d5e5a3450780519e4c368872748be11a",
+      "doi": "10.1007/s10515-025-00560-2",
+      "canonical_id": "DOI:10.1007/s10515-025-00560-2",
+      "authors": [
+        "Xiangyu Liu",
+        "Xin-Wei Liu",
+        "Lili Bo",
+        "Xiao-Xue Wu",
+        "Yun Yang",
+        "Xiaobing Sun",
+        "Feng Zhou"
+      ],
+      "priority": 5,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 5,
+        "citation_count": 5,
+        "total": 5,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 386,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "DAP-BERT: Differentiable Architecture Pruning of BERT",
+      "source_url": "https://doi.org/10.1007/978-3-030-92185-9_30",
+      "year": 2021,
+      "published": null,
+      "venue": "International Conference on Neural Information Processing",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": null,
+      "identifiers": [
+        "SemanticScholar:7cdf08a1becbb258494835609088b2c44941cf88"
+      ],
+      "semantic_scholar_id": "7cdf08a1becbb258494835609088b2c44941cf88",
+      "doi": "10.1007/978-3-030-92185-9_30",
+      "canonical_id": "DOI:10.1007/978-3-030-92185-9_30",
+      "authors": [
+        "Chung-Yiu Yau",
+        "Hao-Li Bai",
+        "I. King",
+        "M. Lyu"
+      ],
+      "priority": 1,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 1,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1931,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Activation Quantization of Vision Encoders Needs Prefixing Registers",
+      "source_url": "https://arxiv.org/abs/2510.04547",
+      "year": 2025,
+      "published": "2025-10-06",
+      "venue": null,
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large pretrained vision encoders are central to multimodal intelligence, powering applications from on-device vision processing to vision-language models. Since these applications often demand real-time processing of massive visual data, reducing the inference cost of vision encoders is critical. Quantization offers a practical path, but it remains challenging even at 8-bit precision due to so-called outliers. In this work, we propose $\\textit{RegCache}$, a training-free algorithm that mitigates outliers in large-scale pretrained vision encoders and serves as a plug-in module that can be applied on top of other quantization methods. RegCache introduces outlier-prone yet semantically meaningless prefix tokens to the vision encoder, which prevent other tokens from having outliers. Notably, we observe that outliers in vision encoders behave differently from those in language models, motivating two technical innovations: middle-layer prefixing and token deletion. Experimental results show that our method consistently improves quantized model performance across various vision encoders, particularly in extremely low-bit regimes (e.g., 4-bit).",
+      "identifiers": [
+        "SemanticScholar:39b55ef8d3bd4abdf2a2256a42c08c732178f7be"
+      ],
+      "semantic_scholar_id": "39b55ef8d3bd4abdf2a2256a42c08c732178f7be",
+      "canonical_id": "arXiv:2510.04547",
+      "arxiv_id": "2510.04547",
+      "authors": [
+        "S. Kim",
+        "Taesun Yeom",
+        "Jinhong Kim",
+        "Wonpyo Park",
+        "Kyuyeun Kim",
+        "Jaeho Lee"
+      ],
+      "priority": 1,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 1,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 373,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2304.11520",
+      "identity_tokens": [
+        "id:DOI:10.1145/3629526.3645054",
+        "id:SemanticScholar:e8b3f24a56ef11311cbed5e247061d195c1b4d50",
+        "id:arXiv:2304.11520",
+        "title:processing natural language on embedded devices how well do transformer models perform",
+        "url:https://arxiv.org/abs/2304.11520"
+      ],
+      "record": {
+        "title": "Processing Natural Language on Embedded Devices: How Well Do Transformer Models Perform?",
+        "source_url": "https://arxiv.org/abs/2304.11520",
+        "year": 2023,
+        "published": "2023-04-23",
+        "venue": "Proceedings of the 15th ACM/SPEC International Conference on Performance Engineering",
+        "citation_count": 20,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Voice-controlled systems are becoming ubiquitous in many IoT-specific applications such as home/industrial automation, automotive infotainment, and healthcare. While cloud-based voice services (\\eg Alexa, Siri) can leverage high-performance computing servers, some use cases (\\eg robotics, automotive infotainment) may require to execute the natural language processing (NLP) tasks offline, often on resource-constrained embedded devices. Transformer-based language models such as BERT and its variants are primarily developed with compute-heavy servers in mind. Despite the great performance of BERT models across various NLP tasks, their large size and numerous parameters pose substantial obstacles to offline computation on embedded systems. Lighter replacement of such language models (\\eg DistilBERT and TinyBERT) often sacrifice accuracy, particularly for complex NLP tasks. Until now, it is still unclear \\ca whether the state-of-the-art language models, \\viz BERT and its variants are deployable on embedded systems with a limited processor, memory, and battery power and \\cb if they do, what are the \"right'' set of configurations and parameters to choose for a given NLP task. This paper presents aperformance study of transformer language models under different hardware configurations and accuracy requirements and derives empirical observations about these resource/accuracy trade-offs. In particular, we study how the most commonly used BERT-based language models (\\viz BERT, RoBERTa, DistilBERT, and TinyBERT) perform on embedded systems. We tested them on \\textitfour off-the-shelf embedded platforms (\\hardware) with 2 GB and 4 GB memory (\\ie a total of \\textiteight hardware configurations) and \\textitfour datasets (\\ie HuRIC, GoEmotion, CoNLL, WNUT17) running various NLP tasks. Our study finds that executing complex NLP tasks (such as \"sentiment'' classification) on embedded systems isfeasible even without any GPUs (\\eg \\rpi with 2 GB of RAM). We release our implementations for community use. Our findings can help designers understand the deployability and performance of transformer language models, especially those based on BERT architectures.",
+        "identifiers": [
+          "SemanticScholar:e8b3f24a56ef11311cbed5e247061d195c1b4d50"
+        ],
+        "semantic_scholar_id": "e8b3f24a56ef11311cbed5e247061d195c1b4d50",
+        "canonical_id": "arXiv:2304.11520",
+        "arxiv_id": "2304.11520",
+        "doi": "10.1145/3629526.3645054",
+        "authors": [
+          "Souvik Sarkar",
+          "M. F. Babar",
+          "Md. Mahadi Hassan",
+          "M. Hasan",
+          "Shubhra Kanti Karmaker Santu"
+        ],
+        "priority": 20,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 20,
+          "citation_count": 20,
+          "total": 20,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 1270,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2604.05601",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2604.05601",
+        "id:SemanticScholar:1663c8f5e8e66e403d67d2836ebf6993cc366b86",
+        "id:arXiv:2604.05601",
+        "title:idselection importancediversity based visual token selection for efficient lvlm inference",
+        "url:https://arxiv.org/abs/2604.05601"
+      ],
+      "record": {
+        "title": "ID-Selection: Importance-Diversity Based Visual Token Selection for Efficient LVLM Inference",
+        "source_url": "https://arxiv.org/abs/2604.05601",
+        "year": 2026,
+        "published": "2026-04-07",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Recent advances have explored visual token pruning to accelerate the inference of large vision-language models (LVLMs). However, existing methods often struggle to balance token importance and diversity: importance-based methods tend to retain redundant tokens, whereas diversity-based methods may overlook informative ones. This trade-off becomes especially problematic under high reduction ratios, where preserving only a small subset of visual tokens is critical. To address this issue, we propose ID-Selection, a simple yet effective token selection strategy for efficient LVLM inference. The key idea is to couple importance estimation with diversity-aware iterative selection: each token is first assigned an importance score, after which high-scoring tokens are selected one by one while the scores of similar tokens are progressively suppressed. In this way, ID-Selection preserves informative tokens while reducing redundancy in a unified selection process. Extensive experiments across 5 LVLM backbones and 16 main benchmarks demonstrate that ID-Selection consistently achieves superior performance and efficiency, especially under extreme pruning ratios. For example, on LLaVA-1.5-7B, ID-Selection prunes 97.2% of visual tokens, retaining only 16 tokens, while reducing inference FLOPs by over 97% and preserving 91.8% of the original performance, all without additional training.",
+        "identifiers": [
+          "SemanticScholar:1663c8f5e8e66e403d67d2836ebf6993cc366b86"
+        ],
+        "semantic_scholar_id": "1663c8f5e8e66e403d67d2836ebf6993cc366b86",
+        "canonical_id": "arXiv:2604.05601",
+        "arxiv_id": "2604.05601",
+        "doi": "10.48550/arXiv.2604.05601",
+        "authors": [
+          "Zhaohong Huang",
+          "Wenjing Liu",
+          "Yuxin Zhang",
+          "Fei Chao",
+          "Rongrong Ji"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 190,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2412.04917",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2412.04917",
+        "id:SemanticScholar:0e0ac1881c96ae53b0dd047cb2afe2c254889415",
+        "id:arXiv:2412.04917",
+        "title:continuous speech tokens makes llms robust multimodality learners",
+        "url:https://arxiv.org/abs/2412.04917"
+      ],
+      "record": {
+        "title": "Continuous Speech Tokens Makes LLMs Robust Multi-Modality Learners",
+        "source_url": "https://arxiv.org/abs/2412.04917",
+        "year": 2024,
+        "published": "2024-12-06",
+        "venue": "arXiv.org",
+        "citation_count": 9,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Recent advances in GPT-4o like multi-modality models have demonstrated remarkable progress for direct speech-to-speech conversation, with real-time speech interaction experience and strong speech understanding ability. However, current research focuses on discrete speech tokens to align with discrete text tokens for language modelling, which depends on an audio codec with residual connections or independent group tokens, such a codec usually leverages large scale and diverse datasets training to ensure that the discrete speech codes have good representation for varied domain, noise, style data reconstruction as well as a well-designed codec quantizer and encoder-decoder architecture for discrete token language modelling. This paper introduces Flow-Omni, a continuous speech token based GPT-4o like model, capable of real-time speech interaction and low streaming latency. Specifically, first, instead of cross-entropy loss only, we combine flow matching loss with a pretrained autoregressive LLM and a small MLP network to predict the probability distribution of the continuous-valued speech tokens from speech prompt. second, we incorporated the continuous speech tokens to Flow-Omni multi-modality training, thereby achieving robust speech-to-speech performance with discrete text tokens and continuous speech tokens together. Experiments demonstrate that, compared to discrete text and speech multi-modality training and its variants, the continuous speech tokens mitigate robustness issues by avoiding the inherent flaws of discrete speech code's representation loss for LLM.",
+        "identifiers": [
+          "SemanticScholar:0e0ac1881c96ae53b0dd047cb2afe2c254889415"
+        ],
+        "semantic_scholar_id": "0e0ac1881c96ae53b0dd047cb2afe2c254889415",
+        "canonical_id": "arXiv:2412.04917",
+        "arxiv_id": "2412.04917",
+        "doi": "10.48550/arXiv.2412.04917",
+        "authors": [
+          "Ze Yuan",
+          "Yanqing Liu",
+          "Shujie Liu",
+          "Sheng Zhao"
+        ],
+        "priority": 9,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 9,
+          "citation_count": 9,
+          "total": 9,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 677,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:SemanticScholar:31431c7eb3622e9b1412e224f140cc8dcd9e6708",
+      "identity_tokens": [
+        "id:SemanticScholar:31431c7eb3622e9b1412e224f140cc8dcd9e6708",
+        "title:token and head adaptive transformers for efficient natural language processing",
+        "url:https://www.semanticscholar.org/paper/31431c7eb3622e9b1412e224f140cc8dcd9e6708"
+      ],
+      "record": {
+        "title": "Token and Head Adaptive Transformers for Efficient Natural Language Processing",
+        "source_url": "https://www.semanticscholar.org/paper/31431c7eb3622e9b1412e224f140cc8dcd9e6708",
+        "year": 2022,
+        "published": null,
+        "venue": "International Conference on Computational Linguistics",
+        "citation_count": 6,
+        "citation_count_source": "semantic_scholar",
+        "abstract": null,
+        "identifiers": [
+          "SemanticScholar:31431c7eb3622e9b1412e224f140cc8dcd9e6708"
+        ],
+        "semantic_scholar_id": "31431c7eb3622e9b1412e224f140cc8dcd9e6708",
+        "canonical_id": "SemanticScholar:31431c7eb3622e9b1412e224f140cc8dcd9e6708",
+        "authors": [
+          "Chonghan Lee",
+          "Md Fahim Faysal Khan",
+          "Rita Brugarolas Brufau",
+          "Ke Ding",
+          "Vijay Narayanan"
+        ],
+        "priority": 6,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 6,
+          "citation_count": 6,
+          "total": 6,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 1566,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1007/s10515-025-00560-2",
+      "identity_tokens": [
+        "id:DOI:10.1007/s10515-025-00560-2",
+        "id:SemanticScholar:03ad45d4d5e5a3450780519e4c368872748be11a",
+        "title:pioneer improving the robustness of student models when compressing pretrained models of code",
+        "url:https://doi.org/10.1007/s10515-025-00560-2"
+      ],
+      "record": {
+        "title": "PIONEER: improving the robustness of student models when compressing pre-trained models of code",
+        "source_url": "https://doi.org/10.1007/s10515-025-00560-2",
+        "year": 2025,
+        "published": "2025-09-23",
+        "venue": "International Conference on Automated Software Engineering",
+        "citation_count": 5,
+        "citation_count_source": "semantic_scholar",
+        "abstract": null,
+        "identifiers": [
+          "SemanticScholar:03ad45d4d5e5a3450780519e4c368872748be11a"
+        ],
+        "semantic_scholar_id": "03ad45d4d5e5a3450780519e4c368872748be11a",
+        "doi": "10.1007/s10515-025-00560-2",
+        "canonical_id": "DOI:10.1007/s10515-025-00560-2",
+        "authors": [
+          "Xiangyu Liu",
+          "Xin-Wei Liu",
+          "Lili Bo",
+          "Xiao-Xue Wu",
+          "Yun Yang",
+          "Xiaobing Sun",
+          "Feng Zhou"
+        ],
+        "priority": 5,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 5,
+          "citation_count": 5,
+          "total": 5,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 386,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1007/978-3-030-92185-9_30",
+      "identity_tokens": [
+        "id:DOI:10.1007/978-3-030-92185-9_30",
+        "id:SemanticScholar:7cdf08a1becbb258494835609088b2c44941cf88",
+        "title:dapbert differentiable architecture pruning of bert",
+        "url:https://doi.org/10.1007/978-3-030-92185-9_30"
+      ],
+      "record": {
+        "title": "DAP-BERT: Differentiable Architecture Pruning of BERT",
+        "source_url": "https://doi.org/10.1007/978-3-030-92185-9_30",
+        "year": 2021,
+        "published": null,
+        "venue": "International Conference on Neural Information Processing",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": null,
+        "identifiers": [
+          "SemanticScholar:7cdf08a1becbb258494835609088b2c44941cf88"
+        ],
+        "semantic_scholar_id": "7cdf08a1becbb258494835609088b2c44941cf88",
+        "doi": "10.1007/978-3-030-92185-9_30",
+        "canonical_id": "DOI:10.1007/978-3-030-92185-9_30",
+        "authors": [
+          "Chung-Yiu Yau",
+          "Hao-Li Bai",
+          "I. King",
+          "M. Lyu"
+        ],
+        "priority": 1,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 1,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 1931,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2510.04547",
+      "identity_tokens": [
+        "id:SemanticScholar:39b55ef8d3bd4abdf2a2256a42c08c732178f7be",
+        "id:arXiv:2510.04547",
+        "title:activation quantization of vision encoders needs prefixing registers",
+        "url:https://arxiv.org/abs/2510.04547"
+      ],
+      "record": {
+        "title": "Activation Quantization of Vision Encoders Needs Prefixing Registers",
+        "source_url": "https://arxiv.org/abs/2510.04547",
+        "year": 2025,
+        "published": "2025-10-06",
+        "venue": null,
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large pretrained vision encoders are central to multimodal intelligence, powering applications from on-device vision processing to vision-language models. Since these applications often demand real-time processing of massive visual data, reducing the inference cost of vision encoders is critical. Quantization offers a practical path, but it remains challenging even at 8-bit precision due to so-called outliers. In this work, we propose $\\textit{RegCache}$, a training-free algorithm that mitigates outliers in large-scale pretrained vision encoders and serves as a plug-in module that can be applied on top of other quantization methods. RegCache introduces outlier-prone yet semantically meaningless prefix tokens to the vision encoder, which prevent other tokens from having outliers. Notably, we observe that outliers in vision encoders behave differently from those in language models, motivating two technical innovations: middle-layer prefixing and token deletion. Experimental results show that our method consistently improves quantized model performance across various vision encoders, particularly in extremely low-bit regimes (e.g., 4-bit).",
+        "identifiers": [
+          "SemanticScholar:39b55ef8d3bd4abdf2a2256a42c08c732178f7be"
+        ],
+        "semantic_scholar_id": "39b55ef8d3bd4abdf2a2256a42c08c732178f7be",
+        "canonical_id": "arXiv:2510.04547",
+        "arxiv_id": "2510.04547",
+        "authors": [
+          "S. Kim",
+          "Taesun Yeom",
+          "Jinhong Kim",
+          "Wonpyo Park",
+          "Kyuyeun Kim",
+          "Jaeho Lee"
+        ],
+        "priority": 1,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 1,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 373,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:787e90c6280fcf79f7fe579a575c825c32b1f1be2b426e92c13091c45732d33d",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}
