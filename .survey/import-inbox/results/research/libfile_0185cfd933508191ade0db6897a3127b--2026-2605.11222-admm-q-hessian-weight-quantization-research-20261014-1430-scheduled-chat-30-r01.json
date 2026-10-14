@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "09818cf79a08d2e0a90740dba31e1b6fb94a39adb248638e9f73b2c4f108488f",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_0185cfd933508191ade0db6897a3127b--2026-2605.11222-admm-q-hessian-weight-quantization-research-20261014-1430-scheduled-chat-30-r01.md",
+  "canonical_id": "arXiv:2605.11222",
+  "worker_completed_at": "2026-10-14T14:40:53+09:00",
+  "worker_run_key": "20261014-1430-scheduled-chat-30/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 4955,
+    "body_paragraphs": 31,
+    "method_chars": 1513,
+    "method_paragraphs": 10,
+    "evaluation_chars": 0,
+    "limitation_chars": 0,
+    "insufficiency_flags": [
+      "評価説明量 0 < 500",
+      "限界説明量 0 < 推奨 120"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 評価説明量 0 < 500",
+    "長文定型文の再利用を検出: .survey/import-inbox/pending/research/libfile_04547b688b308191a6d2418e894770b1--2026-2605.11222-admm-q-hessian-weight-quantization-research-20261014-1430-scheduled-chat-30-r01.md と 9 段落 / 1926文字 (100.0%) が完全一致"
+  ],
+  "processed_at": "2026-10-14T06:09:03+00:00"
+}
