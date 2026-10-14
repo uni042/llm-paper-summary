@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（640本）
+## 自動生成の論文一覧（641本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -1027,6 +1027,10 @@
 - **2026-02 · [RAT+: Train Dense, Infer Sparse -- Recurrence Augmented Attention for Dilated Inference](2026-2602.18196-rat-train-dense-infer-sparse-recurrence-augmented-attention-for-dilated-.md)**  
   実装：[✓](https://github.com/wimh966/rat-plus) ・ リポジトリ内被引用：0  
   注意機構の推論コストを下げる方法には、局所窓だけを見る方式や、重要なトークンだけを選ぶ方式がある。D=16では密な注意に近い精度を保ち、D=64では常識推論の平均正解率が59.21%から57.46%へ下がる一方、時間混合部分の理論演算量とKV保存量を64分の1へ減らす。
+
+- **2026-02 · [OTPrune: Distribution-Aligned Visual Token Pruning via Optimal Transport](2026-2602.20205-otprune-distribution-aligned-visual-token-pruning-via-optimal-transport.md)**  
+  実装：[✓](https://github.com/xiwenc1/OTPrune) ・ リポジトリ内被引用：0  
+  OTPruneは、画像を視覚符号化器でトークン化して大規模言語モデルへ渡す際、どの画像トークンを残すかを全体分布の代表性から決める学習不要の選択方式である。これは演算量の比較であり、同じ倍率の壁時計時間短縮を実測したことを意味しない。
 
 - **2026-02 · [OmniSIFT: Modality-Asymmetric Token Compression for Efficient Omni-modal Large Language Models](2026-2602.04804-omnisift-modality-asymmetric-token-compression-for-efficient-omni-modal-.md)**  
   実装：[✓](https://github.com/dingyue772/OmniSIFT) ・ リポジトリ内被引用：0  

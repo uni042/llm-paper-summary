@@ -28,6 +28,8 @@ worker_run_key: '20261015-0204-scheduled-chat-00/r01'
 quality_self_review_passed: true
 quality_self_review_version: 'PAPER-QUALITY-GUIDE-2026-10-07'
 reference_main_sha: '52f3bdb2b8689ea458706599ed1c8884b5bc0c83'
+last_audited: null
+audit_version: 0
 ---
 
 # LRKV：共有フルランク射影とヘッド別低階数残差によるKVキャッシュ削減
