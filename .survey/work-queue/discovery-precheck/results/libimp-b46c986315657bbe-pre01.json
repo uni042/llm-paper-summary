@@ -1,0 +1,1163 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-b46c986315657bbe-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-b46c98631565",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2305.12458",
+    "arXiv:2310.07240",
+    "arXiv:2408.03130",
+    "arXiv:2409.10593",
+    "arXiv:2411.00915",
+    "arXiv:2503.08019",
+    "arXiv:2503.19353",
+    "arXiv:2505.14638",
+    "arXiv:2505.23219",
+    "arXiv:2507.06608",
+    "arXiv:2510.10207",
+    "arXiv:2510.10964",
+    "arXiv:2510.18245",
+    "arXiv:2510.19389"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 14,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": false,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "aabe066a6f98833169adeac2c1e2dc626dfeb289",
+  "raw_search_result_count": 14,
+  "retrieval_duplicate_filtered_count": 2,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 12,
+  "provider_progress": {
+    "requested_count": 14,
+    "status_counts": {
+      "allowed": 12,
+      "filtered_by_snapshot": 2,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-14T00:27:02.435546+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2305.12458",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2310.07240",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.1145/3651890.3672274"
+    },
+    {
+      "requested_id": "arXiv:2408.03130",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2409.10593",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2411.00915",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2503.08019",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2503.19353",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2505.14638",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2505.23219",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2507.06608",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:arXiv:2507.06608"
+    },
+    {
+      "requested_id": "arXiv:2510.10207",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2510.10964",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2510.18245",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2510.19389",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Empower Vision Applications with LoRA LMM",
+      "source_url": "https://arxiv.org/abs/2411.00915",
+      "year": 2024,
+      "published": "2024-11-01",
+      "venue": "European Conference on Computer Systems",
+      "citation_count": 9,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Multimodal Models (LMMs) have shown significant progress in various complex vision tasks with the solid linguistic and reasoning capacity inherited from large language models (LMMs). Low-rank adaptation (LoRA) offers a promising method to integrate external knowledge into LMMs, compensating for their limitations on domain-specific tasks. However, the existing LoRA model serving is excessively computationally expensive and causes extremely high latency. In this paper, we present an end-to-end solution that empowers diverse vision tasks and enriches vision applications with LoRA LMMs. Our system, VaLoRA, enables accurate and efficient vision tasks by 1) an accuracy-aware LoRA adapter generation approach that generates LoRA adapters rich in domain-specific knowledge to meet application-specific accuracy requirements, 2) an adaptive-tiling LoRA adapters batching operator that efficiently computes concurrent heterogeneous LoRA adapters, and 3) a flexible LoRA adapter orchestration mechanism that manages application requests and LoRA adapters to achieve the lowest average response latency. We prototype VaLoRA on five popular vision tasks on three LMMs. Experiment results reveal that VaLoRA improves 24-62% of the accuracy compared to the original LMMs and reduces 20-89% of the latency compared to the state-of-the-art LoRA model serving systems.",
+      "identifiers": [
+        "SemanticScholar:3db43249447f1f30f6a384268fd4d23107f8e010"
+      ],
+      "semantic_scholar_id": "3db43249447f1f30f6a384268fd4d23107f8e010",
+      "canonical_id": "arXiv:2411.00915",
+      "arxiv_id": "2411.00915",
+      "doi": "10.1145/3689031.3717472",
+      "authors": [
+        "Liang Mi",
+        "Wei-Jun Wang",
+        "Wenming Tu",
+        "Qing-Feng He",
+        "Rui Kong",
+        "Xinyu Fang",
+        "Yazhu Dong",
+        "Yi-Kang Zhang",
+        "Yuan-Chun Li",
+        "Meng Li",
+        "Hai-Peng Dai",
+        "Gui-Hai Chen",
+        "Yun-Xin Liu"
+      ],
+      "priority": 9,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 9,
+        "citation_count": 9,
+        "total": 9,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 712,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Infor-Coef: Information Bottleneck-based Dynamic Token Downsampling for Compact and Efficient language model",
+      "source_url": "https://arxiv.org/abs/2305.12458",
+      "year": 2023,
+      "published": "2023-05-21",
+      "venue": "arXiv.org",
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The prevalence of Transformer-based pre-trained language models (PLMs) has led to their wide adoption for various natural language processing tasks. However, their excessive overhead leads to large latency and computational costs. The statically compression methods allocate fixed computation to different samples, resulting in redundant computation. The dynamic token pruning method selectively shortens the sequences but are unable to change the model size and hardly achieve the speedups as static pruning. In this paper, we propose a model accelaration approaches for large language models that incorporates dynamic token downsampling and static pruning, optimized by the information bottleneck loss. Our model, Infor-Coef, achieves an 18x FLOPs speedup with an accuracy degradation of less than 8\\% compared to BERT. This work provides a promising approach to compress and accelerate transformer-based models for NLP tasks.",
+      "identifiers": [
+        "SemanticScholar:00bfaf8b0b3975860e2b60d3924e731c2333fd71"
+      ],
+      "semantic_scholar_id": "00bfaf8b0b3975860e2b60d3924e731c2333fd71",
+      "canonical_id": "arXiv:2305.12458",
+      "arxiv_id": "2305.12458",
+      "doi": "10.48550/arXiv.2305.12458",
+      "authors": [
+        "Wenxin Tan"
+      ],
+      "priority": 4,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 4,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1242,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Inference Optimizations for Large Language Models: Effects, Challenges, and Practical Considerations",
+      "source_url": "https://arxiv.org/abs/2408.03130",
+      "year": 2024,
+      "published": "2024-08-06",
+      "venue": "arXiv.org",
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models are ubiquitous in natural language processing because they can adapt to new tasks without retraining. However, their sheer scale and complexity present unique challenges and opportunities, prompting researchers and practitioners to explore novel model training, optimization, and deployment methods. This literature review focuses on various techniques for reducing resource requirements and compressing large language models, including quantization, pruning, knowledge distillation, and architectural optimizations. The primary objective is to explore each method in-depth and highlight its unique challenges and practical applications. The discussed methods are categorized into a taxonomy that presents an overview of the optimization landscape and helps navigate it to understand the research trajectory better.",
+      "identifiers": [
+        "SemanticScholar:00764884538ef7e1ef736706dfe9d5c417527899"
+      ],
+      "semantic_scholar_id": "00764884538ef7e1ef736706dfe9d5c417527899",
+      "canonical_id": "arXiv:2408.03130",
+      "arxiv_id": "2408.03130",
+      "doi": "10.48550/arXiv.2408.03130",
+      "authors": [
+        "Leo Donisch",
+        "Sigurd Schacht",
+        "Carsten Lanquillon"
+      ],
+      "priority": 4,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 4,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 799,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "CSKV: Training-Efficient Channel Shrinking for KV Cache in Long-Context Scenarios",
+      "source_url": "https://arxiv.org/abs/2409.10593",
+      "year": 2024,
+      "published": "2024-09-16",
+      "venue": "ENLSP",
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Models (LLMs) have been widely adopted to process long-context tasks. However, the large memory overhead of the key-value (KV) cache poses significant challenges in long-context scenarios. Existing training-free KV cache compression methods typically focus on quantization and token pruning, which have compression limits, and excessive sparsity can lead to severe performance degradation. Other methods design new architectures with less KV overhead but require significant training overhead. To address the above two drawbacks, we further explore the redundancy in the channel dimension and apply an architecture-level design with minor training costs. Therefore, we introduce CSKV, a training-efficient Channel Shrinking technique for KV cache compression: (1) We first analyze the singular value distribution of the KV cache, revealing significant redundancy and compression potential along the channel dimension. Based on this observation, we propose using low-rank decomposition for key and value layers and storing the low-dimension features. (2) To preserve model performance, we introduce a bi-branch KV cache, including a window-based full-precision KV cache and a low-precision compressed KV cache. (3) To reduce the training costs, we minimize the layer-wise reconstruction loss for the compressed KV cache instead of retraining the entire LLMs. Extensive experiments show that CSKV can reduce the memory overhead of the KV cache by 80% while maintaining the model's long-context capability. Moreover, we show that our method can be seamlessly combined with quantization to further reduce the memory overhead, achieving a compression ratio of up to 95%. Code is available at https://github.com/wln20/CSKV.",
+      "identifiers": [
+        "SemanticScholar:4567c0dd44e7364673f7ce8b088a44739b528dd3"
+      ],
+      "semantic_scholar_id": "4567c0dd44e7364673f7ce8b088a44739b528dd3",
+      "canonical_id": "arXiv:2409.10593",
+      "arxiv_id": "2409.10593",
+      "doi": "10.48550/arXiv.2409.10593",
+      "authors": [
+        "Luning Wang",
+        "Shi-Yao Li",
+        "Xue-Fei Ning",
+        "Zhihang Yuan",
+        "Shengen Yan",
+        "Guohao Dai",
+        "Yu Wang"
+      ],
+      "priority": 4,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 4,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 758,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Multi-Cue Adaptive Visual Token Pruning for Large Vision-Language Models",
+      "source_url": "https://arxiv.org/abs/2503.08019",
+      "year": 2025,
+      "published": "2025-03-11",
+      "venue": "arXiv.org",
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "As the computational needs of Large Vision-Language Models (LVLMs) increase, visual token pruning has proven effective in improving inference speed and memory efficiency. Traditional pruning methods in LVLMs predominantly focus on attention scores to determine token relevance, overlooking critical aspects such as spatial position and token similarity. To this end, we introduce AdaptPrune, a novel plug-and-play training-free pruning method that builds on conventional attention-based pruning by integrating spatial distance and token similarity with an adaptive NMS approach. Our method is based on several observed phenomena in large models: the positional bias in the model's image attention and the redundancy of token information ignored by previous approaches. By integrating attention, spatial, and similarity information, our approach ensures a comprehensive evaluation of token importance and substantially refines the pruning decisions. Our method has been extensively tested across various LVLMs and benchmarks, confirming its robustness and adaptability. The results demonstrate that AdaptPrune consistently outperforms existing methods across various pruning ratios. Code is available at https://github.com/bzluan/AdaptPrune.",
+      "identifiers": [
+        "SemanticScholar:7a23e1b3e83d2ce968cc2d168c34abf61f99609a"
+      ],
+      "semantic_scholar_id": "7a23e1b3e83d2ce968cc2d168c34abf61f99609a",
+      "canonical_id": "arXiv:2503.08019",
+      "arxiv_id": "2503.08019",
+      "doi": "10.48550/arXiv.2503.08019",
+      "authors": [
+        "Bozhi Luan",
+        "Wen-Gang Zhou",
+        "Hao Feng",
+        "Zhe Wang",
+        "Xiaosong Li",
+        "Hou-Qiang Li"
+      ],
+      "priority": 4,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 4,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 582,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "QUAD: Quantization and Parameter-Efficient Tuning of LLM with Activation Decomposition",
+      "source_url": "https://arxiv.org/abs/2503.19353",
+      "year": 2025,
+      "published": "2025-03-25",
+      "venue": "arXiv.org",
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Models (LLMs) excel in diverse applications but suffer inefficiency due to massive scale. While quantization reduces computational costs, existing methods degrade accuracy in medium-sized LLMs (e.g., Llama-3-8B) due to activation outliers. To address this, we propose QUAD (Quantization with Activation Decomposition), a framework leveraging Singular Value Decomposition (SVD) to suppress activation outliers for effective 4-bit quantization. QUAD estimates activation singular vectors offline using calibration data to construct an orthogonal transformation matrix P, shifting outliers to additional dimensions in full precision while quantizing rest components to 4-bit. Additionally, QUAD enables parameter-efficient fine-tuning via adaptable full-precision outlier weights, narrowing the accuracy gap between quantized and full-precision models. Experiments demonstrate that QUAD achieves 94% ~ 96% accuracy under W4A4 quantization and 98% accuracy with W4A4/A8 and parameter-efficient fine-tuning for Llama-3 and Qwen-2.5 models. Our code is available at \\href{https://github.com/hyx1999/Quad}{repository}.",
+      "identifiers": [
+        "SemanticScholar:074bc0dbfcc5cc20e9923f7dee84e67406b47ce2"
+      ],
+      "semantic_scholar_id": "074bc0dbfcc5cc20e9923f7dee84e67406b47ce2",
+      "canonical_id": "arXiv:2503.19353",
+      "arxiv_id": "2503.19353",
+      "doi": "10.48550/arXiv.2503.19353",
+      "authors": [
+        "Yuxuan Hu",
+        "Xiaodong Chen",
+        "Cuiping Li",
+        "Hong Chen",
+        "Jing Zhang"
+      ],
+      "priority": 4,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 4,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 568,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Dual Precision Quantization for Efficient and Accurate Deep Neural Networks Inference",
+      "source_url": "https://arxiv.org/abs/2505.14638",
+      "year": 2025,
+      "published": "2025-05-20",
+      "venue": "2025 IEEE/CVF Conference on Computer Vision and Pattern Recognition Workshops (CVPRW)",
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Deep neural networks have achieved state-of-the-art results in a wide range of applications, from natural language processing and computer vision to speech recognition. However, as tasks become increasingly complex, model sizes continue to grow, posing challenges in latency and memory efficiency. To meet these constraints, post-training quantization has emerged as a promising solution. In this paper, we propose a novel hardware-efficient quantization and inference scheme that exploits hardware advantages with minimal accuracy degradation. Specifically, we introduce a W4A8 scheme, where weights are quantized and stored using 4-bit integer precision, and inference computations are performed using 8-bit floating-point arithmetic, demonstrating significant speedups and improved memory utilization compared to 16 -bit operations, applicable on various modern accelerators. To mitigate accuracy loss, we develop a novel quantization algorithm, dubbed Dual Precision Quantization (DPQ), that leverages the unique structure of our scheme without introducing additional inference overhead. Experimental results demonstrate improved performance (i.e., increased throughput) while maintaining tolerable accuracy degradation relative to the full-precision model.",
+      "identifiers": [
+        "SemanticScholar:85e363c67a54acc97128da8c7b33c0c9df45c006"
+      ],
+      "semantic_scholar_id": "85e363c67a54acc97128da8c7b33c0c9df45c006",
+      "canonical_id": "arXiv:2505.14638",
+      "arxiv_id": "2505.14638",
+      "doi": "10.1109/CVPRW67362.2025.00308",
+      "authors": [
+        "Tomer Gafni",
+        "A. Karnieli",
+        "Yair Hanani"
+      ],
+      "priority": 4,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 4,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 512,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Ghidorah: Fast LLM Inference on Edge with Speculative Decoding and Hetero-Core Parallelism",
+      "source_url": "https://arxiv.org/abs/2505.23219",
+      "year": 2025,
+      "published": "2025-05-29",
+      "venue": "ICCD",
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "In-situ LLM inference on end-user devices has gained significant interest due to its privacy benefits and reduced dependency on external infrastructure. However, as the decoding process is memory-bandwidth-bound, the diverse processing units in modern end-user devices cannot be fully exploited, resulting in slow LLM inference. This paper presents Ghidorah, an LLM inference system for end-user devices with the unified memory architecture. The key idea of Ghidorah can be summarized in two steps: 1) leveraging speculative decoding approaches to enhance parallelism, and 2) ingeniously distributing workloads across multiple heterogeneous processing units to maximize computing power utilization. Ghidorah includes the hetero-core model parallelism (HCMP) architecture and the architecture-aware profiling (ARCA) approach. The HCMP architecture guides partitioning by leveraging the unified memory design of end-user devices and adapting to the hybrid computational demands of speculative decoding. The ARCA approach is used to determine the optimal speculative strategy and partitioning strategy, balancing acceptance rate with parallel capability to maximize the speedup. Additionally, we optimize sparse computation on ARM CPUs. Experimental results show that Ghidorah can achieve up to $7.6 \\times$ speedup in the dominant LLM decoding phase compared to the sequential decoding approach on NVIDIA Jetson NX.",
+      "identifiers": [
+        "SemanticScholar:b4ffec86ddd82cb7f6fb163df9f00540c0aec113"
+      ],
+      "semantic_scholar_id": "b4ffec86ddd82cb7f6fb163df9f00540c0aec113",
+      "canonical_id": "arXiv:2505.23219",
+      "arxiv_id": "2505.23219",
+      "doi": "10.1109/ICCD65941.2025.00043",
+      "authors": [
+        "Jin-Hui Wei",
+        "Yen-Chieh Huang",
+        "Yuhui Zhou",
+        "Jiazhi Jiang",
+        "Jiang-Su Du",
+        "Yu-Tong Lu"
+      ],
+      "priority": 4,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 4,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 503,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Adaptive Dual Reasoner: Large Reasoning Models Can Think Efficiently by Hybrid Reasoning",
+      "source_url": "https://arxiv.org/abs/2510.10207",
+      "year": 2025,
+      "published": "2025-10-11",
+      "venue": "arXiv.org",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Although Long Reasoning Models (LRMs) have achieved superior performance on various reasoning scenarios, they often suffer from increased computational costs and inference latency caused by overthinking. To address these limitations, we propose Adaptive Dual Reasoner, which supports two reasoning modes: fast thinking and slow thinking. ADR dynamically alternates between these modes based on the contextual complexity during reasoning. ADR is trained in two stages: (1) A cold-start stage using supervised fine-tuning (SFT) to equip the model with the ability to integrate both fast and slow reasoning modes, in which we construct a hybrid reasoning dataset through a dedicated pipeline to provide large-scale supervision. (2) A reinforcement learning stage for optimizing reasoning effort, where we introduce Entropy-guided Hybrid Policy Optimization EHPO, an RL training framework employing an entropy-guided dynamic rollout strategy for branching at high-entropy units and a difficulty-aware penalty to balance fast and slow reasoning. Across challenging mathematical reasoning benchmarks, ADR achieves an effective balance between reasoning performance and efficiency among state-of-the-art approaches. Specifically, ADR yields a performance gain of up to 6.1%, while reducing the reasoning output length by 49.5% to 59.3%.",
+      "identifiers": [
+        "SemanticScholar:8dc1c5f07e1c7822347e27f0a2dc673393ec54b0"
+      ],
+      "semantic_scholar_id": "8dc1c5f07e1c7822347e27f0a2dc673393ec54b0",
+      "canonical_id": "arXiv:2510.10207",
+      "arxiv_id": "2510.10207",
+      "doi": "10.48550/arXiv.2510.10207",
+      "authors": [
+        "Yujian Zhang",
+        "Ke-Yu Chen",
+        "Zhi-Feng Shen",
+        "Rui-Zhi Qiao",
+        "Xing Sun"
+      ],
+      "priority": 3,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 3,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 368,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Not All Bits Are Equal: Scale-Dependent Memory Optimization Strategies for Reasoning Models",
+      "source_url": "https://arxiv.org/abs/2510.10964",
+      "year": 2025,
+      "published": "2025-10-13",
+      "venue": "arXiv.org",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "While 4-bit quantization has emerged as a memory-optimal choice for non-reasoning models and zero-shot tasks across scales, we show that this universal prescription fails for reasoning models, where the KV cache rather than model size can dominate memory. Through systematic experiments across 1,700 inference scenarios on AIME25 and GPQA-Diamond, we find a scale-dependent trade-off: models with an effective size below 8-bit 4B parameters achieve better accuracy by allocating memory to more weights rather than longer generation, while larger models achieve better accuracy by allocating memory to longer generations. This scale threshold also determines when parallel scaling becomes memory-efficient and whether KV cache eviction outperforms KV quantization. Our findings show that memory optimization for LLMs cannot be scale-agnostic, while providing principled guidelines: for small reasoning models, prioritize model capacity over test-time compute, while for larger ones, maximize test-time compute. Our results suggest that optimizing reasoning models for deployment requires fundamentally different strategies from those established for non-reasoning models.",
+      "identifiers": [
+        "SemanticScholar:184f0682b0354803744a16db8557a35d2fd037ad"
+      ],
+      "semantic_scholar_id": "184f0682b0354803744a16db8557a35d2fd037ad",
+      "canonical_id": "arXiv:2510.10964",
+      "arxiv_id": "2510.10964",
+      "doi": "10.48550/arXiv.2510.10964",
+      "authors": [
+        "Junhyuck Kim",
+        "Ethan Ewer",
+        "Taehong Moon",
+        "Jongho Park",
+        "Dimitris Papailiopoulos"
+      ],
+      "priority": 3,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 3,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 366,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Scaling Laws Meet Model Architecture: Toward Inference-Efficient LLMs",
+      "source_url": "https://arxiv.org/abs/2510.18245",
+      "year": 2025,
+      "published": "2025-10-21",
+      "venue": "arXiv.org",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Scaling the number of parameters and the size of training data has proven to be an effective strategy for improving large language model (LLM) performance. Yet, as these models grow increasingly powerful and widely deployed, the cost of inference has become a pressing concern. Despite its importance, the trade-off between model accuracy and inference efficiency remains underexplored. In this work, we examine how key architectural factors, hidden size, the allocation of parameters between MLP and attention (mlp-to-attention ratio), and grouped-query attention (GQA), influence both inference cost and accuracy. We introduce a conditional scaling law that augments the Chinchilla framework with architectural information, along with a search framework for identifying architectures that are simultaneously inference-efficient and accurate. To validate our approach, we train more than 200 models spanning 80M to 3B parameters and 8B to 100B training tokens, and fit the proposed conditional scaling law. Our results show that the conditional scaling law reliably predicts optimal architectural choices and that the resulting models outperform existing open-source baselines. Under the same training budget, optimized architectures achieve up to 2.1% higher accuracy and 42% greater inference throughput compared to LLaMA-3.2.",
+      "identifiers": [
+        "SemanticScholar:2b66295b8c11f2894e48cc7e820de6b51304e1b8"
+      ],
+      "semantic_scholar_id": "2b66295b8c11f2894e48cc7e820de6b51304e1b8",
+      "canonical_id": "arXiv:2510.18245",
+      "arxiv_id": "2510.18245",
+      "doi": "10.48550/arXiv.2510.18245",
+      "authors": [
+        "Song Bian",
+        "Tao Yu",
+        "Shivaram Venkataraman",
+        "Youngsuk Park"
+      ],
+      "priority": 3,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 3,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 358,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "ARA: Adaptive Rank Allocation for Efficient Large Language Model SVD Compression",
+      "source_url": "https://arxiv.org/abs/2510.19389",
+      "year": 2025,
+      "published": "2025-10-22",
+      "venue": "arXiv.org",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "In the field of large language model (LLM) compression, singular value decomposition (SVD) is a widely studied and adopted low-rank decomposition technique. Since SVD operates exclusively on linear modules, and these modules in LLMs are separated by nonlinear components, SVD can only be applied independently to each linear module. Under a global compression ratio constraint, determining the appropriate rank for different linear modules becomes a critical problem. Existing approaches, such as heuristic algorithms and mask-based training, have made progress in addressing this challenge. However, these methods still suffer from several limitations: heuristic algorithms explore the solution space within restricted regions, while mask-based training struggles to efficiently capture the relationship between singular value spectra and trainable parameters. More importantly, current methods overlook the key property that the gain function is non-smooth at a compression ratio of 1, which often leads the training process to suboptimal local minima. To address these issues, we propose an Adaptive Rank Allocation (ARA) method. Specifically, (1) ARA introduces a dedicated mask design that enables efficient mapping and updating between retained ranks and trainable parameters; and (2) it employs an additional loss function to guide parameter selection toward globally optimal solutions. Experimental results demonstrate that ARA achieves state-of-the-art performance. On the LLaMA2-7B model with a 80\\% compression ratio, ARA reduces perplexity on WikiText2 from 8.38 to 6.42 and improves average zero-shot task accuracy by 9.72 percentage points compared with uniform compression. These results highlight the effectiveness of our method for rank allocation in SVD-based LLM compression.",
+      "identifiers": [
+        "SemanticScholar:8bcaad9c93ad387ef5a9d04d6c78865cc5f13e86"
+      ],
+      "semantic_scholar_id": "8bcaad9c93ad387ef5a9d04d6c78865cc5f13e86",
+      "canonical_id": "arXiv:2510.19389",
+      "arxiv_id": "2510.19389",
+      "doi": "10.48550/arXiv.2510.19389",
+      "authors": [
+        "Lin Xv",
+        "Jingsheng Gao",
+        "Xian Gao",
+        "Ting Liu",
+        "Yuzhuo Fu"
+      ],
+      "priority": 3,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 3,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 357,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2411.00915",
+      "identity_tokens": [
+        "id:DOI:10.1145/3689031.3717472",
+        "id:SemanticScholar:3db43249447f1f30f6a384268fd4d23107f8e010",
+        "id:arXiv:2411.00915",
+        "title:empower vision applications with lora lmm",
+        "url:https://arxiv.org/abs/2411.00915"
+      ],
+      "record": {
+        "title": "Empower Vision Applications with LoRA LMM",
+        "source_url": "https://arxiv.org/abs/2411.00915",
+        "year": 2024,
+        "published": "2024-11-01",
+        "venue": "European Conference on Computer Systems",
+        "citation_count": 9,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large Multimodal Models (LMMs) have shown significant progress in various complex vision tasks with the solid linguistic and reasoning capacity inherited from large language models (LMMs). Low-rank adaptation (LoRA) offers a promising method to integrate external knowledge into LMMs, compensating for their limitations on domain-specific tasks. However, the existing LoRA model serving is excessively computationally expensive and causes extremely high latency. In this paper, we present an end-to-end solution that empowers diverse vision tasks and enriches vision applications with LoRA LMMs. Our system, VaLoRA, enables accurate and efficient vision tasks by 1) an accuracy-aware LoRA adapter generation approach that generates LoRA adapters rich in domain-specific knowledge to meet application-specific accuracy requirements, 2) an adaptive-tiling LoRA adapters batching operator that efficiently computes concurrent heterogeneous LoRA adapters, and 3) a flexible LoRA adapter orchestration mechanism that manages application requests and LoRA adapters to achieve the lowest average response latency. We prototype VaLoRA on five popular vision tasks on three LMMs. Experiment results reveal that VaLoRA improves 24-62% of the accuracy compared to the original LMMs and reduces 20-89% of the latency compared to the state-of-the-art LoRA model serving systems.",
+        "identifiers": [
+          "SemanticScholar:3db43249447f1f30f6a384268fd4d23107f8e010"
+        ],
+        "semantic_scholar_id": "3db43249447f1f30f6a384268fd4d23107f8e010",
+        "canonical_id": "arXiv:2411.00915",
+        "arxiv_id": "2411.00915",
+        "doi": "10.1145/3689031.3717472",
+        "authors": [
+          "Liang Mi",
+          "Wei-Jun Wang",
+          "Wenming Tu",
+          "Qing-Feng He",
+          "Rui Kong",
+          "Xinyu Fang",
+          "Yazhu Dong",
+          "Yi-Kang Zhang",
+          "Yuan-Chun Li",
+          "Meng Li",
+          "Hai-Peng Dai",
+          "Gui-Hai Chen",
+          "Yun-Xin Liu"
+        ],
+        "priority": 9,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 9,
+          "citation_count": 9,
+          "total": 9,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 712,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2305.12458",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2305.12458",
+        "id:SemanticScholar:00bfaf8b0b3975860e2b60d3924e731c2333fd71",
+        "id:arXiv:2305.12458",
+        "title:inforcoef information bottleneckbased dynamic token downsampling for compact and efficient language model",
+        "url:https://arxiv.org/abs/2305.12458"
+      ],
+      "record": {
+        "title": "Infor-Coef: Information Bottleneck-based Dynamic Token Downsampling for Compact and Efficient language model",
+        "source_url": "https://arxiv.org/abs/2305.12458",
+        "year": 2023,
+        "published": "2023-05-21",
+        "venue": "arXiv.org",
+        "citation_count": 4,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The prevalence of Transformer-based pre-trained language models (PLMs) has led to their wide adoption for various natural language processing tasks. However, their excessive overhead leads to large latency and computational costs. The statically compression methods allocate fixed computation to different samples, resulting in redundant computation. The dynamic token pruning method selectively shortens the sequences but are unable to change the model size and hardly achieve the speedups as static pruning. In this paper, we propose a model accelaration approaches for large language models that incorporates dynamic token downsampling and static pruning, optimized by the information bottleneck loss. Our model, Infor-Coef, achieves an 18x FLOPs speedup with an accuracy degradation of less than 8\\% compared to BERT. This work provides a promising approach to compress and accelerate transformer-based models for NLP tasks.",
+        "identifiers": [
+          "SemanticScholar:00bfaf8b0b3975860e2b60d3924e731c2333fd71"
+        ],
+        "semantic_scholar_id": "00bfaf8b0b3975860e2b60d3924e731c2333fd71",
+        "canonical_id": "arXiv:2305.12458",
+        "arxiv_id": "2305.12458",
+        "doi": "10.48550/arXiv.2305.12458",
+        "authors": [
+          "Wenxin Tan"
+        ],
+        "priority": 4,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 4,
+          "citation_count": 4,
+          "total": 4,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 1242,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2408.03130",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2408.03130",
+        "id:SemanticScholar:00764884538ef7e1ef736706dfe9d5c417527899",
+        "id:arXiv:2408.03130",
+        "title:inference optimizations for large language models effects challenges and practical considerations",
+        "url:https://arxiv.org/abs/2408.03130"
+      ],
+      "record": {
+        "title": "Inference Optimizations for Large Language Models: Effects, Challenges, and Practical Considerations",
+        "source_url": "https://arxiv.org/abs/2408.03130",
+        "year": 2024,
+        "published": "2024-08-06",
+        "venue": "arXiv.org",
+        "citation_count": 4,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large language models are ubiquitous in natural language processing because they can adapt to new tasks without retraining. However, their sheer scale and complexity present unique challenges and opportunities, prompting researchers and practitioners to explore novel model training, optimization, and deployment methods. This literature review focuses on various techniques for reducing resource requirements and compressing large language models, including quantization, pruning, knowledge distillation, and architectural optimizations. The primary objective is to explore each method in-depth and highlight its unique challenges and practical applications. The discussed methods are categorized into a taxonomy that presents an overview of the optimization landscape and helps navigate it to understand the research trajectory better.",
+        "identifiers": [
+          "SemanticScholar:00764884538ef7e1ef736706dfe9d5c417527899"
+        ],
+        "semantic_scholar_id": "00764884538ef7e1ef736706dfe9d5c417527899",
+        "canonical_id": "arXiv:2408.03130",
+        "arxiv_id": "2408.03130",
+        "doi": "10.48550/arXiv.2408.03130",
+        "authors": [
+          "Leo Donisch",
+          "Sigurd Schacht",
+          "Carsten Lanquillon"
+        ],
+        "priority": 4,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 4,
+          "citation_count": 4,
+          "total": 4,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 799,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2409.10593",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2409.10593",
+        "id:SemanticScholar:4567c0dd44e7364673f7ce8b088a44739b528dd3",
+        "id:arXiv:2409.10593",
+        "title:cskv trainingefficient channel shrinking for kv cache in longcontext scenarios",
+        "url:https://arxiv.org/abs/2409.10593"
+      ],
+      "record": {
+        "title": "CSKV: Training-Efficient Channel Shrinking for KV Cache in Long-Context Scenarios",
+        "source_url": "https://arxiv.org/abs/2409.10593",
+        "year": 2024,
+        "published": "2024-09-16",
+        "venue": "ENLSP",
+        "citation_count": 4,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large Language Models (LLMs) have been widely adopted to process long-context tasks. However, the large memory overhead of the key-value (KV) cache poses significant challenges in long-context scenarios. Existing training-free KV cache compression methods typically focus on quantization and token pruning, which have compression limits, and excessive sparsity can lead to severe performance degradation. Other methods design new architectures with less KV overhead but require significant training overhead. To address the above two drawbacks, we further explore the redundancy in the channel dimension and apply an architecture-level design with minor training costs. Therefore, we introduce CSKV, a training-efficient Channel Shrinking technique for KV cache compression: (1) We first analyze the singular value distribution of the KV cache, revealing significant redundancy and compression potential along the channel dimension. Based on this observation, we propose using low-rank decomposition for key and value layers and storing the low-dimension features. (2) To preserve model performance, we introduce a bi-branch KV cache, including a window-based full-precision KV cache and a low-precision compressed KV cache. (3) To reduce the training costs, we minimize the layer-wise reconstruction loss for the compressed KV cache instead of retraining the entire LLMs. Extensive experiments show that CSKV can reduce the memory overhead of the KV cache by 80% while maintaining the model's long-context capability. Moreover, we show that our method can be seamlessly combined with quantization to further reduce the memory overhead, achieving a compression ratio of up to 95%. Code is available at https://github.com/wln20/CSKV.",
+        "identifiers": [
+          "SemanticScholar:4567c0dd44e7364673f7ce8b088a44739b528dd3"
+        ],
+        "semantic_scholar_id": "4567c0dd44e7364673f7ce8b088a44739b528dd3",
+        "canonical_id": "arXiv:2409.10593",
+        "arxiv_id": "2409.10593",
+        "doi": "10.48550/arXiv.2409.10593",
+        "authors": [
+          "Luning Wang",
+          "Shi-Yao Li",
+          "Xue-Fei Ning",
+          "Zhihang Yuan",
+          "Shengen Yan",
+          "Guohao Dai",
+          "Yu Wang"
+        ],
+        "priority": 4,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 4,
+          "citation_count": 4,
+          "total": 4,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 758,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2503.08019",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2503.08019",
+        "id:SemanticScholar:7a23e1b3e83d2ce968cc2d168c34abf61f99609a",
+        "id:arXiv:2503.08019",
+        "title:multicue adaptive visual token pruning for large visionlanguage models",
+        "url:https://arxiv.org/abs/2503.08019"
+      ],
+      "record": {
+        "title": "Multi-Cue Adaptive Visual Token Pruning for Large Vision-Language Models",
+        "source_url": "https://arxiv.org/abs/2503.08019",
+        "year": 2025,
+        "published": "2025-03-11",
+        "venue": "arXiv.org",
+        "citation_count": 4,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "As the computational needs of Large Vision-Language Models (LVLMs) increase, visual token pruning has proven effective in improving inference speed and memory efficiency. Traditional pruning methods in LVLMs predominantly focus on attention scores to determine token relevance, overlooking critical aspects such as spatial position and token similarity. To this end, we introduce AdaptPrune, a novel plug-and-play training-free pruning method that builds on conventional attention-based pruning by integrating spatial distance and token similarity with an adaptive NMS approach. Our method is based on several observed phenomena in large models: the positional bias in the model's image attention and the redundancy of token information ignored by previous approaches. By integrating attention, spatial, and similarity information, our approach ensures a comprehensive evaluation of token importance and substantially refines the pruning decisions. Our method has been extensively tested across various LVLMs and benchmarks, confirming its robustness and adaptability. The results demonstrate that AdaptPrune consistently outperforms existing methods across various pruning ratios. Code is available at https://github.com/bzluan/AdaptPrune.",
+        "identifiers": [
+          "SemanticScholar:7a23e1b3e83d2ce968cc2d168c34abf61f99609a"
+        ],
+        "semantic_scholar_id": "7a23e1b3e83d2ce968cc2d168c34abf61f99609a",
+        "canonical_id": "arXiv:2503.08019",
+        "arxiv_id": "2503.08019",
+        "doi": "10.48550/arXiv.2503.08019",
+        "authors": [
+          "Bozhi Luan",
+          "Wen-Gang Zhou",
+          "Hao Feng",
+          "Zhe Wang",
+          "Xiaosong Li",
+          "Hou-Qiang Li"
+        ],
+        "priority": 4,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 4,
+          "citation_count": 4,
+          "total": 4,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 582,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2503.19353",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2503.19353",
+        "id:SemanticScholar:074bc0dbfcc5cc20e9923f7dee84e67406b47ce2",
+        "id:arXiv:2503.19353",
+        "title:quad quantization and parameterefficient tuning of llm with activation decomposition",
+        "url:https://arxiv.org/abs/2503.19353"
+      ],
+      "record": {
+        "title": "QUAD: Quantization and Parameter-Efficient Tuning of LLM with Activation Decomposition",
+        "source_url": "https://arxiv.org/abs/2503.19353",
+        "year": 2025,
+        "published": "2025-03-25",
+        "venue": "arXiv.org",
+        "citation_count": 4,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large Language Models (LLMs) excel in diverse applications but suffer inefficiency due to massive scale. While quantization reduces computational costs, existing methods degrade accuracy in medium-sized LLMs (e.g., Llama-3-8B) due to activation outliers. To address this, we propose QUAD (Quantization with Activation Decomposition), a framework leveraging Singular Value Decomposition (SVD) to suppress activation outliers for effective 4-bit quantization. QUAD estimates activation singular vectors offline using calibration data to construct an orthogonal transformation matrix P, shifting outliers to additional dimensions in full precision while quantizing rest components to 4-bit. Additionally, QUAD enables parameter-efficient fine-tuning via adaptable full-precision outlier weights, narrowing the accuracy gap between quantized and full-precision models. Experiments demonstrate that QUAD achieves 94% ~ 96% accuracy under W4A4 quantization and 98% accuracy with W4A4/A8 and parameter-efficient fine-tuning for Llama-3 and Qwen-2.5 models. Our code is available at \\href{https://github.com/hyx1999/Quad}{repository}.",
+        "identifiers": [
+          "SemanticScholar:074bc0dbfcc5cc20e9923f7dee84e67406b47ce2"
+        ],
+        "semantic_scholar_id": "074bc0dbfcc5cc20e9923f7dee84e67406b47ce2",
+        "canonical_id": "arXiv:2503.19353",
+        "arxiv_id": "2503.19353",
+        "doi": "10.48550/arXiv.2503.19353",
+        "authors": [
+          "Yuxuan Hu",
+          "Xiaodong Chen",
+          "Cuiping Li",
+          "Hong Chen",
+          "Jing Zhang"
+        ],
+        "priority": 4,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 4,
+          "citation_count": 4,
+          "total": 4,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 568,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2505.14638",
+      "identity_tokens": [
+        "id:DOI:10.1109/cvprw67362.2025.00308",
+        "id:SemanticScholar:85e363c67a54acc97128da8c7b33c0c9df45c006",
+        "id:arXiv:2505.14638",
+        "title:dual precision quantization for efficient and accurate deep neural networks inference",
+        "url:https://arxiv.org/abs/2505.14638"
+      ],
+      "record": {
+        "title": "Dual Precision Quantization for Efficient and Accurate Deep Neural Networks Inference",
+        "source_url": "https://arxiv.org/abs/2505.14638",
+        "year": 2025,
+        "published": "2025-05-20",
+        "venue": "2025 IEEE/CVF Conference on Computer Vision and Pattern Recognition Workshops (CVPRW)",
+        "citation_count": 4,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Deep neural networks have achieved state-of-the-art results in a wide range of applications, from natural language processing and computer vision to speech recognition. However, as tasks become increasingly complex, model sizes continue to grow, posing challenges in latency and memory efficiency. To meet these constraints, post-training quantization has emerged as a promising solution. In this paper, we propose a novel hardware-efficient quantization and inference scheme that exploits hardware advantages with minimal accuracy degradation. Specifically, we introduce a W4A8 scheme, where weights are quantized and stored using 4-bit integer precision, and inference computations are performed using 8-bit floating-point arithmetic, demonstrating significant speedups and improved memory utilization compared to 16 -bit operations, applicable on various modern accelerators. To mitigate accuracy loss, we develop a novel quantization algorithm, dubbed Dual Precision Quantization (DPQ), that leverages the unique structure of our scheme without introducing additional inference overhead. Experimental results demonstrate improved performance (i.e., increased throughput) while maintaining tolerable accuracy degradation relative to the full-precision model.",
+        "identifiers": [
+          "SemanticScholar:85e363c67a54acc97128da8c7b33c0c9df45c006"
+        ],
+        "semantic_scholar_id": "85e363c67a54acc97128da8c7b33c0c9df45c006",
+        "canonical_id": "arXiv:2505.14638",
+        "arxiv_id": "2505.14638",
+        "doi": "10.1109/CVPRW67362.2025.00308",
+        "authors": [
+          "Tomer Gafni",
+          "A. Karnieli",
+          "Yair Hanani"
+        ],
+        "priority": 4,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 4,
+          "citation_count": 4,
+          "total": 4,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 512,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2505.23219",
+      "identity_tokens": [
+        "id:DOI:10.1109/iccd65941.2025.00043",
+        "id:SemanticScholar:b4ffec86ddd82cb7f6fb163df9f00540c0aec113",
+        "id:arXiv:2505.23219",
+        "title:ghidorah fast llm inference on edge with speculative decoding and heterocore parallelism",
+        "url:https://arxiv.org/abs/2505.23219"
+      ],
+      "record": {
+        "title": "Ghidorah: Fast LLM Inference on Edge with Speculative Decoding and Hetero-Core Parallelism",
+        "source_url": "https://arxiv.org/abs/2505.23219",
+        "year": 2025,
+        "published": "2025-05-29",
+        "venue": "ICCD",
+        "citation_count": 4,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "In-situ LLM inference on end-user devices has gained significant interest due to its privacy benefits and reduced dependency on external infrastructure. However, as the decoding process is memory-bandwidth-bound, the diverse processing units in modern end-user devices cannot be fully exploited, resulting in slow LLM inference. This paper presents Ghidorah, an LLM inference system for end-user devices with the unified memory architecture. The key idea of Ghidorah can be summarized in two steps: 1) leveraging speculative decoding approaches to enhance parallelism, and 2) ingeniously distributing workloads across multiple heterogeneous processing units to maximize computing power utilization. Ghidorah includes the hetero-core model parallelism (HCMP) architecture and the architecture-aware profiling (ARCA) approach. The HCMP architecture guides partitioning by leveraging the unified memory design of end-user devices and adapting to the hybrid computational demands of speculative decoding. The ARCA approach is used to determine the optimal speculative strategy and partitioning strategy, balancing acceptance rate with parallel capability to maximize the speedup. Additionally, we optimize sparse computation on ARM CPUs. Experimental results show that Ghidorah can achieve up to $7.6 \\times$ speedup in the dominant LLM decoding phase compared to the sequential decoding approach on NVIDIA Jetson NX.",
+        "identifiers": [
+          "SemanticScholar:b4ffec86ddd82cb7f6fb163df9f00540c0aec113"
+        ],
+        "semantic_scholar_id": "b4ffec86ddd82cb7f6fb163df9f00540c0aec113",
+        "canonical_id": "arXiv:2505.23219",
+        "arxiv_id": "2505.23219",
+        "doi": "10.1109/ICCD65941.2025.00043",
+        "authors": [
+          "Jin-Hui Wei",
+          "Yen-Chieh Huang",
+          "Yuhui Zhou",
+          "Jiazhi Jiang",
+          "Jiang-Su Du",
+          "Yu-Tong Lu"
+        ],
+        "priority": 4,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 4,
+          "citation_count": 4,
+          "total": 4,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 503,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2510.10207",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2510.10207",
+        "id:SemanticScholar:8dc1c5f07e1c7822347e27f0a2dc673393ec54b0",
+        "id:arXiv:2510.10207",
+        "title:adaptive dual reasoner large reasoning models can think efficiently by hybrid reasoning",
+        "url:https://arxiv.org/abs/2510.10207"
+      ],
+      "record": {
+        "title": "Adaptive Dual Reasoner: Large Reasoning Models Can Think Efficiently by Hybrid Reasoning",
+        "source_url": "https://arxiv.org/abs/2510.10207",
+        "year": 2025,
+        "published": "2025-10-11",
+        "venue": "arXiv.org",
+        "citation_count": 3,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Although Long Reasoning Models (LRMs) have achieved superior performance on various reasoning scenarios, they often suffer from increased computational costs and inference latency caused by overthinking. To address these limitations, we propose Adaptive Dual Reasoner, which supports two reasoning modes: fast thinking and slow thinking. ADR dynamically alternates between these modes based on the contextual complexity during reasoning. ADR is trained in two stages: (1) A cold-start stage using supervised fine-tuning (SFT) to equip the model with the ability to integrate both fast and slow reasoning modes, in which we construct a hybrid reasoning dataset through a dedicated pipeline to provide large-scale supervision. (2) A reinforcement learning stage for optimizing reasoning effort, where we introduce Entropy-guided Hybrid Policy Optimization EHPO, an RL training framework employing an entropy-guided dynamic rollout strategy for branching at high-entropy units and a difficulty-aware penalty to balance fast and slow reasoning. Across challenging mathematical reasoning benchmarks, ADR achieves an effective balance between reasoning performance and efficiency among state-of-the-art approaches. Specifically, ADR yields a performance gain of up to 6.1%, while reducing the reasoning output length by 49.5% to 59.3%.",
+        "identifiers": [
+          "SemanticScholar:8dc1c5f07e1c7822347e27f0a2dc673393ec54b0"
+        ],
+        "semantic_scholar_id": "8dc1c5f07e1c7822347e27f0a2dc673393ec54b0",
+        "canonical_id": "arXiv:2510.10207",
+        "arxiv_id": "2510.10207",
+        "doi": "10.48550/arXiv.2510.10207",
+        "authors": [
+          "Yujian Zhang",
+          "Ke-Yu Chen",
+          "Zhi-Feng Shen",
+          "Rui-Zhi Qiao",
+          "Xing Sun"
+        ],
+        "priority": 3,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 3,
+          "citation_count": 3,
+          "total": 3,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 368,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2510.10964",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2510.10964",
+        "id:SemanticScholar:184f0682b0354803744a16db8557a35d2fd037ad",
+        "id:arXiv:2510.10964",
+        "title:not all bits are equal scaledependent memory optimization strategies for reasoning models",
+        "url:https://arxiv.org/abs/2510.10964"
+      ],
+      "record": {
+        "title": "Not All Bits Are Equal: Scale-Dependent Memory Optimization Strategies for Reasoning Models",
+        "source_url": "https://arxiv.org/abs/2510.10964",
+        "year": 2025,
+        "published": "2025-10-13",
+        "venue": "arXiv.org",
+        "citation_count": 3,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "While 4-bit quantization has emerged as a memory-optimal choice for non-reasoning models and zero-shot tasks across scales, we show that this universal prescription fails for reasoning models, where the KV cache rather than model size can dominate memory. Through systematic experiments across 1,700 inference scenarios on AIME25 and GPQA-Diamond, we find a scale-dependent trade-off: models with an effective size below 8-bit 4B parameters achieve better accuracy by allocating memory to more weights rather than longer generation, while larger models achieve better accuracy by allocating memory to longer generations. This scale threshold also determines when parallel scaling becomes memory-efficient and whether KV cache eviction outperforms KV quantization. Our findings show that memory optimization for LLMs cannot be scale-agnostic, while providing principled guidelines: for small reasoning models, prioritize model capacity over test-time compute, while for larger ones, maximize test-time compute. Our results suggest that optimizing reasoning models for deployment requires fundamentally different strategies from those established for non-reasoning models.",
+        "identifiers": [
+          "SemanticScholar:184f0682b0354803744a16db8557a35d2fd037ad"
+        ],
+        "semantic_scholar_id": "184f0682b0354803744a16db8557a35d2fd037ad",
+        "canonical_id": "arXiv:2510.10964",
+        "arxiv_id": "2510.10964",
+        "doi": "10.48550/arXiv.2510.10964",
+        "authors": [
+          "Junhyuck Kim",
+          "Ethan Ewer",
+          "Taehong Moon",
+          "Jongho Park",
+          "Dimitris Papailiopoulos"
+        ],
+        "priority": 3,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 3,
+          "citation_count": 3,
+          "total": 3,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 366,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2510.18245",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2510.18245",
+        "id:SemanticScholar:2b66295b8c11f2894e48cc7e820de6b51304e1b8",
+        "id:arXiv:2510.18245",
+        "title:scaling laws meet model architecture toward inferenceefficient llms",
+        "url:https://arxiv.org/abs/2510.18245"
+      ],
+      "record": {
+        "title": "Scaling Laws Meet Model Architecture: Toward Inference-Efficient LLMs",
+        "source_url": "https://arxiv.org/abs/2510.18245",
+        "year": 2025,
+        "published": "2025-10-21",
+        "venue": "arXiv.org",
+        "citation_count": 3,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Scaling the number of parameters and the size of training data has proven to be an effective strategy for improving large language model (LLM) performance. Yet, as these models grow increasingly powerful and widely deployed, the cost of inference has become a pressing concern. Despite its importance, the trade-off between model accuracy and inference efficiency remains underexplored. In this work, we examine how key architectural factors, hidden size, the allocation of parameters between MLP and attention (mlp-to-attention ratio), and grouped-query attention (GQA), influence both inference cost and accuracy. We introduce a conditional scaling law that augments the Chinchilla framework with architectural information, along with a search framework for identifying architectures that are simultaneously inference-efficient and accurate. To validate our approach, we train more than 200 models spanning 80M to 3B parameters and 8B to 100B training tokens, and fit the proposed conditional scaling law. Our results show that the conditional scaling law reliably predicts optimal architectural choices and that the resulting models outperform existing open-source baselines. Under the same training budget, optimized architectures achieve up to 2.1% higher accuracy and 42% greater inference throughput compared to LLaMA-3.2.",
+        "identifiers": [
+          "SemanticScholar:2b66295b8c11f2894e48cc7e820de6b51304e1b8"
+        ],
+        "semantic_scholar_id": "2b66295b8c11f2894e48cc7e820de6b51304e1b8",
+        "canonical_id": "arXiv:2510.18245",
+        "arxiv_id": "2510.18245",
+        "doi": "10.48550/arXiv.2510.18245",
+        "authors": [
+          "Song Bian",
+          "Tao Yu",
+          "Shivaram Venkataraman",
+          "Youngsuk Park"
+        ],
+        "priority": 3,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 3,
+          "citation_count": 3,
+          "total": 3,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 358,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2510.19389",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2510.19389",
+        "id:SemanticScholar:8bcaad9c93ad387ef5a9d04d6c78865cc5f13e86",
+        "id:arXiv:2510.19389",
+        "title:ara adaptive rank allocation for efficient large language model svd compression",
+        "url:https://arxiv.org/abs/2510.19389"
+      ],
+      "record": {
+        "title": "ARA: Adaptive Rank Allocation for Efficient Large Language Model SVD Compression",
+        "source_url": "https://arxiv.org/abs/2510.19389",
+        "year": 2025,
+        "published": "2025-10-22",
+        "venue": "arXiv.org",
+        "citation_count": 3,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "In the field of large language model (LLM) compression, singular value decomposition (SVD) is a widely studied and adopted low-rank decomposition technique. Since SVD operates exclusively on linear modules, and these modules in LLMs are separated by nonlinear components, SVD can only be applied independently to each linear module. Under a global compression ratio constraint, determining the appropriate rank for different linear modules becomes a critical problem. Existing approaches, such as heuristic algorithms and mask-based training, have made progress in addressing this challenge. However, these methods still suffer from several limitations: heuristic algorithms explore the solution space within restricted regions, while mask-based training struggles to efficiently capture the relationship between singular value spectra and trainable parameters. More importantly, current methods overlook the key property that the gain function is non-smooth at a compression ratio of 1, which often leads the training process to suboptimal local minima. To address these issues, we propose an Adaptive Rank Allocation (ARA) method. Specifically, (1) ARA introduces a dedicated mask design that enables efficient mapping and updating between retained ranks and trainable parameters; and (2) it employs an additional loss function to guide parameter selection toward globally optimal solutions. Experimental results demonstrate that ARA achieves state-of-the-art performance. On the LLaMA2-7B model with a 80\\% compression ratio, ARA reduces perplexity on WikiText2 from 8.38 to 6.42 and improves average zero-shot task accuracy by 9.72 percentage points compared with uniform compression. These results highlight the effectiveness of our method for rank allocation in SVD-based LLM compression.",
+        "identifiers": [
+          "SemanticScholar:8bcaad9c93ad387ef5a9d04d6c78865cc5f13e86"
+        ],
+        "semantic_scholar_id": "8bcaad9c93ad387ef5a9d04d6c78865cc5f13e86",
+        "canonical_id": "arXiv:2510.19389",
+        "arxiv_id": "2510.19389",
+        "doi": "10.48550/arXiv.2510.19389",
+        "authors": [
+          "Lin Xv",
+          "Jingsheng Gao",
+          "Xian Gao",
+          "Ting Liu",
+          "Yuzhuo Fu"
+        ],
+        "priority": 3,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 3,
+          "citation_count": 3,
+          "total": 3,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 357,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:93ccda5086738779907a1d280b36f48b35b4fb506210225de87c457f9812794d",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}
