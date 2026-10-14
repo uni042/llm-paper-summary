@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "c69873aa4a08234d78e595f8b3e2bc051d563901655bf66a7acb98d2405bbbe4",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/retry-research-f10f9367e67e--libfile_f8a6b7bf896c81919f4b25aeef6d6e4f--2026-2604.22520-routelmt-hybrid-translation-routing-research-20261014-1445-scheduled-chat-45-r01.md",
+  "canonical_id": "arXiv:2604.22520",
+  "worker_completed_at": "2026-10-14T15:00:00+09:00",
+  "worker_run_key": "20261014-1445-scheduled-chat-45/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 5352,
+    "body_paragraphs": 32,
+    "method_chars": 1507,
+    "method_paragraphs": 10,
+    "evaluation_chars": 1554,
+    "limitation_chars": 0,
+    "insufficiency_flags": [
+      "限界説明量 0 < 推奨 120"
+    ]
+  },
+  "failures": [
+    "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2026-2604.22520-routelmt-learned-sample-routing-for-hybrid-llm-translation-deployment.md と 9 段落 / 1793文字 (100.0%) が完全一致"
+  ],
+  "processed_at": "2026-10-14T13:43:17+00:00"
+}

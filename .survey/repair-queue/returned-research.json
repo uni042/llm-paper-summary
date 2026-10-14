@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-14T13:36:51+00:00",
+  "generated_at": "2026-10-14T13:43:18+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -1047,33 +1047,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_ded311cd47cc8191a429e5b92de682d4--2026-2604.07812-hawk-head-importance-visual-token-pruning-research-20261014-1430-scheduled-chat-30-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_ded311cd47cc8191a429e5b92de682d4--2026-2604.07812-hawk-head-importance-visual-token-pruning-research-20261014-1430-scheduled-chat-30-r01.json",
       "worker_run_key": "20261014-1430-scheduled-chat-30/r01"
-    },
-    {
-      "canonical_id": "arXiv:2604.22520",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-14T12:18:01+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2026-2604.22520-routelmt-learned-sample-routing-for-hybrid-llm-translation-deployment.md と 9 段落 / 1793文字 (100.0%) が完全一致"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5352,
-        "body_paragraphs": 32,
-        "method_chars": 1507,
-        "method_paragraphs": 10,
-        "evaluation_chars": 1554,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_f8a6b7bf896c81919f4b25aeef6d6e4f--2026-2604.22520-routelmt-hybrid-translation-routing-research-20261014-1445-scheduled-chat-45-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_f8a6b7bf896c81919f4b25aeef6d6e4f--2026-2604.22520-routelmt-hybrid-translation-routing-research-20261014-1445-scheduled-chat-45-r01.json",
-      "worker_run_key": "20261014-1445-scheduled-chat-45/r01"
     },
     {
       "canonical_id": "arXiv:2605.31035",
@@ -2707,8 +2680,8 @@
     },
     {
       "canonical_id": "arXiv:2601.02535",
-      "title": "ModeX: Evaluator-Free Best-of-N Selection for Open-Ended Generation",
-      "source_url": "https://arxiv.org/html/2601.02535v2",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-14T13:36:46+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-00",
@@ -2734,8 +2707,8 @@
     },
     {
       "canonical_id": "arXiv:2602.03152",
-      "title": "FASA: Frequency-aware Sparse Attention",
-      "source_url": "https://arxiv.org/abs/2602.03152",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-14T13:36:47+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-45",
@@ -2759,8 +2732,8 @@
     },
     {
       "canonical_id": "arXiv:2601.07832",
-      "title": "MHLA: Restoring Expressivity of Linear Attention via Token-Level Multi-Head",
-      "source_url": "https://proceedings.iclr.cc/paper_files/paper/2026/file/14a812fa4b6bf244d055e37a7cd2f557-Paper-Conference.pdf",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-14T13:36:48+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-30",
@@ -2784,8 +2757,8 @@
     },
     {
       "canonical_id": "arXiv:2605.11222",
-      "title": "ADMM-Q: An Improved Hessian-based Weight Quantizer for Post-Training Quantization of Large Language Models",
-      "source_url": "https://arxiv.org/abs/2605.11222",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-14T13:36:49+00:00",
       "return_count": 3,
       "assigned_worker": "scheduled-chat-45",
@@ -2811,8 +2784,8 @@
     },
     {
       "canonical_id": "arXiv:2604.06515",
-      "title": "Efficient Quantization of Mixture-of-Experts with Theoretical Generalization Guarantees",
-      "source_url": "https://arxiv.org/html/2604.06515v1",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-14T13:36:51+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-45",
@@ -2833,6 +2806,33 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-ef25b356f1fb--libfile_ead1ddbcf95c8191a496f5496cc67a3c--2026-2604.06515-moe-router-norm-mixed-precision-research-20261014-0400-scheduled-chat-00-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-ef25b356f1fb--libfile_ead1ddbcf95c8191a496f5496cc67a3c--2026-2604.06515-moe-router-norm-mixed-precision-research-20261014-0400-scheduled-chat-00-.json",
       "worker_run_key": "20261014-0400-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2604.22520",
+      "title": "RouteLMT: Learned Sample Routing for Hybrid LLM Translation Deployment",
+      "source_url": "https://arxiv.org/html/2604.22520v1",
+      "returned_at": "2026-10-14T13:43:17+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2026-2604.22520-routelmt-learned-sample-routing-for-hybrid-llm-translation-deployment.md と 9 段落 / 1793文字 (100.0%) が完全一致"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5352,
+        "body_paragraphs": 32,
+        "method_chars": 1507,
+        "method_paragraphs": 10,
+        "evaluation_chars": 1554,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-f10f9367e67e--libfile_f8a6b7bf896c81919f4b25aeef6d6e4f--2026-2604.22520-routelmt-hybrid-translation-routing-research-20261014-1445-scheduled-chat-45-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-f10f9367e67e--libfile_f8a6b7bf896c81919f4b25aeef6d6e4f--2026-2604.22520-routelmt-hybrid-translation-routing-research-20261014-1445-scheduled-chat.json",
+      "worker_run_key": "20261014-1445-scheduled-chat-45/r01"
     }
   ]
 }
