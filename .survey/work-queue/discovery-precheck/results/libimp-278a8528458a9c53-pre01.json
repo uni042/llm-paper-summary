@@ -1,0 +1,949 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-278a8528458a9c53-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-278a8528458a",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2505.03745",
+    "arXiv:2506.11087",
+    "arXiv:2506.16411",
+    "arXiv:2508.06297",
+    "arXiv:2511.07842",
+    "arXiv:2512.09946",
+    "arXiv:2602.08818",
+    "arXiv:2603.11053",
+    "arXiv:2604.08564",
+    "arXiv:2606.04620"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 10,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "5db25fefcd98abfafc3fd91bf2591c795b1ff5ab",
+  "raw_search_result_count": 10,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 10,
+  "provider_progress": {
+    "requested_count": 10,
+    "status_counts": {
+      "allowed": 10,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-14T02:50:28.927866+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2505.03745",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2506.11087",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2506.16411",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2508.06297",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2511.07842",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2512.09946",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2602.08818",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2603.11053",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2604.08564",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2606.04620",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Safety-Preserving PTQ via Contrastive Alignment Loss",
+      "source_url": "https://arxiv.org/abs/2511.07842",
+      "year": 2025,
+      "published": "2025-11-11",
+      "venue": null,
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Post-Training Quantization (PTQ) has become the de-facto standard for efficient LLM deployment, yet its optimization objective remains fundamentally incomplete. Standard PTQ methods minimize reconstruction error (e.g., MSE or KL divergence) without accounting for behavioral alignment--a critical property instilled through safety fine-tuning. We demonstrate that this objective mismatch introduces a systematic vulnerability: models can maintain low perplexity yet exhibit significant degradation in safety alignment, revealing that perplexity alone is an insufficient and often misleading proxy for deployment readiness. To address this, we propose Contrastive Alignment Quantization (CAQ), which extends the PTQ objective design space by integrating a Contrastive Alignment Loss (CAL). CAL introduces a principled push-pull mechanism that jointly optimizes distributional fidelity and behavioral alignment: it steers the quantized model toward its safe, instruction-tuned counterpart while diverging from the unaligned, pre-trained reference. CAQ requires no specialized safety datasets, relying solely on standard calibration data, and introduces negligible computational overhead over existing transformation-based PTQ pipelines. We show that CAQ enables robust 4-bit (W4A4) quantization across diverse model families--including LLaMA, Qwen, and Mistral--achieving superior safety alignment where state-of-the-art PTQ methods fail, without sacrificing general capabilities. Anonymized code is available in the supplementary material.",
+      "identifiers": [
+        "SemanticScholar:27c9bdd097fd2ee524257f5a582a816f5d1a4c0e"
+      ],
+      "semantic_scholar_id": "27c9bdd097fd2ee524257f5a582a816f5d1a4c0e",
+      "canonical_id": "arXiv:2511.07842",
+      "arxiv_id": "2511.07842",
+      "authors": [
+        "Sunghyun Wee",
+        "Suyoung Kim",
+        "Hyeonjin Kim",
+        "Kyomin Hwang",
+        "N. Kwak"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 337,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "ELANA: A Simple Energy and Latency Analyzer for LLMs",
+      "source_url": "https://arxiv.org/abs/2512.09946",
+      "year": 2025,
+      "published": "2025-12-07",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The latency and power consumption of large language models (LLMs) are major constraints when serving them across a wide spectrum of hardware platforms, from mobile edge devices to cloud GPU clusters. Benchmarking is crucial for optimizing efficiency in both model deployment and next-generation model development. To address this need, we open-source a simple profiling tool, \\textbf{ELANA}, for evaluating LLMs. ELANA is designed as a lightweight, academic-friendly profiler for analyzing model size, key-value (KV) cache size, prefilling latency (Time-to-first-token, TTFT), generation latency (Time-per-output-token, TPOT), and end-to-end latency (Time-to-last-token, TTLT) of LLMs on both multi-GPU and edge GPU platforms. It supports all publicly available models on Hugging Face and offers a simple command-line interface, along with optional energy consumption logging. Moreover, ELANA is fully compatible with popular Hugging Face APIs and can be easily customized or adapted to compressed or low bit-width models, making it ideal for research on efficient LLMs or for small-scale proof-of-concept studies. We release the ELANA profiling tool at: https://github.com/enyac-group/Elana.",
+      "identifiers": [
+        "SemanticScholar:bedc672f0324b8556c28cd1c6999bd1d7c2bece9"
+      ],
+      "semantic_scholar_id": "bedc672f0324b8556c28cd1c6999bd1d7c2bece9",
+      "canonical_id": "arXiv:2512.09946",
+      "arxiv_id": "2512.09946",
+      "doi": "10.48550/arXiv.2512.09946",
+      "authors": [
+        "Hung-Yueh Chiang",
+        "Bo-Kun Wang",
+        "Diana Marculescu"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 311,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "FlexMoRE: A Flexible Mixture of Rank-heterogeneous Experts for Efficient Federatedly-trained Large Language Models",
+      "source_url": "https://arxiv.org/abs/2602.08818",
+      "year": 2026,
+      "published": "2026-02-09",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Recent advances in mixture-of-experts architectures have shown that individual experts models can be trained federatedly, i.e., in isolation from other experts by using a common base model to facilitate coordination. However, we hypothesize that full-sized experts may not be necessary for all domains and that instead low-rank adapters may be sufficient. Here, we introduce FlexMoRE, a Flexible Mixture of Rank-heterogenous Experts, which may be either full-sized experts or adapters of a suitable rank. We systematically investigate the trade-off between expert rank and downstream task performance by evaluating $6$ experts with ranks $2^0$ to $2^{14}$ resulting in experiments covering 150 mixtures (96 with 2 experts, 54 with 7 experts) that are evaluated across $120$ tasks. For our experiments, we build on FlexOlmo and turn its pre-trained experts into low-rank versions. Our regression analysis from expert rank to downstream task performance reveals that the best-performing rank is substantially higher for reasoning-heavy benchmarks than for knowledge-heavy benchmarks. These findings on rank sensitivity come with direct implications for memory efficiency: Using optimal ranks, FlexMoRE yields improved downstream task performance (average score $47.18$) compared to the baseline FlexOlmo-style mixture of full-sized experts (average score $45.46$) at less than one third the parameters ($10.75$B for FlexMoRE vs. $33.27$B for FlexOlmo). All code will be made available.",
+      "identifiers": [
+        "SemanticScholar:de3c5e35001c6e091090d6148dcc17ab27906572"
+      ],
+      "semantic_scholar_id": "de3c5e35001c6e091090d6148dcc17ab27906572",
+      "canonical_id": "arXiv:2602.08818",
+      "arxiv_id": "2602.08818",
+      "doi": "10.48550/arXiv.2602.08818",
+      "authors": [
+        "Annemette Brok Pirchert",
+        "Jacob Nielsen",
+        "M. H. From",
+        "Lukas Galke Poech",
+        "Peter Schneider-Kamp"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 247,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Attention-Based Sampler for Diffusion Language Models",
+      "source_url": "https://arxiv.org/abs/2604.08564",
+      "year": 2026,
+      "published": "2026-03-18",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Auto-regressive models (ARMs) have established a dominant paradigm in language modeling. However, their strictly sequential sampling paradigm imposes fundamental constraints on both inference efficiency and modeling flexibility. To address these limitations, diffusion-based large language models (dLLMs) have been proposed, offering the potential for parallel sampling and flexible language modeling. Despite these advantages, current dLLMs sampling strategies rely primarily on token level information, which fails to account for global sequence structure and often yields suboptimal results. In this paper, we study the sampling order selection problem from the perspective of log-likelihood maximization. We show that this problem is NP-hard and propose an optimal sampling-rank-based approximation that makes the objective computationally tractable. We further prove that the tractable objective is optimized by sampling tokens in descending order of their attention-matrix column sums. This finding provides a principled justification for attention-guided sampling and offers a theoretically grounded alternative to greedy search. We instantiate this theoretical insight in a new training-free sampling algorithm, termed Attn-Sampler, and further propose dynamic attention thresholding for practical acceleration. Extensive experiments across multiple benchmarks validate the effectiveness of our proposed method, demonstrating that it achieves superior generation quality while enhancing the sampling parallelism.",
+      "identifiers": [
+        "SemanticScholar:d97e16b852f78b769022535155835e96ceedb8ea"
+      ],
+      "semantic_scholar_id": "d97e16b852f78b769022535155835e96ceedb8ea",
+      "canonical_id": "arXiv:2604.08564",
+      "arxiv_id": "2604.08564",
+      "doi": "10.48550/arXiv.2604.08564",
+      "authors": [
+        "Yuyang Zhou",
+        "Kai-Nuo Hou",
+        "Weiyu Chen",
+        "James T. Kwok"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 210,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "KV Cache Compression for Inference Efficiency in LLMs: A Review",
+      "source_url": "https://arxiv.org/abs/2508.06297",
+      "year": 2025,
+      "published": "2025-08-08",
+      "venue": "Proceedings of the 4th International Conference on Artificial Intelligence and Intelligent Information Processing",
+      "citation_count": 15,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "With the rapid advancement of large language models (LLMs), the context length for inference continuously increases, leading to an exponential growth in the demand for Key-Value (KV) caching. This has resulted in a significant memory bottleneck, limiting the inference efficiency and scalability of the models. Therefore, optimizing the KV cache during inference is crucial for enhancing performance and efficiency. This review systematically examines current KV cache optimization techniques, including compression strategies such as selective token strategies, quantization, and attention compression. We evaluate the effectiveness, trade-offs, and application scenarios of these methods, providing a comprehensive analysis of their impact on memory usage and inference speed. We focus on identifying the limitations and challenges of existing methods, such as compatibility issues with different models and tasks. Additionally, this review highlights future research directions, including hybrid optimization techniques, adaptive dynamic strategies, and software-hardware co-design. These approaches aim to improve inference efficiency and promote the practical application of large language models.",
+      "identifiers": [
+        "SemanticScholar:1a3bb1d6f9ce653baa68311df6481ed51535d99b"
+      ],
+      "semantic_scholar_id": "1a3bb1d6f9ce653baa68311df6481ed51535d99b",
+      "canonical_id": "arXiv:2508.06297",
+      "arxiv_id": "2508.06297",
+      "doi": "10.1145/3778534.3778567",
+      "authors": [
+        "Yan-Yu Liu",
+        "Jingying Fu",
+        "Si-Yang Liu",
+        "Yitian Zou",
+        "Shouhua Zhang",
+        "Jiehan Zhou"
+      ],
+      "priority": 15,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 15,
+        "citation_count": 15,
+        "total": 15,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 432,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "When Does Divide and Conquer Work for Long Context LLM? A Noise Decomposition Framework",
+      "source_url": "https://arxiv.org/abs/2506.16411",
+      "year": 2025,
+      "published": "2025-06-19",
+      "venue": "arXiv.org",
+      "citation_count": 10,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "We investigate the challenge of applying Large Language Models (LLMs) to long texts. We propose a theoretical framework that distinguishes the failure modes of long context tasks into three categories: cross-chunk dependence (task noise), confusion that grows with context size (model noise), and the imperfect integration of partial results (aggregator noise). Under this view, we analyze when it is effective to use multi-agent chunking, i.e., dividing a lengthy sequence into smaller chunks and aggregating the processed results of each chunk. Our experiments on tasks such as retrieval, question answering, and summarization confirm both the theoretical analysis and the conditions that favor multi-agent chunking. By exploring the accelerated decay of model fidelity with input length, we also explain why, for large inputs, a weaker model configured with chunk-based processing can surpass a more advanced model like GPT4o applied in a single shot. Overall, we present a principled understanding framework and our results highlight a direct pathway to handling long contexts in LLMs with carefully managed chunking and aggregator strategies.",
+      "identifiers": [
+        "SemanticScholar:9aba7720f88316c300078169970c9067652c20b6"
+      ],
+      "semantic_scholar_id": "9aba7720f88316c300078169970c9067652c20b6",
+      "canonical_id": "arXiv:2506.16411",
+      "arxiv_id": "2506.16411",
+      "doi": "10.48550/arXiv.2506.16411",
+      "authors": [
+        "Zhen Xu",
+        "Shang Zhu",
+        "Jue Wang",
+        "Junlin Wang",
+        "B. Athiwaratkun",
+        "Chi Wang",
+        "James Zou",
+        "Ce Zhang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 10,
+        "citation_count": 10,
+        "total": 10,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 482,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Speculative Decoding Scaling Laws (SDSL): Throughput Optimization Made Simple",
+      "source_url": "https://arxiv.org/abs/2603.11053",
+      "year": 2026,
+      "published": "2026-02-25",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Speculative decoding is a technique that uses multiple language models to accelerate infer- ence. Previous works have used an experi- mental approach to optimize the throughput of the inference pipeline, which involves LLM training and can be costly. This study of spec- ulative decoding proposes a theory that ana- lytically connects the key hyperparameters of pre-trained LLMs to the throughput efficiency of a downstream SD-based inference system. The theory allows the prediction of throughput- optimal hyperparameters for the components of an inference system before their pre-training.",
+      "identifiers": [
+        "SemanticScholar:b57665e71f3ddf0a4f1571e81f1de534bbdf3d12"
+      ],
+      "semantic_scholar_id": "b57665e71f3ddf0a4f1571e81f1de534bbdf3d12",
+      "canonical_id": "arXiv:2603.11053",
+      "arxiv_id": "2603.11053",
+      "doi": "10.48550/arXiv.2603.11053",
+      "authors": [
+        "Amirhossein Bozorgkhoo",
+        "Igor Molybog"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 231,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "QuBLAST: A Framework for Quantizing Large Language Models with Block-Level Compression Approach and Activation Scaling Strategy",
+      "source_url": "https://arxiv.org/abs/2606.04620",
+      "year": 2026,
+      "published": "2026-06-03",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "LLMs have become the state-of-the-art algorithms for solving NLP tasks. However, they typically come at huge computational and memory costs, thus making them difficult to deploy on embedded systems. Toward this, state-of-the-art methods typically employ uniform post-training quantization (PTQ) across attention blocks of the network, hence overlooking the potential of applying different quantization levels in the same network. They also employ complex operations to mitigate the negative impact of activation outliers, hence incurring high computational overheads. Moreover, they have not considered evaluation using emerging LLMs with non-conventional attention architectures (e.g., state-space models), which pose different challenges in applying quantization. To address these limitations, we propose QuBLAST, a novel PTQ methodology that employs block-level compression approach with activation scaling strategy for LLMs. Block-level compression approach enables mixed-precision quantization across blocks of the network, while activation scaling strategy efficiently mitigates the negative impact of activation outliers. Specifically, QuBLAST first analyzes the sensitivity of different attention blocks in the pre-trained model through the cross-entropy loss analysis. QuBLAST leverages this sensitivity analysis to determine the weight quantization level for each attention block in the model. Furthermore, QuBLAST employs the activation scaling map for each block to control the range of activation values and mitigate the negative impact of activation outliers, thereby enabling better quantization results. Experimental results show that, QuBLAST reduces model sizes by 40%-45.2% across different model architectures (i.e., Qwen3-8B, Llama3-8B, Mistral v0.1-8B, and Falcon H1R-7B), while maintaining the performance within 5% perplexity increase for the WikiText-2 and WikiText-103 datasets.",
+      "identifiers": [
+        "SemanticScholar:dfe6112c14d9d088f4fd3bf0ce83035db63f79f4"
+      ],
+      "semantic_scholar_id": "dfe6112c14d9d088f4fd3bf0ce83035db63f79f4",
+      "canonical_id": "arXiv:2606.04620",
+      "arxiv_id": "2606.04620",
+      "doi": "10.48550/arXiv.2606.04620",
+      "authors": [
+        "Pasindu Wickramasinghe",
+        "Achyuta Muthuvelan",
+        "Rachmad Vidya Wicaksana Putra",
+        "Ming-Hao Shao",
+        "Muhammad Shafique"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 133,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "AccLLM: Accelerating Long-Context LLM Inference via Algorithm-Hardware Co-Design",
+      "source_url": "https://arxiv.org/abs/2505.03745",
+      "year": 2025,
+      "published": "2025-04-07",
+      "venue": "IEEE Transactions on Very Large Scale Integration (vlsi) Systems",
+      "citation_count": 9,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Recently, large language models (LLMs) have achieved huge success in the natural language processing (NLP) field, driving a growing demand to extend their deployment from the cloud to edge devices. However, deploying LLMs on resource-constrained edge devices poses significant challenges, including: 1) intensive computations; 2) decode stage memory/bandwidth overhead; and 3) limited long sequence scalability. To address these challenges, we propose AccLLM, a comprehensive acceleration framework that enables efficient and fast long-context LLM inference through algorithm and hardware co-design. At the algorithmic level, we integrate: 1) pruning; 2) <inline-formula> <tex-math notation=\"LaTeX\">$\\Lambda $ </tex-math></inline-formula>-shaped attention; and 3) an innovative W2A8KV4 (2-bit weights, 8-bit activations, and 4-bit KV cache) quantization scheme, thus effectively reducing memory and bandwidth requirements while facilitating LLMs’ long-sequence generation. At the hardware level, we design a dedicated FPGA-based accelerator with a reconfigurable computing engine (RCE) to effectively and flexibly accommodate diverse operations arising from our compression algorithm, thereby fully translating the algorithmic innovations into tangible hardware efficiency. We validate AccLLM on the Xilinx Alveo U280 FPGA, demonstrating a <inline-formula> <tex-math notation=\"LaTeX\">$\\uparrow \\mathbf {4.07}\\times $ </tex-math></inline-formula> energy efficiency and a <inline-formula> <tex-math notation=\"LaTeX\">$\\uparrow \\mathbf {2.98}\\times $ </tex-math></inline-formula> throughput compared to the state-of-the-art work FlightLLM.",
+      "identifiers": [
+        "SemanticScholar:41038c42f7f01643bc4b5952b5347564e1957521"
+      ],
+      "semantic_scholar_id": "41038c42f7f01643bc4b5952b5347564e1957521",
+      "canonical_id": "arXiv:2505.03745",
+      "arxiv_id": "2505.03745",
+      "doi": "10.1109/TVLSI.2026.3658524",
+      "authors": [
+        "Yanbiao Liang",
+        "Huihong Shi",
+        "Haikuo Shao",
+        "Zhong-Feng Wang"
+      ],
+      "priority": 9,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 9,
+        "citation_count": 9,
+        "total": 9,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 555,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Enhancing Delta Compression in LLMs via SVD-based Quantization Error Minimization",
+      "source_url": "https://arxiv.org/abs/2506.11087",
+      "year": 2025,
+      "published": "2025-06-05",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Supervised Fine-Tuning (SFT) empowers Large Language Models (LLMs) with exceptional performance on specialized tasks, but it yields dense, high-dimensional delta parameters that pose severe storage and distribution challenges. Singular Value Decomposition (SVD)-based compression offers a compact representation for such delta parameters, but existing methods adopt heuristic quantization without clarifying underlying mechanisms, leading to poor generalizability. In this work, we propose PrinMix, a rigorous SVD-based framework that models quantization as an optimization problem, grounding the design in mathematical mechanisms. We first theoretically derive quantization error and identify a key singular-value-dominated scaling mechanism, which mathematically proves the necessity of mix-precision quantization. We then model the quantization scheme as a 0/1 Integer Linear Programming (ILP) problem, which yields optimal bit-budget-constrained solutions without empirical assumptions. Furthermore, PrinMix integrates a Reconstruction Target Correction (RTC) method to compensate for errors from the $\\mathbf{V}$-then-$\\mathbf{U}$ sequential quantization process. Extensive experiments confirm PrinMix performs well: for 7B LLMs, PrinMix outperforms SOTA Delta-CoMe on challenging benchmarks by 22.3% on AIME2024 and 6.1% on GQA.",
+      "identifiers": [
+        "SemanticScholar:db81a7f76ec171cf7c64e8020004f5674cc0102e"
+      ],
+      "semantic_scholar_id": "db81a7f76ec171cf7c64e8020004f5674cc0102e",
+      "canonical_id": "arXiv:2506.11087",
+      "arxiv_id": "2506.11087",
+      "authors": [
+        "Boya Xiong",
+        "Shuo Wang",
+        "Wei-Feng Ge",
+        "Guan-Hua Chen",
+        "Yun Chen"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 496,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2511.07842",
+      "identity_tokens": [
+        "id:SemanticScholar:27c9bdd097fd2ee524257f5a582a816f5d1a4c0e",
+        "id:arXiv:2511.07842",
+        "title:safetypreserving ptq via contrastive alignment loss",
+        "url:https://arxiv.org/abs/2511.07842"
+      ],
+      "record": {
+        "title": "Safety-Preserving PTQ via Contrastive Alignment Loss",
+        "source_url": "https://arxiv.org/abs/2511.07842",
+        "year": 2025,
+        "published": "2025-11-11",
+        "venue": null,
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Post-Training Quantization (PTQ) has become the de-facto standard for efficient LLM deployment, yet its optimization objective remains fundamentally incomplete. Standard PTQ methods minimize reconstruction error (e.g., MSE or KL divergence) without accounting for behavioral alignment--a critical property instilled through safety fine-tuning. We demonstrate that this objective mismatch introduces a systematic vulnerability: models can maintain low perplexity yet exhibit significant degradation in safety alignment, revealing that perplexity alone is an insufficient and often misleading proxy for deployment readiness. To address this, we propose Contrastive Alignment Quantization (CAQ), which extends the PTQ objective design space by integrating a Contrastive Alignment Loss (CAL). CAL introduces a principled push-pull mechanism that jointly optimizes distributional fidelity and behavioral alignment: it steers the quantized model toward its safe, instruction-tuned counterpart while diverging from the unaligned, pre-trained reference. CAQ requires no specialized safety datasets, relying solely on standard calibration data, and introduces negligible computational overhead over existing transformation-based PTQ pipelines. We show that CAQ enables robust 4-bit (W4A4) quantization across diverse model families--including LLaMA, Qwen, and Mistral--achieving superior safety alignment where state-of-the-art PTQ methods fail, without sacrificing general capabilities. Anonymized code is available in the supplementary material.",
+        "identifiers": [
+          "SemanticScholar:27c9bdd097fd2ee524257f5a582a816f5d1a4c0e"
+        ],
+        "semantic_scholar_id": "27c9bdd097fd2ee524257f5a582a816f5d1a4c0e",
+        "canonical_id": "arXiv:2511.07842",
+        "arxiv_id": "2511.07842",
+        "authors": [
+          "Sunghyun Wee",
+          "Suyoung Kim",
+          "Hyeonjin Kim",
+          "Kyomin Hwang",
+          "N. Kwak"
+        ],
+        "priority": 102,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 102,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 337,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2512.09946",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2512.09946",
+        "id:SemanticScholar:bedc672f0324b8556c28cd1c6999bd1d7c2bece9",
+        "id:arXiv:2512.09946",
+        "title:elana a simple energy and latency analyzer for llms",
+        "url:https://arxiv.org/abs/2512.09946"
+      ],
+      "record": {
+        "title": "ELANA: A Simple Energy and Latency Analyzer for LLMs",
+        "source_url": "https://arxiv.org/abs/2512.09946",
+        "year": 2025,
+        "published": "2025-12-07",
+        "venue": "arXiv.org",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The latency and power consumption of large language models (LLMs) are major constraints when serving them across a wide spectrum of hardware platforms, from mobile edge devices to cloud GPU clusters. Benchmarking is crucial for optimizing efficiency in both model deployment and next-generation model development. To address this need, we open-source a simple profiling tool, \\textbf{ELANA}, for evaluating LLMs. ELANA is designed as a lightweight, academic-friendly profiler for analyzing model size, key-value (KV) cache size, prefilling latency (Time-to-first-token, TTFT), generation latency (Time-per-output-token, TPOT), and end-to-end latency (Time-to-last-token, TTLT) of LLMs on both multi-GPU and edge GPU platforms. It supports all publicly available models on Hugging Face and offers a simple command-line interface, along with optional energy consumption logging. Moreover, ELANA is fully compatible with popular Hugging Face APIs and can be easily customized or adapted to compressed or low bit-width models, making it ideal for research on efficient LLMs or for small-scale proof-of-concept studies. We release the ELANA profiling tool at: https://github.com/enyac-group/Elana.",
+        "identifiers": [
+          "SemanticScholar:bedc672f0324b8556c28cd1c6999bd1d7c2bece9"
+        ],
+        "semantic_scholar_id": "bedc672f0324b8556c28cd1c6999bd1d7c2bece9",
+        "canonical_id": "arXiv:2512.09946",
+        "arxiv_id": "2512.09946",
+        "doi": "10.48550/arXiv.2512.09946",
+        "authors": [
+          "Hung-Yueh Chiang",
+          "Bo-Kun Wang",
+          "Diana Marculescu"
+        ],
+        "priority": 102,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 102,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 311,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2602.08818",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2602.08818",
+        "id:SemanticScholar:de3c5e35001c6e091090d6148dcc17ab27906572",
+        "id:arXiv:2602.08818",
+        "title:flexmore a flexible mixture of rankheterogeneous experts for efficient federatedlytrained large language models",
+        "url:https://arxiv.org/abs/2602.08818"
+      ],
+      "record": {
+        "title": "FlexMoRE: A Flexible Mixture of Rank-heterogeneous Experts for Efficient Federatedly-trained Large Language Models",
+        "source_url": "https://arxiv.org/abs/2602.08818",
+        "year": 2026,
+        "published": "2026-02-09",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Recent advances in mixture-of-experts architectures have shown that individual experts models can be trained federatedly, i.e., in isolation from other experts by using a common base model to facilitate coordination. However, we hypothesize that full-sized experts may not be necessary for all domains and that instead low-rank adapters may be sufficient. Here, we introduce FlexMoRE, a Flexible Mixture of Rank-heterogenous Experts, which may be either full-sized experts or adapters of a suitable rank. We systematically investigate the trade-off between expert rank and downstream task performance by evaluating $6$ experts with ranks $2^0$ to $2^{14}$ resulting in experiments covering 150 mixtures (96 with 2 experts, 54 with 7 experts) that are evaluated across $120$ tasks. For our experiments, we build on FlexOlmo and turn its pre-trained experts into low-rank versions. Our regression analysis from expert rank to downstream task performance reveals that the best-performing rank is substantially higher for reasoning-heavy benchmarks than for knowledge-heavy benchmarks. These findings on rank sensitivity come with direct implications for memory efficiency: Using optimal ranks, FlexMoRE yields improved downstream task performance (average score $47.18$) compared to the baseline FlexOlmo-style mixture of full-sized experts (average score $45.46$) at less than one third the parameters ($10.75$B for FlexMoRE vs. $33.27$B for FlexOlmo). All code will be made available.",
+        "identifiers": [
+          "SemanticScholar:de3c5e35001c6e091090d6148dcc17ab27906572"
+        ],
+        "semantic_scholar_id": "de3c5e35001c6e091090d6148dcc17ab27906572",
+        "canonical_id": "arXiv:2602.08818",
+        "arxiv_id": "2602.08818",
+        "doi": "10.48550/arXiv.2602.08818",
+        "authors": [
+          "Annemette Brok Pirchert",
+          "Jacob Nielsen",
+          "M. H. From",
+          "Lukas Galke Poech",
+          "Peter Schneider-Kamp"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 247,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2604.08564",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2604.08564",
+        "id:SemanticScholar:d97e16b852f78b769022535155835e96ceedb8ea",
+        "id:arXiv:2604.08564",
+        "title:attentionbased sampler for diffusion language models",
+        "url:https://arxiv.org/abs/2604.08564"
+      ],
+      "record": {
+        "title": "Attention-Based Sampler for Diffusion Language Models",
+        "source_url": "https://arxiv.org/abs/2604.08564",
+        "year": 2026,
+        "published": "2026-03-18",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Auto-regressive models (ARMs) have established a dominant paradigm in language modeling. However, their strictly sequential sampling paradigm imposes fundamental constraints on both inference efficiency and modeling flexibility. To address these limitations, diffusion-based large language models (dLLMs) have been proposed, offering the potential for parallel sampling and flexible language modeling. Despite these advantages, current dLLMs sampling strategies rely primarily on token level information, which fails to account for global sequence structure and often yields suboptimal results. In this paper, we study the sampling order selection problem from the perspective of log-likelihood maximization. We show that this problem is NP-hard and propose an optimal sampling-rank-based approximation that makes the objective computationally tractable. We further prove that the tractable objective is optimized by sampling tokens in descending order of their attention-matrix column sums. This finding provides a principled justification for attention-guided sampling and offers a theoretically grounded alternative to greedy search. We instantiate this theoretical insight in a new training-free sampling algorithm, termed Attn-Sampler, and further propose dynamic attention thresholding for practical acceleration. Extensive experiments across multiple benchmarks validate the effectiveness of our proposed method, demonstrating that it achieves superior generation quality while enhancing the sampling parallelism.",
+        "identifiers": [
+          "SemanticScholar:d97e16b852f78b769022535155835e96ceedb8ea"
+        ],
+        "semantic_scholar_id": "d97e16b852f78b769022535155835e96ceedb8ea",
+        "canonical_id": "arXiv:2604.08564",
+        "arxiv_id": "2604.08564",
+        "doi": "10.48550/arXiv.2604.08564",
+        "authors": [
+          "Yuyang Zhou",
+          "Kai-Nuo Hou",
+          "Weiyu Chen",
+          "James T. Kwok"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 210,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2508.06297",
+      "identity_tokens": [
+        "id:DOI:10.1145/3778534.3778567",
+        "id:SemanticScholar:1a3bb1d6f9ce653baa68311df6481ed51535d99b",
+        "id:arXiv:2508.06297",
+        "title:kv cache compression for inference efficiency in llms a review",
+        "url:https://arxiv.org/abs/2508.06297"
+      ],
+      "record": {
+        "title": "KV Cache Compression for Inference Efficiency in LLMs: A Review",
+        "source_url": "https://arxiv.org/abs/2508.06297",
+        "year": 2025,
+        "published": "2025-08-08",
+        "venue": "Proceedings of the 4th International Conference on Artificial Intelligence and Intelligent Information Processing",
+        "citation_count": 15,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "With the rapid advancement of large language models (LLMs), the context length for inference continuously increases, leading to an exponential growth in the demand for Key-Value (KV) caching. This has resulted in a significant memory bottleneck, limiting the inference efficiency and scalability of the models. Therefore, optimizing the KV cache during inference is crucial for enhancing performance and efficiency. This review systematically examines current KV cache optimization techniques, including compression strategies such as selective token strategies, quantization, and attention compression. We evaluate the effectiveness, trade-offs, and application scenarios of these methods, providing a comprehensive analysis of their impact on memory usage and inference speed. We focus on identifying the limitations and challenges of existing methods, such as compatibility issues with different models and tasks. Additionally, this review highlights future research directions, including hybrid optimization techniques, adaptive dynamic strategies, and software-hardware co-design. These approaches aim to improve inference efficiency and promote the practical application of large language models.",
+        "identifiers": [
+          "SemanticScholar:1a3bb1d6f9ce653baa68311df6481ed51535d99b"
+        ],
+        "semantic_scholar_id": "1a3bb1d6f9ce653baa68311df6481ed51535d99b",
+        "canonical_id": "arXiv:2508.06297",
+        "arxiv_id": "2508.06297",
+        "doi": "10.1145/3778534.3778567",
+        "authors": [
+          "Yan-Yu Liu",
+          "Jingying Fu",
+          "Si-Yang Liu",
+          "Yitian Zou",
+          "Shouhua Zhang",
+          "Jiehan Zhou"
+        ],
+        "priority": 15,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 15,
+          "citation_count": 15,
+          "total": 15,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 432,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2506.16411",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2506.16411",
+        "id:SemanticScholar:9aba7720f88316c300078169970c9067652c20b6",
+        "id:arXiv:2506.16411",
+        "title:when does divide and conquer work for long context llm a noise decomposition framework",
+        "url:https://arxiv.org/abs/2506.16411"
+      ],
+      "record": {
+        "title": "When Does Divide and Conquer Work for Long Context LLM? A Noise Decomposition Framework",
+        "source_url": "https://arxiv.org/abs/2506.16411",
+        "year": 2025,
+        "published": "2025-06-19",
+        "venue": "arXiv.org",
+        "citation_count": 10,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "We investigate the challenge of applying Large Language Models (LLMs) to long texts. We propose a theoretical framework that distinguishes the failure modes of long context tasks into three categories: cross-chunk dependence (task noise), confusion that grows with context size (model noise), and the imperfect integration of partial results (aggregator noise). Under this view, we analyze when it is effective to use multi-agent chunking, i.e., dividing a lengthy sequence into smaller chunks and aggregating the processed results of each chunk. Our experiments on tasks such as retrieval, question answering, and summarization confirm both the theoretical analysis and the conditions that favor multi-agent chunking. By exploring the accelerated decay of model fidelity with input length, we also explain why, for large inputs, a weaker model configured with chunk-based processing can surpass a more advanced model like GPT4o applied in a single shot. Overall, we present a principled understanding framework and our results highlight a direct pathway to handling long contexts in LLMs with carefully managed chunking and aggregator strategies.",
+        "identifiers": [
+          "SemanticScholar:9aba7720f88316c300078169970c9067652c20b6"
+        ],
+        "semantic_scholar_id": "9aba7720f88316c300078169970c9067652c20b6",
+        "canonical_id": "arXiv:2506.16411",
+        "arxiv_id": "2506.16411",
+        "doi": "10.48550/arXiv.2506.16411",
+        "authors": [
+          "Zhen Xu",
+          "Shang Zhu",
+          "Jue Wang",
+          "Junlin Wang",
+          "B. Athiwaratkun",
+          "Chi Wang",
+          "James Zou",
+          "Ce Zhang"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 10,
+          "citation_count": 10,
+          "total": 10,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 482,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2603.11053",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2603.11053",
+        "id:SemanticScholar:b57665e71f3ddf0a4f1571e81f1de534bbdf3d12",
+        "id:arXiv:2603.11053",
+        "title:speculative decoding scaling laws sdsl throughput optimization made simple",
+        "url:https://arxiv.org/abs/2603.11053"
+      ],
+      "record": {
+        "title": "Speculative Decoding Scaling Laws (SDSL): Throughput Optimization Made Simple",
+        "source_url": "https://arxiv.org/abs/2603.11053",
+        "year": 2026,
+        "published": "2026-02-25",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Speculative decoding is a technique that uses multiple language models to accelerate infer- ence. Previous works have used an experi- mental approach to optimize the throughput of the inference pipeline, which involves LLM training and can be costly. This study of spec- ulative decoding proposes a theory that ana- lytically connects the key hyperparameters of pre-trained LLMs to the throughput efficiency of a downstream SD-based inference system. The theory allows the prediction of throughput- optimal hyperparameters for the components of an inference system before their pre-training.",
+        "identifiers": [
+          "SemanticScholar:b57665e71f3ddf0a4f1571e81f1de534bbdf3d12"
+        ],
+        "semantic_scholar_id": "b57665e71f3ddf0a4f1571e81f1de534bbdf3d12",
+        "canonical_id": "arXiv:2603.11053",
+        "arxiv_id": "2603.11053",
+        "doi": "10.48550/arXiv.2603.11053",
+        "authors": [
+          "Amirhossein Bozorgkhoo",
+          "Igor Molybog"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 231,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2606.04620",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2606.04620",
+        "id:SemanticScholar:dfe6112c14d9d088f4fd3bf0ce83035db63f79f4",
+        "id:arXiv:2606.04620",
+        "title:qublast a framework for quantizing large language models with blocklevel compression approach and activation scaling strategy",
+        "url:https://arxiv.org/abs/2606.04620"
+      ],
+      "record": {
+        "title": "QuBLAST: A Framework for Quantizing Large Language Models with Block-Level Compression Approach and Activation Scaling Strategy",
+        "source_url": "https://arxiv.org/abs/2606.04620",
+        "year": 2026,
+        "published": "2026-06-03",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "LLMs have become the state-of-the-art algorithms for solving NLP tasks. However, they typically come at huge computational and memory costs, thus making them difficult to deploy on embedded systems. Toward this, state-of-the-art methods typically employ uniform post-training quantization (PTQ) across attention blocks of the network, hence overlooking the potential of applying different quantization levels in the same network. They also employ complex operations to mitigate the negative impact of activation outliers, hence incurring high computational overheads. Moreover, they have not considered evaluation using emerging LLMs with non-conventional attention architectures (e.g., state-space models), which pose different challenges in applying quantization. To address these limitations, we propose QuBLAST, a novel PTQ methodology that employs block-level compression approach with activation scaling strategy for LLMs. Block-level compression approach enables mixed-precision quantization across blocks of the network, while activation scaling strategy efficiently mitigates the negative impact of activation outliers. Specifically, QuBLAST first analyzes the sensitivity of different attention blocks in the pre-trained model through the cross-entropy loss analysis. QuBLAST leverages this sensitivity analysis to determine the weight quantization level for each attention block in the model. Furthermore, QuBLAST employs the activation scaling map for each block to control the range of activation values and mitigate the negative impact of activation outliers, thereby enabling better quantization results. Experimental results show that, QuBLAST reduces model sizes by 40%-45.2% across different model architectures (i.e., Qwen3-8B, Llama3-8B, Mistral v0.1-8B, and Falcon H1R-7B), while maintaining the performance within 5% perplexity increase for the WikiText-2 and WikiText-103 datasets.",
+        "identifiers": [
+          "SemanticScholar:dfe6112c14d9d088f4fd3bf0ce83035db63f79f4"
+        ],
+        "semantic_scholar_id": "dfe6112c14d9d088f4fd3bf0ce83035db63f79f4",
+        "canonical_id": "arXiv:2606.04620",
+        "arxiv_id": "2606.04620",
+        "doi": "10.48550/arXiv.2606.04620",
+        "authors": [
+          "Pasindu Wickramasinghe",
+          "Achyuta Muthuvelan",
+          "Rachmad Vidya Wicaksana Putra",
+          "Ming-Hao Shao",
+          "Muhammad Shafique"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 133,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2505.03745",
+      "identity_tokens": [
+        "id:DOI:10.1109/tvlsi.2026.3658524",
+        "id:SemanticScholar:41038c42f7f01643bc4b5952b5347564e1957521",
+        "id:arXiv:2505.03745",
+        "title:accllm accelerating longcontext llm inference via algorithmhardware codesign",
+        "url:https://arxiv.org/abs/2505.03745"
+      ],
+      "record": {
+        "title": "AccLLM: Accelerating Long-Context LLM Inference via Algorithm-Hardware Co-Design",
+        "source_url": "https://arxiv.org/abs/2505.03745",
+        "year": 2025,
+        "published": "2025-04-07",
+        "venue": "IEEE Transactions on Very Large Scale Integration (vlsi) Systems",
+        "citation_count": 9,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Recently, large language models (LLMs) have achieved huge success in the natural language processing (NLP) field, driving a growing demand to extend their deployment from the cloud to edge devices. However, deploying LLMs on resource-constrained edge devices poses significant challenges, including: 1) intensive computations; 2) decode stage memory/bandwidth overhead; and 3) limited long sequence scalability. To address these challenges, we propose AccLLM, a comprehensive acceleration framework that enables efficient and fast long-context LLM inference through algorithm and hardware co-design. At the algorithmic level, we integrate: 1) pruning; 2) <inline-formula> <tex-math notation=\"LaTeX\">$\\Lambda $ </tex-math></inline-formula>-shaped attention; and 3) an innovative W2A8KV4 (2-bit weights, 8-bit activations, and 4-bit KV cache) quantization scheme, thus effectively reducing memory and bandwidth requirements while facilitating LLMs’ long-sequence generation. At the hardware level, we design a dedicated FPGA-based accelerator with a reconfigurable computing engine (RCE) to effectively and flexibly accommodate diverse operations arising from our compression algorithm, thereby fully translating the algorithmic innovations into tangible hardware efficiency. We validate AccLLM on the Xilinx Alveo U280 FPGA, demonstrating a <inline-formula> <tex-math notation=\"LaTeX\">$\\uparrow \\mathbf {4.07}\\times $ </tex-math></inline-formula> energy efficiency and a <inline-formula> <tex-math notation=\"LaTeX\">$\\uparrow \\mathbf {2.98}\\times $ </tex-math></inline-formula> throughput compared to the state-of-the-art work FlightLLM.",
+        "identifiers": [
+          "SemanticScholar:41038c42f7f01643bc4b5952b5347564e1957521"
+        ],
+        "semantic_scholar_id": "41038c42f7f01643bc4b5952b5347564e1957521",
+        "canonical_id": "arXiv:2505.03745",
+        "arxiv_id": "2505.03745",
+        "doi": "10.1109/TVLSI.2026.3658524",
+        "authors": [
+          "Yanbiao Liang",
+          "Huihong Shi",
+          "Haikuo Shao",
+          "Zhong-Feng Wang"
+        ],
+        "priority": 9,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 9,
+          "citation_count": 9,
+          "total": 9,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 555,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2506.11087",
+      "identity_tokens": [
+        "id:SemanticScholar:db81a7f76ec171cf7c64e8020004f5674cc0102e",
+        "id:arXiv:2506.11087",
+        "title:enhancing delta compression in llms via svdbased quantization error minimization",
+        "url:https://arxiv.org/abs/2506.11087"
+      ],
+      "record": {
+        "title": "Enhancing Delta Compression in LLMs via SVD-based Quantization Error Minimization",
+        "source_url": "https://arxiv.org/abs/2506.11087",
+        "year": 2025,
+        "published": "2025-06-05",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Supervised Fine-Tuning (SFT) empowers Large Language Models (LLMs) with exceptional performance on specialized tasks, but it yields dense, high-dimensional delta parameters that pose severe storage and distribution challenges. Singular Value Decomposition (SVD)-based compression offers a compact representation for such delta parameters, but existing methods adopt heuristic quantization without clarifying underlying mechanisms, leading to poor generalizability. In this work, we propose PrinMix, a rigorous SVD-based framework that models quantization as an optimization problem, grounding the design in mathematical mechanisms. We first theoretically derive quantization error and identify a key singular-value-dominated scaling mechanism, which mathematically proves the necessity of mix-precision quantization. We then model the quantization scheme as a 0/1 Integer Linear Programming (ILP) problem, which yields optimal bit-budget-constrained solutions without empirical assumptions. Furthermore, PrinMix integrates a Reconstruction Target Correction (RTC) method to compensate for errors from the $\\mathbf{V}$-then-$\\mathbf{U}$ sequential quantization process. Extensive experiments confirm PrinMix performs well: for 7B LLMs, PrinMix outperforms SOTA Delta-CoMe on challenging benchmarks by 22.3% on AIME2024 and 6.1% on GQA.",
+        "identifiers": [
+          "SemanticScholar:db81a7f76ec171cf7c64e8020004f5674cc0102e"
+        ],
+        "semantic_scholar_id": "db81a7f76ec171cf7c64e8020004f5674cc0102e",
+        "canonical_id": "arXiv:2506.11087",
+        "arxiv_id": "2506.11087",
+        "authors": [
+          "Boya Xiong",
+          "Shuo Wang",
+          "Wei-Feng Ge",
+          "Guan-Hua Chen",
+          "Yun Chen"
+        ],
+        "priority": 0,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 0,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 496,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:786bec04d3c409635ee918bc5b33eeff6b98f57d0b5e5b3f55bc036c7e456e6e",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}
