@@ -3,35 +3,44 @@ canonical_id: DOI:10.18653/v1/2026.acl-long.1342
 doi: 10.18653/v1/2026.acl-long.1342
 arxiv_id: null
 title: 'LaCo: Layer-wise Compensation for Pruned Large Language Models'
-summary: '枝刈り後LLMの隠れ状態誤差が深さ方向に累積する問題を、元モデルの各層出力への局所回帰で修復する層別補償。枝刈りマスクを固定したまま残存重みだけを順次更新し、層ごとの出力を次層へ伝播する。Wanda 70%枝刈りLLaMA-2-7Bでは平均困惑度192.01を66.82へ改善、LoRAの80.13も上回る。回復時ピークGPUメモリは43.7GBから6.2GBに減るが、回復時間は4時間20分から6時間50分へ増加する。'
-list_summary: '枝刈り後の局所誤差増幅を、元モデルの隠れ状態を教師にしたマスク制約付き層別回帰で抑制。Wanda 70%のLLaMA-2-7Bで平均PPLを192.01→66.82、回復時ピークメモリをLoRA比約1/7へ削減。'
+summary: 枝刈り後LLMの隠れ状態誤差が深さ方向に累積する問題を、元モデルの各層出力への局所回帰で修復する層別補償。枝刈りマスクを固定したまま残存重みだけを順次更新し、層ごとの出力を次層へ伝播する。Wanda 70%枝刈りLLaMA-2-7Bでは平均困惑度192.01を66.82へ改善、LoRAの80.13も上回る。回復時ピークGPUメモリは43.7GBから6.2GBに減るが、回復時間は4時間20分から6時間50分へ増加する。
+list_summary: 枝刈り後の局所誤差増幅を、元モデルの隠れ状態を教師にしたマスク制約付き層別回帰で抑制。Wanda 70%のLLaMA-2-7Bで平均PPLを192.01→66.82、回復時ピークメモリをLoRA比約1/7へ削減。
 authors:
-  - Yingen Liu
-  - Fan Wu
-  - Xuyan Pan
-  - Ruihui Li
-  - Zhuo Tang
-  - Kenli Li
+- Yingen Liu
+- Fan Wu
+- Xuyan Pan
+- Ruihui Li
+- Zhuo Tang
+- Kenli Li
 published: '2026-07-02'
-publication: 'ACL 2026 Long Papers, pp. 29099–29113'
+publication: ACL 2026 Long Papers, pp. 29099–29113
 publication_type: conference_paper
 publication_status: published
 source: https://aclanthology.org/2026.acl-long.1342.pdf
 sources:
-  - https://aclanthology.org/2026.acl-long.1342/
-  - https://aclanthology.org/2026.acl-long.1342.pdf
-implementation: '元の密モデルを教師として、枝刈りマスクを固定し、各層の残存重みをMSE最小化で順次更新。層ごとの活性化だけを保持するストリーミング実装。WikiText2学習分割から2048件を較正に使用。原著の公式実装公開URLは確認できなかった。'
+- https://aclanthology.org/2026.acl-long.1342/
+- https://aclanthology.org/2026.acl-long.1342.pdf
+implementation: 元の密モデルを教師として、枝刈りマスクを固定し、各層の残存重みをMSE最小化で順次更新。層ごとの活性化だけを保持するストリーミング実装。WikiText2学習分割から2048件を較正に使用。原著の公式実装公開URLは確認できなかった。
 code: null
 last_checked: '2026-10-14'
 worker_completed_at: '2026-10-14T00:04:00+09:00'
-worker_run_key: '20261013-2357-scheduled-chat-00/r01'
+worker_run_key: 20261013-2357-scheduled-chat-00/r01
 worker_id: scheduled-chat-00
 scheduled_slot: '00'
 reference_main_sha: 5fea9b82bf19b20bd45dc3eb6b448c907459a383
 research_origin: returned_research_repair
-returned_research_failure_addressed: '旧投稿の評価説明量420文字不足を、ACL原著の実験4節、表1〜5、限界6節を再読し評価条件・数値・逆転条件・資源交換を補足'
+returned_research_failure_addressed: 旧投稿の評価説明量420文字不足を、ACL原著の実験4節、表1〜5、限界6節を再読し評価条件・数値・逆転条件・資源交換を補足
 last_audited: null
 audit_version: 0
+references:
+- canonical_id: arXiv:2305.18403
+- canonical_id: arXiv:2312.11983
+- canonical_id: arXiv:2301.00774
+- canonical_id: arXiv:2306.11695
+- canonical_id: arXiv:2305.11627
+references_checked_at: '2026-10-14'
+references_source: primary-pdf-reference-section
+references_total: 3
 ---
 
 # LaCo：枝刈り済みLLMの層別表現補償
