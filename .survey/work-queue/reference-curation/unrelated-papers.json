@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-14T03:52:18+00:00",
-  "record_count": 12011,
+  "updated_at": "2026-10-14T04:11:26+00:00",
+  "record_count": 12029,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -172924,6 +172924,278 @@
         "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
       ],
       "title": "MFDA-UNet: Medical Image Segmentation with Frequency-Decoupled Representation and Gated Cross-Scale Integration"
+    },
+    "arXiv:2207.03677": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2207.03677",
+      "identity_tokens": [
+        "arXiv:2207.03677"
+      ],
+      "reason": "SuperTickets jointly searches and prunes general DNN supernets to reduce model-development cost, but its reported applications are generic DNN benchmarks and do not establish an LLM inference-system contribution.",
+      "first_checked_at": "2026-10-14T04:11:20+00:00",
+      "last_checked_at": "2026-10-14T04:11:20+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2002.08307-compressing-bert-studying-the-effects-of-weight-pruning-on-transfer-lear.md",
+        "papers/inference/99-other-inference-systems/2020-2005.14187-hat-hardware-aware-transformers-for-efficient-natural-language-processin.md"
+      ],
+      "title": "SuperTickets: Drawing Task-Agnostic Lottery Tickets from Supernets via Jointly Architecture Searching and Parameter Pruning"
+    },
+    "arXiv:2503.20824": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2503.20824",
+      "identity_tokens": [
+        "arXiv:2503.20824"
+      ],
+      "reason": "TV3S reduces feature-pool memory and sequential processing delay for video semantic segmentation; the contribution is a video-analysis application rather than a general LLM serving or inference-system technique.",
+      "first_checked_at": "2026-10-14T04:11:20+00:00",
+      "last_checked_at": "2026-10-14T04:11:20+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md",
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "title": "Exploiting Temporal State Space Sharing for Video Semantic Segmentation"
+    },
+    "arXiv:2308.06093": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2308.06093",
+      "identity_tokens": [
+        "arXiv:2308.06093"
+      ],
+      "reason": "Experts Weight Averaging changes ViT training and merges MoE branches back into FFNs for inference; the paper targets vision-task accuracy and does not establish LLM or serving efficiency.",
+      "first_checked_at": "2026-10-14T04:11:20+00:00",
+      "last_checked_at": "2026-10-14T04:11:20+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2201.10890-one-student-knows-all-experts-know-from-sparse-to-dense.md",
+        "papers/training/02-distributed-heterogeneous-moe-training/2023-2304.03946-flexmoe-scaling-large-scale-sparse-pre-trained-model-training-via-dynamic-device.md"
+      ],
+      "title": "Experts Weights Averaging: A New General Training Scheme for Vision Transformers"
+    },
+    "arXiv:2503.17261": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2503.17261",
+      "identity_tokens": [
+        "arXiv:2503.17261"
+      ],
+      "reason": "CIPA uses Mamba to segment lung tumors in PET-CT and contributes a medical dataset and imaging architecture, not an LLM inference or serving mechanism.",
+      "first_checked_at": "2026-10-14T04:11:21+00:00",
+      "last_checked_at": "2026-10-14T04:11:21+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md",
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "title": "Cross-Modal Interactive Perception Network with Mamba for Lung Tumor Segmentation in PET-CT Images"
+    },
+    "arXiv:2409.13183": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2409.13183",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2409.13183",
+        "arXiv:2409.13183"
+      ],
+      "reason": "The paper distills symbolic knowledge to improve small-language-model chain-of-thought capability; its stated contribution is reasoning quality rather than inference cost or deployment efficiency.",
+      "first_checked_at": "2026-10-14T04:11:21+00:00",
+      "last_checked_at": "2026-10-14T04:11:21+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md",
+        "papers/inference/99-other-inference-systems/2023-2310.04408-recomp-improving-retrieval-augmented-lms-with-compression-and-selective-.md"
+      ],
+      "title": "SKIntern: Internalizing Symbolic Knowledge for Distilling Better CoT Capabilities into Small Language Models"
+    },
+    "arXiv:2406.12329": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2406.12329",
+      "identity_tokens": [
+        "arXiv:2406.12329"
+      ],
+      "reason": "Opt-Out removes entity-specific knowledge from LLMs for privacy/unlearning; the abstract centers on data removal and security behavior, not serving efficiency.",
+      "first_checked_at": "2026-10-14T04:11:22+00:00",
+      "last_checked_at": "2026-10-14T04:11:22+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2212.10511-when-not-to-trust-language-models-investigating-effectiveness-of-paramet.md",
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ],
+      "title": "Opt-Out: Investigating Entity-Level Unlearning for Large Language Models via Optimal Transport"
+    },
+    "arXiv:2503.20212": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2503.20212",
+      "identity_tokens": [
+        "arXiv:2503.20212"
+      ],
+      "reason": "Dolphin is an Eastern-language speech-recognition model and reports language recognition quality and model availability, without an LLM-serving efficiency contribution.",
+      "first_checked_at": "2026-10-14T04:11:22+00:00",
+      "last_checked_at": "2026-10-14T04:11:22+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2408.16725-mini-omni-language-models-can-hear-talk-while-thinking-in-streaming.md",
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ],
+      "title": "Dolphin: A Large-Scale Automatic Speech Recognition Model for Eastern Languages"
+    },
+    "DOI:10.1007/s44163-025-00334-5": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1007/s44163-025-00334-5",
+      "identity_tokens": [
+        "DOI:10.1007/s44163-025-00334-5"
+      ],
+      "reason": "This review surveys LLM-based recommendation applications and data paradigms; it does not propose or evaluate an inference-system efficiency technique.",
+      "first_checked_at": "2026-10-14T04:11:22+00:00",
+      "last_checked_at": "2026-10-14T04:11:22+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2023-2310.03003-from-words-to-watts-benchmarking-the-energy-costs-of-large-language-mode.md",
+        "papers/survey/09-edge-llm/2025-2410.11845-edge-llm-review.md"
+      ],
+      "title": "A review of large language models and the recommendation task"
+    },
+    "arXiv:2504.04540": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2504.04540",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2504.04540",
+        "arXiv:2504.04540"
+      ],
+      "reason": "The paper studies whether point clouds improve spatial reasoning in 3D LLM applications; its target is task capability rather than LLM execution efficiency.",
+      "first_checked_at": "2026-10-14T04:11:23+00:00",
+      "last_checked_at": "2026-10-14T04:11:23+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md",
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2501.03895-llava-mini-efficient-image-and-video-large-multimodal-models-with-one-vi.md"
+      ],
+      "title": "The Point, the Vision and the Text: Does Point Cloud Boost Spatial Reasoning of Large Language Models?"
+    },
+    "arXiv:2411.15255": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2411.15255",
+      "identity_tokens": [
+        "arXiv:2411.15255"
+      ],
+      "reason": "OSMamba combines spectral state-space scanning and diffusion priors for image exposure correction, an image-processing application without a connection to LLM inference systems.",
+      "first_checked_at": "2026-10-14T04:11:23+00:00",
+      "last_checked_at": "2026-10-14T04:11:23+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md",
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "title": "OSMamba: Omnidirectional Spectral Mamba with Dual-Domain Prior Generator for Exposure Correction"
+    },
+    "arXiv:2505.20072": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.20072",
+      "identity_tokens": [
+        "arXiv:2505.20072"
+      ],
+      "reason": "The work uses weak supervision to incentivize stronger LLM reasoning, focusing on training signals and reasoning capability rather than inference efficiency.",
+      "first_checked_at": "2026-10-14T04:11:23+00:00",
+      "last_checked_at": "2026-10-14T04:11:23+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md",
+        "papers/inference/99-other-inference-systems/2025-2502.21074-codi-compressing-chain-of-thought-into-continuous-space-via-self-distill.md"
+      ],
+      "title": "Incentivizing Strong Reasoning from Weak Supervision"
+    },
+    "arXiv:2508.11849": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2508.11849",
+      "identity_tokens": [
+        "arXiv:2508.11849"
+      ],
+      "reason": "LocoMamba applies Mamba to vision-driven robot locomotion; its control and robotics target is outside LLM serving and inference-system efficiency.",
+      "first_checked_at": "2026-10-14T04:11:24+00:00",
+      "last_checked_at": "2026-10-14T04:11:24+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md",
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "title": "LocoMamba: Vision-Driven Locomotion via End-to-End Deep Reinforcement Learning with Mamba"
+    },
+    "arXiv:2510.00626": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2510.00626",
+      "identity_tokens": [
+        "arXiv:2510.00626"
+      ],
+      "reason": "The study tests how irrelevant audio affects text reasoning in audio-language models; its focus is robustness and reasoning behavior rather than latency, throughput, or memory.",
+      "first_checked_at": "2026-10-14T04:11:24+00:00",
+      "last_checked_at": "2026-10-14T04:11:24+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md",
+        "papers/inference/99-other-inference-systems/2025-2503.20215-qwen2-5-omni-technical-report.md"
+      ],
+      "title": "When Silence Matters: The Impact of Irrelevant Audio on Text Reasoning in Large Audio-Language Models"
+    },
+    "arXiv:2410.10382": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2410.10382",
+      "identity_tokens": [
+        "arXiv:2410.10382"
+      ],
+      "reason": "V2M develops a Mamba representation model for visual images; its contribution is image representation learning, not language-model inference systems.",
+      "first_checked_at": "2026-10-14T04:11:25+00:00",
+      "last_checked_at": "2026-10-14T04:11:25+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md",
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "title": "V2M: Visual 2-Dimensional Mamba for Image Representation Learning"
+    },
+    "arXiv:2410.11279": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2410.11279",
+      "identity_tokens": [
+        "arXiv:2410.11279"
+      ],
+      "reason": "The paper analytically studies fixed-point behavior in deep networks, without a concrete LLM inference, serving, compression, or deployment contribution in its abstract.",
+      "first_checked_at": "2026-10-14T04:11:25+00:00",
+      "last_checked_at": "2026-10-14T04:11:25+00:00",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2024-layerskip-enabling-early-exit-inference-and-self-speculative-decoding.md",
+        "papers/inference/99-other-inference-systems/2024-2409.17422-discovering-the-gems-in-early-layers-accelerating-long-context-llms-with.md"
+      ],
+      "title": "Advancing the Understanding of Fixed Point Iterations in Deep Neural Networks: A Detailed Analytical Study"
+    },
+    "arXiv:2506.19235": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2506.19235",
+      "identity_tokens": [
+        "arXiv:2506.19235"
+      ],
+      "reason": "RecLLM-R1 proposes a two-stage reinforcement-learning and chain-of-thought training paradigm for recommendation quality; the described work is training-focused rather than inference efficiency.",
+      "first_checked_at": "2026-10-14T04:11:25+00:00",
+      "last_checked_at": "2026-10-14T04:11:25+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+        "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md"
+      ],
+      "title": "RecLLM-R1: A Two-Stage Training Paradigm with Reinforcement Learning and Chain-of-Thought v1"
+    },
+    "arXiv:2601.22436": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.22436",
+      "identity_tokens": [
+        "arXiv:2601.22436"
+      ],
+      "reason": "The paper evaluates whether self-evolving LLM agents faithfully use past experience; it addresses agent behavior and reliability rather than inference-system efficiency.",
+      "first_checked_at": "2026-10-14T04:11:26+00:00",
+      "last_checked_at": "2026-10-14T04:11:26+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md",
+        "papers/inference/99-other-inference-systems/2023-2310.06201-compressing-context-to-enhance-inference-efficiency-of-large-language-mo.md"
+      ],
+      "title": "Large Language Model Agents Are Not Always Faithful Self-Evolvers"
+    },
+    "DOI:10.1080/01431161.2024.2443619": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1080/01431161.2024.2443619",
+      "identity_tokens": [
+        "DOI:10.1080/01431161.2024.2443619"
+      ],
+      "reason": "UVMSR applies U-Net and Mamba to hyperspectral image super-resolution; this is a specialized imaging task rather than an LLM inference contribution.",
+      "first_checked_at": "2026-10-14T04:11:26+00:00",
+      "last_checked_at": "2026-10-14T04:11:26+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md",
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "title": "UVMSR: a novel approach to hyperspectral image super-resolution by fusing U-Net and Mamba"
     }
   }
 }

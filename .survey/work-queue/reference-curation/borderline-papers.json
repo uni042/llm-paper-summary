@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-14T03:52:17+00:00",
-  "record_count": 5016,
+  "updated_at": "2026-10-14T04:11:19+00:00",
+  "record_count": 5017,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -77657,6 +77657,22 @@
       ],
       "borderline_recheck_count": 0,
       "title": "MemoWM: How World Models Change What Agents Need to Remember"
+    },
+    "DOI:10.21437/interspeech.2022-10457": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.21437/interspeech.2022-10457",
+      "identity_tokens": [
+        "DOI:10.21437/interspeech.2022-10457"
+      ],
+      "reason": "The abstract proposes a Bayesian mask-attention mechanism for machine translation, but reports no inference latency, memory, throughput, or deployment result; its relationship to inference efficiency remains indirect.",
+      "first_checked_at": "2026-10-14T04:11:19+00:00",
+      "last_checked_at": "2026-10-14T04:11:19+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2019-1901.10430-pay-less-attention-with-lightweight-and-dynamic-convolutions.md",
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Bayesian Transformer Using Disentangled Mask Attention"
     }
   }
 }

@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-2b72aa1e26a413c9-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.21437/interspeech.2022-10457",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.21437/interspeech.2022-10457",
+    "identity_tokens": [
+      "DOI:10.21437/interspeech.2022-10457"
+    ],
+    "reason": "The abstract proposes a Bayesian mask-attention mechanism for machine translation, but reports no inference latency, memory, throughput, or deployment result; its relationship to inference efficiency remains indirect.",
+    "first_checked_at": "2026-10-14T04:11:19+00:00",
+    "last_checked_at": "2026-10-14T04:11:19+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2019-1901.10430-pay-less-attention-with-lightweight-and-dynamic-convolutions.md",
+      "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Bayesian Transformer Using Disentangled Mask Attention"
+  },
+  "processed_at": "2026-10-14T04:11:20+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-2b72aa1e26a4",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
