@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-12ae3775e48d3e95-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1016/j.neucom.2024.128747",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1016/j.neucom.2024.128747",
+    "identity_tokens": [
+      "DOI:10.1016/j.neucom.2024.128747",
+      "SemanticScholar:5e4a99126d7eea0674af631b74968addde698d8f"
+    ],
+    "reason": "UCC prunes and aggregates Vision Transformer tokens and reports substantial FLOP reductions, a concrete transformer-compression method. The evidence is for image-classification ViTs and does not establish transfer to LLM inference.",
+    "first_checked_at": "2026-10-14T12:02:37+00:00",
+    "last_checked_at": "2026-10-14T15:09:08+00:00",
+    "linked_from": [
+      "papers/inference/16-weight-quantization-compression/2023-2307.13304-quip-2-bit-quantization-of-large-language-models-with-guarantees.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "UCC: A unified cascade compression framework for vision transformer models"
+  },
+  "processed_at": "2026-10-14T15:09:08+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-12ae3775e48d",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

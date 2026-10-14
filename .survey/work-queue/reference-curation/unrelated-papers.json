@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-14T15:06:33+00:00",
-  "record_count": 12271,
+  "updated_at": "2026-10-14T15:09:19+00:00",
+  "record_count": 12274,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -175874,11 +175874,12 @@
       "classification": "unrelated",
       "canonical_id": "DOI:10.3389/fimmu.2025.1526518",
       "identity_tokens": [
-        "DOI:10.3389/fimmu.2025.1526518"
+        "DOI:10.3389/fimmu.2025.1526518",
+        "SemanticScholar:7cb18a0174eccc5f4b49344703167fb426bb0770"
       ],
-      "reason": "The review concerns deep-learning segmentation and detection of malignant lymph nodes, a medical-imaging application unrelated to LLM systems.",
+      "reason": "This review surveys medical-image lymph-node segmentation and detection; it is a healthcare vision application and does not address LLM inference systems.",
       "first_checked_at": "2026-10-14T12:00:30+00:00",
-      "last_checked_at": "2026-10-14T12:00:30+00:00",
+      "last_checked_at": "2026-10-14T15:09:14+00:00",
       "linked_from": [
         "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
       ],
@@ -175889,11 +175890,12 @@
       "canonical_id": "arXiv:2209.02536",
       "identity_tokens": [
         "DOI:10.48550/arxiv.2209.02536",
+        "SemanticScholar:2bd983eb332f31cddaad8ec8beb0bbc87ed50aa1",
         "arXiv:2209.02536"
       ],
-      "reason": "The paper develops a semantically coupled vector-quantized model for image synthesis, an independent image-generation task.",
+      "reason": "The VQ-Model work targets semantic image synthesis quality and conditioning, an independent image-generation application rather than efficient LLM inference.",
       "first_checked_at": "2026-10-14T12:00:30+00:00",
-      "last_checked_at": "2026-10-14T12:00:30+00:00",
+      "last_checked_at": "2026-10-14T15:09:15+00:00",
       "linked_from": [
         "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md"
       ],
@@ -175904,11 +175906,12 @@
       "canonical_id": "arXiv:2412.11231",
       "identity_tokens": [
         "DOI:10.48550/arxiv.2412.11231",
+        "SemanticScholar:2f3a9ff8b9af246098c43e3e826a72979d0d4d4e",
         "arXiv:2412.11231"
       ],
-      "reason": "The work studies smaller SLMs for generating instruction-tuning data and proposes an instruction-complexity metric; it targets training-data construction and evaluation.",
+      "reason": "The contribution is instruction-data evolution using smaller models for instruction-tuning data quality; the described work is an upstream training-data application, not inference efficiency.",
       "first_checked_at": "2026-10-14T12:00:31+00:00",
-      "last_checked_at": "2026-10-14T12:00:31+00:00",
+      "last_checked_at": "2026-10-14T15:09:15+00:00",
       "linked_from": [
         "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
       ],
@@ -175918,11 +175921,12 @@
       "classification": "unrelated",
       "canonical_id": "arXiv:2412.18707",
       "identity_tokens": [
+        "SemanticScholar:fe13020247a4575c87198277f964b631178a69c3",
         "arXiv:2412.18707"
       ],
-      "reason": "The paper filters multi-reference literary-translation data and compares human versus synthetic translation fine-tuning; its contribution is task-specific training.",
+      "reason": "The paper improves literary machine translation by selecting human/synthetic references for fine-tuning quality; it presents no LLM serving or inference-efficiency method.",
       "first_checked_at": "2026-10-14T12:00:31+00:00",
-      "last_checked_at": "2026-10-14T12:00:31+00:00",
+      "last_checked_at": "2026-10-14T15:09:15+00:00",
       "linked_from": [
         "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
       ],
@@ -175933,11 +175937,12 @@
       "canonical_id": "arXiv:2507.21513",
       "identity_tokens": [
         "DOI:10.48550/arxiv.2507.21513",
+        "SemanticScholar:e767247b7967c920800ae1eb4c7e0f19cf019a3b",
         "arXiv:2507.21513"
       ],
-      "reason": "The paper formalizes tests for whether neural networks learn a world model; it is a capability/representation analysis, not an inference-system contribution.",
+      "reason": "This paper defines criteria for identifying neural-network world models and proposes evaluation conditions; it does not present an inference-system optimization.",
       "first_checked_at": "2026-10-14T12:00:31+00:00",
-      "last_checked_at": "2026-10-14T12:00:31+00:00",
+      "last_checked_at": "2026-10-14T15:09:16+00:00",
       "linked_from": [
         "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
       ],
@@ -175948,11 +175953,12 @@
       "canonical_id": "arXiv:2509.21051",
       "identity_tokens": [
         "DOI:10.48550/arxiv.2509.21051",
+        "SemanticScholar:9fabaa4bc84991bbdc2cde5c5a3cbefa8f5e7967",
         "arXiv:2509.21051"
       ],
-      "reason": "ManyIFEval and StyleMBPP benchmark multi-instruction following and estimate capability; this is LLM quality evaluation.",
+      "reason": "ManyIFEval and StyleMBPP are benchmarks and regression models for instruction-following capability evaluation; evaluation economy is not an LLM inference-system contribution.",
       "first_checked_at": "2026-10-14T12:00:32+00:00",
-      "last_checked_at": "2026-10-14T12:00:32+00:00",
+      "last_checked_at": "2026-10-14T15:09:16+00:00",
       "linked_from": [
         "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
       ],
@@ -175963,26 +175969,28 @@
       "canonical_id": "DOI:10.48550/arxiv.2402.09179",
       "identity_tokens": [
         "DOI:10.48550/arxiv.2402.09179",
+        "SemanticScholar:e10691827473d0d4e940112adf02a6eb9040de3a",
         "arXiv:2402.09179"
       ],
-      "reason": "The current v3 abstract studies prompt-triggered backdoor attacks and defenses for customized LLMs; it is a security contribution and reports no inference runtime, serving, latency, throughput, memory, or system-efficiency improvement.",
+      "reason": "The paper studies instruction-backdoor attacks against customized LLM applications and trustworthiness risks, not inference efficiency.",
       "first_checked_at": "2026-10-14T12:00:32+00:00",
-      "last_checked_at": "2026-10-14T12:00:32+00:00",
+      "last_checked_at": "2026-10-14T15:09:18+00:00",
       "linked_from": [
         "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
       ],
-      "title": "Rapid Adoption, Hidden Risks: The Dual Impact of Large Language Model Customization"
+      "title": "Instruction Backdoor Attacks Against Customized LLMs"
     },
     "arXiv:2409.09947": {
       "classification": "unrelated",
       "canonical_id": "arXiv:2409.09947",
       "identity_tokens": [
         "DOI:10.48550/arxiv.2409.09947",
+        "SemanticScholar:c2543ee1d2b7fe000228867b58066b0117ce9f9e",
         "arXiv:2409.09947"
       ],
-      "reason": "The paper evaluates fine-grained machine-generated legal analysis for gaps and hallucinations; it is a domain-specific quality-evaluation study.",
+      "reason": "The work develops fine-grained evaluation and detection of hallucination/gaps in legal analysis; it addresses output assessment in a domain application rather than LLM serving.",
       "first_checked_at": "2026-10-14T12:00:33+00:00",
-      "last_checked_at": "2026-10-14T12:00:33+00:00",
+      "last_checked_at": "2026-10-14T15:09:18+00:00",
       "linked_from": [
         "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
       ],
@@ -175992,11 +176000,12 @@
       "classification": "unrelated",
       "canonical_id": "arXiv:2503.11367",
       "identity_tokens": [
+        "SemanticScholar:fdc99074b00d509e8d0409b3eea58a2da51434d7",
         "arXiv:2503.11367"
       ],
-      "reason": "Cornstarch optimizes distributed multimodal-LLM training; the abstract limits its contribution to training, with no inference or serving benefit.",
+      "reason": "Cornstarch improves distributed MLLM training throughput through parallelism strategies; the project contract treats training-only acceleration separately from inference/serving efficiency.",
       "first_checked_at": "2026-10-14T12:00:33+00:00",
-      "last_checked_at": "2026-10-14T12:00:33+00:00",
+      "last_checked_at": "2026-10-14T15:09:19+00:00",
       "linked_from": [
         "papers/inference/99-other-inference-systems/2024-2411.01783-context-parallelism-for-scalable-million-token-inference.md"
       ],
@@ -176007,11 +176016,12 @@
       "canonical_id": "arXiv:2506.11812",
       "identity_tokens": [
         "DOI:10.1007/978-3-032-06118-8_12",
+        "SemanticScholar:3284b13d3d2589a5886f884f24420e24a883d1c3",
         "arXiv:2506.11812"
       ],
-      "reason": "The study evaluates LLM house-price estimation with prompting and geographic examples; its target is real-estate appraisal quality.",
+      "reason": "The study evaluates LLMs for real-estate valuation and prompt-based estimate quality, an application study without inference-system optimization.",
       "first_checked_at": "2026-10-14T12:00:33+00:00",
-      "last_checked_at": "2026-10-14T12:00:33+00:00",
+      "last_checked_at": "2026-10-14T15:09:19+00:00",
       "linked_from": [
         "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
       ],
@@ -176022,11 +176032,12 @@
       "canonical_id": "arXiv:2507.01284",
       "identity_tokens": [
         "DOI:10.1109/itsc60802.2025.11423581",
+        "SemanticScholar:63b74365ad238a8229367f21e9202654edb96f95",
         "arXiv:2507.01284"
       ],
-      "reason": "VLAD integrates a fine-tuned VLM into autonomous driving and evaluates collision outcomes; it is an application framework, not a serving-efficiency contribution.",
+      "reason": "VLAD applies a fine-tuned VLM to autonomous driving decisions and collision reduction; this is a driving application/quality result rather than a serving-efficiency contribution.",
       "first_checked_at": "2026-10-14T12:00:34+00:00",
-      "last_checked_at": "2026-10-14T12:00:34+00:00",
+      "last_checked_at": "2026-10-14T15:09:19+00:00",
       "linked_from": [
         "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
       ],
@@ -176036,11 +176047,12 @@
       "classification": "unrelated",
       "canonical_id": "DOI:10.1007/s00530-025-01927-x",
       "identity_tokens": [
-        "DOI:10.1007/s00530-025-01927-x"
+        "DOI:10.1007/s00530-025-01927-x",
+        "SemanticScholar:c8bc6f5caf2a5292b379dd2cfa9ad9fa95e49f3c"
       ],
-      "reason": "The publisher abstract proposes 3D-aware video editing for autonomous-driving simulation, an application in visual generation rather than LLM systems.",
+      "reason": "Vehiclesim is a two-stage video-editing pipeline for autonomous-driving simulation data and vehicle appearance control; its application is video synthesis, not LLM inference systems.",
       "first_checked_at": "2026-10-14T12:02:38+00:00",
-      "last_checked_at": "2026-10-14T12:02:38+00:00",
+      "last_checked_at": "2026-10-14T15:09:09+00:00",
       "linked_from": [
         "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
       ],
@@ -176050,11 +176062,12 @@
       "classification": "unrelated",
       "canonical_id": "DOI:10.5194/hess-29-5233-2025",
       "identity_tokens": [
-        "DOI:10.5194/hess-29-5233-2025"
+        "DOI:10.5194/hess-29-5233-2025",
+        "SemanticScholar:1a6e6b9dcfc4b80e96bea51436d9b11cb51f2a6b"
       ],
-      "reason": "The publisher abstract develops spatially resolved rainfall-runoff and river-routing models for hydrology; it is a domain application with no LLM systems contribution.",
+      "reason": "The paper models rainfall and streamflow using neural networks for hydrology; this is an application model, with no LLM-serving or inference-efficiency contribution.",
       "first_checked_at": "2026-10-14T12:02:38+00:00",
-      "last_checked_at": "2026-10-14T12:02:38+00:00",
+      "last_checked_at": "2026-10-14T15:09:10+00:00",
       "linked_from": [
         "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
       ],
@@ -176065,40 +176078,27 @@
       "canonical_id": "arXiv:2211.01223",
       "identity_tokens": [
         "DOI:10.48550/arxiv.2211.01223",
+        "SemanticScholar:aa8b07fc7c36e0b870a5465d7ce22047c9de365e",
         "arXiv:2211.01223"
       ],
-      "reason": "The paper trains a causal language model over compressed audio tokens for audio generation; the target is audio modeling rather than LLM inference systems.",
+      "reason": "The audio language model uses discrete audio compression for audio generation/completion, but its contribution is audio-model quality and audio representation, not general LLM inference systems.",
       "first_checked_at": "2026-10-14T12:02:39+00:00",
-      "last_checked_at": "2026-10-14T12:02:39+00:00",
+      "last_checked_at": "2026-10-14T15:09:10+00:00",
       "linked_from": [
         "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md"
       ],
       "title": "Audio Language Modeling using Perceptually-Guided Discrete Representations"
     },
-    "arXiv:2311.13126": {
-      "classification": "unrelated",
-      "canonical_id": "arXiv:2311.13126",
-      "identity_tokens": [
-        "DOI:10.48550/arxiv.2311.13126",
-        "arXiv:2311.13126"
-      ],
-      "reason": "The position paper discusses PEFT architectures and training settings; it proposes research directions rather than a concrete inference/serving optimization.",
-      "first_checked_at": "2026-10-14T12:02:39+00:00",
-      "last_checked_at": "2026-10-14T12:02:39+00:00",
-      "linked_from": [
-        "papers/inference/16-weight-quantization-compression/2023-2306.00978-awq.md"
-      ],
-      "title": "Towards Better Parameter-Efficient Fine-Tuning for Large Language Models: A Position Paper"
-    },
     "arXiv:2311.15044": {
       "classification": "unrelated",
       "canonical_id": "arXiv:2311.15044",
       "identity_tokens": [
+        "SemanticScholar:6240cc46b2b46b6df2aff733c85a4ea1443ccdb1",
         "arXiv:2311.15044"
       ],
-      "reason": "The hybrid CNN-Transformer synthesizes 7T MRI maps from 3T imaging; it is a medical-imaging application.",
+      "reason": "The hybrid CNN-Transformer synthesizes 7T MRI maps from 3T medical images; it is a medical-imaging application rather than an LLM systems paper.",
       "first_checked_at": "2026-10-14T12:02:39+00:00",
-      "last_checked_at": "2026-10-14T12:02:39+00:00",
+      "last_checked_at": "2026-10-14T15:09:11+00:00",
       "linked_from": [
         "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md"
       ],
@@ -176109,11 +176109,12 @@
       "canonical_id": "arXiv:2410.05021",
       "identity_tokens": [
         "DOI:10.48550/arxiv.2410.05021",
+        "SemanticScholar:24f20acad63384afd2809d2c9cdffca26a7ddcf1",
         "arXiv:2410.05021"
       ],
-      "reason": "DEPT reduces communication and embedding memory during federated language-model pre-training; the reported efficiency gains are training-only.",
+      "reason": "DEPT reduces embedding memory and communication during federated language-model pre-training; the abstract specifically describes a training framework and does not establish inference/serving savings.",
       "first_checked_at": "2026-10-14T12:02:40+00:00",
-      "last_checked_at": "2026-10-14T12:02:40+00:00",
+      "last_checked_at": "2026-10-14T15:09:11+00:00",
       "linked_from": [
         "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
       ],
@@ -176939,6 +176940,66 @@
         "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
       ],
       "title": "MODE: Efficient Time Series Prediction with Mamba Enhanced by Low-Rank Neural ODEs"
+    },
+    "DOI:10.3390/s25196225": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.3390/s25196225",
+      "identity_tokens": [
+        "DOI:10.3390/s25196225",
+        "SemanticScholar:0af59e025fef298805c6d5f7675f6323552248f3"
+      ],
+      "reason": "MMFNet applies Mamba to multimodal remote-sensing image segmentation; the task-specific vision architecture is not an LLM inference-system contribution.",
+      "first_checked_at": "2026-10-14T15:09:09+00:00",
+      "last_checked_at": "2026-10-14T15:09:09+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "title": "MMFNet: A Mamba-Based Multimodal Fusion Network for Remote Sensing Image Semantic Segmentation"
+    },
+    "DOI:10.1016/j.engstruct.2025.119695": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1016/j.engstruct.2025.119695",
+      "identity_tokens": [
+        "DOI:10.1016/j.engstruct.2025.119695",
+        "SemanticScholar:62ce6c78a2508d9c2e7e3ca44dd8c8484d2219fb"
+      ],
+      "reason": "The paper uses discrete convolution and combinatorial optimization to plan natural-stone masonry walls; its fast geometric computation is specific to construction planning and unrelated to LLM systems.",
+      "first_checked_at": "2026-10-14T15:09:17+00:00",
+      "last_checked_at": "2026-10-14T15:09:17+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ],
+      "title": "Geometric planning for masonry wall construction with natural stones using discrete convolution"
+    },
+    "DOI:10.1016/j.sysarc.2024.103243": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1016/j.sysarc.2024.103243",
+      "identity_tokens": [
+        "DOI:10.1016/j.sysarc.2024.103243",
+        "SemanticScholar:0041abfbc63aa81ceedbed1f55e58f07ae4ae476"
+      ],
+      "reason": "This survey studies CGRAs for 5G/6G radio baseband processing. Although it covers energy-efficient accelerators, its target workload is communications baseband rather than LLM/ML inference systems.",
+      "first_checked_at": "2026-10-14T15:09:17+00:00",
+      "last_checked_at": "2026-10-14T15:09:17+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2021-2104.07857-zero-infinity-breaking-the-gpu-memory-wall-for-extreme-scale-deep-learning.md"
+      ],
+      "title": "Coarse-grained reconfigurable architectures for radio baseband processing: A survey"
+    },
+    "DOI:10.1109/tgrs.2025.3598446": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/tgrs.2025.3598446",
+      "identity_tokens": [
+        "DOI:10.1109/tgrs.2025.3598446",
+        "SemanticScholar:542ac23f2b7b2f4ba446805756b3727ee04201a5"
+      ],
+      "reason": "The Mamba model is applied to landslide detection from remote-sensing images; the contribution is a domain-specific detection model, not a language-model systems optimization.",
+      "first_checked_at": "2026-10-14T15:09:17+00:00",
+      "last_checked_at": "2026-10-14T15:09:17+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "title": "Mamba for Landslide Detection: A Lightweight Model for Mapping Landslides With Very High-Resolution Images"
     }
   }
 }

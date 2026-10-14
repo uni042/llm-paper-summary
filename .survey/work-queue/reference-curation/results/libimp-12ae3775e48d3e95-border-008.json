@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-12ae3775e48d3e95-border-008",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2311.13126",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2311.13126",
+    "identity_tokens": [
+      "SemanticScholar:9c48db369f4811e6566ff3bc7d71be159a544fe2",
+      "arXiv:2311.13126"
+    ],
+    "reason": "This position paper discusses PEFT architectures and associated computational demands for LLMs, which may affect resource use, but supplies no concrete inference-time method or measurements.",
+    "first_checked_at": "2026-10-14T15:09:09+00:00",
+    "last_checked_at": "2026-10-14T15:09:09+00:00",
+    "linked_from": [
+      "papers/inference/16-weight-quantization-compression/2023-2306.00978-awq.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Towards Better Parameter-Efficient Fine-Tuning for Large Language Models: A Position Paper"
+  },
+  "processed_at": "2026-10-14T15:09:09+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-12ae3775e48d",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

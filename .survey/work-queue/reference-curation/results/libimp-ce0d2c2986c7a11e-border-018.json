@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ce0d2c2986c7a11e-border-018",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2507.01351",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2507.01351",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2507.01351",
+      "SemanticScholar:428ecf50296a73e9bc95f94dcfb7e5655a1cd900",
+      "arXiv:2507.01351"
+    ],
+    "reason": "LTDR changes expert routing in sparse LVLMs and responds to modality-specific token distributions, giving a plausible MoE inference-path connection. The abstract reports benchmark quality and increases expert activation for vision-tail tokens, without evidence of lower inference cost.",
+    "first_checked_at": "2026-10-14T12:00:30+00:00",
+    "last_checked_at": "2026-10-14T15:09:14+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/unknown-7f27cb4187bc-harder-task-needs-more-experts-dynamic-routing-in-moe-models.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Long-Tailed Distribution-Aware Router For Mixture-of-Experts in Large Vision-Language Model"
+  },
+  "processed_at": "2026-10-14T15:09:14+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ce0d2c2986c7",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

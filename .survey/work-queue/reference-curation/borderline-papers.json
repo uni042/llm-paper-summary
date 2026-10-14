@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-14T15:06:30+00:00",
-  "record_count": 5155,
+  "updated_at": "2026-10-14T15:09:18+00:00",
+  "record_count": 5154,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -79339,50 +79339,21 @@
       "borderline_recheck_count": 0,
       "title": "Groot: Graph-Centric Row Reordering with Tree for Sparse Matrix Multiplications on Tensor Cores"
     },
-    "DOI:10.1016/j.engstruct.2025.119695": {
-      "classification": "borderline",
-      "canonical_id": "DOI:10.1016/j.engstruct.2025.119695",
-      "identity_tokens": [
-        "DOI:10.1016/j.engstruct.2025.119695"
-      ],
-      "reason": "The DOI title points to geometric planning for masonry construction, a domain-specific engineering application; ScienceDirect retrieval returned a cache miss, so the required publisher abstract was unavailable. Retrieval evidence: ScienceDirect attempt for DOI 10.1016/j.engstruct.2025.119695 returned “Cache miss”; DOI landing was inaccessible.",
-      "first_checked_at": "2026-10-14T12:00:27+00:00",
-      "last_checked_at": "2026-10-14T12:00:27+00:00",
-      "linked_from": [
-        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
-      ],
-      "borderline_recheck_count": 0,
-      "title": "Geometric planning for masonry wall construction with natural stones using discrete convolution"
-    },
     "DOI:10.1016/j.iopt.2025.100003": {
       "classification": "borderline",
       "canonical_id": "DOI:10.1016/j.iopt.2025.100003",
       "identity_tokens": [
-        "DOI:10.1016/j.iopt.2025.100003"
+        "DOI:10.1016/j.iopt.2025.100003",
+        "SemanticScholar:d0da8cde70565e3207cd1a72d6be6338ae9a60cb"
       ],
-      "reason": "The DOI title points to optical-image processing with vision-language models, a likely vision application; ScienceDirect retrieval returned a cache miss, so the publisher abstract was unavailable. Retrieval evidence: ScienceDirect attempt for DOI 10.1016/j.iopt.2025.100003 returned “Cache miss”; DOI landing was inaccessible.",
+      "reason": "The survey includes inference-efficiency and deployability among constraints for optical image processing with VLMs, but its scope is optical-image applications and it does not isolate general LLM serving methods.",
       "first_checked_at": "2026-10-14T12:00:28+00:00",
-      "last_checked_at": "2026-10-14T12:00:28+00:00",
+      "last_checked_at": "2026-10-14T15:09:13+00:00",
       "linked_from": [
         "papers/inference/04-conditional-computation/2023-2303.09752-colt5-faster-long-range-transformers-with-conditional-computation.md"
       ],
       "borderline_recheck_count": 0,
       "title": "Optical Image Processing and Applications Empowered by Vision-Language Models"
-    },
-    "DOI:10.1016/j.sysarc.2024.103243": {
-      "classification": "borderline",
-      "canonical_id": "DOI:10.1016/j.sysarc.2024.103243",
-      "identity_tokens": [
-        "DOI:10.1016/j.sysarc.2024.103243"
-      ],
-      "reason": "The DOI title concerns reconfigurable architectures for radio-baseband processing, a possible hardware-systems foundation; ScienceDirect retrieval returned a cache miss, so its abstract could not establish an LLM-efficiency connection. Retrieval evidence: ScienceDirect attempt for DOI 10.1016/j.sysarc.2024.103243 returned “Cache miss”; DOI landing was inaccessible.",
-      "first_checked_at": "2026-10-14T12:00:28+00:00",
-      "last_checked_at": "2026-10-14T12:00:28+00:00",
-      "linked_from": [
-        "papers/training/01-training-offload-memory-systems/2021-2104.07857-zero-infinity-breaking-the-gpu-memory-wall-for-extreme-scale-deep-learning.md"
-      ],
-      "borderline_recheck_count": 0,
-      "title": "Coarse-grained reconfigurable architectures for radio baseband processing: A survey"
     },
     "DOI:10.1109/tc.2025.3585339": {
       "classification": "borderline",
@@ -79403,42 +79374,29 @@
       "classification": "borderline",
       "canonical_id": "DOI:10.1109/tcsi.2023.3256700",
       "identity_tokens": [
-        "DOI:10.1109/tcsi.2023.3256700"
+        "DOI:10.1109/tcsi.2023.3256700",
+        "SemanticScholar:ef23a50a0b78cc64401f83e4d34ceea53647f34b"
       ],
-      "reason": "The DOI title describes a neural-architecture-search accelerator for multiplication-reduced networks, a possible execution-efficiency foundation; IEEE Xplore was inaccessible and the publisher abstract could not be screened. Retrieval evidence: IEEE Xplore page for DOI 10.1109/TCSI.2023.3256700 was inaccessible; DOI landing was inaccessible.",
+      "reason": "The candidate's DOI/title are identified, but the registered publisher abstract could not be independently retrieved: Exact DOI route open returned: URL https://doi.org/10.1109/TCSI.2023.3256700 is not accessible via this tool. Exact-title/DOI searches restricted to IEEE Xplore returned no results; secondary ResearchGate metadata showed a candidate abstract but cannot substitute for the publisher abstract. Keep borderline pending primary-source evidence.",
       "first_checked_at": "2026-10-14T12:00:29+00:00",
-      "last_checked_at": "2026-10-14T12:00:29+00:00",
+      "last_checked_at": "2026-10-14T15:09:14+00:00",
       "linked_from": [
         "papers/inference/99-other-inference-systems/2020-2005.14187-hat-hardware-aware-transformers-for-efficient-natural-language-processin.md"
       ],
       "borderline_recheck_count": 0,
       "title": "NASA+: Neural Architecture Search and Acceleration for Multiplication-Reduced Hybrid Networks"
     },
-    "DOI:10.1109/tgrs.2025.3598446": {
-      "classification": "borderline",
-      "canonical_id": "DOI:10.1109/tgrs.2025.3598446",
-      "identity_tokens": [
-        "DOI:10.1109/tgrs.2025.3598446"
-      ],
-      "reason": "The DOI title describes a lightweight Mamba model for landslide mapping, a remote-sensing application with no verified LLM-systems link; IEEE Xplore was inaccessible, so the publisher abstract could not be screened. Retrieval evidence: IEEE Xplore page for DOI 10.1109/TGRS.2025.3598446 was inaccessible; DOI landing was inaccessible.",
-      "first_checked_at": "2026-10-14T12:00:29+00:00",
-      "last_checked_at": "2026-10-14T12:00:29+00:00",
-      "linked_from": [
-        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
-      ],
-      "borderline_recheck_count": 0,
-      "title": "Mamba for Landslide Detection: A Lightweight Model for Mapping Landslides With Very High-Resolution Images"
-    },
     "arXiv:2507.01351": {
       "classification": "borderline",
       "canonical_id": "arXiv:2507.01351",
       "identity_tokens": [
         "DOI:10.48550/arxiv.2507.01351",
+        "SemanticScholar:428ecf50296a73e9bc95f94dcfb7e5655a1cd900",
         "arXiv:2507.01351"
       ],
-      "reason": "LTDR changes modality-aware token-to-expert routing and dynamic expert activation in LVLM MoE; this is a specific conditional-compute connection, but the abstract reports benchmark quality gains rather than measured runtime or resource savings.",
+      "reason": "LTDR changes expert routing in sparse LVLMs and responds to modality-specific token distributions, giving a plausible MoE inference-path connection. The abstract reports benchmark quality and increases expert activation for vision-tail tokens, without evidence of lower inference cost.",
       "first_checked_at": "2026-10-14T12:00:30+00:00",
-      "last_checked_at": "2026-10-14T12:00:30+00:00",
+      "last_checked_at": "2026-10-14T15:09:14+00:00",
       "linked_from": [
         "papers/inference/99-other-inference-systems/unknown-7f27cb4187bc-harder-task-needs-more-experts-dynamic-routing-in-moe-models.md"
       ],
@@ -79449,11 +79407,12 @@
       "classification": "borderline",
       "canonical_id": "DOI:10.1016/j.neucom.2024.128747",
       "identity_tokens": [
-        "DOI:10.1016/j.neucom.2024.128747"
+        "DOI:10.1016/j.neucom.2024.128747",
+        "SemanticScholar:5e4a99126d7eea0674af631b74968addde698d8f"
       ],
-      "reason": "The DOI title describes cascade compression for Vision Transformers, a specific model-compression connection, but ScienceDirect was inaccessible and no publisher abstract was retrieved. Retrieval evidence: ScienceDirect attempt for DOI 10.1016/j.neucom.2024.128747 returned “Cache miss”; DOI landing was inaccessible.",
+      "reason": "UCC prunes and aggregates Vision Transformer tokens and reports substantial FLOP reductions, a concrete transformer-compression method. The evidence is for image-classification ViTs and does not establish transfer to LLM inference.",
       "first_checked_at": "2026-10-14T12:02:37+00:00",
-      "last_checked_at": "2026-10-14T12:02:37+00:00",
+      "last_checked_at": "2026-10-14T15:09:08+00:00",
       "linked_from": [
         "papers/inference/16-weight-quantization-compression/2023-2307.13304-quip-2-bit-quantization-of-large-language-models-with-guarantees.md"
       ],
@@ -79464,31 +79423,17 @@
       "classification": "borderline",
       "canonical_id": "DOI:10.1109/ainit65432.2025.11035605",
       "identity_tokens": [
-        "DOI:10.1109/ainit65432.2025.11035605"
+        "DOI:10.1109/ainit65432.2025.11035605",
+        "SemanticScholar:18af750c64ec6aa7c363d81cf02a3e0978ab07f3"
       ],
-      "reason": "The DOI title describes a review of reinforcement-learning-driven knowledge distillation, which may connect to model compression but appears training-focused; IEEE Xplore was inaccessible and the abstract could not be screened. Retrieval evidence: IEEE Xplore page for DOI 10.1109/AINIT65432.2025.11035605 was inaccessible; DOI landing was inaccessible.",
+      "reason": "The candidate's DOI/title are identified, but the registered publisher abstract could not be independently retrieved: IEEE Xplore direct document/abstract opens returned JavaScript-disabled anti-bot verification pages or Internal Error. Exact-DOI search surfaced secondary records, but no publisher abstract section was available. Keep borderline pending primary-source evidence.",
       "first_checked_at": "2026-10-14T12:02:37+00:00",
-      "last_checked_at": "2026-10-14T12:02:37+00:00",
+      "last_checked_at": "2026-10-14T15:09:08+00:00",
       "linked_from": [
         "papers/inference/16-weight-quantization-compression/2024-2407.14679-compact-language-models-via-pruning-and-knowledge-distillation.md"
       ],
       "borderline_recheck_count": 0,
       "title": "A Survey of Reinforcement Learning-Driven Knowledge Distillation: Techniques, Challenges, and Applications"
-    },
-    "DOI:10.3390/s25196225": {
-      "classification": "borderline",
-      "canonical_id": "DOI:10.3390/s25196225",
-      "identity_tokens": [
-        "DOI:10.3390/s25196225"
-      ],
-      "reason": "The DOI title describes Mamba-based multimodal fusion for remote-sensing segmentation, an application-specific model; the MDPI page was inaccessible and no publisher abstract was retrieved. Retrieval evidence: MDPI publisher page https://www.mdpi.com/1424-8220/25/19/6225 was inaccessible; DOI landing was inaccessible.",
-      "first_checked_at": "2026-10-14T12:02:37+00:00",
-      "last_checked_at": "2026-10-14T12:02:37+00:00",
-      "linked_from": [
-        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
-      ],
-      "borderline_recheck_count": 0,
-      "title": "MMFNet: A Mamba-Based Multimodal Fusion Network for Remote Sensing Image Semantic Segmentation"
     },
     "arXiv:2602.01219": {
       "classification": "borderline",
@@ -80146,6 +80091,54 @@
       ],
       "borderline_recheck_count": 0,
       "title": "Evaluating the Efficacy of LLM-Based Reasoning for Multiobjective HPC Job Scheduling"
+    },
+    "arXiv:2509.14008": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2509.14008",
+      "identity_tokens": [
+        "SemanticScholar:aa260d61e37348d106b0a817294b2d0690ecd6f5",
+        "arXiv:2509.14008"
+      ],
+      "reason": "The Hala report quantizes an Arabic-English teacher to FP8 and reports 2x throughput, but uses this to generate training supervision; the remaining contribution is model training and translation, not serving a deployed LLM.",
+      "first_checked_at": "2026-10-14T15:09:08+00:00",
+      "last_checked_at": "2026-10-14T15:09:08+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Hala Technical Report: Building Arabic-Centric Instruction & Translation Models at Scale"
+    },
+    "arXiv:2311.13126": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2311.13126",
+      "identity_tokens": [
+        "SemanticScholar:9c48db369f4811e6566ff3bc7d71be159a544fe2",
+        "arXiv:2311.13126"
+      ],
+      "reason": "This position paper discusses PEFT architectures and associated computational demands for LLMs, which may affect resource use, but supplies no concrete inference-time method or measurements.",
+      "first_checked_at": "2026-10-14T15:09:09+00:00",
+      "last_checked_at": "2026-10-14T15:09:09+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2023-2306.00978-awq.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Towards Better Parameter-Efficient Fine-Tuning for Large Language Models: A Position Paper"
+    },
+    "arXiv:2510.06410": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2510.06410",
+      "identity_tokens": [
+        "SemanticScholar:45321654247119b752985b19e25fcf3b7dfe6585",
+        "arXiv:2510.06410"
+      ],
+      "reason": "The paper studies whether LLMs can collaborate on shared reasoning trajectories and motivates potential inference-efficiency benefits, but its abstract evaluates behavioral recoverability/guidability and reports no actual cost, latency, or throughput improvement.",
+      "first_checked_at": "2026-10-14T15:09:13+00:00",
+      "last_checked_at": "2026-10-14T15:09:13+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2023-2302.01318-speculative-sampling.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Off-Trajectory Reasoning: Can LLMs Collaborate on Reasoning Trajectory?"
     }
   }
 }

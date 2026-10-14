@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-12ae3775e48d3e95-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1109/ainit65432.2025.11035605",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1109/ainit65432.2025.11035605",
+    "identity_tokens": [
+      "DOI:10.1109/ainit65432.2025.11035605",
+      "SemanticScholar:18af750c64ec6aa7c363d81cf02a3e0978ab07f3"
+    ],
+    "reason": "The candidate's DOI/title are identified, but the registered publisher abstract could not be independently retrieved: IEEE Xplore direct document/abstract opens returned JavaScript-disabled anti-bot verification pages or Internal Error. Exact-DOI search surfaced secondary records, but no publisher abstract section was available. Keep borderline pending primary-source evidence.",
+    "first_checked_at": "2026-10-14T12:02:37+00:00",
+    "last_checked_at": "2026-10-14T15:09:08+00:00",
+    "linked_from": [
+      "papers/inference/16-weight-quantization-compression/2024-2407.14679-compact-language-models-via-pruning-and-knowledge-distillation.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "A Survey of Reinforcement Learning-Driven Knowledge Distillation: Techniques, Challenges, and Applications"
+  },
+  "processed_at": "2026-10-14T15:09:09+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-12ae3775e48d",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
