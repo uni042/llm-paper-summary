@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-14T06:34:21+00:00",
-  "record_count": 5059,
+  "updated_at": "2026-10-14T06:36:23+00:00",
+  "record_count": 5068,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -78268,6 +78268,152 @@
       ],
       "borderline_recheck_count": 0,
       "title": "Orchestrating LLMs with Different Personalizations"
+    },
+    "DOI:10.1016/j.eswa.2026.133888": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.eswa.2026.133888",
+      "identity_tokens": [
+        "DOI:10.1016/j.eswa.2026.133888"
+      ],
+      "reason": "MLFF-DA has confirmed Elsevier DOI/title/PII metadata. Both official ScienceDirect variants returned HTTP 403; search exposed highlights and introductory sections but no complete abstract. Multi-cue caption grounding alone does not establish an inference-efficiency contribution, so source-unavailable status is retained.",
+      "first_checked_at": "2026-10-14T06:36:15+00:00",
+      "last_checked_at": "2026-10-14T06:36:15+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md",
+        "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md",
+        "papers/inference/99-other-inference-systems/2021-2102.03902-nystr-mformer-a-nystr-m-based-algorithm-for-approximating-self-attention.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "MLFF-DA: Multi-level feature fusion with dual attention for enhanced image captioning"
+    },
+    "DOI:10.1109/rusautocon69876.2026.11707335": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/rusautocon69876.2026.11707335",
+      "identity_tokens": [
+        "DOI:10.1109/rusautocon69876.2026.11707335"
+      ],
+      "reason": "Telemetry-Aware Load Balancing is registered with IEEE and its DOI/title are confirmed. The official Xplore page returned Internal Error; DOI/title and publisher searches produced no usable primary abstract. Distributed LLM training in the title is insufficient to infer an inference-system contribution.",
+      "first_checked_at": "2026-10-14T06:36:16+00:00",
+      "last_checked_at": "2026-10-14T06:36:16+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2018-1802.05799-horovod-fast-and-easy-distributed-deep-learning-in-tensorflow.md",
+        "papers/inference/99-other-inference-systems/2019-1909.08053-megatron-lm-training-multi-billion-parameter-language-models-using-model.md",
+        "papers/inference/99-other-inference-systems/2021-2104.04473-efficient-large-scale-language-model-training-on-gpu-clusters-using-mega.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Telemetry-Aware Load Balancing Method and Algorithm for Distributed LLM Training on AI Servers"
+    },
+    "DOI:10.1109/tnet.2022.3190797": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/tnet.2022.3190797",
+      "identity_tokens": [
+        "DOI:10.1109/tnet.2022.3190797"
+      ],
+      "reason": "The ML job scheduling paper has confirmed IEEE DOI/title metadata, but Xplore returned a JavaScript robot-verification page; exact publisher-title searches found no primary abstract. Scheduling of training jobs versus any reusable inference mechanism remains unverified.",
+      "first_checked_at": "2026-10-14T06:36:16+00:00",
+      "last_checked_at": "2026-10-14T06:36:16+00:00",
+      "linked_from": [
+        "papers/inference/15-inference-simulation-emulation/2017-1712.05889-ray-a-distributed-framework-for-emerging-ai-applications.md",
+        "papers/inference/99-other-inference-systems/2018-1802.05799-horovod-fast-and-easy-distributed-deep-learning-in-tensorflow.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Machine Learning Feature Based Job Scheduling for Distributed Machine Learning Clusters"
+    },
+    "arXiv:2510.27566": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2510.27566",
+      "identity_tokens": [
+        "arXiv:2510.27566"
+      ],
+      "reason": "The RAG system design is concrete, but the abstract reports quality rather than lower retrieval count, latency, or other efficiency gain.",
+      "first_checked_at": "2026-10-14T06:36:16+00:00",
+      "last_checked_at": "2026-10-14T06:36:16+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2212.10511-when-not-to-trust-language-models-investigating-effectiveness-of-paramet.md",
+        "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Interact-RAG: Reason and Interact with the Corpus, Beyond Black-Box Retrieval"
+    },
+    "DOI:10.1109/tsc.2025.3577491": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/tsc.2025.3577491",
+      "identity_tokens": [
+        "DOI:10.1109/tsc.2025.3577491"
+      ],
+      "reason": "East has confirmed IEEE DOI/title metadata, but its official Xplore page returned a JavaScript robot-verification page and official-title searches found no abstract. Secure transformer inference is relevant by title, but its nonlinear protocols, runtime and communication claims were not read in a primary source.",
+      "first_checked_at": "2026-10-14T06:36:21+00:00",
+      "last_checked_at": "2026-10-14T06:36:21+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-0ed2662d9eee-iron-private-inference-on-transformers.md",
+        "papers/inference/99-other-inference-systems/2023-2307.12533-puma-secure-inference-of-llama-7b-in-five-minutes.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "East: Efficient and Accurate Secure Inference Framework for Transformer"
+    },
+    "arXiv:2204.01715": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2204.01715",
+      "identity_tokens": [
+        "arXiv:2204.01715"
+      ],
+      "reason": "It provides general AI pipeline acceleration but does not identify LLM inference, serving, or a language-model-specific use case.",
+      "first_checked_at": "2026-10-14T06:36:22+00:00",
+      "last_checked_at": "2026-10-14T06:36:22+00:00",
+      "linked_from": [
+        "papers/inference/15-inference-simulation-emulation/2017-1712.05889-ray-a-distributed-framework-for-emerging-ai-applications.md",
+        "papers/inference/99-other-inference-systems/2018-1802.05799-horovod-fast-and-easy-distributed-deep-learning-in-tensorflow.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "BigDL 2.0: Seamless Scaling of AI Pipelines from Laptops to Distributed Cluster"
+    },
+    "DOI:10.1109/jstars.2024.3510545": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/jstars.2024.3510545",
+      "identity_tokens": [
+        "DOI:10.1109/jstars.2024.3510545"
+      ],
+      "reason": "CDSS-Pan has confirmed IEEE DOI/title metadata, but Xplore returned a JavaScript robot-verification page and a publisher-title search returned no abstract. Pansharpening and state-space modeling in the title do not establish an LLM inference contribution.",
+      "first_checked_at": "2026-10-14T06:36:22+00:00",
+      "last_checked_at": "2026-10-14T06:36:22+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md",
+        "papers/inference/99-other-inference-systems/2022-2206.13947-long-range-language-modeling-via-gated-state-spaces.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "CDSS-Pan: Convolutional Dictionary Learning With State Space Model for Pansharpening"
+    },
+    "DOI:10.1109/icc52391.2025.11160773": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/icc52391.2025.11160773",
+      "identity_tokens": [
+        "DOI:10.1109/icc52391.2025.11160773"
+      ],
+      "reason": "The distributed edge-cloud LLM inference paper has confirmed IEEE DOI/title metadata. Xplore returned a JavaScript robot-verification page and publisher-title searches found no abstract; its partitioning, communication and scheduling mechanisms cannot be classified without primary evidence.",
+      "first_checked_at": "2026-10-14T06:36:22+00:00",
+      "last_checked_at": "2026-10-14T06:36:22+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2407.18003-keep-the-cost-down-a-review-on-methods-to-optimize-llm-s-kv-cache-consum.md",
+        "papers/inference/99-other-inference-systems/2019-1909.08053-megatron-lm-training-multi-billion-parameter-language-models-using-model.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Distributed Inference Optimization for Large Language Model in Edge-Cloud Collaborative Networks"
+    },
+    "DOI:10.1145/3627673.3679647": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3627673.3679647",
+      "identity_tokens": [
+        "DOI:10.1145/3627673.3679647"
+      ],
+      "reason": "The representation-regularization recommendation paper has confirmed ACM DOI/title metadata. Its official page returned HTTP 403 and publisher-title search found no usable abstract; the title does not verify any LLM execution-cost or serving connection.",
+      "first_checked_at": "2026-10-14T06:36:23+00:00",
+      "last_checked_at": "2026-10-14T06:36:23+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md",
+        "papers/inference/99-other-inference-systems/2023-2310.06694-sheared-llama-accelerating-language-model-pre-training-via-structured-pr.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Spectral and Geometric Spaces Representation Regularization for Multi-Modal Sequential Recommendation"
     }
   }
 }

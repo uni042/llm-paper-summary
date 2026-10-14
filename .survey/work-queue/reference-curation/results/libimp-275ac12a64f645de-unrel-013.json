@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-275ac12a64f645de-unrel-013",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2309.07974",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2309.07974",
+    "identity_tokens": [
+      "arXiv:2309.07974"
+    ],
+    "reason": "It contributes a reasoning dataset and baseline evaluation without an inference-efficiency mechanism.",
+    "first_checked_at": "2026-10-14T06:36:20+00:00",
+    "last_checked_at": "2026-10-14T06:36:20+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2019-1907.05242-large-memory-layers-with-product-keys.md",
+      "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md"
+    ],
+    "title": "A Data Source for Reasoning Embodied Agents"
+  },
+  "processed_at": "2026-10-14T06:36:20+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-275ac12a64f6",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
