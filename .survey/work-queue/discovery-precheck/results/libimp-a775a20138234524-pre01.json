@@ -1,0 +1,681 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-a775a20138234524-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-a775a2013823",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "SemanticScholar:0de357a57605e64690ab98e7d1d046f31069d3b7",
+    "SemanticScholar:409bb6f4f749b4cf9f46aea9729838a17c707117",
+    "arXiv:2408.05636",
+    "arXiv:2410.14570",
+    "arXiv:2503.09579",
+    "arXiv:2503.19950",
+    "arXiv:2505.08620",
+    "arXiv:2509.06836"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 8,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": false,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "24297583ca2cfe201b3770d420afb60fbd602426",
+  "raw_search_result_count": 8,
+  "retrieval_duplicate_filtered_count": 1,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 7,
+  "provider_progress": {
+    "requested_count": 8,
+    "status_counts": {
+      "allowed": 7,
+      "filtered_by_snapshot": 1,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-14T01:24:01.813598+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "SemanticScholar:0de357a57605e64690ab98e7d1d046f31069d3b7",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "SemanticScholar:409bb6f4f749b4cf9f46aea9729838a17c707117",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2408.05636",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "title:speculative diffusion decoding accelerating language generation through diffusion"
+    },
+    {
+      "requested_id": "arXiv:2410.14570",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2503.09579",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2503.19950",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2505.08620",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2509.06836",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Cost-Optimal Grouped-Query Attention for Long-Context Modeling",
+      "source_url": "https://arxiv.org/abs/2503.09579",
+      "year": 2025,
+      "published": "2025-03-12",
+      "venue": "Conference on Empirical Methods in Natural Language Processing",
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Grouped-Query Attention (GQA) is a widely adopted strategy for reducing the computational cost of attention layers in large language models (LLMs). However, current GQA configurations are often suboptimal because they overlook how context length influences inference cost. Since inference cost grows with context length, the most cost-efficient GQA configuration should also vary accordingly. In this work, we analyze the relationship among context length, model size, GQA configuration, and model loss, and introduce two innovations: (1) we decouple the total head size from the hidden size, enabling more flexible control over attention FLOPs; and (2) we jointly optimize the model size and the GQA configuration to arrive at a better allocation of inference resources between attention layers and other components. Our analysis reveals that commonly used GQA configurations are highly suboptimal for long-context scenarios. More importantly, we propose a recipe for deriving cost-optimal GQA configurations. Our results show that for long-context scenarios, one should use fewer attention heads while scaling up model size. Configurations selected by our recipe can reduce both memory usage and FLOPs by more than 50% compared to Llama-3's GQA, with *no degradation in model capabilities*. Our findings offer valuable insights for designing efficient long-context LLMs. The code is available at https://www.github.com/THUNLP/cost-optimal-gqa .",
+      "identifiers": [
+        "SemanticScholar:d55a5f85cfe9305fd0bebcba4b49accd4b4a80ac"
+      ],
+      "semantic_scholar_id": "d55a5f85cfe9305fd0bebcba4b49accd4b4a80ac",
+      "canonical_id": "arXiv:2503.09579",
+      "arxiv_id": "2503.09579",
+      "doi": "10.18653/v1/2025.emnlp-main.272",
+      "authors": [
+        "Yingfa Chen",
+        "Yutong Wu",
+        "Chenyang Song",
+        "Z. Thai",
+        "Xingyu Shen",
+        "Xu Han",
+        "Zhiyuan Liu",
+        "Maosong Sun"
+      ],
+      "priority": 14,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 14,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 581,
+        "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+      }
+    },
+    {
+      "title": "Understanding the Difficulty of Low-Precision Post-Training Quantization for LLMs",
+      "source_url": "https://arxiv.org/abs/2410.14570",
+      "year": 2024,
+      "published": "2024-10-18",
+      "venue": "IEEE International Joint Conference on Neural Network",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models of high parameter counts are computationally expensive, yet can be made much more efficient by compressing their weights to very low numerical precision. This can be achieved either through post-training quantization by minimizing local, layer-wise quantization errors, or through quantization-aware fine-tuning by minimizing the global loss function. In this study, we discovered that, under the same data constraint, the former approach nearly always fared worse than the latter, a phenomenon particularly prominent when the numerical precision is very low. We further showed that this difficulty of post-training quantization arose from stark misalignment between optimization of the local and global objective functions. Our findings suggested limited utility in minimization of local quantization error and the importance of direct quantization-aware fine-tuning, in the regime of large models at very low precision.",
+      "identifiers": [
+        "SemanticScholar:c024638d0d3f086f500a0a244f7546eec2d94bdf"
+      ],
+      "semantic_scholar_id": "c024638d0d3f086f500a0a244f7546eec2d94bdf",
+      "canonical_id": "arXiv:2410.14570",
+      "arxiv_id": "2410.14570",
+      "doi": "10.1109/IJCNN64981.2025.11228337",
+      "authors": [
+        "Zifei Xu",
+        "Sayeh Sharify",
+        "W. Yazar",
+        "Tristan Webb",
+        "Xin Wang"
+      ],
+      "priority": 3,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 3,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 726,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Resource-Efficient Language Models: Quantization for Fast and Accessible Inference",
+      "source_url": "https://arxiv.org/abs/2505.08620",
+      "year": 2025,
+      "published": "2025-05-13",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models have significantly advanced natural language processing, yet their heavy resource demands pose severe challenges regarding hardware accessibility and energy consumption. This paper presents a focused and high-level review of post-training quantization (PTQ) techniques designed to optimize the inference efficiency of LLMs by the end-user, including details on various quantization schemes, granularities, and trade-offs. The aim is to provide a balanced overview between the theory and applications of post-training quantization.",
+      "identifiers": [
+        "SemanticScholar:77e993e5af1cb586662232fc8ea6df1cf9f8b8d6"
+      ],
+      "semantic_scholar_id": "77e993e5af1cb586662232fc8ea6df1cf9f8b8d6",
+      "canonical_id": "arXiv:2505.08620",
+      "arxiv_id": "2505.08620",
+      "doi": "10.48550/arXiv.2505.08620",
+      "authors": [
+        "T. Jørgensen"
+      ],
+      "priority": 2,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 2,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 519,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Higher Acceptance Rates for Speculative Decoding with Randomised Drafting",
+      "source_url": "https://www.semanticscholar.org/paper/0de357a57605e64690ab98e7d1d046f31069d3b7",
+      "year": null,
+      "published": null,
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": null,
+      "identifiers": [
+        "SemanticScholar:0de357a57605e64690ab98e7d1d046f31069d3b7"
+      ],
+      "semantic_scholar_id": "0de357a57605e64690ab98e7d1d046f31069d3b7",
+      "canonical_id": "SemanticScholar:0de357a57605e64690ab98e7d1d046f31069d3b7",
+      "authors": [
+        "William Toner",
+        "Martin Asenov",
+        "Rajkarn Singh",
+        "Artjom Joosen"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": null,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "P REFIX AND O UTPUT L ENGTH -A WARE S CHEDULING FOR E FFICIENT O NLINE LLM I NFERENCE",
+      "source_url": "https://www.semanticscholar.org/paper/409bb6f4f749b4cf9f46aea9729838a17c707117",
+      "year": null,
+      "published": null,
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": null,
+      "identifiers": [
+        "SemanticScholar:409bb6f4f749b4cf9f46aea9729838a17c707117"
+      ],
+      "semantic_scholar_id": "409bb6f4f749b4cf9f46aea9729838a17c707117",
+      "canonical_id": "SemanticScholar:409bb6f4f749b4cf9f46aea9729838a17c707117",
+      "authors": [
+        "I. Arango",
+        "Ayush Noori",
+        "Yepeng Huang",
+        "Rana Shahout",
+        "Min-Lan Yu"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": null,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "LogQuant: Log-Distributed 2-Bit Quantization of KV Cache with Superior Accuracy Preservation",
+      "source_url": "https://arxiv.org/abs/2503.19950",
+      "year": 2025,
+      "published": "2025-03-25",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "We introduce LogQuant, a groundbreaking 2-bit quantization technique for KV Cache in large language model (LLM) inference, delivering substantial memory savings while preserving superior performance. Previous methods either assume that later tokens are more important or attempt to predict important tokens based on earlier attention patterns. Both approaches, however, can result in performance bottlenecks or frequent mispredictions. LogQuant takes a different approach. By applying a log-based filtering mechanism, it selectively compresses the KV Cache across the entire context, achieving better performance with the same or even reduced memory footprint compared to existing methods. In benchmark tests, it enhances throughput by 25% and boosts batch size by 60% without increasing memory consumption. For challenging tasks such as Math and Code Completion, LogQuant improves accuracy by 40% to 200% at the same compression ratio, outperforming comparable techniques.LogQuant integrates effortlessly with popular inference frameworks like Python's transformers library. Implementation can be available in https://github.com/Concyclics/LogQuantKV.",
+      "identifiers": [
+        "SemanticScholar:34cbfdf8f2241a63de745d624a473c182b37850a"
+      ],
+      "semantic_scholar_id": "34cbfdf8f2241a63de745d624a473c182b37850a",
+      "canonical_id": "arXiv:2503.19950",
+      "arxiv_id": "2503.19950",
+      "doi": "10.48550/arXiv.2503.19950",
+      "authors": [
+        "Han Chen",
+        "Zicong Jiang",
+        "Zi-Ning Zhang",
+        "Bingsheng He",
+        "Pingyi Luo",
+        "Mian Lu",
+        "Yu-Qiang Chen"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 568,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "COMPACT: Common-token Optimized Model Pruning Across Channels and Tokens",
+      "source_url": "https://arxiv.org/abs/2509.06836",
+      "year": 2025,
+      "published": "2025-09-08",
+      "venue": "Proceedings of the Thirty-Fifth International Joint Conference on Artificial Intelligence",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Improving the memory efficiency, throughput, and serving cost of large language models (LLMs) is critical for edge deployment, interactive applications, and sustainable inference. Pruning is a promising approach, but existing methods have limitations: width pruning disrupts the standard transformer architecture and requires custom inference code, while depth pruning causes abrupt accuracy drops. Moreover, many approaches that work well for LLMs fail to preserve performance on small language models (SLMs). We propose COMPACT, which jointly prunes (i) rare vocabulary to shrink embedding layers and (ii) FFN intermediate channels using common-token–weighted activations aligned with the post-pruning token distribution. COMPACT inherits strengths of both depth and width pruning, such as deployment-friendliness, scale-adaptivity, competitive pruning speed, and strong inference performance. Experiments on several LLM families (0.5B–70B) show state-of-the-art downstream performance, with substantial improvements in inference throughput and GPU memory. Project code is at https://github.com/ekwek1/COMPACT.",
+      "identifiers": [
+        "SemanticScholar:a108afe39883eb9315f8a3af9781517940886201"
+      ],
+      "semantic_scholar_id": "a108afe39883eb9315f8a3af9781517940886201",
+      "canonical_id": "arXiv:2509.06836",
+      "arxiv_id": "2509.06836",
+      "doi": "10.48550/arXiv.2509.06836",
+      "authors": [
+        "Eugene Kwek",
+        "Wenpeng Yin"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 401,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2503.09579",
+      "identity_tokens": [
+        "id:DOI:10.18653/v1/2025.emnlp-main.272",
+        "id:SemanticScholar:d55a5f85cfe9305fd0bebcba4b49accd4b4a80ac",
+        "id:arXiv:2503.09579",
+        "title:costoptimal groupedquery attention for longcontext modeling",
+        "url:https://arxiv.org/abs/2503.09579"
+      ],
+      "record": {
+        "title": "Cost-Optimal Grouped-Query Attention for Long-Context Modeling",
+        "source_url": "https://arxiv.org/abs/2503.09579",
+        "year": 2025,
+        "published": "2025-03-12",
+        "venue": "Conference on Empirical Methods in Natural Language Processing",
+        "citation_count": 4,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Grouped-Query Attention (GQA) is a widely adopted strategy for reducing the computational cost of attention layers in large language models (LLMs). However, current GQA configurations are often suboptimal because they overlook how context length influences inference cost. Since inference cost grows with context length, the most cost-efficient GQA configuration should also vary accordingly. In this work, we analyze the relationship among context length, model size, GQA configuration, and model loss, and introduce two innovations: (1) we decouple the total head size from the hidden size, enabling more flexible control over attention FLOPs; and (2) we jointly optimize the model size and the GQA configuration to arrive at a better allocation of inference resources between attention layers and other components. Our analysis reveals that commonly used GQA configurations are highly suboptimal for long-context scenarios. More importantly, we propose a recipe for deriving cost-optimal GQA configurations. Our results show that for long-context scenarios, one should use fewer attention heads while scaling up model size. Configurations selected by our recipe can reduce both memory usage and FLOPs by more than 50% compared to Llama-3's GQA, with *no degradation in model capabilities*. Our findings offer valuable insights for designing efficient long-context LLMs. The code is available at https://www.github.com/THUNLP/cost-optimal-gqa .",
+        "identifiers": [
+          "SemanticScholar:d55a5f85cfe9305fd0bebcba4b49accd4b4a80ac"
+        ],
+        "semantic_scholar_id": "d55a5f85cfe9305fd0bebcba4b49accd4b4a80ac",
+        "canonical_id": "arXiv:2503.09579",
+        "arxiv_id": "2503.09579",
+        "doi": "10.18653/v1/2025.emnlp-main.272",
+        "authors": [
+          "Yingfa Chen",
+          "Yutong Wu",
+          "Chenyang Song",
+          "Z. Thai",
+          "Xingyu Shen",
+          "Xu Han",
+          "Zhiyuan Liu",
+          "Maosong Sun"
+        ],
+        "priority": 14,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 4,
+          "citation_count": 4,
+          "total": 14,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 581,
+          "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2410.14570",
+      "identity_tokens": [
+        "id:DOI:10.1109/ijcnn64981.2025.11228337",
+        "id:SemanticScholar:c024638d0d3f086f500a0a244f7546eec2d94bdf",
+        "id:arXiv:2410.14570",
+        "title:understanding the difficulty of lowprecision posttraining quantization for llms",
+        "url:https://arxiv.org/abs/2410.14570"
+      ],
+      "record": {
+        "title": "Understanding the Difficulty of Low-Precision Post-Training Quantization for LLMs",
+        "source_url": "https://arxiv.org/abs/2410.14570",
+        "year": 2024,
+        "published": "2024-10-18",
+        "venue": "IEEE International Joint Conference on Neural Network",
+        "citation_count": 3,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large language models of high parameter counts are computationally expensive, yet can be made much more efficient by compressing their weights to very low numerical precision. This can be achieved either through post-training quantization by minimizing local, layer-wise quantization errors, or through quantization-aware fine-tuning by minimizing the global loss function. In this study, we discovered that, under the same data constraint, the former approach nearly always fared worse than the latter, a phenomenon particularly prominent when the numerical precision is very low. We further showed that this difficulty of post-training quantization arose from stark misalignment between optimization of the local and global objective functions. Our findings suggested limited utility in minimization of local quantization error and the importance of direct quantization-aware fine-tuning, in the regime of large models at very low precision.",
+        "identifiers": [
+          "SemanticScholar:c024638d0d3f086f500a0a244f7546eec2d94bdf"
+        ],
+        "semantic_scholar_id": "c024638d0d3f086f500a0a244f7546eec2d94bdf",
+        "canonical_id": "arXiv:2410.14570",
+        "arxiv_id": "2410.14570",
+        "doi": "10.1109/IJCNN64981.2025.11228337",
+        "authors": [
+          "Zifei Xu",
+          "Sayeh Sharify",
+          "W. Yazar",
+          "Tristan Webb",
+          "Xin Wang"
+        ],
+        "priority": 3,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 3,
+          "citation_count": 3,
+          "total": 3,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 726,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2505.08620",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2505.08620",
+        "id:SemanticScholar:77e993e5af1cb586662232fc8ea6df1cf9f8b8d6",
+        "id:arXiv:2505.08620",
+        "title:resourceefficient language models quantization for fast and accessible inference",
+        "url:https://arxiv.org/abs/2505.08620"
+      ],
+      "record": {
+        "title": "Resource-Efficient Language Models: Quantization for Fast and Accessible Inference",
+        "source_url": "https://arxiv.org/abs/2505.08620",
+        "year": 2025,
+        "published": "2025-05-13",
+        "venue": "arXiv.org",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large language models have significantly advanced natural language processing, yet their heavy resource demands pose severe challenges regarding hardware accessibility and energy consumption. This paper presents a focused and high-level review of post-training quantization (PTQ) techniques designed to optimize the inference efficiency of LLMs by the end-user, including details on various quantization schemes, granularities, and trade-offs. The aim is to provide a balanced overview between the theory and applications of post-training quantization.",
+        "identifiers": [
+          "SemanticScholar:77e993e5af1cb586662232fc8ea6df1cf9f8b8d6"
+        ],
+        "semantic_scholar_id": "77e993e5af1cb586662232fc8ea6df1cf9f8b8d6",
+        "canonical_id": "arXiv:2505.08620",
+        "arxiv_id": "2505.08620",
+        "doi": "10.48550/arXiv.2505.08620",
+        "authors": [
+          "T. Jørgensen"
+        ],
+        "priority": 2,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 2,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 519,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:SemanticScholar:0de357a57605e64690ab98e7d1d046f31069d3b7",
+      "identity_tokens": [
+        "id:SemanticScholar:0de357a57605e64690ab98e7d1d046f31069d3b7",
+        "title:higher acceptance rates for speculative decoding with randomised drafting",
+        "url:https://www.semanticscholar.org/paper/0de357a57605e64690ab98e7d1d046f31069d3b7"
+      ],
+      "record": {
+        "title": "Higher Acceptance Rates for Speculative Decoding with Randomised Drafting",
+        "source_url": "https://www.semanticscholar.org/paper/0de357a57605e64690ab98e7d1d046f31069d3b7",
+        "year": null,
+        "published": null,
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": null,
+        "identifiers": [
+          "SemanticScholar:0de357a57605e64690ab98e7d1d046f31069d3b7"
+        ],
+        "semantic_scholar_id": "0de357a57605e64690ab98e7d1d046f31069d3b7",
+        "canonical_id": "SemanticScholar:0de357a57605e64690ab98e7d1d046f31069d3b7",
+        "authors": [
+          "William Toner",
+          "Martin Asenov",
+          "Rajkarn Singh",
+          "Artjom Joosen"
+        ],
+        "priority": 0,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 0,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": null,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:SemanticScholar:409bb6f4f749b4cf9f46aea9729838a17c707117",
+      "identity_tokens": [
+        "id:SemanticScholar:409bb6f4f749b4cf9f46aea9729838a17c707117",
+        "title:p refix and o utput l ength a ware s cheduling for e fficient o nline llm i nference",
+        "url:https://www.semanticscholar.org/paper/409bb6f4f749b4cf9f46aea9729838a17c707117"
+      ],
+      "record": {
+        "title": "P REFIX AND O UTPUT L ENGTH -A WARE S CHEDULING FOR E FFICIENT O NLINE LLM I NFERENCE",
+        "source_url": "https://www.semanticscholar.org/paper/409bb6f4f749b4cf9f46aea9729838a17c707117",
+        "year": null,
+        "published": null,
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": null,
+        "identifiers": [
+          "SemanticScholar:409bb6f4f749b4cf9f46aea9729838a17c707117"
+        ],
+        "semantic_scholar_id": "409bb6f4f749b4cf9f46aea9729838a17c707117",
+        "canonical_id": "SemanticScholar:409bb6f4f749b4cf9f46aea9729838a17c707117",
+        "authors": [
+          "I. Arango",
+          "Ayush Noori",
+          "Yepeng Huang",
+          "Rana Shahout",
+          "Min-Lan Yu"
+        ],
+        "priority": 0,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 0,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": null,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2503.19950",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2503.19950",
+        "id:SemanticScholar:34cbfdf8f2241a63de745d624a473c182b37850a",
+        "id:arXiv:2503.19950",
+        "title:logquant logdistributed 2bit quantization of kv cache with superior accuracy preservation",
+        "url:https://arxiv.org/abs/2503.19950"
+      ],
+      "record": {
+        "title": "LogQuant: Log-Distributed 2-Bit Quantization of KV Cache with Superior Accuracy Preservation",
+        "source_url": "https://arxiv.org/abs/2503.19950",
+        "year": 2025,
+        "published": "2025-03-25",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "We introduce LogQuant, a groundbreaking 2-bit quantization technique for KV Cache in large language model (LLM) inference, delivering substantial memory savings while preserving superior performance. Previous methods either assume that later tokens are more important or attempt to predict important tokens based on earlier attention patterns. Both approaches, however, can result in performance bottlenecks or frequent mispredictions. LogQuant takes a different approach. By applying a log-based filtering mechanism, it selectively compresses the KV Cache across the entire context, achieving better performance with the same or even reduced memory footprint compared to existing methods. In benchmark tests, it enhances throughput by 25% and boosts batch size by 60% without increasing memory consumption. For challenging tasks such as Math and Code Completion, LogQuant improves accuracy by 40% to 200% at the same compression ratio, outperforming comparable techniques.LogQuant integrates effortlessly with popular inference frameworks like Python's transformers library. Implementation can be available in https://github.com/Concyclics/LogQuantKV.",
+        "identifiers": [
+          "SemanticScholar:34cbfdf8f2241a63de745d624a473c182b37850a"
+        ],
+        "semantic_scholar_id": "34cbfdf8f2241a63de745d624a473c182b37850a",
+        "canonical_id": "arXiv:2503.19950",
+        "arxiv_id": "2503.19950",
+        "doi": "10.48550/arXiv.2503.19950",
+        "authors": [
+          "Han Chen",
+          "Zicong Jiang",
+          "Zi-Ning Zhang",
+          "Bingsheng He",
+          "Pingyi Luo",
+          "Mian Lu",
+          "Yu-Qiang Chen"
+        ],
+        "priority": 0,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 0,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 568,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2509.06836",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2509.06836",
+        "id:SemanticScholar:a108afe39883eb9315f8a3af9781517940886201",
+        "id:arXiv:2509.06836",
+        "title:compact commontoken optimized model pruning across channels and tokens",
+        "url:https://arxiv.org/abs/2509.06836"
+      ],
+      "record": {
+        "title": "COMPACT: Common-token Optimized Model Pruning Across Channels and Tokens",
+        "source_url": "https://arxiv.org/abs/2509.06836",
+        "year": 2025,
+        "published": "2025-09-08",
+        "venue": "Proceedings of the Thirty-Fifth International Joint Conference on Artificial Intelligence",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Improving the memory efficiency, throughput, and serving cost of large language models (LLMs) is critical for edge deployment, interactive applications, and sustainable inference. Pruning is a promising approach, but existing methods have limitations: width pruning disrupts the standard transformer architecture and requires custom inference code, while depth pruning causes abrupt accuracy drops. Moreover, many approaches that work well for LLMs fail to preserve performance on small language models (SLMs). We propose COMPACT, which jointly prunes (i) rare vocabulary to shrink embedding layers and (ii) FFN intermediate channels using common-token–weighted activations aligned with the post-pruning token distribution. COMPACT inherits strengths of both depth and width pruning, such as deployment-friendliness, scale-adaptivity, competitive pruning speed, and strong inference performance. Experiments on several LLM families (0.5B–70B) show state-of-the-art downstream performance, with substantial improvements in inference throughput and GPU memory. Project code is at https://github.com/ekwek1/COMPACT.",
+        "identifiers": [
+          "SemanticScholar:a108afe39883eb9315f8a3af9781517940886201"
+        ],
+        "semantic_scholar_id": "a108afe39883eb9315f8a3af9781517940886201",
+        "canonical_id": "arXiv:2509.06836",
+        "arxiv_id": "2509.06836",
+        "doi": "10.48550/arXiv.2509.06836",
+        "authors": [
+          "Eugene Kwek",
+          "Wenpeng Yin"
+        ],
+        "priority": 0,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 0,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 401,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:75bf67b5373cad5e4b05933a0300a94cffb48a5e86dfdaca957361b570cd82ec",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}
