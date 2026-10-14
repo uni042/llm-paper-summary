@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-14T08:22:48+00:00",
+  "generated_at": "2026-10-14T08:28:54+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -891,61 +891,6 @@
       "worker_run_key": "20261014-0730-scheduled-chat-30/r01"
     },
     {
-      "canonical_id": "arXiv:2603.20843",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-14T05:51:16+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 425 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 6262,
-        "body_paragraphs": 35,
-        "method_chars": 1857,
-        "method_paragraphs": 11,
-        "evaluation_chars": 425,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "評価説明量 425 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_2053c3d4802c8191b012db05908fc17d--2026-2603.20843-hici-hierarchical-long-context-attention-research-20261014-1130-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_2053c3d4802c8191b012db05908fc17d--2026-2603.20843-hici-hierarchical-long-context-attention-research-20261014-1130-scheduled-chat-30-r01.json",
-      "worker_run_key": "20261014-1130-scheduled-chat-30/r01"
-    },
-    {
-      "canonical_id": "arXiv:2601.22362",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-14T06:09:52+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 7024,
-        "body_paragraphs": 36,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 1219,
-        "limitation_chars": 959,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_19deb6b02de08191b68cefa1e6129d8e--2026-2601.22362-llm-energy-quantization-batching-serving-research-20261013-2230-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_19deb6b02de08191b68cefa1e6129d8e--2026-2601.22362-llm-energy-quantization-batching-serving-research-20261013-2230-scheduled-chat-30-r01.json",
-      "worker_run_key": "20261013-2230-scheduled-chat-30/r01"
-    },
-    {
       "canonical_id": "arXiv:2601.17367",
       "title": null,
       "source_url": null,
@@ -971,34 +916,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_480e8cc5a4c88191bcb05edd941de685--2026-2601.17367-elastic-attention-adaptive-sparsity-research-20261014-1430-scheduled-chat-30-r01-v2.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_480e8cc5a4c88191bcb05edd941de685--2026-2601.17367-elastic-attention-adaptive-sparsity-research-20261014-1430-scheduled-chat-30-r01-v2.json",
       "worker_run_key": "20261014-1430-scheduled-chat-30/r01"
-    },
-    {
-      "canonical_id": "arXiv:2601.14888",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-14T07:01:40+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 153 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 6451,
-        "body_paragraphs": 34,
-        "method_chars": 1890,
-        "method_paragraphs": 10,
-        "evaluation_chars": 153,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "評価説明量 153 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_806d7ae5cde88191939842c8a2320b36--2026-2601.14888-reasoning-qat-low-bit-reasoning-llm-research-20261014-1230-scheduled-chat-30-r01-v2.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_806d7ae5cde88191939842c8a2320b36--2026-2601.14888-reasoning-qat-low-bit-reasoning-llm-research-20261014-1230-scheduled-chat-30-r01-v2.json",
-      "worker_run_key": "20261014-1230-scheduled-chat-30/r01"
     },
     {
       "canonical_id": "arXiv:2606.10537",
@@ -1054,35 +971,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_96eeaed0f5288191a74a51cbe35189c0--2025-2512.02044-ccd-coherent-diffusion-decoding-research-20261014-0030-scheduled-chat-30-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_96eeaed0f5288191a74a51cbe35189c0--2025-2512.02044-ccd-coherent-diffusion-decoding-research-20261014-0030-scheduled-chat-30-r01.json",
       "worker_run_key": "20261014-0030-scheduled-chat-30/r01"
-    },
-    {
-      "canonical_id": "arXiv:2604.07812",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-14T08:01:17+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 0 < 500",
-        "長文定型文の再利用を検出: .survey/import-inbox/pending/research/retry-research-d21837a25782--libfile_ded311cd47cc8191a429e5b92de682d4--2026-2604.07812-hawk-head-importance-visual-token-pruning-research-20261014-1430-scheduled-chat-30-r01.md と 9 段落 / 1929文字 (100.0%) が完全一致"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 4686,
-        "body_paragraphs": 28,
-        "method_chars": 1331,
-        "method_paragraphs": 9,
-        "evaluation_chars": 0,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "評価説明量 0 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_e88c46fd91ac8191a266a67ec5133564--2026-2604.07812-hawk-head-importance-visual-token-pruning-research-20261014-1430-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_e88c46fd91ac8191a266a67ec5133564--2026-2604.07812-hawk-head-importance-visual-token-pruning-research-20261014-1430-scheduled-chat-30-r01.json",
-      "worker_run_key": "20261014-1430-scheduled-chat-30/r01"
     },
     {
       "canonical_id": "arXiv:2605.19049",
@@ -1164,6 +1052,118 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_f5bd297431a48191b3de4557f30d234c--2025-2511.02647-federated-attention-edge-llm-inference-research-20261014-1430-scheduled-chat-30-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_f5bd297431a48191b3de4557f30d234c--2025-2511.02647-federated-attention-edge-llm-inference-research-20261014-1430-scheduled-chat-30-r01.json",
       "worker_run_key": "20261014-1430-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2601.14888",
+      "title": "What Makes Low-Bit Quantization-Aware Training Work for Reasoning LLMs? A Systematic Study",
+      "source_url": "https://arxiv.org/abs/2601.14888",
+      "returned_at": "2026-10-14T08:28:13+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 153 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 6451,
+        "body_paragraphs": 34,
+        "method_chars": 1890,
+        "method_paragraphs": 10,
+        "evaluation_chars": 153,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "評価説明量 153 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-080701f32c21--libfile_806d7ae5cde88191939842c8a2320b36--2026-2601.14888-reasoning-qat-low-bit-reasoning-llm-research-20261014-1230-scheduled-chat-30-r01-v2.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-080701f32c21--libfile_806d7ae5cde88191939842c8a2320b36--2026-2601.14888-reasoning-qat-low-bit-reasoning-llm-research-20261014-1230-scheduled-chat.json",
+      "worker_run_key": "20261014-1230-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2603.20843",
+      "title": "HiCI: Hierarchical Construction-Integration for Long-Context Attention",
+      "source_url": "https://arxiv.org/pdf/2603.20843",
+      "returned_at": "2026-10-14T08:28:14+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 425 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 6262,
+        "body_paragraphs": 35,
+        "method_chars": 1857,
+        "method_paragraphs": 11,
+        "evaluation_chars": 425,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "評価説明量 425 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-56b25364b336--libfile_2053c3d4802c8191b012db05908fc17d--2026-2603.20843-hici-hierarchical-long-context-attention-research-20261014-1130-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-56b25364b336--libfile_2053c3d4802c8191b012db05908fc17d--2026-2603.20843-hici-hierarchical-long-context-attention-research-20261014-1130-scheduled.json",
+      "worker_run_key": "20261014-1130-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2604.07812",
+      "title": "HAWK: Head Importance-Aware Visual Token Pruning in Multimodal Models",
+      "source_url": "https://arxiv.org/abs/2604.07812",
+      "returned_at": "2026-10-14T08:28:14+00:00",
+      "return_count": 3,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 0 < 500",
+        "長文定型文の再利用を検出: .survey/import-inbox/pending/research/retry-research-d21837a25782--libfile_ded311cd47cc8191a429e5b92de682d4--2026-2604.07812-hawk-head-importance-visual-token-pruning-research-20261014-1430-scheduled-chat-30-r01.md と 9 段落 / 1929文字 (100.0%) が完全一致"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 4686,
+        "body_paragraphs": 28,
+        "method_chars": 1331,
+        "method_paragraphs": 9,
+        "evaluation_chars": 0,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "評価説明量 0 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-55aa81267aef--libfile_e88c46fd91ac8191a266a67ec5133564--2026-2604.07812-hawk-head-importance-visual-token-pruning-research-20261014-1430-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-55aa81267aef--libfile_e88c46fd91ac8191a266a67ec5133564--2026-2604.07812-hawk-head-importance-visual-token-pruning-research-20261014-1430-schedule.json",
+      "worker_run_key": "20261014-1430-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2601.22362",
+      "title": "Understanding Efficiency: Quantization, Batching, and Serving Strategies in LLM Energy Use",
+      "source_url": "https://arxiv.org/html/2601.22362v1",
+      "returned_at": "2026-10-14T08:28:15+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 7024,
+        "body_paragraphs": 36,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 1219,
+        "limitation_chars": 959,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-849a4ea577b5--libfile_19deb6b02de08191b68cefa1e6129d8e--2026-2601.22362-llm-energy-quantization-batching-serving-research-20261013-2230-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-849a4ea577b5--libfile_19deb6b02de08191b68cefa1e6129d8e--2026-2601.22362-llm-energy-quantization-batching-serving-research-20261013-2230-scheduled.json",
+      "worker_run_key": "20261013-2230-scheduled-chat-30/r01"
     }
   ]
 }

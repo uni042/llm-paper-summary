@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "1592cab6efc8e3b75fd2b6557906b1920d6eb8a923b50c104918025a562824b5",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/retry-research-849a4ea577b5--libfile_19deb6b02de08191b68cefa1e6129d8e--2026-2601.22362-llm-energy-quantization-batching-serving-research-20261013-2230-scheduled-chat-30-r01.md",
+  "canonical_id": "arXiv:2601.22362",
+  "worker_completed_at": "2026-10-13T22:46:00+09:00",
+  "worker_run_key": "20261013-2230-scheduled-chat-30/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 7024,
+    "body_paragraphs": 36,
+    "method_chars": 0,
+    "method_paragraphs": 0,
+    "evaluation_chars": 1219,
+    "limitation_chars": 959,
+    "insufficiency_flags": [
+      "手法説明量 0 < 700"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 手法説明量 0 < 700"
+  ],
+  "processed_at": "2026-10-14T08:28:15+00:00"
+}
