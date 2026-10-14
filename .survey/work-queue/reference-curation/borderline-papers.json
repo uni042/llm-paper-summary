@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-14T15:46:34+00:00",
-  "record_count": 5156,
+  "updated_at": "2026-10-14T19:48:58+00:00",
+  "record_count": 5157,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -80165,6 +80165,19 @@
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "Mid-Harness: Scaling Actions Between Model and Harness for Terminal Agents"
+    },
+    "arXiv:2511.19480": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2511.19480",
+      "identity_tokens": [
+        "arXiv:2511.19480"
+      ],
+      "reason": "一次論文の第2～4章では、MoEルータの専門家選択質量を集計した寄与度で専門家を剪定し、能動学習を使って少数のラベルから性能を回復する経路を評価する。Mixtral-8x7B/8x22BのGLUE、WikiText-103、XSumにおける専門家削除後の品質と、専門家を絡めて剪定耐性を高める防御が主題。推論実行の専門家数削減と関係するが、論文自体が新しい推論圧縮技術の提案ではなくモデルの無断再利用・防御を研究目的と明言し、GPUメモリ、推論遅延、スループットの実測を主要評価としていないため、推論システムサーベイへの収録は境界的。",
+      "first_checked_at": "2026-10-14T19:48:58+00:00",
+      "last_checked_at": "2026-10-14T19:48:58+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Exploiting the Experts: Unauthorized Compression in MoE-LLMs"
     }
   }
 }
