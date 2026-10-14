@@ -1,8 +1,8 @@
 {
   "schema_version": 3,
-  "updated_at": "2026-10-14T11:29:06+00:00",
-  "last_run_key": "library-import-eaa35f0dba8a",
-  "last_round": "libimp-eaa35f0dba8a20a9-pre01",
+  "updated_at": "2026-10-14T11:59:10+00:00",
+  "last_run_key": "library-import-626795762a85",
+  "last_round": "libimp-626795762a853830-pre01",
   "paper_stock_zero_count": 3,
   "consecutive_empty_rounds": 0,
   "last_empty_round_reason": null,
@@ -10,40 +10,6 @@
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
   "history": [
-    {
-      "round_identity": "precheck:take-scheduled-chat-30-20260926T043136JST-r10",
-      "precheck_request_id": "take-scheduled-chat-30-20260926T043136JST-r10",
-      "run_key": "scheduled-chat-30-20260926T043136JST-4f31c6",
-      "round": "round-10",
-      "axis": "forward citations of LMCache enterprise-scale KV cache layer",
-      "query_summary": "固定取得窓14件を評価し、推論システムとして直接性の高い候補2件を採用。",
-      "provider": "semantic_scholar",
-      "source_url": "https://api.semanticscholar.org/graph/v1/paper/ARXIV:2510.09665/citations?fields=title,abstract,year,externalIds,url,publicationDate&limit=100",
-      "citation_direction": "forward",
-      "seed_canonical_id": null,
-      "preload_id": "preload-314e98bfafa9f8e903e5",
-      "candidate_count": 14,
-      "duplicate_filtered_count": 12,
-      "final_duplicate_filtered_count": 0,
-      "accepted_count": 2,
-      "accepted_canonical_ids": [],
-      "duplicate_canonical_ids": [],
-      "next_axis_hint": null,
-      "source_submission": "work-queue/submissions/discovery/take-scheduled-chat-30-20260926T043136JST-r10.json",
-      "source_submissions": [
-        "work-queue/submissions/discovery/take-scheduled-chat-30-20260926T043136JST-r10.json"
-      ],
-      "round_submission_indices": [
-        1
-      ],
-      "round_submission_count": 1,
-      "round_accounted": true,
-      "novel_candidate_count": 2,
-      "post_final_dedupe_count": 2,
-      "duplicate_ratio": 0.8571428571428571,
-      "final_duplicate_ratio": 0.0,
-      "round_complete": true
-    },
     {
       "round_identity": "precheck:take-scheduled-chat-30-20260926T043136JST-r12",
       "precheck_request_id": "take-scheduled-chat-30-20260926T043136JST-r12",
@@ -13595,6 +13561,40 @@
       "duplicate_ratio": 0.8333333333333334,
       "final_duplicate_ratio": 0.0,
       "round_complete": true
+    },
+    {
+      "round_identity": "precheck:libimp-626795762a853830-pre01",
+      "precheck_request_id": "libimp-626795762a853830-pre01",
+      "run_key": "library-import-626795762a85",
+      "round": "libimp-626795762a853830-pre01",
+      "axis": "library-candidate-intake",
+      "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。",
+      "provider": "candidate_id_lookup",
+      "source_url": "identifier://approved-public-apis",
+      "citation_direction": null,
+      "seed_canonical_id": null,
+      "preload_id": null,
+      "candidate_count": 2,
+      "duplicate_filtered_count": 0,
+      "final_duplicate_filtered_count": 0,
+      "accepted_count": 2,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": null,
+      "source_submission": "work-queue/submissions/libimp-626795762a853830-pre01-sub01.json",
+      "source_submissions": [
+        "work-queue/submissions/libimp-626795762a853830-pre01-sub01.json"
+      ],
+      "round_submission_indices": [
+        1
+      ],
+      "round_submission_count": 1,
+      "round_accounted": true,
+      "novel_candidate_count": 2,
+      "post_final_dedupe_count": 2,
+      "duplicate_ratio": 0.0,
+      "final_duplicate_ratio": 0.0,
+      "round_complete": true
     }
   ],
   "axes": {
@@ -21966,16 +21966,16 @@
       "next_axis_hint": "今回runで新着、storage/hierarchical memory、MoE、network/runtime、scheduling/kernel、agent/multimodal、speculative/length predictionを横断済み。次回は新着差分とforward/backward citationから再開する"
     },
     "library-candidate-intake": {
-      "last_run_key": "library-import-eaa35f0dba8a",
-      "rounds": 374,
-      "candidate_count": 2150,
+      "last_run_key": "library-import-626795762a85",
+      "rounds": 375,
+      "candidate_count": 2152,
       "duplicate_filtered_count": 1275,
-      "novel_candidate_count": 875,
+      "novel_candidate_count": 877,
       "final_duplicate_filtered_count": 5,
-      "post_final_dedupe_count": 870,
-      "accepted_count": 870,
-      "duplicate_ratio": 0.5930232558139535,
-      "final_duplicate_ratio": 0.005714285714285714,
+      "post_final_dedupe_count": 872,
+      "accepted_count": 872,
+      "duplicate_ratio": 0.5924721189591078,
+      "final_duplicate_ratio": 0.005701254275940707,
       "next_axis_hint": null
     },
     "explicit-library-accept": {
