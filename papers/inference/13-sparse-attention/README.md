@@ -31,7 +31,7 @@
 ### 注目：直近12か月・リポジトリ内で被引用（2025-11〜2026-10）
 
 - **2026-02 · [GLM-5: from Vibe Coding to Agentic Engineering](2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md)**  
-  実装：[✓](https://github.com/zai-org/GLM-5) ・ リポジトリ内被引用：28  
+  実装：[✓](https://github.com/zai-org/GLM-5) ・ リポジトリ内被引用：29  
   前世代GLM-4.5の3550億/320億活性と比較すると、総容量を増やしながら毎トークンの計算増加を限定する設計である。論文は長系列の注意計算で約1.5〜2倍の削減効果を述べるが、これは全システムの要求処理率が一律2倍になるという意味ではない。
 
 - **2026-03 · [IndexCache: Accelerating Sparse Attention via Cross-Layer Index Reuse](2026-2603.12201-indexcache-cross-layer-index-reuse.md)**  
@@ -175,11 +175,11 @@
 ### 2年前（2024-11〜2025-10）
 
 - **2025-02 · [Native Sparse Attention: Hardware-Aligned and Natively Trainable Sparse Attention](2025-2502.11089-native-sparse-attention-hardware-aligned-and-natively-trainable-sparse-a.md)**  
-  実装：✓ ・ リポジトリ内被引用：59  
+  実装：✓ ・ リポジトリ内被引用：60  
   Native Sparse 注意機構（NSA）は、長文脈Transformerの注意演算を、圧縮した長距離文脈、入力依存で選んだ重要ブロック、直近の局所窓という三つの枝に分ける疎注意方式である。注意カーネルは64K文脈で順伝播最大9.0倍、逆伝播最大6.0倍の実測高速化を報告する。
 
 - **2025-02 · [MoBA: Mixture of Block Attention for Long-Context LLMs](2025-2502.13189-moba.md)**  
-  実装：[✓](https://github.com/MoonshotAI/MoBA) ・ リポジトリ内被引用：46  
+  実装：[✓](https://github.com/MoonshotAI/MoBA) ・ リポジトリ内被引用：47  
   MoBAは各問い合わせが関連KVブロックを動的選択するMoE型疎注意で、1M文脈の品質を完全注意に近く保ちつつ注意層前処理を最大6.5倍高速化する。
 
 - **2025-02 · [FlexPrefill: A Context-Aware Sparse Attention Mechanism for Efficient Long-Sequence Inference](2025-2502.20766-flexprefill-a-context-aware-sparse-attention-mechanism-for-efficient-long-context-inference.md)**  
@@ -253,7 +253,7 @@
   注意ヘッドを3種の疎パターンへ割り当て、入力ごとの重要位置を動的推定して長文脈プリフィルを専用GPUカーネルで高速化する。
 
 - **2024-10 · [SeerAttention: Learning Intrinsic Sparse Attention in Your LLMs](2024-2410.13276-seerattention.md)**  
-  実装：[✓](https://github.com/microsoft/SeerAttention) ・ リポジトリ内被引用：32  
+  実装：[✓](https://github.com/microsoft/SeerAttention) ・ リポジトリ内被引用：33  
   Q/Kからブロック単位の重要度を学習する軽量ゲートとブロック疎FlashAttentionを組み合わせ、長文プリフィルの注意計算を動的に削減する。
 
 - **2024-06 · [Loki: Low-Rank Keys for Efficient Sparse Attention](2024-2406.02542-loki-low-rank-keys-for-efficient-sparse-attention.md)**  

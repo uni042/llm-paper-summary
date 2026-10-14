@@ -54,6 +54,10 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   実装：✓ ・ リポジトリ内被引用：1  
   タイル依存関係を記号形状のイベントテンソルとして表し、可変形状とMoEのデータ依存分岐を再コンパイルせず静的・動的メガカーネルへ変換するコンパイラ抽象。
 
+- **2026-03 · [Mamba-3: Improved Sequence Modeling using State Space Principles](2026-2603.15569-mamba-3-improved-sequence-modeling-using-state-space-principles.md)**  
+  実装：[✓](https://github.com/state-spaces/mamba) ・ リポジトリ内被引用：1  
+  Mamba-3は、状態空間モデル（State Space モデル、SSM）を使う系列モデルを学習時の並列性だけでなく推論時の実行効率から設計し直す研究である。
+
 - **2026-02 · [PackInfer: Compute- and I/O-Efficient Attention for Batched LLM Inference](2026-2602.06072-packinfer-batched-attention.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   異種長要求を負荷均衡した群へ詰め、共有接頭辞を考慮した連続KV配置と一体化することで、注意計算の無駄と入出力断片化を同時に削減する。
@@ -163,10 +167,6 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - **2026-03 · [Mixture-of-Depths Attention](2026-2603.15619-mixture-of-depths-attention.md)**  
   実装：[✓](https://github.com/hustvl/MoDA) ・ リポジトリ内被引用：0  
   Mixture-of-Depths 注意機構（MoDA）は、深い大規模言語モデル（Large Language モデル; LLM）で浅い層に形成された情報が、繰り返す残差更新により後段で薄まる問題を対象とする。
-
-- **2026-03 · [Mamba-3: Improved Sequence Modeling using State Space Principles](2026-2603.15569-mamba-3-improved-sequence-modeling-using-state-space-principles.md)**  
-  実装：[✓](https://github.com/state-spaces/mamba) ・ リポジトリ内被引用：0  
-  Mamba-3は、状態空間モデル（State Space モデル、SSM）を使う系列モデルを学習時の並列性だけでなく推論時の実行効率から設計し直す研究である。
 
 - **2026-03 · [Making LLMs Optimize Multi-Scenario CUDA Kernels Like Experts](2026-2603.07169-cudamaster-multi-scenario-kernel-optimization.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -389,6 +389,6 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 ### 9年前（2017-11〜2018-10）
 
 - **2018-05 · [Online normalizer calculation for softmax](2018-1805.02867-online-normalizer-calculation-for-softmax.md)**  
-  実装：[✓](https://github.com/NVIDIA/online-softmax) ・ リポジトリ内被引用：33  
+  実装：[✓](https://github.com/NVIDIA/online-softmax) ・ リポジトリ内被引用：34  
   本論文は、数値的に安全なソフトマックスの出力を変えずに、入力配列を読み直す回数を減らす「オンライン正規化子（online normalizer）」を提案する。著者らのTesla V100での単精度実装では、ソフトマックス単体で最大約1.3倍の高速化が報告される。
 <!-- survey:auto:end -->
