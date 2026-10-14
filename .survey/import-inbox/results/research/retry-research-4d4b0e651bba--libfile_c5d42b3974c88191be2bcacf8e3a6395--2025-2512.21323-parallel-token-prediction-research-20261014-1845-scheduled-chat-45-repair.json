@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "151588cad2d66346402031f3e871263a00202a54c31b9bbfa7194d5f18ac84f0",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/retry-research-4d4b0e651bba--libfile_c5d42b3974c88191be2bcacf8e3a6395--2025-2512.21323-parallel-token-prediction-research-20261014-1845-scheduled-chat-45-repair-r01.md",
+  "canonical_id": "arXiv:2512.21323",
+  "worker_completed_at": "2026-10-14T18:30:00+09:00",
+  "worker_run_key": "20261014-1830-scheduled-chat-30/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 4914,
+    "body_paragraphs": 29,
+    "method_chars": 1888,
+    "method_paragraphs": 12,
+    "evaluation_chars": 1024,
+    "limitation_chars": 587,
+    "insufficiency_flags": []
+  },
+  "failures": [
+    "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2025-2512.21323-parallel-token-prediction-for-language-models.md と 17 段落 / 3415文字 (100.0%) が完全一致"
+  ],
+  "processed_at": "2026-10-14T12:45:05+00:00"
+}

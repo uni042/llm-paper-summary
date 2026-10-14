@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-14T12:39:17+00:00",
+  "generated_at": "2026-10-14T12:45:09+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -1025,34 +1025,6 @@
       "worker_run_key": "20261014-1630-scheduled-chat-30/r01"
     },
     {
-      "canonical_id": "arXiv:2603.20843",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-14T10:16:25+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 425 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 6262,
-        "body_paragraphs": 35,
-        "method_chars": 1857,
-        "method_paragraphs": 11,
-        "evaluation_chars": 425,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "評価説明量 425 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_2053c3d4802c8191b012db05908fc17d--2026-2603.20843-hici-hierarchical-long-context-attention-research-20261014-1130-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_2053c3d4802c8191b012db05908fc17d--2026-2603.20843-hici-hierarchical-long-context-attention-research-20261014-1130-scheduled-chat-30-r01.json",
-      "worker_run_key": "20261014-1130-scheduled-chat-30/r01"
-    },
-    {
       "canonical_id": "arXiv:2403.14520",
       "title": null,
       "source_url": null,
@@ -1418,33 +1390,6 @@
       "worker_run_key": "20261014-0430-scheduled-chat-30/r01"
     },
     {
-      "canonical_id": "arXiv:2606.26762",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-14T11:13:42+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 441 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 8409,
-        "body_paragraphs": 44,
-        "method_chars": 2440,
-        "method_paragraphs": 13,
-        "evaluation_chars": 441,
-        "limitation_chars": 816,
-        "insufficiency_flags": [
-          "評価説明量 441 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_86f29951dfc081919a2a311b2f4e5ef5--2026-2606.26762-protokv-streaming-video-memory-research-20261014-1855-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_86f29951dfc081919a2a311b2f4e5ef5--2026-2606.26762-protokv-streaming-video-memory-research-20261014-1855-scheduled-chat-00-r01.json",
-      "worker_run_key": "20261014-1855-scheduled-chat-00/r01"
-    },
-    {
       "canonical_id": "arXiv:2512.21911",
       "title": null,
       "source_url": null,
@@ -1761,31 +1706,6 @@
       "worker_run_key": "20261014-0345-scheduled-chat-45/r01"
     },
     {
-      "canonical_id": "arXiv:2512.21323",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-14T11:36:03+00:00",
-      "return_count": 3,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2025-2512.21323-parallel-token-prediction-for-language-models.md と 17 段落 / 3415文字 (100.0%) が完全一致"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 4914,
-        "body_paragraphs": 29,
-        "method_chars": 1888,
-        "method_paragraphs": 12,
-        "evaluation_chars": 1024,
-        "limitation_chars": 587,
-        "insufficiency_flags": []
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_c5d42b3974c88191be2bcacf8e3a6395--2025-2512.21323-parallel-token-prediction-research-20261014-1845-scheduled-chat-45-repair-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_c5d42b3974c88191be2bcacf8e3a6395--2025-2512.21323-parallel-token-prediction-research-20261014-1845-scheduled-chat-45-repair-r01.json",
-      "worker_run_key": "20261014-1830-scheduled-chat-30/r01"
-    },
-    {
       "canonical_id": "DOI:10.18653/v1/2021.naacl-industry.15",
       "title": null,
       "source_url": null,
@@ -2050,31 +1970,6 @@
       "worker_run_key": "20261014-0200-scheduled-chat-00/r01"
     },
     {
-      "canonical_id": "arXiv:2604.17091",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-14T12:09:22+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2026-2604.17091-genericagent-a-token-efficient-self-evolving-llm-agent-via-contextual-in.md と 14 段落 / 3014文字 (100.0%) が完全一致"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 6476,
-        "body_paragraphs": 38,
-        "method_chars": 1967,
-        "method_paragraphs": 11,
-        "evaluation_chars": 1912,
-        "limitation_chars": 795,
-        "insufficiency_flags": []
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_e9e54c614abc81919a67387295abd7bf--2026-2604.17091-genericagent-context-density-research-20261014-0845-scheduled-chat-45-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_e9e54c614abc81919a67387295abd7bf--2026-2604.17091-genericagent-context-density-research-20261014-0845-scheduled-chat-45-r01.json",
-      "worker_run_key": "20261014-0845-scheduled-chat-45/r01"
-    },
-    {
       "canonical_id": "arXiv:2604.06515",
       "title": null,
       "source_url": null,
@@ -2125,31 +2020,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_f6f5072f2fc88191ba80a06ed2a80d96--2020-2006.04862-sparse-transformer-universal-approximation-research-20261014-1445-scheduled-chat-45-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_f6f5072f2fc88191ba80a06ed2a80d96--2020-2006.04862-sparse-transformer-universal-approximation-research-20261014-1445-scheduled-chat-45-r01.json",
       "worker_run_key": "20261014-1445-scheduled-chat-45/r01"
-    },
-    {
-      "canonical_id": "arXiv:2605.23071",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-14T12:10:16+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2026-2605.23071-the-efficiency-frontier-a-unified-framework-for-cost-performance-optimiz.md と 7 段落 / 1457文字 (100.0%) が完全一致"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 4931,
-        "body_paragraphs": 33,
-        "method_chars": 1631,
-        "method_paragraphs": 14,
-        "evaluation_chars": 976,
-        "limitation_chars": 738,
-        "insufficiency_flags": []
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_f824b04a65c88191bcd7691c8d0a2a08--2026-2605.23071-efficiency-frontier-context-cost-research-20261013-2230-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_f824b04a65c88191bcd7691c8d0a2a08--2026-2605.23071-efficiency-frontier-context-cost-research-20261013-2230-scheduled-chat-30-r01.json",
-      "worker_run_key": "20261013-2230-scheduled-chat-30/r01"
     },
     {
       "canonical_id": "arXiv:2604.22520",
@@ -2625,8 +2495,8 @@
     },
     {
       "canonical_id": "arXiv:2404.15159",
-      "title": "MixLoRA: Enhancing Large Language Models Fine-Tuning with LoRA-based Mixture of Experts",
-      "source_url": "https://arxiv.org/pdf/2404.15159",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-14T12:39:12+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-30",
@@ -2650,8 +2520,8 @@
     },
     {
       "canonical_id": "arXiv:2606.04438",
-      "title": "LoopMoE: Unifying Iterative Computation with Mixture-of-Experts for Language Modeling",
-      "source_url": "https://arxiv.org/html/2606.04438v2",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-14T12:39:13+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-00",
@@ -2677,8 +2547,8 @@
     },
     {
       "canonical_id": "arXiv:2605.15206",
-      "title": "AgentStop: Terminating Local AI Agents Early to Save Energy in Consumer Devices",
-      "source_url": "https://arxiv.org/pdf/2605.15206",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-14T12:39:14+00:00",
       "return_count": 4,
       "assigned_worker": "scheduled-chat-00",
@@ -2702,8 +2572,8 @@
     },
     {
       "canonical_id": "arXiv:2511.12309",
-      "title": "Optimal Self-Consistency for Efficient Reasoning with Large Language Models",
-      "source_url": "https://arxiv.org/html/2511.12309v2",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-14T12:39:15+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-30",
@@ -2727,8 +2597,8 @@
     },
     {
       "canonical_id": "arXiv:2511.19676",
-      "title": "INTERLACE: Interleaved Layer Pruning and Efficient Adaptation in Large Vision-Language Models",
-      "source_url": "https://arxiv.org/pdf/2511.19676",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-14T12:39:16+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-45",
@@ -2751,6 +2621,136 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-4c7d1830cd11--libfile_5dcd6e9eb4f88191b372182ed78ed81b--2025-2511.19676-interlace-vlm-layer-pruning-research-20261014-1800-scheduled-chat-00-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-4c7d1830cd11--libfile_5dcd6e9eb4f88191b372182ed78ed81b--2025-2511.19676-interlace-vlm-layer-pruning-research-20261014-1800-scheduled-chat-00-r01.json",
       "worker_run_key": "20261014-1800-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2512.21323",
+      "title": "Parallel Token Prediction for Language Models",
+      "source_url": "https://arxiv.org/abs/2512.21323",
+      "returned_at": "2026-10-14T12:45:05+00:00",
+      "return_count": 4,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2025-2512.21323-parallel-token-prediction-for-language-models.md と 17 段落 / 3415文字 (100.0%) が完全一致"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 4914,
+        "body_paragraphs": 29,
+        "method_chars": 1888,
+        "method_paragraphs": 12,
+        "evaluation_chars": 1024,
+        "limitation_chars": 587,
+        "insufficiency_flags": []
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-4d4b0e651bba--libfile_c5d42b3974c88191be2bcacf8e3a6395--2025-2512.21323-parallel-token-prediction-research-20261014-1845-scheduled-chat-45-repair-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-4d4b0e651bba--libfile_c5d42b3974c88191be2bcacf8e3a6395--2025-2512.21323-parallel-token-prediction-research-20261014-1845-scheduled-chat-45-repair.json",
+      "worker_run_key": "20261014-1830-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2606.26762",
+      "title": "ProtoKV: Streaming Video Understanding under Delayed Query with Summary-State Memory",
+      "source_url": "https://arxiv.org/pdf/2606.26762",
+      "returned_at": "2026-10-14T12:45:06+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 441 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 8409,
+        "body_paragraphs": 44,
+        "method_chars": 2440,
+        "method_paragraphs": 13,
+        "evaluation_chars": 441,
+        "limitation_chars": 816,
+        "insufficiency_flags": [
+          "評価説明量 441 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-5228937d075e--libfile_86f29951dfc081919a2a311b2f4e5ef5--2026-2606.26762-protokv-streaming-video-memory-research-20261014-1855-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-5228937d075e--libfile_86f29951dfc081919a2a311b2f4e5ef5--2026-2606.26762-protokv-streaming-video-memory-research-20261014-1855-scheduled-chat-00-r.json",
+      "worker_run_key": "20261014-1855-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2603.20843",
+      "title": "HiCI: Hierarchical Construction-Integration for Long-Context Attention",
+      "source_url": "https://arxiv.org/pdf/2603.20843",
+      "returned_at": "2026-10-14T12:45:07+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 425 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 6262,
+        "body_paragraphs": 35,
+        "method_chars": 1857,
+        "method_paragraphs": 11,
+        "evaluation_chars": 425,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "評価説明量 425 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-56b25364b336--libfile_2053c3d4802c8191b012db05908fc17d--2026-2603.20843-hici-hierarchical-long-context-attention-research-20261014-1130-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-56b25364b336--libfile_2053c3d4802c8191b012db05908fc17d--2026-2603.20843-hici-hierarchical-long-context-attention-research-20261014-1130-scheduled.json",
+      "worker_run_key": "20261014-1130-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2605.23071",
+      "title": "The Efficiency Frontier: A Unified Framework for Cost-Performance Optimization in LLM Context Management",
+      "source_url": "https://arxiv.org/html/2605.23071v2",
+      "returned_at": "2026-10-14T12:45:08+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2026-2605.23071-the-efficiency-frontier-a-unified-framework-for-cost-performance-optimiz.md と 7 段落 / 1457文字 (100.0%) が完全一致"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 4931,
+        "body_paragraphs": 33,
+        "method_chars": 1631,
+        "method_paragraphs": 14,
+        "evaluation_chars": 976,
+        "limitation_chars": 738,
+        "insufficiency_flags": []
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-5ef150541bda--libfile_f824b04a65c88191bcd7691c8d0a2a08--2026-2605.23071-efficiency-frontier-context-cost-research-20261013-2230-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-5ef150541bda--libfile_f824b04a65c88191bcd7691c8d0a2a08--2026-2605.23071-efficiency-frontier-context-cost-research-20261013-2230-scheduled-chat-30.json",
+      "worker_run_key": "20261013-2230-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2604.17091",
+      "title": "GenericAgent: A Token-Efficient Self-Evolving LLM Agent via Contextual Information Density Maximization (V1.0)",
+      "source_url": "https://arxiv.org/html/2604.17091v1",
+      "returned_at": "2026-10-14T12:45:09+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2026-2604.17091-genericagent-a-token-efficient-self-evolving-llm-agent-via-contextual-in.md と 14 段落 / 3014文字 (100.0%) が完全一致"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 6476,
+        "body_paragraphs": 38,
+        "method_chars": 1967,
+        "method_paragraphs": 11,
+        "evaluation_chars": 1912,
+        "limitation_chars": 795,
+        "insufficiency_flags": []
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-5f9e24e21ce2--libfile_e9e54c614abc81919a67387295abd7bf--2026-2604.17091-genericagent-context-density-research-20261014-0845-scheduled-chat-45-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-5f9e24e21ce2--libfile_e9e54c614abc81919a67387295abd7bf--2026-2604.17091-genericagent-context-density-research-20261014-0845-scheduled-chat-45-r01.json",
+      "worker_run_key": "20261014-0845-scheduled-chat-45/r01"
     }
   ]
 }
