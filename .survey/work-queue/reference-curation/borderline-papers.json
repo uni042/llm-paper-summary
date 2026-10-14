@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-14T08:29:21+00:00",
-  "record_count": 5094,
+  "updated_at": "2026-10-14T09:44:19+00:00",
+  "record_count": 5096,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -78752,6 +78752,32 @@
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "Communication Bottleneck Analysis for Distributed MoE Training"
+    },
+    "arXiv:2605.08292": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.08292",
+      "identity_tokens": [
+        "arXiv:2605.08292"
+      ],
+      "reason": "一次要旨では専門家グループ間の負荷均衡とグループ内の専門化を同時に促すルーティング学習目的を提案し、58Bトークン事前学習で困惑度5.6%低下・専門家均衡40%改善と報告する。MoE構造と関係は深いが、推論時の通信・専門家キャッシュ・サービング効率の改善を一次要旨から確認できず、現行の推論システム収録には境界的。",
+      "first_checked_at": "2026-10-14T09:44:17+00:00",
+      "last_checked_at": "2026-10-14T09:44:17+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Hierarchical Mixture-of-Experts with Two-Stage Optimization"
+    },
+    "arXiv:2605.06850": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.06850",
+      "identity_tokens": [
+        "arXiv:2605.06850"
+      ],
+      "reason": "一次書誌と要旨はRL後学習のロールアウト中のKV圧縮に伴う方策ずれを扱い、システムメモリとの関連がある。しかし著者が2026-09-16に実験結果の誤りを理由として論文を取り下げたため、定量結果を信頼できる収録成果として扱えない。原著v2はwithdrawnでPDFも提供されない。",
+      "first_checked_at": "2026-10-14T09:44:19+00:00",
+      "last_checked_at": "2026-10-14T09:44:19+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "How to Compress KV Cache in RL Post-Training? Shadow Mask Distillation for Memory-Efficient Alignment"
     }
   }
 }

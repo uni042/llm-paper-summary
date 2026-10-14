@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-9c6f741c5681174d-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2605.08292",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2605.08292",
+    "identity_tokens": [
+      "arXiv:2605.08292"
+    ],
+    "reason": "一次要旨では専門家グループ間の負荷均衡とグループ内の専門化を同時に促すルーティング学習目的を提案し、58Bトークン事前学習で困惑度5.6%低下・専門家均衡40%改善と報告する。MoE構造と関係は深いが、推論時の通信・専門家キャッシュ・サービング効率の改善を一次要旨から確認できず、現行の推論システム収録には境界的。",
+    "first_checked_at": "2026-10-14T09:44:17+00:00",
+    "last_checked_at": "2026-10-14T09:44:17+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Hierarchical Mixture-of-Experts with Two-Stage Optimization"
+  },
+  "processed_at": "2026-10-14T09:44:18+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-9c6f741c5681",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
