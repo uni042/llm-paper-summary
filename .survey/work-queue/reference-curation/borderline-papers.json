@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-14T03:51:07+00:00",
-  "record_count": 5015,
+  "updated_at": "2026-10-14T03:52:17+00:00",
+  "record_count": 5016,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -77639,6 +77639,24 @@
       ],
       "borderline_recheck_count": 0,
       "title": "FuMi: A Runtime Fuzz-based Machine Learning Precision Measurement and Testing Framework"
+    },
+    "arXiv:2610.10778": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.10778",
+      "identity_tokens": [
+        "arXiv:2610.10778"
+      ],
+      "reason": "MemoWM studies how learned world models change agent memory needs; memory use may relate to context efficiency, but the abstract does not establish LLM serving or inference-memory reduction.",
+      "first_checked_at": "2026-10-14T03:52:17+00:00",
+      "last_checked_at": "2026-10-14T03:52:17+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2502.12110-a-mem-agentic-memory-for-llm-agents.md",
+        "papers/inference/99-other-inference-systems/2025-2506.15841-mem1-learning-to-synergize-memory-and-reasoning-for-efficient-long-horiz.md",
+        "papers/inference/99-other-inference-systems/2026-2601.02553-simplemem-efficient-lifelong-memory-for-llm-agents.md",
+        "papers/inference/99-other-inference-systems/2026-2606.06448-agent-memory-characterization-and-system-implications-of-stateful-long-h.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "MemoWM: How World Models Change What Agents Need to Remember"
     }
   }
 }
