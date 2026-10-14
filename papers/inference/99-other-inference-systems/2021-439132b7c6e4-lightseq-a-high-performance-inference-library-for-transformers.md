@@ -27,6 +27,10 @@ last_checked: '2026-10-13'
 reference_main_sha: a5db0135176c3affec355c8b9b5194bf74fa6123
 last_audited: null
 audit_version: 0
+references: []
+references_checked_at: '2026-10-14'
+references_source: primary-pdf-reference-section
+references_total: 1
 ---
 
 # LightSeq：Transformer推論を演算融合・候補選択・メモリ再利用で高速化する
