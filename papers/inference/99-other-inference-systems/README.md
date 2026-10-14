@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（572本）
+## 自動生成の論文一覧（575本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -916,9 +916,17 @@
   実装：[✓](https://github.com/xidulu/reasoning_risk_control/) ・ リポジトリ内被引用：0  
   Conformal Thinkingは、推論を伴う大規模言語モデル（reasoning LLM）の思考トークンを、精度への影響を制御しながら減らす停止規則を提案する。
 
+- **2026-02 · [AgentArk: Distilling Multi-Agent Intelligence into a Single LLM Agent](2026-2602.03955-agentark-distilling-multi-agent-intelligence-into-a-single-llm-agent.md)**  
+  実装：[✓](https://github.com/AIFrontierLab/AgentArk) ・ リポジトリ内被引用：0  
+  複数のLLMエージェントが同じ問題を検討し、相互に批判・訂正して最終回答を合意する方式は、単独モデルより複雑な推論を改善できることがある。Qwen3、Gemma3、Llama3系を含む120の実験で、単一モデルに比べた推論品質の改善と、学習信号の種類・学生モデルの規模・教師エージェント数の影響を分析する。
+
 - **2026-01 · [Why Attention Patterns Exist: A Unifying Temporal Perspective Analysis](2026-2601.21709-why-attention-patterns-exist-a-unifying-temporal-perspective-analysis.md)**  
   実装：[✓](https://github.com/MIRALab-USTC/LLM-TAPPA) ・ リポジトリ内被引用：0  
   KVキャッシュ圧縮では検索型の不規則な注意が多い、自己類似度の低い層に多めのKV予算を配る。
+
+- **2026-01 · [VTC-R1: Vision-Text Compression for Efficient Long-Context Reasoning](2026-2601.22069-vtc-r1-vision-text-compression-for-efficient-long-context-reasoning.md)**  
+  実装：[✓](https://github.com/w-yibo/VTC-R1) ・ リポジトリ内被引用：0  
+  本研究は、長い思考履歴を文字列として保持し続ける代わりに、既に生成した推論を画像へ描画して次の推論段階へ渡す視覚・テキスト圧縮（Vision-Text Compression; VTC）を提案する。約1億8100万のテキストトークンに相当する履歴を約5400万の視覚トークンとして表し、集計上3.4倍のトークン圧縮を得る。
 
 - **2026-01 · [Routing with Generated Data: Annotation-Free LLM Skill Estimation and Expert Selection](2026-2601.09692-routing-with-generated-data-annotation-free-llm-skill-estimation-and-exp.md)**  
   実装：[✓](https://github.com/tianyiniu/RoutingGenData) ・ リポジトリ内被引用：0  
@@ -963,6 +971,10 @@
 - **2026-01 · [ConfSpec: Efficient Step-Level Speculative Reasoning via Confidence-Gated Verification](2026-2602.18447-confspec-efficient-step-level-speculative-reasoning-via-confidence-gated.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   小型の草稿モデルが作った途中の推論を大型の対象モデルで検証する既存方式は、単語列が異なっていても意味が同じである推論を扱える一方、すべてのステップを高価な検証器へ送ると加速効果が弱くなる。論文の表2では、DeepSeek-R1-Distill 1.5B/32B構成で5課題平均の高速化が1.68倍、平均正答率が対象モデル81.99%に対して81.51%である。
+
+- **2025-12 · [XLM: A Python package for non-autoregressive language models](2025-2512.17065-xlm-a-python-package-for-non-autoregressive-language-models.md)**  
+  実装：[✓](https://github.com/dhruvdcoder/xlm-core) ・ リポジトリ内被引用：0  
+  これに対して、非自己回帰言語モデルにはマスク拡散、挿入型生成、編集型生成など複数の方式がある。
 
 - **2025-12 · [Trellis: Learning to Compress Key-Value Memory in Attention Models](2025-2512.23852-trellis-learning-to-compress-key-value-memory-in-attention-models.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
