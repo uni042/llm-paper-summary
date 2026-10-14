@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-c6e7e023987e8615-border-008",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1109/qpain69676.2026.11545654",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1109/qpain69676.2026.11545654",
+    "identity_tokens": [
+      "DOI:10.1109/qpain69676.2026.11545654",
+      "SemanticScholar:6b01c940ef091ab0037a0cd246bb5601c2f03eaa"
+    ],
+    "reason": "The DOI resolver/official IEEE publisher abstract could not be retrieved; available search result was third-party-only, so the imported title/abstract was not treated as primary evidence.",
+    "first_checked_at": "2026-10-14T14:34:45+00:00",
+    "last_checked_at": "2026-10-14T14:34:45+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2021-2110.02861-8-bit-optimizers-via-block-wise-quantization.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Automated Bengali Physics MCQ Solver: A Large Language Model Approach with Chain-of-Thought Reasoning"
+  },
+  "processed_at": "2026-10-14T14:34:45+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-c6e7e023987e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

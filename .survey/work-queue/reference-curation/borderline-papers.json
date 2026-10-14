@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-14T13:49:00+00:00",
-  "record_count": 5134,
+  "updated_at": "2026-10-14T14:34:51+00:00",
+  "record_count": 5154,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -79806,6 +79806,326 @@
       ],
       "borderline_recheck_count": 0,
       "title": "ProtHyena: A fast and efficient foundation protein language model at single amino acid Resolution"
+    },
+    "arXiv:2603.14228": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2603.14228",
+      "identity_tokens": [
+        "SemanticScholar:6a34fbd59a656b2b3bb2a35cfa9b4bb235046ce1",
+        "arXiv:2603.14228"
+      ],
+      "reason": "StructLoRA improves adaptation quality with training-only modules and explicitly reports zero additional inference cost; it is a training/adaptation method rather than an inference-efficiency contribution.",
+      "first_checked_at": "2026-10-14T14:34:36+00:00",
+      "last_checked_at": "2026-10-14T14:34:36+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2026-2604.02967-foe-forest-of-errors-makes-the-first-solution-the-best-in-large-reasonin.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Not All Directions Matter: Towards Structured and Task-Aware Low-Rank Model Adaptation"
+    },
+    "arXiv:2604.06155": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2604.06155",
+      "identity_tokens": [
+        "SemanticScholar:6ecc07503764f5e65a6cefb9ebac9bdb0c3b4ace",
+        "arXiv:2604.06155"
+      ],
+      "reason": "The paper studies latent world-model representation consistency with multi-token prediction and synthetic/ride data; the abstract does not connect the method to faster speculative inference or serving efficiency.",
+      "first_checked_at": "2026-10-14T14:34:36+00:00",
+      "last_checked_at": "2026-10-14T14:34:36+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2404.19737-better-faster-large-language-models-via-multi-token-prediction.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Toward Consistent World Models with Multi-Token Prediction and Latent Semantic Enhancement"
+    },
+    "arXiv:2602.23901": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2602.23901",
+      "identity_tokens": [
+        "SemanticScholar:b426f00bd86a8cedf80d1b1eead01a4c0d181c8b",
+        "arXiv:2602.23901"
+      ],
+      "reason": "Asynchronous inference and real-time updates target robotic VLA policy responsiveness, but the work is an application-specific manipulation policy and does not establish LLM serving gains.",
+      "first_checked_at": "2026-10-14T14:34:37+00:00",
+      "last_checked_at": "2026-10-14T14:34:37+00:00",
+      "linked_from": [
+        "papers/inference/15-inference-simulation-emulation/2024-2409.12514-tinyvla-towards-fast-data-efficient-vision-language-action-models-for-ro.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "ABPolicy: Asynchronous B-Spline Flow Policy for Real-Time and Smooth Robotic Manipulation"
+    },
+    "DOI:10.1109/icca66035.2025.11430823": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/icca66035.2025.11430823",
+      "identity_tokens": [
+        "DOI:10.1109/icca66035.2025.11430823",
+        "SemanticScholar:caf53e1167d23f444409818d9c7a8c98c585067f"
+      ],
+      "reason": "The DOI resolver/official IEEE publisher page did not yield a verifiable abstract in this run; only third-party indexed material was found, which was not used as primary evidence.",
+      "first_checked_at": "2026-10-14T14:34:37+00:00",
+      "last_checked_at": "2026-10-14T14:34:37+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2402.13598-user-llm-efficient-llm-contextualization-with-user-embeddings.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "ACARIS: Attempting to Improve Conversational AI and Human Social Skills using User Embeddings"
+    },
+    "arXiv:2603.21728": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2603.21728",
+      "identity_tokens": [
+        "SemanticScholar:308b96b76562c802fc698086f343d812327e02da",
+        "arXiv:2603.21728"
+      ],
+      "reason": "EvoIdeator trains a Qwen3-4B policy for scientific ideation with feedback; the abstract reports quality/generalization rather than serving or inference efficiency.",
+      "first_checked_at": "2026-10-14T14:34:37+00:00",
+      "last_checked_at": "2026-10-14T14:34:37+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2511.02805-memsearcher-training-llms-to-reason-search-and-manage-memory-via-end-to-.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "EvoIdeator: Evolving Scientific Ideas through Checklist-Grounded Reinforcement Learning"
+    },
+    "arXiv:2511.06863": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2511.06863",
+      "identity_tokens": [
+        "SemanticScholar:74cee765655f559191c3222bc9fe63b31295d3d3",
+        "arXiv:2511.06863"
+      ],
+      "reason": "The work improves visual-token quantization/codebook utilization for generative models; compressed visual tokens may affect inference cost, but the abstract reports representation quality rather than measured LLM/runtime efficiency.",
+      "first_checked_at": "2026-10-14T14:34:38+00:00",
+      "last_checked_at": "2026-10-14T14:34:38+00:00",
+      "linked_from": [
+        "papers/inference/06-moe-quantization-compression/2025-2505.03804-moequant-enhancing-quantization-for-mixture-of-experts-large-language-models-via.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "VAEVQ: Enhancing Discrete Visual Tokenization through Variational Modeling"
+    },
+    "arXiv:2605.08712": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.08712",
+      "identity_tokens": [
+        "SemanticScholar:fa78cba65c28d363f65362b9d72a589059609ac3",
+        "arXiv:2605.08712"
+      ],
+      "reason": "Hierarchical sparse routing and budgeted inference reduce latency for surgical video generation, but this is a specialized visual-generation application rather than LLM inference/serving.",
+      "first_checked_at": "2026-10-14T14:34:38+00:00",
+      "last_checked_at": "2026-10-14T14:34:38+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2202.09368-expert-choice-routing.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "From Articulated Kinematics to Routed Visual Control for Action-Conditioned Surgical Video Generation"
+    },
+    "arXiv:2601.21933": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2601.21933",
+      "identity_tokens": [
+        "SemanticScholar:55a8ee88e6d1a3d524e51cde30692072dd802100",
+        "arXiv:2601.21933"
+      ],
+      "reason": "FeatJND guides token-wise dynamic quantization of deep visual features under constrained resources; it is a vision-feature compression technique with no stated LLM inference/serving evaluation.",
+      "first_checked_at": "2026-10-14T14:34:38+00:00",
+      "last_checked_at": "2026-10-14T14:34:38+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2024-2402.04291-billm-pushing-the-limit-of-post-training-quantization-for-llms.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Just Noticeable Difference Modeling for Deep Visual Features"
+    },
+    "arXiv:2606.18890": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.18890",
+      "identity_tokens": [
+        "SemanticScholar:eb7e7579704a16188df5f05f10b44f8ef93bbf90",
+        "arXiv:2606.18890"
+      ],
+      "reason": "SGCD improves GUI-agent behavior via continuation distillation and expert trajectories; the described contribution is training supervision and success quality, without an inference-efficiency result.",
+      "first_checked_at": "2026-10-14T14:34:44+00:00",
+      "last_checked_at": "2026-10-14T14:34:44+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2411.17465-showui-one-vision-language-action-model-for-gui-visual-agent.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Skill-Guided Continuation Distillation for GUI Agents"
+    },
+    "arXiv:2603.00500": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2603.00500",
+      "identity_tokens": [
+        "SemanticScholar:ddab822589cc9c9cfa223844e108cc3fa52e8899",
+        "arXiv:2603.00500"
+      ],
+      "reason": "The MLLM is one component of a zero-shot robotic manipulation application using retrieval and 3D pose refinement; the abstract gives task success gains, not inference-system efficiency.",
+      "first_checked_at": "2026-10-14T14:34:44+00:00",
+      "last_checked_at": "2026-10-14T14:34:44+00:00",
+      "linked_from": [
+        "papers/inference/15-inference-simulation-emulation/2024-2411.02359-deer-vla-dynamic-inference-of-multimodal-large-language-models-for-effic.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Zero-Shot Robotic Manipulation via 3D Gaussian Splatting-Enhanced Multimodal Retrieval-Augmented Generation"
+    },
+    "arXiv:2607.21981": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2607.21981",
+      "identity_tokens": [
+        "SemanticScholar:af96e461e702d1d5161c16561dd4680c2eb7e948",
+        "arXiv:2607.21981"
+      ],
+      "reason": "J-CoT uses a compact vocabulary-indexed latent interface for recurrent reasoning, but the abstract reports benchmark quality under matched settings without demonstrating reduced inference compute or latency.",
+      "first_checked_at": "2026-10-14T14:34:44+00:00",
+      "last_checked_at": "2026-10-14T14:34:44+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2502.21074-codi-compressing-chain-of-thought-into-continuous-space-via-self-distill.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "J-CoT: Chain-of-Thought in J-Space"
+    },
+    "arXiv:2606.22276": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.22276",
+      "identity_tokens": [
+        "SemanticScholar:f1f49f1dc0c4b9826484e86a777e44f353203a8a",
+        "arXiv:2606.22276"
+      ],
+      "reason": "This is audio-QA data curation and fine-tuning for accuracy; its train-only model changes do not establish inference-system efficiency.",
+      "first_checked_at": "2026-10-14T14:34:45+00:00",
+      "last_checked_at": "2026-10-14T14:34:45+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2509.17765-qwen3-omni-technical-report.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Learning from Audio-Dependency Errors: Data Curation Strategies Based on Model Confusion Patterns in Audio Question Answering"
+    },
+    "DOI:10.1109/qpain69676.2026.11545654": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/qpain69676.2026.11545654",
+      "identity_tokens": [
+        "DOI:10.1109/qpain69676.2026.11545654",
+        "SemanticScholar:6b01c940ef091ab0037a0cd246bb5601c2f03eaa"
+      ],
+      "reason": "The DOI resolver/official IEEE publisher abstract could not be retrieved; available search result was third-party-only, so the imported title/abstract was not treated as primary evidence.",
+      "first_checked_at": "2026-10-14T14:34:45+00:00",
+      "last_checked_at": "2026-10-14T14:34:45+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2110.02861-8-bit-optimizers-via-block-wise-quantization.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Automated Bengali Physics MCQ Solver: A Large Language Model Approach with Chain-of-Thought Reasoning"
+    },
+    "DOI:10.3390/electronics15051058": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.3390/electronics15051058",
+      "identity_tokens": [
+        "DOI:10.3390/electronics15051058",
+        "SemanticScholar:59ef5fe2e9453001e680fef2f827e10cd404e2f7"
+      ],
+      "reason": "The verified MDPI abstract describes ReWriteGen as a coordinated RAG query-rewriting, retrieval, and generation framework evaluated for QA. The abstract does not establish lower inference latency, higher serving throughput, or reduced serving cost, so its system-efficiency relevance remains unresolved.",
+      "first_checked_at": "2026-10-14T14:34:45+00:00",
+      "last_checked_at": "2026-10-14T14:34:45+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2023-2311.08252-rest-retrieval-speculative-decoding.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "RewriteGen: Autonomous Query Optimization for Retrieval-Augmented Large Language Models via Reinforcement Learning"
+    },
+    "arXiv:2602.00710": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2602.00710",
+      "identity_tokens": [
+        "SemanticScholar:4f766021efa4bc09e68f39f66e99cbc7767db27c",
+        "arXiv:2602.00710"
+      ],
+      "reason": "RepCore reduces the number of LLM benchmark items needed for performance extrapolation using aligned hidden-state representations; this improves evaluation cost, not deployed inference/serving cost, so retain only as a possible benchmark-efficiency connection.",
+      "first_checked_at": "2026-10-14T14:34:49+00:00",
+      "last_checked_at": "2026-10-14T14:34:49+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2504.05419-reasoning-models-know-when-they-re-right-probing-hidden-states-for-self-.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Learning More from Less: Unlocking Internal Representations for Benchmark Compression"
+    },
+    "arXiv:2601.03493": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2601.03493",
+      "identity_tokens": [
+        "SemanticScholar:72841ad0c57603bfdb2430818f6546f7b97fb6d6",
+        "arXiv:2601.03493"
+      ],
+      "reason": "The method selects submodular evaluation subsets for automatic prompt optimization; any efficiency gain is in the optimizer/evaluation loop, while LLM inference or serving cost is not established.",
+      "first_checked_at": "2026-10-14T14:34:49+00:00",
+      "last_checked_at": "2026-10-14T14:34:49+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Submodular Evaluation Subset Selection in Automatic Prompt Optimization"
+    },
+    "DOI:10.1007/s00371-025-04264-2": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1007/s00371-025-04264-2",
+      "identity_tokens": [
+        "DOI:10.1007/s00371-025-04264-2",
+        "SemanticScholar:afb09c830f622cedb6871f0aef298869e88a1364"
+      ],
+      "reason": "The official Springer abstract describes MambaStereo for stereo-depth matching and says partial 3D convolutions reduce computation while maintaining vision accuracy. This is a concrete but task-specific stereo-vision optimization; a transferable inference-system contribution beyond the linked Mamba lineage is not established, so retain as borderline.",
+      "first_checked_at": "2026-10-14T14:34:50+00:00",
+      "last_checked_at": "2026-10-14T14:34:50+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "MambaStereo: enhancing stereo matching accuracy in ill-posed regions via Mamba-based cost volume"
+    },
+    "arXiv:2512.15206": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2512.15206",
+      "identity_tokens": [
+        "SemanticScholar:31561c0c085f583b0508b68386c4c1cd5fec0ff7",
+        "arXiv:2512.15206"
+      ],
+      "reason": "Chorus adds an adaptive cache and lightweight prediction head for on-device model inference and reports latency comparable to sensor-only deployment, but its workloads are sensing/speech models rather than LLMs; retain for edge-inference relevance review.",
+      "first_checked_at": "2026-10-14T14:34:50+00:00",
+      "last_checked_at": "2026-10-14T14:34:50+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2017-1701.06538-outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Chorus: Harmonizing Context and Sensing Signals for Data-Free Model Customization in IoT"
+    },
+    "DOI:10.1109/bibm66473.2025.11357215": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/bibm66473.2025.11357215",
+      "identity_tokens": [
+        "DOI:10.1109/bibm66473.2025.11357215",
+        "SemanticScholar:42830d4a51811570494977771f25e72bbe3916d6"
+      ],
+      "reason": "The official IEEE publisher abstract was not retrieved in this run; the DOI destination did not return a readable primary abstract.",
+      "first_checked_at": "2026-10-14T14:34:50+00:00",
+      "last_checked_at": "2026-10-14T14:34:50+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Enhancing Medical Image Segmentation with Fvm-Unet: a Hybrid Cnn-Mamba Approach"
+    },
+    "DOI:10.1109/icvisp68610.2025.11451687": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/icvisp68610.2025.11451687",
+      "identity_tokens": [
+        "DOI:10.1109/icvisp68610.2025.11451687",
+        "SemanticScholar:77547c87a94230de85536f9b9b84e6ed4242a33b"
+      ],
+      "reason": "The official IEEE publisher abstract was not retrieved in this run; the DOI destination did not return a readable primary abstract.",
+      "first_checked_at": "2026-10-14T14:34:51+00:00",
+      "last_checked_at": "2026-10-14T14:34:51+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "FlashF5-MaViT: A Fast Five Frequency Mamba with CDC–FastViT Architecture for Deepfake Detection"
     }
   }
 }

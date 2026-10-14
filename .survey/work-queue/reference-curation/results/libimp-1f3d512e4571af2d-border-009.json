@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-1f3d512e4571af2d-border-009",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2603.21728",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2603.21728",
+    "identity_tokens": [
+      "SemanticScholar:308b96b76562c802fc698086f343d812327e02da",
+      "arXiv:2603.21728"
+    ],
+    "reason": "EvoIdeator trains a Qwen3-4B policy for scientific ideation with feedback; the abstract reports quality/generalization rather than serving or inference efficiency.",
+    "first_checked_at": "2026-10-14T14:34:37+00:00",
+    "last_checked_at": "2026-10-14T14:34:37+00:00",
+    "linked_from": [
+      "papers/inference/19-inference-evaluation-benchmarking/2025-2511.02805-memsearcher-training-llms-to-reason-search-and-manage-memory-via-end-to-.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "EvoIdeator: Evolving Scientific Ideas through Checklist-Grounded Reinforcement Learning"
+  },
+  "processed_at": "2026-10-14T14:34:38+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-1f3d512e4571",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-1f3d512e4571af2d-unrel-012",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2310.00120",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2310.00120",
+    "identity_tokens": [
+      "SemanticScholar:3a6cbe04cc049d808db5cb49d15d6c0273170a79",
+      "arXiv:2310.00120"
+    ],
+    "reason": "MG-TFNO compresses Fourier neural operators for high-resolution PDE simulation; its target is PDE operator learning rather than LLM inference or serving.",
+    "first_checked_at": "2026-10-14T14:34:41+00:00",
+    "last_checked_at": "2026-10-14T14:34:41+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2020-2006.16362-multi-head-attention-collaborate-instead-of-concatenate.md"
+    ],
+    "title": "Multi-Grid Tensorized Fourier Neural Operator for High-Resolution PDEs"
+  },
+  "processed_at": "2026-10-14T14:34:41+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-1f3d512e4571",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

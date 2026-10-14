@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-c6e7e023987e8615-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2603.00500",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2603.00500",
+    "identity_tokens": [
+      "SemanticScholar:ddab822589cc9c9cfa223844e108cc3fa52e8899",
+      "arXiv:2603.00500"
+    ],
+    "reason": "The MLLM is one component of a zero-shot robotic manipulation application using retrieval and 3D pose refinement; the abstract gives task success gains, not inference-system efficiency.",
+    "first_checked_at": "2026-10-14T14:34:44+00:00",
+    "last_checked_at": "2026-10-14T14:34:44+00:00",
+    "linked_from": [
+      "papers/inference/15-inference-simulation-emulation/2024-2411.02359-deer-vla-dynamic-inference-of-multimodal-large-language-models-for-effic.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Zero-Shot Robotic Manipulation via 3D Gaussian Splatting-Enhanced Multimodal Retrieval-Augmented Generation"
+  },
+  "processed_at": "2026-10-14T14:34:44+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-c6e7e023987e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

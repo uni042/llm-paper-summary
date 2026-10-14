@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-1f3d512e4571af2d-unrel-008",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2603.06854",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2603.06854",
+    "identity_tokens": [
+      "SemanticScholar:c5b07cfe05620db68cbc82fd742611133a0b4079",
+      "arXiv:2603.06854"
+    ],
+    "reason": "Audio-specialist heads steer audio-language model outputs to improve speech understanding accuracy; the contribution is modality grounding/quality, not inference efficiency.",
+    "first_checked_at": "2026-10-14T14:34:40+00:00",
+    "last_checked_at": "2026-10-14T14:34:40+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2019-1905.09418-analyzing-multi-head-self-attention-specialized-heads-do-the-heavy-lifti.md"
+    ],
+    "title": "Are Audio-Language Models Listening? Audio-Specialist Heads for Adaptive Audio Steering"
+  },
+  "processed_at": "2026-10-14T14:34:40+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-1f3d512e4571",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

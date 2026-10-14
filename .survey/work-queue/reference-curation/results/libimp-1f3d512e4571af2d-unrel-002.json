@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-1f3d512e4571af2d-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2306.17670",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2306.17670",
+    "identity_tokens": [
+      "SemanticScholar:127bb6014bb1f59f6381498d17e24dea62d2810e",
+      "arXiv:2306.17670"
+    ],
+    "reason": "The learned synaptic delays improve spiking-neural-network speech/time-series recognition; the target is a non-LLM SNN model and its training algorithm, not LLM inference or serving.",
+    "first_checked_at": "2026-10-14T14:34:39+00:00",
+    "last_checked_at": "2026-10-14T14:34:39+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2302.13939-spikegpt-generative-pre-trained-language-model-with-spiking-neural-netwo.md"
+    ],
+    "title": "Learning Delays in Spiking Neural Networks using Dilated Convolutions with Learnable Spacings"
+  },
+  "processed_at": "2026-10-14T14:34:39+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-1f3d512e4571",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

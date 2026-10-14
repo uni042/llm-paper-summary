@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-1f3d512e4571af2d-unrel-010",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2601.00588",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2601.00588",
+    "identity_tokens": [
+      "SemanticScholar:acbff6875bc24a1702941fa1cd8c4da77a41a67e",
+      "arXiv:2601.00588"
+    ],
+    "reason": "CSSBench evaluates Chinese adversarial safety and over-refusal in lightweight LLMs; it is a safety benchmark, not a serving/performance optimization.",
+    "first_checked_at": "2026-10-14T14:34:40+00:00",
+    "last_checked_at": "2026-10-14T14:34:40+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2024-2409.15790-small-language-models-survey-measurements-and-insights.md"
+    ],
+    "title": "CSSBench: Evaluating the Safety of Lightweight LLMs against Chinese-Specific Adversarial Patterns"
+  },
+  "processed_at": "2026-10-14T14:34:41+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-1f3d512e4571",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

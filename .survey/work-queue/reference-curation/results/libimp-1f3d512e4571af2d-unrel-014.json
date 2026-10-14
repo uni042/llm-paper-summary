@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-1f3d512e4571af2d-unrel-014",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2512.15787",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2512.15787",
+    "identity_tokens": [
+      "DOI:10.1002/sd.70544",
+      "SemanticScholar:0945c91d80d44921d0d7511c9b731d0842602ff4",
+      "arXiv:2512.15787"
+    ],
+    "reason": "This conceptual study proposes sustainable, human-centric GenAI environments and edge deployment recommendations; it does not present a concrete inference-system method or evaluation.",
+    "first_checked_at": "2026-10-14T14:34:41+00:00",
+    "last_checked_at": "2026-10-14T14:34:41+00:00",
+    "linked_from": [
+      "papers/survey/09-edge-llm/2025-2410.11845-edge-llm-review.md"
+    ],
+    "title": "Toward Agentic Environments: GenAI and the Convergence of AI, Sustainability, and Human-Centric Spaces"
+  },
+  "processed_at": "2026-10-14T14:34:41+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-1f3d512e4571",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

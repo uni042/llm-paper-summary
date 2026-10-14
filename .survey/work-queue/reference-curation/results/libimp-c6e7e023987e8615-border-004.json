@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-c6e7e023987e8615-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2606.22276",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2606.22276",
+    "identity_tokens": [
+      "SemanticScholar:f1f49f1dc0c4b9826484e86a777e44f353203a8a",
+      "arXiv:2606.22276"
+    ],
+    "reason": "This is audio-QA data curation and fine-tuning for accuracy; its train-only model changes do not establish inference-system efficiency.",
+    "first_checked_at": "2026-10-14T14:34:45+00:00",
+    "last_checked_at": "2026-10-14T14:34:45+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2025-2509.17765-qwen3-omni-technical-report.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Learning from Audio-Dependency Errors: Data Curation Strategies Based on Model Confusion Patterns in Audio Question Answering"
+  },
+  "processed_at": "2026-10-14T14:34:45+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-c6e7e023987e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
