@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-14T05:16:45+00:00",
-  "record_count": 12133,
+  "updated_at": "2026-10-14T05:39:47+00:00",
+  "record_count": 12136,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -164022,11 +164022,13 @@
       "canonical_id": "arXiv:2303.05511",
       "identity_tokens": [
         "DOI:10.1109/cvpr52729.2023.00976",
-        "arXiv:2303.05511"
+        "arXiv:2303.05511",
+        "id:arXiv:2303.05511",
+        "url:https://arxiv.org/abs/2303.05511"
       ],
-      "reason": "GigaGANはテキストから画像を生成する敵対的生成ネットワーク（GAN）の容量拡張と画像合成速度を評価する。512px画像を0.13秒で生成するが、自己回帰LLMの推論エンジン、KVキャッシュ、量子化、オフロード、サービングの最適化ではない。画像生成モデルのアーキテクチャ研究として除外する。",
+      "reason": "一次要旨を確認。GigaGANを用いたテキスト条件付き画像生成のGAN構造と高解像度画像合成が主題であり、0.13秒の画像生成速度は画像生成器の推論である。LLMの言語トークン復号、サービング、KVキャッシュ、MoE、階層メモリ、言語推論効率を最終適用先とする研究ではない。",
       "first_checked_at": "2026-10-11T08:49:39+00:00",
-      "last_checked_at": "2026-10-13T15:47:56+00:00",
+      "last_checked_at": "2026-10-14T05:39:45+00:00",
       "linked_from": [],
       "title": "Scaling up GANs for Text-to-Image Synthesis"
     },
@@ -170019,11 +170021,13 @@
       "classification": "unrelated",
       "canonical_id": "arXiv:2511.00413",
       "identity_tokens": [
-        "arXiv:2511.00413"
+        "arXiv:2511.00413",
+        "id:arXiv:2511.00413",
+        "url:https://arxiv.org/abs/2511.00413"
       ],
-      "reason": "タイトルが対象をエージェント型LLMの学習（Training）高速化と明記し、接頭辞の共有再利用も学習工程を目的とする。現在凍結中の学習単独最適化に該当し、LLM推論サービング、復号カーネル、KVキャッシュ運用の直接的な改善を主題としていないため、タイトル先行除外とする。",
+      "reason": "一次要旨で確認した中心課題は、エージェントの分岐した学習軌跡を独立系列として処理する際に、共通接頭辞の順伝播・逆伝播が重複する問題である。木構造の直列化、共有接頭辞の計算再利用、勾配整合およびメモリ制約下の木分割を用い、教師あり微調整と強化学習の学習時間を短縮する。推論サービングや推論時KVキャッシュの最適化、推論カーネル・実行時スケジューリングへの直接適用は要旨に示されていない。現行サーベイでは学習単独の高速化は凍結範囲なので、Research原稿の作成対象から除外する。",
       "first_checked_at": "2026-10-13T19:47:26+00:00",
-      "last_checked_at": "2026-10-13T19:47:26+00:00",
+      "last_checked_at": "2026-10-14T05:39:45+00:00",
       "linked_from": [],
       "title": "Tree Training: Accelerating Agentic LLMs Training via Shared Prefix Reuse"
     },
@@ -174611,6 +174615,48 @@
         "papers/inference/09-kernel-runtime-compilation/2024-2412.05496-flexattention-a-programming-model-for-generating-optimized-attention-kernels.md"
       ],
       "title": "Towards Mechanistic Interpretability of Graph Transformers via Attention Graphs"
+    },
+    "arXiv:2607.04179": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.04179",
+      "identity_tokens": [
+        "arXiv:2607.04179",
+        "id:arXiv:2607.04179",
+        "url:https://arxiv.org/abs/2607.04179"
+      ],
+      "reason": "タイトルが示す主題は自動運転向け視覚言語モデルの検証器誘導強化学習と潜在思考蒸留であり、推論システム基盤の実装・資源制御ではない。自動運転タスクのモデル訓練を中心とするため現行推論サーベイから除外する。",
+      "first_checked_at": "2026-10-14T05:39:44+00:00",
+      "last_checked_at": "2026-10-14T05:39:44+00:00",
+      "linked_from": [],
+      "title": "CritiqueDriveVLM: From Verifier-Guided Reinforcement Learning to Latent Thought Distillation for Autonomous Driving"
+    },
+    "arXiv:2607.26148": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.26148",
+      "identity_tokens": [
+        "arXiv:2607.26148",
+        "id:arXiv:2607.26148",
+        "url:https://arxiv.org/abs/2607.26148"
+      ],
+      "reason": "タイトルの中心は身体化エージェントによる視覚・言語ナビゲーションであり、移動方策とゼロショット行動能力の評価を対象とする。推論基盤、GPUメモリ階層、量子化、専門家配置、サービング性能を主題とする論文ではないため除外する。",
+      "first_checked_at": "2026-10-14T05:39:46+00:00",
+      "last_checked_at": "2026-10-14T05:39:46+00:00",
+      "linked_from": [],
+      "title": "Embodied Agents Take Control: Minimal-Interface Zero-Shot Agents Rival Industrial-Scale Policies in Vision-and-Language Navigation"
+    },
+    "arXiv:2603.20284": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.20284",
+      "identity_tokens": [
+        "arXiv:2603.20284",
+        "id:arXiv:2603.20284",
+        "url:https://arxiv.org/abs/2603.20284"
+      ],
+      "reason": "タイトルにキャッシュ圧縮が含まれるが、その対象はストリーミング3次元再構成の時空間表現であり、LLMのKVキャッシュや生成サービングの圧縮ではない。異なるタスクのキャッシュ圧縮をLLM推論システムと同一視しないため除外する。",
+      "first_checked_at": "2026-10-14T05:39:47+00:00",
+      "last_checked_at": "2026-10-14T05:39:47+00:00",
+      "linked_from": [],
+      "title": "STAC: Plug-and-Play Spatio-Temporal Aware Cache Compression for Streaming 3D Reconstruction"
     }
   }
 }

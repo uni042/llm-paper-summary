@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-fc49e67a7ea01df4-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2603.20284",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2603.20284",
+    "identity_tokens": [
+      "arXiv:2603.20284",
+      "id:arXiv:2603.20284",
+      "url:https://arxiv.org/abs/2603.20284"
+    ],
+    "reason": "タイトルにキャッシュ圧縮が含まれるが、その対象はストリーミング3次元再構成の時空間表現であり、LLMのKVキャッシュや生成サービングの圧縮ではない。異なるタスクのキャッシュ圧縮をLLM推論システムと同一視しないため除外する。",
+    "first_checked_at": "2026-10-14T05:39:47+00:00",
+    "last_checked_at": "2026-10-14T05:39:47+00:00",
+    "linked_from": [],
+    "title": "STAC: Plug-and-Play Spatio-Temporal Aware Cache Compression for Streaming 3D Reconstruction"
+  },
+  "processed_at": "2026-10-14T05:39:47+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-fc49e67a7ea0",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
