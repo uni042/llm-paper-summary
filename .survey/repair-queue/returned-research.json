@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-14T12:33:55+00:00",
+  "generated_at": "2026-10-14T12:39:17+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -1313,33 +1313,6 @@
       "worker_run_key": "20261013-2200-scheduled-chat-00/r01"
     },
     {
-      "canonical_id": "arXiv:2511.19676",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-14T10:51:14+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2025-2511.19676-interlace-interleaved-layer-pruning-and-efficient-adaptation-in-large-vi.md と 18 段落 / 3803文字 (100.0%) が完全一致"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5070,
-        "body_paragraphs": 28,
-        "method_chars": 1426,
-        "method_paragraphs": 9,
-        "evaluation_chars": 1543,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_5dcd6e9eb4f88191b372182ed78ed81b--2025-2511.19676-interlace-vlm-layer-pruning-research-20261014-1800-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_5dcd6e9eb4f88191b372182ed78ed81b--2025-2511.19676-interlace-vlm-layer-pruning-research-20261014-1800-scheduled-chat-00-r01.json",
-      "worker_run_key": "20261014-1800-scheduled-chat-00/r01"
-    },
-    {
       "canonical_id": "arXiv:2605.22502",
       "title": null,
       "source_url": null,
@@ -1550,56 +1523,6 @@
       },
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_96eeaed0f5288191a74a51cbe35189c0--2025-2512.02044-ccd-coherent-diffusion-decoding-research-20261014-0030-scheduled-chat-30-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_96eeaed0f5288191a74a51cbe35189c0--2025-2512.02044-ccd-coherent-diffusion-decoding-research-20261014-0030-scheduled-chat-30-r01.json",
-      "worker_run_key": "20261014-0030-scheduled-chat-30/r01"
-    },
-    {
-      "canonical_id": "arXiv:2404.15159",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-14T11:20:09+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2024-2404.15159-mixlora-enhancing-large-language-models-fine-tuning-with-lora-based-mixt.md と 28 段落 / 6618文字 (100.0%) が完全一致"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 7100,
-        "body_paragraphs": 34,
-        "method_chars": 1909,
-        "method_paragraphs": 10,
-        "evaluation_chars": 2180,
-        "limitation_chars": 903,
-        "insufficiency_flags": []
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_9983ad12ff748191b24fa566d303a80c--2024-2404.15159-mixlora-shared-ffn-experts-research-20261013-2145-scheduled-chat-45-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_9983ad12ff748191b24fa566d303a80c--2024-2404.15159-mixlora-shared-ffn-experts-research-20261013-2145-scheduled-chat-45-r01.json",
-      "worker_run_key": "20261013-2145-scheduled-chat-45/r01"
-    },
-    {
-      "canonical_id": "arXiv:2605.15206",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-14T11:20:10+00:00",
-      "return_count": 3,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2026-2605.15206-agentstop-terminating-local-ai-agents-early-to-save-energy-in-consumer-d.md と 9 段落 / 2037文字 (100.0%) が完全一致"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5693,
-        "body_paragraphs": 36,
-        "method_chars": 1038,
-        "method_paragraphs": 7,
-        "evaluation_chars": 1882,
-        "limitation_chars": 879,
-        "insufficiency_flags": []
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_99b9cf97d96081918b112168bf9b287b--2026-2605.15206-agentstop-local-agent-energy-research-20261014-0030-scheduled-chat-30-r01-evaluation-heading-repair-20261014-0045-scheduled-chat-45-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_99b9cf97d96081918b112168bf9b287b--2026-2605.15206-agentstop-local-agent-energy-research-20261014-0030-scheduled-chat-30-r01-evaluation-heading-repair-20.json",
       "worker_run_key": "20261014-0030-scheduled-chat-30/r01"
     },
     {
@@ -1861,33 +1784,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_c5d42b3974c88191be2bcacf8e3a6395--2025-2512.21323-parallel-token-prediction-research-20261014-1845-scheduled-chat-45-repair-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_c5d42b3974c88191be2bcacf8e3a6395--2025-2512.21323-parallel-token-prediction-research-20261014-1845-scheduled-chat-45-repair-r01.json",
       "worker_run_key": "20261014-1830-scheduled-chat-30/r01"
-    },
-    {
-      "canonical_id": "arXiv:2606.04438",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-14T11:43:56+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2026-2606.04438-loopmoe-unifying-iterative-computation-with-mixture-of-experts-for-langu.md と 24 段落 / 5422文字 (100.0%) が完全一致"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 6894,
-        "body_paragraphs": 34,
-        "method_chars": 2169,
-        "method_paragraphs": 11,
-        "evaluation_chars": 2084,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_ce61343efbec81919c1bca8c9154f818--2026-2606.04438-loopmoe-research-20261014-0058-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_ce61343efbec81919c1bca8c9154f818--2026-2606.04438-loopmoe-research-20261014-0058-scheduled-chat-00-r01.json",
-      "worker_run_key": "20261014-0058-scheduled-chat-00/r01"
     },
     {
       "canonical_id": "DOI:10.18653/v1/2021.naacl-industry.15",
@@ -2283,31 +2179,6 @@
       "worker_run_key": "20261014-1445-scheduled-chat-45/r01"
     },
     {
-      "canonical_id": "arXiv:2511.12309",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-14T12:18:02+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2025-2511.12309-optimal-self-consistency-for-efficient-reasoning-with-large-language-mod.md と 18 段落 / 3649文字 (100.0%) が完全一致"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5173,
-        "body_paragraphs": 28,
-        "method_chars": 1355,
-        "method_paragraphs": 8,
-        "evaluation_chars": 1588,
-        "limitation_chars": 712,
-        "insufficiency_flags": []
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_fab9a30ca4208191a16194cad759f5c4--2025-2511.12309-optimal-self-consistency-research-20261014-1145-scheduled-chat-45-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_fab9a30ca4208191a16194cad759f5c4--2025-2511.12309-optimal-self-consistency-research-20261014-1145-scheduled-chat-45-r01.json",
-      "worker_run_key": "20261014-1145-scheduled-chat-45/r01"
-    },
-    {
       "canonical_id": "DOI:10.18653/v1/2026.acl-long.1342",
       "title": null,
       "source_url": null,
@@ -2623,8 +2494,8 @@
     },
     {
       "canonical_id": "arXiv:2601.03649",
-      "title": "SyncThink: A Training-Free Strategy to Align Inference Termination with Reasoning Saturation",
-      "source_url": "https://arxiv.org/html/2601.03649v1",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-14T12:33:51+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-30",
@@ -2648,8 +2519,8 @@
     },
     {
       "canonical_id": "arXiv:2605.27786",
-      "title": "Locality-Aware Redundancy Pruning for LLM Depth Compression",
-      "source_url": "https://arxiv.org/pdf/2605.27786",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-14T12:33:52+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-45",
@@ -2675,8 +2546,8 @@
     },
     {
       "canonical_id": "DOI:10.18653/v1/2025.findings-naacl.462",
-      "title": "Hierarchical Speculative Decoding with Dynamic Windows for Efficient Language Model Inference",
-      "source_url": "https://aclanthology.org/2025.findings-naacl.462.pdf",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-14T12:33:53+00:00",
       "return_count": 4,
       "assigned_worker": "scheduled-chat-30",
@@ -2700,8 +2571,8 @@
     },
     {
       "canonical_id": "DOI:10.14722/ndss.2025.230057",
-      "title": "BumbleBee: Secure Two-party Inference Framework for Large Transformers",
-      "source_url": "https://www.ndss-symposium.org/wp-content/uploads/2025-57-paper.pdf",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-14T12:33:54+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-00",
@@ -2727,8 +2598,8 @@
     },
     {
       "canonical_id": "arXiv:2501.19324",
-      "title": "Reward-Guided Speculative Decoding for Efficient LLM Reasoning",
-      "source_url": "https://arxiv.org/pdf/2501.19324",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-14T12:33:54+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-45",
@@ -2751,6 +2622,135 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-3c9ed449d5c9--libfile_bfcf46dfe910819198dd72642e4c1ba0--2025-2501.19324-reward-guided-speculative-decoding-research-20261014-1345-scheduled-chat-45-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-3c9ed449d5c9--libfile_bfcf46dfe910819198dd72642e4c1ba0--2025-2501.19324-reward-guided-speculative-decoding-research-20261014-1345-scheduled-chat-.json",
       "worker_run_key": "20261014-1345-scheduled-chat-45/r01"
+    },
+    {
+      "canonical_id": "arXiv:2404.15159",
+      "title": "MixLoRA: Enhancing Large Language Models Fine-Tuning with LoRA-based Mixture of Experts",
+      "source_url": "https://arxiv.org/pdf/2404.15159",
+      "returned_at": "2026-10-14T12:39:12+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2024-2404.15159-mixlora-enhancing-large-language-models-fine-tuning-with-lora-based-mixt.md と 28 段落 / 6618文字 (100.0%) が完全一致"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 7100,
+        "body_paragraphs": 34,
+        "method_chars": 1909,
+        "method_paragraphs": 10,
+        "evaluation_chars": 2180,
+        "limitation_chars": 903,
+        "insufficiency_flags": []
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-479e3400ac02--libfile_9983ad12ff748191b24fa566d303a80c--2024-2404.15159-mixlora-shared-ffn-experts-research-20261013-2145-scheduled-chat-45-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-479e3400ac02--libfile_9983ad12ff748191b24fa566d303a80c--2024-2404.15159-mixlora-shared-ffn-experts-research-20261013-2145-scheduled-chat-45-r01.json",
+      "worker_run_key": "20261013-2145-scheduled-chat-45/r01"
+    },
+    {
+      "canonical_id": "arXiv:2606.04438",
+      "title": "LoopMoE: Unifying Iterative Computation with Mixture-of-Experts for Language Modeling",
+      "source_url": "https://arxiv.org/html/2606.04438v2",
+      "returned_at": "2026-10-14T12:39:13+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2026-2606.04438-loopmoe-unifying-iterative-computation-with-mixture-of-experts-for-langu.md と 24 段落 / 5422文字 (100.0%) が完全一致"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 6894,
+        "body_paragraphs": 34,
+        "method_chars": 2169,
+        "method_paragraphs": 11,
+        "evaluation_chars": 2084,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-47e3357832b7--libfile_ce61343efbec81919c1bca8c9154f818--2026-2606.04438-loopmoe-research-20261014-0058-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-47e3357832b7--libfile_ce61343efbec81919c1bca8c9154f818--2026-2606.04438-loopmoe-research-20261014-0058-scheduled-chat-00-r01.json",
+      "worker_run_key": "20261014-0058-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2605.15206",
+      "title": "AgentStop: Terminating Local AI Agents Early to Save Energy in Consumer Devices",
+      "source_url": "https://arxiv.org/pdf/2605.15206",
+      "returned_at": "2026-10-14T12:39:14+00:00",
+      "return_count": 4,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2026-2605.15206-agentstop-terminating-local-ai-agents-early-to-save-energy-in-consumer-d.md と 9 段落 / 2037文字 (100.0%) が完全一致"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5693,
+        "body_paragraphs": 36,
+        "method_chars": 1038,
+        "method_paragraphs": 7,
+        "evaluation_chars": 1882,
+        "limitation_chars": 879,
+        "insufficiency_flags": []
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-49369fd50546--libfile_99b9cf97d96081918b112168bf9b287b--2026-2605.15206-agentstop-local-agent-energy-research-20261014-0030-scheduled-chat-30-r01-evaluation-heading-repair-20261014-0045-schedule.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-49369fd50546--libfile_99b9cf97d96081918b112168bf9b287b--2026-2605.15206-agentstop-local-agent-energy-research-20261014-0030-scheduled-chat-30-r01.json",
+      "worker_run_key": "20261014-0030-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2511.12309",
+      "title": "Optimal Self-Consistency for Efficient Reasoning with Large Language Models",
+      "source_url": "https://arxiv.org/html/2511.12309v2",
+      "returned_at": "2026-10-14T12:39:15+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2025-2511.12309-optimal-self-consistency-for-efficient-reasoning-with-large-language-mod.md と 18 段落 / 3649文字 (100.0%) が完全一致"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5173,
+        "body_paragraphs": 28,
+        "method_chars": 1355,
+        "method_paragraphs": 8,
+        "evaluation_chars": 1588,
+        "limitation_chars": 712,
+        "insufficiency_flags": []
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-4c625c6b588c--libfile_fab9a30ca4208191a16194cad759f5c4--2025-2511.12309-optimal-self-consistency-research-20261014-1145-scheduled-chat-45-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-4c625c6b588c--libfile_fab9a30ca4208191a16194cad759f5c4--2025-2511.12309-optimal-self-consistency-research-20261014-1145-scheduled-chat-45-r01.json",
+      "worker_run_key": "20261014-1145-scheduled-chat-45/r01"
+    },
+    {
+      "canonical_id": "arXiv:2511.19676",
+      "title": "INTERLACE: Interleaved Layer Pruning and Efficient Adaptation in Large Vision-Language Models",
+      "source_url": "https://arxiv.org/pdf/2511.19676",
+      "returned_at": "2026-10-14T12:39:16+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2025-2511.19676-interlace-interleaved-layer-pruning-and-efficient-adaptation-in-large-vi.md と 18 段落 / 3803文字 (100.0%) が完全一致"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5070,
+        "body_paragraphs": 28,
+        "method_chars": 1426,
+        "method_paragraphs": 9,
+        "evaluation_chars": 1543,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-4c7d1830cd11--libfile_5dcd6e9eb4f88191b372182ed78ed81b--2025-2511.19676-interlace-vlm-layer-pruning-research-20261014-1800-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-4c7d1830cd11--libfile_5dcd6e9eb4f88191b372182ed78ed81b--2025-2511.19676-interlace-vlm-layer-pruning-research-20261014-1800-scheduled-chat-00-r01.json",
+      "worker_run_key": "20261014-1800-scheduled-chat-00/r01"
     }
   ]
 }

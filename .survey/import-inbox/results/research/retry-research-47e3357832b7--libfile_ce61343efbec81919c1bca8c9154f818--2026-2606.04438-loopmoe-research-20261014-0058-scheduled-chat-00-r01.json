@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "46136e6a3d80b192a921e4de9db0ec905efc1cd4c7d75c8489c222b7e5948adb",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/retry-research-47e3357832b7--libfile_ce61343efbec81919c1bca8c9154f818--2026-2606.04438-loopmoe-research-20261014-0058-scheduled-chat-00-r01.md",
+  "canonical_id": "arXiv:2606.04438",
+  "worker_completed_at": "2026-10-14T00:58:00+09:00",
+  "worker_run_key": "20261014-0058-scheduled-chat-00/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 6894,
+    "body_paragraphs": 34,
+    "method_chars": 2169,
+    "method_paragraphs": 11,
+    "evaluation_chars": 2084,
+    "limitation_chars": 0,
+    "insufficiency_flags": [
+      "限界説明量 0 < 推奨 120"
+    ]
+  },
+  "failures": [
+    "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2026-2606.04438-loopmoe-unifying-iterative-computation-with-mixture-of-experts-for-langu.md と 24 段落 / 5422文字 (100.0%) が完全一致"
+  ],
+  "processed_at": "2026-10-14T12:39:13+00:00"
+}
