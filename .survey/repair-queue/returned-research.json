@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-14T13:02:37+00:00",
+  "generated_at": "2026-10-14T13:08:19+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -1025,33 +1025,6 @@
       "worker_run_key": "20261014-1630-scheduled-chat-30/r01"
     },
     {
-      "canonical_id": "arXiv:2403.14520",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-14T10:16:28+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2024-2403.14520-cobra-extending-mamba-to-multi-modal-large-language-model-for-efficient-.md と 20 段落 / 4170文字 (100.0%) が完全一致"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 6691,
-        "body_paragraphs": 38,
-        "method_chars": 1925,
-        "method_paragraphs": 11,
-        "evaluation_chars": 1967,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_2d7cce50f7d08191959745f07531dc21--2024-2403.14520-cobra-mamba-multimodal-efficient-inference-research-20261014-0745-scheduled-chat-45-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_2d7cce50f7d08191959745f07531dc21--2024-2403.14520-cobra-mamba-multimodal-efficient-inference-research-20261014-0745-scheduled-chat-45-r01.json",
-      "worker_run_key": "20261014-0745-scheduled-chat-45/r01"
-    },
-    {
       "canonical_id": "arXiv:2601.02535",
       "title": null,
       "source_url": null,
@@ -1365,31 +1338,6 @@
       "worker_run_key": "20261014-0145-scheduled-chat-45/r01"
     },
     {
-      "canonical_id": "arXiv:2511.19097",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-14T11:25:24+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2025-2511.19097-decorl-decoupling-reasoning-chains-via-parallel-sub-step-generation-and-.md と 17 段落 / 3773文字 (100.0%) が完全一致"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 4765,
-        "body_paragraphs": 24,
-        "method_chars": 1682,
-        "method_paragraphs": 9,
-        "evaluation_chars": 1219,
-        "limitation_chars": 726,
-        "insufficiency_flags": []
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_ac37fc5b472c8191af5b7356c636a061--2025-2511.19097-decorl-parallel-reasoning-research-20261014-0200-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_ac37fc5b472c8191af5b7356c636a061--2025-2511.19097-decorl-parallel-reasoning-research-20261014-0200-scheduled-chat-00-r01.json",
-      "worker_run_key": "20261014-0200-scheduled-chat-00/r01"
-    },
-    {
       "canonical_id": "arXiv:2512.03383",
       "title": null,
       "source_url": null,
@@ -1415,33 +1363,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_affb286fc11081918427c99eab59b47d--2025-2512.03383-uniql-research-20261014-1100-scheduled-chat-00-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_affb286fc11081918427c99eab59b47d--2025-2512.03383-uniql-research-20261014-1100-scheduled-chat-00-r01.json",
       "worker_run_key": "20261014-1100-scheduled-chat-00/r01"
-    },
-    {
-      "canonical_id": "arXiv:2602.23699",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-14T11:30:06+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2026-2602.23699-hidrop-hierarchical-vision-token-reduction-in-mllms-via-late-injection-c.md と 21 段落 / 4386文字 (100.0%) が完全一致"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 7135,
-        "body_paragraphs": 40,
-        "method_chars": 2067,
-        "method_paragraphs": 11,
-        "evaluation_chars": 1965,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_b8f59870ba5c81918a6d7ab9c045c4d6--2026-2602.23699-hidrop-hierarchical-vision-token-reduction-research-20261014-0530-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_b8f59870ba5c81918a6d7ab9c045c4d6--2026-2602.23699-hidrop-hierarchical-vision-token-reduction-research-20261014-0530-scheduled-chat-30-r01.json",
-      "worker_run_key": "20261014-0530-scheduled-chat-30/r01"
     },
     {
       "canonical_id": "arXiv:2603.00573",
@@ -1496,31 +1417,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_c34cb3f187308191bf72dfec3a54595d--2025-2511.02647-federated-attention-edge-llm-inference-research-20261014-1430-scheduled-chat-30-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_c34cb3f187308191bf72dfec3a54595d--2025-2511.02647-federated-attention-edge-llm-inference-research-20261014-1430-scheduled-chat-30-r01.json",
       "worker_run_key": "20261014-1430-scheduled-chat-30/r01"
-    },
-    {
-      "canonical_id": "arXiv:2603.02096",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-14T11:49:47+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "長文定型文の再利用を検出: papers/inference/01-offload-hierarchical-memory/2026-2603.02096-fluxmem-adaptive-hierarchical-memory-for-streaming-video-understanding.md と 12 段落 / 2521文字 (100.0%) が完全一致"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5692,
-        "body_paragraphs": 35,
-        "method_chars": 1838,
-        "method_paragraphs": 11,
-        "evaluation_chars": 1213,
-        "limitation_chars": 872,
-        "insufficiency_flags": []
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_6c0ca3dcff7881919578ee715c8bc008--2026-2603.02096-fluxmem-hierarchical-streaming-video-memory-research-20261014-1745-scheduled-chat-45-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_6c0ca3dcff7881919578ee715c8bc008--2026-2603.02096-fluxmem-hierarchical-streaming-video-memory-research-20261014-1745-scheduled-chat-45-r01.json",
-      "worker_run_key": "20261014-1745-scheduled-chat-45/r01"
     },
     {
       "canonical_id": "arXiv:2512.14244",
@@ -2496,33 +2392,6 @@
       "worker_run_key": "20261014-2130-scheduled-chat-30/r01"
     },
     {
-      "canonical_id": "arXiv:2605.15491",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-14T12:50:28+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 0 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 6157,
-        "body_paragraphs": 32,
-        "method_chars": 1810,
-        "method_paragraphs": 9,
-        "evaluation_chars": 0,
-        "limitation_chars": 937,
-        "insufficiency_flags": [
-          "評価説明量 0 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_64a9825ec6fc8191802f6daf71bcb8ff--2026-2605.15491-ghosted-layers-activation-alignment-research-20261014-2056-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_64a9825ec6fc8191802f6daf71bcb8ff--2026-2605.15491-ghosted-layers-activation-alignment-research-20261014-2056-scheduled-chat-00-r01.json",
-      "worker_run_key": "20261014-2056-scheduled-chat-00/r01"
-    },
-    {
       "canonical_id": "DOI:10.1145/3712285.3759834",
       "title": null,
       "source_url": null,
@@ -2706,8 +2575,8 @@
     },
     {
       "canonical_id": "arXiv:2604.26963",
-      "title": "MARS: Efficient, Adaptive Co-Scheduling for Heterogeneous Agentic Systems",
-      "source_url": "https://arxiv.org/html/2604.26963v2",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-14T13:02:33+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-45",
@@ -2733,8 +2602,8 @@
     },
     {
       "canonical_id": "arXiv:2605.30571",
-      "title": "Memory-Bound but Not Bandwidth-Limited: The Physical AI Inference Gap in Batch-1 LLM Decode",
-      "source_url": "https://arxiv.org/abs/2605.30571",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-14T13:02:34+00:00",
       "return_count": 4,
       "assigned_worker": "scheduled-chat-00",
@@ -2758,8 +2627,8 @@
     },
     {
       "canonical_id": "arXiv:2512.21911",
-      "title": "Accelerate Speculative Decoding with Sparse Computation in Verification",
-      "source_url": "https://arxiv.org/pdf/2512.21911",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-14T13:02:35+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-00",
@@ -2785,8 +2654,8 @@
     },
     {
       "canonical_id": "arXiv:2606.00756",
-      "title": "CoMIC: Collaborative Memory and Insights Circulation for Long-Horizon LLM Agents in Cloud-Edge Systems",
-      "source_url": "https://arxiv.org/abs/2606.00756",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-14T13:02:36+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-30",
@@ -2810,8 +2679,8 @@
     },
     {
       "canonical_id": "arXiv:2605.06320",
-      "title": "Improving the Efficiency of Language Agent Teams with Adaptive Task Graphs",
-      "source_url": "https://arxiv.org/html/2605.06320v1",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-14T13:02:37+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-00",
@@ -2834,6 +2703,137 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-9374f15acf65--libfile_ade12f4c49fc81918f9f32a4dd52dc6a--2026-2605.06320-latte-adaptive-task-graphs-research-20261014-0445-scheduled-chat-45-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-9374f15acf65--libfile_ade12f4c49fc81918f9f32a4dd52dc6a--2026-2605.06320-latte-adaptive-task-graphs-research-20261014-0445-scheduled-chat-45-r01.json",
       "worker_run_key": "20261014-0445-scheduled-chat-45/r01"
+    },
+    {
+      "canonical_id": "arXiv:2605.15491",
+      "title": "Ghosted Layers: Unconstrained Activation Alignment for Recovering Layer-Pruned LLMs",
+      "source_url": "https://arxiv.org/abs/2605.15491",
+      "returned_at": "2026-10-14T13:08:15+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 0 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 6157,
+        "body_paragraphs": 32,
+        "method_chars": 1810,
+        "method_paragraphs": 9,
+        "evaluation_chars": 0,
+        "limitation_chars": 937,
+        "insufficiency_flags": [
+          "評価説明量 0 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-9529174bc8ef--libfile_64a9825ec6fc8191802f6daf71bcb8ff--2026-2605.15491-ghosted-layers-activation-alignment-research-20261014-2056-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-9529174bc8ef--libfile_64a9825ec6fc8191802f6daf71bcb8ff--2026-2605.15491-ghosted-layers-activation-alignment-research-20261014-2056-scheduled-chat.json",
+      "worker_run_key": "20261014-2056-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2602.23699",
+      "title": "HiDrop: Hierarchical Vision Token Reduction in MLLMs via Late Injection, Concave Pyramid Pruning, and Early Exit",
+      "source_url": "https://arxiv.org/html/2602.23699v1",
+      "returned_at": "2026-10-14T13:08:16+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2026-2602.23699-hidrop-hierarchical-vision-token-reduction-in-mllms-via-late-injection-c.md と 21 段落 / 4386文字 (100.0%) が完全一致"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 7135,
+        "body_paragraphs": 40,
+        "method_chars": 2067,
+        "method_paragraphs": 11,
+        "evaluation_chars": 1965,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-9ca9a7d732b5--libfile_b8f59870ba5c81918a6d7ab9c045c4d6--2026-2602.23699-hidrop-hierarchical-vision-token-reduction-research-20261014-0530-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-9ca9a7d732b5--libfile_b8f59870ba5c81918a6d7ab9c045c4d6--2026-2602.23699-hidrop-hierarchical-vision-token-reduction-research-20261014-0530-schedul.json",
+      "worker_run_key": "20261014-0530-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2403.14520",
+      "title": "Cobra: Extending Mamba to Multi-Modal Large Language Model for Efficient Inference",
+      "source_url": "https://arxiv.org/html/2403.14520v4",
+      "returned_at": "2026-10-14T13:08:17+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2024-2403.14520-cobra-extending-mamba-to-multi-modal-large-language-model-for-efficient-.md と 20 段落 / 4170文字 (100.0%) が完全一致"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 6691,
+        "body_paragraphs": 38,
+        "method_chars": 1925,
+        "method_paragraphs": 11,
+        "evaluation_chars": 1967,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-9ffd55868e63--libfile_2d7cce50f7d08191959745f07531dc21--2024-2403.14520-cobra-mamba-multimodal-efficient-inference-research-20261014-0745-scheduled-chat-45-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-9ffd55868e63--libfile_2d7cce50f7d08191959745f07531dc21--2024-2403.14520-cobra-mamba-multimodal-efficient-inference-research-20261014-0745-schedul.json",
+      "worker_run_key": "20261014-0745-scheduled-chat-45/r01"
+    },
+    {
+      "canonical_id": "arXiv:2511.19097",
+      "title": "DeCoRL: Decoupling Reasoning Chains via Parallel Sub-Step Generation and Cascaded Reinforcement for Interpretable and Scalable RLHF",
+      "source_url": "https://arxiv.org/html/2511.19097v1",
+      "returned_at": "2026-10-14T13:08:18+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2025-2511.19097-decorl-decoupling-reasoning-chains-via-parallel-sub-step-generation-and-.md と 17 段落 / 3773文字 (100.0%) が完全一致"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 4765,
+        "body_paragraphs": 24,
+        "method_chars": 1682,
+        "method_paragraphs": 9,
+        "evaluation_chars": 1219,
+        "limitation_chars": 726,
+        "insufficiency_flags": []
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-a2b1f9e644d2--libfile_ac37fc5b472c8191af5b7356c636a061--2025-2511.19097-decorl-parallel-reasoning-research-20261014-0200-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-a2b1f9e644d2--libfile_ac37fc5b472c8191af5b7356c636a061--2025-2511.19097-decorl-parallel-reasoning-research-20261014-0200-scheduled-chat-00-r01.json",
+      "worker_run_key": "20261014-0200-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2603.02096",
+      "title": "FluxMem: Adaptive Hierarchical Memory for Streaming Video Understanding",
+      "source_url": "https://arxiv.org/html/2603.02096v1",
+      "returned_at": "2026-10-14T13:08:19+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "長文定型文の再利用を検出: papers/inference/01-offload-hierarchical-memory/2026-2603.02096-fluxmem-adaptive-hierarchical-memory-for-streaming-video-understanding.md と 12 段落 / 2521文字 (100.0%) が完全一致"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5692,
+        "body_paragraphs": 35,
+        "method_chars": 1838,
+        "method_paragraphs": 11,
+        "evaluation_chars": 1213,
+        "limitation_chars": 872,
+        "insufficiency_flags": []
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-a55740704ade--libfile_6c0ca3dcff7881919578ee715c8bc008--2026-2603.02096-fluxmem-hierarchical-streaming-video-memory-research-20261014-1745-scheduled-chat-45-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-a55740704ade--libfile_6c0ca3dcff7881919578ee715c8bc008--2026-2603.02096-fluxmem-hierarchical-streaming-video-memory-research-20261014-1745-schedu.json",
+      "worker_run_key": "20261014-1745-scheduled-chat-45/r01"
     }
   ]
 }
