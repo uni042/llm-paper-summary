@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-14T03:18:17+00:00",
-  "record_count": 11989,
+  "updated_at": "2026-10-14T03:51:09+00:00",
+  "record_count": 12006,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -172557,6 +172557,288 @@
         "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
       ],
       "title": "Packing Analysis: Packing Is More Appropriate for Large Models or Datasets in Supervised Fine-tuning"
+    },
+    "DOI:10.3390/drones9110757": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.3390/drones9110757",
+      "identity_tokens": [
+        "DOI:10.3390/drones9110757"
+      ],
+      "reason": "The work combines continual learning and mixture-of-experts for autonomous guidance; the application is flight guidance, not LLM inference or serving.",
+      "first_checked_at": "2026-10-14T03:51:00+00:00",
+      "last_checked_at": "2026-10-14T03:51:00+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2024-2402.14800-not-all-experts-are-equal-efficient-expert-pruning-and-skipping-for-mixture-of-e.md",
+        "papers/inference/02-adaptive-expert-computation-compression/2024-2407.09590-task-agnostic-expert-pruning.md"
+      ],
+      "title": "Feature-Generation-Replay Continual Learning Combined with Mixture-of-Experts for Data-Driven Autonomous Guidance"
+    },
+    "arXiv:2606.01503": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.01503",
+      "identity_tokens": [
+        "arXiv:2606.01503"
+      ],
+      "reason": "The paper studies token-reduction accelerators for unified vision-language model joint training; its focus is training-time compute, which is outside the target inference/system scope.",
+      "first_checked_at": "2026-10-14T03:51:01+00:00",
+      "last_checked_at": "2026-10-14T03:51:01+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md",
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2501.03895-llava-mini-efficient-image-and-video-large-multimodal-models-with-one-vi.md",
+        "papers/inference/99-other-inference-systems/2023-2311.17043-llama-vid-an-image-is-worth-2-tokens-in-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2024-2403.06764-an-image-is-worth-1-2-tokens-after-layer-2-plug-and-play-inference-accel.md",
+        "papers/inference/99-other-inference-systems/2024-2403.15388-llava-prumerge-adaptive-token-reduction-for-efficient-large-multimodal-m.md",
+        "papers/inference/99-other-inference-systems/2024-2405.05803-boosting-multimodal-large-language-models-with-visual-tokens-withdrawal-.md"
+      ],
+      "title": "On the Limits of Token Reduction for Efficient Unified Vision Language Training"
+    },
+    "arXiv:2503.03269": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2503.03269",
+      "identity_tokens": [
+        "arXiv:2503.03269"
+      ],
+      "reason": "The paper concerns conformal transformations for symmetric power transformers in electrical engineering, not Transformer neural networks or LLM systems.",
+      "first_checked_at": "2026-10-14T03:51:01+00:00",
+      "last_checked_at": "2026-10-14T03:51:01+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.05254-yoco.md",
+        "papers/inference/09-kernel-runtime-compilation/2021-2103.02143-random-feature-attention.md",
+        "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08621-retentive-network-a-successor-to-transformer-for-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md",
+        "papers/inference/99-other-inference-systems/2024-2312.06635-gated-linear-attention-transformers-with-hardware-efficient-training.md"
+      ],
+      "title": "Conformal Transformations for Symmetric Power Transformers"
+    },
+    "DOI:10.48550/arxiv.2511.22099": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.48550/arxiv.2511.22099",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2511.22099",
+        "arXiv:2511.22099"
+      ],
+      "reason": "This work examines trust dimensions such as privacy, robustness, fairness, and ethics for low-rank LLMs; it is a model-assessment topic rather than efficiency or serving.",
+      "first_checked_at": "2026-10-14T03:51:01+00:00",
+      "last_checked_at": "2026-10-14T03:51:01+00:00",
+      "linked_from": [
+        "papers/inference/08-edge-on-device-llm-systems/2022-2207.00112-language-model-compression-with-weighted-low-rank-factorization.md",
+        "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md",
+        "papers/inference/99-other-inference-systems/2023-2306.11695-a-simple-and-effective-pruning-approach-for-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2023-2312.05821-asvd-activation-aware-singular-value-decomposition-for-compressing-large.md",
+        "papers/inference/99-other-inference-systems/2023-2312.11983-fluctuation-based-adaptive-structured-pruning-for-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2024-2403.15447-decoding-compressed-trust-scrutinizing-the-trustworthiness-of-efficient-.md"
+      ],
+      "title": "Decomposed Trust: Exploring Privacy, Adversarial Robustness, Fairness, and Ethics of Low-Rank LLMs"
+    },
+    "arXiv:2509.03872": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2509.03872",
+      "identity_tokens": [
+        "arXiv:2509.03872"
+      ],
+      "reason": "FocusMamba sparsifies RGB/event features for object detection. Its compute-saving mechanism is tied to a separate perception application, not LLM inference systems.",
+      "first_checked_at": "2026-10-14T03:51:02+00:00",
+      "last_checked_at": "2026-10-14T03:51:02+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md",
+        "papers/inference/99-other-inference-systems/2024-2403.06764-an-image-is-worth-1-2-tokens-after-layer-2-plug-and-play-inference-accel.md",
+        "papers/inference/99-other-inference-systems/2024-2405.05803-boosting-multimodal-large-language-models-with-visual-tokens-withdrawal-.md",
+        "papers/inference/99-other-inference-systems/2024-2410.17247-pyramiddrop-accelerating-your-large-vision-language-models-via-pyramid-v.md",
+        "papers/inference/99-other-inference-systems/2025-2503.02175-divprune-diversity-based-visual-token-pruning-for-large-multimodal-model.md"
+      ],
+      "title": "Focus Through Motion: RGB-Event Collaborative Token Sparsification for Efficient Object Detection"
+    },
+    "arXiv:2606.05208": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.05208",
+      "identity_tokens": [
+        "arXiv:2606.05208"
+      ],
+      "reason": "The survey covers Transformer-enhanced reinforcement learning for communications-network tasks; it is not about inference efficiency of LLMs or AI serving systems.",
+      "first_checked_at": "2026-10-14T03:51:02+00:00",
+      "last_checked_at": "2026-10-14T03:51:02+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md",
+        "papers/inference/99-other-inference-systems/2019-1905.07799-adaptive-attention-span-in-transformers.md",
+        "papers/inference/99-other-inference-systems/2020-2007.04825-fast-transformers-with-clustered-attention.md",
+        "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md",
+        "papers/inference/99-other-inference-systems/2021-2102.03902-nystr-mformer-a-nystr-m-based-algorithm-for-approximating-self-attention.md"
+      ],
+      "title": "Transformer-Enhanced Reinforcement Learning: Fundamentals and Applications in Communication Networks"
+    },
+    "arXiv:2412.19794": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2412.19794",
+      "identity_tokens": [
+        "arXiv:2412.19794"
+      ],
+      "reason": "MVTamperBench evaluates robustness of vision-language models to video tampering; this is capability/safety evaluation, not system efficiency.",
+      "first_checked_at": "2026-10-14T03:51:02+00:00",
+      "last_checked_at": "2026-10-14T03:51:02+00:00",
+      "linked_from": [
+        "papers/inference/12-moe-parallelism-communication/2024-2408.10188-longvila-scaling-long-context-visual-language-models-for-long-videos.md",
+        "papers/inference/99-other-inference-systems/2023-2307.16449-moviechat-from-dense-token-to-sparse-memory-for-long-video-understanding.md",
+        "papers/inference/99-other-inference-systems/2024-2410.17434-longvu-spatiotemporal-adaptive-compression-for-long-video-language-under.md",
+        "papers/inference/99-other-inference-systems/2024-2412.04468-nvila-efficient-frontier-visual-language-models.md"
+      ],
+      "title": "MVTamperBench: Evaluating Robustness of Vision-Language Models"
+    },
+    "arXiv:2409.14012": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2409.14012",
+      "identity_tokens": [
+        "arXiv:2409.14012"
+      ],
+      "reason": "Test Time Learning is evaluated for time-series forecasting; the abstract describes task accuracy adaptation, not LLM inference-system efficiency.",
+      "first_checked_at": "2026-10-14T03:51:03+00:00",
+      "last_checked_at": "2026-10-14T03:51:03+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md",
+        "papers/inference/99-other-inference-systems/2023-2303.06349-resurrecting-recurrent-neural-networks-for-long-sequences.md",
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md",
+        "papers/inference/99-other-inference-systems/2024-2407.04620-learning-to-learn-at-test-time-rnns-with-expressive-hidden-states.md"
+      ],
+      "title": "Test Time Learning for Time Series Forecasting"
+    },
+    "DOI:10.1101/2022.04.14.488336": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1101/2022.04.14.488336",
+      "identity_tokens": [
+        "DOI:10.1101/2022.04.14.488336"
+      ],
+      "reason": "The bioRxiv work studies relational processing of contextual information in a biological/behavioral setting, not LLM inference or serving efficiency.",
+      "first_checked_at": "2026-10-14T03:51:03+00:00",
+      "last_checked_at": "2026-10-14T03:51:03+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2021-2103.02143-random-feature-attention.md",
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md",
+        "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md",
+        "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md"
+      ],
+      "title": "Relation is an option for processing context information"
+    },
+    "DOI:10.1016/j.inffus.2025.103967": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1016/j.inffus.2025.103967",
+      "identity_tokens": [
+        "DOI:10.1016/j.inffus.2025.103967"
+      ],
+      "reason": "PAREformer is for time-series forecasting. Although it uses a parallelizable cumulative sum and a lean architecture, its primary contribution is forecasting accuracy for that application, not LLM/system inference.",
+      "first_checked_at": "2026-10-14T03:51:04+00:00",
+      "last_checked_at": "2026-10-14T03:51:04+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md",
+        "papers/inference/99-other-inference-systems/2022-2202.10447-transformer-quality-in-linear-time.md",
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md",
+        "papers/inference/99-other-inference-systems/2024-2404.05892-eagle-and-finch-rwkv-with-matrix-valued-states-and-dynamic-recurrence.md"
+      ],
+      "title": "PAREformer: positional adaptive and recurrent enhanced transformer for time series forecasting"
+    },
+    "arXiv:2510.16004": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2510.16004",
+      "identity_tokens": [
+        "arXiv:2510.16004"
+      ],
+      "reason": "PAINT models turbulent-fluid dynamics with parallel-in-time generative prediction; the contribution is physical-system forecasting, not LLM inference efficiency or infrastructure.",
+      "first_checked_at": "2026-10-14T03:51:07+00:00",
+      "last_checked_at": "2026-10-14T03:51:07+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+      ],
+      "title": "PAINT: Parallel-in-time Neural Twins for Dynamical System Reconstruction"
+    },
+    "arXiv:2408.17383": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2408.17383",
+      "identity_tokens": [
+        "arXiv:2408.17383"
+      ],
+      "reason": "MoRe reduces adapter parameter counts for parameter-efficient fine-tuning; the abstract reports training specialization and quality, not inference-time efficiency.",
+      "first_checked_at": "2026-10-14T03:51:07+00:00",
+      "last_checked_at": "2026-10-14T03:51:07+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md",
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md"
+      ],
+      "title": "MoRe Fine-Tuning with 10x Fewer Parameters"
+    },
+    "arXiv:2506.03885": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2506.03885",
+      "identity_tokens": [
+        "arXiv:2506.03885"
+      ],
+      "reason": "The paper measures training-free token merging for video vision transformers and video action-recognition accuracy/speed. It is an independent vision application rather than LLM inference infrastructure.",
+      "first_checked_at": "2026-10-14T03:51:08+00:00",
+      "last_checked_at": "2026-10-14T03:51:08+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "title": "Video, How Do Your Tokens Merge?"
+    },
+    "arXiv:2505.19355": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.19355",
+      "identity_tokens": [
+        "arXiv:2505.19355"
+      ],
+      "reason": "The proposed causal treatment-outcome model estimates social-media influence and engagement; no LLM systems-efficiency contribution is described.",
+      "first_checked_at": "2026-10-14T03:51:08+00:00",
+      "last_checked_at": "2026-10-14T03:51:08+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "title": "Estimating Online Influence Needs Causal Modeling! Counterfactual Analysis of Social Media Engagement"
+    },
+    "arXiv:2501.13915": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2501.13915",
+      "identity_tokens": [
+        "arXiv:2501.13915"
+      ],
+      "reason": "BDPM is a binary diffusion method evaluated for image generation/restoration; its reported inference-cost benefit is specific to image generation, not LLM or general inference systems.",
+      "first_checked_at": "2026-10-14T03:51:09+00:00",
+      "last_checked_at": "2026-10-14T03:51:09+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md",
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md"
+      ],
+      "title": "Binary Diffusion Probabilistic Model"
+    },
+    "arXiv:2605.24873": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.24873",
+      "identity_tokens": [
+        "arXiv:2605.24873"
+      ],
+      "reason": "UniCo generates causal-reasoning training data and evaluates reasoning quality; its contribution is capability training without a runtime-efficiency result.",
+      "first_checked_at": "2026-10-14T03:51:09+00:00",
+      "last_checked_at": "2026-10-14T03:51:09+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md",
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md"
+      ],
+      "title": "Towards a Universal Causal Reasoner"
+    },
+    "DOI:10.1109/iciice69672.2026.11565509": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/iciice69672.2026.11565509",
+      "identity_tokens": [
+        "DOI:10.1109/iciice69672.2026.11565509"
+      ],
+      "reason": "The paper applies retrieval-augmented small language models to audit legal interactions; this is a domain application and auditing objective, not an efficiency method.",
+      "first_checked_at": "2026-10-14T03:51:09+00:00",
+      "last_checked_at": "2026-10-14T03:51:09+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md",
+        "papers/inference/16-weight-quantization-compression/2023-2306.00978-awq.md"
+      ],
+      "title": "Real-Time Legal Auditing of LLM Interactions Using Retrieval Augmented Small Language Models"
     }
   }
 }

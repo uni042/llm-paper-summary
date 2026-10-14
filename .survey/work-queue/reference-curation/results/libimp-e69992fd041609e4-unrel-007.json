@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e69992fd041609e4-unrel-007",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2509.03872",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2509.03872",
+    "identity_tokens": [
+      "arXiv:2509.03872"
+    ],
+    "reason": "FocusMamba sparsifies RGB/event features for object detection. Its compute-saving mechanism is tied to a separate perception application, not LLM inference systems.",
+    "first_checked_at": "2026-10-14T03:51:02+00:00",
+    "last_checked_at": "2026-10-14T03:51:02+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md",
+      "papers/inference/99-other-inference-systems/2024-2403.06764-an-image-is-worth-1-2-tokens-after-layer-2-plug-and-play-inference-accel.md",
+      "papers/inference/99-other-inference-systems/2024-2405.05803-boosting-multimodal-large-language-models-with-visual-tokens-withdrawal-.md",
+      "papers/inference/99-other-inference-systems/2024-2410.17247-pyramiddrop-accelerating-your-large-vision-language-models-via-pyramid-v.md",
+      "papers/inference/99-other-inference-systems/2025-2503.02175-divprune-diversity-based-visual-token-pruning-for-large-multimodal-model.md"
+    ],
+    "title": "Focus Through Motion: RGB-Event Collaborative Token Sparsification for Efficient Object Detection"
+  },
+  "processed_at": "2026-10-14T03:51:02+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e69992fd0416",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

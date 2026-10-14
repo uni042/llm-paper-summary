@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-fa55a98f07ca5c12-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2506.10516",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2506.10516",
+    "identity_tokens": [
+      "arXiv:2506.10516"
+    ],
+    "reason": "CogStream proposes visual-stream compression and dialogue retrieval to reduce irrelevant history for streaming video QA, but its target is multimodal video understanding and the abstract does not establish a general LLM serving or inference-system contribution.",
+    "first_checked_at": "2026-10-14T03:51:04+00:00",
+    "last_checked_at": "2026-10-14T03:51:04+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2406.11816-videollm-online-online-video-large-language-model-for-streaming-video.md",
+      "papers/inference/99-other-inference-systems/2023-2307.16449-moviechat-from-dense-token-to-sparse-memory-for-long-video-understanding.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "CogStream: Context-guided Streaming Video Question Answering"
+  },
+  "processed_at": "2026-10-14T03:51:04+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-fa55a98f07ca",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-fa55a98f07ca5c12-border-006",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2405.13203",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2405.13203",
+    "identity_tokens": [
+      "arXiv:2405.13203"
+    ],
+    "reason": "Timed diarized transcript modeling targets real-time dialogue generation and reports token-rate requirements on commodity hardware, but it focuses on interaction modeling rather than a general inference optimization.",
+    "first_checked_at": "2026-10-14T03:51:05+00:00",
+    "last_checked_at": "2026-10-14T03:51:05+00:00",
+    "linked_from": [
+      "papers/inference/05-speculative-decoding-moe/2022-2211.17192-speculative-decoding.md",
+      "papers/inference/05-speculative-decoding-moe/2023-2302.01318-speculative-sampling.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Modeling Real-Time Interactive Conversations as Timed Diarized Transcripts"
+  },
+  "processed_at": "2026-10-14T03:51:05+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-fa55a98f07ca",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

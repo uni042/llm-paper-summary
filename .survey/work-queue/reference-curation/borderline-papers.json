@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-14T03:18:14+00:00",
-  "record_count": 5001,
+  "updated_at": "2026-10-14T03:51:07+00:00",
+  "record_count": 5015,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -77402,6 +77402,243 @@
       ],
       "borderline_recheck_count": 0,
       "title": "A dynamic parallel method for performance optimization on hybrid CPUs"
+    },
+    "arXiv:2601.20234": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2601.20234",
+      "identity_tokens": [
+        "arXiv:2601.20234"
+      ],
+      "reason": "MALLOC benchmarks memory-aware long-sequence compression for large sequential recommenders and tests LLM-originated memory strategies. The application is recommendation rather than LLM inference, so transfer to the target corpus is plausible but indirect.",
+      "first_checked_at": "2026-10-14T03:50:58+00:00",
+      "last_checked_at": "2026-10-14T03:50:58+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2019-1911.02150-multi-query-attention.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2404.14469-snapkv.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md",
+        "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md",
+        "papers/inference/99-other-inference-systems/2023-2305.13245-gqa.md",
+        "papers/inference/99-other-inference-systems/2024-2401.03462-long-context-compression-with-activation-beacon.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "MALLOC: Benchmarking the Memory-aware Long Sequence Compression for Large Sequential Recommendation"
+    },
+    "DOI:10.1109/tnse.2026.3655188": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/tnse.2026.3655188",
+      "identity_tokens": [
+        "DOI:10.1109/tnse.2026.3655188"
+      ],
+      "reason": "The survey covers computing-power-network architecture, resource allocation, and AI services, which may connect to serving infrastructure, but the available abstract does not establish a concrete LLM inference mechanism.",
+      "first_checked_at": "2026-10-14T03:50:59+00:00",
+      "last_checked_at": "2026-10-14T03:50:59+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2201.05596-deepspeed-moe-inference-compression.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2407.18003-keep-the-cost-down-a-review-on-methods-to-optimize-llm-s-kv-cache-consum.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2412.19442-a-survey-on-large-language-model-acceleration-based-on-kv-cache-manageme.md",
+        "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2024-2407.06204-a-survey-on-mixture-of-experts-in-large-language-models.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "A Survey on Computing Power Networks: Architecture, Resource Allocation, and AI Services Enablement"
+    },
+    "arXiv:2310.20051": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2310.20051",
+      "identity_tokens": [
+        "arXiv:2310.20051"
+      ],
+      "reason": "The paper analyzes polynomial attention expressivity as a response to quadratic attention cost, but its abstract is a theoretical expressivity study and does not demonstrate a concrete efficiency improvement.",
+      "first_checked_at": "2026-10-14T03:50:59+00:00",
+      "last_checked_at": "2026-10-14T03:50:59+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2023-2310.05869-hyperattention-long-context-attention-in-near-linear-time.md",
+        "papers/inference/99-other-inference-systems/2019-1905.07799-adaptive-attention-span-in-transformers.md",
+        "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08045-beyond-classical-attention-quantum-attention-for-scalable-computation.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "The Expressibility of Polynomial based Attention Scheme"
+    },
+    "arXiv:2503.03008": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2503.03008",
+      "identity_tokens": [
+        "arXiv:2503.03008"
+      ],
+      "reason": "MoSE uses self-distillation to provide multi-exit encoder portions with different inference-cost/accuracy tradeoffs for code retrieval and classification. This is a deployment-efficiency mechanism, but its encoder retrieval/classification scope is indirect to the LLM inference corpus.",
+      "first_checked_at": "2026-10-14T03:50:59+00:00",
+      "last_checked_at": "2026-10-14T03:50:59+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2023-2310.03003-from-words-to-watts-benchmarking-the-energy-costs-of-large-language-mode.md",
+        "papers/inference/99-other-inference-systems/2023-2305.13245-gqa.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md",
+        "papers/inference/99-other-inference-systems/2024-2401.06118-extreme-compression-of-large-language-models-via-additive-quantization.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "MoSE: Hierarchical Self-Distillation Enhances Early Layer Embeddings"
+    },
+    "arXiv:2604.09494": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2604.09494",
+      "identity_tokens": [
+        "arXiv:2604.09494"
+      ],
+      "reason": "RecaLLM adds explicit in-context retrieval to address loss of reasoning context. This is plausibly related to managing long reasoning contexts, but the available evidence does not establish a system-efficiency gain.",
+      "first_checked_at": "2026-10-14T03:51:00+00:00",
+      "last_checked_at": "2026-10-14T03:51:00+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.09702-efficient-guided-generation-for-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md",
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "RecaLLM: Addressing the Lost-in-Thought Phenomenon with Explicit In-Context Retrieval"
+    },
+    "arXiv:2506.10516": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2506.10516",
+      "identity_tokens": [
+        "arXiv:2506.10516"
+      ],
+      "reason": "CogStream proposes visual-stream compression and dialogue retrieval to reduce irrelevant history for streaming video QA, but its target is multimodal video understanding and the abstract does not establish a general LLM serving or inference-system contribution.",
+      "first_checked_at": "2026-10-14T03:51:04+00:00",
+      "last_checked_at": "2026-10-14T03:51:04+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2406.11816-videollm-online-online-video-large-language-model-for-streaming-video.md",
+        "papers/inference/99-other-inference-systems/2023-2307.16449-moviechat-from-dense-token-to-sparse-memory-for-long-video-understanding.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "CogStream: Context-guided Streaming Video Question Answering"
+    },
+    "DOI:10.1016/j.eswa.2025.130838": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.eswa.2025.130838",
+      "identity_tokens": [
+        "DOI:10.1016/j.eswa.2025.130838"
+      ],
+      "reason": "The publisher describes DKF as progressive incremental learning and domain-knowledge fusion for multi-domain machine translation; its target is translation adaptation rather than LLM runtime or inference efficiency. Primary abstract text could not be retrieved from the publisher during this screen; this is retained as a source-limited borderline.",
+      "first_checked_at": "2026-10-14T03:51:04+00:00",
+      "last_checked_at": "2026-10-14T03:51:04+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md",
+        "papers/survey/09-edge-llm/2025-2410.11845-edge-llm-review.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "DKF: Domain knowledge fusion in progressive incremental learning for multi-domain machine translation"
+    },
+    "arXiv:2405.13203": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2405.13203",
+      "identity_tokens": [
+        "arXiv:2405.13203"
+      ],
+      "reason": "Timed diarized transcript modeling targets real-time dialogue generation and reports token-rate requirements on commodity hardware, but it focuses on interaction modeling rather than a general inference optimization.",
+      "first_checked_at": "2026-10-14T03:51:05+00:00",
+      "last_checked_at": "2026-10-14T03:51:05+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2022-2211.17192-speculative-decoding.md",
+        "papers/inference/05-speculative-decoding-moe/2023-2302.01318-speculative-sampling.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Modeling Real-Time Interactive Conversations as Timed Diarized Transcripts"
+    },
+    "DOI:10.1109/tgrs.2026.3673920": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/tgrs.2026.3673920",
+      "identity_tokens": [
+        "DOI:10.1109/tgrs.2026.3673920"
+      ],
+      "reason": "IEEE primary abstract page was unavailable through this retrieval path. The title identifies an optical remote-sensing salient-object-detection task; without verified primary abstract text, keep this as a source-limited borderline.",
+      "first_checked_at": "2026-10-14T03:51:05+00:00",
+      "last_checked_at": "2026-10-14T03:51:05+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Lightweight Dual Correlation Variance Compensation for Salient Object Detection in Optical Remote Sensing Images"
+    },
+    "arXiv:2605.16861": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.16861",
+      "identity_tokens": [
+        "arXiv:2605.16861"
+      ],
+      "reason": "PA-BDM combines parallel block diffusion and progressive KV caching to raise document-recognition throughput. The mechanism is a concrete inference optimization, but the application is document parsing rather than LLM systems.",
+      "first_checked_at": "2026-10-14T03:51:05+00:00",
+      "last_checked_at": "2026-10-14T03:51:05+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2022-2211.17192-speculative-decoding.md",
+        "papers/inference/07-kv-cache-optimization-compression/2025-2505.22618-fast-dllm-kv-cache-parallel-decoding.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Prefix-Adaptive Block Diffusion for Efficient Document Recognition"
+    },
+    "DOI:10.1016/j.ipm.2026.105197": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.ipm.2026.105197",
+      "identity_tokens": [
+        "DOI:10.1016/j.ipm.2026.105197"
+      ],
+      "reason": "Publisher metadata identifies error-aware fine-tuning for LLM mathematical reasoning; the stated contribution learns from token-level mistakes and does not establish inference/system efficiency. The publisher abstract body was not accessible in this retrieval. Primary abstract text could not be retrieved from the publisher during this screen; this is retained as a source-limited borderline.",
+      "first_checked_at": "2026-10-14T03:51:06+00:00",
+      "last_checked_at": "2026-10-14T03:51:06+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md",
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "EREAL: Enhancing Mathematical Reasoning through Error-Aware Learning in Large Language Models"
+    },
+    "DOI:10.1109/icassp55912.2026.11460492": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/icassp55912.2026.11460492",
+      "identity_tokens": [
+        "DOI:10.1109/icassp55912.2026.11460492"
+      ],
+      "reason": "The primary conference record identifies cross-modal infrared/visible image fusion, an independent image-fusion application with no LLM inference-system connection; its publisher abstract was unavailable. Primary abstract text could not be retrieved from the publisher during this screen; this is retained as a source-limited borderline.",
+      "first_checked_at": "2026-10-14T03:51:06+00:00",
+      "last_checked_at": "2026-10-14T03:51:06+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Multi-Scale State Space Modeling for Cross-Modal Infrared and Visible Image Fusion"
+    },
+    "DOI:10.1109/icsai68704.2025.11345858": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/icsai68704.2025.11345858",
+      "identity_tokens": [
+        "DOI:10.1109/icsai68704.2025.11345858"
+      ],
+      "reason": "The primary publisher abstract could not be retrieved. The title suggests attention acceleration in contrastive clustering, but available evidence does not establish a concrete LLM or inference-systems contribution.",
+      "first_checked_at": "2026-10-14T03:51:06+00:00",
+      "last_checked_at": "2026-10-14T03:51:06+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Contrastive Clustering with False-Negative Compensation and Alternating Attention Acceleration"
+    },
+    "DOI:10.1145/3734866": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3734866",
+      "identity_tokens": [
+        "DOI:10.1145/3734866"
+      ],
+      "reason": "The ACM DOI page returned 403 and no primary abstract was retrieved. The title suggests runtime ML precision measurement/testing, but its system-efficiency relevance remains uncertain.",
+      "first_checked_at": "2026-10-14T03:51:07+00:00",
+      "last_checked_at": "2026-10-14T03:51:07+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "FuMi: A Runtime Fuzz-based Machine Learning Precision Measurement and Testing Framework"
     }
   }
 }
