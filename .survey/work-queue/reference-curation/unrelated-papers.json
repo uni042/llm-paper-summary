@@ -2,7 +2,7 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-14T21:47:13+00:00",
+  "updated_at": "2026-10-14T22:48:33+00:00",
   "record_count": 12274,
   "records": {
     "arXiv:2303.08774": {
@@ -165101,9 +165101,9 @@
         "id:arXiv:2512.04678",
         "url:https://arxiv.org/abs/2512.04678"
       ],
-      "reason": "一次要旨で、EMA-Sinkによる過去動画フレームの集約と、動きの品質報酬を用いる分布一致蒸留により、単一H100で23.1 FPSのストリーミング動画生成を目指す研究と確認した。最終成果は動画拡散モデルの生成品質と映像フレーム速度であり、テキストLLMの復号、推論サービング、MoE、KVキャッシュ最適化の実証を含まないためunrelatedとする。",
+      "reason": "Reward Forcingは動画拡散生成で古いフレームを指数移動平均で要約するEMA-Sinkと、動きの報酬で蒸留を重み付けするRe-DMDを提案し、H100での動画生成速度を報告する。対象は動画拡散モデルの画質・動きと動画ストリーミングであり、言語モデルの自己回帰トークン推論、LLMサービングやKVキャッシュの実行基盤ではない。",
       "first_checked_at": "2026-10-12T18:49:58+00:00",
-      "last_checked_at": "2026-10-13T10:45:30+00:00",
+      "last_checked_at": "2026-10-14T22:48:33+00:00",
       "linked_from": [],
       "title": "Reward Forcing: Efficient Streaming Video Generation with Rewarded Distribution Matching Distillation"
     },

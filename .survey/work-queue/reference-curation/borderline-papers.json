@@ -2,7 +2,7 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-14T19:48:58+00:00",
+  "updated_at": "2026-10-14T22:48:33+00:00",
   "record_count": 5157,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
@@ -71549,9 +71549,9 @@
         "DOI:10.48550/arxiv.2509.25140",
         "arXiv:2509.25140"
       ],
-      "reason": "エージェントの成功・失敗履歴から再利用可能な推論方略を抽出し、試験時の複数経験から記憶を改善する。再試行の減少など実行効率への影響があり得る一方、主評価はウェブ操作とソフトウェア開発タスクの能力で、LLM実行エンジンやメモリ転送の性能評価ではない。エージェント記憶という隣接領域として境界扱い。",
+      "reason": "ReasoningBankはLLMエージェントの成功・失敗軌跡から再利用可能な推論方針を抽出し、記憶検索と実行時の追加探索（MaTTS）でWeb閲覧・ソフトウェア開発タスクの成功率を高める。記憶の保存・検索は推論時の処理だが、中心的な貢献はエージェント能力・経験学習であり、KVキャッシュ管理、推論処理量、計算資源配置などのシステム効率を直接検証した研究ではない。",
       "first_checked_at": "2026-10-12T10:58:03+00:00",
-      "last_checked_at": "2026-10-13T16:45:34+00:00",
+      "last_checked_at": "2026-10-14T22:48:32+00:00",
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "ReasoningBank: Scaling Agent Self-Evolving with Reasoning Memory"
@@ -71792,9 +71792,9 @@
       "identity_tokens": [
         "arXiv:2601.01885"
       ],
-      "reason": "AgeMemは長期・短期記憶の保存、検索、更新、要約、破棄をLLMエージェントの道具操作として統合し、段階的強化学習とステップ単位GRPOで行動方策を学ぶ。5種類の長期タスクで記憶品質と文脈利用効率を改善するが、中心はエージェントの方策学習であり、推論サービングのGPU/CPU/SSD階層やKVキャッシュの転送コストを直接最適化する研究ではない。文脈管理に関連するため境界的とする。",
+      "reason": "AgeMemはLLMエージェントの長期・短期記憶の保存、検索、更新、要約、削除を行動として学習させ、段階的な強化学習とstep-wise GRPOで長期課題の成績と文脈利用効率を改善する。文脈管理との接点はあるが、学習されたエージェント方策が中心で、GPU/CPUメモリ配置、KVキャッシュ圧縮やLLMサービングの実測最適化ではないため境界扱いとする。",
       "first_checked_at": "2026-10-12T21:37:59+00:00",
-      "last_checked_at": "2026-10-12T21:39:42+00:00",
+      "last_checked_at": "2026-10-14T22:48:33+00:00",
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "Agentic Memory: Learning Unified Long-Term and Short-Term Memory Management for Large Language Model Agents"

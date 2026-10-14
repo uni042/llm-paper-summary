@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-7e7b514a39b149f7-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2601.01885",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2601.01885",
+    "identity_tokens": [
+      "arXiv:2601.01885"
+    ],
+    "reason": "AgeMemはLLMエージェントの長期・短期記憶の保存、検索、更新、要約、削除を行動として学習させ、段階的な強化学習とstep-wise GRPOで長期課題の成績と文脈利用効率を改善する。文脈管理との接点はあるが、学習されたエージェント方策が中心で、GPU/CPUメモリ配置、KVキャッシュ圧縮やLLMサービングの実測最適化ではないため境界扱いとする。",
+    "first_checked_at": "2026-10-12T21:37:59+00:00",
+    "last_checked_at": "2026-10-14T22:48:33+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Agentic Memory: Learning Unified Long-Term and Short-Term Memory Management for Large Language Model Agents"
+  },
+  "processed_at": "2026-10-14T22:48:34+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-7e7b514a39b1",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
