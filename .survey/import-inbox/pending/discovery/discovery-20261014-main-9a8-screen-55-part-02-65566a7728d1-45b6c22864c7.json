@@ -1,0 +1,415 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-55",
+  "run_key": "discovery-20261014-main-9a8-screen-55-part-02-65566a7728d1",
+  "reference_main_sha": "8c885ba44c4e5ce2e528e1902208fa26803f30d8",
+  "record_count": 20,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2510.08369",
+      "identity_tokens": [
+        "arXiv:2510.08369"
+      ],
+      "title": "Guided Star-Shaped Masked Diffusion",
+      "reason": "Guided masked diffusion is a generative modeling method, not inference systems efficiency.",
+      "source_url": "https://arxiv.org/abs/2510.08369",
+      "body_check": "abstract_screen_only; body_not_read",
+      "abstract_evidence_excerpt": "The performance of pre-trained masked diffusion models is often constrained by their sampling procedure, which makes decisions irreversible and struggles in low-step generation regimes. We introduce a novel sampling algorithm that works with pre-trained models and, after a lightweight fine-tuning of a single layer, significantly improves sample quality and efficiency. Our metho",
+      "abstract_evidence_sha256": "4da27f285d4cb742fdbbc8044c4e0feb1b8f0f801a4017eb61bdde70f32a4fee",
+      "abstract_sha256": "7e7234dc7ecf268d808123bc7476f386c74664c84ae17f97e221f39bb05795ad",
+      "source_abstract_chars": 965,
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2025-2505.22618-fast-dllm-kv-cache-parallel-decoding.md",
+        "papers/inference/99-other-inference-systems/2025-2503.09573-block-diffusion-interpolating-between-autoregressive-and-diffusion-langu.md",
+        "papers/inference/99-other-inference-systems/2025-2508.15487-dream-7b-diffusion-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2026-2406.03736-your-absorbing-discrete-diffusion-secretly-models-the-conditional-distri.md"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2509.22832",
+      "identity_tokens": [
+        "arXiv:2509.22832"
+      ],
+      "title": "Efficient Fine-Grained Gpu Performance Modeling for Distributed Deep Learning of Llm",
+      "reason": "Fine-grained GPU modeling of distributed LLM workloads supports performance prediction and system optimization.",
+      "source_url": "https://arxiv.org/abs/2509.22832",
+      "body_check": "abstract_screen_only; body_not_read",
+      "abstract_evidence_excerpt": "Training Large Language Models(LLMs) is one of the most compute-intensive tasks in high-performance computing. Predicting end-to-end training time for multi-billion parameter models distributed across hundreds of GPUs remains challenging due to complex interactions between transformer components, parallelism strategies(data, model, pipeline, tensor), and multi-tier communicatio",
+      "abstract_evidence_sha256": "c80cad47c6411de63d8180b561019a5cf5b9624cb1e2d4fc53c5b153b45b83f5",
+      "abstract_sha256": "5a2310ad127e7ab50ccfacfaadf28b3cd8059b515e887c63ed0ecc2711d69e49",
+      "source_abstract_chars": 1251,
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1909.08053-megatron-lm-training-multi-billion-parameter-language-models-using-model.md",
+        "papers/inference/99-other-inference-systems/2021-2104.04473-efficient-large-scale-language-model-training-on-gpu-clusters-using-mega.md",
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md",
+        "papers/training/01-training-offload-memory-systems/2021-2104.07857-zero-infinity-breaking-the-gpu-memory-wall-for-extreme-scale-deep-learning.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2607.01520",
+      "identity_tokens": [
+        "arXiv:2607.01520"
+      ],
+      "title": "The risk of KV cache compression",
+      "reason": "The work evaluates KV-cache compression risks but does not establish a concrete serving method.",
+      "source_url": "https://arxiv.org/abs/2607.01520",
+      "body_check": "abstract_screen_only; body_not_read",
+      "abstract_evidence_excerpt": "Transformer inference on long sequences is expensive because softmax attention repeatedly reads from a large KV cache. The prevalent approach to this bottleneck is KV cache compression, which replaces the full cache with a compact summary. Despite its practical importance, the design of such summaries is largely driven by empirical experimentation. On the theoretical side, exis",
+      "abstract_evidence_sha256": "9f7c9f3d5ab1523777eed47eb683240da921554de035f33239a518fe369c2ce4",
+      "abstract_sha256": "e18080679ae223f3ab8bc5df4b4d025732b44f6e898b3fc3689e6d18067055dd",
+      "source_abstract_chars": 1191,
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2305.17118-scissorhands.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2403.09054-keyformer-kv-cache-reduction-through-key-tokens-selection-for-efficient-.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2406.02069-pyramidkv.md",
+        "papers/inference/99-other-inference-systems/2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2603.13430",
+      "identity_tokens": [
+        "arXiv:2603.13430"
+      ],
+      "title": "Dynamic Sparse Attention: Access Patterns and Architecture",
+      "reason": "Dynamic sparse attention addresses access patterns and architecture for efficient attention execution.",
+      "source_url": "https://arxiv.org/abs/2603.13430",
+      "body_check": "abstract_screen_only; body_not_read",
+      "abstract_evidence_excerpt": "Dynamic sparse attention (DSA) reduces the per-token attention bandwidth by restricting computation to a top-k subset of cached key-value (KV) entries, but its token-dependent selection pattern introduces a system-level challenge: the KV working set is fragmented, volatile, and difficult to prefetch, which can translate into poor cache locality and stalled decode throughput. We",
+      "abstract_evidence_sha256": "c1d975578803f3acc1299d4cf58b23b0a4bdf0b7d41e81119a243dee626757b1",
+      "abstract_sha256": "196605716190682df9a01bf13a719ba0e636faa83c995cbbc2b6c7f84263848c",
+      "source_abstract_chars": 1132,
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.04437-vattention-virtual-memory-kv-management.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2412.19442-a-survey-on-large-language-model-acceleration-based-on-kv-cache-manageme.md",
+        "papers/inference/07-kv-cache-optimization-compression/2025-2504.06319-asynchronous-kv-cache-prefetching.md",
+        "papers/inference/13-sparse-attention/2025-2503.16428-xattention-block-sparse-attention-with-antidiagonal-scoring.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2506.06041",
+      "identity_tokens": [
+        "arXiv:2506.06041"
+      ],
+      "title": "Tensor-to-Tensor Models with Fast Iterated Sum Features",
+      "reason": "Tensor-to-tensor model design has no concrete LLM inference-system link.",
+      "source_url": "https://arxiv.org/abs/2506.06041",
+      "body_check": "abstract_screen_only; body_not_read",
+      "abstract_evidence_excerpt": "Data in the form of images or higher-order tensors is ubiquitous in modern deep learning applications. Owing to their inherent high dimensionality, the need for subquadratic layers processing such data is even more pressing than for sequence data. We propose a novel tensor-to-tensor layer with linear cost in the input size, utilizing the mathematical gadget of ``corner trees'' ",
+      "abstract_evidence_sha256": "f1b4cea1e1c1ce124e0b07f9fbfc1923f5a7ef0613ebf802afea2a2814d02783",
+      "abstract_sha256": "a54ef5b9808aa98d77c395fabf4be0bc9ab23dd5a4214140970726cce7b7c4c2",
+      "source_abstract_chars": 1539,
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md",
+        "papers/inference/19-inference-evaluation-benchmarking/2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md",
+        "papers/inference/99-other-inference-systems/2023-2303.06349-resurrecting-recurrent-neural-networks-for-long-sequences.md",
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2507.07129",
+      "identity_tokens": [
+        "arXiv:2507.07129"
+      ],
+      "title": "Growing Transformers: Modular Composition and Layer-wise Expansion on a Frozen Substrate",
+      "reason": "Model growth and layer-wise expansion are described without a clear inference-efficiency contribution.",
+      "source_url": "https://arxiv.org/abs/2507.07129",
+      "body_check": "abstract_screen_only; body_not_read",
+      "abstract_evidence_excerpt": "We study a constrained training regime for decoder-only Transformers in which the token interface is fixed, previously trained dense blocks are not reopened, and the active trainable parameter set is kept approximately constant as depth grows. Starting from a shallow model, we stack new blocks and train only the newest blocks and the LM head; optional LoRA phases provide limite",
+      "abstract_evidence_sha256": "e073ae49526897d337ee282236d8f5163518914846eb2ee8a55de8542d54c678",
+      "abstract_sha256": "0143fc1e86885c703eb5b6323c20d786441a875feebf88092b80bd60d88f4af9",
+      "source_abstract_chars": 1769,
+      "linked_from": [
+        "papers/inference/12-moe-parallelism-communication/2021-2101.03961-switch-transformers-scaling-to-trillion-parameter-models-with-simple-and.md",
+        "papers/inference/99-other-inference-systems/2017-1701.06538-outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts.md",
+        "papers/inference/99-other-inference-systems/2021-2110.02861-8-bit-optimizers-via-block-wise-quantization.md",
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.18535",
+      "identity_tokens": [
+        "arXiv:2605.18535"
+      ],
+      "title": "Beyond Scaling: Agents Are Heading to the Edge",
+      "reason": "Edge agents are discussed, but concrete latency, memory, or throughput improvement is unclear.",
+      "source_url": "https://arxiv.org/abs/2605.18535",
+      "body_check": "abstract_screen_only; body_not_read",
+      "abstract_evidence_excerpt": "The bottleneck of useful agentic intelligence has shifted from compressing world knowledge into a single model to executing a coordinated system. This position paper argues that personal-agent architecture must move to the edge because the core properties of agentic intelligence tasks, particularly their structural coupling with high-fidelity local context and the need for zero",
+      "abstract_evidence_sha256": "876eedc20f339ef0bc35ea26492f83d1f07e168e57b86ff889e41eeb2f473d2c",
+      "abstract_sha256": "700105ce4be3726f8daaa676f7be6122e9f06feadc844dfda67136138722dfa1",
+      "source_abstract_chars": 1570,
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2023-2312.11514-llm-in-a-flash-efficient-large-language-model-inference-with-limited-memory.md",
+        "papers/inference/09-kernel-runtime-compilation/2024-2311.03285-s-lora-serving-thousands-of-concurrent-lora-adapters.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2308.16369-sarathi.md",
+        "papers/inference/99-other-inference-systems/2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.21264",
+      "identity_tokens": [
+        "arXiv:2605.21264"
+      ],
+      "title": "FedCoE: Bridging Generalization and Personalization via Federated Coordinated Dual-level MoEs",
+      "reason": "Federated MoE generalization/personalization is a learning objective, not serving efficiency.",
+      "source_url": "https://arxiv.org/abs/2605.21264",
+      "body_check": "abstract_screen_only; body_not_read",
+      "abstract_evidence_excerpt": "Federated Learning (FL) has emerged as a promising paradigm for privacy-preserving distributed learning. However, existing FL methods face a fundamental challenge. Traditional averaging-based approaches suffer from parameter divergence under non-IID conditions, while personalized FL methods overfit to local data and fail to generalize to new clients (cold-start problem). Mixtur",
+      "abstract_evidence_sha256": "b65ed311ece94b799de031186bea5bbd24f7623a1aba67dee30070f1dfc74eb3",
+      "abstract_sha256": "a978e463557e6f47fa9e867e1de6ee5de5bf17a2770f2bbc872eaf3b244a01b5",
+      "source_abstract_chars": 1415,
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2201.05596-deepspeed-moe-inference-compression.md",
+        "papers/inference/12-moe-parallelism-communication/2021-2101.03961-switch-transformers-scaling-to-trillion-parameter-models-with-simple-and.md",
+        "papers/inference/99-other-inference-systems/2017-1701.06538-outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts.md",
+        "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2408.07884",
+      "identity_tokens": [
+        "arXiv:2408.07884"
+      ],
+      "title": "Instruct Large Language Models to Generate Scientific Literature Survey Step by Step",
+      "reason": "Scientific literature survey generation is an application task.",
+      "source_url": "https://arxiv.org/abs/2408.07884",
+      "body_check": "abstract_screen_only; body_not_read",
+      "abstract_evidence_excerpt": "Abstract. Automatically generating scientific literature surveys is a valuable task that can significantly enhance research efficiency. However, the diverse and complex nature of information within a literature survey poses substantial challenges for generative models. In this paper, we design a series of prompts to systematically leverage large language models (LLMs), enabling",
+      "abstract_evidence_sha256": "fd0411a0ad3aa7b5de2aa3d6fa1b2304b906a8c029dc5b2b35bd16cb0ae45577",
+      "abstract_sha256": "ea2645982f6546a9a24d6925c55de4c5c0d133c0e4019934fc66e3ef8542aa70",
+      "source_abstract_chars": 1400,
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md",
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+        "papers/inference/99-other-inference-systems/2023-2307.02486-longnet-scaling-transformers-to-1-000-000-000-tokens.md"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.18653/v1/2024.findings-eacl.143",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2024.findings-eacl.143"
+      ],
+      "title": "Hierarchical and Dynamic Prompt Compression for Efficient Zero-shot API Usage",
+      "reason": "The ACL paper proposes hierarchical dynamic prompt compression for efficient zero-shot API use.",
+      "source_url": "https://doi.org/10.18653/v1/2024.findings-eacl.143",
+      "body_check": "abstract_screen_only; body_not_read",
+      "abstract_evidence_excerpt": "Long prompts present a significant challenge for practical LLM-based systems that need to operate with low latency and limited resources. We investigate prompt compression for zero-shot dialogue systems that learn to use unseen APIs directly in-context from their documentation, which may take up hundreds of prompt tokens per API. We start from a recently introduced approach (Mu",
+      "abstract_evidence_sha256": "262119d0972583fab2b06c6f6b255e4baa67487a1471fd2f5d9fc9d786bdc05b",
+      "abstract_sha256": "cd0a27852d40606443efc2ba36d876f367760f399f087537bcf8e3296948a169",
+      "source_abstract_chars": 1332,
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md",
+        "papers/inference/99-other-inference-systems/2023-2304.08467-learning-to-compress-prompts-with-gist-tokens.md",
+        "papers/inference/99-other-inference-systems/2024-2401.03462-long-context-compression-with-activation-beacon.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2501.12919",
+      "identity_tokens": [
+        "arXiv:2501.12919"
+      ],
+      "title": "Bridging text and crystal structures: literature-driven contrastive learning for materials science",
+      "reason": "Text/crystal contrastive learning is a materials-science application.",
+      "source_url": "https://arxiv.org/abs/2501.12919",
+      "body_check": "abstract_screen_only; body_not_read",
+      "abstract_evidence_excerpt": "Understanding structure–property relationships is an essential yet challenging aspect of materials discovery and development. To facilitate this process, recent studies in materials informatics have sought latent embedding spaces of crystal structures to capture their similarities based on properties and functionalities. However, abstract feature-based embedding spaces are huma",
+      "abstract_evidence_sha256": "9a536fdb1572b3c33092fec7cb4492d7f0c299f51fbbcf21fa36b07697f31f92",
+      "abstract_sha256": "8981e925a7f5cb645d2393cd3b8df56b0925f75c58a7e7b0f7c8cc49a01708ed",
+      "source_abstract_chars": 1263,
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md",
+        "papers/inference/99-other-inference-systems/2023-2310.06694-sheared-llama-accelerating-language-model-pre-training-via-structured-pr.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.09644",
+      "identity_tokens": [
+        "arXiv:2605.09644"
+      ],
+      "title": "Attention Itself Could Retrieve.RetrieveVGGT: Training-Free Long Context Streaming 3D Reconstruction via Query-Key Similarity Retrieval",
+      "reason": "Streaming 3D reconstruction is a separate vision task.",
+      "source_url": "https://arxiv.org/abs/2605.09644",
+      "body_check": "abstract_screen_only; body_not_read",
+      "abstract_evidence_excerpt": "Visual Geometry Grounded Transformer (VGGT) advances 3D reconstruction via scalable Transformer architecture, but the quadratic complexity of global attention prevents long context application. StreamVGGT enables streaming with causal attention, yet its KV cache grows linearly with frames, causing memory overflow and quality degradation. We present RetrieveVGGT, a training-free",
+      "abstract_evidence_sha256": "b334aa81a4e8a5ef0e7b4f881b769a2985d995d8227f174a6f1c95bf0708ac09",
+      "abstract_sha256": "a2bf55e64739e7be53b31bad524362bf0f7e17e1facdbbe4be4b5dbd75ef9660",
+      "source_abstract_chars": 1491,
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2306.14048-h2o.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2404.14469-snapkv.md",
+        "papers/inference/13-sparse-attention/2024-2406.10774-quest.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2411.19542",
+      "identity_tokens": [
+        "arXiv:2411.19542"
+      ],
+      "title": "A dynamic parallel method for performance optimization on hybrid CPUs",
+      "reason": "Hybrid CPU parallelism is general performance work without a specific LLM inference connection.",
+      "source_url": "https://arxiv.org/abs/2411.19542",
+      "body_check": "abstract_screen_only; body_not_read",
+      "abstract_evidence_excerpt": "The AIPC concept is gaining popularity, and more and more hybrid CPUs will be running AI models on client devices. However, the current AI inference framework overlooks the imbalanced hardware capability of hybrid CPUs, leading to low inference performance. To address this issue, we have introduced a dynamic parallel method for hybrid CPUs, which significantly increases LLM inf",
+      "abstract_evidence_sha256": "9dfd83dd322bf76368b80c157248ce164e93a9a979df9b19a799fd8cbf9ee3c6",
+      "abstract_sha256": "2b4390d9fac5621a8dd52c5d46bed67c1c32d7fbfe1a8047aed85e6d123bf7e5",
+      "source_abstract_chars": 608,
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-2407.07304-inference-performance-optimization-for-large-language-models-on-cpus.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2308.16369-sarathi.md",
+        "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2512.18126",
+      "identity_tokens": [
+        "arXiv:2512.18126"
+      ],
+      "title": "Efficient Mixture-of-Agents Serving via Tree-Structured Routing, Adaptive Pruning, and Dependency-Aware Prefill-Decode Overlap",
+      "reason": "Routing, pruning, and prefill/decode overlap directly target efficient MoA serving.",
+      "source_url": "https://arxiv.org/abs/2512.18126",
+      "body_check": "abstract_screen_only; body_not_read",
+      "abstract_evidence_excerpt": "Mixture-of-Agents (MoA) inference can suffer from dense inter-agent communication and low hardware utilization, which jointly inflate serving latency. We present a serving design that targets these bottlenecks through an algorithm-system co-design. First, we replace dense agent interaction graphs with a hierarchical tree topology that induces structured sparsity in inter-agent ",
+      "abstract_evidence_sha256": "007a76bb9f56bbbc36669a01f5462955fac3d551de743b84789cd63950d58e51",
+      "abstract_sha256": "466d739a46ff2849ec9f830884e99251d7b78fb0974212416a0eb3cc50d3379c",
+      "source_abstract_chars": 1003,
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2308.16369-sarathi.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.09670-distserve-disaggregating-prefill-decoding-goodput.md"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1016/j.eswa.2026.133227",
+      "identity_tokens": [
+        "DOI:10.1016/j.eswa.2026.133227"
+      ],
+      "title": "Overcoming contextless web markup text translation: A parallel and selective Q&A-driven LLM approach",
+      "reason": "The primary article uses selective spans, parallelism, and cache reuse to improve LLM throughput.",
+      "source_url": "https://www.sciencedirect.com/science/article/abs/pii/S0957417426021366",
+      "body_check": "abstract_screen_only; body_not_read",
+      "abstract_evidence_excerpt": "Over the past three decades, the web has evolved into a vast repository of knowledge. However, language barriers still prevent many users from accessing foreign-language websites. While modern browsers provide built-in translation, they often ignore page-level context and therefore produce misleading output, degrading user experience. Although processing the full HTML document with a Seq2Seq translation would restore context, it makes inference too slow for real-time browsing.",
+      "abstract_evidence_sha256": "6b0e6bae60640db6d227a0b67b46b9937fd5779e7875e01d24c55ab11295cf3e",
+      "abstract_sha256": null,
+      "source_abstract_chars": null,
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2402.15220-chunkattention-efficient-self-attention-with-prefix-aware-kv-cache-and-t.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md",
+        "papers/inference/99-other-inference-systems/2022-2211.05102-efficiently-scaling-transformer-inference.md"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "USENIX:OSDI26-318507",
+      "identity_tokens": [
+        "USENIX:OSDI26-318507",
+        "SemanticScholar:d64b13ce85d02f006f11b0c7ca724740198d38c5"
+      ],
+      "title": "Hardware Lifecycle-Aware Power Planning in Commercial Hyperscale Datacenters (Operational Systems)",
+      "reason": "OSDI describes lifecycle-aware hyperscale rack power budgets and prediction deployed across heterogeneous fleets.",
+      "source_url": "https://www.usenix.org/conference/osdi26/presentation/li-ruihao",
+      "body_check": "abstract_screen_only; body_not_read",
+      "abstract_evidence_excerpt": "Modern commercial datacenters operate with heterogeneous hardware, deploying new servers to meet the growing compute demands while retaining older servers due to budgetary and environmental constraints. Datacenter planners can use daily performance and power profiling data to continually refine power budgets for legacy hardware. By contrast, power planning for new hardware must begin as early as the pre-silicon stage of server development when such data is not yet available.",
+      "abstract_evidence_sha256": "3e34dd9ac193a5b8737dd76d8ddf0c7ddb2307b9b2d3e3c1be98ec2c92f4302a",
+      "abstract_sha256": null,
+      "source_abstract_chars": null,
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2311.18677-splitwise-efficient-generative-llm-inference-phase-splitting.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2408.00741-dynamollm.md",
+        "papers/inference/99-other-inference-systems/2024-ad611bbc0cdc-characterizing-power-management-opportunities-for-llms-in-the-cloud.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2311.02945",
+      "identity_tokens": [
+        "arXiv:2311.02945"
+      ],
+      "title": "PhoGPT: Generative Pre-training for Vietnamese",
+      "reason": "Vietnamese generative pretraining has no direct systems-efficiency contribution.",
+      "source_url": "https://arxiv.org/abs/2311.02945",
+      "body_check": "abstract_screen_only; body_not_read",
+      "abstract_evidence_excerpt": "We open-source a state-of-the-art 4B-parameter generative model series for Vietnamese, which includes the base pre-trained monolingual model PhoGPT-4B and its chat variant, PhoGPT-4B-Chat. The base model, PhoGPT-4B, with exactly 3.7B parameters, is pre-trained from scratch on a Vietnamese corpus of 102B tokens, with an 8192 context length, employing a vocabulary of 20480 token ",
+      "abstract_evidence_sha256": "3dc55e2281e2a406994f52155765e8e3013aff530da3387aba760e7a4fd6fa4a",
+      "abstract_sha256": "857f854d1e81b8ca79201bbd2b5a80f7184c1e23d9d7a52972bed758b13c326a",
+      "source_abstract_chars": 760,
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md",
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2510.07081",
+      "identity_tokens": [
+        "arXiv:2510.07081"
+      ],
+      "title": "Accelerating Diffusion LLM Inference via Local Determinism Propagation",
+      "reason": "Local determinism propagation explicitly accelerates diffusion LLM inference.",
+      "source_url": "https://arxiv.org/abs/2510.07081",
+      "body_check": "abstract_screen_only; body_not_read",
+      "abstract_evidence_excerpt": "Diffusion large language models (dLLMs) represent a significant advancement in text generation, offering parallel token decoding capabilities. However, existing open-source implementations suffer from quality-speed trade-offs that impede their practical deployment. Conservative sampling strategies typically decode only the most confident token per step to ensure quality (i.e., ",
+      "abstract_evidence_sha256": "a8ffe846492e91495297fefcd0a32dfc4017f6fd6b34a5978bc1cd5062f2abeb",
+      "abstract_sha256": "e1b72bac52b2c245422dcbea9efcc1f8c0877085a2854746a3ccc0378533f9cb",
+      "source_abstract_chars": 1510,
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2025-2505.15781-dkv-cache-delayed-kv-diffusion-language-models.md",
+        "papers/inference/07-kv-cache-optimization-compression/2025-2506.06295-dllm-cache-adaptive-caching.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2410.20643",
+      "identity_tokens": [
+        "arXiv:2410.20643"
+      ],
+      "title": "GenUP: Generative User Profilers as In-Context Learners for Next POI Recommender Systems",
+      "reason": "POI user profiling focuses recommendation quality, not inference systems.",
+      "source_url": "https://arxiv.org/abs/2410.20643",
+      "body_check": "abstract_screen_only; body_not_read",
+      "abstract_evidence_excerpt": "Traditional Point-of-Interest (POI) recommendation systems often lack transparency, interpretability, and scrutability due to their reliance on dense vector-based user embeddings. Furthermore, the cold-start problem—where systems have insufficient data for new users—limits their ability to generate accurate recommendations. Existing methods often address this by leveraging simi",
+      "abstract_evidence_sha256": "62545f3171c27d026e775aae61180d17fbd05f604a0c663d81a818c8a590ab81",
+      "abstract_sha256": "2b0094408c26d160ae64d07df2d7da6bc40f98eac627c2d7bab401a6663c4cef",
+      "source_abstract_chars": 1383,
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2410.08081",
+      "identity_tokens": [
+        "arXiv:2410.08081"
+      ],
+      "title": "Packing Analysis: Packing Is More Appropriate for Large Models or Datasets in Supervised Fine-tuning",
+      "reason": "Fine-tuning data packing optimizes training rather than inference.",
+      "source_url": "https://arxiv.org/abs/2410.08081",
+      "body_check": "abstract_screen_only; body_not_read",
+      "abstract_evidence_excerpt": "Packing, initially utilized in the pre-training phase, is an optimization technique designed to maximize hardware resource efficiency by combining different training sequences to fit the model's maximum input length. Although it has demonstrated effectiveness during pre-training, there remains a lack of comprehensive analysis for the supervised fine-tuning (SFT) stage on the fo",
+      "abstract_evidence_sha256": "83d51a36ca03f14b158fbf89d71bd532e37b36939fc7bdeaabd216263719114a",
+      "abstract_sha256": "3697d1f77689dd6ab0fcc231043c4b5116b771b960307529b897a60ced23d61a",
+      "source_abstract_chars": 1534,
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ]
+    }
+  ]
+}
