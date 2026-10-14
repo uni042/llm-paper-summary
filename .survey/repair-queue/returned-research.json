@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-14T12:45:09+00:00",
+  "generated_at": "2026-10-14T12:51:21+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 110,
+  "count": 113,
   "entries": [
     {
       "canonical_id": "DOI:10.1145/3714983.3714987",
@@ -1471,31 +1471,6 @@
       "worker_run_key": "20261014-0030-scheduled-chat-30/r01"
     },
     {
-      "canonical_id": "arXiv:2404.03384",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-14T11:20:11+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2024-2404.03384-longvlm-efficient-long-video-understanding-via-large-language-models.md と 14 段落 / 3202文字 (100.0%) が完全一致"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 4464,
-        "body_paragraphs": 23,
-        "method_chars": 1634,
-        "method_paragraphs": 8,
-        "evaluation_chars": 904,
-        "limitation_chars": 471,
-        "insufficiency_flags": []
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_9be1a8c1002c8191a1714c543a39caf3--2024-2404.03384-longvlm-hierarchical-video-token-merging-research-20261014-0730-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_9be1a8c1002c8191a1714c543a39caf3--2024-2404.03384-longvlm-hierarchical-video-token-merging-research-20261014-0730-scheduled-chat-30-r01.json",
-      "worker_run_key": "20261014-0730-scheduled-chat-30/r01"
-    },
-    {
       "canonical_id": "arXiv:2601.07832",
       "title": null,
       "source_url": null,
@@ -2624,8 +2599,8 @@
     },
     {
       "canonical_id": "arXiv:2512.21323",
-      "title": "Parallel Token Prediction for Language Models",
-      "source_url": "https://arxiv.org/abs/2512.21323",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-14T12:45:05+00:00",
       "return_count": 4,
       "assigned_worker": "scheduled-chat-45",
@@ -2649,8 +2624,8 @@
     },
     {
       "canonical_id": "arXiv:2606.26762",
-      "title": "ProtoKV: Streaming Video Understanding under Delayed Query with Summary-State Memory",
-      "source_url": "https://arxiv.org/pdf/2606.26762",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-14T12:45:06+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-30",
@@ -2676,8 +2651,8 @@
     },
     {
       "canonical_id": "arXiv:2603.20843",
-      "title": "HiCI: Hierarchical Construction-Integration for Long-Context Attention",
-      "source_url": "https://arxiv.org/pdf/2603.20843",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-14T12:45:07+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-45",
@@ -2704,8 +2679,8 @@
     },
     {
       "canonical_id": "arXiv:2605.23071",
-      "title": "The Efficiency Frontier: A Unified Framework for Cost-Performance Optimization in LLM Context Management",
-      "source_url": "https://arxiv.org/html/2605.23071v2",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-14T12:45:08+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-00",
@@ -2729,8 +2704,8 @@
     },
     {
       "canonical_id": "arXiv:2604.17091",
-      "title": "GenericAgent: A Token-Efficient Self-Evolving LLM Agent via Contextual Information Density Maximization (V1.0)",
-      "source_url": "https://arxiv.org/html/2604.17091v1",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-14T12:45:09+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-30",
@@ -2751,6 +2726,114 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-5f9e24e21ce2--libfile_e9e54c614abc81919a67387295abd7bf--2026-2604.17091-genericagent-context-density-research-20261014-0845-scheduled-chat-45-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-5f9e24e21ce2--libfile_e9e54c614abc81919a67387295abd7bf--2026-2604.17091-genericagent-context-density-research-20261014-0845-scheduled-chat-45-r01.json",
       "worker_run_key": "20261014-0845-scheduled-chat-45/r01"
+    },
+    {
+      "canonical_id": "arXiv:2601.23278",
+      "title": "FOCUS: DLLMs Know How to Tame Their Compute Bound",
+      "source_url": "https://arxiv.org/html/2601.23278v1",
+      "returned_at": "2026-10-14T12:50:28+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 0 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 6058,
+        "body_paragraphs": 35,
+        "method_chars": 2300,
+        "method_paragraphs": 14,
+        "evaluation_chars": 0,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "評価説明量 0 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_e41afb7e7b1c8191bcdb6043d0fd7f5f--2026-2601.23278-focus-dllm-token-eviction-research-20261014-2130-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_e41afb7e7b1c8191bcdb6043d0fd7f5f--2026-2601.23278-focus-dllm-token-eviction-research-20261014-2130-scheduled-chat-30-r01.json",
+      "worker_run_key": "20261014-2130-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2605.15491",
+      "title": "Ghosted Layers: Unconstrained Activation Alignment for Recovering Layer-Pruned LLMs",
+      "source_url": "https://arxiv.org/abs/2605.15491",
+      "returned_at": "2026-10-14T12:50:28+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 0 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 6157,
+        "body_paragraphs": 32,
+        "method_chars": 1810,
+        "method_paragraphs": 9,
+        "evaluation_chars": 0,
+        "limitation_chars": 937,
+        "insufficiency_flags": [
+          "評価説明量 0 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_64a9825ec6fc8191802f6daf71bcb8ff--2026-2605.15491-ghosted-layers-activation-alignment-research-20261014-2056-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_64a9825ec6fc8191802f6daf71bcb8ff--2026-2605.15491-ghosted-layers-activation-alignment-research-20261014-2056-scheduled-chat-00-r01.json",
+      "worker_run_key": "20261014-2056-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "DOI:10.1145/3712285.3759834",
+      "title": "Towards Efficient LLM Inference via Collective and Adaptive Speculative Decoding",
+      "source_url": "https://doi.org/10.1145/3712285.3759834",
+      "returned_at": "2026-10-14T12:50:29+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 0 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 6270,
+        "body_paragraphs": 33,
+        "method_chars": 1865,
+        "method_paragraphs": 10,
+        "evaluation_chars": 0,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "評価説明量 0 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_e925c473d4948191b343265733d91f2c--2025-doi-10.1145-3712285.3759834-smurfs-collective-adaptive-speculative-decoding-research-20261014-2130-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_e925c473d4948191b343265733d91f2c--2025-doi-10.1145-3712285.3759834-smurfs-collective-adaptive-speculative-decoding-research-20261014-2130-scheduled-chat.json",
+      "worker_run_key": "20261014-2130-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2404.03384",
+      "title": "LongVLM: Efficient Long Video Understanding via Large Language Models",
+      "source_url": "https://arxiv.org/html/2404.03384v3",
+      "returned_at": "2026-10-14T12:50:30+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2024-2404.03384-longvlm-efficient-long-video-understanding-via-large-language-models.md と 14 段落 / 3202文字 (100.0%) が完全一致"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 4464,
+        "body_paragraphs": 23,
+        "method_chars": 1634,
+        "method_paragraphs": 8,
+        "evaluation_chars": 904,
+        "limitation_chars": 471,
+        "insufficiency_flags": []
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-630bbd0dac2d--libfile_9be1a8c1002c8191a1714c543a39caf3--2024-2404.03384-longvlm-hierarchical-video-token-merging-research-20261014-0730-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-630bbd0dac2d--libfile_9be1a8c1002c8191a1714c543a39caf3--2024-2404.03384-longvlm-hierarchical-video-token-merging-research-20261014-0730-scheduled.json",
+      "worker_run_key": "20261014-0730-scheduled-chat-30/r01"
     }
   ]
 }
