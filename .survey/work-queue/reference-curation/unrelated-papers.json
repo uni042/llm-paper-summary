@@ -2,7 +2,7 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-14T15:09:19+00:00",
+  "updated_at": "2026-10-14T16:43:39+00:00",
   "record_count": 12274,
   "records": {
     "arXiv:2303.08774": {
@@ -164067,9 +164067,9 @@
         "id:arXiv:2008.05000",
         "url:https://arxiv.org/abs/2008.05000"
       ],
-      "reason": "一次要旨では、グラフニューラルネットワークの頂点次数に依存する量子化誤差へ対処する量子化考慮学習を提案し、六つのグラフデータセットとCPU上のINT8推論を評価している。低精度推論自体は一般技術だが、対象はGNN特有のグラフ演算で、LLMの重み量子化・KVキャッシュ・生成推論やサービングへの適用を示さないためunrelatedとする。",
+      "reason": "Degree-Quantはグラフのノード次数に由来する量子化誤差を抑えるグラフニューラルネットワーク専用の量子化対応学習である。INT8のCPU推論4.7倍高速化はGNNの実験であり、Transformer/LLMの重み量子化・推論基盤への具体的適用は示していない。",
       "first_checked_at": "2026-10-11T07:45:44+00:00",
-      "last_checked_at": "2026-10-13T09:49:07+00:00",
+      "last_checked_at": "2026-10-14T16:43:38+00:00",
       "linked_from": [],
       "title": "Degree-Quant: Quantization-Aware Training for Graph Neural Networks"
     },
@@ -164082,9 +164082,9 @@
         "id:arXiv:2303.05511",
         "url:https://arxiv.org/abs/2303.05511"
       ],
-      "reason": "一次要旨を確認。GigaGANを用いたテキスト条件付き画像生成のGAN構造と高解像度画像合成が主題であり、0.13秒の画像生成速度は画像生成器の推論である。LLMの言語トークン復号、サービング、KVキャッシュ、MoE、階層メモリ、言語推論効率を最終適用先とする研究ではない。",
+      "reason": "GigaGANはStyleGANを大規模画像・文章対画像生成に拡張する生成器・識別器の設計研究で、要旨の0.13秒/512pxは画像生成モデルの推論速度である。LLMのトークン復号、KVキャッシュ、MoE、サービング基盤の機構を提案していないため対象外。",
       "first_checked_at": "2026-10-11T08:49:39+00:00",
-      "last_checked_at": "2026-10-14T05:39:45+00:00",
+      "last_checked_at": "2026-10-14T16:43:37+00:00",
       "linked_from": [],
       "title": "Scaling up GANs for Text-to-Image Synthesis"
     },
@@ -164302,9 +164302,9 @@
         "id:arXiv:2203.10314",
         "url:https://arxiv.org/abs/2203.10314"
       ],
-      "reason": "タイトルが示す対象は点群からの3次元物体検出であり、Voxel Set Transformerは点群集合間の検出処理を扱う。言語モデルの推論基盤やLLMサービングの最適化を主題とするものではないため、Research本文読解へは進めない。",
+      "reason": "VoxSeTは点群をボクセル単位の集合注意で処理しKITTI・Waymoの3D物体検出を改善する視覚認識モデルである。線形計算量の注意構造は点群・ボクセル専用で、LLM推論や言語モデルのサービングへの適用・測定は要旨にない。",
       "first_checked_at": "2026-10-11T14:41:43+00:00",
-      "last_checked_at": "2026-10-14T04:47:00+00:00",
+      "last_checked_at": "2026-10-14T16:43:39+00:00",
       "linked_from": [],
       "title": "Voxel Set Transformer: A Set-to-Set Approach to 3D Object Detection from Point Clouds"
     },
