@@ -29,6 +29,8 @@ last_checked: "2026-10-13"
 worker_completed_at: "2026-10-13T22:46:00+09:00"
 worker_run_key: "20261013-2230-scheduled-chat-30/r01"
 worker_id: "scheduled-chat-30"
+last_audited: null
+audit_version: 0
 ---
 
 # LLM推論の電力効率：量子化、バッチ化、配信方式の実測比較

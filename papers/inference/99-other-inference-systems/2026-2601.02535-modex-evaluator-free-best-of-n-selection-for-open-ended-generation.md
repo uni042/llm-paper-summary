@@ -31,6 +31,8 @@ worklist_rank: 30
 reference_main_sha: '06d12bbe0e49761da768550f0f8d8a4f2ae8a6f4'
 quality_self_review_passed: true
 quality_self_review_version: '2026-10-07'
+last_audited: null
+audit_version: 0
 ---
 
 # ModeX：複数生成の合意構造から外部採点器なしで回答を選択する

@@ -46,6 +46,8 @@ last_checked: '2026-10-14'
 worker_id: 'scheduled-chat-30'
 worker_completed_at: '2026-10-14T02:40:00+09:00'
 worker_run_key: '20261014-0230-scheduled-chat-30/r01'
+last_audited: null
+audit_version: 0
 ---
 
 # Kernel-Smith：進化型探索と改善ステップ学習によるGPUカーネル最適化
