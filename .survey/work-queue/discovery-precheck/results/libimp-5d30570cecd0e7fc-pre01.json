@@ -1,0 +1,780 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-5d30570cecd0e7fc-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-5d30570cecd0",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "DOI:10.52202/079017-3595",
+    "SemanticScholar:84d13eb6c3fa53d9d45c5c4526ab88ba608c244d",
+    "arXiv:2409.11650",
+    "arXiv:2410.21340",
+    "arXiv:2503.17922",
+    "arXiv:2505.17074",
+    "arXiv:2506.13771",
+    "arXiv:2506.15745",
+    "arXiv:2602.03681",
+    "arXiv:2604.27476",
+    "arXiv:2606.04032",
+    "arXiv:2609.33887",
+    "arXiv:2609.34060",
+    "arXiv:2610.01230"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 14,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": false,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "42077da6468224cd1f2b687e0a8eec8ddf6a1eea",
+  "raw_search_result_count": 14,
+  "retrieval_duplicate_filtered_count": 7,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 7,
+  "provider_progress": {
+    "requested_count": 14,
+    "status_counts": {
+      "allowed": 7,
+      "filtered_by_snapshot": 7,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-14T12:26:31.902213+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "DOI:10.52202/079017-3595",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "SemanticScholar:84d13eb6c3fa53d9d45c5c4526ab88ba608c244d",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:SemanticScholar:84d13eb6c3fa53d9d45c5c4526ab88ba608c244d"
+    },
+    {
+      "requested_id": "arXiv:2409.11650",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2409.11650"
+    },
+    {
+      "requested_id": "arXiv:2410.21340",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2503.17922",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2503.17922"
+    },
+    {
+      "requested_id": "arXiv:2505.17074",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2505.17074"
+    },
+    {
+      "requested_id": "arXiv:2506.13771",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2506.15745",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2602.03681",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2602.03681"
+    },
+    {
+      "requested_id": "arXiv:2604.27476",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2606.04032",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2606.04032"
+    },
+    {
+      "requested_id": "arXiv:2609.33887",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2609.34060",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:SemanticScholar:cb9b5775e8d6be746645659d79e139a5d53622dc"
+    },
+    {
+      "requested_id": "arXiv:2610.01230",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "EdgeFM: Efficient Edge Inference for Vision-Language Models",
+      "source_url": "https://arxiv.org/abs/2604.27476",
+      "year": 2026,
+      "published": "2026-04-30",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Vision-language models (VLMs) have demonstrated strong applicability in edge industrial applications, yet their deployment remains severely constrained by requirements for deterministic low latency and stable execution under resource limitations. Existing frameworks either rely on bloated general-purpose designs or force developers into opaque, hardware-specific closed-source ecosystems, leading to hardware lock-in limitation and poor cross-platform adaptability. Observing that modern AI agents can efficiently search and tune configurations to generate highly optimized low-level kernels for standard LLM operators, we propose EdgeFM, a lightweight, agent-driven VLM/LLM inference framework tailored for cross-platform industrial edge deployment. EdgeFM removes non-essential features to reduce single-request latency, and encapsulates agent-tuned kernel optimizations as a modular library of reusable skills. By allowing direct invocation of these skills rather than waiting for closed-source implementations, it effectively closes the performance gap long dominated by proprietary toolchains. The framework natively supports mainstream platforms including x86 and NVIDIA Orin SoCs, and represents the first end-to-end VLA deployment on the domestic Horizon Journey platform, enhancing cross-platform portability. In most cases, it yields clearly better inference performance than conventional vendor-specific toolchains, achieving up to 1.49 times speedup over TensorRT-Edge-LLM on the NVIDIA Orin platform. Experimental results show that EdgeFM delivers favorable end-to-end inference performance, providing an open-source, production-grade solution for diverse edge industrial scenarios.",
+      "identifiers": [
+        "SemanticScholar:11b4eb8ee9e0275e02ef549fc1ee819a54f61979"
+      ],
+      "semantic_scholar_id": "11b4eb8ee9e0275e02ef549fc1ee819a54f61979",
+      "canonical_id": "arXiv:2604.27476",
+      "arxiv_id": "2604.27476",
+      "doi": "10.48550/arXiv.2604.27476",
+      "authors": [
+        "Menglin Deng",
+        "Yuanpeng Chen",
+        "Sheng-Jing Yang",
+        "Weilin Tao",
+        "Wen-Hai Zhang",
+        "Hui Song",
+        "Linyuanhao Qin",
+        "Kaiyong Zhao",
+        "Xiao-Jun Ye",
+        "Shanhui Mo",
+        "Jing-Li Fan",
+        "Shuang Zhang",
+        "Bei Liu",
+        "Tiankun Zhao",
+        "X. An"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 167,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Faster Block-Diffusion Serving with Distribution-Free Risk Guarantees",
+      "source_url": "https://arxiv.org/abs/2609.33887",
+      "year": 2026,
+      "published": "2026-09-27",
+      "venue": null,
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Block-diffusion language models are served at hand-picked operating points, such as acceptance thresholds, buffer depth, schedule, checkpoint and precision, and each point is chosen by its mean benchmark accuracy. However, a mean does not tell an operator how often a faster configuration fails on prompts that the slower one answers correctly. On the serving engine and its decode traces, the default commit rule already commits every fully resolved block, a static skip rule captures nearly all of the compute that allocation can save, and self-distillation on engine-decoded targets adds speed at unchanged accuracy. Larger speedups come from lower thresholds, which commit tokens that are still uncertain. We therefore present Redline, a finite-sample procedure that selects operating points, hand-picked or learned, from the correctness of their answers on calibration prompts. Redline keeps the reference-relative risk, the joint probability that the reference answers correctly and a candidate configuration does not, within a user-chosen budget with high probability, and deploys the fastest configuration that passes. It speeds up math at a smaller risk budget than code in both model families, and at a budget of ten percent it deploys a LLaDA2 math configuration that commits over a third more tokens in each forward. It also applies without modification to the acceptance rule of speculative decoding and to weight quantization. On the same calibration data, Redline stays within its stated failure probability, whereas each tolerance of a mean-accuracy rule either gains less speed for some model and task or exceeds the risk budget far more often for another. Code is available at https://github.com/js-lee-AI/Redline.",
+      "identifiers": [
+        "SemanticScholar:57f70e9c573fa3a20ccd18887a901bc8f6d34544"
+      ],
+      "semantic_scholar_id": "57f70e9c573fa3a20ccd18887a901bc8f6d34544",
+      "canonical_id": "arXiv:2609.33887",
+      "arxiv_id": "2609.33887",
+      "authors": [
+        "Jungseob Lee",
+        "D. Lee",
+        "Chanjun Park",
+        "Sugyeong Eo",
+        "Heu-Jeoung Lim"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 17,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "InfiniPot-V: Memory-Constrained KV Cache Compression for Streaming Video Understanding",
+      "source_url": "https://arxiv.org/abs/2506.15745",
+      "year": 2025,
+      "published": "2025-06-18",
+      "venue": "Neural Information Processing Systems",
+      "citation_count": 62,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Modern multimodal large language models (MLLMs) can reason over hour-long video, yet their key-value (KV) cache grows linearly with time-quickly exceeding the fixed memory of phones, AR glasses, and edge robots. Prior compression schemes either assume the whole video and user query are available offline or must first build the full cache, so memory still scales with stream length. InfiniPot-V is the first training-free, query-agnostic framework that enforces a hard, length-independent memory cap for streaming video understanding. During video encoding it monitors the cache and, once a user-set threshold is reached, runs a lightweight compression pass that (i) removes temporally redundant tokens via Temporal-axis Redundancy (TaR) metric and (ii) keeps semantically significant tokens via Value-Norm (VaN) ranking. Across four open-source MLLMs and four long-video and streaming-video benchmarks, InfiniPot-V cuts peak GPU memory by up to 94%, sustains real-time generation, and matches or surpasses full-cache accuracy-even in multi-turn dialogues. By dissolving the KV cache bottleneck without retraining or query knowledge, InfiniPot-V closes the gap for on-device streaming video assistants.",
+      "identifiers": [
+        "SemanticScholar:9be83cc37ea50459136dd13ef9b28b554a059e4d"
+      ],
+      "semantic_scholar_id": "9be83cc37ea50459136dd13ef9b28b554a059e4d",
+      "canonical_id": "arXiv:2506.15745",
+      "arxiv_id": "2506.15745",
+      "doi": "10.48550/arXiv.2506.15745",
+      "authors": [
+        "Minsoo Kim",
+        "Kyuhong Shim",
+        "Jungwook Choi",
+        "Simyung Chang"
+      ],
+      "priority": 72,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 62,
+        "citation_count": 62,
+        "total": 72,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 483,
+        "matched_prestigious_venue": "Neural Information Processing Systems"
+      }
+    },
+    {
+      "title": "ArkVale: Efficient Generative LLM Inference with Recallable Key-Value Eviction",
+      "source_url": "https://doi.org/10.52202/079017-3595",
+      "year": 2024,
+      "published": null,
+      "venue": "Neural Information Processing Systems",
+      "citation_count": 58,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Models (LLMs) are widely used in today’s tasks of natural language processing. To support applications like multi-turn chats, document understanding, and content generation, models with long context lengths are growing in importance. However, managing long contexts brings substantial challenges due to the expansion of key-value cache (KV cache). Longer KV cache requires larger memory, limiting the batch-size and thus decreasing throughput. Also, computing attention over long KV cache incurs more memory access, hurting the end-to-end latency. Prior works find that it is sufficient to use only the recent and high-impact tokens for attention computation, allowing the eviction of less vital tokens to reduce memory footprint. Nonetheless, we observe a dynamic shift in token importance across different decoding steps. Tokens initially evicted might regain importance after certain decoding steps. To address this, we propose A RK V ALE , a page-based KV cache manager that can recognize and recall important tokens evicted before. We asynchronously copy the filled page into external memory (e.g., CPU memory) as backup and summarize/compress it into a much smaller digest by constructing the bounding-volume of the keys in the KV-page",
+      "identifiers": [
+        "SemanticScholar:8153906992cc87084010e170ce52c638c94ee04e"
+      ],
+      "semantic_scholar_id": "8153906992cc87084010e170ce52c638c94ee04e",
+      "doi": "10.52202/079017-3595",
+      "canonical_id": "DOI:10.52202/079017-3595",
+      "authors": [
+        "Renze Chen",
+        "Zhuofeng Wang",
+        "Beiquan Cao",
+        "Tong Wu",
+        "Size Zheng",
+        "Xiuhong Li",
+        "Xue-Chao Wei",
+        "Shen-Gen Yan",
+        "Meng Li",
+        "Yun Liang"
+      ],
+      "priority": 68,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 58,
+        "citation_count": 58,
+        "total": 68,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 835,
+        "matched_prestigious_venue": "Neural Information Processing Systems"
+      }
+    },
+    {
+      "title": "LittleBit: Ultra Low-Bit Quantization via Latent Factorization",
+      "source_url": "https://arxiv.org/abs/2506.13771",
+      "year": 2025,
+      "published": "2025-05-30",
+      "venue": "Neural Information Processing Systems",
+      "citation_count": 14,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The deployment of large language models (LLMs) is frequently hindered by prohibitive memory and computational requirements. While quantization mitigates these bottlenecks, maintaining model fidelity in the sub-1-bit regime remains a persistent challenge. In this paper, we introduce LittleBit, a novel framework for extreme LLM compression. We target quantization rates as low as $0.1$ bits per weight (BPW), achieving a memory reduction of approximately $31\\times$, which effectively compresses Llama2-13B to under $0.9$ GB. We represent weights via low-rank latent matrix factorization and subsequently binarize the resulting factors. To counteract the information loss inherent to such drastic precision reduction, we integrate a multi-scale compensation mechanism that learns importance parameters across row, column, and latent dimensions. Two primary contributions enable effective training: Dual Sign-Value-Independent Decomposition (Dual-SVID) for quantization-aware training (QAT) initialization, and Residual Compensation to minimize approximation errors. Extensive experiments confirm the superiority of LittleBit in the sub-1-bit domain; for instance, our method at $0.1$ BPW surpasses the performance of leading techniques operating at $0.7$ BPW on Llama2-7B. We establish a new size-performance trade-off -- unlocking a potential $11.6\\times$ inference speedup relative to FP16 -- and render powerful LLMs practical for resource-constrained environments. Our code is available at https://github.com/SamsungLabs/LittleBit.",
+      "identifiers": [
+        "SemanticScholar:993fce9e6428dcfd02c7adc069a28df1e4ab6e99"
+      ],
+      "semantic_scholar_id": "993fce9e6428dcfd02c7adc069a28df1e4ab6e99",
+      "canonical_id": "arXiv:2506.13771",
+      "arxiv_id": "2506.13771",
+      "doi": "10.48550/arXiv.2506.13771",
+      "authors": [
+        "Banseok Lee",
+        "DongKyu Kim",
+        "Youngcheon You",
+        "Youngmin Kim"
+      ],
+      "priority": 24,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 14,
+        "citation_count": 14,
+        "total": 24,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 502,
+        "matched_prestigious_venue": "Neural Information Processing Systems"
+      }
+    },
+    {
+      "title": "HHR: Hierarchical Hash Retrieval for Efficient LLM Generation",
+      "source_url": "https://arxiv.org/abs/2610.01230",
+      "year": 2026,
+      "published": "2026-10-01",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Efficient long-context inference is essential for large language models (LLMs), yet it poses a severe computational bottleneck. Hash-based retrieval offers an efficient alternative by encoding queries and keys into binary codes and using Hamming distance for key selection. However, this leads to a critical mismatch between Hamming distance and attention relevance. Query-Key logits depend jointly on directional similarity and feature magnitudes, whereas hash binarization discards magnitude information, causing both false-positive retrieval of low-logit keys and false-negative omission of high-logit keys. To address these failures, we propose Hierarchical Hash Retrieval (HHR), a coarse-to-fine framework that progressively improves retrieval accuracy through Geometry-Aware Key Routing (GKR) and Learned Hash Projection (LHP). GKR learns a head-wise orthogonal transformation to redistribute feature magnitudes and derive more discriminative page-level logit bounds, enabling effective pruning of low-logit keys while preserving important candidates. LHP then learns a head-wise projection space that aligns Hamming distance with the true Query-Key relevance ranking for fine-grained retrieval. By combining GKR and LHP, HHR suppresses false positives and recovers false negatives, substantially improving the fidelity of hash-based sparse attention. Extensive experiments across diverse LLMs and benchmarks demonstrate that HHR achieves superior performance over existing methods. For example, on LongBench, HHR improves the average score by 1.10 points and, at a context length of 128K, achieves up to a 3.30x decoding speedup and a 2.83x end-to-end speedup for Llama-3.1-8B-Instruct. The code is publicly available at https://github.com/lianjunl13-sudo/HHR.",
+      "identifiers": [
+        "SemanticScholar:ef8f2b58364dee9ff95f7fc424cfd1712dc7ff5a"
+      ],
+      "semantic_scholar_id": "ef8f2b58364dee9ff95f7fc424cfd1712dc7ff5a",
+      "canonical_id": "arXiv:2610.01230",
+      "arxiv_id": "2610.01230",
+      "authors": [
+        "Lian Liu",
+        "Tian-Tian Zheng",
+        "You Huang",
+        "Wei-Qi Yan",
+        "Ming-Te Qiu",
+        "Hua-Zhong Liu",
+        "Xiao-Feng Zhu",
+        "Yunshan Zhong"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 13,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Meta-Learning for Speeding Up Large Model Inference in Decentralized Environments",
+      "source_url": "https://arxiv.org/abs/2410.21340",
+      "year": 2024,
+      "published": "2024-10-28",
+      "venue": "arXiv.org",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The deployment of large-scale models, such as large language models (LLMs) and sophisticated image generation systems, incurs substantial costs due to their computational demands. To mitigate these costs and address challenges related to scalability and data security, there is a growing shift towards decentralized systems for deploying such models. In these decentralized environments, efficient inference acceleration becomes crucial to manage computational resources effectively and enhance system responsiveness. In this work, we address the challenge of selecting optimal acceleration methods in decentralized systems by introducing a meta-learning-based framework. This framework automates the selection process by learning from historical performance data of various acceleration techniques across different tasks. Unlike traditional methods that rely on random selection or expert intuition, our approach systematically identifies the best acceleration strategies based on the specific characteristics of each task. We demonstrate that our meta-learning framework not only streamlines the decision-making process but also consistently outperforms conventional methods in terms of efficiency and performance. Our results highlight the potential of meta-learning to revolutionize inference acceleration in decentralized AI systems, offering a path towards more democratic and economically feasible artificial intelligence solutions.",
+      "identifiers": [
+        "SemanticScholar:6f0548d04b6029f048dd048c3311eefa0f238fa2"
+      ],
+      "semantic_scholar_id": "6f0548d04b6029f048dd048c3311eefa0f238fa2",
+      "canonical_id": "arXiv:2410.21340",
+      "arxiv_id": "2410.21340",
+      "doi": "10.48550/arXiv.2410.21340",
+      "authors": [
+        "Yipeng Du",
+        "Zihao Wang",
+        "Ahmad Farhan",
+        "C. Angione",
+        "Harry Yang",
+        "Fielding Johnston",
+        "James P. Buban",
+        "Patrick Colangelo",
+        "Yue Zhao",
+        "Yu-Zhe Yang"
+      ],
+      "priority": 3,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 3,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 716,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2604.27476",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2604.27476",
+        "id:SemanticScholar:11b4eb8ee9e0275e02ef549fc1ee819a54f61979",
+        "id:arXiv:2604.27476",
+        "title:edgefm efficient edge inference for visionlanguage models",
+        "url:https://arxiv.org/abs/2604.27476"
+      ],
+      "record": {
+        "title": "EdgeFM: Efficient Edge Inference for Vision-Language Models",
+        "source_url": "https://arxiv.org/abs/2604.27476",
+        "year": 2026,
+        "published": "2026-04-30",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Vision-language models (VLMs) have demonstrated strong applicability in edge industrial applications, yet their deployment remains severely constrained by requirements for deterministic low latency and stable execution under resource limitations. Existing frameworks either rely on bloated general-purpose designs or force developers into opaque, hardware-specific closed-source ecosystems, leading to hardware lock-in limitation and poor cross-platform adaptability. Observing that modern AI agents can efficiently search and tune configurations to generate highly optimized low-level kernels for standard LLM operators, we propose EdgeFM, a lightweight, agent-driven VLM/LLM inference framework tailored for cross-platform industrial edge deployment. EdgeFM removes non-essential features to reduce single-request latency, and encapsulates agent-tuned kernel optimizations as a modular library of reusable skills. By allowing direct invocation of these skills rather than waiting for closed-source implementations, it effectively closes the performance gap long dominated by proprietary toolchains. The framework natively supports mainstream platforms including x86 and NVIDIA Orin SoCs, and represents the first end-to-end VLA deployment on the domestic Horizon Journey platform, enhancing cross-platform portability. In most cases, it yields clearly better inference performance than conventional vendor-specific toolchains, achieving up to 1.49 times speedup over TensorRT-Edge-LLM on the NVIDIA Orin platform. Experimental results show that EdgeFM delivers favorable end-to-end inference performance, providing an open-source, production-grade solution for diverse edge industrial scenarios.",
+        "identifiers": [
+          "SemanticScholar:11b4eb8ee9e0275e02ef549fc1ee819a54f61979"
+        ],
+        "semantic_scholar_id": "11b4eb8ee9e0275e02ef549fc1ee819a54f61979",
+        "canonical_id": "arXiv:2604.27476",
+        "arxiv_id": "2604.27476",
+        "doi": "10.48550/arXiv.2604.27476",
+        "authors": [
+          "Menglin Deng",
+          "Yuanpeng Chen",
+          "Sheng-Jing Yang",
+          "Weilin Tao",
+          "Wen-Hai Zhang",
+          "Hui Song",
+          "Linyuanhao Qin",
+          "Kaiyong Zhao",
+          "Xiao-Jun Ye",
+          "Shanhui Mo",
+          "Jing-Li Fan",
+          "Shuang Zhang",
+          "Bei Liu",
+          "Tiankun Zhao",
+          "X. An"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 167,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.33887",
+      "identity_tokens": [
+        "id:SemanticScholar:57f70e9c573fa3a20ccd18887a901bc8f6d34544",
+        "id:arXiv:2609.33887",
+        "title:faster blockdiffusion serving with distributionfree risk guarantees",
+        "url:https://arxiv.org/abs/2609.33887"
+      ],
+      "record": {
+        "title": "Faster Block-Diffusion Serving with Distribution-Free Risk Guarantees",
+        "source_url": "https://arxiv.org/abs/2609.33887",
+        "year": 2026,
+        "published": "2026-09-27",
+        "venue": null,
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Block-diffusion language models are served at hand-picked operating points, such as acceptance thresholds, buffer depth, schedule, checkpoint and precision, and each point is chosen by its mean benchmark accuracy. However, a mean does not tell an operator how often a faster configuration fails on prompts that the slower one answers correctly. On the serving engine and its decode traces, the default commit rule already commits every fully resolved block, a static skip rule captures nearly all of the compute that allocation can save, and self-distillation on engine-decoded targets adds speed at unchanged accuracy. Larger speedups come from lower thresholds, which commit tokens that are still uncertain. We therefore present Redline, a finite-sample procedure that selects operating points, hand-picked or learned, from the correctness of their answers on calibration prompts. Redline keeps the reference-relative risk, the joint probability that the reference answers correctly and a candidate configuration does not, within a user-chosen budget with high probability, and deploys the fastest configuration that passes. It speeds up math at a smaller risk budget than code in both model families, and at a budget of ten percent it deploys a LLaDA2 math configuration that commits over a third more tokens in each forward. It also applies without modification to the acceptance rule of speculative decoding and to weight quantization. On the same calibration data, Redline stays within its stated failure probability, whereas each tolerance of a mean-accuracy rule either gains less speed for some model and task or exceeds the risk budget far more often for another. Code is available at https://github.com/js-lee-AI/Redline.",
+        "identifiers": [
+          "SemanticScholar:57f70e9c573fa3a20ccd18887a901bc8f6d34544"
+        ],
+        "semantic_scholar_id": "57f70e9c573fa3a20ccd18887a901bc8f6d34544",
+        "canonical_id": "arXiv:2609.33887",
+        "arxiv_id": "2609.33887",
+        "authors": [
+          "Jungseob Lee",
+          "D. Lee",
+          "Chanjun Park",
+          "Sugyeong Eo",
+          "Heu-Jeoung Lim"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 17,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2506.15745",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2506.15745",
+        "id:SemanticScholar:9be83cc37ea50459136dd13ef9b28b554a059e4d",
+        "id:arXiv:2506.15745",
+        "title:infinipotv memoryconstrained kv cache compression for streaming video understanding",
+        "url:https://arxiv.org/abs/2506.15745"
+      ],
+      "record": {
+        "title": "InfiniPot-V: Memory-Constrained KV Cache Compression for Streaming Video Understanding",
+        "source_url": "https://arxiv.org/abs/2506.15745",
+        "year": 2025,
+        "published": "2025-06-18",
+        "venue": "Neural Information Processing Systems",
+        "citation_count": 62,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Modern multimodal large language models (MLLMs) can reason over hour-long video, yet their key-value (KV) cache grows linearly with time-quickly exceeding the fixed memory of phones, AR glasses, and edge robots. Prior compression schemes either assume the whole video and user query are available offline or must first build the full cache, so memory still scales with stream length. InfiniPot-V is the first training-free, query-agnostic framework that enforces a hard, length-independent memory cap for streaming video understanding. During video encoding it monitors the cache and, once a user-set threshold is reached, runs a lightweight compression pass that (i) removes temporally redundant tokens via Temporal-axis Redundancy (TaR) metric and (ii) keeps semantically significant tokens via Value-Norm (VaN) ranking. Across four open-source MLLMs and four long-video and streaming-video benchmarks, InfiniPot-V cuts peak GPU memory by up to 94%, sustains real-time generation, and matches or surpasses full-cache accuracy-even in multi-turn dialogues. By dissolving the KV cache bottleneck without retraining or query knowledge, InfiniPot-V closes the gap for on-device streaming video assistants.",
+        "identifiers": [
+          "SemanticScholar:9be83cc37ea50459136dd13ef9b28b554a059e4d"
+        ],
+        "semantic_scholar_id": "9be83cc37ea50459136dd13ef9b28b554a059e4d",
+        "canonical_id": "arXiv:2506.15745",
+        "arxiv_id": "2506.15745",
+        "doi": "10.48550/arXiv.2506.15745",
+        "authors": [
+          "Minsoo Kim",
+          "Kyuhong Shim",
+          "Jungwook Choi",
+          "Simyung Chang"
+        ],
+        "priority": 72,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 62,
+          "citation_count": 62,
+          "total": 72,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 483,
+          "matched_prestigious_venue": "Neural Information Processing Systems"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.52202/079017-3595",
+      "identity_tokens": [
+        "id:DOI:10.52202/079017-3595",
+        "id:SemanticScholar:8153906992cc87084010e170ce52c638c94ee04e",
+        "title:arkvale efficient generative llm inference with recallable keyvalue eviction",
+        "url:https://doi.org/10.52202/079017-3595"
+      ],
+      "record": {
+        "title": "ArkVale: Efficient Generative LLM Inference with Recallable Key-Value Eviction",
+        "source_url": "https://doi.org/10.52202/079017-3595",
+        "year": 2024,
+        "published": null,
+        "venue": "Neural Information Processing Systems",
+        "citation_count": 58,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large Language Models (LLMs) are widely used in today’s tasks of natural language processing. To support applications like multi-turn chats, document understanding, and content generation, models with long context lengths are growing in importance. However, managing long contexts brings substantial challenges due to the expansion of key-value cache (KV cache). Longer KV cache requires larger memory, limiting the batch-size and thus decreasing throughput. Also, computing attention over long KV cache incurs more memory access, hurting the end-to-end latency. Prior works find that it is sufficient to use only the recent and high-impact tokens for attention computation, allowing the eviction of less vital tokens to reduce memory footprint. Nonetheless, we observe a dynamic shift in token importance across different decoding steps. Tokens initially evicted might regain importance after certain decoding steps. To address this, we propose A RK V ALE , a page-based KV cache manager that can recognize and recall important tokens evicted before. We asynchronously copy the filled page into external memory (e.g., CPU memory) as backup and summarize/compress it into a much smaller digest by constructing the bounding-volume of the keys in the KV-page",
+        "identifiers": [
+          "SemanticScholar:8153906992cc87084010e170ce52c638c94ee04e"
+        ],
+        "semantic_scholar_id": "8153906992cc87084010e170ce52c638c94ee04e",
+        "doi": "10.52202/079017-3595",
+        "canonical_id": "DOI:10.52202/079017-3595",
+        "authors": [
+          "Renze Chen",
+          "Zhuofeng Wang",
+          "Beiquan Cao",
+          "Tong Wu",
+          "Size Zheng",
+          "Xiuhong Li",
+          "Xue-Chao Wei",
+          "Shen-Gen Yan",
+          "Meng Li",
+          "Yun Liang"
+        ],
+        "priority": 68,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 58,
+          "citation_count": 58,
+          "total": 68,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 835,
+          "matched_prestigious_venue": "Neural Information Processing Systems"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2506.13771",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2506.13771",
+        "id:SemanticScholar:993fce9e6428dcfd02c7adc069a28df1e4ab6e99",
+        "id:arXiv:2506.13771",
+        "title:littlebit ultra lowbit quantization via latent factorization",
+        "url:https://arxiv.org/abs/2506.13771"
+      ],
+      "record": {
+        "title": "LittleBit: Ultra Low-Bit Quantization via Latent Factorization",
+        "source_url": "https://arxiv.org/abs/2506.13771",
+        "year": 2025,
+        "published": "2025-05-30",
+        "venue": "Neural Information Processing Systems",
+        "citation_count": 14,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The deployment of large language models (LLMs) is frequently hindered by prohibitive memory and computational requirements. While quantization mitigates these bottlenecks, maintaining model fidelity in the sub-1-bit regime remains a persistent challenge. In this paper, we introduce LittleBit, a novel framework for extreme LLM compression. We target quantization rates as low as $0.1$ bits per weight (BPW), achieving a memory reduction of approximately $31\\times$, which effectively compresses Llama2-13B to under $0.9$ GB. We represent weights via low-rank latent matrix factorization and subsequently binarize the resulting factors. To counteract the information loss inherent to such drastic precision reduction, we integrate a multi-scale compensation mechanism that learns importance parameters across row, column, and latent dimensions. Two primary contributions enable effective training: Dual Sign-Value-Independent Decomposition (Dual-SVID) for quantization-aware training (QAT) initialization, and Residual Compensation to minimize approximation errors. Extensive experiments confirm the superiority of LittleBit in the sub-1-bit domain; for instance, our method at $0.1$ BPW surpasses the performance of leading techniques operating at $0.7$ BPW on Llama2-7B. We establish a new size-performance trade-off -- unlocking a potential $11.6\\times$ inference speedup relative to FP16 -- and render powerful LLMs practical for resource-constrained environments. Our code is available at https://github.com/SamsungLabs/LittleBit.",
+        "identifiers": [
+          "SemanticScholar:993fce9e6428dcfd02c7adc069a28df1e4ab6e99"
+        ],
+        "semantic_scholar_id": "993fce9e6428dcfd02c7adc069a28df1e4ab6e99",
+        "canonical_id": "arXiv:2506.13771",
+        "arxiv_id": "2506.13771",
+        "doi": "10.48550/arXiv.2506.13771",
+        "authors": [
+          "Banseok Lee",
+          "DongKyu Kim",
+          "Youngcheon You",
+          "Youngmin Kim"
+        ],
+        "priority": 24,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 14,
+          "citation_count": 14,
+          "total": 24,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 502,
+          "matched_prestigious_venue": "Neural Information Processing Systems"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.01230",
+      "identity_tokens": [
+        "id:SemanticScholar:ef8f2b58364dee9ff95f7fc424cfd1712dc7ff5a",
+        "id:arXiv:2610.01230",
+        "title:hhr hierarchical hash retrieval for efficient llm generation",
+        "url:https://arxiv.org/abs/2610.01230"
+      ],
+      "record": {
+        "title": "HHR: Hierarchical Hash Retrieval for Efficient LLM Generation",
+        "source_url": "https://arxiv.org/abs/2610.01230",
+        "year": 2026,
+        "published": "2026-10-01",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Efficient long-context inference is essential for large language models (LLMs), yet it poses a severe computational bottleneck. Hash-based retrieval offers an efficient alternative by encoding queries and keys into binary codes and using Hamming distance for key selection. However, this leads to a critical mismatch between Hamming distance and attention relevance. Query-Key logits depend jointly on directional similarity and feature magnitudes, whereas hash binarization discards magnitude information, causing both false-positive retrieval of low-logit keys and false-negative omission of high-logit keys. To address these failures, we propose Hierarchical Hash Retrieval (HHR), a coarse-to-fine framework that progressively improves retrieval accuracy through Geometry-Aware Key Routing (GKR) and Learned Hash Projection (LHP). GKR learns a head-wise orthogonal transformation to redistribute feature magnitudes and derive more discriminative page-level logit bounds, enabling effective pruning of low-logit keys while preserving important candidates. LHP then learns a head-wise projection space that aligns Hamming distance with the true Query-Key relevance ranking for fine-grained retrieval. By combining GKR and LHP, HHR suppresses false positives and recovers false negatives, substantially improving the fidelity of hash-based sparse attention. Extensive experiments across diverse LLMs and benchmarks demonstrate that HHR achieves superior performance over existing methods. For example, on LongBench, HHR improves the average score by 1.10 points and, at a context length of 128K, achieves up to a 3.30x decoding speedup and a 2.83x end-to-end speedup for Llama-3.1-8B-Instruct. The code is publicly available at https://github.com/lianjunl13-sudo/HHR.",
+        "identifiers": [
+          "SemanticScholar:ef8f2b58364dee9ff95f7fc424cfd1712dc7ff5a"
+        ],
+        "semantic_scholar_id": "ef8f2b58364dee9ff95f7fc424cfd1712dc7ff5a",
+        "canonical_id": "arXiv:2610.01230",
+        "arxiv_id": "2610.01230",
+        "authors": [
+          "Lian Liu",
+          "Tian-Tian Zheng",
+          "You Huang",
+          "Wei-Qi Yan",
+          "Ming-Te Qiu",
+          "Hua-Zhong Liu",
+          "Xiao-Feng Zhu",
+          "Yunshan Zhong"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 13,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2410.21340",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2410.21340",
+        "id:SemanticScholar:6f0548d04b6029f048dd048c3311eefa0f238fa2",
+        "id:arXiv:2410.21340",
+        "title:metalearning for speeding up large model inference in decentralized environments",
+        "url:https://arxiv.org/abs/2410.21340"
+      ],
+      "record": {
+        "title": "Meta-Learning for Speeding Up Large Model Inference in Decentralized Environments",
+        "source_url": "https://arxiv.org/abs/2410.21340",
+        "year": 2024,
+        "published": "2024-10-28",
+        "venue": "arXiv.org",
+        "citation_count": 3,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The deployment of large-scale models, such as large language models (LLMs) and sophisticated image generation systems, incurs substantial costs due to their computational demands. To mitigate these costs and address challenges related to scalability and data security, there is a growing shift towards decentralized systems for deploying such models. In these decentralized environments, efficient inference acceleration becomes crucial to manage computational resources effectively and enhance system responsiveness. In this work, we address the challenge of selecting optimal acceleration methods in decentralized systems by introducing a meta-learning-based framework. This framework automates the selection process by learning from historical performance data of various acceleration techniques across different tasks. Unlike traditional methods that rely on random selection or expert intuition, our approach systematically identifies the best acceleration strategies based on the specific characteristics of each task. We demonstrate that our meta-learning framework not only streamlines the decision-making process but also consistently outperforms conventional methods in terms of efficiency and performance. Our results highlight the potential of meta-learning to revolutionize inference acceleration in decentralized AI systems, offering a path towards more democratic and economically feasible artificial intelligence solutions.",
+        "identifiers": [
+          "SemanticScholar:6f0548d04b6029f048dd048c3311eefa0f238fa2"
+        ],
+        "semantic_scholar_id": "6f0548d04b6029f048dd048c3311eefa0f238fa2",
+        "canonical_id": "arXiv:2410.21340",
+        "arxiv_id": "2410.21340",
+        "doi": "10.48550/arXiv.2410.21340",
+        "authors": [
+          "Yipeng Du",
+          "Zihao Wang",
+          "Ahmad Farhan",
+          "C. Angione",
+          "Harry Yang",
+          "Fielding Johnston",
+          "James P. Buban",
+          "Patrick Colangelo",
+          "Yue Zhao",
+          "Yu-Zhe Yang"
+        ],
+        "priority": 3,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 3,
+          "citation_count": 3,
+          "total": 3,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 716,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:2df1e95f7e0312ca6f5c5c5f037347eb5c9d923c8ddfabf43fff1e1f6ee4abd8",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}
