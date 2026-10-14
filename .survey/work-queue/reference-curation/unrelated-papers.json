@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-14T06:36:23+00:00",
-  "record_count": 12161,
+  "updated_at": "2026-10-14T07:31:06+00:00",
+  "record_count": 12171,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -175040,6 +175040,128 @@
         "papers/inference/99-other-inference-systems/2019-1905.09418-analyzing-multi-head-self-attention-specialized-heads-do-the-heavy-lifti.md"
       ],
       "title": "Linguistic Blind Spots of Large Language Models"
+    },
+    "DOI:10.1007/978-981-96-0960-4_24": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1007/978-981-96-0960-4_24",
+      "identity_tokens": [
+        "DOI:10.1007/978-981-96-0960-4_24"
+      ],
+      "reason": "QR-DETR routes object queries through selected detection-transformer decoder layers, allowing other queries to exit early and preventing indiscriminate communication; the publisher abstract evaluates COCO detection mAP, without a concrete LLM inference connection.",
+      "first_checked_at": "2026-10-14T07:31:03+00:00",
+      "last_checked_at": "2026-10-14T07:31:03+00:00",
+      "linked_from": [],
+      "title": "QR-DETR: Query Routing for Detection Transformer"
+    },
+    "PMLR:pmlr-v180-garg22a": {
+      "classification": "unrelated",
+      "canonical_id": "PMLR:pmlr-v180-garg22a",
+      "identity_tokens": [
+        "PMLR:pmlr-v180-garg22a",
+        "SemanticScholar:e03e75f34d88ddb49c1edc252d4cfd94903eb70f"
+      ],
+      "reason": "The primary abstract concerns estimating transfer entropy in time series for finance and neuroscience using conditional likelihoods and locality-sensitive-hash perturbations; it does not connect this estimator to LLM inference/system efficiency.",
+      "first_checked_at": "2026-10-14T07:31:03+00:00",
+      "last_checked_at": "2026-10-14T07:31:03+00:00",
+      "linked_from": [],
+      "title": "Estimating transfer entropy under long ranged dependencies"
+    },
+    "arXiv:2311.04499": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2311.04499",
+      "identity_tokens": [
+        "arXiv:2311.04499"
+      ],
+      "reason": "The abstract presents COVAP as gradient compression and communication-computation overlap for DNN data-parallel training; the improvement is training time/scaling, with no inference, serving, or deployment mechanism for LLM systems.",
+      "first_checked_at": "2026-10-14T07:31:04+00:00",
+      "last_checked_at": "2026-10-14T07:31:04+00:00",
+      "linked_from": [],
+      "title": "Near-Linear Scaling Data Parallel Training with Overlapping-Aware Gradient Compression"
+    },
+    "DOI:10.1140/epjs/s11734-024-01447-1": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1140/epjs/s11734-024-01447-1",
+      "identity_tokens": [
+        "DOI:10.1140/epjs/s11734-024-01447-1"
+      ],
+      "reason": "The publisher abstract pretrains an encoder on electronic health records and fine-tunes encoder-decoder disease prediction, comparing diagnostic precision/recall; no LLM inference-system efficiency mechanism is established.",
+      "first_checked_at": "2026-10-14T07:31:04+00:00",
+      "last_checked_at": "2026-10-14T07:31:04+00:00",
+      "linked_from": [],
+      "title": "A transformer-based model for next disease prediction using electronic health records"
+    },
+    "DOI:10.51302/tce.2024.19081": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.51302/tce.2024.19081",
+      "identity_tokens": [
+        "DOI:10.51302/tce.2024.19081"
+      ],
+      "reason": "The primary Spanish abstract analyzes ChatGPT/GPT-4 legal-sector functionality, limitations and legal risks; it provides no LLM inference execution optimization.",
+      "first_checked_at": "2026-10-14T07:31:04+00:00",
+      "last_checked_at": "2026-10-14T07:31:04+00:00",
+      "linked_from": [],
+      "title": "ChatGPT y GPT-4: utilidades en el sector jurídico, funcionamiento, limitaciones y riesgos  de los modelos fundacionales"
+    },
+    "arXiv:2404.00399": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2404.00399",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2404.00399",
+        "arXiv:2404.00399"
+      ],
+      "reason": "The primary arXiv record has a different title from the packet title and describes open model pretraining, multilingual performance, and red-teaming; it contributes no inference efficiency or serving mechanism.",
+      "first_checked_at": "2026-10-14T07:31:05+00:00",
+      "last_checked_at": "2026-10-14T07:31:05+00:00",
+      "linked_from": [],
+      "title": "Aurora-M: Open Source Continual Pre-training for Multilingual Language and Code"
+    },
+    "DOI:10.1007/s11280-025-01350-2": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1007/s11280-025-01350-2",
+      "identity_tokens": [
+        "DOI:10.1007/s11280-025-01350-2"
+      ],
+      "reason": "The publisher abstract surveys sustainability awareness in over 1,100 ML-conference papers using resource/carbon-reporting categories; it assesses research practices and guidelines rather than proposing or benchmarking an LLM inference efficiency mechanism.",
+      "first_checked_at": "2026-10-14T07:31:05+00:00",
+      "last_checked_at": "2026-10-14T07:31:05+00:00",
+      "linked_from": [],
+      "title": "Assessing awareness of environmental sustainability in machine learning research"
+    },
+    "arXiv:2601.09026": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.09026",
+      "identity_tokens": [
+        "arXiv:2601.09026"
+      ],
+      "reason": "The abstract targets parallel acceleration in transformer forward/backpropagation during training; workflow scope excludes training-only speedup without a concrete inference-system contribution.",
+      "first_checked_at": "2026-10-14T07:31:05+00:00",
+      "last_checked_at": "2026-10-14T07:31:05+00:00",
+      "linked_from": [],
+      "title": "Layer-Parallel Training for Transformers"
+    },
+    "arXiv:2602.11081": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.11081",
+      "identity_tokens": [
+        "arXiv:2602.11081"
+      ],
+      "reason": "The abstract describes a domain-specific German tax-law benchmark and model adapted with synthetic data; its contribution is legal task capability, with no inference-system efficiency mechanism.",
+      "first_checked_at": "2026-10-14T07:31:06+00:00",
+      "last_checked_at": "2026-10-14T07:31:06+00:00",
+      "linked_from": [],
+      "title": "SteuerLLM: Local specialized large language model for German tax law analysis"
+    },
+    "arXiv:2607.10299": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.10299",
+      "identity_tokens": [
+        "arXiv:2607.10299"
+      ],
+      "reason": "AVDC decouples audio/visual captions and AVDC-QA-CoT supplies reasoning supervision; its two-stage model training improves omni-modal perception benchmarks without an inference execution efficiency mechanism.",
+      "first_checked_at": "2026-10-14T07:31:06+00:00",
+      "last_checked_at": "2026-10-14T07:31:06+00:00",
+      "linked_from": [],
+      "title": "Empowering Long-form Omni-modal Understanding with Robust Audio Perception"
     }
   }
 }
