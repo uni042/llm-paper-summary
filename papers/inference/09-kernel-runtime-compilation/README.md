@@ -23,7 +23,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - [06-moe-quantization-compression](../06-moe-quantization-compression/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（79本）
+## 自動生成の論文一覧（80本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -127,6 +127,10 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - **2026-05 · [Self-Pruned Key-Value Attention: Learning When to Write by Predicting Future Utility](2026-2605.14037-self-pruned-key-value-attention-learning-when-to-write-by-predicting-fut.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   長い会話、検索拡張生成、エージェントの反復処理ではKVキャッシュの容量とメモリ帯域がボトルネックとなる。読出し時だけ重要なKVを選ぶ疎注意方式は計算量を減らせるが、全KVを保存し続ける限り容量の増加は止まらない。
+
+- **2026-05 · [Memory-Bound but Not Bandwidth-Limited: The Physical AI Inference Gap in Batch-1 LLM Decode](2026-2605.30571-memory-bound-but-not-bandwidth-limited-the-physical-ai-inference-gap-in-.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  研究の中心は新しい注意演算を発明することではなく、既存の復号経路で、メモリ転送、CPUからのGPUカーネル起動、量子化カーネルの適合性を切り分ける測定設計にある。
 
 - **2026-05 · [GPU Forecasters: Language Models as Selective Surrogates for Kernel Runtime Optimization](2026-2605.31464-gpu-forecasters-kernel-runtime-surrogates.md)**  
   実装：[✓](https://github.com/codezakh/gpu-forecasters) ・ リポジトリ内被引用：0  
