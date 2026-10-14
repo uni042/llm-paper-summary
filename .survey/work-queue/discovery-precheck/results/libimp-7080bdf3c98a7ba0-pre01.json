@@ -1,0 +1,599 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-7080bdf3c98a7ba0-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-7080bdf3c98a",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2410.07407",
+    "arXiv:2410.19318",
+    "arXiv:2411.02795",
+    "arXiv:2601.09694",
+    "arXiv:2604.17087",
+    "arXiv:2605.31256"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 6,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "78e6bfaad36d2af3632f91038403e1a4e305640f",
+  "raw_search_result_count": 6,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 6,
+  "provider_progress": {
+    "requested_count": 6,
+    "status_counts": {
+      "allowed": 6,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-14T09:49:10.712486+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2410.07407",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2410.19318",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2411.02795",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2601.09694",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2604.17087",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2605.31256",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "EvoComp: Learning Visual Token Compression for Multimodal Large Language Models via Semantic-Guided Evolutionary Labeling",
+      "source_url": "https://arxiv.org/abs/2604.17087",
+      "year": 2026,
+      "published": "2026-04-18",
+      "venue": "arXiv.org",
+      "citation_count": 5,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Recent Multimodal Large Language Models (MLLMs) have demonstrated strong performance on vision-language understanding tasks, yet their inference efficiency is often hampered by the large number of visual tokens, particularly in high-resolution or multi-image scenarios. To address this issue, we propose EvoComp, a visual token compression framework that significantly reduces token count while preserving task accuracy. EvoComp introduces a lightweight encoder-only transformer-based compressor that selects the most informative and non-redundant visual tokens by jointly considering visual and textual contexts. A core challenge lies in providing effective supervision for training the compressor. To this end, we design an evolutionary labeling strategy that searches for token subsets minimizing the MLLM's output loss, while enforcing semantic diversity through vocabulary-based token grouping. We further train the compressor using a tailored loss function combining the GHM loss to mitigate class and difficulty imbalance, and a cosine similarity regularization to encourage semantic separation between retained and discarded tokens. Extensive experiments across multiple vision-language benchmarks show that EvoComp outperforms existing methods based on attention or similarity heuristics. Notably, it retains 99.3% of the original accuracy under 3x token compression and delivers up to 1.6x speedup on mobile devices.",
+      "identifiers": [
+        "SemanticScholar:eb5a98c1c47a8791f2f1cfc44f9cf39bf2bfeb1c"
+      ],
+      "semantic_scholar_id": "eb5a98c1c47a8791f2f1cfc44f9cf39bf2bfeb1c",
+      "canonical_id": "arXiv:2604.17087",
+      "arxiv_id": "2604.17087",
+      "doi": "10.48550/arXiv.2604.17087",
+      "authors": [
+        "Jiafei Song",
+        "Feng Zhou",
+        "Jinkai Qu",
+        "Wen-Jing Li",
+        "Tongzi Wu",
+        "Geng-Jian Xue",
+        "Zhikang Zhao",
+        "Dao-Min Wei",
+        "Yi-Chao Lu",
+        "Bailin Na"
+      ],
+      "priority": 105,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 5,
+        "citation_count": 5,
+        "total": 105,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 179,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "LLMs can Compress LLMs: Adaptive Pruning by Agents",
+      "source_url": "https://arxiv.org/abs/2601.09694",
+      "year": 2026,
+      "published": "2026-01-14",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "As Large Language Models (LLMs) continue to scale, post-training pruning has emerged as a promising approach to reduce computational costs while preserving performance. Existing methods such as SparseGPT and Wanda achieve high sparsity through layer-wise weight reconstruction or activation-aware magnitude pruning, but rely on uniform or hand-crafted heuristics to determine per-layer sparsity ratios. Moreover, recent work has shown that pruned LLMs suffer from severe factual knowledge degradation, with structured pruning methods experiencing near-total collapse in factual question-answering capabilities. We introduce agent-guided pruning, where a foundation model acts as an adaptive pruning agent to intelligently select which layers to prune at each iteration while preserving critical knowledge pathways. Our method constructs layer-wise sensitivity profiles by combining Wanda-inspired weight-activation metrics with gradient importance scores, normalized as z-scores for model-agnostic comparison. These statistics are processed by an LLM agent equipped with self-reflection capabilities, enabling it to learn from previous pruning outcomes and iteratively refine its strategy. A checkpoint rollback mechanism maintains model quality by reverting when perplexity degradation exceeds a threshold. We evaluate our approach on Qwen3 models (4B and 8B parameters) at approximately 45% sparsity, demonstrating substantial improvements over structured pruning baselines: 56% relative improvement in MMLU accuracy, 19x better factual knowledge retention on FreebaseQA, and 69% lower perplexity degradation. Notably, our framework requires no retraining, operates in a model-agnostic manner, and exhibits effective self-correction with only 2-4 rollbacks across 21-40 iterations, demonstrating that foundation models can effectively guide the compression of other foundation models.",
+      "identifiers": [
+        "SemanticScholar:52953dce22548a1e3b94c273ae7b4d5406f5e9cd"
+      ],
+      "semantic_scholar_id": "52953dce22548a1e3b94c273ae7b4d5406f5e9cd",
+      "canonical_id": "arXiv:2601.09694",
+      "arxiv_id": "2601.09694",
+      "doi": "10.48550/arXiv.2601.09694",
+      "authors": [
+        "Sai Varun Kodathala",
+        "Rakesh Vunnam"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 273,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Before Parc Fermé: RL-Time Pruning for Efficient Embodied LLMs in Autonomous Driving",
+      "source_url": "https://arxiv.org/abs/2605.31256",
+      "year": 2026,
+      "published": "2026-05-29",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Embodied Large Language Models (LLMs) are increasingly used as reasoning modules in robotic control pipelines to improve human-robot interaction, but their memory and generation latency make real-time deployment difficult. Pruning can reduce these costs, but for controllers that undergo multiple pre- and post-training phases, the crucial question is not only how much to prune, but when pruning should occur. In this work, we propose Before Parc Ferm\\'e (BPF), a pruning strategy performed during RL that compresses embodied LLM controllers while they are still being optimized for closed-loop behavior. This allows pruning decisions to account for the task-specific supervision and closed-loop feedback that shape the final controller. We propose two variants: BPF-RL, which performs iterative pruning during RL by removing part of the model at predefined training intervals, and BPF-SFT/RL, which first prunes part of the model structure during SFT and then further compresses it during RL using the same iterative strategy as BPF-RL until the target pruning ratio is reached. We evaluate BPF on RobotxR1, an LLM-based autonomous-driving control pipeline, using an established LLM pruning framework (LLM-Pruner), and compare it against post-training pruning, post-training pruning with RL recovery, SFT-stage pruning, and smaller dense models from the same family. Our results show that BPF provides the best task-performance vs. memory and throughput trade-off among the considered pruning strategies. When compressing the larger RobotxR1 models, BPF-SFT/RL achieves a $1.69\\times$ better size-end-to-end performance trade-off than directly selecting a smaller dense model from the same family, measured as removed parameters per lost percentage point of control adaptability. On the Jetson AGX Orin mounted on the target robotic platform, the compact models improve decode throughput by up to $27\\%$.",
+      "identifiers": [
+        "SemanticScholar:c4b5c9d0d3795afb4d9ef87ea1973df40f5824a9"
+      ],
+      "semantic_scholar_id": "c4b5c9d0d3795afb4d9ef87ea1973df40f5824a9",
+      "canonical_id": "arXiv:2605.31256",
+      "arxiv_id": "2605.31256",
+      "doi": "10.48550/arXiv.2605.31256",
+      "authors": [
+        "Luca Benfenati",
+        "Alireza Azimi",
+        "M. Risso",
+        "F. Carapellese",
+        "D. J. Pagliari",
+        "A. Burrello"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 138,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Optimized Spatial Architecture Mapping Flow for Transformer Accelerators",
+      "source_url": "https://arxiv.org/abs/2410.07407",
+      "year": 2024,
+      "published": "2024-10-09",
+      "venue": "arXiv.org",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Recent innovations in Transformer-based large language models have significantly advanced the field of general-purpose neural language understanding and generation. With billions of trainable parameters, deployment of these large models relies on high-performance hardware accelerators to efficiently deliver the required computation. Spatial architectures, such as TPUs, offer a promising solution to accelerating computation-intensive workloads. However, the design process for existing spatial architectures is predominantly manual, and it often involves time-consuming redesigns for new applications and new problem dimensions, which greatly limits the development of optimally designed accelerators for Transformer models. To address these challenges, we propose SAMT (Spatial Architecture Mapping for Transformers), a comprehensive framework designed to optimize the dataflow mapping of Transformer inference workloads onto spatial accelerators. We demonstrate the effectiveness of SAMT in improving the performance of spatial accelerators for Transformer models. We propose and leverage the dynamic operator fusion schemes for the Transformer models and co-search the optimal dataflow mapping strategies for spatial accelerators. SAMT significantly reduces inference latency by 12% to 91% and energy consumption by 3% to 23% for evaluated Transformer models compared to traditional spatial accelerator designs among edge, mobile and cloud settings.",
+      "identifiers": [
+        "SemanticScholar:9cfc07744ed54cd5114422922a82c41e470e5bca"
+      ],
+      "semantic_scholar_id": "9cfc07744ed54cd5114422922a82c41e470e5bca",
+      "canonical_id": "arXiv:2410.07407",
+      "arxiv_id": "2410.07407",
+      "doi": "10.48550/arXiv.2410.07407",
+      "authors": [
+        "Hao-Cheng Xu",
+        "Faraz Tahmasebi",
+        "Ye Qiao",
+        "Hongzheng Tian",
+        "Hyoukjun Kwon",
+        "Si-Tao Huang"
+      ],
+      "priority": 3,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 3,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 735,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Two are better than one: Context window extension with multi-grained self-injection",
+      "source_url": "https://arxiv.org/abs/2410.19318",
+      "year": 2024,
+      "published": "2024-10-25",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The limited context window of contemporary large language models (LLMs) remains a huge barrier to their broader application across various domains. While continual pre-training on long-context data is a straightforward and effective solution, it incurs substantial costs in terms of data acquisition and computational resources. To alleviate this issue, we propose SharedLLM, a novel approach grounded in the design philosophy of multi-grained context compression and query-aware information retrieval. SharedLLM is composed of two short-context LLMs such as LLaMA-2, termed upper model and lower model. The lower model functions as a compressor while the upper model acts as a decoder. The upper model receives compressed, multi-grained context information from the lower model and performs context-aware modeling on the running text. Information transfer between the compressor and decoder occurs only at the lowest layers to refrain from long forward paths in the lower model and redundant cross-attention modules in the upper model. Based on this architecture, we introduce a specialized tree-style data structure to efficiently encode, store and retrieve multi-grained contextual information for text chunks. This structure, combined with a search algorithm, enables rapid encoding and retrieval of relevant information from various levels of the tree based on the input query. This entire process, wherein the sender and receiver are derived from the same LLM layer, is referred to as self-injection.",
+      "identifiers": [
+        "SemanticScholar:3d922e815d764f3285403f0522a708f98ea88f39"
+      ],
+      "semantic_scholar_id": "3d922e815d764f3285403f0522a708f98ea88f39",
+      "canonical_id": "arXiv:2410.19318",
+      "arxiv_id": "2410.19318",
+      "doi": "10.48550/arXiv.2410.19318",
+      "authors": [
+        "Wei Han",
+        "Pan Zhou",
+        "Soujanya Poria",
+        "Shui-Cheng Yan"
+      ],
+      "priority": 2,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 2,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 719,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "The Evolution of RWKV: Advancements in Efficient Language Modeling",
+      "source_url": "https://arxiv.org/abs/2411.02795",
+      "year": 2024,
+      "published": "2024-11-05",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "This paper reviews the development of the Receptance Weighted Key Value (RWKV) architecture, emphasizing its advancements in efficient language modeling. RWKV combines the training efficiency of Transformers with the inference efficiency of RNNs through a novel linear attention mechanism. We examine its core innovations, adaptations across various domains, and performance advantages over traditional models. The paper also discusses challenges and future directions for RWKV as a versatile architecture in deep learning.",
+      "identifiers": [
+        "SemanticScholar:ee89e60f772c8cb7ced05b6b955eb8ddc20e5804"
+      ],
+      "semantic_scholar_id": "ee89e60f772c8cb7ced05b6b955eb8ddc20e5804",
+      "canonical_id": "arXiv:2411.02795",
+      "arxiv_id": "2411.02795",
+      "doi": "10.48550/arXiv.2411.02795",
+      "authors": [
+        "Akul Datta"
+      ],
+      "priority": 1,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 1,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 708,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2604.17087",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2604.17087",
+        "id:SemanticScholar:eb5a98c1c47a8791f2f1cfc44f9cf39bf2bfeb1c",
+        "id:arXiv:2604.17087",
+        "title:evocomp learning visual token compression for multimodal large language models via semanticguided evolutionary labeling",
+        "url:https://arxiv.org/abs/2604.17087"
+      ],
+      "record": {
+        "title": "EvoComp: Learning Visual Token Compression for Multimodal Large Language Models via Semantic-Guided Evolutionary Labeling",
+        "source_url": "https://arxiv.org/abs/2604.17087",
+        "year": 2026,
+        "published": "2026-04-18",
+        "venue": "arXiv.org",
+        "citation_count": 5,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Recent Multimodal Large Language Models (MLLMs) have demonstrated strong performance on vision-language understanding tasks, yet their inference efficiency is often hampered by the large number of visual tokens, particularly in high-resolution or multi-image scenarios. To address this issue, we propose EvoComp, a visual token compression framework that significantly reduces token count while preserving task accuracy. EvoComp introduces a lightweight encoder-only transformer-based compressor that selects the most informative and non-redundant visual tokens by jointly considering visual and textual contexts. A core challenge lies in providing effective supervision for training the compressor. To this end, we design an evolutionary labeling strategy that searches for token subsets minimizing the MLLM's output loss, while enforcing semantic diversity through vocabulary-based token grouping. We further train the compressor using a tailored loss function combining the GHM loss to mitigate class and difficulty imbalance, and a cosine similarity regularization to encourage semantic separation between retained and discarded tokens. Extensive experiments across multiple vision-language benchmarks show that EvoComp outperforms existing methods based on attention or similarity heuristics. Notably, it retains 99.3% of the original accuracy under 3x token compression and delivers up to 1.6x speedup on mobile devices.",
+        "identifiers": [
+          "SemanticScholar:eb5a98c1c47a8791f2f1cfc44f9cf39bf2bfeb1c"
+        ],
+        "semantic_scholar_id": "eb5a98c1c47a8791f2f1cfc44f9cf39bf2bfeb1c",
+        "canonical_id": "arXiv:2604.17087",
+        "arxiv_id": "2604.17087",
+        "doi": "10.48550/arXiv.2604.17087",
+        "authors": [
+          "Jiafei Song",
+          "Feng Zhou",
+          "Jinkai Qu",
+          "Wen-Jing Li",
+          "Tongzi Wu",
+          "Geng-Jian Xue",
+          "Zhikang Zhao",
+          "Dao-Min Wei",
+          "Yi-Chao Lu",
+          "Bailin Na"
+        ],
+        "priority": 105,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 5,
+          "citation_count": 5,
+          "total": 105,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 179,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2601.09694",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2601.09694",
+        "id:SemanticScholar:52953dce22548a1e3b94c273ae7b4d5406f5e9cd",
+        "id:arXiv:2601.09694",
+        "title:llms can compress llms adaptive pruning by agents",
+        "url:https://arxiv.org/abs/2601.09694"
+      ],
+      "record": {
+        "title": "LLMs can Compress LLMs: Adaptive Pruning by Agents",
+        "source_url": "https://arxiv.org/abs/2601.09694",
+        "year": 2026,
+        "published": "2026-01-14",
+        "venue": "arXiv.org",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "As Large Language Models (LLMs) continue to scale, post-training pruning has emerged as a promising approach to reduce computational costs while preserving performance. Existing methods such as SparseGPT and Wanda achieve high sparsity through layer-wise weight reconstruction or activation-aware magnitude pruning, but rely on uniform or hand-crafted heuristics to determine per-layer sparsity ratios. Moreover, recent work has shown that pruned LLMs suffer from severe factual knowledge degradation, with structured pruning methods experiencing near-total collapse in factual question-answering capabilities. We introduce agent-guided pruning, where a foundation model acts as an adaptive pruning agent to intelligently select which layers to prune at each iteration while preserving critical knowledge pathways. Our method constructs layer-wise sensitivity profiles by combining Wanda-inspired weight-activation metrics with gradient importance scores, normalized as z-scores for model-agnostic comparison. These statistics are processed by an LLM agent equipped with self-reflection capabilities, enabling it to learn from previous pruning outcomes and iteratively refine its strategy. A checkpoint rollback mechanism maintains model quality by reverting when perplexity degradation exceeds a threshold. We evaluate our approach on Qwen3 models (4B and 8B parameters) at approximately 45% sparsity, demonstrating substantial improvements over structured pruning baselines: 56% relative improvement in MMLU accuracy, 19x better factual knowledge retention on FreebaseQA, and 69% lower perplexity degradation. Notably, our framework requires no retraining, operates in a model-agnostic manner, and exhibits effective self-correction with only 2-4 rollbacks across 21-40 iterations, demonstrating that foundation models can effectively guide the compression of other foundation models.",
+        "identifiers": [
+          "SemanticScholar:52953dce22548a1e3b94c273ae7b4d5406f5e9cd"
+        ],
+        "semantic_scholar_id": "52953dce22548a1e3b94c273ae7b4d5406f5e9cd",
+        "canonical_id": "arXiv:2601.09694",
+        "arxiv_id": "2601.09694",
+        "doi": "10.48550/arXiv.2601.09694",
+        "authors": [
+          "Sai Varun Kodathala",
+          "Rakesh Vunnam"
+        ],
+        "priority": 102,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 102,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 273,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.31256",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2605.31256",
+        "id:SemanticScholar:c4b5c9d0d3795afb4d9ef87ea1973df40f5824a9",
+        "id:arXiv:2605.31256",
+        "title:before parc fermé rltime pruning for efficient embodied llms in autonomous driving",
+        "url:https://arxiv.org/abs/2605.31256"
+      ],
+      "record": {
+        "title": "Before Parc Fermé: RL-Time Pruning for Efficient Embodied LLMs in Autonomous Driving",
+        "source_url": "https://arxiv.org/abs/2605.31256",
+        "year": 2026,
+        "published": "2026-05-29",
+        "venue": "arXiv.org",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Embodied Large Language Models (LLMs) are increasingly used as reasoning modules in robotic control pipelines to improve human-robot interaction, but their memory and generation latency make real-time deployment difficult. Pruning can reduce these costs, but for controllers that undergo multiple pre- and post-training phases, the crucial question is not only how much to prune, but when pruning should occur. In this work, we propose Before Parc Ferm\\'e (BPF), a pruning strategy performed during RL that compresses embodied LLM controllers while they are still being optimized for closed-loop behavior. This allows pruning decisions to account for the task-specific supervision and closed-loop feedback that shape the final controller. We propose two variants: BPF-RL, which performs iterative pruning during RL by removing part of the model at predefined training intervals, and BPF-SFT/RL, which first prunes part of the model structure during SFT and then further compresses it during RL using the same iterative strategy as BPF-RL until the target pruning ratio is reached. We evaluate BPF on RobotxR1, an LLM-based autonomous-driving control pipeline, using an established LLM pruning framework (LLM-Pruner), and compare it against post-training pruning, post-training pruning with RL recovery, SFT-stage pruning, and smaller dense models from the same family. Our results show that BPF provides the best task-performance vs. memory and throughput trade-off among the considered pruning strategies. When compressing the larger RobotxR1 models, BPF-SFT/RL achieves a $1.69\\times$ better size-end-to-end performance trade-off than directly selecting a smaller dense model from the same family, measured as removed parameters per lost percentage point of control adaptability. On the Jetson AGX Orin mounted on the target robotic platform, the compact models improve decode throughput by up to $27\\%$.",
+        "identifiers": [
+          "SemanticScholar:c4b5c9d0d3795afb4d9ef87ea1973df40f5824a9"
+        ],
+        "semantic_scholar_id": "c4b5c9d0d3795afb4d9ef87ea1973df40f5824a9",
+        "canonical_id": "arXiv:2605.31256",
+        "arxiv_id": "2605.31256",
+        "doi": "10.48550/arXiv.2605.31256",
+        "authors": [
+          "Luca Benfenati",
+          "Alireza Azimi",
+          "M. Risso",
+          "F. Carapellese",
+          "D. J. Pagliari",
+          "A. Burrello"
+        ],
+        "priority": 102,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 102,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 138,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2410.07407",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2410.07407",
+        "id:SemanticScholar:9cfc07744ed54cd5114422922a82c41e470e5bca",
+        "id:arXiv:2410.07407",
+        "title:optimized spatial architecture mapping flow for transformer accelerators",
+        "url:https://arxiv.org/abs/2410.07407"
+      ],
+      "record": {
+        "title": "Optimized Spatial Architecture Mapping Flow for Transformer Accelerators",
+        "source_url": "https://arxiv.org/abs/2410.07407",
+        "year": 2024,
+        "published": "2024-10-09",
+        "venue": "arXiv.org",
+        "citation_count": 3,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Recent innovations in Transformer-based large language models have significantly advanced the field of general-purpose neural language understanding and generation. With billions of trainable parameters, deployment of these large models relies on high-performance hardware accelerators to efficiently deliver the required computation. Spatial architectures, such as TPUs, offer a promising solution to accelerating computation-intensive workloads. However, the design process for existing spatial architectures is predominantly manual, and it often involves time-consuming redesigns for new applications and new problem dimensions, which greatly limits the development of optimally designed accelerators for Transformer models. To address these challenges, we propose SAMT (Spatial Architecture Mapping for Transformers), a comprehensive framework designed to optimize the dataflow mapping of Transformer inference workloads onto spatial accelerators. We demonstrate the effectiveness of SAMT in improving the performance of spatial accelerators for Transformer models. We propose and leverage the dynamic operator fusion schemes for the Transformer models and co-search the optimal dataflow mapping strategies for spatial accelerators. SAMT significantly reduces inference latency by 12% to 91% and energy consumption by 3% to 23% for evaluated Transformer models compared to traditional spatial accelerator designs among edge, mobile and cloud settings.",
+        "identifiers": [
+          "SemanticScholar:9cfc07744ed54cd5114422922a82c41e470e5bca"
+        ],
+        "semantic_scholar_id": "9cfc07744ed54cd5114422922a82c41e470e5bca",
+        "canonical_id": "arXiv:2410.07407",
+        "arxiv_id": "2410.07407",
+        "doi": "10.48550/arXiv.2410.07407",
+        "authors": [
+          "Hao-Cheng Xu",
+          "Faraz Tahmasebi",
+          "Ye Qiao",
+          "Hongzheng Tian",
+          "Hyoukjun Kwon",
+          "Si-Tao Huang"
+        ],
+        "priority": 3,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 3,
+          "citation_count": 3,
+          "total": 3,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 735,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2410.19318",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2410.19318",
+        "id:SemanticScholar:3d922e815d764f3285403f0522a708f98ea88f39",
+        "id:arXiv:2410.19318",
+        "title:two are better than one context window extension with multigrained selfinjection",
+        "url:https://arxiv.org/abs/2410.19318"
+      ],
+      "record": {
+        "title": "Two are better than one: Context window extension with multi-grained self-injection",
+        "source_url": "https://arxiv.org/abs/2410.19318",
+        "year": 2024,
+        "published": "2024-10-25",
+        "venue": "arXiv.org",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The limited context window of contemporary large language models (LLMs) remains a huge barrier to their broader application across various domains. While continual pre-training on long-context data is a straightforward and effective solution, it incurs substantial costs in terms of data acquisition and computational resources. To alleviate this issue, we propose SharedLLM, a novel approach grounded in the design philosophy of multi-grained context compression and query-aware information retrieval. SharedLLM is composed of two short-context LLMs such as LLaMA-2, termed upper model and lower model. The lower model functions as a compressor while the upper model acts as a decoder. The upper model receives compressed, multi-grained context information from the lower model and performs context-aware modeling on the running text. Information transfer between the compressor and decoder occurs only at the lowest layers to refrain from long forward paths in the lower model and redundant cross-attention modules in the upper model. Based on this architecture, we introduce a specialized tree-style data structure to efficiently encode, store and retrieve multi-grained contextual information for text chunks. This structure, combined with a search algorithm, enables rapid encoding and retrieval of relevant information from various levels of the tree based on the input query. This entire process, wherein the sender and receiver are derived from the same LLM layer, is referred to as self-injection.",
+        "identifiers": [
+          "SemanticScholar:3d922e815d764f3285403f0522a708f98ea88f39"
+        ],
+        "semantic_scholar_id": "3d922e815d764f3285403f0522a708f98ea88f39",
+        "canonical_id": "arXiv:2410.19318",
+        "arxiv_id": "2410.19318",
+        "doi": "10.48550/arXiv.2410.19318",
+        "authors": [
+          "Wei Han",
+          "Pan Zhou",
+          "Soujanya Poria",
+          "Shui-Cheng Yan"
+        ],
+        "priority": 2,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 2,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 719,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2411.02795",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2411.02795",
+        "id:SemanticScholar:ee89e60f772c8cb7ced05b6b955eb8ddc20e5804",
+        "id:arXiv:2411.02795",
+        "title:the evolution of rwkv advancements in efficient language modeling",
+        "url:https://arxiv.org/abs/2411.02795"
+      ],
+      "record": {
+        "title": "The Evolution of RWKV: Advancements in Efficient Language Modeling",
+        "source_url": "https://arxiv.org/abs/2411.02795",
+        "year": 2024,
+        "published": "2024-11-05",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "This paper reviews the development of the Receptance Weighted Key Value (RWKV) architecture, emphasizing its advancements in efficient language modeling. RWKV combines the training efficiency of Transformers with the inference efficiency of RNNs through a novel linear attention mechanism. We examine its core innovations, adaptations across various domains, and performance advantages over traditional models. The paper also discusses challenges and future directions for RWKV as a versatile architecture in deep learning.",
+        "identifiers": [
+          "SemanticScholar:ee89e60f772c8cb7ced05b6b955eb8ddc20e5804"
+        ],
+        "semantic_scholar_id": "ee89e60f772c8cb7ced05b6b955eb8ddc20e5804",
+        "canonical_id": "arXiv:2411.02795",
+        "arxiv_id": "2411.02795",
+        "doi": "10.48550/arXiv.2411.02795",
+        "authors": [
+          "Akul Datta"
+        ],
+        "priority": 1,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 1,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 708,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:92f9dc33ee1e05353ddd600aa31559e76bc6cdf0048f51243f7c1389a3f197f3",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}
