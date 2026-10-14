@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-10-14T10:45:49.510182+00:00",
+  "generated_at": "2026-10-14T18:02:38.672148+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 5,
+  "count": 7,
   "worker_counts": {
-    "scheduled-chat-00": 1,
-    "scheduled-chat-30": 2,
+    "scheduled-chat-00": 2,
+    "scheduled-chat-30": 3,
     "scheduled-chat-45": 2
   },
   "entries": [
@@ -84,6 +84,46 @@
       "warnings": [
         "日本語比率 73.8% < 警告基準 80%"
       ]
+    },
+    {
+      "path": "papers/inference/05-speculative-decoding-moe/2026-2602.01274-pacer-blockwise-pre-verification-for-speculative-decoding-with-adaptive-.md",
+      "canonical_id": "arXiv:2602.01274",
+      "title": "Pacer: Blockwise Pre-verification for Speculative Decoding with Adaptive Length",
+      "file_bytes": 12297,
+      "source_sha256": "ab810962ffde881e242c74358934e79120ef78dc198ed3d19738577c45e83594",
+      "source_git_blob_sha": "db5ac24a25d08445f3fabb0727aec861a9a31133",
+      "assigned_worker": "scheduled-chat-30",
+      "semantic_status": "pending",
+      "mechanical_status": "PASS",
+      "japanese_ratio": 0.916606,
+      "quality_metrics": {
+        "body_chars": 3639,
+        "method_chars": 1063,
+        "evaluation_chars": 1088,
+        "limitation_chars": 0
+      },
+      "mechanical_failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/99-other-inference-systems/2026-2603.23525-prompt-compression-in-production-task-orchestration-a-pre-registered-ran.md",
+      "canonical_id": "arXiv:2603.23525",
+      "title": "Prompt Compression in Production Task Orchestration: A Pre-Registered Randomized Trial",
+      "file_bytes": 12547,
+      "source_sha256": "f435d8cc3ae698b9f3c6d1f0fa1de2830897ae78342b3fc3807fd20a503621fa",
+      "source_git_blob_sha": "bb0807705c121f90d1e533e2a34d1885d28e3a05",
+      "assigned_worker": "scheduled-chat-00",
+      "semantic_status": "pending",
+      "mechanical_status": "PASS",
+      "japanese_ratio": 0.991652,
+      "quality_metrics": {
+        "body_chars": 3236,
+        "method_chars": 1031,
+        "evaluation_chars": 689,
+        "limitation_chars": 0
+      },
+      "mechanical_failures": [],
+      "warnings": []
     },
     {
       "path": "papers/inference/17-pim-near-data-acceleration/2026-h3-attn.md",
