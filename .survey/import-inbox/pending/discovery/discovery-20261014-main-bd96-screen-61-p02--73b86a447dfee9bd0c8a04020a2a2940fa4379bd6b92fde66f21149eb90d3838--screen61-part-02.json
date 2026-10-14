@@ -1,0 +1,483 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-61",
+  "run_key": "discovery-20261014-main-bd96-screen-61-part-02",
+  "reference_main_sha": "bd96643a3a7a8edbb1fb26b31de1d945e32d6bd3",
+  "record_count": 20,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1109/IISWC66894.2025.00019",
+      "identity_tokens": [
+        "DOI:10.1109/IISWC66894.2025.00019"
+      ],
+      "title": "Keeping up with Large Language Models: A Holistic Methodology of Compute, Memory, Communication, and Cost Modeling",
+      "reason": "LLM training/inference compute-memory-communication-costを統合するperformance model。",
+      "source_url": "https://ieeexplore.ieee.org/abstract/document/11241986",
+      "body_check": "abstract_screen_only; body_not_read",
+      "abstract_evidence_excerpt": "This paper introduces a performance-cost modeling methodology for LLM training and inference that integrates state-of-the-art compute techniques with memory optimizations, and latest communication techniques.",
+      "abstract_evidence_sha256": "fd40a03c3119b8bd4f53981806a26c72f862d14e9664a772095eed3da9fd462f",
+      "abstract_sha256": null,
+      "source_abstract_chars": null,
+      "linked_from": [],
+      "first_checked_at": "2026-10-14T05:47:55Z",
+      "last_checked_at": "2026-10-14T05:47:55Z",
+      "primary_source_status": "verified_primary_abstract"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2605.12460",
+      "identity_tokens": [
+        "arXiv:2605.12460"
+      ],
+      "title": "Multi-Stream LLMs: Unblocking Language Models with Parallel Streams of Thoughts, Inputs and Outputs",
+      "reason": "複数の並列streamを使うinstruction tuningでLLM agent計算の効率改善を主張。",
+      "source_url": "https://arxiv.org/abs/2605.12460v1",
+      "body_check": "abstract_screen_only; body_not_read",
+      "abstract_evidence_excerpt": "The continued improvements in language model capability have unlocked their widespread use as drivers of autonomous agents, for example in coding or computer use",
+      "abstract_evidence_sha256": "561c651794744d8285541413c32d15ab1536c2cbbaaeef68f1ac0285bb1221d3",
+      "abstract_sha256": null,
+      "source_abstract_chars": null,
+      "linked_from": [],
+      "first_checked_at": "2026-10-14T05:47:55Z",
+      "last_checked_at": "2026-10-14T05:47:55Z",
+      "primary_source_status": "verified_primary_abstract",
+      "source_version": "v1",
+      "source_submission_history": [
+        "[v1] Tue, 12 May 2026 17:47:41 UTC (871 KB)"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2503.15369",
+      "identity_tokens": [
+        "arXiv:2503.15369"
+      ],
+      "title": "EfficientLLaVA:Generalizable Auto-Pruning for Large Vision-language Models",
+      "reason": "少数sampleからVLM pruning policyを学びLLaVA比1.8倍推論speedup。",
+      "source_url": "https://arxiv.org/abs/2503.15369v1",
+      "body_check": "abstract_screen_only; body_not_read",
+      "abstract_evidence_excerpt": "In this paper, we propose an automatic pruning method for large vision-language models to enhance the efficiency of multimodal reasoning.",
+      "abstract_evidence_sha256": "4c9e31d062dc03869f2c52c1b3d3424a1112a8f210b199df7ea0e28d4c5ecb1f",
+      "abstract_sha256": null,
+      "source_abstract_chars": null,
+      "linked_from": [],
+      "first_checked_at": "2026-10-14T05:47:55Z",
+      "last_checked_at": "2026-10-14T05:47:55Z",
+      "primary_source_status": "verified_primary_abstract",
+      "source_version": "v1",
+      "source_submission_history": [
+        "[v1] Wed, 19 Mar 2025 16:07:04 UTC (585 KB)"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1117/12.3107387",
+      "identity_tokens": [
+        "DOI:10.1117/12.3107387"
+      ],
+      "title": "Enhancing LLM inference via training-free anchor compression: a layer-wise representation projection framework",
+      "reason": "SPIE publisher DOI pageを取得できず、anchor compressionのabstractを検証不可。 試行URL: https://doi.org/10.1117/12.3107387; SPIE publisher DOI pageを取得できず、anchor compressionのabstractを検証不可。",
+      "source_url": "https://doi.org/10.1117/12.3107387",
+      "body_check": "source_unavailable; abstract_not_read; body_not_read",
+      "abstract_evidence_excerpt": "",
+      "abstract_evidence_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "abstract_sha256": null,
+      "source_abstract_chars": null,
+      "linked_from": [],
+      "first_checked_at": "2026-10-14T05:47:55Z",
+      "last_checked_at": "2026-10-14T05:47:55Z",
+      "primary_source_status": "source_unavailable",
+      "source_attempts": [
+        {
+          "url": "https://doi.org/10.1117/12.3107387",
+          "result": "Web open error: URL https://doi.org/10.1117/12.3107387 is not accessible via this tool."
+        }
+      ],
+      "source_failure": "https://doi.org/10.1117/12.3107387: Web open error: URL https://doi.org/10.1117/12.3107387 is not accessible via this tool."
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2603.16440",
+      "identity_tokens": [
+        "arXiv:2603.16440"
+      ],
+      "title": "Capability-Guided Compression: Toward Interpretability-Aware Budget Allocation for Large Language Models",
+      "reason": "SAE由来の機能指標でLLM componentごとのcompression予算を配分。",
+      "source_url": "https://arxiv.org/abs/2603.16440v1",
+      "body_check": "abstract_screen_only; body_not_read",
+      "abstract_evidence_excerpt": "We propose Capability-Guided Compression (CGC), a framework that addresses this by using Sparse Autoencoder (SAE)-derived capability density maps to allocate differential compression budgets across",
+      "abstract_evidence_sha256": "09b96466e2c69562257a9623324c8deb5107c431c200c02798f9e3113ac7fc02",
+      "abstract_sha256": null,
+      "source_abstract_chars": null,
+      "linked_from": [],
+      "first_checked_at": "2026-10-14T05:47:55Z",
+      "last_checked_at": "2026-10-14T05:47:55Z",
+      "primary_source_status": "verified_primary_abstract",
+      "source_version": "v1",
+      "source_submission_history": [
+        "[v1] Tue, 17 Mar 2026 12:21:07 UTC (792 KB)"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/TCSI.2025.3547732",
+      "identity_tokens": [
+        "DOI:10.1109/TCSI.2025.3547732"
+      ],
+      "title": "OFQ-LLM: Outlier-Flexing Quantization for Efficient Low-Bit Large Language Model Acceleration",
+      "reason": "IEEE publisher abstract page/DOI resolver取得不可。quantization mechanismを一次資料で確認できない。 試行URL: https://doi.org/10.1109/TCSI.2025.3547732; IEEE publisher abstract page/DOI resolver取得不可。quantization mechanismを一次資料で確認できない。",
+      "source_url": "https://doi.org/10.1109/TCSI.2025.3547732",
+      "body_check": "source_unavailable; abstract_not_read; body_not_read",
+      "abstract_evidence_excerpt": "",
+      "abstract_evidence_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "abstract_sha256": null,
+      "source_abstract_chars": null,
+      "linked_from": [],
+      "first_checked_at": "2026-10-14T05:47:55Z",
+      "last_checked_at": "2026-10-14T05:47:55Z",
+      "primary_source_status": "source_unavailable",
+      "source_attempts": [
+        {
+          "url": "https://doi.org/10.1109/TCSI.2025.3547732",
+          "result": "Web open error: URL https://doi.org/10.1109/TCSI.2025.3547732 is not accessible via this tool."
+        }
+      ],
+      "source_failure": "https://doi.org/10.1109/TCSI.2025.3547732: Web open error: URL https://doi.org/10.1109/TCSI.2025.3547732 is not accessible via this tool."
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/ACCESS.2025.3625771",
+      "identity_tokens": [
+        "DOI:10.1109/ACCESS.2025.3625771"
+      ],
+      "title": "Sub 4-bit Power-of-Two-Based Mixed-Precision Quantization for Efficient LLM Compression and Acceleration",
+      "reason": "IEEE Xplore robot verificationによりpublisher abstractを取得できず、method/benchmarkを検証不可。 試行URL: https://doi.org/10.1109/ACCESS.2025.3625771; IEEE Xplore robot verificationによりpublisher abstractを取得できず、method/benchmarkを検証不可。",
+      "source_url": "https://doi.org/10.1109/ACCESS.2025.3625771",
+      "body_check": "source_unavailable; abstract_not_read; body_not_read",
+      "abstract_evidence_excerpt": "",
+      "abstract_evidence_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "abstract_sha256": null,
+      "source_abstract_chars": null,
+      "linked_from": [],
+      "first_checked_at": "2026-10-14T05:47:55Z",
+      "last_checked_at": "2026-10-14T05:47:55Z",
+      "primary_source_status": "source_unavailable",
+      "source_attempts": [
+        {
+          "result": "Redirected to IEEE Xplore document 11218199; JavaScript/robot verification blocked abstract.",
+          "url": "https://doi.org/10.1109/ACCESS.2025.3625771"
+        }
+      ],
+      "source_failure": "https://doi.org/10.1109/ACCESS.2025.3625771: Redirected to IEEE Xplore document 11218199; JavaScript/robot verification blocked abstract."
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.23838",
+      "identity_tokens": [
+        "arXiv:2604.23838"
+      ],
+      "title": "JigsawRL: Assembling RL Pipelines for Efficient LLM Post-Training",
+      "reason": "Sub-Stage Graph・resource allocation・rollout migrationでRL post-training pipelineを高速化するが、一次要旨に推論servingの効率改善への具体的接続はない。",
+      "source_url": "https://arxiv.org/abs/2604.23838v1",
+      "body_check": "abstract_screen_only; body_not_read",
+      "abstract_evidence_excerpt": "We present JigsawRL, a cost-efficient framework that explores Pipeline Multiplexing as a new dimension of RL parallelism.",
+      "abstract_evidence_sha256": "be3db235d46b2891e515fc23e064f8f352b6c17bd1ef81ef33768a64e5f390e3",
+      "abstract_sha256": null,
+      "source_abstract_chars": null,
+      "linked_from": [],
+      "first_checked_at": "2026-10-14T05:47:55Z",
+      "last_checked_at": "2026-10-14T05:47:55Z",
+      "primary_source_status": "verified_primary_abstract",
+      "source_version": "v1",
+      "source_submission_history": [
+        "[v1] Sun, 26 Apr 2026 18:45:31 UTC (967 KB)"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2603.18489",
+      "identity_tokens": [
+        "arXiv:2603.18489"
+      ],
+      "title": "EntropyCache: Decoded Token Entropy Guided KV Caching for Diffusion Language Models",
+      "reason": "token entropyによるconstant-cost KV recomputationでdiffusion LLM inferenceを最大15.2–26.4倍高速化。",
+      "source_url": "https://arxiv.org/abs/2603.18489v1",
+      "body_check": "abstract_screen_only; body_not_read",
+      "abstract_evidence_excerpt": "We propose EntropyCache, a training-free KV caching method that uses the maximum entropy of newly decoded token distributions as a constant-cost signal for deciding",
+      "abstract_evidence_sha256": "003ce3fcdff967947945804bca4c0897a51239ffd55eed4d4985fd3a20387bfc",
+      "abstract_sha256": null,
+      "source_abstract_chars": null,
+      "linked_from": [],
+      "first_checked_at": "2026-10-14T05:47:55Z",
+      "last_checked_at": "2026-10-14T05:47:55Z",
+      "primary_source_status": "verified_primary_abstract",
+      "source_version": "v1",
+      "source_submission_history": [
+        "[v1] Thu, 19 Mar 2026 04:46:34 UTC (1,584 KB)"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/FCCM68464.2026.00026",
+      "identity_tokens": [
+        "DOI:10.1109/FCCM68464.2026.00026"
+      ],
+      "title": "ReCoVLM: A Reconfigurable FPGA–GPU Co-Design for Edge Vision-Language Inference",
+      "reason": "IEEE publisher pageからFPGA–GPU inference co-designのabstractを取得できず。 試行URL: https://doi.org/10.1109/FCCM68464.2026.00026; IEEE publisher pageからFPGA–GPU inference co-designのabstractを取得できず。",
+      "source_url": "https://doi.org/10.1109/FCCM68464.2026.00026",
+      "body_check": "source_unavailable; abstract_not_read; body_not_read",
+      "abstract_evidence_excerpt": "",
+      "abstract_evidence_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "abstract_sha256": null,
+      "source_abstract_chars": null,
+      "linked_from": [],
+      "first_checked_at": "2026-10-14T05:47:55Z",
+      "last_checked_at": "2026-10-14T05:47:55Z",
+      "primary_source_status": "source_unavailable",
+      "source_attempts": [
+        {
+          "url": "https://doi.org/10.1109/FCCM68464.2026.00026",
+          "result": "Web open error: URL https://doi.org/10.1109/FCCM68464.2026.00026 is not accessible via this tool."
+        }
+      ],
+      "source_failure": "https://doi.org/10.1109/FCCM68464.2026.00026: Web open error: URL https://doi.org/10.1109/FCCM68464.2026.00026 is not accessible via this tool."
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2510.11958",
+      "identity_tokens": [
+        "arXiv:2510.11958"
+      ],
+      "title": "Direct Multi-Token Decoding",
+      "reason": "early/middle layersを迂回して複数tokenを生成するdecoderで最大2倍speedup。",
+      "source_url": "https://arxiv.org/abs/2510.11958v1",
+      "body_check": "abstract_screen_only; body_not_read",
+      "abstract_evidence_excerpt": "Decoder-only transformers have become the standard architecture for large language models (LLMs) due to their strong performance.",
+      "abstract_evidence_sha256": "04ac878ee8e8c8d9bb74faf68bbc44048f97297d41ba157a2fd1b3305b4a2d2b",
+      "abstract_sha256": null,
+      "source_abstract_chars": null,
+      "linked_from": [],
+      "first_checked_at": "2026-10-14T05:47:55Z",
+      "last_checked_at": "2026-10-14T05:47:55Z",
+      "primary_source_status": "verified_primary_abstract",
+      "source_version": "v1",
+      "source_submission_history": [
+        "[v1] Mon, 13 Oct 2025 21:42:37 UTC (189 KB)"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2604.02501",
+      "identity_tokens": [
+        "arXiv:2604.02501"
+      ],
+      "title": "ECG Foundation Models and Medical LLMs for Agentic Cardiovascular Intelligence at the Edge: A Review and Outlook",
+      "reason": "edge医療LLM/ECG deployment surveyで、具体的な新規efficiency mechanismの主張は間接的。",
+      "source_url": "https://arxiv.org/abs/2604.02501v1",
+      "body_check": "abstract_screen_only; body_not_read",
+      "abstract_evidence_excerpt": "Electrocardiogram (ECG) foundation models represent a paradigm shift from task-specific pipelines to generalizable architectures pre-trained on large-scale unlabeled waveform data.",
+      "abstract_evidence_sha256": "94acf8b88e060616e10df64013f4431ab6f5f0fe4cde2c4e321dea59ea6c1d1e",
+      "abstract_sha256": null,
+      "source_abstract_chars": null,
+      "linked_from": [],
+      "first_checked_at": "2026-10-14T05:47:55Z",
+      "last_checked_at": "2026-10-14T05:47:55Z",
+      "primary_source_status": "verified_primary_abstract",
+      "source_version": "v1",
+      "source_submission_history": [
+        "[v1] Thu, 2 Apr 2026 20:09:05 UTC (4,986 KB)"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2512.24545",
+      "identity_tokens": [
+        "arXiv:2512.24545"
+      ],
+      "title": "More Than Bits: Multi-Envelope Double Binary Factorization for Extreme Quantization",
+      "reason": "multi-envelope binary factorizationによりLLM weightを低bit化し同一bit予算の精度を改善。",
+      "source_url": "https://arxiv.org/abs/2512.24545v1",
+      "body_check": "abstract_screen_only; body_not_read",
+      "abstract_evidence_excerpt": "We propose Multi-envelope DBF (MDBF), which retains a shared pair of 1-bit sign bases but replaces the single envelope with a rank-$l$ envelope.",
+      "abstract_evidence_sha256": "bc0f9e9ffc2d3c517e543580ab57256d736ce4b2cefd242e35650c9e8de99a8c",
+      "abstract_sha256": null,
+      "source_abstract_chars": null,
+      "linked_from": [],
+      "first_checked_at": "2026-10-14T05:47:55Z",
+      "last_checked_at": "2026-10-14T05:47:55Z",
+      "primary_source_status": "verified_primary_abstract",
+      "source_version": "v1",
+      "source_submission_history": [
+        "[v1] Wed, 31 Dec 2025 01:04:34 UTC (80 KB)"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2605.25469",
+      "identity_tokens": [
+        "arXiv:2605.25469"
+      ],
+      "title": "JacQuant: STE-Free Quantization-Aware Training via Learned Jacobian Surrogates",
+      "reason": "learned Jacobian surrogateでultra-low-bit LLM QATを安定・高速化し追加costを抑える。",
+      "source_url": "https://arxiv.org/abs/2605.25469v1",
+      "body_check": "abstract_screen_only; body_not_read",
+      "abstract_evidence_excerpt": "We introduce JacQuant, a QAT framework that learns a lightweight surrogate of the model's local sensitivity to parameter changes and uses it to stabilize",
+      "abstract_evidence_sha256": "44cc6e94c7f09efa1cd06a40466d14293f44037e53bc179cec5d83c29095d27d",
+      "abstract_sha256": null,
+      "source_abstract_chars": null,
+      "linked_from": [],
+      "first_checked_at": "2026-10-14T05:47:55Z",
+      "last_checked_at": "2026-10-14T05:47:55Z",
+      "primary_source_status": "verified_primary_abstract",
+      "source_version": "v1",
+      "source_submission_history": [
+        "[v1] Mon, 25 May 2026 06:19:49 UTC (208 KB)"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.48550/arXiv.2602.21788",
+      "identity_tokens": [
+        "DOI:10.48550/arXiv.2602.21788",
+        "arXiv:2602.21788"
+      ],
+      "title": "Efficient Scaling of LLM Training with Flexible Context Parallelism",
+      "reason": "FCPは異種sequence長に対応したLLM/MLLM学習時のcontext parallelismであり、一次要旨の実測もtraining throughputに限定される。",
+      "source_url": "https://arxiv.org/abs/2602.21788v2",
+      "body_check": "abstract_screen_only; body_not_read",
+      "abstract_evidence_excerpt": "In this work, we propose Flexible Context Parallelism (FCP), an efficient parallelism strategy that adaptively reconfigures communication groups and context parallelism degrees during LLM",
+      "abstract_evidence_sha256": "d6de19e828be9ebf6df0f788fdb1ea8dde27c57335a5ad90334e7fcd6320d865",
+      "abstract_sha256": null,
+      "source_abstract_chars": null,
+      "linked_from": [],
+      "first_checked_at": "2026-10-14T05:47:55Z",
+      "last_checked_at": "2026-10-14T05:47:55Z",
+      "primary_source_status": "verified_primary_abstract",
+      "source_version": "v2",
+      "source_submission_history": [
+        "[v1] Wed, 25 Feb 2026 11:11:53 UTC (1,552 KB)",
+        "[v2] Mon, 8 Jun 2026 12:37:51 UTC (2,633 KB)"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2411.16585",
+      "identity_tokens": [
+        "arXiv:2411.16585"
+      ],
+      "title": "MarketGPT: Developing a Pre-trained transformer (GPT) for Modeling Financial Time Series",
+      "reason": "金融order-flow生成向けGPTで、要旨に推論/system efficiency mechanismやresource削減はない。",
+      "source_url": "https://arxiv.org/abs/2411.16585v1",
+      "body_check": "abstract_screen_only; body_not_read",
+      "abstract_evidence_excerpt": "Our results demonstrate that the model successfully reproduces key features of order flow data, even when the initial order flow prompt is no longer",
+      "abstract_evidence_sha256": "c99dc94b1703528b3bb7a2fc56e7ce76a3c2c87cdc4ce4e17f270545ada23ca6",
+      "abstract_sha256": null,
+      "source_abstract_chars": null,
+      "linked_from": [],
+      "first_checked_at": "2026-10-14T05:47:55Z",
+      "last_checked_at": "2026-10-14T05:47:55Z",
+      "primary_source_status": "verified_primary_abstract",
+      "source_version": "v1",
+      "source_submission_history": [
+        "[v1] Mon, 25 Nov 2024 17:15:28 UTC (2,580 KB)"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2511.08083",
+      "identity_tokens": [
+        "arXiv:2511.08083"
+      ],
+      "title": "HipKittens: Fast and Furious AMD Kernels",
+      "reason": "AMD向けAI kernel frameworkを提示、attention kernel含む性能を改善するenabling infrastructure。",
+      "source_url": "https://arxiv.org/abs/2511.08083v1",
+      "body_check": "abstract_screen_only; body_not_read",
+      "abstract_evidence_excerpt": "AMD GPUs offer state-of-the-art compute and memory bandwidth; however, peak performance AMD kernels are written in raw assembly.",
+      "abstract_evidence_sha256": "5f2b30935e6d99e6f343f4dd7f8d3dca5d61e04980eec7c3c253d351eedcdd8b",
+      "abstract_sha256": null,
+      "source_abstract_chars": null,
+      "linked_from": [],
+      "first_checked_at": "2026-10-14T05:47:55Z",
+      "last_checked_at": "2026-10-14T05:47:55Z",
+      "primary_source_status": "verified_primary_abstract",
+      "source_version": "v1",
+      "source_submission_history": [
+        "[v1] Tue, 11 Nov 2025 10:36:18 UTC (7,205 KB)"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2604.14403",
+      "identity_tokens": [
+        "arXiv:2604.14403"
+      ],
+      "title": "A Unified Model and Document Representation for On-Device Retrieval-Augmented Generation",
+      "reason": "retrieval representationとgeneration contextを統合圧縮しon-device RAGのcontext sizeを平均1/10化。",
+      "source_url": "https://arxiv.org/abs/2604.14403v1",
+      "body_check": "abstract_screen_only; body_not_read",
+      "abstract_evidence_excerpt": "In this work, we propose a unified model that compresses the RAG context and utilizes the same representations for retrieval.",
+      "abstract_evidence_sha256": "8911ea072dd67d50ecf6118bff2732e8026087ea9328a12a916d4ff1bc62a62f",
+      "abstract_sha256": null,
+      "source_abstract_chars": null,
+      "linked_from": [],
+      "first_checked_at": "2026-10-14T05:47:55Z",
+      "last_checked_at": "2026-10-14T05:47:55Z",
+      "primary_source_status": "verified_primary_abstract",
+      "source_version": "v1",
+      "source_submission_history": [
+        "[v1] Wed, 15 Apr 2026 20:34:10 UTC (78 KB)"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2510.06052",
+      "identity_tokens": [
+        "arXiv:2510.06052"
+      ],
+      "title": "MixReasoning: Switching Modes to Think",
+      "reason": "問題難度に応じreasoning depthを動的に調節し生成token数を減らして効率改善。",
+      "source_url": "https://arxiv.org/abs/2510.06052v2",
+      "body_check": "abstract_screen_only; body_not_read",
+      "abstract_evidence_excerpt": "To this end, we propose MixReasoning, a framework that dynamically adjusts the depth of reasoning within a single response.",
+      "abstract_evidence_sha256": "c6117d9925a88941fee5b8366ba6b0b332923e8b7c467ca120f103d936c0b15f",
+      "abstract_sha256": null,
+      "source_abstract_chars": null,
+      "linked_from": [],
+      "first_checked_at": "2026-10-14T05:47:55Z",
+      "last_checked_at": "2026-10-14T05:47:55Z",
+      "primary_source_status": "verified_primary_abstract",
+      "source_version": "v2",
+      "source_submission_history": [
+        "[v1] Tue, 7 Oct 2025 15:46:34 UTC (1,580 KB)",
+        "[v2] Mon, 8 Jun 2026 08:05:28 UTC (1,047 KB)"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2604.25326",
+      "identity_tokens": [
+        "arXiv:2604.25326"
+      ],
+      "title": "AHASD: Asynchronous Heterogeneous Architecture for LLM Adaptive Drafting Speculative Decoding on Mobile Devices",
+      "reason": "mobile NPU–PIM向け非同期adaptive speculative decodingでthroughputとenergy efficiencyを改善。",
+      "source_url": "https://arxiv.org/abs/2604.25326v3",
+      "body_check": "abstract_screen_only; body_not_read",
+      "abstract_evidence_excerpt": "This paper introduces AHASD, a task-level asynchronous mobile NPU-PIM heterogeneous architecture for speculative decoding.",
+      "abstract_evidence_sha256": "fa4ce7aa23061466cb99cf57bc7cbb9cd62543128215f318c7da7cb4a39b5fee",
+      "abstract_sha256": null,
+      "source_abstract_chars": null,
+      "linked_from": [],
+      "first_checked_at": "2026-10-14T05:47:55Z",
+      "last_checked_at": "2026-10-14T05:47:55Z",
+      "primary_source_status": "verified_primary_abstract",
+      "source_version": "v3",
+      "source_submission_history": [
+        "[v1] Tue, 28 Apr 2026 07:42:41 UTC (959 KB)",
+        "[v2] Wed, 29 Apr 2026 03:26:59 UTC (959 KB)",
+        "[v3] Thu, 30 Apr 2026 13:25:24 UTC (959 KB)"
+      ]
+    }
+  ]
+}
