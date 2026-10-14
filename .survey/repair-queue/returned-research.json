@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-14T14:07:12+00:00",
+  "generated_at": "2026-10-14T14:11:17+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -2652,61 +2652,9 @@
       "worker_run_key": "20261014-1445-scheduled-chat-45/r01"
     },
     {
-      "canonical_id": "arXiv:2603.01236",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-14T13:51:29+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2026-2603.01236-agilepruner-an-empirical-study-of-attention-and-diversity-for-adaptive-v.md と 23 段落 / 5461文字 (100.0%) が完全一致"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 6329,
-        "body_paragraphs": 31,
-        "method_chars": 1418,
-        "method_paragraphs": 7,
-        "evaluation_chars": 1187,
-        "limitation_chars": 811,
-        "insufficiency_flags": []
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_391c7266dcf481918c1bf26429d51b40--2026-2603.01236-agilepruner-adaptive-visual-token-pruning-research-20261013-2230-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_391c7266dcf481918c1bf26429d51b40--2026-2603.01236-agilepruner-adaptive-visual-token-pruning-research-20261013-2230-scheduled-chat-30-r01.json",
-      "worker_run_key": "20261013-2230-scheduled-chat-30/r01"
-    },
-    {
-      "canonical_id": "arXiv:2603.00573",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-14T14:00:34+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2026-2603.00573-comol-efficient-mixture-of-lora-experts-via-dynamic-core-space-merging.md と 20 段落 / 4539文字 (100.0%) が完全一致"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 4992,
-        "body_paragraphs": 25,
-        "method_chars": 1145,
-        "method_paragraphs": 6,
-        "evaluation_chars": 1312,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_be186c9ad72c8191a820e9193ceb1ca7--2026-2603.00573-comol-core-space-lora-experts-research-20261013-2100-scheduled-chat-00-r02.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_be186c9ad72c8191a820e9193ceb1ca7--2026-2603.00573-comol-core-space-lora-experts-research-20261013-2100-scheduled-chat-00-r02.json",
-      "worker_run_key": "20261013-2100-scheduled-chat-00/r02"
-    },
-    {
       "canonical_id": "DOI:10.18653/v1/2025.findings-naacl.462",
-      "title": "Hierarchical Speculative Decoding with Dynamic Windows for Efficient Language Model Inference",
-      "source_url": "https://aclanthology.org/2025.findings-naacl.462.pdf",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-14T14:07:10+00:00",
       "return_count": 4,
       "assigned_worker": "scheduled-chat-30",
@@ -2730,8 +2678,8 @@
     },
     {
       "canonical_id": "DOI:10.18653/v1/2025.naacl-long.543",
-      "title": "HIGGS: Pushing the Limits of Large Language Model Quantization via the Linearity Theorem",
-      "source_url": "https://aclanthology.org/2025.naacl-long.543.pdf",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-14T14:07:10+00:00",
       "return_count": 4,
       "assigned_worker": "scheduled-chat-00",
@@ -2757,8 +2705,8 @@
     },
     {
       "canonical_id": "arXiv:2404.15159",
-      "title": "MixLoRA: Enhancing Large Language Models Fine-Tuning with LoRA-based Mixture of Experts",
-      "source_url": "https://arxiv.org/pdf/2404.15159",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-14T14:07:11+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-30",
@@ -2782,8 +2730,8 @@
     },
     {
       "canonical_id": "DOI:10.18653/v1/2021.naacl-main.463",
-      "title": "TR-BERT: Dynamic Token Reduction for Accelerating BERT Inference",
-      "source_url": "https://aclanthology.org/2021.naacl-main.463.pdf",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-14T14:07:12+00:00",
       "return_count": 4,
       "assigned_worker": "scheduled-chat-00",
@@ -2809,8 +2757,8 @@
     },
     {
       "canonical_id": "arXiv:2605.01910",
-      "title": "Stochastic Sparse Attention for Memory-Bound Inference",
-      "source_url": "https://arxiv.org/pdf/2605.01910",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-14T14:07:12+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-45",
@@ -2833,6 +2781,58 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-5f737f8abe7d--libfile_dba2ad65366481919f3fd75b6c9daeb9--2026-2605.01910-santa-stochastic-sparse-attention-research-20261014-2200-scheduled-chat-00-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-5f737f8abe7d--libfile_dba2ad65366481919f3fd75b6c9daeb9--2026-2605.01910-santa-stochastic-sparse-attention-research-20261014-2200-scheduled-chat-0.json",
       "worker_run_key": "20261014-2200-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2603.01236",
+      "title": "AgilePruner: An Empirical Study of Attention and Diversity for Adaptive Visual Token Pruning in Large Vision-Language Models",
+      "source_url": "https://arxiv.org/html/2603.01236v1",
+      "returned_at": "2026-10-14T14:11:16+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2026-2603.01236-agilepruner-an-empirical-study-of-attention-and-diversity-for-adaptive-v.md と 23 段落 / 5461文字 (100.0%) が完全一致"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 6329,
+        "body_paragraphs": 31,
+        "method_chars": 1418,
+        "method_paragraphs": 7,
+        "evaluation_chars": 1187,
+        "limitation_chars": 811,
+        "insufficiency_flags": []
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-d99fa7468816--libfile_391c7266dcf481918c1bf26429d51b40--2026-2603.01236-agilepruner-adaptive-visual-token-pruning-research-20261013-2230-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-d99fa7468816--libfile_391c7266dcf481918c1bf26429d51b40--2026-2603.01236-agilepruner-adaptive-visual-token-pruning-research-20261013-2230-schedule.json",
+      "worker_run_key": "20261013-2230-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2603.00573",
+      "title": "CoMoL: Efficient Mixture of LoRA Experts via Dynamic Core Space Merging",
+      "source_url": "https://arxiv.org/abs/2603.00573",
+      "returned_at": "2026-10-14T14:11:17+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2026-2603.00573-comol-efficient-mixture-of-lora-experts-via-dynamic-core-space-merging.md と 20 段落 / 4539文字 (100.0%) が完全一致"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 4992,
+        "body_paragraphs": 25,
+        "method_chars": 1145,
+        "method_paragraphs": 6,
+        "evaluation_chars": 1312,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-e8c2b930764a--libfile_be186c9ad72c8191a820e9193ceb1ca7--2026-2603.00573-comol-core-space-lora-experts-research-20261013-2100-scheduled-chat-00-r02.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-e8c2b930764a--libfile_be186c9ad72c8191a820e9193ceb1ca7--2026-2603.00573-comol-core-space-lora-experts-research-20261013-2100-scheduled-chat-00-r0.json",
+      "worker_run_key": "20261013-2100-scheduled-chat-00/r02"
     }
   ]
 }
