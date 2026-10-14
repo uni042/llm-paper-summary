@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-14T04:12:37+00:00",
-  "record_count": 5019,
+  "updated_at": "2026-10-14T04:34:42+00:00",
+  "record_count": 5024,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -77709,6 +77709,76 @@
       ],
       "borderline_recheck_count": 0,
       "title": "Making RALM Robust to Irrelevant Contexts via Layer Knowledge Guided Attention"
+    },
+    "arXiv:2205.11656": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2205.11656",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2205.11656",
+        "arXiv:2205.11656"
+      ],
+      "reason": "The primary abstract for FlexiBERT: Are Current Transformer Architectures too Homogeneous and Rigid? reports an efficiency-adjacent method, but its stated evaluation or contribution is limited to a specialized architecture/task and does not establish direct LLM-serving applicability.",
+      "first_checked_at": "2026-10-14T04:34:41+00:00",
+      "last_checked_at": "2026-10-14T04:34:41+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "FlexiBERT: Are Current Transformer Architectures too Homogeneous and Rigid?"
+    },
+    "arXiv:2210.17115": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2210.17115",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2210.17115",
+        "arXiv:2210.17115"
+      ],
+      "reason": "The primary abstract for ViT-LSLA: Vision Transformer with Light Self-Limited-Attention reports an efficiency-adjacent method, but its stated evaluation or contribution is limited to a specialized architecture/task and does not establish direct LLM-serving applicability.",
+      "first_checked_at": "2026-10-14T04:34:41+00:00",
+      "last_checked_at": "2026-10-14T04:34:41+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "ViT-LSLA: Vision Transformer with Light Self-Limited-Attention"
+    },
+    "arXiv:2405.07395": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2405.07395",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2405.07395",
+        "arXiv:2405.07395"
+      ],
+      "reason": "The primary abstract for CaFA: Global Weather Forecasting with Factorized Attention on Sphere reports an efficiency-adjacent method, but its stated evaluation or contribution is limited to a specialized architecture/task and does not establish direct LLM-serving applicability.",
+      "first_checked_at": "2026-10-14T04:34:41+00:00",
+      "last_checked_at": "2026-10-14T04:34:41+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "CaFA: Global Weather Forecasting with Factorized Attention on Sphere"
+    },
+    "arXiv:2604.21905": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2604.21905",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2604.21905",
+        "arXiv:2604.21905"
+      ],
+      "reason": "The primary abstract for Low-Rank Adaptation Redux for Large Models reports an efficiency-adjacent method, but its stated evaluation or contribution is limited to a specialized architecture/task and does not establish direct LLM-serving applicability.",
+      "first_checked_at": "2026-10-14T04:34:42+00:00",
+      "last_checked_at": "2026-10-14T04:34:42+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Low-Rank Adaptation Redux for Large Models"
+    },
+    "arXiv:2601.17585": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2601.17585",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2601.17585",
+        "arXiv:2601.17585"
+      ],
+      "reason": "The abstract reports more efficient computation from intermediate decoder layers for sequence labeling, but frames the contribution around a specialized token-labeling task rather than serving throughput/latency.",
+      "first_checked_at": "2026-10-14T04:34:42+00:00",
+      "last_checked_at": "2026-10-14T04:34:42+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Sequence Repetition Enhances Token Embeddings and Improves Sequence Labeling with Decoder-only Language Models"
     }
   }
 }
