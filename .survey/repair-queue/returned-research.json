@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-14T10:51:34+00:00",
+  "generated_at": "2026-10-14T10:58:49+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 66,
+  "count": 70,
   "entries": [
     {
       "canonical_id": "DOI:10.1145/3714983.3714987",
@@ -1528,8 +1528,8 @@
     },
     {
       "canonical_id": "arXiv:2511.19676",
-      "title": "INTERLACE: Interleaved Layer Pruning and Efficient Adaptation in Large Vision-Language Models",
-      "source_url": "https://arxiv.org/pdf/2511.19676",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-14T10:51:14+00:00",
       "return_count": 1,
       "assigned_worker": "scheduled-chat-45",
@@ -1555,8 +1555,8 @@
     },
     {
       "canonical_id": "arXiv:2604.04745",
-      "title": "The Energy Cost of Execution-Idle in GPU Clusters",
-      "source_url": "https://arxiv.org/pdf/2604.04745",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-14T10:51:15+00:00",
       "return_count": 3,
       "assigned_worker": "scheduled-chat-45",
@@ -1580,8 +1580,8 @@
     },
     {
       "canonical_id": "arXiv:2511.02805",
-      "title": "MemSearcher: Training LLMs to Reason, Search and Manage Memory via End-to-End Reinforcement Learning",
-      "source_url": "https://arxiv.org/pdf/2511.02805v2",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-14T10:51:34+00:00",
       "return_count": 1,
       "assigned_worker": "scheduled-chat-00",
@@ -1604,6 +1604,108 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_676b77cbeacc81919ddff721604e0ffc--2025-2511.02805-memsearcher-compact-agent-memory-research-20261014-0500-scheduled-chat-00-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_676b77cbeacc81919ddff721604e0ffc--2025-2511.02805-memsearcher-compact-agent-memory-research-20261014-0500-scheduled-chat-00-r01.json",
       "worker_run_key": "20261014-0500-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2601.03649",
+      "title": "SyncThink: A Training-Free Strategy to Align Inference Termination with Reasoning Saturation",
+      "source_url": "https://arxiv.org/html/2601.03649v1",
+      "returned_at": "2026-10-14T10:56:39+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2026-2601.03649-syncthink-a-training-free-strategy-to-align-inference-termination-with-r.md と 23 段落 / 4917文字 (100.0%) が完全一致"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 6377,
+        "body_paragraphs": 34,
+        "method_chars": 2296,
+        "method_paragraphs": 13,
+        "evaluation_chars": 1374,
+        "limitation_chars": 732,
+        "insufficiency_flags": []
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_68332ec207c481918fc15dd9c45147a0--2026-2601.03649-syncthink-dynamic-reasoning-termination-research-20261013-2300-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_68332ec207c481918fc15dd9c45147a0--2026-2601.03649-syncthink-dynamic-reasoning-termination-research-20261013-2300-scheduled-chat-00-r01.json",
+      "worker_run_key": "20261013-2300-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2605.22502",
+      "title": "Compiling Agentic Workflows into LLM Weights: Near-Frontier Quality at Two Orders of Magnitude Less Cost",
+      "source_url": "https://arxiv.org/pdf/2605.22502",
+      "returned_at": "2026-10-14T10:57:28+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "長文定型文の再利用を検出: papers/inference/14-agentic-inference-serving-runtime/2026-2605.22502-compiling-agentic-workflows-into-llm-weights-near-frontier-quality-at-tw.md と 25 段落 / 5590文字 (100.0%) が完全一致"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 6554,
+        "body_paragraphs": 36,
+        "method_chars": 1251,
+        "method_paragraphs": 6,
+        "evaluation_chars": 2267,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_6d9f0103ee408191b124e1837b438155--2026-2605.22502-compiling-agentic-workflows-research-20261014-0445-scheduled-chat-45-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_6d9f0103ee408191b124e1837b438155--2026-2605.22502-compiling-agentic-workflows-research-20261014-0445-scheduled-chat-45-r01.json",
+      "worker_run_key": "20261014-0445-scheduled-chat-45/r01"
+    },
+    {
+      "canonical_id": "arXiv:2511.18868",
+      "title": "KernelBand: Steering LLM-based Kernel Optimization via Hardware-Aware Multi-Armed Bandits",
+      "source_url": "https://arxiv.org/html/2511.18868v2",
+      "returned_at": "2026-10-14T10:57:30+00:00",
+      "return_count": 3,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "長文定型文の再利用を検出: papers/inference/09-kernel-runtime-compilation/2025-2511.18868-kernelband-steering-llm-based-kernel-optimization-via-hardware-aware-mul.md と 19 段落 / 4210文字 (100.0%) が完全一致"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 6192,
+        "body_paragraphs": 35,
+        "method_chars": 1708,
+        "method_paragraphs": 9,
+        "evaluation_chars": 1775,
+        "limitation_chars": 673,
+        "insufficiency_flags": []
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_6e8530b261d4819183f57181b23b6009--2025-2511.18868-kernelband-quality-repair-20261014-0445-scheduled-chat-45-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_6e8530b261d4819183f57181b23b6009--2025-2511.18868-kernelband-quality-repair-20261014-0445-scheduled-chat-45-r01.json",
+      "worker_run_key": "20261014-0445-scheduled-chat-45/r01"
+    },
+    {
+      "canonical_id": "arXiv:2405.19209",
+      "title": "VideoTree: Adaptive Tree-based Video Representation for LLM Reasoning on Long Videos",
+      "source_url": "https://arxiv.org/html/2405.19209",
+      "returned_at": "2026-10-14T10:57:31+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2024-2405.19209-videotree-adaptive-tree-based-video-representation-for-llm-reasoning-on-.md と 20 段落 / 4230文字 (100.0%) が完全一致"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5503,
+        "body_paragraphs": 32,
+        "method_chars": 1167,
+        "method_paragraphs": 7,
+        "evaluation_chars": 1503,
+        "limitation_chars": 870,
+        "insufficiency_flags": []
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_70119075dfdc8191890846ebee7e4935--2024-2405.19209-videotree-query-adaptive-long-video-reasoning-research-20261014-1245-scheduled-chat-45-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_70119075dfdc8191890846ebee7e4935--2024-2405.19209-videotree-query-adaptive-long-video-reasoning-research-20261014-1245-scheduled-chat-45-r01.json",
+      "worker_run_key": "20261014-1245-scheduled-chat-45/r01"
     }
   ]
 }

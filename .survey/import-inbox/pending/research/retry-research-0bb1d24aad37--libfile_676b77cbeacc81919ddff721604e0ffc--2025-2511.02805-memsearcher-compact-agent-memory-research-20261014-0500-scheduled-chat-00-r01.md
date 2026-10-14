@@ -31,6 +31,8 @@ code: https://github.com/icip-cas/MemSearcher
 last_checked: '2026-10-14'
 worker_completed_at: '2026-10-14T05:07:20+09:00'
 worker_run_key: '20261014-0500-scheduled-chat-00/r01'
+last_audited: null
+audit_version: 0
 ---
 # MemSearcher: Training LLMs to Reason, Search and Manage Memory via End-to-End Reinforcement Learning
 

@@ -1,13 +1,12 @@
 {
   "schema_version": 1,
   "artifact_type": "research",
-  "status": "imported",
+  "status": "blocked_quality",
   "source_sha256": "4bd9a4fc79ccbfb7625ac5ad36cecf5dfc8e47a58767f765af02ed18a1efc75b",
-  "canonical_id": "arXiv:2605.22502",
-  "paper_path": "papers/inference/14-agentic-inference-serving-runtime/2026-2605.22502-compiling-agentic-workflows-into-llm-weights-near-frontier-quality-at-tw.md",
-  "lineage": "14-agentic-inference-serving-runtime",
-  "audit_status": "WARN",
+  "normalized_source_sha256": null,
   "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_6d9f0103ee408191b124e1837b438155--2026-2605.22502-compiling-agentic-workflows-research-20261014-0445-scheduled-chat-45-r01.md",
+  "canonical_id": "arXiv:2605.22502",
   "worker_completed_at": "2026-10-14T04:49:00+09:00",
   "worker_run_key": "20261014-0445-scheduled-chat-45/r01",
   "quality_metrics": {
@@ -22,5 +21,8 @@
       "限界説明量 0 < 推奨 120"
     ]
   },
-  "processed_at": "2026-10-14T06:42:24+00:00"
+  "failures": [
+    "長文定型文の再利用を検出: papers/inference/14-agentic-inference-serving-runtime/2026-2605.22502-compiling-agentic-workflows-into-llm-weights-near-frontier-quality-at-tw.md と 25 段落 / 5590文字 (100.0%) が完全一致"
+  ],
+  "processed_at": "2026-10-14T10:57:28+00:00"
 }

@@ -44,6 +44,8 @@ references:
     arxiv_id: '2306.11695'
 references_checked_at: '2026-10-14'
 references_source: 'arxiv:2511.19676v1 PDF 参考文献節の実在する引用から抜粋。'
+last_audited: null
+audit_version: 0
 ---
 
 # INTERLACE：3層単位の削除・微調整・凍結で視覚言語モデルを深さ圧縮する

@@ -1,13 +1,12 @@
 {
   "schema_version": 1,
   "artifact_type": "research",
-  "status": "imported",
+  "status": "blocked_quality",
   "source_sha256": "50d34e5e2adb7f34e8b434ee2cc0991bbc9e4718af649d06d69bf6d18f087248",
-  "canonical_id": "arXiv:2511.18868",
-  "paper_path": "papers/inference/09-kernel-runtime-compilation/2025-2511.18868-kernelband-steering-llm-based-kernel-optimization-via-hardware-aware-mul.md",
-  "lineage": "09-kernel-runtime-compilation",
-  "audit_status": "PASS",
+  "normalized_source_sha256": null,
   "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_6e8530b261d4819183f57181b23b6009--2025-2511.18868-kernelband-quality-repair-20261014-0445-scheduled-chat-45-r01.md",
+  "canonical_id": "arXiv:2511.18868",
   "worker_completed_at": "2026-10-14T04:55:56+09:00",
   "worker_run_key": "20261014-0445-scheduled-chat-45/r01",
   "quality_metrics": {
@@ -20,5 +19,8 @@
     "limitation_chars": 673,
     "insufficiency_flags": []
   },
-  "processed_at": "2026-10-14T06:52:50+00:00"
+  "failures": [
+    "長文定型文の再利用を検出: papers/inference/09-kernel-runtime-compilation/2025-2511.18868-kernelband-steering-llm-based-kernel-optimization-via-hardware-aware-mul.md と 19 段落 / 4210文字 (100.0%) が完全一致"
+  ],
+  "processed_at": "2026-10-14T10:57:30+00:00"
 }

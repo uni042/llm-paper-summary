@@ -1,13 +1,12 @@
 {
   "schema_version": 1,
   "artifact_type": "research",
-  "status": "imported",
+  "status": "blocked_quality",
   "source_sha256": "8de2a17c5a6bdebb95eebda61203359adc08dae604fa77f57769a9329c9299ef",
-  "canonical_id": "arXiv:2601.03649",
-  "paper_path": "papers/inference/99-other-inference-systems/2026-2601.03649-syncthink-a-training-free-strategy-to-align-inference-termination-with-r.md",
-  "lineage": "99-other-inference-systems",
-  "audit_status": "PASS",
+  "normalized_source_sha256": null,
   "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_68332ec207c481918fc15dd9c45147a0--2026-2601.03649-syncthink-dynamic-reasoning-termination-research-20261013-2300-scheduled-chat-00-r01.md",
+  "canonical_id": "arXiv:2601.03649",
   "worker_completed_at": "2026-10-13T23:08:19+09:00",
   "worker_run_key": "20261013-2300-scheduled-chat-00/r01",
   "quality_metrics": {
@@ -20,5 +19,8 @@
     "limitation_chars": 732,
     "insufficiency_flags": []
   },
-  "processed_at": "2026-10-14T06:41:36+00:00"
+  "failures": [
+    "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2026-2601.03649-syncthink-a-training-free-strategy-to-align-inference-termination-with-r.md と 23 段落 / 4917文字 (100.0%) が完全一致"
+  ],
+  "processed_at": "2026-10-14T10:56:39+00:00"
 }
