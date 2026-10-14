@@ -1,35 +1,42 @@
 ---
-canonical_id: "DOI:10.14722/ndss.2025.230057"
-title: "BumbleBee: Secure Two-party Inference Framework for Large Transformers"
-summary: "BumbleBeeは、入力を持つ利用者と重みを持つ提供者の二者だけで、Transformerを互いの秘密を保ったまま推論する枠組みである。環準同型暗号による行列積の結果を暗号文係数の交互配置で圧縮し、同じ2の冪剰余環で線形・非線形演算を接続する。さらに分割多項式によるGeLU/SiLUと、負の入力に限定した指数関数近似で通信を削減する。NDSS 2025の実験ではBERT-baseの入力128トークンを1Gbpsの局所網で2.55分・総通信6.40GiBで処理し、BOLTの8.89分・59.61GiBより小さくした。LLaMA-7Bの入力8トークンからの1トークン生成はCPU二台で7.96分、総通信6.27GiBを要する。通常の非秘匿GPUサービングを高速化したという結果ではない。"
-list_summary: "二者間秘匿Transformer推論で、暗号文係数の交互配置と環整合した秘密分散演算を組み合わせ、BERT-baseの通信量をBOLT比59.61→6.40GiBへ削減する。"
+canonical_id: DOI:10.14722/ndss.2025.230057
+title: 'BumbleBee: Secure Two-party Inference Framework for Large Transformers'
+summary: BumbleBeeは、入力を持つ利用者と重みを持つ提供者の二者だけで、Transformerを互いの秘密を保ったまま推論する枠組みである。環準同型暗号による行列積の結果を暗号文係数の交互配置で圧縮し、同じ2の冪剰余環で線形・非線形演算を接続する。さらに分割多項式によるGeLU/SiLUと、負の入力に限定した指数関数近似で通信を削減する。NDSS 2025の実験ではBERT-baseの入力128トークンを1Gbpsの局所網で2.55分・総通信6.40GiBで処理し、BOLTの8.89分・59.61GiBより小さくした。LLaMA-7Bの入力8トークンからの1トークン生成はCPU二台で7.96分、総通信6.27GiBを要する。通常の非秘匿GPUサービングを高速化したという結果ではない。
+list_summary: 二者間秘匿Transformer推論で、暗号文係数の交互配置と環整合した秘密分散演算を組み合わせ、BERT-baseの通信量をBOLT比59.61→6.40GiBへ削減する。
 authors:
-  - "Wen-jie Lu"
-  - "Zhicong Huang"
-  - "Zhen Gu"
-  - "Jingyu Li"
-  - "Jian Liu"
-  - "Cheng Hong"
-  - "Kui Ren"
-  - "Tao Wei"
-  - "Wenguang Chen"
-published: "2025-02"
-publication: "Network and Distributed System Security Symposium (NDSS 2025)"
-publication_type: "conference"
-publication_status: "published"
-source: "https://www.ndss-symposium.org/wp-content/uploads/2025-57-paper.pdf"
+- Wen-jie Lu
+- Zhicong Huang
+- Zhen Gu
+- Jingyu Li
+- Jian Liu
+- Cheng Hong
+- Kui Ren
+- Tao Wei
+- Wenguang Chen
+published: 2025-02
+publication: Network and Distributed System Security Symposium (NDSS 2025)
+publication_type: conference
+publication_status: published
+source: https://www.ndss-symposium.org/wp-content/uploads/2025-57-paper.pdf
 sources:
-  - "https://www.ndss-symposium.org/wp-content/uploads/2025-57-paper.pdf"
-  - "https://www.ndss-symposium.org/ndss-paper/bumblebee-secure-two-party-inference-framework-for-large-transformers/"
-  - "https://doi.org/10.14722/ndss.2025.230057"
-implementation: "SPUとYACL/Ferretの秘匿計算、Microsoft SEALとIntel HEXLを使ったCPU向け試作実装を公式OpenBumbleBeeとして公開。公式READMEは開発途中であり機密性が必要な製品への利用を推奨しない。"
-code: "https://github.com/AntCPLab/OpenBumbleBee"
-last_checked: "2026-10-14"
-worker_completed_at: "2026-10-14T07:49:49+09:00"
-worker_run_key: "20261014-0745-scheduled-chat-45/r01"
-lineage: "99-other-inference-systems"
+- https://www.ndss-symposium.org/wp-content/uploads/2025-57-paper.pdf
+- https://www.ndss-symposium.org/ndss-paper/bumblebee-secure-two-party-inference-framework-for-large-transformers/
+- https://doi.org/10.14722/ndss.2025.230057
+implementation: SPUとYACL/Ferretの秘匿計算、Microsoft SEALとIntel HEXLを使ったCPU向け試作実装を公式OpenBumbleBeeとして公開。公式READMEは開発途中であり機密性が必要な製品への利用を推奨しない。
+code: https://github.com/AntCPLab/OpenBumbleBee
+last_checked: '2026-10-14'
+worker_completed_at: '2026-10-14T07:49:49+09:00'
+worker_run_key: 20261014-0745-scheduled-chat-45/r01
+lineage: 99-other-inference-systems
 last_audited: null
 audit_version: 0
+references:
+- canonical_id: arXiv:2307.12533
+  doi: 10.48550/arxiv.2307.12533
+- canonical_id: DOI:10.52202/068431-1143
+references_checked_at: '2026-10-14'
+references_source: primary-pdf-reference-section
+references_total: 80
 ---
 
 # BumbleBee：二者間秘匿Transformer推論の行列積・非線形関数を通信効率化する
