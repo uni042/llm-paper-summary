@@ -35,10 +35,15 @@
   "selection_reason": "各tokenが通過するlayer数を動的に変えるtoken reductionをmulti-step selectionとして定式化し、reinforcement learningで選択policyを学習する。BERT inferenceを2–5倍高速化し長文ではself-attention計算も削減するため、Transformer推論のconditional computationとしてaccept。",
   "semantic_scholar_id": "6da4b231148bf26677233d1f778d08a5d26f4313",
   "source_url": "https://arxiv.org/abs/2105.11618",
-  "status": "ready",
+  "status": "superseded",
   "title": "TR-BERT: Dynamic Token Reduction for Accelerating BERT Inference",
   "type": "research",
   "venue": "North American Chapter of the Association for Computational Linguistics",
   "workflow_version": 10,
-  "year": 2021
+  "year": 2021,
+  "superseded_at": "2026-10-14T06:32:56+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2021-00c8b8f9f90e-tr-bert-dynamic-token-reduction-for-accelerating-bert-inference.md",
+  "represented_canonical_id": "DOI:10.18653/v1/2021.naacl-main.463",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

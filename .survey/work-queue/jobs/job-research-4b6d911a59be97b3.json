@@ -35,10 +35,15 @@
   "selection_reason": "FASA selects tokens from dominant RoPE frequency chunks and attends only to the retained KV subset; its reported cache reduction and 2.56x speedup directly target long-context LLM serving.",
   "semantic_scholar_id": "c6083bfe175e042d979323cb0dfa5eff63aa8b81",
   "source_url": "https://arxiv.org/abs/2602.03152",
-  "status": "ready",
+  "status": "superseded",
   "title": "FASA: Frequency-aware Sparse Attention",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-10-14T06:32:56+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/13-sparse-attention/2026-2602.03152-fasa-frequency-aware-sparse-attention.md",
+  "represented_canonical_id": "arXiv:2602.03152",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
