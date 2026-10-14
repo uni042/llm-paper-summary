@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-decfe6aa97168937-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2603.03371",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2603.03371",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2603.03371",
+      "SemanticScholar:7ae2ee78993445c4cab4ec54ee075604b30a282b",
+      "arXiv:2603.03371"
+    ],
+    "reason": "The abstract studies a multi-stage PEFT/RL backdoor attack on tool-using agents and detection of concealed malicious behavior; it is a security evaluation, not an inference-efficiency contribution.",
+    "first_checked_at": "2026-10-13T00:49:40+00:00",
+    "last_checked_at": "2026-10-14T12:50:23+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md",
+      "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md",
+      "papers/inference/16-weight-quantization-compression/2023-2306.00978-awq.md"
+    ],
+    "title": "Sleeper Cell: Injecting Latent Malice Temporal Backdoors into Tool-Using LLMs"
+  },
+  "processed_at": "2026-10-14T12:50:23+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-decfe6aa9716",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -2,7 +2,7 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-14T12:48:54+00:00",
+  "updated_at": "2026-10-14T12:50:24+00:00",
   "record_count": 12238,
   "records": {
     "arXiv:2303.08774": {
@@ -48731,11 +48731,12 @@
       "classification": "unrelated",
       "canonical_id": "arXiv:2609.10347",
       "identity_tokens": [
+        "SemanticScholar:25a9df450bc2c4393ef7973a9a80ec1df64db6ba",
         "arXiv:2609.10347"
       ],
-      "reason": "arXiv abstract concerns SSD flash-translation-layer verification and storage-centric computing security, not LLM/model inference.",
+      "reason": "CertiFlash verifies SSD flash-translation layers, not model inference.",
       "first_checked_at": "2026-10-05T06:58:58+00:00",
-      "last_checked_at": "2026-10-05T06:58:58+00:00",
+      "last_checked_at": "2026-10-14T12:50:23+00:00",
       "linked_from": [
         "papers/inference/01-offload-hierarchical-memory/2024-2409.15654-cambricon-llm-chiplet-flash-inference.md",
         "papers/inference/17-pim-near-data-acceleration/2024-attacc-unleashing-the-power-of-pim-for-batched-transformer-based-generative-model-inference.md",
@@ -166515,11 +166516,13 @@
       "classification": "unrelated",
       "canonical_id": "arXiv:2603.03371",
       "identity_tokens": [
+        "DOI:10.48550/arxiv.2603.03371",
+        "SemanticScholar:7ae2ee78993445c4cab4ec54ee075604b30a282b",
         "arXiv:2603.03371"
       ],
-      "reason": "The work injects temporal backdoors into tool-using LLMs; this is a security study without a concrete inference-efficiency contribution.",
+      "reason": "The abstract studies a multi-stage PEFT/RL backdoor attack on tool-using agents and detection of concealed malicious behavior; it is a security evaluation, not an inference-efficiency contribution.",
       "first_checked_at": "2026-10-13T00:49:40+00:00",
-      "last_checked_at": "2026-10-13T00:49:40+00:00",
+      "last_checked_at": "2026-10-14T12:50:23+00:00",
       "linked_from": [
         "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md",
         "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md",
@@ -166564,11 +166567,12 @@
       "classification": "unrelated",
       "canonical_id": "DOI:10.54097/nk7bve15",
       "identity_tokens": [
-        "DOI:10.54097/nk7bve15"
+        "DOI:10.54097/nk7bve15",
+        "SemanticScholar:fc77337501f38cca6db46d0c368399f59343e922"
       ],
-      "reason": "The paper surveys parameter-efficient LLaMA fine-tuning for domain adaptation; its stated target is training and adaptation, not inference systems efficiency.",
+      "reason": "The publisher abstract compares LoRA, QLoRA, LongLoRA, and full fine-tuning for domain-specific adaptation, including training efficiency and memory use. It does not establish an LLM inference or serving efficiency contribution.",
       "first_checked_at": "2026-10-13T00:49:41+00:00",
-      "last_checked_at": "2026-10-13T00:49:41+00:00",
+      "last_checked_at": "2026-10-14T12:50:24+00:00",
       "linked_from": [
         "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md",
         "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
