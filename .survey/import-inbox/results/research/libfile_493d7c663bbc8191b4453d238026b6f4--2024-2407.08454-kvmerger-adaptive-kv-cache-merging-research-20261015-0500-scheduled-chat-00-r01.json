@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "aef4828e6ae03db8f1e8a27003c1b00e743de0ca467a30c2d54a1a43b1f5ebf1",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_493d7c663bbc8191b4453d238026b6f4--2024-2407.08454-kvmerger-adaptive-kv-cache-merging-research-20261015-0500-scheduled-chat-00-r01.md",
+  "canonical_id": "arXiv:2407.08454",
+  "worker_completed_at": "2026-10-15T05:09:00+09:00",
+  "worker_run_key": "20261015-0500-scheduled-chat-00/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 5902,
+    "body_paragraphs": 31,
+    "method_chars": 0,
+    "method_paragraphs": 0,
+    "evaluation_chars": 164,
+    "limitation_chars": 574,
+    "insufficiency_flags": [
+      "手法説明量 0 < 700",
+      "評価説明量 164 < 500"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 手法説明量 0 < 700",
+    "説明不足トリガー: 評価説明量 164 < 500"
+  ],
+  "processed_at": "2026-10-14T23:53:33+00:00"
+}
