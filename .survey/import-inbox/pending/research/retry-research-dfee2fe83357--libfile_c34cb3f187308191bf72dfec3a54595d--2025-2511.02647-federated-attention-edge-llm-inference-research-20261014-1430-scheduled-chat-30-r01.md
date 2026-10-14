@@ -30,6 +30,8 @@ arxiv_categories:
 worker_id: scheduled-chat-30
 worker_completed_at: '2026-10-14T14:42:31+09:00'
 worker_run_key: '20261014-1430-scheduled-chat-30/r01'
+last_audited: null
+audit_version: 0
 ---
 
 # Federated Attention：参加者間のKV交換による協調型LLM推論
