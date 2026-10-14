@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-dba3aecba90fc44a-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2410.10846",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2410.10846",
+    "identity_tokens": [
+      "arXiv:2410.10846"
+    ],
+    "reason": "Duo-LLM studies per-token routing among small/big FFNs and layer bypass, an inference-compute mechanism. The full text says exhaustive oracle routing is infeasible in deployment and developing an efficient implementation is outside scope; experiments compare perplexity under fixed compute and do not report realized latency, throughput, or memory gains. The mechanism is directly relevant, but its system-efficiency contribution remains unclear.",
+    "first_checked_at": "2026-10-14T02:46:31+00:00",
+    "last_checked_at": "2026-10-14T02:46:31+00:00",
+    "linked_from": [
+      "papers/inference/02-adaptive-expert-computation-compression/2022-2202.09368-expert-choice-routing.md",
+      "papers/inference/02-adaptive-expert-computation-compression/2024-2402.14800-not-all-experts-are-equal-efficient-expert-pruning-and-skipping-for-mixture-of-e.md",
+      "papers/inference/04-conditional-computation/2023-2307.02628-skipdecode-autoregressive-skip-decoding-with-batching-and-caching-for-efficient-.md",
+      "papers/inference/05-speculative-decoding-moe/2022-2211.17192-speculative-decoding.md",
+      "papers/inference/12-moe-parallelism-communication/2021-2101.03961-switch-transformers-scaling-to-trillion-parameter-models-with-simple-and.md",
+      "papers/inference/19-inference-evaluation-benchmarking/2024-2404.02852-toward-inference-optimal-mixture-of-expert-large-language-models.md",
+      "papers/inference/99-other-inference-systems/2017-1701.06538-outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts.md",
+      "papers/inference/99-other-inference-systems/2019-1905.09418-analyzing-multi-head-self-attention-specialized-heads-do-the-heavy-lifti.md",
+      "papers/inference/99-other-inference-systems/2022-2202.08906-st-moe-designing-stable-and-transferable-sparse-expert-models.md",
+      "papers/inference/99-other-inference-systems/2024-2404.02258-mixture-of-depths-dynamically-allocating-compute-in-transformer-based-la.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Duo-LLM: A Framework for Studying Adaptive Computation in Large Language Models"
+  },
+  "processed_at": "2026-10-14T02:46:31+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-dba3aecba90f",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

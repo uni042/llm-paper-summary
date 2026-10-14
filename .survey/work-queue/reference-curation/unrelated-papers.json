@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-14T02:15:18+00:00",
-  "record_count": 11961,
+  "updated_at": "2026-10-14T02:46:32+00:00",
+  "record_count": 11963,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -172073,6 +172073,45 @@
         "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
       ],
       "title": "Reasoning on Multiple Needles In A Haystack"
+    },
+    "arXiv:2511.15208": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2511.15208",
+      "identity_tokens": [
+        "arXiv:2511.15208"
+      ],
+      "reason": "The contribution is training-time reinforcement-learning allocation for reasoning quality and stability, not inference or serving efficiency.",
+      "first_checked_at": "2026-10-14T02:46:32+00:00",
+      "last_checked_at": "2026-10-14T02:46:32+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2025-2505.22618-fast-dllm-kv-cache-parallel-decoding.md",
+        "papers/inference/07-kv-cache-optimization-compression/2025-2506.06295-dllm-cache-adaptive-caching.md",
+        "papers/inference/07-kv-cache-optimization-compression/2025-2508.02558-sparse-dllm-dynamic-cache-eviction.md",
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+        "papers/inference/99-other-inference-systems/2025-2508.15487-dream-7b-diffusion-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2025-2509.26328-fast-dllm-v2-block-diffusion-hierarchical-cache.md",
+        "papers/inference/99-other-inference-systems/2025-2510.08666-dinfer-an-efficient-inference-framework-for-diffusion-language-models.md"
+      ],
+      "title": "Reasoning in Diffusion Large Language Models is Concentrated in Dynamic Confusion Zones"
+    },
+    "arXiv:2510.13253": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2510.13253",
+      "identity_tokens": [
+        "arXiv:2510.13253"
+      ],
+      "reason": "The primary abstract describes a multimodal generation and reasoning model and reports task performance, without a concrete LLM inference-efficiency contribution.",
+      "first_checked_at": "2026-10-14T02:46:32+00:00",
+      "last_checked_at": "2026-10-14T02:46:32+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2019-1911.02150-multi-query-attention.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.04437-vattention-virtual-memory-kv-management.md",
+        "papers/inference/13-sparse-attention/2023-2310.05869-hyperattention-long-context-attention-in-near-linear-time.md",
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+        "papers/inference/99-other-inference-systems/2023-2305.13245-gqa.md",
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "title": "End-to-End Multi-Modal Diffusion Mamba"
     }
   }
 }
