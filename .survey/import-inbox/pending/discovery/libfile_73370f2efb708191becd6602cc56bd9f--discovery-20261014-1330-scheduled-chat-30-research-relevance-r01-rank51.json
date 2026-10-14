@@ -1,0 +1,27 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261014-1330-scheduled-chat-30/r01/research-relevance-rank51",
+  "reference_main_sha": "a9f2485270394b7179b2d7c69928e98c3f9b1c9f",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.09163",
+      "identity_tokens": [
+        "id:arXiv:2603.09163",
+        "url:https://arxiv.org/abs/2603.09163"
+      ],
+      "title": "SPAN-Nav: Generalized Spatial Awareness for Versatile Vision-Language Navigation",
+      "reason": "タイトルで明示される対象は視覚・言語による空間認識と実世界ナビゲーションであり、LLM推論のメモリ階層、モデル圧縮、GPUカーネル、サービング制御の研究ではない。空間認識を用いる身体化ナビゲーションのモデル研究であり、現行のLLM推論システムの収録対象から除外する。",
+      "source_url": "https://arxiv.org/abs/2603.09163",
+      "body_check": "title_screen_only; abstract_not_read; body_not_read; no Research completion credit",
+      "first_checked_at": "2026-10-14T13:35:33+09:00",
+      "last_checked_at": "2026-10-14T13:35:33+09:00",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance",
+      "worklist_rank": 51
+    }
+  ]
+}
