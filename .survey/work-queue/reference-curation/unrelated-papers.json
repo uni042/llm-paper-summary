@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-14T06:02:24+00:00",
-  "record_count": 12141,
+  "updated_at": "2026-10-14T06:34:23+00:00",
+  "record_count": 12149,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -174718,6 +174718,141 @@
       "last_checked_at": "2026-10-14T06:02:24+00:00",
       "linked_from": [],
       "title": "MarketGPT: Developing a Pre-trained transformer (GPT) for Modeling Financial Time Series"
+    },
+    "arXiv:2512.05277": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2512.05277",
+      "identity_tokens": [
+        "arXiv:2512.05277"
+      ],
+      "reason": "It targets reasoning quality and a driving benchmark without inference-cost, latency, throughput, or system-efficiency gains.",
+      "first_checked_at": "2026-10-14T06:34:21+00:00",
+      "last_checked_at": "2026-10-14T06:34:21+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md",
+        "papers/inference/99-other-inference-systems/2024-2401.06118-extreme-compression-of-large-language-models-via-additive-quantization.md",
+        "papers/inference/99-other-inference-systems/2024-2402.04396-quip-even-better-llm-quantization-with-hadamard-incoherence-and-lattice-.md",
+        "papers/inference/99-other-inference-systems/2024-2403.06764-an-image-is-worth-1-2-tokens-after-layer-2-plug-and-play-inference-accel.md",
+        "papers/inference/99-other-inference-systems/2024-2405.05803-boosting-multimodal-large-language-models-with-visual-tokens-withdrawal-.md",
+        "papers/inference/99-other-inference-systems/2025-2503.02175-divprune-diversity-based-visual-token-pruning-for-large-multimodal-model.md"
+      ],
+      "title": "From Segments to Scenes: Temporal Understanding for Agentic Autonomous Driving via Vision-Language Models"
+    },
+    "SemanticScholar:fc3c02acb31b60d4dbb3eda62e656c43bf540977": {
+      "classification": "unrelated",
+      "canonical_id": "SemanticScholar:fc3c02acb31b60d4dbb3eda62e656c43bf540977",
+      "identity_tokens": [
+        "DOI:10.64898/2026.05.12.724542",
+        "SemanticScholar:fc3c02acb31b60d4dbb3eda62e656c43bf540977"
+      ],
+      "reason": "Router interpretability and biological sequence/vision capability are the focus; the reported compute comparison concerns model adaptation rather than LLM inference or serving optimization.",
+      "first_checked_at": "2026-10-14T06:34:21+00:00",
+      "last_checked_at": "2026-10-14T06:34:21+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md",
+        "papers/inference/12-moe-parallelism-communication/2021-2101.03961-switch-transformers-scaling-to-trillion-parameter-models-with-simple-and.md",
+        "papers/inference/99-other-inference-systems/2017-1701.06538-outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts.md",
+        "papers/inference/99-other-inference-systems/2022-2202.08906-st-moe-designing-stable-and-transferable-sparse-expert-models.md",
+        "papers/inference/99-other-inference-systems/2024-2407.06204-a-survey-on-mixture-of-experts-in-large-language-models.md"
+      ],
+      "title": "OmniGene-4: A Unified Bio-Language MoE Model with Router-Level Interpretability and Modality-Invariant Transfer"
+    },
+    "arXiv:2509.23755": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2509.23755",
+      "identity_tokens": [
+        "arXiv:2509.23755"
+      ],
+      "reason": "It addresses fine-tuning capability retention and downstream quality, not inference or serving efficiency.",
+      "first_checked_at": "2026-10-14T06:34:21+00:00",
+      "last_checked_at": "2026-10-14T06:34:21+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2408.16725-mini-omni-language-models-can-hear-talk-while-thinking-in-streaming.md",
+        "papers/inference/99-other-inference-systems/2024-2409.06666-llama-omni-seamless-speech-interaction-with-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2024-2410.00037-moshi-a-speech-text-foundation-model-for-real-time-dialogue.md",
+        "papers/inference/99-other-inference-systems/2025-2503.20215-qwen2-5-omni-technical-report.md"
+      ],
+      "title": "Understanding Textual Capability Degradation in Speech LLMs via Parameter Importance Analysis"
+    },
+    "arXiv:2408.01416": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2408.01416",
+      "identity_tokens": [
+        "arXiv:2408.01416"
+      ],
+      "reason": "It is an interpretability survey with no inference-efficiency method or enabling runtime infrastructure.",
+      "first_checked_at": "2026-10-14T06:34:22+00:00",
+      "last_checked_at": "2026-10-14T06:34:22+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md",
+        "papers/inference/99-other-inference-systems/2020-2004.03844-on-the-effect-of-dropping-layers-of-pre-trained-transformer-models.md",
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "title": "The Quest for the Right Mediator: Surveying Mechanistic Interpretability Through the Lens of Causal Mediation Analysis"
+    },
+    "arXiv:2508.02013": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2508.02013",
+      "identity_tokens": [
+        "arXiv:2508.02013"
+      ],
+      "reason": "The contribution is a speech-agent data set and quality benchmark, not inference-system efficiency.",
+      "first_checked_at": "2026-10-14T06:34:22+00:00",
+      "last_checked_at": "2026-10-14T06:34:22+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2409.06666-llama-omni-seamless-speech-interaction-with-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2024-2410.00037-moshi-a-speech-text-foundation-model-for-real-time-dialogue.md",
+        "papers/inference/99-other-inference-systems/2025-2503.20215-qwen2-5-omni-technical-report.md"
+      ],
+      "title": "SpeechRole: A Large-Scale Dataset and Benchmark for Evaluating Speech Role-Playing Agents"
+    },
+    "arXiv:2505.18999": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.18999",
+      "identity_tokens": [
+        "arXiv:2505.18999"
+      ],
+      "reason": "The target is graph recommendation, not LLM or language-model inference infrastructure.",
+      "first_checked_at": "2026-10-14T06:34:22+00:00",
+      "last_checked_at": "2026-10-14T06:34:22+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2024-2402.10631-bitdistiller-unleashing-the-potential-of-sub-4-bit-llms-via-self-distill.md",
+        "papers/inference/99-other-inference-systems/2023-2305.17888-llm-qat-data-free-quantization-aware-training-for-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2024-2402.17764-the-era-of-1-bit-llms-all-large-language-models-are-in-1-58-bits.md"
+      ],
+      "title": "Lightweight Embeddings with Graph Rewiring for Collaborative Filtering"
+    },
+    "arXiv:2409.16001": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2409.16001",
+      "identity_tokens": [
+        "arXiv:2409.16001"
+      ],
+      "reason": "It proposes no concrete system-efficiency mechanism or evaluation.",
+      "first_checked_at": "2026-10-14T06:34:23+00:00",
+      "last_checked_at": "2026-10-14T06:34:23+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md",
+        "papers/inference/99-other-inference-systems/2017-1701.06538-outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts.md",
+        "papers/inference/99-other-inference-systems/2019-1909.08053-megatron-lm-training-multi-billion-parameter-language-models-using-model.md"
+      ],
+      "title": "Artificial Human Intelligence: The role of Humans in the Development of Next Generation AI"
+    },
+    "DOI:10.3389/frsen.2025.1718058": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.3389/frsen.2025.1718058",
+      "identity_tokens": [
+        "DOI:10.3389/frsen.2025.1718058"
+      ],
+      "reason": "The memory-read and image-processing speed improvements concern an independent remote-sensing reconstruction model, with no concrete language-model inference or serving contribution.",
+      "first_checked_at": "2026-10-14T06:34:23+00:00",
+      "last_checked_at": "2026-10-14T06:34:23+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md",
+        "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md",
+        "papers/inference/99-other-inference-systems/2024-2404.05892-eagle-and-finch-rwkv-with-matrix-valued-states-and-dynamic-recurrence.md"
+      ],
+      "title": "Efficient remote sensing image super-resolution with residual-enhanced wavelet and key-value adaptation"
     }
   }
 }

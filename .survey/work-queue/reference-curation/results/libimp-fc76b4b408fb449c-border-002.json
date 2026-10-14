@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-fc76b4b408fb449c-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2605.12770",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2605.12770",
+    "identity_tokens": [
+      "arXiv:2605.12770"
+    ],
+    "reason": "The abstract targets recurrent LM cache state but reports interpretability and steering, not memory or runtime efficiency.",
+    "first_checked_at": "2026-10-14T06:34:20+00:00",
+    "last_checked_at": "2026-10-14T06:34:20+00:00",
+    "linked_from": [
+      "papers/inference/09-kernel-runtime-compilation/2026-2602.04852-on-state-reduction-in-linear-attention.md",
+      "papers/inference/09-kernel-runtime-compilation/2026-2603.15569-mamba-3-improved-sequence-modeling-using-state-space-principles.md",
+      "papers/inference/99-other-inference-systems/2023-2307.08621-retentive-network-a-successor-to-transformer-for-large-language-models.md",
+      "papers/inference/99-other-inference-systems/2024-2312.06635-gated-linear-attention-transformers-with-hardware-efficient-training.md",
+      "papers/inference/99-other-inference-systems/2024-2407.04620-learning-to-learn-at-test-time-rnns-with-expressive-hidden-states.md",
+      "papers/inference/99-other-inference-systems/2024-2412.06464-gated-delta-networks-improving-mamba2-with-delta-rule.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "WriteSAE: Sparse Autoencoders for Recurrent State"
+  },
+  "processed_at": "2026-10-14T06:34:20+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-fc76b4b408fb",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

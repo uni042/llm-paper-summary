@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-14T06:02:23+00:00",
-  "record_count": 5054,
+  "updated_at": "2026-10-14T06:34:21+00:00",
+  "record_count": 5059,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -78177,6 +78177,97 @@
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "ECG Foundation Models and Medical LLMs for Agentic Cardiovascular Intelligence at the Edge: A Review and Outlook"
+    },
+    "arXiv:2605.12770": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.12770",
+      "identity_tokens": [
+        "arXiv:2605.12770"
+      ],
+      "reason": "The abstract targets recurrent LM cache state but reports interpretability and steering, not memory or runtime efficiency.",
+      "first_checked_at": "2026-10-14T06:34:20+00:00",
+      "last_checked_at": "2026-10-14T06:34:20+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2026-2602.04852-on-state-reduction-in-linear-attention.md",
+        "papers/inference/09-kernel-runtime-compilation/2026-2603.15569-mamba-3-improved-sequence-modeling-using-state-space-principles.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08621-retentive-network-a-successor-to-transformer-for-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2024-2312.06635-gated-linear-attention-transformers-with-hardware-efficient-training.md",
+        "papers/inference/99-other-inference-systems/2024-2407.04620-learning-to-learn-at-test-time-rnns-with-expressive-hidden-states.md",
+        "papers/inference/99-other-inference-systems/2024-2412.06464-gated-delta-networks-improving-mamba2-with-delta-rule.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "WriteSAE: Sparse Autoencoders for Recurrent State"
+    },
+    "DOI:10.1145/3460231.3474258": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3460231.3474258",
+      "identity_tokens": [
+        "DOI:10.1145/3460231.3474258"
+      ],
+      "reason": "The capsule-wardrobe paper has confirmed ACM DOI/title metadata, but the official ACM page returned HTTP 403 and a publisher-domain title search found no usable abstract. The fashion recommendation mechanism and any inference-efficiency connection remain unverified.",
+      "first_checked_at": "2026-10-14T06:34:20+00:00",
+      "last_checked_at": "2026-10-14T06:34:20+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2021-2103.02143-random-feature-attention.md",
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md",
+        "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md",
+        "papers/inference/99-other-inference-systems/2021-2102.03902-nystr-mformer-a-nystr-m-based-algorithm-for-approximating-self-attention.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Tops, Bottoms, and Shoes: Building Capsule Wardrobes via Cross-Attention Tensor Network"
+    },
+    "arXiv:2203.03312": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2203.03312",
+      "identity_tokens": [
+        "arXiv:2203.03312"
+      ],
+      "reason": "Sparse activation may reduce active computation, but the abstract reports performance and transfer rather than runtime or inference cost.",
+      "first_checked_at": "2026-10-14T06:34:20+00:00",
+      "last_checked_at": "2026-10-14T06:34:20+00:00",
+      "linked_from": [
+        "papers/inference/12-moe-parallelism-communication/2021-2101.03961-switch-transformers-scaling-to-trillion-parameter-models-with-simple-and.md",
+        "papers/inference/99-other-inference-systems/2017-1701.06538-outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts.md",
+        "papers/inference/99-other-inference-systems/2021-2112.06905-glam-efficient-scaling-of-language-models-with-mixture-of-experts.md",
+        "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "SkillNet-NLU: A Sparsely Activated Model for General-Purpose Natural Language Understanding"
+    },
+    "DOI:10.1145/3777730.3777756": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3777730.3777756",
+      "identity_tokens": [
+        "DOI:10.1145/3777730.3777756"
+      ],
+      "reason": "The bio-inspired LLM forgetting paper has confirmed ACM DOI/title metadata, but the official ACM page returned HTTP 403 and a publisher-domain title search exposed no usable abstract; efficient inference or memory reduction cannot be inferred from its title.",
+      "first_checked_at": "2026-10-14T06:34:20+00:00",
+      "last_checked_at": "2026-10-14T06:34:20+00:00",
+      "linked_from": [
+        "papers/inference/12-moe-parallelism-communication/2021-2101.03961-switch-transformers-scaling-to-trillion-parameter-models-with-simple-and.md",
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md",
+        "papers/inference/99-other-inference-systems/2019-1905.09418-analyzing-multi-head-self-attention-specialized-heads-do-the-heavy-lifti.md",
+        "papers/inference/99-other-inference-systems/2023-2304.11062-scaling-transformer-to-1m-tokens-and-beyond-with-rmt.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Bio-Inspired LLMs Forgetting: Integrating Neuroscience and Computational Mechanisms"
+    },
+    "arXiv:2407.04181": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2407.04181",
+      "identity_tokens": [
+        "arXiv:2407.04181"
+      ],
+      "reason": "It is described as efficient relative to fine-tuning, but gives no serving cost or runtime evidence; multi-expert per-token execution leaves efficiency unclear.",
+      "first_checked_at": "2026-10-14T06:34:21+00:00",
+      "last_checked_at": "2026-10-14T06:34:21+00:00",
+      "linked_from": [
+        "papers/inference/12-moe-parallelism-communication/2021-2101.03961-switch-transformers-scaling-to-trillion-parameter-models-with-simple-and.md",
+        "papers/inference/99-other-inference-systems/2017-1701.06538-outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts.md",
+        "papers/inference/99-other-inference-systems/2021-2112.06905-glam-efficient-scaling-of-language-models-with-mixture-of-experts.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Orchestrating LLMs with Different Personalizations"
     }
   }
 }
