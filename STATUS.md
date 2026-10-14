@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-10-14 21:18:08 JST**
+> 自動生成: **2026-10-14 21:23:15 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -15,7 +15,7 @@
 | 未claim Research job | **1834** |
 | 直近24hのResearch処理完了 | **94** |
 | 最終Research処理完了 | **10-14 20:15:00 JST** |
-| 最終Discovery探索完了 | **10-14 21:07:59 JST** |
+| 最終Discovery探索完了 | **10-14 21:14:31 JST** |
 | 整合性異常 | **0** |
 
 ## 16KB未満論文サマリーの再監査
@@ -88,7 +88,7 @@
 - 全数との差は暫定隔離数。元候補・引用プール・relevance判定台帳は削除せず、現在の候補identityから再計算する。
 
 - 消化率: **15.3%**
-- 現在の生在庫: 後方references **52885件** / 前方引用 **65933件**。後方候補を優先し、前方プールは後方プールに存在する同一identityを保持しません。
+- 現在の生在庫: 後方references **52887件** / 前方引用 **65933件**。後方候補を優先し、前方プールは後方プールに存在する同一identityを保持しません。
 - 前方・後方を統合してidentity重複を除いた未処理面は **118158件**。そこから既にResearch / Audit候補へ昇格したidentityを除いた値が上表の未処理Discovery候補です。
 - 処理済み = 収録済み + Research / Audit候補へ昇格済み + 無関係 + 微妙。前方引用・後方referencesの出自は区別せず、DOI/arXiv/title aliasを統合して数えます。
 - STATUS生成時にpaper実体、Research/Audit job、relevance台帳、現在の前方/後方候補からゼロベースで再計算します。
@@ -116,7 +116,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **10-14 09:28:07 JST（11時間50分前）** |
+| 最終maintenance完了 | **10-14 09:28:07 JST（11時間55分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **passed** |
 | health | **issues_found** |
@@ -137,18 +137,18 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 | 指標 | 現在値 |
 |---|---:|
 | 直近6hのResearch完了 | **19** |
-| 直近6hのDiscovery run | **22** |
-| 直近6hのDiscovery本文確認・分類 | **311** |
+| 直近6hのDiscovery run | **21** |
+| 直近6hのDiscovery本文確認・分類 | **301** |
 | 最終Research完了 | **10-14 20:15:00 JST** |
-| 最終Discovery完了 | **10-14 21:07:59 JST** |
+| 最終Discovery完了 | **10-14 21:14:31 JST** |
 
 ### 最新Library-first run
 
 - Research: **10-14 20:15:00 JST** / worker — / run 20261014-2000-scheduled-chat-00/r01 / 成果 **1件**
   - evidence: .survey/import-inbox/results/research/libfile_9021981dbeac8191a6ec67f2d73c5719--2026-2605.29157-parallax-parameterized-local-linear-attention-research-20261014-2000-scheduled-chat-00-r01.json
-- Discovery: **10-14 21:07:59 JST** / worker codex-local-screen-70 / run discovery-20261014-main-b098-screen-70-part-02
-  - 本文確認・分類 **20件** / accept **2件** / unrelated+borderline **18件**
-  - evidence: .survey/import-inbox/results/discovery/codex-screen70-20261014-b098-p02--part-02.json
+- Discovery: **10-14 21:14:31 JST** / worker codex-local-screen-71 / run discovery-20261014-main-8870-screen-71-part-01
+  - 本文確認・分類 **20件** / accept **14件** / unrelated+borderline **6件**
+  - evidence: .survey/import-inbox/pending/discovery/codex-screen71-20261014-8870-p01--part-01.json
 
 ### Codex探索成果の反映状況
 
@@ -157,14 +157,14 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 | 指標 | 件数 |
 |---|---:|
 | Codex成果の取り込み済み（receipt） | **2972ファイル / 16162件** |
-| Codex成果の取り込み待機中 | **0ファイル / 0件** |
-| └ 待機中のaccept | **0件** |
-| └ 待機中のunrelated | **0件** |
-| └ 待機中のborderline | **0件** |
+| Codex成果の取り込み待機中 | **2ファイル / 40件** |
+| └ 待機中のaccept | **28件** |
+| └ 待機中のunrelated | **3件** |
+| └ 待機中のborderline | **9件** |
 | Codex成果のblocked（要対処） | **0ファイル** |
 
-- 最終Codex分類・受渡し証拠: **10-14 21:07:59 JST** / results / discovery-20261014-main-b098-screen-70-part-02
-  - evidence: .survey/import-inbox/results/discovery/codex-screen70-20261014-b098-p02--part-02.json
+- 最終Codex分類・受渡し証拠: **10-14 21:14:31 JST** / pending / discovery-20261014-main-8870-screen-71-part-01
+  - evidence: .survey/import-inbox/pending/discovery/codex-screen71-20261014-8870-p01--part-01.json
 
 
 ## 件数サマリー（旧immutable transport診断）
