@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-14T07:32:29+00:00",
-  "record_count": 12182,
+  "updated_at": "2026-10-14T08:26:54+00:00",
+  "record_count": 12186,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -175295,6 +175295,54 @@
       "last_checked_at": "2026-10-14T07:32:29+00:00",
       "linked_from": [],
       "title": "Ostrakon-VL: Towards Domain-Expert MLLM for Food-Service and Retail Stores"
+    },
+    "arXiv:2505.00347": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.00347",
+      "identity_tokens": [
+        "arXiv:2505.00347"
+      ],
+      "reason": "optimizer-state memory reductionはtraining効率だけで、対象のinference systemsへの接続がない。",
+      "first_checked_at": "2026-10-14T08:26:50+00:00",
+      "last_checked_at": "2026-10-14T08:26:50+00:00",
+      "linked_from": [],
+      "title": "Pushing the Limits of Low-Bit Optimizers: A Focus on EMA Dynamics"
+    },
+    "arXiv:2510.05862": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2510.05862",
+      "identity_tokens": [
+        "arXiv:2510.05862"
+      ],
+      "reason": "context-denoising trainingで予測品質を改善し、推論効率を改善する主張はない。",
+      "first_checked_at": "2026-10-14T08:26:51+00:00",
+      "last_checked_at": "2026-10-14T08:26:51+00:00",
+      "linked_from": [],
+      "title": "Revisiting Long-context Modeling from Context Denoising Perspective"
+    },
+    "arXiv:2605.12617": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.12617",
+      "identity_tokens": [
+        "arXiv:2605.12617"
+      ],
+      "reason": "generative recommenderの高速化応用であり、LLM inference serving基盤の効率化は示さない。",
+      "first_checked_at": "2026-10-14T08:26:51+00:00",
+      "last_checked_at": "2026-10-14T08:26:51+00:00",
+      "linked_from": [],
+      "title": "MLPs are Efficient Distilled Generative Recommenders"
+    },
+    "arXiv:2601.22585": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.22585",
+      "identity_tokens": [
+        "arXiv:2601.22585"
+      ],
+      "reason": "LLM model trainingのheterogeneous GPU communication高速化のみで推論系との具体的接点なし。",
+      "first_checked_at": "2026-10-14T08:26:54+00:00",
+      "last_checked_at": "2026-10-14T08:26:54+00:00",
+      "linked_from": [],
+      "title": "HetCCL: Accelerating LLM Training with Heterogeneous GPUs"
     }
   }
 }
