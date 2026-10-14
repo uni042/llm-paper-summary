@@ -1,0 +1,160 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-bc498020ecf4c937-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-bc498020ecf4",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2210.13361",
+    "arXiv:2609.01730",
+    "arXiv:2609.32754"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 3,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": false,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "a10557e89f468bddf72c778e641225d2e8bee4c7",
+  "raw_search_result_count": 3,
+  "retrieval_duplicate_filtered_count": 2,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 1,
+  "provider_progress": {
+    "requested_count": 3,
+    "status_counts": {
+      "allowed": 1,
+      "filtered_by_snapshot": 2,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-14T15:15:44.026311+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2210.13361",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.1145/3508352.3549478"
+    },
+    {
+      "requested_id": "arXiv:2609.01730",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:SemanticScholar:3ad4c0563b1107f58be1320ee5ebaa1e3a36f613"
+    },
+    {
+      "requested_id": "arXiv:2609.32754",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Adaptive Consistency Graph for Long-Horizon Agents",
+      "source_url": "https://arxiv.org/abs/2609.32754",
+      "year": 2026,
+      "published": "2026-09-26",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language model agents can often make reasonable local decisions on short tasks, yet their performance degrades when success requires long sequences of dependent actions and tool calls. During execution, task requirements, historical evidence, and the current execution state may gradually become disconnected, so later decisions can drift from the original objective. We study this problem by introducing the Adaptive Consistency Graph (ACG) for long-horizon execution. ACG incrementally organizes execution evidence and its provenance in a persistent graph, then constructs a temporary requirement-centered view for each decision under a bounded context budget. Rather than replacing the base agent's planner or tool executor, ACG provides a structured and traceable context view for each decision. In the matched evaluation, ACG improves GPT-5.6-luna's average success from 44.5\\% with ReAct to 50.2\\%, with the largest gain on BrowseComp-Plus (73.5\\% versus 62.4\\%). We further analyze trajectory structure and inference cost to characterize this improvement. Our code is available at https://github.com/yunsaijc/Adaptive-Consistency-Graph.",
+      "identifiers": [
+        "SemanticScholar:cf68c8f469a8a3efd43c80bbf762e9455e4a9463"
+      ],
+      "semantic_scholar_id": "cf68c8f469a8a3efd43c80bbf762e9455e4a9463",
+      "canonical_id": "arXiv:2609.32754",
+      "arxiv_id": "2609.32754",
+      "authors": [
+        "Jie-Cong Wang",
+        "Hao Peng",
+        "Zhan-Yi Wang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 18,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2609.32754",
+      "identity_tokens": [
+        "id:SemanticScholar:cf68c8f469a8a3efd43c80bbf762e9455e4a9463",
+        "id:arXiv:2609.32754",
+        "title:adaptive consistency graph for longhorizon agents",
+        "url:https://arxiv.org/abs/2609.32754"
+      ],
+      "record": {
+        "title": "Adaptive Consistency Graph for Long-Horizon Agents",
+        "source_url": "https://arxiv.org/abs/2609.32754",
+        "year": 2026,
+        "published": "2026-09-26",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large language model agents can often make reasonable local decisions on short tasks, yet their performance degrades when success requires long sequences of dependent actions and tool calls. During execution, task requirements, historical evidence, and the current execution state may gradually become disconnected, so later decisions can drift from the original objective. We study this problem by introducing the Adaptive Consistency Graph (ACG) for long-horizon execution. ACG incrementally organizes execution evidence and its provenance in a persistent graph, then constructs a temporary requirement-centered view for each decision under a bounded context budget. Rather than replacing the base agent's planner or tool executor, ACG provides a structured and traceable context view for each decision. In the matched evaluation, ACG improves GPT-5.6-luna's average success from 44.5\\% with ReAct to 50.2\\%, with the largest gain on BrowseComp-Plus (73.5\\% versus 62.4\\%). We further analyze trajectory structure and inference cost to characterize this improvement. Our code is available at https://github.com/yunsaijc/Adaptive-Consistency-Graph.",
+        "identifiers": [
+          "SemanticScholar:cf68c8f469a8a3efd43c80bbf762e9455e4a9463"
+        ],
+        "semantic_scholar_id": "cf68c8f469a8a3efd43c80bbf762e9455e4a9463",
+        "canonical_id": "arXiv:2609.32754",
+        "arxiv_id": "2609.32754",
+        "authors": [
+          "Jie-Cong Wang",
+          "Hao Peng",
+          "Zhan-Yi Wang"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 18,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:2ea5efd0ae9687a967523f62674a980c45e59ede05f618f81d235d6d7425bb0f",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}
