@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-14T08:03:23+00:00",
+  "generated_at": "2026-10-14T08:12:21+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 49,
+  "count": 50,
   "entries": [
     {
       "canonical_id": "DOI:10.1145/3714983.3714987",
@@ -1083,36 +1083,9 @@
       "worker_run_key": "20261014-0030-scheduled-chat-30/r01"
     },
     {
-      "canonical_id": "arXiv:2511.02647",
+      "canonical_id": "arXiv:2604.07812",
       "title": null,
       "source_url": null,
-      "returned_at": "2026-10-14T07:42:46+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "長文定型文の再利用を検出: .survey/import-inbox/pending/research/libfile_f5bd297431a48191b3de4557f30d234c--2025-2511.02647-federated-attention-edge-llm-inference-research-20261014-1430-scheduled-chat-30-r01.md と 11 段落 / 2267文字 (100.0%) が完全一致"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5009,
-        "body_paragraphs": 29,
-        "method_chars": 1785,
-        "method_paragraphs": 10,
-        "evaluation_chars": 1421,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_c34cb3f187308191bf72dfec3a54595d--2025-2511.02647-federated-attention-edge-llm-inference-research-20261014-1430-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_c34cb3f187308191bf72dfec3a54595d--2025-2511.02647-federated-attention-edge-llm-inference-research-20261014-1430-scheduled-chat-30-r01.json",
-      "worker_run_key": "20261014-1430-scheduled-chat-30/r01"
-    },
-    {
-      "canonical_id": "arXiv:2604.07812",
-      "title": "HAWK: Head Importance-Aware Visual Token Pruning in Multimodal Models",
-      "source_url": "https://arxiv.org/abs/2604.07812",
       "returned_at": "2026-10-14T08:01:17+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-30",
@@ -1140,8 +1113,8 @@
     },
     {
       "canonical_id": "arXiv:2605.19049",
-      "title": "KVBuffer: IO-aware Serving for Linear Attention",
-      "source_url": "https://arxiv.org/html/2605.19049v1",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-14T08:01:19+00:00",
       "return_count": 1,
       "assigned_worker": "scheduled-chat-00",
@@ -1164,6 +1137,60 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_e9925c600dc481919896f3dab2b2d9e1--2026-2605.19049-kvbuffer-linear-attention-serving-research-20261014-0200-scheduled-chat-00-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_e9925c600dc481919896f3dab2b2d9e1--2026-2605.19049-kvbuffer-linear-attention-serving-research-20261014-0200-scheduled-chat-00-r01.json",
       "worker_run_key": "20261014-0200-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2602.01778",
+      "title": "Data Distribution Matters: A Data-Centric Perspective on Context Compression for Large Language Model",
+      "source_url": "https://arxiv.org/html/2602.01778v1",
+      "returned_at": "2026-10-14T08:10:45+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 0 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 6089,
+        "body_paragraphs": 38,
+        "method_chars": 1912,
+        "method_paragraphs": 12,
+        "evaluation_chars": 0,
+        "limitation_chars": 750,
+        "insufficiency_flags": [
+          "評価説明量 0 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_edbe26230abc81918f5fb5cc89b2ae64--2026-2602.01778-data-distribution-context-compression-research-20261014-1530-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_edbe26230abc81918f5fb5cc89b2ae64--2026-2602.01778-data-distribution-context-compression-research-20261014-1530-scheduled-chat-30-r01.json",
+      "worker_run_key": "20261014-1530-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2511.02647",
+      "title": "Federated Attention: A Distributed Paradigm for Collaborative LLM Inference over Edge Networks",
+      "source_url": "https://arxiv.org/abs/2511.02647",
+      "returned_at": "2026-10-14T08:11:22+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "長文定型文の再利用を検出: .survey/import-inbox/pending/research/retry-research-dfee2fe83357--libfile_c34cb3f187308191bf72dfec3a54595d--2025-2511.02647-federated-attention-edge-llm-inference-research-20261014-1430-scheduled-chat-30-r01.md と 11 段落 / 2267文字 (100.0%) が完全一致"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5009,
+        "body_paragraphs": 29,
+        "method_chars": 1785,
+        "method_paragraphs": 10,
+        "evaluation_chars": 1421,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_f5bd297431a48191b3de4557f30d234c--2025-2511.02647-federated-attention-edge-llm-inference-research-20261014-1430-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_f5bd297431a48191b3de4557f30d234c--2025-2511.02647-federated-attention-edge-llm-inference-research-20261014-1430-scheduled-chat-30-r01.json",
+      "worker_run_key": "20261014-1430-scheduled-chat-30/r01"
     }
   ]
 }

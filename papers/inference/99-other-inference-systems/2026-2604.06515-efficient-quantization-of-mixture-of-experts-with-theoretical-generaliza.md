@@ -31,6 +31,8 @@ worker_completed_at: '2026-10-14T04:03:55+09:00'
 worker_run_key: '20261014-0400-scheduled-chat-00/r01'
 quality_self_review_passed: true
 quality_self_review_version: 'PAPER-QUALITY-GUIDE-2026-10-07'
+last_audited: null
+audit_version: 0
 ---
 
 # MoEの専門家別混合精度量子化：ルーターノルムと重み分散に基づく割当
