@@ -1,0 +1,293 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "discovery-20261014-main-e309-screen-51-part-02-0ad862bc1284",
+  "reference_main_sha": "01f84242b969f9e8c4364599996d1609cb4ea4b0",
+  "record_count": 20,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2509.15206",
+      "identity_tokens": [
+        "arXiv:2509.15206"
+      ],
+      "title": "Fair-GPTQ: Bias-Aware Quantization for Large Language Models",
+      "reason": "The method adds fairness constraints to GPTQ while retaining low-bit quantization benefits for model size and inference.",
+      "source_url": "https://arxiv.org/abs/2509.15206",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T01:11:26Z",
+      "last_checked_at": "2026-10-14T01:11:26Z",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1109/DAC63849.2025.11132542",
+      "identity_tokens": [
+        "DOI:10.1109/DAC63849.2025.11132542"
+      ],
+      "title": "KVO-LLM: Boosting Long-Context Generation Throughput for Batched LLM Inference",
+      "reason": "Official DAC abstract co-optimizes KV handling and accelerator execution for batched long-context generation and reports throughput improvement.",
+      "source_url": "https://62dac.conference-program.com/presentation/?id=RESEARCH274&sess=sess108",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T01:11:26Z",
+      "last_checked_at": "2026-10-14T01:11:26Z",
+      "linked_from": []
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/ACCESS.2026.3698449",
+      "identity_tokens": [
+        "DOI:10.1109/ACCESS.2026.3698449"
+      ],
+      "title": "Sensitivity-Guided Mixed-Precision Quantization-Aware Training for Large Language Models",
+      "reason": "IEEE/DOI publisher search and landing routes yielded title/metadata but no readable primary abstract; secondary abstract snippets were not used. The classification evidence is missing.",
+      "source_url": "https://doi.org/10.1109/ACCESS.2026.3698449",
+      "body_check": "source_unavailable; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-10-14T01:11:26Z",
+      "last_checked_at": "2026-10-14T01:11:26Z",
+      "linked_from": []
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/TASLPRO.2026.3706023",
+      "identity_tokens": [
+        "DOI:10.1109/TASLPRO.2026.3706023"
+      ],
+      "title": "AceQuant: An Activation-Centric Framework for High-Fidelity Low-Bit Quantization of LLMs",
+      "reason": "IEEE publisher search/landing routes confirmed bibliographic title but did not return the official abstract; no secondary abstract was used.",
+      "source_url": "https://doi.org/10.1109/TASLPRO.2026.3706023",
+      "body_check": "source_unavailable; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-10-14T01:11:26Z",
+      "last_checked_at": "2026-10-14T01:11:26Z",
+      "linked_from": []
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/COOLCHIPS65488.2025.11018582",
+      "identity_tokens": [
+        "DOI:10.1109/COOLCHIPS65488.2025.11018582"
+      ],
+      "title": "A Lightweight Transformer Model with Dynamic Sparse Mask for Neural Machine Translation",
+      "reason": "Official COOLCHIPS program metadata and IEEE/DOI publisher searches confirmed title/authors, but no primary abstract was retrievable.",
+      "source_url": "https://doi.org/10.1109/COOLCHIPS65488.2025.11018582",
+      "body_check": "source_unavailable; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-10-14T01:11:26Z",
+      "last_checked_at": "2026-10-14T01:11:26Z",
+      "linked_from": []
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2509.10406",
+      "identity_tokens": [
+        "arXiv:2509.10406"
+      ],
+      "title": "Multipole Semantic Attention: A Fast Approximation of Softmax Attention for Pretraining",
+      "reason": "The method approximates attention for pretraining; the abstract does not establish inference/serving efficiency.",
+      "source_url": "https://arxiv.org/abs/2509.10406",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T01:11:26Z",
+      "last_checked_at": "2026-10-14T01:11:26Z",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2407.15508",
+      "identity_tokens": [
+        "arXiv:2407.15508",
+        "DOI:10.48550/arXiv.2407.15508"
+      ],
+      "title": "Compensate Quantization Errors+: Quantized Models Are Inquisitive Learners",
+      "reason": "The work compensates errors in quantized language models, improving the quality of low-precision models for efficient deployment.",
+      "source_url": "https://arxiv.org/abs/2407.15508",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T01:11:26Z",
+      "last_checked_at": "2026-10-14T01:11:26Z",
+      "linked_from": []
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/ACCESS.2025.3611390",
+      "identity_tokens": [
+        "DOI:10.1109/ACCESS.2025.3611390"
+      ],
+      "title": "A Developer’s Guide to Compressing Pre-Trained Transformer Neural Networks Across Different Domains",
+      "reason": "IEEE publisher search confirmed the DOI/title but did not surface a readable official abstract. Title alone is insufficient to establish its LLM/inference scope.",
+      "source_url": "https://doi.org/10.1109/ACCESS.2025.3611390",
+      "body_check": "source_unavailable; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-10-14T01:11:26Z",
+      "last_checked_at": "2026-10-14T01:11:26Z",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2502.02040",
+      "identity_tokens": [
+        "arXiv:2502.02040"
+      ],
+      "title": "M2R2: Mixture of Multi-Rate Residuals for Efficient Transformer Inference",
+      "reason": "The dynamic multi-rate residual method accelerates Transformer/LLM inference, including speculative decoding.",
+      "source_url": "https://arxiv.org/abs/2502.02040",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T01:11:26Z",
+      "last_checked_at": "2026-10-14T01:11:26Z",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2508.09072",
+      "identity_tokens": [
+        "arXiv:2508.09072"
+      ],
+      "title": "READER: Retrieval-Assisted Drafter for Efficient LLM Inference",
+      "reason": "Retrieval-assisted speculative drafting preserves outputs while reducing LLM inference latency.",
+      "source_url": "https://arxiv.org/abs/2508.09072",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T01:11:26Z",
+      "last_checked_at": "2026-10-14T01:11:26Z",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.12142/ZTETJ.202402003",
+      "identity_tokens": [
+        "DOI:10.12142/ZTETJ.202402003",
+        "SemanticScholar:990cca64e27b0c29c80ae4aa6920db01913cc92f"
+      ],
+      "title": "Review of Evolution of Large Language Model Algorithms",
+      "reason": "The publisher abstract reviews LLM algorithm development and explicitly includes inference efficiency, distributed computation, memory and quantization.",
+      "source_url": "https://www.zte.com.cn/content/dam/zte-site/res-www-zte-com-cn/mediares/magazine/publication/com_cn/article/202402/3.pdf",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T01:11:26Z",
+      "last_checked_at": "2026-10-14T01:11:26Z",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2502.13176",
+      "identity_tokens": [
+        "arXiv:2502.13176"
+      ],
+      "title": "BaKlaVa - Budgeted Allocation of KV cache for Long-context Inference",
+      "reason": "Budgeted KV-cache allocation compresses long-context inference state while managing model quality.",
+      "source_url": "https://arxiv.org/abs/2502.13176",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T01:11:26Z",
+      "last_checked_at": "2026-10-14T01:11:26Z",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2510.22909",
+      "identity_tokens": [
+        "arXiv:2510.22909"
+      ],
+      "title": "Rethinking Inference Placement for Deep Learning across Edge and Cloud Platforms: A Multi-Objective Optimization Perspective and Future Directions",
+      "reason": "The survey explicitly treats inference placement/offloading across edge and cloud with latency, privacy and cost objectives.",
+      "source_url": "https://arxiv.org/abs/2510.22909",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T01:11:26Z",
+      "last_checked_at": "2026-10-14T01:11:26Z",
+      "linked_from": []
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/CBASE67452.2025.11335478",
+      "identity_tokens": [
+        "DOI:10.1109/CBASE67452.2025.11335478"
+      ],
+      "title": "KVSpec: Efficient KV-Cache Reuse for Speculative Decoding",
+      "reason": "The registered DOI/IEEE publisher route did not yield a readable primary abstract after attempted lookup; no secondary abstract was used.",
+      "source_url": "https://doi.org/10.1109/CBASE67452.2025.11335478",
+      "body_check": "source_unavailable; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-10-14T01:11:26Z",
+      "last_checked_at": "2026-10-14T01:11:26Z",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2505.24544",
+      "identity_tokens": [
+        "arXiv:2505.24544"
+      ],
+      "title": "Cross-Attention Speculative Decoding",
+      "reason": "The work proposes cross-attention speculative decoding to accelerate autoregressive generation.",
+      "source_url": "https://arxiv.org/abs/2505.24544",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T01:11:26Z",
+      "last_checked_at": "2026-10-14T01:11:26Z",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2504.05586",
+      "identity_tokens": [
+        "arXiv:2504.05586",
+        "SemanticScholar:a0b938e3e741e998a42463f0cbe19fd3f37607f1"
+      ],
+      "title": "Finding Fantastic Experts in MoEs: A Unified Study for Expert Dropping Strategies and Observations",
+      "reason": "The resolved paper studies expert dropping/sparsification in MoEs, reducing active model resources and supporting efficient inference.",
+      "source_url": "https://arxiv.org/abs/2504.05586",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T01:11:26Z",
+      "last_checked_at": "2026-10-14T01:11:26Z",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2411.09580",
+      "identity_tokens": [
+        "arXiv:2411.09580"
+      ],
+      "title": "Software Performance Engineering for Foundation Model-Powered Software",
+      "reason": "The abstract studies software performance engineering, throughput and latency for foundation-model-powered systems, a plausible systems-performance lineage.",
+      "source_url": "https://arxiv.org/abs/2411.09580",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T01:11:26Z",
+      "last_checked_at": "2026-10-14T01:11:26Z",
+      "linked_from": []
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/ACCESS.2025.3609769",
+      "identity_tokens": [
+        "DOI:10.1109/ACCESS.2025.3609769"
+      ],
+      "title": "A Component-Centric Perspective on Hardware Accelerators for LLMs",
+      "reason": "IEEE publisher retrieval did not provide an official abstract. A secondary site showed a summary, but it was excluded; primary abstract evidence remains unavailable.",
+      "source_url": "https://doi.org/10.1109/ACCESS.2025.3609769",
+      "body_check": "source_unavailable; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-10-14T01:11:26Z",
+      "last_checked_at": "2026-10-14T01:11:26Z",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2505.22811",
+      "identity_tokens": [
+        "arXiv:2505.22811"
+      ],
+      "title": "Highly Efficient and Effective LLMs with Multi-Boolean Architectures",
+      "reason": "The proposed multi-boolean architecture reduces model complexity and inference computation while preserving effectiveness.",
+      "source_url": "https://arxiv.org/abs/2505.22811",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T01:11:26Z",
+      "last_checked_at": "2026-10-14T01:11:26Z",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2503.02495",
+      "identity_tokens": [
+        "arXiv:2503.02495"
+      ],
+      "title": "Union of Experts: Adapting Hierarchical Routing to Equivalently Decomposed Transformer",
+      "reason": "Hierarchical expert routing and hardware-efficient batched operations reduce computation for Transformer inference.",
+      "source_url": "https://arxiv.org/abs/2503.02495",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T01:11:26Z",
+      "last_checked_at": "2026-10-14T01:11:26Z",
+      "linked_from": []
+    }
+  ]
+}
