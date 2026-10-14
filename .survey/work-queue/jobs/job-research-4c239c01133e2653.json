@@ -35,10 +35,15 @@
   "selection_reason": "凍結したbackbone LLMをmemory encoderとし、adaptive residual side-networkをretriever/readerとして分離して過去文脈を外部memory bankへキャッシュ・検索するLongMemを提案し、固定context長を超える推論時メモリ利用を扱う。",
   "semantic_scholar_id": "80980cd10d19f021c14a6b7eee871b6a5d328024",
   "source_url": "https://arxiv.org/abs/2306.07174",
-  "status": "ready",
+  "status": "superseded",
   "title": "Augmenting Language Models with Long-Term Memory",
   "type": "research",
   "venue": "Neural Information Processing Systems",
   "workflow_version": 10,
-  "year": 2023
+  "year": 2023,
+  "superseded_at": "2026-10-14T08:48:24+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2023-2306.07174-augmenting-language-models-with-long-term-memory.md",
+  "represented_canonical_id": "arXiv:2306.07174",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
