@@ -35,6 +35,8 @@ worker_completed_at: '2026-10-14T23:00:00+09:00'
 worker_run_key: 20261014-2258-scheduled-chat-00/r01
 quality_self_review_passed: true
 quality_self_review_version: '2026-10-07'
+last_audited: null
+audit_version: 0
 ---
 # WISV: Wireless-Informed Semantic Verification for Distributed Speculative Decoding in Device-Edge LLM Inference
 
