@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-14T03:15:44+00:00",
-  "record_count": 11978,
+  "updated_at": "2026-10-14T03:18:17+00:00",
+  "record_count": 11989,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -172385,6 +172385,178 @@
         "papers/inference/99-other-inference-systems/2019-1909.08053-megatron-lm-training-multi-billion-parameter-language-models-using-model.md"
       ],
       "title": "Who is leading in AI? An analysis of industry AI research"
+    },
+    "arXiv:2503.17237": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2503.17237",
+      "identity_tokens": [
+        "arXiv:2503.17237"
+      ],
+      "reason": "Multi-UAV tracking is an independent vision application.",
+      "first_checked_at": "2026-10-14T03:18:12+00:00",
+      "last_checked_at": "2026-10-14T03:18:12+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+      ],
+      "title": "Strong Baseline: Multi-UAV Tracking via YOLOv12 with BoT-SORT-ReID"
+    },
+    "arXiv:2410.08989": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2410.08989",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2410.08989",
+        "arXiv:2410.08989"
+      ],
+      "reason": "SubZero targets memory and convergence in fine-tuning; training-only optimization is out of scope.",
+      "first_checked_at": "2026-10-14T03:18:12+00:00",
+      "last_checked_at": "2026-10-14T03:18:12+00:00",
+      "linked_from": [],
+      "title": "Zeroth-Order Fine-Tuning of LLMs in Random Subspaces"
+    },
+    "arXiv:2510.08369": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2510.08369",
+      "identity_tokens": [
+        "arXiv:2510.08369"
+      ],
+      "reason": "Guided masked diffusion is a generative modeling method, not inference systems efficiency.",
+      "first_checked_at": "2026-10-14T03:18:14+00:00",
+      "last_checked_at": "2026-10-14T03:18:14+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2025-2505.22618-fast-dllm-kv-cache-parallel-decoding.md",
+        "papers/inference/99-other-inference-systems/2025-2503.09573-block-diffusion-interpolating-between-autoregressive-and-diffusion-langu.md",
+        "papers/inference/99-other-inference-systems/2025-2508.15487-dream-7b-diffusion-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2026-2406.03736-your-absorbing-discrete-diffusion-secretly-models-the-conditional-distri.md"
+      ],
+      "title": "Guided Star-Shaped Masked Diffusion"
+    },
+    "arXiv:2506.06041": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2506.06041",
+      "identity_tokens": [
+        "arXiv:2506.06041"
+      ],
+      "reason": "Tensor-to-tensor model design has no concrete LLM inference-system link.",
+      "first_checked_at": "2026-10-14T03:18:15+00:00",
+      "last_checked_at": "2026-10-14T03:18:15+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md",
+        "papers/inference/19-inference-evaluation-benchmarking/2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md",
+        "papers/inference/99-other-inference-systems/2023-2303.06349-resurrecting-recurrent-neural-networks-for-long-sequences.md",
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "title": "Tensor-to-Tensor Models with Fast Iterated Sum Features"
+    },
+    "arXiv:2605.21264": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.21264",
+      "identity_tokens": [
+        "arXiv:2605.21264"
+      ],
+      "reason": "Federated MoE generalization/personalization is a learning objective, not serving efficiency.",
+      "first_checked_at": "2026-10-14T03:18:15+00:00",
+      "last_checked_at": "2026-10-14T03:18:15+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2201.05596-deepspeed-moe-inference-compression.md",
+        "papers/inference/12-moe-parallelism-communication/2021-2101.03961-switch-transformers-scaling-to-trillion-parameter-models-with-simple-and.md",
+        "papers/inference/99-other-inference-systems/2017-1701.06538-outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts.md",
+        "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md"
+      ],
+      "title": "FedCoE: Bridging Generalization and Personalization via Federated Coordinated Dual-level MoEs"
+    },
+    "arXiv:2408.07884": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2408.07884",
+      "identity_tokens": [
+        "arXiv:2408.07884"
+      ],
+      "reason": "Scientific literature survey generation is an application task.",
+      "first_checked_at": "2026-10-14T03:18:15+00:00",
+      "last_checked_at": "2026-10-14T03:18:15+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md",
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+        "papers/inference/99-other-inference-systems/2023-2307.02486-longnet-scaling-transformers-to-1-000-000-000-tokens.md"
+      ],
+      "title": "Instruct Large Language Models to Generate Scientific Literature Survey Step by Step"
+    },
+    "arXiv:2501.12919": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2501.12919",
+      "identity_tokens": [
+        "arXiv:2501.12919"
+      ],
+      "reason": "Text/crystal contrastive learning is a materials-science application.",
+      "first_checked_at": "2026-10-14T03:18:16+00:00",
+      "last_checked_at": "2026-10-14T03:18:16+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md",
+        "papers/inference/99-other-inference-systems/2023-2310.06694-sheared-llama-accelerating-language-model-pre-training-via-structured-pr.md"
+      ],
+      "title": "Bridging text and crystal structures: literature-driven contrastive learning for materials science"
+    },
+    "arXiv:2605.09644": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.09644",
+      "identity_tokens": [
+        "arXiv:2605.09644"
+      ],
+      "reason": "Streaming 3D reconstruction is a separate vision task.",
+      "first_checked_at": "2026-10-14T03:18:16+00:00",
+      "last_checked_at": "2026-10-14T03:18:16+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2306.14048-h2o.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2404.14469-snapkv.md",
+        "papers/inference/13-sparse-attention/2024-2406.10774-quest.md"
+      ],
+      "title": "Attention Itself Could Retrieve.RetrieveVGGT: Training-Free Long Context Streaming 3D Reconstruction via Query-Key Similarity Retrieval"
+    },
+    "arXiv:2311.02945": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2311.02945",
+      "identity_tokens": [
+        "arXiv:2311.02945"
+      ],
+      "reason": "Vietnamese generative pretraining has no direct systems-efficiency contribution.",
+      "first_checked_at": "2026-10-14T03:18:16+00:00",
+      "last_checked_at": "2026-10-14T03:18:16+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md",
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md"
+      ],
+      "title": "PhoGPT: Generative Pre-training for Vietnamese"
+    },
+    "arXiv:2410.20643": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2410.20643",
+      "identity_tokens": [
+        "arXiv:2410.20643"
+      ],
+      "reason": "POI user profiling focuses recommendation quality, not inference systems.",
+      "first_checked_at": "2026-10-14T03:18:16+00:00",
+      "last_checked_at": "2026-10-14T03:18:16+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+      ],
+      "title": "GenUP: Generative User Profilers as In-Context Learners for Next POI Recommender Systems"
+    },
+    "arXiv:2410.08081": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2410.08081",
+      "identity_tokens": [
+        "arXiv:2410.08081"
+      ],
+      "reason": "Fine-tuning data packing optimizes training rather than inference.",
+      "first_checked_at": "2026-10-14T03:18:17+00:00",
+      "last_checked_at": "2026-10-14T03:18:17+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ],
+      "title": "Packing Analysis: Packing Is More Appropriate for Large Models or Datasets in Supervised Fine-tuning"
     }
   }
 }

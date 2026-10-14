@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-14T03:15:41+00:00",
-  "record_count": 4997,
+  "updated_at": "2026-10-14T03:18:14+00:00",
+  "record_count": 5001,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -77331,6 +77331,77 @@
       ],
       "borderline_recheck_count": 0,
       "title": "Hyperscale Hardware Optimized Neural Architecture Search"
+    },
+    "arXiv:2607.01520": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2607.01520",
+      "identity_tokens": [
+        "arXiv:2607.01520"
+      ],
+      "reason": "The work evaluates KV-cache compression risks but does not establish a concrete serving method.",
+      "first_checked_at": "2026-10-14T03:18:13+00:00",
+      "last_checked_at": "2026-10-14T03:18:13+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2305.17118-scissorhands.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2403.09054-keyformer-kv-cache-reduction-through-key-tokens-selection-for-efficient-.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2406.02069-pyramidkv.md",
+        "papers/inference/99-other-inference-systems/2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "The risk of KV cache compression"
+    },
+    "arXiv:2507.07129": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2507.07129",
+      "identity_tokens": [
+        "arXiv:2507.07129"
+      ],
+      "reason": "Model growth and layer-wise expansion are described without a clear inference-efficiency contribution.",
+      "first_checked_at": "2026-10-14T03:18:14+00:00",
+      "last_checked_at": "2026-10-14T03:18:14+00:00",
+      "linked_from": [
+        "papers/inference/12-moe-parallelism-communication/2021-2101.03961-switch-transformers-scaling-to-trillion-parameter-models-with-simple-and.md",
+        "papers/inference/99-other-inference-systems/2017-1701.06538-outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts.md",
+        "papers/inference/99-other-inference-systems/2021-2110.02861-8-bit-optimizers-via-block-wise-quantization.md",
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Growing Transformers: Modular Composition and Layer-wise Expansion on a Frozen Substrate"
+    },
+    "arXiv:2605.18535": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.18535",
+      "identity_tokens": [
+        "arXiv:2605.18535"
+      ],
+      "reason": "Edge agents are discussed, but concrete latency, memory, or throughput improvement is unclear.",
+      "first_checked_at": "2026-10-14T03:18:14+00:00",
+      "last_checked_at": "2026-10-14T03:18:14+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2023-2312.11514-llm-in-a-flash-efficient-large-language-model-inference-with-limited-memory.md",
+        "papers/inference/09-kernel-runtime-compilation/2024-2311.03285-s-lora-serving-thousands-of-concurrent-lora-adapters.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2308.16369-sarathi.md",
+        "papers/inference/99-other-inference-systems/2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Beyond Scaling: Agents Are Heading to the Edge"
+    },
+    "arXiv:2411.19542": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2411.19542",
+      "identity_tokens": [
+        "arXiv:2411.19542"
+      ],
+      "reason": "Hybrid CPU parallelism is general performance work without a specific LLM inference connection.",
+      "first_checked_at": "2026-10-14T03:18:14+00:00",
+      "last_checked_at": "2026-10-14T03:18:14+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-2407.07304-inference-performance-optimization-for-large-language-models-on-cpus.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2308.16369-sarathi.md",
+        "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "A dynamic parallel method for performance optimization on hybrid CPUs"
     }
   }
 }

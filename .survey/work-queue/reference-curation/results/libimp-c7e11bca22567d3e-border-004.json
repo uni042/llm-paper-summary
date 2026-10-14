@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-c7e11bca22567d3e-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2507.07129",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2507.07129",
+    "identity_tokens": [
+      "arXiv:2507.07129"
+    ],
+    "reason": "Model growth and layer-wise expansion are described without a clear inference-efficiency contribution.",
+    "first_checked_at": "2026-10-14T03:18:14+00:00",
+    "last_checked_at": "2026-10-14T03:18:14+00:00",
+    "linked_from": [
+      "papers/inference/12-moe-parallelism-communication/2021-2101.03961-switch-transformers-scaling-to-trillion-parameter-models-with-simple-and.md",
+      "papers/inference/99-other-inference-systems/2017-1701.06538-outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts.md",
+      "papers/inference/99-other-inference-systems/2021-2110.02861-8-bit-optimizers-via-block-wise-quantization.md",
+      "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Growing Transformers: Modular Composition and Layer-wise Expansion on a Frozen Substrate"
+  },
+  "processed_at": "2026-10-14T03:18:14+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-c7e11bca2256",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

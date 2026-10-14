@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-c7e11bca22567d3e-border-005",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2605.18535",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2605.18535",
+    "identity_tokens": [
+      "arXiv:2605.18535"
+    ],
+    "reason": "Edge agents are discussed, but concrete latency, memory, or throughput improvement is unclear.",
+    "first_checked_at": "2026-10-14T03:18:14+00:00",
+    "last_checked_at": "2026-10-14T03:18:14+00:00",
+    "linked_from": [
+      "papers/inference/01-offload-hierarchical-memory/2023-2312.11514-llm-in-a-flash-efficient-large-language-model-inference-with-limited-memory.md",
+      "papers/inference/09-kernel-runtime-compilation/2024-2311.03285-s-lora-serving-thousands-of-concurrent-lora-adapters.md",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2308.16369-sarathi.md",
+      "papers/inference/99-other-inference-systems/2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Beyond Scaling: Agents Are Heading to the Edge"
+  },
+  "processed_at": "2026-10-14T03:18:14+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-c7e11bca2256",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
