@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-14T10:42:53+00:00",
+  "generated_at": "2026-10-14T10:51:34+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 63,
+  "count": 66,
   "entries": [
     {
       "canonical_id": "DOI:10.1145/3714983.3714987",
@@ -1449,8 +1449,8 @@
     },
     {
       "canonical_id": "arXiv:2512.09487",
-      "title": "RouteRAG: Efficient Retrieval-Augmented Generation from Text and Graph via Reinforcement Learning",
-      "source_url": "https://arxiv.org/abs/2512.09487",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-14T10:41:34+00:00",
       "return_count": 1,
       "assigned_worker": "scheduled-chat-00",
@@ -1474,8 +1474,8 @@
     },
     {
       "canonical_id": "DOI:10.18653/v1/2021.naacl-main.463",
-      "title": "TR-BERT: Dynamic Token Reduction for Accelerating BERT Inference",
-      "source_url": "https://aclanthology.org/2021.naacl-main.463.pdf",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-14T10:41:36+00:00",
       "return_count": 3,
       "assigned_worker": "scheduled-chat-00",
@@ -1501,8 +1501,8 @@
     },
     {
       "canonical_id": "arXiv:2512.14244",
-      "title": "From Context to EDUs: Faithful and Structured Context Compression via Elementary Discourse Unit Decomposition",
-      "source_url": "https://arxiv.org/abs/2512.14244",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-14T10:41:37+00:00",
       "return_count": 1,
       "assigned_worker": "scheduled-chat-30",
@@ -1525,6 +1525,85 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_510e63254f748191865cf57db14737e8--2025-2512.14244-lingoedu-structured-context-compression-research-20261014-1600-scheduled-chat-00-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_510e63254f748191865cf57db14737e8--2025-2512.14244-lingoedu-structured-context-compression-research-20261014-1600-scheduled-chat-00-r01.json",
       "worker_run_key": "20261014-1600-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2511.19676",
+      "title": "INTERLACE: Interleaved Layer Pruning and Efficient Adaptation in Large Vision-Language Models",
+      "source_url": "https://arxiv.org/pdf/2511.19676",
+      "returned_at": "2026-10-14T10:51:14+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2025-2511.19676-interlace-interleaved-layer-pruning-and-efficient-adaptation-in-large-vi.md と 18 段落 / 3803文字 (100.0%) が完全一致"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5070,
+        "body_paragraphs": 28,
+        "method_chars": 1426,
+        "method_paragraphs": 9,
+        "evaluation_chars": 1543,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_5dcd6e9eb4f88191b372182ed78ed81b--2025-2511.19676-interlace-vlm-layer-pruning-research-20261014-1800-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_5dcd6e9eb4f88191b372182ed78ed81b--2025-2511.19676-interlace-vlm-layer-pruning-research-20261014-1800-scheduled-chat-00-r01.json",
+      "worker_run_key": "20261014-1800-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2604.04745",
+      "title": "The Energy Cost of Execution-Idle in GPU Clusters",
+      "source_url": "https://arxiv.org/pdf/2604.04745",
+      "returned_at": "2026-10-14T10:51:15+00:00",
+      "return_count": 3,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "長文定型文の再利用を検出: papers/inference/11-llm-serving-scheduling-disaggregation/2026-2604.04745-the-energy-cost-of-execution-idle-in-gpu-clusters.md と 15 段落 / 3162文字 (100.0%) が完全一致"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5492,
+        "body_paragraphs": 32,
+        "method_chars": 1758,
+        "method_paragraphs": 10,
+        "evaluation_chars": 1151,
+        "limitation_chars": 632,
+        "insufficiency_flags": []
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_5e3a13d72fec8191845c60e5ba3701ed--2026-2604.04745-execution-idle-energy-quality-repair-20261014-1145-scheduled-chat-45-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_5e3a13d72fec8191845c60e5ba3701ed--2026-2604.04745-execution-idle-energy-quality-repair-20261014-1145-scheduled-chat-45-r01.json",
+      "worker_run_key": "20261014-1145-scheduled-chat-45/r01"
+    },
+    {
+      "canonical_id": "arXiv:2511.02805",
+      "title": "MemSearcher: Training LLMs to Reason, Search and Manage Memory via End-to-End Reinforcement Learning",
+      "source_url": "https://arxiv.org/pdf/2511.02805v2",
+      "returned_at": "2026-10-14T10:51:34+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "長文定型文の再利用を検出: papers/inference/19-inference-evaluation-benchmarking/2025-2511.02805-memsearcher-training-llms-to-reason-search-and-manage-memory-via-end-to-.md と 14 段落 / 3737文字 (100.0%) が完全一致"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 4965,
+        "body_paragraphs": 32,
+        "method_chars": 1392,
+        "method_paragraphs": 9,
+        "evaluation_chars": 825,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_676b77cbeacc81919ddff721604e0ffc--2025-2511.02805-memsearcher-compact-agent-memory-research-20261014-0500-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_676b77cbeacc81919ddff721604e0ffc--2025-2511.02805-memsearcher-compact-agent-memory-research-20261014-0500-scheduled-chat-00-r01.json",
+      "worker_run_key": "20261014-0500-scheduled-chat-00/r01"
     }
   ]
 }

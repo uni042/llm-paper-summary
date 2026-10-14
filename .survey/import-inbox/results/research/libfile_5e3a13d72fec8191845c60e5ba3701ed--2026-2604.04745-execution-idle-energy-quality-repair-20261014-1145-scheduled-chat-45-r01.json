@@ -1,13 +1,12 @@
 {
   "schema_version": 1,
   "artifact_type": "research",
-  "status": "imported",
+  "status": "blocked_quality",
   "source_sha256": "ff9aa664f35741dbaf6267038adc39fc8951612ace401d9352cf0b95756064b5",
-  "canonical_id": "arXiv:2604.04745",
-  "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2604.04745-the-energy-cost-of-execution-idle-in-gpu-clusters.md",
-  "lineage": "11-llm-serving-scheduling-disaggregation",
-  "audit_status": "PASS",
+  "normalized_source_sha256": null,
   "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_5e3a13d72fec8191845c60e5ba3701ed--2026-2604.04745-execution-idle-energy-quality-repair-20261014-1145-scheduled-chat-45-r01.md",
+  "canonical_id": "arXiv:2604.04745",
   "worker_completed_at": "2026-10-14T11:56:00+09:00",
   "worker_run_key": "20261014-1145-scheduled-chat-45/r01",
   "quality_metrics": {
@@ -20,5 +19,8 @@
     "limitation_chars": 632,
     "insufficiency_flags": []
   },
-  "processed_at": "2026-10-14T06:39:38+00:00"
+  "failures": [
+    "長文定型文の再利用を検出: papers/inference/11-llm-serving-scheduling-disaggregation/2026-2604.04745-the-energy-cost-of-execution-idle-in-gpu-clusters.md と 15 段落 / 3162文字 (100.0%) が完全一致"
+  ],
+  "processed_at": "2026-10-14T10:51:15+00:00"
 }

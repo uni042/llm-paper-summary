@@ -1,13 +1,12 @@
 {
   "schema_version": 1,
   "artifact_type": "research",
-  "status": "imported",
+  "status": "blocked_quality",
   "source_sha256": "17f8aa787226075a15859bcaf30c4e1711935fef4e6e4e55f8ab43ca8308f9ef",
-  "canonical_id": "arXiv:2511.02805",
-  "paper_path": "papers/inference/19-inference-evaluation-benchmarking/2025-2511.02805-memsearcher-training-llms-to-reason-search-and-manage-memory-via-end-to-.md",
-  "lineage": "19-inference-evaluation-benchmarking",
-  "audit_status": "WARN",
+  "normalized_source_sha256": null,
   "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_676b77cbeacc81919ddff721604e0ffc--2025-2511.02805-memsearcher-compact-agent-memory-research-20261014-0500-scheduled-chat-00-r01.md",
+  "canonical_id": "arXiv:2511.02805",
   "worker_completed_at": "2026-10-14T05:07:20+09:00",
   "worker_run_key": "20261014-0500-scheduled-chat-00/r01",
   "quality_metrics": {
@@ -22,5 +21,8 @@
       "限界説明量 0 < 推奨 120"
     ]
   },
-  "processed_at": "2026-10-14T06:40:49+00:00"
+  "failures": [
+    "長文定型文の再利用を検出: papers/inference/19-inference-evaluation-benchmarking/2025-2511.02805-memsearcher-training-llms-to-reason-search-and-manage-memory-via-end-to-.md と 14 段落 / 3737文字 (100.0%) が完全一致"
+  ],
+  "processed_at": "2026-10-14T10:51:34+00:00"
 }

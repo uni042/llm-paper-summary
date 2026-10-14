@@ -1,13 +1,12 @@
 {
   "schema_version": 1,
   "artifact_type": "research",
-  "status": "imported",
+  "status": "blocked_quality",
   "source_sha256": "ba0f3598a49713c027bbec7901811c9ca090b69f0f7493c3183adf003020a824",
-  "canonical_id": "arXiv:2511.19676",
-  "paper_path": "papers/inference/99-other-inference-systems/2025-2511.19676-interlace-interleaved-layer-pruning-and-efficient-adaptation-in-large-vi.md",
-  "lineage": "99-other-inference-systems",
-  "audit_status": "WARN",
+  "normalized_source_sha256": null,
   "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_5dcd6e9eb4f88191b372182ed78ed81b--2025-2511.19676-interlace-vlm-layer-pruning-research-20261014-1800-scheduled-chat-00-r01.md",
+  "canonical_id": "arXiv:2511.19676",
   "worker_completed_at": "2026-10-14T18:00:00+09:00",
   "worker_run_key": "20261014-1800-scheduled-chat-00/r01",
   "quality_metrics": {
@@ -22,5 +21,8 @@
       "限界説明量 0 < 推奨 120"
     ]
   },
-  "processed_at": "2026-10-14T09:58:39+00:00"
+  "failures": [
+    "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2025-2511.19676-interlace-interleaved-layer-pruning-and-efficient-adaptation-in-large-vi.md と 18 段落 / 3803文字 (100.0%) が完全一致"
+  ],
+  "processed_at": "2026-10-14T10:51:14+00:00"
 }
