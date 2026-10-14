@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-14T10:26:40+00:00",
-  "record_count": 5110,
+  "updated_at": "2026-10-14T11:15:33+00:00",
+  "record_count": 5111,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -68588,12 +68588,28 @@
       "classification": "borderline",
       "canonical_id": "DOI:10.1145/3767295.3769345",
       "identity_tokens": [
-        "DOI:10.1145/3767295.3769345"
+        "DOI:10.1145/3767295.3769345",
+        "SemanticScholar:35326a4f06e98f9fee6234d3b8f92c4026df2894"
       ],
-      "reason": "Primary ACM abstract retrieval failed (official DOI page returned Internal Error with zero lines); retain as a source-unavailable borderline because its stable DOI and title directly indicate LLM inference-serving relevance.",
+      "reason": "DOI/title identity is confirmed, and a nonpublisher bibliographic mirror exposed an abstract, but the registered ACM publisher page returned HTTP 403; publisher abstract evidence is therefore unavailable for final screening.",
       "first_checked_at": "2026-10-08T17:57:37+00:00",
-      "last_checked_at": "2026-10-08T17:57:37+00:00",
-      "linked_from": [],
+      "last_checked_at": "2026-10-14T11:15:33+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2021-2010.05680-turbotransformers-an-efficient-gpu-serving-system-for-transformer-models.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2305.05920-fastserve-iteration-level-preemptive-scheduling.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2308.16369-sarathi.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2311.18677-splitwise-efficient-generative-llm-inference-phase-splitting.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.08671-deepspeed-fastgen-dynamic-splitfuse.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.09670-distserve-disaggregating-prefill-decoding-goodput.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.11181-tetriinfer.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2403.02310-sarathi-serve-chunked-prefills-stall-free-scheduling.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2405.19888-parrot-efficient-serving-llm-applications-semantic-variable.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2406.03243-llumnix-dynamic-scheduling-live-migration.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2501.06709-mell-multi-gpu-kv-cache-management.md",
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+        "papers/inference/99-other-inference-systems/2024-2403.01876-dejavu-kv-cache-streaming-for-fast-fault-tolerant-generative-llm-serving.md"
+      ],
       "borderline_recheck_count": 0,
       "title": "AdaGen: Workload-Adaptive Cluster Scheduler for Latency-Optimal LLM Inference Serving"
     },
@@ -69291,11 +69307,12 @@
       "classification": "borderline",
       "canonical_id": "arXiv:2402.00976",
       "identity_tokens": [
+        "SemanticScholar:dbb30953d9303658586083bbd4c196f9c0895f88",
         "arXiv:2402.00976"
       ],
-      "reason": "recurrent Transformer/dynamic haltの比較は一次要旨で確認できたが、推論system efficiencyへの具体的寄与は明確でない。研究段階で本文確認が必要。",
+      "reason": "The paper studies recurrent Transformer designs and proposes dynamic halting, a possible conditional-compute connection, but its abstract reports diagnostic modeling studies rather than demonstrated inference/system-efficiency gains.",
       "first_checked_at": "2026-10-09T23:31:54+00:00",
-      "last_checked_at": "2026-10-09T23:31:54+00:00",
+      "last_checked_at": "2026-10-14T11:15:32+00:00",
       "linked_from": [
         "papers/inference/04-conditional-computation/2023-2303.09752-colt5-faster-long-range-transformers-with-conditional-computation.md",
         "papers/inference/07-kv-cache-optimization-compression/2024-2403.19887-jamba-a-hybrid-transformer-mamba-language-model.md",
@@ -79285,6 +79302,35 @@
       ],
       "borderline_recheck_count": 0,
       "title": "AdaServe: Accelerating Multi-SLO LLM Serving with SLO-Customized Speculative Decoding"
+    },
+    "DOI:10.1145/3779212.3790153": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3779212.3790153",
+      "identity_tokens": [
+        "DOI:10.1145/3779212.3790153",
+        "SemanticScholar:61739326c6c37e9138c60d3c5d87ba957855bf4c"
+      ],
+      "reason": "ACM DOI metadata and the official title confirm a speculative-decoding FPGA/GPU architecture, but the registered publisher abstract could not be retrieved (ACM DOI page returned HTTP 403); the available author-repository description is not substituted for the publisher abstract.",
+      "first_checked_at": "2026-10-14T11:15:33+00:00",
+      "last_checked_at": "2026-10-14T11:15:33+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2023-2302.01318-speculative-sampling.md",
+        "papers/inference/05-speculative-decoding-moe/2023-2305.09781-specinfer-tree-speculative-inference.md",
+        "papers/inference/05-speculative-decoding-moe/2023-2308.04623-accelerating-llm-inference-with-staged-speculative-decoding.md",
+        "papers/inference/05-speculative-decoding-moe/2024-2402.02057-lookahead-decoding.md",
+        "papers/inference/05-speculative-decoding-moe/2024-2410.17375-amusd-asynchronous-multi-device-speculative-decoding-for-llm-acceleratio.md",
+        "papers/inference/05-speculative-decoding-moe/2024-2412.18934-dovetail-cpu-gpu-heterogeneous-speculative-decoding.md",
+        "papers/inference/05-speculative-decoding-moe/2025-2503.15921-spin-heterogeneous-speculative-model-serving.md",
+        "papers/inference/05-speculative-decoding-moe/2025-2504.18583-pard-accelerating-llm-inference-with-low-cost-parallel-draft-model-adaptation.md",
+        "papers/inference/07-kv-cache-optimization-compression/2025-2502.10424-quantspec-self-speculative-decoding-with-hierarchical-quantized-kv-cache.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md",
+        "papers/inference/99-other-inference-systems/2024-2402.01528-decoding-speculative-decoding.md",
+        "papers/inference/99-other-inference-systems/2025-2506.11309-swiftspec-asynchronous-speculative-decoding.md",
+        "papers/survey/03-inference-engines/2024-2402.16363-llm-inference-unveiled.md",
+        "papers/survey/07-speculative-decoding/2024-2401.07851-speculative-decoding-survey.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "DFVG: A Heterogeneous Architecture for Speculative Decoding with Draft-on-FPGA and Verify-on-GPU"
     }
   }
 }
