@@ -1,13 +1,12 @@
 {
   "schema_version": 1,
   "artifact_type": "research",
-  "status": "imported",
+  "status": "blocked_quality",
   "source_sha256": "247e693755fd99c6eeef2fc2c74f5c5b2d75cb342b6c1f900f2a8f21d3a82308",
-  "canonical_id": "arXiv:2006.16362",
-  "paper_path": "papers/inference/99-other-inference-systems/2020-2006.16362-multi-head-attention-collaborate-instead-of-concatenate.md",
-  "lineage": "99-other-inference-systems",
-  "audit_status": "PASS",
+  "normalized_source_sha256": null,
   "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_8da335920f64819193ec398401cdccf5--2020-2006.16362-collaborative-multihead-attention-research-20261014-0130-scheduled-chat-30-r01.md",
+  "canonical_id": "arXiv:2006.16362",
   "worker_completed_at": "2026-10-14T05:55:00+09:00",
   "worker_run_key": "20261014-0130-scheduled-chat-30/r01",
   "quality_metrics": {
@@ -20,5 +19,8 @@
     "limitation_chars": 701,
     "insufficiency_flags": []
   },
-  "processed_at": "2026-10-14T07:02:28+00:00"
+  "failures": [
+    "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2020-2006.16362-multi-head-attention-collaborate-instead-of-concatenate.md と 28 段落 / 6620文字 (100.0%) が完全一致"
+  ],
+  "processed_at": "2026-10-14T11:13:43+00:00"
 }
