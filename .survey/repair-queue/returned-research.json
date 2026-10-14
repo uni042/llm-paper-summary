@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-14T07:36:07+00:00",
+  "generated_at": "2026-10-14T07:44:45+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 47,
+  "count": 48,
   "entries": [
     {
       "canonical_id": "DOI:10.1145/3714983.3714987",
@@ -1109,6 +1109,33 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_96eeaed0f5288191a74a51cbe35189c0--2025-2512.02044-ccd-coherent-diffusion-decoding-research-20261014-0030-scheduled-chat-30-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_96eeaed0f5288191a74a51cbe35189c0--2025-2512.02044-ccd-coherent-diffusion-decoding-research-20261014-0030-scheduled-chat-30-r01.json",
       "worker_run_key": "20261014-0030-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2511.02647",
+      "title": "Federated Attention: A Distributed Paradigm for Collaborative LLM Inference over Edge Networks",
+      "source_url": "https://arxiv.org/abs/2511.02647",
+      "returned_at": "2026-10-14T07:42:46+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "長文定型文の再利用を検出: .survey/import-inbox/pending/research/libfile_f5bd297431a48191b3de4557f30d234c--2025-2511.02647-federated-attention-edge-llm-inference-research-20261014-1430-scheduled-chat-30-r01.md と 11 段落 / 2267文字 (100.0%) が完全一致"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5009,
+        "body_paragraphs": 29,
+        "method_chars": 1785,
+        "method_paragraphs": 10,
+        "evaluation_chars": 1421,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_c34cb3f187308191bf72dfec3a54595d--2025-2511.02647-federated-attention-edge-llm-inference-research-20261014-1430-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_c34cb3f187308191bf72dfec3a54595d--2025-2511.02647-federated-attention-edge-llm-inference-research-20261014-1430-scheduled-chat-30-r01.json",
+      "worker_run_key": "20261014-1430-scheduled-chat-30/r01"
     }
   ]
 }

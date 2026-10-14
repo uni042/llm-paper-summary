@@ -33,6 +33,8 @@ reference_main_sha: 'a9f2485270394b7179b2d7c69928e98c3f9b1c9f'
 worklist_rank: 67
 quality_self_review_passed: true
 quality_self_review_version: '2026-10-07'
+last_audited: null
+audit_version: 0
 ---
 
 # HARP：極低ビット量子化のための学習可能なアダマール前処理
