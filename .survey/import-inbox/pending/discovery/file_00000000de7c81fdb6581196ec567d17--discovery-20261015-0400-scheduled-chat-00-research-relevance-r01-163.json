@@ -1,0 +1,26 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261015-0400-scheduled-chat-00/r01",
+  "reference_main_sha": "25dd1ce2f7e7bbd5d811bdf9a2261b7ce9ec9f39",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2511.19480",
+      "identity_tokens": [
+        "arxiv:2511.19480"
+      ],
+      "title": "Exploiting the Experts: Unauthorized Compression in MoE-LLMs",
+      "reason": "一次論文の第2～4章では、MoEルータの専門家選択質量を集計した寄与度で専門家を剪定し、能動学習を使って少数のラベルから性能を回復する経路を評価する。Mixtral-8x7B/8x22BのGLUE、WikiText-103、XSumにおける専門家削除後の品質と、専門家を絡めて剪定耐性を高める防御が主題。推論実行の専門家数削減と関係するが、論文自体が新しい推論圧縮技術の提案ではなくモデルの無断再利用・防御を研究目的と明言し、GPUメモリ、推論遅延、スループットの実測を主要評価としていないため、推論システムサーベイへの収録は境界的。",
+      "source_url": "https://arxiv.org/abs/2511.19480",
+      "body_check": "research_fulltext_relevance_review: arXiv原著PDF 14ページの第2章脅威モデル、第3章専門家寄与度・能動学習・防御、第4章Mixtral-8x7B/8x22B、GLUE/WikiText-103/XSum評価、結論を確認。推論システム性能ではなく無断圧縮の可能性と防御の評価が中心。",
+      "first_checked_at": "2026-10-15T04:03:32+09:00",
+      "last_checked_at": "2026-10-15T04:03:32+09:00",
+      "linked_from": [],
+      "origin": "research_postread_relevance",
+      "worklist_rank": 163
+    }
+  ]
+}
