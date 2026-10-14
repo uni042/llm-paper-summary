@@ -1,0 +1,396 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-62",
+  "run_key": "discovery-20261014-main-0f09-screen-62-part-01",
+  "reference_main_sha": "0f09b5aa430c8f64af213c340969cb6d2ceed7c0",
+  "record_count": 20,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2510.04547",
+      "identity_tokens": [
+        "arXiv:2510.04547"
+      ],
+      "title": "Activation Quantization of Vision Encoders Needs Prefixing Registers",
+      "reason": "A training-free quantization add-on for encoders used in on-device processing and VLMs directly targets visual inference cost.",
+      "source_url": "https://arxiv.org/abs/2510.04547",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T15:18:00+09:00",
+      "last_checked_at": "2026-10-14T15:18:00+09:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2406.12335-attention-score-is-not-all-you-need-for-token-importance-indicator-in-kv.md",
+        "papers/inference/16-weight-quantization-compression/2023-2306.00978-awq.md",
+        "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2023-2311.17043-llama-vid-an-image-is-worth-2-tokens-in-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2024-2402.17762-massive-activations-in-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2024-2404.00456-quarot-outlier-free-4-bit-inference-in-rotated-llms.md",
+        "papers/inference/99-other-inference-systems/2025-2405.16406-spinquant-llm-quantization-with-learned-rotations.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2512.05277",
+      "identity_tokens": [
+        "arXiv:2512.05277"
+      ],
+      "title": "From Segments to Scenes: Temporal Understanding for Agentic Autonomous Driving via Vision-Language Models",
+      "reason": "It targets reasoning quality and a driving benchmark without inference-cost, latency, throughput, or system-efficiency gains.",
+      "source_url": "https://arxiv.org/abs/2512.05277",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T15:18:00+09:00",
+      "last_checked_at": "2026-10-14T15:18:00+09:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md",
+        "papers/inference/99-other-inference-systems/2024-2401.06118-extreme-compression-of-large-language-models-via-additive-quantization.md",
+        "papers/inference/99-other-inference-systems/2024-2402.04396-quip-even-better-llm-quantization-with-hadamard-incoherence-and-lattice-.md",
+        "papers/inference/99-other-inference-systems/2024-2403.06764-an-image-is-worth-1-2-tokens-after-layer-2-plug-and-play-inference-accel.md",
+        "papers/inference/99-other-inference-systems/2024-2405.05803-boosting-multimodal-large-language-models-with-visual-tokens-withdrawal-.md",
+        "papers/inference/99-other-inference-systems/2025-2503.02175-divprune-diversity-based-visual-token-pruning-for-large-multimodal-model.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.12770",
+      "identity_tokens": [
+        "arXiv:2605.12770"
+      ],
+      "title": "WriteSAE: Sparse Autoencoders for Recurrent State",
+      "reason": "The abstract targets recurrent LM cache state but reports interpretability and steering, not memory or runtime efficiency.",
+      "source_url": "https://arxiv.org/abs/2605.12770",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T15:18:00+09:00",
+      "last_checked_at": "2026-10-14T15:18:00+09:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2026-2602.04852-on-state-reduction-in-linear-attention.md",
+        "papers/inference/09-kernel-runtime-compilation/2026-2603.15569-mamba-3-improved-sequence-modeling-using-state-space-principles.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08621-retentive-network-a-successor-to-transformer-for-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2024-2312.06635-gated-linear-attention-transformers-with-hardware-efficient-training.md",
+        "papers/inference/99-other-inference-systems/2024-2407.04620-learning-to-learn-at-test-time-rnns-with-expressive-hidden-states.md",
+        "papers/inference/99-other-inference-systems/2024-2412.06464-gated-delta-networks-improving-mamba2-with-delta-rule.md"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1007/s10515-025-00560-2",
+      "identity_tokens": [
+        "DOI:10.1007/s10515-025-00560-2"
+      ],
+      "title": "PIONEER: improving the robustness of student models when compressing pre-trained models of code",
+      "reason": "CodeBERT, GraphCodeBERT and CodeT5 compression directly reduces model size and inference latency while improving robustness.",
+      "source_url": "https://link.springer.com/article/10.1007/s10515-025-00560-2",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T06:29:07+00:00",
+      "last_checked_at": "2026-10-14T06:29:07+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1905.10650-are-sixteen-heads-really-better-than-one.md",
+        "papers/inference/99-other-inference-systems/2019-1909.11556-reducing-transformer-depth-on-demand-with-structured-dropout.md",
+        "papers/inference/99-other-inference-systems/2019-1910.06188-q8bert-quantized-8bit-bert.md",
+        "papers/inference/99-other-inference-systems/2020-2002.08307-compressing-bert-studying-the-effects-of-weight-pruning-on-transfer-lear.md",
+        "papers/inference/99-other-inference-systems/2020-2004.02178-fastbert-a-self-distilling-bert-with-adaptive-inference-time.md"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2604.05601",
+      "identity_tokens": [
+        "arXiv:2604.05601"
+      ],
+      "title": "ID-Selection: Importance-Diversity Based Visual Token Selection for Efficient LVLM Inference",
+      "reason": "It directly reduces visual-token compute during LVLM inference while preserving task performance.",
+      "source_url": "https://arxiv.org/abs/2604.05601",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T15:18:00+09:00",
+      "last_checked_at": "2026-10-14T15:18:00+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2403.06764-an-image-is-worth-1-2-tokens-after-layer-2-plug-and-play-inference-accel.md",
+        "papers/inference/99-other-inference-systems/2024-2403.15388-llava-prumerge-adaptive-token-reduction-for-efficient-large-multimodal-m.md",
+        "papers/inference/99-other-inference-systems/2024-2410.04417-sparsevlm-visual-token-sparsification-for-efficient-vision-language-mode.md",
+        "papers/inference/99-other-inference-systems/2025-2502.11494-stop-looking-for-important-tokens-in-multimodal-language-models-duplicat.md",
+        "papers/inference/99-other-inference-systems/2025-2503.02175-divprune-diversity-based-visual-token-pruning-for-large-multimodal-model.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "SemanticScholar:fc3c02acb31b60d4dbb3eda62e656c43bf540977",
+      "identity_tokens": [
+        "SemanticScholar:fc3c02acb31b60d4dbb3eda62e656c43bf540977",
+        "DOI:10.64898/2026.05.12.724542"
+      ],
+      "title": "OmniGene-4: A Unified Bio-Language MoE Model with Router-Level Interpretability and Modality-Invariant Transfer",
+      "reason": "Router interpretability and biological sequence/vision capability are the focus; the reported compute comparison concerns model adaptation rather than LLM inference or serving optimization.",
+      "source_url": "https://www.biorxiv.org/content/10.64898/2026.05.12.724542v3",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T06:29:07+00:00",
+      "last_checked_at": "2026-10-14T06:29:07+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md",
+        "papers/inference/12-moe-parallelism-communication/2021-2101.03961-switch-transformers-scaling-to-trillion-parameter-models-with-simple-and.md",
+        "papers/inference/99-other-inference-systems/2017-1701.06538-outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts.md",
+        "papers/inference/99-other-inference-systems/2022-2202.08906-st-moe-designing-stable-and-transferable-sparse-expert-models.md",
+        "papers/inference/99-other-inference-systems/2024-2407.06204-a-survey-on-mixture-of-experts-in-large-language-models.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3460231.3474258",
+      "identity_tokens": [
+        "DOI:10.1145/3460231.3474258"
+      ],
+      "title": "Tops, Bottoms, and Shoes: Building Capsule Wardrobes via Cross-Attention Tensor Network",
+      "reason": "The capsule-wardrobe paper has confirmed ACM DOI/title metadata, but the official ACM page returned HTTP 403 and a publisher-domain title search found no usable abstract. The fashion recommendation mechanism and any inference-efficiency connection remain unverified.",
+      "source_url": "https://dl.acm.org/doi/10.1145/3460231.3474258",
+      "body_check": "source_unavailable; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-10-14T06:29:07+00:00",
+      "last_checked_at": "2026-10-14T06:29:07+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2021-2103.02143-random-feature-attention.md",
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md",
+        "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md",
+        "papers/inference/99-other-inference-systems/2021-2102.03902-nystr-mformer-a-nystr-m-based-algorithm-for-approximating-self-attention.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2203.03312",
+      "identity_tokens": [
+        "arXiv:2203.03312"
+      ],
+      "title": "SkillNet-NLU: A Sparsely Activated Model for General-Purpose Natural Language Understanding",
+      "reason": "Sparse activation may reduce active computation, but the abstract reports performance and transfer rather than runtime or inference cost.",
+      "source_url": "https://arxiv.org/abs/2203.03312",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T15:18:00+09:00",
+      "last_checked_at": "2026-10-14T15:18:00+09:00",
+      "linked_from": [
+        "papers/inference/12-moe-parallelism-communication/2021-2101.03961-switch-transformers-scaling-to-trillion-parameter-models-with-simple-and.md",
+        "papers/inference/99-other-inference-systems/2017-1701.06538-outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts.md",
+        "papers/inference/99-other-inference-systems/2021-2112.06905-glam-efficient-scaling-of-language-models-with-mixture-of-experts.md",
+        "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3777730.3777756",
+      "identity_tokens": [
+        "DOI:10.1145/3777730.3777756"
+      ],
+      "title": "Bio-Inspired LLMs Forgetting: Integrating Neuroscience and Computational Mechanisms",
+      "reason": "The bio-inspired LLM forgetting paper has confirmed ACM DOI/title metadata, but the official ACM page returned HTTP 403 and a publisher-domain title search exposed no usable abstract; efficient inference or memory reduction cannot be inferred from its title.",
+      "source_url": "https://dl.acm.org/doi/10.1145/3777730.3777756",
+      "body_check": "source_unavailable; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-10-14T06:29:07+00:00",
+      "last_checked_at": "2026-10-14T06:29:07+00:00",
+      "linked_from": [
+        "papers/inference/12-moe-parallelism-communication/2021-2101.03961-switch-transformers-scaling-to-trillion-parameter-models-with-simple-and.md",
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md",
+        "papers/inference/99-other-inference-systems/2019-1905.09418-analyzing-multi-head-self-attention-specialized-heads-do-the-heavy-lifti.md",
+        "papers/inference/99-other-inference-systems/2023-2304.11062-scaling-transformer-to-1m-tokens-and-beyond-with-rmt.md"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1007/978-3-030-92185-9_30",
+      "identity_tokens": [
+        "DOI:10.1007/978-3-030-92185-9_30"
+      ],
+      "title": "DAP-BERT: Differentiable Architecture Pruning of BERT",
+      "reason": "Architecture pruning directly accelerates BERT inference and supports deployment under edge-device resource limits.",
+      "source_url": "https://link.springer.com/chapter/10.1007/978-3-030-92185-9_30",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T06:29:07+00:00",
+      "last_checked_at": "2026-10-14T06:29:07+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1905.10650-are-sixteen-heads-really-better-than-one.md",
+        "papers/inference/99-other-inference-systems/2019-1909.05840-q-bert-hessian-based-ultra-low-precision-quantization-of-bert.md",
+        "papers/inference/99-other-inference-systems/2020-2002.08307-compressing-bert-studying-the-effects-of-weight-pruning-on-transfer-lear.md",
+        "papers/inference/99-other-inference-systems/2020-2009.12812-ternarybert-distillation-aware-ultra-low-bit-bert.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2509.23755",
+      "identity_tokens": [
+        "arXiv:2509.23755"
+      ],
+      "title": "Understanding Textual Capability Degradation in Speech LLMs via Parameter Importance Analysis",
+      "reason": "It addresses fine-tuning capability retention and downstream quality, not inference or serving efficiency.",
+      "source_url": "https://arxiv.org/abs/2509.23755",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T15:18:00+09:00",
+      "last_checked_at": "2026-10-14T15:18:00+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2408.16725-mini-omni-language-models-can-hear-talk-while-thinking-in-streaming.md",
+        "papers/inference/99-other-inference-systems/2024-2409.06666-llama-omni-seamless-speech-interaction-with-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2024-2410.00037-moshi-a-speech-text-foundation-model-for-real-time-dialogue.md",
+        "papers/inference/99-other-inference-systems/2025-2503.20215-qwen2-5-omni-technical-report.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2408.01416",
+      "identity_tokens": [
+        "arXiv:2408.01416"
+      ],
+      "title": "The Quest for the Right Mediator: Surveying Mechanistic Interpretability Through the Lens of Causal Mediation Analysis",
+      "reason": "It is an interpretability survey with no inference-efficiency method or enabling runtime infrastructure.",
+      "source_url": "https://arxiv.org/abs/2408.01416",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T15:18:00+09:00",
+      "last_checked_at": "2026-10-14T15:18:00+09:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md",
+        "papers/inference/99-other-inference-systems/2020-2004.03844-on-the-effect-of-dropping-layers-of-pre-trained-transformer-models.md",
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2508.02013",
+      "identity_tokens": [
+        "arXiv:2508.02013"
+      ],
+      "title": "SpeechRole: A Large-Scale Dataset and Benchmark for Evaluating Speech Role-Playing Agents",
+      "reason": "The contribution is a speech-agent data set and quality benchmark, not inference-system efficiency.",
+      "source_url": "https://arxiv.org/abs/2508.02013",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T15:18:00+09:00",
+      "last_checked_at": "2026-10-14T15:18:00+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2409.06666-llama-omni-seamless-speech-interaction-with-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2024-2410.00037-moshi-a-speech-text-foundation-model-for-real-time-dialogue.md",
+        "papers/inference/99-other-inference-systems/2025-2503.20215-qwen2-5-omni-technical-report.md"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2412.04917",
+      "identity_tokens": [
+        "arXiv:2412.04917"
+      ],
+      "title": "Continuous Speech Tokens Makes LLMs Robust Multi-Modality Learners",
+      "reason": "Low-latency streaming speech-LLM interaction is an explicit system-level inference target.",
+      "source_url": "https://arxiv.org/abs/2412.04917",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T15:18:00+09:00",
+      "last_checked_at": "2026-10-14T15:18:00+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2408.16725-mini-omni-language-models-can-hear-talk-while-thinking-in-streaming.md",
+        "papers/inference/99-other-inference-systems/2024-2409.06666-llama-omni-seamless-speech-interaction-with-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2024-2410.00037-moshi-a-speech-text-foundation-model-for-real-time-dialogue.md"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "SemanticScholar:31431c7eb3622e9b1412e224f140cc8dcd9e6708",
+      "identity_tokens": [
+        "SemanticScholar:31431c7eb3622e9b1412e224f140cc8dcd9e6708",
+        "https://aclanthology.org/2022.coling-1.404/"
+      ],
+      "title": "Token and Head Adaptive Transformers for Efficient Natural Language Processing",
+      "reason": "The joint token/head pruning and compute-budget search explicitly reduce BERT computational cost and memory requirements.",
+      "source_url": "https://aclanthology.org/2022.coling-1.404/",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T06:29:07+00:00",
+      "last_checked_at": "2026-10-14T06:29:07+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1905.09418-analyzing-multi-head-self-attention-specialized-heads-do-the-heavy-lifti.md",
+        "papers/inference/99-other-inference-systems/2019-1905.10650-are-sixteen-heads-really-better-than-one.md",
+        "papers/inference/99-other-inference-systems/2019-1909.11556-reducing-transformer-depth-on-demand-with-structured-dropout.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2407.04181",
+      "identity_tokens": [
+        "arXiv:2407.04181"
+      ],
+      "title": "Orchestrating LLMs with Different Personalizations",
+      "reason": "It is described as efficient relative to fine-tuning, but gives no serving cost or runtime evidence; multi-expert per-token execution leaves efficiency unclear.",
+      "source_url": "https://arxiv.org/abs/2407.04181",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T15:18:00+09:00",
+      "last_checked_at": "2026-10-14T15:18:00+09:00",
+      "linked_from": [
+        "papers/inference/12-moe-parallelism-communication/2021-2101.03961-switch-transformers-scaling-to-trillion-parameter-models-with-simple-and.md",
+        "papers/inference/99-other-inference-systems/2017-1701.06538-outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts.md",
+        "papers/inference/99-other-inference-systems/2021-2112.06905-glam-efficient-scaling-of-language-models-with-mixture-of-experts.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.18999",
+      "identity_tokens": [
+        "arXiv:2505.18999"
+      ],
+      "title": "Lightweight Embeddings with Graph Rewiring for Collaborative Filtering",
+      "reason": "The target is graph recommendation, not LLM or language-model inference infrastructure.",
+      "source_url": "https://arxiv.org/abs/2505.18999",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T15:18:00+09:00",
+      "last_checked_at": "2026-10-14T15:18:00+09:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2024-2402.10631-bitdistiller-unleashing-the-potential-of-sub-4-bit-llms-via-self-distill.md",
+        "papers/inference/99-other-inference-systems/2023-2305.17888-llm-qat-data-free-quantization-aware-training-for-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2024-2402.17764-the-era-of-1-bit-llms-all-large-language-models-are-in-1-58-bits.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2409.16001",
+      "identity_tokens": [
+        "arXiv:2409.16001"
+      ],
+      "title": "Artificial Human Intelligence: The role of Humans in the Development of Next Generation AI",
+      "reason": "It proposes no concrete system-efficiency mechanism or evaluation.",
+      "source_url": "https://arxiv.org/abs/2409.16001",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T15:18:00+09:00",
+      "last_checked_at": "2026-10-14T15:18:00+09:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md",
+        "papers/inference/99-other-inference-systems/2017-1701.06538-outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts.md",
+        "papers/inference/99-other-inference-systems/2019-1909.08053-megatron-lm-training-multi-billion-parameter-language-models-using-model.md"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "SemanticScholar:d4e1bb7c90607441103ef222806e9aa46610ad0c",
+      "identity_tokens": [
+        "SemanticScholar:d4e1bb7c90607441103ef222806e9aa46610ad0c",
+        "arXiv:2304.11520"
+      ],
+      "title": "Processing Natural Language on Embedded Devices: How Well Do Transformer Models Perform?",
+      "reason": "Actual embedded hardware measurements characterize language-model deployability and performance under CPU and memory constraints.",
+      "source_url": "https://arxiv.org/abs/2304.11520v4",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T06:29:07+00:00",
+      "last_checked_at": "2026-10-14T06:29:07+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1905.10650-are-sixteen-heads-really-better-than-one.md",
+        "papers/inference/99-other-inference-systems/2019-1910.06188-q8bert-quantized-8bit-bert.md",
+        "papers/inference/99-other-inference-systems/2020-2011.14203-edgebert-sentence-level-energy-optimizations-for-latency-aware-multi-tas.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.3389/frsen.2025.1718058",
+      "identity_tokens": [
+        "DOI:10.3389/frsen.2025.1718058"
+      ],
+      "title": "Efficient remote sensing image super-resolution with residual-enhanced wavelet and key-value adaptation",
+      "reason": "The memory-read and image-processing speed improvements concern an independent remote-sensing reconstruction model, with no concrete language-model inference or serving contribution.",
+      "source_url": "https://www.frontiersin.org/journals/remote-sensing/articles/10.3389/frsen.2025.1718058/full",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T06:29:07+00:00",
+      "last_checked_at": "2026-10-14T06:29:07+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md",
+        "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md",
+        "papers/inference/99-other-inference-systems/2024-2404.05892-eagle-and-finch-rwkv-with-matrix-valued-states-and-dynamic-recurrence.md"
+      ]
+    }
+  ]
+}
+
