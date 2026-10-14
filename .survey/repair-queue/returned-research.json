@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-14T11:14:09+00:00",
+  "generated_at": "2026-10-14T11:20:11+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 73,
+  "count": 77,
   "entries": [
     {
       "canonical_id": "DOI:10.1145/3714983.3714987",
@@ -972,33 +972,6 @@
       "worker_run_key": "20261014-0200-scheduled-chat-00/r01"
     },
     {
-      "canonical_id": "arXiv:2512.02044",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-14T08:39:27+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 171 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5238,
-        "body_paragraphs": 28,
-        "method_chars": 1287,
-        "method_paragraphs": 7,
-        "evaluation_chars": 171,
-        "limitation_chars": 748,
-        "insufficiency_flags": [
-          "評価説明量 171 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-e02ff8e10515--libfile_96eeaed0f5288191a74a51cbe35189c0--2025-2512.02044-ccd-coherent-diffusion-decoding-research-20261014-0030-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-e02ff8e10515--libfile_96eeaed0f5288191a74a51cbe35189c0--2025-2512.02044-ccd-coherent-diffusion-decoding-research-20261014-0030-scheduled-chat-30-.json",
-      "worker_run_key": "20261014-0030-scheduled-chat-30/r01"
-    },
-    {
       "canonical_id": "arXiv:2604.22575",
       "title": null,
       "source_url": null,
@@ -1707,8 +1680,8 @@
     },
     {
       "canonical_id": "arXiv:2606.26762",
-      "title": "ProtoKV: Streaming Video Understanding under Delayed Query with Summary-State Memory",
-      "source_url": "https://arxiv.org/pdf/2606.26762",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-14T11:13:42+00:00",
       "return_count": 1,
       "assigned_worker": "scheduled-chat-30",
@@ -1734,8 +1707,8 @@
     },
     {
       "canonical_id": "arXiv:2006.16362",
-      "title": "Multi-Head Attention: Collaborate Instead of Concatenate",
-      "source_url": "https://arxiv.org/abs/2006.16362",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-14T11:13:43+00:00",
       "return_count": 1,
       "assigned_worker": "scheduled-chat-45",
@@ -1759,8 +1732,8 @@
     },
     {
       "canonical_id": "arXiv:2512.21911",
-      "title": "Accelerate Speculative Decoding with Sparse Computation in Verification",
-      "source_url": "https://arxiv.org/pdf/2512.21911",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-14T11:13:44+00:00",
       "return_count": 1,
       "assigned_worker": "scheduled-chat-00",
@@ -1783,6 +1756,135 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_9050a0c1c59c8191803d6a25f8431c3d--2025-2512.21911-sparse-speculative-verification-research-20261014-1800-scheduled-chat-00-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_9050a0c1c59c8191803d6a25f8431c3d--2025-2512.21911-sparse-speculative-verification-research-20261014-1800-scheduled-chat-00-r01.json",
       "worker_run_key": "20261014-1800-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2512.11529",
+      "title": "xGR: Efficient Generative Recommendation Serving at Scale",
+      "source_url": "https://arxiv.org/pdf/2512.11529",
+      "returned_at": "2026-10-14T11:20:06+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "長文定型文の再利用を検出: papers/inference/11-llm-serving-scheduling-disaggregation/2025-2512.11529-xgr-efficient-generative-recommendation-serving-at-scale.md と 19 段落 / 4097文字 (100.0%) が完全一致"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 4951,
+        "body_paragraphs": 25,
+        "method_chars": 2218,
+        "method_paragraphs": 11,
+        "evaluation_chars": 590,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_95bf66d8978881918a80a4dd60b6b77f--2025-2512.11529-xgr-generative-recommendation-serving-research-20261014-1800-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_95bf66d8978881918a80a4dd60b6b77f--2025-2512.11529-xgr-generative-recommendation-serving-research-20261014-1800-scheduled-chat-00-r01.json",
+      "worker_run_key": "20261014-1800-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2512.02044",
+      "title": "Beyond Confidence: Adaptive and Coherent Decoding for Diffusion Language Models",
+      "source_url": "https://arxiv.org/pdf/2512.02044",
+      "returned_at": "2026-10-14T11:20:08+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 171 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5238,
+        "body_paragraphs": 28,
+        "method_chars": 1287,
+        "method_paragraphs": 7,
+        "evaluation_chars": 171,
+        "limitation_chars": 748,
+        "insufficiency_flags": [
+          "評価説明量 171 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_96eeaed0f5288191a74a51cbe35189c0--2025-2512.02044-ccd-coherent-diffusion-decoding-research-20261014-0030-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_96eeaed0f5288191a74a51cbe35189c0--2025-2512.02044-ccd-coherent-diffusion-decoding-research-20261014-0030-scheduled-chat-30-r01.json",
+      "worker_run_key": "20261014-0030-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2404.15159",
+      "title": "MixLoRA: Enhancing Large Language Models Fine-Tuning with LoRA-based Mixture of Experts",
+      "source_url": "https://arxiv.org/pdf/2404.15159",
+      "returned_at": "2026-10-14T11:20:09+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2024-2404.15159-mixlora-enhancing-large-language-models-fine-tuning-with-lora-based-mixt.md と 28 段落 / 6618文字 (100.0%) が完全一致"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 7100,
+        "body_paragraphs": 34,
+        "method_chars": 1909,
+        "method_paragraphs": 10,
+        "evaluation_chars": 2180,
+        "limitation_chars": 903,
+        "insufficiency_flags": []
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_9983ad12ff748191b24fa566d303a80c--2024-2404.15159-mixlora-shared-ffn-experts-research-20261013-2145-scheduled-chat-45-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_9983ad12ff748191b24fa566d303a80c--2024-2404.15159-mixlora-shared-ffn-experts-research-20261013-2145-scheduled-chat-45-r01.json",
+      "worker_run_key": "20261013-2145-scheduled-chat-45/r01"
+    },
+    {
+      "canonical_id": "arXiv:2605.15206",
+      "title": "AgentStop: Terminating Local AI Agents Early to Save Energy in Consumer Devices",
+      "source_url": "https://arxiv.org/pdf/2605.15206",
+      "returned_at": "2026-10-14T11:20:10+00:00",
+      "return_count": 3,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2026-2605.15206-agentstop-terminating-local-ai-agents-early-to-save-energy-in-consumer-d.md と 9 段落 / 2037文字 (100.0%) が完全一致"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5693,
+        "body_paragraphs": 36,
+        "method_chars": 1038,
+        "method_paragraphs": 7,
+        "evaluation_chars": 1882,
+        "limitation_chars": 879,
+        "insufficiency_flags": []
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_99b9cf97d96081918b112168bf9b287b--2026-2605.15206-agentstop-local-agent-energy-research-20261014-0030-scheduled-chat-30-r01-evaluation-heading-repair-20261014-0045-scheduled-chat-45-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_99b9cf97d96081918b112168bf9b287b--2026-2605.15206-agentstop-local-agent-energy-research-20261014-0030-scheduled-chat-30-r01-evaluation-heading-repair-20.json",
+      "worker_run_key": "20261014-0030-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2404.03384",
+      "title": "LongVLM: Efficient Long Video Understanding via Large Language Models",
+      "source_url": "https://arxiv.org/html/2404.03384v3",
+      "returned_at": "2026-10-14T11:20:11+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2024-2404.03384-longvlm-efficient-long-video-understanding-via-large-language-models.md と 14 段落 / 3202文字 (100.0%) が完全一致"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 4464,
+        "body_paragraphs": 23,
+        "method_chars": 1634,
+        "method_paragraphs": 8,
+        "evaluation_chars": 904,
+        "limitation_chars": 471,
+        "insufficiency_flags": []
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_9be1a8c1002c8191a1714c543a39caf3--2024-2404.03384-longvlm-hierarchical-video-token-merging-research-20261014-0730-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_9be1a8c1002c8191a1714c543a39caf3--2024-2404.03384-longvlm-hierarchical-video-token-merging-research-20261014-0730-scheduled-chat-30-r01.json",
+      "worker_run_key": "20261014-0730-scheduled-chat-30/r01"
     }
   ]
 }

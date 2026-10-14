@@ -1,13 +1,12 @@
 {
   "schema_version": 1,
   "artifact_type": "research",
-  "status": "imported",
+  "status": "blocked_quality",
   "source_sha256": "668e1c787ec41eb8c6b24ff98d0f101bd96c7e0cc703e7c35f729dfb943d2067",
-  "canonical_id": "arXiv:2404.03384",
-  "paper_path": "papers/inference/99-other-inference-systems/2024-2404.03384-longvlm-efficient-long-video-understanding-via-large-language-models.md",
-  "lineage": "99-other-inference-systems",
-  "audit_status": "PASS",
+  "normalized_source_sha256": null,
   "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_9be1a8c1002c8191a1714c543a39caf3--2024-2404.03384-longvlm-hierarchical-video-token-merging-research-20261014-0730-scheduled-chat-30-r01.md",
+  "canonical_id": "arXiv:2404.03384",
   "worker_completed_at": "2026-10-14T07:36:00+09:00",
   "worker_run_key": "20261014-0730-scheduled-chat-30/r01",
   "quality_metrics": {
@@ -20,5 +19,8 @@
     "limitation_chars": 471,
     "insufficiency_flags": []
   },
-  "processed_at": "2026-10-14T07:20:50+00:00"
+  "failures": [
+    "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2024-2404.03384-longvlm-efficient-long-video-understanding-via-large-language-models.md と 14 段落 / 3202文字 (100.0%) が完全一致"
+  ],
+  "processed_at": "2026-10-14T11:20:11+00:00"
 }
