@@ -1,13 +1,12 @@
 {
   "schema_version": 1,
   "artifact_type": "research",
-  "status": "imported",
+  "status": "blocked_quality",
   "source_sha256": "64594c61378aebd755cc04f29d6cc67479a7d1783adf810a94412a14bfa03747",
-  "canonical_id": "arXiv:2006.04862",
-  "paper_path": "papers/inference/99-other-inference-systems/2020-2006.04862-o-n-connections-are-expressive-enough-universal-approximability-of-spars.md",
-  "lineage": "99-other-inference-systems",
-  "audit_status": "WARN",
+  "normalized_source_sha256": null,
   "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_f6f5072f2fc88191ba80a06ed2a80d96--2020-2006.04862-sparse-transformer-universal-approximation-research-20261014-1445-scheduled-chat-45-r01.md",
+  "canonical_id": "arXiv:2006.04862",
   "worker_completed_at": "2026-10-14T14:58:00+09:00",
   "worker_run_key": "20261014-1445-scheduled-chat-45/r01",
   "quality_metrics": {
@@ -22,5 +21,8 @@
       "限界説明量 0 < 推奨 120"
     ]
   },
-  "processed_at": "2026-10-14T08:18:25+00:00"
+  "failures": [
+    "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2020-2006.04862-o-n-connections-are-expressive-enough-universal-approximability-of-spars.md と 11 段落 / 2209文字 (100.0%) が完全一致"
+  ],
+  "processed_at": "2026-10-14T12:10:15+00:00"
 }

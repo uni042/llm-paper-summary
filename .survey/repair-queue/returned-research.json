@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-14T12:03:03+00:00",
+  "generated_at": "2026-10-14T12:11:38+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 102,
+  "count": 106,
   "entries": [
     {
       "canonical_id": "DOI:10.1145/3714983.3714987",
@@ -2413,8 +2413,8 @@
     },
     {
       "canonical_id": "arXiv:2602.13215",
-      "title": "When to Think Fast and Slow? AMOR: Adaptive Entropy Gate for Hybrid Models",
-      "source_url": "https://arxiv.org/abs/2602.13215",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-14T12:02:58+00:00",
       "return_count": 1,
       "assigned_worker": "scheduled-chat-00",
@@ -2441,8 +2441,8 @@
     },
     {
       "canonical_id": "arXiv:2604.07812",
-      "title": "HAWK: Head Importance-Aware Visual Token Pruning in Multimodal Models",
-      "source_url": "https://arxiv.org/abs/2604.07812",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-14T12:02:59+00:00",
       "return_count": 3,
       "assigned_worker": "scheduled-chat-30",
@@ -2468,8 +2468,8 @@
     },
     {
       "canonical_id": "arXiv:2306.08543",
-      "title": "MiniLLM: On-Policy Distillation of Large Language Models",
-      "source_url": "https://arxiv.org/html/2306.08543v6",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-14T12:03:00+00:00",
       "return_count": 1,
       "assigned_worker": "scheduled-chat-30",
@@ -2493,8 +2493,8 @@
     },
     {
       "canonical_id": "arXiv:2605.19049",
-      "title": "KVBuffer: IO-aware Serving for Linear Attention",
-      "source_url": "https://arxiv.org/html/2605.19049v1",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-14T12:03:01+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-00",
@@ -2520,8 +2520,8 @@
     },
     {
       "canonical_id": "DOI:10.14722/ndss.2025.230057",
-      "title": "BumbleBee: Secure Two-party Inference Framework for Large Transformers",
-      "source_url": "https://www.ndss-symposium.org/wp-content/uploads/2025-57-paper.pdf",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-14T12:03:03+00:00",
       "return_count": 1,
       "assigned_worker": "scheduled-chat-00",
@@ -2544,6 +2544,108 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_e9dab823000c8191a9ce3beff9bd67b7--2025-bumblebee-secure-two-party-transformer-inference-research-20261014-0745-scheduled-chat-45-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_e9dab823000c8191a9ce3beff9bd67b7--2025-bumblebee-secure-two-party-transformer-inference-research-20261014-0745-scheduled-chat-45-r01.json",
       "worker_run_key": "20261014-0745-scheduled-chat-45/r01"
+    },
+    {
+      "canonical_id": "arXiv:2604.17091",
+      "title": "GenericAgent: A Token-Efficient Self-Evolving LLM Agent via Contextual Information Density Maximization (V1.0)",
+      "source_url": "https://arxiv.org/html/2604.17091v1",
+      "returned_at": "2026-10-14T12:09:22+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2026-2604.17091-genericagent-a-token-efficient-self-evolving-llm-agent-via-contextual-in.md と 14 段落 / 3014文字 (100.0%) が完全一致"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 6476,
+        "body_paragraphs": 38,
+        "method_chars": 1967,
+        "method_paragraphs": 11,
+        "evaluation_chars": 1912,
+        "limitation_chars": 795,
+        "insufficiency_flags": []
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_e9e54c614abc81919a67387295abd7bf--2026-2604.17091-genericagent-context-density-research-20261014-0845-scheduled-chat-45-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_e9e54c614abc81919a67387295abd7bf--2026-2604.17091-genericagent-context-density-research-20261014-0845-scheduled-chat-45-r01.json",
+      "worker_run_key": "20261014-0845-scheduled-chat-45/r01"
+    },
+    {
+      "canonical_id": "arXiv:2604.06515",
+      "title": "Efficient Quantization of Mixture-of-Experts with Theoretical Generalization Guarantees",
+      "source_url": "https://arxiv.org/html/2604.06515v1",
+      "returned_at": "2026-10-14T12:09:23+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2026-2604.06515-efficient-quantization-of-mixture-of-experts-with-theoretical-generaliza.md と 21 段落 / 4495文字 (100.0%) が完全一致"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 6415,
+        "body_paragraphs": 34,
+        "method_chars": 1995,
+        "method_paragraphs": 12,
+        "evaluation_chars": 2349,
+        "limitation_chars": 453,
+        "insufficiency_flags": []
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_ead1ddbcf95c8191a496f5496cc67a3c--2026-2604.06515-moe-router-norm-mixed-precision-research-20261014-0400-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_ead1ddbcf95c8191a496f5496cc67a3c--2026-2604.06515-moe-router-norm-mixed-precision-research-20261014-0400-scheduled-chat-00-r01.json",
+      "worker_run_key": "20261014-0400-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2006.04862",
+      "title": "$O(n)$ Connections are Expressive Enough: Universal Approximability of Sparse Transformers",
+      "source_url": "https://arxiv.org/pdf/2006.04862",
+      "returned_at": "2026-10-14T12:10:15+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2020-2006.04862-o-n-connections-are-expressive-enough-universal-approximability-of-spars.md と 11 段落 / 2209文字 (100.0%) が完全一致"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5793,
+        "body_paragraphs": 34,
+        "method_chars": 1755,
+        "method_paragraphs": 11,
+        "evaluation_chars": 1810,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_f6f5072f2fc88191ba80a06ed2a80d96--2020-2006.04862-sparse-transformer-universal-approximation-research-20261014-1445-scheduled-chat-45-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_f6f5072f2fc88191ba80a06ed2a80d96--2020-2006.04862-sparse-transformer-universal-approximation-research-20261014-1445-scheduled-chat-45-r01.json",
+      "worker_run_key": "20261014-1445-scheduled-chat-45/r01"
+    },
+    {
+      "canonical_id": "arXiv:2605.23071",
+      "title": "The Efficiency Frontier: A Unified Framework for Cost-Performance Optimization in LLM Context Management",
+      "source_url": "https://arxiv.org/html/2605.23071v2",
+      "returned_at": "2026-10-14T12:10:16+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2026-2605.23071-the-efficiency-frontier-a-unified-framework-for-cost-performance-optimiz.md と 7 段落 / 1457文字 (100.0%) が完全一致"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 4931,
+        "body_paragraphs": 33,
+        "method_chars": 1631,
+        "method_paragraphs": 14,
+        "evaluation_chars": 976,
+        "limitation_chars": 738,
+        "insufficiency_flags": []
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_f824b04a65c88191bcd7691c8d0a2a08--2026-2605.23071-efficiency-frontier-context-cost-research-20261013-2230-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_f824b04a65c88191bcd7691c8d0a2a08--2026-2605.23071-efficiency-frontier-context-cost-research-20261013-2230-scheduled-chat-30-r01.json",
+      "worker_run_key": "20261013-2230-scheduled-chat-30/r01"
     }
   ]
 }

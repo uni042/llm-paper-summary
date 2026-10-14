@@ -1,13 +1,12 @@
 {
   "schema_version": 1,
   "artifact_type": "research",
-  "status": "imported",
+  "status": "blocked_quality",
   "source_sha256": "c0e377f39c4fe99ec01fd51ed372d02899cab1aaf2a5e1bdcca77c066ffc295b",
-  "canonical_id": "arXiv:2604.17091",
-  "paper_path": "papers/inference/99-other-inference-systems/2026-2604.17091-genericagent-a-token-efficient-self-evolving-llm-agent-via-contextual-in.md",
-  "lineage": "99-other-inference-systems",
-  "audit_status": "PASS",
+  "normalized_source_sha256": null,
   "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_e9e54c614abc81919a67387295abd7bf--2026-2604.17091-genericagent-context-density-research-20261014-0845-scheduled-chat-45-r01.md",
+  "canonical_id": "arXiv:2604.17091",
   "worker_completed_at": "2026-10-14T08:56:00+09:00",
   "worker_run_key": "20261014-0845-scheduled-chat-45/r01",
   "quality_metrics": {
@@ -20,5 +19,8 @@
     "limitation_chars": 795,
     "insufficiency_flags": []
   },
-  "processed_at": "2026-10-14T08:10:08+00:00"
+  "failures": [
+    "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2026-2604.17091-genericagent-a-token-efficient-self-evolving-llm-agent-via-contextual-in.md と 14 段落 / 3014文字 (100.0%) が完全一致"
+  ],
+  "processed_at": "2026-10-14T12:09:22+00:00"
 }

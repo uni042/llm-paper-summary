@@ -1,13 +1,12 @@
 {
   "schema_version": 1,
   "artifact_type": "research",
-  "status": "imported",
+  "status": "blocked_quality",
   "source_sha256": "c34517399c6fd44fb3a94c260aea69b302f926c3d0f2a4122f05f21790287573",
-  "canonical_id": "arXiv:2605.23071",
-  "paper_path": "papers/inference/99-other-inference-systems/2026-2605.23071-the-efficiency-frontier-a-unified-framework-for-cost-performance-optimiz.md",
-  "lineage": "99-other-inference-systems",
-  "audit_status": "PASS",
+  "normalized_source_sha256": null,
   "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_f824b04a65c88191bcd7691c8d0a2a08--2026-2605.23071-efficiency-frontier-context-cost-research-20261013-2230-scheduled-chat-30-r01.md",
+  "canonical_id": "arXiv:2605.23071",
   "worker_completed_at": "2026-10-13T22:40:30+09:00",
   "worker_run_key": "20261013-2230-scheduled-chat-30/r01",
   "quality_metrics": {
@@ -20,5 +19,8 @@
     "limitation_chars": 738,
     "insufficiency_flags": []
   },
-  "processed_at": "2026-10-14T08:19:12+00:00"
+  "failures": [
+    "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2026-2605.23071-the-efficiency-frontier-a-unified-framework-for-cost-performance-optimiz.md と 7 段落 / 1457文字 (100.0%) が完全一致"
+  ],
+  "processed_at": "2026-10-14T12:10:16+00:00"
 }
