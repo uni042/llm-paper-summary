@@ -2,7 +2,7 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-14T14:34:52+00:00",
+  "updated_at": "2026-10-14T14:57:24+00:00",
   "record_count": 12272,
   "records": {
     "arXiv:2303.08774": {
@@ -168601,9 +168601,9 @@
         "id:arXiv:2412.00081",
         "url:https://arxiv.org/abs/2412.00081"
       ],
-      "reason": "一次要旨では、タスク別モデル差分の層行列を特異値分解し、特異ベクトルの干渉を測って複数タスクのモデル統合を改善する。TSV-Compressは差分表現を元の10%へ縮小して99%の精度を保持すると報告するが、目的はモデル統合時の干渉低減と差分圧縮であり、実行時LLM推論の速度・KVメモリ・サービング効率を検証する研究ではない。",
+      "reason": "一次要旨で確認した主題は、複数タスクの学習済み重み差分を特異値分解し、低階数圧縮と干渉抑制によってモデル統合精度を改善する手法である。圧縮対象はタスク差分表現であり、LLM推論時のKV管理、推論カーネル、スケジューリング、オフロードや実測生成速度の改善を扱わない。推論基盤技術の収録範囲から除外する。",
       "first_checked_at": "2026-10-13T10:44:17+00:00",
-      "last_checked_at": "2026-10-13T10:44:17+00:00",
+      "last_checked_at": "2026-10-14T14:57:24+00:00",
       "linked_from": [],
       "title": "Task Singular Vectors: Reducing Task Interference in Model Merging"
     },
