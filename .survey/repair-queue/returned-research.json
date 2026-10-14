@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-14T15:00:51+00:00",
+  "generated_at": "2026-10-14T15:08:09+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -2838,8 +2838,8 @@
       "canonical_id": "arXiv:2604.08564",
       "title": "Attention-Based Sampler for Diffusion Language Models",
       "source_url": "https://arxiv.org/abs/2604.08564",
-      "returned_at": "2026-10-14T14:59:33+00:00",
-      "return_count": 1,
+      "returned_at": "2026-10-14T15:08:07+00:00",
+      "return_count": 2,
       "assigned_worker": "scheduled-chat-00",
       "reason": "blocked_quality",
       "failures": [
@@ -2860,16 +2860,16 @@
           "限界説明量 0 < 推奨 120"
         ]
       },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_acb4665f1598819197bea321a3641e12--2026-2604.08564-attn-sampler-diffusion-language-model-research-20261014-2258-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_acb4665f1598819197bea321a3641e12--2026-2604.08564-attn-sampler-diffusion-language-model-research-20261014-2258-scheduled-chat-00-r01.json",
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-267a1851b6da--libfile_acb4665f1598819197bea321a3641e12--2026-2604.08564-attn-sampler-diffusion-language-model-research-20261014-2258-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-267a1851b6da--libfile_acb4665f1598819197bea321a3641e12--2026-2604.08564-attn-sampler-diffusion-language-model-research-20261014-2258-scheduled-ch.json",
       "worker_run_key": "20261014-2258-scheduled-chat-00/r01"
     },
     {
       "canonical_id": "arXiv:2512.16843",
       "title": "LLMCache: Layer-Wise Caching Strategies for Accelerated Reuse in Transformer Inference",
       "source_url": "https://arxiv.org/abs/2512.16843",
-      "returned_at": "2026-10-14T14:59:34+00:00",
-      "return_count": 1,
+      "returned_at": "2026-10-14T15:08:09+00:00",
+      "return_count": 2,
       "assigned_worker": "scheduled-chat-30",
       "reason": "blocked_quality",
       "failures": [
@@ -2888,8 +2888,8 @@
           "限界説明量 0 < 推奨 120"
         ]
       },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_bba482f53fc48191a8687816f7c83ac0--2025-2512.16843-llmcache-layer-wise-activation-reuse-research-20261014-2330-scheduled-chat-30-r01-v2.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_bba482f53fc48191a8687816f7c83ac0--2025-2512.16843-llmcache-layer-wise-activation-reuse-research-20261014-2330-scheduled-chat-30-r01-v2.json",
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-3c5df45b52b0--libfile_bba482f53fc48191a8687816f7c83ac0--2025-2512.16843-llmcache-layer-wise-activation-reuse-research-20261014-2330-scheduled-chat-30-r01-v2.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-3c5df45b52b0--libfile_bba482f53fc48191a8687816f7c83ac0--2025-2512.16843-llmcache-layer-wise-activation-reuse-research-20261014-2330-scheduled-cha.json",
       "worker_run_key": "20261014-2330-scheduled-chat-30/r01"
     }
   ]
