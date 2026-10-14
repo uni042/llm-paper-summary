@@ -34,6 +34,8 @@ worker_id: scheduled-chat-00
 worker_completed_at: '2026-10-14T11:05:21+09:00'
 worker_run_key: '20261014-1100-scheduled-chat-00/r01'
 reference_main_sha: 7470b2fefdd7f6b42e3578fdab46b40c20d8e0a9
+last_audited: null
+audit_version: 0
 ---
 
 # UniQL：量子化した単一モデルから端末上で枝刈り率を変えるLLM圧縮

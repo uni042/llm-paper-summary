@@ -1,13 +1,12 @@
 {
   "schema_version": 1,
   "artifact_type": "research",
-  "status": "imported",
+  "status": "blocked_quality",
   "source_sha256": "879378823da3f251f3667e0de1f782ee5b58e5208d6ef60e814c4e0ea8ca9944",
-  "canonical_id": "arXiv:2606.00756",
-  "paper_path": "papers/inference/08-edge-on-device-llm-systems/2026-2606.00756-comic-collaborative-memory-and-insights-circulation-for-long-horizon-llm.md",
-  "lineage": "08-edge-on-device-llm-systems",
-  "audit_status": "PASS",
+  "normalized_source_sha256": null,
   "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_c3bf6a37acc48191b15c8db3ef9c6ecc--2026-2606.00756-comic-cloud-edge-agent-memory-research-20261014-0345-scheduled-chat-45-r01.md",
+  "canonical_id": "arXiv:2606.00756",
   "worker_completed_at": "2026-10-14T03:56:49+09:00",
   "worker_run_key": "20261014-0345-scheduled-chat-45/r01",
   "quality_metrics": {
@@ -20,5 +19,8 @@
     "limitation_chars": 684,
     "insufficiency_flags": []
   },
-  "processed_at": "2026-10-14T07:43:18+00:00"
+  "failures": [
+    "長文定型文の再利用を検出: papers/inference/08-edge-on-device-llm-systems/2026-2606.00756-comic-collaborative-memory-and-insights-circulation-for-long-horizon-llm.md と 17 段落 / 3930文字 (100.0%) が完全一致"
+  ],
+  "processed_at": "2026-10-14T11:36:02+00:00"
 }

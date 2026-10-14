@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-14T11:30:07+00:00",
+  "generated_at": "2026-10-14T11:38:06+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 86,
+  "count": 90,
   "entries": [
     {
       "canonical_id": "DOI:10.1145/3714983.3714987",
@@ -2017,8 +2017,8 @@
     },
     {
       "canonical_id": "arXiv:2512.03383",
-      "title": "UniQL: Unified Quantization and Low-rank Compression for Adaptive Edge LLMs",
-      "source_url": "https://arxiv.org/html/2512.03383v3",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-14T11:30:03+00:00",
       "return_count": 1,
       "assigned_worker": "scheduled-chat-30",
@@ -2044,8 +2044,8 @@
     },
     {
       "canonical_id": "arXiv:2605.27786",
-      "title": "Locality-Aware Redundancy Pruning for LLM Depth Compression",
-      "source_url": "https://arxiv.org/pdf/2605.27786",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-14T11:30:04+00:00",
       "return_count": 1,
       "assigned_worker": "scheduled-chat-45",
@@ -2071,8 +2071,8 @@
     },
     {
       "canonical_id": "arXiv:2602.23699",
-      "title": "HiDrop: Hierarchical Vision Token Reduction in MLLMs via Late Injection, Concave Pyramid Pruning, and Early Exit",
-      "source_url": "https://arxiv.org/html/2602.23699v1",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-14T11:30:06+00:00",
       "return_count": 1,
       "assigned_worker": "scheduled-chat-00",
@@ -2098,8 +2098,8 @@
     },
     {
       "canonical_id": "arXiv:2603.00573",
-      "title": "CoMoL: Efficient Mixture of LoRA Experts via Dynamic Core Space Merging",
-      "source_url": "https://arxiv.org/abs/2603.00573",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-14T11:30:07+00:00",
       "return_count": 1,
       "assigned_worker": "scheduled-chat-30",
@@ -2122,6 +2122,110 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_be186c9ad72c8191a820e9193ceb1ca7--2026-2603.00573-comol-core-space-lora-experts-research-20261013-2100-scheduled-chat-00-r02.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_be186c9ad72c8191a820e9193ceb1ca7--2026-2603.00573-comol-core-space-lora-experts-research-20261013-2100-scheduled-chat-00-r02.json",
       "worker_run_key": "20261013-2100-scheduled-chat-00/r02"
+    },
+    {
+      "canonical_id": "arXiv:2501.19324",
+      "title": "Reward-Guided Speculative Decoding for Efficient LLM Reasoning",
+      "source_url": "https://arxiv.org/pdf/2501.19324",
+      "returned_at": "2026-10-14T11:36:00+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "長文定型文の再利用を検出: papers/inference/05-speculative-decoding-moe/2025-2501.19324-reward-guided-speculative-decoding-for-efficient-llm-reasoning.md と 26 段落 / 5757文字 (100.0%) が完全一致"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 7449,
+        "body_paragraphs": 40,
+        "method_chars": 1649,
+        "method_paragraphs": 9,
+        "evaluation_chars": 2626,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_bfcf46dfe910819198dd72642e4c1ba0--2025-2501.19324-reward-guided-speculative-decoding-research-20261014-1345-scheduled-chat-45-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_bfcf46dfe910819198dd72642e4c1ba0--2025-2501.19324-reward-guided-speculative-decoding-research-20261014-1345-scheduled-chat-45-r01.json",
+      "worker_run_key": "20261014-1345-scheduled-chat-45/r01"
+    },
+    {
+      "canonical_id": "arXiv:2511.02647",
+      "title": "Federated Attention: A Distributed Paradigm for Collaborative LLM Inference over Edge Networks",
+      "source_url": "https://arxiv.org/abs/2511.02647",
+      "returned_at": "2026-10-14T11:36:01+00:00",
+      "return_count": 3,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2025-2511.02647-federated-attention-a-distributed-paradigm-for-collaborative-llm-inferen.md と 11 段落 / 2267文字 (100.0%) が完全一致"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5009,
+        "body_paragraphs": 29,
+        "method_chars": 1785,
+        "method_paragraphs": 10,
+        "evaluation_chars": 1421,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_c34cb3f187308191bf72dfec3a54595d--2025-2511.02647-federated-attention-edge-llm-inference-research-20261014-1430-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_c34cb3f187308191bf72dfec3a54595d--2025-2511.02647-federated-attention-edge-llm-inference-research-20261014-1430-scheduled-chat-30-r01.json",
+      "worker_run_key": "20261014-1430-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2606.00756",
+      "title": "CoMIC: Collaborative Memory and Insights Circulation for Long-Horizon LLM Agents in Cloud-Edge Systems",
+      "source_url": "https://arxiv.org/abs/2606.00756",
+      "returned_at": "2026-10-14T11:36:02+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "長文定型文の再利用を検出: papers/inference/08-edge-on-device-llm-systems/2026-2606.00756-comic-collaborative-memory-and-insights-circulation-for-long-horizon-llm.md と 17 段落 / 3930文字 (100.0%) が完全一致"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 6188,
+        "body_paragraphs": 37,
+        "method_chars": 1681,
+        "method_paragraphs": 9,
+        "evaluation_chars": 1486,
+        "limitation_chars": 684,
+        "insufficiency_flags": []
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_c3bf6a37acc48191b15c8db3ef9c6ecc--2026-2606.00756-comic-cloud-edge-agent-memory-research-20261014-0345-scheduled-chat-45-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_c3bf6a37acc48191b15c8db3ef9c6ecc--2026-2606.00756-comic-cloud-edge-agent-memory-research-20261014-0345-scheduled-chat-45-r01.json",
+      "worker_run_key": "20261014-0345-scheduled-chat-45/r01"
+    },
+    {
+      "canonical_id": "arXiv:2512.21323",
+      "title": "Parallel Token Prediction for Language Models",
+      "source_url": "https://arxiv.org/abs/2512.21323",
+      "returned_at": "2026-10-14T11:36:03+00:00",
+      "return_count": 3,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2025-2512.21323-parallel-token-prediction-for-language-models.md と 17 段落 / 3415文字 (100.0%) が完全一致"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 4914,
+        "body_paragraphs": 29,
+        "method_chars": 1888,
+        "method_paragraphs": 12,
+        "evaluation_chars": 1024,
+        "limitation_chars": 587,
+        "insufficiency_flags": []
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_c5d42b3974c88191be2bcacf8e3a6395--2025-2512.21323-parallel-token-prediction-research-20261014-1845-scheduled-chat-45-repair-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_c5d42b3974c88191be2bcacf8e3a6395--2025-2512.21323-parallel-token-prediction-research-20261014-1845-scheduled-chat-45-repair-r01.json",
+      "worker_run_key": "20261014-1830-scheduled-chat-30/r01"
     }
   ]
 }

@@ -29,6 +29,8 @@ code: null
 last_checked: "2026-10-14"
 worker_completed_at: "2026-10-14T19:04:32+09:00"
 worker_run_key: "20261014-1855-scheduled-chat-00/r01"
+last_audited: null
+audit_version: 0
 ---
 
 # LoRP：表現局所性を考慮したLLMの深さ枝刈り

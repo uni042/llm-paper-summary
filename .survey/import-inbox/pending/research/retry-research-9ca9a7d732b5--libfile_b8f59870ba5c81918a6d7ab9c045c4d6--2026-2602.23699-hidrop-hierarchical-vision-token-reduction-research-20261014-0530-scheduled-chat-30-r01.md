@@ -32,6 +32,8 @@ last_checked: '2026-10-14'
 worker_completed_at: '2026-10-14T05:32:50+09:00'
 worker_id: scheduled-chat-30
 worker_run_key: 20261014-0530-scheduled-chat-30/r01
+last_audited: null
+audit_version: 0
 ---
 
 # HiDrop：視覚トークンの層別処理を見直す遅延投入・凹型削減・早期退出
