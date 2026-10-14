@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-14T12:56:24+00:00",
+  "generated_at": "2026-10-14T13:02:37+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -1154,33 +1154,6 @@
       "worker_run_key": "20261014-0330-scheduled-chat-30/r01"
     },
     {
-      "canonical_id": "arXiv:2604.26963",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-14T10:29:50+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 211 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 6562,
-        "body_paragraphs": 34,
-        "method_chars": 2366,
-        "method_paragraphs": 12,
-        "evaluation_chars": 211,
-        "limitation_chars": 834,
-        "insufficiency_flags": [
-          "評価説明量 211 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_4527362751b8819195e101100fcd882e--2026-2604.26963-mars-agentic-gpu-cpu-coscheduling-research-20261014-1530-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_4527362751b8819195e101100fcd882e--2026-2604.26963-mars-agentic-gpu-cpu-coscheduling-research-20261014-1530-scheduled-chat-30-r01.json",
-      "worker_run_key": "20261014-1530-scheduled-chat-30/r01"
-    },
-    {
       "canonical_id": "arXiv:2512.09487",
       "title": null,
       "source_url": null,
@@ -1285,31 +1258,6 @@
       "worker_run_key": "20261014-0445-scheduled-chat-45/r01"
     },
     {
-      "canonical_id": "arXiv:2605.30571",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-14T11:04:46+00:00",
-      "return_count": 3,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "長文定型文の再利用を検出: papers/inference/09-kernel-runtime-compilation/2026-2605.30571-memory-bound-but-not-bandwidth-limited-the-physical-ai-inference-gap-in-.md と 27 段落 / 7003文字 (100.0%) が完全一致"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 7302,
-        "body_paragraphs": 32,
-        "method_chars": 1937,
-        "method_paragraphs": 8,
-        "evaluation_chars": 1858,
-        "limitation_chars": 892,
-        "insufficiency_flags": []
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_73a1a2737a7c8191a0fa7524fe402345--2026-2605.30571-memory-bound-quality-repair-20261014-1245-scheduled-chat-45-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_73a1a2737a7c8191a0fa7524fe402345--2026-2605.30571-memory-bound-quality-repair-20261014-1245-scheduled-chat-45-r01.json",
-      "worker_run_key": "20261014-1200-scheduled-chat-00/r01"
-    },
-    {
       "canonical_id": "arXiv:2606.10537",
       "title": null,
       "source_url": null,
@@ -1336,33 +1284,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_84c0786a5afc8191895b4f30c1759e9a--2026-2606.10537-prefilling-dllm-research-20261014-0430-scheduled-chat-30-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_84c0786a5afc8191895b4f30c1759e9a--2026-2606.10537-prefilling-dllm-research-20261014-0430-scheduled-chat-30-r01.json",
       "worker_run_key": "20261014-0430-scheduled-chat-30/r01"
-    },
-    {
-      "canonical_id": "arXiv:2512.21911",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-14T11:13:44+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "長文定型文の再利用を検出: papers/inference/05-speculative-decoding-moe/2025-2512.21911-accelerate-speculative-decoding-with-sparse-computation-in-verification.md と 20 段落 / 4195文字 (100.0%) が完全一致"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5457,
-        "body_paragraphs": 30,
-        "method_chars": 2148,
-        "method_paragraphs": 12,
-        "evaluation_chars": 1162,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_9050a0c1c59c8191803d6a25f8431c3d--2025-2512.21911-sparse-speculative-verification-research-20261014-1800-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_9050a0c1c59c8191803d6a25f8431c3d--2025-2512.21911-sparse-speculative-verification-research-20261014-1800-scheduled-chat-00-r01.json",
-      "worker_run_key": "20261014-1800-scheduled-chat-00/r01"
     },
     {
       "canonical_id": "arXiv:2512.11529",
@@ -1467,33 +1388,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_ac37fc5b472c8191af5b7356c636a061--2025-2511.19097-decorl-parallel-reasoning-research-20261014-0200-scheduled-chat-00-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_ac37fc5b472c8191af5b7356c636a061--2025-2511.19097-decorl-parallel-reasoning-research-20261014-0200-scheduled-chat-00-r01.json",
       "worker_run_key": "20261014-0200-scheduled-chat-00/r01"
-    },
-    {
-      "canonical_id": "arXiv:2605.06320",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-14T11:25:24+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "長文定型文の再利用を検出: papers/inference/09-kernel-runtime-compilation/2026-2605.06320-improving-the-efficiency-of-language-agent-teams-with-adaptive-task-grap.md と 20 段落 / 4222文字 (100.0%) が完全一致"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5817,
-        "body_paragraphs": 35,
-        "method_chars": 1112,
-        "method_paragraphs": 6,
-        "evaluation_chars": 1794,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_ade12f4c49fc81918f9f32a4dd52dc6a--2026-2605.06320-latte-adaptive-task-graphs-research-20261014-0445-scheduled-chat-45-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_ade12f4c49fc81918f9f32a4dd52dc6a--2026-2605.06320-latte-adaptive-task-graphs-research-20261014-0445-scheduled-chat-45-r01.json",
-      "worker_run_key": "20261014-0445-scheduled-chat-45/r01"
     },
     {
       "canonical_id": "arXiv:2512.03383",
@@ -1602,31 +1496,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_c34cb3f187308191bf72dfec3a54595d--2025-2511.02647-federated-attention-edge-llm-inference-research-20261014-1430-scheduled-chat-30-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_c34cb3f187308191bf72dfec3a54595d--2025-2511.02647-federated-attention-edge-llm-inference-research-20261014-1430-scheduled-chat-30-r01.json",
       "worker_run_key": "20261014-1430-scheduled-chat-30/r01"
-    },
-    {
-      "canonical_id": "arXiv:2606.00756",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-14T11:36:02+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "長文定型文の再利用を検出: papers/inference/08-edge-on-device-llm-systems/2026-2606.00756-comic-collaborative-memory-and-insights-circulation-for-long-horizon-llm.md と 17 段落 / 3930文字 (100.0%) が完全一致"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 6188,
-        "body_paragraphs": 37,
-        "method_chars": 1681,
-        "method_paragraphs": 9,
-        "evaluation_chars": 1486,
-        "limitation_chars": 684,
-        "insufficiency_flags": []
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_c3bf6a37acc48191b15c8db3ef9c6ecc--2026-2606.00756-comic-cloud-edge-agent-memory-research-20261014-0345-scheduled-chat-45-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_c3bf6a37acc48191b15c8db3ef9c6ecc--2026-2606.00756-comic-cloud-edge-agent-memory-research-20261014-0345-scheduled-chat-45-r01.json",
-      "worker_run_key": "20261014-0345-scheduled-chat-45/r01"
     },
     {
       "canonical_id": "arXiv:2603.02096",
@@ -2708,8 +2577,8 @@
     },
     {
       "canonical_id": "arXiv:2511.06605",
-      "title": "DMA-Latte: Expanding the Reach of DMA Offloads to Latency-bound ML Communication",
-      "source_url": "https://arxiv.org/pdf/2511.06605",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-14T12:56:19+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-00",
@@ -2735,8 +2604,8 @@
     },
     {
       "canonical_id": "arXiv:2603.28342",
-      "title": "Kernel-Smith: A Unified Recipe for Evolutionary Kernel Optimization",
-      "source_url": "https://arxiv.org/abs/2603.28342",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-14T12:56:20+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-45",
@@ -2760,8 +2629,8 @@
     },
     {
       "canonical_id": "DOI:10.18653/v1/2021.naacl-industry.15",
-      "title": "LightSeq: A High Performance Inference Library for Transformers",
-      "source_url": "https://aclanthology.org/2021.naacl-industry.15.pdf",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-14T12:56:21+00:00",
       "return_count": 4,
       "assigned_worker": "scheduled-chat-30",
@@ -2787,8 +2656,8 @@
     },
     {
       "canonical_id": "arXiv:2512.24545",
-      "title": "More Than Bits: Multi-Envelope Double Binary Factorization for Extreme Quantization",
-      "source_url": "https://arxiv.org/abs/2512.24545",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-14T12:56:22+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-45",
@@ -2812,8 +2681,8 @@
     },
     {
       "canonical_id": "arXiv:2603.13430",
-      "title": "Dynamic Sparse Attention: Access Patterns and Architecture",
-      "source_url": "https://arxiv.org/pdf/2603.13430",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-14T12:56:23+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-45",
@@ -2834,6 +2703,137 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-769763a15b24--libfile_45dbea873100819189162ef34a9b8f57--2026-2603.13430-dynamic-sparse-attention-access-patterns-architecture-research-20261014-1655-scheduled-chat-00-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-769763a15b24--libfile_45dbea873100819189162ef34a9b8f57--2026-2603.13430-dynamic-sparse-attention-access-patterns-architecture-research-20261014-1.json",
       "worker_run_key": "20261014-1655-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2604.26963",
+      "title": "MARS: Efficient, Adaptive Co-Scheduling for Heterogeneous Agentic Systems",
+      "source_url": "https://arxiv.org/html/2604.26963v2",
+      "returned_at": "2026-10-14T13:02:33+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 211 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 6562,
+        "body_paragraphs": 34,
+        "method_chars": 2366,
+        "method_paragraphs": 12,
+        "evaluation_chars": 211,
+        "limitation_chars": 834,
+        "insufficiency_flags": [
+          "評価説明量 211 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-7cd698f56b98--libfile_4527362751b8819195e101100fcd882e--2026-2604.26963-mars-agentic-gpu-cpu-coscheduling-research-20261014-1530-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-7cd698f56b98--libfile_4527362751b8819195e101100fcd882e--2026-2604.26963-mars-agentic-gpu-cpu-coscheduling-research-20261014-1530-scheduled-chat-3.json",
+      "worker_run_key": "20261014-1530-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2605.30571",
+      "title": "Memory-Bound but Not Bandwidth-Limited: The Physical AI Inference Gap in Batch-1 LLM Decode",
+      "source_url": "https://arxiv.org/abs/2605.30571",
+      "returned_at": "2026-10-14T13:02:34+00:00",
+      "return_count": 4,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "長文定型文の再利用を検出: papers/inference/09-kernel-runtime-compilation/2026-2605.30571-memory-bound-but-not-bandwidth-limited-the-physical-ai-inference-gap-in-.md と 27 段落 / 7003文字 (100.0%) が完全一致"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 7302,
+        "body_paragraphs": 32,
+        "method_chars": 1937,
+        "method_paragraphs": 8,
+        "evaluation_chars": 1858,
+        "limitation_chars": 892,
+        "insufficiency_flags": []
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-81cb48b6698b--libfile_73a1a2737a7c8191a0fa7524fe402345--2026-2605.30571-memory-bound-quality-repair-20261014-1245-scheduled-chat-45-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-81cb48b6698b--libfile_73a1a2737a7c8191a0fa7524fe402345--2026-2605.30571-memory-bound-quality-repair-20261014-1245-scheduled-chat-45-r01.json",
+      "worker_run_key": "20261014-1200-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2512.21911",
+      "title": "Accelerate Speculative Decoding with Sparse Computation in Verification",
+      "source_url": "https://arxiv.org/pdf/2512.21911",
+      "returned_at": "2026-10-14T13:02:35+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "長文定型文の再利用を検出: papers/inference/05-speculative-decoding-moe/2025-2512.21911-accelerate-speculative-decoding-with-sparse-computation-in-verification.md と 20 段落 / 4195文字 (100.0%) が完全一致"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5457,
+        "body_paragraphs": 30,
+        "method_chars": 2148,
+        "method_paragraphs": 12,
+        "evaluation_chars": 1162,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-8d1f3a3194c0--libfile_9050a0c1c59c8191803d6a25f8431c3d--2025-2512.21911-sparse-speculative-verification-research-20261014-1800-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-8d1f3a3194c0--libfile_9050a0c1c59c8191803d6a25f8431c3d--2025-2512.21911-sparse-speculative-verification-research-20261014-1800-scheduled-chat-00-.json",
+      "worker_run_key": "20261014-1800-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2606.00756",
+      "title": "CoMIC: Collaborative Memory and Insights Circulation for Long-Horizon LLM Agents in Cloud-Edge Systems",
+      "source_url": "https://arxiv.org/abs/2606.00756",
+      "returned_at": "2026-10-14T13:02:36+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "長文定型文の再利用を検出: papers/inference/08-edge-on-device-llm-systems/2026-2606.00756-comic-collaborative-memory-and-insights-circulation-for-long-horizon-llm.md と 17 段落 / 3930文字 (100.0%) が完全一致"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 6188,
+        "body_paragraphs": 37,
+        "method_chars": 1681,
+        "method_paragraphs": 9,
+        "evaluation_chars": 1486,
+        "limitation_chars": 684,
+        "insufficiency_flags": []
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-8e7355b5400f--libfile_c3bf6a37acc48191b15c8db3ef9c6ecc--2026-2606.00756-comic-cloud-edge-agent-memory-research-20261014-0345-scheduled-chat-45-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-8e7355b5400f--libfile_c3bf6a37acc48191b15c8db3ef9c6ecc--2026-2606.00756-comic-cloud-edge-agent-memory-research-20261014-0345-scheduled-chat-45-r0.json",
+      "worker_run_key": "20261014-0345-scheduled-chat-45/r01"
+    },
+    {
+      "canonical_id": "arXiv:2605.06320",
+      "title": "Improving the Efficiency of Language Agent Teams with Adaptive Task Graphs",
+      "source_url": "https://arxiv.org/html/2605.06320v1",
+      "returned_at": "2026-10-14T13:02:37+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "長文定型文の再利用を検出: papers/inference/09-kernel-runtime-compilation/2026-2605.06320-improving-the-efficiency-of-language-agent-teams-with-adaptive-task-grap.md と 20 段落 / 4222文字 (100.0%) が完全一致"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5817,
+        "body_paragraphs": 35,
+        "method_chars": 1112,
+        "method_paragraphs": 6,
+        "evaluation_chars": 1794,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-9374f15acf65--libfile_ade12f4c49fc81918f9f32a4dd52dc6a--2026-2605.06320-latte-adaptive-task-graphs-research-20261014-0445-scheduled-chat-45-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-9374f15acf65--libfile_ade12f4c49fc81918f9f32a4dd52dc6a--2026-2605.06320-latte-adaptive-task-graphs-research-20261014-0445-scheduled-chat-45-r01.json",
+      "worker_run_key": "20261014-0445-scheduled-chat-45/r01"
     }
   ]
 }
