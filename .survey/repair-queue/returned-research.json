@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-14T18:33:41+00:00",
+  "generated_at": "2026-10-14T18:47:39+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -2898,8 +2898,8 @@
     },
     {
       "canonical_id": "arXiv:2606.04438",
-      "title": "LoopMoE: Unifying Iterative Computation with Mixture-of-Experts for Language Modeling",
-      "source_url": "https://arxiv.org/html/2606.04438v2",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-14T18:33:39+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-00",
@@ -2925,8 +2925,8 @@
     },
     {
       "canonical_id": "DOI:10.18653/v1/2026.acl-long.1342",
-      "title": "LaCo: Layer-wise Compensation for Pruned Large Language Models",
-      "source_url": "https://aclanthology.org/2026.acl-long.1342.pdf",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-14T18:33:40+00:00",
       "return_count": 6,
       "assigned_worker": "scheduled-chat-00",
@@ -2949,31 +2949,32 @@
       "worker_run_key": "20261013-2357-scheduled-chat-00/r01"
     },
     {
-      "canonical_id": "arXiv:2512.02044",
-      "title": "Beyond Confidence: Adaptive and Coherent Decoding for Diffusion Language Models",
-      "source_url": "https://arxiv.org/pdf/2512.02044",
-      "returned_at": "2026-10-14T18:33:41+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-30",
+      "canonical_id": "arXiv:2602.01274",
+      "title": "PACER: Blockwise Pre-verification for Speculative Decoding with Adaptive Length",
+      "source_url": "https://arxiv.org/pdf/2602.01274",
+      "returned_at": "2026-10-14T18:46:11+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-00",
       "reason": "blocked_quality",
       "failures": [
-        "説明不足トリガー: 評価説明量 171 < 500"
+        "16KB未満再監査: 評価説明量 122 < 500"
       ],
       "quality_metrics": {
         "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5238,
-        "body_paragraphs": 28,
-        "method_chars": 1287,
+        "body_chars": 4818,
+        "body_paragraphs": 23,
+        "method_chars": 1418,
         "method_paragraphs": 7,
-        "evaluation_chars": 171,
-        "limitation_chars": 748,
+        "evaluation_chars": 122,
+        "limitation_chars": 0,
         "insufficiency_flags": [
-          "評価説明量 171 < 500"
+          "評価説明量 122 < 500",
+          "限界説明量 0 < 推奨 120"
         ]
       },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-e02ff8e10515--libfile_96eeaed0f5288191a74a51cbe35189c0--2025-2512.02044-ccd-coherent-diffusion-decoding-research-20261014-0030-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-e02ff8e10515--libfile_96eeaed0f5288191a74a51cbe35189c0--2025-2512.02044-ccd-coherent-diffusion-decoding-research-20261014-0030-scheduled-chat-30-.json",
-      "worker_run_key": "20261014-0030-scheduled-chat-30/r01"
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_4cc0e9927ecc8191929be5cadde03ac2--2026-2602.01274-pacer-under16kb-reaudit-20261015-0330-scheduled-chat-30-r01-v2.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_4cc0e9927ecc8191929be5cadde03ac2--2026-2602.01274-pacer-under16kb-reaudit-20261015-0330-scheduled-chat-30-r01-v2.json",
+      "worker_run_key": "20261015-0330-scheduled-chat-30/r01"
     }
   ]
 }
