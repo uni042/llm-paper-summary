@@ -1,8 +1,8 @@
 {
   "schema_version": 3,
-  "updated_at": "2026-10-14T11:59:10+00:00",
-  "last_run_key": "library-import-626795762a85",
-  "last_round": "libimp-626795762a853830-pre01",
+  "updated_at": "2026-10-14T12:07:54+00:00",
+  "last_run_key": "library-import-a1fd91681c58",
+  "last_round": "libimp-a1fd91681c587b25-pre01",
   "paper_stock_zero_count": 3,
   "consecutive_empty_rounds": 0,
   "last_empty_round_reason": null,
@@ -10,74 +10,6 @@
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
   "history": [
-    {
-      "round_identity": "precheck:take-scheduled-chat-30-20260926T043136JST-r12",
-      "precheck_request_id": "take-scheduled-chat-30-20260926T043136JST-r12",
-      "run_key": "scheduled-chat-30-20260926T043136JST-4f31c6",
-      "round": "round-12",
-      "axis": "forward citations of FlexGen offload and hierarchical-memory LLM inference",
-      "query_summary": "固定取得窓20件を評価し、推論システムとして直接性の高い候補3件を採用。",
-      "provider": "semantic_scholar",
-      "source_url": "https://api.semanticscholar.org/graph/v1/paper/ARXIV:2303.06865/citations?fields=paperId,title,abstract,year,venue,externalIds,url,publicationDate&limit=100",
-      "citation_direction": "forward",
-      "seed_canonical_id": null,
-      "preload_id": "preload-561c765b08a24f1caf0f",
-      "candidate_count": 20,
-      "duplicate_filtered_count": 17,
-      "final_duplicate_filtered_count": 0,
-      "accepted_count": 3,
-      "accepted_canonical_ids": [],
-      "duplicate_canonical_ids": [],
-      "next_axis_hint": null,
-      "source_submission": "work-queue/submissions/discovery/take-scheduled-chat-30-20260926T043136JST-r12.json",
-      "source_submissions": [
-        "work-queue/submissions/discovery/take-scheduled-chat-30-20260926T043136JST-r12.json"
-      ],
-      "round_submission_indices": [
-        1
-      ],
-      "round_submission_count": 1,
-      "round_accounted": true,
-      "novel_candidate_count": 3,
-      "post_final_dedupe_count": 3,
-      "duplicate_ratio": 0.85,
-      "final_duplicate_ratio": 0.0,
-      "round_complete": true
-    },
-    {
-      "round_identity": "precheck:take-scheduled-chat-30-20260926T043136JST-r14",
-      "precheck_request_id": "take-scheduled-chat-30-20260926T043136JST-r14",
-      "run_key": "scheduled-chat-30-20260926T043136JST-4f31c6",
-      "round": "round-14",
-      "axis": "forward citations of FlashAttention for recent attention kernels and serving systems",
-      "query_summary": "固定取得窓20件を評価し、推論システムとして直接性の高い候補4件を採用。",
-      "provider": "semantic_scholar",
-      "source_url": "https://api.semanticscholar.org/graph/v1/paper/ARXIV:2205.14135/citations?fields=title,abstract,year,externalIds,url,publicationDate&limit=100",
-      "citation_direction": "forward",
-      "seed_canonical_id": null,
-      "preload_id": "preload-b7059327cf3a593ead8a",
-      "candidate_count": 20,
-      "duplicate_filtered_count": 16,
-      "final_duplicate_filtered_count": 0,
-      "accepted_count": 4,
-      "accepted_canonical_ids": [],
-      "duplicate_canonical_ids": [],
-      "next_axis_hint": null,
-      "source_submission": "work-queue/submissions/discovery/take-scheduled-chat-30-20260926T043136JST-r14.json",
-      "source_submissions": [
-        "work-queue/submissions/discovery/take-scheduled-chat-30-20260926T043136JST-r14.json"
-      ],
-      "round_submission_indices": [
-        1
-      ],
-      "round_submission_count": 1,
-      "round_accounted": true,
-      "novel_candidate_count": 4,
-      "post_final_dedupe_count": 4,
-      "duplicate_ratio": 0.8,
-      "final_duplicate_ratio": 0.0,
-      "round_complete": true
-    },
     {
       "round_identity": "precheck:take-scheduled-chat-30-20260926T043136JST-r2",
       "precheck_request_id": "take-scheduled-chat-30-20260926T043136JST-r2",
@@ -13595,6 +13527,74 @@
       "duplicate_ratio": 0.0,
       "final_duplicate_ratio": 0.0,
       "round_complete": true
+    },
+    {
+      "round_identity": "precheck:libimp-936932a1899be34e-pre01",
+      "precheck_request_id": "libimp-936932a1899be34e-pre01",
+      "run_key": "library-import-936932a1899b",
+      "round": "libimp-936932a1899be34e-pre01",
+      "axis": "library-candidate-intake",
+      "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。",
+      "provider": "candidate_id_lookup",
+      "source_url": "identifier://approved-public-apis",
+      "citation_direction": null,
+      "seed_canonical_id": null,
+      "preload_id": null,
+      "candidate_count": 2,
+      "duplicate_filtered_count": 0,
+      "final_duplicate_filtered_count": 0,
+      "accepted_count": 2,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": null,
+      "source_submission": "work-queue/submissions/libimp-936932a1899be34e-pre01-sub01.json",
+      "source_submissions": [
+        "work-queue/submissions/libimp-936932a1899be34e-pre01-sub01.json"
+      ],
+      "round_submission_indices": [
+        1
+      ],
+      "round_submission_count": 1,
+      "round_accounted": true,
+      "novel_candidate_count": 2,
+      "post_final_dedupe_count": 2,
+      "duplicate_ratio": 0.0,
+      "final_duplicate_ratio": 0.0,
+      "round_complete": true
+    },
+    {
+      "round_identity": "precheck:libimp-a1fd91681c587b25-pre01",
+      "precheck_request_id": "libimp-a1fd91681c587b25-pre01",
+      "run_key": "library-import-a1fd91681c58",
+      "round": "libimp-a1fd91681c587b25-pre01",
+      "axis": "library-candidate-intake",
+      "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。",
+      "provider": "candidate_id_lookup",
+      "source_url": "identifier://approved-public-apis",
+      "citation_direction": null,
+      "seed_canonical_id": null,
+      "preload_id": null,
+      "candidate_count": 1,
+      "duplicate_filtered_count": 0,
+      "final_duplicate_filtered_count": 0,
+      "accepted_count": 1,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": null,
+      "source_submission": "work-queue/submissions/libimp-a1fd91681c587b25-pre01-sub01.json",
+      "source_submissions": [
+        "work-queue/submissions/libimp-a1fd91681c587b25-pre01-sub01.json"
+      ],
+      "round_submission_indices": [
+        1
+      ],
+      "round_submission_count": 1,
+      "round_accounted": true,
+      "novel_candidate_count": 1,
+      "post_final_dedupe_count": 1,
+      "duplicate_ratio": 0.0,
+      "final_duplicate_ratio": 0.0,
+      "round_complete": true
     }
   ],
   "axes": {
@@ -21966,16 +21966,16 @@
       "next_axis_hint": "今回runで新着、storage/hierarchical memory、MoE、network/runtime、scheduling/kernel、agent/multimodal、speculative/length predictionを横断済み。次回は新着差分とforward/backward citationから再開する"
     },
     "library-candidate-intake": {
-      "last_run_key": "library-import-626795762a85",
-      "rounds": 375,
-      "candidate_count": 2152,
+      "last_run_key": "library-import-a1fd91681c58",
+      "rounds": 377,
+      "candidate_count": 2155,
       "duplicate_filtered_count": 1275,
-      "novel_candidate_count": 877,
+      "novel_candidate_count": 880,
       "final_duplicate_filtered_count": 5,
-      "post_final_dedupe_count": 872,
-      "accepted_count": 872,
-      "duplicate_ratio": 0.5924721189591078,
-      "final_duplicate_ratio": 0.005701254275940707,
+      "post_final_dedupe_count": 875,
+      "accepted_count": 875,
+      "duplicate_ratio": 0.5916473317865429,
+      "final_duplicate_ratio": 0.005681818181818182,
       "next_axis_hint": null
     },
     "explicit-library-accept": {
