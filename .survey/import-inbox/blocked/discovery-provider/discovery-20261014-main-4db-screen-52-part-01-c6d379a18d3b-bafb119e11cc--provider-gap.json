@@ -2,9 +2,9 @@
   "schema_version": 2,
   "artifact_type": "discovery_run",
   "worker_id": "codex-local-screen-watcher",
-  "run_key": "discovery-20261014-main-4db-screen-52-part-01-c6d379a18d3b",
+  "run_key": "discovery-20261014-main-4db-screen-52-part-01-c6d379a18d3b::provider-gap",
   "reference_main_sha": "507e17d45d3f70c594aaffa3792a82b19738e2a8",
-  "record_count": 20,
+  "record_count": 11,
   "records": [
     {
       "classification": "accept",
@@ -49,20 +49,6 @@
       "linked_from": []
     },
     {
-      "classification": "borderline",
-      "canonical_id": "DOI:10.1109/ICASSP49660.2025.10890367",
-      "identity_tokens": [
-        "DOI:10.1109/ICASSP49660.2025.10890367"
-      ],
-      "title": "DynamicAttention: Dynamic KV Cache for Disaggregate LLM Inference",
-      "reason": "The IEEE conference program and DOI identify the Dynamic KV Cache paper, but the official Xplore abstract endpoint returned HTTP 418. Crossref REST DOI lookup was inaccessible through the available retrieval tool, so the publisher abstract could not be screened.",
-      "source_url": "https://ieeexplore.ieee.org/abstract/document/10890367",
-      "body_check": "source_unavailable; abstract_not_read; body_not_read",
-      "first_checked_at": "2026-10-14T01:33:22Z",
-      "last_checked_at": "2026-10-14T01:33:22Z",
-      "linked_from": []
-    },
-    {
       "classification": "accept",
       "canonical_id": "arXiv:2510.08008",
       "identity_tokens": [
@@ -91,20 +77,6 @@
       "linked_from": []
     },
     {
-      "classification": "borderline",
-      "canonical_id": "DOI:10.1109/DAC63849.2025.11132485",
-      "identity_tokens": [
-        "DOI:10.1109/DAC63849.2025.11132485"
-      ],
-      "title": "An Algorithm-Hardware Co-design Based on Revised Microscaling Format Quantization for Accelerating Large Language Models",
-      "reason": "The official DAC program lists the matching paper and DOI; the IEEE Xplore abstract endpoint returned HTTP 418. Crossref REST DOI lookup was inaccessible through the available retrieval tool, so the publisher abstract could not be screened.",
-      "source_url": "https://ieeexplore.ieee.org/abstract/document/11132485",
-      "body_check": "source_unavailable; abstract_not_read; body_not_read",
-      "first_checked_at": "2026-10-14T01:33:22Z",
-      "last_checked_at": "2026-10-14T01:33:22Z",
-      "linked_from": []
-    },
-    {
       "classification": "accept",
       "canonical_id": "arXiv:2510.20111",
       "identity_tokens": [
@@ -113,34 +85,6 @@
       "title": "AsyncHZP: Hierarchical ZeRO Parallelism with Asynchronous Scheduling for Scalable LLM Training",
       "reason": "AsyncHZPはZeROの再shardと非同期all-gather/reduce-scatterを計算と重ね、巨大LLM学習時の通信待ちとメモリ負荷を抑える。",
       "source_url": "https://arxiv.org/abs/2510.20111",
-      "body_check": "abstract_screen_only; body_not_read",
-      "first_checked_at": "2026-10-14T01:29:02Z",
-      "last_checked_at": "2026-10-14T01:29:02Z",
-      "linked_from": []
-    },
-    {
-      "classification": "unrelated",
-      "canonical_id": "arXiv:2507.01309",
-      "identity_tokens": [
-        "arXiv:2507.01309"
-      ],
-      "title": "SD-Acc: Accelerating Stable Diffusion through Phase-Aware Sampling and Hardware Co-Optimizations",
-      "reason": "対象はStable Diffusionの画像生成で、位相別denoising近似と専用dataflowで画像品質を保ちながら計算・メモリアクセスを削減する。LLM推論・配備への接続は要旨に示されない。",
-      "source_url": "https://arxiv.org/abs/2507.01309",
-      "body_check": "abstract_screen_only; body_not_read",
-      "first_checked_at": "2026-10-14T01:29:02Z",
-      "last_checked_at": "2026-10-14T01:29:02Z",
-      "linked_from": []
-    },
-    {
-      "classification": "unrelated",
-      "canonical_id": "arXiv:2503.09509",
-      "identity_tokens": [
-        "arXiv:2503.09509"
-      ],
-      "title": "ViM-VQ: Efficient Post-Training Vector Quantization for Visual Mamba",
-      "reason": "ViM-VQは視覚タスク向けVisual Mambaの外れ値を処理する事後ベクトル量子化で、要旨の適用先・評価対象は視覚モデルに限られ、LLMシステム効率への具体的接続は示されない。",
-      "source_url": "https://arxiv.org/abs/2503.09509",
       "body_check": "abstract_screen_only; body_not_read",
       "first_checked_at": "2026-10-14T01:29:02Z",
       "last_checked_at": "2026-10-14T01:29:02Z",
@@ -161,34 +105,6 @@
       "linked_from": []
     },
     {
-      "classification": "unrelated",
-      "canonical_id": "arXiv:2504.08202",
-      "identity_tokens": [
-        "arXiv:2504.08202"
-      ],
-      "title": "Harnessing the Unseen: The Hidden Influence of Intrinsic Knowledge in Long-Context Language Models",
-      "reason": "この研究は長文脈LLMのparametric recallと外部検索能力の干渉を測る評価法を提案するが、計算量・メモリ・レイテンシ・配備効率を改善する手法は要旨にない。",
-      "source_url": "https://arxiv.org/abs/2504.08202",
-      "body_check": "abstract_screen_only; body_not_read",
-      "first_checked_at": "2026-10-14T01:29:02Z",
-      "last_checked_at": "2026-10-14T01:29:02Z",
-      "linked_from": []
-    },
-    {
-      "classification": "borderline",
-      "canonical_id": "DOI:10.1145/3746027.3755307",
-      "identity_tokens": [
-        "DOI:10.1145/3746027.3755307"
-      ],
-      "title": "CITR: Efficient Long Video Understanding Needs Causal Importance",
-      "reason": "Bibliographic DOI/title match is confirmed in ACM Multimedia 2025 records, but the ACM Digital Library page returned HTTP 403 and the Crossref REST DOI lookup was inaccessible through the available retrieval tool. The primary abstract could not be screened.",
-      "source_url": "https://dl.acm.org/doi/10.1145/3746027.3755307",
-      "body_check": "source_unavailable; abstract_not_read; body_not_read",
-      "first_checked_at": "2026-10-14T01:33:22Z",
-      "last_checked_at": "2026-10-14T01:33:22Z",
-      "linked_from": []
-    },
-    {
       "classification": "accept",
       "canonical_id": "DOI:10.1109/ACCESS.2026.3677249",
       "identity_tokens": [
@@ -197,36 +113,6 @@
       "title": "Context-Aware Autoscaling for Cost-Efficient Large Language Model Inference With Prefix Cache Integration",
       "reason": "IEEE abstract describes AdaptiveScale using prefix-cache telemetry, heterogeneous tiered scheduling, and KV-state preservation for LLM serving; it reports reduced GPU costs while maintaining SLOs.",
       "source_url": "https://ieeexplore.ieee.org/document/11455169/",
-      "body_check": "abstract_screen_only; body_not_read",
-      "first_checked_at": "2026-10-14T01:33:22Z",
-      "last_checked_at": "2026-10-14T01:33:22Z",
-      "linked_from": []
-    },
-    {
-      "classification": "accept",
-      "canonical_id": "DOI:10.18653/v1/2026.bigpicture-main.6",
-      "identity_tokens": [
-        "DOI:10.18653/v1/2026.bigpicture-main.6",
-        "SemanticScholar:de42c32bc69555bb18874f1cc47a96e0992c4415"
-      ],
-      "title": "Challenging Quadratic Attention - A Holistic View On the Rise of Alternative Language Model Architectures",
-      "reason": "The ACL abstract reviews sub-quadratic attention, recurrent/state-space, and hybrid architectures against compute and memory complexity, including domain-specific and edge-device settings.",
-      "source_url": "https://aclanthology.org/2026.bigpicture-main.6/",
-      "body_check": "abstract_screen_only; body_not_read",
-      "first_checked_at": "2026-10-14T01:33:22Z",
-      "last_checked_at": "2026-10-14T01:33:22Z",
-      "linked_from": []
-    },
-    {
-      "classification": "accept",
-      "canonical_id": "DOI:10.18653/v1/2026.findings-acl.498",
-      "identity_tokens": [
-        "DOI:10.18653/v1/2026.findings-acl.498",
-        "SemanticScholar:312bc34c049603c1ffe4548c62e8a8a583671c2c"
-      ],
-      "title": "From Static Inference to Dynamic Interaction: A Survey of Streaming Large Language Models",
-      "reason": "The survey establishes a streaming-LLM taxonomy and analyzes methods across real-time text, speech, and video scenarios, directly addressing dynamic inference.",
-      "source_url": "https://aclanthology.org/2026.findings-acl.498/",
       "body_check": "abstract_screen_only; body_not_read",
       "first_checked_at": "2026-10-14T01:33:22Z",
       "last_checked_at": "2026-10-14T01:33:22Z",
@@ -262,21 +148,6 @@
     },
     {
       "classification": "accept",
-      "canonical_id": "DOI:10.18653/v1/2026.findings-acl.1809",
-      "identity_tokens": [
-        "DOI:10.18653/v1/2026.findings-acl.1809",
-        "SemanticScholar:1c052dc64b887eb0bc785e5f6518239a0dac95cd"
-      ],
-      "title": "Speculative Verification: Exploiting Information Gain for Speculative Decoding",
-      "reason": "The paper dynamically adapts speculative verification length using a companion model; its abstract reports higher throughput and up to 1.9x SD improvement.",
-      "source_url": "https://aclanthology.org/2026.findings-acl.1809/",
-      "body_check": "abstract_screen_only; body_not_read",
-      "first_checked_at": "2026-10-14T01:33:22Z",
-      "last_checked_at": "2026-10-14T01:33:22Z",
-      "linked_from": []
-    },
-    {
-      "classification": "accept",
       "canonical_id": "OpenReview:04d372c6d5c0ba3b8c79ddd41e5b8901eceba008",
       "identity_tokens": [
         "OpenReview:04d372c6d5c0ba3b8c79ddd41e5b8901eceba008",
@@ -290,5 +161,20 @@
       "last_checked_at": "2026-10-14T01:33:22Z",
       "linked_from": []
     }
+  ],
+  "parent_run_key": "discovery-20261014-main-4db-screen-52-part-01-c6d379a18d3b",
+  "provider_gap_from": ".survey/import-inbox/waiting/discovery/discovery-20261014-main-4db-screen-52-part-01-c6d379a18d3b-bafb119e11cc.json",
+  "provider_gap_ids": [
+    "DOI:10.1109/access.2026.3677249",
+    "SemanticScholar:7dbd42d852d192a41e04ee78747d6f64ac1b1ed4",
+    "arXiv:2406.06571",
+    "arXiv:2409.02026",
+    "arXiv:2410.07531",
+    "arXiv:2502.12784",
+    "arXiv:2504.13989",
+    "arXiv:2510.01718",
+    "arXiv:2510.03275",
+    "arXiv:2510.08008",
+    "arXiv:2510.20111"
   ]
 }
