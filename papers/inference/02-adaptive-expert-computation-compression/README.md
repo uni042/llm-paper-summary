@@ -88,6 +88,10 @@ MoEで毎回同じ数のexpertを実行するのではなく、**token・layer�
   実装：[✓](https://github.com/MasterGodzilla/Expert-Threshold-Routing) ・ リポジトリ内被引用：2  
   専門家ごとの得点分位点を指数移動平均で追跡し、未来トークンを参照せず可変数の専門家を起動して負荷均衡と動的計算を両立する。
 
+- **2026-02 · [Certain Head, Uncertain Tail: Expert-Sample for Test-Time Scaling in Fine-Grained MoE](2026-2602.02443-expert-sample-test-time-scaling.md)**  
+  実装：✓ ・ リポジトリ内被引用：2  
+  細粒度MoEの高確信専門家を固定し低確信尾部だけを確率的に選ぶことで、単発品質を崩しにくいまま複数推論経路の多様性とpass@nを高める。
+
 - **2026-01 · [LatentMoE: Toward Optimal Accuracy per FLOP and Parameter in Mixture of Experts](2026-2601.18089-latentmoe-accuracy-per-flop-parameter.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
   MoEエキスパートを低次元潜在空間で計算し、削減した帯域・通信コストを総エキスパート数と活性エキスパート数の拡大へ再投資して、計算量当たり精度とパラメータ当たり精度を同時に改善する設計。
@@ -127,10 +131,6 @@ MoEで毎回同じ数のexpertを実行するのではなく、**token・layer�
 - **2026-05 · [dMoE: dLLMs with Learnable Block Experts](2026-2605.30876-dmoe-block-level-experts.md)**  
   実装：[✓](https://github.com/fscdc/dMoE) ・ リポジトリ内被引用：1  
   ブロック内のトークン別ルータ得点を集約して適応的な専門家候補集合を作り、MoE拡散LLMの固有専門家数と重み読出しを大幅に減らす。
-
-- **2026-02 · [Certain Head, Uncertain Tail: Expert-Sample for Test-Time Scaling in Fine-Grained MoE](2026-2602.02443-expert-sample-test-time-scaling.md)**  
-  実装：✓ ・ リポジトリ内被引用：1  
-  細粒度MoEの高確信専門家を固定し低確信尾部だけを確率的に選ぶことで、単発品質を崩しにくいまま複数推論経路の多様性とpass@nを高める。
 
 - **2026-01 · [Improving MoE Compute Efficiency by Composing Weight and Data Sparsity](2026-2601.15370-composing-weight-data-sparsity.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
@@ -443,7 +443,7 @@ MoEで毎回同じ数のexpertを実行するのではなく、**token・layer�
   PR-MoE/MoSでMoEサイズを最大3.7倍縮小し、多次元並列・通信・融合カーネルを統合してPyTorch比最大7.3倍、同等品質dense比最大4.5倍高速な推論を実現。
 
 - **2022-02 · [Mixture-of-Experts with Expert Choice Routing](2022-2202.09368-expert-choice-routing.md)**  
-  実装：✓ ・ リポジトリ内被引用：56  
+  実装：✓ ・ リポジトリ内被引用：57  
   専門家側が固定容量ぶんの上位トークンを選ぶことで完全な負荷均衡とトークンごとの可変計算量を同時に実現するMoEルーティング。
 
 - **2022-06 · [Task-Specific Expert Pruning for Sparse Mixture-of-Experts](2022-2206.00277-task-specific-expert-pruning.md)**  
