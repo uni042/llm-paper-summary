@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-14T14:57:24+00:00",
-  "record_count": 12272,
+  "updated_at": "2026-10-14T15:06:33+00:00",
+  "record_count": 12271,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -175686,11 +175686,12 @@
       "canonical_id": "arXiv:2510.13366",
       "identity_tokens": [
         "DOI:10.48550/arxiv.2510.13366",
+        "SemanticScholar:de318eaf21e14f16ea79b4fec30a982e4a7bc03c",
         "arXiv:2510.13366"
       ],
-      "reason": "The survey covers document-AI applications of LLMs, including multimodal, multilingual, and retrieval-augmented document processing, without a systems-efficiency contribution.",
+      "reason": "The survey concerns document-intelligence applications of LLMs, including multimodal and retrieval-augmented DAI; its abstract gives no inference-system or serving-efficiency contribution.",
       "first_checked_at": "2026-10-14T11:53:40+00:00",
-      "last_checked_at": "2026-10-14T11:53:40+00:00",
+      "last_checked_at": "2026-10-14T15:06:30+00:00",
       "linked_from": [
         "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
       ],
@@ -175700,11 +175701,12 @@
       "classification": "unrelated",
       "canonical_id": "DOI:10.1007/s10032-025-00512-2",
       "identity_tokens": [
-        "DOI:10.1007/s10032-025-00512-2"
+        "DOI:10.1007/s10032-025-00512-2",
+        "SemanticScholar:5522b764ce2ef8e2921b86a46e511d885b5d36a4"
       ],
-      "reason": "QROB applies a lightweight CNN and augmentation to oracle-bone character recognition; the publisher abstract targets historical-script digitization rather than LLM inference systems.",
+      "reason": "QROB targets OCR of ancient oracle-bone characters with a task-specific recognition model, an independent document-vision application rather than LLM inference systems.",
       "first_checked_at": "2026-10-14T11:53:41+00:00",
-      "last_checked_at": "2026-10-14T11:53:41+00:00",
+      "last_checked_at": "2026-10-14T15:06:30+00:00",
       "linked_from": [
         "papers/inference/07-kv-cache-optimization-compression/2019-1911.02150-multi-query-attention.md"
       ],
@@ -175715,11 +175717,12 @@
       "canonical_id": "arXiv:2108.10752",
       "identity_tokens": [
         "DOI:10.21437/interspeech.2022-581",
+        "SemanticScholar:ac762d174034173808c70ee125c3b1898bb8921c",
         "arXiv:2108.10752"
       ],
-      "reason": "Sparse self-attention is used to improve out-of-domain Conformer speech-recognition accuracy; the abstract reports CER gains for speech, not LLM or serving efficiency.",
+      "reason": "The sparse attention and state-reset changes target out-domain speech recognition quality for RNN-T/Conformer; the abstract reports character-error reduction, not an LLM inference-system contribution.",
       "first_checked_at": "2026-10-14T11:53:41+00:00",
-      "last_checked_at": "2026-10-14T11:53:41+00:00",
+      "last_checked_at": "2026-10-14T15:06:31+00:00",
       "linked_from": [
         "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md"
       ],
@@ -175730,26 +175733,28 @@
       "canonical_id": "arXiv:2407.04420",
       "identity_tokens": [
         "DOI:10.1016/j.ascom.2025.100934",
+        "SemanticScholar:c3daddf7c9b17b4db7e65e776f03bac1a2dfe811",
         "arXiv:2407.04420"
       ],
-      "reason": "cosmosage is an LLM-based cosmology question-answering assistant; its abstract addresses a domain application and answer quality, not model-runtime efficiency.",
+      "reason": "cosmosage is a cosmology question-answering assistant and is evaluated for domain answer quality; the abstract describes no serving or inference-efficiency method.",
       "first_checked_at": "2026-10-14T11:53:42+00:00",
-      "last_checked_at": "2026-10-14T11:53:42+00:00",
+      "last_checked_at": "2026-10-14T15:06:31+00:00",
       "linked_from": [
         "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
       ],
-      "title": "cosmosage: A natural-language assistant for cosmology"
+      "title": "cosmosage: A Natural-Language Assistant for Cosmologists"
     },
     "arXiv:2407.11487": {
       "classification": "unrelated",
       "canonical_id": "arXiv:2407.11487",
       "identity_tokens": [
         "DOI:10.48550/arxiv.2407.11487",
+        "SemanticScholar:49653c3e849a5e403949ba0545c70cf90664a163",
         "arXiv:2407.11487"
       ],
-      "reason": "PRET reduces computation for vision-and-language navigation trajectory planning; the target is a navigation application, not LLM inference or serving systems.",
+      "reason": "PRET reduces computation for vision-and-language navigation with directed-graph trajectory planning, but its optimization is confined to an independent navigation application rather than language-model serving.",
       "first_checked_at": "2026-10-14T11:53:42+00:00",
-      "last_checked_at": "2026-10-14T11:53:42+00:00",
+      "last_checked_at": "2026-10-14T15:06:31+00:00",
       "linked_from": [
         "papers/inference/99-other-inference-systems/2022-2211.05102-efficiently-scaling-transformer-inference.md"
       ],
@@ -175760,11 +175765,12 @@
       "canonical_id": "arXiv:2412.19031",
       "identity_tokens": [
         "DOI:10.48550/arxiv.2412.19031",
+        "SemanticScholar:6cb37add3ca69c91325054d11395f52baffdc361",
         "arXiv:2412.19031"
       ],
-      "reason": "ReSAT constructs localization and code-edit training data to improve SLM software-issue resolution; its contribution is task-specific training and capability evaluation.",
+      "reason": "ReSAT is training-data construction and training for repository issue-resolution quality in SLMs; it does not establish inference or serving efficiency.",
       "first_checked_at": "2026-10-14T11:53:42+00:00",
-      "last_checked_at": "2026-10-14T11:53:42+00:00",
+      "last_checked_at": "2026-10-14T15:06:31+00:00",
       "linked_from": [
         "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
       ],
@@ -175775,11 +175781,12 @@
       "canonical_id": "arXiv:2502.18504",
       "identity_tokens": [
         "DOI:10.48550/arxiv.2502.18504",
+        "SemanticScholar:33fd40bdb945562fc3eb0a2038fe165acb557a55",
         "arXiv:2502.18504"
       ],
-      "reason": "TurboFuzzLLM accelerates mutation-based jailbreak discovery and measures attack success; this is LLM security evaluation, not inference-system efficiency.",
+      "reason": "TurboFuzzLLM improves adversarial jailbreak discovery and attack success for LLM safety testing; its fuzzing efficiency is for security evaluation, not model inference.",
       "first_checked_at": "2026-10-14T11:53:43+00:00",
-      "last_checked_at": "2026-10-14T11:53:43+00:00",
+      "last_checked_at": "2026-10-14T15:06:32+00:00",
       "linked_from": [
         "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md"
       ],
@@ -175790,11 +175797,12 @@
       "canonical_id": "arXiv:2503.02844",
       "identity_tokens": [
         "DOI:10.48550/arxiv.2503.02844",
+        "SemanticScholar:2e8341358c463a8dbfab5650d196a988449ff124",
         "arXiv:2503.02844"
       ],
-      "reason": "The infinite learning-rate schedule improves continual pre-training outcomes; the abstract reports training results without an inference or serving contribution.",
+      "reason": "The work compares learning-rate schedules for continual pre-training and reports training performance; it is training-only rather than inference-system efficiency.",
       "first_checked_at": "2026-10-14T11:53:43+00:00",
-      "last_checked_at": "2026-10-14T11:53:43+00:00",
+      "last_checked_at": "2026-10-14T15:06:32+00:00",
       "linked_from": [
         "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
       ],
@@ -175805,41 +175813,28 @@
       "canonical_id": "arXiv:2505.12343",
       "identity_tokens": [
         "DOI:10.48550/arxiv.2505.12343",
+        "SemanticScholar:4e71babdc755bc5a40a476164567b0b4b9bad4cf",
         "arXiv:2505.12343"
       ],
-      "reason": "DCLA aggregates LVLM layer representations during decoding to mitigate hallucinations and improve benchmark quality; the stated objective is output reliability, not systems efficiency.",
+      "reason": "DCLA is a training-free decoding method for reducing LVLM hallucinations and improving benchmark accuracy; the abstract does not establish lower inference cost or serving performance.",
       "first_checked_at": "2026-10-14T11:53:43+00:00",
-      "last_checked_at": "2026-10-14T11:53:43+00:00",
+      "last_checked_at": "2026-10-14T15:06:32+00:00",
       "linked_from": [
         "papers/inference/07-kv-cache-optimization-compression/2024-2405.12981-cross-layer-attention.md"
       ],
       "title": "Mitigating Hallucinations via Inter-Layer Consistency Aggregation in Large Vision-Language Models"
-    },
-    "arXiv:2506.02025": {
-      "classification": "unrelated",
-      "canonical_id": "arXiv:2506.02025",
-      "identity_tokens": [
-        "DOI:10.1145/3731599.3767584",
-        "arXiv:2506.02025"
-      ],
-      "reason": "The paper evaluates LLM reasoning as an HPC workload scheduler and explicitly notes computational overhead; this is an LLM application/evaluation study rather than an LLM serving optimization.",
-      "first_checked_at": "2026-10-14T11:53:44+00:00",
-      "last_checked_at": "2026-10-14T11:53:44+00:00",
-      "linked_from": [
-        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2408.15792-efficient-llm-scheduling-learning-to-rank.md"
-      ],
-      "title": "Evaluating the Efficacy of LLM-Based Reasoning for Multiobjective HPC Job Scheduling"
     },
     "arXiv:2510.02790": {
       "classification": "unrelated",
       "canonical_id": "arXiv:2510.02790",
       "identity_tokens": [
         "DOI:10.48550/arxiv.2510.02790",
+        "SemanticScholar:e47773ff0c847c2e6617ae7f1efb324a634399ec",
         "arXiv:2510.02790"
       ],
-      "reason": "MaskCD changes contrastive decoding to reduce vision-language hallucinations and reports quality benchmarks, with no inference-cost improvement.",
+      "reason": "MaskCD targets hallucination and output quality in vision-language models through contrastive decoding; the abstract does not report inference-efficiency gains.",
       "first_checked_at": "2026-10-14T11:53:44+00:00",
-      "last_checked_at": "2026-10-14T11:53:44+00:00",
+      "last_checked_at": "2026-10-14T15:06:32+00:00",
       "linked_from": [
         "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md"
       ],
@@ -175849,11 +175844,12 @@
       "classification": "unrelated",
       "canonical_id": "DOI:10.1007/s12325-025-03273-w",
       "identity_tokens": [
-        "DOI:10.1007/s12325-025-03273-w"
+        "DOI:10.1007/s12325-025-03273-w",
+        "SemanticScholar:2b5177c2e996c2713a23d7f65607ca0f3ce66e50"
       ],
-      "reason": "The publisher abstract proposes a human/Gen-AI framework for health-economics workflows, evidence synthesis, and patient-reported outcomes; it is a domain workflow application.",
+      "reason": "The hybrid GenAI framework is for health economics and outcomes research workflows; the abstract gives an application framework rather than an LLM efficiency or serving contribution.",
       "first_checked_at": "2026-10-14T11:53:45+00:00",
-      "last_checked_at": "2026-10-14T11:53:45+00:00",
+      "last_checked_at": "2026-10-14T15:06:32+00:00",
       "linked_from": [
         "papers/inference/99-other-inference-systems/2023-2307.15337-skeleton-of-thought-prompting-llms-for-efficient-parallel-generation.md"
       ],
@@ -175863,11 +175859,12 @@
       "classification": "unrelated",
       "canonical_id": "DOI:10.1177/00405175251335188",
       "identity_tokens": [
-        "DOI:10.1177/00405175251335188"
+        "DOI:10.1177/00405175251335188",
+        "SemanticScholar:db2aa8a9f3f42996568851c7bfd193f975361b16"
       ],
-      "reason": "The review surveys deep-learning methods for 3D garment generation, an independent computer-vision application.",
+      "reason": "The review concerns 3D garment generation for virtual try-on and manufacturing, a domain-specific vision application without an LLM systems contribution.",
       "first_checked_at": "2026-10-14T11:53:45+00:00",
-      "last_checked_at": "2026-10-14T11:53:45+00:00",
+      "last_checked_at": "2026-10-14T15:06:33+00:00",
       "linked_from": [
         "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
       ],

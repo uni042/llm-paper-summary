@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-bc498020ecf4c937-border-013",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2506.02025",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2506.02025",
+    "identity_tokens": [
+      "SemanticScholar:126d5679a3f416ed76eb9f659675b6c5348719ea",
+      "arXiv:2506.02025"
+    ],
+    "reason": "The work evaluates LLM reasoning as a multiobjective scheduler for HPC workloads and explicitly notes computational overhead that challenges real-time use. This concerns using an LLM to schedule HPC jobs, not scheduling LLM inference workloads, so the systems connection remains indirect.",
+    "first_checked_at": "2026-10-14T15:06:30+00:00",
+    "last_checked_at": "2026-10-14T15:06:30+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2408.15792-efficient-llm-scheduling-learning-to-rank.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Evaluating the Efficacy of LLM-Based Reasoning for Multiobjective HPC Job Scheduling"
+  },
+  "processed_at": "2026-10-14T15:06:30+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-bc498020ecf4",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

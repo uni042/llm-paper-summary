@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-14T14:34:51+00:00",
-  "record_count": 5154,
+  "updated_at": "2026-10-14T15:06:30+00:00",
+  "record_count": 5155,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -79277,11 +79277,12 @@
       "classification": "borderline",
       "canonical_id": "DOI:10.1109/iscait64916.2025.11010596",
       "identity_tokens": [
-        "DOI:10.1109/iscait64916.2025.11010596"
+        "DOI:10.1109/iscait64916.2025.11010596",
+        "SemanticScholar:c695092e82b1e050afb746bb684706d079a0a4ae"
       ],
-      "reason": "The title and DOI identify a 2PC floating-point division protocol, a plausible primitive for secure inference, but the IEEE Xplore landing page was inaccessible (URL not accessible via web retrieval) and the DOI landing also failed; no publisher abstract was available to screen. Retrieval evidence: DOI landing https://doi.org/10.1109/ISCAIT64916.2025.11010596 was not accessible via web retrieval; IEEE Xplore https://ieeexplore.ieee.org/document/11010596 was also inaccessible.",
+      "reason": "The candidate's DOI/title are identified, but the registered publisher abstract could not be independently retrieved: Direct IEEE Xplore open returned: URL https://ieeexplore.ieee.org/document/11010596 is not accessible via this tool. Alternate /abstract/document/11010596 open returned Internal Error. Exact DOI search surfaced ResearchGate metadata but no publisher abstract section. Keep borderline pending primary-source evidence.",
       "first_checked_at": "2026-10-14T11:53:39+00:00",
-      "last_checked_at": "2026-10-14T11:53:39+00:00",
+      "last_checked_at": "2026-10-14T15:06:29+00:00",
       "linked_from": [
         "papers/inference/99-other-inference-systems/2022-0ed2662d9eee-iron-private-inference-on-transformers.md",
         "papers/inference/99-other-inference-systems/2025-93b16acfd7b9-bumblebee-secure-two-party-inference-framework-for-large-transformers.md"
@@ -79293,11 +79294,12 @@
       "classification": "borderline",
       "canonical_id": "DOI:10.1145/3819765.3819781",
       "identity_tokens": [
-        "DOI:10.1145/3819765.3819781"
+        "DOI:10.1145/3819765.3819781",
+        "SemanticScholar:9a6ff2e47e710b2e45a8e3133126107fa70b4f99"
       ],
-      "reason": "The DOI identifies an ACM survey on cross-layer co-design for privacy-preserving LLM inference, a direct systems connection, but the official ACM page returned HTTP 403, so its publisher abstract could not be screened. Retrieval evidence: ACM publisher page https://dl.acm.org/doi/10.1145/3819765.3819781 returned HTTP 403 Forbidden; DOI landing was inaccessible.",
+      "reason": "The candidate's DOI/title are identified, but the registered publisher abstract could not be independently retrieved: ACM Digital Library direct open returned HTTP 403 Forbidden. Exact-DOI search surfaced non-publisher ResearchGate metadata, not an ACM abstract page. Keep borderline pending primary-source evidence.",
       "first_checked_at": "2026-10-14T11:53:39+00:00",
-      "last_checked_at": "2026-10-14T11:53:39+00:00",
+      "last_checked_at": "2026-10-14T15:06:29+00:00",
       "linked_from": [
         "papers/inference/99-other-inference-systems/2023-2307.12533-puma-secure-inference-of-llama-7b-in-five-minutes.md",
         "papers/inference/99-other-inference-systems/2025-93b16acfd7b9-bumblebee-secure-two-party-inference-framework-for-large-transformers.md"
@@ -79309,11 +79311,12 @@
       "classification": "borderline",
       "canonical_id": "DOI:10.1109/jiot.2023.3311761",
       "identity_tokens": [
-        "DOI:10.1109/jiot.2023.3311761"
+        "DOI:10.1109/jiot.2023.3311761",
+        "SemanticScholar:d585335977870046248b8c5fb0e6fa1e9a1d9861"
       ],
-      "reason": "PrivyNAS searches DNN architectures for privacy-aware edge/cloud split computing, a limited edge-systems connection; IEEE Xplore was inaccessible, preventing first-party abstract screening. Retrieval evidence: IEEE Xplore page for DOI 10.1109/JIOT.2023.3311761 was inaccessible; DOI landing was inaccessible.",
+      "reason": "PrivyNAS optimizes privacy-aware split inference across edge and cloud and balances model accuracy, execution latency, and privacy. Its abstract is about generic DNNs rather than LLM/VLM serving, so transfer to the target systems is plausible but unshown.",
       "first_checked_at": "2026-10-14T11:53:40+00:00",
-      "last_checked_at": "2026-10-14T11:53:40+00:00",
+      "last_checked_at": "2026-10-14T15:06:29+00:00",
       "linked_from": [
         "papers/inference/99-other-inference-systems/2020-2005.14187-hat-hardware-aware-transformers-for-efficient-natural-language-processin.md"
       ],
@@ -79324,11 +79327,12 @@
       "classification": "borderline",
       "canonical_id": "DOI:10.1145/3689031.3717460",
       "identity_tokens": [
-        "DOI:10.1145/3689031.3717460"
+        "DOI:10.1145/3689031.3717460",
+        "SemanticScholar:30b3a13d7b36ca95f9f695153bd60c9782eedbfd"
       ],
-      "reason": "Groot reorders sparse-matrix rows for Tensor Core SpMM/SDDMM, a plausible GPU-kernel foundation for ML execution, but the ACM publisher page returned HTTP 403 and its abstract could not be screened. Retrieval evidence: ACM publisher page https://dl.acm.org/doi/10.1145/3689031.3717460 was inaccessible; DOI landing was inaccessible.",
+      "reason": "The candidate's DOI/title are identified, but the registered publisher abstract could not be independently retrieved: ACM Digital Library direct open returned Internal Error with no page content. Exact DOI search located secondary bibliographic records only; no publisher abstract section could be inspected. Keep borderline pending primary-source evidence.",
       "first_checked_at": "2026-10-14T11:53:40+00:00",
-      "last_checked_at": "2026-10-14T11:53:40+00:00",
+      "last_checked_at": "2026-10-14T15:06:30+00:00",
       "linked_from": [
         "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md"
       ],
@@ -80126,6 +80130,22 @@
       ],
       "borderline_recheck_count": 0,
       "title": "FlashF5-MaViT: A Fast Five Frequency Mamba with CDC–FastViT Architecture for Deepfake Detection"
+    },
+    "arXiv:2506.02025": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2506.02025",
+      "identity_tokens": [
+        "SemanticScholar:126d5679a3f416ed76eb9f659675b6c5348719ea",
+        "arXiv:2506.02025"
+      ],
+      "reason": "The work evaluates LLM reasoning as a multiobjective scheduler for HPC workloads and explicitly notes computational overhead that challenges real-time use. This concerns using an LLM to schedule HPC jobs, not scheduling LLM inference workloads, so the systems connection remains indirect.",
+      "first_checked_at": "2026-10-14T15:06:30+00:00",
+      "last_checked_at": "2026-10-14T15:06:30+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2408.15792-efficient-llm-scheduling-learning-to-rank.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Evaluating the Efficacy of LLM-Based Reasoning for Multiobjective HPC Job Scheduling"
     }
   }
 }

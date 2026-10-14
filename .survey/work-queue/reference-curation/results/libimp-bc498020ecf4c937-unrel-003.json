@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-bc498020ecf4c937-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2510.13366",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2510.13366",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2510.13366",
+      "SemanticScholar:de318eaf21e14f16ea79b4fec30a982e4a7bc03c",
+      "arXiv:2510.13366"
+    ],
+    "reason": "The survey concerns document-intelligence applications of LLMs, including multimodal and retrieval-augmented DAI; its abstract gives no inference-system or serving-efficiency contribution.",
+    "first_checked_at": "2026-10-14T11:53:40+00:00",
+    "last_checked_at": "2026-10-14T15:06:30+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+    ],
+    "title": "Document Intelligence in the Era of Large Language Models: A Survey"
+  },
+  "processed_at": "2026-10-14T15:06:30+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-bc498020ecf4",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

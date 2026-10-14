@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-bc498020ecf4c937-border-016",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1145/3689031.3717460",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1145/3689031.3717460",
+    "identity_tokens": [
+      "DOI:10.1145/3689031.3717460",
+      "SemanticScholar:30b3a13d7b36ca95f9f695153bd60c9782eedbfd"
+    ],
+    "reason": "The candidate's DOI/title are identified, but the registered publisher abstract could not be independently retrieved: ACM Digital Library direct open returned Internal Error with no page content. Exact DOI search located secondary bibliographic records only; no publisher abstract section could be inspected. Keep borderline pending primary-source evidence.",
+    "first_checked_at": "2026-10-14T11:53:40+00:00",
+    "last_checked_at": "2026-10-14T15:06:30+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Groot: Graph-Centric Row Reordering with Tree for Sparse Matrix Multiplications on Tensor Cores"
+  },
+  "processed_at": "2026-10-14T15:06:30+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-bc498020ecf4",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
