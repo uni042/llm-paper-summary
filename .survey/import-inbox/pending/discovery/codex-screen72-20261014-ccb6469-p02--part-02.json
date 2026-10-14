@@ -1,0 +1,818 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-72",
+  "run_key": "discovery-20261014-main-ccb6469-screen-72-part-02",
+  "reference_main_sha": "ccb6469b1f0ed3ee7ab3efd3f4551e092b2a47ae",
+  "record_count": 20,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.37001",
+      "identity_tokens": [
+        "arXiv:2609.37001",
+        "SemanticScholar:74cf093d4c5c51a0e3856b509602659c6fdb0a8d"
+      ],
+      "title": "Parameterized Stripe Attention for Efficient Video Generation",
+      "primary_title": "Parameterized Stripe Attention for Efficient Video Generation",
+      "reason": "Parameterized stripe attention accelerates video diffusion generation, not LLM inference.",
+      "source_url": "https://arxiv.org/abs/2609.37001",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T12:37:03Z",
+      "last_checked_at": "2026-10-14T12:37:03Z",
+      "source_version": "v1",
+      "source_submission_date": "2026-09-29",
+      "primary_source_status": "abstract_available",
+      "verification_method": "Official arXiv abstract page inspected; title, submission date, current version v1 checked.",
+      "abstract_evidence_excerpt": "Diffusion Transformers (DiTs) enable high-quality video generation but suffer from substantial inference latency, primarily attributable to the computationally expensive full spatio-temporal attention. While sparse attention methods offer potential solutions, existing approaches face an inherent flexibility--efficiency dilemma: predefined masks lack the flexibility to capture diverse attention pat",
+      "abstract_evidence_sha256": "9687f786cc34434109f50a0be6f191dc7756ea71929bd435f0b2697f28a453ab",
+      "abstract_sha256": null,
+      "source_abstract_chars": null,
+      "source_metadata_sha256": null,
+      "source_response_sha256": null,
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-2410.20399-thunderkittens-simple-fast-and-adorable-ai-kernels.md",
+        "papers/inference/13-sparse-attention/2025-2502.13189-moba.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md",
+        "papers/inference/99-other-inference-systems/2024-2407.08608-flashattention-3-fast-and-accurate-attention-with-asynchrony-and-low-pre.md",
+        "papers/inference/99-other-inference-systems/2025-2501.01005-flashinfer-attention-engine-serving.md"
+      ],
+      "linked_from_lineages": [
+        "02-hardware-accelerators",
+        "GPU Kernel Framework",
+        "正確な注意計算 / 入出力指向注意 / GPUカーネル最適化 / FlashAttention",
+        "疎注意／長文脈学習"
+      ],
+      "rank": 21
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2510.24021",
+      "identity_tokens": [
+        "arXiv:2510.24021",
+        "SemanticScholar:a9194d81f17eb62f58a76e8550a1c4689e56fccc"
+      ],
+      "title": "SelecTKD: Selective Token-Weighted Knowledge Distillation for LLMs",
+      "primary_title": "SelecTKD: Selective Token-Weighted Knowledge Distillation for LLMs",
+      "reason": "SelecTKD is a distillation training objective without an inference or serving efficiency result.",
+      "source_url": "https://arxiv.org/abs/2510.24021",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T12:37:03Z",
+      "last_checked_at": "2026-10-14T12:37:03Z",
+      "source_version": "v2",
+      "source_submission_date": "2025-10-28",
+      "primary_source_status": "abstract_available",
+      "verification_method": "Official arXiv abstract page inspected; title, submission date, current version v2 checked.",
+      "abstract_evidence_excerpt": "Knowledge distillation (KD) is a standard route to compress Large Language Models (LLMs) into compact students, yet most pipelines uniformly apply token-wise loss regardless of teacher confidence. This indiscriminate supervision amplifies noisy, high-entropy signals and is especially harmful under large teacher-student capacity gaps. We introduce SelecTKD, a plug-and-play Selective Token-Weighted ",
+      "abstract_evidence_sha256": "1c79f878011f4b3078fa6dbc5671e3e4796b5bc2df493ead0aede284dc249815",
+      "abstract_sha256": null,
+      "source_abstract_chars": null,
+      "source_metadata_sha256": null,
+      "source_response_sha256": null,
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2022-2211.17192-speculative-decoding.md",
+        "papers/inference/05-speculative-decoding-moe/2023-2302.01318-speculative-sampling.md",
+        "papers/inference/05-speculative-decoding-moe/2023-2305.09781-specinfer-tree-speculative-inference.md",
+        "papers/inference/99-other-inference-systems/2023-2310.08461-distillspec-improving-speculative-decoding-via-knowledge-distillation.md"
+      ],
+      "linked_from_lineages": [
+        "Speculative Decoding",
+        "投機的デコード / 分布保存型デコード高速化",
+        "投機的デコード / 知識蒸留 / ドラフトモデル整合",
+        "投機的復号 / 無損失復号高速化"
+      ],
+      "rank": 22
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2410.17268",
+      "identity_tokens": [
+        "arXiv:2410.17268",
+        "SemanticScholar:ce219ebdd18f21caa9bb7916b759c6c5ad620b83",
+        "DOI:10.1109/TCDS.2026.3698720"
+      ],
+      "title": "SPikE-SSM: A Sparse, Precise, and Efficient Spiking State Space Model for Long Sequences Learning",
+      "primary_title": "SPikE-SSM: A Sparse, Precise, and Efficient Spiking State Space Model for Long Sequences Learning",
+      "reason": "SPikE-SSM targets spiking-neuron sequence learning, not LLM inference.",
+      "source_url": "https://arxiv.org/abs/2410.17268",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T12:37:03Z",
+      "last_checked_at": "2026-10-14T12:37:03Z",
+      "source_version": "v1",
+      "source_submission_date": "2024-10-07",
+      "primary_source_status": "abstract_available",
+      "verification_method": "Official arXiv abstract page inspected; title, submission date, current version v1 checked.",
+      "abstract_evidence_excerpt": "Spiking neural networks (SNNs) provide an energy-efficient solution by utilizing the spike-based and sparse nature of biological systems. Since the advent of Transformers, SNNs have struggled to compete with artificial networks on long sequential tasks, until the recent emergence of state space models (SSMs), which offer superior computational efficiency and modeling capability. However, applying ",
+      "abstract_evidence_sha256": "71629b4add8f03a890e549b5629ea7fe3b85aebcb3fba1b4440281ab2bb93997",
+      "abstract_sha256": null,
+      "source_abstract_chars": null,
+      "source_metadata_sha256": null,
+      "source_response_sha256": null,
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md",
+        "papers/inference/19-inference-evaluation-benchmarking/2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md",
+        "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md",
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+        "papers/inference/99-other-inference-systems/2022-2206.13947-long-range-language-modeling-via-gated-state-spaces.md",
+        "papers/inference/99-other-inference-systems/2022-2212.14052-hungry-hungry-hippos-towards-language-modeling-with-state-space-models.md",
+        "papers/inference/99-other-inference-systems/2023-2302.13939-spikegpt-generative-pre-trained-language-model-with-spiking-neural-netwo.md",
+        "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md",
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md",
+        "papers/inference/99-other-inference-systems/2024-2404.02258-mixture-of-depths-dynamically-allocating-compute-in-transformer-based-la.md"
+      ],
+      "linked_from_lineages": [
+        "state space models / selective SSM / recurrent inference / hardware-aware sequence modeling",
+        "正確な注意計算 / 入出力指向注意 / GPUカーネル最適化 / FlashAttention",
+        "注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層"
+      ],
+      "rank": 23
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.52202/085713-4569",
+      "identity_tokens": [
+        "DOI:10.52202/085713-4569",
+        "SemanticScholar:32e899b049daefca933022e82fdd95b0ee74623c"
+      ],
+      "title": "DynaPipe: Dynamic Layer Redistribution for Efficient Serving of LLMs with Pipeline Parallelism",
+      "primary_title": "DynaPipe: Dynamic Layer Redistribution for Efficient Serving of LLMs with Pipeline Parallelism",
+      "reason": "DynaPipe rebalances pipeline stages and migrates KV cache in LLM serving, lowering request latency.",
+      "source_url": "https://papers.nips.cc/paper_files/paper/2025/hash/c80873f613504606542457ad715ac3c3-Abstract-Conference.html",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T12:37:03Z",
+      "last_checked_at": "2026-10-14T12:37:03Z",
+      "source_version": null,
+      "source_submission_date": null,
+      "primary_source_status": "abstract_available",
+      "verification_method": "Official NeurIPS proceedings abstract page; title, DOI, abstract checked.",
+      "abstract_evidence_excerpt": "To accelerate large language model (LLM) inference, pipeline parallelism partitions model layers into sequential stages, each assigned to a different device for concurrent execution. However, this method often suffers from pipeline bubbles caused by imbalanced computation in the tail stage. While upstream stages focus solely on layer-forward operations, the final stage must also handle additional ",
+      "abstract_evidence_sha256": "f1841c31628d331097702569f7803331ea562b33cef89f51c7f237a3995960a0",
+      "abstract_sha256": null,
+      "source_abstract_chars": null,
+      "source_metadata_sha256": null,
+      "source_response_sha256": null,
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2025-pod-attention.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2308.16369-sarathi.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2311.18677-splitwise-efficient-generative-llm-inference-phase-splitting.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.09670-distserve-disaggregating-prefill-decoding-goodput.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2405.19888-parrot-efficient-serving-llm-applications-semantic-variable.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2406.03243-llumnix-dynamic-scheduling-live-migration.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2503.06433-seesaw-high-throughput-llm-inference-via-model-re-sharding.md",
+        "papers/inference/99-other-inference-systems/2021-2104.04473-efficient-large-scale-language-model-training-on-gpu-clusters-using-mega.md",
+        "papers/inference/99-other-inference-systems/2025-2506.10470-td-pipe-temporally-disaggregated-pipeline-parallelism-architecture-for-h.md"
+      ],
+      "linked_from_lineages": [
+        "LLM Serving / Scheduling / Disaggregation",
+        "LLM serving scheduling / chunked prefill / iteration-level scheduling / pipeline parallelism",
+        "kernel-runtime-compilation"
+      ],
+      "rank": 24
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2404.15153",
+      "identity_tokens": [
+        "arXiv:2404.15153",
+        "SemanticScholar:b7b36137309c0b4f60a1f339fb3b2ce1c1e9b2a8",
+        "DOI:10.1109/BigData62323.2024.10826121"
+      ],
+      "title": "Performance Characterization of Expert Router for Scalable LLM Inference",
+      "primary_title": "Performance Characterization of Expert Router for Scalable LLM Inference",
+      "reason": "Expert Router is evaluated for latency, throughput, and concurrency in scalable LLM inference.",
+      "source_url": "https://arxiv.org/abs/2404.15153",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T12:37:03Z",
+      "last_checked_at": "2026-10-14T12:37:03Z",
+      "source_version": "v2",
+      "source_submission_date": "2024-04-22",
+      "primary_source_status": "abstract_available",
+      "verification_method": "Official arXiv abstract page inspected; title, submission date, current version v2 checked.",
+      "abstract_evidence_excerpt": "Large Language Models (LLMs) have experienced widespread adoption across scientific and industrial domains due to their versatility and utility for diverse tasks. Nevertheless, deploying and serving these models at scale with optimal throughput and latency remains a significant challenge, primarily because of LLMs’ high computational and memory demands. Specialized models optimized for specific ta",
+      "abstract_evidence_sha256": "046f7e647d0bd81d12ad1cb61222bf0a83cb1e9720ac71701f22d8379085139f",
+      "abstract_sha256": null,
+      "source_abstract_chars": null,
+      "source_metadata_sha256": null,
+      "source_response_sha256": null,
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2305.13144-response-length-perception-and-sequence-scheduling-an-llm-empowered-llm-inference-pipeline.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2311.18677-splitwise-efficient-generative-llm-inference-phase-splitting.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.15234-towards-efficient-generative-large-language-model-serving-a-survey-from-.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.09670-distserve-disaggregating-prefill-decoding-goodput.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2403.02310-sarathi-serve-chunked-prefills-stall-free-scheduling.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2404.14294-a-survey-on-efficient-inference-for-large-language-models.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2408.00741-dynamollm.md",
+        "papers/inference/15-inference-simulation-emulation/2024-2405.05465-vidur-a-large-scale-simulation-framework-for-llm-inference.md",
+        "papers/inference/99-other-inference-systems/2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md",
+        "papers/inference/99-other-inference-systems/2023-2311.08692-routing-to-the-expert-efficient-reward-guided-ensemble-of-large-language.md"
+      ],
+      "linked_from_lineages": [
+        "LLM Serving / Scheduling / Disaggregation",
+        "LLM serving / energy management / cluster scheduling / dynamic reconfiguration",
+        "inference-systems"
+      ],
+      "rank": 25
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2503.12559",
+      "identity_tokens": [
+        "arXiv:2503.12559",
+        "SemanticScholar:5f1802f0b200bb57d49c1dc4d9608d00cadf68d6",
+        "DOI:10.48550/arXiv.2503.12559"
+      ],
+      "title": "AdaReTaKe: Adaptive Redundancy Reduction to Perceive Longer for Video-language Understanding",
+      "primary_title": "AdaReTaKe: Adaptive Redundancy Reduction to Perceive Longer for Video-language Understanding",
+      "reason": "AdaReTaKe compresses MLLM visual tokens to enable longer video inputs.",
+      "source_url": "https://arxiv.org/abs/2503.12559",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T12:37:03Z",
+      "last_checked_at": "2026-10-14T12:37:03Z",
+      "source_version": "v2",
+      "source_submission_date": "2025-03-16",
+      "primary_source_status": "abstract_available",
+      "verification_method": "Official arXiv abstract page inspected; title, submission date, current version v2 checked.",
+      "abstract_evidence_excerpt": "Multimodal Large Language Models (MLLMs) have revolutionized video understanding, yet are still limited by context length when processing long videos. Recent methods compress videos by leveraging visual redundancy uniformly, yielding promising results. Nevertheless, our quantitative analysis shows that redundancy varies significantly across time and model layers, necessitating a more flexible comp",
+      "abstract_evidence_sha256": "2d0f1d0e9a70fe6693bc49e65b66d49403145b2ac124f1b528439858b6739c4d",
+      "abstract_sha256": null,
+      "source_abstract_chars": null,
+      "source_metadata_sha256": null,
+      "source_response_sha256": null,
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2401.18079-kvquant.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2407.11550-ada-kv.md",
+        "papers/inference/10-kv-cache-offload-recomputation/2024-fa73d8b64a60-memorize-step-by-step-efficient-long-context-prefilling-with-incremental.md",
+        "papers/inference/12-moe-parallelism-communication/2024-2408.10188-longvila-scaling-long-context-visual-language-models-for-long-videos.md",
+        "papers/inference/99-other-inference-systems/2024-2410.04417-sparsevlm-visual-token-sparsification-for-efficient-vision-language-mode.md",
+        "papers/inference/99-other-inference-systems/2024-2410.17247-pyramiddrop-accelerating-your-large-vision-language-models-via-pyramid-v.md",
+        "papers/inference/99-other-inference-systems/2024-2410.17434-longvu-spatiotemporal-adaptive-compression-for-long-video-language-under.md"
+      ],
+      "linked_from_lineages": [
+        "10-kv-cache-offload-recomputation",
+        "KV cache memory management / streaming inference / attention sinks / length extrapolation",
+        "KV cache quantization / long-context inference / activation compression"
+      ],
+      "rank": 26
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2312.07950",
+      "identity_tokens": [
+        "arXiv:2312.07950",
+        "SemanticScholar:d2b0cec5c7e222a8f2cafa48257982c3cabf41e2",
+        "DOI:10.48550/arXiv.2312.07950"
+      ],
+      "title": "CBQ: Cross-Block Quantization for Large Language Models",
+      "primary_title": "CBQ: Cross-Block Quantization for Large Language Models",
+      "reason": "CBQ quantizes LLM weights and activations across blocks for low-bit inference.",
+      "source_url": "https://arxiv.org/abs/2312.07950",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T12:37:03Z",
+      "last_checked_at": "2026-10-14T12:37:03Z",
+      "source_version": "v5",
+      "source_submission_date": "2023-12-13",
+      "primary_source_status": "abstract_available",
+      "verification_method": "Official arXiv abstract page inspected; title, submission date, current version v5 checked.",
+      "abstract_evidence_excerpt": "Post-training quantization (PTQ) has played a key role in compressing large language models (LLMs) with ultra-low costs. However, existing PTQ methods only focus on handling the outliers within one layer or one block, which ignores the dependency of blocks and leads to severe performance degradation in low-bit settings. In this paper, we propose CBQ, a cross-block reconstruction-based PTQ method f",
+      "abstract_evidence_sha256": "61866eebcc0a19666ac1d0f3eb5367aa49b620114da8c96a27c39fb596bce062",
+      "abstract_sha256": null,
+      "source_abstract_chars": null,
+      "source_metadata_sha256": null,
+      "source_response_sha256": null,
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md",
+        "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md",
+        "papers/inference/16-weight-quantization-compression/2023-2307.13304-quip-2-bit-quantization-of-large-language-models-with-guarantees.md",
+        "papers/inference/99-other-inference-systems/2022-2206.01861-zeroquant-efficient-and-affordable-post-training-quantization-for-large-.md",
+        "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2023-2305.13245-gqa.md",
+        "papers/inference/99-other-inference-systems/2023-2305.17888-llm-qat-data-free-quantization-aware-training-for-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2023-2308.13137-omniquant-omnidirectionally-calibrated-quantization-for-large-language-m.md"
+      ],
+      "linked_from_lineages": [
+        "Weight Quantization / Compression",
+        "inference-systems",
+        "post-training quantization / second-order compression / weight-only LLM inference"
+      ],
+      "rank": 27
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/MICRO61859.2024.00106",
+      "identity_tokens": [
+        "DOI:10.1109/MICRO61859.2024.00106",
+        "SemanticScholar:f265fdc530939711ffbca7696979418a37a6abfb"
+      ],
+      "title": "VGA: Hardware Accelerator for Scalable Long Sequence Model Inference",
+      "primary_title": "VGA: Hardware Accelerator for Scalable Long Sequence Model Inference",
+      "reason": "IEEE DOI/title identify an inference accelerator, but Xplore was blocked by a robot check and no publisher abstract was accessible.",
+      "source_url": "https://ieeexplore.ieee.org/document/10751865",
+      "body_check": "source_unavailable; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-10-14T12:37:03Z",
+      "last_checked_at": "2026-10-14T12:37:03Z",
+      "source_version": null,
+      "source_submission_date": null,
+      "primary_source_status": "source_unavailable",
+      "verification_method": "Official IEEE Xplore returned a JavaScript/robot check; no publisher abstract was accessible.",
+      "abstract_evidence_excerpt": "",
+      "abstract_evidence_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "abstract_sha256": null,
+      "source_abstract_chars": null,
+      "source_metadata_sha256": null,
+      "source_response_sha256": null,
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md",
+        "papers/inference/19-inference-evaluation-benchmarking/2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md",
+        "papers/inference/99-other-inference-systems/2022-2211.05102-efficiently-scaling-transformer-inference.md",
+        "papers/inference/99-other-inference-systems/2022-2212.14052-hungry-hungry-hippos-towards-language-modeling-with-state-space-models.md",
+        "papers/inference/99-other-inference-systems/2023-2302.10866-hyena-hierarchy-towards-larger-convolutional-language-models.md",
+        "papers/inference/99-other-inference-systems/2023-2303.06349-resurrecting-recurrent-neural-networks-for-long-sequences.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md",
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "linked_from_lineages": [
+        "large-scale LLM inference / tensor partitioning / TPU serving / KV-cache memory efficiency",
+        "state space models / selective SSM / recurrent inference / hardware-aware sequence modeling",
+        "正確な注意計算 / 入出力指向注意 / GPUカーネル最適化 / FlashAttention"
+      ],
+      "rank": 28
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.10389",
+      "identity_tokens": [
+        "arXiv:2607.10389",
+        "SemanticScholar:a26c458bec3deafa5edde8bd93ac010b2b49bfa2",
+        "DOI:10.48550/arXiv.2607.10389"
+      ],
+      "title": "Stateful Worlds, Stateless Elasticity: Exact-State Serving for Interactive World Models",
+      "primary_title": "Stateful Worlds, Stateless Elasticity: Exact-State Serving for Interactive World Models",
+      "reason": "Exact-state migration serves interactive world models, not LLM serving.",
+      "source_url": "https://arxiv.org/abs/2607.10389",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T12:37:03Z",
+      "last_checked_at": "2026-10-14T12:37:03Z",
+      "source_version": "v1",
+      "source_submission_date": "2026-07-11",
+      "primary_source_status": "abstract_available",
+      "verification_method": "Official arXiv abstract page inspected; title, submission date, current version v1 checked.",
+      "abstract_evidence_excerpt": "A persistent interactive world model keeps its running state resident on the GPU that serves it: a multi-gigabyte attention cache, almost all of it rewritten at every generation step. That state cannot be recomputed in interactive time or approximated without changing the world, so a live session pins its device. The pin is a scheduling problem. WorldMove moves a live session under one guarantee: ",
+      "abstract_evidence_sha256": "9fe14cee55136861913023808eb4042d416319836f80106be8039336a388adc6",
+      "abstract_sha256": null,
+      "source_abstract_chars": null,
+      "source_metadata_sha256": null,
+      "source_response_sha256": null,
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2401.18079-kvquant.md",
+        "papers/inference/10-kv-cache-offload-recomputation/2024-2310.07240-cachegen.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2311.18677-splitwise-efficient-generative-llm-inference-phase-splitting.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.09670-distserve-disaggregating-prefill-decoding-goodput.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2403.02310-sarathi-serve-chunked-prefills-stall-free-scheduling.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2406.03243-llumnix-dynamic-scheduling-live-migration.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2602.16603-flowprefill-operator-level-preemption.md",
+        "papers/inference/19-inference-evaluation-benchmarking/2024-2401.17644-burstgpt-real-world-llm-serving-workload-dataset.md"
+      ],
+      "linked_from_lineages": [
+        "KV cache quantization / long-context inference / activation compression",
+        "KVキャッシュ再利用／圧縮／ネットワーク転送",
+        "LLM Serving / Scheduling / Disaggregation"
+      ],
+      "rank": 29
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.16372",
+      "identity_tokens": [
+        "arXiv:2609.16372",
+        "SemanticScholar:eb9c9d9d2024ec31667759c3d7065f626e97cd00"
+      ],
+      "title": "Register Tokens for Bounded-State Reasoning in Diffusion Language Models",
+      "primary_title": "Register Tokens for Bounded-State Reasoning in Diffusion Language Models",
+      "reason": "Register tokens preserve reasoning state across diffusion-LLM chunks, but no inference-efficiency gain is reported.",
+      "source_url": "https://arxiv.org/abs/2609.16372",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T12:37:03Z",
+      "last_checked_at": "2026-10-14T12:37:03Z",
+      "source_version": "v1",
+      "source_submission_date": "2026-09-14",
+      "primary_source_status": "abstract_available",
+      "verification_method": "Official arXiv abstract page inspected; title, submission date, current version v1 checked.",
+      "abstract_evidence_excerpt": "Masked diffusion language models (dLLMs) generate text by iteratively denoising masked tokens with bidirectional attention. Extending reasoning across generation chunks normally requires keeping earlier generated text in context. We ask whether a dLLM can instead continue reasoning after that text is cleared, using only a fixed-size carried state. We implement this state as a small number of regis",
+      "abstract_evidence_sha256": "2b179b9072121d2dacdfc5b707b8c339d201b852d4011240efb95dad029b2efa",
+      "abstract_sha256": null,
+      "source_abstract_chars": null,
+      "source_metadata_sha256": null,
+      "source_response_sha256": null,
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md",
+        "papers/inference/99-other-inference-systems/2023-2304.08467-learning-to-compress-prompts-with-gist-tokens.md",
+        "papers/inference/99-other-inference-systems/2023-2307.06945-in-context-autoencoder-for-context-compression-in-a-large-language-model.md",
+        "papers/inference/99-other-inference-systems/2023-2310.06839-longllmlingua-accelerating-and-enhancing-llms-in-long-context-scenarios-.md",
+        "papers/inference/99-other-inference-systems/2024-2401.03462-long-context-compression-with-activation-beacon.md",
+        "papers/inference/99-other-inference-systems/2025-2503.09573-block-diffusion-interpolating-between-autoregressive-and-diffusion-langu.md",
+        "papers/inference/99-other-inference-systems/2025-2508.15487-dream-7b-diffusion-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2026-2406.03736-your-absorbing-discrete-diffusion-secretly-models-the-conditional-distri.md"
+      ],
+      "linked_from_lineages": [
+        "KV cache memory management / streaming inference / attention sinks / length extrapolation",
+        "diffusion language models / masked diffusion / parallel decoding / AR-to-diffusion conversion",
+        "inference-systems"
+      ],
+      "rank": 30
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2303.11607",
+      "identity_tokens": [
+        "arXiv:2303.11607",
+        "SemanticScholar:12454696085d66beaeb6cd43857de982a8445824",
+        "DOI:10.48550/arXiv.2303.11607"
+      ],
+      "title": "Transformers in Speech Processing: A Survey",
+      "primary_title": "Transformers in Speech Processing: A Survey",
+      "reason": "The speech-transformer survey has no specific inference-efficiency contribution.",
+      "source_url": "https://arxiv.org/abs/2303.11607",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T12:37:03Z",
+      "last_checked_at": "2026-10-14T12:37:03Z",
+      "source_version": "v2",
+      "source_submission_date": "2023-03-21",
+      "primary_source_status": "abstract_available",
+      "verification_method": "Official arXiv abstract page inspected; title, submission date, current version v2 checked.",
+      "abstract_evidence_excerpt": "The remarkable success of transformers in the field of natural language processing has sparked the interest of the speech-processing community, leading to an exploration of their potential for modeling long-range dependencies within speech sequences. Recently, transformers have gained prominence across various speech-related domains, including automatic speech recognition, speech synthesis, speech",
+      "abstract_evidence_sha256": "50d5b50dba68b69b4c4bb837d4d8aad91382e7021d869c5a908be44480f42443",
+      "abstract_sha256": null,
+      "source_abstract_chars": null,
+      "source_metadata_sha256": null,
+      "source_response_sha256": null,
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2021-2107.02192-long-short-transformer-efficient-transformers-for-language-and-vision.md",
+        "papers/inference/13-sparse-attention/2020-2003.05997-efficient-content-based-sparse-attention-with-routing-transformers.md",
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md",
+        "papers/inference/99-other-inference-systems/2019-1905.09418-analyzing-multi-head-self-attention-specialized-heads-do-the-heavy-lifti.md",
+        "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md",
+        "papers/inference/99-other-inference-systems/2020-2005.14187-hat-hardware-aware-transformers-for-efficient-natural-language-processin.md",
+        "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md"
+      ],
+      "linked_from_lineages": [
+        "99-other-inference-systems",
+        "inference-systems",
+        "sparse attention / long-context Transformer"
+      ],
+      "rank": 31
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2511.04063",
+      "identity_tokens": [
+        "arXiv:2511.04063",
+        "SemanticScholar:150c05eee008880ce89f1b5cfd1f1d12588cff90",
+        "DOI:10.48550/arXiv.2511.04063"
+      ],
+      "title": "DartQuant: Efficient Rotational Distribution Calibration for LLM Quantization",
+      "primary_title": "DartQuant: Efficient Rotational Distribution Calibration for LLM Quantization",
+      "reason": "DartQuant reduces time and memory for rotational calibration in large LLM quantization.",
+      "source_url": "https://arxiv.org/abs/2511.04063",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T12:37:03Z",
+      "last_checked_at": "2026-10-14T12:37:03Z",
+      "source_version": "v1",
+      "source_submission_date": "2025-11-06",
+      "primary_source_status": "abstract_available",
+      "verification_method": "Official arXiv abstract page inspected; title, submission date, current version v1 checked.",
+      "abstract_evidence_excerpt": "Quantization plays a crucial role in accelerating the inference of large-scale models, and rotational matrices have been shown to effectively improve quantization performance by smoothing outliers. However, end-to-end fine-tuning of rotational optimization algorithms incurs high computational costs and is prone to overfitting. To address this challenge, we propose an efficient distribution-aware r",
+      "abstract_evidence_sha256": "ac6d68f241b175bf47b6db0304cadd8c993fd8cfe442694793c25bb3e1690ce2",
+      "abstract_sha256": null,
+      "source_abstract_chars": null,
+      "source_metadata_sha256": null,
+      "source_response_sha256": null,
+      "linked_from": [
+        "papers/inference/06-moe-quantization-compression/2025-eac-moe-expert-selection-aware-compressor-for-mixture-of-experts-large-language-.md",
+        "papers/inference/16-weight-quantization-compression/2023-2306.02272-owq-outlier-aware-weight-quantization-for-efficient-fine-tuning-and-infe.md",
+        "papers/inference/16-weight-quantization-compression/2023-2307.13304-quip-2-bit-quantization-of-large-language-models-with-guarantees.md",
+        "papers/inference/16-weight-quantization-compression/2023-2310.19102-atom-low-bit-quantization-for-efficient-and-accurate-llm-serving.md",
+        "papers/inference/16-weight-quantization-compression/2024-2401.15024-slicegpt-compress-large-language-models-by-deleting-rows-and-columns.md",
+        "papers/inference/16-weight-quantization-compression/2024-2403.12544-affinequant-affine-transformation-quantization-for-large-language-models.md",
+        "papers/inference/16-weight-quantization-compression/2024-2406.01721-duquant-distributing-outliers-via-dual-transformation-makes-stronger-quantized-llms.md"
+      ],
+      "linked_from_lineages": [
+        "Quantization × MoE × Offload",
+        "Weight Quantization / Compression",
+        "inference-systems"
+      ],
+      "rank": 32
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2405.03144",
+      "identity_tokens": [
+        "arXiv:2405.03144",
+        "SemanticScholar:112eb0d25bf07aa4d4a8f0bfd829fcd8643bc0ec",
+        "DOI:10.1109/CVPR52733.2024.01509"
+      ],
+      "title": "PTQ4SAM: Post-Training Quantization for Segment Anything",
+      "primary_title": "PTQ4SAM: Post-Training Quantization for Segment Anything",
+      "reason": "PTQ4SAM targets Segment Anything, not LLM inference.",
+      "source_url": "https://arxiv.org/abs/2405.03144",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T12:37:03Z",
+      "last_checked_at": "2026-10-14T12:37:03Z",
+      "source_version": "v1",
+      "source_submission_date": "2024-05-06",
+      "primary_source_status": "abstract_available",
+      "verification_method": "Official arXiv abstract page inspected; title, submission date, current version v1 checked.",
+      "abstract_evidence_excerpt": "Segment Anything Model (SAM) has achieved impressive performance in many computer vision tasks. However, as a large-scale model, the immense memory and computation costs hinder its practical deployment. In this paper, we pro-pose a post-training quantization (PTQ)frameworkfor Segment Anything Model, namely PTQ4SAM. First, we investigate the inherent bottleneck of SAM quantization attributed to the",
+      "abstract_evidence_sha256": "0121486c685ea18cb1b489068dede12b9d6f41aef57b652541e68bc6c25c652e",
+      "abstract_sha256": null,
+      "source_abstract_chars": null,
+      "source_metadata_sha256": null,
+      "source_response_sha256": null,
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md",
+        "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md",
+        "papers/inference/16-weight-quantization-compression/2023-2306.00978-awq.md",
+        "papers/inference/16-weight-quantization-compression/2024-2402.11960-db-llm-accurate-dual-binarization-for-efficient-llms.md",
+        "papers/inference/99-other-inference-systems/2022-2206.01861-zeroquant-efficient-and-affordable-post-training-quantization-for-large-.md",
+        "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md"
+      ],
+      "linked_from_lineages": [
+        "Weight Quantization / Compression",
+        "post-training quantization / second-order compression / weight-only LLM inference",
+        "重み専用量子化 / 推論カーネル"
+      ],
+      "rank": 33
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.00103",
+      "identity_tokens": [
+        "arXiv:2609.00103",
+        "SemanticScholar:ea334b08b8c06b02b8a69ae7d7cb9ad7913acf4e"
+      ],
+      "title": "Good Memory Has ECC: Evaluating the Memory of Vision-Language Models Beyond Accuracy",
+      "primary_title": "Good Memory Has ECC: Evaluating the Memory of Vision-Language Models Beyond Accuracy",
+      "reason": "ECCBench measures VLM memory efficiency in FLOPs and compression tradeoffs.",
+      "source_url": "https://arxiv.org/abs/2609.00103",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T12:37:03Z",
+      "last_checked_at": "2026-10-14T12:37:03Z",
+      "source_version": "v1",
+      "source_submission_date": "2026-08-31",
+      "primary_source_status": "abstract_available",
+      "verification_method": "Official arXiv abstract page inspected; title, submission date, current version v1 checked.",
+      "abstract_evidence_excerpt": "Memory is widely viewed as an important unsolved problem for LLMs and VLMs, and current benchmarks typically evaluate it by testing accuracy over long text or video. However, accuracy alone misses properties that matter for real long-horizon tasks. We introduce ECCBench, a benchmark and evaluation protocol that measures memory beyond a system's capacity--its raw accuracy at a specific budget--via ",
+      "abstract_evidence_sha256": "2942f301ee62c5842105de6cd63cc726fe98733e81be6b4be5e369faf22244df",
+      "abstract_sha256": null,
+      "source_abstract_chars": null,
+      "source_metadata_sha256": null,
+      "source_response_sha256": null,
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md",
+        "papers/inference/13-sparse-attention/2024-2406.10774-quest.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08621-retentive-network-a-successor-to-transformer-for-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md",
+        "papers/inference/99-other-inference-systems/2024-2312.06635-gated-linear-attention-transformers-with-hardware-efficient-training.md",
+        "papers/inference/99-other-inference-systems/2024-2412.06464-gated-delta-networks-improving-mamba2-with-delta-rule.md"
+      ],
+      "linked_from_lineages": [
+        "KV cache memory management / streaming inference / attention sinks / length extrapolation",
+        "正確な注意計算 / 入出力指向注意 / GPUカーネル最適化 / FlashAttention",
+        "疎注意 / KVキャッシュ選択 / 長文脈推論"
+      ],
+      "rank": 34
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.09208",
+      "identity_tokens": [
+        "arXiv:2609.09208",
+        "SemanticScholar:d4e1e2e1f322265e2363d78961b2a6dc42cd2e29"
+      ],
+      "title": "Shift-Accumulate Attention: Multiplier-Free Query--Key Products for Transformer Decoding",
+      "primary_title": "Shift-Accumulate Attention: Multiplier-Free Query--Key Products for Transformer Decoding",
+      "reason": "Shift-Accumulate Attention replaces query-key multiplication with shift-adds and reports decoding/KV-cache improvements.",
+      "source_url": "https://arxiv.org/abs/2609.09208",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T12:37:03Z",
+      "last_checked_at": "2026-10-14T12:37:03Z",
+      "source_version": "v1",
+      "source_submission_date": "2026-09-05",
+      "primary_source_status": "abstract_available",
+      "verification_method": "Official arXiv abstract page inspected; title, submission date, current version v1 checked.",
+      "abstract_evidence_excerpt": "Power-of-two (PoT) quantisation turns a multiplication into a bit shift, so far only for the post-softmax attention--value product. The earlier and larger product, S=QK^T, has not been reformulated the same way. We quantise the key cache to a signed power-of-two fixed-point code, so that every scalar multiplication in QK^T becomes a sign flip, a bit shift and an integer accumulation. A fixed-point",
+      "abstract_evidence_sha256": "1646cfb1892eeff1c3a22af7e1df82b185b4091e878115b2fad32cea191df994",
+      "abstract_sha256": null,
+      "source_abstract_chars": null,
+      "source_metadata_sha256": null,
+      "source_response_sha256": null,
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2401.18079-kvquant.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2402.02750-kivi.md",
+        "papers/inference/09-kernel-runtime-compilation/2018-1805.02867-online-normalizer-calculation-for-softmax.md",
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+        "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2024-2404.00456-quarot-outlier-free-4-bit-inference-in-rotated-llms.md"
+      ],
+      "linked_from_lineages": [
+        "KV cache quantization / long-context inference / activation compression",
+        "KVキャッシュ圧縮 / 量子化 / 推論メモリ最適化",
+        "注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層"
+      ],
+      "rank": 35
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2402.17497",
+      "identity_tokens": [
+        "arXiv:2402.17497",
+        "SemanticScholar:8c4b0f3f69e1ed36f371d91dfab7e0d9f909311c",
+        "DOI:10.48550/arXiv.2402.17497"
+      ],
+      "title": "REAR: A Relevance-Aware Retrieval-Augmented Framework for Open-Domain Question Answering",
+      "primary_title": "REAR: A Relevance-Aware Retrieval-Augmented Framework for Open-Domain Question Answering",
+      "reason": "REAR improves retrieval and QA quality without an inference-efficiency contribution.",
+      "source_url": "https://arxiv.org/abs/2402.17497",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T12:37:03Z",
+      "last_checked_at": "2026-10-14T12:37:03Z",
+      "source_version": "v2",
+      "source_submission_date": "2024-02-27",
+      "primary_source_status": "abstract_available",
+      "verification_method": "Official arXiv abstract page inspected; title, submission date, current version v2 checked.",
+      "abstract_evidence_excerpt": "Considering the limited internal parametric knowledge, retrieval-augmented generation (RAG) has been widely used to extend the knowledge scope of large language models (LLMs). Despite the extensive efforts on RAG research, in existing methods, LLMs cannot precisely assess the relevance of retrieved documents, thus likely leading to misleading or even incorrect utilization of external knowledge (i.",
+      "abstract_evidence_sha256": "30ede9bfc2105c094dcadf5cc75b62e46a74adc4b8e72a7c3ddf2ad97b1ca19a",
+      "abstract_sha256": null,
+      "source_abstract_chars": null,
+      "source_metadata_sha256": null,
+      "source_response_sha256": null,
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md",
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+        "papers/inference/99-other-inference-systems/2023-2212.10511-when-not-to-trust-language-models-investigating-effectiveness-of-paramet.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md",
+        "papers/inference/99-other-inference-systems/2023-2310.04408-recomp-improving-retrieval-augmented-lms-with-compression-and-selective-.md"
+      ],
+      "linked_from_lineages": [
+        "LLM Serving / Scheduling / Disaggregation",
+        "正確な注意計算 / 入出力指向注意 / GPUカーネル最適化 / FlashAttention",
+        "注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層"
+      ],
+      "rank": 36
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2407.05694",
+      "identity_tokens": [
+        "arXiv:2407.05694",
+        "SemanticScholar:88d245401ac9949f55f6f531964de67ffad92a12"
+      ],
+      "title": "On the Limitations of Compute Thresholds as a Governance Strategy",
+      "primary_title": "On the Limitations of Compute Thresholds as a Governance Strategy",
+      "reason": "The official abstract discusses policy use of compute thresholds to predict AI risk and recommends governance changes; it contributes no technical method for LLM inference or serving efficiency.",
+      "source_url": "https://arxiv.org/abs/2407.05694v2",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T12:42:55Z",
+      "last_checked_at": "2026-10-14T12:42:55Z",
+      "source_version": "v2",
+      "source_submission_date": "2024-07-08",
+      "primary_source_status": "abstract_available",
+      "verification_method": "Official arXiv v2 abstract page checked; title, ID, and submission/version history match.",
+      "abstract_evidence_excerpt": "To do so, we need to engage with a decades-old debate at the heart of computer science progress, namely, is bigger always better? Does a certain inflection point of compute result in changes to the risk profile of a model? Hence, this essay may be of interest not only to policymakers and the wider public but also to computer scientists interested in understanding the role of compute in unlocking breakthroughs.",
+      "abstract_evidence_sha256": "34b5ed9e44bd3a344fa785de84a5a4986fdb242d0693b2920db230b4091a2fee",
+      "abstract_sha256": null,
+      "source_abstract_chars": null,
+      "source_metadata_sha256": null,
+      "source_response_sha256": null,
+      "linked_from": [
+        "papers/inference/12-moe-parallelism-communication/2021-2101.03961-switch-transformers-scaling-to-trillion-parameter-models-with-simple-and.md",
+        "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md",
+        "papers/inference/16-weight-quantization-compression/2023-2306.00978-awq.md",
+        "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md",
+        "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md"
+      ],
+      "linked_from_lineages": [
+        "Weight Quantization / Compression",
+        "分散学習 / 混合専門家モデル / 自動シャーディング / SPMD",
+        "重み専用量子化 / 推論カーネル"
+      ],
+      "rank": 37
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2506.03084",
+      "identity_tokens": [
+        "arXiv:2506.03084",
+        "SemanticScholar:04d57840b0c78b2efc993bc83ed997a15e5e1eca",
+        "DOI:10.1109/TVCG.2025.3635116"
+      ],
+      "title": "InterMamba: Efficient Human-Human Interaction Generation With Adaptive Spatio-Temporal Mamba",
+      "primary_title": "InterMamba: Efficient Human-Human Interaction Generation With Adaptive Spatio-Temporal Mamba",
+      "reason": "InterMamba accelerates human-motion generation, an independent application.",
+      "source_url": "https://arxiv.org/abs/2506.03084",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T12:37:03Z",
+      "last_checked_at": "2026-10-14T12:37:03Z",
+      "source_version": "v1",
+      "source_submission_date": "2025-06-03",
+      "primary_source_status": "abstract_available",
+      "verification_method": "Official arXiv abstract page inspected; title, submission date, current version v1 checked.",
+      "abstract_evidence_excerpt": "Human-human interaction generation has garnered significant attention in motion synthesis due to its vital role in understanding humans as social beings. However, existing methods typically rely on transformer-based architectures, which often face challenges related to scalability and efficiency. To address these challenges, we propose InterMamba, a novel and efficient human–human interaction gene",
+      "abstract_evidence_sha256": "67ea572f50c6d29a49dd168628e92265a9fd3b40fa7b2522529709983d5f2e1f",
+      "abstract_sha256": null,
+      "source_abstract_chars": null,
+      "source_metadata_sha256": null,
+      "source_response_sha256": null,
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2212.14052-hungry-hungry-hippos-towards-language-modeling-with-state-space-models.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md",
+        "papers/inference/99-other-inference-systems/2023-2310.01889-ring-attention-blockwise-transformers.md",
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "linked_from_lineages": [
+        "distributed attention / sequence parallelism / blockwise attention / long-context transformers",
+        "state space models / selective SSM / recurrent inference / hardware-aware sequence modeling",
+        "正確な注意計算 / 入出力指向注意 / GPUカーネル最適化 / FlashAttention"
+      ],
+      "rank": 38
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2604.19342",
+      "identity_tokens": [
+        "arXiv:2604.19342",
+        "SemanticScholar:eae9e21630b8a1b66096529982136b3c7fd381e8",
+        "DOI:10.48550/arXiv.2604.19342"
+      ],
+      "title": "Are Large Language Models Economically Viable for Industry Deployment?",
+      "primary_title": "Are Large Language Models Economically Viable for Industry Deployment?",
+      "reason": "EDGE-EVAL measures LLM deployment cost, power, density, cold-start, and quantization.",
+      "source_url": "https://arxiv.org/abs/2604.19342",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T12:37:03Z",
+      "last_checked_at": "2026-10-14T12:37:03Z",
+      "source_version": "v1",
+      "source_submission_date": "2026-04-21",
+      "primary_source_status": "abstract_available",
+      "verification_method": "Official arXiv abstract page inspected; title, submission date, current version v1 checked.",
+      "abstract_evidence_excerpt": "Generative AI-powered by Large Language Models (LLMs)-is increasingly deployed in industry across healthcare decision support, financial analytics, enterprise retrieval, and conversational automation, where reliability, efficiency, and cost control are critical. In such settings, models must satisfy strict constraints on energy, latency, and hardware utilization-not accuracy alone. Yet prevailing ",
+      "abstract_evidence_sha256": "3f073a377883dd53d893ec4d8855a5f6fa90cc97690a3e95f84f6223234ecba5",
+      "abstract_sha256": null,
+      "source_abstract_chars": null,
+      "source_metadata_sha256": null,
+      "source_response_sha256": null,
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md",
+        "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md",
+        "papers/inference/16-weight-quantization-compression/2023-2306.00978-awq.md",
+        "papers/inference/99-other-inference-systems/2022-2206.01861-zeroquant-efficient-and-affordable-post-training-quantization-for-large-.md"
+      ],
+      "linked_from_lineages": [
+        "LLM Serving / Scheduling / Disaggregation",
+        "post-training quantization / second-order compression / weight-only LLM inference",
+        "重み専用量子化 / 推論カーネル"
+      ],
+      "rank": 39
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.21712",
+      "identity_tokens": [
+        "arXiv:2609.21712",
+        "SemanticScholar:d5665d214770386a1e9c09170949504e3c16e1cf"
+      ],
+      "title": "ZYT-World: A Real-Time Controllable World Model for Closed-Loop Autonomous-Driving Simulation",
+      "primary_title": "ZYT-World: A Real-Time Controllable World Model for Closed-Loop Autonomous-Driving Simulation",
+      "reason": "ZYT-World accelerates autonomous-driving simulation, an independent world-generation application rather than LLM inference.",
+      "source_url": "https://arxiv.org/abs/2609.21712",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T12:37:03Z",
+      "last_checked_at": "2026-10-14T12:37:03Z",
+      "source_version": "v2",
+      "source_submission_date": "2026-09-18",
+      "primary_source_status": "abstract_available",
+      "verification_method": "Official arXiv abstract page inspected; title, submission date, current version v2 checked.",
+      "abstract_evidence_excerpt": "Generative world models offer controllable and repeatable closed-loop simulation for end-to-end and vision-language-action driving policies, but production deployment exposes three unresolved requirements: faithfully reproducing a mixed fisheye-pinhole rig at native resolutions; reconciling causal, per-timestep interaction with long-horizon stability and low latency; and preserving scene identity ",
+      "abstract_evidence_sha256": "2dcc7162a279fc8cb4bf12c3e1411e7ba5ffce55b2cdc2bedf06d7200446a651",
+      "abstract_sha256": null,
+      "source_abstract_chars": null,
+      "source_metadata_sha256": null,
+      "source_response_sha256": null,
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md",
+        "papers/inference/09-kernel-runtime-compilation/2024-2412.05496-flexattention-a-programming-model-for-generating-optimized-attention-kernels.md",
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+        "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md"
+      ],
+      "linked_from_lineages": [
+        "KV cache memory management / streaming inference / attention sinks / length extrapolation",
+        "inference-systems",
+        "注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層"
+      ],
+      "rank": 40
+    }
+  ]
+}
