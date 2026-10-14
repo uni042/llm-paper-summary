@@ -1,0 +1,444 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-55",
+  "run_key": "discovery-20261014-main-9a8-screen-55-part-01-65566a7728d1",
+  "reference_main_sha": "19118c03bf44046890ec38b6322704bf341cb769",
+  "record_count": 20,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2410.12794",
+      "identity_tokens": [
+        "arXiv:2410.12794"
+      ],
+      "title": "Disaggregating Embedding Recommendation Systems with FlexEMR",
+      "reason": "FlexEMR disaggregates embedding lookup and neural inference; locality-aware transfers and concurrent RDMA directly target serving network cost.",
+      "source_url": "https://arxiv.org/abs/2410.12794",
+      "body_check": "abstract_screen_only; body_not_read",
+      "abstract_evidence_excerpt": "Efficiently serving embedding-based recommendation (EMR) models remains a significant challenge due to their increasingly large memory requirements. Today's practice splits the model across many monolithic servers, where a mix of GPUs, CPUs, and DRAM is provisioned in fixed proportions. This approach leads to suboptimal resource utilization and increased costs. Disaggregating e",
+      "abstract_evidence_sha256": "2c0d99aa5ed357c896ff1c58ace24ab9e46a17bcc6eaa26c257d74289a8c8157",
+      "abstract_sha256": "79002aa21456ce0355b17a36f859203d2f46fca0c87569848aa3504838706776",
+      "source_abstract_chars": 950,
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2022-2205.10034-moesys-a-distributed-and-efficient-mixture-of-experts-training-and-inference-system-for-internet-services.md",
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2201.05596-deepspeed-moe-inference-compression.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2603.09222",
+      "identity_tokens": [
+        "arXiv:2603.09222"
+      ],
+      "title": "EnComp: Lightweight Encoder-Only Context Compression for Retrieval-Augmented Question Answering",
+      "reason": "EnComp compresses retrieved context in one encoder pass and reports lower memory and latency for RAG.",
+      "source_url": "https://arxiv.org/abs/2603.09222",
+      "body_check": "abstract_screen_only; body_not_read",
+      "abstract_evidence_excerpt": "Efficient context compression is critical for retrieval-augmented question answering in resource-constrained settings, where long retrieved contexts increase latency, memory use, and LLM reader cost. We propose a lightweight encoder-only framework for query-driven sentence pruning that preserves answer-critical evidence while aggressively reducing irrelevant context. Our method",
+      "abstract_evidence_sha256": "f78df23d9fdbc8da97885aef5e5dd690537bdfc5f874f23cb773a24effcc32b0",
+      "abstract_sha256": "4402576042fda55de42f427c2490a2d25d9e8388d5f4c140cd12cd614897b61f",
+      "source_abstract_chars": 985,
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md",
+        "papers/inference/99-other-inference-systems/2023-2304.08467-learning-to-compress-prompts-with-gist-tokens.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2603.08088",
+      "identity_tokens": [
+        "arXiv:2603.08088"
+      ],
+      "title": "EAGLE-Pangu: Accelerator-Safe Tree Speculative Decoding on Ascend NPUs",
+      "reason": "EAGLE-Pangu applies accelerator-safe tree speculative decoding on Ascend NPUs to accelerate generation.",
+      "source_url": "https://arxiv.org/abs/2603.08088",
+      "body_check": "abstract_screen_only; body_not_read",
+      "abstract_evidence_excerpt": "Autoregressive decoding remains a primary bottleneck in large language model (LLM) serving, motivating speculative decoding methods that reduce expensive teacher-model invocations by verifying multiple candidate tokens per step. Tree-structured speculation further increases parallelism, but is often brittle when ported across heterogeneous backends and accelerator stacks, where",
+      "abstract_evidence_sha256": "d7ea66558088722c1965c7a5f744fd8a0dd6e6a73d774670f072c992e9e84a2b",
+      "abstract_sha256": "19517f0dd3fade772174428191c19eb8c750c6d6f0449e96e2d12bcc2a2622cc",
+      "source_abstract_chars": 1331,
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2022-2211.17192-speculative-decoding.md",
+        "papers/inference/05-speculative-decoding-moe/2024-2401.10774-medusa-multiple-decoding-heads.md",
+        "papers/inference/05-speculative-decoding-moe/2025-2503.01840-eagle-3.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.00232",
+      "identity_tokens": [
+        "arXiv:2606.00232"
+      ],
+      "title": "Self-Correction Can Amplify Hallucinations: Fact-Level Repair with Graph-Based Evidence Routing in Multimodal Generation",
+      "reason": "Multimodal fact-level hallucination repair targets output reliability, not system efficiency.",
+      "source_url": "https://arxiv.org/abs/2606.00232",
+      "body_check": "abstract_screen_only; body_not_read",
+      "abstract_evidence_excerpt": "We study fact-level repair for multimodal generation, where a fluent output may contain specific facts that are not supported by the input. Existing inference-time repair methods often generate feedback by jointly conditioning on the input and the current output. This design has two limitations: hallucinated claims in the output can bias the model's interpretation of the input,",
+      "abstract_evidence_sha256": "027964ad46bea852ec40f7fe73a4e3ba2706b80b4378f6c7f6460897395829e2",
+      "abstract_sha256": "649932646e9db0fb9237525c76f159311e5c98442c80608228affdb3b70d50b5",
+      "source_abstract_chars": 1324,
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2025-2509.10377-dern-dropping-experts-recombining-neurons.md",
+        "papers/inference/05-speculative-decoding-moe/2022-2211.17192-speculative-decoding.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2510.02259",
+      "identity_tokens": [
+        "arXiv:2510.02259",
+        "DOI:10.48550/arXiv.2510.02259"
+      ],
+      "title": "Transformers Discover Molecular Structure Without Graph Priors",
+      "reason": "The primary abstract concerns atomistic molecular structure and physical priors, not LLM inference.",
+      "source_url": "https://arxiv.org/abs/2510.02259",
+      "body_check": "abstract_screen_only; body_not_read",
+      "abstract_evidence_excerpt": "Computational simulations play a central role in scientific discovery, and machine learning (ML) has emerged as a promising alternative to traditional physics-based modeling. However, scientific modeling requires physically meaningful predictions, raising a fundamental question for data-driven methods: to what extent can physical inductive biases—that is, prior assumptions about the structure of the physical world—emerge by learning from data alone?",
+      "abstract_evidence_sha256": "d15b63ccf6170c2d72c46ff157a334595421cbd087a224e97802266c0319abee",
+      "abstract_sha256": null,
+      "source_abstract_chars": null,
+      "linked_from": []
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2504.04215",
+      "identity_tokens": [
+        "arXiv:2504.04215"
+      ],
+      "title": "Towards Understanding and Improving Refusal in Compressed Models via Mechanistic Interpretability",
+      "reason": "Refusal and interpretability study safety/model behavior rather than inference efficiency.",
+      "source_url": "https://arxiv.org/abs/2504.04215",
+      "body_check": "abstract_screen_only; body_not_read",
+      "abstract_evidence_excerpt": "The rapid growth of large language models has spurred significant interest in model compression as a means to enhance their accessibility and practicality. While extensive research has explored model compression through the lens of safety, findings suggest that safety-aligned models often lose elements of trustworthiness post-compression. Simultaneously, the field of mechanisti",
+      "abstract_evidence_sha256": "bbbf4090792bab1a46c8438555732216eed7157aa233f39cd5e76b6291822f07",
+      "abstract_sha256": "11647830f7a29442f602e634110684698dddb1cf27c72504cb2909d278c49031",
+      "source_abstract_chars": 983,
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2403.19887-jamba-a-hybrid-transformer-mamba-language-model.md",
+        "papers/inference/08-edge-on-device-llm-systems/2022-2207.00112-language-model-compression-with-weighted-low-rank-factorization.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md",
+        "papers/inference/16-weight-quantization-compression/2023-2306.11222-losparse-structured-compression-of-large-language-models-based-on-low-rank-and-sparse-approximation.md",
+        "papers/inference/99-other-inference-systems/2023-2301.00774-sparsegpt-massive-language-models-can-be-accurately-pruned-in-one-shot.md",
+        "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md",
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md",
+        "papers/inference/99-other-inference-systems/2024-2403.15447-decoding-compressed-trust-scrutinizing-the-trustworthiness-of-efficient-.md"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "OpenReview:cqhAzteLzc",
+      "identity_tokens": [
+        "OpenReview:cqhAzteLzc",
+        "SemanticScholar:31b8a29357d61780d42adf2cb88d79c423262d34"
+      ],
+      "title": "Efficient LLM Pruning with Global Token-Dependency Awareness and Hardware-Adapted Inference",
+      "reason": "TVA-Prune structurally prunes LLMs and aligns dimensions to Tensor Cores; its abstract reports inference speedup.",
+      "source_url": "https://openreview.net/pdf?id=cqhAzteLzc",
+      "body_check": "abstract_screen_only; body_not_read",
+      "abstract_evidence_excerpt": "Structured pruning removes entire components like attention heads or layers to yield faster dense models. However, previous methods require significant pruning time and overlook token embedding dimension, missing potential inference acceleration. Moreover, pruning of heads in grouped query attentions is not widely attempted due to challenges with their interdependencies. To address these limitations, we propose a structured pruning method for LLMs that incorporates the concept of Variational Information Bottleneck (VIB) to obtain compressed representations at each structural element while preserving essential information for accurate prediction.",
+      "abstract_evidence_sha256": "dc8b6ff897c6fac69c6dda6a7cfd1be9ac47bdd0a452ed88ef3fc58c9c7807d5",
+      "abstract_sha256": null,
+      "source_abstract_chars": null,
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2023-2303.06865-flexgen-high-throughput-generative-inference-of-large-language-models-with-a-single-gpu.md",
+        "papers/inference/05-speculative-decoding-moe/2024-2402.12374-sequoia-scalable-robust-and-hardware-aware-speculative-decoding.md",
+        "papers/inference/99-other-inference-systems/2022-2204.00408-structured-pruning-learns-compact-and-accurate-models.md",
+        "papers/inference/99-other-inference-systems/2023-2301.00774-sparsegpt-massive-language-models-can-be-accurately-pruned-in-one-shot.md",
+        "papers/inference/99-other-inference-systems/2023-2305.11627-llm-pruner-on-the-structural-pruning-of-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2023-2306.11695-a-simple-and-effective-pruning-approach-for-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2023-2312.11983-fluctuation-based-adaptive-structured-pruning-for-large-language-models.md"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2510.03267",
+      "identity_tokens": [
+        "arXiv:2510.03267"
+      ],
+      "title": "PT$^2$-LLM: Post-Training Ternarization for Large Language Models",
+      "reason": "Post-training ternarization reduces LLM weight representation cost.",
+      "source_url": "https://arxiv.org/abs/2510.03267",
+      "body_check": "abstract_screen_only; body_not_read",
+      "abstract_evidence_excerpt": "Large Language Models (LLMs) have shown impressive capabilities across diverse tasks, but their large memory and compute demands hinder deployment. Ternarization has gained attention as a promising compression technique, delivering substantial size reduction and high computational efficiency. However, its potential in the post-training quantization (PTQ) setting remains underex",
+      "abstract_evidence_sha256": "174753d9b27c339d6afce0774656227706830bdde9bd813cff9a76192c5e5351",
+      "abstract_sha256": "3b8cad19a4a1235fd5f8ffdfad685399566dab4e3ed30ff644b9fe871462b190",
+      "source_abstract_chars": 1552,
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2023-2306.02272-owq-outlier-aware-weight-quantization-for-efficient-fine-tuning-and-infe.md",
+        "papers/inference/16-weight-quantization-compression/2023-2307.13304-quip-2-bit-quantization-of-large-language-models-with-guarantees.md",
+        "papers/inference/16-weight-quantization-compression/2023-2310.00034-pb-llm-partially-binarized-large-language-models.md",
+        "papers/inference/16-weight-quantization-compression/2024-2402.04291-billm-pushing-the-limit-of-post-training-quantization-for-llms.md",
+        "papers/inference/16-weight-quantization-compression/2024-2405.14917-slim-llm-salience-driven-mixed-precision-quantization-for-large-language-models.md",
+        "papers/inference/16-weight-quantization-compression/2024-2406.01721-duquant-distributing-outliers-via-dual-transformation-makes-stronger-quantized-llms.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.13761",
+      "identity_tokens": [
+        "arXiv:2604.13761"
+      ],
+      "title": "Design and Behavior of Sparse Mixture-of-Experts Layers in CNN-based Semantic Segmentation",
+      "reason": "Sparse MoE is applied to CNN semantic segmentation, a separate vision workload.",
+      "source_url": "https://arxiv.org/abs/2604.13761",
+      "body_check": "abstract_screen_only; body_not_read",
+      "abstract_evidence_excerpt": "Sparse mixture-of-experts (MoE) layers have been shown to substantially increase model capacity without a proportional increase in computational cost and are widely used in transformer architectures, where they typically replace feed-forward network blocks. In contrast, integrating sparse MoE layers into convolutional neural networks (CNNs) remains inconsistent, with most prior",
+      "abstract_evidence_sha256": "a0f42c801c7db2e85f1bdf1343f930c5d6b6a52f7d9c3b3d26815439f2d065ca",
+      "abstract_sha256": "8d09724554d7852c85e76bd378c2373c1bdb8337b3c330fdad0d42ef21b29cbb",
+      "source_abstract_chars": 1238,
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2201.05596-deepspeed-moe-inference-compression.md",
+        "papers/inference/12-moe-parallelism-communication/2021-2101.03961-switch-transformers-scaling-to-trillion-parameter-models-with-simple-and.md",
+        "papers/inference/12-moe-parallelism-communication/2022-2206.03382-tutel-adaptive-mixture-of-experts-at-scale.md",
+        "papers/inference/99-other-inference-systems/2017-1701.06538-outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts.md",
+        "papers/inference/99-other-inference-systems/2021-2112.06905-glam-efficient-scaling-of-language-models-with-mixture-of-experts.md",
+        "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2605.17997",
+      "identity_tokens": [
+        "arXiv:2605.17997"
+      ],
+      "title": "MARR: Module-Adaptive Residual Reconstruction for Low-Bit Post-Training Quantization",
+      "reason": "MARR targets low-bit post-training quantization with module-adaptive reconstruction.",
+      "source_url": "https://arxiv.org/abs/2605.17997",
+      "body_check": "abstract_screen_only; body_not_read",
+      "abstract_evidence_excerpt": "Recently, residual reconstruction-based model quantization methods have achieved promising performance in low-bit post-training quantization (PTQ) by introducing cross-layer residuals to reduce error accumulated from previous layers.However, these residuals may also introduce additional bias arising from the Hessian-approximation (HA) assumption underlying reconstruction-based ",
+      "abstract_evidence_sha256": "b0ba03700ec335d882c775f24927b42424b679b860bc38a2291bb3011de68ca0",
+      "abstract_sha256": "9c37c163394ba24f0e985b22f1f912edffd5b997278a99443f188c12cba22037",
+      "source_abstract_chars": 1720,
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md",
+        "papers/inference/16-weight-quantization-compression/2023-2306.02272-owq-outlier-aware-weight-quantization-for-efficient-fine-tuning-and-infe.md",
+        "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2023-2306.11695-a-simple-and-effective-pruning-approach-for-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2024-2404.00456-quarot-outlier-free-4-bit-inference-in-rotated-llms.md",
+        "papers/inference/99-other-inference-systems/2025-2405.16406-spinquant-llm-quantization-with-learned-rotations.md"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2605.20295",
+      "identity_tokens": [
+        "arXiv:2605.20295"
+      ],
+      "title": "Quant.npu: Enabling Efficient Mobile NPU Inference for on-device LLMs via Fully Static Quantization",
+      "reason": "Quant.npu uses static quantization for mobile NPU LLM inference.",
+      "source_url": "https://arxiv.org/abs/2605.20295",
+      "body_check": "abstract_screen_only; body_not_read",
+      "abstract_evidence_excerpt": "Large language models (LLMs) are increasingly deployed on mobile devices, where Neural Processing Units (NPUs) necessitate fully static quantization for optimal inference efficiency. However, existing post-training quantization (PTQ) methods predominantly rely on dynamic activation quantization, rendering them incompatible with NPU hardware constraints. To bridge the gap betwee",
+      "abstract_evidence_sha256": "0052310f37856837dcc0e69be50f43a625503be1a611a121a67e71bb9337820c",
+      "abstract_sha256": "e18e4987e6e0b75eafd86ecbb807cbe2fb191f7418e8cb4efe3130bbdaae36aa",
+      "source_abstract_chars": 1501,
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md",
+        "papers/inference/16-weight-quantization-compression/2023-2306.00978-awq.md",
+        "papers/inference/16-weight-quantization-compression/2024-2402.10631-bitdistiller-unleashing-the-potential-of-sub-4-bit-llms-via-self-distill.md",
+        "papers/inference/99-other-inference-systems/2023-2305.17888-llm-qat-data-free-quantization-aware-training-for-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2023-2306.11695-a-simple-and-effective-pruning-approach-for-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2024-2404.00456-quarot-outlier-free-4-bit-inference-in-rotated-llms.md"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2505.00570",
+      "identity_tokens": [
+        "arXiv:2505.00570"
+      ],
+      "title": "FreqKV: Key-Value Compression in Frequency Domain for Context Window Extension",
+      "reason": "FreqKV compresses KV state to extend context under memory limits.",
+      "source_url": "https://arxiv.org/abs/2505.00570",
+      "body_check": "abstract_screen_only; body_not_read",
+      "abstract_evidence_excerpt": "Existing key-value (KV) cache compression methods for large language models (LLMs) often rely on token eviction, which risks losing critical local information in both long prefilling and decoding scenarios. When extrapolating beyond the pretrained context length, their performance degrades sharply on long-context benchmarks. Motivated by the observation in the frequency domain ",
+      "abstract_evidence_sha256": "fcfa07e182b3e76ac7e2ea3d8a9c12bdb4ff5f6d1bf5dec1003043adc2ac1e00",
+      "abstract_sha256": "cadc238f2d4b8d71365d7f5d313de42a3ed924f59029db153bd6a25939063053",
+      "source_abstract_chars": 1095,
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2024-2406.13035-d2o-dynamic-discriminative-operations-for-efficient-long-context-inference.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2407.21018-think-thinner-key-cache-by-query-driven-pruning.md",
+        "papers/inference/99-other-inference-systems/2023-2308.16137-lm-infinite-zero-shot-extreme-length-generalization-for-large-language-m.md",
+        "papers/inference/99-other-inference-systems/2024-2401.03462-long-context-compression-with-activation-beacon.md",
+        "papers/inference/99-other-inference-systems/2024-2409.17422-discovering-the-gems-in-early-layers-accelerating-long-context-llms-with.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.06504",
+      "identity_tokens": [
+        "arXiv:2505.06504"
+      ],
+      "title": "FlexNeRFer: A Multi-Dataflow, Adaptive Sparsity-Aware Accelerator for On-Device NeRF Rendering",
+      "reason": "FlexNeRFer accelerates NeRF rendering, not LLM inference.",
+      "source_url": "https://arxiv.org/abs/2505.06504",
+      "body_check": "abstract_screen_only; body_not_read",
+      "abstract_evidence_excerpt": "Neural Radiance Fields (NeRF), an AI-driven approach for 3D view reconstruction, has demonstrated impressive performance, sparking active research across fields. As a result, a range of advanced NeRF models has emerged, leading on-device applications to increasingly adopt NeRF for highly realistic scene reconstructions. With the advent of diverse NeRF models, NeRF-based applica",
+      "abstract_evidence_sha256": "6b0d6f6c36e7a0f16741700e362f24fe37ecc168eb2ad5070abfa05811cf479e",
+      "abstract_sha256": "7217e52a9fee1c5131f84d280990ab221a071833c77ddb9e696183f3d2a9c6af",
+      "source_abstract_chars": 1557,
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2202.09368-expert-choice-routing.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2311.18677-splitwise-efficient-generative-llm-inference-phase-splitting.md",
+        "papers/inference/17-pim-near-data-acceleration/2024-2403.00579-neupims-npu-pim-heterogeneous-acceleration-for-batched-llm-inferencing.md",
+        "papers/inference/99-other-inference-systems/2017-1701.06538-outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts.md",
+        "papers/inference/99-other-inference-systems/2024-6daecc086891-llmcompass-enabling-efficient-hardware-design-for-large-language-model-i.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2504.09265",
+      "identity_tokens": [
+        "arXiv:2504.09265"
+      ],
+      "title": "Mixture of Group Experts for Learning Invariant Representations",
+      "reason": "MoGE is evaluated on transformer image-classification and language-modeling tasks, retains roughly constant per-token computation, and reduces expert redundancy; the abstract does not show a concrete LLM inference latency/throughput gain.",
+      "source_url": "https://arxiv.org/abs/2504.09265",
+      "body_check": "abstract_screen_only; body_not_read",
+      "abstract_evidence_excerpt": "Sparsely activated Mixture-of-Experts (MoE) models effectively increase the number of parameters while maintaining consistent computational costs per token. However, vanilla MoE models often suffer from limited diversity and specialization among experts, constraining their performance and scalability, especially as the number of experts increases. In this paper, we present a no",
+      "abstract_evidence_sha256": "4541957ac1b9f2efb1d98b2ccfeefa106e6ea533384c04f8b5deab00ada7b54c",
+      "abstract_sha256": "07b7b048d11407c84ad50c6fd9ea63934ba5e4bc73df856c2420a468804b223d",
+      "source_abstract_chars": 1553,
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2202.09368-expert-choice-routing.md",
+        "papers/inference/12-moe-parallelism-communication/2021-2101.03961-switch-transformers-scaling-to-trillion-parameter-models-with-simple-and.md",
+        "papers/inference/12-moe-parallelism-communication/2022-2206.03382-tutel-adaptive-mixture-of-experts-at-scale.md",
+        "papers/inference/99-other-inference-systems/2017-1701.06538-outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts.md",
+        "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2508.18430",
+      "identity_tokens": [
+        "arXiv:2508.18430"
+      ],
+      "title": "CLARIFY: A Specialist-Generalist Framework for Accurate and Lightweight Dermatological Visual Question Answering",
+      "reason": "Dermatology VQA is an application; no reusable inference-system optimization is established.",
+      "source_url": "https://arxiv.org/abs/2508.18430",
+      "body_check": "abstract_screen_only; body_not_read",
+      "abstract_evidence_excerpt": "Vision-language models (VLMs) have shown significant potential for medical tasks; however, their general-purpose nature can limit specialized diagnostic accuracy, and their large size poses substantial inference costs for real-world clinical deployment. To address these challenges, we introduce CLARIFY, a Specialist-Generalist framework for dermatological visual question answer",
+      "abstract_evidence_sha256": "53a5d6095db4f7906ade5b2df0352a9984cf38e88546263eb87689be5cb91802",
+      "abstract_sha256": "e0c3937d5b7cc461fb039d1f75251a2fe376454c7dce351c6ada7c3a70b77f57",
+      "source_abstract_chars": 1614,
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md",
+        "papers/inference/19-inference-evaluation-benchmarking/2022-2202.07105-a-survey-on-model-compression-and-acceleration-for-pretrained-language-m.md",
+        "papers/inference/99-other-inference-systems/2023-2305.11627-llm-pruner-on-the-structural-pruning-of-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2023-2306.11695-a-simple-and-effective-pruning-approach-for-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2024-2403.03853-shortgpt-layers-in-large-language-models-are-more-redundant-than-you-exp.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.12522",
+      "identity_tokens": [
+        "arXiv:2605.12522"
+      ],
+      "title": "Differences in Text Generated by Diffusion and Autoregressive Language Models",
+      "reason": "The paper compares text characteristics rather than inference efficiency.",
+      "source_url": "https://arxiv.org/abs/2605.12522",
+      "body_check": "abstract_screen_only; body_not_read",
+      "abstract_evidence_excerpt": "Diffusion language models (DLMs) are promising alternatives to autoregressive language models (ARMs), yet the intrinsic differences in their generated text remain underexplored. We first find empirically that off-the-shelf DLMs exhibit lower $n$-gram entropy, higher semantic coherence, and higher semantic diversity. To understand the cause, we conduct controlled experiments tha",
+      "abstract_evidence_sha256": "0eed7ce37c2272a8fe8688eb4d8602182d6367ebd15f1bd5ff09a474ef89fee1",
+      "abstract_sha256": "cbe95ff40af5dfcea388d5b12199f6c3683c2fb3ff06e32cd79364a25c912361",
+      "source_abstract_chars": 1248,
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2025-2505.22618-fast-dllm-kv-cache-parallel-decoding.md",
+        "papers/inference/99-other-inference-systems/2025-2503.09573-block-diffusion-interpolating-between-autoregressive-and-diffusion-langu.md",
+        "papers/inference/99-other-inference-systems/2025-2508.15487-dream-7b-diffusion-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2025-2509.26328-fast-dllm-v2-block-diffusion-hierarchical-cache.md",
+        "papers/inference/99-other-inference-systems/2026-2406.03736-your-absorbing-discrete-diffusion-secretly-models-the-conditional-distri.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.02883",
+      "identity_tokens": [
+        "arXiv:2603.02883"
+      ],
+      "title": "SemanticDialect: Semantic-Aware Mixed-Format Quantization for Video Diffusion Transformers",
+      "reason": "Video diffusion quantization concerns a separate generation application.",
+      "source_url": "https://arxiv.org/abs/2603.02883",
+      "body_check": "abstract_screen_only; body_not_read",
+      "abstract_evidence_excerpt": "Diffusion Transformers (DiTs) achieve state-of-the-art video generation quality, but their substantial memory and computational footprints hinder edge deployment. Quantization can reduce these costs, yet existing methods often degrade video quality due to high activation variation and the difficulty of preserving semantic and temporal coherence. We propose SemanticDialect, whic",
+      "abstract_evidence_sha256": "0fe4885ace9160d0c512d3c50f46d670febd1dc014bf219de9ef798389fa113d",
+      "abstract_sha256": "88c2afe5e22212623f31b0beaf47ab70567f015be2244e9527e0435a4efa987e",
+      "source_abstract_chars": 1267,
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2023-2306.07629-squeezellm-dense-and-sparse-quantization.md",
+        "papers/inference/16-weight-quantization-compression/2023-2310.16836-llm-fp4-4-bit-floating-point-quantized-transformers.md",
+        "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2023-2302.08007-with-shared-microexponents-a-little-shifting-goes-a-long-way.md",
+        "papers/inference/99-other-inference-systems/2024-2404.00456-quarot-outlier-free-4-bit-inference-in-rotated-llms.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2407.11046",
+      "identity_tokens": [
+        "arXiv:2407.11046"
+      ],
+      "title": "A survey on LoRA of large language models",
+      "reason": "The LoRA survey concerns adaptation/training, not inference serving.",
+      "source_url": "https://arxiv.org/abs/2407.11046",
+      "body_check": "abstract_screen_only; body_not_read",
+      "abstract_evidence_excerpt": "Low-Rank Adaptation (LoRA), which updates the dense neural network layers with pluggable low-rank matrices, is one of the best performed parameter efficient fine-tuning paradigms. Furthermore, it has significant advantages in cross-task generalization and privacy-preserving. Hence, LoRA has gained much attention recently, and the number of related literature demonstrates expone",
+      "abstract_evidence_sha256": "3a0eb17d46f3b7c3708967eb76845bafffd04510b286fe076d5da23c4034aeb5",
+      "abstract_sha256": "1fa63c0f31796252f85e0a45ea710ca96388e72d2960c88f5feab3ace6f398f6",
+      "source_abstract_chars": 1000,
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-2311.03285-s-lora-serving-thousands-of-concurrent-lora-adapters.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2310.18547-punica-multitenant-lora-serving.md",
+        "papers/inference/99-other-inference-systems/2023-2305.18403-loraprune-structured-pruning-meets-low-rank-parameter-efficient-fine-tun.md",
+        "papers/inference/99-other-inference-systems/2024-2401.11240-caraserve-cpu-assisted-lora-serving.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3582016.3582049",
+      "identity_tokens": [
+        "DOI:10.1145/3582016.3582049"
+      ],
+      "title": "Hyperscale Hardware Optimized Neural Architecture Search",
+      "reason": "The NAS work targets hardware-optimized neural architectures, but the abstract does not establish an LLM inference deployment or measurable serving benefit.",
+      "source_url": "https://doi.org/10.1145/3582016.3582049",
+      "body_check": "abstract_screen_only; body_not_read",
+      "abstract_evidence_excerpt": "Recent advances in machine learning have leveraged dramatic increases in computational power, a trend expected to continue in the future. This paper introduces the first Hyperscale Hardware Optimized Neural Architecture Search (H2O-NAS) to automatically design accurate and performant machine learning models tailored to the underlying hardware architecture. H2O-NAS consists of t",
+      "abstract_evidence_sha256": "428da5a4da2f9a6c738824813676de10371be748833bf8332ede065f7de7870b",
+      "abstract_sha256": "d46630330697bdb7a2e6e4d3439300aca1a675f935c2ac4fdc7dbc6ecddcc812",
+      "source_abstract_chars": 1341,
+      "linked_from": [
+        "papers/inference/12-moe-parallelism-communication/2021-2101.03961-switch-transformers-scaling-to-trillion-parameter-models-with-simple-and.md",
+        "papers/inference/99-other-inference-systems/2020-2005.14187-hat-hardware-aware-transformers-for-efficient-natural-language-processin.md",
+        "papers/inference/99-other-inference-systems/2020-2006.03236-funnel-transformer-filtering-out-sequential-redundancy-for-efficient-lan.md",
+        "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2312.00043",
+      "identity_tokens": [
+        "arXiv:2312.00043"
+      ],
+      "title": "Who is leading in AI? An analysis of industry AI research",
+      "reason": "This is an analysis of AI research leadership, not a systems technique.",
+      "source_url": "https://arxiv.org/abs/2312.00043",
+      "body_check": "abstract_screen_only; body_not_read",
+      "abstract_evidence_excerpt": "AI research is increasingly industry-driven, making it crucial to understand company contributions to this field. We compare leading AI companies by research publications, citations, size of training runs, and contributions to algorithmic innovations. Our analysis reveals the substantial role played by Google, OpenAI and Meta. We find that these three companies have been respon",
+      "abstract_evidence_sha256": "39e5a790eda93b98210075434a56ba1fc7062eb8a032ba844b07bcc1e8a3e5be",
+      "abstract_sha256": "ddaae914b4164c6b47901fc8605badc66022009da15a234cd29378c71bc4f069",
+      "source_abstract_chars": 1075,
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2019-1911.02150-multi-query-attention.md",
+        "papers/inference/99-other-inference-systems/2017-1701.06538-outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts.md",
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md",
+        "papers/inference/99-other-inference-systems/2019-1909.08053-megatron-lm-training-multi-billion-parameter-language-models-using-model.md"
+      ]
+    }
+  ]
+}
