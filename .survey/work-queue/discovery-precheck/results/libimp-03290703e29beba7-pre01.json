@@ -1,0 +1,1109 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-03290703e29beba7-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-03290703e29b",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2410.10714",
+    "arXiv:2410.19103",
+    "arXiv:2503.05330",
+    "arXiv:2503.06594",
+    "arXiv:2503.08640",
+    "arXiv:2505.12215",
+    "arXiv:2507.12205",
+    "arXiv:2601.22716",
+    "arXiv:2602.13215",
+    "arXiv:2605.24144",
+    "arXiv:2606.08411",
+    "arXiv:2606.12876",
+    "arXiv:2606.31982"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 13,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": false,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "e3e1e4af71e2e90f60af20377ac1f7fa8bb05527",
+  "raw_search_result_count": 13,
+  "retrieval_duplicate_filtered_count": 2,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 11,
+  "provider_progress": {
+    "requested_count": 13,
+    "status_counts": {
+      "allowed": 11,
+      "filtered_by_snapshot": 2,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-14T12:54:48.487431+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2410.10714",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2410.19103",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2503.05330",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2503.06594",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2503.08640",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2505.12215",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2505.12215"
+    },
+    {
+      "requested_id": "arXiv:2507.12205",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2601.22716",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2602.13215",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:SemanticScholar:8ef34187d81dbce9783d45361b30e289c6e9de7d"
+    },
+    {
+      "requested_id": "arXiv:2605.24144",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2606.08411",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2606.12876",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2606.31982",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "EVA: Accelerating LLM Decoding via an Efficient Vector Quantization Architecture",
+      "source_url": "https://arxiv.org/abs/2605.24144",
+      "year": 2026,
+      "published": "2026-05-22",
+      "venue": "International Symposium on Computer Architecture",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Models (LLMs) have achieved impressive performance across diverse domains but remain inefficient during the autoregressive decoding phase. Unlike the prefill stage, which employs compute-bound GEMM operations, decoding executes a sequence of small GEMV-like computations that are memory-bound and underutilize modern accelerators. Weight-only vector quantization (VQ) has emerged as an effective compression technique that clusters model weights into a shared codebook and replaces the original weight matrix with lowprecision indices, enabling 2-bit-level weight compression. While this approach substantially reduces model size and memory bandwidth, it still suffers from two critical inefficiencies: the low utilization of GEMV computation and frequent memory conflicts during codebook lookups. This paper presents EVA, an efficient vector-quantizationbased architecture that addresses both computational and memory bottlenecks in LLM decoding. EVA builds on a simple yet effective insight that combines input-codebook computation with conflict-free memory access. Instead of reconstructing quantized weights from indices, EVA directly performs dot products between input vectors and the weight codebook, transforming LLM decoding from GEMV to GEMM computation. It then performs structured lookups from an intermediate output buffer, eliminating memory bank conflicts. We further design a hardware-software co-optimized architecture specialized for LLM decoding while remaining compatible with conventional prefill execution. Evaluations show that EVA achieves up to 11.17× speedup and $7.17 \\times$ higher energy efficiency compared with the SOTA lookup-based architecture, while preserving arithmetic precision after vector quantization. Our code is available at https://github.com/dbw6/Eva.git.",
+      "identifiers": [
+        "SemanticScholar:b7a5c202bb947f543b1f35a07ef441612f563033"
+      ],
+      "semantic_scholar_id": "b7a5c202bb947f543b1f35a07ef441612f563033",
+      "canonical_id": "arXiv:2605.24144",
+      "arxiv_id": "2605.24144",
+      "doi": "10.1109/ISCA66397.2026.00102",
+      "authors": [
+        "Bo-Wen Duan",
+        "Cong Guo",
+        "Chi-Yue Wei",
+        "Haoxuan Shan",
+        "Yu-Zhe Fu",
+        "Xinhua Chen",
+        "Yifan Xu",
+        "Ziyue Zhang",
+        "Changchun Zhou",
+        "Hai Li",
+        "Yi-Ran Chen"
+      ],
+      "priority": 112,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 10,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 112,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 145,
+        "matched_prestigious_venue": "International Symposium on Computer Architecture"
+      }
+    },
+    {
+      "title": "Multi-Bitwidth Quantization for LLMs Using Additive Codebooks",
+      "source_url": "https://arxiv.org/abs/2606.12876",
+      "year": 2026,
+      "published": "2026-06-11",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "As large language models (LLMs) are increasingly deployed across heterogeneous hardware with varying resource constraints, the ability to adaptively manage the performance-efficiency trade-off without retraining is critical. We propose Drop-by-Drop, a novel multi-bitwidth post-training quantization framework enabling inference-time precision control over LLM weights from a single quantized model. As theoretical motivation, we prove that Gaussian sources are successively refinable under a weighted mean squared error distortion motivated by LLM loss functions: successive refinement across distortion levels incurs no rate penalty relative to encoding at each level separately. Drop-by-Drop approximates this hierarchical structure in practice by incorporating Matryoshka-style supervision into additive codebook training, inducing an ordering in which codebook prefixes yield accurate partial reconstructions at each precision level. Furthermore, a block-Hadamard rotation brings the weight distribution closer to our Gaussian source assumption. The result is a single model that serves multiple bitwidths by dropping codebooks, reducing storage and quantization cost relative to the static per-bitwidth models. Across Qwen, LLaMA, Gemma, and Mistral, Drop-by-Drop achieves lower perplexity than state-of-the-art multi-bitwidth methods with competitive zero-shot accuracy, while our specialized kernels further reduce decoding latency.",
+      "identifiers": [
+        "SemanticScholar:3505f5533cebb2efefdf6fd83bc723ac173100b1"
+      ],
+      "semantic_scholar_id": "3505f5533cebb2efefdf6fd83bc723ac173100b1",
+      "canonical_id": "arXiv:2606.12876",
+      "arxiv_id": "2606.12876",
+      "doi": "10.48550/arXiv.2606.12876",
+      "authors": [
+        "Liza Babaoglu",
+        "Shuangyi Chen",
+        "Ashish J. Khisti"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 125,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "ERA: Entropy-Guided Visual Token Pruning with Rectified Attention for Efficient MLLMs",
+      "source_url": "https://arxiv.org/abs/2606.31982",
+      "year": 2026,
+      "published": "2026-06-30",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Multimodal Large Language Models (MLLMs) incur prohibitive inference costs due to long visual token sequences. Training-free visual token reduction provides an efficient solution. However, existing methods distort attention distributions, giving rise to a phenomenon we term Attention Logit Collapse. To address this issue, we propose ERA, an Entropy-guided visual token pruning framework with Rectified Attention for efficient MLLMs. Specifically, ERA comprises three crucial components: Dual-view Entropy Pruning (DEP), Bias-aware Token Recycling (BTR), and Logit-preserving Attention Rectification (LAR). First, DEP identifies representative anchor tokens by jointly modeling visual diversity and head-wise saliency. BTR then recycles pruned tokens into their corresponding anchors while estimating a cluster-level logit bias. Building upon this, LAR injects the estimated bias into attention logits, effectively rectifying the collapse induced by token reduction. Together, these components preserve visual evidence even under aggressive compression, enabling robust performance across single-image, multi-image, and video settings on a wide range of MLLMs. Beyond delivering practical acceleration, ERA establishes logit-preserving visual token pruning as a principled framework for efficient MLLMs, unifying theoretical foundation, algorithmic design, and practical deployment. The code is at https://github.com/924973292/ERA.",
+      "identifiers": [
+        "SemanticScholar:3153a8f86eecb8c9dd8220f12efc4d409ad1608e"
+      ],
+      "semantic_scholar_id": "3153a8f86eecb8c9dd8220f12efc4d409ad1608e",
+      "canonical_id": "arXiv:2606.31982",
+      "arxiv_id": "2606.31982",
+      "doi": "10.48550/arXiv.2606.31982",
+      "authors": [
+        "Yuhao Wang",
+        "Mu Qiao",
+        "Haiwen Diao",
+        "Yun-Zhi Zhuge",
+        "Ping-Ping Zhang",
+        "Xindong Zhang",
+        "Lei Zhang",
+        "Huchuan Lu"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 106,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Breaking the Blocks: Continuous Low-Rank Decomposed Scaling for Unified LLM Quantization and Adaptation",
+      "source_url": "https://arxiv.org/abs/2601.22716",
+      "year": 2026,
+      "published": "2026-01-30",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Current quantization methods for LLMs predominantly rely on block-wise structures to maintain efficiency, often at the cost of representational flexibility. In this work, we demonstrate that element-wise quantization can be made as efficient as block-wise scaling while providing strictly superior expressive power by modeling the scaling manifold as continuous low-rank matrices ($S = BA$). We propose Low-Rank Decomposed Scaling (LoRDS), a unified framework that rethinks quantization granularity through this low-rank decomposition. By\"breaking the blocks\"of spatial constraints, LoRDS establishes a seamless efficiency lifecycle: it provides high-fidelity PTQ initialization refined via iterative optimization, enables joint QAT of weights and scaling factors, and facilitates high-rank multiplicative PEFT adaptation. Unlike additive PEFT approaches such as QLoRA, LoRDS enables high-rank weight updates within a low-rank budget while incurring no additional inference overhead. Supported by highly optimized Triton kernels, LoRDS consistently outperforms state-of-the-art baselines across various model families in both quantization and downstream fine-tuning tasks. Notably, on Llama3-8B, our method achieves up to a 27.0% accuracy improvement at 3 bits over NormalFloat quantization and delivers a 1.5x inference speedup on NVIDIA RTX 4090 while enhancing PEFT performance by 9.6% on downstream tasks over 4bit QLoRA, offering a robust and integrated solution for unified compression and adaptation of LLMs.",
+      "identifiers": [
+        "SemanticScholar:3b25038d0c358701e930c2a5e1b0cab5281b0f52"
+      ],
+      "semantic_scholar_id": "3b25038d0c358701e930c2a5e1b0cab5281b0f52",
+      "canonical_id": "arXiv:2601.22716",
+      "arxiv_id": "2601.22716",
+      "doi": "10.48550/arXiv.2601.22716",
+      "authors": [
+        "Pingzhi Tang",
+        "Rui-Jie Zhou",
+        "Fan-Xu Meng",
+        "Wen-Jie Pei",
+        "Mu-Han Zhang"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 257,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Beyond Decoder-only: Large Language Models Can be Good Encoders for Machine Translation",
+      "source_url": "https://arxiv.org/abs/2503.06594",
+      "year": 2025,
+      "published": "2025-03-09",
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "citation_count": 15,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The field of neural machine translation (NMT) has changed with the advent of large language models (LLMs). Much of the recent emphasis in natural language processing (NLP) has been on modeling machine translation and many other problems using a single pre-trained Transformer decoder, while encoder-decoder architectures, which were the standard in earlier NMT models, have received relatively less attention. In this paper, we explore translation models that are universal, efficient, and easy to optimize, by marrying the world of LLMs with the world of NMT. We apply LLMs to NMT encoding and leave the NMT decoder unchanged. We also develop methods for adapting LLMs to work better with the NMT decoder. Furthermore, we construct a new dataset involving multiple tasks to assess how well the machine translation system generalizes across various tasks. Evaluations on the WMT and our datasets show that results using our method match or surpass a range of baselines in terms of translation quality, but achieve $2.4 \\sim 6.5 \\times$ inference speedups and a $75\\%$ reduction in the memory footprint of the KV cache. It also demonstrates strong generalization across a variety of translation-related tasks.",
+      "identifiers": [
+        "SemanticScholar:ac0ef442016704a2d495fccc013873e39da1724d"
+      ],
+      "semantic_scholar_id": "ac0ef442016704a2d495fccc013873e39da1724d",
+      "canonical_id": "arXiv:2503.06594",
+      "arxiv_id": "2503.06594",
+      "doi": "10.48550/arXiv.2503.06594",
+      "authors": [
+        "Ying-Feng Luo",
+        "Tong Zheng",
+        "Yongyu Mu",
+        "Bei Li",
+        "Qinghong Zhang",
+        "Yongqi Gao",
+        "Ziqiang Xu",
+        "Peinan Feng",
+        "Xiao-Qian Liu",
+        "Tong Xiao",
+        "Jing-Bo Zhu"
+      ],
+      "priority": 25,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 15,
+        "citation_count": 15,
+        "total": 25,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 584,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      }
+    },
+    {
+      "title": "Efficient Many-Shot In-Context Learning with Dynamic Block-Sparse Attention",
+      "source_url": "https://arxiv.org/abs/2503.08640",
+      "year": 2025,
+      "published": "2025-03-11",
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "citation_count": 12,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Many-shot in-context learning has recently shown promise as an alternative to finetuning, with the major advantage that the same model can be served for multiple tasks. However, this shifts the computational burden from training-time to inference-time, making deployment of many-shot ICL challenging to justify in-practice. This cost is further increased if a custom demonstration set is retrieved for each inference example. We present Dynamic Block-Sparse Attention, a training-free framework for retrieval-based many-shot in-context learning. By combining carefully designed block-sparse attention and retrieval of cached groups of demonstrations, we achieve comparable per-example latency to finetuning while maintaining on average>95% of the best method's accuracy across strong ICL and finetuning baselines. We hope that this will further enable the deployment of many-shot ICL at scale.",
+      "identifiers": [
+        "SemanticScholar:4a39d2e2c4b56d5cd06e8b022a915b1ac902281f"
+      ],
+      "semantic_scholar_id": "4a39d2e2c4b56d5cd06e8b022a915b1ac902281f",
+      "canonical_id": "arXiv:2503.08640",
+      "arxiv_id": "2503.08640",
+      "doi": "10.48550/arXiv.2503.08640",
+      "authors": [
+        "Emily Xiao",
+        "Chin-Jou Li",
+        "Yi-Lin Zhang",
+        "Graham Neubig",
+        "Amanda Bertsch"
+      ],
+      "priority": 22,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 12,
+        "citation_count": 12,
+        "total": 22,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 582,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      }
+    },
+    {
+      "title": "Speculative Decoding for Multi-Sample Inference",
+      "source_url": "https://arxiv.org/abs/2503.05330",
+      "year": 2025,
+      "published": "2025-03-07",
+      "venue": "Conference on Empirical Methods in Natural Language Processing",
+      "citation_count": 6,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "We propose a novel speculative decoding method tailored for multi-sample reasoning scenarios, such as self-consistency and Best-of-N sampling. Our method exploits the intrinsic consensus of parallel generation paths to synthesize high-quality draft tokens without requiring auxiliary models or external databases. By dynamically analyzing structural patterns across parallel reasoning paths through a probabilistic aggregation mechanism, it identifies consensus token sequences that align with the decoding distribution. Evaluations on mathematical reasoning benchmarks demonstrate a substantial improvement in draft acceptance rates over baselines, while reducing the latency in draft token construction. This work establishes a paradigm shift for efficient multi-sample inference, enabling seamless integration of speculative decoding with sampling-based reasoning techniques.",
+      "identifiers": [
+        "SemanticScholar:16b174821052162515e1fe91757fe4cab1bc5940"
+      ],
+      "semantic_scholar_id": "16b174821052162515e1fe91757fe4cab1bc5940",
+      "canonical_id": "arXiv:2503.05330",
+      "arxiv_id": "2503.05330",
+      "doi": "10.48550/arXiv.2503.05330",
+      "authors": [
+        "Yi-Wei Li",
+        "Jia-Yi Shi",
+        "Shaoxiong Feng",
+        "Pei-Wen Yuan",
+        "Xing-Lin Wang",
+        "Yue-Qi Zhang",
+        "Ji Zhang",
+        "Chu-Yi Tan",
+        "Bo-Yuan Pan",
+        "Yao Hu",
+        "Kan Li"
+      ],
+      "priority": 16,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 6,
+        "citation_count": 6,
+        "total": 16,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 586,
+        "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+      }
+    },
+    {
+      "title": "AsyncLane: Decoupling Refinement from Advancement in Diffusion Language Model Decoding",
+      "source_url": "https://arxiv.org/abs/2606.08411",
+      "year": 2026,
+      "published": "2026-06-07",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Block-wise semi-autoregressive decoding is the standard inference paradigm for diffusion large language models (DLMs), but it imposes a strict dependency between blocks: the next block cannot begin until the current block is fully decoded or its denoising budget is exhausted. We observe that once a block exposes a reliable delimiter boundary or stable semantic prefix, continuation generation need not wait for every residual token to be resolved. We propose AsyncLane, a training-free decoding scheduler that decouples refinement from advancement. AsyncLane forks a generate lane at observed delimiter boundaries into a refine lane and a continuation generate lane: the prefix remains editable, while the continuation advances before prefix refinement finishes. The resulting lane tree records decoding dependencies and output order, while execution proceeds over the active lane set. To make this asynchronous schedule efficient under bidirectional attention, AsyncLane combines shared-prefix lane batching, lookahead draft reuse, cascading termination, and compact cache refresh with refresh-logit reuse, preventing model-call cost from scaling directly with the number of lanes. AsyncLane is a drop-in replacement for block-wise DLM samplers and requires no retraining. Experiments on mathematical reasoning and code generation show that AsyncLane consistently improves throughput while maintaining competitive quality. Across LLaDA and Dream backbones, AsyncLane achieves the highest TPS in all evaluated benchmark-length settings; relative to the fastest competing baseline, it reaches peak speedups of 2.95x on LLaDA and 3.04x on Dream, with especially large gains under longer generation budgets.",
+      "identifiers": [
+        "SemanticScholar:ef23e2234139db8af287079a4761cc8681a33272"
+      ],
+      "semantic_scholar_id": "ef23e2234139db8af287079a4761cc8681a33272",
+      "canonical_id": "arXiv:2606.08411",
+      "arxiv_id": "2606.08411",
+      "doi": "10.48550/arXiv.2606.08411",
+      "authors": [
+        "Ying-Xuan Ren",
+        "Yuxuan Lou",
+        "Yong Liu",
+        "Peng-Cheng Fang",
+        "Zi-Ming Wang",
+        "Peng-Fei Zhou",
+        "Yang You"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 129,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "TesseraQ: Ultra Low-Bit LLM Post-Training Quantization with Block Reconstruction",
+      "source_url": "https://arxiv.org/abs/2410.19103",
+      "year": 2024,
+      "published": "2024-10-24",
+      "venue": "arXiv.org",
+      "citation_count": 6,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLMs) have revolutionized natural language processing, albeit at the cost of immense memory and computation requirements. Post-training quantization (PTQ) is becoming the de facto method to reduce the memory footprint and improve the inference throughput of LLMs. In this work, we aim to push the upper limit of LLM PTQ by optimizing the weight rounding parameters with the block reconstruction technique, a predominant method in previous vision models. We propose TesseraQ, a new state-of-the-art PTQ technique, to quantize the weights of LLMs to ultra-low bits. To effectively optimize the rounding in LLMs and stabilize the reconstruction process, we introduce progressive adaptive rounding. This approach iteratively transits the soft rounding variables to hard variables during the reconstruction process. Additionally, we optimize the dequantization scale parameters to fully leverage the block reconstruction technique. We demonstrate that TesseraQ can be seamlessly integrated with existing scaling or clipping-based PTQ algorithms such as AWQ and OmniQuant, significantly enhancing their performance and establishing a new state-of-the-art. For instance, when compared to AWQ, TesseraQ improves the wikitext2 perplexity from 14.65 to 6.82 and average downstream accuracy from 50.52 to 59.27 with 2-bit weight-only quantization of LLaMA-2-7B. Across a range of quantization schemes, including W2A16, W3A16, W3A3, and W4A4, TesseraQ consistently exhibits superior performance.",
+      "identifiers": [
+        "SemanticScholar:2eca14406a23abeb01dac401b213e4239ff4c75a"
+      ],
+      "semantic_scholar_id": "2eca14406a23abeb01dac401b213e4239ff4c75a",
+      "canonical_id": "arXiv:2410.19103",
+      "arxiv_id": "2410.19103",
+      "doi": "10.48550/arXiv.2410.19103",
+      "authors": [
+        "Yuhang Li",
+        "P. Panda"
+      ],
+      "priority": 6,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 6,
+        "citation_count": 6,
+        "total": 6,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 720,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "SeedLM: Compressing LLM Weights into Seeds of Pseudo-Random Generators",
+      "source_url": "https://arxiv.org/abs/2410.10714",
+      "year": 2024,
+      "published": "2024-10-14",
+      "venue": "arXiv.org",
+      "citation_count": 5,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Models (LLMs) have transformed natural language processing, but face significant challenges in widespread deployment due to their high runtime cost. In this paper, we introduce SeedLM, a novel post-training compression method that uses seeds of pseudo-random generators to encode and compress model weights. Specifically, for each block of weights, we find a seed that is fed into a Linear Feedback Shift Register (LFSR) during inference to efficiently generate a random matrix. This matrix is then linearly combined with compressed coefficients to reconstruct the weight block. SeedLM reduces memory access and leverages idle compute cycles during inference, effectively speeding up memory-bound tasks by trading compute for fewer memory accesses. Unlike state-of-the-art compression methods that rely on calibration data, our approach is data-free and generalizes well across diverse tasks. Our experiments with Llama 3 70B, which is particularly challenging to compress, show that SeedLM achieves significantly better zero-shot accuracy retention at 4- and 3-bit than state-of-the-art techniques, while maintaining performance comparable to FP16 baselines. Additionally, FPGA-based tests demonstrate that 4-bit SeedLM, as model size increases to 70B, approaches a 4x speed-up over an FP16 Llama 2/3 baseline.",
+      "identifiers": [
+        "SemanticScholar:cee2d89783966cbbb17be601125ba5b7c1dfd4ff"
+      ],
+      "semantic_scholar_id": "cee2d89783966cbbb17be601125ba5b7c1dfd4ff",
+      "canonical_id": "arXiv:2410.10714",
+      "arxiv_id": "2410.10714",
+      "doi": "10.48550/arXiv.2410.10714",
+      "authors": [
+        "Rasoul Shafipour",
+        "David Harrison",
+        "Max Horton",
+        "Jeffrey Marker",
+        "Houman Bedayat",
+        "Sachin Mehta",
+        "Mohammad Rastegari",
+        "Mahyar Najibi",
+        "Saman Naderiparizi"
+      ],
+      "priority": 5,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 5,
+        "citation_count": 5,
+        "total": 5,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 730,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "EC-SpMV: Toward Efficient SpMV in Sparse LLMs via Block Extraction and Compressed Storage",
+      "source_url": "https://arxiv.org/abs/2507.12205",
+      "year": 2025,
+      "published": "2025-07-16",
+      "venue": "ACM Transactions on Architecture and Code Optimization (TACO)",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Sparse Matrix-Vector Multiplication (SpMV) has become a critical performance bottleneck in the local deployment of sparse Large Language Models (LLMs), where inference predominantly operates on workloads during the decoder phase with a batch size of one. Existing SpMV kernels and sparse matrix formats, originally designed for scientific computing, fail to exploit the unique structure patterns inherent in sparse LLMs, resulting in suboptimal performance and excessive storage overhead. This article presents EC-SpMV, a GPU-optimized SpMV approach for accelerating sparse LLM inference. EC-SpMV introduces (1) a hierarchical block extraction algorithm that captures multiple granularities of block structures within sparse LLMs, and (2) a novel compressed sparse format (EC-CSR) that employs delta indexing to reduce storage overhead and enhance memory access efficiency. Evaluated on sparse weight matrices from LLaMA and OPT models across sparsity levels from 30% to 90%, EC-SpMV achieves up to 7.47× speedup over state-of-the-art SpMV libraries and reduces storage overhead by up to 58.5% compared with CSR.",
+      "identifiers": [
+        "SemanticScholar:cad4df62a5e319fe9b6da4f1e30d623ce339cd11"
+      ],
+      "semantic_scholar_id": "cad4df62a5e319fe9b6da4f1e30d623ce339cd11",
+      "canonical_id": "arXiv:2507.12205",
+      "arxiv_id": "2507.12205",
+      "doi": "10.1145/3821427",
+      "authors": [
+        "Jun-Qing Lin",
+        "Jing-Wei Sun",
+        "Ming Lu",
+        "Guang-Zhong Sun"
+      ],
+      "priority": 3,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 3,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 455,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2605.24144",
+      "identity_tokens": [
+        "id:DOI:10.1109/isca66397.2026.00102",
+        "id:SemanticScholar:b7a5c202bb947f543b1f35a07ef441612f563033",
+        "id:arXiv:2605.24144",
+        "title:eva accelerating llm decoding via an efficient vector quantization architecture",
+        "url:https://arxiv.org/abs/2605.24144"
+      ],
+      "record": {
+        "title": "EVA: Accelerating LLM Decoding via an Efficient Vector Quantization Architecture",
+        "source_url": "https://arxiv.org/abs/2605.24144",
+        "year": 2026,
+        "published": "2026-05-22",
+        "venue": "International Symposium on Computer Architecture",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large Language Models (LLMs) have achieved impressive performance across diverse domains but remain inefficient during the autoregressive decoding phase. Unlike the prefill stage, which employs compute-bound GEMM operations, decoding executes a sequence of small GEMV-like computations that are memory-bound and underutilize modern accelerators. Weight-only vector quantization (VQ) has emerged as an effective compression technique that clusters model weights into a shared codebook and replaces the original weight matrix with lowprecision indices, enabling 2-bit-level weight compression. While this approach substantially reduces model size and memory bandwidth, it still suffers from two critical inefficiencies: the low utilization of GEMV computation and frequent memory conflicts during codebook lookups. This paper presents EVA, an efficient vector-quantizationbased architecture that addresses both computational and memory bottlenecks in LLM decoding. EVA builds on a simple yet effective insight that combines input-codebook computation with conflict-free memory access. Instead of reconstructing quantized weights from indices, EVA directly performs dot products between input vectors and the weight codebook, transforming LLM decoding from GEMV to GEMM computation. It then performs structured lookups from an intermediate output buffer, eliminating memory bank conflicts. We further design a hardware-software co-optimized architecture specialized for LLM decoding while remaining compatible with conventional prefill execution. Evaluations show that EVA achieves up to 11.17× speedup and $7.17 \\times$ higher energy efficiency compared with the SOTA lookup-based architecture, while preserving arithmetic precision after vector quantization. Our code is available at https://github.com/dbw6/Eva.git.",
+        "identifiers": [
+          "SemanticScholar:b7a5c202bb947f543b1f35a07ef441612f563033"
+        ],
+        "semantic_scholar_id": "b7a5c202bb947f543b1f35a07ef441612f563033",
+        "canonical_id": "arXiv:2605.24144",
+        "arxiv_id": "2605.24144",
+        "doi": "10.1109/ISCA66397.2026.00102",
+        "authors": [
+          "Bo-Wen Duan",
+          "Cong Guo",
+          "Chi-Yue Wei",
+          "Haoxuan Shan",
+          "Yu-Zhe Fu",
+          "Xinhua Chen",
+          "Yifan Xu",
+          "Ziyue Zhang",
+          "Changchun Zhou",
+          "Hai Li",
+          "Yi-Ran Chen"
+        ],
+        "priority": 112,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 10,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 112,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 145,
+          "matched_prestigious_venue": "International Symposium on Computer Architecture"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2606.12876",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2606.12876",
+        "id:SemanticScholar:3505f5533cebb2efefdf6fd83bc723ac173100b1",
+        "id:arXiv:2606.12876",
+        "title:multibitwidth quantization for llms using additive codebooks",
+        "url:https://arxiv.org/abs/2606.12876"
+      ],
+      "record": {
+        "title": "Multi-Bitwidth Quantization for LLMs Using Additive Codebooks",
+        "source_url": "https://arxiv.org/abs/2606.12876",
+        "year": 2026,
+        "published": "2026-06-11",
+        "venue": "arXiv.org",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "As large language models (LLMs) are increasingly deployed across heterogeneous hardware with varying resource constraints, the ability to adaptively manage the performance-efficiency trade-off without retraining is critical. We propose Drop-by-Drop, a novel multi-bitwidth post-training quantization framework enabling inference-time precision control over LLM weights from a single quantized model. As theoretical motivation, we prove that Gaussian sources are successively refinable under a weighted mean squared error distortion motivated by LLM loss functions: successive refinement across distortion levels incurs no rate penalty relative to encoding at each level separately. Drop-by-Drop approximates this hierarchical structure in practice by incorporating Matryoshka-style supervision into additive codebook training, inducing an ordering in which codebook prefixes yield accurate partial reconstructions at each precision level. Furthermore, a block-Hadamard rotation brings the weight distribution closer to our Gaussian source assumption. The result is a single model that serves multiple bitwidths by dropping codebooks, reducing storage and quantization cost relative to the static per-bitwidth models. Across Qwen, LLaMA, Gemma, and Mistral, Drop-by-Drop achieves lower perplexity than state-of-the-art multi-bitwidth methods with competitive zero-shot accuracy, while our specialized kernels further reduce decoding latency.",
+        "identifiers": [
+          "SemanticScholar:3505f5533cebb2efefdf6fd83bc723ac173100b1"
+        ],
+        "semantic_scholar_id": "3505f5533cebb2efefdf6fd83bc723ac173100b1",
+        "canonical_id": "arXiv:2606.12876",
+        "arxiv_id": "2606.12876",
+        "doi": "10.48550/arXiv.2606.12876",
+        "authors": [
+          "Liza Babaoglu",
+          "Shuangyi Chen",
+          "Ashish J. Khisti"
+        ],
+        "priority": 102,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 102,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 125,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2606.31982",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2606.31982",
+        "id:SemanticScholar:3153a8f86eecb8c9dd8220f12efc4d409ad1608e",
+        "id:arXiv:2606.31982",
+        "title:era entropyguided visual token pruning with rectified attention for efficient mllms",
+        "url:https://arxiv.org/abs/2606.31982"
+      ],
+      "record": {
+        "title": "ERA: Entropy-Guided Visual Token Pruning with Rectified Attention for Efficient MLLMs",
+        "source_url": "https://arxiv.org/abs/2606.31982",
+        "year": 2026,
+        "published": "2026-06-30",
+        "venue": "arXiv.org",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Multimodal Large Language Models (MLLMs) incur prohibitive inference costs due to long visual token sequences. Training-free visual token reduction provides an efficient solution. However, existing methods distort attention distributions, giving rise to a phenomenon we term Attention Logit Collapse. To address this issue, we propose ERA, an Entropy-guided visual token pruning framework with Rectified Attention for efficient MLLMs. Specifically, ERA comprises three crucial components: Dual-view Entropy Pruning (DEP), Bias-aware Token Recycling (BTR), and Logit-preserving Attention Rectification (LAR). First, DEP identifies representative anchor tokens by jointly modeling visual diversity and head-wise saliency. BTR then recycles pruned tokens into their corresponding anchors while estimating a cluster-level logit bias. Building upon this, LAR injects the estimated bias into attention logits, effectively rectifying the collapse induced by token reduction. Together, these components preserve visual evidence even under aggressive compression, enabling robust performance across single-image, multi-image, and video settings on a wide range of MLLMs. Beyond delivering practical acceleration, ERA establishes logit-preserving visual token pruning as a principled framework for efficient MLLMs, unifying theoretical foundation, algorithmic design, and practical deployment. The code is at https://github.com/924973292/ERA.",
+        "identifiers": [
+          "SemanticScholar:3153a8f86eecb8c9dd8220f12efc4d409ad1608e"
+        ],
+        "semantic_scholar_id": "3153a8f86eecb8c9dd8220f12efc4d409ad1608e",
+        "canonical_id": "arXiv:2606.31982",
+        "arxiv_id": "2606.31982",
+        "doi": "10.48550/arXiv.2606.31982",
+        "authors": [
+          "Yuhao Wang",
+          "Mu Qiao",
+          "Haiwen Diao",
+          "Yun-Zhi Zhuge",
+          "Ping-Ping Zhang",
+          "Xindong Zhang",
+          "Lei Zhang",
+          "Huchuan Lu"
+        ],
+        "priority": 102,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 102,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 106,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2601.22716",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2601.22716",
+        "id:SemanticScholar:3b25038d0c358701e930c2a5e1b0cab5281b0f52",
+        "id:arXiv:2601.22716",
+        "title:breaking the blocks continuous lowrank decomposed scaling for unified llm quantization and adaptation",
+        "url:https://arxiv.org/abs/2601.22716"
+      ],
+      "record": {
+        "title": "Breaking the Blocks: Continuous Low-Rank Decomposed Scaling for Unified LLM Quantization and Adaptation",
+        "source_url": "https://arxiv.org/abs/2601.22716",
+        "year": 2026,
+        "published": "2026-01-30",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Current quantization methods for LLMs predominantly rely on block-wise structures to maintain efficiency, often at the cost of representational flexibility. In this work, we demonstrate that element-wise quantization can be made as efficient as block-wise scaling while providing strictly superior expressive power by modeling the scaling manifold as continuous low-rank matrices ($S = BA$). We propose Low-Rank Decomposed Scaling (LoRDS), a unified framework that rethinks quantization granularity through this low-rank decomposition. By\"breaking the blocks\"of spatial constraints, LoRDS establishes a seamless efficiency lifecycle: it provides high-fidelity PTQ initialization refined via iterative optimization, enables joint QAT of weights and scaling factors, and facilitates high-rank multiplicative PEFT adaptation. Unlike additive PEFT approaches such as QLoRA, LoRDS enables high-rank weight updates within a low-rank budget while incurring no additional inference overhead. Supported by highly optimized Triton kernels, LoRDS consistently outperforms state-of-the-art baselines across various model families in both quantization and downstream fine-tuning tasks. Notably, on Llama3-8B, our method achieves up to a 27.0% accuracy improvement at 3 bits over NormalFloat quantization and delivers a 1.5x inference speedup on NVIDIA RTX 4090 while enhancing PEFT performance by 9.6% on downstream tasks over 4bit QLoRA, offering a robust and integrated solution for unified compression and adaptation of LLMs.",
+        "identifiers": [
+          "SemanticScholar:3b25038d0c358701e930c2a5e1b0cab5281b0f52"
+        ],
+        "semantic_scholar_id": "3b25038d0c358701e930c2a5e1b0cab5281b0f52",
+        "canonical_id": "arXiv:2601.22716",
+        "arxiv_id": "2601.22716",
+        "doi": "10.48550/arXiv.2601.22716",
+        "authors": [
+          "Pingzhi Tang",
+          "Rui-Jie Zhou",
+          "Fan-Xu Meng",
+          "Wen-Jie Pei",
+          "Mu-Han Zhang"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 257,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2503.06594",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2503.06594",
+        "id:SemanticScholar:ac0ef442016704a2d495fccc013873e39da1724d",
+        "id:arXiv:2503.06594",
+        "title:beyond decoderonly large language models can be good encoders for machine translation",
+        "url:https://arxiv.org/abs/2503.06594"
+      ],
+      "record": {
+        "title": "Beyond Decoder-only: Large Language Models Can be Good Encoders for Machine Translation",
+        "source_url": "https://arxiv.org/abs/2503.06594",
+        "year": 2025,
+        "published": "2025-03-09",
+        "venue": "Annual Meeting of the Association for Computational Linguistics",
+        "citation_count": 15,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The field of neural machine translation (NMT) has changed with the advent of large language models (LLMs). Much of the recent emphasis in natural language processing (NLP) has been on modeling machine translation and many other problems using a single pre-trained Transformer decoder, while encoder-decoder architectures, which were the standard in earlier NMT models, have received relatively less attention. In this paper, we explore translation models that are universal, efficient, and easy to optimize, by marrying the world of LLMs with the world of NMT. We apply LLMs to NMT encoding and leave the NMT decoder unchanged. We also develop methods for adapting LLMs to work better with the NMT decoder. Furthermore, we construct a new dataset involving multiple tasks to assess how well the machine translation system generalizes across various tasks. Evaluations on the WMT and our datasets show that results using our method match or surpass a range of baselines in terms of translation quality, but achieve $2.4 \\sim 6.5 \\times$ inference speedups and a $75\\%$ reduction in the memory footprint of the KV cache. It also demonstrates strong generalization across a variety of translation-related tasks.",
+        "identifiers": [
+          "SemanticScholar:ac0ef442016704a2d495fccc013873e39da1724d"
+        ],
+        "semantic_scholar_id": "ac0ef442016704a2d495fccc013873e39da1724d",
+        "canonical_id": "arXiv:2503.06594",
+        "arxiv_id": "2503.06594",
+        "doi": "10.48550/arXiv.2503.06594",
+        "authors": [
+          "Ying-Feng Luo",
+          "Tong Zheng",
+          "Yongyu Mu",
+          "Bei Li",
+          "Qinghong Zhang",
+          "Yongqi Gao",
+          "Ziqiang Xu",
+          "Peinan Feng",
+          "Xiao-Qian Liu",
+          "Tong Xiao",
+          "Jing-Bo Zhu"
+        ],
+        "priority": 25,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 15,
+          "citation_count": 15,
+          "total": 25,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 584,
+          "matched_prestigious_venue": "Association for Computational Linguistics"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2503.08640",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2503.08640",
+        "id:SemanticScholar:4a39d2e2c4b56d5cd06e8b022a915b1ac902281f",
+        "id:arXiv:2503.08640",
+        "title:efficient manyshot incontext learning with dynamic blocksparse attention",
+        "url:https://arxiv.org/abs/2503.08640"
+      ],
+      "record": {
+        "title": "Efficient Many-Shot In-Context Learning with Dynamic Block-Sparse Attention",
+        "source_url": "https://arxiv.org/abs/2503.08640",
+        "year": 2025,
+        "published": "2025-03-11",
+        "venue": "Annual Meeting of the Association for Computational Linguistics",
+        "citation_count": 12,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Many-shot in-context learning has recently shown promise as an alternative to finetuning, with the major advantage that the same model can be served for multiple tasks. However, this shifts the computational burden from training-time to inference-time, making deployment of many-shot ICL challenging to justify in-practice. This cost is further increased if a custom demonstration set is retrieved for each inference example. We present Dynamic Block-Sparse Attention, a training-free framework for retrieval-based many-shot in-context learning. By combining carefully designed block-sparse attention and retrieval of cached groups of demonstrations, we achieve comparable per-example latency to finetuning while maintaining on average>95% of the best method's accuracy across strong ICL and finetuning baselines. We hope that this will further enable the deployment of many-shot ICL at scale.",
+        "identifiers": [
+          "SemanticScholar:4a39d2e2c4b56d5cd06e8b022a915b1ac902281f"
+        ],
+        "semantic_scholar_id": "4a39d2e2c4b56d5cd06e8b022a915b1ac902281f",
+        "canonical_id": "arXiv:2503.08640",
+        "arxiv_id": "2503.08640",
+        "doi": "10.48550/arXiv.2503.08640",
+        "authors": [
+          "Emily Xiao",
+          "Chin-Jou Li",
+          "Yi-Lin Zhang",
+          "Graham Neubig",
+          "Amanda Bertsch"
+        ],
+        "priority": 22,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 12,
+          "citation_count": 12,
+          "total": 22,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 582,
+          "matched_prestigious_venue": "Association for Computational Linguistics"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2503.05330",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2503.05330",
+        "id:SemanticScholar:16b174821052162515e1fe91757fe4cab1bc5940",
+        "id:arXiv:2503.05330",
+        "title:speculative decoding for multisample inference",
+        "url:https://arxiv.org/abs/2503.05330"
+      ],
+      "record": {
+        "title": "Speculative Decoding for Multi-Sample Inference",
+        "source_url": "https://arxiv.org/abs/2503.05330",
+        "year": 2025,
+        "published": "2025-03-07",
+        "venue": "Conference on Empirical Methods in Natural Language Processing",
+        "citation_count": 6,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "We propose a novel speculative decoding method tailored for multi-sample reasoning scenarios, such as self-consistency and Best-of-N sampling. Our method exploits the intrinsic consensus of parallel generation paths to synthesize high-quality draft tokens without requiring auxiliary models or external databases. By dynamically analyzing structural patterns across parallel reasoning paths through a probabilistic aggregation mechanism, it identifies consensus token sequences that align with the decoding distribution. Evaluations on mathematical reasoning benchmarks demonstrate a substantial improvement in draft acceptance rates over baselines, while reducing the latency in draft token construction. This work establishes a paradigm shift for efficient multi-sample inference, enabling seamless integration of speculative decoding with sampling-based reasoning techniques.",
+        "identifiers": [
+          "SemanticScholar:16b174821052162515e1fe91757fe4cab1bc5940"
+        ],
+        "semantic_scholar_id": "16b174821052162515e1fe91757fe4cab1bc5940",
+        "canonical_id": "arXiv:2503.05330",
+        "arxiv_id": "2503.05330",
+        "doi": "10.48550/arXiv.2503.05330",
+        "authors": [
+          "Yi-Wei Li",
+          "Jia-Yi Shi",
+          "Shaoxiong Feng",
+          "Pei-Wen Yuan",
+          "Xing-Lin Wang",
+          "Yue-Qi Zhang",
+          "Ji Zhang",
+          "Chu-Yi Tan",
+          "Bo-Yuan Pan",
+          "Yao Hu",
+          "Kan Li"
+        ],
+        "priority": 16,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 6,
+          "citation_count": 6,
+          "total": 16,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 586,
+          "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2606.08411",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2606.08411",
+        "id:SemanticScholar:ef23e2234139db8af287079a4761cc8681a33272",
+        "id:arXiv:2606.08411",
+        "title:asynclane decoupling refinement from advancement in diffusion language model decoding",
+        "url:https://arxiv.org/abs/2606.08411"
+      ],
+      "record": {
+        "title": "AsyncLane: Decoupling Refinement from Advancement in Diffusion Language Model Decoding",
+        "source_url": "https://arxiv.org/abs/2606.08411",
+        "year": 2026,
+        "published": "2026-06-07",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Block-wise semi-autoregressive decoding is the standard inference paradigm for diffusion large language models (DLMs), but it imposes a strict dependency between blocks: the next block cannot begin until the current block is fully decoded or its denoising budget is exhausted. We observe that once a block exposes a reliable delimiter boundary or stable semantic prefix, continuation generation need not wait for every residual token to be resolved. We propose AsyncLane, a training-free decoding scheduler that decouples refinement from advancement. AsyncLane forks a generate lane at observed delimiter boundaries into a refine lane and a continuation generate lane: the prefix remains editable, while the continuation advances before prefix refinement finishes. The resulting lane tree records decoding dependencies and output order, while execution proceeds over the active lane set. To make this asynchronous schedule efficient under bidirectional attention, AsyncLane combines shared-prefix lane batching, lookahead draft reuse, cascading termination, and compact cache refresh with refresh-logit reuse, preventing model-call cost from scaling directly with the number of lanes. AsyncLane is a drop-in replacement for block-wise DLM samplers and requires no retraining. Experiments on mathematical reasoning and code generation show that AsyncLane consistently improves throughput while maintaining competitive quality. Across LLaDA and Dream backbones, AsyncLane achieves the highest TPS in all evaluated benchmark-length settings; relative to the fastest competing baseline, it reaches peak speedups of 2.95x on LLaDA and 3.04x on Dream, with especially large gains under longer generation budgets.",
+        "identifiers": [
+          "SemanticScholar:ef23e2234139db8af287079a4761cc8681a33272"
+        ],
+        "semantic_scholar_id": "ef23e2234139db8af287079a4761cc8681a33272",
+        "canonical_id": "arXiv:2606.08411",
+        "arxiv_id": "2606.08411",
+        "doi": "10.48550/arXiv.2606.08411",
+        "authors": [
+          "Ying-Xuan Ren",
+          "Yuxuan Lou",
+          "Yong Liu",
+          "Peng-Cheng Fang",
+          "Zi-Ming Wang",
+          "Peng-Fei Zhou",
+          "Yang You"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 129,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2410.19103",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2410.19103",
+        "id:SemanticScholar:2eca14406a23abeb01dac401b213e4239ff4c75a",
+        "id:arXiv:2410.19103",
+        "title:tesseraq ultra lowbit llm posttraining quantization with block reconstruction",
+        "url:https://arxiv.org/abs/2410.19103"
+      ],
+      "record": {
+        "title": "TesseraQ: Ultra Low-Bit LLM Post-Training Quantization with Block Reconstruction",
+        "source_url": "https://arxiv.org/abs/2410.19103",
+        "year": 2024,
+        "published": "2024-10-24",
+        "venue": "arXiv.org",
+        "citation_count": 6,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large language models (LLMs) have revolutionized natural language processing, albeit at the cost of immense memory and computation requirements. Post-training quantization (PTQ) is becoming the de facto method to reduce the memory footprint and improve the inference throughput of LLMs. In this work, we aim to push the upper limit of LLM PTQ by optimizing the weight rounding parameters with the block reconstruction technique, a predominant method in previous vision models. We propose TesseraQ, a new state-of-the-art PTQ technique, to quantize the weights of LLMs to ultra-low bits. To effectively optimize the rounding in LLMs and stabilize the reconstruction process, we introduce progressive adaptive rounding. This approach iteratively transits the soft rounding variables to hard variables during the reconstruction process. Additionally, we optimize the dequantization scale parameters to fully leverage the block reconstruction technique. We demonstrate that TesseraQ can be seamlessly integrated with existing scaling or clipping-based PTQ algorithms such as AWQ and OmniQuant, significantly enhancing their performance and establishing a new state-of-the-art. For instance, when compared to AWQ, TesseraQ improves the wikitext2 perplexity from 14.65 to 6.82 and average downstream accuracy from 50.52 to 59.27 with 2-bit weight-only quantization of LLaMA-2-7B. Across a range of quantization schemes, including W2A16, W3A16, W3A3, and W4A4, TesseraQ consistently exhibits superior performance.",
+        "identifiers": [
+          "SemanticScholar:2eca14406a23abeb01dac401b213e4239ff4c75a"
+        ],
+        "semantic_scholar_id": "2eca14406a23abeb01dac401b213e4239ff4c75a",
+        "canonical_id": "arXiv:2410.19103",
+        "arxiv_id": "2410.19103",
+        "doi": "10.48550/arXiv.2410.19103",
+        "authors": [
+          "Yuhang Li",
+          "P. Panda"
+        ],
+        "priority": 6,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 6,
+          "citation_count": 6,
+          "total": 6,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 720,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2410.10714",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2410.10714",
+        "id:SemanticScholar:cee2d89783966cbbb17be601125ba5b7c1dfd4ff",
+        "id:arXiv:2410.10714",
+        "title:seedlm compressing llm weights into seeds of pseudorandom generators",
+        "url:https://arxiv.org/abs/2410.10714"
+      ],
+      "record": {
+        "title": "SeedLM: Compressing LLM Weights into Seeds of Pseudo-Random Generators",
+        "source_url": "https://arxiv.org/abs/2410.10714",
+        "year": 2024,
+        "published": "2024-10-14",
+        "venue": "arXiv.org",
+        "citation_count": 5,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large Language Models (LLMs) have transformed natural language processing, but face significant challenges in widespread deployment due to their high runtime cost. In this paper, we introduce SeedLM, a novel post-training compression method that uses seeds of pseudo-random generators to encode and compress model weights. Specifically, for each block of weights, we find a seed that is fed into a Linear Feedback Shift Register (LFSR) during inference to efficiently generate a random matrix. This matrix is then linearly combined with compressed coefficients to reconstruct the weight block. SeedLM reduces memory access and leverages idle compute cycles during inference, effectively speeding up memory-bound tasks by trading compute for fewer memory accesses. Unlike state-of-the-art compression methods that rely on calibration data, our approach is data-free and generalizes well across diverse tasks. Our experiments with Llama 3 70B, which is particularly challenging to compress, show that SeedLM achieves significantly better zero-shot accuracy retention at 4- and 3-bit than state-of-the-art techniques, while maintaining performance comparable to FP16 baselines. Additionally, FPGA-based tests demonstrate that 4-bit SeedLM, as model size increases to 70B, approaches a 4x speed-up over an FP16 Llama 2/3 baseline.",
+        "identifiers": [
+          "SemanticScholar:cee2d89783966cbbb17be601125ba5b7c1dfd4ff"
+        ],
+        "semantic_scholar_id": "cee2d89783966cbbb17be601125ba5b7c1dfd4ff",
+        "canonical_id": "arXiv:2410.10714",
+        "arxiv_id": "2410.10714",
+        "doi": "10.48550/arXiv.2410.10714",
+        "authors": [
+          "Rasoul Shafipour",
+          "David Harrison",
+          "Max Horton",
+          "Jeffrey Marker",
+          "Houman Bedayat",
+          "Sachin Mehta",
+          "Mohammad Rastegari",
+          "Mahyar Najibi",
+          "Saman Naderiparizi"
+        ],
+        "priority": 5,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 5,
+          "citation_count": 5,
+          "total": 5,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 730,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2507.12205",
+      "identity_tokens": [
+        "id:DOI:10.1145/3821427",
+        "id:SemanticScholar:cad4df62a5e319fe9b6da4f1e30d623ce339cd11",
+        "id:arXiv:2507.12205",
+        "title:ecspmv toward efficient spmv in sparse llms via block extraction and compressed storage",
+        "url:https://arxiv.org/abs/2507.12205"
+      ],
+      "record": {
+        "title": "EC-SpMV: Toward Efficient SpMV in Sparse LLMs via Block Extraction and Compressed Storage",
+        "source_url": "https://arxiv.org/abs/2507.12205",
+        "year": 2025,
+        "published": "2025-07-16",
+        "venue": "ACM Transactions on Architecture and Code Optimization (TACO)",
+        "citation_count": 3,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Sparse Matrix-Vector Multiplication (SpMV) has become a critical performance bottleneck in the local deployment of sparse Large Language Models (LLMs), where inference predominantly operates on workloads during the decoder phase with a batch size of one. Existing SpMV kernels and sparse matrix formats, originally designed for scientific computing, fail to exploit the unique structure patterns inherent in sparse LLMs, resulting in suboptimal performance and excessive storage overhead. This article presents EC-SpMV, a GPU-optimized SpMV approach for accelerating sparse LLM inference. EC-SpMV introduces (1) a hierarchical block extraction algorithm that captures multiple granularities of block structures within sparse LLMs, and (2) a novel compressed sparse format (EC-CSR) that employs delta indexing to reduce storage overhead and enhance memory access efficiency. Evaluated on sparse weight matrices from LLaMA and OPT models across sparsity levels from 30% to 90%, EC-SpMV achieves up to 7.47× speedup over state-of-the-art SpMV libraries and reduces storage overhead by up to 58.5% compared with CSR.",
+        "identifiers": [
+          "SemanticScholar:cad4df62a5e319fe9b6da4f1e30d623ce339cd11"
+        ],
+        "semantic_scholar_id": "cad4df62a5e319fe9b6da4f1e30d623ce339cd11",
+        "canonical_id": "arXiv:2507.12205",
+        "arxiv_id": "2507.12205",
+        "doi": "10.1145/3821427",
+        "authors": [
+          "Jun-Qing Lin",
+          "Jing-Wei Sun",
+          "Ming Lu",
+          "Guang-Zhong Sun"
+        ],
+        "priority": 3,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 3,
+          "citation_count": 3,
+          "total": 3,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 455,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:08c439a4dcba956b9ddb31450e031b9b94f8eda36753c26f5cdbbf0512f519ff",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}
