@@ -1,0 +1,27 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261014-1330-scheduled-chat-30/r01/research-relevance-rank91",
+  "reference_main_sha": "a9f2485270394b7179b2d7c69928e98c3f9b1c9f",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.04179",
+      "identity_tokens": [
+        "id:arXiv:2607.04179",
+        "url:https://arxiv.org/abs/2607.04179"
+      ],
+      "title": "CritiqueDriveVLM: From Verifier-Guided Reinforcement Learning to Latent Thought Distillation for Autonomous Driving",
+      "reason": "タイトルが示す主題は自動運転向け視覚言語モデルの検証器誘導強化学習と潜在思考蒸留であり、推論システム基盤の実装・資源制御ではない。自動運転タスクのモデル訓練を中心とするため現行推論サーベイから除外する。",
+      "source_url": "https://arxiv.org/abs/2607.04179",
+      "body_check": "title_screen_only; abstract_not_read; body_not_read; no Research completion credit",
+      "first_checked_at": "2026-10-14T13:36:47+09:00",
+      "last_checked_at": "2026-10-14T13:36:47+09:00",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance",
+      "worklist_rank": 91
+    }
+  ]
+}
