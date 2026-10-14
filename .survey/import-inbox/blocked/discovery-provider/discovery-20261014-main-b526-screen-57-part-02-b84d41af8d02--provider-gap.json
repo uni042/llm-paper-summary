@@ -1,0 +1,80 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-57",
+  "run_key": "discovery-20261014-main-b526-screen-57-part-02::provider-gap",
+  "reference_main_sha": "b526294f2e17d723d0e29f8cbe65c4ad466f910f",
+  "record_count": 3,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2510.09332",
+      "identity_tokens": [
+        "arXiv:2510.09332"
+      ],
+      "title": "FLRC: Fine-grained Low-Rank Compressor for Efficient LLM Inference",
+      "reason": "FLRC explicitly compresses LLM weights with fine-grained low-rank factors to enable deployment on resource-constrained hardware, directly addressing inference memory and efficiency.",
+      "source_url": "https://arxiv.org/abs/2510.09332",
+      "body_check": "abstract_screen_only; body_not_read",
+      "abstract_evidence_excerpt": "Although large language models (LLM) have achieved remarkable performance, their enormous parameter counts hinder deployment on resource-constrained hardware. Low-rank compression can reduce both memory usage and computational demand, but applying a uniform compression ratio across all layers often leads to significant",
+      "abstract_evidence_sha256": "175b51746e2e2c6657f97aa47c53fff0de7fde59f392ba762a565b6e941defad",
+      "abstract_sha256": null,
+      "source_abstract_chars": null,
+      "linked_from": [
+        "papers/inference/08-edge-on-device-llm-systems/2022-2207.00112-language-model-compression-with-weighted-low-rank-factorization.md",
+        "papers/inference/99-other-inference-systems/2025-2405.16406-spinquant-llm-quantization-with-learned-rotations.md"
+      ],
+      "first_checked_at": "2026-10-14T13:08:11+09:00",
+      "last_checked_at": "2026-10-14T13:08:11+09:00"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2605.27358",
+      "identity_tokens": [
+        "arXiv:2605.27358"
+      ],
+      "title": "MobileMoE: Scaling On-Device Mixture of Experts",
+      "reason": "MobileMoE investigates scaling sparse-expert language models for on-device deployment, directly engaging the memory and compute constraints of edge inference.",
+      "source_url": "https://arxiv.org/abs/2605.27358",
+      "body_check": "abstract_screen_only; body_not_read",
+      "abstract_evidence_excerpt": "Mixture-of-Experts (MoE) has become the de facto architecture for hundred-billion-parameter language models, yet its advantages at sub-billion scales for on-device deployment remain largely unexplored. To close this gap, we present MobileMoE, a family of on-device MoE language models with sub-billion active parameters ",
+      "abstract_evidence_sha256": "87b009e4823e8c2fe73b58394f4f4f1aae6f93f03a985e67d0f78129867df844",
+      "abstract_sha256": null,
+      "source_abstract_chars": null,
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2202.09368-expert-choice-routing.md",
+        "papers/inference/99-other-inference-systems/2025-2505.00949-llama-nemotron-efficient-reasoning-models.md"
+      ],
+      "first_checked_at": "2026-10-14T13:08:11+09:00",
+      "last_checked_at": "2026-10-14T13:08:11+09:00"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1109/TVLSI.2025.3604705",
+      "identity_tokens": [
+        "DOI:10.1109/TVLSI.2025.3604705"
+      ],
+      "title": "MoE-Sched: Enabling Efficient FPGA Deployment of Mixture-of-Experts Vision Transformers via Coordinated Scheduling",
+      "reason": "MoE-Sched coordinates scheduling, module reuse, chip mapping, and quantization for efficient FPGA deployment of MoE vision transformers; it is a concrete transformer inference accelerator contribution, though demonstrated on vision models.",
+      "source_url": "https://doi.org/10.1109/TVLSI.2025.3604705",
+      "body_check": "abstract_screen_only; body_not_read",
+      "abstract_evidence_excerpt": "Compared to traditional Vision Transformers (ViT), Mixture-of-Experts ViTs (MoE-ViTs) are introduced to scale model size without a proportional increase in computational complexity, making them a new research focus. Given the high performance and reconfigurability, field-programmable gate array (FPGA)-based accelerator",
+      "abstract_evidence_sha256": "037b4a81cd6cccfdd24a116dabcd3729c93721bf75f12b980fd4b05e9578afba",
+      "abstract_sha256": null,
+      "source_abstract_chars": null,
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2024-2405.18832-monde-mixture-of-experts-neural-network-inference-with-near-data-processing.md",
+        "papers/inference/13-sparse-attention/2021-0aaecf5ce8bb-sanger-a-co-design-framework-for-enabling-sparse-attention-using-reconfi.md"
+      ],
+      "first_checked_at": "2026-10-14T13:08:11+09:00",
+      "last_checked_at": "2026-10-14T13:08:11+09:00"
+    }
+  ],
+  "parent_run_key": "discovery-20261014-main-b526-screen-57-part-02",
+  "provider_gap_from": ".survey/import-inbox/waiting/discovery/discovery-20261014-main-b526-screen-57-part-02-b84d41af8d02.json",
+  "provider_gap_ids": [
+    "DOI:10.1109/tvlsi.2025.3604705",
+    "arXiv:2510.09332",
+    "arXiv:2605.27358"
+  ]
+}
