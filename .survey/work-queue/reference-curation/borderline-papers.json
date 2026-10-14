@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-14T01:19:55+00:00",
-  "record_count": 4972,
+  "updated_at": "2026-10-14T01:49:02+00:00",
+  "record_count": 4975,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -76793,6 +76793,45 @@
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "A Component-Centric Perspective on Hardware Accelerators for LLMs"
+    },
+    "DOI:10.1109/icassp49660.2025.10890367": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/icassp49660.2025.10890367",
+      "identity_tokens": [
+        "DOI:10.1109/icassp49660.2025.10890367"
+      ],
+      "reason": "The IEEE conference program and DOI identify the Dynamic KV Cache paper, but the official Xplore abstract endpoint returned HTTP 418. Crossref REST DOI lookup was inaccessible through the available retrieval tool, so the publisher abstract could not be screened.",
+      "first_checked_at": "2026-10-14T01:49:02+00:00",
+      "last_checked_at": "2026-10-14T01:49:02+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "DynamicAttention: Dynamic KV Cache for Disaggregate LLM Inference"
+    },
+    "DOI:10.1109/dac63849.2025.11132485": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/dac63849.2025.11132485",
+      "identity_tokens": [
+        "DOI:10.1109/dac63849.2025.11132485"
+      ],
+      "reason": "The official DAC program lists the matching paper and DOI; the IEEE Xplore abstract endpoint returned HTTP 418. Crossref REST DOI lookup was inaccessible through the available retrieval tool, so the publisher abstract could not be screened.",
+      "first_checked_at": "2026-10-14T01:49:02+00:00",
+      "last_checked_at": "2026-10-14T01:49:02+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "An Algorithm-Hardware Co-design Based on Revised Microscaling Format Quantization for Accelerating Large Language Models"
+    },
+    "DOI:10.1145/3746027.3755307": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3746027.3755307",
+      "identity_tokens": [
+        "DOI:10.1145/3746027.3755307"
+      ],
+      "reason": "Bibliographic DOI/title match is confirmed in ACM Multimedia 2025 records, but the ACM Digital Library page returned HTTP 403 and the Crossref REST DOI lookup was inaccessible through the available retrieval tool. The primary abstract could not be screened.",
+      "first_checked_at": "2026-10-14T01:49:02+00:00",
+      "last_checked_at": "2026-10-14T01:49:02+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "CITR: Efficient Long Video Understanding Needs Causal Importance"
     }
   }
 }

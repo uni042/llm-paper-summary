@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-14T01:19:55+00:00",
-  "record_count": 11951,
+  "updated_at": "2026-10-14T01:49:03+00:00",
+  "record_count": 11954,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -171905,6 +171905,42 @@
       "last_checked_at": "2026-10-14T01:19:55+00:00",
       "linked_from": [],
       "title": "Multipole Semantic Attention: A Fast Approximation of Softmax Attention for Pretraining"
+    },
+    "arXiv:2507.01309": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2507.01309",
+      "identity_tokens": [
+        "arXiv:2507.01309"
+      ],
+      "reason": "対象はStable Diffusionの画像生成で、位相別denoising近似と専用dataflowで画像品質を保ちながら計算・メモリアクセスを削減する。LLM推論・配備への接続は要旨に示されない。",
+      "first_checked_at": "2026-10-14T01:49:03+00:00",
+      "last_checked_at": "2026-10-14T01:49:03+00:00",
+      "linked_from": [],
+      "title": "SD-Acc: Accelerating Stable Diffusion through Phase-Aware Sampling and Hardware Co-Optimizations"
+    },
+    "arXiv:2503.09509": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2503.09509",
+      "identity_tokens": [
+        "arXiv:2503.09509"
+      ],
+      "reason": "ViM-VQは視覚タスク向けVisual Mambaの外れ値を処理する事後ベクトル量子化で、要旨の適用先・評価対象は視覚モデルに限られ、LLMシステム効率への具体的接続は示されない。",
+      "first_checked_at": "2026-10-14T01:49:03+00:00",
+      "last_checked_at": "2026-10-14T01:49:03+00:00",
+      "linked_from": [],
+      "title": "ViM-VQ: Efficient Post-Training Vector Quantization for Visual Mamba"
+    },
+    "arXiv:2504.08202": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2504.08202",
+      "identity_tokens": [
+        "arXiv:2504.08202"
+      ],
+      "reason": "この研究は長文脈LLMのparametric recallと外部検索能力の干渉を測る評価法を提案するが、計算量・メモリ・レイテンシ・配備効率を改善する手法は要旨にない。",
+      "first_checked_at": "2026-10-14T01:49:03+00:00",
+      "last_checked_at": "2026-10-14T01:49:03+00:00",
+      "linked_from": [],
+      "title": "Harnessing the Unseen: The Hidden Influence of Intrinsic Knowledge in Long-Context Language Models"
     }
   }
 }

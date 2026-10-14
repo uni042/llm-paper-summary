@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e32e8ed1946c784d-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2507.01309",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2507.01309",
+    "identity_tokens": [
+      "arXiv:2507.01309"
+    ],
+    "reason": "対象はStable Diffusionの画像生成で、位相別denoising近似と専用dataflowで画像品質を保ちながら計算・メモリアクセスを削減する。LLM推論・配備への接続は要旨に示されない。",
+    "first_checked_at": "2026-10-14T01:49:03+00:00",
+    "last_checked_at": "2026-10-14T01:49:03+00:00",
+    "linked_from": [],
+    "title": "SD-Acc: Accelerating Stable Diffusion through Phase-Aware Sampling and Hardware Co-Optimizations"
+  },
+  "processed_at": "2026-10-14T01:49:03+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e32e8ed1946c",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
