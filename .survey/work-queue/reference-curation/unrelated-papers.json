@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-14T02:46:32+00:00",
-  "record_count": 11963,
+  "updated_at": "2026-10-14T02:49:15+00:00",
+  "record_count": 11970,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -172112,6 +172112,136 @@
         "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
       ],
       "title": "End-to-End Multi-Modal Diffusion Mamba"
+    },
+    "arXiv:2510.06107": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2510.06107",
+      "identity_tokens": [
+        "arXiv:2510.06107"
+      ],
+      "reason": "This work explains hallucination mechanisms and evaluates explanatory fidelity, not runtime or inference-system efficiency.",
+      "first_checked_at": "2026-10-14T02:49:13+00:00",
+      "last_checked_at": "2026-10-14T02:49:13+00:00",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2024-layerskip-enabling-early-exit-inference-and-self-speculative-decoding.md",
+        "papers/inference/07-kv-cache-optimization-compression/2023-2305.17118-scissorhands.md",
+        "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md",
+        "papers/inference/07-kv-cache-optimization-compression/2023-2310.01801-fastgen.md",
+        "papers/inference/12-moe-parallelism-communication/2021-2101.03961-switch-transformers-scaling-to-trillion-parameter-models-with-simple-and.md",
+        "papers/inference/99-other-inference-systems/2025-2504.05419-reasoning-models-know-when-they-re-right-probing-hidden-states-for-self-.md"
+      ],
+      "title": "Distributional Semantics Tracing: A Framework for Explaining Hallucinations in Large Language Models"
+    },
+    "DOI:10.1109/isca66397.2026.00185": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/isca66397.2026.00185",
+      "identity_tokens": [
+        "DOI:10.1109/isca66397.2026.00185"
+      ],
+      "reason": "The topology-aware accelerator reduces graph-transformer computation and data movement, but targets graph representation learning rather than LLM inference systems.",
+      "first_checked_at": "2026-10-14T02:49:13+00:00",
+      "last_checked_at": "2026-10-14T02:49:13+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2024-2401.03868-flightllm-efficient-large-language-model-inference-with-a-complete-mappi.md",
+        "papers/inference/13-sparse-attention/2020-2012.09852-spatten-efficient-sparse-attention-architecture-with-cascade-token-and-head-pruning.md",
+        "papers/inference/16-weight-quantization-compression/2023-2306.00978-awq.md",
+        "papers/inference/99-other-inference-systems/2022-2204.09656-a-fast-post-training-pruning-framework-for-transformers.md",
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+        "papers/inference/99-other-inference-systems/2022-2206.01861-zeroquant-efficient-and-affordable-post-training-quantization-for-large-.md",
+        "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2023-2301.00774-sparsegpt-massive-language-models-can-be-accurately-pruned-in-one-shot.md"
+      ],
+      "title": "TAGT: An Efficient Graph Transformer Accelerator with Topology-aware Sparsification and Merging"
+    },
+    "arXiv:2605.15617": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.15617",
+      "identity_tokens": [
+        "arXiv:2605.15617"
+      ],
+      "reason": "PrismLLM reduces resources for faithful LLM training emulation; its contribution is training-system emulation, not LLM inference or serving.",
+      "first_checked_at": "2026-10-14T02:49:13+00:00",
+      "last_checked_at": "2026-10-14T02:49:13+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2026-2603.05451-flashattention-4-algorithm-and-kernel-pipelining-co-design-for-asymmetri.md",
+        "papers/inference/99-other-inference-systems/2019-1909.08053-megatron-lm-training-multi-billion-parameter-language-models-using-model.md",
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md",
+        "papers/inference/99-other-inference-systems/2024-2407.08608-flashattention-3-fast-and-accurate-attention-with-asynchrony-and-low-pre.md",
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ],
+      "title": "A Few GPUs, A Whole Lotta Scale: Faithful LLM Training Emulation with PrismLLM"
+    },
+    "arXiv:2412.16481": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2412.16481",
+      "identity_tokens": [
+        "arXiv:2412.16481"
+      ],
+      "reason": "Its GPU-locality optimization targets point-cloud vision transformers, an independent application rather than LLM inference or serving.",
+      "first_checked_at": "2026-10-14T02:49:14+00:00",
+      "last_checked_at": "2026-10-14T02:49:14+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2018-1805.02867-online-normalizer-calculation-for-softmax.md",
+        "papers/inference/09-kernel-runtime-compilation/2024-2410.20399-thunderkittens-simple-fast-and-adorable-ai-kernels.md",
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md",
+        "papers/inference/99-other-inference-systems/2024-2407.08608-flashattention-3-fast-and-accurate-attention-with-asynchrony-and-low-pre.md"
+      ],
+      "title": "Flash3D: Super-scaling Point Transformers through Joint Hardware-Geometry Locality"
+    },
+    "arXiv:2602.01075": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.01075",
+      "identity_tokens": [
+        "arXiv:2602.01075"
+      ],
+      "reason": "The work benchmarks mathematical reasoning and proposes an agentic task-solving framework; no inference-system efficiency contribution is stated.",
+      "first_checked_at": "2026-10-14T02:49:14+00:00",
+      "last_checked_at": "2026-10-14T02:49:14+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.05254-yoco.md",
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+        "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md",
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "title": "ConvexBench: Can LLMs Recognize Convex Functions?"
+    },
+    "arXiv:2504.03662": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2504.03662",
+      "identity_tokens": [
+        "arXiv:2504.03662"
+      ],
+      "reason": "Its optimization is automatic distributed Transformer training; the abstract does not state an inference-system contribution.",
+      "first_checked_at": "2026-10-14T02:49:14+00:00",
+      "last_checked_at": "2026-10-14T02:49:14+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1909.08053-megatron-lm-training-multi-billion-parameter-language-models-using-model.md",
+        "papers/inference/99-other-inference-systems/2021-2104.04473-efficient-large-scale-language-model-training-on-gpu-clusters-using-mega.md",
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md",
+        "papers/training/01-training-offload-memory-systems/2021-2104.07857-zero-infinity-breaking-the-gpu-memory-wall-for-extreme-scale-deep-learning.md",
+        "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md"
+      ],
+      "title": "Galvatron: Automatic Distributed Training for Large Transformer Models"
+    },
+    "arXiv:2603.25450": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.25450",
+      "identity_tokens": [
+        "arXiv:2603.25450"
+      ],
+      "reason": "The method estimates answer correctness for evaluation and routing, not inference execution efficiency; it adds verifier-model computation.",
+      "first_checked_at": "2026-10-14T02:49:15+00:00",
+      "last_checked_at": "2026-10-14T02:49:15+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2022-2211.17192-speculative-decoding.md",
+        "papers/inference/05-speculative-decoding-moe/2023-2302.01318-speculative-sampling.md",
+        "papers/inference/99-other-inference-systems/2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md",
+        "papers/inference/99-other-inference-systems/2024-2404.14618-hybrid-llm-cost-efficient-and-quality-aware-query-routing.md"
+      ],
+      "title": "Cross-Model Disagreement as a Label-Free Correctness Signal"
     }
   }
 }

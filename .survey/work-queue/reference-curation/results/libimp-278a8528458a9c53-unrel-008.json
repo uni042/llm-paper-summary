@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-278a8528458a9c53-unrel-008",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2412.16481",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2412.16481",
+    "identity_tokens": [
+      "arXiv:2412.16481"
+    ],
+    "reason": "Its GPU-locality optimization targets point-cloud vision transformers, an independent application rather than LLM inference or serving.",
+    "first_checked_at": "2026-10-14T02:49:14+00:00",
+    "last_checked_at": "2026-10-14T02:49:14+00:00",
+    "linked_from": [
+      "papers/inference/09-kernel-runtime-compilation/2018-1805.02867-online-normalizer-calculation-for-softmax.md",
+      "papers/inference/09-kernel-runtime-compilation/2024-2410.20399-thunderkittens-simple-fast-and-adorable-ai-kernels.md",
+      "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+      "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md",
+      "papers/inference/99-other-inference-systems/2024-2407.08608-flashattention-3-fast-and-accurate-attention-with-asynchrony-and-low-pre.md"
+    ],
+    "title": "Flash3D: Super-scaling Point Transformers through Joint Hardware-Geometry Locality"
+  },
+  "processed_at": "2026-10-14T02:49:14+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-278a8528458a",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

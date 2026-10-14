@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-278a8528458a9c53-border-005",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1109/asp-dac66049.2026.11420462",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1109/asp-dac66049.2026.11420462",
+    "identity_tokens": [
+      "DOI:10.1109/asp-dac66049.2026.11420462"
+    ],
+    "reason": "The title directly concerns communication efficiency for LLM decoding on DRAM-based PIM, but the implementation and measured effect remain unverified. Primary-source access limitation: The IEEE publisher abstract page could not be retrieved; the official ASP-DAC program and conference PDF confirmed the title, but no primary abstract text was read.",
+    "first_checked_at": "2026-10-14T02:49:12+00:00",
+    "last_checked_at": "2026-10-14T02:49:12+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2311.18677-splitwise-efficient-generative-llm-inference-phase-splitting.md",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.09670-distserve-disaggregating-prefill-decoding-goodput.md",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2404.09526-loongserve-efficiently-serving-long-context-large-language-models-with-e.md",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2407.00079-mooncake-kvcache-centric-disaggregated-architecture.md",
+      "papers/inference/17-pim-near-data-acceleration/2024-2403.00579-neupims-npu-pim-heterogeneous-acceleration-for-batched-llm-inferencing.md",
+      "papers/inference/17-pim-near-data-acceleration/2024-attacc-unleashing-the-power-of-pim-for-batched-transformer-based-generative-model-inference.md",
+      "papers/survey/03-inference-engines/2024-2402.16363-llm-inference-unveiled.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "BLADE: Boosting LLM Decoding’s Communication Efficiency in DRAM-based PIM"
+  },
+  "processed_at": "2026-10-14T02:49:12+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-278a8528458a",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
