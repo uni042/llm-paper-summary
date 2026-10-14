@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-14T01:48:09+00:00",
+  "generated_at": "2026-10-14T01:55:00+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -1088,8 +1088,8 @@
       "canonical_id": "arXiv:2601.22954",
       "title": "Residual Context Diffusion Language Models",
       "source_url": "https://arxiv.org/html/2601.22954v2",
-      "returned_at": "2026-10-14T01:44:34+00:00",
-      "return_count": 1,
+      "returned_at": "2026-10-14T01:54:06+00:00",
+      "return_count": 2,
       "assigned_worker": "scheduled-chat-30",
       "reason": "blocked_quality",
       "failures": [
@@ -1107,16 +1107,16 @@
           "評価説明量 0 < 500"
         ]
       },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_4c788705a65481918f215a789da70a88--2026-2601.22954-residual-context-diffusion-research-20261014-1000-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_4c788705a65481918f215a789da70a88--2026-2601.22954-residual-context-diffusion-research-20261014-1000-scheduled-chat-00-r01.json",
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-207ade869c88--libfile_4c788705a65481918f215a789da70a88--2026-2601.22954-residual-context-diffusion-research-20261014-1000-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-207ade869c88--libfile_4c788705a65481918f215a789da70a88--2026-2601.22954-residual-context-diffusion-research-20261014-1000-scheduled-chat-00-r01.json",
       "worker_run_key": "20261014-1000-scheduled-chat-00/r01"
     },
     {
       "canonical_id": "arXiv:2604.24447",
       "title": "Characterizing Vision-Language-Action Models across XPUs: Constraints and Acceleration for On-Robot Deployment",
       "source_url": "https://arxiv.org/html/2604.24447v1",
-      "returned_at": "2026-10-14T01:44:36+00:00",
-      "return_count": 1,
+      "returned_at": "2026-10-14T01:54:07+00:00",
+      "return_count": 2,
       "assigned_worker": "scheduled-chat-00",
       "reason": "blocked_quality",
       "failures": [
@@ -1134,8 +1134,8 @@
           "評価説明量 0 < 500"
         ]
       },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_72ee85827d088191bb0ec7259141200a--2026-2604.24447-vla-xpu-characterization-research-20261014-1000-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_72ee85827d088191bb0ec7259141200a--2026-2604.24447-vla-xpu-characterization-research-20261014-1000-scheduled-chat-00-r01.json",
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-3b9af2450724--libfile_72ee85827d088191bb0ec7259141200a--2026-2604.24447-vla-xpu-characterization-research-20261014-1000-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-3b9af2450724--libfile_72ee85827d088191bb0ec7259141200a--2026-2604.24447-vla-xpu-characterization-research-20261014-1000-scheduled-chat-00-r01.json",
       "worker_run_key": "20261014-1000-scheduled-chat-00/r01"
     }
   ]
