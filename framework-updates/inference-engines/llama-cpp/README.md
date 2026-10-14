@@ -78,6 +78,12 @@ llama.cppの主要な機能・性能更新を継続的に記録する集約ペ�
 
 ## 主要更新
 
+### 2026-10-14 — llama.cpp b11588〜b11602：画像MTP・Vulkanホストメモリ・埋め込み・アリーナ修正
+- **b11588**: Qwen3.8-Flash-Nextで画像埋め込みと複数トークン予測（MTP）を組み合わせる経路に対応。視覚入力と投機的生成の互換性改善。[公式版](https://github.com/ggml-org/llama.cpp/releases/tag/b11588)／[PR #30397](https://github.com/ggml-org/llama.cpp/pull/30397)。
+- **b11594**: Vulkanで複数デバイスからGPU可視ホストメモリへのアクセスを改善。Windowsを含むVulkan経路の変更であり、**CUDA固有の改善ではない**。[公式版](https://github.com/ggml-org/llama.cpp/releases/tag/b11594)／[PR #29741](https://github.com/ggml-org/llama.cpp/pull/29741)。
+- **b11597**: プーリング埋め込みで語彙logits算出に必要な不要の言語モデル出力ヘッド（LM head）計算とホストバッファを省略。**一般の生成復号の一律高速化とは異なる**。[公式版](https://github.com/ggml-org/llama.cpp/releases/tag/b11597)／[PR #30445](https://github.com/ggml-org/llama.cpp/pull/30445)。
+- **b11602**: メモリアリーナ再確保後のサブグラフ再生成で整合性を修正。定量的な性能改善は未報告。[公式版](https://github.com/ggml-org/llama.cpp/releases/tag/b11602)／[PR #30453](https://github.com/ggml-org/llama.cpp/pull/30453)。
+
 ### 2026-10-13 — llama.cpp b11569〜b11577：MoE・CUDA注意・判定モデル対応
 - **b11569（10/12公開）**: Metal版の専門家混合（MoE）行列積 `MUL_MAT_ID` で同一専門家IDが重複する場合の出力不整合を修正し、不要な起動タイルを削減。限定ベンチマークでは入力処理が約0.5〜2%向上、逐次生成はほぼ不変。**Metal限定でありWindows CUDAの高速化とは別**。[公式版](https://github.com/ggml-org/llama.cpp/releases/tag/b11569)
 - **b11572／b11577**: vLLM D3系の判定モデル対応を追加し、後続版で複数系列の問題を修正。一般の会話モデル全体の速度改善ではない。[b11572](https://github.com/ggml-org/llama.cpp/releases/tag/b11572)／[b11577](https://github.com/ggml-org/llama.cpp/releases/tag/b11577)
