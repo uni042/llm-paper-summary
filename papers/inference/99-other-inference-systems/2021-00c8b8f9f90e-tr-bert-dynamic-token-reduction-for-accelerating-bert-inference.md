@@ -1,33 +1,45 @@
 ---
-canonical_id: "DOI:10.18653/v1/2021.naacl-main.463"
-title: "TR-BERT: Dynamic Token Reduction for Accelerating BERT Inference"
-summary: "TR-BERTはBERTの全層を全トークンに適用する代わりに、層の途中でトークンごとに計算継続・終了を選択する。二層の方策網を強化学習で訓練し、正解ラベルの対数確率と継続トークン数の罰則を両立する。11課題でFLOPs比おおむね2～5倍の削減を示し、SQuAD 2.0では2.08倍のFLOPs比に対しV100実測2.01倍を確認した。ただし質問応答では精度低下があり、長文タスクでも効果は課題依存である。"
-list_summary: "強化学習したトークン選択器でBERTの各トークンの処理層数を動的に減らし、質問応答・分類で精度と演算量を調整する推論高速化方式。"
+canonical_id: DOI:10.18653/v1/2021.naacl-main.463
+title: 'TR-BERT: Dynamic Token Reduction for Accelerating BERT Inference'
+summary: TR-BERTはBERTの全層を全トークンに適用する代わりに、層の途中でトークンごとに計算継続・終了を選択する。二層の方策網を強化学習で訓練し、正解ラベルの対数確率と継続トークン数の罰則を両立する。11課題でFLOPs比おおむね2～5倍の削減を示し、SQuAD 2.0では2.08倍のFLOPs比に対しV100実測2.01倍を確認した。ただし質問応答では精度低下があり、長文タスクでも効果は課題依存である。
+list_summary: 強化学習したトークン選択器でBERTの各トークンの処理層数を動的に減らし、質問応答・分類で精度と演算量を調整する推論高速化方式。
 authors:
-  - Deming Ye
-  - Yankai Lin
-  - Yufei Huang
-  - Maosong Sun
-published: "2021-06"
-publication: "Proceedings of NAACL-HLT 2021, pp. 5798–5809"
-publication_type: "conference paper"
-publication_status: "published"
-source: "https://aclanthology.org/2021.naacl-main.463.pdf"
+- Deming Ye
+- Yankai Lin
+- Yufei Huang
+- Maosong Sun
+published: 2021-06
+publication: Proceedings of NAACL-HLT 2021, pp. 5798–5809
+publication_type: conference paper
+publication_status: published
+source: https://aclanthology.org/2021.naacl-main.463.pdf
 sources:
-  - "https://aclanthology.org/2021.naacl-main.463.pdf"
-  - "https://aclanthology.org/2021.naacl-main.463/"
-implementation: "著者はBERT-base、6層DistilBERT、1024トークン拡張BERTを基盤に、トークン選択方策網を追加して11課題で評価した。論文の脚注・要旨に著者公開実装を記載。"
-code: "https://github.com/thunlp/TR-BERT"
-last_checked: "2026-10-13"
-worker_completed_at: "2026-10-13T22:09:00+09:00"
-worker_run_key: "20261013-2200-scheduled-chat-00/r01"
-reference_main_sha: "43ed858adba40d66223c6452f61515bde66c9a6a"
+- https://aclanthology.org/2021.naacl-main.463.pdf
+- https://aclanthology.org/2021.naacl-main.463/
+implementation: 著者はBERT-base、6層DistilBERT、1024トークン拡張BERTを基盤に、トークン選択方策網を追加して11課題で評価した。論文の脚注・要旨に著者公開実装を記載。
+code: https://github.com/thunlp/TR-BERT
+last_checked: '2026-10-13'
+worker_completed_at: '2026-10-13T22:09:00+09:00'
+worker_run_key: 20261013-2200-scheduled-chat-00/r01
+reference_main_sha: 43ed858adba40d66223c6452f61515bde66c9a6a
 quality_self_review_passed: true
-quality_self_review_version: "2026-10-07"
-repair_origin: "returned_research"
-repair_origin_canonical_id: "DOI:10.18653/v1/2021.naacl-main.463"
+quality_self_review_version: '2026-10-07'
+repair_origin: returned_research
+repair_origin_canonical_id: DOI:10.18653/v1/2021.naacl-main.463
 last_audited: null
 audit_version: 0
+references:
+- canonical_id: arXiv:2004.12993
+- canonical_id: arXiv:1909.11556
+- canonical_id: arXiv:1909.05840
+- canonical_id: arXiv:2004.02178
+- canonical_id: arXiv:1904.10509
+- canonical_id: arXiv:2009.12812
+- canonical_id: arXiv:2007.14062
+- canonical_id: arXiv:1905.10650
+references_checked_at: '2026-10-14'
+references_source: primary-pdf-reference-section
+references_total: 3
 ---
 
 # TR-BERT: Dynamic Token Reduction for Accelerating BERT Inference
