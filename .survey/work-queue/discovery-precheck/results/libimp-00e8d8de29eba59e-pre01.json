@@ -1,0 +1,1283 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-00e8d8de29eba59e-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-00e8d8de29eb",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "DOI:10.14778/3796195.3796204",
+    "arXiv:2402.00518",
+    "arXiv:2410.05462",
+    "arXiv:2511.00603",
+    "arXiv:2511.07776",
+    "arXiv:2601.15287",
+    "arXiv:2601.21626",
+    "arXiv:2602.05307",
+    "arXiv:2602.20205",
+    "arXiv:2604.00666",
+    "arXiv:2605.15572",
+    "arXiv:2605.26175",
+    "arXiv:2605.28713"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 13,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "03deed1484056d7402d063669d747c376afc6d8a",
+  "raw_search_result_count": 13,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 13,
+  "provider_progress": {
+    "requested_count": 13,
+    "status_counts": {
+      "allowed": 13,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-14T00:43:05.979476+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "DOI:10.14778/3796195.3796204",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2402.00518",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2410.05462",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2511.00603",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2511.07776",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2601.15287",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2601.21626",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2602.05307",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2602.20205",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2604.00666",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2605.15572",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2605.26175",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2605.28713",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "EPARA: Parallelizing Categorized AI Inference in Edge Clouds",
+      "source_url": "https://arxiv.org/abs/2511.00603",
+      "year": 2025,
+      "published": "2025-11-01",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "With the increasing adoption of AI applications such as large language models and computer vision AI, the computational demands on AI inference systems are continuously rising, making the enhancement of task processing capacity using existing hardware a primary objective in edge clouds. We propose EPARA, an end-to-end AI parallel inference framework in edge, aimed at enhancing the edge AI serving capability. Our key idea is to categorize tasks based on their sensitivity to latency/frequency and requirement for GPU resources, thereby achieving both request-level and service-level task-resource allocation. EPARA consists of three core components: 1) a task-categorized parallelism allocator that decides the parallel mode of each task, 2) a distributed request handler that performs the calculation for the specific request, and 3) a state-aware scheduler that periodically updates service placement in edge clouds. We implement a EPARA prototype and conduct a case study on the EPARA operation for LLMs and segmentation tasks. Evaluation through testbed experiments involving edge servers, embedded devices, and microcomputers shows that EPARA achieves up to 2.1$\\times$ higher goodput in production workloads compared to prior frameworks, while adapting to various edge AI inference tasks.",
+      "identifiers": [
+        "SemanticScholar:84ec6a3ff535f6d20a2e5f4af8a7973c318a477d"
+      ],
+      "semantic_scholar_id": "84ec6a3ff535f6d20a2e5f4af8a7973c318a477d",
+      "canonical_id": "arXiv:2511.00603",
+      "arxiv_id": "2511.00603",
+      "doi": "10.48550/arXiv.2511.00603",
+      "authors": [
+        "Yubo Wang",
+        "Yubo Cui",
+        "Tuo Shi",
+        "Danyang Li",
+        "Wenxin Li",
+        "Lide Suo",
+        "Tao Wang",
+        "Xin Xie"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 347,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Streaming Tensor Programs: A Streaming Abstraction for Dynamic Parallelism",
+      "source_url": "https://arxiv.org/abs/2511.07776",
+      "year": 2025,
+      "published": "2025-11-11",
+      "venue": "International Conference on Architectural Support for Programming Languages and Operating Systems",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Dynamic behaviors are becoming prevalent in tensor applications, like machine learning, where many widely used models contain data-dependent tensor shapes and control flow. However, the limited expressiveness of prior programming abstractions for spatial dataflow accelerators (SDAs) forces these dynamic behaviors to be implemented statically and/or unoptimized. To address these challenges, we present Streaming Tensor Programs (STeP), a streaming abstraction that enables dynamic tensor workloads to run efficiently on SDAs. STeP introduces flexible routing operators, an explicit memory hierarchy, and symbolic-shape semantics that expose dynamic data rates and tensor dimensions. These capabilities unlock new optimizations, like dynamic tiling, dynamic parallelization, and configuration time-multiplexing, that adapt SDA execution to dynamic behaviors while preserving dataflow efficiency. Using a cycle-approximate simulator on representative LLM layers and a full model with real-world traces, STeP enables: dynamic tiling that breaks the Pareto-optimal frontier from prior work, dynamic parallelization that improves latency by ~2.72x, and configuration time-multiplexing that increases compute utilization by ~2.64x over prior SDA abstractions and their implementations.",
+      "identifiers": [
+        "SemanticScholar:4ed97e7cc310a0661e5ac8b04bce87023159f908"
+      ],
+      "semantic_scholar_id": "4ed97e7cc310a0661e5ac8b04bce87023159f908",
+      "canonical_id": "arXiv:2511.07776",
+      "arxiv_id": "2511.07776",
+      "doi": "10.1145/3779212.3790229",
+      "authors": [
+        "Gina Sohn",
+        "Genghan Zhang",
+        "Konstantin Hossfeld",
+        "Jungwoo Kim",
+        "N. Sobotka",
+        "Nathan Zhang",
+        "Olivia Hsu",
+        "K. Olukotun"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 337,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Ken: An Execution Engine for Unstructured Database Systems",
+      "source_url": "https://doi.org/10.14778/3796195.3796204",
+      "year": 2026,
+      "published": "2026-01-01",
+      "venue": "Proceedings of the VLDB Endowment",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "\n Unstructured database management systems (UDBMSes) leverage machine learning to apply the relational model to modalities beyond tables, such as documents, images and videos. Queries in a UDBMS consist of\n logical operators\n for which the UDBMS chooses\n physical implementations\n (e.g., different models) with the goal to optimize both query latency and accuracy. However, many operators only expose a coarse-grained set of implementations, forcing the UDBMS to excessively sacrifice either accuracy or latency without middle-ground options. For example, an entity matching operator can either be implemented through small, specialized models or large, general-purpose models (e.g., Large Language Models) — while the former struggles on challenging inputs, the latter is more accurate but incurs orders of magnitude more computation. In this work, we aim to address this issue with\n model cascades\n , which seek to process \"easy\" inputs with small models and only resort to large models when necessary. However, cascades incur higher memory usage and additional data transfer between GPU memory and arithmetic units, which often slows queries compared to single models. To address this issue, we introduce Ken, a dedicated UDBMS\n execution engine\n that dynamically adapts its use of cascades to the query load, and optimizes the GPU placement and invocation scheduling of the cascade models. Compared to baselines, Ken achieves 1.7× –3.3× latency reductions when combining similar models for a single operator, and 122× latency reductions when combining models with orders of magnitude size differences in a multi-operator query.\n",
+      "identifiers": [
+        "SemanticScholar:effb79ce5793bb7ddd36f5d4fe1b18b473c049df"
+      ],
+      "semantic_scholar_id": "effb79ce5793bb7ddd36f5d4fe1b18b473c049df",
+      "doi": "10.14778/3796195.3796204",
+      "canonical_id": "DOI:10.14778/3796195.3796204",
+      "authors": [
+        "Ferdinand Kossmann",
+        "Ziniu Wu",
+        "Alex Turk",
+        "N. Tatbul",
+        "Lei Cao",
+        "Samuel Madden"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 286,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Towards Understanding Best Practices for Quantization of Vision-Language Models",
+      "source_url": "https://arxiv.org/abs/2601.15287",
+      "year": 2026,
+      "published": "2026-01-21",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLMs) deliver impressive results for a variety of tasks, but state-of-the-art systems require fast GPUs with large amounts of memory. To reduce both the memory and latency of these systems, practitioners quantize their learned parameters, typically at half precision. A growing body of research focuses on preserving the model performance with more aggressive bit widths, and some work has been done to apply these strategies to other models, like vision transformers. In our study we investigate how a variety of quantization methods, including state-of-the-art GPTQ and AWQ, can be applied effectively to multimodal pipelines comprised of vision models, language models, and their connectors. We address how performance on captioning, retrieval, and question answering can be affected by bit width, quantization method, and which portion of the pipeline the quantization is used for. Results reveal that ViT and LLM exhibit comparable importance in model performance, despite significant differences in parameter size, and that lower-bit quantization of the LLM achieves high accuracy at reduced bits per weight (bpw). These findings provide practical insights for efficient deployment of MLLMs and highlight the value of exploration for understanding component sensitivities in multimodal models. Our code is available at https://github.com/gautomdas/mmq.",
+      "identifiers": [
+        "SemanticScholar:18a3930231aac924cd6055ac3738e7584141f39f"
+      ],
+      "semantic_scholar_id": "18a3930231aac924cd6055ac3738e7584141f39f",
+      "canonical_id": "arXiv:2601.15287",
+      "arxiv_id": "2601.15287",
+      "doi": "10.48550/arXiv.2601.15287",
+      "authors": [
+        "Gautom Das",
+        "Vincent La",
+        "Ethan Lau",
+        "Abhinav Shrivastava",
+        "M. Gwilliam"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 266,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "HeRo-Q: A General Framework for Stable Low Bit Quantization via Hessian Conditioning",
+      "source_url": "https://arxiv.org/abs/2601.21626",
+      "year": 2026,
+      "published": "2026-01-29",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Post Training Quantization (PTQ), a mainstream model compression technique, often leads to the paradoxical'low error, high loss'phenomenon because it focuses solely on minimizing quantization error. The root cause lies in the Hessian matrix of the LLM loss landscape: a few high curvature directions are extremely sensitive to perturbations. To address this, we propose the Hessian Robust Quantization (HeRo Q) algorithm, which applies a lightweight, learnable rotation-compression matrix to the weight space prior to quantization. This joint framework reshapes the loss landscape by reducing the largest Hessian eigenvalue and reducing its max eigenvalue, thereby significantly enhancing robustness to quantization noise. HeRo-Q requires no architectural modifications, incurs negligible computational overhead, and integrates seamlessly into existing PTQ pipelines. Experiments on Llama and Qwen models show that HeRo Q consistently outperforms state of the art methods including GPTQ, AWQ, and SpinQuant not only achieving superior performance under standard W4A8 settings, but also excelling in the highly challenging W3A16 ultra low bit regime, where it boosts GSM8K accuracy on Llama3 8B to 70.15\\% and effectively avoids the logical collapse commonly seen in aggressive quantization.",
+      "identifiers": [
+        "SemanticScholar:87f9845c700adc451bd64fbd48d6871ec0e1a802"
+      ],
+      "semantic_scholar_id": "87f9845c700adc451bd64fbd48d6871ec0e1a802",
+      "canonical_id": "arXiv:2601.21626",
+      "arxiv_id": "2601.21626",
+      "doi": "10.48550/arXiv.2601.21626",
+      "authors": [
+        "Jin-Hao Zhang",
+        "Yun-Quan Zhang",
+        "Zi-Cheng Yan",
+        "Bo-Yang Zhang",
+        "Jun Sun",
+        "Da-Ning Cheng"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 258,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "MentorCollab: Large-to-Small Inference-Time Mentorship for Concise Reasoning in Language Models",
+      "source_url": "https://arxiv.org/abs/2602.05307",
+      "year": 2026,
+      "published": "2026-02-05",
+      "venue": null,
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large reasoning models (LRMs) have demonstrated impressive reasoning capabilities, but their solutions are often verbose and computationally expensive, and taxing for users to read. In contrast, small language models (SLMs) produce concise outputs with lower inference costs, yet they frequently struggle on challenging multi-step reasoning tasks. Existing inference-time collaboration methods attempt to bridge this gap through imitation, encouraging SLMs to follow the reasoning process of LRMs. However, the student often inherits the mentor's overthinking, producing long and reflective reasoning chains while still falling short in accuracy. We propose MentorCollab, a collaboration method based on mentorship: the SLM remains the primary generator and consults the LRM only when additional reasoning support is needed. At sparsely sampled token positions, we probe for divergence between the two models and use a lightweight verifier to decide whether the SLM should follow a short lookahead segment from its mentor or continue on its own. Across 15 SLM-LRM pairs and 3 domains, our method achieves an average gain of 3.0%, with improvements of up to 8.0% in 12 settings. The resulting traces remain shorter than the mentor's, using only a small fraction of its tokens. These results demonstrate that selective, verified mentorship can boost reasoning accuracy while preserving concise generation.",
+      "identifiers": [
+        "SemanticScholar:0ac8fa7ff5cb97bd0d281989a9db3821ab793166"
+      ],
+      "semantic_scholar_id": "0ac8fa7ff5cb97bd0d281989a9db3821ab793166",
+      "canonical_id": "arXiv:2602.05307",
+      "arxiv_id": "2602.05307",
+      "authors": [
+        "Haojin Wang",
+        "Yike Wang",
+        "Shang-Bin Feng",
+        "Hanna Hajishirzi",
+        "Yulia Tsvetkov"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 251,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "OTPrune: Distribution-Aligned Visual Token Pruning via Optimal Transport",
+      "source_url": "https://arxiv.org/abs/2602.20205",
+      "year": 2026,
+      "published": "2026-02-22",
+      "venue": "2026 IEEE/CVF Conference on Computer Vision and Pattern Recognition- FINDINGS Track (CVPRF)",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Multi-modal large language models (MLLMs) achieve strong visual-language reasoning but suffer from high inference cost due to redundant visual tokens. Recent work explores visual token pruning to accelerate inference, while existing pruning methods overlook the underlying distributional structure of visual representations. We propose OT-Prune, a training-free framework that formulates pruning as distribution alignment via optimal transport (OT). By minimizing the 2-Wasserstein distance between the full and pruned token distributions, OTPrune preserves both local diversity and global representativeness while reducing inference cost. Moreover, we derive a tractable submodular objective that enables efficient optimization, and theoretically prove its monotonicity and submodularity, providing a principled foundation for stable and efficient pruning. We further provide a comprehensive analysis that explains how distributional alignment contributes to stable and semantically faithful pruning. Comprehensive experiments on wider benchmarks demonstrate that OTPrune achieves superior performance-efficiency tradeoffs compared to state-of-the-art methods. The code is available at https://github.com/xiwenc1/OTPrune.",
+      "identifiers": [
+        "SemanticScholar:edd8ab5b9b401d86b87c13c296173f988466575f"
+      ],
+      "semantic_scholar_id": "edd8ab5b9b401d86b87c13c296173f988466575f",
+      "canonical_id": "arXiv:2602.20205",
+      "arxiv_id": "2602.20205",
+      "doi": "10.1109/CVPRF71909.2026.00562",
+      "authors": [
+        "Xi-Wen Chen",
+        "Wen-Hui Zhu",
+        "Gen Li",
+        "Xuan-Zhao Dong",
+        "Yujian Xiong",
+        "Hao Wang",
+        "Pei-Jie Qiu",
+        "Qingquan Song",
+        "Zhi-Peng Wang",
+        "Shao Tang",
+        "Yalin Wang",
+        "Abolfazl Razi"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 234,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "TRIMS: Trajectory-Ranked Instruction Masked Supervision for Diffusion Language Models",
+      "source_url": "https://arxiv.org/abs/2604.00666",
+      "year": 2026,
+      "published": "2026-04-01",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Diffusion language models (DLMs) offer a promising path toward low-latency generation through parallel decoding, but their practical efficiency depends heavily on the decoding trajectory. In practice, this advantage often fails to fully materialize because standard training does not provide explicit supervision over token reveal order, creating a train-inference mismatch that leads to suboptimal decoding behavior. We propose Trajectory-Ranked Instruction Masked Supervision (TRIMS), a simple trajectory-guided supervised fine-tuning framework that injects trajectory supervision into standard Masked Diffusion Language Model (MDLM) training with minimal overhead. Instead of relying on costly DLM-based distillation, TRIMS uses lightweight signals from an autoregressive teacher to guide a trajectory-aware masking strategy, encouraging the model to learn more effective decoding orders. Experiments on LLaDA and Dream across math and coding benchmarks show that TRIMS significantly improves the accuracy-parallelism trade-off over both standard MDLM training and train-free acceleration baselines, while achieving competitive performance with prior distillation-based approaches at substantially lower training cost. Further analysis shows that TRIMS leads to better decoding trajectories, validating the effectiveness of trajectory-guided supervision for DLMs.",
+      "identifiers": [
+        "SemanticScholar:1202277a17551604d62dd7e5d993a57201504e55"
+      ],
+      "semantic_scholar_id": "1202277a17551604d62dd7e5d993a57201504e55",
+      "canonical_id": "arXiv:2604.00666",
+      "arxiv_id": "2604.00666",
+      "doi": "10.48550/arXiv.2604.00666",
+      "authors": [
+        "Lingjie Chen",
+        "Rui-Zhong Qiu",
+        "Yu-Qi Fan",
+        "Yan-Jun Zhao",
+        "Hang-Hang Tong"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 196,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "EE-Tuning: An Economical yet Scalable Solution for Tuning Early-Exit Large Language Models",
+      "source_url": "https://arxiv.org/abs/2402.00518",
+      "year": 2024,
+      "published": "2024-02-01",
+      "venue": "arXiv.org",
+      "citation_count": 14,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "This work introduces EE-Tuning, a lightweight and economical solution to training/tuning early-exit large language models (LLMs). In contrast to the common approach of full-parameter pre-training, EE-Tuning augments any pre-trained (and possibly fine-tuned) standard LLM with additional early-exit layers that are tuned in a parameter-efficient manner, which requires significantly less computational resources and training data. Our implementation of EE-Tuning achieves outstanding training efficiency via extensive performance optimizations, as well as scalability due to its full compatibility with 3D parallelism. Results of systematic experiments validate the efficacy of EE-Tuning, confirming that effective early-exit LLM inference can be achieved with a limited training budget. In hope of making early-exit LLMs accessible to the community, we release the source code of our implementation of EE-Tuning at https://github.com/pan-x-c/EE-LLM.",
+      "identifiers": [
+        "SemanticScholar:7ff1c7fefef44fc36d3163bd818c078ac66fbdc2"
+      ],
+      "semantic_scholar_id": "7ff1c7fefef44fc36d3163bd818c078ac66fbdc2",
+      "canonical_id": "arXiv:2402.00518",
+      "arxiv_id": "2402.00518",
+      "doi": "10.48550/arXiv.2402.00518",
+      "authors": [
+        "Xu-Chen Pan",
+        "Yan-Xi Chen",
+        "Ya-Liang Li",
+        "Bo-Lin Ding",
+        "Jingren Zhou"
+      ],
+      "priority": 14,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 14,
+        "citation_count": 14,
+        "total": 14,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 986,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "LevAttention: Time, Space, and Streaming Efficient Algorithm for Heavy Attentions",
+      "source_url": "https://arxiv.org/abs/2410.05462",
+      "year": 2024,
+      "published": "2024-10-07",
+      "venue": "International Conference on Learning Representations",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "A central problem related to transformers can be stated as follows: given two $n \\times d$ matrices $Q$ and $K$, and a non-negative function $f$, define the matrix $A$ as follows: (1) apply the function $f$ to each entry of the $n \\times n$ matrix $Q K^T$, and then (2) normalize each of the row sums of $A$ to be equal to $1$. The matrix $A$ can be computed in $O(n^2 d)$ time assuming $f$ can be applied to a number in constant time, but the quadratic dependence on $n$ is prohibitive in applications where it corresponds to long context lengths. For a large class of functions $f$, we show how to find all the ``large attention scores\", i.e., entries of $A$ which are at least a positive value $\\varepsilon$, in time with linear dependence on $n$ (i.e., $n \\cdot \\textrm{poly}(d/\\varepsilon)$) for a positive parameter $\\varepsilon>0$. Our class of functions include all functions $f$ of the form $f(x) = |x|^p$, as explored recently in transformer models. Using recently developed tools from randomized numerical linear algebra, we prove that for any $K$, there is a ``universal set\"$U \\subset [n]$ of size independent of $n$, such that for any $Q$ and any row $i$, the large attention scores $A_{i,j}$ in row $i$ of $A$ all have $j \\in U$. We also find $U$ in $n \\cdot \\textrm{poly}(d/\\varepsilon)$ time. Notably, we (1) make no assumptions on the data, (2) our workspace does not grow with $n$, and (3) our algorithms can be computed in streaming and parallel settings. We call the attention mechanism that uses only the subset of keys in the universal set as LevAttention since our algorithm to identify the universal set $U$ is based on leverage scores. We empirically show the benefits of our scheme for vision transformers, showing how to train new models that use our universal set while training as well, showing that our model is able to consistently select ``important keys'' during training.",
+      "identifiers": [
+        "SemanticScholar:3ae61a2119ce26f67826f7778e5acb5384d8ea2d"
+      ],
+      "semantic_scholar_id": "3ae61a2119ce26f67826f7778e5acb5384d8ea2d",
+      "canonical_id": "arXiv:2410.05462",
+      "arxiv_id": "2410.05462",
+      "doi": "10.48550/arXiv.2410.05462",
+      "authors": [
+        "Ravi Kannan",
+        "Chiranjib Bhattacharyya",
+        "Praneeth Kacham",
+        "David P. Woodruff"
+      ],
+      "priority": 13,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 13,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 737,
+        "matched_prestigious_venue": "International Conference on Learning Representations"
+      }
+    },
+    {
+      "title": "Measuring Maximum Activations in Open Large Language Models",
+      "source_url": "https://arxiv.org/abs/2605.15572",
+      "year": 2026,
+      "published": "2026-05-15",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The dynamic range of activations is a first-order constraint for low-bit quantization, activation scaling, and stable LLM inference. Prior work characterized outlier features and massive activations on pre-2024 LLaMA-style models, and the downstream activation-quantization stack inherits that picture without revisiting it for the post-LLaMA open-model boom. We ask the deployment-oriented question: how large can activations get in modern open LLMs, and how does this magnitude vary across families, generations, and training stages? Under a unified pipeline (5,000-sample multi-domain corpus, family-specific tokenization, identical hooks across embeddings, hidden states, attention, MLP/MoE, SwiGLU gates, and final norm), we measure global and layerwise maxima on 27 checkpoints from 8 open families spanning dense, MoE, vision-language, intermediate-training, and instruction-tuned variants. We find that (i) global maxima span over nearly four orders of magnitude at comparable parameter counts, with Qwen3.5 and MoE checkpoints in the 10^2 to 10^3 range and Gemma3-27B-it reaching ~7 x 10^5; (ii) cross-family and cross-generation comparisons break simple monotonic scaling; and (iii) MoE checkpoints exhibit 14.0-23.4x lower peaks than matched-scale dense counterparts, while the residual stream carries the global maximum in 22/24 checkpoints. A lightweight INT-8 sanity check shows that measured maxima co-vary with low-bit reconstruction error via activation-scale selection. We conclude that maximum activation magnitude is a model property tied to family, architecture, and training stage - not a simple byproduct of size - and should be measured and reported alongside any open-weight release before low-bit deployment. The code is publicly available at https://github.com/clx1415926/Max_act_llm.",
+      "identifiers": [
+        "SemanticScholar:ef5e1a4586d7a4a7b410d5ea08d22e977d28acf7"
+      ],
+      "semantic_scholar_id": "ef5e1a4586d7a4a7b410d5ea08d22e977d28acf7",
+      "canonical_id": "arXiv:2605.15572",
+      "arxiv_id": "2605.15572",
+      "doi": "10.48550/arXiv.2605.15572",
+      "authors": [
+        "Lu Chen",
+        "Han Tian",
+        "Xin-Ran Chen",
+        "Rui Kong",
+        "Fangyu Wang",
+        "Jiamin Chen",
+        "Yu-Chen Li",
+        "Jia-Shu Zhao",
+        "Shuai-Qiang Wang",
+        "Hao-Yi Xiong",
+        "Da-Wei Yin"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 152,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "InfoQuant: Shaping Activation Distributions for Low-Bit LLM Quantization",
+      "source_url": "https://arxiv.org/abs/2605.26175",
+      "year": 2026,
+      "published": "2026-05-25",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Low-bit activation quantization remains a major bottleneck in efficient large language model (LLM) deployment. The difficulty is not only that activations contain outliers, but that their distributions are often poorly matched to a low-bit uniform quantizer. Existing post-training quantization (PTQ) methods suppress peaks, balance channels, or minimize reconstruction error, yet they rarely specify what activation distribution is actually easy to discretize. As a result, activations may appear numerically smoother while still incurring large quantization error because the quantization range remains wide or most values collapse into a few levels near the mean. We recast activation transformation as quantizer-facing distribution design and analyze quantization error from an information-theoretic perspective. Our analysis shows that quantization-friendly activations should jointly have a smaller numerical range and sufficient dispersion within that range. Guided by this analysis, we propose InfoQuant, a train-free method that employs Peak Suppression Orthogonal Transformation (PSOT) to shape activations into more quantization-friendly distributions. We further introduce adaptive outlier-token selection to improve the robustness of PSOT during optimization. Across multiple LLM families, InfoQuant consistently outperforms prior PTQ and end-to-end training baselines. Under W4A4KV4, it preserves 97% of floating-point accuracy on average and reduces the LLaMA-2 13B performance gap by 42% over the previous state of the art. Code is available at [https://github.com/LLIKKE/InfoQuant](https://github.com/LLIKKE/InfoQuant)",
+      "identifiers": [
+        "SemanticScholar:94feb39417b13df2763e492e3ed78efe32eb13ee"
+      ],
+      "semantic_scholar_id": "94feb39417b13df2763e492e3ed78efe32eb13ee",
+      "canonical_id": "arXiv:2605.26175",
+      "arxiv_id": "2605.26175",
+      "doi": "10.48550/arXiv.2605.26175",
+      "authors": [
+        "Ke Li",
+        "Dong An",
+        "Xiaoling Zang",
+        "Can Ye",
+        "Liang Xie",
+        "Qibo Qiu",
+        "Chengze Shen",
+        "Xiaofei He",
+        "Wenxiao Wang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 142,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Thinking as Compression: Your Reasoning Model is Secretly a Context Compressor",
+      "source_url": "https://arxiv.org/abs/2605.28713",
+      "year": 2026,
+      "published": "2026-05-27",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Context compression aims to shorten long context inputs with minimal information loss for LLM inference acceleration. While existing methods have shown promise, they typically rely on complex compression modules or compression-specific training, leaving the intrinsic capabilities of LLMs underexplored. In contrast, this work reveals that a thinking model itself can naturally compress long contexts by organizing task-relevant information. We thus derive Thinking as Compression (TaC), a new compression paradigm that treats thinking itself as compressed context. Without relying on specific dedicated compressor, TaC directly prompts the thinking model to generate thinking traces as the shortened context, already outperforming most representative compression methods. Further, given that raw thinking output may struggle with budget control and shortcut behaviors, we introduce Thinking as Compression Constrained (TaC-C), leveraging a simple reward-driven optimization framework to elicit intrinsic thinking as compact and controllable compressed context. Experiments across four long-context QA benchmarks demonstrate that TaC-C consistently outperforms existing baselines. At 4x and 8x compression ratios, it surpasses the strongest competitor by 17.4% and 23.4% in average F1, and by 15.7% and 21.7% in average Exact Match Score (EM), respectively.",
+      "identifiers": [
+        "SemanticScholar:a1c0fe6fb340f29768f458c54e51e00ffeb845c5"
+      ],
+      "semantic_scholar_id": "a1c0fe6fb340f29768f458c54e51e00ffeb845c5",
+      "canonical_id": "arXiv:2605.28713",
+      "arxiv_id": "2605.28713",
+      "doi": "10.48550/arXiv.2605.28713",
+      "authors": [
+        "Guoxin Ma",
+        "Yibin Liu",
+        "Chengzhengxu Li",
+        "Yuci Liang",
+        "Yan Wang",
+        "Yue-Yang Zhang",
+        "Ke Chen",
+        "Zhao-Xiang Zhang",
+        "Zhi-Yuan Sun",
+        "Dai-Ting Shi"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 140,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2511.00603",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2511.00603",
+        "id:SemanticScholar:84ec6a3ff535f6d20a2e5f4af8a7973c318a477d",
+        "id:arXiv:2511.00603",
+        "title:epara parallelizing categorized ai inference in edge clouds",
+        "url:https://arxiv.org/abs/2511.00603"
+      ],
+      "record": {
+        "title": "EPARA: Parallelizing Categorized AI Inference in Edge Clouds",
+        "source_url": "https://arxiv.org/abs/2511.00603",
+        "year": 2025,
+        "published": "2025-11-01",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "With the increasing adoption of AI applications such as large language models and computer vision AI, the computational demands on AI inference systems are continuously rising, making the enhancement of task processing capacity using existing hardware a primary objective in edge clouds. We propose EPARA, an end-to-end AI parallel inference framework in edge, aimed at enhancing the edge AI serving capability. Our key idea is to categorize tasks based on their sensitivity to latency/frequency and requirement for GPU resources, thereby achieving both request-level and service-level task-resource allocation. EPARA consists of three core components: 1) a task-categorized parallelism allocator that decides the parallel mode of each task, 2) a distributed request handler that performs the calculation for the specific request, and 3) a state-aware scheduler that periodically updates service placement in edge clouds. We implement a EPARA prototype and conduct a case study on the EPARA operation for LLMs and segmentation tasks. Evaluation through testbed experiments involving edge servers, embedded devices, and microcomputers shows that EPARA achieves up to 2.1$\\times$ higher goodput in production workloads compared to prior frameworks, while adapting to various edge AI inference tasks.",
+        "identifiers": [
+          "SemanticScholar:84ec6a3ff535f6d20a2e5f4af8a7973c318a477d"
+        ],
+        "semantic_scholar_id": "84ec6a3ff535f6d20a2e5f4af8a7973c318a477d",
+        "canonical_id": "arXiv:2511.00603",
+        "arxiv_id": "2511.00603",
+        "doi": "10.48550/arXiv.2511.00603",
+        "authors": [
+          "Yubo Wang",
+          "Yubo Cui",
+          "Tuo Shi",
+          "Danyang Li",
+          "Wenxin Li",
+          "Lide Suo",
+          "Tao Wang",
+          "Xin Xie"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 347,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2511.07776",
+      "identity_tokens": [
+        "id:DOI:10.1145/3779212.3790229",
+        "id:SemanticScholar:4ed97e7cc310a0661e5ac8b04bce87023159f908",
+        "id:arXiv:2511.07776",
+        "title:streaming tensor programs a streaming abstraction for dynamic parallelism",
+        "url:https://arxiv.org/abs/2511.07776"
+      ],
+      "record": {
+        "title": "Streaming Tensor Programs: A Streaming Abstraction for Dynamic Parallelism",
+        "source_url": "https://arxiv.org/abs/2511.07776",
+        "year": 2025,
+        "published": "2025-11-11",
+        "venue": "International Conference on Architectural Support for Programming Languages and Operating Systems",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Dynamic behaviors are becoming prevalent in tensor applications, like machine learning, where many widely used models contain data-dependent tensor shapes and control flow. However, the limited expressiveness of prior programming abstractions for spatial dataflow accelerators (SDAs) forces these dynamic behaviors to be implemented statically and/or unoptimized. To address these challenges, we present Streaming Tensor Programs (STeP), a streaming abstraction that enables dynamic tensor workloads to run efficiently on SDAs. STeP introduces flexible routing operators, an explicit memory hierarchy, and symbolic-shape semantics that expose dynamic data rates and tensor dimensions. These capabilities unlock new optimizations, like dynamic tiling, dynamic parallelization, and configuration time-multiplexing, that adapt SDA execution to dynamic behaviors while preserving dataflow efficiency. Using a cycle-approximate simulator on representative LLM layers and a full model with real-world traces, STeP enables: dynamic tiling that breaks the Pareto-optimal frontier from prior work, dynamic parallelization that improves latency by ~2.72x, and configuration time-multiplexing that increases compute utilization by ~2.64x over prior SDA abstractions and their implementations.",
+        "identifiers": [
+          "SemanticScholar:4ed97e7cc310a0661e5ac8b04bce87023159f908"
+        ],
+        "semantic_scholar_id": "4ed97e7cc310a0661e5ac8b04bce87023159f908",
+        "canonical_id": "arXiv:2511.07776",
+        "arxiv_id": "2511.07776",
+        "doi": "10.1145/3779212.3790229",
+        "authors": [
+          "Gina Sohn",
+          "Genghan Zhang",
+          "Konstantin Hossfeld",
+          "Jungwoo Kim",
+          "N. Sobotka",
+          "Nathan Zhang",
+          "Olivia Hsu",
+          "K. Olukotun"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 337,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.14778/3796195.3796204",
+      "identity_tokens": [
+        "id:DOI:10.14778/3796195.3796204",
+        "id:SemanticScholar:effb79ce5793bb7ddd36f5d4fe1b18b473c049df",
+        "title:ken an execution engine for unstructured database systems",
+        "url:https://doi.org/10.14778/3796195.3796204"
+      ],
+      "record": {
+        "title": "Ken: An Execution Engine for Unstructured Database Systems",
+        "source_url": "https://doi.org/10.14778/3796195.3796204",
+        "year": 2026,
+        "published": "2026-01-01",
+        "venue": "Proceedings of the VLDB Endowment",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "\n Unstructured database management systems (UDBMSes) leverage machine learning to apply the relational model to modalities beyond tables, such as documents, images and videos. Queries in a UDBMS consist of\n logical operators\n for which the UDBMS chooses\n physical implementations\n (e.g., different models) with the goal to optimize both query latency and accuracy. However, many operators only expose a coarse-grained set of implementations, forcing the UDBMS to excessively sacrifice either accuracy or latency without middle-ground options. For example, an entity matching operator can either be implemented through small, specialized models or large, general-purpose models (e.g., Large Language Models) — while the former struggles on challenging inputs, the latter is more accurate but incurs orders of magnitude more computation. In this work, we aim to address this issue with\n model cascades\n , which seek to process \"easy\" inputs with small models and only resort to large models when necessary. However, cascades incur higher memory usage and additional data transfer between GPU memory and arithmetic units, which often slows queries compared to single models. To address this issue, we introduce Ken, a dedicated UDBMS\n execution engine\n that dynamically adapts its use of cascades to the query load, and optimizes the GPU placement and invocation scheduling of the cascade models. Compared to baselines, Ken achieves 1.7× –3.3× latency reductions when combining similar models for a single operator, and 122× latency reductions when combining models with orders of magnitude size differences in a multi-operator query.\n",
+        "identifiers": [
+          "SemanticScholar:effb79ce5793bb7ddd36f5d4fe1b18b473c049df"
+        ],
+        "semantic_scholar_id": "effb79ce5793bb7ddd36f5d4fe1b18b473c049df",
+        "doi": "10.14778/3796195.3796204",
+        "canonical_id": "DOI:10.14778/3796195.3796204",
+        "authors": [
+          "Ferdinand Kossmann",
+          "Ziniu Wu",
+          "Alex Turk",
+          "N. Tatbul",
+          "Lei Cao",
+          "Samuel Madden"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 286,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2601.15287",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2601.15287",
+        "id:SemanticScholar:18a3930231aac924cd6055ac3738e7584141f39f",
+        "id:arXiv:2601.15287",
+        "title:towards understanding best practices for quantization of visionlanguage models",
+        "url:https://arxiv.org/abs/2601.15287"
+      ],
+      "record": {
+        "title": "Towards Understanding Best Practices for Quantization of Vision-Language Models",
+        "source_url": "https://arxiv.org/abs/2601.15287",
+        "year": 2026,
+        "published": "2026-01-21",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large language models (LLMs) deliver impressive results for a variety of tasks, but state-of-the-art systems require fast GPUs with large amounts of memory. To reduce both the memory and latency of these systems, practitioners quantize their learned parameters, typically at half precision. A growing body of research focuses on preserving the model performance with more aggressive bit widths, and some work has been done to apply these strategies to other models, like vision transformers. In our study we investigate how a variety of quantization methods, including state-of-the-art GPTQ and AWQ, can be applied effectively to multimodal pipelines comprised of vision models, language models, and their connectors. We address how performance on captioning, retrieval, and question answering can be affected by bit width, quantization method, and which portion of the pipeline the quantization is used for. Results reveal that ViT and LLM exhibit comparable importance in model performance, despite significant differences in parameter size, and that lower-bit quantization of the LLM achieves high accuracy at reduced bits per weight (bpw). These findings provide practical insights for efficient deployment of MLLMs and highlight the value of exploration for understanding component sensitivities in multimodal models. Our code is available at https://github.com/gautomdas/mmq.",
+        "identifiers": [
+          "SemanticScholar:18a3930231aac924cd6055ac3738e7584141f39f"
+        ],
+        "semantic_scholar_id": "18a3930231aac924cd6055ac3738e7584141f39f",
+        "canonical_id": "arXiv:2601.15287",
+        "arxiv_id": "2601.15287",
+        "doi": "10.48550/arXiv.2601.15287",
+        "authors": [
+          "Gautom Das",
+          "Vincent La",
+          "Ethan Lau",
+          "Abhinav Shrivastava",
+          "M. Gwilliam"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 266,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2601.21626",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2601.21626",
+        "id:SemanticScholar:87f9845c700adc451bd64fbd48d6871ec0e1a802",
+        "id:arXiv:2601.21626",
+        "title:heroq a general framework for stable low bit quantization via hessian conditioning",
+        "url:https://arxiv.org/abs/2601.21626"
+      ],
+      "record": {
+        "title": "HeRo-Q: A General Framework for Stable Low Bit Quantization via Hessian Conditioning",
+        "source_url": "https://arxiv.org/abs/2601.21626",
+        "year": 2026,
+        "published": "2026-01-29",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Post Training Quantization (PTQ), a mainstream model compression technique, often leads to the paradoxical'low error, high loss'phenomenon because it focuses solely on minimizing quantization error. The root cause lies in the Hessian matrix of the LLM loss landscape: a few high curvature directions are extremely sensitive to perturbations. To address this, we propose the Hessian Robust Quantization (HeRo Q) algorithm, which applies a lightweight, learnable rotation-compression matrix to the weight space prior to quantization. This joint framework reshapes the loss landscape by reducing the largest Hessian eigenvalue and reducing its max eigenvalue, thereby significantly enhancing robustness to quantization noise. HeRo-Q requires no architectural modifications, incurs negligible computational overhead, and integrates seamlessly into existing PTQ pipelines. Experiments on Llama and Qwen models show that HeRo Q consistently outperforms state of the art methods including GPTQ, AWQ, and SpinQuant not only achieving superior performance under standard W4A8 settings, but also excelling in the highly challenging W3A16 ultra low bit regime, where it boosts GSM8K accuracy on Llama3 8B to 70.15\\% and effectively avoids the logical collapse commonly seen in aggressive quantization.",
+        "identifiers": [
+          "SemanticScholar:87f9845c700adc451bd64fbd48d6871ec0e1a802"
+        ],
+        "semantic_scholar_id": "87f9845c700adc451bd64fbd48d6871ec0e1a802",
+        "canonical_id": "arXiv:2601.21626",
+        "arxiv_id": "2601.21626",
+        "doi": "10.48550/arXiv.2601.21626",
+        "authors": [
+          "Jin-Hao Zhang",
+          "Yun-Quan Zhang",
+          "Zi-Cheng Yan",
+          "Bo-Yang Zhang",
+          "Jun Sun",
+          "Da-Ning Cheng"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 258,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2602.05307",
+      "identity_tokens": [
+        "id:SemanticScholar:0ac8fa7ff5cb97bd0d281989a9db3821ab793166",
+        "id:arXiv:2602.05307",
+        "title:mentorcollab largetosmall inferencetime mentorship for concise reasoning in language models",
+        "url:https://arxiv.org/abs/2602.05307"
+      ],
+      "record": {
+        "title": "MentorCollab: Large-to-Small Inference-Time Mentorship for Concise Reasoning in Language Models",
+        "source_url": "https://arxiv.org/abs/2602.05307",
+        "year": 2026,
+        "published": "2026-02-05",
+        "venue": null,
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large reasoning models (LRMs) have demonstrated impressive reasoning capabilities, but their solutions are often verbose and computationally expensive, and taxing for users to read. In contrast, small language models (SLMs) produce concise outputs with lower inference costs, yet they frequently struggle on challenging multi-step reasoning tasks. Existing inference-time collaboration methods attempt to bridge this gap through imitation, encouraging SLMs to follow the reasoning process of LRMs. However, the student often inherits the mentor's overthinking, producing long and reflective reasoning chains while still falling short in accuracy. We propose MentorCollab, a collaboration method based on mentorship: the SLM remains the primary generator and consults the LRM only when additional reasoning support is needed. At sparsely sampled token positions, we probe for divergence between the two models and use a lightweight verifier to decide whether the SLM should follow a short lookahead segment from its mentor or continue on its own. Across 15 SLM-LRM pairs and 3 domains, our method achieves an average gain of 3.0%, with improvements of up to 8.0% in 12 settings. The resulting traces remain shorter than the mentor's, using only a small fraction of its tokens. These results demonstrate that selective, verified mentorship can boost reasoning accuracy while preserving concise generation.",
+        "identifiers": [
+          "SemanticScholar:0ac8fa7ff5cb97bd0d281989a9db3821ab793166"
+        ],
+        "semantic_scholar_id": "0ac8fa7ff5cb97bd0d281989a9db3821ab793166",
+        "canonical_id": "arXiv:2602.05307",
+        "arxiv_id": "2602.05307",
+        "authors": [
+          "Haojin Wang",
+          "Yike Wang",
+          "Shang-Bin Feng",
+          "Hanna Hajishirzi",
+          "Yulia Tsvetkov"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 251,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2602.20205",
+      "identity_tokens": [
+        "id:DOI:10.1109/cvprf71909.2026.00562",
+        "id:SemanticScholar:edd8ab5b9b401d86b87c13c296173f988466575f",
+        "id:arXiv:2602.20205",
+        "title:otprune distributionaligned visual token pruning via optimal transport",
+        "url:https://arxiv.org/abs/2602.20205"
+      ],
+      "record": {
+        "title": "OTPrune: Distribution-Aligned Visual Token Pruning via Optimal Transport",
+        "source_url": "https://arxiv.org/abs/2602.20205",
+        "year": 2026,
+        "published": "2026-02-22",
+        "venue": "2026 IEEE/CVF Conference on Computer Vision and Pattern Recognition- FINDINGS Track (CVPRF)",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Multi-modal large language models (MLLMs) achieve strong visual-language reasoning but suffer from high inference cost due to redundant visual tokens. Recent work explores visual token pruning to accelerate inference, while existing pruning methods overlook the underlying distributional structure of visual representations. We propose OT-Prune, a training-free framework that formulates pruning as distribution alignment via optimal transport (OT). By minimizing the 2-Wasserstein distance between the full and pruned token distributions, OTPrune preserves both local diversity and global representativeness while reducing inference cost. Moreover, we derive a tractable submodular objective that enables efficient optimization, and theoretically prove its monotonicity and submodularity, providing a principled foundation for stable and efficient pruning. We further provide a comprehensive analysis that explains how distributional alignment contributes to stable and semantically faithful pruning. Comprehensive experiments on wider benchmarks demonstrate that OTPrune achieves superior performance-efficiency tradeoffs compared to state-of-the-art methods. The code is available at https://github.com/xiwenc1/OTPrune.",
+        "identifiers": [
+          "SemanticScholar:edd8ab5b9b401d86b87c13c296173f988466575f"
+        ],
+        "semantic_scholar_id": "edd8ab5b9b401d86b87c13c296173f988466575f",
+        "canonical_id": "arXiv:2602.20205",
+        "arxiv_id": "2602.20205",
+        "doi": "10.1109/CVPRF71909.2026.00562",
+        "authors": [
+          "Xi-Wen Chen",
+          "Wen-Hui Zhu",
+          "Gen Li",
+          "Xuan-Zhao Dong",
+          "Yujian Xiong",
+          "Hao Wang",
+          "Pei-Jie Qiu",
+          "Qingquan Song",
+          "Zhi-Peng Wang",
+          "Shao Tang",
+          "Yalin Wang",
+          "Abolfazl Razi"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 234,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2604.00666",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2604.00666",
+        "id:SemanticScholar:1202277a17551604d62dd7e5d993a57201504e55",
+        "id:arXiv:2604.00666",
+        "title:trims trajectoryranked instruction masked supervision for diffusion language models",
+        "url:https://arxiv.org/abs/2604.00666"
+      ],
+      "record": {
+        "title": "TRIMS: Trajectory-Ranked Instruction Masked Supervision for Diffusion Language Models",
+        "source_url": "https://arxiv.org/abs/2604.00666",
+        "year": 2026,
+        "published": "2026-04-01",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Diffusion language models (DLMs) offer a promising path toward low-latency generation through parallel decoding, but their practical efficiency depends heavily on the decoding trajectory. In practice, this advantage often fails to fully materialize because standard training does not provide explicit supervision over token reveal order, creating a train-inference mismatch that leads to suboptimal decoding behavior. We propose Trajectory-Ranked Instruction Masked Supervision (TRIMS), a simple trajectory-guided supervised fine-tuning framework that injects trajectory supervision into standard Masked Diffusion Language Model (MDLM) training with minimal overhead. Instead of relying on costly DLM-based distillation, TRIMS uses lightweight signals from an autoregressive teacher to guide a trajectory-aware masking strategy, encouraging the model to learn more effective decoding orders. Experiments on LLaDA and Dream across math and coding benchmarks show that TRIMS significantly improves the accuracy-parallelism trade-off over both standard MDLM training and train-free acceleration baselines, while achieving competitive performance with prior distillation-based approaches at substantially lower training cost. Further analysis shows that TRIMS leads to better decoding trajectories, validating the effectiveness of trajectory-guided supervision for DLMs.",
+        "identifiers": [
+          "SemanticScholar:1202277a17551604d62dd7e5d993a57201504e55"
+        ],
+        "semantic_scholar_id": "1202277a17551604d62dd7e5d993a57201504e55",
+        "canonical_id": "arXiv:2604.00666",
+        "arxiv_id": "2604.00666",
+        "doi": "10.48550/arXiv.2604.00666",
+        "authors": [
+          "Lingjie Chen",
+          "Rui-Zhong Qiu",
+          "Yu-Qi Fan",
+          "Yan-Jun Zhao",
+          "Hang-Hang Tong"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 196,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2402.00518",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2402.00518",
+        "id:SemanticScholar:7ff1c7fefef44fc36d3163bd818c078ac66fbdc2",
+        "id:arXiv:2402.00518",
+        "title:eetuning an economical yet scalable solution for tuning earlyexit large language models",
+        "url:https://arxiv.org/abs/2402.00518"
+      ],
+      "record": {
+        "title": "EE-Tuning: An Economical yet Scalable Solution for Tuning Early-Exit Large Language Models",
+        "source_url": "https://arxiv.org/abs/2402.00518",
+        "year": 2024,
+        "published": "2024-02-01",
+        "venue": "arXiv.org",
+        "citation_count": 14,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "This work introduces EE-Tuning, a lightweight and economical solution to training/tuning early-exit large language models (LLMs). In contrast to the common approach of full-parameter pre-training, EE-Tuning augments any pre-trained (and possibly fine-tuned) standard LLM with additional early-exit layers that are tuned in a parameter-efficient manner, which requires significantly less computational resources and training data. Our implementation of EE-Tuning achieves outstanding training efficiency via extensive performance optimizations, as well as scalability due to its full compatibility with 3D parallelism. Results of systematic experiments validate the efficacy of EE-Tuning, confirming that effective early-exit LLM inference can be achieved with a limited training budget. In hope of making early-exit LLMs accessible to the community, we release the source code of our implementation of EE-Tuning at https://github.com/pan-x-c/EE-LLM.",
+        "identifiers": [
+          "SemanticScholar:7ff1c7fefef44fc36d3163bd818c078ac66fbdc2"
+        ],
+        "semantic_scholar_id": "7ff1c7fefef44fc36d3163bd818c078ac66fbdc2",
+        "canonical_id": "arXiv:2402.00518",
+        "arxiv_id": "2402.00518",
+        "doi": "10.48550/arXiv.2402.00518",
+        "authors": [
+          "Xu-Chen Pan",
+          "Yan-Xi Chen",
+          "Ya-Liang Li",
+          "Bo-Lin Ding",
+          "Jingren Zhou"
+        ],
+        "priority": 14,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 14,
+          "citation_count": 14,
+          "total": 14,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 986,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2410.05462",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2410.05462",
+        "id:SemanticScholar:3ae61a2119ce26f67826f7778e5acb5384d8ea2d",
+        "id:arXiv:2410.05462",
+        "title:levattention time space and streaming efficient algorithm for heavy attentions",
+        "url:https://arxiv.org/abs/2410.05462"
+      ],
+      "record": {
+        "title": "LevAttention: Time, Space, and Streaming Efficient Algorithm for Heavy Attentions",
+        "source_url": "https://arxiv.org/abs/2410.05462",
+        "year": 2024,
+        "published": "2024-10-07",
+        "venue": "International Conference on Learning Representations",
+        "citation_count": 3,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "A central problem related to transformers can be stated as follows: given two $n \\times d$ matrices $Q$ and $K$, and a non-negative function $f$, define the matrix $A$ as follows: (1) apply the function $f$ to each entry of the $n \\times n$ matrix $Q K^T$, and then (2) normalize each of the row sums of $A$ to be equal to $1$. The matrix $A$ can be computed in $O(n^2 d)$ time assuming $f$ can be applied to a number in constant time, but the quadratic dependence on $n$ is prohibitive in applications where it corresponds to long context lengths. For a large class of functions $f$, we show how to find all the ``large attention scores\", i.e., entries of $A$ which are at least a positive value $\\varepsilon$, in time with linear dependence on $n$ (i.e., $n \\cdot \\textrm{poly}(d/\\varepsilon)$) for a positive parameter $\\varepsilon>0$. Our class of functions include all functions $f$ of the form $f(x) = |x|^p$, as explored recently in transformer models. Using recently developed tools from randomized numerical linear algebra, we prove that for any $K$, there is a ``universal set\"$U \\subset [n]$ of size independent of $n$, such that for any $Q$ and any row $i$, the large attention scores $A_{i,j}$ in row $i$ of $A$ all have $j \\in U$. We also find $U$ in $n \\cdot \\textrm{poly}(d/\\varepsilon)$ time. Notably, we (1) make no assumptions on the data, (2) our workspace does not grow with $n$, and (3) our algorithms can be computed in streaming and parallel settings. We call the attention mechanism that uses only the subset of keys in the universal set as LevAttention since our algorithm to identify the universal set $U$ is based on leverage scores. We empirically show the benefits of our scheme for vision transformers, showing how to train new models that use our universal set while training as well, showing that our model is able to consistently select ``important keys'' during training.",
+        "identifiers": [
+          "SemanticScholar:3ae61a2119ce26f67826f7778e5acb5384d8ea2d"
+        ],
+        "semantic_scholar_id": "3ae61a2119ce26f67826f7778e5acb5384d8ea2d",
+        "canonical_id": "arXiv:2410.05462",
+        "arxiv_id": "2410.05462",
+        "doi": "10.48550/arXiv.2410.05462",
+        "authors": [
+          "Ravi Kannan",
+          "Chiranjib Bhattacharyya",
+          "Praneeth Kacham",
+          "David P. Woodruff"
+        ],
+        "priority": 13,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 3,
+          "citation_count": 3,
+          "total": 13,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 737,
+          "matched_prestigious_venue": "International Conference on Learning Representations"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.15572",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2605.15572",
+        "id:SemanticScholar:ef5e1a4586d7a4a7b410d5ea08d22e977d28acf7",
+        "id:arXiv:2605.15572",
+        "title:measuring maximum activations in open large language models",
+        "url:https://arxiv.org/abs/2605.15572"
+      ],
+      "record": {
+        "title": "Measuring Maximum Activations in Open Large Language Models",
+        "source_url": "https://arxiv.org/abs/2605.15572",
+        "year": 2026,
+        "published": "2026-05-15",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The dynamic range of activations is a first-order constraint for low-bit quantization, activation scaling, and stable LLM inference. Prior work characterized outlier features and massive activations on pre-2024 LLaMA-style models, and the downstream activation-quantization stack inherits that picture without revisiting it for the post-LLaMA open-model boom. We ask the deployment-oriented question: how large can activations get in modern open LLMs, and how does this magnitude vary across families, generations, and training stages? Under a unified pipeline (5,000-sample multi-domain corpus, family-specific tokenization, identical hooks across embeddings, hidden states, attention, MLP/MoE, SwiGLU gates, and final norm), we measure global and layerwise maxima on 27 checkpoints from 8 open families spanning dense, MoE, vision-language, intermediate-training, and instruction-tuned variants. We find that (i) global maxima span over nearly four orders of magnitude at comparable parameter counts, with Qwen3.5 and MoE checkpoints in the 10^2 to 10^3 range and Gemma3-27B-it reaching ~7 x 10^5; (ii) cross-family and cross-generation comparisons break simple monotonic scaling; and (iii) MoE checkpoints exhibit 14.0-23.4x lower peaks than matched-scale dense counterparts, while the residual stream carries the global maximum in 22/24 checkpoints. A lightweight INT-8 sanity check shows that measured maxima co-vary with low-bit reconstruction error via activation-scale selection. We conclude that maximum activation magnitude is a model property tied to family, architecture, and training stage - not a simple byproduct of size - and should be measured and reported alongside any open-weight release before low-bit deployment. The code is publicly available at https://github.com/clx1415926/Max_act_llm.",
+        "identifiers": [
+          "SemanticScholar:ef5e1a4586d7a4a7b410d5ea08d22e977d28acf7"
+        ],
+        "semantic_scholar_id": "ef5e1a4586d7a4a7b410d5ea08d22e977d28acf7",
+        "canonical_id": "arXiv:2605.15572",
+        "arxiv_id": "2605.15572",
+        "doi": "10.48550/arXiv.2605.15572",
+        "authors": [
+          "Lu Chen",
+          "Han Tian",
+          "Xin-Ran Chen",
+          "Rui Kong",
+          "Fangyu Wang",
+          "Jiamin Chen",
+          "Yu-Chen Li",
+          "Jia-Shu Zhao",
+          "Shuai-Qiang Wang",
+          "Hao-Yi Xiong",
+          "Da-Wei Yin"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 152,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.26175",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2605.26175",
+        "id:SemanticScholar:94feb39417b13df2763e492e3ed78efe32eb13ee",
+        "id:arXiv:2605.26175",
+        "title:infoquant shaping activation distributions for lowbit llm quantization",
+        "url:https://arxiv.org/abs/2605.26175"
+      ],
+      "record": {
+        "title": "InfoQuant: Shaping Activation Distributions for Low-Bit LLM Quantization",
+        "source_url": "https://arxiv.org/abs/2605.26175",
+        "year": 2026,
+        "published": "2026-05-25",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Low-bit activation quantization remains a major bottleneck in efficient large language model (LLM) deployment. The difficulty is not only that activations contain outliers, but that their distributions are often poorly matched to a low-bit uniform quantizer. Existing post-training quantization (PTQ) methods suppress peaks, balance channels, or minimize reconstruction error, yet they rarely specify what activation distribution is actually easy to discretize. As a result, activations may appear numerically smoother while still incurring large quantization error because the quantization range remains wide or most values collapse into a few levels near the mean. We recast activation transformation as quantizer-facing distribution design and analyze quantization error from an information-theoretic perspective. Our analysis shows that quantization-friendly activations should jointly have a smaller numerical range and sufficient dispersion within that range. Guided by this analysis, we propose InfoQuant, a train-free method that employs Peak Suppression Orthogonal Transformation (PSOT) to shape activations into more quantization-friendly distributions. We further introduce adaptive outlier-token selection to improve the robustness of PSOT during optimization. Across multiple LLM families, InfoQuant consistently outperforms prior PTQ and end-to-end training baselines. Under W4A4KV4, it preserves 97% of floating-point accuracy on average and reduces the LLaMA-2 13B performance gap by 42% over the previous state of the art. Code is available at [https://github.com/LLIKKE/InfoQuant](https://github.com/LLIKKE/InfoQuant)",
+        "identifiers": [
+          "SemanticScholar:94feb39417b13df2763e492e3ed78efe32eb13ee"
+        ],
+        "semantic_scholar_id": "94feb39417b13df2763e492e3ed78efe32eb13ee",
+        "canonical_id": "arXiv:2605.26175",
+        "arxiv_id": "2605.26175",
+        "doi": "10.48550/arXiv.2605.26175",
+        "authors": [
+          "Ke Li",
+          "Dong An",
+          "Xiaoling Zang",
+          "Can Ye",
+          "Liang Xie",
+          "Qibo Qiu",
+          "Chengze Shen",
+          "Xiaofei He",
+          "Wenxiao Wang"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 142,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.28713",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2605.28713",
+        "id:SemanticScholar:a1c0fe6fb340f29768f458c54e51e00ffeb845c5",
+        "id:arXiv:2605.28713",
+        "title:thinking as compression your reasoning model is secretly a context compressor",
+        "url:https://arxiv.org/abs/2605.28713"
+      ],
+      "record": {
+        "title": "Thinking as Compression: Your Reasoning Model is Secretly a Context Compressor",
+        "source_url": "https://arxiv.org/abs/2605.28713",
+        "year": 2026,
+        "published": "2026-05-27",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Context compression aims to shorten long context inputs with minimal information loss for LLM inference acceleration. While existing methods have shown promise, they typically rely on complex compression modules or compression-specific training, leaving the intrinsic capabilities of LLMs underexplored. In contrast, this work reveals that a thinking model itself can naturally compress long contexts by organizing task-relevant information. We thus derive Thinking as Compression (TaC), a new compression paradigm that treats thinking itself as compressed context. Without relying on specific dedicated compressor, TaC directly prompts the thinking model to generate thinking traces as the shortened context, already outperforming most representative compression methods. Further, given that raw thinking output may struggle with budget control and shortcut behaviors, we introduce Thinking as Compression Constrained (TaC-C), leveraging a simple reward-driven optimization framework to elicit intrinsic thinking as compact and controllable compressed context. Experiments across four long-context QA benchmarks demonstrate that TaC-C consistently outperforms existing baselines. At 4x and 8x compression ratios, it surpasses the strongest competitor by 17.4% and 23.4% in average F1, and by 15.7% and 21.7% in average Exact Match Score (EM), respectively.",
+        "identifiers": [
+          "SemanticScholar:a1c0fe6fb340f29768f458c54e51e00ffeb845c5"
+        ],
+        "semantic_scholar_id": "a1c0fe6fb340f29768f458c54e51e00ffeb845c5",
+        "canonical_id": "arXiv:2605.28713",
+        "arxiv_id": "2605.28713",
+        "doi": "10.48550/arXiv.2605.28713",
+        "authors": [
+          "Guoxin Ma",
+          "Yibin Liu",
+          "Chengzhengxu Li",
+          "Yuci Liang",
+          "Yan Wang",
+          "Yue-Yang Zhang",
+          "Ke Chen",
+          "Zhao-Xiang Zhang",
+          "Zhi-Yuan Sun",
+          "Dai-Ting Shi"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 140,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:e93d2407afe53f2d9f8440302c0d6766cde1f0837fd51864b94ebf150d74109b",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}
