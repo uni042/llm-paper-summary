@@ -1,13 +1,12 @@
 {
   "schema_version": 1,
   "artifact_type": "research",
-  "status": "imported",
+  "status": "blocked_quality",
   "source_sha256": "a617b32abf86a75bfa8d2ec811aa95dcb14668508213360467badb3fcaf6448e",
-  "canonical_id": "DOI:10.18653/v1/2021.naacl-main.463",
-  "paper_path": "papers/inference/99-other-inference-systems/2021-00c8b8f9f90e-tr-bert-dynamic-token-reduction-for-accelerating-bert-inference.md",
-  "lineage": "99-other-inference-systems",
-  "audit_status": "WARN",
+  "normalized_source_sha256": null,
   "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_4fc44f0519e88191b93bf46c11f84fc1--2021-tr-bert-dynamic-token-reduction-returned-repair-20261013-2200-scheduled-chat-00-r01-v2.md",
+  "canonical_id": "DOI:10.18653/v1/2021.naacl-main.463",
   "worker_completed_at": "2026-10-13T22:09:00+09:00",
   "worker_run_key": "20261013-2200-scheduled-chat-00/r01",
   "quality_metrics": {
@@ -22,5 +21,8 @@
       "限界説明量 0 < 推奨 120"
     ]
   },
-  "processed_at": "2026-10-14T06:30:55+00:00"
+  "failures": [
+    "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2021-00c8b8f9f90e-tr-bert-dynamic-token-reduction-for-accelerating-bert-inference.md と 21 段落 / 4539文字 (100.0%) が完全一致"
+  ],
+  "processed_at": "2026-10-14T10:41:36+00:00"
 }

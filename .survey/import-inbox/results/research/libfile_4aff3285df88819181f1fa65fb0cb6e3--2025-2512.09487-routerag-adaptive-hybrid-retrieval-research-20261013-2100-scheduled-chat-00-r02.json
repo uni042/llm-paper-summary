@@ -1,13 +1,12 @@
 {
   "schema_version": 1,
   "artifact_type": "research",
-  "status": "imported",
+  "status": "blocked_quality",
   "source_sha256": "a1c79129d661172c0e3b8e71178687d25c5cfa527273b86d37fbd4b3a7e3b5ab",
-  "canonical_id": "arXiv:2512.09487",
-  "paper_path": "papers/inference/99-other-inference-systems/2025-2512.09487-routerag-efficient-retrieval-augmented-generation-from-text-and-graph-vi.md",
-  "lineage": "99-other-inference-systems",
-  "audit_status": "PASS",
+  "normalized_source_sha256": null,
   "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_4aff3285df88819181f1fa65fb0cb6e3--2025-2512.09487-routerag-adaptive-hybrid-retrieval-research-20261013-2100-scheduled-chat-00-r02.md",
+  "canonical_id": "arXiv:2512.09487",
   "worker_completed_at": "2026-10-13T21:11:59+09:00",
   "worker_run_key": "20261013-2100-scheduled-chat-00/r02",
   "quality_metrics": {
@@ -20,5 +19,8 @@
     "limitation_chars": 630,
     "insufficiency_flags": []
   },
-  "processed_at": "2026-10-14T06:30:08+00:00"
+  "failures": [
+    "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2025-2512.09487-routerag-efficient-retrieval-augmented-generation-from-text-and-graph-vi.md と 17 段落 / 3610文字 (100.0%) が完全一致"
+  ],
+  "processed_at": "2026-10-14T10:41:34+00:00"
 }
