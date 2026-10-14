@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-10-14T05:54:40.438759+00:00",
+  "generated_at": "2026-10-14T10:33:00.673118+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 4,
+  "count": 5,
   "worker_counts": {
     "scheduled-chat-00": 1,
     "scheduled-chat-30": 2,
-    "scheduled-chat-45": 1
+    "scheduled-chat-45": 2
   },
   "entries": [
     {
@@ -101,6 +101,26 @@
         "method_chars": 1072,
         "evaluation_chars": 505,
         "limitation_chars": 0
+      },
+      "mechanical_failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/99-other-inference-systems/2025-2512.24545-more-than-bits-multi-envelope-double-binary-factorization-for-extreme-qu.md",
+      "canonical_id": "arXiv:2512.24545",
+      "title": "More Than Bits: Multi-Envelope Double Binary Factorization for Extreme Quantization",
+      "file_bytes": 15766,
+      "source_sha256": "d9a6fabf4f38fa43f5591df6ae6dd8345a9fb543bdbff0fff51b53c8a40da023",
+      "source_git_blob_sha": "b5968c312a3b0bd22b909eae2538214dcf6e752f",
+      "assigned_worker": "scheduled-chat-45",
+      "semantic_status": "pending",
+      "mechanical_status": "PASS",
+      "japanese_ratio": 0.989657,
+      "quality_metrics": {
+        "body_chars": 3749,
+        "method_chars": 1472,
+        "evaluation_chars": 569,
+        "limitation_chars": 276
       },
       "mechanical_failures": [],
       "warnings": []
