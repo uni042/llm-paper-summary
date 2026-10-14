@@ -35,6 +35,8 @@ worker_completed_at: '2026-10-14T15:34:40+09:00'
 worker_run_key: 20261014-1530-scheduled-chat-30/r01
 quality_self_review_passed: true
 quality_self_review_version: library-paper-quality-guide-2026-10-07
+last_audited: null
+audit_version: 0
 ---
 
 # Data Distribution Matters：文脈圧縮の品質を左右する入力と事前学習分布

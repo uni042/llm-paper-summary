@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（615本）
+## 自動生成の論文一覧（620本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -608,6 +608,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   LLMETは、LLMのタイル配置とメモリ階層転送を回路レベルのSRAM・M3D特性へ接続し、L2容量を増やす利益とアクセス費が釣り合う省エネ設計点を探索する。
 
+- **2026-07 · [LaCo: Layer-wise Compensation for Pruned Large Language Models](2026-00140e8efcf4-laco-layer-wise-compensation-for-pruned-large-language-models.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  LaCo（層-wise Compensation）は、枝刈りによって一部の重みや層内構造を削除したLLMの性能を、元モデルの各層の隠れ状態へ順次近づける局所回帰で回復する方法である。
+
 - **2026-07 · [LaCache: Exact Caching and Precision-Adaptive Inference for Diffusion Large Language Models](2026-2607.16339-lacache-exact-caching-precision-adaptive-dllm.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   拡散型LLMの反復生成で不変なトークン状態とFlashAttention中間状態を無損失再利用し、第2層以降をFP8化して、既存の生成ステップ削減法と組み合わせ可能な推論高速化を実現する。
@@ -736,6 +740,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   混合専門家（Mixture-of-Experts; MoE）言語モデルは、各トークンについて多数の専門家ネットワークのうち少数だけを実行する。Qwen3-30B-A3Bでは、確信度の高いトークンは標準経路と最良候補の差がほぼないが、難しいトークンでは大きく乖離する。ただし、この論文は推論時に32個の候補を毎回試す高速化方式を提案したわけではない。
 
+- **2026-05 · [The Efficiency Frontier: A Unified Framework for Cost-Performance Optimization in LLM Context Management](2026-2605.23071-the-efficiency-frontier-a-unified-framework-for-cost-performance-optimiz.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  全文投入、検索拡張、要約・圧縮などの文脈管理方式は、回答品質だけ、または入力トークン数だけを比較すると運用上の優劣が決めにくい。HotpotQAの5,000問をGPT-5.4 miniで評価した結果、再利用回数が1から100へ増えると、F1約0.78の運用点で有効トークン数が566から424へ約25%減る構成が選ばれた。
+
 - **2026-05 · [Test-Time Speculation](2026-2605.09329-test-time-speculation.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   投機的復号（投機的復号）は、小さく高速なドラフトモデルに複数トークンの候補を作らせ、大きな対象モデルがまとめて検証することで、対象モデルの呼び出し回数を減らす方式である。原著の実験ではDFlashを基準に受理長が平均41%、最大72%改善し、EAGLE-3を基準に平均34%、最大67%改善した。
@@ -835,6 +843,10 @@
 - **2026-04 · [Serving Chain-structured Jobs with Large Memory Footprints with Application to Large Foundation Model Serving](2026-2604.14993-serving-chain-structured-jobs-with-large-memory-footprints-with-application-to-large-foundation-model-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   分散パイプライン型の大規模言語モデル推論を、モデルブロック配置、鍵値キャッシュ容量配分、オンライン負荷分散からなるサーバ鎖構成問題として定式化し、実サービング評価で平均応答時間を六十三から七十七パーセント削減する。
+
+- **2026-04 · [RouteLMT: Learned Sample Routing for Hybrid LLM Translation Deployment](2026-2604.22520-routelmt-learned-sample-routing-for-hybrid-llm-translation-deployment.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  大規模言語モデルを用いた翻訳では、高品質な大型モデルをすべての要求に適用すると推論費用と遅延が大きくなる。小型モデルで大半を処理し、必要な要求だけ大型モデルへ振り分ける混成配備（hybrid deployment）は、一定の品質を維持しながら大型モデルの利用率を抑えるための基本的な方式である。
 
 - **2026-04 · [Reason Only When Needed: Efficient Generative Reward Modeling via Model-Internal Uncertainty](2026-2604.10072-reason-only-when-needed-efficient-generative-reward-modeling-via-model-i.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -1143,6 +1155,10 @@
 - **2025-11 · [Revisiting Disaggregated Large Language Model Serving for Performance and Energy Implications](2026-2601.08833-revisiting-disaggregated-large-language-model-serving-for-performance-and-energy-implications.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   公平な2-GPU基準と複数KV転送階層・DVFSでプリフィル/デコード分離を再評価し、性能・省電力の優位が条件依存であることを示す。
+
+- **2025-11 · [Optimal Self-Consistency for Efficient Reasoning with Large Language Models](2025-2511.12309-optimal-self-consistency-for-efficient-reasoning-with-large-language-mod.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  しかし、全問題へ同じ回数だけ生成を繰り返すと、少数の試行で答えが安定する簡単な問題にも計算を使い続け、回答が割れる難しい問題に十分な予算を残せない。固定回数の生成、回答の信頼度に応じて停止する方式、問題間で生成回数を再配分する方式の違いを整理し、予算が少ない段階で有効な方法と、予算が大きい段階で有効な方法を組み合わせるBlend-ASCを提案する。
 
 - **2025-11 · [NeuroPath: Neurobiology-Inspired Path Tracking and Reflection for Semantically Coherent Retrieval](2025-2511.14096-neuropath-neurobiology-inspired-path-tracking-and-reflection-for-semanti.md)**  
   実装：[✓](https://github.com/KennyCaty/NeuroPath) ・ リポジトリ内被引用：0  
@@ -2415,6 +2431,10 @@
 - **2020-08 · [ConvBERT: Improving BERT with Span-based Dynamic Convolution](2020-2008.02496-convbert-improving-bert-with-span-based-dynamic-convolution.md)**  
   実装：[✓](https://github.com/yitu-opensource/ConvBert) ・ リポジトリ内被引用：0  
   BERTの多頭自己注意は、すべてのヘッドで全トークン対の関係を計算する。しかし自然言語では局所的な構文・語彙の結び付きが重要であり、実際に多くのヘッドの注意行列は対角線付近へ集中する。遠方トークンをほとんど参照しないヘッドでも、全系列の二次元注意行列を構築するのは計算上の無駄である。
+
+- **2020-06 · [$O(n)$ Connections are Expressive Enough: Universal Approximability of Sparse Transformers](2020-2006.04862-o-n-connections-are-expressive-enough-universal-approximability-of-spars.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  通常のTransformerの自己注意は、系列中の各トークンが他の全トークンを参照するため、系列長nに対して注意得点の組合せがnの二乗で増える。長文を処理する際に接続を減らす疎注意は計算量を減らす候補だが、接続を取り除くことでモデルが表現できる関数の種類まで狭まるのかは自明ではない。
 
 ### 8年前（2018-11〜2019-10）
 
