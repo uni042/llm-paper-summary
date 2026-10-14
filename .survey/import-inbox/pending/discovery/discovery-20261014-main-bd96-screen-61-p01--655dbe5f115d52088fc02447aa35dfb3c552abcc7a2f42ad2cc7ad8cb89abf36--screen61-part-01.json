@@ -1,0 +1,487 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-61",
+  "run_key": "discovery-20261014-main-bd96-screen-61-part-01",
+  "reference_main_sha": "bd96643a3a7a8edbb1fb26b31de1d945e32d6bd3",
+  "record_count": 20,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2503.15758",
+      "identity_tokens": [
+        "arXiv:2503.15758"
+      ],
+      "title": "ATTENTION2D: Communication Efficient Distributed Self-Attention Mechanism",
+      "reason": "Query/key-value二軸attention並列化で分散self-attentionの通信効率と速度を改善。",
+      "source_url": "https://arxiv.org/abs/2503.15758v2",
+      "body_check": "abstract_screen_only; body_not_read",
+      "abstract_evidence_excerpt": "In this paper, we introduce ATTENTION2D, a novel approach that exploits parallelism along two dimensions - query and key/value - of the self-attention operation.",
+      "abstract_evidence_sha256": "df465901b32a857b255155c499d41d6dc39ccfcb7ef48289c3c1c8a0bc355664",
+      "abstract_sha256": null,
+      "source_abstract_chars": null,
+      "linked_from": [],
+      "first_checked_at": "2026-10-14T05:47:55Z",
+      "last_checked_at": "2026-10-14T05:47:55Z",
+      "primary_source_status": "verified_primary_abstract",
+      "source_version": "v2",
+      "source_submission_history": [
+        "[v1] Thu, 20 Mar 2025 00:25:44 UTC (303 KB)",
+        "[v2] Sat, 28 Jun 2025 22:35:32 UTC (303 KB)"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "SemanticScholar:49819c58350056de622da083fdfb80d716c823a2",
+      "identity_tokens": [
+        "SemanticScholar:49819c58350056de622da083fdfb80d716c823a2"
+      ],
+      "title": "Efficient Hardware Scaling and Diminishing Returns in Large-Scale Training of Language Models",
+      "reason": "一次要旨は大規模LLM学習のhardware配置・分散並列化・cost効率の実測に限定され、推論効率への具体的な接続を確認できない。",
+      "source_url": "https://openreview.net/pdf?id=p7jQEf3wlh",
+      "body_check": "abstract_screen_only; body_not_read",
+      "abstract_evidence_excerpt": "We conduct an extensive empirical study of the performance of large-scale LLM training workloads across model size, hardware configurations, and distributed parallelization strategies",
+      "abstract_evidence_sha256": "3e402e94fb09abc4da27fe7d1efb91370ee263ab4d3b3f91fda084d1f6586862",
+      "abstract_sha256": null,
+      "source_abstract_chars": null,
+      "linked_from": [],
+      "first_checked_at": "2026-10-14T05:47:55Z",
+      "last_checked_at": "2026-10-14T05:47:55Z",
+      "primary_source_status": "verified_primary_abstract"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2510.21956",
+      "identity_tokens": [
+        "arXiv:2510.21956"
+      ],
+      "title": "Transformer Based Linear Attention with Optimized GPU Kernel Implementation",
+      "reason": "linear attentionのforward/backwardとCUDA kernelを最適化し速度3.3倍、memory3.6倍削減。",
+      "source_url": "https://arxiv.org/abs/2510.21956v1",
+      "body_check": "abstract_screen_only; body_not_read",
+      "abstract_evidence_excerpt": "We propose a novel method for LA's forward and backward passes, along with a highly-optimized CUDA implementation.",
+      "abstract_evidence_sha256": "1e5b630aea782c95a161a700aee5a3378e775ea9b35b4b632a5944e1fe449292",
+      "abstract_sha256": null,
+      "source_abstract_chars": null,
+      "linked_from": [],
+      "first_checked_at": "2026-10-14T05:47:55Z",
+      "last_checked_at": "2026-10-14T05:47:55Z",
+      "primary_source_status": "verified_primary_abstract",
+      "source_version": "v1",
+      "source_submission_history": [
+        "[v1] Fri, 24 Oct 2025 18:32:20 UTC (296 KB)"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "SemanticScholar:6058cd15d34b11b01994db453110fbcca3bb3bea",
+      "identity_tokens": [
+        "SemanticScholar:6058cd15d34b11b01994db453110fbcca3bb3bea",
+        "arXiv:2512.12744"
+      ],
+      "title": "Resting Neurons, Active Insights: Robustifying Activation Sparsity in LLMs via Spontaneity",
+      "reason": "SPONでLLM activation sparsityの精度劣化を抑え、低overheadな疎推論を実現。",
+      "source_url": "https://arxiv.org/abs/2512.12744v4",
+      "body_check": "abstract_screen_only; body_not_read",
+      "abstract_evidence_excerpt": "Activation sparsity offers a compelling route to accelerate large language model (LLM) inference by selectively suppressing hidden activations, yet existing approaches exhibit severe accuracy",
+      "abstract_evidence_sha256": "503eff6caa7cc05fec257ada4186a8a4668f0e6bfe94f625f24a47721ac034c0",
+      "abstract_sha256": null,
+      "source_abstract_chars": null,
+      "linked_from": [],
+      "first_checked_at": "2026-10-14T05:47:55Z",
+      "last_checked_at": "2026-10-14T05:47:55Z",
+      "primary_source_status": "verified_primary_abstract",
+      "source_version": "v4",
+      "source_submission_history": [
+        "[v1] Sun, 14 Dec 2025 15:47:40 UTC (348 KB)",
+        "[v2] Thu, 2 Apr 2026 19:26:17 UTC (575 KB)",
+        "[v3] Thu, 30 Apr 2026 21:10:36 UTC (575 KB)",
+        "[v4] Thu, 21 May 2026 01:18:21 UTC (576 KB)"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2504.12526",
+      "identity_tokens": [
+        "arXiv:2504.12526"
+      ],
+      "title": "MOM: Memory-Efficient Offloaded Mini-Sequence Inference for Long Context Language Models",
+      "reason": "mini-sequenceとKV-cache offloadingを組み合わせ、長文脈LLM推論memoryを大幅削減。",
+      "source_url": "https://arxiv.org/abs/2504.12526v1",
+      "body_check": "abstract_screen_only; body_not_read",
+      "abstract_evidence_excerpt": "We propose Memory-efficient Offloaded Mini-sequence Inference (MOM), a method that partitions critical layers into smaller \"mini-sequences\" and integrates seamlessly with KV cache offloading.",
+      "abstract_evidence_sha256": "c4907f8d8474126d3522fca2ecbddd71763832ca67765c4cab076b7f235fdb09",
+      "abstract_sha256": null,
+      "source_abstract_chars": null,
+      "linked_from": [],
+      "first_checked_at": "2026-10-14T05:47:55Z",
+      "last_checked_at": "2026-10-14T05:47:55Z",
+      "primary_source_status": "verified_primary_abstract",
+      "source_version": "v1",
+      "source_submission_history": [
+        "[v1] Wed, 16 Apr 2025 23:15:09 UTC (3,062 KB)"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2507.12442",
+      "identity_tokens": [
+        "arXiv:2507.12442"
+      ],
+      "title": "Characterizing State Space Model and Hybrid Language Model Performance with Long Context",
+      "reason": "長文脈Transformer/SSMのembedded GPU性能とmemory bottleneckを比較するsystem評価。",
+      "source_url": "https://arxiv.org/abs/2507.12442v4",
+      "body_check": "abstract_screen_only; body_not_read",
+      "abstract_evidence_excerpt": "Although such works present promising results, their workload characteristics in terms of computational performance and hardware resource requirements are not yet thoroughly explored, which",
+      "abstract_evidence_sha256": "8f23c88cb459e60910117eca520c8255e688a54b763bf0d3d9fd895abe6218d7",
+      "abstract_sha256": null,
+      "source_abstract_chars": null,
+      "linked_from": [],
+      "first_checked_at": "2026-10-14T05:47:55Z",
+      "last_checked_at": "2026-10-14T05:47:55Z",
+      "primary_source_status": "verified_primary_abstract",
+      "source_version": "v4",
+      "source_submission_history": [
+        "[v1] Wed, 16 Jul 2025 17:28:40 UTC (9,235 KB)",
+        "[v2] Sat, 19 Jul 2025 08:24:57 UTC (9,230 KB)",
+        "[v3] Tue, 24 Feb 2026 05:37:48 UTC (11,765 KB)",
+        "[v4] Sun, 22 Mar 2026 12:40:45 UTC (11,769 KB)"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2509.25044",
+      "identity_tokens": [
+        "arXiv:2509.25044"
+      ],
+      "title": "A Scalable Distributed Framework for Multimodal GigaVoxel Image Registration",
+      "reason": "分散IO-aware kernelによる大規模3D生物画像登録の高速化。汎用LLM推論基盤への移転可能性がabstractでは限定的。",
+      "source_url": "https://arxiv.org/abs/2509.25044v1",
+      "body_check": "abstract_screen_only; body_not_read",
+      "abstract_evidence_excerpt": "In this work, we propose FFDP, a set of IO-aware non-GEMM fused kernels supplemented with a distributed framework for image registration at unprecedented scales.",
+      "abstract_evidence_sha256": "3e72e61e2cd5c308be53b141b2e56cbea025187fbfd8d5822c4d8f69f2278cbe",
+      "abstract_sha256": null,
+      "source_abstract_chars": null,
+      "linked_from": [],
+      "first_checked_at": "2026-10-14T05:47:55Z",
+      "last_checked_at": "2026-10-14T05:47:55Z",
+      "primary_source_status": "verified_primary_abstract",
+      "source_version": "v1",
+      "source_submission_history": [
+        "[v1] Mon, 29 Sep 2025 16:58:40 UTC (41,538 KB)"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2510.26182",
+      "identity_tokens": [
+        "arXiv:2510.26182"
+      ],
+      "title": "MossNet: Mixture of State-Space Experts is a Multi-Head Attention",
+      "reason": "linear multi-head attention相当を行うSSM-MoEを提案し、LLM性能と実機runtime/resourceを評価。",
+      "source_url": "https://arxiv.org/abs/2510.26182v1",
+      "body_check": "abstract_screen_only; body_not_read",
+      "abstract_evidence_excerpt": "In this work, we propose MossNet, a novel mixture-of-state-space-experts architecture that emulates a linear multi-head attention (MHA).",
+      "abstract_evidence_sha256": "24d532f245ff7e7b05efc6b0e5c6047b63182183781eb7f1a3db0f29b536d03c",
+      "abstract_sha256": null,
+      "source_abstract_chars": null,
+      "linked_from": [],
+      "first_checked_at": "2026-10-14T05:47:55Z",
+      "last_checked_at": "2026-10-14T05:47:55Z",
+      "primary_source_status": "verified_primary_abstract",
+      "source_version": "v1",
+      "source_submission_history": [
+        "[v1] Thu, 30 Oct 2025 06:37:23 UTC (1,059 KB)"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2501.18154",
+      "identity_tokens": [
+        "arXiv:2501.18154"
+      ],
+      "title": "Mixed-Precision Graph Neural Quantization for Low Bit Large Language Models",
+      "reason": "GNNでLLM weightごとに低bit PTQを割り当て、低bit量子化性能を改善。",
+      "source_url": "https://arxiv.org/abs/2501.18154v1",
+      "body_check": "abstract_screen_only; body_not_read",
+      "abstract_evidence_excerpt": "To enhance the quantization performance at low bit widths, we introduce a Mixed-precision Graph Neural PTQ (MG-PTQ) approach, employing a graph neural network (GNN)",
+      "abstract_evidence_sha256": "e358f7bea8a3f898d4d6f974667d5e95248946a5a224f0feabe8a858ae77e546",
+      "abstract_sha256": null,
+      "source_abstract_chars": null,
+      "linked_from": [],
+      "first_checked_at": "2026-10-14T05:47:55Z",
+      "last_checked_at": "2026-10-14T05:47:55Z",
+      "primary_source_status": "verified_primary_abstract",
+      "source_version": "v1",
+      "source_submission_history": [
+        "[v1] Thu, 30 Jan 2025 05:39:01 UTC (374 KB)"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/ACCESS.2026.3715276",
+      "identity_tokens": [
+        "DOI:10.1109/ACCESS.2026.3715276"
+      ],
+      "title": "Neuro-Elastic: A Unified Framework for Hardware-Aware Adaptive Quantization and Dynamic Sparsity in Real-Time Edge Intent Prediction",
+      "reason": "IEEE publisher abstract pageを取得できず、手法と対象を一次資料で確認できない。 試行URL: https://doi.org/10.1109/ACCESS.2026.3715276; IEEE publisher abstract pageを取得できず、手法と対象を一次資料で確認できない。",
+      "source_url": "https://doi.org/10.1109/ACCESS.2026.3715276",
+      "body_check": "source_unavailable; abstract_not_read; body_not_read",
+      "abstract_evidence_excerpt": "",
+      "abstract_evidence_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "abstract_sha256": null,
+      "source_abstract_chars": null,
+      "linked_from": [],
+      "first_checked_at": "2026-10-14T05:47:55Z",
+      "last_checked_at": "2026-10-14T05:47:55Z",
+      "primary_source_status": "source_unavailable",
+      "source_attempts": [
+        {
+          "url": "https://doi.org/10.1109/ACCESS.2026.3715276",
+          "result": "Web open error: URL https://doi.org/10.1109/ACCESS.2026.3715276 is not accessible via this tool."
+        }
+      ],
+      "source_failure": "https://doi.org/10.1109/ACCESS.2026.3715276: Web open error: URL https://doi.org/10.1109/ACCESS.2026.3715276 is not accessible via this tool."
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2508.06974",
+      "identity_tokens": [
+        "arXiv:2508.06974"
+      ],
+      "title": "Rethinking 1-bit Optimization Leveraging Pre-trained Large Language Models",
+      "reason": "事前学習LLMの1-bit化を段階的に行い、低bit model作成と精度維持に対処。",
+      "source_url": "https://arxiv.org/abs/2508.06974v2",
+      "body_check": "abstract_screen_only; body_not_read",
+      "abstract_evidence_excerpt": "In this paper, we introduce a consistent progressive training for both forward and backward, smoothly converting the full-precision weights into the binarized ones.",
+      "abstract_evidence_sha256": "d943a7a0caafd340a3682864c6578639a76b13ed7556c9b3600e5830260701d3",
+      "abstract_sha256": null,
+      "source_abstract_chars": null,
+      "linked_from": [],
+      "first_checked_at": "2026-10-14T05:47:55Z",
+      "last_checked_at": "2026-10-14T05:47:55Z",
+      "primary_source_status": "verified_primary_abstract",
+      "source_version": "v2",
+      "source_submission_history": [
+        "[v1] Sat, 9 Aug 2025 13:00:16 UTC (511 KB)",
+        "[v2] Mon, 18 May 2026 12:47:40 UTC (544 KB)"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/TASLPRO.2026.3724410",
+      "identity_tokens": [
+        "DOI:10.1109/TASLPRO.2026.3724410"
+      ],
+      "title": "Toward Extremely Low-Bit and Multi-Precision Conformer and Speech Foundation Model Quantization",
+      "reason": "IEEE publisher abstract pageを取得できず、Conformer/Speech model量子化の具体策を一次資料で確認できない。 試行URL: https://doi.org/10.1109/TASLPRO.2026.3724410; IEEE publisher abstract pageを取得できず、Conformer/Speech model量子化の具体策を一次資料で確認できない。",
+      "source_url": "https://doi.org/10.1109/TASLPRO.2026.3724410",
+      "body_check": "source_unavailable; abstract_not_read; body_not_read",
+      "abstract_evidence_excerpt": "",
+      "abstract_evidence_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "abstract_sha256": null,
+      "source_abstract_chars": null,
+      "linked_from": [],
+      "first_checked_at": "2026-10-14T05:47:55Z",
+      "last_checked_at": "2026-10-14T05:47:55Z",
+      "primary_source_status": "source_unavailable",
+      "source_attempts": [
+        {
+          "url": "https://doi.org/10.1109/TASLPRO.2026.3724410",
+          "result": "Web open error: URL https://doi.org/10.1109/TASLPRO.2026.3724410 is not accessible via this tool."
+        }
+      ],
+      "source_failure": "https://doi.org/10.1109/TASLPRO.2026.3724410: Web open error: URL https://doi.org/10.1109/TASLPRO.2026.3724410 is not accessible via this tool."
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2408.05391",
+      "identity_tokens": [
+        "arXiv:2408.05391"
+      ],
+      "title": "SAMSA: Efficient Transformer for Many Data Modalities",
+      "reason": "data-dependent samplingによるlinear self-attentionで複数modalitiesの推論を高速化。",
+      "source_url": "https://arxiv.org/abs/2408.05391v2",
+      "body_check": "abstract_screen_only; body_not_read",
+      "abstract_evidence_excerpt": "Our mechanism is based on a differentiable sampling without replacement method we discovered.",
+      "abstract_evidence_sha256": "aa62dff3f90d8d1d482c7403b515cee287248db2b66405fca2310a3e79d69226",
+      "abstract_sha256": null,
+      "source_abstract_chars": null,
+      "linked_from": [],
+      "first_checked_at": "2026-10-14T05:47:55Z",
+      "last_checked_at": "2026-10-14T05:47:55Z",
+      "primary_source_status": "verified_primary_abstract",
+      "source_version": "v2",
+      "source_submission_history": [
+        "[v1] Sat, 10 Aug 2024 00:09:06 UTC (1,268 KB)",
+        "[v2] Sun, 18 Aug 2024 13:22:05 UTC (386 KB)"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/SMC54092.2024.10831406",
+      "identity_tokens": [
+        "DOI:10.1109/SMC54092.2024.10831406"
+      ],
+      "title": "Efficient One-Shot Pruning of Large Language Models with Low-Rank Approximation",
+      "reason": "IEEE Xplore robot verificationとDOI resolver errorのためpublisher abstractを取得できず、methodを確認できない。 試行URL: https://doi.org/10.1109/SMC54092.2024.10831406; IEEE Xplore robot verificationとDOI resolver errorのためpublisher abstractを取得できず、methodを確認できない。",
+      "source_url": "https://doi.org/10.1109/SMC54092.2024.10831406",
+      "body_check": "source_unavailable; abstract_not_read; body_not_read",
+      "abstract_evidence_excerpt": "",
+      "abstract_evidence_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "abstract_sha256": null,
+      "source_abstract_chars": null,
+      "linked_from": [],
+      "first_checked_at": "2026-10-14T05:47:55Z",
+      "last_checked_at": "2026-10-14T05:47:55Z",
+      "primary_source_status": "source_unavailable",
+      "source_attempts": [
+        {
+          "result": "DOI resolver inaccessible via web tool.",
+          "url": "https://doi.org/10.1109/SMC54092.2024.10831406"
+        },
+        {
+          "result": "IEEE Xplore returned JavaScript/robot verification; no abstract.",
+          "url": "https://ieeexplore.ieee.org/document/10831406"
+        }
+      ],
+      "source_failure": "https://doi.org/10.1109/SMC54092.2024.10831406: DOI resolver inaccessible via web tool. | https://ieeexplore.ieee.org/document/10831406: IEEE Xplore returned JavaScript/robot verification; no abstract."
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "SemanticScholar:abb6ba1bc5470508150fe420ecb1cdd07caf0fa2",
+      "identity_tokens": [
+        "SemanticScholar:abb6ba1bc5470508150fe420ecb1cdd07caf0fa2"
+      ],
+      "title": "Characterizing self-speculative decoding approaches for accelerating LLMs",
+      "reason": "5種のself-speculative decodingを複数モデルとdatasetで比較し、LLM inference trade-offを分析。",
+      "source_url": "https://openreview.net/pdf/1b1a683b2c8c838b082c772172999fb1011053cf.pdf",
+      "body_check": "abstract_screen_only; body_not_read",
+      "abstract_evidence_excerpt": "To better understand these tradeoffs, we characterize five self-speculative decoding techniques across three model sizes and three datasets and provide recommendations",
+      "abstract_evidence_sha256": "6889266b32db23dfab1986fec45c21a5e1e6ef0c585459ddf52f6115e1cc5236",
+      "abstract_sha256": null,
+      "source_abstract_chars": null,
+      "linked_from": [],
+      "first_checked_at": "2026-10-14T05:47:55Z",
+      "last_checked_at": "2026-10-14T05:47:55Z",
+      "primary_source_status": "verified_primary_abstract"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2511.18936",
+      "identity_tokens": [
+        "arXiv:2511.18936"
+      ],
+      "title": "SWAN: Sparse Winnowed Attention for Reduced Inference Memory via Decompression-Free KV-Cache Compression",
+      "reason": "KV cacheを復元なしで使うrotation/pruningで長文脈LLMのcache memoryを50–60%削減。",
+      "source_url": "https://arxiv.org/abs/2511.18936v1",
+      "body_check": "abstract_screen_only; body_not_read",
+      "abstract_evidence_excerpt": "Existing compression techniques like token eviction, quantization, or other low-rank methods often risk information loss, have fixed limits, or introduce significant computational overhead from",
+      "abstract_evidence_sha256": "640ca4eefbca720df5e2ed6afffae23e14a41b035c635be61579b3144a5cfe44",
+      "abstract_sha256": null,
+      "source_abstract_chars": null,
+      "linked_from": [],
+      "first_checked_at": "2026-10-14T05:47:55Z",
+      "last_checked_at": "2026-10-14T05:47:55Z",
+      "primary_source_status": "verified_primary_abstract",
+      "source_version": "v1",
+      "source_submission_history": [
+        "[v1] Mon, 24 Nov 2025 09:41:24 UTC (1,833 KB)"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.18653/v1/2025.findings-emnlp.1286",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2025.findings-emnlp.1286"
+      ],
+      "title": "FractalLLM: Lossless Self-Speculative Decoding with Layer Embedded Self-Compression",
+      "reason": "decoder層へ圧縮モデルを埋め込みlossless self-speculative decoding、最大2.47倍speedup。",
+      "source_url": "https://aclanthology.org/2025.findings-emnlp.1286/",
+      "body_check": "abstract_screen_only; body_not_read",
+      "abstract_evidence_excerpt": "To address this limitation, we propose Fractal-LLM, a lossless self-speculative decoding method that embeds a compressed model within selected decoder layers of the original",
+      "abstract_evidence_sha256": "2f29680a3f01ebd2cdd45e30791b9fb2605559abf5008dd69a59a858a3d46bc7",
+      "abstract_sha256": null,
+      "source_abstract_chars": null,
+      "linked_from": [],
+      "first_checked_at": "2026-10-14T05:47:55Z",
+      "last_checked_at": "2026-10-14T05:47:55Z",
+      "primary_source_status": "verified_primary_abstract"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3731599.3767354",
+      "identity_tokens": [
+        "DOI:10.1145/3731599.3767354"
+      ],
+      "title": "Engine-Agnostic Model Hot-Swapping for Cost-Effective LLM Inference",
+      "reason": "ACM publisher pageが403、DOI resolverも不可。機関repositoryのabstractはpublisher abstract要件の代わりとしない。 試行URL: https://doi.org/10.1145/3731599.3767354; ACM publisher pageが403、DOI resolverも不可。機関repositoryのabstractはpublisher abstract要件の代わりとしない。",
+      "source_url": "https://doi.org/10.1145/3731599.3767354",
+      "body_check": "source_unavailable; abstract_not_read; body_not_read",
+      "abstract_evidence_excerpt": "",
+      "abstract_evidence_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "abstract_sha256": null,
+      "source_abstract_chars": null,
+      "linked_from": [],
+      "first_checked_at": "2026-10-14T05:47:55Z",
+      "last_checked_at": "2026-10-14T05:47:55Z",
+      "primary_source_status": "source_unavailable",
+      "source_attempts": [
+        {
+          "result": "DOI resolver inaccessible via web tool.",
+          "url": "https://doi.org/10.1145/3731599.3767354"
+        },
+        {
+          "result": "HTTP 403 Forbidden.",
+          "url": "https://dl.acm.org/doi/10.1145/3731599.3767354"
+        }
+      ],
+      "source_failure": "https://doi.org/10.1145/3731599.3767354: DOI resolver inaccessible via web tool. | https://dl.acm.org/doi/10.1145/3731599.3767354: HTTP 403 Forbidden."
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1609/aaai.v39i23.34690",
+      "identity_tokens": [
+        "DOI:10.1609/aaai.v39i23.34690"
+      ],
+      "title": "Dynamic-Width Speculative Beam Decoding for LLM Inference",
+      "reason": "adaptive-width speculative beam decodingでbeam sampling比の速度/energy改善、品質維持を報告。",
+      "source_url": "https://ojs.aaai.org/index.php/AAAI/article/view/34690",
+      "body_check": "abstract_screen_only; body_not_read",
+      "abstract_evidence_excerpt": "To address these challenges, we propose dynamic-width speculative beam decoding (DSBD).",
+      "abstract_evidence_sha256": "20771b82dc514e08c68393d801c25c63db10dfb7dfea789877598bfb0ce89ce5",
+      "abstract_sha256": null,
+      "source_abstract_chars": null,
+      "linked_from": [],
+      "first_checked_at": "2026-10-14T05:47:55Z",
+      "last_checked_at": "2026-10-14T05:47:55Z",
+      "primary_source_status": "verified_primary_abstract"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/GLOBECOM59602.2025.11432531",
+      "identity_tokens": [
+        "DOI:10.1109/GLOBECOM59602.2025.11432531"
+      ],
+      "title": "Efficient Batch Processing for Private Cloud LLM Inference: Modeling and Performance Comparison",
+      "reason": "IEEE publisher pageとDOI resolverからabstract取得不可。secondary metadataでは内容を判定しない。 試行URL: https://doi.org/10.1109/GLOBECOM59602.2025.11432531; IEEE publisher pageとDOI resolverからabstract取得不可。secondary metadataでは内容を判定しない。",
+      "source_url": "https://doi.org/10.1109/GLOBECOM59602.2025.11432531",
+      "body_check": "source_unavailable; abstract_not_read; body_not_read",
+      "abstract_evidence_excerpt": "",
+      "abstract_evidence_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "abstract_sha256": null,
+      "source_abstract_chars": null,
+      "linked_from": [],
+      "first_checked_at": "2026-10-14T05:47:55Z",
+      "last_checked_at": "2026-10-14T05:47:55Z",
+      "primary_source_status": "source_unavailable",
+      "source_attempts": [
+        {
+          "url": "https://doi.org/10.1109/GLOBECOM59602.2025.11432531",
+          "result": "Web open error: URL https://doi.org/10.1109/GLOBECOM59602.2025.11432531 is not accessible via this tool."
+        }
+      ],
+      "source_failure": "https://doi.org/10.1109/GLOBECOM59602.2025.11432531: Web open error: URL https://doi.org/10.1109/GLOBECOM59602.2025.11432531 is not accessible via this tool."
+    }
+  ]
+}
