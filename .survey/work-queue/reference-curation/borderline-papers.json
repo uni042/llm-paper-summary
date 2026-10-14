@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-14T09:45:49+00:00",
-  "record_count": 5104,
+  "updated_at": "2026-10-14T09:47:17+00:00",
+  "record_count": 5105,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -78962,6 +78962,29 @@
       ],
       "borderline_recheck_count": 0,
       "title": "Rethinking Layer Relevance in Large Language Models Beyond Cosine Similarity"
+    },
+    "arXiv:2412.14354": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2412.14354",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2412.14354",
+        "SemanticScholar:b96f33a001601e0a6b727c3325fc0aa4ffccdf25",
+        "arXiv:2412.14354"
+      ],
+      "reason": "Benchmarks SSM rerankers and efficiency tradeoffs, but is application-level reranking evaluation rather than LLM inference optimization.",
+      "first_checked_at": "2026-10-14T09:47:17+00:00",
+      "last_checked_at": "2026-10-14T09:47:17+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2403.19887-jamba-a-hybrid-transformer-mamba-language-model.md",
+        "papers/inference/19-inference-evaluation-benchmarking/2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md",
+        "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md",
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md",
+        "papers/inference/99-other-inference-systems/2024-2312.06635-gated-linear-attention-transformers-with-hardware-efficient-training.md",
+        "papers/inference/99-other-inference-systems/2024-2404.07904-hgrn2-gated-linear-rnns-with-state-expansion.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "State Space Models are Strong Text Rerankers"
     }
   }
 }
