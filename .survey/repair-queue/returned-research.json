@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-14T12:23:11+00:00",
+  "generated_at": "2026-10-14T12:28:35+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -1365,33 +1365,6 @@
       "worker_run_key": "20261014-1800-scheduled-chat-00/r01"
     },
     {
-      "canonical_id": "arXiv:2511.02805",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-14T10:51:34+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "長文定型文の再利用を検出: papers/inference/19-inference-evaluation-benchmarking/2025-2511.02805-memsearcher-training-llms-to-reason-search-and-manage-memory-via-end-to-.md と 14 段落 / 3737文字 (100.0%) が完全一致"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 4965,
-        "body_paragraphs": 32,
-        "method_chars": 1392,
-        "method_paragraphs": 9,
-        "evaluation_chars": 825,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_676b77cbeacc81919ddff721604e0ffc--2025-2511.02805-memsearcher-compact-agent-memory-research-20261014-0500-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_676b77cbeacc81919ddff721604e0ffc--2025-2511.02805-memsearcher-compact-agent-memory-research-20261014-0500-scheduled-chat-00-r01.json",
-      "worker_run_key": "20261014-0500-scheduled-chat-00/r01"
-    },
-    {
       "canonical_id": "arXiv:2601.03649",
       "title": null,
       "source_url": null,
@@ -1467,31 +1440,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_6e8530b261d4819183f57181b23b6009--2025-2511.18868-kernelband-quality-repair-20261014-0445-scheduled-chat-45-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_6e8530b261d4819183f57181b23b6009--2025-2511.18868-kernelband-quality-repair-20261014-0445-scheduled-chat-45-r01.json",
       "worker_run_key": "20261014-0445-scheduled-chat-45/r01"
-    },
-    {
-      "canonical_id": "arXiv:2405.19209",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-14T10:57:31+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2024-2405.19209-videotree-adaptive-tree-based-video-representation-for-llm-reasoning-on-.md と 20 段落 / 4230文字 (100.0%) が完全一致"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5503,
-        "body_paragraphs": 32,
-        "method_chars": 1167,
-        "method_paragraphs": 7,
-        "evaluation_chars": 1503,
-        "limitation_chars": 870,
-        "insufficiency_flags": []
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_70119075dfdc8191890846ebee7e4935--2024-2405.19209-videotree-query-adaptive-long-video-reasoning-research-20261014-1245-scheduled-chat-45-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_70119075dfdc8191890846ebee7e4935--2024-2405.19209-videotree-query-adaptive-long-video-reasoning-research-20261014-1245-scheduled-chat-45-r01.json",
-      "worker_run_key": "20261014-1245-scheduled-chat-45/r01"
     },
     {
       "canonical_id": "arXiv:2605.30571",
@@ -1572,31 +1520,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_86f29951dfc081919a2a311b2f4e5ef5--2026-2606.26762-protokv-streaming-video-memory-research-20261014-1855-scheduled-chat-00-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_86f29951dfc081919a2a311b2f4e5ef5--2026-2606.26762-protokv-streaming-video-memory-research-20261014-1855-scheduled-chat-00-r01.json",
       "worker_run_key": "20261014-1855-scheduled-chat-00/r01"
-    },
-    {
-      "canonical_id": "arXiv:2006.16362",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-14T11:13:43+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2020-2006.16362-multi-head-attention-collaborate-instead-of-concatenate.md と 28 段落 / 6620文字 (100.0%) が完全一致"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 7452,
-        "body_paragraphs": 43,
-        "method_chars": 1423,
-        "method_paragraphs": 7,
-        "evaluation_chars": 1880,
-        "limitation_chars": 701,
-        "insufficiency_flags": []
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_8da335920f64819193ec398401cdccf5--2020-2006.16362-collaborative-multihead-attention-research-20261014-0130-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_8da335920f64819193ec398401cdccf5--2020-2006.16362-collaborative-multihead-attention-research-20261014-0130-scheduled-chat-30-r01.json",
-      "worker_run_key": "20261014-0130-scheduled-chat-30/r01"
     },
     {
       "canonical_id": "arXiv:2512.21911",
@@ -1780,31 +1703,6 @@
       "worker_run_key": "20261014-0145-scheduled-chat-45/r01"
     },
     {
-      "canonical_id": "arXiv:2603.17809",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-14T11:25:23+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2026-2603.17809-fine-grained-post-training-quantization-for-large-vision-language-models.md と 23 段落 / 5086文字 (100.0%) が完全一致"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5361,
-        "body_paragraphs": 28,
-        "method_chars": 1288,
-        "method_paragraphs": 7,
-        "evaluation_chars": 876,
-        "limitation_chars": 538,
-        "insufficiency_flags": []
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_9ff17a8e3e7881918a0b1c307fdc32fe--2026-2603.17809-qig-token-aware-ptq-vlm-research-20261014-0200-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_9ff17a8e3e7881918a0b1c307fdc32fe--2026-2603.17809-qig-token-aware-ptq-vlm-research-20261014-0200-scheduled-chat-00-r01.json",
-      "worker_run_key": "20261014-0200-scheduled-chat-00/r01"
-    },
-    {
       "canonical_id": "arXiv:2511.19097",
       "title": null,
       "source_url": null,
@@ -1855,33 +1753,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_ade12f4c49fc81918f9f32a4dd52dc6a--2026-2605.06320-latte-adaptive-task-graphs-research-20261014-0445-scheduled-chat-45-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_ade12f4c49fc81918f9f32a4dd52dc6a--2026-2605.06320-latte-adaptive-task-graphs-research-20261014-0445-scheduled-chat-45-r01.json",
       "worker_run_key": "20261014-0445-scheduled-chat-45/r01"
-    },
-    {
-      "canonical_id": "DOI:10.18653/v1/2025.naacl-long.543",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-14T11:25:25+00:00",
-      "return_count": 3,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2025-2411.17525-higgs-pushing-the-limits-of-large-language-model-quantization-via-the-li.md と 19 段落 / 4271文字 (100.0%) が完全一致"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5847,
-        "body_paragraphs": 31,
-        "method_chars": 1991,
-        "method_paragraphs": 11,
-        "evaluation_chars": 1255,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_ae4970e3a4508191bd816a7d1a094fd3--2025-higgs-linearity-quantization-returned-repair-20261013-2200-scheduled-chat-00-r01-v2.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_ae4970e3a4508191bd816a7d1a094fd3--2025-higgs-linearity-quantization-returned-repair-20261013-2200-scheduled-chat-00-r01-v2.json",
-      "worker_run_key": "20261013-2200-scheduled-chat-00/r01"
     },
     {
       "canonical_id": "arXiv:2512.03383",
@@ -2619,8 +2490,8 @@
     },
     {
       "canonical_id": "arXiv:2604.04745",
-      "title": "The Energy Cost of Execution-Idle in GPU Clusters",
-      "source_url": "https://arxiv.org/pdf/2604.04745",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-14T12:23:07+00:00",
       "return_count": 4,
       "assigned_worker": "scheduled-chat-45",
@@ -2644,8 +2515,8 @@
     },
     {
       "canonical_id": "arXiv:2605.22884",
-      "title": "Tensor Cache: Eviction-conditioned Associative Memory for Transformers",
-      "source_url": "https://arxiv.org/abs/2605.22884",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-14T12:23:08+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-30",
@@ -2672,8 +2543,8 @@
     },
     {
       "canonical_id": "arXiv:2605.07260",
-      "title": "When Are Experts Misrouted? Counterfactual Routing Analysis in Mixture-of-Experts Language Models",
-      "source_url": "https://arxiv.org/html/2605.07260v1",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-14T12:23:09+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-45",
@@ -2699,8 +2570,8 @@
     },
     {
       "canonical_id": "arXiv:2605.29843",
-      "title": "HARP: Hadamard-Preconditioned Adaptive Rotation Processor for Extreme LLM Quantization",
-      "source_url": "https://arxiv.org/abs/2605.29843",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-14T12:23:10+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-30",
@@ -2726,8 +2597,8 @@
     },
     {
       "canonical_id": "arXiv:2601.14888",
-      "title": "What Makes Low-Bit Quantization-Aware Training Work for Reasoning LLMs? A Systematic Study",
-      "source_url": "https://arxiv.org/abs/2601.14888",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-14T12:23:11+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-45",
@@ -2751,6 +2622,135 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-080701f32c21--libfile_806d7ae5cde88191939842c8a2320b36--2026-2601.14888-reasoning-qat-low-bit-reasoning-llm-research-20261014-1230-scheduled-chat-30-r01-v2.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-080701f32c21--libfile_806d7ae5cde88191939842c8a2320b36--2026-2601.14888-reasoning-qat-low-bit-reasoning-llm-research-20261014-1230-scheduled-chat.json",
       "worker_run_key": "20261014-1230-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2006.16362",
+      "title": "Multi-Head Attention: Collaborate Instead of Concatenate",
+      "source_url": "https://arxiv.org/abs/2006.16362",
+      "returned_at": "2026-10-14T12:28:30+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2020-2006.16362-multi-head-attention-collaborate-instead-of-concatenate.md と 28 段落 / 6620文字 (100.0%) が完全一致"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 7452,
+        "body_paragraphs": 43,
+        "method_chars": 1423,
+        "method_paragraphs": 7,
+        "evaluation_chars": 1880,
+        "limitation_chars": 701,
+        "insufficiency_flags": []
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-0a524b22fab2--libfile_8da335920f64819193ec398401cdccf5--2020-2006.16362-collaborative-multihead-attention-research-20261014-0130-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-0a524b22fab2--libfile_8da335920f64819193ec398401cdccf5--2020-2006.16362-collaborative-multihead-attention-research-20261014-0130-scheduled-chat-3.json",
+      "worker_run_key": "20261014-0130-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2511.02805",
+      "title": "MemSearcher: Training LLMs to Reason, Search and Manage Memory via End-to-End Reinforcement Learning",
+      "source_url": "https://arxiv.org/pdf/2511.02805v2",
+      "returned_at": "2026-10-14T12:28:31+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "長文定型文の再利用を検出: papers/inference/19-inference-evaluation-benchmarking/2025-2511.02805-memsearcher-training-llms-to-reason-search-and-manage-memory-via-end-to-.md と 14 段落 / 3737文字 (100.0%) が完全一致"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 4965,
+        "body_paragraphs": 32,
+        "method_chars": 1392,
+        "method_paragraphs": 9,
+        "evaluation_chars": 825,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-0bb1d24aad37--libfile_676b77cbeacc81919ddff721604e0ffc--2025-2511.02805-memsearcher-compact-agent-memory-research-20261014-0500-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-0bb1d24aad37--libfile_676b77cbeacc81919ddff721604e0ffc--2025-2511.02805-memsearcher-compact-agent-memory-research-20261014-0500-scheduled-chat-00.json",
+      "worker_run_key": "20261014-0500-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2405.19209",
+      "title": "VideoTree: Adaptive Tree-based Video Representation for LLM Reasoning on Long Videos",
+      "source_url": "https://arxiv.org/html/2405.19209",
+      "returned_at": "2026-10-14T12:28:32+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2024-2405.19209-videotree-adaptive-tree-based-video-representation-for-llm-reasoning-on-.md と 20 段落 / 4230文字 (100.0%) が完全一致"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5503,
+        "body_paragraphs": 32,
+        "method_chars": 1167,
+        "method_paragraphs": 7,
+        "evaluation_chars": 1503,
+        "limitation_chars": 870,
+        "insufficiency_flags": []
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-10d9da523956--libfile_70119075dfdc8191890846ebee7e4935--2024-2405.19209-videotree-query-adaptive-long-video-reasoning-research-20261014-1245-scheduled-chat-45-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-10d9da523956--libfile_70119075dfdc8191890846ebee7e4935--2024-2405.19209-videotree-query-adaptive-long-video-reasoning-research-20261014-1245-sche.json",
+      "worker_run_key": "20261014-1245-scheduled-chat-45/r01"
+    },
+    {
+      "canonical_id": "DOI:10.18653/v1/2025.naacl-long.543",
+      "title": "HIGGS: Pushing the Limits of Large Language Model Quantization via the Linearity Theorem",
+      "source_url": "https://aclanthology.org/2025.naacl-long.543.pdf",
+      "returned_at": "2026-10-14T12:28:34+00:00",
+      "return_count": 4,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2025-2411.17525-higgs-pushing-the-limits-of-large-language-model-quantization-via-the-li.md と 19 段落 / 4271文字 (100.0%) が完全一致"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5847,
+        "body_paragraphs": 31,
+        "method_chars": 1991,
+        "method_paragraphs": 11,
+        "evaluation_chars": 1255,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-156601224fec--libfile_ae4970e3a4508191bd816a7d1a094fd3--2025-higgs-linearity-quantization-returned-repair-20261013-2200-scheduled-chat-00-r01-v2.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-156601224fec--libfile_ae4970e3a4508191bd816a7d1a094fd3--2025-higgs-linearity-quantization-returned-repair-20261013-2200-scheduled-chat-00-r01-v2.json",
+      "worker_run_key": "20261013-2200-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2603.17809",
+      "title": "Fine-Grained Post-Training Quantization for Large Vision Language Models with Quantization-Aware Integrated Gradients",
+      "source_url": "https://arxiv.org/html/2603.17809v1",
+      "returned_at": "2026-10-14T12:28:35+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2026-2603.17809-fine-grained-post-training-quantization-for-large-vision-language-models.md と 23 段落 / 5086文字 (100.0%) が完全一致"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5361,
+        "body_paragraphs": 28,
+        "method_chars": 1288,
+        "method_paragraphs": 7,
+        "evaluation_chars": 876,
+        "limitation_chars": 538,
+        "insufficiency_flags": []
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-23a83a707073--libfile_9ff17a8e3e7881918a0b1c307fdc32fe--2026-2603.17809-qig-token-aware-ptq-vlm-research-20261014-0200-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-23a83a707073--libfile_9ff17a8e3e7881918a0b1c307fdc32fe--2026-2603.17809-qig-token-aware-ptq-vlm-research-20261014-0200-scheduled-chat-00-r01.json",
+      "worker_run_key": "20261014-0200-scheduled-chat-00/r01"
     }
   ]
 }

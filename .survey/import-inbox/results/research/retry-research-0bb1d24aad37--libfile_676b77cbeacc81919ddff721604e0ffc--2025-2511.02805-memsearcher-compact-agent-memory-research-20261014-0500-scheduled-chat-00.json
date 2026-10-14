@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "041aaa90def12c850949f2b7f283c84efd4c21ccec4d0cda59fcb97e72690e2b",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/retry-research-0bb1d24aad37--libfile_676b77cbeacc81919ddff721604e0ffc--2025-2511.02805-memsearcher-compact-agent-memory-research-20261014-0500-scheduled-chat-00-r01.md",
+  "canonical_id": "arXiv:2511.02805",
+  "worker_completed_at": "2026-10-14T05:07:20+09:00",
+  "worker_run_key": "20261014-0500-scheduled-chat-00/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 4965,
+    "body_paragraphs": 32,
+    "method_chars": 1392,
+    "method_paragraphs": 9,
+    "evaluation_chars": 825,
+    "limitation_chars": 0,
+    "insufficiency_flags": [
+      "限界説明量 0 < 推奨 120"
+    ]
+  },
+  "failures": [
+    "長文定型文の再利用を検出: papers/inference/19-inference-evaluation-benchmarking/2025-2511.02805-memsearcher-training-llms-to-reason-search-and-manage-memory-via-end-to-.md と 14 段落 / 3737文字 (100.0%) が完全一致"
+  ],
+  "processed_at": "2026-10-14T12:28:31+00:00"
+}

@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "1a241a81c11822497ab2a8d993d31f860cca99c9ba0e486c65e01dd62d36c606",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/retry-research-156601224fec--libfile_ae4970e3a4508191bd816a7d1a094fd3--2025-higgs-linearity-quantization-returned-repair-20261013-2200-scheduled-chat-00-r01-v2.md",
+  "canonical_id": "DOI:10.18653/v1/2025.naacl-long.543",
+  "worker_completed_at": "2026-10-13T22:10:00+09:00",
+  "worker_run_key": "20261013-2200-scheduled-chat-00/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 5847,
+    "body_paragraphs": 31,
+    "method_chars": 1991,
+    "method_paragraphs": 11,
+    "evaluation_chars": 1255,
+    "limitation_chars": 0,
+    "insufficiency_flags": [
+      "限界説明量 0 < 推奨 120"
+    ]
+  },
+  "failures": [
+    "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2025-2411.17525-higgs-pushing-the-limits-of-large-language-model-quantization-via-the-li.md と 19 段落 / 4271文字 (100.0%) が完全一致"
+  ],
+  "processed_at": "2026-10-14T12:28:34+00:00"
+}
