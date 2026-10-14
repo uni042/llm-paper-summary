@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-029a62a15b5ea0ef-border-005",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2508.21394",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2508.21394",
+    "identity_tokens": [
+      "DOI:10.1109/mcas.2025.3650725",
+      "arXiv:2508.21394"
+    ],
+    "reason": "The matching arXiv work was cross-identified by title/authors with the DOI feature article. The abstract is a broad architecture/evolution overview and does not establish a concrete LLM inference/serving efficiency method.",
+    "first_checked_at": "2026-10-14T01:19:51+00:00",
+    "last_checked_at": "2026-10-14T01:19:51+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "AI Compute Architecture and Evolution Trends"
+  },
+  "processed_at": "2026-10-14T01:19:51+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-029a62a15b5e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

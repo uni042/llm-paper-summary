@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-14T01:00:56+00:00",
-  "record_count": 4963,
+  "updated_at": "2026-10-14T01:19:55+00:00",
+  "record_count": 4972,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -76675,6 +76675,124 @@
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "Libra: Novel LLM Token Streaming via Region-Based Task Scheduling and Token Bundling"
+    },
+    "DOI:10.1109/icws67624.2025.00071": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/icws67624.2025.00071",
+      "identity_tokens": [
+        "DOI:10.1109/icws67624.2025.00071"
+      ],
+      "reason": "Publisher page lookup attempted at the DOI/IEEE Xplore route; the official abstract was not returned (retrieval reported “Cache miss”). Only title/metadata were available; abstract evidence is still missing.",
+      "first_checked_at": "2026-10-14T01:19:50+00:00",
+      "last_checked_at": "2026-10-14T01:19:50+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "A Dynamic Inference Method for Autoregressive Transformer Models"
+    },
+    "arXiv:2508.21394": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2508.21394",
+      "identity_tokens": [
+        "DOI:10.1109/mcas.2025.3650725",
+        "arXiv:2508.21394"
+      ],
+      "reason": "The matching arXiv work was cross-identified by title/authors with the DOI feature article. The abstract is a broad architecture/evolution overview and does not establish a concrete LLM inference/serving efficiency method.",
+      "first_checked_at": "2026-10-14T01:19:51+00:00",
+      "last_checked_at": "2026-10-14T01:19:51+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "AI Compute Architecture and Evolution Trends"
+    },
+    "DOI:10.1109/tccn.2026.3657037": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/tccn.2026.3657037",
+      "identity_tokens": [
+        "DOI:10.1109/tccn.2026.3657037"
+      ],
+      "reason": "IEEE Xplore publisher abstract request failed with “(418) I’m a Teapot”; title/DOI metadata were visible, but no official abstract was retrieved.",
+      "first_checked_at": "2026-10-14T01:19:53+00:00",
+      "last_checked_at": "2026-10-14T01:19:53+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "DisHelis: Optimizing Deployment of Disaggregated LLMs Inference Serving Over Heterogeneous Environments via Hierarchical Max-Flow"
+    },
+    "DOI:10.1109/access.2026.3698449": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/access.2026.3698449",
+      "identity_tokens": [
+        "DOI:10.1109/access.2026.3698449"
+      ],
+      "reason": "IEEE/DOI publisher search and landing routes yielded title/metadata but no readable primary abstract; secondary abstract snippets were not used. The classification evidence is missing.",
+      "first_checked_at": "2026-10-14T01:19:54+00:00",
+      "last_checked_at": "2026-10-14T01:19:54+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Sensitivity-Guided Mixed-Precision Quantization-Aware Training for Large Language Models"
+    },
+    "DOI:10.1109/taslpro.2026.3706023": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/taslpro.2026.3706023",
+      "identity_tokens": [
+        "DOI:10.1109/taslpro.2026.3706023"
+      ],
+      "reason": "IEEE publisher search/landing routes confirmed bibliographic title but did not return the official abstract; no secondary abstract was used.",
+      "first_checked_at": "2026-10-14T01:19:54+00:00",
+      "last_checked_at": "2026-10-14T01:19:54+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "AceQuant: An Activation-Centric Framework for High-Fidelity Low-Bit Quantization of LLMs"
+    },
+    "DOI:10.1109/coolchips65488.2025.11018582": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/coolchips65488.2025.11018582",
+      "identity_tokens": [
+        "DOI:10.1109/coolchips65488.2025.11018582"
+      ],
+      "reason": "Official COOLCHIPS program metadata and IEEE/DOI publisher searches confirmed title/authors, but no primary abstract was retrievable.",
+      "first_checked_at": "2026-10-14T01:19:54+00:00",
+      "last_checked_at": "2026-10-14T01:19:54+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "A Lightweight Transformer Model with Dynamic Sparse Mask for Neural Machine Translation"
+    },
+    "DOI:10.1109/access.2025.3611390": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/access.2025.3611390",
+      "identity_tokens": [
+        "DOI:10.1109/access.2025.3611390"
+      ],
+      "reason": "IEEE publisher search confirmed the DOI/title but did not surface a readable official abstract. Title alone is insufficient to establish its LLM/inference scope.",
+      "first_checked_at": "2026-10-14T01:19:54+00:00",
+      "last_checked_at": "2026-10-14T01:19:54+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "A Developer’s Guide to Compressing Pre-Trained Transformer Neural Networks Across Different Domains"
+    },
+    "DOI:10.1109/cbase67452.2025.11335478": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/cbase67452.2025.11335478",
+      "identity_tokens": [
+        "DOI:10.1109/cbase67452.2025.11335478"
+      ],
+      "reason": "The registered DOI/IEEE publisher route did not yield a readable primary abstract after attempted lookup; no secondary abstract was used.",
+      "first_checked_at": "2026-10-14T01:19:54+00:00",
+      "last_checked_at": "2026-10-14T01:19:54+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "KVSpec: Efficient KV-Cache Reuse for Speculative Decoding"
+    },
+    "DOI:10.1109/access.2025.3609769": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/access.2025.3609769",
+      "identity_tokens": [
+        "DOI:10.1109/access.2025.3609769"
+      ],
+      "reason": "IEEE publisher retrieval did not provide an official abstract. A secondary site showed a summary, but it was excluded; primary abstract evidence remains unavailable.",
+      "first_checked_at": "2026-10-14T01:19:55+00:00",
+      "last_checked_at": "2026-10-14T01:19:55+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "A Component-Centric Perspective on Hardware Accelerators for LLMs"
     }
   }
 }

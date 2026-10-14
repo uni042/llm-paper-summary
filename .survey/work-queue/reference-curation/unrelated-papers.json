@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-14T01:00:59+00:00",
-  "record_count": 11946,
+  "updated_at": "2026-10-14T01:19:55+00:00",
+  "record_count": 11951,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -77580,16 +77580,17 @@
       "classification": "unrelated",
       "canonical_id": "arXiv:2508.07970",
       "identity_tokens": [
+        "SemanticScholar:4cbcbfec289c9c1cfd6bfa385348bc331c20a166",
         "arXiv:2508.07970"
       ],
-      "reason": "RLHF用training frameworkのcontroller/scheduling。trainingであり推論servingではない。",
+      "reason": "The work improves RLHF trainer utilization and training throughput; its abstract concerns training rather than model inference/runtime.",
       "first_checked_at": "2026-10-05T14:04:52+00:00",
-      "last_checked_at": "2026-10-05T14:04:52+00:00",
+      "last_checked_at": "2026-10-14T01:19:52+00:00",
       "linked_from": [
         "papers/inference/12-moe-parallelism-communication/2022-2206.03382-tutel-adaptive-mixture-of-experts-at-scale.md",
         "papers/training/02-distributed-heterogeneous-moe-training/2025-2504.14960-moe-parallel-folding-heterogeneous-parallelism-mappings-for-efficient-large-scal.md"
       ],
-      "title": "WeChat-YATT: A Scalable, Simple, Efficient, and Production Ready Training Library"
+      "title": "WeChat-YATT: A Simple, Scalable and Balanced RLHF Trainer"
     },
     "arXiv:2410.11163": {
       "classification": "unrelated",
@@ -171422,35 +171423,6 @@
       ],
       "title": "FG-Attn: Leveraging Fine-Grained Sparse Attention in Video Diffusion Models"
     },
-    "arXiv:2508.21394": {
-      "classification": "unrelated",
-      "canonical_id": "arXiv:2508.21394",
-      "identity_tokens": [
-        "arXiv:2508.21394"
-      ],
-      "reason": "The primary abstract describes general AI development challenges rather than LLM inference, serving or inference-time compression; no specific in-scope application is established.",
-      "first_checked_at": "2026-10-14T00:22:53+00:00",
-      "last_checked_at": "2026-10-14T00:22:53+00:00",
-      "linked_from": [
-        "papers/inference/05-speculative-decoding-moe/2022-2211.17192-speculative-decoding.md",
-        "papers/inference/07-kv-cache-optimization-compression/2024-2405.12981-cross-layer-attention.md",
-        "papers/inference/07-kv-cache-optimization-compression/2025-2501.08192-preserve-prefetching-model-weights-and-kv-cache-in-distributed-llm-serving.md",
-        "papers/inference/10-kv-cache-offload-recomputation/2025-2510.09665-lmcache.md",
-        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md",
-        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.02669-infinite-llm-distattention-distributed-kvcache.md",
-        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.09670-distserve-disaggregating-prefill-decoding-goodput.md",
-        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2404.09529-prepacking-a-simple-method-for-fast-prefilling-and-increased-throughput-in-large-language-models.md",
-        "papers/inference/99-other-inference-systems/2018-1811.03115-blockwise-parallel-decoding-for-deep-autoregressive-models.md",
-        "papers/inference/99-other-inference-systems/2019-1909.08053-megatron-lm-training-multi-billion-parameter-language-models-using-model.md",
-        "papers/inference/99-other-inference-systems/2021-2104.04473-efficient-large-scale-language-model-training-on-gpu-clusters-using-mega.md",
-        "papers/inference/99-other-inference-systems/2022-2211.05102-efficiently-scaling-transformer-inference.md",
-        "papers/inference/99-other-inference-systems/2023-2304.08467-learning-to-compress-prompts-with-gist-tokens.md",
-        "papers/inference/99-other-inference-systems/2024-2407.06204-a-survey-on-mixture-of-experts-in-large-language-models.md",
-        "papers/inference/99-other-inference-systems/2025-2510.18234-deepseek-ocr-contexts-optical-compression.md",
-        "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md"
-      ],
-      "title": "AI Compute Architecture and Evolution Trends"
-    },
     "arXiv:2507.22789": {
       "classification": "unrelated",
       "canonical_id": "arXiv:2507.22789",
@@ -171860,6 +171832,79 @@
       "last_checked_at": "2026-10-14T01:00:59+00:00",
       "linked_from": [],
       "title": "Memory-Efficient Generative Models via Product Quantization"
+    },
+    "arXiv:2509.04442": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2509.04442",
+      "identity_tokens": [
+        "arXiv:2509.04442"
+      ],
+      "reason": "The abstract introduces a representation for organizing, comparing, and combining fine-tuned models; it does not present inference or serving efficiency.",
+      "first_checked_at": "2026-10-14T01:19:51+00:00",
+      "last_checked_at": "2026-10-14T01:19:51+00:00",
+      "linked_from": [],
+      "title": "Delta Activations: A Representation for Finetuned Large Language Models"
+    },
+    "arXiv:2501.06718": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2501.06718",
+      "identity_tokens": [
+        "arXiv:2501.06718"
+      ],
+      "reason": "The abstract concerns offline reinforcement learning and trajectory modeling for test-time training, not runtime efficiency of LLM inference or serving.",
+      "first_checked_at": "2026-10-14T01:19:51+00:00",
+      "last_checked_at": "2026-10-14T01:19:51+00:00",
+      "linked_from": [],
+      "title": "DRDT3: Diffusion-Refined Decision Test-Time Training Model"
+    },
+    "arXiv:2107.13054": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2107.13054",
+      "identity_tokens": [
+        "arXiv:2107.13054"
+      ],
+      "reason": "The abstract concerns ecommerce visual-linguistic multi-task learning and task performance, not language-model inference or serving efficiency.",
+      "first_checked_at": "2026-10-14T01:19:51+00:00",
+      "last_checked_at": "2026-10-14T01:19:51+00:00",
+      "linked_from": [],
+      "title": "Exceeding the Limits of Visual-Linguistic Multi-Task Learning"
+    },
+    "arXiv:2410.22118": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2410.22118",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2410.22118",
+        "arXiv:2410.22118"
+      ],
+      "reason": "This paper evaluates how acceleration choices affect demographic bias; it studies downstream bias effects rather than introducing an efficiency method.",
+      "first_checked_at": "2026-10-14T01:19:52+00:00",
+      "last_checked_at": "2026-10-14T01:19:52+00:00",
+      "linked_from": [],
+      "title": "The Impact of Inference Acceleration Strategies on Bias of LLMs"
+    },
+    "DOI:10.29375/25392115.5054": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.29375/25392115.5054",
+      "identity_tokens": [
+        "DOI:10.29375/25392115.5054"
+      ],
+      "reason": "The publisher abstract explicitly covers parallelism in distributed deep-learning training, with no inference or serving connection.",
+      "first_checked_at": "2026-10-14T01:19:52+00:00",
+      "last_checked_at": "2026-10-14T01:19:52+00:00",
+      "linked_from": [],
+      "title": "A snapshot of parallelism in distributed deep learning training"
+    },
+    "arXiv:2509.10406": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2509.10406",
+      "identity_tokens": [
+        "arXiv:2509.10406"
+      ],
+      "reason": "The method approximates attention for pretraining; the abstract does not establish inference/serving efficiency.",
+      "first_checked_at": "2026-10-14T01:19:55+00:00",
+      "last_checked_at": "2026-10-14T01:19:55+00:00",
+      "linked_from": [],
+      "title": "Multipole Semantic Attention: A Fast Approximation of Softmax Attention for Pretraining"
     }
   }
 }
