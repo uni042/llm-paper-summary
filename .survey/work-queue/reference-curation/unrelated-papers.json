@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-14T04:37:31+00:00",
-  "record_count": 12063,
+  "updated_at": "2026-10-14T04:47:00+00:00",
+  "record_count": 12065,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -162995,11 +162995,13 @@
       "canonical_id": "arXiv:2301.09474",
       "identity_tokens": [
         "DOI:10.48550/arxiv.2301.09474",
-        "arXiv:2301.09474"
+        "arXiv:2301.09474",
+        "id:arXiv:2301.09474",
+        "url:https://arxiv.org/abs/2301.09474"
       ],
-      "reason": "原著要旨ではエネルギー制約付き拡散に基づくグラフ上のペアワイズ結合強度を推定し、線形計算量版を含むグラフ表現エンコーダを提案する。主な用途はノード分類、半教師あり画像・テキスト分類、時空間ダイナミクス予測であり、LLMの生成推論・KVキャッシュ・サービング実装に対する寄与を示さない。",
+      "reason": "タイトルが示す中心課題はグラフTransformerとエネルギー制約付き拡散に基づくグラフ表現学習であり、言語モデルの復号・サービング・GPU推論基盤の改善ではない。",
       "first_checked_at": "2026-10-11T00:45:52+00:00",
-      "last_checked_at": "2026-10-12T10:58:05+00:00",
+      "last_checked_at": "2026-10-14T04:46:58+00:00",
       "linked_from": [],
       "title": "DIFFormer: Scalable (Graph) Transformers Induced by Energy Constrained Diffusion"
     },
@@ -163159,11 +163161,13 @@
       "classification": "unrelated",
       "canonical_id": "arXiv:2204.13767",
       "identity_tokens": [
-        "arXiv:2204.13767"
+        "arXiv:2204.13767",
+        "id:arXiv:2204.13767",
+        "url:https://arxiv.org/abs/2204.13767"
       ],
-      "reason": "時系列予測専用の三角形パッチ注意と変数別パラメータを用い、複数変数の長期予測精度・線形計算量を評価する。LLMの学習・推論基盤ではなく、時系列モデルの構造・予測タスクを研究する。",
+      "reason": "タイトルが示す応用先は多変量時系列の予測であり、変数ごとの三角注意構造を用いた予測器の研究である。LLMの推論・サービング・KVキャッシュなどの最終適用先を示していないため対象外と判定した。",
       "first_checked_at": "2026-10-11T02:48:44+00:00",
-      "last_checked_at": "2026-10-13T21:31:13+00:00",
+      "last_checked_at": "2026-10-14T04:47:00+00:00",
       "linked_from": [],
       "title": "Triformer: Triangular, Variable-Specific Attentions for Long Sequence Multivariate Time Series Forecasting-Full Version"
     },
@@ -164240,9 +164244,9 @@
         "id:arXiv:2203.10314",
         "url:https://arxiv.org/abs/2203.10314"
       ],
-      "reason": "点群をボクセル化して集合注意を用いる3次元物体検出モデル。KITTI・Waymoでの物体検出が評価対象であり、LLMの言語生成・復号、KVキャッシュ、推論サービング、分散実行への適用を示さない。線形計算量の注意機構という共通語だけでは本サーベイの対象に含めない。",
+      "reason": "タイトルが示す対象は点群からの3次元物体検出であり、Voxel Set Transformerは点群集合間の検出処理を扱う。言語モデルの推論基盤やLLMサービングの最適化を主題とするものではないため、Research本文読解へは進めない。",
       "first_checked_at": "2026-10-11T14:41:43+00:00",
-      "last_checked_at": "2026-10-13T15:47:56+00:00",
+      "last_checked_at": "2026-10-14T04:47:00+00:00",
       "linked_from": [],
       "title": "Voxel Set Transformer: A Set-to-Set Approach to 3D Object Detection from Point Clouds"
     },
@@ -167944,11 +167948,13 @@
       "classification": "unrelated",
       "canonical_id": "arXiv:2605.12624",
       "identity_tokens": [
-        "arXiv:2605.12624"
+        "arXiv:2605.12624",
+        "id:arXiv:2605.12624",
+        "url:https://arxiv.org/abs/2605.12624"
       ],
-      "reason": "対象は自動運転向け視覚・言語・行動モデルの統合ストリーミング構造と運転タスクであり、汎用LLM推論基盤のメモリ階層、実行時最適化、サービングを主題としない。タイトル段階で対象外と判断。",
+      "reason": "タイトルで明示される主目的は自動運転の視覚・言語・行動モデル（VLA）である。ストリーミング構造を用いるとしても、LLM推論サーバーのスケジューリングや重み・KVのメモリ管理ではなく、自動運転タスクの知覚・行動生成を対象とするため対象外と判定する。",
       "first_checked_at": "2026-10-13T07:51:15+00:00",
-      "last_checked_at": "2026-10-13T07:51:15+00:00",
+      "last_checked_at": "2026-10-14T04:46:58+00:00",
       "linked_from": [],
       "title": "MindVLA-U1: VLA Beats VA with Unified Streaming Architecture for Autonomous Driving"
     },
@@ -173674,6 +173680,34 @@
       "last_checked_at": "2026-10-14T04:37:31+00:00",
       "linked_from": [],
       "title": "Pose Magic: Efficient and Temporally Consistent Human Pose Estimation with a Hybrid Mamba-GCN Network"
+    },
+    "arXiv:2603.09163": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.09163",
+      "identity_tokens": [
+        "arXiv:2603.09163",
+        "id:arXiv:2603.09163",
+        "url:https://arxiv.org/abs/2603.09163"
+      ],
+      "reason": "タイトルで明示される対象は視覚・言語による空間認識と実世界ナビゲーションであり、LLM推論のメモリ階層、モデル圧縮、GPUカーネル、サービング制御の研究ではない。空間認識を用いる身体化ナビゲーションのモデル研究であり、現行のLLM推論システムの収録対象から除外する。",
+      "first_checked_at": "2026-10-14T04:46:58+00:00",
+      "last_checked_at": "2026-10-14T04:46:58+00:00",
+      "linked_from": [],
+      "title": "SPAN-Nav: Generalized Spatial Awareness for Versatile Vision-Language Navigation"
+    },
+    "arXiv:2606.27807": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.27807",
+      "identity_tokens": [
+        "arXiv:2606.27807",
+        "id:arXiv:2606.27807",
+        "url:https://arxiv.org/abs/2606.27807"
+      ],
+      "reason": "タイトルが示す中心課題はスパイキング神経網を用いた視覚・言語・行動モデルの構築であり、LLM推論サービングや重み・KVキャッシュの配置・量子化・GPU推論カーネルの研究ではない。身体化モデルの行動生成を目的とするため対象外と判定する。",
+      "first_checked_at": "2026-10-14T04:46:59+00:00",
+      "last_checked_at": "2026-10-14T04:46:59+00:00",
+      "linked_from": [],
+      "title": "SpikeVLA: Vision-Language-Action Models with Spiking Neural Networks"
     }
   }
 }
