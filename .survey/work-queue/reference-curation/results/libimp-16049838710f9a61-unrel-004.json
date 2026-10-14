@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-16049838710f9a61-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2506.21137",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2506.21137",
+    "identity_tokens": [
+      "arXiv:2506.21137"
+    ],
+    "reason": "The primary abstract and title concern vision linear-attention accuracy, not language-model inference/serving.",
+    "first_checked_at": "2026-10-14T00:22:54+00:00",
+    "last_checked_at": "2026-10-14T00:22:54+00:00",
+    "linked_from": [
+      "papers/inference/09-kernel-runtime-compilation/2018-1805.02867-online-normalizer-calculation-for-softmax.md",
+      "papers/inference/99-other-inference-systems/2022-2202.08791-cosformer-rethinking-softmax-in-attention.md",
+      "papers/inference/99-other-inference-systems/2023-2307.08621-retentive-network-a-successor-to-transformer-for-large-language-models.md",
+      "papers/inference/99-other-inference-systems/2023-2311.13541-linear-log-normal-attention-with-unbiased-concentration.md",
+      "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md",
+      "papers/inference/99-other-inference-systems/2024-2312.06635-gated-linear-attention-transformers-with-hardware-efficient-training.md",
+      "papers/inference/99-other-inference-systems/2024-2412.06464-gated-delta-networks-improving-mamba2-with-delta-rule.md"
+    ],
+    "title": "Norm$\\times$Direction: Restoring the Missing Query Norm in Vision Linear Attention"
+  },
+  "processed_at": "2026-10-14T00:22:54+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-16049838710f",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

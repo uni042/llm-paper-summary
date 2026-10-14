@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-14T00:03:39+00:00",
-  "record_count": 4944,
+  "updated_at": "2026-10-14T00:22:58+00:00",
+  "record_count": 4951,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -76347,6 +76347,177 @@
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "Compressing Lengthy Context With UltraGist"
+    },
+    "DOI:10.1109/msn69125.2025.00018": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/msn69125.2025.00018",
+      "identity_tokens": [
+        "DOI:10.1109/msn69125.2025.00018"
+      ],
+      "reason": "The title suggests dynamic token reactivation for multi-turn LLM inference, but IEEE primary abstract/full text could not be retrieved through the direct DOI route (Internal Error). Relevance remains plausible; held pending primary abstract.",
+      "first_checked_at": "2026-10-14T00:22:54+00:00",
+      "last_checked_at": "2026-10-14T00:22:54+00:00",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2024-2407.14057-lazyllm-dynamic-token-pruning-for-efficient-long-context-llm-inference.md",
+        "papers/inference/07-kv-cache-optimization-compression/2023-2305.17118-scissorhands.md",
+        "papers/inference/07-kv-cache-optimization-compression/2023-2306.14048-h2o.md",
+        "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2404.14469-snapkv.md",
+        "papers/inference/07-kv-cache-optimization-compression/2025-2503.12491-cake-cascading-and-adaptive-kv-cache-eviction-with-layer-preferences.md",
+        "papers/inference/13-sparse-attention/2024-2406.10774-quest.md",
+        "papers/inference/13-sparse-attention/2024-2412.10319-scbench-a-kv-cache-centric-analysis-of-long-context-methods.md",
+        "papers/inference/99-other-inference-systems/2024-2409.10516-retrievalattention-accelerating-long-context-llm-inference-via-vector-re.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Mulreact: Dynamic Token Reactivation for Efficient Multi-Turn LLM Inference on Resource constrained Devices"
+    },
+    "DOI:10.1109/tcad.2024.3488572": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/tcad.2024.3488572",
+      "identity_tokens": [
+        "DOI:10.1109/tcad.2024.3488572"
+      ],
+      "reason": "The title concerns transformer inference and nonlinear-operation quantization, but the IEEE primary abstract/full text was inaccessible (direct DOI open returned Internal Error). The topic appears in scope, but primary abstract evidence is missing.",
+      "first_checked_at": "2026-10-14T00:22:55+00:00",
+      "last_checked_at": "2026-10-14T00:22:55+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2018-1805.02867-online-normalizer-calculation-for-softmax.md",
+        "papers/inference/13-sparse-attention/2020-2012.09852-spatten-efficient-sparse-attention-architecture-with-cascade-token-and-head-pruning.md",
+        "papers/inference/13-sparse-attention/2021-0aaecf5ce8bb-sanger-a-co-design-framework-for-enabling-sparse-attention-using-reconfi.md",
+        "papers/inference/15-inference-simulation-emulation/2020-2002.10941-a3-accelerating-attention-mechanisms-in-neural-networks-with-approximati.md",
+        "papers/inference/99-other-inference-systems/2019-1909.05840-q-bert-hessian-based-ultra-low-precision-quantization-of-bert.md",
+        "papers/inference/99-other-inference-systems/2021-2101.01321-i-bert-integer-only-bert-quantization.md",
+        "papers/inference/99-other-inference-systems/2021-2103.09301-softermax-hardware-software-co-design-of-an-efficient-softmax-for-transf.md",
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+        "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Improving Transformer Inference Through Optimized Nonlinear Operations With Quantization-Approximation-Based Strategy"
+    },
+    "DOI:10.1109/cluster59342.2025.11186463": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/cluster59342.2025.11186463",
+      "identity_tokens": [
+        "DOI:10.1109/cluster59342.2025.11186463"
+      ],
+      "reason": "The title strongly suggests multimodal LLM adapter serving and resource orchestration, but the IEEE primary abstract/full text was not accessible through DOI resolution. Retained as borderline until primary text verifies its scope.",
+      "first_checked_at": "2026-10-14T00:22:55+00:00",
+      "last_checked_at": "2026-10-14T00:22:55+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-2311.03285-s-lora-serving-thousands-of-concurrent-lora-adapters.md",
+        "papers/inference/10-kv-cache-offload-recomputation/2024-2405.16444-cacheblend-fast-rag-kv-cache-fusion.md",
+        "papers/inference/10-kv-cache-offload-recomputation/2024-2410.05004-hcache-fast-state-restoration-llm-serving.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2310.18547-punica-multitenant-lora-serving.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2311.15566-spotserve-preemptible-instance-serving.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.05516-pensieve-stateful-large-language-model-serving.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.09670-distserve-disaggregating-prefill-decoding-goodput.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2403.19708-cachedattention-multi-turn-conversation-serving.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2404.09526-loongserve-efficiently-serving-long-context-large-language-models-with-e.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2502.00937-modserve.md",
+        "papers/inference/16-weight-quantization-compression/2024-2405.04532-qserve.md",
+        "papers/inference/99-other-inference-systems/2024-2401.11240-caraserve-cpu-assisted-lora-serving.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Rock: Serving Multimodal Models in Cloud with Heterogeneous-Aware Resource Orchestration for Thousands of LoRA Adapters"
+    },
+    "DOI:10.1145/3676642.3736399": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3676642.3736399",
+      "identity_tokens": [
+        "DOI:10.1145/3676642.3736399"
+      ],
+      "reason": "Official contest materials corroborate the title and describe compiler-time intra-operator parallelization for distributed deep learning, but the ACM paper itself could not be read. It may concern training or general tensor execution; retain borderline pending primary paper text.",
+      "first_checked_at": "2026-10-14T00:22:55+00:00",
+      "last_checked_at": "2026-10-14T00:22:55+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2023-2303.06865-flexgen-high-throughput-generative-inference-of-large-language-models-with-a-single-gpu.md",
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2201.05596-deepspeed-moe-inference-compression.md",
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md",
+        "papers/inference/99-other-inference-systems/2019-1807.08887-supporting-very-large-models-using-automatic-dataflow-graph-partitioning.md",
+        "papers/inference/99-other-inference-systems/2019-1909.08053-megatron-lm-training-multi-billion-parameter-language-models-using-model.md",
+        "papers/inference/99-other-inference-systems/2021-2104.04473-efficient-large-scale-language-model-training-on-gpu-clusters-using-mega.md",
+        "papers/inference/99-other-inference-systems/2021-2112.06905-glam-efficient-scaling-of-language-models-with-mixture-of-experts.md",
+        "papers/inference/99-other-inference-systems/2022-2207.00032-deepspeed-inference-enabling-efficient-inference-of-transformer-models-at-unprecedented-scale.md",
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md",
+        "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "The ASPLOS 2025 / EuroSys 2025 Contest on Intra-Operator Parallelism for Distributed Deep Learning"
+    },
+    "DOI:10.1109/icws67624.2025.00045": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/icws67624.2025.00045",
+      "identity_tokens": [
+        "DOI:10.1109/icws67624.2025.00045"
+      ],
+      "reason": "Title and conference program indicate serverless LLM prefill/decode inference, but no primary abstract or paper body was retrieved; secondary summaries are not used to substantiate classification.",
+      "first_checked_at": "2026-10-14T00:22:55+00:00",
+      "last_checked_at": "2026-10-14T00:22:55+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2305.05920-fastserve-iteration-level-preemptive-scheduling.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2311.18677-splitwise-efficient-generative-llm-inference-phase-splitting.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.09670-distserve-disaggregating-prefill-decoding-goodput.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.11181-tetriinfer.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.14351-serverlessllm-low-latency-serverless-inference.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2404.09526-loongserve-efficiently-serving-long-context-large-language-models-with-e.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2406.17565-memserve-context-caching-disaggregated-serving.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2408.00741-dynamollm.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2408.08147-pd-serve-disaggregated-llm-at-scale.md",
+        "papers/inference/15-inference-simulation-emulation/2017-1712.05889-ray-a-distributed-framework-for-emerging-ai-applications.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "ServerlessPD: Fast RDMA-Codesigned Disaggregated Prefill-Decoding for Serverless Inference of Large Language Models"
+    },
+    "DOI:10.1109/tc.2024.3404051": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/tc.2024.3404051",
+      "identity_tokens": [
+        "DOI:10.1109/tc.2024.3404051"
+      ],
+      "reason": "The title explicitly targets transformer inference acceleration through nonlinear-operation quantization/approximation, but the IEEE primary abstract/full text was inaccessible. Relevance is plausible; held for primary-source evidence.",
+      "first_checked_at": "2026-10-14T00:22:57+00:00",
+      "last_checked_at": "2026-10-14T00:22:57+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2022-2206.09557-lut-gemm-quantized-matrix-multiplication-based-on-luts-for-efficient-inf.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md",
+        "papers/inference/13-sparse-attention/2020-2012.09852-spatten-efficient-sparse-attention-architecture-with-cascade-token-and-head-pruning.md",
+        "papers/inference/15-inference-simulation-emulation/2020-2002.10941-a3-accelerating-attention-mechanisms-in-neural-networks-with-approximati.md",
+        "papers/inference/16-weight-quantization-compression/2023-2306.07629-squeezellm-dense-and-sparse-quantization.md",
+        "papers/inference/99-other-inference-systems/2020-2004.12993-deebert-dynamic-early-exiting-for-accelerating-bert-inference.md",
+        "papers/inference/99-other-inference-systems/2020-2005.03842-gobo-quantizing-attention-based-nlp-models-for-low-latency-and-energy-ef.md",
+        "papers/inference/99-other-inference-systems/2020-2006.04152-bert-loses-patience-fast-and-robust-inference-with-early-exit.md",
+        "papers/inference/99-other-inference-systems/2020-2011.14203-edgebert-sentence-level-energy-optimizations-for-latency-aware-multi-tas.md",
+        "papers/inference/99-other-inference-systems/2021-2109.04838-block-pruning-for-faster-transformers.md",
+        "papers/inference/99-other-inference-systems/2021-3c0f54f14532-berxit-early-exiting-for-bert-with-better-fine-tuning-and-extension-to-r.md",
+        "papers/inference/99-other-inference-systems/2023-2305.14152-memory-efficient-fine-tuning-of-compressed-large-language-models-via-sub.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "ToEx: Accelerating Generation Stage of Transformer-Based Language Models via Token-Adaptive Early Exit"
+    },
+    "DOI:10.1109/fpl60245.2023.00015": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/fpl60245.2023.00015",
+      "identity_tokens": [
+        "DOI:10.1109/fpl60245.2023.00015"
+      ],
+      "reason": "The stable DOI and official IEEE record confirm a Transformer token-packing paper, but the abstract/full text was unavailable. Whether the packing targets inference execution or training batches cannot be resolved from primary content.",
+      "first_checked_at": "2026-10-14T00:22:58+00:00",
+      "last_checked_at": "2026-10-14T00:22:58+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2021-2010.05680-turbotransformers-an-efficient-gpu-serving-system-for-transformer-models.md",
+        "papers/inference/13-sparse-attention/2020-2012.09852-spatten-efficient-sparse-attention-architecture-with-cascade-token-and-head-pruning.md",
+        "papers/inference/13-sparse-attention/2021-0aaecf5ce8bb-sanger-a-co-design-framework-for-enabling-sparse-attention-using-reconfi.md",
+        "papers/inference/15-inference-simulation-emulation/2020-2002.10941-a3-accelerating-attention-mechanisms-in-neural-networks-with-approximati.md",
+        "papers/inference/99-other-inference-systems/2019-1909.05840-q-bert-hessian-based-ultra-low-precision-quantization-of-bert.md",
+        "papers/inference/99-other-inference-systems/2019-1910.06188-q8bert-quantized-8bit-bert.md",
+        "papers/inference/99-other-inference-systems/2020-2007.08563-ftrans-energy-efficient-acceleration-of-transformers-using-fpga.md",
+        "papers/inference/99-other-inference-systems/2021-2101.01321-i-bert-integer-only-bert-quantization.md",
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Token Packing for Transformers with Variable-Length Inputs"
     }
   }
 }
