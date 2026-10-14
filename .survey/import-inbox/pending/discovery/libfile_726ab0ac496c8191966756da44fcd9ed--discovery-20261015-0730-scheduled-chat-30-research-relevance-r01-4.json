@@ -1,0 +1,27 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261015-0730-scheduled-chat-30/r01",
+  "reference_main_sha": "9562ec054e0d5665c88ae730fdec00e31ecb4d0b",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2509.25140",
+      "identity_tokens": [
+        "arxiv:2509.25140",
+        "https://arxiv.org/abs/2509.25140"
+      ],
+      "title": "ReasoningBank: Scaling Agent Self-Evolving with Reasoning Memory",
+      "reason": "ReasoningBankはLLMエージェントの成功・失敗軌跡から再利用可能な推論方針を抽出し、記憶検索と実行時の追加探索（MaTTS）でWeb閲覧・ソフトウェア開発タスクの成功率を高める。記憶の保存・検索は推論時の処理だが、中心的な貢献はエージェント能力・経験学習であり、KVキャッシュ管理、推論処理量、計算資源配置などのシステム効率を直接検証した研究ではない。",
+      "source_url": "https://arxiv.org/abs/2509.25140",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-15T07:30:26+09:00",
+      "last_checked_at": "2026-10-15T07:30:26+09:00",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance",
+      "worklist_rank": 4
+    }
+  ]
+}
