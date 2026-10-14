@@ -1,0 +1,290 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-65",
+  "run_key": "discovery-20261014-main-5622-screen-65-698fcf4369a6-part-01",
+  "reference_main_sha": "5622d2ef3a9507fdc024805c9672e5ffc2aad0b9",
+  "record_count": 20,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/WCCCT65447.2025.11027973",
+      "identity_tokens": [
+        "DOI:10.1109/WCCCT65447.2025.11027973"
+      ],
+      "title": "Optimizing Attention for Efficient LLM Inference: A Review",
+      "reason": "Crossref directly verified exact DOI/title/publisher and official route. Publisher abstract remains unread: HTTP 202 with zero response-content bytes. Metadata does not substitute for primary abstract.",
+      "source_url": "https://ieeexplore.ieee.org/document/11027973/",
+      "body_check": "source_unavailable; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-10-14T08:19:17Z",
+      "last_checked_at": "2026-10-14T08:19:17Z",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2511.06010",
+      "identity_tokens": [
+        "arXiv:2511.06010"
+      ],
+      "title": "MoSKA: Mixture of Shared KV Attention for Efficient Long-Sequence LLM Inference",
+      "reason": "共有KV attentionでメモリ律速演算をGEMMへ変換し、LLM servingのthroughputを上げる。",
+      "source_url": "https://arxiv.org/abs/2511.06010",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T08:10:17Z",
+      "last_checked_at": "2026-10-14T08:10:17Z",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1016/j.future.2026.108646",
+      "identity_tokens": [
+        "DOI:10.1016/j.future.2026.108646"
+      ],
+      "title": "HALO: A heterogeneous accelerator for low-latency and energy-efficient edge LLM inference",
+      "reason": "ScienceDirect publisher result verifies DOI/title/abstract; it details KV access morphing, nonlinear operator projection and unified execution.",
+      "source_url": "https://www.sciencedirect.com/science/article/pii/S0167739X26002803",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T08:10:17Z",
+      "last_checked_at": "2026-10-14T08:10:17Z",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2605.12001",
+      "identity_tokens": [
+        "arXiv:2605.12001"
+      ],
+      "title": "CR^2: Cost-Aware Risk-Controlled Routing for Wireless Device-Edge LLM Inference",
+      "reason": "無線device-edge routingでlatency/energy/costを扱い、matched accuracyで配置コストを下げる。",
+      "source_url": "https://arxiv.org/abs/2605.12001",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T08:10:17Z",
+      "last_checked_at": "2026-10-14T08:10:17Z",
+      "linked_from": []
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/ISCA66397.2026.00057",
+      "identity_tokens": [
+        "DOI:10.1109/ISCA66397.2026.00057"
+      ],
+      "title": "SMOOTH: Hardware-Assisted Fine-Grained On-Chip Memory Management for Efficient On-Device LLM Inference",
+      "reason": "Crossref directly verified exact DOI/title/publisher and official route. Publisher abstract remains unread: HTTP 202 with zero response-content bytes. Metadata does not substitute for primary abstract.",
+      "source_url": "https://ieeexplore.ieee.org/document/11617883/",
+      "body_check": "source_unavailable; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-10-14T08:19:18Z",
+      "last_checked_at": "2026-10-14T08:19:18Z",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2607.20457",
+      "identity_tokens": [
+        "arXiv:2607.20457"
+      ],
+      "title": "Dropping the Anchor: Statistical Context Summarization for Distributed Systems via Pulsar Attention",
+      "reason": "分散long-context attentionの内容依存summaryでGPU FLOPsを削減する。",
+      "source_url": "https://arxiv.org/abs/2607.20457",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T08:10:17Z",
+      "last_checked_at": "2026-10-14T08:10:17Z",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2510.02361",
+      "identity_tokens": [
+        "arXiv:2510.02361"
+      ],
+      "title": "ChunkLLM: A Lightweight Pluggable Framework for Accelerating LLMs Inference",
+      "reason": "chunk選択とKV保持でlong-context Transformer inferenceを高速化する。",
+      "source_url": "https://arxiv.org/abs/2510.02361",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T08:10:17Z",
+      "last_checked_at": "2026-10-14T08:10:17Z",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2605.02888",
+      "identity_tokens": [
+        "arXiv:2605.02888"
+      ],
+      "title": "SpecKV: Adaptive Speculative Decoding with Compression-Aware Gamma Selection",
+      "reason": "compression-aware adaptive gammaでspeculative decodingのtoken throughputを改善する。",
+      "source_url": "https://arxiv.org/abs/2605.02888",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T08:10:17Z",
+      "last_checked_at": "2026-10-14T08:10:17Z",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.21704",
+      "identity_tokens": [
+        "arXiv:2609.21704"
+      ],
+      "title": "SpecQuant – Speculative Decoding with Multi-Parent Quantization for Adaptive LLM Inference",
+      "reason": "multi-parent quantizationとroutingを使うspeculative decodingでon-device inferenceを高速化する。",
+      "source_url": "https://arxiv.org/abs/2609.21704",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T08:10:17Z",
+      "last_checked_at": "2026-10-14T08:10:17Z",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2509.21081",
+      "identity_tokens": [
+        "arXiv:2509.21081"
+      ],
+      "title": "TyphoonMLA: A Mixed Naive-Absorb MLA Kernel For Shared Prefix",
+      "reason": "shared-prefix aware hybrid MLA kernelがattention throughputを上げる。",
+      "source_url": "https://arxiv.org/abs/2509.21081",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T08:10:17Z",
+      "last_checked_at": "2026-10-14T08:10:17Z",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2508.00904",
+      "identity_tokens": [
+        "arXiv:2508.00904"
+      ],
+      "title": "Forecasting LLM Inference Performance via Hardware-Agnostic Analytical Modeling",
+      "reason": "hardware仕様からLLM inference latency/throughputを予測し、最適化を比較する。",
+      "source_url": "https://arxiv.org/abs/2508.00904",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T08:10:17Z",
+      "last_checked_at": "2026-10-14T08:10:17Z",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2506.06579",
+      "identity_tokens": [
+        "arXiv:2506.06579"
+      ],
+      "title": "Towards Efficient Multi-LLM Inference: Characterization and Analysis of LLM Routing and Hierarchical Techniques",
+      "reason": "model routing/cascadeで軽量モデル割当てと段階推論を行うsystem-efficiency survey。",
+      "source_url": "https://arxiv.org/abs/2506.06579",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T08:10:17Z",
+      "last_checked_at": "2026-10-14T08:10:17Z",
+      "linked_from": []
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/INFOCOM55648.2025.11044508",
+      "identity_tokens": [
+        "DOI:10.1109/INFOCOM55648.2025.11044508"
+      ],
+      "title": "SP-MoE: Expediting Mixture-of-Experts Training with Optimized Pipelining Planning",
+      "reason": "Crossref directly verified exact DOI/title/publisher and official route. Publisher abstract remains unread: HTTP 202 with zero response-content bytes. Metadata does not substitute for primary abstract.",
+      "source_url": "https://ieeexplore.ieee.org/document/11044508/",
+      "body_check": "source_unavailable; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-10-14T08:19:19Z",
+      "last_checked_at": "2026-10-14T08:19:19Z",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2502.08910",
+      "identity_tokens": [
+        "arXiv:2502.08910"
+      ],
+      "title": "InfiniteHiP: Extending Language Model Context Up to 3 Million Tokens on a Single GPU",
+      "reason": "hierarchical pruningとhost KV offloadでsingle-GPU long-context inferenceを可能にする。",
+      "source_url": "https://arxiv.org/abs/2502.08910",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T08:10:17Z",
+      "last_checked_at": "2026-10-14T08:10:17Z",
+      "linked_from": []
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2304.07613",
+      "identity_tokens": [
+        "arXiv:2304.07613"
+      ],
+      "title": "STen: Productive and Efficient Sparsity in PyTorch",
+      "reason": "汎用PyTorch sparsity interfaceとCPU inferenceの技術。LLMへの具体的接続は要旨にない。",
+      "source_url": "https://arxiv.org/abs/2304.07613",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T08:10:17Z",
+      "last_checked_at": "2026-10-14T08:10:17Z",
+      "linked_from": []
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.00347",
+      "identity_tokens": [
+        "arXiv:2505.00347"
+      ],
+      "title": "Pushing the Limits of Low-Bit Optimizers: A Focus on EMA Dynamics",
+      "reason": "optimizer-state memory reductionはtraining効率だけで、対象のinference systemsへの接続がない。",
+      "source_url": "https://arxiv.org/abs/2505.00347",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T08:10:17Z",
+      "last_checked_at": "2026-10-14T08:10:17Z",
+      "linked_from": []
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2510.05862",
+      "identity_tokens": [
+        "arXiv:2510.05862"
+      ],
+      "title": "Revisiting Long-context Modeling from Context Denoising Perspective",
+      "reason": "context-denoising trainingで予測品質を改善し、推論効率を改善する主張はない。",
+      "source_url": "https://arxiv.org/abs/2510.05862",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T08:10:17Z",
+      "last_checked_at": "2026-10-14T08:10:17Z",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2505.11271",
+      "identity_tokens": [
+        "arXiv:2505.11271"
+      ],
+      "title": "Semantic Caching of Contextual Summaries for Efficient Question-Answering with Language Models",
+      "reason": "contextual summaryのsemantic cacheでQA時の重複文書計算を削減する。",
+      "source_url": "https://arxiv.org/abs/2505.11271",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T08:10:17Z",
+      "last_checked_at": "2026-10-14T08:10:17Z",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2410.09675",
+      "identity_tokens": [
+        "arXiv:2410.09675"
+      ],
+      "title": "COrAL: Order-Agnostic Language Modeling for Efficient Iterative Refinement",
+      "reason": "blockwise order-agnostic decodingで逐次generationの推論時間を短縮する。",
+      "source_url": "https://arxiv.org/abs/2410.09675",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T08:10:17Z",
+      "last_checked_at": "2026-10-14T08:10:17Z",
+      "linked_from": []
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.12617",
+      "identity_tokens": [
+        "arXiv:2605.12617"
+      ],
+      "title": "MLPs are Efficient Distilled Generative Recommenders",
+      "reason": "generative recommenderの高速化応用であり、LLM inference serving基盤の効率化は示さない。",
+      "source_url": "https://arxiv.org/abs/2605.12617",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T08:10:17Z",
+      "last_checked_at": "2026-10-14T08:10:17Z",
+      "linked_from": []
+    }
+  ]
+}
