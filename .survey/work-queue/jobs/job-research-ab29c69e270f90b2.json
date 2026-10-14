@@ -35,10 +35,15 @@
   "selection_reason": "LVLMでLLM投入前にtext-guidedなvisual token pruningを行い、推論時visual-token負荷を削減する。最終適用先が大規模視覚言語モデルの推論効率化であり、multimodal LLM inferenceとして対象内。",
   "semantic_scholar_id": "400c7e5ba126c06b0a2eebf64e09ab0f20418341",
   "source_url": "https://arxiv.org/abs/2607.16326",
-  "status": "ready",
+  "status": "superseded",
   "title": "CRISP: Pre-LLM Yet Text-Driven Visual Token Pruning for Efficient LVLM Inference",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-10-14T05:43:02+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2026-2607.16326-crisp-pre-llm-yet-text-driven-visual-token-pruning-for-efficient-lvlm-in.md",
+  "represented_canonical_id": "arXiv:2607.16326",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
