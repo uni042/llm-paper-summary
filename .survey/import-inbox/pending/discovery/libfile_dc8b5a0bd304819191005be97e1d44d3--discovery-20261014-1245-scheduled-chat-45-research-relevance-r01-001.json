@@ -1,0 +1,27 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-45",
+  "run_key": "20261014-1245-scheduled-chat-45/r01/research-relevance-rank1",
+  "reference_main_sha": "32dabfd99b1953d9c70e4fc584de051177a70f7c",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2303.05511",
+      "identity_tokens": [
+        "id:arXiv:2303.05511",
+        "url:https://arxiv.org/abs/2303.05511"
+      ],
+      "title": "Scaling up GANs for Text-to-Image Synthesis",
+      "reason": "一次要旨を確認。GigaGANを用いたテキスト条件付き画像生成のGAN構造と高解像度画像合成が主題であり、0.13秒の画像生成速度は画像生成器の推論である。LLMの言語トークン復号、サービング、KVキャッシュ、MoE、階層メモリ、言語推論効率を最終適用先とする研究ではない。",
+      "source_url": "https://arxiv.org/abs/2303.05511",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T12:49:13+09:00",
+      "last_checked_at": "2026-10-14T12:49:13+09:00",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance",
+      "worklist_rank": 1
+    }
+  ]
+}
