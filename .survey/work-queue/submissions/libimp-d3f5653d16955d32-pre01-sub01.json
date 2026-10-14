@@ -1,0 +1,230 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Multi-Draft Speculative Sampling: Canonical Decomposition and Theoretical Limits",
+      "source_url": "https://arxiv.org/abs/2410.18234",
+      "year": 2024,
+      "published": "2024-10-23",
+      "venue": "International Conference on Learning Representations",
+      "citation_count": 12,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "We consider multi-draft speculative sampling, where the proposal sequences are sampled independently from different draft models. At each step, a token-level draft selection scheme takes a list of valid tokens as input and produces an output token whose distribution matches that of the target model. Previous works have demonstrated that the optimal scheme (which maximizes the probability of accepting one of the input tokens) can be cast as a solution to a linear program. In this work we show that the optimal scheme can be decomposed into a two-step solution: in the first step an importance sampling (IS) type scheme is used to select one intermediate token; in the second step (single-draft) speculative sampling is applied to generate the output token. For the case of two identical draft models we further 1) establish a necessary and sufficient condition on the distributions of the target and draft models for the acceptance probability to equal one and 2) provide an explicit expression for the optimal acceptance probability. Our theoretical analysis also motives a new class of token-level selection schemes based on weighted importance sampling. Our experimental results demonstrate consistent improvements in the achievable block efficiency and token rates over baseline schemes in a number of scenarios.",
+      "identifiers": [
+        "SemanticScholar:9cfd75985dcdf6917ba4c6da0bfcf38dff59be8d"
+      ],
+      "semantic_scholar_id": "9cfd75985dcdf6917ba4c6da0bfcf38dff59be8d",
+      "canonical_id": "arXiv:2410.18234",
+      "arxiv_id": "2410.18234",
+      "authors": [
+        "Ashish J. Khisti",
+        "MohammadReza Ebrahimi",
+        "Hassan Dbouk",
+        "Arash Behboodi",
+        "Roland Memisevic",
+        "Christos Louizos"
+      ],
+      "priority": 22,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 12,
+        "citation_count": 12,
+        "total": 22,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 721,
+        "matched_prestigious_venue": "International Conference on Learning Representations"
+      },
+      "reason": "Improves a decoding-time inference acceleration technique. Official title uses “Canonical Decomposition and Theoretical Limits,” differing slightly from input.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Efficiently Deploying LLMs with Controlled Risk",
+      "source_url": "https://arxiv.org/abs/2410.02173",
+      "year": 2024,
+      "published": "2024-10-03",
+      "venue": "arXiv.org",
+      "citation_count": 5,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Deploying large language models in production requires simultaneous attention to efficiency and risk control. Prior work has shown the possibility to cut costs while maintaining similar accuracy, but has neglected to focus on risk control. By contrast, here we present hierarchical chains with multi-level abstention (HCMA), which use model-intrinsic uncertainty to delegate queries along the LLM intelligence hierarchy, enabling training-free model switching based solely on black-box API calls. Our framework presents novel trade-offs between efficiency and risk. For example, deploying HCMA on MMLU cuts the error rate of Llama3 405B by 30% when the model is allowed to abstain on 20% of the queries. To calibrate HCMA for optimal performance, our approach uses data-efficient logistic regressions (based on a simple nonlinear feature transformation), which require only 50 or 100 labeled examples to achieve excellent calibration error (ECE), cutting ECE by 50% compared to naive Platt scaling. On free-form generation tasks, we find that chain-of-thought is ineffectual for selective prediction, whereas zero-shot prompting drives error to 0% on TruthfulQA at high abstention rates. As LLMs are increasingly deployed across computing environments with different capabilities (such as mobile, laptop, and cloud), our framework paves the way towards maintaining deployment efficiency while putting in place sharp risk controls.",
+      "identifiers": [
+        "SemanticScholar:69ac9a30b90024667e1605e6b35c176d1810338c"
+      ],
+      "semantic_scholar_id": "69ac9a30b90024667e1605e6b35c176d1810338c",
+      "canonical_id": "arXiv:2410.02173",
+      "arxiv_id": "2410.02173",
+      "doi": "10.48550/arXiv.2410.02173",
+      "authors": [
+        "Michael J. Zellinger",
+        "Matt Thomson"
+      ],
+      "priority": 5,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 5,
+        "citation_count": 5,
+        "total": 5,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 741,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Serving-time model selection can avoid expensive calls; the primary abstract explicitly frames deployment efficiency and risk together.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Taipan: Efficient and Expressive State Space Language Models with Selective Attention",
+      "source_url": "https://arxiv.org/abs/2410.18572",
+      "year": 2024,
+      "published": "2024-10-24",
+      "venue": "arXiv.org",
+      "citation_count": 5,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Efficient long-context language modeling remains a significant challenge in Natural Language Processing (NLP). While Transformers dominate language tasks, they struggle with long sequences due to quadratic computational complexity in training and linearly scaling memory costs during inference. Recent State Space Models (SSMs) such as Mamba offer alternatives with constant memory usage, but they underperform in tasks requiring extensive in-context retrieval. We introduce Taipan, a novel hybrid architecture that combines Mamba-2 with Selective Attention Layers (SALs). These SALs identify tokens requiring long-range interactions, remove less important features, and then augment their representations using the attention module. This approach balances Mamba's efficiency with Transformer-like performance in memory-intensive tasks. By constraining the attention budget, Taipan extends accurate predictions to context lengths of up to 1 million tokens while preserving computational efficiency. Our experiments demonstrate Taipan's superior performance across various scales and tasks, offering a promising solution for efficient long-context language modeling.",
+      "identifiers": [
+        "SemanticScholar:214ba3038e6aa37d1f17b4049bac54b161e6c0f7"
+      ],
+      "semantic_scholar_id": "214ba3038e6aa37d1f17b4049bac54b161e6c0f7",
+      "canonical_id": "arXiv:2410.18572",
+      "arxiv_id": "2410.18572",
+      "doi": "10.48550/arXiv.2410.18572",
+      "authors": [
+        "Chien Van Nguyen",
+        "Huy Huu Nguyen",
+        "Thang M. Pham",
+        "Ruiyi Zhang",
+        "Hanieh Deilamsalehy",
+        "Puneet Mathur",
+        "Ryan A. Rossi",
+        "Trung Bui",
+        "Viet Dac Lai",
+        "Franck Dernoncourt",
+        "Thien Huu Nguyen"
+      ],
+      "priority": 5,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 5,
+        "citation_count": 5,
+        "total": 5,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 720,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Hybrid recurrence and bounded attention directly target long-context language-model compute/memory scaling.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Anchor Attention, Small Cache: Code Generation With Large Language Models",
+      "source_url": "https://arxiv.org/abs/2411.06680",
+      "year": 2024,
+      "published": "2024-11-11",
+      "venue": "IEEE Transactions on Software Engineering",
+      "citation_count": 5,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The development of large language models (LLMs) has revolutionized automated code generation. However, their high demand of computation resources has hindered a broader deployment and raised environmental concerns. A common strategy for diminishing computational demands is to cache Key-Value (KV) states from the attention mechanism which is adopted predominately by mainstream LLMs. It can mitigate the need of repeated attention computations, but brings significant memory overhead. Current practices in NLP often use sparse attention which may, unfortunately, lead to substantial inaccuracies, or hallucinations, in code generation tasks. In this paper, we analyze the attention weights distribution within code generation models via an empirical study, uncovering a sparsity pattern, i.e., the aggregation of information at specific anchor points. Based on this observation, we propose a novel approach, AnchorCoder, which features token-wise anchor attention designed to extract and compress the contextual information, and layer-wise anchor attention enabling cross-layer communication to mitigate the issue of excessive superposition caused by the compression. The extensive experiments across multiple benchmark datasets confirm the effectiveness of AnchorCoder, which can consistently achieve a significant (at least 70%) reduction in KV cache requirements, while preserving the majority of model’s performance.",
+      "identifiers": [
+        "SemanticScholar:7fcec68408b759d7826edbd6a0dea0a8bb12f6bc"
+      ],
+      "semantic_scholar_id": "7fcec68408b759d7826edbd6a0dea0a8bb12f6bc",
+      "canonical_id": "arXiv:2411.06680",
+      "arxiv_id": "2411.06680",
+      "doi": "10.1109/TSE.2025.3570680",
+      "authors": [
+        "Xiangyu Zhang",
+        "Yu Zhou",
+        "Guang Yang",
+        "Harald C. Gall",
+        "Taolue Chen"
+      ],
+      "priority": 5,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 5,
+        "citation_count": 5,
+        "total": 5,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 702,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Addresses decoding memory overhead while preserving code-generation task performance.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "EMS: Adaptive Evict-then-Merge Strategy for Head-wise KV Cache Compression Based on Global-Local Importance",
+      "source_url": "https://arxiv.org/abs/2412.08521",
+      "year": 2024,
+      "published": "2024-12-11",
+      "venue": "arXiv.org",
+      "citation_count": 5,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "As large language models (LLMs) continue to advance, the demand for higher quality and faster processing of long contexts across various applications is growing. KV cache is widely adopted as it stores previously generated key and value tokens, effectively reducing redundant computations during inference. However, as memory overhead becomes a significant concern, efficient compression of KV cache has gained increasing attention. Most existing methods perform compression from two perspectives: identifying important tokens and designing compression strategies. However, these approaches often produce biased distributions of important tokens due to the influence of accumulated attention scores or positional encoding. Furthermore, they overlook the sparsity and redundancy across different heads, which leads to difficulties in preserving the most effective information at the head level. To this end, we propose EMS to overcome these limitations, while achieving better KV cache compression under extreme compression ratios. Specifically, we introduce a Global-Local score that combines accumulated attention scores from both global and local KV tokens to better identify the token importance. For the compression strategy, we design an adaptive and unified Evict-then-Merge framework that accounts for the sparsity and redundancy of KV tokens across different heads. Additionally, we implement the head-wise parallel compression through a zero-class mechanism to enhance efficiency. Extensive experiments demonstrate our SOTA performance even under extreme compression ratios. EMS consistently achieves the lowest perplexity, improves scores by over 1.28 points across four LLMs on LongBench under a 256 cache budget, and preserves 95% retrieval accuracy with a cache budget less than 2% of the context length in the Needle-in-a-Haystack task.",
+      "identifiers": [
+        "SemanticScholar:c7778e467fadf9e550d4fc6310d553b0decfaeed"
+      ],
+      "semantic_scholar_id": "c7778e467fadf9e550d4fc6310d553b0decfaeed",
+      "canonical_id": "arXiv:2412.08521",
+      "arxiv_id": "2412.08521",
+      "doi": "10.48550/arXiv.2412.08521",
+      "authors": [
+        "Ying-Xin Li",
+        "Ye Li",
+        "Yuan Meng",
+        "Xinzhu Ma",
+        "Zihan Geng",
+        "Shu-Tao Xia",
+        "Zhi Wang"
+      ],
+      "priority": 5,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 5,
+        "citation_count": 5,
+        "total": 5,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 672,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Directly targets KV-cache memory overhead during LLM inference and describes a parallel compression method.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-d3f5653d1695",
+    "round": "libimp-d3f5653d16955d32-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 13,
+    "round_submission_count": 3,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-d3f5653d16955d32-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-d3f5653d16955d32-pre01.json",
+    "receipt": "sha256:8922267f55d1aaf9774802ffb31574950ad46890e87595a825263747f235c69d"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-d3f5653d1695",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

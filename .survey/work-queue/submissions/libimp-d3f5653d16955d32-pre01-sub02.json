@@ -1,0 +1,231 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "A Proximal Operator for Inducing 2:4-Sparsity",
+      "source_url": "https://arxiv.org/abs/2501.18015",
+      "year": 2025,
+      "published": "2025-01-29",
+      "venue": "Trans. Mach. Learn. Res.",
+      "citation_count": 5,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Recent hardware advancements in AI Accelerators and GPUs allow to efficiently compute sparse matrix multiplications, especially when 2 out of 4 consecutive weights are set to zero. However, this so-called 2:4 sparsity usually comes at a decreased accuracy of the model. We derive a regularizer that exploits the local correlation of features to find better sparsity masks in trained models. We minimize the regularizer jointly with a local squared loss by deriving the proximal operator for which we show that it has an efficient solution in the 2:4-sparse case. After optimizing the mask, we use maskedgradient updates to further minimize the local squared loss. We illustrate our method on toy problems and apply it to pruning entire large language models up to 70B parameters. On models up to 13B we improve over previous state of the art algorithms, whilst on 70B models we match their performance.",
+      "identifiers": [
+        "SemanticScholar:65e48ba940096e5e7db47ce96875facd097e90d1"
+      ],
+      "semantic_scholar_id": "65e48ba940096e5e7db47ce96875facd097e90d1",
+      "canonical_id": "arXiv:2501.18015",
+      "arxiv_id": "2501.18015",
+      "doi": "10.48550/arXiv.2501.18015",
+      "authors": [
+        "Jonas M. Kübler",
+        "Yu-Xiang Wang",
+        "Shoham Sabach",
+        "Navid Ansari",
+        "Matthäus Kleindessner",
+        "Kailash Budhathoki",
+        "V. Cevher",
+        "George Karypis"
+      ],
+      "priority": 5,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 5,
+        "citation_count": 5,
+        "total": 5,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 623,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Targets accelerator sparse matrix multiplication and evaluates whole-LLM pruning, giving a concrete hardware/runtime path.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Exploiting Sparsity for Long Context Inference: Million Token Contexts on Commodity GPUs",
+      "source_url": "https://arxiv.org/abs/2502.06766",
+      "year": 2025,
+      "published": "2025-02-10",
+      "venue": "arXiv.org",
+      "citation_count": 5,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "There is growing demand for performing inference with hundreds of thousands of input tokens on trained transformer models. Inference at this extreme scale demands significant computational resources, hindering the application of transformers at long contexts on commodity (i.e not data center scale) hardware. To address the inference time costs associated with running self-attention based transformer language models on long contexts and enable their adoption on widely available hardware, we propose a tunable mechanism that reduces the cost of the forward pass by attending to only the most relevant tokens at every generation step using a top-k selection mechanism. We showcase the efficiency gains afforded by our method by performing inference on context windows up to 1M tokens using approximately 16GB of GPU RAM. Our experiments reveal that models are capable of handling the sparsity induced by the reduced number of keys and values. By attending to less than 2% of input tokens, we achieve over 95% of model performance on common benchmarks (RULER, AlpacaEval, and Open LLM Leaderboard).",
+      "identifiers": [
+        "SemanticScholar:c3ecb3222e63d6c718198eab919e2519e4ba884c"
+      ],
+      "semantic_scholar_id": "c3ecb3222e63d6c718198eab919e2519e4ba884c",
+      "canonical_id": "arXiv:2502.06766",
+      "arxiv_id": "2502.06766",
+      "doi": "10.48550/arXiv.2502.06766",
+      "authors": [
+        "Ryan P. Synk",
+        "Monte Hoover",
+        "John Kirchenbauer",
+        "Neel Jain",
+        "Alex Stein",
+        "Manli Shu",
+        "Josue Melendez Sanchez",
+        "R. Duraiswami",
+        "Tom Goldstein"
+      ],
+      "priority": 5,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 5,
+        "citation_count": 5,
+        "total": 5,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 611,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Directly addresses inference compute/memory on commodity GPUs and reports long-context performance.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Hybrid Offline-online Scheduling Method for Large Language Model Inference Optimization",
+      "source_url": "https://arxiv.org/abs/2502.15763",
+      "year": 2025,
+      "published": "2025-02-14",
+      "venue": "arXiv.org",
+      "citation_count": 5,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "With the development of large language models (LLMs), it has become increasingly important to optimize hardware usage and improve throughput. In this paper, we study the inference optimization of the serving system that deploys LLMs. To optimize system throughput and maximize hardware utilization, we formulate the inference optimization problem as a mixed-integer programming (MIP) model and propose a hybrid offline-online method as solution. The offline method improves large-scale inference systems by introducing a Minimizing Makespan Bin Packing Problem. We further provide a theoretical lower bound computation method. Then, we propose an online sorting and preemptive scheduling method to better utilize hardware. In the online iteration scheduling process, a Lagrangian method is applied to evaluate the cost efficiency of inserting prefill stages versus decode stages at each iteration and dynamically determine when to preempt decoding tasks and insert prefill tasks. Experiments using real-world data from the LLaMA-65B model and the GSM8K dataset demonstrate that system utilization improves from 80.2% to 89.1%, and the total inference time decreases from 201.00 to 190.58 seconds. A 100-cases study shows that our method consistently outperforms the baseline method and improves the utilization rate by 8.0% on average. Finally, we discuss potential future extensions, including stochastic modeling, reinforcement learning-based schedulers, and dynamic decision-making strategies for system throughput and hardware utilization.",
+      "identifiers": [
+        "SemanticScholar:d3a236191fe4a335c5917ed4bebae76cb7505d26"
+      ],
+      "semantic_scholar_id": "d3a236191fe4a335c5917ed4bebae76cb7505d26",
+      "canonical_id": "arXiv:2502.15763",
+      "arxiv_id": "2502.15763",
+      "doi": "10.48550/arXiv.2502.15763",
+      "authors": [
+        "Bowen Pang",
+        "Kai Li",
+        "Rui-Feng She",
+        "Fei-Fan Wang"
+      ],
+      "priority": 5,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 5,
+        "citation_count": 5,
+        "total": 5,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 607,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Directly studies inference serving scheduling with utilization and end-to-end time outcomes.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Universality of Layer-Level Entropy-Weighted Quantization Beyond Model Architecture and Size",
+      "source_url": "https://arxiv.org/abs/2503.04704",
+      "year": 2025,
+      "published": "2025-03-06",
+      "venue": "arXiv.org",
+      "citation_count": 5,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "We present a novel approach to selective model quantization that transcends the limitations of architecture-specific and size-dependent compression methods for Large Language Models (LLMs) using Entropy-Weighted Quantization (EWQ). By analyzing the entropy distribution across transformer blocks, EWQ determines which blocks can be safely quantized without causing significant performance degradation, independent of model architecture or size. Our method outperforms uniform quantization approaches, maintaining Massive Multitask Language Understanding (MMLU) accuracy scores within 0.5% of unquantized models while reducing memory usage by up to 18%. We demonstrate the effectiveness of EWQ across multiple architectures -- from 1.6B to 70B parameters -- and showcase consistent improvements in the quality-compression trade-off regardless of model scale or architectural design. A surprising finding of EWQ is its ability to reduce perplexity compared to unquantized models, suggesting the presence of beneficial regularization through selective precision reduction. This improvement holds across different model families, indicating a fundamental relationship between layer-level entropy and optimal precision requirements. Additionally, we introduce FastEWQ, a rapid method for entropy distribution analysis that eliminates the need for loading model weights. This technique leverages universal characteristics of entropy distribution that persist across various architectures and scales, enabling near-instantaneous quantization decisions while maintaining 80% classification accuracy with full entropy analysis. Our results demonstrate that effective quantization strategies can be developed independently of specific architectural choices or model sizes, opening new possibilities for efficient LLM deployment.",
+      "identifiers": [
+        "SemanticScholar:fabd340c7084bf1fc61db5366c24937e893e49d9"
+      ],
+      "semantic_scholar_id": "fabd340c7084bf1fc61db5366c24937e893e49d9",
+      "canonical_id": "arXiv:2503.04704",
+      "arxiv_id": "2503.04704",
+      "doi": "10.48550/arXiv.2503.04704",
+      "authors": [
+        "Alireza Behtash",
+        "Marijan Fofonjka",
+        "Ethan Baird",
+        "Tyler Mauer",
+        "Hossein Moghimifam",
+        "David Stout",
+        "J. Dennison"
+      ],
+      "priority": 5,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 5,
+        "citation_count": 5,
+        "total": 5,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 587,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Selective precision has direct LLM deployment-memory effects; FastEWQ also reduces quantization decision overhead.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Token-Driven GammaTune: Adaptive Calibration for Enhanced Speculative Decoding",
+      "source_url": "https://arxiv.org/abs/2504.00030",
+      "year": 2025,
+      "published": "2025-03-28",
+      "venue": "arXiv.org",
+      "citation_count": 5,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Speculative decoding accelerates large language model (LLM) inference by using a smaller draft model to propose tokens, which are then verified by a larger target model. However, selecting an optimal speculation length is critical for maximizing speedup while minimizing wasted computation. We introduce \\textit{GammaTune} and \\textit{GammaTune+}, training-free adaptive algorithms that dynamically adjust speculation length based on token acceptance rates using a heuristic-based switching mechanism. Evaluated on SpecBench across multiple tasks and model pairs, our method outperforms other heuristic-based approaches and fixed-length speculative decoding, achieving an average speedup of 15\\% ($\\pm$5\\%) with \\textit{GammaTune} and 16\\% ($\\pm$3\\%) with \\textit{GammaTune+}, while reducing performance variance. This makes \\textit{GammaTune} a robust and efficient solution for real-world deployment.",
+      "identifiers": [
+        "SemanticScholar:589bbe3b532c6af0ec0302e957ec9eb080949eb3"
+      ],
+      "semantic_scholar_id": "589bbe3b532c6af0ec0302e957ec9eb080949eb3",
+      "canonical_id": "arXiv:2504.00030",
+      "arxiv_id": "2504.00030",
+      "doi": "10.48550/arXiv.2504.00030",
+      "authors": [
+        "Aayush Gautam",
+        "Susav Shrestha",
+        "A. L. Narasimha Reddy"
+      ],
+      "priority": 5,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 5,
+        "citation_count": 5,
+        "total": 5,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 565,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Full text confirms the adaptive speculation-length mechanism and evaluations; this directly optimizes LLM decoding.",
+      "library_body_check": "body_sections_reviewed",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-d3f5653d1695",
+    "round": "libimp-d3f5653d16955d32-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 13,
+    "round_submission_count": 3,
+    "round_submission_index": 2,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-d3f5653d16955d32-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-d3f5653d16955d32-pre01.json",
+    "receipt": "sha256:8922267f55d1aaf9774802ffb31574950ad46890e87595a825263747f235c69d"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-d3f5653d1695",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
