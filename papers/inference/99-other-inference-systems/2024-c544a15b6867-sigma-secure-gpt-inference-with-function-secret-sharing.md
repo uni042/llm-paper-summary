@@ -3,34 +3,64 @@ canonical_id: DOI:10.56553/popets-2024-0107
 doi: 10.56553/popets-2024-0107
 title: 'SIGMA: Secure GPT Inference with Function Secret Sharing'
 authors:
-  - Kanav Gupta
-  - Neha Jawalkar
-  - Ananta Mukherjee
-  - Nishanth Chandran
-  - Divya Gupta
-  - Ashish Panwar
-  - Rahul Sharma
+- Kanav Gupta
+- Neha Jawalkar
+- Ananta Mukherjee
+- Nishanth Chandran
+- Divya Gupta
+- Ashish Panwar
+- Rahul Sharma
 published: '2024-10-01'
-publication: 'Proceedings on Privacy Enhancing Technologies 2024(4), 61–79'
-publication_type: '査読付き学術誌論文'
+publication: Proceedings on Privacy Enhancing Technologies 2024(4), 61–79
+publication_type: 査読付き学術誌論文
 publication_status: published
 source: https://petsymposium.org/popets/2024/popets-2024-0107.pdf
 sources:
-  - https://petsymposium.org/popets/2024/popets-2024-0107.php
-  - https://petsymposium.org/popets/2024/popets-2024-0107.pdf
-  - https://doi.org/10.56553/popets-2024-0107
+- https://petsymposium.org/popets/2024/popets-2024-0107.php
+- https://petsymposium.org/popets/2024/popets-2024-0107.pdf
+- https://doi.org/10.56553/popets-2024-0107
 code: https://github.com/mpc-msri/EzPC/tree/master/GPU-MPC/experiments/sigma
-implementation: '二者間の秘匿推論を想定し、各者がNVIDIA A6000 46GB、AMD EPYC 7742、RAM 1TBを備えた2台を9.4Gbps・往復遅延約0.05msのLANで接続して測定。FSS事前処理とGPU上のオンライン評価を分離。公式実装はEzPCのGPU-MPC/experiments/sigma。'
-summary: 'SIGMAは関数秘密分散（FSS）を使い、GeLU・SiLU・Softmax・正規化・安全な固定小数点切捨てを二者間で実行するTransformer秘匿推論システム。GPU上で通信・鍵転送を抑える専用手順を実装し、入力長128のオンライン評価でCrypTen比12.2～19倍の短時間化、通信8.4～11.6分の1を報告する。Llama2-13Bはオンライン37.59秒だが、FSS鍵419.01GBの事前生成・転送を別に要し、長文の通常生成性能を示す値ではない。'
-list_summary: 'FSSに基づくGPU秘匿推論で非線形演算と通信を最適化し、CrypTen比オンライン遅延12.2～19倍改善。Llama2-13Bは37.59秒だが事前鍵419GBを要する。'
+implementation: 二者間の秘匿推論を想定し、各者がNVIDIA A6000 46GB、AMD EPYC 7742、RAM 1TBを備えた2台を9.4Gbps・往復遅延約0.05msのLANで接続して測定。FSS事前処理とGPU上のオンライン評価を分離。公式実装はEzPCのGPU-MPC/experiments/sigma。
+summary: SIGMAは関数秘密分散（FSS）を使い、GeLU・SiLU・Softmax・正規化・安全な固定小数点切捨てを二者間で実行するTransformer秘匿推論システム。GPU上で通信・鍵転送を抑える専用手順を実装し、入力長128のオンライン評価でCrypTen比12.2～19倍の短時間化、通信8.4～11.6分の1を報告する。Llama2-13Bはオンライン37.59秒だが、FSS鍵419.01GBの事前生成・転送を別に要し、長文の通常生成性能を示す値ではない。
+list_summary: FSSに基づくGPU秘匿推論で非線形演算と通信を最適化し、CrypTen比オンライン遅延12.2～19倍改善。Llama2-13Bは37.59秒だが事前鍵419GBを要する。
 last_checked: '2026-10-14'
 worker_id: scheduled-chat-45
 worker_completed_at: '2026-10-14T18:45:00+09:00'
-worker_run_key: '20261014-1845-scheduled-chat-45/r01'
+worker_run_key: 20261014-1845-scheduled-chat-45/r01
 quality_self_review_passed: true
-quality_self_review_version: 'PAPER-QUALITY-GUIDE-2026-10-07'
+quality_self_review_version: PAPER-QUALITY-GUIDE-2026-10-07
 last_audited: null
 audit_version: 0
+references:
+- canonical_id: arXiv:2306.10763
+  arxiv_id: '2306.10763'
+- canonical_id: arXiv:2005.14165
+  arxiv_id: '2005.14165'
+- canonical_id: arXiv:2303.12712
+  arxiv_id: '2303.12712'
+- canonical_id: DOI:10.1007/978-3-030-56877-1_7
+  doi: 10.1007/978-3-030-56877-1_7
+- canonical_id: arXiv:1810.04805
+  arxiv_id: '1810.04805'
+- canonical_id: arXiv:2306.11644
+  arxiv_id: '2306.11644'
+- canonical_id: DOI:10.52202/068431-1143
+- canonical_id: arXiv:1606.08415
+  arxiv_id: '1606.08415'
+- canonical_id: DOI:10.1109/sp54263.2024.00063
+  doi: 10.1109/sp54263.2024.00063
+- canonical_id: arXiv:1706.02515
+  arxiv_id: '1706.02515'
+- canonical_id: DOI:10.56553/popets-2024-0107
+- canonical_id: arXiv:1710.05941
+  arxiv_id: '1710.05941'
+- canonical_id: arXiv:2302.13971
+  arxiv_id: '2302.13971'
+- canonical_id: arXiv:2307.09288
+  arxiv_id: '2307.09288'
+references_checked_at: '2026-10-14'
+references_source: primary-pdf-reference-section
+references_total: 87
 ---
 
 # SIGMA：関数秘密分散とGPU最適化でTransformerの秘匿推論を実用的な時間へ近づける
