@@ -1,13 +1,12 @@
 {
   "schema_version": 1,
   "artifact_type": "research",
-  "status": "imported",
+  "status": "blocked_quality",
   "source_sha256": "ff2b9bf6a74b4ca021c35b37066683193b39e32fdf2eb241a0418795b11d2694",
-  "canonical_id": "arXiv:2603.00573",
-  "paper_path": "papers/inference/99-other-inference-systems/2026-2603.00573-comol-efficient-mixture-of-lora-experts-via-dynamic-core-space-merging.md",
-  "lineage": "99-other-inference-systems",
-  "audit_status": "WARN",
+  "normalized_source_sha256": null,
   "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_be186c9ad72c8191a820e9193ceb1ca7--2026-2603.00573-comol-core-space-lora-experts-research-20261013-2100-scheduled-chat-00-r02.md",
+  "canonical_id": "arXiv:2603.00573",
   "worker_completed_at": "2026-10-13T21:10:35+09:00",
   "worker_run_key": "20261013-2100-scheduled-chat-00/r02",
   "quality_metrics": {
@@ -22,5 +21,8 @@
       "限界説明量 0 < 推奨 120"
     ]
   },
-  "processed_at": "2026-10-14T07:34:52+00:00"
+  "failures": [
+    "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2026-2603.00573-comol-efficient-mixture-of-lora-experts-via-dynamic-core-space-merging.md と 20 段落 / 4539文字 (100.0%) が完全一致"
+  ],
+  "processed_at": "2026-10-14T11:30:07+00:00"
 }

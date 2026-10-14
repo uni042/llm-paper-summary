@@ -1,13 +1,12 @@
 {
   "schema_version": 1,
   "artifact_type": "research",
-  "status": "imported",
+  "status": "blocked_quality",
   "source_sha256": "a9a3f914b116a8d8e59e3f7991ad5bccc8516eb6403173d2c1596bb378b4e9a5",
-  "canonical_id": "arXiv:2602.23699",
-  "paper_path": "papers/inference/99-other-inference-systems/2026-2602.23699-hidrop-hierarchical-vision-token-reduction-in-mllms-via-late-injection-c.md",
-  "lineage": "99-other-inference-systems",
-  "audit_status": "WARN",
+  "normalized_source_sha256": null,
   "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_b8f59870ba5c81918a6d7ab9c045c4d6--2026-2602.23699-hidrop-hierarchical-vision-token-reduction-research-20261014-0530-scheduled-chat-30-r01.md",
+  "canonical_id": "arXiv:2602.23699",
   "worker_completed_at": "2026-10-14T05:32:50+09:00",
   "worker_run_key": "20261014-0530-scheduled-chat-30/r01",
   "quality_metrics": {
@@ -22,5 +21,8 @@
       "限界説明量 0 < 推奨 120"
     ]
   },
-  "processed_at": "2026-10-14T07:34:05+00:00"
+  "failures": [
+    "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2026-2602.23699-hidrop-hierarchical-vision-token-reduction-in-mllms-via-late-injection-c.md と 21 段落 / 4386文字 (100.0%) が完全一致"
+  ],
+  "processed_at": "2026-10-14T11:30:06+00:00"
 }

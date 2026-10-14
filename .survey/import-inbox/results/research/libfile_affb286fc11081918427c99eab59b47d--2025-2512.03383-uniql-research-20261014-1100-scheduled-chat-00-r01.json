@@ -1,13 +1,12 @@
 {
   "schema_version": 1,
   "artifact_type": "research",
-  "status": "imported",
+  "status": "blocked_quality",
   "source_sha256": "7e9bccb2054fac7e07c6ca0fbbc02f02a44768ef8dc8bfb4b0b00c65ee6a7e32",
-  "canonical_id": "arXiv:2512.03383",
-  "paper_path": "papers/inference/99-other-inference-systems/2025-2512.03383-uniql-unified-quantization-and-low-rank-compression-for-adaptive-edge-ll.md",
-  "lineage": "99-other-inference-systems",
-  "audit_status": "WARN",
+  "normalized_source_sha256": null,
   "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_affb286fc11081918427c99eab59b47d--2025-2512.03383-uniql-research-20261014-1100-scheduled-chat-00-r01.md",
+  "canonical_id": "arXiv:2512.03383",
   "worker_completed_at": "2026-10-14T11:05:21+09:00",
   "worker_run_key": "20261014-1100-scheduled-chat-00/r01",
   "quality_metrics": {
@@ -22,5 +21,8 @@
       "限界説明量 0 < 推奨 120"
     ]
   },
-  "processed_at": "2026-10-14T07:32:32+00:00"
+  "failures": [
+    "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2025-2512.03383-uniql-unified-quantization-and-low-rank-compression-for-adaptive-edge-ll.md と 25 段落 / 6508文字 (100.0%) が完全一致"
+  ],
+  "processed_at": "2026-10-14T11:30:03+00:00"
 }

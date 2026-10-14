@@ -33,6 +33,8 @@ quality_self_review_passed: true
 quality_self_review_version: "2026-10-07"
 repair_origin: "returned_research"
 repair_origin_canonical_id: "DOI:10.18653/v1/2025.naacl-long.543"
+last_audited: null
+audit_version: 0
 ---
 
 # HIGGS：線形性定理に基づくデータ不要の量子化と層別ビット配分

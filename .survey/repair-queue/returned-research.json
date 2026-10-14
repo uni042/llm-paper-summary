@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-14T11:25:25+00:00",
+  "generated_at": "2026-10-14T11:30:07+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 82,
+  "count": 86,
   "entries": [
     {
       "canonical_id": "DOI:10.1145/3714983.3714987",
@@ -1888,8 +1888,8 @@
     },
     {
       "canonical_id": "arXiv:2601.07832",
-      "title": "MHLA: Restoring Expressivity of Linear Attention via Token-Level Multi-Head",
-      "source_url": "https://proceedings.iclr.cc/paper_files/paper/2026/file/14a812fa4b6bf244d055e37a7cd2f557-Paper-Conference.pdf",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-14T11:25:23+00:00",
       "return_count": 1,
       "assigned_worker": "scheduled-chat-30",
@@ -1913,8 +1913,8 @@
     },
     {
       "canonical_id": "arXiv:2603.17809",
-      "title": "Fine-Grained Post-Training Quantization for Large Vision Language Models with Quantization-Aware Integrated Gradients",
-      "source_url": "https://arxiv.org/html/2603.17809v1",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-14T11:25:23+00:00",
       "return_count": 1,
       "assigned_worker": "scheduled-chat-45",
@@ -1938,8 +1938,8 @@
     },
     {
       "canonical_id": "arXiv:2511.19097",
-      "title": "DeCoRL: Decoupling Reasoning Chains via Parallel Sub-Step Generation and Cascaded Reinforcement for Interpretable and Scalable RLHF",
-      "source_url": "https://arxiv.org/html/2511.19097v1",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-14T11:25:24+00:00",
       "return_count": 1,
       "assigned_worker": "scheduled-chat-30",
@@ -1963,8 +1963,8 @@
     },
     {
       "canonical_id": "arXiv:2605.06320",
-      "title": "Improving the Efficiency of Language Agent Teams with Adaptive Task Graphs",
-      "source_url": "https://arxiv.org/html/2605.06320v1",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-14T11:25:24+00:00",
       "return_count": 1,
       "assigned_worker": "scheduled-chat-00",
@@ -1990,8 +1990,8 @@
     },
     {
       "canonical_id": "DOI:10.18653/v1/2025.naacl-long.543",
-      "title": "HIGGS: Pushing the Limits of Large Language Model Quantization via the Linearity Theorem",
-      "source_url": "https://aclanthology.org/2025.naacl-long.543.pdf",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-14T11:25:25+00:00",
       "return_count": 3,
       "assigned_worker": "scheduled-chat-00",
@@ -2014,6 +2014,114 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_ae4970e3a4508191bd816a7d1a094fd3--2025-higgs-linearity-quantization-returned-repair-20261013-2200-scheduled-chat-00-r01-v2.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_ae4970e3a4508191bd816a7d1a094fd3--2025-higgs-linearity-quantization-returned-repair-20261013-2200-scheduled-chat-00-r01-v2.json",
       "worker_run_key": "20261013-2200-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2512.03383",
+      "title": "UniQL: Unified Quantization and Low-rank Compression for Adaptive Edge LLMs",
+      "source_url": "https://arxiv.org/html/2512.03383v3",
+      "returned_at": "2026-10-14T11:30:03+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2025-2512.03383-uniql-unified-quantization-and-low-rank-compression-for-adaptive-edge-ll.md と 25 段落 / 6508文字 (100.0%) が完全一致"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 6321,
+        "body_paragraphs": 27,
+        "method_chars": 2193,
+        "method_paragraphs": 10,
+        "evaluation_chars": 1114,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_affb286fc11081918427c99eab59b47d--2025-2512.03383-uniql-research-20261014-1100-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_affb286fc11081918427c99eab59b47d--2025-2512.03383-uniql-research-20261014-1100-scheduled-chat-00-r01.json",
+      "worker_run_key": "20261014-1100-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2605.27786",
+      "title": "Locality-Aware Redundancy Pruning for LLM Depth Compression",
+      "source_url": "https://arxiv.org/pdf/2605.27786",
+      "returned_at": "2026-10-14T11:30:04+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 120 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 6356,
+        "body_paragraphs": 40,
+        "method_chars": 1534,
+        "method_paragraphs": 10,
+        "evaluation_chars": 120,
+        "limitation_chars": 775,
+        "insufficiency_flags": [
+          "評価説明量 120 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_b3d682ff1b6c8191a5be74cfab1f8d68--2026-2605.27786-lorp-depth-pruning-research-20261014-1855-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_b3d682ff1b6c8191a5be74cfab1f8d68--2026-2605.27786-lorp-depth-pruning-research-20261014-1855-scheduled-chat-00-r01.json",
+      "worker_run_key": "20261014-1855-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2602.23699",
+      "title": "HiDrop: Hierarchical Vision Token Reduction in MLLMs via Late Injection, Concave Pyramid Pruning, and Early Exit",
+      "source_url": "https://arxiv.org/html/2602.23699v1",
+      "returned_at": "2026-10-14T11:30:06+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2026-2602.23699-hidrop-hierarchical-vision-token-reduction-in-mllms-via-late-injection-c.md と 21 段落 / 4386文字 (100.0%) が完全一致"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 7135,
+        "body_paragraphs": 40,
+        "method_chars": 2067,
+        "method_paragraphs": 11,
+        "evaluation_chars": 1965,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_b8f59870ba5c81918a6d7ab9c045c4d6--2026-2602.23699-hidrop-hierarchical-vision-token-reduction-research-20261014-0530-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_b8f59870ba5c81918a6d7ab9c045c4d6--2026-2602.23699-hidrop-hierarchical-vision-token-reduction-research-20261014-0530-scheduled-chat-30-r01.json",
+      "worker_run_key": "20261014-0530-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2603.00573",
+      "title": "CoMoL: Efficient Mixture of LoRA Experts via Dynamic Core Space Merging",
+      "source_url": "https://arxiv.org/abs/2603.00573",
+      "returned_at": "2026-10-14T11:30:07+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2026-2603.00573-comol-efficient-mixture-of-lora-experts-via-dynamic-core-space-merging.md と 20 段落 / 4539文字 (100.0%) が完全一致"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 4992,
+        "body_paragraphs": 25,
+        "method_chars": 1145,
+        "method_paragraphs": 6,
+        "evaluation_chars": 1312,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_be186c9ad72c8191a820e9193ceb1ca7--2026-2603.00573-comol-core-space-lora-experts-research-20261013-2100-scheduled-chat-00-r02.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_be186c9ad72c8191a820e9193ceb1ca7--2026-2603.00573-comol-core-space-lora-experts-research-20261013-2100-scheduled-chat-00-r02.json",
+      "worker_run_key": "20261013-2100-scheduled-chat-00/r02"
     }
   ]
 }
