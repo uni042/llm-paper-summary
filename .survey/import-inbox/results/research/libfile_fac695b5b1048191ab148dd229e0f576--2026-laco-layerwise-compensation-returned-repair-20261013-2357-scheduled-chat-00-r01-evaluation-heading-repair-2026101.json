@@ -1,13 +1,12 @@
 {
   "schema_version": 1,
   "artifact_type": "research",
-  "status": "imported",
+  "status": "blocked_quality",
   "source_sha256": "c128c2f978e3abf93ed06d50447be7df895fc441adce8c71dafd364b47b305a2",
-  "canonical_id": "DOI:10.18653/v1/2026.acl-long.1342",
-  "paper_path": "papers/inference/99-other-inference-systems/2026-00140e8efcf4-laco-layer-wise-compensation-for-pruned-large-language-models.md",
-  "lineage": "99-other-inference-systems",
-  "audit_status": "PASS",
+  "normalized_source_sha256": null,
   "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_fac695b5b1048191ab148dd229e0f576--2026-laco-layerwise-compensation-returned-repair-20261013-2357-scheduled-chat-00-r01-evaluation-heading-repair-20261014-0045-scheduled-chat-45-r01.md",
+  "canonical_id": "DOI:10.18653/v1/2026.acl-long.1342",
   "worker_completed_at": "2026-10-14T00:04:00+09:00",
   "worker_run_key": "20261013-2357-scheduled-chat-00/r01",
   "quality_metrics": {
@@ -20,5 +19,8 @@
     "limitation_chars": 608,
     "insufficiency_flags": []
   },
-  "processed_at": "2026-10-14T08:21:32+00:00"
+  "failures": [
+    "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2026-00140e8efcf4-laco-layer-wise-compensation-for-pruned-large-language-models.md と 12 段落 / 3199文字 (100.0%) が完全一致"
+  ],
+  "processed_at": "2026-10-14T12:18:03+00:00"
 }

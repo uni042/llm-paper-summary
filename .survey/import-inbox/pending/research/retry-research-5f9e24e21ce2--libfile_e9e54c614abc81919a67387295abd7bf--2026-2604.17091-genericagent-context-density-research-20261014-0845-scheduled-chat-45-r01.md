@@ -45,6 +45,8 @@ lineage: "99-other-inference-systems"
 references: []
 references_checked_at: "2026-10-14"
 references_source: "https://arxiv.org/html/2604.17091v1"
+last_audited: null
+audit_version: 0
 ---
 
 # GenericAgent：長期エージェントの文脈情報密度と経験再利用によるトークン効率化
