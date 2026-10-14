@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "21ada8d95f0a133cdf0ac67c4a274004a8b98efb870417cb22115cc31a383ae1",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/retry-research-07eae828c1c6--libfile_d41a832820a88191bbead1b7d5f0eb10--2026-2605.07260-moe-counterfactual-routing-research-20261014-0845-scheduled-chat-45-r01.md",
+  "canonical_id": "arXiv:2605.07260",
+  "worker_completed_at": "2026-10-14T08:59:00+09:00",
+  "worker_run_key": "20261014-0845-scheduled-chat-45/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 5574,
+    "body_paragraphs": 36,
+    "method_chars": 1614,
+    "method_paragraphs": 10,
+    "evaluation_chars": 1127,
+    "limitation_chars": 0,
+    "insufficiency_flags": [
+      "限界説明量 0 < 推奨 120"
+    ]
+  },
+  "failures": [
+    "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2026-2605.07260-when-are-experts-misrouted-counterfactual-routing-analysis-in-mixture-of.md と 12 段落 / 2465文字 (100.0%) が完全一致"
+  ],
+  "processed_at": "2026-10-14T12:23:09+00:00"
+}

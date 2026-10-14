@@ -36,6 +36,8 @@ worker_run_key: '20261014-1445-scheduled-chat-45/r01'
 worklist_rank: 35
 quality_self_review_passed: true
 quality_self_review_version: '2026-10-07'
+last_audited: null
+audit_version: 0
 ---
 
 # RouteLMT：大型モデルへの切替で得られる品質改善幅を予測する翻訳ルータ

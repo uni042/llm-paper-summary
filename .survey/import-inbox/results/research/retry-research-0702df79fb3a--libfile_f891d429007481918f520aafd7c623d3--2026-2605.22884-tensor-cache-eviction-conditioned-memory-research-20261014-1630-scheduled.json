@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "a0deb09239f3cd4caeb5eec5f528a5a7fee60edf569225ef87094c2460859c9b",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/retry-research-0702df79fb3a--libfile_f891d429007481918f520aafd7c623d3--2026-2605.22884-tensor-cache-eviction-conditioned-memory-research-20261014-1630-scheduled-chat-30-r01.md",
+  "canonical_id": "arXiv:2605.22884",
+  "worker_completed_at": "2026-10-14T16:39:23+09:00",
+  "worker_run_key": "20261014-1630-scheduled-chat-30/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 4315,
+    "body_paragraphs": 27,
+    "method_chars": 1421,
+    "method_paragraphs": 10,
+    "evaluation_chars": 0,
+    "limitation_chars": 0,
+    "insufficiency_flags": [
+      "評価説明量 0 < 500",
+      "限界説明量 0 < 推奨 120"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 評価説明量 0 < 500"
+  ],
+  "processed_at": "2026-10-14T12:23:08+00:00"
+}

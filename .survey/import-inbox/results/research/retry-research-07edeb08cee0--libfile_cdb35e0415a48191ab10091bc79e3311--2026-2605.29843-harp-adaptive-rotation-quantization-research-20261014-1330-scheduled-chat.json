@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "827075ee0d3517c79dccc0c4e448b73367fb5f7d44a08d882e1471a818ecc559",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/retry-research-07edeb08cee0--libfile_cdb35e0415a48191ab10091bc79e3311--2026-2605.29843-harp-adaptive-rotation-quantization-research-20261014-1330-scheduled-chat-30-r01.md",
+  "canonical_id": "arXiv:2605.29843",
+  "worker_completed_at": "2026-10-14T13:34:40+09:00",
+  "worker_run_key": "20261014-1330-scheduled-chat-30/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 5871,
+    "body_paragraphs": 32,
+    "method_chars": 2034,
+    "method_paragraphs": 11,
+    "evaluation_chars": 1441,
+    "limitation_chars": 0,
+    "insufficiency_flags": [
+      "限界説明量 0 < 推奨 120"
+    ]
+  },
+  "failures": [
+    "長文定型文の再利用を検出: papers/inference/16-weight-quantization-compression/2026-2605.29843-harp-hadamard-preconditioned-adaptive-rotation-processor-for-extreme-llm.md と 18 段落 / 3940文字 (100.0%) が完全一致"
+  ],
+  "processed_at": "2026-10-14T12:23:10+00:00"
+}
