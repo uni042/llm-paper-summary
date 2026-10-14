@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "5a2f9385792a3ac850370b36448bd307978c67d0dc857385922029c137415b44",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_087dc1fa22e48191bfac83616f1f7e42--2026-2602.05191-double-p-hierarchical-top-p-sparse-attention-research-20261015-0530-scheduled-chat-30-r01.md",
+  "canonical_id": "arXiv:2602.05191",
+  "worker_completed_at": "2026-10-15T05:30:00+09:00",
+  "worker_run_key": "20261015-0530-scheduled-chat-30/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 5185,
+    "body_paragraphs": 28,
+    "method_chars": 1615,
+    "method_paragraphs": 9,
+    "evaluation_chars": 148,
+    "limitation_chars": 735,
+    "insufficiency_flags": [
+      "評価説明量 148 < 500"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 評価説明量 148 < 500"
+  ],
+  "processed_at": "2026-10-14T20:50:21+00:00"
+}
