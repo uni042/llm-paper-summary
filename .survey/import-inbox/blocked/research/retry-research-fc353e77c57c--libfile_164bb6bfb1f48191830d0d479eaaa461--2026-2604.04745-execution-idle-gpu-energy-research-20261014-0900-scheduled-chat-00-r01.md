@@ -32,6 +32,8 @@ worker_id: scheduled-chat-00
 worker_completed_at: '2026-10-14T09:09:16+09:00'
 worker_run_key: '20261014-0900-scheduled-chat-00/r01'
 reference_main_sha: '715995603084f35fce9f6c37f39c3bd14a28da81'
+last_audited: null
+audit_version: 0
 ---
 
 # GPUクラスタの「実行中アイドル」が消費する電力とLLMサービングの省電力設計
