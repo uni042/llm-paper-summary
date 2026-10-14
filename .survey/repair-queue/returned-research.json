@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-14T13:30:52+00:00",
+  "generated_at": "2026-10-14T13:36:51+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -970,60 +970,6 @@
       "worker_run_key": "20261014-1730-scheduled-chat-30/r01"
     },
     {
-      "canonical_id": "arXiv:2605.11222",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-14T10:06:21+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "長文定型文の再利用を検出: papers/inference/16-weight-quantization-compression/2026-2605.11222-admm-q-an-improved-hessian-based-weight-quantizer-for-post-training-quan.md と 9 段落 / 1926文字 (100.0%) が完全一致"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 4955,
-        "body_paragraphs": 31,
-        "method_chars": 1513,
-        "method_paragraphs": 10,
-        "evaluation_chars": 1201,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_04547b688b308191a6d2418e894770b1--2026-2605.11222-admm-q-hessian-weight-quantization-research-20261014-1430-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_04547b688b308191a6d2418e894770b1--2026-2605.11222-admm-q-hessian-weight-quantization-research-20261014-1430-scheduled-chat-30-r01.json",
-      "worker_run_key": "20261014-1430-scheduled-chat-30/r01"
-    },
-    {
-      "canonical_id": "arXiv:2601.02535",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-14T10:16:29+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2026-2601.02535-modex-evaluator-free-best-of-n-selection-for-open-ended-generation.md と 13 段落 / 2663文字 (100.0%) が完全一致"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5783,
-        "body_paragraphs": 33,
-        "method_chars": 1833,
-        "method_paragraphs": 11,
-        "evaluation_chars": 1525,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_31a53f28639c8191af3fc9cfb6682c65--2026-2601.02535-modex-evaluator-free-best-of-n-research-20261014-1445-scheduled-chat-45-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_31a53f28639c8191af3fc9cfb6682c65--2026-2601.02535-modex-evaluator-free-best-of-n-research-20261014-1445-scheduled-chat-45-r01.json",
-      "worker_run_key": "20261014-1445-scheduled-chat-45/r01"
-    },
-    {
       "canonical_id": "arXiv:2306.07174",
       "title": null,
       "source_url": null,
@@ -1047,56 +993,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_34a662b0db648191bebfd33ef3014e2d--2023-2306.07174-longmem-decoupled-long-term-memory-research-20261014-1645-scheduled-chat-45-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_34a662b0db648191bebfd33ef3014e2d--2023-2306.07174-longmem-decoupled-long-term-memory-research-20261014-1645-scheduled-chat-45-r01.json",
       "worker_run_key": "20261014-1645-scheduled-chat-45/r01"
-    },
-    {
-      "canonical_id": "arXiv:2602.03152",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-14T10:22:14+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "長文定型文の再利用を検出: papers/inference/13-sparse-attention/2026-2602.03152-fasa-frequency-aware-sparse-attention.md と 25 段落 / 5445文字 (100.0%) が完全一致"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5930,
-        "body_paragraphs": 30,
-        "method_chars": 2222,
-        "method_paragraphs": 12,
-        "evaluation_chars": 1144,
-        "limitation_chars": 644,
-        "insufficiency_flags": []
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_3c6b74fa6f3881919b56ef27ae5d6b15--2026-2602.03152-fasa-frequency-aware-sparse-attention-research-20261014-0330-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_3c6b74fa6f3881919b56ef27ae5d6b15--2026-2602.03152-fasa-frequency-aware-sparse-attention-research-20261014-0330-scheduled-chat-30-r01.json",
-      "worker_run_key": "20261014-0330-scheduled-chat-30/r01"
-    },
-    {
-      "canonical_id": "arXiv:2601.07832",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-14T11:25:23+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2026-2601.07832-mhla-restoring-expressivity-of-linear-attention-via-token-level-multi-he.md と 21 段落 / 4745文字 (100.0%) が完全一致"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 7660,
-        "body_paragraphs": 49,
-        "method_chars": 1597,
-        "method_paragraphs": 10,
-        "evaluation_chars": 2443,
-        "limitation_chars": 855,
-        "insufficiency_flags": []
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_a40d63159fac8191a1bcf3ec675947b7--2026-2601.07832-mhla-token-level-linear-attention-research-20261014-0145-scheduled-chat-45-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_a40d63159fac8191a1bcf3ec675947b7--2026-2601.07832-mhla-token-level-linear-attention-research-20261014-0145-scheduled-chat-45-r01.json",
-      "worker_run_key": "20261014-0145-scheduled-chat-45/r01"
     },
     {
       "canonical_id": "arXiv:2511.02647",
@@ -1151,31 +1047,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_ded311cd47cc8191a429e5b92de682d4--2026-2604.07812-hawk-head-importance-visual-token-pruning-research-20261014-1430-scheduled-chat-30-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_ded311cd47cc8191a429e5b92de682d4--2026-2604.07812-hawk-head-importance-visual-token-pruning-research-20261014-1430-scheduled-chat-30-r01.json",
       "worker_run_key": "20261014-1430-scheduled-chat-30/r01"
-    },
-    {
-      "canonical_id": "arXiv:2604.06515",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-14T12:09:23+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2026-2604.06515-efficient-quantization-of-mixture-of-experts-with-theoretical-generaliza.md と 21 段落 / 4495文字 (100.0%) が完全一致"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 6415,
-        "body_paragraphs": 34,
-        "method_chars": 1995,
-        "method_paragraphs": 12,
-        "evaluation_chars": 2349,
-        "limitation_chars": 453,
-        "insufficiency_flags": []
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_ead1ddbcf95c8191a496f5496cc67a3c--2026-2604.06515-moe-router-norm-mixed-precision-research-20261014-0400-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_ead1ddbcf95c8191a496f5496cc67a3c--2026-2604.06515-moe-router-norm-mixed-precision-research-20261014-0400-scheduled-chat-00-r01.json",
-      "worker_run_key": "20261014-0400-scheduled-chat-00/r01"
     },
     {
       "canonical_id": "arXiv:2604.22520",
@@ -2702,8 +2573,8 @@
     },
     {
       "canonical_id": "arXiv:2512.02044",
-      "title": "Beyond Confidence: Adaptive and Coherent Decoding for Diffusion Language Models",
-      "source_url": "https://arxiv.org/pdf/2512.02044",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-14T13:30:48+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-30",
@@ -2729,8 +2600,8 @@
     },
     {
       "canonical_id": "arXiv:2608.26005",
-      "title": "VoiceMem: Streaming Dual-Brain Memory for Real-Time Interaction",
-      "source_url": "https://arxiv.org/abs/2608.26005",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-14T13:30:49+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-30",
@@ -2756,8 +2627,8 @@
     },
     {
       "canonical_id": "arXiv:2511.08083",
-      "title": "HipKittens: Fast and Furious AMD Kernels",
-      "source_url": "https://arxiv.org/abs/2511.08083",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-14T13:30:50+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-30",
@@ -2784,8 +2655,8 @@
     },
     {
       "canonical_id": "arXiv:2603.00573",
-      "title": "CoMoL: Efficient Mixture of LoRA Experts via Dynamic Core Space Merging",
-      "source_url": "https://arxiv.org/abs/2603.00573",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-14T13:30:51+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-30",
@@ -2811,8 +2682,8 @@
     },
     {
       "canonical_id": "arXiv:2306.08543",
-      "title": "MiniLLM: On-Policy Distillation of Large Language Models",
-      "source_url": "https://arxiv.org/html/2306.08543v6",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-14T13:30:52+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-30",
@@ -2833,6 +2704,135 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-eaee4671a907--libfile_e28c701c15d88191a8b2d8085b960d36--2023-2306.08543-minillm-on-policy-distillation-research-20261014-0145-scheduled-chat-45-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-eaee4671a907--libfile_e28c701c15d88191a8b2d8085b960d36--2023-2306.08543-minillm-on-policy-distillation-research-20261014-0145-scheduled-chat-45-r.json",
       "worker_run_key": "20261014-0145-scheduled-chat-45/r01"
+    },
+    {
+      "canonical_id": "arXiv:2601.02535",
+      "title": "ModeX: Evaluator-Free Best-of-N Selection for Open-Ended Generation",
+      "source_url": "https://arxiv.org/html/2601.02535v2",
+      "returned_at": "2026-10-14T13:36:46+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2026-2601.02535-modex-evaluator-free-best-of-n-selection-for-open-ended-generation.md と 13 段落 / 2663文字 (100.0%) が完全一致"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5783,
+        "body_paragraphs": 33,
+        "method_chars": 1833,
+        "method_paragraphs": 11,
+        "evaluation_chars": 1525,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-eb940b4aa30b--libfile_31a53f28639c8191af3fc9cfb6682c65--2026-2601.02535-modex-evaluator-free-best-of-n-research-20261014-1445-scheduled-chat-45-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-eb940b4aa30b--libfile_31a53f28639c8191af3fc9cfb6682c65--2026-2601.02535-modex-evaluator-free-best-of-n-research-20261014-1445-scheduled-chat-45-r.json",
+      "worker_run_key": "20261014-1445-scheduled-chat-45/r01"
+    },
+    {
+      "canonical_id": "arXiv:2602.03152",
+      "title": "FASA: Frequency-aware Sparse Attention",
+      "source_url": "https://arxiv.org/abs/2602.03152",
+      "returned_at": "2026-10-14T13:36:47+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "長文定型文の再利用を検出: papers/inference/13-sparse-attention/2026-2602.03152-fasa-frequency-aware-sparse-attention.md と 25 段落 / 5445文字 (100.0%) が完全一致"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5930,
+        "body_paragraphs": 30,
+        "method_chars": 2222,
+        "method_paragraphs": 12,
+        "evaluation_chars": 1144,
+        "limitation_chars": 644,
+        "insufficiency_flags": []
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-ebd9f6fc18d6--libfile_3c6b74fa6f3881919b56ef27ae5d6b15--2026-2602.03152-fasa-frequency-aware-sparse-attention-research-20261014-0330-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-ebd9f6fc18d6--libfile_3c6b74fa6f3881919b56ef27ae5d6b15--2026-2602.03152-fasa-frequency-aware-sparse-attention-research-20261014-0330-scheduled-ch.json",
+      "worker_run_key": "20261014-0330-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2601.07832",
+      "title": "MHLA: Restoring Expressivity of Linear Attention via Token-Level Multi-Head",
+      "source_url": "https://proceedings.iclr.cc/paper_files/paper/2026/file/14a812fa4b6bf244d055e37a7cd2f557-Paper-Conference.pdf",
+      "returned_at": "2026-10-14T13:36:48+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2026-2601.07832-mhla-restoring-expressivity-of-linear-attention-via-token-level-multi-he.md と 21 段落 / 4745文字 (100.0%) が完全一致"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 7660,
+        "body_paragraphs": 49,
+        "method_chars": 1597,
+        "method_paragraphs": 10,
+        "evaluation_chars": 2443,
+        "limitation_chars": 855,
+        "insufficiency_flags": []
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-ed1b38a44c8d--libfile_a40d63159fac8191a1bcf3ec675947b7--2026-2601.07832-mhla-token-level-linear-attention-research-20261014-0145-scheduled-chat-45-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-ed1b38a44c8d--libfile_a40d63159fac8191a1bcf3ec675947b7--2026-2601.07832-mhla-token-level-linear-attention-research-20261014-0145-scheduled-chat-4.json",
+      "worker_run_key": "20261014-0145-scheduled-chat-45/r01"
+    },
+    {
+      "canonical_id": "arXiv:2605.11222",
+      "title": "ADMM-Q: An Improved Hessian-based Weight Quantizer for Post-Training Quantization of Large Language Models",
+      "source_url": "https://arxiv.org/abs/2605.11222",
+      "returned_at": "2026-10-14T13:36:49+00:00",
+      "return_count": 3,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "長文定型文の再利用を検出: papers/inference/16-weight-quantization-compression/2026-2605.11222-admm-q-an-improved-hessian-based-weight-quantizer-for-post-training-quan.md と 9 段落 / 1926文字 (100.0%) が完全一致"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 4955,
+        "body_paragraphs": 31,
+        "method_chars": 1513,
+        "method_paragraphs": 10,
+        "evaluation_chars": 1201,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-ed1bcd4978c5--libfile_04547b688b308191a6d2418e894770b1--2026-2605.11222-admm-q-hessian-weight-quantization-research-20261014-1430-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-ed1bcd4978c5--libfile_04547b688b308191a6d2418e894770b1--2026-2605.11222-admm-q-hessian-weight-quantization-research-20261014-1430-scheduled-chat-.json",
+      "worker_run_key": "20261014-1430-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2604.06515",
+      "title": "Efficient Quantization of Mixture-of-Experts with Theoretical Generalization Guarantees",
+      "source_url": "https://arxiv.org/html/2604.06515v1",
+      "returned_at": "2026-10-14T13:36:51+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2026-2604.06515-efficient-quantization-of-mixture-of-experts-with-theoretical-generaliza.md と 21 段落 / 4495文字 (100.0%) が完全一致"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 6415,
+        "body_paragraphs": 34,
+        "method_chars": 1995,
+        "method_paragraphs": 12,
+        "evaluation_chars": 2349,
+        "limitation_chars": 453,
+        "insufficiency_flags": []
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-ef25b356f1fb--libfile_ead1ddbcf95c8191a496f5496cc67a3c--2026-2604.06515-moe-router-norm-mixed-precision-research-20261014-0400-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-ef25b356f1fb--libfile_ead1ddbcf95c8191a496f5496cc67a3c--2026-2604.06515-moe-router-norm-mixed-precision-research-20261014-0400-scheduled-chat-00-.json",
+      "worker_run_key": "20261014-0400-scheduled-chat-00/r01"
     }
   ]
 }
