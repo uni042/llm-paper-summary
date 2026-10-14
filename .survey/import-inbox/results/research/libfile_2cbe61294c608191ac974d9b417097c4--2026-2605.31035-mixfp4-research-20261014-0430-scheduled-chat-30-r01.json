@@ -1,13 +1,12 @@
 {
   "schema_version": 1,
   "artifact_type": "research",
-  "status": "imported",
+  "status": "blocked_quality",
   "source_sha256": "f41aaad2a939f0a50b9ff11e8ae31f7bf85de8710ef50c0dee27a0feab14f2d9",
-  "canonical_id": "arXiv:2605.31035",
-  "paper_path": "papers/inference/99-other-inference-systems/2026-2605.31035-mixfp4-enhancing-nvfp4-with-adaptive-fp4-int4-block-representations.md",
-  "lineage": "99-other-inference-systems",
-  "audit_status": "PASS",
+  "normalized_source_sha256": null,
   "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_2cbe61294c608191ac974d9b417097c4--2026-2605.31035-mixfp4-research-20261014-0430-scheduled-chat-30-r01.md",
+  "canonical_id": "arXiv:2605.31035",
   "worker_completed_at": "2026-10-14T04:35:01+09:00",
   "worker_run_key": "20261014-0430-scheduled-chat-30/r01",
   "quality_metrics": {
@@ -20,5 +19,8 @@
     "limitation_chars": 590,
     "insufficiency_flags": []
   },
-  "processed_at": "2026-10-14T06:11:24+00:00"
+  "failures": [
+    "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2026-2605.31035-mixfp4-enhancing-nvfp4-with-adaptive-fp4-int4-block-representations.md と 21 段落 / 4482文字 (100.0%) が完全一致"
+  ],
+  "processed_at": "2026-10-14T10:16:26+00:00"
 }

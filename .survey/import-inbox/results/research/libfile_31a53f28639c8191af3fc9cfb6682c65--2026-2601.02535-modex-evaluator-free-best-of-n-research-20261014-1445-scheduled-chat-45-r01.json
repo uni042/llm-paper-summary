@@ -1,13 +1,12 @@
 {
   "schema_version": 1,
   "artifact_type": "research",
-  "status": "imported",
+  "status": "blocked_quality",
   "source_sha256": "5e9f0366ddff2f0bdd16772f14bf19b4154db3bd6d85965e4cf74039ab3b972a",
-  "canonical_id": "arXiv:2601.02535",
-  "paper_path": "papers/inference/99-other-inference-systems/2026-2601.02535-modex-evaluator-free-best-of-n-selection-for-open-ended-generation.md",
-  "lineage": "99-other-inference-systems",
-  "audit_status": "WARN",
+  "normalized_source_sha256": null,
   "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_31a53f28639c8191af3fc9cfb6682c65--2026-2601.02535-modex-evaluator-free-best-of-n-research-20261014-1445-scheduled-chat-45-r01.md",
+  "canonical_id": "arXiv:2601.02535",
   "worker_completed_at": "2026-10-14T14:56:00+09:00",
   "worker_run_key": "20261014-1445-scheduled-chat-45/r01",
   "quality_metrics": {
@@ -22,5 +21,8 @@
       "限界説明量 0 < 推奨 120"
     ]
   },
-  "processed_at": "2026-10-14T06:20:05+00:00"
+  "failures": [
+    "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2026-2601.02535-modex-evaluator-free-best-of-n-selection-for-open-ended-generation.md と 13 段落 / 2663文字 (100.0%) が完全一致"
+  ],
+  "processed_at": "2026-10-14T10:16:29+00:00"
 }
