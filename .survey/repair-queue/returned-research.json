@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-14T20:57:14+00:00",
+  "generated_at": "2026-10-14T21:43:49+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -2977,36 +2977,9 @@
       "worker_run_key": "20261015-0330-scheduled-chat-30/r01"
     },
     {
-      "canonical_id": "arXiv:2606.04032",
-      "title": "Do Transformers Need Three Projections? Systematic Study of QKV Variants",
-      "source_url": "https://arxiv.org/abs/2606.04032",
-      "returned_at": "2026-10-14T20:57:09+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 150 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 4985,
-        "body_paragraphs": 30,
-        "method_chars": 1368,
-        "method_paragraphs": 9,
-        "evaluation_chars": 150,
-        "limitation_chars": 601,
-        "insufficiency_flags": [
-          "評価説明量 150 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_050e535af0248191812eb1b89f8634b2--2026-2606.04032-qkv-projection-sharing-kv-cache-research-20261015-0530-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_050e535af0248191812eb1b89f8634b2--2026-2606.04032-qkv-projection-sharing-kv-cache-research-20261015-0530-scheduled-chat-30-r01.json",
-      "worker_run_key": "20261015-0530-scheduled-chat-30/r01"
-    },
-    {
       "canonical_id": "arXiv:2403.01632",
-      "title": "SynCode: LLM Generation with Grammar Augmentation",
-      "source_url": "https://arxiv.org/abs/2403.01632",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-14T20:57:10+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-00",
@@ -3033,8 +3006,8 @@
     },
     {
       "canonical_id": "arXiv:2503.12559",
-      "title": "AdaReTaKe: Adaptive Redundancy Reduction to Perceive Longer for Video-language Understanding",
-      "source_url": "https://arxiv.org/abs/2503.12559",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-14T20:57:11+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-00",
@@ -3060,8 +3033,8 @@
     },
     {
       "canonical_id": "arXiv:2511.02017",
-      "title": "TapOut: A Bandit-Based Approach to Dynamic Speculative Decoding",
-      "source_url": "https://arxiv.org/abs/2511.02017",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-14T20:57:12+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-00",
@@ -3088,8 +3061,8 @@
     },
     {
       "canonical_id": "arXiv:2602.05191",
-      "title": "Double-P: Hierarchical Top-P Sparse Attention for Long-Context LLMs",
-      "source_url": "https://arxiv.org/abs/2602.05191",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-14T20:57:13+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-00",
@@ -3111,6 +3084,33 @@
       },
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-e6d7acc7e58f--libfile_087dc1fa22e48191bfac83616f1f7e42--2026-2602.05191-double-p-hierarchical-top-p-sparse-attention-research-20261015-0530-scheduled-chat-30-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-e6d7acc7e58f--libfile_087dc1fa22e48191bfac83616f1f7e42--2026-2602.05191-double-p-hierarchical-top-p-sparse-attention-research-20261015-0530-sched.json",
+      "worker_run_key": "20261015-0530-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2606.04032",
+      "title": "Do Transformers Need Three Projections? Systematic Study of QKV Variants",
+      "source_url": "https://arxiv.org/abs/2606.04032",
+      "returned_at": "2026-10-14T21:43:49+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 150 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 4985,
+        "body_paragraphs": 30,
+        "method_chars": 1368,
+        "method_paragraphs": 9,
+        "evaluation_chars": 150,
+        "limitation_chars": 601,
+        "insufficiency_flags": [
+          "評価説明量 150 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-f901910a60e5--libfile_050e535af0248191812eb1b89f8634b2--2026-2606.04032-qkv-projection-sharing-kv-cache-research-20261015-0530-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-f901910a60e5--libfile_050e535af0248191812eb1b89f8634b2--2026-2606.04032-qkv-projection-sharing-kv-cache-research-20261015-0530-scheduled-chat-30-.json",
       "worker_run_key": "20261015-0530-scheduled-chat-30/r01"
     }
   ]
