@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-14T13:08:19+00:00",
+  "generated_at": "2026-10-14T13:13:12+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -1259,33 +1259,6 @@
       "worker_run_key": "20261014-0430-scheduled-chat-30/r01"
     },
     {
-      "canonical_id": "arXiv:2512.11529",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-14T11:20:06+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "長文定型文の再利用を検出: papers/inference/11-llm-serving-scheduling-disaggregation/2025-2512.11529-xgr-efficient-generative-recommendation-serving-at-scale.md と 19 段落 / 4097文字 (100.0%) が完全一致"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 4951,
-        "body_paragraphs": 25,
-        "method_chars": 2218,
-        "method_paragraphs": 11,
-        "evaluation_chars": 590,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_95bf66d8978881918a80a4dd60b6b77f--2025-2512.11529-xgr-generative-recommendation-serving-research-20261014-1800-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_95bf66d8978881918a80a4dd60b6b77f--2025-2512.11529-xgr-generative-recommendation-serving-research-20261014-1800-scheduled-chat-00-r01.json",
-      "worker_run_key": "20261014-1800-scheduled-chat-00/r01"
-    },
-    {
       "canonical_id": "arXiv:2512.02044",
       "title": null,
       "source_url": null,
@@ -1336,33 +1309,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_a40d63159fac8191a1bcf3ec675947b7--2026-2601.07832-mhla-token-level-linear-attention-research-20261014-0145-scheduled-chat-45-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_a40d63159fac8191a1bcf3ec675947b7--2026-2601.07832-mhla-token-level-linear-attention-research-20261014-0145-scheduled-chat-45-r01.json",
       "worker_run_key": "20261014-0145-scheduled-chat-45/r01"
-    },
-    {
-      "canonical_id": "arXiv:2512.03383",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-14T11:30:03+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2025-2512.03383-uniql-unified-quantization-and-low-rank-compression-for-adaptive-edge-ll.md と 25 段落 / 6508文字 (100.0%) が完全一致"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 6321,
-        "body_paragraphs": 27,
-        "method_chars": 2193,
-        "method_paragraphs": 10,
-        "evaluation_chars": 1114,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_affb286fc11081918427c99eab59b47d--2025-2512.03383-uniql-research-20261014-1100-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_affb286fc11081918427c99eab59b47d--2025-2512.03383-uniql-research-20261014-1100-scheduled-chat-00-r01.json",
-      "worker_run_key": "20261014-1100-scheduled-chat-00/r01"
     },
     {
       "canonical_id": "arXiv:2603.00573",
@@ -1606,33 +1552,6 @@
       "worker_run_key": "20261014-0400-scheduled-chat-00/r01"
     },
     {
-      "canonical_id": "arXiv:2006.04862",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-14T12:10:15+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2020-2006.04862-o-n-connections-are-expressive-enough-universal-approximability-of-spars.md と 11 段落 / 2209文字 (100.0%) が完全一致"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5793,
-        "body_paragraphs": 34,
-        "method_chars": 1755,
-        "method_paragraphs": 11,
-        "evaluation_chars": 1810,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_f6f5072f2fc88191ba80a06ed2a80d96--2020-2006.04862-sparse-transformer-universal-approximation-research-20261014-1445-scheduled-chat-45-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_f6f5072f2fc88191ba80a06ed2a80d96--2020-2006.04862-sparse-transformer-universal-approximation-research-20261014-1445-scheduled-chat-45-r01.json",
-      "worker_run_key": "20261014-1445-scheduled-chat-45/r01"
-    },
-    {
       "canonical_id": "arXiv:2604.22520",
       "title": null,
       "source_url": null,
@@ -1658,31 +1577,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_f8a6b7bf896c81919f4b25aeef6d6e4f--2026-2604.22520-routelmt-hybrid-translation-routing-research-20261014-1445-scheduled-chat-45-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_f8a6b7bf896c81919f4b25aeef6d6e4f--2026-2604.22520-routelmt-hybrid-translation-routing-research-20261014-1445-scheduled-chat-45-r01.json",
       "worker_run_key": "20261014-1445-scheduled-chat-45/r01"
-    },
-    {
-      "canonical_id": "DOI:10.18653/v1/2026.acl-long.1342",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-14T12:18:03+00:00",
-      "return_count": 5,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2026-00140e8efcf4-laco-layer-wise-compensation-for-pruned-large-language-models.md と 12 段落 / 3199文字 (100.0%) が完全一致"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 4379,
-        "body_paragraphs": 27,
-        "method_chars": 1202,
-        "method_paragraphs": 7,
-        "evaluation_chars": 1249,
-        "limitation_chars": 608,
-        "insufficiency_flags": []
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_fac695b5b1048191ab148dd229e0f576--2026-laco-layerwise-compensation-returned-repair-20261013-2357-scheduled-chat-00-r01-evaluation-heading-repair-20261014-0045-scheduled-chat-45-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_fac695b5b1048191ab148dd229e0f576--2026-laco-layerwise-compensation-returned-repair-20261013-2357-scheduled-chat-00-r01-evaluation-heading-repair-2026101.json",
-      "worker_run_key": "20261013-2357-scheduled-chat-00/r01"
     },
     {
       "canonical_id": "arXiv:2605.31035",
@@ -2364,34 +2258,6 @@
       "worker_run_key": "20261014-0845-scheduled-chat-45/r01"
     },
     {
-      "canonical_id": "arXiv:2601.23278",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-14T12:50:28+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 0 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 6058,
-        "body_paragraphs": 35,
-        "method_chars": 2300,
-        "method_paragraphs": 14,
-        "evaluation_chars": 0,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "評価説明量 0 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_e41afb7e7b1c8191bcdb6043d0fd7f5f--2026-2601.23278-focus-dllm-token-eviction-research-20261014-2130-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_e41afb7e7b1c8191bcdb6043d0fd7f5f--2026-2601.23278-focus-dllm-token-eviction-research-20261014-2130-scheduled-chat-30-r01.json",
-      "worker_run_key": "20261014-2130-scheduled-chat-30/r01"
-    },
-    {
       "canonical_id": "DOI:10.1145/3712285.3759834",
       "title": null,
       "source_url": null,
@@ -2706,8 +2572,8 @@
     },
     {
       "canonical_id": "arXiv:2605.15491",
-      "title": "Ghosted Layers: Unconstrained Activation Alignment for Recovering Layer-Pruned LLMs",
-      "source_url": "https://arxiv.org/abs/2605.15491",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-14T13:08:15+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-45",
@@ -2733,8 +2599,8 @@
     },
     {
       "canonical_id": "arXiv:2602.23699",
-      "title": "HiDrop: Hierarchical Vision Token Reduction in MLLMs via Late Injection, Concave Pyramid Pruning, and Early Exit",
-      "source_url": "https://arxiv.org/html/2602.23699v1",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-14T13:08:16+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-00",
@@ -2760,8 +2626,8 @@
     },
     {
       "canonical_id": "arXiv:2403.14520",
-      "title": "Cobra: Extending Mamba to Multi-Modal Large Language Model for Efficient Inference",
-      "source_url": "https://arxiv.org/html/2403.14520v4",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-14T13:08:17+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-45",
@@ -2787,8 +2653,8 @@
     },
     {
       "canonical_id": "arXiv:2511.19097",
-      "title": "DeCoRL: Decoupling Reasoning Chains via Parallel Sub-Step Generation and Cascaded Reinforcement for Interpretable and Scalable RLHF",
-      "source_url": "https://arxiv.org/html/2511.19097v1",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-14T13:08:18+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-30",
@@ -2812,8 +2678,8 @@
     },
     {
       "canonical_id": "arXiv:2603.02096",
-      "title": "FluxMem: Adaptive Hierarchical Memory for Streaming Video Understanding",
-      "source_url": "https://arxiv.org/html/2603.02096v1",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-14T13:08:19+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-30",
@@ -2834,6 +2700,140 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-a55740704ade--libfile_6c0ca3dcff7881919578ee715c8bc008--2026-2603.02096-fluxmem-hierarchical-streaming-video-memory-research-20261014-1745-scheduled-chat-45-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-a55740704ade--libfile_6c0ca3dcff7881919578ee715c8bc008--2026-2603.02096-fluxmem-hierarchical-streaming-video-memory-research-20261014-1745-schedu.json",
       "worker_run_key": "20261014-1745-scheduled-chat-45/r01"
+    },
+    {
+      "canonical_id": "arXiv:2006.04862",
+      "title": "$O(n)$ Connections are Expressive Enough: Universal Approximability of Sparse Transformers",
+      "source_url": "https://arxiv.org/pdf/2006.04862",
+      "returned_at": "2026-10-14T13:13:08+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2020-2006.04862-o-n-connections-are-expressive-enough-universal-approximability-of-spars.md と 11 段落 / 2209文字 (100.0%) が完全一致"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5793,
+        "body_paragraphs": 34,
+        "method_chars": 1755,
+        "method_paragraphs": 11,
+        "evaluation_chars": 1810,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-a995c6d347a2--libfile_f6f5072f2fc88191ba80a06ed2a80d96--2020-2006.04862-sparse-transformer-universal-approximation-research-20261014-1445-scheduled-chat-45-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-a995c6d347a2--libfile_f6f5072f2fc88191ba80a06ed2a80d96--2020-2006.04862-sparse-transformer-universal-approximation-research-20261014-1445-schedul.json",
+      "worker_run_key": "20261014-1445-scheduled-chat-45/r01"
+    },
+    {
+      "canonical_id": "arXiv:2512.11529",
+      "title": "xGR: Efficient Generative Recommendation Serving at Scale",
+      "source_url": "https://arxiv.org/pdf/2512.11529",
+      "returned_at": "2026-10-14T13:13:09+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "長文定型文の再利用を検出: papers/inference/11-llm-serving-scheduling-disaggregation/2025-2512.11529-xgr-efficient-generative-recommendation-serving-at-scale.md と 19 段落 / 4097文字 (100.0%) が完全一致"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 4951,
+        "body_paragraphs": 25,
+        "method_chars": 2218,
+        "method_paragraphs": 11,
+        "evaluation_chars": 590,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-abe5f98b8955--libfile_95bf66d8978881918a80a4dd60b6b77f--2025-2512.11529-xgr-generative-recommendation-serving-research-20261014-1800-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-abe5f98b8955--libfile_95bf66d8978881918a80a4dd60b6b77f--2025-2512.11529-xgr-generative-recommendation-serving-research-20261014-1800-scheduled-ch.json",
+      "worker_run_key": "20261014-1800-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2512.03383",
+      "title": "UniQL: Unified Quantization and Low-rank Compression for Adaptive Edge LLMs",
+      "source_url": "https://arxiv.org/html/2512.03383v3",
+      "returned_at": "2026-10-14T13:13:10+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2025-2512.03383-uniql-unified-quantization-and-low-rank-compression-for-adaptive-edge-ll.md と 25 段落 / 6508文字 (100.0%) が完全一致"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 6321,
+        "body_paragraphs": 27,
+        "method_chars": 2193,
+        "method_paragraphs": 10,
+        "evaluation_chars": 1114,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-accb44c7023a--libfile_affb286fc11081918427c99eab59b47d--2025-2512.03383-uniql-research-20261014-1100-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-accb44c7023a--libfile_affb286fc11081918427c99eab59b47d--2025-2512.03383-uniql-research-20261014-1100-scheduled-chat-00-r01.json",
+      "worker_run_key": "20261014-1100-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "DOI:10.18653/v1/2026.acl-long.1342",
+      "title": "LaCo: Layer-wise Compensation for Pruned Large Language Models",
+      "source_url": "https://aclanthology.org/2026.acl-long.1342.pdf",
+      "returned_at": "2026-10-14T13:13:11+00:00",
+      "return_count": 6,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2026-00140e8efcf4-laco-layer-wise-compensation-for-pruned-large-language-models.md と 12 段落 / 3199文字 (100.0%) が完全一致"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 4379,
+        "body_paragraphs": 27,
+        "method_chars": 1202,
+        "method_paragraphs": 7,
+        "evaluation_chars": 1249,
+        "limitation_chars": 608,
+        "insufficiency_flags": []
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-b006bdab8deb--libfile_fac695b5b1048191ab148dd229e0f576--2026-laco-layerwise-compensation-returned-repair-20261013-2357-scheduled-chat-00-r01-evaluation-heading-repair-20261014-0045-scheduled-cha.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-b006bdab8deb--libfile_fac695b5b1048191ab148dd229e0f576--2026-laco-layerwise-compensation-returned-repair-20261013-2357-scheduled-chat-00-r01-eval.json",
+      "worker_run_key": "20261013-2357-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2601.23278",
+      "title": "FOCUS: DLLMs Know How to Tame Their Compute Bound",
+      "source_url": "https://arxiv.org/html/2601.23278v1",
+      "returned_at": "2026-10-14T13:13:12+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 0 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 6058,
+        "body_paragraphs": 35,
+        "method_chars": 2300,
+        "method_paragraphs": 14,
+        "evaluation_chars": 0,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "評価説明量 0 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-b35cb5b1ff94--libfile_e41afb7e7b1c8191bcdb6043d0fd7f5f--2026-2601.23278-focus-dllm-token-eviction-research-20261014-2130-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-b35cb5b1ff94--libfile_e41afb7e7b1c8191bcdb6043d0fd7f5f--2026-2601.23278-focus-dllm-token-eviction-research-20261014-2130-scheduled-chat-30-r01.json",
+      "worker_run_key": "20261014-2130-scheduled-chat-30/r01"
     }
   ]
 }
