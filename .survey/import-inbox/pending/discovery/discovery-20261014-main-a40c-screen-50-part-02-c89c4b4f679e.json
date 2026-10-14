@@ -1,0 +1,291 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-50",
+  "run_key": "discovery-20261014-main-a40c-screen-50-part-02-c89c4b4f679e",
+  "reference_main_sha": "3b0d97102eb3a40f4dd4fd1a703ce4b912fea124",
+  "record_count": 20,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2408.11855",
+      "identity_tokens": [
+        "arXiv:2408.11855"
+      ],
+      "title": "FactorLLM: Factorizing Knowledge via Mixture of Experts for Large Language Models",
+      "reason": "FactorLLM decomposes dense LLM FFNs into sparse expert subnetworks and its primary abstract reports more than 30% inference-speed improvement.",
+      "source_url": "https://arxiv.org/abs/2408.11855",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T09:51:03+09:00",
+      "last_checked_at": "2026-10-14T09:51:03+09:00",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "SemanticScholar:db3dec580b67703832f46c15aff9262bee8c557b",
+      "identity_tokens": [
+        "SemanticScholar:db3dec580b67703832f46c15aff9262bee8c557b"
+      ],
+      "title": "Equilibrium Language Models",
+      "reason": "Equilibrium Language Models replace groups of Transformer layers, add a one-step KV cache, and explicitly target memory-limited edge deployment.",
+      "source_url": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/6041ba59d44d7d1c150334b8bb02497c-Abstract-Conference.html",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T09:51:03+09:00",
+      "last_checked_at": "2026-10-14T09:51:03+09:00",
+      "linked_from": []
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/ACCESS.2025.3544550",
+      "identity_tokens": [
+        "DOI:10.1109/ACCESS.2025.3544550"
+      ],
+      "title": "CQS-Attention: Scaling Up the Standard Attention Computation for Infinitely Long Sequences",
+      "reason": "The IEEE DOI/title and abstract were located in a secondary full-text mirror, but DOI resolution and targeted IEEE Xplore retrieval did not expose the publisher abstract; primary evidence is insufficient to classify.",
+      "source_url": "https://doi.org/10.1109/ACCESS.2025.3544550",
+      "body_check": "source_unavailable; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-10-14T09:51:03+09:00",
+      "last_checked_at": "2026-10-14T09:51:03+09:00",
+      "linked_from": []
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/AIxSET65682.2025.00033",
+      "identity_tokens": [
+        "DOI:10.1109/AIxSET65682.2025.00033"
+      ],
+      "title": "An Empirical Study on Latency Reduction Techniques for Large Language Models",
+      "reason": "The DOI and conference metadata identify an LLM latency-reduction study, but the official IEEE abstract could not be retrieved after DOI/IEEE search attempts; title alone cannot establish the techniques or results.",
+      "source_url": "https://doi.org/10.1109/AIxSET65682.2025.00033",
+      "body_check": "source_unavailable; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-10-14T09:51:03+09:00",
+      "last_checked_at": "2026-10-14T09:51:03+09:00",
+      "linked_from": []
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2503.14076",
+      "identity_tokens": [
+        "arXiv:2503.14076"
+      ],
+      "title": "Theoretical Foundation of Flow-Based Time Series Generation: Provable Approximation, Generalization, and Efficiency",
+      "reason": "The primary abstract studies approximation/generalization of flow-based time-series generation; its efficiency claim concerns sampling theory for an unrelated application.",
+      "source_url": "https://arxiv.org/abs/2503.14076",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T09:51:03+09:00",
+      "last_checked_at": "2026-10-14T09:51:03+09:00",
+      "linked_from": []
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/TON.2026.3658387",
+      "identity_tokens": [
+        "DOI:10.1109/TON.2026.3658387"
+      ],
+      "title": "Resource-Efficient LLM Customization on Mobile Devices Through Proxy Submodel Tuning",
+      "reason": "Publisher registration and bibliographic metadata support the IEEE DOI and title; the DOI/IEEE primary abstract remained inaccessible. The subject is on-device LLM customization/tuning, with no verified inference-serving efficiency result.",
+      "source_url": "https://doi.org/10.1109/TON.2026.3658387",
+      "body_check": "source_unavailable; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-10-14T09:51:03+09:00",
+      "last_checked_at": "2026-10-14T09:51:03+09:00",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1002/spe.3422",
+      "identity_tokens": [
+        "DOI:10.1002/spe.3422"
+      ],
+      "title": "Subkv: Quantizing Long Context KV Cache for Sub-Billion Parameter Language Models on Edge Devices",
+      "reason": "SubKV uses key/channel and value/token quantization plus dynamic-window handling to reduce KV-cache size for long-context inference on edge devices.",
+      "source_url": "https://onlinelibrary.wiley.com/doi/10.1002/spe.3422",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T09:51:03+09:00",
+      "last_checked_at": "2026-10-14T09:51:03+09:00",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2508.04405",
+      "identity_tokens": [
+        "arXiv:2508.04405"
+      ],
+      "title": "FlexQ: Efficient Post-training INT6 Quantization for LLM Serving via Algorithm-System Co-Design",
+      "reason": "FlexQ combines post-training INT6 quantization with specialized GPU kernels for LLM serving; its abstract reports end-to-end inference acceleration and memory savings.",
+      "source_url": "https://arxiv.org/abs/2508.04405",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T09:51:03+09:00",
+      "last_checked_at": "2026-10-14T09:51:03+09:00",
+      "linked_from": []
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "SemanticScholar:6ad6c1c7c7e6dd7c905ad5e786cda9221092bd07",
+      "identity_tokens": [
+        "SemanticScholar:6ad6c1c7c7e6dd7c905ad5e786cda9221092bd07"
+      ],
+      "title": "Block-Sparse Global Attention for Efficient Multi-View Geometry Transformers",
+      "reason": "The primary abstract accelerates global attention in multi-view geometry reconstruction, a standalone computer-vision application rather than LLM inference/serving.",
+      "source_url": "https://openaccess.thecvf.com/content/CVPR2026/papers/Wang_Block-Sparse_Global_Attention_for_Efficient_Multi-View_Geometry_Transformers_CVPR_2026_paper.pdf",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T09:51:03+09:00",
+      "last_checked_at": "2026-10-14T09:51:03+09:00",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2509.01190",
+      "identity_tokens": [
+        "arXiv:2509.01190"
+      ],
+      "title": "Efficient Large Language Models with Zero-Shot Adjustable Acceleration",
+      "reason": "The primary abstract presents zero-shot-adjustable LLM inference acceleration, dynamically changing hardware usage after fine-tuning without further training.",
+      "source_url": "https://arxiv.org/abs/2509.01190",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T09:51:03+09:00",
+      "last_checked_at": "2026-10-14T09:51:03+09:00",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2510.05175",
+      "identity_tokens": [
+        "arXiv:2510.05175"
+      ],
+      "title": "Exact Causal Attention with 10% Fewer Operations",
+      "reason": "Fast Causal Attention algebraically reduces operations in exact causal attention and reports GPU speedups over PyTorch and Triton baselines.",
+      "source_url": "https://arxiv.org/abs/2510.05175",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T09:51:03+09:00",
+      "last_checked_at": "2026-10-14T09:51:03+09:00",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2505.07833",
+      "identity_tokens": [
+        "arXiv:2505.07833"
+      ],
+      "title": "Harmonia: End-to-End RAG Serving Optimization",
+      "reason": "Harmonia is an end-to-end RAG serving framework with heterogeneous deployment and a load-aware runtime controller; its abstract reports throughput and SLO improvements.",
+      "source_url": "https://arxiv.org/abs/2505.07833",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T09:51:03+09:00",
+      "last_checked_at": "2026-10-14T09:51:03+09:00",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1109/CLUSTER59342.2025.11186468",
+      "identity_tokens": [
+        "DOI:10.1109/CLUSTER59342.2025.11186468"
+      ],
+      "title": "Scalable and Fast Inference Serving via Hybrid Communication Scheduling on Heterogeneous Networks",
+      "reason": "HeroServe jointly schedules computation and network communication in LLM inference serving over heterogeneous networks and reports improved scalability and latency.",
+      "source_url": "https://desword.github.io/paper/cluster25_ina.pdf",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T09:51:03+09:00",
+      "last_checked_at": "2026-10-14T09:51:03+09:00",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2505.21835",
+      "identity_tokens": [
+        "arXiv:2505.21835"
+      ],
+      "title": "TuneComp: Joint Fine-tuning and Compression for Large Foundation Models",
+      "reason": "TuneComp jointly fine-tunes and compresses large foundation models into a smaller pruned low-rank structure; compression directly reduces deployed model size.",
+      "source_url": "https://arxiv.org/abs/2505.21835",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T09:51:03+09:00",
+      "last_checked_at": "2026-10-14T09:51:03+09:00",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2605.03562",
+      "identity_tokens": [
+        "SemanticScholar:13fa84b25b8960ae93b877e12551fc1d60d25739",
+        "arXiv:2605.03562"
+      ],
+      "title": "HeadQ: Model-Visible Distortion and Score-Space Correction for KV-Cache Quantization",
+      "reason": "The primary abstract proposes score-space KV-cache quantization with a learned correction code; although it focuses on fidelity rather than measured speed, it directly targets cache representation cost.",
+      "source_url": "https://arxiv.org/abs/2605.03562",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T09:51:03+09:00",
+      "last_checked_at": "2026-10-14T09:51:03+09:00",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "SemanticScholar:5ba021e294c898420b72d475f62d80b6d3ae2fbb",
+      "identity_tokens": [
+        "SemanticScholar:5ba021e294c898420b72d475f62d80b6d3ae2fbb"
+      ],
+      "title": "OPSERVE: Opportunistic LLM Inference over Fragmented GPU Capacity in HPC Systems",
+      "reason": "The official SC26 program describes opportunistic LLM inference using transient/persistent workers and shared KV state to exploit fragmented HPC GPU capacity.",
+      "source_url": "https://sc26.conference-program.com/presentation/?id=ws_aihpc107&sess=sess141",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T09:51:03+09:00",
+      "last_checked_at": "2026-10-14T09:51:03+09:00",
+      "linked_from": []
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2410.11687",
+      "identity_tokens": [
+        "arXiv:2410.11687"
+      ],
+      "title": "State-space models can learn in-context by gradient descent",
+      "reason": "The primary abstract studies how an SSM can implement in-context gradient descent, not serving efficiency. Recurrent-state architecture has a plausible efficiency connection, but no systems benefit is measured.",
+      "source_url": "https://arxiv.org/abs/2410.11687",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T09:51:03+09:00",
+      "last_checked_at": "2026-10-14T09:51:03+09:00",
+      "linked_from": []
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/IWQoS65803.2025.11143346",
+      "identity_tokens": [
+        "DOI:10.1109/IWQoS65803.2025.11143346"
+      ],
+      "title": "Libra: Novel LLM Token Streaming via Region-Based Task Scheduling and Token Bundling",
+      "reason": "The IEEE DOI and conference metadata identify a token-streaming scheduler, but the publisher abstract could not be retrieved after DOI resolution and targeted IEEE search; no mechanism/result is asserted from title alone.",
+      "source_url": "https://doi.org/10.1109/IWQoS65803.2025.11143346",
+      "body_check": "source_unavailable; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-10-14T09:51:03+09:00",
+      "last_checked_at": "2026-10-14T09:51:03+09:00",
+      "linked_from": []
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2410.03662",
+      "identity_tokens": [
+        "arXiv:2410.03662"
+      ],
+      "title": "System 2 Reasoning Capabilities Are Nigh",
+      "reason": "The primary abstract is a survey of reasoning capabilities and does not propose or measure an inference-system efficiency mechanism.",
+      "source_url": "https://arxiv.org/abs/2410.03662",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T09:51:03+09:00",
+      "last_checked_at": "2026-10-14T09:51:03+09:00",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2509.04897",
+      "identity_tokens": [
+        "arXiv:2509.04897"
+      ],
+      "title": "PLaMo 2 Technical Report",
+      "reason": "PLaMo 2’s primary technical report describes structured pruning, weight reuse, vLLM and quantization for an efficient LLM deployment.",
+      "source_url": "https://arxiv.org/abs/2509.04897",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T09:51:03+09:00",
+      "last_checked_at": "2026-10-14T09:51:03+09:00",
+      "linked_from": []
+    }
+  ]
+}
