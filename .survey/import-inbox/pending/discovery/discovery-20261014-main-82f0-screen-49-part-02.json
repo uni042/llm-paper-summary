@@ -1,0 +1,290 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-49",
+  "run_key": "discovery-20261014-main-82f0-screen-49-part-02",
+  "reference_main_sha": "82f050cfb31ae72078a254c321af648ed5c4bc07",
+  "record_count": 20,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2604.00666",
+      "identity_tokens": [
+        "arXiv:2604.00666"
+      ],
+      "title": "TRIMS: Trajectory-Ranked Instruction Masked Supervision for Diffusion Language Models",
+      "reason": "The primary full text confirms TRIMS is an inference-time decoding method that improves parallelism and token throughput while retaining similar accuracy; the training data curation is much cheaper than distillation but is not the basis for this classification. Body review: TRIMS is presented as low-latency DLM inference and raises parallelism/TPS up to about 3× with similar accuracy. The paper also reports 0.6 GPU-hours curation versus 287 GPU-hours distillation; this training-side comparison is separate from the inference contribution.",
+      "source_url": "https://arxiv.org/abs/2604.00666",
+      "body_check": "body_sections_reviewed",
+      "first_checked_at": "2026-10-14T09:32:19+09:00",
+      "last_checked_at": "2026-10-14T09:32:19+09:00",
+      "linked_from": []
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/TMC.2025.3633250",
+      "identity_tokens": [
+        "DOI:10.1109/TMC.2025.3633250"
+      ],
+      "title": "Toward an Ultra-Lightweight Text Representation: Causal Convolutional Networks With Feature Self-Enhancement Mechanisms",
+      "reason": "The candidate title suggests lightweight text representations, but the registered publisher route `https://doi.org/10.1109/TMC.2025.3633250` returned Internal Error; the IEEE Xplore title search returned no matching primary abstract, and the guessed document route `https://ieeexplore.ieee.org/document/3633250` was inaccessible. Publisher primary abstract could not be retrieved, so relevance cannot be determined from primary evidence.",
+      "source_url": "https://doi.org/10.1109/TMC.2025.3633250",
+      "body_check": "source_unavailable; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-10-14T09:32:19+09:00",
+      "last_checked_at": "2026-10-14T09:32:19+09:00",
+      "linked_from": []
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3779212.3790178",
+      "identity_tokens": [
+        "DOI:10.1145/3779212.3790178"
+      ],
+      "title": "It Takes Two to Entangle",
+      "reason": "The title alone does not establish a connection to LLM inference. The registered DOI route `https://doi.org/10.1145/3779212.3790178` returned an error and ACM DL `https://dl.acm.org/doi/10.1145/3779212.3790178` returned HTTP 403 Forbidden; the publisher primary abstract was unavailable.",
+      "source_url": "https://doi.org/10.1145/3779212.3790178",
+      "body_check": "source_unavailable; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-10-14T09:32:19+09:00",
+      "last_checked_at": "2026-10-14T09:32:19+09:00",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2602.20205",
+      "identity_tokens": [
+        "arXiv:2602.20205"
+      ],
+      "title": "OTPrune: Distribution-Aligned Visual Token Pruning via Optimal Transport",
+      "reason": "This is inference-time visual-token pruning for multimodal LLMs, reducing the vision-token burden while addressing distribution shift from pruning.",
+      "source_url": "https://arxiv.org/abs/2602.20205",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T09:32:19+09:00",
+      "last_checked_at": "2026-10-14T09:32:19+09:00",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2602.05307",
+      "identity_tokens": [
+        "arXiv:2602.05307"
+      ],
+      "title": "MentorCollab: Large-to-Small Inference-Time Mentorship for Concise Reasoning in Language Models",
+      "reason": "This inference-time selective mentorship method limits large-model contribution and generated-token cost while preserving a small model as the primary generator. Full-text review found no latency measurement, so the efficiency link is token/cost reduction rather than a demonstrated speedup. Body review: The small model remains the generator and a larger mentor is used selectively; the paper reports an 18.4% average mentor-token share in final responses. The reviewed text did not provide an end-to-end latency measurement, so a speedup is not established.",
+      "source_url": "https://arxiv.org/abs/2602.05307",
+      "body_check": "body_sections_reviewed",
+      "first_checked_at": "2026-10-14T09:32:19+09:00",
+      "last_checked_at": "2026-10-14T09:32:19+09:00",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2601.21626",
+      "identity_tokens": [
+        "arXiv:2601.21626"
+      ],
+      "title": "HeRo-Q: A General Framework for Stable Low Bit Quantization via Hessian Conditioning",
+      "reason": "This enables low-bit LLM inference with reduced model memory and little extra runtime computation.",
+      "source_url": "https://arxiv.org/abs/2601.21626",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T09:32:19+09:00",
+      "last_checked_at": "2026-10-14T09:32:19+09:00",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2601.15287",
+      "identity_tokens": [
+        "arXiv:2601.15287"
+      ],
+      "title": "Towards Understanding Best Practices for Quantization of Vision-Language Models",
+      "reason": "It studies low-bit deployment of vision-language models, with inference memory and latency as the optimization targets.",
+      "source_url": "https://arxiv.org/abs/2601.15287",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T09:32:19+09:00",
+      "last_checked_at": "2026-10-14T09:32:19+09:00",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.14778/3796195.3796204",
+      "identity_tokens": [
+        "DOI:10.14778/3796195.3796204"
+      ],
+      "title": "Ken: An Execution Engine for Unstructured Database Systems",
+      "reason": "The engine schedules model invocations and places operators across GPUs to optimize query latency/accuracy trade-offs; this is an inference execution and scheduling contribution. The primary paper abstract reports the stated latency comparisons. Body review: The official PVLDB paper describes dynamic cascades for database ML inference, GPU placement, and invocation scheduling. Its abstract reports 1.7–3.3× and up to 122× latency reductions against the stated baselines; only abstract, introduction, background, and system description were reviewed.",
+      "source_url": "https://doi.org/10.14778/3796195.3796204",
+      "body_check": "body_sections_reviewed",
+      "first_checked_at": "2026-10-14T09:32:19+09:00",
+      "last_checked_at": "2026-10-14T09:32:19+09:00",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2511.07776",
+      "identity_tokens": [
+        "arXiv:2511.07776"
+      ],
+      "title": "Streaming Tensor Programs: A Streaming Abstraction for Dynamic Parallelism",
+      "reason": "The streaming abstraction targets runtime scheduling and utilization for dynamic tensor/LLM workloads, with reported latency and utilization improvements.",
+      "source_url": "https://arxiv.org/abs/2511.07776",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T09:32:19+09:00",
+      "last_checked_at": "2026-10-14T09:32:19+09:00",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2511.00603",
+      "identity_tokens": [
+        "arXiv:2511.00603"
+      ],
+      "title": "EPARA: Parallelizing Categorized AI Inference in Edge Clouds",
+      "reason": "It is an edge-cloud inference resource-allocation method with an explicit serving goodput result.",
+      "source_url": "https://arxiv.org/abs/2511.00603",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T09:32:19+09:00",
+      "last_checked_at": "2026-10-14T09:32:19+09:00",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2402.00518",
+      "identity_tokens": [
+        "arXiv:2402.00518"
+      ],
+      "title": "EE-Tuning: An Economical yet Scalable Solution for Tuning Early-Exit Large Language Models",
+      "reason": "Early exit reduces inference computation for LLMs; the paper is an inference-efficiency method even though it requires tuning/training to prepare the exits.",
+      "source_url": "https://arxiv.org/abs/2402.00518",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T09:32:19+09:00",
+      "last_checked_at": "2026-10-14T09:32:19+09:00",
+      "linked_from": []
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2408.04307",
+      "identity_tokens": [
+        "arXiv:2408.04307"
+      ],
+      "title": "MoC-System: Efficient Fault Tolerance for Sparse Mixture-of-Experts Model Training",
+      "reason": "The abstract addresses training checkpoint size and fault tolerance only; no inference, serving, or inference-time efficiency contribution is described.",
+      "source_url": "https://arxiv.org/abs/2408.04307",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T09:32:19+09:00",
+      "last_checked_at": "2026-10-14T09:32:19+09:00",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2410.05462",
+      "identity_tokens": [
+        "arXiv:2410.05462"
+      ],
+      "title": "LevAttention: Time, Space, and Streaming Efficient Algorithm for Heavy Attentions",
+      "reason": "The primary abstract presents a general attention algorithm with linear-time/streaming efficiency, a plausible inference-kernel contribution. Its reported empirical workloads are vision transformers rather than LLMs, so direct LLM validation is not established by the abstract.",
+      "source_url": "https://arxiv.org/abs/2410.05462",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T09:32:19+09:00",
+      "last_checked_at": "2026-10-14T09:32:19+09:00",
+      "linked_from": []
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3620666.3651351",
+      "identity_tokens": [
+        "DOI:10.1145/3620666.3651351"
+      ],
+      "title": "Fractal: Joint Multi-Level Sparse Pattern Tuning of Accuracy and Performance for DNN Pruning",
+      "reason": "The title suggests DNN pruning performance, but the registered DOI route `https://doi.org/10.1145/3620666.3651351` returned Internal Error and ACM DL `https://dl.acm.org/doi/10.1145/3620666.3651351` returned HTTP 403 Forbidden. The publisher primary abstract could not be retrieved, so the model/task and inference relevance remain unverified.",
+      "source_url": "https://doi.org/10.1145/3620666.3651351",
+      "body_check": "source_unavailable; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-10-14T09:32:19+09:00",
+      "last_checked_at": "2026-10-14T09:32:19+09:00",
+      "linked_from": []
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2501.12896",
+      "identity_tokens": [
+        "arXiv:2501.12896"
+      ],
+      "title": "Irrational Complex Rotations Empower Low-bit Optimizers",
+      "reason": "The primary abstract is about optimizer-state compression and training memory; it does not address inference or serving.",
+      "source_url": "https://arxiv.org/abs/2501.12896",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T09:32:19+09:00",
+      "last_checked_at": "2026-10-14T09:32:19+09:00",
+      "linked_from": []
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/2575-8411.2026.00068",
+      "identity_tokens": [
+        "DOI:10.1109/2575-8411.2026.00068"
+      ],
+      "title": "BCD-Megatron: A Cost-Effective Training System for Large Language Models",
+      "reason": "The title indicates an LLM training system, but the registered DOI route `https://doi.org/10.1109/2575-8411.2026.00068` and IEEE Xplore search/document routes could not provide the primary abstract. Secondary search snippets mention pretraining/fine-tuning and GPU memory, but they are not used as primary evidence. Per the retrieval rule, classification remains borderline until the primary source is available.",
+      "source_url": "https://doi.org/10.1109/2575-8411.2026.00068",
+      "body_check": "source_unavailable; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-10-14T09:32:19+09:00",
+      "last_checked_at": "2026-10-14T09:32:19+09:00",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2605.28713",
+      "identity_tokens": [
+        "arXiv:2605.28713"
+      ],
+      "title": "Thinking as Compression: Your Reasoning Model is Secretly a Context Compressor",
+      "reason": "It compresses reasoning context at inference to reduce token/context processing and accelerate LLM generation; the abstract reports compression and QA results.",
+      "source_url": "https://arxiv.org/abs/2605.28713",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T09:32:19+09:00",
+      "last_checked_at": "2026-10-14T09:32:19+09:00",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2605.26175",
+      "identity_tokens": [
+        "arXiv:2605.26175"
+      ],
+      "title": "InfoQuant: Shaping Activation Distributions for Low-Bit LLM Quantization",
+      "reason": "Activation quantization reduces inference memory/compute without requiring quantization-aware retraining, directly serving low-bit LLM deployment.",
+      "source_url": "https://arxiv.org/abs/2605.26175",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T09:32:19+09:00",
+      "last_checked_at": "2026-10-14T09:32:19+09:00",
+      "linked_from": []
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.17598",
+      "identity_tokens": [
+        "arXiv:2605.17598"
+      ],
+      "title": "Mixture of Experts for Low-Resource LLMs",
+      "reason": "The abstract focuses on multilingual capability and model-quality correction through continued pretraining/fine-tuning; it does not describe serving or inference efficiency.",
+      "source_url": "https://arxiv.org/abs/2605.17598",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T09:32:19+09:00",
+      "last_checked_at": "2026-10-14T09:32:19+09:00",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2605.15572",
+      "identity_tokens": [
+        "arXiv:2605.15572"
+      ],
+      "title": "Measuring Maximum Activations in Open Large Language Models",
+      "reason": "This is deployment-oriented measurement evidence for choosing activation ranges and quantization strategies in efficient LLM inference, though the abstract does not propose a new runtime.",
+      "source_url": "https://arxiv.org/abs/2605.15572",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T09:32:19+09:00",
+      "last_checked_at": "2026-10-14T09:32:19+09:00",
+      "linked_from": []
+    }
+  ]
+}
