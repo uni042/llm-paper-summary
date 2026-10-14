@@ -1,0 +1,414 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-363d27e976da591e-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-363d27e976da",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "DOI:10.1016/j.asoc.2023.111207",
+    "DOI:10.1109/ton.2025.3645806",
+    "DOI:10.1109/tsipn.2026.3654839",
+    "arXiv:2403.06497"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 4,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "41bbce5dca86791bde9985198df6014fa075bc89",
+  "raw_search_result_count": 4,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 4,
+  "provider_progress": {
+    "requested_count": 4,
+    "status_counts": {
+      "allowed": 4,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-14T00:06:15.367610+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "DOI:10.1016/j.asoc.2023.111207",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.1109/ton.2025.3645806",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.1109/tsipn.2026.3654839",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2403.06497",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Evolving masked low-rank transformer for long text understanding",
+      "source_url": "https://doi.org/10.1016/j.asoc.2023.111207",
+      "year": 2023,
+      "published": "2023-12-01",
+      "venue": "Applied Soft Computing",
+      "citation_count": 5,
+      "citation_count_source": "semantic_scholar",
+      "abstract": null,
+      "identifiers": [
+        "SemanticScholar:c81eb0019d2e277ee84ea5627bb5482a5b44f932"
+      ],
+      "semantic_scholar_id": "c81eb0019d2e277ee84ea5627bb5482a5b44f932",
+      "doi": "10.1016/j.asoc.2023.111207",
+      "canonical_id": "DOI:10.1016/j.asoc.2023.111207",
+      "authors": [
+        "Chen-Jing Liu",
+        "Xiang-Ru Chen",
+        "Jie Lin",
+        "Peng Hu",
+        "Junfeng Wang",
+        "Xue Geng"
+      ],
+      "priority": 5,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 5,
+        "citation_count": 5,
+        "total": 5,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1048,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "QuantTune: Optimizing Model Quantization with Adaptive Outlier-Driven Fine Tuning",
+      "source_url": "https://arxiv.org/abs/2403.06497",
+      "year": 2024,
+      "published": "2024-03-11",
+      "venue": "Conference on Multimedia Information Processing and Retrieval",
+      "citation_count": 5,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Transformer-based models have gained widespread popularity in varying fields. Deploying these large models for real-world applications inevitably requires fine-tuning on task-specific data, followed by quantization for efficient inference in real-world scenarios. However, QAT (Quantization-Aware Training) is time-consuming and computationally expensive, while PTQ (Post-Training Quantization) often leads to substantial accuracy loss. Since fine-tuning is inevitable, one question would arise: can we just make the model quantization-friendly during fine-tuning? The answer is affirmed. We propose QuantTune, a quantization-friendly fine-tuning method based on restricting the dynamic range amplification effect of outliers across Transformer-based models using the proposed outlier-driven loss. Importantly, QuantTune seamlessly integrates into existing fine-tuning workflows without increasing training time or requiring extra inference complexity. Our approach achieves significant improvements across Transformer-based models, including ViT, BERT-base, and OPT, using naive PTQ only. QuantTune reduces accuracy drops by 12.09% at 8-bit quantization compared to top calibration methods, outperforming state-of-the-art solutions by over 18.84% across ViT models, also demonstrating that the proposed QuantTune achieve the best trade-off in the real-world scenarios.",
+      "identifiers": [
+        "SemanticScholar:dc0041b310e2627a6e2a1869f0da2728aa6bf2bc"
+      ],
+      "semantic_scholar_id": "dc0041b310e2627a6e2a1869f0da2728aa6bf2bc",
+      "canonical_id": "arXiv:2403.06497",
+      "arxiv_id": "2403.06497",
+      "doi": "10.1109/MIPR67560.2025.00029",
+      "authors": [
+        "Jiun-Man Chen",
+        "Yu-Hsuan Chao",
+        "Yuji Wang",
+        "Ming-Der Shieh",
+        "Chih-Chung Hsu",
+        "Wei Lin"
+      ],
+      "priority": 5,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 5,
+        "citation_count": 5,
+        "total": 5,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 947,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Optimizing Mixture-of-Experts Inference Time via Model Deployment and Communication Scheduling",
+      "source_url": "https://doi.org/10.1109/TON.2025.3645806",
+      "year": 2026,
+      "published": null,
+      "venue": "IEEE Transactions on Networking",
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "As machine learning models scale in size and com plexity, their computational requirements become a significant barrier. Mixture-of-Experts (MoE) models alleviate this issue by selectively activating relevant experts. Despite this, MoE models are hindered by high communication overhead from all-to-all operations, low GPU utilization, and complications from heterogeneous GPU environments. This paper presents Comet, which optimizes both model deployment and all-to-all communication scheduling to address these challenges in MoE inference. Comet achieves minimal communication times by strategically ordering token transmissions in all-to-all communications. It improves GPU utilization by colocating experts from different models on the same device, avoiding the limitations of all-to-all communication. We analyze Comet’s optimization strategies theoretically across four common GPU cluster settings: exclusive vs. colocated models on GPUs, and homogeneous vs. heterogeneous GPUs. Comet provides optimal solutions for three cases, and for the remaining NP-hard scenario, it offers a polynomial-time sub-optimal solution with only a <inline-formula> <tex-math notation=\"LaTeX\">$1.09\\times $ </tex-math></inline-formula> degradation from the optimal, as shown in the simulation results. Comet is the first approach to minimize MoE inference time via optimal model deployment and communication scheduling across various scenarios. Evaluations demonstrate that Comet significantly accelerates inference, achieving speedups of up to <inline-formula> <tex-math notation=\"LaTeX\">$2.63\\times $ </tex-math></inline-formula> in homogeneous clusters and <inline-formula> <tex-math notation=\"LaTeX\">$2.91\\times $ </tex-math></inline-formula> in heterogeneous environments. Moreover, Comet enhances GPU utilization by up to <inline-formula> <tex-math notation=\"LaTeX\">$2.38\\times $ </tex-math></inline-formula> compared to existing methods.",
+      "identifiers": [
+        "SemanticScholar:aeeb0ffcd74bf5df314008f699b026a1e7398b69"
+      ],
+      "semantic_scholar_id": "aeeb0ffcd74bf5df314008f699b026a1e7398b69",
+      "doi": "10.1109/TON.2025.3645806",
+      "canonical_id": "DOI:10.1109/TON.2025.3645806",
+      "authors": [
+        "Jialong Li",
+        "Shreyansh Tripathi",
+        "Lakshay Rastogi",
+        "Yiming Lei",
+        "Rui Pan",
+        "Yiting Xia"
+      ],
+      "priority": 4,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 4,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 105,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Graph Neural Networks Improve Quantized Transformers by Incorporating Global Relationships",
+      "source_url": "https://doi.org/10.1109/TSIPN.2026.3654839",
+      "year": 2026,
+      "published": null,
+      "venue": "IEEE Transactions on Signal and Information Processing over Networks",
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Transformers are established in natural language processing (NLP). Their capabilities improve with model size, but training and hosting larger models are computationally demanding. Quantization of model parameters can reduce cost; however, it generally leads to a significant loss in model performance. We introduce BitTransGNN which improves the performance of transformers quantized to low-bit precision by integrating their architecture with Graph Neural Networks (GNNs) during training. BitTransGNN substantially reduces and often closes the performance gap between quantized transformers and their full-precision counterparts while retaining the computational efficiency advantages provided by quantization, including lower memory and energy costs. This is possible since transformers and GNNs capture different characteristics of data. Transformers excel in modeling contextual semantics. GNNs excel in modeling very long-range relationships extracted from the entirety of texts beyond the reach of transformers' contextual window sizes. Alongside the transductive joint model, we introduce inductive variants of BitTransGNN, which transfer the knowledge of the joint framework into a standalone quantized transformer. BitTransGNN outperforms quantized transformer baselines trained without GNN integration with minimal additional overhead, and shows competitive performance against full-precision baselines across multiple language benchmarks. Its inductive variants also successfully encapsulate the information captured by the joint model into a standalone quantized transformer, achieving consistent performance gains over quantized baselines with zero additional inference cost. Furthermore, by combining advanced post-training quantization methods with BitTransGNN, we show that its improvements are complementary to those attainable through advancements in quantization.",
+      "identifiers": [
+        "SemanticScholar:8d36c97aac8bace483176f4cdc859381206db96f"
+      ],
+      "semantic_scholar_id": "8d36c97aac8bace483176f4cdc859381206db96f",
+      "doi": "10.1109/TSIPN.2026.3654839",
+      "canonical_id": "DOI:10.1109/TSIPN.2026.3654839",
+      "authors": [
+        "Cihan Eralp Kumbasar",
+        "H. Ozaktas",
+        "Aykut Koç"
+      ],
+      "priority": 4,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 4,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 105,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:DOI:10.1016/j.asoc.2023.111207",
+      "identity_tokens": [
+        "id:DOI:10.1016/j.asoc.2023.111207",
+        "id:SemanticScholar:c81eb0019d2e277ee84ea5627bb5482a5b44f932",
+        "title:evolving masked lowrank transformer for long text understanding",
+        "url:https://doi.org/10.1016/j.asoc.2023.111207"
+      ],
+      "record": {
+        "title": "Evolving masked low-rank transformer for long text understanding",
+        "source_url": "https://doi.org/10.1016/j.asoc.2023.111207",
+        "year": 2023,
+        "published": "2023-12-01",
+        "venue": "Applied Soft Computing",
+        "citation_count": 5,
+        "citation_count_source": "semantic_scholar",
+        "abstract": null,
+        "identifiers": [
+          "SemanticScholar:c81eb0019d2e277ee84ea5627bb5482a5b44f932"
+        ],
+        "semantic_scholar_id": "c81eb0019d2e277ee84ea5627bb5482a5b44f932",
+        "doi": "10.1016/j.asoc.2023.111207",
+        "canonical_id": "DOI:10.1016/j.asoc.2023.111207",
+        "authors": [
+          "Chen-Jing Liu",
+          "Xiang-Ru Chen",
+          "Jie Lin",
+          "Peng Hu",
+          "Junfeng Wang",
+          "Xue Geng"
+        ],
+        "priority": 5,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 5,
+          "citation_count": 5,
+          "total": 5,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 1048,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2403.06497",
+      "identity_tokens": [
+        "id:DOI:10.1109/mipr67560.2025.00029",
+        "id:SemanticScholar:dc0041b310e2627a6e2a1869f0da2728aa6bf2bc",
+        "id:arXiv:2403.06497",
+        "title:quanttune optimizing model quantization with adaptive outlierdriven fine tuning",
+        "url:https://arxiv.org/abs/2403.06497"
+      ],
+      "record": {
+        "title": "QuantTune: Optimizing Model Quantization with Adaptive Outlier-Driven Fine Tuning",
+        "source_url": "https://arxiv.org/abs/2403.06497",
+        "year": 2024,
+        "published": "2024-03-11",
+        "venue": "Conference on Multimedia Information Processing and Retrieval",
+        "citation_count": 5,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Transformer-based models have gained widespread popularity in varying fields. Deploying these large models for real-world applications inevitably requires fine-tuning on task-specific data, followed by quantization for efficient inference in real-world scenarios. However, QAT (Quantization-Aware Training) is time-consuming and computationally expensive, while PTQ (Post-Training Quantization) often leads to substantial accuracy loss. Since fine-tuning is inevitable, one question would arise: can we just make the model quantization-friendly during fine-tuning? The answer is affirmed. We propose QuantTune, a quantization-friendly fine-tuning method based on restricting the dynamic range amplification effect of outliers across Transformer-based models using the proposed outlier-driven loss. Importantly, QuantTune seamlessly integrates into existing fine-tuning workflows without increasing training time or requiring extra inference complexity. Our approach achieves significant improvements across Transformer-based models, including ViT, BERT-base, and OPT, using naive PTQ only. QuantTune reduces accuracy drops by 12.09% at 8-bit quantization compared to top calibration methods, outperforming state-of-the-art solutions by over 18.84% across ViT models, also demonstrating that the proposed QuantTune achieve the best trade-off in the real-world scenarios.",
+        "identifiers": [
+          "SemanticScholar:dc0041b310e2627a6e2a1869f0da2728aa6bf2bc"
+        ],
+        "semantic_scholar_id": "dc0041b310e2627a6e2a1869f0da2728aa6bf2bc",
+        "canonical_id": "arXiv:2403.06497",
+        "arxiv_id": "2403.06497",
+        "doi": "10.1109/MIPR67560.2025.00029",
+        "authors": [
+          "Jiun-Man Chen",
+          "Yu-Hsuan Chao",
+          "Yuji Wang",
+          "Ming-Der Shieh",
+          "Chih-Chung Hsu",
+          "Wei Lin"
+        ],
+        "priority": 5,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 5,
+          "citation_count": 5,
+          "total": 5,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 947,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/ton.2025.3645806",
+      "identity_tokens": [
+        "id:DOI:10.1109/ton.2025.3645806",
+        "id:SemanticScholar:aeeb0ffcd74bf5df314008f699b026a1e7398b69",
+        "title:optimizing mixtureofexperts inference time via model deployment and communication scheduling",
+        "url:https://doi.org/10.1109/TON.2025.3645806"
+      ],
+      "record": {
+        "title": "Optimizing Mixture-of-Experts Inference Time via Model Deployment and Communication Scheduling",
+        "source_url": "https://doi.org/10.1109/TON.2025.3645806",
+        "year": 2026,
+        "published": null,
+        "venue": "IEEE Transactions on Networking",
+        "citation_count": 4,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "As machine learning models scale in size and com plexity, their computational requirements become a significant barrier. Mixture-of-Experts (MoE) models alleviate this issue by selectively activating relevant experts. Despite this, MoE models are hindered by high communication overhead from all-to-all operations, low GPU utilization, and complications from heterogeneous GPU environments. This paper presents Comet, which optimizes both model deployment and all-to-all communication scheduling to address these challenges in MoE inference. Comet achieves minimal communication times by strategically ordering token transmissions in all-to-all communications. It improves GPU utilization by colocating experts from different models on the same device, avoiding the limitations of all-to-all communication. We analyze Comet’s optimization strategies theoretically across four common GPU cluster settings: exclusive vs. colocated models on GPUs, and homogeneous vs. heterogeneous GPUs. Comet provides optimal solutions for three cases, and for the remaining NP-hard scenario, it offers a polynomial-time sub-optimal solution with only a <inline-formula> <tex-math notation=\"LaTeX\">$1.09\\times $ </tex-math></inline-formula> degradation from the optimal, as shown in the simulation results. Comet is the first approach to minimize MoE inference time via optimal model deployment and communication scheduling across various scenarios. Evaluations demonstrate that Comet significantly accelerates inference, achieving speedups of up to <inline-formula> <tex-math notation=\"LaTeX\">$2.63\\times $ </tex-math></inline-formula> in homogeneous clusters and <inline-formula> <tex-math notation=\"LaTeX\">$2.91\\times $ </tex-math></inline-formula> in heterogeneous environments. Moreover, Comet enhances GPU utilization by up to <inline-formula> <tex-math notation=\"LaTeX\">$2.38\\times $ </tex-math></inline-formula> compared to existing methods.",
+        "identifiers": [
+          "SemanticScholar:aeeb0ffcd74bf5df314008f699b026a1e7398b69"
+        ],
+        "semantic_scholar_id": "aeeb0ffcd74bf5df314008f699b026a1e7398b69",
+        "doi": "10.1109/TON.2025.3645806",
+        "canonical_id": "DOI:10.1109/TON.2025.3645806",
+        "authors": [
+          "Jialong Li",
+          "Shreyansh Tripathi",
+          "Lakshay Rastogi",
+          "Yiming Lei",
+          "Rui Pan",
+          "Yiting Xia"
+        ],
+        "priority": 4,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 4,
+          "citation_count": 4,
+          "total": 4,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 105,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/tsipn.2026.3654839",
+      "identity_tokens": [
+        "id:DOI:10.1109/tsipn.2026.3654839",
+        "id:SemanticScholar:8d36c97aac8bace483176f4cdc859381206db96f",
+        "title:graph neural networks improve quantized transformers by incorporating global relationships",
+        "url:https://doi.org/10.1109/TSIPN.2026.3654839"
+      ],
+      "record": {
+        "title": "Graph Neural Networks Improve Quantized Transformers by Incorporating Global Relationships",
+        "source_url": "https://doi.org/10.1109/TSIPN.2026.3654839",
+        "year": 2026,
+        "published": null,
+        "venue": "IEEE Transactions on Signal and Information Processing over Networks",
+        "citation_count": 4,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Transformers are established in natural language processing (NLP). Their capabilities improve with model size, but training and hosting larger models are computationally demanding. Quantization of model parameters can reduce cost; however, it generally leads to a significant loss in model performance. We introduce BitTransGNN which improves the performance of transformers quantized to low-bit precision by integrating their architecture with Graph Neural Networks (GNNs) during training. BitTransGNN substantially reduces and often closes the performance gap between quantized transformers and their full-precision counterparts while retaining the computational efficiency advantages provided by quantization, including lower memory and energy costs. This is possible since transformers and GNNs capture different characteristics of data. Transformers excel in modeling contextual semantics. GNNs excel in modeling very long-range relationships extracted from the entirety of texts beyond the reach of transformers' contextual window sizes. Alongside the transductive joint model, we introduce inductive variants of BitTransGNN, which transfer the knowledge of the joint framework into a standalone quantized transformer. BitTransGNN outperforms quantized transformer baselines trained without GNN integration with minimal additional overhead, and shows competitive performance against full-precision baselines across multiple language benchmarks. Its inductive variants also successfully encapsulate the information captured by the joint model into a standalone quantized transformer, achieving consistent performance gains over quantized baselines with zero additional inference cost. Furthermore, by combining advanced post-training quantization methods with BitTransGNN, we show that its improvements are complementary to those attainable through advancements in quantization.",
+        "identifiers": [
+          "SemanticScholar:8d36c97aac8bace483176f4cdc859381206db96f"
+        ],
+        "semantic_scholar_id": "8d36c97aac8bace483176f4cdc859381206db96f",
+        "doi": "10.1109/TSIPN.2026.3654839",
+        "canonical_id": "DOI:10.1109/TSIPN.2026.3654839",
+        "authors": [
+          "Cihan Eralp Kumbasar",
+          "H. Ozaktas",
+          "Aykut Koç"
+        ],
+        "priority": 4,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 4,
+          "citation_count": 4,
+          "total": 4,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 105,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:8d6326cae314ff58393f061cf8bd6a864e0eaf8fb8227a95833d8663ed468406",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

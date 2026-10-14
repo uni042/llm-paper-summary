@@ -1,0 +1,1254 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-d3f5653d16955d32-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-d3f5653d1695",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2410.02173",
+    "arXiv:2410.18234",
+    "arXiv:2410.18572",
+    "arXiv:2411.06680",
+    "arXiv:2412.08521",
+    "arXiv:2501.18015",
+    "arXiv:2502.06766",
+    "arXiv:2502.15763",
+    "arXiv:2503.04704",
+    "arXiv:2503.23817",
+    "arXiv:2504.00030",
+    "arXiv:2504.13932",
+    "arXiv:2505.22758"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 13,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "41bbce5dca86791bde9985198df6014fa075bc89",
+  "raw_search_result_count": 13,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 13,
+  "provider_progress": {
+    "requested_count": 13,
+    "status_counts": {
+      "allowed": 13,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-14T00:06:15.387405+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2410.02173",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2410.18234",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2410.18572",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2411.06680",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2412.08521",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2501.18015",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2502.06766",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2502.15763",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2503.04704",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2503.23817",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2504.00030",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2504.13932",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2505.22758",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Multi-Draft Speculative Sampling: Canonical Decomposition and Theoretical Limits",
+      "source_url": "https://arxiv.org/abs/2410.18234",
+      "year": 2024,
+      "published": "2024-10-23",
+      "venue": "International Conference on Learning Representations",
+      "citation_count": 12,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "We consider multi-draft speculative sampling, where the proposal sequences are sampled independently from different draft models. At each step, a token-level draft selection scheme takes a list of valid tokens as input and produces an output token whose distribution matches that of the target model. Previous works have demonstrated that the optimal scheme (which maximizes the probability of accepting one of the input tokens) can be cast as a solution to a linear program. In this work we show that the optimal scheme can be decomposed into a two-step solution: in the first step an importance sampling (IS) type scheme is used to select one intermediate token; in the second step (single-draft) speculative sampling is applied to generate the output token. For the case of two identical draft models we further 1) establish a necessary and sufficient condition on the distributions of the target and draft models for the acceptance probability to equal one and 2) provide an explicit expression for the optimal acceptance probability. Our theoretical analysis also motives a new class of token-level selection schemes based on weighted importance sampling. Our experimental results demonstrate consistent improvements in the achievable block efficiency and token rates over baseline schemes in a number of scenarios.",
+      "identifiers": [
+        "SemanticScholar:9cfd75985dcdf6917ba4c6da0bfcf38dff59be8d"
+      ],
+      "semantic_scholar_id": "9cfd75985dcdf6917ba4c6da0bfcf38dff59be8d",
+      "canonical_id": "arXiv:2410.18234",
+      "arxiv_id": "2410.18234",
+      "authors": [
+        "Ashish J. Khisti",
+        "MohammadReza Ebrahimi",
+        "Hassan Dbouk",
+        "Arash Behboodi",
+        "Roland Memisevic",
+        "Christos Louizos"
+      ],
+      "priority": 22,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 12,
+        "citation_count": 12,
+        "total": 22,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 721,
+        "matched_prestigious_venue": "International Conference on Learning Representations"
+      }
+    },
+    {
+      "title": "Efficiently Deploying LLMs with Controlled Risk",
+      "source_url": "https://arxiv.org/abs/2410.02173",
+      "year": 2024,
+      "published": "2024-10-03",
+      "venue": "arXiv.org",
+      "citation_count": 5,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Deploying large language models in production requires simultaneous attention to efficiency and risk control. Prior work has shown the possibility to cut costs while maintaining similar accuracy, but has neglected to focus on risk control. By contrast, here we present hierarchical chains with multi-level abstention (HCMA), which use model-intrinsic uncertainty to delegate queries along the LLM intelligence hierarchy, enabling training-free model switching based solely on black-box API calls. Our framework presents novel trade-offs between efficiency and risk. For example, deploying HCMA on MMLU cuts the error rate of Llama3 405B by 30% when the model is allowed to abstain on 20% of the queries. To calibrate HCMA for optimal performance, our approach uses data-efficient logistic regressions (based on a simple nonlinear feature transformation), which require only 50 or 100 labeled examples to achieve excellent calibration error (ECE), cutting ECE by 50% compared to naive Platt scaling. On free-form generation tasks, we find that chain-of-thought is ineffectual for selective prediction, whereas zero-shot prompting drives error to 0% on TruthfulQA at high abstention rates. As LLMs are increasingly deployed across computing environments with different capabilities (such as mobile, laptop, and cloud), our framework paves the way towards maintaining deployment efficiency while putting in place sharp risk controls.",
+      "identifiers": [
+        "SemanticScholar:69ac9a30b90024667e1605e6b35c176d1810338c"
+      ],
+      "semantic_scholar_id": "69ac9a30b90024667e1605e6b35c176d1810338c",
+      "canonical_id": "arXiv:2410.02173",
+      "arxiv_id": "2410.02173",
+      "doi": "10.48550/arXiv.2410.02173",
+      "authors": [
+        "Michael J. Zellinger",
+        "Matt Thomson"
+      ],
+      "priority": 5,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 5,
+        "citation_count": 5,
+        "total": 5,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 741,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Taipan: Efficient and Expressive State Space Language Models with Selective Attention",
+      "source_url": "https://arxiv.org/abs/2410.18572",
+      "year": 2024,
+      "published": "2024-10-24",
+      "venue": "arXiv.org",
+      "citation_count": 5,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Efficient long-context language modeling remains a significant challenge in Natural Language Processing (NLP). While Transformers dominate language tasks, they struggle with long sequences due to quadratic computational complexity in training and linearly scaling memory costs during inference. Recent State Space Models (SSMs) such as Mamba offer alternatives with constant memory usage, but they underperform in tasks requiring extensive in-context retrieval. We introduce Taipan, a novel hybrid architecture that combines Mamba-2 with Selective Attention Layers (SALs). These SALs identify tokens requiring long-range interactions, remove less important features, and then augment their representations using the attention module. This approach balances Mamba's efficiency with Transformer-like performance in memory-intensive tasks. By constraining the attention budget, Taipan extends accurate predictions to context lengths of up to 1 million tokens while preserving computational efficiency. Our experiments demonstrate Taipan's superior performance across various scales and tasks, offering a promising solution for efficient long-context language modeling.",
+      "identifiers": [
+        "SemanticScholar:214ba3038e6aa37d1f17b4049bac54b161e6c0f7"
+      ],
+      "semantic_scholar_id": "214ba3038e6aa37d1f17b4049bac54b161e6c0f7",
+      "canonical_id": "arXiv:2410.18572",
+      "arxiv_id": "2410.18572",
+      "doi": "10.48550/arXiv.2410.18572",
+      "authors": [
+        "Chien Van Nguyen",
+        "Huy Huu Nguyen",
+        "Thang M. Pham",
+        "Ruiyi Zhang",
+        "Hanieh Deilamsalehy",
+        "Puneet Mathur",
+        "Ryan A. Rossi",
+        "Trung Bui",
+        "Viet Dac Lai",
+        "Franck Dernoncourt",
+        "Thien Huu Nguyen"
+      ],
+      "priority": 5,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 5,
+        "citation_count": 5,
+        "total": 5,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 720,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Anchor Attention, Small Cache: Code Generation With Large Language Models",
+      "source_url": "https://arxiv.org/abs/2411.06680",
+      "year": 2024,
+      "published": "2024-11-11",
+      "venue": "IEEE Transactions on Software Engineering",
+      "citation_count": 5,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The development of large language models (LLMs) has revolutionized automated code generation. However, their high demand of computation resources has hindered a broader deployment and raised environmental concerns. A common strategy for diminishing computational demands is to cache Key-Value (KV) states from the attention mechanism which is adopted predominately by mainstream LLMs. It can mitigate the need of repeated attention computations, but brings significant memory overhead. Current practices in NLP often use sparse attention which may, unfortunately, lead to substantial inaccuracies, or hallucinations, in code generation tasks. In this paper, we analyze the attention weights distribution within code generation models via an empirical study, uncovering a sparsity pattern, i.e., the aggregation of information at specific anchor points. Based on this observation, we propose a novel approach, AnchorCoder, which features token-wise anchor attention designed to extract and compress the contextual information, and layer-wise anchor attention enabling cross-layer communication to mitigate the issue of excessive superposition caused by the compression. The extensive experiments across multiple benchmark datasets confirm the effectiveness of AnchorCoder, which can consistently achieve a significant (at least 70%) reduction in KV cache requirements, while preserving the majority of model’s performance.",
+      "identifiers": [
+        "SemanticScholar:7fcec68408b759d7826edbd6a0dea0a8bb12f6bc"
+      ],
+      "semantic_scholar_id": "7fcec68408b759d7826edbd6a0dea0a8bb12f6bc",
+      "canonical_id": "arXiv:2411.06680",
+      "arxiv_id": "2411.06680",
+      "doi": "10.1109/TSE.2025.3570680",
+      "authors": [
+        "Xiangyu Zhang",
+        "Yu Zhou",
+        "Guang Yang",
+        "Harald C. Gall",
+        "Taolue Chen"
+      ],
+      "priority": 5,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 5,
+        "citation_count": 5,
+        "total": 5,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 702,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "EMS: Adaptive Evict-then-Merge Strategy for Head-wise KV Cache Compression Based on Global-Local Importance",
+      "source_url": "https://arxiv.org/abs/2412.08521",
+      "year": 2024,
+      "published": "2024-12-11",
+      "venue": "arXiv.org",
+      "citation_count": 5,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "As large language models (LLMs) continue to advance, the demand for higher quality and faster processing of long contexts across various applications is growing. KV cache is widely adopted as it stores previously generated key and value tokens, effectively reducing redundant computations during inference. However, as memory overhead becomes a significant concern, efficient compression of KV cache has gained increasing attention. Most existing methods perform compression from two perspectives: identifying important tokens and designing compression strategies. However, these approaches often produce biased distributions of important tokens due to the influence of accumulated attention scores or positional encoding. Furthermore, they overlook the sparsity and redundancy across different heads, which leads to difficulties in preserving the most effective information at the head level. To this end, we propose EMS to overcome these limitations, while achieving better KV cache compression under extreme compression ratios. Specifically, we introduce a Global-Local score that combines accumulated attention scores from both global and local KV tokens to better identify the token importance. For the compression strategy, we design an adaptive and unified Evict-then-Merge framework that accounts for the sparsity and redundancy of KV tokens across different heads. Additionally, we implement the head-wise parallel compression through a zero-class mechanism to enhance efficiency. Extensive experiments demonstrate our SOTA performance even under extreme compression ratios. EMS consistently achieves the lowest perplexity, improves scores by over 1.28 points across four LLMs on LongBench under a 256 cache budget, and preserves 95% retrieval accuracy with a cache budget less than 2% of the context length in the Needle-in-a-Haystack task.",
+      "identifiers": [
+        "SemanticScholar:c7778e467fadf9e550d4fc6310d553b0decfaeed"
+      ],
+      "semantic_scholar_id": "c7778e467fadf9e550d4fc6310d553b0decfaeed",
+      "canonical_id": "arXiv:2412.08521",
+      "arxiv_id": "2412.08521",
+      "doi": "10.48550/arXiv.2412.08521",
+      "authors": [
+        "Ying-Xin Li",
+        "Ye Li",
+        "Yuan Meng",
+        "Xinzhu Ma",
+        "Zihan Geng",
+        "Shu-Tao Xia",
+        "Zhi Wang"
+      ],
+      "priority": 5,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 5,
+        "citation_count": 5,
+        "total": 5,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 672,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "A Proximal Operator for Inducing 2:4-Sparsity",
+      "source_url": "https://arxiv.org/abs/2501.18015",
+      "year": 2025,
+      "published": "2025-01-29",
+      "venue": "Trans. Mach. Learn. Res.",
+      "citation_count": 5,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Recent hardware advancements in AI Accelerators and GPUs allow to efficiently compute sparse matrix multiplications, especially when 2 out of 4 consecutive weights are set to zero. However, this so-called 2:4 sparsity usually comes at a decreased accuracy of the model. We derive a regularizer that exploits the local correlation of features to find better sparsity masks in trained models. We minimize the regularizer jointly with a local squared loss by deriving the proximal operator for which we show that it has an efficient solution in the 2:4-sparse case. After optimizing the mask, we use maskedgradient updates to further minimize the local squared loss. We illustrate our method on toy problems and apply it to pruning entire large language models up to 70B parameters. On models up to 13B we improve over previous state of the art algorithms, whilst on 70B models we match their performance.",
+      "identifiers": [
+        "SemanticScholar:65e48ba940096e5e7db47ce96875facd097e90d1"
+      ],
+      "semantic_scholar_id": "65e48ba940096e5e7db47ce96875facd097e90d1",
+      "canonical_id": "arXiv:2501.18015",
+      "arxiv_id": "2501.18015",
+      "doi": "10.48550/arXiv.2501.18015",
+      "authors": [
+        "Jonas M. Kübler",
+        "Yu-Xiang Wang",
+        "Shoham Sabach",
+        "Navid Ansari",
+        "Matthäus Kleindessner",
+        "Kailash Budhathoki",
+        "V. Cevher",
+        "George Karypis"
+      ],
+      "priority": 5,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 5,
+        "citation_count": 5,
+        "total": 5,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 623,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Exploiting Sparsity for Long Context Inference: Million Token Contexts on Commodity GPUs",
+      "source_url": "https://arxiv.org/abs/2502.06766",
+      "year": 2025,
+      "published": "2025-02-10",
+      "venue": "arXiv.org",
+      "citation_count": 5,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "There is growing demand for performing inference with hundreds of thousands of input tokens on trained transformer models. Inference at this extreme scale demands significant computational resources, hindering the application of transformers at long contexts on commodity (i.e not data center scale) hardware. To address the inference time costs associated with running self-attention based transformer language models on long contexts and enable their adoption on widely available hardware, we propose a tunable mechanism that reduces the cost of the forward pass by attending to only the most relevant tokens at every generation step using a top-k selection mechanism. We showcase the efficiency gains afforded by our method by performing inference on context windows up to 1M tokens using approximately 16GB of GPU RAM. Our experiments reveal that models are capable of handling the sparsity induced by the reduced number of keys and values. By attending to less than 2% of input tokens, we achieve over 95% of model performance on common benchmarks (RULER, AlpacaEval, and Open LLM Leaderboard).",
+      "identifiers": [
+        "SemanticScholar:c3ecb3222e63d6c718198eab919e2519e4ba884c"
+      ],
+      "semantic_scholar_id": "c3ecb3222e63d6c718198eab919e2519e4ba884c",
+      "canonical_id": "arXiv:2502.06766",
+      "arxiv_id": "2502.06766",
+      "doi": "10.48550/arXiv.2502.06766",
+      "authors": [
+        "Ryan P. Synk",
+        "Monte Hoover",
+        "John Kirchenbauer",
+        "Neel Jain",
+        "Alex Stein",
+        "Manli Shu",
+        "Josue Melendez Sanchez",
+        "R. Duraiswami",
+        "Tom Goldstein"
+      ],
+      "priority": 5,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 5,
+        "citation_count": 5,
+        "total": 5,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 611,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Hybrid Offline-online Scheduling Method for Large Language Model Inference Optimization",
+      "source_url": "https://arxiv.org/abs/2502.15763",
+      "year": 2025,
+      "published": "2025-02-14",
+      "venue": "arXiv.org",
+      "citation_count": 5,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "With the development of large language models (LLMs), it has become increasingly important to optimize hardware usage and improve throughput. In this paper, we study the inference optimization of the serving system that deploys LLMs. To optimize system throughput and maximize hardware utilization, we formulate the inference optimization problem as a mixed-integer programming (MIP) model and propose a hybrid offline-online method as solution. The offline method improves large-scale inference systems by introducing a Minimizing Makespan Bin Packing Problem. We further provide a theoretical lower bound computation method. Then, we propose an online sorting and preemptive scheduling method to better utilize hardware. In the online iteration scheduling process, a Lagrangian method is applied to evaluate the cost efficiency of inserting prefill stages versus decode stages at each iteration and dynamically determine when to preempt decoding tasks and insert prefill tasks. Experiments using real-world data from the LLaMA-65B model and the GSM8K dataset demonstrate that system utilization improves from 80.2% to 89.1%, and the total inference time decreases from 201.00 to 190.58 seconds. A 100-cases study shows that our method consistently outperforms the baseline method and improves the utilization rate by 8.0% on average. Finally, we discuss potential future extensions, including stochastic modeling, reinforcement learning-based schedulers, and dynamic decision-making strategies for system throughput and hardware utilization.",
+      "identifiers": [
+        "SemanticScholar:d3a236191fe4a335c5917ed4bebae76cb7505d26"
+      ],
+      "semantic_scholar_id": "d3a236191fe4a335c5917ed4bebae76cb7505d26",
+      "canonical_id": "arXiv:2502.15763",
+      "arxiv_id": "2502.15763",
+      "doi": "10.48550/arXiv.2502.15763",
+      "authors": [
+        "Bowen Pang",
+        "Kai Li",
+        "Rui-Feng She",
+        "Fei-Fan Wang"
+      ],
+      "priority": 5,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 5,
+        "citation_count": 5,
+        "total": 5,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 607,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Universality of Layer-Level Entropy-Weighted Quantization Beyond Model Architecture and Size",
+      "source_url": "https://arxiv.org/abs/2503.04704",
+      "year": 2025,
+      "published": "2025-03-06",
+      "venue": "arXiv.org",
+      "citation_count": 5,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "We present a novel approach to selective model quantization that transcends the limitations of architecture-specific and size-dependent compression methods for Large Language Models (LLMs) using Entropy-Weighted Quantization (EWQ). By analyzing the entropy distribution across transformer blocks, EWQ determines which blocks can be safely quantized without causing significant performance degradation, independent of model architecture or size. Our method outperforms uniform quantization approaches, maintaining Massive Multitask Language Understanding (MMLU) accuracy scores within 0.5% of unquantized models while reducing memory usage by up to 18%. We demonstrate the effectiveness of EWQ across multiple architectures -- from 1.6B to 70B parameters -- and showcase consistent improvements in the quality-compression trade-off regardless of model scale or architectural design. A surprising finding of EWQ is its ability to reduce perplexity compared to unquantized models, suggesting the presence of beneficial regularization through selective precision reduction. This improvement holds across different model families, indicating a fundamental relationship between layer-level entropy and optimal precision requirements. Additionally, we introduce FastEWQ, a rapid method for entropy distribution analysis that eliminates the need for loading model weights. This technique leverages universal characteristics of entropy distribution that persist across various architectures and scales, enabling near-instantaneous quantization decisions while maintaining 80% classification accuracy with full entropy analysis. Our results demonstrate that effective quantization strategies can be developed independently of specific architectural choices or model sizes, opening new possibilities for efficient LLM deployment.",
+      "identifiers": [
+        "SemanticScholar:fabd340c7084bf1fc61db5366c24937e893e49d9"
+      ],
+      "semantic_scholar_id": "fabd340c7084bf1fc61db5366c24937e893e49d9",
+      "canonical_id": "arXiv:2503.04704",
+      "arxiv_id": "2503.04704",
+      "doi": "10.48550/arXiv.2503.04704",
+      "authors": [
+        "Alireza Behtash",
+        "Marijan Fofonjka",
+        "Ethan Baird",
+        "Tyler Mauer",
+        "Hossein Moghimifam",
+        "David Stout",
+        "J. Dennison"
+      ],
+      "priority": 5,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 5,
+        "citation_count": 5,
+        "total": 5,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 587,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Token-Driven GammaTune: Adaptive Calibration for Enhanced Speculative Decoding",
+      "source_url": "https://arxiv.org/abs/2504.00030",
+      "year": 2025,
+      "published": "2025-03-28",
+      "venue": "arXiv.org",
+      "citation_count": 5,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Speculative decoding accelerates large language model (LLM) inference by using a smaller draft model to propose tokens, which are then verified by a larger target model. However, selecting an optimal speculation length is critical for maximizing speedup while minimizing wasted computation. We introduce \\textit{GammaTune} and \\textit{GammaTune+}, training-free adaptive algorithms that dynamically adjust speculation length based on token acceptance rates using a heuristic-based switching mechanism. Evaluated on SpecBench across multiple tasks and model pairs, our method outperforms other heuristic-based approaches and fixed-length speculative decoding, achieving an average speedup of 15\\% ($\\pm$5\\%) with \\textit{GammaTune} and 16\\% ($\\pm$3\\%) with \\textit{GammaTune+}, while reducing performance variance. This makes \\textit{GammaTune} a robust and efficient solution for real-world deployment.",
+      "identifiers": [
+        "SemanticScholar:589bbe3b532c6af0ec0302e957ec9eb080949eb3"
+      ],
+      "semantic_scholar_id": "589bbe3b532c6af0ec0302e957ec9eb080949eb3",
+      "canonical_id": "arXiv:2504.00030",
+      "arxiv_id": "2504.00030",
+      "doi": "10.48550/arXiv.2504.00030",
+      "authors": [
+        "Aayush Gautam",
+        "Susav Shrestha",
+        "A. L. Narasimha Reddy"
+      ],
+      "priority": 5,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 5,
+        "citation_count": 5,
+        "total": 5,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 565,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "MVDRAM: Enabling GeMV Execution in Unmodified DRAM for Low-Bit LLM Acceleration",
+      "source_url": "https://arxiv.org/abs/2503.23817",
+      "year": 2025,
+      "published": "2025-03-31",
+      "venue": "arXiv.org",
+      "citation_count": 5,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "General matrix-vector multiplication (GeMV) remains a critical latency bottleneck in large language model (LLM) inference, even with quantized low-bit models. Processing-Using-DRAM (PUD), an analog in-DRAM computing technique, has the potential to repurpose on-device DRAM as a GeMV engine, offering additional high-throughput processing capabilities to widespread consumer devices without DRAM modifications. However, applying PUD to GeMV operations in the LLM inference pipeline incurs significant overheads $\\textit{before}$ and $\\textit{after}$ in-DRAM computation, diminishing the benefits of its high-throughput processing capabilities. This paper presents MVDRAM, the first practical system to accelerate GeMV operations for low-bit LLM inference using unmodified DRAM. By leveraging the data sharing patterns and mathematical linearity in GeMV operations, MVDRAM orchestrates the processor and DRAM to eliminate the costs associated with pre-arranging inputs and bit-transposition of outputs required in conventional PUD approaches. Our experimental evaluation with four DDR4 DRAM modules shows that MVDRAM achieves comparable or even better inference speed than the processor-based implementation for GeMV operations in low-bit (under 4-bit) LLM. In particular, MVDRAM achieves up to 7.29$\\times$ speedup and 30.5$\\times$ energy efficiency for low-bit GeMV operations. For end-to-end LLM inference, MVDRAM achieves 2.18$\\times$ and 1.31$\\times$ throughput improvements, along with 3.04$\\times$ and 2.35$\\times$ energy efficiency, for 2-bit and 4-bit quantized low-bit models, respectively. MVDRAM has the potential to redefine the AI hardware landscape by demonstrating the feasibility of standard DRAM as an LLM accelerator.",
+      "identifiers": [
+        "SemanticScholar:791495a3541e53ccdb4917379b39f8c89e7aab80"
+      ],
+      "semantic_scholar_id": "791495a3541e53ccdb4917379b39f8c89e7aab80",
+      "canonical_id": "arXiv:2503.23817",
+      "arxiv_id": "2503.23817",
+      "doi": "10.48550/arXiv.2503.23817",
+      "authors": [
+        "Tatsuya Kubo",
+        "Daichi Tokuda",
+        "Tomoya Nagatani",
+        "Masayuki Usui",
+        "Lei Qu",
+        "Ting Cao",
+        "Shinya Takamaeda-Yamazaki"
+      ],
+      "priority": 5,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 5,
+        "citation_count": 5,
+        "total": 5,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 562,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Enhancing Ultra-Low-Bit Quantization of Large Language Models Through Saliency-Aware Partial Retraining",
+      "source_url": "https://arxiv.org/abs/2504.13932",
+      "year": 2025,
+      "published": "2025-04-14",
+      "venue": "Modeling Decisions for Artificial Intelligence",
+      "citation_count": 5,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The growing use of large language models has raised environmental and economic concerns about their intensity of resource usage during inference. Serving these models to each user requires substantial energy and water for cooling. Model compression techniques like quantization can shrink large language models and make them more resource efficient at the cost of potential performance degradation. Quantization methods compress model size through replacing their high-precision parameters by quantized values of lower precision. Among existing methods, the ApiQ method achieves superior accuracy preservation at minimal memory and time overhead. We investigate two ideas to extend performance in ultra-low-bit quantization beyond ApiQ's level. First, we look into combining existing quantization-aware training techniques with ApiQ's partial training. We show that this does not outperform the baseline ApiQ method with limited training data and frozen weights. This leads to two key insights: (1) The substantial representational capacity that is gained through full retraining is unlikely to be feasible through partial training. (2) This gain may depend on using a large and diverse dataset in quantization-aware training. Second, through a novel approach informed by the two insights, we propose an ultra-low-bit quantization method that builds upon ApiQ and extends its performance without the need for full retraining. This publicly available method relies on a saliency-aware regularization term that prioritizes preserving the most impactful parameters during quantization. Our experiments on LLaMA 7B and 13B benchmarks demonstrate that our method reduces the ApiQ's accuracy degradation by 10.85% and 7.54% respectively. A Python implementation of the proposed quantization method is publicly available on GitHub https://github.com/TokuyuSou/ULB-SAPR.",
+      "identifiers": [
+        "SemanticScholar:f2e6a2216f81f722f3056c0ba946103935ced889"
+      ],
+      "semantic_scholar_id": "f2e6a2216f81f722f3056c0ba946103935ced889",
+      "canonical_id": "arXiv:2504.13932",
+      "arxiv_id": "2504.13932",
+      "doi": "10.1007/978-3-032-00891-6_28",
+      "authors": [
+        "Deyu Cao",
+        "Samin Aref"
+      ],
+      "priority": 5,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 5,
+        "citation_count": 5,
+        "total": 5,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 548,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "FlashFormer: Whole-Model Kernels for Efficient Low-Batch Inference",
+      "source_url": "https://arxiv.org/abs/2505.22758",
+      "year": 2025,
+      "published": "2025-05-28",
+      "venue": "arXiv.org",
+      "citation_count": 5,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The size and compute characteristics of modern large language models have led to an increased interest in developing specialized kernels tailored for particular training and inference workloads. Existing kernels primarily optimize for compute utilization, targeting the large-batch training and inference settings. However, low-batch inference, where memory bandwidth and kernel launch overheads are significant factors, remains important for many applications of interest such as in edge deployment and latency-sensitive applications. This paper describes FlashFormer, which fuses the entire transformer forward pass into a single kernel for accelerating low-batch inference of large language models. Across various model sizes and quantizations settings, FlashFormer achieves nontrivial speedups compared to existing inference kernels.",
+      "identifiers": [
+        "SemanticScholar:e2a8bd0affd209336d40e4ca5f3ad7871ff7b755"
+      ],
+      "semantic_scholar_id": "e2a8bd0affd209336d40e4ca5f3ad7871ff7b755",
+      "canonical_id": "arXiv:2505.22758",
+      "arxiv_id": "2505.22758",
+      "doi": "10.48550/arXiv.2505.22758",
+      "authors": [
+        "Aniruddha Nrusimha",
+        "William Brandon",
+        "Mayank Mishra",
+        "Yikang Shen",
+        "Rameswar Panda",
+        "Jonathan Ragan-Kelley",
+        "Yoon Kim"
+      ],
+      "priority": 5,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 5,
+        "citation_count": 5,
+        "total": 5,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 504,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2410.18234",
+      "identity_tokens": [
+        "id:SemanticScholar:9cfd75985dcdf6917ba4c6da0bfcf38dff59be8d",
+        "id:arXiv:2410.18234",
+        "title:multidraft speculative sampling canonical decomposition and theoretical limits",
+        "url:https://arxiv.org/abs/2410.18234"
+      ],
+      "record": {
+        "title": "Multi-Draft Speculative Sampling: Canonical Decomposition and Theoretical Limits",
+        "source_url": "https://arxiv.org/abs/2410.18234",
+        "year": 2024,
+        "published": "2024-10-23",
+        "venue": "International Conference on Learning Representations",
+        "citation_count": 12,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "We consider multi-draft speculative sampling, where the proposal sequences are sampled independently from different draft models. At each step, a token-level draft selection scheme takes a list of valid tokens as input and produces an output token whose distribution matches that of the target model. Previous works have demonstrated that the optimal scheme (which maximizes the probability of accepting one of the input tokens) can be cast as a solution to a linear program. In this work we show that the optimal scheme can be decomposed into a two-step solution: in the first step an importance sampling (IS) type scheme is used to select one intermediate token; in the second step (single-draft) speculative sampling is applied to generate the output token. For the case of two identical draft models we further 1) establish a necessary and sufficient condition on the distributions of the target and draft models for the acceptance probability to equal one and 2) provide an explicit expression for the optimal acceptance probability. Our theoretical analysis also motives a new class of token-level selection schemes based on weighted importance sampling. Our experimental results demonstrate consistent improvements in the achievable block efficiency and token rates over baseline schemes in a number of scenarios.",
+        "identifiers": [
+          "SemanticScholar:9cfd75985dcdf6917ba4c6da0bfcf38dff59be8d"
+        ],
+        "semantic_scholar_id": "9cfd75985dcdf6917ba4c6da0bfcf38dff59be8d",
+        "canonical_id": "arXiv:2410.18234",
+        "arxiv_id": "2410.18234",
+        "authors": [
+          "Ashish J. Khisti",
+          "MohammadReza Ebrahimi",
+          "Hassan Dbouk",
+          "Arash Behboodi",
+          "Roland Memisevic",
+          "Christos Louizos"
+        ],
+        "priority": 22,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 12,
+          "citation_count": 12,
+          "total": 22,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 721,
+          "matched_prestigious_venue": "International Conference on Learning Representations"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2410.02173",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2410.02173",
+        "id:SemanticScholar:69ac9a30b90024667e1605e6b35c176d1810338c",
+        "id:arXiv:2410.02173",
+        "title:efficiently deploying llms with controlled risk",
+        "url:https://arxiv.org/abs/2410.02173"
+      ],
+      "record": {
+        "title": "Efficiently Deploying LLMs with Controlled Risk",
+        "source_url": "https://arxiv.org/abs/2410.02173",
+        "year": 2024,
+        "published": "2024-10-03",
+        "venue": "arXiv.org",
+        "citation_count": 5,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Deploying large language models in production requires simultaneous attention to efficiency and risk control. Prior work has shown the possibility to cut costs while maintaining similar accuracy, but has neglected to focus on risk control. By contrast, here we present hierarchical chains with multi-level abstention (HCMA), which use model-intrinsic uncertainty to delegate queries along the LLM intelligence hierarchy, enabling training-free model switching based solely on black-box API calls. Our framework presents novel trade-offs between efficiency and risk. For example, deploying HCMA on MMLU cuts the error rate of Llama3 405B by 30% when the model is allowed to abstain on 20% of the queries. To calibrate HCMA for optimal performance, our approach uses data-efficient logistic regressions (based on a simple nonlinear feature transformation), which require only 50 or 100 labeled examples to achieve excellent calibration error (ECE), cutting ECE by 50% compared to naive Platt scaling. On free-form generation tasks, we find that chain-of-thought is ineffectual for selective prediction, whereas zero-shot prompting drives error to 0% on TruthfulQA at high abstention rates. As LLMs are increasingly deployed across computing environments with different capabilities (such as mobile, laptop, and cloud), our framework paves the way towards maintaining deployment efficiency while putting in place sharp risk controls.",
+        "identifiers": [
+          "SemanticScholar:69ac9a30b90024667e1605e6b35c176d1810338c"
+        ],
+        "semantic_scholar_id": "69ac9a30b90024667e1605e6b35c176d1810338c",
+        "canonical_id": "arXiv:2410.02173",
+        "arxiv_id": "2410.02173",
+        "doi": "10.48550/arXiv.2410.02173",
+        "authors": [
+          "Michael J. Zellinger",
+          "Matt Thomson"
+        ],
+        "priority": 5,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 5,
+          "citation_count": 5,
+          "total": 5,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 741,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2410.18572",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2410.18572",
+        "id:SemanticScholar:214ba3038e6aa37d1f17b4049bac54b161e6c0f7",
+        "id:arXiv:2410.18572",
+        "title:taipan efficient and expressive state space language models with selective attention",
+        "url:https://arxiv.org/abs/2410.18572"
+      ],
+      "record": {
+        "title": "Taipan: Efficient and Expressive State Space Language Models with Selective Attention",
+        "source_url": "https://arxiv.org/abs/2410.18572",
+        "year": 2024,
+        "published": "2024-10-24",
+        "venue": "arXiv.org",
+        "citation_count": 5,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Efficient long-context language modeling remains a significant challenge in Natural Language Processing (NLP). While Transformers dominate language tasks, they struggle with long sequences due to quadratic computational complexity in training and linearly scaling memory costs during inference. Recent State Space Models (SSMs) such as Mamba offer alternatives with constant memory usage, but they underperform in tasks requiring extensive in-context retrieval. We introduce Taipan, a novel hybrid architecture that combines Mamba-2 with Selective Attention Layers (SALs). These SALs identify tokens requiring long-range interactions, remove less important features, and then augment their representations using the attention module. This approach balances Mamba's efficiency with Transformer-like performance in memory-intensive tasks. By constraining the attention budget, Taipan extends accurate predictions to context lengths of up to 1 million tokens while preserving computational efficiency. Our experiments demonstrate Taipan's superior performance across various scales and tasks, offering a promising solution for efficient long-context language modeling.",
+        "identifiers": [
+          "SemanticScholar:214ba3038e6aa37d1f17b4049bac54b161e6c0f7"
+        ],
+        "semantic_scholar_id": "214ba3038e6aa37d1f17b4049bac54b161e6c0f7",
+        "canonical_id": "arXiv:2410.18572",
+        "arxiv_id": "2410.18572",
+        "doi": "10.48550/arXiv.2410.18572",
+        "authors": [
+          "Chien Van Nguyen",
+          "Huy Huu Nguyen",
+          "Thang M. Pham",
+          "Ruiyi Zhang",
+          "Hanieh Deilamsalehy",
+          "Puneet Mathur",
+          "Ryan A. Rossi",
+          "Trung Bui",
+          "Viet Dac Lai",
+          "Franck Dernoncourt",
+          "Thien Huu Nguyen"
+        ],
+        "priority": 5,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 5,
+          "citation_count": 5,
+          "total": 5,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 720,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2411.06680",
+      "identity_tokens": [
+        "id:DOI:10.1109/tse.2025.3570680",
+        "id:SemanticScholar:7fcec68408b759d7826edbd6a0dea0a8bb12f6bc",
+        "id:arXiv:2411.06680",
+        "title:anchor attention small cache code generation with large language models",
+        "url:https://arxiv.org/abs/2411.06680"
+      ],
+      "record": {
+        "title": "Anchor Attention, Small Cache: Code Generation With Large Language Models",
+        "source_url": "https://arxiv.org/abs/2411.06680",
+        "year": 2024,
+        "published": "2024-11-11",
+        "venue": "IEEE Transactions on Software Engineering",
+        "citation_count": 5,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The development of large language models (LLMs) has revolutionized automated code generation. However, their high demand of computation resources has hindered a broader deployment and raised environmental concerns. A common strategy for diminishing computational demands is to cache Key-Value (KV) states from the attention mechanism which is adopted predominately by mainstream LLMs. It can mitigate the need of repeated attention computations, but brings significant memory overhead. Current practices in NLP often use sparse attention which may, unfortunately, lead to substantial inaccuracies, or hallucinations, in code generation tasks. In this paper, we analyze the attention weights distribution within code generation models via an empirical study, uncovering a sparsity pattern, i.e., the aggregation of information at specific anchor points. Based on this observation, we propose a novel approach, AnchorCoder, which features token-wise anchor attention designed to extract and compress the contextual information, and layer-wise anchor attention enabling cross-layer communication to mitigate the issue of excessive superposition caused by the compression. The extensive experiments across multiple benchmark datasets confirm the effectiveness of AnchorCoder, which can consistently achieve a significant (at least 70%) reduction in KV cache requirements, while preserving the majority of model’s performance.",
+        "identifiers": [
+          "SemanticScholar:7fcec68408b759d7826edbd6a0dea0a8bb12f6bc"
+        ],
+        "semantic_scholar_id": "7fcec68408b759d7826edbd6a0dea0a8bb12f6bc",
+        "canonical_id": "arXiv:2411.06680",
+        "arxiv_id": "2411.06680",
+        "doi": "10.1109/TSE.2025.3570680",
+        "authors": [
+          "Xiangyu Zhang",
+          "Yu Zhou",
+          "Guang Yang",
+          "Harald C. Gall",
+          "Taolue Chen"
+        ],
+        "priority": 5,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 5,
+          "citation_count": 5,
+          "total": 5,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 702,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2412.08521",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2412.08521",
+        "id:SemanticScholar:c7778e467fadf9e550d4fc6310d553b0decfaeed",
+        "id:arXiv:2412.08521",
+        "title:ems adaptive evictthenmerge strategy for headwise kv cache compression based on globallocal importance",
+        "url:https://arxiv.org/abs/2412.08521"
+      ],
+      "record": {
+        "title": "EMS: Adaptive Evict-then-Merge Strategy for Head-wise KV Cache Compression Based on Global-Local Importance",
+        "source_url": "https://arxiv.org/abs/2412.08521",
+        "year": 2024,
+        "published": "2024-12-11",
+        "venue": "arXiv.org",
+        "citation_count": 5,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "As large language models (LLMs) continue to advance, the demand for higher quality and faster processing of long contexts across various applications is growing. KV cache is widely adopted as it stores previously generated key and value tokens, effectively reducing redundant computations during inference. However, as memory overhead becomes a significant concern, efficient compression of KV cache has gained increasing attention. Most existing methods perform compression from two perspectives: identifying important tokens and designing compression strategies. However, these approaches often produce biased distributions of important tokens due to the influence of accumulated attention scores or positional encoding. Furthermore, they overlook the sparsity and redundancy across different heads, which leads to difficulties in preserving the most effective information at the head level. To this end, we propose EMS to overcome these limitations, while achieving better KV cache compression under extreme compression ratios. Specifically, we introduce a Global-Local score that combines accumulated attention scores from both global and local KV tokens to better identify the token importance. For the compression strategy, we design an adaptive and unified Evict-then-Merge framework that accounts for the sparsity and redundancy of KV tokens across different heads. Additionally, we implement the head-wise parallel compression through a zero-class mechanism to enhance efficiency. Extensive experiments demonstrate our SOTA performance even under extreme compression ratios. EMS consistently achieves the lowest perplexity, improves scores by over 1.28 points across four LLMs on LongBench under a 256 cache budget, and preserves 95% retrieval accuracy with a cache budget less than 2% of the context length in the Needle-in-a-Haystack task.",
+        "identifiers": [
+          "SemanticScholar:c7778e467fadf9e550d4fc6310d553b0decfaeed"
+        ],
+        "semantic_scholar_id": "c7778e467fadf9e550d4fc6310d553b0decfaeed",
+        "canonical_id": "arXiv:2412.08521",
+        "arxiv_id": "2412.08521",
+        "doi": "10.48550/arXiv.2412.08521",
+        "authors": [
+          "Ying-Xin Li",
+          "Ye Li",
+          "Yuan Meng",
+          "Xinzhu Ma",
+          "Zihan Geng",
+          "Shu-Tao Xia",
+          "Zhi Wang"
+        ],
+        "priority": 5,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 5,
+          "citation_count": 5,
+          "total": 5,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 672,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2501.18015",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2501.18015",
+        "id:SemanticScholar:65e48ba940096e5e7db47ce96875facd097e90d1",
+        "id:arXiv:2501.18015",
+        "title:a proximal operator for inducing 24sparsity",
+        "url:https://arxiv.org/abs/2501.18015"
+      ],
+      "record": {
+        "title": "A Proximal Operator for Inducing 2:4-Sparsity",
+        "source_url": "https://arxiv.org/abs/2501.18015",
+        "year": 2025,
+        "published": "2025-01-29",
+        "venue": "Trans. Mach. Learn. Res.",
+        "citation_count": 5,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Recent hardware advancements in AI Accelerators and GPUs allow to efficiently compute sparse matrix multiplications, especially when 2 out of 4 consecutive weights are set to zero. However, this so-called 2:4 sparsity usually comes at a decreased accuracy of the model. We derive a regularizer that exploits the local correlation of features to find better sparsity masks in trained models. We minimize the regularizer jointly with a local squared loss by deriving the proximal operator for which we show that it has an efficient solution in the 2:4-sparse case. After optimizing the mask, we use maskedgradient updates to further minimize the local squared loss. We illustrate our method on toy problems and apply it to pruning entire large language models up to 70B parameters. On models up to 13B we improve over previous state of the art algorithms, whilst on 70B models we match their performance.",
+        "identifiers": [
+          "SemanticScholar:65e48ba940096e5e7db47ce96875facd097e90d1"
+        ],
+        "semantic_scholar_id": "65e48ba940096e5e7db47ce96875facd097e90d1",
+        "canonical_id": "arXiv:2501.18015",
+        "arxiv_id": "2501.18015",
+        "doi": "10.48550/arXiv.2501.18015",
+        "authors": [
+          "Jonas M. Kübler",
+          "Yu-Xiang Wang",
+          "Shoham Sabach",
+          "Navid Ansari",
+          "Matthäus Kleindessner",
+          "Kailash Budhathoki",
+          "V. Cevher",
+          "George Karypis"
+        ],
+        "priority": 5,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 5,
+          "citation_count": 5,
+          "total": 5,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 623,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2502.06766",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2502.06766",
+        "id:SemanticScholar:c3ecb3222e63d6c718198eab919e2519e4ba884c",
+        "id:arXiv:2502.06766",
+        "title:exploiting sparsity for long context inference million token contexts on commodity gpus",
+        "url:https://arxiv.org/abs/2502.06766"
+      ],
+      "record": {
+        "title": "Exploiting Sparsity for Long Context Inference: Million Token Contexts on Commodity GPUs",
+        "source_url": "https://arxiv.org/abs/2502.06766",
+        "year": 2025,
+        "published": "2025-02-10",
+        "venue": "arXiv.org",
+        "citation_count": 5,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "There is growing demand for performing inference with hundreds of thousands of input tokens on trained transformer models. Inference at this extreme scale demands significant computational resources, hindering the application of transformers at long contexts on commodity (i.e not data center scale) hardware. To address the inference time costs associated with running self-attention based transformer language models on long contexts and enable their adoption on widely available hardware, we propose a tunable mechanism that reduces the cost of the forward pass by attending to only the most relevant tokens at every generation step using a top-k selection mechanism. We showcase the efficiency gains afforded by our method by performing inference on context windows up to 1M tokens using approximately 16GB of GPU RAM. Our experiments reveal that models are capable of handling the sparsity induced by the reduced number of keys and values. By attending to less than 2% of input tokens, we achieve over 95% of model performance on common benchmarks (RULER, AlpacaEval, and Open LLM Leaderboard).",
+        "identifiers": [
+          "SemanticScholar:c3ecb3222e63d6c718198eab919e2519e4ba884c"
+        ],
+        "semantic_scholar_id": "c3ecb3222e63d6c718198eab919e2519e4ba884c",
+        "canonical_id": "arXiv:2502.06766",
+        "arxiv_id": "2502.06766",
+        "doi": "10.48550/arXiv.2502.06766",
+        "authors": [
+          "Ryan P. Synk",
+          "Monte Hoover",
+          "John Kirchenbauer",
+          "Neel Jain",
+          "Alex Stein",
+          "Manli Shu",
+          "Josue Melendez Sanchez",
+          "R. Duraiswami",
+          "Tom Goldstein"
+        ],
+        "priority": 5,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 5,
+          "citation_count": 5,
+          "total": 5,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 611,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2502.15763",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2502.15763",
+        "id:SemanticScholar:d3a236191fe4a335c5917ed4bebae76cb7505d26",
+        "id:arXiv:2502.15763",
+        "title:hybrid offlineonline scheduling method for large language model inference optimization",
+        "url:https://arxiv.org/abs/2502.15763"
+      ],
+      "record": {
+        "title": "Hybrid Offline-online Scheduling Method for Large Language Model Inference Optimization",
+        "source_url": "https://arxiv.org/abs/2502.15763",
+        "year": 2025,
+        "published": "2025-02-14",
+        "venue": "arXiv.org",
+        "citation_count": 5,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "With the development of large language models (LLMs), it has become increasingly important to optimize hardware usage and improve throughput. In this paper, we study the inference optimization of the serving system that deploys LLMs. To optimize system throughput and maximize hardware utilization, we formulate the inference optimization problem as a mixed-integer programming (MIP) model and propose a hybrid offline-online method as solution. The offline method improves large-scale inference systems by introducing a Minimizing Makespan Bin Packing Problem. We further provide a theoretical lower bound computation method. Then, we propose an online sorting and preemptive scheduling method to better utilize hardware. In the online iteration scheduling process, a Lagrangian method is applied to evaluate the cost efficiency of inserting prefill stages versus decode stages at each iteration and dynamically determine when to preempt decoding tasks and insert prefill tasks. Experiments using real-world data from the LLaMA-65B model and the GSM8K dataset demonstrate that system utilization improves from 80.2% to 89.1%, and the total inference time decreases from 201.00 to 190.58 seconds. A 100-cases study shows that our method consistently outperforms the baseline method and improves the utilization rate by 8.0% on average. Finally, we discuss potential future extensions, including stochastic modeling, reinforcement learning-based schedulers, and dynamic decision-making strategies for system throughput and hardware utilization.",
+        "identifiers": [
+          "SemanticScholar:d3a236191fe4a335c5917ed4bebae76cb7505d26"
+        ],
+        "semantic_scholar_id": "d3a236191fe4a335c5917ed4bebae76cb7505d26",
+        "canonical_id": "arXiv:2502.15763",
+        "arxiv_id": "2502.15763",
+        "doi": "10.48550/arXiv.2502.15763",
+        "authors": [
+          "Bowen Pang",
+          "Kai Li",
+          "Rui-Feng She",
+          "Fei-Fan Wang"
+        ],
+        "priority": 5,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 5,
+          "citation_count": 5,
+          "total": 5,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 607,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2503.04704",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2503.04704",
+        "id:SemanticScholar:fabd340c7084bf1fc61db5366c24937e893e49d9",
+        "id:arXiv:2503.04704",
+        "title:universality of layerlevel entropyweighted quantization beyond model architecture and size",
+        "url:https://arxiv.org/abs/2503.04704"
+      ],
+      "record": {
+        "title": "Universality of Layer-Level Entropy-Weighted Quantization Beyond Model Architecture and Size",
+        "source_url": "https://arxiv.org/abs/2503.04704",
+        "year": 2025,
+        "published": "2025-03-06",
+        "venue": "arXiv.org",
+        "citation_count": 5,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "We present a novel approach to selective model quantization that transcends the limitations of architecture-specific and size-dependent compression methods for Large Language Models (LLMs) using Entropy-Weighted Quantization (EWQ). By analyzing the entropy distribution across transformer blocks, EWQ determines which blocks can be safely quantized without causing significant performance degradation, independent of model architecture or size. Our method outperforms uniform quantization approaches, maintaining Massive Multitask Language Understanding (MMLU) accuracy scores within 0.5% of unquantized models while reducing memory usage by up to 18%. We demonstrate the effectiveness of EWQ across multiple architectures -- from 1.6B to 70B parameters -- and showcase consistent improvements in the quality-compression trade-off regardless of model scale or architectural design. A surprising finding of EWQ is its ability to reduce perplexity compared to unquantized models, suggesting the presence of beneficial regularization through selective precision reduction. This improvement holds across different model families, indicating a fundamental relationship between layer-level entropy and optimal precision requirements. Additionally, we introduce FastEWQ, a rapid method for entropy distribution analysis that eliminates the need for loading model weights. This technique leverages universal characteristics of entropy distribution that persist across various architectures and scales, enabling near-instantaneous quantization decisions while maintaining 80% classification accuracy with full entropy analysis. Our results demonstrate that effective quantization strategies can be developed independently of specific architectural choices or model sizes, opening new possibilities for efficient LLM deployment.",
+        "identifiers": [
+          "SemanticScholar:fabd340c7084bf1fc61db5366c24937e893e49d9"
+        ],
+        "semantic_scholar_id": "fabd340c7084bf1fc61db5366c24937e893e49d9",
+        "canonical_id": "arXiv:2503.04704",
+        "arxiv_id": "2503.04704",
+        "doi": "10.48550/arXiv.2503.04704",
+        "authors": [
+          "Alireza Behtash",
+          "Marijan Fofonjka",
+          "Ethan Baird",
+          "Tyler Mauer",
+          "Hossein Moghimifam",
+          "David Stout",
+          "J. Dennison"
+        ],
+        "priority": 5,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 5,
+          "citation_count": 5,
+          "total": 5,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 587,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2504.00030",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2504.00030",
+        "id:SemanticScholar:589bbe3b532c6af0ec0302e957ec9eb080949eb3",
+        "id:arXiv:2504.00030",
+        "title:tokendriven gammatune adaptive calibration for enhanced speculative decoding",
+        "url:https://arxiv.org/abs/2504.00030"
+      ],
+      "record": {
+        "title": "Token-Driven GammaTune: Adaptive Calibration for Enhanced Speculative Decoding",
+        "source_url": "https://arxiv.org/abs/2504.00030",
+        "year": 2025,
+        "published": "2025-03-28",
+        "venue": "arXiv.org",
+        "citation_count": 5,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Speculative decoding accelerates large language model (LLM) inference by using a smaller draft model to propose tokens, which are then verified by a larger target model. However, selecting an optimal speculation length is critical for maximizing speedup while minimizing wasted computation. We introduce \\textit{GammaTune} and \\textit{GammaTune+}, training-free adaptive algorithms that dynamically adjust speculation length based on token acceptance rates using a heuristic-based switching mechanism. Evaluated on SpecBench across multiple tasks and model pairs, our method outperforms other heuristic-based approaches and fixed-length speculative decoding, achieving an average speedup of 15\\% ($\\pm$5\\%) with \\textit{GammaTune} and 16\\% ($\\pm$3\\%) with \\textit{GammaTune+}, while reducing performance variance. This makes \\textit{GammaTune} a robust and efficient solution for real-world deployment.",
+        "identifiers": [
+          "SemanticScholar:589bbe3b532c6af0ec0302e957ec9eb080949eb3"
+        ],
+        "semantic_scholar_id": "589bbe3b532c6af0ec0302e957ec9eb080949eb3",
+        "canonical_id": "arXiv:2504.00030",
+        "arxiv_id": "2504.00030",
+        "doi": "10.48550/arXiv.2504.00030",
+        "authors": [
+          "Aayush Gautam",
+          "Susav Shrestha",
+          "A. L. Narasimha Reddy"
+        ],
+        "priority": 5,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 5,
+          "citation_count": 5,
+          "total": 5,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 565,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2503.23817",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2503.23817",
+        "id:SemanticScholar:791495a3541e53ccdb4917379b39f8c89e7aab80",
+        "id:arXiv:2503.23817",
+        "title:mvdram enabling gemv execution in unmodified dram for lowbit llm acceleration",
+        "url:https://arxiv.org/abs/2503.23817"
+      ],
+      "record": {
+        "title": "MVDRAM: Enabling GeMV Execution in Unmodified DRAM for Low-Bit LLM Acceleration",
+        "source_url": "https://arxiv.org/abs/2503.23817",
+        "year": 2025,
+        "published": "2025-03-31",
+        "venue": "arXiv.org",
+        "citation_count": 5,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "General matrix-vector multiplication (GeMV) remains a critical latency bottleneck in large language model (LLM) inference, even with quantized low-bit models. Processing-Using-DRAM (PUD), an analog in-DRAM computing technique, has the potential to repurpose on-device DRAM as a GeMV engine, offering additional high-throughput processing capabilities to widespread consumer devices without DRAM modifications. However, applying PUD to GeMV operations in the LLM inference pipeline incurs significant overheads $\\textit{before}$ and $\\textit{after}$ in-DRAM computation, diminishing the benefits of its high-throughput processing capabilities. This paper presents MVDRAM, the first practical system to accelerate GeMV operations for low-bit LLM inference using unmodified DRAM. By leveraging the data sharing patterns and mathematical linearity in GeMV operations, MVDRAM orchestrates the processor and DRAM to eliminate the costs associated with pre-arranging inputs and bit-transposition of outputs required in conventional PUD approaches. Our experimental evaluation with four DDR4 DRAM modules shows that MVDRAM achieves comparable or even better inference speed than the processor-based implementation for GeMV operations in low-bit (under 4-bit) LLM. In particular, MVDRAM achieves up to 7.29$\\times$ speedup and 30.5$\\times$ energy efficiency for low-bit GeMV operations. For end-to-end LLM inference, MVDRAM achieves 2.18$\\times$ and 1.31$\\times$ throughput improvements, along with 3.04$\\times$ and 2.35$\\times$ energy efficiency, for 2-bit and 4-bit quantized low-bit models, respectively. MVDRAM has the potential to redefine the AI hardware landscape by demonstrating the feasibility of standard DRAM as an LLM accelerator.",
+        "identifiers": [
+          "SemanticScholar:791495a3541e53ccdb4917379b39f8c89e7aab80"
+        ],
+        "semantic_scholar_id": "791495a3541e53ccdb4917379b39f8c89e7aab80",
+        "canonical_id": "arXiv:2503.23817",
+        "arxiv_id": "2503.23817",
+        "doi": "10.48550/arXiv.2503.23817",
+        "authors": [
+          "Tatsuya Kubo",
+          "Daichi Tokuda",
+          "Tomoya Nagatani",
+          "Masayuki Usui",
+          "Lei Qu",
+          "Ting Cao",
+          "Shinya Takamaeda-Yamazaki"
+        ],
+        "priority": 5,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 5,
+          "citation_count": 5,
+          "total": 5,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 562,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2504.13932",
+      "identity_tokens": [
+        "id:DOI:10.1007/978-3-032-00891-6_28",
+        "id:SemanticScholar:f2e6a2216f81f722f3056c0ba946103935ced889",
+        "id:arXiv:2504.13932",
+        "title:enhancing ultralowbit quantization of large language models through saliencyaware partial retraining",
+        "url:https://arxiv.org/abs/2504.13932"
+      ],
+      "record": {
+        "title": "Enhancing Ultra-Low-Bit Quantization of Large Language Models Through Saliency-Aware Partial Retraining",
+        "source_url": "https://arxiv.org/abs/2504.13932",
+        "year": 2025,
+        "published": "2025-04-14",
+        "venue": "Modeling Decisions for Artificial Intelligence",
+        "citation_count": 5,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The growing use of large language models has raised environmental and economic concerns about their intensity of resource usage during inference. Serving these models to each user requires substantial energy and water for cooling. Model compression techniques like quantization can shrink large language models and make them more resource efficient at the cost of potential performance degradation. Quantization methods compress model size through replacing their high-precision parameters by quantized values of lower precision. Among existing methods, the ApiQ method achieves superior accuracy preservation at minimal memory and time overhead. We investigate two ideas to extend performance in ultra-low-bit quantization beyond ApiQ's level. First, we look into combining existing quantization-aware training techniques with ApiQ's partial training. We show that this does not outperform the baseline ApiQ method with limited training data and frozen weights. This leads to two key insights: (1) The substantial representational capacity that is gained through full retraining is unlikely to be feasible through partial training. (2) This gain may depend on using a large and diverse dataset in quantization-aware training. Second, through a novel approach informed by the two insights, we propose an ultra-low-bit quantization method that builds upon ApiQ and extends its performance without the need for full retraining. This publicly available method relies on a saliency-aware regularization term that prioritizes preserving the most impactful parameters during quantization. Our experiments on LLaMA 7B and 13B benchmarks demonstrate that our method reduces the ApiQ's accuracy degradation by 10.85% and 7.54% respectively. A Python implementation of the proposed quantization method is publicly available on GitHub https://github.com/TokuyuSou/ULB-SAPR.",
+        "identifiers": [
+          "SemanticScholar:f2e6a2216f81f722f3056c0ba946103935ced889"
+        ],
+        "semantic_scholar_id": "f2e6a2216f81f722f3056c0ba946103935ced889",
+        "canonical_id": "arXiv:2504.13932",
+        "arxiv_id": "2504.13932",
+        "doi": "10.1007/978-3-032-00891-6_28",
+        "authors": [
+          "Deyu Cao",
+          "Samin Aref"
+        ],
+        "priority": 5,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 5,
+          "citation_count": 5,
+          "total": 5,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 548,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2505.22758",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2505.22758",
+        "id:SemanticScholar:e2a8bd0affd209336d40e4ca5f3ad7871ff7b755",
+        "id:arXiv:2505.22758",
+        "title:flashformer wholemodel kernels for efficient lowbatch inference",
+        "url:https://arxiv.org/abs/2505.22758"
+      ],
+      "record": {
+        "title": "FlashFormer: Whole-Model Kernels for Efficient Low-Batch Inference",
+        "source_url": "https://arxiv.org/abs/2505.22758",
+        "year": 2025,
+        "published": "2025-05-28",
+        "venue": "arXiv.org",
+        "citation_count": 5,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The size and compute characteristics of modern large language models have led to an increased interest in developing specialized kernels tailored for particular training and inference workloads. Existing kernels primarily optimize for compute utilization, targeting the large-batch training and inference settings. However, low-batch inference, where memory bandwidth and kernel launch overheads are significant factors, remains important for many applications of interest such as in edge deployment and latency-sensitive applications. This paper describes FlashFormer, which fuses the entire transformer forward pass into a single kernel for accelerating low-batch inference of large language models. Across various model sizes and quantizations settings, FlashFormer achieves nontrivial speedups compared to existing inference kernels.",
+        "identifiers": [
+          "SemanticScholar:e2a8bd0affd209336d40e4ca5f3ad7871ff7b755"
+        ],
+        "semantic_scholar_id": "e2a8bd0affd209336d40e4ca5f3ad7871ff7b755",
+        "canonical_id": "arXiv:2505.22758",
+        "arxiv_id": "2505.22758",
+        "doi": "10.48550/arXiv.2505.22758",
+        "authors": [
+          "Aniruddha Nrusimha",
+          "William Brandon",
+          "Mayank Mishra",
+          "Yikang Shen",
+          "Rameswar Panda",
+          "Jonathan Ragan-Kelley",
+          "Yoon Kim"
+        ],
+        "priority": 5,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 5,
+          "citation_count": 5,
+          "total": 5,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 504,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:8922267f55d1aaf9774802ffb31574950ad46890e87595a825263747f235c69d",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}
