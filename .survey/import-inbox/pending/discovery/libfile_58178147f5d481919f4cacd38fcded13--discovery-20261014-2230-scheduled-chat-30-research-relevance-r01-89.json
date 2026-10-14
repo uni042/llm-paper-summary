@@ -1,0 +1,26 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261014-2230-scheduled-chat-30/r01/prescreen-89",
+  "reference_main_sha": "53a1ad44b261a74cc692bc7e221fdbe025582ab8",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.20449",
+      "identity_tokens": [
+        "arxiv:2602.20449"
+      ],
+      "title": "Protein Language Models Diverge from Natural Language: Comparative Analysis and Improved Inference",
+      "reason": "タイトルが明示する対象はタンパク質配列を扱う生物学的言語モデルの比較とタンパク質特性予測の推論改善であり、自然言語LLMの推論基盤、KVキャッシュ、サービング、量子化・オフロード等を直接改善する研究ではない。タイトルによる先行除外として扱い、本文未読の段階でタンパク質領域の評価数値を主張しない。",
+      "source_url": "https://arxiv.org/abs/2602.20449",
+      "body_check": "title_screen_only; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-10-14T22:38:05+09:00",
+      "last_checked_at": "2026-10-14T22:38:05+09:00",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance",
+      "worklist_rank": 89
+    }
+  ]
+}
