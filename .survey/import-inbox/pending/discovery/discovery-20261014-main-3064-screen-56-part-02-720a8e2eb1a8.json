@@ -1,0 +1,482 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-56",
+  "run_key": "discovery-20261014-main-3064-screen-56-part-02",
+  "reference_main_sha": "3064f013ce3d01526c99133f2e03ac288d86a4ea",
+  "record_count": 20,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.3390/drones9110757",
+      "identity_tokens": [
+        "DOI:10.3390/drones9110757"
+      ],
+      "title": "Feature-Generation-Replay Continual Learning Combined with Mixture-of-Experts for Data-Driven Autonomous Guidance",
+      "reason": "The work combines continual learning and mixture-of-experts for autonomous guidance; the application is flight guidance, not LLM inference or serving.",
+      "source_url": "https://doi.org/10.3390/drones9110757",
+      "body_check": "abstract_screen_only; body_not_read",
+      "abstract_evidence_excerpt": "Continual learning (CL) is a key technology for enabling data-driven autonomous guidance systems to operate stably and persistently in complex and dynamic environments. Its core goal is to enable the model to continuously learn new scenarios and tasks after deployment, without forgetting existing knowledge, and finally achieving stable decision-making in the different scenarios over a long period. This paper proposes a continual learning method that combines feature-generation-replay with Mixture-of-Experts and Low-Rank Adaptation (MoE-LoRA). This method retains the key features of historical tasks by feature repla and realizes the adaptive s",
+      "abstract_evidence_sha256": "94f56b3a55c5346c7ae127dabf7061a7f5cf60974147f313b0c9643f4dd31438",
+      "abstract_sha256": null,
+      "source_abstract_chars": null,
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2024-2402.14800-not-all-experts-are-equal-efficient-expert-pruning-and-skipping-for-mixture-of-e.md",
+        "papers/inference/02-adaptive-expert-computation-compression/2024-2407.09590-task-agnostic-expert-pruning.md"
+      ],
+      "first_checked_at": "2026-10-14T12:47:41+09:00",
+      "last_checked_at": "2026-10-14T12:47:41+09:00"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1184/R1/14402450.V1",
+      "identity_tokens": [
+        "DOI:10.1184/R1/14402450.V1"
+      ],
+      "title": "Machine Learning Parallelism Could Be Adaptive, Composable and Automated",
+      "reason": "The primary thesis-proposal abstract describes adaptive, composable systems for parallelizing ML training and inference across CPUs, GPUs, and distributed nodes; this is directly relevant systems work. The DOI-to-document link still needs verification.",
+      "source_url": "https://doi.org/10.1184/R1/14402450.V1",
+      "body_check": "abstract_screen_only; body_not_read",
+      "abstract_evidence_excerpt": "In recent years, the pace of innovations in the field of machine learning has accelerated. To cope with the sheer computational complexity of training large ML models on large datasets, researchers in SysML have created algorithms and systems that parallelize ML training and inference over multiple CPUs or GPUs, or even multiple computing nodes over a network (distributed machine learning).",
+      "abstract_evidence_sha256": "f7d1cc9cdee1cbc41398c35257fb9aa2d2163f48b7b5027fc2ae284b502f8334",
+      "abstract_sha256": null,
+      "source_abstract_chars": null,
+      "linked_from": [
+        "papers/inference/15-inference-simulation-emulation/2017-1712.05889-ray-a-distributed-framework-for-emerging-ai-applications.md",
+        "papers/inference/99-other-inference-systems/2017-1701.06538-outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts.md",
+        "papers/inference/99-other-inference-systems/2018-1802.05799-horovod-fast-and-easy-distributed-deep-learning-in-tensorflow.md",
+        "papers/inference/99-other-inference-systems/2018-1806.03377-pipedream-generalized-pipeline-parallelism-for-dnn-training.md",
+        "papers/inference/99-other-inference-systems/2019-1807.08887-supporting-very-large-models-using-automatic-dataflow-graph-partitioning.md",
+        "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md"
+      ],
+      "first_checked_at": "2026-10-14T12:47:41+09:00",
+      "last_checked_at": "2026-10-14T12:47:41+09:00"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2601.20234",
+      "identity_tokens": [
+        "arXiv:2601.20234"
+      ],
+      "title": "MALLOC: Benchmarking the Memory-aware Long Sequence Compression for Large Sequential Recommendation",
+      "reason": "MALLOC benchmarks memory-aware long-sequence compression for large sequential recommenders and tests LLM-originated memory strategies. The application is recommendation rather than LLM inference, so transfer to the target corpus is plausible but indirect.",
+      "source_url": "https://arxiv.org/abs/2601.20234",
+      "body_check": "abstract_screen_only; body_not_read",
+      "abstract_evidence_excerpt": "The scaling law, which indicates that model performance improves with increasing dataset and model capacity, has fueled a growing trend in expanding recommendation models in both industry and academia. However, the advent of large-scale recommenders also brings significantly higher computational costs, particularly under the long-sequence dependencies inherent in the user intent of recommendation systems. Current approaches often rely on pre-storing the intermediate states of the past behavior for each user, thereby reducing the quadratic re-computation cost for the following requests. Despite their effectiveness, these methods often treat me",
+      "abstract_evidence_sha256": "43490bcf3e34d178bcccf1488984040d2cd086f28ffa1838a5a4688c9f8105f2",
+      "abstract_sha256": null,
+      "source_abstract_chars": null,
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2019-1911.02150-multi-query-attention.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2404.14469-snapkv.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md",
+        "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md",
+        "papers/inference/99-other-inference-systems/2023-2305.13245-gqa.md",
+        "papers/inference/99-other-inference-systems/2024-2401.03462-long-context-compression-with-activation-beacon.md"
+      ],
+      "first_checked_at": "2026-10-14T12:47:41+09:00",
+      "last_checked_at": "2026-10-14T12:47:41+09:00"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.01503",
+      "identity_tokens": [
+        "arXiv:2606.01503"
+      ],
+      "title": "On the Limits of Token Reduction for Efficient Unified Vision Language Training",
+      "reason": "The paper studies token-reduction accelerators for unified vision-language model joint training; its focus is training-time compute, which is outside the target inference/system scope.",
+      "source_url": "https://arxiv.org/abs/2606.01503",
+      "body_check": "abstract_screen_only; body_not_read",
+      "abstract_evidence_excerpt": "Unified vision-language models (VLMs) integrate visual understanding and visual generation within a single autoregressive backbone, but their joint training is computationally expensive and largely overlooked from an efficiency perspective. In this work, we study the feasibility and limits of token-reduction-based acceleration for unified VLM training. Through a systematic analysis of layerwise attention allocation, we uncover a fundamental asymmetry: visual understanding exhibits substantial late-layer visual redundancy, whereas visual generation maintains persistent dependence on image tokens across depth. Guided by this observation, we des",
+      "abstract_evidence_sha256": "b8caa24c5a089ebb9c195daf66390cff5bc6a7b9a5b1baeed168a9b5e7c1a11b",
+      "abstract_sha256": null,
+      "source_abstract_chars": null,
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md",
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2501.03895-llava-mini-efficient-image-and-video-large-multimodal-models-with-one-vi.md",
+        "papers/inference/99-other-inference-systems/2023-2311.17043-llama-vid-an-image-is-worth-2-tokens-in-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2024-2403.06764-an-image-is-worth-1-2-tokens-after-layer-2-plug-and-play-inference-accel.md",
+        "papers/inference/99-other-inference-systems/2024-2403.15388-llava-prumerge-adaptive-token-reduction-for-efficient-large-multimodal-m.md",
+        "papers/inference/99-other-inference-systems/2024-2405.05803-boosting-multimodal-large-language-models-with-visual-tokens-withdrawal-.md"
+      ],
+      "first_checked_at": "2026-10-14T12:47:41+09:00",
+      "last_checked_at": "2026-10-14T12:47:41+09:00"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2503.03269",
+      "identity_tokens": [
+        "arXiv:2503.03269"
+      ],
+      "title": "Conformal Transformations for Symmetric Power Transformers",
+      "reason": "The paper concerns conformal transformations for symmetric power transformers in electrical engineering, not Transformer neural networks or LLM systems.",
+      "source_url": "https://arxiv.org/abs/2503.03269",
+      "body_check": "abstract_screen_only; body_not_read",
+      "abstract_evidence_excerpt": "Transformers with linear attention offer significant computational advantages over softmax-based transformers but often suffer from degraded performance. The symmetric power (sympow) transformer, a particular type of linear transformer, addresses some of this performance gap by leveraging symmetric tensor embeddings, achieving comparable performance to softmax transformers. However, the finite capacity of the recurrent state in sympow transformers limits their ability to retain information, leading to performance degradation when scaling the training or evaluation context length. To address this issue, we propose the conformal-sympow transfor",
+      "abstract_evidence_sha256": "2d7161eb2efd961de2f437a84043521ecff3283943568ab70a4e506e81567d9f",
+      "abstract_sha256": null,
+      "source_abstract_chars": null,
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.05254-yoco.md",
+        "papers/inference/09-kernel-runtime-compilation/2021-2103.02143-random-feature-attention.md",
+        "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08621-retentive-network-a-successor-to-transformer-for-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md",
+        "papers/inference/99-other-inference-systems/2024-2312.06635-gated-linear-attention-transformers-with-hardware-efficient-training.md"
+      ],
+      "first_checked_at": "2026-10-14T12:47:41+09:00",
+      "last_checked_at": "2026-10-14T12:47:41+09:00"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.48550/arXiv.2511.22099",
+      "identity_tokens": [
+        "DOI:10.48550/arXiv.2511.22099"
+      ],
+      "title": "Decomposed Trust: Exploring Privacy, Adversarial Robustness, Fairness, and Ethics of Low-Rank LLMs",
+      "reason": "This work examines trust dimensions such as privacy, robustness, fairness, and ethics for low-rank LLMs; it is a model-assessment topic rather than efficiency or serving.",
+      "source_url": "https://doi.org/10.48550/arXiv.2511.22099",
+      "body_check": "abstract_screen_only; body_not_read",
+      "abstract_evidence_excerpt": "Large language models (LLMs) have driven major advances across domains, yet their massive size hinders deployment in resource-constrained settings. Low-rank factorization addresses this challenge by compressing models to effectively reduce their computation and memory consumption while maintaining accuracy. While these compressed models boast benign performance and system-level advantages, their trustworthiness implications remain poorly understood. In this paper, we present the first comprehensive study of how low-rank factorization affects LLM trustworthiness across privacy, adversarial robustness, ethics, and fairness, complemented by an e",
+      "abstract_evidence_sha256": "9a04d42f22a065dbfe416cfb377f6e3bc8bf4db034f3132d1845f014587f0dd5",
+      "abstract_sha256": null,
+      "source_abstract_chars": null,
+      "linked_from": [
+        "papers/inference/08-edge-on-device-llm-systems/2022-2207.00112-language-model-compression-with-weighted-low-rank-factorization.md",
+        "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md",
+        "papers/inference/99-other-inference-systems/2023-2306.11695-a-simple-and-effective-pruning-approach-for-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2023-2312.05821-asvd-activation-aware-singular-value-decomposition-for-compressing-large.md",
+        "papers/inference/99-other-inference-systems/2023-2312.11983-fluctuation-based-adaptive-structured-pruning-for-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2024-2403.15447-decoding-compressed-trust-scrutinizing-the-trustworthiness-of-efficient-.md"
+      ],
+      "first_checked_at": "2026-10-14T12:47:41+09:00",
+      "last_checked_at": "2026-10-14T12:47:41+09:00"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/TNSE.2026.3655188",
+      "identity_tokens": [
+        "DOI:10.1109/TNSE.2026.3655188"
+      ],
+      "title": "A Survey on Computing Power Networks: Architecture, Resource Allocation, and AI Services Enablement",
+      "reason": "The survey covers computing-power-network architecture, resource allocation, and AI services, which may connect to serving infrastructure, but the available abstract does not establish a concrete LLM inference mechanism.",
+      "source_url": "https://doi.org/10.1109/TNSE.2026.3655188",
+      "body_check": "abstract_screen_only; body_not_read",
+      "abstract_evidence_excerpt": "The rapid proliferation of large-scale artificial intelligence (AI) applications has led to unprecedented demand for distributed, efficient, and highly scalable computing infrastructures. Traditional communication networks have evolved to support cloud–edge–end collaborative computing. However, they remain fundamentally communication-centric and lack native mechanisms for coordinating widespread computing resources. Computing power networks (CPNs) address these limitations by adopting a computation-first design that treats computing power as a unified, schedulable network resource. CPNs enable on-demand computing resource scheduling. This all",
+      "abstract_evidence_sha256": "4d63a1134b0fc6408d781ab5c53f7a9bcd4a7f36edd251267aa89b5a066df2c2",
+      "abstract_sha256": null,
+      "source_abstract_chars": null,
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2201.05596-deepspeed-moe-inference-compression.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2407.18003-keep-the-cost-down-a-review-on-methods-to-optimize-llm-s-kv-cache-consum.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2412.19442-a-survey-on-large-language-model-acceleration-based-on-kv-cache-manageme.md",
+        "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2024-2407.06204-a-survey-on-mixture-of-experts-in-large-language-models.md"
+      ],
+      "first_checked_at": "2026-10-14T12:47:41+09:00",
+      "last_checked_at": "2026-10-14T12:47:41+09:00"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2507.14000",
+      "identity_tokens": [
+        "arXiv:2507.14000"
+      ],
+      "title": "Photonic Fabric Platform for AI Accelerators",
+      "reason": "Photonic Fabric provides shared memory and high-bandwidth switching for AI accelerators; its abstract explicitly evaluates LLM inference throughput, latency, memory capacity, and data-movement energy.",
+      "source_url": "https://arxiv.org/abs/2507.14000",
+      "body_check": "abstract_screen_only; body_not_read",
+      "abstract_evidence_excerpt": "This paper presents the Photonic FabricTM and the Photonic Fabric ApplianceTM (PFA), a photonic-enabled switch and memory subsystem that delivers low latency, high bandwidth, and low per-bit energy. By integrating high-bandwidth HBM3E memory, an on-module photonic switch, and external DDR5 in a 2.5D electro-optical system-in-package, the PFA offers up to 32 TB of shared memory alongside 115 Tbps of all-to-all digital switching. The Photonic FabricTM enables distributed AI training and inference to execute parallelism strategies more efficiently. The Photonic Fabric removes the silicon beachfront constraint that limits the fixed memory-to-comp",
+      "abstract_evidence_sha256": "8e83e47b8c0e1e532e6e00e87f93ec9b71c60c577ba0523ddfea9dc4644ef3bb",
+      "abstract_sha256": null,
+      "source_abstract_chars": null,
+      "linked_from": [
+        "papers/inference/15-inference-simulation-emulation/2024-2405.05465-vidur-a-large-scale-simulation-framework-for-llm-inference.md",
+        "papers/inference/15-inference-simulation-emulation/2024-2408.05499-llmservingsim-a-hw-sw-co-simulation-infrastructure-for-llm-inference-ser.md",
+        "papers/inference/99-other-inference-systems/2019-1909.08053-megatron-lm-training-multi-billion-parameter-language-models-using-model.md",
+        "papers/inference/99-other-inference-systems/2021-2104.04473-efficient-large-scale-language-model-training-on-gpu-clusters-using-mega.md",
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md"
+      ],
+      "first_checked_at": "2026-10-14T12:47:41+09:00",
+      "last_checked_at": "2026-10-14T12:47:41+09:00"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2509.03872",
+      "identity_tokens": [
+        "arXiv:2509.03872"
+      ],
+      "title": "Focus Through Motion: RGB-Event Collaborative Token Sparsification for Efficient Object Detection",
+      "reason": "FocusMamba sparsifies RGB/event features for object detection. Its compute-saving mechanism is tied to a separate perception application, not LLM inference systems.",
+      "source_url": "https://arxiv.org/abs/2509.03872",
+      "body_check": "abstract_screen_only; body_not_read",
+      "abstract_evidence_excerpt": "Existing RGB-Event detection methods process the low-information regions of both modalities (background in images and non-event regions in event data) uniformly during feature extraction and fusion, resulting in high computational costs and suboptimal performance. To mitigate the computational redundancy during feature extraction, researchers have respectively proposed token sparsification methods for the image and event modalities. However, these methods employ a fixed number or threshold for token selection, hindering the retention of informative tokens for samples with varying complexity. To achieve a better balance between accuracy and ef",
+      "abstract_evidence_sha256": "90cb1d911543036738869784f99ae909855edaeeb3e1e555a4926f116724d82f",
+      "abstract_sha256": null,
+      "source_abstract_chars": null,
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md",
+        "papers/inference/99-other-inference-systems/2024-2403.06764-an-image-is-worth-1-2-tokens-after-layer-2-plug-and-play-inference-accel.md",
+        "papers/inference/99-other-inference-systems/2024-2405.05803-boosting-multimodal-large-language-models-with-visual-tokens-withdrawal-.md",
+        "papers/inference/99-other-inference-systems/2024-2410.17247-pyramiddrop-accelerating-your-large-vision-language-models-via-pyramid-v.md",
+        "papers/inference/99-other-inference-systems/2025-2503.02175-divprune-diversity-based-visual-token-pruning-for-large-multimodal-model.md"
+      ],
+      "first_checked_at": "2026-10-14T12:47:41+09:00",
+      "last_checked_at": "2026-10-14T12:47:41+09:00"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.05208",
+      "identity_tokens": [
+        "arXiv:2606.05208"
+      ],
+      "title": "Transformer-Enhanced Reinforcement Learning: Fundamentals and Applications in Communication Networks",
+      "reason": "The survey covers Transformer-enhanced reinforcement learning for communications-network tasks; it is not about inference efficiency of LLMs or AI serving systems.",
+      "source_url": "https://arxiv.org/abs/2606.05208",
+      "body_check": "abstract_screen_only; body_not_read",
+      "abstract_evidence_excerpt": "Reinforcement Learning (RL) has long been a powerful solution to various problems in communication networks. However, traditional RL models still face several limitations. Not only do they rely on large numbers of interactions with the environment, but they are also limited in terms of modeling long-term relationships and tackling partial observability. In recent years, the Transformer model has demonstrated the ability to enhance RL models, allowing them to overcome these issues. Particularly, the self-attention mechanism within the Transformer enables efficient modeling of long-range dependencies and global correlations, as well as accelera",
+      "abstract_evidence_sha256": "b402e7a9f1b48acb3d1d98a6422951f016570c62a0a8bfbfa3e11fce5be80f9b",
+      "abstract_sha256": null,
+      "source_abstract_chars": null,
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md",
+        "papers/inference/99-other-inference-systems/2019-1905.07799-adaptive-attention-span-in-transformers.md",
+        "papers/inference/99-other-inference-systems/2020-2007.04825-fast-transformers-with-clustered-attention.md",
+        "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md",
+        "papers/inference/99-other-inference-systems/2021-2102.03902-nystr-mformer-a-nystr-m-based-algorithm-for-approximating-self-attention.md"
+      ],
+      "first_checked_at": "2026-10-14T12:47:41+09:00",
+      "last_checked_at": "2026-10-14T12:47:41+09:00"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2412.19794",
+      "identity_tokens": [
+        "arXiv:2412.19794"
+      ],
+      "title": "MVTamperBench: Evaluating Robustness of Vision-Language Models",
+      "reason": "MVTamperBench evaluates robustness of vision-language models to video tampering; this is capability/safety evaluation, not system efficiency.",
+      "source_url": "https://arxiv.org/abs/2412.19794",
+      "body_check": "abstract_screen_only; body_not_read",
+      "abstract_evidence_excerpt": "Multimodal Large Language Models (MLLMs), are recent advancement of Vision-Language Models (VLMs) that have driven major advances in video understanding. However, their vulnerability to adversarial tampering and manipulations remains underexplored. To address this gap, we introduce \\textbf{MVTamperBench}, a benchmark that systematically evaluates MLLM robustness against five prevalent tampering techniques: rotation, masking, substitution, repetition, and dropping; based on real-world visual tampering scenarios such as surveillance interference, social media content edits, and misinformation injection. MVTamperBench comprises ~3.4K original vi",
+      "abstract_evidence_sha256": "e2fa395948e16450704e1381fc8a85e166a27880ab2a9d385a3a1a18ae343806",
+      "abstract_sha256": null,
+      "source_abstract_chars": null,
+      "linked_from": [
+        "papers/inference/12-moe-parallelism-communication/2024-2408.10188-longvila-scaling-long-context-visual-language-models-for-long-videos.md",
+        "papers/inference/99-other-inference-systems/2023-2307.16449-moviechat-from-dense-token-to-sparse-memory-for-long-video-understanding.md",
+        "papers/inference/99-other-inference-systems/2024-2410.17434-longvu-spatiotemporal-adaptive-compression-for-long-video-language-under.md",
+        "papers/inference/99-other-inference-systems/2024-2412.04468-nvila-efficient-frontier-visual-language-models.md"
+      ],
+      "first_checked_at": "2026-10-14T12:47:41+09:00",
+      "last_checked_at": "2026-10-14T12:47:41+09:00"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2602.11287",
+      "identity_tokens": [
+        "arXiv:2602.11287"
+      ],
+      "title": "HiFloat4 Format for Language Model Inference",
+      "reason": "HiFloat4 is a 4-bit floating-point format evaluated on language-model inference and designed to reduce matrix-multiply hardware area and power while preserving accuracy.",
+      "source_url": "https://arxiv.org/abs/2602.11287",
+      "body_check": "abstract_screen_only; body_not_read",
+      "abstract_evidence_excerpt": "This paper introduces HiFloat4 (HiF4), a block floating-point data format tailored for deep learning. Each HiF4 unit packs 64 4-bit elements with 32 bits of shared scaling metadata, averaging 4.5 bits per value. The metadata specifies a three-level scaling hierarchy, capturing inter- and intra-group dynamic range while improving the utilization of the representational space. In addition, the large 64-element group size enables matrix multiplications to be executed in a highly fixed-point manner, significantly reducing hardware area and power consumption. To evaluate the proposed format, we conducted inference experiments on several language m",
+      "abstract_evidence_sha256": "cbfc39fa58d03c237eb98a1cfb3fc8e1254287fc667173ebf6a2b5d80742fd15",
+      "abstract_sha256": null,
+      "source_abstract_chars": null,
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2025-2509.01322-longcat-flash-zero-computation-experts.md",
+        "papers/inference/99-other-inference-systems/2023-2302.08007-with-shared-microexponents-a-little-shifting-goes-a-long-way.md",
+        "papers/inference/99-other-inference-systems/2023-2305.13245-gqa.md",
+        "papers/inference/99-other-inference-systems/2024-2403.14123-ai-and-memory-wall.md"
+      ],
+      "first_checked_at": "2026-10-14T12:47:41+09:00",
+      "last_checked_at": "2026-10-14T12:47:41+09:00"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2310.20051",
+      "identity_tokens": [
+        "arXiv:2310.20051"
+      ],
+      "title": "The Expressibility of Polynomial based Attention Scheme",
+      "reason": "The paper analyzes polynomial attention expressivity as a response to quadratic attention cost, but its abstract is a theoretical expressivity study and does not demonstrate a concrete efficiency improvement.",
+      "source_url": "https://arxiv.org/abs/2310.20051",
+      "body_check": "abstract_screen_only; body_not_read",
+      "abstract_evidence_excerpt": "Large language models (LLMs) have significantly improved various aspects of our daily lives. These models have impacted numerous domains, from healthcare to education, enhancing productivity, decision-making processes, and accessibility. However, the quadratic complexity of attention in transformer architectures makes it impractical to train very large models on lengthy texts or use them efficiently during inference. While a recent study by [Kacham, Mirrokni and Zhong 2023] introduced a technique that replaces the softmax with a polynomial function and polynomial sketching to speed up attention mechanisms, the theoretical understandings of th",
+      "abstract_evidence_sha256": "1c5ccf70bf1cecf836a06642aa9cf285aae9e760389bc694f913ab0c2aa37950",
+      "abstract_sha256": null,
+      "source_abstract_chars": null,
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2023-2310.05869-hyperattention-long-context-attention-in-near-linear-time.md",
+        "papers/inference/99-other-inference-systems/2019-1905.07799-adaptive-attention-span-in-transformers.md",
+        "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08045-beyond-classical-attention-quantum-attention-for-scalable-computation.md"
+      ],
+      "first_checked_at": "2026-10-14T12:47:41+09:00",
+      "last_checked_at": "2026-10-14T12:47:41+09:00"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2409.14012",
+      "identity_tokens": [
+        "arXiv:2409.14012"
+      ],
+      "title": "Test Time Learning for Time Series Forecasting",
+      "reason": "Test Time Learning is evaluated for time-series forecasting; the abstract describes task accuracy adaptation, not LLM inference-system efficiency.",
+      "source_url": "https://arxiv.org/abs/2409.14012",
+      "body_check": "abstract_screen_only; body_not_read",
+      "abstract_evidence_excerpt": "Time-series forecasting has seen significant advancements with the introduction of token prediction mechanisms such as multi-head attention. However, these methods often struggle to achieve the same performance as in language modeling, primarily due to the quadratic computational cost and the complexity of capturing long-range dependencies in time-series data. State-space models (SSMs), such as Mamba, have shown promise in addressing these challenges by offering efficient solutions with linear RNNs capable of modeling long sequences with larger context windows. However, there remains room for improvement in accuracy and scalability. We propos",
+      "abstract_evidence_sha256": "5668ea92d09db11de808a0c3b445c25114c693e92c24d993e56845783e628065",
+      "abstract_sha256": null,
+      "source_abstract_chars": null,
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md",
+        "papers/inference/99-other-inference-systems/2023-2303.06349-resurrecting-recurrent-neural-networks-for-long-sequences.md",
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md",
+        "papers/inference/99-other-inference-systems/2024-2407.04620-learning-to-learn-at-test-time-rnns-with-expressive-hidden-states.md"
+      ],
+      "first_checked_at": "2026-10-14T12:47:41+09:00",
+      "last_checked_at": "2026-10-14T12:47:41+09:00"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2505.11076",
+      "identity_tokens": [
+        "arXiv:2505.11076"
+      ],
+      "title": "Addition is almost all you need: Compressing large language models with double binary factorization",
+      "reason": "Double binary factorization compresses large language models, directly targeting model storage/compute efficiency through low-bit parameter representation.",
+      "source_url": "https://arxiv.org/abs/2505.11076",
+      "body_check": "abstract_screen_only; body_not_read",
+      "abstract_evidence_excerpt": "Binary quantization approaches, which replace weight matrices with binary matrices and substitute costly multiplications with cheaper additions, offer a computationally efficient approach to address the increasing computational and storage requirements of Large Language Models (LLMs). However, the severe quantization constraint ($\\pm1$) can lead to significant accuracy degradation. In this paper, we propose Double Binary Factorization (DBF), a novel method that factorizes dense weight matrices into products of two binary (sign) matrices, each accompanied by scaling vectors. DBF preserves the efficiency advantages of binary representations whi",
+      "abstract_evidence_sha256": "fb6fa98a69fc6639fec0982a7b376d27fac8f9211f84772cefced85594eba6e4",
+      "abstract_sha256": null,
+      "source_abstract_chars": null,
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2024-2402.04291-billm-pushing-the-limit-of-post-training-quantization-for-llms.md",
+        "papers/inference/16-weight-quantization-compression/2024-2405.14852-pv-tuning-beyond-straight-through-estimation-for-extreme-llm-compression.md",
+        "papers/inference/16-weight-quantization-compression/2024-2406.11235-qtip-quantization-with-trellises-and-incoherence-processing.md",
+        "papers/inference/99-other-inference-systems/2024-2401.06118-extreme-compression-of-large-language-models-via-additive-quantization.md"
+      ],
+      "first_checked_at": "2026-10-14T12:47:41+09:00",
+      "last_checked_at": "2026-10-14T12:47:41+09:00"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2511.09345",
+      "identity_tokens": [
+        "arXiv:2511.09345"
+      ],
+      "title": "Seer Self-Consistency: Advance Budget Estimation for Adaptive Test-Time Scaling",
+      "reason": "Seer Self-Consistency estimates reasoning budgets for adaptive test-time scaling, directly targeting how much inference-time reasoning compute is spent.",
+      "source_url": "https://arxiv.org/abs/2511.09345",
+      "body_check": "abstract_screen_only; body_not_read",
+      "abstract_evidence_excerpt": "Test-time scaling improves the inference performance of Large Language Models (LLMs) but also incurs substantial computational costs. Although recent studies have reduced token consumption through dynamic self-consistency, they remain constrained by the high latency of sequential requests. In this paper, we propose SeerSC, a dynamic self-consistency framework that simultaneously improves token efficiency and latency by integrating System 1 and System 2 reasoning. Specifically, we utilize the rapid System 1 to compute the answer entropy for given queries. This score is then used to evaluate the potential of samples for scaling, enabling dynami",
+      "abstract_evidence_sha256": "e1b40b4af38127c5883fd8e2bf82906e0eb8dc6931551f48a9dba0e0b375f999",
+      "abstract_sha256": null,
+      "source_abstract_chars": null,
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md",
+        "papers/inference/19-inference-evaluation-benchmarking/2024-2401.10480-escape-sky-high-cost-early-stopping-self-consistency-for-multi-step-reas.md",
+        "papers/inference/99-other-inference-systems/2023-2305.11860-let-s-sample-step-by-step-adaptive-consistency-for-efficient-reasoning-a.md",
+        "papers/inference/99-other-inference-systems/2025-2502.12067-tokenskip-controllable-chain-of-thought-compression-in-llms.md"
+      ],
+      "first_checked_at": "2026-10-14T12:47:41+09:00",
+      "last_checked_at": "2026-10-14T12:47:41+09:00"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1101/2022.04.14.488336",
+      "identity_tokens": [
+        "DOI:10.1101/2022.04.14.488336"
+      ],
+      "title": "Relation is an option for processing context information",
+      "reason": "The bioRxiv work studies relational processing of contextual information in a biological/behavioral setting, not LLM inference or serving efficiency.",
+      "source_url": "https://doi.org/10.1101/2022.04.14.488336",
+      "body_check": "abstract_screen_only; body_not_read",
+      "abstract_evidence_excerpt": "Attention mechanisms are one of the most frequently used architectures in the development of artificial intelligence because they can process contextual information efficiently. Various artificial intelligence mechanisms such as transformer for processing natural language, image data, etc. include the attention mechanism. Since attention is a powerful component to realize artificial intelligence, various improvements have been made to enhance its performance. The time complexity of attention depends on the square of input sequence length. Methods to improve time complexity of attention are one of the hottest topics in various studies. In this",
+      "abstract_evidence_sha256": "560be375db1a9b79c5419205c635c478ce48eda30145c685fbf573385dc34362",
+      "abstract_sha256": null,
+      "source_abstract_chars": null,
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2021-2103.02143-random-feature-attention.md",
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md",
+        "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md",
+        "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md"
+      ],
+      "first_checked_at": "2026-10-14T12:47:41+09:00",
+      "last_checked_at": "2026-10-14T12:47:41+09:00"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2503.03008",
+      "identity_tokens": [
+        "arXiv:2503.03008"
+      ],
+      "title": "MoSE: Hierarchical Self-Distillation Enhances Early Layer Embeddings",
+      "reason": "MoSE uses self-distillation to provide multi-exit encoder portions with different inference-cost/accuracy tradeoffs for code retrieval and classification. This is a deployment-efficiency mechanism, but its encoder retrieval/classification scope is indirect to the LLM inference corpus.",
+      "source_url": "https://arxiv.org/abs/2503.03008",
+      "body_check": "abstract_screen_only; body_not_read",
+      "abstract_evidence_excerpt": "Deploying language models often requires navigating accuracy vs. performance trade-offs to meet latency constraints while preserving utility. Traditional model distillation reduces size but incurs substantial costs through training separate models. We introduce ModularStarEncoder (MoSE), a 1-billion-parameter multi-exit encoder for code retrieval and classification that employs a novel Self-Distillation mechanism. This approach significantly enhances lower-layer representations, enabling flexible deployment of different model portions with favorable performance trade-offs. Our architecture improves text-to-code and code-to-code search by targ",
+      "abstract_evidence_sha256": "c8a50f137faa1a3db4b5b654597d45f4d02844c056323e92fc2aa5dee10abf12",
+      "abstract_sha256": null,
+      "source_abstract_chars": null,
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2023-2310.03003-from-words-to-watts-benchmarking-the-energy-costs-of-large-language-mode.md",
+        "papers/inference/99-other-inference-systems/2023-2305.13245-gqa.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md",
+        "papers/inference/99-other-inference-systems/2024-2401.06118-extreme-compression-of-large-language-models-via-additive-quantization.md"
+      ],
+      "first_checked_at": "2026-10-14T12:47:41+09:00",
+      "last_checked_at": "2026-10-14T12:47:41+09:00"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1016/j.inffus.2025.103967",
+      "identity_tokens": [
+        "DOI:10.1016/j.inffus.2025.103967"
+      ],
+      "title": "PAREformer: positional adaptive and recurrent enhanced transformer for time series forecasting",
+      "reason": "PAREformer is for time-series forecasting. Although it uses a parallelizable cumulative sum and a lean architecture, its primary contribution is forecasting accuracy for that application, not LLM/system inference.",
+      "source_url": "https://www.sciencedirect.com/science/article/pii/S1566253525010292",
+      "body_check": "abstract_screen_only; body_not_read",
+      "abstract_evidence_excerpt": "Time series forecasting is a fundamental task in numerous domains where accurately modeling temporal dynamics is paramount. While Transformers are powerful for capturing long-range dependencies in sequence prediction, these models struggle with time series data lacking semantic information, where capturing and fusing both positional patterns and temporal recurrent information remains challenging. To overcome these challenges, we propose the Positional Adaptive and Recurrent Enhanced Transformer (PAREformer), a novel architecture designed for the adaptive fusion of multiple temporal information sources.",
+      "abstract_evidence_sha256": "edd1201f0467d1f760e073166a5fb5ee15511d3223f1944667e9a5dfdb2dae18",
+      "abstract_sha256": null,
+      "source_abstract_chars": null,
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md",
+        "papers/inference/99-other-inference-systems/2022-2202.10447-transformer-quality-in-linear-time.md",
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md",
+        "papers/inference/99-other-inference-systems/2024-2404.05892-eagle-and-finch-rwkv-with-matrix-valued-states-and-dynamic-recurrence.md"
+      ],
+      "first_checked_at": "2026-10-14T12:47:41+09:00",
+      "last_checked_at": "2026-10-14T12:47:41+09:00"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2604.09494",
+      "identity_tokens": [
+        "arXiv:2604.09494"
+      ],
+      "title": "RecaLLM: Addressing the Lost-in-Thought Phenomenon with Explicit In-Context Retrieval",
+      "reason": "RecaLLM adds explicit in-context retrieval to address loss of reasoning context. This is plausibly related to managing long reasoning contexts, but the available evidence does not establish a system-efficiency gain.",
+      "source_url": "https://arxiv.org/abs/2604.09494",
+      "body_check": "abstract_screen_only; body_not_read",
+      "abstract_evidence_excerpt": "We propose RecaLLM, a set of reasoning language models post-trained to make effective use of long-context information. In-context retrieval, which identifies relevant evidence from context, and reasoning are deeply intertwined: retrieval supports reasoning, while reasoning often determines what must be retrieved. However, their interaction remains largely underexplored. In preliminary experiments on several open-source LLMs, we observe that in-context retrieval performance substantially degrades even after a short reasoning span, revealing a key bottleneck for test-time scaling that we refer to as lost-in-thought: reasoning steps that improve",
+      "abstract_evidence_sha256": "ca71fbdd4f19467d1a4eb2b99b597a8b77bb7a9797b1dac51d8c2623ab513f9b",
+      "abstract_sha256": null,
+      "source_abstract_chars": null,
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.09702-efficient-guided-generation-for-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md",
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ],
+      "first_checked_at": "2026-10-14T12:47:41+09:00",
+      "last_checked_at": "2026-10-14T12:47:41+09:00"
+    }
+  ]
+}
