@@ -1,13 +1,12 @@
 {
   "schema_version": 1,
   "artifact_type": "research",
-  "status": "imported",
+  "status": "blocked_quality",
   "source_sha256": "38f60253849029d35452ecc91ed339cdb5efbf62340c0798813be1923fec2f65",
-  "canonical_id": "arXiv:2602.03152",
-  "paper_path": "papers/inference/13-sparse-attention/2026-2602.03152-fasa-frequency-aware-sparse-attention.md",
-  "lineage": "13-sparse-attention",
-  "audit_status": "PASS",
+  "normalized_source_sha256": null,
   "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_3c6b74fa6f3881919b56ef27ae5d6b15--2026-2602.03152-fasa-frequency-aware-sparse-attention-research-20261014-0330-scheduled-chat-30-r01.md",
+  "canonical_id": "arXiv:2602.03152",
   "worker_completed_at": "2026-10-14T03:30:04+09:00",
   "worker_run_key": "20261014-0330-scheduled-chat-30/r01",
   "quality_metrics": {
@@ -20,5 +19,8 @@
     "limitation_chars": 644,
     "insufficiency_flags": []
   },
-  "processed_at": "2026-10-14T06:29:20+00:00"
+  "failures": [
+    "長文定型文の再利用を検出: papers/inference/13-sparse-attention/2026-2602.03152-fasa-frequency-aware-sparse-attention.md と 25 段落 / 5445文字 (100.0%) が完全一致"
+  ],
+  "processed_at": "2026-10-14T10:22:14+00:00"
 }

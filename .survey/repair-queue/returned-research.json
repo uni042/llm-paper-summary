@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-14T10:16:30+00:00",
+  "generated_at": "2026-10-14T10:22:57+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 55,
+  "count": 59,
   "entries": [
     {
       "canonical_id": "DOI:10.1145/3714983.3714987",
@@ -1188,8 +1188,8 @@
     },
     {
       "canonical_id": "arXiv:2603.20843",
-      "title": "HiCI: Hierarchical Construction-Integration for Long-Context Attention",
-      "source_url": "https://arxiv.org/pdf/2603.20843",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-14T10:16:25+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-45",
@@ -1216,8 +1216,8 @@
     },
     {
       "canonical_id": "arXiv:2605.31035",
-      "title": "MixFP4: Enhancing NVFP4 with Adaptive FP4/INT4 Block Representations",
-      "source_url": "https://arxiv.org/pdf/2605.31035",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-14T10:16:26+00:00",
       "return_count": 1,
       "assigned_worker": "scheduled-chat-30",
@@ -1241,8 +1241,8 @@
     },
     {
       "canonical_id": "arXiv:2403.14520",
-      "title": "Cobra: Extending Mamba to Multi-Modal Large Language Model for Efficient Inference",
-      "source_url": "https://arxiv.org/html/2403.14520v4",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-14T10:16:28+00:00",
       "return_count": 1,
       "assigned_worker": "scheduled-chat-45",
@@ -1268,8 +1268,8 @@
     },
     {
       "canonical_id": "arXiv:2601.02535",
-      "title": "ModeX: Evaluator-Free Best-of-N Selection for Open-Ended Generation",
-      "source_url": "https://arxiv.org/html/2601.02535v2",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-14T10:16:29+00:00",
       "return_count": 1,
       "assigned_worker": "scheduled-chat-00",
@@ -1295,8 +1295,8 @@
     },
     {
       "canonical_id": "arXiv:2603.28342",
-      "title": "Kernel-Smith: A Unified Recipe for Evolutionary Kernel Optimization",
-      "source_url": "https://arxiv.org/abs/2603.28342",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-14T10:16:30+00:00",
       "return_count": 1,
       "assigned_worker": "scheduled-chat-45",
@@ -1317,6 +1317,108 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_32eddd6f808081919fb7c0d25dbf5876--2026-2603.28342-kernel-smith-evolutionary-gpu-kernel-optimization-research-20261014-0230-scheduled-chat-30-r01-v2.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_32eddd6f808081919fb7c0d25dbf5876--2026-2603.28342-kernel-smith-evolutionary-gpu-kernel-optimization-research-20261014-0230-scheduled-chat-30-r01-v2.json",
       "worker_run_key": "20261014-0230-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2306.07174",
+      "title": "Augmenting Language Models with Long-Term Memory",
+      "source_url": "https://arxiv.org/html/2306.07174v1",
+      "returned_at": "2026-10-14T10:22:12+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2023-2306.07174-augmenting-language-models-with-long-term-memory.md と 15 段落 / 3334文字 (100.0%) が完全一致"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5933,
+        "body_paragraphs": 35,
+        "method_chars": 1937,
+        "method_paragraphs": 12,
+        "evaluation_chars": 1260,
+        "limitation_chars": 900,
+        "insufficiency_flags": []
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_34a662b0db648191bebfd33ef3014e2d--2023-2306.07174-longmem-decoupled-long-term-memory-research-20261014-1645-scheduled-chat-45-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_34a662b0db648191bebfd33ef3014e2d--2023-2306.07174-longmem-decoupled-long-term-memory-research-20261014-1645-scheduled-chat-45-r01.json",
+      "worker_run_key": "20261014-1645-scheduled-chat-45/r01"
+    },
+    {
+      "canonical_id": "arXiv:2511.06605",
+      "title": "DMA-Latte: Expanding the Reach of DMA Offloads to Latency-bound ML Communication",
+      "source_url": "https://arxiv.org/pdf/2511.06605",
+      "returned_at": "2026-10-14T10:22:13+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "長文定型文の再利用を検出: papers/inference/12-moe-parallelism-communication/2025-2511.06605-dma-latte-expanding-the-reach-of-dma-offloads-to-latency-bound-ml-commun.md と 20 段落 / 4611文字 (100.0%) が完全一致"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 6068,
+        "body_paragraphs": 30,
+        "method_chars": 1856,
+        "method_paragraphs": 10,
+        "evaluation_chars": 1060,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_3b330252d7908191a75952cce0c01535--2025-2511.06605-dma-latte-small-ml-communication-research-20261014-1800-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_3b330252d7908191a75952cce0c01535--2025-2511.06605-dma-latte-small-ml-communication-research-20261014-1800-scheduled-chat-00-r01.json",
+      "worker_run_key": "20261014-1800-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2603.01236",
+      "title": "AgilePruner: An Empirical Study of Attention and Diversity for Adaptive Visual Token Pruning in Large Vision-Language Models",
+      "source_url": "https://arxiv.org/html/2603.01236v1",
+      "returned_at": "2026-10-14T10:22:13+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2026-2603.01236-agilepruner-an-empirical-study-of-attention-and-diversity-for-adaptive-v.md と 23 段落 / 5461文字 (100.0%) が完全一致"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 6329,
+        "body_paragraphs": 31,
+        "method_chars": 1418,
+        "method_paragraphs": 7,
+        "evaluation_chars": 1187,
+        "limitation_chars": 811,
+        "insufficiency_flags": []
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_391c7266dcf481918c1bf26429d51b40--2026-2603.01236-agilepruner-adaptive-visual-token-pruning-research-20261013-2230-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_391c7266dcf481918c1bf26429d51b40--2026-2603.01236-agilepruner-adaptive-visual-token-pruning-research-20261013-2230-scheduled-chat-30-r01.json",
+      "worker_run_key": "20261013-2230-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2602.03152",
+      "title": "FASA: Frequency-aware Sparse Attention",
+      "source_url": "https://arxiv.org/abs/2602.03152",
+      "returned_at": "2026-10-14T10:22:14+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "長文定型文の再利用を検出: papers/inference/13-sparse-attention/2026-2602.03152-fasa-frequency-aware-sparse-attention.md と 25 段落 / 5445文字 (100.0%) が完全一致"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5930,
+        "body_paragraphs": 30,
+        "method_chars": 2222,
+        "method_paragraphs": 12,
+        "evaluation_chars": 1144,
+        "limitation_chars": 644,
+        "insufficiency_flags": []
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_3c6b74fa6f3881919b56ef27ae5d6b15--2026-2602.03152-fasa-frequency-aware-sparse-attention-research-20261014-0330-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_3c6b74fa6f3881919b56ef27ae5d6b15--2026-2602.03152-fasa-frequency-aware-sparse-attention-research-20261014-0330-scheduled-chat-30-r01.json",
+      "worker_run_key": "20261014-0330-scheduled-chat-30/r01"
     }
   ]
 }
