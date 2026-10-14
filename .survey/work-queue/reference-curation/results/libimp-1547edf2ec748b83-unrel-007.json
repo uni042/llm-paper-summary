@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-1547edf2ec748b83-unrel-007",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1515/lingvan-2024-0233",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1515/lingvan-2024-0233",
+    "identity_tokens": [
+      "62324cfea239764d2f9b27753a9e1b15ef0d3675",
+      "DOI:10.1515/lingvan-2024-0233",
+      "SemanticScholar:62324cfea239764d2f9b27753a9e1b15ef0d3675"
+    ],
+    "reason": "Evaluates RNNs for linguistic incrementality/cognitive plausibility; results concern linguistic modeling and training.",
+    "first_checked_at": "2026-10-14T13:11:20+00:00",
+    "last_checked_at": "2026-10-14T13:11:20+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+      "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+    ],
+    "title": "From recursion to incrementality: return to recurrent neural networks"
+  },
+  "processed_at": "2026-10-14T13:11:21+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-1547edf2ec74",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
