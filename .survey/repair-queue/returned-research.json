@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-14T13:18:45+00:00",
+  "generated_at": "2026-10-14T13:24:52+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -1077,31 +1077,6 @@
       "worker_run_key": "20261014-1645-scheduled-chat-45/r01"
     },
     {
-      "canonical_id": "arXiv:2603.01236",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-14T10:22:13+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2026-2603.01236-agilepruner-an-empirical-study-of-attention-and-diversity-for-adaptive-v.md と 23 段落 / 5461文字 (100.0%) が完全一致"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 6329,
-        "body_paragraphs": 31,
-        "method_chars": 1418,
-        "method_paragraphs": 7,
-        "evaluation_chars": 1187,
-        "limitation_chars": 811,
-        "insufficiency_flags": []
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_391c7266dcf481918c1bf26429d51b40--2026-2603.01236-agilepruner-adaptive-visual-token-pruning-research-20261013-2230-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_391c7266dcf481918c1bf26429d51b40--2026-2603.01236-agilepruner-adaptive-visual-token-pruning-research-20261013-2230-scheduled-chat-30-r01.json",
-      "worker_run_key": "20261013-2230-scheduled-chat-30/r01"
-    },
-    {
       "canonical_id": "arXiv:2602.03152",
       "title": null,
       "source_url": null,
@@ -1125,86 +1100,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_3c6b74fa6f3881919b56ef27ae5d6b15--2026-2602.03152-fasa-frequency-aware-sparse-attention-research-20261014-0330-scheduled-chat-30-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_3c6b74fa6f3881919b56ef27ae5d6b15--2026-2602.03152-fasa-frequency-aware-sparse-attention-research-20261014-0330-scheduled-chat-30-r01.json",
       "worker_run_key": "20261014-0330-scheduled-chat-30/r01"
-    },
-    {
-      "canonical_id": "DOI:10.18653/v1/2021.naacl-main.463",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-14T10:41:36+00:00",
-      "return_count": 3,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2021-00c8b8f9f90e-tr-bert-dynamic-token-reduction-for-accelerating-bert-inference.md と 21 段落 / 4539文字 (100.0%) が完全一致"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5656,
-        "body_paragraphs": 29,
-        "method_chars": 1949,
-        "method_paragraphs": 10,
-        "evaluation_chars": 1250,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_4fc44f0519e88191b93bf46c11f84fc1--2021-tr-bert-dynamic-token-reduction-returned-repair-20261013-2200-scheduled-chat-00-r01-v2.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_4fc44f0519e88191b93bf46c11f84fc1--2021-tr-bert-dynamic-token-reduction-returned-repair-20261013-2200-scheduled-chat-00-r01-v2.json",
-      "worker_run_key": "20261013-2200-scheduled-chat-00/r01"
-    },
-    {
-      "canonical_id": "arXiv:2511.18868",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-14T10:57:30+00:00",
-      "return_count": 3,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "長文定型文の再利用を検出: papers/inference/09-kernel-runtime-compilation/2025-2511.18868-kernelband-steering-llm-based-kernel-optimization-via-hardware-aware-mul.md と 19 段落 / 4210文字 (100.0%) が完全一致"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 6192,
-        "body_paragraphs": 35,
-        "method_chars": 1708,
-        "method_paragraphs": 9,
-        "evaluation_chars": 1775,
-        "limitation_chars": 673,
-        "insufficiency_flags": []
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_6e8530b261d4819183f57181b23b6009--2025-2511.18868-kernelband-quality-repair-20261014-0445-scheduled-chat-45-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_6e8530b261d4819183f57181b23b6009--2025-2511.18868-kernelband-quality-repair-20261014-0445-scheduled-chat-45-r01.json",
-      "worker_run_key": "20261014-0445-scheduled-chat-45/r01"
-    },
-    {
-      "canonical_id": "arXiv:2606.10537",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-14T11:05:36+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 0 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 6983,
-        "body_paragraphs": 40,
-        "method_chars": 2318,
-        "method_paragraphs": 13,
-        "evaluation_chars": 0,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "評価説明量 0 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_84c0786a5afc8191895b4f30c1759e9a--2026-2606.10537-prefilling-dllm-research-20261014-0430-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_84c0786a5afc8191895b4f30c1759e9a--2026-2606.10537-prefilling-dllm-research-20261014-0430-scheduled-chat-30-r01.json",
-      "worker_run_key": "20261014-0430-scheduled-chat-30/r01"
     },
     {
       "canonical_id": "arXiv:2512.02044",
@@ -1311,34 +1206,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_c34cb3f187308191bf72dfec3a54595d--2025-2511.02647-federated-attention-edge-llm-inference-research-20261014-1430-scheduled-chat-30-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_c34cb3f187308191bf72dfec3a54595d--2025-2511.02647-federated-attention-edge-llm-inference-research-20261014-1430-scheduled-chat-30-r01.json",
       "worker_run_key": "20261014-1430-scheduled-chat-30/r01"
-    },
-    {
-      "canonical_id": "arXiv:2512.14244",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-14T11:57:08+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 175 < 500",
-        "長文定型文の再利用を検出: .survey/import-inbox/pending/research/retry-research-c61d5f8db535--libfile_510e63254f748191865cf57db14737e8--2025-2512.14244-lingoedu-structured-context-compression-research-20261014-1600-scheduled-chat-00-r01.md と 14 段落 / 3847文字 (100.0%) が完全一致"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5541,
-        "body_paragraphs": 34,
-        "method_chars": 1610,
-        "method_paragraphs": 9,
-        "evaluation_chars": 175,
-        "limitation_chars": 752,
-        "insufficiency_flags": [
-          "評価説明量 175 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_510e63254f748191865cf57db14737e8--2025-2512.14244-lingoedu-structured-context-compression-research-20261014-1600-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_510e63254f748191865cf57db14737e8--2025-2512.14244-lingoedu-structured-context-compression-research-20261014-1600-scheduled-chat-00-r01.json",
-      "worker_run_key": "20261014-1600-scheduled-chat-00/r01"
     },
     {
       "canonical_id": "arXiv:2608.26005",
@@ -2702,8 +2569,8 @@
     },
     {
       "canonical_id": "arXiv:2605.22502",
-      "title": "Compiling Agentic Workflows into LLM Weights: Near-Frontier Quality at Two Orders of Magnitude Less Cost",
-      "source_url": "https://arxiv.org/pdf/2605.22502",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-14T13:18:40+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-30",
@@ -2729,8 +2596,8 @@
     },
     {
       "canonical_id": "DOI:10.1145/3712285.3759834",
-      "title": "Towards Efficient LLM Inference via Collective and Adaptive Speculative Decoding",
-      "source_url": "https://doi.org/10.1145/3712285.3759834",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-14T13:18:41+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-30",
@@ -2757,8 +2624,8 @@
     },
     {
       "canonical_id": "arXiv:2605.19049",
-      "title": "KVBuffer: IO-aware Serving for Linear Attention",
-      "source_url": "https://arxiv.org/html/2605.19049v1",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-14T13:18:42+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-00",
@@ -2784,8 +2651,8 @@
     },
     {
       "canonical_id": "arXiv:2512.09487",
-      "title": "RouteRAG: Efficient Retrieval-Augmented Generation from Text and Graph via Reinforcement Learning",
-      "source_url": "https://arxiv.org/abs/2512.09487",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-14T13:18:43+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-00",
@@ -2809,8 +2676,8 @@
     },
     {
       "canonical_id": "arXiv:2602.13215",
-      "title": "When to Think Fast and Slow? AMOR: Adaptive Entropy Gate for Hybrid Models",
-      "source_url": "https://arxiv.org/abs/2602.13215",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-14T13:18:44+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-00",
@@ -2834,6 +2701,138 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-c234b8b064ad--libfile_dd17990729f08191b760e44839055232--2026-2602.13215-amor-adaptive-entropy-gate-research-20261014-1630-scheduled-chat-30-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-c234b8b064ad--libfile_dd17990729f08191b760e44839055232--2026-2602.13215-amor-adaptive-entropy-gate-research-20261014-1630-scheduled-chat-30-r01.json",
       "worker_run_key": "20261014-1630-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2512.14244",
+      "title": "From Context to EDUs: Faithful and Structured Context Compression via Elementary Discourse Unit Decomposition",
+      "source_url": "https://arxiv.org/abs/2512.14244",
+      "returned_at": "2026-10-14T13:24:47+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 175 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5541,
+        "body_paragraphs": 34,
+        "method_chars": 1610,
+        "method_paragraphs": 9,
+        "evaluation_chars": 175,
+        "limitation_chars": 752,
+        "insufficiency_flags": [
+          "評価説明量 175 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-c61d5f8db535--libfile_510e63254f748191865cf57db14737e8--2025-2512.14244-lingoedu-structured-context-compression-research-20261014-1600-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-c61d5f8db535--libfile_510e63254f748191865cf57db14737e8--2025-2512.14244-lingoedu-structured-context-compression-research-20261014-1600-scheduled-.json",
+      "worker_run_key": "20261014-1600-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2511.18868",
+      "title": "KernelBand: Steering LLM-based Kernel Optimization via Hardware-Aware Multi-Armed Bandits",
+      "source_url": "https://arxiv.org/html/2511.18868v2",
+      "returned_at": "2026-10-14T13:24:48+00:00",
+      "return_count": 4,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "長文定型文の再利用を検出: papers/inference/09-kernel-runtime-compilation/2025-2511.18868-kernelband-steering-llm-based-kernel-optimization-via-hardware-aware-mul.md と 19 段落 / 4210文字 (100.0%) が完全一致"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 6192,
+        "body_paragraphs": 35,
+        "method_chars": 1708,
+        "method_paragraphs": 9,
+        "evaluation_chars": 1775,
+        "limitation_chars": 673,
+        "insufficiency_flags": []
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-c7b9843586e8--libfile_6e8530b261d4819183f57181b23b6009--2025-2511.18868-kernelband-quality-repair-20261014-0445-scheduled-chat-45-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-c7b9843586e8--libfile_6e8530b261d4819183f57181b23b6009--2025-2511.18868-kernelband-quality-repair-20261014-0445-scheduled-chat-45-r01.json",
+      "worker_run_key": "20261014-0445-scheduled-chat-45/r01"
+    },
+    {
+      "canonical_id": "arXiv:2606.10537",
+      "title": "Prefilling-dLLM: Predictive Prefilling for Long-Context Inference in Diffusion Language Models",
+      "source_url": "https://arxiv.org/html/2606.10537v2",
+      "returned_at": "2026-10-14T13:24:49+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 0 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 6983,
+        "body_paragraphs": 40,
+        "method_chars": 2318,
+        "method_paragraphs": 13,
+        "evaluation_chars": 0,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "評価説明量 0 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-cabbf4122410--libfile_84c0786a5afc8191895b4f30c1759e9a--2026-2606.10537-prefilling-dllm-research-20261014-0430-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-cabbf4122410--libfile_84c0786a5afc8191895b4f30c1759e9a--2026-2606.10537-prefilling-dllm-research-20261014-0430-scheduled-chat-30-r01.json",
+      "worker_run_key": "20261014-0430-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "DOI:10.18653/v1/2021.naacl-main.463",
+      "title": "TR-BERT: Dynamic Token Reduction for Accelerating BERT Inference",
+      "source_url": "https://aclanthology.org/2021.naacl-main.463.pdf",
+      "returned_at": "2026-10-14T13:24:51+00:00",
+      "return_count": 4,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2021-00c8b8f9f90e-tr-bert-dynamic-token-reduction-for-accelerating-bert-inference.md と 21 段落 / 4539文字 (100.0%) が完全一致"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5656,
+        "body_paragraphs": 29,
+        "method_chars": 1949,
+        "method_paragraphs": 10,
+        "evaluation_chars": 1250,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-cad67c351106--libfile_4fc44f0519e88191b93bf46c11f84fc1--2021-tr-bert-dynamic-token-reduction-returned-repair-20261013-2200-scheduled-chat-00-r01-v2.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-cad67c351106--libfile_4fc44f0519e88191b93bf46c11f84fc1--2021-tr-bert-dynamic-token-reduction-returned-repair-20261013-2200-scheduled-chat-00-r01-.json",
+      "worker_run_key": "20261013-2200-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2603.01236",
+      "title": "AgilePruner: An Empirical Study of Attention and Diversity for Adaptive Visual Token Pruning in Large Vision-Language Models",
+      "source_url": "https://arxiv.org/html/2603.01236v1",
+      "returned_at": "2026-10-14T13:24:52+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2026-2603.01236-agilepruner-an-empirical-study-of-attention-and-diversity-for-adaptive-v.md と 23 段落 / 5461文字 (100.0%) が完全一致"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 6329,
+        "body_paragraphs": 31,
+        "method_chars": 1418,
+        "method_paragraphs": 7,
+        "evaluation_chars": 1187,
+        "limitation_chars": 811,
+        "insufficiency_flags": []
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-d99fa7468816--libfile_391c7266dcf481918c1bf26429d51b40--2026-2603.01236-agilepruner-adaptive-visual-token-pruning-research-20261013-2230-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-d99fa7468816--libfile_391c7266dcf481918c1bf26429d51b40--2026-2603.01236-agilepruner-adaptive-visual-token-pruning-research-20261013-2230-schedule.json",
+      "worker_run_key": "20261013-2230-scheduled-chat-30/r01"
     }
   ]
 }
