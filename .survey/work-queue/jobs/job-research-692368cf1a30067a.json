@@ -35,10 +35,15 @@
   "selection_reason": "自己回帰LLMの推論メモリを制約するKV cacheを対象に、キー・値tensorをテンソル分解で圧縮した時のスペクトル特性と保存量あたりの再構成誤差を分析している。Tucker等の分解形式を比較し、キーと値に独立rank予算を割り当てる根拠やRoPE前後の圧縮性差を示すため、推論時KV cache圧縮に直接関連する。実際のdecode latencyや生成品質を測るend-to-end serving論文ではなく、2モデル・固定系列長でのcache reconstruction比較が中心である点を適用範囲として残す。",
   "semantic_scholar_id": "9b5c75985b0b46e62b84fb2f157457f11673c5fb",
   "source_url": "https://arxiv.org/abs/2609.28029",
-  "status": "ready",
+  "status": "superseded",
   "title": "Tensor Decomposition of Transformer Key-Value Caches: Spectral Structure and Format Comparison",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-10-14T15:49:28+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2026-2609.28029-tensor-decomposition-of-transformer-key-value-caches-spectral-structure-.md",
+  "represented_canonical_id": "arXiv:2609.28029",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
