@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-14T11:20:11+00:00",
+  "generated_at": "2026-10-14T11:25:25+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 77,
+  "count": 82,
   "entries": [
     {
       "canonical_id": "DOI:10.1145/3714983.3714987",
@@ -1759,8 +1759,8 @@
     },
     {
       "canonical_id": "arXiv:2512.11529",
-      "title": "xGR: Efficient Generative Recommendation Serving at Scale",
-      "source_url": "https://arxiv.org/pdf/2512.11529",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-14T11:20:06+00:00",
       "return_count": 1,
       "assigned_worker": "scheduled-chat-30",
@@ -1786,8 +1786,8 @@
     },
     {
       "canonical_id": "arXiv:2512.02044",
-      "title": "Beyond Confidence: Adaptive and Coherent Decoding for Diffusion Language Models",
-      "source_url": "https://arxiv.org/pdf/2512.02044",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-14T11:20:08+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-30",
@@ -1813,8 +1813,8 @@
     },
     {
       "canonical_id": "arXiv:2404.15159",
-      "title": "MixLoRA: Enhancing Large Language Models Fine-Tuning with LoRA-based Mixture of Experts",
-      "source_url": "https://arxiv.org/pdf/2404.15159",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-14T11:20:09+00:00",
       "return_count": 1,
       "assigned_worker": "scheduled-chat-30",
@@ -1838,8 +1838,8 @@
     },
     {
       "canonical_id": "arXiv:2605.15206",
-      "title": "AgentStop: Terminating Local AI Agents Early to Save Energy in Consumer Devices",
-      "source_url": "https://arxiv.org/pdf/2605.15206",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-14T11:20:10+00:00",
       "return_count": 3,
       "assigned_worker": "scheduled-chat-00",
@@ -1863,8 +1863,8 @@
     },
     {
       "canonical_id": "arXiv:2404.03384",
-      "title": "LongVLM: Efficient Long Video Understanding via Large Language Models",
-      "source_url": "https://arxiv.org/html/2404.03384v3",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-14T11:20:11+00:00",
       "return_count": 1,
       "assigned_worker": "scheduled-chat-45",
@@ -1885,6 +1885,135 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_9be1a8c1002c8191a1714c543a39caf3--2024-2404.03384-longvlm-hierarchical-video-token-merging-research-20261014-0730-scheduled-chat-30-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_9be1a8c1002c8191a1714c543a39caf3--2024-2404.03384-longvlm-hierarchical-video-token-merging-research-20261014-0730-scheduled-chat-30-r01.json",
       "worker_run_key": "20261014-0730-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2601.07832",
+      "title": "MHLA: Restoring Expressivity of Linear Attention via Token-Level Multi-Head",
+      "source_url": "https://proceedings.iclr.cc/paper_files/paper/2026/file/14a812fa4b6bf244d055e37a7cd2f557-Paper-Conference.pdf",
+      "returned_at": "2026-10-14T11:25:23+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2026-2601.07832-mhla-restoring-expressivity-of-linear-attention-via-token-level-multi-he.md と 21 段落 / 4745文字 (100.0%) が完全一致"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 7660,
+        "body_paragraphs": 49,
+        "method_chars": 1597,
+        "method_paragraphs": 10,
+        "evaluation_chars": 2443,
+        "limitation_chars": 855,
+        "insufficiency_flags": []
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_a40d63159fac8191a1bcf3ec675947b7--2026-2601.07832-mhla-token-level-linear-attention-research-20261014-0145-scheduled-chat-45-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_a40d63159fac8191a1bcf3ec675947b7--2026-2601.07832-mhla-token-level-linear-attention-research-20261014-0145-scheduled-chat-45-r01.json",
+      "worker_run_key": "20261014-0145-scheduled-chat-45/r01"
+    },
+    {
+      "canonical_id": "arXiv:2603.17809",
+      "title": "Fine-Grained Post-Training Quantization for Large Vision Language Models with Quantization-Aware Integrated Gradients",
+      "source_url": "https://arxiv.org/html/2603.17809v1",
+      "returned_at": "2026-10-14T11:25:23+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2026-2603.17809-fine-grained-post-training-quantization-for-large-vision-language-models.md と 23 段落 / 5086文字 (100.0%) が完全一致"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5361,
+        "body_paragraphs": 28,
+        "method_chars": 1288,
+        "method_paragraphs": 7,
+        "evaluation_chars": 876,
+        "limitation_chars": 538,
+        "insufficiency_flags": []
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_9ff17a8e3e7881918a0b1c307fdc32fe--2026-2603.17809-qig-token-aware-ptq-vlm-research-20261014-0200-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_9ff17a8e3e7881918a0b1c307fdc32fe--2026-2603.17809-qig-token-aware-ptq-vlm-research-20261014-0200-scheduled-chat-00-r01.json",
+      "worker_run_key": "20261014-0200-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2511.19097",
+      "title": "DeCoRL: Decoupling Reasoning Chains via Parallel Sub-Step Generation and Cascaded Reinforcement for Interpretable and Scalable RLHF",
+      "source_url": "https://arxiv.org/html/2511.19097v1",
+      "returned_at": "2026-10-14T11:25:24+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2025-2511.19097-decorl-decoupling-reasoning-chains-via-parallel-sub-step-generation-and-.md と 17 段落 / 3773文字 (100.0%) が完全一致"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 4765,
+        "body_paragraphs": 24,
+        "method_chars": 1682,
+        "method_paragraphs": 9,
+        "evaluation_chars": 1219,
+        "limitation_chars": 726,
+        "insufficiency_flags": []
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_ac37fc5b472c8191af5b7356c636a061--2025-2511.19097-decorl-parallel-reasoning-research-20261014-0200-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_ac37fc5b472c8191af5b7356c636a061--2025-2511.19097-decorl-parallel-reasoning-research-20261014-0200-scheduled-chat-00-r01.json",
+      "worker_run_key": "20261014-0200-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2605.06320",
+      "title": "Improving the Efficiency of Language Agent Teams with Adaptive Task Graphs",
+      "source_url": "https://arxiv.org/html/2605.06320v1",
+      "returned_at": "2026-10-14T11:25:24+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "長文定型文の再利用を検出: papers/inference/09-kernel-runtime-compilation/2026-2605.06320-improving-the-efficiency-of-language-agent-teams-with-adaptive-task-grap.md と 20 段落 / 4222文字 (100.0%) が完全一致"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5817,
+        "body_paragraphs": 35,
+        "method_chars": 1112,
+        "method_paragraphs": 6,
+        "evaluation_chars": 1794,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_ade12f4c49fc81918f9f32a4dd52dc6a--2026-2605.06320-latte-adaptive-task-graphs-research-20261014-0445-scheduled-chat-45-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_ade12f4c49fc81918f9f32a4dd52dc6a--2026-2605.06320-latte-adaptive-task-graphs-research-20261014-0445-scheduled-chat-45-r01.json",
+      "worker_run_key": "20261014-0445-scheduled-chat-45/r01"
+    },
+    {
+      "canonical_id": "DOI:10.18653/v1/2025.naacl-long.543",
+      "title": "HIGGS: Pushing the Limits of Large Language Model Quantization via the Linearity Theorem",
+      "source_url": "https://aclanthology.org/2025.naacl-long.543.pdf",
+      "returned_at": "2026-10-14T11:25:25+00:00",
+      "return_count": 3,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2025-2411.17525-higgs-pushing-the-limits-of-large-language-model-quantization-via-the-li.md と 19 段落 / 4271文字 (100.0%) が完全一致"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5847,
+        "body_paragraphs": 31,
+        "method_chars": 1991,
+        "method_paragraphs": 11,
+        "evaluation_chars": 1255,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_ae4970e3a4508191bd816a7d1a094fd3--2025-higgs-linearity-quantization-returned-repair-20261013-2200-scheduled-chat-00-r01-v2.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_ae4970e3a4508191bd816a7d1a094fd3--2025-higgs-linearity-quantization-returned-repair-20261013-2200-scheduled-chat-00-r01-v2.json",
+      "worker_run_key": "20261013-2200-scheduled-chat-00/r01"
     }
   ]
 }

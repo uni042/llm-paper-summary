@@ -1,13 +1,12 @@
 {
   "schema_version": 1,
   "artifact_type": "research",
-  "status": "imported",
+  "status": "blocked_quality",
   "source_sha256": "99435ec53fec8e8745ea5ec00e051380f66dda0d00119030fcf1848aa18f7a63",
-  "canonical_id": "arXiv:2511.19097",
-  "paper_path": "papers/inference/99-other-inference-systems/2025-2511.19097-decorl-decoupling-reasoning-chains-via-parallel-sub-step-generation-and-.md",
-  "lineage": "99-other-inference-systems",
-  "audit_status": "PASS",
+  "normalized_source_sha256": null,
   "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_ac37fc5b472c8191af5b7356c636a061--2025-2511.19097-decorl-parallel-reasoning-research-20261014-0200-scheduled-chat-00-r01.md",
+  "canonical_id": "arXiv:2511.19097",
   "worker_completed_at": "2026-10-14T02:08:21+09:00",
   "worker_run_key": "20261014-0200-scheduled-chat-00/r01",
   "quality_metrics": {
@@ -20,5 +19,8 @@
     "limitation_chars": 726,
     "insufficiency_flags": []
   },
-  "processed_at": "2026-10-14T07:23:11+00:00"
+  "failures": [
+    "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2025-2511.19097-decorl-decoupling-reasoning-chains-via-parallel-sub-step-generation-and-.md と 17 段落 / 3773文字 (100.0%) が完全一致"
+  ],
+  "processed_at": "2026-10-14T11:25:24+00:00"
 }

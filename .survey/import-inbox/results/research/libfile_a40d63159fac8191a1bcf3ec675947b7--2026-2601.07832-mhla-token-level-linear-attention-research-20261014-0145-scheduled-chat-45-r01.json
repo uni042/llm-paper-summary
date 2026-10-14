@@ -1,13 +1,12 @@
 {
   "schema_version": 1,
   "artifact_type": "research",
-  "status": "imported",
+  "status": "blocked_quality",
   "source_sha256": "629ffaebe292c6725e18cd3599571ab0b853b6351c408c83f83f392332a0d883",
-  "canonical_id": "arXiv:2601.07832",
-  "paper_path": "papers/inference/99-other-inference-systems/2026-2601.07832-mhla-restoring-expressivity-of-linear-attention-via-token-level-multi-he.md",
-  "lineage": "99-other-inference-systems",
-  "audit_status": "PASS",
+  "normalized_source_sha256": null,
   "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_a40d63159fac8191a1bcf3ec675947b7--2026-2601.07832-mhla-token-level-linear-attention-research-20261014-0145-scheduled-chat-45-r01.md",
+  "canonical_id": "arXiv:2601.07832",
   "worker_completed_at": "2026-10-14T01:53:00+09:00",
   "worker_run_key": "20261014-0145-scheduled-chat-45/r01",
   "quality_metrics": {
@@ -20,5 +19,8 @@
     "limitation_chars": 855,
     "insufficiency_flags": []
   },
-  "processed_at": "2026-10-14T07:22:24+00:00"
+  "failures": [
+    "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2026-2601.07832-mhla-restoring-expressivity-of-linear-attention-via-token-level-multi-he.md と 21 段落 / 4745文字 (100.0%) が完全一致"
+  ],
+  "processed_at": "2026-10-14T11:25:23+00:00"
 }

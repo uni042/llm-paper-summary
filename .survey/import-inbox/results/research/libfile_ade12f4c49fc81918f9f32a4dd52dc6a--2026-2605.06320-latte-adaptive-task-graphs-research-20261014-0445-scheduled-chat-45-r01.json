@@ -1,13 +1,12 @@
 {
   "schema_version": 1,
   "artifact_type": "research",
-  "status": "imported",
+  "status": "blocked_quality",
   "source_sha256": "da240a81c2c5592f11452c4e5fc1b4735cc6f1047ebe8f262e47685de38415e1",
-  "canonical_id": "arXiv:2605.06320",
-  "paper_path": "papers/inference/09-kernel-runtime-compilation/2026-2605.06320-improving-the-efficiency-of-language-agent-teams-with-adaptive-task-grap.md",
-  "lineage": "09-kernel-runtime-compilation",
-  "audit_status": "WARN",
+  "normalized_source_sha256": null,
   "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_ade12f4c49fc81918f9f32a4dd52dc6a--2026-2605.06320-latte-adaptive-task-graphs-research-20261014-0445-scheduled-chat-45-r01.md",
+  "canonical_id": "arXiv:2605.06320",
   "worker_completed_at": "2026-10-14T04:54:59+09:00",
   "worker_run_key": "20261014-0445-scheduled-chat-45/r01",
   "quality_metrics": {
@@ -22,5 +21,8 @@
       "限界説明量 0 < 推奨 120"
     ]
   },
-  "processed_at": "2026-10-14T07:23:58+00:00"
+  "failures": [
+    "長文定型文の再利用を検出: papers/inference/09-kernel-runtime-compilation/2026-2605.06320-improving-the-efficiency-of-language-agent-teams-with-adaptive-task-grap.md と 20 段落 / 4222文字 (100.0%) が完全一致"
+  ],
+  "processed_at": "2026-10-14T11:25:24+00:00"
 }

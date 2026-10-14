@@ -1,13 +1,12 @@
 {
   "schema_version": 1,
   "artifact_type": "research",
-  "status": "imported",
+  "status": "blocked_quality",
   "source_sha256": "f203f82f2a3275741aa453a40a5fdfe71d65c5b3ae318ed5e3a342aee86cc461",
-  "canonical_id": "arXiv:2603.17809",
-  "paper_path": "papers/inference/99-other-inference-systems/2026-2603.17809-fine-grained-post-training-quantization-for-large-vision-language-models.md",
-  "lineage": "99-other-inference-systems",
-  "audit_status": "PASS",
+  "normalized_source_sha256": null,
   "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_9ff17a8e3e7881918a0b1c307fdc32fe--2026-2603.17809-qig-token-aware-ptq-vlm-research-20261014-0200-scheduled-chat-00-r01.md",
+  "canonical_id": "arXiv:2603.17809",
   "worker_completed_at": "2026-10-14T02:06:44+09:00",
   "worker_run_key": "20261014-0200-scheduled-chat-00/r01",
   "quality_metrics": {
@@ -20,5 +19,8 @@
     "limitation_chars": 538,
     "insufficiency_flags": []
   },
-  "processed_at": "2026-10-14T07:21:37+00:00"
+  "failures": [
+    "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2026-2603.17809-fine-grained-post-training-quantization-for-large-vision-language-models.md と 23 段落 / 5086文字 (100.0%) が完全一致"
+  ],
+  "processed_at": "2026-10-14T11:25:23+00:00"
 }
