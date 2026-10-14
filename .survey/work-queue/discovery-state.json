@@ -1,8 +1,8 @@
 {
   "schema_version": 3,
-  "updated_at": "2026-10-14T03:56:57+00:00",
-  "last_run_key": "library-import-fa55a98f07ca",
-  "last_round": "libimp-fa55a98f07ca5c12-pre01",
+  "updated_at": "2026-10-14T04:18:53+00:00",
+  "last_run_key": "library-import-98410c89dd8a",
+  "last_round": "libimp-98410c89dd8ae236-pre01",
   "paper_stock_zero_count": 3,
   "consecutive_empty_rounds": 0,
   "last_empty_round_reason": null,
@@ -10,74 +10,6 @@
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
   "history": [
-    {
-      "round_identity": "precheck:frontier-2dc3d20552047e7e7b31b1a7",
-      "precheck_request_id": "frontier-2dc3d20552047e7e7b31b1a7",
-      "run_key": "scheduled-chat-00-20260925T100045JST-a7d3c1",
-      "round": "frontier-2dc3d20552047e7e7b31b1a7",
-      "axis": "preload-backward-structured-references",
-      "query_summary": null,
-      "provider": "repository_references",
-      "source_url": "repository://structured-references",
-      "citation_direction": "backward",
-      "seed_canonical_id": null,
-      "preload_id": "preload-ec5ef6eaca315183f94c",
-      "candidate_count": 20,
-      "duplicate_filtered_count": 19,
-      "final_duplicate_filtered_count": 0,
-      "accepted_count": 1,
-      "accepted_canonical_ids": [],
-      "duplicate_canonical_ids": [],
-      "next_axis_hint": null,
-      "source_submission": "work-queue/submissions/discovery/frontier-2dc3d20552047e7e7b31b1a7-s1.json",
-      "source_submissions": [
-        "work-queue/submissions/discovery/frontier-2dc3d20552047e7e7b31b1a7-s1.json"
-      ],
-      "round_submission_indices": [
-        1
-      ],
-      "round_submission_count": 1,
-      "round_accounted": true,
-      "novel_candidate_count": 1,
-      "post_final_dedupe_count": 1,
-      "duplicate_ratio": 0.95,
-      "final_duplicate_ratio": 0.0,
-      "round_complete": true
-    },
-    {
-      "round_identity": "precheck:frontier-4894a37f20e344e51ca3a409",
-      "precheck_request_id": "frontier-4894a37f20e344e51ca3a409",
-      "run_key": "scheduled-chat-00-20260925T100045JST-a7d3c1",
-      "round": "frontier-4894a37f20e344e51ca3a409",
-      "axis": "preload-backward-structured-references",
-      "query_summary": null,
-      "provider": "repository_references",
-      "source_url": "repository://structured-references",
-      "citation_direction": "backward",
-      "seed_canonical_id": null,
-      "preload_id": "preload-f54b0987fad6ef395b09",
-      "candidate_count": 20,
-      "duplicate_filtered_count": 19,
-      "final_duplicate_filtered_count": 0,
-      "accepted_count": 1,
-      "accepted_canonical_ids": [],
-      "duplicate_canonical_ids": [],
-      "next_axis_hint": null,
-      "source_submission": "work-queue/submissions/discovery/frontier-4894a37f20e344e51ca3a409-s1.json",
-      "source_submissions": [
-        "work-queue/submissions/discovery/frontier-4894a37f20e344e51ca3a409-s1.json"
-      ],
-      "round_submission_indices": [
-        1
-      ],
-      "round_submission_count": 1,
-      "round_accounted": true,
-      "novel_candidate_count": 1,
-      "post_final_dedupe_count": 1,
-      "duplicate_ratio": 0.95,
-      "final_duplicate_ratio": 0.0,
-      "round_complete": true
-    },
     {
       "round_identity": "precheck:disc-take-scheduled-chat-00-a7d3c1-r10",
       "precheck_request_id": "disc-take-scheduled-chat-00-a7d3c1-r10",
@@ -13545,6 +13477,74 @@
       "duplicate_ratio": 0.0,
       "final_duplicate_ratio": 0.0,
       "round_complete": true
+    },
+    {
+      "round_identity": "precheck:libimp-2b72aa1e26a413c9-pre01",
+      "precheck_request_id": "libimp-2b72aa1e26a413c9-pre01",
+      "run_key": "library-import-2b72aa1e26a4",
+      "round": "libimp-2b72aa1e26a413c9-pre01",
+      "axis": "library-candidate-intake",
+      "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。",
+      "provider": "candidate_id_lookup",
+      "source_url": "identifier://approved-public-apis",
+      "citation_direction": null,
+      "seed_canonical_id": null,
+      "preload_id": null,
+      "candidate_count": 1,
+      "duplicate_filtered_count": 0,
+      "final_duplicate_filtered_count": 0,
+      "accepted_count": 1,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": null,
+      "source_submission": "work-queue/submissions/libimp-2b72aa1e26a413c9-pre01-sub01.json",
+      "source_submissions": [
+        "work-queue/submissions/libimp-2b72aa1e26a413c9-pre01-sub01.json"
+      ],
+      "round_submission_indices": [
+        1
+      ],
+      "round_submission_count": 1,
+      "round_accounted": true,
+      "novel_candidate_count": 1,
+      "post_final_dedupe_count": 1,
+      "duplicate_ratio": 0.0,
+      "final_duplicate_ratio": 0.0,
+      "round_complete": true
+    },
+    {
+      "round_identity": "precheck:libimp-98410c89dd8ae236-pre01",
+      "precheck_request_id": "libimp-98410c89dd8ae236-pre01",
+      "run_key": "library-import-98410c89dd8a",
+      "round": "libimp-98410c89dd8ae236-pre01",
+      "axis": "library-candidate-intake",
+      "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。",
+      "provider": "candidate_id_lookup",
+      "source_url": "identifier://approved-public-apis",
+      "citation_direction": null,
+      "seed_canonical_id": null,
+      "preload_id": null,
+      "candidate_count": 1,
+      "duplicate_filtered_count": 0,
+      "final_duplicate_filtered_count": 0,
+      "accepted_count": 1,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": null,
+      "source_submission": "work-queue/submissions/libimp-98410c89dd8ae236-pre01-sub01.json",
+      "source_submissions": [
+        "work-queue/submissions/libimp-98410c89dd8ae236-pre01-sub01.json"
+      ],
+      "round_submission_indices": [
+        1
+      ],
+      "round_submission_count": 1,
+      "round_accounted": true,
+      "novel_candidate_count": 1,
+      "post_final_dedupe_count": 1,
+      "duplicate_ratio": 0.0,
+      "final_duplicate_ratio": 0.0,
+      "round_complete": true
     }
   ],
   "axes": {
@@ -21916,16 +21916,16 @@
       "next_axis_hint": "今回runで新着、storage/hierarchical memory、MoE、network/runtime、scheduling/kernel、agent/multimodal、speculative/length predictionを横断済み。次回は新着差分とforward/backward citationから再開する"
     },
     "library-candidate-intake": {
-      "last_run_key": "library-import-fa55a98f07ca",
-      "rounds": 350,
-      "candidate_count": 1956,
+      "last_run_key": "library-import-98410c89dd8a",
+      "rounds": 352,
+      "candidate_count": 1958,
       "duplicate_filtered_count": 1145,
-      "novel_candidate_count": 811,
+      "novel_candidate_count": 813,
       "final_duplicate_filtered_count": 5,
-      "post_final_dedupe_count": 806,
-      "accepted_count": 806,
-      "duplicate_ratio": 0.5853783231083844,
-      "final_duplicate_ratio": 0.006165228113440197,
+      "post_final_dedupe_count": 808,
+      "accepted_count": 808,
+      "duplicate_ratio": 0.5847803881511746,
+      "final_duplicate_ratio": 0.006150061500615006,
       "next_axis_hint": null
     },
     "explicit-library-accept": {
