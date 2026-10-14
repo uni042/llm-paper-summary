@@ -2,7 +2,7 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-14T09:47:17+00:00",
+  "updated_at": "2026-10-14T10:06:57+00:00",
   "record_count": 12193,
   "records": {
     "arXiv:2303.08774": {
@@ -170786,9 +170786,9 @@
       "identity_tokens": [
         "arXiv:2605.11722"
       ],
-      "reason": "題名で対象を複合的なテキストから画像への生成制御と明示しており、画像生成の構成条件を推論時に満たすことが主題である。LLMのトークン復号・サービング・GPUメモリ効率を扱う論文とは研究対象が異なるため先行除外する。",
+      "reason": "一次要旨で対象は複数物体・属性・関係を満たす画像生成であり、画像生成器の再サンプリングと編集を述語検査で選ぶ方式と確認した。MLLM呼出削減は画像生成ワークフローの副次指標で、LLMの重み・KV・推論カーネル・サービング基盤の最適化ではない。",
       "first_checked_at": "2026-10-13T21:31:16+00:00",
-      "last_checked_at": "2026-10-13T21:31:16+00:00",
+      "last_checked_at": "2026-10-14T10:06:57+00:00",
       "linked_from": [],
       "title": "EPIC: Efficient Predicate-Guided Inference-Time Control for Compositional Text-to-Image Generation"
     },
