@@ -1,0 +1,24 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261015-0030-scheduled-chat-30/r01/research-relevance-102",
+  "reference_main_sha": "f375646c312fe3f8ac434129f932a14cd1b01698",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.39982",
+      "identity_tokens": ["arxiv:2609.39982", "arxiv:2609.39982v1"],
+      "title": "Mid-Harness: Scaling Actions Between Model and Harness for Terminal Agents",
+      "reason": "Mid-Harnessはターミナル操作エージェントの各行動の前にN件の候補コマンドを生成し、検証器が1件を選んで実行環境へ渡す。TerminalBench-LiteではTMAX-9Bの基準Pass@1 50.00%から、強力なGPT-5.6 Sol検証器・候補8件で68.03%へ改善する。検証器の対比較には8候補で最大28回の呼出しが必要で、推論費用も分析している。ただし主な貢献は行動選択の信頼性とテスト時計算の割当であり、LLMサービング基盤の実行効率・メモリ・GPU資源管理・処理量改善ではない。推論時計算費用の比較はサーベイと接するためborderlineとする。",
+      "source_url": "https://arxiv.org/html/2609.39982v1",
+      "body_check": "research_fulltext_relevance_review: arXiv HTML v1の§1、§2、§3、§4.1-4.4、§5を確認。行動候補生成→検証→単一コマンド実行の経路、listwise/pointwise/pairwiseの検証呼出し回数、Pass@1・推論費用のトレードオフ、GPT-5.6 SolとTMAX-9Bの比較を照合。",
+      "first_checked_at": "2026-10-15T00:32:57+09:00",
+      "last_checked_at": "2026-10-15T00:32:57+09:00",
+      "linked_from": [],
+      "origin": "research_postread_relevance",
+      "worklist_rank": 102
+    }
+  ]
+}
