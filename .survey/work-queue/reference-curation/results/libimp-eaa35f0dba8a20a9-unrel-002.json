@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-eaa35f0dba8a20a9-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2604.02525",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2604.02525",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2604.02525",
+      "SemanticScholar:64060e59f33be4df4b5d7ad6ebb5a62c931b601c",
+      "arXiv:2604.02525"
+    ],
+    "reason": "AdaHOP accelerates low-precision LLM training; the abstract does not establish an inference, serving, or deployment-efficiency contribution.",
+    "first_checked_at": "2026-10-08T20:04:55+00:00",
+    "last_checked_at": "2026-10-14T11:20:26+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md",
+      "papers/inference/07-kv-cache-optimization-compression/2024-2402.02750-kivi.md",
+      "papers/inference/07-kv-cache-optimization-compression/2024-2403.05527-gear-an-efficient-kv-cache-compression-recipe-for-near-lossless-generati.md",
+      "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md",
+      "papers/inference/16-weight-quantization-compression/2023-2306.00978-awq.md",
+      "papers/inference/16-weight-quantization-compression/2023-2307.13304-quip-2-bit-quantization-of-large-language-models-with-guarantees.md",
+      "papers/inference/16-weight-quantization-compression/2024-2410.09426-flatquant-flatness-matters-for-llm-quantization.md",
+      "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md",
+      "papers/inference/99-other-inference-systems/2023-2304.09145-outlier-suppression-accurate-quantization-of-large-language-models-by-eq.md",
+      "papers/inference/99-other-inference-systems/2024-2402.04396-quip-even-better-llm-quantization-with-hadamard-incoherence-and-lattice-.md",
+      "papers/inference/99-other-inference-systems/2024-2404.00456-quarot-outlier-free-4-bit-inference-in-rotated-llms.md",
+      "papers/inference/99-other-inference-systems/2025-2405.16406-spinquant-llm-quantization-with-learned-rotations.md",
+      "papers/inference/99-other-inference-systems/2025-2510.25602-int-v-s-fp-a-comprehensive-study-of-fine-grained-low-bit-quantization-fo.md"
+    ],
+    "title": "AdaHOP: Fast and Accurate Low-Precision Training via Outlier-Pattern-Aware Rotation"
+  },
+  "processed_at": "2026-10-14T11:20:26+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-eaa35f0dba8a",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
