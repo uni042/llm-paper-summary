@@ -1,0 +1,430 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-57",
+  "run_key": "discovery-20261014-main-b526-screen-57-part-02",
+  "reference_main_sha": "b526294f2e17d723d0e29f8cbe65c4ad466f910f",
+  "record_count": 20,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2407.13137",
+      "identity_tokens": [
+        "arXiv:2407.13137"
+      ],
+      "title": "OE-BevSeg: An Object Informed and Environment Aware Multimodal Framework for Bird’s-Eye-View Vehicle Semantic Segmentation",
+      "reason": "OE-BevSeg performs bird’s-eye-view vehicle segmentation from multi-view sensor inputs; its target is autonomous-driving perception, not LLM system efficiency.",
+      "source_url": "https://arxiv.org/abs/2407.13137",
+      "body_check": "abstract_screen_only; body_not_read",
+      "abstract_evidence_excerpt": "Bird’s-eye-view (BEV) semantic segmentation is becoming crucial in autonomous driving systems. It realizes ego-vehicle surrounding environment perception by projecting 2D multi-view images into 3D world space. Recently, BEV segmentation has made notable progress, attributed to better view transformation modules, larger",
+      "abstract_evidence_sha256": "98d8b72f862f52abd87522a9d945c480694b19350b3c06d490a8d5c313b3f445",
+      "abstract_sha256": null,
+      "source_abstract_chars": null,
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md",
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "first_checked_at": "2026-10-14T13:08:11+09:00",
+      "last_checked_at": "2026-10-14T13:08:11+09:00"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2411.01195",
+      "identity_tokens": [
+        "arXiv:2411.01195"
+      ],
+      "title": "Transfer Learning for Finetuning Large Language Models",
+      "reason": "The study concerns transfer learning and parameter-efficient fine-tuning of LLMs; the described contribution is model adaptation during training, not inference or serving efficiency.",
+      "source_url": "https://arxiv.org/abs/2411.01195",
+      "body_check": "abstract_screen_only; body_not_read",
+      "abstract_evidence_excerpt": "As the landscape of large language models expands, efficiently finetuning for specific tasks becomes increasingly crucial. At the same time, the landscape of parameter-efficient finetuning methods rapidly expands. Consequently, practitioners face a multitude of complex choices when searching for an optimal finetuning p",
+      "abstract_evidence_sha256": "4a88d82485e853ad78a1d234a2327cad42574412d9d1ea204e3c77def3741799",
+      "abstract_sha256": null,
+      "source_abstract_chars": null,
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md",
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md"
+      ],
+      "first_checked_at": "2026-10-14T13:08:11+09:00",
+      "last_checked_at": "2026-10-14T13:08:11+09:00"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2501.14194",
+      "identity_tokens": [
+        "arXiv:2501.14194"
+      ],
+      "title": "ENTER: Event Based Interpretable Reasoning for VideoQA",
+      "reason": "ENTER uses event graphs for interpretable video question answering; the abstract emphasizes task reasoning and interpretation rather than runtime or system efficiency.",
+      "source_url": "https://arxiv.org/abs/2501.14194",
+      "body_check": "abstract_screen_only; body_not_read",
+      "abstract_evidence_excerpt": "In this paper, we present ENTER, an interpretable Video Question Answering (VideoQA) system based on event graphs. Event graphs convert videos into graphical representations, where video events form the nodes and event-event relationships (temporal/causal/hierarchical) form the edges. This structured representation off",
+      "abstract_evidence_sha256": "58658df3905e99e8e3ef564135e092873124bb8f1200d0e2363808b7480c0b5d",
+      "abstract_sha256": null,
+      "source_abstract_chars": null,
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.16449-moviechat-from-dense-token-to-sparse-memory-for-long-video-understanding.md",
+        "papers/inference/99-other-inference-systems/2024-2410.17434-longvu-spatiotemporal-adaptive-compression-for-long-video-language-under.md"
+      ],
+      "first_checked_at": "2026-10-14T13:08:11+09:00",
+      "last_checked_at": "2026-10-14T13:08:11+09:00"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2503.24191",
+      "identity_tokens": [
+        "arXiv:2503.24191"
+      ],
+      "title": "When Grammar Guides the Attack: Uncovering Control-Plane Vulnerabilities in LLMs with Structured Output",
+      "reason": "The paper discovers control-plane vulnerabilities in LLM structured outputs; its security evaluation is not an inference-efficiency contribution.",
+      "source_url": "https://arxiv.org/abs/2503.24191",
+      "body_check": "abstract_screen_only; body_not_read",
+      "abstract_evidence_excerpt": "Content Warning: This paper may contain unsafe or harmful content generated by LLMs that may be offensive to readers. Large Language Models (LLMs) increasingly serve as tooling platforms through structured output APIs, but the grammar-guided decoding that powers this feature opens a critical control-plane attack surfac",
+      "abstract_evidence_sha256": "e000ea320a2ba3759ce033c2205ed53e7a749b15cf62f9fec38d75e3c31b136e",
+      "abstract_sha256": null,
+      "source_abstract_chars": null,
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md"
+      ],
+      "first_checked_at": "2026-10-14T13:08:11+09:00",
+      "last_checked_at": "2026-10-14T13:08:11+09:00"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.3390/biom15060764",
+      "identity_tokens": [
+        "DOI:10.3390/biom15060764"
+      ],
+      "title": "Bio-Inspired Mamba for Antibody–Antigen Interaction Prediction",
+      "reason": "MambaAAI predicts antibody-antigen interactions from protein sequences for biomedical discovery; despite using a protein language model and Mamba, it is a domain application rather than LLM serving research.",
+      "source_url": "https://doi.org/10.3390/biom15060764",
+      "body_check": "abstract_screen_only; body_not_read",
+      "abstract_evidence_excerpt": "Antibody lead discovery, crucial for immunotherapy development, requires identifying candidates with potent binding affinities to target antigens. Recent advances in protein language models have opened promising avenues to tackle this challenge by predicting antibody–antigen interactions (AAIs). Despite their appeals, ",
+      "abstract_evidence_sha256": "4830dee9eb42dbf890bcf4f30ca13002b1852678868c6692d7370681104dbbb8",
+      "abstract_sha256": null,
+      "source_abstract_chars": null,
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md",
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "first_checked_at": "2026-10-14T13:08:11+09:00",
+      "last_checked_at": "2026-10-14T13:08:11+09:00"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2502.07072",
+      "identity_tokens": [
+        "arXiv:2502.07072"
+      ],
+      "title": "IRepair: An Intent-Aware Approach to Repair Data-Driven Errors in Large Language Models",
+      "reason": "IRepair repairs data-driven errors in LLM outputs through intent-aware methods; its stated goal is output correctness, not inference cost or system performance.",
+      "source_url": "https://arxiv.org/abs/2502.07072",
+      "body_check": "abstract_screen_only; body_not_read",
+      "abstract_evidence_excerpt": "Not a day goes by without hearing about the impressive feats of large language models (LLMs), and equally, not a day passes without hearing about their challenges. LLMs are notoriously vulnerable to biases in their dataset, leading to issues such as toxicity, harmful responses, and factual inaccuracies. While domain-ad",
+      "abstract_evidence_sha256": "58176d7a277559bbf82be555106735b1809c7b12cbb298ff9b80e1fd99553c9d",
+      "abstract_sha256": null,
+      "source_abstract_chars": null,
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1909.08053-megatron-lm-training-multi-billion-parameter-language-models-using-model.md",
+        "papers/inference/99-other-inference-systems/2022-2203.14680-transformer-feed-forward-layers-build-predictions-by-promoting-concepts-.md"
+      ],
+      "first_checked_at": "2026-10-14T13:08:11+09:00",
+      "last_checked_at": "2026-10-14T13:08:11+09:00"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2507.13384",
+      "identity_tokens": [
+        "arXiv:2507.13384"
+      ],
+      "title": "Flatten Wisely: How Patch Order Shapes Mamba-Powered Vision for MRI Segmentation",
+      "reason": "Flatten Wisely studies patch order for Mamba-based MRI segmentation; its contribution is medical image segmentation rather than LLM inference systems.",
+      "source_url": "https://arxiv.org/abs/2507.13384",
+      "body_check": "abstract_screen_only; body_not_read",
+      "abstract_evidence_excerpt": "Vision Mamba models promise transformer-level performance at linear computational cost, but their reliance on serializing 2D images into 1D sequences introduces a critical, yet overlooked, design choice: the patch scan order. In medical imaging, where modalities like brain MRI contain strong anatomical priors, this cho",
+      "abstract_evidence_sha256": "c09be1dd3e79d2644bd373d1e8f3d980ab05f21d8d8e405f76a0f991b3fcf105",
+      "abstract_sha256": null,
+      "source_abstract_chars": null,
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md",
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "first_checked_at": "2026-10-14T13:08:11+09:00",
+      "last_checked_at": "2026-10-14T13:08:11+09:00"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2508.05305",
+      "identity_tokens": [
+        "arXiv:2508.05305"
+      ],
+      "title": "SONAR-LLM: Autoregressive Transformer that Thinks in Sentence Embeddings and Speaks in Tokens",
+      "reason": "SONAR-LLM autoregresses over sentence embeddings before emitting tokens, a representation change that could affect generation cost, but the abstract does not quantify or establish an inference-efficiency gain.",
+      "source_url": "https://arxiv.org/abs/2508.05305",
+      "body_check": "abstract_screen_only; body_not_read",
+      "abstract_evidence_excerpt": "The recently proposed Large Concept Model (LCM) generates text by predicting a sequence of sentence-level embeddings and training with either mean-squared error or diffusion objectives. We present SONAR-LLM, a decoder-only transformer that\"thinks\"in the same continuous SONAR embedding space, yet is supervised through t",
+      "abstract_evidence_sha256": "6fc46859667514df914f857db3b4e6c32ac74e1f2bb9886ddcc580e31e0398ad",
+      "abstract_sha256": null,
+      "source_abstract_chars": null,
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md",
+        "papers/inference/99-other-inference-systems/2025-2501.00663-titans-learning-to-memorize-at-test-time.md"
+      ],
+      "first_checked_at": "2026-10-14T13:08:11+09:00",
+      "last_checked_at": "2026-10-14T13:08:11+09:00"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2510.09332",
+      "identity_tokens": [
+        "arXiv:2510.09332"
+      ],
+      "title": "FLRC: Fine-grained Low-Rank Compressor for Efficient LLM Inference",
+      "reason": "FLRC explicitly compresses LLM weights with fine-grained low-rank factors to enable deployment on resource-constrained hardware, directly addressing inference memory and efficiency.",
+      "source_url": "https://arxiv.org/abs/2510.09332",
+      "body_check": "abstract_screen_only; body_not_read",
+      "abstract_evidence_excerpt": "Although large language models (LLM) have achieved remarkable performance, their enormous parameter counts hinder deployment on resource-constrained hardware. Low-rank compression can reduce both memory usage and computational demand, but applying a uniform compression ratio across all layers often leads to significant",
+      "abstract_evidence_sha256": "175b51746e2e2c6657f97aa47c53fff0de7fde59f392ba762a565b6e941defad",
+      "abstract_sha256": null,
+      "source_abstract_chars": null,
+      "linked_from": [
+        "papers/inference/08-edge-on-device-llm-systems/2022-2207.00112-language-model-compression-with-weighted-low-rank-factorization.md",
+        "papers/inference/99-other-inference-systems/2025-2405.16406-spinquant-llm-quantization-with-learned-rotations.md"
+      ],
+      "first_checked_at": "2026-10-14T13:08:11+09:00",
+      "last_checked_at": "2026-10-14T13:08:11+09:00"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1016/j.patter.2025.101231",
+      "identity_tokens": [
+        "DOI:10.1016/j.patter.2025.101231"
+      ],
+      "title": "Dimensionality and dynamics for next-generation artificial neural networks",
+      "reason": "The perspective discusses dimensionality and dynamics in neural networks broadly, without a concrete mechanism or evaluation for LLM inference-system efficiency.",
+      "source_url": "https://doi.org/10.1016/j.patter.2025.101231",
+      "body_check": "abstract_screen_only; body_not_read",
+      "abstract_evidence_excerpt": "Summary The recent awarding of the Nobel Prize in Physics to Geoffrey E. Hinton and John J. Hopfield highlights their profound impact on artificial neural networks. In this perspective, we explore how their foundational insights can drive the advancement of next-generation artificial intelligence (AI) models. We propos",
+      "abstract_evidence_sha256": "a0fc1cd61b313fb51bf70620ed7a7bceaa7b60238634d2fef846361110188bcd",
+      "abstract_sha256": null,
+      "source_abstract_chars": null,
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md",
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "first_checked_at": "2026-10-14T13:08:11+09:00",
+      "last_checked_at": "2026-10-14T13:08:11+09:00"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2010.08012",
+      "identity_tokens": [
+        "arXiv:2010.08012"
+      ],
+      "title": "Neural Function Modules with Sparse Arguments: A Dynamic Approach to Integrating Information across Layers",
+      "reason": "Neural Function Modules use sparse arguments to integrate information across layers in general neural networks; the abstract does not tie this to LLM serving or measured inference efficiency.",
+      "source_url": "https://arxiv.org/abs/2010.08012",
+      "body_check": "abstract_screen_only; body_not_read",
+      "abstract_evidence_excerpt": "Feed-forward neural networks consist of a sequence of layers, in which each layer performs some processing on the information from the previous layer. A downside to this approach is that each layer (or module, as multiple modules can operate in parallel) is tasked with processing the entire hidden state, rather than a ",
+      "abstract_evidence_sha256": "4886d5681562fdb4e2e0e9ffdd4423a44de86ddc1085ab7fb2920011649f296d",
+      "abstract_sha256": null,
+      "source_abstract_chars": null,
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2017-1701.06538-outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts.md",
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md"
+      ],
+      "first_checked_at": "2026-10-14T13:08:11+09:00",
+      "last_checked_at": "2026-10-14T13:08:11+09:00"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2411.01074",
+      "identity_tokens": [
+        "arXiv:2411.01074"
+      ],
+      "title": "DNN Modularization via Activation-Driven Training",
+      "reason": "Activation-driven DNN modularization targets adaptable model training and reduced retraining effort; it does not establish an LLM inference or serving optimization.",
+      "source_url": "https://arxiv.org/abs/2411.01074",
+      "body_check": "abstract_screen_only; body_not_read",
+      "abstract_evidence_excerpt": "Deep Neural Networks (DNNs) tend to accrue technical debt and suffer from significant retraining costs when adapting to evolving requirements. Modularizing DNNs offers the promise of improving their reusability. Previous work has proposed techniques to decompose DNN models into modules both during and after training. H",
+      "abstract_evidence_sha256": "ac513986cce8f586881a11739c4e6ebcaa7ba6c38bdc8cd4a9c3796d1d00f6c9",
+      "abstract_sha256": null,
+      "source_abstract_chars": null,
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2017-1701.06538-outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts.md",
+        "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md"
+      ],
+      "first_checked_at": "2026-10-14T13:08:11+09:00",
+      "last_checked_at": "2026-10-14T13:08:11+09:00"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2506.05121",
+      "identity_tokens": [
+        "arXiv:2506.05121"
+      ],
+      "title": "The NTNU System at the S&I Challenge 2025 SLA Open Track",
+      "reason": "The NTNU system addresses spoken-language assessment in an SLA challenge; its evaluated task is speech proficiency prediction rather than inference-system efficiency.",
+      "source_url": "https://arxiv.org/abs/2506.05121",
+      "body_check": "abstract_screen_only; body_not_read",
+      "abstract_evidence_excerpt": "A recent line of research on spoken language assessment (SLA) employs neural models such as BERT and wav2vec 2.0 (W2V) to evaluate speaking proficiency across linguistic and acoustic modalities. Although both models effectively capture features relevant to oral competence, each exhibits modality-specific limitations. B",
+      "abstract_evidence_sha256": "8d41151104ecefe3610a012f59a19074274177bcd1f554979d5e29c417fd3cab",
+      "abstract_sha256": null,
+      "source_abstract_chars": null,
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13245-gqa.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+      ],
+      "first_checked_at": "2026-10-14T13:08:11+09:00",
+      "last_checked_at": "2026-10-14T13:08:11+09:00"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2508.18760",
+      "identity_tokens": [
+        "arXiv:2508.18760"
+      ],
+      "title": "Answering the Unanswerable Is to Err Knowingly: Analyzing and Mitigating Abstention Failures in Large Reasoning Models",
+      "reason": "The paper studies abstention failures and mitigation in large reasoning models, focusing on answerability and safety behavior rather than serving efficiency.",
+      "source_url": "https://arxiv.org/abs/2508.18760",
+      "body_check": "abstract_screen_only; body_not_read",
+      "abstract_evidence_excerpt": "Large reasoning models (LRMs) have shown remarkable progress on complex reasoning tasks. However, some questions posed to LRMs are inherently unanswerable, such as math problems lacking sufficient conditions. We find that LRMs continually fail to provide appropriate abstentions when confronted with these unanswerable q",
+      "abstract_evidence_sha256": "28ea6a9f8d336f0369bb3b1721ebca6a67ec192e1ca4afabb8ef54b553a39c9a",
+      "abstract_sha256": null,
+      "source_abstract_chars": null,
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2025-2504.15895-dynamic-early-exit-in-reasoning-models.md",
+        "papers/inference/19-inference-evaluation-benchmarking/2024-2401.10480-escape-sky-high-cost-early-stopping-self-consistency-for-multi-step-reas.md"
+      ],
+      "first_checked_at": "2026-10-14T13:08:11+09:00",
+      "last_checked_at": "2026-10-14T13:08:11+09:00"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2510.06940",
+      "identity_tokens": [
+        "arXiv:2510.06940"
+      ],
+      "title": "Revisiting Node Affinity Prediction in Temporal Graphs",
+      "reason": "Node affinity prediction is a temporal-graph learning task for network/recommender applications; no LLM inference-system contribution is described.",
+      "source_url": "https://arxiv.org/abs/2510.06940",
+      "body_check": "abstract_screen_only; body_not_read",
+      "abstract_evidence_excerpt": "Node affinity prediction is a common task that is widely used in temporal graph learning with applications in social and financial networks, recommender systems, and more. Recent works have addressed this task by adapting state-of-the-art dynamic link property prediction models to node affinity prediction. However, sim",
+      "abstract_evidence_sha256": "2cd85b7058d880b460abbc7c43c7f249c90d95dbd8f9511ce921ffff91f86b3b",
+      "abstract_sha256": null,
+      "source_abstract_chars": null,
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md",
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "first_checked_at": "2026-10-14T13:08:11+09:00",
+      "last_checked_at": "2026-10-14T13:08:11+09:00"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2605.27358",
+      "identity_tokens": [
+        "arXiv:2605.27358"
+      ],
+      "title": "MobileMoE: Scaling On-Device Mixture of Experts",
+      "reason": "MobileMoE investigates scaling sparse-expert language models for on-device deployment, directly engaging the memory and compute constraints of edge inference.",
+      "source_url": "https://arxiv.org/abs/2605.27358",
+      "body_check": "abstract_screen_only; body_not_read",
+      "abstract_evidence_excerpt": "Mixture-of-Experts (MoE) has become the de facto architecture for hundred-billion-parameter language models, yet its advantages at sub-billion scales for on-device deployment remain largely unexplored. To close this gap, we present MobileMoE, a family of on-device MoE language models with sub-billion active parameters ",
+      "abstract_evidence_sha256": "87b009e4823e8c2fe73b58394f4f4f1aae6f93f03a985e67d0f78129867df844",
+      "abstract_sha256": null,
+      "source_abstract_chars": null,
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2202.09368-expert-choice-routing.md",
+        "papers/inference/99-other-inference-systems/2025-2505.00949-llama-nemotron-efficient-reasoning-models.md"
+      ],
+      "first_checked_at": "2026-10-14T13:08:11+09:00",
+      "last_checked_at": "2026-10-14T13:08:11+09:00"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1109/TVLSI.2025.3604705",
+      "identity_tokens": [
+        "DOI:10.1109/TVLSI.2025.3604705"
+      ],
+      "title": "MoE-Sched: Enabling Efficient FPGA Deployment of Mixture-of-Experts Vision Transformers via Coordinated Scheduling",
+      "reason": "MoE-Sched coordinates scheduling, module reuse, chip mapping, and quantization for efficient FPGA deployment of MoE vision transformers; it is a concrete transformer inference accelerator contribution, though demonstrated on vision models.",
+      "source_url": "https://doi.org/10.1109/TVLSI.2025.3604705",
+      "body_check": "abstract_screen_only; body_not_read",
+      "abstract_evidence_excerpt": "Compared to traditional Vision Transformers (ViT), Mixture-of-Experts ViTs (MoE-ViTs) are introduced to scale model size without a proportional increase in computational complexity, making them a new research focus. Given the high performance and reconfigurability, field-programmable gate array (FPGA)-based accelerator",
+      "abstract_evidence_sha256": "037b4a81cd6cccfdd24a116dabcd3729c93721bf75f12b980fd4b05e9578afba",
+      "abstract_sha256": null,
+      "source_abstract_chars": null,
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2024-2405.18832-monde-mixture-of-experts-neural-network-inference-with-near-data-processing.md",
+        "papers/inference/13-sparse-attention/2021-0aaecf5ce8bb-sanger-a-co-design-framework-for-enabling-sparse-attention-using-reconfi.md"
+      ],
+      "first_checked_at": "2026-10-14T13:08:11+09:00",
+      "last_checked_at": "2026-10-14T13:08:11+09:00"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2408.15915",
+      "identity_tokens": [
+        "arXiv:2408.15915"
+      ],
+      "title": "Leveraging Open Knowledge for Advancing Task Expertise in Large Language Models",
+      "reason": "The paper incorporates open knowledge to improve task expertise in LLMs; its stated contribution is capability adaptation rather than inference-time system efficiency.",
+      "source_url": "https://arxiv.org/abs/2408.15915",
+      "body_check": "abstract_screen_only; body_not_read",
+      "abstract_evidence_excerpt": "The cultivation of expertise for large language models (LLMs) to solve tasks of specific areas often requires special-purpose tuning with calibrated behaviors on the expected stable outputs. To avoid huge cost brought by manual preparation of instruction datasets and training resources up to hundreds of hours, the expl",
+      "abstract_evidence_sha256": "ad7c484c9acf441541de7a0d99be6433d4a232f5040f2463a0e385a40c9e6ea8",
+      "abstract_sha256": null,
+      "source_abstract_chars": null,
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2023-2306.03745-smear-soft-merging-adaptive-routing.md",
+        "papers/inference/99-other-inference-systems/2023-2311.08692-routing-to-the-expert-efficient-reward-guided-ensemble-of-large-language.md"
+      ],
+      "first_checked_at": "2026-10-14T13:08:11+09:00",
+      "last_checked_at": "2026-10-14T13:08:11+09:00"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2501.06220",
+      "identity_tokens": [
+        "arXiv:2501.06220"
+      ],
+      "title": "Powerful Design of Small Vision Transformer on CIFAR10",
+      "reason": "This work designs a small Vision Transformer for CIFAR-10 and targets image classification performance; it does not establish an LLM inference-system contribution.",
+      "source_url": "https://arxiv.org/abs/2501.06220",
+      "body_check": "abstract_screen_only; body_not_read",
+      "abstract_evidence_excerpt": "Vision Transformers (ViTs) have demonstrated remarkable success on large-scale datasets, but their performance on smaller datasets often falls short of convolutional neural networks (CNNs). This paper explores the design and optimization of Tiny ViTs for small datasets, using CIFAR-10 as a benchmark. We systematically ",
+      "abstract_evidence_sha256": "1358f4cfae51b54798c84930d13a3b474802263b1395313ae74bf99903f5f991",
+      "abstract_sha256": null,
+      "source_abstract_chars": null,
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md",
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md"
+      ],
+      "first_checked_at": "2026-10-14T13:08:11+09:00",
+      "last_checked_at": "2026-10-14T13:08:11+09:00"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.00388",
+      "identity_tokens": [
+        "arXiv:2602.00388"
+      ],
+      "title": "Safer by Diffusion, Broken by Context: Diffusion LLM's Safety Blessing and Its Failure Mode",
+      "reason": "The paper analyzes safety behavior and contextual failure modes of diffusion LLMs; it does not focus on serving efficiency despite discussing diffusion generation.",
+      "source_url": "https://arxiv.org/abs/2602.00388",
+      "body_check": "abstract_screen_only; body_not_read",
+      "abstract_evidence_excerpt": "Diffusion large language models (D-LLMs) offer an alternative to autoregressive LLMs (AR-LLMs) and have demonstrated advantages in generation efficiency. Beyond the utility benefits, we argue that D-LLMs exhibit a previously underexplored safety blessing: their diffusion-style generation confers intrinsic robustness ag",
+      "abstract_evidence_sha256": "6d58c40f69f5f1fe744b0fde940be592293db83936fbb0983d7cc54d764cf84d",
+      "abstract_sha256": null,
+      "source_abstract_chars": null,
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2508.15487-dream-7b-diffusion-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2026-2406.03736-your-absorbing-discrete-diffusion-secretly-models-the-conditional-distri.md"
+      ],
+      "first_checked_at": "2026-10-14T13:08:11+09:00",
+      "last_checked_at": "2026-10-14T13:08:11+09:00"
+    }
+  ]
+}
