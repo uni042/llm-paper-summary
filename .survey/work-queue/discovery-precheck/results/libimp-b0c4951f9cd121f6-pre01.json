@@ -1,0 +1,1242 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-b0c4951f9cd121f6-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-b0c4951f9cd1",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "DOI:10.1007/s40747-025-02200-4",
+    "arXiv:2502.14882",
+    "arXiv:2504.14872",
+    "arXiv:2506.13472",
+    "arXiv:2508.14302",
+    "arXiv:2601.08743",
+    "arXiv:2601.13563",
+    "arXiv:2602.20662",
+    "arXiv:2603.14371",
+    "arXiv:2603.14785",
+    "arXiv:2605.11733",
+    "arXiv:2605.11744",
+    "arXiv:2606.07571"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 13,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "d83fe50e3fc98ad82eab51b270a69a804b1ebb33",
+  "raw_search_result_count": 13,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 13,
+  "provider_progress": {
+    "requested_count": 13,
+    "status_counts": {
+      "allowed": 13,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-14T08:33:10.828072+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "DOI:10.1007/s40747-025-02200-4",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2502.14882",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2504.14872",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2506.13472",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2508.14302",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2601.08743",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2601.13563",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2602.20662",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2603.14371",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2603.14785",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2605.11733",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2605.11744",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2606.07571",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "OxyGen: Unified KV Cache Management for VLA Inference under Multi-Task Parallelism",
+      "source_url": "https://arxiv.org/abs/2603.14371",
+      "year": 2026,
+      "published": "2026-03-15",
+      "venue": null,
+      "citation_count": 7,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Embodied AI agents increasingly require parallel execution of multiple tasks, such as manipulation, conversation, and memory construction, from shared observations under distinct time constraints. Recent Mixture-of-Transformers (MoT) Vision-Language-Action Models (VLAs) architecturally support such heterogeneous outputs, yet existing inference systems fail to achieve efficient multi-task parallelism for on-device deployment because of redundant computation and resource contention. We identify isolated KV cache management as the root cause. To address this, we propose unified KV cache management, an inference design that treats the KV cache as a first-class shared resource across tasks and over time. This abstraction enables two key optimizations: cross-task KV sharing eliminates redundant prefill of shared observations, while cross-frame continuous batching decouples variable-length language decoding from fixed-rate action generation across control cycles. We implement this design for $\\pi_{0.5}$, a popular MoT VLA, and evaluate it on both NVIDIA GeForce RTX 4090 and Jetson AGX Thor, two representative platforms for on-device VLA inference. OxyGen achieves up to 3.7$\\times$ speedup over isolated execution, delivering over 200 tokens/s language throughput and 70 Hz action frequency simultaneously without degrading action quality, and we further validate the gains on a real humanoid robot with on-board Jetson AGX Thor.",
+      "identifiers": [
+        "SemanticScholar:fde28458f6730453478732459d079d81ffee8f55"
+      ],
+      "semantic_scholar_id": "fde28458f6730453478732459d079d81ffee8f55",
+      "canonical_id": "arXiv:2603.14371",
+      "arxiv_id": "2603.14371",
+      "authors": [
+        "Xiangyu Li",
+        "Huaizhi Tang",
+        "Xin Ding",
+        "Weijun Wang",
+        "Ting Cao",
+        "Yun-Xin Liu"
+      ],
+      "priority": 107,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 7,
+        "citation_count": 7,
+        "total": 107,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 213,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "TableCache: Primary Foreign Key Guided KV Cache Precomputation for Low Latency Text-to-SQL",
+      "source_url": "https://arxiv.org/abs/2601.08743",
+      "year": 2026,
+      "published": "2026-01-13",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "In Text-to-SQL tasks, existing LLM-based methods often include extensive database schemas in prompts, leading to long context lengths and increased prefilling latency. While user queries typically focus on recurrent table sets-offering an opportunity for KV cache sharing across queries-current inference engines, such as SGLang and vLLM, generate redundant prefix cache copies when processing user queries with varying table orders. To address this inefficiency, we propose precomputing table representations as KV caches offline and querying the required ones online. A key aspect of our approach is the computation of table caches while preserving primary foreign key relationships between tables. Additionally, we construct a Table Trie structure to facilitate efficient KV cache lookups during inference. To enhance cache performance, we introduce a cache management system with a query reranking strategy to improve cache hit rates and a computation loading pipeline for parallelizing model inference and cache loading. Experimental results show that our proposed TableCache achieves up to a 3.62x speedup in Time to First Token (TTFT) with negligible performance degradation.",
+      "identifiers": [
+        "SemanticScholar:0cbc0c4f18f65f4346f642500ca82d63ad32d36a"
+      ],
+      "semantic_scholar_id": "0cbc0c4f18f65f4346f642500ca82d63ad32d36a",
+      "canonical_id": "arXiv:2601.08743",
+      "arxiv_id": "2601.08743",
+      "doi": "10.48550/arXiv.2601.08743",
+      "authors": [
+        "Jinbo Su",
+        "Yuxuan Hu",
+        "Cuiping Li",
+        "Hong Chen",
+        "Jia Li",
+        "Lintao Ma",
+        "Jing Zhang"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 274,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "TOM: A Ternary Read-only Memory Accelerator for LLM-powered Edge Intelligence",
+      "source_url": "https://arxiv.org/abs/2602.20662",
+      "year": 2026,
+      "published": "2026-02-24",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The deployment of Large Language Models (LLMs) for real-time intelligence on edge devices is rapidly growing. However, conventional hardware architectures face a fundamental memory wall challenge, where limited on-device memory capacity and bandwidth severely constrain the size of deployable models and their inference speed, while also limiting on-device adaptation. To address this challenge, we propose TOM, a hybrid ROM-SRAM accelerator co-designed with ternary quantization, which balances extreme density with on-device tunability. TOM exploits the synergy between ternary quantization and ROM to achieve extreme memory density and bandwidth, while preserving flexibility through a hybrid ROM-SRAM architecture designed for QLoRA-based tunability. Specifically, we introduce: (1) a sparsity-aware ROM architecture that synthesizes ternary weights as standard-cell logic, eliminating area overhead from zero-valued bits; (2) a distributed processing architecture that co-locates high-density ROM banks with flexible SRAM-based QLoRA adapters and compute units; and (3) a workload-aware dynamic power gating scheme that exploits the logic-based nature of ROM to power down inactive banks, minimizing dynamic energy consumption. TOM achieves an inference throughput of 3,306 TPS using BitNet-2B model, demonstrating its effectiveness in delivering real-time, energy-efficient edge intelligence.",
+      "identifiers": [
+        "SemanticScholar:ac5b30786312436da2857a3c8e65717da6c31014"
+      ],
+      "semantic_scholar_id": "ac5b30786312436da2857a3c8e65717da6c31014",
+      "canonical_id": "arXiv:2602.20662",
+      "arxiv_id": "2602.20662",
+      "doi": "10.48550/arXiv.2602.20662",
+      "authors": [
+        "Hong-Yi Guan",
+        "Yijia Zhang",
+        "Wenqiang Wang",
+        "Yi-Zhao Gao",
+        "Shijie Cao",
+        "Chen Zhang",
+        "Ningyi Xu"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 232,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Multi-tier dynamic storage of KV cache for LLM inference under resource-constrained conditions",
+      "source_url": "https://doi.org/10.1007/s40747-025-02200-4",
+      "year": 2026,
+      "published": "2026-01-27",
+      "venue": "Complex & Intelligent Systems",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The scale of large language models (LLMs) continues to grow in response to increasing demands for intelligent applications. When these large models and their intermediate results, such as key-value (KV) caches, are deployed in resource-constrained environments like edge inference scenarios, they impose substantial pressure on computational and storage resources, resulting in significant performance degradation and storage inefficiency. To address the problem, this paper proposes a novel Multi-Tier Dynamic Storage (MTDS) framework that offloads KV caches from limited GPU VRAM to a hierarchical storage system, effectively reducing both memory and computation overhead on the GPU. By introducing a selective KV cache reuse mechanism, MTDS achieves notable improvements in inference performance. We further develop a dynamic storage access control scheme and an adaptive hierarchical eviction strategy to address the challenges of bandwidth contention and capacity overhead introduced by multi-tier storage under limited resources. These techniques significantly alleviate performance bottlenecks and reduce resource waste in edge inference servers. Experimental results demonstrate that MTDS improves LLM inference efficiency, reduces first-token latency by more than 25%, and increases multi-tier active storage cache hit rate by up to 20%.",
+      "identifiers": [
+        "SemanticScholar:81b53b049ebf7a30178baa81ff33b40ff51b87bb"
+      ],
+      "semantic_scholar_id": "81b53b049ebf7a30178baa81ff33b40ff51b87bb",
+      "doi": "10.1007/s40747-025-02200-4",
+      "canonical_id": "DOI:10.1007/s40747-025-02200-4",
+      "authors": [
+        "Junliang Wang",
+        "Jiaqi Hu",
+        "Qin Cao",
+        "Yuanrui Zhu",
+        "Xiancheng Lin"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 260,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "SkipOPU: An FPGA-based Overlay Processor for Large Language Models with Dynamically Allocated Computation",
+      "source_url": "https://arxiv.org/abs/2603.14785",
+      "year": 2026,
+      "published": "2026-03-16",
+      "venue": "ACM Transactions on Reconfigurable Technology and Systems",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLMs), particularly decoder-only models with auto-regressive decoding, have achieved remarkable performance across a wide range of tasks, but their inference efficiency remains a critical bottleneck due to rapidly growing parameters and memory-bound generation phases. Recent advances in dynamic computation allocation address this challenge by exploiting the highly uneven contributions of different tokens and layers, enabling selective execution that significantly reduces redundant computation while preserving model accuracy. However, existing hardware platforms and accelerators are primarily optimized for uniform, static execution, limiting their ability to efficiently support such dynamic inference patterns. In this work, we propose SkipOPU, an FPGA-based overlay processor that dynamically allocates computation across tokens and layers with high flexibility through a lightweight routing mechanism. First, we decouple reduction operations from element-wise computation in nonlinear modules and perform reductions incrementally. This design enables both stages to be fused with adjacent linear operations (router or matrix multiplication), effectively hiding nonlinear latency within the pipeline. Second, motivated by asymmetric sensitivity to numerical precision between activation and weight, we design a processing element (PE) array that efficiently supports float–fixed hybrid execution. A novel DSP overpacking technique is introduced to maximize hardware utilization while minimizing resource overhead. Finally, we develop a proactive on-chip KV (Key-Value) history buffer that exploits cross-layer KV invariance of pruned tokens, eliminating irregular HBM (High Bandwidth Memory) accesses during decoding and supplementing off-chip bandwidth through high-locality on-chip reuse. Experimental results demonstrate that SkipOPU on an AMD U280 FPGA outperforms GPU and other FPGA-based accelerators by 1.31 × −2.55× in bandwidth efficiency for LLMs inference with dynamic computation allocation. Moreover, cross-layer KV reuse reduces up to 25.4% KV storage overhead across varying sequence lengths.",
+      "identifiers": [
+        "SemanticScholar:3d8300303e0330ab7736c63249b9fcd3ccbfa7d4"
+      ],
+      "semantic_scholar_id": "3d8300303e0330ab7736c63249b9fcd3ccbfa7d4",
+      "canonical_id": "arXiv:2603.14785",
+      "arxiv_id": "2603.14785",
+      "doi": "10.1145/3837086",
+      "authors": [
+        "Zicheng He",
+        "An-Hao Zhao",
+        "Xiao-Yu Shen",
+        "Chengru Wu",
+        "He Lei"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 212,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Position: LLM Inference Should Be Evaluated as Energy-to-Token Production",
+      "source_url": "https://arxiv.org/abs/2605.11733",
+      "year": 2026,
+      "published": "2026-05-12",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "LLM inference is still evaluated mainly as a model or software problem: accuracy, latency, throughput, and hardware utilization. This is incomplete. At deployment scale, the relevant output is a quality-conditioned token produced under joint constraints from effective compute, delivered data-center power, cooling capacity, PUE, and utilization. We argue that the ML community should treat inference as \\emph{energy-to-token production}. We formalize this view with a dimensionally consistent Token Production Function in which token rate is bounded by both compute-per-token and energy-per-token ceilings. Listed API prices vary by over an order of magnitude across providers, but we use price dispersion only as directional motivation, not as causal evidence of marginal cost. The core physical question is instead: under fixed quality and service targets, when does the binding constraint move from theoretical peak compute toward delivered power, cooling, and operational efficiency? Under this framing, system optimizations -- latent KV-cache compression, sparse or heavily compressed attention, quantization, routing, and difficulty-adaptive reasoning -- are not merely local engineering tricks. They are energy-to-token levers because they reduce FLOPs/token, joules/token, memory traffic, or utilization losses under fixed $(q^{*},s^{*})$. We therefore call for inference papers and benchmarks to report Joules/token, active binding constraint, PUE-adjusted delivered power, and utilization-adjusted token output alongside accuracy and latency.",
+      "identifiers": [
+        "SemanticScholar:ade6d0a5498d2a4b130c230b3318e71b4dd622de"
+      ],
+      "semantic_scholar_id": "ade6d0a5498d2a4b130c230b3318e71b4dd622de",
+      "canonical_id": "arXiv:2605.11733",
+      "arxiv_id": "2605.11733",
+      "doi": "10.48550/arXiv.2605.11733",
+      "authors": [
+        "Xiang Liu",
+        "Shimiao Yuan",
+        "Zhen-Heng Tang",
+        "Peijie Dong",
+        "Kaiyong Zhao",
+        "Qian Wang",
+        "Bo Li",
+        "Xiaowen Chu"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 155,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Training-Inference Consistent Segmented Execution for Long-Context LLMs",
+      "source_url": "https://arxiv.org/abs/2605.11744",
+      "year": 2026,
+      "published": "2026-05-12",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Transformer-based large language models face severe scalability challenges in long-context generation due to the computational and memory costs of full-context attention. Under practical computation and memory constraints, many inference-efficient long-context methods improve efficiency by adopting bounded-context or segment-level execution only during inference, while continuing to train models under full-context attention, resulting in a mismatch between training and inference execution and state-transition semantics. Based on this insight, we propose a training-inference consistent segment-level generation framework, in which training and inference follow the same segment-level forward execution semantics. During training, consistency with inference is enforced by restricting gradient propagation to KV states carried over from the immediately preceding segment, while permitting head-specific access to past KV states during the forward pass without involving them in gradient propagation. Across long-context benchmarks, our approach achieves performance comparable to full-context attention, while achieving competitive latency-memory trade-offs against strong inference-efficient baselines, and substantially improving scalability at very long context lengths (e.g., approximately 6x lower peak prefill memory at 128K compared to full-context attention with FlashAttention).",
+      "identifiers": [
+        "SemanticScholar:d1987f656a5b92a844115a88aed6f7aa20174250"
+      ],
+      "semantic_scholar_id": "d1987f656a5b92a844115a88aed6f7aa20174250",
+      "canonical_id": "arXiv:2605.11744",
+      "arxiv_id": "2605.11744",
+      "doi": "10.48550/arXiv.2605.11744",
+      "authors": [
+        "Xian-Peng Shang",
+        "Jiang Li",
+        "Zehua Duo",
+        "Qi Cai",
+        "Xiang-Dong Su"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 155,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Enabling KV Caching of Shared Prefix for Diffusion Language Models",
+      "source_url": "https://arxiv.org/abs/2606.07571",
+      "year": 2026,
+      "published": "2026-05-26",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Key-value (KV) caching for shared prefixes is essential for high-throughput large language model (LLM) serving, but it faces critical challenges in emerging diffusion language models (DLMs). In DLMs, bidirectional attention means that updating any token dynamically alters the entire context and its corresponding KVs. Thus, existing caching techniques developed for LLMs, which assume that KVs remain invariant once computed, corrupt the shared prefix KVs. Our experiments show that applying these techniques to DLMs causes model accuracy to collapse to near zero. To unlock high-throughput DLM serving, we propose bidirectional prefix caching, BiCache, the first KV caching technique for shared prefixes in DLMs. BiCache is designed based on key observations from our comprehensive analysis: shared prefix KVs remain stable and reusable in shallow layers, while the depth of shallow layers depends on the fraction of shared prefix tokens in each request. Thus, BiCache dynamically identifies a safe layer depth for reusing shared prefix KVs and eliminates redundant computation. Evaluations demonstrate that BiCache significantly improves serving throughput by 36.3%-98.3% compared to existing techniques without accuracy collapse (only 0-1.8% difference).",
+      "identifiers": [
+        "SemanticScholar:4b944e9ad42e2d26f50a078d5df6a6c551f63dc7"
+      ],
+      "semantic_scholar_id": "4b944e9ad42e2d26f50a078d5df6a6c551f63dc7",
+      "canonical_id": "arXiv:2606.07571",
+      "arxiv_id": "2606.07571",
+      "doi": "10.48550/arXiv.2606.07571",
+      "authors": [
+        "Younghun Go",
+        "Jaehoon Han",
+        "Changyong Shin",
+        "Chuk Yoo",
+        "Gyeongsik Yang"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 141,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "ButterflyMoE: Compression-Scalable Ternary Experts via Structured Butterfly Orbits",
+      "source_url": "https://arxiv.org/abs/2601.13563",
+      "year": 2026,
+      "published": "2026-01-20",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "In current Mixture of Experts (MoE) architectures, linear memory scaling is present, the memory grows as the number of experts increases. $N$ independent expert weight matrices require $\\mathcal{O}(N \\cdot d^2)$ memory which exceeds the memory budget of edge devices. Current compression methods like quantization, pruning, and low-rank factorization reduce constant factors, but the scaling bottleneck is still unresolved. We introduce ButterflyMoE, a method which treats experts not as independent matrices but as geometric reorientations of a shared quantized substrate. Diversity amongst the experts arises from viewing different angles of the shared capacity and not from redundant storage. Learned rotations are applied to a shared ternary prototype. With this, each expert yields $\\mathcal{O}(d^2 + N \\cdot d \\log d)$ memory-reducing per-expert cost from $\\mathcal{O}(d^2)$ to $\\mathcal{O}(d \\log d)$. The key insight is that training these rotations with quantization reduces activation outliers and stabilizes extreme low-bit training where other static methods collapse. Across language modeling benchmarks, ButterflyMoE achieves 80$\\times$ memory reduction at 8 experts with a highly favorable memory-accuracy tradeoff.At this 80x compression ButterflyMoE outperforms an equal memory dense baseline, showing that orbital parameterization extracts fundamentally more utility per byte. When scaled up to 256 experts, ButterflyMoE asymptotically compresses the memory by 150 $\\times$. ButterflyMoE reduces the constant factor of linear scaling with compression ratio growing with the expert count.",
+      "identifiers": [
+        "SemanticScholar:1a2d29ef7c3ccd434b6aed3c5b4c6de473fa08c7"
+      ],
+      "semantic_scholar_id": "1a2d29ef7c3ccd434b6aed3c5b4c6de473fa08c7",
+      "canonical_id": "arXiv:2601.13563",
+      "arxiv_id": "2601.13563",
+      "authors": [
+        "Aryan Karmore"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 267,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "CalibQuant: 1-Bit KV Cache Quantization for Multimodal LLMs",
+      "source_url": "https://arxiv.org/abs/2502.14882",
+      "year": 2025,
+      "published": "2025-02-15",
+      "venue": null,
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Multimodal Large Language Models (MLLMs) have demonstrated remarkable performance across diverse applications. However, their computational overhead during deployment remains a critical bottleneck. While Key-Value (KV) caching effectively trades memory for computation to enhance inference efficiency, the growing memory footprint from extensive KV caches significantly reduces throughput and restricts prolonged deployment on memory-constrained GPU devices. To address this challenge, we propose CalibQuant, a simple yet highly effective visual quantization strategy that drastically reduces both memory and computational overhead. Specifically, CalibQuant introduces an extreme 1-bit quantization scheme, complemented by novel post-scaling and calibration techniques tailored to the intrinsic patterns of KV caches, thereby ensuring high efficiency without compromising model performance. Leveraging Triton for runtime optimization, we achieve a 10x throughput increase on InternVL models. Our method is designed to be plug-and-play, seamlessly integrating with various existing MLLMs without requiring architectural changes. Extensive experiments confirm that our approach significantly reduces memory usage while maintaining computational efficiency and preserving multimodal capabilities. Codes are available at https://github.com/insuhan/calibquant.",
+      "identifiers": [
+        "SemanticScholar:bf7b5d053c6ffc6f7e403f5beb054eb4c5f09006"
+      ],
+      "semantic_scholar_id": "bf7b5d053c6ffc6f7e403f5beb054eb4c5f09006",
+      "canonical_id": "arXiv:2502.14882",
+      "arxiv_id": "2502.14882",
+      "authors": [
+        "Insu Han",
+        "Ze-Liang Zhang",
+        "Zhiyuan Wang",
+        "Yifan Zhu",
+        "Susan Liang",
+        "Jia-Ni Liu",
+        "Haiting Lin",
+        "Mingjie Zhao",
+        "Chen-Liang Xu",
+        "Kun Wan",
+        "Wentian Zhao"
+      ],
+      "priority": 4,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 4,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 606,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Efficient Function Orchestration for Large Language Models",
+      "source_url": "https://arxiv.org/abs/2504.14872",
+      "year": 2025,
+      "published": "2025-04-21",
+      "venue": "IEEE Transactions on Software Engineering",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Function calling is a fundamental capability of today’s large language models, but sequential function calling posed efficiency problems. Recent studies have proposed to request function calls with parallelism support in order to alleviate this issue. However, they either delegate the concurrent function calls to users for execution which are conversely executed sequentially, or overlook the relations among various function calls, rending limited efficiency. This paper introduces <monospace>LLMOrch</monospace>, an advanced framework for automated, parallel function calling in large language models. The key principle behind <monospace>LLMOrch</monospace> is to identify an available processor to execute a function call while preventing any single processor from becoming overburdened. To this end, <monospace>LLMOrch</monospace> models the data relations (i.e., definition-use (def-use) dependencies among different function calls and coordinates their executions by their contro l relations (i.e., mutual-exclusion) as well as the working status of the underlying processors. When comparing with state-of-the-art techniques, <monospace>LLMOrch</monospace> demonstrated comparable efficiency improvements in orchestrating I/O-intensive functions, while significantly outperforming (2<inline-formula><tex-math notation=\"LaTeX\">$\\times$</tex-math><alternatives><mml:math><mml:mo>×</mml:mo></mml:math><graphic position=\"float\" orientation=\"portrait\" xlink:href=\"wang-ieq1-3619112.gif\"/></alternatives></inline-formula>) them with compute-intensive functions. <monospace>LLMOrch</monospace>’s performance even showed a linear correlation to the number of allocated processors. We believe that these results highlight the potential of <monospace>LLMOrch</monospace> as an efficient solution for parallel function orchestration in the context of large language models.",
+      "identifiers": [
+        "SemanticScholar:7c9e3f8149ece9f8726a5ddcb52b041c16233d05"
+      ],
+      "semantic_scholar_id": "7c9e3f8149ece9f8726a5ddcb52b041c16233d05",
+      "canonical_id": "arXiv:2504.14872",
+      "arxiv_id": "2504.14872",
+      "doi": "10.1109/TSE.2025.3619112",
+      "authors": [
+        "Xiao-Xia Liu",
+        "Peng Di",
+        "Cong Li",
+        "Jun Sun",
+        "Jingyi Wang"
+      ],
+      "priority": 2,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 2,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 541,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "ROSAQ: Rotation-based Saliency-Aware Weight Quantization for Efficiently Compressing Large Language Models",
+      "source_url": "https://arxiv.org/abs/2506.13472",
+      "year": 2025,
+      "published": "2025-06-16",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Quantization has been widely studied as an effective technique for reducing the memory requirement of large language models (LLMs), potentially improving the latency time as well. Utilizing the characteristic of rotational invariance of transformer, we propose the rotation-based saliency-aware weight quantization (ROSAQ), which identifies salient channels in the projection feature space, not in the original feature space, where the projected\"principal\"dimensions are naturally considered as\"salient\"features. The proposed ROSAQ consists of 1) PCA-based projection, which first performs principal component analysis (PCA) on a calibration set and transforms via the PCA projection, 2) Salient channel dentification, which selects dimensions corresponding to the K-largest eigenvalues as salient channels, and 3) Saliency-aware quantization with mixed-precision, which uses FP16 for salient dimensions and INT3/4 for other dimensions. Experiment results show that ROSAQ shows improvements over the baseline saliency-aware quantization on the original feature space and other existing quantization methods. With kernel fusion, ROSAQ presents about 2.3x speed up over FP16 implementation in generating 256 tokens with a batch size of 64.",
+      "identifiers": [
+        "SemanticScholar:54a5112217c774cfdec12c60ddaff0e63e40e9b7"
+      ],
+      "semantic_scholar_id": "54a5112217c774cfdec12c60ddaff0e63e40e9b7",
+      "canonical_id": "arXiv:2506.13472",
+      "arxiv_id": "2506.13472",
+      "doi": "10.48550/arXiv.2506.13472",
+      "authors": [
+        "Junho Yoon",
+        "G. Lee",
+        "Donghyeon Jeon",
+        "Inho Kang",
+        "Seung-Hoon Na"
+      ],
+      "priority": 2,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 2,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 485,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "GLASS: Global-Local Aggregation for Inference-time Sparsification of LLMs",
+      "source_url": "https://arxiv.org/abs/2508.14302",
+      "year": 2025,
+      "published": "2025-08-19",
+      "venue": null,
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Inference-time sparsification is a promising path to deploy large language models (LLMs) on resource-constrained devices, yet existing training-free methods typically estimate feedforward network (FFN) neuron importance from the input prompt alone. We show this prompt-only signal is often unreliable, especially for short prompts and long-form decoding, leading to inaccurate masks and degraded generation fidelity. We propose GLASS, a plug-and-play, training-free framework that stabilizes dynamic FFN pruning by aggregating two complementary views of neuron criticality: local prompt-specific activations and a global model-intrinsic prior. GLASS fuses global and local signals via rank aggregation, yielding robust critical-neuron selection even when the prompt is short. We interpret GLASS as the maximum-a-posteriori consensus ranking under a permutation-based probabilistic model, providing a principled foundation for its weighted rank-aggregation rule. We apply GLASS to a diverse set of open-source LLMs, and show that it yields substantial improvements over prior training-free baselines in the challenging short-prompt, long-generation scenarios, achieving up to 45.10% lower perplexity and 25.73% lower KL divergence, while delivering significant on-device decoding speedup.",
+      "identifiers": [
+        "SemanticScholar:22a460a5c3c773d65f4669f6c6daa0e88205787f"
+      ],
+      "semantic_scholar_id": "22a460a5c3c773d65f4669f6c6daa0e88205787f",
+      "canonical_id": "arXiv:2508.14302",
+      "arxiv_id": "2508.14302",
+      "authors": [
+        "Amirmohsen Sattarifard",
+        "Sepehr Lavasani",
+        "Kunlin Zhang",
+        "Amirhossein Rajabpour",
+        "Han-Lin Xu",
+        "Fengyu Sun",
+        "Negar Hassanpour",
+        "Chao Gao"
+      ],
+      "priority": 1,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 1,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 421,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2603.14371",
+      "identity_tokens": [
+        "id:SemanticScholar:fde28458f6730453478732459d079d81ffee8f55",
+        "id:arXiv:2603.14371",
+        "title:oxygen unified kv cache management for vla inference under multitask parallelism",
+        "url:https://arxiv.org/abs/2603.14371"
+      ],
+      "record": {
+        "title": "OxyGen: Unified KV Cache Management for VLA Inference under Multi-Task Parallelism",
+        "source_url": "https://arxiv.org/abs/2603.14371",
+        "year": 2026,
+        "published": "2026-03-15",
+        "venue": null,
+        "citation_count": 7,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Embodied AI agents increasingly require parallel execution of multiple tasks, such as manipulation, conversation, and memory construction, from shared observations under distinct time constraints. Recent Mixture-of-Transformers (MoT) Vision-Language-Action Models (VLAs) architecturally support such heterogeneous outputs, yet existing inference systems fail to achieve efficient multi-task parallelism for on-device deployment because of redundant computation and resource contention. We identify isolated KV cache management as the root cause. To address this, we propose unified KV cache management, an inference design that treats the KV cache as a first-class shared resource across tasks and over time. This abstraction enables two key optimizations: cross-task KV sharing eliminates redundant prefill of shared observations, while cross-frame continuous batching decouples variable-length language decoding from fixed-rate action generation across control cycles. We implement this design for $\\pi_{0.5}$, a popular MoT VLA, and evaluate it on both NVIDIA GeForce RTX 4090 and Jetson AGX Thor, two representative platforms for on-device VLA inference. OxyGen achieves up to 3.7$\\times$ speedup over isolated execution, delivering over 200 tokens/s language throughput and 70 Hz action frequency simultaneously without degrading action quality, and we further validate the gains on a real humanoid robot with on-board Jetson AGX Thor.",
+        "identifiers": [
+          "SemanticScholar:fde28458f6730453478732459d079d81ffee8f55"
+        ],
+        "semantic_scholar_id": "fde28458f6730453478732459d079d81ffee8f55",
+        "canonical_id": "arXiv:2603.14371",
+        "arxiv_id": "2603.14371",
+        "authors": [
+          "Xiangyu Li",
+          "Huaizhi Tang",
+          "Xin Ding",
+          "Weijun Wang",
+          "Ting Cao",
+          "Yun-Xin Liu"
+        ],
+        "priority": 107,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 7,
+          "citation_count": 7,
+          "total": 107,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 213,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2601.08743",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2601.08743",
+        "id:SemanticScholar:0cbc0c4f18f65f4346f642500ca82d63ad32d36a",
+        "id:arXiv:2601.08743",
+        "title:tablecache primary foreign key guided kv cache precomputation for low latency texttosql",
+        "url:https://arxiv.org/abs/2601.08743"
+      ],
+      "record": {
+        "title": "TableCache: Primary Foreign Key Guided KV Cache Precomputation for Low Latency Text-to-SQL",
+        "source_url": "https://arxiv.org/abs/2601.08743",
+        "year": 2026,
+        "published": "2026-01-13",
+        "venue": "arXiv.org",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "In Text-to-SQL tasks, existing LLM-based methods often include extensive database schemas in prompts, leading to long context lengths and increased prefilling latency. While user queries typically focus on recurrent table sets-offering an opportunity for KV cache sharing across queries-current inference engines, such as SGLang and vLLM, generate redundant prefix cache copies when processing user queries with varying table orders. To address this inefficiency, we propose precomputing table representations as KV caches offline and querying the required ones online. A key aspect of our approach is the computation of table caches while preserving primary foreign key relationships between tables. Additionally, we construct a Table Trie structure to facilitate efficient KV cache lookups during inference. To enhance cache performance, we introduce a cache management system with a query reranking strategy to improve cache hit rates and a computation loading pipeline for parallelizing model inference and cache loading. Experimental results show that our proposed TableCache achieves up to a 3.62x speedup in Time to First Token (TTFT) with negligible performance degradation.",
+        "identifiers": [
+          "SemanticScholar:0cbc0c4f18f65f4346f642500ca82d63ad32d36a"
+        ],
+        "semantic_scholar_id": "0cbc0c4f18f65f4346f642500ca82d63ad32d36a",
+        "canonical_id": "arXiv:2601.08743",
+        "arxiv_id": "2601.08743",
+        "doi": "10.48550/arXiv.2601.08743",
+        "authors": [
+          "Jinbo Su",
+          "Yuxuan Hu",
+          "Cuiping Li",
+          "Hong Chen",
+          "Jia Li",
+          "Lintao Ma",
+          "Jing Zhang"
+        ],
+        "priority": 102,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 102,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 274,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2602.20662",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2602.20662",
+        "id:SemanticScholar:ac5b30786312436da2857a3c8e65717da6c31014",
+        "id:arXiv:2602.20662",
+        "title:tom a ternary readonly memory accelerator for llmpowered edge intelligence",
+        "url:https://arxiv.org/abs/2602.20662"
+      ],
+      "record": {
+        "title": "TOM: A Ternary Read-only Memory Accelerator for LLM-powered Edge Intelligence",
+        "source_url": "https://arxiv.org/abs/2602.20662",
+        "year": 2026,
+        "published": "2026-02-24",
+        "venue": "arXiv.org",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The deployment of Large Language Models (LLMs) for real-time intelligence on edge devices is rapidly growing. However, conventional hardware architectures face a fundamental memory wall challenge, where limited on-device memory capacity and bandwidth severely constrain the size of deployable models and their inference speed, while also limiting on-device adaptation. To address this challenge, we propose TOM, a hybrid ROM-SRAM accelerator co-designed with ternary quantization, which balances extreme density with on-device tunability. TOM exploits the synergy between ternary quantization and ROM to achieve extreme memory density and bandwidth, while preserving flexibility through a hybrid ROM-SRAM architecture designed for QLoRA-based tunability. Specifically, we introduce: (1) a sparsity-aware ROM architecture that synthesizes ternary weights as standard-cell logic, eliminating area overhead from zero-valued bits; (2) a distributed processing architecture that co-locates high-density ROM banks with flexible SRAM-based QLoRA adapters and compute units; and (3) a workload-aware dynamic power gating scheme that exploits the logic-based nature of ROM to power down inactive banks, minimizing dynamic energy consumption. TOM achieves an inference throughput of 3,306 TPS using BitNet-2B model, demonstrating its effectiveness in delivering real-time, energy-efficient edge intelligence.",
+        "identifiers": [
+          "SemanticScholar:ac5b30786312436da2857a3c8e65717da6c31014"
+        ],
+        "semantic_scholar_id": "ac5b30786312436da2857a3c8e65717da6c31014",
+        "canonical_id": "arXiv:2602.20662",
+        "arxiv_id": "2602.20662",
+        "doi": "10.48550/arXiv.2602.20662",
+        "authors": [
+          "Hong-Yi Guan",
+          "Yijia Zhang",
+          "Wenqiang Wang",
+          "Yi-Zhao Gao",
+          "Shijie Cao",
+          "Chen Zhang",
+          "Ningyi Xu"
+        ],
+        "priority": 102,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 102,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 232,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1007/s40747-025-02200-4",
+      "identity_tokens": [
+        "id:DOI:10.1007/s40747-025-02200-4",
+        "id:SemanticScholar:81b53b049ebf7a30178baa81ff33b40ff51b87bb",
+        "title:multitier dynamic storage of kv cache for llm inference under resourceconstrained conditions",
+        "url:https://doi.org/10.1007/s40747-025-02200-4"
+      ],
+      "record": {
+        "title": "Multi-tier dynamic storage of KV cache for LLM inference under resource-constrained conditions",
+        "source_url": "https://doi.org/10.1007/s40747-025-02200-4",
+        "year": 2026,
+        "published": "2026-01-27",
+        "venue": "Complex & Intelligent Systems",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The scale of large language models (LLMs) continues to grow in response to increasing demands for intelligent applications. When these large models and their intermediate results, such as key-value (KV) caches, are deployed in resource-constrained environments like edge inference scenarios, they impose substantial pressure on computational and storage resources, resulting in significant performance degradation and storage inefficiency. To address the problem, this paper proposes a novel Multi-Tier Dynamic Storage (MTDS) framework that offloads KV caches from limited GPU VRAM to a hierarchical storage system, effectively reducing both memory and computation overhead on the GPU. By introducing a selective KV cache reuse mechanism, MTDS achieves notable improvements in inference performance. We further develop a dynamic storage access control scheme and an adaptive hierarchical eviction strategy to address the challenges of bandwidth contention and capacity overhead introduced by multi-tier storage under limited resources. These techniques significantly alleviate performance bottlenecks and reduce resource waste in edge inference servers. Experimental results demonstrate that MTDS improves LLM inference efficiency, reduces first-token latency by more than 25%, and increases multi-tier active storage cache hit rate by up to 20%.",
+        "identifiers": [
+          "SemanticScholar:81b53b049ebf7a30178baa81ff33b40ff51b87bb"
+        ],
+        "semantic_scholar_id": "81b53b049ebf7a30178baa81ff33b40ff51b87bb",
+        "doi": "10.1007/s40747-025-02200-4",
+        "canonical_id": "DOI:10.1007/s40747-025-02200-4",
+        "authors": [
+          "Junliang Wang",
+          "Jiaqi Hu",
+          "Qin Cao",
+          "Yuanrui Zhu",
+          "Xiancheng Lin"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 260,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2603.14785",
+      "identity_tokens": [
+        "id:DOI:10.1145/3837086",
+        "id:SemanticScholar:3d8300303e0330ab7736c63249b9fcd3ccbfa7d4",
+        "id:arXiv:2603.14785",
+        "title:skipopu an fpgabased overlay processor for large language models with dynamically allocated computation",
+        "url:https://arxiv.org/abs/2603.14785"
+      ],
+      "record": {
+        "title": "SkipOPU: An FPGA-based Overlay Processor for Large Language Models with Dynamically Allocated Computation",
+        "source_url": "https://arxiv.org/abs/2603.14785",
+        "year": 2026,
+        "published": "2026-03-16",
+        "venue": "ACM Transactions on Reconfigurable Technology and Systems",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large language models (LLMs), particularly decoder-only models with auto-regressive decoding, have achieved remarkable performance across a wide range of tasks, but their inference efficiency remains a critical bottleneck due to rapidly growing parameters and memory-bound generation phases. Recent advances in dynamic computation allocation address this challenge by exploiting the highly uneven contributions of different tokens and layers, enabling selective execution that significantly reduces redundant computation while preserving model accuracy. However, existing hardware platforms and accelerators are primarily optimized for uniform, static execution, limiting their ability to efficiently support such dynamic inference patterns. In this work, we propose SkipOPU, an FPGA-based overlay processor that dynamically allocates computation across tokens and layers with high flexibility through a lightweight routing mechanism. First, we decouple reduction operations from element-wise computation in nonlinear modules and perform reductions incrementally. This design enables both stages to be fused with adjacent linear operations (router or matrix multiplication), effectively hiding nonlinear latency within the pipeline. Second, motivated by asymmetric sensitivity to numerical precision between activation and weight, we design a processing element (PE) array that efficiently supports float–fixed hybrid execution. A novel DSP overpacking technique is introduced to maximize hardware utilization while minimizing resource overhead. Finally, we develop a proactive on-chip KV (Key-Value) history buffer that exploits cross-layer KV invariance of pruned tokens, eliminating irregular HBM (High Bandwidth Memory) accesses during decoding and supplementing off-chip bandwidth through high-locality on-chip reuse. Experimental results demonstrate that SkipOPU on an AMD U280 FPGA outperforms GPU and other FPGA-based accelerators by 1.31 × −2.55× in bandwidth efficiency for LLMs inference with dynamic computation allocation. Moreover, cross-layer KV reuse reduces up to 25.4% KV storage overhead across varying sequence lengths.",
+        "identifiers": [
+          "SemanticScholar:3d8300303e0330ab7736c63249b9fcd3ccbfa7d4"
+        ],
+        "semantic_scholar_id": "3d8300303e0330ab7736c63249b9fcd3ccbfa7d4",
+        "canonical_id": "arXiv:2603.14785",
+        "arxiv_id": "2603.14785",
+        "doi": "10.1145/3837086",
+        "authors": [
+          "Zicheng He",
+          "An-Hao Zhao",
+          "Xiao-Yu Shen",
+          "Chengru Wu",
+          "He Lei"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 212,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.11733",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2605.11733",
+        "id:SemanticScholar:ade6d0a5498d2a4b130c230b3318e71b4dd622de",
+        "id:arXiv:2605.11733",
+        "title:position llm inference should be evaluated as energytotoken production",
+        "url:https://arxiv.org/abs/2605.11733"
+      ],
+      "record": {
+        "title": "Position: LLM Inference Should Be Evaluated as Energy-to-Token Production",
+        "source_url": "https://arxiv.org/abs/2605.11733",
+        "year": 2026,
+        "published": "2026-05-12",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "LLM inference is still evaluated mainly as a model or software problem: accuracy, latency, throughput, and hardware utilization. This is incomplete. At deployment scale, the relevant output is a quality-conditioned token produced under joint constraints from effective compute, delivered data-center power, cooling capacity, PUE, and utilization. We argue that the ML community should treat inference as \\emph{energy-to-token production}. We formalize this view with a dimensionally consistent Token Production Function in which token rate is bounded by both compute-per-token and energy-per-token ceilings. Listed API prices vary by over an order of magnitude across providers, but we use price dispersion only as directional motivation, not as causal evidence of marginal cost. The core physical question is instead: under fixed quality and service targets, when does the binding constraint move from theoretical peak compute toward delivered power, cooling, and operational efficiency? Under this framing, system optimizations -- latent KV-cache compression, sparse or heavily compressed attention, quantization, routing, and difficulty-adaptive reasoning -- are not merely local engineering tricks. They are energy-to-token levers because they reduce FLOPs/token, joules/token, memory traffic, or utilization losses under fixed $(q^{*},s^{*})$. We therefore call for inference papers and benchmarks to report Joules/token, active binding constraint, PUE-adjusted delivered power, and utilization-adjusted token output alongside accuracy and latency.",
+        "identifiers": [
+          "SemanticScholar:ade6d0a5498d2a4b130c230b3318e71b4dd622de"
+        ],
+        "semantic_scholar_id": "ade6d0a5498d2a4b130c230b3318e71b4dd622de",
+        "canonical_id": "arXiv:2605.11733",
+        "arxiv_id": "2605.11733",
+        "doi": "10.48550/arXiv.2605.11733",
+        "authors": [
+          "Xiang Liu",
+          "Shimiao Yuan",
+          "Zhen-Heng Tang",
+          "Peijie Dong",
+          "Kaiyong Zhao",
+          "Qian Wang",
+          "Bo Li",
+          "Xiaowen Chu"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 155,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.11744",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2605.11744",
+        "id:SemanticScholar:d1987f656a5b92a844115a88aed6f7aa20174250",
+        "id:arXiv:2605.11744",
+        "title:traininginference consistent segmented execution for longcontext llms",
+        "url:https://arxiv.org/abs/2605.11744"
+      ],
+      "record": {
+        "title": "Training-Inference Consistent Segmented Execution for Long-Context LLMs",
+        "source_url": "https://arxiv.org/abs/2605.11744",
+        "year": 2026,
+        "published": "2026-05-12",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Transformer-based large language models face severe scalability challenges in long-context generation due to the computational and memory costs of full-context attention. Under practical computation and memory constraints, many inference-efficient long-context methods improve efficiency by adopting bounded-context or segment-level execution only during inference, while continuing to train models under full-context attention, resulting in a mismatch between training and inference execution and state-transition semantics. Based on this insight, we propose a training-inference consistent segment-level generation framework, in which training and inference follow the same segment-level forward execution semantics. During training, consistency with inference is enforced by restricting gradient propagation to KV states carried over from the immediately preceding segment, while permitting head-specific access to past KV states during the forward pass without involving them in gradient propagation. Across long-context benchmarks, our approach achieves performance comparable to full-context attention, while achieving competitive latency-memory trade-offs against strong inference-efficient baselines, and substantially improving scalability at very long context lengths (e.g., approximately 6x lower peak prefill memory at 128K compared to full-context attention with FlashAttention).",
+        "identifiers": [
+          "SemanticScholar:d1987f656a5b92a844115a88aed6f7aa20174250"
+        ],
+        "semantic_scholar_id": "d1987f656a5b92a844115a88aed6f7aa20174250",
+        "canonical_id": "arXiv:2605.11744",
+        "arxiv_id": "2605.11744",
+        "doi": "10.48550/arXiv.2605.11744",
+        "authors": [
+          "Xian-Peng Shang",
+          "Jiang Li",
+          "Zehua Duo",
+          "Qi Cai",
+          "Xiang-Dong Su"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 155,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2606.07571",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2606.07571",
+        "id:SemanticScholar:4b944e9ad42e2d26f50a078d5df6a6c551f63dc7",
+        "id:arXiv:2606.07571",
+        "title:enabling kv caching of shared prefix for diffusion language models",
+        "url:https://arxiv.org/abs/2606.07571"
+      ],
+      "record": {
+        "title": "Enabling KV Caching of Shared Prefix for Diffusion Language Models",
+        "source_url": "https://arxiv.org/abs/2606.07571",
+        "year": 2026,
+        "published": "2026-05-26",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Key-value (KV) caching for shared prefixes is essential for high-throughput large language model (LLM) serving, but it faces critical challenges in emerging diffusion language models (DLMs). In DLMs, bidirectional attention means that updating any token dynamically alters the entire context and its corresponding KVs. Thus, existing caching techniques developed for LLMs, which assume that KVs remain invariant once computed, corrupt the shared prefix KVs. Our experiments show that applying these techniques to DLMs causes model accuracy to collapse to near zero. To unlock high-throughput DLM serving, we propose bidirectional prefix caching, BiCache, the first KV caching technique for shared prefixes in DLMs. BiCache is designed based on key observations from our comprehensive analysis: shared prefix KVs remain stable and reusable in shallow layers, while the depth of shallow layers depends on the fraction of shared prefix tokens in each request. Thus, BiCache dynamically identifies a safe layer depth for reusing shared prefix KVs and eliminates redundant computation. Evaluations demonstrate that BiCache significantly improves serving throughput by 36.3%-98.3% compared to existing techniques without accuracy collapse (only 0-1.8% difference).",
+        "identifiers": [
+          "SemanticScholar:4b944e9ad42e2d26f50a078d5df6a6c551f63dc7"
+        ],
+        "semantic_scholar_id": "4b944e9ad42e2d26f50a078d5df6a6c551f63dc7",
+        "canonical_id": "arXiv:2606.07571",
+        "arxiv_id": "2606.07571",
+        "doi": "10.48550/arXiv.2606.07571",
+        "authors": [
+          "Younghun Go",
+          "Jaehoon Han",
+          "Changyong Shin",
+          "Chuk Yoo",
+          "Gyeongsik Yang"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 141,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2601.13563",
+      "identity_tokens": [
+        "id:SemanticScholar:1a2d29ef7c3ccd434b6aed3c5b4c6de473fa08c7",
+        "id:arXiv:2601.13563",
+        "title:butterflymoe compressionscalable ternary experts via structured butterfly orbits",
+        "url:https://arxiv.org/abs/2601.13563"
+      ],
+      "record": {
+        "title": "ButterflyMoE: Compression-Scalable Ternary Experts via Structured Butterfly Orbits",
+        "source_url": "https://arxiv.org/abs/2601.13563",
+        "year": 2026,
+        "published": "2026-01-20",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "In current Mixture of Experts (MoE) architectures, linear memory scaling is present, the memory grows as the number of experts increases. $N$ independent expert weight matrices require $\\mathcal{O}(N \\cdot d^2)$ memory which exceeds the memory budget of edge devices. Current compression methods like quantization, pruning, and low-rank factorization reduce constant factors, but the scaling bottleneck is still unresolved. We introduce ButterflyMoE, a method which treats experts not as independent matrices but as geometric reorientations of a shared quantized substrate. Diversity amongst the experts arises from viewing different angles of the shared capacity and not from redundant storage. Learned rotations are applied to a shared ternary prototype. With this, each expert yields $\\mathcal{O}(d^2 + N \\cdot d \\log d)$ memory-reducing per-expert cost from $\\mathcal{O}(d^2)$ to $\\mathcal{O}(d \\log d)$. The key insight is that training these rotations with quantization reduces activation outliers and stabilizes extreme low-bit training where other static methods collapse. Across language modeling benchmarks, ButterflyMoE achieves 80$\\times$ memory reduction at 8 experts with a highly favorable memory-accuracy tradeoff.At this 80x compression ButterflyMoE outperforms an equal memory dense baseline, showing that orbital parameterization extracts fundamentally more utility per byte. When scaled up to 256 experts, ButterflyMoE asymptotically compresses the memory by 150 $\\times$. ButterflyMoE reduces the constant factor of linear scaling with compression ratio growing with the expert count.",
+        "identifiers": [
+          "SemanticScholar:1a2d29ef7c3ccd434b6aed3c5b4c6de473fa08c7"
+        ],
+        "semantic_scholar_id": "1a2d29ef7c3ccd434b6aed3c5b4c6de473fa08c7",
+        "canonical_id": "arXiv:2601.13563",
+        "arxiv_id": "2601.13563",
+        "authors": [
+          "Aryan Karmore"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 267,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2502.14882",
+      "identity_tokens": [
+        "id:SemanticScholar:bf7b5d053c6ffc6f7e403f5beb054eb4c5f09006",
+        "id:arXiv:2502.14882",
+        "title:calibquant 1bit kv cache quantization for multimodal llms",
+        "url:https://arxiv.org/abs/2502.14882"
+      ],
+      "record": {
+        "title": "CalibQuant: 1-Bit KV Cache Quantization for Multimodal LLMs",
+        "source_url": "https://arxiv.org/abs/2502.14882",
+        "year": 2025,
+        "published": "2025-02-15",
+        "venue": null,
+        "citation_count": 4,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Multimodal Large Language Models (MLLMs) have demonstrated remarkable performance across diverse applications. However, their computational overhead during deployment remains a critical bottleneck. While Key-Value (KV) caching effectively trades memory for computation to enhance inference efficiency, the growing memory footprint from extensive KV caches significantly reduces throughput and restricts prolonged deployment on memory-constrained GPU devices. To address this challenge, we propose CalibQuant, a simple yet highly effective visual quantization strategy that drastically reduces both memory and computational overhead. Specifically, CalibQuant introduces an extreme 1-bit quantization scheme, complemented by novel post-scaling and calibration techniques tailored to the intrinsic patterns of KV caches, thereby ensuring high efficiency without compromising model performance. Leveraging Triton for runtime optimization, we achieve a 10x throughput increase on InternVL models. Our method is designed to be plug-and-play, seamlessly integrating with various existing MLLMs without requiring architectural changes. Extensive experiments confirm that our approach significantly reduces memory usage while maintaining computational efficiency and preserving multimodal capabilities. Codes are available at https://github.com/insuhan/calibquant.",
+        "identifiers": [
+          "SemanticScholar:bf7b5d053c6ffc6f7e403f5beb054eb4c5f09006"
+        ],
+        "semantic_scholar_id": "bf7b5d053c6ffc6f7e403f5beb054eb4c5f09006",
+        "canonical_id": "arXiv:2502.14882",
+        "arxiv_id": "2502.14882",
+        "authors": [
+          "Insu Han",
+          "Ze-Liang Zhang",
+          "Zhiyuan Wang",
+          "Yifan Zhu",
+          "Susan Liang",
+          "Jia-Ni Liu",
+          "Haiting Lin",
+          "Mingjie Zhao",
+          "Chen-Liang Xu",
+          "Kun Wan",
+          "Wentian Zhao"
+        ],
+        "priority": 4,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 4,
+          "citation_count": 4,
+          "total": 4,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 606,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2504.14872",
+      "identity_tokens": [
+        "id:DOI:10.1109/tse.2025.3619112",
+        "id:SemanticScholar:7c9e3f8149ece9f8726a5ddcb52b041c16233d05",
+        "id:arXiv:2504.14872",
+        "title:efficient function orchestration for large language models",
+        "url:https://arxiv.org/abs/2504.14872"
+      ],
+      "record": {
+        "title": "Efficient Function Orchestration for Large Language Models",
+        "source_url": "https://arxiv.org/abs/2504.14872",
+        "year": 2025,
+        "published": "2025-04-21",
+        "venue": "IEEE Transactions on Software Engineering",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Function calling is a fundamental capability of today’s large language models, but sequential function calling posed efficiency problems. Recent studies have proposed to request function calls with parallelism support in order to alleviate this issue. However, they either delegate the concurrent function calls to users for execution which are conversely executed sequentially, or overlook the relations among various function calls, rending limited efficiency. This paper introduces <monospace>LLMOrch</monospace>, an advanced framework for automated, parallel function calling in large language models. The key principle behind <monospace>LLMOrch</monospace> is to identify an available processor to execute a function call while preventing any single processor from becoming overburdened. To this end, <monospace>LLMOrch</monospace> models the data relations (i.e., definition-use (def-use) dependencies among different function calls and coordinates their executions by their contro l relations (i.e., mutual-exclusion) as well as the working status of the underlying processors. When comparing with state-of-the-art techniques, <monospace>LLMOrch</monospace> demonstrated comparable efficiency improvements in orchestrating I/O-intensive functions, while significantly outperforming (2<inline-formula><tex-math notation=\"LaTeX\">$\\times$</tex-math><alternatives><mml:math><mml:mo>×</mml:mo></mml:math><graphic position=\"float\" orientation=\"portrait\" xlink:href=\"wang-ieq1-3619112.gif\"/></alternatives></inline-formula>) them with compute-intensive functions. <monospace>LLMOrch</monospace>’s performance even showed a linear correlation to the number of allocated processors. We believe that these results highlight the potential of <monospace>LLMOrch</monospace> as an efficient solution for parallel function orchestration in the context of large language models.",
+        "identifiers": [
+          "SemanticScholar:7c9e3f8149ece9f8726a5ddcb52b041c16233d05"
+        ],
+        "semantic_scholar_id": "7c9e3f8149ece9f8726a5ddcb52b041c16233d05",
+        "canonical_id": "arXiv:2504.14872",
+        "arxiv_id": "2504.14872",
+        "doi": "10.1109/TSE.2025.3619112",
+        "authors": [
+          "Xiao-Xia Liu",
+          "Peng Di",
+          "Cong Li",
+          "Jun Sun",
+          "Jingyi Wang"
+        ],
+        "priority": 2,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 2,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 541,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2506.13472",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2506.13472",
+        "id:SemanticScholar:54a5112217c774cfdec12c60ddaff0e63e40e9b7",
+        "id:arXiv:2506.13472",
+        "title:rosaq rotationbased saliencyaware weight quantization for efficiently compressing large language models",
+        "url:https://arxiv.org/abs/2506.13472"
+      ],
+      "record": {
+        "title": "ROSAQ: Rotation-based Saliency-Aware Weight Quantization for Efficiently Compressing Large Language Models",
+        "source_url": "https://arxiv.org/abs/2506.13472",
+        "year": 2025,
+        "published": "2025-06-16",
+        "venue": "arXiv.org",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Quantization has been widely studied as an effective technique for reducing the memory requirement of large language models (LLMs), potentially improving the latency time as well. Utilizing the characteristic of rotational invariance of transformer, we propose the rotation-based saliency-aware weight quantization (ROSAQ), which identifies salient channels in the projection feature space, not in the original feature space, where the projected\"principal\"dimensions are naturally considered as\"salient\"features. The proposed ROSAQ consists of 1) PCA-based projection, which first performs principal component analysis (PCA) on a calibration set and transforms via the PCA projection, 2) Salient channel dentification, which selects dimensions corresponding to the K-largest eigenvalues as salient channels, and 3) Saliency-aware quantization with mixed-precision, which uses FP16 for salient dimensions and INT3/4 for other dimensions. Experiment results show that ROSAQ shows improvements over the baseline saliency-aware quantization on the original feature space and other existing quantization methods. With kernel fusion, ROSAQ presents about 2.3x speed up over FP16 implementation in generating 256 tokens with a batch size of 64.",
+        "identifiers": [
+          "SemanticScholar:54a5112217c774cfdec12c60ddaff0e63e40e9b7"
+        ],
+        "semantic_scholar_id": "54a5112217c774cfdec12c60ddaff0e63e40e9b7",
+        "canonical_id": "arXiv:2506.13472",
+        "arxiv_id": "2506.13472",
+        "doi": "10.48550/arXiv.2506.13472",
+        "authors": [
+          "Junho Yoon",
+          "G. Lee",
+          "Donghyeon Jeon",
+          "Inho Kang",
+          "Seung-Hoon Na"
+        ],
+        "priority": 2,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 2,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 485,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2508.14302",
+      "identity_tokens": [
+        "id:SemanticScholar:22a460a5c3c773d65f4669f6c6daa0e88205787f",
+        "id:arXiv:2508.14302",
+        "title:glass globallocal aggregation for inferencetime sparsification of llms",
+        "url:https://arxiv.org/abs/2508.14302"
+      ],
+      "record": {
+        "title": "GLASS: Global-Local Aggregation for Inference-time Sparsification of LLMs",
+        "source_url": "https://arxiv.org/abs/2508.14302",
+        "year": 2025,
+        "published": "2025-08-19",
+        "venue": null,
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Inference-time sparsification is a promising path to deploy large language models (LLMs) on resource-constrained devices, yet existing training-free methods typically estimate feedforward network (FFN) neuron importance from the input prompt alone. We show this prompt-only signal is often unreliable, especially for short prompts and long-form decoding, leading to inaccurate masks and degraded generation fidelity. We propose GLASS, a plug-and-play, training-free framework that stabilizes dynamic FFN pruning by aggregating two complementary views of neuron criticality: local prompt-specific activations and a global model-intrinsic prior. GLASS fuses global and local signals via rank aggregation, yielding robust critical-neuron selection even when the prompt is short. We interpret GLASS as the maximum-a-posteriori consensus ranking under a permutation-based probabilistic model, providing a principled foundation for its weighted rank-aggregation rule. We apply GLASS to a diverse set of open-source LLMs, and show that it yields substantial improvements over prior training-free baselines in the challenging short-prompt, long-generation scenarios, achieving up to 45.10% lower perplexity and 25.73% lower KL divergence, while delivering significant on-device decoding speedup.",
+        "identifiers": [
+          "SemanticScholar:22a460a5c3c773d65f4669f6c6daa0e88205787f"
+        ],
+        "semantic_scholar_id": "22a460a5c3c773d65f4669f6c6daa0e88205787f",
+        "canonical_id": "arXiv:2508.14302",
+        "arxiv_id": "2508.14302",
+        "authors": [
+          "Amirmohsen Sattarifard",
+          "Sepehr Lavasani",
+          "Kunlin Zhang",
+          "Amirhossein Rajabpour",
+          "Han-Lin Xu",
+          "Fengyu Sun",
+          "Negar Hassanpour",
+          "Chao Gao"
+        ],
+        "priority": 1,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 1,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 421,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:fa5d3dbec97d052c928fdd3492019991d9440d2828e8a007e13e57f9d5b6cb07",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}
