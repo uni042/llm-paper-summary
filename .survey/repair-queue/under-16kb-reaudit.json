@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-10-13T22:44:15.161924+00:00",
+  "generated_at": "2026-10-14T05:54:40.438759+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 6,
+  "count": 4,
   "worker_counts": {
-    "scheduled-chat-00": 2,
+    "scheduled-chat-00": 1,
     "scheduled-chat-30": 2,
-    "scheduled-chat-45": 2
+    "scheduled-chat-45": 1
   },
   "entries": [
     {
@@ -100,46 +100,6 @@
         "body_chars": 2413,
         "method_chars": 1072,
         "evaluation_chars": 505,
-        "limitation_chars": 0
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/09-kernel-runtime-compilation/2026-2605.23081-thriftattention-selective-mixed-precision-for-long-context-fp4-attention.md",
-      "canonical_id": "arXiv:2605.23081",
-      "title": "ThriftAttention: Selective Mixed Precision for Long-Context FP4 Attention",
-      "file_bytes": 15866,
-      "source_sha256": "e0c11447014e4823f2ccab8ac9e59ed91a85d21274e9cbd85da04983a7c2fb1b",
-      "source_git_blob_sha": "8c9b2ad2b32e69709b66c8a6ae581aec11e85f54",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.916363,
-      "quality_metrics": {
-        "body_chars": 4358,
-        "method_chars": 1486,
-        "evaluation_chars": 1320,
-        "limitation_chars": 0
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2026-2602.05695-sweetspot-an-analytical-model-for-predicting-energy-efficiency-of-llm-in.md",
-      "canonical_id": "arXiv:2602.05695",
-      "title": "SweetSpot: An Analytical Model for Predicting Energy Efficiency of LLM Inference",
-      "file_bytes": 17022,
-      "source_sha256": "497b84a55fd41e5690f78d8a9d2742165434c1d0009470f9147a54b7d7c5c793",
-      "source_git_blob_sha": "b5e469ecddfc416676481997f91ed6477e0d10e1",
-      "assigned_worker": "scheduled-chat-45",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.970692,
-      "quality_metrics": {
-        "body_chars": 4468,
-        "method_chars": 1132,
-        "evaluation_chars": 1511,
         "limitation_chars": 0
       },
       "mechanical_failures": [],
