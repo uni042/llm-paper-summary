@@ -1,0 +1,646 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-70",
+  "run_key": "discovery-20261014-main-b098-screen-70-part-01",
+  "reference_main_sha": "b098b839b3190c1b24355e8606659de9fcb87379",
+  "record_count": 20,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.01730",
+      "identity_tokens": [
+        "arXiv:2609.01730"
+      ],
+      "title": "HEAT: Faster Fully Homomorphic Inference via Approximations-Weights Co-Adaptation",
+      "primary_title": "HEAT: Faster Fully Homomorphic Inference via Approximations-Weights Co-Adaptation",
+      "reason": "HEAT learns the iteration count used for homomorphic nonlinearities together with model weights; the abstract reports fewer bootstraps and 1.4x lower encrypted GPT-2 decoding latency.",
+      "source_url": "https://arxiv.org/abs/2609.01730",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T11:42:25Z",
+      "last_checked_at": "2026-10-14T11:42:25Z",
+      "source_version": "v2",
+      "source_submission_date": "2026-09-01",
+      "primary_source_status": "verified",
+      "verification_method": "Official arXiv abstract page; title and abstract screened; page current version/submission display checked.",
+      "abstract_evidence_excerpt": "Fully homomorphic encryption (FHE) allows a server to run a language model directly on encrypted user prompts, but current approaches remain prohibitively slow. Ciphertexts natively support only addition, multiplication, and rotation, and multiplications may be composed only to a bounded depth before a costly bootstrapping operation is required to continue. Every nonlinearity must therefore be approximated by an iter",
+      "abstract_evidence_sha256": "1f2fa1b703d963fcea010880d23b44292cde59507306d2e0225c51ab11ae3e8e",
+      "abstract_sha256": null,
+      "source_abstract_chars": null,
+      "source_metadata_sha256": null,
+      "source_response_sha256": null,
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-0ed2662d9eee-iron-private-inference-on-transformers.md",
+        "papers/inference/99-other-inference-systems/2023-2307.12533-puma-secure-inference-of-llama-7b-in-five-minutes.md",
+        "papers/inference/99-other-inference-systems/2025-93b16acfd7b9-bumblebee-secure-two-party-inference-framework-for-large-transformers.md"
+      ],
+      "linked_from_lineages": [
+        "99-other-inference-systems"
+      ],
+      "rank": 407
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.32754",
+      "identity_tokens": [
+        "arXiv:2609.32754"
+      ],
+      "title": "Adaptive Consistency Graph for Long-Horizon Agents",
+      "primary_title": "Adaptive Consistency Graph for Long-Horizon Agents",
+      "reason": "Adaptive Consistency Graph stores long-horizon execution evidence and builds requirement-focused views under a bounded context budget; it evaluates success and inference cost but does not state a concrete serving or runtime-efficiency improvement.",
+      "source_url": "https://arxiv.org/abs/2609.32754",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T11:42:25Z",
+      "last_checked_at": "2026-10-14T11:42:25Z",
+      "source_version": "v2",
+      "source_submission_date": "2026-09-26",
+      "primary_source_status": "verified",
+      "verification_method": "Official arXiv abstract page; title and abstract screened; page current version/submission display checked.",
+      "abstract_evidence_excerpt": "Large language model agents can often make reasonable local decisions on short tasks, yet their performance degrades when success requires long sequences of dependent actions and tool calls. During execution, task requirements, historical evidence, and the current execution state may gradually become disconnected, so later decisions can drift from the original objective. We study this problem by introducing the Adapt",
+      "abstract_evidence_sha256": "abda3972219a8561a4247bbbcd21db039d6e23246753783385ec168f28e0bf80",
+      "abstract_sha256": null,
+      "source_abstract_chars": null,
+      "source_metadata_sha256": null,
+      "source_response_sha256": null,
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2025-2510.00615-acon-optimizing-context-compression-for-long-horizon-llm-agents.md",
+        "papers/inference/99-other-inference-systems/2023-2306.07174-augmenting-language-models-with-long-term-memory.md"
+      ],
+      "linked_from_lineages": [
+        "07-kv-cache-optimization-compression"
+      ],
+      "rank": 586
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/ISCAIT64916.2025.11010596",
+      "identity_tokens": [
+        "DOI:10.1109/ISCAIT64916.2025.11010596"
+      ],
+      "title": "Privacy-Preserving Floating-Point Operations: Optimizing Division in 2PC Frameworks",
+      "primary_title": "Privacy-Preserving Floating-Point Operations: Optimizing Division in 2PC Frameworks",
+      "reason": "The title and DOI identify a 2PC floating-point division protocol, a plausible primitive for secure inference, but the IEEE Xplore landing page was inaccessible (URL not accessible via web retrieval) and the DOI landing also failed; no publisher abstract was available to screen. Retrieval evidence: DOI landing https://doi.org/10.1109/ISCAIT64916.2025.11010596 was not accessible via web retrieval; IEEE Xplore https://ieeexplore.ieee.org/document/11010596 was also inaccessible.",
+      "source_url": "https://doi.org/10.1109/ISCAIT64916.2025.11010596",
+      "body_check": "source_unavailable; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-10-14T11:42:25Z",
+      "last_checked_at": "2026-10-14T11:42:25Z",
+      "source_version": null,
+      "source_submission_date": null,
+      "primary_source_status": "source_unavailable",
+      "verification_method": "First-party publisher retrieval attempted; DOI landing https://doi.org/10.1109/ISCAIT64916.2025.11010596 was not accessible via web retrieval; IEEE Xplore https://ieeexplore.ieee.org/document/11010596 was also inaccessible.",
+      "abstract_evidence_excerpt": "",
+      "abstract_evidence_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "abstract_sha256": null,
+      "source_abstract_chars": null,
+      "source_metadata_sha256": null,
+      "source_response_sha256": null,
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-0ed2662d9eee-iron-private-inference-on-transformers.md",
+        "papers/inference/99-other-inference-systems/2025-93b16acfd7b9-bumblebee-secure-two-party-inference-framework-for-large-transformers.md"
+      ],
+      "linked_from_lineages": [
+        "99-other-inference-systems"
+      ],
+      "rank": 597
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3819765.3819781",
+      "identity_tokens": [
+        "DOI:10.1145/3819765.3819781"
+      ],
+      "title": "Privacy-Preserving Inference for Large Language Models: A Survey on Cross-Layer Co-Design",
+      "primary_title": "Privacy-Preserving Inference for Large Language Models: A Survey on Cross-Layer Co-Design",
+      "reason": "The DOI identifies an ACM survey on cross-layer co-design for privacy-preserving LLM inference, a direct systems connection, but the official ACM page returned HTTP 403, so its publisher abstract could not be screened. Retrieval evidence: ACM publisher page https://dl.acm.org/doi/10.1145/3819765.3819781 returned HTTP 403 Forbidden; DOI landing was inaccessible.",
+      "source_url": "https://doi.org/10.1145/3819765.3819781",
+      "body_check": "source_unavailable; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-10-14T11:42:25Z",
+      "last_checked_at": "2026-10-14T11:42:25Z",
+      "source_version": null,
+      "source_submission_date": null,
+      "primary_source_status": "source_unavailable",
+      "verification_method": "First-party publisher retrieval attempted; ACM publisher page https://dl.acm.org/doi/10.1145/3819765.3819781 returned HTTP 403 Forbidden; DOI landing was inaccessible.",
+      "abstract_evidence_excerpt": "",
+      "abstract_evidence_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "abstract_sha256": null,
+      "source_abstract_chars": null,
+      "source_metadata_sha256": null,
+      "source_response_sha256": null,
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.12533-puma-secure-inference-of-llama-7b-in-five-minutes.md",
+        "papers/inference/99-other-inference-systems/2025-93b16acfd7b9-bumblebee-secure-two-party-inference-framework-for-large-transformers.md"
+      ],
+      "linked_from_lineages": [
+        "99-other-inference-systems"
+      ],
+      "rank": 603
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2510.13366",
+      "identity_tokens": [
+        "arXiv:2510.13366",
+        "DOI:10.48550/arXiv.2510.13366"
+      ],
+      "title": "Document Intelligence in the Era of Large Language Models: A Survey",
+      "primary_title": "Document Intelligence in the Era of Large Language Models: A Survey",
+      "reason": "The survey covers document-AI applications of LLMs, including multimodal, multilingual, and retrieval-augmented document processing, without a systems-efficiency contribution.",
+      "source_url": "https://arxiv.org/abs/2510.13366",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T11:42:25Z",
+      "last_checked_at": "2026-10-14T11:42:25Z",
+      "source_version": "v1",
+      "source_submission_date": "2025-10-15",
+      "primary_source_status": "verified",
+      "verification_method": "Official arXiv abstract page; title and abstract screened; page current version/submission display checked.",
+      "abstract_evidence_excerpt": "Document AI (DAI) has emerged as a vital application area, and is significantly transformed by the advent of large language models (LLMs). While earlier approaches relied on encoder-decoder architectures, decoder-only LLMs have revolutionized DAI, bringing remarkable advancements in understanding and generation. This survey provides a comprehensive overview of DAI's evolution, highlighting current research attempts a",
+      "abstract_evidence_sha256": "d4b342e89944a5732a87c2b4477c49e7394fe5fa26de8db07c157647cfaf64d5",
+      "abstract_sha256": null,
+      "source_abstract_chars": null,
+      "source_metadata_sha256": null,
+      "source_response_sha256": null,
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "linked_from_lineages": [
+        "state space models / selective SSM / recurrent inference / hardware-aware sequence modeling"
+      ],
+      "rank": 729
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1007/s10032-025-00512-2",
+      "identity_tokens": [
+        "DOI:10.1007/s10032-025-00512-2"
+      ],
+      "title": "Oracle character recognition using universal inverted bottleneck and inverse image frequency",
+      "primary_title": "Oracle character recognition using universal inverted bottleneck and inverse image frequency",
+      "reason": "QROB applies a lightweight CNN and augmentation to oracle-bone character recognition; the publisher abstract targets historical-script digitization rather than LLM inference systems.",
+      "source_url": "https://link.springer.com/article/10.1007/s10032-025-00512-2",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T11:42:25Z",
+      "last_checked_at": "2026-10-14T11:42:25Z",
+      "source_version": null,
+      "source_submission_date": null,
+      "primary_source_status": "verified",
+      "verification_method": "Official registered publisher article page; bibliographic title and abstract screened.",
+      "abstract_evidence_excerpt": "The oracle bone script, one of the most well-known ancient writing systems, plays a key role in the study of ancient Chinese characters. To speed up the digitization of oracle bone documents through automatic recognition, we propose a recognition model called QROB (Quick Response Oracle Bone). Due to the unique characteristics of oracle bone characters, only a small portion has been translated, leading to an imbalanc",
+      "abstract_evidence_sha256": "b145b3dc94f6d1f6012322f1ae81211c666c0c493179e4f8b7c61ebf9da4221a",
+      "abstract_sha256": null,
+      "source_abstract_chars": null,
+      "source_metadata_sha256": null,
+      "source_response_sha256": null,
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2019-1911.02150-multi-query-attention.md"
+      ],
+      "linked_from_lineages": [
+        "07-kv-cache-optimization-compression"
+      ],
+      "rank": 730
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/JIOT.2023.3311761",
+      "identity_tokens": [
+        "DOI:10.1109/JIOT.2023.3311761"
+      ],
+      "title": "PrivyNAS: Privacy-Aware Neural Architecture Search for Split Computing in Edge–Cloud Systems",
+      "primary_title": "PrivyNAS: Privacy-Aware Neural Architecture Search for Split Computing in Edge–Cloud Systems",
+      "reason": "PrivyNAS searches DNN architectures for privacy-aware edge/cloud split computing, a limited edge-systems connection; IEEE Xplore was inaccessible, preventing first-party abstract screening. Retrieval evidence: IEEE Xplore page for DOI 10.1109/JIOT.2023.3311761 was inaccessible; DOI landing was inaccessible.",
+      "source_url": "https://doi.org/10.1109/JIOT.2023.3311761",
+      "body_check": "source_unavailable; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-10-14T11:42:25Z",
+      "last_checked_at": "2026-10-14T11:42:25Z",
+      "source_version": null,
+      "source_submission_date": null,
+      "primary_source_status": "source_unavailable",
+      "verification_method": "First-party publisher retrieval attempted; IEEE Xplore page for DOI 10.1109/JIOT.2023.3311761 was inaccessible; DOI landing was inaccessible.",
+      "abstract_evidence_excerpt": "",
+      "abstract_evidence_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "abstract_sha256": null,
+      "source_abstract_chars": null,
+      "source_metadata_sha256": null,
+      "source_response_sha256": null,
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2005.14187-hat-hardware-aware-transformers-for-efficient-natural-language-processin.md"
+      ],
+      "linked_from_lineages": [
+        "99-other-inference-systems"
+      ],
+      "rank": 731
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2108.10752",
+      "identity_tokens": [
+        "arXiv:2108.10752",
+        "DOI:10.21437/interspeech.2022-581"
+      ],
+      "title": "Generalizing RNN-Transducer to Out-Domain Audio via Sparse Self-Attention Layers",
+      "primary_title": "Generalizing RNN-Transducer to Out-Domain Audio via Sparse Self-Attention Layers",
+      "reason": "Sparse self-attention is used to improve out-of-domain Conformer speech-recognition accuracy; the abstract reports CER gains for speech, not LLM or serving efficiency.",
+      "source_url": "https://arxiv.org/abs/2108.10752",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T11:42:25Z",
+      "last_checked_at": "2026-10-14T11:42:25Z",
+      "source_version": "v2",
+      "source_submission_date": "2021-08-22",
+      "primary_source_status": "verified",
+      "verification_method": "Official arXiv abstract page; title and abstract screened; page current version/submission display checked.",
+      "abstract_evidence_excerpt": "Recurrent neural network transducer (RNN-T) is an end-to-end speech recognition framework converting input acoustic frames into a character sequence. The state-of-the-art encoder network for RNN-T is the Conformer, which can effectively model the local-global context information via its convolution and self-attention layers. Although Conformer RNN-T has shown outstanding performance, most studies have been verified i",
+      "abstract_evidence_sha256": "37c78ef96de850e2898be6eb6383b2347797e16181df8649c4221df8d3ef09b3",
+      "abstract_sha256": null,
+      "source_abstract_chars": null,
+      "source_metadata_sha256": null,
+      "source_response_sha256": null,
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md"
+      ],
+      "linked_from_lineages": [
+        "sparse attention / long-context Transformer"
+      ],
+      "rank": 732
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2210.13361",
+      "identity_tokens": [
+        "arXiv:2210.13361",
+        "DOI:10.1145/3508352.3549478"
+      ],
+      "title": "NASA: Neural Architecture Search and Acceleration for Hardware Inspired Hybrid Networks",
+      "primary_title": "NASA: Neural Architecture Search and Acceleration for Hardware Inspired Hybrid Networks",
+      "reason": "NASA jointly searches multiplication-reduced DNN architectures and a dedicated accelerator, a concrete algorithm/hardware co-design contribution to efficient neural-network execution.",
+      "source_url": "https://arxiv.org/abs/2210.13361",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T11:42:25Z",
+      "last_checked_at": "2026-10-14T11:42:25Z",
+      "source_version": "v2",
+      "source_submission_date": "2022-10-24",
+      "primary_source_status": "verified",
+      "verification_method": "Official arXiv abstract page; title and abstract screened; page current version/submission display checked.",
+      "abstract_evidence_excerpt": "Multiplication is arguably the most cost-dominant operation in modern deep neural networks (DNNs), limiting their achievable efficiency and thus more extensive deployment in resource-constrained applications. To tackle this limitation, pioneering works have developed handcrafted multiplication-free DNNs, which require expert knowledge and time-consuming manual iteration, calling for fast development tools. To this en",
+      "abstract_evidence_sha256": "0395e7cf482435b6e4052d6f1909c9099f2bf8cf032a66a6184efc4ec99b992a",
+      "abstract_sha256": null,
+      "source_abstract_chars": null,
+      "source_metadata_sha256": null,
+      "source_response_sha256": null,
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2005.14187-hat-hardware-aware-transformers-for-efficient-natural-language-processin.md"
+      ],
+      "linked_from_lineages": [
+        "99-other-inference-systems"
+      ],
+      "rank": 733
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2407.04420",
+      "identity_tokens": [
+        "arXiv:2407.04420",
+        "DOI:10.1016/j.ascom.2025.100934"
+      ],
+      "title": "cosmosage: A natural-language assistant for cosmology",
+      "primary_title": "cosmosage: A natural-language assistant for cosmology",
+      "reason": "cosmosage is an LLM-based cosmology question-answering assistant; its abstract addresses a domain application and answer quality, not model-runtime efficiency.",
+      "source_url": "https://arxiv.org/abs/2407.04420",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T11:42:25Z",
+      "last_checked_at": "2026-10-14T11:42:25Z",
+      "source_version": "v2",
+      "source_submission_date": "2024-07-05",
+      "primary_source_status": "verified",
+      "verification_method": "Official arXiv abstract page; title and abstract screened; page current version/submission display checked.",
+      "abstract_evidence_excerpt": "cosmosage is a natural-language assistant intended for a wide audience, from laypersons interested in cosmology to students, teachers, and professional cosmologists. cosmosage provides a novel way to access knowledge and reason about cosmology. Leveraging the power of advanced large language models (LLMs), cosmosage has learned from a vast corpus of open-access source texts, including textbooks and papers. cosmosage ",
+      "abstract_evidence_sha256": "0362438a68ebb623c47e53e915beb26ab280aa8fdb1e43c082dc35bd9103e716",
+      "abstract_sha256": null,
+      "source_abstract_chars": null,
+      "source_metadata_sha256": null,
+      "source_response_sha256": null,
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ],
+      "linked_from_lineages": [
+        "大規模モデル学習／分散学習メモリ最適化／DeepSpeed"
+      ],
+      "rank": 734
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2407.11487",
+      "identity_tokens": [
+        "arXiv:2407.11487",
+        "DOI:10.48550/arXiv.2407.11487"
+      ],
+      "title": "PRET: Planning with Directed Fidelity Trajectory for Vision and Language Navigation",
+      "primary_title": "PRET: Planning with Directed Fidelity Trajectory for Vision and Language Navigation",
+      "reason": "PRET reduces computation for vision-and-language navigation trajectory planning; the target is a navigation application, not LLM inference or serving systems.",
+      "source_url": "https://arxiv.org/abs/2407.11487",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T11:42:25Z",
+      "last_checked_at": "2026-10-14T11:42:25Z",
+      "source_version": "v1",
+      "source_submission_date": "2024-07-16",
+      "primary_source_status": "verified",
+      "verification_method": "Official arXiv abstract page; title and abstract screened; page current version/submission display checked.",
+      "abstract_evidence_excerpt": "Vision and language navigation is a task that requires an agent to navigate according to a natural language instruction. Recent methods predict sub-goals on constructed topology map at each step to enable long-term action planning. However, they suffer from high computational cost when attempting to support such high-level predictions with GCN-like models. In this work, we propose an alternative method that facilitat",
+      "abstract_evidence_sha256": "c5d98bf0d913829e391bc6136e31fd32c00ee5204f6a36ab4e1232d70ed6ee5d",
+      "abstract_sha256": null,
+      "source_abstract_chars": null,
+      "source_metadata_sha256": null,
+      "source_response_sha256": null,
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2211.05102-efficiently-scaling-transformer-inference.md"
+      ],
+      "linked_from_lineages": [
+        "large-scale LLM inference / tensor partitioning / TPU serving / KV-cache memory efficiency"
+      ],
+      "rank": 735
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2412.19031",
+      "identity_tokens": [
+        "arXiv:2412.19031",
+        "DOI:10.48550/arXiv.2412.19031"
+      ],
+      "title": "Repository Structure-Aware Training Makes SLMs Better Issue Resolver",
+      "primary_title": "Repository Structure-Aware Training Makes SLMs Better Issue Resolver",
+      "reason": "ReSAT constructs localization and code-edit training data to improve SLM software-issue resolution; its contribution is task-specific training and capability evaluation.",
+      "source_url": "https://arxiv.org/abs/2412.19031",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T11:42:25Z",
+      "last_checked_at": "2026-10-14T11:42:25Z",
+      "source_version": "v1",
+      "source_submission_date": "2024-12-26",
+      "primary_source_status": "verified",
+      "verification_method": "Official arXiv abstract page; title and abstract screened; page current version/submission display checked.",
+      "abstract_evidence_excerpt": "Language models have been applied to various software development tasks, but the performance varies according to the scale of the models. Large Language Models (LLMs) outperform Small Language Models (SLMs) in complex tasks like repository-level issue resolving, but raise concerns about privacy and cost. In contrast, SLMs are more accessible but under-perform in complex tasks. In this paper, we introduce ReSAT (Repos",
+      "abstract_evidence_sha256": "14adaccb029e96f9d07c2128ebc980322c30fe4473cc7dc85b46883306b0ce5c",
+      "abstract_sha256": null,
+      "source_abstract_chars": null,
+      "source_metadata_sha256": null,
+      "source_response_sha256": null,
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+      ],
+      "linked_from_lineages": [
+        "正確な注意計算 / 入出力指向注意 / GPUカーネル最適化 / FlashAttention"
+      ],
+      "rank": 737
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2502.18504",
+      "identity_tokens": [
+        "arXiv:2502.18504",
+        "DOI:10.48550/arXiv.2502.18504"
+      ],
+      "title": "TurboFuzzLLM: Turbocharging Mutation-based Fuzzing for Effectively Jailbreaking Large Language Models in Practice",
+      "primary_title": "TurboFuzzLLM: Turbocharging Mutation-based Fuzzing for Effectively Jailbreaking Large Language Models in Practice",
+      "reason": "TurboFuzzLLM accelerates mutation-based jailbreak discovery and measures attack success; this is LLM security evaluation, not inference-system efficiency.",
+      "source_url": "https://arxiv.org/abs/2502.18504",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T11:42:25Z",
+      "last_checked_at": "2026-10-14T11:42:25Z",
+      "source_version": "v2",
+      "source_submission_date": "2025-02-21",
+      "primary_source_status": "verified",
+      "verification_method": "Official arXiv abstract page; title and abstract screened; page current version/submission display checked.",
+      "abstract_evidence_excerpt": "Jailbreaking large-language models (LLMs) involves testing their robustness against adversarial prompts and evaluating their ability to withstand prompt attacks that could elicit unauthorized or malicious responses. In this paper, we present TurboFuzzLLM, a mutation-based fuzzing technique for efficiently finding a collection of effective jailbreaking templates that, when combined with harmful questions, can lead a t",
+      "abstract_evidence_sha256": "f97d46372d28bd28d4896c3004f25c5c39806e51299d2eb57344d4a831c9f7b6",
+      "abstract_sha256": null,
+      "source_abstract_chars": null,
+      "source_metadata_sha256": null,
+      "source_response_sha256": null,
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md"
+      ],
+      "linked_from_lineages": [
+        "注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層"
+      ],
+      "rank": 738
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2503.02844",
+      "identity_tokens": [
+        "arXiv:2503.02844",
+        "DOI:10.48550/arXiv.2503.02844"
+      ],
+      "title": "Beyond Cosine Decay: On the effectiveness of Infinite Learning Rate Schedule for Continual Pre-training",
+      "primary_title": "Beyond Cosine Decay: On the effectiveness of Infinite Learning Rate Schedule for Continual Pre-training",
+      "reason": "The infinite learning-rate schedule improves continual pre-training outcomes; the abstract reports training results without an inference or serving contribution.",
+      "source_url": "https://arxiv.org/abs/2503.02844",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T11:42:25Z",
+      "last_checked_at": "2026-10-14T11:42:25Z",
+      "source_version": "v3",
+      "source_submission_date": "2025-03-04",
+      "primary_source_status": "verified",
+      "verification_method": "Official arXiv abstract page; title and abstract screened; page current version/submission display checked.",
+      "abstract_evidence_excerpt": "The ever-growing availability of unlabeled data presents both opportunities and challenges for training artificial intelligence systems. While self-supervised learning (SSL) has emerged as a powerful paradigm for extracting meaningful representations from vast amounts of unlabeled data, existing methods still struggle to adapt to the non-stationary, non-IID nature of real-world data streams without forgetting previou",
+      "abstract_evidence_sha256": "8156b1846a65fdcf33a7a494fe753dac73a20f09660f0f7ca418b2094ffb9cc1",
+      "abstract_sha256": null,
+      "source_abstract_chars": null,
+      "source_metadata_sha256": null,
+      "source_response_sha256": null,
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ],
+      "linked_from_lineages": [
+        "大規模モデル学習／分散学習メモリ最適化／DeepSpeed"
+      ],
+      "rank": 739
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.12343",
+      "identity_tokens": [
+        "arXiv:2505.12343",
+        "DOI:10.48550/arXiv.2505.12343"
+      ],
+      "title": "Mitigating Hallucinations via Inter-Layer Consistency Aggregation in Large Vision-Language Models",
+      "primary_title": "Mitigating Hallucinations via Inter-Layer Consistency Aggregation in Large Vision-Language Models",
+      "reason": "DCLA aggregates LVLM layer representations during decoding to mitigate hallucinations and improve benchmark quality; the stated objective is output reliability, not systems efficiency.",
+      "source_url": "https://arxiv.org/abs/2505.12343",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T11:42:25Z",
+      "last_checked_at": "2026-10-14T11:42:25Z",
+      "source_version": "v3",
+      "source_submission_date": "2025-05-18",
+      "primary_source_status": "verified",
+      "verification_method": "Official arXiv abstract page; title and abstract screened; page current version/submission display checked.",
+      "abstract_evidence_excerpt": "Despite the impressive capabilities of Large Vision-Language Models (LVLMs), they remain susceptible to hallucinations, where generated content is inconsistent with the input image. Existing training-free hallucination mitigation methods often suffer from unstable performance and high sensitivity to hyperparameter settings, which limits their practicality and broader adoption. In this paper, we propose Decoding with ",
+      "abstract_evidence_sha256": "8a261ab5b46094ff3903925908fbc78329d0abc1570a6f58e67ac8f17897492a",
+      "abstract_sha256": null,
+      "source_abstract_chars": null,
+      "source_metadata_sha256": null,
+      "source_response_sha256": null,
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.12981-cross-layer-attention.md"
+      ],
+      "linked_from_lineages": [
+        "KVキャッシュ・注意アーキテクチャ"
+      ],
+      "rank": 740
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2506.02025",
+      "identity_tokens": [
+        "arXiv:2506.02025",
+        "DOI:10.1145/3731599.3767584"
+      ],
+      "title": "Evaluating the Efficacy of LLM-Based Reasoning for Multiobjective HPC Job Scheduling",
+      "primary_title": "Evaluating the Efficacy of LLM-Based Reasoning for Multiobjective HPC Job Scheduling",
+      "reason": "The paper evaluates LLM reasoning as an HPC workload scheduler and explicitly notes computational overhead; this is an LLM application/evaluation study rather than an LLM serving optimization.",
+      "source_url": "https://arxiv.org/abs/2506.02025",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T11:42:25Z",
+      "last_checked_at": "2026-10-14T11:42:25Z",
+      "source_version": "v2",
+      "source_submission_date": "2025-05-29",
+      "primary_source_status": "verified",
+      "verification_method": "Official arXiv abstract page; title and abstract screened; page current version/submission display checked.",
+      "abstract_evidence_excerpt": "High-Performance Computing (HPC) job scheduling involves balancing conflicting objectives such as minimizing makespan, reducing wait times, optimizing resource use, and ensuring fairness. Traditional methods, including heuristic-based, e.g., First-Come-First-Served(FJFS) and Shortest Job First (SJF), or intensive optimization techniques, often lack adaptability to dynamic workloads and, more importantly, cannot simul",
+      "abstract_evidence_sha256": "47c90916a86d0b04c8d65b95f2b4af881eccbab4f61318961eec7b92764cd774",
+      "abstract_sha256": null,
+      "source_abstract_chars": null,
+      "source_metadata_sha256": null,
+      "source_response_sha256": null,
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2408.15792-efficient-llm-scheduling-learning-to-rank.md"
+      ],
+      "linked_from_lineages": [
+        "inference-systems"
+      ],
+      "rank": 741
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2510.02790",
+      "identity_tokens": [
+        "arXiv:2510.02790",
+        "DOI:10.48550/arXiv.2510.02790"
+      ],
+      "title": "MaskCD: Mitigating LVLM Hallucinations by Image Head Masked Contrastive Decoding",
+      "primary_title": "MaskCD: Mitigating LVLM Hallucinations by Image Head Masked Contrastive Decoding",
+      "reason": "MaskCD changes contrastive decoding to reduce vision-language hallucinations and reports quality benchmarks, with no inference-cost improvement.",
+      "source_url": "https://arxiv.org/abs/2510.02790",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T11:42:25Z",
+      "last_checked_at": "2026-10-14T11:42:25Z",
+      "source_version": "v1",
+      "source_submission_date": "2025-10-03",
+      "primary_source_status": "verified",
+      "verification_method": "Official arXiv abstract page; title and abstract screened; page current version/submission display checked.",
+      "abstract_evidence_excerpt": "Large vision-language models (LVLMs) have shown remarkable performance in visual-language understanding for downstream multimodal tasks. While their capabilities are improving, problems emerge simultaneously. Among those problems, the hallucinations have attracted much attention, which stands for the phenomenon where LVLMs generate contradictory content to their input visual and text contents. Many approaches have be",
+      "abstract_evidence_sha256": "ace4d9ea2b3353d1f00c65150a38ca337e347168cbde983516c8888770bf1bed",
+      "abstract_sha256": null,
+      "source_abstract_chars": null,
+      "source_metadata_sha256": null,
+      "source_response_sha256": null,
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md"
+      ],
+      "linked_from_lineages": [
+        "KV cache memory management / streaming inference / attention sinks / length extrapolation"
+      ],
+      "rank": 742
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1007/s12325-025-03273-w",
+      "identity_tokens": [
+        "DOI:10.1007/s12325-025-03273-w"
+      ],
+      "title": "Integration of Generative AI with Human Expertise in HEOR: A Hybrid Intelligence Framework",
+      "primary_title": "Integration of Generative AI with Human Expertise in HEOR: A Hybrid Intelligence Framework",
+      "reason": "The publisher abstract proposes a human/Gen-AI framework for health-economics workflows, evidence synthesis, and patient-reported outcomes; it is a domain workflow application.",
+      "source_url": "https://link.springer.com/article/10.1007/s12325-025-03273-w",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T11:42:25Z",
+      "last_checked_at": "2026-10-14T11:42:25Z",
+      "source_version": null,
+      "source_submission_date": null,
+      "primary_source_status": "verified",
+      "verification_method": "Official registered publisher article page; bibliographic title and abstract screened.",
+      "abstract_evidence_excerpt": "Health economics and outcomes research (HEOR) is pivotal in shaping healthcare policies, optimizing decision-making, and ensuring effective resource allocation. However, current HEOR workflows often struggle to keep pace with the growing complexity of data, constrained resources, and the need for adaptable, real-time analysis. Generative artificial intelligence (Gen-AI) offers a transformative opportunity to address ",
+      "abstract_evidence_sha256": "36958ed5683861d4a614f2db8d36e8e02f9283f112265e255bf2613aef57562f",
+      "abstract_sha256": null,
+      "source_abstract_chars": null,
+      "source_metadata_sha256": null,
+      "source_response_sha256": null,
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.15337-skeleton-of-thought-prompting-llms-for-efficient-parallel-generation.md"
+      ],
+      "linked_from_lineages": [
+        "inference-systems"
+      ],
+      "rank": 744
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3689031.3717460",
+      "identity_tokens": [
+        "DOI:10.1145/3689031.3717460"
+      ],
+      "title": "Groot: Graph-Centric Row Reordering with Tree for Sparse Matrix Multiplications on Tensor Cores",
+      "primary_title": "Groot: Graph-Centric Row Reordering with Tree for Sparse Matrix Multiplications on Tensor Cores",
+      "reason": "Groot reorders sparse-matrix rows for Tensor Core SpMM/SDDMM, a plausible GPU-kernel foundation for ML execution, but the ACM publisher page returned HTTP 403 and its abstract could not be screened. Retrieval evidence: ACM publisher page https://dl.acm.org/doi/10.1145/3689031.3717460 was inaccessible; DOI landing was inaccessible.",
+      "source_url": "https://doi.org/10.1145/3689031.3717460",
+      "body_check": "source_unavailable; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-10-14T11:42:25Z",
+      "last_checked_at": "2026-10-14T11:42:25Z",
+      "source_version": null,
+      "source_submission_date": null,
+      "primary_source_status": "source_unavailable",
+      "verification_method": "First-party publisher retrieval attempted; ACM publisher page https://dl.acm.org/doi/10.1145/3689031.3717460 was inaccessible; DOI landing was inaccessible.",
+      "abstract_evidence_excerpt": "",
+      "abstract_evidence_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "abstract_sha256": null,
+      "source_abstract_chars": null,
+      "source_metadata_sha256": null,
+      "source_response_sha256": null,
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md"
+      ],
+      "linked_from_lineages": [
+        "sparse attention / long-context Transformer"
+      ],
+      "rank": 745
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1177/00405175251335188",
+      "identity_tokens": [
+        "DOI:10.1177/00405175251335188"
+      ],
+      "title": "Deep learning for 3D garment generation: A review",
+      "primary_title": "Deep learning for 3D garment generation: A review",
+      "reason": "The review surveys deep-learning methods for 3D garment generation, an independent computer-vision application.",
+      "source_url": "https://journals.sagepub.com/doi/10.1177/00405175251335188",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T11:42:25Z",
+      "last_checked_at": "2026-10-14T11:42:25Z",
+      "source_version": null,
+      "source_submission_date": null,
+      "primary_source_status": "verified",
+      "verification_method": "Official registered publisher article page; bibliographic title and abstract screened.",
+      "abstract_evidence_excerpt": "3D garment models enhance the consumer experience by enabling virtual trying-on and personalized customization. Additionally, they streamline design and manufacturing processes, reduce resource waste, and drive the garment industry toward greater digitalization and sustainability. Nevertheless, the complexities of 3D garment modeling have impeded its widespread adoption. Recent significant advances in deep learning h",
+      "abstract_evidence_sha256": "5a7991eee46b3fe7c71e5602078471e2530782f8804b7e706a7f365e50d44bb1",
+      "abstract_sha256": null,
+      "source_abstract_chars": null,
+      "source_metadata_sha256": null,
+      "source_response_sha256": null,
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "linked_from_lineages": [
+        "state space models / selective SSM / recurrent inference / hardware-aware sequence modeling"
+      ],
+      "rank": 746
+    }
+  ]
+}
