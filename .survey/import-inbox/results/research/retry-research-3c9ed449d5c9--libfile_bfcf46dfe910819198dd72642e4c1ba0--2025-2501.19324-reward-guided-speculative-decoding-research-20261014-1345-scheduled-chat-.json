@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "3344786e837b017c91f5aa9335d9284f011e13b3e54ca56292e8d95630fa40dd",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/retry-research-3c9ed449d5c9--libfile_bfcf46dfe910819198dd72642e4c1ba0--2025-2501.19324-reward-guided-speculative-decoding-research-20261014-1345-scheduled-chat-45-r01.md",
+  "canonical_id": "arXiv:2501.19324",
+  "worker_completed_at": "2026-10-14T13:50:54+09:00",
+  "worker_run_key": "20261014-1345-scheduled-chat-45/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 7449,
+    "body_paragraphs": 40,
+    "method_chars": 1649,
+    "method_paragraphs": 9,
+    "evaluation_chars": 2626,
+    "limitation_chars": 0,
+    "insufficiency_flags": [
+      "限界説明量 0 < 推奨 120"
+    ]
+  },
+  "failures": [
+    "長文定型文の再利用を検出: papers/inference/05-speculative-decoding-moe/2025-2501.19324-reward-guided-speculative-decoding-for-efficient-llm-reasoning.md と 26 段落 / 5757文字 (100.0%) が完全一致"
+  ],
+  "processed_at": "2026-10-14T12:33:54+00:00"
+}

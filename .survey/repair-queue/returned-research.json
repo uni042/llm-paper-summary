@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-14T12:28:35+00:00",
+  "generated_at": "2026-10-14T12:33:55+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -1025,31 +1025,6 @@
       "worker_run_key": "20261014-1630-scheduled-chat-30/r01"
     },
     {
-      "canonical_id": "DOI:10.18653/v1/2025.findings-naacl.462",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-14T10:07:57+00:00",
-      "return_count": 3,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "長文定型文の再利用を検出: papers/inference/05-speculative-decoding-moe/2025-d38a1bd0beb3-hierarchical-speculative-decoding-with-dynamic-windows-for-efficient-lan.md と 17 段落 / 3939文字 (100.0%) が完全一致"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 4948,
-        "body_paragraphs": 25,
-        "method_chars": 1028,
-        "method_paragraphs": 6,
-        "evaluation_chars": 2201,
-        "limitation_chars": 330,
-        "insufficiency_flags": []
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_1b3173cd257881919b86a350e77eef8a--2025-hsddw-returned-repair-20261013-2130-scheduled-chat-30-r01-v2.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_1b3173cd257881919b86a350e77eef8a--2025-hsddw-returned-repair-20261013-2130-scheduled-chat-30-r01-v2.json",
-      "worker_run_key": "20261013-2130-scheduled-chat-30/r01"
-    },
-    {
       "canonical_id": "arXiv:2603.20843",
       "title": null,
       "source_url": null,
@@ -1363,31 +1338,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_5dcd6e9eb4f88191b372182ed78ed81b--2025-2511.19676-interlace-vlm-layer-pruning-research-20261014-1800-scheduled-chat-00-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_5dcd6e9eb4f88191b372182ed78ed81b--2025-2511.19676-interlace-vlm-layer-pruning-research-20261014-1800-scheduled-chat-00-r01.json",
       "worker_run_key": "20261014-1800-scheduled-chat-00/r01"
-    },
-    {
-      "canonical_id": "arXiv:2601.03649",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-14T10:56:39+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2026-2601.03649-syncthink-a-training-free-strategy-to-align-inference-termination-with-r.md と 23 段落 / 4917文字 (100.0%) が完全一致"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 6377,
-        "body_paragraphs": 34,
-        "method_chars": 2296,
-        "method_paragraphs": 13,
-        "evaluation_chars": 1374,
-        "limitation_chars": 732,
-        "insufficiency_flags": []
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_68332ec207c481918fc15dd9c45147a0--2026-2601.03649-syncthink-dynamic-reasoning-termination-research-20261013-2300-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_68332ec207c481918fc15dd9c45147a0--2026-2601.03649-syncthink-dynamic-reasoning-termination-research-20261013-2300-scheduled-chat-00-r01.json",
-      "worker_run_key": "20261013-2300-scheduled-chat-00/r01"
     },
     {
       "canonical_id": "arXiv:2605.22502",
@@ -1782,33 +1732,6 @@
       "worker_run_key": "20261014-1100-scheduled-chat-00/r01"
     },
     {
-      "canonical_id": "arXiv:2605.27786",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-14T11:30:04+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 120 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 6356,
-        "body_paragraphs": 40,
-        "method_chars": 1534,
-        "method_paragraphs": 10,
-        "evaluation_chars": 120,
-        "limitation_chars": 775,
-        "insufficiency_flags": [
-          "評価説明量 120 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_b3d682ff1b6c8191a5be74cfab1f8d68--2026-2605.27786-lorp-depth-pruning-research-20261014-1855-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_b3d682ff1b6c8191a5be74cfab1f8d68--2026-2605.27786-lorp-depth-pruning-research-20261014-1855-scheduled-chat-00-r01.json",
-      "worker_run_key": "20261014-1855-scheduled-chat-00/r01"
-    },
-    {
       "canonical_id": "arXiv:2602.23699",
       "title": null,
       "source_url": null,
@@ -1861,33 +1784,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_be186c9ad72c8191a820e9193ceb1ca7--2026-2603.00573-comol-core-space-lora-experts-research-20261013-2100-scheduled-chat-00-r02.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_be186c9ad72c8191a820e9193ceb1ca7--2026-2603.00573-comol-core-space-lora-experts-research-20261013-2100-scheduled-chat-00-r02.json",
       "worker_run_key": "20261013-2100-scheduled-chat-00/r02"
-    },
-    {
-      "canonical_id": "arXiv:2501.19324",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-14T11:36:00+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "長文定型文の再利用を検出: papers/inference/05-speculative-decoding-moe/2025-2501.19324-reward-guided-speculative-decoding-for-efficient-llm-reasoning.md と 26 段落 / 5757文字 (100.0%) が完全一致"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 7449,
-        "body_paragraphs": 40,
-        "method_chars": 1649,
-        "method_paragraphs": 9,
-        "evaluation_chars": 2626,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_bfcf46dfe910819198dd72642e4c1ba0--2025-2501.19324-reward-guided-speculative-decoding-research-20261014-1345-scheduled-chat-45-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_bfcf46dfe910819198dd72642e4c1ba0--2025-2501.19324-reward-guided-speculative-decoding-research-20261014-1345-scheduled-chat-45-r01.json",
-      "worker_run_key": "20261014-1345-scheduled-chat-45/r01"
     },
     {
       "canonical_id": "arXiv:2511.02647",
@@ -2258,33 +2154,6 @@
       "worker_run_key": "20261014-0200-scheduled-chat-00/r01"
     },
     {
-      "canonical_id": "DOI:10.14722/ndss.2025.230057",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-14T12:03:03+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2025-93b16acfd7b9-bumblebee-secure-two-party-inference-framework-for-large-transformers.md と 19 段落 / 3926文字 (100.0%) が完全一致"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 6418,
-        "body_paragraphs": 39,
-        "method_chars": 2320,
-        "method_paragraphs": 14,
-        "evaluation_chars": 1332,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_e9dab823000c8191a9ce3beff9bd67b7--2025-bumblebee-secure-two-party-transformer-inference-research-20261014-0745-scheduled-chat-45-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_e9dab823000c8191a9ce3beff9bd67b7--2025-bumblebee-secure-two-party-transformer-inference-research-20261014-0745-scheduled-chat-45-r01.json",
-      "worker_run_key": "20261014-0745-scheduled-chat-45/r01"
-    },
-    {
       "canonical_id": "arXiv:2604.17091",
       "title": null,
       "source_url": null,
@@ -2625,8 +2494,8 @@
     },
     {
       "canonical_id": "arXiv:2006.16362",
-      "title": "Multi-Head Attention: Collaborate Instead of Concatenate",
-      "source_url": "https://arxiv.org/abs/2006.16362",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-14T12:28:30+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-45",
@@ -2650,8 +2519,8 @@
     },
     {
       "canonical_id": "arXiv:2511.02805",
-      "title": "MemSearcher: Training LLMs to Reason, Search and Manage Memory via End-to-End Reinforcement Learning",
-      "source_url": "https://arxiv.org/pdf/2511.02805v2",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-14T12:28:31+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-00",
@@ -2677,8 +2546,8 @@
     },
     {
       "canonical_id": "arXiv:2405.19209",
-      "title": "VideoTree: Adaptive Tree-based Video Representation for LLM Reasoning on Long Videos",
-      "source_url": "https://arxiv.org/html/2405.19209",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-14T12:28:32+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-30",
@@ -2702,8 +2571,8 @@
     },
     {
       "canonical_id": "DOI:10.18653/v1/2025.naacl-long.543",
-      "title": "HIGGS: Pushing the Limits of Large Language Model Quantization via the Linearity Theorem",
-      "source_url": "https://aclanthology.org/2025.naacl-long.543.pdf",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-14T12:28:34+00:00",
       "return_count": 4,
       "assigned_worker": "scheduled-chat-00",
@@ -2729,8 +2598,8 @@
     },
     {
       "canonical_id": "arXiv:2603.17809",
-      "title": "Fine-Grained Post-Training Quantization for Large Vision Language Models with Quantization-Aware Integrated Gradients",
-      "source_url": "https://arxiv.org/html/2603.17809v1",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-14T12:28:35+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-45",
@@ -2751,6 +2620,137 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-23a83a707073--libfile_9ff17a8e3e7881918a0b1c307fdc32fe--2026-2603.17809-qig-token-aware-ptq-vlm-research-20261014-0200-scheduled-chat-00-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-23a83a707073--libfile_9ff17a8e3e7881918a0b1c307fdc32fe--2026-2603.17809-qig-token-aware-ptq-vlm-research-20261014-0200-scheduled-chat-00-r01.json",
       "worker_run_key": "20261014-0200-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2601.03649",
+      "title": "SyncThink: A Training-Free Strategy to Align Inference Termination with Reasoning Saturation",
+      "source_url": "https://arxiv.org/html/2601.03649v1",
+      "returned_at": "2026-10-14T12:33:51+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2026-2601.03649-syncthink-a-training-free-strategy-to-align-inference-termination-with-r.md と 23 段落 / 4917文字 (100.0%) が完全一致"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 6377,
+        "body_paragraphs": 34,
+        "method_chars": 2296,
+        "method_paragraphs": 13,
+        "evaluation_chars": 1374,
+        "limitation_chars": 732,
+        "insufficiency_flags": []
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-35066026ddf4--libfile_68332ec207c481918fc15dd9c45147a0--2026-2601.03649-syncthink-dynamic-reasoning-termination-research-20261013-2300-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-35066026ddf4--libfile_68332ec207c481918fc15dd9c45147a0--2026-2601.03649-syncthink-dynamic-reasoning-termination-research-20261013-2300-scheduled-.json",
+      "worker_run_key": "20261013-2300-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2605.27786",
+      "title": "Locality-Aware Redundancy Pruning for LLM Depth Compression",
+      "source_url": "https://arxiv.org/pdf/2605.27786",
+      "returned_at": "2026-10-14T12:33:52+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 120 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 6356,
+        "body_paragraphs": 40,
+        "method_chars": 1534,
+        "method_paragraphs": 10,
+        "evaluation_chars": 120,
+        "limitation_chars": 775,
+        "insufficiency_flags": [
+          "評価説明量 120 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-351d00913d2a--libfile_b3d682ff1b6c8191a5be74cfab1f8d68--2026-2605.27786-lorp-depth-pruning-research-20261014-1855-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-351d00913d2a--libfile_b3d682ff1b6c8191a5be74cfab1f8d68--2026-2605.27786-lorp-depth-pruning-research-20261014-1855-scheduled-chat-00-r01.json",
+      "worker_run_key": "20261014-1855-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "DOI:10.18653/v1/2025.findings-naacl.462",
+      "title": "Hierarchical Speculative Decoding with Dynamic Windows for Efficient Language Model Inference",
+      "source_url": "https://aclanthology.org/2025.findings-naacl.462.pdf",
+      "returned_at": "2026-10-14T12:33:53+00:00",
+      "return_count": 4,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "長文定型文の再利用を検出: papers/inference/05-speculative-decoding-moe/2025-d38a1bd0beb3-hierarchical-speculative-decoding-with-dynamic-windows-for-efficient-lan.md と 17 段落 / 3939文字 (100.0%) が完全一致"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 4948,
+        "body_paragraphs": 25,
+        "method_chars": 1028,
+        "method_paragraphs": 6,
+        "evaluation_chars": 2201,
+        "limitation_chars": 330,
+        "insufficiency_flags": []
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-372156bbc544--libfile_1b3173cd257881919b86a350e77eef8a--2025-hsddw-returned-repair-20261013-2130-scheduled-chat-30-r01-v2.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-372156bbc544--libfile_1b3173cd257881919b86a350e77eef8a--2025-hsddw-returned-repair-20261013-2130-scheduled-chat-30-r01-v2.json",
+      "worker_run_key": "20261013-2130-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "DOI:10.14722/ndss.2025.230057",
+      "title": "BumbleBee: Secure Two-party Inference Framework for Large Transformers",
+      "source_url": "https://www.ndss-symposium.org/wp-content/uploads/2025-57-paper.pdf",
+      "returned_at": "2026-10-14T12:33:54+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2025-93b16acfd7b9-bumblebee-secure-two-party-inference-framework-for-large-transformers.md と 19 段落 / 3926文字 (100.0%) が完全一致"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 6418,
+        "body_paragraphs": 39,
+        "method_chars": 2320,
+        "method_paragraphs": 14,
+        "evaluation_chars": 1332,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-444159618cce--libfile_e9dab823000c8191a9ce3beff9bd67b7--2025-bumblebee-secure-two-party-transformer-inference-research-20261014-0745-scheduled-chat-45-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-444159618cce--libfile_e9dab823000c8191a9ce3beff9bd67b7--2025-bumblebee-secure-two-party-transformer-inference-research-20261014-0745-scheduled-ch.json",
+      "worker_run_key": "20261014-0745-scheduled-chat-45/r01"
+    },
+    {
+      "canonical_id": "arXiv:2501.19324",
+      "title": "Reward-Guided Speculative Decoding for Efficient LLM Reasoning",
+      "source_url": "https://arxiv.org/pdf/2501.19324",
+      "returned_at": "2026-10-14T12:33:54+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "長文定型文の再利用を検出: papers/inference/05-speculative-decoding-moe/2025-2501.19324-reward-guided-speculative-decoding-for-efficient-llm-reasoning.md と 26 段落 / 5757文字 (100.0%) が完全一致"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 7449,
+        "body_paragraphs": 40,
+        "method_chars": 1649,
+        "method_paragraphs": 9,
+        "evaluation_chars": 2626,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-3c9ed449d5c9--libfile_bfcf46dfe910819198dd72642e4c1ba0--2025-2501.19324-reward-guided-speculative-decoding-research-20261014-1345-scheduled-chat-45-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-3c9ed449d5c9--libfile_bfcf46dfe910819198dd72642e4c1ba0--2025-2501.19324-reward-guided-speculative-decoding-research-20261014-1345-scheduled-chat-.json",
+      "worker_run_key": "20261014-1345-scheduled-chat-45/r01"
     }
   ]
 }
