@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-936932a1899be34e-unrel-016",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2506.11812",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2506.11812",
+    "identity_tokens": [
+      "DOI:10.1007/978-3-032-06118-8_12",
+      "arXiv:2506.11812"
+    ],
+    "reason": "The study evaluates LLM house-price estimation with prompting and geographic examples; its target is real-estate appraisal quality.",
+    "first_checked_at": "2026-10-14T12:00:33+00:00",
+    "last_checked_at": "2026-10-14T12:00:33+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+    ],
+    "title": "On the Performance of LLMs for Real Estate Appraisal"
+  },
+  "processed_at": "2026-10-14T12:00:34+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-936932a1899b",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
