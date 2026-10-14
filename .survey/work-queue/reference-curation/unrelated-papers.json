@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-14T05:39:47+00:00",
-  "record_count": 12136,
+  "updated_at": "2026-10-14T06:02:24+00:00",
+  "record_count": 12141,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -174657,6 +174657,67 @@
       "last_checked_at": "2026-10-14T05:39:47+00:00",
       "linked_from": [],
       "title": "STAC: Plug-and-Play Spatio-Temporal Aware Cache Compression for Streaming 3D Reconstruction"
+    },
+    "SemanticScholar:49819c58350056de622da083fdfb80d716c823a2": {
+      "classification": "unrelated",
+      "canonical_id": "SemanticScholar:49819c58350056de622da083fdfb80d716c823a2",
+      "identity_tokens": [
+        "SemanticScholar:49819c58350056de622da083fdfb80d716c823a2"
+      ],
+      "reason": "一次要旨は大規模LLM学習のhardware配置・分散並列化・cost効率の実測に限定され、推論効率への具体的な接続を確認できない。",
+      "first_checked_at": "2026-10-14T06:02:20+00:00",
+      "last_checked_at": "2026-10-14T06:02:20+00:00",
+      "linked_from": [],
+      "title": "Efficient Hardware Scaling and Diminishing Returns in Large-Scale Training of Language Models"
+    },
+    "arXiv:2601.22450": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.22450",
+      "identity_tokens": [
+        "arXiv:2601.22450"
+      ],
+      "reason": "masked diffusionのgeneralization/learning objectiveを扱うが要旨に推論効率やsystem resource削減がない。",
+      "first_checked_at": "2026-10-14T06:02:22+00:00",
+      "last_checked_at": "2026-10-14T06:02:22+00:00",
+      "linked_from": [],
+      "title": "Tuning the Implicit Regularizer of Masked Diffusion Language Models: Enhancing Generalization via Insights from $k$-Parity"
+    },
+    "arXiv:2604.23838": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.23838",
+      "identity_tokens": [
+        "arXiv:2604.23838"
+      ],
+      "reason": "Sub-Stage Graph・resource allocation・rollout migrationでRL post-training pipelineを高速化するが、一次要旨に推論servingの効率改善への具体的接続はない。",
+      "first_checked_at": "2026-10-14T06:02:24+00:00",
+      "last_checked_at": "2026-10-14T06:02:24+00:00",
+      "linked_from": [],
+      "title": "JigsawRL: Assembling RL Pipelines for Efficient LLM Post-Training"
+    },
+    "DOI:10.48550/arxiv.2602.21788": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.48550/arxiv.2602.21788",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2602.21788",
+        "arXiv:2602.21788"
+      ],
+      "reason": "FCPは異種sequence長に対応したLLM/MLLM学習時のcontext parallelismであり、一次要旨の実測もtraining throughputに限定される。",
+      "first_checked_at": "2026-10-14T06:02:24+00:00",
+      "last_checked_at": "2026-10-14T06:02:24+00:00",
+      "linked_from": [],
+      "title": "Efficient Scaling of LLM Training with Flexible Context Parallelism"
+    },
+    "arXiv:2411.16585": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2411.16585",
+      "identity_tokens": [
+        "arXiv:2411.16585"
+      ],
+      "reason": "金融order-flow生成向けGPTで、要旨に推論/system efficiency mechanismやresource削減はない。",
+      "first_checked_at": "2026-10-14T06:02:24+00:00",
+      "last_checked_at": "2026-10-14T06:02:24+00:00",
+      "linked_from": [],
+      "title": "MarketGPT: Developing a Pre-trained transformer (GPT) for Modeling Financial Time Series"
     }
   }
 }
