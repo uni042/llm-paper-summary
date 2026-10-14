@@ -1,0 +1,1789 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-eaa35f0dba8a20a9-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-eaa35f0dba8a",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2412.00099",
+    "arXiv:2501.19309",
+    "arXiv:2501.19392",
+    "arXiv:2502.17501",
+    "arXiv:2504.15302",
+    "arXiv:2505.12566",
+    "arXiv:2505.14085",
+    "arXiv:2508.07329",
+    "arXiv:2508.07675",
+    "arXiv:2509.25853",
+    "arXiv:2510.02295",
+    "arXiv:2510.05059",
+    "arXiv:2510.08525",
+    "arXiv:2510.14686",
+    "arXiv:2512.00719",
+    "arXiv:2602.00397",
+    "arXiv:2605.13779",
+    "arXiv:2606.22874"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 18,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "beed28f8709df20ed30e118c0b1931f6e1cb1b6d",
+  "raw_search_result_count": 18,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 18,
+  "provider_progress": {
+    "requested_count": 18,
+    "status_counts": {
+      "allowed": 18,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-14T11:21:32.394030+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2412.00099",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2501.19309",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2501.19392",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2502.17501",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2504.15302",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2505.12566",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2505.14085",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2508.07329",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2508.07675",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2509.25853",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2510.02295",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2510.05059",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2510.08525",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2510.14686",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2512.00719",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2602.00397",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2605.13779",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2606.22874",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "SpotAttention: Plug-In Block-Sparse Routing for Pretrained Long-Context Transformers",
+      "source_url": "https://arxiv.org/abs/2606.22874",
+      "year": 2026,
+      "published": "2026-06-22",
+      "venue": "arXiv.org",
+      "citation_count": 5,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Long contexts have become standard in pretrained LLMs, yet they remain expensive to run: prefill compute grows quadratically with sequence length, and every decode step re-reads a key-value cache that grows linearly with it. Sparse attention cuts these costs by attending only to a relevant subset of past tokens, but selecting that subset is itself expensive. We present SpotAttention, a lightweight selector that attaches to a frozen pretrained transformer and learns by KL distillation to estimate its attention distribution. The selector picks the top-K keys each query attends to, and because its estimate is a calibrated distribution, a dual top-p rule reads the per-query, per-layer budget directly from it. Across Qwen3 (dense, 4B-32B) and Qwen3.5 (hybrid linear/full attention, 4B-9B), SpotAttention matches dense accuracy at contexts up to 128K tokens, eight times the training length. Decode at L=128K runs 3.9x faster than FlashAttention and 1.8x faster than Twilight, the strongest training-free baseline. Quantizing the selector's K-cache to INT4 or FP4 microscale shrinks it 3.5x at no accuracy cost.",
+      "identifiers": [
+        "SemanticScholar:8f819ee9e04f9aeae6618ce26a520073c6731648"
+      ],
+      "semantic_scholar_id": "8f819ee9e04f9aeae6618ce26a520073c6731648",
+      "canonical_id": "arXiv:2606.22874",
+      "arxiv_id": "2606.22874",
+      "doi": "10.48550/arXiv.2606.22874",
+      "authors": [
+        "Huzama Ahmad",
+        "Se-Young Yun"
+      ],
+      "priority": 105,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 5,
+        "citation_count": 5,
+        "total": 105,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 114,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "SIMPLE: Disaggregating Sampling from GPU Inference into a Decision Plane for Faster Distributed LLM Serving",
+      "source_url": "https://arxiv.org/abs/2512.00719",
+      "year": 2025,
+      "published": "2025-11-30",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "As large language models (LLMs) scale out with tensor parallelism (TP) and pipeline parallelism (PP) and production stacks have aggressively optimized the data plane (attention/GEMM and KV cache), sampling, the decision plane that turns logits into tokens, becomes a new bottleneck. This creates a structural holdout: sampling neither expands with TP nor balances across PP stages, so its share of iteration time grows as GPUs get faster and it caps pipeline frequency at the last stage. We present SIMPLE, a stage-agnostic, sequence-parallel, overlappable decision plane that disaggregates sampling into a CPU-side service and shrinks its runtime footprint back to a minor, hidden role. SIMPLE combines: (1) sequence-parallel sampling, which shards work along the batch dimension and removes vocabulary-axis collectives; (2) a CPU-based algorithm with column-wise penalties and truncation-first filtering to realize single-pass, linear-time kernels; and (3) speculative hot-vocab sampling (SHVS), which samples on a small hot set with rejection-correctness and uses a simple sizing model to choose the hot-vocab size that maximizes throughput. In evaluation, SIMPLE improves end-to-end throughput by up to 96% and reduces P95 latency by 20-65%. Crucially, SIMPLE requires no user-side code changes and composes with existing data-plane optimizations, unlocking scaling benefits that compound with future GPU generations.",
+      "identifiers": [
+        "SemanticScholar:4930a5bf6ae8b827516b9163e89df2a9b96368a4"
+      ],
+      "semantic_scholar_id": "4930a5bf6ae8b827516b9163e89df2a9b96368a4",
+      "canonical_id": "arXiv:2512.00719",
+      "arxiv_id": "2512.00719",
+      "doi": "10.48550/arXiv.2512.00719",
+      "authors": [
+        "Bo-Han Zhao",
+        "Zane Cao",
+        "Yong-Chao He"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 318,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Fast Forward: Accelerating LLM Prefill with Predictive FFN Sparsity",
+      "source_url": "https://arxiv.org/abs/2602.00397",
+      "year": 2026,
+      "published": "2026-01-30",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The prefill stage of large language model (LLM) inference is a key computational bottleneck for long-context workloads. At short-to-moderate context lengths (1K--16K tokens), Feed-Forward Networks (FFNs) dominate this cost, accounting for most of the total FLOPs. Existing FFN sparsification methods, designed for autoregressive decoding, fail to exploit the prefill stage's parallelism and often degrade accuracy. To address this, we introduce FastForward, a predictive sparsity framework that accelerates LLM prefill through block-wise, context-aware FFN sparsity. FastForward combines (1) a lightweight expert predictor to select high-importance neurons per block, (2) an error compensation network to correct sparsity-induced errors, and (3) a layer-wise sparsity scheduler to allocate compute based on token-mixing importance. Across LLaMA and Qwen models up to 8B parameters, FastForward delivers up to 1.45$\\times$ compute-bound speedup at 50% FFN sparsity with $<$ 6% accuracy loss compared to the dense baseline on LongBench, substantially reducing Time-to-First-Token (TTFT) for efficient, long-context LLM inference on constrained hardware.",
+      "identifiers": [
+        "SemanticScholar:cff0c32bea68b793de4f4d6941db8d2857934e43"
+      ],
+      "semantic_scholar_id": "cff0c32bea68b793de4f4d6941db8d2857934e43",
+      "canonical_id": "arXiv:2602.00397",
+      "arxiv_id": "2602.00397",
+      "doi": "10.48550/arXiv.2602.00397",
+      "authors": [
+        "Aayush Gautam",
+        "Mukul Gagrani",
+        "Junyoung Park",
+        "Min-Gu Lee",
+        "Chiris Lott",
+        "A. L. Narasimha Reddy"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 257,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "MinT: Managed Infrastructure for Training and Serving Millions of LLMs",
+      "source_url": "https://arxiv.org/abs/2605.13779",
+      "year": 2026,
+      "published": "2026-05-13",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "We present MindLab Toolkit (MinT), a managed infrastructure system for Low-Rank Adaptation (LoRA) post-training and online serving. MinT targets a setting where many trained policies are produced over a small number of expensive base-model deployments. Instead of materializing each policy as a merged full checkpoint, MinT keeps the base model resident and moves exported LoRA adapter revisions through rollout, update, export, evaluation, serving, and rollback, hiding distributed training, serving, scheduling, and data movement behind a service interface. MinT scales this path along three axes. Scale Up extends LoRA RL to frontier-scale dense and MoE architectures, including MLA and DSA attention paths, with training and serving validated beyond 1T total parameters. Scale Down moves only the exported LoRA adapter, which can be under 1% of base-model size in rank-1 settings; adapter-only handoff reduces the measured step by 18.3x on a 4B dense model and 2.85x on a 30B MoE, while concurrent multi-policy GRPO shortens wall time by 1.77x and 1.45x without raising peak memory. Scale Out separates durable policy addressability from CPU/GPU working sets: a tensor-parallel deployment supports 10^6-scale addressable catalogs (measured single-engine sweeps through 100K) and thousand-adapter active waves at cluster scale, with cold loading treated as scheduled service work and packed MoE LoRA tensors improving live engine loading by 8.5-8.7x. MinT thus manages million-scale LoRA policy catalogs while training and serving selected adapter revisions over shared 1T-class base models.",
+      "identifiers": [
+        "SemanticScholar:f753bfd272c7dccffe5eda0beb9e1e05fb88c5f0"
+      ],
+      "semantic_scholar_id": "f753bfd272c7dccffe5eda0beb9e1e05fb88c5f0",
+      "canonical_id": "arXiv:2605.13779",
+      "arxiv_id": "2605.13779",
+      "doi": "10.48550/arXiv.2605.13779",
+      "authors": [
+        "Mind Lab"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 154,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Judge Decoding: Faster Speculative Sampling Requires Going Beyond Model Alignment",
+      "source_url": "https://arxiv.org/abs/2501.19309",
+      "year": 2025,
+      "published": "2025-01-31",
+      "venue": "International Conference on Learning Representations",
+      "citation_count": 69,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The performance of large language models (LLMs) is closely linked to their underlying size, leading to ever-growing networks and hence slower inference. Speculative decoding has been proposed as a technique to accelerate autoregressive generation, leveraging a fast draft model to propose candidate tokens, which are then verified in parallel based on their likelihood under the target model. While this approach guarantees to reproduce the target output, it incurs a substantial penalty: many high-quality draft tokens are rejected, even when they represent objectively valid continuations. Indeed, we show that even powerful draft models such as GPT-4o, as well as human text cannot achieve high acceptance rates under the standard verification scheme. This severely limits the speedup potential of current speculative decoding methods, as an early rejection becomes overwhelmingly likely when solely relying on alignment of draft and target. We thus ask the following question: Can we adapt verification to recognize correct, but non-aligned replies? To this end, we draw inspiration from the LLM-as-a-judge framework, which demonstrated that LLMs are able to rate answers in a versatile way. We carefully design a dataset to elicit the same capability in the target model by training a compact module on top of the embeddings to produce ``judgements\"of the current continuation. We showcase our strategy on the Llama-3.1 family, where our 8b/405B-Judge achieves a speedup of 9x over Llama-405B, while maintaining its quality on a large range of benchmarks. These benefits remain present even in optimized inference frameworks, where our method reaches up to 141 tokens/s for 8B/70B-Judge and 129 tokens/s for 8B/405B on 2 and 8 H100s respectively.",
+      "identifiers": [
+        "SemanticScholar:6008a7676b3cae015670217c263ec0fdfc31e38b"
+      ],
+      "semantic_scholar_id": "6008a7676b3cae015670217c263ec0fdfc31e38b",
+      "canonical_id": "arXiv:2501.19309",
+      "arxiv_id": "2501.19309",
+      "doi": "10.48550/arXiv.2501.19309",
+      "authors": [
+        "Gregor Bachmann",
+        "Sotiris Anagnostidis",
+        "Albert Pumarola",
+        "Markos Georgopoulos",
+        "Artsiom Sanakoyeu",
+        "Yuming Du",
+        "Edgar Schönfeld",
+        "Ali K. Thabet",
+        "J. Kohler"
+      ],
+      "priority": 79,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 69,
+        "citation_count": 69,
+        "total": 79,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 621,
+        "matched_prestigious_venue": "International Conference on Learning Representations"
+      }
+    },
+    {
+      "title": "Cache Me If You Must: Adaptive Key-Value Quantization for Large Language Models",
+      "source_url": "https://arxiv.org/abs/2501.19392",
+      "year": 2025,
+      "published": "2025-01-31",
+      "venue": "International Conference on Machine Learning",
+      "citation_count": 26,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Efficient real-world deployments of large language models (LLMs) rely on Key-Value (KV) caching for processing and generating long outputs, reducing the need for repetitive computation. For large contexts, Key-Value caches can take up tens of gigabytes of device memory, as they store vector representations for each token and layer. Recent work has shown that the cached vectors can be compressed through quantization, pruning or merging, but these techniques often compromise quality towards higher compression rates. In this work, we aim to improve Key&Value compression by exploiting two observations: 1) the inherent dependencies between keys and values across different layers, and 2) high-compression mechanisms for internal network states. We propose AQUA-KV, an adaptive quantization for Key-Value caches that relies on compact adapters to exploit existing dependencies between Keys and Values, and aims to\"optimally\"compress the information that cannot be predicted. AQUA-KV significantly improves compression rates, while maintaining high accuracy on state-of-the-art LLM families. On Llama 3.2 LLMs, we achieve near-lossless inference at 2-2.5 bits per value with under $1\\%$ relative error in perplexity and LongBench scores. AQUA-KV is one-shot, simple, and efficient: it can be calibrated on a single GPU within 1-6 hours, even for 70B models.",
+      "identifiers": [
+        "SemanticScholar:e710b63080c45b275bf0ee477c7cf0f5d9a5b6e7"
+      ],
+      "semantic_scholar_id": "e710b63080c45b275bf0ee477c7cf0f5d9a5b6e7",
+      "canonical_id": "arXiv:2501.19392",
+      "arxiv_id": "2501.19392",
+      "doi": "10.48550/arXiv.2501.19392",
+      "authors": [
+        "Alina Shutova",
+        "Vladimir Malinovskii",
+        "Vage Egiazarian",
+        "Denis Kuznedelev",
+        "D. Mazur",
+        "Nikita Surkov",
+        "Ivan Ermakov",
+        "Dan Alistarh"
+      ],
+      "priority": 36,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 26,
+        "citation_count": 26,
+        "total": 36,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 621,
+        "matched_prestigious_venue": "International Conference on Machine Learning"
+      }
+    },
+    {
+      "title": "Mixture of Cache-Conditional Experts for Efficient Mobile Device Inference",
+      "source_url": "https://arxiv.org/abs/2412.00099",
+      "year": 2024,
+      "published": "2024-11-27",
+      "venue": "Trans. Mach. Learn. Res.",
+      "citation_count": 17,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Mixture of Experts (MoE) LLMs have recently gained attention for their ability to enhance performance by selectively engaging specialized subnetworks or\"experts\"for each input. However, deploying MoEs on memory-constrained devices remains challenging, particularly when generating tokens sequentially with a batch size of one, as opposed to typical high-throughput settings involving long sequences or large batches. In this work, we optimize MoE on memory-constrained devices where only a subset of expert weights fit in DRAM. We introduce a novel cache-aware routing strategy that leverages expert reuse during token generation to improve cache locality. We evaluate our approach on language modeling, MMLU, and GSM8K benchmarks and present on-device results demonstrating 2$\\times$ speedups on mobile devices, offering a flexible, training-free solution to extend MoE's applicability across real-world applications.",
+      "identifiers": [
+        "SemanticScholar:0790f66f56948017b66b4ee10279e35d641d9ba9"
+      ],
+      "semantic_scholar_id": "0790f66f56948017b66b4ee10279e35d641d9ba9",
+      "canonical_id": "arXiv:2412.00099",
+      "arxiv_id": "2412.00099",
+      "doi": "10.48550/arXiv.2412.00099",
+      "authors": [
+        "Andrii Skliar",
+        "T. V. Rozendaal",
+        "Romain Lepert",
+        "Todor Boinovski",
+        "Mart van Baalen",
+        "Markus Nagel",
+        "Paul N. Whatmough",
+        "B. Bejnordi"
+      ],
+      "priority": 17,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 17,
+        "citation_count": 17,
+        "total": 17,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 686,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Semantic Caching for Low-Cost LLM Serving: From Offline Learning to Online Adaptation",
+      "source_url": "https://arxiv.org/abs/2508.07675",
+      "year": 2025,
+      "published": "2025-08-11",
+      "venue": "IEEE Conference on Computer Communications",
+      "citation_count": 15,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Models (LLMs) are revolutionizing how users interact with information systems, yet their high inference cost poses serious scalability and sustainability challenges. Caching inference responses, allowing them to be retrieved without another forward pass through the LLM, has emerged as one possible solution. Traditional exact-match caching, however, overlooks the semantic similarity between queries, leading to unnecessary recomputation. Semantic caching addresses this by retrieving responses based on semantic similarity, but introduces a fundamentally different cache eviction problem: one must account for mismatch costs between incoming queries and cached responses. Moreover, key system parameters, such as query arrival probabilities and serving costs, are often unknown and must be learned over time. Existing semantic caching methods are largely ad-hoc, lacking theoretical foundations and unable to adapt to real-world uncertainty. In this paper, we present a principled, learning-based framework for semantic cache eviction under unknown query and cost distributions. We formulate both offline optimization and online learning variants of the problem based on the combinatorial multi-armed bandit framework, and develop provably efficient algorithms with state-of-the-art guarantees. We also evaluate our framework on a synthetic dataset, showing that our proposed algorithms perform matching or superior performance compared with baselines.",
+      "identifiers": [
+        "SemanticScholar:d40f43fcc2db511b722633927c31b66b19207e13"
+      ],
+      "semantic_scholar_id": "d40f43fcc2db511b722633927c31b66b19207e13",
+      "canonical_id": "arXiv:2508.07675",
+      "arxiv_id": "2508.07675",
+      "doi": "10.1109/INFOCOM59046.2026.11571467",
+      "authors": [
+        "Xutong Liu",
+        "Baran Atalar",
+        "Xiang-Xiang Dai",
+        "Jin-Hang Zuo",
+        "Si-Wei Wang",
+        "John C. S. Lui",
+        "Wei Chen",
+        "Carlee Joe-Wong"
+      ],
+      "priority": 15,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 15,
+        "citation_count": 15,
+        "total": 15,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 429,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Which Heads Matter for Reasoning? RL-Guided KV Cache Compression",
+      "source_url": "https://arxiv.org/abs/2510.08525",
+      "year": 2025,
+      "published": "2025-10-09",
+      "venue": "arXiv.org",
+      "citation_count": 13,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Reasoning large language models exhibit complex reasoning behaviors via extended chain-of-thought generation that are highly fragile to information loss during decoding, creating critical challenges for KV cache compression. Existing token-dropping methods directly disrupt reasoning chains by removing intermediate steps, while head-reallocation methods, designed for retrieval tasks, fail to preserve the heads essential for generative reasoning. However, no existing method can identify which attention heads genuinely maintain reasoning consistency and control generation termination. To address this, we propose RLKV, which uses reinforcement learning as a probe to discover which heads contribute to reasoning quality by directly optimizing their cache usage against actual generation outcomes. This discovery naturally leads to an efficient compression strategy: we allocate full KV cache to reasoning-critical heads while aggressively compressing others with constant-size KV cache. Experiments reveal that a fraction of heads proves essential for reasoning, enabling 20--60% cache reduction with near-lossless performance across diverse tasks and models, and up to 2.06x end-to-end speedup at 60% reduction.",
+      "identifiers": [
+        "SemanticScholar:bb15d15655a41d12c714b3cd88c810ee5bb2886e"
+      ],
+      "semantic_scholar_id": "bb15d15655a41d12c714b3cd88c810ee5bb2886e",
+      "canonical_id": "arXiv:2510.08525",
+      "arxiv_id": "2510.08525",
+      "doi": "10.48550/arXiv.2510.08525",
+      "authors": [
+        "Wenjie Du",
+        "Li Jiang",
+        "Keda Tao",
+        "Xue Liu",
+        "Huan Wang"
+      ],
+      "priority": 13,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 13,
+        "citation_count": 13,
+        "total": 13,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 370,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "VideoNSA: Native Sparse Attention Scales Video Understanding",
+      "source_url": "https://arxiv.org/abs/2510.02295",
+      "year": 2025,
+      "published": "2025-10-02",
+      "venue": "arXiv.org",
+      "citation_count": 12,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Video understanding in multimodal language models remains limited by context length: models often miss key transition frames and struggle to maintain coherence across long time scales. To address this, we adapt Native Sparse Attention (NSA) to video-language models. Our method, VideoNSA, adapts Qwen2.5-VL through end-to-end training on a 216K video instruction dataset. We employ a hardware-aware hybrid approach to attention, preserving dense attention for text, while employing NSA for video. Compared to token-compression and training-free sparse baselines, VideoNSA achieves improved performance on long-video understanding, temporal reasoning, and spatial benchmarks. Further ablation analysis reveals four key findings: (1) reliable scaling to 128K tokens; (2) an optimal global-local attention allocation at a fixed budget; (3) task-dependent branch usage patterns; and (4) the learnable combined sparse attention help induce dynamic attention sinks. Project Page: https://enxinsong.com/VideoNSA-web/, Code: https://github.com/Espere-1119-Song/VideoNSA",
+      "identifiers": [
+        "SemanticScholar:1f1e11057f3e80d1ac73855ac06ed967739a4c71"
+      ],
+      "semantic_scholar_id": "1f1e11057f3e80d1ac73855ac06ed967739a4c71",
+      "canonical_id": "arXiv:2510.02295",
+      "arxiv_id": "2510.02295",
+      "doi": "10.48550/arXiv.2510.02295",
+      "authors": [
+        "En-Xin Song",
+        "Wen-Hao Chai",
+        "Shu-Sheng Yang",
+        "Ethan Armand",
+        "Xiaojun Shan",
+        "Hai-Yang Xu",
+        "Jian-Wen Xie",
+        "Zhuo-Wen Tu"
+      ],
+      "priority": 12,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 12,
+        "citation_count": 12,
+        "total": 12,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 377,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "RAGDoll: Efficient Offloading-based Online RAG System on a Single GPU",
+      "source_url": "https://arxiv.org/abs/2504.15302",
+      "year": 2025,
+      "published": "2025-04-17",
+      "venue": "arXiv.org",
+      "citation_count": 8,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Retrieval-Augmented Generation (RAG) enhances large language model (LLM) generation quality by incorporating relevant external knowledge. However, deploying RAG on consumer-grade platforms is challenging due to limited memory and the increasing scale of both models and knowledge bases. In this work, we introduce RAGDoll, a resource-efficient, self-adaptive RAG serving system integrated with LLMs, specifically designed for resource-constrained platforms. RAGDoll exploits the insight that RAG retrieval and LLM generation impose different computational and memory demands, which in a traditional serial workflow result in substantial idle times and poor resource utilization. Based on this insight, RAGDoll decouples retrieval and generation into parallel pipelines, incorporating joint memory placement and dynamic batch scheduling strategies to optimize resource usage across diverse hardware devices and workloads. Extensive experiments demonstrate that RAGDoll adapts effectively to various hardware configurations and LLM scales, achieving up to 3.6 times speedup in average latency compared to serial RAG systems based on vLLM.",
+      "identifiers": [
+        "SemanticScholar:3fb502ea8d4a05856cdf1c0f5e21bc362bec1a33"
+      ],
+      "semantic_scholar_id": "3fb502ea8d4a05856cdf1c0f5e21bc362bec1a33",
+      "canonical_id": "arXiv:2504.15302",
+      "arxiv_id": "2504.15302",
+      "doi": "10.48550/arXiv.2504.15302",
+      "authors": [
+        "Weiping Yu",
+        "Ningyi Liao",
+        "Siqiang Luo",
+        "Junfeng Liu"
+      ],
+      "priority": 8,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 8,
+        "citation_count": 8,
+        "total": 8,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 545,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Staircase Streaming for Low-Latency Multi-Agent Inference",
+      "source_url": "https://arxiv.org/abs/2510.05059",
+      "year": 2025,
+      "published": "2025-10-06",
+      "venue": "arXiv.org",
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Recent advances in large language models (LLMs) opened up new directions for leveraging the collective expertise of multiple LLMs. These methods, such as Mixture-of-Agents, typically employ additional inference steps to generate intermediate outputs, which are then used to produce the final response. While multi-agent inference can enhance response quality, it can significantly increase the time to first token (TTFT), posing a challenge for latency-sensitive applications and hurting user experience. To address this issue, we propose staircase streaming for low-latency multi-agent inference. Instead of waiting for the complete intermediate outputs from previous steps, we begin generating the final response as soon as we receive partial outputs from these steps. Experimental results demonstrate that staircase streaming reduces TTFT by up to 93% while maintaining response quality.",
+      "identifiers": [
+        "SemanticScholar:690c81d3810ef2232c9003bb4ebea2412495423b"
+      ],
+      "semantic_scholar_id": "690c81d3810ef2232c9003bb4ebea2412495423b",
+      "canonical_id": "arXiv:2510.05059",
+      "arxiv_id": "2510.05059",
+      "doi": "10.48550/arXiv.2510.05059",
+      "authors": [
+        "Junlin Wang",
+        "Jue Wang",
+        "Zhen Xu",
+        "B. Athiwaratkun",
+        "Bhuwan Dhingra",
+        "Ce Zhang",
+        "James Zou"
+      ],
+      "priority": 4,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 4,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 373,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "xLLM Technical Report",
+      "source_url": "https://arxiv.org/abs/2510.14686",
+      "year": 2025,
+      "published": "2025-10-16",
+      "venue": "arXiv.org",
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "We introduce xLLM, an intelligent and efficient Large Language Model (LLM) inference framework designed for high-performance, large-scale enterprise-grade serving, with deep optimizations for diverse AI accelerators. To address these challenges, xLLM builds a novel decoupled service-engine architecture. At the service layer, xLLM-Service features an intelligent scheduling module that efficiently processes multimodal requests and co-locates online and offline tasks through unified elastic scheduling to maximize cluster utilization. This module also relies on a workload-adaptive dynamic Prefill-Decode (PD) disaggregation policy and a novel Encode-Prefill-Decode (EPD) disaggregation policy designed for multimodal inputs. Furthermore, it incorporates a distributed architecture to provide global KV Cache management and robust fault-tolerant capabilities for high availability. At the engine layer, xLLM-Engine co-optimizes system and algorithm designs to fully saturate computing resources. This is achieved through comprehensive multi-layer execution pipeline optimizations, an adaptive graph mode and an xTensor memory management. xLLM-Engine also further integrates algorithmic enhancements such as optimized speculative decoding and dynamic EPLB, collectively serving to substantially boost throughput and inference efficiency. Extensive evaluations demonstrate that xLLM delivers significantly superior performance and resource efficiency. Under identical TPOT constraints, xLLM achieves throughput up to 1.7x that of MindIE and 2.2x that of vLLM-Ascend with Qwen-series models, while maintaining an average throughput of 1.7x that of MindIE with Deepseek-series models. xLLM framework is publicly available at https://github.com/jd-opensource/xllm and https://github.com/jd-opensource/xllm-service.",
+      "identifiers": [
+        "SemanticScholar:36541679c153670f5bb91aa44d8eb7c15fcce316"
+      ],
+      "semantic_scholar_id": "36541679c153670f5bb91aa44d8eb7c15fcce316",
+      "canonical_id": "arXiv:2510.14686",
+      "arxiv_id": "2510.14686",
+      "doi": "10.48550/arXiv.2510.14686",
+      "authors": [
+        "Tong-Xuan Liu",
+        "Tao Peng",
+        "Peijun Yang",
+        "Xiaoyang Zhao",
+        "Xiusheng Lu",
+        "Weizhe Huang",
+        "Zi-Rui Liu",
+        "Xiaoyu Chen",
+        "Zhiwei Liang",
+        "Jun Xiong",
+        "Donghe Jin",
+        "Minchao Zhang",
+        "Jin-Rong Guo",
+        "Yi-Xuan Deng",
+        "Xu Zhang",
+        "Xianzhe Dong",
+        "Siqi Wang",
+        "Siyu Wu",
+        "Yu Wu",
+        "Zi-Han Tang",
+        "Yu-Xin Zeng",
+        "Yan-Shu Wang",
+        "Jin-Guang Liu",
+        "Meng Kang",
+        "Menxin Li",
+        "Yun-Long Wang",
+        "Yi-Ming Liu",
+        "Xiaolong Ma",
+        "Yi-Fan Wang",
+        "Yichen Zhang",
+        "Jin-Run Yin",
+        "Ke-Ming Zheng",
+        "Jiang-Wei Yin",
+        "Jun Zhang",
+        "Zi-Ying Wang",
+        "Xiao Lin",
+        "Liangyu Liu",
+        "Li Lan",
+        "Yang Liu",
+        "Chun Peng",
+        "Han-Bing Liu",
+        "S. Ren",
+        "Xuezhu Wang",
+        "Yunheng Shen",
+        "Yi Wang",
+        "Gu-Yue Liu",
+        "Hui Chen",
+        "Tong Yang",
+        "Hailong Yang",
+        "Jing Li",
+        "Gui-Guang Ding",
+        "Ke-Ke Zhang"
+      ],
+      "priority": 4,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 4,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 363,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "CE-LSLM: Efficient Large-Small Language Model Inference and Communication via Cloud-Edge Collaboration",
+      "source_url": "https://arxiv.org/abs/2505.14085",
+      "year": 2025,
+      "published": "2025-05-20",
+      "venue": "arXiv.org",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Emerging intelligent service scenarios in 6G communication impose stringent requirements for low latency, high reliability, and privacy preservation. Generative large language models (LLMs) are gradually becoming key enablers for the integration of semantic communication and computation. However, due to the limited computational resources of edge devices and the increasing complexity of heterogeneous terminal access, existing centralized inference approaches fail to meet the dual demands of response efficiency and data privacy in edge-side inference tasks. To address these challenges, this paper proposes a novel collaborative inference architecture that integrates cloud-based LLMs with edge-deployed small language models (SLMs), enabling dynamic scheduling and sharing of semantic-level intermediate states, and establishing a unified computation-communication paradigm tailored for 6G networks. Specifically, a key-value (KV) cache reuse mechanism is introduced to enhance the semantic understanding of edge models through contextual guidance from the cloud, while significantly reducing edge-side computational and storage overhead. Furthermore, a cross-node parallel scheduling mechanism is proposed to achieve asynchronous coordination between model state loading and decoding computation, thereby improving edge responsiveness. In addition, we investigate layer alignment and representation compression strategies between heterogeneous models to alleviate the communication burden on the edge. Experimental results demonstrate that the proposed architecture exhibits superior adaptability and scalability in terms of inference latency, system stability, and concurrent processing capacity.",
+      "identifiers": [
+        "SemanticScholar:d6c919161e3ee5adfb1e6298a1982c64f568020d"
+      ],
+      "semantic_scholar_id": "d6c919161e3ee5adfb1e6298a1982c64f568020d",
+      "canonical_id": "arXiv:2505.14085",
+      "arxiv_id": "2505.14085",
+      "doi": "10.48550/arXiv.2505.14085",
+      "authors": [
+        "Pengyan Zhu",
+        "Tingting Yang"
+      ],
+      "priority": 3,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 3,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 512,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "SAIL: SRAM-Accelerated LLM Inference System with Lookup-Table-based GEMV",
+      "source_url": "https://arxiv.org/abs/2509.25853",
+      "year": 2025,
+      "published": "2025-09-30",
+      "venue": "arXiv.org",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Model (LLM) inference requires substantial computational resources, yet CPU-based inference remains essential for democratizing AI due to the widespread availability of CPUs compared to specialized accelerators. However, efficient LLM inference on CPUs faces two fundamental challenges: (1) existing CPU architectures struggle with low-precision arithmetic required by quantized models, where optimal bit precision varies across models and layers; and (2) the memory-bound nature of the token generation phase creates severe performance bottlenecks. To address these challenges, we propose SAIL (SRAM-Accelerated Inference of LLMs), a CPU-based inference solution that efficiently supports arbitrary bit precisions with minimal overhead. SAIL integrates three key innovations: First, we introduce Batched LUT-based General Matrix-Vector Multiplication (LUT-GEMV) with SRAM-based processing-in-memory, enabling high data reuse through lookup tables and reducing memory movement. Second, our Pattern-Aware LUT optimization identifies and exploits redundancy in input activation patterns, reducing computation cycles by 13.8\\%. Third, we develop an in-memory type conversion algorithm that leverages PIM's parallelism for efficient de-/quantization operations, alleviating pressure on CPU's vector units. Our architecture requires only 2\\% hardware overhead and a single new instruction, while maintaining dual functionality as both compute and storage units. Experimental evaluations using a modified gem5 simulator demonstrate that SAIL achieves up to 10.7x speedup and 19.9x higher tokens per dollar compared to ARM Neoverse-N1 CPU baselines, and up to 7.04x better cost efficiency than NVIDIA V100 GPUs, establishing a practical path for efficient CPU-based LLM inference.",
+      "identifiers": [
+        "SemanticScholar:666cff4c762f573d46563509441bb9d21d169fde"
+      ],
+      "semantic_scholar_id": "666cff4c762f573d46563509441bb9d21d169fde",
+      "canonical_id": "arXiv:2509.25853",
+      "arxiv_id": "2509.25853",
+      "doi": "10.48550/arXiv.2509.25853",
+      "authors": [
+        "Jingyao Zhang",
+        "Jaewoo Park",
+        "Jongeun Lee",
+        "Elaheh Sadredini"
+      ],
+      "priority": 3,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 3,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 379,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "CoKV: Optimizing KV Cache Allocation via Cooperative Game",
+      "source_url": "https://arxiv.org/abs/2502.17501",
+      "year": 2025,
+      "published": "2025-02-21",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLMs) have achieved remarkable success on various aspects of human life. However, one of the major challenges in deploying these models is the substantial memory consumption required to store key-value pairs (KV), which imposes significant resource demands. Recent research has focused on KV cache budget allocation, with several approaches proposing head-level budget distribution by evaluating the importance of individual attention heads. These methods, however, assess the importance of heads independently, overlooking their cooperative contributions within the model, which may result in a deviation from their true impact on model performance. In light of this limitation, we propose CoKV, a novel method that models the cooperation between heads in model inference as a cooperative game. By evaluating the contribution of each head within the cooperative game, CoKV can allocate the cache budget more effectively. Extensive experiments show that CoKV achieves state-of-the-art performance on the LongBench benchmark using LLama-3-8B-Instruct and Mistral-7B models.",
+      "identifiers": [
+        "SemanticScholar:90a7cd596f5f17711ef7b7433f0aa762abd45ea8"
+      ],
+      "semantic_scholar_id": "90a7cd596f5f17711ef7b7433f0aa762abd45ea8",
+      "canonical_id": "arXiv:2502.17501",
+      "arxiv_id": "2502.17501",
+      "doi": "10.48550/arXiv.2502.17501",
+      "authors": [
+        "Qiheng Sun",
+        "Hongwei Zhang",
+        "Haocheng Xia",
+        "Jia-Yao Zhang",
+        "Jin-Fei Liu",
+        "Kui Ren"
+      ],
+      "priority": 1,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 1,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 600,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "HYBRIDSERVE: Efficient Serving of Large AI Models with Confidence-Based Cascade Routing",
+      "source_url": "https://arxiv.org/abs/2505.12566",
+      "year": 2025,
+      "published": "2025-05-18",
+      "venue": "International Conference on Distributed Computing Systems Workshops",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Giant Deep Neural Networks (DNNs) are central to modern cloud-based AI services but are extremely energyintensive to serve - often exceeding their training cost - due to the need for large GPU clusters to host model partitions and replicas. Existing methods trade off either energy efficiency or inference accuracy. We present HYBRIDSERVE, a hybrid DNN serving system that leverages multiple model sizes - from small to giant - and routes requests based on confidence estimates. By prioritizing smaller, energy-efficient models for confident queries, HYBRIDSERVE reduces reliance on giant model replicas while preserving accuracy. A dataflow planner further optimizes model placement and replication to maximize throughput. Experiments show that HYBRIDSERVE reduces energy consumption by up to $19.8 \\times$ over state-of-the-art serving systems, while achieving the same accuracy as the largest model alone.",
+      "identifiers": [
+        "SemanticScholar:fabddcae91008fc1f5bde620eee1ad4e3a0cc70d"
+      ],
+      "semantic_scholar_id": "fabddcae91008fc1f5bde620eee1ad4e3a0cc70d",
+      "canonical_id": "arXiv:2505.12566",
+      "arxiv_id": "2505.12566",
+      "doi": "10.1109/ICDCSW63273.2025.00028",
+      "authors": [
+        "Leyang Xue",
+        "Yao Fu",
+        "Luo Mai",
+        "Mahesh K. Marina"
+      ],
+      "priority": 1,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 1,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 514,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Efficient Edge LLMs Deployment via HessianAware Quantization and CPU GPU Collaborative",
+      "source_url": "https://arxiv.org/abs/2508.07329",
+      "year": 2025,
+      "published": "2025-08-10",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "With the breakthrough progress of large language models (LLMs) in natural language processing and multimodal tasks, efficiently deploying them on resource-constrained edge devices has become a critical challenge. The Mixture of Experts (MoE) architecture enhances model capacity through sparse activation, but faces two major difficulties in practical deployment: (1) The presence of numerous outliers in activation distributions leads to severe degradation in quantization accuracy for both activations and weights, significantly impairing inference performance; (2) Under limited memory, efficient offloading and collaborative inference of expert modules struggle to balance latency and throughput. To address these issues, this paper proposes an efficient MoE edge deployment scheme based on Hessian-Aware Quantization (HAQ) and CPU-GPU collaborative inference. First, by introducing smoothed Hessian matrix quantization, we achieve joint 8-bit quantization of activations and weights, which significantly alleviates the accuracy loss caused by outliers while ensuring efficient implementation on mainstream hardware. Second, we design an expert-level collaborative offloading and inference mechanism, which, combined with expert activation path statistics, enables efficient deployment and scheduling of expert modules between CPU and GPU, greatly reducing memory footprint and inference latency. Extensive experiments validate the effectiveness of our method on mainstream large models such as the OPT series and Mixtral 8*7B: on datasets like Wikitext2 and C4, the inference accuracy of the low-bit quantized model approaches that of the full-precision model, while GPU memory usage is reduced by about 60%, and inference latency is significantly improved.",
+      "identifiers": [
+        "SemanticScholar:2782bf2c95a37e89043e589edf77b98b5d0d289a"
+      ],
+      "semantic_scholar_id": "2782bf2c95a37e89043e589edf77b98b5d0d289a",
+      "canonical_id": "arXiv:2508.07329",
+      "arxiv_id": "2508.07329",
+      "doi": "10.48550/arXiv.2508.07329",
+      "authors": [
+        "Tuo Zhang",
+        "Ning Li",
+        "Xin Yuan",
+        "Wen-Chao Xu",
+        "Quan Chen",
+        "Song Guo",
+        "Hai-Jun Zhang"
+      ],
+      "priority": 1,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 1,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 430,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2606.22874",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2606.22874",
+        "id:SemanticScholar:8f819ee9e04f9aeae6618ce26a520073c6731648",
+        "id:arXiv:2606.22874",
+        "title:spotattention plugin blocksparse routing for pretrained longcontext transformers",
+        "url:https://arxiv.org/abs/2606.22874"
+      ],
+      "record": {
+        "title": "SpotAttention: Plug-In Block-Sparse Routing for Pretrained Long-Context Transformers",
+        "source_url": "https://arxiv.org/abs/2606.22874",
+        "year": 2026,
+        "published": "2026-06-22",
+        "venue": "arXiv.org",
+        "citation_count": 5,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Long contexts have become standard in pretrained LLMs, yet they remain expensive to run: prefill compute grows quadratically with sequence length, and every decode step re-reads a key-value cache that grows linearly with it. Sparse attention cuts these costs by attending only to a relevant subset of past tokens, but selecting that subset is itself expensive. We present SpotAttention, a lightweight selector that attaches to a frozen pretrained transformer and learns by KL distillation to estimate its attention distribution. The selector picks the top-K keys each query attends to, and because its estimate is a calibrated distribution, a dual top-p rule reads the per-query, per-layer budget directly from it. Across Qwen3 (dense, 4B-32B) and Qwen3.5 (hybrid linear/full attention, 4B-9B), SpotAttention matches dense accuracy at contexts up to 128K tokens, eight times the training length. Decode at L=128K runs 3.9x faster than FlashAttention and 1.8x faster than Twilight, the strongest training-free baseline. Quantizing the selector's K-cache to INT4 or FP4 microscale shrinks it 3.5x at no accuracy cost.",
+        "identifiers": [
+          "SemanticScholar:8f819ee9e04f9aeae6618ce26a520073c6731648"
+        ],
+        "semantic_scholar_id": "8f819ee9e04f9aeae6618ce26a520073c6731648",
+        "canonical_id": "arXiv:2606.22874",
+        "arxiv_id": "2606.22874",
+        "doi": "10.48550/arXiv.2606.22874",
+        "authors": [
+          "Huzama Ahmad",
+          "Se-Young Yun"
+        ],
+        "priority": 105,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 5,
+          "citation_count": 5,
+          "total": 105,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 114,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2512.00719",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2512.00719",
+        "id:SemanticScholar:4930a5bf6ae8b827516b9163e89df2a9b96368a4",
+        "id:arXiv:2512.00719",
+        "title:simple disaggregating sampling from gpu inference into a decision plane for faster distributed llm serving",
+        "url:https://arxiv.org/abs/2512.00719"
+      ],
+      "record": {
+        "title": "SIMPLE: Disaggregating Sampling from GPU Inference into a Decision Plane for Faster Distributed LLM Serving",
+        "source_url": "https://arxiv.org/abs/2512.00719",
+        "year": 2025,
+        "published": "2025-11-30",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "As large language models (LLMs) scale out with tensor parallelism (TP) and pipeline parallelism (PP) and production stacks have aggressively optimized the data plane (attention/GEMM and KV cache), sampling, the decision plane that turns logits into tokens, becomes a new bottleneck. This creates a structural holdout: sampling neither expands with TP nor balances across PP stages, so its share of iteration time grows as GPUs get faster and it caps pipeline frequency at the last stage. We present SIMPLE, a stage-agnostic, sequence-parallel, overlappable decision plane that disaggregates sampling into a CPU-side service and shrinks its runtime footprint back to a minor, hidden role. SIMPLE combines: (1) sequence-parallel sampling, which shards work along the batch dimension and removes vocabulary-axis collectives; (2) a CPU-based algorithm with column-wise penalties and truncation-first filtering to realize single-pass, linear-time kernels; and (3) speculative hot-vocab sampling (SHVS), which samples on a small hot set with rejection-correctness and uses a simple sizing model to choose the hot-vocab size that maximizes throughput. In evaluation, SIMPLE improves end-to-end throughput by up to 96% and reduces P95 latency by 20-65%. Crucially, SIMPLE requires no user-side code changes and composes with existing data-plane optimizations, unlocking scaling benefits that compound with future GPU generations.",
+        "identifiers": [
+          "SemanticScholar:4930a5bf6ae8b827516b9163e89df2a9b96368a4"
+        ],
+        "semantic_scholar_id": "4930a5bf6ae8b827516b9163e89df2a9b96368a4",
+        "canonical_id": "arXiv:2512.00719",
+        "arxiv_id": "2512.00719",
+        "doi": "10.48550/arXiv.2512.00719",
+        "authors": [
+          "Bo-Han Zhao",
+          "Zane Cao",
+          "Yong-Chao He"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 318,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2602.00397",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2602.00397",
+        "id:SemanticScholar:cff0c32bea68b793de4f4d6941db8d2857934e43",
+        "id:arXiv:2602.00397",
+        "title:fast forward accelerating llm prefill with predictive ffn sparsity",
+        "url:https://arxiv.org/abs/2602.00397"
+      ],
+      "record": {
+        "title": "Fast Forward: Accelerating LLM Prefill with Predictive FFN Sparsity",
+        "source_url": "https://arxiv.org/abs/2602.00397",
+        "year": 2026,
+        "published": "2026-01-30",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The prefill stage of large language model (LLM) inference is a key computational bottleneck for long-context workloads. At short-to-moderate context lengths (1K--16K tokens), Feed-Forward Networks (FFNs) dominate this cost, accounting for most of the total FLOPs. Existing FFN sparsification methods, designed for autoregressive decoding, fail to exploit the prefill stage's parallelism and often degrade accuracy. To address this, we introduce FastForward, a predictive sparsity framework that accelerates LLM prefill through block-wise, context-aware FFN sparsity. FastForward combines (1) a lightweight expert predictor to select high-importance neurons per block, (2) an error compensation network to correct sparsity-induced errors, and (3) a layer-wise sparsity scheduler to allocate compute based on token-mixing importance. Across LLaMA and Qwen models up to 8B parameters, FastForward delivers up to 1.45$\\times$ compute-bound speedup at 50% FFN sparsity with $<$ 6% accuracy loss compared to the dense baseline on LongBench, substantially reducing Time-to-First-Token (TTFT) for efficient, long-context LLM inference on constrained hardware.",
+        "identifiers": [
+          "SemanticScholar:cff0c32bea68b793de4f4d6941db8d2857934e43"
+        ],
+        "semantic_scholar_id": "cff0c32bea68b793de4f4d6941db8d2857934e43",
+        "canonical_id": "arXiv:2602.00397",
+        "arxiv_id": "2602.00397",
+        "doi": "10.48550/arXiv.2602.00397",
+        "authors": [
+          "Aayush Gautam",
+          "Mukul Gagrani",
+          "Junyoung Park",
+          "Min-Gu Lee",
+          "Chiris Lott",
+          "A. L. Narasimha Reddy"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 257,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.13779",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2605.13779",
+        "id:SemanticScholar:f753bfd272c7dccffe5eda0beb9e1e05fb88c5f0",
+        "id:arXiv:2605.13779",
+        "title:mint managed infrastructure for training and serving millions of llms",
+        "url:https://arxiv.org/abs/2605.13779"
+      ],
+      "record": {
+        "title": "MinT: Managed Infrastructure for Training and Serving Millions of LLMs",
+        "source_url": "https://arxiv.org/abs/2605.13779",
+        "year": 2026,
+        "published": "2026-05-13",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "We present MindLab Toolkit (MinT), a managed infrastructure system for Low-Rank Adaptation (LoRA) post-training and online serving. MinT targets a setting where many trained policies are produced over a small number of expensive base-model deployments. Instead of materializing each policy as a merged full checkpoint, MinT keeps the base model resident and moves exported LoRA adapter revisions through rollout, update, export, evaluation, serving, and rollback, hiding distributed training, serving, scheduling, and data movement behind a service interface. MinT scales this path along three axes. Scale Up extends LoRA RL to frontier-scale dense and MoE architectures, including MLA and DSA attention paths, with training and serving validated beyond 1T total parameters. Scale Down moves only the exported LoRA adapter, which can be under 1% of base-model size in rank-1 settings; adapter-only handoff reduces the measured step by 18.3x on a 4B dense model and 2.85x on a 30B MoE, while concurrent multi-policy GRPO shortens wall time by 1.77x and 1.45x without raising peak memory. Scale Out separates durable policy addressability from CPU/GPU working sets: a tensor-parallel deployment supports 10^6-scale addressable catalogs (measured single-engine sweeps through 100K) and thousand-adapter active waves at cluster scale, with cold loading treated as scheduled service work and packed MoE LoRA tensors improving live engine loading by 8.5-8.7x. MinT thus manages million-scale LoRA policy catalogs while training and serving selected adapter revisions over shared 1T-class base models.",
+        "identifiers": [
+          "SemanticScholar:f753bfd272c7dccffe5eda0beb9e1e05fb88c5f0"
+        ],
+        "semantic_scholar_id": "f753bfd272c7dccffe5eda0beb9e1e05fb88c5f0",
+        "canonical_id": "arXiv:2605.13779",
+        "arxiv_id": "2605.13779",
+        "doi": "10.48550/arXiv.2605.13779",
+        "authors": [
+          "Mind Lab"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 154,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2501.19309",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2501.19309",
+        "id:SemanticScholar:6008a7676b3cae015670217c263ec0fdfc31e38b",
+        "id:arXiv:2501.19309",
+        "title:judge decoding faster speculative sampling requires going beyond model alignment",
+        "url:https://arxiv.org/abs/2501.19309"
+      ],
+      "record": {
+        "title": "Judge Decoding: Faster Speculative Sampling Requires Going Beyond Model Alignment",
+        "source_url": "https://arxiv.org/abs/2501.19309",
+        "year": 2025,
+        "published": "2025-01-31",
+        "venue": "International Conference on Learning Representations",
+        "citation_count": 69,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The performance of large language models (LLMs) is closely linked to their underlying size, leading to ever-growing networks and hence slower inference. Speculative decoding has been proposed as a technique to accelerate autoregressive generation, leveraging a fast draft model to propose candidate tokens, which are then verified in parallel based on their likelihood under the target model. While this approach guarantees to reproduce the target output, it incurs a substantial penalty: many high-quality draft tokens are rejected, even when they represent objectively valid continuations. Indeed, we show that even powerful draft models such as GPT-4o, as well as human text cannot achieve high acceptance rates under the standard verification scheme. This severely limits the speedup potential of current speculative decoding methods, as an early rejection becomes overwhelmingly likely when solely relying on alignment of draft and target. We thus ask the following question: Can we adapt verification to recognize correct, but non-aligned replies? To this end, we draw inspiration from the LLM-as-a-judge framework, which demonstrated that LLMs are able to rate answers in a versatile way. We carefully design a dataset to elicit the same capability in the target model by training a compact module on top of the embeddings to produce ``judgements\"of the current continuation. We showcase our strategy on the Llama-3.1 family, where our 8b/405B-Judge achieves a speedup of 9x over Llama-405B, while maintaining its quality on a large range of benchmarks. These benefits remain present even in optimized inference frameworks, where our method reaches up to 141 tokens/s for 8B/70B-Judge and 129 tokens/s for 8B/405B on 2 and 8 H100s respectively.",
+        "identifiers": [
+          "SemanticScholar:6008a7676b3cae015670217c263ec0fdfc31e38b"
+        ],
+        "semantic_scholar_id": "6008a7676b3cae015670217c263ec0fdfc31e38b",
+        "canonical_id": "arXiv:2501.19309",
+        "arxiv_id": "2501.19309",
+        "doi": "10.48550/arXiv.2501.19309",
+        "authors": [
+          "Gregor Bachmann",
+          "Sotiris Anagnostidis",
+          "Albert Pumarola",
+          "Markos Georgopoulos",
+          "Artsiom Sanakoyeu",
+          "Yuming Du",
+          "Edgar Schönfeld",
+          "Ali K. Thabet",
+          "J. Kohler"
+        ],
+        "priority": 79,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 69,
+          "citation_count": 69,
+          "total": 79,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 621,
+          "matched_prestigious_venue": "International Conference on Learning Representations"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2501.19392",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2501.19392",
+        "id:SemanticScholar:e710b63080c45b275bf0ee477c7cf0f5d9a5b6e7",
+        "id:arXiv:2501.19392",
+        "title:cache me if you must adaptive keyvalue quantization for large language models",
+        "url:https://arxiv.org/abs/2501.19392"
+      ],
+      "record": {
+        "title": "Cache Me If You Must: Adaptive Key-Value Quantization for Large Language Models",
+        "source_url": "https://arxiv.org/abs/2501.19392",
+        "year": 2025,
+        "published": "2025-01-31",
+        "venue": "International Conference on Machine Learning",
+        "citation_count": 26,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Efficient real-world deployments of large language models (LLMs) rely on Key-Value (KV) caching for processing and generating long outputs, reducing the need for repetitive computation. For large contexts, Key-Value caches can take up tens of gigabytes of device memory, as they store vector representations for each token and layer. Recent work has shown that the cached vectors can be compressed through quantization, pruning or merging, but these techniques often compromise quality towards higher compression rates. In this work, we aim to improve Key&Value compression by exploiting two observations: 1) the inherent dependencies between keys and values across different layers, and 2) high-compression mechanisms for internal network states. We propose AQUA-KV, an adaptive quantization for Key-Value caches that relies on compact adapters to exploit existing dependencies between Keys and Values, and aims to\"optimally\"compress the information that cannot be predicted. AQUA-KV significantly improves compression rates, while maintaining high accuracy on state-of-the-art LLM families. On Llama 3.2 LLMs, we achieve near-lossless inference at 2-2.5 bits per value with under $1\\%$ relative error in perplexity and LongBench scores. AQUA-KV is one-shot, simple, and efficient: it can be calibrated on a single GPU within 1-6 hours, even for 70B models.",
+        "identifiers": [
+          "SemanticScholar:e710b63080c45b275bf0ee477c7cf0f5d9a5b6e7"
+        ],
+        "semantic_scholar_id": "e710b63080c45b275bf0ee477c7cf0f5d9a5b6e7",
+        "canonical_id": "arXiv:2501.19392",
+        "arxiv_id": "2501.19392",
+        "doi": "10.48550/arXiv.2501.19392",
+        "authors": [
+          "Alina Shutova",
+          "Vladimir Malinovskii",
+          "Vage Egiazarian",
+          "Denis Kuznedelev",
+          "D. Mazur",
+          "Nikita Surkov",
+          "Ivan Ermakov",
+          "Dan Alistarh"
+        ],
+        "priority": 36,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 26,
+          "citation_count": 26,
+          "total": 36,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 621,
+          "matched_prestigious_venue": "International Conference on Machine Learning"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2412.00099",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2412.00099",
+        "id:SemanticScholar:0790f66f56948017b66b4ee10279e35d641d9ba9",
+        "id:arXiv:2412.00099",
+        "title:mixture of cacheconditional experts for efficient mobile device inference",
+        "url:https://arxiv.org/abs/2412.00099"
+      ],
+      "record": {
+        "title": "Mixture of Cache-Conditional Experts for Efficient Mobile Device Inference",
+        "source_url": "https://arxiv.org/abs/2412.00099",
+        "year": 2024,
+        "published": "2024-11-27",
+        "venue": "Trans. Mach. Learn. Res.",
+        "citation_count": 17,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Mixture of Experts (MoE) LLMs have recently gained attention for their ability to enhance performance by selectively engaging specialized subnetworks or\"experts\"for each input. However, deploying MoEs on memory-constrained devices remains challenging, particularly when generating tokens sequentially with a batch size of one, as opposed to typical high-throughput settings involving long sequences or large batches. In this work, we optimize MoE on memory-constrained devices where only a subset of expert weights fit in DRAM. We introduce a novel cache-aware routing strategy that leverages expert reuse during token generation to improve cache locality. We evaluate our approach on language modeling, MMLU, and GSM8K benchmarks and present on-device results demonstrating 2$\\times$ speedups on mobile devices, offering a flexible, training-free solution to extend MoE's applicability across real-world applications.",
+        "identifiers": [
+          "SemanticScholar:0790f66f56948017b66b4ee10279e35d641d9ba9"
+        ],
+        "semantic_scholar_id": "0790f66f56948017b66b4ee10279e35d641d9ba9",
+        "canonical_id": "arXiv:2412.00099",
+        "arxiv_id": "2412.00099",
+        "doi": "10.48550/arXiv.2412.00099",
+        "authors": [
+          "Andrii Skliar",
+          "T. V. Rozendaal",
+          "Romain Lepert",
+          "Todor Boinovski",
+          "Mart van Baalen",
+          "Markus Nagel",
+          "Paul N. Whatmough",
+          "B. Bejnordi"
+        ],
+        "priority": 17,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 17,
+          "citation_count": 17,
+          "total": 17,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 686,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2508.07675",
+      "identity_tokens": [
+        "id:DOI:10.1109/infocom59046.2026.11571467",
+        "id:SemanticScholar:d40f43fcc2db511b722633927c31b66b19207e13",
+        "id:arXiv:2508.07675",
+        "title:semantic caching for lowcost llm serving from offline learning to online adaptation",
+        "url:https://arxiv.org/abs/2508.07675"
+      ],
+      "record": {
+        "title": "Semantic Caching for Low-Cost LLM Serving: From Offline Learning to Online Adaptation",
+        "source_url": "https://arxiv.org/abs/2508.07675",
+        "year": 2025,
+        "published": "2025-08-11",
+        "venue": "IEEE Conference on Computer Communications",
+        "citation_count": 15,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large Language Models (LLMs) are revolutionizing how users interact with information systems, yet their high inference cost poses serious scalability and sustainability challenges. Caching inference responses, allowing them to be retrieved without another forward pass through the LLM, has emerged as one possible solution. Traditional exact-match caching, however, overlooks the semantic similarity between queries, leading to unnecessary recomputation. Semantic caching addresses this by retrieving responses based on semantic similarity, but introduces a fundamentally different cache eviction problem: one must account for mismatch costs between incoming queries and cached responses. Moreover, key system parameters, such as query arrival probabilities and serving costs, are often unknown and must be learned over time. Existing semantic caching methods are largely ad-hoc, lacking theoretical foundations and unable to adapt to real-world uncertainty. In this paper, we present a principled, learning-based framework for semantic cache eviction under unknown query and cost distributions. We formulate both offline optimization and online learning variants of the problem based on the combinatorial multi-armed bandit framework, and develop provably efficient algorithms with state-of-the-art guarantees. We also evaluate our framework on a synthetic dataset, showing that our proposed algorithms perform matching or superior performance compared with baselines.",
+        "identifiers": [
+          "SemanticScholar:d40f43fcc2db511b722633927c31b66b19207e13"
+        ],
+        "semantic_scholar_id": "d40f43fcc2db511b722633927c31b66b19207e13",
+        "canonical_id": "arXiv:2508.07675",
+        "arxiv_id": "2508.07675",
+        "doi": "10.1109/INFOCOM59046.2026.11571467",
+        "authors": [
+          "Xutong Liu",
+          "Baran Atalar",
+          "Xiang-Xiang Dai",
+          "Jin-Hang Zuo",
+          "Si-Wei Wang",
+          "John C. S. Lui",
+          "Wei Chen",
+          "Carlee Joe-Wong"
+        ],
+        "priority": 15,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 15,
+          "citation_count": 15,
+          "total": 15,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 429,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2510.08525",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2510.08525",
+        "id:SemanticScholar:bb15d15655a41d12c714b3cd88c810ee5bb2886e",
+        "id:arXiv:2510.08525",
+        "title:which heads matter for reasoning rlguided kv cache compression",
+        "url:https://arxiv.org/abs/2510.08525"
+      ],
+      "record": {
+        "title": "Which Heads Matter for Reasoning? RL-Guided KV Cache Compression",
+        "source_url": "https://arxiv.org/abs/2510.08525",
+        "year": 2025,
+        "published": "2025-10-09",
+        "venue": "arXiv.org",
+        "citation_count": 13,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Reasoning large language models exhibit complex reasoning behaviors via extended chain-of-thought generation that are highly fragile to information loss during decoding, creating critical challenges for KV cache compression. Existing token-dropping methods directly disrupt reasoning chains by removing intermediate steps, while head-reallocation methods, designed for retrieval tasks, fail to preserve the heads essential for generative reasoning. However, no existing method can identify which attention heads genuinely maintain reasoning consistency and control generation termination. To address this, we propose RLKV, which uses reinforcement learning as a probe to discover which heads contribute to reasoning quality by directly optimizing their cache usage against actual generation outcomes. This discovery naturally leads to an efficient compression strategy: we allocate full KV cache to reasoning-critical heads while aggressively compressing others with constant-size KV cache. Experiments reveal that a fraction of heads proves essential for reasoning, enabling 20--60% cache reduction with near-lossless performance across diverse tasks and models, and up to 2.06x end-to-end speedup at 60% reduction.",
+        "identifiers": [
+          "SemanticScholar:bb15d15655a41d12c714b3cd88c810ee5bb2886e"
+        ],
+        "semantic_scholar_id": "bb15d15655a41d12c714b3cd88c810ee5bb2886e",
+        "canonical_id": "arXiv:2510.08525",
+        "arxiv_id": "2510.08525",
+        "doi": "10.48550/arXiv.2510.08525",
+        "authors": [
+          "Wenjie Du",
+          "Li Jiang",
+          "Keda Tao",
+          "Xue Liu",
+          "Huan Wang"
+        ],
+        "priority": 13,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 13,
+          "citation_count": 13,
+          "total": 13,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 370,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2510.02295",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2510.02295",
+        "id:SemanticScholar:1f1e11057f3e80d1ac73855ac06ed967739a4c71",
+        "id:arXiv:2510.02295",
+        "title:videonsa native sparse attention scales video understanding",
+        "url:https://arxiv.org/abs/2510.02295"
+      ],
+      "record": {
+        "title": "VideoNSA: Native Sparse Attention Scales Video Understanding",
+        "source_url": "https://arxiv.org/abs/2510.02295",
+        "year": 2025,
+        "published": "2025-10-02",
+        "venue": "arXiv.org",
+        "citation_count": 12,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Video understanding in multimodal language models remains limited by context length: models often miss key transition frames and struggle to maintain coherence across long time scales. To address this, we adapt Native Sparse Attention (NSA) to video-language models. Our method, VideoNSA, adapts Qwen2.5-VL through end-to-end training on a 216K video instruction dataset. We employ a hardware-aware hybrid approach to attention, preserving dense attention for text, while employing NSA for video. Compared to token-compression and training-free sparse baselines, VideoNSA achieves improved performance on long-video understanding, temporal reasoning, and spatial benchmarks. Further ablation analysis reveals four key findings: (1) reliable scaling to 128K tokens; (2) an optimal global-local attention allocation at a fixed budget; (3) task-dependent branch usage patterns; and (4) the learnable combined sparse attention help induce dynamic attention sinks. Project Page: https://enxinsong.com/VideoNSA-web/, Code: https://github.com/Espere-1119-Song/VideoNSA",
+        "identifiers": [
+          "SemanticScholar:1f1e11057f3e80d1ac73855ac06ed967739a4c71"
+        ],
+        "semantic_scholar_id": "1f1e11057f3e80d1ac73855ac06ed967739a4c71",
+        "canonical_id": "arXiv:2510.02295",
+        "arxiv_id": "2510.02295",
+        "doi": "10.48550/arXiv.2510.02295",
+        "authors": [
+          "En-Xin Song",
+          "Wen-Hao Chai",
+          "Shu-Sheng Yang",
+          "Ethan Armand",
+          "Xiaojun Shan",
+          "Hai-Yang Xu",
+          "Jian-Wen Xie",
+          "Zhuo-Wen Tu"
+        ],
+        "priority": 12,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 12,
+          "citation_count": 12,
+          "total": 12,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 377,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2504.15302",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2504.15302",
+        "id:SemanticScholar:3fb502ea8d4a05856cdf1c0f5e21bc362bec1a33",
+        "id:arXiv:2504.15302",
+        "title:ragdoll efficient offloadingbased online rag system on a single gpu",
+        "url:https://arxiv.org/abs/2504.15302"
+      ],
+      "record": {
+        "title": "RAGDoll: Efficient Offloading-based Online RAG System on a Single GPU",
+        "source_url": "https://arxiv.org/abs/2504.15302",
+        "year": 2025,
+        "published": "2025-04-17",
+        "venue": "arXiv.org",
+        "citation_count": 8,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Retrieval-Augmented Generation (RAG) enhances large language model (LLM) generation quality by incorporating relevant external knowledge. However, deploying RAG on consumer-grade platforms is challenging due to limited memory and the increasing scale of both models and knowledge bases. In this work, we introduce RAGDoll, a resource-efficient, self-adaptive RAG serving system integrated with LLMs, specifically designed for resource-constrained platforms. RAGDoll exploits the insight that RAG retrieval and LLM generation impose different computational and memory demands, which in a traditional serial workflow result in substantial idle times and poor resource utilization. Based on this insight, RAGDoll decouples retrieval and generation into parallel pipelines, incorporating joint memory placement and dynamic batch scheduling strategies to optimize resource usage across diverse hardware devices and workloads. Extensive experiments demonstrate that RAGDoll adapts effectively to various hardware configurations and LLM scales, achieving up to 3.6 times speedup in average latency compared to serial RAG systems based on vLLM.",
+        "identifiers": [
+          "SemanticScholar:3fb502ea8d4a05856cdf1c0f5e21bc362bec1a33"
+        ],
+        "semantic_scholar_id": "3fb502ea8d4a05856cdf1c0f5e21bc362bec1a33",
+        "canonical_id": "arXiv:2504.15302",
+        "arxiv_id": "2504.15302",
+        "doi": "10.48550/arXiv.2504.15302",
+        "authors": [
+          "Weiping Yu",
+          "Ningyi Liao",
+          "Siqiang Luo",
+          "Junfeng Liu"
+        ],
+        "priority": 8,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 8,
+          "citation_count": 8,
+          "total": 8,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 545,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2510.05059",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2510.05059",
+        "id:SemanticScholar:690c81d3810ef2232c9003bb4ebea2412495423b",
+        "id:arXiv:2510.05059",
+        "title:staircase streaming for lowlatency multiagent inference",
+        "url:https://arxiv.org/abs/2510.05059"
+      ],
+      "record": {
+        "title": "Staircase Streaming for Low-Latency Multi-Agent Inference",
+        "source_url": "https://arxiv.org/abs/2510.05059",
+        "year": 2025,
+        "published": "2025-10-06",
+        "venue": "arXiv.org",
+        "citation_count": 4,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Recent advances in large language models (LLMs) opened up new directions for leveraging the collective expertise of multiple LLMs. These methods, such as Mixture-of-Agents, typically employ additional inference steps to generate intermediate outputs, which are then used to produce the final response. While multi-agent inference can enhance response quality, it can significantly increase the time to first token (TTFT), posing a challenge for latency-sensitive applications and hurting user experience. To address this issue, we propose staircase streaming for low-latency multi-agent inference. Instead of waiting for the complete intermediate outputs from previous steps, we begin generating the final response as soon as we receive partial outputs from these steps. Experimental results demonstrate that staircase streaming reduces TTFT by up to 93% while maintaining response quality.",
+        "identifiers": [
+          "SemanticScholar:690c81d3810ef2232c9003bb4ebea2412495423b"
+        ],
+        "semantic_scholar_id": "690c81d3810ef2232c9003bb4ebea2412495423b",
+        "canonical_id": "arXiv:2510.05059",
+        "arxiv_id": "2510.05059",
+        "doi": "10.48550/arXiv.2510.05059",
+        "authors": [
+          "Junlin Wang",
+          "Jue Wang",
+          "Zhen Xu",
+          "B. Athiwaratkun",
+          "Bhuwan Dhingra",
+          "Ce Zhang",
+          "James Zou"
+        ],
+        "priority": 4,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 4,
+          "citation_count": 4,
+          "total": 4,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 373,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2510.14686",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2510.14686",
+        "id:SemanticScholar:36541679c153670f5bb91aa44d8eb7c15fcce316",
+        "id:arXiv:2510.14686",
+        "title:xllm technical report",
+        "url:https://arxiv.org/abs/2510.14686"
+      ],
+      "record": {
+        "title": "xLLM Technical Report",
+        "source_url": "https://arxiv.org/abs/2510.14686",
+        "year": 2025,
+        "published": "2025-10-16",
+        "venue": "arXiv.org",
+        "citation_count": 4,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "We introduce xLLM, an intelligent and efficient Large Language Model (LLM) inference framework designed for high-performance, large-scale enterprise-grade serving, with deep optimizations for diverse AI accelerators. To address these challenges, xLLM builds a novel decoupled service-engine architecture. At the service layer, xLLM-Service features an intelligent scheduling module that efficiently processes multimodal requests and co-locates online and offline tasks through unified elastic scheduling to maximize cluster utilization. This module also relies on a workload-adaptive dynamic Prefill-Decode (PD) disaggregation policy and a novel Encode-Prefill-Decode (EPD) disaggregation policy designed for multimodal inputs. Furthermore, it incorporates a distributed architecture to provide global KV Cache management and robust fault-tolerant capabilities for high availability. At the engine layer, xLLM-Engine co-optimizes system and algorithm designs to fully saturate computing resources. This is achieved through comprehensive multi-layer execution pipeline optimizations, an adaptive graph mode and an xTensor memory management. xLLM-Engine also further integrates algorithmic enhancements such as optimized speculative decoding and dynamic EPLB, collectively serving to substantially boost throughput and inference efficiency. Extensive evaluations demonstrate that xLLM delivers significantly superior performance and resource efficiency. Under identical TPOT constraints, xLLM achieves throughput up to 1.7x that of MindIE and 2.2x that of vLLM-Ascend with Qwen-series models, while maintaining an average throughput of 1.7x that of MindIE with Deepseek-series models. xLLM framework is publicly available at https://github.com/jd-opensource/xllm and https://github.com/jd-opensource/xllm-service.",
+        "identifiers": [
+          "SemanticScholar:36541679c153670f5bb91aa44d8eb7c15fcce316"
+        ],
+        "semantic_scholar_id": "36541679c153670f5bb91aa44d8eb7c15fcce316",
+        "canonical_id": "arXiv:2510.14686",
+        "arxiv_id": "2510.14686",
+        "doi": "10.48550/arXiv.2510.14686",
+        "authors": [
+          "Tong-Xuan Liu",
+          "Tao Peng",
+          "Peijun Yang",
+          "Xiaoyang Zhao",
+          "Xiusheng Lu",
+          "Weizhe Huang",
+          "Zi-Rui Liu",
+          "Xiaoyu Chen",
+          "Zhiwei Liang",
+          "Jun Xiong",
+          "Donghe Jin",
+          "Minchao Zhang",
+          "Jin-Rong Guo",
+          "Yi-Xuan Deng",
+          "Xu Zhang",
+          "Xianzhe Dong",
+          "Siqi Wang",
+          "Siyu Wu",
+          "Yu Wu",
+          "Zi-Han Tang",
+          "Yu-Xin Zeng",
+          "Yan-Shu Wang",
+          "Jin-Guang Liu",
+          "Meng Kang",
+          "Menxin Li",
+          "Yun-Long Wang",
+          "Yi-Ming Liu",
+          "Xiaolong Ma",
+          "Yi-Fan Wang",
+          "Yichen Zhang",
+          "Jin-Run Yin",
+          "Ke-Ming Zheng",
+          "Jiang-Wei Yin",
+          "Jun Zhang",
+          "Zi-Ying Wang",
+          "Xiao Lin",
+          "Liangyu Liu",
+          "Li Lan",
+          "Yang Liu",
+          "Chun Peng",
+          "Han-Bing Liu",
+          "S. Ren",
+          "Xuezhu Wang",
+          "Yunheng Shen",
+          "Yi Wang",
+          "Gu-Yue Liu",
+          "Hui Chen",
+          "Tong Yang",
+          "Hailong Yang",
+          "Jing Li",
+          "Gui-Guang Ding",
+          "Ke-Ke Zhang"
+        ],
+        "priority": 4,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 4,
+          "citation_count": 4,
+          "total": 4,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 363,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2505.14085",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2505.14085",
+        "id:SemanticScholar:d6c919161e3ee5adfb1e6298a1982c64f568020d",
+        "id:arXiv:2505.14085",
+        "title:celslm efficient largesmall language model inference and communication via cloudedge collaboration",
+        "url:https://arxiv.org/abs/2505.14085"
+      ],
+      "record": {
+        "title": "CE-LSLM: Efficient Large-Small Language Model Inference and Communication via Cloud-Edge Collaboration",
+        "source_url": "https://arxiv.org/abs/2505.14085",
+        "year": 2025,
+        "published": "2025-05-20",
+        "venue": "arXiv.org",
+        "citation_count": 3,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Emerging intelligent service scenarios in 6G communication impose stringent requirements for low latency, high reliability, and privacy preservation. Generative large language models (LLMs) are gradually becoming key enablers for the integration of semantic communication and computation. However, due to the limited computational resources of edge devices and the increasing complexity of heterogeneous terminal access, existing centralized inference approaches fail to meet the dual demands of response efficiency and data privacy in edge-side inference tasks. To address these challenges, this paper proposes a novel collaborative inference architecture that integrates cloud-based LLMs with edge-deployed small language models (SLMs), enabling dynamic scheduling and sharing of semantic-level intermediate states, and establishing a unified computation-communication paradigm tailored for 6G networks. Specifically, a key-value (KV) cache reuse mechanism is introduced to enhance the semantic understanding of edge models through contextual guidance from the cloud, while significantly reducing edge-side computational and storage overhead. Furthermore, a cross-node parallel scheduling mechanism is proposed to achieve asynchronous coordination between model state loading and decoding computation, thereby improving edge responsiveness. In addition, we investigate layer alignment and representation compression strategies between heterogeneous models to alleviate the communication burden on the edge. Experimental results demonstrate that the proposed architecture exhibits superior adaptability and scalability in terms of inference latency, system stability, and concurrent processing capacity.",
+        "identifiers": [
+          "SemanticScholar:d6c919161e3ee5adfb1e6298a1982c64f568020d"
+        ],
+        "semantic_scholar_id": "d6c919161e3ee5adfb1e6298a1982c64f568020d",
+        "canonical_id": "arXiv:2505.14085",
+        "arxiv_id": "2505.14085",
+        "doi": "10.48550/arXiv.2505.14085",
+        "authors": [
+          "Pengyan Zhu",
+          "Tingting Yang"
+        ],
+        "priority": 3,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 3,
+          "citation_count": 3,
+          "total": 3,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 512,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2509.25853",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2509.25853",
+        "id:SemanticScholar:666cff4c762f573d46563509441bb9d21d169fde",
+        "id:arXiv:2509.25853",
+        "title:sail sramaccelerated llm inference system with lookuptablebased gemv",
+        "url:https://arxiv.org/abs/2509.25853"
+      ],
+      "record": {
+        "title": "SAIL: SRAM-Accelerated LLM Inference System with Lookup-Table-based GEMV",
+        "source_url": "https://arxiv.org/abs/2509.25853",
+        "year": 2025,
+        "published": "2025-09-30",
+        "venue": "arXiv.org",
+        "citation_count": 3,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large Language Model (LLM) inference requires substantial computational resources, yet CPU-based inference remains essential for democratizing AI due to the widespread availability of CPUs compared to specialized accelerators. However, efficient LLM inference on CPUs faces two fundamental challenges: (1) existing CPU architectures struggle with low-precision arithmetic required by quantized models, where optimal bit precision varies across models and layers; and (2) the memory-bound nature of the token generation phase creates severe performance bottlenecks. To address these challenges, we propose SAIL (SRAM-Accelerated Inference of LLMs), a CPU-based inference solution that efficiently supports arbitrary bit precisions with minimal overhead. SAIL integrates three key innovations: First, we introduce Batched LUT-based General Matrix-Vector Multiplication (LUT-GEMV) with SRAM-based processing-in-memory, enabling high data reuse through lookup tables and reducing memory movement. Second, our Pattern-Aware LUT optimization identifies and exploits redundancy in input activation patterns, reducing computation cycles by 13.8\\%. Third, we develop an in-memory type conversion algorithm that leverages PIM's parallelism for efficient de-/quantization operations, alleviating pressure on CPU's vector units. Our architecture requires only 2\\% hardware overhead and a single new instruction, while maintaining dual functionality as both compute and storage units. Experimental evaluations using a modified gem5 simulator demonstrate that SAIL achieves up to 10.7x speedup and 19.9x higher tokens per dollar compared to ARM Neoverse-N1 CPU baselines, and up to 7.04x better cost efficiency than NVIDIA V100 GPUs, establishing a practical path for efficient CPU-based LLM inference.",
+        "identifiers": [
+          "SemanticScholar:666cff4c762f573d46563509441bb9d21d169fde"
+        ],
+        "semantic_scholar_id": "666cff4c762f573d46563509441bb9d21d169fde",
+        "canonical_id": "arXiv:2509.25853",
+        "arxiv_id": "2509.25853",
+        "doi": "10.48550/arXiv.2509.25853",
+        "authors": [
+          "Jingyao Zhang",
+          "Jaewoo Park",
+          "Jongeun Lee",
+          "Elaheh Sadredini"
+        ],
+        "priority": 3,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 3,
+          "citation_count": 3,
+          "total": 3,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 379,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2502.17501",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2502.17501",
+        "id:SemanticScholar:90a7cd596f5f17711ef7b7433f0aa762abd45ea8",
+        "id:arXiv:2502.17501",
+        "title:cokv optimizing kv cache allocation via cooperative game",
+        "url:https://arxiv.org/abs/2502.17501"
+      ],
+      "record": {
+        "title": "CoKV: Optimizing KV Cache Allocation via Cooperative Game",
+        "source_url": "https://arxiv.org/abs/2502.17501",
+        "year": 2025,
+        "published": "2025-02-21",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large language models (LLMs) have achieved remarkable success on various aspects of human life. However, one of the major challenges in deploying these models is the substantial memory consumption required to store key-value pairs (KV), which imposes significant resource demands. Recent research has focused on KV cache budget allocation, with several approaches proposing head-level budget distribution by evaluating the importance of individual attention heads. These methods, however, assess the importance of heads independently, overlooking their cooperative contributions within the model, which may result in a deviation from their true impact on model performance. In light of this limitation, we propose CoKV, a novel method that models the cooperation between heads in model inference as a cooperative game. By evaluating the contribution of each head within the cooperative game, CoKV can allocate the cache budget more effectively. Extensive experiments show that CoKV achieves state-of-the-art performance on the LongBench benchmark using LLama-3-8B-Instruct and Mistral-7B models.",
+        "identifiers": [
+          "SemanticScholar:90a7cd596f5f17711ef7b7433f0aa762abd45ea8"
+        ],
+        "semantic_scholar_id": "90a7cd596f5f17711ef7b7433f0aa762abd45ea8",
+        "canonical_id": "arXiv:2502.17501",
+        "arxiv_id": "2502.17501",
+        "doi": "10.48550/arXiv.2502.17501",
+        "authors": [
+          "Qiheng Sun",
+          "Hongwei Zhang",
+          "Haocheng Xia",
+          "Jia-Yao Zhang",
+          "Jin-Fei Liu",
+          "Kui Ren"
+        ],
+        "priority": 1,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 1,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 600,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2505.12566",
+      "identity_tokens": [
+        "id:DOI:10.1109/icdcsw63273.2025.00028",
+        "id:SemanticScholar:fabddcae91008fc1f5bde620eee1ad4e3a0cc70d",
+        "id:arXiv:2505.12566",
+        "title:hybridserve efficient serving of large ai models with confidencebased cascade routing",
+        "url:https://arxiv.org/abs/2505.12566"
+      ],
+      "record": {
+        "title": "HYBRIDSERVE: Efficient Serving of Large AI Models with Confidence-Based Cascade Routing",
+        "source_url": "https://arxiv.org/abs/2505.12566",
+        "year": 2025,
+        "published": "2025-05-18",
+        "venue": "International Conference on Distributed Computing Systems Workshops",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Giant Deep Neural Networks (DNNs) are central to modern cloud-based AI services but are extremely energyintensive to serve - often exceeding their training cost - due to the need for large GPU clusters to host model partitions and replicas. Existing methods trade off either energy efficiency or inference accuracy. We present HYBRIDSERVE, a hybrid DNN serving system that leverages multiple model sizes - from small to giant - and routes requests based on confidence estimates. By prioritizing smaller, energy-efficient models for confident queries, HYBRIDSERVE reduces reliance on giant model replicas while preserving accuracy. A dataflow planner further optimizes model placement and replication to maximize throughput. Experiments show that HYBRIDSERVE reduces energy consumption by up to $19.8 \\times$ over state-of-the-art serving systems, while achieving the same accuracy as the largest model alone.",
+        "identifiers": [
+          "SemanticScholar:fabddcae91008fc1f5bde620eee1ad4e3a0cc70d"
+        ],
+        "semantic_scholar_id": "fabddcae91008fc1f5bde620eee1ad4e3a0cc70d",
+        "canonical_id": "arXiv:2505.12566",
+        "arxiv_id": "2505.12566",
+        "doi": "10.1109/ICDCSW63273.2025.00028",
+        "authors": [
+          "Leyang Xue",
+          "Yao Fu",
+          "Luo Mai",
+          "Mahesh K. Marina"
+        ],
+        "priority": 1,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 1,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 514,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2508.07329",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2508.07329",
+        "id:SemanticScholar:2782bf2c95a37e89043e589edf77b98b5d0d289a",
+        "id:arXiv:2508.07329",
+        "title:efficient edge llms deployment via hessianaware quantization and cpu gpu collaborative",
+        "url:https://arxiv.org/abs/2508.07329"
+      ],
+      "record": {
+        "title": "Efficient Edge LLMs Deployment via HessianAware Quantization and CPU GPU Collaborative",
+        "source_url": "https://arxiv.org/abs/2508.07329",
+        "year": 2025,
+        "published": "2025-08-10",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "With the breakthrough progress of large language models (LLMs) in natural language processing and multimodal tasks, efficiently deploying them on resource-constrained edge devices has become a critical challenge. The Mixture of Experts (MoE) architecture enhances model capacity through sparse activation, but faces two major difficulties in practical deployment: (1) The presence of numerous outliers in activation distributions leads to severe degradation in quantization accuracy for both activations and weights, significantly impairing inference performance; (2) Under limited memory, efficient offloading and collaborative inference of expert modules struggle to balance latency and throughput. To address these issues, this paper proposes an efficient MoE edge deployment scheme based on Hessian-Aware Quantization (HAQ) and CPU-GPU collaborative inference. First, by introducing smoothed Hessian matrix quantization, we achieve joint 8-bit quantization of activations and weights, which significantly alleviates the accuracy loss caused by outliers while ensuring efficient implementation on mainstream hardware. Second, we design an expert-level collaborative offloading and inference mechanism, which, combined with expert activation path statistics, enables efficient deployment and scheduling of expert modules between CPU and GPU, greatly reducing memory footprint and inference latency. Extensive experiments validate the effectiveness of our method on mainstream large models such as the OPT series and Mixtral 8*7B: on datasets like Wikitext2 and C4, the inference accuracy of the low-bit quantized model approaches that of the full-precision model, while GPU memory usage is reduced by about 60%, and inference latency is significantly improved.",
+        "identifiers": [
+          "SemanticScholar:2782bf2c95a37e89043e589edf77b98b5d0d289a"
+        ],
+        "semantic_scholar_id": "2782bf2c95a37e89043e589edf77b98b5d0d289a",
+        "canonical_id": "arXiv:2508.07329",
+        "arxiv_id": "2508.07329",
+        "doi": "10.48550/arXiv.2508.07329",
+        "authors": [
+          "Tuo Zhang",
+          "Ning Li",
+          "Xin Yuan",
+          "Wen-Chao Xu",
+          "Quan Chen",
+          "Song Guo",
+          "Hai-Jun Zhang"
+        ],
+        "priority": 1,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 1,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 430,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:1a62fd0727175558816e0bbc2f5987a861e805f85a2639ad4ce4637c1234d88c",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

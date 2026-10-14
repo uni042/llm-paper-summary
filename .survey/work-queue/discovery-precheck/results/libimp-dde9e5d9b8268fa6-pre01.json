@@ -1,0 +1,1437 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-dde9e5d9b8268fa6-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-dde9e5d9b826",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2410.05589",
+    "arXiv:2505.03031",
+    "arXiv:2505.19201",
+    "arXiv:2505.22913",
+    "arXiv:2506.03700",
+    "arXiv:2506.08018",
+    "arXiv:2507.02659",
+    "arXiv:2507.19595",
+    "arXiv:2507.21433",
+    "arXiv:2508.02124",
+    "arXiv:2508.02751",
+    "arXiv:2510.13161",
+    "arXiv:2510.16805",
+    "arXiv:2603.04716",
+    "arXiv:2605.18753"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 15,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "beed28f8709df20ed30e118c0b1931f6e1cb1b6d",
+  "raw_search_result_count": 15,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 15,
+  "provider_progress": {
+    "requested_count": 15,
+    "status_counts": {
+      "allowed": 15,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-14T11:21:17.848853+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2410.05589",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2505.03031",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2505.19201",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2505.22913",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2506.03700",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2506.08018",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2507.02659",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2507.19595",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2507.21433",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2508.02124",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2508.02751",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2510.13161",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2510.16805",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2603.04716",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2605.18753",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "DashAttention: Differentiable and Adaptive Sparse Hierarchical Attention",
+      "source_url": "https://arxiv.org/abs/2605.18753",
+      "year": 2026,
+      "published": "2026-05-18",
+      "venue": "arXiv.org",
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Current hierarchical attention methods, such as NSA and InfLLMv2, select the top-k relevant key-value (KV) blocks based on coarse attention scores and subsequently apply fine-grained softmax attention on the selected tokens. However, the top-k operation assumes the number of relevant tokens for any query is fixed and it precludes the gradient flow between the sparse and dense stages. In this work, we propose DashAttention (Differentiable and Adaptive Sparse Hierarchical Attention), which leverages the adaptively sparse $\\alpha$-entmax transformation to select a variable number of blocks according to the current query in the first stage. This in turn provides a prior for the second-stage softmax attention, keeping the entire hierarchy fully differentiable. Contrary to other hierarchical attention methods, we show that DashAttention is non-dispersive, translating to better long-context modeling ability. Experiments with large language models (LLMs) show that DashAttention achieves comparable accuracy as full attention with 75% sparsity and a better Pareto frontier than NSA and InfLLMv2, especially in high-sparsity regimes. We also provide an efficient, GPU-aware implementation of DashAttention in Triton, which achieves a speedup of up to over FlashAttention-3 at inference time. Overall, DashAttention offers a cost-effective strategy to model long contexts.",
+      "identifiers": [
+        "SemanticScholar:a104ebe1d02f64c089064fe906f7b2236675caa8"
+      ],
+      "semantic_scholar_id": "a104ebe1d02f64c089064fe906f7b2236675caa8",
+      "canonical_id": "arXiv:2605.18753",
+      "arxiv_id": "2605.18753",
+      "doi": "10.48550/arXiv.2605.18753",
+      "authors": [
+        "Yu-Xiang Huang",
+        "Nuno Gonçalves",
+        "Federico Alvetreti",
+        "Lei Li",
+        "Xu Han",
+        "E. Ponti",
+        "André F. T. Martins",
+        "Marcos V. Treviso"
+      ],
+      "priority": 104,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 104,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 149,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "SLO-Aware Compute Resource Allocation for Prefill-Decode Disaggregated LLM Inference",
+      "source_url": "https://arxiv.org/abs/2603.04716",
+      "year": 2026,
+      "published": "2026-03-05",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Prefill-Decode (P/D) disaggregation has emerged as a widely adopted optimization strategy for Large Language Model (LLM) inference. However, there currently exists no well-established methodology for determining the optimal number of P/D hardware resources, subject to constraints on total throughput, service level objectives (SLOs), and request characteristics - specifically input and output lengths. To address this gap, we propose a hybrid approach that combines theoretical modeling with empirical benchmarking. First, we present a theoretical model for calculating P/D resource counts, which is based on total throughput requirements, request input and output lengths, as well as prefill and decode throughput. Then, to obtain the actual prefill and decode throughput under SLO constraints, we model the prefill process using M/M/1 queuing theory, deriving the achieved prefill throughput from the benchmarked maximum prefill throughput and Time-To-First-Token (TTFT). For the decode phase, we determine the decode batch sizes that meet Time-Per-Output-Token (TPOT) requirements and obtain the corresponding decode throughput through empirical measurements. Our experimental results demonstrate that the proposed method can accurately predict optimal P/D resource allocation in real-world LLM inference scenarios.",
+      "identifiers": [
+        "SemanticScholar:f86bc34e1e748b9bed0da8513962a8d4e54a40ba"
+      ],
+      "semantic_scholar_id": "f86bc34e1e748b9bed0da8513962a8d4e54a40ba",
+      "canonical_id": "arXiv:2603.04716",
+      "arxiv_id": "2603.04716",
+      "doi": "10.48550/arXiv.2603.04716",
+      "authors": [
+        "Lu-Chang Li",
+        "Dongfang Li",
+        "Bo-Zhao Gong",
+        "Yu Zhang"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 223,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Efficient attention mechanisms for large language models",
+      "source_url": "https://arxiv.org/abs/2507.19595",
+      "year": 2025,
+      "published": "2025-07-25",
+      "venue": "Patterns",
+      "citation_count": 32,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Summary Transformer-based architectures have become the prevailing backbone of large language models. However, the time and memory complexity of self-attention remains a fundamental obstacle to efficient long-context modeling. To address this limitation, recent research has introduced two principal categories of efficient attention mechanisms. Linear attention methods achieve linear complexity through kernel approximations, recurrent formulations, or fast-weight dynamics, thereby enabling scalable inference with reduced computational overhead. Sparse attention techniques, in contrast, limit attention computation to selected subsets of tokens based on fixed or dynamic strategies, enhancing efficiency while preserving contextual coverage. This survey provides a comprehensive overview of these developments, integrating both algorithmic innovations and hardware-level considerations. In addition, we analyze the incorporation of efficient attention into large-scale pre-trained language models, including both architectures built entirely on efficient attention and hybrid designs that combine local and global components. By aligning theoretical foundations with practical deployment strategies, this work aims to serve as a foundational reference for advancing the design of scalable and efficient language models.",
+      "identifiers": [
+        "SemanticScholar:877a93bd2da8dc9a7c78f8e497450a2f2a21f19b"
+      ],
+      "semantic_scholar_id": "877a93bd2da8dc9a7c78f8e497450a2f2a21f19b",
+      "canonical_id": "arXiv:2507.19595",
+      "arxiv_id": "2507.19595",
+      "doi": "10.1016/j.patter.2026.101594",
+      "authors": [
+        "Yu-Tao Sun",
+        "Zhen-Yu Li",
+        "Yi-Ke Zhang",
+        "Teng-Yu Pan",
+        "Bo Dong",
+        "Yuyi Guo",
+        "Jian-Yong Wang"
+      ],
+      "priority": 32,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 32,
+        "citation_count": 32,
+        "total": 32,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 446,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "ParallelSpec: Parallel Drafter for Efficient Speculative Decoding",
+      "source_url": "https://arxiv.org/abs/2410.05589",
+      "year": 2024,
+      "published": "2024-10-08",
+      "venue": "arXiv.org",
+      "citation_count": 25,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Speculative decoding has proven to be an efficient solution to large language model (LLM) inference, where the small drafter predicts future tokens at a low cost, and the target model is leveraged to verify them in parallel. However, most existing works still draft tokens auto-regressively to maintain sequential dependency in language modeling, which we consider a huge computational burden in speculative decoding. We present ParallelSpec, an alternative to auto-regressive drafting strategies in state-of-the-art speculative decoding approaches. In contrast to auto-regressive drafting in the speculative stage, we train a parallel drafter to serve as an efficient speculative model. ParallelSpec learns to efficiently predict multiple future tokens in parallel using a single model, and it can be integrated into any speculative decoding framework that requires aligning the output distributions of the drafter and the target model with minimal training cost. Experimental results show that ParallelSpec accelerates baseline methods in latency up to 62% on text generation benchmarks from different domains, and it achieves 2.84X overall speedup on the Llama-2-13B model using third-party evaluation criteria.",
+      "identifiers": [
+        "SemanticScholar:2d06b3601b4841a464929558d1d25b0db385f91f"
+      ],
+      "semantic_scholar_id": "2d06b3601b4841a464929558d1d25b0db385f91f",
+      "canonical_id": "arXiv:2410.05589",
+      "arxiv_id": "2410.05589",
+      "doi": "10.48550/arXiv.2410.05589",
+      "authors": [
+        "Zi-Qiang Xiao",
+        "Hong-Ming Zhang",
+        "Tao Ge",
+        "Siru Ouyang",
+        "Vicente Ordóñez",
+        "Dong Yu"
+      ],
+      "priority": 25,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 25,
+        "citation_count": 25,
+        "total": 25,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 736,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "DREAM: Drafting with Refined Target Features and Entropy-Adaptive Cross-Attention Fusion for Multimodal Speculative Decoding",
+      "source_url": "https://arxiv.org/abs/2505.19201",
+      "year": 2025,
+      "published": "2025-05-25",
+      "venue": "Neural Information Processing Systems",
+      "citation_count": 15,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Speculative decoding (SD) has emerged as a powerful method for accelerating autoregressive generation in large language models (LLMs), yet its integration into vision-language models (VLMs) remains underexplored. We introduce DREAM, a novel speculative decoding framework tailored for VLMs that combines three key innovations: (1) a cross-attention-based mechanism to inject intermediate features from the target model into the draft model for improved alignment, (2) adaptive intermediate feature selection based on attention entropy to guide efficient draft model training, and (3) visual token compression to reduce draft model latency. DREAM enables efficient, accurate, and parallel multimodal decoding with significant throughput improvement. Experiments across a diverse set of recent popular VLMs, including LLaVA, Pixtral, SmolVLM and Gemma3, demonstrate up to 3.6x speedup over conventional decoding and significantly outperform prior SD baselines in both inference throughput and speculative draft acceptance length across a broad range of multimodal benchmarks. The code is publicly available at: https://github.com/SAI-Lab-NYU/DREAM.git",
+      "identifiers": [
+        "SemanticScholar:88b7d68d84ba18d7c69c61f77d7e9aae6052e9a4"
+      ],
+      "semantic_scholar_id": "88b7d68d84ba18d7c69c61f77d7e9aae6052e9a4",
+      "canonical_id": "arXiv:2505.19201",
+      "arxiv_id": "2505.19201",
+      "doi": "10.48550/arXiv.2505.19201",
+      "authors": [
+        "Yunhai Hu",
+        "Tian-Hua Xia",
+        "Zining Liu",
+        "Rahul Raman",
+        "Xing-Yu Liu",
+        "Bo Bao",
+        "E. Sather",
+        "Vithursan Thangarasa",
+        "Sai-Qian Zhang"
+      ],
+      "priority": 25,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 15,
+        "citation_count": 15,
+        "total": 25,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 507,
+        "matched_prestigious_venue": "Neural Information Processing Systems"
+      }
+    },
+    {
+      "title": "Mustafar: Promoting Unstructured Sparsity for KV Cache Pruning in LLM Inference",
+      "source_url": "https://arxiv.org/abs/2505.22913",
+      "year": 2025,
+      "published": "2025-05-28",
+      "venue": "Neural Information Processing Systems",
+      "citation_count": 12,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "We demonstrate that unstructured sparsity significantly improves KV cache compression for LLMs, enabling sparsity levels up to 70% without compromising accuracy or requiring fine-tuning. We conduct a systematic exploration of pruning strategies and find per-token magnitude-based pruning as highly effective for both Key and Value caches under unstructured sparsity, surpassing prior structured pruning schemes. The Key cache benefits from prominent outlier elements, while the Value cache surprisingly benefits from a simple magnitude-based pruning despite its uniform distribution. KV cache size is the major bottleneck in decode performance due to high memory overhead for large context lengths. To address this, we use a bitmap-based sparse format and a custom attention kernel capable of compressing and directly computing over compressed caches pruned to arbitrary sparsity patterns, significantly accelerating memory-bound operations in decode computations and thereby compensating for the overhead of runtime pruning and compression. Our custom attention kernel coupled with the bitmap-based format delivers substantial compression of KV cache upto 45% of dense inference and thereby enables longer context length and increased tokens/sec throughput of upto 2.23x compared to dense inference. Our pruning mechanism and sparse attention kernel is available at https://github.com/dhjoo98/mustafar.",
+      "identifiers": [
+        "SemanticScholar:643c287adfaccc9d5c06496c9711beb96b2b4d3c"
+      ],
+      "semantic_scholar_id": "643c287adfaccc9d5c06496c9711beb96b2b4d3c",
+      "canonical_id": "arXiv:2505.22913",
+      "arxiv_id": "2505.22913",
+      "doi": "10.48550/arXiv.2505.22913",
+      "authors": [
+        "Donghyeon Joo",
+        "Helya Hosseini",
+        "Ramyad Hadidi",
+        "Bahar Asgari"
+      ],
+      "priority": 22,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 12,
+        "citation_count": 12,
+        "total": 22,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 504,
+        "matched_prestigious_venue": "Neural Information Processing Systems"
+      }
+    },
+    {
+      "title": "SmallKV: Small Model Assisted Compensation of KV Cache Compression for Efficient LLM Inference",
+      "source_url": "https://arxiv.org/abs/2508.02751",
+      "year": 2025,
+      "published": "2025-08-03",
+      "venue": "Neural Information Processing Systems",
+      "citation_count": 8,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "KV cache eviction has emerged as an effective solution to alleviate resource constraints faced by LLMs in long-context scenarios. However, existing token-level eviction methods often overlook two critical aspects: (1) their irreversible eviction strategy fails to adapt to dynamic attention patterns during decoding (the saliency shift problem), and (2) they treat both marginally important tokens and truly unimportant tokens equally, despite the collective significance of marginal tokens to model performance (the marginal information over-compression problem). To address these issues, we design two compensation mechanisms based on the high similarity of attention matrices between LLMs of different scales. We propose SmallKV, a small model assisted compensation method for KV cache compression. SmallKV can maintain attention matching between different-scale LLMs to: 1) assist the larger model in perceiving globally important information of attention; and 2) use the smaller model's attention scores to approximate those of marginal tokens in the larger model. Extensive experiments on benchmarks including GSM8K, BBH, MT-Bench, and LongBench demonstrate the effectiveness of SmallKV. Moreover, efficiency evaluations show that SmallKV achieves 1.75 - 2.56 times higher throughput than baseline methods, highlighting its potential for efficient and performant LLM inference in resource constrained environments.",
+      "identifiers": [
+        "SemanticScholar:bb36f730698710cb98ba8abff7ac5e120ebf27f9"
+      ],
+      "semantic_scholar_id": "bb36f730698710cb98ba8abff7ac5e120ebf27f9",
+      "canonical_id": "arXiv:2508.02751",
+      "arxiv_id": "2508.02751",
+      "doi": "10.48550/arXiv.2508.02751",
+      "authors": [
+        "Yi Zhao",
+        "Yajuan Peng",
+        "Cam-Tu Nguyen",
+        "Z. Li",
+        "Xiaoliang Wang",
+        "Hai Zhao",
+        "Xiao-Ming Fu"
+      ],
+      "priority": 18,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 8,
+        "citation_count": 8,
+        "total": 18,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 437,
+        "matched_prestigious_venue": "Neural Information Processing Systems"
+      }
+    },
+    {
+      "title": "AdaDecode: Accelerating LLM Decoding with Adaptive Layer Parallelism",
+      "source_url": "https://arxiv.org/abs/2506.03700",
+      "year": 2025,
+      "published": "2025-06-04",
+      "venue": "International Conference on Machine Learning",
+      "citation_count": 7,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLMs) are increasingly used for long-content generation (e.g., long Chain-of-Thought reasoning) where decoding efficiency becomes a critical bottleneck: Autoregressive decoding is inherently limited by its sequential token generation process, where each token must be generated before the next can be processed. This sequential dependency restricts the ability to fully leverage modern hardware's parallel processing capabilities. Existing methods like speculative decoding and layer skipping offer potential speedups but have notable drawbacks: speculative decoding relies on an auxiliary\"drafter\"model, which can be challenging to acquire and increases memory overhead, while layer skipping may introduce discrepancies in the outputs due to the missing key-value cache at skipped layers. In this work, we propose AdaDecode, which accelerates LLM decoding without requiring auxiliary models or changes to the original model parameters, while ensuring output consistency. AdaDecode leverages the insight that many tokens can accurately be generated at intermediate layers, as further layers often do not significantly alter predictions once the model reaches a certain confidence. By adaptively generating tokens at intermediate layers when confidence is high, AdaDecode enables the next token's computation to begin immediately. The remaining layer computations for early-predicted tokens are deferred and executed in parallel with subsequent tokens when needed, maximizing hardware utilization and reducing decoding latency. A final verification step ensures that early predictions match the results of standard autoregressive decoding, preserving output parity. Experiments across diverse generation tasks shows that AdaDecode consistently achieves superior decoding throughput with up to 1.73x speedup, while guaranteeing output parity with standard autoregressive decoding.",
+      "identifiers": [
+        "SemanticScholar:fcb118efd7597f05f77373fb64b1732b13733534"
+      ],
+      "semantic_scholar_id": "fcb118efd7597f05f77373fb64b1732b13733534",
+      "canonical_id": "arXiv:2506.03700",
+      "arxiv_id": "2506.03700",
+      "doi": "10.48550/arXiv.2506.03700",
+      "authors": [
+        "Zhepei Wei",
+        "Wei-Lin Chen",
+        "Xin-Yu Zhu",
+        "Yu Meng"
+      ],
+      "priority": 17,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 7,
+        "citation_count": 7,
+        "total": 17,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 497,
+        "matched_prestigious_venue": "International Conference on Machine Learning"
+      }
+    },
+    {
+      "title": "Radio: Rate-Distortion Optimization for Large Language Model Compression",
+      "source_url": "https://arxiv.org/abs/2505.03031",
+      "year": 2025,
+      "published": "2025-05-05",
+      "venue": "International Conference on Machine Learning",
+      "citation_count": 6,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "In recent years, the compression of large language models (LLMs) has emerged as a key problem in facilitating LLM deployment on resource-limited devices, reducing compute costs, and mitigating the environmental footprint due to large-scale AI infrastructure. Here, we establish the foundations of LLM quantization from a rate-distortion theory perspective and propose a quantization technique based on simple rate-distortion optimization. Our technique scales to models containing hundreds of billions of weight parameters and offers users the flexibility to compress models, post-training, to a model size or accuracy specified by the user.",
+      "identifiers": [
+        "SemanticScholar:bed7b6a2b2fb2d3335cc413645920e5e6dc4540f"
+      ],
+      "semantic_scholar_id": "bed7b6a2b2fb2d3335cc413645920e5e6dc4540f",
+      "canonical_id": "arXiv:2505.03031",
+      "arxiv_id": "2505.03031",
+      "doi": "10.48550/arXiv.2505.03031",
+      "authors": [
+        "S. Young"
+      ],
+      "priority": 16,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 6,
+        "citation_count": 6,
+        "total": 16,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 527,
+        "matched_prestigious_venue": "International Conference on Machine Learning"
+      }
+    },
+    {
+      "title": "OmniDraft: A Cross-vocabulary, Online Adaptive Drafter for On-device Speculative Decoding",
+      "source_url": "https://arxiv.org/abs/2507.02659",
+      "year": 2025,
+      "published": "2025-07-03",
+      "venue": "Neural Information Processing Systems",
+      "citation_count": 6,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Speculative decoding generally dictates having a small, efficient draft model that is either pretrained or distilled offline to a particular target model series, for instance, Llama or Qwen models. However, within online deployment settings, there are two major challenges: 1) usage of a target model that is incompatible with the draft model; 2) expectation of latency improvements over usage and time. In this work, we propose OmniDraft, a unified framework that enables a single draft model to operate with any target model and adapt dynamically to user data. We introduce an online n-gram cache with hybrid distillation fine-tuning to address the cross-vocabulary mismatch across draft and target models; and further improve decoding speed by leveraging adaptive drafting techniques. OmniDraft is particularly suitable for on-device LLM applications where model cost, efficiency and user customization are the major points of contention. This further highlights the need to tackle the above challenges and motivates the \\textit{``one drafter for all''} paradigm. We showcase the proficiency of the OmniDraft framework by performing online learning on math reasoning, coding and text generation tasks. Notably, OmniDraft enables a single Llama-68M model to pair with various target models including Vicuna-7B, Qwen2-7B and Llama3-8B models for speculative decoding; and additionally provides up to 1.5-2x speedup.",
+      "identifiers": [
+        "SemanticScholar:3ebc1be7fcbdd3165b39df1104e24f6e90c76bca"
+      ],
+      "semantic_scholar_id": "3ebc1be7fcbdd3165b39df1104e24f6e90c76bca",
+      "canonical_id": "arXiv:2507.02659",
+      "arxiv_id": "2507.02659",
+      "doi": "10.48550/arXiv.2507.02659",
+      "authors": [
+        "R. Ramakrishnan",
+        "Zhaocong Yuan",
+        "Shaojie Zhuo",
+        "Chen Feng",
+        "Yicheng Lin",
+        "Chenzheng Su",
+        "Xiaopeng Zhang"
+      ],
+      "priority": 16,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 6,
+        "citation_count": 6,
+        "total": 16,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 468,
+        "matched_prestigious_venue": "Neural Information Processing Systems"
+      }
+    },
+    {
+      "title": "Trainable Dynamic Mask Sparse Attention",
+      "source_url": "https://arxiv.org/abs/2508.02124",
+      "year": 2025,
+      "published": "2025-08-04",
+      "venue": "arXiv.org",
+      "citation_count": 8,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The increasing demand for long-context modeling in large language models (LLMs) is bottlenecked by the quadratic complexity of the standard self-attention mechanism. The community has proposed sparse attention to mitigate this issue. However, position-aware sparse attention methods rely on static sparse structures that lack adaptability to diverse query contexts, while content-aware sparse attention methods depend on heuristic key-value selection, hindering full differentiability. We introduce a trainable dynamic mask sparse attention mechanism, a method that merges the advantages of both position-aware and content-aware approaches. Dynamic Mask Attention (DMA) achieves this through three key innovations: First, it leverages value vector representations to generate content-aware dynamic masks, enabling the model to adaptively identify and attend to critical information. Second, it computes position-aware sparse weights in a hardware-friendly manner, efficiently skipping unnecessary computational regions. Finally, we demonstrate that the introduced dynamic mask and sparse weights do not obstruct gradients, supporting end-to-end training. We have validated the performance of DMA through comprehensive experiments. A large body of experimental evidence shows that DMA consistently holds a Pareto advantage over state-of-the-art sparse attention baselines in tasks including scaling laws, multi-query associative recall, standard benchmarks, and needle in a haystack tests, while also delivering up to a 10x overall speedup. These results highlight its ability to effectively balance model efficiency with long-context modeling capabilities. Our computational kernel code is now open-source at https://github.com/SmallDoges/flash-dmattn to encourage further research and application by the community.",
+      "identifiers": [
+        "SemanticScholar:3770eb141b01719c2ff83506ed478546ee64b7ad"
+      ],
+      "semantic_scholar_id": "3770eb141b01719c2ff83506ed478546ee64b7ad",
+      "canonical_id": "arXiv:2508.02124",
+      "arxiv_id": "2508.02124",
+      "doi": "10.48550/arXiv.2508.02124",
+      "authors": [
+        "Jing-Ze Shi",
+        "Yi-Fan Wu",
+        "Bing-Heng Wu",
+        "Yi-Ran Peng",
+        "Liang-Dong Wang",
+        "Guang Liu",
+        "Yu-Yu Luo"
+      ],
+      "priority": 8,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 8,
+        "citation_count": 8,
+        "total": 8,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 436,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Mixed-Precision Quantization for Language Models: Techniques and Prospects",
+      "source_url": "https://arxiv.org/abs/2510.16805",
+      "year": 2025,
+      "published": "2025-10-19",
+      "venue": "ACM Computing Surveys",
+      "citation_count": 7,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The rapid scaling of Language Models (LMs) has resulted in unprecedented computational, memory, and energy requirements, making their training and deployment increasingly unsustainable. Quantization has emerged as a crucial compression technique for reducing model size, alleviating memory bottlenecks, and accelerating inference. However, while uniform low-bit quantization (e.g., INT8, INT4) provides significant efficiency gains, it can degrade accuracy in sensitive components of transformer-based LMs. Mixed-precision quantization offers a promising alternative by selectively allocating precision across layers or within tensors to strike a balance between efficiency and accuracy. This survey provides a comprehensive overview of Mixed-Precision quantization frameworks for LMs (MXPLMs). We first review quantization fundamentals, including uniform and non-uniform quantizers, quantization granularity, and methods widely used in post-training quantization. We then categorize and compare recent MXPLM frameworks according to their bit allocation strategies and precision configurations across weights, activations, and key-value caches. A comparative analysis highlights differences in perplexity, zero-shot task performance, and deployment trade-offs. Furthermore, we contrast MXPLMs with earlier mixed-precision quantization methods for deep neural networks, identifying strategies that transfer and those that face challenges in the LM setting. Then, we discuss quantization-compatible hardware, KV cache and mixture-of-experts quantization, and summarize open issues and future directions, including hardware-aware design, activation quantization, and scalable optimization methods for billion-parameter models.",
+      "identifiers": [
+        "SemanticScholar:e9c3f9f1c7d03b58bc385acc392b5faac0b5ba12"
+      ],
+      "semantic_scholar_id": "e9c3f9f1c7d03b58bc385acc392b5faac0b5ba12",
+      "canonical_id": "arXiv:2510.16805",
+      "arxiv_id": "2510.16805",
+      "doi": "10.1145/3848510",
+      "authors": [
+        "Mariam Rakka",
+        "Marios Fournarakis",
+        "O. Krestinskaya",
+        "Jinane Bazzi",
+        "K. N. Salama",
+        "Fadi J. Kurdahi",
+        "Ahmed M. Eltawil",
+        "M. Fouda"
+      ],
+      "priority": 7,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 7,
+        "citation_count": 7,
+        "total": 7,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 360,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "KVmix: Gradient-Based Layer Importance-Aware Mixed-Precision Quantization for KV Cache",
+      "source_url": "https://arxiv.org/abs/2506.08018",
+      "year": 2025,
+      "published": "2025-05-18",
+      "venue": "AAAI Conference on Artificial Intelligence",
+      "citation_count": 5,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The high memory demands of the Key-Value (KV) Cache during the inference of Large Language Models (LLMs) severely restrict their deployment in resource-constrained platforms. Quantization can effectively alleviate the memory pressure caused by KV Cache. However, existing methods either rely on static one-size-fits-all precision allocation or fail to dynamically prioritize critical KV in long-context tasks, forcing memory-accuracy-throughput tradeoffs. In this work, we propose a novel mixed-precision quantization method for KV Cache named KVmix. KVmix leverages gradient-based importance analysis to evaluate how individual Key and Value projection matrices affect the model loss, enabling layer-specific bit-width allocation for mix-precision quantization. It dynamically prioritizes higher precision for important layers while aggressively quantizing less influential ones, achieving a tunable balance between accuracy and efficiency. KVmix introduces a dynamic long-context optimization strategy that adaptively keeps full-precision KV pairs for recent pivotal tokens and compresses older ones, achieving high-quality sequence generation with low memory usage. Additionally, KVmix provides efficient low-bit quantization and CUDA kernels to optimize computational overhead. On LLMs such as Llama and Mistral, KVmix achieves near-lossless inference performance with extremely low quantization configuration (Key 2.19bit Value 2.38bit), while delivering a remarkable 4.9× memory compression and a 5.3× speedup in inference throughput.",
+      "identifiers": [
+        "SemanticScholar:86118b0557759010a60b04bc3d2909bb86a11fc5"
+      ],
+      "semantic_scholar_id": "86118b0557759010a60b04bc3d2909bb86a11fc5",
+      "canonical_id": "arXiv:2506.08018",
+      "arxiv_id": "2506.08018",
+      "doi": "10.48550/arXiv.2506.08018",
+      "authors": [
+        "Fei Li",
+        "Song Liu",
+        "Wei-Guo Wu",
+        "Shi-Qiang Nie",
+        "Jin-Yu Wang"
+      ],
+      "priority": 5,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 5,
+        "citation_count": 5,
+        "total": 5,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 514,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "ReasonCache: Accelerating Large Reasoning Model Serving through KV Cache Sharing",
+      "source_url": "https://arxiv.org/abs/2507.21433",
+      "year": 2025,
+      "published": "2025-07-29",
+      "venue": "International Workshop on Quality of Service",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Reasoning Models (LRMs) are integral to modern AI inference systems, but their long, auto-regressive reasoning processes incur substantial KV cache memory overhead that severely limits throughput and latency, degrading QoS for concurrent users. We observe that LRMs frequently generate highly similar intermediate reasoning steps corresponding to similar KV cache states across layers. Building on this insight, we propose ReasonCache, a novel KV cache management approach that uses a Collaborative Filtering Algorithm to efficiently identify reusable KV cache blocks and enables zero-copy cache reuse. Experiments demonstrate that ReasonCache achieves a peak throughput improvement of 89.2% and 40–60% average gains while maintaining higher accuracy than existing KV cache management techniques, leading to more responsive and cost-effective AI inference services.",
+      "identifiers": [
+        "SemanticScholar:cffac68578dab28c6d0a5caf13e75aaa79589598"
+      ],
+      "semantic_scholar_id": "cffac68578dab28c6d0a5caf13e75aaa79589598",
+      "canonical_id": "arXiv:2507.21433",
+      "arxiv_id": "2507.21433",
+      "doi": "10.1109/IWQoS70441.2026.11661075",
+      "authors": [
+        "Kaiwen Chen",
+        "Xin Tan",
+        "Minchen Yu",
+        "Jingzong Li",
+        "Hong Xu"
+      ],
+      "priority": 1,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 1,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 442,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Mirror Speculative Decoding: Breaking the Serial Barrier in LLM Inference",
+      "source_url": "https://arxiv.org/abs/2510.13161",
+      "year": 2025,
+      "published": "2025-10-15",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Speculative decoding accelerates LLM inference by using a draft model to look ahead, but gains are capped by the cost of autoregressive draft generation: increasing draft size elevates acceptance rates but introduces additional latency overhead exacerbating the speed-accuracy tradeoff. Prior methods (Medusa, Hydra, EAGLE) partially reduce draft cost but either degrade acceptance or introduce overheads that limit scaling. We present Mirror Speculative Decoding (Mirror-SD), an inference algorithm that breaks the latency-acceptance tradeoff. Mirror-SD launches branch-complete rollouts from early-exit signals in parallel with the target model's suffix and explicitly maps computation across heterogeneous accelerators (GPU and NPU) to exploit cross-device parallelism. The draft speculates forward continuations for the target to verify, while the target simultaneously speculates correction paths for the draft, converting speculation into two complementary execution pipelines. To further cut draft latency without weakening acceptance semantics, we add speculative streaming so the draft emits multiple tokens per step. This dual strategy of parallel heterogeneous execution plus multi-token speculative streaming pushes speculative decoding toward its ideal regime of high acceptance with low overhead. On SpecBench with server-scale models from 14B to 66B parameters, Mirror-SD delivers consistent end-to-end gains, achieving 2.8x-5.8x wall-time speedups across diverse tasks and a 30% average relative improvement over the strongest baseline, EAGLE3.",
+      "identifiers": [
+        "SemanticScholar:feaecf4e6b19e6faa684bda930d5c0866e0f6305"
+      ],
+      "semantic_scholar_id": "feaecf4e6b19e6faa684bda930d5c0866e0f6305",
+      "canonical_id": "arXiv:2510.13161",
+      "arxiv_id": "2510.13161",
+      "doi": "10.48550/arXiv.2510.13161",
+      "authors": [
+        "Nikhil Bhendawade",
+        "Kumari Nishu",
+        "Arnav Kundu",
+        "Chris Bartels",
+        "Minsik Cho",
+        "I. Belousova"
+      ],
+      "priority": 1,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 1,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 364,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2605.18753",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2605.18753",
+        "id:SemanticScholar:a104ebe1d02f64c089064fe906f7b2236675caa8",
+        "id:arXiv:2605.18753",
+        "title:dashattention differentiable and adaptive sparse hierarchical attention",
+        "url:https://arxiv.org/abs/2605.18753"
+      ],
+      "record": {
+        "title": "DashAttention: Differentiable and Adaptive Sparse Hierarchical Attention",
+        "source_url": "https://arxiv.org/abs/2605.18753",
+        "year": 2026,
+        "published": "2026-05-18",
+        "venue": "arXiv.org",
+        "citation_count": 4,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Current hierarchical attention methods, such as NSA and InfLLMv2, select the top-k relevant key-value (KV) blocks based on coarse attention scores and subsequently apply fine-grained softmax attention on the selected tokens. However, the top-k operation assumes the number of relevant tokens for any query is fixed and it precludes the gradient flow between the sparse and dense stages. In this work, we propose DashAttention (Differentiable and Adaptive Sparse Hierarchical Attention), which leverages the adaptively sparse $\\alpha$-entmax transformation to select a variable number of blocks according to the current query in the first stage. This in turn provides a prior for the second-stage softmax attention, keeping the entire hierarchy fully differentiable. Contrary to other hierarchical attention methods, we show that DashAttention is non-dispersive, translating to better long-context modeling ability. Experiments with large language models (LLMs) show that DashAttention achieves comparable accuracy as full attention with 75% sparsity and a better Pareto frontier than NSA and InfLLMv2, especially in high-sparsity regimes. We also provide an efficient, GPU-aware implementation of DashAttention in Triton, which achieves a speedup of up to over FlashAttention-3 at inference time. Overall, DashAttention offers a cost-effective strategy to model long contexts.",
+        "identifiers": [
+          "SemanticScholar:a104ebe1d02f64c089064fe906f7b2236675caa8"
+        ],
+        "semantic_scholar_id": "a104ebe1d02f64c089064fe906f7b2236675caa8",
+        "canonical_id": "arXiv:2605.18753",
+        "arxiv_id": "2605.18753",
+        "doi": "10.48550/arXiv.2605.18753",
+        "authors": [
+          "Yu-Xiang Huang",
+          "Nuno Gonçalves",
+          "Federico Alvetreti",
+          "Lei Li",
+          "Xu Han",
+          "E. Ponti",
+          "André F. T. Martins",
+          "Marcos V. Treviso"
+        ],
+        "priority": 104,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 4,
+          "citation_count": 4,
+          "total": 104,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 149,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2603.04716",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2603.04716",
+        "id:SemanticScholar:f86bc34e1e748b9bed0da8513962a8d4e54a40ba",
+        "id:arXiv:2603.04716",
+        "title:sloaware compute resource allocation for prefilldecode disaggregated llm inference",
+        "url:https://arxiv.org/abs/2603.04716"
+      ],
+      "record": {
+        "title": "SLO-Aware Compute Resource Allocation for Prefill-Decode Disaggregated LLM Inference",
+        "source_url": "https://arxiv.org/abs/2603.04716",
+        "year": 2026,
+        "published": "2026-03-05",
+        "venue": "arXiv.org",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Prefill-Decode (P/D) disaggregation has emerged as a widely adopted optimization strategy for Large Language Model (LLM) inference. However, there currently exists no well-established methodology for determining the optimal number of P/D hardware resources, subject to constraints on total throughput, service level objectives (SLOs), and request characteristics - specifically input and output lengths. To address this gap, we propose a hybrid approach that combines theoretical modeling with empirical benchmarking. First, we present a theoretical model for calculating P/D resource counts, which is based on total throughput requirements, request input and output lengths, as well as prefill and decode throughput. Then, to obtain the actual prefill and decode throughput under SLO constraints, we model the prefill process using M/M/1 queuing theory, deriving the achieved prefill throughput from the benchmarked maximum prefill throughput and Time-To-First-Token (TTFT). For the decode phase, we determine the decode batch sizes that meet Time-Per-Output-Token (TPOT) requirements and obtain the corresponding decode throughput through empirical measurements. Our experimental results demonstrate that the proposed method can accurately predict optimal P/D resource allocation in real-world LLM inference scenarios.",
+        "identifiers": [
+          "SemanticScholar:f86bc34e1e748b9bed0da8513962a8d4e54a40ba"
+        ],
+        "semantic_scholar_id": "f86bc34e1e748b9bed0da8513962a8d4e54a40ba",
+        "canonical_id": "arXiv:2603.04716",
+        "arxiv_id": "2603.04716",
+        "doi": "10.48550/arXiv.2603.04716",
+        "authors": [
+          "Lu-Chang Li",
+          "Dongfang Li",
+          "Bo-Zhao Gong",
+          "Yu Zhang"
+        ],
+        "priority": 102,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 102,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 223,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2507.19595",
+      "identity_tokens": [
+        "id:DOI:10.1016/j.patter.2026.101594",
+        "id:SemanticScholar:877a93bd2da8dc9a7c78f8e497450a2f2a21f19b",
+        "id:arXiv:2507.19595",
+        "title:efficient attention mechanisms for large language models",
+        "url:https://arxiv.org/abs/2507.19595"
+      ],
+      "record": {
+        "title": "Efficient attention mechanisms for large language models",
+        "source_url": "https://arxiv.org/abs/2507.19595",
+        "year": 2025,
+        "published": "2025-07-25",
+        "venue": "Patterns",
+        "citation_count": 32,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Summary Transformer-based architectures have become the prevailing backbone of large language models. However, the time and memory complexity of self-attention remains a fundamental obstacle to efficient long-context modeling. To address this limitation, recent research has introduced two principal categories of efficient attention mechanisms. Linear attention methods achieve linear complexity through kernel approximations, recurrent formulations, or fast-weight dynamics, thereby enabling scalable inference with reduced computational overhead. Sparse attention techniques, in contrast, limit attention computation to selected subsets of tokens based on fixed or dynamic strategies, enhancing efficiency while preserving contextual coverage. This survey provides a comprehensive overview of these developments, integrating both algorithmic innovations and hardware-level considerations. In addition, we analyze the incorporation of efficient attention into large-scale pre-trained language models, including both architectures built entirely on efficient attention and hybrid designs that combine local and global components. By aligning theoretical foundations with practical deployment strategies, this work aims to serve as a foundational reference for advancing the design of scalable and efficient language models.",
+        "identifiers": [
+          "SemanticScholar:877a93bd2da8dc9a7c78f8e497450a2f2a21f19b"
+        ],
+        "semantic_scholar_id": "877a93bd2da8dc9a7c78f8e497450a2f2a21f19b",
+        "canonical_id": "arXiv:2507.19595",
+        "arxiv_id": "2507.19595",
+        "doi": "10.1016/j.patter.2026.101594",
+        "authors": [
+          "Yu-Tao Sun",
+          "Zhen-Yu Li",
+          "Yi-Ke Zhang",
+          "Teng-Yu Pan",
+          "Bo Dong",
+          "Yuyi Guo",
+          "Jian-Yong Wang"
+        ],
+        "priority": 32,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 32,
+          "citation_count": 32,
+          "total": 32,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 446,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2410.05589",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2410.05589",
+        "id:SemanticScholar:2d06b3601b4841a464929558d1d25b0db385f91f",
+        "id:arXiv:2410.05589",
+        "title:parallelspec parallel drafter for efficient speculative decoding",
+        "url:https://arxiv.org/abs/2410.05589"
+      ],
+      "record": {
+        "title": "ParallelSpec: Parallel Drafter for Efficient Speculative Decoding",
+        "source_url": "https://arxiv.org/abs/2410.05589",
+        "year": 2024,
+        "published": "2024-10-08",
+        "venue": "arXiv.org",
+        "citation_count": 25,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Speculative decoding has proven to be an efficient solution to large language model (LLM) inference, where the small drafter predicts future tokens at a low cost, and the target model is leveraged to verify them in parallel. However, most existing works still draft tokens auto-regressively to maintain sequential dependency in language modeling, which we consider a huge computational burden in speculative decoding. We present ParallelSpec, an alternative to auto-regressive drafting strategies in state-of-the-art speculative decoding approaches. In contrast to auto-regressive drafting in the speculative stage, we train a parallel drafter to serve as an efficient speculative model. ParallelSpec learns to efficiently predict multiple future tokens in parallel using a single model, and it can be integrated into any speculative decoding framework that requires aligning the output distributions of the drafter and the target model with minimal training cost. Experimental results show that ParallelSpec accelerates baseline methods in latency up to 62% on text generation benchmarks from different domains, and it achieves 2.84X overall speedup on the Llama-2-13B model using third-party evaluation criteria.",
+        "identifiers": [
+          "SemanticScholar:2d06b3601b4841a464929558d1d25b0db385f91f"
+        ],
+        "semantic_scholar_id": "2d06b3601b4841a464929558d1d25b0db385f91f",
+        "canonical_id": "arXiv:2410.05589",
+        "arxiv_id": "2410.05589",
+        "doi": "10.48550/arXiv.2410.05589",
+        "authors": [
+          "Zi-Qiang Xiao",
+          "Hong-Ming Zhang",
+          "Tao Ge",
+          "Siru Ouyang",
+          "Vicente Ordóñez",
+          "Dong Yu"
+        ],
+        "priority": 25,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 25,
+          "citation_count": 25,
+          "total": 25,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 736,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2505.19201",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2505.19201",
+        "id:SemanticScholar:88b7d68d84ba18d7c69c61f77d7e9aae6052e9a4",
+        "id:arXiv:2505.19201",
+        "title:dream drafting with refined target features and entropyadaptive crossattention fusion for multimodal speculative decoding",
+        "url:https://arxiv.org/abs/2505.19201"
+      ],
+      "record": {
+        "title": "DREAM: Drafting with Refined Target Features and Entropy-Adaptive Cross-Attention Fusion for Multimodal Speculative Decoding",
+        "source_url": "https://arxiv.org/abs/2505.19201",
+        "year": 2025,
+        "published": "2025-05-25",
+        "venue": "Neural Information Processing Systems",
+        "citation_count": 15,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Speculative decoding (SD) has emerged as a powerful method for accelerating autoregressive generation in large language models (LLMs), yet its integration into vision-language models (VLMs) remains underexplored. We introduce DREAM, a novel speculative decoding framework tailored for VLMs that combines three key innovations: (1) a cross-attention-based mechanism to inject intermediate features from the target model into the draft model for improved alignment, (2) adaptive intermediate feature selection based on attention entropy to guide efficient draft model training, and (3) visual token compression to reduce draft model latency. DREAM enables efficient, accurate, and parallel multimodal decoding with significant throughput improvement. Experiments across a diverse set of recent popular VLMs, including LLaVA, Pixtral, SmolVLM and Gemma3, demonstrate up to 3.6x speedup over conventional decoding and significantly outperform prior SD baselines in both inference throughput and speculative draft acceptance length across a broad range of multimodal benchmarks. The code is publicly available at: https://github.com/SAI-Lab-NYU/DREAM.git",
+        "identifiers": [
+          "SemanticScholar:88b7d68d84ba18d7c69c61f77d7e9aae6052e9a4"
+        ],
+        "semantic_scholar_id": "88b7d68d84ba18d7c69c61f77d7e9aae6052e9a4",
+        "canonical_id": "arXiv:2505.19201",
+        "arxiv_id": "2505.19201",
+        "doi": "10.48550/arXiv.2505.19201",
+        "authors": [
+          "Yunhai Hu",
+          "Tian-Hua Xia",
+          "Zining Liu",
+          "Rahul Raman",
+          "Xing-Yu Liu",
+          "Bo Bao",
+          "E. Sather",
+          "Vithursan Thangarasa",
+          "Sai-Qian Zhang"
+        ],
+        "priority": 25,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 15,
+          "citation_count": 15,
+          "total": 25,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 507,
+          "matched_prestigious_venue": "Neural Information Processing Systems"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2505.22913",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2505.22913",
+        "id:SemanticScholar:643c287adfaccc9d5c06496c9711beb96b2b4d3c",
+        "id:arXiv:2505.22913",
+        "title:mustafar promoting unstructured sparsity for kv cache pruning in llm inference",
+        "url:https://arxiv.org/abs/2505.22913"
+      ],
+      "record": {
+        "title": "Mustafar: Promoting Unstructured Sparsity for KV Cache Pruning in LLM Inference",
+        "source_url": "https://arxiv.org/abs/2505.22913",
+        "year": 2025,
+        "published": "2025-05-28",
+        "venue": "Neural Information Processing Systems",
+        "citation_count": 12,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "We demonstrate that unstructured sparsity significantly improves KV cache compression for LLMs, enabling sparsity levels up to 70% without compromising accuracy or requiring fine-tuning. We conduct a systematic exploration of pruning strategies and find per-token magnitude-based pruning as highly effective for both Key and Value caches under unstructured sparsity, surpassing prior structured pruning schemes. The Key cache benefits from prominent outlier elements, while the Value cache surprisingly benefits from a simple magnitude-based pruning despite its uniform distribution. KV cache size is the major bottleneck in decode performance due to high memory overhead for large context lengths. To address this, we use a bitmap-based sparse format and a custom attention kernel capable of compressing and directly computing over compressed caches pruned to arbitrary sparsity patterns, significantly accelerating memory-bound operations in decode computations and thereby compensating for the overhead of runtime pruning and compression. Our custom attention kernel coupled with the bitmap-based format delivers substantial compression of KV cache upto 45% of dense inference and thereby enables longer context length and increased tokens/sec throughput of upto 2.23x compared to dense inference. Our pruning mechanism and sparse attention kernel is available at https://github.com/dhjoo98/mustafar.",
+        "identifiers": [
+          "SemanticScholar:643c287adfaccc9d5c06496c9711beb96b2b4d3c"
+        ],
+        "semantic_scholar_id": "643c287adfaccc9d5c06496c9711beb96b2b4d3c",
+        "canonical_id": "arXiv:2505.22913",
+        "arxiv_id": "2505.22913",
+        "doi": "10.48550/arXiv.2505.22913",
+        "authors": [
+          "Donghyeon Joo",
+          "Helya Hosseini",
+          "Ramyad Hadidi",
+          "Bahar Asgari"
+        ],
+        "priority": 22,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 12,
+          "citation_count": 12,
+          "total": 22,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 504,
+          "matched_prestigious_venue": "Neural Information Processing Systems"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2508.02751",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2508.02751",
+        "id:SemanticScholar:bb36f730698710cb98ba8abff7ac5e120ebf27f9",
+        "id:arXiv:2508.02751",
+        "title:smallkv small model assisted compensation of kv cache compression for efficient llm inference",
+        "url:https://arxiv.org/abs/2508.02751"
+      ],
+      "record": {
+        "title": "SmallKV: Small Model Assisted Compensation of KV Cache Compression for Efficient LLM Inference",
+        "source_url": "https://arxiv.org/abs/2508.02751",
+        "year": 2025,
+        "published": "2025-08-03",
+        "venue": "Neural Information Processing Systems",
+        "citation_count": 8,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "KV cache eviction has emerged as an effective solution to alleviate resource constraints faced by LLMs in long-context scenarios. However, existing token-level eviction methods often overlook two critical aspects: (1) their irreversible eviction strategy fails to adapt to dynamic attention patterns during decoding (the saliency shift problem), and (2) they treat both marginally important tokens and truly unimportant tokens equally, despite the collective significance of marginal tokens to model performance (the marginal information over-compression problem). To address these issues, we design two compensation mechanisms based on the high similarity of attention matrices between LLMs of different scales. We propose SmallKV, a small model assisted compensation method for KV cache compression. SmallKV can maintain attention matching between different-scale LLMs to: 1) assist the larger model in perceiving globally important information of attention; and 2) use the smaller model's attention scores to approximate those of marginal tokens in the larger model. Extensive experiments on benchmarks including GSM8K, BBH, MT-Bench, and LongBench demonstrate the effectiveness of SmallKV. Moreover, efficiency evaluations show that SmallKV achieves 1.75 - 2.56 times higher throughput than baseline methods, highlighting its potential for efficient and performant LLM inference in resource constrained environments.",
+        "identifiers": [
+          "SemanticScholar:bb36f730698710cb98ba8abff7ac5e120ebf27f9"
+        ],
+        "semantic_scholar_id": "bb36f730698710cb98ba8abff7ac5e120ebf27f9",
+        "canonical_id": "arXiv:2508.02751",
+        "arxiv_id": "2508.02751",
+        "doi": "10.48550/arXiv.2508.02751",
+        "authors": [
+          "Yi Zhao",
+          "Yajuan Peng",
+          "Cam-Tu Nguyen",
+          "Z. Li",
+          "Xiaoliang Wang",
+          "Hai Zhao",
+          "Xiao-Ming Fu"
+        ],
+        "priority": 18,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 8,
+          "citation_count": 8,
+          "total": 18,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 437,
+          "matched_prestigious_venue": "Neural Information Processing Systems"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2506.03700",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2506.03700",
+        "id:SemanticScholar:fcb118efd7597f05f77373fb64b1732b13733534",
+        "id:arXiv:2506.03700",
+        "title:adadecode accelerating llm decoding with adaptive layer parallelism",
+        "url:https://arxiv.org/abs/2506.03700"
+      ],
+      "record": {
+        "title": "AdaDecode: Accelerating LLM Decoding with Adaptive Layer Parallelism",
+        "source_url": "https://arxiv.org/abs/2506.03700",
+        "year": 2025,
+        "published": "2025-06-04",
+        "venue": "International Conference on Machine Learning",
+        "citation_count": 7,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large language models (LLMs) are increasingly used for long-content generation (e.g., long Chain-of-Thought reasoning) where decoding efficiency becomes a critical bottleneck: Autoregressive decoding is inherently limited by its sequential token generation process, where each token must be generated before the next can be processed. This sequential dependency restricts the ability to fully leverage modern hardware's parallel processing capabilities. Existing methods like speculative decoding and layer skipping offer potential speedups but have notable drawbacks: speculative decoding relies on an auxiliary\"drafter\"model, which can be challenging to acquire and increases memory overhead, while layer skipping may introduce discrepancies in the outputs due to the missing key-value cache at skipped layers. In this work, we propose AdaDecode, which accelerates LLM decoding without requiring auxiliary models or changes to the original model parameters, while ensuring output consistency. AdaDecode leverages the insight that many tokens can accurately be generated at intermediate layers, as further layers often do not significantly alter predictions once the model reaches a certain confidence. By adaptively generating tokens at intermediate layers when confidence is high, AdaDecode enables the next token's computation to begin immediately. The remaining layer computations for early-predicted tokens are deferred and executed in parallel with subsequent tokens when needed, maximizing hardware utilization and reducing decoding latency. A final verification step ensures that early predictions match the results of standard autoregressive decoding, preserving output parity. Experiments across diverse generation tasks shows that AdaDecode consistently achieves superior decoding throughput with up to 1.73x speedup, while guaranteeing output parity with standard autoregressive decoding.",
+        "identifiers": [
+          "SemanticScholar:fcb118efd7597f05f77373fb64b1732b13733534"
+        ],
+        "semantic_scholar_id": "fcb118efd7597f05f77373fb64b1732b13733534",
+        "canonical_id": "arXiv:2506.03700",
+        "arxiv_id": "2506.03700",
+        "doi": "10.48550/arXiv.2506.03700",
+        "authors": [
+          "Zhepei Wei",
+          "Wei-Lin Chen",
+          "Xin-Yu Zhu",
+          "Yu Meng"
+        ],
+        "priority": 17,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 7,
+          "citation_count": 7,
+          "total": 17,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 497,
+          "matched_prestigious_venue": "International Conference on Machine Learning"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2505.03031",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2505.03031",
+        "id:SemanticScholar:bed7b6a2b2fb2d3335cc413645920e5e6dc4540f",
+        "id:arXiv:2505.03031",
+        "title:radio ratedistortion optimization for large language model compression",
+        "url:https://arxiv.org/abs/2505.03031"
+      ],
+      "record": {
+        "title": "Radio: Rate-Distortion Optimization for Large Language Model Compression",
+        "source_url": "https://arxiv.org/abs/2505.03031",
+        "year": 2025,
+        "published": "2025-05-05",
+        "venue": "International Conference on Machine Learning",
+        "citation_count": 6,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "In recent years, the compression of large language models (LLMs) has emerged as a key problem in facilitating LLM deployment on resource-limited devices, reducing compute costs, and mitigating the environmental footprint due to large-scale AI infrastructure. Here, we establish the foundations of LLM quantization from a rate-distortion theory perspective and propose a quantization technique based on simple rate-distortion optimization. Our technique scales to models containing hundreds of billions of weight parameters and offers users the flexibility to compress models, post-training, to a model size or accuracy specified by the user.",
+        "identifiers": [
+          "SemanticScholar:bed7b6a2b2fb2d3335cc413645920e5e6dc4540f"
+        ],
+        "semantic_scholar_id": "bed7b6a2b2fb2d3335cc413645920e5e6dc4540f",
+        "canonical_id": "arXiv:2505.03031",
+        "arxiv_id": "2505.03031",
+        "doi": "10.48550/arXiv.2505.03031",
+        "authors": [
+          "S. Young"
+        ],
+        "priority": 16,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 6,
+          "citation_count": 6,
+          "total": 16,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 527,
+          "matched_prestigious_venue": "International Conference on Machine Learning"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2507.02659",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2507.02659",
+        "id:SemanticScholar:3ebc1be7fcbdd3165b39df1104e24f6e90c76bca",
+        "id:arXiv:2507.02659",
+        "title:omnidraft a crossvocabulary online adaptive drafter for ondevice speculative decoding",
+        "url:https://arxiv.org/abs/2507.02659"
+      ],
+      "record": {
+        "title": "OmniDraft: A Cross-vocabulary, Online Adaptive Drafter for On-device Speculative Decoding",
+        "source_url": "https://arxiv.org/abs/2507.02659",
+        "year": 2025,
+        "published": "2025-07-03",
+        "venue": "Neural Information Processing Systems",
+        "citation_count": 6,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Speculative decoding generally dictates having a small, efficient draft model that is either pretrained or distilled offline to a particular target model series, for instance, Llama or Qwen models. However, within online deployment settings, there are two major challenges: 1) usage of a target model that is incompatible with the draft model; 2) expectation of latency improvements over usage and time. In this work, we propose OmniDraft, a unified framework that enables a single draft model to operate with any target model and adapt dynamically to user data. We introduce an online n-gram cache with hybrid distillation fine-tuning to address the cross-vocabulary mismatch across draft and target models; and further improve decoding speed by leveraging adaptive drafting techniques. OmniDraft is particularly suitable for on-device LLM applications where model cost, efficiency and user customization are the major points of contention. This further highlights the need to tackle the above challenges and motivates the \\textit{``one drafter for all''} paradigm. We showcase the proficiency of the OmniDraft framework by performing online learning on math reasoning, coding and text generation tasks. Notably, OmniDraft enables a single Llama-68M model to pair with various target models including Vicuna-7B, Qwen2-7B and Llama3-8B models for speculative decoding; and additionally provides up to 1.5-2x speedup.",
+        "identifiers": [
+          "SemanticScholar:3ebc1be7fcbdd3165b39df1104e24f6e90c76bca"
+        ],
+        "semantic_scholar_id": "3ebc1be7fcbdd3165b39df1104e24f6e90c76bca",
+        "canonical_id": "arXiv:2507.02659",
+        "arxiv_id": "2507.02659",
+        "doi": "10.48550/arXiv.2507.02659",
+        "authors": [
+          "R. Ramakrishnan",
+          "Zhaocong Yuan",
+          "Shaojie Zhuo",
+          "Chen Feng",
+          "Yicheng Lin",
+          "Chenzheng Su",
+          "Xiaopeng Zhang"
+        ],
+        "priority": 16,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 6,
+          "citation_count": 6,
+          "total": 16,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 468,
+          "matched_prestigious_venue": "Neural Information Processing Systems"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2508.02124",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2508.02124",
+        "id:SemanticScholar:3770eb141b01719c2ff83506ed478546ee64b7ad",
+        "id:arXiv:2508.02124",
+        "title:trainable dynamic mask sparse attention",
+        "url:https://arxiv.org/abs/2508.02124"
+      ],
+      "record": {
+        "title": "Trainable Dynamic Mask Sparse Attention",
+        "source_url": "https://arxiv.org/abs/2508.02124",
+        "year": 2025,
+        "published": "2025-08-04",
+        "venue": "arXiv.org",
+        "citation_count": 8,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The increasing demand for long-context modeling in large language models (LLMs) is bottlenecked by the quadratic complexity of the standard self-attention mechanism. The community has proposed sparse attention to mitigate this issue. However, position-aware sparse attention methods rely on static sparse structures that lack adaptability to diverse query contexts, while content-aware sparse attention methods depend on heuristic key-value selection, hindering full differentiability. We introduce a trainable dynamic mask sparse attention mechanism, a method that merges the advantages of both position-aware and content-aware approaches. Dynamic Mask Attention (DMA) achieves this through three key innovations: First, it leverages value vector representations to generate content-aware dynamic masks, enabling the model to adaptively identify and attend to critical information. Second, it computes position-aware sparse weights in a hardware-friendly manner, efficiently skipping unnecessary computational regions. Finally, we demonstrate that the introduced dynamic mask and sparse weights do not obstruct gradients, supporting end-to-end training. We have validated the performance of DMA through comprehensive experiments. A large body of experimental evidence shows that DMA consistently holds a Pareto advantage over state-of-the-art sparse attention baselines in tasks including scaling laws, multi-query associative recall, standard benchmarks, and needle in a haystack tests, while also delivering up to a 10x overall speedup. These results highlight its ability to effectively balance model efficiency with long-context modeling capabilities. Our computational kernel code is now open-source at https://github.com/SmallDoges/flash-dmattn to encourage further research and application by the community.",
+        "identifiers": [
+          "SemanticScholar:3770eb141b01719c2ff83506ed478546ee64b7ad"
+        ],
+        "semantic_scholar_id": "3770eb141b01719c2ff83506ed478546ee64b7ad",
+        "canonical_id": "arXiv:2508.02124",
+        "arxiv_id": "2508.02124",
+        "doi": "10.48550/arXiv.2508.02124",
+        "authors": [
+          "Jing-Ze Shi",
+          "Yi-Fan Wu",
+          "Bing-Heng Wu",
+          "Yi-Ran Peng",
+          "Liang-Dong Wang",
+          "Guang Liu",
+          "Yu-Yu Luo"
+        ],
+        "priority": 8,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 8,
+          "citation_count": 8,
+          "total": 8,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 436,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2510.16805",
+      "identity_tokens": [
+        "id:DOI:10.1145/3848510",
+        "id:SemanticScholar:e9c3f9f1c7d03b58bc385acc392b5faac0b5ba12",
+        "id:arXiv:2510.16805",
+        "title:mixedprecision quantization for language models techniques and prospects",
+        "url:https://arxiv.org/abs/2510.16805"
+      ],
+      "record": {
+        "title": "Mixed-Precision Quantization for Language Models: Techniques and Prospects",
+        "source_url": "https://arxiv.org/abs/2510.16805",
+        "year": 2025,
+        "published": "2025-10-19",
+        "venue": "ACM Computing Surveys",
+        "citation_count": 7,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The rapid scaling of Language Models (LMs) has resulted in unprecedented computational, memory, and energy requirements, making their training and deployment increasingly unsustainable. Quantization has emerged as a crucial compression technique for reducing model size, alleviating memory bottlenecks, and accelerating inference. However, while uniform low-bit quantization (e.g., INT8, INT4) provides significant efficiency gains, it can degrade accuracy in sensitive components of transformer-based LMs. Mixed-precision quantization offers a promising alternative by selectively allocating precision across layers or within tensors to strike a balance between efficiency and accuracy. This survey provides a comprehensive overview of Mixed-Precision quantization frameworks for LMs (MXPLMs). We first review quantization fundamentals, including uniform and non-uniform quantizers, quantization granularity, and methods widely used in post-training quantization. We then categorize and compare recent MXPLM frameworks according to their bit allocation strategies and precision configurations across weights, activations, and key-value caches. A comparative analysis highlights differences in perplexity, zero-shot task performance, and deployment trade-offs. Furthermore, we contrast MXPLMs with earlier mixed-precision quantization methods for deep neural networks, identifying strategies that transfer and those that face challenges in the LM setting. Then, we discuss quantization-compatible hardware, KV cache and mixture-of-experts quantization, and summarize open issues and future directions, including hardware-aware design, activation quantization, and scalable optimization methods for billion-parameter models.",
+        "identifiers": [
+          "SemanticScholar:e9c3f9f1c7d03b58bc385acc392b5faac0b5ba12"
+        ],
+        "semantic_scholar_id": "e9c3f9f1c7d03b58bc385acc392b5faac0b5ba12",
+        "canonical_id": "arXiv:2510.16805",
+        "arxiv_id": "2510.16805",
+        "doi": "10.1145/3848510",
+        "authors": [
+          "Mariam Rakka",
+          "Marios Fournarakis",
+          "O. Krestinskaya",
+          "Jinane Bazzi",
+          "K. N. Salama",
+          "Fadi J. Kurdahi",
+          "Ahmed M. Eltawil",
+          "M. Fouda"
+        ],
+        "priority": 7,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 7,
+          "citation_count": 7,
+          "total": 7,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 360,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2506.08018",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2506.08018",
+        "id:SemanticScholar:86118b0557759010a60b04bc3d2909bb86a11fc5",
+        "id:arXiv:2506.08018",
+        "title:kvmix gradientbased layer importanceaware mixedprecision quantization for kv cache",
+        "url:https://arxiv.org/abs/2506.08018"
+      ],
+      "record": {
+        "title": "KVmix: Gradient-Based Layer Importance-Aware Mixed-Precision Quantization for KV Cache",
+        "source_url": "https://arxiv.org/abs/2506.08018",
+        "year": 2025,
+        "published": "2025-05-18",
+        "venue": "AAAI Conference on Artificial Intelligence",
+        "citation_count": 5,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The high memory demands of the Key-Value (KV) Cache during the inference of Large Language Models (LLMs) severely restrict their deployment in resource-constrained platforms. Quantization can effectively alleviate the memory pressure caused by KV Cache. However, existing methods either rely on static one-size-fits-all precision allocation or fail to dynamically prioritize critical KV in long-context tasks, forcing memory-accuracy-throughput tradeoffs. In this work, we propose a novel mixed-precision quantization method for KV Cache named KVmix. KVmix leverages gradient-based importance analysis to evaluate how individual Key and Value projection matrices affect the model loss, enabling layer-specific bit-width allocation for mix-precision quantization. It dynamically prioritizes higher precision for important layers while aggressively quantizing less influential ones, achieving a tunable balance between accuracy and efficiency. KVmix introduces a dynamic long-context optimization strategy that adaptively keeps full-precision KV pairs for recent pivotal tokens and compresses older ones, achieving high-quality sequence generation with low memory usage. Additionally, KVmix provides efficient low-bit quantization and CUDA kernels to optimize computational overhead. On LLMs such as Llama and Mistral, KVmix achieves near-lossless inference performance with extremely low quantization configuration (Key 2.19bit Value 2.38bit), while delivering a remarkable 4.9× memory compression and a 5.3× speedup in inference throughput.",
+        "identifiers": [
+          "SemanticScholar:86118b0557759010a60b04bc3d2909bb86a11fc5"
+        ],
+        "semantic_scholar_id": "86118b0557759010a60b04bc3d2909bb86a11fc5",
+        "canonical_id": "arXiv:2506.08018",
+        "arxiv_id": "2506.08018",
+        "doi": "10.48550/arXiv.2506.08018",
+        "authors": [
+          "Fei Li",
+          "Song Liu",
+          "Wei-Guo Wu",
+          "Shi-Qiang Nie",
+          "Jin-Yu Wang"
+        ],
+        "priority": 5,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 5,
+          "citation_count": 5,
+          "total": 5,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 514,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2507.21433",
+      "identity_tokens": [
+        "id:DOI:10.1109/iwqos70441.2026.11661075",
+        "id:SemanticScholar:cffac68578dab28c6d0a5caf13e75aaa79589598",
+        "id:arXiv:2507.21433",
+        "title:reasoncache accelerating large reasoning model serving through kv cache sharing",
+        "url:https://arxiv.org/abs/2507.21433"
+      ],
+      "record": {
+        "title": "ReasonCache: Accelerating Large Reasoning Model Serving through KV Cache Sharing",
+        "source_url": "https://arxiv.org/abs/2507.21433",
+        "year": 2025,
+        "published": "2025-07-29",
+        "venue": "International Workshop on Quality of Service",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large Reasoning Models (LRMs) are integral to modern AI inference systems, but their long, auto-regressive reasoning processes incur substantial KV cache memory overhead that severely limits throughput and latency, degrading QoS for concurrent users. We observe that LRMs frequently generate highly similar intermediate reasoning steps corresponding to similar KV cache states across layers. Building on this insight, we propose ReasonCache, a novel KV cache management approach that uses a Collaborative Filtering Algorithm to efficiently identify reusable KV cache blocks and enables zero-copy cache reuse. Experiments demonstrate that ReasonCache achieves a peak throughput improvement of 89.2% and 40–60% average gains while maintaining higher accuracy than existing KV cache management techniques, leading to more responsive and cost-effective AI inference services.",
+        "identifiers": [
+          "SemanticScholar:cffac68578dab28c6d0a5caf13e75aaa79589598"
+        ],
+        "semantic_scholar_id": "cffac68578dab28c6d0a5caf13e75aaa79589598",
+        "canonical_id": "arXiv:2507.21433",
+        "arxiv_id": "2507.21433",
+        "doi": "10.1109/IWQoS70441.2026.11661075",
+        "authors": [
+          "Kaiwen Chen",
+          "Xin Tan",
+          "Minchen Yu",
+          "Jingzong Li",
+          "Hong Xu"
+        ],
+        "priority": 1,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 1,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 442,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2510.13161",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2510.13161",
+        "id:SemanticScholar:feaecf4e6b19e6faa684bda930d5c0866e0f6305",
+        "id:arXiv:2510.13161",
+        "title:mirror speculative decoding breaking the serial barrier in llm inference",
+        "url:https://arxiv.org/abs/2510.13161"
+      ],
+      "record": {
+        "title": "Mirror Speculative Decoding: Breaking the Serial Barrier in LLM Inference",
+        "source_url": "https://arxiv.org/abs/2510.13161",
+        "year": 2025,
+        "published": "2025-10-15",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Speculative decoding accelerates LLM inference by using a draft model to look ahead, but gains are capped by the cost of autoregressive draft generation: increasing draft size elevates acceptance rates but introduces additional latency overhead exacerbating the speed-accuracy tradeoff. Prior methods (Medusa, Hydra, EAGLE) partially reduce draft cost but either degrade acceptance or introduce overheads that limit scaling. We present Mirror Speculative Decoding (Mirror-SD), an inference algorithm that breaks the latency-acceptance tradeoff. Mirror-SD launches branch-complete rollouts from early-exit signals in parallel with the target model's suffix and explicitly maps computation across heterogeneous accelerators (GPU and NPU) to exploit cross-device parallelism. The draft speculates forward continuations for the target to verify, while the target simultaneously speculates correction paths for the draft, converting speculation into two complementary execution pipelines. To further cut draft latency without weakening acceptance semantics, we add speculative streaming so the draft emits multiple tokens per step. This dual strategy of parallel heterogeneous execution plus multi-token speculative streaming pushes speculative decoding toward its ideal regime of high acceptance with low overhead. On SpecBench with server-scale models from 14B to 66B parameters, Mirror-SD delivers consistent end-to-end gains, achieving 2.8x-5.8x wall-time speedups across diverse tasks and a 30% average relative improvement over the strongest baseline, EAGLE3.",
+        "identifiers": [
+          "SemanticScholar:feaecf4e6b19e6faa684bda930d5c0866e0f6305"
+        ],
+        "semantic_scholar_id": "feaecf4e6b19e6faa684bda930d5c0866e0f6305",
+        "canonical_id": "arXiv:2510.13161",
+        "arxiv_id": "2510.13161",
+        "doi": "10.48550/arXiv.2510.13161",
+        "authors": [
+          "Nikhil Bhendawade",
+          "Kumari Nishu",
+          "Arnav Kundu",
+          "Chris Bartels",
+          "Minsik Cho",
+          "I. Belousova"
+        ],
+        "priority": 1,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 1,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 364,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:f741ca4546f34e60816302f882a3719239ba68a25634b859acec9499f65ff16d",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}
