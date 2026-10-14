@@ -34,6 +34,8 @@ quality_self_review_passed: true
 repair_run_key: "20261014-1845-scheduled-chat-45/r01"
 repair_reason: "import blocked_quality: evaluation_chars=456, limitation_chars=0; section heading normalization"
 quality_self_review_version: 'PAPER-QUALITY-GUIDE-2026-10-07'
+last_audited: null
+audit_version: 0
 ---
 
 # Parallel Token Prediction：乱数を入力化して依存した複数トークンを一度に予測する

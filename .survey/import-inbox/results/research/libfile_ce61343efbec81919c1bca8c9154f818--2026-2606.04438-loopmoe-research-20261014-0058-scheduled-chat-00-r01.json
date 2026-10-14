@@ -1,13 +1,12 @@
 {
   "schema_version": 1,
   "artifact_type": "research",
-  "status": "imported",
+  "status": "blocked_quality",
   "source_sha256": "b9abe5aef023951ae81718e1da4af7a0d7f0ca11ea525a2719b34a622ff79bd2",
-  "canonical_id": "arXiv:2606.04438",
-  "paper_path": "papers/inference/99-other-inference-systems/2026-2606.04438-loopmoe-unifying-iterative-computation-with-mixture-of-experts-for-langu.md",
-  "lineage": "99-other-inference-systems",
-  "audit_status": "WARN",
+  "normalized_source_sha256": null,
   "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_ce61343efbec81919c1bca8c9154f818--2026-2606.04438-loopmoe-research-20261014-0058-scheduled-chat-00-r01.md",
+  "canonical_id": "arXiv:2606.04438",
   "worker_completed_at": "2026-10-14T00:58:00+09:00",
   "worker_run_key": "20261014-0058-scheduled-chat-00/r01",
   "quality_metrics": {
@@ -22,5 +21,8 @@
       "限界説明量 0 < 推奨 120"
     ]
   },
-  "processed_at": "2026-10-14T07:50:52+00:00"
+  "failures": [
+    "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2026-2606.04438-loopmoe-unifying-iterative-computation-with-mixture-of-experts-for-langu.md と 24 段落 / 5422文字 (100.0%) が完全一致"
+  ],
+  "processed_at": "2026-10-14T11:43:56+00:00"
 }

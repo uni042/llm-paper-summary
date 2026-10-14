@@ -28,6 +28,8 @@ worker_completed_at: "2026-10-14T03:56:49+09:00"
 worker_id: "scheduled-chat-45"
 worker_run_key: "20261014-0345-scheduled-chat-45/r01"
 lineage: "cloud-edge-offloading-hierarchical-agent-memory"
+last_audited: null
+audit_version: 0
 ---
 
 # CoMIC：エッジの短い作業記憶とクラウドの非同期反省を結ぶLLMエージェント基盤

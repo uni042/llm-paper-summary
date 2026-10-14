@@ -36,6 +36,8 @@ reference_main_sha: 'b8c2abb463692b3cbc8b006a9421a6549569add8'
 worklist_rank: 20
 quality_self_review_passed: true
 quality_self_review_version: '2026-10-07'
+last_audited: null
+audit_version: 0
 ---
 
 # 報酬誘導型投機的復号：推論の途中で小型モデルと大型モデルを切り替える

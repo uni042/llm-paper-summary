@@ -1,13 +1,12 @@
 {
   "schema_version": 1,
   "artifact_type": "research",
-  "status": "imported",
+  "status": "blocked_quality",
   "source_sha256": "30d69e06e28070cf6432a4cbd576db1170af91dca1872ec887204147b4b4b07e",
-  "canonical_id": "DOI:10.18653/v1/2021.naacl-industry.15",
-  "paper_path": "papers/inference/99-other-inference-systems/2021-439132b7c6e4-lightseq-a-high-performance-inference-library-for-transformers.md",
-  "lineage": "99-other-inference-systems",
-  "audit_status": "WARN",
+  "normalized_source_sha256": null,
   "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_d363acd88e20819195f8f9dc7895d435--2021-lightseq-returned-repair-20261013-2130-scheduled-chat-30-r01-v2.md",
+  "canonical_id": "DOI:10.18653/v1/2021.naacl-industry.15",
   "worker_completed_at": "2026-10-13T21:30:00+09:00",
   "worker_run_key": "20261013-2130-scheduled-chat-30/r01",
   "quality_metrics": {
@@ -22,5 +21,8 @@
       "限界説明量 0 < 推奨 120"
     ]
   },
-  "processed_at": "2026-10-14T07:51:33+00:00"
+  "failures": [
+    "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2021-439132b7c6e4-lightseq-a-high-performance-inference-library-for-transformers.md と 18 段落 / 4162文字 (100.0%) が完全一致"
+  ],
+  "processed_at": "2026-10-14T11:44:23+00:00"
 }

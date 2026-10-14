@@ -29,6 +29,8 @@ worker_completed_at: '2026-10-14T18:45:00+09:00'
 worker_run_key: '20261014-1845-scheduled-chat-45/r01'
 quality_self_review_passed: true
 quality_self_review_version: 'PAPER-QUALITY-GUIDE-2026-10-07'
+last_audited: null
+audit_version: 0
 ---
 
 # SIGMA：関数秘密分散とGPU最適化でTransformerの秘匿推論を実用的な時間へ近づける
