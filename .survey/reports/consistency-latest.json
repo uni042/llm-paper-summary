@@ -1,11 +1,11 @@
 {
   "schema_version": 3,
   "source_commit": "citation-backfill-working-tree",
-  "checked_at": "2026-10-14T10:00:13.575267+00:00",
+  "checked_at": "2026-10-14T10:23:06.564470+00:00",
   "status": "issues_found",
   "scope": "repository-wide structural consistency",
-  "inventory_file_count": 59171,
-  "checked_file_count": 59171,
+  "inventory_file_count": 59267,
+  "checked_file_count": 59267,
   "missing_files": [],
   "working_changes": [],
   "checks": [
@@ -26,8 +26,13 @@
     "Scheduler startup guarantees",
     "Runtime execution of arbitrary repository code"
   ],
-  "external_url_count": 3505,
+  "external_url_count": 3509,
   "findings": [
+    {
+      "code": "broken_local_link",
+      "path": ".survey/import-inbox/pending/research/libfile_c3bf6a37acc48191b15c8db3ef9c6ecc--2026-2606.00756-comic-cloud-edge-agent-memory-research-20261014-0345-scheduled-chat-45-r01.md",
+      "detail": "s_self"
+    },
     {
       "code": "broken_local_link",
       "path": "papers/inference/08-edge-on-device-llm-systems/2026-2606.00756-comic-collaborative-memory-and-insights-circulation-for-long-horizon-llm.md",
