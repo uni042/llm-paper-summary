@@ -42,6 +42,8 @@ references:
   - canonical_id: 'arXiv:2006.16236'
   - canonical_id: 'arXiv:2312.00752'
   - canonical_id: 'arXiv:2205.14135'
+last_audited: null
+audit_version: 0
 ---
 
 # MHLA：トークン軸の多頭分割で表現力を回復する線形注意

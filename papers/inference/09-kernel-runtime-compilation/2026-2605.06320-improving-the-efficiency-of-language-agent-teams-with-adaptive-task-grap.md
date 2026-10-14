@@ -33,6 +33,8 @@ worker_id: scheduled-chat-45
 worker_completed_at: '2026-10-14T04:54:59+09:00'
 worker_run_key: '20261014-0445-scheduled-chat-45/r01'
 reference_main_sha: 'e0c44ad5a4e74e297828bd011526f5ba470d5e14'
+last_audited: null
+audit_version: 0
 ---
 
 # 動的タスクグラフでLLMエージェント群の競合と無駄な推論を削減するLATTE

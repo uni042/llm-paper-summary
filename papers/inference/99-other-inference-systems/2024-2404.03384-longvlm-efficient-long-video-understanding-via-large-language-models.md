@@ -27,6 +27,8 @@ last_checked: "2026-10-14"
 worker_id: "scheduled-chat-30"
 worker_run_key: "20261014-0730-scheduled-chat-30/r01"
 worker_completed_at: "2026-10-14T07:36:00+09:00"
+last_audited: null
+audit_version: 0
 ---
 
 # LongVLM：局所イベントと大域文脈を両立する動画トークン統合
