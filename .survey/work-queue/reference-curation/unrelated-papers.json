@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-14T01:51:32+00:00",
-  "record_count": 11956,
+  "updated_at": "2026-10-14T02:15:18+00:00",
+  "record_count": 11961,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -171965,6 +171965,114 @@
       "last_checked_at": "2026-10-14T01:51:32+00:00",
       "linked_from": [],
       "title": "MegaFold: Efficient Training of Next-Generation 3D Attention Protein Models on Cross-Platform GPUs"
+    },
+    "arXiv:2509.26246": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2509.26246",
+      "identity_tokens": [
+        "arXiv:2509.26246"
+      ],
+      "reason": "The primary abstract’s efficiency gains are explicitly for training; it does not address inference or serving.",
+      "first_checked_at": "2026-10-14T02:15:15+00:00",
+      "last_checked_at": "2026-10-14T02:15:15+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2018-1806.03377-pipedream-generalized-pipeline-parallelism-for-dnn-training.md",
+        "papers/inference/99-other-inference-systems/2019-1909.08053-megatron-lm-training-multi-billion-parameter-language-models-using-model.md",
+        "papers/inference/99-other-inference-systems/2021-2104.04473-efficient-large-scale-language-model-training-on-gpu-clusters-using-mega.md",
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+        "papers/inference/99-other-inference-systems/2023-2305.13245-gqa.md",
+        "papers/inference/99-other-inference-systems/2023-2310.01889-ring-attention-blockwise-transformers.md",
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md",
+        "papers/training/01-training-offload-memory-systems/2021-2104.07857-zero-infinity-breaking-the-gpu-memory-wall-for-extreme-scale-deep-learning.md",
+        "papers/training/03-pipeline-parallel-modular-training/2023-2311.09431-striped-attention.md"
+      ],
+      "title": "SlimPack: Fine-Grained Asymmetric Packing for Balanced and Efficient Variable-Length LLM Training"
+    },
+    "arXiv:2505.20600": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.20600",
+      "identity_tokens": [
+        "arXiv:2505.20600"
+      ],
+      "reason": "This is an efficient serving system for diffusion-based image editing, not an LLM inference or language-model execution system.",
+      "first_checked_at": "2026-10-14T02:15:15+00:00",
+      "last_checked_at": "2026-10-14T02:15:15+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-2311.03285-s-lora-serving-thousands-of-concurrent-lora-adapters.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2020-2006.02464-serving-dnns-like-clockwork-performance-predictability-from-the-bottom-u.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2403.02310-sarathi-serve-chunked-prefills-stall-free-scheduling.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2403.19708-cachedattention-multi-turn-conversation-serving.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2405.19888-parrot-efficient-serving-llm-applications-semantic-variable.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+      ],
+      "title": "InstGenIE: Generative Image Editing Made Efficient with Mask-aware Caching and Scheduling"
+    },
+    "arXiv:2507.10618": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2507.10618",
+      "identity_tokens": [
+        "arXiv:2507.10618"
+      ],
+      "reason": "The measured object is compute spent developing pretraining innovations; it does not propose or evaluate runtime efficiency for LLM inference or serving.",
+      "first_checked_at": "2026-10-14T02:15:18+00:00",
+      "last_checked_at": "2026-10-14T02:15:18+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2021-2101.06840-zero-offload-democratizing-billion-scale-model-training.md",
+        "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md",
+        "papers/inference/99-other-inference-systems/2019-1909.08053-megatron-lm-training-multi-billion-parameter-language-models-using-model.md",
+        "papers/inference/99-other-inference-systems/2021-2104.04473-efficient-large-scale-language-model-training-on-gpu-clusters-using-mega.md",
+        "papers/inference/99-other-inference-systems/2021-2112.05682-self-attention-does-not-need-o-n-2-memory.md",
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+        "papers/inference/99-other-inference-systems/2023-2305.13245-gqa.md",
+        "papers/inference/99-other-inference-systems/2023-2310.01889-ring-attention-blockwise-transformers.md",
+        "papers/inference/99-other-inference-systems/2024-2404.19737-better-faster-large-language-models-via-multi-token-prediction.md",
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ],
+      "title": "Compute Requirements for Algorithmic Innovation in Frontier AI Models"
+    },
+    "arXiv:2506.09163": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2506.09163",
+      "identity_tokens": [
+        "arXiv:2506.09163"
+      ],
+      "reason": "Although the abstract reports scalable inference, the model and target applications are neural-process forecasting in scientific domains rather than LLM inference systems.",
+      "first_checked_at": "2026-10-14T02:15:18+00:00",
+      "last_checked_at": "2026-10-14T02:15:18+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-2412.05496-flexattention-a-programming-model-for-generating-optimized-attention-kernels.md",
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md",
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md",
+        "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md",
+        "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md",
+        "papers/inference/99-other-inference-systems/2021-2112.05682-self-attention-does-not-need-o-n-2-memory.md",
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md",
+        "papers/inference/99-other-inference-systems/2024-2407.08608-flashattention-3-fast-and-accurate-attention-with-asynchrony-and-low-pre.md"
+      ],
+      "title": "Scalable Spatiotemporal Inference with Biased Scan Attention Transformer Neural Processes"
+    },
+    "arXiv:2504.04150": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2504.04150",
+      "identity_tokens": [
+        "arXiv:2504.04150"
+      ],
+      "reason": "The contribution targets reasoning quality and evaluation, with no concrete inference-runtime, memory, throughput or serving optimization.",
+      "first_checked_at": "2026-10-14T02:15:18+00:00",
+      "last_checked_at": "2026-10-14T02:15:18+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+        "papers/inference/99-other-inference-systems/2023-2304.11062-scaling-transformer-to-1m-tokens-and-beyond-with-rmt.md",
+        "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md",
+        "papers/inference/99-other-inference-systems/2023-2307.02486-longnet-scaling-transformers-to-1-000-000-000-tokens.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md",
+        "papers/inference/99-other-inference-systems/2023-2310.01889-ring-attention-blockwise-transformers.md",
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "title": "Reasoning on Multiple Needles In A Haystack"
     }
   }
 }

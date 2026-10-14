@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-14T01:49:02+00:00",
-  "record_count": 4975,
+  "updated_at": "2026-10-14T02:15:18+00:00",
+  "record_count": 4986,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -76832,6 +76832,258 @@
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "CITR: Efficient Long Video Understanding Needs Causal Importance"
+    },
+    "DOI:10.1109/dac63849.2025.11132816": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/dac63849.2025.11132816",
+      "identity_tokens": [
+        "DOI:10.1109/dac63849.2025.11132816"
+      ],
+      "reason": "The title suggests FPGA quantization and LLM acceleration, but the publisher page was inaccessible and the primary abstract could not be verified in this retrieval session.",
+      "first_checked_at": "2026-10-14T02:15:13+00:00",
+      "last_checked_at": "2026-10-14T02:15:13+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2024-2401.03868-flightllm-efficient-large-language-model-inference-with-a-complete-mappi.md",
+        "papers/inference/15-inference-simulation-emulation/2020-2002.10941-a3-accelerating-attention-mechanisms-in-neural-networks-with-approximati.md",
+        "papers/inference/16-weight-quantization-compression/2023-2310.19102-atom-low-bit-quantization-for-efficient-and-accurate-llm-serving.md",
+        "papers/inference/16-weight-quantization-compression/2023-olive-accelerating-large-language-models-via-hardware-friendly-outlier-victim-pair-quantization.md",
+        "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2023-2308.13137-omniquant-omnidirectionally-calibrated-quantization-for-large-language-m.md",
+        "papers/inference/99-other-inference-systems/2023-2312.15159-understanding-the-potential-of-fpga-based-spatial-acceleration-for-large.md",
+        "papers/inference/99-other-inference-systems/2024-2402.17762-massive-activations-in-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2024-2404.00456-quarot-outlier-free-4-bit-inference-in-rotated-llms.md",
+        "papers/inference/99-other-inference-systems/2025-2405.16406-spinquant-llm-quantization-with-learned-rotations.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "DuoQ: A DSP Utilization-aware and Outlier-free Quantization for FPGA-based LLMs Acceleration"
+    },
+    "arXiv:2505.00624": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2505.00624",
+      "identity_tokens": [
+        "arXiv:2505.00624"
+      ],
+      "reason": "The resulting models may reduce inference cost through pruning, but the abstract emphasizes domain accuracy and finetuning and does not establish runtime or serving efficiency.",
+      "first_checked_at": "2026-10-14T02:15:14+00:00",
+      "last_checked_at": "2026-10-14T02:15:14+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2019-1910.04732-structured-pruning-of-large-language-models.md",
+        "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md",
+        "papers/inference/16-weight-quantization-compression/2024-2401.15024-slicegpt-compress-large-language-models-by-deleting-rows-and-columns.md",
+        "papers/inference/99-other-inference-systems/2022-2204.00408-structured-pruning-learns-compact-and-accurate-models.md",
+        "papers/inference/99-other-inference-systems/2023-2305.11627-llm-pruner-on-the-structural-pruning-of-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2023-2305.17888-llm-qat-data-free-quantization-aware-training-for-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2023-2306.11695-a-simple-and-effective-pruning-approach-for-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2023-2310.06694-sheared-llama-accelerating-language-model-pre-training-via-structured-pr.md",
+        "papers/inference/99-other-inference-systems/2023-2312.11983-fluctuation-based-adaptive-structured-pruning-for-large-language-models.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "FineScope: SAE-guided Data Selection Enables Domain Specific LLM Pruning and Finetuning"
+    },
+    "DOI:10.1109/taslpro.2026.3675784": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/taslpro.2026.3675784",
+      "identity_tokens": [
+        "DOI:10.1109/taslpro.2026.3675784"
+      ],
+      "reason": "The title identifies prompt compression for LLM long-context QA, a plausible way to reduce inference input cost, but the primary abstract was unavailable to confirm the method or efficiency outcomes.",
+      "first_checked_at": "2026-10-14T02:15:14+00:00",
+      "last_checked_at": "2026-10-14T02:15:14+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md",
+        "papers/inference/99-other-inference-systems/2022-2211.05102-efficiently-scaling-transformer-inference.md",
+        "papers/inference/99-other-inference-systems/2023-2304.08467-learning-to-compress-prompts-with-gist-tokens.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md",
+        "papers/inference/99-other-inference-systems/2023-2310.06201-compressing-context-to-enhance-inference-efficiency-of-large-language-mo.md",
+        "papers/inference/99-other-inference-systems/2023-2310.06839-longllmlingua-accelerating-and-enhancing-llms-in-long-context-scenarios-.md",
+        "papers/inference/99-other-inference-systems/2024-2401.03462-long-context-compression-with-activation-beacon.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Alleviating Contextual Misguidance: Response-Aware Prompt Compression for Long-Context Question Answering"
+    },
+    "DOI:10.1109/acait67930.2025.11522017": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/acait67930.2025.11522017",
+      "identity_tokens": [
+        "DOI:10.1109/acait67930.2025.11522017"
+      ],
+      "reason": "The title suggests compressed RAG prompts and small-model collaboration, but without the primary abstract the contribution to inference systems efficiency cannot be established.",
+      "first_checked_at": "2026-10-14T02:15:14+00:00",
+      "last_checked_at": "2026-10-14T02:15:14+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md",
+        "papers/inference/99-other-inference-systems/2022-2107.00910-learned-token-pruning-for-transformers.md",
+        "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2023-2212.10511-when-not-to-trust-language-models-investigating-effectiveness-of-paramet.md",
+        "papers/inference/99-other-inference-systems/2023-2301.00774-sparsegpt-massive-language-models-can-be-accurately-pruned-in-one-shot.md",
+        "papers/inference/99-other-inference-systems/2023-2304.08467-learning-to-compress-prompts-with-gist-tokens.md",
+        "papers/inference/99-other-inference-systems/2023-2310.06201-compressing-context-to-enhance-inference-efficiency-of-large-language-mo.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "ModelFusion-RAG: A Prompt Compression Framework for Retrieval Enhanced Generation Based on Small Model Collaboration"
+    },
+    "OpenReview:EciNEiW1uq": {
+      "classification": "borderline",
+      "canonical_id": "OpenReview:EciNEiW1uq",
+      "identity_tokens": [
+        "OpenReview:EciNEiW1uq",
+        "SemanticScholar:dec84ac2223ecc5ddbf80b734e19c067d41ab503"
+      ],
+      "reason": "The primary abstract verifies an inference-time context-compression mechanism, but reports no serving latency, throughput or memory-efficiency outcome; system-efficiency relevance remains limited.",
+      "first_checked_at": "2026-10-14T02:15:15+00:00",
+      "last_checked_at": "2026-10-14T02:15:15+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2304.08467-learning-to-compress-prompts-with-gist-tokens.md",
+        "papers/inference/99-other-inference-systems/2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2023-2310.01889-ring-attention-blockwise-transformers.md",
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md",
+        "papers/inference/99-other-inference-systems/2024-2401.03462-long-context-compression-with-activation-beacon.md",
+        "papers/inference/99-other-inference-systems/2024-2404.07143-leave-no-context-behind-efficient-infinite-context-transformers-with-infini-attention.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Long Context Understanding using Self-Generated Synthetic Data"
+    },
+    "DOI:10.1109/iscslp63861.2024.10800592": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/iscslp63861.2024.10800592",
+      "identity_tokens": [
+        "DOI:10.1109/iscslp63861.2024.10800592"
+      ],
+      "reason": "The title and DOI metadata identify LLM pruning, but the publisher abstract is needed to establish whether the proposed fusion actually improves inference efficiency.",
+      "first_checked_at": "2026-10-14T02:15:16+00:00",
+      "last_checked_at": "2026-10-14T02:15:16+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2023-2302.07863-speculative-decoding-with-big-little-decoder.md",
+        "papers/inference/05-speculative-decoding-moe/2023-2310.12072-speed-speculative-pipelined-execution-for-efficient-decoding.md",
+        "papers/inference/05-speculative-decoding-moe/2024-2401.10774-medusa-multiple-decoding-heads.md",
+        "papers/inference/07-kv-cache-optimization-compression/2023-2306.14048-h2o.md",
+        "papers/inference/09-kernel-runtime-compilation/2022-2206.09557-lut-gemm-quantized-matrix-multiplication-based-on-luts-for-efficient-inf.md",
+        "papers/inference/16-weight-quantization-compression/2023-olive-accelerating-large-language-models-via-hardware-friendly-outlier-victim-pair-quantization.md",
+        "papers/inference/99-other-inference-systems/2020-2004.12993-deebert-dynamic-early-exiting-for-accelerating-bert-inference.md",
+        "papers/inference/99-other-inference-systems/2023-2301.00774-sparsegpt-massive-language-models-can-be-accurately-pruned-in-one-shot.md",
+        "papers/inference/99-other-inference-systems/2023-2305.11627-llm-pruner-on-the-structural-pruning-of-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2023-2305.17888-llm-qat-data-free-quantization-aware-training-for-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2023-2306.11695-a-simple-and-effective-pruning-approach-for-large-language-models.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Fusion Pruning for Large Language Models"
+    },
+    "DOI:10.1145/3735358.3735368": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3735358.3735368",
+      "identity_tokens": [
+        "DOI:10.1145/3735358.3735368"
+      ],
+      "reason": "The title indicates wireless multi-device inference, but does not establish that the system serves LLMs or improves a relevant LLM runtime; the ACM abstract was inaccessible.",
+      "first_checked_at": "2026-10-14T02:15:16+00:00",
+      "last_checked_at": "2026-10-14T02:15:16+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2023-2303.06865-flexgen-high-throughput-generative-inference-of-large-language-models-with-a-single-gpu.md",
+        "papers/inference/01-offload-hierarchical-memory/2023-2312.12456-powerinfer.md",
+        "papers/inference/08-edge-on-device-llm-systems/2024-2406.06282-powerinfer-2-fast-large-language-model-inference-on-a-smartphone.md",
+        "papers/inference/10-kv-cache-offload-recomputation/2024-2310.07240-cachegen.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2311.18677-splitwise-efficient-generative-llm-inference-phase-splitting.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.09670-distserve-disaggregating-prefill-decoding-goodput.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2403.02310-sarathi-serve-chunked-prefills-stall-free-scheduling.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2404.09526-loongserve-efficiently-serving-long-context-large-language-models-with-e.md",
+        "papers/inference/16-weight-quantization-compression/2023-2306.00978-awq.md",
+        "papers/inference/16-weight-quantization-compression/2023-2307.13304-quip-2-bit-quantization-of-large-language-models-with-guarantees.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "FlexSpark: Robust and Efficient Multi-Device Collaborative Inference over Wireless Network"
+    },
+    "DOI:10.1109/ijcnn60899.2024.10650050": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/ijcnn60899.2024.10650050",
+      "identity_tokens": [
+        "DOI:10.1109/ijcnn60899.2024.10650050"
+      ],
+      "reason": "The title suggests a faster adaptive language-modeling method, but the official publisher abstract could not be retrieved to establish whether it improves LLM inference or only model/task quality.",
+      "first_checked_at": "2026-10-14T02:15:17+00:00",
+      "last_checked_at": "2026-10-14T02:15:17+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1905.09418-analyzing-multi-head-self-attention-specialized-heads-do-the-heavy-lifti.md",
+        "papers/inference/99-other-inference-systems/2019-1905.10650-are-sixteen-heads-really-better-than-one.md",
+        "papers/inference/99-other-inference-systems/2019-1909.05840-q-bert-hessian-based-ultra-low-precision-quantization-of-bert.md",
+        "papers/inference/99-other-inference-systems/2019-1910.06188-q8bert-quantized-8bit-bert.md",
+        "papers/inference/99-other-inference-systems/2020-2004.02178-fastbert-a-self-distilling-bert-with-adaptive-inference-time.md",
+        "papers/inference/99-other-inference-systems/2020-2004.07320-training-with-quantization-noise-for-extreme-model-compression.md",
+        "papers/inference/99-other-inference-systems/2020-2004.12993-deebert-dynamic-early-exiting-for-accelerating-bert-inference.md",
+        "papers/inference/99-other-inference-systems/2020-2006.04152-bert-loses-patience-fast-and-robust-inference-with-early-exit.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "From Static to Dynamic: A Deeper, Faster, and Adaptive Language Modeling Approach"
+    },
+    "DOI:10.1109/ijcnn64981.2025.11228214": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/ijcnn64981.2025.11228214",
+      "identity_tokens": [
+        "DOI:10.1109/ijcnn64981.2025.11228214"
+      ],
+      "reason": "The title describes KV-cache retention for LLMs, a plausible inference-memory optimization, but primary abstract evidence is required to verify the proposal and its effect.",
+      "first_checked_at": "2026-10-14T02:15:17+00:00",
+      "last_checked_at": "2026-10-14T02:15:17+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2306.14048-h2o.md",
+        "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2402.02750-kivi.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2403.05527-gear-an-efficient-kv-cache-compression-recipe-for-near-lossless-generati.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2403.09054-keyformer-kv-cache-reduction-through-key-tokens-selection-for-efficient-.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2403.17312-alisa-accelerating-large-language-model-inference-via-sparsity-aware-kv-caching.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2406.19707-infinigen-dynamic-kv-cache-management.md",
+        "papers/inference/10-kv-cache-offload-recomputation/2024-2310.07240-cachegen.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md",
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md",
+        "papers/inference/99-other-inference-systems/2022-2211.05102-efficiently-scaling-transformer-inference.md",
+        "papers/inference/99-other-inference-systems/2023-2307.02486-longnet-scaling-transformers-to-1-000-000-000-tokens.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Initial-Key Cache: An Efficient KV Cache Strategy Focusing on Initial and Key Tokens for LLMs"
+    },
+    "arXiv:2508.11921": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2508.11921",
+      "identity_tokens": [
+        "arXiv:2508.11921"
+      ],
+      "reason": "The abstract presents an efficient attention architecture but targets high-order non-language data; the link to LLM inference systems is limited and not demonstrated.",
+      "first_checked_at": "2026-10-14T02:15:17+00:00",
+      "last_checked_at": "2026-10-14T02:15:17+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-2402.18668-simple-linear-attention-language-models-balance-the-recall-throughput-tr.md",
+        "papers/inference/09-kernel-runtime-compilation/2024-2412.05496-flexattention-a-programming-model-for-generating-optimized-attention-kernels.md",
+        "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08621-retentive-network-a-successor-to-transformer-for-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md",
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md",
+        "papers/inference/99-other-inference-systems/2024-2312.06635-gated-linear-attention-transformers-with-hardware-efficient-training.md",
+        "papers/inference/99-other-inference-systems/2024-2404.07904-hgrn2-gated-linear-rnns-with-state-expansion.md",
+        "papers/inference/99-other-inference-systems/2024-2412.06464-gated-delta-networks-improving-mamba2-with-delta-rule.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "ENA: Efficient N-dimensional Attention"
+    },
+    "DOI:10.1109/icme59968.2025.11210203": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/icme59968.2025.11210203",
+      "identity_tokens": [
+        "DOI:10.1109/icme59968.2025.11210203"
+      ],
+      "reason": "Adaptive LLM context compression could reduce inference context cost, but the official abstract was unavailable to verify its mechanism, deployment target or efficiency effect.",
+      "first_checked_at": "2026-10-14T02:15:18+00:00",
+      "last_checked_at": "2026-10-14T02:15:18+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md",
+        "papers/inference/99-other-inference-systems/2023-2307.02486-longnet-scaling-transformers-to-1-000-000-000-tokens.md",
+        "papers/inference/99-other-inference-systems/2023-2307.06945-in-context-autoencoder-for-context-compression-in-a-large-language-model.md",
+        "papers/inference/99-other-inference-systems/2023-2310.04408-recomp-improving-retrieval-augmented-lms-with-compression-and-selective-.md",
+        "papers/inference/99-other-inference-systems/2023-2310.06201-compressing-context-to-enhance-inference-efficiency-of-large-language-mo.md",
+        "papers/inference/99-other-inference-systems/2023-2310.06839-longllmlingua-accelerating-and-enhancing-llms-in-long-context-scenarios-.md",
+        "papers/inference/99-other-inference-systems/2024-2405.13792-xrag-extreme-context-compression-for-retrieval-augmented-generation-with.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Integrate-and-Fire Compressor: Learning to Compress Context for LLMs Adaptively"
     }
   }
 }
