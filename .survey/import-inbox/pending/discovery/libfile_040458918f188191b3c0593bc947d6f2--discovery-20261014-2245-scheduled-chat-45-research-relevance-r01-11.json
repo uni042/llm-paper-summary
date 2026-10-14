@@ -1,0 +1,26 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-45",
+  "run_key": "20261014-2245-scheduled-chat-45/r01/prescreen-11",
+  "reference_main_sha": "e004784b410cd4c15399c075c49e737a62b3706e",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2412.00081",
+      "identity_tokens": [
+        "arxiv:2412.00081"
+      ],
+      "title": "Task Singular Vectors: Reducing Task Interference in Model Merging",
+      "reason": "一次要旨で確認した主題は、複数タスクの学習済み重み差分を特異値分解し、低階数圧縮と干渉抑制によってモデル統合精度を改善する手法である。圧縮対象はタスク差分表現であり、LLM推論時のKV管理、推論カーネル、スケジューリング、オフロードや実測生成速度の改善を扱わない。推論基盤技術の収録範囲から除外する。",
+      "source_url": "https://arxiv.org/abs/2412.00081",
+      "body_check": "abstract_screen_only; body_not_read; arXiv一次要旨で層別タスク特異ベクトル、TSV-CompressとTSV-Merge、タスク干渉の抑制を確認。推論時システム効率への直接的寄与は記述されない。",
+      "first_checked_at": "2026-10-14T22:55:19+09:00",
+      "last_checked_at": "2026-10-14T22:55:19+09:00",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance",
+      "worklist_rank": 11
+    }
+  ]
+}
