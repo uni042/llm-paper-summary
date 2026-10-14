@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-10-14T18:02:38.672148+00:00",
+  "generated_at": "2026-10-14T18:21:58.690468+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 7,
+  "count": 8,
   "worker_counts": {
     "scheduled-chat-00": 2,
     "scheduled-chat-30": 3,
-    "scheduled-chat-45": 2
+    "scheduled-chat-45": 3
   },
   "entries": [
     {
@@ -86,40 +86,20 @@
       ]
     },
     {
-      "path": "papers/inference/05-speculative-decoding-moe/2026-2602.01274-pacer-blockwise-pre-verification-for-speculative-decoding-with-adaptive-.md",
-      "canonical_id": "arXiv:2602.01274",
-      "title": "Pacer: Blockwise Pre-verification for Speculative Decoding with Adaptive Length",
-      "file_bytes": 12297,
-      "source_sha256": "ab810962ffde881e242c74358934e79120ef78dc198ed3d19738577c45e83594",
-      "source_git_blob_sha": "db5ac24a25d08445f3fabb0727aec861a9a31133",
-      "assigned_worker": "scheduled-chat-30",
+      "path": "papers/inference/99-other-inference-systems/2026-2602.20205-otprune-distribution-aligned-visual-token-pruning-via-optimal-transport.md",
+      "canonical_id": "arXiv:2602.20205",
+      "title": "OTPrune: Distribution-Aligned Visual Token Pruning via Optimal Transport",
+      "file_bytes": 12925,
+      "source_sha256": "1aa5b8fcce8634186cd07b70af96ad48af8b3cb12f1ac0ee6dac0b91a9efd212",
+      "source_git_blob_sha": "186582c51e303edf4570be582cf5de40c0aaaf0c",
+      "assigned_worker": "scheduled-chat-45",
       "semantic_status": "pending",
       "mechanical_status": "PASS",
-      "japanese_ratio": 0.916606,
+      "japanese_ratio": 0.983451,
       "quality_metrics": {
-        "body_chars": 3639,
-        "method_chars": 1063,
-        "evaluation_chars": 1088,
-        "limitation_chars": 0
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2026-2603.23525-prompt-compression-in-production-task-orchestration-a-pre-registered-ran.md",
-      "canonical_id": "arXiv:2603.23525",
-      "title": "Prompt Compression in Production Task Orchestration: A Pre-Registered Randomized Trial",
-      "file_bytes": 12547,
-      "source_sha256": "f435d8cc3ae698b9f3c6d1f0fa1de2830897ae78342b3fc3807fd20a503621fa",
-      "source_git_blob_sha": "bb0807705c121f90d1e533e2a34d1885d28e3a05",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.991652,
-      "quality_metrics": {
-        "body_chars": 3236,
-        "method_chars": 1031,
-        "evaluation_chars": 689,
+        "body_chars": 3540,
+        "method_chars": 1066,
+        "evaluation_chars": 1104,
         "limitation_chars": 0
       },
       "mechanical_failures": [],
@@ -140,6 +120,46 @@
         "body_chars": 2413,
         "method_chars": 1072,
         "evaluation_chars": 505,
+        "limitation_chars": 0
+      },
+      "mechanical_failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/99-other-inference-systems/2026-2603.23525-prompt-compression-in-production-task-orchestration-a-pre-registered-ran.md",
+      "canonical_id": "arXiv:2603.23525",
+      "title": "Prompt Compression in Production Task Orchestration: A Pre-Registered Randomized Trial",
+      "file_bytes": 13827,
+      "source_sha256": "fa6b4e15eb89fa178af28a9fcd615659ea180221c94d85e4f34dfb241a19f588",
+      "source_git_blob_sha": "44b2c7b27205f2c36f276f3b44c8344b78f099d3",
+      "assigned_worker": "scheduled-chat-00",
+      "semantic_status": "pending",
+      "mechanical_status": "PASS",
+      "japanese_ratio": 0.991652,
+      "quality_metrics": {
+        "body_chars": 3236,
+        "method_chars": 1031,
+        "evaluation_chars": 689,
+        "limitation_chars": 0
+      },
+      "mechanical_failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/05-speculative-decoding-moe/2026-2602.01274-pacer-blockwise-pre-verification-for-speculative-decoding-with-adaptive-.md",
+      "canonical_id": "arXiv:2602.01274",
+      "title": "Pacer: Blockwise Pre-verification for Speculative Decoding with Adaptive Length",
+      "file_bytes": 14678,
+      "source_sha256": "4be3f7d2e4d21d157732a3b4e9752eab4a130ee1d3dfdd9c8978ef950b676b36",
+      "source_git_blob_sha": "f7fe126be61907f310e72d2e53f70d74a2e58d6f",
+      "assigned_worker": "scheduled-chat-30",
+      "semantic_status": "pending",
+      "mechanical_status": "PASS",
+      "japanese_ratio": 0.916606,
+      "quality_metrics": {
+        "body_chars": 3639,
+        "method_chars": 1063,
+        "evaluation_chars": 1088,
         "limitation_chars": 0
       },
       "mechanical_failures": [],
