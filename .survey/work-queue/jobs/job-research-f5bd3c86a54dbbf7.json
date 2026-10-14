@@ -35,10 +35,15 @@
   "selection_reason": "ZIP-RC reuses unused logits in the same forward pass to predict reward and remaining length, then allocates test-time samples by expected utility; this directly reduces reasoning cost/latency without a second model.",
   "semantic_scholar_id": "e25aac46f0b96ef8578139750f2b5ff33036de4f",
   "source_url": "https://arxiv.org/abs/2512.01457",
-  "status": "ready",
+  "status": "superseded",
   "title": "Zero-Overhead Introspection for Adaptive Test-Time Compute",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2025
+  "year": 2025,
+  "superseded_at": "2026-10-14T05:52:15+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2025-2512.01457-zero-overhead-introspection-for-adaptive-test-time-compute.md",
+  "represented_canonical_id": "arXiv:2512.01457",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

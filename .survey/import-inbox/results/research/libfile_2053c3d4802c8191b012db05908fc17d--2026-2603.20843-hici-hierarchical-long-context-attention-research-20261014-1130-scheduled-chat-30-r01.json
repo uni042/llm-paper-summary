@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "bd4ad8af2aa8ec0050782f1f0e9138cc08c13c0d060d4bed457f1d4318e1b2e1",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_2053c3d4802c8191b012db05908fc17d--2026-2603.20843-hici-hierarchical-long-context-attention-research-20261014-1130-scheduled-chat-30-r01.md",
+  "canonical_id": "arXiv:2603.20843",
+  "worker_completed_at": "2026-10-14T11:38:34+09:00",
+  "worker_run_key": "20261014-1130-scheduled-chat-30/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 6262,
+    "body_paragraphs": 35,
+    "method_chars": 1857,
+    "method_paragraphs": 11,
+    "evaluation_chars": 425,
+    "limitation_chars": 0,
+    "insufficiency_flags": [
+      "評価説明量 425 < 500",
+      "限界説明量 0 < 推奨 120"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 評価説明量 425 < 500"
+  ],
+  "processed_at": "2026-10-14T05:51:16+00:00"
+}

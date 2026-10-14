@@ -22,6 +22,8 @@ worker_run_key: 20261013-2130-scheduled-chat-30/r01
 worker_completed_at: '2026-10-13T21:30:00+09:00'
 last_checked: '2026-10-13'
 reference_main_sha: a5db0135176c3affec355c8b9b5194bf74fa6123
+last_audited: null
+audit_version: 0
 ---
 
 # 階層型投機的復号 HSDDW：自己検証で候補窓を止め、中間モデルで検証費用を抑える
