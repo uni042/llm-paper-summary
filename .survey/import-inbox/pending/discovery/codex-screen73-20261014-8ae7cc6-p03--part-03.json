@@ -1,0 +1,379 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-73",
+  "run_key": "discovery-20261014-main-8ae7cc6-screen-73-part-03",
+  "reference_main_sha": "8ae7cc65d659192bb0dde86ce5154cb3329fd22e",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.16864",
+      "identity_tokens": [
+        "10.48550/arXiv.2505.16864",
+        "2505.16864",
+        "544ee93b7b1a4973c8e29f9783ae509da9680ff1",
+        "SemanticScholar:544ee93b7b1a4973c8e29f9783ae509da9680ff1",
+        "arXiv:2505.16864"
+      ],
+      "title": "Training-Free Efficient Video Generation via Dynamic Token Carving",
+      "primary_title": "Training-Free Efficient Video Generation via Dynamic Token Carving",
+      "reason": "Accelerates video diffusion generation, an adjacent modality/application outside the project scope.",
+      "source_url": "https://arxiv.org/abs/2505.16864",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T12:59:56Z",
+      "last_checked_at": "2026-10-14T13:03:00Z",
+      "source_version": "Current arXiv version linked on official abs page at check time",
+      "source_submission_date": "2025-05-22",
+      "primary_source_status": "primary_abstract_verified",
+      "verification_method": "Opened official arXiv abs record; checked canonical ID/title, abstract, current-version link and submission/version history; no full text read.",
+      "abstract_evidence_excerpt": "Despite the remarkable generation quality of video Diffusion Transformer (DiT) models, their practical deployment is severely hindered by extensive computational requirements. This inefficiency stems from two key challenges: the quadratic complexity of self-at",
+      "abstract_evidence_sha256": "2a732452f1fbc78f1152ece23d2d3a59ba3af4cfbf5ef454abccc9bada0186a4",
+      "abstract_sha256": null,
+      "source_abstract_chars": null,
+      "source_metadata_sha256": null,
+      "source_response_sha256": null,
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-2412.05496-flexattention-a-programming-model-for-generating-optimized-attention-kernels.md",
+        "papers/inference/13-sparse-attention/2025-2502.13189-moba.md"
+      ],
+      "linked_from_lineages": [
+        "inference-systems",
+        "疎注意／長文脈学習"
+      ],
+      "rank": 41
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2410.17215",
+      "identity_tokens": [
+        "10.48550/arXiv.2410.17215",
+        "2410.17215",
+        "3f4b3d0fd2af9c45bcedd73a3428c56d3a2e5fc6",
+        "SemanticScholar:3f4b3d0fd2af9c45bcedd73a3428c56d3a2e5fc6",
+        "arXiv:2410.17215"
+      ],
+      "title": "MiniPLM: Knowledge Distillation for Pre-Training Language Models",
+      "primary_title": "MiniPLM: Knowledge Distillation for Pre-Training Language Models",
+      "reason": "Reduces language-model pretraining computation via data distillation; training-only.",
+      "source_url": "https://arxiv.org/abs/2410.17215",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T12:59:56Z",
+      "last_checked_at": "2026-10-14T13:03:00Z",
+      "source_version": "Current arXiv version linked on official abs page at check time",
+      "source_submission_date": "2024-10-22",
+      "primary_source_status": "primary_abstract_verified",
+      "verification_method": "Opened official arXiv abs record; checked canonical ID/title, abstract, current-version link and submission/version history; no full text read.",
+      "abstract_evidence_excerpt": "Knowledge distillation (KD) is widely used to train small, high-performing student language models (LMs) using large teacher LMs. While effective in fine-tuning, KD during pre-training faces efficiency, flexibility, and effectiveness issues. Existing methods e",
+      "abstract_evidence_sha256": "d2b1b76a33d76a7b6bb1349cc68140155d946a3b0d08042cd5979eecee6fb08f",
+      "abstract_sha256": null,
+      "source_abstract_chars": null,
+      "source_metadata_sha256": null,
+      "source_response_sha256": null,
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2409.15790-small-language-models-survey-measurements-and-insights.md",
+        "papers/inference/16-weight-quantization-compression/2024-2407.14679-compact-language-models-via-pruning-and-knowledge-distillation.md"
+      ],
+      "linked_from_lineages": [
+        "edge-on-device-llm-systems",
+        "inference-systems"
+      ],
+      "rank": 42
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2406.04801",
+      "identity_tokens": [
+        "10.48550/arXiv.2406.04801",
+        "2406.04801",
+        "SemanticScholar:ff8a40349db17daaed78def5f192229c3c2e2527",
+        "arXiv:2406.04801",
+        "ff8a40349db17daaed78def5f192229c3c2e2527"
+      ],
+      "title": "MoE Jetpack: From Dense Checkpoints to Adaptive Mixture of Experts for Vision Tasks",
+      "primary_title": "MoE Jetpack: From Dense Checkpoints to Adaptive Mixture of Experts for Vision Tasks",
+      "reason": "Converts dense models to MoE for vision-task fine-tuning; separate application and training contribution.",
+      "source_url": "https://arxiv.org/abs/2406.04801",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T12:59:56Z",
+      "last_checked_at": "2026-10-14T13:03:00Z",
+      "source_version": "Current arXiv version linked on official abs page at check time",
+      "source_submission_date": "2024-06-07",
+      "primary_source_status": "primary_abstract_verified",
+      "verification_method": "Opened official arXiv abs record; checked canonical ID/title, abstract, current-version link and submission/version history; no full text read.",
+      "abstract_evidence_excerpt": "The sparsely activated mixture of experts (MoE) model presents a promising alternative to traditional densely activated (dense) models, enhancing both quality and computational efficiency. However, training MoE models from scratch demands extensive data and co",
+      "abstract_evidence_sha256": "e05d2a4c76e12dd0fa1262602c06160926b7786ee8f6718576d94443202e6f1b",
+      "abstract_sha256": null,
+      "source_abstract_chars": null,
+      "source_metadata_sha256": null,
+      "source_response_sha256": null,
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2021-2110.01786-moefication.md",
+        "papers/inference/02-adaptive-expert-computation-compression/2023-2306.03745-smear-soft-merging-adaptive-routing.md"
+      ],
+      "linked_from_lineages": [
+        "Mixture-of-Experts / differentiable routing / parameter merging / modular learning",
+        "dense-to-MoE conversion / conditional FFN computation / expert routing"
+      ],
+      "rank": 43
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2504.10317",
+      "identity_tokens": [
+        "10.48550/arXiv.2504.10317",
+        "2504.10317",
+        "5b338b53d491c995e312d6a1a6868bf97ca2ec5b",
+        "SemanticScholar:5b338b53d491c995e312d6a1a6868bf97ca2ec5b",
+        "arXiv:2504.10317"
+      ],
+      "title": "Analysis of Attention in Video Diffusion Transformers",
+      "primary_title": "Analysis of Attention in Video Diffusion Transformers",
+      "reason": "Analyzes video-diffusion attention and suggests future efficiency directions without an LLM inference contribution.",
+      "source_url": "https://arxiv.org/abs/2504.10317",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T12:59:56Z",
+      "last_checked_at": "2026-10-14T13:03:00Z",
+      "source_version": "Current arXiv version linked on official abs page at check time",
+      "source_submission_date": "2025-04-14",
+      "primary_source_status": "primary_abstract_verified",
+      "verification_method": "Opened official arXiv abs record; checked canonical ID/title, abstract, current-version link and submission/version history; no full text read.",
+      "abstract_evidence_excerpt": "We conduct an in-depth analysis of attention in video diffusion transformers (VDiTs) and report a number of novel findings. We identify three key properties of attention in VDiTs: Structure, Sparsity, and Sinks. Structure: We observe that attention patterns ac",
+      "abstract_evidence_sha256": "1daf0f313c4d06bf881e9accda339d3bfee61002d17c0a6a4d3818f823a658f0",
+      "abstract_sha256": null,
+      "source_abstract_chars": null,
+      "source_metadata_sha256": null,
+      "source_response_sha256": null,
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md",
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md"
+      ],
+      "linked_from_lineages": [
+        "KV cache memory management / streaming inference / attention sinks / length extrapolation",
+        "sparse attention / long-context Transformer"
+      ],
+      "rank": 44
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.07271",
+      "identity_tokens": [
+        "0467ea5c1751f55693840be65a46573fe1c9d5eb",
+        "10.48550/arXiv.2505.07271",
+        "2505.07271",
+        "SemanticScholar:0467ea5c1751f55693840be65a46573fe1c9d5eb",
+        "arXiv:2505.07271"
+      ],
+      "title": "On the Robustness of Reward Models for Language Model Alignment",
+      "primary_title": "On the Robustness of Reward Models for Language Model Alignment",
+      "reason": "Evaluates reward-model robustness for alignment, a quality/robustness topic.",
+      "source_url": "https://arxiv.org/abs/2505.07271",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T12:59:56Z",
+      "last_checked_at": "2026-10-14T13:03:00Z",
+      "source_version": "Current arXiv version linked on official abs page at check time",
+      "source_submission_date": "2025-05-12",
+      "primary_source_status": "primary_abstract_verified",
+      "verification_method": "Opened official arXiv abs record; checked canonical ID/title, abstract, current-version link and submission/version history; no full text read.",
+      "abstract_evidence_excerpt": "The Bradley-Terry (BT) model is widely practiced in reward modeling for reinforcement learning with human feedback (RLHF). Despite its effectiveness, reward models (RMs) trained with BT model loss are prone to over-optimization, losing generalizability to unse",
+      "abstract_evidence_sha256": "88755608f0e07827c57d95f21dd4cf2c0d85360b2c9cd7c1dca60498c30483fb",
+      "abstract_sha256": null,
+      "source_abstract_chars": null,
+      "source_metadata_sha256": null,
+      "source_response_sha256": null,
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md",
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ],
+      "linked_from_lineages": [
+        "LLM Serving / Scheduling / Disaggregation",
+        "大規模モデル学習／分散学習メモリ最適化／DeepSpeed"
+      ],
+      "rank": 45
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2510.17505",
+      "identity_tokens": [
+        "10.1145/3779212.3790176",
+        "2510.17505",
+        "SemanticScholar:fec1555081b283683b1ed59fb9a353515045fbf9",
+        "arXiv:2510.17505",
+        "fec1555081b283683b1ed59fb9a353515045fbf9"
+      ],
+      "title": "Insum: Sparse GPU Kernels Simplified and Optimized with Indirect Einsums",
+      "primary_title": "Insum: Sparse GPU Kernels Simplified and Optimized with Indirect Einsums",
+      "reason": "Introduces a sparse GPU-kernel compiler and reports application speedups, directly relevant to GPU compiler/runtime efficiency.",
+      "source_url": "https://arxiv.org/abs/2510.17505",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T12:59:56Z",
+      "last_checked_at": "2026-10-14T13:03:00Z",
+      "source_version": "Current arXiv version linked on official abs page at check time",
+      "source_submission_date": "2025-10-20",
+      "primary_source_status": "primary_abstract_verified",
+      "verification_method": "Opened official arXiv abs record; checked canonical ID/title, abstract, current-version link and submission/version history; no full text read.",
+      "abstract_evidence_excerpt": "Programming high-performance sparse GPU kernels is notoriously difficult, requiring both substantial effort and deep expertise. Sparse compilers aim to simplify this process, but existing systems fall short in two key ways. First, they are primarily designed f",
+      "abstract_evidence_sha256": "d62efff90340b27c4eacf60ee502c67c2051ab1ff47767c24d9ee865d7bf90e8",
+      "abstract_sha256": null,
+      "source_abstract_chars": null,
+      "source_metadata_sha256": null,
+      "source_response_sha256": null,
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md",
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ],
+      "linked_from_lineages": [
+        "PyTorch 2 torch.compileの設計と評価を報告する論文。",
+        "inference-systems"
+      ],
+      "rank": 46
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2512.11303",
+      "identity_tokens": [
+        "10.48550/arXiv.2512.11303",
+        "2512.11303",
+        "9b1edebbde76e46fe013c92587de5e04ceabd866",
+        "SemanticScholar:9b1edebbde76e46fe013c92587de5e04ceabd866",
+        "arXiv:2512.11303"
+      ],
+      "title": "Unifying Dynamic Tool Creation and Cross-Task Experience Sharing through Cognitive Memory Architecture",
+      "primary_title": "Unifying Dynamic Tool Creation and Cross-Task Experience Sharing through Cognitive Memory Architecture",
+      "reason": "Improves agent capability through dynamic tools and memory, not runtime/serving efficiency.",
+      "source_url": "https://arxiv.org/abs/2512.11303",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T12:59:56Z",
+      "last_checked_at": "2026-10-14T13:03:00Z",
+      "source_version": "Current arXiv version linked on official abs page at check time",
+      "source_submission_date": "2025-12-12",
+      "primary_source_status": "primary_abstract_verified",
+      "verification_method": "Opened official arXiv abs record; checked canonical ID/title, abstract, current-version link and submission/version history; no full text read.",
+      "abstract_evidence_excerpt": "Large Language Model agents face fundamental challenges in adapting to novel tasks due to limitations in tool availability and experience reuse. Existing approaches either rely on predefined tools with limited coverage or build tools from scratch without lever",
+      "abstract_evidence_sha256": "766df0454264b676f29c3c9095de999262c1e6b7505744bc8f7f8dfc12307303",
+      "abstract_sha256": null,
+      "source_abstract_chars": null,
+      "source_metadata_sha256": null,
+      "source_response_sha256": null,
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2305.17126-large-language-models-as-tool-makers.md",
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+      ],
+      "linked_from_lineages": [
+        "11-llm-serving-scheduling-disaggregation",
+        "agentic inference / persistent memory"
+      ],
+      "rank": 47
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1515/lingvan-2024-0233",
+      "identity_tokens": [
+        "10.1515/lingvan-2024-0233",
+        "62324cfea239764d2f9b27753a9e1b15ef0d3675",
+        "DOI:10.1515/lingvan-2024-0233",
+        "SemanticScholar:62324cfea239764d2f9b27753a9e1b15ef0d3675"
+      ],
+      "title": "From recursion to incrementality: return to recurrent neural networks",
+      "primary_title": "From recursion to incrementality: return to recurrent neural networks",
+      "reason": "Evaluates RNNs for linguistic incrementality/cognitive plausibility; results concern linguistic modeling and training.",
+      "source_url": "https://doi.org/10.1515/lingvan-2024-0233",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T12:59:56Z",
+      "last_checked_at": "2026-10-14T13:03:00Z",
+      "source_version": "DOI-identified record; version/publication date as exposed in metadata",
+      "source_submission_date": "2026-03-16",
+      "primary_source_status": "primary_abstract_verified",
+      "verification_method": "Read source abstract and checked title/DOI metadata.",
+      "abstract_evidence_excerpt": "Abstract Large language models grounded on attention-based architectures have outperformed recurrent neural networks (RNNs), like those based on long short-term memory (LSTM) gating systems, in various natural language processing tasks. However, despite optimi",
+      "abstract_evidence_sha256": "8516f1f21afeeb68b6c0b0a4ca403175ef4efcfc079961c8e48badce86b30bfd",
+      "abstract_sha256": null,
+      "source_abstract_chars": null,
+      "source_metadata_sha256": null,
+      "source_response_sha256": null,
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "linked_from_lineages": [
+        "state space models / selective SSM / recurrent inference / hardware-aware sequence modeling",
+        "注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層"
+      ],
+      "rank": 48
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.13935",
+      "identity_tokens": [
+        "10.48550/arXiv.2605.13935",
+        "2605.13935",
+        "SemanticScholar:b9f702233fefce28cbf3bc91b0686e2a9b85fe29",
+        "arXiv:2605.13935",
+        "b9f702233fefce28cbf3bc91b0686e2a9b85fe29"
+      ],
+      "title": "Beyond Mode-Seeking RL: Trajectory-Balance Post-Training for Diffusion Language Models",
+      "primary_title": "Beyond Mode-Seeking RL: Trajectory-Balance Post-Training for Diffusion Language Models",
+      "reason": "Improves diffusion-LM post-training quality; not inference/serving efficiency.",
+      "source_url": "https://arxiv.org/abs/2605.13935",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T12:59:56Z",
+      "last_checked_at": "2026-10-14T13:03:00Z",
+      "source_version": "Current arXiv version linked on official abs page at check time",
+      "source_submission_date": "2026-05-13",
+      "primary_source_status": "primary_abstract_verified",
+      "verification_method": "Opened official arXiv abs record; checked canonical ID/title, abstract, current-version link and submission/version history; no full text read.",
+      "abstract_evidence_excerpt": "Diffusion language models are a promising alternative to autoregressive models, yet post-training methods for them largely adapt reward-maximizing objectives. We identify a central failure mode in this setting we call trajectory locking: sampled reward-driven ",
+      "abstract_evidence_sha256": "2627982cd3408626e4a3e347ecfcf873e10010c09bb17d1889d3848d58ac7edf",
+      "abstract_sha256": null,
+      "source_abstract_chars": null,
+      "source_metadata_sha256": null,
+      "source_response_sha256": null,
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2025-2505.22618-fast-dllm-kv-cache-parallel-decoding.md",
+        "papers/inference/99-other-inference-systems/2025-2508.15487-dream-7b-diffusion-large-language-models.md"
+      ],
+      "linked_from_lineages": [
+        "diffusion language models / masked diffusion / parallel decoding / AR-to-diffusion conversion",
+        "拡散型LLM推論 / 近似KVキャッシュ / 並列復号"
+      ],
+      "rank": 49
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2608.08237",
+      "identity_tokens": [
+        "10.1109/CoDIT70676.2026.11631166",
+        "2608.08237",
+        "SemanticScholar:dee37587c951823831ec66414de01b7ddb0de2ca",
+        "arXiv:2608.08237",
+        "dee37587c951823831ec66414de01b7ddb0de2ca"
+      ],
+      "title": "SAGE: SLO-Aware Adaptive Retrieval for Production RAG Systems",
+      "primary_title": "SAGE: SLO-Aware Adaptive Retrieval for Production RAG Systems",
+      "reason": "Adapts RAG retrieval budgets to meet latency SLOs while reducing P95 latency and retrieval cost.",
+      "source_url": "https://arxiv.org/abs/2608.08237",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T12:59:56Z",
+      "last_checked_at": "2026-10-14T13:03:00Z",
+      "source_version": "Current arXiv version linked on official abs page at check time",
+      "source_submission_date": "2026-07-01",
+      "primary_source_status": "primary_abstract_verified",
+      "verification_method": "Opened official arXiv abs record; checked canonical ID/title, abstract, current-version link and submission/version history; no full text read.",
+      "abstract_evidence_excerpt": "Retrieval-Augmented Generation (RAG) systems in production operate under strict service level objectives (SLOs) on tail latency and infrastructure cost. However, standard retrieval pipelines rely on fixed retrieval budgets that ignore query difficulty, over-re",
+      "abstract_evidence_sha256": "b1de4a368a9ba21ed870669570883ceaef0d951979893dd33e4e0af549c17a44",
+      "abstract_sha256": null,
+      "source_abstract_chars": null,
+      "source_metadata_sha256": null,
+      "source_response_sha256": null,
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md",
+        "papers/inference/99-other-inference-systems/2025-2504.20068-jitserve-slo-aware-llm-serving-with-imprecise-request-information.md"
+      ],
+      "linked_from_lineages": [
+        "LLM Serving / Scheduling / Disaggregation",
+        "serving-scheduling"
+      ],
+      "rank": 50
+    }
+  ]
+}
