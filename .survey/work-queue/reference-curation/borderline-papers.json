@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-14T00:38:55+00:00",
-  "record_count": 4956,
+  "updated_at": "2026-10-14T00:59:31+00:00",
+  "record_count": 4958,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -69492,11 +69492,12 @@
       "classification": "borderline",
       "canonical_id": "arXiv:2511.17388",
       "identity_tokens": [
+        "SemanticScholar:ff477cb6269024888614469190225f1931958de3",
         "arXiv:2511.17388"
       ],
-      "reason": "The technique is transformer-architecture adjacent, but the primary abstract demonstrates task quality rather than an inference-efficiency mechanism or measured efficiency gain.",
+      "reason": "The primary arXiv record for Selective RoPE matches the distinctive rotary-embedding title fragment and describes improved gated-linear sequence models, but reports language/sequence quality rather than a serving-efficiency gain.",
       "first_checked_at": "2026-10-10T05:26:22+00:00",
-      "last_checked_at": "2026-10-10T05:26:22+00:00",
+      "last_checked_at": "2026-10-14T00:59:31+00:00",
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "Selective Rotary Position Embedding"
@@ -76583,6 +76584,32 @@
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "ShrinKV: Key-Value Cache Compression with Progressive Hidden States Shrinking to Mitigate Prefilling Latency"
+    },
+    "DOI:10.1109/iscas56072.2025.11043353": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/iscas56072.2025.11043353",
+      "identity_tokens": [
+        "DOI:10.1109/iscas56072.2025.11043353"
+      ],
+      "reason": "DOI metadata and the University of Groningen record confirm the listed paper and IEEE venue, but the DOI resolver/IEEE primary abstract could not be retrieved in this session; algorithm and target benefit therefore remain unverified.",
+      "first_checked_at": "2026-10-14T00:59:30+00:00",
+      "last_checked_at": "2026-10-14T00:59:30+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Algorithm-Hardware Co-Design for Ultra-Low-Power Large Language Models"
+    },
+    "arXiv:2510.06557": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2510.06557",
+      "identity_tokens": [
+        "arXiv:2510.06557"
+      ],
+      "reason": "Markovian Thinking redesigns reasoning to linear compute and constant memory; this is inference-time reasoning cost reduction, but evidence is tied to a reasoning/RL environment rather than a serving runtime.",
+      "first_checked_at": "2026-10-14T00:59:31+00:00",
+      "last_checked_at": "2026-10-14T00:59:31+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "The Markovian Thinker: Architecture-Agnostic Linear Scaling of Reasoning"
     }
   }
 }

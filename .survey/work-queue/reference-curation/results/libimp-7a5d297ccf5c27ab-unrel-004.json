@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-7a5d297ccf5c27ab-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2510.18830",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2510.18830",
+    "identity_tokens": [
+      "arXiv:2510.18830"
+    ],
+    "reason": "MTraining improves distributed dynamic-sparse-attention throughput for ultra-long-context model training; the abstract’s objective and measurements are training-specific.",
+    "first_checked_at": "2026-10-14T00:59:31+00:00",
+    "last_checked_at": "2026-10-14T00:59:31+00:00",
+    "linked_from": [],
+    "title": "MTraining: Distributed Dynamic Sparse Attention for Efficient Ultra-Long Context Training"
+  },
+  "processed_at": "2026-10-14T00:59:32+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-7a5d297ccf5c",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
