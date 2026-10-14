@@ -1,0 +1,676 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-c44af3544d7ca1d6-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-c44af3544d7c",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "DOI:10.1109/cluster59342.2025.11186491",
+    "DOI:10.1145/3759441.3759448",
+    "arXiv:2307.07705",
+    "arXiv:2407.21082",
+    "arXiv:2506.01967",
+    "arXiv:2510.12051",
+    "arXiv:2510.19482"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 7,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "5e1f97f1581a5b6ac67807a379b63362ae1b07fe",
+  "raw_search_result_count": 7,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 7,
+  "provider_progress": {
+    "requested_count": 7,
+    "status_counts": {
+      "allowed": 7,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-14T01:04:23.499416+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "DOI:10.1109/cluster59342.2025.11186491",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.1145/3759441.3759448",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2307.07705",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2407.21082",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2506.01967",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2510.12051",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2510.19482",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "CA-LoRA: Adapting Existing LoRA for Compressed LLMs to Enable Efficient Multi-Tasking on Personal Devices",
+      "source_url": "https://arxiv.org/abs/2307.07705",
+      "year": 2023,
+      "published": "2023-07-15",
+      "venue": null,
+      "citation_count": 7,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Recently, there has been a demand to deploy Large Language Models (LLMs) on personal devices such as laptops and smartphones. These LLMs have different model variants when handling different tasks. However, personal devices have limited resources and require reduced storage overhead. To address this, there are two key methods available: the first is model compression, which compresses LLMs into smaller sizes; the second is LoRA, which can transfer an LLM to other tasks with very few parameters, avoiding the storage of multiple model variants in multi-task scenarios by only preserving LoRAs. However, our experiments show that directly combining these two methods yields sub-optimal performance. Considering that the open-source community has already contributed many LoRAs to LLMs, we propose to adapt these existing LoRAs from the LLMs to their compressed version and introduce a Compression-Aware LoRA (CA-LoRA) framework. We incorporate knowledge inheritance and recovery strategies to recover the lost knowledge caused by model compression. Experiment results demonstrate that CA-LoRA outperforms the vanilla LoRA methods applied to a compressed LLM and achieves comparable performance to the non-compressed LLM with existing LoRA modules. The source code of CA-LoRA is available at https://github.com/thunlp/CA-LoRA.",
+      "identifiers": [
+        "SemanticScholar:e3c677111470321bf4190860a62b7619d2a50af3"
+      ],
+      "semantic_scholar_id": "e3c677111470321bf4190860a62b7619d2a50af3",
+      "canonical_id": "arXiv:2307.07705",
+      "arxiv_id": "2307.07705",
+      "authors": [
+        "Weilin Zhao",
+        "Yu-Xiang Huang",
+        "Xu Han",
+        "Zhi-Yuan Liu",
+        "Zhengyan Zhang",
+        "Kuai Li",
+        "Chen Chen",
+        "Tao Yang",
+        "Maosong Sun"
+      ],
+      "priority": 7,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 7,
+        "citation_count": 7,
+        "total": 7,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1187,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Turning LLM Activations Quantization-Friendly",
+      "source_url": "https://arxiv.org/abs/2506.01967",
+      "year": 2025,
+      "published": "2025-05-11",
+      "venue": "International Symposium on Applied Computational Intelligence and Informatics",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Quantization effectively reduces the serving costs of Large Language Models (LLMs) by speeding up data movement through compressed parameters and enabling faster operations via integer arithmetic. However, activating integer arithmetic requires quantizing both weights and activations, which poses challenges due to the significant outliers in LLMs that increase quantization error. In this work, we investigate these outliers with an emphasis on their effect on layer-wise quantization error, then examine how smoothing and rotation transform the observed values. Our primary contributions include introducing a new metric to measure and visualize quantization difficulty based on channel magnitudes, as well as proposing a hybrid approach that applies channel-wise scaling before rotation, supported by a mathematical formulation of its benefits. The code used in our experiments is available at https://github.com/czakop/smooth-rotexper.",
+      "identifiers": [
+        "SemanticScholar:16c62e3157857c99366f07212db8e0418a9d8ac5"
+      ],
+      "semantic_scholar_id": "16c62e3157857c99366f07212db8e0418a9d8ac5",
+      "canonical_id": "arXiv:2506.01967",
+      "arxiv_id": "2506.01967",
+      "doi": "10.1109/SACI66288.2025.11030191",
+      "authors": [
+        "Patrik Czakó",
+        "Gábor Kertész",
+        "S. Szénási"
+      ],
+      "priority": 2,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 2,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 521,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "EMPIRIC: Exploring Missing Pieces in KV Cache Compression for Reducing Computation, Storage, and Latency in Long-Context LLM Inference",
+      "source_url": "https://doi.org/10.1145/3759441.3759448",
+      "year": 2025,
+      "published": "2025-08-04",
+      "venue": "ACM SIGOPS Operating Systems Review",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Transformer-based Large Language Models (LLMs) heavily depend on the KV cache for efficient handling of long context sequences. However, the size of the KV cache grows linearly with the input sequence length, increasingly straining system memory, computational resources, bandwidth, and latency during decoding. Although recent research has proposed various techniques to compress the KV cache -targeting either storage or computational efficiency-few methods effectively achieve both simultaneously. Additionally, existing methods primarily rely on heuristic-driven approaches, lacking comprehensive insights into token selection criteria, and often significantly compromise model accuracy under strict KV cache token budget constraints (e.g., keeping 512 tokens). Building upon our recent work, RocketKV, this paper introduces EMPIRIC as an oracle-based vision study, which explicitly defines theoretical bounds for accuracy, computation, and storage in KV cache compression. By analyzing intrinsic patterns in KV cache attention heads, EMPIRIC provides novel insights into effective token pruning without accuracy degradation. This work clarifies the overlooked elements critical to KV cache compression during decoding and optimally balances computational efficiency, storage optimization, inference latency, and accuracy. We envision that EMPIRIC will guide future research efforts toward creating scalable, efficient KV cache compression techniques, significantly improving inference performance for long context LLM inference.",
+      "identifiers": [
+        "SemanticScholar:957fe6370e176853431091c8c76fbf6b4eff8239"
+      ],
+      "semantic_scholar_id": "957fe6370e176853431091c8c76fbf6b4eff8239",
+      "doi": "10.1145/3759441.3759448",
+      "canonical_id": "DOI:10.1145/3759441.3759448",
+      "authors": [
+        "Payman Behnam",
+        "Yao-Sheng Fu",
+        "Ritchie Zhao",
+        "Po-An Tsai",
+        "Zhididng Yu",
+        "Alexey Tumanov"
+      ],
+      "priority": 1,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 1,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 436,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Accelerating Large Language Model Inference with Self-Supervised Early Exits",
+      "source_url": "https://arxiv.org/abs/2407.21082",
+      "year": 2024,
+      "published": "2024-07-30",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "This paper presents a modular approach to accelerate inference in large language models (LLMs) by adding early exit heads at intermediate transformer layers. Each head is trained in a self-supervised manner to mimic the main model's predictions, allowing computation to stop early when a calibrated confidence threshold is reached. We evaluate several confidence metrics and show that entropy provides the most reliable separation between correct and incorrect predictions. Experiments on the Pythia model suite (70M to 2.8B parameters) demonstrate that our method significantly reduces inference cost while maintaining accuracy across multiple benchmarks. We further adapt this approach to speculative decoding, introducing Dynamic Self-Speculative Decoding (DSSD), which achieves 1.66x higher token acceptance than manually-tuned LayerSkip baselines with minimal hyperparameter tuning.",
+      "identifiers": [
+        "SemanticScholar:0841857d0337043cef1cdf030acc28b1599c367c"
+      ],
+      "semantic_scholar_id": "0841857d0337043cef1cdf030acc28b1599c367c",
+      "canonical_id": "arXiv:2407.21082",
+      "arxiv_id": "2407.21082",
+      "authors": [
+        "F. Valade"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 806,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "SplitQuant: Resource-Efficient LLM Offline Serving on Heterogeneous GPUs via Phase-Aware Model Partition and Adaptive Quantization",
+      "source_url": "https://doi.org/10.1109/CLUSTER59342.2025.11186491",
+      "year": 2025,
+      "published": "2025-09-02",
+      "venue": "IEEE International Conference on Cluster Computing",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Modern large language models (LLMs) serving systems address distributed deployment challenges through two key techniques: distributed model partitioning for parallel computation across accelerators and quantization for reducing parameter size. While existing systems assume homogeneous GPU environments, we reveal significant untapped potential in heterogeneous systems with mixed-capacity accelerators where two critical limitations persist: (1) uniform partitioning and quantization strategies fail to adapt to hardware heterogeneity, exacerbating resource imbalance, and (2) decoupled optimization of partitioning and quantization overlooks critical performance synergies between these techniques. We present SplitQuant, a phase-aware distributed serving system that co-optimizes mixedprecision quantization, phase-aware model partitioning, and micro-batch sizing for heterogeneous environments. Our approach combines analytical modeling of quality-runtime tradeoffs with a lightweight planning algorithm to maximize throughput while preserving user-specified model quality targets. Evaluations across 10 production clusters show SplitQuant achieves up to $2.34 \\times(1.61 \\times$ mean) higher throughput than state-of-theart approaches without violating accuracy targets. Our results underscore the value of co-designing quantization and model partitioning strategies for heterogeneous environments.",
+      "identifiers": [
+        "SemanticScholar:5701cb053d8f43ba3927dacc8d1660b6be989d74"
+      ],
+      "semantic_scholar_id": "5701cb053d8f43ba3927dacc8d1660b6be989d74",
+      "doi": "10.1109/CLUSTER59342.2025.11186491",
+      "canonical_id": "DOI:10.1109/CLUSTER59342.2025.11186491",
+      "authors": [
+        "Juntao Zhao",
+        "Borui Wan",
+        "Yanghua Peng",
+        "Haibin Lin",
+        "Chuan Wu"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 407,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "APCE: Adaptive Progressive Context Expansion for Long Context Processing",
+      "source_url": "https://arxiv.org/abs/2510.12051",
+      "year": 2025,
+      "published": "2025-10-14",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Deploying useful Long-Context Transformer Models (LCTMs) requires addressing two key challenges: (1) A growing memory footprint due to quadratic self-attention and linear KV-cache scaling in memory as sequence length increases; (2) the ContextRot phenomena where empirical evidence suggests that transformer architecture's performance degrades with increasing context length. Given the shared dependency on the input, a natural question arises: Can we surgically select the most important input chunks for processing to synergistically (a) reduce the memory footprint, and (b) mitigate the ContextRot effects? In this paper, we answer this question in the affirmative for long-context summarization tasks. We propose APCE as a context-aware solution to select the most important input chunks through low-dimensional semantic similarity matching with the current query. By directly operating on the input, APCE decouples from strict dependency on underlying hardware or CUDA environments, promising a compatible solution scalable to different deployment systems. Our empirical evaluations have demonstrated superior or on-par summarization performance for APCE compared to the full dense baseline using a fraction (50%-70%) of the input sequence resulting in KV-cache and self-attention memory efficiency improvements. We hope our findings inspire further research on context-aware efficiency solutions for LCTMs geared towards other relevant long-context tasks.",
+      "identifiers": [
+        "SemanticScholar:2573f32e639f6d72fb6288b0763bf311dd851ee7"
+      ],
+      "semantic_scholar_id": "2573f32e639f6d72fb6288b0763bf311dd851ee7",
+      "canonical_id": "arXiv:2510.12051",
+      "arxiv_id": "2510.12051",
+      "doi": "10.48550/arXiv.2510.12051",
+      "authors": [
+        "Baisub Lee",
+        "Sanghyun Byun",
+        "Mohanad Odema",
+        "J. Guack",
+        "Jacob Song",
+        "Woo Seong Chung"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 365,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "ELUTQ: Optimizing Quantization Accuracy under LUT-Based Computation for Edge LLMs",
+      "source_url": "https://arxiv.org/abs/2510.19482",
+      "year": 2025,
+      "published": "2025-10-22",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Weight quantization effectively reduces memory consumption and enable the deployment of Large Language Models on edge devices, yet existing hardware-friendly methods often rely on uniform quantization, which suffers from poor weight-distribution fitting and high dequantization overhead under low-bit settings. In this paper, we propose ELUTQ, an efficient quantization framework featuring a novel quantization format termed Hierarchical Linear Quantization (HLQ). HLQ is designed to better capture the statistical characteristics of weights and eliminate dequantization overhead using Bit-serial LUT-based GEMM operations. HLQ significantly improves model accuracy under low-bit settings and achieves performance comparable to QAT methods without any retraining of the weights. Moreover, an optimized quantization pipeline is integrated into ELUTQ, enabling it to complete the quantization of LLaMA 3.1-70B using only 64 GB of CPU memory and 48 GB of VRAM, reducing the hardware requirements for large-scale model quantization. To enable efficient deployment on edge devices, ELUTQ designs high-performance kernels to support end-to-end inference. Our 2-bit LLaMA3.1-8B achieves 1.5x speedup over AWQ on RTX 3090. Code is available at https://github.com/Nkniexin/ELUTQ.",
+      "identifiers": [
+        "SemanticScholar:d2abf9c7cb81a26f48e1b86d09524af01b9acfc6"
+      ],
+      "semantic_scholar_id": "d2abf9c7cb81a26f48e1b86d09524af01b9acfc6",
+      "canonical_id": "arXiv:2510.19482",
+      "arxiv_id": "2510.19482",
+      "authors": [
+        "Xin Nie",
+        "Liang Dong",
+        "Haicheng Zhang",
+        "Jiawang Xiao",
+        "Gui-Ling Sun"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 357,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2307.07705",
+      "identity_tokens": [
+        "id:SemanticScholar:e3c677111470321bf4190860a62b7619d2a50af3",
+        "id:arXiv:2307.07705",
+        "title:calora adapting existing lora for compressed llms to enable efficient multitasking on personal devices",
+        "url:https://arxiv.org/abs/2307.07705"
+      ],
+      "record": {
+        "title": "CA-LoRA: Adapting Existing LoRA for Compressed LLMs to Enable Efficient Multi-Tasking on Personal Devices",
+        "source_url": "https://arxiv.org/abs/2307.07705",
+        "year": 2023,
+        "published": "2023-07-15",
+        "venue": null,
+        "citation_count": 7,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Recently, there has been a demand to deploy Large Language Models (LLMs) on personal devices such as laptops and smartphones. These LLMs have different model variants when handling different tasks. However, personal devices have limited resources and require reduced storage overhead. To address this, there are two key methods available: the first is model compression, which compresses LLMs into smaller sizes; the second is LoRA, which can transfer an LLM to other tasks with very few parameters, avoiding the storage of multiple model variants in multi-task scenarios by only preserving LoRAs. However, our experiments show that directly combining these two methods yields sub-optimal performance. Considering that the open-source community has already contributed many LoRAs to LLMs, we propose to adapt these existing LoRAs from the LLMs to their compressed version and introduce a Compression-Aware LoRA (CA-LoRA) framework. We incorporate knowledge inheritance and recovery strategies to recover the lost knowledge caused by model compression. Experiment results demonstrate that CA-LoRA outperforms the vanilla LoRA methods applied to a compressed LLM and achieves comparable performance to the non-compressed LLM with existing LoRA modules. The source code of CA-LoRA is available at https://github.com/thunlp/CA-LoRA.",
+        "identifiers": [
+          "SemanticScholar:e3c677111470321bf4190860a62b7619d2a50af3"
+        ],
+        "semantic_scholar_id": "e3c677111470321bf4190860a62b7619d2a50af3",
+        "canonical_id": "arXiv:2307.07705",
+        "arxiv_id": "2307.07705",
+        "authors": [
+          "Weilin Zhao",
+          "Yu-Xiang Huang",
+          "Xu Han",
+          "Zhi-Yuan Liu",
+          "Zhengyan Zhang",
+          "Kuai Li",
+          "Chen Chen",
+          "Tao Yang",
+          "Maosong Sun"
+        ],
+        "priority": 7,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 7,
+          "citation_count": 7,
+          "total": 7,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 1187,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2506.01967",
+      "identity_tokens": [
+        "id:DOI:10.1109/saci66288.2025.11030191",
+        "id:SemanticScholar:16c62e3157857c99366f07212db8e0418a9d8ac5",
+        "id:arXiv:2506.01967",
+        "title:turning llm activations quantizationfriendly",
+        "url:https://arxiv.org/abs/2506.01967"
+      ],
+      "record": {
+        "title": "Turning LLM Activations Quantization-Friendly",
+        "source_url": "https://arxiv.org/abs/2506.01967",
+        "year": 2025,
+        "published": "2025-05-11",
+        "venue": "International Symposium on Applied Computational Intelligence and Informatics",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Quantization effectively reduces the serving costs of Large Language Models (LLMs) by speeding up data movement through compressed parameters and enabling faster operations via integer arithmetic. However, activating integer arithmetic requires quantizing both weights and activations, which poses challenges due to the significant outliers in LLMs that increase quantization error. In this work, we investigate these outliers with an emphasis on their effect on layer-wise quantization error, then examine how smoothing and rotation transform the observed values. Our primary contributions include introducing a new metric to measure and visualize quantization difficulty based on channel magnitudes, as well as proposing a hybrid approach that applies channel-wise scaling before rotation, supported by a mathematical formulation of its benefits. The code used in our experiments is available at https://github.com/czakop/smooth-rotexper.",
+        "identifiers": [
+          "SemanticScholar:16c62e3157857c99366f07212db8e0418a9d8ac5"
+        ],
+        "semantic_scholar_id": "16c62e3157857c99366f07212db8e0418a9d8ac5",
+        "canonical_id": "arXiv:2506.01967",
+        "arxiv_id": "2506.01967",
+        "doi": "10.1109/SACI66288.2025.11030191",
+        "authors": [
+          "Patrik Czakó",
+          "Gábor Kertész",
+          "S. Szénási"
+        ],
+        "priority": 2,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 2,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 521,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1145/3759441.3759448",
+      "identity_tokens": [
+        "id:DOI:10.1145/3759441.3759448",
+        "id:SemanticScholar:957fe6370e176853431091c8c76fbf6b4eff8239",
+        "title:empiric exploring missing pieces in kv cache compression for reducing computation storage and latency in longcontext llm inference",
+        "url:https://doi.org/10.1145/3759441.3759448"
+      ],
+      "record": {
+        "title": "EMPIRIC: Exploring Missing Pieces in KV Cache Compression for Reducing Computation, Storage, and Latency in Long-Context LLM Inference",
+        "source_url": "https://doi.org/10.1145/3759441.3759448",
+        "year": 2025,
+        "published": "2025-08-04",
+        "venue": "ACM SIGOPS Operating Systems Review",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Transformer-based Large Language Models (LLMs) heavily depend on the KV cache for efficient handling of long context sequences. However, the size of the KV cache grows linearly with the input sequence length, increasingly straining system memory, computational resources, bandwidth, and latency during decoding. Although recent research has proposed various techniques to compress the KV cache -targeting either storage or computational efficiency-few methods effectively achieve both simultaneously. Additionally, existing methods primarily rely on heuristic-driven approaches, lacking comprehensive insights into token selection criteria, and often significantly compromise model accuracy under strict KV cache token budget constraints (e.g., keeping 512 tokens). Building upon our recent work, RocketKV, this paper introduces EMPIRIC as an oracle-based vision study, which explicitly defines theoretical bounds for accuracy, computation, and storage in KV cache compression. By analyzing intrinsic patterns in KV cache attention heads, EMPIRIC provides novel insights into effective token pruning without accuracy degradation. This work clarifies the overlooked elements critical to KV cache compression during decoding and optimally balances computational efficiency, storage optimization, inference latency, and accuracy. We envision that EMPIRIC will guide future research efforts toward creating scalable, efficient KV cache compression techniques, significantly improving inference performance for long context LLM inference.",
+        "identifiers": [
+          "SemanticScholar:957fe6370e176853431091c8c76fbf6b4eff8239"
+        ],
+        "semantic_scholar_id": "957fe6370e176853431091c8c76fbf6b4eff8239",
+        "doi": "10.1145/3759441.3759448",
+        "canonical_id": "DOI:10.1145/3759441.3759448",
+        "authors": [
+          "Payman Behnam",
+          "Yao-Sheng Fu",
+          "Ritchie Zhao",
+          "Po-An Tsai",
+          "Zhididng Yu",
+          "Alexey Tumanov"
+        ],
+        "priority": 1,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 1,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 436,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2407.21082",
+      "identity_tokens": [
+        "id:SemanticScholar:0841857d0337043cef1cdf030acc28b1599c367c",
+        "id:arXiv:2407.21082",
+        "title:accelerating large language model inference with selfsupervised early exits",
+        "url:https://arxiv.org/abs/2407.21082"
+      ],
+      "record": {
+        "title": "Accelerating Large Language Model Inference with Self-Supervised Early Exits",
+        "source_url": "https://arxiv.org/abs/2407.21082",
+        "year": 2024,
+        "published": "2024-07-30",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "This paper presents a modular approach to accelerate inference in large language models (LLMs) by adding early exit heads at intermediate transformer layers. Each head is trained in a self-supervised manner to mimic the main model's predictions, allowing computation to stop early when a calibrated confidence threshold is reached. We evaluate several confidence metrics and show that entropy provides the most reliable separation between correct and incorrect predictions. Experiments on the Pythia model suite (70M to 2.8B parameters) demonstrate that our method significantly reduces inference cost while maintaining accuracy across multiple benchmarks. We further adapt this approach to speculative decoding, introducing Dynamic Self-Speculative Decoding (DSSD), which achieves 1.66x higher token acceptance than manually-tuned LayerSkip baselines with minimal hyperparameter tuning.",
+        "identifiers": [
+          "SemanticScholar:0841857d0337043cef1cdf030acc28b1599c367c"
+        ],
+        "semantic_scholar_id": "0841857d0337043cef1cdf030acc28b1599c367c",
+        "canonical_id": "arXiv:2407.21082",
+        "arxiv_id": "2407.21082",
+        "authors": [
+          "F. Valade"
+        ],
+        "priority": 0,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 0,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 806,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/cluster59342.2025.11186491",
+      "identity_tokens": [
+        "id:DOI:10.1109/cluster59342.2025.11186491",
+        "id:SemanticScholar:5701cb053d8f43ba3927dacc8d1660b6be989d74",
+        "title:splitquant resourceefficient llm offline serving on heterogeneous gpus via phaseaware model partition and adaptive quantization",
+        "url:https://doi.org/10.1109/CLUSTER59342.2025.11186491"
+      ],
+      "record": {
+        "title": "SplitQuant: Resource-Efficient LLM Offline Serving on Heterogeneous GPUs via Phase-Aware Model Partition and Adaptive Quantization",
+        "source_url": "https://doi.org/10.1109/CLUSTER59342.2025.11186491",
+        "year": 2025,
+        "published": "2025-09-02",
+        "venue": "IEEE International Conference on Cluster Computing",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Modern large language models (LLMs) serving systems address distributed deployment challenges through two key techniques: distributed model partitioning for parallel computation across accelerators and quantization for reducing parameter size. While existing systems assume homogeneous GPU environments, we reveal significant untapped potential in heterogeneous systems with mixed-capacity accelerators where two critical limitations persist: (1) uniform partitioning and quantization strategies fail to adapt to hardware heterogeneity, exacerbating resource imbalance, and (2) decoupled optimization of partitioning and quantization overlooks critical performance synergies between these techniques. We present SplitQuant, a phase-aware distributed serving system that co-optimizes mixedprecision quantization, phase-aware model partitioning, and micro-batch sizing for heterogeneous environments. Our approach combines analytical modeling of quality-runtime tradeoffs with a lightweight planning algorithm to maximize throughput while preserving user-specified model quality targets. Evaluations across 10 production clusters show SplitQuant achieves up to $2.34 \\times(1.61 \\times$ mean) higher throughput than state-of-theart approaches without violating accuracy targets. Our results underscore the value of co-designing quantization and model partitioning strategies for heterogeneous environments.",
+        "identifiers": [
+          "SemanticScholar:5701cb053d8f43ba3927dacc8d1660b6be989d74"
+        ],
+        "semantic_scholar_id": "5701cb053d8f43ba3927dacc8d1660b6be989d74",
+        "doi": "10.1109/CLUSTER59342.2025.11186491",
+        "canonical_id": "DOI:10.1109/CLUSTER59342.2025.11186491",
+        "authors": [
+          "Juntao Zhao",
+          "Borui Wan",
+          "Yanghua Peng",
+          "Haibin Lin",
+          "Chuan Wu"
+        ],
+        "priority": 0,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 0,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 407,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2510.12051",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2510.12051",
+        "id:SemanticScholar:2573f32e639f6d72fb6288b0763bf311dd851ee7",
+        "id:arXiv:2510.12051",
+        "title:apce adaptive progressive context expansion for long context processing",
+        "url:https://arxiv.org/abs/2510.12051"
+      ],
+      "record": {
+        "title": "APCE: Adaptive Progressive Context Expansion for Long Context Processing",
+        "source_url": "https://arxiv.org/abs/2510.12051",
+        "year": 2025,
+        "published": "2025-10-14",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Deploying useful Long-Context Transformer Models (LCTMs) requires addressing two key challenges: (1) A growing memory footprint due to quadratic self-attention and linear KV-cache scaling in memory as sequence length increases; (2) the ContextRot phenomena where empirical evidence suggests that transformer architecture's performance degrades with increasing context length. Given the shared dependency on the input, a natural question arises: Can we surgically select the most important input chunks for processing to synergistically (a) reduce the memory footprint, and (b) mitigate the ContextRot effects? In this paper, we answer this question in the affirmative for long-context summarization tasks. We propose APCE as a context-aware solution to select the most important input chunks through low-dimensional semantic similarity matching with the current query. By directly operating on the input, APCE decouples from strict dependency on underlying hardware or CUDA environments, promising a compatible solution scalable to different deployment systems. Our empirical evaluations have demonstrated superior or on-par summarization performance for APCE compared to the full dense baseline using a fraction (50%-70%) of the input sequence resulting in KV-cache and self-attention memory efficiency improvements. We hope our findings inspire further research on context-aware efficiency solutions for LCTMs geared towards other relevant long-context tasks.",
+        "identifiers": [
+          "SemanticScholar:2573f32e639f6d72fb6288b0763bf311dd851ee7"
+        ],
+        "semantic_scholar_id": "2573f32e639f6d72fb6288b0763bf311dd851ee7",
+        "canonical_id": "arXiv:2510.12051",
+        "arxiv_id": "2510.12051",
+        "doi": "10.48550/arXiv.2510.12051",
+        "authors": [
+          "Baisub Lee",
+          "Sanghyun Byun",
+          "Mohanad Odema",
+          "J. Guack",
+          "Jacob Song",
+          "Woo Seong Chung"
+        ],
+        "priority": 0,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 0,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 365,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2510.19482",
+      "identity_tokens": [
+        "id:SemanticScholar:d2abf9c7cb81a26f48e1b86d09524af01b9acfc6",
+        "id:arXiv:2510.19482",
+        "title:elutq optimizing quantization accuracy under lutbased computation for edge llms",
+        "url:https://arxiv.org/abs/2510.19482"
+      ],
+      "record": {
+        "title": "ELUTQ: Optimizing Quantization Accuracy under LUT-Based Computation for Edge LLMs",
+        "source_url": "https://arxiv.org/abs/2510.19482",
+        "year": 2025,
+        "published": "2025-10-22",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Weight quantization effectively reduces memory consumption and enable the deployment of Large Language Models on edge devices, yet existing hardware-friendly methods often rely on uniform quantization, which suffers from poor weight-distribution fitting and high dequantization overhead under low-bit settings. In this paper, we propose ELUTQ, an efficient quantization framework featuring a novel quantization format termed Hierarchical Linear Quantization (HLQ). HLQ is designed to better capture the statistical characteristics of weights and eliminate dequantization overhead using Bit-serial LUT-based GEMM operations. HLQ significantly improves model accuracy under low-bit settings and achieves performance comparable to QAT methods without any retraining of the weights. Moreover, an optimized quantization pipeline is integrated into ELUTQ, enabling it to complete the quantization of LLaMA 3.1-70B using only 64 GB of CPU memory and 48 GB of VRAM, reducing the hardware requirements for large-scale model quantization. To enable efficient deployment on edge devices, ELUTQ designs high-performance kernels to support end-to-end inference. Our 2-bit LLaMA3.1-8B achieves 1.5x speedup over AWQ on RTX 3090. Code is available at https://github.com/Nkniexin/ELUTQ.",
+        "identifiers": [
+          "SemanticScholar:d2abf9c7cb81a26f48e1b86d09524af01b9acfc6"
+        ],
+        "semantic_scholar_id": "d2abf9c7cb81a26f48e1b86d09524af01b9acfc6",
+        "canonical_id": "arXiv:2510.19482",
+        "arxiv_id": "2510.19482",
+        "authors": [
+          "Xin Nie",
+          "Liang Dong",
+          "Haicheng Zhang",
+          "Jiawang Xiao",
+          "Gui-Ling Sun"
+        ],
+        "priority": 0,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 0,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 357,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:391cd5c2d336c0aedb339692e6deb7706e2afff0b5fbe3debe6f2516e4ae90a1",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

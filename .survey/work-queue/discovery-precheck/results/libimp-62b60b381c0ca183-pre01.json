@@ -1,0 +1,1106 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-62b60b381c0ca183-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-62b60b381c0c",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "DOI:10.1002/spe.3422",
+    "DOI:10.1109/cluster59342.2025.11186468",
+    "SemanticScholar:5ba021e294c898420b72d475f62d80b6d3ae2fbb",
+    "SemanticScholar:db3dec580b67703832f46c15aff9262bee8c557b",
+    "arXiv:2408.11855",
+    "arXiv:2505.07833",
+    "arXiv:2505.21835",
+    "arXiv:2508.04405",
+    "arXiv:2509.01190",
+    "arXiv:2509.04897",
+    "arXiv:2510.05175",
+    "arXiv:2605.03562"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 12,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": false,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "5e1f97f1581a5b6ac67807a379b63362ae1b07fe",
+  "raw_search_result_count": 12,
+  "retrieval_duplicate_filtered_count": 1,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 11,
+  "provider_progress": {
+    "requested_count": 12,
+    "status_counts": {
+      "allowed": 11,
+      "filtered_by_snapshot": 1,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-14T01:04:11.290085+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "DOI:10.1002/spe.3422",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.1109/cluster59342.2025.11186468",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "SemanticScholar:5ba021e294c898420b72d475f62d80b6d3ae2fbb",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "SemanticScholar:db3dec580b67703832f46c15aff9262bee8c557b",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2408.11855",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2505.07833",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2505.21835",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2508.04405",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2509.01190",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2509.04897",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2510.05175",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2605.03562",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2605.03562"
+    }
+  ],
+  "results": [
+    {
+      "title": "Subkv: Quantizing Long Context KV Cache for Sub‐Billion Parameter Language Models on Edge Devices",
+      "source_url": "https://doi.org/10.1002/spe.3422",
+      "year": 2025,
+      "published": "2025-04-01",
+      "venue": "Software, Practice & Experience",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Models (LLMs) have demonstrated remarkable capabilities across various tasks. However, their substantial computational and memory requirements present significant challenges for widespread deployment on edge devices.",
+      "identifiers": [
+        "SemanticScholar:570e1642ffa3e552b0c100ec10b92bccf3da80e3"
+      ],
+      "semantic_scholar_id": "570e1642ffa3e552b0c100ec10b92bccf3da80e3",
+      "doi": "10.1002/spe.3422",
+      "canonical_id": "DOI:10.1002/spe.3422",
+      "authors": [
+        "Zi-Qian Zeng",
+        "Tao Zhang",
+        "Zheng-Dong Lu",
+        "Wen-Jun Li",
+        "Hui-Ping Zhuang",
+        "Hon-Gen Shao",
+        "Sin G. Teo",
+        "Xiao-Feng Zou"
+      ],
+      "priority": 3,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 3,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 561,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "FactorLLM: Factorizing Knowledge via Mixture of Experts for Large Language Models",
+      "source_url": "https://arxiv.org/abs/2408.11855",
+      "year": 2024,
+      "published": "2024-08-15",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Recent research has demonstrated that Feed-Forward Networks (FFNs) in Large Language Models (LLMs) play a pivotal role in storing diverse linguistic and factual knowledge. Conventional methods frequently face challenges due to knowledge confusion stemming from their monolithic and redundant architectures, which calls for more efficient solutions with minimal computational overhead, particularly for LLMs. In this paper, we explore the FFN computation paradigm in LLMs and introduce FactorLLM, a novel approach that decomposes well-trained dense FFNs into sparse sub-networks without requiring any further modifications, while maintaining the same level of performance. Furthermore, we embed a router from the Mixture-of-Experts (MoE), combined with our devised Prior-Approximate (PA) loss term that facilitates the dynamic activation of experts and knowledge adaptation, thereby accelerating computational processes and enhancing performance using minimal training data and fine-tuning steps. FactorLLM thus enables efficient knowledge factorization and activates select groups of experts specifically tailored to designated tasks, emulating the interactive functional segmentation of the human brain. Extensive experiments across various benchmarks demonstrate the effectiveness of our proposed FactorLLM which achieves comparable performance to the source model securing up to 85% model performance while obtaining over a 30% increase in inference speed. Code: https://github.com/zhenwuweihe/FactorLLM.",
+      "identifiers": [
+        "SemanticScholar:e55c9cde2094bf0eb8c4c09b44eaa1b8df403a57"
+      ],
+      "semantic_scholar_id": "e55c9cde2094bf0eb8c4c09b44eaa1b8df403a57",
+      "canonical_id": "arXiv:2408.11855",
+      "arxiv_id": "2408.11855",
+      "doi": "10.48550/arXiv.2408.11855",
+      "authors": [
+        "Zhong-Yu Zhao",
+        "Menghang Dong",
+        "Rong-Yu Zhang",
+        "Wen-Zhao Zheng",
+        "Yun-Peng Zhang",
+        "Huanrui Yang",
+        "Dalong Du",
+        "Kurt Keutzer",
+        "Shang-Hang Zhang"
+      ],
+      "priority": 2,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 2,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 790,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "FlexQ: Efficient Post-training INT6 Quantization for LLM Serving via Algorithm-System Co-Design",
+      "source_url": "https://arxiv.org/abs/2508.04405",
+      "year": 2025,
+      "published": "2025-08-06",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Models (LLMs) demonstrate exceptional performance but entail significant memory and computational costs, restricting their practical deployment. While existing INT4/INT8 quantization reduces these costs, they often degrade accuracy or lack optimal efficiency. INT6 quantization offers a superior trade-off between model accuracy and inference efficiency, but lacks hardware support in modern GPUs, forcing emulation via higher-precision arithmetic units that limit acceleration. In this paper, we propose FlexQ, a novel post-training INT6 quantization framework combining algorithmic innovation with system-level optimizations. FlexQ employs uniform 6-bit weight quantization across all layers, with adaptive retention of 8-bit activations in layers identified through layer-wise sensitivity analysis. To maximize hardware efficiency, we develop a specialized high-performance GPU kernel supporting matrix multiplication for W6A6 and W6A8 representations via Binary Tensor Core (BTC) equivalents, effectively bypassing the lack of native INT6 tensor cores. Evaluations on LLaMA family models show FlexQ maintains near-FP16 accuracy, with perplexity increases of no more than 0.1 on WikiText2. The proposed kernel achieves an average 1.39$\\times$ speedup over ABQ-LLM on LLaMA-2-70B linear layers. End-to-end, FlexQ delivers 1.33$\\times$ inference acceleration and 1.21$\\times$ memory savings over SmoothQuant. Code is released at https://github.com/FlyFoxPlayer/FlexQ.",
+      "identifiers": [
+        "SemanticScholar:12919efc80d55969ec34a3aa6b8d6518f262a44b"
+      ],
+      "semantic_scholar_id": "12919efc80d55969ec34a3aa6b8d6518f262a44b",
+      "canonical_id": "arXiv:2508.04405",
+      "arxiv_id": "2508.04405",
+      "doi": "10.48550/arXiv.2508.04405",
+      "authors": [
+        "Hao Zhang",
+        "Ai-Ning Jia",
+        "Weifeng Bu",
+        "Yu Cai",
+        "Kai Sheng",
+        "Hao Chen",
+        "Xin He"
+      ],
+      "priority": 2,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 2,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 434,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "O P S ERVE : Opportunistic LLM Inference over Fragmented GPU Capacity in HPC Systems",
+      "source_url": "https://www.semanticscholar.org/paper/5ba021e294c898420b72d475f62d80b6d3ae2fbb",
+      "year": null,
+      "published": null,
+      "venue": null,
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": null,
+      "identifiers": [
+        "SemanticScholar:5ba021e294c898420b72d475f62d80b6d3ae2fbb"
+      ],
+      "semantic_scholar_id": "5ba021e294c898420b72d475f62d80b6d3ae2fbb",
+      "canonical_id": "SemanticScholar:5ba021e294c898420b72d475f62d80b6d3ae2fbb",
+      "authors": [
+        "Patrick Watters",
+        "Xiao-Long Ma",
+        "Harry Yu",
+        "Ian T. Foster",
+        "Michael E. Papka",
+        "Lei Yang",
+        "Feng Yan",
+        "R. Kettimuthu"
+      ],
+      "priority": 1,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 1,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": null,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "TuneComp: Joint Fine-tuning and Compression for Large Foundation Models",
+      "source_url": "https://arxiv.org/abs/2505.21835",
+      "year": 2025,
+      "published": "2025-05-27",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "To reduce model size during post-training, compression methods, including knowledge distillation, low-rank approximation, and pruning, are often applied after fine-tuning the model. However, sequential fine-tuning and compression sacrifices performance, while creating a larger than necessary model as an intermediate step. In this work, we aim to reduce this gap, by directly constructing a smaller model while guided by the downstream task. We propose to jointly fine-tune and compress the model by gradually distilling it to a pruned low-rank structure. Experiments demonstrate that joint fine-tuning and compression significantly outperforms other sequential compression methods.",
+      "identifiers": [
+        "SemanticScholar:fea2e7798ca0c40492b8875d61c858b88612b229"
+      ],
+      "semantic_scholar_id": "fea2e7798ca0c40492b8875d61c858b88612b229",
+      "canonical_id": "arXiv:2505.21835",
+      "arxiv_id": "2505.21835",
+      "doi": "10.48550/arXiv.2505.21835",
+      "authors": [
+        "Xiangyu Chen",
+        "Jing Liu",
+        "Ye Wang",
+        "Matthew Brand",
+        "Pu Wang",
+        "T. Koike-Akino"
+      ],
+      "priority": 1,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 1,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 505,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Exact Causal Attention with 10% Fewer Operations",
+      "source_url": "https://arxiv.org/abs/2510.05175",
+      "year": 2025,
+      "published": "2025-10-05",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "We present Exact Causal Attention (ECA), a Strassen-style algorithm that computes exact Causal Attention using 10\\% fewer operations. ECA improves a special class of matrix multiplications where either one operand or the output matrix is upper- or lower-triangular. This includes all matrix multiplication operations in the forward and backward pass of Causal Attention, such as masked product $\\mathrm{Mask}(QK^{T})$. ECA is built upon algebraic identities discovered via machine learning and combinatorial search. We note that ECA cannot accelerate fused kernels such as FlashAttention on GPU. This is because ECA requires materialization of large intermediate expressions in the memory, while FlashAttention does not. However, it provides an alternative approach for compute-bound applications and can potentially be useful in scenarios with FLOPs considerations.",
+      "identifiers": [
+        "SemanticScholar:a8c51cb4eb8c3fb18eeed69a3cd561af1b61160f"
+      ],
+      "semantic_scholar_id": "a8c51cb4eb8c3fb18eeed69a3cd561af1b61160f",
+      "canonical_id": "arXiv:2510.05175",
+      "arxiv_id": "2510.05175",
+      "doi": "10.48550/arXiv.2510.05175",
+      "authors": [
+        "Dmitry Rybin",
+        "Yu-Shun Zhang",
+        "Ding Tian",
+        "Zhi-Hang Lin",
+        "Zhi-Quan Luo"
+      ],
+      "priority": 1,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 1,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 374,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "E QUILIBRIUM L ANGUAGE M ODELS",
+      "source_url": "https://www.semanticscholar.org/paper/db3dec580b67703832f46c15aff9262bee8c557b",
+      "year": null,
+      "published": null,
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": null,
+      "identifiers": [
+        "SemanticScholar:db3dec580b67703832f46c15aff9262bee8c557b"
+      ],
+      "semantic_scholar_id": "db3dec580b67703832f46c15aff9262bee8c557b",
+      "canonical_id": "SemanticScholar:db3dec580b67703832f46c15aff9262bee8c557b",
+      "authors": [
+        "Yi-Kun Jiang",
+        "Huanyu Wang",
+        "Tian-Hong Ding",
+        "Wen-Hu Zhang",
+        "Yiming Wu",
+        "Hanbing Zhao",
+        "John C. S. Lui",
+        "Huawei Technologies Co."
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": null,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Harmonia: End-to-End RAG Serving Optimization",
+      "source_url": "https://arxiv.org/abs/2505.07833",
+      "year": 2025,
+      "published": "2025-05-01",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Retrieval-Augmented Generation (RAG) improves the reliability of large language models by integrating external knowledge, but serving RAG pipelines efficiently is challenging because requests traverse heterogeneous components spanning LLM inference, databases, and CPU-side processing. We present Harmonia, an end-to-end RAG serving framework that addresses these bottlenecks through (i) a flexible pipeline specification interface for composing custom workflows, (ii) heterogeneity-aware deployment that provisions and configures components as a distributed inference system, and (iii) a closed-loop runtime controller that monitors load and execution progress and reduces SLO violations through request prioritization and auto-scaling. Across four RAG applications, Harmonia outperforms commercial alternatives, improving throughput by more than 2.04x while reducing SLO violations by up to 78.4 percent.",
+      "identifiers": [
+        "SemanticScholar:1f1a78de2ff367b3e4996822fdca5364ea91d33a"
+      ],
+      "semantic_scholar_id": "1f1a78de2ff367b3e4996822fdca5364ea91d33a",
+      "canonical_id": "arXiv:2505.07833",
+      "arxiv_id": "2505.07833",
+      "authors": [
+        "Saurabh Agarwal",
+        "Bo-Dun Hu",
+        "Luis Pabon",
+        "Myungjin Lee",
+        "Jayanth Srinivasa",
+        "Aditya Akella"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 531,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Efficient Large Language Models with Zero-Shot Adjustable Acceleration",
+      "source_url": "https://arxiv.org/abs/2509.01190",
+      "year": 2025,
+      "published": "2025-09-01",
+      "venue": "2026 34th International Conference on Electrical Engineering (ICEE)",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Models (LLMs) face significant challenges in real-world applications, particularly in balancing computational efficiency and model performance. Acceleration during both fine-tuning and inference is essential for designing efficient architectures. This paper presents a novel training and inference method, termed zero-shot adjustable acceleration, which dynamically adjusts hardware utilization at inference time without additional fine-tuning. The method is applied to recent LLMs and evaluated on multiple classification and text generation benchmarks. Experimental results demonstrate that the approach enables flexible zero-shot acceleration and achieves up to an 11× speedup over baseline methods, while maintaining high model performance.",
+      "identifiers": [
+        "SemanticScholar:20f001de3e77e6756ef7e245b0541e90bfb01db9"
+      ],
+      "semantic_scholar_id": "20f001de3e77e6756ef7e245b0541e90bfb01db9",
+      "canonical_id": "arXiv:2509.01190",
+      "arxiv_id": "2509.01190",
+      "doi": "10.1109/ICEE70628.2026.11710801",
+      "authors": [
+        "Sajjad Kachuee",
+        "Mohammad Sharifkhani"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 408,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Scalable and Fast Inference Serving via Hybrid Communication Scheduling on Heterogeneous Networks",
+      "source_url": "https://doi.org/10.1109/CLUSTER59342.2025.11186468",
+      "year": 2025,
+      "published": "2025-09-02",
+      "venue": "IEEE International Conference on Cluster Computing",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Advances in large language models (LLMs) have opened up new possibilities across various fields, fueling a new wave of interactive AI applications such as DeepSeek and ChatGPT. Inference serving systems play a crucial role in supporting these applications. Recent research indicates that when crossserver parallelization is enabled in inference serving systems, data synchronization overhead can exceed 65% of the total inference delay, making the reduction of communication overhead essential for speeding up inference. While existing systems accelerate cross-server communications by offloading synchronization operations to programmable switches, they often suffer from limited aggregation throughput under bursty traffic conditions, posing challenges for homogeneous network environments. To address these challenges, we propose HeroServe, an innovative inference serving system that leverages heterogeneous networks to accelerate data synchronization in distributed clusters. Our approach enables a fast and scalable inference serving system by employing an offline planner for joint computation allocation and communication scheduling, along with an online scheduler for dynamic traffic management and load balancing. We implement a prototype on a testbed comprising six servers and two programmable switches. Experimental results demonstrate that HeroServe improves scalability by $1.53 \\times$ while achieving lower latency compared to state-of-the-art solutions.",
+      "identifiers": [
+        "SemanticScholar:219f70f66aa8d11f654139c5e8de247801b325bb"
+      ],
+      "semantic_scholar_id": "219f70f66aa8d11f654139c5e8de247801b325bb",
+      "doi": "10.1109/CLUSTER59342.2025.11186468",
+      "canonical_id": "DOI:10.1109/CLUSTER59342.2025.11186468",
+      "authors": [
+        "Gonglong Chen",
+        "Jia-Mei Lv",
+        "Ke-Jiang Ye",
+        "Tao Gu",
+        "Cheng-Zhong Xu"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 407,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "PLaMo 2 Technical Report",
+      "source_url": "https://arxiv.org/abs/2509.04897",
+      "year": 2025,
+      "published": "2025-09-05",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "In this report, we introduce PLaMo 2, a series of Japanese-focused large language models featuring a hybrid Samba-based architecture that transitions to full attention via continual pre-training to support 32K token contexts. Training leverages extensive synthetic corpora to overcome data scarcity, while computational efficiency is achieved through weight reuse and structured pruning. This efficient pruning methodology produces an 8B model that achieves performance comparable to our previous 100B model. Post-training further refines the models using a pipeline of supervised fine-tuning (SFT) and direct preference optimization (DPO), enhanced by synthetic Japanese instruction data and model merging techniques. Optimized for inference using vLLM and quantization with minimal accuracy loss, the PLaMo 2 models achieve state-of-the-art results on Japanese benchmarks, outperforming similarly-sized open models in instruction-following, language fluency, and Japanese-specific knowledge.",
+      "identifiers": [
+        "SemanticScholar:942752924e5743d6557cc9a53c2a05fb11e3b50b"
+      ],
+      "semantic_scholar_id": "942752924e5743d6557cc9a53c2a05fb11e3b50b",
+      "canonical_id": "arXiv:2509.04897",
+      "arxiv_id": "2509.04897",
+      "doi": "10.48550/arXiv.2509.04897",
+      "authors": [
+        "Kaizaburo Chubachi",
+        "Yasuhiro Fujita",
+        "Shinichi Hemmi",
+        "Yuta Hirokawa",
+        "Kentaro Imajo",
+        "T. Kataoka",
+        "Goro Kobayashi",
+        "Kenichi Maehashi",
+        "Calvin Metzger",
+        "Hiroaki Mikami",
+        "Shogo Murai",
+        "Daisuke Nishino",
+        "Kento Nozawa",
+        "Toru Ogawa",
+        "S. Okada",
+        "Daisuke Okanohara",
+        "Shunta Saito",
+        "Shotaro Sano",
+        "Shuji Suzuki",
+        "Kuniyuki Takahashi",
+        "Daisuke Tanaka",
+        "Avinash Ummadisingu",
+        "Hanqin Wang",
+        "Si-Xue Wang",
+        "Tianqi Xu"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 404,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:DOI:10.1002/spe.3422",
+      "identity_tokens": [
+        "id:DOI:10.1002/spe.3422",
+        "id:SemanticScholar:570e1642ffa3e552b0c100ec10b92bccf3da80e3",
+        "title:subkv quantizing long context kv cache for subbillion parameter language models on edge devices",
+        "url:https://doi.org/10.1002/spe.3422"
+      ],
+      "record": {
+        "title": "Subkv: Quantizing Long Context KV Cache for Sub‐Billion Parameter Language Models on Edge Devices",
+        "source_url": "https://doi.org/10.1002/spe.3422",
+        "year": 2025,
+        "published": "2025-04-01",
+        "venue": "Software, Practice & Experience",
+        "citation_count": 3,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large Language Models (LLMs) have demonstrated remarkable capabilities across various tasks. However, their substantial computational and memory requirements present significant challenges for widespread deployment on edge devices.",
+        "identifiers": [
+          "SemanticScholar:570e1642ffa3e552b0c100ec10b92bccf3da80e3"
+        ],
+        "semantic_scholar_id": "570e1642ffa3e552b0c100ec10b92bccf3da80e3",
+        "doi": "10.1002/spe.3422",
+        "canonical_id": "DOI:10.1002/spe.3422",
+        "authors": [
+          "Zi-Qian Zeng",
+          "Tao Zhang",
+          "Zheng-Dong Lu",
+          "Wen-Jun Li",
+          "Hui-Ping Zhuang",
+          "Hon-Gen Shao",
+          "Sin G. Teo",
+          "Xiao-Feng Zou"
+        ],
+        "priority": 3,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 3,
+          "citation_count": 3,
+          "total": 3,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 561,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2408.11855",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2408.11855",
+        "id:SemanticScholar:e55c9cde2094bf0eb8c4c09b44eaa1b8df403a57",
+        "id:arXiv:2408.11855",
+        "title:factorllm factorizing knowledge via mixture of experts for large language models",
+        "url:https://arxiv.org/abs/2408.11855"
+      ],
+      "record": {
+        "title": "FactorLLM: Factorizing Knowledge via Mixture of Experts for Large Language Models",
+        "source_url": "https://arxiv.org/abs/2408.11855",
+        "year": 2024,
+        "published": "2024-08-15",
+        "venue": "arXiv.org",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Recent research has demonstrated that Feed-Forward Networks (FFNs) in Large Language Models (LLMs) play a pivotal role in storing diverse linguistic and factual knowledge. Conventional methods frequently face challenges due to knowledge confusion stemming from their monolithic and redundant architectures, which calls for more efficient solutions with minimal computational overhead, particularly for LLMs. In this paper, we explore the FFN computation paradigm in LLMs and introduce FactorLLM, a novel approach that decomposes well-trained dense FFNs into sparse sub-networks without requiring any further modifications, while maintaining the same level of performance. Furthermore, we embed a router from the Mixture-of-Experts (MoE), combined with our devised Prior-Approximate (PA) loss term that facilitates the dynamic activation of experts and knowledge adaptation, thereby accelerating computational processes and enhancing performance using minimal training data and fine-tuning steps. FactorLLM thus enables efficient knowledge factorization and activates select groups of experts specifically tailored to designated tasks, emulating the interactive functional segmentation of the human brain. Extensive experiments across various benchmarks demonstrate the effectiveness of our proposed FactorLLM which achieves comparable performance to the source model securing up to 85% model performance while obtaining over a 30% increase in inference speed. Code: https://github.com/zhenwuweihe/FactorLLM.",
+        "identifiers": [
+          "SemanticScholar:e55c9cde2094bf0eb8c4c09b44eaa1b8df403a57"
+        ],
+        "semantic_scholar_id": "e55c9cde2094bf0eb8c4c09b44eaa1b8df403a57",
+        "canonical_id": "arXiv:2408.11855",
+        "arxiv_id": "2408.11855",
+        "doi": "10.48550/arXiv.2408.11855",
+        "authors": [
+          "Zhong-Yu Zhao",
+          "Menghang Dong",
+          "Rong-Yu Zhang",
+          "Wen-Zhao Zheng",
+          "Yun-Peng Zhang",
+          "Huanrui Yang",
+          "Dalong Du",
+          "Kurt Keutzer",
+          "Shang-Hang Zhang"
+        ],
+        "priority": 2,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 2,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 790,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2508.04405",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2508.04405",
+        "id:SemanticScholar:12919efc80d55969ec34a3aa6b8d6518f262a44b",
+        "id:arXiv:2508.04405",
+        "title:flexq efficient posttraining int6 quantization for llm serving via algorithmsystem codesign",
+        "url:https://arxiv.org/abs/2508.04405"
+      ],
+      "record": {
+        "title": "FlexQ: Efficient Post-training INT6 Quantization for LLM Serving via Algorithm-System Co-Design",
+        "source_url": "https://arxiv.org/abs/2508.04405",
+        "year": 2025,
+        "published": "2025-08-06",
+        "venue": "arXiv.org",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large Language Models (LLMs) demonstrate exceptional performance but entail significant memory and computational costs, restricting their practical deployment. While existing INT4/INT8 quantization reduces these costs, they often degrade accuracy or lack optimal efficiency. INT6 quantization offers a superior trade-off between model accuracy and inference efficiency, but lacks hardware support in modern GPUs, forcing emulation via higher-precision arithmetic units that limit acceleration. In this paper, we propose FlexQ, a novel post-training INT6 quantization framework combining algorithmic innovation with system-level optimizations. FlexQ employs uniform 6-bit weight quantization across all layers, with adaptive retention of 8-bit activations in layers identified through layer-wise sensitivity analysis. To maximize hardware efficiency, we develop a specialized high-performance GPU kernel supporting matrix multiplication for W6A6 and W6A8 representations via Binary Tensor Core (BTC) equivalents, effectively bypassing the lack of native INT6 tensor cores. Evaluations on LLaMA family models show FlexQ maintains near-FP16 accuracy, with perplexity increases of no more than 0.1 on WikiText2. The proposed kernel achieves an average 1.39$\\times$ speedup over ABQ-LLM on LLaMA-2-70B linear layers. End-to-end, FlexQ delivers 1.33$\\times$ inference acceleration and 1.21$\\times$ memory savings over SmoothQuant. Code is released at https://github.com/FlyFoxPlayer/FlexQ.",
+        "identifiers": [
+          "SemanticScholar:12919efc80d55969ec34a3aa6b8d6518f262a44b"
+        ],
+        "semantic_scholar_id": "12919efc80d55969ec34a3aa6b8d6518f262a44b",
+        "canonical_id": "arXiv:2508.04405",
+        "arxiv_id": "2508.04405",
+        "doi": "10.48550/arXiv.2508.04405",
+        "authors": [
+          "Hao Zhang",
+          "Ai-Ning Jia",
+          "Weifeng Bu",
+          "Yu Cai",
+          "Kai Sheng",
+          "Hao Chen",
+          "Xin He"
+        ],
+        "priority": 2,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 2,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 434,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:SemanticScholar:5ba021e294c898420b72d475f62d80b6d3ae2fbb",
+      "identity_tokens": [
+        "id:SemanticScholar:5ba021e294c898420b72d475f62d80b6d3ae2fbb",
+        "title:o p s erve opportunistic llm inference over fragmented gpu capacity in hpc systems",
+        "url:https://www.semanticscholar.org/paper/5ba021e294c898420b72d475f62d80b6d3ae2fbb"
+      ],
+      "record": {
+        "title": "O P S ERVE : Opportunistic LLM Inference over Fragmented GPU Capacity in HPC Systems",
+        "source_url": "https://www.semanticscholar.org/paper/5ba021e294c898420b72d475f62d80b6d3ae2fbb",
+        "year": null,
+        "published": null,
+        "venue": null,
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": null,
+        "identifiers": [
+          "SemanticScholar:5ba021e294c898420b72d475f62d80b6d3ae2fbb"
+        ],
+        "semantic_scholar_id": "5ba021e294c898420b72d475f62d80b6d3ae2fbb",
+        "canonical_id": "SemanticScholar:5ba021e294c898420b72d475f62d80b6d3ae2fbb",
+        "authors": [
+          "Patrick Watters",
+          "Xiao-Long Ma",
+          "Harry Yu",
+          "Ian T. Foster",
+          "Michael E. Papka",
+          "Lei Yang",
+          "Feng Yan",
+          "R. Kettimuthu"
+        ],
+        "priority": 1,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 1,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": null,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2505.21835",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2505.21835",
+        "id:SemanticScholar:fea2e7798ca0c40492b8875d61c858b88612b229",
+        "id:arXiv:2505.21835",
+        "title:tunecomp joint finetuning and compression for large foundation models",
+        "url:https://arxiv.org/abs/2505.21835"
+      ],
+      "record": {
+        "title": "TuneComp: Joint Fine-tuning and Compression for Large Foundation Models",
+        "source_url": "https://arxiv.org/abs/2505.21835",
+        "year": 2025,
+        "published": "2025-05-27",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "To reduce model size during post-training, compression methods, including knowledge distillation, low-rank approximation, and pruning, are often applied after fine-tuning the model. However, sequential fine-tuning and compression sacrifices performance, while creating a larger than necessary model as an intermediate step. In this work, we aim to reduce this gap, by directly constructing a smaller model while guided by the downstream task. We propose to jointly fine-tune and compress the model by gradually distilling it to a pruned low-rank structure. Experiments demonstrate that joint fine-tuning and compression significantly outperforms other sequential compression methods.",
+        "identifiers": [
+          "SemanticScholar:fea2e7798ca0c40492b8875d61c858b88612b229"
+        ],
+        "semantic_scholar_id": "fea2e7798ca0c40492b8875d61c858b88612b229",
+        "canonical_id": "arXiv:2505.21835",
+        "arxiv_id": "2505.21835",
+        "doi": "10.48550/arXiv.2505.21835",
+        "authors": [
+          "Xiangyu Chen",
+          "Jing Liu",
+          "Ye Wang",
+          "Matthew Brand",
+          "Pu Wang",
+          "T. Koike-Akino"
+        ],
+        "priority": 1,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 1,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 505,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2510.05175",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2510.05175",
+        "id:SemanticScholar:a8c51cb4eb8c3fb18eeed69a3cd561af1b61160f",
+        "id:arXiv:2510.05175",
+        "title:exact causal attention with 10 fewer operations",
+        "url:https://arxiv.org/abs/2510.05175"
+      ],
+      "record": {
+        "title": "Exact Causal Attention with 10% Fewer Operations",
+        "source_url": "https://arxiv.org/abs/2510.05175",
+        "year": 2025,
+        "published": "2025-10-05",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "We present Exact Causal Attention (ECA), a Strassen-style algorithm that computes exact Causal Attention using 10\\% fewer operations. ECA improves a special class of matrix multiplications where either one operand or the output matrix is upper- or lower-triangular. This includes all matrix multiplication operations in the forward and backward pass of Causal Attention, such as masked product $\\mathrm{Mask}(QK^{T})$. ECA is built upon algebraic identities discovered via machine learning and combinatorial search. We note that ECA cannot accelerate fused kernels such as FlashAttention on GPU. This is because ECA requires materialization of large intermediate expressions in the memory, while FlashAttention does not. However, it provides an alternative approach for compute-bound applications and can potentially be useful in scenarios with FLOPs considerations.",
+        "identifiers": [
+          "SemanticScholar:a8c51cb4eb8c3fb18eeed69a3cd561af1b61160f"
+        ],
+        "semantic_scholar_id": "a8c51cb4eb8c3fb18eeed69a3cd561af1b61160f",
+        "canonical_id": "arXiv:2510.05175",
+        "arxiv_id": "2510.05175",
+        "doi": "10.48550/arXiv.2510.05175",
+        "authors": [
+          "Dmitry Rybin",
+          "Yu-Shun Zhang",
+          "Ding Tian",
+          "Zhi-Hang Lin",
+          "Zhi-Quan Luo"
+        ],
+        "priority": 1,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 1,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 374,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:SemanticScholar:db3dec580b67703832f46c15aff9262bee8c557b",
+      "identity_tokens": [
+        "id:SemanticScholar:db3dec580b67703832f46c15aff9262bee8c557b",
+        "title:e quilibrium l anguage m odels",
+        "url:https://www.semanticscholar.org/paper/db3dec580b67703832f46c15aff9262bee8c557b"
+      ],
+      "record": {
+        "title": "E QUILIBRIUM L ANGUAGE M ODELS",
+        "source_url": "https://www.semanticscholar.org/paper/db3dec580b67703832f46c15aff9262bee8c557b",
+        "year": null,
+        "published": null,
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": null,
+        "identifiers": [
+          "SemanticScholar:db3dec580b67703832f46c15aff9262bee8c557b"
+        ],
+        "semantic_scholar_id": "db3dec580b67703832f46c15aff9262bee8c557b",
+        "canonical_id": "SemanticScholar:db3dec580b67703832f46c15aff9262bee8c557b",
+        "authors": [
+          "Yi-Kun Jiang",
+          "Huanyu Wang",
+          "Tian-Hong Ding",
+          "Wen-Hu Zhang",
+          "Yiming Wu",
+          "Hanbing Zhao",
+          "John C. S. Lui",
+          "Huawei Technologies Co."
+        ],
+        "priority": 0,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 0,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": null,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2505.07833",
+      "identity_tokens": [
+        "id:SemanticScholar:1f1a78de2ff367b3e4996822fdca5364ea91d33a",
+        "id:arXiv:2505.07833",
+        "title:harmonia endtoend rag serving optimization",
+        "url:https://arxiv.org/abs/2505.07833"
+      ],
+      "record": {
+        "title": "Harmonia: End-to-End RAG Serving Optimization",
+        "source_url": "https://arxiv.org/abs/2505.07833",
+        "year": 2025,
+        "published": "2025-05-01",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Retrieval-Augmented Generation (RAG) improves the reliability of large language models by integrating external knowledge, but serving RAG pipelines efficiently is challenging because requests traverse heterogeneous components spanning LLM inference, databases, and CPU-side processing. We present Harmonia, an end-to-end RAG serving framework that addresses these bottlenecks through (i) a flexible pipeline specification interface for composing custom workflows, (ii) heterogeneity-aware deployment that provisions and configures components as a distributed inference system, and (iii) a closed-loop runtime controller that monitors load and execution progress and reduces SLO violations through request prioritization and auto-scaling. Across four RAG applications, Harmonia outperforms commercial alternatives, improving throughput by more than 2.04x while reducing SLO violations by up to 78.4 percent.",
+        "identifiers": [
+          "SemanticScholar:1f1a78de2ff367b3e4996822fdca5364ea91d33a"
+        ],
+        "semantic_scholar_id": "1f1a78de2ff367b3e4996822fdca5364ea91d33a",
+        "canonical_id": "arXiv:2505.07833",
+        "arxiv_id": "2505.07833",
+        "authors": [
+          "Saurabh Agarwal",
+          "Bo-Dun Hu",
+          "Luis Pabon",
+          "Myungjin Lee",
+          "Jayanth Srinivasa",
+          "Aditya Akella"
+        ],
+        "priority": 0,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 0,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 531,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2509.01190",
+      "identity_tokens": [
+        "id:DOI:10.1109/icee70628.2026.11710801",
+        "id:SemanticScholar:20f001de3e77e6756ef7e245b0541e90bfb01db9",
+        "id:arXiv:2509.01190",
+        "title:efficient large language models with zeroshot adjustable acceleration",
+        "url:https://arxiv.org/abs/2509.01190"
+      ],
+      "record": {
+        "title": "Efficient Large Language Models with Zero-Shot Adjustable Acceleration",
+        "source_url": "https://arxiv.org/abs/2509.01190",
+        "year": 2025,
+        "published": "2025-09-01",
+        "venue": "2026 34th International Conference on Electrical Engineering (ICEE)",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large Language Models (LLMs) face significant challenges in real-world applications, particularly in balancing computational efficiency and model performance. Acceleration during both fine-tuning and inference is essential for designing efficient architectures. This paper presents a novel training and inference method, termed zero-shot adjustable acceleration, which dynamically adjusts hardware utilization at inference time without additional fine-tuning. The method is applied to recent LLMs and evaluated on multiple classification and text generation benchmarks. Experimental results demonstrate that the approach enables flexible zero-shot acceleration and achieves up to an 11× speedup over baseline methods, while maintaining high model performance.",
+        "identifiers": [
+          "SemanticScholar:20f001de3e77e6756ef7e245b0541e90bfb01db9"
+        ],
+        "semantic_scholar_id": "20f001de3e77e6756ef7e245b0541e90bfb01db9",
+        "canonical_id": "arXiv:2509.01190",
+        "arxiv_id": "2509.01190",
+        "doi": "10.1109/ICEE70628.2026.11710801",
+        "authors": [
+          "Sajjad Kachuee",
+          "Mohammad Sharifkhani"
+        ],
+        "priority": 0,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 0,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 408,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/cluster59342.2025.11186468",
+      "identity_tokens": [
+        "id:DOI:10.1109/cluster59342.2025.11186468",
+        "id:SemanticScholar:219f70f66aa8d11f654139c5e8de247801b325bb",
+        "title:scalable and fast inference serving via hybrid communication scheduling on heterogeneous networks",
+        "url:https://doi.org/10.1109/CLUSTER59342.2025.11186468"
+      ],
+      "record": {
+        "title": "Scalable and Fast Inference Serving via Hybrid Communication Scheduling on Heterogeneous Networks",
+        "source_url": "https://doi.org/10.1109/CLUSTER59342.2025.11186468",
+        "year": 2025,
+        "published": "2025-09-02",
+        "venue": "IEEE International Conference on Cluster Computing",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Advances in large language models (LLMs) have opened up new possibilities across various fields, fueling a new wave of interactive AI applications such as DeepSeek and ChatGPT. Inference serving systems play a crucial role in supporting these applications. Recent research indicates that when crossserver parallelization is enabled in inference serving systems, data synchronization overhead can exceed 65% of the total inference delay, making the reduction of communication overhead essential for speeding up inference. While existing systems accelerate cross-server communications by offloading synchronization operations to programmable switches, they often suffer from limited aggregation throughput under bursty traffic conditions, posing challenges for homogeneous network environments. To address these challenges, we propose HeroServe, an innovative inference serving system that leverages heterogeneous networks to accelerate data synchronization in distributed clusters. Our approach enables a fast and scalable inference serving system by employing an offline planner for joint computation allocation and communication scheduling, along with an online scheduler for dynamic traffic management and load balancing. We implement a prototype on a testbed comprising six servers and two programmable switches. Experimental results demonstrate that HeroServe improves scalability by $1.53 \\times$ while achieving lower latency compared to state-of-the-art solutions.",
+        "identifiers": [
+          "SemanticScholar:219f70f66aa8d11f654139c5e8de247801b325bb"
+        ],
+        "semantic_scholar_id": "219f70f66aa8d11f654139c5e8de247801b325bb",
+        "doi": "10.1109/CLUSTER59342.2025.11186468",
+        "canonical_id": "DOI:10.1109/CLUSTER59342.2025.11186468",
+        "authors": [
+          "Gonglong Chen",
+          "Jia-Mei Lv",
+          "Ke-Jiang Ye",
+          "Tao Gu",
+          "Cheng-Zhong Xu"
+        ],
+        "priority": 0,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 0,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 407,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2509.04897",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2509.04897",
+        "id:SemanticScholar:942752924e5743d6557cc9a53c2a05fb11e3b50b",
+        "id:arXiv:2509.04897",
+        "title:plamo 2 technical report",
+        "url:https://arxiv.org/abs/2509.04897"
+      ],
+      "record": {
+        "title": "PLaMo 2 Technical Report",
+        "source_url": "https://arxiv.org/abs/2509.04897",
+        "year": 2025,
+        "published": "2025-09-05",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "In this report, we introduce PLaMo 2, a series of Japanese-focused large language models featuring a hybrid Samba-based architecture that transitions to full attention via continual pre-training to support 32K token contexts. Training leverages extensive synthetic corpora to overcome data scarcity, while computational efficiency is achieved through weight reuse and structured pruning. This efficient pruning methodology produces an 8B model that achieves performance comparable to our previous 100B model. Post-training further refines the models using a pipeline of supervised fine-tuning (SFT) and direct preference optimization (DPO), enhanced by synthetic Japanese instruction data and model merging techniques. Optimized for inference using vLLM and quantization with minimal accuracy loss, the PLaMo 2 models achieve state-of-the-art results on Japanese benchmarks, outperforming similarly-sized open models in instruction-following, language fluency, and Japanese-specific knowledge.",
+        "identifiers": [
+          "SemanticScholar:942752924e5743d6557cc9a53c2a05fb11e3b50b"
+        ],
+        "semantic_scholar_id": "942752924e5743d6557cc9a53c2a05fb11e3b50b",
+        "canonical_id": "arXiv:2509.04897",
+        "arxiv_id": "2509.04897",
+        "doi": "10.48550/arXiv.2509.04897",
+        "authors": [
+          "Kaizaburo Chubachi",
+          "Yasuhiro Fujita",
+          "Shinichi Hemmi",
+          "Yuta Hirokawa",
+          "Kentaro Imajo",
+          "T. Kataoka",
+          "Goro Kobayashi",
+          "Kenichi Maehashi",
+          "Calvin Metzger",
+          "Hiroaki Mikami",
+          "Shogo Murai",
+          "Daisuke Nishino",
+          "Kento Nozawa",
+          "Toru Ogawa",
+          "S. Okada",
+          "Daisuke Okanohara",
+          "Shunta Saito",
+          "Shotaro Sano",
+          "Shuji Suzuki",
+          "Kuniyuki Takahashi",
+          "Daisuke Tanaka",
+          "Avinash Ummadisingu",
+          "Hanqin Wang",
+          "Si-Xue Wang",
+          "Tianqi Xu"
+        ],
+        "priority": 0,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 0,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 404,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:ad256aa089367fa50bc7d766dab26568d4fd778a9a388922c7949ab89fab48bc",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}
