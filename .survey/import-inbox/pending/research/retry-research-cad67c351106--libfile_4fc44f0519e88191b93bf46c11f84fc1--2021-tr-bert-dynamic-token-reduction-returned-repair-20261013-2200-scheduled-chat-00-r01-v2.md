@@ -26,6 +26,8 @@ quality_self_review_passed: true
 quality_self_review_version: "2026-10-07"
 repair_origin: "returned_research"
 repair_origin_canonical_id: "DOI:10.18653/v1/2021.naacl-main.463"
+last_audited: null
+audit_version: 0
 ---
 
 # TR-BERT: Dynamic Token Reduction for Accelerating BERT Inference
