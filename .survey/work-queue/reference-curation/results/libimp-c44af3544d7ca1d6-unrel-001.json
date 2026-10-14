@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-c44af3544d7ca1d6-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "SemanticScholar:0e46dc3beb4e96da2ee6f0e71f8c062eaa0c844e",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "SemanticScholar:0e46dc3beb4e96da2ee6f0e71f8c062eaa0c844e",
+    "identity_tokens": [
+      "SemanticScholar:0e46dc3beb4e96da2ee6f0e71f8c062eaa0c844e"
+    ],
+    "reason": "The primary BMVC paper accelerates high-resolution vision encoders (DINOv2, CLIP, SAM2); it is an independent vision application, not the target LLM systems scope.",
+    "first_checked_at": "2026-10-14T01:00:59+00:00",
+    "last_checked_at": "2026-10-14T01:00:59+00:00",
+    "linked_from": [],
+    "title": "Leveraging Sparsity for Efficient Inference of High-Resolution Vision Foundation Models"
+  },
+  "processed_at": "2026-10-14T01:00:59+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-c44af3544d7c",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
