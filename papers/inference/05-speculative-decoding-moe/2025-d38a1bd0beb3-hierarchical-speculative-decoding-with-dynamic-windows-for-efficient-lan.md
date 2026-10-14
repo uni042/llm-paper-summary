@@ -24,6 +24,25 @@ last_checked: '2026-10-13'
 reference_main_sha: a5db0135176c3affec355c8b9b5194bf74fa6123
 last_audited: null
 audit_version: 0
+references:
+- canonical_id: arXiv:2401.07851
+- canonical_id: arXiv:2404.11912
+- canonical_id: arXiv:2203.16487
+- canonical_id: arXiv:2309.08168
+- canonical_id: arXiv:2401.10774
+- canonical_id: arXiv:2402.02057
+- canonical_id: arXiv:2310.08461
+- canonical_id: DOI:10.48550/arxiv.2302.01318
+- canonical_id: arXiv:2405.19715
+- canonical_id: arXiv:2401.15077
+- canonical_id: arXiv:2308.04623
+- canonical_id: arXiv:1811.03115
+- canonical_id: arXiv:2211.17192
+- canonical_id: arXiv:1911.02150
+- canonical_id: arXiv:2311.08252
+references_checked_at: '2026-10-14'
+references_source: primary-pdf-reference-section
+references_total: 7
 ---
 
 # 階層型投機的復号 HSDDW：自己検証で候補窓を止め、中間モデルで検証費用を抑える
