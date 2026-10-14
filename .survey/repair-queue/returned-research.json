@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-14T13:43:18+00:00",
+  "generated_at": "2026-10-14T13:53:44+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 113,
+  "count": 112,
   "entries": [
     {
       "canonical_id": "DOI:10.1145/3714983.3714987",
@@ -1390,31 +1390,6 @@
       "worker_run_key": "20261014-1855-scheduled-chat-00/r01"
     },
     {
-      "canonical_id": "DOI:10.18653/v1/2025.findings-naacl.462",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-14T12:33:53+00:00",
-      "return_count": 4,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "長文定型文の再利用を検出: papers/inference/05-speculative-decoding-moe/2025-d38a1bd0beb3-hierarchical-speculative-decoding-with-dynamic-windows-for-efficient-lan.md と 17 段落 / 3939文字 (100.0%) が完全一致"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 4948,
-        "body_paragraphs": 25,
-        "method_chars": 1028,
-        "method_paragraphs": 6,
-        "evaluation_chars": 2201,
-        "limitation_chars": 330,
-        "insufficiency_flags": []
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-372156bbc544--libfile_1b3173cd257881919b86a350e77eef8a--2025-hsddw-returned-repair-20261013-2130-scheduled-chat-30-r01-v2.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-372156bbc544--libfile_1b3173cd257881919b86a350e77eef8a--2025-hsddw-returned-repair-20261013-2130-scheduled-chat-30-r01-v2.json",
-      "worker_run_key": "20261013-2130-scheduled-chat-30/r01"
-    },
-    {
       "canonical_id": "DOI:10.14722/ndss.2025.230057",
       "title": null,
       "source_url": null,
@@ -1932,33 +1907,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-81cb48b6698b--libfile_73a1a2737a7c8191a0fa7524fe402345--2026-2605.30571-memory-bound-quality-repair-20261014-1245-scheduled-chat-45-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-81cb48b6698b--libfile_73a1a2737a7c8191a0fa7524fe402345--2026-2605.30571-memory-bound-quality-repair-20261014-1245-scheduled-chat-45-r01.json",
       "worker_run_key": "20261014-1200-scheduled-chat-00/r01"
-    },
-    {
-      "canonical_id": "arXiv:2512.21911",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-14T13:02:35+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "長文定型文の再利用を検出: papers/inference/05-speculative-decoding-moe/2025-2512.21911-accelerate-speculative-decoding-with-sparse-computation-in-verification.md と 20 段落 / 4195文字 (100.0%) が完全一致"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5457,
-        "body_paragraphs": 30,
-        "method_chars": 2148,
-        "method_paragraphs": 12,
-        "evaluation_chars": 1162,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-8d1f3a3194c0--libfile_9050a0c1c59c8191803d6a25f8431c3d--2025-2512.21911-sparse-speculative-verification-research-20261014-1800-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-8d1f3a3194c0--libfile_9050a0c1c59c8191803d6a25f8431c3d--2025-2512.21911-sparse-speculative-verification-research-20261014-1800-scheduled-chat-00-.json",
-      "worker_run_key": "20261014-1800-scheduled-chat-00/r01"
     },
     {
       "canonical_id": "arXiv:2606.00756",
@@ -2493,58 +2441,6 @@
       "worker_run_key": "20261014-0430-scheduled-chat-30/r01"
     },
     {
-      "canonical_id": "DOI:10.18653/v1/2021.naacl-main.463",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-14T13:24:51+00:00",
-      "return_count": 4,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2021-00c8b8f9f90e-tr-bert-dynamic-token-reduction-for-accelerating-bert-inference.md と 21 段落 / 4539文字 (100.0%) が完全一致"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5656,
-        "body_paragraphs": 29,
-        "method_chars": 1949,
-        "method_paragraphs": 10,
-        "evaluation_chars": 1250,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-cad67c351106--libfile_4fc44f0519e88191b93bf46c11f84fc1--2021-tr-bert-dynamic-token-reduction-returned-repair-20261013-2200-scheduled-chat-00-r01-v2.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-cad67c351106--libfile_4fc44f0519e88191b93bf46c11f84fc1--2021-tr-bert-dynamic-token-reduction-returned-repair-20261013-2200-scheduled-chat-00-r01-.json",
-      "worker_run_key": "20261013-2200-scheduled-chat-00/r01"
-    },
-    {
-      "canonical_id": "arXiv:2603.01236",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-14T13:24:52+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2026-2603.01236-agilepruner-an-empirical-study-of-attention-and-diversity-for-adaptive-v.md と 23 段落 / 5461文字 (100.0%) が完全一致"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 6329,
-        "body_paragraphs": 31,
-        "method_chars": 1418,
-        "method_paragraphs": 7,
-        "evaluation_chars": 1187,
-        "limitation_chars": 811,
-        "insufficiency_flags": []
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-d99fa7468816--libfile_391c7266dcf481918c1bf26429d51b40--2026-2603.01236-agilepruner-adaptive-visual-token-pruning-research-20261013-2230-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-d99fa7468816--libfile_391c7266dcf481918c1bf26429d51b40--2026-2603.01236-agilepruner-adaptive-visual-token-pruning-research-20261013-2230-schedule.json",
-      "worker_run_key": "20261013-2230-scheduled-chat-30/r01"
-    },
-    {
       "canonical_id": "arXiv:2512.02044",
       "title": null,
       "source_url": null,
@@ -2809,8 +2705,8 @@
     },
     {
       "canonical_id": "arXiv:2604.22520",
-      "title": "RouteLMT: Learned Sample Routing for Hybrid LLM Translation Deployment",
-      "source_url": "https://arxiv.org/html/2604.22520v1",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-14T13:43:17+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-45",
@@ -2833,6 +2729,83 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-f10f9367e67e--libfile_f8a6b7bf896c81919f4b25aeef6d6e4f--2026-2604.22520-routelmt-hybrid-translation-routing-research-20261014-1445-scheduled-chat-45-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-f10f9367e67e--libfile_f8a6b7bf896c81919f4b25aeef6d6e4f--2026-2604.22520-routelmt-hybrid-translation-routing-research-20261014-1445-scheduled-chat.json",
       "worker_run_key": "20261014-1445-scheduled-chat-45/r01"
+    },
+    {
+      "canonical_id": "DOI:10.18653/v1/2025.findings-naacl.462",
+      "title": "Hierarchical Speculative Decoding with Dynamic Windows for Efficient Language Model Inference",
+      "source_url": "https://aclanthology.org/2025.findings-naacl.462.pdf",
+      "returned_at": "2026-10-14T13:51:28+00:00",
+      "return_count": 4,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "長文定型文の再利用を検出: papers/inference/05-speculative-decoding-moe/2025-d38a1bd0beb3-hierarchical-speculative-decoding-with-dynamic-windows-for-efficient-lan.md と 17 段落 / 3939文字 (100.0%) が完全一致"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 4948,
+        "body_paragraphs": 25,
+        "method_chars": 1028,
+        "method_paragraphs": 6,
+        "evaluation_chars": 2201,
+        "limitation_chars": 330,
+        "insufficiency_flags": []
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_1b3173cd257881919b86a350e77eef8a--2025-hsddw-returned-repair-20261013-2130-scheduled-chat-30-r01-v2.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_1b3173cd257881919b86a350e77eef8a--2025-hsddw-returned-repair-20261013-2130-scheduled-chat-30-r01-v2.json",
+      "worker_run_key": "20261013-2130-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2603.01236",
+      "title": "AgilePruner: An Empirical Study of Attention and Diversity for Adaptive Visual Token Pruning in Large Vision-Language Models",
+      "source_url": "https://arxiv.org/html/2603.01236v1",
+      "returned_at": "2026-10-14T13:51:29+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2026-2603.01236-agilepruner-an-empirical-study-of-attention-and-diversity-for-adaptive-v.md と 23 段落 / 5461文字 (100.0%) が完全一致"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 6329,
+        "body_paragraphs": 31,
+        "method_chars": 1418,
+        "method_paragraphs": 7,
+        "evaluation_chars": 1187,
+        "limitation_chars": 811,
+        "insufficiency_flags": []
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_391c7266dcf481918c1bf26429d51b40--2026-2603.01236-agilepruner-adaptive-visual-token-pruning-research-20261013-2230-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_391c7266dcf481918c1bf26429d51b40--2026-2603.01236-agilepruner-adaptive-visual-token-pruning-research-20261013-2230-scheduled-chat-30-r01.json",
+      "worker_run_key": "20261013-2230-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "DOI:10.18653/v1/2021.naacl-main.463",
+      "title": "TR-BERT: Dynamic Token Reduction for Accelerating BERT Inference",
+      "source_url": "https://aclanthology.org/2021.naacl-main.463.pdf",
+      "returned_at": "2026-10-14T13:51:52+00:00",
+      "return_count": 4,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2021-00c8b8f9f90e-tr-bert-dynamic-token-reduction-for-accelerating-bert-inference.md と 21 段落 / 4539文字 (100.0%) が完全一致"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5656,
+        "body_paragraphs": 29,
+        "method_chars": 1949,
+        "method_paragraphs": 10,
+        "evaluation_chars": 1250,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_4fc44f0519e88191b93bf46c11f84fc1--2021-tr-bert-dynamic-token-reduction-returned-repair-20261013-2200-scheduled-chat-00-r01-v2.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_4fc44f0519e88191b93bf46c11f84fc1--2021-tr-bert-dynamic-token-reduction-returned-repair-20261013-2200-scheduled-chat-00-r01-v2.json",
+      "worker_run_key": "20261013-2200-scheduled-chat-00/r01"
     }
   ]
 }
