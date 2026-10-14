@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-14T20:51:52+00:00",
+  "generated_at": "2026-10-14T20:57:14+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 122,
+  "count": 123,
   "entries": [
     {
       "canonical_id": "DOI:10.1145/3714983.3714987",
@@ -2977,65 +2977,38 @@
       "worker_run_key": "20261015-0330-scheduled-chat-30/r01"
     },
     {
-      "canonical_id": "arXiv:2602.05191",
-      "title": "Double-P: Hierarchical Top-P Sparse Attention for Long-Context LLMs",
-      "source_url": "https://arxiv.org/abs/2602.05191",
-      "returned_at": "2026-10-14T20:50:21+00:00",
+      "canonical_id": "arXiv:2606.04032",
+      "title": "Do Transformers Need Three Projections? Systematic Study of QKV Variants",
+      "source_url": "https://arxiv.org/abs/2606.04032",
+      "returned_at": "2026-10-14T20:57:09+00:00",
       "return_count": 1,
-      "assigned_worker": "scheduled-chat-00",
+      "assigned_worker": "scheduled-chat-30",
       "reason": "blocked_quality",
       "failures": [
-        "説明不足トリガー: 評価説明量 148 < 500"
+        "説明不足トリガー: 評価説明量 150 < 500"
       ],
       "quality_metrics": {
         "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5185,
-        "body_paragraphs": 28,
-        "method_chars": 1615,
+        "body_chars": 4985,
+        "body_paragraphs": 30,
+        "method_chars": 1368,
         "method_paragraphs": 9,
-        "evaluation_chars": 148,
-        "limitation_chars": 735,
+        "evaluation_chars": 150,
+        "limitation_chars": 601,
         "insufficiency_flags": [
-          "評価説明量 148 < 500"
+          "評価説明量 150 < 500"
         ]
       },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_087dc1fa22e48191bfac83616f1f7e42--2026-2602.05191-double-p-hierarchical-top-p-sparse-attention-research-20261015-0530-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_087dc1fa22e48191bfac83616f1f7e42--2026-2602.05191-double-p-hierarchical-top-p-sparse-attention-research-20261015-0530-scheduled-chat-30-r01.json",
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_050e535af0248191812eb1b89f8634b2--2026-2606.04032-qkv-projection-sharing-kv-cache-research-20261015-0530-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_050e535af0248191812eb1b89f8634b2--2026-2606.04032-qkv-projection-sharing-kv-cache-research-20261015-0530-scheduled-chat-30-r01.json",
       "worker_run_key": "20261015-0530-scheduled-chat-30/r01"
-    },
-    {
-      "canonical_id": "arXiv:2503.12559",
-      "title": "AdaReTaKe: Adaptive Redundancy Reduction to Perceive Longer for Video-language Understanding",
-      "source_url": "https://arxiv.org/abs/2503.12559",
-      "returned_at": "2026-10-14T20:50:56+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 386 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 4150,
-        "body_paragraphs": 20,
-        "method_chars": 1529,
-        "method_paragraphs": 8,
-        "evaluation_chars": 386,
-        "limitation_chars": 592,
-        "insufficiency_flags": [
-          "評価説明量 386 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_1bf7b93b82c08191a511ab6a71cb2f6f--2025-2503.12559-adaretake-temporal-layer-video-kv-compression-research-20261015-0410-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_1bf7b93b82c08191a511ab6a71cb2f6f--2025-2503.12559-adaretake-temporal-layer-video-kv-compression-research-20261015-0410-scheduled-chat-00-r01.json",
-      "worker_run_key": "20261015-0410-scheduled-chat-00/r01"
     },
     {
       "canonical_id": "arXiv:2403.01632",
       "title": "SynCode: LLM Generation with Grammar Augmentation",
       "source_url": "https://arxiv.org/abs/2403.01632",
-      "returned_at": "2026-10-14T20:50:57+00:00",
-      "return_count": 1,
+      "returned_at": "2026-10-14T20:57:10+00:00",
+      "return_count": 2,
       "assigned_worker": "scheduled-chat-00",
       "reason": "blocked_quality",
       "failures": [
@@ -3054,16 +3027,43 @@
           "限界説明量 0 < 推奨 120"
         ]
       },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_514a8a1c27b88191a192ccb25230646c--2024-2403.01632-syncode-grammar-constrained-decoding-research-20261015-0410-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_514a8a1c27b88191a192ccb25230646c--2024-2403.01632-syncode-grammar-constrained-decoding-research-20261015-0410-scheduled-chat-00-r01.json",
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-2cec2ec646d4--libfile_514a8a1c27b88191a192ccb25230646c--2024-2403.01632-syncode-grammar-constrained-decoding-research-20261015-0410-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-2cec2ec646d4--libfile_514a8a1c27b88191a192ccb25230646c--2024-2403.01632-syncode-grammar-constrained-decoding-research-20261015-0410-scheduled-cha.json",
+      "worker_run_key": "20261015-0410-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2503.12559",
+      "title": "AdaReTaKe: Adaptive Redundancy Reduction to Perceive Longer for Video-language Understanding",
+      "source_url": "https://arxiv.org/abs/2503.12559",
+      "returned_at": "2026-10-14T20:57:11+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 386 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 4150,
+        "body_paragraphs": 20,
+        "method_chars": 1529,
+        "method_paragraphs": 8,
+        "evaluation_chars": 386,
+        "limitation_chars": 592,
+        "insufficiency_flags": [
+          "評価説明量 386 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-736184ce816d--libfile_1bf7b93b82c08191a511ab6a71cb2f6f--2025-2503.12559-adaretake-temporal-layer-video-kv-compression-research-20261015-0410-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-736184ce816d--libfile_1bf7b93b82c08191a511ab6a71cb2f6f--2025-2503.12559-adaretake-temporal-layer-video-kv-compression-research-20261015-0410-sche.json",
       "worker_run_key": "20261015-0410-scheduled-chat-00/r01"
     },
     {
       "canonical_id": "arXiv:2511.02017",
       "title": "TapOut: A Bandit-Based Approach to Dynamic Speculative Decoding",
       "source_url": "https://arxiv.org/abs/2511.02017",
-      "returned_at": "2026-10-14T20:50:57+00:00",
-      "return_count": 1,
+      "returned_at": "2026-10-14T20:57:12+00:00",
+      "return_count": 2,
       "assigned_worker": "scheduled-chat-00",
       "reason": "blocked_quality",
       "failures": [
@@ -3082,9 +3082,36 @@
           "限界説明量 0 < 推奨 120"
         ]
       },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_53008ec96ba88191b6d8588297c6751b--2025-2511.02017-tapout-bandit-dynamic-speculative-decoding-research-20261015-0410-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_53008ec96ba88191b6d8588297c6751b--2025-2511.02017-tapout-bandit-dynamic-speculative-decoding-research-20261015-0410-scheduled-chat-00-r01.json",
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-c9658091e50a--libfile_53008ec96ba88191b6d8588297c6751b--2025-2511.02017-tapout-bandit-dynamic-speculative-decoding-research-20261015-0410-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-c9658091e50a--libfile_53008ec96ba88191b6d8588297c6751b--2025-2511.02017-tapout-bandit-dynamic-speculative-decoding-research-20261015-0410-schedul.json",
       "worker_run_key": "20261015-0410-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2602.05191",
+      "title": "Double-P: Hierarchical Top-P Sparse Attention for Long-Context LLMs",
+      "source_url": "https://arxiv.org/abs/2602.05191",
+      "returned_at": "2026-10-14T20:57:13+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 148 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5185,
+        "body_paragraphs": 28,
+        "method_chars": 1615,
+        "method_paragraphs": 9,
+        "evaluation_chars": 148,
+        "limitation_chars": 735,
+        "insufficiency_flags": [
+          "評価説明量 148 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-e6d7acc7e58f--libfile_087dc1fa22e48191bfac83616f1f7e42--2026-2602.05191-double-p-hierarchical-top-p-sparse-attention-research-20261015-0530-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-e6d7acc7e58f--libfile_087dc1fa22e48191bfac83616f1f7e42--2026-2602.05191-double-p-hierarchical-top-p-sparse-attention-research-20261015-0530-sched.json",
+      "worker_run_key": "20261015-0530-scheduled-chat-30/r01"
     }
   ]
 }

@@ -35,6 +35,8 @@ worker_id: scheduled-chat-30
 worker_run_key: 20261015-0530-scheduled-chat-30/r01
 quality_self_review_passed: true
 quality_self_review_version: 'PAPER-QUALITY-GUIDE-2026-10-07'
+last_audited: null
+audit_version: 0
 ---
 
 # Double-P：二段階累積確率選択による長文脈LLMの疎注意
