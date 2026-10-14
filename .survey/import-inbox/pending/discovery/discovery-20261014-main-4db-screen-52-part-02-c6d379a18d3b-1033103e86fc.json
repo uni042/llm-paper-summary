@@ -1,0 +1,293 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "discovery-20261014-main-4db-screen-52-part-02-c6d379a18d3b",
+  "reference_main_sha": "507e17d45d3f70c594aaffa3792a82b19738e2a8",
+  "record_count": 20,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2505.17074",
+      "identity_tokens": [
+        "arXiv:2505.17074"
+      ],
+      "title": "Semi-Clairvoyant Scheduling of Speculative Decoding Requests to Minimize LLM Inference Latency",
+      "reason": "LAPS-SDは生成長と受理率の変化に応じてspeculative decoding要求の優先度・プリエンプションを切替え、serving平均レイテンシを下げる。",
+      "source_url": "https://arxiv.org/abs/2505.17074",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T01:29:02Z",
+      "last_checked_at": "2026-10-14T01:29:02Z",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2405.01943",
+      "identity_tokens": [
+        "arXiv:2405.01943"
+      ],
+      "title": "Dependency-Aware Semi-Structured Sparsity of GLU Variants in Large Language Models",
+      "reason": "DaSSはGLU系LLMの重みと中間活性を併せて枝刈り重要度を求め、依存関係を保ったhardware-friendly N:M sparsityへ落とし込む。",
+      "source_url": "https://arxiv.org/abs/2405.01943",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T01:29:02Z",
+      "last_checked_at": "2026-10-14T01:29:02Z",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2411.06364",
+      "identity_tokens": [
+        "arXiv:2411.06364"
+      ],
+      "title": "EconoServe: Maximizing Multi-Resource Utilization with SLO Guarantees in LLM Serving",
+      "reason": "EconoServeはprompt/generation別queue、応答長別batching、KVC先行確保と未使用領域のpipeline共有でGPU/KV cache双方の利用率とSLOを改善するserving scheduler。",
+      "source_url": "https://arxiv.org/abs/2411.06364",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T01:29:02Z",
+      "last_checked_at": "2026-10-14T01:29:02Z",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "OpenReview:fLTZrFoebz",
+      "identity_tokens": [
+        "OpenReview:fLTZrFoebz",
+        "SemanticScholar:3d92ed5d5ec908d880ebd2fff15cbae1559abc25"
+      ],
+      "title": "Autoregressive Language Modeling using Compressed Sequence Mixing",
+      "reason": "CAT attends to compressed sequence chunks to reduce per-token inference work and memory; the abstract reports up to 3x generation throughput and 7x lower memory than dense transformers.",
+      "source_url": "https://openreview.net/pdf?id=fLTZrFoebz",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T01:33:22Z",
+      "last_checked_at": "2026-10-14T01:33:22Z",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2510.11602",
+      "identity_tokens": [
+        "arXiv:2510.11602"
+      ],
+      "title": "Deconstructing Attention: Investigating Design Principles for Effective Language Modeling",
+      "reason": "本研究はdot-product attentionの設計要素を層ごとに緩和し、通常attentionとの混在で性能を保てる条件を分析する。要旨は簡素化の可能性を示すが、実行時間・メモリ削減は測定していないため、効率への接点は限定的。",
+      "source_url": "https://arxiv.org/abs/2510.11602",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T01:29:02Z",
+      "last_checked_at": "2026-10-14T01:29:02Z",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2402.17512",
+      "identity_tokens": [
+        "arXiv:2402.17512"
+      ],
+      "title": "Unifying Linear-Time Attention via Latent Probabilistic Modelling",
+      "reason": "潜在確率モデルに方向性を持つ線形attentionと再帰的query/keyを導入し、長系列の二次attention計算を避けながら言語モデル品質を保つ。",
+      "source_url": "https://arxiv.org/abs/2402.17512",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T01:29:02Z",
+      "last_checked_at": "2026-10-14T01:29:02Z",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2407.00467",
+      "identity_tokens": [
+        "arXiv:2407.00467"
+      ],
+      "title": "VcLLM: Video Codecs are Secretly Tensor Codecs",
+      "reason": "GPUの動画codecをLLM tensor codecとして使い、training/inference時のテンソル保存・転送量を圧縮してメモリ容量と帯域の制約を緩和する。",
+      "source_url": "https://arxiv.org/abs/2407.00467",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T01:29:02Z",
+      "last_checked_at": "2026-10-14T01:29:02Z",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2506.11498",
+      "identity_tokens": [
+        "arXiv:2506.11498"
+      ],
+      "title": "Lag-Relative Sparse Attention In Long Context Training",
+      "reason": "LRSA/LagKVは遅延窓から重要KVを選んでchunkごとにprefillし、長文脈LLMでKV圧縮後の計算・メモリ負荷と性能劣化を抑える。",
+      "source_url": "https://arxiv.org/abs/2506.11498",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T01:29:02Z",
+      "last_checked_at": "2026-10-14T01:29:02Z",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2506.12204",
+      "identity_tokens": [
+        "arXiv:2506.12204"
+      ],
+      "title": "Semantic Scheduling for LLM Inference",
+      "reason": "Semantic SchedulingはLLM promptの内容から優先度を決める計算量最適なrequest schedulerで、LLM servingの待ち時間を直接短縮する。",
+      "source_url": "https://arxiv.org/abs/2506.12204",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T01:29:02Z",
+      "last_checked_at": "2026-10-14T01:29:02Z",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2510.20878",
+      "identity_tokens": [
+        "arXiv:2510.20878"
+      ],
+      "title": "HA-RAG: Hotness-Aware RAG Acceleration via Mixed Precision and Data Placement",
+      "reason": "HA-RAGはKV chunkのhotnessに応じた混合精度圧縮と高速memory配置でdisk I/Oを抑え、RAGのTTFTを改善する。",
+      "source_url": "https://arxiv.org/abs/2510.20878",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T01:29:02Z",
+      "last_checked_at": "2026-10-14T01:29:02Z",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2410.06722",
+      "identity_tokens": [
+        "arXiv:2410.06722"
+      ],
+      "title": "Scaling Laws For Mixed Quantization",
+      "reason": "論文はLLM規模に応じた混合量子化率とblock sizeの損失則を与え、推論時の低bit化と不要なhardware細分化の回避に使える。",
+      "source_url": "https://arxiv.org/abs/2410.06722",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T01:29:02Z",
+      "last_checked_at": "2026-10-14T01:29:02Z",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2503.01066",
+      "identity_tokens": [
+        "arXiv:2503.01066"
+      ],
+      "title": "Alchemist: Towards the Design of Efficient Online Continual Learning System",
+      "reason": "Alchemistはprefill時のserving activation/KV cacheをonline trainingへ再利用し、重複計算を減らしながら学習throughputとメモリ効率を上げ、serving latencyも保つ。",
+      "source_url": "https://arxiv.org/abs/2503.01066",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T01:29:02Z",
+      "last_checked_at": "2026-10-14T01:29:02Z",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2505.12988",
+      "identity_tokens": [
+        "arXiv:2505.12988"
+      ],
+      "title": "Optimal Formats for Weight Quantisation",
+      "reason": "量子化formatの最適設計とtensorごとのbit幅配分を導き、要旨ではLLMに適用してパラメータ当たり最大0.25 bitを削減する。",
+      "source_url": "https://arxiv.org/abs/2505.12988",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T01:29:02Z",
+      "last_checked_at": "2026-10-14T01:29:02Z",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2504.14569",
+      "identity_tokens": [
+        "arXiv:2504.14569"
+      ],
+      "title": "NoWag: A Unified Framework for Shape Preserving Compression of Large Language Models",
+      "reason": "NoWagはLlama-2/3へweight/activation情報を使うshape-preserving事後圧縮を適用し、vector quantizationとpruningでLLMの計算・メモリ需要を抑える。",
+      "source_url": "https://arxiv.org/abs/2504.14569",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T01:29:02Z",
+      "last_checked_at": "2026-10-14T01:29:02Z",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2405.17849",
+      "identity_tokens": [
+        "arXiv:2405.17849",
+        "SemanticScholar:259801b7832915cbb6b9760b891991d00498931a"
+      ],
+      "title": "I-LLM: Efficient Integer-Only Inference for Fully-Quantized Low-Bit Large Language Models",
+      "reason": "The primary abstract proposes fully integer-only post-training quantization for LLM inference, including integer matrix multiplication and nonlinear operators for edge/cloud deployment.",
+      "source_url": "https://arxiv.org/abs/2405.17849",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T01:33:22Z",
+      "last_checked_at": "2026-10-14T01:33:22Z",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "OpenReview:540fe815ac96bd42a86e67f219c75d4be48bae1b",
+      "identity_tokens": [
+        "OpenReview:540fe815ac96bd42a86e67f219c75d4be48bae1b",
+        "SemanticScholar:495b6f68a28cdb816f04cf3ea41a5cd2df664e2b"
+      ],
+      "title": "HAP-E: Hessian-Aware Structured Pruning of LLMs for Efficient Inference",
+      "reason": "The paper proposes hardware-latency-targeted structured pruning for LLMs using adaptive Hessian-guided budget allocation and a latency predictor.",
+      "source_url": "https://openreview.net/pdf/540fe815ac96bd42a86e67f219c75d4be48bae1b.pdf",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T01:33:22Z",
+      "last_checked_at": "2026-10-14T01:33:22Z",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2505.08600",
+      "identity_tokens": [
+        "arXiv:2505.08600"
+      ],
+      "title": "Automatic Task Detection and Heterogeneous LLM Speculative Decoding",
+      "reason": "task分類器でpromptを振り分け、タスク別heterogeneous draft modelを使い分けるspeculative decodingにより、下流タスクでの受理率と推論速度を改善する。",
+      "source_url": "https://arxiv.org/abs/2505.08600",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T01:29:02Z",
+      "last_checked_at": "2026-10-14T01:29:02Z",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1109/TPDS.2026.3732699",
+      "identity_tokens": [
+        "DOI:10.1109/TPDS.2026.3732699"
+      ],
+      "title": "EcoxPU: Autonomous Multi-Agent Orchestration for Energy-Efficient Disaggregated LLM Inference on Heterogeneous xPUs",
+      "reason": "IEEE abstract describes runtime coordination of PD and FFN disaggregation across heterogeneous accelerators to reduce LLM inference energy while controlling latency.",
+      "source_url": "https://ieeexplore.ieee.org/abstract/document/11684983/",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T01:33:22Z",
+      "last_checked_at": "2026-10-14T01:33:22Z",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "SemanticScholar:3a94121f1a42fb80c75f9d47e492c73dfa5b2e97",
+      "identity_tokens": [
+        "SemanticScholar:3a94121f1a42fb80c75f9d47e492c73dfa5b2e97"
+      ],
+      "title": "Composite Attention: A Framework for Combining Sequence Mixing Primitives",
+      "reason": "The workshop paper formalizes hybrid sequence-mixer compositions as a way to reduce transformer compute while retaining quality; its contribution is directly tied to efficient sequence modeling.",
+      "source_url": "https://neurips2024-enlsp.github.io/papers/paper_27.pdf",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T01:33:22Z",
+      "last_checked_at": "2026-10-14T01:33:22Z",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2506.03206",
+      "identity_tokens": [
+        "arXiv:2506.03206"
+      ],
+      "title": "Out-of-Vocabulary Sampling Boosts Speculative Decoding",
+      "reason": "RDKはtoken-affinity priorsで小語彙drafterの確率質量を再配分し、語彙を大幅に刈り込んでもspeculative decodingの受理率を保つ線形時間sampler。",
+      "source_url": "https://arxiv.org/abs/2506.03206",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T01:29:02Z",
+      "last_checked_at": "2026-10-14T01:29:02Z",
+      "linked_from": []
+    }
+  ]
+}
