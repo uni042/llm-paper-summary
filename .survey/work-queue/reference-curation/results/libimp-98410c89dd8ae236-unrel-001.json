@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-98410c89dd8ae236-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2603.06178",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2603.06178",
+    "identity_tokens": [
+      "arXiv:2603.06178"
+    ],
+    "reason": "The work scales training-free diffusion segmentors for image segmentation; its target is visual discriminative performance, not LLM inference infrastructure.",
+    "first_checked_at": "2026-10-14T04:12:37+00:00",
+    "last_checked_at": "2026-10-14T04:12:37+00:00",
+    "linked_from": [
+      "papers/inference/04-conditional-computation/2024-2410.11842-moh-mixture-of-head-attention.md",
+      "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md"
+    ],
+    "title": "Making Training-Free Diffusion Segmentors Scale with the Generative Power"
+  },
+  "processed_at": "2026-10-14T04:12:37+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-98410c89dd8a",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
