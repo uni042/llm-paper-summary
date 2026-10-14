@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-b2aeb4e0c78d04c9-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2510.24021",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2510.24021",
+    "identity_tokens": [
+      "SemanticScholar:a9194d81f17eb62f58a76e8550a1c4689e56fccc",
+      "arXiv:2510.24021"
+    ],
+    "reason": "SelecTKD is a distillation training objective without an inference or serving efficiency result.",
+    "first_checked_at": "2026-10-14T12:48:51+00:00",
+    "last_checked_at": "2026-10-14T12:48:51+00:00",
+    "linked_from": [
+      "papers/inference/05-speculative-decoding-moe/2022-2211.17192-speculative-decoding.md",
+      "papers/inference/05-speculative-decoding-moe/2023-2302.01318-speculative-sampling.md",
+      "papers/inference/05-speculative-decoding-moe/2023-2305.09781-specinfer-tree-speculative-inference.md",
+      "papers/inference/99-other-inference-systems/2023-2310.08461-distillspec-improving-speculative-decoding-via-knowledge-distillation.md"
+    ],
+    "title": "SelecTKD: Selective Token-Weighted Knowledge Distillation for LLMs"
+  },
+  "processed_at": "2026-10-14T12:48:51+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-b2aeb4e0c78d",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

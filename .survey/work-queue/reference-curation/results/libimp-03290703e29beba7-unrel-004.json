@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-03290703e29beba7-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2309.06782",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2309.06782",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2309.06782",
+      "SemanticScholar:0d7229d2b560670e5e0b643dce10c9230a5c3eb6",
+      "arXiv:2309.06782"
+    ],
+    "reason": "The official abstract compares graph neural networks and a kernel-based Transformer for particle-flow event reconstruction, avoiding quadratic operations and reporting portable reconstruction models. Its target remains particle-detector reconstruction, with no concrete connection to LLM inference or serving systems.",
+    "first_checked_at": "2026-10-14T12:48:47+00:00",
+    "last_checked_at": "2026-10-14T12:48:47+00:00",
+    "linked_from": [
+      "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md",
+      "papers/inference/99-other-inference-systems/2018-1802.05799-horovod-fast-and-easy-distributed-deep-learning-in-tensorflow.md",
+      "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md",
+      "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md",
+      "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+      "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md",
+      "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+    ],
+    "title": "Scalable neural network models and terascale datasets for particle-flow reconstruction"
+  },
+  "processed_at": "2026-10-14T12:48:47+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-03290703e29b",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
