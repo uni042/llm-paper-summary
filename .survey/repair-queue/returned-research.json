@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-14T13:24:52+00:00",
+  "generated_at": "2026-10-14T13:30:52+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -997,34 +997,6 @@
       "worker_run_key": "20261014-1430-scheduled-chat-30/r01"
     },
     {
-      "canonical_id": "arXiv:2511.08083",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-14T10:07:09+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 0 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 4055,
-        "body_paragraphs": 22,
-        "method_chars": 1740,
-        "method_paragraphs": 9,
-        "evaluation_chars": 0,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "評価説明量 0 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_089f03b42fa88191ade8d44d1d575d47--2025-2511.08083-hipkittens-amd-kernels-research-20261014-1630-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_089f03b42fa88191ade8d44d1d575d47--2025-2511.08083-hipkittens-amd-kernels-research-20261014-1630-scheduled-chat-30-r01.json",
-      "worker_run_key": "20261014-1630-scheduled-chat-30/r01"
-    },
-    {
       "canonical_id": "arXiv:2601.02535",
       "title": null,
       "source_url": null,
@@ -1102,33 +1074,6 @@
       "worker_run_key": "20261014-0330-scheduled-chat-30/r01"
     },
     {
-      "canonical_id": "arXiv:2512.02044",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-14T11:20:08+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 171 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5238,
-        "body_paragraphs": 28,
-        "method_chars": 1287,
-        "method_paragraphs": 7,
-        "evaluation_chars": 171,
-        "limitation_chars": 748,
-        "insufficiency_flags": [
-          "評価説明量 171 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_96eeaed0f5288191a74a51cbe35189c0--2025-2512.02044-ccd-coherent-diffusion-decoding-research-20261014-0030-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_96eeaed0f5288191a74a51cbe35189c0--2025-2512.02044-ccd-coherent-diffusion-decoding-research-20261014-0030-scheduled-chat-30-r01.json",
-      "worker_run_key": "20261014-0030-scheduled-chat-30/r01"
-    },
-    {
       "canonical_id": "arXiv:2601.07832",
       "title": null,
       "source_url": null,
@@ -1152,33 +1097,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_a40d63159fac8191a1bcf3ec675947b7--2026-2601.07832-mhla-token-level-linear-attention-research-20261014-0145-scheduled-chat-45-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_a40d63159fac8191a1bcf3ec675947b7--2026-2601.07832-mhla-token-level-linear-attention-research-20261014-0145-scheduled-chat-45-r01.json",
       "worker_run_key": "20261014-0145-scheduled-chat-45/r01"
-    },
-    {
-      "canonical_id": "arXiv:2603.00573",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-14T11:30:07+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2026-2603.00573-comol-efficient-mixture-of-lora-experts-via-dynamic-core-space-merging.md と 20 段落 / 4539文字 (100.0%) が完全一致"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 4992,
-        "body_paragraphs": 25,
-        "method_chars": 1145,
-        "method_paragraphs": 6,
-        "evaluation_chars": 1312,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_be186c9ad72c8191a820e9193ceb1ca7--2026-2603.00573-comol-core-space-lora-experts-research-20261013-2100-scheduled-chat-00-r02.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_be186c9ad72c8191a820e9193ceb1ca7--2026-2603.00573-comol-core-space-lora-experts-research-20261013-2100-scheduled-chat-00-r02.json",
-      "worker_run_key": "20261013-2100-scheduled-chat-00/r02"
     },
     {
       "canonical_id": "arXiv:2511.02647",
@@ -1208,33 +1126,6 @@
       "worker_run_key": "20261014-1430-scheduled-chat-30/r01"
     },
     {
-      "canonical_id": "arXiv:2608.26005",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-14T11:57:08+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2026-2608.26005-voicemem-streaming-dual-brain-memory-for-real-time-interaction.md と 14 段落 / 2941文字 (100.0%) が完全一致"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5805,
-        "body_paragraphs": 34,
-        "method_chars": 2238,
-        "method_paragraphs": 13,
-        "evaluation_chars": 1120,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_852b156b821c81919b3e879785532e3f--2026-2608.26005-voicemem-streaming-dual-brain-research-20261014-1600-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_852b156b821c81919b3e879785532e3f--2026-2608.26005-voicemem-streaming-dual-brain-research-20261014-1600-scheduled-chat-00-r01.json",
-      "worker_run_key": "20261014-1600-scheduled-chat-00/r01"
-    },
-    {
       "canonical_id": "arXiv:2604.07812",
       "title": null,
       "source_url": null,
@@ -1260,31 +1151,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_ded311cd47cc8191a429e5b92de682d4--2026-2604.07812-hawk-head-importance-visual-token-pruning-research-20261014-1430-scheduled-chat-30-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_ded311cd47cc8191a429e5b92de682d4--2026-2604.07812-hawk-head-importance-visual-token-pruning-research-20261014-1430-scheduled-chat-30-r01.json",
       "worker_run_key": "20261014-1430-scheduled-chat-30/r01"
-    },
-    {
-      "canonical_id": "arXiv:2306.08543",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-14T12:03:00+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2023-2306.08543-minillm-on-policy-distillation-of-large-language-models.md と 23 段落 / 5357文字 (100.0%) が完全一致"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 7397,
-        "body_paragraphs": 44,
-        "method_chars": 1853,
-        "method_paragraphs": 10,
-        "evaluation_chars": 1760,
-        "limitation_chars": 923,
-        "insufficiency_flags": []
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_e28c701c15d88191a8b2d8085b960d36--2023-2306.08543-minillm-on-policy-distillation-research-20261014-0145-scheduled-chat-45-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_e28c701c15d88191a8b2d8085b960d36--2023-2306.08543-minillm-on-policy-distillation-research-20261014-0145-scheduled-chat-45-r01.json",
-      "worker_run_key": "20261014-0145-scheduled-chat-45/r01"
     },
     {
       "canonical_id": "arXiv:2604.06515",
@@ -2704,8 +2570,8 @@
     },
     {
       "canonical_id": "arXiv:2512.14244",
-      "title": "From Context to EDUs: Faithful and Structured Context Compression via Elementary Discourse Unit Decomposition",
-      "source_url": "https://arxiv.org/abs/2512.14244",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-14T13:24:47+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-30",
@@ -2731,8 +2597,8 @@
     },
     {
       "canonical_id": "arXiv:2511.18868",
-      "title": "KernelBand: Steering LLM-based Kernel Optimization via Hardware-Aware Multi-Armed Bandits",
-      "source_url": "https://arxiv.org/html/2511.18868v2",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-14T13:24:48+00:00",
       "return_count": 4,
       "assigned_worker": "scheduled-chat-00",
@@ -2756,8 +2622,8 @@
     },
     {
       "canonical_id": "arXiv:2606.10537",
-      "title": "Prefilling-dLLM: Predictive Prefilling for Long-Context Inference in Diffusion Language Models",
-      "source_url": "https://arxiv.org/html/2606.10537v2",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-14T13:24:49+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-00",
@@ -2784,8 +2650,8 @@
     },
     {
       "canonical_id": "DOI:10.18653/v1/2021.naacl-main.463",
-      "title": "TR-BERT: Dynamic Token Reduction for Accelerating BERT Inference",
-      "source_url": "https://aclanthology.org/2021.naacl-main.463.pdf",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-14T13:24:51+00:00",
       "return_count": 4,
       "assigned_worker": "scheduled-chat-00",
@@ -2811,8 +2677,8 @@
     },
     {
       "canonical_id": "arXiv:2603.01236",
-      "title": "AgilePruner: An Empirical Study of Attention and Diversity for Adaptive Visual Token Pruning in Large Vision-Language Models",
-      "source_url": "https://arxiv.org/html/2603.01236v1",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-14T13:24:52+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-00",
@@ -2833,6 +2699,140 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-d99fa7468816--libfile_391c7266dcf481918c1bf26429d51b40--2026-2603.01236-agilepruner-adaptive-visual-token-pruning-research-20261013-2230-scheduled-chat-30-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-d99fa7468816--libfile_391c7266dcf481918c1bf26429d51b40--2026-2603.01236-agilepruner-adaptive-visual-token-pruning-research-20261013-2230-schedule.json",
       "worker_run_key": "20261013-2230-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2512.02044",
+      "title": "Beyond Confidence: Adaptive and Coherent Decoding for Diffusion Language Models",
+      "source_url": "https://arxiv.org/pdf/2512.02044",
+      "returned_at": "2026-10-14T13:30:48+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 171 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5238,
+        "body_paragraphs": 28,
+        "method_chars": 1287,
+        "method_paragraphs": 7,
+        "evaluation_chars": 171,
+        "limitation_chars": 748,
+        "insufficiency_flags": [
+          "評価説明量 171 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-e02ff8e10515--libfile_96eeaed0f5288191a74a51cbe35189c0--2025-2512.02044-ccd-coherent-diffusion-decoding-research-20261014-0030-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-e02ff8e10515--libfile_96eeaed0f5288191a74a51cbe35189c0--2025-2512.02044-ccd-coherent-diffusion-decoding-research-20261014-0030-scheduled-chat-30-.json",
+      "worker_run_key": "20261014-0030-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2608.26005",
+      "title": "VoiceMem: Streaming Dual-Brain Memory for Real-Time Interaction",
+      "source_url": "https://arxiv.org/abs/2608.26005",
+      "returned_at": "2026-10-14T13:30:49+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2026-2608.26005-voicemem-streaming-dual-brain-memory-for-real-time-interaction.md と 14 段落 / 2941文字 (100.0%) が完全一致"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5805,
+        "body_paragraphs": 34,
+        "method_chars": 2238,
+        "method_paragraphs": 13,
+        "evaluation_chars": 1120,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-e1902d93d74a--libfile_852b156b821c81919b3e879785532e3f--2026-2608.26005-voicemem-streaming-dual-brain-research-20261014-1600-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-e1902d93d74a--libfile_852b156b821c81919b3e879785532e3f--2026-2608.26005-voicemem-streaming-dual-brain-research-20261014-1600-scheduled-chat-00-r0.json",
+      "worker_run_key": "20261014-1600-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2511.08083",
+      "title": "HipKittens: Fast and Furious AMD Kernels",
+      "source_url": "https://arxiv.org/abs/2511.08083",
+      "returned_at": "2026-10-14T13:30:50+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 0 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 4055,
+        "body_paragraphs": 22,
+        "method_chars": 1740,
+        "method_paragraphs": 9,
+        "evaluation_chars": 0,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "評価説明量 0 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-e5f917c8c9ef--libfile_089f03b42fa88191ade8d44d1d575d47--2025-2511.08083-hipkittens-amd-kernels-research-20261014-1630-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-e5f917c8c9ef--libfile_089f03b42fa88191ade8d44d1d575d47--2025-2511.08083-hipkittens-amd-kernels-research-20261014-1630-scheduled-chat-30-r01.json",
+      "worker_run_key": "20261014-1630-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2603.00573",
+      "title": "CoMoL: Efficient Mixture of LoRA Experts via Dynamic Core Space Merging",
+      "source_url": "https://arxiv.org/abs/2603.00573",
+      "returned_at": "2026-10-14T13:30:51+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2026-2603.00573-comol-efficient-mixture-of-lora-experts-via-dynamic-core-space-merging.md と 20 段落 / 4539文字 (100.0%) が完全一致"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 4992,
+        "body_paragraphs": 25,
+        "method_chars": 1145,
+        "method_paragraphs": 6,
+        "evaluation_chars": 1312,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-e8c2b930764a--libfile_be186c9ad72c8191a820e9193ceb1ca7--2026-2603.00573-comol-core-space-lora-experts-research-20261013-2100-scheduled-chat-00-r02.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-e8c2b930764a--libfile_be186c9ad72c8191a820e9193ceb1ca7--2026-2603.00573-comol-core-space-lora-experts-research-20261013-2100-scheduled-chat-00-r0.json",
+      "worker_run_key": "20261013-2100-scheduled-chat-00/r02"
+    },
+    {
+      "canonical_id": "arXiv:2306.08543",
+      "title": "MiniLLM: On-Policy Distillation of Large Language Models",
+      "source_url": "https://arxiv.org/html/2306.08543v6",
+      "returned_at": "2026-10-14T13:30:52+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2023-2306.08543-minillm-on-policy-distillation-of-large-language-models.md と 23 段落 / 5357文字 (100.0%) が完全一致"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 7397,
+        "body_paragraphs": 44,
+        "method_chars": 1853,
+        "method_paragraphs": 10,
+        "evaluation_chars": 1760,
+        "limitation_chars": 923,
+        "insufficiency_flags": []
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-eaee4671a907--libfile_e28c701c15d88191a8b2d8085b960d36--2023-2306.08543-minillm-on-policy-distillation-research-20261014-0145-scheduled-chat-45-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-eaee4671a907--libfile_e28c701c15d88191a8b2d8085b960d36--2023-2306.08543-minillm-on-policy-distillation-research-20261014-0145-scheduled-chat-45-r.json",
+      "worker_run_key": "20261014-0145-scheduled-chat-45/r01"
     }
   ]
 }

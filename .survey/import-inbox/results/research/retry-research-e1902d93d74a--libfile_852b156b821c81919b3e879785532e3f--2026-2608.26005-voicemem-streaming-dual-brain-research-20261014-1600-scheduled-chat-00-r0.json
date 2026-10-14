@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "312cf14137e00930fb001b1f5e5b0a63caad40e4c617a5c280ab4c3ad8b63469",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/retry-research-e1902d93d74a--libfile_852b156b821c81919b3e879785532e3f--2026-2608.26005-voicemem-streaming-dual-brain-research-20261014-1600-scheduled-chat-00-r01.md",
+  "canonical_id": "arXiv:2608.26005",
+  "worker_completed_at": "2026-10-14T16:08:13+09:00",
+  "worker_run_key": "20261014-1600-scheduled-chat-00/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 5805,
+    "body_paragraphs": 34,
+    "method_chars": 2238,
+    "method_paragraphs": 13,
+    "evaluation_chars": 1120,
+    "limitation_chars": 0,
+    "insufficiency_flags": [
+      "限界説明量 0 < 推奨 120"
+    ]
+  },
+  "failures": [
+    "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2026-2608.26005-voicemem-streaming-dual-brain-memory-for-real-time-interaction.md と 14 段落 / 2941文字 (100.0%) が完全一致"
+  ],
+  "processed_at": "2026-10-14T13:30:49+00:00"
+}
