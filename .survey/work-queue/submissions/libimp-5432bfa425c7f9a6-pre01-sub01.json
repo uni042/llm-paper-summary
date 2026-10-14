@@ -1,0 +1,228 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "SQ-format: A Unified Sparse-Quantized Hardware-friendly Data Format for LLMs",
+      "source_url": "https://arxiv.org/abs/2512.05409",
+      "year": 2025,
+      "published": "2025-12-05",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Post-training quantization (PTQ) plays a crucial role in the democratization of large language models (LLMs). However, existing low-bit quantization and sparsification techniques are difficult to balance accuracy and efficiency due to the limited hardware support. For example, W4A8 can only achieve the same peak TOPS as W8A8 whereas the GPU-supported sparse data format (2:4 semi-structure sparse) is seldomly adopted due to the loss of accuracy. To bridge this gap, in this paper, we propose the Sparse-Quantized Format (SQ-format), which is a unified data format for quantization and sparsification potentially easily supported by new hardware and existing GPUs. SQ-format makes use of the fact that sparse matrix can be accelerated in high-precision, and low-precision matrix multiplication can also be accelerated accordingly. As such, SQ-format is proposed to achieve Pareto improvement between performance and throughput. This format is particularly suitable for activations with outlier inequality status and makes their static compression possible. We show the state-of-the-art PTQ performance with SQ-format, propose the hardware required to support it, and further offer the design exploration and insights for the next-generation AI accelerators.",
+      "identifiers": [
+        "SemanticScholar:d17e1ccbf14957612e9948f7dd4712a85472ef12"
+      ],
+      "semantic_scholar_id": "d17e1ccbf14957612e9948f7dd4712a85472ef12",
+      "canonical_id": "arXiv:2512.05409",
+      "arxiv_id": "2512.05409",
+      "doi": "10.48550/arXiv.2512.05409",
+      "authors": [
+        "Ruixuan Huang",
+        "Hao Zeng",
+        "Hantao Huang",
+        "Jinyuan Shi",
+        "Ming-Hui Yu",
+        "Ian En-Hsu Yen",
+        "Shuai Wang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 313,
+        "matched_prestigious_venue": null
+      },
+      "reason": "A joint sparse-quantized data format targets LLM PTQ performance and accelerator support, connecting model compression with inference hardware efficiency.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "ChunkWise LoRA: Adaptive Sequence Partitioning for Memory-Efficient Low-Rank Adaptation and Accelerated LLM Inference",
+      "source_url": "https://arxiv.org/abs/2601.21109",
+      "year": 2025,
+      "published": "2025-12-17",
+      "venue": "International Symposium on Embedded Computing and System Design",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Recent advances in low-rank adaptation (LoRA) have enabled efficient fine-tuning of large language models (LLMs) with minimal additional parameters. However, existing LoRA methods apply static rank configurations uniformly across all input tokens, ignoring variation in token complexity and computational requirements. In this work, we propose ChunkWise LoRA, a dynamic and adaptive approach that partitions sequences into variable-length chunks based on token complexity and assigns each chunk a tailored low-rank configuration. Our system introduces a runtime scheduler that estimates token difficulty, performs adaptive chunking, and selects per-chunk LoRA rank and scaling using a rank-ladder mechanism. To preserve output consistency, we further introduce a boundarysafe composition module and integrate policy-driven KV-cache strategies. Experiments on benchmark datasets such as Wikitext103 and SQuAD demonstrate that ChunkWise LoRA achieves up to $\\mathbf{3 4 \\%}$ lower latency and $\\mathbf{3 8 \\%}$ memory reduction compared to baseline LoRA, while maintaining or improving task performance metrics like BLEU, EM, and perplexity. The proposed framework remains fully compatible with existing transformer architectures and inference frameworks, providing a practical solution for real-world deployment of parameter-efficient LLMs.",
+      "identifiers": [
+        "SemanticScholar:386a426c8048102241c9c89f38eaa3cd76758b3e"
+      ],
+      "semantic_scholar_id": "386a426c8048102241c9c89f38eaa3cd76758b3e",
+      "canonical_id": "arXiv:2601.21109",
+      "arxiv_id": "2601.21109",
+      "doi": "10.1109/ISED67359.2025.11405311",
+      "authors": [
+        "Ketan Thakkar",
+        "M. Chatterjee",
+        "R. Balasubramanian",
+        "Achyuthan Jootoo",
+        "Rajendra Ugrani"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 301,
+        "matched_prestigious_venue": null
+      },
+      "reason": "The method has runtime chunking, per-chunk rank selection and KV-cache policy; primary full text reports latency, peak GPU memory and task metrics on LLaMA-7B.",
+      "library_body_check": "body_sections_reviewed",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Modality Inflation: Energy Characterization and Optimization Opportunities for MLLM Inference",
+      "source_url": "https://arxiv.org/abs/2512.22695",
+      "year": 2025,
+      "published": "2025-12-27",
+      "venue": "IEEE International Symposium on Parallel & Distributed Processing, Workshops and Phd Forum",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Multimodal large language models (MLLMs) are built on text-only LLMs by incorporating additional modalities, enabling multimodal understanding and a broader range of applications. However, these additions introduce a previously unexplored energy trade-off across modalities that remains poorly understood, as most prior work focuses on text-only models. In this paper, we examine modality inflation, a key source of inefficiency in which multimodal inputs increase inference workloads through extra encoding stages and expanded token sequences. We provide the first detailed, stage-level analysis of energy consumption in MLLM inference by breaking the pipeline into vision encoding, prefill, and decoding stages. Using four representative MLLMs evaluated on NVIDIA A100 GPU, we quantify the additional energy required for multimodal inference compared to text-only baselines, observing overheads ranging from 17% to 94% across models for identical inputs. Our results show that energy bottlenecks differ widely across model architectures, stemming either from compute-heavy vision encoders or from the downstream impact of large visual token sequences during prefill. By examining GPU power traces, we further uncover substantial GPU underutilization during multimodal execution and show that input complexity leads to markedly different energy scaling behaviors across models. Finally, we demonstrate that stage-wise dynamic voltage and frequency scaling (DVFS) is an effective optimization, allowing energy savings with only modest performance impact. Together, these findings offer practical insights and concrete guidance for designing more energy-efficient multimodal LLM serving systems.",
+      "identifiers": [
+        "SemanticScholar:48b8ea4594e6fdc626a51abe9687c9ddb0111373"
+      ],
+      "semantic_scholar_id": "48b8ea4594e6fdc626a51abe9687c9ddb0111373",
+      "canonical_id": "arXiv:2512.22695",
+      "arxiv_id": "2512.22695",
+      "doi": "10.1109/IPDPSW71298.2026.00035",
+      "authors": [
+        "Mona Moghadampanah",
+        "Adib Rezaei Shahmirzadi",
+        "Farhana Amin",
+        "D. Nikolopoulos"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 291,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Directly measures encoder, prefill and decode energy for MLLM inference on A100s and evaluates stage-wise DVFS for serving. Body review confirms architecture-dependent energy bottlenecks; evaluation is single-GPU and four-model, so generality is limited.",
+      "library_body_check": "body_sections_reviewed",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Thanos: A Block-wise Pruning Algorithm for Efficient Large Language Model Compression",
+      "source_url": "https://arxiv.org/abs/2504.05346",
+      "year": 2025,
+      "published": "2025-04-06",
+      "venue": "arXiv.org",
+      "citation_count": 7,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "This paper presents Thanos, a novel weight-pruning algorithm designed to reduce the memory footprint and enhance the computational efficiency of large language models (LLMs) by removing redundant weights while maintaining accuracy. Thanos introduces a block-wise pruning strategy with adaptive masks that dynamically adjust to weight importance, enabling flexible sparsity patterns and structured formats, such as $n:m$ sparsity, optimized for hardware acceleration. Experimental evaluations demonstrate that Thanos achieves state-of-the-art performance in structured pruning and outperforms existing methods in unstructured pruning. By providing an efficient and adaptable approach to model compression, Thanos offers a practical solution for deploying large models in resource-constrained environments.",
+      "identifiers": [
+        "SemanticScholar:d0656bdf977f2a82cf918ecd6a8cdd068f91a44b"
+      ],
+      "semantic_scholar_id": "d0656bdf977f2a82cf918ecd6a8cdd068f91a44b",
+      "canonical_id": "arXiv:2504.05346",
+      "arxiv_id": "2504.05346",
+      "doi": "10.48550/arXiv.2504.05346",
+      "authors": [
+        "Ivan D. Ilin",
+        "Peter Richtárik"
+      ],
+      "priority": 7,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 7,
+        "citation_count": 7,
+        "total": 7,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 556,
+        "matched_prestigious_venue": null
+      },
+      "reason": "The paper prunes LLM weights using adaptive block masks and structured n:m patterns; full-text experiments include LLaMA/OPT zero-shot evaluations. This is a direct inference deployment compression path, with accuracy trade-offs varying by sparsity/model.",
+      "library_body_check": "body_sections_reviewed",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Auto-Parallelizing Large Models with Rhino: A Systematic Approach on Production AI Platform",
+      "source_url": "https://arxiv.org/abs/2302.08141",
+      "year": 2023,
+      "published": "2023-02-16",
+      "venue": "arXiv.org",
+      "citation_count": 6,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "We present Rhino, a system for accelerating tensor programs with automatic parallelization on AI platform for real production environment. It transforms a tensor program written for a single device into an equivalent distributed program that is capable of scaling up to thousands of devices with no user configuration. Rhino firstly works on a semantically independent intermediate representation of tensor programs, which facilitates its generalization to unprecedented applications. Additionally, it implements a task-oriented controller and a distributed runtime for optimal performance. Rhino explores on a complete and systematic parallelization strategy space that comprises all the paradigms commonly employed in deep learning (DL), in addition to strided partitioning and pipeline parallelism on non-linear models. Aiming to efficiently search for a near-optimal parallel execution plan, our analysis of production clusters reveals general heuristics to speed up the strategy search. On top of it, two optimization levels are designed to offer users flexible trade-offs between the search time and strategy quality. Our experiments demonstrate that Rhino can not only re-discover the expert-crafted strategies of classic, research and production DL models, but also identify novel parallelization strategies which surpass existing systems for novel models.",
+      "identifiers": [
+        "SemanticScholar:c72b859ff9a349f6e0f2021a4eb9542316509949"
+      ],
+      "semantic_scholar_id": "c72b859ff9a349f6e0f2021a4eb9542316509949",
+      "canonical_id": "arXiv:2302.08141",
+      "arxiv_id": "2302.08141",
+      "doi": "10.48550/arXiv.2302.08141",
+      "authors": [
+        "Shiwei Zhang",
+        "Lan-Song Diao",
+        "Siyu Wang",
+        "Zong-Yan Cao",
+        "Yiliang Gu",
+        "Chang Si",
+        "Ziji Shi",
+        "Zhen Zheng",
+        "Chuan Wu",
+        "W. Lin"
+      ],
+      "priority": 6,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 6,
+        "citation_count": 6,
+        "total": 6,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1336,
+        "matched_prestigious_venue": null
+      },
+      "reason": "This is a general production AI parallelization system rather than an LLM-only method, but its device mapping and distributed runtime plausibly improve large-model execution; retain as a broad inference-systems connection.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-5432bfa425c7",
+    "round": "libimp-5432bfa425c7f9a6-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 11,
+    "round_submission_count": 3,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-5432bfa425c7f9a6-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-5432bfa425c7f9a6-pre01.json",
+    "receipt": "sha256:54edc97bef1a1b643eea29c01c4a5823e0a179a845c522414e6554d46593003e"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-5432bfa425c7",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

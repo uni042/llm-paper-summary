@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Bi-VLM: Pushing Ultra-Low Precision Post-Training Quantization Boundaries in Vision-Language Models",
+      "source_url": "https://arxiv.org/abs/2509.18763",
+      "year": 2025,
+      "published": "2025-09-23",
+      "venue": "arXiv.org",
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "We address the critical gap between the computational demands of vision-language models and the possible ultra-low-bit weight precision (bitwidth $\\leq2$ bits) we can use for higher efficiency. Our work is motivated by the substantial computational cost and memory requirements of VLMs, which restrict their applicability in hardware-constrained environments. We propose Bi-VLM, which separates model weights non-uniformly based on the Gaussian quantiles. Our formulation groups the model weights into outlier (salient) and multiple inlier (unsalient) subsets, ensuring that each subset contains a proportion of weights corresponding to its quantile in the distribution. We propose a saliency-aware hybrid quantization algorithm and use it to quantize weights by imposing different constraints on the scaler and binary matrices based on the saliency metric and compression objective. We have evaluated our approach on different VLMs. For the language model part of the VLM, our Bi-VLM outperforms the SOTA by 3%-47% on the visual question answering task in terms of four different benchmarks and three different models. For the overall VLM, our Bi-VLM outperforms the SOTA by 4%-45%. We also perform token pruning on the quantized models and observe that there is redundancy of image tokens 90% - 99% in the quantized models. This helps us to further prune the visual tokens to improve efficiency.",
+      "identifiers": [
+        "SemanticScholar:e2bed84a1fcf417418ae978afe7b91bae630fe86"
+      ],
+      "semantic_scholar_id": "e2bed84a1fcf417418ae978afe7b91bae630fe86",
+      "canonical_id": "arXiv:2509.18763",
+      "arxiv_id": "2509.18763",
+      "doi": "10.48550/arXiv.2509.18763",
+      "authors": [
+        "Xi-Jun Wang",
+        "Jun-Yun Huang",
+        "Rayyan Abdalla",
+        "Cheng-Yuan Zhang",
+        "Ruiqi Xian",
+        "Dinesh Manocha"
+      ],
+      "priority": 4,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 4,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 386,
+        "matched_prestigious_venue": null
+      },
+      "reason": "The method reduces VLM weight precision and visual-token workload, directly affecting multimodal model runtime and memory. It is a plausible inference compression contribution; evaluation scope is VLM/VQA.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-5432bfa425c7",
+    "round": "libimp-5432bfa425c7f9a6-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 11,
+    "round_submission_count": 3,
+    "round_submission_index": 3,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-5432bfa425c7f9a6-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-5432bfa425c7f9a6-pre01.json",
+    "receipt": "sha256:54edc97bef1a1b643eea29c01c4a5823e0a179a845c522414e6554d46593003e"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-5432bfa425c7",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

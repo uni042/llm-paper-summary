@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Untangling Component Imbalance in Hybrid Linear Attention Conversion Methods",
+      "source_url": "https://arxiv.org/abs/2510.05901",
+      "year": 2025,
+      "published": "2025-10-07",
+      "venue": "arXiv.org",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Transformers'quadratic computational complexity limits their scalability despite remarkable performance. While linear attention reduces this to linear complexity, pre-training such models from scratch remains, in most cases, prohibitively expensive. Recent post-training linearisation methods convert pre-trained Transformers to linear models efficiently, often using hybrid approaches that combine linear attention with sliding-window softmax. We identify a critical flaw: existing hybrid methods inadvertently bypass the linear component, relying almost entirely on SWA. Component-level diagnostics reveal this previously undetected behaviour stems from overlooked evaluation practices on common-sense benchmarks. We propose three solutions to ensure balanced component usage: (i) inference-time hybridisation of linear-only conversions with sliding-window softmax; (ii) HedgeCATs, combining attention-weight transfer with targeted LoRA fine-tuning; and (iii) Scheduled Sliding-window Dropout (SSD), which stochastically suppresses the softmax branch during training to prevent component collapse. Our methods maintain computational efficiency while recovering most base model performance and ensuring genuine linear attention adoption, restoring the validity of performance attributions in hybrid conversions.",
+      "identifiers": [
+        "SemanticScholar:3b5c97e3c70245714526be31413d092917b833c6"
+      ],
+      "semantic_scholar_id": "3b5c97e3c70245714526be31413d092917b833c6",
+      "canonical_id": "arXiv:2510.05901",
+      "arxiv_id": "2510.05901",
+      "doi": "10.48550/arXiv.2510.05901",
+      "authors": [
+        "Martin A Benfeghoul",
+        "Teresa Delgado",
+        "Adnan Oomerjee",
+        "Haitham Bou-Ammar",
+        "Jun Wang",
+        "Z. Fountas"
+      ],
+      "priority": 3,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 3,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 372,
+        "matched_prestigious_venue": null
+      },
+      "reason": "The primary abstract connects hybrid linear-attention conversion with execution efficiency and model quality; this architecture/runtime trade-off is plausibly relevant to inference.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-16049838710f",
+    "round": "libimp-16049838710f9a61-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 6,
+    "round_submission_count": 2,
+    "round_submission_index": 2,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-16049838710f9a61-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-16049838710f9a61-pre01.json",
+    "receipt": "sha256:337f130be48492002cdd5287d6550eede24c154d94920e2d6755ee4cda11c433"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-16049838710f",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

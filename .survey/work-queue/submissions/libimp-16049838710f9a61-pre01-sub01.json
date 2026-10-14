@@ -1,0 +1,235 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "TPLA: Tensor Parallel Latent Attention for Efficient Disaggregated Prefill and Decode Inference",
+      "source_url": "https://arxiv.org/abs/2508.15881",
+      "year": 2025,
+      "published": "2025-08-21",
+      "venue": "arXiv.org",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Multi-Head Latent Attention (MLA), introduced in DeepSeek-V2, compresses key-value states into a low-rank latent vector, caching only this vector to reduce memory. In tensor parallelism (TP), however, attention heads are computed across multiple devices, and each device must load the full cache, eroding the advantage of MLA over Grouped Query Attention (GQA). We propose Tensor-Parallel Latent Attention (TPLA): a scheme that partitions both the latent representation and each head's input dimension across devices, performs attention independently per shard, and then combines results with an all-reduce. TPLA preserves the benefits of a compressed KV cache while unlocking TP efficiency. Unlike Grouped Latent Attention (GLA), every head in TPLA still leverages the full latent representation, maintaining stronger representational capacity. TPLA is drop-in compatible with models pre-trained using MLA: it supports MLA-style prefilling and enables efficient tensor-parallel decoding without retraining. Applying simple orthogonal transforms -- e.g., the Hadamard transform or PCA -- before TP slicing further mitigates cross-shard interference, yielding minimal accuracy degradation. By reducing the per-device KV cache for DeepSeek-V3 and Kimi-K2, we achieve 1.79x and 1.93x speedups, respectively, at a 32K-token context length while maintaining performance on commonsense and LongBench benchmarks. TPLA can be implemented with FlashAttention-3, enabling practical end-to-end acceleration.",
+      "identifiers": [
+        "SemanticScholar:4e2330ea6fe9210f49df6aa061bcf14a450de97a"
+      ],
+      "semantic_scholar_id": "4e2330ea6fe9210f49df6aa061bcf14a450de97a",
+      "canonical_id": "arXiv:2508.15881",
+      "arxiv_id": "2508.15881",
+      "doi": "10.48550/arXiv.2508.15881",
+      "authors": [
+        "Xiaojuan Tang",
+        "Fan-Xu Meng",
+        "Pingzhi Tang",
+        "Yuxuan Wang",
+        "Di Yin",
+        "Xing Sun",
+        "Mu-Han Zhang"
+      ],
+      "priority": 3,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 3,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 419,
+        "matched_prestigious_venue": null
+      },
+      "reason": "The primary abstract describes tensor-parallel KV-cache partitioning for MLA models and reports prefill/decode speedups at 32K context. It directly matches inference systems and KV-cache efficiency.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "End-to-End On-Device Quantization-Aware Training for LLMs at Inference Cost",
+      "source_url": "https://arxiv.org/abs/2509.00031",
+      "year": 2025,
+      "published": "2025-08-21",
+      "venue": "arXiv.org",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Quantization is an effective technique to reduce the deployment cost of large language models (LLMs), and post-training quantization (PTQ) has been widely studied due to its efficiency. However, existing PTQ methods are limited by their inability to fine-tune model parameters and often suffer significant accuracy loss in low-bit scenarios. Quantization-aware training (QAT) provides a more principled solution, but its reliance on backpropagation incurs prohibitive memory costs, limiting its practicality for LLM deployment. To address these challenges, we propose ZeroQAT, a zeroth-order optimization-based QAT framework that supports both weight and activation quantization. ZeroQAT leverages forward-only gradient estimation to eliminate backpropagation, substantially reducing computational and memory overhead while retaining the benefits of end-to-end optimization. We further introduce a lightweight variant of ZeroQAT for quantized fine-tuning, which freezes and pre-quantizes most parameters to further cut memory usage. Experiments show that ZeroQAT consistently outperforms representative PTQ and QAT baselines while requiring significantly less memory. For example, ZeroQAT enables fine-tuning of a 13B model at extremely low bit-widths (e.g., 2-4 bits) on a single 8GB GPU, and even allows fine-tuning a 6.7B model on a OnePlus 12 smartphone, demonstrating its practicality for end-to-end QAT on resource-limited edge devices.",
+      "identifiers": [
+        "SemanticScholar:4e8a9cc70171f56637cce93477f0f2f82853763c"
+      ],
+      "semantic_scholar_id": "4e8a9cc70171f56637cce93477f0f2f82853763c",
+      "canonical_id": "arXiv:2509.00031",
+      "arxiv_id": "2509.00031",
+      "doi": "10.48550/arXiv.2509.00031",
+      "authors": [
+        "Qi-Tao Tan",
+        "Xiao-Ying Song",
+        "Jin Lu",
+        "Guo-Ming Li",
+        "Jun Liu",
+        "Ling-Zi Hong",
+        "Caiwen Ding",
+        "Jundong Li",
+        "Xiaoming Zhai",
+        "Shao-Yi Huang",
+        "Wei Niu",
+        "Geng Yuan"
+      ],
+      "priority": 3,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 3,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 419,
+        "matched_prestigious_venue": null
+      },
+      "reason": "The abstract includes quantized LLM deployment results on an 8GB GPU and smartphone. Although the method uses training, the stated end application is low-bit LLM deployment; keep as a plausible inference-compression candidate.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "ILRe: Intermediate Layer Retrieval for Context Compression in Causal Language Models",
+      "source_url": "https://arxiv.org/abs/2508.17892",
+      "year": 2025,
+      "published": "2025-08-25",
+      "venue": "arXiv.org",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Models (LLMs) have demonstrated success across many benchmarks. However, they still exhibit limitations in long-context scenarios, primarily due to their short effective context length, quadratic computational complexity, and high memory overhead when processing lengthy inputs. To mitigate these issues, we introduce a novel context compression pipeline, called Intermediate Layer Retrieval (ILRe), which determines one intermediate decoder layer offline, encodes context by streaming chunked prefill only up to that layer, and recalls tokens by the attention scores between the input query and full key cache in that specified layer. In particular, we propose a multi-pooling kernels allocating strategy in the token recalling process to maintain the completeness of semantics. Our approach not only reduces the prefilling complexity from $O(L^2)$ to $O(L)$ and trims the memory footprint to a few tenths of that required for the full context, but also delivers performance comparable to or superior to the full-context setup in long-context scenarios. Without additional post training or operator development, ILRe can process a single $1M$ tokens request in less than half a minute (speedup $\\approx 180\\times$) and scores RULER-$1M$ benchmark of $\\approx 79.8$ with model Llama-3.1-UltraLong-8B-1M-Instruct on a Huawei Ascend 910B NPU.",
+      "identifiers": [
+        "SemanticScholar:f7b7019cf1bbc07f228189f24063ce6323c673f5"
+      ],
+      "semantic_scholar_id": "f7b7019cf1bbc07f228189f24063ce6323c673f5",
+      "canonical_id": "arXiv:2508.17892",
+      "arxiv_id": "2508.17892",
+      "doi": "10.48550/arXiv.2508.17892",
+      "authors": [
+        "Manlai Liang",
+        "Man-Di Liu",
+        "Jiangzhou Ji",
+        "Huai-Jun Li",
+        "Hao Yang",
+        "Yaohan He",
+        "Jinlong Li"
+      ],
+      "priority": 3,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 3,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 415,
+        "matched_prestigious_venue": null
+      },
+      "reason": "The primary abstract reports reduced prefill complexity and memory, plus long-context inference speed on an Ascend 910B; this is directly in scope.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "MACE: A Hybrid LLM Serving System with Colocated SLO-aware Continuous Retraining Alignment",
+      "source_url": "https://arxiv.org/abs/2510.03283",
+      "year": 2025,
+      "published": "2025-09-28",
+      "venue": "arXiv.org",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLMs) deployed on edge servers are increasingly used in latency-sensitive applications such as personalized assistants, recommendation, and content moderation. However, the non-stationary nature of user data necessitates frequent retraining, which introduces a fundamental tension between inference latency and model accuracy under constrained GPU resources. Existing retraining strategies either delay model updates, over-commit resources to retraining, or overlook iteration-level retraining granularity. In this paper, we identify that iteration-level scheduling is crucial for adapting retraining frequency to model drift without violating service-level objectives (SLOs). We propose MACE, a hybrid LLM system that colocates concurrent inference (prefill, decode) and fine-tuning, with intelligent memory management to maximize task performance while promising inference throughput. MACE leverages the insight that not all model updates equally affect output alignment and allocates GPU cycles accordingly to balance throughput, latency, and update freshness. Our trace-driven evaluation shows that MACE matches or exceeds continuous retraining while reducing inference latency by up to 63% and maintaining throughput under resource constraints. Compared to periodic retraining, MACE improves latency breakdown across prefill, decode, and finetune stages, and sustains GPU utilization above 85% in NVIDIA AGX Orin. These results demonstrate that iteration-level hybrid scheduling is a promising direction for deploying LLMs with continual learning capabilities on edge platforms.",
+      "identifiers": [
+        "SemanticScholar:6f3d0118ee8817983382fbc926c4a5d9d5920043"
+      ],
+      "semantic_scholar_id": "6f3d0118ee8817983382fbc926c4a5d9d5920043",
+      "canonical_id": "arXiv:2510.03283",
+      "arxiv_id": "2510.03283",
+      "doi": "10.48550/arXiv.2510.03283",
+      "authors": [
+        "Yufei Li",
+        "Yu Fu",
+        "Yue Dong",
+        "Cong Liu"
+      ],
+      "priority": 3,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 3,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 381,
+        "matched_prestigious_venue": null
+      },
+      "reason": "This is explicitly a hybrid LLM serving system. Its inference/retraining coupling and SLO-aware resource allocation directly connect to serving throughput and latency.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "ARMOR: High-Performance Semi-Structured Pruning via Adaptive Matrix Factorization",
+      "source_url": "https://arxiv.org/abs/2510.05528",
+      "year": 2025,
+      "published": "2025-10-07",
+      "venue": "arXiv.org",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLMs) present significant deployment challenges due to their immense computational and memory requirements. While semi-structured pruning, particularly 2:4 sparsity, offers a path to practical hardware acceleration, existing methods often incur substantial performance degradation. To bridge this gap, we introduce ARMOR: (Adaptive Representation with Matrix-factORization), a novel one-shot post-training pruning algorithm. Instead of directly pruning weights, ARMOR factorizes each weight matrix into a 2:4 sparse core wrapped by two low-overhead, block diagonal matrices. These wrappers act as efficient pre and post-transformation error correctors, offering greater flexibility to preserve model quality compared to conventional 2:4 pruning techniques. The sparse core and block diagonal wrappers are chosen through a block coordinate descent algorithm that minimizes a layer-wise proxy loss. We theoretically prove this optimization is guaranteed to converge to a solution with a proxy loss less than or equal to state-of-the-art pruning algorithms. Experiments on Llama (Touvron et al., 2023; Dubey et al., 2024) and Qwen (Yang et al., 2025) model families demonstrate that ARMOR consistently and significantly outperforms state-of-the-art 2:4 pruning methods across a wide range of downstream tasks and perplexity evaluations. ARMOR achieves this superior performance while retaining the inference speedups and substantial memory usage reductions of 2:4 pruning, establishing a more effective trade-off between model compression and task accuracy",
+      "identifiers": [
+        "SemanticScholar:c497a42b38b1269f4a9eac857b2d93a02b2b4a69"
+      ],
+      "semantic_scholar_id": "c497a42b38b1269f4a9eac857b2d93a02b2b4a69",
+      "canonical_id": "arXiv:2510.05528",
+      "arxiv_id": "2510.05528",
+      "doi": "10.48550/arXiv.2510.05528",
+      "authors": [
+        "Lawrence Liu",
+        "Alexander Liu",
+        "Mengdi Wang",
+        "Tuo Zhao",
+        "Lin F. Yang"
+      ],
+      "priority": 3,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 3,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 372,
+        "matched_prestigious_venue": null
+      },
+      "reason": "The primary abstract frames pruning as deployment-oriented LLM acceleration and memory reduction, a plausible model-compression pathway for inference.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-16049838710f",
+    "round": "libimp-16049838710f9a61-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 6,
+    "round_submission_count": 2,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-16049838710f9a61-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-16049838710f9a61-pre01.json",
+    "receipt": "sha256:337f130be48492002cdd5287d6550eede24c154d94920e2d6755ee4cda11c433"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-16049838710f",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
