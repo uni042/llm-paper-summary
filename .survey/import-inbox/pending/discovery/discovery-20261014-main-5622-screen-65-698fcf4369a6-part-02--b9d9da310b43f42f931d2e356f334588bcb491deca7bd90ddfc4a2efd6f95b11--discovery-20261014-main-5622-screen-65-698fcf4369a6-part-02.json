@@ -1,0 +1,293 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-65",
+  "run_key": "discovery-20261014-main-5622-screen-65-698fcf4369a6-part-02",
+  "reference_main_sha": "5622d2ef3a9507fdc024805c9672e5ffc2aad0b9",
+  "record_count": 20,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2602.20662",
+      "identity_tokens": [
+        "arXiv:2602.20662"
+      ],
+      "title": "TOM: A Ternary Read-only Memory Accelerator for LLM-powered Edge Intelligence",
+      "reason": "ternary ROM/SRAM co-designとpower gatingでedge LLM inferenceを実行する。",
+      "source_url": "https://arxiv.org/abs/2602.20662",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T08:10:17Z",
+      "last_checked_at": "2026-10-14T08:10:17Z",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.48550/arXiv.2603.14371",
+      "identity_tokens": [
+        "DOI:10.48550/arXiv.2603.14371",
+        "arXiv:2603.14371"
+      ],
+      "title": "OxyGen: Unified KV Cache Management for VLA Inference under Multi-Task Parallelism",
+      "reason": "複数task/frame間のKV共有とcontinuous batchingによるVLA LLM inference効率化。",
+      "source_url": "https://arxiv.org/abs/2603.14371",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T08:10:17Z",
+      "last_checked_at": "2026-10-14T08:10:17Z",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2506.13472",
+      "identity_tokens": [
+        "arXiv:2506.13472"
+      ],
+      "title": "ROSAQ: Rotation-based Saliency-Aware Weight Quantization for Efficiently Compressing Large Language Models",
+      "reason": "saliency-aware mixed-precision weight quantizationと融合kernelでLLM generationを高速化する。",
+      "source_url": "https://arxiv.org/abs/2506.13472",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T08:10:17Z",
+      "last_checked_at": "2026-10-14T08:10:17Z",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2601.08743",
+      "identity_tokens": [
+        "arXiv:2601.08743"
+      ],
+      "title": "TableCache: Primary Foreign Key Guided KV Cache Precomputation for Low Latency Text-to-SQL",
+      "reason": "Text-to-SQLでtable KV precomputation/cache lookupがTTFTを改善する。",
+      "source_url": "https://arxiv.org/abs/2601.08743",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T08:10:17Z",
+      "last_checked_at": "2026-10-14T08:10:17Z",
+      "linked_from": []
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/JETCAS.2025.3556443",
+      "identity_tokens": [
+        "DOI:10.1109/JETCAS.2025.3556443"
+      ],
+      "title": "Efficient Hardware Architecture Design for Rotary Position Embedding of Large Language Models",
+      "reason": "Crossref directly verified exact DOI/title/publisher and official route. Publisher abstract remains unread: HTTP 202 with zero response-content bytes. Metadata does not substitute for primary abstract.",
+      "source_url": "https://ieeexplore.ieee.org/document/10946150/",
+      "body_check": "source_unavailable; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-10-14T08:19:20Z",
+      "last_checked_at": "2026-10-14T08:19:20Z",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2504.14872",
+      "identity_tokens": [
+        "arXiv:2504.14872"
+      ],
+      "title": "Efficient Function Orchestration for Large Language Models",
+      "reason": "LLM function callsのprocessor scheduling/parallel orchestrationを改善する。",
+      "source_url": "https://arxiv.org/abs/2504.14872",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T08:10:17Z",
+      "last_checked_at": "2026-10-14T08:10:17Z",
+      "linked_from": []
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/SoutheastCon63549.2026.11476596",
+      "identity_tokens": [
+        "DOI:10.1109/SoutheastCon63549.2026.11476596"
+      ],
+      "title": "Adaptive Token Routing for Heterogeneous LLM Inference in Edge-Cloud Continuum",
+      "reason": "Crossref directly verified exact DOI/title/publisher and official route. Publisher abstract remains unread: HTTP 202 with zero response-content bytes. Metadata does not substitute for primary abstract.",
+      "source_url": "https://ieeexplore.ieee.org/document/11476596/",
+      "body_check": "source_unavailable; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-10-14T08:19:20Z",
+      "last_checked_at": "2026-10-14T08:19:20Z",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2605.11733",
+      "identity_tokens": [
+        "arXiv:2605.11733"
+      ],
+      "title": "Position: LLM Inference Should Be Evaluated as Energy-to-Token Production",
+      "reason": "energy-to-token評価枠組みを示し、推論system efficiencyの主要技術を関連付ける。",
+      "source_url": "https://arxiv.org/abs/2605.11733",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T08:10:17Z",
+      "last_checked_at": "2026-10-14T08:10:17Z",
+      "linked_from": []
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/ICDCS63083.2025.00063",
+      "identity_tokens": [
+        "DOI:10.1109/ICDCS63083.2025.00063"
+      ],
+      "title": "Mitigating Contention in Stream Multiprocessors for Pipelined Mixture of Experts: An SM-Aware Scheduling Approach",
+      "reason": "Crossref directly verified exact DOI/title/publisher and official route. Publisher abstract remains unread: HTTP 202 with zero response-content bytes. Metadata does not substitute for primary abstract.",
+      "source_url": "https://ieeexplore.ieee.org/document/11183819/",
+      "body_check": "source_unavailable; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-10-14T08:19:21Z",
+      "last_checked_at": "2026-10-14T08:19:21Z",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1007/s40747-025-02200-4",
+      "identity_tokens": [
+        "DOI:10.1007/s40747-025-02200-4"
+      ],
+      "title": "Multi-tier dynamic storage of KV cache for LLM inference under resource-constrained conditions",
+      "reason": "Springer Nature official page verifies DOI/title and describes KV offload, selective reuse and adaptive eviction, reporting TTFT reduction over 25%.",
+      "source_url": "https://link.springer.com/article/10.1007/s40747-025-02200-4",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T08:10:17Z",
+      "last_checked_at": "2026-10-14T08:10:17Z",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.48550/arXiv.2601.13563",
+      "identity_tokens": [
+        "DOI:10.48550/arXiv.2601.13563",
+        "arXiv:2601.13563"
+      ],
+      "title": "ButterflyMoE: Compression-Scalable Ternary Experts via Structured Butterfly Orbits",
+      "reason": "共有ternary substrateによりMoE expert memoryを大幅圧縮する。",
+      "source_url": "https://arxiv.org/abs/2601.13563",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T08:10:17Z",
+      "last_checked_at": "2026-10-14T08:10:17Z",
+      "linked_from": []
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.22585",
+      "identity_tokens": [
+        "arXiv:2601.22585"
+      ],
+      "title": "HetCCL: Accelerating LLM Training with Heterogeneous GPUs",
+      "reason": "LLM model trainingのheterogeneous GPU communication高速化のみで推論系との具体的接点なし。",
+      "source_url": "https://arxiv.org/abs/2601.22585",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T08:10:17Z",
+      "last_checked_at": "2026-10-14T08:10:17Z",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2508.14302",
+      "identity_tokens": [
+        "arXiv:2508.14302"
+      ],
+      "title": "GLASS: Global-Local Aggregation for Inference-time Sparsification of LLMs",
+      "reason": "inference-time FFN sparsificationでLLM decoding/on-device efficiencyを改善する。",
+      "source_url": "https://arxiv.org/abs/2508.14302",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T08:10:17Z",
+      "last_checked_at": "2026-10-14T08:10:17Z",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2606.07571",
+      "identity_tokens": [
+        "arXiv:2606.07571"
+      ],
+      "title": "Enabling KV Caching of Shared Prefix for Diffusion Language Models",
+      "reason": "diffusion LMのshared-prefix KV cachingでserving throughputを改善する。",
+      "source_url": "https://arxiv.org/abs/2606.07571",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T08:10:17Z",
+      "last_checked_at": "2026-10-14T08:10:17Z",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2603.14785",
+      "identity_tokens": [
+        "arXiv:2603.14785"
+      ],
+      "title": "SkipOPU: An FPGA-based Overlay Processor for Large Language Models with Dynamically Allocated Computation",
+      "reason": "dynamic compute FPGA overlayとKV bufferでLLM inference acceleratorを構成する。",
+      "source_url": "https://arxiv.org/abs/2603.14785",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T08:10:17Z",
+      "last_checked_at": "2026-10-14T08:10:17Z",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2605.11744",
+      "identity_tokens": [
+        "arXiv:2605.11744"
+      ],
+      "title": "Training-Inference Consistent Segmented Execution for Long-Context LLMs",
+      "reason": "segmented executionでlong-context LLM prefill memory/scalabilityを改善する。",
+      "source_url": "https://arxiv.org/abs/2605.11744",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T08:10:17Z",
+      "last_checked_at": "2026-10-14T08:10:17Z",
+      "linked_from": []
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3774934.3786425",
+      "identity_tokens": [
+        "DOI:10.1145/3774934.3786425"
+      ],
+      "title": "FlashAttention-T: Towards Fully Tensorized Attention by Exploiting Tensor-Vector Parallelism",
+      "reason": "Crossref directly verified exact DOI/title/publisher and official route. Publisher abstract remains unread: HTTP 403 Forbidden. Metadata does not substitute for primary abstract.",
+      "source_url": "https://dl.acm.org/doi/10.1145/3774934.3786425",
+      "body_check": "source_unavailable; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-10-14T08:19:22Z",
+      "last_checked_at": "2026-10-14T08:19:22Z",
+      "linked_from": []
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/IJCNN64981.2025.11229416",
+      "identity_tokens": [
+        "DOI:10.1109/IJCNN64981.2025.11229416"
+      ],
+      "title": "Low-Rank Decomposition Assisted Quantization and Inference Compensation for Quality Large Language Model Inference",
+      "reason": "Crossref directly verified exact DOI/title/publisher and official route. Publisher abstract remains unread: HTTP 202 with zero response-content bytes. Metadata does not substitute for primary abstract.",
+      "source_url": "https://ieeexplore.ieee.org/document/11229416/",
+      "body_check": "source_unavailable; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-10-14T08:19:22Z",
+      "last_checked_at": "2026-10-14T08:19:22Z",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.48550/arXiv.2502.14882",
+      "identity_tokens": [
+        "DOI:10.48550/arXiv.2502.14882",
+        "arXiv:2502.14882"
+      ],
+      "title": "CalibQuant: 1-Bit KV Cache Quantization for Multimodal LLMs",
+      "reason": "arXiv v2の要旨はmultimodal LLM KVを1-bit量子化しthroughputを向上。選択titleと公式v2 titleの違いをcanonical IDで照合した。",
+      "source_url": "https://arxiv.org/abs/2502.14882",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T08:10:17Z",
+      "last_checked_at": "2026-10-14T08:10:17Z",
+      "linked_from": []
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/QPAIN69676.2026.11546324",
+      "identity_tokens": [
+        "DOI:10.1109/QPAIN69676.2026.11546324"
+      ],
+      "title": "Cache-Aware Generative NLP: Reducing Latency in Large-Scale Multilingual Systems",
+      "reason": "Crossref directly verified exact DOI/title/publisher and official route. Publisher abstract remains unread: HTTP 202 with zero response-content bytes. Metadata does not substitute for primary abstract.",
+      "source_url": "https://ieeexplore.ieee.org/document/11546324/",
+      "body_check": "source_unavailable; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-10-14T08:19:23Z",
+      "last_checked_at": "2026-10-14T08:19:23Z",
+      "linked_from": []
+    }
+  ]
+}
