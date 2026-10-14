@@ -1,0 +1,27 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-45",
+  "run_key": "20261014-1245-scheduled-chat-45/r01/research-relevance-rank12",
+  "reference_main_sha": "32dabfd99b1953d9c70e4fc584de051177a70f7c",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2204.13767",
+      "identity_tokens": [
+        "id:arXiv:2204.13767",
+        "url:https://arxiv.org/abs/2204.13767"
+      ],
+      "title": "Triformer: Triangular, Variable-Specific Attentions for Long Sequence Multivariate Time Series Forecasting-Full Version",
+      "reason": "タイトルが示す応用先は多変量時系列の予測であり、変数ごとの三角注意構造を用いた予測器の研究である。LLMの推論・サービング・KVキャッシュなどの最終適用先を示していないため対象外と判定した。",
+      "source_url": "https://arxiv.org/abs/2204.13767",
+      "body_check": "title_screen_only; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-10-14T12:49:13+09:00",
+      "last_checked_at": "2026-10-14T12:49:13+09:00",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance",
+      "worklist_rank": 12
+    }
+  ]
+}
