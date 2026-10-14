@@ -23,7 +23,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - [06-moe-quantization-compression](../06-moe-quantization-compression/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（85本）
+## 自動生成の論文一覧（86本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -127,6 +127,10 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - **2026-05 · [Self-Pruned Key-Value Attention: Learning When to Write by Predicting Future Utility](2026-2605.14037-self-pruned-key-value-attention-learning-when-to-write-by-predicting-fut.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   長い会話、検索拡張生成、エージェントの反復処理ではKVキャッシュの容量とメモリ帯域がボトルネックとなる。読出し時だけ重要なKVを選ぶ疎注意方式は計算量を減らせるが、全KVを保存し続ける限り容量の増加は止まらない。
+
+- **2026-05 · [Parallax: Parameterized Local Linear Attention for Language Modeling](2026-2605.29157-parallax-parameterized-local-linear-attention-for-language-modeling.md)**  
+  実装：[✓](https://github.com/Yifei-Zuo/Parallax) ・ リポジトリ内被引用：0  
+  Parallaxは、通常のSoftmax注意の「入力クエリに近いキーへ重みを置いて値を平均する」という計算に、キーと値の局所的な相互共分散を使った補正を加える注意機構である。H200でのBF16復号カーネルの測定では、比較対象のFlashAttention 2/3の速い方に対し、測定したバッチ・文脈長の範囲で同等以上と著者らは報告する。
 
 - **2026-05 · [Memory-Bound but Not Bandwidth-Limited: The Physical AI Inference Gap in Batch-1 LLM Decode](2026-2605.30571-memory-bound-but-not-bandwidth-limited-the-physical-ai-inference-gap-in-.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

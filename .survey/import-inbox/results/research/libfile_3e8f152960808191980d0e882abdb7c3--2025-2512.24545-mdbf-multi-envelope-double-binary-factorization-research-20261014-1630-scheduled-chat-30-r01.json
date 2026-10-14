@@ -1,13 +1,12 @@
 {
   "schema_version": 1,
   "artifact_type": "research",
-  "status": "imported",
-  "source_sha256": "0b8029e0ed9b226e8884cea1131600e74bbeec786e3775109976632bacd64700",
-  "canonical_id": "arXiv:2512.24545",
-  "paper_path": "papers/inference/99-other-inference-systems/2025-2512.24545-more-than-bits-multi-envelope-double-binary-factorization-for-extreme-qu.md",
-  "lineage": "99-other-inference-systems",
-  "audit_status": "PASS",
+  "status": "blocked_quality",
+  "source_sha256": "f2d0532f1f2959d855aa6f2307ebdf184e4955fd133c7348cbb83574538e6fa1",
+  "normalized_source_sha256": null,
   "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_3e8f152960808191980d0e882abdb7c3--2025-2512.24545-mdbf-multi-envelope-double-binary-factorization-research-20261014-1630-scheduled-chat-30-r01.md",
+  "canonical_id": "arXiv:2512.24545",
   "worker_completed_at": "2026-10-14T16:36:35+09:00",
   "worker_run_key": "20261014-1630-scheduled-chat-30/r01",
   "quality_metrics": {
@@ -20,5 +19,8 @@
     "limitation_chars": 276,
     "insufficiency_flags": []
   },
-  "processed_at": "2026-10-14T10:28:11+00:00"
+  "failures": [
+    "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2025-2512.24545-more-than-bits-multi-envelope-double-binary-factorization-for-extreme-qu.md と 13 段落 / 2741文字 (100.0%) が完全一致"
+  ],
+  "processed_at": "2026-10-14T11:49:45+00:00"
 }
