@@ -1,0 +1,27 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261014-1300-scheduled-chat-00/r01/research-relevance-rank74",
+  "reference_main_sha": "787b639d464f425b07ce42181327275ade8b0ab4",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.03077",
+      "identity_tokens": [
+        "id:arXiv:2606.03077",
+        "url:https://arxiv.org/abs/2606.03077"
+      ],
+      "title": "Libra: Efficient Resource Management for Agentic RL Post-Training",
+      "reason": "一次要旨で確認した中心対象は、強化学習の後学習でのロールアウトと学習ステージ間のGPU割当て、長尾ロールアウトの因果的な複数レベルフィードバックキュー、GPU再割当てによる学習収束の高速化である。48基のA800上で最大3.0倍の処理能力と最大2.5倍の報酬収束高速化を主張する。ロールアウト内の推論要求のルーティングやKVキャッシュ移動は推論システムと技術的に関連する一方、主評価指標と最適化目的は学習パイプラインの効率であり、一般的な本番推論サービングへの直接適用と実測が要旨では示されない。現行の学習単独凍結と推論基盤の境界にあるため、無関係と断定せずborderlineとして保留し、Research完成件数には含めない。",
+      "source_url": "https://arxiv.org/abs/2606.03077",
+      "body_check": "abstract_screen_only; body_not_read; primary arXiv abstract reviewed; not counted as completed Research",
+      "first_checked_at": "2026-10-14T13:08:45+09:00",
+      "last_checked_at": "2026-10-14T13:08:45+09:00",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance",
+      "worklist_rank": 74
+    }
+  ]
+}
