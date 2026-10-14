@@ -1,0 +1,150 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-49",
+  "run_key": "discovery-20261014-main-82f0-screen-49-part-03",
+  "reference_main_sha": "82f050cfb31ae72078a254c321af648ed5c4bc07",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2605.13235",
+      "identity_tokens": [
+        "arXiv:2605.13235"
+      ],
+      "title": "Intelligence Delivery Network: Toward an Internet Architecture for the AI Age",
+      "reason": "It addresses AI inference service delivery, routing, and caching across deployment tiers, a direct systems/serving connection.",
+      "source_url": "https://arxiv.org/abs/2605.13235",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T09:32:19+09:00",
+      "last_checked_at": "2026-10-14T09:32:19+09:00",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2605.03351",
+      "identity_tokens": [
+        "arXiv:2605.03351"
+      ],
+      "title": "VLMaxxing through FrameMogging Training-Free Anti-Recomputation for Video Vision-Language Models",
+      "reason": "The contribution is inference-time state reuse for a video VLM; it reduces recomputation and reports query latency improvement. The workload is specifically video multimodal inference.",
+      "source_url": "https://arxiv.org/abs/2605.03351",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T09:32:19+09:00",
+      "last_checked_at": "2026-10-14T09:32:19+09:00",
+      "linked_from": []
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/icassp55912.2026.11463859",
+      "identity_tokens": [
+        "DOI:10.1109/icassp55912.2026.11463859"
+      ],
+      "title": "ShrinKV: Key-Value Cache Compression with Progressive Hidden States Shrinking to Mitigate Prefilling Latency",
+      "reason": "The candidate title indicates KV-cache compression for prefill latency, but registered DOI `https://doi.org/10.1109/icassp55912.2026.11463859` and IEEE Xplore `https://ieeexplore.ieee.org/document/11463859` did not yield the publisher abstract (the document route displayed an inaccessible JavaScript/captcha page). A conference-program entry and author-hosted PDF were found, but neither is used as the registered publisher abstract. Primary evidence remains unavailable.",
+      "source_url": "https://doi.org/10.1109/icassp55912.2026.11463859",
+      "body_check": "source_unavailable; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-10-14T09:32:19+09:00",
+      "last_checked_at": "2026-10-14T09:32:19+09:00",
+      "linked_from": []
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.18128",
+      "identity_tokens": [
+        "arXiv:2604.18128"
+      ],
+      "title": "Depth Registers Unlock W4A4 on SwiGLU: A Reader/Generator Decomposition",
+      "reason": "The primary abstract explicitly characterizes the work as a training-time probe rather than a deployment proposal; it is also withdrawn and no PDF is available.",
+      "source_url": "https://arxiv.org/abs/2604.18128",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T09:32:19+09:00",
+      "last_checked_at": "2026-10-14T09:32:19+09:00",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.23919/DATE69613.2026.11539270",
+      "identity_tokens": [
+        "DOI:10.23919/DATE69613.2026.11539270"
+      ],
+      "title": "SA-ANT: Efficient Low-Bit Group-Wise Quantization for Large Language Models via Sign-Asymmetric Adaptive Numeric Type",
+      "reason": "This is an LLM inference quantization design with hardware area/power results and quality evaluation. The DOI/IEEE page was inaccessible, but the official DATE 2026 proceedings PDF is a primary conference source; its abstract and relevant performance results were reviewed. Body review: Official DATE 2026 proceedings identify low-bit group-wise LLM quantization and report area, power, and accuracy comparisons. The IEEE DOI page was unavailable; the conference proceedings PDF is the primary evidence.",
+      "source_url": "https://past.date-conference.com/proceedings-archive/2026/DATA/1613.pdf",
+      "body_check": "body_sections_reviewed",
+      "first_checked_at": "2026-10-14T09:32:19+09:00",
+      "last_checked_at": "2026-10-14T09:32:19+09:00",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2604.17353",
+      "identity_tokens": [
+        "arXiv:2604.17353"
+      ],
+      "title": "Hive: A Multi-Agent Infrastructure for Algorithm- and Task-Level Scaling",
+      "reason": "The abstract describes runtime caching and resource scheduling for model agents, a plausible inference-serving efficiency connection.",
+      "source_url": "https://arxiv.org/abs/2604.17353",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T09:32:19+09:00",
+      "last_checked_at": "2026-10-14T09:32:19+09:00",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2603.28622",
+      "identity_tokens": [
+        "arXiv:2603.28622"
+      ],
+      "title": "Trust-Aware Routing for Distributed Generative AI Inference at the Edge",
+      "reason": "It is an inference routing policy for distributed edge generative AI and explicitly evaluates route-selection latency.",
+      "source_url": "https://arxiv.org/abs/2603.28622",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T09:32:19+09:00",
+      "last_checked_at": "2026-10-14T09:32:19+09:00",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2604.19767",
+      "identity_tokens": [
+        "arXiv:2604.19767"
+      ],
+      "title": "Accelerating Paypal's Commerce Agent with Speculative Decoding: An Empirical Study on EAGLE3 with Fine-Tuned Nemotron Models",
+      "reason": "This is an empirical deployment study of speculative LLM decoding with direct throughput/latency results on a real agent workload.",
+      "source_url": "https://arxiv.org/abs/2604.19767",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T09:32:19+09:00",
+      "last_checked_at": "2026-10-14T09:32:19+09:00",
+      "linked_from": []
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.08558",
+      "identity_tokens": [
+        "arXiv:2604.08558"
+      ],
+      "title": "WAND: Windowed Attention and Knowledge Distillation for Efficient Autoregressive Text-to-Speech Models",
+      "reason": "The primary abstract targets standalone text-to-speech generation, an audio application outside this LLM inference/serving scope.",
+      "source_url": "https://arxiv.org/abs/2604.08558",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T09:32:19+09:00",
+      "last_checked_at": "2026-10-14T09:32:19+09:00",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2603.06642",
+      "identity_tokens": [
+        "arXiv:2603.06642"
+      ],
+      "title": "SR-TTT Does Not Learn Retrieval: A Correction and Mechanistic Post-Mortem of Surprisal-Aware Residual Test-Time Training",
+      "reason": "The paper directly studies an inference-time memory substitute for long-context models and provides a correction about when that technique fails. Its negative result is relevant to inference-memory design; no successful retrieval improvement is claimed.",
+      "source_url": "https://arxiv.org/abs/2603.06642",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T09:32:19+09:00",
+      "last_checked_at": "2026-10-14T09:32:19+09:00",
+      "linked_from": []
+    }
+  ]
+}
