@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-14T14:01:38+00:00",
+  "generated_at": "2026-10-14T14:07:12+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -2652,31 +2652,6 @@
       "worker_run_key": "20261014-1445-scheduled-chat-45/r01"
     },
     {
-      "canonical_id": "DOI:10.18653/v1/2025.findings-naacl.462",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-14T13:51:28+00:00",
-      "return_count": 4,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "長文定型文の再利用を検出: papers/inference/05-speculative-decoding-moe/2025-d38a1bd0beb3-hierarchical-speculative-decoding-with-dynamic-windows-for-efficient-lan.md と 17 段落 / 3939文字 (100.0%) が完全一致"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 4948,
-        "body_paragraphs": 25,
-        "method_chars": 1028,
-        "method_paragraphs": 6,
-        "evaluation_chars": 2201,
-        "limitation_chars": 330,
-        "insufficiency_flags": []
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_1b3173cd257881919b86a350e77eef8a--2025-hsddw-returned-repair-20261013-2130-scheduled-chat-30-r01-v2.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_1b3173cd257881919b86a350e77eef8a--2025-hsddw-returned-repair-20261013-2130-scheduled-chat-30-r01-v2.json",
-      "worker_run_key": "20261013-2130-scheduled-chat-30/r01"
-    },
-    {
       "canonical_id": "arXiv:2603.01236",
       "title": null,
       "source_url": null,
@@ -2702,88 +2677,9 @@
       "worker_run_key": "20261013-2230-scheduled-chat-30/r01"
     },
     {
-      "canonical_id": "DOI:10.18653/v1/2021.naacl-main.463",
+      "canonical_id": "arXiv:2603.00573",
       "title": null,
       "source_url": null,
-      "returned_at": "2026-10-14T13:51:52+00:00",
-      "return_count": 4,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2021-00c8b8f9f90e-tr-bert-dynamic-token-reduction-for-accelerating-bert-inference.md と 21 段落 / 4539文字 (100.0%) が完全一致"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5656,
-        "body_paragraphs": 29,
-        "method_chars": 1949,
-        "method_paragraphs": 10,
-        "evaluation_chars": 1250,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_4fc44f0519e88191b93bf46c11f84fc1--2021-tr-bert-dynamic-token-reduction-returned-repair-20261013-2200-scheduled-chat-00-r01-v2.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_4fc44f0519e88191b93bf46c11f84fc1--2021-tr-bert-dynamic-token-reduction-returned-repair-20261013-2200-scheduled-chat-00-r01-v2.json",
-      "worker_run_key": "20261013-2200-scheduled-chat-00/r01"
-    },
-    {
-      "canonical_id": "arXiv:2404.15159",
-      "title": "MixLoRA: Enhancing Large Language Models Fine-Tuning with LoRA-based Mixture of Experts",
-      "source_url": "https://arxiv.org/pdf/2404.15159",
-      "returned_at": "2026-10-14T13:59:53+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2024-2404.15159-mixlora-enhancing-large-language-models-fine-tuning-with-lora-based-mixt.md と 28 段落 / 6618文字 (100.0%) が完全一致"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 7100,
-        "body_paragraphs": 34,
-        "method_chars": 1909,
-        "method_paragraphs": 10,
-        "evaluation_chars": 2180,
-        "limitation_chars": 903,
-        "insufficiency_flags": []
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_9983ad12ff748191b24fa566d303a80c--2024-2404.15159-mixlora-shared-ffn-experts-research-20261013-2145-scheduled-chat-45-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_9983ad12ff748191b24fa566d303a80c--2024-2404.15159-mixlora-shared-ffn-experts-research-20261013-2145-scheduled-chat-45-r01.json",
-      "worker_run_key": "20261013-2145-scheduled-chat-45/r01"
-    },
-    {
-      "canonical_id": "DOI:10.18653/v1/2025.naacl-long.543",
-      "title": "HIGGS: Pushing the Limits of Large Language Model Quantization via the Linearity Theorem",
-      "source_url": "https://aclanthology.org/2025.naacl-long.543.pdf",
-      "returned_at": "2026-10-14T14:00:33+00:00",
-      "return_count": 4,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2025-2411.17525-higgs-pushing-the-limits-of-large-language-model-quantization-via-the-li.md と 19 段落 / 4271文字 (100.0%) が完全一致"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5847,
-        "body_paragraphs": 31,
-        "method_chars": 1991,
-        "method_paragraphs": 11,
-        "evaluation_chars": 1255,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_ae4970e3a4508191bd816a7d1a094fd3--2025-higgs-linearity-quantization-returned-repair-20261013-2200-scheduled-chat-00-r01-v2.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_ae4970e3a4508191bd816a7d1a094fd3--2025-higgs-linearity-quantization-returned-repair-20261013-2200-scheduled-chat-00-r01-v2.json",
-      "worker_run_key": "20261013-2200-scheduled-chat-00/r01"
-    },
-    {
-      "canonical_id": "arXiv:2603.00573",
-      "title": "CoMoL: Efficient Mixture of LoRA Experts via Dynamic Core Space Merging",
-      "source_url": "https://arxiv.org/abs/2603.00573",
       "returned_at": "2026-10-14T14:00:34+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-30",
@@ -2808,11 +2704,115 @@
       "worker_run_key": "20261013-2100-scheduled-chat-00/r02"
     },
     {
+      "canonical_id": "DOI:10.18653/v1/2025.findings-naacl.462",
+      "title": "Hierarchical Speculative Decoding with Dynamic Windows for Efficient Language Model Inference",
+      "source_url": "https://aclanthology.org/2025.findings-naacl.462.pdf",
+      "returned_at": "2026-10-14T14:07:10+00:00",
+      "return_count": 4,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "長文定型文の再利用を検出: papers/inference/05-speculative-decoding-moe/2025-d38a1bd0beb3-hierarchical-speculative-decoding-with-dynamic-windows-for-efficient-lan.md と 17 段落 / 3939文字 (100.0%) が完全一致"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 4948,
+        "body_paragraphs": 25,
+        "method_chars": 1028,
+        "method_paragraphs": 6,
+        "evaluation_chars": 2201,
+        "limitation_chars": 330,
+        "insufficiency_flags": []
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-372156bbc544--libfile_1b3173cd257881919b86a350e77eef8a--2025-hsddw-returned-repair-20261013-2130-scheduled-chat-30-r01-v2.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-372156bbc544--libfile_1b3173cd257881919b86a350e77eef8a--2025-hsddw-returned-repair-20261013-2130-scheduled-chat-30-r01-v2.json",
+      "worker_run_key": "20261013-2130-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "DOI:10.18653/v1/2025.naacl-long.543",
+      "title": "HIGGS: Pushing the Limits of Large Language Model Quantization via the Linearity Theorem",
+      "source_url": "https://aclanthology.org/2025.naacl-long.543.pdf",
+      "returned_at": "2026-10-14T14:07:10+00:00",
+      "return_count": 4,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2025-2411.17525-higgs-pushing-the-limits-of-large-language-model-quantization-via-the-li.md と 19 段落 / 4271文字 (100.0%) が完全一致"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5847,
+        "body_paragraphs": 31,
+        "method_chars": 1991,
+        "method_paragraphs": 11,
+        "evaluation_chars": 1255,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-156601224fec--libfile_ae4970e3a4508191bd816a7d1a094fd3--2025-higgs-linearity-quantization-returned-repair-20261013-2200-scheduled-chat-00-r01-v2.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-156601224fec--libfile_ae4970e3a4508191bd816a7d1a094fd3--2025-higgs-linearity-quantization-returned-repair-20261013-2200-scheduled-chat-00-r01-v2.json",
+      "worker_run_key": "20261013-2200-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2404.15159",
+      "title": "MixLoRA: Enhancing Large Language Models Fine-Tuning with LoRA-based Mixture of Experts",
+      "source_url": "https://arxiv.org/pdf/2404.15159",
+      "returned_at": "2026-10-14T14:07:11+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2024-2404.15159-mixlora-enhancing-large-language-models-fine-tuning-with-lora-based-mixt.md と 28 段落 / 6618文字 (100.0%) が完全一致"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 7100,
+        "body_paragraphs": 34,
+        "method_chars": 1909,
+        "method_paragraphs": 10,
+        "evaluation_chars": 2180,
+        "limitation_chars": 903,
+        "insufficiency_flags": []
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-479e3400ac02--libfile_9983ad12ff748191b24fa566d303a80c--2024-2404.15159-mixlora-shared-ffn-experts-research-20261013-2145-scheduled-chat-45-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-479e3400ac02--libfile_9983ad12ff748191b24fa566d303a80c--2024-2404.15159-mixlora-shared-ffn-experts-research-20261013-2145-scheduled-chat-45-r01.json",
+      "worker_run_key": "20261013-2145-scheduled-chat-45/r01"
+    },
+    {
+      "canonical_id": "DOI:10.18653/v1/2021.naacl-main.463",
+      "title": "TR-BERT: Dynamic Token Reduction for Accelerating BERT Inference",
+      "source_url": "https://aclanthology.org/2021.naacl-main.463.pdf",
+      "returned_at": "2026-10-14T14:07:12+00:00",
+      "return_count": 4,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2021-00c8b8f9f90e-tr-bert-dynamic-token-reduction-for-accelerating-bert-inference.md と 21 段落 / 4539文字 (100.0%) が完全一致"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5656,
+        "body_paragraphs": 29,
+        "method_chars": 1949,
+        "method_paragraphs": 10,
+        "evaluation_chars": 1250,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-cad67c351106--libfile_4fc44f0519e88191b93bf46c11f84fc1--2021-tr-bert-dynamic-token-reduction-returned-repair-20261013-2200-scheduled-chat-00-r01-v2.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-cad67c351106--libfile_4fc44f0519e88191b93bf46c11f84fc1--2021-tr-bert-dynamic-token-reduction-returned-repair-20261013-2200-scheduled-chat-00-r01-.json",
+      "worker_run_key": "20261013-2200-scheduled-chat-00/r01"
+    },
+    {
       "canonical_id": "arXiv:2605.01910",
       "title": "Stochastic Sparse Attention for Memory-Bound Inference",
       "source_url": "https://arxiv.org/pdf/2605.01910",
-      "returned_at": "2026-10-14T14:00:35+00:00",
-      "return_count": 1,
+      "returned_at": "2026-10-14T14:07:12+00:00",
+      "return_count": 2,
       "assigned_worker": "scheduled-chat-45",
       "reason": "blocked_quality",
       "failures": [
@@ -2830,8 +2830,8 @@
           "評価説明量 0 < 500"
         ]
       },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_dba2ad65366481919f3fd75b6c9daeb9--2026-2605.01910-santa-stochastic-sparse-attention-research-20261014-2200-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_dba2ad65366481919f3fd75b6c9daeb9--2026-2605.01910-santa-stochastic-sparse-attention-research-20261014-2200-scheduled-chat-00-r01.json",
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-5f737f8abe7d--libfile_dba2ad65366481919f3fd75b6c9daeb9--2026-2605.01910-santa-stochastic-sparse-attention-research-20261014-2200-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-5f737f8abe7d--libfile_dba2ad65366481919f3fd75b6c9daeb9--2026-2605.01910-santa-stochastic-sparse-attention-research-20261014-2200-scheduled-chat-0.json",
       "worker_run_key": "20261014-2200-scheduled-chat-00/r01"
     }
   ]

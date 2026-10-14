@@ -35,6 +35,8 @@ worklist_rank: 129
 reference_main_sha: '0c5b81f218e7883b8476efceaad50e6007c34551'
 quality_self_review_passed: true
 quality_self_review_version: 'PAPER-QUALITY-GUIDE-2026-10-07'
+last_audited: null
+audit_version: 0
 ---
 
 # SANTA：長文脈復号のValue参照を確率標本化する疎注意
