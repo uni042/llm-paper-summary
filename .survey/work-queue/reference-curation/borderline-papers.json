@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-13T23:41:30+00:00",
-  "record_count": 4935,
+  "updated_at": "2026-10-14T00:03:39+00:00",
+  "record_count": 4944,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -76230,6 +76230,123 @@
       ],
       "borderline_recheck_count": 0,
       "title": "Understanding the Mixture-of-Experts with Nadaraya-Watson Kernel"
+    },
+    "DOI:10.1109/iciestr60916.2024.10798212": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/iciestr60916.2024.10798212",
+      "identity_tokens": [
+        "DOI:10.1109/iciestr60916.2024.10798212"
+      ],
+      "reason": "IEEE DOI publisher URL returned “not accessible via this tool”; IEEE proceedings table of contents confirmed the title but did not provide a primary abstract.",
+      "first_checked_at": "2026-10-14T00:03:33+00:00",
+      "last_checked_at": "2026-10-14T00:03:33+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "MLBERT: Multi-Level Fully Binarized BERT"
+    },
+    "arXiv:2510.19266": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2510.19266",
+      "identity_tokens": [
+        "arXiv:2510.19266"
+      ],
+      "reason": "The abstract establishes distillation/training-data efficiency; an efficient SSM student is plausible for runtime but the paper abstract reports no inference latency, memory, or throughput.",
+      "first_checked_at": "2026-10-14T00:03:33+00:00",
+      "last_checked_at": "2026-10-14T00:03:33+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Data Efficient Any Transformer-to-Mamba Distillation via Attention Bridge"
+    },
+    "DOI:10.1016/j.eswa.2025.129960": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.eswa.2025.129960",
+      "identity_tokens": [
+        "DOI:10.1016/j.eswa.2025.129960"
+      ],
+      "reason": "Publisher highlights/abstract establish long-context QA, but accessible primary-source text does not substantiate lower inference compute, memory, latency, or serving cost; efficiency relevance remains weak.",
+      "first_checked_at": "2026-10-14T00:03:34+00:00",
+      "last_checked_at": "2026-10-14T00:03:34+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "A collaborative reasoning framework for large language models in long-context Q&A"
+    },
+    "arXiv:2503.22913": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2503.22913",
+      "identity_tokens": [
+        "arXiv:2503.22913"
+      ],
+      "reason": "The work builds on a compute-efficient recurrent architecture, but reports quality gains from retrieval rather than inference cost, memory, latency, or serving improvements; the systems-efficiency connection is indirect.",
+      "first_checked_at": "2026-10-14T00:03:36+00:00",
+      "last_checked_at": "2026-10-14T00:03:36+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Resona: Improving Context Copying in Linear Recurrence Models with Retrieval"
+    },
+    "DOI:10.1109/tnnls.2025.3548047": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/tnnls.2025.3548047",
+      "identity_tokens": [
+        "DOI:10.1109/tnnls.2025.3548047"
+      ],
+      "reason": "IEEE DOI publisher route returned “URL ... is not accessible via this tool”; PubMed confirms the DOI and title but is an index, not primary abstract evidence. No primary abstract retrieved.",
+      "first_checked_at": "2026-10-14T00:03:36+00:00",
+      "last_checked_at": "2026-10-14T00:03:36+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "2-D Transformer: Extending Large Language Models to Long-Context With Few Memory"
+    },
+    "arXiv:2505.07793": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2505.07793",
+      "identity_tokens": [
+        "arXiv:2505.07793"
+      ],
+      "reason": "Inference-time and context relevance are explicit, but the abstract establishes quality improvements rather than reduced runtime, memory, or serving cost.",
+      "first_checked_at": "2026-10-14T00:03:38+00:00",
+      "last_checked_at": "2026-10-14T00:03:38+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Overflow Prevention Enhances Long-Context Recurrent LLMs"
+    },
+    "DOI:10.1109/lca.2025.3567844": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/lca.2025.3567844",
+      "identity_tokens": [
+        "DOI:10.1109/lca.2025.3567844"
+      ],
+      "reason": "IEEE Xplore identified the publisher article/title but returned HTTP 418 “I’m a Teapot”; the DOI URL was also inaccessible. J-GLOBAL exposed only a truncated fragment, not a complete abstract.",
+      "first_checked_at": "2026-10-14T00:03:38+00:00",
+      "last_checked_at": "2026-10-14T00:03:38+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "OASIS: Outlier-Aware KV Cache Clustering for Scaling LLM Inference in CXL Memory Systems"
+    },
+    "DOI:10.1109/lca.2024.3422492": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/lca.2024.3422492",
+      "identity_tokens": [
+        "DOI:10.1109/lca.2024.3422492"
+      ],
+      "reason": "IEEE DOI publisher route was inaccessible. A university research portal confirmed publication metadata and exposed an abstract, but that is not the primary publisher abstract.",
+      "first_checked_at": "2026-10-14T00:03:39+00:00",
+      "last_checked_at": "2026-10-14T00:03:39+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "A Quantitative Analysis of State Space Model-Based Large Language Model: Study of Hungry Hungry Hippos"
+    },
+    "arXiv:2405.16635": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2405.16635",
+      "identity_tokens": [
+        "arXiv:2405.16635"
+      ],
+      "reason": "The official arXiv record explicitly marks UltraGist withdrawn and superseded by arXiv:2401.03462v3, whose distinct title is Long Context Compression with Activation Beacon. The successor abstract supports inference efficiency, but the input identity is the withdrawn UltraGist record; retain as borderline pending identity-level confirmation rather than accept the successor as this paper.",
+      "first_checked_at": "2026-10-14T00:03:39+00:00",
+      "last_checked_at": "2026-10-14T00:03:39+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Compressing Lengthy Context With UltraGist"
     }
   }
 }

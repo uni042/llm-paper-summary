@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-363d27e976da591e-border-005",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2510.19266",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2510.19266",
+    "identity_tokens": [
+      "arXiv:2510.19266"
+    ],
+    "reason": "The abstract establishes distillation/training-data efficiency; an efficient SSM student is plausible for runtime but the paper abstract reports no inference latency, memory, or throughput.",
+    "first_checked_at": "2026-10-14T00:03:33+00:00",
+    "last_checked_at": "2026-10-14T00:03:33+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Data Efficient Any Transformer-to-Mamba Distillation via Attention Bridge"
+  },
+  "processed_at": "2026-10-14T00:03:33+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-363d27e976da",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
