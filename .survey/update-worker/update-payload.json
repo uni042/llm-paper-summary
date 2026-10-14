@@ -1,52 +1,30 @@
 {
   "schema_version": 1,
-  "attempt_id": "library-import-20261013-0830-20261013T110045698Z",
+  "attempt_id": "library-import-20261014-0830-chatgpt-20261014055332",
   "kind": "framework_llm_update",
   "artifacts": [
     {
       "path": "framework-updates/inference-engines/llama-cpp/README.md",
-      "expected_blob_sha": "d42801489f6127d476579c26a545e09dea53ede3",
+      "expected_blob_sha": "cbbebc7b111d134a660e981064d7036a1d7af78f",
       "edits": [
         {
           "op": "insert_after_once",
           "anchor": "## 主要更新\n\n",
-          "text": "### 2026-10-13 — llama.cpp b11569〜b11577：MoE・CUDA注意・判定モデル対応\n- **b11569（10/12公開）**: Metal版の専門家混合（MoE）行列積 `MUL_MAT_ID` で同一専門家IDが重複する場合の出力不整合を修正し、不要な起動タイルを削減。限定ベンチマークでは入力処理が約0.5〜2%向上、逐次生成はほぼ不変。**Metal限定でありWindows CUDAの高速化とは別**。[公式版](https://github.com/ggml-org/llama.cpp/releases/tag/b11569)\n- **b11572／b11577**: vLLM D3系の判定モデル対応を追加し、後続版で複数系列の問題を修正。一般の会話モデル全体の速度改善ではない。[b11572](https://github.com/ggml-org/llama.cpp/releases/tag/b11572)／[b11577](https://github.com/ggml-org/llama.cpp/releases/tag/b11577)\n- **b11576（10/13公開）**: head size 512のキャッシュなし注意機構でCUDA `FLASH_ATTN_EXT` がCPUへフォールバックすることがある不具合を、鍵・値とマスクのパディングにより修正。対象形状でのみGPU経路回復を見込める。Windows向けCUDA配布物もあるが、一般モデルの一律高速化倍率は未報告。[公式版](https://github.com/ggml-org/llama.cpp/releases/tag/b11576)\n- **b11574**: Snapdragon Hexagon NPU向けコピー・連結等を最適化し、メモリ同期の問題も修正。**NVIDIA CUDAには直接適用されない**。[公式版](https://github.com/ggml-org/llama.cpp/releases/tag/b11574)\n\n"
+          "text": "### 2026-10-14 — llama.cpp b11588〜b11602：画像MTP・Vulkanホストメモリ・埋め込み・アリーナ修正\n- **b11588**: Qwen3.8-Flash-Nextで画像埋め込みと複数トークン予測（MTP）を組み合わせる経路に対応。視覚入力と投機的生成の互換性改善。[公式版](https://github.com/ggml-org/llama.cpp/releases/tag/b11588)／[PR #30397](https://github.com/ggml-org/llama.cpp/pull/30397)。\n- **b11594**: Vulkanで複数デバイスからGPU可視ホストメモリへのアクセスを改善。Windowsを含むVulkan経路の変更であり、**CUDA固有の改善ではない**。[公式版](https://github.com/ggml-org/llama.cpp/releases/tag/b11594)／[PR #29741](https://github.com/ggml-org/llama.cpp/pull/29741)。\n- **b11597**: プーリング埋め込みで語彙logits算出に必要な不要の言語モデル出力ヘッド（LM head）計算とホストバッファを省略。**一般の生成復号の一律高速化とは異なる**。[公式版](https://github.com/ggml-org/llama.cpp/releases/tag/b11597)／[PR #30445](https://github.com/ggml-org/llama.cpp/pull/30445)。\n- **b11602**: メモリアリーナ再確保後のサブグラフ再生成で整合性を修正。定量的な性能改善は未報告。[公式版](https://github.com/ggml-org/llama.cpp/releases/tag/b11602)／[PR #30453](https://github.com/ggml-org/llama.cpp/pull/30453)。\n\n"
         }
       ]
     },
     {
       "path": "framework-updates/inference-engines/ollama/README.md",
-      "expected_blob_sha": "7c8785f733bffa304a0722f151be70cc30fcbf00",
+      "expected_blob_sha": "3dcaa202d942a4e2319aa0a7e180cb4e54c02852",
       "edits": [
         {
           "op": "insert_after_once",
           "anchor": "## 主要更新\n\n",
-          "text": "### 2026-10-13 — Ollama v0.40.4-rc0（公開候補版）\n- 内蔵llama.cppをb11521へ更新し、判定モデルとEmbeddingGemma 2の対応を追加。モデル情報・読み込み済みモデルの再利用、Apple SiliconのMLXで投機的復号の巻き戻し後の再帰状態を圧縮する処理、Codex上のローカルモデル表示なども含む。\n- **安定版ではない**。内蔵b11521はllama.cpp単独版b11577とは異なる。MLX更新による性能をWindows CUDAへ外挿しない。全モデル共通の実測速度倍率は未報告。[公式候補版](https://github.com/ollama/ollama/releases/tag/v0.40.4-rc0)\n\n"
-        }
-      ]
-    },
-    {
-      "path": "framework-updates/inference-engines/vllm/README.md",
-      "expected_blob_sha": "a40eb62aff0d8ce767b7a279d104cd2b0bf2a9b2",
-      "edits": [
-        {
-          "op": "insert_after_once",
-          "anchor": "## 主要更新\n\n",
-          "text": "### 2026-10-12 — ReplaySSM：状態空間モデルの再帰状態保持最適化（研究・統合進展）\n- 状態空間モデル（SSM）の再帰状態を定期的な状態保存と直近入力のバッファへ分け、毎トークンの巨大状態書き戻しを減らす。投機的復号で候補を棄却するときは入力バッファの位置を巻き戻す。再帰的な量子化誤差を防ぐ高精度状態と低精度読み出し複製も提案。\n- B300/H100等の**限定条件**ではバッチ256のカーネル1.46〜1.80倍、復号ステップ全体1.20〜1.47倍、バッチ512の120B級で投機的復号処理量が既存vLLM比1.85〜2.10倍。**バッチ1では改善なし**。\n- 上流vLLMへの統合はMamba2の標準復号経路が中心。GDN・投機的復号の一部は未統合の公開プルリクエストや研究用分岐にあり、全機能が標準安定版ですぐ利用できるわけではない。[NVIDIA解説](https://developer.nvidia.com/blog/replayssm-rethinking-state-storage-for-faster-hybrid-model-decoding/)／[論文](https://arxiv.org/abs/2610.13778)／[実装](https://github.com/Johnny-Liou/ReplaySSM)\n\n"
-        }
-      ]
-    },
-    {
-      "path": "framework-updates/inference-engines/tensorrt-llm/README.md",
-      "expected_blob_sha": "eec1cb2067e80e42913b4ce451bfc1f54ccee654",
-      "edits": [
-        {
-          "op": "insert_after_once",
-          "anchor": "## 主要更新\n\n",
-          "text": "### 2026-10-12 — ReplaySSMの再帰状態最適化（研究・統合状況）\n- SSMの状態更新を定期保存・入力バッファ再生で代替し、投機的復号の巻き戻しと低精度状態読み出しを高速化する研究。NVIDIAの技術記事でTensorRT-LLMを含む関連基盤への適用を紹介。\n- B300/H100等で大規模バッチの復号ステップが最大1.47倍、対象120B級の投機的復号が1.85〜2.10倍という**研究評価**であり、**バッチ1では改善なし**。標準安定版のTensorRT-LLM全モデル・全経路で同倍率が利用可能という意味ではない。[NVIDIA解説](https://developer.nvidia.com/blog/replayssm-rethinking-state-storage-for-faster-hybrid-model-decoding/)／[原著](https://arxiv.org/abs/2610.13778)／[実装](https://github.com/Johnny-Liou/ReplaySSM)\n\n"
+          "text": "### 2026-10-14 — Ollama v0.40.4-rc2（公開候補版）\n- 内蔵llama.cppのb11521への更新、判定モデル（decision model）およびEmbeddingGemma 2の対応、検証済みmanifestと読み込みモデルの再利用、Apple MLXでの投機的復号巻戻し後の再帰状態整理などを含む。\n- **公開候補版であり安定版ではない**。リリースの作成日時と公開日時に不整合があるため日付は要確認。Apple MLXの改良をWindows CUDAの性能向上とみなさず、速度倍率の実測は未確認。[公式候補版](https://github.com/ollama/ollama/releases/tag/v0.40.4-rc2)。\n\n"
         }
       ]
     }
   ],
-  "summary": "2026-10-13 08:30 JST Library updates: llama.cpp b11569-11577, Ollama v0.40.4-rc0, ReplaySSM integration status"
+  "summary": "2026-10-14 08:30 JST Library update: llama.cpp b11588/b11594/b11597/b11602 and Ollama v0.40.4-rc2; only officially identified changes; no confirmed new model release"
 }
