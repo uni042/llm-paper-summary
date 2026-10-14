@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-14T01:49:03+00:00",
-  "record_count": 11954,
+  "updated_at": "2026-10-14T01:51:32+00:00",
+  "record_count": 11956,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -171941,6 +171941,30 @@
       "last_checked_at": "2026-10-14T01:49:03+00:00",
       "linked_from": [],
       "title": "Harnessing the Unseen: The Hidden Influence of Intrinsic Knowledge in Long-Context Language Models"
+    },
+    "arXiv:2510.18716": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2510.18716",
+      "identity_tokens": [
+        "arXiv:2510.18716"
+      ],
+      "reason": "対象はautoregressive画像生成のvisual token cacheで、視覚品質を保ちながら画像生成memory/throughputを改善する。要旨にLLM推論・servingへの具体的適用は示されない。",
+      "first_checked_at": "2026-10-14T01:51:31+00:00",
+      "last_checked_at": "2026-10-14T01:51:31+00:00",
+      "linked_from": [],
+      "title": "SSD: Spatial-Semantic Head Decoupling for Efficient Autoregressive Image Generation"
+    },
+    "arXiv:2506.20686": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2506.20686",
+      "identity_tokens": [
+        "arXiv:2506.20686"
+      ],
+      "reason": "MegaFoldはAlphaFold3型の3D attentionを使う蛋白質モデルの学習GPU utilizationを改善するが、要旨自身がLLM trainingと異なるworkloadとして区別し、LLMシステム効率への直接接続を示さない。",
+      "first_checked_at": "2026-10-14T01:51:32+00:00",
+      "last_checked_at": "2026-10-14T01:51:32+00:00",
+      "linked_from": [],
+      "title": "MegaFold: Efficient Training of Next-Generation 3D Attention Protein Models on Cross-Platform GPUs"
     }
   }
 }

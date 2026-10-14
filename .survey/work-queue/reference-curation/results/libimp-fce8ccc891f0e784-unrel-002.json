@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-fce8ccc891f0e784-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2506.20686",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2506.20686",
+    "identity_tokens": [
+      "arXiv:2506.20686"
+    ],
+    "reason": "MegaFoldはAlphaFold3型の3D attentionを使う蛋白質モデルの学習GPU utilizationを改善するが、要旨自身がLLM trainingと異なるworkloadとして区別し、LLMシステム効率への直接接続を示さない。",
+    "first_checked_at": "2026-10-14T01:51:32+00:00",
+    "last_checked_at": "2026-10-14T01:51:32+00:00",
+    "linked_from": [],
+    "title": "MegaFold: Efficient Training of Next-Generation 3D Attention Protein Models on Cross-Platform GPUs"
+  },
+  "processed_at": "2026-10-14T01:51:32+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-fce8ccc891f0",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
