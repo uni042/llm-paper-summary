@@ -1,0 +1,24 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261014-1200-scheduled-chat-00/r01/research-relevance-rank69",
+  "reference_main_sha": "2a7fb1f6f9298679f24e9c4c9c784e8b4683f476",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2511.00413",
+      "identity_tokens": ["id:arXiv:2511.00413", "url:https://arxiv.org/abs/2511.00413"],
+      "title": "Tree Training: Accelerating Agentic LLMs Training via Shared Prefix Reuse",
+      "reason": "一次要旨で確認した中心課題は、エージェントの分岐した学習軌跡を独立系列として処理する際に、共通接頭辞の順伝播・逆伝播が重複する問題である。木構造の直列化、共有接頭辞の計算再利用、勾配整合およびメモリ制約下の木分割を用い、教師あり微調整と強化学習の学習時間を短縮する。推論サービングや推論時KVキャッシュの最適化、推論カーネル・実行時スケジューリングへの直接適用は要旨に示されていない。現行サーベイでは学習単独の高速化は凍結範囲なので、Research原稿の作成対象から除外する。",
+      "source_url": "https://arxiv.org/abs/2511.00413",
+      "body_check": "abstract_screen_only; body_not_read; arXiv abstract checked; latest abstract describes forward/backward shared-prefix reuse for SFT/RL training, not runtime inference",
+      "first_checked_at": "2026-10-14T12:08:00+09:00",
+      "last_checked_at": "2026-10-14T12:08:00+09:00",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance",
+      "worklist_rank": 69
+    }
+  ]
+}
