@@ -1,0 +1,487 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-fce8ccc891f0e784-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-fce8ccc891f0",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "DOI:10.1109/access.2026.3680126",
+    "SemanticScholar:4f3a8bd3272ef6d0c18342038f811b00c7bae325",
+    "arXiv:2501.18596",
+    "arXiv:2503.01564",
+    "arXiv:2508.06084"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 5,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "15d75c2a1844845c72dbed54ca8f6cad3b9d5b82",
+  "raw_search_result_count": 5,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 5,
+  "provider_progress": {
+    "requested_count": 5,
+    "status_counts": {
+      "allowed": 5,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-14T01:53:41.891094+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "DOI:10.1109/access.2026.3680126",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "SemanticScholar:4f3a8bd3272ef6d0c18342038f811b00c7bae325",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2501.18596",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2503.01564",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2508.06084",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "DeltaLLM: Compress LLMs with Low-Rank Deltas between Shared Weights",
+      "source_url": "https://arxiv.org/abs/2501.18596",
+      "year": 2025,
+      "published": "2025-01-30",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "We introduce DeltaLLM, a new post-training compression technique to reduce the memory footprint of LLMs. We propose an alternative way of structuring LLMs with weight sharing between layers in subsequent Transformer blocks, along with additional low-rank difference matrices between them. For training, we adopt the progressing module replacement method and show that the lightweight training of the low-rank modules with approximately 30M-40M tokens is sufficient to achieve performance on par with LLMs of comparable sizes trained from scratch. We release the resultant models, DeltaLLAMA and DeltaPHI, with a 12% parameter reduction, retaining 90% of the performance of the base Llama and Phi models on common knowledge and reasoning benchmarks. Our method also outperforms compression techniques JointDrop, LaCo, ShortGPT and SliceGPT with the same number of parameters removed. For example, DeltaPhi 2.9B with a 24% reduction achieves similar average zero-shot accuracies as recovery fine-tuned SlicedPhi 3.3B with a 12% reduction, despite being approximately 400M parameters smaller with no fine-tuning applied. This work provides new insights into LLM architecture design and compression methods when storage space is critical.",
+      "identifiers": [
+        "SemanticScholar:0632c7b510d4ea15200f41d80575961a9f386ad7"
+      ],
+      "semantic_scholar_id": "0632c7b510d4ea15200f41d80575961a9f386ad7",
+      "canonical_id": "arXiv:2501.18596",
+      "arxiv_id": "2501.18596",
+      "doi": "10.48550/arXiv.2501.18596",
+      "authors": [
+        "Liana Mikaelyan",
+        "Ayyoob Imani",
+        "Mathew Salvaris",
+        "Parth Pathak",
+        "Mohsen Fayyaz"
+      ],
+      "priority": 2,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 2,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 622,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "QubitCache: Quantum-Inspired Probabilistic Attention Preservation for KV-Cache Compression",
+      "source_url": "https://doi.org/10.1109/ACCESS.2026.3680126",
+      "year": 2026,
+      "published": null,
+      "venue": "IEEE Access",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language model inference faces a critical memory bottleneck from KV cache, which grows linearly with sequence length and dominates GPU memory during long-context generation. Existing compression methods reduce memory through token eviction but irreversibly discard attention relationships essential for complex reasoning. We present QubitCache, a framework that reframes KV cache compression as attention distribution compression rather than token selection. Our approach employs a quantum-inspired mathematical formalism (using the hierarchical amplitude encoding structure from quantum computing as a classical probability distribution compressor, without requiring quantum hardware) to represent attention weight distributions in logarithmic parameter space. QubitCache introduces a hybrid architecture: critical tokens (15% of sequence) remain in full-precision classical storage, while attention distributions over remaining tokens are compressed using hierarchical amplitude encoding, achieving a <inline-formula> <tex-math notation=\"LaTeX\">$57\\times $ </tex-math></inline-formula> parameter reduction per segment. We provide formal analysis showing that the pipeline output error is bounded by the fraction of attention mass assigned to compressed tokens, which is small (<inline-formula> <tex-math notation=\"LaTeX\">$\\leq 15$ </tex-math></inline-formula>%) due to inherent attention sparsity (Theorem 1). An important property of our design is that the compressed distribution is fixed after prefill and is therefore query-agnostic during decoding; we analyze the implications of this trade-off and provide empirical evidence that the resulting <inline-formula> <tex-math notation=\"LaTeX\">$\\lambda _{\\text {mass}}$ </tex-math></inline-formula> stability is sufficient for the tasks evaluated. During inference, compressed distributions are reconstructed to provide soft attention weights, maintaining contextual influence of compressed tokens through probabilistic rather than binary decisions. We evaluate QubitCache on four long-context models across sixteen LongBench tasks and the RULER benchmark, comparing against both classical baselines (H2O, SnapKV) and recent methods (MiniKV, Compactor). QubitCache achieves approximately <inline-formula> <tex-math notation=\"LaTeX\">$6.7\\times $ </tex-math></inline-formula> memory reduction while retaining 91–99% of full-KV performance, with an average of 74.8 on RULER, which is 10.5 points above token-eviction baselines. Latency analysis confirms that per-token decode overhead remains within <inline-formula> <tex-math notation=\"LaTeX\">$2\\times $ </tex-math></inline-formula> of eviction-based methods. Comprehensive analysis including sensitivity, quantization integration, and failure cases characterizes when this approach succeeds and where it has limitations.",
+      "identifiers": [
+        "SemanticScholar:d31fb4a85df72da4a5bcb71e969a9db7b8f3bd9c"
+      ],
+      "semantic_scholar_id": "d31fb4a85df72da4a5bcb71e969a9db7b8f3bd9c",
+      "doi": "10.1109/ACCESS.2026.3680126",
+      "canonical_id": "DOI:10.1109/ACCESS.2026.3680126",
+      "authors": [
+        "Jieui Kang",
+        "Jaeyoung Choi",
+        "Wonhui Noh",
+        "Jaehyeong Sim"
+      ],
+      "priority": 1,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 1,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 105,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "SPECS : F ASTER T EST -T IME S CALING THROUGH S PECULATIVE D RAFTS AND D YNAMIC S WITCHING",
+      "source_url": "https://www.semanticscholar.org/paper/4f3a8bd3272ef6d0c18342038f811b00c7bae325",
+      "year": null,
+      "published": null,
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": null,
+      "identifiers": [
+        "SemanticScholar:4f3a8bd3272ef6d0c18342038f811b00c7bae325"
+      ],
+      "semantic_scholar_id": "4f3a8bd3272ef6d0c18342038f811b00c7bae325",
+      "canonical_id": "SemanticScholar:4f3a8bd3272ef6d0c18342038f811b00c7bae325",
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": null,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Attention Condensation via Sparsity Induced Regularized Training",
+      "source_url": "https://arxiv.org/abs/2503.01564",
+      "year": 2025,
+      "published": "2025-03-03",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "As the context window expands, self-attention increasingly dominates the transformer's inference time. Therefore, accelerating attention computation while minimizing performance degradation is essential for the efficient deployment of Large Language Models (LLMs). In this study we extend a theoretical framework of attention sparsity in LLMs. A customized loss function is designed to enforce the sparsity by restricting the number of top elements in the attention matrix. We perform an initial set of evaluations with GPT-2 to show the effectiveness of our sparsification approach. The attention matrices of the models trained with the proposed loss are both sparse and effective in capturing relevant input dependencies. We now continue working to demonstrate the value of our approach on larger models and different architectures.",
+      "identifiers": [
+        "SemanticScholar:fcf78321ba2ff521010536653309aaec772e2d6c"
+      ],
+      "semantic_scholar_id": "fcf78321ba2ff521010536653309aaec772e2d6c",
+      "canonical_id": "arXiv:2503.01564",
+      "arxiv_id": "2503.01564",
+      "doi": "10.48550/arXiv.2503.01564",
+      "authors": [
+        "Eli Sason",
+        "D. Frolova",
+        "B. Nazarov",
+        "Felix Goldberd"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 590,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "AdaptInfer: Adaptive Token Pruning for Vision-Language Model Inference via Dynamical Text Guidance",
+      "source_url": "https://arxiv.org/abs/2508.06084",
+      "year": 2025,
+      "published": "2025-08-08",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Vision-language models (VLMs) have achieved impressive performance on multimodal inference tasks, but the cost remains a significant challenge due to the large number of vision tokens processed during the prefill stage. Existing token pruning methods often rely on utilizing the static attention patterns directly, failing to exploit the dynamic internal signals within VLMs. To address the issue, we propose AdaptInfer, a novel plug-and-play framework for vision token pruning. First, we introduce a dynamic text-guided pruning mechanism that construct soft priors over text-token importance on each pruning layer, allowing more informed scoring of vision tokens at each stage. Second, we observe a highly consistent distribution of cross-modal attention shifts by architecture, which inspires us to introduce a efficient data-driven schedule which determines the pruning locations automatically. Experimental results have verified the effectiveness and generalization of the proposed method. Under the same token budget, AdaptInfer surpasses existing approaches in accuracy. For instance, AdaptInfer maintains averagely 99.4% accuracy on Qwen2-VL while 70% of the prefilling vision token overhead is reduced. The source code is available on: https://github.com/weiczh02/AdaptInfer-base.",
+      "identifiers": [
+        "SemanticScholar:428adc80cf9ab28b050a0f058791988456da948b"
+      ],
+      "semantic_scholar_id": "428adc80cf9ab28b050a0f058791988456da948b",
+      "canonical_id": "arXiv:2508.06084",
+      "arxiv_id": "2508.06084",
+      "authors": [
+        "Wei-Chen Zhang",
+        "Zhui Zhu",
+        "Ning-Bo Li",
+        "Shi-Long Tao",
+        "Hong-Zi Zhu",
+        "Jin-Gao Xu",
+        "Ke-Bin Liu",
+        "Yun-Hao Liu"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 432,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2501.18596",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2501.18596",
+        "id:SemanticScholar:0632c7b510d4ea15200f41d80575961a9f386ad7",
+        "id:arXiv:2501.18596",
+        "title:deltallm compress llms with lowrank deltas between shared weights",
+        "url:https://arxiv.org/abs/2501.18596"
+      ],
+      "record": {
+        "title": "DeltaLLM: Compress LLMs with Low-Rank Deltas between Shared Weights",
+        "source_url": "https://arxiv.org/abs/2501.18596",
+        "year": 2025,
+        "published": "2025-01-30",
+        "venue": "arXiv.org",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "We introduce DeltaLLM, a new post-training compression technique to reduce the memory footprint of LLMs. We propose an alternative way of structuring LLMs with weight sharing between layers in subsequent Transformer blocks, along with additional low-rank difference matrices between them. For training, we adopt the progressing module replacement method and show that the lightweight training of the low-rank modules with approximately 30M-40M tokens is sufficient to achieve performance on par with LLMs of comparable sizes trained from scratch. We release the resultant models, DeltaLLAMA and DeltaPHI, with a 12% parameter reduction, retaining 90% of the performance of the base Llama and Phi models on common knowledge and reasoning benchmarks. Our method also outperforms compression techniques JointDrop, LaCo, ShortGPT and SliceGPT with the same number of parameters removed. For example, DeltaPhi 2.9B with a 24% reduction achieves similar average zero-shot accuracies as recovery fine-tuned SlicedPhi 3.3B with a 12% reduction, despite being approximately 400M parameters smaller with no fine-tuning applied. This work provides new insights into LLM architecture design and compression methods when storage space is critical.",
+        "identifiers": [
+          "SemanticScholar:0632c7b510d4ea15200f41d80575961a9f386ad7"
+        ],
+        "semantic_scholar_id": "0632c7b510d4ea15200f41d80575961a9f386ad7",
+        "canonical_id": "arXiv:2501.18596",
+        "arxiv_id": "2501.18596",
+        "doi": "10.48550/arXiv.2501.18596",
+        "authors": [
+          "Liana Mikaelyan",
+          "Ayyoob Imani",
+          "Mathew Salvaris",
+          "Parth Pathak",
+          "Mohsen Fayyaz"
+        ],
+        "priority": 2,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 2,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 622,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/access.2026.3680126",
+      "identity_tokens": [
+        "id:DOI:10.1109/access.2026.3680126",
+        "id:SemanticScholar:d31fb4a85df72da4a5bcb71e969a9db7b8f3bd9c",
+        "title:qubitcache quantuminspired probabilistic attention preservation for kvcache compression",
+        "url:https://doi.org/10.1109/ACCESS.2026.3680126"
+      ],
+      "record": {
+        "title": "QubitCache: Quantum-Inspired Probabilistic Attention Preservation for KV-Cache Compression",
+        "source_url": "https://doi.org/10.1109/ACCESS.2026.3680126",
+        "year": 2026,
+        "published": null,
+        "venue": "IEEE Access",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large language model inference faces a critical memory bottleneck from KV cache, which grows linearly with sequence length and dominates GPU memory during long-context generation. Existing compression methods reduce memory through token eviction but irreversibly discard attention relationships essential for complex reasoning. We present QubitCache, a framework that reframes KV cache compression as attention distribution compression rather than token selection. Our approach employs a quantum-inspired mathematical formalism (using the hierarchical amplitude encoding structure from quantum computing as a classical probability distribution compressor, without requiring quantum hardware) to represent attention weight distributions in logarithmic parameter space. QubitCache introduces a hybrid architecture: critical tokens (15% of sequence) remain in full-precision classical storage, while attention distributions over remaining tokens are compressed using hierarchical amplitude encoding, achieving a <inline-formula> <tex-math notation=\"LaTeX\">$57\\times $ </tex-math></inline-formula> parameter reduction per segment. We provide formal analysis showing that the pipeline output error is bounded by the fraction of attention mass assigned to compressed tokens, which is small (<inline-formula> <tex-math notation=\"LaTeX\">$\\leq 15$ </tex-math></inline-formula>%) due to inherent attention sparsity (Theorem 1). An important property of our design is that the compressed distribution is fixed after prefill and is therefore query-agnostic during decoding; we analyze the implications of this trade-off and provide empirical evidence that the resulting <inline-formula> <tex-math notation=\"LaTeX\">$\\lambda _{\\text {mass}}$ </tex-math></inline-formula> stability is sufficient for the tasks evaluated. During inference, compressed distributions are reconstructed to provide soft attention weights, maintaining contextual influence of compressed tokens through probabilistic rather than binary decisions. We evaluate QubitCache on four long-context models across sixteen LongBench tasks and the RULER benchmark, comparing against both classical baselines (H2O, SnapKV) and recent methods (MiniKV, Compactor). QubitCache achieves approximately <inline-formula> <tex-math notation=\"LaTeX\">$6.7\\times $ </tex-math></inline-formula> memory reduction while retaining 91–99% of full-KV performance, with an average of 74.8 on RULER, which is 10.5 points above token-eviction baselines. Latency analysis confirms that per-token decode overhead remains within <inline-formula> <tex-math notation=\"LaTeX\">$2\\times $ </tex-math></inline-formula> of eviction-based methods. Comprehensive analysis including sensitivity, quantization integration, and failure cases characterizes when this approach succeeds and where it has limitations.",
+        "identifiers": [
+          "SemanticScholar:d31fb4a85df72da4a5bcb71e969a9db7b8f3bd9c"
+        ],
+        "semantic_scholar_id": "d31fb4a85df72da4a5bcb71e969a9db7b8f3bd9c",
+        "doi": "10.1109/ACCESS.2026.3680126",
+        "canonical_id": "DOI:10.1109/ACCESS.2026.3680126",
+        "authors": [
+          "Jieui Kang",
+          "Jaeyoung Choi",
+          "Wonhui Noh",
+          "Jaehyeong Sim"
+        ],
+        "priority": 1,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 1,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 105,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:SemanticScholar:4f3a8bd3272ef6d0c18342038f811b00c7bae325",
+      "identity_tokens": [
+        "id:SemanticScholar:4f3a8bd3272ef6d0c18342038f811b00c7bae325",
+        "title:specs f aster t est t ime s caling through s peculative d rafts and d ynamic s witching",
+        "url:https://www.semanticscholar.org/paper/4f3a8bd3272ef6d0c18342038f811b00c7bae325"
+      ],
+      "record": {
+        "title": "SPECS : F ASTER T EST -T IME S CALING THROUGH S PECULATIVE D RAFTS AND D YNAMIC S WITCHING",
+        "source_url": "https://www.semanticscholar.org/paper/4f3a8bd3272ef6d0c18342038f811b00c7bae325",
+        "year": null,
+        "published": null,
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": null,
+        "identifiers": [
+          "SemanticScholar:4f3a8bd3272ef6d0c18342038f811b00c7bae325"
+        ],
+        "semantic_scholar_id": "4f3a8bd3272ef6d0c18342038f811b00c7bae325",
+        "canonical_id": "SemanticScholar:4f3a8bd3272ef6d0c18342038f811b00c7bae325",
+        "priority": 0,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 0,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": null,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2503.01564",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2503.01564",
+        "id:SemanticScholar:fcf78321ba2ff521010536653309aaec772e2d6c",
+        "id:arXiv:2503.01564",
+        "title:attention condensation via sparsity induced regularized training",
+        "url:https://arxiv.org/abs/2503.01564"
+      ],
+      "record": {
+        "title": "Attention Condensation via Sparsity Induced Regularized Training",
+        "source_url": "https://arxiv.org/abs/2503.01564",
+        "year": 2025,
+        "published": "2025-03-03",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "As the context window expands, self-attention increasingly dominates the transformer's inference time. Therefore, accelerating attention computation while minimizing performance degradation is essential for the efficient deployment of Large Language Models (LLMs). In this study we extend a theoretical framework of attention sparsity in LLMs. A customized loss function is designed to enforce the sparsity by restricting the number of top elements in the attention matrix. We perform an initial set of evaluations with GPT-2 to show the effectiveness of our sparsification approach. The attention matrices of the models trained with the proposed loss are both sparse and effective in capturing relevant input dependencies. We now continue working to demonstrate the value of our approach on larger models and different architectures.",
+        "identifiers": [
+          "SemanticScholar:fcf78321ba2ff521010536653309aaec772e2d6c"
+        ],
+        "semantic_scholar_id": "fcf78321ba2ff521010536653309aaec772e2d6c",
+        "canonical_id": "arXiv:2503.01564",
+        "arxiv_id": "2503.01564",
+        "doi": "10.48550/arXiv.2503.01564",
+        "authors": [
+          "Eli Sason",
+          "D. Frolova",
+          "B. Nazarov",
+          "Felix Goldberd"
+        ],
+        "priority": 0,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 0,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 590,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2508.06084",
+      "identity_tokens": [
+        "id:SemanticScholar:428adc80cf9ab28b050a0f058791988456da948b",
+        "id:arXiv:2508.06084",
+        "title:adaptinfer adaptive token pruning for visionlanguage model inference via dynamical text guidance",
+        "url:https://arxiv.org/abs/2508.06084"
+      ],
+      "record": {
+        "title": "AdaptInfer: Adaptive Token Pruning for Vision-Language Model Inference via Dynamical Text Guidance",
+        "source_url": "https://arxiv.org/abs/2508.06084",
+        "year": 2025,
+        "published": "2025-08-08",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Vision-language models (VLMs) have achieved impressive performance on multimodal inference tasks, but the cost remains a significant challenge due to the large number of vision tokens processed during the prefill stage. Existing token pruning methods often rely on utilizing the static attention patterns directly, failing to exploit the dynamic internal signals within VLMs. To address the issue, we propose AdaptInfer, a novel plug-and-play framework for vision token pruning. First, we introduce a dynamic text-guided pruning mechanism that construct soft priors over text-token importance on each pruning layer, allowing more informed scoring of vision tokens at each stage. Second, we observe a highly consistent distribution of cross-modal attention shifts by architecture, which inspires us to introduce a efficient data-driven schedule which determines the pruning locations automatically. Experimental results have verified the effectiveness and generalization of the proposed method. Under the same token budget, AdaptInfer surpasses existing approaches in accuracy. For instance, AdaptInfer maintains averagely 99.4% accuracy on Qwen2-VL while 70% of the prefilling vision token overhead is reduced. The source code is available on: https://github.com/weiczh02/AdaptInfer-base.",
+        "identifiers": [
+          "SemanticScholar:428adc80cf9ab28b050a0f058791988456da948b"
+        ],
+        "semantic_scholar_id": "428adc80cf9ab28b050a0f058791988456da948b",
+        "canonical_id": "arXiv:2508.06084",
+        "arxiv_id": "2508.06084",
+        "authors": [
+          "Wei-Chen Zhang",
+          "Zhui Zhu",
+          "Ning-Bo Li",
+          "Shi-Long Tao",
+          "Hong-Zi Zhu",
+          "Jin-Gao Xu",
+          "Ke-Bin Liu",
+          "Yun-Hao Liu"
+        ],
+        "priority": 0,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 0,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 432,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:2572637f5c688c344640dae9522cf07015214f7c534841e344a6543402432f25",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}
