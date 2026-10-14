@@ -2,7 +2,7 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-14T10:06:57+00:00",
+  "updated_at": "2026-10-14T10:25:14+00:00",
   "record_count": 12193,
   "records": {
     "arXiv:2303.08774": {
@@ -160257,10 +160257,27 @@
       "identity_tokens": [
         "arXiv:2303.04555"
       ],
-      "reason": "The title identifies a small-space streaming Kernel PCA dimensionality-reduction algorithm and gives no concrete connection to LLM inference, Transformer serving, compression, or deployment efficiency. This is a permitted title-only exclusion for an unambiguously unrelated candidate.",
+      "reason": "The primary abstract is exclusively a low-space streaming Kernel PCA algorithm; it does not concern LLM inference, serving, or model inference efficiency.",
       "first_checked_at": "2026-10-09T04:22:59+00:00",
-      "last_checked_at": "2026-10-09T04:22:59+00:00",
-      "linked_from": [],
+      "last_checked_at": "2026-10-14T10:25:14+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2401.18079-kvquant.md",
+        "papers/inference/09-kernel-runtime-compilation/2022-2206.09557-lut-gemm-quantized-matrix-multiplication-based-on-luts-for-efficient-inf.md",
+        "papers/inference/09-kernel-runtime-compilation/2023-2310.06927-sparse-fine-tuning-for-inference-acceleration-of-large-language-models.md",
+        "papers/inference/10-kv-cache-offload-recomputation/2025-2502.12574-headinfer-head-wise-kv-offloading.md",
+        "papers/inference/16-weight-quantization-compression/2024-2401.15024-slicegpt-compress-large-language-models-by-deleting-rows-and-columns.md",
+        "papers/inference/99-other-inference-systems/2018-1811.03115-blockwise-parallel-decoding-for-deep-autoregressive-models.md",
+        "papers/inference/99-other-inference-systems/2019-1905.10650-are-sixteen-heads-really-better-than-one.md",
+        "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2023-2301.00774-sparsegpt-massive-language-models-can-be-accurately-pruned-in-one-shot.md",
+        "papers/inference/99-other-inference-systems/2023-2306.11695-a-simple-and-effective-pruning-approach-for-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md",
+        "papers/inference/99-other-inference-systems/2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2023-2310.06694-sheared-llama-accelerating-language-model-pre-training-via-structured-pr.md",
+        "papers/inference/99-other-inference-systems/2024-2402.17463-training-free-long-context-scaling-of-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2024-2407.08608-flashattention-3-fast-and-accurate-attention-with-asynchrony-and-low-pre.md",
+        "papers/inference/99-other-inference-systems/2024-2409.17422-discovering-the-gems-in-early-layers-accelerating-long-context-llms-with.md"
+      ],
       "title": "Streaming Kernel PCA Algorithm With Small Space"
     },
     "arXiv:2411.01030": {
