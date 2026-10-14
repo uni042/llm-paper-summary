@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-16c328b0c1105158-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2604.08558",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2604.08558",
+    "identity_tokens": [
+      "arXiv:2604.08558"
+    ],
+    "reason": "The primary abstract targets standalone text-to-speech generation, an audio application outside this LLM inference/serving scope.",
+    "first_checked_at": "2026-10-14T00:38:55+00:00",
+    "last_checked_at": "2026-10-14T00:38:55+00:00",
+    "linked_from": [],
+    "title": "WAND: Windowed Attention and Knowledge Distillation for Efficient Autoregressive Text-to-Speech Models"
+  },
+  "processed_at": "2026-10-14T00:38:56+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-16c328b0c110",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

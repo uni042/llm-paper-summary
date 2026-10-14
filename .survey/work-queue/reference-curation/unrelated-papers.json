@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-14T00:22:59+00:00",
-  "record_count": 11931,
+  "updated_at": "2026-10-14T00:38:58+00:00",
+  "record_count": 11939,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -171680,6 +171680,102 @@
         "papers/inference/99-other-inference-systems/2024-2402.19427-griffin-mixing-gated-linear-recurrences-with-local-attention-for-efficie.md"
       ],
       "title": "Building on Efficient Foundations: Effectively Training LLMs with Structured Feedforward Layers"
+    },
+    "arXiv:2408.04307": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2408.04307",
+      "identity_tokens": [
+        "arXiv:2408.04307"
+      ],
+      "reason": "The abstract addresses training checkpoint size and fault tolerance only; no inference, serving, or inference-time efficiency contribution is described.",
+      "first_checked_at": "2026-10-14T00:38:54+00:00",
+      "last_checked_at": "2026-10-14T00:38:54+00:00",
+      "linked_from": [],
+      "title": "MoC-System: Efficient Fault Tolerance for Sparse Mixture-of-Experts Model Training"
+    },
+    "arXiv:2501.12896": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2501.12896",
+      "identity_tokens": [
+        "arXiv:2501.12896"
+      ],
+      "reason": "The primary abstract is about optimizer-state compression and training memory; it does not address inference or serving.",
+      "first_checked_at": "2026-10-14T00:38:54+00:00",
+      "last_checked_at": "2026-10-14T00:38:54+00:00",
+      "linked_from": [],
+      "title": "Irrational Complex Rotations Empower Low-bit Optimizers"
+    },
+    "arXiv:2605.17598": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.17598",
+      "identity_tokens": [
+        "arXiv:2605.17598"
+      ],
+      "reason": "The abstract focuses on multilingual capability and model-quality correction through continued pretraining/fine-tuning; it does not describe serving or inference efficiency.",
+      "first_checked_at": "2026-10-14T00:38:54+00:00",
+      "last_checked_at": "2026-10-14T00:38:54+00:00",
+      "linked_from": [],
+      "title": "Mixture of Experts for Low-Resource LLMs"
+    },
+    "arXiv:2604.18128": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.18128",
+      "identity_tokens": [
+        "arXiv:2604.18128"
+      ],
+      "reason": "The primary abstract explicitly characterizes the work as a training-time probe rather than a deployment proposal; it is also withdrawn and no PDF is available.",
+      "first_checked_at": "2026-10-14T00:38:55+00:00",
+      "last_checked_at": "2026-10-14T00:38:55+00:00",
+      "linked_from": [],
+      "title": "Depth Registers Unlock W4A4 on SwiGLU: A Reader/Generator Decomposition"
+    },
+    "arXiv:2604.08558": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.08558",
+      "identity_tokens": [
+        "arXiv:2604.08558"
+      ],
+      "reason": "The primary abstract targets standalone text-to-speech generation, an audio application outside this LLM inference/serving scope.",
+      "first_checked_at": "2026-10-14T00:38:55+00:00",
+      "last_checked_at": "2026-10-14T00:38:55+00:00",
+      "linked_from": [],
+      "title": "WAND: Windowed Attention and Knowledge Distillation for Efficient Autoregressive Text-to-Speech Models"
+    },
+    "arXiv:2604.00375": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.00375",
+      "identity_tokens": [
+        "arXiv:2604.00375"
+      ],
+      "reason": "The primary abstract is about decoding-sample exploration and answer quality; it does not identify an inference latency, memory, throughput, or serving-efficiency contribution.",
+      "first_checked_at": "2026-10-14T00:38:57+00:00",
+      "last_checked_at": "2026-10-14T00:38:57+00:00",
+      "linked_from": [],
+      "title": "Locally Confident, Globally Stuck: The Quality-Exploration Dilemma in Diffusion Language Models"
+    },
+    "arXiv:2606.00395": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.00395",
+      "identity_tokens": [
+        "arXiv:2606.00395"
+      ],
+      "reason": "The primary abstract concerns MoE reinforcement-learning training stability and replay; it does not describe inference-time routing or serving efficiency.",
+      "first_checked_at": "2026-10-14T00:38:57+00:00",
+      "last_checked_at": "2026-10-14T00:38:57+00:00",
+      "linked_from": [],
+      "title": "PR2: Predictive Routing Replay for MoE-Based LLM Reinforcement Learning"
+    },
+    "arXiv:2605.30325": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.30325",
+      "identity_tokens": [
+        "arXiv:2605.30325"
+      ],
+      "reason": "The abstract targets video diffusion generation rather than language-model inference, serving, or inference-time compression in the project scope.",
+      "first_checked_at": "2026-10-14T00:38:58+00:00",
+      "last_checked_at": "2026-10-14T00:38:58+00:00",
+      "linked_from": [],
+      "title": "Veda: Scalable Video Diffusion via Distilled Sparse Attention"
     }
   }
 }

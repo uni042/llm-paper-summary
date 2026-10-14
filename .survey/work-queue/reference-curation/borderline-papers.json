@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-14T00:22:58+00:00",
-  "record_count": 4951,
+  "updated_at": "2026-10-14T00:38:55+00:00",
+  "record_count": 4956,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -76518,6 +76518,71 @@
       ],
       "borderline_recheck_count": 0,
       "title": "Token Packing for Transformers with Variable-Length Inputs"
+    },
+    "DOI:10.1109/tmc.2025.3633250": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/tmc.2025.3633250",
+      "identity_tokens": [
+        "DOI:10.1109/tmc.2025.3633250"
+      ],
+      "reason": "The candidate title suggests lightweight text representations, but the registered publisher route `https://doi.org/10.1109/TMC.2025.3633250` returned Internal Error; the IEEE Xplore title search returned no matching primary abstract, and the guessed document route `https://ieeexplore.ieee.org/document/3633250` was inaccessible. Publisher primary abstract could not be retrieved, so relevance cannot be determined from primary evidence.",
+      "first_checked_at": "2026-10-14T00:38:53+00:00",
+      "last_checked_at": "2026-10-14T00:38:53+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Toward an Ultra-Lightweight Text Representation: Causal Convolutional Networks With Feature Self-Enhancement Mechanisms"
+    },
+    "DOI:10.1145/3779212.3790178": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3779212.3790178",
+      "identity_tokens": [
+        "DOI:10.1145/3779212.3790178"
+      ],
+      "reason": "The title alone does not establish a connection to LLM inference. The registered DOI route `https://doi.org/10.1145/3779212.3790178` returned an error and ACM DL `https://dl.acm.org/doi/10.1145/3779212.3790178` returned HTTP 403 Forbidden; the publisher primary abstract was unavailable.",
+      "first_checked_at": "2026-10-14T00:38:53+00:00",
+      "last_checked_at": "2026-10-14T00:38:53+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "It Takes Two to Entangle"
+    },
+    "DOI:10.1145/3620666.3651351": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3620666.3651351",
+      "identity_tokens": [
+        "DOI:10.1145/3620666.3651351"
+      ],
+      "reason": "The title suggests DNN pruning performance, but the registered DOI route `https://doi.org/10.1145/3620666.3651351` returned Internal Error and ACM DL `https://dl.acm.org/doi/10.1145/3620666.3651351` returned HTTP 403 Forbidden. The publisher primary abstract could not be retrieved, so the model/task and inference relevance remain unverified.",
+      "first_checked_at": "2026-10-14T00:38:53+00:00",
+      "last_checked_at": "2026-10-14T00:38:53+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Fractal: Joint Multi-Level Sparse Pattern Tuning of Accuracy and Performance for DNN Pruning"
+    },
+    "DOI:10.1109/2575-8411.2026.00068": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/2575-8411.2026.00068",
+      "identity_tokens": [
+        "DOI:10.1109/2575-8411.2026.00068"
+      ],
+      "reason": "The title indicates an LLM training system, but the registered DOI route `https://doi.org/10.1109/2575-8411.2026.00068` and IEEE Xplore search/document routes could not provide the primary abstract. Secondary search snippets mention pretraining/fine-tuning and GPU memory, but they are not used as primary evidence. Per the retrieval rule, classification remains borderline until the primary source is available.",
+      "first_checked_at": "2026-10-14T00:38:53+00:00",
+      "last_checked_at": "2026-10-14T00:38:53+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "BCD-Megatron: A Cost-Effective Training System for Large Language Models"
+    },
+    "DOI:10.1109/icassp55912.2026.11463859": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/icassp55912.2026.11463859",
+      "identity_tokens": [
+        "DOI:10.1109/icassp55912.2026.11463859"
+      ],
+      "reason": "The candidate title indicates KV-cache compression for prefill latency, but registered DOI `https://doi.org/10.1109/icassp55912.2026.11463859` and IEEE Xplore `https://ieeexplore.ieee.org/document/11463859` did not yield the publisher abstract (the document route displayed an inaccessible JavaScript/captcha page). A conference-program entry and author-hosted PDF were found, but neither is used as the registered publisher abstract. Primary evidence remains unavailable.",
+      "first_checked_at": "2026-10-14T00:38:55+00:00",
+      "last_checked_at": "2026-10-14T00:38:55+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "ShrinKV: Key-Value Cache Compression with Progressive Hidden States Shrinking to Mitigate Prefilling Latency"
     }
   }
 }
