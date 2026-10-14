@@ -98,6 +98,10 @@
   実装：[✓](https://github.com/SHA-4096/EntropyInfer) ・ リポジトリ内被引用：1  
   長い入力を処理するLLMでは、入力文脈全体の注意機構計算がプリフィル 遅延を押し上げ、生成中は過去トークンのキー/値 (KV) が蓄積してGPU メモリを圧迫する。
 
+- **2026-02 · [FASA: Frequency-aware Sparse Attention](2026-2602.03152-fasa-frequency-aware-sparse-attention.md)**  
+  実装：[✓](https://github.com/wangyifei0047/FASA-ICLR2026) ・ リポジトリ内被引用：1  
+  そこで過去トークンを間引く方式が使われるが、固定位置の保存や事前段階での一度限りの選別では、生成途中に変わる重要性を追跡できない。
+
 ### 直近12か月・未被引用（2025-11〜2026-10）
 
 - **2026-09 · [SANTA++: Sampling Attention through Representative Keys](2026-2609.35629-santa-sampling-attention-through-representative-keys.md)**  
@@ -148,10 +152,6 @@
   実装：✓ ・ リポジトリ内被引用：0  
   文脈長が128Kトークンに達すると、注意計算とKVキャッシュの読み出しが遅延を増やす。LycheeDecodeはこの問題を、少数の「検索ヘッド（retrieval heads）」と多数の「疎ヘッド（sparse heads）」へ役割を分ける混合ヘッド方式で解く。
 
-- **2026-02 · [FASA: Frequency-aware Sparse Attention](2026-2602.03152-fasa-frequency-aware-sparse-attention.md)**  
-  実装：[✓](https://github.com/wangyifei0047/FASA-ICLR2026) ・ リポジトリ内被引用：0  
-  そこで過去トークンを間引く方式が使われるが、固定位置の保存や事前段階での一度限りの選別では、生成途中に変わる重要性を追跡できない。
-
 - **2026-01 · [Elastic Attention: Test-time Adaptive Sparsity Ratios for Efficient Transformers](2026-2601.17367-elastic-attention-test-time-adaptive-sparsity-ratios-for-efficient-trans.md)**  
   実装：[✓](https://github.com/LCM-Lab/Elastic-Attention) ・ リポジトリ内被引用：0  
   長文脈の大規模言語モデル（Large Language モデル; LLM）では、すべての入力トークンへ注意を向ける全注意（Full 注意機構; FA）が計算量・メモリ帯域のボトルネックとなる。
@@ -171,11 +171,11 @@
   Native Sparse 注意機構（NSA）は、長文脈Transformerの注意演算を、圧縮した長距離文脈、入力依存で選んだ重要ブロック、直近の局所窓という三つの枝に分ける疎注意方式である。注意カーネルは64K文脈で順伝播最大9.0倍、逆伝播最大6.0倍の実測高速化を報告する。
 
 - **2025-02 · [MoBA: Mixture of Block Attention for Long-Context LLMs](2025-2502.13189-moba.md)**  
-  実装：[✓](https://github.com/MoonshotAI/MoBA) ・ リポジトリ内被引用：43  
+  実装：[✓](https://github.com/MoonshotAI/MoBA) ・ リポジトリ内被引用：44  
   MoBAは各問い合わせが関連KVブロックを動的選択するMoE型疎注意で、1M文脈の品質を完全注意に近く保ちつつ注意層前処理を最大6.5倍高速化する。
 
 - **2025-02 · [FlexPrefill: A Context-Aware Sparse Attention Mechanism for Efficient Long-Sequence Inference](2025-2502.20766-flexprefill-a-context-aware-sparse-attention-mechanism-for-efficient-long-context-inference.md)**  
-  実装：[✓](https://github.com/bytedance/FlexPrefill) ・ リポジトリ内被引用：24  
+  実装：[✓](https://github.com/bytedance/FlexPrefill) ・ リポジトリ内被引用：25  
   要点: FlexPrefillは、長文プリフィルの注意計算を一律の疎パターンへ置き換えるのではなく、入力と注意ヘッドごとに「クエリごとに見る場所が違う多様型」か「多くのクエリが似た場所を見る構造型」かを判定し、その型に合う索引だけを累積注意量の閾値まで選ぶ。これにより、必要なヘッドには多く、簡単なヘッドには少ない計算予算を割り当てる。
 
 - **2024-12 · [SCBench: A KV Cache-Centric Analysis of Long-Context Methods](2024-2412.10319-scbench-a-kv-cache-centric-analysis-of-long-context-methods.md)**  
@@ -187,7 +187,7 @@
   すべての過去トークンが同じように重要とは限らないため、注意行列の重要な領域だけを計算するブロック疎注意（block-sparse 注意機構）が提案されてきた。RULERやLongBenchでは全注意に近い精度を保ち、注意演算部分では最大13.5倍の高速化を報告する。
 
 - **2025-02 · [SpargeAttention: Accurate and Training-free Sparse Attention Accelerating Any Model Inference](2025-2502.18137-spargeattn-accurate-sparse-attention-accelerating-any-model-inference.md)**  
-  実装：[✓](https://github.com/thu-ml/SpargeAttn) ・ リポジトリ内被引用：14  
+  実装：[✓](https://github.com/thu-ml/SpargeAttn) ・ リポジトリ内被引用：15  
   自己類似度を使って重要ブロックを予測し、残ったブロックにもGPUワープ単位のsoftmax判定を適用する学習不要の疎注意演算子。近似誤差の許容範囲を層ごとに調整し、言語・画像・動画で実測性能と品質を比較する。
 
 - **2025-09 · [InfLLM-V2: Dense-Sparse Switchable Attention for Seamless Short-to-Long Adaptation](2025-2509.24663-infllm-v2-dense-sparse-switchable-attention-for-seamless-short-to-long-a.md)**  
@@ -237,11 +237,11 @@
 ### 3年前（2023-11〜2024-10）
 
 - **2024-06 · [Quest: Query-Aware Sparsity for Efficient Long-Context LLM Inference](2024-2406.10774-quest.md)**  
-  実装：[✓](https://github.com/mit-han-lab/Quest) ・ リポジトリ内被引用：142  
+  実装：[✓](https://github.com/mit-han-lab/Quest) ・ リポジトリ内被引用：143  
   KVページのキー最小・最大値と現在クエリから重要度上界を推定し、上位ページだけを読むことで全KVを保持したまま長文脈注意の帯域を削減し最大7.03倍高速化。
 
 - **2024-07 · [MInference 1.0: Accelerating Pre-filling for Long-Context LLMs via Dynamic Sparse Attention](2024-2407.02490-minference.md)**  
-  実装：[✓](https://github.com/microsoft/MInference) ・ リポジトリ内被引用：92  
+  実装：[✓](https://github.com/microsoft/MInference) ・ リポジトリ内被引用：93  
   注意ヘッドを3種の疎パターンへ割り当て、入力ごとの重要位置を動的推定して長文脈プリフィルを専用GPUカーネルで高速化する。
 
 - **2024-10 · [SeerAttention: Learning Intrinsic Sparse Attention in Your LLMs](2024-2410.13276-seerattention.md)**  

@@ -1768,9 +1768,17 @@
   実装：[✓](https://github.com/maufadel/EnergyMeter) ・ リポジトリ内被引用：3  
   著者らは推論をモデルパラメータ数だけで比較する慣習にも疑問を投げかけ、層の深さ、注意・フィードフォワードの並列化、バッチ数、量子化形式の実行実装を分けて検証した。
 
+- **2024-04 · [Language Model Cascades: Token-level uncertainty and beyond](2024-2404.10136-language-model-cascades-token-level-uncertainty-and-beyond.md)**  
+  実装：✓ ・ リポジトリ内被引用：3  
+  本論文は、入力ごとに必要な推論計算量を変える「モデル段階実行」（モデル cascade）の委譲規則を、生成言語モデルに合わせて設計する研究である。
+
 - **2024-02 · [OneBit: Towards Extremely Low-bit Large Language Models](2024-2402.11295-onebit-towards-extremely-low-bit-large-language-models.md)**  
   実装：[✓](https://github.com/xuyuzhuang11/OneBit) ・ リポジトリ内被引用：3  
   OneBitは、学習済み大規模言語モデル（LLM）の重みを極端に低いビット数で保存する際に生じる精度劣化を、線形層の表現形式そのものを変更することで緩和する研究である。査読版の表3では、LLaMA-7Bの重み保存量が13.5 GBから1.3 GBへ、LLaMA-13Bでは26.0 GBから2.2 GBへ減る。
+
+- **2024-02 · [Large Language Model Cascades with Mixture of Thought Representations for Cost-efficient Reasoning](2024-2310.03094-large-language-model-cascades-with-mixture-of-thought-representations-fo.md)**  
+  実装：[✓](https://github.com/MurongYue/LLM_MoT_cascade) ・ リポジトリ内被引用：3  
+  強力な言語モデルをすべての要求へ使用すると、簡単な算数問題にも難しい因果推論にも同じ高価なAPIを呼ぶことになる。一方、安価なモデルだけに切り替えると難問で正答率が落ちる。
 
 - **2024-02 · [BlackMamba: Mixture of Experts for State-Space Models](2024-2402.01771-blackmamba-mixture-of-experts-for-state-space-models.md)**  
   実装：[✓](https://github.com/Zyphra/BlackMamba) ・ リポジトリ内被引用：3  
@@ -1788,10 +1796,6 @@
   実装：✓ ・ リポジトリ内被引用：2  
   本論文は、大規模言語モデル（LLM）の事後量子化（post-学習 量子化, PTQ）で広く使われるSmoothQuant、活性認識重み量子化（AWQ）、勾配不要の重み誤差補償（GPTQ）を、ブロックごとに尺度を共有する微小尺度（microscaling, MX）形式へ拡張し、三方式の組合せと適用順序を体系的に評価した研究である。
 
-- **2024-04 · [Language Model Cascades: Token-level uncertainty and beyond](2024-2404.10136-language-model-cascades-token-level-uncertainty-and-beyond.md)**  
-  実装：✓ ・ リポジトリ内被引用：2  
-  本論文は、入力ごとに必要な推論計算量を変える「モデル段階実行」（モデル cascade）の委譲規則を、生成言語モデルに合わせて設計する研究である。
-
 - **2024-03 · [Decoding Compressed Trust: Scrutinizing the Trustworthiness of Efficient LLMs Under Compression](2024-2403.15447-decoding-compressed-trust-scrutinizing-the-trustworthiness-of-efficient-.md)**  
   実装：[✓](https://github.com/decoding-comp-trust/comp-trust) ・ リポジトリ内被引用：2  
   LLM圧縮の評価は、通常の質問応答や知識課題の性能を維持できるかに偏りがちである。評価の中心的な結果は、同程度に圧縮する場合は量子化が枝刈りより元モデルの信頼性を再現しやすいこと、4-bit量子化では一部軸が改善し得ること、3-bitでは通常性能に現れにくい深刻な回帰が生じることである。
@@ -1807,10 +1811,6 @@
 - **2024-02 · [LongHeads: Multi-Head Attention is Secretly a Long Context Processor](2024-2402.10685-longheads-multi-head-attention-is-secretly-a-long-context-processor.md)**  
   実装：[✓](https://github.com/LuLuLuyi/LongHeads) ・ リポジトリ内被引用：2  
   LongHeadsは、事前学習時よりはるかに長い文章を既存の大規模言語モデルへ与える際、各注意頭が全文へ注意する必要はないという観察を利用した、追加学習不要の長文推論方式である。LLaMA-2-7Bを単一NVIDIA A100で評価し、32Kのパスキー検索でほぼ100%、CPUへKVキャッシュを退避した128K条件でも2K注意窓で100%を報告する。
-
-- **2024-02 · [Large Language Model Cascades with Mixture of Thought Representations for Cost-efficient Reasoning](2024-2310.03094-large-language-model-cascades-with-mixture-of-thought-representations-fo.md)**  
-  実装：[✓](https://github.com/MurongYue/LLM_MoT_cascade) ・ リポジトリ内被引用：2  
-  強力な言語モデルをすべての要求へ使用すると、簡単な算数問題にも難しい因果推論にも同じ高価なAPIを呼ぶことになる。一方、安価なモデルだけに切り替えると難問で正答率が落ちる。
 
 - **2024-02 · [Efficient Prompt Caching via Embedding Similarity](2024-2402.01173-efficient-prompt-caching-via-embedding-similarity.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
@@ -1899,11 +1899,11 @@
 ### 4年前（2022-11〜2023-10）
 
 - **2023-07 · [FlashAttention-2: Faster Attention with Better Parallelism and Work Partitioning](2023-2307.08691-flashattention-2.md)**  
-  実装：[✓](https://github.com/Dao-AILab/flash-attention) ・ リポジトリ内被引用：262  
+  実装：[✓](https://github.com/Dao-AILab/flash-attention) ・ リポジトリ内被引用：263  
   初代FlashAttentionのオンライン・ソフトマックスとタイル分割を保ちつつ、行列積以外の演算とブロック・ワープ間の仕事分割を再設計し、A100で理論演算性能の最大73%と初代比約2倍の高速化を達成する。
 
 - **2022-11 · [SmoothQuant: Accurate and Efficient Post-Training Quantization for Large Language Models](2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md)**  
-  実装：[✓](https://github.com/mit-han-lab/smoothquant) ・ リポジトリ内被引用：211  
+  実装：[✓](https://github.com/mit-han-lab/smoothquant) ・ リポジトリ内被引用：212  
   活性値全体を単純に8ビットへ写すと、その少数の外れ値が量子化範囲を広げ、通常値へ割り当てられる段階数が減って精度が崩れる。OPT、BLOOM、GLM、MT-NLGなどで8ビット重み・8ビット活性値（W8A8）を実現し、精度低下をほぼ抑えながら最大1.56倍の推論高速化と2倍のメモリ削減を報告し、530Bモデルを単一ノードで提供可能にした。
 
 - **2023-05 · [GQA: Training Generalized Multi-Query Transformer Models from Multi-Head Checkpoints](2023-2305.13245-gqa.md)**  
@@ -1919,11 +1919,11 @@
   Wanda（重みと活性による枝刈り、枝刈り by 重み and 活性値）は、大規模言語モデルの線形層を追加学習も残存重みの更新も行わず疎化する方法である。LLaMA-7Bを50%非構造疎化したとき、WikiTextの困惑度は単純大きさ枝刈り17.29、Wanda 7.26、SparseGPT 7.22であり、軽い処理でも品質を大幅に保てる。
 
 - **2023-01 · [SparseGPT: Massive Language Models Can Be Accurately Pruned in One-Shot](2023-2301.00774-sparsegpt-massive-language-models-can-be-accurately-pruned-in-one-shot.md)**  
-  実装：[✓](https://github.com/IST-DASLab/sparsegpt) ・ リポジトリ内被引用：93  
+  実装：[✓](https://github.com/IST-DASLab/sparsegpt) ・ リポジトリ内被引用：94  
   重みの絶対値が小さい順に削除する単純な枝刈りでは、巨大モデルであっても削除による層出力誤差が累積し、50%の疎化で性能が崩壊し得る。
 
 - **2023-05 · [LLM-Pruner: On the Structural Pruning of Large Language Models](2023-2305.11627-llm-pruner-on-the-structural-pruning-of-large-language-models.md)**  
-  実装：[✓](https://github.com/horseee/LLM-Pruner) ・ リポジトリ内被引用：70  
+  実装：[✓](https://github.com/horseee/LLM-Pruner) ・ リポジトリ内被引用：71  
   LLM-Prunerは、大規模言語モデルのパラメータを実際に削除して小さい密行列モデルへ変換する構造枝刈り手法である。LLaMA-7B、Vicuna-7B、ChatGLM-6Bを評価し、LLaMA-7Bでは20%の構造削減でゼロショット七課題平均が63.25から56.82へ下がり、低ランク適応後60.07まで回復した。
 
 - **2023-08 · [OmniQuant: Omnidirectionally Calibrated Quantization for Large Language Models](2023-2308.13137-omniquant-omnidirectionally-calibrated-quantization-for-large-language-m.md)**  
@@ -1934,13 +1934,13 @@
   実装：✓ ・ リポジトリ内被引用：65  
   ドラフト自身の生成データと課題別の分布間距離でターゲットとの整合を蒸留し、投機的デコードの候補受理率を上げる手法。
 
+- **2023-05 · [LLM-QAT: Data-Free Quantization Aware Training for Large Language Models](2023-2305.17888-llm-qat-data-free-quantization-aware-training-for-large-language-models.md)**  
+  実装：[✓](https://github.com/facebookresearch/LLM-QAT) ・ リポジトリ内被引用：56  
+  LLM-QATは、学習後量子化（Post-学習 量子化: PTQ）では精度が大きく低下する低ビット領域に対し、量子化誤差を学習中に経験させる量子化対応学習（Quantization-Aware 学習: QAT）を大規模言語モデルへ適用する研究である。
+
 - **2023-05 · [RWKV: Reinventing RNNs for the Transformer Era](2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md)**  
   実装：[✓](https://github.com/BlinkDL/RWKV-LM) ・ リポジトリ内被引用：55  
   RWKVの大きな特徴は、単に注意を近似して軽量化することではなく、同じ重みと演算を訓練時の並列形式と推論時の再帰形式の双方で扱うことである。論文自身も長文脈評価の一部で弱点を示し、指示の順序を変えるだけで下流評価が大きく改善する例を報告している。
-
-- **2023-05 · [LLM-QAT: Data-Free Quantization Aware Training for Large Language Models](2023-2305.17888-llm-qat-data-free-quantization-aware-training-for-large-language-models.md)**  
-  実装：[✓](https://github.com/facebookresearch/LLM-QAT) ・ リポジトリ内被引用：55  
-  LLM-QATは、学習後量子化（Post-学習 量子化: PTQ）では精度が大きく低下する低ビット領域に対し、量子化誤差を学習中に経験させる量子化対応学習（Quantization-Aware 学習: QAT）を大規模言語モデルへ適用する研究である。
 
 - **2023-10 · [Ring Attention with Blockwise Transformers for Near-Infinite Context](2023-2310.01889-ring-attention-blockwise-transformers.md)**  
   実装：[✓](https://github.com/lhao499/llm_large_context) ・ リポジトリ内被引用：52  
@@ -2145,7 +2145,7 @@
   大規模言語モデルの量子化では、重みを16ビットから8ビットへ減らすだけでメモリ転送量は小さくなる。INT8では追加の学習や校正なしでBERT・GPT系の品質をほぼ保ち、NVIDIA A100上のBERT-baseで最大5.19倍、GPT-3 350Mで4.16倍の速度向上を示した。
 
 - **2022-02 · [ST-MoE: Designing Stable and Transferable Sparse Expert Models](2022-2202.08906-st-moe-designing-stable-and-transferable-sparse-expert-models.md)**  
-  実装：[✓](https://github.com/tensorflow/mesh/blob/master/mesh_tensorflow/transformer/moe.py) ・ リポジトリ内被引用：51  
+  実装：[✓](https://github.com/tensorflow/mesh/blob/master/mesh_tensorflow/transformer/moe.py) ・ リポジトリ内被引用：52  
   ST-MoEは専門家混合（Mixture-of-Experts、MoE）モデルを単に巨大化するのではなく、学習の発散を防ぎ、下流の多様な自然言語課題で密モデルを上回るための設計を検討する研究である。ただしこれはモデル全体をGPUメモリ12GBで動かせるという意味ではなく、専門家の重み配置と分散通信を含めた大規模学習システムの研究である。
 
 - **2021-12 · [GLaM: Efficient Scaling of Language Models with Mixture-of-Experts](2021-2112.06905-glam-efficient-scaling-of-language-models-with-mixture-of-experts.md)**  
@@ -2289,7 +2289,7 @@
   BlockBERTは、長い文書をBERT型の双方向符号化器へ入力するとき、通常の自己注意が系列長の二乗に比例する注意得点を作る問題を、ブロック単位で規則的に疎化した注意によって緩和する。単に遠方のトークンを切り捨てるのではなく、各注意ヘッドへ異なるブロック置換を割り当てることで、近傍情報を読むヘッドと離れたブロックを読むヘッドを共存させる。
 
 - **2020-06 · [BERT Loses Patience: Fast and Robust Inference with Early Exit](2020-2006.04152-bert-loses-patience-fast-and-robust-inference-with-early-exit.md)**  
-  実装：✓ ・ リポジトリ内被引用：13  
+  実装：✓ ・ リポジトリ内被引用：14  
   浅い層で正しい分類がほぼ確定している入力にも後段層の計算を続けるため、不要な遅延が生じる。従来の早期終了方式は中間分類器の最大確率やエントロピーなど、一つの層での自信の強さを停止信号にすることが多かった。
 
 - **2020-04 · [Training with Quantization Noise for Extreme Model Compression](2020-2004.07320-training-with-quantization-noise-for-extreme-model-compression.md)**  
@@ -2419,6 +2419,6 @@
 ### 10年前（2016-11〜2017-10）
 
 - **2017-01 · [Outrageously Large Neural Networks: The Sparsely-Gated Mixture-of-Experts Layer](2017-1701.06538-outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts.md)**  
-  実装：✓ ・ リポジトリ内被引用：183  
+  実装：✓ ・ リポジトリ内被引用：184  
   本論文は、ニューラルネットワークの総パラメータ数を増やすと各入力での計算量も増えるという密なモデルの制約を、入力ごとに一部の専門家だけを実行する条件付き計算によって緩和した基礎研究である。モデルの総容量を大きくしても、活性化する専門家数を固定すれば入力一件あたりの専門家演算量はほぼ一定にできる。ただし専門家を増やすだけでは高速にならない。
 <!-- survey:auto:end -->

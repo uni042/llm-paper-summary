@@ -188,7 +188,7 @@
   従来の記憶システムでは、いつ保存し、どの形式で整理し、どの条件で取り出すかを開発者が固定する場合が多い。NeurIPS 2025正式掲載論文では、長期会話の質問応答データで六つの基盤モデルを評価し、特に時間推論や複数会話をまたぐ質問で改善を示した。
 
 - **2025-06 · [The Cost of Dynamic Reasoning: Demystifying AI Agents and Test-Time Scaling from an AI Infrastructure Perspective](2025-2506.04301-cost-dynamic-reasoning.md)**  
-  実装：✓ ・ リポジトリ内被引用：10  
+  実装：✓ ・ リポジトリ内被引用：11  
   この構造は能力を上げる一方、通常の単一ターン推論を前提に設計されたGPUサービングでは、長い逐次依存、外部ツール待ち、繰り返しプリフィル、可変長生成を生み、平均利用率だけでは実コストを捉えにくい。代表結果では、HotpotQAやMATHのCPU・外部ツール待ちが実行時間の最大54.5%を占める条件があり、LLM実行中も復号がGPU時間の74.1%を占める。
 
 - **2025-01 · [Zep: A Temporal Knowledge Graph Architecture for Agent Memory](2025-2501.13956-zep-a-temporal-knowledge-graph-architecture-for-agent-memory.md)**  
