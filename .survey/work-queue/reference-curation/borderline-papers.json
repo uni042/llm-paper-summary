@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-14T15:09:18+00:00",
-  "record_count": 5154,
+  "updated_at": "2026-10-14T15:46:34+00:00",
+  "record_count": 5156,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -80139,6 +80139,32 @@
       ],
       "borderline_recheck_count": 0,
       "title": "Off-Trajectory Reasoning: Can LLMs Collaborate on Reasoning Trajectory?"
+    },
+    "arXiv:2511.02358": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2511.02358",
+      "identity_tokens": [
+        "arXiv:2511.02358"
+      ],
+      "reason": "M-Solomonはマルチモーダル検索用の埋め込みモデルで、/augmentと/embedを選択して検索質問の生成的拡張を省略できる。MMEBでAlwaysAug比の生成遅延を1320→716msへ下げつつ、検索P@1を67.4→67.6へ改善した。しかし主題は検索表現学習と検索品質の改善であり、LLMの自己回帰推論、KVキャッシュ、GPUサービング、モデル実行系の資源管理そのものへのシステム貢献は検証していない。検索前処理の条件付き生成による推論遅延削減という接点はあるため無関係ではなくborderlineとする。",
+      "first_checked_at": "2026-10-14T15:46:32+00:00",
+      "last_checked_at": "2026-10-14T15:46:32+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Let Multimodal Embedders Learn When to Augment Query via Adaptive Query Augmentation"
+    },
+    "arXiv:2609.39982": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.39982",
+      "identity_tokens": [
+        "arXiv:2609.39982"
+      ],
+      "reason": "Mid-Harnessはターミナル操作エージェントの各行動の前にN件の候補コマンドを生成し、検証器が1件を選んで実行環境へ渡す。TerminalBench-LiteではTMAX-9Bの基準Pass@1 50.00%から、強力なGPT-5.6 Sol検証器・候補8件で68.03%へ改善する。検証器の対比較には8候補で最大28回の呼出しが必要で、推論費用も分析している。ただし主な貢献は行動選択の信頼性とテスト時計算の割当であり、LLMサービング基盤の実行効率・メモリ・GPU資源管理・処理量改善ではない。推論時計算費用の比較はサーベイと接するためborderlineとする。",
+      "first_checked_at": "2026-10-14T15:46:34+00:00",
+      "last_checked_at": "2026-10-14T15:46:34+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Mid-Harness: Scaling Actions Between Model and Harness for Terminal Agents"
     }
   }
 }
