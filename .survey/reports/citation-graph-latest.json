@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-14T15:38:57+00:00",
-  "paper_count": 2184,
-  "edge_count": 26480,
+  "generated_at": "2026-10-14T15:58:55+00:00",
+  "paper_count": 2185,
+  "edge_count": 26484,
   "citation_counts": {
     "papers/inference/01-offload-hierarchical-memory/2021-2101.06840-zero-offload-democratizing-billion-scale-model-training.md": 8,
     "papers/inference/01-offload-hierarchical-memory/2022-2205.10034-moesys-a-distributed-and-efficient-mixture-of-experts-training-and-inference-system-for-internet-services.md": 22,
@@ -421,7 +421,7 @@
     "papers/inference/06-moe-quantization-compression/2026-2607.16184-pagedweight-efficient-moe-llm-serving-with-dynamic-quality-aware-weight-quantiza.md": 1,
     "papers/inference/06-moe-quantization-compression/2026-2608.08910-tied-trit-planes.md": 0,
     "papers/inference/06-moe-quantization-compression/2026-2609.04453-expert-pruning-over-dispersed-moe.md": 0,
-    "papers/inference/07-kv-cache-optimization-compression/2019-1911.02150-multi-query-attention.md": 158,
+    "papers/inference/07-kv-cache-optimization-compression/2019-1911.02150-multi-query-attention.md": 159,
     "papers/inference/07-kv-cache-optimization-compression/2023-2305.17118-scissorhands.md": 102,
     "papers/inference/07-kv-cache-optimization-compression/2023-2306.14048-h2o.md": 311,
     "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md": 352,
@@ -484,7 +484,7 @@
     "papers/inference/07-kv-cache-optimization-compression/2025-2503.12491-cake-cascading-and-adaptive-kv-cache-eviction-with-layer-preferences.md": 15,
     "papers/inference/07-kv-cache-optimization-compression/2025-2503.18292-jenga-heterogeneous-memory-management.md": 11,
     "papers/inference/07-kv-cache-optimization-compression/2025-2503.18599-oaken-hybrid-kv-cache-quantization.md": 7,
-    "papers/inference/07-kv-cache-optimization-compression/2025-2503.18893-xkv-cross-layer-kv-cache-compression-via-aligned-singular-value-decomposition.md": 9,
+    "papers/inference/07-kv-cache-optimization-compression/2025-2503.18893-xkv-cross-layer-kv-cache-compression-via-aligned-singular-value-decomposition.md": 10,
     "papers/inference/07-kv-cache-optimization-compression/2025-2504.06319-asynchronous-kv-cache-prefetching.md": 5,
     "papers/inference/07-kv-cache-optimization-compression/2025-2504.19874-turboquant-online-vector-quantization-with-near-optimal-distortion-rate.md": 20,
     "papers/inference/07-kv-cache-optimization-compression/2025-2505.15781-dkv-cache-delayed-kv-diffusion-language-models.md": 22,
@@ -886,7 +886,7 @@
     "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2305.13144-response-length-perception-and-sequence-scheduling-an-llm-empowered-llm-inference-pipeline.md": 20,
     "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2305.17126-large-language-models-as-tool-makers.md": 1,
     "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2308.16369-sarathi.md": 121,
-    "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md": 995,
+    "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md": 996,
     "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.14393-llmcarbon-modeling-the-end-to-end-carbon-footprint-of-large-language-mod.md": 6,
     "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2310.18547-punica-multitenant-lora-serving.md": 30,
     "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2311.11514-hexgen-generative-inference-of-large-language-model-over-heterogeneous-devices.md": 10,
@@ -1606,7 +1606,7 @@
     "papers/inference/99-other-inference-systems/2023-2305.11627-llm-pruner-on-the-structural-pruning-of-large-language-models.md": 77,
     "papers/inference/99-other-inference-systems/2023-2305.11860-let-s-sample-step-by-step-adaptive-consistency-for-efficient-reasoning-a.md": 9,
     "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md": 58,
-    "papers/inference/99-other-inference-systems/2023-2305.13245-gqa.md": 213,
+    "papers/inference/99-other-inference-systems/2023-2305.13245-gqa.md": 214,
     "papers/inference/99-other-inference-systems/2023-2305.14152-memory-efficient-fine-tuning-of-compressed-large-language-models-via-sub.md": 7,
     "papers/inference/99-other-inference-systems/2023-2305.16300-landmark-attention-random-access-infinite-context-length-for-transformer.md": 22,
     "papers/inference/99-other-inference-systems/2023-2305.17888-llm-qat-data-free-quantization-aware-training-for-large-language-models.md": 58,
@@ -2127,6 +2127,7 @@
     "papers/inference/99-other-inference-systems/2026-2609.26300-compkv-compensation-aware-kv-selection-for-long-context-llm-inference.md": 0,
     "papers/inference/99-other-inference-systems/2026-2609.26796-flash-dllm-io-aware-kv-caching-and-parallel-decoding-for-fast-memory-efficient-diffusion-llms.md": 0,
     "papers/inference/99-other-inference-systems/2026-2609.27373-attention-routing-stabilizes-early-working-set-inference-for-recurrent-language-models.md": 0,
+    "papers/inference/99-other-inference-systems/2026-2609.28029-tensor-decomposition-of-transformer-key-value-caches-spectral-structure-.md": 0,
     "papers/inference/99-other-inference-systems/2026-2609.33614-eat-expert-account-tracker-for-efficient-moe-inference.md": 0,
     "papers/inference/99-other-inference-systems/2026-2610.01763-topk-guided-adaptive-budget-aware-activation-sparsity-for-efficient-llm-.md": 0,
     "papers/inference/99-other-inference-systems/2026-2fe550669a96-turbobus-pooling-pcie-bandwidth-for-llm-workloads-via-scale-up-fabrics.md": 0,
@@ -32143,6 +32144,12 @@
       "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
       "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md",
       "papers/inference/99-other-inference-systems/2024-2404.02258-mixture-of-depths-dynamically-allocating-compute-in-transformer-based-la.md"
+    ],
+    "papers/inference/99-other-inference-systems/2026-2609.28029-tensor-decomposition-of-transformer-key-value-caches-spectral-structure-.md": [
+      "papers/inference/07-kv-cache-optimization-compression/2019-1911.02150-multi-query-attention.md",
+      "papers/inference/07-kv-cache-optimization-compression/2025-2503.18893-xkv-cross-layer-kv-cache-compression-via-aligned-singular-value-decomposition.md",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md",
+      "papers/inference/99-other-inference-systems/2023-2305.13245-gqa.md"
     ],
     "papers/inference/99-other-inference-systems/2026-2609.33614-eat-expert-account-tracker-for-efficient-moe-inference.md": [
       "papers/inference/02-adaptive-expert-computation-compression/2024-2402.14800-not-all-experts-are-equal-efficient-expert-pruning-and-skipping-for-mixture-of-e.md",
