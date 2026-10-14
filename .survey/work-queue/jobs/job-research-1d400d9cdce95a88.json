@@ -35,10 +35,15 @@
   "selection_reason": "主軸はLoRA-based MoE fine-tuningだが、共有base FFN計算を再利用するhigh-throughput frameworkを明示的に提案し、trainingだけでなくinferenceでもGPU memory 40%削減・token computation latency 30%削減を評価しているため推論効率部分を対象とする。",
   "semantic_scholar_id": "ebcf108f8bc42140721ff02b6727b0a291362957",
   "source_url": "https://arxiv.org/abs/2404.15159",
-  "status": "ready",
+  "status": "superseded",
   "title": "MixLoRA: Enhancing Large Language Models Fine-Tuning with LoRA based Mixture of Experts",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2024
+  "year": 2024,
+  "superseded_at": "2026-10-14T07:14:03+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2024-2404.15159-mixlora-enhancing-large-language-models-fine-tuning-with-lora-based-mixt.md",
+  "represented_canonical_id": "arXiv:2404.15159",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
