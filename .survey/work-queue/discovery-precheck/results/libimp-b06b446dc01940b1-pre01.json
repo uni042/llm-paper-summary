@@ -1,0 +1,778 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-b06b446dc01940b1-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-b06b446dc019",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "SemanticScholar:31b8a29357d61780d42adf2cb88d79c423262d34",
+    "arXiv:2410.12794",
+    "arXiv:2505.00570",
+    "arXiv:2510.03267",
+    "arXiv:2603.08088",
+    "arXiv:2603.09222",
+    "arXiv:2605.17997",
+    "arXiv:2605.20295"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 8,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "110902c196fc61b8622615a51517d8a1e3943017",
+  "raw_search_result_count": 8,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 8,
+  "provider_progress": {
+    "requested_count": 8,
+    "status_counts": {
+      "allowed": 8,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-14T03:19:55.966984+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "SemanticScholar:31b8a29357d61780d42adf2cb88d79c423262d34",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2410.12794",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2505.00570",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2510.03267",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2603.08088",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2603.09222",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2605.17997",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2605.20295",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "EnComp: Lightweight Encoder-Only Context Compression for Retrieval-Augmented Question Answering",
+      "source_url": "https://arxiv.org/abs/2603.09222",
+      "year": 2026,
+      "published": "2026-03-10",
+      "venue": null,
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Efficient context compression is critical for retrieval-augmented question answering in resource-constrained settings, where long retrieved contexts increase latency, memory use, and LLM reader cost. We propose a lightweight encoder-only framework for query-driven sentence pruning that preserves answer-critical evidence while aggressively reducing irrelevant context. Our method learns marginal contribution scores for sentences using counterfactual training signals and optimizes a contrastive ranking objective that separates critical evidence from noncritical context. Our approach scores all sentences from a single full-context encoding, enabling fast inference with low computational overhead. Experiments show that it maintains accuracy comparable to the strongest baseline while using 3.7$\\times$ less peak memory and achieving nearly 3$\\times$ lower compression latency, demonstrating an effective quality--efficiency trade-off for practical resource-constrained deployment.",
+      "identifiers": [
+        "SemanticScholar:9ce65822257293fff3aa44617681f66e43dea9d0"
+      ],
+      "semantic_scholar_id": "9ce65822257293fff3aa44617681f66e43dea9d0",
+      "canonical_id": "arXiv:2603.09222",
+      "arxiv_id": "2603.09222",
+      "authors": [
+        "Thao Do",
+        "D. Tran",
+        "A. Vo",
+        "Seon Kwon Kim",
+        "Daeyoung Kim"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 218,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "EAGLE-Pangu: Accelerator-Safe Tree Speculative Decoding on Ascend NPUs",
+      "source_url": "https://arxiv.org/abs/2603.08088",
+      "year": 2026,
+      "published": "2026-03-09",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Autoregressive decoding remains a primary bottleneck in large language model (LLM) serving, motivating speculative decoding methods that reduce expensive teacher-model invocations by verifying multiple candidate tokens per step. Tree-structured speculation further increases parallelism, but is often brittle when ported across heterogeneous backends and accelerator stacks, where attention masking, KV-cache layouts, and indexing semantics are not interchangeable. We present EAGLE-Pangu, a reproducible system that ports EAGLE-3-style tree speculative decoding to a Pangu teacher backend on Ascend NPUs. EAGLE-Pangu contributes (i) an explicit branch/commit cache manager built on the Cache API, (ii) accelerator-safe tree tensorization that removes undefined negative indices by construction and validates structural invariants, and (iii) a fused-kernel-compatible teacher verification path with a debuggable eager fallback. On 240 turns from MT-Bench and HumanEval-style prompts, EAGLE-Pangu improves end-to-end decoding throughput by 1.27x on average, up to 2.46x at p99, over teacher-only greedy decoding in the fused-kernel performance path. We also provide a fused-kernel-free reference path with structured traces and invariant checks to support reproducible debugging and ablation across execution modes and tree budgets.",
+      "identifiers": [
+        "SemanticScholar:f995c55d73155af03e9a522ed4d6fa816a7f1ac4"
+      ],
+      "semantic_scholar_id": "f995c55d73155af03e9a522ed4d6fa816a7f1ac4",
+      "canonical_id": "arXiv:2603.08088",
+      "arxiv_id": "2603.08088",
+      "doi": "10.48550/arXiv.2603.08088",
+      "authors": [
+        "Changhun Han",
+        "Yi-Jie Hu",
+        "Jinglin Liu"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 219,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "MARR: Module-Adaptive Residual Reconstruction for Low-Bit Post-Training Quantization",
+      "source_url": "https://arxiv.org/abs/2605.17997",
+      "year": 2026,
+      "published": "2026-05-18",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Recently, residual reconstruction-based model quantization methods have achieved promising performance in low-bit post-training quantization (PTQ) by introducing cross-layer residuals to reduce error accumulated from previous layers.However, these residuals may also introduce additional bias arising from the Hessian-approximation (HA) assumption underlying reconstruction-based PTQ, leading to suboptimal quantization performance.In this work, we analyze that multiplying the residual term by a scaling coefficient provides a direct way to mitigate the HA bias associated with residual strength, while preserving accumulated-error correction. More importantly, we observe that this trade-off is module-dependent, making a single global residual strength insufficient to balance effective correction and residual-related bias across modules.Based on these observations, we propose Module-Adaptive Residual Reconstruction (MARR), which assigns a module-specific scaling coefficient to adaptively balance accumulated-error correction and residual-related HA bias for each module.To avoid expensive per-module coefficient search and obtain a stable coefficient estimate, we design a Proportional-Integral-Derivative (PID)-based adaptive update strategy that uses reconstruction error as feedback to progressively refine this coefficient. Experiments on several typical large language models (LLMs) and vision transformers (ViTs) demonstrate the effectiveness of MARR under low-bit quantization (less than or equal to 4-bit), achieving up to 20.2% performance gains on LLMs and up to 4.6% relative gains on ViTs over the residual reconstruction state-of-the-art methods.Code will be made publicly available upon acceptance.",
+      "identifiers": [
+        "SemanticScholar:c45e8f717cdf07690560c5eb96dbac4305236755"
+      ],
+      "semantic_scholar_id": "c45e8f717cdf07690560c5eb96dbac4305236755",
+      "canonical_id": "arXiv:2605.17997",
+      "arxiv_id": "2605.17997",
+      "doi": "10.48550/arXiv.2605.17997",
+      "authors": [
+        "Le Su",
+        "Xing Luo",
+        "Zhi Jin"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 149,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Quant.npu: Enabling Efficient Mobile NPU Inference for on-device LLMs via Fully Static Quantization",
+      "source_url": "https://arxiv.org/abs/2605.20295",
+      "year": 2026,
+      "published": "2026-05-19",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLMs) are increasingly deployed on mobile devices, where Neural Processing Units (NPUs) necessitate fully static quantization for optimal inference efficiency. However, existing post-training quantization (PTQ) methods predominantly rely on dynamic activation quantization, rendering them incompatible with NPU hardware constraints. To bridge the gap between high-fidelity PTQ and NPU-constrained inference, we propose Quant.npu, a integer-only fully static quantization framework. It incorporates learnable quantization parameters and rotation matrices, enabling low-bit activation-weight quantization without runtime quantization parameters re-computation. Crucially, we identify that initialization and selective optimization of quantization parameters is pivotal for optimization stability, as improper initialization and naive joint optimization induce gradient instability that disrupts the optimization of rotation matrices. To address this, we propose a rotation-and-bit-width-aware initialization tailored to diverse activation profiles and a distribution-aware selective optimization (two-stage quantization pipeline) tailored to rotated and unrotated tensors. Furthermore, we introduce a sensitivity-guided adaptive mixed-precision scheme to balance accuracy with inference efficiency. Extensive experiments on real-world mobile NPUs demonstrate that Quant.npu achieves comparable accuracy to state-of-the-art methods, while reducing inference latency by up to 15.1%.",
+      "identifiers": [
+        "SemanticScholar:d4ef796e7dcc1ee40f62cc3079118f2c918d1564"
+      ],
+      "semantic_scholar_id": "d4ef796e7dcc1ee40f62cc3079118f2c918d1564",
+      "canonical_id": "arXiv:2605.20295",
+      "arxiv_id": "2605.20295",
+      "doi": "10.48550/arXiv.2605.20295",
+      "authors": [
+        "Jinghe Zhang",
+        "Da-Liang Xu",
+        "Cheng-Hua Wang",
+        "Weikai Xie",
+        "Tao Qi",
+        "Yun Ma",
+        "Meng-Wei Xu",
+        "Gang Huang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 148,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "FreqKV: Key-Value Compression in Frequency Domain for Context Window Extension",
+      "source_url": "https://arxiv.org/abs/2505.00570",
+      "year": 2025,
+      "published": "2025-05-01",
+      "venue": null,
+      "citation_count": 9,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Existing key-value (KV) cache compression methods for large language models (LLMs) often rely on token eviction, which risks losing critical local information in both long prefilling and decoding scenarios. When extrapolating beyond the pretrained context length, their performance degrades sharply on long-context benchmarks. Motivated by the observation in the frequency domain that the context information is concentrated in the low-frequency components, we propose FreqKV, a parameter-free and architecture-agnostic approach. It iteratively compresses the increasing KV cache in the frequency domain, allowing models to process lengthy contexts efficiently. With minimal training at 8K length, FreqKV extends the context window of LLaMA-2-7B up to 256K tokens while maintaining stable perplexity. Extensive experiments across prefilling and decoding demonstrate that FreqKV enables robust context window extension and consistently outperforms existing KV cache compression methods on LLaMA-2 and LLaMA-3, highlighting its effectiveness for both understanding and generation in long contexts.",
+      "identifiers": [
+        "SemanticScholar:a4278529d2d50fed4f2e006ac776ce9560b92fb8"
+      ],
+      "semantic_scholar_id": "a4278529d2d50fed4f2e006ac776ce9560b92fb8",
+      "canonical_id": "arXiv:2505.00570",
+      "arxiv_id": "2505.00570",
+      "authors": [
+        "Jushi Kai",
+        "Yixuan Wang",
+        "Bo-Yi Zeng",
+        "Haoli Bai",
+        "Bo Jiang",
+        "Ziwei He",
+        "Zhouhan Lin"
+      ],
+      "priority": 9,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 9,
+        "citation_count": 9,
+        "total": 9,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 531,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "PT$^2$-LLM: Post-Training Ternarization for Large Language Models",
+      "source_url": "https://arxiv.org/abs/2510.03267",
+      "year": 2025,
+      "published": "2025-09-27",
+      "venue": null,
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Models (LLMs) have shown impressive capabilities across diverse tasks, but their large memory and compute demands hinder deployment. Ternarization has gained attention as a promising compression technique, delivering substantial size reduction and high computational efficiency. However, its potential in the post-training quantization (PTQ) setting remains underexplored, due to the challenge of training-free parameter optimization and the quantization difficulty posed by outliers and dispersed weights. To address these issues, we propose PT$^2$-LLM, a post-training ternarization framework tailored for LLMs. At its core is an Asymmetric Ternary Quantizer equipped with a two-stage refinement pipeline: (1) Iterative Ternary Fitting (ITF), which alternates between optimal ternary grid construction and flexible rounding to minimize quantization error, and (2) Activation-aware Grid Alignment (AGA), which further refines the ternary grid to better match full-precision outputs. In addition, we propose a plug-and-play Structural Similarity-based Reordering (SSR) strategy that leverages inter-column structural similarity to ease quantization and mitigate outlier effects, further enhancing overall performance. Extensive experiments demonstrate that PT$^2$-LLM delivers competitive performance against state-of-the-art (SOTA) 2-bit PTQ methods with lower memory cost, while also accelerating both prefill and decoding to achieve end-to-end speedup. The code and models will be available at https://github.com/XIANGLONGYAN/PT2-LLM.",
+      "identifiers": [
+        "SemanticScholar:89d9e6906517261c923d61891ddc582270b22719"
+      ],
+      "semantic_scholar_id": "89d9e6906517261c923d61891ddc582270b22719",
+      "canonical_id": "arXiv:2510.03267",
+      "arxiv_id": "2510.03267",
+      "authors": [
+        "Xiang-Long Yan",
+        "Cheng-Zhu Bao",
+        "Zhiteng Li",
+        "Tian-Ao Zhang",
+        "Kai-Cheng Yang",
+        "Hao-Tong Qin",
+        "Ruo-Bing Xie",
+        "Xing-Wu Sun",
+        "Yu-Lun Zhang"
+      ],
+      "priority": 4,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 4,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 382,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Disaggregating Embedding Recommendation Systems with FlexEMR",
+      "source_url": "https://arxiv.org/abs/2410.12794",
+      "year": 2024,
+      "published": "2024-09-28",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Efficiently serving embedding-based recommendation (EMR) models remains a significant challenge due to their increasingly large memory requirements. Today's practice splits the model across many monolithic servers, where a mix of GPUs, CPUs, and DRAM is provisioned in fixed proportions. This approach leads to suboptimal resource utilization and increased costs. Disaggregating embedding operations from neural network inference is a promising solution but raises novel networking challenges. In this paper, we discuss the design of FlexEMR for optimized EMR disaggregation. FlexEMR proposes two sets of techniques to tackle the networking challenges: Leveraging the temporal and spatial locality of embedding lookups to reduce data movement over the network, and designing an optimized multi-threaded RDMA engine for concurrent lookup subrequests. We outline the design space for each technique and present initial results from our early prototype.",
+      "identifiers": [
+        "SemanticScholar:33b6964f0802c709ebb41402d306e9036ab4ab57"
+      ],
+      "semantic_scholar_id": "33b6964f0802c709ebb41402d306e9036ab4ab57",
+      "canonical_id": "arXiv:2410.12794",
+      "arxiv_id": "2410.12794",
+      "doi": "10.48550/arXiv.2410.12794",
+      "authors": [
+        "Yi-Bo Huang",
+        "Zhenning Yang",
+        "Jiarong Xing",
+        "Yi Dai",
+        "Yiming Qiu",
+        "Dingming Wu",
+        "Fan Lai",
+        "Ang Chen"
+      ],
+      "priority": 2,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 2,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 746,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Efficient LLM Pruning with Global Token-Dependency Awareness and Hardware-Adapted Inference",
+      "source_url": "https://www.semanticscholar.org/paper/31b8a29357d61780d42adf2cb88d79c423262d34",
+      "year": null,
+      "published": null,
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": null,
+      "identifiers": [
+        "SemanticScholar:31b8a29357d61780d42adf2cb88d79c423262d34"
+      ],
+      "semantic_scholar_id": "31b8a29357d61780d42adf2cb88d79c423262d34",
+      "canonical_id": "SemanticScholar:31b8a29357d61780d42adf2cb88d79c423262d34",
+      "authors": [
+        "Oshin Dutta",
+        "Ritvik Gupta",
+        "Sumeet Agarwal"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": null,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2603.09222",
+      "identity_tokens": [
+        "id:SemanticScholar:9ce65822257293fff3aa44617681f66e43dea9d0",
+        "id:arXiv:2603.09222",
+        "title:encomp lightweight encoderonly context compression for retrievalaugmented question answering",
+        "url:https://arxiv.org/abs/2603.09222"
+      ],
+      "record": {
+        "title": "EnComp: Lightweight Encoder-Only Context Compression for Retrieval-Augmented Question Answering",
+        "source_url": "https://arxiv.org/abs/2603.09222",
+        "year": 2026,
+        "published": "2026-03-10",
+        "venue": null,
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Efficient context compression is critical for retrieval-augmented question answering in resource-constrained settings, where long retrieved contexts increase latency, memory use, and LLM reader cost. We propose a lightweight encoder-only framework for query-driven sentence pruning that preserves answer-critical evidence while aggressively reducing irrelevant context. Our method learns marginal contribution scores for sentences using counterfactual training signals and optimizes a contrastive ranking objective that separates critical evidence from noncritical context. Our approach scores all sentences from a single full-context encoding, enabling fast inference with low computational overhead. Experiments show that it maintains accuracy comparable to the strongest baseline while using 3.7$\\times$ less peak memory and achieving nearly 3$\\times$ lower compression latency, demonstrating an effective quality--efficiency trade-off for practical resource-constrained deployment.",
+        "identifiers": [
+          "SemanticScholar:9ce65822257293fff3aa44617681f66e43dea9d0"
+        ],
+        "semantic_scholar_id": "9ce65822257293fff3aa44617681f66e43dea9d0",
+        "canonical_id": "arXiv:2603.09222",
+        "arxiv_id": "2603.09222",
+        "authors": [
+          "Thao Do",
+          "D. Tran",
+          "A. Vo",
+          "Seon Kwon Kim",
+          "Daeyoung Kim"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 218,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2603.08088",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2603.08088",
+        "id:SemanticScholar:f995c55d73155af03e9a522ed4d6fa816a7f1ac4",
+        "id:arXiv:2603.08088",
+        "title:eaglepangu acceleratorsafe tree speculative decoding on ascend npus",
+        "url:https://arxiv.org/abs/2603.08088"
+      ],
+      "record": {
+        "title": "EAGLE-Pangu: Accelerator-Safe Tree Speculative Decoding on Ascend NPUs",
+        "source_url": "https://arxiv.org/abs/2603.08088",
+        "year": 2026,
+        "published": "2026-03-09",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Autoregressive decoding remains a primary bottleneck in large language model (LLM) serving, motivating speculative decoding methods that reduce expensive teacher-model invocations by verifying multiple candidate tokens per step. Tree-structured speculation further increases parallelism, but is often brittle when ported across heterogeneous backends and accelerator stacks, where attention masking, KV-cache layouts, and indexing semantics are not interchangeable. We present EAGLE-Pangu, a reproducible system that ports EAGLE-3-style tree speculative decoding to a Pangu teacher backend on Ascend NPUs. EAGLE-Pangu contributes (i) an explicit branch/commit cache manager built on the Cache API, (ii) accelerator-safe tree tensorization that removes undefined negative indices by construction and validates structural invariants, and (iii) a fused-kernel-compatible teacher verification path with a debuggable eager fallback. On 240 turns from MT-Bench and HumanEval-style prompts, EAGLE-Pangu improves end-to-end decoding throughput by 1.27x on average, up to 2.46x at p99, over teacher-only greedy decoding in the fused-kernel performance path. We also provide a fused-kernel-free reference path with structured traces and invariant checks to support reproducible debugging and ablation across execution modes and tree budgets.",
+        "identifiers": [
+          "SemanticScholar:f995c55d73155af03e9a522ed4d6fa816a7f1ac4"
+        ],
+        "semantic_scholar_id": "f995c55d73155af03e9a522ed4d6fa816a7f1ac4",
+        "canonical_id": "arXiv:2603.08088",
+        "arxiv_id": "2603.08088",
+        "doi": "10.48550/arXiv.2603.08088",
+        "authors": [
+          "Changhun Han",
+          "Yi-Jie Hu",
+          "Jinglin Liu"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 219,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.17997",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2605.17997",
+        "id:SemanticScholar:c45e8f717cdf07690560c5eb96dbac4305236755",
+        "id:arXiv:2605.17997",
+        "title:marr moduleadaptive residual reconstruction for lowbit posttraining quantization",
+        "url:https://arxiv.org/abs/2605.17997"
+      ],
+      "record": {
+        "title": "MARR: Module-Adaptive Residual Reconstruction for Low-Bit Post-Training Quantization",
+        "source_url": "https://arxiv.org/abs/2605.17997",
+        "year": 2026,
+        "published": "2026-05-18",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Recently, residual reconstruction-based model quantization methods have achieved promising performance in low-bit post-training quantization (PTQ) by introducing cross-layer residuals to reduce error accumulated from previous layers.However, these residuals may also introduce additional bias arising from the Hessian-approximation (HA) assumption underlying reconstruction-based PTQ, leading to suboptimal quantization performance.In this work, we analyze that multiplying the residual term by a scaling coefficient provides a direct way to mitigate the HA bias associated with residual strength, while preserving accumulated-error correction. More importantly, we observe that this trade-off is module-dependent, making a single global residual strength insufficient to balance effective correction and residual-related bias across modules.Based on these observations, we propose Module-Adaptive Residual Reconstruction (MARR), which assigns a module-specific scaling coefficient to adaptively balance accumulated-error correction and residual-related HA bias for each module.To avoid expensive per-module coefficient search and obtain a stable coefficient estimate, we design a Proportional-Integral-Derivative (PID)-based adaptive update strategy that uses reconstruction error as feedback to progressively refine this coefficient. Experiments on several typical large language models (LLMs) and vision transformers (ViTs) demonstrate the effectiveness of MARR under low-bit quantization (less than or equal to 4-bit), achieving up to 20.2% performance gains on LLMs and up to 4.6% relative gains on ViTs over the residual reconstruction state-of-the-art methods.Code will be made publicly available upon acceptance.",
+        "identifiers": [
+          "SemanticScholar:c45e8f717cdf07690560c5eb96dbac4305236755"
+        ],
+        "semantic_scholar_id": "c45e8f717cdf07690560c5eb96dbac4305236755",
+        "canonical_id": "arXiv:2605.17997",
+        "arxiv_id": "2605.17997",
+        "doi": "10.48550/arXiv.2605.17997",
+        "authors": [
+          "Le Su",
+          "Xing Luo",
+          "Zhi Jin"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 149,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.20295",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2605.20295",
+        "id:SemanticScholar:d4ef796e7dcc1ee40f62cc3079118f2c918d1564",
+        "id:arXiv:2605.20295",
+        "title:quantnpu enabling efficient mobile npu inference for ondevice llms via fully static quantization",
+        "url:https://arxiv.org/abs/2605.20295"
+      ],
+      "record": {
+        "title": "Quant.npu: Enabling Efficient Mobile NPU Inference for on-device LLMs via Fully Static Quantization",
+        "source_url": "https://arxiv.org/abs/2605.20295",
+        "year": 2026,
+        "published": "2026-05-19",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large language models (LLMs) are increasingly deployed on mobile devices, where Neural Processing Units (NPUs) necessitate fully static quantization for optimal inference efficiency. However, existing post-training quantization (PTQ) methods predominantly rely on dynamic activation quantization, rendering them incompatible with NPU hardware constraints. To bridge the gap between high-fidelity PTQ and NPU-constrained inference, we propose Quant.npu, a integer-only fully static quantization framework. It incorporates learnable quantization parameters and rotation matrices, enabling low-bit activation-weight quantization without runtime quantization parameters re-computation. Crucially, we identify that initialization and selective optimization of quantization parameters is pivotal for optimization stability, as improper initialization and naive joint optimization induce gradient instability that disrupts the optimization of rotation matrices. To address this, we propose a rotation-and-bit-width-aware initialization tailored to diverse activation profiles and a distribution-aware selective optimization (two-stage quantization pipeline) tailored to rotated and unrotated tensors. Furthermore, we introduce a sensitivity-guided adaptive mixed-precision scheme to balance accuracy with inference efficiency. Extensive experiments on real-world mobile NPUs demonstrate that Quant.npu achieves comparable accuracy to state-of-the-art methods, while reducing inference latency by up to 15.1%.",
+        "identifiers": [
+          "SemanticScholar:d4ef796e7dcc1ee40f62cc3079118f2c918d1564"
+        ],
+        "semantic_scholar_id": "d4ef796e7dcc1ee40f62cc3079118f2c918d1564",
+        "canonical_id": "arXiv:2605.20295",
+        "arxiv_id": "2605.20295",
+        "doi": "10.48550/arXiv.2605.20295",
+        "authors": [
+          "Jinghe Zhang",
+          "Da-Liang Xu",
+          "Cheng-Hua Wang",
+          "Weikai Xie",
+          "Tao Qi",
+          "Yun Ma",
+          "Meng-Wei Xu",
+          "Gang Huang"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 148,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2505.00570",
+      "identity_tokens": [
+        "id:SemanticScholar:a4278529d2d50fed4f2e006ac776ce9560b92fb8",
+        "id:arXiv:2505.00570",
+        "title:freqkv keyvalue compression in frequency domain for context window extension",
+        "url:https://arxiv.org/abs/2505.00570"
+      ],
+      "record": {
+        "title": "FreqKV: Key-Value Compression in Frequency Domain for Context Window Extension",
+        "source_url": "https://arxiv.org/abs/2505.00570",
+        "year": 2025,
+        "published": "2025-05-01",
+        "venue": null,
+        "citation_count": 9,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Existing key-value (KV) cache compression methods for large language models (LLMs) often rely on token eviction, which risks losing critical local information in both long prefilling and decoding scenarios. When extrapolating beyond the pretrained context length, their performance degrades sharply on long-context benchmarks. Motivated by the observation in the frequency domain that the context information is concentrated in the low-frequency components, we propose FreqKV, a parameter-free and architecture-agnostic approach. It iteratively compresses the increasing KV cache in the frequency domain, allowing models to process lengthy contexts efficiently. With minimal training at 8K length, FreqKV extends the context window of LLaMA-2-7B up to 256K tokens while maintaining stable perplexity. Extensive experiments across prefilling and decoding demonstrate that FreqKV enables robust context window extension and consistently outperforms existing KV cache compression methods on LLaMA-2 and LLaMA-3, highlighting its effectiveness for both understanding and generation in long contexts.",
+        "identifiers": [
+          "SemanticScholar:a4278529d2d50fed4f2e006ac776ce9560b92fb8"
+        ],
+        "semantic_scholar_id": "a4278529d2d50fed4f2e006ac776ce9560b92fb8",
+        "canonical_id": "arXiv:2505.00570",
+        "arxiv_id": "2505.00570",
+        "authors": [
+          "Jushi Kai",
+          "Yixuan Wang",
+          "Bo-Yi Zeng",
+          "Haoli Bai",
+          "Bo Jiang",
+          "Ziwei He",
+          "Zhouhan Lin"
+        ],
+        "priority": 9,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 9,
+          "citation_count": 9,
+          "total": 9,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 531,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2510.03267",
+      "identity_tokens": [
+        "id:SemanticScholar:89d9e6906517261c923d61891ddc582270b22719",
+        "id:arXiv:2510.03267",
+        "title:pt2llm posttraining ternarization for large language models",
+        "url:https://arxiv.org/abs/2510.03267"
+      ],
+      "record": {
+        "title": "PT$^2$-LLM: Post-Training Ternarization for Large Language Models",
+        "source_url": "https://arxiv.org/abs/2510.03267",
+        "year": 2025,
+        "published": "2025-09-27",
+        "venue": null,
+        "citation_count": 4,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large Language Models (LLMs) have shown impressive capabilities across diverse tasks, but their large memory and compute demands hinder deployment. Ternarization has gained attention as a promising compression technique, delivering substantial size reduction and high computational efficiency. However, its potential in the post-training quantization (PTQ) setting remains underexplored, due to the challenge of training-free parameter optimization and the quantization difficulty posed by outliers and dispersed weights. To address these issues, we propose PT$^2$-LLM, a post-training ternarization framework tailored for LLMs. At its core is an Asymmetric Ternary Quantizer equipped with a two-stage refinement pipeline: (1) Iterative Ternary Fitting (ITF), which alternates between optimal ternary grid construction and flexible rounding to minimize quantization error, and (2) Activation-aware Grid Alignment (AGA), which further refines the ternary grid to better match full-precision outputs. In addition, we propose a plug-and-play Structural Similarity-based Reordering (SSR) strategy that leverages inter-column structural similarity to ease quantization and mitigate outlier effects, further enhancing overall performance. Extensive experiments demonstrate that PT$^2$-LLM delivers competitive performance against state-of-the-art (SOTA) 2-bit PTQ methods with lower memory cost, while also accelerating both prefill and decoding to achieve end-to-end speedup. The code and models will be available at https://github.com/XIANGLONGYAN/PT2-LLM.",
+        "identifiers": [
+          "SemanticScholar:89d9e6906517261c923d61891ddc582270b22719"
+        ],
+        "semantic_scholar_id": "89d9e6906517261c923d61891ddc582270b22719",
+        "canonical_id": "arXiv:2510.03267",
+        "arxiv_id": "2510.03267",
+        "authors": [
+          "Xiang-Long Yan",
+          "Cheng-Zhu Bao",
+          "Zhiteng Li",
+          "Tian-Ao Zhang",
+          "Kai-Cheng Yang",
+          "Hao-Tong Qin",
+          "Ruo-Bing Xie",
+          "Xing-Wu Sun",
+          "Yu-Lun Zhang"
+        ],
+        "priority": 4,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 4,
+          "citation_count": 4,
+          "total": 4,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 382,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2410.12794",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2410.12794",
+        "id:SemanticScholar:33b6964f0802c709ebb41402d306e9036ab4ab57",
+        "id:arXiv:2410.12794",
+        "title:disaggregating embedding recommendation systems with flexemr",
+        "url:https://arxiv.org/abs/2410.12794"
+      ],
+      "record": {
+        "title": "Disaggregating Embedding Recommendation Systems with FlexEMR",
+        "source_url": "https://arxiv.org/abs/2410.12794",
+        "year": 2024,
+        "published": "2024-09-28",
+        "venue": "arXiv.org",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Efficiently serving embedding-based recommendation (EMR) models remains a significant challenge due to their increasingly large memory requirements. Today's practice splits the model across many monolithic servers, where a mix of GPUs, CPUs, and DRAM is provisioned in fixed proportions. This approach leads to suboptimal resource utilization and increased costs. Disaggregating embedding operations from neural network inference is a promising solution but raises novel networking challenges. In this paper, we discuss the design of FlexEMR for optimized EMR disaggregation. FlexEMR proposes two sets of techniques to tackle the networking challenges: Leveraging the temporal and spatial locality of embedding lookups to reduce data movement over the network, and designing an optimized multi-threaded RDMA engine for concurrent lookup subrequests. We outline the design space for each technique and present initial results from our early prototype.",
+        "identifiers": [
+          "SemanticScholar:33b6964f0802c709ebb41402d306e9036ab4ab57"
+        ],
+        "semantic_scholar_id": "33b6964f0802c709ebb41402d306e9036ab4ab57",
+        "canonical_id": "arXiv:2410.12794",
+        "arxiv_id": "2410.12794",
+        "doi": "10.48550/arXiv.2410.12794",
+        "authors": [
+          "Yi-Bo Huang",
+          "Zhenning Yang",
+          "Jiarong Xing",
+          "Yi Dai",
+          "Yiming Qiu",
+          "Dingming Wu",
+          "Fan Lai",
+          "Ang Chen"
+        ],
+        "priority": 2,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 2,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 746,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:SemanticScholar:31b8a29357d61780d42adf2cb88d79c423262d34",
+      "identity_tokens": [
+        "id:SemanticScholar:31b8a29357d61780d42adf2cb88d79c423262d34",
+        "title:efficient llm pruning with global tokendependency awareness and hardwareadapted inference",
+        "url:https://www.semanticscholar.org/paper/31b8a29357d61780d42adf2cb88d79c423262d34"
+      ],
+      "record": {
+        "title": "Efficient LLM Pruning with Global Token-Dependency Awareness and Hardware-Adapted Inference",
+        "source_url": "https://www.semanticscholar.org/paper/31b8a29357d61780d42adf2cb88d79c423262d34",
+        "year": null,
+        "published": null,
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": null,
+        "identifiers": [
+          "SemanticScholar:31b8a29357d61780d42adf2cb88d79c423262d34"
+        ],
+        "semantic_scholar_id": "31b8a29357d61780d42adf2cb88d79c423262d34",
+        "canonical_id": "SemanticScholar:31b8a29357d61780d42adf2cb88d79c423262d34",
+        "authors": [
+          "Oshin Dutta",
+          "Ritvik Gupta",
+          "Sumeet Agarwal"
+        ],
+        "priority": 0,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 0,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": null,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:be13554094224c4f8a71e91cea58d963152ec6c7473bc66a576ba1b12eaa3cfb",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}
