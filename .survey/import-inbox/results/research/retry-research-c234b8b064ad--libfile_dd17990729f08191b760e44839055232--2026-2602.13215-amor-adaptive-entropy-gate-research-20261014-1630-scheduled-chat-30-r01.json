@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "50a2b8ff7444e1d92888a1279aa9fd0de41cbd31f9919938908f03a65a191ec9",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/retry-research-c234b8b064ad--libfile_dd17990729f08191b760e44839055232--2026-2602.13215-amor-adaptive-entropy-gate-research-20261014-1630-scheduled-chat-30-r01.md",
+  "canonical_id": "arXiv:2602.13215",
+  "worker_completed_at": "2026-10-14T16:35:00+09:00",
+  "worker_run_key": "20261014-1630-scheduled-chat-30/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 4621,
+    "body_paragraphs": 26,
+    "method_chars": 1645,
+    "method_paragraphs": 10,
+    "evaluation_chars": 0,
+    "limitation_chars": 0,
+    "insufficiency_flags": [
+      "評価説明量 0 < 500",
+      "限界説明量 0 < 推奨 120"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 評価説明量 0 < 500"
+  ],
+  "processed_at": "2026-10-14T13:18:44+00:00"
+}

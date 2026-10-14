@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-14T13:13:12+00:00",
+  "generated_at": "2026-10-14T13:18:45+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -1127,31 +1127,6 @@
       "worker_run_key": "20261014-0330-scheduled-chat-30/r01"
     },
     {
-      "canonical_id": "arXiv:2512.09487",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-14T10:41:34+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2025-2512.09487-routerag-efficient-retrieval-augmented-generation-from-text-and-graph-vi.md と 17 段落 / 3610文字 (100.0%) が完全一致"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 4926,
-        "body_paragraphs": 27,
-        "method_chars": 1643,
-        "method_paragraphs": 9,
-        "evaluation_chars": 923,
-        "limitation_chars": 630,
-        "insufficiency_flags": []
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_4aff3285df88819181f1fa65fb0cb6e3--2025-2512.09487-routerag-adaptive-hybrid-retrieval-research-20261013-2100-scheduled-chat-00-r02.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_4aff3285df88819181f1fa65fb0cb6e3--2025-2512.09487-routerag-adaptive-hybrid-retrieval-research-20261013-2100-scheduled-chat-00-r02.json",
-      "worker_run_key": "20261013-2100-scheduled-chat-00/r02"
-    },
-    {
       "canonical_id": "DOI:10.18653/v1/2021.naacl-main.463",
       "title": null,
       "source_url": null,
@@ -1177,33 +1152,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_4fc44f0519e88191b93bf46c11f84fc1--2021-tr-bert-dynamic-token-reduction-returned-repair-20261013-2200-scheduled-chat-00-r01-v2.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_4fc44f0519e88191b93bf46c11f84fc1--2021-tr-bert-dynamic-token-reduction-returned-repair-20261013-2200-scheduled-chat-00-r01-v2.json",
       "worker_run_key": "20261013-2200-scheduled-chat-00/r01"
-    },
-    {
-      "canonical_id": "arXiv:2605.22502",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-14T10:57:28+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "長文定型文の再利用を検出: papers/inference/14-agentic-inference-serving-runtime/2026-2605.22502-compiling-agentic-workflows-into-llm-weights-near-frontier-quality-at-tw.md と 25 段落 / 5590文字 (100.0%) が完全一致"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 6554,
-        "body_paragraphs": 36,
-        "method_chars": 1251,
-        "method_paragraphs": 6,
-        "evaluation_chars": 2267,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_6d9f0103ee408191b124e1837b438155--2026-2605.22502-compiling-agentic-workflows-research-20261014-0445-scheduled-chat-45-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_6d9f0103ee408191b124e1837b438155--2026-2605.22502-compiling-agentic-workflows-research-20261014-0445-scheduled-chat-45-r01.json",
-      "worker_run_key": "20261014-0445-scheduled-chat-45/r01"
     },
     {
       "canonical_id": "arXiv:2511.18868",
@@ -1420,34 +1368,6 @@
       "worker_run_key": "20261014-1600-scheduled-chat-00/r01"
     },
     {
-      "canonical_id": "arXiv:2602.13215",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-14T12:02:58+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 0 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 4621,
-        "body_paragraphs": 26,
-        "method_chars": 1645,
-        "method_paragraphs": 10,
-        "evaluation_chars": 0,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "評価説明量 0 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_dd17990729f08191b760e44839055232--2026-2602.13215-amor-adaptive-entropy-gate-research-20261014-1630-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_dd17990729f08191b760e44839055232--2026-2602.13215-amor-adaptive-entropy-gate-research-20261014-1630-scheduled-chat-30-r01.json",
-      "worker_run_key": "20261014-1630-scheduled-chat-30/r01"
-    },
-    {
       "canonical_id": "arXiv:2604.07812",
       "title": null,
       "source_url": null,
@@ -1498,33 +1418,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_e28c701c15d88191a8b2d8085b960d36--2023-2306.08543-minillm-on-policy-distillation-research-20261014-0145-scheduled-chat-45-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_e28c701c15d88191a8b2d8085b960d36--2023-2306.08543-minillm-on-policy-distillation-research-20261014-0145-scheduled-chat-45-r01.json",
       "worker_run_key": "20261014-0145-scheduled-chat-45/r01"
-    },
-    {
-      "canonical_id": "arXiv:2605.19049",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-14T12:03:01+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 419 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5072,
-        "body_paragraphs": 24,
-        "method_chars": 1678,
-        "method_paragraphs": 8,
-        "evaluation_chars": 419,
-        "limitation_chars": 745,
-        "insufficiency_flags": [
-          "評価説明量 419 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_e9925c600dc481919896f3dab2b2d9e1--2026-2605.19049-kvbuffer-linear-attention-serving-research-20261014-0200-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_e9925c600dc481919896f3dab2b2d9e1--2026-2605.19049-kvbuffer-linear-attention-serving-research-20261014-0200-scheduled-chat-00-r01.json",
-      "worker_run_key": "20261014-0200-scheduled-chat-00/r01"
     },
     {
       "canonical_id": "arXiv:2604.06515",
@@ -2258,34 +2151,6 @@
       "worker_run_key": "20261014-0845-scheduled-chat-45/r01"
     },
     {
-      "canonical_id": "DOI:10.1145/3712285.3759834",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-14T12:50:29+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 0 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 6270,
-        "body_paragraphs": 33,
-        "method_chars": 1865,
-        "method_paragraphs": 10,
-        "evaluation_chars": 0,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "評価説明量 0 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_e925c473d4948191b343265733d91f2c--2025-doi-10.1145-3712285.3759834-smurfs-collective-adaptive-speculative-decoding-research-20261014-2130-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_e925c473d4948191b343265733d91f2c--2025-doi-10.1145-3712285.3759834-smurfs-collective-adaptive-speculative-decoding-research-20261014-2130-scheduled-chat.json",
-      "worker_run_key": "20261014-2130-scheduled-chat-30/r01"
-    },
-    {
       "canonical_id": "arXiv:2404.03384",
       "title": null,
       "source_url": null,
@@ -2703,8 +2568,8 @@
     },
     {
       "canonical_id": "arXiv:2006.04862",
-      "title": "$O(n)$ Connections are Expressive Enough: Universal Approximability of Sparse Transformers",
-      "source_url": "https://arxiv.org/pdf/2006.04862",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-14T13:13:08+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-30",
@@ -2730,8 +2595,8 @@
     },
     {
       "canonical_id": "arXiv:2512.11529",
-      "title": "xGR: Efficient Generative Recommendation Serving at Scale",
-      "source_url": "https://arxiv.org/pdf/2512.11529",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-14T13:13:09+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-30",
@@ -2757,8 +2622,8 @@
     },
     {
       "canonical_id": "arXiv:2512.03383",
-      "title": "UniQL: Unified Quantization and Low-rank Compression for Adaptive Edge LLMs",
-      "source_url": "https://arxiv.org/html/2512.03383v3",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-14T13:13:10+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-30",
@@ -2784,8 +2649,8 @@
     },
     {
       "canonical_id": "DOI:10.18653/v1/2026.acl-long.1342",
-      "title": "LaCo: Layer-wise Compensation for Pruned Large Language Models",
-      "source_url": "https://aclanthology.org/2026.acl-long.1342.pdf",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-14T13:13:11+00:00",
       "return_count": 6,
       "assigned_worker": "scheduled-chat-00",
@@ -2809,8 +2674,8 @@
     },
     {
       "canonical_id": "arXiv:2601.23278",
-      "title": "FOCUS: DLLMs Know How to Tame Their Compute Bound",
-      "source_url": "https://arxiv.org/html/2601.23278v1",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-14T13:13:12+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-00",
@@ -2834,6 +2699,141 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-b35cb5b1ff94--libfile_e41afb7e7b1c8191bcdb6043d0fd7f5f--2026-2601.23278-focus-dllm-token-eviction-research-20261014-2130-scheduled-chat-30-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-b35cb5b1ff94--libfile_e41afb7e7b1c8191bcdb6043d0fd7f5f--2026-2601.23278-focus-dllm-token-eviction-research-20261014-2130-scheduled-chat-30-r01.json",
       "worker_run_key": "20261014-2130-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2605.22502",
+      "title": "Compiling Agentic Workflows into LLM Weights: Near-Frontier Quality at Two Orders of Magnitude Less Cost",
+      "source_url": "https://arxiv.org/pdf/2605.22502",
+      "returned_at": "2026-10-14T13:18:40+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "長文定型文の再利用を検出: papers/inference/14-agentic-inference-serving-runtime/2026-2605.22502-compiling-agentic-workflows-into-llm-weights-near-frontier-quality-at-tw.md と 25 段落 / 5590文字 (100.0%) が完全一致"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 6554,
+        "body_paragraphs": 36,
+        "method_chars": 1251,
+        "method_paragraphs": 6,
+        "evaluation_chars": 2267,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-bc2fc43d03ce--libfile_6d9f0103ee408191b124e1837b438155--2026-2605.22502-compiling-agentic-workflows-research-20261014-0445-scheduled-chat-45-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-bc2fc43d03ce--libfile_6d9f0103ee408191b124e1837b438155--2026-2605.22502-compiling-agentic-workflows-research-20261014-0445-scheduled-chat-45-r01.json",
+      "worker_run_key": "20261014-0445-scheduled-chat-45/r01"
+    },
+    {
+      "canonical_id": "DOI:10.1145/3712285.3759834",
+      "title": "Towards Efficient LLM Inference via Collective and Adaptive Speculative Decoding",
+      "source_url": "https://doi.org/10.1145/3712285.3759834",
+      "returned_at": "2026-10-14T13:18:41+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 0 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 6270,
+        "body_paragraphs": 33,
+        "method_chars": 1865,
+        "method_paragraphs": 10,
+        "evaluation_chars": 0,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "評価説明量 0 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-bd87e4f0dcd8--libfile_e925c473d4948191b343265733d91f2c--2025-doi-10.1145-3712285.3759834-smurfs-collective-adaptive-speculative-decoding-research-20261014-2130-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-bd87e4f0dcd8--libfile_e925c473d4948191b343265733d91f2c--2025-doi-10.1145-3712285.3759834-smurfs-collective-adaptive-speculative-decoding-research.json",
+      "worker_run_key": "20261014-2130-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2605.19049",
+      "title": "KVBuffer: IO-aware Serving for Linear Attention",
+      "source_url": "https://arxiv.org/html/2605.19049v1",
+      "returned_at": "2026-10-14T13:18:42+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 419 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5072,
+        "body_paragraphs": 24,
+        "method_chars": 1678,
+        "method_paragraphs": 8,
+        "evaluation_chars": 419,
+        "limitation_chars": 745,
+        "insufficiency_flags": [
+          "評価説明量 419 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-be47558e0bb6--libfile_e9925c600dc481919896f3dab2b2d9e1--2026-2605.19049-kvbuffer-linear-attention-serving-research-20261014-0200-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-be47558e0bb6--libfile_e9925c600dc481919896f3dab2b2d9e1--2026-2605.19049-kvbuffer-linear-attention-serving-research-20261014-0200-scheduled-chat-0.json",
+      "worker_run_key": "20261014-0200-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2512.09487",
+      "title": "RouteRAG: Efficient Retrieval-Augmented Generation from Text and Graph via Reinforcement Learning",
+      "source_url": "https://arxiv.org/abs/2512.09487",
+      "returned_at": "2026-10-14T13:18:43+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2025-2512.09487-routerag-efficient-retrieval-augmented-generation-from-text-and-graph-vi.md と 17 段落 / 3610文字 (100.0%) が完全一致"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 4926,
+        "body_paragraphs": 27,
+        "method_chars": 1643,
+        "method_paragraphs": 9,
+        "evaluation_chars": 923,
+        "limitation_chars": 630,
+        "insufficiency_flags": []
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-bf545f226cc9--libfile_4aff3285df88819181f1fa65fb0cb6e3--2025-2512.09487-routerag-adaptive-hybrid-retrieval-research-20261013-2100-scheduled-chat-00-r02.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-bf545f226cc9--libfile_4aff3285df88819181f1fa65fb0cb6e3--2025-2512.09487-routerag-adaptive-hybrid-retrieval-research-20261013-2100-scheduled-chat-.json",
+      "worker_run_key": "20261013-2100-scheduled-chat-00/r02"
+    },
+    {
+      "canonical_id": "arXiv:2602.13215",
+      "title": "When to Think Fast and Slow? AMOR: Adaptive Entropy Gate for Hybrid Models",
+      "source_url": "https://arxiv.org/abs/2602.13215",
+      "returned_at": "2026-10-14T13:18:44+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 0 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 4621,
+        "body_paragraphs": 26,
+        "method_chars": 1645,
+        "method_paragraphs": 10,
+        "evaluation_chars": 0,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "評価説明量 0 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-c234b8b064ad--libfile_dd17990729f08191b760e44839055232--2026-2602.13215-amor-adaptive-entropy-gate-research-20261014-1630-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-c234b8b064ad--libfile_dd17990729f08191b760e44839055232--2026-2602.13215-amor-adaptive-entropy-gate-research-20261014-1630-scheduled-chat-30-r01.json",
+      "worker_run_key": "20261014-1630-scheduled-chat-30/r01"
     }
   ]
 }
