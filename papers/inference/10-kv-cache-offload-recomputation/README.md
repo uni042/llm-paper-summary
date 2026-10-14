@@ -216,6 +216,10 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
   実装：✓ ・ リポジトリ内被引用：1  
   本論文は、長文脈の大規模言語モデル推論で鍵値キャッシュ（KVキャッシュ）をCPUメモリへ退避し、後でGPUへ読み戻す方式が、どの条件で高速化ではなく性能低下を招くかを定量的に分析する。公称64GB/秒のホストからGPUへの転送帯域に対して、実効継続帯域は約15GB/秒であった。
 
+- **2025-12 · [Sim-LLM: Optimizing LLM Inference at the Edge through Inter-Task KV Reuse](2025-5e060858489e-sim-llm-optimizing-llm-inference-at-the-edge-through-inter-task-kv-reuse.md)**  
+  実装：[✓](https://github.com/CGCL-codes/SimLLM) ・ リポジトリ内被引用：1  
+  キー・値キャッシュ（KV キャッシュ）は、一つの生成要求の過去トークンを再計算しないための標準的な手段だが、通常は要求をまたいでキャッシュを共有しない。従来のH2OやStreamingLLMは同一要求内の重要トークンを選び、ZipCacheは保存数値を圧縮するが、異なる要求の意味的な重複を直接利用しない。
+
 ### 直近12か月・未被引用（2025-11〜2026-10）
 
 - **2026-09 · [UNISON: A Co-Designed Near-Memory Scheduler of Session KV Residency for LLM Agents](2026-2609.09643-unison-agent-session-kv-residency.md)**  
@@ -309,10 +313,6 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
 - **2026-02 · [Adaptive Multi-Objective Tiered Storage Configuration for KV Cache in LLM Service](2026-2603.08739-kareto-adaptive-tiered-storage-kv-cache.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   実負荷を再生するシミュレータでDRAM・SSD容量と保持時間のパレート前線を探索し、固定1TB DRAM比で処理量最大9.3%向上・平均初回トークン時間最大58.3%短縮・費用最大20.2%削減する階層KV構成最適化。
-
-- **2025-12 · [Sim-LLM: Optimizing LLM Inference at the Edge through Inter-Task KV Reuse](2025-5e060858489e-sim-llm-optimizing-llm-inference-at-the-edge-through-inter-task-kv-reuse.md)**  
-  実装：[✓](https://github.com/CGCL-codes/SimLLM) ・ リポジトリ内被引用：0  
-  キー・値キャッシュ（KV キャッシュ）は、一つの生成要求の過去トークンを再計算しないための標準的な手段だが、通常は要求をまたいでキャッシュを共有しない。従来のH2OやStreamingLLMは同一要求内の重要トークンを選び、ZipCacheは保存数値を圧縮するが、異なる要求の意味的な重複を直接利用しない。
 
 ### 2年前（2024-11〜2025-10）
 
