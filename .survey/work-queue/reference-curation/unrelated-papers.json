@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-14T08:26:54+00:00",
-  "record_count": 12186,
+  "updated_at": "2026-10-14T09:45:50+00:00",
+  "record_count": 12191,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -175343,6 +175343,118 @@
       "last_checked_at": "2026-10-14T08:26:54+00:00",
       "linked_from": [],
       "title": "HetCCL: Accelerating LLM Training with Heterogeneous GPUs"
+    },
+    "arXiv:2207.11912": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2207.11912",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2207.11912",
+        "SemanticScholar:39638f73ecd4080592d9fd9270fd7aa25df02f63",
+        "arXiv:2207.11912"
+      ],
+      "reason": "Primary abstract concerns big-model training objectives and distributed training methods only; no inference contribution.",
+      "first_checked_at": "2026-10-14T09:45:46+00:00",
+      "last_checked_at": "2026-10-14T09:45:46+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2021-2101.06840-zero-offload-democratizing-billion-scale-model-training.md",
+        "papers/inference/12-moe-parallelism-communication/2021-2101.03961-switch-transformers-scaling-to-trillion-parameter-models-with-simple-and.md",
+        "papers/inference/99-other-inference-systems/2017-1701.06538-outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts.md",
+        "papers/inference/99-other-inference-systems/2018-1806.03377-pipedream-generalized-pipeline-parallelism-for-dnn-training.md",
+        "papers/inference/99-other-inference-systems/2019-1909.08053-megatron-lm-training-multi-billion-parameter-language-models-using-model.md",
+        "papers/inference/99-other-inference-systems/2020-2002.08307-compressing-bert-studying-the-effects-of-weight-pruning-on-transfer-lear.md",
+        "papers/inference/99-other-inference-systems/2021-2104.04473-efficient-large-scale-language-model-training-on-gpu-clusters-using-mega.md",
+        "papers/training/01-training-offload-memory-systems/2021-2104.07857-zero-infinity-breaking-the-gpu-memory-wall-for-extreme-scale-deep-learning.md",
+        "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md"
+      ],
+      "title": "Dive into Big Model Training"
+    },
+    "arXiv:2605.17923": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.17923",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2605.17923",
+        "SemanticScholar:b27113c2dd158ced057a635aaa3d108ba84ae7ed",
+        "arXiv:2605.17923"
+      ],
+      "reason": "Concerns efficient video-diffusion Transformer training, not LLM inference.",
+      "first_checked_at": "2026-10-14T09:45:47+00:00",
+      "last_checked_at": "2026-10-14T09:45:47+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2026-2603.07169-cudamaster-multi-scenario-kernel-optimization.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2507.10069-elasticmm-elastic-multimodal-parallelism.md",
+        "papers/inference/99-other-inference-systems/2019-1909.08053-megatron-lm-training-multi-billion-parameter-language-models-using-model.md",
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md",
+        "papers/inference/99-other-inference-systems/2024-2403.14123-ai-and-memory-wall.md",
+        "papers/inference/99-other-inference-systems/2024-2407.08608-flashattention-3-fast-and-accurate-attention-with-asynchrony-and-low-pre.md",
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ],
+      "title": "AdaptiveLoad: Towards Efficient Video Diffusion Transformer Training"
+    },
+    "DOI:10.64898/2026.02.28.708160": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.64898/2026.02.28.708160",
+      "identity_tokens": [
+        "DOI:10.64898/2026.02.28.708160",
+        "SemanticScholar:b18dbf022c5679d6843bdcdea0baacbfd36e9459"
+      ],
+      "reason": "The primary abstract describes scDynOmics for single-cell multimodal biological data; it does not identify a contribution to LLM inference or serving efficiency.",
+      "first_checked_at": "2026-10-14T09:45:50+00:00",
+      "last_checked_at": "2026-10-14T09:45:50+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-2410.02367-sageattention-accurate-8-bit-attention-for-plug-and-play-inference-accel.md",
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md",
+        "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md",
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08621-retentive-network-a-successor-to-transformer-for-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md",
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "title": "scDynOmics: An Optimized Transformer Model for Representation Learning from Single-Cell Multiomics"
+    },
+    "arXiv:2603.29206": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.29206",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2603.29206",
+        "SemanticScholar:c025308b9dfc8741db4a65e9c14222e02dc51d78",
+        "arXiv:2603.29206"
+      ],
+      "reason": "Analyzes routing-style meta prompts/internal states without demonstrated efficiency contribution.",
+      "first_checked_at": "2026-10-14T09:45:50+00:00",
+      "last_checked_at": "2026-10-14T09:45:50+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2201.05596-deepspeed-moe-inference-compression.md",
+        "papers/inference/99-other-inference-systems/2017-1701.06538-outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts.md",
+        "papers/inference/99-other-inference-systems/2020-2004.12993-deebert-dynamic-early-exiting-for-accelerating-bert-inference.md",
+        "papers/inference/99-other-inference-systems/2020-2006.04152-bert-loses-patience-fast-and-robust-inference-with-early-exit.md",
+        "papers/inference/99-other-inference-systems/2022-2202.08906-st-moe-designing-stable-and-transferable-sparse-expert-models.md",
+        "papers/inference/99-other-inference-systems/2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md",
+        "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md"
+      ],
+      "title": "Route-Induced Density and Stability (RIDE): Controlled Intervention and Mechanism Analysis of Routing-Style Meta Prompts on LLM Internal States"
+    },
+    "arXiv:2506.12263": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2506.12263",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2506.12263",
+        "SemanticScholar:54ca5b504977c3693fbe6cfafb16e8dd22bd76bc",
+        "arXiv:2506.12263"
+      ],
+      "reason": "Survey concerns foundation models in IoT broadly, without specific LLM inference/system efficiency contribution.",
+      "first_checked_at": "2026-10-14T09:45:50+00:00",
+      "last_checked_at": "2026-10-14T09:45:50+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2019-1911.02150-multi-query-attention.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md",
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+        "papers/inference/99-other-inference-systems/2023-2305.13245-gqa.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md",
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md",
+        "papers/inference/99-other-inference-systems/2024-2404.07904-hgrn2-gated-linear-rnns-with-state-expansion.md"
+      ],
+      "title": "A Survey of Foundation Models for IoT: Taxonomy and Criteria-Based Analysis"
     }
   }
 }

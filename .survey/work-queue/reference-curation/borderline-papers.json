@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-14T09:44:19+00:00",
-  "record_count": 5096,
+  "updated_at": "2026-10-14T09:45:49+00:00",
+  "record_count": 5104,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -78778,6 +78778,190 @@
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "How to Compress KV Cache in RL Post-Training? Shadow Mask Distillation for Memory-Efficient Alignment"
+    },
+    "DOI:10.20944/preprints202502.0779.v1": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.20944/preprints202502.0779.v1",
+      "identity_tokens": [
+        "DOI:10.20944/preprints202502.0779.v1",
+        "SemanticScholar:00644c91a541effe27d5ef72c10bb6441eff8093"
+      ],
+      "reason": "Publisher abstract is a diffusion-model efficiency survey, not an LLM-specific method. Sampling, compression and hardware overlap generative inference but direct LLM relevance is unestablished.",
+      "first_checked_at": "2026-10-14T09:45:45+00:00",
+      "last_checked_at": "2026-10-14T09:45:45+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2023-2302.01318-speculative-sampling.md",
+        "papers/inference/05-speculative-decoding-moe/2024-2404.08856-on-speculative-decoding-for-multimodal-large-language-models.md",
+        "papers/inference/12-moe-parallelism-communication/2021-2101.03961-switch-transformers-scaling-to-trillion-parameter-models-with-simple-and.md",
+        "papers/inference/19-inference-evaluation-benchmarking/2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md",
+        "papers/inference/99-other-inference-systems/2023-2311.17043-llama-vid-an-image-is-worth-2-tokens-in-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md",
+        "papers/inference/99-other-inference-systems/2023-2312.06742-honeybee-locality-enhanced-projector-for-multimodal-llm.md",
+        "papers/inference/99-other-inference-systems/2024-2403.06764-an-image-is-worth-1-2-tokens-after-layer-2-plug-and-play-inference-accel.md",
+        "papers/inference/99-other-inference-systems/2024-2405.05803-boosting-multimodal-large-language-models-with-visual-tokens-withdrawal-.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Making Diffusion Models Practical: A Survey on Acceleration and Optimization"
+    },
+    "DOI:10.1109/acp66871.2025.11350784": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/acp66871.2025.11350784",
+      "identity_tokens": [
+        "DOI:10.1109/acp66871.2025.11350784",
+        "SemanticScholar:34d0c8a13236aceba34b9a2cf090f5d71c6e3095"
+      ],
+      "reason": "IEEE publisher abstract unavailable; only identity/title confirmed. General GPU scheduling may relate to LLM serving, so fit is unverified. Failed publisher retrieval: https://ieeexplore.ieee.org/document/11350784 returned JavaScript-disabled/robot verification shell; search results lacked publisher abstract.",
+      "first_checked_at": "2026-10-14T09:45:46+00:00",
+      "last_checked_at": "2026-10-14T09:45:46+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2024-2410.17043-aurora-moe-deployment-communication-scheduling.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2302.11665-alpaserve.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2305.05920-fastserve-iteration-level-preemptive-scheduling.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.14351-serverlessllm-low-latency-serverless-inference.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2502.00722-demystifying-cost-efficiency-in-llm-serving-over-heterogeneous-gpus.md",
+        "papers/inference/12-moe-parallelism-communication/2022-2210.17223-accelerating-distributed-moe-training-and-inference-with-lina.md",
+        "papers/inference/99-other-inference-systems/2019-1909.08053-megatron-lm-training-multi-billion-parameter-language-models-using-model.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Learning Optimal Transport for GPU Allocation: A Deep Learning Approach to Efficient Resource Scheduling"
+    },
+    "arXiv:2603.05503": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2603.05503",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2603.05503",
+        "SemanticScholar:e3a3ddab1d02c3431f11c59d928cf4b6bdaa5a22",
+        "arXiv:2603.05503"
+      ],
+      "reason": "Abstract evaluates calibrated sparse attention for text-to-video diffusion. Attention optimization may transfer, but no LLM inference result is established.",
+      "first_checked_at": "2026-10-14T09:45:47+00:00",
+      "last_checked_at": "2026-10-14T09:45:47+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2018-1805.02867-online-normalizer-calculation-for-softmax.md",
+        "papers/inference/09-kernel-runtime-compilation/2024-2412.05496-flexattention-a-programming-model-for-generating-optimized-attention-kernels.md",
+        "papers/inference/13-sparse-attention/2025-2503.16428-xattention-block-sparse-attention-with-antidiagonal-scoring.md",
+        "papers/inference/99-other-inference-systems/2019-1905.09418-analyzing-multi-head-self-attention-specialized-heads-do-the-heavy-lifti.md",
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md",
+        "papers/inference/99-other-inference-systems/2024-2407.08608-flashattention-3-fast-and-accurate-attention-with-asynchrony-and-low-pre.md",
+        "papers/inference/99-other-inference-systems/2025-2501.01005-flashinfer-attention-engine-serving.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Accelerating Text-to-Video Generation with Calibrated Sparse Attention"
+    },
+    "DOI:10.1109/access.2023.3271640": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/access.2023.3271640",
+      "identity_tokens": [
+        "DOI:10.1109/access.2023.3271640",
+        "SemanticScholar:95cba102f88fb6706bb4ef0690d5bf2b87a4f54a"
+      ],
+      "reason": "The primary IEEE Access abstract describes attention-based NMT weight compression and near-memory decompression with MHA latency and transfer-energy reductions. The demonstrated application is NMT rather than LLM inference, so relevance stays borderline.",
+      "first_checked_at": "2026-10-14T09:45:48+00:00",
+      "last_checked_at": "2026-10-14T09:45:48+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2003.05997-efficient-content-based-sparse-attention-with-routing-transformers.md",
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md",
+        "papers/inference/13-sparse-attention/2020-2012.09852-spatten-efficient-sparse-attention-architecture-with-cascade-token-and-head-pruning.md",
+        "papers/inference/13-sparse-attention/2021-0aaecf5ce8bb-sanger-a-co-design-framework-for-enabling-sparse-attention-using-reconfi.md",
+        "papers/inference/13-sparse-attention/2021-2110.15343-scatterbrain-unifying-sparse-and-low-rank-attention-approximation.md",
+        "papers/inference/15-inference-simulation-emulation/2020-2002.10941-a3-accelerating-attention-mechanisms-in-neural-networks-with-approximati.md",
+        "papers/inference/17-pim-near-data-acceleration/2022-392657209cc9-transpim-a-memory-based-acceleration-via-software-hardware-co-design-for.md",
+        "papers/inference/99-other-inference-systems/2020-2005.03842-gobo-quantizing-attention-based-nlp-models-for-low-latency-and-energy-ef.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Linearization Weight Compression and In-Situ Hardware-Based Decompression for Attention-Based Neural Machine Translation"
+    },
+    "DOI:10.1109/icaace65325.2025.11019425": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/icaace65325.2025.11019425",
+      "identity_tokens": [
+        "DOI:10.1109/icaace65325.2025.11019425",
+        "SemanticScholar:6e5c4bcf67ffcd8bedb63bab4bd0a5746c1a9c5c"
+      ],
+      "reason": "IEEE publisher abstract unavailable; metadata identifies speculative decoding but not its contribution or results. Failed publisher retrieval: https://ieeexplore.ieee.org/document/11019425 returned JavaScript-disabled/robot verification shell; bibliographic results lacked publisher abstract.",
+      "first_checked_at": "2026-10-14T09:45:48+00:00",
+      "last_checked_at": "2026-10-14T09:45:48+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2022-2211.17192-speculative-decoding.md",
+        "papers/inference/05-speculative-decoding-moe/2023-2302.01318-speculative-sampling.md",
+        "papers/inference/05-speculative-decoding-moe/2023-2305.09781-specinfer-tree-speculative-inference.md",
+        "papers/inference/05-speculative-decoding-moe/2023-2310.15141-spectr-fast-speculative-decoding-via-optimal-transport.md",
+        "papers/inference/05-speculative-decoding-moe/2024-2401.10774-medusa-multiple-decoding-heads.md",
+        "papers/inference/99-other-inference-systems/2023-2310.08461-distillspec-improving-speculative-decoding-via-knowledge-distillation.md",
+        "papers/inference/99-other-inference-systems/2024-2401.06706-multi-candidate-speculative-decoding.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Improving Speculative Decoding with Dynamic Adjustment and Probability Smoothing"
+    },
+    "DOI:10.1109/icassp55912.2026.11464073": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/icassp55912.2026.11464073",
+      "identity_tokens": [
+        "DOI:10.1109/icassp55912.2026.11464073",
+        "SemanticScholar:f46bd143c3a92921b20aaf3dffdf8638a68d9ed4"
+      ],
+      "reason": "IEEE Xplore returned a three-line shell without abstract. LLM compression is on-topic by title, but method/evidence are unavailable. Failed publisher retrieval: https://ieeexplore.ieee.org/document/11464073 returned three-line shell without abstract; conference listing had metadata only.",
+      "first_checked_at": "2026-10-14T09:45:48+00:00",
+      "last_checked_at": "2026-10-14T09:45:48+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md",
+        "papers/inference/16-weight-quantization-compression/2024-2401.15024-slicegpt-compress-large-language-models-by-deleting-rows-and-columns.md",
+        "papers/inference/99-other-inference-systems/2019-1909.11556-reducing-transformer-depth-on-demand-with-structured-dropout.md",
+        "papers/inference/99-other-inference-systems/2022-2204.00408-structured-pruning-learns-compact-and-accurate-models.md",
+        "papers/inference/99-other-inference-systems/2023-2301.00774-sparsegpt-massive-language-models-can-be-accurately-pruned-in-one-shot.md",
+        "papers/inference/99-other-inference-systems/2023-2305.11627-llm-pruner-on-the-structural-pruning-of-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2023-2312.11983-fluctuation-based-adaptive-structured-pruning-for-large-language-models.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Dynamic Fusion for Large Language Models Compression"
+    },
+    "arXiv:2312.14385": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2312.14385",
+      "identity_tokens": [
+        "DOI:10.1109/ispass61541.2024.00032",
+        "SemanticScholar:e1e6dcb3c162a2bbbcb128eff6fed01755613d1c",
+        "arXiv:2312.14385"
+      ],
+      "reason": "Profiles systems for multimodal generation beyond LLMs; transformer-system lessons may transfer, but direct LLM efficiency is unestablished.",
+      "first_checked_at": "2026-10-14T09:45:49+00:00",
+      "last_checked_at": "2026-10-14T09:45:49+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2305.13144-response-length-perception-and-sequence-scheduling-an-llm-empowered-llm-inference-pipeline.md",
+        "papers/inference/13-sparse-attention/2020-2003.05997-efficient-content-based-sparse-attention-with-routing-transformers.md",
+        "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md",
+        "papers/inference/99-other-inference-systems/2021-2102.03902-nystr-mformer-a-nystr-m-based-algorithm-for-approximating-self-attention.md",
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+        "papers/inference/99-other-inference-systems/2022-2207.00032-deepspeed-inference-enabling-efficient-inference-of-transformer-models-at-unprecedented-scale.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Generative AI Beyond LLMs: System Implications of Multi-Modal Generation"
+    },
+    "arXiv:2605.14075": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.14075",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2605.14075",
+        "SemanticScholar:bcf8aa66d3ad5d84931343cc8427d0e175c72e7c",
+        "arXiv:2605.14075"
+      ],
+      "reason": "Studies layer relevance/interpretability without demonstrating inference-efficiency method or measured system benefit.",
+      "first_checked_at": "2026-10-14T09:45:49+00:00",
+      "last_checked_at": "2026-10-14T09:45:49+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2024-2401.15024-slicegpt-compress-large-language-models-by-deleting-rows-and-columns.md",
+        "papers/inference/19-inference-evaluation-benchmarking/2024-2403.17887-the-unreasonable-ineffectiveness-of-the-deeper-layers.md",
+        "papers/inference/99-other-inference-systems/2020-2004.03844-on-the-effect-of-dropping-layers-of-pre-trained-transformer-models.md",
+        "papers/inference/99-other-inference-systems/2022-2203.14680-transformer-feed-forward-layers-build-predictions-by-promoting-concepts-.md",
+        "papers/inference/99-other-inference-systems/2023-2305.11627-llm-pruner-on-the-structural-pruning-of-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2023-2306.11695-a-simple-and-effective-pruning-approach-for-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2024-2403.03853-shortgpt-layers-in-large-language-models-are-more-redundant-than-you-exp.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Rethinking Layer Relevance in Large Language Models Beyond Cosine Similarity"
     }
   }
 }

@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-8393276a3467f622-unrel-009",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2506.12263",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2506.12263",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2506.12263",
+      "SemanticScholar:54ca5b504977c3693fbe6cfafb16e8dd22bd76bc",
+      "arXiv:2506.12263"
+    ],
+    "reason": "Survey concerns foundation models in IoT broadly, without specific LLM inference/system efficiency contribution.",
+    "first_checked_at": "2026-10-14T09:45:50+00:00",
+    "last_checked_at": "2026-10-14T09:45:50+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2019-1911.02150-multi-query-attention.md",
+      "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md",
+      "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+      "papers/inference/99-other-inference-systems/2023-2305.13245-gqa.md",
+      "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md",
+      "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md",
+      "papers/inference/99-other-inference-systems/2024-2404.07904-hgrn2-gated-linear-rnns-with-state-expansion.md"
+    ],
+    "title": "A Survey of Foundation Models for IoT: Taxonomy and Criteria-Based Analysis"
+  },
+  "processed_at": "2026-10-14T09:45:51+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-8393276a3467",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

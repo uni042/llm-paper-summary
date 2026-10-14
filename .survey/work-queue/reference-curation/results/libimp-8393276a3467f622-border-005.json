@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-8393276a3467f622-border-005",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2312.14385",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2312.14385",
+    "identity_tokens": [
+      "DOI:10.1109/ispass61541.2024.00032",
+      "SemanticScholar:e1e6dcb3c162a2bbbcb128eff6fed01755613d1c",
+      "arXiv:2312.14385"
+    ],
+    "reason": "Profiles systems for multimodal generation beyond LLMs; transformer-system lessons may transfer, but direct LLM efficiency is unestablished.",
+    "first_checked_at": "2026-10-14T09:45:49+00:00",
+    "last_checked_at": "2026-10-14T09:45:49+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2305.13144-response-length-perception-and-sequence-scheduling-an-llm-empowered-llm-inference-pipeline.md",
+      "papers/inference/13-sparse-attention/2020-2003.05997-efficient-content-based-sparse-attention-with-routing-transformers.md",
+      "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md",
+      "papers/inference/99-other-inference-systems/2021-2102.03902-nystr-mformer-a-nystr-m-based-algorithm-for-approximating-self-attention.md",
+      "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+      "papers/inference/99-other-inference-systems/2022-2207.00032-deepspeed-inference-enabling-efficient-inference-of-transformer-models-at-unprecedented-scale.md",
+      "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Generative AI Beyond LLMs: System Implications of Multi-Modal Generation"
+  },
+  "processed_at": "2026-10-14T09:45:49+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-8393276a3467",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
