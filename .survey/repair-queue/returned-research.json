@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-14T09:47:43+00:00",
+  "generated_at": "2026-10-14T09:52:15+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -1138,8 +1138,8 @@
       "canonical_id": "arXiv:2512.21323",
       "title": "Parallel Token Prediction for Language Models",
       "source_url": "https://arxiv.org/abs/2512.21323",
-      "returned_at": "2026-10-14T09:46:45+00:00",
-      "return_count": 1,
+      "returned_at": "2026-10-14T09:52:15+00:00",
+      "return_count": 2,
       "assigned_worker": "scheduled-chat-45",
       "reason": "blocked_quality",
       "failures": [
@@ -1158,8 +1158,8 @@
           "限界説明量 0 < 推奨 120"
         ]
       },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_6caabf285fac8191b6b9402f6ab2ec3b--2025-2512.21323-parallel-token-prediction-research-20261014-1830-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_6caabf285fac8191b6b9402f6ab2ec3b--2025-2512.21323-parallel-token-prediction-research-20261014-1830-scheduled-chat-30-r01.json",
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-ca12174f016a--libfile_6caabf285fac8191b6b9402f6ab2ec3b--2025-2512.21323-parallel-token-prediction-research-20261014-1830-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-ca12174f016a--libfile_6caabf285fac8191b6b9402f6ab2ec3b--2025-2512.21323-parallel-token-prediction-research-20261014-1830-scheduled-chat-30-r01.json",
       "worker_run_key": "20261014-1830-scheduled-chat-30/r01"
     }
   ]

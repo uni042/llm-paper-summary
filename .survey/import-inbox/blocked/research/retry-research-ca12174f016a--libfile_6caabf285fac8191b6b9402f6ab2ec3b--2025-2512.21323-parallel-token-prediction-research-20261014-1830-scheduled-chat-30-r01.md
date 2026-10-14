@@ -32,6 +32,8 @@ worker_completed_at: '2026-10-14T18:30:00+09:00'
 worker_run_key: '20261014-1830-scheduled-chat-30/r01'
 quality_self_review_passed: true
 quality_self_review_version: 'PAPER-QUALITY-GUIDE-2026-10-07'
+last_audited: null
+audit_version: 0
 ---
 
 # Parallel Token Prediction：乱数を入力化して依存した複数トークンを一度に予測する
