@@ -1,0 +1,219 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-58",
+  "run_key": "discovery-20261014-main-3a0-screen-58-part-02",
+  "reference_main_sha": "3a0c2b55b2b6cb5df776eb7ffd2352bfae528f42",
+  "record_count": 11,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2605.17106",
+      "identity_tokens": [
+        "arXiv:2605.17106",
+        "DOI:10.48550/arXiv.2605.17106"
+      ],
+      "title": "HyDRA: Hybrid Dynamic Routing Architecture for Heterogeneous LLM Pools",
+      "reason": "HyDRA predicts per-query capabilities and chooses the cheapest adequate model in heterogeneous production LLM pools, directly reducing deployment cost while reporting CPU router latency.",
+      "source_url": "https://arxiv.org/abs/2605.17106v2",
+      "body_check": "abstract_screen_only; body_not_read",
+      "abstract_evidence_excerpt": "Production LLM deployments increasingly maintain heterogeneous model pools spanning order-of-magnitude cost differences. Existing routers make binary strong-vs-weak decisions and couple learned parameters to specific model identities, requiring retraining whenever the catalog changes.",
+      "abstract_evidence_sha256": "a815451635f2ab35d38c29f4222b92a8a0491e074f8eb6e3bdf97363300502f5",
+      "abstract_sha256": null,
+      "source_abstract_chars": null,
+      "linked_from": null,
+      "first_checked_at": "2026-10-14",
+      "last_checked_at": "2026-10-14"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.21854",
+      "identity_tokens": [
+        "arXiv:2605.21854",
+        "DOI:10.48550/arXiv.2605.21854"
+      ],
+      "title": "CrossVLA: Cross-Paradigm Post-Training and Inference Optimization for Vision-Language-Action Models",
+      "reason": "The primary abstract for CrossVLA: Cross-Paradigm Post-Training and Inference Optimization for Vision-Language-Action Models reports an efficiency-adjacent method, but its stated evaluation or contribution is limited to a specialized architecture/task and does not establish direct LLM-serving applicability.",
+      "source_url": "https://arxiv.org/abs/2605.21854v2",
+      "body_check": "abstract_screen_only; body_not_read",
+      "abstract_evidence_excerpt": "Vision-Language-Action (VLA) models have rapidly converged on a small set of architectural patterns: discrete-token autoregression (e.g. OpenVLA) and continuous-action flow-matching (e.g. pi-0.5).",
+      "abstract_evidence_sha256": "638a9fb698d0fb9285830d4999c18ad3698abe42c1d510fb28b295147243103f",
+      "abstract_sha256": null,
+      "source_abstract_chars": null,
+      "linked_from": null,
+      "first_checked_at": "2026-10-14",
+      "last_checked_at": "2026-10-14"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.26776",
+      "identity_tokens": [
+        "arXiv:2605.26776",
+        "DOI:10.48550/arXiv.2605.26776"
+      ],
+      "title": "Towards Generalization-Oriented Models for Vehicle Routing Problems with Mixture-of-Experts",
+      "reason": "The primary abstract applies Towards Generalization-Oriented Models for Vehicle Routing Problems with Mixture-of-Experts to a task-specific capability, training objective, safety, or non-LLM application; it does not establish a concrete contribution to LLM inference or serving efficiency.",
+      "source_url": "https://arxiv.org/abs/2605.26776v1",
+      "body_check": "abstract_screen_only; body_not_read",
+      "abstract_evidence_excerpt": "In recent years, Deep Reinforcement Learning (DRL) has achieved substantial progress on Vehicle Routing Problems (VRPs). However, existing DRL-based methods are typically trained on instances generated from a uniform distribution, which limits their performance under real-world distribution shifts.",
+      "abstract_evidence_sha256": "96819b0ccaa0bfef50e55ac9db75573417829441ae5041faaadbf9676e226b9b",
+      "abstract_sha256": null,
+      "source_abstract_chars": null,
+      "linked_from": null,
+      "first_checked_at": "2026-10-14",
+      "last_checked_at": "2026-10-14"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.01000",
+      "identity_tokens": [
+        "arXiv:2606.01000",
+        "DOI:10.48550/arXiv.2606.01000"
+      ],
+      "title": "Trust Functions: Near-Lossless Weak-to-Strong Generalization by Learning When to Trust the Weak Teacher",
+      "reason": "The primary abstract applies Trust Functions: Near-Lossless Weak-to-Strong Generalization by Learning When to Trust the Weak Teacher to a task-specific capability, training objective, safety, or non-LLM application; it does not establish a concrete contribution to LLM inference or serving efficiency.",
+      "source_url": "https://arxiv.org/abs/2606.01000v1",
+      "body_check": "abstract_screen_only; body_not_read",
+      "abstract_evidence_excerpt": "Weak-to-strong generalization studies how to improve a strong student using supervision from a weaker teacher when reliable labels are scarce.",
+      "abstract_evidence_sha256": "289d4fb865d03cd306873a504d54a128e0fbfc9cf1374c45921a46d03c25ad90",
+      "abstract_sha256": null,
+      "source_abstract_chars": null,
+      "linked_from": null,
+      "first_checked_at": "2026-10-14",
+      "last_checked_at": "2026-10-14"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.09575",
+      "identity_tokens": [
+        "arXiv:2608.09575",
+        "DOI:10.48550/arXiv.2608.09575"
+      ],
+      "title": "MSP-Net: Manifold-Guided Spectral Prompt Network for Hyperspectral Object Tracking",
+      "reason": "The primary abstract applies MSP-Net: Manifold-Guided Spectral Prompt Network for Hyperspectral Object Tracking to a task-specific capability, training objective, safety, or non-LLM application; it does not establish a concrete contribution to LLM inference or serving efficiency.",
+      "source_url": "https://arxiv.org/abs/2608.09575v1",
+      "body_check": "abstract_screen_only; body_not_read",
+      "abstract_evidence_excerpt": "Hyperspectral object tracking leverages abundant spectral information to provide unique advantages for target discrimination in complex scenes.",
+      "abstract_evidence_sha256": "4495b8bdc80f66b4bfcc40de8d603d1eb4364315d0cad22146aae8988d48a4b8",
+      "abstract_sha256": null,
+      "source_abstract_chars": null,
+      "linked_from": null,
+      "first_checked_at": "2026-10-14",
+      "last_checked_at": "2026-10-14"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2409.06857",
+      "identity_tokens": [
+        "arXiv:2409.06857",
+        "DOI:10.48550/arXiv.2409.06857"
+      ],
+      "title": "What is the Role of Small Models in the LLM Era: A Survey",
+      "reason": "The primary abstract for What is the Role of Small Models in the LLM Era: A Survey reports an efficiency-adjacent method, but its stated evaluation or contribution is limited to a specialized architecture/task and does not establish direct LLM-serving applicability.",
+      "source_url": "https://arxiv.org/abs/2409.06857v9",
+      "body_check": "abstract_screen_only; body_not_read",
+      "abstract_evidence_excerpt": "Large Language Models (LLMs) have demonstrated remarkable capabilities in various reasoning tasks, which leads to the development of increasingly large models. However, scaling up model sizes results in significantly higher computational costs and energy consumption, which makes these models impractical for academic researchers and businesses with limited resources.",
+      "abstract_evidence_sha256": "1dd63b244da1a4639c493e931c16b0ff70dd756a8fe5a86d771a2bdbc2c62251",
+      "abstract_sha256": null,
+      "source_abstract_chars": null,
+      "linked_from": null,
+      "first_checked_at": "2026-10-14",
+      "last_checked_at": "2026-10-14"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2409.11416",
+      "identity_tokens": [
+        "arXiv:2409.11416",
+        "DOI:10.48550/arXiv.2409.11416"
+      ],
+      "title": "The Unseen AI Disruptions for Power Grids: LLM-Induced Transients",
+      "reason": "The primary abstract for The Unseen AI Disruptions for Power Grids: LLM-Induced Transients reports an efficiency-adjacent method, but its stated evaluation or contribution is limited to a specialized architecture/task and does not establish direct LLM-serving applicability.",
+      "source_url": "https://arxiv.org/abs/2409.11416v1",
+      "body_check": "abstract_screen_only; body_not_read",
+      "abstract_evidence_excerpt": "Recent breakthroughs of large language models (LLMs) have exhibited superior capability across major industries and stimulated multi-hundred-billion-dollar investment in AI-centric data centers in the next 3-5 years.",
+      "abstract_evidence_sha256": "976a3ad407c4b4f3e3a463cda9a527b8634a0c45ef911ba8881ca33ab7eeeac5",
+      "abstract_sha256": null,
+      "source_abstract_chars": null,
+      "linked_from": null,
+      "first_checked_at": "2026-10-14",
+      "last_checked_at": "2026-10-14"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2507.07999",
+      "identity_tokens": [
+        "arXiv:2507.07999",
+        "DOI:10.48550/arXiv.2507.07999"
+      ],
+      "title": "Traceable Evidence Enhanced Visual Grounded Reasoning: Evaluation and Methodology",
+      "reason": "The primary abstract applies Traceable Evidence Enhanced Visual Grounded Reasoning: Evaluation and Methodology to a task-specific capability, training objective, safety, or non-LLM application; it does not establish a concrete contribution to LLM inference or serving efficiency.",
+      "source_url": "https://arxiv.org/abs/2507.07999v2",
+      "body_check": "abstract_screen_only; body_not_read",
+      "abstract_evidence_excerpt": "Models like OpenAI-o3 pioneer visual grounded reasoning by dynamically referencing visual regions, just like human \"thinking with images\". However, no benchmark exists to evaluate these capabilities holistically.",
+      "abstract_evidence_sha256": "4140a0cfd7a0961d04036821432ca0ee6e2833edfc03ef16bc4566b7d714269c",
+      "abstract_sha256": null,
+      "source_abstract_chars": null,
+      "linked_from": null,
+      "first_checked_at": "2026-10-14",
+      "last_checked_at": "2026-10-14"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2210.06583",
+      "identity_tokens": [
+        "arXiv:2210.06583",
+        "DOI:10.48550/arXiv.2210.06583"
+      ],
+      "title": "S4ND: Modeling Images and Videos as Multidimensional Signals Using State Spaces",
+      "reason": "The primary abstract applies S4ND: Modeling Images and Videos as Multidimensional Signals Using State Spaces to a task-specific capability, training objective, safety, or non-LLM application; it does not establish a concrete contribution to LLM inference or serving efficiency.",
+      "source_url": "https://arxiv.org/abs/2210.06583v2",
+      "body_check": "abstract_screen_only; body_not_read",
+      "abstract_evidence_excerpt": "Visual data such as images and videos are typically modeled as discretizations of inherently continuous, multidimensional signals.",
+      "abstract_evidence_sha256": "b44ca7385a5f3e8aeefa0e8ef753073515dc818ec5ed75afde7a9b0dfb980032",
+      "abstract_sha256": null,
+      "source_abstract_chars": null,
+      "linked_from": null,
+      "first_checked_at": "2026-10-14",
+      "last_checked_at": "2026-10-14"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.17847",
+      "identity_tokens": [
+        "arXiv:2505.17847",
+        "DOI:10.48550/arXiv.2505.17847"
+      ],
+      "title": "Time-o1: Time-Series Forecasting Needs Transformed Label Alignment",
+      "reason": "The primary abstract applies Time-o1: Time-Series Forecasting Needs Transformed Label Alignment to a task-specific capability, training objective, safety, or non-LLM application; it does not establish a concrete contribution to LLM inference or serving efficiency.",
+      "source_url": "https://arxiv.org/abs/2505.17847v3",
+      "body_check": "abstract_screen_only; body_not_read",
+      "abstract_evidence_excerpt": "Training time-series forecasting models poses unique challenges in loss function design. Most existing approaches adopt temporal mean squared error, but this study reveals two critical limitations.",
+      "abstract_evidence_sha256": "9c1db41cd5a2adcccc61ce774d320bf9c50afc3a751c3caf9f1ebc442af4e068",
+      "abstract_sha256": null,
+      "source_abstract_chars": null,
+      "linked_from": null,
+      "first_checked_at": "2026-10-14",
+      "last_checked_at": "2026-10-14"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2408.02922",
+      "identity_tokens": [
+        "arXiv:2408.02922",
+        "DOI:10.48550/arXiv.2408.02922"
+      ],
+      "title": "Pose Magic: Efficient and Temporally Consistent Human Pose Estimation with a Hybrid Mamba-GCN Network",
+      "reason": "The primary abstract applies Pose Magic: Efficient and Temporally Consistent Human Pose Estimation with a Hybrid Mamba-GCN Network to a task-specific capability, training objective, safety, or non-LLM application; it does not establish a concrete contribution to LLM inference or serving efficiency.",
+      "source_url": "https://arxiv.org/abs/2408.02922v3",
+      "body_check": "abstract_screen_only; body_not_read",
+      "abstract_evidence_excerpt": "Current state-of-the-art (SOTA) methods in 3D Human Pose Estimation (HPE) are primarily based on Transformers.",
+      "abstract_evidence_sha256": "bf9b34f38489cc55cba42d6b27eec15f4b4cc3bd23e10e512fc288c4d31e85f3",
+      "abstract_sha256": null,
+      "source_abstract_chars": null,
+      "linked_from": null,
+      "first_checked_at": "2026-10-14",
+      "last_checked_at": "2026-10-14"
+    }
+  ]
+}
