@@ -1,0 +1,180 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-discovery",
+  "run_key": "discovery-20261014-main-d64675-screen-75-part-03-32e8312893d3",
+  "reference_main_sha": "b0e86af66d9b752f4801e14fa2f6effed1815ca6",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2509.14008",
+      "identity_tokens": [
+        "SemanticScholar:aa260d61e37348d106b0a817294b2d0690ecd6f5",
+        "arXiv:2509.14008"
+      ],
+      "title": "Hala Technical Report: Building Arabic-Centric Instruction & Translation Models at Scale",
+      "reason": "The Hala report quantizes an Arabic-English teacher to FP8 and reports 2x throughput, but uses this to generate training supervision; the remaining contribution is model training and translation, not serving a deployed LLM.",
+      "source_url": "https://arxiv.org/abs/2509.14008",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T14:51:11Z",
+      "last_checked_at": "2026-10-14T14:51:11Z",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1007/s00530-025-01927-x",
+      "identity_tokens": [
+        "SemanticScholar:c8bc6f5caf2a5292b379dd2cfa9ad9fa95e49f3c",
+        "DOI:10.1007/s00530-025-01927-x"
+      ],
+      "title": "Vehiclesim: realistic and 3D-aware video editing with one image for autonomous driving",
+      "reason": "Vehiclesim is a two-stage video-editing pipeline for autonomous-driving simulation data and vehicle appearance control; its application is video synthesis, not LLM inference systems.",
+      "source_url": "https://doi.org/10.1007/s00530-025-01927-x",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T14:51:11Z",
+      "last_checked_at": "2026-10-14T14:51:11Z",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.neucom.2024.128747",
+      "identity_tokens": [
+        "SemanticScholar:5e4a99126d7eea0674af631b74968addde698d8f",
+        "DOI:10.1016/j.neucom.2024.128747"
+      ],
+      "title": "UCC: A unified cascade compression framework for vision transformer models",
+      "reason": "UCC prunes and aggregates Vision Transformer tokens and reports substantial FLOP reductions, a concrete transformer-compression method. The evidence is for image-classification ViTs and does not establish transfer to LLM inference.",
+      "source_url": "https://doi.org/10.1016/j.neucom.2024.128747",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T14:51:11Z",
+      "last_checked_at": "2026-10-14T14:51:11Z",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2023-2307.13304-quip-2-bit-quantization-of-large-language-models-with-guarantees.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/AINIT65432.2025.11035605",
+      "identity_tokens": [
+        "SemanticScholar:18af750c64ec6aa7c363d81cf02a3e0978ab07f3",
+        "DOI:10.1109/ainit65432.2025.11035605"
+      ],
+      "title": "A Survey of Reinforcement Learning-Driven Knowledge Distillation: Techniques, Challenges, and Applications",
+      "reason": "The candidate's DOI/title are identified, but the registered publisher abstract could not be independently retrieved: IEEE Xplore direct document/abstract opens returned JavaScript-disabled anti-bot verification pages or Internal Error. Exact-DOI search surfaced secondary records, but no publisher abstract section was available. Keep borderline pending primary-source evidence.",
+      "source_url": "https://ieeexplore.ieee.org/abstract/document/11035605",
+      "body_check": "source_unavailable; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-10-14T14:51:11Z",
+      "last_checked_at": "2026-10-14T14:59:37Z",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2024-2407.14679-compact-language-models-via-pruning-and-knowledge-distillation.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.3390/s25196225",
+      "identity_tokens": [
+        "SemanticScholar:0af59e025fef298805c6d5f7675f6323552248f3",
+        "DOI:10.3390/s25196225"
+      ],
+      "title": "MMFNet: A Mamba-Based Multimodal Fusion Network for Remote Sensing Image Semantic Segmentation",
+      "reason": "MMFNet applies Mamba to multimodal remote-sensing image segmentation; the task-specific vision architecture is not an LLM inference-system contribution.",
+      "source_url": "https://www.mdpi.com/1424-8220/25/19/6225",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T14:51:11Z",
+      "last_checked_at": "2026-10-14T14:59:37Z",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.5194/hess-29-5233-2025",
+      "identity_tokens": [
+        "SemanticScholar:1a6e6b9dcfc4b80e96bea51436d9b11cb51f2a6b",
+        "DOI:10.5194/hess-29-5233-2025"
+      ],
+      "title": "Spatially resolved rainfall streamflow modeling in central Europe",
+      "reason": "The paper models rainfall and streamflow using neural networks for hydrology; this is an application model, with no LLM-serving or inference-efficiency contribution.",
+      "source_url": "https://hess.copernicus.org/articles/29/5233/2025/hess-29-5233-2025.html",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T14:51:11Z",
+      "last_checked_at": "2026-10-14T14:59:37Z",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2211.01223",
+      "identity_tokens": [
+        "SemanticScholar:aa8b07fc7c36e0b870a5465d7ce22047c9de365e",
+        "arXiv:2211.01223"
+      ],
+      "title": "Audio Language Modeling using Perceptually-Guided Discrete Representations",
+      "reason": "The audio language model uses discrete audio compression for audio generation/completion, but its contribution is audio-model quality and audio representation, not general LLM inference systems.",
+      "source_url": "https://arxiv.org/abs/2211.01223",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T14:51:11Z",
+      "last_checked_at": "2026-10-14T14:51:11Z",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2311.13126",
+      "identity_tokens": [
+        "SemanticScholar:9c48db369f4811e6566ff3bc7d71be159a544fe2",
+        "arXiv:2311.13126"
+      ],
+      "title": "Towards Better Parameter-Efficient Fine-Tuning for Large Language Models: A Position Paper",
+      "reason": "This position paper discusses PEFT architectures and associated computational demands for LLMs, which may affect resource use, but supplies no concrete inference-time method or measurements.",
+      "source_url": "https://arxiv.org/abs/2311.13126",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T14:51:11Z",
+      "last_checked_at": "2026-10-14T14:51:11Z",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2023-2306.00978-awq.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2311.15044",
+      "identity_tokens": [
+        "SemanticScholar:6240cc46b2b46b6df2aff733c85a4ea1443ccdb1",
+        "arXiv:2311.15044"
+      ],
+      "title": "High-resolution 3T to 7T MRI Synthesis with a Hybrid CNN-Transformer Model",
+      "reason": "The hybrid CNN-Transformer synthesizes 7T MRI maps from 3T medical images; it is a medical-imaging application rather than an LLM systems paper.",
+      "source_url": "https://arxiv.org/abs/2311.15044",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T14:51:11Z",
+      "last_checked_at": "2026-10-14T14:51:11Z",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2410.05021",
+      "identity_tokens": [
+        "SemanticScholar:24f20acad63384afd2809d2c9cdffca26a7ddcf1",
+        "arXiv:2410.05021"
+      ],
+      "title": "DEPT: Decoupled Embeddings for Pre-training Language Models",
+      "reason": "DEPT reduces embedding memory and communication during federated language-model pre-training; the abstract specifically describes a training framework and does not establish inference/serving savings.",
+      "source_url": "https://arxiv.org/abs/2410.05021",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T14:51:11Z",
+      "last_checked_at": "2026-10-14T14:51:11Z",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ]
+    }
+  ]
+}
