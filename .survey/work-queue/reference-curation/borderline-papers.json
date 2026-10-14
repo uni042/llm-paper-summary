@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-14T12:02:37+00:00",
-  "record_count": 5126,
+  "updated_at": "2026-10-14T12:23:35+00:00",
+  "record_count": 5132,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -68663,9 +68663,9 @@
       "identity_tokens": [
         "DOI:10.1109/caibda70336.2026.11621553"
       ],
-      "reason": "Memory-efficient attention for long sequences can relate to attention-system memory use, but this title does not establish an LLM or inference target. Primary-source access limitation: IEEE DOI/publisher route could not be retrieved as readable primary content in this session; only the DOI/title pair was available for screening.",
+      "reason": "Publisher abstract retrieval failed for this DOI: the official publisher URL could not be accessed (IEEE Xplore unavailable/robot check or ACM HTTP 403), so the available cached abstract was not used to make a substantive relevance claim.",
       "first_checked_at": "2026-10-08T18:37:10+00:00",
-      "last_checked_at": "2026-10-14T02:46:30+00:00",
+      "last_checked_at": "2026-10-14T12:23:34+00:00",
       "linked_from": [
         "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md",
         "papers/inference/07-kv-cache-optimization-compression/2024-2410.16179-magicpig-lsh-sampling-efficient-llm-generation.md",
@@ -75278,9 +75278,9 @@
         "id:DOI:10.1109/isca66397.2026.00079",
         "url:https://doi.org/10.1109/ISCA66397.2026.00079"
       ],
-      "reason": "The DOI/title/ISCA 2026 identity are confirmed, but IEEE is the publisher and the IEEE Xplore page did not provide a readable abstract in this retrieval. Only secondary bibliographic snippets were accessible, so no primary abstract or technical claims are recorded. Exact publisher-route failure: web open of https://doi.org/10.1109/ISCA66397.2026.00079 returned “URL ... is not accessible via this tool”.",
+      "reason": "Publisher abstract retrieval failed for this DOI: the official publisher URL could not be accessed (IEEE Xplore unavailable/robot check or ACM HTTP 403), so the available cached abstract was not used to make a substantive relevance claim.",
       "first_checked_at": "2026-10-13T20:57:39+00:00",
-      "last_checked_at": "2026-10-13T20:57:39+00:00",
+      "last_checked_at": "2026-10-14T12:23:33+00:00",
       "linked_from": [
         "papers/inference/01-offload-hierarchical-memory/2024-2409.15654-cambricon-llm-chiplet-flash-inference.md",
         "papers/inference/07-kv-cache-optimization-compression/2023-2306.14048-h2o.md",
@@ -77248,9 +77248,9 @@
       "identity_tokens": [
         "arXiv:2410.10846"
       ],
-      "reason": "Duo-LLM studies per-token routing among small/big FFNs and layer bypass, an inference-compute mechanism. The full text says exhaustive oracle routing is infeasible in deployment and developing an efficient implementation is outside scope; experiments compare perplexity under fixed compute and do not report realized latency, throughput, or memory gains. The mechanism is directly relevant, but its system-efficiency contribution remains unclear.",
+      "reason": "Duo-LLM studies adaptive token routing and layer bypass in LLMs, but the abstract emphasizes oracle/router analysis and does not establish an operational inference-efficiency result.",
       "first_checked_at": "2026-10-14T02:46:31+00:00",
-      "last_checked_at": "2026-10-14T02:46:31+00:00",
+      "last_checked_at": "2026-10-14T12:23:32+00:00",
       "linked_from": [
         "papers/inference/02-adaptive-expert-computation-compression/2022-2202.09368-expert-choice-routing.md",
         "papers/inference/02-adaptive-expert-computation-compression/2024-2402.14800-not-all-experts-are-equal-efficient-expert-pruning-and-skipping-for-mixture-of-e.md",
@@ -79560,6 +79560,170 @@
       ],
       "borderline_recheck_count": 0,
       "title": "MMFNet: A Mamba-Based Multimodal Fusion Network for Remote Sensing Image Semantic Segmentation"
+    },
+    "arXiv:2602.01219": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2602.01219",
+      "identity_tokens": [
+        "arXiv:2602.01219"
+      ],
+      "reason": "MiTA presents top-k routed fast-weight attention as an efficient-attention mechanism, but the abstract reports its experiments on vision tasks only and does not establish LLM inference performance.",
+      "first_checked_at": "2026-10-14T12:23:31+00:00",
+      "last_checked_at": "2026-10-14T12:23:31+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2018-1805.02867-online-normalizer-calculation-for-softmax.md",
+        "papers/inference/13-sparse-attention/2020-2003.05997-efficient-content-based-sparse-attention-with-routing-transformers.md",
+        "papers/inference/13-sparse-attention/2024-2407.02490-minference.md",
+        "papers/inference/13-sparse-attention/2025-2502.11089-native-sparse-attention-hardware-aligned-and-natively-trainable-sparse-a.md",
+        "papers/inference/13-sparse-attention/2025-2502.13189-moba.md",
+        "papers/inference/13-sparse-attention/2025-2502.20766-flexprefill-a-context-aware-sparse-attention-mechanism-for-efficient-long-context-inference.md",
+        "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md",
+        "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md",
+        "papers/inference/99-other-inference-systems/2021-2102.03902-nystr-mformer-a-nystr-m-based-algorithm-for-approximating-self-attention.md",
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md",
+        "papers/inference/99-other-inference-systems/2024-2407.04620-learning-to-learn-at-test-time-rnns-with-expressive-hidden-states.md",
+        "papers/inference/99-other-inference-systems/2024-2407.08608-flashattention-3-fast-and-accurate-attention-with-asynchrony-and-low-pre.md",
+        "papers/inference/99-other-inference-systems/2025-2501.00663-titans-learning-to-memorize-at-test-time.md",
+        "papers/inference/99-other-inference-systems/2026-2601.07832-mhla-restoring-expressivity-of-linear-attention-via-token-level-multi-he.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Mixture-of-Top-k Attention: Efficient Attention via Scalable Fast Weights"
+    },
+    "DOI:10.1145/3779212.3790131": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3779212.3790131",
+      "identity_tokens": [
+        "DOI:10.1145/3779212.3790131"
+      ],
+      "reason": "Publisher abstract retrieval failed for this DOI: the official publisher URL could not be accessed (IEEE Xplore unavailable/robot check or ACM HTTP 403), so the available cached abstract was not used to make a substantive relevance claim.",
+      "first_checked_at": "2026-10-14T12:23:32+00:00",
+      "last_checked_at": "2026-10-14T12:23:32+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2023-2305.09781-specinfer-tree-speculative-inference.md",
+        "papers/inference/07-kv-cache-optimization-compression/2025-2506.02634-kvcache-cache-in-the-wild-characterizing-and-optimizing-kvcache-cache-at.md",
+        "papers/inference/10-kv-cache-offload-recomputation/2023-2311.04934-prompt-cache.md",
+        "papers/inference/10-kv-cache-offload-recomputation/2024-2405.16444-cacheblend-fast-rag-kv-cache-fusion.md",
+        "papers/inference/10-kv-cache-offload-recomputation/2024-2410.05004-hcache-fast-state-restoration-llm-serving.md",
+        "papers/inference/10-kv-cache-offload-recomputation/2024-2410.15332-epic-position-independent-caching.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.05516-pensieve-stateful-large-language-model-serving.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2403.19708-cachedattention-multi-turn-conversation-serving.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2505.07203-prefillonly-an-inference-engine-for-prefill-only-workloads-in-large-language-model-applications.md",
+        "papers/inference/99-other-inference-systems/2024-2412.03594-batchllm-optimizing-large-batched-llm-inference-with-global-prefix-shari.md",
+        "papers/inference/99-other-inference-systems/2025-2501.01005-flashinfer-attention-engine-serving.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Bat: Efficient Generative Recommender Serving with Bipartite Attention"
+    },
+    "arXiv:2505.14638": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2505.14638",
+      "identity_tokens": [
+        "arXiv:2505.14638"
+      ],
+      "reason": "DPQ combines W4 weights with FP8 inference arithmetic to improve accelerator throughput and memory efficiency, but its abstract provides no LLM-specific evaluation or serving connection.",
+      "first_checked_at": "2026-10-14T12:23:32+00:00",
+      "last_checked_at": "2026-10-14T12:23:32+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md",
+        "papers/inference/16-weight-quantization-compression/2023-2306.00978-awq.md",
+        "papers/inference/16-weight-quantization-compression/2023-2306.07629-squeezellm-dense-and-sparse-quantization.md",
+        "papers/inference/16-weight-quantization-compression/2024-2405.04532-qserve.md",
+        "papers/inference/99-other-inference-systems/2022-2206.01861-zeroquant-efficient-and-affordable-post-training-quantization-for-large-.md",
+        "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2023-2305.17888-llm-qat-data-free-quantization-aware-training-for-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2023-2308.13137-omniquant-omnidirectionally-calibrated-quantization-for-large-language-m.md",
+        "papers/inference/99-other-inference-systems/2024-2402.17762-massive-activations-in-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2024-2404.00456-quarot-outlier-free-4-bit-inference-in-rotated-llms.md",
+        "papers/inference/99-other-inference-systems/2025-2405.16406-spinquant-llm-quantization-with-learned-rotations.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Dual Precision Quantization for Efficient and Accurate Deep Neural Networks Inference"
+    },
+    "DOI:10.1109/iwqos70441.2026.11661225": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/iwqos70441.2026.11661225",
+      "identity_tokens": [
+        "DOI:10.1109/iwqos70441.2026.11661225"
+      ],
+      "reason": "Publisher abstract retrieval failed for this DOI: the official publisher URL could not be accessed (IEEE Xplore unavailable/robot check or ACM HTTP 403), so the available cached abstract was not used to make a substantive relevance claim.",
+      "first_checked_at": "2026-10-14T12:23:34+00:00",
+      "last_checked_at": "2026-10-14T12:23:34+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2023-2303.06865-flexgen-high-throughput-generative-inference-of-large-language-models-with-a-single-gpu.md",
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2201.05596-deepspeed-moe-inference-compression.md",
+        "papers/inference/05-speculative-decoding-moe/2022-2203.16487-speculative-decoding-exploiting-speculative-execution-for-accelerating-s.md",
+        "papers/inference/05-speculative-decoding-moe/2022-2211.17192-speculative-decoding.md",
+        "papers/inference/05-speculative-decoding-moe/2023-2302.01318-speculative-sampling.md",
+        "papers/inference/05-speculative-decoding-moe/2023-2305.09781-specinfer-tree-speculative-inference.md",
+        "papers/inference/05-speculative-decoding-moe/2023-2311.08252-rest-retrieval-speculative-decoding.md",
+        "papers/inference/05-speculative-decoding-moe/2024-2401.10774-medusa-multiple-decoding-heads.md",
+        "papers/inference/05-speculative-decoding-moe/2024-2401.15077-eagle-feature-speculative-sampling.md",
+        "papers/inference/05-speculative-decoding-moe/2024-2402.12374-sequoia-scalable-robust-and-hardware-aware-speculative-decoding.md",
+        "papers/inference/05-speculative-decoding-moe/2024-2406.02532-specexec-massively-parallel-speculative-decoding-for-interactive-llm-inference-on-consumer-devices.md",
+        "papers/inference/05-speculative-decoding-moe/2024-2406.17276-opt-tree-speculative-decoding-with-adaptive-draft-tree-structure.md",
+        "papers/inference/05-speculative-decoding-moe/2025-2509.04576-communication-efficient-distributed-speculative-decoding.md",
+        "papers/inference/08-edge-on-device-llm-systems/2025-2507.12000-dssd-efficient-edge-device-llm-deployment-and-collaborative-inference.md",
+        "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md",
+        "papers/inference/16-weight-quantization-compression/2023-2306.00978-awq.md",
+        "papers/inference/99-other-inference-systems/2022-2207.00032-deepspeed-inference-enabling-efficient-inference-of-transformer-models-at-unprecedented-scale.md",
+        "papers/inference/99-other-inference-systems/2022-2211.05102-efficiently-scaling-transformer-inference.md",
+        "papers/survey/09-edge-llm/2025-2410.11845-edge-llm-review.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Ygg: Tree-Based Collaborative Speculative Decoding with Token-Only Transmission"
+    },
+    "DOI:10.1145/3767295.3769339": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3767295.3769339",
+      "identity_tokens": [
+        "DOI:10.1145/3767295.3769339"
+      ],
+      "reason": "Publisher abstract retrieval failed for this DOI: the official publisher URL could not be accessed (IEEE Xplore unavailable/robot check or ACM HTTP 403), so the available cached abstract was not used to make a substantive relevance claim.",
+      "first_checked_at": "2026-10-14T12:23:34+00:00",
+      "last_checked_at": "2026-10-14T12:23:34+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2023-2312.12456-powerinfer.md",
+        "papers/inference/05-speculative-decoding-moe/2023-2302.01318-speculative-sampling.md",
+        "papers/inference/05-speculative-decoding-moe/2024-2401.10774-medusa-multiple-decoding-heads.md",
+        "papers/inference/05-speculative-decoding-moe/2024-2401.15077-eagle-feature-speculative-sampling.md",
+        "papers/inference/09-kernel-runtime-compilation/2023-2310.17157-deja-vu-contextual-sparsity-for-efficient-llms-at-inference-time.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md",
+        "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md",
+        "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md",
+        "papers/inference/16-weight-quantization-compression/2023-2306.00978-awq.md",
+        "papers/inference/16-weight-quantization-compression/2023-2306.11222-losparse-structured-compression-of-large-language-models-based-on-low-rank-and-sparse-approximation.md",
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+        "papers/inference/99-other-inference-systems/2022-2206.01861-zeroquant-efficient-and-affordable-post-training-quantization-for-large-.md",
+        "papers/inference/99-other-inference-systems/2023-2311.01282-flashdecoding-faster-large-language-model-inference-on-gpus.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "LLMFolder: Revisiting Constant Folding in Large Language Models"
+    },
+    "arXiv:2605.31485": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.31485",
+      "identity_tokens": [
+        "arXiv:2605.31485"
+      ],
+      "reason": "The graphical calculus can transform attention masks into preprocessing for efficient sparse-attention blocks, but the abstract demonstrates a formal programming calculus rather than an LLM-serving or runtime result.",
+      "first_checked_at": "2026-10-14T12:23:35+00:00",
+      "last_checked_at": "2026-10-14T12:23:35+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2022-2211.17192-speculative-decoding.md",
+        "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2402.05099-hydragen-high-throughput-llm-inference-shared-prefixes.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md",
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md",
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md",
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Graphical einops: bridging tensor networks and computation graphs"
     }
   }
 }
