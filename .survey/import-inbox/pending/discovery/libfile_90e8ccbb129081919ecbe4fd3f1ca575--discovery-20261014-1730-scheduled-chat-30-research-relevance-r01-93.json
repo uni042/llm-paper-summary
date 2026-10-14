@@ -1,0 +1,26 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261014-1730-scheduled-chat-30/r01/prescreen-93",
+  "reference_main_sha": "d83fe50e3fc98ad82eab51b270a69a804b1ebb33",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.06850",
+      "identity_tokens": [
+        "arxiv:2605.06850"
+      ],
+      "title": "How to Compress KV Cache in RL Post-Training? Shadow Mask Distillation for Memory-Efficient Alignment",
+      "reason": "一次書誌と要旨はRL後学習のロールアウト中のKV圧縮に伴う方策ずれを扱い、システムメモリとの関連がある。しかし著者が2026-09-16に実験結果の誤りを理由として論文を取り下げたため、定量結果を信頼できる収録成果として扱えない。原著v2はwithdrawnでPDFも提供されない。",
+      "source_url": "https://arxiv.org/abs/2605.06850",
+      "body_check": "abstract_screen_only; withdrawal_notice_checked; body_not_read",
+      "first_checked_at": "2026-10-14T17:39:30+09:00",
+      "last_checked_at": "2026-10-14T17:39:30+09:00",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance",
+      "worklist_rank": 93
+    }
+  ]
+}
