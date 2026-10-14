@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-10-15 04:33:45 JST**
+> 自動生成: **2026-10-15 04:52:18 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,11 +11,11 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文数 | **1896** |
-| 未claim Research job | **1896** |
+| 収録候補論文数 | **1895** |
+| 未claim Research job | **1895** |
 | 直近24hのResearch処理完了 | **87** |
-| 最終Research処理完了 | **10-15 03:02:53 JST** |
-| 最終Discovery探索完了 | **10-15 00:45:00 JST** |
+| 最終Research処理完了 | **10-15 04:39:00 JST** |
+| 最終Discovery探索完了 | **10-15 04:00:00 JST** |
 | 整合性異常 | **0** |
 
 ## 16KB未満論文サマリーの再監査
@@ -41,9 +41,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **1896** |
+| canonical_id確認済みの一意な候補論文 | **1895** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **1896** |
+| 非終端Research job合計 | **1895** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -54,10 +54,10 @@
 | 探索候補総数 | **137175** |
 | 処理済み | **21041** |
 | 未処理Discovery候補 | **116134** |
-| 収録済み | **2188** |
-| Research / Audit候補へ昇格済み | **1685** |
+| 収録済み | **2189** |
+| Research / Audit候補へ昇格済み | **1683** |
 | 無関係として除外 | **12162** |
-| 微妙として除外 | **5006** |
+| 微妙として除外 | **5007** |
 
 ### 探索候補の事前フィルタリング（可逆）
 
@@ -89,7 +89,7 @@
 
 - 消化率: **15.3%**
 - 現在の生在庫: 後方references **52918件** / 前方引用 **65838件**。後方候補を優先し、前方プールは後方プールに存在する同一identityを保持しません。
-- 前方・後方を統合してidentity重複を除いた未処理面は **118152件**。そこから既にResearch / Audit候補へ昇格したidentityを除いた値が上表の未処理Discovery候補です。
+- 前方・後方を統合してidentity重複を除いた未処理面は **118150件**。そこから既にResearch / Audit候補へ昇格したidentityを除いた値が上表の未処理Discovery候補です。
 - 処理済み = 収録済み + Research / Audit候補へ昇格済み + 無関係 + 微妙。前方引用・後方referencesの出自は区別せず、DOI/arXiv/title aliasを統合して数えます。
 - STATUS生成時にpaper実体、Research/Audit job、relevance台帳、現在の前方/後方候補からゼロベースで再計算します。
 
@@ -116,7 +116,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **10-14 09:28:07 JST（19時間5分前）** |
+| 最終maintenance完了 | **10-14 09:28:07 JST（19時間24分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **passed** |
 | health | **issues_found** |
@@ -136,19 +136,19 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 指標 | 現在値 |
 |---|---:|
-| 直近6hのResearch完了 | **8** |
+| 直近6hのResearch完了 | **9** |
 | 直近6hのDiscovery run | **12** |
 | 直近6hのDiscovery本文確認・分類 | **106** |
-| 最終Research完了 | **10-15 03:02:53 JST** |
-| 最終Discovery完了 | **10-15 00:45:00 JST** |
+| 最終Research完了 | **10-15 04:39:00 JST** |
+| 最終Discovery完了 | **10-15 04:00:00 JST** |
 
 ### 最新Library-first run
 
-- Research: **10-15 03:02:53 JST** / worker — / run 20261015-0245-scheduled-chat-45/r01 / 成果 **1件**
-  - evidence: .survey/import-inbox/results/research/libfile_77df5f3b31f8819180d502176c5bea50--2025-2512.02044-ccd-coherent-diffusion-decoding-research-20261014-0030-scheduled-chat-30-r01-repair-20261015-0245-sche.json
-- Discovery: **10-15 00:45:00 JST** / worker scheduled-chat-45 / run 20261015-0045-scheduled-chat-45/r01/research-prescreen-1
+- Research: **10-15 04:39:00 JST** / worker — / run 20261015-0430-scheduled-chat-30/r01 / 成果 **1件**
+  - evidence: .survey/import-inbox/results/research/file_00000000204481f79c85f1c2ea8e0804--2026-2603.15685-dash-audio-guided-omnimodal-token-compression-research-20261015-0430-scheduled-chat-30-r01-v2.json
+- Discovery: **10-15 04:00:00 JST** / worker scheduled-chat-00 / run 20261015-0400-scheduled-chat-00/r01
   - 本文確認・分類 **1件** / accept **0件** / unrelated+borderline **1件**
-  - evidence: .survey/import-inbox/results/discovery/libfile_9795d24f63608191abec76cacb879f67--discovery-20261015-0045-scheduled-chat-45-research-relevance-r01-1.json
+  - evidence: .survey/import-inbox/results/discovery/file_00000000de7c81fdb6581196ec567d17--discovery-20261015-0400-scheduled-chat-00-research-relevance-r01-163.json
 
 ### Codex探索成果の反映状況
 
@@ -274,7 +274,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | status | 件数 |
 |---|---:|
-| ready | **1896** |
+| ready | **1895** |
 
 ### 候補の重複・識別情報欠損
 
@@ -294,7 +294,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **2191** |
+| inference/training/survey配下の論文Markdown実体 | **2192** |
 
 ### immutable submissionの未照合
 
