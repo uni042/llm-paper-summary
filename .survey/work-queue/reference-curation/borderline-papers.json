@@ -2,7 +2,7 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-14T12:23:35+00:00",
+  "updated_at": "2026-10-14T12:25:35+00:00",
   "record_count": 5132,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
@@ -76983,10 +76983,20 @@
       "identity_tokens": [
         "DOI:10.1145/3746027.3755307"
       ],
-      "reason": "Bibliographic DOI/title match is confirmed in ACM Multimedia 2025 records, but the ACM Digital Library page returned HTTP 403 and the Crossref REST DOI lookup was inaccessible through the available retrieval tool. The primary abstract could not be screened.",
+      "reason": "Publisher abstract retrieval failed for this DOI: the official publisher URL could not be accessed (IEEE Xplore unavailable/robot check or ACM HTTP 403), so the available cached abstract was not used to make a substantive relevance claim.",
       "first_checked_at": "2026-10-14T01:49:02+00:00",
-      "last_checked_at": "2026-10-14T01:49:02+00:00",
-      "linked_from": [],
+      "last_checked_at": "2026-10-14T12:25:35+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2019-1911.02150-multi-query-attention.md",
+        "papers/inference/07-kv-cache-optimization-compression/2023-2306.14048-h2o.md",
+        "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2404.14469-snapkv.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2409.09086-inf-mllm-efficient-streaming-inference.md",
+        "papers/inference/12-moe-parallelism-communication/2024-2408.10188-longvila-scaling-long-context-visual-language-models-for-long-videos.md",
+        "papers/inference/99-other-inference-systems/2023-2307.16449-moviechat-from-dense-token-to-sparse-memory-for-long-video-understanding.md",
+        "papers/inference/99-other-inference-systems/2024-2410.17434-longvu-spatiotemporal-adaptive-compression-for-long-video-language-under.md",
+        "papers/inference/99-other-inference-systems/2024-2412.04468-nvila-efficient-frontier-visual-language-models.md"
+      ],
       "borderline_recheck_count": 0,
       "title": "CITR: Efficient Long Video Understanding Needs Causal Importance"
     },
@@ -77272,9 +77282,9 @@
       "identity_tokens": [
         "DOI:10.1109/icme59968.2025.11210095"
       ],
-      "reason": "The title names shared KV-cache attention inference for multimodal LLMs, a direct system topic, but the proposed mechanism and measured efficiency could not be screened from a primary abstract. Primary-source access limitation: IEEE Xplore primary abstract page was not accessible; an independent bibliographic record confirmed title and DOI only.",
+      "reason": "Publisher abstract retrieval failed for this DOI: the official publisher URL could not be accessed (IEEE Xplore unavailable/robot check or ACM HTTP 403), so the available cached abstract was not used to make a substantive relevance claim.",
       "first_checked_at": "2026-10-14T02:46:31+00:00",
-      "last_checked_at": "2026-10-14T02:46:31+00:00",
+      "last_checked_at": "2026-10-14T12:25:35+00:00",
       "linked_from": [
         "papers/inference/01-offload-hierarchical-memory/2023-2303.06865-flexgen-high-throughput-generative-inference-of-large-language-models-with-a-single-gpu.md",
         "papers/inference/07-kv-cache-optimization-compression/2024-2402.02750-kivi.md",
