@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-211211ddd80afe3f-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1007/s00530-026-02320-y",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1007/s00530-026-02320-y",
+    "identity_tokens": [
+      "DOI:10.1007/s00530-026-02320-y"
+    ],
+    "reason": "Acoustic Jambaはtime-frequency特徴、noise抑制とclass imbalance lossで船舶放射noise認識を改善する音響応用。",
+    "first_checked_at": "2026-10-14T04:58:11+00:00",
+    "last_checked_at": "2026-10-14T04:58:11+00:00",
+    "linked_from": [],
+    "title": "AJamba: low upper limit and imbalanced ship-radiated noise recognition with Acoustic Jamba model"
+  },
+  "processed_at": "2026-10-14T04:58:11+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-211211ddd80a",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
