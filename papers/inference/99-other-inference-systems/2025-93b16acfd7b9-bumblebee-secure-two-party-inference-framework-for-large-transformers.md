@@ -28,6 +28,8 @@ last_checked: "2026-10-14"
 worker_completed_at: "2026-10-14T07:49:49+09:00"
 worker_run_key: "20261014-0745-scheduled-chat-45/r01"
 lineage: "99-other-inference-systems"
+last_audited: null
+audit_version: 0
 ---
 
 # BumbleBee：二者間秘匿Transformer推論の行列積・非線形関数を通信効率化する

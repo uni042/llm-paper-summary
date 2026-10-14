@@ -35,10 +35,15 @@
   "selection_reason": "Qwen2-VL-2Bを基盤にUI screenshotの冗長visual tokenをconnected-component構造から選別し、self-attentionへ入るtoken数を削減する。推論時にもtoken selectionを適用可能で、GUI向けMLLMのvisual-token計算削減を直接扱うため対象。",
   "semantic_scholar_id": "02128b757f31f1385c9b839201783ceae5cd2088",
   "source_url": "https://arxiv.org/abs/2411.17465",
-  "status": "ready",
+  "status": "superseded",
   "title": "ShowUI: One Vision-Language-Action Model for GUI Visual Agent",
   "type": "research",
   "venue": "Computer Vision and Pattern Recognition",
   "workflow_version": 10,
-  "year": 2024
+  "year": 2024,
+  "superseded_at": "2026-10-14T08:03:23+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2024-2411.17465-showui-one-vision-language-action-model-for-gui-visual-agent.md",
+  "represented_canonical_id": "arXiv:2411.17465",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
