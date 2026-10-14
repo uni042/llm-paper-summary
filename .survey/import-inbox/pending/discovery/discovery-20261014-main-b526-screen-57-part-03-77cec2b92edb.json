@@ -1,0 +1,115 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-57",
+  "run_key": "discovery-20261014-main-b526-screen-57-part-03",
+  "reference_main_sha": "b526294f2e17d723d0e29f8cbe65c4ad466f910f",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.06178",
+      "identity_tokens": [
+        "arXiv:2603.06178"
+      ],
+      "title": "Making Training-Free Diffusion Segmentors Scale with the Generative Power",
+      "reason": "The work scales training-free diffusion segmentors for image segmentation; its target is visual discriminative performance, not LLM inference infrastructure.",
+      "source_url": "https://arxiv.org/abs/2603.06178",
+      "body_check": "abstract_screen_only; body_not_read",
+      "abstract_evidence_excerpt": "As powerful generative models, text-to-image diffusion models have recently been explored for discriminative tasks. A line of research focuses on adapting a pre-trained diffusion model to semantic segmentation without any further training, leading to training-free diffusion segmentors. These methods typically rely on c",
+      "abstract_evidence_sha256": "ca827b5f3b34afd9cc904076c8d3941c1e54cf3ac06666d8938373b182e9a593",
+      "abstract_sha256": null,
+      "source_abstract_chars": null,
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2024-2410.11842-moh-mixture-of-head-attention.md",
+        "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md"
+      ],
+      "first_checked_at": "2026-10-14T13:08:11+09:00",
+      "last_checked_at": "2026-10-14T13:08:11+09:00"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.08265",
+      "identity_tokens": [
+        "arXiv:2608.08265"
+      ],
+      "title": "Opportunity Is Not Realizability: Selection-Valid Diagnostics for Multi-LLM Routing",
+      "reason": "The paper proposes selection-valid diagnostics for multi-LLM routing and measures available routing gains, but the abstract does not establish latency, cost, or throughput optimization; efficiency relevance is plausible but unproven.",
+      "source_url": "https://arxiv.org/abs/2608.08265",
+      "body_check": "abstract_screen_only; body_not_read",
+      "abstract_evidence_excerpt": "Oracle routing measures how much a pool of language models could gain from per-query selection, but the diagnostic has two flaws: testing against a best fixed model selected on the same examples invalidates paired inference, and a full-information oracle sees outcomes no deployable router observes. We separate three es",
+      "abstract_evidence_sha256": "dece2f26b8481ca9eecff08890f392c5203169a054ba44e708447d4469bd27ae",
+      "abstract_sha256": null,
+      "source_abstract_chars": null,
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md",
+        "papers/inference/99-other-inference-systems/2024-2404.14618-hybrid-llm-cost-efficient-and-quality-aware-query-routing.md"
+      ],
+      "first_checked_at": "2026-10-14T13:08:11+09:00",
+      "last_checked_at": "2026-10-14T13:08:11+09:00"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.18653/v1/2025.findings-acl.188",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2025.findings-acl.188"
+      ],
+      "title": "Making RALM Robust to Irrelevant Contexts via Layer Knowledge Guided Attention",
+      "reason": "Layer-knowledge guided attention improves RALM robustness to irrelevant retrieved contexts; its relevance filtering could affect inference work, but the abstract reports answer quality rather than a measured efficiency effect.",
+      "source_url": "https://aclanthology.org/2025.findings-acl.188/",
+      "body_check": "abstract_screen_only; body_not_read",
+      "abstract_evidence_excerpt": "Retrieval-augmented language models (RALMs) aim to incorporate external knowledge to address the issues of factual hallucination and knowledge obsolescence faced by large language models (LLMs). Inevitably, the retrieved passages based on similarity search may be irrelevant to the given question, and the aggregation of",
+      "abstract_evidence_sha256": "b182b9b32f8e106adbcbf78c35d765f55d3eb940f8531873d178be47e87cebc9",
+      "abstract_sha256": null,
+      "source_abstract_chars": null,
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md",
+        "papers/inference/99-other-inference-systems/2023-2212.10511-when-not-to-trust-language-models-investigating-effectiveness-of-paramet.md"
+      ],
+      "first_checked_at": "2026-10-14T13:08:11+09:00",
+      "last_checked_at": "2026-10-14T13:08:11+09:00"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2404.04759",
+      "identity_tokens": [
+        "arXiv:2404.04759"
+      ],
+      "title": "What Happens When Small Is Made Smaller? Exploring the Impact of Compression on Small Data Pretrained Language Models",
+      "reason": "This study examines compression effects on small-data pretrained language models; compression is directly relevant to model size and deployment, although the abstract frames its analysis around model quality rather than serving metrics.",
+      "source_url": "https://arxiv.org/abs/2404.04759",
+      "body_check": "abstract_screen_only; body_not_read",
+      "abstract_evidence_excerpt": "Compression techniques have been crucial in advancing machine learning by enabling efficient training and deployment of large-scale language models. However, these techniques have received limited attention in the context of low-resource language models, which are trained on even smaller amounts of data and under compu",
+      "abstract_evidence_sha256": "2612b7b99a715a51659f4517c3e47fbb7ae9af06cc57f4d52b1fc81f3b89fd24",
+      "abstract_sha256": null,
+      "source_abstract_chars": null,
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md",
+        "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md"
+      ],
+      "first_checked_at": "2026-10-14T13:08:11+09:00",
+      "last_checked_at": "2026-10-14T13:08:11+09:00"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2506.21573",
+      "identity_tokens": [
+        "arXiv:2506.21573"
+      ],
+      "title": "Instruction Learning Paradigms: A Dual Perspective on White-Box and Black-Box LLMs",
+      "reason": "The paper compares white-box and black-box instruction-learning paradigms for LLMs; the stated scope is instruction optimization and capability, not inference efficiency.",
+      "source_url": "https://arxiv.org/abs/2506.21573",
+      "body_check": "abstract_screen_only; body_not_read",
+      "abstract_evidence_excerpt": "Optimizing instructions for large language models (LLMs) is critical for harnessing their full potential in complex and diverse tasks. However, relying solely on white-box approaches demands extensive computational resources and offers limited representational capacity, while black-box models can incur prohibitive fina",
+      "abstract_evidence_sha256": "d4491d070d8b1f6db1eaeca4e6eeb9ad2e0a1e303fc05b4d5a9791f7cbc79040",
+      "abstract_sha256": null,
+      "source_abstract_chars": null,
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2407.06204-a-survey-on-mixture-of-experts-in-large-language-models.md",
+        "papers/survey/09-edge-llm/2025-2410.11845-edge-llm-review.md"
+      ],
+      "first_checked_at": "2026-10-14T13:08:11+09:00",
+      "last_checked_at": "2026-10-14T13:08:11+09:00"
+    }
+  ]
+}
