@@ -1,0 +1,142 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-2b72aa1e26a413c9-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-2b72aa1e26a4",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "DOI:10.1145/3757892.3757906"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 1,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "9b6dca4038e5074d8de3fe589910916088c168dd",
+  "raw_search_result_count": 1,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 1,
+  "provider_progress": {
+    "requested_count": 1,
+    "status_counts": {
+      "allowed": 1,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-14T04:16:31.283215+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "DOI:10.1145/3757892.3757906",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "A Thermal-Aware Workload Scheduler for High-Performance LLM Inference in Cooling-Regulated Datacenters",
+      "source_url": "https://doi.org/10.1145/3757892.3757906",
+      "year": 2025,
+      "published": "2025-07-01",
+      "venue": "ACM SIGEnergy Energy Informatics Review",
+      "citation_count": 13,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The wide deployment of AI datacenters has led to an increasing demand for energy. Recently, there have been developments in the area of reference cooling temperatures in datacenter server rooms, with the aim of avoiding the setting of excessively low temperatures to save energy. For example, the recommendation in Singapore is [28°C–32°C] for level 4 datacenters, while the European Union code of conduct for datacenters suggests a temperature of 35°C. These standards were carefully tested to satisfy overall cooling requirements, yet we observe in this paper that there is a risk that, in certain scenarios, the heat that is dissipated may not match the heat generation of GPUs, especially for high-performance workloads such as LLM inference. Such a mismatch can lead to an increase in the temperature of the GPU and trigger its thermal-throttle mechanism. The GPU frequency will decrease in self-protection from the damage due to overheating and performance degradation. As such, the issue of cooling regulation poses challenges to high-performance computing in AI datacenters. In this paper, we study LLM inference serving in cooling-regulated datacenters. Specifically, a datacenter serves millions of LLM inference jobs. To maximize the throughput, a workload scheduler (e.g., Ray Serve) assigns the jobs to GPUs and determines the execution batch sizes on GPUs. We show that in cooling-regulated datacenters, existing schedulers can increase the probability of thermal throttling by 10 times, and the performance degradation can be as much as 34.2%. We develop a new thermal-aware workload scheduler, TAWS, which takes into consideration the GPU voltage and frequency. Our scheduler can maximize the throughput of LLM inference under a relatively high ambient temperature in datacenter server rooms. The evaluation results show that the new scheduler can lead to a maximum improvement of 40.94% of throughput under 41°C.",
+      "identifiers": [
+        "SemanticScholar:94198362307233f6506b20d26f114a7b8f9107c0"
+      ],
+      "semantic_scholar_id": "94198362307233f6506b20d26f114a7b8f9107c0",
+      "doi": "10.1145/3757892.3757906",
+      "canonical_id": "DOI:10.1145/3757892.3757906",
+      "authors": [
+        "Rui Lu",
+        "Dan Wang"
+      ],
+      "priority": 13,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 13,
+        "citation_count": 13,
+        "total": 13,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 470,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:DOI:10.1145/3757892.3757906",
+      "identity_tokens": [
+        "id:DOI:10.1145/3757892.3757906",
+        "id:SemanticScholar:94198362307233f6506b20d26f114a7b8f9107c0",
+        "title:a thermalaware workload scheduler for highperformance llm inference in coolingregulated datacenters",
+        "url:https://doi.org/10.1145/3757892.3757906"
+      ],
+      "record": {
+        "title": "A Thermal-Aware Workload Scheduler for High-Performance LLM Inference in Cooling-Regulated Datacenters",
+        "source_url": "https://doi.org/10.1145/3757892.3757906",
+        "year": 2025,
+        "published": "2025-07-01",
+        "venue": "ACM SIGEnergy Energy Informatics Review",
+        "citation_count": 13,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The wide deployment of AI datacenters has led to an increasing demand for energy. Recently, there have been developments in the area of reference cooling temperatures in datacenter server rooms, with the aim of avoiding the setting of excessively low temperatures to save energy. For example, the recommendation in Singapore is [28°C–32°C] for level 4 datacenters, while the European Union code of conduct for datacenters suggests a temperature of 35°C. These standards were carefully tested to satisfy overall cooling requirements, yet we observe in this paper that there is a risk that, in certain scenarios, the heat that is dissipated may not match the heat generation of GPUs, especially for high-performance workloads such as LLM inference. Such a mismatch can lead to an increase in the temperature of the GPU and trigger its thermal-throttle mechanism. The GPU frequency will decrease in self-protection from the damage due to overheating and performance degradation. As such, the issue of cooling regulation poses challenges to high-performance computing in AI datacenters. In this paper, we study LLM inference serving in cooling-regulated datacenters. Specifically, a datacenter serves millions of LLM inference jobs. To maximize the throughput, a workload scheduler (e.g., Ray Serve) assigns the jobs to GPUs and determines the execution batch sizes on GPUs. We show that in cooling-regulated datacenters, existing schedulers can increase the probability of thermal throttling by 10 times, and the performance degradation can be as much as 34.2%. We develop a new thermal-aware workload scheduler, TAWS, which takes into consideration the GPU voltage and frequency. Our scheduler can maximize the throughput of LLM inference under a relatively high ambient temperature in datacenter server rooms. The evaluation results show that the new scheduler can lead to a maximum improvement of 40.94% of throughput under 41°C.",
+        "identifiers": [
+          "SemanticScholar:94198362307233f6506b20d26f114a7b8f9107c0"
+        ],
+        "semantic_scholar_id": "94198362307233f6506b20d26f114a7b8f9107c0",
+        "doi": "10.1145/3757892.3757906",
+        "canonical_id": "DOI:10.1145/3757892.3757906",
+        "authors": [
+          "Rui Lu",
+          "Dan Wang"
+        ],
+        "priority": 13,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 13,
+          "citation_count": 13,
+          "total": 13,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 470,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:d9eaabe28870f2847610819e41aa49fd0719f0b0cc7b00bb72a045bd1be40fe6",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}
