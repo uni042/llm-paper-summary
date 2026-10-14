@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-14T13:11:28+00:00",
-  "record_count": 12251,
+  "updated_at": "2026-10-14T13:49:00+00:00",
+  "record_count": 12253,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -176632,6 +176632,30 @@
         "papers/inference/99-other-inference-systems/2022-2211.05102-efficiently-scaling-transformer-inference.md"
       ],
       "title": "Generative Audio Language Modeling with Continuous-valued Tokens and Masked Next-Token Prediction"
+    },
+    "arXiv:2602.20449": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.20449",
+      "identity_tokens": [
+        "arXiv:2602.20449"
+      ],
+      "reason": "タイトルが明示する対象はタンパク質配列を扱う生物学的言語モデルの比較とタンパク質特性予測の推論改善であり、自然言語LLMの推論基盤、KVキャッシュ、サービング、量子化・オフロード等を直接改善する研究ではない。タイトルによる先行除外として扱い、本文未読の段階でタンパク質領域の評価数値を主張しない。",
+      "first_checked_at": "2026-10-14T13:48:58+00:00",
+      "last_checked_at": "2026-10-14T13:48:58+00:00",
+      "linked_from": [],
+      "title": "Protein Language Models Diverge from Natural Language: Comparative Analysis and Improved Inference"
+    },
+    "DOI:10.21105/joss.10304": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.21105/joss.10304",
+      "identity_tokens": [
+        "DOI:10.21105/joss.10304"
+      ],
+      "reason": "タイトルが示す対象は計算実験・ベンチマーク一般を行うPythonフレームワークであり、LLMの実行時スケジューリング、メモリ管理、カーネル、KV、MoE、圧縮など推論システム固有の貢献を明示しない。論文の他の応用可能性までは断定せず、タイトル段階の対象外判定とする。",
+      "first_checked_at": "2026-10-14T13:49:00+00:00",
+      "last_checked_at": "2026-10-14T13:49:00+00:00",
+      "linked_from": [],
+      "title": "ado: a Python framework for computational experimentation and benchmarking"
     }
   }
 }
