@@ -1,0 +1,372 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-72",
+  "run_key": "discovery-20261014-main-ccb6469-screen-72-part-03",
+  "reference_main_sha": "ccb6469b1f0ed3ee7ab3efd3f4551e092b2a47ae",
+  "record_count": 9,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.03371",
+      "identity_tokens": [
+        "arXiv:2603.03371",
+        "SemanticScholar:7ae2ee78993445c4cab4ec54ee075604b30a282b",
+        "DOI:10.48550/arXiv.2603.03371"
+      ],
+      "title": "Sleeper Cell: Injecting Latent Malice Temporal Backdoors into Tool-Using LLMs",
+      "primary_title": "Sleeper Cell: Injecting Latent Malice Temporal Backdoors into Tool-Using LLMs",
+      "reason": "The abstract studies a multi-stage PEFT/RL backdoor attack on tool-using agents and detection of concealed malicious behavior; it is a security evaluation, not an inference-efficiency contribution.",
+      "source_url": "https://arxiv.org/abs/2603.03371v1",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T12:42:55Z",
+      "last_checked_at": "2026-10-14T12:42:55Z",
+      "source_version": "v1",
+      "source_submission_date": "2026-03-02",
+      "primary_source_status": "abstract_available",
+      "verification_method": "Official arXiv v1 abstract page checked; title and arXiv ID match the selected row.",
+      "abstract_evidence_excerpt": "In this work, we demonstrate a novel vector for stealthy backdoor injection: the implantation of latent malicious behavior into tool-using agents via a multi-stage Parameter-Efficient Fine-Tuning (PEFT) framework. Our method, SFT-then-GRPO, decouples capability injection from behavioral alignment.",
+      "abstract_evidence_sha256": "b6784b0848e0fb769950a0008f6523a2fff8ad625f2cb239f33538315854ba0a",
+      "abstract_sha256": null,
+      "source_abstract_chars": null,
+      "source_metadata_sha256": null,
+      "source_response_sha256": null,
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md",
+        "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md",
+        "papers/inference/16-weight-quantization-compression/2023-2306.00978-awq.md"
+      ],
+      "linked_from_lineages": [
+        "LLM Serving / Scheduling / Disaggregation",
+        "post-training quantization / second-order compression / weight-only LLM inference",
+        "重み専用量子化 / 推論カーネル"
+      ],
+      "rank": 41
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2608.15303",
+      "identity_tokens": [
+        "arXiv:2608.15303",
+        "SemanticScholar:19d6d38dcf6a45f6ea7b0d6339ce10f138766dd3"
+      ],
+      "title": "Divergent-Convergent Reasoning: Scaling Test-Time Compute through Structured Solution Synthesis",
+      "primary_title": "Divergent-Convergent Reasoning: Scaling Test-Time Compute through Structured Solution Synthesis",
+      "reason": "DCR selectively allocates test-time reasoning compute and reports similar accuracy with lower compute.",
+      "source_url": "https://arxiv.org/abs/2608.15303",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T12:37:03Z",
+      "last_checked_at": "2026-10-14T12:37:03Z",
+      "source_version": "v1",
+      "source_submission_date": "2026-08-15",
+      "primary_source_status": "abstract_available",
+      "verification_method": "Official arXiv abstract page inspected; title, submission date, current version v1 checked.",
+      "abstract_evidence_excerpt": "Test-time compute can substantially improve Large Language Model (LLM) reasoning performance, yet how and when additional compute helps remains poorly understood. We study Divergent-Convergent Reasoning (DCR), a simple two-phase primitive consisting of an exploration phase that generates multiple candidate solutions followed by a convergent reconciliation phase. We present three core results. Firs",
+      "abstract_evidence_sha256": "d5f3b40a933b4c93df183056a6f3e6d2028b8a77f8ee3a4ac07110d9308ac706",
+      "abstract_sha256": null,
+      "source_abstract_chars": null,
+      "source_metadata_sha256": null,
+      "source_response_sha256": null,
+      "linked_from": [
+        "papers/inference/10-kv-cache-offload-recomputation/2024-2310.07240-cachegen.md",
+        "papers/inference/10-kv-cache-offload-recomputation/2024-2405.16444-cacheblend-fast-rag-kv-cache-fusion.md",
+        "papers/inference/10-kv-cache-offload-recomputation/2025-2510.09665-lmcache.md"
+      ],
+      "linked_from_lineages": [
+        "KV Cache Offload / Recomputation",
+        "KVキャッシュ再利用／圧縮／ネットワーク転送",
+        "kv-cache-offload-recomputation"
+      ],
+      "rank": 42
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.10347",
+      "identity_tokens": [
+        "arXiv:2609.10347",
+        "SemanticScholar:25a9df450bc2c4393ef7973a9a80ec1df64db6ba"
+      ],
+      "title": "CertiFlash: A Formal Verification Framework for Flash Translation Layers in Computational Solid State Drives",
+      "primary_title": "CertiFlash: A Formal Verification Framework for Flash Translation Layers in Computational Solid State Drives",
+      "reason": "CertiFlash verifies SSD flash-translation layers, not model inference.",
+      "source_url": "https://arxiv.org/abs/2609.10347",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T12:37:03Z",
+      "last_checked_at": "2026-10-14T12:37:03Z",
+      "source_version": "v1",
+      "source_submission_date": "2026-09-09",
+      "primary_source_status": "abstract_available",
+      "verification_method": "Official arXiv abstract page inspected; title, submission date, current version v1 checked.",
+      "abstract_evidence_excerpt": "Data-intensive applications move large amounts of data from storage to the compute unit, incurring significant data movement overhead. Storage-centric computing reduces this overhead by moving computation near or inside solid-state drives (SSDs). Enabling it requires modifying SSD policies, e.g., address translation and garbage collection, which are part of the Flash Translation Layer (FTL), the S",
+      "abstract_evidence_sha256": "d7f5469602d1dea8fd75b46d13430d8f8a439cdcb0d727da1ae4731c1f6c7152",
+      "abstract_sha256": null,
+      "source_abstract_chars": null,
+      "source_metadata_sha256": null,
+      "source_response_sha256": null,
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2024-2409.15654-cambricon-llm-chiplet-flash-inference.md",
+        "papers/inference/17-pim-near-data-acceleration/2024-attacc-unleashing-the-power-of-pim-for-batched-transformer-based-generative-model-inference.md",
+        "papers/training/01-training-offload-memory-systems/2024-2403.06664-smart-infinity-fast-large-language-model-training-using-near-storage-processing-.md"
+      ],
+      "linked_from_lineages": [
+        "inference-systems",
+        "その他システム研究",
+        "端末内LLM推論／フラッシュ計算／チップレット／重み退避"
+      ],
+      "rank": 43
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.54097/nk7bve15",
+      "identity_tokens": [
+        "DOI:10.54097/nk7bve15",
+        "SemanticScholar:fc77337501f38cca6db46d0c368399f59343e922"
+      ],
+      "title": "Modern Approaches to LLaMA Fine-Tuning: Parameter-Efficient Methods for Targeted Domain",
+      "primary_title": "Modern Approaches to LLaMA Fine-Tuning: Parameter-Efficient Methods for Targeted Domain",
+      "reason": "The publisher abstract compares LoRA, QLoRA, LongLoRA, and full fine-tuning for domain-specific adaptation, including training efficiency and memory use. It does not establish an LLM inference or serving efficiency contribution.",
+      "source_url": "https://computer-life.org/index.php/ojs/article/view/28",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T12:42:55Z",
+      "last_checked_at": "2026-10-14T12:42:55Z",
+      "source_version": null,
+      "source_submission_date": "2026-02-08",
+      "primary_source_status": "abstract_available",
+      "verification_method": "Official Computer Life article page/search result checked; DOI, title, authors, publication date, and publisher abstract match. Direct page retrieval returned HTTP 503, while search retrieval exposed the publisher abstract and PDF.",
+      "abstract_evidence_excerpt": "This study presents a comprehensive analysis of parameter-efficient fine-tuning (PEFT) methods for LLaMA models, focusing on their application to healthcare, government, ocean science, and financial services. We evaluate Low-Rank Adaptation (LoRA), Quantized LoRA (QLoRA), LongLoRA, and full fine-tuning approaches across multiple dimensions including computational requirements, memory usage, and domain-specific performance. LoRA achieves a 9-fold improvement in training efficiency.",
+      "abstract_evidence_sha256": "cb03a6c91d085fe3b4800746c14fa3d77b46aed359983270dc647a51e35a3989",
+      "abstract_sha256": null,
+      "source_abstract_chars": null,
+      "source_metadata_sha256": null,
+      "source_response_sha256": null,
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md",
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ],
+      "linked_from_lineages": [
+        "post-training quantization / second-order compression / weight-only LLM inference",
+        "大規模モデル学習／分散学習メモリ最適化／DeepSpeed",
+        "注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層"
+      ],
+      "rank": 44
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2505.14604",
+      "identity_tokens": [
+        "arXiv:2505.14604",
+        "SemanticScholar:0014b34f566b087f6de555c3614da4aef94073df",
+        "DOI:10.52202/085713-0069"
+      ],
+      "title": "Let LRMs Break Free from Overthinking via Self-Braking Tuning",
+      "primary_title": "Let LRMs Break Free from Overthinking via Self-Braking Tuning",
+      "reason": "Self-Braking Tuning reduces redundant reasoning and reports fewer generated tokens at comparable accuracy.",
+      "source_url": "https://arxiv.org/abs/2505.14604",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T12:37:03Z",
+      "last_checked_at": "2026-10-14T12:37:03Z",
+      "source_version": "v4",
+      "source_submission_date": "2025-05-20",
+      "primary_source_status": "abstract_available",
+      "verification_method": "Official arXiv abstract page inspected; title, submission date, current version v4 checked.",
+      "abstract_evidence_excerpt": "Large reasoning models (LRMs), such as OpenAI o1 and DeepSeek-R1, have significantly enhanced their reasoning capabilities by generating longer chains of thought, demonstrating outstanding performance across a variety of tasks. However, this performance gain comes at the cost of a substantial increase in redundant reasoning during the generation process, leading to high computational overhead and ",
+      "abstract_evidence_sha256": "38715774aed4edb2817ceeecc12aaaad5cad2ab84ebbec1ec27d3209418ec169",
+      "abstract_sha256": null,
+      "source_abstract_chars": null,
+      "source_metadata_sha256": null,
+      "source_response_sha256": null,
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2025-2504.15895-dynamic-early-exit-in-reasoning-models.md",
+        "papers/inference/05-speculative-decoding-moe/2025-2501.19324-reward-guided-speculative-decoding-for-efficient-llm-reasoning.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md",
+        "papers/inference/19-inference-evaluation-benchmarking/2024-2401.10480-escape-sky-high-cost-early-stopping-self-consistency-for-multi-step-reas.md",
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2503.16419-stop-overthinking-a-survey-on-efficient-reasoning-for-large-language-mod.md",
+        "papers/inference/99-other-inference-systems/2024-2412.11664-c3ot-generating-shorter-chain-of-thought-without-compromising-effectiven.md",
+        "papers/inference/99-other-inference-systems/2024-2412.18547-token-budget-aware-llm-reasoning.md",
+        "papers/inference/99-other-inference-systems/2025-2502.09601-cot-valve-length-compressible-chain-of-thought-tuning.md",
+        "papers/inference/99-other-inference-systems/2025-2502.12067-tokenskip-controllable-chain-of-thought-compression-in-llms.md",
+        "papers/inference/99-other-inference-systems/2025-2502.18600-chain-of-draft-thinking-faster-by-writing-less.md",
+        "papers/inference/99-other-inference-systems/2025-2503.04697-l1-controlling-how-long-a-reasoning-model-thinks-with-reinforcement-lear.md",
+        "papers/inference/99-other-inference-systems/2025-2504.05419-reasoning-models-know-when-they-re-right-probing-hidden-states-for-self-.md",
+        "papers/inference/99-other-inference-systems/2025-2504.09858-reasoning-models-can-be-effective-without-thinking.md"
+      ],
+      "linked_from_lineages": [
+        "Conditional Computation",
+        "LLM Serving / Scheduling / Disaggregation"
+      ],
+      "rank": 45
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2603.07135",
+      "identity_tokens": [
+        "arXiv:2603.07135",
+        "SemanticScholar:cad7509eb8a3cb2b074c33e7f57c242853e2b149",
+        "DOI:10.48550/arXiv.2603.07135"
+      ],
+      "title": "The Model Knows Which Tokens Matter: Automatic Token Selection via Noise Gating",
+      "primary_title": "The Model Knows Which Tokens Matter: Automatic Token Selection via Noise Gating",
+      "reason": "AutoSelect token selection reduces VLM prefill computation and reports a 2.85x speedup.",
+      "source_url": "https://arxiv.org/abs/2603.07135",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T12:37:03Z",
+      "last_checked_at": "2026-10-14T12:37:03Z",
+      "source_version": "v1",
+      "source_submission_date": "2026-03-07",
+      "primary_source_status": "abstract_available",
+      "verification_method": "Official arXiv abstract page inspected; title, submission date, current version v1 checked.",
+      "abstract_evidence_excerpt": "Visual tokens dominate inference cost in vision-language models (VLMs), yet many carry redundant information. Existing pruning methods alleviate this but typically rely on attention magnitude or similarity scores. We reformulate visual token pruning as capacity constrained communication: given a fixed budget K, the model must allocate limited bandwidth to maximally preserve visual information. We ",
+      "abstract_evidence_sha256": "3118e2a49485b0a887b4550140794c69ec5aca5bfc5899c098193c5dad1ff26e",
+      "abstract_sha256": null,
+      "source_abstract_chars": null,
+      "source_metadata_sha256": null,
+      "source_response_sha256": null,
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md",
+        "papers/inference/99-other-inference-systems/2024-2403.06764-an-image-is-worth-1-2-tokens-after-layer-2-plug-and-play-inference-accel.md",
+        "papers/inference/99-other-inference-systems/2024-2403.15388-llava-prumerge-adaptive-token-reduction-for-efficient-large-multimodal-m.md",
+        "papers/inference/99-other-inference-systems/2024-2405.05803-boosting-multimodal-large-language-models-with-visual-tokens-withdrawal-.md",
+        "papers/inference/99-other-inference-systems/2024-2407.08608-flashattention-3-fast-and-accurate-attention-with-asynchrony-and-low-pre.md",
+        "papers/inference/99-other-inference-systems/2024-2410.04417-sparsevlm-visual-token-sparsification-for-efficient-vision-language-mode.md",
+        "papers/inference/99-other-inference-systems/2024-2410.17247-pyramiddrop-accelerating-your-large-vision-language-models-via-pyramid-v.md",
+        "papers/inference/99-other-inference-systems/2025-2502.11494-stop-looking-for-important-tokens-in-multimodal-language-models-duplicat.md",
+        "papers/inference/99-other-inference-systems/2025-2503.02175-divprune-diversity-based-visual-token-pruning-for-large-multimodal-model.md"
+      ],
+      "linked_from_lineages": [
+        "正確な注意計算 / 入出力指向注意 / GPUカーネル最適化 / FlashAttention",
+        "注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層"
+      ],
+      "rank": 46
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2607.02303",
+      "identity_tokens": [
+        "arXiv:2607.02303",
+        "SemanticScholar:ad9abf824a73a941d1357ff4f9481cfa52141edf",
+        "DOI:10.48550/arXiv.2607.02303"
+      ],
+      "title": "A Hippocampus for Linear Attention: An Exact Memory for What the Recurrent State Forgets",
+      "primary_title": "A Hippocampus for Linear Attention: An Exact Memory for What the Recurrent State Forgets",
+      "reason": "HOLA combines linear recurrent state with bounded exact KV cache for long-context memory efficiency.",
+      "source_url": "https://arxiv.org/abs/2607.02303",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T12:37:03Z",
+      "last_checked_at": "2026-10-14T12:37:03Z",
+      "source_version": "v1",
+      "source_submission_date": "2026-07-02",
+      "primary_source_status": "abstract_available",
+      "verification_method": "Official arXiv abstract page inspected; title, submission date, current version v1 checked.",
+      "abstract_evidence_excerpt": "Linear-attention and state-space language models compress the prefix into a fixed-size recurrent state, yielding O(1) memory at the cost of a lossy exact memory: when many key--value associations compete, earlier facts are overwritten and needle recall degrades. Inspired by Complementary Learning Systems, we give linear attention a hippocampal complement. HOLA (Hippocampal Linear Attention) keeps ",
+      "abstract_evidence_sha256": "ad5d4e7e8430b240da7a7a682164010246a0e62287192b9c22d0f69e81e8868f",
+      "abstract_sha256": null,
+      "source_abstract_chars": null,
+      "source_metadata_sha256": null,
+      "source_response_sha256": null,
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2403.19887-jamba-a-hybrid-transformer-mamba-language-model.md",
+        "papers/inference/09-kernel-runtime-compilation/2024-2402.18668-simple-linear-attention-language-models-balance-the-recall-throughput-tr.md",
+        "papers/inference/99-other-inference-systems/2023-2305.16300-landmark-attention-random-access-infinite-context-length-for-transformer.md",
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md",
+        "papers/inference/99-other-inference-systems/2023-2312.04927-zoology-measuring-and-improving-recall-in-efficient-language-models.md",
+        "papers/inference/99-other-inference-systems/2024-2312.06635-gated-linear-attention-transformers-with-hardware-efficient-training.md",
+        "papers/inference/99-other-inference-systems/2024-2402.19427-griffin-mixing-gated-linear-recurrences-with-local-attention-for-efficie.md",
+        "papers/inference/99-other-inference-systems/2024-2406.07522-samba-simple-hybrid-state-space-models-for-efficient-unlimited-context-language-modeling.md",
+        "papers/inference/99-other-inference-systems/2024-2412.06464-gated-delta-networks-improving-mamba2-with-delta-rule.md"
+      ],
+      "linked_from_lineages": [
+        "KV cache memory management / streaming inference / attention sinks / length extrapolation",
+        "state space models / selective SSM / recurrent inference / hardware-aware sequence modeling"
+      ],
+      "rank": 47
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2405.05957",
+      "identity_tokens": [
+        "arXiv:2405.05957",
+        "SemanticScholar:59768c67974ee3d75b427ee5d1af2095e49fc1ea",
+        "DOI:10.48550/arXiv.2405.05957"
+      ],
+      "title": "OpenBA-V2: Reaching 77.3% High Compression Ratio with Fast Multi-Stage Pruning",
+      "primary_title": "OpenBA-V2: Reaching 77.3% High Compression Ratio with Fast Multi-Stage Pruning",
+      "reason": "OpenBA-V2 pruning compresses a 15B LLM to 3.4B for resource-limited deployment.",
+      "source_url": "https://arxiv.org/abs/2405.05957",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T12:37:03Z",
+      "last_checked_at": "2026-10-14T12:37:03Z",
+      "source_version": "v1",
+      "source_submission_date": "2024-05-09",
+      "primary_source_status": "abstract_available",
+      "verification_method": "Official arXiv abstract page inspected; title, submission date, current version v1 checked.",
+      "abstract_evidence_excerpt": "Large Language Models (LLMs) have played an important role in many fields due to their powerful capabilities.However, their massive number of parameters leads to high deployment requirements and incurs significant inference costs, which impedes their practical applications. Training smaller models is an effective way to address this problem. Therefore, we introduce OpenBA-V2, a 3.4B model derived ",
+      "abstract_evidence_sha256": "7b9f6c7813e28660210efed2d31482ed54fb3052bb4150bcfbf4070542b85e09",
+      "abstract_sha256": null,
+      "source_abstract_chars": null,
+      "source_metadata_sha256": null,
+      "source_response_sha256": null,
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2023-2306.03078-spqr-a-sparse-quantized-representation-for-near-lossless-llm-weight-compression.md",
+        "papers/inference/16-weight-quantization-compression/2023-2310.16836-llm-fp4-4-bit-floating-point-quantized-transformers.md",
+        "papers/inference/99-other-inference-systems/2019-1909.11556-reducing-transformer-depth-on-demand-with-structured-dropout.md",
+        "papers/inference/99-other-inference-systems/2023-2301.00774-sparsegpt-massive-language-models-can-be-accurately-pruned-in-one-shot.md",
+        "papers/inference/99-other-inference-systems/2023-2305.11627-llm-pruner-on-the-structural-pruning-of-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md",
+        "papers/inference/99-other-inference-systems/2023-2306.11695-a-simple-and-effective-pruning-approach-for-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2023-2310.06694-sheared-llama-accelerating-language-model-pre-training-via-structured-pr.md",
+        "papers/inference/99-other-inference-systems/2023-2312.11983-fluctuation-based-adaptive-structured-pruning-for-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2024-2402.17764-the-era-of-1-bit-llms-all-large-language-models-are-in-1-58-bits.md"
+      ],
+      "linked_from_lineages": [
+        "inference-systems",
+        "大規模言語モデル重み量子化 / 混合精度 / 疎量子化"
+      ],
+      "rank": 48
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2403.12983",
+      "identity_tokens": [
+        "arXiv:2403.12983",
+        "SemanticScholar:6d71cdbe349c8e0c4d7c7fabe7191ceccdebd848",
+        "DOI:10.48550/arXiv.2403.12983"
+      ],
+      "title": "OSSCAR: One-Shot Structured Pruning in Vision and Language Models with Combinatorial Optimization",
+      "primary_title": "OSSCAR: One-Shot Structured Pruning in Vision and Language Models with Combinatorial Optimization",
+      "reason": "OSSCAR applies structured pruning to language models and reports inference speedups.",
+      "source_url": "https://arxiv.org/abs/2403.12983",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T12:37:03Z",
+      "last_checked_at": "2026-10-14T12:37:03Z",
+      "source_version": "v1",
+      "source_submission_date": "2024-03-02",
+      "primary_source_status": "abstract_available",
+      "verification_method": "Official arXiv abstract page inspected; title, submission date, current version v1 checked.",
+      "abstract_evidence_excerpt": "Structured pruning is a promising approach for reducing the inference costs of large vision and language models. By removing carefully chosen structures, e.g., neurons or attention heads, the improvements from this approach can be realized on standard deep learning hardware. In this work, we focus on structured pruning in the one-shot (post-training) setting, which does not require model retrainin",
+      "abstract_evidence_sha256": "c1daa53b755fa7791d56e005893198ed6ea6d71dc3ef7c8d7d07ba970fab1511",
+      "abstract_sha256": null,
+      "source_abstract_chars": null,
+      "source_metadata_sha256": null,
+      "source_response_sha256": null,
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1905.09418-analyzing-multi-head-self-attention-specialized-heads-do-the-heavy-lifti.md",
+        "papers/inference/99-other-inference-systems/2019-1905.10650-are-sixteen-heads-really-better-than-one.md",
+        "papers/inference/99-other-inference-systems/2019-1909.11556-reducing-transformer-depth-on-demand-with-structured-dropout.md",
+        "papers/inference/99-other-inference-systems/2020-2004.03844-on-the-effect-of-dropping-layers-of-pre-trained-transformer-models.md",
+        "papers/inference/99-other-inference-systems/2022-2204.00408-structured-pruning-learns-compact-and-accurate-models.md",
+        "papers/inference/99-other-inference-systems/2022-2204.09656-a-fast-post-training-pruning-framework-for-transformers.md",
+        "papers/inference/99-other-inference-systems/2022-2206.01861-zeroquant-efficient-and-affordable-post-training-quantization-for-large-.md",
+        "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2023-2301.00774-sparsegpt-massive-language-models-can-be-accurately-pruned-in-one-shot.md"
+      ],
+      "linked_from_lineages": [
+        "03-model-compression-pruning",
+        "Inference / Structured Model Compression and Pruning"
+      ],
+      "rank": 50
+    }
+  ]
+}
