@@ -16,7 +16,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 方向は異なるが、いずれも**KV cacheがdecode時のmemory容量やmemory bandwidthのボトルネックになることを直接緩和する**研究として扱う。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（219本）
+## 自動生成の論文一覧（220本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -432,6 +432,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 - **2026-08 · [LiveMem: Maintaining Memory State Continuity in Long-Running LLM Inference](2026-2608.02515-livemem-maintaining-memory-state-continuity-in-long-running-llm-inferenc.md)**  
   実装：[✓](https://github.com/cafeii/LiveMem) ・ リポジトリ内被引用：0  
   長時間稼働する対話支援や自律エージェントでは、対話履歴がモデルの注意機構（注意機構）の文脈窓を超える。Qwen3-4Bを基盤とする制限文脈の実験では、教師あり微調整と強化学習を経たLiveMemの全課題総合スコアが0.519で、基盤モデルの0.458を上回る。
+
+- **2026-08 · [KVDiagnosis: A Diagnostic Benchmark for KV-Cache Compression in Long-Context Language Models](2026-2608.09412-kvdiagnosis-a-diagnostic-benchmark-for-kv-cache-compression-in-long-cont.md)**  
+  実装：[✓](https://github.com/ChosenQC/KVDiagnosis) ・ リポジトリ内被引用：0  
+  長文脈LLMの鍵・値キャッシュ（KVキャッシュ）を圧縮する研究では、通常、圧縮後の平均正答率と保存容量が比較される。うち7,913行（63.2%）は証拠位置の測定・投影被覆が低いか部分的であった。
 
 - **2026-08 · [KV Cache Compression Through the Lens of Transform Coding](2026-2608.14191-kv-cache-compression-through-the-lens-of-transform-coding.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

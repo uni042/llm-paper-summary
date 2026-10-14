@@ -3,7 +3,7 @@
 複数requestを複数GPU / nodeで処理するLLM servingについて、request順、batch、prefill / decodeのGPU配分、KV再利用・転送、request移動などを調整し、latencyとresource効率を改善する研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（347本）
+## 自動生成の論文一覧（348本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -795,6 +795,10 @@
 - **2026-03 · [Token-Budget-Aware Pool Routing for Cost-Efficient LLM Inference](2026-2604.09613-token-budget-aware-pool-routing.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   短文・長文でvLLMプールを分離し、自己校正した総トークン予算で振り分けてGPU台数を約17〜39%削減するフリート経路制御。
+
+- **2026-03 · [S-HPLB: Efficient LLM Attention Serving via Sparsity-Aware Head Parallelism Load Balance](2026-2603.10353-s-hplb-efficient-llm-attention-serving-via-sparsity-aware-head-paralleli.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  注意行列の全要素を計算せず重要なトークンだけを残す疎注意（sparse 注意機構）は有効だが、各注意ヘッドに同じトークン数を割り当てると、少数のトークンで十分なヘッドには過剰計算を与え、多くのトークンを必要とするヘッドでは重要な情報を捨てる。
 
 - **2026-03 · [Multi-stage Flow Scheduling for LLM Serving](2026-2603.17456-multi-stage-flow-scheduling.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
