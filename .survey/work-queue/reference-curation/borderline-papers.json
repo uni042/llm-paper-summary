@@ -2,7 +2,7 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-15T09:45:43+00:00",
+  "updated_at": "2026-10-15T11:47:36+00:00",
   "record_count": 5161,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
@@ -71873,9 +71873,9 @@
         "id:arXiv:2602.02050",
         "url:https://arxiv.org/abs/2602.02050"
       ],
-      "reason": "一次要旨では、長いエージェント実行軌跡で無駄なツール呼出しが増える問題に対し、エントロピー減少を報酬信号とする学習を提案する。疎な結果報酬で比較対象平均よりツール呼出し72.07%削減、密な過程報酬で性能22.27%改善を報告し、推論時のツール費用に関係する。ただし改善機構はエージェントの強化学習と行動選択であり、LLMの生成・GPU推論基盤・KVメモリの直接最適化ではないため境界的とする。",
+      "reason": "一次要旨によれば、エージェントのツール呼び出し前後のエントロピー低下を強化学習の報酬に用い、無駄な呼び出しを平均ベースライン比72.07%削減する。実行時のツール費用・遅延には関連するが、主要貢献は学習時の報酬設計であり、推論サーバやメモリ・カーネル最適化の直接研究ではないため境界的。",
       "first_checked_at": "2026-10-12T21:39:41+00:00",
-      "last_checked_at": "2026-10-13T10:42:58+00:00",
+      "last_checked_at": "2026-10-15T11:47:36+00:00",
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "Rethinking the Role of Entropy in Optimizing Tool-Use Behaviors for Large Language Model Agents"
