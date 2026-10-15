@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-15T11:47:36+00:00",
-  "record_count": 5161,
+  "updated_at": "2026-10-15T14:52:21+00:00",
+  "record_count": 5163,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -80234,6 +80234,32 @@
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "Inducing Reasoning Primitives from Agent Traces"
+    },
+    "arXiv:2605.12624": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.12624",
+      "identity_tokens": [
+        "arXiv:2605.12624"
+      ],
+      "reason": "一次要旨の主対象は自動運転の視覚・言語・行動モデルであり、汎用LLM推論基盤ではない。一方で、フレーム単位の逐次処理、時間メモリ、密・疎Mixture-of-Transformersのfast/slow経路と16FPSの実測を含むため、マルチモーダル推論効率の周辺技術として境界的。",
+      "first_checked_at": "2026-10-15T14:52:21+00:00",
+      "last_checked_at": "2026-10-15T14:52:21+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "MindVLA-U1: VLA Beats VA with Unified Streaming Architecture for Autonomous Driving"
+    },
+    "arXiv:2512.00041": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2512.00041",
+      "identity_tokens": [
+        "arXiv:2512.00041"
+      ],
+      "reason": "一次要旨は屋内視覚言語ナビゲーション用の行動条件付き世界モデルとオンライン価値地図を主題とする。ただしVAE潜在空間での展開、蒸留サンプラー、疎な復号によって単一消費者GPU上での推論を可能にする効率化要素があり、推論システム研究との関連は境界的。",
+      "first_checked_at": "2026-10-15T14:52:21+00:00",
+      "last_checked_at": "2026-10-15T14:52:21+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "VISTAv2: World Imagination for Indoor Vision-and-Language Navigation"
     }
   }
 }

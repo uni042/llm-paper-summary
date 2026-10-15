@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-15T12:51:21+00:00",
-  "record_count": 12277,
+  "updated_at": "2026-10-15T14:52:22+00:00",
+  "record_count": 12275,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -168021,29 +168021,15 @@
       ],
       "title": "LogicReward: Incentivizing LLM Reasoning via Step-Wise Logical Supervision"
     },
-    "arXiv:2605.12624": {
-      "classification": "unrelated",
-      "canonical_id": "arXiv:2605.12624",
-      "identity_tokens": [
-        "arXiv:2605.12624",
-        "id:arXiv:2605.12624",
-        "url:https://arxiv.org/abs/2605.12624"
-      ],
-      "reason": "タイトルで明示される主目的は自動運転の視覚・言語・行動モデル（VLA）である。ストリーミング構造を用いるとしても、LLM推論サーバーのスケジューリングや重み・KVのメモリ管理ではなく、自動運転タスクの知覚・行動生成を対象とするため対象外と判定する。",
-      "first_checked_at": "2026-10-13T07:51:15+00:00",
-      "last_checked_at": "2026-10-14T04:46:58+00:00",
-      "linked_from": [],
-      "title": "MindVLA-U1: VLA Beats VA with Unified Streaming Architecture for Autonomous Driving"
-    },
     "arXiv:2607.10383": {
       "classification": "unrelated",
       "canonical_id": "arXiv:2607.10383",
       "identity_tokens": [
         "arXiv:2607.10383"
       ],
-      "reason": "題名の主題は視覚と言語を用いるナビゲーション基盤モデルの構築であり、LLM推論の実行・配信・メモリ管理の効率化を直接の対象としていない。ロボットの経路探索・視覚ナビゲーションモデルに関する研究として先行除外する。",
+      "reason": "一次要旨の中心は視覚言語ナビゲーションのタスク汎化、ピクセル目標と連続行動生成である。slow/fastの認知・制御分離はタスク特化のロボット制御構成であり、LLM推論ランタイム、KV管理、量子化、サービングの一般化可能な機構や評価は主題ではない。",
       "first_checked_at": "2026-10-13T07:51:16+00:00",
-      "last_checked_at": "2026-10-13T21:31:16+00:00",
+      "last_checked_at": "2026-10-15T14:52:22+00:00",
       "linked_from": [],
       "title": "ABot-N1: Toward a General Visual Language Navigation Foundation Model"
     },
@@ -169773,18 +169759,6 @@
         "papers/inference/99-other-inference-systems/2025-2511.11346-fast-and-expressive-multi-byte-prediction-with-probabilistic-circuits.md"
       ],
       "title": "MIXAR: Scaling Autoregressive Pixel-based Language Models to Multiple Languages and Scripts"
-    },
-    "arXiv:2512.00041": {
-      "classification": "unrelated",
-      "canonical_id": "arXiv:2512.00041",
-      "identity_tokens": [
-        "arXiv:2512.00041"
-      ],
-      "reason": "タイトルに示される主題は屋内の視覚言語ナビゲーション向け世界想像であり、ロボットの経路・行動推定に関する応用研究である。LLM推論の実行基盤、KVキャッシュ、メモリ階層、演算カーネル、モデル圧縮、MoE配信、分散推論の効率化を主題とすることはタイトルから認められないため、本文読解前のタイトル先行除外とする。要旨と本文の技術内容は未確認。",
-      "first_checked_at": "2026-10-13T18:47:22+00:00",
-      "last_checked_at": "2026-10-13T18:47:22+00:00",
-      "linked_from": [],
-      "title": "VISTAv2: World Imagination for Indoor Vision-and-Language Navigation"
     },
     "arXiv:2104.11227": {
       "classification": "unrelated",
