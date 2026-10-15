@@ -1,0 +1,27 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261016-0730-scheduled-chat-30/r01-research-relevance-188",
+  "reference_main_sha": "6e5547458f2e8d08e34da7bed5530448517535fc",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2509.19128",
+      "identity_tokens": [
+        "arXiv:2509.19128",
+        "arxiv:2509.19128"
+      ],
+      "title": "PipelineRL: Faster On-policy Reinforcement Learning for Long Sequence Generation",
+      "reason": "原著要旨では、LLMの強化学習時に生成エンジンへ飛行中の重み更新を反映し、ロールアウト生成と学習を並列化して学習データの鮮度を保つ。128台のH100で約2倍の学習高速化を報告するが、主要評価対象は学習の所要時間とオンポリシー性であり、凍結したLLMの本番推論サービングを高速化する方式ではない。現行サーベイの学習単独範囲は凍結中のため対象外とする。",
+      "source_url": "https://arxiv.org/abs/2509.19128",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-16T07:38:36+09:00",
+      "last_checked_at": "2026-10-16T07:38:36+09:00",
+      "linked_from": [],
+      "worklist_rank": 188,
+      "origin": "research_prescreen_relevance"
+    }
+  ]
+}
