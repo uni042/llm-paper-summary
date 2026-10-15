@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-15T08:02:28+00:00",
+  "generated_at": "2026-10-15T14:54:36+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 123,
+  "count": 124,
   "entries": [
     {
       "canonical_id": "DOI:10.1145/3714983.3714987",
@@ -3114,6 +3114,34 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-ed1bcd4978c5--libfile_04547b688b308191a6d2418e894770b1--2026-2605.11222-admm-q-hessian-weight-quantization-research-20261014-1430-scheduled-chat-30-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-ed1bcd4978c5--libfile_04547b688b308191a6d2418e894770b1--2026-2605.11222-admm-q-hessian-weight-quantization-research-20261014-1430-scheduled-chat-.json",
       "worker_run_key": "20261014-1430-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2511.17809",
+      "title": "Adaptive Layer-Wise Transformations for Post-Training Quantization of Large Language Models",
+      "source_url": "https://arxiv.org/html/2511.17809v1",
+      "returned_at": "2026-10-15T14:54:36+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 6471,
+        "body_paragraphs": 33,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 673,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_1df25dfdb454819195a120fdf448abf7--2025-2511.17809-adaptive-layerwise-quantization-research-20261015-2330-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_1df25dfdb454819195a120fdf448abf7--2025-2511.17809-adaptive-layerwise-quantization-research-20261015-2330-scheduled-chat-30-r01.json",
+      "worker_run_key": "20261015-2330-scheduled-chat-30/r01"
     }
   ]
 }
