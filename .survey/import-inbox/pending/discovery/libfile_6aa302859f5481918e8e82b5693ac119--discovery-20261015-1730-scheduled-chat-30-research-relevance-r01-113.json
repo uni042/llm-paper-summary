@@ -1,0 +1,27 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261015-1730-scheduled-chat-30/r01-research-prescreen-113",
+  "reference_main_sha": "0c0c0c061314b77a42d34aa63f91925f9e1b00c5",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.02994",
+      "identity_tokens": [
+        "arxiv:2606.02994",
+        "doi:10.48550/arxiv.2606.02994"
+      ],
+      "title": "Inducing Reasoning Primitives from Agent Traces",
+      "reason": "原著一次要旨では、成功したReActエージェントの推論軌跡から頻出の思考操作を抽出・統合し、自然言語の説明文を持つ型付き疑似ツールとして再利用する。試験時にはLLMが各疑似ツールを解釈して推論し、RuleArena NBA、MuSR、NatPlanなどで正答率を改善し、AWMより平均推論コストが低いと報告する。推論コストへの副次的言及はあるが、主要貢献はエージェントの問題解決能力・推論手順の再利用であり、サービング、GPUカーネル、キャッシュ、分散実行等のシステム機構の改善条件や直接的性能評価は要旨から確認できない。推論時効率との関連はあるためunrelatedと断定せずborderlineとする。",
+      "source_url": "https://arxiv.org/abs/2606.02994",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-15T17:29:34+09:00",
+      "last_checked_at": "2026-10-15T17:29:34+09:00",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance",
+      "worklist_rank": 113
+    }
+  ]
+}
