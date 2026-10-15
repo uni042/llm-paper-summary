@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-15T18:52:28+00:00",
-  "record_count": 5164,
+  "updated_at": "2026-10-15T20:49:13+00:00",
+  "record_count": 5165,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -80273,6 +80273,19 @@
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "Beyond tokens: a unified framework for latent communication in LLM-based multi-agent systems"
+    },
+    "arXiv:2602.03563": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2602.03563",
+      "identity_tokens": [
+        "arXiv:2602.03563"
+      ],
+      "reason": "一次論文の方法節では分類器のラベル埋込みをアンカーとする対比学習（ACL-Embed）、交差エントロピーと対比損失の勾配が90度超で衝突するバッチでは対比損失を切るACL-Grad、深層出口から浅層出口へ蒸留するACL-CLを提案する。GLUEのBERT/RoBERTa分類精度と中間出口の精度向上が主要評価であり、早期終了推論に間接的に関連する一方、生成LLMの推論基盤・実測速度・メモリ・スループットを主対象としないため現行サーベイでは境界的。",
+      "first_checked_at": "2026-10-15T20:49:13+00:00",
+      "last_checked_at": "2026-10-15T20:49:13+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "ACL: Aligned Contrastive Learning Improves BERT and Multi-exit BERT Fine-tuning"
     }
   }
 }
