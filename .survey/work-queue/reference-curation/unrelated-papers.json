@@ -2,7 +2,7 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-15T15:45:00+00:00",
+  "updated_at": "2026-10-15T16:44:44+00:00",
   "record_count": 12275,
   "records": {
     "arXiv:2303.08774": {
@@ -164305,9 +164305,9 @@
         "id:arXiv:2203.10314",
         "url:https://arxiv.org/abs/2203.10314"
       ],
-      "reason": "一次要旨では点群の3次元物体検出に向け、ボクセル単位の集合注意（VSA）で任意サイズの点群を処理し、KITTI・Waymo検出性能を評価する。注意演算の効率化は点群認識専用であり、LLMの自己回帰推論・GPUサービングへの適用や評価は示されない。",
+      "reason": "VoxSeTは点群の3次元物体検出に対するボクセル集合注意と潜在コードによる線形計算の設計であり、KITTI/Waymoの検出を評価する。対象は点群認識の視覚モデルで、LLM推論基盤・言語モデル学習の改善を検証しない。",
       "first_checked_at": "2026-10-11T14:41:43+00:00",
-      "last_checked_at": "2026-10-15T06:43:51+00:00",
+      "last_checked_at": "2026-10-15T16:44:44+00:00",
       "linked_from": [],
       "title": "Voxel Set Transformer: A Set-to-Set Approach to 3D Object Detection from Point Clouds"
     },

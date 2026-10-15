@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-899f3fb9a67b21cf-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2203.10314",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2203.10314",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2203.10314",
+      "arXiv:2203.10314",
+      "id:arXiv:2203.10314",
+      "url:https://arxiv.org/abs/2203.10314"
+    ],
+    "reason": "VoxSeTは点群の3次元物体検出に対するボクセル集合注意と潜在コードによる線形計算の設計であり、KITTI/Waymoの検出を評価する。対象は点群認識の視覚モデルで、LLM推論基盤・言語モデル学習の改善を検証しない。",
+    "first_checked_at": "2026-10-11T14:41:43+00:00",
+    "last_checked_at": "2026-10-15T16:44:44+00:00",
+    "linked_from": [],
+    "title": "Voxel Set Transformer: A Set-to-Set Approach to 3D Object Detection from Point Clouds"
+  },
+  "processed_at": "2026-10-15T16:44:45+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-899f3fb9a67b",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
