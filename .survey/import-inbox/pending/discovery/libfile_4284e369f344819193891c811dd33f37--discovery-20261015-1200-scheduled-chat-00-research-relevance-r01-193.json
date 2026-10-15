@@ -1,0 +1,27 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261015-1200-scheduled-chat-00/r01-relevance-193",
+  "reference_main_sha": "754a4b53e98c5d8d1b847be201f060f61085f3e7",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2203.14380",
+      "identity_tokens": [
+        "arxiv:2203.14380",
+        "title:pyramid-bert-reducing-complexity-via-successive-core-set-based-token-selection"
+      ],
+      "title": "Pyramid-BERT: Reducing Complexity via Successive Core-set based Token Selection",
+      "reason": "一次論文の第3〜7節を確認。層ごとにトークン表現のk-center被覆集合を選び、BERTの分類用CLS埋め込みを保ちながらエンコーダ系列長を減らす実行効率化手法。GLUEではBERT-baseの分類・照合課題を対象に3倍高速化時の平均指標80.0対無圧縮81.5を報告する。一方、実験はBERT型の双方向エンコーダとLong Range Arenaの分類課題に限られ、自己回帰LLMのKVキャッシュ・逐次生成・推論サービングへの具体的実装や性能検証はない。汎用Transformerのトークン選択として技術的関連性はあるが、現行のLLM推論システムへの直接的貢献を確認できないためborderlineとする。",
+      "source_url": "https://arxiv.org/html/2203.14380v1",
+      "body_check": "research_fulltext_relevance_review: Sections 3-7 and Tables 1-5 inspected; encoder-only classification/ranking and LRA evaluation; no causal LLM serving or KV inference benchmark.",
+      "first_checked_at": "2026-10-15T12:00:00+09:00",
+      "last_checked_at": "2026-10-15T12:00:00+09:00",
+      "linked_from": [],
+      "origin": "research_postread_relevance",
+      "worklist_rank": 193
+    }
+  ]
+}
