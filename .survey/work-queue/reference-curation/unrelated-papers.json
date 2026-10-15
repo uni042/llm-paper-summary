@@ -2,7 +2,7 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-15T22:46:32+00:00",
+  "updated_at": "2026-10-15T23:47:14+00:00",
   "record_count": 12277,
   "records": {
     "arXiv:2303.08774": {
@@ -164809,9 +164809,9 @@
         "arXiv:2210.13452",
         "semanticscholar:fc4cbc7a75f5a3bbca59db5513231555f078fe78"
       ],
-      "reason": "MetaFormerの恒等写像・乱数行列・畳み込み・自己注意による視覚バックボーンを比較し、ImageNet-1Kの分類精度（CAFormer 85.5%など）を主評価とする。活性化関数StarReLUの演算量削減はあるが、LLMの推論配信・KVキャッシュ・重みオフロード・生成復号への適用や評価は要旨にない。画像認識モデルの設計研究であり本サーベイのLLM推論システム範囲外。",
+      "reason": "IdentityFormer、RandFormer、ConvFormer、CAFormerという画像認識用のMetaFormer基準モデルを比較し、ImageNet-1Kの分類精度やStarReLUの演算量を評価する。研究対象は画像分類・視覚モデルのアーキテクチャであり、LLM推論サービングやLLMメモリ階層・実行カーネルへの直接の貢献は一次要旨に示されていない。",
       "first_checked_at": "2026-10-11T20:48:40+00:00",
-      "last_checked_at": "2026-10-13T14:44:26+00:00",
+      "last_checked_at": "2026-10-15T23:47:14+00:00",
       "linked_from": [],
       "title": "MetaFormer Baselines for Vision"
     },
