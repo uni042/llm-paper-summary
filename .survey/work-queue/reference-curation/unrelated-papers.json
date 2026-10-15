@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-15T16:44:44+00:00",
-  "record_count": 12275,
+  "updated_at": "2026-10-15T17:52:11+00:00",
+  "record_count": 12276,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -177016,6 +177016,18 @@
       "last_checked_at": "2026-10-15T09:45:44+00:00",
       "linked_from": [],
       "title": "Less, but Better: Efficient Multilingual Expansion for LLMs via Layer-wise Mixture-of-Experts"
+    },
+    "arXiv:2505.13000": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.13000",
+      "identity_tokens": [
+        "arXiv:2505.13000"
+      ],
+      "reason": "タイトルが対象とするのは音声生成のための低フレームレート神経音声コーデックであり、LLMの推論サービング、KVキャッシュ、GPUメモリ、MoE、分散実行、投機的復号等の基盤最適化を主題としていない。タイトルで明示される研究対象に基づく除外であり、要旨や本文の技術的寄与を確認したとは扱わない。",
+      "first_checked_at": "2026-10-15T17:52:11+00:00",
+      "last_checked_at": "2026-10-15T17:52:11+00:00",
+      "linked_from": [],
+      "title": "DualCodec: A Low-Frame-Rate, Semantically-Enhanced Neural Audio Codec for Speech Generation"
     }
   }
 }
