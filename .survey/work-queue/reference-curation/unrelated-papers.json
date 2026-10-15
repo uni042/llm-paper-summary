@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-15T01:46:45+00:00",
-  "record_count": 12274,
+  "updated_at": "2026-10-15T05:47:39+00:00",
+  "record_count": 12276,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -177000,6 +177000,32 @@
       "last_checked_at": "2026-10-15T00:46:46+00:00",
       "linked_from": [],
       "title": "Predictive Exit: Prediction of Fine-Grained Early Exits for Computation- and Energy-Efficient Inference"
+    },
+    "arXiv:2601.09473": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.09473",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2601.09473",
+        "arXiv:2601.09473"
+      ],
+      "reason": "一次要旨はモデルの統合演算子・統合順序・チェックポイントの選択を、モデル間の類似度特徴から予測する手法を扱う。LLMのモデル開発・チェックポイント合成を対象とし、オンライン推論の計算カーネル、サービング、メモリ階層、推論スケジューリング等の改善は要旨にない。現行サーベイの推論システム収録範囲から外れる。",
+      "first_checked_at": "2026-10-15T05:47:39+00:00",
+      "last_checked_at": "2026-10-15T05:47:39+00:00",
+      "linked_from": [],
+      "title": "SimMerge: Learning to Select Merge Operators from Similarity Signals"
+    },
+    "arXiv:2511.21730": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2511.21730",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2511.21730",
+        "arXiv:2511.21730"
+      ],
+      "reason": "タイトルに明示された中心課題は言語エージェントの手続き記憶検索を評価するベンチマークであり、LLMの推論計算・サービング・GPUメモリ管理・分散処理などのシステム最適化を対象とする研究ではない。タイトルで明白な対象外として本文調査前に除外する。",
+      "first_checked_at": "2026-10-15T05:47:39+00:00",
+      "last_checked_at": "2026-10-15T05:47:39+00:00",
+      "linked_from": [],
+      "title": "A Benchmark for Procedural Memory Retrieval in Language Agents"
     }
   }
 }
