@@ -1,7 +1,7 @@
 # Scheduled worker :30 worklist
 
 Worker: `scheduled-chat-30`  
-Generated: `2026-10-15T18:25:56+00:00`
+Generated: `2026-10-15T18:42:20+00:00`
 
 このページはこのworker専用の再構築可能な選択索引です。他のScheduled worker用ページとは候補を重複させません（十分な在庫がある場合）。
 正本は `.survey/work-queue/jobs/`、claim、論文実体、relevance ledgerです。処理直前に最新正本を再確認してください。
@@ -200,7 +200,7 @@ ready総数: **1870** / 未claim総数: **1869** / このworker向け: **200**
 | 181 | 42 | research | arXiv:2506.07530 | BitVLA: 1-bit Vision-Language-Action Models for Robotics Manipulation | [primary](https://arxiv.org/abs/2506.07530) | `papers/inference/99-other-inference-systems/2025-2506.07530-bitvla-1-bit-vision-language-action-models-for-robotics-manipulation.md` |
 | 182 | 41 | research | arXiv:2505.14604 | Let LRMs Break Free from Overthinking via Self-Braking Tuning | [primary](https://arxiv.org/abs/2505.14604) | `papers/inference/99-other-inference-systems/2025-2505.14604-let-lrms-break-free-from-overthinking-via-self-braking-tuning.md` |
 | 183 | 38 | research | arXiv:2404.08698 | Lossless Acceleration of Large Language Model via Adaptive N-gram Parallel Decoding | [primary](https://arxiv.org/abs/2404.08698) | `papers/inference/99-other-inference-systems/2024-2404.08698-lossless-acceleration-of-large-language-model-via-adaptive-n-gram-parallel-decoding.md` |
-| 184 | 35 | research | DOI:10.1109/CVPR52734.2025.01360 | Conical Visual Concentration for Efficient Large Vision-Language Models | [primary](https://doi.org/10.1109/CVPR52734.2025.01360) | `papers/inference/99-other-inference-systems/2020-2025.01360-conical-visual-concentration-for-efficient-large-vision-language-models.md` |
+| 184 | 36 | research | arXiv:2505.12215 | GMSA: Enhancing Context Compression via Group Merging and Layer Semantic Alignment | [primary](https://arxiv.org/abs/2505.12215) | `papers/inference/99-other-inference-systems/2025-2505.12215-gmsa-enhancing-context-compression-via-group-merging-and-layer-semantic-alignment.md` |
 | 185 | 34 | research | arXiv:2110.11299 | Transformer Acceleration with Dynamic Sparse Attention | [primary](https://arxiv.org/abs/2110.11299) | `papers/inference/99-other-inference-systems/2021-2110.11299-transformer-acceleration-with-dynamic-sparse-attention.md` |
 | 186 | 32 | research | arXiv:2507.19595 | Efficient attention mechanisms for large language models | [primary](https://arxiv.org/abs/2507.19595) | `papers/inference/99-other-inference-systems/2025-2507.19595-efficient-attention-mechanisms-for-large-language-models.md` |
 | 187 | 32 | research | arXiv:2501.19392 | Cache Me If You Must: Adaptive Key-Value Quantization for Large Language Models | [primary](https://arxiv.org/abs/2501.19392) | `papers/inference/99-other-inference-systems/2025-2501.19392-cache-me-if-you-must-adaptive-key-value-quantization-for-large-language-models.md` |
@@ -220,8 +220,8 @@ ready総数: **1870** / 未claim総数: **1869** / このworker向け: **200**
 
 ## リスト入り判定待ち Discovery候補
 
-未判定総数: **116663** / このworker向け: **500**
-事前選別: **quarantine** / 暫定隔離 **111001** / 監査再投入 **0** / 機械規則適用後 **113225** / 選抜率 **5.0%** （候補の正本は保持。隔離はunrelated判定ではない）
+未判定総数: **116664** / このworker向け: **500**
+事前選別: **quarantine** / 暫定隔離 **111002** / 監査再投入 **0** / 機械規則適用後 **113225** / 選抜率 **5.0%** （候補の正本は保持。隔離はunrelated判定ではない）
 
 | # | priority | 系統内引用最多 | 系統内引用合計 | identity | title | published | venue | 全被引用 | 参照関係 | 系統候補 | source |
 |---:|---:|---:|---:|---|---|---|---|---:|---:|---|---|

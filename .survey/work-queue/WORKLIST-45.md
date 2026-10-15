@@ -1,7 +1,7 @@
 # Scheduled worker :45 worklist
 
 Worker: `scheduled-chat-45`  
-Generated: `2026-10-15T18:25:56+00:00`
+Generated: `2026-10-15T18:42:20+00:00`
 
 このページはこのworker専用の再構築可能な選択索引です。他のScheduled worker用ページとは候補を重複させません（十分な在庫がある場合）。
 正本は `.survey/work-queue/jobs/`、claim、論文実体、relevance ledgerです。処理直前に最新正本を再確認してください。
@@ -199,7 +199,7 @@ ready総数: **1870** / 未claim総数: **1869** / このworker向け: **200**
 | 180 | 43 | research | arXiv:2411.04975 | SuffixDecoding: Extreme Speculative Decoding for Emerging AI Applications | [primary](https://arxiv.org/abs/2411.04975) | `papers/inference/99-other-inference-systems/2024-2411.04975-suffixdecoding-a-model-free-approach-to-speeding-up-large-language-model-inference.md` |
 | 181 | 42 | research | arXiv:2401.00134 | Unicron: Economizing Self-Healing LLM Training at Scale | [primary](https://arxiv.org/abs/2401.00134) | `papers/inference/99-other-inference-systems/2024-2401.00134-unicron-economizing-self-healing-llm-training-at-scale.md` |
 | 182 | 40 | research | arXiv:2407.10032 | LeanQuant: Accurate and Scalable Large Language Model Quantization with Loss-error-aware Grid | [primary](https://arxiv.org/abs/2407.10032) | `papers/inference/99-other-inference-systems/2024-2407.10032-leanquant-accurate-and-scalable-large-language-model-quantization-with-loss-error-aware-grid.md` |
-| 183 | 36 | research | arXiv:2510.12603 | Reasoning in the Dark: Interleaved Vision-Text Reasoning in Latent Space | [primary](https://arxiv.org/abs/2510.12603) | `papers/inference/99-other-inference-systems/2025-2510.12603-reasoning-in-the-dark-interleaved-vision-text-reasoning-in-latent-space.md` |
+| 183 | 36 | research | DOI:10.1109/CVPR52734.2025.01360 | Conical Visual Concentration for Efficient Large Vision-Language Models | [primary](https://doi.org/10.1109/CVPR52734.2025.01360) | `papers/inference/99-other-inference-systems/2020-2025.01360-conical-visual-concentration-for-efficient-large-vision-language-models.md` |
 | 184 | 35 | research | arXiv:2204.03227 | Accelerating attention through gradient-based learned runtime pruning | [primary](https://arxiv.org/abs/2204.03227) | `papers/inference/99-other-inference-systems/2022-2204.03227-accelerating-attention-through-gradient-based-learned-runtime-pruning.md` |
 | 185 | 34 | research | arXiv:2310.07188 | Adaptive Gating in Mixture-of-Experts based Language Models | [primary](https://arxiv.org/abs/2310.07188) | `papers/inference/99-other-inference-systems/2023-2310.07188-adaptive-gating-in-mixture-of-experts-based-language-models.md` |
 | 186 | 32 | research | arXiv:2504.19720 | Taming the Titans: A Survey of Efficient LLM Inference Serving | [primary](https://arxiv.org/abs/2504.19720) | `papers/inference/99-other-inference-systems/2025-2504.19720-taming-the-titans-a-survey-of-efficient-llm-inference-serving.md` |
@@ -220,8 +220,8 @@ ready総数: **1870** / 未claim総数: **1869** / このworker向け: **200**
 
 ## リスト入り判定待ち Discovery候補
 
-未判定総数: **116663** / このworker向け: **500**
-事前選別: **quarantine** / 暫定隔離 **111001** / 監査再投入 **0** / 機械規則適用後 **113225** / 選抜率 **5.0%** （候補の正本は保持。隔離はunrelated判定ではない）
+未判定総数: **116664** / このworker向け: **500**
+事前選別: **quarantine** / 暫定隔離 **111002** / 監査再投入 **0** / 機械規則適用後 **113225** / 選抜率 **5.0%** （候補の正本は保持。隔離はunrelated判定ではない）
 
 | # | priority | 系統内引用最多 | 系統内引用合計 | identity | title | published | venue | 全被引用 | 参照関係 | 系統候補 | source |
 |---:|---:|---:|---:|---|---|---|---|---:|---:|---|---|

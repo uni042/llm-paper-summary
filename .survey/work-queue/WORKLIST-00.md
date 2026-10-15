@@ -1,7 +1,7 @@
 # Scheduled worker :00 worklist
 
 Worker: `scheduled-chat-00`  
-Generated: `2026-10-15T18:25:56+00:00`
+Generated: `2026-10-15T18:42:20+00:00`
 
 このページはこのworker専用の再構築可能な選択索引です。他のScheduled worker用ページとは候補を重複させません（十分な在庫がある場合）。
 正本は `.survey/work-queue/jobs/`、claim、論文実体、relevance ledgerです。処理直前に最新正本を再確認してください。
@@ -200,7 +200,7 @@ ready総数: **1870** / 未claim総数: **1869** / このworker向け: **200**
 | 181 | 43 | research | arXiv:2402.13720 | Ouroboros: Generating Longer Drafts Phrase by Phrase for Faster Speculative Decoding | [primary](https://arxiv.org/abs/2402.13720) | `papers/inference/99-other-inference-systems/2024-2402.13720-ouroboros-generating-longer-drafts-phrase-by-phrase-for-faster-speculative-decoding.md` |
 | 182 | 41 | research | arXiv:2505.13000 | DualCodec: A Low-Frame-Rate, Semantically-Enhanced Neural Audio Codec for Speech Generation | [primary](https://arxiv.org/abs/2505.13000) | `papers/inference/99-other-inference-systems/2025-2505.13000-dualcodec-a-low-frame-rate-semantically-enhanced-neural-audio-codec-for-speech-generation.md` |
 | 183 | 38 | research | arXiv:2410.07265 | A Survey: Collaborative Hardware and Software Design in the Era of Large Language Models | [primary](https://arxiv.org/abs/2410.07265) | `papers/inference/99-other-inference-systems/2024-2410.07265-a-survey-collaborative-hardware-and-software-design-in-the-era-of-large-language-models.md` |
-| 184 | 36 | research | arXiv:2505.12215 | GMSA: Enhancing Context Compression via Group Merging and Layer Semantic Alignment | [primary](https://arxiv.org/abs/2505.12215) | `papers/inference/99-other-inference-systems/2025-2505.12215-gmsa-enhancing-context-compression-via-group-merging-and-layer-semantic-alignment.md` |
+| 184 | 36 | research | arXiv:2510.12603 | Reasoning in the Dark: Interleaved Vision-Text Reasoning in Latent Space | [primary](https://arxiv.org/abs/2510.12603) | `papers/inference/99-other-inference-systems/2025-2510.12603-reasoning-in-the-dark-interleaved-vision-text-reasoning-in-latent-space.md` |
 | 185 | 34 | research | arXiv:2507.16731 | Collaborative Inference and Learning between Edge SLMs and Cloud LLMs: A Survey of Algorithms, Execution, and Open Challenges | [primary](https://arxiv.org/abs/2507.16731) | `papers/inference/99-other-inference-systems/2025-2507.16731-collaborative-inference-and-learning-between-edge-slms-and-cloud-llms-a-survey-of-algorithms-execution-and-open-challeng.md` |
 | 186 | 33 | research | arXiv:2503.00979 | Dialogue Without Limits: Constant-Sized KV Caches for Extended Responses in LLMs | [primary](https://arxiv.org/abs/2503.00979) | `papers/inference/99-other-inference-systems/2025-2503.00979-dialogue-without-limits-constant-sized-kv-caches-for-extended-responses-in-llms.md` |
 | 187 | 32 | research | arXiv:2110.14895 | Pipeline Parallelism for Inference on Heterogeneous Edge Computing | [primary](https://arxiv.org/abs/2110.14895) | `papers/inference/99-other-inference-systems/2021-2110.14895-pipeline-parallelism-for-inference-on-heterogeneous-edge-computing.md` |
@@ -220,8 +220,8 @@ ready総数: **1870** / 未claim総数: **1869** / このworker向け: **200**
 
 ## リスト入り判定待ち Discovery候補
 
-未判定総数: **116663** / このworker向け: **500**
-事前選別: **quarantine** / 暫定隔離 **111001** / 監査再投入 **0** / 機械規則適用後 **113225** / 選抜率 **5.0%** （候補の正本は保持。隔離はunrelated判定ではない）
+未判定総数: **116664** / このworker向け: **500**
+事前選別: **quarantine** / 暫定隔離 **111002** / 監査再投入 **0** / 機械規則適用後 **113225** / 選抜率 **5.0%** （候補の正本は保持。隔離はunrelated判定ではない）
 
 | # | priority | 系統内引用最多 | 系統内引用合計 | identity | title | published | venue | 全被引用 | 参照関係 | 系統候補 | source |
 |---:|---:|---:|---:|---|---|---|---|---:|---:|---|---|
