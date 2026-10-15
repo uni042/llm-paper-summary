@@ -33,6 +33,8 @@ worker_completed_at: '2026-10-14T03:30:04+09:00'
 worker_id: scheduled-chat-30
 worker_run_key: '20261014-0330-scheduled-chat-30/r01'
 lineage: kv-cache-compression-sparse-attention
+last_audited: null
+audit_version: 0
 ---
 
 # FASA：周波数成分の機能的疎性を利用した重要トークン選択と集中注意計算
