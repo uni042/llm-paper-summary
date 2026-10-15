@@ -30,6 +30,8 @@ worker_completed_at: '2026-10-15T13:35:13+09:00'
 worker_run_key: '20261015-1325-scheduled-chat-30/r01'
 quality_self_review_passed: true
 quality_self_review_version: 'PAPER-QUALITY-GUIDE-2026-10-07'
+last_audited: null
+audit_version: 0
 ---
 
 # 情報利得サンプラー：マスク拡散モデルの復号順序を大域的な不確実性で選ぶ

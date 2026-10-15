@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-15T06:55:27+00:00",
+  "generated_at": "2026-10-15T07:02:08+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -3007,63 +3007,9 @@
       "worker_run_key": "20261015-1430-scheduled-chat-30/r01"
     },
     {
-      "canonical_id": "arXiv:2605.11222",
-      "title": "ADMM-Q: An Improved Hessian-based Weight Quantizer for Post-Training Quantization of Large Language Models",
-      "source_url": "https://arxiv.org/abs/2605.11222",
-      "returned_at": "2026-10-15T06:55:24+00:00",
-      "return_count": 3,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "長文定型文の再利用を検出: papers/inference/16-weight-quantization-compression/2026-2605.11222-admm-q-an-improved-hessian-based-weight-quantizer-for-post-training-quan.md と 9 段落 / 1926文字 (100.0%) が完全一致"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 4955,
-        "body_paragraphs": 31,
-        "method_chars": 1513,
-        "method_paragraphs": 10,
-        "evaluation_chars": 1201,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_04547b688b308191a6d2418e894770b1--2026-2605.11222-admm-q-hessian-weight-quantization-research-20261014-1430-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_04547b688b308191a6d2418e894770b1--2026-2605.11222-admm-q-hessian-weight-quantization-research-20261014-1430-scheduled-chat-30-r01.json",
-      "worker_run_key": "20261014-1430-scheduled-chat-30/r01"
-    },
-    {
-      "canonical_id": "arXiv:2602.18176",
-      "title": "Improving Sampling for Masked Diffusion Models via Information Gain",
-      "source_url": "https://arxiv.org/html/2602.18176v3",
-      "returned_at": "2026-10-15T06:55:25+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 136 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 6275,
-        "body_paragraphs": 47,
-        "method_chars": 1975,
-        "method_paragraphs": 17,
-        "evaluation_chars": 136,
-        "limitation_chars": 624,
-        "insufficiency_flags": [
-          "評価説明量 136 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_d438f284a60881919ecc9deeb8f1802c--2026-2602.18176-info-gain-masked-diffusion-research-20261015-1325-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_d438f284a60881919ecc9deeb8f1802c--2026-2602.18176-info-gain-masked-diffusion-research-20261015-1325-scheduled-chat-30-r01.json",
-      "worker_run_key": "20261015-1325-scheduled-chat-30/r01"
-    },
-    {
       "canonical_id": "arXiv:2604.07812",
-      "title": "HAWK: Head Importance-Aware Visual Token Pruning in Multimodal Models",
-      "source_url": "https://arxiv.org/abs/2604.07812",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-15T06:55:26+00:00",
       "return_count": 3,
       "assigned_worker": "scheduled-chat-30",
@@ -3089,8 +3035,8 @@
     },
     {
       "canonical_id": "arXiv:2501.19309",
-      "title": "Judge Decoding: Faster Speculative Sampling Requires Going Beyond Model Alignment",
-      "source_url": "https://proceedings.iclr.cc/paper_files/paper/2025/file/656d6174fd5ffb01c843f269649ab5cb-Paper-Conference.pdf",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-15T06:55:27+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-00",
@@ -3114,6 +3060,60 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-5c8d12286723--libfile_132403cd5f908191a1b087bb3261a2b8--2025-2501.19309-judge-decoding-research-20261015-1500-scheduled-chat-00-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-5c8d12286723--libfile_132403cd5f908191a1b087bb3261a2b8--2025-2501.19309-judge-decoding-research-20261015-1500-scheduled-chat-00-r01.json",
       "worker_run_key": "20261015-1500-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2602.18176",
+      "title": "Improving Sampling for Masked Diffusion Models via Information Gain",
+      "source_url": "https://arxiv.org/html/2602.18176v3",
+      "returned_at": "2026-10-15T07:02:07+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 136 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 6275,
+        "body_paragraphs": 47,
+        "method_chars": 1975,
+        "method_paragraphs": 17,
+        "evaluation_chars": 136,
+        "limitation_chars": 624,
+        "insufficiency_flags": [
+          "評価説明量 136 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-a39594e4bab9--libfile_d438f284a60881919ecc9deeb8f1802c--2026-2602.18176-info-gain-masked-diffusion-research-20261015-1325-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-a39594e4bab9--libfile_d438f284a60881919ecc9deeb8f1802c--2026-2602.18176-info-gain-masked-diffusion-research-20261015-1325-scheduled-chat-30-r01.json",
+      "worker_run_key": "20261015-1325-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2605.11222",
+      "title": "ADMM-Q: An Improved Hessian-based Weight Quantizer for Post-Training Quantization of Large Language Models",
+      "source_url": "https://arxiv.org/abs/2605.11222",
+      "returned_at": "2026-10-15T07:02:08+00:00",
+      "return_count": 3,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "長文定型文の再利用を検出: papers/inference/16-weight-quantization-compression/2026-2605.11222-admm-q-an-improved-hessian-based-weight-quantizer-for-post-training-quan.md と 9 段落 / 1926文字 (100.0%) が完全一致"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 4955,
+        "body_paragraphs": 31,
+        "method_chars": 1513,
+        "method_paragraphs": 10,
+        "evaluation_chars": 1201,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-ed1bcd4978c5--libfile_04547b688b308191a6d2418e894770b1--2026-2605.11222-admm-q-hessian-weight-quantization-research-20261014-1430-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-ed1bcd4978c5--libfile_04547b688b308191a6d2418e894770b1--2026-2605.11222-admm-q-hessian-weight-quantization-research-20261014-1430-scheduled-chat-.json",
+      "worker_run_key": "20261014-1430-scheduled-chat-30/r01"
     }
   ]
 }
