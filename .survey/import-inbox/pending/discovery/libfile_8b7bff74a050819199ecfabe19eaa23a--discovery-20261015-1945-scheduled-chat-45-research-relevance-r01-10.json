@@ -1,0 +1,26 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-45",
+  "run_key": "20261015-1945-scheduled-chat-45/r01-research-relevance",
+  "reference_main_sha": "e6af3d146791ff48481d2c5a465a6cdec65cd07d",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2403.18421",
+      "identity_tokens": [
+        "arxiv:2403.18421"
+      ],
+      "title": "BioMedLM: A 2.7B Parameter Language Model Trained On Biomedical Text",
+      "reason": "生物医学テキストを用いた言語モデルの構築・学習が主題であり、LLM推論基盤の高速化、キャッシュ管理、量子化、サービングの手法研究ではない。",
+      "source_url": "https://arxiv.org/abs/2403.18421",
+      "body_check": "title_screen_only; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-10-15T19:51:35+09:00",
+      "last_checked_at": "2026-10-15T19:51:35+09:00",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance",
+      "worklist_rank": 10
+    }
+  ]
+}
