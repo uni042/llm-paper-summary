@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-15T21:18:10+00:00",
+  "generated_at": "2026-10-15T22:52:19+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 125,
+  "count": 127,
   "entries": [
     {
       "canonical_id": "DOI:10.1145/3714983.3714987",
@@ -3170,6 +3170,61 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-5e0ef9c2d748--libfile_95561e2056bc8191904e16e20fabf2d8--2023-2312.07950-cbq-cross-block-quantization-research-20261016-0430-scheduled-chat-30-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-5e0ef9c2d748--libfile_95561e2056bc8191904e16e20fabf2d8--2023-2312.07950-cbq-cross-block-quantization-research-20261016-0430-scheduled-chat-30-r01.json",
       "worker_run_key": "20261016-0430-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2605.05602",
+      "title": "Nearly Optimal Attention Coresets",
+      "source_url": "https://arxiv.org/html/2605.05602v1",
+      "returned_at": "2026-10-15T22:52:18+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "quality_self_review_version が空"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 6739,
+        "body_paragraphs": 47,
+        "method_chars": 2477,
+        "method_paragraphs": 21,
+        "evaluation_chars": 814,
+        "limitation_chars": 577,
+        "insufficiency_flags": []
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_0239ed33c9dc8191ad884a472b708c1f--2026-2605.05602-nearly-optimal-attention-coresets-research-20261016-0700-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_0239ed33c9dc8191ad884a472b708c1f--2026-2605.05602-nearly-optimal-attention-coresets-research-20261016-0700-scheduled-chat-00-r01.json",
+      "worker_run_key": "20261016-0700-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2504.19720",
+      "title": "Taming the Titans: A Survey of Efficient LLM Inference Serving",
+      "source_url": "https://arxiv.org/abs/2504.19720",
+      "returned_at": "2026-10-15T22:52:19+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 297 < 700",
+        "説明不足トリガー: 評価説明量 262 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 8951,
+        "body_paragraphs": 52,
+        "method_chars": 297,
+        "method_paragraphs": 2,
+        "evaluation_chars": 262,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "手法説明量 297 < 700",
+          "評価説明量 262 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_f0aceb1936788191b8451343d7c813d1--2025-2504.19720-taming-the-titans-serving-survey-research-20261016-0730-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_f0aceb1936788191b8451343d7c813d1--2025-2504.19720-taming-the-titans-serving-survey-research-20261016-0730-scheduled-chat-30-r01.json",
+      "worker_run_key": "20261016-0730-scheduled-chat-30/r01"
     }
   ]
 }
