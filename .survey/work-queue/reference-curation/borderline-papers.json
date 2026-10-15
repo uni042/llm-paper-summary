@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-15T20:49:13+00:00",
-  "record_count": 5165,
+  "updated_at": "2026-10-15T22:46:31+00:00",
+  "record_count": 5166,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -80286,6 +80286,19 @@
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "ACL: Aligned Contrastive Learning Improves BERT and Multi-exit BERT Fine-tuning"
+    },
+    "arXiv:2505.07596": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2505.07596",
+      "identity_tokens": [
+        "arXiv:2505.07596"
+      ],
+      "reason": "原著要旨では検索拡張生成のエージェントIKEAが内部知識の境界を学習し、必要な場合だけ外部検索するよう報酬関数と学習データを設計する。検索回数減少による推論遅延への寄与はあるが、中心は知識判断能力と強化学習による検索方策であり、推論エンジンのスケジューラ、キャッシュ、並列実行などのシステム機構は要旨で示されない。RAGサービングとの接点があるため無関係ではなく境界とする。",
+      "first_checked_at": "2026-10-15T22:46:31+00:00",
+      "last_checked_at": "2026-10-15T22:46:31+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Reinforced Internal-External Knowledge Synergistic Reasoning for Efficient Adaptive Search Agent"
     }
   }
 }
