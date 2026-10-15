@@ -413,7 +413,7 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
   過去トークンをKVまたは小さい中間活性値で混在保存し、重み転送中に活性値からKVを再生成して、PCIe転送量とGPU再計算量の大きい方を抑える方式。
 
 - **2024-11 · [Memorize Step by Step: Efficient Long-Context Prefilling with Incremental Memory and Decremental Chunk](2024-fa73d8b64a60-memorize-step-by-step-efficient-long-context-prefilling-with-incremental.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
+  実装：✓ ・ リポジトリ内被引用：1  
   既存の反復圧縮方式は文書を複数の入力塊へ分け、圧縮済みKVを一定サイズのメモリとして引き継ぐ。NVIDIA A800上のLLaMA2-7BとSnapKVを用いた条件では、固定サイズのメモリ方式に比べて初回トークン時間（Time To First Token; TTFT）を最大1.45倍改善し、GPUメモリを最大23.3%削減した。
 
 ### 3年前（2023-11〜2024-10）
