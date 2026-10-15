@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-15T01:49:11+00:00",
-  "record_count": 5158,
+  "updated_at": "2026-10-15T03:49:02+00:00",
+  "record_count": 5159,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -80191,6 +80191,20 @@
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "M6-Rec: Generative Pretrained Language Models are Open-Ended Recommender Systems"
+    },
+    "arXiv:2203.14380": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2203.14380",
+      "identity_tokens": [
+        "arXiv:2203.14380",
+        "title:pyramid-bert-reducing-complexity-via-successive-core-set-based-token-selection"
+      ],
+      "reason": "一次論文の第3〜7節を確認。層ごとにトークン表現のk-center被覆集合を選び、BERTの分類用CLS埋め込みを保ちながらエンコーダ系列長を減らす実行効率化手法。GLUEではBERT-baseの分類・照合課題を対象に3倍高速化時の平均指標80.0対無圧縮81.5を報告する。一方、実験はBERT型の双方向エンコーダとLong Range Arenaの分類課題に限られ、自己回帰LLMのKVキャッシュ・逐次生成・推論サービングへの具体的実装や性能検証はない。汎用Transformerのトークン選択として技術的関連性はあるが、現行のLLM推論システムへの直接的貢献を確認できないためborderlineとする。",
+      "first_checked_at": "2026-10-15T03:49:02+00:00",
+      "last_checked_at": "2026-10-15T03:49:02+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Pyramid-BERT: Reducing Complexity via Successive Core-set based Token Selection"
     }
   }
 }
