@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（655本）
+## 自動生成の論文一覧（657本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -1020,6 +1020,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   領域別プリフィル事前読込と時間・層間・領域局所性によるデコード先読みを組み合わせ、MoEのCPU退避でI/O待ち50%削減、投影TPOT 3.45倍高速化、全常駐比33%メモリ削減を狙う。
 
+- **2026-02 · [T3D: Few-Step Diffusion Language Models via Trajectory Self-Distillation with Direct Discriminative Optimization](2026-2602.12262-t3d-few-step-diffusion-language-models-via-trajectory-self-distillation-.md)**  
+  実装：[✓](https://github.com/Tyrion58/T3D) ・ リポジトリ内被引用：0  
+  これに対しマスク拡散言語モデル（Masked Diffusion Language モデル、MDLM）は、複数位置のマスクを並列に予測し、繰り返し修正して文章を完成させる。動的復号を組み合わせた一部条件では、GSM8Kの正答率を10.8ポイント改善しながら処理量を1.45倍にする実測結果も報告されている。
+
 - **2026-02 · [Swordsman: Entropy-Driven Adaptive Block Partition for Efficient Diffusion Language Models](2026-2602.04399-swordsman-entropy-driven-adaptive-block-partition-for-efficient-diffusio.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   Swordsmanは、拡散言語モデル（Diffusion Language モデル、DLM）の生成速度と品質を改善するため、出力列を固定長で区切るブロック復号を、モデルの予測エントロピーに応じて動的に区切る方式へ変更する。
@@ -1239,6 +1243,10 @@
 - **2025-11 · [Optimal Self-Consistency for Efficient Reasoning with Large Language Models](2025-2511.12309-optimal-self-consistency-for-efficient-reasoning-with-large-language-mod.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   しかし、全問題へ同じ回数だけ生成を繰り返すと、少数の試行で答えが安定する簡単な問題にも計算を使い続け、回答が割れる難しい問題に十分な予算を残せない。固定回数の生成、回答の信頼度に応じて停止する方式、問題間で生成回数を再配分する方式の違いを整理し、予算が少ない段階で有効な方法と、予算が大きい段階で有効な方法を組み合わせるBlend-ASCを提案する。
+
+- **2025-11 · [OckBench: Measuring the Efficiency of LLM Reasoning](2025-2511.05722-ockbench-measuring-the-efficiency-of-llm-reasoning.md)**  
+  実装：[✓](https://github.com/OckBench/OckBench) ・ リポジトリ内被引用：0  
+  従来の正答率だけではこの差が見えず、ハードウェアの処理量だけではモデル自身がどれほど冗長に推論するかを分離できない。
 
 - **2025-11 · [NeuroPath: Neurobiology-Inspired Path Tracking and Reflection for Semantically Coherent Retrieval](2025-2511.14096-neuropath-neurobiology-inspired-path-tracking-and-reflection-for-semanti.md)**  
   実装：[✓](https://github.com/KennyCaty/NeuroPath) ・ リポジトリ内被引用：0  

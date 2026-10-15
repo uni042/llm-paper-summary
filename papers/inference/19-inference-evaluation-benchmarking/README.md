@@ -1,5 +1,5 @@
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（37本）
+## 自動生成の論文一覧（38本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -47,6 +47,10 @@
 - **2026-05 · [Linear Scaling Video VLMs for Long Video Understanding](2026-2605.31598-linear-scaling-video-vlms-for-long-video-understanding.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   長い動画を視覚言語モデル（Vision-Language モデル; VLM）へ入力すると、映像から得られる視覚トークンが時間とともに増え、各フレームが過去の全フレームへ自己注意（self-注意機構）を計算する通常の実装では、全映像を処理する事前充填（プリフィル）の計算量がフレーム数 N に対して二次的に増える。
+
+- **2026-05 · [Evading Visual Aphasia: Contrastive Adaptive Semantic Token Pruning for Vision-Language Models](2026-2605.09429-evading-visual-aphasia-contrastive-adaptive-semantic-token-pruning-for-v.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  たとえば、画像内で目立つ動物より周辺の店名看板を尋ねているのに、初期層の注意が動物へ集中した結果、看板のトークンが枝刈りされ、モデルが架空の店名を答える。LLaVA-v1.5-7Bで画像トークンを576個から128個へ77.8%削減した条件では、七つの評価セットを正規化した平均性能を98.64%保持し、遅延を167.50ミリ秒から77.94ミリ秒へ短縮した。
 
 - **2026-05 · [EarlyTom: Early Token Compression Completes Fast Video Understanding](2026-2605.30010-earlytom-early-token-compression-completes-fast-video-understanding.md)**  
   実装：[✓](https://github.com/viridisGreen/EarlyTom) ・ リポジトリ内被引用：0  

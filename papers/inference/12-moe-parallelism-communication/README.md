@@ -24,7 +24,7 @@ MoEの専門家並列、テンソル並列との混成、all-to-all通信、専�
 - [02-adaptive-expert-computation-compression](../02-adaptive-expert-computation-compression/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（45本）
+## 自動生成の論文一覧（46本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -120,6 +120,10 @@ MoEの専門家並列、テンソル並列との混成、all-to-all通信、専�
 - **2026-05 · [SiDP: Memory-Efficient Data Parallelism for Offline LLM Inference](2026-2605.28095-sidp-memory-efficient-data-parallelism.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   SiDPはデータ並列GPU間でFFN重みを一度だけ保持する共有プールを作り、バッチ規模に応じて重み先読み型と活性値集約型を切り替え、KV容量不足と重複重みを減らす。
+
+- **2026-05 · [CCL-Bench 1.0: A Trace-Based Benchmark for LLM Infrastructure](2026-2605.06544-ccl-bench-1-0-a-trace-based-benchmark-for-llm-infrastructure.md)**  
+  実装：[✓](https://github.com/cornell-sysphotonics/ccl-bench) ・ リポジトリ内被引用：0  
+  トレースの演算・通信・時間情報と、どのハードウェアとソフトウェアで走ったかという構成情報を分離して保存するため、指標を増やすだけなら実験をやり直さずに済む。第三に、Llama-3.1-8Bを16基のA100で学習すると、TorchTitanの最良設定は1.50秒/step、Megatron-LMは0.44秒/stepであり、両者の最適な並列構成は異なる。
 
 - **2026-04 · [Rethinking Network Topologies for Cost-Effective Mixture-of-Experts LLM Serving](2026-2605.00254-network-topologies-cost-effective-moe-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
