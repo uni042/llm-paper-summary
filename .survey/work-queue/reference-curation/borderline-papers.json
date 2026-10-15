@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-15T06:43:50+00:00",
-  "record_count": 5159,
+  "updated_at": "2026-10-15T09:45:43+00:00",
+  "record_count": 5161,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -80206,6 +80206,34 @@
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "Pyramid-BERT: Reducing Complexity via Successive Core-set based Token Selection"
+    },
+    "arXiv:2107.00175": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2107.00175",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2107.00175",
+        "arXiv:2107.00175"
+      ],
+      "reason": "ALBERT-large（24層）の文章分類に対し、各層の予測分布の正規化エントロピーと、過去8層の予測確率の単調変化を使って早期終了を決める推論時の計算削減研究。GLUE・AG-news・IMDBで単一2080 Ti、バッチ1の分類推論を評価し、ALBERT比2～10倍の速度改善を報告する。LLM推論の条件付き計算に技術的な関係はあるが、評価は双方向エンコーダの分類であり、自己回帰生成・KVキャッシュ・多要求サービングへの直接的な適用や速度改善を実証していないため、現行サーベイでは境界候補とする。",
+      "first_checked_at": "2026-10-15T09:45:43+00:00",
+      "last_checked_at": "2026-10-15T09:45:43+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Elbert: Fast Albert with Confidence-Window Based Early Exit"
+    },
+    "arXiv:2606.02994": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.02994",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2606.02994",
+        "arXiv:2606.02994"
+      ],
+      "reason": "原著一次要旨では、成功したReActエージェントの推論軌跡から頻出の思考操作を抽出・統合し、自然言語の説明文を持つ型付き疑似ツールとして再利用する。試験時にはLLMが各疑似ツールを解釈して推論し、RuleArena NBA、MuSR、NatPlanなどで正答率を改善し、AWMより平均推論コストが低いと報告する。推論コストへの副次的言及はあるが、主要貢献はエージェントの問題解決能力・推論手順の再利用であり、サービング、GPUカーネル、キャッシュ、分散実行等のシステム機構の改善条件や直接的性能評価は要旨から確認できない。推論時効率との関連はあるためunrelatedと断定せずborderlineとする。",
+      "first_checked_at": "2026-10-15T09:45:43+00:00",
+      "last_checked_at": "2026-10-15T09:45:43+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Inducing Reasoning Primitives from Agent Traces"
     }
   }
 }

@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-15T06:43:52+00:00",
-  "record_count": 12276,
+  "updated_at": "2026-10-15T09:45:44+00:00",
+  "record_count": 12277,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -176640,9 +176640,9 @@
       "identity_tokens": [
         "DOI:10.21105/joss.10304"
       ],
-      "reason": "タイトルが示す対象は計算実験・ベンチマーク一般を行うPythonフレームワークであり、LLMの実行時スケジューリング、メモリ管理、カーネル、KV、MoE、圧縮など推論システム固有の貢献を明示しない。論文の他の応用可能性までは断定せず、タイトル段階の対象外判定とする。",
+      "reason": "原著の公開要旨と著者機関の一次説明によると、adoは実験計画、探索空間、サンプリング、計測値の共有、由来記録、再利用を統合する汎用Python実験キャンペーン管理基盤であり、プラグインにより科学計算・基盤モデル性能測定を含む各分野の実験を扱う。並列実行機能は実験キャンペーンの実行管理であって、LLMオンライン推論のKVキャッシュ、モデル実行、スケジューラ、GPUカーネル、分散サービングの新規最適化を示すものではない。LLM推論性能を計測対象として利用できることと推論システム自体への直接的技術貢献を区別し、現行サーベイの対象外と判定する。",
       "first_checked_at": "2026-10-14T13:49:00+00:00",
-      "last_checked_at": "2026-10-14T13:49:00+00:00",
+      "last_checked_at": "2026-10-15T09:45:42+00:00",
       "linked_from": [],
       "title": "ado: a Python framework for computational experimentation and benchmarking"
     },
@@ -177029,6 +177029,19 @@
       "last_checked_at": "2026-10-15T05:47:39+00:00",
       "linked_from": [],
       "title": "A Benchmark for Procedural Memory Retrieval in Language Agents"
+    },
+    "arXiv:2505.22582": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.22582",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2505.22582",
+        "arXiv:2505.22582"
+      ],
+      "reason": "LayerMoEはQwen1.5-1.8Bの継続的多言語拡張を目的とし、各層の言語表現類似度に反比例する専門家数を新設、旧言語を元の専門家へ送る分類器を追加して旧言語の忘却を減らす学習方式。論文の主評価はARC、MMLU、HellaSwag、Belebeleの多言語精度と追加専門家数（単回拡張60%、継続拡張33.3%削減）であり、推論時のGPUメモリ、専門家ロード、トークン処理量、サービング遅延の改善は実証していない。MoEを用いるが目的は多言語能力拡張・忘却対策で、現行の推論・学習システム効率サーベイの直接対象外とする。",
+      "first_checked_at": "2026-10-15T09:45:44+00:00",
+      "last_checked_at": "2026-10-15T09:45:44+00:00",
+      "linked_from": [],
+      "title": "Less, but Better: Efficient Multilingual Expansion for LLMs via Layer-wise Mixture-of-Experts"
     }
   }
 }
