@@ -1,0 +1,26 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261014-1730-scheduled-chat-30/r01/prescreen-91",
+  "reference_main_sha": "d83fe50e3fc98ad82eab51b270a69a804b1ebb33",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.11722",
+      "identity_tokens": [
+        "arxiv:2605.11722"
+      ],
+      "title": "EPIC: Efficient Predicate-Guided Inference-Time Control for Compositional Text-to-Image Generation",
+      "reason": "一次要旨で対象は複数物体・属性・関係を満たす画像生成であり、画像生成器の再サンプリングと編集を述語検査で選ぶ方式と確認した。MLLM呼出削減は画像生成ワークフローの副次指標で、LLMの重み・KV・推論カーネル・サービング基盤の最適化ではない。",
+      "source_url": "https://arxiv.org/abs/2605.11722",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-14T17:39:30+09:00",
+      "last_checked_at": "2026-10-14T17:39:30+09:00",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance",
+      "worklist_rank": 91
+    }
+  ]
+}
