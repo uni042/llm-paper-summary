@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-15T22:52:19+00:00",
+  "generated_at": "2026-10-15T22:57:28+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -3172,36 +3172,11 @@
       "worker_run_key": "20261016-0430-scheduled-chat-30/r01"
     },
     {
-      "canonical_id": "arXiv:2605.05602",
-      "title": "Nearly Optimal Attention Coresets",
-      "source_url": "https://arxiv.org/html/2605.05602v1",
-      "returned_at": "2026-10-15T22:52:18+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "quality_self_review_version が空"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 6739,
-        "body_paragraphs": 47,
-        "method_chars": 2477,
-        "method_paragraphs": 21,
-        "evaluation_chars": 814,
-        "limitation_chars": 577,
-        "insufficiency_flags": []
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_0239ed33c9dc8191ad884a472b708c1f--2026-2605.05602-nearly-optimal-attention-coresets-research-20261016-0700-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_0239ed33c9dc8191ad884a472b708c1f--2026-2605.05602-nearly-optimal-attention-coresets-research-20261016-0700-scheduled-chat-00-r01.json",
-      "worker_run_key": "20261016-0700-scheduled-chat-00/r01"
-    },
-    {
       "canonical_id": "arXiv:2504.19720",
       "title": "Taming the Titans: A Survey of Efficient LLM Inference Serving",
       "source_url": "https://arxiv.org/abs/2504.19720",
-      "returned_at": "2026-10-15T22:52:19+00:00",
-      "return_count": 1,
+      "returned_at": "2026-10-15T22:57:27+00:00",
+      "return_count": 2,
       "assigned_worker": "scheduled-chat-30",
       "reason": "blocked_quality",
       "failures": [
@@ -3222,9 +3197,34 @@
           "限界説明量 0 < 推奨 120"
         ]
       },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_f0aceb1936788191b8451343d7c813d1--2025-2504.19720-taming-the-titans-serving-survey-research-20261016-0730-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_f0aceb1936788191b8451343d7c813d1--2025-2504.19720-taming-the-titans-serving-survey-research-20261016-0730-scheduled-chat-30-r01.json",
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-b62a7e6e80ac--libfile_f0aceb1936788191b8451343d7c813d1--2025-2504.19720-taming-the-titans-serving-survey-research-20261016-0730-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-b62a7e6e80ac--libfile_f0aceb1936788191b8451343d7c813d1--2025-2504.19720-taming-the-titans-serving-survey-research-20261016-0730-scheduled-chat-30.json",
       "worker_run_key": "20261016-0730-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2605.05602",
+      "title": "Nearly Optimal Attention Coresets",
+      "source_url": "https://arxiv.org/html/2605.05602v1",
+      "returned_at": "2026-10-15T22:57:28+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "quality_self_review_version が空"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 6739,
+        "body_paragraphs": 47,
+        "method_chars": 2477,
+        "method_paragraphs": 21,
+        "evaluation_chars": 814,
+        "limitation_chars": 577,
+        "insufficiency_flags": []
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-f17d0d72cf71--libfile_0239ed33c9dc8191ad884a472b708c1f--2026-2605.05602-nearly-optimal-attention-coresets-research-20261016-0700-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-f17d0d72cf71--libfile_0239ed33c9dc8191ad884a472b708c1f--2026-2605.05602-nearly-optimal-attention-coresets-research-20261016-0700-scheduled-chat-0.json",
+      "worker_run_key": "20261016-0700-scheduled-chat-00/r01"
     }
   ]
 }

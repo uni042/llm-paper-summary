@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "6989a804d6b043d78f6ab562074ceb4f08b5da42e3d2114f2083f9993e026eb3",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/retry-research-b62a7e6e80ac--libfile_f0aceb1936788191b8451343d7c813d1--2025-2504.19720-taming-the-titans-serving-survey-research-20261016-0730-scheduled-chat-30-r01.md",
+  "canonical_id": "arXiv:2504.19720",
+  "worker_completed_at": "2026-10-16T07:36:00+09:00",
+  "worker_run_key": "20261016-0730-scheduled-chat-30/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 8951,
+    "body_paragraphs": 52,
+    "method_chars": 297,
+    "method_paragraphs": 2,
+    "evaluation_chars": 262,
+    "limitation_chars": 0,
+    "insufficiency_flags": [
+      "手法説明量 297 < 700",
+      "評価説明量 262 < 500",
+      "限界説明量 0 < 推奨 120"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 手法説明量 297 < 700",
+    "説明不足トリガー: 評価説明量 262 < 500"
+  ],
+  "processed_at": "2026-10-15T22:57:27+00:00"
+}
