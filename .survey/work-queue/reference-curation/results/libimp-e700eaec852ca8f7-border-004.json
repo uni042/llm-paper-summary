@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e700eaec852ca8f7-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2410.03051",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2410.03051",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2410.03051",
+      "arXiv:2410.03051"
+    ],
+    "reason": "一次要旨は動画の詳細キャプション生成モデルAuroraCapとVDCベンチマークを主題とする一方、長い動画列の入力視覚トークンを統合して処理負荷を削減し、性能低下が小さいと報告する。多モーダルLLMの入力圧縮に関連するが、独立した汎用LLM推論サービング機構や実測生成遅延・メモリ帯域の評価が中心ではないため境界的とする。",
+    "first_checked_at": "2026-10-12T18:49:58+00:00",
+    "last_checked_at": "2026-10-15T06:43:50+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "AuroraCap: Efficient, Performant Video Detailed Captioning and a New Benchmark"
+  },
+  "processed_at": "2026-10-15T06:43:50+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e700eaec852c",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
