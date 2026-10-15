@@ -2,7 +2,7 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-15T14:52:22+00:00",
+  "updated_at": "2026-10-15T15:45:00+00:00",
   "record_count": 12275,
   "records": {
     "arXiv:2303.08774": {
@@ -165037,9 +165037,9 @@
       "identity_tokens": [
         "arXiv:2501.15061"
       ],
-      "reason": "題名で視覚Transformer用の極性考慮線形注意を対象と明示しており、主な対象は画像認識向け視覚モデルの注意機構である。言語モデルの生成・サービング・KV管理を対象とすることは題名から読み取れないため、現行のLLM推論システム調査から先行除外する。",
+      "reason": "対象モデルが画像向けVision Transformerであり、極性を考慮した線形注意は画像認識処理の効率化を狙う。LLMの言語復号・KVキャッシュ・推論サービングを直接扱うものではない。",
       "first_checked_at": "2026-10-11T21:44:20+00:00",
-      "last_checked_at": "2026-10-13T21:31:15+00:00",
+      "last_checked_at": "2026-10-15T15:45:00+00:00",
       "linked_from": [],
       "title": "PolaFormer: Polarity-aware Linear Attention for Vision Transformers"
     },
