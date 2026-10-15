@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-ee583e8c04f01a0d-unrel-001",
+  "operation": "mark_unrelated",
+  "canonical_id": "arXiv:2505.22582",
+  "reason": "LayerMoEはQwen1.5-1.8Bの継続的多言語拡張を目的とし、各層の言語表現類似度に反比例する専門家数を新設、旧言語を元の専門家へ送る分類器を追加して旧言語の忘却を減らす学習方式。論文の主評価はARC、MMLU、HellaSwag、Belebeleの多言語精度と追加専門家数（単回拡張60%、継続拡張33.3%削減）であり、推論時のGPUメモリ、専門家ロード、トークン処理量、サービング遅延の改善は実証していない。MoEを用いるが目的は多言語能力拡張・忘却対策で、現行の推論・学習システム効率サーベイの直接対象外とする。",
+  "title": "Less, but Better: Efficient Multilingual Expansion for LLMs via Layer-wise Mixture-of-Experts",
+  "identity_tokens": [
+    "arxiv:2505.22582",
+    "doi:10.48550/arxiv.2505.22582"
+  ],
+  "linked_from": [],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ee583e8c04f0",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}
