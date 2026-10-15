@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ceea57b7d6c265a0-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2606.05711",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2606.05711",
+    "identity_tokens": [
+      "arXiv:2606.05711"
+    ],
+    "reason": "一次要旨はエージェント間で自然言語の逐次生成を省き、埋込み・隠れ状態・KVキャッシュ等の連続表現を直接受け渡す研究を、情報形式・送受信の表現整合・受信側への融合方法の3軸で整理した文献サーベイである。テキスト生成の推論費用と通信冗長性という対象領域は関連するが、18手法の分類と未解決課題の整理が主目的で、著者独自のGPUカーネル・ランタイム・速度改善の新規実装を評価する一次方式論文ではない。研究対象の系統参照としては有用なため境界的関連とする。",
+    "first_checked_at": "2026-10-15T18:52:28+00:00",
+    "last_checked_at": "2026-10-15T18:52:28+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Beyond tokens: a unified framework for latent communication in LLM-based multi-agent systems"
+  },
+  "processed_at": "2026-10-15T18:52:28+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ceea57b7d6c2",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
