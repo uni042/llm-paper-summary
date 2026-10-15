@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-a813c21b99e95967-border-001",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2203.14380",
+  "reason": "一次論文の第3〜7節を確認。層ごとにトークン表現のk-center被覆集合を選び、BERTの分類用CLS埋め込みを保ちながらエンコーダ系列長を減らす実行効率化手法。GLUEではBERT-baseの分類・照合課題を対象に3倍高速化時の平均指標80.0対無圧縮81.5を報告する。一方、実験はBERT型の双方向エンコーダとLong Range Arenaの分類課題に限られ、自己回帰LLMのKVキャッシュ・逐次生成・推論サービングへの具体的実装や性能検証はない。汎用Transformerのトークン選択として技術的関連性はあるが、現行のLLM推論システムへの直接的貢献を確認できないためborderlineとする。",
+  "title": "Pyramid-BERT: Reducing Complexity via Successive Core-set based Token Selection",
+  "identity_tokens": [
+    "arxiv:2203.14380",
+    "title:pyramid-bert-reducing-complexity-via-successive-core-set-based-token-selection"
+  ],
+  "linked_from": [],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a813c21b99e9",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}
