@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-14T22:48:33+00:00",
-  "record_count": 5157,
+  "updated_at": "2026-10-15T01:46:45+00:00",
+  "record_count": 5158,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -80178,6 +80178,19 @@
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "Exploiting the Experts: Unauthorized Compression in MoE-LLMs"
+    },
+    "arXiv:2205.08084": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2205.08084",
+      "identity_tokens": [
+        "arXiv:2205.08084"
+      ],
+      "reason": "一次要旨では産業用推薦を言語理解・生成タスクへ統合することが主目的。少数パラメータのプロンプト調整に加え、late interaction、early exiting、重み共有、pruningによる推論時間・モデル容量の削減を記載する。LLM推論最適化の要素はあるが、最終評価が推薦システムの性能・展開に依存するため、推論基盤の独立した寄与としては追加確認を要する。",
+      "first_checked_at": "2026-10-15T01:46:45+00:00",
+      "last_checked_at": "2026-10-15T01:46:45+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "M6-Rec: Generative Pretrained Language Models are Open-Ended Recommender Systems"
     }
   }
 }
