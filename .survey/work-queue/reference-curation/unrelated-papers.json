@@ -2,7 +2,7 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-15T17:52:11+00:00",
+  "updated_at": "2026-10-15T18:58:03+00:00",
   "record_count": 12276,
   "records": {
     "arXiv:2303.08774": {
@@ -168602,9 +168602,9 @@
       "identity_tokens": [
         "arXiv:2403.18421"
       ],
-      "reason": "一次要旨を確認。主な寄与はPubMed文献のみで学習した医学生物学向け2.7B言語モデルと、その医療質問応答の精度評価である。小型モデルの用途別有効性とプライバシーには触れるが、LLM推論時の新しい実行機構、量子化・疎化、KVキャッシュ管理、スケジューリング、オフロードの技術的提案と評価が主題ではない。モデル紹介・医療応用研究として対象外。",
+      "reason": "生物医学テキストを用いた言語モデルの構築・学習が主題であり、LLM推論基盤の高速化、キャッシュ管理、量子化、サービングの手法研究ではない。",
       "first_checked_at": "2026-10-13T13:47:00+00:00",
-      "last_checked_at": "2026-10-14T21:47:13+00:00",
+      "last_checked_at": "2026-10-15T18:58:03+00:00",
       "linked_from": [],
       "title": "BioMedLM: A 2.7B Parameter Language Model Trained On Biomedical Text"
     },
