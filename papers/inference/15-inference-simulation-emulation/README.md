@@ -23,7 +23,7 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
 - [09-kernel-runtime-compilation](../09-kernel-runtime-compilation/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（26本）
+## 自動生成の論文一覧（27本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -131,6 +131,12 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
 - **2024-09 · [TinyVLA: Towards Fast, Data-Efficient Vision-Language-Action Models for Robotic Manipulation](2024-2409.12514-tinyvla-towards-fast-data-efficient-vision-language-action-models-for-ro.md)**  
   実装：[✓](https://github.com/liyaxuanliyaxuan/TinyVLA) ・ リポジトリ内被引用：2  
   提案手法は、画像・言語の意味理解を約4.2億〜13億パラメータの小型マルチモーダル基盤モデルへ、連続行動の生成を拡散方策（diffusion policy）復号器へ分担させる。実機のFranka単腕ロボット5タスクでは、最大構成TinyVLA-Hの平均成功率が94.0%、OpenVLAが68.3%であり、差は25.7パーセントポイントだった。
+
+### 4年前（2022-11〜2023-10）
+
+- **2023-10 · [Sia: Heterogeneity-aware, goodput-optimized ML-cluster scheduling](2023-2c2071afa90d-sia-heterogeneity-aware-goodput-optimized-ml-cluster-scheduling.md)**  
+  実装：[✓](https://github.com/siasosp23/artifacts) ・ リポジトリ内被引用：2  
+  Siaは、GPUの種類が混在する深層学習訓練クラスタで、各ジョブへ割り当てるGPUの種類・台数・バッチサイズを同時に決めるスケジューラである。原著は、44GPUの実機クラスタで既存のPolluxより平均ジョブ完了時間を約35〜50%、Gavelより約50%短縮したと報告する。
 
 ### 7年前（2019-11〜2020-10）
 
