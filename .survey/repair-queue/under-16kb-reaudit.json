@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-10-14T23:57:46.313105+00:00",
+  "generated_at": "2026-10-15T00:09:18.783812+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 10,
+  "count": 11,
   "worker_counts": {
     "scheduled-chat-00": 4,
-    "scheduled-chat-30": 3,
+    "scheduled-chat-30": 4,
     "scheduled-chat-45": 3
   },
   "entries": [
@@ -106,26 +106,6 @@
       "warnings": []
     },
     {
-      "path": "papers/inference/99-other-inference-systems/2025-2503.12559-adaretake-adaptive-redundancy-reduction-to-perceive-longer-for-video-lan.md",
-      "canonical_id": "arXiv:2503.12559",
-      "title": "AdaReTaKe: Adaptive Redundancy Reduction to Perceive Longer for Video-language Understanding",
-      "file_bytes": 13735,
-      "source_sha256": "7a5aa45237d418f7af09de555aaacd2b1948beda1e6be78ab6bfc127beaccea5",
-      "source_git_blob_sha": "0c0858b1cd83a4d32029599c87fb18d3b9a4123f",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.977667,
-      "quality_metrics": {
-        "body_chars": 3538,
-        "method_chars": 1138,
-        "evaluation_chars": 1160,
-        "limitation_chars": 0
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
       "path": "papers/inference/99-other-inference-systems/2026-2603.23525-prompt-compression-in-production-task-orchestration-a-pre-registered-ran.md",
       "canonical_id": "arXiv:2603.23525",
       "title": "Prompt Compression in Production Task Orchestration: A Pre-Registered Randomized Trial",
@@ -140,6 +120,26 @@
         "body_chars": 3236,
         "method_chars": 1031,
         "evaluation_chars": 689,
+        "limitation_chars": 0
+      },
+      "mechanical_failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/99-other-inference-systems/2024-2403.01632-syncode-llm-generation-with-grammar-augmentation.md",
+      "canonical_id": "arXiv:2403.01632",
+      "title": "SynCode: LLM Generation with Grammar Augmentation",
+      "file_bytes": 14384,
+      "source_sha256": "bf3c982e9cee7bf8f3314db86927e9b1aa30d209b8e8745e557d5de512116232",
+      "source_git_blob_sha": "9c698b05c1d090b2ad57c16e2e08fd22764fb29e",
+      "assigned_worker": "scheduled-chat-30",
+      "semantic_status": "pending",
+      "mechanical_status": "PASS",
+      "japanese_ratio": 0.920688,
+      "quality_metrics": {
+        "body_chars": 4048,
+        "method_chars": 1248,
+        "evaluation_chars": 1418,
         "limitation_chars": 0
       },
       "mechanical_failures": [],
@@ -180,6 +180,26 @@
         "body_chars": 3639,
         "method_chars": 1063,
         "evaluation_chars": 1088,
+        "limitation_chars": 0
+      },
+      "mechanical_failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/99-other-inference-systems/2025-2503.12559-adaretake-adaptive-redundancy-reduction-to-perceive-longer-for-video-lan.md",
+      "canonical_id": "arXiv:2503.12559",
+      "title": "AdaReTaKe: Adaptive Redundancy Reduction to Perceive Longer for Video-language Understanding",
+      "file_bytes": 15285,
+      "source_sha256": "ec1a2ae0f0a0cfa5eae3dfcb76956745250f193120e73a6d48576b508679660a",
+      "source_git_blob_sha": "a87bc53d4dfdebe136441fd2b81dfa233a743d62",
+      "assigned_worker": "scheduled-chat-00",
+      "semantic_status": "pending",
+      "mechanical_status": "PASS",
+      "japanese_ratio": 0.977667,
+      "quality_metrics": {
+        "body_chars": 3538,
+        "method_chars": 1138,
+        "evaluation_chars": 1160,
         "limitation_chars": 0
       },
       "mechanical_failures": [],
