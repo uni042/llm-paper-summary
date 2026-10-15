@@ -35,10 +35,15 @@
   "selection_reason": "Gumbel-Softmax relaxationで座標ごとのquantization grid割当とgroup scaleを共同最適化するpost-training scalar量子化。既存scalar推論kernelとの互換性とGGUF K-Quant形式への再投影を一次要旨で確認でき、低bit LLM実行のmemory効率改善へ直接つながるためaccept。",
   "semantic_scholar_id": "c8b509a32e5bb1f138db9b33b5422d3173eddee9",
   "source_url": "https://arxiv.org/abs/2604.18556",
-  "status": "ready",
+  "status": "superseded",
   "title": "GSQ: Highly-Accurate Low-Precision Scalar Quantization for LLMs via Gumbel-Softmax Sampling",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-10-15T16:54:48+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2026-2604.18556-gsq-highly-accurate-low-precision-scalar-quantization-for-llms-via-gumbe.md",
+  "represented_canonical_id": "arXiv:2604.18556",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
