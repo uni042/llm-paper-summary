@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-15T23:47:14+00:00",
-  "record_count": 12277,
+  "updated_at": "2026-10-15T23:53:10+00:00",
+  "record_count": 12278,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -177040,6 +177040,18 @@
       "last_checked_at": "2026-10-15T22:46:32+00:00",
       "linked_from": [],
       "title": "PipelineRL: Faster On-policy Reinforcement Learning for Long Sequence Generation"
+    },
+    "arXiv:2208.00406": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2208.00406",
+      "identity_tokens": [
+        "arXiv:2208.00406"
+      ],
+      "reason": "一次要旨で確認した貢献は、機械学習モデルの消費電力と地域別CO2排出換算を記録する汎用計測パッケージeco2AIの提供である。推論と学習のエネルギーを観測するが、LLMの実行時スケジューリング、メモリ管理、KVキャッシュ、量子化、オフロード、GPUカーネルを改善するアルゴリズムやLLM推論基盤の実測改善を提案していないため対象外とする。",
+      "first_checked_at": "2026-10-15T23:53:10+00:00",
+      "last_checked_at": "2026-10-15T23:53:10+00:00",
+      "linked_from": [],
+      "title": "Eco2AI: carbon emissions tracking of machine learning models as the first step towards sustainable AI"
     }
   }
 }
