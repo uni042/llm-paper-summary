@@ -368,13 +368,13 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
   実装：[✓](https://github.com/LMCache/LMCache) ・ リポジトリ内被引用：7  
   外部知識を毎回文章としてプリフィルするのではなく、その文章をモデルが一度処理して得たKVキャッシュを「配送できる知識オブジェクト」として扱う。
 
+- **2025-08 · [TokenLake: A Unified Segment-level Prefix Cache Pool for Fine-grained Elastic Long-Context LLM Serving](2025-2508.17219-tokenlake-segment-prefix-cache-pool.md)**  
+  実装：✓ ・ リポジトリ内被引用：6  
+  TokenLakeは接頭辞KVを独立セグメントへ分割して全GPUの共有プールへ置き、頻出セグメントだけ複製し、負荷偏り・重複保存・断片化と通信量を減らす方式。
+
 - **2025-09 · [SparseServe: Unlocking Parallelism for Dynamic Sparse Attention in Long-Context LLM Serving](2025-2509.24626-sparseserve-dynamic-sparse-attention-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：5  
   動的疎注意で未使用KVをDRAMへ逃がし、断片化転送・HBM競合・長文プリフィルを専用機構で抑えることで、vLLM比で初回トークン時間を最大9.26倍短縮し生成スループットを最大3.14倍高めた長文LLMサービング基盤。
-
-- **2025-08 · [TokenLake: A Unified Segment-level Prefix Cache Pool for Fine-grained Elastic Long-Context LLM Serving](2025-2508.17219-tokenlake-segment-prefix-cache-pool.md)**  
-  実装：✓ ・ リポジトリ内被引用：5  
-  TokenLakeは接頭辞KVを独立セグメントへ分割して全GPUの共有プールへ置き、頻出セグメントだけ複製し、負荷偏り・重複保存・断片化と通信量を減らす方式。
 
 - **2025-07 · [HGCA: Hybrid GPU-CPU Attention for Long Context LLM Inference](2025-2507.03153-hgca-hybrid-gpu-cpu-attention.md)**  
   実装：✓ ・ リポジトリ内被引用：4  
