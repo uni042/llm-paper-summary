@@ -1,0 +1,26 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-45",
+  "run_key": "20261015-1945-scheduled-chat-45/r01-research-relevance",
+  "reference_main_sha": "e6af3d146791ff48481d2c5a465a6cdec65cd07d",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2501.15061",
+      "identity_tokens": [
+        "arxiv:2501.15061"
+      ],
+      "title": "PolaFormer: Polarity-aware Linear Attention for Vision Transformers",
+      "reason": "対象モデルが画像向けVision Transformerであり、極性を考慮した線形注意は画像認識処理の効率化を狙う。LLMの言語復号・KVキャッシュ・推論サービングを直接扱うものではない。",
+      "source_url": "https://arxiv.org/abs/2501.15061",
+      "body_check": "title_screen_only; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-10-15T19:51:35+09:00",
+      "last_checked_at": "2026-10-15T19:51:35+09:00",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance",
+      "worklist_rank": 22
+    }
+  ]
+}
