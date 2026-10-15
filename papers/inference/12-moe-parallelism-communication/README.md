@@ -24,7 +24,7 @@ MoEの専門家並列、テンソル並列との混成、all-to-all通信、専�
 - [02-adaptive-expert-computation-compression](../02-adaptive-expert-computation-compression/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（44本）
+## 自動生成の論文一覧（45本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -136,6 +136,10 @@ MoEの専門家並列、テンソル並列との混成、all-to-all通信、専�
 - **2026-01 · [A Scheduling Framework for Efficient MoE Inference on Edge GPU-NDP Systems](2026-2601.03992-edge-gpu-ndp-moe-scheduling.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   本研究は専門家行列を複数NDPへ分割し、GPU/NDP実行時間を釣り合わせる動的割当と頻出専門家先読みを組み合わせ、エッジMoEの外部転送と装置間負荷偏りを減らす。
+
+- **2025-12 · [RepetitionCurse: Measuring and Understanding Router Imbalance in Mixture-of-Experts LLMs under DoS Stress](2025-2512.23995-repetitioncurse-measuring-and-understanding-router-imbalance-in-mixture-.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  本研究の貢献は、新しいMoEルータを学習することではなく、既存の推論実装における負荷集中の発生条件、サービス品質への波及、専門家配置の防御効果の限界を測ることである。
 
 - **2025-11 · [DMA-Latte: Expanding the Reach of DMA Offloads to Latency-bound ML Communication](2025-2511.06605-dma-latte-expanding-the-reach-of-dma-offloads-to-latency-bound-ml-commun.md)**  
   実装：[✓](https://github.com/AMDResearch/AMD-DMA-Latte) ・ リポジトリ内被引用：0  

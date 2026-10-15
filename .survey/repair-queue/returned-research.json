@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-15T00:18:52+00:00",
+  "generated_at": "2026-10-15T05:51:19+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -2127,33 +2127,6 @@
       "worker_run_key": "20261014-2130-scheduled-chat-30/r01"
     },
     {
-      "canonical_id": "arXiv:2605.19049",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-14T13:18:42+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 419 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5072,
-        "body_paragraphs": 24,
-        "method_chars": 1678,
-        "method_paragraphs": 8,
-        "evaluation_chars": 419,
-        "limitation_chars": 745,
-        "insufficiency_flags": [
-          "評価説明量 419 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-be47558e0bb6--libfile_e9925c600dc481919896f3dab2b2d9e1--2026-2605.19049-kvbuffer-linear-attention-serving-research-20261014-0200-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-be47558e0bb6--libfile_e9925c600dc481919896f3dab2b2d9e1--2026-2605.19049-kvbuffer-linear-attention-serving-research-20261014-0200-scheduled-chat-0.json",
-      "worker_run_key": "20261014-0200-scheduled-chat-00/r01"
-    },
-    {
       "canonical_id": "arXiv:2512.09487",
       "title": null,
       "source_url": null,
@@ -3059,6 +3032,33 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-ebd9f6fc18d6--libfile_3c6b74fa6f3881919b56ef27ae5d6b15--2026-2602.03152-fasa-frequency-aware-sparse-attention-research-20261014-0330-scheduled-chat-30-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-ebd9f6fc18d6--libfile_3c6b74fa6f3881919b56ef27ae5d6b15--2026-2602.03152-fasa-frequency-aware-sparse-attention-research-20261014-0330-scheduled-ch.json",
       "worker_run_key": "20261014-0330-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2605.19049",
+      "title": "KVBuffer: IO-aware Serving for Linear Attention",
+      "source_url": "https://arxiv.org/abs/2605.19049",
+      "returned_at": "2026-10-15T05:49:16+00:00",
+      "return_count": 3,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 426 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 4860,
+        "body_paragraphs": 25,
+        "method_chars": 1918,
+        "method_paragraphs": 8,
+        "evaluation_chars": 426,
+        "limitation_chars": 582,
+        "insufficiency_flags": [
+          "評価説明量 426 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_2461ed70d7888191a86e5aa292676aa9--2026-2605.19049-kvbuffer-linear-attention-serving-research-20261015-1430-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_2461ed70d7888191a86e5aa292676aa9--2026-2605.19049-kvbuffer-linear-attention-serving-research-20261015-1430-scheduled-chat-30-r01.json",
+      "worker_run_key": "20261015-1430-scheduled-chat-30/r01"
     }
   ]
 }
