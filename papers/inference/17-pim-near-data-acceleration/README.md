@@ -24,7 +24,7 @@
 - [08-edge-on-device-llm-systems](../08-edge-on-device-llm-systems/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（22本）
+## 自動生成の論文一覧（23本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -76,6 +76,10 @@
 - **2026-05 · [NASiC: 3D NAND-based CAM-Selected Multibit CIM Architecture for Efficient On-Device Mixture-of-Experts LLM Inference](2026-2605.23294-nasic-3d-nand-based-cam-selected-multibit-cim-architecture-for-efficient-on-device-mixture-of-experts-llm-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   三次元NAND内部で専門家番号の照合と選択専門家の計算を一体化し、多値記憶とブロック並列化によって専門家混合モデルを高密度に直接実行する。
+
+- **2026-04 · [Rethinking Compute Substrates for 3D-Stacked Near-Memory LLM Decoding: Microarchitecture-Scheduling Co-Design](2026-2604.04253-rethinking-compute-substrates-for-3d-stacked-near-memory-llm-decoding-mi.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  本論文は、三次元積層メモリの近傍演算（near-メモリ processing、NMP）を用いたLLM復号の計算基盤を、ロジックダイの小さな面積に合わせて再設計する。Stratum由来のHBM3積層構成を共通条件にした論理合成・シミュレーション評価で、従来MAC木型NMPに対して復号速度は平均2.90倍、ロジックダイのエネルギー効率は2.40倍と報告される。
 
 - **2026-03 · [PIM-SHERPA: Software Method for On-device LLM Inference by Resolving PIM Memory Attribute and Layout Inconsistencies](2026-2603.09216-pim-sherpa-software-method-for-on-device-llm-inference-by-resolving-pim-memory-attribute-and-layout-inconsistencies.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
