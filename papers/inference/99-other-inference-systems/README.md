@@ -1303,7 +1303,7 @@
   多様なKV配置と注意派生形をブロック疎形式と実行時コンパイルで統一し、可変系列長を固定CTAへ動的に負荷均衡しながらCUDAグラフ互換性も保つ、LLMサービング向け高性能注意エンジン。
 
 - **2025-04 · [SpinQuant: LLM quantization with learned rotations](2025-2405.16406-spinquant-llm-quantization-with-learned-rotations.md)**  
-  実装：[✓](https://github.com/facebookresearch/SpinQuant) ・ リポジトリ内被引用：51  
+  実装：[✓](https://github.com/facebookresearch/SpinQuant) ・ リポジトリ内被引用：52  
   外れ値が低ビット量子化の誤差を大きくする問題に対して、全精度の機能を保つ旋回行列を学習し、重み・活性値・KVキャッシュの量子化に合わせる。
 
 - **2024-12 · [Gated Delta Networks: Improving Mamba2 with Delta Rule](2024-2412.06464-gated-delta-networks-improving-mamba2-with-delta-rule.md)**  
@@ -1578,6 +1578,10 @@
   実装：[✓](https://github.com/ds2-lab/MorphServe) ・ リポジトリ内被引用：2  
   負荷ピーク時だけ低影響層を低ビット版へ非同期交換し、空いたGPUメモリをKVキャッシュへ振り替えることで、平均SLO違反を92.45%削減しP95初回トークン遅延を2.2〜3.9倍改善する。
 
+- **2025-04 · [HIGGS: Pushing the Limits of Large Language Model Quantization via the Linearity Theorem](2025-2411.17525-higgs-pushing-the-limits-of-large-language-model-quantization-via-the-li.md)**  
+  実装：✓ ・ リポジトリ内被引用：2  
+  HIGGSは、LLMの各重み行列を別々に量子化するとき、どの誤差指標を最小化すればモデル全体の予測品質を守れるのかを理論と実験の両面から扱う。GPU実装面では、RTX 4090でLlama-3.1-8Bの4ビットHIGGSをFLUTEカーネルで実行すると、バッチ1で139トークン/秒、FP16は57トークン/秒だった。
+
 - **2025-03 · [Collaborative Speculative Inference for Efficient LLM Inference Serving](2025-2503.10325-collaborative-speculative-inference-for-efficient-llm-inference-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
   異種GPUへドラフト生成と検証を分離し、専門ドラフタ協調と動的パイプライン制御で投機推論の資源利用と受理率を改善する。
@@ -1601,10 +1605,6 @@
 - **2025-06 · [EQuARX: Efficient Quantized AllReduce in XLA for Distributed Machine Learning Acceleration](2025-2506.17615-equarx-quantized-allreduce-xla.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   AllReduce内でブロック量子化と逆量子化を通信へ重ね、TPU/XLAの集団通信量を削減する方式。int8でBF16 AllReduce比最大1.8倍、Gemma 3 27Bプリフィル最大1.28倍を示す。
-
-- **2025-04 · [HIGGS: Pushing the Limits of Large Language Model Quantization via the Linearity Theorem](2025-2411.17525-higgs-pushing-the-limits-of-large-language-model-quantization-via-the-li.md)**  
-  実装：✓ ・ リポジトリ内被引用：1  
-  HIGGSは、LLMの各重み行列を別々に量子化するとき、どの誤差指標を最小化すればモデル全体の予測品質を守れるのかを理論と実験の両面から扱う。GPU実装面では、RTX 4090でLlama-3.1-8Bの4ビットHIGGSをFLUTEカーネルで実行すると、バッチ1で139トークン/秒、FP16は57トークン/秒だった。
 
 - **2024-12 · [IFMoE: An Inference Framework Design for Fine-grained MoE](2026-3190de0b4969-ifmoe-an-inference-framework-design-for-fine-grained-moe.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
@@ -1677,7 +1677,7 @@
   従来のFlashAttention系列は、注意重みの巨大な中間行列を高帯域メモリ（HBM）に書き戻さず、共有メモリとレジスタ内でタイルごとに処理することでメモリ転送を削減した。
 
 - **2024-03 · [QuaRot: Outlier-Free 4-Bit Inference in Rotated LLMs](2024-2404.00456-quarot-outlier-free-4-bit-inference-in-rotated-llms.md)**  
-  実装：[✓](https://github.com/spcl/QuaRot) ・ リポジトリ内被引用：65  
+  実装：[✓](https://github.com/spcl/QuaRot) ・ リポジトリ内被引用：66  
   QuaRotは、大規模言語モデル（LLM）の4ビット推論を難しくする活性値の外れ値を、高精度の例外チャネルへ逃がすのではなく、モデルの関数を変えない直交回転（orthogonal rotation）で多数の次元へ分散する量子化手法である。
 
 - **2024-09 · [OLMoE: Open Mixture-of-Experts Language Models](2024-2409.02060-olmoe-open-mixture-of-experts-language-models.md)**  
@@ -1685,7 +1685,7 @@
   混合専門家（Mixture-of-Experts; MoE）は総パラメータを増やしながら、各トークンで一部専門家だけを実行することで、密 モデルより計算量を抑えられる。
 
 - **2024-02 · [QuIP#: Even Better LLM Quantization with Hadamard Incoherence and Lattice Codebooks](2024-2402.04396-quip-even-better-llm-quantization-with-hadamard-incoherence-and-lattice-.md)**  
-  実装：[✓](https://github.com/Cornell-RelaxML/quip-sharp) ・ リポジトリ内被引用：47  
+  実装：[✓](https://github.com/Cornell-RelaxML/quip-sharp) ・ リポジトリ内被引用：48  
   QuIP#は、学習済みの大規模言語モデルを再学習せずに2〜4ビット/重みへ圧縮する事後学習量子化（Post-学習 量子化、PTQ）である。試作推論実装はRTX 4090上で70Bの2ビット重みを32.74トークン/秒で生成し、実効メモリ帯域利用率56.84%を記録した（表5）。
 
 - **2024-03 · [An Image is Worth 1/2 Tokens After Layer 2: Plug-and-Play Inference Acceleration for Large Vision-Language Models](2024-2403.06764-an-image-is-worth-1-2-tokens-after-layer-2-plug-and-play-inference-accel.md)**  
@@ -1737,7 +1737,7 @@
   本論文は、大規模言語モデルの全ての変換層が同程度に必要とは限らないという観察から、計算の一部を省略する二種類の方式を提案する。ACL 2025掲載版の代表例では、Llama2-13Bの40層から10層を対象とする条件で、多肢選択指標の平均値は58.49から53.57となり、元の約91.59%を維持した。
 
 - **2024-01 · [Extreme Compression of Large Language Models via Additive Quantization](2024-2401.06118-extreme-compression-of-large-language-models-via-additive-quantization.md)**  
-  実装：[✓](https://github.com/Vahe1994/AQLM) ・ リポジトリ内被引用：27  
+  実装：[✓](https://github.com/Vahe1994/AQLM) ・ リポジトリ内被引用：28  
   加算量子化による言語モデル圧縮（AQLM）は、重みの極低ビット量子化における「小さいモデルを高精度で保持した方が、巨大モデルを2ビットにするより良い」という従来の精度対容量の関係を改善する研究である。Llama 2 7B・13B・70B、Mixtral 8×7B、Mistral 7Bを評価する。
 
 - **2024-02 · [Decoding Speculative Decoding](2024-2402.01528-decoding-speculative-decoding.md)**  
@@ -2131,7 +2131,7 @@
   初代FlashAttentionのオンライン・ソフトマックスとタイル分割を保ちつつ、行列積以外の演算とブロック・ワープ間の仕事分割を再設計し、A100で理論演算性能の最大73%と初代比約2倍の高速化を達成する。
 
 - **2022-11 · [SmoothQuant: Accurate and Efficient Post-Training Quantization for Large Language Models](2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md)**  
-  実装：[✓](https://github.com/mit-han-lab/smoothquant) ・ リポジトリ内被引用：222  
+  実装：[✓](https://github.com/mit-han-lab/smoothquant) ・ リポジトリ内被引用：223  
   活性値全体を単純に8ビットへ写すと、その少数の外れ値が量子化範囲を広げ、通常値へ割り当てられる段階数が減って精度が崩れる。OPT、BLOOM、GLM、MT-NLGなどで8ビット重み・8ビット活性値（W8A8）を実現し、精度低下をほぼ抑えながら最大1.56倍の推論高速化と2倍のメモリ削減を報告し、530Bモデルを単一ノードで提供可能にした。
 
 - **2023-05 · [GQA: Training Generalized Multi-Query Transformer Models from Multi-Head Checkpoints](2023-2305.13245-gqa.md)**  
@@ -2462,13 +2462,13 @@
   実装：[✓](https://github.com/idiap/fast-transformers) ・ リポジトリ内被引用：10  
   本論文は、自己注意（self-注意機構）の各クエリがすべてのキーを参照するため、系列長Nに対して注意行列がN×Nになり、計算量と中間メモリが二乗で増える問題を扱う。NeurIPS 2020の正式版では、GTX 1080 Ti 11GB上の音声認識2データセットと、学習済みRoBERTaのGLUE・SQuADへの適用を評価した。
 
+- **2021-10 · [8-bit Optimizers via Block-wise Quantization](2021-2110.02861-8-bit-optimizers-via-block-wise-quantization.md)**  
+  実装：[✓](https://github.com/bitsandbytes-foundation/bitsandbytes) ・ リポジトリ内被引用：8  
+  Dettmersらは、この状態を8ビットへ縮めても32ビット版に近い学習品質を維持する方式を提案した。原著表1では1.5Bパラメータ言語モデルで32ビットAdamと8ビットAdamの困惑度がともに9.0で、後者は8.5GBのGPUメモリを節約した。
+
 - **2020-12 · [MiniLMv2: Multi-Head Self-Attention Relation Distillation for Compressing Pretrained Transformers](2020-2012.15828-minilmv2-multi-head-self-attention-relation-distillation-for-compressing.md)**  
   実装：[✓](https://github.com/microsoft/unilm/tree/master/minilm) ・ リポジトリ内被引用：8  
   教師と生徒の注意頭数を揃える制約を外し、Query・Key・Valueのトークン間関係を共通の「関係頭」で比較する。推論速度の改善は蒸留後の小型モデルによるもので、実行時に教師を参照する方式ではない。
-
-- **2021-10 · [8-bit Optimizers via Block-wise Quantization](2021-2110.02861-8-bit-optimizers-via-block-wise-quantization.md)**  
-  実装：[✓](https://github.com/bitsandbytes-foundation/bitsandbytes) ・ リポジトリ内被引用：7  
-  Dettmersらは、この状態を8ビットへ縮めても32ビット版に近い学習品質を維持する方式を提案した。原著表1では1.5Bパラメータ言語モデルで32ビットAdamと8ビットAdamの困惑度がともに9.0で、後者は8.5GBのGPUメモリを節約した。
 
 - **2020-11 · [EdgeBERT: Sentence-Level Energy Optimizations for Latency-Aware Multi-Task NLP Inference](2020-2011.14203-edgebert-sentence-level-energy-optimizations-for-latency-aware-multi-tas.md)**  
   実装：✓ ・ リポジトリ内被引用：6  

@@ -37,27 +37,27 @@ MoEの大部分を占めるexpert重みを**低bit化、pruning、precision切�
 ### 2年前（2024-11〜2025-10）
 
 - **2025-07 · [EAC-MoE: Expert-Selection Aware Compressor for Mixture-of-Experts Large Language Models](2025-eac-moe-expert-selection-aware-compressor-for-mixture-of-experts-large-language-.md)**  
-  実装：✓ ・ リポジトリ内被引用：14  
+  実装：✓ ・ リポジトリ内被引用：15  
   混合専門家（Mixture of エキスパート、MoE）型の大規模言語モデルは、トークンごとに少数の専門家だけを実行するため活性パラメータ数を抑えられるが、専門家の総重みは大きく、GPUメモリの負担が残る。重み量子化は保存容量を削減する一方、各層の出力を少し変化させる。
 
 - **2025-05 · [MxMoE: Mixed-precision Quantization for MoE with Accuracy and Performance Co-Design](2025-2505.05799-mxmoe-mixed-precision-quantization-for-moe-with-accuracy-and-performance-co-desi.md)**  
   実装：[✓](https://github.com/cat538/MxMoE) ・ リポジトリ内被引用：13  
   MxMoEは、混合専門家モデル（Mixture of エキスパート; MoE）の推論において、モデルの重みを小さくするだけでなく、実際にGPU上で計算が速くなる量子化配置を選ぶ研究である。専門家演算の処理量は16ビット基準に対して、512トークン条件で1.6～2.7倍、8192トークン条件で3.0～3.4倍となった。
 
+- **2025-05 · [MoEQuant: Enhancing Quantization for Mixture-of-Experts Large Language Models via Expert-Balanced Sampling and Affinity Guidance](2025-2505.03804-moequant-enhancing-quantization-for-mixture-of-experts-large-language-models-via.md)**  
+  実装：[✓](https://github.com/chenzx921020/MoEQuant) ・ リポジトリ内被引用：11  
+  MoEQuantは、混合専門家モデル（Mixture of エキスパート、MoE）を低ビットの重みで動かすときに生じる、専門家間の較正例不足と専門家内の入力重要度の違いを同時に扱う学習後量子化（Post-学習 量子化、PTQ）の枠組みである。
+
 - **2025-02 · [Delta Decompression for MoE-based LLMs Compression](2025-2502.17298-delta-decompression-for-moe-based-llms-compression.md)**  
   実装：[✓](https://github.com/lliai/D2MoE) ・ リポジトリ内被引用：11  
   しかし、推論環境には多数の専門家の重みを保持する必要があり、GPUメモリ・ホストメモリ・ストレージ容量が大きくなる。専門家を丸ごと削除すると特化した能力を失い、複数専門家を単純に統合すると固有の知識が平均化される。
 
-- **2025-05 · [MoEQuant: Enhancing Quantization for Mixture-of-Experts Large Language Models via Expert-Balanced Sampling and Affinity Guidance](2025-2505.03804-moequant-enhancing-quantization-for-mixture-of-experts-large-language-models-via.md)**  
-  実装：[✓](https://github.com/chenzx921020/MoEQuant) ・ リポジトリ内被引用：10  
-  MoEQuantは、混合専門家モデル（Mixture of エキスパート、MoE）を低ビットの重みで動かすときに生じる、専門家間の較正例不足と専門家内の入力重要度の違いを同時に扱う学習後量子化（Post-学習 量子化、PTQ）の枠組みである。
-
 - **2025-06 · [EAQuant: Enhancing Post-Training Quantization for MoE Models via Expert-Aware Optimization](2025-2506.13329-eaquant-enhancing-post-training-quantization-for-moe-models.md)**  
-  実装：[✓](https://github.com/darren-fzq/EAQuant) ・ リポジトリ内被引用：5  
+  実装：[✓](https://github.com/darren-fzq/EAQuant) ・ リポジトリ内被引用：6  
   密モデル向けの事後学習量子化（Post-学習 量子化; PTQ）をMoEへそのまま持ち込むと、専門家ごとに異なる活性外れ値、量子化後のルータTop-kの入れ替わり、ほとんど選ばれない専門家の校正データ不足が重なる。EAQuantはこれを一つの量子化誤差として扱わず、専門家認識平滑化、ルーティング整合、専門家単位の校正データ均衡の三機構に分解して補正する。
 
 - **2025-03 · [DynaMo: Runtime Switchable Quantization for MoE with Cross-Dataset Adaptation](2025-2503.21135-dynamo-runtime-switchable-quantization-for-moe-with-cross-dataset-adaptation-moq.md)**  
-  実装：✓ ・ リポジトリ内被引用：4  
+  実装：✓ ・ リポジトリ内被引用：5  
   DynaMoは、混合専門家モデル（Mixture-of-Experts; MoE）の量子化を、固定された1種類の較正データに最適化するのではなく、複数のデータ集合にわたる専門家の重要度変動と、入力分布の変化に応じて調整する手法である。
 
 - **2025-10 · [MC#: Mixture Compressor for Mixture-of-Experts Large Models](2025-2510.10962-mc-mixture-compressor-for-mixture-of-experts-large-models.md)**  
@@ -93,6 +93,6 @@ MoEの大部分を占めるexpert重みを**低bit化、pruning、precision切�
   MoQEは、モデル容量の大半を占める専門家FFNだけを2〜8ビット化し、注意・共有FFNは高精度に残して、品質を守りながら保存量と重み帯域を減らす。
 
 - **2023-10 · [QMoE: Practical Sub-1-Bit Compression of Trillion-Parameter Models](2023-2310.16795-qmoe-practical-sub-1-bit-compression-of-trillion-parameter-models.md)**  
-  実装：[✓](https://github.com/IST-DASLab/qmoe) ・ リポジトリ内被引用：21  
+  実装：[✓](https://github.com/IST-DASLab/qmoe) ・ リポジトリ内被引用：22  
   QMoEは、Switch Transformerの専門家重みをデータ依存に2ビット/三値圧縮し、圧縮表現を直接読むGPUカーネルで展開帯域を抑え、超大規模MoEの保存容量を減らす。
 <!-- survey:auto:end -->
