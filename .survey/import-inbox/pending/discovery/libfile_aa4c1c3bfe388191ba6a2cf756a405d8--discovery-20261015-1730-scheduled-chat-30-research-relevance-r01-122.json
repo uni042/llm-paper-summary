@@ -1,0 +1,26 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261015-1730-scheduled-chat-30/r01-research-prescreen-122",
+  "reference_main_sha": "0c0c0c061314b77a42d34aa63f91925f9e1b00c5",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.21105/joss.10304",
+      "identity_tokens": [
+        "doi:10.21105/joss.10304"
+      ],
+      "title": "ado: a Python framework for computational experimentation and benchmarking",
+      "reason": "原著の公開要旨と著者機関の一次説明によると、adoは実験計画、探索空間、サンプリング、計測値の共有、由来記録、再利用を統合する汎用Python実験キャンペーン管理基盤であり、プラグインにより科学計算・基盤モデル性能測定を含む各分野の実験を扱う。並列実行機能は実験キャンペーンの実行管理であって、LLMオンライン推論のKVキャッシュ、モデル実行、スケジューラ、GPUカーネル、分散サービングの新規最適化を示すものではない。LLM推論性能を計測対象として利用できることと推論システム自体への直接的技術貢献を区別し、現行サーベイの対象外と判定する。",
+      "source_url": "https://joss.theoj.org/papers/10.21105/joss.10304",
+      "body_check": "abstract_screen_only; body_not_read; publisher_abstract_and_author_institution_description",
+      "first_checked_at": "2026-10-15T17:30:45+09:00",
+      "last_checked_at": "2026-10-15T17:30:45+09:00",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance",
+      "worklist_rank": 122
+    }
+  ]
+}
