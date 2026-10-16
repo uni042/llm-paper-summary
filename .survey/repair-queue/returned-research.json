@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-16T08:59:43+00:00",
+  "generated_at": "2026-10-16T09:25:38+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 133,
+  "count": 134,
   "entries": [
     {
       "canonical_id": "DOI:10.1145/3714983.3714987",
@@ -3317,37 +3317,9 @@
       "worker_run_key": "20261016-1700-scheduled-chat-00/r01"
     },
     {
-      "canonical_id": "arXiv:1606.09274",
-      "title": "Compression of Neural Machine Translation Models via Pruning",
-      "source_url": "https://arxiv.org/pdf/1606.09274",
-      "returned_at": "2026-10-16T08:59:40+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 489 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5432,
-        "body_paragraphs": 31,
-        "method_chars": 1033,
-        "method_paragraphs": 6,
-        "evaluation_chars": 489,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "評価説明量 489 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_ee229bd06d688191b12c3e3af1c4f1ec--2016-1606.09274-nmt-magnitude-pruning-research-20261016-1700-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_ee229bd06d688191b12c3e3af1c4f1ec--2016-1606.09274-nmt-magnitude-pruning-research-20261016-1700-scheduled-chat-00-r01.json",
-      "worker_run_key": "20261016-1700-scheduled-chat-00/r01"
-    },
-    {
       "canonical_id": "DOI:10.3390/s26041101",
-      "title": "Dynamic Micro-Batch and Token-Budget Scheduling for IoT-Scale Pipeline-Parallel LLM Inference",
-      "source_url": "https://www.mdpi.com/1424-8220/26/4/1101",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-16T08:59:42+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-00",
@@ -3376,8 +3348,8 @@
     },
     {
       "canonical_id": "arXiv:2606.25091",
-      "title": "Speculation at a Distance: Where Edge-Cloud Speculative Decoding Actually Pays Off",
-      "source_url": "https://arxiv.org/html/2606.25091v2",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-16T08:59:43+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-45",
@@ -3403,6 +3375,62 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-a4957a409a45--libfile_39bbd72cc26481919d651249663a0ae4--2026-2606.25091-edge-cloud-speculative-decoding-economics-research-20261016-1730-scheduled-chat-30-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-a4957a409a45--libfile_39bbd72cc26481919d651249663a0ae4--2026-2606.25091-edge-cloud-speculative-decoding-economics-research-20261016-1730-schedule.json",
       "worker_run_key": "20261016-1730-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2602.22896",
+      "title": "DySL-VLA: Efficient Vision-Language-Action Model Inference via Dynamic-Static Layer-Skipping for Robot Manipulation",
+      "source_url": "https://arxiv.org/html/2602.22896v3",
+      "returned_at": "2026-10-16T09:25:37+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5050,
+        "body_paragraphs": 25,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 1012,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_da18bfc3945081918b96cf6aca2eff68--2026-2602.22896-dysl-vla-dynamic-static-layer-skipping-research-20261016-1800-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_da18bfc3945081918b96cf6aca2eff68--2026-2602.22896-dysl-vla-dynamic-static-layer-skipping-research-20261016-1800-scheduled-chat-00-r01.json",
+      "worker_run_key": "20261016-1800-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:1606.09274",
+      "title": "Compression of Neural Machine Translation Models via Pruning",
+      "source_url": "https://arxiv.org/pdf/1606.09274",
+      "returned_at": "2026-10-16T09:25:38+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 489 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5432,
+        "body_paragraphs": 31,
+        "method_chars": 1033,
+        "method_paragraphs": 6,
+        "evaluation_chars": 489,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "評価説明量 489 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-212c36ab5656--libfile_ee229bd06d688191b12c3e3af1c4f1ec--2016-1606.09274-nmt-magnitude-pruning-research-20261016-1700-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-212c36ab5656--libfile_ee229bd06d688191b12c3e3af1c4f1ec--2016-1606.09274-nmt-magnitude-pruning-research-20261016-1700-scheduled-chat-00-r01.json",
+      "worker_run_key": "20261016-1700-scheduled-chat-00/r01"
     }
   ]
 }

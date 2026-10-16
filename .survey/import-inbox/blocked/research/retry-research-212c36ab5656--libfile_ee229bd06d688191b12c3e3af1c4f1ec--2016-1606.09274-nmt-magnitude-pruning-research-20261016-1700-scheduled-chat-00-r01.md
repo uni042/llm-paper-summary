@@ -35,6 +35,8 @@ references:
     arxiv_id: '1503.04069'
   - canonical_id: arXiv:1510.00149
     arxiv_id: '1510.00149'
+last_audited: null
+audit_version: 0
 ---
 
 # 重み絶対値剪定によるニューラル機械翻訳モデルの圧縮
