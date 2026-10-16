@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "c2d050ea6ce65ddc45c5e6bbbefed75cecb3961d7a58bc2d4300fe8a2edfe7eb",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/retry-research-2fe6cde1ff6b--libfile_e18fe94f7a3c8191a82e04f2464b4556--2026-2605.05602-nearly-optimal-attention-coresets-quality-repair-20261016-1840.md",
+  "canonical_id": "arXiv:2605.05602",
+  "worker_completed_at": "2026-10-16T17:34:42+09:00",
+  "worker_run_key": "20261016-1730-scheduled-chat-30/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 5423,
+    "body_paragraphs": 37,
+    "method_chars": 1329,
+    "method_paragraphs": 10,
+    "evaluation_chars": 985,
+    "limitation_chars": 676,
+    "insufficiency_flags": []
+  },
+  "failures": [
+    "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2026-2605.05602-nearly-optimal-attention-coresets.md と 21 段落 / 4459文字 (100.0%) が完全一致"
+  ],
+  "processed_at": "2026-10-16T15:13:22+00:00"
+}
