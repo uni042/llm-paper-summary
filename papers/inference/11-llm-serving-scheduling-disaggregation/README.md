@@ -934,13 +934,13 @@
   実装：✓ ・ リポジトリ内被引用：13  
   要求ごとのプリフィル長とデコード長を考慮し、KV容量を守るバッチをF指標で選ぶスケジューラ。Vidur時間モデルでは混合2000要求の平均遅延をFCFS比4.87倍改善した。
 
+- **2025-02 · [LServe: Efficient Long-sequence LLM Serving with Unified Sparse Attention](2025-2502.14866-lserve-efficient-long-sequence-llm-serving-with-unified-sparse-attention.md)**  
+  実装：[✓](https://github.com/mit-han-lab/omniserve) ・ リポジトリ内被引用：13  
+  長文LLMでは、プリフィルでは系列長に対して二乗で増える注意計算、デコードでは過去KVを毎トークン読み直すメモリ帯域が別々の律速になる。LServeは両者をブロック疎注意（block-sparse 注意機構）という共通の実行形式へ落とし、オフラインで決めるストリーミングヘッドと、実行時に選ぶ重要KVページを同じカーネル群で処理する。
+
 - **2025-02 · [AIBrix: Towards Scalable, Cost-Effective Large Language Model Inference Infrastructure](2025-2504.03648-aibrix-towards-scalable-cost-effective-large-language-model-inference-in.md)**  
   実装：[✓](https://github.com/vllm-project/aibrix) ・ リポジトリ内被引用：13  
   GPU利用率のみで自動スケーリングすれば、入力長と出力長の差、復号負荷、KV容量圧迫を適切に反映できない。提案は、Kubernetesによる粗粒度資源管理を残しつつ、LLMのトークン処理量・接頭辞一致・KV使用量・アダプター配置・GPU別費用を観測する仕組みを導入する。
-
-- **2025-02 · [LServe: Efficient Long-sequence LLM Serving with Unified Sparse Attention](2025-2502.14866-lserve-efficient-long-sequence-llm-serving-with-unified-sparse-attention.md)**  
-  実装：[✓](https://github.com/mit-han-lab/omniserve) ・ リポジトリ内被引用：12  
-  長文LLMでは、プリフィルでは系列長に対して二乗で増える注意計算、デコードでは過去KVを毎トークン読み直すメモリ帯域が別々の律速になる。LServeは両者をブロック疎注意（block-sparse 注意機構）という共通の実行形式へ落とし、オフラインで決めるストリーミングヘッドと、実行時に選ぶ重要KVページを同じカーネル群で処理する。
 
 - **2025-01 · [Locality-aware Fair Scheduling in LLM Serving](2025-2501.14312-locality-aware-fair-scheduling-dlpm.md)**  
   実装：✓ ・ リポジトリ内被引用：12  
@@ -1193,7 +1193,7 @@
 ### 3年前（2023-11〜2024-10）
 
 - **2023-12 · [SGLang: Efficient Execution of Structured Language Model Programs](2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md)**  
-  実装：[✓](https://github.com/sgl-project/sglang) ・ リポジトリ内被引用：479  
+  実装：[✓](https://github.com/sgl-project/sglang) ・ リポジトリ内被引用：480  
   複数のLLM呼び出しや条件分岐をランタイムが1つのプログラムとして理解し、共有接頭辞のKV再利用・並列実行・構造化出力生成をまとめて効率化する推論システム。
 
 - **2024-07 · [DistServe: Disaggregating Prefill and Decoding for Goodput-optimized Large Language Model Serving](2024-2401.09670-distserve-disaggregating-prefill-decoding-goodput.md)**  
@@ -1297,7 +1297,7 @@
   本論文はこの問題を機械学習システム（MLSys）の観点から整理し、アルゴリズム側のモデル圧縮・効率的復号と、システム側のメモリ管理・バッチ化・並列化・スケジューリングを同じサービング設計空間に置く。
 
 - **2024-06 · [Helix: Distributed Serving of Large Language Models via Max-Flow on Heterogeneous GPUs](2024-2406.01566-helix-maxflow-heterogeneous-gpu-serving.md)**  
-  実装：[✓](https://github.com/Thesys-lab/Helix-ASPLOS25) ・ リポジトリ内被引用：26  
+  実装：[✓](https://github.com/Thesys-lab/Helix-ASPLOS25) ・ リポジトリ内被引用：27  
   異種GPUとネットワークを容量付き有向グラフへ写像し、最大流を目的に層配置をMILPで決め、最大流比率に沿って要求ごとの経路を選ぶことで、固定パイプラインの遊休GPUと通信混雑を減らすLLMサービング方式。
 
 - **2024-04 · [Mélange: Cost Efficient Large Language Model Serving by Exploiting GPU Heterogeneity](2024-2404.14527-m-lange-cost-efficient-large-language-model-serving-by-exploiting-gpu-he.md)**  
@@ -1383,7 +1383,7 @@
 ### 4年前（2022-11〜2023-10）
 
 - **2023-09 · [Efficient Memory Management for Large Language Model Serving with PagedAttention](2023-2309.06180-vllm-pagedattention-efficient-memory-management.md)**  
-  実装：[✓](https://github.com/vllm-project/vllm) ・ リポジトリ内被引用：1026  
+  実装：[✓](https://github.com/vllm-project/vllm) ・ リポジトリ内被引用：1027  
   vLLMは、要求ごとに大きな連続領域を予約していたKVキャッシュを固定長ブロックへ分解し、論理的な並びとGPU上の物理配置を分離する。必要なブロックだけ動的に割り当て、同じ接頭辞のKVを共有することで、限られたGPUメモリへより多くの要求を同時に載せる。
 
 - **2023-02 · [AlpaServe: Statistical Multiplexing with Model Parallelism for Deep Learning Serving](2023-2302.11665-alpaserve.md)**  

@@ -329,7 +329,7 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
   文書ごとの事前計算済み鍵・値キャッシュを位置再符号化と学習可能リンクトークンで安全に連結し、再計算を避けながら精度低下を抑える長文脈推論方式。
 
 - **2025-05 · [RetroInfer: A Vector Storage Engine for Scalable Long-Context LLM Inference](2026-vldb-retroinfer-vector-storage-engine-scalable-long-context-llm-inference.md)**  
-  実装：✓ ・ リポジトリ内被引用：17  
+  実装：✓ ・ リポジトリ内被引用：18  
   RetroInferはCPU上のKVをベクトル索引で検索し、注意に重要なトークンだけGPUへ取り出して、全KV走査の容量・帯域を減らしつつ検索近似誤差を抑える方式。
 
 - **2025-03 · [KVShare: An LLM Service System with Efficient and Effective Multi-Tenant KV Cache Reuse](2025-2503.16525-kvshare.md)**  
@@ -349,7 +349,7 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
   KVPRはCPU上のKVの一部を小さい中間活性値からGPUで再計算し、残りのKV転送と並行してPCIe待ちを減らす無損失方式。
 
 - **2025-03 · [SpeCache: Speculative Key-Value Caching for Efficient Generation of LLMs](2025-2503.16163-specache-speculative-kv-caching.md)**  
-  実装：✓ ・ リポジトリ内被引用：10  
+  実装：✓ ・ リポジトリ内被引用：11  
   SpeCacheは16-bit KV正本をCPUに残し、GPUには重要位置の低ビット索引と少数の正確KVだけを置く。次トークンの参照先を予測して一段先読みし、容量と転送待ちを減らす方式。
 
 - **2025-03 · [Accelerating LLM Serving for Multi-turn Dialogues with Efficient Resource Management](2025-flashgen-accelerating-llm-serving-for-multi-turn-dialogues-with-efficient-resource-management.md)**  
@@ -427,7 +427,7 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
   複数要求で再利用されるプロンプト断片のKV状態をモジュール単位で事前計算し、位置整合を保って合成することで初回トークン遅延を削減する。
 
 - **2024-10 · [ShadowKV: KV Cache in Shadows for High-Throughput Long-Context LLM Inference](2024-2410.21465-shadowkv-low-rank-key-value-offload.md)**  
-  実装：[✓](https://github.com/ByteDance-Seed/ShadowKV) ・ リポジトリ内被引用：66  
+  実装：[✓](https://github.com/ByteDance-Seed/ShadowKV) ・ リポジトリ内被引用：67  
   ShadowKVはキーを低ランク要約と代表値としてGPUに残し、値だけCPUへ置いて重要チャンクの値を選択転送し、長文KVの容量とPCIe転送量を減らす方式。
 
 - **2024-03 · [FastDecode: High-Throughput GPU-Efficient LLM Serving using Heterogeneous Pipelines](2024-2403.11421-fastdecode-high-throughput-gpu-efficient-llm-serving-using-heterogeneous-pipelines.md)**  

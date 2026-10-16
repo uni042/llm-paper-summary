@@ -73,7 +73,7 @@ MoEのexpert数を変えるAdaptive Expert Computationとは対象が異なり�
   本論文は、デコーダ専用大規模言語モデルの各入力を必ず最終層まで通すことによる過剰計算を、入力単位の早期終了で減らすAdaInferを提案する。原著第3版の主評価では、Llama 2の7B・13BとOPT-13Bで層削減率は課題により約9〜43%、平均17.8%となる。
 
 - **2024-10 · [MoH: Multi-Head Attention as Mixture-of-Head Attention](2024-2410.11842-moh-mixture-of-head-attention.md)**  
-  実装：[✓](https://github.com/SkyworkAI/MoH) ・ リポジトリ内被引用：4  
+  実装：[✓](https://github.com/SkyworkAI/MoH) ・ リポジトリ内被引用：5  
   注意ヘッドを共有ヘッドとTop-Kルーティングヘッドに分け、トークンごとに必要なヘッドだけ使うMoH。LLaMA3-8Bで75%利用・14評価平均64.0%を達成。
 
 ### 4年前（2022-11〜2023-10）
