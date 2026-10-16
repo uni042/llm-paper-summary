@@ -35,10 +35,15 @@
   "selection_reason": "It changes the inference-time decoding path for multimodal diffusion LLMs and manages runtime cost while improving visual information selection. The abstract does not claim a throughput speedup; full-text sections confirm fixed scheduling, no extra model forward pass, and near-baseline throughput. Body review: VRCD reranks parallel-decoding tokens using visual complementarity. The fixed commit schedule adds no model forward pass; stated post-processing is O(MN + M²N), and measured throughput remains near baseline. The reported gains are mainly output quality, not a speedup.",
   "semantic_scholar_id": "bc1dfaa2efb3fc0afec9c01e2fefc81aa82e60ae",
   "source_url": "https://arxiv.org/abs/2605.25820",
-  "status": "ready",
+  "status": "superseded",
   "title": "Visual-Redundancy-Controlled Parallel Decoding for Diffusion-Based Multimodal Large Language Models",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-10-16T11:19:09+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2026-2605.25820-visual-redundancy-controlled-parallel-decoding-for-diffusion-based-multi.md",
+  "represented_canonical_id": "arXiv:2605.25820",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

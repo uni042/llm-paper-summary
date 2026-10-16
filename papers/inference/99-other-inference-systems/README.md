@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（674本）
+## 自動生成の論文一覧（675本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -783,6 +783,10 @@
 - **2026-05 · [When Are Experts Misrouted? Counterfactual Routing Analysis in Mixture-of-Experts Language Models](2026-2605.07260-when-are-experts-misrouted-counterfactual-routing-analysis-in-mixture-of.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   混合専門家（Mixture-of-Experts; MoE）言語モデルは、各トークンについて多数の専門家ネットワークのうち少数だけを実行する。Qwen3-30B-A3Bでは、確信度の高いトークンは標準経路と最良候補の差がほぼないが、難しいトークンでは大きく乖離する。ただし、この論文は推論時に32個の候補を毎回試す高速化方式を提案したわけではない。
+
+- **2026-05 · [Visual-Redundancy-Controlled Parallel Decoding for Diffusion-Based Multimodal Large Language Models](2026-2605.25820-visual-redundancy-controlled-parallel-decoding-for-diffusion-based-multi.md)**  
+  実装：[✓](https://github.com/infiniteYuanyl/VRCD) ・ リポジトリ内被引用：0  
+  マスク付き拡散言語モデル（masked diffusion language モデル）は、未確定の多数のトークン位置を一度に予測し、確信の高い一部を確定する処理を繰り返して文章を生成する。主要な結果は推論高速化ではなく品質改善である。
 
 - **2026-05 · [Training-Inference Consistent Segmented Execution for Long-Context LLMs](2026-2605.11744-training-inference-consistent-segmented-execution-for-long-context-llms.md)**  
   実装：[✓](https://github.com/sxp11/Training-Inference-Consistent-Segmented-Execution) ・ リポジトリ内被引用：0  
