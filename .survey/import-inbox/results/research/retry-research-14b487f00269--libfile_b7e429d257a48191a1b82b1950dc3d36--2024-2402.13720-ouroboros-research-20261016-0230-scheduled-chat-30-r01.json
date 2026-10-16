@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "2aa5d3e583e14a3d57046b84d48a72285b9ad7291298d76ec987c0cdeaac8a03",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/retry-research-14b487f00269--libfile_b7e429d257a48191a1b82b1950dc3d36--2024-2402.13720-ouroboros-research-20261016-0230-scheduled-chat-30-r01.md",
+  "canonical_id": "arXiv:2402.13720",
+  "worker_completed_at": "2026-10-16T02:36:31+09:00",
+  "worker_run_key": "20261016-0230-scheduled-chat-30/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 5495,
+    "body_paragraphs": 37,
+    "method_chars": 0,
+    "method_paragraphs": 0,
+    "evaluation_chars": 0,
+    "limitation_chars": 802,
+    "insufficiency_flags": [
+      "手法説明量 0 < 700",
+      "評価説明量 0 < 500"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 手法説明量 0 < 700",
+    "説明不足トリガー: 評価説明量 0 < 500"
+  ],
+  "processed_at": "2026-10-16T14:46:24+00:00"
+}

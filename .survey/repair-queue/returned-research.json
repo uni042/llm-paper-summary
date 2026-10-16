@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-16T14:41:19+00:00",
+  "generated_at": "2026-10-16T14:46:25+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -3302,34 +3302,6 @@
       "worker_run_key": "20261015-1104-scheduled-chat-00/r01"
     },
     {
-      "canonical_id": "arXiv:2601.04359",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-16T10:45:25+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 163 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 6879,
-        "body_paragraphs": 38,
-        "method_chars": 2455,
-        "method_paragraphs": 13,
-        "evaluation_chars": 163,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "評価説明量 163 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_20e56325f2188191bf1cd672f823600c--2026-2601.04359-packcache-video-kv-cache-research-20261016-1300-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_20e56325f2188191bf1cd672f823600c--2026-2601.04359-packcache-video-kv-cache-research-20261016-1300-scheduled-chat-00-r01.json",
-      "worker_run_key": "20261016-1300-scheduled-chat-00/r01"
-    },
-    {
       "canonical_id": "arXiv:2511.07776",
       "title": null,
       "source_url": null,
@@ -4280,62 +4252,6 @@
       "worker_run_key": "20261016-0700-scheduled-chat-00/r01"
     },
     {
-      "canonical_id": "arXiv:2402.13720",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-16T13:14:34+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700",
-        "説明不足トリガー: 評価説明量 0 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5495,
-        "body_paragraphs": 37,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 0,
-        "limitation_chars": 802,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700",
-          "評価説明量 0 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_b7e429d257a48191a1b82b1950dc3d36--2024-2402.13720-ouroboros-research-20261016-0230-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_b7e429d257a48191a1b82b1950dc3d36--2024-2402.13720-ouroboros-research-20261016-0230-scheduled-chat-30-r01.json",
-      "worker_run_key": "20261016-0230-scheduled-chat-30/r01"
-    },
-    {
-      "canonical_id": "arXiv:2502.11018",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-16T13:14:34+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 0 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 6190,
-        "body_paragraphs": 37,
-        "method_chars": 1476,
-        "method_paragraphs": 9,
-        "evaluation_chars": 0,
-        "limitation_chars": 773,
-        "insufficiency_flags": [
-          "評価説明量 0 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_b9795715a81c8191b5b41f96a5e26a8f--2025-2502.11018-griffin-token-alignment-speculative-decoding-research-20261016-0330-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_b9795715a81c8191b5b41f96a5e26a8f--2025-2502.11018-griffin-token-alignment-speculative-decoding-research-20261016-0330-scheduled-chat-30-r01.json",
-      "worker_run_key": "20261016-0330-scheduled-chat-30/r01"
-    },
-    {
       "canonical_id": "arXiv:2601.23180",
       "title": null,
       "source_url": null,
@@ -4416,33 +4332,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_bef3eb5174a88191a7937d8d7660f061--2024-2409.12961-oryx-variable-resolution-dynamic-visual-token-compression-research-20261016-1745-scheduled-chat-45-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_bef3eb5174a88191a7937d8d7660f061--2024-2409.12961-oryx-variable-resolution-dynamic-visual-token-compression-research-20261016-1745-scheduled-chat-45-r01.json",
       "worker_run_key": "20261016-1745-scheduled-chat-45/r01"
-    },
-    {
-      "canonical_id": "arXiv:2502.09334",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-16T13:31:13+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 0 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 6453,
-        "body_paragraphs": 28,
-        "method_chars": 1869,
-        "method_paragraphs": 8,
-        "evaluation_chars": 0,
-        "limitation_chars": 671,
-        "insufficiency_flags": [
-          "評価説明量 0 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_c29a69a2a84c8191a2de880053b369a4--2025-2502.09334-thunderserve-heterogeneous-cloud-serving-research-20261015-1803-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_c29a69a2a84c8191a2de880053b369a4--2025-2502.09334-thunderserve-heterogeneous-cloud-serving-research-20261015-1803-scheduled-chat-00-r01.json",
-      "worker_run_key": "20261015-1803-scheduled-chat-00/r01"
     },
     {
       "canonical_id": "arXiv:2601.13563",
@@ -5005,34 +4894,6 @@
       "worker_run_key": "20261015-2300-scheduled-chat-00/r01"
     },
     {
-      "canonical_id": "arXiv:2406.05981",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-16T14:31:07+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 152 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 6881,
-        "body_paragraphs": 39,
-        "method_chars": 2308,
-        "method_paragraphs": 13,
-        "evaluation_chars": 152,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "評価説明量 152 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_f82da8ade528819189e9b927eb21e774--2024-2406.05981-shiftaddllm-bcq-pot-reparameterization-research-20261016-0630-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_f82da8ade528819189e9b927eb21e774--2024-2406.05981-shiftaddllm-bcq-pot-reparameterization-research-20261016-0630-scheduled-chat-30-r01.json",
-      "worker_run_key": "20261016-0630-scheduled-chat-30/r01"
-    },
-    {
       "canonical_id": "DOI:10.1145/3552326.3587438",
       "title": null,
       "source_url": null,
@@ -5064,8 +4925,8 @@
     },
     {
       "canonical_id": "arXiv:2602.02544",
-      "title": "SPA-Cache: Singular Proxies for Adaptive Caching in Diffusion Language Models",
-      "source_url": "https://arxiv.org/html/2602.02544v2",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-16T14:40:07+00:00",
       "return_count": 1,
       "assigned_worker": "scheduled-chat-00",
@@ -5091,8 +4952,8 @@
     },
     {
       "canonical_id": "arXiv:2403.10059",
-      "title": "Repoformer: Selective Retrieval for Repository-Level Code Completion",
-      "source_url": "https://arxiv.org/html/2403.10059",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-16T14:40:09+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-45",
@@ -5120,8 +4981,8 @@
     },
     {
       "canonical_id": "arXiv:2403.11805",
-      "title": "LLM as a System Service on Mobile Devices",
-      "source_url": "https://arxiv.org/html/2403.11805v1",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-16T14:40:10+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-45",
@@ -5147,6 +5008,145 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-07ffa214ad2e--libfile_c51867e3c6808191a4a25222e98646a5--2024-2403.11805-llms-mobile-system-service-research-20261016-0030-scheduled-chat-30-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-07ffa214ad2e--libfile_c51867e3c6808191a4a25222e98646a5--2024-2403.11805-llms-mobile-system-service-research-20261016-0030-scheduled-chat-30-r01.json",
       "worker_run_key": "20261016-0030-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2601.04359",
+      "title": "PackCache: A Training-Free Acceleration Method for Unified Autoregressive Video Generation via Compact KV-Cache",
+      "source_url": "https://arxiv.org/html/2601.04359v1",
+      "returned_at": "2026-10-16T14:46:22+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 163 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 6879,
+        "body_paragraphs": 38,
+        "method_chars": 2455,
+        "method_paragraphs": 13,
+        "evaluation_chars": 163,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "評価説明量 163 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-0a3c6dc34208--libfile_20e56325f2188191bf1cd672f823600c--2026-2601.04359-packcache-video-kv-cache-research-20261016-1300-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-0a3c6dc34208--libfile_20e56325f2188191bf1cd672f823600c--2026-2601.04359-packcache-video-kv-cache-research-20261016-1300-scheduled-chat-00-r01.json",
+      "worker_run_key": "20261016-1300-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2502.11018",
+      "title": "GRIFFIN: Effective Token Alignment for Faster Speculative Decoding",
+      "source_url": "https://arxiv.org/html/2502.11018v2",
+      "returned_at": "2026-10-16T14:46:23+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 0 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 6190,
+        "body_paragraphs": 37,
+        "method_chars": 1476,
+        "method_paragraphs": 9,
+        "evaluation_chars": 0,
+        "limitation_chars": 773,
+        "insufficiency_flags": [
+          "評価説明量 0 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-0f1fe105033b--libfile_b9795715a81c8191b5b41f96a5e26a8f--2025-2502.11018-griffin-token-alignment-speculative-decoding-research-20261016-0330-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-0f1fe105033b--libfile_b9795715a81c8191b5b41f96a5e26a8f--2025-2502.11018-griffin-token-alignment-speculative-decoding-research-20261016-0330-sched.json",
+      "worker_run_key": "20261016-0330-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2402.13720",
+      "title": "Ouroboros: Generating Longer Drafts Phrase by Phrase for Faster Speculative Decoding",
+      "source_url": "https://arxiv.org/abs/2402.13720",
+      "returned_at": "2026-10-16T14:46:24+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700",
+        "説明不足トリガー: 評価説明量 0 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5495,
+        "body_paragraphs": 37,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 0,
+        "limitation_chars": 802,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700",
+          "評価説明量 0 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-14b487f00269--libfile_b7e429d257a48191a1b82b1950dc3d36--2024-2402.13720-ouroboros-research-20261016-0230-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-14b487f00269--libfile_b7e429d257a48191a1b82b1950dc3d36--2024-2402.13720-ouroboros-research-20261016-0230-scheduled-chat-30-r01.json",
+      "worker_run_key": "20261016-0230-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2406.05981",
+      "title": "ShiftAddLLM: Accelerating Pretrained LLMs via Post-Training Multiplication-Less Reparameterization",
+      "source_url": "https://arxiv.org/pdf/2406.05981",
+      "returned_at": "2026-10-16T14:46:24+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 152 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 6881,
+        "body_paragraphs": 39,
+        "method_chars": 2308,
+        "method_paragraphs": 13,
+        "evaluation_chars": 152,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "評価説明量 152 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-10a939127564--libfile_f82da8ade528819189e9b927eb21e774--2024-2406.05981-shiftaddllm-bcq-pot-reparameterization-research-20261016-0630-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-10a939127564--libfile_f82da8ade528819189e9b927eb21e774--2024-2406.05981-shiftaddllm-bcq-pot-reparameterization-research-20261016-0630-scheduled-c.json",
+      "worker_run_key": "20261016-0630-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2502.09334",
+      "title": "ThunderServe: High-performance and Cost-efficient LLM Serving in Cloud Environments",
+      "source_url": "https://arxiv.org/html/2502.09334v2",
+      "returned_at": "2026-10-16T14:46:25+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 0 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 6453,
+        "body_paragraphs": 28,
+        "method_chars": 1869,
+        "method_paragraphs": 8,
+        "evaluation_chars": 0,
+        "limitation_chars": 671,
+        "insufficiency_flags": [
+          "評価説明量 0 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-1bfdc1e7c21c--libfile_c29a69a2a84c8191a2de880053b369a4--2025-2502.09334-thunderserve-heterogeneous-cloud-serving-research-20261015-1803-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-1bfdc1e7c21c--libfile_c29a69a2a84c8191a2de880053b369a4--2025-2502.09334-thunderserve-heterogeneous-cloud-serving-research-20261015-1803-scheduled.json",
+      "worker_run_key": "20261015-1803-scheduled-chat-00/r01"
     }
   ]
 }
