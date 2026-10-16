@@ -23,7 +23,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - [06-moe-quantization-compression](../06-moe-quantization-compression/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（95本）
+## 自動生成の論文一覧（96本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -215,6 +215,10 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - **2026-01 · [SD-E2: Semantic Exploration for Reasoning Under Token Budgets](2026-2601.17982-sd-e2-semantic-exploration-for-reasoning-under-token-budgets.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   小型言語モデルに複雑な問題を解かせる際、複数の解法を試すことは有効だが、生成トークン数には限りがある。結果・形式・長さを用いるGRPO-CFLの76.80%、意味を考慮しない探索・活用方式GRPO-CFEEの80.52%も上回る。
+
+- **2026-01 · [LatencyPrism: Online Non-intrusive Latency Sculpting for SLO-Guaranteed LLM Inference](2026-2601.09258-latencyprism-online-non-intrusive-latency-sculpting-for-slo-guaranteed-l.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  LatencyPrismは、本番の大規模言語モデル（LLM）推論で、ユーザーの体感品質に影響する遅延の一時的な増大を、サービスを止めずに検知し、原因の切り分けに必要な実行情報を取得するシステムである。
 
 - **2025-12 · [MemEvolve: Meta-Evolution of Agent Memory Systems](2025-2512.18746-memevolve-meta-evolution-of-agent-memory-systems.md)**  
   実装：[✓](https://github.com/bingreeky/MemEvolve) ・ リポジトリ内被引用：0  

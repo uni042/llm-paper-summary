@@ -55,6 +55,8 @@ reference_main_sha: '4ec24a325fd1a3bff98a9a67c681461869c30576'
 research_worklist_rank: 16
 quality_self_review_passed: true
 quality_self_review_version: PAPER-QUALITY-GUIDE-2026-10-07
+last_audited: null
+audit_version: 0
 ---
 
 # QuantVLA：視覚・言語・動作モデルの尺度補正付き学習後量子化

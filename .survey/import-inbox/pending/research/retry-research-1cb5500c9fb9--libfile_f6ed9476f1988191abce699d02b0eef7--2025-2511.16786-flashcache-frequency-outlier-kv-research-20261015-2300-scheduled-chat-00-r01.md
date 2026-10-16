@@ -34,6 +34,8 @@ worker_run_key: '20261015-2300-scheduled-chat-00/r01'
 worklist_rank: 50
 quality_self_review_passed: true
 quality_self_review_version: 'PAPER-QUALITY-GUIDE-2026-10-07'
+last_audited: null
+audit_version: 0
 ---
 
 # FlashCache：周波数領域の外れ値を使うマルチモーダルKVキャッシュ圧縮

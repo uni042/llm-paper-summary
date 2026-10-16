@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "39d4a3fa9c765379f26e84ebc46807bedd23ad1aee95e4fb427ca0ba56b4f6ab",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_fea1e4b8f4788191bb899649f418c91a--2026-2602.02544-spa-cache-singular-proxies-research-20261015-2230-scheduled-chat-30-r01.md",
+  "canonical_id": "arXiv:2602.02544",
+  "worker_completed_at": "2026-10-15T22:30:00+09:00",
+  "worker_run_key": "20261015-2230-scheduled-chat-30/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 6002,
+    "body_paragraphs": 31,
+    "method_chars": 1925,
+    "method_paragraphs": 9,
+    "evaluation_chars": 226,
+    "limitation_chars": 722,
+    "insufficiency_flags": [
+      "評価説明量 226 < 500"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 評価説明量 226 < 500"
+  ],
+  "processed_at": "2026-10-16T14:40:07+00:00"
+}

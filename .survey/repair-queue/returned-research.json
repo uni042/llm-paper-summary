@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-16T14:32:21+00:00",
+  "generated_at": "2026-10-16T14:41:19+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -422,33 +422,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-fdcebf6b97c1--libfile_8668892fb7d481918dc1dd6e94a25ee1--2023-samsung-pim-pnm-repair.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-fdcebf6b97c1--libfile_8668892fb7d481918dc1dd6e94a25ee1--2023-samsung-pim-pnm-repair.json",
       "worker_run_key": "20261008-0325-scheduled-chat-30/repair-r01"
-    },
-    {
-      "canonical_id": "arXiv:2606.23581",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-08T15:33:54+00:00",
-      "return_count": 4,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 0 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 4738,
-        "body_paragraphs": 22,
-        "method_chars": 1617,
-        "method_paragraphs": 8,
-        "evaluation_chars": 0,
-        "limitation_chars": 706,
-        "insufficiency_flags": [
-          "評価説明量 0 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-fd364571b423--libfile_faeaa141def881919cb396f289949b4c--2026-2606.23581-kamera-returned-research-repair-20261008-1404-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-fd364571b423--libfile_faeaa141def881919cb396f289949b4c--2026-2606.23581-kamera-returned-research-repair-20261008-1404-scheduled-chat-00-r01.json",
-      "worker_run_key": "20261008-1404-scheduled-chat-00/r01"
     },
     {
       "canonical_id": "arXiv:2503.16419",
@@ -3777,35 +3750,6 @@
       "worker_run_key": "20261016-0045-scheduled-chat-45/r01"
     },
     {
-      "canonical_id": "arXiv:2403.10059",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-16T11:42:49+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700",
-        "説明不足トリガー: 評価説明量 191 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 8070,
-        "body_paragraphs": 43,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 191,
-        "limitation_chars": 900,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700",
-          "評価説明量 191 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_604896c3db5081919d32901694a18b74--2024-2403.10059-repoformer-selective-retrieval-code-completion-research-20261016-1145-scheduled-chat-45-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_604896c3db5081919d32901694a18b74--2024-2403.10059-repoformer-selective-retrieval-code-completion-research-20261016-1145-scheduled-chat-45-r01.json",
-      "worker_run_key": "20261016-1145-scheduled-chat-45/r01"
-    },
-    {
       "canonical_id": "arXiv:2404.08698",
       "title": null,
       "source_url": null,
@@ -4501,36 +4445,6 @@
       "worker_run_key": "20261015-1803-scheduled-chat-00/r01"
     },
     {
-      "canonical_id": "arXiv:2403.11805",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-16T13:32:05+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700",
-        "説明不足トリガー: 評価説明量 0 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 6237,
-        "body_paragraphs": 32,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 0,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700",
-          "評価説明量 0 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_c51867e3c6808191a4a25222e98646a5--2024-2403.11805-llms-mobile-system-service-research-20261016-0030-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_c51867e3c6808191a4a25222e98646a5--2024-2403.11805-llms-mobile-system-service-research-20261016-0030-scheduled-chat-30-r01.json",
-      "worker_run_key": "20261016-0030-scheduled-chat-30/r01"
-    },
-    {
       "canonical_id": "arXiv:2601.13563",
       "title": null,
       "source_url": null,
@@ -5037,8 +4951,8 @@
     },
     {
       "canonical_id": "arXiv:2602.20309",
-      "title": "QuantVLA: Scale-Calibrated Post-Training Quantization for Vision-Language-Action Models",
-      "source_url": "https://arxiv.org/html/2602.20309v4",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-16T14:30:20+00:00",
       "return_count": 1,
       "assigned_worker": "scheduled-chat-00",
@@ -5064,8 +4978,8 @@
     },
     {
       "canonical_id": "arXiv:2511.16786",
-      "title": "Revisiting Multimodal KV Cache Compression: A Frequency-Domain-Guided Outlier-KV-Aware Approach",
-      "source_url": "https://arxiv.org/html/2511.16786v2",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-16T14:31:06+00:00",
       "return_count": 1,
       "assigned_worker": "scheduled-chat-30",
@@ -5092,8 +5006,8 @@
     },
     {
       "canonical_id": "arXiv:2406.05981",
-      "title": "ShiftAddLLM: Accelerating Pretrained LLMs via Post-Training Multiplication-Less Reparameterization",
-      "source_url": "https://arxiv.org/pdf/2406.05981",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-16T14:31:07+00:00",
       "return_count": 1,
       "assigned_worker": "scheduled-chat-00",
@@ -5120,8 +5034,8 @@
     },
     {
       "canonical_id": "DOI:10.1145/3552326.3587438",
-      "title": "Tabi: An Efficient Multi-Level Inference System for Large Language Models",
-      "source_url": "https://yidingwang.xyz/files/tabi_eurosys23.pdf",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-16T14:31:09+00:00",
       "return_count": 1,
       "assigned_worker": "scheduled-chat-30",
@@ -5146,6 +5060,92 @@
       },
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_fa4f002121488191aed9f30d61aba9d4--2023-doi-10.1145.3552326.3587438-tabi-multilevel-inference-research-20261016-0030-scheduled-chat-30-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_fa4f002121488191aed9f30d61aba9d4--2023-doi-10.1145.3552326.3587438-tabi-multilevel-inference-research-20261016-0030-scheduled-chat-30-r01.json",
+      "worker_run_key": "20261016-0030-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2602.02544",
+      "title": "SPA-Cache: Singular Proxies for Adaptive Caching in Diffusion Language Models",
+      "source_url": "https://arxiv.org/html/2602.02544v2",
+      "returned_at": "2026-10-16T14:40:07+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 226 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 6002,
+        "body_paragraphs": 31,
+        "method_chars": 1925,
+        "method_paragraphs": 9,
+        "evaluation_chars": 226,
+        "limitation_chars": 722,
+        "insufficiency_flags": [
+          "評価説明量 226 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_fea1e4b8f4788191bb899649f418c91a--2026-2602.02544-spa-cache-singular-proxies-research-20261015-2230-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_fea1e4b8f4788191bb899649f418c91a--2026-2602.02544-spa-cache-singular-proxies-research-20261015-2230-scheduled-chat-30-r01.json",
+      "worker_run_key": "20261015-2230-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2403.10059",
+      "title": "Repoformer: Selective Retrieval for Repository-Level Code Completion",
+      "source_url": "https://arxiv.org/html/2403.10059",
+      "returned_at": "2026-10-16T14:40:09+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700",
+        "説明不足トリガー: 評価説明量 191 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 8070,
+        "body_paragraphs": 43,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 191,
+        "limitation_chars": 900,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700",
+          "評価説明量 191 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-017486cd84f9--libfile_604896c3db5081919d32901694a18b74--2024-2403.10059-repoformer-selective-retrieval-code-completion-research-20261016-1145-scheduled-chat-45-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-017486cd84f9--libfile_604896c3db5081919d32901694a18b74--2024-2403.10059-repoformer-selective-retrieval-code-completion-research-20261016-1145-sch.json",
+      "worker_run_key": "20261016-1145-scheduled-chat-45/r01"
+    },
+    {
+      "canonical_id": "arXiv:2403.11805",
+      "title": "LLM as a System Service on Mobile Devices",
+      "source_url": "https://arxiv.org/html/2403.11805v1",
+      "returned_at": "2026-10-16T14:40:10+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700",
+        "説明不足トリガー: 評価説明量 0 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 6237,
+        "body_paragraphs": 32,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 0,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700",
+          "評価説明量 0 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-07ffa214ad2e--libfile_c51867e3c6808191a4a25222e98646a5--2024-2403.11805-llms-mobile-system-service-research-20261016-0030-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-07ffa214ad2e--libfile_c51867e3c6808191a4a25222e98646a5--2024-2403.11805-llms-mobile-system-service-research-20261016-0030-scheduled-chat-30-r01.json",
       "worker_run_key": "20261016-0030-scheduled-chat-30/r01"
     }
   ]
