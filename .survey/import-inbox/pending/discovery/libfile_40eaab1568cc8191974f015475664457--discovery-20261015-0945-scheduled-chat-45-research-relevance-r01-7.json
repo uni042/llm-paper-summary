@@ -1,0 +1,26 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-45",
+  "run_key": "20261015-0945-scheduled-chat-45/r01",
+  "reference_main_sha": "fe67172da33af862cf101c8eb320ef64ba14c799",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2512.06688",
+      "identity_tokens": [
+        "arxiv:2512.06688"
+      ],
+      "title": "PersonaMem-v2: Towards Personalized Intelligence via Learning Implicit User Personas and Agentic Memory",
+      "reason": "一次要旨では個人化対話データセット、Qwen3-4Bの強化微調整、長期エージェント記憶が中心。32K対話履歴を約2Kの記憶へ置換して入力トークンを16分の1にする実験は推論入力コストに関連するが、KVキャッシュ・サービング・実行カーネルの最適化は主題ではないため境界候補とする。",
+      "source_url": "https://arxiv.org/abs/2512.06688",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-15T09:49:32+09:00",
+      "last_checked_at": "2026-10-15T09:49:32+09:00",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance",
+      "worklist_rank": 7
+    }
+  ]
+}
