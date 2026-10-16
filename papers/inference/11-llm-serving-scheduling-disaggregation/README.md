@@ -3,7 +3,7 @@
 複数requestを複数GPU / nodeで処理するLLM servingについて、request順、batch、prefill / decodeのGPU配分、KV再利用・転送、request移動などを調整し、latencyとresource効率を改善する研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（355本）
+## 自動生成の論文一覧（356本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -827,6 +827,10 @@
 - **2026-02 · [Multi-Layer Scheduling for MoE-Based LLM Reasoning](2026-2602.21626-multi-layer-scheduling-moe-reasoning.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   Gimbalは、MoEサービングで実測KV使用量から要求の送り先、入力長からエンジン内の実行順、専門家の活性頻度と層間依存からGPU配置を決め、容量偏り・先頭待ち・専門家集中をまとめて減らす三層スケジューラ。
+
+- **2026-02 · [Dynamic Micro-Batch and Token-Budget Scheduling for IoT-Scale Pipeline-Parallel LLM Inference](2026-4b60583e1d6f-dynamic-micro-batch-and-token-budget-scheduling-for-iot-scale-pipeline-p.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  4ノードのパイプライン並列LLM推論で、入力処理と逐次生成の負荷不均衡・通信待ちを減らすため、トークン予算とマイクロバッチ数を同時に動的調整するスケジューラを提案。RTX 4070 12GB×4、Llama-2-13BとQwen2.5-14B、100/1000Mbpsのネットワークで評価。
 
 - **2026-02 · [A State-Transition Framework for Efficient LLM Reasoning](2026-2602.01198-a-state-transition-framework-for-efficient-llm-reasoning.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

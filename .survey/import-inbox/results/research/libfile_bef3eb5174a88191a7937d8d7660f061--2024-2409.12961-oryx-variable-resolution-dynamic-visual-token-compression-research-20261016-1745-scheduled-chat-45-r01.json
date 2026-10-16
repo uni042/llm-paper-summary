@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "7a557ac86547742029999eb4f7d7d702884973303e742e11f59c216459ca7cea",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_bef3eb5174a88191a7937d8d7660f061--2024-2409.12961-oryx-variable-resolution-dynamic-visual-token-compression-research-20261016-1745-scheduled-chat-45-r01.md",
+  "canonical_id": "arXiv:2409.12961",
+  "worker_completed_at": "2026-10-16T17:52:00+09:00",
+  "worker_run_key": "20261016-1745-scheduled-chat-45/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 5232,
+    "body_paragraphs": 26,
+    "method_chars": 0,
+    "method_paragraphs": 0,
+    "evaluation_chars": 0,
+    "limitation_chars": 0,
+    "insufficiency_flags": [
+      "手法説明量 0 < 700",
+      "評価説明量 0 < 500",
+      "限界説明量 0 < 推奨 120"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 手法説明量 0 < 700",
+    "説明不足トリガー: 評価説明量 0 < 500"
+  ],
+  "processed_at": "2026-10-16T13:22:21+00:00"
+}

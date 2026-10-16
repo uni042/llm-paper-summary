@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-16T13:15:44+00:00",
+  "generated_at": "2026-10-16T13:23:41+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 171,
+  "count": 173,
   "entries": [
     {
       "canonical_id": "DOI:10.1145/3714983.3714987",
@@ -3778,36 +3778,6 @@
       "worker_run_key": "20261015-1325-scheduled-chat-30/r01"
     },
     {
-      "canonical_id": "DOI:10.3390/s26041101",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-16T11:34:52+00:00",
-      "return_count": 3,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700",
-        "説明不足トリガー: 評価説明量 499 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 8129,
-        "body_paragraphs": 50,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 499,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700",
-          "評価説明量 499 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_5e606db91dc081918a7ebc3542c000db--2026-doi-10.3390-s26041101-dynamic-microbatch-tokenbudget-research-20261016-1445-scheduled-chat-45-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_5e606db91dc081918a7ebc3542c000db--2026-doi-10.3390-s26041101-dynamic-microbatch-tokenbudget-research-20261016-1445-scheduled-chat-45-r01.json",
-      "worker_run_key": "20261016-1445-scheduled-chat-45/r01"
-    },
-    {
       "canonical_id": "arXiv:2605.22078",
       "title": null,
       "source_url": null,
@@ -4393,8 +4363,8 @@
     },
     {
       "canonical_id": "arXiv:2604.07955",
-      "title": "Rethinking Residual Errors in Compensation-based LLM Quantization",
-      "source_url": "https://arxiv.org/html/2604.07955v1",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-16T13:14:06+00:00",
       "return_count": 1,
       "assigned_worker": "scheduled-chat-30",
@@ -4422,8 +4392,8 @@
     },
     {
       "canonical_id": "arXiv:2402.13720",
-      "title": "Ouroboros: Generating Longer Drafts Phrase by Phrase for Faster Speculative Decoding",
-      "source_url": "https://arxiv.org/abs/2402.13720",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-16T13:14:34+00:00",
       "return_count": 1,
       "assigned_worker": "scheduled-chat-30",
@@ -4451,8 +4421,8 @@
     },
     {
       "canonical_id": "arXiv:2502.11018",
-      "title": "GRIFFIN: Effective Token Alignment for Faster Speculative Decoding",
-      "source_url": "https://arxiv.org/html/2502.11018v2",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-16T13:14:34+00:00",
       "return_count": 1,
       "assigned_worker": "scheduled-chat-30",
@@ -4475,6 +4445,88 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_b9795715a81c8191b5b41f96a5e26a8f--2025-2502.11018-griffin-token-alignment-speculative-decoding-research-20261016-0330-scheduled-chat-30-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_b9795715a81c8191b5b41f96a5e26a8f--2025-2502.11018-griffin-token-alignment-speculative-decoding-research-20261016-0330-scheduled-chat-30-r01.json",
       "worker_run_key": "20261016-0330-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2601.23180",
+      "title": "TriSpec: Ternary Speculative Decoding via Lightweight Proxy Verification",
+      "source_url": "https://arxiv.org/abs/2601.23180",
+      "returned_at": "2026-10-16T13:21:28+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 0 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5393,
+        "body_paragraphs": 36,
+        "method_chars": 1836,
+        "method_paragraphs": 12,
+        "evaluation_chars": 0,
+        "limitation_chars": 435,
+        "insufficiency_flags": [
+          "評価説明量 0 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_bd38edeef1348191badb67328e80541f--2026-2601.23180-trispec-proxy-verification-research-20261016-1830-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_bd38edeef1348191badb67328e80541f--2026-2601.23180-trispec-proxy-verification-research-20261016-1830-scheduled-chat-30-r01.json",
+      "worker_run_key": "20261016-1830-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "DOI:10.3390/s26041101",
+      "title": "Dynamic Micro-Batch and Token-Budget Scheduling for IoT-Scale Pipeline-Parallel LLM Inference",
+      "source_url": "https://www.mdpi.com/1424-8220/26/4/1101",
+      "returned_at": "2026-10-16T13:22:20+00:00",
+      "return_count": 4,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "長文定型文の再利用を検出: papers/inference/11-llm-serving-scheduling-disaggregation/2026-4b60583e1d6f-dynamic-micro-batch-and-token-budget-scheduling-for-iot-scale-pipeline-p.md と 15 段落 / 3598文字 (100.0%) が完全一致"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5655,
+        "body_paragraphs": 32,
+        "method_chars": 1087,
+        "method_paragraphs": 8,
+        "evaluation_chars": 1253,
+        "limitation_chars": 845,
+        "insufficiency_flags": []
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_bd5f9c9b811081918572f45423bcd3c3--2026-doi-10.3390-s26041101-dynamic-microbatch-tokenbudget-returned-heading-repair-20261016-1945-scheduled-chat-45-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_bd5f9c9b811081918572f45423bcd3c3--2026-doi-10.3390-s26041101-dynamic-microbatch-tokenbudget-returned-heading-repair-20261016-1945-scheduled-chat-45-r01.json",
+      "worker_run_key": "20261016-1945-scheduled-chat-45/r01"
+    },
+    {
+      "canonical_id": "arXiv:2409.12961",
+      "title": "Oryx MLLM: On-Demand Spatial-Temporal Understanding at Arbitrary Resolution",
+      "source_url": "https://arxiv.org/html/2409.12961v4",
+      "returned_at": "2026-10-16T13:22:21+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700",
+        "説明不足トリガー: 評価説明量 0 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5232,
+        "body_paragraphs": 26,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 0,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700",
+          "評価説明量 0 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_bef3eb5174a88191a7937d8d7660f061--2024-2409.12961-oryx-variable-resolution-dynamic-visual-token-compression-research-20261016-1745-scheduled-chat-45-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_bef3eb5174a88191a7937d8d7660f061--2024-2409.12961-oryx-variable-resolution-dynamic-visual-token-compression-research-20261016-1745-scheduled-chat-45-r01.json",
+      "worker_run_key": "20261016-1745-scheduled-chat-45/r01"
     }
   ]
 }
