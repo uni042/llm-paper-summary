@@ -35,7 +35,18 @@ jobs:
         uses: actions/checkout@v4
         with:
           ref: main
-          fetch-depth: 0
+          fetch-depth: 1
+
+      - name: Restore main ancestry for snapshot provenance
+        shell: bash
+        run: |
+          set -euo pipefail
+          # Snapshot reuse below requires complete commit ancestry; historical blobs stay lazy.
+          git -c protocol.version=2 fetch --unshallow --filter=blob:none --no-tags origin main
+          if [ "$(git rev-parse --is-shallow-repository)" != false ]; then
+            echo 'Discovery precheck requires full main ancestry; refusing shallow history.' >&2
+            exit 1
+          fi
 
       - name: Set up Python
         uses: actions/setup-python@v5
