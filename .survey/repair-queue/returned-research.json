@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-16T11:52:20+00:00",
+  "generated_at": "2026-10-16T12:00:19+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 157,
+  "count": 160,
   "entries": [
     {
       "canonical_id": "DOI:10.1145/3714983.3714987",
@@ -3966,8 +3966,8 @@
     },
     {
       "canonical_id": "arXiv:2404.08698",
-      "title": "Lossless Acceleration of Large Language Model via Adaptive N-gram Parallel Decoding",
-      "source_url": "https://arxiv.org/html/2404.08698v2",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-16T11:51:12+00:00",
       "return_count": 1,
       "assigned_worker": "scheduled-chat-30",
@@ -3993,8 +3993,8 @@
     },
     {
       "canonical_id": "DOI:10.13140/rg.2.2.28167.37282",
-      "title": "KIVI: A Tuning-Free Asymmetric 2bit Quantization for KV Cache",
-      "source_url": "https://arxiv.org/html/2402.02750",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-16T11:51:13+00:00",
       "return_count": 1,
       "assigned_worker": "scheduled-chat-45",
@@ -4021,8 +4021,8 @@
     },
     {
       "canonical_id": "arXiv:2512.00719",
-      "title": "SIMPLE: Disaggregating Sampling from GPU Inference into a Decision Plane for Faster Distributed LLM Serving",
-      "source_url": "https://arxiv.org/abs/2512.00719",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-16T11:51:14+00:00",
       "return_count": 1,
       "assigned_worker": "scheduled-chat-30",
@@ -4050,8 +4050,8 @@
     },
     {
       "canonical_id": "arXiv:2602.08722",
-      "title": "QUOKA: Query-Oriented KV Selection For Efficient LLM Prefill",
-      "source_url": "https://arxiv.org/pdf/2602.08722v1",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-16T11:51:39+00:00",
       "return_count": 1,
       "assigned_worker": "scheduled-chat-45",
@@ -4074,6 +4074,88 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_78040cefdda48191abb0ff3665aa47f7--2026-2602.08722-quoka-query-oriented-kv-selection-research-20261016-0200-scheduled-chat-00-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_78040cefdda48191abb0ff3665aa47f7--2026-2602.08722-quoka-query-oriented-kv-selection-research-20261016-0200-scheduled-chat-00-r01.json",
       "worker_run_key": "20261016-0200-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "DOI:10.1109/CLOUD67622.2025.00028",
+      "title": "ZipNN: Lossless Compression for AI Models",
+      "source_url": "https://arxiv.org/pdf/2411.05239",
+      "returned_at": "2026-10-16T11:58:04+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 0 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 6073,
+        "body_paragraphs": 34,
+        "method_chars": 1953,
+        "method_paragraphs": 11,
+        "evaluation_chars": 0,
+        "limitation_chars": 709,
+        "insufficiency_flags": [
+          "評価説明量 0 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_7ac792980d348191b290ec895c35ca2b--2025-2411.05239-zipnn-lossless-model-compression-research-20261015-1300-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_7ac792980d348191b290ec895c35ca2b--2025-2411.05239-zipnn-lossless-model-compression-research-20261015-1300-scheduled-chat-00-r01.json",
+      "worker_run_key": "20261015-1300-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2410.10165",
+      "title": "HSR-Enhanced Sparse Attention Acceleration",
+      "source_url": "https://arxiv.org/pdf/2410.10165",
+      "returned_at": "2026-10-16T11:58:06+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5340,
+        "body_paragraphs": 37,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 644,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_7b0d8122b8dc8191ad986541fb60bab7--2024-2410.10165-hsr-sparse-attention-theory-research-20261016-0530-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_7b0d8122b8dc8191ad986541fb60bab7--2024-2410.10165-hsr-sparse-attention-theory-research-20261016-0530-scheduled-chat-30-r01.json",
+      "worker_run_key": "20261016-0530-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2603.12634",
+      "title": "Spend Less, Reason Better: Budget-Aware Value Tree Search for LLM Agents",
+      "source_url": "https://arxiv.org/html/2603.12634v1",
+      "returned_at": "2026-10-16T11:58:07+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 146 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 6045,
+        "body_paragraphs": 41,
+        "method_chars": 1980,
+        "method_paragraphs": 16,
+        "evaluation_chars": 146,
+        "limitation_chars": 697,
+        "insufficiency_flags": [
+          "評価説明量 146 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_7bb37a0464f88191957cf61ce087c882--2026-2603.12634-bavt-budget-aware-agent-search-research-20261015-1325-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_7bb37a0464f88191957cf61ce087c882--2026-2603.12634-bavt-budget-aware-agent-search-research-20261015-1325-scheduled-chat-30-r01.json",
+      "worker_run_key": "20261015-1325-scheduled-chat-30/r01"
     }
   ]
 }

@@ -32,6 +32,8 @@ worker_run_key: 20261016-0200-scheduled-chat-00/r01
 worker_id: scheduled-chat-00
 reference_main_sha: 20b36db3252dc720a1ff5330559589e540722704
 worklist_rank: 56
+last_audited: null
+audit_version: 0
 ---
 
 # QUOKA：代表問い合わせに基づくKV選択でチャンク前処理を高速化する疎注意

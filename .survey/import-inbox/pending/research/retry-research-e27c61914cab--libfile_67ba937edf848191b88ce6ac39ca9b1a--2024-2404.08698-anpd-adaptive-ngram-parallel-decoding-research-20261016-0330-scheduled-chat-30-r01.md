@@ -28,6 +28,8 @@ worker_completed_at: '2026-10-16T03:39:46+09:00'
 worker_run_key: '20261016-0330-scheduled-chat-30/r01'
 worker_id: scheduled-chat-30
 reference_main_sha: '037811143525f7c026d2fb5ad5b6444352c4a60e'
+last_audited: null
+audit_version: 0
 ---
 
 # ANPD：文脈から学ぶ多段N-gram草稿と元LLMの一括検証による無損失復号高速化
