@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-16T13:50:28+00:00",
+  "generated_at": "2026-10-16T14:03:15+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 178,
+  "count": 180,
   "entries": [
     {
       "canonical_id": "DOI:10.1145/3714983.3714987",
@@ -4616,8 +4616,8 @@
     },
     {
       "canonical_id": "arXiv:2606.04050",
-      "title": "LiftQuant: Continuous Bit-Width LLM via Dimensional Lifting and Projection",
-      "source_url": "https://arxiv.org/html/2606.04050v2",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-16T13:49:04+00:00",
       "return_count": 1,
       "assigned_worker": "scheduled-chat-45",
@@ -4646,8 +4646,8 @@
     },
     {
       "canonical_id": "DOI:10.1145/3712285.3759867",
-      "title": "MaverIQ: Fingerprint-Guided Extrapolation and Fragmentation-Aware Layering for Intent-Based LLM Serving",
-      "source_url": "https://doi.org/10.1145/3712285.3759867",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-16T13:49:36+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-45",
@@ -4671,6 +4671,63 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_da52fd8bea448191905e16e11a1316db--2025-maveriq-fingerprint-fragmentation-aware-serving-research-20261016-1445-scheduled-chat-45-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_da52fd8bea448191905e16e11a1316db--2025-maveriq-fingerprint-fragmentation-aware-serving-research-20261016-1445-scheduled-chat-45-r01.json",
       "worker_run_key": "20261016-1445-scheduled-chat-45/r01"
+    },
+    {
+      "canonical_id": "arXiv:2605.18165",
+      "title": "Elastic-dLLM: Position Preserving Context Compression and Augmentation of Diffusion LLMs",
+      "source_url": "https://arxiv.org/html/2605.18165v1",
+      "returned_at": "2026-10-16T14:01:05+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700",
+        "説明不足トリガー: 評価説明量 379 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5668,
+        "body_paragraphs": 30,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 379,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700",
+          "評価説明量 379 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_936f81f2c35c819185d1be972eaca9fd--2026-2605.18165-elastic-dllm-position-preserving-mask-compression-research-20261016-2230-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_936f81f2c35c819185d1be972eaca9fd--2026-2605.18165-elastic-dllm-position-preserving-mask-compression-research-20261016-2230-scheduled-chat-30-r01.json",
+      "worker_run_key": "20261016-2230-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2511.09345",
+      "title": "Seer Self-Consistency: Advance Budget Estimation for Adaptive Test-Time Scaling",
+      "source_url": "https://arxiv.org/html/2511.09345v2",
+      "returned_at": "2026-10-16T14:01:06+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 195 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 6295,
+        "body_paragraphs": 39,
+        "method_chars": 1904,
+        "method_paragraphs": 14,
+        "evaluation_chars": 195,
+        "limitation_chars": 662,
+        "insufficiency_flags": [
+          "評価説明量 195 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_daadbfdb1f8481918148be93bd233076--2025-2511.09345-seersc-adaptive-budget-research-20261015-1325-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_daadbfdb1f8481918148be93bd233076--2025-2511.09345-seersc-adaptive-budget-research-20261015-1325-scheduled-chat-30-r01.json",
+      "worker_run_key": "20261015-1325-scheduled-chat-30/r01"
     }
   ]
 }
