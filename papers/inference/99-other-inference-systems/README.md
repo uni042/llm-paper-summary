@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（683本）
+## 自動生成の論文一覧（686本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -716,6 +716,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   複数RAM/SSDを帯域幅比例の単一KVプールとして並列利用し、SPDK直アクセスでファイルシステムを迂回して長文脈KV再取得を高速化する。
 
+- **2026-06 · [Teaching Diffusion to Speculate Left-to-Right](2026-2606.11552-teaching-diffusion-to-speculate-left-to-right.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  投機的復号（投機的復号）は、軽い生成器が複数の候補トークンを先に出し、大きな対象モデルが候補列を一度の並列計算で検証することで、対象モデルを逐次実行する回数を減らす。
+
 - **2026-06 · [SMEPilot: Characterizing and Optimizing LLM Inference with Scalable Matrix Extensions](2026-2606.16332-smepilot-characterizing-and-optimizing-llm-inference-with-scalable-matrix-extensions.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   CPU内のSMEと通常コアを共有帯域込みのルーフラインで使い分け、タイル分割・注意パイプライン・配置再利用によりLLM推論をllama.cpp比最大3.94倍高速化する。
@@ -955,6 +959,10 @@
 - **2026-04 · [Prompt Compression in the Wild: Measuring Latency, Rate Adherence, and Quality for Faster LLM Inference](2026-2604.02985-prompt-compression-in-the-wild-measuring-latency-rate-adherence-and-qual.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   入力圧縮（プロンプト compression）は、情報価値の低い語や断片を削り、生成モデルに渡す入力を短くすることでこの費用を減らす。著者はLLMLingua-2の軽量な圧縮器を使えば、特定の長文入力・高圧縮条件で端から端までの遅延を最大約18%減らせると報告する。
+
+- **2026-04 · [MI-Pruner: Crossmodal Mutual Information-guided Token Pruner for Efficient MLLMs](2026-2604.03072-mi-pruner-crossmodal-mutual-information-guided-token-pruner-for-efficien.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  注意の吸い込み（注意機構 Sink）、位置偏り、複数注意ヘッドの役割差、画像全体で目立つ物体への偏りがある。さらに64トークンのPOPE効率測定では、質問関連性だけを使うλ=1の構成が77.06ms、13.93GBであり、VisPrunerの89.48ms、14.35GBより小さい。
 
 - **2026-04 · [KV Cache Offloading for Context-Intensive Tasks](2026-2604.08426-kv-cache-offloading-for-context-intensive-tasks.md)**  
   実装：[✓](https://github.com/yandex-research/context-intensive-kv-offloading) ・ リポジトリ内被引用：0  
@@ -2039,6 +2047,10 @@
 - **2024-02 · [Training-Free Long-Context Scaling of Large Language Models](2024-2402.17463-training-free-long-context-scaling-of-large-language-models.md)**  
   実装：[✓](https://github.com/HKUNLP/ChunkLlama) ・ リポジトリ内被引用：4  
   二重チャンク注意（Dual Chunk 注意機構、以下DCA）は、回転位置埋め込み（Rotary Position Embedding、以下RoPE）を用いた大規模言語モデルが、事前学習時より長い系列で位置関係を見失う問題に対する推論時の注意計算の変更である。最後の比較は特定の閉形式4課題の平均であり、汎用能力の94%を意味しない。
+
+- **2024-01 · [APAR: LLMs Can Do Auto-Parallel Auto-Regressive Decoding](2024-2401.06761-apar-llms-can-do-auto-parallel-auto-regressive-decoding.md)**  
+  実装：✓ ・ リポジトリ内被引用：4  
+  各トークンの生成にはモデル重みの読み込みと注意計算が必要で、単一要求ではGPUの演算器が十分使われない一方、多数要求では注意計算とKVキャッシュ容量が制約になる。重要なのは独立した段落を別々の生成系列として同時に進めることであり、単に次の複数トークンを予測して検証する投機的復号（投機的復号）とは異なる。
 
 - **2024-01 · [A Comprehensive Survey of Compression Algorithms for Language Models](2024-2401.15347-a-comprehensive-survey-of-compression-algorithms-for-language-models.md)**  
   実装：✓ ・ リポジトリ内被引用：4  

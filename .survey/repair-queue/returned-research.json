@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-16T12:15:07+00:00",
+  "generated_at": "2026-10-16T12:24:13+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -3076,34 +3076,6 @@
       "worker_run_key": "20261016-0730-scheduled-chat-30/r01"
     },
     {
-      "canonical_id": "arXiv:2606.11552",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-16T03:24:48+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 103 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 4361,
-        "body_paragraphs": 22,
-        "method_chars": 1143,
-        "method_paragraphs": 6,
-        "evaluation_chars": 103,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "評価説明量 103 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-a7efdeb0b109--libfile_ab2f45b2c9248191a10eb3dfd7610c43--2026-2606.11552-diffusion-drafter-left-to-right-alignment-research-20261016-1100-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-a7efdeb0b109--libfile_ab2f45b2c9248191a10eb3dfd7610c43--2026-2606.11552-diffusion-drafter-left-to-right-alignment-research-20261016-1100-schedule.json",
-      "worker_run_key": "20261016-1100-scheduled-chat-00/r01"
-    },
-    {
       "canonical_id": "arXiv:2605.11605",
       "title": null,
       "source_url": null,
@@ -4226,8 +4198,8 @@
     },
     {
       "canonical_id": "arXiv:2606.01926",
-      "title": "Mitigating Bias in Locally Constrained Decoding via Tractable Proposals",
-      "source_url": "https://arxiv.org/html/2606.01926v2",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-16T12:13:29+00:00",
       "return_count": 1,
       "assigned_worker": "scheduled-chat-45",
@@ -4254,8 +4226,8 @@
     },
     {
       "canonical_id": "DOI:10.1145/3689031.3696072",
-      "title": "Fast State Restoration in LLM Serving with HCache",
-      "source_url": "https://arxiv.org/pdf/2410.05004",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-16T12:13:57+00:00",
       "return_count": 1,
       "assigned_worker": "scheduled-chat-45",
@@ -4281,6 +4253,33 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_9367ddbb6fa8819184f813713d99a72d--2025-doi-10.1145.3689031.3696072-hcache-fast-state-restoration-research-20261016-0130-scheduled-chat-30-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_9367ddbb6fa8819184f813713d99a72d--2025-doi-10.1145.3689031.3696072-hcache-fast-state-restoration-research-20261016-0130-scheduled-chat-30-r01.json",
       "worker_run_key": "20261016-0130-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2511.06516",
+      "title": "You Had One Job: Per-Task Quantization Using LLMs’ Hidden Representations",
+      "source_url": "https://arxiv.org/pdf/2511.06516",
+      "returned_at": "2026-10-16T12:23:08+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 0 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 7113,
+        "body_paragraphs": 46,
+        "method_chars": 1949,
+        "method_paragraphs": 12,
+        "evaluation_chars": 0,
+        "limitation_chars": 847,
+        "insufficiency_flags": [
+          "評価説明量 0 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_9768b4f4bc8c81919cea074252f00692--2025-2511.06516-taq-task-aware-layer-quantization-research-20261016-0100-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_9768b4f4bc8c81919cea074252f00692--2025-2511.06516-taq-task-aware-layer-quantization-research-20261016-0100-scheduled-chat-00-r01.json",
+      "worker_run_key": "20261016-0100-scheduled-chat-00/r01"
     }
   ]
 }

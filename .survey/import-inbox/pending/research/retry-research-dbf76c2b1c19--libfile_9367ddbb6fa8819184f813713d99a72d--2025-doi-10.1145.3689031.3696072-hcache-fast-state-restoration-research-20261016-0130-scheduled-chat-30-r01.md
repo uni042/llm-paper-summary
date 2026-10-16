@@ -24,6 +24,8 @@ code: null
 last_checked: "2026-10-16"
 worker_completed_at: "2026-10-16T01:30:00+09:00"
 worker_run_key: "20261016-0130-scheduled-chat-30/r01"
+last_audited: null
+audit_version: 0
 ---
 
 # HCache：隠れ状態を保存してKVキャッシュを高速復元する推論サービング方式

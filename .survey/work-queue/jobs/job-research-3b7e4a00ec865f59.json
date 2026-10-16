@@ -33,10 +33,15 @@
   "selection_reason": "自己回帰出力を階層構造へ分岐して独立部分を並列生成し、生成step、KV cache、attention計算を削減するLLM推論高速化方式。",
   "semantic_scholar_id": "8a824052a8ae2061d67f1b76f3610c20ca301f7f",
   "source_url": "https://arxiv.org/abs/2401.06761",
-  "status": "ready",
+  "status": "superseded",
   "title": "APAR: LLMs Can Do Auto-Parallel Auto-Regressive Decoding",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2024
+  "year": 2024,
+  "superseded_at": "2026-10-16T12:24:13+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2024-2401.06761-apar-llms-can-do-auto-parallel-auto-regressive-decoding.md",
+  "represented_canonical_id": "arXiv:2401.06761",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
