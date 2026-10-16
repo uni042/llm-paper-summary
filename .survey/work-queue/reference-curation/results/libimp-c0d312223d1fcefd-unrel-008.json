@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-c0d312223d1fcefd-unrel-008",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.18653/v1/2024.emnlp-main.225",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.18653/v1/2024.emnlp-main.225",
+    "identity_tokens": [
+      "DOI:10.18653/v1/2024.emnlp-main.225"
+    ],
+    "reason": "The primary abstract describes Language models recognized as a new form of knowledge bases, face challenges of outdated, erroneous, and privacy-sensitive information, necessitating knowledge editing to rect…. The identified task is Interpretability-based Tailored Knowledge Editing in Transformers; it does not establish an LLM inference-system efficiency contribution.",
+    "first_checked_at": "2026-10-16T05:16:22+00:00",
+    "last_checked_at": "2026-10-16T05:16:22+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2022-2203.14680-transformer-feed-forward-layers-build-predictions-by-promoting-concepts-.md"
+    ],
+    "title": "Interpretability-based Tailored Knowledge Editing in Transformers"
+  },
+  "processed_at": "2026-10-16T05:16:22+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-c0d312223d1f",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

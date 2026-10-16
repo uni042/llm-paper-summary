@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-736ce0b12ebcad9b-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.18653/v1/2025.findings-acl.391",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.18653/v1/2025.findings-acl.391",
+    "identity_tokens": [
+      "DOI:10.18653/v1/2025.findings-acl.391"
+    ],
+    "reason": "The primary abstract describes Large language models (LLMs) have made significant strides in natural language processing by leveraging their ability to comprehend and reason with factual knowledge. However,…. The identified task is StructFact: Reasoning Factual Knowledge from Structured Data with Large Language Models; it does not establish an LLM inference-system efficiency contribution.",
+    "first_checked_at": "2026-10-16T05:16:16+00:00",
+    "last_checked_at": "2026-10-16T05:16:16+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+    ],
+    "title": "StructFact: Reasoning Factual Knowledge from Structured Data with Large Language Models"
+  },
+  "processed_at": "2026-10-16T05:16:17+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-736ce0b12ebc",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

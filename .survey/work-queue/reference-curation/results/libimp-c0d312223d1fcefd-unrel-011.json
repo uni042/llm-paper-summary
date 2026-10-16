@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-c0d312223d1fcefd-unrel-011",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2404.13004",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2404.13004",
+    "identity_tokens": [
+      "arXiv:2404.13004"
+    ],
+    "reason": "The primary abstract describes Recent industrial credit scoring models remain heavily reliant on manually tuned statistical learning methods. Despite their potential, deep learning architectures have strugg…. The identified task is A Unified Framework for Modeling Heterogeneous Financial Data via Dual-Granularity Prompting; it does not establish an LLM inference-system efficiency contribution.",
+    "first_checked_at": "2026-10-16T05:16:23+00:00",
+    "last_checked_at": "2026-10-16T05:16:23+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+    ],
+    "title": "A Unified Framework for Modeling Heterogeneous Financial Data via Dual-Granularity Prompting"
+  },
+  "processed_at": "2026-10-16T05:16:23+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-c0d312223d1f",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

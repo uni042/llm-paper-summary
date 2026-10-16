@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-c0d312223d1fcefd-unrel-012",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2406.06056",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2406.06056",
+    "identity_tokens": [
+      "arXiv:2406.06056"
+    ],
+    "reason": "The primary abstract describes Social and behavioral determinants of health (SBDH) play a crucial role in health outcomes and are frequently documented in clinical text. Automatically extracting SBDH inform…. The identified task is Synth-SBDH: A Synthetic Dataset of Social and Behavioral Determinants of Health for Clinical Text; it does not establish an LLM inference-system efficiency contribution.",
+    "first_checked_at": "2026-10-16T05:16:23+00:00",
+    "last_checked_at": "2026-10-16T05:16:23+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+    ],
+    "title": "Synth-SBDH: A Synthetic Dataset of Social and Behavioral Determinants of Health for Clinical Text"
+  },
+  "processed_at": "2026-10-16T05:16:24+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-c0d312223d1f",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
