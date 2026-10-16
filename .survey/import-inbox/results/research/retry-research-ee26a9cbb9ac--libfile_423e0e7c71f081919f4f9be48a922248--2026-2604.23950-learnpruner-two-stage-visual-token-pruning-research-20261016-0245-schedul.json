@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "e3af4eaa9015b7e639a150a67f53a109df8f4a2c3f8fbef35a6934dd0281044f",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/retry-research-ee26a9cbb9ac--libfile_423e0e7c71f081919f4f9be48a922248--2026-2604.23950-learnpruner-two-stage-visual-token-pruning-research-20261016-0245-scheduled-chat-45-r01.md",
+  "canonical_id": "arXiv:2604.23950",
+  "worker_completed_at": "2026-10-16T02:59:00+09:00",
+  "worker_run_key": "20261016-0245-scheduled-chat-45/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 6797,
+    "body_paragraphs": 35,
+    "method_chars": 0,
+    "method_paragraphs": 0,
+    "evaluation_chars": 0,
+    "limitation_chars": 814,
+    "insufficiency_flags": [
+      "手法説明量 0 < 700",
+      "評価説明量 0 < 500"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 手法説明量 0 < 700",
+    "説明不足トリガー: 評価説明量 0 < 500"
+  ],
+  "processed_at": "2026-10-16T16:20:03+00:00"
+}

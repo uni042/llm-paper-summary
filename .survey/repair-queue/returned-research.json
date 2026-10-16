@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-16T16:13:26+00:00",
+  "generated_at": "2026-10-16T16:20:04+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -3162,89 +3162,6 @@
       "worker_run_key": "20261015-2203-scheduled-chat-00/r01"
     },
     {
-      "canonical_id": "arXiv:2604.23950",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-16T11:17:23+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700",
-        "説明不足トリガー: 評価説明量 0 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 6797,
-        "body_paragraphs": 35,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 0,
-        "limitation_chars": 814,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700",
-          "評価説明量 0 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_423e0e7c71f081919f4f9be48a922248--2026-2604.23950-learnpruner-two-stage-visual-token-pruning-research-20261016-0245-scheduled-chat-45-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_423e0e7c71f081919f4f9be48a922248--2026-2604.23950-learnpruner-two-stage-visual-token-pruning-research-20261016-0245-scheduled-chat-45-r01.json",
-      "worker_run_key": "20261016-0245-scheduled-chat-45/r01"
-    },
-    {
-      "canonical_id": "arXiv:2605.22078",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-16T11:35:28+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 144 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5905,
-        "body_paragraphs": 36,
-        "method_chars": 1595,
-        "method_paragraphs": 9,
-        "evaluation_chars": 144,
-        "limitation_chars": 694,
-        "insufficiency_flags": [
-          "評価説明量 144 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_60130539d8ec8191990b5e49104e6cbf--2026-2605.22078-st-gridpool-video-token-representation-research-20261016-1630-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_60130539d8ec8191990b5e49104e6cbf--2026-2605.22078-st-gridpool-video-token-representation-research-20261016-1630-scheduled-chat-30-r01.json",
-      "worker_run_key": "20261016-1630-scheduled-chat-30/r01"
-    },
-    {
-      "canonical_id": "arXiv:2404.08698",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-16T11:51:12+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 0 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5432,
-        "body_paragraphs": 32,
-        "method_chars": 1624,
-        "method_paragraphs": 9,
-        "evaluation_chars": 0,
-        "limitation_chars": 746,
-        "insufficiency_flags": [
-          "評価説明量 0 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_67ba937edf848191b88ce6ac39ca9b1a--2024-2404.08698-anpd-adaptive-ngram-parallel-decoding-research-20261016-0330-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_67ba937edf848191b88ce6ac39ca9b1a--2024-2404.08698-anpd-adaptive-ngram-parallel-decoding-research-20261016-0330-scheduled-chat-30-r01.json",
-      "worker_run_key": "20261016-0330-scheduled-chat-30/r01"
-    },
-    {
       "canonical_id": "DOI:10.13140/rg.2.2.28167.37282",
       "title": null,
       "source_url": null,
@@ -3271,64 +3188,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_743e62328d4c81918b50337600a1b24e--2024-2402.02750-kivi-asymmetric-2bit-kv-cache-research-20261016-1330-scheduled-chat-30-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_743e62328d4c81918b50337600a1b24e--2024-2402.02750-kivi-asymmetric-2bit-kv-cache-research-20261016-1330-scheduled-chat-30-r01.json",
       "worker_run_key": "20261016-1330-scheduled-chat-30/r01"
-    },
-    {
-      "canonical_id": "arXiv:2508.08438",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-16T12:39:57+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700",
-        "説明不足トリガー: 評価説明量 0 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 6599,
-        "body_paragraphs": 30,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 0,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700",
-          "評価説明量 0 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_a05483024d5c81919a3e8ccbe9c52687--2025-2508.08438-safekv-selective-cache-sharing-research-20261015-1803-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_a05483024d5c81919a3e8ccbe9c52687--2025-2508.08438-safekv-selective-cache-sharing-research-20261015-1803-scheduled-chat-00-r01.json",
-      "worker_run_key": "20261015-1803-scheduled-chat-00/r01"
-    },
-    {
-      "canonical_id": "arXiv:2601.22716",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-16T13:42:22+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 0 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 6159,
-        "body_paragraphs": 33,
-        "method_chars": 1970,
-        "method_paragraphs": 10,
-        "evaluation_chars": 0,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "評価説明量 0 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_d08fab9988ac819191687b59035de99a--2026-2601.22716-lords-low-rank-decomposed-scaling-research-20261015-2230-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_d08fab9988ac819191687b59035de99a--2026-2601.22716-lords-low-rank-decomposed-scaling-research-20261015-2230-scheduled-chat-30-r01.json",
-      "worker_run_key": "20261015-2230-scheduled-chat-30/r01"
     },
     {
       "canonical_id": "arXiv:2609.07664",
@@ -5033,8 +4892,8 @@
     },
     {
       "canonical_id": "DOI:10.1109/CISAT71030.2026.11682186",
-      "title": "Semantic-Aware Intelligent Request Routing in Multi-Model LLM Backend Gateways",
-      "source_url": "https://www.researchgate.net/publication/405186829_Semantic-Aware_Intelligent_Request_Routing_in_Multi-Model_LLM_Backend_Gateways",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-16T16:13:20+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-45",
@@ -5061,8 +4920,8 @@
     },
     {
       "canonical_id": "DOI:10.1145/3642970.3655844",
-      "title": "ALTO: An Efficient Network Orchestrator for Compound AI Systems",
-      "source_url": "https://sing.stanford.edu/site/assets/publications/alto-euromlsys24.pdf",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-16T16:13:22+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-30",
@@ -5089,8 +4948,8 @@
     },
     {
       "canonical_id": "arXiv:2410.10165",
-      "title": "HSR-Enhanced Sparse Attention Acceleration",
-      "source_url": "https://arxiv.org/pdf/2410.10165",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-16T16:13:23+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-00",
@@ -5117,8 +4976,8 @@
     },
     {
       "canonical_id": "DOI:10.1145/3689031.3696072",
-      "title": "Fast State Restoration in LLM Serving with HCache",
-      "source_url": "https://arxiv.org/pdf/2410.05004",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-16T16:13:24+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-45",
@@ -5147,8 +5006,8 @@
     },
     {
       "canonical_id": "DOI:10.3390/s26041101",
-      "title": "Dynamic Micro-Batch and Token-Budget Scheduling for IoT-Scale Pipeline-Parallel LLM Inference",
-      "source_url": "https://www.mdpi.com/1424-8220/26/4/1101",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-16T16:13:25+00:00",
       "return_count": 5,
       "assigned_worker": "scheduled-chat-00",
@@ -5172,6 +5031,147 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-de4311a499b4--libfile_157152657d548191bd3e3b6600d8c869--2026-doi-10.3390-s26041101-dynamic-microbatch-tokenbudget-scheduling-research-20261016-1930-scheduled-chat-30-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-de4311a499b4--libfile_157152657d548191bd3e3b6600d8c869--2026-doi-10.3390-s26041101-dynamic-microbatch-tokenbudget-scheduling-research-20261016-19.json",
       "worker_run_key": "20261016-1930-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2404.08698",
+      "title": "Lossless Acceleration of Large Language Model via Adaptive N-gram Parallel Decoding",
+      "source_url": "https://arxiv.org/html/2404.08698v2",
+      "returned_at": "2026-10-16T16:20:01+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 0 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5432,
+        "body_paragraphs": 32,
+        "method_chars": 1624,
+        "method_paragraphs": 9,
+        "evaluation_chars": 0,
+        "limitation_chars": 746,
+        "insufficiency_flags": [
+          "評価説明量 0 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-e27c61914cab--libfile_67ba937edf848191b88ce6ac39ca9b1a--2024-2404.08698-anpd-adaptive-ngram-parallel-decoding-research-20261016-0330-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-e27c61914cab--libfile_67ba937edf848191b88ce6ac39ca9b1a--2024-2404.08698-anpd-adaptive-ngram-parallel-decoding-research-20261016-0330-scheduled-ch.json",
+      "worker_run_key": "20261016-0330-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2605.22078",
+      "title": "Enhancing Visual Token Representations for Video Large Language Models via Training-Free Spatial-Temporal Pooling and Gridding",
+      "source_url": "https://arxiv.org/abs/2605.22078",
+      "returned_at": "2026-10-16T16:20:01+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 144 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5905,
+        "body_paragraphs": 36,
+        "method_chars": 1595,
+        "method_paragraphs": 9,
+        "evaluation_chars": 144,
+        "limitation_chars": 694,
+        "insufficiency_flags": [
+          "評価説明量 144 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-e5191e094710--libfile_60130539d8ec8191990b5e49104e6cbf--2026-2605.22078-st-gridpool-video-token-representation-research-20261016-1630-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-e5191e094710--libfile_60130539d8ec8191990b5e49104e6cbf--2026-2605.22078-st-gridpool-video-token-representation-research-20261016-1630-scheduled-c.json",
+      "worker_run_key": "20261016-1630-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2508.08438",
+      "title": "Selective KV-Cache Sharing to Mitigate Timing Side-Channels in LLM Inference",
+      "source_url": "https://arxiv.org/html/2508.08438v2",
+      "returned_at": "2026-10-16T16:20:02+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700",
+        "説明不足トリガー: 評価説明量 0 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 6599,
+        "body_paragraphs": 30,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 0,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700",
+          "評価説明量 0 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-ea34a107df11--libfile_a05483024d5c81919a3e8ccbe9c52687--2025-2508.08438-safekv-selective-cache-sharing-research-20261015-1803-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-ea34a107df11--libfile_a05483024d5c81919a3e8ccbe9c52687--2025-2508.08438-safekv-selective-cache-sharing-research-20261015-1803-scheduled-chat-00-r.json",
+      "worker_run_key": "20261015-1803-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2604.23950",
+      "title": "LearnPruner: Rethinking Attention-based Token Pruning in Vision Language Models",
+      "source_url": "https://arxiv.org/html/2604.23950v2",
+      "returned_at": "2026-10-16T16:20:03+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700",
+        "説明不足トリガー: 評価説明量 0 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 6797,
+        "body_paragraphs": 35,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 0,
+        "limitation_chars": 814,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700",
+          "評価説明量 0 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-ee26a9cbb9ac--libfile_423e0e7c71f081919f4f9be48a922248--2026-2604.23950-learnpruner-two-stage-visual-token-pruning-research-20261016-0245-scheduled-chat-45-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-ee26a9cbb9ac--libfile_423e0e7c71f081919f4f9be48a922248--2026-2604.23950-learnpruner-two-stage-visual-token-pruning-research-20261016-0245-schedul.json",
+      "worker_run_key": "20261016-0245-scheduled-chat-45/r01"
+    },
+    {
+      "canonical_id": "arXiv:2601.22716",
+      "title": "Breaking the Blocks: Continuous Low-Rank Decomposed Scaling for Unified LLM Quantization and Adaptation",
+      "source_url": "https://arxiv.org/pdf/2601.22716",
+      "returned_at": "2026-10-16T16:20:04+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 0 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 6159,
+        "body_paragraphs": 33,
+        "method_chars": 1970,
+        "method_paragraphs": 10,
+        "evaluation_chars": 0,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "評価説明量 0 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-f3e4f6563cce--libfile_d08fab9988ac819191687b59035de99a--2026-2601.22716-lords-low-rank-decomposed-scaling-research-20261015-2230-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-f3e4f6563cce--libfile_d08fab9988ac819191687b59035de99a--2026-2601.22716-lords-low-rank-decomposed-scaling-research-20261015-2230-scheduled-chat-3.json",
+      "worker_run_key": "20261015-2230-scheduled-chat-30/r01"
     }
   ]
 }
