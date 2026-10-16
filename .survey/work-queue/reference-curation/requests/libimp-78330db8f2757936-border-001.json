@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-78330db8f2757936-border-001",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2603.21096",
+  "reason": "潜在記憶トークンをチャプターに分割し入力系列単位のルータで上位kチャプターだけをクロス注意で参照するため推論時の注意計算量をO(L*N_m)からO(L*k*T)へ減らす設計は直接関連する。一方、本文の実測評価は9.6Bトークンの事前学習、230Mトークンの指示微調整、MMLU/ARC-C/BoolQ/OBQA正答率と忘却抑制に集中し、実際の推論レイテンシ、トークン/秒、GPUメモリ帯域、配信処理量の測定がない。学習単独の効率・能力向上を凍結する現行範囲では収録可否が境界的。",
+  "title": "Mixture of Chapters: Scaling Learnt Memory in Transformers",
+  "identity_tokens": [
+    "arxiv:2603.21096",
+    "doi:10.48550/arxiv.2603.21096"
+  ],
+  "linked_from": [],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-78330db8f275",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}
