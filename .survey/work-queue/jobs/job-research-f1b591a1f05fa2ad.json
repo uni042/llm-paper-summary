@@ -45,10 +45,15 @@
   "selection_reason": "5 architecture・4 reasoning benchmark・120 runでBF16からQ2_Kまでfull-vocabulary divergenceを測定し、llama.cpp Q4_Kが同程度memoryのQ4_0より低driftとなる傾向を示す。",
   "semantic_scholar_id": "84845b9a9ba10adeb94154d89fac900566597aaf",
   "source_url": "https://www.semanticscholar.org/paper/84845b9a9ba10adeb94154d89fac900566597aaf",
-  "status": "ready",
+  "status": "superseded",
   "status_submission": ".survey/work-queue/submissions/research/attempt-ee97c1c62e37d96ca0e0e94f.json",
   "title": "Accuracy is Not Enough: A Divergence-Based Approach to Evaluate Fidelity Loss in Quantized LLMs",
   "type": "research",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-10-16T13:50:28+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2026-2609.07664-accuracy-is-not-enough-a-divergence-based-approach-to-evaluate-fidelity-.md",
+  "represented_canonical_id": "arXiv:2609.07664",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

@@ -3,7 +3,7 @@
 複数requestを複数GPU / nodeで処理するLLM servingについて、request順、batch、prefill / decodeのGPU配分、KV再利用・転送、request移動などを調整し、latencyとresource効率を改善する研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（357本）
+## 自動生成の論文一覧（358本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -739,6 +739,10 @@
 - **2026-05 · [Measurement-Driven Diagnosis and Mitigation of Host-CPU Co-location Interference in Single-GPU LLM Serving on a Multi-GPU Server](2026-2609.05425-cotail.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   CPU制御段階のP95/P99遅延からスケジューラ競合とNUMA・キャッシュ競合を診断し、リアルタイム優先度またはCPU配置分離を選んで同居ワークロードによるLLM遅延を減らす。
+
+- **2026-05 · [Keep What Audio Cannot Say: Context-Preserving Token Pruning for Omni-LLMs](2026-2605.11605-keep-what-audio-cannot-say-context-preserving-token-pruning-for-omni-llm.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  音声・映像を同時に扱う全モダリティ大規模言語モデルでは、映像の特徴列が音声に比べて長くなり、入力の事前充填（プリフィル）時間とGPUメモリを消費する。さらに空間格子による細部の救済と、時間方向で重複する映像特徴の統合を行う。Qwen2.5-Omni 7Bでは6評価課題の平均入力トークンを55%削減し、無削減を100とする正規化平均性能は100.0を維持する。
 
 - **2026-05 · [Human-Less LLM Serving: Quantifying the Human Tax on Throughput](2026-2606.20577-human-less-llm-serving-human-tax-throughput.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

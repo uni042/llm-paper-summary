@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-16T13:43:21+00:00",
+  "generated_at": "2026-10-16T13:50:28+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -3076,34 +3076,6 @@
       "worker_run_key": "20261016-0730-scheduled-chat-30/r01"
     },
     {
-      "canonical_id": "arXiv:2605.11605",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-16T03:24:49+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 182 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 4516,
-        "body_paragraphs": 21,
-        "method_chars": 1427,
-        "method_paragraphs": 6,
-        "evaluation_chars": 182,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "評価説明量 182 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-f075006bf65f--libfile_24a0c0180c2c8191a64ea3e3a472904f--2026-2605.11605-contextguard-audio-visual-token-pruning-research-20261016-1100-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-f075006bf65f--libfile_24a0c0180c2c8191a64ea3e3a472904f--2026-2605.11605-contextguard-audio-visual-token-pruning-research-20261016-1100-scheduled-.json",
-      "worker_run_key": "20261016-1100-scheduled-chat-00/r01"
-    },
-    {
       "canonical_id": "arXiv:2605.04738",
       "title": null,
       "source_url": null,
@@ -3412,33 +3384,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_22eebea2972481919884d9a25ea43b52--2025-2511.07776-step-streaming-tensor-programs-research-20261016-0030-scheduled-chat-30-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_22eebea2972481919884d9a25ea43b52--2025-2511.07776-step-streaming-tensor-programs-research-20261016-0030-scheduled-chat-30-r01.json",
       "worker_run_key": "20261016-0030-scheduled-chat-30/r01"
-    },
-    {
-      "canonical_id": "DOI:10.1145/3712285.3759867",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-16T10:50:36+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 6603,
-        "body_paragraphs": 34,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 946,
-        "limitation_chars": 783,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_015daa53de0c81918da6933d5fd335a4--2025-doi-10.1145-3712285.3759867-maveriq-fingerprint-fragmentation-research-20261016-1930-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_015daa53de0c81918da6933d5fd335a4--2025-doi-10.1145-3712285.3759867-maveriq-fingerprint-fragmentation-research-20261016-1930-scheduled-chat-30-r01.json",
-      "worker_run_key": "20261016-1930-scheduled-chat-30/r01"
     },
     {
       "canonical_id": "DOI:10.1145/3725338",
@@ -4615,8 +4560,8 @@
     },
     {
       "canonical_id": "DOI:10.1145/3642970.3655844",
-      "title": "ALTO: An Efficient Network Orchestrator for Compound AI Systems",
-      "source_url": "https://sing.stanford.edu/site/assets/publications/alto-euromlsys24.pdf",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-16T13:41:26+00:00",
       "return_count": 1,
       "assigned_worker": "scheduled-chat-30",
@@ -4643,8 +4588,8 @@
     },
     {
       "canonical_id": "arXiv:2601.22716",
-      "title": "Breaking the Blocks: Continuous Low-Rank Decomposed Scaling for Unified LLM Quantization and Adaptation",
-      "source_url": "https://arxiv.org/pdf/2601.22716",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-16T13:42:22+00:00",
       "return_count": 1,
       "assigned_worker": "scheduled-chat-00",
@@ -4668,6 +4613,64 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_d08fab9988ac819191687b59035de99a--2026-2601.22716-lords-low-rank-decomposed-scaling-research-20261015-2230-scheduled-chat-30-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_d08fab9988ac819191687b59035de99a--2026-2601.22716-lords-low-rank-decomposed-scaling-research-20261015-2230-scheduled-chat-30-r01.json",
       "worker_run_key": "20261015-2230-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2606.04050",
+      "title": "LiftQuant: Continuous Bit-Width LLM via Dimensional Lifting and Projection",
+      "source_url": "https://arxiv.org/html/2606.04050v2",
+      "returned_at": "2026-10-16T13:49:04+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700",
+        "説明不足トリガー: 評価説明量 217 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 8434,
+        "body_paragraphs": 47,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 217,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700",
+          "評価説明量 217 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_d5d0f1c0574881919a7ba930599ff86f--2026-2606.04050-liftquant-fractional-bitwidth-research-20261016-1430-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_d5d0f1c0574881919a7ba930599ff86f--2026-2606.04050-liftquant-fractional-bitwidth-research-20261016-1430-scheduled-chat-30-r01.json",
+      "worker_run_key": "20261016-1430-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "DOI:10.1145/3712285.3759867",
+      "title": "MaverIQ: Fingerprint-Guided Extrapolation and Fragmentation-Aware Layering for Intent-Based LLM Serving",
+      "source_url": "https://doi.org/10.1145/3712285.3759867",
+      "returned_at": "2026-10-16T13:49:36+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 9217,
+        "body_paragraphs": 52,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 595,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_da52fd8bea448191905e16e11a1316db--2025-maveriq-fingerprint-fragmentation-aware-serving-research-20261016-1445-scheduled-chat-45-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_da52fd8bea448191905e16e11a1316db--2025-maveriq-fingerprint-fragmentation-aware-serving-research-20261016-1445-scheduled-chat-45-r01.json",
+      "worker_run_key": "20261016-1445-scheduled-chat-45/r01"
     }
   ]
 }
