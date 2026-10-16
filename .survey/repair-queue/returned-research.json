@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-16T11:45:46+00:00",
+  "generated_at": "2026-10-16T11:52:20+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 153,
+  "count": 157,
   "entries": [
     {
       "canonical_id": "DOI:10.1145/3714983.3714987",
@@ -3910,8 +3910,8 @@
     },
     {
       "canonical_id": "arXiv:2511.16193",
-      "title": "Fast LLM Post-training via Decoupled and Fastest-of-N Speculation",
-      "source_url": "https://arxiv.org/html/2511.16193v3",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-16T11:41:58+00:00",
       "return_count": 1,
       "assigned_worker": "scheduled-chat-45",
@@ -3937,8 +3937,8 @@
     },
     {
       "canonical_id": "arXiv:2403.10059",
-      "title": "Repoformer: Selective Retrieval for Repository-Level Code Completion",
-      "source_url": "https://arxiv.org/html/2403.10059",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-16T11:42:49+00:00",
       "return_count": 1,
       "assigned_worker": "scheduled-chat-45",
@@ -3963,6 +3963,117 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_604896c3db5081919d32901694a18b74--2024-2403.10059-repoformer-selective-retrieval-code-completion-research-20261016-1145-scheduled-chat-45-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_604896c3db5081919d32901694a18b74--2024-2403.10059-repoformer-selective-retrieval-code-completion-research-20261016-1145-scheduled-chat-45-r01.json",
       "worker_run_key": "20261016-1145-scheduled-chat-45/r01"
+    },
+    {
+      "canonical_id": "arXiv:2404.08698",
+      "title": "Lossless Acceleration of Large Language Model via Adaptive N-gram Parallel Decoding",
+      "source_url": "https://arxiv.org/html/2404.08698v2",
+      "returned_at": "2026-10-16T11:51:12+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 0 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5432,
+        "body_paragraphs": 32,
+        "method_chars": 1624,
+        "method_paragraphs": 9,
+        "evaluation_chars": 0,
+        "limitation_chars": 746,
+        "insufficiency_flags": [
+          "評価説明量 0 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_67ba937edf848191b88ce6ac39ca9b1a--2024-2404.08698-anpd-adaptive-ngram-parallel-decoding-research-20261016-0330-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_67ba937edf848191b88ce6ac39ca9b1a--2024-2404.08698-anpd-adaptive-ngram-parallel-decoding-research-20261016-0330-scheduled-chat-30-r01.json",
+      "worker_run_key": "20261016-0330-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "DOI:10.13140/rg.2.2.28167.37282",
+      "title": "KIVI: A Tuning-Free Asymmetric 2bit Quantization for KV Cache",
+      "source_url": "https://arxiv.org/html/2402.02750",
+      "returned_at": "2026-10-16T11:51:13+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 0 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5982,
+        "body_paragraphs": 29,
+        "method_chars": 1935,
+        "method_paragraphs": 10,
+        "evaluation_chars": 0,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "評価説明量 0 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_743e62328d4c81918b50337600a1b24e--2024-2402.02750-kivi-asymmetric-2bit-kv-cache-research-20261016-1330-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_743e62328d4c81918b50337600a1b24e--2024-2402.02750-kivi-asymmetric-2bit-kv-cache-research-20261016-1330-scheduled-chat-30-r01.json",
+      "worker_run_key": "20261016-1330-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2512.00719",
+      "title": "SIMPLE: Disaggregating Sampling from GPU Inference into a Decision Plane for Faster Distributed LLM Serving",
+      "source_url": "https://arxiv.org/abs/2512.00719",
+      "returned_at": "2026-10-16T11:51:14+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700",
+        "説明不足トリガー: 評価説明量 0 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 7770,
+        "body_paragraphs": 39,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 0,
+        "limitation_chars": 955,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700",
+          "評価説明量 0 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_74e6708254708191af1f8e518d2782e7--2025-2512.00719-simple-disaggregated-sampling-research-20261015-2330-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_74e6708254708191af1f8e518d2782e7--2025-2512.00719-simple-disaggregated-sampling-research-20261015-2330-scheduled-chat-30-r01.json",
+      "worker_run_key": "20261015-2330-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2602.08722",
+      "title": "QUOKA: Query-Oriented KV Selection For Efficient LLM Prefill",
+      "source_url": "https://arxiv.org/pdf/2602.08722v1",
+      "returned_at": "2026-10-16T11:51:39+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 124 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5177,
+        "body_paragraphs": 29,
+        "method_chars": 1415,
+        "method_paragraphs": 8,
+        "evaluation_chars": 124,
+        "limitation_chars": 788,
+        "insufficiency_flags": [
+          "評価説明量 124 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_78040cefdda48191abb0ff3665aa47f7--2026-2602.08722-quoka-query-oriented-kv-selection-research-20261016-0200-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_78040cefdda48191abb0ff3665aa47f7--2026-2602.08722-quoka-query-oriented-kv-selection-research-20261016-0200-scheduled-chat-00-r01.json",
+      "worker_run_key": "20261016-0200-scheduled-chat-00/r01"
     }
   ]
 }
