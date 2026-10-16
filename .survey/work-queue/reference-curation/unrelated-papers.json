@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-16T06:53:27+00:00",
-  "record_count": 12408,
+  "updated_at": "2026-10-16T07:46:06+00:00",
+  "record_count": 12409,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -168574,11 +168574,12 @@
       "classification": "unrelated",
       "canonical_id": "arXiv:2403.18421",
       "identity_tokens": [
+        "DOI:10.48550/arxiv.2403.18421",
         "arXiv:2403.18421"
       ],
-      "reason": "生物医学テキストを用いた言語モデルの構築・学習が主題であり、LLM推論基盤の高速化、キャッシュ管理、量子化、サービングの手法研究ではない。",
+      "reason": "タイトルが示す主題は生物医学文書で学習した27億パラメータ言語モデルの構築であり、医療領域への適応と事前学習が中心である。LLM推論基盤のメモリ管理、スケジューリング、低ビット推論、カーネル最適化を提案する論文とは読み取れないため、現行サーベイのシステム研究から除外した。タイトルのみ確認し、要旨・本文は未読。",
       "first_checked_at": "2026-10-13T13:47:00+00:00",
-      "last_checked_at": "2026-10-15T18:58:03+00:00",
+      "last_checked_at": "2026-10-16T07:46:06+00:00",
       "linked_from": [],
       "title": "BioMedLM: A 2.7B Parameter Language Model Trained On Biomedical Text"
     },
@@ -178970,6 +178971,19 @@
       "last_checked_at": "2026-10-16T06:53:27+00:00",
       "linked_from": [],
       "title": "Dynamic Sparse No Training: Training-Free Fine-tuning for Sparse LLMs"
+    },
+    "arXiv:2407.18370": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2407.18370",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2407.18370",
+        "arXiv:2407.18370"
+      ],
+      "reason": "タイトルに明示された研究課題はLLM評価器の人間との判定一致に対する保証とエスカレーション判断である。主題は判定品質・人手評価との整合であり、推論サービングの速度、GPU利用率、KV管理、専門家配置、分散実行などの基盤最適化ではないため対象外とした。タイトル段階の適格性確認のみであり、要旨・本文は未読。",
+      "first_checked_at": "2026-10-16T07:46:05+00:00",
+      "last_checked_at": "2026-10-16T07:46:05+00:00",
+      "linked_from": [],
+      "title": "Trust or Escalate: LLM Judges with Provable Guarantees for Human Agreement"
     }
   }
 }
