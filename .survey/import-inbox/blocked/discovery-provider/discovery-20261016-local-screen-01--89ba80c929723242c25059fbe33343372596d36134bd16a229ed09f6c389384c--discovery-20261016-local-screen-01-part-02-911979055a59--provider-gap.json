@@ -1,0 +1,31 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-discovery",
+  "run_key": "discovery-20261016-local-screen-01-part-02-911979055a59::provider-gap",
+  "reference_main_sha": "00713b3b0867f89b784f77827fa729b8091e1f4a",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2407.08980",
+      "identity_tokens": [
+        "arXiv:2407.08980"
+      ],
+      "title": "Enabling Elastic Model Serving with MultiWorld",
+      "reason": "MultiWorld directly addresses elastic inference serving for large partitioned models under dynamic workloads and failures, with communication designed for serving rather than fixed-resource training; it matches serving, scheduling, and runtime-efficiency lineages.",
+      "source_url": "https://arxiv.org/abs/2407.08980",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-16T00:07:07Z",
+      "last_checked_at": "2026-10-16T00:07:07Z",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2311.15566-spotserve-preemptible-instance-serving.md"
+      ]
+    }
+  ],
+  "parent_run_key": "discovery-20261016-local-screen-01-part-02-911979055a59",
+  "provider_gap_from": ".survey/import-inbox/waiting/discovery/discovery-20261016-local-screen-01--89ba80c929723242c25059fbe33343372596d36134bd16a229ed09f6c389384c--discovery-20261016-local-screen-01-part-02-911979055a59.json",
+  "provider_gap_ids": [
+    "arXiv:2407.08980"
+  ]
+}
