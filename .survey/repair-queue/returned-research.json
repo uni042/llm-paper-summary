@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-16T15:19:15+00:00",
+  "generated_at": "2026-10-16T15:23:49+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -3135,34 +3135,6 @@
       "worker_run_key": "20261016-1700-scheduled-chat-00/r01"
     },
     {
-      "canonical_id": "arXiv:2602.22675",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-16T10:04:03+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 8634,
-        "body_paragraphs": 43,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 1793,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_1737164089608191b33ff2914b267d13--2026-2602.22675-smtl-parallel-agentic-search-research-20261016-1600-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_1737164089608191b33ff2914b267d13--2026-2602.22675-smtl-parallel-agentic-search-research-20261016-1600-scheduled-chat-00-r01.json",
-      "worker_run_key": "20261016-1600-scheduled-chat-00/r01"
-    },
-    {
       "canonical_id": "arXiv:2608.07088",
       "title": null,
       "source_url": null,
@@ -3332,34 +3304,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_2ff1ea5dff5c819193abf618b8130116--2021-2103.14636-practical-survey-faster-lighter-transformers-research-20261016-1330-scheduled-chat-30-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_2ff1ea5dff5c819193abf618b8130116--2021-2103.14636-practical-survey-faster-lighter-transformers-research-20261016-1330-scheduled-chat-30-r01.json",
       "worker_run_key": "20261016-1330-scheduled-chat-30/r01"
-    },
-    {
-      "canonical_id": "arXiv:2409.01141",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-16T11:07:55+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 118 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 4040,
-        "body_paragraphs": 22,
-        "method_chars": 1616,
-        "method_paragraphs": 9,
-        "evaluation_chars": 118,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "評価説明量 118 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_32c0cbaaab688191a44699cf3b0d2f48--2024-2409.01141-duplex-logic-pim-research-20261015-1500-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_32c0cbaaab688191a44699cf3b0d2f48--2024-2409.01141-duplex-logic-pim-research-20261015-1500-scheduled-chat-00-r01.json",
-      "worker_run_key": "20261015-1500-scheduled-chat-00/r01"
     },
     {
       "canonical_id": "arXiv:2505.19201",
@@ -3806,34 +3750,6 @@
       "worker_run_key": "20261016-0100-scheduled-chat-00/r01"
     },
     {
-      "canonical_id": "arXiv:2502.20704",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-16T12:07:31+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 142 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 4859,
-        "body_paragraphs": 23,
-        "method_chars": 1548,
-        "method_paragraphs": 8,
-        "evaluation_chars": 142,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "評価説明量 142 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_8c6476348c948191ba731ed0c4b9efaa--2025-2502.20704-fuzzy-speculative-decoding-research-20261015-1655-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_8c6476348c948191ba731ed0c4b9efaa--2025-2502.20704-fuzzy-speculative-decoding-research-20261015-1655-scheduled-chat-00-r01.json",
-      "worker_run_key": "20261015-1655-scheduled-chat-00/r01"
-    },
-    {
       "canonical_id": "DOI:10.1145/3689031.3696072",
       "title": null,
       "source_url": null,
@@ -3975,33 +3891,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_a05483024d5c81919a3e8ccbe9c52687--2025-2508.08438-safekv-selective-cache-sharing-research-20261015-1803-scheduled-chat-00-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_a05483024d5c81919a3e8ccbe9c52687--2025-2508.08438-safekv-selective-cache-sharing-research-20261015-1803-scheduled-chat-00-r01.json",
       "worker_run_key": "20261015-1803-scheduled-chat-00/r01"
-    },
-    {
-      "canonical_id": "arXiv:2607.02303",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-16T12:49:53+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 176 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 4569,
-        "body_paragraphs": 26,
-        "method_chars": 1549,
-        "method_paragraphs": 9,
-        "evaluation_chars": 176,
-        "limitation_chars": 673,
-        "insufficiency_flags": [
-          "評価説明量 176 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_a7767e5f2e308191b7f80761b9438eeb--2026-2607.02303-hola-hippocampal-linear-attention-research-20261015-0530-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_a7767e5f2e308191b7f80761b9438eeb--2026-2607.02303-hola-hippocampal-linear-attention-research-20261015-0530-scheduled-chat-30-r01.json",
-      "worker_run_key": "20261015-0530-scheduled-chat-30/r01"
     },
     {
       "canonical_id": "arXiv:2604.07955",
@@ -4473,36 +4362,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_f60f2a3fae1c819186a2aebaaab88d54--2026-2602.20309-quantvla-scale-calibrated-vla-quantization-research-20261016-1730-scheduled-chat-30-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_f60f2a3fae1c819186a2aebaaab88d54--2026-2602.20309-quantvla-scale-calibrated-vla-quantization-research-20261016-1730-scheduled-chat-30-r01.json",
       "worker_run_key": "20261016-1730-scheduled-chat-30/r01"
-    },
-    {
-      "canonical_id": "DOI:10.1145/3552326.3587438",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-16T14:31:09+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700",
-        "説明不足トリガー: 評価説明量 0 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5287,
-        "body_paragraphs": 27,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 0,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700",
-          "評価説明量 0 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_fa4f002121488191aed9f30d61aba9d4--2023-doi-10.1145.3552326.3587438-tabi-multilevel-inference-research-20261016-0030-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_fa4f002121488191aed9f30d61aba9d4--2023-doi-10.1145.3552326.3587438-tabi-multilevel-inference-research-20261016-0030-scheduled-chat-30-r01.json",
-      "worker_run_key": "20261016-0030-scheduled-chat-30/r01"
     },
     {
       "canonical_id": "arXiv:2602.02544",
@@ -5036,8 +4895,8 @@
     },
     {
       "canonical_id": "arXiv:2511.09345",
-      "title": "Seer Self-Consistency: Advance Budget Estimation for Adaptive Test-Time Scaling",
-      "source_url": "https://arxiv.org/html/2511.09345v2",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-16T15:19:11+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-00",
@@ -5063,8 +4922,8 @@
     },
     {
       "canonical_id": "arXiv:2602.04789",
-      "title": "Light Forcing: Accelerating Autoregressive Video Diffusion via Sparse Attention",
-      "source_url": "https://arxiv.org/html/2602.04789v4",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-16T15:19:12+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-45",
@@ -5090,8 +4949,8 @@
     },
     {
       "canonical_id": "arXiv:2605.18165",
-      "title": "Elastic-dLLM: Position Preserving Context Compression and Augmentation of Diffusion LLMs",
-      "source_url": "https://arxiv.org/html/2605.18165v1",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-16T15:19:13+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-30",
@@ -5120,8 +4979,8 @@
     },
     {
       "canonical_id": "arXiv:2409.12961",
-      "title": "Oryx MLLM: On-Demand Spatial-Temporal Understanding at Arbitrary Resolution",
-      "source_url": "https://arxiv.org/html/2409.12961v4",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-16T15:19:14+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-00",
@@ -5150,8 +5009,8 @@
     },
     {
       "canonical_id": "arXiv:2608.00881",
-      "title": "AOSpec: Action and Observation Co-Speculation for Low-Latency Agent Serving",
-      "source_url": "https://arxiv.org/html/2608.00881v1",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-16T15:19:15+00:00",
       "return_count": 4,
       "assigned_worker": "scheduled-chat-45",
@@ -5172,6 +5031,147 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-42c07424e31e--libfile_58bc0b4be5f481918a778fff8b64aa56--2026-2608.00881-aospec-heading-repair-research-20261016-1445-scheduled-chat-45-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-42c07424e31e--libfile_58bc0b4be5f481918a778fff8b64aa56--2026-2608.00881-aospec-heading-repair-research-20261016-1445-scheduled-chat-45-r01.json",
       "worker_run_key": "20261016-1445-scheduled-chat-45/r01"
+    },
+    {
+      "canonical_id": "arXiv:2602.22675",
+      "title": "Search More, Think Less: Rethinking Long-Horizon Agentic Search for Efficiency and Generalization",
+      "source_url": "https://arxiv.org/html/2602.22675v2",
+      "returned_at": "2026-10-16T15:23:47+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 8634,
+        "body_paragraphs": 43,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 1793,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-442d340d78d6--libfile_1737164089608191b33ff2914b267d13--2026-2602.22675-smtl-parallel-agentic-search-research-20261016-1600-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-442d340d78d6--libfile_1737164089608191b33ff2914b267d13--2026-2602.22675-smtl-parallel-agentic-search-research-20261016-1600-scheduled-chat-00-r01.json",
+      "worker_run_key": "20261016-1600-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2607.02303",
+      "title": "A Hippocampus for Linear Attention: An Exact Memory for What the Recurrent State Forgets",
+      "source_url": "https://arxiv.org/abs/2607.02303",
+      "returned_at": "2026-10-16T15:23:47+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 176 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 4569,
+        "body_paragraphs": 26,
+        "method_chars": 1549,
+        "method_paragraphs": 9,
+        "evaluation_chars": 176,
+        "limitation_chars": 673,
+        "insufficiency_flags": [
+          "評価説明量 176 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-4768f230d179--libfile_a7767e5f2e308191b7f80761b9438eeb--2026-2607.02303-hola-hippocampal-linear-attention-research-20261015-0530-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-4768f230d179--libfile_a7767e5f2e308191b7f80761b9438eeb--2026-2607.02303-hola-hippocampal-linear-attention-research-20261015-0530-scheduled-chat-3.json",
+      "worker_run_key": "20261015-0530-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2409.01141",
+      "title": "Duplex: A Device for Large Language Models with Mixture of Experts, Grouped Query Attention, and Continuous Batching",
+      "source_url": "https://scale.snu.ac.kr/papers/2024-12-Conference-MICRO-Duplex.pdf",
+      "returned_at": "2026-10-16T15:23:48+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 118 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 4040,
+        "body_paragraphs": 22,
+        "method_chars": 1616,
+        "method_paragraphs": 9,
+        "evaluation_chars": 118,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "評価説明量 118 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-49672d3d24f8--libfile_32c0cbaaab688191a44699cf3b0d2f48--2024-2409.01141-duplex-logic-pim-research-20261015-1500-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-49672d3d24f8--libfile_32c0cbaaab688191a44699cf3b0d2f48--2024-2409.01141-duplex-logic-pim-research-20261015-1500-scheduled-chat-00-r01.json",
+      "worker_run_key": "20261015-1500-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "DOI:10.1145/3552326.3587438",
+      "title": "Tabi: An Efficient Multi-Level Inference System for Large Language Models",
+      "source_url": "https://yidingwang.xyz/files/tabi_eurosys23.pdf",
+      "returned_at": "2026-10-16T15:23:49+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700",
+        "説明不足トリガー: 評価説明量 0 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5287,
+        "body_paragraphs": 27,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 0,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700",
+          "評価説明量 0 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-4a97d30510f8--libfile_fa4f002121488191aed9f30d61aba9d4--2023-doi-10.1145.3552326.3587438-tabi-multilevel-inference-research-20261016-0030-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-4a97d30510f8--libfile_fa4f002121488191aed9f30d61aba9d4--2023-doi-10.1145.3552326.3587438-tabi-multilevel-inference-research-20261016-0030-schedul.json",
+      "worker_run_key": "20261016-0030-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2502.20704",
+      "title": "Fuzzy Speculative Decoding for a Tunable Accuracy-Runtime Tradeoff",
+      "source_url": "https://arxiv.org/pdf/2502.20704",
+      "returned_at": "2026-10-16T15:23:49+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 142 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 4859,
+        "body_paragraphs": 23,
+        "method_chars": 1548,
+        "method_paragraphs": 8,
+        "evaluation_chars": 142,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "評価説明量 142 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-4bfa1854d540--libfile_8c6476348c948191ba731ed0c4b9efaa--2025-2502.20704-fuzzy-speculative-decoding-research-20261015-1655-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-4bfa1854d540--libfile_8c6476348c948191ba731ed0c4b9efaa--2025-2502.20704-fuzzy-speculative-decoding-research-20261015-1655-scheduled-chat-00-r01.json",
+      "worker_run_key": "20261015-1655-scheduled-chat-00/r01"
     }
   ]
 }
