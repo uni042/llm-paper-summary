@@ -1,0 +1,27 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261016-1800-scheduled-chat-00/r01-research-relevance-7",
+  "reference_main_sha": "bd4fbba5a8f9e76fdc2aaab08af4e1b013443033",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2512.08186",
+      "identity_tokens": [
+        "arxiv:2512.08186",
+        "title:ground slow move fast a dual system foundation model for generalizable vision and language navigation"
+      ],
+      "title": "Ground Slow, Move Fast: A Dual-System Foundation Model for Generalizable Vision-and-Language Navigation",
+      "reason": "視覚言語モデルQwen2.5-VL-7Bを約2Hzの高次経路計画へ限定し、軽量拡散変換器の局所制御を約30Hzで非同期実行する二重系によりロボットの実時間性を改善する点は推論頻度削減・非同期実行の設計に関連する。ただし主な貢献と評価はVLN-CE/VLN-PEのロボット経路成功率・衝突回避・汎化で、LLMサービング基盤、KV管理、GPUカーネル、生成速度の一般化可能な最適化を直接測定していない。推論システムの応用事例として境界扱い。",
+      "source_url": "https://arxiv.org/html/2512.08186",
+      "body_check": "research_fulltext_relevance_review: arXiv本文の§1導入、§3のSystem 2の画像上目標予測とSystem 1の拡散軌跡政策、2Hz/30Hz非同期処理、§5のVLN-CE/VLN-PE成功率・経路指標を確認。LLM推論システムの直接比較なし。",
+      "first_checked_at": "2026-10-16T18:04:50+09:00",
+      "last_checked_at": "2026-10-16T18:04:50+09:00",
+      "linked_from": [],
+      "origin": "research_postread_relevance",
+      "worklist_rank": 7
+    }
+  ]
+}
