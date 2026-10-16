@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-16T14:53:22+00:00",
+  "generated_at": "2026-10-16T15:00:54+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -3386,34 +3386,6 @@
       "worker_run_key": "20261016-1330-scheduled-chat-30/r01"
     },
     {
-      "canonical_id": "arXiv:2602.15843",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-16T11:00:53+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5767,
-        "body_paragraphs": 28,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 1301,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_31dc6804ca588191a91247bc67cd2fce--2026-2602.15843-perplexity-paradox-taac-research-20261016-1400-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_31dc6804ca588191a91247bc67cd2fce--2026-2602.15843-perplexity-paradox-taac-research-20261016-1400-scheduled-chat-00-r01.json",
-      "worker_run_key": "20261016-1400-scheduled-chat-00/r01"
-    },
-    {
       "canonical_id": "arXiv:2409.01141",
       "title": null,
       "source_url": null,
@@ -3583,36 +3555,6 @@
       "worker_run_key": "20261016-0200-scheduled-chat-00/r01"
     },
     {
-      "canonical_id": "arXiv:2602.07804",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-16T11:25:54+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700",
-        "説明不足トリガー: 評価説明量 424 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 8698,
-        "body_paragraphs": 50,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 424,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700",
-          "評価説明量 424 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_48b45f905d9881919590d1a75cc53123--2026-2602.07804-cooperative-game-layer-pruning-research-20261016-1445-scheduled-chat-45-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_48b45f905d9881919590d1a75cc53123--2026-2602.07804-cooperative-game-layer-pruning-research-20261016-1445-scheduled-chat-45-r01.json",
-      "worker_run_key": "20261016-1445-scheduled-chat-45/r01"
-    },
-    {
       "canonical_id": "arXiv:2601.06562",
       "title": null,
       "source_url": null,
@@ -3693,33 +3635,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_60130539d8ec8191990b5e49104e6cbf--2026-2605.22078-st-gridpool-video-token-representation-research-20261016-1630-scheduled-chat-30-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_60130539d8ec8191990b5e49104e6cbf--2026-2605.22078-st-gridpool-video-token-representation-research-20261016-1630-scheduled-chat-30-r01.json",
       "worker_run_key": "20261016-1630-scheduled-chat-30/r01"
-    },
-    {
-      "canonical_id": "arXiv:2511.16193",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-16T11:41:58+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 104 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 6868,
-        "body_paragraphs": 38,
-        "method_chars": 2016,
-        "method_paragraphs": 11,
-        "evaluation_chars": 104,
-        "limitation_chars": 874,
-        "insufficiency_flags": [
-          "評価説明量 104 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_6017f33901cc819191f8400d2c8d5c45--2025-2511.16193-specactor-decoupled-fastest-of-n-speculative-rollout-research-20261016-0045-scheduled-chat-45-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_6017f33901cc819191f8400d2c8d5c45--2025-2511.16193-specactor-decoupled-fastest-of-n-speculative-rollout-research-20261016-0045-scheduled-chat-45-r01.json",
-      "worker_run_key": "20261016-0045-scheduled-chat-45/r01"
     },
     {
       "canonical_id": "arXiv:2404.08698",
@@ -3996,34 +3911,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_8ef74361bef081919a87de72580e8dac--2025-2511.04063-dartquant-rotation-calibration-research-20261015-2203-scheduled-chat-00-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_8ef74361bef081919a87de72580e8dac--2025-2511.04063-dartquant-rotation-calibration-research-20261015-2203-scheduled-chat-00-r01.json",
       "worker_run_key": "20261015-2203-scheduled-chat-00/r01"
-    },
-    {
-      "canonical_id": "arXiv:2606.01926",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-16T12:13:29+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 8289,
-        "body_paragraphs": 41,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 1728,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_906cbb89876c8191a33d46e012daa2d5--2026-2606.01926-tractable-proposals-constrained-decoding-research-20261016-1430-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_906cbb89876c8191a33d46e012daa2d5--2026-2606.01926-tractable-proposals-constrained-decoding-research-20261016-1430-scheduled-chat-30-r01.json",
-      "worker_run_key": "20261016-1430-scheduled-chat-30/r01"
     },
     {
       "canonical_id": "DOI:10.1145/3689031.3696072",
@@ -4726,34 +4613,6 @@
       "worker_run_key": "20261016-0030-scheduled-chat-30/r01"
     },
     {
-      "canonical_id": "arXiv:2503.00979",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-16T14:22:32+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5523,
-        "body_paragraphs": 33,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 1255,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_eec4f4b459248191bff3e3b2907dbe7c--2025-2503.00979-morphkv-research-20261016-0230-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_eec4f4b459248191bff3e3b2907dbe7c--2025-2503.00979-morphkv-research-20261016-0230-scheduled-chat-30-r01.json",
-      "worker_run_key": "20261016-0230-scheduled-chat-30/r01"
-    },
-    {
       "canonical_id": "DOI:10.1145/3731569.3764823",
       "title": null,
       "source_url": null,
@@ -5122,8 +4981,8 @@
     },
     {
       "canonical_id": "arXiv:2511.16786",
-      "title": "Revisiting Multimodal KV Cache Compression: A Frequency-Domain-Guided Outlier-KV-Aware Approach",
-      "source_url": "https://arxiv.org/html/2511.16786v2",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-16T14:52:36+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-30",
@@ -5147,6 +5006,147 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-1cb5500c9fb9--libfile_f6ed9476f1988191abce699d02b0eef7--2025-2511.16786-flashcache-frequency-outlier-kv-research-20261015-2300-scheduled-chat-00-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-1cb5500c9fb9--libfile_f6ed9476f1988191abce699d02b0eef7--2025-2511.16786-flashcache-frequency-outlier-kv-research-20261015-2300-scheduled-chat-00-.json",
       "worker_run_key": "20261015-2300-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2606.01926",
+      "title": "Mitigating Bias in Locally Constrained Decoding via Tractable Proposals",
+      "source_url": "https://arxiv.org/html/2606.01926v2",
+      "returned_at": "2026-10-16T15:00:48+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 8289,
+        "body_paragraphs": 41,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 1728,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-1e47e05c4543--libfile_906cbb89876c8191a33d46e012daa2d5--2026-2606.01926-tractable-proposals-constrained-decoding-research-20261016-1430-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-1e47e05c4543--libfile_906cbb89876c8191a33d46e012daa2d5--2026-2606.01926-tractable-proposals-constrained-decoding-research-20261016-1430-scheduled.json",
+      "worker_run_key": "20261016-1430-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2503.00979",
+      "title": "Dialogue Without Limits: Constant-Sized KV Caches for Extended Responses in LLMs",
+      "source_url": "https://arxiv.org/html/2503.00979v2",
+      "returned_at": "2026-10-16T15:00:49+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5523,
+        "body_paragraphs": 33,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 1255,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-1f7aef196f19--libfile_eec4f4b459248191bff3e3b2907dbe7c--2025-2503.00979-morphkv-research-20261016-0230-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-1f7aef196f19--libfile_eec4f4b459248191bff3e3b2907dbe7c--2025-2503.00979-morphkv-research-20261016-0230-scheduled-chat-30-r01.json",
+      "worker_run_key": "20261016-0230-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2602.15843",
+      "title": "The Perplexity Paradox: Why Code Compresses Better Than Math in LLM Prompts",
+      "source_url": "https://arxiv.org/html/2602.15843v1",
+      "returned_at": "2026-10-16T15:00:51+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5767,
+        "body_paragraphs": 28,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 1301,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-2358d1c31cfd--libfile_31dc6804ca588191a91247bc67cd2fce--2026-2602.15843-perplexity-paradox-taac-research-20261016-1400-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-2358d1c31cfd--libfile_31dc6804ca588191a91247bc67cd2fce--2026-2602.15843-perplexity-paradox-taac-research-20261016-1400-scheduled-chat-00-r01.json",
+      "worker_run_key": "20261016-1400-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2602.07804",
+      "title": "Pruning as a Cooperative Game: Surrogate-Assisted Layer Contribution Estimation for Large Language Models",
+      "source_url": "https://arxiv.org/pdf/2602.07804",
+      "returned_at": "2026-10-16T15:00:52+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700",
+        "説明不足トリガー: 評価説明量 424 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 8698,
+        "body_paragraphs": 50,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 424,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700",
+          "評価説明量 424 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-264ff918d817--libfile_48b45f905d9881919590d1a75cc53123--2026-2602.07804-cooperative-game-layer-pruning-research-20261016-1445-scheduled-chat-45-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-264ff918d817--libfile_48b45f905d9881919590d1a75cc53123--2026-2602.07804-cooperative-game-layer-pruning-research-20261016-1445-scheduled-chat-45-r.json",
+      "worker_run_key": "20261016-1445-scheduled-chat-45/r01"
+    },
+    {
+      "canonical_id": "arXiv:2511.16193",
+      "title": "Fast LLM Post-training via Decoupled and Fastest-of-N Speculation",
+      "source_url": "https://arxiv.org/html/2511.16193v3",
+      "returned_at": "2026-10-16T15:00:53+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 104 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 6868,
+        "body_paragraphs": 38,
+        "method_chars": 2016,
+        "method_paragraphs": 11,
+        "evaluation_chars": 104,
+        "limitation_chars": 874,
+        "insufficiency_flags": [
+          "評価説明量 104 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-2df1118a233b--libfile_6017f33901cc819191f8400d2c8d5c45--2025-2511.16193-specactor-decoupled-fastest-of-n-speculative-rollout-research-20261016-0045-scheduled-chat-45-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-2df1118a233b--libfile_6017f33901cc819191f8400d2c8d5c45--2025-2511.16193-specactor-decoupled-fastest-of-n-speculative-rollout-research-20261016-00.json",
+      "worker_run_key": "20261016-0045-scheduled-chat-45/r01"
     }
   ]
 }
