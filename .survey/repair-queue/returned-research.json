@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-16T16:20:04+00:00",
+  "generated_at": "2026-10-16T16:25:08+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -4055,34 +4055,6 @@
       "worker_run_key": "20261016-0100-scheduled-chat-00/r01"
     },
     {
-      "canonical_id": "DOI:10.1145/3712285.3759867",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-16T15:29:51+00:00",
-      "return_count": 3,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 9217,
-        "body_paragraphs": 52,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 595,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-5f58dcc23090--libfile_da52fd8bea448191905e16e11a1316db--2025-maveriq-fingerprint-fragmentation-aware-serving-research-20261016-1445-scheduled-chat-45-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-5f58dcc23090--libfile_da52fd8bea448191905e16e11a1316db--2025-maveriq-fingerprint-fragmentation-aware-serving-research-20261016-1445-scheduled-cha.json",
-      "worker_run_key": "20261016-1445-scheduled-chat-45/r01"
-    },
-    {
       "canonical_id": "arXiv:2512.00719",
       "title": null,
       "source_url": null,
@@ -5034,8 +5006,8 @@
     },
     {
       "canonical_id": "arXiv:2404.08698",
-      "title": "Lossless Acceleration of Large Language Model via Adaptive N-gram Parallel Decoding",
-      "source_url": "https://arxiv.org/html/2404.08698v2",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-16T16:20:01+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-30",
@@ -5061,8 +5033,8 @@
     },
     {
       "canonical_id": "arXiv:2605.22078",
-      "title": "Enhancing Visual Token Representations for Video Large Language Models via Training-Free Spatial-Temporal Pooling and Gridding",
-      "source_url": "https://arxiv.org/abs/2605.22078",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-16T16:20:01+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-30",
@@ -5088,8 +5060,8 @@
     },
     {
       "canonical_id": "arXiv:2508.08438",
-      "title": "Selective KV-Cache Sharing to Mitigate Timing Side-Channels in LLM Inference",
-      "source_url": "https://arxiv.org/html/2508.08438v2",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-16T16:20:02+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-00",
@@ -5118,8 +5090,8 @@
     },
     {
       "canonical_id": "arXiv:2604.23950",
-      "title": "LearnPruner: Rethinking Attention-based Token Pruning in Vision Language Models",
-      "source_url": "https://arxiv.org/html/2604.23950v2",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-16T16:20:03+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-00",
@@ -5147,8 +5119,8 @@
     },
     {
       "canonical_id": "arXiv:2601.22716",
-      "title": "Breaking the Blocks: Continuous Low-Rank Decomposed Scaling for Unified LLM Quantization and Adaptation",
-      "source_url": "https://arxiv.org/pdf/2601.22716",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-16T16:20:04+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-00",
@@ -5172,6 +5144,33 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-f3e4f6563cce--libfile_d08fab9988ac819191687b59035de99a--2026-2601.22716-lords-low-rank-decomposed-scaling-research-20261015-2230-scheduled-chat-30-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-f3e4f6563cce--libfile_d08fab9988ac819191687b59035de99a--2026-2601.22716-lords-low-rank-decomposed-scaling-research-20261015-2230-scheduled-chat-3.json",
       "worker_run_key": "20261015-2230-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "DOI:10.1145/3712285.3759867",
+      "title": "MaverIQ: Fingerprint-Guided Extrapolation and Fragmentation-Aware Layering for Intent-Based LLM Serving",
+      "source_url": "https://ut-sysml.ece.utexas.edu/publications/prints/sc2025_liakopoulos.pdf",
+      "returned_at": "2026-10-16T16:25:08+00:00",
+      "return_count": 4,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 6603,
+        "body_paragraphs": 34,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 946,
+        "limitation_chars": 783,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-f78887fb77ce--libfile_015daa53de0c81918da6933d5fd335a4--2025-doi-10.1145-3712285.3759867-maveriq-fingerprint-fragmentation-research-20261016-1930-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-f78887fb77ce--libfile_015daa53de0c81918da6933d5fd335a4--2025-doi-10.1145-3712285.3759867-maveriq-fingerprint-fragmentation-research-20261016-1930.json",
+      "worker_run_key": "20261016-1930-scheduled-chat-30/r01"
     }
   ]
 }
