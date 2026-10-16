@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-16T15:49:16+00:00",
+  "generated_at": "2026-10-16T15:55:25+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -3165,36 +3165,6 @@
       "worker_run_key": "20261016-1730-scheduled-chat-30/r01"
     },
     {
-      "canonical_id": "arXiv:2507.19595",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-16T10:37:54+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700",
-        "説明不足トリガー: 評価説明量 0 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 7231,
-        "body_paragraphs": 43,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 0,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700",
-          "評価説明量 0 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_1f44aee4d7e88191965628ed04796f5e--2025-2507.19595-efficient-attention-survey-research-20261015-1104-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_1f44aee4d7e88191965628ed04796f5e--2025-2507.19595-efficient-attention-survey-research-20261015-1104-scheduled-chat-00-r01.json",
-      "worker_run_key": "20261015-1104-scheduled-chat-00/r01"
-    },
-    {
       "canonical_id": "DOI:10.1145/3725338",
       "title": null,
       "source_url": null,
@@ -3530,33 +3500,6 @@
       "worker_run_key": "20261016-0130-scheduled-chat-30/r01"
     },
     {
-      "canonical_id": "arXiv:2511.06516",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-16T12:23:08+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 0 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 7113,
-        "body_paragraphs": 46,
-        "method_chars": 1949,
-        "method_paragraphs": 12,
-        "evaluation_chars": 0,
-        "limitation_chars": 847,
-        "insufficiency_flags": [
-          "評価説明量 0 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_9768b4f4bc8c81919cea074252f00692--2025-2511.06516-taq-task-aware-layer-quantization-research-20261016-0100-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_9768b4f4bc8c81919cea074252f00692--2025-2511.06516-taq-task-aware-layer-quantization-research-20261016-0100-scheduled-chat-00-r01.json",
-      "worker_run_key": "20261016-0100-scheduled-chat-00/r01"
-    },
-    {
       "canonical_id": "DOI:10.1109/CISAT71030.2026.11682186",
       "title": null,
       "source_url": null,
@@ -3640,31 +3583,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_bd38edeef1348191badb67328e80541f--2026-2601.23180-trispec-proxy-verification-research-20261016-1830-scheduled-chat-30-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_bd38edeef1348191badb67328e80541f--2026-2601.23180-trispec-proxy-verification-research-20261016-1830-scheduled-chat-30-r01.json",
       "worker_run_key": "20261016-1830-scheduled-chat-30/r01"
-    },
-    {
-      "canonical_id": "DOI:10.3390/s26041101",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-16T13:22:20+00:00",
-      "return_count": 4,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "長文定型文の再利用を検出: papers/inference/11-llm-serving-scheduling-disaggregation/2026-4b60583e1d6f-dynamic-micro-batch-and-token-budget-scheduling-for-iot-scale-pipeline-p.md と 15 段落 / 3598文字 (100.0%) が完全一致"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5655,
-        "body_paragraphs": 32,
-        "method_chars": 1087,
-        "method_paragraphs": 8,
-        "evaluation_chars": 1253,
-        "limitation_chars": 845,
-        "insufficiency_flags": []
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_bd5f9c9b811081918572f45423bcd3c3--2026-doi-10.3390-s26041101-dynamic-microbatch-tokenbudget-returned-heading-repair-20261016-1945-scheduled-chat-45-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_bd5f9c9b811081918572f45423bcd3c3--2026-doi-10.3390-s26041101-dynamic-microbatch-tokenbudget-returned-heading-repair-20261016-1945-scheduled-chat-45-r01.json",
-      "worker_run_key": "20261016-1945-scheduled-chat-45/r01"
     },
     {
       "canonical_id": "DOI:10.1145/3642970.3655844",
@@ -3776,61 +3694,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_e55fdf760014819194953c8d62d54fc3--2024-2406.02500-holistic-moe-compression-research-20261016-0530-scheduled-chat-30-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_e55fdf760014819194953c8d62d54fc3--2024-2406.02500-holistic-moe-compression-research-20261016-0530-scheduled-chat-30-r01.json",
       "worker_run_key": "20261016-0530-scheduled-chat-30/r01"
-    },
-    {
-      "canonical_id": "arXiv:2401.08383",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-16T14:08:36+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 7294,
-        "body_paragraphs": 43,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 2109,
-        "limitation_chars": 789,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_e6dada5a19908191896597a719063534--2024-2401.08383-exflow-interlayer-expert-affinity-research-20261016-0630-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_e6dada5a19908191896597a719063534--2024-2401.08383-exflow-interlayer-expert-affinity-research-20261016-0630-scheduled-chat-30-r01.json",
-      "worker_run_key": "20261016-0630-scheduled-chat-30/r01"
-    },
-    {
-      "canonical_id": "DOI:10.1145/3620666.3651324",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-16T14:17:23+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 170 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5853,
-        "body_paragraphs": 29,
-        "method_chars": 788,
-        "method_paragraphs": 4,
-        "evaluation_chars": 170,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "評価説明量 170 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_ecd424b861d48191836c373d5f76e416--2024-doi-10.1145.3620666.3651324-ianus-npu-pim-unified-memory-research-20261016-0030-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_ecd424b861d48191836c373d5f76e416--2024-doi-10.1145.3620666.3651324-ianus-npu-pim-unified-memory-research-20261016-0030-scheduled-chat-30-r01.json",
-      "worker_run_key": "20261016-0030-scheduled-chat-30/r01"
     },
     {
       "canonical_id": "arXiv:2602.20309",
@@ -5063,8 +4926,8 @@
     },
     {
       "canonical_id": "arXiv:2603.12634",
-      "title": "Spend Less, Reason Better: Budget-Aware Value Tree Search for LLM Agents",
-      "source_url": "https://arxiv.org/html/2603.12634v1",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-16T15:47:52+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-30",
@@ -5090,8 +4953,8 @@
     },
     {
       "canonical_id": "DOI:10.1109/CLOUD67622.2025.00028",
-      "title": "ZipNN: Lossless Compression for AI Models",
-      "source_url": "https://arxiv.org/pdf/2411.05239",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-16T15:47:53+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-00",
@@ -5117,8 +4980,8 @@
     },
     {
       "canonical_id": "arXiv:2601.06562",
-      "title": "Mosaic: Unlocking Long-Context Inference for Diffusion LLMs via Global Memory Planning and Dynamic Peak Taming",
-      "source_url": "https://arxiv.org/pdf/2601.06562v1",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-16T15:47:54+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-00",
@@ -5145,8 +5008,8 @@
     },
     {
       "canonical_id": "arXiv:2608.04074",
-      "title": "Spend Bits Where Queries Look: KV Cache Vector Quantization with Attention-Preserving Transforms",
-      "source_url": "https://arxiv.org/html/2608.04074v1",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-16T15:47:55+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-00",
@@ -5169,6 +5032,148 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-8f0df0c5a3de--libfile_e26e22d48f9c8191852410a6fe050ea0--2026-2608.04074-nova-kv-attention-vector-quantization-research-20261016-0930-scheduled-chat-30-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-8f0df0c5a3de--libfile_e26e22d48f9c8191852410a6fe050ea0--2026-2608.04074-nova-kv-attention-vector-quantization-research-20261016-0930-scheduled-ch.json",
       "worker_run_key": "20261016-0930-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2507.19595",
+      "title": "Efficient Attention Mechanisms for Large Language Models: A Survey",
+      "source_url": "https://arxiv.org/html/2507.19595v3",
+      "returned_at": "2026-10-16T15:55:21+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700",
+        "説明不足トリガー: 評価説明量 0 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 7231,
+        "body_paragraphs": 43,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 0,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700",
+          "評価説明量 0 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-8f3a7dc1877a--libfile_1f44aee4d7e88191965628ed04796f5e--2025-2507.19595-efficient-attention-survey-research-20261015-1104-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-8f3a7dc1877a--libfile_1f44aee4d7e88191965628ed04796f5e--2025-2507.19595-efficient-attention-survey-research-20261015-1104-scheduled-chat-00-r01.json",
+      "worker_run_key": "20261015-1104-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2401.08383",
+      "title": "Exploiting Inter-Layer Expert Affinity for Accelerating Mixture-of-Experts Model Inference",
+      "source_url": "https://arxiv.org/html/2401.08383v2",
+      "returned_at": "2026-10-16T15:55:22+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 7294,
+        "body_paragraphs": 43,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 2109,
+        "limitation_chars": 789,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-94f391931431--libfile_e6dada5a19908191896597a719063534--2024-2401.08383-exflow-interlayer-expert-affinity-research-20261016-0630-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-94f391931431--libfile_e6dada5a19908191896597a719063534--2024-2401.08383-exflow-interlayer-expert-affinity-research-20261016-0630-scheduled-chat-3.json",
+      "worker_run_key": "20261016-0630-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "DOI:10.3390/s26041101",
+      "title": "Dynamic Micro-Batch and Token-Budget Scheduling for IoT-Scale Pipeline-Parallel LLM Inference",
+      "source_url": "https://www.mdpi.com/1424-8220/26/4/1101",
+      "returned_at": "2026-10-16T15:55:23+00:00",
+      "return_count": 4,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700",
+        "説明不足トリガー: 評価説明量 499 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 8129,
+        "body_paragraphs": 50,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 499,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700",
+          "評価説明量 499 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-952ea16a168c--libfile_5e606db91dc081918a7ebc3542c000db--2026-doi-10.3390-s26041101-dynamic-microbatch-tokenbudget-research-20261016-1445-scheduled-chat-45-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-952ea16a168c--libfile_5e606db91dc081918a7ebc3542c000db--2026-doi-10.3390-s26041101-dynamic-microbatch-tokenbudget-research-20261016-1445-schedule.json",
+      "worker_run_key": "20261016-1445-scheduled-chat-45/r01"
+    },
+    {
+      "canonical_id": "arXiv:2511.06516",
+      "title": "You Had One Job: Per-Task Quantization Using LLMs’ Hidden Representations",
+      "source_url": "https://arxiv.org/pdf/2511.06516",
+      "returned_at": "2026-10-16T15:55:24+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 0 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 7113,
+        "body_paragraphs": 46,
+        "method_chars": 1949,
+        "method_paragraphs": 12,
+        "evaluation_chars": 0,
+        "limitation_chars": 847,
+        "insufficiency_flags": [
+          "評価説明量 0 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-98680a3909b6--libfile_9768b4f4bc8c81919cea074252f00692--2025-2511.06516-taq-task-aware-layer-quantization-research-20261016-0100-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-98680a3909b6--libfile_9768b4f4bc8c81919cea074252f00692--2025-2511.06516-taq-task-aware-layer-quantization-research-20261016-0100-scheduled-chat-0.json",
+      "worker_run_key": "20261016-0100-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "DOI:10.1145/3620666.3651324",
+      "title": "IANUS: Integrated Accelerator based on NPU-PIM Unified Memory System",
+      "source_url": "https://arxiv.org/html/2410.15008v1",
+      "returned_at": "2026-10-16T15:55:25+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 170 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5853,
+        "body_paragraphs": 29,
+        "method_chars": 788,
+        "method_paragraphs": 4,
+        "evaluation_chars": 170,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "評価説明量 170 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-a005ac8b13e4--libfile_ecd424b861d48191836c373d5f76e416--2024-doi-10.1145.3620666.3651324-ianus-npu-pim-unified-memory-research-20261016-0030-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-a005ac8b13e4--libfile_ecd424b861d48191836c373d5f76e416--2024-doi-10.1145.3620666.3651324-ianus-npu-pim-unified-memory-research-20261016-0030-sche.json",
+      "worker_run_key": "20261016-0030-scheduled-chat-30/r01"
     }
   ]
 }
