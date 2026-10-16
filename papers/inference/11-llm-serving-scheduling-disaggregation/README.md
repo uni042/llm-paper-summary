@@ -1352,6 +1352,10 @@
   実装：✓ ・ リポジトリ内被引用：7  
   Aladdinは、複数GPUで大規模言語モデルの推論要求を処理するとき、各要求をどのワーカーへ配置するかと、ワーカーを何台・何GPU構成で用意するかを共同で決めるクラスタスケジューラである。
 
+- **2024-10 · [GraphRouter: A Graph-based Router for LLM Selections](2024-2410.03834-graphrouter-a-graph-based-router-for-llm-selections.md)**  
+  実装：[✓](https://github.com/ulab-uiuc/GraphRouter) ・ リポジトリ内被引用：6  
+  常に最大モデルを使うと費用が高く、常に最小モデルを使うと精度が不足する。従来の二択ルータやモデル名だけを埋め込む方式では、候補モデルが増えた場合や新しいモデルが登場した場合に適切な選択が難しい。原著の主表では、品質と費用を同等に重視した条件の報酬が0.209となり、比較対象の最高0.196を上回った。
+
 - **2024-08 · [Intelligent Router for LLM Workloads: Improving Performance Through Workload-Aware Load Balancing](2024-2408.13510-intelligent-router-for-llm-workloads-improving-performance-through-workload-aware-routing.md)**  
   実装：✓ ・ リポジトリ内被引用：6  
   要点: この研究は、vLLMのような各GPU内スケジューラを改良するのではなく、その一段手前の「どのLLMインスタンスへ要求を送るか」を最適化する。
@@ -1359,10 +1363,6 @@
 - **2024-06 · [Enabling Efficient Batch Serving for LMaaS via Generation Length Prediction](2024-2406.04785-enabling-efficient-batch-serving-for-lmaas-via-generation-length-prediction.md)**  
   実装：✓ ・ リポジトリ内被引用：6  
   入力長・アプリ・利用者特徴から生成長を予測し、近い長さを適応バッチ化してHRRNで順序付けするMagnusにより、スループット最大234%向上・応答時間最大89.7%削減を達成する。
-
-- **2024-10 · [GraphRouter: A Graph-based Router for LLM Selections](2024-2410.03834-graphrouter-a-graph-based-router-for-llm-selections.md)**  
-  実装：[✓](https://github.com/ulab-uiuc/GraphRouter) ・ リポジトリ内被引用：5  
-  常に最大モデルを使うと費用が高く、常に最小モデルを使うと精度が不足する。従来の二択ルータやモデル名だけを埋め込む方式では、候補モデルが増えた場合や新しいモデルが登場した場合に適切な選択が難しい。原著の主表では、品質と費用を同等に重視した条件の報酬が0.209となり、比較対象の最高0.196を上回った。
 
 - **2024-06 · [Slice-Level Scheduling for High-Throughput and Load-Balanced LLM Serving](2024-2406.13511-slice-level-scheduling-for-high-throughput-and-load-balanced-llm-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：5  
