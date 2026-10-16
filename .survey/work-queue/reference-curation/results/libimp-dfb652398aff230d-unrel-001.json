@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-dfb652398aff230d-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2208.00406",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2208.00406",
+    "identity_tokens": [
+      "arXiv:2208.00406"
+    ],
+    "reason": "一次要旨は学習・推論の電力消費量と地域別CO2排出係数を測定するPython計測パッケージを提案する。LLM推論の実行時間、KVキャッシュ、分散配置、量子化等を直接改善するシステム手法ではなく、汎用的な環境負荷の計測ツールである。",
+    "first_checked_at": "2026-10-15T23:53:10+00:00",
+    "last_checked_at": "2026-10-16T17:49:39+00:00",
+    "linked_from": [],
+    "title": "Eco2AI: carbon emissions tracking of machine learning models as the first step towards sustainable AI"
+  },
+  "processed_at": "2026-10-16T17:49:39+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-dfb652398aff",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

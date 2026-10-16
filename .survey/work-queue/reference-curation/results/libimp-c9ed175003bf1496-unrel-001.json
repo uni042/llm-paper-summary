@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-c9ed175003bf1496-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2303.05511",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2303.05511",
+    "identity_tokens": [
+      "DOI:10.1109/cvpr52729.2023.00976",
+      "DOI:10.48550/arxiv.2303.05511",
+      "arXiv:2303.05511",
+      "id:arXiv:2303.05511",
+      "url:https://arxiv.org/abs/2303.05511"
+    ],
+    "reason": "一次要旨はGigaGANによる文章条件付き画像合成と高解像度画像生成の速度を扱う。0.13秒で512画素画像を生成する成果は画像GANの推論性能であり、大規模言語モデルのトークン生成、KV管理、LLMサービングの最適化ではない。",
+    "first_checked_at": "2026-10-11T08:49:39+00:00",
+    "last_checked_at": "2026-10-16T17:49:38+00:00",
+    "linked_from": [],
+    "title": "Scaling up GANs for Text-to-Image Synthesis"
+  },
+  "processed_at": "2026-10-16T17:49:39+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-c9ed175003bf",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

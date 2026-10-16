@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-16T16:44:38+00:00",
-  "record_count": 12413,
+  "updated_at": "2026-10-16T17:49:39+00:00",
+  "record_count": 12412,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -164044,9 +164044,9 @@
         "id:arXiv:2303.05511",
         "url:https://arxiv.org/abs/2303.05511"
       ],
-      "reason": "GigaGANは画像生成用GANの規模拡張・生成品質と画像生成速度を評価する。512画素画像0.13秒という推論速度の記述はあるが、自己回帰型言語モデル、LLMの推論カーネル、KVキャッシュ、LLM学習・サービングの技術ではない。",
+      "reason": "一次要旨はGigaGANによる文章条件付き画像合成と高解像度画像生成の速度を扱う。0.13秒で512画素画像を生成する成果は画像GANの推論性能であり、大規模言語モデルのトークン生成、KV管理、LLMサービングの最適化ではない。",
       "first_checked_at": "2026-10-11T08:49:39+00:00",
-      "last_checked_at": "2026-10-16T09:26:00+00:00",
+      "last_checked_at": "2026-10-16T17:49:38+00:00",
       "linked_from": [],
       "title": "Scaling up GANs for Text-to-Image Synthesis"
     },
@@ -165051,9 +165051,9 @@
         "id:arXiv:2512.04678",
         "url:https://arxiv.org/abs/2512.04678"
       ],
-      "reason": "一次要旨の対象は動画拡散モデルのストリーミング映像生成で、EMA-Sinkによるフレーム文脈保持と動きの報酬を使う分布一致蒸留で映像の運動品質を改善する。単一H100で23.1FPSと効率測定はあるが、LLMの言語トークン復号、推論基盤、KVキャッシュ管理、MoE通信、オフロードの研究ではない。動画生成モデル固有の品質・時系列一貫性が主題。",
+      "reason": "一次要旨は映像拡散モデルによる連続動画生成を対象とし、EMA-Sinkと報酬付き分布整合蒸留で映像の動きと長期一貫性を改善する。H100で23.1 FPSの成果は動画フレーム生成であり、LLMの言語トークン復号やLLMサービングのシステム貢献を示さない。",
       "first_checked_at": "2026-10-12T18:49:58+00:00",
-      "last_checked_at": "2026-10-16T13:52:39+00:00",
+      "last_checked_at": "2026-10-16T17:49:37+00:00",
       "linked_from": [],
       "title": "Reward Forcing: Efficient Streaming Video Generation with Rewarded Distribution Matching Distillation"
     },
@@ -176959,9 +176959,9 @@
       "identity_tokens": [
         "arXiv:2208.00406"
       ],
-      "reason": "一次要旨が提案するeco2AIは機械学習の訓練・推論における消費電力量と地域別CO2排出量を追跡するPython計測パッケージである。目的は環境負荷の測定と報告の正確性であり、LLM推論処理のメモリ配置、演算、並列化、サービング性能やエネルギー削減アルゴリズムそのものの改善は提案・評価の主題ではない。",
+      "reason": "一次要旨は学習・推論の電力消費量と地域別CO2排出係数を測定するPython計測パッケージを提案する。LLM推論の実行時間、KVキャッシュ、分散配置、量子化等を直接改善するシステム手法ではなく、汎用的な環境負荷の計測ツールである。",
       "first_checked_at": "2026-10-15T23:53:10+00:00",
-      "last_checked_at": "2026-10-16T13:52:43+00:00",
+      "last_checked_at": "2026-10-16T17:49:39+00:00",
       "linked_from": [],
       "title": "Eco2AI: carbon emissions tracking of machine learning models as the first step towards sustainable AI"
     },
@@ -178957,19 +178957,6 @@
       "last_checked_at": "2026-10-16T09:21:25+00:00",
       "linked_from": [],
       "title": "Methods for Pruning Deep Neural Networks"
-    },
-    "arXiv:2205.08084": {
-      "classification": "unrelated",
-      "canonical_id": "arXiv:2205.08084",
-      "identity_tokens": [
-        "DOI:10.48550/arxiv.2205.08084",
-        "arXiv:2205.08084"
-      ],
-      "reason": "タイトルの主題は生成事前学習済み言語モデルを用いる推薦システムの設計と推薦タスクである。LLMの推論サービング、GPU実行、KVキャッシュ、MoEのメモリ階層、投機的復号等のシステム効率化を扱うとはタイトルから読めず、推薦用途の応用研究として対象外と判断した。タイトルのみの先行適格性確認であり、要旨・本文は未読。",
-      "first_checked_at": "2026-10-16T09:21:27+00:00",
-      "last_checked_at": "2026-10-16T09:21:27+00:00",
-      "linked_from": [],
-      "title": "M6-Rec: Generative Pretrained Language Models are Open-Ended Recommender Systems"
     },
     "DOI:10.1016/j.ress.2025.111891": {
       "classification": "unrelated",
