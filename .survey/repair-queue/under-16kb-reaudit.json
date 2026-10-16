@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-10-16T07:11:32.059087+00:00",
+  "generated_at": "2026-10-16T13:52:32.944867+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 14,
+  "count": 15,
   "worker_counts": {
     "scheduled-chat-00": 5,
     "scheduled-chat-30": 5,
-    "scheduled-chat-45": 4
+    "scheduled-chat-45": 5
   },
   "entries": [
     {
@@ -132,7 +132,7 @@
       "file_bytes": 13877,
       "source_sha256": "b5510a7895258f113b9bceb02f0596ea64a3787b334af6fd19d4c69bdef95805",
       "source_git_blob_sha": "5c2aaeee30fc8752bb01ceaa667510b4c2bf83a5",
-      "assigned_worker": "scheduled-chat-30",
+      "assigned_worker": "scheduled-chat-45",
       "semantic_status": "pending",
       "mechanical_status": "PASS",
       "japanese_ratio": 0.993257,
@@ -220,6 +220,26 @@
         "body_chars": 4076,
         "method_chars": 1226,
         "evaluation_chars": 1387,
+        "limitation_chars": 0
+      },
+      "mechanical_failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2605.11605-keep-what-audio-cannot-say-context-preserving-token-pruning-for-omni-llm.md",
+      "canonical_id": "arXiv:2605.11605",
+      "title": "Keep What Audio Cannot Say: Context-Preserving Token Pruning for Omni-LLMs",
+      "file_bytes": 15766,
+      "source_sha256": "d55e95377efa55d3cc620d09f1843ed7d817636c7d90e7eb84f9986957fab9fe",
+      "source_git_blob_sha": "1a4f5ad26b262aff30bfa652d03eefc3ae07ac8a",
+      "assigned_worker": "scheduled-chat-30",
+      "semantic_status": "pending",
+      "mechanical_status": "PASS",
+      "japanese_ratio": 0.967919,
+      "quality_metrics": {
+        "body_chars": 4614,
+        "method_chars": 1314,
+        "evaluation_chars": 1913,
         "limitation_chars": 0
       },
       "mechanical_failures": [],
