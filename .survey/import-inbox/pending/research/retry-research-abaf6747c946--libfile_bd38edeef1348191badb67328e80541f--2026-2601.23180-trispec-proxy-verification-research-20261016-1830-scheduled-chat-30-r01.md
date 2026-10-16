@@ -42,6 +42,8 @@ references:
   - canonical_id: arXiv:2401.10774
   - canonical_id: arXiv:2302.01318
   - canonical_id: arXiv:2405.19261
+last_audited: null
+audit_version: 0
 ---
 
 ## 概要
