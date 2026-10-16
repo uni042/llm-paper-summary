@@ -2,7 +2,7 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-16T13:52:43+00:00",
+  "updated_at": "2026-10-16T16:44:38+00:00",
   "record_count": 12413,
   "records": {
     "arXiv:2303.08774": {
@@ -165011,9 +165011,9 @@
         "DOI:10.48550/arxiv.2203.11086",
         "arXiv:2203.11086"
       ],
-      "reason": "一次要旨での主貢献はMobileNet/EfficientNetの低ビット量子化対応学習で生じる重み振動を、振動抑制と反復的な重み凍結で防ぐこと。LLM推論ランタイムや推論時のシステム性能ではなく、学習の精度劣化対策を扱う。",
+      "reason": "原著の対象はMobileNetV2/V3とEfficientNet-liteなど画像分類用の畳み込みネットワークにおける量子化認識学習であり、ImageNetで重み振動とバッチ正規化の精度劣化を検証する。LLM推論・学習基盤、TransformerのKVキャッシュ、LLM量子化の実測やLLMサービングを扱わず、現行LLMシステムサーベイの収録対象外。",
       "first_checked_at": "2026-10-12T10:59:20+00:00",
-      "last_checked_at": "2026-10-12T21:38:02+00:00",
+      "last_checked_at": "2026-10-16T16:44:38+00:00",
       "linked_from": [],
       "title": "Overcoming Oscillations in Quantization-Aware Training"
     },
