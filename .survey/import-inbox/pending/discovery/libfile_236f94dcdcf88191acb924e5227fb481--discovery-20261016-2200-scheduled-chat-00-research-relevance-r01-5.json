@@ -1,0 +1,26 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261016-2200-scheduled-chat-00/r01-research-relevance-5",
+  "reference_main_sha": "23e8f47f666147debddfa739747de34954f8882b",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2208.00406",
+      "identity_tokens": [
+        "arxiv:2208.00406"
+      ],
+      "title": "Eco2AI: carbon emissions tracking of machine learning models as the first step towards sustainable AI",
+      "reason": "一次要旨が提案するeco2AIは機械学習の訓練・推論における消費電力量と地域別CO2排出量を追跡するPython計測パッケージである。目的は環境負荷の測定と報告の正確性であり、LLM推論処理のメモリ配置、演算、並列化、サービング性能やエネルギー削減アルゴリズムそのものの改善は提案・評価の主題ではない。",
+      "source_url": "https://arxiv.org/abs/2208.00406",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-16T22:08:32+09:00",
+      "last_checked_at": "2026-10-16T22:08:32+09:00",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance",
+      "worklist_rank": 5
+    }
+  ]
+}
