@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-9d7a588139ac0690-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2510.09606",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2510.09606",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2510.09606",
+      "SemanticScholar:b9bf676ac56fbbb09fcd5877fa7b6fe0899dd3d7",
+      "arXiv:2510.09606"
+    ],
+    "reason": "SpaceVista evaluates spatial reasoning from images for robotics and driving; it is a multimodal capability contribution, not an inference-systems method.",
+    "first_checked_at": "2026-10-16T06:19:52+00:00",
+    "last_checked_at": "2026-10-16T06:19:52+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md"
+    ],
+    "title": "SpaceVista: All-Scale Visual Spatial Reasoning from mm to km"
+  },
+  "processed_at": "2026-10-16T06:19:52+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-9d7a588139ac",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

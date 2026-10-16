@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-35f9a7acdd29c3b7-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2406.16424",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2406.16424",
+    "identity_tokens": [
+      "DOI:10.52202/085713-1108",
+      "SemanticScholar:66c0cc35eace26e0a97b5cc4b73b790e0b992eb4",
+      "arXiv:2406.16424"
+    ],
+    "reason": "MEMENTO uses memory from earlier attempts to adapt neural-solver search at inference time, but its evaluated routing tasks are optimization applications rather than LLM inference systems.",
+    "first_checked_at": "2026-10-16T06:19:17+00:00",
+    "last_checked_at": "2026-10-16T06:19:17+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2021-2112.05682-self-attention-does-not-need-o-n-2-memory.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Memory-Enhanced Neural Solvers for Routing Problems"
+  },
+  "processed_at": "2026-10-16T06:19:17+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-35f9a7acdd29",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

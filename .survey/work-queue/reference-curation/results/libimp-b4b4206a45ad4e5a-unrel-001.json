@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-b4b4206a45ad4e5a-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2211.03627",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2211.03627",
+    "identity_tokens": [
+      "DOI:10.1016/j.cma.2023.115892",
+      "SemanticScholar:7185b4aba86661da4b494ce241283c670e7b8ca5",
+      "arXiv:2211.03627"
+    ],
+    "reason": "D2RM solves PDEs with neural networks using nested Ritz optimization; it is a scientific-computing application, not LLM inference.",
+    "first_checked_at": "2026-10-16T06:19:56+00:00",
+    "last_checked_at": "2026-10-16T06:19:56+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2018-1802.05799-horovod-fast-and-easy-distributed-deep-learning-in-tensorflow.md"
+    ],
+    "title": "A Deep Double Ritz Method (D2RM) for solving Partial Differential Equations using Neural Networks"
+  },
+  "processed_at": "2026-10-16T06:19:56+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-b4b4206a45ad",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

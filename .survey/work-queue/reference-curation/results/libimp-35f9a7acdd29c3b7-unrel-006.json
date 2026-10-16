@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-35f9a7acdd29c3b7-unrel-006",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2505.09569",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2505.09569",
+    "identity_tokens": [
+      "DOI:10.1145/3770855.3817526",
+      "SemanticScholar:04aed50f8d856129349ca237b377601381ce07c4",
+      "arXiv:2505.09569"
+    ],
+    "reason": "MigrationBench evaluates repository-level Java migration by LLM agents; its contribution is task benchmarking, not inference-system efficiency.",
+    "first_checked_at": "2026-10-16T06:19:19+00:00",
+    "last_checked_at": "2026-10-16T06:19:19+00:00",
+    "linked_from": [
+      "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+    ],
+    "title": "MigrationBench: Repository-Level Code Migration Benchmark from Java 8"
+  },
+  "processed_at": "2026-10-16T06:19:19+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-35f9a7acdd29",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

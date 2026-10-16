@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-b4b4206a45ad4e5a-border-009",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2510.20286",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2510.20286",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2510.20286",
+      "SemanticScholar:dd571dff7f4255b5efc715b1c94c00a59810e43d",
+      "arXiv:2510.20286"
+    ],
+    "reason": "UI-Ins uses inference-time instruction diversity to improve GUI grounding accuracy, but reports no lower token, latency, or compute cost.",
+    "first_checked_at": "2026-10-16T06:19:56+00:00",
+    "last_checked_at": "2026-10-16T06:19:56+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2024-2411.17465-showui-one-vision-language-action-model-for-gui-visual-agent.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "UI-Ins: Enhancing GUI Grounding with Multi-Perspective Instruction-as-Reasoning"
+  },
+  "processed_at": "2026-10-16T06:19:56+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-b4b4206a45ad",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

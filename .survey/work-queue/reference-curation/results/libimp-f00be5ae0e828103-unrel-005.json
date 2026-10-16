@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-f00be5ae0e828103-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1007/s00530-026-02320-y",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1007/s00530-026-02320-y",
+    "identity_tokens": [
+      "DOI:10.1007/s00530-026-02320-y"
+    ],
+    "reason": "船舶放射雑音の認識にAcoustic Jambaを使う応用研究で、要旨の改善対象はクラス不均衡下の認識性能でありLLM/serving効率との具体的接続はない。",
+    "first_checked_at": "2026-10-14T04:58:11+00:00",
+    "last_checked_at": "2026-10-16T06:20:07+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2024-2403.19887-jamba-a-hybrid-transformer-mamba-language-model.md",
+      "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+    ],
+    "title": "AJamba: low upper limit and imbalanced ship-radiated noise recognition with Acoustic Jamba model"
+  },
+  "processed_at": "2026-10-16T06:20:07+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f00be5ae0e82",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

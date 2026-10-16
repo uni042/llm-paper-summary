@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-9d7a588139ac0690-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2407.10735",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2407.10735",
+    "identity_tokens": [
+      "DOI:10.1007/s11097-025-10094-3",
+      "SemanticScholar:4d1b323f32b07dffbbcc06552adb6b416470028f",
+      "arXiv:2407.10735"
+    ],
+    "reason": "This philosophy paper analyzes the agency and mode of existence of LLMs; it does not propose an implementation or efficiency method.",
+    "first_checked_at": "2026-10-16T06:19:50+00:00",
+    "last_checked_at": "2026-10-16T06:19:50+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2017-1701.06538-outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts.md"
+    ],
+    "title": "Transforming Agency. On the mode of existence of Large Language Models"
+  },
+  "processed_at": "2026-10-16T06:19:51+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-9d7a588139ac",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

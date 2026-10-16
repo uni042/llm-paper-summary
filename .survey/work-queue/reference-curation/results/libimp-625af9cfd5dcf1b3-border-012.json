@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-625af9cfd5dcf1b3-border-012",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1145/3691620.3695555",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1145/3691620.3695555",
+    "identity_tokens": [
+      "DOI:10.1145/3691620.3695555",
+      "SemanticScholar:d8625f976a42130ceb8e09b6d7ca78bb45e6c369"
+    ],
+    "reason": "The DOI/title metadata describes vulnerability-repair suggestion generation, but ACM’s primary abstract was inaccessible; no evidence supports an efficiency classification.",
+    "first_checked_at": "2026-10-16T06:19:23+00:00",
+    "last_checked_at": "2026-10-16T06:19:23+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2020-2005.08025-intellicode-compose-code-generation-using-transformer.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "VulAdvisor: Natural Language Suggestion Generation for Software Vulnerability Repair"
+  },
+  "processed_at": "2026-10-16T06:19:23+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-625af9cfd5dc",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

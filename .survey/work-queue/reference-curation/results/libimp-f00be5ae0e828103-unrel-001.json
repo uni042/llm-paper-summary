@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-f00be5ae0e828103-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1002/advs.202524215",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1002/advs.202524215",
+    "identity_tokens": [
+      "DOI:10.1002/advs.202524215"
+    ],
+    "reason": "要旨はプロンプト設計で科学文献から材料情報を抽出し、光触媒候補の発見を支援する研究であり、LLM利用は材料探索用途で推論実行コスト削減の仕組みを示さない。",
+    "first_checked_at": "2026-10-05T13:41:36+00:00",
+    "last_checked_at": "2026-10-16T06:20:05+00:00",
+    "linked_from": [
+      "papers/inference/02-adaptive-expert-computation-compression/2025-2510.13079-gatepro-parameter-free-expert-selection.md",
+      "papers/inference/02-adaptive-expert-computation-compression/2025-2510.13999-reap-one-shot-moe-compression.md"
+    ],
+    "title": "Prompt Engineering Accelerates the Data‐Driven Discovery of Photocatalysts via an LLM‐Based Model Ensemble Strategy"
+  },
+  "processed_at": "2026-10-16T06:20:06+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f00be5ae0e82",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

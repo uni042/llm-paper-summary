@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-16T06:17:49+00:00",
-  "record_count": 5184,
+  "updated_at": "2026-10-16T06:20:11+00:00",
+  "record_count": 5227,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -45138,9 +45138,9 @@
       "identity_tokens": [
         "DOI:10.1016/j.aei.2026.105130"
       ],
-      "reason": "Input abstract is absent. Attempted ScienceDirect DOI/publisher primary source; web retrieval returned URL not accessible, so it cannot be excluded by title alone.",
+      "reason": "ScienceDirectのpublisher recordは当該DOIの公開を2026年11月と表示し、screen cutoff 2026-10-16より後。後日表示された要旨はcutoff時点の判定根拠に採用せず、当時の適格性・本文内容は未確認としてborderline。",
       "first_checked_at": "2026-10-06T12:23:02+00:00",
-      "last_checked_at": "2026-10-06T12:23:02+00:00",
+      "last_checked_at": "2026-10-16T06:19:44+00:00",
       "linked_from": [
         "papers/inference/99-other-inference-systems/2024-2407.06204-a-survey-on-mixture-of-experts-in-large-language-models.md"
       ],
@@ -79708,9 +79708,9 @@
         "SemanticScholar:b8a0b911d9b6d36f6ff08a36b76e47abcbe679ff",
         "b8a0b911d9b6d36f6ff08a36b76e47abcbe679ff"
       ],
-      "reason": "DOI/title are indexed as a forthcoming 2027 Computer Science Review survey, but the publisher abstract page was not retrievable through the DOI/publisher route; only secondary catalogues were accessible.",
+      "reason": "DOI/titleとElsevierの登録先はCrossrefで確認したが、正規ScienceDirect pageはHTTP 403、Crossref print issueは2027-02でscreen後。第三者のabstractは使わず、screen時点の一次要旨未確認としてborderline。",
       "first_checked_at": "2026-10-14T13:11:26+00:00",
-      "last_checked_at": "2026-10-14T13:11:26+00:00",
+      "last_checked_at": "2026-10-16T06:19:59+00:00",
       "linked_from": [
         "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md",
         "papers/inference/12-moe-parallelism-communication/2021-2101.03961-switch-transformers-scaling-to-trillion-parameter-models-with-simple-and.md",
@@ -80574,6 +80574,673 @@
       ],
       "borderline_recheck_count": 0,
       "title": "Differentially Private Decoding in Large Language Models"
+    },
+    "arXiv:2406.16424": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2406.16424",
+      "identity_tokens": [
+        "DOI:10.52202/085713-1108",
+        "SemanticScholar:66c0cc35eace26e0a97b5cc4b73b790e0b992eb4",
+        "arXiv:2406.16424"
+      ],
+      "reason": "MEMENTO uses memory from earlier attempts to adapt neural-solver search at inference time, but its evaluated routing tasks are optimization applications rather than LLM inference systems.",
+      "first_checked_at": "2026-10-16T06:19:17+00:00",
+      "last_checked_at": "2026-10-16T06:19:17+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2112.05682-self-attention-does-not-need-o-n-2-memory.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Memory-Enhanced Neural Solvers for Routing Problems"
+    },
+    "DOI:10.52202/075280-2459": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.52202/075280-2459",
+      "identity_tokens": [
+        "DOI:10.52202/075280-2459",
+        "SemanticScholar:0023786698fa0ae1729ae54b49dd13a71586e481"
+      ],
+      "reason": "The DOI/title suggest a locality-sensitive search primitive for set containment, but the registered proceedings page did not expose a primary abstract; potential retrieval relevance remains unresolved.",
+      "first_checked_at": "2026-10-16T06:19:17+00:00",
+      "last_checked_at": "2026-10-16T06:19:17+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2021-2103.02143-random-feature-attention.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Locality Sensitive Hashing in Fourier Frequency Domain For Soft Set Containment Search"
+    },
+    "DOI:10.1109/iccv51701.2025.00643": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/iccv51701.2025.00643",
+      "identity_tokens": [
+        "DOI:10.1109/iccv51701.2025.00643",
+        "SemanticScholar:993b5ad471a0997dcd9e996248df8e5f845f397f"
+      ],
+      "reason": "The DOI/title identify a long-horizon vision-language-action system, a potentially relevant agent architecture, but neither IEEE nor the official CVF page exposed an abstract to verify its mechanisms or efficiency.",
+      "first_checked_at": "2026-10-16T06:19:18+00:00",
+      "last_checked_at": "2026-10-16T06:19:18+00:00",
+      "linked_from": [
+        "papers/inference/15-inference-simulation-emulation/2024-2409.12514-tinyvla-towards-fast-data-efficient-vision-language-action-models-for-ro.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Towards Long-Horizon Vision-Language-Action System: Reasoning, Acting and Memory"
+    },
+    "arXiv:2505.20660": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2505.20660",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2505.20660",
+        "SemanticScholar:a0c0c2e7c9a316e7e9e7006640e58556669251e0",
+        "arXiv:2505.20660"
+      ],
+      "reason": "BacktrackAgent adds error detection and backtracking for GUI task completion; the abstract does not establish reduced latency, compute, or serving cost.",
+      "first_checked_at": "2026-10-16T06:19:21+00:00",
+      "last_checked_at": "2026-10-16T06:19:21+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2411.17465-showui-one-vision-language-action-model-for-gui-visual-agent.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "BacktrackAgent: Enhancing GUI Agent with Error Detection and Backtracking Mechanism"
+    },
+    "DOI:10.1016/j.neucom.2024.128921": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.neucom.2024.128921",
+      "identity_tokens": [
+        "DOI:10.1016/j.neucom.2024.128921",
+        "SemanticScholar:0fcd41a644593f8a775d3713ad6abb84ead75f28"
+      ],
+      "reason": "The DOI/title metadata identifies a survey of pretrained-language-model text classification, but the official publisher abstract was inaccessible; relevance cannot be resolved from primary abstract evidence.",
+      "first_checked_at": "2026-10-16T06:19:22+00:00",
+      "last_checked_at": "2026-10-16T06:19:22+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2006.03236-funnel-transformer-filtering-out-sequential-redundancy-for-efficient-lan.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "A survey of text classification based on pre-trained language model"
+    },
+    "DOI:10.1016/j.ipm.2024.103726": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.ipm.2024.103726",
+      "identity_tokens": [
+        "DOI:10.1016/j.ipm.2024.103726",
+        "SemanticScholar:2041ee6f019bbb0799eb03941e2186ea258303ec"
+      ],
+      "reason": "The DOI/title metadata identifies a knowledge-reasoning method for visual question answering, but the official publisher abstract was inaccessible; relevance cannot be resolved from primary abstract evidence.",
+      "first_checked_at": "2026-10-16T06:19:22+00:00",
+      "last_checked_at": "2026-10-16T06:19:22+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2202.10447-transformer-quality-in-linear-time.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Explainable Knowledge reasoning via thought chains for knowledge-based visual question answering"
+    },
+    "DOI:10.1109/tip.2022.3232232": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/tip.2022.3232232",
+      "identity_tokens": [
+        "DOI:10.1109/tip.2022.3232232",
+        "SemanticScholar:15456168f0f6e81440bea9af13c1c0a2ca4593f9"
+      ],
+      "reason": "The DOI/title metadata identifies a Moiré-pattern detection method for digital photos, but the official publisher abstract was inaccessible; relevance cannot be resolved from primary abstract evidence.",
+      "first_checked_at": "2026-10-16T06:19:22+00:00",
+      "last_checked_at": "2026-10-16T06:19:22+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Doing More With Moiré Pattern Detection in Digital Photos"
+    },
+    "SemanticScholar:ec0d0860ec129e137b9d475b4d19735db69c3e4c": {
+      "classification": "borderline",
+      "canonical_id": "SemanticScholar:ec0d0860ec129e137b9d475b4d19735db69c3e4c",
+      "identity_tokens": [
+        "SemanticScholar:ec0d0860ec129e137b9d475b4d19735db69c3e4c"
+      ],
+      "reason": "The candidate concerns photovoltaic forecasting with a GCN–Informer model, but the publisher abstract could not be inspected, so its possible mechanisms cannot be screened from primary evidence.",
+      "first_checked_at": "2026-10-16T06:19:23+00:00",
+      "last_checked_at": "2026-10-16T06:19:23+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "GCN–Informer: A Novel Framework for Mid-Term Photovoltaic Power Forecasting"
+    },
+    "DOI:10.1145/3691620.3695555": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3691620.3695555",
+      "identity_tokens": [
+        "DOI:10.1145/3691620.3695555",
+        "SemanticScholar:d8625f976a42130ceb8e09b6d7ca78bb45e6c369"
+      ],
+      "reason": "The DOI/title metadata describes vulnerability-repair suggestion generation, but ACM’s primary abstract was inaccessible; no evidence supports an efficiency classification.",
+      "first_checked_at": "2026-10-16T06:19:23+00:00",
+      "last_checked_at": "2026-10-16T06:19:23+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2005.08025-intellicode-compose-code-generation-using-transformer.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "VulAdvisor: Natural Language Suggestion Generation for Software Vulnerability Repair"
+    },
+    "DOI:10.1109/access.2020.2971383": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/access.2020.2971383",
+      "identity_tokens": [
+        "DOI:10.1109/access.2020.2971383",
+        "SemanticScholar:3c068f406de090bc3232582473580beaa5631faa"
+      ],
+      "reason": "The DOI/title metadata describes pediatric echocardiography segmentation, but IEEE’s primary abstract was inaccessible; no evidence supports an efficiency classification.",
+      "first_checked_at": "2026-10-16T06:19:23+00:00",
+      "last_checked_at": "2026-10-16T06:19:23+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2018-1802.05799-horovod-fast-and-easy-distributed-deep-learning-in-tensorflow.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "AIDAN: An Attention-Guided Dual-Path Network for Pediatric Echocardiography Segmentation"
+    },
+    "DOI:10.1109/tmm.2023.3321438": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/tmm.2023.3321438",
+      "identity_tokens": [
+        "DOI:10.1109/tmm.2023.3321438",
+        "SemanticScholar:62755fff5c7a04792679de3253485f86023ab675"
+      ],
+      "reason": "The DOI/title metadata describes a 3D human-pose estimation architecture, but IEEE’s primary abstract was inaccessible; no evidence supports an efficiency classification.",
+      "first_checked_at": "2026-10-16T06:19:24+00:00",
+      "last_checked_at": "2026-10-16T06:19:24+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2006.03236-funnel-transformer-filtering-out-sequential-redundancy-for-efficient-lan.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Global and Local Spatio-Temporal Encoder for 3D Human Pose Estimation"
+    },
+    "DOI:10.1007/s10845-025-02688-0": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1007/s10845-025-02688-0",
+      "identity_tokens": [
+        "DOI:10.1007/s10845-025-02688-0"
+      ],
+      "reason": "The Springer URL returned an internal fetch error; the industrial object-detection title alone does not resolve the claimed method or serving-efficiency connection.",
+      "first_checked_at": "2026-10-16T06:19:29+00:00",
+      "last_checked_at": "2026-10-16T06:19:29+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Cross-scene object relationship-driven object detection for flexible printed circuit production"
+    },
+    "DOI:10.1007/s10994-019-05811-4": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1007/s10994-019-05811-4",
+      "identity_tokens": [
+        "DOI:10.1007/s10994-019-05811-4"
+      ],
+      "reason": "Potentially relevant MoE inference mechanism, but abstract describes probabilistic classification-model inference/training rather than LLM token-serving.",
+      "first_checked_at": "2026-10-16T06:19:29+00:00",
+      "last_checked_at": "2026-10-16T06:19:29+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2017-1701.06538-outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "A flexible probabilistic framework for large-margin mixture of experts"
+    },
+    "DOI:10.1007/s10994-023-06438-2": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1007/s10994-023-06438-2",
+      "identity_tokens": [
+        "DOI:10.1007/s10994-023-06438-2"
+      ],
+      "reason": "The abstract reports time-efficiency in model simplification but not deployment inference gains or LLM use.",
+      "first_checked_at": "2026-10-16T06:19:29+00:00",
+      "last_checked_at": "2026-10-16T06:19:29+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-00c8b8f9f90e-tr-bert-dynamic-token-reduction-for-accelerating-bert-inference.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Neural network structure simplification by assessing evolution in node weight magnitude"
+    },
+    "DOI:10.1007/s11042-026-21232-7": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1007/s11042-026-21232-7",
+      "identity_tokens": [
+        "DOI:10.1007/s11042-026-21232-7"
+      ],
+      "reason": "The Springer URL returned an internal fetch error; title describes HTML-to-JSON processing, but no publisher abstract was available to confirm scope.",
+      "first_checked_at": "2026-10-16T06:19:30+00:00",
+      "last_checked_at": "2026-10-16T06:19:30+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.09702-efficient-guided-generation-for-large-language-models.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Efficient translation of HTML to JSON for enhanced web content production"
+    },
+    "DOI:10.1007/s11227-024-06313-4": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1007/s11227-024-06313-4",
+      "identity_tokens": [
+        "DOI:10.1007/s11227-024-06313-4"
+      ],
+      "reason": "Abstract claims superior efficiency for time-series forecasting, but no serving-cost benchmark or LLM application is established.",
+      "first_checked_at": "2026-10-16T06:19:30+00:00",
+      "last_checked_at": "2026-10-16T06:19:30+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Temporal patterns decomposition and Legendre projection for long-term time series forecasting"
+    },
+    "DOI:10.1002/cpe.938": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1002/cpe.938",
+      "identity_tokens": [
+        "DOI:10.1002/cpe.938"
+      ],
+      "reason": "Wiley DOI/title metadata match, but the official article page returned HTTP 403; without its abstract Condor’s possible distributed-systems relevance cannot be judged.",
+      "first_checked_at": "2026-10-16T06:19:36+00:00",
+      "last_checked_at": "2026-10-16T06:19:36+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Distributed computing in practice: the Condor experience"
+    },
+    "DOI:10.1002/mp.17896": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1002/mp.17896",
+      "identity_tokens": [
+        "DOI:10.1002/mp.17896"
+      ],
+      "reason": "Wiley page returned HTTP 403, so the title’s lite cross-attention mechanism and any actual cost effect could not be checked.",
+      "first_checked_at": "2026-10-16T06:19:36+00:00",
+      "last_checked_at": "2026-10-16T06:19:36+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2004.11886-lite-transformer-with-long-short-range-attention.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Automatic x‐ray to CT registration using embedding reconstruction and lite cross‐attention"
+    },
+    "DOI:10.1002/stvr.467": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1002/stvr.467",
+      "identity_tokens": [
+        "DOI:10.1002/stvr.467"
+      ],
+      "reason": "Wiley page returned HTTP 403; JVM aging may concern runtime behavior, but the abstract is unavailable to establish an LLM-serving connection.",
+      "first_checked_at": "2026-10-16T06:19:37+00:00",
+      "last_checked_at": "2026-10-16T06:19:37+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "A measurement‐based ageing analysis of the JVM"
+    },
+    "DOI:10.1007/3-540-45465-9_59": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1007/3-540-45465-9_59",
+      "identity_tokens": [
+        "DOI:10.1007/3-540-45465-9_59"
+      ],
+      "reason": "The low-storage count-sketch is a generic streaming primitive with possible systems use, but no LLM inference connection is established.",
+      "first_checked_at": "2026-10-16T06:19:37+00:00",
+      "last_checked_at": "2026-10-16T06:19:37+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Finding frequent items in data streams"
+    },
+    "DOI:10.1007/3-540-49478-2_14": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1007/3-540-49478-2_14",
+      "identity_tokens": [
+        "DOI:10.1007/3-540-49478-2_14"
+      ],
+      "reason": "It directly targets MT throughput, but transfer from statistical retrieval translation to current LLM serving is uncertain.",
+      "first_checked_at": "2026-10-16T06:19:37+00:00",
+      "last_checked_at": "2026-10-16T06:19:37+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Fast document translation for cross-language information retrieval"
+    },
+    "DOI:10.1007/978-3-030-61616-8_28": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1007/978-3-030-61616-8_28",
+      "identity_tokens": [
+        "DOI:10.1007/978-3-030-61616-8_28"
+      ],
+      "reason": "Springer URL retrieval returned an internal fetch error; the NMT actor-critic title alone cannot resolve whether the contribution is training-only or inference efficiency.",
+      "first_checked_at": "2026-10-16T06:19:38+00:00",
+      "last_checked_at": "2026-10-16T06:19:38+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2018-1802.06901-deterministic-non-autoregressive-neural-sequence-modeling-by-iterative-r.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Neural Machine Translation Based on Improved Actor-Critic Method"
+    },
+    "DOI:10.1007/s11432-025-4665-8": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1007/s11432-025-4665-8",
+      "identity_tokens": [
+        "DOI:10.1007/s11432-025-4665-8"
+      ],
+      "reason": "Long-CoTのsurveyでinference-time scalingやoverthinkingを扱い、reasoning computeとの接点はあるが、要旨は能力・現象整理で資源削減策や実測を示さないため限定的関連。",
+      "first_checked_at": "2026-10-16T06:19:43+00:00",
+      "last_checked_at": "2026-10-16T06:19:43+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2412.11664-c3ot-generating-shorter-chain-of-thought-without-compromising-effectiven.md",
+        "papers/inference/99-other-inference-systems/2025-2502.12067-tokenskip-controllable-chain-of-thought-compression-in-llms.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Towards reasoning era: a survey of long chain-of-thought for reasoning large language models"
+    },
+    "DOI:10.1007/s42979-026-04750-x": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1007/s42979-026-04750-x",
+      "identity_tokens": [
+        "DOI:10.1007/s42979-026-04750-x"
+      ],
+      "reason": "edge-cloud協調型intrusion detectionで、cloud agentsがedge behaviorを監視し通信overheadを抑えるが、LLM推論servingへの適用や効率効果は示さないため一般的関連にとどまる。",
+      "first_checked_at": "2026-10-16T06:19:43+00:00",
+      "last_checked_at": "2026-10-16T06:19:43+00:00",
+      "linked_from": [
+        "papers/survey/04-distributed-training-systems/2024-2407.20018-efficient-training-llms-distributed-infrastructures-survey.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "A Cloud-Driven Support Layer for Enhancing Distributed IDS in IoT Networks"
+    },
+    "DOI:10.1016/j.aiia.2025.01.001": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.aiia.2025.01.001",
+      "identity_tokens": [
+        "DOI:10.1016/j.aiia.2025.01.001"
+      ],
+      "reason": "Mamba-YOLOを子豚の行動検出へ適用し要旨はefficient visual detectionと述べるが、効率化は特定の農業視覚モデル内に限られ、LLM/一般servingとの接続が弱い。",
+      "first_checked_at": "2026-10-16T06:19:44+00:00",
+      "last_checked_at": "2026-10-16T06:19:44+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "PAB-Mamba-YOLO: VSSM assists in YOLO for aggressive behavior detection among weaned piglets"
+    },
+    "DOI:10.23919/aise.2005.000007": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.23919/aise.2005.000007",
+      "identity_tokens": [
+        "DOI:10.23919/aise.2005.000007",
+        "SemanticScholar:0ed6d93d17882b23f137925d064b00fc5c30089e"
+      ],
+      "reason": "The DOI/title identify a survey of medical vision-language models, but the publisher abstract was inaccessible, so its system-efficiency relevance remains unverified.",
+      "first_checked_at": "2026-10-16T06:19:49+00:00",
+      "last_checked_at": "2026-10-16T06:19:49+00:00",
+      "linked_from": [
+        "papers/inference/12-moe-parallelism-communication/2021-2101.03961-switch-transformers-scaling-to-trillion-parameter-models-with-simple-and.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "The Synergy of Seeing and Saying: Revolutionary Advances in Multi-modality Medical Vision-Language Large Models"
+    },
+    "DOI:10.1109/tcyb.2023.3312647": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/tcyb.2023.3312647",
+      "identity_tokens": [
+        "DOI:10.1109/tcyb.2023.3312647",
+        "SemanticScholar:d4958408f1022f2caee89ee18cb73af131a91046"
+      ],
+      "reason": "The DOI/title identify reinforcement-learning spatial scheduling for parking lots, but the publisher abstract was inaccessible; its possible scheduling relevance cannot be verified.",
+      "first_checked_at": "2026-10-16T06:19:49+00:00",
+      "last_checked_at": "2026-10-16T06:19:49+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2017-1701.06538-outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Hybrid Residual Multiexpert Reinforcement Learning for Spatial Scheduling of High-Density Parking Lots"
+    },
+    "DOI:10.1109/icse-seip66354.2025.00025": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/icse-seip66354.2025.00025",
+      "identity_tokens": [
+        "DOI:10.1109/icse-seip66354.2025.00025",
+        "SemanticScholar:1666093f137c7ac2b822b8dc4fd69ee36c5058aa"
+      ],
+      "reason": "The DOI/title identify a lightweight 7B code-processing LLM, but IEEE provided no abstract; the claimed efficiency relevance cannot be checked from primary evidence.",
+      "first_checked_at": "2026-10-16T06:19:49+00:00",
+      "last_checked_at": "2026-10-16T06:19:49+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13245-gqa.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "aiXcoder-7B: A Lightweight and Effective Large Language Model for Code Processing"
+    },
+    "DOI:10.1016/j.tranpol.2024.05.007": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.tranpol.2024.05.007",
+      "identity_tokens": [
+        "DOI:10.1016/j.tranpol.2024.05.007",
+        "SemanticScholar:b14096189faf81cd02053b0d1d1f4729ae8814c5"
+      ],
+      "reason": "The DOI/title concern data-driven analysis of railway-accident hazards, but the publisher abstract was inaccessible; primary evidence is insufficient for a final relevance judgment.",
+      "first_checked_at": "2026-10-16T06:19:50+00:00",
+      "last_checked_at": "2026-10-16T06:19:50+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2002.11985-compressing-large-scale-transformer-based-models-a-case-study-on-bert.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "A data-driven conceptual framework for understanding the nature of hazards in railway accidents"
+    },
+    "DOI:10.1016/j.engappai.2021.104165": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.engappai.2021.104165",
+      "identity_tokens": [
+        "DOI:10.1016/j.engappai.2021.104165",
+        "SemanticScholar:8b09c67deb2e4bc4c3b56320487c1be5ba24b690"
+      ],
+      "reason": "The DOI/title metadata describes scalable traffic-signal coordination, but the official Elsevier abstract was inaccessible; no primary abstract evidence establishes an LLM-systems connection.",
+      "first_checked_at": "2026-10-16T06:19:55+00:00",
+      "last_checked_at": "2026-10-16T06:19:55+00:00",
+      "linked_from": [
+        "papers/inference/15-inference-simulation-emulation/2017-1712.05889-ray-a-distributed-framework-for-emerging-ai-applications.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Learning scalable multi-agent coordination by spatial differentiation for traffic signal control"
+    },
+    "arXiv:2510.20286": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2510.20286",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2510.20286",
+        "SemanticScholar:dd571dff7f4255b5efc715b1c94c00a59810e43d",
+        "arXiv:2510.20286"
+      ],
+      "reason": "UI-Ins uses inference-time instruction diversity to improve GUI grounding accuracy, but reports no lower token, latency, or compute cost.",
+      "first_checked_at": "2026-10-16T06:19:56+00:00",
+      "last_checked_at": "2026-10-16T06:19:56+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2411.17465-showui-one-vision-language-action-model-for-gui-visual-agent.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "UI-Ins: Enhancing GUI Grounding with Multi-Perspective Instruction-as-Reasoning"
+    },
+    "DOI:10.1016/j.engappai.2025.112480": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.engappai.2025.112480",
+      "identity_tokens": [
+        "DOI:10.1016/j.engappai.2025.112480"
+      ],
+      "reason": "Mamba/quantum-attentionを含む軽量植物病害検出モデルとmobile applicationを提示するが、要旨は認識精度を主に報告しLLM servingや実測inference costの接続は限定的。",
+      "first_checked_at": "2026-10-16T06:19:59+00:00",
+      "last_checked_at": "2026-10-16T06:19:59+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "A mamba-quantum attention transformer-convolutional network for automated pest and disease detection"
+    },
+    "DOI:10.1016/j.anucene.2026.112435": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.anucene.2026.112435",
+      "identity_tokens": [
+        "DOI:10.1016/j.anucene.2026.112435"
+      ],
+      "reason": "Mamba efficiency/dynamic halting may transfer, but evidence is for a specialized nuclear accident classifier, not general LLM serving.",
+      "first_checked_at": "2026-10-16T06:20:02+00:00",
+      "last_checked_at": "2026-10-16T06:20:02+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Advanced nuclear power plant accident classification based on optimized deep learning algorithm"
+    },
+    "DOI:10.1016/j.cja.2025.104024": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.cja.2025.104024",
+      "identity_tokens": [
+        "DOI:10.1016/j.cja.2025.104024"
+      ],
+      "reason": "Potentially reusable SSM efficiency method, but demonstrated only for specialized direction-of-arrival signal processing.",
+      "first_checked_at": "2026-10-16T06:20:03+00:00",
+      "last_checked_at": "2026-10-16T06:20:03+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Direction of arrival estimation via vision Mamba integrating bidirectional Mamba2"
+    },
+    "DOI:10.1016/j.engappai.2026.116244": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.engappai.2026.116244",
+      "identity_tokens": [
+        "DOI:10.1016/j.engappai.2026.116244"
+      ],
+      "reason": "ScienceDirect displays issue date 2026-11-01, after this 2026-10-16 screen; first-online date is unverified, so evidence timing is unresolved.",
+      "first_checked_at": "2026-10-16T06:20:03+00:00",
+      "last_checked_at": "2026-10-16T06:20:03+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "A gas leakage intelligent monitoring method based on multi-channel spatiotemporal perception and multi-view learning"
+    },
+    "DOI:10.1109/tkde.2022.3159539": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/tkde.2022.3159539",
+      "identity_tokens": [
+        "DOI:10.1109/tkde.2022.3159539",
+        "SemanticScholar:f1fd8f2364e9eb33660ff6afbededc1c96180ca7"
+      ],
+      "reason": "The DOI/title describe an ensemble method for word and multi-sense embeddings, but IEEE provided no abstract; its relation to current inference-system work cannot be established.",
+      "first_checked_at": "2026-10-16T06:20:09+00:00",
+      "last_checked_at": "2026-10-16T06:20:09+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2002.11985-compressing-large-scale-transformer-based-models-a-case-study-on-bert.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "A Knowledge-Enriched Ensemble Method for Word Embedding and Multi-Sense Embedding"
+    },
+    "DOI:10.1016/j.patrec.2021.03.025": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.patrec.2021.03.025",
+      "identity_tokens": [
+        "DOI:10.1016/j.patrec.2021.03.025",
+        "SemanticScholar:3356bb45b4fd3169efb973f4e2a5afca828c6d56"
+      ],
+      "reason": "The DOI/title identify multimodal sentiment classification, but Elsevier did not expose the primary abstract; the system-efficiency relation is unverified.",
+      "first_checked_at": "2026-10-16T06:20:09+00:00",
+      "last_checked_at": "2026-10-16T06:20:09+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2019-1901.10430-pay-less-attention-with-lightweight-and-dynamic-convolutions.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Cross-modal context-gated convolution for multi-modal sentiment analysis"
+    },
+    "arXiv:2509.07339": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2509.07339",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2509.07339",
+        "SemanticScholar:590e37772a4e2b6cd10d26d0f37ba4b290525e99",
+        "arXiv:2509.07339"
+      ],
+      "reason": "The paper tests whether chain-of-thought length tracks task complexity and finds only weak correlation; it informs adaptive-compute assumptions but proposes no efficiency mechanism.",
+      "first_checked_at": "2026-10-16T06:20:10+00:00",
+      "last_checked_at": "2026-10-16T06:20:10+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2502.04463-training-language-models-to-reason-efficiently.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Performative Thinking? The Brittle Correlation Between CoT Length and Problem Complexity"
+    },
+    "DOI:10.32604/cmc.2022.023318": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.32604/cmc.2022.023318",
+      "identity_tokens": [
+        "DOI:10.32604/cmc.2022.023318",
+        "SemanticScholar:8299d995be8718362cf0486081c7a4941f414572"
+      ],
+      "reason": "The paper proposes multi-agent resource allocation for DL jobs in an HPC/AI cluster and reports job-time and power improvements; the cluster-scheduling mechanism may transfer, but no LLM inference-serving workload is evaluated.",
+      "first_checked_at": "2026-10-16T06:20:10+00:00",
+      "last_checked_at": "2026-10-16T06:20:10+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2018-1802.05799-horovod-fast-and-easy-distributed-deep-learning-in-tensorflow.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Multi-Agent Deep Reinforcement Learning-Based Resource Allocation in HPC/AI Converged Cluster"
+    },
+    "DOI:10.1007/s10489-022-04110-1": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1007/s10489-022-04110-1",
+      "identity_tokens": [
+        "DOI:10.1007/s10489-022-04110-1",
+        "SemanticScholar:54a22534a8a58a7e18dea33d5947a02f7d84b701"
+      ],
+      "reason": "The DOI/title concern multivariate time-series forecasting, but Springer did not expose the abstract; primary evidence is insufficient to verify a systems-efficiency connection.",
+      "first_checked_at": "2026-10-16T06:20:10+00:00",
+      "last_checked_at": "2026-10-16T06:20:10+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "A hybrid framework for multivariate long-sequence time series forecasting"
+    },
+    "DOI:10.1109/icassp43922.2022.9746863": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/icassp43922.2022.9746863",
+      "identity_tokens": [
+        "DOI:10.1109/icassp43922.2022.9746863",
+        "SemanticScholar:3ea4d0bbb313dbaa28e3eb9680879dff80cab84d"
+      ],
+      "reason": "The DOI/title specify temporal early exiting for streaming speech recognition, a plausible adaptive-inference mechanism, but the publisher abstract was inaccessible and the task is not an LLM workload.",
+      "first_checked_at": "2026-10-16T06:20:11+00:00",
+      "last_checked_at": "2026-10-16T06:20:11+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2004.12993-deebert-dynamic-early-exiting-for-accelerating-bert-inference.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Temporal Early Exiting for Streaming Speech Commands Recognition"
+    },
+    "DOI:10.1007/978-3-030-50426-7_33": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1007/978-3-030-50426-7_33",
+      "identity_tokens": [
+        "DOI:10.1007/978-3-030-50426-7_33",
+        "SemanticScholar:5e46f4d777670116523ab4c6cb9d58cf20c38e73"
+      ],
+      "reason": "The DOI/title identify a parallel RL framework for graph optimization, but Springer did not expose the chapter abstract; the relation to LLM inference systems remains unverified.",
+      "first_checked_at": "2026-10-16T06:20:11+00:00",
+      "last_checked_at": "2026-10-16T06:20:11+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2018-1802.05799-horovod-fast-and-easy-distributed-deep-learning-in-tensorflow.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "OpenGraphGym: A Parallel Reinforcement Learning Framework for Graph Optimization Problems"
+    },
+    "arXiv:2510.27210": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2510.27210",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2510.27210",
+        "SemanticScholar:79be8b5dc57c41cc500bc7858b317ddd660c820a",
+        "arXiv:2510.27210"
+      ],
+      "reason": "GUI-Rise combines structured reasoning with compact history summaries for GUI agents, a possible inference-context technique, but reports task quality and generalization rather than token or latency savings.",
+      "first_checked_at": "2026-10-16T06:20:11+00:00",
+      "last_checked_at": "2026-10-16T06:20:11+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2411.17465-showui-one-vision-language-action-model-for-gui-visual-agent.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "GUI-Rise: Structured Reasoning and History Summarization for GUI Navigation"
     }
   }
 }

@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ff9ec64df4631774-border-008",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.32604/cmc.2022.023318",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.32604/cmc.2022.023318",
+    "identity_tokens": [
+      "DOI:10.32604/cmc.2022.023318",
+      "SemanticScholar:8299d995be8718362cf0486081c7a4941f414572"
+    ],
+    "reason": "The paper proposes multi-agent resource allocation for DL jobs in an HPC/AI cluster and reports job-time and power improvements; the cluster-scheduling mechanism may transfer, but no LLM inference-serving workload is evaluated.",
+    "first_checked_at": "2026-10-16T06:20:10+00:00",
+    "last_checked_at": "2026-10-16T06:20:10+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2018-1802.05799-horovod-fast-and-easy-distributed-deep-learning-in-tensorflow.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Multi-Agent Deep Reinforcement Learning-Based Resource Allocation in HPC/AI Converged Cluster"
+  },
+  "processed_at": "2026-10-16T06:20:10+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ff9ec64df463",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-625af9cfd5dcf1b3-unrel-014",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2508.08039",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2508.08039",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2508.08039",
+      "SemanticScholar:fcf275305eb7c0863517fa992f9b967d1756fae8",
+      "arXiv:2508.08039"
+    ],
+    "reason": "Audio-Thinker trains an audio-language model with reinforcement learning to guide reasoning; it does not report lower inference resource use.",
+    "first_checked_at": "2026-10-16T06:19:26+00:00",
+    "last_checked_at": "2026-10-16T06:19:26+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2025-2505.13417-adaptthink-reasoning-models-can-learn-when-to-think.md"
+    ],
+    "title": "Audio-Thinker: Guiding Audio Language Model When and How to Think via Reinforcement Learning"
+  },
+  "processed_at": "2026-10-16T06:19:27+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-625af9cfd5dc",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

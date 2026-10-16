@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-625af9cfd5dcf1b3-unrel-016",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2508.05592",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2508.05592",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2508.05592",
+      "SemanticScholar:3da24e1feaa1135432a6cd27d7ab01e4e1679f1d",
+      "arXiv:2508.05592"
+    ],
+    "reason": "MathSmith synthesizes math problems and uses reinforcement learning to train reasoning models; the contribution concerns training and capability.",
+    "first_checked_at": "2026-10-16T06:19:27+00:00",
+    "last_checked_at": "2026-10-16T06:19:27+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md"
+    ],
+    "title": "MathSmith: Towards Extremely Hard Mathematical Reasoning by Forging Synthetic Problems with a Reinforced Policy"
+  },
+  "processed_at": "2026-10-16T06:19:27+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-625af9cfd5dc",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
