@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-16T12:33:41+00:00",
+  "generated_at": "2026-10-16T12:42:34+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 166,
+  "count": 167,
   "entries": [
     {
       "canonical_id": "DOI:10.1145/3714983.3714987",
@@ -3104,36 +3104,6 @@
       "worker_run_key": "20261016-1100-scheduled-chat-00/r01"
     },
     {
-      "canonical_id": "arXiv:2607.22634",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-16T05:57:12+00:00",
-      "return_count": 4,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700",
-        "説明不足トリガー: 評価説明量 157 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 7940,
-        "body_paragraphs": 43,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 157,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700",
-          "評価説明量 157 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-e5a2f368eaae--libfile_498a657eba5481918734292f675172e8--2026-2607.22634-presto-diffusion-tree-speculation-research-20261016-1430-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-e5a2f368eaae--libfile_498a657eba5481918734292f675172e8--2026-2607.22634-presto-diffusion-tree-speculation-research-20261016-1430-scheduled-chat-3.json",
-      "worker_run_key": "20261016-1430-scheduled-chat-30/r01"
-    },
-    {
       "canonical_id": "arXiv:2605.04738",
       "title": null,
       "source_url": null,
@@ -4283,8 +4253,8 @@
     },
     {
       "canonical_id": "arXiv:2606.05742",
-      "title": "AdaPLD: Adaptive Retrieval and Reuse for Efficient Model-Free Speculative Decoding",
-      "source_url": "https://arxiv.org/abs/2606.05742",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-16T12:31:42+00:00",
       "return_count": 1,
       "assigned_worker": "scheduled-chat-45",
@@ -4311,8 +4281,8 @@
     },
     {
       "canonical_id": "DOI:10.1109/CISAT71030.2026.11682186",
-      "title": "Semantic-Aware Intelligent Request Routing in Multi-Model LLM Backend Gateways",
-      "source_url": "https://www.researchgate.net/publication/405186829_Semantic-Aware_Intelligent_Request_Routing_in_Multi-Model_LLM_Backend_Gateways",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-16T12:32:16+00:00",
       "return_count": 1,
       "assigned_worker": "scheduled-chat-45",
@@ -4336,6 +4306,63 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_9cbca0111c2c8191af6625b74e67626e--2026-doi-10.1109-cisat71030.2026.11682186-apirouter-semantic-routing-research-20261015-2245-scheduled-chat-45-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_9cbca0111c2c8191af6625b74e67626e--2026-doi-10.1109-cisat71030.2026.11682186-apirouter-semantic-routing-research-20261015-2245-scheduled-chat-45-r01.json",
       "worker_run_key": "20261015-2245-scheduled-chat-45/r01"
+    },
+    {
+      "canonical_id": "arXiv:2508.08438",
+      "title": "Selective KV-Cache Sharing to Mitigate Timing Side-Channels in LLM Inference",
+      "source_url": "https://arxiv.org/html/2508.08438v2",
+      "returned_at": "2026-10-16T12:39:57+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700",
+        "説明不足トリガー: 評価説明量 0 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 6599,
+        "body_paragraphs": 30,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 0,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700",
+          "評価説明量 0 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_a05483024d5c81919a3e8ccbe9c52687--2025-2508.08438-safekv-selective-cache-sharing-research-20261015-1803-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_a05483024d5c81919a3e8ccbe9c52687--2025-2508.08438-safekv-selective-cache-sharing-research-20261015-1803-scheduled-chat-00-r01.json",
+      "worker_run_key": "20261015-1803-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2602.04789",
+      "title": "Light Forcing: Accelerating Autoregressive Video Diffusion via Sparse Attention",
+      "source_url": "https://arxiv.org/html/2602.04789v4",
+      "returned_at": "2026-10-16T12:41:14+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 6299,
+        "body_paragraphs": 31,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 1839,
+        "limitation_chars": 646,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_a562b6227ab88191b72c1560d1701f2c--2026-2602.04789-light-forcing-chunk-aware-hierarchical-sparse-attention-research-20261016-1800-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_a562b6227ab88191b72c1560d1701f2c--2026-2602.04789-light-forcing-chunk-aware-hierarchical-sparse-attention-research-20261016-1800-scheduled-chat-00-r01.json",
+      "worker_run_key": "20261016-1800-scheduled-chat-00/r01"
     }
   ]
 }

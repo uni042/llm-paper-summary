@@ -27,6 +27,8 @@ worker_run_key: '20261015-2245-scheduled-chat-45/r01'
 reference_main_sha: 'cbaec980d99db8f651ed9eac76a1bd9c6418096c'
 quality_self_review_passed: true
 quality_self_review_version: 'PAPER-QUALITY-GUIDE-2026-10-07'
+last_audited: null
+audit_version: 0
 ---
 
 # APIRouter：意味難度分類と文脈付きバンディットによる複数LLMの要求振分け

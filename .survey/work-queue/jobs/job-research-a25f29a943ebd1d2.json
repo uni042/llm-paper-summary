@@ -35,10 +35,15 @@
   "selection_reason": "PRESTOは、拡散型LLMドラフターの位置別周辺確率が自己回帰型検証のprefix条件を反映せず、候補経路の順位付けを誤り得る問題に対し、軽量なprefix条件付き信号を周辺確率へ補正として加え、優先度付き木探索で候補を展開する拡散ドラフティング手法である。既存の投機的デコーディングおよび木構造ドラフトに対し、拡散ドラフターの多候補性を使った方式と実測を加えるため対象内とする。著者らは複数の数学・コード・対話ベンチマークでdFlashおよびNemotron-Labs-Diffusionの線形ドラフティングに対する受理長・スループット改善を報告する一方、prefix信号は短距離語彙関係を捉えるn-gramであり、評価は主に単一要求設定で、大規模batch・長文脈・最適化済みserving環境の評価を今後の課題としている。",
   "semantic_scholar_id": "5af66480e4e120e09722a448063d2723c90d677f",
   "source_url": "https://arxiv.org/abs/2607.22634",
-  "status": "ready",
+  "status": "superseded",
   "title": "PRESTO: Prefix-Aligned Tree Drafting for Diffusion Speculative Decoding",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-10-16T12:42:34+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/05-speculative-decoding-moe/2026-2607.22634-presto-prefix-aligned-tree-drafting-for-diffusion-speculative-decoding.md",
+  "represented_canonical_id": "arXiv:2607.22634",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
