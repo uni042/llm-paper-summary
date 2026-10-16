@@ -35,10 +35,15 @@
   "selection_reason": "RouteSparseは凍結済みLLMの長文prefillで実行するattention query-key対を構造化疎attentionにより減らし、入力ごとのpattern・budget選択と不確実時のdense fallbackで品質と遅延を調整する推論時効率化であり、対象範囲に該当する。評価はLlama 3.1-8B-Instruct、128K context、単一A100 80GB上のprefillを含み、学習時手法ではない。評価された速度・品質・shift耐性の根拠が本文にあるためacceptとする。",
   "semantic_scholar_id": "3a7e1c35265c6f6a99e82572a890a3d00bd97cbd",
   "source_url": "https://arxiv.org/abs/2608.29058",
-  "status": "ready",
+  "status": "superseded",
   "title": "RouteSparse: Input-Conditional Pattern Routing for Budgeted Long-Context Prefilling",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-10-16T00:51:36+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/13-sparse-attention/2026-2608.29058-routesparse-input-conditional-pattern-routing-for-budgeted-long-context-.md",
+  "represented_canonical_id": "arXiv:2608.29058",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
