@@ -24,7 +24,7 @@
 - [10-kv-cache-offload-recomputation](../10-kv-cache-offload-recomputation/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（46本）
+## 自動生成の論文一覧（48本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -103,6 +103,10 @@
   実装：[✓](https://github.com/anon/Scepsy) ・ リポジトリ内被引用：1  
   LLMごとの安定した相対負荷を集約パイプライン化し、GPU分数・テンソル並列・複製数・配置を共同探索して任意の複数LLMエージェント処理を効率化する。
 
+- **2026-03 · [Orla: A Library for Serving LLM-Based Multi-Agent Systems](2026-2603.13605-orla-a-library-for-serving-llm-based-multi-agent-systems.md)**  
+  実装：[✓](https://github.com/dorcha-inc/orla) ・ リポジトリ内被引用：1  
+  分類段階をQwen3-4B、重い段階をQwen3-8Bへ割り当てた異種構成は、単一Qwen3-8Bの比較対象に対し壁時計時間38%、平均完了時間60%、推定推論費用35%を削減した。
+
 ### 直近12か月・未被引用（2025-11〜2026-10）
 
 - **2026-09 · [Speculative Macro Commit for Faster Tool-Using Agents](2026-2609.03236-speculative-macro-commit-for-faster-tool-using-agents.md)**  
@@ -152,6 +156,10 @@
 - **2026-06 · [Towards Direct Latent-Space Synthesis for Parallel Branches in LLM-Agent Workflows](2026-2606.14672-towards-direct-latent-space-synthesis-for-parallel-branches-in-llm-agent-workflows.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   並列エージェントの生成済みKVを位置再符号化・キャッシュ写像・合成器LoRAで直接統合し、再プリフィルを省いて9課題中7課題で品質を維持・改善しつつ最初のトークンまでを2.5〜11倍高速化する。
+
+- **2026-06 · [Libra: Efficient Resource Management for Agentic RL Post-Training](2026-2606.03077-libra-efficient-resource-management-for-agentic-rl-post-training.md)**  
+  実装：[✓](https://github.com/NetX-lab/Libra) ・ リポジトリ内被引用：0  
+  Libraは、ツール呼び出しを伴う大規模言語モデル（LLM）の強化学習後学習において、軌跡生成（Rollout）と勾配更新（学習）の双方を対象とする資源管理システムである。原著の最大改善はパイプライン処理能力4.2倍、報酬収束までの実時間2.7倍であり、初版の3.0倍・2.5倍と混同してはならない。
 
 - **2026-05 · [Stateful Inference for Low-Latency Multi-Agent Tool Calling](2026-2605.26289-stateful-inference-for-low-latency-multi-agent-tool-calling.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

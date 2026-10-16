@@ -3,7 +3,7 @@
 GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE expert**をCPU memory、peer GPU HBM、SSD / Flashなどへ置き、必要な部分だけGPUへ移す、CPU/GPUで分担して計算する、storage側で計算する研究をまとめる。KV cache固有のoffloadは [KV Cache Offload / Recomputation](../10-kv-cache-offload-recomputation/) に分離する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（118本）
+## 自動生成の論文一覧（119本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -471,6 +471,10 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
 - **2024-06 · [Endor: Hardware-Friendly Sparse Format for Offloaded LLM Inference](2024-2406.11674-endor-hardware-friendly-sparse-offloaded-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   非構造枝刈り重みを非ゼロ値と位置ビットマップへ分離し、CPU/SSDからGPUへの転送量を減らして、退避LLM推論を最大約2.37倍高速化する。
+
+- **2024-03 · [OSSCAR: One-Shot Structured Pruning in Vision and Language Models with Combinatorial Optimization](2024-2403.12983-osscar-one-shot-structured-pruning-in-vision-and-language-models-with-co.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  大規模言語モデル（LLM）の推論負荷を下げるために重みの一部をゼロにしても、非構造化疎行列を通常のGPU行列積で実行すると必ずしも高速にならない。事前学習済みの重みから一度だけ枝刈りし、元の学習目的で追加の勾配学習を行わない「一回限りの事後構造化枝刈り」である。
 
 ### 4年前（2022-11〜2023-10）
 
