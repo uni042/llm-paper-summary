@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-16T03:18:17+00:00",
+  "generated_at": "2026-10-16T03:25:45+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -3227,39 +3227,11 @@
       "worker_run_key": "20261016-0700-scheduled-chat-00/r01"
     },
     {
-      "canonical_id": "arXiv:2605.11605",
-      "title": "Keep What Audio Cannot Say: Context-Preserving Token Pruning for Omni-LLMs",
-      "source_url": "https://arxiv.org/html/2605.11605v1",
-      "returned_at": "2026-10-16T03:18:16+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 182 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 4516,
-        "body_paragraphs": 21,
-        "method_chars": 1427,
-        "method_paragraphs": 6,
-        "evaluation_chars": 182,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "評価説明量 182 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_24a0c0180c2c8191a64ea3e3a472904f--2026-2605.11605-contextguard-audio-visual-token-pruning-research-20261016-1100-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_24a0c0180c2c8191a64ea3e3a472904f--2026-2605.11605-contextguard-audio-visual-token-pruning-research-20261016-1100-scheduled-chat-00-r01.json",
-      "worker_run_key": "20261016-1100-scheduled-chat-00/r01"
-    },
-    {
       "canonical_id": "arXiv:2606.11552",
       "title": "Teaching Diffusion to Speculate Left-to-Right",
       "source_url": "https://arxiv.org/abs/2606.11552",
-      "returned_at": "2026-10-16T03:18:17+00:00",
-      "return_count": 1,
+      "returned_at": "2026-10-16T03:24:48+00:00",
+      "return_count": 2,
       "assigned_worker": "scheduled-chat-00",
       "reason": "blocked_quality",
       "failures": [
@@ -3278,8 +3250,36 @@
           "限界説明量 0 < 推奨 120"
         ]
       },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_ab2f45b2c9248191a10eb3dfd7610c43--2026-2606.11552-diffusion-drafter-left-to-right-alignment-research-20261016-1100-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_ab2f45b2c9248191a10eb3dfd7610c43--2026-2606.11552-diffusion-drafter-left-to-right-alignment-research-20261016-1100-scheduled-chat-00-r01.json",
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-a7efdeb0b109--libfile_ab2f45b2c9248191a10eb3dfd7610c43--2026-2606.11552-diffusion-drafter-left-to-right-alignment-research-20261016-1100-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-a7efdeb0b109--libfile_ab2f45b2c9248191a10eb3dfd7610c43--2026-2606.11552-diffusion-drafter-left-to-right-alignment-research-20261016-1100-schedule.json",
+      "worker_run_key": "20261016-1100-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2605.11605",
+      "title": "Keep What Audio Cannot Say: Context-Preserving Token Pruning for Omni-LLMs",
+      "source_url": "https://arxiv.org/html/2605.11605v1",
+      "returned_at": "2026-10-16T03:24:49+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 182 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 4516,
+        "body_paragraphs": 21,
+        "method_chars": 1427,
+        "method_paragraphs": 6,
+        "evaluation_chars": 182,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "評価説明量 182 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-f075006bf65f--libfile_24a0c0180c2c8191a64ea3e3a472904f--2026-2605.11605-contextguard-audio-visual-token-pruning-research-20261016-1100-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-f075006bf65f--libfile_24a0c0180c2c8191a64ea3e3a472904f--2026-2605.11605-contextguard-audio-visual-token-pruning-research-20261016-1100-scheduled-.json",
       "worker_run_key": "20261016-1100-scheduled-chat-00/r01"
     }
   ]

@@ -25,6 +25,8 @@ last_checked: '2026-10-16'
 worker_completed_at: '2026-10-16T11:04:00+09:00'
 worker_run_key: '20261016-1100-scheduled-chat-00/r01'
 worker_id: scheduled-chat-00
+last_audited: null
+audit_version: 0
 ---
 
 # 拡散型投機ドラフターを左からの検証へ整合させる学習手法
