@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-16T09:29:11+00:00",
-  "record_count": 12414,
+  "updated_at": "2026-10-16T13:52:43+00:00",
+  "record_count": 12413,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -28867,20 +28867,6 @@
         "papers/inference/16-weight-quantization-compression/2024-2401.15024-slicegpt-compress-large-language-models-by-deleting-rows-and-columns.md"
       ],
       "title": "Algebraic Dead Directions in LayerNorm Transformers: A Forward-Pass-Only Diagnostic at LLM Scale"
-    },
-    "arXiv:2402.12289": {
-      "classification": "unrelated",
-      "canonical_id": "arXiv:2402.12289",
-      "identity_tokens": [
-        "DOI:10.48550/arxiv.2402.12289",
-        "arXiv:2402.12289",
-        "semanticscholar:758c2dc290c037a6f211ec503beee70abe2d1197"
-      ],
-      "reason": "タイトルが自動運転への視覚言語モデルの応用・融合を主題としており、LLM推論システムの性能・資源管理の最適化を示さない。",
-      "first_checked_at": "2026-10-05T02:49:32+00:00",
-      "last_checked_at": "2026-10-13T13:47:00+00:00",
-      "linked_from": [],
-      "title": "DriveVLM: The Convergence of Autonomous Driving and Large Vision-Language Models"
     },
     "DOI:10.1145/215399.215427": {
       "classification": "unrelated",
@@ -165065,9 +165051,9 @@
         "id:arXiv:2512.04678",
         "url:https://arxiv.org/abs/2512.04678"
       ],
-      "reason": "Reward Forcingは動画拡散生成で古いフレームを指数移動平均で要約するEMA-Sinkと、動きの報酬で蒸留を重み付けするRe-DMDを提案し、H100での動画生成速度を報告する。対象は動画拡散モデルの画質・動きと動画ストリーミングであり、言語モデルの自己回帰トークン推論、LLMサービングやKVキャッシュの実行基盤ではない。",
+      "reason": "一次要旨の対象は動画拡散モデルのストリーミング映像生成で、EMA-Sinkによるフレーム文脈保持と動きの報酬を使う分布一致蒸留で映像の運動品質を改善する。単一H100で23.1FPSと効率測定はあるが、LLMの言語トークン復号、推論基盤、KVキャッシュ管理、MoE通信、オフロードの研究ではない。動画生成モデル固有の品質・時系列一貫性が主題。",
       "first_checked_at": "2026-10-12T18:49:58+00:00",
-      "last_checked_at": "2026-10-14T22:48:33+00:00",
+      "last_checked_at": "2026-10-16T13:52:39+00:00",
       "linked_from": [],
       "title": "Reward Forcing: Efficient Streaming Video Generation with Rewarded Distribution Matching Distillation"
     },
@@ -168586,13 +168572,14 @@
       "classification": "unrelated",
       "canonical_id": "arXiv:2203.07814",
       "identity_tokens": [
+        "DOI:10.1126/science.abq1158",
         "arXiv:2203.07814"
       ],
-      "reason": "タイトルが競技プログラミングのコード生成能力を研究対象と明示している。LLMの推論実行基盤、量子化、メモリ階層、スケジューリング等の高速化手法ではない。",
+      "reason": "一次要旨の主貢献は競技プログラミング問題へのコード生成能力、訓練・評価用データ、候補プログラムの大量生成と動作検査による選別である。Codeforcesでの順位を主要指標とし、LLM推論基盤のサービング、メモリ階層、カーネル、通信、資源配分の高速化手法を提案・評価する研究ではない。",
       "first_checked_at": "2026-10-13T13:47:04+00:00",
-      "last_checked_at": "2026-10-13T13:47:04+00:00",
+      "last_checked_at": "2026-10-16T13:52:41+00:00",
       "linked_from": [],
-      "title": "Competition-level code generation with AlphaCode"
+      "title": "Competition-Level Code Generation with AlphaCode"
     },
     "arXiv:1606.09274": {
       "classification": "unrelated",
@@ -176972,9 +176959,9 @@
       "identity_tokens": [
         "arXiv:2208.00406"
       ],
-      "reason": "一次要旨で確認した貢献は、機械学習モデルの消費電力と地域別CO2排出換算を記録する汎用計測パッケージeco2AIの提供である。推論と学習のエネルギーを観測するが、LLMの実行時スケジューリング、メモリ管理、KVキャッシュ、量子化、オフロード、GPUカーネルを改善するアルゴリズムやLLM推論基盤の実測改善を提案していないため対象外とする。",
+      "reason": "一次要旨が提案するeco2AIは機械学習の訓練・推論における消費電力量と地域別CO2排出量を追跡するPython計測パッケージである。目的は環境負荷の測定と報告の正確性であり、LLM推論処理のメモリ配置、演算、並列化、サービング性能やエネルギー削減アルゴリズムそのものの改善は提案・評価の主題ではない。",
       "first_checked_at": "2026-10-15T23:53:10+00:00",
-      "last_checked_at": "2026-10-15T23:53:10+00:00",
+      "last_checked_at": "2026-10-16T13:52:43+00:00",
       "linked_from": [],
       "title": "Eco2AI: carbon emissions tracking of machine learning models as the first step towards sustainable AI"
     },

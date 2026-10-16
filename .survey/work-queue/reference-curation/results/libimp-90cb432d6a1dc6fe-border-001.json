@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-90cb432d6a1dc6fe-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2601.01885",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2601.01885",
+    "identity_tokens": [
+      "arXiv:2601.01885"
+    ],
+    "reason": "一次要旨のAgeMemは、長期・短期メモリ操作をエージェントのツール行動として統合し、三段階の強化学習とstep-wise GRPOで記憶管理方策を学習する。コンテキスト利用効率の改善に言及するため周辺関連性はあるが、中心は長期タスクの成功率・記憶の質・方策学習であり、GPU上のKVキャッシュやLLMサービングの配置・転送・実行時間の最適化を直接扱わない。",
+    "first_checked_at": "2026-10-12T21:37:59+00:00",
+    "last_checked_at": "2026-10-16T13:52:41+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Agentic Memory: Learning Unified Long-Term and Short-Term Memory Management for Large Language Model Agents"
+  },
+  "processed_at": "2026-10-16T13:52:42+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-90cb432d6a1d",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

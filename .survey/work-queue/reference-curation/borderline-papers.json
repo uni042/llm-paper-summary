@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-16T09:29:11+00:00",
-  "record_count": 5234,
+  "updated_at": "2026-10-16T13:52:43+00:00",
+  "record_count": 5235,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -71549,9 +71549,9 @@
         "DOI:10.48550/arxiv.2509.25140",
         "arXiv:2509.25140"
       ],
-      "reason": "ReasoningBankはLLMエージェントの成功・失敗軌跡から再利用可能な推論方針を抽出し、記憶検索と実行時の追加探索（MaTTS）でWeb閲覧・ソフトウェア開発タスクの成功率を高める。記憶の保存・検索は推論時の処理だが、中心的な貢献はエージェント能力・経験学習であり、KVキャッシュ管理、推論処理量、計算資源配置などのシステム効率を直接検証した研究ではない。",
+      "reason": "一次要旨での技術的中心は、エージェントの成功・失敗履歴から推論方策を抽出して記憶し、次のタスクで検索・再利用するReasoningBankと、タスクごとの計算予算を増やして経験を多様化するMaTTSである。実行時の記憶検索や効率改善に言及するため周辺関連性はあるが、評価はウェブ操作・ソフトウェア開発タスクの成功率とエージェントの自己改善が中心で、LLM推論サービングのGPUメモリ、KVキャッシュ、通信、カーネル、要求スケジューリングの改善を直接示さない。",
       "first_checked_at": "2026-10-12T10:58:03+00:00",
-      "last_checked_at": "2026-10-14T22:48:32+00:00",
+      "last_checked_at": "2026-10-16T13:52:43+00:00",
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "ReasoningBank: Scaling Agent Self-Evolving with Reasoning Memory"
@@ -71764,9 +71764,9 @@
       "identity_tokens": [
         "arXiv:2601.01885"
       ],
-      "reason": "AgeMemはLLMエージェントの長期・短期記憶の保存、検索、更新、要約、削除を行動として学習させ、段階的な強化学習とstep-wise GRPOで長期課題の成績と文脈利用効率を改善する。文脈管理との接点はあるが、学習されたエージェント方策が中心で、GPU/CPUメモリ配置、KVキャッシュ圧縮やLLMサービングの実測最適化ではないため境界扱いとする。",
+      "reason": "一次要旨のAgeMemは、長期・短期メモリ操作をエージェントのツール行動として統合し、三段階の強化学習とstep-wise GRPOで記憶管理方策を学習する。コンテキスト利用効率の改善に言及するため周辺関連性はあるが、中心は長期タスクの成功率・記憶の質・方策学習であり、GPU上のKVキャッシュやLLMサービングの配置・転送・実行時間の最適化を直接扱わない。",
       "first_checked_at": "2026-10-12T21:37:59+00:00",
-      "last_checked_at": "2026-10-14T22:48:33+00:00",
+      "last_checked_at": "2026-10-16T13:52:41+00:00",
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "Agentic Memory: Learning Unified Long-Term and Short-Term Memory Management for Large Language Model Agents"
@@ -81334,6 +81334,19 @@
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "Mixture of Chapters: Scaling Learnt Memory in Transformers"
+    },
+    "arXiv:2402.12289": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2402.12289",
+      "identity_tokens": [
+        "arXiv:2402.12289"
+      ],
+      "reason": "一次要旨の主目的は都市自動運転の複雑場面理解と階層的運転計画である。一方、視覚言語モデルの重い計算負荷を問題視し、従来の自動運転パイプラインと組み合わせるDriveVLM-Dualを提案するため、推論実行効率との接点はある。ただし要旨はKVキャッシュ、GPU実行、バッチング、スケジューリング等の汎用LLM推論システム機構や性能改善を示さず、nuScenes/SUP-ADでの運転性能と実車配備が評価の中心であるため収録確定には足りない。",
+      "first_checked_at": "2026-10-16T13:52:40+00:00",
+      "last_checked_at": "2026-10-16T13:52:40+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "DriveVLM: The Convergence of Autonomous Driving and Large Vision-Language Models"
     }
   }
 }
