@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-16T12:42:34+00:00",
+  "generated_at": "2026-10-16T12:52:35+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 167,
+  "count": 168,
   "entries": [
     {
       "canonical_id": "DOI:10.1145/3714983.3714987",
@@ -4309,8 +4309,8 @@
     },
     {
       "canonical_id": "arXiv:2508.08438",
-      "title": "Selective KV-Cache Sharing to Mitigate Timing Side-Channels in LLM Inference",
-      "source_url": "https://arxiv.org/html/2508.08438v2",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-16T12:39:57+00:00",
       "return_count": 1,
       "assigned_worker": "scheduled-chat-00",
@@ -4339,8 +4339,8 @@
     },
     {
       "canonical_id": "arXiv:2602.04789",
-      "title": "Light Forcing: Accelerating Autoregressive Video Diffusion via Sparse Attention",
-      "source_url": "https://arxiv.org/html/2602.04789v4",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-16T12:41:14+00:00",
       "return_count": 1,
       "assigned_worker": "scheduled-chat-45",
@@ -4363,6 +4363,33 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_a562b6227ab88191b72c1560d1701f2c--2026-2602.04789-light-forcing-chunk-aware-hierarchical-sparse-attention-research-20261016-1800-scheduled-chat-00-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_a562b6227ab88191b72c1560d1701f2c--2026-2602.04789-light-forcing-chunk-aware-hierarchical-sparse-attention-research-20261016-1800-scheduled-chat-00-r01.json",
       "worker_run_key": "20261016-1800-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2607.02303",
+      "title": "A Hippocampus for Linear Attention: An Exact Memory for What the Recurrent State Forgets",
+      "source_url": "https://arxiv.org/abs/2607.02303",
+      "returned_at": "2026-10-16T12:49:53+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 176 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 4569,
+        "body_paragraphs": 26,
+        "method_chars": 1549,
+        "method_paragraphs": 9,
+        "evaluation_chars": 176,
+        "limitation_chars": 673,
+        "insufficiency_flags": [
+          "評価説明量 176 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_a7767e5f2e308191b7f80761b9438eeb--2026-2607.02303-hola-hippocampal-linear-attention-research-20261015-0530-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_a7767e5f2e308191b7f80761b9438eeb--2026-2607.02303-hola-hippocampal-linear-attention-research-20261015-0530-scheduled-chat-30-r01.json",
+      "worker_run_key": "20261015-0530-scheduled-chat-30/r01"
     }
   ]
 }
