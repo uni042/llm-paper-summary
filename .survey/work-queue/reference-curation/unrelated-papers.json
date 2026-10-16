@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-16T09:22:43+00:00",
-  "record_count": 12411,
+  "updated_at": "2026-10-16T09:26:01+00:00",
+  "record_count": 12412,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -164042,9 +164042,9 @@
         "id:arXiv:2008.05000",
         "url:https://arxiv.org/abs/2008.05000"
       ],
-      "reason": "一次要旨はグラフニューラルネットワークの次数依存量子化誤差を抑える量子化対応学習を提案し、グラフデータ6件でINT8/INT4とCPU推論を評価する。量子化技術ではあるが対象モデルはGNNで、LLM推論向け重み量子化・KVキャッシュ・生成カーネルへの直接の技術的貢献は確認できない。",
+      "reason": "Degree-Quantはグラフニューラルネットワークの次数依存誤差を扱う量子化対応学習で、INT8/INT4のGNN推論とCPU高速化を評価する。LLMの重み・活性値量子化、Transformer復号、言語モデルの学習・サービングは対象外である。",
       "first_checked_at": "2026-10-11T07:45:44+00:00",
-      "last_checked_at": "2026-10-15T06:43:52+00:00",
+      "last_checked_at": "2026-10-16T09:26:01+00:00",
       "linked_from": [],
       "title": "Degree-Quant: Quantization-Aware Training for Graph Neural Networks"
     },
@@ -164058,9 +164058,9 @@
         "id:arXiv:2303.05511",
         "url:https://arxiv.org/abs/2303.05511"
       ],
-      "reason": "一次要旨はGigaGANによるテキストからの画像合成を対象とし、StyleGANの大規模化、画像生成時間0.13秒（512画素）や高解像度合成を評価する。画像生成GANのアーキテクチャと生成品質が中心で、自己回帰LLMの推論サービング、KVキャッシュ、MoE実行、メモリ階層を最適化する研究ではない。",
+      "reason": "GigaGANは画像生成用GANの規模拡張・生成品質と画像生成速度を評価する。512画素画像0.13秒という推論速度の記述はあるが、自己回帰型言語モデル、LLMの推論カーネル、KVキャッシュ、LLM学習・サービングの技術ではない。",
       "first_checked_at": "2026-10-11T08:49:39+00:00",
-      "last_checked_at": "2026-10-15T06:43:51+00:00",
+      "last_checked_at": "2026-10-16T09:26:00+00:00",
       "linked_from": [],
       "title": "Scaling up GANs for Text-to-Image Synthesis"
     },
@@ -179008,6 +179008,18 @@
       "last_checked_at": "2026-10-16T09:22:43+00:00",
       "linked_from": [],
       "title": "Pirate-GPT: A locally deployed large language model framework for reliable offline anti-piracy"
+    },
+    "arXiv:2511.19575": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2511.19575",
+      "identity_tokens": [
+        "arXiv:2511.19575"
+      ],
+      "reason": "一次要旨の主題は文字認識専用の1B視覚言語モデル、OCR精度、データ・強化学習とエンドツーエンド構成である。vLLMによる展開効率には触れるが、推論エンジンやKV管理の一般化可能な高速化機構を提案・評価する研究ではなく、OCR応用モデルの技術報告である。",
+      "first_checked_at": "2026-10-16T09:25:58+00:00",
+      "last_checked_at": "2026-10-16T09:25:58+00:00",
+      "linked_from": [],
+      "title": "HunyuanOCR Technical Report"
     }
   }
 }
