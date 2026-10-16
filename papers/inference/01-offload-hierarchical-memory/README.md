@@ -441,7 +441,7 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
   一覧用要約：HeteGenはGPUへ載せ切れない大規模言語モデルの線形層をCPU計算部分とGPU計算部分へ分割し、CPU演算・ホストメモリ固定・重み転送・GPU演算を非同期に重ねる。実測に基づく分割比率とGPU常駐重みの優先順位を決め、バッチ1のオフロード推論遅延を削減する。
 
 - **2024-05 · [Efficient Heterogeneous Large Language Model Decoding with Model-Attention Disaggregation](2024-2405.01814-attention-offloading.md)**  
-  実装：✓ ・ リポジトリ内被引用：13  
+  実装：✓ ・ リポジトリ内被引用：14  
   注意演算とその他をH20/H100へ分離し、CPU非介在通信と自動分割・パイプラインで層間通信を隠して、同費用vLLM比16.1〜90.1%高いデコードスループットを得る。
 
 - **2024-09 · [TwinPilots: A New Computing Paradigm for GPU-CPU Parallel LLM Inference](2024-3688351.3689164-twinpilots-a-new-computing-paradigm-for-gpu-cpu-parallel-llm-inference.md)**  
