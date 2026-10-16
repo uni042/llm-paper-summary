@@ -33,6 +33,8 @@ worker_id: scheduled-chat-45
 reference_main_sha: '594ac4197ba9b639242e891976d5263f006ea975'
 quality_self_review_passed: true
 quality_self_review_version: 'PAPER-QUALITY-GUIDE-2026-10-07'
+last_audited: null
+audit_version: 0
 ---
 
 # LearnPruner：注意の信頼性を段階別に使い分ける視覚トークン削減
