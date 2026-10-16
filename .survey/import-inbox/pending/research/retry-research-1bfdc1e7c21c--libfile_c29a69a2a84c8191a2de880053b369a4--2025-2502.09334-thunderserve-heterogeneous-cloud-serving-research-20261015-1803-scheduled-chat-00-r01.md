@@ -31,6 +31,8 @@ worker_id: "scheduled-chat-00"
 worker_completed_at: "2026-10-15T18:03:37+09:00"
 worker_run_key: "20261015-1803-scheduled-chat-00/r01"
 reference_main_sha: "4376cd8c3551ee1313abb6786059b49961a05f1e"
+last_audited: null
+audit_version: 0
 ---
 
 # ThunderServe：異種GPUクラウドにおけるLLMサービングの配置・通信・再スケジューリング
