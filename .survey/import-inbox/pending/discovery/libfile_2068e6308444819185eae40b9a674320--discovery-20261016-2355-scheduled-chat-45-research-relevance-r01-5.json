@@ -1,0 +1,26 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-45",
+  "run_key": "20261016-2345-scheduled-chat-45/r01-research-relevance-5",
+  "reference_main_sha": "937e83043414f66a933c6a4fc51b6431b2e399c2",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2203.11086",
+      "identity_tokens": [
+        "arxiv:2203.11086"
+      ],
+      "title": "Overcoming Oscillations in Quantization-Aware Training",
+      "reason": "原著の対象はMobileNetV2/V3とEfficientNet-liteなど画像分類用の畳み込みネットワークにおける量子化認識学習であり、ImageNetで重み振動とバッチ正規化の精度劣化を検証する。LLM推論・学習基盤、TransformerのKVキャッシュ、LLM量子化の実測やLLMサービングを扱わず、現行LLMシステムサーベイの収録対象外。",
+      "source_url": "https://arxiv.org/abs/2203.11086",
+      "body_check": "abstract_screen_only; body_not_read; primary arXiv abstract explicitly names MobileNetV2/MobileNetV3/EfficientNet-lite and ImageNet, not LLM systems",
+      "first_checked_at": "2026-10-16T23:54:59+09:00",
+      "last_checked_at": "2026-10-16T23:54:59+09:00",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance",
+      "worklist_rank": 5
+    }
+  ]
+}
