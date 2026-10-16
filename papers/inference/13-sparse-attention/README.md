@@ -253,7 +253,7 @@
 ### 3年前（2023-11〜2024-10）
 
 - **2024-06 · [Quest: Query-Aware Sparsity for Efficient Long-Context LLM Inference](2024-2406.10774-quest.md)**  
-  実装：[✓](https://github.com/mit-han-lab/Quest) ・ リポジトリ内被引用：150  
+  実装：[✓](https://github.com/mit-han-lab/Quest) ・ リポジトリ内被引用：152  
   KVページのキー最小・最大値と現在クエリから重要度上界を推定し、上位ページだけを読むことで全KVを保持したまま長文脈注意の帯域を削減し最大7.03倍高速化。
 
 - **2024-07 · [MInference 1.0: Accelerating Pre-filling for Long-Context LLMs via Dynamic Sparse Attention](2024-2407.02490-minference.md)**  
@@ -291,7 +291,7 @@
   動的 Context 枝刈りは、生成の途中で「今後のトークンが参照する価値が低い」と学習した過去トークンを、注意対象とキー・バリュー（Key-Value; KV）キャッシュから動的に削除する。固定窓のように距離だけで落とさず、層ごとの学習可能な相互作用スコアで削除時点を決める。
 
 - **2023-10 · [HyperAttention: Long-context Attention in Near-Linear Time](2023-2310.05869-hyperattention-long-context-attention-in-near-linear-time.md)**  
-  実装：[✓](https://github.com/insuhan/hyper-attn) ・ リポジトリ内被引用：6  
+  実装：[✓](https://github.com/insuhan/hyper-attn) ・ リポジトリ内被引用：7  
   局所性鋭敏ハッシュで注意行列の大きな要素を効率的に見つけ、残りの小さい成分をサンプリングで近似する。全注意行列を作らずに正規化と値の加重和を計算し、長文脈での計算量を削減する。
 
 ### 6年前（2020-11〜2021-10）

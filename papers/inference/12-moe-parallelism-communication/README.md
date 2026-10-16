@@ -193,13 +193,13 @@ MoEの専門家並列、テンソル並列との混成、all-to-all通信、専�
 
 ### 3年前（2023-11〜2024-10）
 
+- **2024-08 · [LongVILA: Scaling Long-Context Visual Language Models for Long Videos](2024-2408.10188-longvila-scaling-long-context-visual-language-models-for-long-videos.md)**  
+  実装：[✓](https://github.com/NVlabs/VILA) ・ リポジトリ内被引用：12  
+  LongVILAは、長時間動画を理解する視覚言語モデル（Vision-Language モデル、VLM）の学習手順と分散実行基盤を同時に設計した研究である。256基のGPUを使うと勾配チェックポイントを使わず約200万トークンの学習文脈を扱え、従来のリング型系列並列に対して2.1〜5.7倍の訓練処理量を得る。
+
 - **2024-04 · [Shortcut-connected Expert Parallelism for Accelerating Mixture of Experts](2024-2404.05019-shortcut-connected-expert-parallelism-for-accelerating-mixture-of-expert.md)**  
   実装：✓ ・ リポジトリ内被引用：12  
   混合専門家モデル（Mixture of エキスパート; MoE）を複数GPUで実行する専門家並列では、各トークンを選択された専門家のGPUへ送る全対全通信（全対全）が不可欠となる。従来のtop-2 MoEでは、ルーティング、入力整列、全対全送信、専門家計算、全対全返送、出力整列が依存鎖上で続く。
-
-- **2024-08 · [LongVILA: Scaling Long-Context Visual Language Models for Long Videos](2024-2408.10188-longvila-scaling-long-context-visual-language-models-for-long-videos.md)**  
-  実装：[✓](https://github.com/NVlabs/VILA) ・ リポジトリ内被引用：11  
-  LongVILAは、長時間動画を理解する視覚言語モデル（Vision-Language モデル、VLM）の学習手順と分散実行基盤を同時に設計した研究である。256基のGPUを使うと勾配チェックポイントを使わず約200万トークンの学習文脈を扱え、従来のリング型系列並列に対して2.1〜5.7倍の訓練処理量を得る。
 
 - **2024-10 · [EPS-MoE: Expert Pipeline Scheduler for Cost-Efficient MoE Inference](2024-2410.12247-eps-moe-expert-pipeline-scheduler-for-cost-efficient-moe-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：6  
