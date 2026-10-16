@@ -45,6 +45,8 @@ quality_self_review_passed: true
 quality_self_review_version: PAPER-QUALITY-GUIDE-2026-10-07
 returned_research_repair_of: '.survey/import-inbox/blocked/research/libfile_e18fe94f7a3c8191a82e04f2464b4556--2026-2605.05602-nearly-optimal-attention-coresets-research-20261016-1730-scheduled-chat-30-r01.md'
 returned_research_failure_fixed: '既存の手法・評価・限界本文を品質計測器が正しく分類できるように見出しを整理。'
+last_audited: null
+audit_version: 0
 ---
 
 # Nearly Optimal Attention Coresets：KVキャッシュ部分集合のほぼ最適な理論限界
