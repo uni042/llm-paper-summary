@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "5078a8dd1855a304a941b46608014c4cacc63fcec817f28fabd117cd758bd590",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/retry-research-e5a2f368eaae--libfile_498a657eba5481918734292f675172e8--2026-2607.22634-presto-diffusion-tree-speculation-research-20261016-1430-scheduled-chat-30-r01.md",
+  "canonical_id": "arXiv:2607.22634",
+  "worker_completed_at": "2026-10-16T14:30:00+09:00",
+  "worker_run_key": "20261016-1430-scheduled-chat-30/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 7940,
+    "body_paragraphs": 43,
+    "method_chars": 0,
+    "method_paragraphs": 0,
+    "evaluation_chars": 157,
+    "limitation_chars": 0,
+    "insufficiency_flags": [
+      "手法説明量 0 < 700",
+      "評価説明量 157 < 500",
+      "限界説明量 0 < 推奨 120"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 手法説明量 0 < 700",
+    "説明不足トリガー: 評価説明量 157 < 500"
+  ],
+  "processed_at": "2026-10-16T05:57:12+00:00"
+}

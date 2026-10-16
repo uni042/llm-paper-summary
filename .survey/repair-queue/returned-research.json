@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-16T05:52:27+00:00",
+  "generated_at": "2026-10-16T05:57:12+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -3256,11 +3256,38 @@
       "worker_run_key": "20261016-1100-scheduled-chat-00/r01"
     },
     {
+      "canonical_id": "arXiv:2608.00881",
+      "title": "AOSpec: Action and Observation Co-Speculation for Low-Latency Agent Serving",
+      "source_url": "https://arxiv.org/html/2608.00881v1",
+      "returned_at": "2026-10-16T05:57:11+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 8417,
+        "body_paragraphs": 45,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 946,
+        "limitation_chars": 967,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-a7379e128788--libfile_83f5abd6034c8191910616515e82bb5a--2026-2608.00881-aospec-action-observation-speculation-research-20261016-1430-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-a7379e128788--libfile_83f5abd6034c8191910616515e82bb5a--2026-2608.00881-aospec-action-observation-speculation-research-20261016-1430-scheduled-ch.json",
+      "worker_run_key": "20261016-1430-scheduled-chat-30/r01"
+    },
+    {
       "canonical_id": "arXiv:2607.22634",
       "title": "PRESTO: Prefix-Aligned Tree Drafting for Diffusion Speculative Decoding",
       "source_url": "https://arxiv.org/html/2607.22634v1",
-      "returned_at": "2026-10-16T05:52:26+00:00",
-      "return_count": 3,
+      "returned_at": "2026-10-16T05:57:12+00:00",
+      "return_count": 4,
       "assigned_worker": "scheduled-chat-45",
       "reason": "blocked_quality",
       "failures": [
@@ -3281,35 +3308,8 @@
           "限界説明量 0 < 推奨 120"
         ]
       },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_498a657eba5481918734292f675172e8--2026-2607.22634-presto-diffusion-tree-speculation-research-20261016-1430-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_498a657eba5481918734292f675172e8--2026-2607.22634-presto-diffusion-tree-speculation-research-20261016-1430-scheduled-chat-30-r01.json",
-      "worker_run_key": "20261016-1430-scheduled-chat-30/r01"
-    },
-    {
-      "canonical_id": "arXiv:2608.00881",
-      "title": "AOSpec: Action and Observation Co-Speculation for Low-Latency Agent Serving",
-      "source_url": "https://arxiv.org/html/2608.00881v1",
-      "returned_at": "2026-10-16T05:52:27+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 8417,
-        "body_paragraphs": 45,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 946,
-        "limitation_chars": 967,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_83f5abd6034c8191910616515e82bb5a--2026-2608.00881-aospec-action-observation-speculation-research-20261016-1430-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_83f5abd6034c8191910616515e82bb5a--2026-2608.00881-aospec-action-observation-speculation-research-20261016-1430-scheduled-chat-30-r01.json",
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-e5a2f368eaae--libfile_498a657eba5481918734292f675172e8--2026-2607.22634-presto-diffusion-tree-speculation-research-20261016-1430-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-e5a2f368eaae--libfile_498a657eba5481918734292f675172e8--2026-2607.22634-presto-diffusion-tree-speculation-research-20261016-1430-scheduled-chat-3.json",
       "worker_run_key": "20261016-1430-scheduled-chat-30/r01"
     }
   ]
