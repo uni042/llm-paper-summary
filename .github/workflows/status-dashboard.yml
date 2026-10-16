@@ -91,7 +91,31 @@ jobs:
       - uses: actions/checkout@v4
         with:
           ref: main
-          fetch-depth: 0
+          fetch-depth: 1
+      - name: Restore main ancestry
+        shell: bash
+        run: |
+          set -euo pipefail
+          # Keep the complete main commit graph while fetching historical blobs lazily.
+          fetch_stderr="$(mktemp)"
+          trap 'rm -f "$fetch_stderr"' EXIT
+          if git -c protocol.version=2 fetch --unshallow --filter=blob:none --no-tags origin main 2>"$fetch_stderr"; then
+            if grep -Fq 'filtering not recognized by server, ignoring' "$fetch_stderr"; then
+              cat "$fetch_stderr" >&2
+              echo 'Git server ignored the requested blob filter; refusing to continue.' >&2
+              exit 1
+            fi
+            cat "$fetch_stderr" >&2
+          else
+            fetch_rc=$?
+            cat "$fetch_stderr" >&2
+            echo "Fetching full main ancestry failed (exit ${fetch_rc})." >&2
+            exit "$fetch_rc"
+          fi
+          if [ "$(git rev-parse --is-shallow-repository)" != false ]; then
+            echo 'Status dashboard requires full main ancestry; refusing shallow history.' >&2
+            exit 1
+          fi
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
@@ -104,6 +128,25 @@ jobs:
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
 
+          run_timed() {
+            local attempt="$1"
+            local stage="$2"
+            shift 2
+            local started ended duration rc
+            started="$(date +%s)"
+            printf 'attempt=%s stage=%s event=start\n' "$attempt" "$stage" >&2
+            if "$@"; then
+              rc=0
+            else
+              rc=$?
+            fi
+            ended="$(date +%s)"
+            duration=$((ended - started))
+            printf 'attempt=%s stage=%s event=complete duration_seconds=%s exit_code=%s\n' \
+              "$attempt" "$stage" "$duration" "$rc" >&2
+            return "$rc"
+          }
+
           if [ "${{ github.event_name }}" = "push" ]; then
             if git diff --name-only "${{ github.event.before }}" "${{ github.sha }}" | grep -Fxq 'STATUS.md'; then
               echo 'Triggering paper push already included STATUS.md; dashboard refresh is already atomic.'
@@ -114,17 +157,17 @@ jobs:
           for attempt in 1 2 3 4; do
             git fetch origin main
             git reset --hard origin/main
-            python .survey/scripts/reconcile_represented_research_jobs.py --repo-root .
-            python .survey/scripts/refresh_queue_snapshot.py --repo-root . >/tmp/next-jobs.json
-            python .survey/scripts/render_status_dashboard.py --repo-root . --output STATUS.md
-            python .survey/scripts/build_worker_worklist.py --repo-root .
+            run_timed "$attempt" reconciliation python .survey/scripts/reconcile_represented_research_jobs.py --repo-root .
+            run_timed "$attempt" 'queue snapshot' python .survey/scripts/refresh_queue_snapshot.py --repo-root . >/tmp/next-jobs.json
+            run_timed "$attempt" 'STATUS render' python .survey/scripts/render_status_dashboard.py --repo-root . --output STATUS.md
+            run_timed "$attempt" 'worklist build' python .survey/scripts/build_worker_worklist.py --repo-root .
             git add -A STATUS.md .survey/work-queue/jobs .survey/work-queue/next-jobs.json .survey/work-queue/WORKLIST-00.md .survey/work-queue/WORKLIST-30.md .survey/work-queue/WORKLIST-45.md .survey/work-queue/worker-worklist-00.json .survey/work-queue/worker-worklist-30.json .survey/work-queue/worker-worklist-45.json
             if git diff --cached --quiet; then
               echo 'Dashboard already current.'
               exit 0
             fi
             git commit -m 'chore: refresh survey status dashboard'
-            if git push origin HEAD:main; then
+            if run_timed "$attempt" push git push origin HEAD:main; then
               exit 0
             fi
             echo "Push conflict on attempt ${attempt}; regenerating from latest main."
