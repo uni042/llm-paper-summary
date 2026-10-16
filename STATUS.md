@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-10-16 16:36:36 JST**
+> 自動生成: **2026-10-16 16:47:08 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -15,7 +15,7 @@
 | 未claim Research job | **1886** |
 | 直近24hのResearch処理完了 | **14** |
 | 最終Research処理完了 | **10-16 15:58:10 JST** |
-| 最終Discovery探索完了 | **10-16 15:30:27 JST** |
+| 最終Discovery探索完了 | **10-16 16:08:00 JST** |
 | 整合性異常 | **0** |
 
 ## 16KB未満論文サマリーの再監査
@@ -56,8 +56,8 @@
 | 未処理Discovery候補 | **116160** |
 | 収録済み | **2222** |
 | Research / Audit候補へ昇格済み | **1650** |
-| 無関係として除外 | **12295** |
-| 微妙として除外 | **5076** |
+| 無関係として除外 | **12296** |
+| 微妙として除外 | **5075** |
 
 ### 探索候補の事前フィルタリング（可逆）
 
@@ -116,7 +116,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **10-16 09:28:45 JST（7時間7分前）** |
+| 最終maintenance完了 | **10-16 09:28:45 JST（7時間18分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **issues_found** |
 | health | **issues_found** |
@@ -137,18 +137,18 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 | 指標 | 現在値 |
 |---|---:|
 | 直近6hのResearch完了 | **1** |
-| 直近6hのDiscovery run | **11** |
-| 直近6hのDiscovery本文確認・分類 | **170** |
+| 直近6hのDiscovery run | **13** |
+| 直近6hのDiscovery本文確認・分類 | **172** |
 | 最終Research完了 | **10-16 15:58:10 JST** |
-| 最終Discovery完了 | **10-16 15:30:27 JST** |
+| 最終Discovery完了 | **10-16 16:08:00 JST** |
 
 ### 最新Library-first run
 
 - Research: **10-16 15:58:10 JST** / worker — / run 20261016-1545-scheduled-chat-45/r01 / 成果 **1件**
   - evidence: .survey/import-inbox/results/research/libfile_d7f8e6701b1481918815b54acdda7213--2026-2605.25745-selective-latent-thinking-heading-repair-20261016-1545-scheduled-chat-45-r01.json
-- Discovery: **10-16 15:30:27 JST** / worker codex-local-discovery / run discovery-20261016-local-screen-02-part-03-156f5feb5e72
-  - 本文確認・分類 **10件** / accept **1件** / unrelated+borderline **9件**
-  - evidence: .survey/import-inbox/results/discovery/discovery-20261016-local-screen-02--3f72d1327cc02d141120b166d4c5e0be25b5a9762362ce1961bcb2bfeb8c1d8d--discovery-20261016-local-screen-02-part-03-156f5feb5e72.json
+- Discovery: **10-16 16:08:00 JST** / worker scheduled-chat-45 / run 20261016-1608-scheduled-chat-45/r01-research-prescreen-13
+  - 本文確認・分類 **1件** / accept **0件** / unrelated+borderline **1件**
+  - evidence: .survey/import-inbox/results/discovery/libfile_978f8784131481919505becad8cf2adc--discovery-20261016-1608-scheduled-chat-45-research-relevance-r01-13.json
 
 ### Codex探索成果の反映状況
 
