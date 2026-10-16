@@ -1,0 +1,26 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-45",
+  "run_key": "20261016-0245-scheduled-chat-45/r01-research-relevance-28",
+  "reference_main_sha": "594ac4197ba9b639242e891976d5263f006ea975",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2602.23368",
+      "identity_tokens": [
+        "arxiv:2602.23368"
+      ],
+      "title": "Keyword search is all you need: Achieving RAG-Level Performance without vector databases using agentic tool use",
+      "reason": "一次要旨で比較するのは、エージェントに基本的なキーワード検索ツールを与えた質問応答と、ベクトルデータベースを使う検索拡張生成（RAG）の回答品質である。ベクトル索引の常時保持や更新コストを回避できるという運用上の効率性はあるが、GPUサービングの実行時間、KVキャッシュ、量子化、分散推論の実装を最適化する研究ではない。要旨はRAG品質指標の90%以上と述べるが、LLMの推論時間削減倍率を報告していないため境界的な関連と判定する。",
+      "source_url": "https://arxiv.org/abs/2602.23368",
+      "body_check": "abstract_screen_only; body_not_read; arXiv primary abstract checked 2026-10-16",
+      "first_checked_at": "2026-10-16T02:57:30+09:00",
+      "last_checked_at": "2026-10-16T02:57:30+09:00",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance",
+      "worklist_rank": 28
+    }
+  ]
+}
