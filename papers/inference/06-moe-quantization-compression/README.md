@@ -37,7 +37,7 @@ MoEの大部分を占めるexpert重みを**低bit化、pruning、precision切�
 ### 2年前（2024-11〜2025-10）
 
 - **2025-07 · [EAC-MoE: Expert-Selection Aware Compressor for Mixture-of-Experts Large Language Models](2025-eac-moe-expert-selection-aware-compressor-for-mixture-of-experts-large-language-.md)**  
-  実装：✓ ・ リポジトリ内被引用：15  
+  実装：✓ ・ リポジトリ内被引用：16  
   混合専門家（Mixture of エキスパート、MoE）型の大規模言語モデルは、トークンごとに少数の専門家だけを実行するため活性パラメータ数を抑えられるが、専門家の総重みは大きく、GPUメモリの負担が残る。重み量子化は保存容量を削減する一方、各層の出力を少し変化させる。
 
 - **2025-05 · [MxMoE: Mixed-precision Quantization for MoE with Accuracy and Performance Co-Design](2025-2505.05799-mxmoe-mixed-precision-quantization-for-moe-with-accuracy-and-performance-co-desi.md)**  
