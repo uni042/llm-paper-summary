@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-16T09:26:01+00:00",
-  "record_count": 12412,
+  "updated_at": "2026-10-16T09:27:37+00:00",
+  "record_count": 12414,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -163195,11 +163195,11 @@
         "id:arXiv:2204.13767",
         "url:https://arxiv.org/abs/2204.13767"
       ],
-      "reason": "一次要旨を確認。提案は多変量時系列の長期予測専用であり、三角階層のパッチ注意による線形計算量と変数別パラメータを評価する。LLMの自己回帰復号、推論サービング、KVキャッシュ、MoE、重み量子化、オフロード、LLM推論カーネルを直接扱っていないため、現行推論サーベイの対象外。Transformerという名称だけでは関連性を認定しない。",
+      "reason": "タイトルで明示された最終タスクは多変量時系列の予測であり、LLMの自己回帰復号、KVキャッシュ、サービング、MoE推論、推論基盤の最適化を扱う研究ではない。",
       "first_checked_at": "2026-10-11T02:48:44+00:00",
-      "last_checked_at": "2026-10-14T21:47:12+00:00",
+      "last_checked_at": "2026-10-16T09:27:37+00:00",
       "linked_from": [],
-      "title": "Triformer: Triangular, Variable-Specific Attentions for Long Sequence Multivariate Time Series Forecasting--Full Version"
+      "title": "Triformer: Triangular, Variable-Specific Attentions for Long Sequence Multivariate Time Series Forecasting-Full Version"
     },
     "DOI:10.1109/tcsvt.2026.3661516": {
       "classification": "unrelated",
@@ -164760,20 +164760,6 @@
       "last_checked_at": "2026-10-13T14:44:23+00:00",
       "linked_from": [],
       "title": "PEFT-Bench: A Parameter-Efficient Fine-Tuning Methods Benchmark"
-    },
-    "arXiv:2601.18496": {
-      "classification": "unrelated",
-      "canonical_id": "arXiv:2601.18496",
-      "identity_tokens": [
-        "DOI:10.48550/arxiv.2601.18496",
-        "arXiv:2601.18496",
-        "semanticscholar:651de358537e09001f21efd2c800c7f7631167b6"
-      ],
-      "reason": "医療質問応答向けに多段検索データ合成、難度依存のツール呼出し罰則、推論中の仮説検証モニターを組み合わせ、医療7ベンチマークの正答性能を平均9.79%改善する。ツール呼出し数の制御はあるが、主目的は医療知識・推論の正確性で、LLM実行エンジンやメモリ階層、計算カーネル、分散配信のシステム効率を提案・評価する研究ではない。",
-      "first_checked_at": "2026-10-11T20:48:39+00:00",
-      "last_checked_at": "2026-10-13T21:31:14+00:00",
-      "linked_from": [],
-      "title": "DEEPMED: Building a Medical DeepResearch Agent via Multi-hop Med-Search Data and Turn-Controlled Agentic Training & Inference"
     },
     "arXiv:2210.13452": {
       "classification": "unrelated",
@@ -179020,6 +179006,45 @@
       "last_checked_at": "2026-10-16T09:25:58+00:00",
       "linked_from": [],
       "title": "HunyuanOCR Technical Report"
+    },
+    "arXiv:2602.05827": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.05827",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2602.05827",
+        "arXiv:2602.05827"
+      ],
+      "reason": "一次要旨はロボットの長距離ナビゲーションで疎な未来映像を生成し、動画拡散モデルの軌道推定を未最適化構成より27倍高速化する。主対象は動画生成と実世界の移動制御であり、LLMの自己回帰推論・KVキャッシュ・MoE・GPUサービングの一般的な最適化ではないため無関係とする。",
+      "first_checked_at": "2026-10-16T09:27:34+00:00",
+      "last_checked_at": "2026-10-16T09:27:34+00:00",
+      "linked_from": [],
+      "title": "Sparse Video Generation Propels Real-World Beyond-the-View Vision-Language Navigation"
+    },
+    "arXiv:2607.20918": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.20918",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2607.20918",
+        "arXiv:2607.20918"
+      ],
+      "reason": "原著一次要旨では、テキスト・画像・音声の各専門教師を生徒モデルの出力モダリティに応じて振り分け、教師の確率が生徒を上回るトークンに蒸留信号を限定し、モダリティごとの教師重みと推論過程の正当性評価を学習中に調整する。12ベンチマーク・3モデル規模の評価は学習後の多モダリティ能力の改善であり、オンライン推論サービング、GPU実行、キャッシュ管理、量子化、投機的復号、分散推論の効率化を主張するものではない。専門教師は学習後に破棄されるため、実行時のMoEルーティング技術とも異なる。推論システムに直接寄与しない学習専用の蒸留研究として現行凍結範囲に該当し、unrelatedと判定する。",
+      "first_checked_at": "2026-10-16T09:27:35+00:00",
+      "last_checked_at": "2026-10-16T09:27:35+00:00",
+      "linked_from": [],
+      "title": "OPOD: On-Policy Omni Distillation"
+    },
+    "arXiv:2605.08862": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.08862",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2605.08862",
+        "arXiv:2605.08862"
+      ],
+      "reason": "原著一次要旨が扱う最終目的はLLMの強化学習における同期ロールアウトの高速化である。データ並列ランク間の待ち時間に次の学習ロールアウトを先行生成し、投機的復号で利用して学習ステップの空転を減らす。要旨の1.8倍は学習ロールアウト処理量であり、推論サービングのオンライン要求処理、KVキャッシュ、モデル推論カーネル等への独立した寄与は要旨で確認できない。現行サーベイでは学習単独最適化が凍結対象のためunrelatedとする。",
+      "first_checked_at": "2026-10-16T09:27:36+00:00",
+      "last_checked_at": "2026-10-16T09:27:36+00:00",
+      "linked_from": [],
+      "title": "BubbleSpec: Turning Long-Tail Bubbles into Speculative Rollout Drafts for Synchronous Reinforcement Learning"
     }
   }
 }

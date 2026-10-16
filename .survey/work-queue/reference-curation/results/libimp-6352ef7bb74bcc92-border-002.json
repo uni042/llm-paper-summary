@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-6352ef7bb74bcc92-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2601.13384",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2601.13384",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2601.13384",
+      "arXiv:2601.13384"
+    ],
+    "reason": "一次要旨はコード補完を検索・置換形式の単一推論へ統合する指示調整を提案し、従来のエージェント型編集より少ない逐次処理で文脈修正を可能にする。推論遅延は通常の穴埋め補完と同程度とするが、主な貢献はコード生成タスク形式とモデル学習であり、汎用推論サービングのカーネル・メモリ管理の最適化ではないため境界的とする。",
+    "first_checked_at": "2026-10-16T09:27:33+00:00",
+    "last_checked_at": "2026-10-16T09:27:33+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "From Completion to Editing: Unlocking Context-Aware Code Infilling via Search-and-Replace Instruction Tuning"
+  },
+  "processed_at": "2026-10-16T09:27:34+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-6352ef7bb74b",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

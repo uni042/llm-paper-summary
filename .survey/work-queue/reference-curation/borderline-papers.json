@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-16T09:25:59+00:00",
-  "record_count": 5230,
+  "updated_at": "2026-10-16T09:27:34+00:00",
+  "record_count": 5233,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -71097,9 +71097,9 @@
         "semanticscholar:5e364810740f92046868a4ddb7a1b30576439e4d",
         "url:https://arxiv.org/abs/2512.06688"
       ],
-      "reason": "長期のユーザー嗜好を扱う対話データと強化微調整、可読メモリを学習するエージェント記憶を提案。32k履歴に対する2kメモリで入力トークンを16分の1にする点は推論資源に関係するが、主目的は個人化の正解率で、メモリ階層・サービング処理量のシステム最適化は中心ではない。",
+      "reason": "一次要旨では個人化対話データセット、Qwen3-4Bの強化微調整、長期エージェント記憶が中心。32K対話履歴を約2Kの記憶へ置換して入力トークンを16分の1にする実験は推論入力コストに関連するが、KVキャッシュ・サービング・実行カーネルの最適化は主題ではないため境界候補とする。",
       "first_checked_at": "2026-10-11T10:43:47+00:00",
-      "last_checked_at": "2026-10-13T16:45:35+00:00",
+      "last_checked_at": "2026-10-16T09:27:32+00:00",
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "PersonaMem-v2: Towards Personalized Intelligence via Learning Implicit User Personas and Agentic Memory"
@@ -81278,6 +81278,48 @@
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "STAC: Plug-and-Play Spatio-Temporal Aware Cache Compression for Streaming 3D Reconstruction"
+    },
+    "arXiv:2601.09708": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2601.09708",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2601.09708",
+        "arXiv:2601.09708"
+      ],
+      "reason": "一次要旨はロボット操作向けの視覚・言語・行動モデルにおいて、長い明示的思考列を潜在推論へ蒸留して推論遅延を最大89.3%削減する。ただし対象は身体化行動の計画・制御で、汎用自己回帰LLMのサービング基盤、KV管理、MoE実行の性能評価ではない。潜在思考による生成遅延削減の転用可能性があるため境界的とする。",
+      "first_checked_at": "2026-10-16T09:27:33+00:00",
+      "last_checked_at": "2026-10-16T09:27:33+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Fast-ThinkAct: Efficient Vision-Language-Action Reasoning via Verbalizable Latent Planning"
+    },
+    "arXiv:2601.13384": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2601.13384",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2601.13384",
+        "arXiv:2601.13384"
+      ],
+      "reason": "一次要旨はコード補完を検索・置換形式の単一推論へ統合する指示調整を提案し、従来のエージェント型編集より少ない逐次処理で文脈修正を可能にする。推論遅延は通常の穴埋め補完と同程度とするが、主な貢献はコード生成タスク形式とモデル学習であり、汎用推論サービングのカーネル・メモリ管理の最適化ではないため境界的とする。",
+      "first_checked_at": "2026-10-16T09:27:33+00:00",
+      "last_checked_at": "2026-10-16T09:27:33+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "From Completion to Editing: Unlocking Context-Aware Code Infilling via Search-and-Replace Instruction Tuning"
+    },
+    "arXiv:2601.18496": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2601.18496",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2601.18496",
+        "arXiv:2601.18496"
+      ],
+      "reason": "一次要旨は医療調査エージェントの多段検索と臨床推論を改善し、難度に応じたツール呼出し抑制と推論中の監視器で不要な探索を抑える。呼出し回数の制御は推論費用に関連するが、主評価は医療問題7ベンチマークの正答性能であり、汎用LLMサービングのスケジューリングやGPU処理量を直接測っていないため境界的とする。",
+      "first_checked_at": "2026-10-16T09:27:34+00:00",
+      "last_checked_at": "2026-10-16T09:27:34+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "DEEPMED: Building a Medical DeepResearch Agent via Multi-hop Med-Search Data and Turn-Controlled Agentic Training & Inference"
     }
   }
 }
