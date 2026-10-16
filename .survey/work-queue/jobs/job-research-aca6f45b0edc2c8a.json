@@ -33,10 +33,15 @@
   "selection_reason": "重みだけでなくactivationも4bit化し、prompt処理やbatch推論のcompute-bound領域まで含めてLLM推論を高速化する量子化・GPUカーネル研究。",
   "semantic_scholar_id": "3cf409c5dc261c3c495c4cca091e674adcaa5081",
   "source_url": "https://arxiv.org/abs/2310.09259",
-  "status": "ready",
+  "status": "superseded",
   "title": "QUIK: Towards End-to-end 4-Bit Inference on Generative Large Language Models",
   "type": "research",
   "venue": "Conference on Empirical Methods in Natural Language Processing",
   "workflow_version": 10,
-  "year": 2023
+  "year": 2023,
+  "superseded_at": "2026-10-16T12:08:30+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/09-kernel-runtime-compilation/2023-2310.09259-quik-towards-end-to-end-4-bit-inference-on-generative-large-language-mod.md",
+  "represented_canonical_id": "arXiv:2310.09259",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

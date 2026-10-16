@@ -35,10 +35,15 @@
   "selection_reason": "rollback可能なdiffusion language modelの応答生成で、変更されないprompt側K/Vの再利用と状態距離に基づくrefreshにより反復forward計算を削減するtraining-freeの推論手法であり、LLM inference efficiencyに直接該当する。本文は複数DLM・codeおよび非codeタスクで品質とlatencyを測り、過度なcache stalenessによる精度低下も示しているためacceptとする。",
   "semantic_scholar_id": "d7b9339916043bbcc437ac5268f43518decc78af",
   "source_url": "https://arxiv.org/abs/2608.08086",
-  "status": "ready",
+  "status": "superseded",
   "title": "Archer: Adaptive Reuse of Cached Hidden States for Efficient Rollback in Diffusion Language Models",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-10-16T12:08:30+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2026-2608.08086-archer-adaptive-reuse-of-cached-hidden-states-for-efficient-rollback-in-.md",
+  "represented_canonical_id": "arXiv:2608.08086",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
