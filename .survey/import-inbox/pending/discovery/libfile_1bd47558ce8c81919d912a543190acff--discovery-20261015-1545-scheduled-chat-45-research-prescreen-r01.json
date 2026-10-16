@@ -1,0 +1,66 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-45",
+  "run_key": "20261015-1545-scheduled-chat-45/r01-research-prescreen",
+  "reference_main_sha": "8bb2c6f99ae6d77a2101581ce66afaa42880d68f",
+  "record_count": 4,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2601.09708",
+      "identity_tokens": ["arxiv:2601.09708", "doi:10.48550/arxiv.2601.09708"],
+      "title": "Fast-ThinkAct: Efficient Vision-Language-Action Reasoning via Verbalizable Latent Planning",
+      "reason": "一次要旨はロボット操作向けの視覚・言語・行動モデルにおいて、長い明示的思考列を潜在推論へ蒸留して推論遅延を最大89.3%削減する。ただし対象は身体化行動の計画・制御で、汎用自己回帰LLMのサービング基盤、KV管理、MoE実行の性能評価ではない。潜在思考による生成遅延削減の転用可能性があるため境界的とする。",
+      "source_url": "https://arxiv.org/abs/2601.09708",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-15T15:48:53+09:00",
+      "last_checked_at": "2026-10-15T15:48:53+09:00",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance",
+      "worklist_rank": 15
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2601.13384",
+      "identity_tokens": ["arxiv:2601.13384", "doi:10.48550/arxiv.2601.13384"],
+      "title": "From Completion to Editing: Unlocking Context-Aware Code Infilling via Search-and-Replace Instruction Tuning",
+      "reason": "一次要旨はコード補完を検索・置換形式の単一推論へ統合する指示調整を提案し、従来のエージェント型編集より少ない逐次処理で文脈修正を可能にする。推論遅延は通常の穴埋め補完と同程度とするが、主な貢献はコード生成タスク形式とモデル学習であり、汎用推論サービングのカーネル・メモリ管理の最適化ではないため境界的とする。",
+      "source_url": "https://arxiv.org/abs/2601.13384",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-15T15:48:53+09:00",
+      "last_checked_at": "2026-10-15T15:48:53+09:00",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance",
+      "worklist_rank": 18
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2601.18496",
+      "identity_tokens": ["arxiv:2601.18496", "doi:10.48550/arxiv.2601.18496"],
+      "title": "DEEPMED: Building a Medical DeepResearch Agent via Multi-hop Med-Search Data and Turn-Controlled Agentic Training & Inference",
+      "reason": "一次要旨は医療調査エージェントの多段検索と臨床推論を改善し、難度に応じたツール呼出し抑制と推論中の監視器で不要な探索を抑える。呼出し回数の制御は推論費用に関連するが、主評価は医療問題7ベンチマークの正答性能であり、汎用LLMサービングのスケジューリングやGPU処理量を直接測っていないため境界的とする。",
+      "source_url": "https://arxiv.org/abs/2601.18496",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-15T15:48:53+09:00",
+      "last_checked_at": "2026-10-15T15:48:53+09:00",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance",
+      "worklist_rank": 19
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.05827",
+      "identity_tokens": ["arxiv:2602.05827", "doi:10.48550/arxiv.2602.05827"],
+      "title": "Sparse Video Generation Propels Real-World Beyond-the-View Vision-Language Navigation",
+      "reason": "一次要旨はロボットの長距離ナビゲーションで疎な未来映像を生成し、動画拡散モデルの軌道推定を未最適化構成より27倍高速化する。主対象は動画生成と実世界の移動制御であり、LLMの自己回帰推論・KVキャッシュ・MoE・GPUサービングの一般的な最適化ではないため無関係とする。",
+      "source_url": "https://arxiv.org/abs/2602.05827",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-15T15:48:53+09:00",
+      "last_checked_at": "2026-10-15T15:48:53+09:00",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance",
+      "worklist_rank": 20
+    }
+  ]
+}
