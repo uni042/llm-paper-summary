@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-16T14:03:15+00:00",
+  "generated_at": "2026-10-16T14:08:36+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 180,
+  "count": 184,
   "entries": [
     {
       "canonical_id": "DOI:10.1145/3714983.3714987",
@@ -4674,8 +4674,8 @@
     },
     {
       "canonical_id": "arXiv:2605.18165",
-      "title": "Elastic-dLLM: Position Preserving Context Compression and Augmentation of Diffusion LLMs",
-      "source_url": "https://arxiv.org/html/2605.18165v1",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-16T14:01:05+00:00",
       "return_count": 1,
       "assigned_worker": "scheduled-chat-30",
@@ -4704,8 +4704,8 @@
     },
     {
       "canonical_id": "arXiv:2511.09345",
-      "title": "Seer Self-Consistency: Advance Budget Estimation for Adaptive Test-Time Scaling",
-      "source_url": "https://arxiv.org/html/2511.09345v2",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-16T14:01:06+00:00",
       "return_count": 1,
       "assigned_worker": "scheduled-chat-00",
@@ -4728,6 +4728,115 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_daadbfdb1f8481918148be93bd233076--2025-2511.09345-seersc-adaptive-budget-research-20261015-1325-scheduled-chat-30-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_daadbfdb1f8481918148be93bd233076--2025-2511.09345-seersc-adaptive-budget-research-20261015-1325-scheduled-chat-30-r01.json",
       "worker_run_key": "20261015-1325-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2608.04074",
+      "title": "Spend Bits Where Queries Look: KV Cache Vector Quantization with Attention-Preserving Transforms",
+      "source_url": "https://arxiv.org/html/2608.04074v1",
+      "returned_at": "2026-10-16T14:08:30+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 167 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 9013,
+        "body_paragraphs": 57,
+        "method_chars": 1337,
+        "method_paragraphs": 8,
+        "evaluation_chars": 167,
+        "limitation_chars": 1089,
+        "insufficiency_flags": [
+          "評価説明量 167 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_e26e22d48f9c8191852410a6fe050ea0--2026-2608.04074-nova-kv-attention-vector-quantization-research-20261016-0930-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_e26e22d48f9c8191852410a6fe050ea0--2026-2608.04074-nova-kv-attention-vector-quantization-research-20261016-0930-scheduled-chat-30-r01.json",
+      "worker_run_key": "20261016-0930-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2609.07664",
+      "title": "Accuracy is Not Enough: A Divergence-Based Approach to Evaluate Fidelity Loss in Quantized LLMs",
+      "source_url": "https://arxiv.org/abs/2609.07664",
+      "returned_at": "2026-10-16T14:08:33+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 133 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 6447,
+        "body_paragraphs": 43,
+        "method_chars": 1310,
+        "method_paragraphs": 9,
+        "evaluation_chars": 133,
+        "limitation_chars": 798,
+        "insufficiency_flags": [
+          "評価説明量 133 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_e4019a8bbfe88191a9db183534e2de96--2026-2609.07664-quantization-fidelity-tvd-jsd-llamacpp-research-20261016-2030-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_e4019a8bbfe88191a9db183534e2de96--2026-2609.07664-quantization-fidelity-tvd-jsd-llamacpp-research-20261016-2030-scheduled-chat-30-r01.json",
+      "worker_run_key": "20261016-2030-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2406.02500",
+      "title": "Towards Efficient Mixture of Experts: A Holistic Study of Compression Techniques",
+      "source_url": "https://arxiv.org/pdf/2406.02500",
+      "returned_at": "2026-10-16T14:08:34+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 339 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 6357,
+        "body_paragraphs": 38,
+        "method_chars": 1904,
+        "method_paragraphs": 11,
+        "evaluation_chars": 339,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "評価説明量 339 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_e55fdf760014819194953c8d62d54fc3--2024-2406.02500-holistic-moe-compression-research-20261016-0530-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_e55fdf760014819194953c8d62d54fc3--2024-2406.02500-holistic-moe-compression-research-20261016-0530-scheduled-chat-30-r01.json",
+      "worker_run_key": "20261016-0530-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2401.08383",
+      "title": "Exploiting Inter-Layer Expert Affinity for Accelerating Mixture-of-Experts Model Inference",
+      "source_url": "https://arxiv.org/html/2401.08383v2",
+      "returned_at": "2026-10-16T14:08:36+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 7294,
+        "body_paragraphs": 43,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 2109,
+        "limitation_chars": 789,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_e6dada5a19908191896597a719063534--2024-2401.08383-exflow-interlayer-expert-affinity-research-20261016-0630-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_e6dada5a19908191896597a719063534--2024-2401.08383-exflow-interlayer-expert-affinity-research-20261016-0630-scheduled-chat-30-r01.json",
+      "worker_run_key": "20261016-0630-scheduled-chat-30/r01"
     }
   ]
 }

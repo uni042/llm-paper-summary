@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "bc26fd6567b2acd814993a3107b4a11b6885ee809a9eeb01385e6dbd908db53d",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_e26e22d48f9c8191852410a6fe050ea0--2026-2608.04074-nova-kv-attention-vector-quantization-research-20261016-0930-scheduled-chat-30-r01.md",
+  "canonical_id": "arXiv:2608.04074",
+  "worker_completed_at": "2026-10-16T09:40:00+09:00",
+  "worker_run_key": "20261016-0930-scheduled-chat-30/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 9013,
+    "body_paragraphs": 57,
+    "method_chars": 1337,
+    "method_paragraphs": 8,
+    "evaluation_chars": 167,
+    "limitation_chars": 1089,
+    "insufficiency_flags": [
+      "評価説明量 167 < 500"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 評価説明量 167 < 500"
+  ],
+  "processed_at": "2026-10-16T14:08:30+00:00"
+}

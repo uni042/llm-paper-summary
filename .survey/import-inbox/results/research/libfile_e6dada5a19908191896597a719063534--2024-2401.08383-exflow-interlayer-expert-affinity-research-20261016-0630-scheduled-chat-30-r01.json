@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "5d2989f94570627a1cd030b0fbb1decf2ab7696f83f9921f8b1db1a95a7cf7d5",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_e6dada5a19908191896597a719063534--2024-2401.08383-exflow-interlayer-expert-affinity-research-20261016-0630-scheduled-chat-30-r01.md",
+  "canonical_id": "arXiv:2401.08383",
+  "worker_completed_at": "2026-10-16T06:52:00+09:00",
+  "worker_run_key": "20261016-0630-scheduled-chat-30/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 7294,
+    "body_paragraphs": 43,
+    "method_chars": 0,
+    "method_paragraphs": 0,
+    "evaluation_chars": 2109,
+    "limitation_chars": 789,
+    "insufficiency_flags": [
+      "手法説明量 0 < 700"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 手法説明量 0 < 700"
+  ],
+  "processed_at": "2026-10-16T14:08:36+00:00"
+}

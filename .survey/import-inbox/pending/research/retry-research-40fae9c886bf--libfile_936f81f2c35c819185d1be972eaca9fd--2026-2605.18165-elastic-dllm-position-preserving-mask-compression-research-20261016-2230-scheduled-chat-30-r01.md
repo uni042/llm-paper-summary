@@ -29,6 +29,8 @@ worker_completed_at: "2026-10-16T22:30:00+09:00"
 worker_run_key: "20261016-2230-scheduled-chat-30/r01"
 quality_self_review_passed: true
 quality_self_review_version: "PAPER-QUALITY-GUIDE-2026-10-07"
+last_audited: null
+audit_version: 0
 ---
 
 # Elastic-dLLM：拡散言語モデルの位置を保持するMASK圧縮・長文折り畳み・終端アンカー
