@@ -2,7 +2,7 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-16T09:21:27+00:00",
+  "updated_at": "2026-10-16T09:22:43+00:00",
   "record_count": 12411,
   "records": {
     "arXiv:2303.08774": {
@@ -174639,25 +174639,11 @@
         "id:arXiv:2607.26148",
         "url:https://arxiv.org/abs/2607.26148"
       ],
-      "reason": "タイトルの中心は身体化エージェントによる視覚・言語ナビゲーションであり、移動方策とゼロショット行動能力の評価を対象とする。推論基盤、GPUメモリ階層、量子化、専門家配置、サービング性能を主題とする論文ではないため除外する。",
+      "reason": "一次要旨はカメラと離散行動だけを与えた一般エージェントによるゼロショット視覚言語ナビゲーションの成功率と制御インターフェースを比較する。環境ステップ数・経過時間への言及はあるが、主貢献は身体化ナビゲーションの能力評価であり、汎用LLM推論エンジン・メモリ階層・GPU実行最適化を提案しないため無関係とする。",
       "first_checked_at": "2026-10-14T05:39:46+00:00",
-      "last_checked_at": "2026-10-14T05:39:46+00:00",
+      "last_checked_at": "2026-10-16T09:22:43+00:00",
       "linked_from": [],
       "title": "Embodied Agents Take Control: Minimal-Interface Zero-Shot Agents Rival Industrial-Scale Policies in Vision-and-Language Navigation"
-    },
-    "arXiv:2603.20284": {
-      "classification": "unrelated",
-      "canonical_id": "arXiv:2603.20284",
-      "identity_tokens": [
-        "arXiv:2603.20284",
-        "id:arXiv:2603.20284",
-        "url:https://arxiv.org/abs/2603.20284"
-      ],
-      "reason": "タイトルにキャッシュ圧縮が含まれるが、その対象はストリーミング3次元再構成の時空間表現であり、LLMのKVキャッシュや生成サービングの圧縮ではない。異なるタスクのキャッシュ圧縮をLLM推論システムと同一視しないため除外する。",
-      "first_checked_at": "2026-10-14T05:39:47+00:00",
-      "last_checked_at": "2026-10-14T05:39:47+00:00",
-      "linked_from": [],
-      "title": "STAC: Plug-and-Play Spatio-Temporal Aware Cache Compression for Streaming 3D Reconstruction"
     },
     "SemanticScholar:49819c58350056de622da083fdfb80d716c823a2": {
       "classification": "unrelated",
@@ -179010,6 +178996,18 @@
       "last_checked_at": "2026-10-16T09:21:27+00:00",
       "linked_from": [],
       "title": "M6-Rec: Generative Pretrained Language Models are Open-Ended Recommender Systems"
+    },
+    "DOI:10.1016/j.ress.2025.111891": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1016/j.ress.2025.111891",
+      "identity_tokens": [
+        "DOI:10.1016/j.ress.2025.111891"
+      ],
+      "reason": "タイトルは海賊行為対策のオフライン業務アプリケーション向けLLM利用を主題としており、推論カーネル、KVキャッシュ、MoE、量子化、汎用サービングスケジューリングの新規技術を明示していない。明白な応用領域研究として本文深読解の対象外とする。",
+      "first_checked_at": "2026-10-16T09:22:43+00:00",
+      "last_checked_at": "2026-10-16T09:22:43+00:00",
+      "linked_from": [],
+      "title": "Pirate-GPT: A locally deployed large language model framework for reliable offline anti-piracy"
     }
   }
 }

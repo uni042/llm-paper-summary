@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-16T09:21:29+00:00",
-  "record_count": 5227,
+  "updated_at": "2026-10-16T09:22:42+00:00",
+  "record_count": 5231,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -80214,7 +80214,7 @@
       ],
       "reason": "一次要旨はエージェント間で自然言語の逐次生成を省き、埋込み・隠れ状態・KVキャッシュ等の連続表現を直接受け渡す研究を、情報形式・送受信の表現整合・受信側への融合方法の3軸で整理した文献サーベイである。テキスト生成の推論費用と通信冗長性という対象領域は関連するが、18手法の分類と未解決課題の整理が主目的で、著者独自のGPUカーネル・ランタイム・速度改善の新規実装を評価する一次方式論文ではない。研究対象の系統参照としては有用なため境界的関連とする。",
       "first_checked_at": "2026-10-15T18:52:28+00:00",
-      "last_checked_at": "2026-10-15T18:52:28+00:00",
+      "last_checked_at": "2026-10-16T09:22:41+00:00",
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "Beyond tokens: a unified framework for latent communication in LLM-based multi-agent systems"
@@ -81239,6 +81239,58 @@
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "Fast Sampling via Discrete Non-Markov Diffusion Models with Predetermined Transition Time"
+    },
+    "arXiv:2602.23368": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2602.23368",
+      "identity_tokens": [
+        "arXiv:2602.23368"
+      ],
+      "reason": "一次要旨で比較するのは、エージェントに基本的なキーワード検索ツールを与えた質問応答と、ベクトルデータベースを使う検索拡張生成（RAG）の回答品質である。ベクトル索引の常時保持や更新コストを回避できるという運用上の効率性はあるが、GPUサービングの実行時間、KVキャッシュ、量子化、分散推論の実装を最適化する研究ではない。要旨はRAG品質指標の90%以上と述べるが、LLMの推論時間削減倍率を報告していないため境界的な関連と判定する。",
+      "first_checked_at": "2026-10-16T09:22:42+00:00",
+      "last_checked_at": "2026-10-16T09:22:42+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Keyword search is all you need: Achieving RAG-Level Performance without vector databases using agentic tool use"
+    },
+    "arXiv:2602.22663": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2602.22663",
+      "identity_tokens": [
+        "arXiv:2602.22663"
+      ],
+      "reason": "一次要旨ではロボット向け視覚・言語・行動モデルの実用性ベンチマークCEBenchと、小型VLM基盤・多視点知覚・行動チャンク化を用いたLLaVA-VLAを提案する。消費者向けGPUへの展開可能性は推論効率と接点があるが、中心評価は身体化制御の汎化と実世界操作であり、汎用LLMサービングの遅延・スループット・KVキャッシュ最適化ではないため境界的とする。",
+      "first_checked_at": "2026-10-16T09:22:42+00:00",
+      "last_checked_at": "2026-10-16T09:22:42+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Rethinking the Practicality of Vision-language-action Model: A Comprehensive Benchmark and An Improved Baseline"
+    },
+    "arXiv:2601.11641": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2601.11641",
+      "identity_tokens": [
+        "arXiv:2601.11641"
+      ],
+      "reason": "一次要旨は動画拡散Transformerの注意行列に対し、初期ノイズ除去段階の統計から分布混合を近似し、ブロック疎マスクを逐次予測することで動画生成推論を高速化する。動的疎注意とGPU実装はLLM注意最適化に技術的接点があるが、評価対象は動画拡散モデルであり、自己回帰LLMのKVキャッシュ・トークン復号・サービングを直接評価しないため境界的とする。",
+      "first_checked_at": "2026-10-16T09:22:42+00:00",
+      "last_checked_at": "2026-10-16T09:22:42+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Mixture of Distributions Matters: Dynamic Sparse Attention for Efficient Video Diffusion Transformers"
+    },
+    "arXiv:2603.20284": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2603.20284",
+      "identity_tokens": [
+        "arXiv:2603.20284"
+      ],
+      "reason": "一次要旨は因果VGGTによる連続3D再構築で、減衰累積注意に基づく時間トークン保持、ボクセル整列した空間圧縮、複数フレーム一括処理によりKVキャッシュを約10分の1、推論を約4倍高速化すると報告する。キャッシュ管理機構はLLMへの転用可能性があるが、直接の適用先は3D再構築用Transformerであり、LLM生成・サービング実測ではないため境界的とする。",
+      "first_checked_at": "2026-10-16T09:22:42+00:00",
+      "last_checked_at": "2026-10-16T09:22:42+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "STAC: Plug-and-Play Spatio-Temporal Aware Cache Compression for Streaming 3D Reconstruction"
     }
   }
 }
