@@ -25,6 +25,8 @@ code: null
 last_checked: "2026-10-16"
 worker_completed_at: "2026-10-16T13:30:00+09:00"
 worker_run_key: "20261016-1330-scheduled-chat-30/r01"
+last_audited: null
+audit_version: 0
 ---
 
 # A Practical Survey on Faster and Lighter Transformers：軽量・高速Transformerの分類と実務的な比較

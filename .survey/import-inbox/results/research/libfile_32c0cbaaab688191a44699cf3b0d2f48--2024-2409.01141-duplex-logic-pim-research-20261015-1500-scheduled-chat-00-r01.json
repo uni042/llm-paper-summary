@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "295fef8accbfde832dcf8f42b40b1a64051b50fde716ba34c85af7c78526b0eb",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_32c0cbaaab688191a44699cf3b0d2f48--2024-2409.01141-duplex-logic-pim-research-20261015-1500-scheduled-chat-00-r01.md",
+  "canonical_id": "arXiv:2409.01141",
+  "worker_completed_at": "2026-10-15T15:00:00+09:00",
+  "worker_run_key": "20261015-1500-scheduled-chat-00/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 4040,
+    "body_paragraphs": 22,
+    "method_chars": 1616,
+    "method_paragraphs": 9,
+    "evaluation_chars": 118,
+    "limitation_chars": 0,
+    "insufficiency_flags": [
+      "評価説明量 118 < 500",
+      "限界説明量 0 < 推奨 120"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 評価説明量 118 < 500"
+  ],
+  "processed_at": "2026-10-16T11:07:55+00:00"
+}

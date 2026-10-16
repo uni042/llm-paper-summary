@@ -28,6 +28,8 @@ reference_main_sha: '831038f519b77c6f7ac23643a844b34f84690fce'
 worklist_rank: 91
 quality_self_review_passed: true
 quality_self_review_version: 'PAPER-QUALITY-GUIDE-2026-10-07'
+last_audited: null
+audit_version: 0
 ---
 
 # パープレキシティ逆説：コードと数学で異なるプロンプト圧縮の失敗機構
