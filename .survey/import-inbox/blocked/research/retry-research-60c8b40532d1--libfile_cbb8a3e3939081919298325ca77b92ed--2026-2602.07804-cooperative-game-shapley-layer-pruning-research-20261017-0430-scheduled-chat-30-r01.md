@@ -32,6 +32,8 @@ worker_id: "scheduled-chat-30"
 worklist_rank: 47
 quality_self_review_passed: true
 quality_self_review_version: "2026-10-07"
+last_audited: null
+audit_version: 0
 ---
 
 # 協力ゲームとしてのLLM層枝刈り：代理モデルによるShapley寄与推定

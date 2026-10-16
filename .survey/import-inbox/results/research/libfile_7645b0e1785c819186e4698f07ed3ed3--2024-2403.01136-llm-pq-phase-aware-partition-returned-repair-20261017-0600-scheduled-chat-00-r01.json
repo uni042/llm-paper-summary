@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "9d8b5fb6d75d1f8b661f9b021c9335afa19e0ba31385943f920e37777df1f1cf",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_7645b0e1785c819186e4698f07ed3ed3--2024-2403.01136-llm-pq-phase-aware-partition-returned-repair-20261017-0600-scheduled-chat-00-r01.md",
+  "canonical_id": "arXiv:2403.01136",
+  "worker_completed_at": "2026-10-17T06:00:00+09:00",
+  "worker_run_key": "20261017-0600-scheduled-chat-00/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 10614,
+    "body_paragraphs": 54,
+    "method_chars": 3906,
+    "method_paragraphs": 20,
+    "evaluation_chars": 3071,
+    "limitation_chars": 0,
+    "insufficiency_flags": [
+      "限界説明量 0 < 推奨 120"
+    ]
+  },
+  "failures": [
+    "長文定型文の再利用を検出: papers/inference/11-llm-serving-scheduling-disaggregation/2024-2403.01136-llm-pq-serving-llm-on-heterogeneous-clusters-with-phase-aware-partition-.md と 37 段落 / 8241文字 (100.0%) が完全一致"
+  ],
+  "processed_at": "2026-10-16T22:02:24+00:00"
+}
