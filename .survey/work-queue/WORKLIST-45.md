@@ -1,7 +1,7 @@
 # Scheduled worker :45 worklist
 
 Worker: `scheduled-chat-45`  
-Generated: `2026-10-16T04:37:12+00:00`
+Generated: `2026-10-16T05:39:56+00:00`
 
 このページはこのworker専用の再構築可能な選択索引です。他のScheduled worker用ページとは候補を重複させません（十分な在庫がある場合）。
 正本は `.survey/work-queue/jobs/`、claim、論文実体、relevance ledgerです。処理直前に最新正本を再確認してください。
@@ -13,7 +13,7 @@ Generated: `2026-10-16T04:37:12+00:00`
 
 ## 未処理 Research / Audit
 
-ready総数: **1865** / 未claim総数: **1864** / このworker向け: **200**
+ready総数: **1867** / 未claim総数: **1866** / このworker向け: **200**
 
 | # | score | 種別 | identity | title | source | 想定配置先 |
 |---:|---:|---|---|---|---|---|
@@ -220,8 +220,8 @@ ready総数: **1865** / 未claim総数: **1864** / このworker向け: **200**
 
 ## リスト入り判定待ち Discovery候補
 
-未判定総数: **116681** / このworker向け: **500**
-事前選別: **quarantine** / 暫定隔離 **111018** / 監査再投入 **0** / 機械規則適用後 **113242** / 選抜率 **5.0%** （候補の正本は保持。隔離はunrelated判定ではない）
+未判定総数: **116633** / このworker向け: **500**
+事前選別: **quarantine** / 暫定隔離 **110972** / 監査再投入 **0** / 機械規則適用後 **113204** / 選抜率 **5.0%** （候補の正本は保持。隔離はunrelated判定ではない）
 
 | # | priority | 系統内引用最多 | 系統内引用合計 | identity | title | published | venue | 全被引用 | 参照関係 | 系統候補 | source |
 |---:|---:|---:|---:|---|---|---|---|---:|---:|---|---|
@@ -483,7 +483,7 @@ ready総数: **1865** / 未claim総数: **1864** / このworker向け: **200**
 | 256 | 102 | 6 | 9 | arXiv:2608.11152 | Scheduling Mixed RL Rollouts Beyond Prefix Locality | 2026-08-11 |  | 2 | 9 | 11-llm-serving-scheduling-disaggregation, KVキャッシュ管理・CPUオフロード・動的先読み・疎な注意計算, LLM Serving / Scheduling / Disaggregation | [source](https://arxiv.org/abs/2608.11152) |
 | 257 | 0 | 6 | 9 | arXiv:2410.10553 | SLaNC: Static LayerNorm Calibration | 2024-10-14 | arXiv.org | 0 | 9 | KV cache quantization / long-context inference / activation compression, post-training quantization / second-order compression / weight-only LLM inference, 重み専用量子化 / 推論カーネル | [source](https://arxiv.org/abs/2410.10553) |
 | 258 | 10 | 6 | 8 | arXiv:2608.03447 | Approximate Speculative Decoding | 2026-08-04 |  | 0 | 8 | Speculative Decoding, 投機的デコード / 分布保存型デコード高速化, 投機的復号 / 無損失復号高速化 | [source](https://arxiv.org/abs/2608.03447) |
-| 259 | 3 | 6 | 8 | DOI:10.1109/DAC63849.2025.11132534 | LLMShare: Optimizing LLM Inference Serving with Hardware Architecture Exploration | 2025-06-22 | Design Automation Conference | 3 | 8 | KVキャッシュ動的メモリ管理／PagedAttention代替, LLM Serving / Scheduling / Disaggregation | [source](https://doi.org/10.1109/DAC63849.2025.11132534) |
+| 259 | 2 | 6 | 8 | DOI:10.1109/DAC63849.2025.11132534 | LLMShare: Optimizing LLM Inference Serving with Hardware Architecture Exploration | 2025-06-22 | Proceedings - ACM IEEE Design Automation Conference | 2 | 8 | KVキャッシュ動的メモリ管理／PagedAttention代替, LLM Serving / Scheduling / Disaggregation | [source](https://doi.org/10.1109/dac63849.2025.11132534) |
 | 260 | 10 | 6 | 8 | DOI:10.18653/v1/2025.findings-emnlp.957 | Distributed LLM Serving on Consumer-Grade GPUs by Reconciling Computation and Communication | 2025 | Conference on Empirical Methods in Natural Language Processing | 0 | 8 | LLM Serving / Scheduling / Disaggregation, LLM serving scheduling / chunked prefill / iteration-level scheduling / pipeline parallelism, llm-serving-scheduling-disaggregation, 投機的復号 / 無損失復号高速化 | [source](https://doi.org/10.18653/v1/2025.findings-emnlp.957) |
 | 261 | 10 | 6 | 8 | arXiv:2607.22587 | TriSP: Tri-Signal Structured Pruning for Large Language Models | 2026-06-09 | arXiv.org | 0 | 8 | inference-systems, post-training quantization / second-order compression / weight-only LLM inference | [source](https://arxiv.org/abs/2607.22587) |
 | 262 | 10 | 6 | 8 | arXiv:2609.33586 | Approximating Softmax in Pretrained LLMs: Model Sensitivity and Kernel Acceleration | 2026-09-27 |  | 0 | 8 | 正確な注意計算 / 入出力指向注意 / GPUカーネル最適化 / FlashAttention, 注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層 | [source](https://arxiv.org/abs/2609.33586) |

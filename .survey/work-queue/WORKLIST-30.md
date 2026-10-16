@@ -1,7 +1,7 @@
 # Scheduled worker :30 worklist
 
 Worker: `scheduled-chat-30`  
-Generated: `2026-10-16T04:37:12+00:00`
+Generated: `2026-10-16T05:39:55+00:00`
 
 このページはこのworker専用の再構築可能な選択索引です。他のScheduled worker用ページとは候補を重複させません（十分な在庫がある場合）。
 正本は `.survey/work-queue/jobs/`、claim、論文実体、relevance ledgerです。処理直前に最新正本を再確認してください。
@@ -13,7 +13,7 @@ Generated: `2026-10-16T04:37:12+00:00`
 
 ## 未処理 Research / Audit
 
-ready総数: **1865** / 未claim総数: **1864** / このworker向け: **200**
+ready総数: **1867** / 未claim総数: **1866** / このworker向け: **200**
 
 | # | score | 種別 | identity | title | source | 想定配置先 |
 |---:|---:|---|---|---|---|---|
@@ -220,8 +220,8 @@ ready総数: **1865** / 未claim総数: **1864** / このworker向け: **200**
 
 ## リスト入り判定待ち Discovery候補
 
-未判定総数: **116681** / このworker向け: **500**
-事前選別: **quarantine** / 暫定隔離 **111018** / 監査再投入 **0** / 機械規則適用後 **113242** / 選抜率 **5.0%** （候補の正本は保持。隔離はunrelated判定ではない）
+未判定総数: **116633** / このworker向け: **500**
+事前選別: **quarantine** / 暫定隔離 **110972** / 監査再投入 **0** / 機械規則適用後 **113204** / 選抜率 **5.0%** （候補の正本は保持。隔離はunrelated判定ではない）
 
 | # | priority | 系統内引用最多 | 系統内引用合計 | identity | title | published | venue | 全被引用 | 参照関係 | 系統候補 | source |
 |---:|---:|---:|---:|---|---|---|---|---:|---:|---|---|

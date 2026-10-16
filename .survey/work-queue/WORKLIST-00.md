@@ -1,7 +1,7 @@
 # Scheduled worker :00 worklist
 
 Worker: `scheduled-chat-00`  
-Generated: `2026-10-16T04:37:12+00:00`
+Generated: `2026-10-16T05:39:55+00:00`
 
 このページはこのworker専用の再構築可能な選択索引です。他のScheduled worker用ページとは候補を重複させません（十分な在庫がある場合）。
 正本は `.survey/work-queue/jobs/`、claim、論文実体、relevance ledgerです。処理直前に最新正本を再確認してください。
@@ -13,7 +13,7 @@ Generated: `2026-10-16T04:37:12+00:00`
 
 ## 未処理 Research / Audit
 
-ready総数: **1865** / 未claim総数: **1864** / このworker向け: **200**
+ready総数: **1867** / 未claim総数: **1866** / このworker向け: **200**
 
 | # | score | 種別 | identity | title | source | 想定配置先 |
 |---:|---:|---|---|---|---|---|
@@ -220,8 +220,8 @@ ready総数: **1865** / 未claim総数: **1864** / このworker向け: **200**
 
 ## リスト入り判定待ち Discovery候補
 
-未判定総数: **116681** / このworker向け: **500**
-事前選別: **quarantine** / 暫定隔離 **111018** / 監査再投入 **0** / 機械規則適用後 **113242** / 選抜率 **5.0%** （候補の正本は保持。隔離はunrelated判定ではない）
+未判定総数: **116633** / このworker向け: **500**
+事前選別: **quarantine** / 暫定隔離 **110972** / 監査再投入 **0** / 機械規則適用後 **113204** / 選抜率 **5.0%** （候補の正本は保持。隔離はunrelated判定ではない）
 
 | # | priority | 系統内引用最多 | 系統内引用合計 | identity | title | published | venue | 全被引用 | 参照関係 | 系統候補 | source |
 |---:|---:|---:|---:|---|---|---|---|---:|---:|---|---|
@@ -567,7 +567,7 @@ ready総数: **1865** / 未claim総数: **1864** / このworker向け: **200**
 | 340 | 10 | 5 | 12 | arXiv:2608.20397 | Nexus: Depth-Adaptive KV-Cache Splicing and Retrieval-Decoupled Tool Routing for Agentic LLMs on Unified Memory | 2026-07-01 |  | 0 | 12 | KVキャッシュ動的メモリ管理／PagedAttention代替, LLM Serving / Scheduling / Disaggregation, inference/07-kv-cache-optimization-compression, 正確な注意計算 / 入出力指向注意 / GPUカーネル最適化 / FlashAttention, 注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層 | [source](https://arxiv.org/abs/2608.20397) |
 | 341 | 2 | 5 | 12 | arXiv:2505.02380 | EntroLLM: Entropy Encoded Weight Compression for Efficient Large Language Model Inference on Edge Devices | 2025-05-05 | IEEE International Conference on Acoustics, Speech, and Signal Processing | 2 | 12 | 07-kv-cache-optimization-compression, LLM Serving / Scheduling / Disaggregation, Quantization × MoE × Offload, Weight Quantization / Compression, large-scale LLM inference / tensor partitioning / TPU serving / KV-cache memory efficiency, 大規模言語モデル重み量子化 / 混合精度 / 疎量子化, 重み専用量子化 / 推論カーネル | [source](https://arxiv.org/abs/2505.02380) |
 | 342 | 10 | 5 | 12 | arXiv:2606.31580 | LASER: Load-Aware Serving with Early-Exit for Reasoning LLMs at the Edge | 2026-06-30 | arXiv.org | 0 | 12 | Conditional Computation, LLM Serving / Scheduling / Disaggregation, speculative decoding / edge-assisted serving / distributed inference / pipeline scheduling | [source](https://arxiv.org/abs/2606.31580) |
-| 343 | 3 | 5 | 11 | DOI:10.1109/CLOUD67622.2025.00029 | Disk-Based Shared KV Cache Management for Fast Inference in Multi-Instance LLM RAG Systems | 2025-07-07 | IEEE International Conference on Cloud Computing | 3 | 11 | Conditional Computation, KV cache memory management / streaming inference / attention sinks / length extrapolation, LLM Serving / Scheduling / Disaggregation, kv-cache-offload-recomputation, 注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層 | [source](https://doi.org/10.1109/CLOUD67622.2025.00029) |
+| 343 | 1 | 5 | 11 | DOI:10.1109/CLOUD67622.2025.00029 | Disk-Based Shared KV Cache Management for Fast Inference in Multi-Instance LLM RAG Systems | 2025-07-07 | IEEE ... International Conference on Cloud Computing | 1 | 11 | Conditional Computation, KV cache memory management / streaming inference / attention sinks / length extrapolation, LLM Serving / Scheduling / Disaggregation, kv-cache-offload-recomputation, 注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層 | [source](https://doi.org/10.1109/cloud67622.2025.00029) |
 | 344 | 18 | 5 | 11 | DOI:10.18653/v1/2025.findings-acl.1386 | Automated Fine-Grained Mixture-of-Experts Quantization | 2025 | Annual Meeting of the Association for Computational Linguistics | 8 | 11 | Adaptive Expert Computation / Compression, MoE inference systems / expert parallelism / model compression / knowledge distillation, Weight Quantization / Compression, arXiv:2405.16406のICLR 2025採録版。, 分散学習 / 混合専門家モデル / 自動シャーディング / SPMD | [source](https://doi.org/10.18653/v1/2025.findings-acl.1386) |
 | 345 | 92 | 5 | 11 | SemanticScholar:dad1164d87e0cbea2b1bf8932a15b8499bba68b2 | Power-aware Deep Learning Model Serving with μ-Serve | 2024 | USENIX Annual Technical Conference | 82 | 11 | CPUオフロード / 活性化疎性 / 階層メモリ, LLM Serving / Scheduling / Disaggregation, LLMサービング／スケジューリング, Offload / Hierarchical Memory, Speculative Decoding, Transformer inference runtime and variable-length request batching, 投機的復号 / 無損失復号高速化 | [source](https://www.semanticscholar.org/paper/dad1164d87e0cbea2b1bf8932a15b8499bba68b2) |
 | 346 | 10 | 5 | 11 | arXiv:2609.36032 | TORQUE: Optimizing What (not) to Quantize Before and After Rotation | 2026-09-28 |  | 0 | 11 | KV Cache Optimization / Compression, Weight Quantization / Compression, arXiv:2405.16406のICLR 2025採録版。, inference-systems, 大規模言語モデル重み量子化 / 混合精度 / 疎量子化, 重み専用量子化 / 推論カーネル | [source](https://arxiv.org/abs/2609.36032) |
