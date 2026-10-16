@@ -1,0 +1,72 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-discovery",
+  "run_key": "discovery-20261016-local-screen-03-part-02-2a511856686b::provider-gap",
+  "reference_main_sha": "621340b22527b31b28ca597d3a4445b31216086b",
+  "record_count": 3,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2204.06164",
+      "identity_tokens": [
+        "DOI:10.48550/arXiv.2204.06164",
+        "SemanticScholar:3f28feadf272523190d4c3a451966e39a2cfbf41",
+        "arXiv:2204.06164"
+      ],
+      "title": "A Unified Cascaded Encoder ASR Model for Dynamic Model Sizes",
+      "reason": "The cascaded encoder supports dynamic ASR model sizes and the primary abstract reports lower model size and power without quality loss; this is a concrete adaptive-compute/inference-efficiency technique, although demonstrated for speech.",
+      "source_url": "https://arxiv.org/abs/2204.06164",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-16T00:37:26Z",
+      "last_checked_at": "2026-10-16T00:37:26Z",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2006.03236-funnel-transformer-filtering-out-sequential-redundancy-for-efficient-lan.md"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2410.09457",
+      "identity_tokens": [
+        "DOI:10.48550/arXiv.2410.09457",
+        "SemanticScholar:aaf2e37a157f1dcf0ece87a4d877a70004737d56",
+        "arXiv:2410.09457"
+      ],
+      "title": "Power-Softmax: Towards Secure LLM Inference over Encrypted Data",
+      "reason": "Power-Softmax supplies a polynomial-friendly self-attention for encrypted LLM inference and reports latency breakdowns; it directly advances private LLM inference execution.",
+      "source_url": "https://arxiv.org/abs/2410.09457",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-16T00:37:26Z",
+      "last_checked_at": "2026-10-16T00:37:26Z",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.12533-puma-secure-inference-of-llama-7b-in-five-minutes.md",
+        "papers/inference/99-other-inference-systems/2024-c544a15b6867-sigma-secure-gpt-inference-with-function-secret-sharing.md"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.48550/arXiv.2406.17507",
+      "identity_tokens": [
+        "DOI:10.48550/arXiv.2406.17507",
+        "SemanticScholar:8654b611548b09ec49816fc874ccdd8abcee1f40",
+        "arXiv:2406.17507"
+      ],
+      "title": "ACE: A Generative Cross-Modal Retrieval Framework with Coarse-To-Fine Semantic Modeling",
+      "reason": "CART addresses cross-modal retrieval whose conventional similarity scoring is limited by inference latency at scale, and reports efficiency gains from coarse-to-fine generative retrieval; this is a concrete retrieval-runtime lineage.",
+      "source_url": "https://arxiv.org/abs/2406.17507",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-16T00:37:26Z",
+      "last_checked_at": "2026-10-16T00:37:26Z",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2017-1701.06538-outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts.md"
+      ]
+    }
+  ],
+  "parent_run_key": "discovery-20261016-local-screen-03-part-02-2a511856686b",
+  "provider_gap_from": ".survey/import-inbox/waiting/discovery/discovery-20261016-local-screen-03--07bc3266594abba517687c296d9ff1b91f83bd62bc5c63e67e37955cdad292f1--discovery-20261016-local-screen-03-part-02-2a511856686b.json",
+  "provider_gap_ids": [
+    "arXiv:2204.06164",
+    "arXiv:2406.17507",
+    "arXiv:2410.09457"
+  ]
+}
