@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-16T09:25:38+00:00",
+  "generated_at": "2026-10-16T09:30:49+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -3377,37 +3377,9 @@
       "worker_run_key": "20261016-1730-scheduled-chat-30/r01"
     },
     {
-      "canonical_id": "arXiv:2602.22896",
-      "title": "DySL-VLA: Efficient Vision-Language-Action Model Inference via Dynamic-Static Layer-Skipping for Robot Manipulation",
-      "source_url": "https://arxiv.org/html/2602.22896v3",
-      "returned_at": "2026-10-16T09:25:37+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5050,
-        "body_paragraphs": 25,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 1012,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_da18bfc3945081918b96cf6aca2eff68--2026-2602.22896-dysl-vla-dynamic-static-layer-skipping-research-20261016-1800-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_da18bfc3945081918b96cf6aca2eff68--2026-2602.22896-dysl-vla-dynamic-static-layer-skipping-research-20261016-1800-scheduled-chat-00-r01.json",
-      "worker_run_key": "20261016-1800-scheduled-chat-00/r01"
-    },
-    {
       "canonical_id": "arXiv:1606.09274",
-      "title": "Compression of Neural Machine Translation Models via Pruning",
-      "source_url": "https://arxiv.org/pdf/1606.09274",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-16T09:25:38+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-00",
@@ -3431,6 +3403,34 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-212c36ab5656--libfile_ee229bd06d688191b12c3e3af1c4f1ec--2016-1606.09274-nmt-magnitude-pruning-research-20261016-1700-scheduled-chat-00-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-212c36ab5656--libfile_ee229bd06d688191b12c3e3af1c4f1ec--2016-1606.09274-nmt-magnitude-pruning-research-20261016-1700-scheduled-chat-00-r01.json",
       "worker_run_key": "20261016-1700-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2602.22896",
+      "title": "DySL-VLA: Efficient Vision-Language-Action Model Inference via Dynamic-Static Layer-Skipping for Robot Manipulation",
+      "source_url": "https://arxiv.org/html/2602.22896v3",
+      "returned_at": "2026-10-16T09:30:49+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5050,
+        "body_paragraphs": 25,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 1012,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-4f391342139a--libfile_da18bfc3945081918b96cf6aca2eff68--2026-2602.22896-dysl-vla-dynamic-static-layer-skipping-research-20261016-1800-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-4f391342139a--libfile_da18bfc3945081918b96cf6aca2eff68--2026-2602.22896-dysl-vla-dynamic-static-layer-skipping-research-20261016-1800-scheduled-c.json",
+      "worker_run_key": "20261016-1800-scheduled-chat-00/r01"
     }
   ]
 }
