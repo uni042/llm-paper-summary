@@ -1,0 +1,285 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-discovery",
+  "run_key": "discovery-20261016-local-screen-04-part-01-40f865e1b6cb",
+  "reference_main_sha": "621340b22527b31b28ca597d3a4445b31216086b",
+  "record_count": 20,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1002/CPE.938",
+      "identity_tokens": [
+        "DOI:10.1002/cpe.938"
+      ],
+      "title": "Distributed computing in practice: the Condor experience",
+      "reason": "Wiley DOI/title metadata match, but the official article page returned HTTP 403; without its abstract Condor’s possible distributed-systems relevance cannot be judged.",
+      "source_url": "https://onlinelibrary.wiley.com/doi/10.1002/CPE.938",
+      "body_check": "source_unavailable; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-10-16T00:46:32Z",
+      "last_checked_at": "2026-10-16T00:46:32Z"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1002/mp.17896",
+      "identity_tokens": [
+        "DOI:10.1002/mp.17896"
+      ],
+      "title": "Automatic x‐ray to CT registration using embedding reconstruction and lite cross‐attention",
+      "reason": "Wiley page returned HTTP 403, so the title’s lite cross-attention mechanism and any actual cost effect could not be checked.",
+      "source_url": "https://onlinelibrary.wiley.com/doi/10.1002/mp.17896",
+      "body_check": "source_unavailable; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-10-16T00:46:32Z",
+      "last_checked_at": "2026-10-16T00:46:32Z",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2004.11886-lite-transformer-with-long-short-range-attention.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1002/stvr.467",
+      "identity_tokens": [
+        "DOI:10.1002/stvr.467"
+      ],
+      "title": "A measurement‐based ageing analysis of the JVM",
+      "reason": "Wiley page returned HTTP 403; JVM aging may concern runtime behavior, but the abstract is unavailable to establish an LLM-serving connection.",
+      "source_url": "https://onlinelibrary.wiley.com/doi/10.1002/stvr.467",
+      "body_check": "source_unavailable; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-10-16T00:46:32Z",
+      "last_checked_at": "2026-10-16T00:46:32Z"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1007/11562214_2",
+      "identity_tokens": [
+        "DOI:10.1007/11562214_2"
+      ],
+      "title": "Topic Tracking Based on Linguistic Features",
+      "reason": "The abstract concerns newspaper topic-tracking features, not inference or serving efficiency.",
+      "source_url": "https://link.springer.com/chapter/10.1007/11562214_2",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-16T00:46:32Z",
+      "last_checked_at": "2026-10-16T00:46:32Z"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1007/11562214_27",
+      "identity_tokens": [
+        "DOI:10.1007/11562214_27"
+      ],
+      "title": "Classifying Chinese Texts in Two Steps",
+      "reason": "The two-stage Bayesian classifiers address text categorization, not model execution efficiency.",
+      "source_url": "https://link.springer.com/chapter/10.1007/11562214_27",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-16T00:46:32Z",
+      "last_checked_at": "2026-10-16T00:46:32Z"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1007/11562214_37",
+      "identity_tokens": [
+        "DOI:10.1007/11562214_37"
+      ],
+      "title": "A Preliminary Work on Classifying Time Granularities of Temporal Questions",
+      "reason": "The abstract describes question classification and answer extraction quality, not serving cost.",
+      "source_url": "https://link.springer.com/chapter/10.1007/11562214_37",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-16T00:46:32Z",
+      "last_checked_at": "2026-10-16T00:46:32Z"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1007/11562214_52",
+      "identity_tokens": [
+        "DOI:10.1007/11562214_52"
+      ],
+      "title": "Why Is Zero Marking Important in Korean?",
+      "reason": "It proposes linguistic annotation resources for anaphor resolution, not inference systems.",
+      "source_url": "https://link.springer.com/chapter/10.1007/11562214_52",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-16T00:46:32Z",
+      "last_checked_at": "2026-10-16T00:46:32Z"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1007/11562214_6",
+      "identity_tokens": [
+        "DOI:10.1007/11562214_6"
+      ],
+      "title": "Parsing Biomedical Literature",
+      "reason": "The abstract reports parser accuracy gains from domain-specific lexical resources; no serving efficiency outcome.",
+      "source_url": "https://link.springer.com/chapter/10.1007/11562214_6",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-16T00:46:32Z",
+      "last_checked_at": "2026-10-16T00:46:32Z"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1007/11562214_74",
+      "identity_tokens": [
+        "DOI:10.1007/11562214_74"
+      ],
+      "title": "A Connectionist Model of Anticipation in Visual Worlds",
+      "reason": "The work models visual-world language comprehension, a domain application without systems-efficiency claims.",
+      "source_url": "https://link.springer.com/chapter/10.1007/11562214_74",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-16T00:46:32Z",
+      "last_checked_at": "2026-10-16T00:46:32Z"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1007/3-540-39965-8_11",
+      "identity_tokens": [
+        "DOI:10.1007/3-540-39965-8_11"
+      ],
+      "title": "How are you doing? A look at MT evaluation",
+      "reason": "The paper develops MT evaluation theory and small experiments; it evaluates quality, not inference cost.",
+      "source_url": "https://link.springer.com/chapter/10.1007/3-540-39965-8_11",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-16T00:46:32Z",
+      "last_checked_at": "2026-10-16T00:46:32Z"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1007/3-540-39965-8_3",
+      "identity_tokens": [
+        "DOI:10.1007/3-540-39965-8_3"
+      ],
+      "title": "Mixed-initiative translation of Web pages",
+      "reason": "It studies interactive web-page translation rather than computational efficiency.",
+      "source_url": "https://link.springer.com/chapter/10.1007/3-540-39965-8_3",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-16T00:46:32Z",
+      "last_checked_at": "2026-10-16T00:46:32Z"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1007/3-540-39965-8_9",
+      "identity_tokens": [
+        "DOI:10.1007/3-540-39965-8_9"
+      ],
+      "title": "The effect of source analysis on translation confidence",
+      "reason": "The contribution is a translation-confidence metric, not serving cost.",
+      "source_url": "https://link.springer.com/chapter/10.1007/3-540-39965-8_9",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-16T00:46:32Z",
+      "last_checked_at": "2026-10-16T00:46:32Z"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1007/3-540-45465-9_59",
+      "identity_tokens": [
+        "DOI:10.1007/3-540-45465-9_59"
+      ],
+      "title": "Finding frequent items in data streams",
+      "reason": "The low-storage count-sketch is a generic streaming primitive with possible systems use, but no LLM inference connection is established.",
+      "source_url": "https://link.springer.com/chapter/10.1007/3-540-45465-9_59",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-16T00:46:32Z",
+      "last_checked_at": "2026-10-16T00:46:32Z"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1007/3-540-49478-2_14",
+      "identity_tokens": [
+        "DOI:10.1007/3-540-49478-2_14"
+      ],
+      "title": "Fast document translation for cross-language information retrieval",
+      "reason": "It directly targets MT throughput, but transfer from statistical retrieval translation to current LLM serving is uncertain.",
+      "source_url": "https://link.springer.com/chapter/10.1007/3-540-49478-2_14",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-16T00:46:32Z",
+      "last_checked_at": "2026-10-16T00:46:32Z"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1007/3-540-49478-2_20",
+      "identity_tokens": [
+        "DOI:10.1007/3-540-49478-2_20"
+      ],
+      "title": "Can simultaneous interpretation help machine translation?",
+      "reason": "The abstract surveys SI and suggests possible ideas, with no implemented system or efficiency evidence.",
+      "source_url": "https://link.springer.com/chapter/10.1007/3-540-49478-2_20",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-16T00:46:32Z",
+      "last_checked_at": "2026-10-16T00:46:32Z"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1007/978-1-4684-2001-2_9",
+      "identity_tokens": [
+        "DOI:10.1007/978-1-4684-2001-2_9"
+      ],
+      "title": "Reducibility among Combinatorial Problems",
+      "reason": "This is a complexity-theory result on combinatorial problems, not model-serving infrastructure.",
+      "source_url": "https://link.springer.com/chapter/10.1007/978-1-4684-2001-2_9",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-16T00:46:32Z",
+      "last_checked_at": "2026-10-16T00:46:32Z"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1007/978-3-030-56725-5_9",
+      "identity_tokens": [
+        "DOI:10.1007/978-3-030-56725-5_9"
+      ],
+      "title": "Empirical Research on Futures Trading Strategy Based on Time Series Algorithm",
+      "reason": "The abstract evaluates financial forecasting and copper-futures trading outcomes, not inference efficiency.",
+      "source_url": "https://link.springer.com/chapter/10.1007/978-3-030-56725-5_9",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-16T00:46:32Z",
+      "last_checked_at": "2026-10-16T00:46:32Z",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1905.09418-analyzing-multi-head-self-attention-specialized-heads-do-the-heavy-lifti.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1007/978-3-030-61616-8_28",
+      "identity_tokens": [
+        "DOI:10.1007/978-3-030-61616-8_28"
+      ],
+      "title": "Neural Machine Translation Based on Improved Actor-Critic Method",
+      "reason": "Springer URL retrieval returned an internal fetch error; the NMT actor-critic title alone cannot resolve whether the contribution is training-only or inference efficiency.",
+      "source_url": "https://link.springer.com/chapter/10.1007/978-3-030-61616-8_28",
+      "body_check": "source_unavailable; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-10-16T00:46:32Z",
+      "last_checked_at": "2026-10-16T00:46:32Z",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2018-1802.06901-deterministic-non-autoregressive-neural-sequence-modeling-by-iterative-r.md"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1007/978-3-030-88480-2_9",
+      "identity_tokens": [
+        "DOI:10.1007/978-3-030-88480-2_9"
+      ],
+      "title": "Sentence-State LSTMs For Sequence-to-Sequence Learning",
+      "reason": "The abstract gives direct sequence-complexity and measured inference-speed evidence.",
+      "source_url": "https://link.springer.com/chapter/10.1007/978-3-030-88480-2_9",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-16T00:46:32Z",
+      "last_checked_at": "2026-10-16T00:46:32Z",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2003.05997-efficient-content-based-sparse-attention-with-routing-transformers.md"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1007/978-3-031-04580-6_27",
+      "identity_tokens": [
+        "DOI:10.1007/978-3-031-04580-6_27"
+      ],
+      "title": "Mitigating the Effects of RRAM Process Variation on the Accuracy of Artificial Neural Networks",
+      "reason": "The paper analyzes accelerator weight-storage variability and mitigation including hardware-overhead reduction.",
+      "source_url": "https://link.springer.com/chapter/10.1007/978-3-031-04580-6_27",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-16T00:46:32Z",
+      "last_checked_at": "2026-10-16T00:46:32Z",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2017-1701.06538-outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts.md"
+      ]
+    }
+  ]
+}
