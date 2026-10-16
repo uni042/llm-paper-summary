@@ -1,0 +1,26 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-45",
+  "run_key": "20261015-1945-scheduled-chat-45/r01-research-relevance",
+  "reference_main_sha": "e6af3d146791ff48481d2c5a465a6cdec65cd07d",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2511.19575",
+      "identity_tokens": [
+        "arxiv:2511.19575"
+      ],
+      "title": "HunyuanOCR Technical Report",
+      "reason": "一次要旨の主題は文字認識専用の1B視覚言語モデル、OCR精度、データ・強化学習とエンドツーエンド構成である。vLLMによる展開効率には触れるが、推論エンジンやKV管理の一般化可能な高速化機構を提案・評価する研究ではなく、OCR応用モデルの技術報告である。",
+      "source_url": "https://arxiv.org/abs/2511.19575",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-15T19:51:35+09:00",
+      "last_checked_at": "2026-10-15T19:51:35+09:00",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance",
+      "worklist_rank": 24
+    }
+  ]
+}
