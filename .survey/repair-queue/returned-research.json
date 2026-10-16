@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-16T10:46:35+00:00",
+  "generated_at": "2026-10-16T10:52:07+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 138,
+  "count": 140,
   "entries": [
     {
       "canonical_id": "DOI:10.1145/3714983.3714987",
@@ -3264,36 +3264,6 @@
       "worker_run_key": "20261016-1700-scheduled-chat-00/r01"
     },
     {
-      "canonical_id": "DOI:10.3390/s26041101",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-16T08:59:42+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700",
-        "説明不足トリガー: 評価説明量 499 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 8129,
-        "body_paragraphs": 50,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 499,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700",
-          "評価説明量 499 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-952ea16a168c--libfile_5e606db91dc081918a7ebc3542c000db--2026-doi-10.3390-s26041101-dynamic-microbatch-tokenbudget-research-20261016-1445-scheduled-chat-45-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-952ea16a168c--libfile_5e606db91dc081918a7ebc3542c000db--2026-doi-10.3390-s26041101-dynamic-microbatch-tokenbudget-research-20261016-1445-schedule.json",
-      "worker_run_key": "20261016-1445-scheduled-chat-45/r01"
-    },
-    {
       "canonical_id": "arXiv:1606.09274",
       "title": null,
       "source_url": null,
@@ -3490,8 +3460,8 @@
     },
     {
       "canonical_id": "arXiv:2601.04359",
-      "title": "PackCache: A Training-Free Acceleration Method for Unified Autoregressive Video Generation via Compact KV-Cache",
-      "source_url": "https://arxiv.org/html/2601.04359v1",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-16T10:45:25+00:00",
       "return_count": 1,
       "assigned_worker": "scheduled-chat-00",
@@ -3518,8 +3488,8 @@
     },
     {
       "canonical_id": "arXiv:2511.07776",
-      "title": "Streaming Tensor Programs: A Streaming Abstraction for Dynamic Parallelism",
-      "source_url": "https://arxiv.org/html/2511.07776",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-16T10:45:26+00:00",
       "return_count": 1,
       "assigned_worker": "scheduled-chat-30",
@@ -3544,6 +3514,87 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_22eebea2972481919884d9a25ea43b52--2025-2511.07776-step-streaming-tensor-programs-research-20261016-0030-scheduled-chat-30-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_22eebea2972481919884d9a25ea43b52--2025-2511.07776-step-streaming-tensor-programs-research-20261016-0030-scheduled-chat-30-r01.json",
       "worker_run_key": "20261016-0030-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "DOI:10.1145/3712285.3759867",
+      "title": "MaverIQ: Fingerprint-Guided Extrapolation and Fragmentation-Aware Layering for Intent-Based LLM Serving",
+      "source_url": "https://ut-sysml.ece.utexas.edu/publications/prints/sc2025_liakopoulos.pdf",
+      "returned_at": "2026-10-16T10:50:36+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 6603,
+        "body_paragraphs": 34,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 946,
+        "limitation_chars": 783,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_015daa53de0c81918da6933d5fd335a4--2025-doi-10.1145-3712285.3759867-maveriq-fingerprint-fragmentation-research-20261016-1930-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_015daa53de0c81918da6933d5fd335a4--2025-doi-10.1145-3712285.3759867-maveriq-fingerprint-fragmentation-research-20261016-1930-scheduled-chat-30-r01.json",
+      "worker_run_key": "20261016-1930-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "DOI:10.3390/s26041101",
+      "title": "Dynamic Micro-Batch and Token-Budget Scheduling for IoT-Scale Pipeline-Parallel LLM Inference",
+      "source_url": "https://www.mdpi.com/1424-8220/26/4/1101",
+      "returned_at": "2026-10-16T10:50:36+00:00",
+      "return_count": 3,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5655,
+        "body_paragraphs": 32,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 1253,
+        "limitation_chars": 845,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_157152657d548191bd3e3b6600d8c869--2026-doi-10.3390-s26041101-dynamic-microbatch-tokenbudget-scheduling-research-20261016-1930-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_157152657d548191bd3e3b6600d8c869--2026-doi-10.3390-s26041101-dynamic-microbatch-tokenbudget-scheduling-research-20261016-1930-scheduled-chat-30-r01.json",
+      "worker_run_key": "20261016-1930-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "DOI:10.1145/3725338",
+      "title": "PQCache: Product Quantization-based KVCache for Long Context LLM Inference",
+      "source_url": "https://arxiv.org/html/2407.12820v2",
+      "returned_at": "2026-10-16T10:51:02+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 0 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5857,
+        "body_paragraphs": 30,
+        "method_chars": 2016,
+        "method_paragraphs": 11,
+        "evaluation_chars": 0,
+        "limitation_chars": 540,
+        "insufficiency_flags": [
+          "評価説明量 0 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_25ada47667a88191908ac275fe6e7d87--2025-2407.12820-pqcache-product-quantization-kv-research-20261015-2203-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_25ada47667a88191908ac275fe6e7d87--2025-2407.12820-pqcache-product-quantization-kv-research-20261015-2203-scheduled-chat-00-r01.json",
+      "worker_run_key": "20261015-2203-scheduled-chat-00/r01"
     }
   ]
 }
