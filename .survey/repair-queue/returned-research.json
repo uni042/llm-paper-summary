@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-16T11:28:50+00:00",
+  "generated_at": "2026-10-16T11:36:25+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 148,
+  "count": 151,
   "entries": [
     {
       "canonical_id": "DOI:10.1145/3714983.3714987",
@@ -3515,33 +3515,6 @@
       "worker_run_key": "20261016-1930-scheduled-chat-30/r01"
     },
     {
-      "canonical_id": "DOI:10.3390/s26041101",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-16T10:50:36+00:00",
-      "return_count": 3,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5655,
-        "body_paragraphs": 32,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 1253,
-        "limitation_chars": 845,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_157152657d548191bd3e3b6600d8c869--2026-doi-10.3390-s26041101-dynamic-microbatch-tokenbudget-scheduling-research-20261016-1930-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_157152657d548191bd3e3b6600d8c869--2026-doi-10.3390-s26041101-dynamic-microbatch-tokenbudget-scheduling-research-20261016-1930-scheduled-chat-30-r01.json",
-      "worker_run_key": "20261016-1930-scheduled-chat-30/r01"
-    },
-    {
       "canonical_id": "DOI:10.1145/3725338",
       "title": null,
       "source_url": null,
@@ -3795,8 +3768,8 @@
     },
     {
       "canonical_id": "arXiv:2602.07804",
-      "title": "Pruning as a Cooperative Game: Surrogate-Assisted Layer Contribution Estimation for Large Language Models",
-      "source_url": "https://arxiv.org/pdf/2602.07804",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-16T11:25:54+00:00",
       "return_count": 1,
       "assigned_worker": "scheduled-chat-30",
@@ -3822,6 +3795,118 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_48b45f905d9881919590d1a75cc53123--2026-2602.07804-cooperative-game-layer-pruning-research-20261016-1445-scheduled-chat-45-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_48b45f905d9881919590d1a75cc53123--2026-2602.07804-cooperative-game-layer-pruning-research-20261016-1445-scheduled-chat-45-r01.json",
       "worker_run_key": "20261016-1445-scheduled-chat-45/r01"
+    },
+    {
+      "canonical_id": "arXiv:2601.06562",
+      "title": "Mosaic: Unlocking Long-Context Inference for Diffusion LLMs via Global Memory Planning and Dynamic Peak Taming",
+      "source_url": "https://arxiv.org/pdf/2601.06562v1",
+      "returned_at": "2026-10-16T11:34:50+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 148 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 4714,
+        "body_paragraphs": 28,
+        "method_chars": 1810,
+        "method_paragraphs": 11,
+        "evaluation_chars": 148,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "評価説明量 148 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_59c35bedd740819180aea404bbcfabbc--2026-2601.06562-mosaic-dllm-global-memory-planning-research-20261016-0200-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_59c35bedd740819180aea404bbcfabbc--2026-2601.06562-mosaic-dllm-global-memory-planning-research-20261016-0200-scheduled-chat-00-r01.json",
+      "worker_run_key": "20261016-0200-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2603.16590",
+      "title": "BATQuant: Outlier-resilient MXFP4 Quantization via Learnable Block-wise Optimization",
+      "source_url": "https://arxiv.org/html/2603.16590v1",
+      "returned_at": "2026-10-16T11:34:51+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 127 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5942,
+        "body_paragraphs": 40,
+        "method_chars": 1871,
+        "method_paragraphs": 13,
+        "evaluation_chars": 127,
+        "limitation_chars": 638,
+        "insufficiency_flags": [
+          "評価説明量 127 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_5b2c772920d08191923e2c9dafe96e62--2026-2603.16590-batquant-mxfp4-research-20261015-1325-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_5b2c772920d08191923e2c9dafe96e62--2026-2603.16590-batquant-mxfp4-research-20261015-1325-scheduled-chat-30-r01.json",
+      "worker_run_key": "20261015-1325-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "DOI:10.3390/s26041101",
+      "title": "Dynamic Micro-Batch and Token-Budget Scheduling for IoT-Scale Pipeline-Parallel LLM Inference",
+      "source_url": "https://www.mdpi.com/1424-8220/26/4/1101",
+      "returned_at": "2026-10-16T11:34:52+00:00",
+      "return_count": 3,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700",
+        "説明不足トリガー: 評価説明量 499 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 8129,
+        "body_paragraphs": 50,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 499,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700",
+          "評価説明量 499 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_5e606db91dc081918a7ebc3542c000db--2026-doi-10.3390-s26041101-dynamic-microbatch-tokenbudget-research-20261016-1445-scheduled-chat-45-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_5e606db91dc081918a7ebc3542c000db--2026-doi-10.3390-s26041101-dynamic-microbatch-tokenbudget-research-20261016-1445-scheduled-chat-45-r01.json",
+      "worker_run_key": "20261016-1445-scheduled-chat-45/r01"
+    },
+    {
+      "canonical_id": "arXiv:2605.22078",
+      "title": "Enhancing Visual Token Representations for Video Large Language Models via Training-Free Spatial-Temporal Pooling and Gridding",
+      "source_url": "https://arxiv.org/abs/2605.22078",
+      "returned_at": "2026-10-16T11:35:28+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 144 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5905,
+        "body_paragraphs": 36,
+        "method_chars": 1595,
+        "method_paragraphs": 9,
+        "evaluation_chars": 144,
+        "limitation_chars": 694,
+        "insufficiency_flags": [
+          "評価説明量 144 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_60130539d8ec8191990b5e49104e6cbf--2026-2605.22078-st-gridpool-video-token-representation-research-20261016-1630-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_60130539d8ec8191990b5e49104e6cbf--2026-2605.22078-st-gridpool-video-token-representation-research-20261016-1630-scheduled-chat-30-r01.json",
+      "worker_run_key": "20261016-1630-scheduled-chat-30/r01"
     }
   ]
 }
