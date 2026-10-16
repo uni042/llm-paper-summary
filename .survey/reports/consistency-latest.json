@@ -1,11 +1,11 @@
 {
   "schema_version": 3,
   "source_commit": "citation-backfill-working-tree",
-  "checked_at": "2026-10-16T13:27:08.230658+00:00",
+  "checked_at": "2026-10-16T13:54:23.137440+00:00",
   "status": "issues_found",
   "scope": "repository-wide structural consistency",
-  "inventory_file_count": 60529,
-  "checked_file_count": 60529,
+  "inventory_file_count": 60536,
+  "checked_file_count": 60536,
   "missing_files": [],
   "working_changes": [],
   "checks": [
@@ -30,11 +30,6 @@
   "findings": [
     {
       "code": "broken_local_link",
-      "path": ".survey/import-inbox/pending/research/libfile_c40909e1454c8191aa7398fe9c7e1006--2026-2601.11641-mod-dit-dynamic-sparse-attention-research-20261016-1400-scheduled-chat-00-r01.md",
-      "detail": "t-t1"
-    },
-    {
-      "code": "broken_local_link",
       "path": "PAPER-ADDITION-WORKFLOW.md",
       "detail": "docs/CODEX-DISCOVERY-BACKFILL-VERIFIED.md"
     },
@@ -42,6 +37,11 @@
       "code": "broken_local_link",
       "path": "papers/inference/08-edge-on-device-llm-systems/2026-2606.00756-comic-collaborative-memory-and-insights-circulation-for-long-horizon-llm.md",
       "detail": "s_self"
+    },
+    {
+      "code": "broken_local_link",
+      "path": "papers/inference/13-sparse-attention/2026-2601.11641-mixture-of-distributions-matters-dynamic-sparse-attention-for-efficient-.md",
+      "detail": "t-t1"
     }
   ]
 }
