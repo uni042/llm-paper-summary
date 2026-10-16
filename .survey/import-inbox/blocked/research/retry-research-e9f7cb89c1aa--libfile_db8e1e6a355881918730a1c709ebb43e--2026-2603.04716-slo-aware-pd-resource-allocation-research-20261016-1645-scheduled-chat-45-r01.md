@@ -31,6 +31,8 @@ reference_main_sha: '3183e5d2fa6131799f6873b289db9389ae5647e2'
 worklist_rank: 88
 quality_self_review_passed: true
 quality_self_review_version: 'PAPER-QUALITY-GUIDE-2026-10-07'
+last_audited: null
+audit_version: 0
 ---
 
 # SLOを満たすP/D分離LLM推論の資源数を、待ち行列と実測から決める
