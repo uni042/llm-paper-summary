@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "8c871c30dc2f4ee9b89cdca4f34415ef0619e163106d3fc3e7429ccfce3f5035",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/retry-research-a4957a409a45--libfile_39bbd72cc26481919d651249663a0ae4--2026-2606.25091-edge-cloud-speculative-decoding-economics-research-20261016-1730-scheduled-chat-30-r01.md",
+  "canonical_id": "arXiv:2606.25091",
+  "worker_completed_at": "2026-10-16T17:34:42+09:00",
+  "worker_run_key": "20261016-1730-scheduled-chat-30/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 6549,
+    "body_paragraphs": 49,
+    "method_chars": 0,
+    "method_paragraphs": 0,
+    "evaluation_chars": 0,
+    "limitation_chars": 0,
+    "insufficiency_flags": [
+      "手法説明量 0 < 700",
+      "評価説明量 0 < 500",
+      "限界説明量 0 < 推奨 120"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 手法説明量 0 < 700",
+    "説明不足トリガー: 評価説明量 0 < 500"
+  ],
+  "processed_at": "2026-10-16T08:59:43+00:00"
+}

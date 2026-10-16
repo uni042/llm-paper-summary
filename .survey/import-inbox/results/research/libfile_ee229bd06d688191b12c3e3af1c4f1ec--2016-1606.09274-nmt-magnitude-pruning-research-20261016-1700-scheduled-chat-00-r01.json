@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "7dd95fd939d0b47376667de48c2fdcbec5385ffd378286cefa21ad0bf9159383",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_ee229bd06d688191b12c3e3af1c4f1ec--2016-1606.09274-nmt-magnitude-pruning-research-20261016-1700-scheduled-chat-00-r01.md",
+  "canonical_id": "arXiv:1606.09274",
+  "worker_completed_at": "2026-10-16T17:08:00+09:00",
+  "worker_run_key": "20261016-1700-scheduled-chat-00/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 5432,
+    "body_paragraphs": 31,
+    "method_chars": 1033,
+    "method_paragraphs": 6,
+    "evaluation_chars": 489,
+    "limitation_chars": 0,
+    "insufficiency_flags": [
+      "評価説明量 489 < 500",
+      "限界説明量 0 < 推奨 120"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 評価説明量 489 < 500"
+  ],
+  "processed_at": "2026-10-16T08:59:40+00:00"
+}

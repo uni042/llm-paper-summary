@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "681a4193266d15a9ed902860304fa2505926e0d0d98f19e4c8e2767679d38d7f",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/retry-research-952ea16a168c--libfile_5e606db91dc081918a7ebc3542c000db--2026-doi-10.3390-s26041101-dynamic-microbatch-tokenbudget-research-20261016-1445-scheduled-chat-45-r01.md",
+  "canonical_id": "DOI:10.3390/s26041101",
+  "worker_completed_at": "2026-10-16T14:59:00+09:00",
+  "worker_run_key": "20261016-1445-scheduled-chat-45/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 8129,
+    "body_paragraphs": 50,
+    "method_chars": 0,
+    "method_paragraphs": 0,
+    "evaluation_chars": 499,
+    "limitation_chars": 0,
+    "insufficiency_flags": [
+      "手法説明量 0 < 700",
+      "評価説明量 499 < 500",
+      "限界説明量 0 < 推奨 120"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 手法説明量 0 < 700",
+    "説明不足トリガー: 評価説明量 499 < 500"
+  ],
+  "processed_at": "2026-10-16T08:59:42+00:00"
+}
