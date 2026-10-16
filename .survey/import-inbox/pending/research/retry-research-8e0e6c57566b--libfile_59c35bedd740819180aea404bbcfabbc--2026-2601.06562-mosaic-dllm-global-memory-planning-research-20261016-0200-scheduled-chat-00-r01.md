@@ -34,6 +34,8 @@ worker_run_key: 20261016-0200-scheduled-chat-00/r01
 worker_id: scheduled-chat-00
 reference_main_sha: 20b36db3252dc720a1ff5330559589e540722704
 worklist_rank: 70
+last_audited: null
+audit_version: 0
 ---
 
 # Mosaic：拡散言語モデルの長文推論を支える大域的活性化メモリ管理
