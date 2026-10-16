@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-16T14:18:34+00:00",
+  "generated_at": "2026-10-16T14:23:43+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 187,
+  "count": 191,
   "entries": [
     {
       "canonical_id": "DOI:10.1145/3714983.3714987",
@@ -4840,8 +4840,8 @@
     },
     {
       "canonical_id": "arXiv:2603.01400",
-      "title": "Token Reduction via Local and Global Contexts Optimization for Efficient Video Large Language Models",
-      "source_url": "https://arxiv.org/pdf/2603.01400",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-16T14:16:55+00:00",
       "return_count": 1,
       "assigned_worker": "scheduled-chat-00",
@@ -4868,8 +4868,8 @@
     },
     {
       "canonical_id": "arXiv:2502.14051",
-      "title": "RocketKV: Accelerating Long-Context LLM Inference via Two-Stage KV Cache Compression",
-      "source_url": "https://arxiv.org/pdf/2502.14051",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-16T14:17:22+00:00",
       "return_count": 1,
       "assigned_worker": "scheduled-chat-00",
@@ -4896,8 +4896,8 @@
     },
     {
       "canonical_id": "DOI:10.1145/3620666.3651324",
-      "title": "IANUS: Integrated Accelerator based on NPU-PIM Unified Memory System",
-      "source_url": "https://arxiv.org/html/2410.15008v1",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-16T14:17:23+00:00",
       "return_count": 1,
       "assigned_worker": "scheduled-chat-00",
@@ -4921,6 +4921,119 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_ecd424b861d48191836c373d5f76e416--2024-doi-10.1145.3620666.3651324-ianus-npu-pim-unified-memory-research-20261016-0030-scheduled-chat-30-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_ecd424b861d48191836c373d5f76e416--2024-doi-10.1145.3620666.3651324-ianus-npu-pim-unified-memory-research-20261016-0030-scheduled-chat-30-r01.json",
       "worker_run_key": "20261016-0030-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2503.00979",
+      "title": "Dialogue Without Limits: Constant-Sized KV Caches for Extended Responses in LLMs",
+      "source_url": "https://arxiv.org/html/2503.00979v2",
+      "returned_at": "2026-10-16T14:22:32+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5523,
+        "body_paragraphs": 33,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 1255,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_eec4f4b459248191bff3e3b2907dbe7c--2025-2503.00979-morphkv-research-20261016-0230-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_eec4f4b459248191bff3e3b2907dbe7c--2025-2503.00979-morphkv-research-20261016-0230-scheduled-chat-30-r01.json",
+      "worker_run_key": "20261016-0230-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "DOI:10.1145/3731569.3764823",
+      "title": "Jenga: Effective Memory Management for Serving LLM with Heterogeneity",
+      "source_url": "https://arxiv.org/abs/2503.18292",
+      "returned_at": "2026-10-16T14:22:33+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700",
+        "説明不足トリガー: 評価説明量 125 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 6739,
+        "body_paragraphs": 40,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 125,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700",
+          "評価説明量 125 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_eee1e8ea93748191bf11ad92df813a8d--2025-2503.18292-jenga-research-20261016-0230-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_eee1e8ea93748191bf11ad92df813a8d--2025-2503.18292-jenga-research-20261016-0230-scheduled-chat-30-r01.json",
+      "worker_run_key": "20261016-0230-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2502.04420",
+      "title": "KVTuner: Sensitivity-Aware Layer-Wise Mixed-Precision KV Cache Quantization for Efficient and Nearly Lossless LLM Inference",
+      "source_url": "https://arxiv.org/pdf/2502.04420",
+      "returned_at": "2026-10-16T14:22:59+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 173 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5423,
+        "body_paragraphs": 32,
+        "method_chars": 1271,
+        "method_paragraphs": 8,
+        "evaluation_chars": 173,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "評価説明量 173 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_f41f4086aee88191b71226f3773226e9--2025-2502.04420-kvtuner-layerwise-kv-quantization-research-20261016-0130-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_f41f4086aee88191b71226f3773226e9--2025-2502.04420-kvtuner-layerwise-kv-quantization-research-20261016-0130-scheduled-chat-30-r01.json",
+      "worker_run_key": "20261016-0130-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2403.01136",
+      "title": "LLM-PQ: Serving LLM on Heterogeneous Clusters with Phase-Aware Partition and Adaptive Quantization",
+      "source_url": "https://arxiv.org/html/2403.01136v1",
+      "returned_at": "2026-10-16T14:23:00+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 6676,
+        "body_paragraphs": 39,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 1102,
+        "limitation_chars": 845,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_f5b678402f14819185fb73640fec2570--2024-2403.01136-llm-pq-research-20261016-0230-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_f5b678402f14819185fb73640fec2570--2024-2403.01136-llm-pq-research-20261016-0230-scheduled-chat-30-r01.json",
+      "worker_run_key": "20261016-0230-scheduled-chat-30/r01"
     }
   ]
 }
