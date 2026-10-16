@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-880eb489f6250aa9-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "SemanticScholar:7945684818786fcb32cf92bace2566d7d6bc8945",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "SemanticScholar:7945684818786fcb32cf92bace2566d7d6bc8945",
+    "identity_tokens": [
+      "SemanticScholar:7945684818786fcb32cf92bace2566d7d6bc8945",
+      "semanticscholar:7945684818786fcb32cf92bace2566d7d6bc8945",
+      "title:legoos-a-disseminated-distributed-os-for-hardware-resource-disaggregation"
+    ],
+    "reason": "分散オペレーティングシステムの計算・メモリ資源分離を扱う研究であり、タイトルと書誌で確認できる主題は汎用OS設計。LLMの推論、KVキャッシュ、MoE、言語モデル向け実装・評価が主対象ではない。LLM特化のメモリ階層・推論システムの研究成果としては収録しない。",
+    "first_checked_at": "2026-10-12T13:50:18+00:00",
+    "last_checked_at": "2026-10-16T09:29:11+00:00",
+    "linked_from": [],
+    "title": "LegoOS: A Disseminated, Distributed OS for Hardware Resource Disaggregation"
+  },
+  "processed_at": "2026-10-16T09:29:12+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-880eb489f625",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

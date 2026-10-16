@@ -2,7 +2,7 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-16T09:27:37+00:00",
+  "updated_at": "2026-10-16T09:29:11+00:00",
   "record_count": 12414,
   "records": {
     "arXiv:2303.08774": {
@@ -165036,11 +165036,12 @@
       "canonical_id": "SemanticScholar:7945684818786fcb32cf92bace2566d7d6bc8945",
       "identity_tokens": [
         "SemanticScholar:7945684818786fcb32cf92bace2566d7d6bc8945",
+        "semanticscholar:7945684818786fcb32cf92bace2566d7d6bc8945",
         "title:legoos-a-disseminated-distributed-os-for-hardware-resource-disaggregation"
       ],
-      "reason": "著者らのOSDI 2018公式一次要旨では、分離型計算機を管理するsplitkernel方式を提案し、CPU・メモリ・ストレージを分離した汎用データセンターOSをLinuxと比較する。LLMの推論・学習、注意カーネル、KVキャッシュ、モデルオフロード、専門家配置などを研究対象にしておらず、対象サーベイのLLMシステム技術への直接的な貢献は一次要旨で確認できない。一般的な資源分離OSとして背景関連はあるが収録対象外。",
+      "reason": "分散オペレーティングシステムの計算・メモリ資源分離を扱う研究であり、タイトルと書誌で確認できる主題は汎用OS設計。LLMの推論、KVキャッシュ、MoE、言語モデル向け実装・評価が主対象ではない。LLM特化のメモリ階層・推論システムの研究成果としては収録しない。",
       "first_checked_at": "2026-10-12T13:50:18+00:00",
-      "last_checked_at": "2026-10-12T13:50:18+00:00",
+      "last_checked_at": "2026-10-16T09:29:11+00:00",
       "linked_from": [],
       "title": "LegoOS: A Disseminated, Distributed OS for Hardware Resource Disaggregation"
     },
