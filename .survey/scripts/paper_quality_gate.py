@@ -128,6 +128,14 @@ def _boilerplate_reuse_failures(repo_root: Path, paper_path: str, content: str) 
             other_text = other.read_text(encoding="utf-8", errors="strict")
             if quality.is_moved_stub(other_text.splitlines()):
                 continue
+            # A queued retry of the same canonical paper is not cross-paper boilerplate.
+            # Keep comparing published papers and other canonical identities normally.
+            if (
+                rel.startswith(".survey/import-inbox/pending/research/")
+                and target_id
+                and str(quality._frontmatter(other_text)[0].get("canonical_id") or "").strip().casefold() == target_id
+            ):
+                continue
             if (
                 target_path and target_sha and target_id
                 and rel == target_path
