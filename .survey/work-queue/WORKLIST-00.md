@@ -1,7 +1,7 @@
 # Scheduled worker :00 worklist
 
 Worker: `scheduled-chat-00`  
-Generated: `2026-10-16T04:00:30+00:00`
+Generated: `2026-10-16T04:37:12+00:00`
 
 このページはこのworker専用の再構築可能な選択索引です。他のScheduled worker用ページとは候補を重複させません（十分な在庫がある場合）。
 正本は `.survey/work-queue/jobs/`、claim、論文実体、relevance ledgerです。処理直前に最新正本を再確認してください。
@@ -79,8 +79,8 @@ ready総数: **1865** / 未claim総数: **1864** / このworker向け: **200**
 | 60 | 103 | research | arXiv:2605.11605 | Keep What Audio Cannot Say: Context-Preserving Token Pruning for Omni-LLMs | [primary](https://arxiv.org/abs/2605.11605) | `papers/inference/99-other-inference-systems/2026-2605.11605-keep-what-audio-cannot-say-context-preserving-token-pruning-for-omni-llms.md` |
 | 61 | 103 | research | arXiv:2604.24622 | CF-VLA: Efficient Coarse-to-Fine Action Generation for Vision-Language-Action Policies | [primary](https://arxiv.org/abs/2604.24622) | `papers/inference/99-other-inference-systems/2026-2604.24622-cf-vla-efficient-coarse-to-fine-action-generation-for-vision-language-action-policies.md` |
 | 62 | 103 | research | arXiv:2604.03072 | MI-Pruner: Crossmodal Mutual Information-guided Token Pruner for Efficient MLLMs | [primary](https://arxiv.org/abs/2604.03072) | `papers/inference/99-other-inference-systems/2026-2604.03072-mi-pruner-crossmodal-mutual-information-guided-token-pruner-for-efficient-mllms.md` |
-| 63 | 103 | research | arXiv:2603.21269 | DyGeoVLN: Infusing Dynamic Geometry Foundation Model into Vision-Language Navigation | [primary](https://arxiv.org/abs/2603.21269) | `papers/inference/99-other-inference-systems/2026-2603.21269-dygeovln-infusing-dynamic-geometry-foundation-model-into-vision-language-navigation.md` |
-| 64 | 103 | research | arXiv:2603.20843 | HiCI: Hierarchical Construction-Integration for Long-Context Attention | [primary](https://arxiv.org/abs/2603.20843) | `papers/inference/99-other-inference-systems/2026-2603.20843-hici-hierarchical-construction-integration-for-long-context-attention.md` |
+| 63 | 103 | research | DOI:10.1145/3779212.3790240 | Trinity: Three-Dimensional Tensor Program Optimization via Tile-level Equality Saturation | [primary](https://doi.org/10.1145/3779212.3790240) | `papers/inference/99-other-inference-systems/2026-f777f1110d4d-trinity-three-dimensional-tensor-program-optimization-via-tile-level-equality-saturation.md` |
+| 64 | 103 | research | arXiv:2603.18489 | EntropyCache: Decoded Token Entropy Guided KV Caching for Diffusion Language Models | [primary](https://arxiv.org/abs/2603.18489) | `papers/inference/99-other-inference-systems/2026-2603.18489-entropycache-decoded-token-entropy-guided-kv-caching-for-diffusion-language-models.md` |
 | 65 | 103 | research | arXiv:2602.19281 | Limited Reasoning Space: The cage of long-horizon reasoning in LLMs | [primary](https://arxiv.org/abs/2602.19281) | `papers/inference/99-other-inference-systems/2026-2602.19281-limited-reasoning-space-the-cage-of-long-horizon-reasoning-in-llms.md` |
 | 66 | 103 | research | arXiv:2602.01778 | Data Distribution Matters: A Data-Centric Perspective on Context Compression for Large Language Model | [primary](https://arxiv.org/abs/2602.01778) | `papers/inference/99-other-inference-systems/2026-2602.01778-data-distribution-matters-a-data-centric-perspective-on-context-compression-for-large-language-model.md` |
 | 67 | 103 | research | arXiv:2601.23278 | FOCUS: DLLMs Know How to Tame Their Compute Bound | [primary](https://arxiv.org/abs/2601.23278) | `papers/inference/99-other-inference-systems/2026-2601.23278-focus-dllms-know-how-to-tame-their-compute-bound.md` |

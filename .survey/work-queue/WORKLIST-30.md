@@ -1,7 +1,7 @@
 # Scheduled worker :30 worklist
 
 Worker: `scheduled-chat-30`  
-Generated: `2026-10-16T04:00:30+00:00`
+Generated: `2026-10-16T04:37:12+00:00`
 
 このページはこのworker専用の再構築可能な選択索引です。他のScheduled worker用ページとは候補を重複させません（十分な在庫がある場合）。
 正本は `.survey/work-queue/jobs/`、claim、論文実体、relevance ledgerです。処理直前に最新正本を再確認してください。
@@ -79,8 +79,8 @@ ready総数: **1865** / 未claim総数: **1864** / このworker向け: **200**
 | 60 | 103 | research | arXiv:2605.12464 | Search Your Block Floating Point Scales! | [primary](https://arxiv.org/abs/2605.12464) | `papers/inference/99-other-inference-systems/2026-2605.12464-search-your-block-floating-point-scales.md` |
 | 61 | 103 | research | arXiv:2604.14825 | Nautilus: An Auto-Scheduling Tensor Compiler for Efficient Tiled GPU Kernels | [primary](https://arxiv.org/abs/2604.14825) | `papers/inference/99-other-inference-systems/2026-2604.14825-nautilus-an-auto-scheduling-tensor-compiler-for-efficient-tiled-gpu-kernels.md` |
 | 62 | 103 | research | arXiv:2603.28845 | OneComp: One-Line Revolution for Generative AI Model Compression | [primary](https://arxiv.org/abs/2603.28845) | `papers/inference/99-other-inference-systems/2026-2603.28845-onecomp-one-line-revolution-for-generative-ai-model-compression.md` |
-| 63 | 103 | research | DOI:10.1145/3779212.3790240 | Trinity: Three-Dimensional Tensor Program Optimization via Tile-level Equality Saturation | [primary](https://doi.org/10.1145/3779212.3790240) | `papers/inference/99-other-inference-systems/2026-f777f1110d4d-trinity-three-dimensional-tensor-program-optimization-via-tile-level-equality-saturation.md` |
-| 64 | 103 | research | arXiv:2603.18489 | EntropyCache: Decoded Token Entropy Guided KV Caching for Diffusion Language Models | [primary](https://arxiv.org/abs/2603.18489) | `papers/inference/99-other-inference-systems/2026-2603.18489-entropycache-decoded-token-entropy-guided-kv-caching-for-diffusion-language-models.md` |
+| 63 | 103 | research | DOI:10.1145/3779212.3790246 | SwiftSpec: Disaggregated Speculative Decoding and Fused Kernels for Low-Latency LLM Inference | [primary](https://doi.org/10.1145/3779212.3790246) | `papers/inference/99-other-inference-systems/2026-92272744585e-swiftspec-disaggregated-speculative-decoding-and-fused-kernels-for-low-latency-llm-inference.md` |
+| 64 | 103 | research | DOI:10.1016/j.dcan.2026.03.010 | Generative IoT: advancing IoT with generative AI and large language models | [primary](https://doi.org/10.1016/j.dcan.2026.03.010) | `papers/inference/99-other-inference-systems/2026-00368177de6f-generative-iot-advancing-iot-with-generative-ai-and-large-language-models.md` |
 | 65 | 103 | research | arXiv:2602.12305 | OptiML: An End-to-End Framework for Program Synthesis and CUDA Kernel Optimization | [primary](https://arxiv.org/abs/2602.12305) | `papers/inference/99-other-inference-systems/2026-2602.12305-optiml-an-end-to-end-framework-for-program-synthesis-and-cuda-kernel-optimization.md` |
 | 66 | 103 | research | arXiv:2602.02680 | FlexRank: Nested Low-Rank Knowledge Decomposition for Adaptive Model Deployment | [primary](https://arxiv.org/abs/2602.02680) | `papers/inference/99-other-inference-systems/2026-2602.02680-flexrank-nested-low-rank-knowledge-decomposition-for-adaptive-model-deployment.md` |
 | 67 | 103 | research | DOI:10.1145/3774934.3786444 | MetaAttention: A Unified and Performant Attention Framework across Hardware Backends | [primary](https://doi.org/10.1145/3774934.3786444) | `papers/inference/99-other-inference-systems/2026-2a6becaafcba-metaattention-a-unified-and-performant-attention-framework-across-hardware-backends.md` |
