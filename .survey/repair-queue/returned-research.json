@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-16T14:23:43+00:00",
+  "generated_at": "2026-10-16T14:32:21+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 191,
+  "count": 195,
   "entries": [
     {
       "canonical_id": "DOI:10.1145/3714983.3714987",
@@ -4924,8 +4924,8 @@
     },
     {
       "canonical_id": "arXiv:2503.00979",
-      "title": "Dialogue Without Limits: Constant-Sized KV Caches for Extended Responses in LLMs",
-      "source_url": "https://arxiv.org/html/2503.00979v2",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-16T14:22:32+00:00",
       "return_count": 1,
       "assigned_worker": "scheduled-chat-30",
@@ -4952,8 +4952,8 @@
     },
     {
       "canonical_id": "DOI:10.1145/3731569.3764823",
-      "title": "Jenga: Effective Memory Management for Serving LLM with Heterogeneity",
-      "source_url": "https://arxiv.org/abs/2503.18292",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-16T14:22:33+00:00",
       "return_count": 1,
       "assigned_worker": "scheduled-chat-45",
@@ -4982,8 +4982,8 @@
     },
     {
       "canonical_id": "arXiv:2502.04420",
-      "title": "KVTuner: Sensitivity-Aware Layer-Wise Mixed-Precision KV Cache Quantization for Efficient and Nearly Lossless LLM Inference",
-      "source_url": "https://arxiv.org/pdf/2502.04420",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-16T14:22:59+00:00",
       "return_count": 1,
       "assigned_worker": "scheduled-chat-00",
@@ -5010,8 +5010,8 @@
     },
     {
       "canonical_id": "arXiv:2403.01136",
-      "title": "LLM-PQ: Serving LLM on Heterogeneous Clusters with Phase-Aware Partition and Adaptive Quantization",
-      "source_url": "https://arxiv.org/html/2403.01136v1",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-16T14:23:00+00:00",
       "return_count": 1,
       "assigned_worker": "scheduled-chat-00",
@@ -5034,6 +5034,119 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_f5b678402f14819185fb73640fec2570--2024-2403.01136-llm-pq-research-20261016-0230-scheduled-chat-30-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_f5b678402f14819185fb73640fec2570--2024-2403.01136-llm-pq-research-20261016-0230-scheduled-chat-30-r01.json",
       "worker_run_key": "20261016-0230-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2602.20309",
+      "title": "QuantVLA: Scale-Calibrated Post-Training Quantization for Vision-Language-Action Models",
+      "source_url": "https://arxiv.org/html/2602.20309v4",
+      "returned_at": "2026-10-16T14:30:20+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 448 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 6694,
+        "body_paragraphs": 35,
+        "method_chars": 1898,
+        "method_paragraphs": 11,
+        "evaluation_chars": 448,
+        "limitation_chars": 659,
+        "insufficiency_flags": [
+          "評価説明量 448 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_f60f2a3fae1c819186a2aebaaab88d54--2026-2602.20309-quantvla-scale-calibrated-vla-quantization-research-20261016-1730-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_f60f2a3fae1c819186a2aebaaab88d54--2026-2602.20309-quantvla-scale-calibrated-vla-quantization-research-20261016-1730-scheduled-chat-30-r01.json",
+      "worker_run_key": "20261016-1730-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2511.16786",
+      "title": "Revisiting Multimodal KV Cache Compression: A Frequency-Domain-Guided Outlier-KV-Aware Approach",
+      "source_url": "https://arxiv.org/html/2511.16786v2",
+      "returned_at": "2026-10-16T14:31:06+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 121 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 4862,
+        "body_paragraphs": 28,
+        "method_chars": 1316,
+        "method_paragraphs": 9,
+        "evaluation_chars": 121,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "評価説明量 121 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_f6ed9476f1988191abce699d02b0eef7--2025-2511.16786-flashcache-frequency-outlier-kv-research-20261015-2300-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_f6ed9476f1988191abce699d02b0eef7--2025-2511.16786-flashcache-frequency-outlier-kv-research-20261015-2300-scheduled-chat-00-r01.json",
+      "worker_run_key": "20261015-2300-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2406.05981",
+      "title": "ShiftAddLLM: Accelerating Pretrained LLMs via Post-Training Multiplication-Less Reparameterization",
+      "source_url": "https://arxiv.org/pdf/2406.05981",
+      "returned_at": "2026-10-16T14:31:07+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 152 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 6881,
+        "body_paragraphs": 39,
+        "method_chars": 2308,
+        "method_paragraphs": 13,
+        "evaluation_chars": 152,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "評価説明量 152 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_f82da8ade528819189e9b927eb21e774--2024-2406.05981-shiftaddllm-bcq-pot-reparameterization-research-20261016-0630-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_f82da8ade528819189e9b927eb21e774--2024-2406.05981-shiftaddllm-bcq-pot-reparameterization-research-20261016-0630-scheduled-chat-30-r01.json",
+      "worker_run_key": "20261016-0630-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "DOI:10.1145/3552326.3587438",
+      "title": "Tabi: An Efficient Multi-Level Inference System for Large Language Models",
+      "source_url": "https://yidingwang.xyz/files/tabi_eurosys23.pdf",
+      "returned_at": "2026-10-16T14:31:09+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700",
+        "説明不足トリガー: 評価説明量 0 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5287,
+        "body_paragraphs": 27,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 0,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700",
+          "評価説明量 0 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_fa4f002121488191aed9f30d61aba9d4--2023-doi-10.1145.3552326.3587438-tabi-multilevel-inference-research-20261016-0030-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_fa4f002121488191aed9f30d61aba9d4--2023-doi-10.1145.3552326.3587438-tabi-multilevel-inference-research-20261016-0030-scheduled-chat-30-r01.json",
+      "worker_run_key": "20261016-0030-scheduled-chat-30/r01"
     }
   ]
 }

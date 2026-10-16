@@ -33,6 +33,8 @@ worker_completed_at: '2026-10-16T02:39:01+09:00'
 worker_run_key: '20261016-0230-scheduled-chat-30/r01'
 worker_id: scheduled-chat-30
 reference_main_sha: f74bdeeacd6e70c35fb4f009f9088d42a3abf8af
+last_audited: null
+audit_version: 0
 ---
 
 # MorphKV：長い応答でも一定容量を保つ相関認識KVキャッシュ
