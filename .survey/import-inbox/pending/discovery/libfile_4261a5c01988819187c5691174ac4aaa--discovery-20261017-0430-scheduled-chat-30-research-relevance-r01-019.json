@@ -1,0 +1,27 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261017-0430-scheduled-chat-30/r01/research-prescreen",
+  "reference_main_sha": "1aa52723a447387c082a9d7597127b3e6126c1fa",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.13742",
+      "identity_tokens": [
+        "arxiv:2601.13742"
+      ],
+      "title": "Hearing Between the Lines: Unlocking the Reasoning Power of LLMs for Speech Evaluation",
+      "reason": "TRACEは音声特徴をテキスト表現に変換してLLM判定器に渡し、内容・声質・パラ言語情報を個別評価して人間評価との一致を高める。音声対話評価の品質と判定費用が目的で、LLMサービング、投機的復号、量子化、KVキャッシュ等の汎用推論システム技術を提案していない。",
+      "source_url": "https://arxiv.org/abs/2601.13742",
+      "body_check": "abstract_screen_only; body_not_read; 2026-10-17にarXiv一次要旨と書誌を確認",
+      "first_checked_at": "2026-10-17T04:28:30+09:00",
+      "last_checked_at": "2026-10-17T04:28:30+09:00",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance",
+      "research_job_id": "job-research-42885bd383fe72b2",
+      "worklist_rank": 19
+    }
+  ]
+}
