@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-16T15:23:49+00:00",
+  "generated_at": "2026-10-16T15:29:52+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 196,
+  "count": 197,
   "entries": [
     {
       "canonical_id": "DOI:10.1145/3714983.3714987",
@@ -3584,35 +3584,6 @@
       "worker_run_key": "20261016-1330-scheduled-chat-30/r01"
     },
     {
-      "canonical_id": "arXiv:2512.00719",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-16T11:51:14+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700",
-        "説明不足トリガー: 評価説明量 0 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 7770,
-        "body_paragraphs": 39,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 0,
-        "limitation_chars": 955,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700",
-          "評価説明量 0 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_74e6708254708191af1f8e518d2782e7--2025-2512.00719-simple-disaggregated-sampling-research-20261015-2330-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_74e6708254708191af1f8e518d2782e7--2025-2512.00719-simple-disaggregated-sampling-research-20261015-2330-scheduled-chat-30-r01.json",
-      "worker_run_key": "20261015-2330-scheduled-chat-30/r01"
-    },
-    {
       "canonical_id": "arXiv:2602.08722",
       "title": null,
       "source_url": null,
@@ -4058,64 +4029,6 @@
       "worker_run_key": "20261015-2230-scheduled-chat-30/r01"
     },
     {
-      "canonical_id": "arXiv:2606.04050",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-16T13:49:04+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700",
-        "説明不足トリガー: 評価説明量 217 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 8434,
-        "body_paragraphs": 47,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 217,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700",
-          "評価説明量 217 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_d5d0f1c0574881919a7ba930599ff86f--2026-2606.04050-liftquant-fractional-bitwidth-research-20261016-1430-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_d5d0f1c0574881919a7ba930599ff86f--2026-2606.04050-liftquant-fractional-bitwidth-research-20261016-1430-scheduled-chat-30-r01.json",
-      "worker_run_key": "20261016-1430-scheduled-chat-30/r01"
-    },
-    {
-      "canonical_id": "DOI:10.1145/3712285.3759867",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-16T13:49:36+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 9217,
-        "body_paragraphs": 52,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 595,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_da52fd8bea448191905e16e11a1316db--2025-maveriq-fingerprint-fragmentation-aware-serving-research-20261016-1445-scheduled-chat-45-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_da52fd8bea448191905e16e11a1316db--2025-maveriq-fingerprint-fragmentation-aware-serving-research-20261016-1445-scheduled-chat-45-r01.json",
-      "worker_run_key": "20261016-1445-scheduled-chat-45/r01"
-    },
-    {
       "canonical_id": "arXiv:2608.04074",
       "title": null,
       "source_url": null,
@@ -4223,34 +4136,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_e6dada5a19908191896597a719063534--2024-2401.08383-exflow-interlayer-expert-affinity-research-20261016-0630-scheduled-chat-30-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_e6dada5a19908191896597a719063534--2024-2401.08383-exflow-interlayer-expert-affinity-research-20261016-0630-scheduled-chat-30-r01.json",
       "worker_run_key": "20261016-0630-scheduled-chat-30/r01"
-    },
-    {
-      "canonical_id": "arXiv:2603.01400",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-16T14:16:55+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 0 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 7173,
-        "body_paragraphs": 43,
-        "method_chars": 2320,
-        "method_paragraphs": 15,
-        "evaluation_chars": 0,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "評価説明量 0 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_e78e7ade37588191b72a6aea4b658d32--2026-2603.01400-aot-local-global-video-token-reduction-research-20261016-0100-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_e78e7ade37588191b72a6aea4b658d32--2026-2603.01400-aot-local-global-video-token-reduction-research-20261016-0100-scheduled-chat-00-r01.json",
-      "worker_run_key": "20261016-0100-scheduled-chat-00/r01"
     },
     {
       "canonical_id": "arXiv:2502.14051",
@@ -5034,8 +4919,8 @@
     },
     {
       "canonical_id": "arXiv:2602.22675",
-      "title": "Search More, Think Less: Rethinking Long-Horizon Agentic Search for Efficiency and Generalization",
-      "source_url": "https://arxiv.org/html/2602.22675v2",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-16T15:23:47+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-30",
@@ -5062,8 +4947,8 @@
     },
     {
       "canonical_id": "arXiv:2607.02303",
-      "title": "A Hippocampus for Linear Attention: An Exact Memory for What the Recurrent State Forgets",
-      "source_url": "https://arxiv.org/abs/2607.02303",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-16T15:23:47+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-00",
@@ -5089,8 +4974,8 @@
     },
     {
       "canonical_id": "arXiv:2409.01141",
-      "title": "Duplex: A Device for Large Language Models with Mixture of Experts, Grouped Query Attention, and Continuous Batching",
-      "source_url": "https://scale.snu.ac.kr/papers/2024-12-Conference-MICRO-Duplex.pdf",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-16T15:23:48+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-00",
@@ -5117,8 +5002,8 @@
     },
     {
       "canonical_id": "DOI:10.1145/3552326.3587438",
-      "title": "Tabi: An Efficient Multi-Level Inference System for Large Language Models",
-      "source_url": "https://yidingwang.xyz/files/tabi_eurosys23.pdf",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-16T15:23:49+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-30",
@@ -5147,8 +5032,8 @@
     },
     {
       "canonical_id": "arXiv:2502.20704",
-      "title": "Fuzzy Speculative Decoding for a Tunable Accuracy-Runtime Tradeoff",
-      "source_url": "https://arxiv.org/pdf/2502.20704",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-16T15:23:49+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-45",
@@ -5172,6 +5057,146 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-4bfa1854d540--libfile_8c6476348c948191ba731ed0c4b9efaa--2025-2502.20704-fuzzy-speculative-decoding-research-20261015-1655-scheduled-chat-00-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-4bfa1854d540--libfile_8c6476348c948191ba731ed0c4b9efaa--2025-2502.20704-fuzzy-speculative-decoding-research-20261015-1655-scheduled-chat-00-r01.json",
       "worker_run_key": "20261015-1655-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2603.04716",
+      "title": "SLO-Aware Compute Resource Allocation for Prefill-Decode Disaggregated LLM Inference",
+      "source_url": "https://arxiv.org/pdf/2603.04716",
+      "returned_at": "2026-10-16T15:29:47+00:00",
+      "return_count": 4,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2026-2603.04716-slo-aware-compute-resource-allocation-for-prefill-decode-disaggregated-l.md と 17 段落 / 4205文字 (100.0%) が完全一致"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 7630,
+        "body_paragraphs": 45,
+        "method_chars": 3102,
+        "method_paragraphs": 22,
+        "evaluation_chars": 1171,
+        "limitation_chars": 722,
+        "insufficiency_flags": []
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-4bfb616a2359--libfile_db8e1e6a355881918730a1c709ebb43e--2026-2603.04716-slo-aware-pd-quality-repair-20261016-1840.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-4bfb616a2359--libfile_db8e1e6a355881918730a1c709ebb43e--2026-2603.04716-slo-aware-pd-quality-repair-20261016-1840.json",
+      "worker_run_key": "20261016-1645-scheduled-chat-45/r01"
+    },
+    {
+      "canonical_id": "arXiv:2606.04050",
+      "title": "LiftQuant: Continuous Bit-Width LLM via Dimensional Lifting and Projection",
+      "source_url": "https://arxiv.org/html/2606.04050v2",
+      "returned_at": "2026-10-16T15:29:48+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700",
+        "説明不足トリガー: 評価説明量 217 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 8434,
+        "body_paragraphs": 47,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 217,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700",
+          "評価説明量 217 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-4f45eb58cfae--libfile_d5d0f1c0574881919a7ba930599ff86f--2026-2606.04050-liftquant-fractional-bitwidth-research-20261016-1430-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-4f45eb58cfae--libfile_d5d0f1c0574881919a7ba930599ff86f--2026-2606.04050-liftquant-fractional-bitwidth-research-20261016-1430-scheduled-chat-30-r0.json",
+      "worker_run_key": "20261016-1430-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2603.01400",
+      "title": "Token Reduction via Local and Global Contexts Optimization for Efficient Video Large Language Models",
+      "source_url": "https://arxiv.org/pdf/2603.01400",
+      "returned_at": "2026-10-16T15:29:49+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 0 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 7173,
+        "body_paragraphs": 43,
+        "method_chars": 2320,
+        "method_paragraphs": 15,
+        "evaluation_chars": 0,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "評価説明量 0 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-5d326354d01f--libfile_e78e7ade37588191b72a6aea4b658d32--2026-2603.01400-aot-local-global-video-token-reduction-research-20261016-0100-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-5d326354d01f--libfile_e78e7ade37588191b72a6aea4b658d32--2026-2603.01400-aot-local-global-video-token-reduction-research-20261016-0100-scheduled-c.json",
+      "worker_run_key": "20261016-0100-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "DOI:10.1145/3712285.3759867",
+      "title": "MaverIQ: Fingerprint-Guided Extrapolation and Fragmentation-Aware Layering for Intent-Based LLM Serving",
+      "source_url": "https://doi.org/10.1145/3712285.3759867",
+      "returned_at": "2026-10-16T15:29:51+00:00",
+      "return_count": 3,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 9217,
+        "body_paragraphs": 52,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 595,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-5f58dcc23090--libfile_da52fd8bea448191905e16e11a1316db--2025-maveriq-fingerprint-fragmentation-aware-serving-research-20261016-1445-scheduled-chat-45-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-5f58dcc23090--libfile_da52fd8bea448191905e16e11a1316db--2025-maveriq-fingerprint-fragmentation-aware-serving-research-20261016-1445-scheduled-cha.json",
+      "worker_run_key": "20261016-1445-scheduled-chat-45/r01"
+    },
+    {
+      "canonical_id": "arXiv:2512.00719",
+      "title": "SIMPLE: Disaggregating Sampling from GPU Inference into a Decision Plane for Faster Distributed LLM Serving",
+      "source_url": "https://arxiv.org/abs/2512.00719",
+      "returned_at": "2026-10-16T15:29:52+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700",
+        "説明不足トリガー: 評価説明量 0 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 7770,
+        "body_paragraphs": 39,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 0,
+        "limitation_chars": 955,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700",
+          "評価説明量 0 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-66b8999ebd27--libfile_74e6708254708191af1f8e518d2782e7--2025-2512.00719-simple-disaggregated-sampling-research-20261015-2330-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-66b8999ebd27--libfile_74e6708254708191af1f8e518d2782e7--2025-2512.00719-simple-disaggregated-sampling-research-20261015-2330-scheduled-chat-30-r0.json",
+      "worker_run_key": "20261015-2330-scheduled-chat-30/r01"
     }
   ]
 }

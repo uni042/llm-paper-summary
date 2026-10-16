@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "5c84d8d854ef6ed39145635dc725272025824933425c02e66a9a32f22152830c",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/retry-research-4bfb616a2359--libfile_db8e1e6a355881918730a1c709ebb43e--2026-2603.04716-slo-aware-pd-quality-repair-20261016-1840.md",
+  "canonical_id": "arXiv:2603.04716",
+  "worker_completed_at": "2026-10-16T16:50:00+09:00",
+  "worker_run_key": "20261016-1645-scheduled-chat-45/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 7630,
+    "body_paragraphs": 45,
+    "method_chars": 3102,
+    "method_paragraphs": 22,
+    "evaluation_chars": 1171,
+    "limitation_chars": 722,
+    "insufficiency_flags": []
+  },
+  "failures": [
+    "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2026-2603.04716-slo-aware-compute-resource-allocation-for-prefill-decode-disaggregated-l.md と 17 段落 / 4205文字 (100.0%) が完全一致"
+  ],
+  "processed_at": "2026-10-16T15:29:47+00:00"
+}

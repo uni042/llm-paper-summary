@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "c3827390f579b47f873ab6366e397652e09b63232fc1283f858c998212b615ed",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/retry-research-5f58dcc23090--libfile_da52fd8bea448191905e16e11a1316db--2025-maveriq-fingerprint-fragmentation-aware-serving-research-20261016-1445-scheduled-chat-45-r01.md",
+  "canonical_id": "DOI:10.1145/3712285.3759867",
+  "worker_completed_at": "2026-10-16T14:56:00+09:00",
+  "worker_run_key": "20261016-1445-scheduled-chat-45/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 9217,
+    "body_paragraphs": 52,
+    "method_chars": 0,
+    "method_paragraphs": 0,
+    "evaluation_chars": 595,
+    "limitation_chars": 0,
+    "insufficiency_flags": [
+      "手法説明量 0 < 700",
+      "限界説明量 0 < 推奨 120"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 手法説明量 0 < 700"
+  ],
+  "processed_at": "2026-10-16T15:29:51+00:00"
+}
