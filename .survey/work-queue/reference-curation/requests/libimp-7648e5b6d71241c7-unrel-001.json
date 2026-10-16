@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-7648e5b6d71241c7-unrel-001",
+  "operation": "mark_unrelated",
+  "canonical_id": "arXiv:2607.20918",
+  "reason": "原著一次要旨では、テキスト・画像・音声の各専門教師を生徒モデルの出力モダリティに応じて振り分け、教師の確率が生徒を上回るトークンに蒸留信号を限定し、モダリティごとの教師重みと推論過程の正当性評価を学習中に調整する。12ベンチマーク・3モデル規模の評価は学習後の多モダリティ能力の改善であり、オンライン推論サービング、GPU実行、キャッシュ管理、量子化、投機的復号、分散推論の効率化を主張するものではない。専門教師は学習後に破棄されるため、実行時のMoEルーティング技術とも異なる。推論システムに直接寄与しない学習専用の蒸留研究として現行凍結範囲に該当し、unrelatedと判定する。",
+  "title": "OPOD: On-Policy Omni Distillation",
+  "identity_tokens": [
+    "arxiv:2607.20918",
+    "doi:10.48550/arxiv.2607.20918"
+  ],
+  "linked_from": [],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-7648e5b6d712",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}
