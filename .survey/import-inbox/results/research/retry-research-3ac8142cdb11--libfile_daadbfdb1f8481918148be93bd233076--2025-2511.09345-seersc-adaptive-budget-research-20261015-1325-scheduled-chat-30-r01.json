@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "da9ee4c96ed1b1639e50c400dca47829dd3c1bc7942d1e45391bdd0cb22d31a3",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/retry-research-3ac8142cdb11--libfile_daadbfdb1f8481918148be93bd233076--2025-2511.09345-seersc-adaptive-budget-research-20261015-1325-scheduled-chat-30-r01.md",
+  "canonical_id": "arXiv:2511.09345",
+  "worker_completed_at": "2026-10-15T13:28:49+09:00",
+  "worker_run_key": "20261015-1325-scheduled-chat-30/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 6295,
+    "body_paragraphs": 39,
+    "method_chars": 1904,
+    "method_paragraphs": 14,
+    "evaluation_chars": 195,
+    "limitation_chars": 662,
+    "insufficiency_flags": [
+      "評価説明量 195 < 500"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 評価説明量 195 < 500"
+  ],
+  "processed_at": "2026-10-16T15:19:11+00:00"
+}

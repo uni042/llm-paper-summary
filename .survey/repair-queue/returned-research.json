@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-16T15:13:28+00:00",
+  "generated_at": "2026-10-16T15:19:15+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -3220,31 +3220,6 @@
       "worker_run_key": "20261016-1730-scheduled-chat-30/r01"
     },
     {
-      "canonical_id": "arXiv:2608.00881",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-16T10:04:06+00:00",
-      "return_count": 3,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "長文定型文の再利用を検出: papers/inference/14-agentic-inference-serving-runtime/2026-2608.00881-aospec-action-and-observation-co-speculation-for-low-latency-agent-servi.md と 27 段落 / 5768文字 (100.0%) が完全一致"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 8417,
-        "body_paragraphs": 45,
-        "method_chars": 2688,
-        "method_paragraphs": 15,
-        "evaluation_chars": 2555,
-        "limitation_chars": 967,
-        "insufficiency_flags": []
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_58bc0b4be5f481918a778fff8b64aa56--2026-2608.00881-aospec-heading-repair-research-20261016-1445-scheduled-chat-45-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_58bc0b4be5f481918a778fff8b64aa56--2026-2608.00881-aospec-heading-repair-research-20261016-1445-scheduled-chat-45-r01.json",
-      "worker_run_key": "20261016-1445-scheduled-chat-45/r01"
-    },
-    {
       "canonical_id": "arXiv:2507.19595",
       "title": null,
       "source_url": null,
@@ -4002,33 +3977,6 @@
       "worker_run_key": "20261015-1803-scheduled-chat-00/r01"
     },
     {
-      "canonical_id": "arXiv:2602.04789",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-16T12:41:14+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 6299,
-        "body_paragraphs": 31,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 1839,
-        "limitation_chars": 646,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_a562b6227ab88191b72c1560d1701f2c--2026-2602.04789-light-forcing-chunk-aware-hierarchical-sparse-attention-research-20261016-1800-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_a562b6227ab88191b72c1560d1701f2c--2026-2602.04789-light-forcing-chunk-aware-hierarchical-sparse-attention-research-20261016-1800-scheduled-chat-00-r01.json",
-      "worker_run_key": "20261016-1800-scheduled-chat-00/r01"
-    },
-    {
       "canonical_id": "arXiv:2607.02303",
       "title": null,
       "source_url": null,
@@ -4135,36 +4083,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_bd5f9c9b811081918572f45423bcd3c3--2026-doi-10.3390-s26041101-dynamic-microbatch-tokenbudget-returned-heading-repair-20261016-1945-scheduled-chat-45-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_bd5f9c9b811081918572f45423bcd3c3--2026-doi-10.3390-s26041101-dynamic-microbatch-tokenbudget-returned-heading-repair-20261016-1945-scheduled-chat-45-r01.json",
       "worker_run_key": "20261016-1945-scheduled-chat-45/r01"
-    },
-    {
-      "canonical_id": "arXiv:2409.12961",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-16T13:22:21+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700",
-        "説明不足トリガー: 評価説明量 0 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5232,
-        "body_paragraphs": 26,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 0,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700",
-          "評価説明量 0 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_bef3eb5174a88191a7937d8d7660f061--2024-2409.12961-oryx-variable-resolution-dynamic-visual-token-compression-research-20261016-1745-scheduled-chat-45-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_bef3eb5174a88191a7937d8d7660f061--2024-2409.12961-oryx-variable-resolution-dynamic-visual-token-compression-research-20261016-1745-scheduled-chat-45-r01.json",
-      "worker_run_key": "20261016-1745-scheduled-chat-45/r01"
     },
     {
       "canonical_id": "arXiv:2601.13563",
@@ -4307,63 +4225,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_da52fd8bea448191905e16e11a1316db--2025-maveriq-fingerprint-fragmentation-aware-serving-research-20261016-1445-scheduled-chat-45-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_da52fd8bea448191905e16e11a1316db--2025-maveriq-fingerprint-fragmentation-aware-serving-research-20261016-1445-scheduled-chat-45-r01.json",
       "worker_run_key": "20261016-1445-scheduled-chat-45/r01"
-    },
-    {
-      "canonical_id": "arXiv:2605.18165",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-16T14:01:05+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700",
-        "説明不足トリガー: 評価説明量 379 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5668,
-        "body_paragraphs": 30,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 379,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700",
-          "評価説明量 379 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_936f81f2c35c819185d1be972eaca9fd--2026-2605.18165-elastic-dllm-position-preserving-mask-compression-research-20261016-2230-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_936f81f2c35c819185d1be972eaca9fd--2026-2605.18165-elastic-dllm-position-preserving-mask-compression-research-20261016-2230-scheduled-chat-30-r01.json",
-      "worker_run_key": "20261016-2230-scheduled-chat-30/r01"
-    },
-    {
-      "canonical_id": "arXiv:2511.09345",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-16T14:01:06+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 195 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 6295,
-        "body_paragraphs": 39,
-        "method_chars": 1904,
-        "method_paragraphs": 14,
-        "evaluation_chars": 195,
-        "limitation_chars": 662,
-        "insufficiency_flags": [
-          "評価説明量 195 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_daadbfdb1f8481918148be93bd233076--2025-2511.09345-seersc-adaptive-budget-research-20261015-1325-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_daadbfdb1f8481918148be93bd233076--2025-2511.09345-seersc-adaptive-budget-research-20261015-1325-scheduled-chat-30-r01.json",
-      "worker_run_key": "20261015-1325-scheduled-chat-30/r01"
     },
     {
       "canonical_id": "arXiv:2608.04074",
@@ -5039,8 +4900,8 @@
     },
     {
       "canonical_id": "arXiv:2605.05602",
-      "title": "Nearly Optimal Attention Coresets",
-      "source_url": "https://arxiv.org/html/2605.05602v1",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-16T15:13:22+00:00",
       "return_count": 6,
       "assigned_worker": "scheduled-chat-45",
@@ -5064,8 +4925,8 @@
     },
     {
       "canonical_id": "arXiv:2511.04063",
-      "title": "DartQuant: Efficient Rotational Distribution Calibration for LLM Quantization",
-      "source_url": "https://arxiv.org/html/2511.04063v1",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-16T15:13:24+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-00",
@@ -5091,8 +4952,8 @@
     },
     {
       "canonical_id": "arXiv:2602.03769",
-      "title": "Reasoning with Latent Tokens in Diffusion Language Models",
-      "source_url": "https://arxiv.org/html/2602.03769v1",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-16T15:13:25+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-30",
@@ -5118,8 +4979,8 @@
     },
     {
       "canonical_id": "DOI:10.1145/3731569.3764823",
-      "title": "Jenga: Effective Memory Management for Serving LLM with Heterogeneity",
-      "source_url": "https://arxiv.org/abs/2503.18292",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-16T15:13:26+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-45",
@@ -5148,8 +5009,8 @@
     },
     {
       "canonical_id": "arXiv:2403.01136",
-      "title": "LLM-PQ: Serving LLM on Heterogeneous Clusters with Phase-Aware Partition and Adaptive Quantization",
-      "source_url": "https://arxiv.org/html/2403.01136v1",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-16T15:13:28+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-00",
@@ -5172,6 +5033,145 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-34db1cebd719--libfile_f5b678402f14819185fb73640fec2570--2024-2403.01136-llm-pq-research-20261016-0230-scheduled-chat-30-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-34db1cebd719--libfile_f5b678402f14819185fb73640fec2570--2024-2403.01136-llm-pq-research-20261016-0230-scheduled-chat-30-r01.json",
       "worker_run_key": "20261016-0230-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2511.09345",
+      "title": "Seer Self-Consistency: Advance Budget Estimation for Adaptive Test-Time Scaling",
+      "source_url": "https://arxiv.org/html/2511.09345v2",
+      "returned_at": "2026-10-16T15:19:11+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 195 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 6295,
+        "body_paragraphs": 39,
+        "method_chars": 1904,
+        "method_paragraphs": 14,
+        "evaluation_chars": 195,
+        "limitation_chars": 662,
+        "insufficiency_flags": [
+          "評価説明量 195 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-3ac8142cdb11--libfile_daadbfdb1f8481918148be93bd233076--2025-2511.09345-seersc-adaptive-budget-research-20261015-1325-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-3ac8142cdb11--libfile_daadbfdb1f8481918148be93bd233076--2025-2511.09345-seersc-adaptive-budget-research-20261015-1325-scheduled-chat-30-r01.json",
+      "worker_run_key": "20261015-1325-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2602.04789",
+      "title": "Light Forcing: Accelerating Autoregressive Video Diffusion via Sparse Attention",
+      "source_url": "https://arxiv.org/html/2602.04789v4",
+      "returned_at": "2026-10-16T15:19:12+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 6299,
+        "body_paragraphs": 31,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 1839,
+        "limitation_chars": 646,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-3d8954f09476--libfile_a562b6227ab88191b72c1560d1701f2c--2026-2602.04789-light-forcing-chunk-aware-hierarchical-sparse-attention-research-20261016-1800-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-3d8954f09476--libfile_a562b6227ab88191b72c1560d1701f2c--2026-2602.04789-light-forcing-chunk-aware-hierarchical-sparse-attention-research-20261016.json",
+      "worker_run_key": "20261016-1800-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2605.18165",
+      "title": "Elastic-dLLM: Position Preserving Context Compression and Augmentation of Diffusion LLMs",
+      "source_url": "https://arxiv.org/html/2605.18165v1",
+      "returned_at": "2026-10-16T15:19:13+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700",
+        "説明不足トリガー: 評価説明量 379 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5668,
+        "body_paragraphs": 30,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 379,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700",
+          "評価説明量 379 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-40fae9c886bf--libfile_936f81f2c35c819185d1be972eaca9fd--2026-2605.18165-elastic-dllm-position-preserving-mask-compression-research-20261016-2230-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-40fae9c886bf--libfile_936f81f2c35c819185d1be972eaca9fd--2026-2605.18165-elastic-dllm-position-preserving-mask-compression-research-20261016-2230-.json",
+      "worker_run_key": "20261016-2230-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2409.12961",
+      "title": "Oryx MLLM: On-Demand Spatial-Temporal Understanding at Arbitrary Resolution",
+      "source_url": "https://arxiv.org/html/2409.12961v4",
+      "returned_at": "2026-10-16T15:19:14+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700",
+        "説明不足トリガー: 評価説明量 0 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5232,
+        "body_paragraphs": 26,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 0,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700",
+          "評価説明量 0 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-41c8d26402fe--libfile_bef3eb5174a88191a7937d8d7660f061--2024-2409.12961-oryx-variable-resolution-dynamic-visual-token-compression-research-20261016-1745-scheduled-chat-45-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-41c8d26402fe--libfile_bef3eb5174a88191a7937d8d7660f061--2024-2409.12961-oryx-variable-resolution-dynamic-visual-token-compression-research-202610.json",
+      "worker_run_key": "20261016-1745-scheduled-chat-45/r01"
+    },
+    {
+      "canonical_id": "arXiv:2608.00881",
+      "title": "AOSpec: Action and Observation Co-Speculation for Low-Latency Agent Serving",
+      "source_url": "https://arxiv.org/html/2608.00881v1",
+      "returned_at": "2026-10-16T15:19:15+00:00",
+      "return_count": 4,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "長文定型文の再利用を検出: papers/inference/14-agentic-inference-serving-runtime/2026-2608.00881-aospec-action-and-observation-co-speculation-for-low-latency-agent-servi.md と 27 段落 / 5768文字 (100.0%) が完全一致"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 8417,
+        "body_paragraphs": 45,
+        "method_chars": 2688,
+        "method_paragraphs": 15,
+        "evaluation_chars": 2555,
+        "limitation_chars": 967,
+        "insufficiency_flags": []
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-42c07424e31e--libfile_58bc0b4be5f481918a778fff8b64aa56--2026-2608.00881-aospec-heading-repair-research-20261016-1445-scheduled-chat-45-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-42c07424e31e--libfile_58bc0b4be5f481918a778fff8b64aa56--2026-2608.00881-aospec-heading-repair-research-20261016-1445-scheduled-chat-45-r01.json",
+      "worker_run_key": "20261016-1445-scheduled-chat-45/r01"
     }
   ]
 }
