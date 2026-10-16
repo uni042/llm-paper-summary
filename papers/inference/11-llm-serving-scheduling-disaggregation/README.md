@@ -1313,7 +1313,7 @@
   LLM人気度を考慮した配置と事前充填・復号の動的共配置、共有KVキャッシュ管理を組み合わせ、複数LLM配信のGPU計算・メモリ利用率を同時に高める。
 
 - **2024-06 · [TurboSpec: Closed-loop Speculation Control System for Optimizing LLM Serving Goodput](2024-2406.14066-turbospec-closed-loop-speculation-control-system-for-optimizing-llm-serv.md)**  
-  実装：✓ ・ リポジトリ内被引用：23  
+  実装：✓ ・ リポジトリ内被引用：24  
   TurboSpecは、大規模言語モデル（LLM）の複数要求をまとめる連続バッチ処理と、単一要求内で複数候補を先読みする投機的復号（投機的復号）を、現在の負荷に応じて切り替える制御システムである。
 
 - **2024-10 · [Don't Stop Me Now: Embedding Based Scheduling for LLMs](2024-2410.01035-embedding-based-scheduling.md)**  
@@ -1387,7 +1387,7 @@
 ### 4年前（2022-11〜2023-10）
 
 - **2023-09 · [Efficient Memory Management for Large Language Model Serving with PagedAttention](2023-2309.06180-vllm-pagedattention-efficient-memory-management.md)**  
-  実装：[✓](https://github.com/vllm-project/vllm) ・ リポジトリ内被引用：1038  
+  実装：[✓](https://github.com/vllm-project/vllm) ・ リポジトリ内被引用：1039  
   vLLMは、要求ごとに大きな連続領域を予約していたKVキャッシュを固定長ブロックへ分解し、論理的な並びとGPU上の物理配置を分離する。必要なブロックだけ動的に割り当て、同じ接頭辞のKVを共有することで、限られたGPUメモリへより多くの要求を同時に載せる。
 
 - **2023-02 · [AlpaServe: Statistical Multiplexing with Model Parallelism for Deep Learning Serving](2023-2302.11665-alpaserve.md)**  

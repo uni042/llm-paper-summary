@@ -1804,6 +1804,10 @@
   実装：✓ ・ リポジトリ内被引用：46  
   一般的な自己回帰言語モデルは、各位置までの文脈から直後の一つのトークンを予測する。これに対して複数トークン予測（Multi-トークン Prediction; MTP）は、同じ位置の共有表現から、1個先だけでなく2個先、3個先、4個先など複数の未来トークンを別々の出力ヘッドで予測するよう学習する。この研究には二つの独立した成果がある。
 
+- **2024-02 · [Hydra: Sequentially-Dependent Draft Heads for Medusa Decoding](2024-2402.05109-hydra-sequentially-dependent-draft-heads-for-medusa-decoding.md)**  
+  実装：[✓](https://github.com/zankner/Hydra) ・ リポジトリ内被引用：41  
+  投機的復号（投機的復号）は、安価な下書きモデルが複数の将来トークンを予測し、元の大きな言語モデルが候補をまとめて検証することで、1回の高価な順伝播で複数トークンを確定させる。単一要求のVicuna 7B/13B/33Bで通常の自己回帰生成に対しそれぞれ2.70/2.50/2.53倍、Medusaに対し1.27/1.27/1.31倍の処理率を報告する。
+
 - **2024-04 · [RAGCache: Efficient Knowledge Caching for Retrieval-Augmented Generation](2024-2404.12457-ragcache-efficient-knowledge-caching-for-retrieval-augmented-generation.md)**  
   実装：✓ ・ リポジトリ内被引用：40  
   RAGCacheは、検索拡張生成（Retrieval-Augmented Generation; RAG）で同じ知識文書が何度も検索されることに着目し、その文書を言語モデルが処理したときの鍵・値キャッシュ（KVキャッシュ）を複数要求で再利用する推論提供システムである。
@@ -1811,10 +1815,6 @@
 - **2024-02 · [InfLLM: Training-Free Long-Context Extrapolation for LLMs with an Efficient Context Memory](2024-2402.04617-infllm-training-free-long-context-extrapolation-for-llms-with-an-efficie.md)**  
   実装：[✓](https://github.com/thunlp/InfLLM) ・ リポジトリ内被引用：40  
   InfLLMは、短い文脈長で事前学習された大規模言語モデル（LLM）を、重みの追加学習なしに非常に長い入力へ適用する方式である。
-
-- **2024-02 · [Hydra: Sequentially-Dependent Draft Heads for Medusa Decoding](2024-2402.05109-hydra-sequentially-dependent-draft-heads-for-medusa-decoding.md)**  
-  実装：[✓](https://github.com/zankner/Hydra) ・ リポジトリ内被引用：40  
-  投機的復号（投機的復号）は、安価な下書きモデルが複数の将来トークンを予測し、元の大きな言語モデルが候補をまとめて検証することで、1回の高価な順伝播で複数トークンを確定させる。単一要求のVicuna 7B/13B/33Bで通常の自己回帰生成に対しそれぞれ2.70/2.50/2.53倍、Medusaに対し1.27/1.27/1.31倍の処理率を報告する。
 
 - **2024-09 · [RetrievalAttention: Accelerating Long-Context LLM Inference via Vector Retrieval](2024-2409.10516-retrievalattention-accelerating-long-context-llm-inference-via-vector-re.md)**  
   実装：✓ ・ リポジトリ内被引用：39  
@@ -1928,6 +1928,10 @@
   実装：[✓](https://github.com/test-time-training/ttt-lm-pytorch) ・ リポジトリ内被引用：15  
   本論文は、再帰型ニューラルネットワーク（Recurrent Neural Network、RNN）の隠れ状態を単なる固定長ベクトルではなく、小さな機械学習モデルの重みとして表現するテスト時訓練（Test-Time 学習、TTT）層を提案する。
 
+- **2024-02 · [CLLMs: Consistency Large Language Models](2024-2403.00835-cllms-consistency-large-language-models.md)**  
+  実装：[✓](https://github.com/hao-ai-lab/Consistency_LLM) ・ リポジトリ内被引用：15  
+  整合性大規模言語モデル（Consistency Large Language Models; CLLMs）は、Jacobi型の並列復号で使う仮の複数トークン列から、自己回帰復号の最終固定点へ速く近づくよう既存LLMを追加学習する。固定点に対する大域整合性損失と通常の自己回帰損失を併用し、追加の小型草案モデルなしで生成を高速化する。
+
 - **2024-01 · [MoE-LLaVA: Mixture of Experts for Large Vision-Language Models](2024-2401.15947-moe-llava-mixture-of-experts-for-large-vision-language-models.md)**  
   実装：[✓](https://github.com/PKU-YuanGroup/MoE-LLaVA) ・ リポジトリ内被引用：15  
   混合専門家（mixture of エキスパート、MoE）は、複数の専門家を持ちながらトークンごとに少数だけ活性化することで、総パラメータ数と一度の計算に使うパラメータ数を切り離せる。
@@ -1935,10 +1939,6 @@
 - **2024-04 · [Characterizing Power Management Opportunities for LLMs in the Cloud](2024-ad611bbc0cdc-characterizing-power-management-opportunities-for-llms-in-the-cloud.md)**  
   実装：✓ ・ リポジトリ内被引用：14  
   この観測を使い、優先度別の二段階電力制御を行うPOLCAを提案する。著者らは本番トレースから生成した合成負荷を用いた離散事象シミュレーションで、既存の電力予算のままサーバーを30%多く配置しても、設定した遅延SLOを満たし、通常条件で電力ブレーキを起こさない結果を示した。
-
-- **2024-02 · [CLLMs: Consistency Large Language Models](2024-2403.00835-cllms-consistency-large-language-models.md)**  
-  実装：[✓](https://github.com/hao-ai-lab/Consistency_LLM) ・ リポジトリ内被引用：14  
-  整合性大規模言語モデル（Consistency Large Language Models; CLLMs）は、Jacobi型の並列復号で使う仮の複数トークン列から、自己回帰復号の最終固定点へ速く近づくよう既存LLMを追加学習する。固定点に対する大域整合性損失と通常の自己回帰損失を併用し、追加の小型草案モデルなしで生成を高速化する。
 
 - **2024-10 · [ConServe: Fine-Grained GPU Harvesting for LLM Online and Offline Co-Serving](2024-2410.01228-conserve-fine-grained-gpu-harvesting-for-llm-online-and-offline-co-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：13  
@@ -2704,13 +2704,13 @@
   実装：[✓](https://github.com/uwsampl/dtr-prototype) ・ リポジトリ内被引用：3  
   活性チェックポイントは一部の活性だけを保存し、捨てた活性を逆伝播の必要時に再計算することで、メモリと演算量を交換する。
 
+- **2020-05 · [IntelliCode Compose: Code Generation using Transformer](2020-2005.08025-intellicode-compose-code-generation-using-transformer.md)**  
+  実装：✓ ・ リポジトリ内被引用：3  
+  IntelliCode Composeは、統合開発環境（IDE）で入力途中のプログラムから一行規模の補完候補を提示するクラウド型のコード生成システムである。ただし編集類似度は84.1%から78.0%へ下がる。
+
 - **2020-01 · [PoWER-BERT: Accelerating BERT Inference via Progressive Word-vector Elimination](2020-2001.08950-power-bert-accelerating-bert-inference-via-progressive-word-vector-elimi.md)**  
   実装：[✓](https://github.com/IBM/PoWER-BERT) ・ リポジトリ内被引用：3  
   方式は二つの判断を分離する。原著のK80 GPU、Keras、バッチ128（RACEのみ32）の評価では、BERTBASE比で各課題2.0～4.5倍の推論時間短縮を報告する。
-
-- **2020-05 · [IntelliCode Compose: Code Generation using Transformer](2020-2005.08025-intellicode-compose-code-generation-using-transformer.md)**  
-  実装：✓ ・ リポジトリ内被引用：2  
-  IntelliCode Composeは、統合開発環境（IDE）で入力途中のプログラムから一行規模の補完候補を提示するクラウド型のコード生成システムである。ただし編集類似度は84.1%から78.0%へ下がる。
 
 - **2020-06 · [Funnel-Transformer: Filtering out Sequential Redundancy for Efficient Language Processing](2020-2006.03236-funnel-transformer-filtering-out-sequential-redundancy-for-efficient-lan.md)**  
   実装：[✓](https://github.com/laiguokun/Funnel-Transformer) ・ リポジトリ内被引用：1  
