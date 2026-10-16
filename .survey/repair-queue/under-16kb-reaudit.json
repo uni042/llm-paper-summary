@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-16T14:55:12.268054+00:00",
+  "generated_at": "2026-10-16T15:03:55.710820+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
@@ -62,46 +62,6 @@
       ]
     },
     {
-      "path": "papers/inference/16-weight-quantization-compression/2026-2602.02546-d2quant-accurate-low-bit-post-training-weight-quantization-for-llms.md",
-      "canonical_id": "arXiv:2602.02546",
-      "title": "D2Quant: Accurate Low-bit Post-Training Weight Quantization for LLMs",
-      "file_bytes": 11032,
-      "source_sha256": "5d5960f0076da8e2018982d25276c618676804798312b7e27a37c9f271a3173c",
-      "source_git_blob_sha": "2907cafbddc69b09f369b688906bbabf32b23b97",
-      "assigned_worker": "scheduled-chat-45",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.925788,
-      "quality_metrics": {
-        "body_chars": 2942,
-        "method_chars": 1214,
-        "evaluation_chars": 578,
-        "limitation_chars": 315
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2026-2603.14785-skipopu-an-fpga-based-overlay-processor-for-large-language-models-with-d.md",
-      "canonical_id": "arXiv:2603.14785",
-      "title": "SkipOPU: An FPGA-based Overlay Processor for Large Language Models with Dynamically Allocated Computation",
-      "file_bytes": 11551,
-      "source_sha256": "d5fc85e6e2fe1609e14315ce05495d4f1930cb53ce6fdd21eb153addef5ba0a5",
-      "source_git_blob_sha": "cde8248b729cf965bbf640a7f3905bd33bfdb25c",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.99478,
-      "quality_metrics": {
-        "body_chars": 3180,
-        "method_chars": 1135,
-        "evaluation_chars": 858,
-        "limitation_chars": 333
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
       "path": "papers/inference/07-kv-cache-optimization-compression/2026-5497c425b6df-to-keep-or-not-to-keep-learning-kv-cache-retention-in-disaggregated-llm-.md",
       "canonical_id": "DOI:10.1145/3793230.3837769",
       "title": "To Keep or Not to Keep: Learning KV Cache Retention in Disaggregated LLM Serving Systems",
@@ -126,41 +86,21 @@
       ]
     },
     {
-      "path": "papers/inference/13-sparse-attention/2026-2602.05853-rrattention-dynamic-block-sparse-attention-via-per-head-round-robin-shif.md",
-      "canonical_id": "arXiv:2602.05853",
-      "title": "RRAttention: Dynamic Block Sparse Attention via Per-Head Round-Robin Shifts for Long-Context Inference",
-      "file_bytes": 11773,
-      "source_sha256": "6b6029fcb6480bf95a5c182e5dc60bc28428721fba0e9c37ba6d3a8ad0f43bf8",
-      "source_git_blob_sha": "0c855db175189151bb50d74258654f5424d93d43",
-      "assigned_worker": "scheduled-chat-30",
+      "path": "papers/inference/16-weight-quantization-compression/2026-2602.02546-d2quant-accurate-low-bit-post-training-weight-quantization-for-llms.md",
+      "canonical_id": "arXiv:2602.02546",
+      "title": "D2Quant: Accurate Low-bit Post-Training Weight Quantization for LLMs",
+      "file_bytes": 12380,
+      "source_sha256": "e35ca1673681fb42e058c9a2b27061fb81716aac8fe0c96c59264f1c7a1eeec6",
+      "source_git_blob_sha": "c0a43b1f208d83cb34c245808662108847c7cbb3",
+      "assigned_worker": "scheduled-chat-45",
       "semantic_status": "pending",
       "mechanical_status": "PASS",
-      "japanese_ratio": 0.967904,
+      "japanese_ratio": 0.925788,
       "quality_metrics": {
-        "body_chars": 2901,
-        "method_chars": 1031,
-        "evaluation_chars": 665,
-        "limitation_chars": 316
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2026-2603.21096-mixture-of-chapters-scaling-learnt-memory-in-transformers.md",
-      "canonical_id": "arXiv:2603.21096",
-      "title": "Mixture of Chapters: Scaling Learnt Memory in Transformers",
-      "file_bytes": 12252,
-      "source_sha256": "28cc4854279c45d4bbc54242560e9fb449f4602396491a3b2adba14efd0a3a45",
-      "source_git_blob_sha": "9c7fbc9f3ace7fe1ff28a9248ea74d0b0338dd1a",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.964554,
-      "quality_metrics": {
-        "body_chars": 3189,
-        "method_chars": 1121,
-        "evaluation_chars": 793,
-        "limitation_chars": 0
+        "body_chars": 2942,
+        "method_chars": 1214,
+        "evaluation_chars": 578,
+        "limitation_chars": 315
       },
       "mechanical_failures": [],
       "warnings": []
@@ -181,6 +121,26 @@
         "method_chars": 1072,
         "evaluation_chars": 505,
         "limitation_chars": 0
+      },
+      "mechanical_failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/13-sparse-attention/2026-2602.05853-rrattention-dynamic-block-sparse-attention-via-per-head-round-robin-shif.md",
+      "canonical_id": "arXiv:2602.05853",
+      "title": "RRAttention: Dynamic Block Sparse Attention via Per-Head Round-Robin Shifts for Long-Context Inference",
+      "file_bytes": 13664,
+      "source_sha256": "edc13b5e9ea40ff460f618c0fff38a310cc1a40a033951cd64cbaac78a19799c",
+      "source_git_blob_sha": "ae9b725e416004ad62bf1a2937d0b4ebc746ea40",
+      "assigned_worker": "scheduled-chat-30",
+      "semantic_status": "pending",
+      "mechanical_status": "PASS",
+      "japanese_ratio": 0.967904,
+      "quality_metrics": {
+        "body_chars": 2901,
+        "method_chars": 1031,
+        "evaluation_chars": 665,
+        "limitation_chars": 316
       },
       "mechanical_failures": [],
       "warnings": []
@@ -266,6 +226,26 @@
       "warnings": []
     },
     {
+      "path": "papers/inference/99-other-inference-systems/2026-2603.21096-mixture-of-chapters-scaling-learnt-memory-in-transformers.md",
+      "canonical_id": "arXiv:2603.21096",
+      "title": "Mixture of Chapters: Scaling Learnt Memory in Transformers",
+      "file_bytes": 15180,
+      "source_sha256": "da95596a79876d2769d33f6378dee143517a991abf4188e0ef2c99b6a9f840d5",
+      "source_git_blob_sha": "e3314c21f6f9c055c9d2489b9df20f56ea9cefb1",
+      "assigned_worker": "scheduled-chat-00",
+      "semantic_status": "pending",
+      "mechanical_status": "PASS",
+      "japanese_ratio": 0.964554,
+      "quality_metrics": {
+        "body_chars": 3189,
+        "method_chars": 1121,
+        "evaluation_chars": 793,
+        "limitation_chars": 0
+      },
+      "mechanical_failures": [],
+      "warnings": []
+    },
+    {
       "path": "papers/inference/99-other-inference-systems/2025-2503.12559-adaretake-adaptive-redundancy-reduction-to-perceive-longer-for-video-lan.md",
       "canonical_id": "arXiv:2503.12559",
       "title": "AdaReTaKe: Adaptive Redundancy Reduction to Perceive Longer for Video-language Understanding",
@@ -281,6 +261,26 @@
         "method_chars": 1138,
         "evaluation_chars": 1160,
         "limitation_chars": 0
+      },
+      "mechanical_failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/99-other-inference-systems/2026-2603.14785-skipopu-an-fpga-based-overlay-processor-for-large-language-models-with-d.md",
+      "canonical_id": "arXiv:2603.14785",
+      "title": "SkipOPU: An FPGA-based Overlay Processor for Large Language Models with Dynamically Allocated Computation",
+      "file_bytes": 15457,
+      "source_sha256": "1157d880bad7dbb8b62f91fd83c1400cbecd7185f3c9d13494ba88997c9644d5",
+      "source_git_blob_sha": "b46a4452d1fe03b1af2acdcd903b1a944bdb8625",
+      "assigned_worker": "scheduled-chat-30",
+      "semantic_status": "pending",
+      "mechanical_status": "PASS",
+      "japanese_ratio": 0.99478,
+      "quality_metrics": {
+        "body_chars": 3180,
+        "method_chars": 1135,
+        "evaluation_chars": 858,
+        "limitation_chars": 333
       },
       "mechanical_failures": [],
       "warnings": []
