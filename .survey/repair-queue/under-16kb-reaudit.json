@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-10-15T10:06:08.011225+00:00",
+  "generated_at": "2026-10-16T07:11:32.059087+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 16,
+  "count": 14,
   "worker_counts": {
-    "scheduled-chat-00": 6,
+    "scheduled-chat-00": 5,
     "scheduled-chat-30": 5,
-    "scheduled-chat-45": 5
+    "scheduled-chat-45": 4
   },
   "entries": [
     {
@@ -19,7 +19,7 @@
       "file_bytes": 9952,
       "source_sha256": "8b78672dfd3367b0494e3c7598b7da2601580cb6b08f4395783b6fda1b12e681",
       "source_git_blob_sha": "c799f4294b018595eed9c724fc6829cf8353f2d3",
-      "assigned_worker": "scheduled-chat-00",
+      "assigned_worker": "scheduled-chat-45",
       "semantic_status": "pending",
       "mechanical_status": "FAIL",
       "japanese_ratio": 0.8674,
@@ -86,26 +86,6 @@
       ]
     },
     {
-      "path": "papers/inference/99-other-inference-systems/2023-2311.01927-gateloop-fully-data-controlled-linear-recurrence-for-sequence-modeling.md",
-      "canonical_id": "arXiv:2311.01927",
-      "title": "GateLoop: Fully Data-Controlled Linear Recurrence for Sequence Modeling",
-      "file_bytes": 12120,
-      "source_sha256": "7ff1d7ac689061eb208d0ed875aa2a712cc5ff7b315d45fd67b18d40acfa5290",
-      "source_git_blob_sha": "9c19bd3786591444ea055f830b9d1abfc5d5b597",
-      "assigned_worker": "scheduled-chat-45",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.93822,
-      "quality_metrics": {
-        "body_chars": 3411,
-        "method_chars": 1142,
-        "evaluation_chars": 658,
-        "limitation_chars": 325
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
       "path": "papers/inference/17-pim-near-data-acceleration/2026-h3-attn.md",
       "canonical_id": "DOI:10.1145/3816440.3818602",
       "title": "H3-Attn: Attention-Efficient 3D DRAM PNM Processor with Hybrid Head Parallelism and Hierarchical SFU",
@@ -160,26 +140,6 @@
         "body_chars": 3902,
         "method_chars": 1235,
         "evaluation_chars": 1168,
-        "limitation_chars": 0
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2025-2507.11851-your-llm-knows-the-future-uncovering-its-multi-token-prediction-potentia.md",
-      "canonical_id": "arXiv:2507.11851",
-      "title": "Your LLM Knows the Future: Uncovering Its Multi-Token Prediction Potential",
-      "file_bytes": 13956,
-      "source_sha256": "22b11697aac01527df2f954d5accff937db5fa98d2c0594baccebb942271cd4d",
-      "source_git_blob_sha": "5d95fc460c4f2e72490f87bb112a3e4b9e35d911",
-      "assigned_worker": "scheduled-chat-45",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.98655,
-      "quality_metrics": {
-        "body_chars": 3709,
-        "method_chars": 1480,
-        "evaluation_chars": 743,
         "limitation_chars": 0
       },
       "mechanical_failures": [],
