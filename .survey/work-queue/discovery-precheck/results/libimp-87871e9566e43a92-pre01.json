@@ -1,0 +1,490 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-87871e9566e43a92-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-87871e9566e4",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "DOI:10.1007/s11432-020-3245-7",
+    "DOI:10.1007/s11432-026-5028-5",
+    "DOI:10.1007/s44227-026-00105-3",
+    "DOI:10.1007/s44443-025-00071-w",
+    "DOI:10.1007/s44443-026-00801-8",
+    "DOI:10.1016/j.asoc.2025.114398"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 6,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": false,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "adf825a2e5baf18d84ceed08077c3dad916dcdff",
+  "raw_search_result_count": 6,
+  "retrieval_duplicate_filtered_count": 1,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 5,
+  "provider_progress": {
+    "requested_count": 6,
+    "status_counts": {
+      "allowed": 5,
+      "filtered_by_snapshot": 1,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-16T06:21:28.025216+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "DOI:10.1007/s11432-020-3245-7",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.1007/s11432-026-5028-5",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.1007/s44227-026-00105-3",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.1007/s44443-025-00071-w",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.1007/s44443-025-00071-w"
+    },
+    {
+      "requested_id": "DOI:10.1007/s44443-026-00801-8",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.1016/j.asoc.2025.114398",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "A time scaling theory for multi-layer electronic systems",
+      "source_url": "https://doi.org/10.1007/s11432-026-5028-5",
+      "year": 2026,
+      "published": "2026-07-21",
+      "venue": "Science China Information Sciences",
+      "citation_count": 6,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "For six decades, Moore’s geometric scaling drove progress in semiconductors. That industry compact no longer holds: returns from pure dimensional shrinking have flattened, leading-edge design budgets exceed one billion dollars per chip, and cost-per-transistor at the most advanced nodes is no longer falling. This perspective argues for a successor scaling principle—τ scaling—that adopts time itself, rather than transistor area, as the primary metric of progress, applying a single characteristic time constant τ as the unifying optimization target across twelve orders of magnitude, from a switching transistor to a data-center workload. Two production-scale demonstrations are presented. On a mobile SoC, LogicFolding—a methodology that partitions digital, analog, and memory circuits across vertically stacked active tiers—delivers a 55% step-wise increase in transistor density and a 41% reduction in power consumption at equivalent performance at a fixed device node. On AI systems, a co-designed stack comprising the memory-semantic Unified Bus fabric, near-packaged Hi-ONE optical I/O, and edge-to-surface 3D Folding projects more than 100× growth in hardware integration by 2035. The deeper claim is methodological: τ scaling is the first scaling principle since Dennard to establish a shared optimization target across the entire computing stack.",
+      "identifiers": [
+        "SemanticScholar:a678897f170b8aee11a9be44375b22cb11024871"
+      ],
+      "semantic_scholar_id": "a678897f170b8aee11a9be44375b22cb11024871",
+      "doi": "10.1007/s11432-026-5028-5",
+      "canonical_id": "DOI:10.1007/s11432-026-5028-5",
+      "authors": [
+        "Tingbo He"
+      ],
+      "priority": 106,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 6,
+        "citation_count": 6,
+        "total": 106,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 87,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Attention distillation for low-cost driver behavior recognition",
+      "source_url": "https://doi.org/10.1016/j.asoc.2025.114398",
+      "year": 2025,
+      "published": "2025-12-01",
+      "venue": "Applied Soft Computing",
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": null,
+      "identifiers": [
+        "SemanticScholar:fcee7bda1bb667b22bb4b1a2bf569d18156e7b69"
+      ],
+      "semantic_scholar_id": "fcee7bda1bb667b22bb4b1a2bf569d18156e7b69",
+      "doi": "10.1016/j.asoc.2025.114398",
+      "canonical_id": "DOI:10.1016/j.asoc.2025.114398",
+      "authors": [
+        "Hang Gao",
+        "Mengting Hu",
+        "Kaiye Yu",
+        "Han Xing"
+      ],
+      "priority": 104,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 104,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 319,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "NAS4RRAM: neural network architecture search for inference on RRAM-based accelerators",
+      "source_url": "https://doi.org/10.1007/s11432-020-3245-7",
+      "year": 2021,
+      "published": "2021-05-10",
+      "venue": "Science China Information Sciences",
+      "citation_count": 31,
+      "citation_count_source": "semantic_scholar",
+      "abstract": null,
+      "identifiers": [
+        "SemanticScholar:5e9615cb661b325d6538de7c2777d94014004618"
+      ],
+      "semantic_scholar_id": "5e9615cb661b325d6538de7c2777d94014004618",
+      "doi": "10.1007/s11432-020-3245-7",
+      "canonical_id": "DOI:10.1007/s11432-020-3245-7",
+      "authors": [
+        "Zhihang Yuan",
+        "Jing-Ze Liu",
+        "Xingchen Li",
+        "Long-Hao Yan",
+        "Hao-Xiang Chen",
+        "Bingzhe Wu",
+        "Yuchao Yang",
+        "Guang-Yu Sun"
+      ],
+      "priority": 31,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 31,
+        "citation_count": 31,
+        "total": 31,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1985,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Lightweight surprise-on-memory: efficient engagement recognition via prediction error-guided updates",
+      "source_url": "https://doi.org/10.1007/s44443-026-00801-8",
+      "year": 2026,
+      "published": "2026-04-30",
+      "venue": "Journal of King Saud University: Computer and Information Sciences",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "In online teaching scenarios, automatic assessment of student engagement suffers from limited real-time capability, high computational cost, and redundant information in long-duration videos. To address these challenges, a student engagement recognition model driven by prediction error–based memory updating (DMDN) is proposed. A multi-stage framework with feature decoupling is adopted. A behavior dynamics branch is used to extract coarse-grained behavioral features. A facial attention branch is used to extract fine-grained facial representations. Semantic interference during heterogeneous visual feature modeling is thus avoided. Furthermore, a dynamic memory updating module based on prediction error is introduced. The deviation between current observations and historical memory is characterized. The memory update strength is adaptively adjusted. Selective encoding of key behavioral segments is achieved. Interference from redundant temporal information is effectively suppressed. The model parameters and deployment scheme are revised as follows. A two-stage deployment strategy is adopted, in which backbone features are extracted and cached offline, decoupling heavy feature extraction from online inference. Only a lightweight inference backend with 3.18M trainable parameters is executed during real-time prediction. Experimental results on the DAiSEE dataset demonstrate that a Top-1 accuracy of 64.65% is achieved, validating the effectiveness of the proposed method under strict computational constraints. This design demonstrates its potential in resource-constrained scenarios. Ablation studies further verify the effectiveness of the feature decoupling structure and the dynamic memory update mechanism in improving performance.",
+      "identifiers": [
+        "SemanticScholar:8d976324a991814fe3ee716360321cba2fc7ebba"
+      ],
+      "semantic_scholar_id": "8d976324a991814fe3ee716360321cba2fc7ebba",
+      "doi": "10.1007/s44443-026-00801-8",
+      "canonical_id": "DOI:10.1007/s44443-026-00801-8",
+      "authors": [
+        "Xinhao Zhang",
+        "Yuli Sun",
+        "Weidong Ji"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 169,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Cost-Aware Structured Content Generation Using Hybrid Retrieval-Augmented Generation and Adaptive Compute Routing",
+      "source_url": "https://doi.org/10.1007/s44227-026-00105-3",
+      "year": 2026,
+      "published": "2026-06-04",
+      "venue": "International Journal of Networked and Distributed Computing (IJNDC)",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Deploying large language models for structured content generation presents a fundamental tension between quality requirements and computational costs. Standard retrieval-augmented generation approaches struggle with complex multi-hop domain questions due to context loss and retrieval noise, while state-of-the-art models impose prohibitive per-query costs at scale. We introduce Cost-Aware Structured Generation, a domain-agnostic 14-stage pipeline that integrates hybrid retrieval-augmented generation with Reciprocal Rank Fusion, conditional compute routing based on query difficulty, and adaptive voting strategies with domain-specific weighting. Our architecture achieves 93.5% overall precision with a hallucination rate of only 0.31% (1 error in 325 human-reviewed samples from 2021 to 2025) on a validation dataset of 1,200+ complex domain questions spanning 2007–2025, requiring 200+ field structured outputs. Through intelligent routing that selectively invokes expensive models only for high-complexity queries, we demonstrate 84% improvement in content richness while reducing costs by 50.4% compared to baseline Self-Consistency ensembles. Validation on aerospace engineering certification exams demonstrates production viability. While the architecture is designed with domain-agnostic principles, its application to other high-stakes domains remains a direction for future work. This work establishes that architectural engineering, not merely model scaling, provides a viable pathway to production-grade structured generation with strict precision requirements.",
+      "identifiers": [
+        "SemanticScholar:797eaea9f234b384c92742097acb1974df01f20b"
+      ],
+      "semantic_scholar_id": "797eaea9f234b384c92742097acb1974df01f20b",
+      "doi": "10.1007/s44227-026-00105-3",
+      "canonical_id": "DOI:10.1007/s44227-026-00105-3",
+      "authors": [
+        "Anand Wankhade",
+        "Aniket K. Shahade"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 134,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:DOI:10.1007/s11432-026-5028-5",
+      "identity_tokens": [
+        "id:DOI:10.1007/s11432-026-5028-5",
+        "id:SemanticScholar:a678897f170b8aee11a9be44375b22cb11024871",
+        "title:a time scaling theory for multilayer electronic systems",
+        "url:https://doi.org/10.1007/s11432-026-5028-5"
+      ],
+      "record": {
+        "title": "A time scaling theory for multi-layer electronic systems",
+        "source_url": "https://doi.org/10.1007/s11432-026-5028-5",
+        "year": 2026,
+        "published": "2026-07-21",
+        "venue": "Science China Information Sciences",
+        "citation_count": 6,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "For six decades, Moore’s geometric scaling drove progress in semiconductors. That industry compact no longer holds: returns from pure dimensional shrinking have flattened, leading-edge design budgets exceed one billion dollars per chip, and cost-per-transistor at the most advanced nodes is no longer falling. This perspective argues for a successor scaling principle—τ scaling—that adopts time itself, rather than transistor area, as the primary metric of progress, applying a single characteristic time constant τ as the unifying optimization target across twelve orders of magnitude, from a switching transistor to a data-center workload. Two production-scale demonstrations are presented. On a mobile SoC, LogicFolding—a methodology that partitions digital, analog, and memory circuits across vertically stacked active tiers—delivers a 55% step-wise increase in transistor density and a 41% reduction in power consumption at equivalent performance at a fixed device node. On AI systems, a co-designed stack comprising the memory-semantic Unified Bus fabric, near-packaged Hi-ONE optical I/O, and edge-to-surface 3D Folding projects more than 100× growth in hardware integration by 2035. The deeper claim is methodological: τ scaling is the first scaling principle since Dennard to establish a shared optimization target across the entire computing stack.",
+        "identifiers": [
+          "SemanticScholar:a678897f170b8aee11a9be44375b22cb11024871"
+        ],
+        "semantic_scholar_id": "a678897f170b8aee11a9be44375b22cb11024871",
+        "doi": "10.1007/s11432-026-5028-5",
+        "canonical_id": "DOI:10.1007/s11432-026-5028-5",
+        "authors": [
+          "Tingbo He"
+        ],
+        "priority": 106,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 6,
+          "citation_count": 6,
+          "total": 106,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 87,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1016/j.asoc.2025.114398",
+      "identity_tokens": [
+        "id:DOI:10.1016/j.asoc.2025.114398",
+        "id:SemanticScholar:fcee7bda1bb667b22bb4b1a2bf569d18156e7b69",
+        "title:attention distillation for lowcost driver behavior recognition",
+        "url:https://doi.org/10.1016/j.asoc.2025.114398"
+      ],
+      "record": {
+        "title": "Attention distillation for low-cost driver behavior recognition",
+        "source_url": "https://doi.org/10.1016/j.asoc.2025.114398",
+        "year": 2025,
+        "published": "2025-12-01",
+        "venue": "Applied Soft Computing",
+        "citation_count": 4,
+        "citation_count_source": "semantic_scholar",
+        "abstract": null,
+        "identifiers": [
+          "SemanticScholar:fcee7bda1bb667b22bb4b1a2bf569d18156e7b69"
+        ],
+        "semantic_scholar_id": "fcee7bda1bb667b22bb4b1a2bf569d18156e7b69",
+        "doi": "10.1016/j.asoc.2025.114398",
+        "canonical_id": "DOI:10.1016/j.asoc.2025.114398",
+        "authors": [
+          "Hang Gao",
+          "Mengting Hu",
+          "Kaiye Yu",
+          "Han Xing"
+        ],
+        "priority": 104,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 4,
+          "citation_count": 4,
+          "total": 104,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 319,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1007/s11432-020-3245-7",
+      "identity_tokens": [
+        "id:DOI:10.1007/s11432-020-3245-7",
+        "id:SemanticScholar:5e9615cb661b325d6538de7c2777d94014004618",
+        "title:nas4rram neural network architecture search for inference on rrambased accelerators",
+        "url:https://doi.org/10.1007/s11432-020-3245-7"
+      ],
+      "record": {
+        "title": "NAS4RRAM: neural network architecture search for inference on RRAM-based accelerators",
+        "source_url": "https://doi.org/10.1007/s11432-020-3245-7",
+        "year": 2021,
+        "published": "2021-05-10",
+        "venue": "Science China Information Sciences",
+        "citation_count": 31,
+        "citation_count_source": "semantic_scholar",
+        "abstract": null,
+        "identifiers": [
+          "SemanticScholar:5e9615cb661b325d6538de7c2777d94014004618"
+        ],
+        "semantic_scholar_id": "5e9615cb661b325d6538de7c2777d94014004618",
+        "doi": "10.1007/s11432-020-3245-7",
+        "canonical_id": "DOI:10.1007/s11432-020-3245-7",
+        "authors": [
+          "Zhihang Yuan",
+          "Jing-Ze Liu",
+          "Xingchen Li",
+          "Long-Hao Yan",
+          "Hao-Xiang Chen",
+          "Bingzhe Wu",
+          "Yuchao Yang",
+          "Guang-Yu Sun"
+        ],
+        "priority": 31,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 31,
+          "citation_count": 31,
+          "total": 31,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 1985,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1007/s44443-026-00801-8",
+      "identity_tokens": [
+        "id:DOI:10.1007/s44443-026-00801-8",
+        "id:SemanticScholar:8d976324a991814fe3ee716360321cba2fc7ebba",
+        "title:lightweight surpriseonmemory efficient engagement recognition via prediction errorguided updates",
+        "url:https://doi.org/10.1007/s44443-026-00801-8"
+      ],
+      "record": {
+        "title": "Lightweight surprise-on-memory: efficient engagement recognition via prediction error-guided updates",
+        "source_url": "https://doi.org/10.1007/s44443-026-00801-8",
+        "year": 2026,
+        "published": "2026-04-30",
+        "venue": "Journal of King Saud University: Computer and Information Sciences",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "In online teaching scenarios, automatic assessment of student engagement suffers from limited real-time capability, high computational cost, and redundant information in long-duration videos. To address these challenges, a student engagement recognition model driven by prediction error–based memory updating (DMDN) is proposed. A multi-stage framework with feature decoupling is adopted. A behavior dynamics branch is used to extract coarse-grained behavioral features. A facial attention branch is used to extract fine-grained facial representations. Semantic interference during heterogeneous visual feature modeling is thus avoided. Furthermore, a dynamic memory updating module based on prediction error is introduced. The deviation between current observations and historical memory is characterized. The memory update strength is adaptively adjusted. Selective encoding of key behavioral segments is achieved. Interference from redundant temporal information is effectively suppressed. The model parameters and deployment scheme are revised as follows. A two-stage deployment strategy is adopted, in which backbone features are extracted and cached offline, decoupling heavy feature extraction from online inference. Only a lightweight inference backend with 3.18M trainable parameters is executed during real-time prediction. Experimental results on the DAiSEE dataset demonstrate that a Top-1 accuracy of 64.65% is achieved, validating the effectiveness of the proposed method under strict computational constraints. This design demonstrates its potential in resource-constrained scenarios. Ablation studies further verify the effectiveness of the feature decoupling structure and the dynamic memory update mechanism in improving performance.",
+        "identifiers": [
+          "SemanticScholar:8d976324a991814fe3ee716360321cba2fc7ebba"
+        ],
+        "semantic_scholar_id": "8d976324a991814fe3ee716360321cba2fc7ebba",
+        "doi": "10.1007/s44443-026-00801-8",
+        "canonical_id": "DOI:10.1007/s44443-026-00801-8",
+        "authors": [
+          "Xinhao Zhang",
+          "Yuli Sun",
+          "Weidong Ji"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 169,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1007/s44227-026-00105-3",
+      "identity_tokens": [
+        "id:DOI:10.1007/s44227-026-00105-3",
+        "id:SemanticScholar:797eaea9f234b384c92742097acb1974df01f20b",
+        "title:costaware structured content generation using hybrid retrievalaugmented generation and adaptive compute routing",
+        "url:https://doi.org/10.1007/s44227-026-00105-3"
+      ],
+      "record": {
+        "title": "Cost-Aware Structured Content Generation Using Hybrid Retrieval-Augmented Generation and Adaptive Compute Routing",
+        "source_url": "https://doi.org/10.1007/s44227-026-00105-3",
+        "year": 2026,
+        "published": "2026-06-04",
+        "venue": "International Journal of Networked and Distributed Computing (IJNDC)",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Deploying large language models for structured content generation presents a fundamental tension between quality requirements and computational costs. Standard retrieval-augmented generation approaches struggle with complex multi-hop domain questions due to context loss and retrieval noise, while state-of-the-art models impose prohibitive per-query costs at scale. We introduce Cost-Aware Structured Generation, a domain-agnostic 14-stage pipeline that integrates hybrid retrieval-augmented generation with Reciprocal Rank Fusion, conditional compute routing based on query difficulty, and adaptive voting strategies with domain-specific weighting. Our architecture achieves 93.5% overall precision with a hallucination rate of only 0.31% (1 error in 325 human-reviewed samples from 2021 to 2025) on a validation dataset of 1,200+ complex domain questions spanning 2007–2025, requiring 200+ field structured outputs. Through intelligent routing that selectively invokes expensive models only for high-complexity queries, we demonstrate 84% improvement in content richness while reducing costs by 50.4% compared to baseline Self-Consistency ensembles. Validation on aerospace engineering certification exams demonstrates production viability. While the architecture is designed with domain-agnostic principles, its application to other high-stakes domains remains a direction for future work. This work establishes that architectural engineering, not merely model scaling, provides a viable pathway to production-grade structured generation with strict precision requirements.",
+        "identifiers": [
+          "SemanticScholar:797eaea9f234b384c92742097acb1974df01f20b"
+        ],
+        "semantic_scholar_id": "797eaea9f234b384c92742097acb1974df01f20b",
+        "doi": "10.1007/s44227-026-00105-3",
+        "canonical_id": "DOI:10.1007/s44227-026-00105-3",
+        "authors": [
+          "Anand Wankhade",
+          "Aniket K. Shahade"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 134,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:218da9bcc106c261124601e6f7eac1c07035ac3ef2355c86b2028c00b2597ef8",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}
