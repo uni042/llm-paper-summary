@@ -143,16 +143,16 @@
   層ごとの学習可能アフィン変換を小さなクロネッカー積へ分解し量子化と融合して、LLaMA-3-70BのW4A4で精度低下1%未満とプリフィル最大2.3倍高速化を両立する。
 
 - **2024-02 · [GPTVQ: The Blessing of Dimensionality for LLM Quantization](2024-2402.15319-gptvq-the-blessing-of-dimensionality-for-llm-quantization.md)**  
-  実装：✓ ・ リポジトリ内被引用：14  
+  実装：✓ ・ リポジトリ内被引用：15  
   複数の重みを1ベクトルとして量子化し、代理ヘッセ行列（proxy Hessian）で量子化誤差を後続列へ補償する。Llama 3 8Bの約3.125 bit/value構成では、Snapdragon X Elite上で独自INT4実装よりモデル占有量を約19%減らし、23.81から26.15 トークン/sへ高速化する。
+
+- **2024-06 · [QTIP: Quantization with Trellises and Incoherence Processing](2024-2406.11235-qtip-quantization-with-trellises-and-incoherence-processing.md)**  
+  実装：[✓](https://github.com/Cornell-RelaxML/qtip) ・ リポジトリ内被引用：14  
+  ベクトル量子化（Vector Quantization, VQ）は複数重みをまとめて符号化するほど量子化効率が上がる一方、通常の符号帳は次元に対して指数的に巨大化する。QTIPは、符号帳を列挙せず有限状態の「トレリス」を使うことで、この次元の壁を外し、2bit級でも256次元の高次元量子化を実用的な復号コストで実現する。
 
 - **2024-01 · [SliM-LLM: Salience-Driven Mixed-Precision Quantization for Large Language Models](2024-2405.14917-slim-llm-salience-driven-mixed-precision-quantization-for-large-language-models.md)**  
   実装：✓ ・ リポジトリ内被引用：14  
   要素単位で重要重みだけ高精度に残すのではなく、重要度が空間的にまとまる性質を使ってグループ単位で1/2/3ビットを割り当てる。さらに各グループ内部の少数の重要要素を量子化器校正で重く扱い、LLaMA-7Bの2ビット級でWikiText2パープレキシティ14.58を達成する。
-
-- **2024-06 · [QTIP: Quantization with Trellises and Incoherence Processing](2024-2406.11235-qtip-quantization-with-trellises-and-incoherence-processing.md)**  
-  実装：[✓](https://github.com/Cornell-RelaxML/qtip) ・ リポジトリ内被引用：13  
-  ベクトル量子化（Vector Quantization, VQ）は複数重みをまとめて符号化するほど量子化効率が上がる一方、通常の符号帳は次元に対して指数的に巨大化する。QTIPは、符号帳を列挙せず有限状態の「トレリス」を使うことで、この次元の壁を外し、2bit級でも256次元の高次元量子化を実用的な復号コストで実現する。
 
 - **2024-01 · [LLM-FP4: 4-Bit Floating-Point Quantized Transformers](2023-2310.16836-llm-fp4-4-bit-floating-point-quantized-transformers.md)**  
   実装：✓ ・ リポジトリ内被引用：12  
@@ -167,11 +167,11 @@
   15Bを学習した後に8B・4Bを別々にゼロから学習する代わりに、Nemotron-4 15Bから注意ヘッド、MLP中間次元、埋め込み幅、必要に応じて層を構造枝刈りし、元15Bのロジットを教師にして短期間だけ知識蒸留（Knowledge Distillation; KD）する。
 
 - **2024-05 · [PV-Tuning: Beyond Straight-Through Estimation for Extreme LLM Compression](2024-2405.14852-pv-tuning-beyond-straight-through-estimation-for-extreme-llm-compression.md)**  
-  実装：✓ ・ リポジトリ内被引用：8  
+  実装：✓ ・ リポジトリ内被引用：9  
   大規模言語モデルを1～2ビット/重みへ圧縮すると、モデルを小さなメモリへ収められる一方、量子化誤差によって予測品質が大きく低下する。Llama-2 7Bの約2.02ビット/重みではWikiText-2のパープレキシティ5.84、5課題平均正答率61.35%を報告し、同程度のQuIP#の6.19・57.51%を上回る。
 
 - **2024-03 · [IntactKV: Improving Large Language Model Quantization by Keeping Pivot Tokens Intact](2024-2403.01241-intactkv-improving-large-language-model-quantization-by-keeping-pivot-to.md)**  
-  実装：[✓](https://github.com/ruikangliu/IntactKV) ・ リポジトリ内被引用：7  
+  実装：[✓](https://github.com/ruikangliu/IntactKV) ・ リポジトリ内被引用：8  
   IntactKVは、低ビット量子化した大規模言語モデル（LLM）において、入力の最初に置かれる少数の支点トークン（pivot トークン）の鍵・値キャッシュ（KV キャッシュ）だけを高精度モデルから生成して保存する方式である。
 
 - **2024-02 · [DB-LLM: Accurate Dual-Binarization for Efficient LLMs](2024-2402.11960-db-llm-accurate-dual-binarization-for-efficient-llms.md)**  
@@ -189,7 +189,7 @@
 ### 4年前（2022-11〜2023-10）
 
 - **2023-06 · [AWQ: Activation-aware Weight Quantization for LLM Compression and Acceleration](2023-2306.00978-awq.md)**  
-  実装：[✓](https://github.com/mit-han-lab/llm-awq) ・ リポジトリ内被引用：146  
+  実装：[✓](https://github.com/mit-han-lab/llm-awq) ・ リポジトリ内被引用：147  
   活性の大きい入力チャネルに対応する重みを等価スケーリングで保護し、全重みを均一な低ビット形式のまま高精度化する重み専用量子化とTinyChat実装。
 
 - **2022-11 · [LLM.int8(): 8-bit Matrix Multiplication for Transformers at Scale](2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md)**  
@@ -231,6 +231,6 @@
 ### 5年前（2021-11〜2022-10）
 
 - **2022-10 · [GPTQ: Accurate Post-Training Quantization for Generative Pre-trained Transformers](2022-2210.17323-gptq.md)**  
-  実装：[✓](https://github.com/IST-DASLab/gptq) ・ リポジトリ内被引用：279  
+  実装：[✓](https://github.com/IST-DASLab/gptq) ・ リポジトリ内被引用：280  
   二次情報に基づく誤差補償をGPU向けに再設計し、175B級LLMを数時間で3〜4bit化して単一A100実行と約3.24倍の生成高速化を実現した基礎的GPTQ研究。
 <!-- survey:auto:end -->

@@ -168,7 +168,7 @@ MoEの専門家並列、テンソル並列との混成、all-to-all通信、専�
   共活性に基づく階層専門家配置、動的複製、局所性・負荷認識ルーティング、階層疎通信を組み合わせ、分散MoE推論を最大4.66倍高速化するGRACE-MoE。
 
 - **2025-03 · [Capacity-Aware Inference: Mitigating the Straggler Effect in Mixture of Experts](2025-2503.05066-capacity-aware-inference-mitigating-the-straggler-effect-in-mixture-of-experts.md)**  
-  実装：[✓](https://github.com/CASE-Lab-UMD/Capacity-Aware-MoE) ・ リポジトリ内被引用：5  
+  実装：[✓](https://github.com/CASE-Lab-UMD/Capacity-Aware-MoE) ・ リポジトリ内被引用：6  
   専門家並列（専門家 Parallelism; EP）では、平均トークン数が同じでも一部専門家に負荷が集中すると、その専門家を担当するGPUが同期点を支配する。Capacity-Aware Inferenceは各専門家へ容量上限を設け、低ゲートスコアの超過トークンを落とすか、同一GPU上の追加候補専門家へ逃がすことでこのストラグラー効果を抑える。
 
 - **2024-11 · [Communication Compression for Tensor Parallel LLM Inference](2024-2411.09510-communication-compression-for-tensor-parallel-llm-inference.md)**  
@@ -224,6 +224,6 @@ MoEの専門家並列、テンソル並列との混成、all-to-all通信、専�
 ### 6年前（2020-11〜2021-10）
 
 - **2021-01 · [Switch Transformers: Scaling to Trillion Parameter Models with Simple and Efficient Sparsity](2021-2101.03961-switch-transformers-scaling-to-trillion-parameter-models-with-simple-and.md)**  
-  実装：[✓](https://github.com/tensorflow/mesh/blob/master/mesh_tensorflow/transformer/moe.py) ・ リポジトリ内被引用：154  
+  実装：[✓](https://github.com/tensorflow/mesh/blob/master/mesh_tensorflow/transformer/moe.py) ・ リポジトリ内被引用：155  
   論文は、専門家容量、容量超過トークンの扱い、負荷分散補助損失、ルータだけを高精度で計算する選択的精度、初期値スケールの縮小、専門家専用ドロップアウト、データ・モデル・専門家並列の組合せまで含め、巨大な疎モデルを実際に安定学習するための設計をまとめている。
 <!-- survey:auto:end -->
