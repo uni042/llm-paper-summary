@@ -42,13 +42,13 @@
   実装：✓ ・ リポジトリ内被引用：8  
   非同期エージェントのKV接頭辞がLRU追い出しと再計算を繰り返す中盤スラッシングを、KV使用率・ヒット率を混雑信号にしたエージェント単位の加算増加・乗算減少型受入れ制御で未然に抑える方式。
 
+- **2026-03 · [Parallelizing Tool Execution and LLM Generation for Low-Latency Agent Serving](2026-2603.18897-paste-pattern-aware-speculative-tool-execution.md)**  
+  実装：✓ ・ リポジトリ内被引用：7  
+  反復する道具系列と引数依存から次の具体的な道具呼出しを先行実行し、言語モデル側の混雑も共同制御して平均タスク完了時間を最大43.5%削減する。
+
 - **2025-12 · [TokenScale: Timely and Accurate Autoscaling for Disaggregated LLM Serving with Token Velocity](2025-2512.03416-tokenscale-token-velocity-disaggregated-llm-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：7  
   プリフィル・通信・デコードを共通の「トークン速度」で観測し、突発負荷では既存デコードGPUを一時的なプリフィル処理へ転用して、新規GPU起動の遅れを埋める自動スケーリング方式。
-
-- **2026-03 · [Parallelizing Tool Execution and LLM Generation for Low-Latency Agent Serving](2026-2603.18897-paste-pattern-aware-speculative-tool-execution.md)**  
-  実装：✓ ・ リポジトリ内被引用：6  
-  反復する道具系列と引数依存から次の具体的な道具呼出しを先行実行し、言語モデル側の混雑も共同制御して平均タスク完了時間を最大43.5%削減する。
 
 - **2026-02 · [vLLM-Omni: Fully Disaggregated Serving for Any-to-Any Multimodal Models](2026-2602.02204-vllm-omni-fully-disaggregated-multimodal-serving.md)**  
   実装：[✓](https://github.com/vllm-project/vllm-omni) ・ リポジトリ内被引用：6  
@@ -234,6 +234,10 @@
   実装：[✓](https://github.com/sudokara/Kairos) ・ リポジトリ内被引用：1  
   プリフィルGPUの混雑時にデコードGPUの余力へプリフィルを小分けで差し込み、トークン間時間のSLOを超えない範囲で要求を移して、プリフィル待ちとKV転送を減らす。
 
+- **2026-07 · [SPORK: Self-Speculative Forking to Accelerate Agentic LLM Inference](2026-2607.03333-spork-self-speculative-forking-agentic-llm.md)**  
+  実装：[✓](https://github.com/baihuajun24/spork) ・ リポジトリ内被引用：1  
+  主LLM自身をprobeとして分岐し、思考生成中に将来のツール呼出しを先行実行することで外部ツール待ちを隠す。GAIAのQwen3-32BでP95遅延を18%削減し、誤予測時は一致した呼出し接頭辞を再利用する。
+
 - **2026-07 · [Robust KV Cache Management for LLM Serving under Output Token Length Uncertainty](2026-2607.16892-robust-kv-cache-management-output-length-uncertainty.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   出力長分布のずれを考慮し、プリエンプション損失と未使用HBM損失からKV予約量を求め、GPU構成・要求振り分け・接頭辞キャッシュを再最適化して容量浪費と追い出しを減らす。
@@ -293,6 +297,10 @@
 - **2026-05 · [FATE: Future-State-Aware Scheduling for Heterogeneous LLM Workflows](2026-2605.07238-fate-future-state-aware-workflow-scheduling.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   現在のGPU負荷だけでなく、配置後に残るモデル常駐・親出力局所性・接頭辞再利用を有限先読みで評価し、ワークフローDAGの次段階に有利な状態を残すスケジューラ。
+
+- **2026-05 · [DeltaBox: Scaling Stateful AI Agents with Millisecond-Level Sandbox Checkpoint/Rollback](2026-2605.22781-deltabox-agent-sandbox-checkpoint-rollback.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  ファイルとプロセスの連続状態差分だけを保存し、動的overlay層切替と凍結テンプレートforkを組み合わせて、状態を持つAIエージェントのチェックポイント・ロールバックをミリ秒級にする。
 
 - **2026-05 · [A Policy-Driven Runtime Layer for Agentic LLM Serving](2026-2605.27744-policy-driven-runtime-agentic-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
@@ -576,10 +584,6 @@
   実装：✓ ・ リポジトリ内被引用：0  
   単発要求の待ち時間やGPU利用率だけを最適化する方式は、ツールを使うエージェントの連続呼出しには必ずしも適さない。機構を無効化したラウンド型基準と比較し、セッション完了時間の中央値を1000秒から189秒、95パーセンタイルを2296秒から867秒へ短縮した。
 
-- **2026-07 · [SPORK: Self-Speculative Forking to Accelerate Agentic LLM Inference](2026-2607.03333-spork-self-speculative-forking-agentic-llm.md)**  
-  実装：[✓](https://github.com/baihuajun24/spork) ・ リポジトリ内被引用：0  
-  主LLM自身をprobeとして分岐し、思考生成中に将来のツール呼出しを先行実行することで外部ツール待ちを隠す。GAIAのQwen3-32BでP95遅延を18%削減し、誤予測時は一致した呼出し接頭辞を再利用する。
-
 - **2026-07 · [SpecBox: Speculative Sandbox Scheduling for Efficient LLM Agent Serving](2026-2607.23933-specbox-speculative-sandbox-scheduling-agent-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   SpecBoxはLLM生成中に将来のツール利用を推測して隔離実行環境を投機起動し、依存グラフ先読み・結果キャッシュ・共有メモリ転送を組み合わせてエージェントサービングの初回起動遅延と常時予約メモリを両立改善する。
@@ -743,10 +747,6 @@
 - **2026-05 · [Fail-Closed Lowering of Resident KV Claims onto LLM Serving Runtimes](2026-2606.01387-fail-closed-lowering-of-resident-kv-claims-onto-llm-serving-runtimes.md)**  
   実装：[✓](https://github.com/gustavgauge/resident-kv-lowering-artifact) ・ リポジトリ内被引用：0  
   大規模言語モデルの推論基盤には、鍵・値キャッシュ（KVキャッシュ）の保持優先度、期限、CPU・ストレージへの退避、ブロックの保存・削除イベント、退避禁止、キャッシュ状態を考慮した経路選択などがある。
-
-- **2026-05 · [DeltaBox: Scaling Stateful AI Agents with Millisecond-Level Sandbox Checkpoint/Rollback](2026-2605.22781-deltabox-agent-sandbox-checkpoint-rollback.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  ファイルとプロセスの連続状態差分だけを保存し、動的overlay層切替と凍結テンプレートforkを組み合わせて、状態を持つAIエージェントのチェックポイント・ロールバックをミリ秒級にする。
 
 - **2026-05 · [C2CServe: Leveraging NVLink-C2C for Elastic Serverless LLM Serving on MIG](2026-2605.19481-c2cserve-serverless-mig-nvlink-c2c.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -1371,7 +1371,7 @@
 ### 4年前（2022-11〜2023-10）
 
 - **2023-09 · [Efficient Memory Management for Large Language Model Serving with PagedAttention](2023-2309.06180-vllm-pagedattention-efficient-memory-management.md)**  
-  実装：[✓](https://github.com/vllm-project/vllm) ・ リポジトリ内被引用：1010  
+  実装：[✓](https://github.com/vllm-project/vllm) ・ リポジトリ内被引用：1011  
   vLLMは、要求ごとに大きな連続領域を予約していたKVキャッシュを固定長ブロックへ分解し、論理的な並びとGPU上の物理配置を分離する。必要なブロックだけ動的に割り当て、同じ接頭辞のKVを共有することで、限られたGPUメモリへより多くの要求を同時に載せる。
 
 - **2023-02 · [AlpaServe: Statistical Multiplexing with Model Parallelism for Deep Learning Serving](2023-2302.11665-alpaserve.md)**  
