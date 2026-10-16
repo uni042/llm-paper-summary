@@ -23,7 +23,7 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
 - [09-kernel-runtime-compilation](../09-kernel-runtime-compilation/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（29本）
+## 自動生成の論文一覧（30本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -61,6 +61,10 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
 - **2026-05 · [LLM-Emu: Native Runtime Emulation of LLM Inference via Profile-Driven Sampling](2026-2605.00616-llm-emu-native-runtime-emulation.md)**  
   実装：[✓](https://github.com/AKafakA/llm-emu) ・ リポジトリ内被引用：1  
   vLLMの本番HTTP・スケジューラ・KV管理を実コードのまま動かし、GPU順伝播だけを二次元遅延プロファイルからの標本化へ置換して、実GPU比の出力トークン当たり時間・反復時間を4.8%、エンドツーエンド遅延を5.3%、出力スループットを1.9%以内で再現する（初回トークン時間は最大10.41%ずれる）実時間エミュレータ。
+
+- **2026-05 · [EVA: Accelerating LLM Decoding via an Efficient Vector Quantization Architecture](2026-2605.24144-eva-accelerating-llm-decoding-via-an-efficient-vector-quantization-archi.md)**  
+  実装：[✓](https://github.com/dbw6/Eva) ・ リポジトリ内被引用：1  
+  EVAは、重みだけをベクトル量子化（Vector Quantization; VQ）した大規模言語モデル（LLM）の逐次復号を高速化する、アルゴリズムと回路の協調設計である。論文の主たる比較は、実在の一般消費者向けGPUでのトークン生成実測ではなく、28nm技術、500MHz、64GB/sの外部メモリ帯域を仮定した専用アクセラレータのシミュレーションである。
 
 ### 直近12か月・未被引用（2025-11〜2026-10）
 

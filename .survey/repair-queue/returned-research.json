@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-16T20:51:59+00:00",
+  "generated_at": "2026-10-16T21:56:34+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 189,
+  "count": 188,
   "entries": [
     {
       "canonical_id": "DOI:10.1145/3714983.3714987",
@@ -3499,36 +3499,6 @@
       "worker_run_key": "20261016-1400-scheduled-chat-00/r01"
     },
     {
-      "canonical_id": "arXiv:2602.07804",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-16T15:00:52+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700",
-        "説明不足トリガー: 評価説明量 424 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 8698,
-        "body_paragraphs": 50,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 424,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700",
-          "評価説明量 424 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-264ff918d817--libfile_48b45f905d9881919590d1a75cc53123--2026-2602.07804-cooperative-game-layer-pruning-research-20261016-1445-scheduled-chat-45-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-264ff918d817--libfile_48b45f905d9881919590d1a75cc53123--2026-2602.07804-cooperative-game-layer-pruning-research-20261016-1445-scheduled-chat-45-r.json",
-      "worker_run_key": "20261016-1445-scheduled-chat-45/r01"
-    },
-    {
       "canonical_id": "arXiv:2511.16193",
       "title": null,
       "source_url": null,
@@ -3635,33 +3605,6 @@
       },
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-34089b75bf1f--libfile_eee1e8ea93748191bf11ad92df813a8d--2025-2503.18292-jenga-research-20261016-0230-scheduled-chat-30-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-34089b75bf1f--libfile_eee1e8ea93748191bf11ad92df813a8d--2025-2503.18292-jenga-research-20261016-0230-scheduled-chat-30-r01.json",
-      "worker_run_key": "20261016-0230-scheduled-chat-30/r01"
-    },
-    {
-      "canonical_id": "arXiv:2403.01136",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-16T15:13:28+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 6676,
-        "body_paragraphs": 39,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 1102,
-        "limitation_chars": 845,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-34db1cebd719--libfile_f5b678402f14819185fb73640fec2570--2024-2403.01136-llm-pq-research-20261016-0230-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-34db1cebd719--libfile_f5b678402f14819185fb73640fec2570--2024-2403.01136-llm-pq-research-20261016-0230-scheduled-chat-30-r01.json",
       "worker_run_key": "20261016-0230-scheduled-chat-30/r01"
     },
     {
@@ -4975,6 +4918,33 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-f78887fb77ce--libfile_015daa53de0c81918da6933d5fd335a4--2025-doi-10.1145-3712285.3759867-maveriq-fingerprint-fragmentation-research-20261016-1930-scheduled-chat-30-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-f78887fb77ce--libfile_015daa53de0c81918da6933d5fd335a4--2025-doi-10.1145-3712285.3759867-maveriq-fingerprint-fragmentation-research-20261016-1930.json",
       "worker_run_key": "20261016-1930-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2602.07804",
+      "title": "Pruning as a Cooperative Game: Surrogate-Assisted Layer Contribution Estimation for Large Language Models",
+      "source_url": "https://arxiv.org/html/2602.07804v1",
+      "returned_at": "2026-10-16T21:54:26+00:00",
+      "return_count": 3,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 180 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 6125,
+        "body_paragraphs": 39,
+        "method_chars": 1668,
+        "method_paragraphs": 11,
+        "evaluation_chars": 180,
+        "limitation_chars": 828,
+        "insufficiency_flags": [
+          "評価説明量 180 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_cbb8a3e3939081919298325ca77b92ed--2026-2602.07804-cooperative-game-shapley-layer-pruning-research-20261017-0430-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_cbb8a3e3939081919298325ca77b92ed--2026-2602.07804-cooperative-game-shapley-layer-pruning-research-20261017-0430-scheduled-chat-30-r01.json",
+      "worker_run_key": "20261017-0430-scheduled-chat-30/r01"
     }
   ]
 }
