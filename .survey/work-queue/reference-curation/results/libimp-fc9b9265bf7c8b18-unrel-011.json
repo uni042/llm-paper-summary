@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-fc9b9265bf7c8b18-unrel-011",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2110.03303",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2110.03303",
+    "identity_tokens": [
+      "SemanticScholar:e1bccf9e3fa257b550e1e1bc477c63ab82d18457",
+      "arXiv:2110.03303"
+    ],
+    "reason": "The paper proves transformer approximation and constraint-satisfaction results; it proposes no execution or efficiency technique.",
+    "first_checked_at": "2026-10-16T06:17:52+00:00",
+    "last_checked_at": "2026-10-16T06:17:52+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2020-2006.04862-o-n-connections-are-expressive-enough-universal-approximability-of-spars.md"
+    ],
+    "title": "Universal Approximation Under Constraints is Possible with Transformers"
+  },
+  "processed_at": "2026-10-16T06:17:52+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-fc9b9265bf7c",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-fc9b9265bf7c8b18-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2111.14940",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2111.14940",
+    "identity_tokens": [
+      "DOI:10.1145/3470496.3527434",
+      "SemanticScholar:82973c5f56681190a0dbb4c4449ed60d5f805135",
+      "arXiv:2111.14940"
+    ],
+    "reason": "EQC distributes quantum-circuit workloads across devices to speed VQA training; its system is for quantum-model training, not LLM inference.",
+    "first_checked_at": "2026-10-16T06:17:50+00:00",
+    "last_checked_at": "2026-10-16T06:17:50+00:00",
+    "linked_from": [
+      "papers/inference/15-inference-simulation-emulation/2017-1712.05889-ray-a-distributed-framework-for-emerging-ai-applications.md"
+    ],
+    "title": "EQC: ensembled quantum computing for variational quantum algorithms"
+  },
+  "processed_at": "2026-10-16T06:17:50+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-fc9b9265bf7c",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

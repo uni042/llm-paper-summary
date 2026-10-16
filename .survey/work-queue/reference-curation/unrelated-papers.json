@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-16T05:16:26+00:00",
-  "record_count": 12308,
+  "updated_at": "2026-10-16T06:17:54+00:00",
+  "record_count": 12324,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -177474,6 +177474,253 @@
         "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
       ],
       "title": "Spatially Resolved Meteorological and Ancillary Data in Central Europe for Rainfall Streamflow Modeling"
+    },
+    "arXiv:2511.03441": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2511.03441",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2511.03441",
+        "SemanticScholar:11e431907cc7cc4bf29ba26b64645d81294faffa",
+        "arXiv:2511.03441"
+      ],
+      "reason": "CareMedEval benchmarks LLM critical appraisal in biomedical research; it measures reasoning quality, not inference-system efficiency.",
+      "first_checked_at": "2026-10-16T06:17:49+00:00",
+      "last_checked_at": "2026-10-16T06:17:49+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+      ],
+      "title": "CareMedEval dataset: Evaluating Critical Appraisal and Reasoning in the Biomedical Field"
+    },
+    "arXiv:2107.00676": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2107.00676",
+      "identity_tokens": [
+        "DOI:10.1145/3727339",
+        "SemanticScholar:d725c41b8e0516d0cf84d8fbd25eb7fc01a47342",
+        "arXiv:2107.00676"
+      ],
+      "reason": "This primer surveys multilingual pretrained language models, their capabilities, evaluation, and capacity; it proposes no serving-efficiency method.",
+      "first_checked_at": "2026-10-16T06:17:49+00:00",
+      "last_checked_at": "2026-10-16T06:17:49+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1905.09418-analyzing-multi-head-self-attention-specialized-heads-do-the-heavy-lifti.md"
+      ],
+      "title": "A Primer on Pretrained Multilingual Language Models"
+    },
+    "arXiv:2111.14940": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2111.14940",
+      "identity_tokens": [
+        "DOI:10.1145/3470496.3527434",
+        "SemanticScholar:82973c5f56681190a0dbb4c4449ed60d5f805135",
+        "arXiv:2111.14940"
+      ],
+      "reason": "EQC distributes quantum-circuit workloads across devices to speed VQA training; its system is for quantum-model training, not LLM inference.",
+      "first_checked_at": "2026-10-16T06:17:50+00:00",
+      "last_checked_at": "2026-10-16T06:17:50+00:00",
+      "linked_from": [
+        "papers/inference/15-inference-simulation-emulation/2017-1712.05889-ray-a-distributed-framework-for-emerging-ai-applications.md"
+      ],
+      "title": "EQC: ensembled quantum computing for variational quantum algorithms"
+    },
+    "SemanticScholar:a9278b95d8bd1ef3833424611a85856a3ff62bc7": {
+      "classification": "unrelated",
+      "canonical_id": "SemanticScholar:a9278b95d8bd1ef3833424611a85856a3ff62bc7",
+      "identity_tokens": [
+        "SemanticScholar:a9278b95d8bd1ef3833424611a85856a3ff62bc7"
+      ],
+      "reason": "The paper surveys and evaluates compression of communication for distributed deep-learning training; its target is training communication, not inference or serving.",
+      "first_checked_at": "2026-10-16T06:17:50+00:00",
+      "last_checked_at": "2026-10-16T06:17:50+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2018-1802.05799-horovod-fast-and-easy-distributed-deep-learning-in-tensorflow.md"
+      ],
+      "title": "Compressed Communication for Distributed Deep Learning: Survey and Quantitative Evaluation"
+    },
+    "arXiv:2210.11831": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2210.11831",
+      "identity_tokens": [
+        "DOI:10.1145/3582302.3582306",
+        "SemanticScholar:a12e64c8bd53136147862b570981581758e4937e",
+        "arXiv:2210.11831"
+      ],
+      "reason": "This survey compares tools for managing datasets, models, metrics, and other ML lifecycle artifacts; its focus is reproducibility and traceability, not runtime efficiency.",
+      "first_checked_at": "2026-10-16T06:17:50+00:00",
+      "last_checked_at": "2026-10-16T06:17:50+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2018-1802.05799-horovod-fast-and-easy-distributed-deep-learning-in-tensorflow.md"
+      ],
+      "title": "Management of Machine Learning Lifecycle Artifacts"
+    },
+    "arXiv:2007.13221": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2007.13221",
+      "identity_tokens": [
+        "SemanticScholar:66f2eaf3150510ecc89de62abf6f97bb96a1b38c",
+        "arXiv:2007.13221"
+      ],
+      "reason": "CSER compresses communication and accelerates distributed SGD training; the abstract explicitly reports training speedups.",
+      "first_checked_at": "2026-10-16T06:17:51+00:00",
+      "last_checked_at": "2026-10-16T06:17:51+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2018-1802.05799-horovod-fast-and-easy-distributed-deep-learning-in-tensorflow.md"
+      ],
+      "title": "CSER: Communication-efficient SGD with Error Reset"
+    },
+    "DOI:10.1007/s11432-020-3182-1": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1007/s11432-020-3182-1",
+      "identity_tokens": [
+        "DOI:10.1007/s11432-020-3182-1",
+        "SemanticScholar:a6cc3f1aad0743393826e955b3247dcd61fd9719"
+      ],
+      "reason": "The primary abstract compares TensorFlow and PyTorch single-GPU training speed; it studies training throughput rather than LLM inference or serving.",
+      "first_checked_at": "2026-10-16T06:17:51+00:00",
+      "last_checked_at": "2026-10-16T06:17:51+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2018-1802.05799-horovod-fast-and-easy-distributed-deep-learning-in-tensorflow.md"
+      ],
+      "title": "Reveal training performance mystery between TensorFlow and PyTorch in the single GPU environment"
+    },
+    "DOI:10.1101/gr.279142.124": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1101/gr.279142.124",
+      "identity_tokens": [
+        "DOI:10.1101/gr.279142.124",
+        "SemanticScholar:8d7bdedf28977b2da0396b4c963187c2a0e214e3"
+      ],
+      "reason": "The autoregressive language model is used to design regulatory DNA, a biological application rather than an inference-system efficiency contribution.",
+      "first_checked_at": "2026-10-16T06:17:52+00:00",
+      "last_checked_at": "2026-10-16T06:17:52+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2302.10866-hyena-hierarchy-towards-larger-convolutional-language-models.md"
+      ],
+      "title": "Designing realistic regulatory DNA with autoregressive language models"
+    },
+    "arXiv:2104.05861": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2104.05861",
+      "identity_tokens": [
+        "DOI:10.1007/s10664-023-10314-x",
+        "SemanticScholar:44725678a7e2b48fdcf6ad3b86d1a96dec736a9e",
+        "arXiv:2104.05861"
+      ],
+      "reason": "The study evaluates pretrained models for app-review classification and prediction time; it is a task-specific software-engineering application, not a general LLM systems method.",
+      "first_checked_at": "2026-10-16T06:17:52+00:00",
+      "last_checked_at": "2026-10-16T06:17:52+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2005.08025-intellicode-compose-code-generation-using-transformer.md"
+      ],
+      "title": "Evaluating pre-trained models for user feedback analysis in software engineering: a study on classification of app-reviews"
+    },
+    "arXiv:2110.03303": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2110.03303",
+      "identity_tokens": [
+        "SemanticScholar:e1bccf9e3fa257b550e1e1bc477c63ab82d18457",
+        "arXiv:2110.03303"
+      ],
+      "reason": "The paper proves transformer approximation and constraint-satisfaction results; it proposes no execution or efficiency technique.",
+      "first_checked_at": "2026-10-16T06:17:52+00:00",
+      "last_checked_at": "2026-10-16T06:17:52+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2006.04862-o-n-connections-are-expressive-enough-universal-approximability-of-spars.md"
+      ],
+      "title": "Universal Approximation Under Constraints is Possible with Transformers"
+    },
+    "arXiv:1809.04270": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1809.04270",
+      "identity_tokens": [
+        "SemanticScholar:db036f260390f51f8fe2bed31644e3fc75433dbb",
+        "arXiv:1809.04270"
+      ],
+      "reason": "MotherNets reduce computation and time for training deep ensembles; the contribution is explicitly training-only.",
+      "first_checked_at": "2026-10-16T06:17:53+00:00",
+      "last_checked_at": "2026-10-16T06:17:53+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2017-1701.06538-outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts.md"
+      ],
+      "title": "MotherNets: Rapid Deep Ensemble Learning"
+    },
+    "arXiv:2310.03659": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2310.03659",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2310.03659",
+        "SemanticScholar:6d828a7aace632477c5d89c1d4e2182645030b85",
+        "arXiv:2310.03659"
+      ],
+      "reason": "The paper proposes a taxonomy for LLM multi-agent autonomy and alignment, not a concrete runtime or inference-efficiency intervention.",
+      "first_checked_at": "2026-10-16T06:17:53+00:00",
+      "last_checked_at": "2026-10-16T06:17:53+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2306.07174-augmenting-language-models-with-long-term-memory.md"
+      ],
+      "title": "Balancing Autonomy and Alignment: A Multi-Dimensional Taxonomy for Autonomous LLM-powered Multi-Agent Architectures"
+    },
+    "arXiv:2108.07435": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2108.07435",
+      "identity_tokens": [
+        "SemanticScholar:b42d20ec9580ebd76860890a1d7a7fdcc742677e",
+        "arXiv:2108.07435"
+      ],
+      "reason": "The language model is applied to protein sequence representation and biological analysis, not general LLM systems.",
+      "first_checked_at": "2026-10-16T06:17:53+00:00",
+      "last_checked_at": "2026-10-16T06:17:53+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1909.08053-megatron-lm-training-multi-billion-parameter-language-models-using-model.md"
+      ],
+      "title": "Modeling Protein Using Large-scale Pretrain Language Model"
+    },
+    "arXiv:2106.08928": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2106.08928",
+      "identity_tokens": [
+        "DOI:10.52202/068431-2212",
+        "SemanticScholar:5d8b5849fb9a7802365ba5a7bee652a61d3f4395",
+        "arXiv:2106.08928"
+      ],
+      "reason": "The paper studies recurrent neural-network assemblies for neuroscience, not LLM inference or serving.",
+      "first_checked_at": "2026-10-16T06:17:54+00:00",
+      "last_checked_at": "2026-10-16T06:17:54+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md"
+      ],
+      "title": "RNNs of RNNs: Recursive Construction of Stable Assemblies of Recurrent Neural Networks"
+    },
+    "arXiv:2303.07221": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2303.07221",
+      "identity_tokens": [
+        "DOI:10.1109/icpc58990.2023.00036",
+        "SemanticScholar:4e97303aeb299ee736b1b8c29cef046212690354",
+        "arXiv:2303.07221"
+      ],
+      "reason": "The work generates code-review feedback; its target is review automation rather than LLM runtime efficiency.",
+      "first_checked_at": "2026-10-16T06:17:54+00:00",
+      "last_checked_at": "2026-10-16T06:17:54+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2005.08025-intellicode-compose-code-generation-using-transformer.md"
+      ],
+      "title": "Generation-based Code Review Automation: How Far Are Weƒ"
+    },
+    "DOI:10.1007/s44217-024-00114-w": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1007/s44217-024-00114-w",
+      "identity_tokens": [
+        "DOI:10.1007/s44217-024-00114-w",
+        "SemanticScholar:82fc3fe5cbe324071f6ef3b96444db4241b95e28"
+      ],
+      "reason": "This article discusses academic opportunities and challenges of ChatGPT; it proposes no concrete inference-time or serving-efficiency method.",
+      "first_checked_at": "2026-10-16T06:17:54+00:00",
+      "last_checked_at": "2026-10-16T06:17:54+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1909.08053-megatron-lm-training-multi-billion-parameter-language-models-using-model.md"
+      ],
+      "title": "Exploring the opportunities and challenges of ChatGPT in academia"
     }
   }
 }

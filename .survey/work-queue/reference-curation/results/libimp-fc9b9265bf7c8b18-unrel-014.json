@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-fc9b9265bf7c8b18-unrel-014",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2310.03659",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2310.03659",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2310.03659",
+      "SemanticScholar:6d828a7aace632477c5d89c1d4e2182645030b85",
+      "arXiv:2310.03659"
+    ],
+    "reason": "The paper proposes a taxonomy for LLM multi-agent autonomy and alignment, not a concrete runtime or inference-efficiency intervention.",
+    "first_checked_at": "2026-10-16T06:17:53+00:00",
+    "last_checked_at": "2026-10-16T06:17:53+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2306.07174-augmenting-language-models-with-long-term-memory.md"
+    ],
+    "title": "Balancing Autonomy and Alignment: A Multi-Dimensional Taxonomy for Autonomous LLM-powered Multi-Agent Architectures"
+  },
+  "processed_at": "2026-10-16T06:17:53+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-fc9b9265bf7c",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

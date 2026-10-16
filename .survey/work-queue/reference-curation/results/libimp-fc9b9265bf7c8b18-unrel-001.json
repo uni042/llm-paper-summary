@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-fc9b9265bf7c8b18-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2511.03441",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2511.03441",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2511.03441",
+      "SemanticScholar:11e431907cc7cc4bf29ba26b64645d81294faffa",
+      "arXiv:2511.03441"
+    ],
+    "reason": "CareMedEval benchmarks LLM critical appraisal in biomedical research; it measures reasoning quality, not inference-system efficiency.",
+    "first_checked_at": "2026-10-16T06:17:49+00:00",
+    "last_checked_at": "2026-10-16T06:17:49+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+    ],
+    "title": "CareMedEval dataset: Evaluating Critical Appraisal and Reasoning in the Biomedical Field"
+  },
+  "processed_at": "2026-10-16T06:17:49+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-fc9b9265bf7c",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

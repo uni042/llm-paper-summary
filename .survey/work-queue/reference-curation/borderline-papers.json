@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-16T05:16:21+00:00",
-  "record_count": 5182,
+  "updated_at": "2026-10-16T06:17:49+00:00",
+  "record_count": 5184,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -80541,6 +80541,39 @@
       ],
       "borderline_recheck_count": 0,
       "title": "MOTIF: Modular Thinking via Reinforcement Fine-tuning in LLMs"
+    },
+    "arXiv:1911.05289": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:1911.05289",
+      "identity_tokens": [
+        "SemanticScholar:dbc4b7508068f77b1ad9c24d963b446def8eed2c",
+        "arXiv:1911.05289"
+      ],
+      "reason": "The paper discusses deep-learning implications for chip design and sparsely activated routed models, but presents no concrete inference runtime or measured efficiency method.",
+      "first_checked_at": "2026-10-16T06:17:48+00:00",
+      "last_checked_at": "2026-10-16T06:17:48+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2017-1701.06538-outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "The Deep Learning Revolution and Its Implications for Computer Architecture and Chip Design"
+    },
+    "arXiv:2205.13621": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2205.13621",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2205.13621",
+        "SemanticScholar:2811559b89a32fdf9facf24f4847f1d37393d158",
+        "arXiv:2205.13621"
+      ],
+      "reason": "The work adds a computationally lightweight perturbation during LLM decoding for differential privacy, but gives no latency or resource reduction; its efficiency relevance is uncertain.",
+      "first_checked_at": "2026-10-16T06:17:49+00:00",
+      "last_checked_at": "2026-10-16T06:17:49+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1909.08053-megatron-lm-training-multi-billion-parameter-language-models-using-model.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Differentially Private Decoding in Large Language Models"
     }
   }
 }

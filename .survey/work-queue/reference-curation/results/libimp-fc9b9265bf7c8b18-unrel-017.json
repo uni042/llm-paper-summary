@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-fc9b9265bf7c8b18-unrel-017",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2303.07221",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2303.07221",
+    "identity_tokens": [
+      "DOI:10.1109/icpc58990.2023.00036",
+      "SemanticScholar:4e97303aeb299ee736b1b8c29cef046212690354",
+      "arXiv:2303.07221"
+    ],
+    "reason": "The work generates code-review feedback; its target is review automation rather than LLM runtime efficiency.",
+    "first_checked_at": "2026-10-16T06:17:54+00:00",
+    "last_checked_at": "2026-10-16T06:17:54+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2020-2005.08025-intellicode-compose-code-generation-using-transformer.md"
+    ],
+    "title": "Generation-based Code Review Automation: How Far Are Weƒ"
+  },
+  "processed_at": "2026-10-16T06:17:54+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-fc9b9265bf7c",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
