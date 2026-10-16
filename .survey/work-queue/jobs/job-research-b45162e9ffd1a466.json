@@ -35,10 +35,15 @@
   "selection_reason": "GritLMはembeddingとgenerationを単一LLMへ統合し、RAGで別retriever/generatorへ重複して通すforward passを再利用・半減して長文書RAGを60%以上高速化するため、RAG推論経路の効率化として対象。",
   "semantic_scholar_id": "e310707f28c60e1f56820ab12272affe71818d17",
   "source_url": "https://arxiv.org/abs/2402.09906",
-  "status": "ready",
+  "status": "superseded",
   "title": "Generative Representational Instruction Tuning",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2024
+  "year": 2024,
+  "superseded_at": "2026-10-16T08:52:52+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2024-2402.09906-generative-representational-instruction-tuning.md",
+  "represented_canonical_id": "arXiv:2402.09906",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

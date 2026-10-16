@@ -24,7 +24,7 @@
 - [10-kv-cache-offload-recomputation](../10-kv-cache-offload-recomputation/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（45本）
+## 自動生成の論文一覧（46本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -140,6 +140,10 @@
 - **2026-08 · [AsymSpec: Context-Asymmetric Speculative Decoding for Agentic LLMs](2026-2608.26004-asymspec-context-asymmetric-speculative-decoding-for-agentic-llms.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   軽量ドラフターだけが完全文脈を読み、完全/圧縮文脈のロジット差δと文脈発散連動の受理ゲートで、圧縮文脈しか見ない大規模検証器の精度を回復する非対称推測復号。
+
+- **2026-08 · [AOSpec: Action and Observation Co-Speculation for Low-Latency Agent Serving](2026-2608.00881-aospec-action-and-observation-co-speculation-for-low-latency-agent-servi.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  単純な投機的生成はモデル内部のトークン列を先読みするが、エージェント全体の遅延ではモデル外の実行時間が残る。同じ記録済み軌跡を再生する評価で、通常の逐次実行に比べた平均総遅延削減率は11.8〜32.5%、10ms/トークン条件のp99遅延削減率は42.8%である。
 
 - **2026-07 · [Compute Globally, Materialize Locally: The Memory Contract of Sparse Event-KV](2026-2607.23693-compute-globally-materialize-locally-the-memory-contract-of-sparse-event-kv.md)**  
   実装：[✓](https://github.com/oklen/Compute-Globally-Materialize-Locally) ・ リポジトリ内被引用：0  
