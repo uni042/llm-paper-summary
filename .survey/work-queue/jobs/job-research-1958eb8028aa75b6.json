@@ -33,10 +33,15 @@
   "selection_reason": "量子化LLMの推論品質低下を、初期pivot tokenのKVだけ全精度で保持して抑える推論向け量子化補助手法。既存PTQへ追加でき、通常のデコード時に追加計算を要求しないため対象範囲。",
   "semantic_scholar_id": "a2339a7e417df89c617ee41eef6e70868da6baac",
   "source_url": "https://arxiv.org/abs/2403.01241",
-  "status": "ready",
+  "status": "superseded",
   "title": "IntactKV: Improving Large Language Model Quantization by Keeping Pivot Tokens Intact",
   "type": "research",
   "venue": "Annual Meeting of the Association for Computational Linguistics",
   "workflow_version": 10,
-  "year": 2024
+  "year": 2024,
+  "superseded_at": "2026-10-16T10:39:12+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/16-weight-quantization-compression/2024-2403.01241-intactkv-improving-large-language-model-quantization-by-keeping-pivot-to.md",
+  "represented_canonical_id": "arXiv:2403.01241",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
