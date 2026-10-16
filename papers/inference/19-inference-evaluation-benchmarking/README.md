@@ -1,5 +1,5 @@
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（40本）
+## 自動生成の論文一覧（41本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -59,6 +59,10 @@
 - **2026-04 · [Watt Counts: Energy-Aware Benchmark for Sustainable LLM Inference on Heterogeneous GPU Architectures](2026-2604.09048-watt-counts-energy-aware-benchmark-for-sustainable-llm-inference-on-hete.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   逆に常時待機する低負荷サーバでは、ピーク処理能力よりアイドル時の消費電力が支配的になり、別のGPUが有利になり得る。Watt Countsは、こうしたモデル、GPU、運用負荷の三者の相互作用を比較するための公開データセットと測定基盤を提案する。
+
+- **2026-04 · [SMoES: Soft Modality-Guided Expert Specialization in MoE-VLMs](2026-2604.23996-smoes-soft-modality-guided-expert-specialization-in-moe-vlms.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  SMoES（Soft Modality-guided 専門家 Specialization）は、視覚・言語モデル（Vision-Language モデル, VLM）の専門家混合（Mixture of エキスパート, MoE）層で、画像由来トークンと文章由来トークンが各層でどの程度混合しているかを推定し、専門家の配置と学習を調整する方式である。
 
 - **2026-04 · [Reasoning Language Model Inference Serving Unveiled: An Empirical Study](2025-2510.18672-reasoning-language-model-inference-serving-unveiled.md)**  
   実装：[✓](https://github.com/lqinfdim/RLMServing) ・ リポジトリ内被引用：0  

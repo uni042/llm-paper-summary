@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（670本）
+## 自動生成の論文一覧（672本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -784,6 +784,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   混合専門家（Mixture-of-Experts; MoE）言語モデルは、各トークンについて多数の専門家ネットワークのうち少数だけを実行する。Qwen3-30B-A3Bでは、確信度の高いトークンは標準経路と最良候補の差がほぼないが、難しいトークンでは大きく乖離する。ただし、この論文は推論時に32個の候補を毎回試す高速化方式を提案したわけではない。
 
+- **2026-05 · [Training-Inference Consistent Segmented Execution for Long-Context LLMs](2026-2605.11744-training-inference-consistent-segmented-execution-for-long-context-llms.md)**  
+  実装：[✓](https://github.com/sxp11/Training-Inference-Consistent-Segmented-Execution) ・ リポジトリ内被引用：0  
+  長文脈の大規模言語モデル（LLM）は、通常の全注意力（full self-注意機構）を使うと、入力が長くなるにつれて注意演算と中間状態の記憶費用が増大する。16K/32K事前充填でのGPUピークメモリは18.56/19.06GBで、全注意力の23.61/34.67GBより小さい。
+
 - **2026-05 · [The Efficiency Frontier: A Unified Framework for Cost-Performance Optimization in LLM Context Management](2026-2605.23071-the-efficiency-frontier-a-unified-framework-for-cost-performance-optimiz.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   全文投入、検索拡張、要約・圧縮などの文脈管理方式は、回答品質だけ、または入力トークン数だけを比較すると運用上の優劣が決めにくい。HotpotQAの5,000問をGPT-5.4 miniで評価した結果、再利用回数が1から100へ増えると、F1約0.78の運用点で有効トークン数が566から424へ約25%減る構成が選ばれた。
@@ -987,6 +991,10 @@
 - **2026-04 · [AEGIS: Scaling Long-Sequence Homomorphic Encrypted Transformer Inference via Hybrid Parallelism on Multi-GPU Systems](2026-2604.03425-aegis-scaling-long-sequence-homomorphic-encrypted-transformer-inference-.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   AEGISは、完全準同型暗号（fully homomorphic encryption; FHE）で暗号化した入力を復号せずにTransformerへ通す際、複数GPUへ暗号文を分配する方法を最適化するシステムである。
+
+- **2026-04 · [A Self-Evolving Framework for Efficient Terminal Agents via Observational Context Compression](2026-2604.19572-a-self-evolving-framework-for-efficient-terminal-agents-via-observationa.md)**  
+  実装：[✓](https://github.com/multimodal-art-projection/TACO) ・ リポジトリ内被引用：0  
+  TACO（Terminal Agent Compression）は、コマンド出力をエージェントの履歴へ入れる直前に圧縮する追加層である。MiniMax-M2.5によるTerminalBench 1.0では成功率42.30%→45.25%、総トークン29.74→23.43百万（21.2%減）である。
 
 - **2026-03 · [The Missing Memory Hierarchy: Demand Paging for LLM Context Windows](2026-2603.09023-pichay-demand-paging-context-windows.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -2707,6 +2715,6 @@
 ### 10年前（2016-11〜2017-10）
 
 - **2017-01 · [Outrageously Large Neural Networks: The Sparsely-Gated Mixture-of-Experts Layer](2017-1701.06538-outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts.md)**  
-  実装：✓ ・ リポジトリ内被引用：193  
+  実装：✓ ・ リポジトリ内被引用：194  
   本論文は、ニューラルネットワークの総パラメータ数を増やすと各入力での計算量も増えるという密なモデルの制約を、入力ごとに一部の専門家だけを実行する条件付き計算によって緩和した基礎研究である。モデルの総容量を大きくしても、活性化する専門家数を固定すれば入力一件あたりの専門家演算量はほぼ一定にできる。ただし専門家を増やすだけでは高速にならない。
 <!-- survey:auto:end -->
