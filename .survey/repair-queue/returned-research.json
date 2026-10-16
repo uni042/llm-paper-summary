@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-16T12:08:30+00:00",
+  "generated_at": "2026-10-16T12:15:07+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 163,
+  "count": 164,
   "entries": [
     {
       "canonical_id": "DOI:10.1145/3714983.3714987",
@@ -253,22 +253,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-97ee9f2dc9c2--libfile_54f27b0becdc81919c7e97422419c095--1811.03115-blockwise-parallel-decoding(1).md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-97ee9f2dc9c2--libfile_54f27b0becdc81919c7e97422419c095--1811.03115-blockwise-parallel-decoding-1.json",
       "worker_run_key": "20261006-0700-scheduled-chat-00/r01"
-    },
-    {
-      "canonical_id": "arXiv:2608.25053",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-06T21:28:29+00:00",
-      "return_count": 3,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "日本語比率 61.7% < 70%"
-      ],
-      "quality_metrics": null,
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-1ec64e6cfe35--libfile_b998da9ea6388191b46c5212d5ab38d0--2608.25053-hydra.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-1ec64e6cfe35--libfile_b998da9ea6388191b46c5212d5ab38d0--2608.25053-hydra.json",
-      "worker_run_key": "20261006-2000-scheduled-chat-00/r01"
     },
     {
       "canonical_id": "DOI:10.1109/ISCA59077.2024.00082",
@@ -4159,8 +4143,8 @@
     },
     {
       "canonical_id": "arXiv:2602.02680",
-      "title": "FlexRank: Nested Low-Rank Knowledge Decomposition for Adaptive Model Deployment",
-      "source_url": "https://arxiv.org/pdf/2602.02680",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-16T12:06:54+00:00",
       "return_count": 1,
       "assigned_worker": "scheduled-chat-45",
@@ -4187,8 +4171,8 @@
     },
     {
       "canonical_id": "arXiv:2502.20704",
-      "title": "Fuzzy Speculative Decoding for a Tunable Accuracy-Runtime Tradeoff",
-      "source_url": "https://arxiv.org/pdf/2502.20704",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-16T12:07:31+00:00",
       "return_count": 1,
       "assigned_worker": "scheduled-chat-45",
@@ -4215,8 +4199,8 @@
     },
     {
       "canonical_id": "arXiv:2511.04063",
-      "title": "DartQuant: Efficient Rotational Distribution Calibration for LLM Quantization",
-      "source_url": "https://arxiv.org/html/2511.04063v1",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-16T12:07:32+00:00",
       "return_count": 1,
       "assigned_worker": "scheduled-chat-00",
@@ -4239,6 +4223,64 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_8ef74361bef081919a87de72580e8dac--2025-2511.04063-dartquant-rotation-calibration-research-20261015-2203-scheduled-chat-00-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_8ef74361bef081919a87de72580e8dac--2025-2511.04063-dartquant-rotation-calibration-research-20261015-2203-scheduled-chat-00-r01.json",
       "worker_run_key": "20261015-2203-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2606.01926",
+      "title": "Mitigating Bias in Locally Constrained Decoding via Tractable Proposals",
+      "source_url": "https://arxiv.org/html/2606.01926v2",
+      "returned_at": "2026-10-16T12:13:29+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 8289,
+        "body_paragraphs": 41,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 1728,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_906cbb89876c8191a33d46e012daa2d5--2026-2606.01926-tractable-proposals-constrained-decoding-research-20261016-1430-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_906cbb89876c8191a33d46e012daa2d5--2026-2606.01926-tractable-proposals-constrained-decoding-research-20261016-1430-scheduled-chat-30-r01.json",
+      "worker_run_key": "20261016-1430-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "DOI:10.1145/3689031.3696072",
+      "title": "Fast State Restoration in LLM Serving with HCache",
+      "source_url": "https://arxiv.org/pdf/2410.05004",
+      "returned_at": "2026-10-16T12:13:57+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700",
+        "説明不足トリガー: 評価説明量 0 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 6276,
+        "body_paragraphs": 34,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 0,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700",
+          "評価説明量 0 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_9367ddbb6fa8819184f813713d99a72d--2025-doi-10.1145.3689031.3696072-hcache-fast-state-restoration-research-20261016-0130-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_9367ddbb6fa8819184f813713d99a72d--2025-doi-10.1145.3689031.3696072-hcache-fast-state-restoration-research-20261016-0130-scheduled-chat-30-r01.json",
+      "worker_run_key": "20261016-0130-scheduled-chat-30/r01"
     }
   ]
 }
