@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-16T17:49:39+00:00",
-  "record_count": 12412,
+  "updated_at": "2026-10-16T18:54:54+00:00",
+  "record_count": 12413,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -164028,9 +164028,9 @@
         "id:arXiv:2008.05000",
         "url:https://arxiv.org/abs/2008.05000"
       ],
-      "reason": "Degree-Quantはグラフニューラルネットワークの次数依存誤差を扱う量子化対応学習で、INT8/INT4のGNN推論とCPU高速化を評価する。LLMの重み・活性値量子化、Transformer復号、言語モデルの学習・サービングは対象外である。",
+      "reason": "一次要旨はグラフニューラルネットワーク（GNN）固有の量子化誤差を次数情報で抑える量子化考慮学習を提案する。INT8でのCPU高速化やINT4の精度改善はGNNでの実験であり、LLMの重み・活性化量子化、生成時KV管理、LLM推論基盤を対象としない。",
       "first_checked_at": "2026-10-11T07:45:44+00:00",
-      "last_checked_at": "2026-10-16T09:26:01+00:00",
+      "last_checked_at": "2026-10-16T18:54:54+00:00",
       "linked_from": [],
       "title": "Degree-Quant: Quantization-Aware Training for Graph Neural Networks"
     },
@@ -164265,9 +164265,9 @@
         "id:arXiv:2203.10314",
         "url:https://arxiv.org/abs/2203.10314"
       ],
-      "reason": "VoxSeTは点群の3次元物体検出に対するボクセル集合注意と潜在コードによる線形計算の設計であり、KITTI/Waymoの検出を評価する。対象は点群認識の視覚モデルで、LLM推論基盤・言語モデル学習の改善を検証しない。",
+      "reason": "一次要旨は点群の三次元物体検出のためのボクセル集合注意（VSA）と潜在コードによる集合間変換を提案し、KITTIとWaymoの検出性能を評価する。線形計算量の注意機構は点群専用で、LLMの自己回帰復号・サービングやKVキャッシュ管理を直接扱わない。",
       "first_checked_at": "2026-10-11T14:41:43+00:00",
-      "last_checked_at": "2026-10-15T16:44:44+00:00",
+      "last_checked_at": "2026-10-16T18:54:54+00:00",
       "linked_from": [],
       "title": "Voxel Set Transformer: A Set-to-Set Approach to 3D Object Detection from Point Clouds"
     },
@@ -179020,6 +179020,18 @@
       "last_checked_at": "2026-10-16T09:27:36+00:00",
       "linked_from": [],
       "title": "BubbleSpec: Turning Long-Tail Bubbles into Speculative Rollout Drafts for Synchronous Reinforcement Learning"
+    },
+    "arXiv:2402.12289": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2402.12289",
+      "identity_tokens": [
+        "arXiv:2402.12289"
+      ],
+      "reason": "一次要旨は自動運転の道路場面理解、場面分析、階層計画と実車での動作検証を主題とする。DriveVLM-Dualは車両の従来型認識・計画系と視覚言語モデルを統合する応用設計であり、LLM推論サーバ、KVキャッシュ、量子化、分散推論基盤の一般化可能な性能最適化を評価していない。",
+      "first_checked_at": "2026-10-16T18:54:53+00:00",
+      "last_checked_at": "2026-10-16T18:54:53+00:00",
+      "linked_from": [],
+      "title": "DriveVLM: The Convergence of Autonomous Driving and Large Vision-Language Models"
     }
   }
 }

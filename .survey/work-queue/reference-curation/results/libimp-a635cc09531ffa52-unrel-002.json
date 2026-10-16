@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a635cc09531ffa52-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2203.10314",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2203.10314",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2203.10314",
+      "arXiv:2203.10314",
+      "id:arXiv:2203.10314",
+      "url:https://arxiv.org/abs/2203.10314"
+    ],
+    "reason": "一次要旨は点群の三次元物体検出のためのボクセル集合注意（VSA）と潜在コードによる集合間変換を提案し、KITTIとWaymoの検出性能を評価する。線形計算量の注意機構は点群専用で、LLMの自己回帰復号・サービングやKVキャッシュ管理を直接扱わない。",
+    "first_checked_at": "2026-10-11T14:41:43+00:00",
+    "last_checked_at": "2026-10-16T18:54:54+00:00",
+    "linked_from": [],
+    "title": "Voxel Set Transformer: A Set-to-Set Approach to 3D Object Detection from Point Clouds"
+  },
+  "processed_at": "2026-10-16T18:54:54+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a635cc09531f",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
