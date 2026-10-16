@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-16T18:54:54+00:00",
-  "record_count": 12413,
+  "updated_at": "2026-10-16T19:48:15+00:00",
+  "record_count": 12418,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -165075,9 +165075,9 @@
       "identity_tokens": [
         "arXiv:2601.13742"
       ],
-      "reason": "音声対音声生成の評価を、音響特徴を文章化してLLM審査器へ渡す方式で人間評価に近づける研究。評価対象は音声出力の品質であり、推論エンジンの演算・記憶・配信スケジューリング・KV管理を提案していない。音声評価手法の研究として本サーベイの中心範囲外。",
+      "reason": "TRACEは音声特徴をテキスト表現に変換してLLM判定器に渡し、内容・声質・パラ言語情報を個別評価して人間評価との一致を高める。音声対話評価の品質と判定費用が目的で、LLMサービング、投機的復号、量子化、KVキャッシュ等の汎用推論システム技術を提案していない。",
       "first_checked_at": "2026-10-12T18:50:00+00:00",
-      "last_checked_at": "2026-10-13T21:31:12+00:00",
+      "last_checked_at": "2026-10-16T19:48:11+00:00",
       "linked_from": [],
       "title": "Hearing Between the Lines: Unlocking the Reasoning Power of LLMs for Speech Evaluation"
     },
@@ -168481,9 +168481,9 @@
         "id:arXiv:2606.18112",
         "url:https://arxiv.org/abs/2606.18112"
       ],
-      "reason": "タイトルはロボットの自律移動を行うナビゲーションモデルの技術報告であることを明示する。最終適用先がロボットの航法システムであり、LLMトークン生成のサービング、KVキャッシュ、MoE推論、GPUメモリ階層の最適化を示すタイトルではないため、Researchの先行タイトル除外とする。要旨と本文は未確認。",
+      "reason": "自律ナビゲーションシステム向けのロボット移動モデル技術報告であり、題名が対象とするのは移動・経路計画モデルである。LLM推論基盤の実行高速化やサービングの研究を示していない。",
       "first_checked_at": "2026-10-13T10:41:38+00:00",
-      "last_checked_at": "2026-10-13T10:41:38+00:00",
+      "last_checked_at": "2026-10-16T19:48:13+00:00",
       "linked_from": [],
       "title": "Qwen-RobotNav Technical Report: A Scalable Navigation Model Designed for an Agentic Navigation System"
     },
@@ -168509,9 +168509,9 @@
         "id:arXiv:2601.08665",
         "url:https://arxiv.org/abs/2601.08665"
       ],
-      "reason": "一次要旨では、視覚言語行動モデルによるロボット航法において、必要時のみ明示的推論を行う適応型思考連鎖と、過去の視覚観測を保持する言語記憶を組み合わせる。主目的は長期のロボット移動計画と未知環境への転移であり、LLMサービングやテキスト生成の推論カーネル・メモリ階層・量子化を対象とした性能評価ではないため対象外とする。",
+      "reason": "視覚言語行動モデルによるロボット移動で、必要時だけ推論を起動する適応的思考と視覚補助の言語記憶を組み合わせ、強化学習とNav-AdaCoT-2.9Mでナビゲーション性能を改善する。計算の選択性はあるが、最終対象はロボット経路計画・行動制御であり、LLM推論基盤の一般的な高速化ではない。",
       "first_checked_at": "2026-10-13T10:42:58+00:00",
-      "last_checked_at": "2026-10-13T10:42:58+00:00",
+      "last_checked_at": "2026-10-16T19:48:12+00:00",
       "linked_from": [],
       "title": "VLingNav: Embodied Navigation with Adaptive Reasoning and Visual-Assisted Linguistic Memory"
     },
@@ -169087,9 +169087,9 @@
       "identity_tokens": [
         "arXiv:2606.30367"
       ],
-      "reason": "タイトル段階で視覚と言語を用いるナビゲーションの世界・行動モデリングを主題とする論文と判別。LLM推論基盤、モデルのメモリ・演算・通信・量子化・並列実行・学習基盤の効率化を直接扱うと判断できないため、一次本文へ進む前に対象外とした。抽象と本文は未読であり、詳細な方法や数値は判断根拠に用いていない。",
+      "reason": "視覚言語ナビゲーション向けの世界・行動モデルの統合が主題であり、LLM推論基盤の高速化ではない。",
       "first_checked_at": "2026-10-13T17:44:44+00:00",
-      "last_checked_at": "2026-10-13T17:44:44+00:00",
+      "last_checked_at": "2026-10-16T19:48:14+00:00",
       "linked_from": [],
       "title": "FutureNav: Unified World-Action Modeling for Vision-and-Language Navigation"
     },
@@ -174613,9 +174613,9 @@
         "id:arXiv:2607.26148",
         "url:https://arxiv.org/abs/2607.26148"
       ],
-      "reason": "一次要旨はカメラと離散行動だけを与えた一般エージェントによるゼロショット視覚言語ナビゲーションの成功率と制御インターフェースを比較する。環境ステップ数・経過時間への言及はあるが、主貢献は身体化ナビゲーションの能力評価であり、汎用LLM推論エンジン・メモリ階層・GPU実行最適化を提案しないため無関係とする。",
+      "reason": "身体性エージェントによる視覚言語ナビゲーションの制御性能が対象であり、汎用LLMの生成カーネルやサービングを対象としない。",
       "first_checked_at": "2026-10-14T05:39:46+00:00",
-      "last_checked_at": "2026-10-16T09:22:43+00:00",
+      "last_checked_at": "2026-10-16T19:48:14+00:00",
       "linked_from": [],
       "title": "Embodied Agents Take Control: Minimal-Interface Zero-Shot Agents Rival Industrial-Scale Policies in Vision-and-Language Navigation"
     },
@@ -179032,6 +179032,66 @@
       "last_checked_at": "2026-10-16T18:54:53+00:00",
       "linked_from": [],
       "title": "DriveVLM: The Convergence of Autonomous Driving and Large Vision-Language Models"
+    },
+    "arXiv:2606.15869": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.15869",
+      "identity_tokens": [
+        "arXiv:2606.15869"
+      ],
+      "reason": "自動運転と都市ナビゲーションの世界・行動モデルを対象とする。効率的という形容はあるが、題名からの主目的は自律運転モデルの汎化でありLLM推論サーバや重み・KV配置ではない。",
+      "first_checked_at": "2026-10-16T19:48:13+00:00",
+      "last_checked_at": "2026-10-16T19:48:13+00:00",
+      "linked_from": [],
+      "title": "Metis: A Generalizable and Efficient World-Action Model for Autonomous Driving and Urban Navigation"
+    },
+    "arXiv:2602.22663": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.22663",
+      "identity_tokens": [
+        "arXiv:2602.22663"
+      ],
+      "reason": "視覚言語行動モデルの実用性評価ベンチマークと基準モデルを主題とし、LLM推論の計算・メモリ・スケジューリング方式を主題としない。",
+      "first_checked_at": "2026-10-16T19:48:13+00:00",
+      "last_checked_at": "2026-10-16T19:48:13+00:00",
+      "linked_from": [],
+      "title": "Rethinking the Practicality of Vision-language-action Model: A Comprehensive Benchmark and An Improved Baseline"
+    },
+    "arXiv:2512.09616": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2512.09616",
+      "identity_tokens": [
+        "arXiv:2512.09616"
+      ],
+      "reason": "動画を対象とする思考連鎖の推論能力・表現方式の研究であり、推論ランタイムやモデル圧縮・KVキャッシュの実装最適化を題名が示していない。",
+      "first_checked_at": "2026-10-16T19:48:14+00:00",
+      "last_checked_at": "2026-10-16T19:48:14+00:00",
+      "linked_from": [],
+      "title": "Rethinking Chain-of-Thought Reasoning for Videos"
+    },
+    "DOI:10.1016/j.dcan.2026.03.010": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1016/j.dcan.2026.03.010",
+      "identity_tokens": [
+        "DOI:10.1016/j.dcan.2026.03.010"
+      ],
+      "reason": "生成AIと大規模言語モデルをIoT領域へ応用する研究を題名が示し、推論サーバ・メモリ階層・カーネル・モデル圧縮の具体的な新方式を主題としない。",
+      "first_checked_at": "2026-10-16T19:48:15+00:00",
+      "last_checked_at": "2026-10-16T19:48:15+00:00",
+      "linked_from": [],
+      "title": "Generative IoT: advancing IoT with generative AI and large language models"
+    },
+    "arXiv:2607.29600": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.29600",
+      "identity_tokens": [
+        "arXiv:2607.29600"
+      ],
+      "reason": "階層的エージェント記憶を使った視覚言語ナビゲーションのゼロショット制御が対象であり、LLMのKVキャッシュやサービング向けメモリ管理ではない。",
+      "first_checked_at": "2026-10-16T19:48:15+00:00",
+      "last_checked_at": "2026-10-16T19:48:15+00:00",
+      "linked_from": [],
+      "title": "HAM-VLN: Harnessing Hierarchical Agentic Memory for Zero-Shot Vision-and-Language Navigation"
     }
   }
 }
