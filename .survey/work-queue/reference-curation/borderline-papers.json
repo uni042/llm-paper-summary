@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-16T06:20:11+00:00",
-  "record_count": 5227,
+  "updated_at": "2026-10-16T06:53:25+00:00",
+  "record_count": 5228,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -81241,6 +81241,19 @@
       ],
       "borderline_recheck_count": 0,
       "title": "GUI-Rise: Structured Reasoning and History Summarization for GUI Navigation"
+    },
+    "arXiv:2506.07530": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2506.07530",
+      "identity_tokens": [
+        "arXiv:2506.07530"
+      ],
+      "reason": "一次要旨を確認。BitNet b1.58 2B4Tの1-bit LLMを基盤にし、視覚エンコーダも低ビット化してロボット操作用VLAを構築する。モデルメモリ11.0倍減・エンドツーエンド遅延4.4倍短縮というシステム関連の結果がある一方、主たる評価対象はロボット操作の視覚言語行動ポリシーであり、一般のテキストLLM推論基盤・KVキャッシュ・MoE・llama.cpp等の推論システムではない。量子化の転用可能性があるため即時unrelatedではなくborderlineへ保留し、LLM固有の推論効率評価があるか本文再確認を要する。",
+      "first_checked_at": "2026-10-16T06:53:25+00:00",
+      "last_checked_at": "2026-10-16T06:53:25+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "BitVLA: 1-bit Vision-Language-Action Models for Robotics Manipulation"
     }
   }
 }

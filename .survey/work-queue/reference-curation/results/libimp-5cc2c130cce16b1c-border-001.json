@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-5cc2c130cce16b1c-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2506.07530",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2506.07530",
+    "identity_tokens": [
+      "arXiv:2506.07530"
+    ],
+    "reason": "一次要旨を確認。BitNet b1.58 2B4Tの1-bit LLMを基盤にし、視覚エンコーダも低ビット化してロボット操作用VLAを構築する。モデルメモリ11.0倍減・エンドツーエンド遅延4.4倍短縮というシステム関連の結果がある一方、主たる評価対象はロボット操作の視覚言語行動ポリシーであり、一般のテキストLLM推論基盤・KVキャッシュ・MoE・llama.cpp等の推論システムではない。量子化の転用可能性があるため即時unrelatedではなくborderlineへ保留し、LLM固有の推論効率評価があるか本文再確認を要する。",
+    "first_checked_at": "2026-10-16T06:53:25+00:00",
+    "last_checked_at": "2026-10-16T06:53:25+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "BitVLA: 1-bit Vision-Language-Action Models for Robotics Manipulation"
+  },
+  "processed_at": "2026-10-16T06:53:25+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-5cc2c130cce1",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
