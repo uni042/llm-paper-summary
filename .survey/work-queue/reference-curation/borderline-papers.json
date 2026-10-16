@@ -2,7 +2,7 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-16T07:46:06+00:00",
+  "updated_at": "2026-10-16T09:21:29+00:00",
   "record_count": 5227,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
@@ -74289,19 +74289,6 @@
       "borderline_recheck_count": 0,
       "title": "VideoTree: Adaptive Tree-based Video Representation for LLM Reasoning on Long Videos"
     },
-    "arXiv:2011.00241": {
-      "classification": "borderline",
-      "canonical_id": "arXiv:2011.00241",
-      "identity_tokens": [
-        "arXiv:2011.00241"
-      ],
-      "reason": "150件超の汎用DNN枝刈り研究を大きさ・クラスタリング・感度に分類するサーベイ。AlexNet、ResNet、DenseNet、VGG等が中心で、LLM学習・推論システム固有のメモリ階層やGPU実装の比較ではない。関連技術の背景文献として保留。",
-      "first_checked_at": "2026-10-13T16:47:54+00:00",
-      "last_checked_at": "2026-10-13T16:47:54+00:00",
-      "linked_from": [],
-      "borderline_recheck_count": 0,
-      "title": "Methods for Pruning Deep Neural Networks"
-    },
     "arXiv:2605.09650": {
       "classification": "borderline",
       "canonical_id": "arXiv:2605.09650",
@@ -80151,19 +80138,6 @@
       "borderline_recheck_count": 0,
       "title": "Exploiting the Experts: Unauthorized Compression in MoE-LLMs"
     },
-    "arXiv:2205.08084": {
-      "classification": "borderline",
-      "canonical_id": "arXiv:2205.08084",
-      "identity_tokens": [
-        "arXiv:2205.08084"
-      ],
-      "reason": "一次要旨では産業用推薦を言語理解・生成タスクへ統合することが主目的。少数パラメータのプロンプト調整に加え、late interaction、early exiting、重み共有、pruningによる推論時間・モデル容量の削減を記載する。LLM推論最適化の要素はあるが、最終評価が推薦システムの性能・展開に依存するため、推論基盤の独立した寄与としては追加確認を要する。",
-      "first_checked_at": "2026-10-15T01:46:45+00:00",
-      "last_checked_at": "2026-10-15T01:49:11+00:00",
-      "linked_from": [],
-      "borderline_recheck_count": 0,
-      "title": "M6-Rec: Generative Pretrained Language Models are Open-Ended Recommender Systems"
-    },
     "arXiv:2203.14380": {
       "classification": "borderline",
       "canonical_id": "arXiv:2203.14380",
@@ -81238,6 +81212,33 @@
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "BitVLA: 1-bit Vision-Language-Action Models for Robotics Manipulation"
+    },
+    "arXiv:2512.08186": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2512.08186",
+      "identity_tokens": [
+        "arXiv:2512.08186",
+        "title:ground slow move fast a dual system foundation model for generalizable vision and language navigation"
+      ],
+      "reason": "視覚言語モデルQwen2.5-VL-7Bを約2Hzの高次経路計画へ限定し、軽量拡散変換器の局所制御を約30Hzで非同期実行する二重系によりロボットの実時間性を改善する点は推論頻度削減・非同期実行の設計に関連する。ただし主な貢献と評価はVLN-CE/VLN-PEのロボット経路成功率・衝突回避・汎化で、LLMサービング基盤、KV管理、GPUカーネル、生成速度の一般化可能な最適化を直接測定していない。推論システムの応用事例として境界扱い。",
+      "first_checked_at": "2026-10-16T09:21:28+00:00",
+      "last_checked_at": "2026-10-16T09:21:28+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Ground Slow, Move Fast: A Dual-System Foundation Model for Generalizable Vision-and-Language Navigation"
+    },
+    "arXiv:2312.09193": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2312.09193",
+      "identity_tokens": [
+        "arXiv:2312.09193"
+      ],
+      "reason": "原著要旨では離散非マルコフ拡散モデル（DNDM）の遷移時刻を事前に決め、追加学習なしでニューラルネットワーク呼出し回数を減らすサンプリングを提案する。自然言語生成・機械翻訳で速度と生成品質を評価しており生成時高速化の直接寄与はあるが、対象は一般の離散拡散生成モデルで、LLM推論サービング、KVキャッシュ、実行時メモリやGPU配置の具体的貢献は要旨から確認できないため境界候補とする。",
+      "first_checked_at": "2026-10-16T09:21:29+00:00",
+      "last_checked_at": "2026-10-16T09:21:29+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Fast Sampling via Discrete Non-Markov Diffusion Models with Predetermined Transition Time"
     }
   }
 }

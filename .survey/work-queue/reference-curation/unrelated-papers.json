@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-16T07:46:06+00:00",
-  "record_count": 12409,
+  "updated_at": "2026-10-16T09:21:27+00:00",
+  "record_count": 12411,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -178984,6 +178984,32 @@
       "last_checked_at": "2026-10-16T07:46:05+00:00",
       "linked_from": [],
       "title": "Trust or Escalate: LLM Judges with Provable Guarantees for Human Agreement"
+    },
+    "arXiv:2011.00241": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2011.00241",
+      "identity_tokens": [
+        "arXiv:2011.00241",
+        "title:methods for pruning deep neural networks"
+      ],
+      "reason": "本文は150超の既発表研究を整理した一般深層ニューラルネットワークの剪定総説で、中心対象はAlexNet、ResNet、VGG、DenseNet等の畳み込み画像分類モデル。ImageNet/CIFAR-10の分類精度と圧縮率の比較が主眼で、LLM・Transformerの推論サービング、KVキャッシュ、MoE、生成速度、GPUカーネル最適化への固有技術貢献・直接評価がないため現行LLM推論サーベイの対象外と判定。",
+      "first_checked_at": "2026-10-16T09:21:25+00:00",
+      "last_checked_at": "2026-10-16T09:21:25+00:00",
+      "linked_from": [],
+      "title": "Methods for Pruning Deep Neural Networks"
+    },
+    "arXiv:2205.08084": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2205.08084",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2205.08084",
+        "arXiv:2205.08084"
+      ],
+      "reason": "タイトルの主題は生成事前学習済み言語モデルを用いる推薦システムの設計と推薦タスクである。LLMの推論サービング、GPU実行、KVキャッシュ、MoEのメモリ階層、投機的復号等のシステム効率化を扱うとはタイトルから読めず、推薦用途の応用研究として対象外と判断した。タイトルのみの先行適格性確認であり、要旨・本文は未読。",
+      "first_checked_at": "2026-10-16T09:21:27+00:00",
+      "last_checked_at": "2026-10-16T09:21:27+00:00",
+      "linked_from": [],
+      "title": "M6-Rec: Generative Pretrained Language Models are Open-Ended Recommender Systems"
     }
   }
 }
