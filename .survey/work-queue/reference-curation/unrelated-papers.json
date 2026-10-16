@@ -2,7 +2,7 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-15T23:53:10+00:00",
+  "updated_at": "2026-10-16T01:51:53+00:00",
   "record_count": 12278,
   "records": {
     "arXiv:2303.08774": {
@@ -165052,9 +165052,9 @@
         "id:arXiv:2311.17049",
         "url:https://arxiv.org/abs/2311.17049"
       ],
-      "reason": "CLIP系の画像・テキスト対照学習エンコーダをモバイル向けに高速化し、MobileCLIP-S2でViT-B/16系比較対象に対する2.3倍の速度を報告する。主要機構は知識を強化データセットへ保存する学習方式で、評価も画像のゼロショット分類・検索である。LLMの自己回帰生成・推論配信・KV管理とは異なるモデル系列・用途のため対象外。",
+      "reason": "一次要旨で対象はCLIP系の画像・テキスト対照符号器であり、ゼロショット画像分類と画像検索の遅延・精度、強化データセットによる学習効率を評価する。自己回帰LLMの復号・KV管理・MoE・言語モデルの推論サービングではないため本サーベイ対象外。",
       "first_checked_at": "2026-10-12T10:58:05+00:00",
-      "last_checked_at": "2026-10-13T14:44:24+00:00",
+      "last_checked_at": "2026-10-16T01:51:53+00:00",
       "linked_from": [],
       "title": "MobileCLIP: Fast Image-Text Models through Multi-Modal Reinforced Training"
     },
