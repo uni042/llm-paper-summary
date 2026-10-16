@@ -1,0 +1,27 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-45",
+  "run_key": "20261016-0045-scheduled-chat-45/r01-research-relevance",
+  "reference_main_sha": "088e97a09edf8006e6d1ea9612591ff806a1cc23",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2303.05511",
+      "identity_tokens": [
+        "arxiv:2303.05511",
+        "2303.05511"
+      ],
+      "title": "Scaling up GANs for Text-to-Image Synthesis",
+      "reason": "GigaGANは画像生成用GANの規模拡張・生成品質と画像生成速度を評価する。512画素画像0.13秒という推論速度の記述はあるが、自己回帰型言語モデル、LLMの推論カーネル、KVキャッシュ、LLM学習・サービングの技術ではない。",
+      "source_url": "https://arxiv.org/abs/2303.05511",
+      "body_check": "abstract_screen_only; body_not_read; primary arXiv abstract confirms task, architecture and evaluation scope",
+      "first_checked_at": "2026-10-16T00:49:44+09:00",
+      "last_checked_at": "2026-10-16T00:49:44+09:00",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance",
+      "worklist_rank": 1
+    }
+  ]
+}
