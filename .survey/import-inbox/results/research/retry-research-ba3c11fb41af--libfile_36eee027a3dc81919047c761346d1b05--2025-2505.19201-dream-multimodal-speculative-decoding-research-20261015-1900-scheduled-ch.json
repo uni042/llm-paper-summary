@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "ac7a76384e8ab1672b93340d7f76dc71ed6487c98a29fdfd9acc140e22268a62",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/retry-research-ba3c11fb41af--libfile_36eee027a3dc81919047c761346d1b05--2025-2505.19201-dream-multimodal-speculative-decoding-research-20261015-1900-scheduled-chat-00-r01.md",
+  "canonical_id": "arXiv:2505.19201",
+  "worker_completed_at": "2026-10-15T19:00:00+09:00",
+  "worker_run_key": "20261015-1900-scheduled-chat-00/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 5330,
+    "body_paragraphs": 30,
+    "method_chars": 1414,
+    "method_paragraphs": 8,
+    "evaluation_chars": 387,
+    "limitation_chars": 0,
+    "insufficiency_flags": [
+      "評価説明量 387 < 500",
+      "限界説明量 0 < 推奨 120"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 評価説明量 387 < 500"
+  ],
+  "processed_at": "2026-10-16T16:07:39+00:00"
+}

@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-16T16:01:07+00:00",
+  "generated_at": "2026-10-16T16:07:43+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -3162,62 +3162,6 @@
       "worker_run_key": "20261015-2203-scheduled-chat-00/r01"
     },
     {
-      "canonical_id": "arXiv:2103.14636",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-16T11:00:52+00:00",
-      "return_count": 3,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 406 < 700"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 7225,
-        "body_paragraphs": 35,
-        "method_chars": 406,
-        "method_paragraphs": 2,
-        "evaluation_chars": 926,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "手法説明量 406 < 700",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_2ff1ea5dff5c819193abf618b8130116--2021-2103.14636-practical-survey-faster-lighter-transformers-research-20261016-1330-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_2ff1ea5dff5c819193abf618b8130116--2021-2103.14636-practical-survey-faster-lighter-transformers-research-20261016-1330-scheduled-chat-30-r01.json",
-      "worker_run_key": "20261016-1330-scheduled-chat-30/r01"
-    },
-    {
-      "canonical_id": "arXiv:2505.19201",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-16T11:08:46+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 387 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5330,
-        "body_paragraphs": 30,
-        "method_chars": 1414,
-        "method_paragraphs": 8,
-        "evaluation_chars": 387,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "評価説明量 387 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_36eee027a3dc81919047c761346d1b05--2025-2505.19201-dream-multimodal-speculative-decoding-research-20261015-1900-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_36eee027a3dc81919047c761346d1b05--2025-2505.19201-dream-multimodal-speculative-decoding-research-20261015-1900-scheduled-chat-00-r01.json",
-      "worker_run_key": "20261015-1900-scheduled-chat-00/r01"
-    },
-    {
       "canonical_id": "arXiv:2604.23950",
       "title": null,
       "source_url": null,
@@ -3327,33 +3271,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_743e62328d4c81918b50337600a1b24e--2024-2402.02750-kivi-asymmetric-2bit-kv-cache-research-20261016-1330-scheduled-chat-30-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_743e62328d4c81918b50337600a1b24e--2024-2402.02750-kivi-asymmetric-2bit-kv-cache-research-20261016-1330-scheduled-chat-30-r01.json",
       "worker_run_key": "20261016-1330-scheduled-chat-30/r01"
-    },
-    {
-      "canonical_id": "arXiv:2602.08722",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-16T11:51:39+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 124 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5177,
-        "body_paragraphs": 29,
-        "method_chars": 1415,
-        "method_paragraphs": 8,
-        "evaluation_chars": 124,
-        "limitation_chars": 788,
-        "insufficiency_flags": [
-          "評価説明量 124 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_78040cefdda48191abb0ff3665aa47f7--2026-2602.08722-quoka-query-oriented-kv-selection-research-20261016-0200-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_78040cefdda48191abb0ff3665aa47f7--2026-2602.08722-quoka-query-oriented-kv-selection-research-20261016-0200-scheduled-chat-00-r01.json",
-      "worker_run_key": "20261016-0200-scheduled-chat-00/r01"
     },
     {
       "canonical_id": "arXiv:2410.10165",
@@ -3553,60 +3470,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_e4019a8bbfe88191a9db183534e2de96--2026-2609.07664-quantization-fidelity-tvd-jsd-llamacpp-research-20261016-2030-scheduled-chat-30-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_e4019a8bbfe88191a9db183534e2de96--2026-2609.07664-quantization-fidelity-tvd-jsd-llamacpp-research-20261016-2030-scheduled-chat-30-r01.json",
       "worker_run_key": "20261016-2030-scheduled-chat-30/r01"
-    },
-    {
-      "canonical_id": "arXiv:2602.20309",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-16T14:30:20+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 448 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 6694,
-        "body_paragraphs": 35,
-        "method_chars": 1898,
-        "method_paragraphs": 11,
-        "evaluation_chars": 448,
-        "limitation_chars": 659,
-        "insufficiency_flags": [
-          "評価説明量 448 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_f60f2a3fae1c819186a2aebaaab88d54--2026-2602.20309-quantvla-scale-calibrated-vla-quantization-research-20261016-1730-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_f60f2a3fae1c819186a2aebaaab88d54--2026-2602.20309-quantvla-scale-calibrated-vla-quantization-research-20261016-1730-scheduled-chat-30-r01.json",
-      "worker_run_key": "20261016-1730-scheduled-chat-30/r01"
-    },
-    {
-      "canonical_id": "arXiv:2602.02544",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-16T14:40:07+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 226 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 6002,
-        "body_paragraphs": 31,
-        "method_chars": 1925,
-        "method_paragraphs": 9,
-        "evaluation_chars": 226,
-        "limitation_chars": 722,
-        "insufficiency_flags": [
-          "評価説明量 226 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_fea1e4b8f4788191bb899649f418c91a--2026-2602.02544-spa-cache-singular-proxies-research-20261015-2230-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_fea1e4b8f4788191bb899649f418c91a--2026-2602.02544-spa-cache-singular-proxies-research-20261015-2230-scheduled-chat-30-r01.json",
-      "worker_run_key": "20261015-2230-scheduled-chat-30/r01"
     },
     {
       "canonical_id": "arXiv:2403.10059",
@@ -5036,8 +4899,8 @@
     },
     {
       "canonical_id": "arXiv:2606.25091",
-      "title": "Speculation at a Distance: Where Edge-Cloud Speculative Decoding Actually Pays Off",
-      "source_url": "https://arxiv.org/html/2606.25091v2",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-16T16:01:02+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-45",
@@ -5066,8 +4929,8 @@
     },
     {
       "canonical_id": "arXiv:2601.23180",
-      "title": "TriSpec: Ternary Speculative Decoding via Lightweight Proxy Verification",
-      "source_url": "https://arxiv.org/abs/2601.23180",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-16T16:01:03+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-00",
@@ -5093,8 +4956,8 @@
     },
     {
       "canonical_id": "arXiv:2406.02500",
-      "title": "Towards Efficient Mixture of Experts: A Holistic Study of Compression Techniques",
-      "source_url": "https://arxiv.org/pdf/2406.02500",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-16T16:01:05+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-45",
@@ -5121,8 +4984,8 @@
     },
     {
       "canonical_id": "arXiv:2603.16590",
-      "title": "BATQuant: Outlier-resilient MXFP4 Quantization via Learnable Block-wise Optimization",
-      "source_url": "https://arxiv.org/html/2603.16590v1",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-16T16:01:06+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-00",
@@ -5148,8 +5011,8 @@
     },
     {
       "canonical_id": "arXiv:2411.10741",
-      "title": "MetaLA: Unified Optimal Linear Approximation to Softmax Attention Map",
-      "source_url": "https://arxiv.org/pdf/2411.10741",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-16T16:01:07+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-45",
@@ -5174,6 +5037,143 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-b505f1cd25bc--libfile_4070b63abf708191a67354b8f7817e9e--2024-2411.10741-metala-linear-attention-optimal-conditions-research-20261016-0630-scheduled-chat-30-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-b505f1cd25bc--libfile_4070b63abf708191a67354b8f7817e9e--2024-2411.10741-metala-linear-attention-optimal-conditions-research-20261016-0630-schedul.json",
       "worker_run_key": "20261016-0630-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2505.19201",
+      "title": "DREAM: Drafting with Refined Target Features and Entropy-Adaptive Cross-Attention Fusion for Multimodal Speculative Decoding",
+      "source_url": "https://arxiv.org/html/2505.19201v3",
+      "returned_at": "2026-10-16T16:07:39+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 387 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5330,
+        "body_paragraphs": 30,
+        "method_chars": 1414,
+        "method_paragraphs": 8,
+        "evaluation_chars": 387,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "評価説明量 387 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-ba3c11fb41af--libfile_36eee027a3dc81919047c761346d1b05--2025-2505.19201-dream-multimodal-speculative-decoding-research-20261015-1900-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-ba3c11fb41af--libfile_36eee027a3dc81919047c761346d1b05--2025-2505.19201-dream-multimodal-speculative-decoding-research-20261015-1900-scheduled-ch.json",
+      "worker_run_key": "20261015-1900-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2103.14636",
+      "title": "A Practical Survey on Faster and Lighter Transformers",
+      "source_url": "https://arxiv.org/pdf/2103.14636",
+      "returned_at": "2026-10-16T16:07:40+00:00",
+      "return_count": 4,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 406 < 700"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 7225,
+        "body_paragraphs": 35,
+        "method_chars": 406,
+        "method_paragraphs": 2,
+        "evaluation_chars": 926,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "手法説明量 406 < 700",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-ba44ca26b0cb--libfile_2ff1ea5dff5c819193abf618b8130116--2021-2103.14636-practical-survey-faster-lighter-transformers-research-20261016-1330-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-ba44ca26b0cb--libfile_2ff1ea5dff5c819193abf618b8130116--2021-2103.14636-practical-survey-faster-lighter-transformers-research-20261016-1330-sched.json",
+      "worker_run_key": "20261016-1330-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2602.20309",
+      "title": "QuantVLA: Scale-Calibrated Post-Training Quantization for Vision-Language-Action Models",
+      "source_url": "https://arxiv.org/html/2602.20309v4",
+      "returned_at": "2026-10-16T16:07:41+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 448 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 6694,
+        "body_paragraphs": 35,
+        "method_chars": 1898,
+        "method_paragraphs": 11,
+        "evaluation_chars": 448,
+        "limitation_chars": 659,
+        "insufficiency_flags": [
+          "評価説明量 448 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-c5509075353e--libfile_f60f2a3fae1c819186a2aebaaab88d54--2026-2602.20309-quantvla-scale-calibrated-vla-quantization-research-20261016-1730-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-c5509075353e--libfile_f60f2a3fae1c819186a2aebaaab88d54--2026-2602.20309-quantvla-scale-calibrated-vla-quantization-research-20261016-1730-schedul.json",
+      "worker_run_key": "20261016-1730-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2602.02544",
+      "title": "SPA-Cache: Singular Proxies for Adaptive Caching in Diffusion Language Models",
+      "source_url": "https://arxiv.org/html/2602.02544v2",
+      "returned_at": "2026-10-16T16:07:42+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 226 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 6002,
+        "body_paragraphs": 31,
+        "method_chars": 1925,
+        "method_paragraphs": 9,
+        "evaluation_chars": 226,
+        "limitation_chars": 722,
+        "insufficiency_flags": [
+          "評価説明量 226 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-c661b3501f82--libfile_fea1e4b8f4788191bb899649f418c91a--2026-2602.02544-spa-cache-singular-proxies-research-20261015-2230-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-c661b3501f82--libfile_fea1e4b8f4788191bb899649f418c91a--2026-2602.02544-spa-cache-singular-proxies-research-20261015-2230-scheduled-chat-30-r01.json",
+      "worker_run_key": "20261015-2230-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2602.08722",
+      "title": "QUOKA: Query-Oriented KV Selection For Efficient LLM Prefill",
+      "source_url": "https://arxiv.org/pdf/2602.08722v1",
+      "returned_at": "2026-10-16T16:07:43+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 124 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5177,
+        "body_paragraphs": 29,
+        "method_chars": 1415,
+        "method_paragraphs": 8,
+        "evaluation_chars": 124,
+        "limitation_chars": 788,
+        "insufficiency_flags": [
+          "評価説明量 124 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-ca367b403376--libfile_78040cefdda48191abb0ff3665aa47f7--2026-2602.08722-quoka-query-oriented-kv-selection-research-20261016-0200-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-ca367b403376--libfile_78040cefdda48191abb0ff3665aa47f7--2026-2602.08722-quoka-query-oriented-kv-selection-research-20261016-0200-scheduled-chat-0.json",
+      "worker_run_key": "20261016-0200-scheduled-chat-00/r01"
     }
   ]
 }
