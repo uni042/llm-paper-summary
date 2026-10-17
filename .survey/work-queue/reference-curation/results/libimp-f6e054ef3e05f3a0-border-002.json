@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-f6e054ef3e05f3a0-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2112.06749",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2112.06749",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2112.06749",
+      "arXiv:2112.06749",
+      "id:arXiv:2112.06749",
+      "url:https://arxiv.org/abs/2112.06749"
+    ],
+    "reason": "一次要旨では自己回帰復号器に代わる反復改善型の非自己回帰テキスト生成器SUNDAEを提案し、拡散型生成より少ない反復回数で収束することを主張する。生成反復回数の削減は推論計算量に関係するが、主評価はWMT14英独翻訳品質と自然言語・Pythonコード生成品質であり、現行LLMサービングの遅延、GPU実測、バッチ実行器を対象とした最適化とは区別するため境界的。",
+    "first_checked_at": "2026-10-13T10:44:16+00:00",
+    "last_checked_at": "2026-10-17T17:44:44+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Step-unrolled Denoising Autoencoders for Text Generation"
+  },
+  "processed_at": "2026-10-17T17:44:44+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f6e054ef3e05",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

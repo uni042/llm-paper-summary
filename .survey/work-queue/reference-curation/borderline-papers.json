@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-17T13:43:42+00:00",
-  "record_count": 5233,
+  "updated_at": "2026-10-17T17:44:44+00:00",
+  "record_count": 5234,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -71097,9 +71097,9 @@
         "semanticscholar:5e364810740f92046868a4ddb7a1b30576439e4d",
         "url:https://arxiv.org/abs/2512.06688"
       ],
-      "reason": "一次要旨では暗黙の利用者嗜好を学習する個人化ベンチマークとエージェント記憶が主題。2千トークンの記憶で3万2千トークンの会話履歴を置き換え、入力トークンを16分の1にするという推論費用に関連する効果がある一方、主要評価は個人化回答正答率（記憶方式55%）であり、KVキャッシュ、実行時配置、サービング遅延・スループットのシステム最適化を直接検証していないため境界とする。",
+      "reason": "一次要旨は、1,000件の利用者対話・20,000超の選好を扱う個人化評価集合と、強化学習およびエージェント記憶の構築を主眼とする。2,000トークンの記憶で32,000トークンの履歴に代える16倍の入力削減を報告しており推論時入力費用には間接的に関連するが、評価指標は暗黙の個人化の正答率（記憶方式55%）であり、汎用KV管理、GPUメモリ削減、サービング遅延の実測を直接提案・評価しないため境界的。",
       "first_checked_at": "2026-10-11T10:43:47+00:00",
-      "last_checked_at": "2026-10-17T05:06:14+00:00",
+      "last_checked_at": "2026-10-17T17:44:44+00:00",
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "PersonaMem-v2: Towards Personalized Intelligence via Learning Implicit User Personas and Agentic Memory"
@@ -71139,11 +71139,12 @@
       "classification": "borderline",
       "canonical_id": "arXiv:2512.05665",
       "identity_tokens": [
+        "DOI:10.48550/arxiv.2512.05665",
         "arXiv:2512.05665"
       ],
-      "reason": "一次要旨は視覚画像を毎段再符号化せず、潜在表現と文章を交互生成し、選択的な視覚特徴教師信号で推論性能を改善する。再符号化費用の削減は推論効率と関係するが、主要貢献は多モーダル推論モデルと学習方式であり、汎用LLM推論ランタイム最適化ではない。",
+      "reason": "一次要旨ではマルチモーダル推論における高密度画像の繰り返し再符号化の計算費用を問題にし、画像の潜在表現をテキスト生成に交互に挿入して、運動量教師による選択的特徴蒸留で視覚状態を更新する。再符号化回避は推論効率と接点がある一方、主評価は視覚推論課題の品質であり、汎用推論サーバーのスループット、GPUメモリ、KVキャッシュの改善量は一次要旨から確定できないため境界的。",
       "first_checked_at": "2026-10-11T11:49:06+00:00",
-      "last_checked_at": "2026-10-12T21:38:00+00:00",
+      "last_checked_at": "2026-10-17T17:44:44+00:00",
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "Interleaved Latent Visual Reasoning with Selective Perceptual Modeling"
@@ -74222,13 +74223,14 @@
       "classification": "borderline",
       "canonical_id": "arXiv:2112.06749",
       "identity_tokens": [
+        "DOI:10.48550/arxiv.2112.06749",
         "arXiv:2112.06749",
         "id:arXiv:2112.06749",
         "url:https://arxiv.org/abs/2112.06749"
       ],
-      "reason": "自己回帰を用いない反復的なトークン改良による文章生成を提案し、従来の拡散型生成より少ない反復回数と翻訳品質を報告する。並列復号の基本方式として関連性はあるが、現代の大規模生成モデルの推論速度や配信システムの実装・評価は要旨から確認できないため境界候補に残す。",
+      "reason": "一次要旨では自己回帰復号器に代わる反復改善型の非自己回帰テキスト生成器SUNDAEを提案し、拡散型生成より少ない反復回数で収束することを主張する。生成反復回数の削減は推論計算量に関係するが、主評価はWMT14英独翻訳品質と自然言語・Pythonコード生成品質であり、現行LLMサービングの遅延、GPU実測、バッチ実行器を対象とした最適化とは区別するため境界的。",
       "first_checked_at": "2026-10-13T10:44:16+00:00",
-      "last_checked_at": "2026-10-13T16:45:32+00:00",
+      "last_checked_at": "2026-10-17T17:44:44+00:00",
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "Step-unrolled Denoising Autoencoders for Text Generation"
@@ -81319,6 +81321,20 @@
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "EcoFormer: Energy-Saving Attention with Linear Complexity"
+    },
+    "arXiv:2512.19125": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2512.19125",
+      "identity_tokens": [
+        "arXiv:2512.19125",
+        "title:sap syntactic attention pruning for transformer based language models"
+      ],
+      "reason": "構文依存解析で上位k種類の依存関係を抽出し、注意行列の該当語対への重みからヘッド削除候補を選ぶSAPと、性能低下を測って再順位付けするCandidate Filteringは構造化圧縮の技術的貢献を持つ。ただし一次本文の実験はBERT_BASE（12層・12ヘッド）によるGLUE分類6課題に限定され、生成LLMの推論・サービング、実行時メモリ、実測速度の検証はない。推論基盤への直接適用と改善量が未立証のため境界的な収録候補として保留する。",
+      "first_checked_at": "2026-10-17T17:44:42+00:00",
+      "last_checked_at": "2026-10-17T17:44:42+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "SAP: Syntactic Attention Pruning for Transformer-based Language Models"
     }
   }
 }

@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-f6e054ef3e05f3a0-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2512.06688",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2512.06688",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2512.06688",
+      "arXiv:2512.06688",
+      "id:arXiv:2512.06688",
+      "semanticscholar:5e364810740f92046868a4ddb7a1b30576439e4d",
+      "url:https://arxiv.org/abs/2512.06688"
+    ],
+    "reason": "一次要旨は、1,000件の利用者対話・20,000超の選好を扱う個人化評価集合と、強化学習およびエージェント記憶の構築を主眼とする。2,000トークンの記憶で32,000トークンの履歴に代える16倍の入力削減を報告しており推論時入力費用には間接的に関連するが、評価指標は暗黙の個人化の正答率（記憶方式55%）であり、汎用KV管理、GPUメモリ削減、サービング遅延の実測を直接提案・評価しないため境界的。",
+    "first_checked_at": "2026-10-11T10:43:47+00:00",
+    "last_checked_at": "2026-10-17T17:44:44+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "PersonaMem-v2: Towards Personalized Intelligence via Learning Implicit User Personas and Agentic Memory"
+  },
+  "processed_at": "2026-10-17T17:44:44+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f6e054ef3e05",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

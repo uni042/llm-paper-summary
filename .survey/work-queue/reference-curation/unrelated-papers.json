@@ -2,7 +2,7 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-17T14:51:09+00:00",
+  "updated_at": "2026-10-17T17:44:41+00:00",
   "record_count": 12422,
   "records": {
     "arXiv:2303.08774": {
@@ -179012,11 +179012,12 @@
       "classification": "unrelated",
       "canonical_id": "arXiv:2402.12289",
       "identity_tokens": [
+        "DOI:10.48550/arxiv.2402.12289",
         "arXiv:2402.12289"
       ],
-      "reason": "一次要旨は自動運転の道路場面理解、場面分析、階層計画と実車での動作検証を主題とする。DriveVLM-Dualは車両の従来型認識・計画系と視覚言語モデルを統合する応用設計であり、LLM推論サーバ、KVキャッシュ、量子化、分散推論基盤の一般化可能な性能最適化を評価していない。",
+      "reason": "自動運転車の長尾の交通状況を理解し、画像言語モデルで場面記述・状況分析・階層的走行計画を実行するDriveVLMと、従来の自動運転パイプラインを組み合わせるDriveVLM-Dualを提案する。nuScenesとSUP-ADでの評価、および実車への配備が主対象であり、生成LLMのKVキャッシュ、GPU推論カーネル、バッチスケジューラ、オフロードなどの汎用推論基盤を改良・評価する研究ではない。対象は自動運転の応用モデルであり、現行LLM推論システムサーベイの範囲外。",
       "first_checked_at": "2026-10-16T18:54:53+00:00",
-      "last_checked_at": "2026-10-16T18:54:53+00:00",
+      "last_checked_at": "2026-10-17T17:44:41+00:00",
       "linked_from": [],
       "title": "DriveVLM: The Convergence of Autonomous Driving and Large Vision-Language Models"
     },
