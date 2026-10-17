@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-10-17T07:37:55.411751+00:00",
+  "generated_at": "2026-10-17T08:06:05.137269+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 8,
+  "count": 9,
   "worker_counts": {
     "scheduled-chat-00": 3,
-    "scheduled-chat-30": 2,
+    "scheduled-chat-30": 3,
     "scheduled-chat-45": 3
   },
   "entries": [
@@ -106,6 +106,46 @@
       "warnings": []
     },
     {
+      "path": "papers/inference/07-kv-cache-optimization-compression/2025-2511.16786-revisiting-multimodal-kv-cache-compression-a-frequency-domain-guided-out.md",
+      "canonical_id": "arXiv:2511.16786",
+      "title": "Revisiting Multimodal KV Cache Compression: A Frequency-Domain-Guided Outlier-KV-Aware Approach",
+      "file_bytes": 13382,
+      "source_sha256": "4ce09e4cc2ed40583eb5463a290f61d0cffef582e7b12dfe9e449a7afb561d7b",
+      "source_git_blob_sha": "a9a4196158e3712da9fa7b8b007ccbf698766827",
+      "assigned_worker": "scheduled-chat-30",
+      "semantic_status": "pending",
+      "mechanical_status": "PASS",
+      "japanese_ratio": 0.978731,
+      "quality_metrics": {
+        "body_chars": 3373,
+        "method_chars": 1085,
+        "evaluation_chars": 1134,
+        "limitation_chars": 342
+      },
+      "mechanical_failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/07-kv-cache-optimization-compression/2025-2505.20334-lookahead-q-cache-achieving-more-consistent-kv-cache-eviction-via-pseudo.md",
+      "canonical_id": "arXiv:2505.20334",
+      "title": "Lookahead Q-Cache: Achieving More Consistent KV Cache Eviction via Pseudo Query",
+      "file_bytes": 15007,
+      "source_sha256": "ca1af34d621a15a73707685175a783244a99363b86d87809022eeda7deb2144f",
+      "source_git_blob_sha": "2024db354f5b85cf0c07c7d7d540a85b44a8f767",
+      "assigned_worker": "scheduled-chat-30",
+      "semantic_status": "pending",
+      "mechanical_status": "PASS",
+      "japanese_ratio": 0.986256,
+      "quality_metrics": {
+        "body_chars": 4000,
+        "method_chars": 1059,
+        "evaluation_chars": 523,
+        "limitation_chars": 0
+      },
+      "mechanical_failures": [],
+      "warnings": []
+    },
+    {
       "path": "papers/inference/13-sparse-attention/2023-2310.08152-context-compression-for-auto-regressive-transformers-with-sentinel-token.md",
       "canonical_id": "arXiv:2310.08152",
       "title": "Context Compression for Auto-regressive Transformers with Sentinel Tokens",
@@ -160,26 +200,6 @@
         "body_chars": 4614,
         "method_chars": 1314,
         "evaluation_chars": 1913,
-        "limitation_chars": 0
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/05-speculative-decoding-moe/2024-2410.11305-qspec-speculative-decoding-with-complementary-quantization-schemes.md",
-      "canonical_id": "arXiv:2410.11305",
-      "title": "QSpec: Speculative Decoding with Complementary Quantization Schemes",
-      "file_bytes": 17980,
-      "source_sha256": "f8ca9ce4fb5d19bb6add9d9c007ee2231ab98c356cf6984752f322b2f5a6ad8c",
-      "source_git_blob_sha": "8e8b0225d04b52a7bf7e6738561647dbb38751f1",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.97414,
-      "quality_metrics": {
-        "body_chars": 4564,
-        "method_chars": 1320,
-        "evaluation_chars": 721,
         "limitation_chars": 0
       },
       "mechanical_failures": [],
