@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "6b4fe9e8f941e869baf2c8d4c6e42ed328af7f9ae57d229a29fea2115d8b18f4",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/retry-research-e798d265029c--libfile_bc2c9675f5c08191841e3cfd61baac66--2026-2606.04446-d2sd-dual-diffusion-speculative-decoding-research-20261017-1130-scheduled-chat-30-r01.md",
+  "canonical_id": "arXiv:2606.04446",
+  "worker_completed_at": "2026-10-17T11:27:00+09:00",
+  "worker_run_key": "20261017-1130-scheduled-chat-30/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 6655,
+    "body_paragraphs": 39,
+    "method_chars": 0,
+    "method_paragraphs": 0,
+    "evaluation_chars": 0,
+    "limitation_chars": 728,
+    "insufficiency_flags": [
+      "手法説明量 0 < 700",
+      "評価説明量 0 < 500"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 手法説明量 0 < 700",
+    "説明不足トリガー: 評価説明量 0 < 500"
+  ],
+  "processed_at": "2026-10-17T17:35:09+00:00"
+}

@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-17T17:24:36+00:00",
+  "generated_at": "2026-10-17T17:35:12+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 152,
+  "count": 153,
   "entries": [
     {
       "canonical_id": "DOI:10.1145/3714983.3714987",
@@ -2926,33 +2926,6 @@
       "worker_run_key": "20261014-1645-scheduled-chat-45/r01"
     },
     {
-      "canonical_id": "arXiv:2604.14889",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-17T06:24:21+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 6423,
-        "body_paragraphs": 38,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 576,
-        "limitation_chars": 551,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_88cdf01c22dc8191ac4bb88ce2721cce--2026-2604.14889-memosight-compression-mtp-reasoning-research-20261017-1130-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_88cdf01c22dc8191ac4bb88ce2721cce--2026-2604.14889-memosight-compression-mtp-reasoning-research-20261017-1130-scheduled-chat-30-r01.json",
-      "worker_run_key": "20261017-1130-scheduled-chat-30/r01"
-    },
-    {
       "canonical_id": "DOI:10.1145/3725338",
       "title": null,
       "source_url": null,
@@ -2978,35 +2951,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_b02495c8702081918ba38f95ea04418c--2024-2407.12820-pqcache-product-quantization-kv-offload-research-20261017-0345-scheduled-chat-45-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_b02495c8702081918ba38f95ea04418c--2024-2407.12820-pqcache-product-quantization-kv-offload-research-20261017-0345-scheduled-chat-45-r01.json",
       "worker_run_key": "20261017-0345-scheduled-chat-45/r01"
-    },
-    {
-      "canonical_id": "arXiv:2606.04446",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-17T06:54:10+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700",
-        "説明不足トリガー: 評価説明量 0 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 6655,
-        "body_paragraphs": 39,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 0,
-        "limitation_chars": 728,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700",
-          "評価説明量 0 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_bc2c9675f5c08191841e3cfd61baac66--2026-2606.04446-d2sd-dual-diffusion-speculative-decoding-research-20261017-1130-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_bc2c9675f5c08191841e3cfd61baac66--2026-2606.04446-d2sd-dual-diffusion-speculative-decoding-research-20261017-1130-scheduled-chat-30-r01.json",
-      "worker_run_key": "20261017-1130-scheduled-chat-30/r01"
     },
     {
       "canonical_id": "arXiv:2603.14785",
@@ -3057,31 +3001,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-20261017-exact--libfile_9315978cffc88191a3c0d963c39a7a28.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-20261017-exact--libfile_9315978cffc88191a3c0d963c39a7a28.json",
       "worker_run_key": "20261017-0130-scheduled-chat-30/r01"
-    },
-    {
-      "canonical_id": "arXiv:2204.03227",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-17T07:31:33+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "長文定型文の再利用を検出: papers/inference/11-llm-serving-scheduling-disaggregation/2022-2204.03227-accelerating-attention-through-gradient-based-learned-runtime-pruning.md と 16 段落 / 3568文字 (100.0%) が完全一致"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5487,
-        "body_paragraphs": 31,
-        "method_chars": 2046,
-        "method_paragraphs": 12,
-        "evaluation_chars": 1065,
-        "limitation_chars": 669,
-        "insufficiency_flags": []
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_d05f65204a80819195495b548582b530--2022-2204.03227-leopard-gradient-runtime-pruning-research-20261015-1104-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_d05f65204a80819195495b548582b530--2022-2204.03227-leopard-gradient-runtime-pruning-research-20261015-1104-scheduled-chat-00-r01.json",
-      "worker_run_key": "20261015-1104-scheduled-chat-00/r01"
     },
     {
       "canonical_id": "arXiv:2603.01399",
@@ -3840,8 +3759,8 @@
     },
     {
       "canonical_id": "arXiv:2604.23466",
-      "title": "Evaluating CUDA Tile for AI Workloads on Hopper and Blackwell GPUs",
-      "source_url": "https://arxiv.org/abs/2604.23466",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-17T17:23:49+00:00",
       "return_count": 4,
       "assigned_worker": "scheduled-chat-00",
@@ -3868,8 +3787,8 @@
     },
     {
       "canonical_id": "arXiv:2410.17980",
-      "title": "Scaling Stick-Breaking Attention: An Efficient Implementation and In-depth Study",
-      "source_url": "https://arxiv.org/html/2410.17980v2",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-17T17:23:50+00:00",
       "return_count": 3,
       "assigned_worker": "scheduled-chat-45",
@@ -3896,8 +3815,8 @@
     },
     {
       "canonical_id": "arXiv:2605.11093",
-      "title": "Enabling Performant and Flexible Model-Internal Observability for LLM Inference",
-      "source_url": "https://arxiv.org/html/2605.11093v1",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-17T17:23:50+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-00",
@@ -3925,8 +3844,8 @@
     },
     {
       "canonical_id": "arXiv:2511.19480",
-      "title": "Exploiting the Experts: Unauthorized Compression in MoE-LLMs",
-      "source_url": "https://arxiv.org/abs/2511.19480",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-17T17:23:51+00:00",
       "return_count": 3,
       "assigned_worker": "scheduled-chat-30",
@@ -3951,6 +3870,115 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-d468221adfb3--library-final-audit--2511.19480--2025-2511.19480-exploiting-experts-moe-compression-security-research-20261015-0410-scheduled-chat-00-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-d468221adfb3--library-final-audit--2511.19480--2025-2511.19480-exploiting-experts-moe-compression-security-research-20261015-0410-scheduled-chat-.json",
       "worker_run_key": "20261015-0410-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2604.14889",
+      "title": "MemoSight: Unifying Context Compression and Multi Token Prediction for Reasoning Acceleration",
+      "source_url": "https://arxiv.org/html/2604.14889v1",
+      "returned_at": "2026-10-17T17:35:08+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 6423,
+        "body_paragraphs": 38,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 576,
+        "limitation_chars": 551,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-dad409707d3f--libfile_88cdf01c22dc8191ac4bb88ce2721cce--2026-2604.14889-memosight-compression-mtp-reasoning-research-20261017-1130-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-dad409707d3f--libfile_88cdf01c22dc8191ac4bb88ce2721cce--2026-2604.14889-memosight-compression-mtp-reasoning-research-20261017-1130-scheduled-chat.json",
+      "worker_run_key": "20261017-1130-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2606.04446",
+      "title": "D^2SD: Accelerating Speculative Decoding with Dual Diffusion Draft Models",
+      "source_url": "https://arxiv.org/html/2606.04446v1",
+      "returned_at": "2026-10-17T17:35:09+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700",
+        "説明不足トリガー: 評価説明量 0 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 6655,
+        "body_paragraphs": 39,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 0,
+        "limitation_chars": 728,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700",
+          "評価説明量 0 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-e798d265029c--libfile_bc2c9675f5c08191841e3cfd61baac66--2026-2606.04446-d2sd-dual-diffusion-speculative-decoding-research-20261017-1130-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-e798d265029c--libfile_bc2c9675f5c08191841e3cfd61baac66--2026-2606.04446-d2sd-dual-diffusion-speculative-decoding-research-20261017-1130-scheduled.json",
+      "worker_run_key": "20261017-1130-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2402.13720",
+      "title": "Ouroboros: Generating Longer Drafts Phrase by Phrase for Faster Speculative Decoding",
+      "source_url": "https://arxiv.org/pdf/2402.13720",
+      "returned_at": "2026-10-17T17:35:10+00:00",
+      "return_count": 4,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 276 < 500",
+        "長文定型文の再利用を検出: papers/inference/05-speculative-decoding-moe/2024-2402.13720-ouroboros-generating-longer-drafts-phrase-by-phrase-for-faster-speculati.md と 12 段落 / 2745文字 (100.0%) が完全一致"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5238,
+        "body_paragraphs": 32,
+        "method_chars": 1322,
+        "method_paragraphs": 8,
+        "evaluation_chars": 276,
+        "limitation_chars": 650,
+        "insufficiency_flags": [
+          "評価説明量 276 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-f0584b43f338--libfile_acba131f8eac8191b02235dd38bb46f4--2024-2402.13720-ouroboros-phrase-speculative-decoding-research-20261017-2130-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-f0584b43f338--libfile_acba131f8eac8191b02235dd38bb46f4--2024-2402.13720-ouroboros-phrase-speculative-decoding-research-20261017-2130-scheduled-ch.json",
+      "worker_run_key": "20261017-2130-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2204.03227",
+      "title": "Accelerating Attention through Gradient-Based Learned Runtime Pruning",
+      "source_url": "https://arxiv.org/html/2204.03227v3",
+      "returned_at": "2026-10-17T17:35:11+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "長文定型文の再利用を検出: papers/inference/11-llm-serving-scheduling-disaggregation/2022-2204.03227-accelerating-attention-through-gradient-based-learned-runtime-pruning.md と 16 段落 / 3568文字 (100.0%) が完全一致"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5487,
+        "body_paragraphs": 31,
+        "method_chars": 2046,
+        "method_paragraphs": 12,
+        "evaluation_chars": 1065,
+        "limitation_chars": 669,
+        "insufficiency_flags": []
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-fe1981233236--libfile_d05f65204a80819195495b548582b530--2022-2204.03227-leopard-gradient-runtime-pruning-research-20261015-1104-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-fe1981233236--libfile_d05f65204a80819195495b548582b530--2022-2204.03227-leopard-gradient-runtime-pruning-research-20261015-1104-scheduled-chat-00.json",
+      "worker_run_key": "20261015-1104-scheduled-chat-00/r01"
     }
   ]
 }
