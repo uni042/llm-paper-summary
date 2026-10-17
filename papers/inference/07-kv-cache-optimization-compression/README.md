@@ -16,7 +16,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 方向は異なるが、いずれも**KV cacheがdecode時のmemory容量やmemory bandwidthのボトルネックになることを直接緩和する**研究として扱う。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（231本）
+## 自動生成の論文一覧（233本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -258,6 +258,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 - **2026-03 · [Low-Latency Edge LLM Handover via Joint KV Cache Transfer and Token Prefill](2026-2603.28018-edge-llm-handover-kv-transfer-prefill.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   Edge LLM移動時にプリフィル再計算するprefix長と残余KVのbackhaul転送を共同最適化し、複数UEの最悪ハンドオーバ停止時間を最小化する。
+
+- **2026-03 · [EchoKV: Efficient KV Cache Compression via Similarity-Based Reconstruction](2026-2603.22910-echokv-efficient-kv-cache-compression-via-similarity-based-reconstructio.md)**  
+  実装：[✓](https://github.com/noforit/EchoKV) ・ リポジトリ内被引用：1  
+  圧縮方式の一つである低ランク分解は、重み行列を変形して保存すべきKVの次元を減らすが、変形後のモデルを短文・長文の負荷に応じて元の通常推論へ戻すことが難しい。これらは圧縮率50%で精度が常に完全維持されるという結果ではなく、課題ごとの悪化もある。
 
 - **2026-02 · [InnerQ: Hardware-Aware Tuning-Free Quantization of KV Cache for Large Language Models](2026-2602.23200-innerq-hardware-aware-tuning-free-quantization-of-kv-cache-for-large-lan.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
@@ -512,6 +516,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 - **2026-06 · [Tangram: Unlocking Non-Uniform KV Cache Compression for Efficient Multi-turn LLM Serving](2026-2606.06302-tangram-non-uniform-kv-cache.md)**  
   実装：[✓](https://github.com/aiha-lab/TANGRAM) ・ リポジトリ内被引用：0  
   Tangramは、ヘッド別KV保持量を少数サンプルで事前較正し、固定予算のraggedページ化と負荷分散へ変換して、非一様圧縮の断片化・回収費・デコード不均衡を減らす。
+
+- **2026-06 · [Rethinking LoRA Memory Through the Lens of KV Cache Compression](2026-2606.05698-rethinking-lora-memory-through-the-lens-of-kv-cache-compression.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  検索拡張生成では、回答に必要な文書をプロンプトへ入れると、文書内容が鍵・値キャッシュ（KVキャッシュ）へ保存され、回答中に参照される。さらにLoRAを文書の事前処理（プリフィル）、KV圧縮の重要度採点、回答復号のどの段階で有効にするかを分けた。
 
 - **2026-06 · [PTStore (Prefix Tensor Store): Distributed Prefix Caching and Replication for High Throughput Inference Serving](2026-2607.22648-ptstore-prefix-tensor-store-distributed-prefix-caching-and-replication-f.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

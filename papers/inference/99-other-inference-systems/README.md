@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（744本）
+## 自動生成の論文一覧（745本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -253,6 +253,10 @@
 - **2026-02 · [Effective MoE-based LLM Compression by Exploiting Heterogeneous Inter-Group Experts Routing Frequency and Information Density](2026-2602.09316-effective-moe-based-llm-compression-by-exploiting-heterogeneous-inter-gr.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   RFID-MoEは、混合専門家（Mixture-of-Experts; MoE）型の大規模言語モデルを、事後学習の重み圧縮で小さくする研究である。論文はQwen3-235B-A22Bの総重み容量が8基のA100 40GB、合計320GBに収まらない例を挙げ、演算の疎性と保存容量の大きさが別問題であることを示す。
+
+- **2026-02 · [Data Distribution Matters: A Data-Centric Perspective on Context Compression for Large Language Model](2026-2602.01778-data-distribution-matters-a-data-centric-perspective-on-context-compress.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  長文脈の大規模言語モデル（LLM）では、入力の全トークンをそのまま処理するより、先に少数の潜在表現へ圧縮して復元器へ渡す方法が考えられる。
 
 - **2026-01 · [Towards Compute-Aware In-Switch Computing for LLMs Tensor-Parallelism on Multi-GPU Systems](2026-161bea97e0de-towards-compute-aware-in-switch-computing-for-llms-tensor-parallelism-on-multi-gpu-systems.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
