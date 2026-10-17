@@ -120,7 +120,7 @@
 
 - **2026-02 · [QUOKA: Query-Oriented KV Selection For Efficient LLM Prefill](2026-2602.08722-quoka-query-oriented-kv-selection-for-efficient-llm-prefill.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
-  長い入力を持つ大規模言語モデル（Large Language モデル; LLM）では、入力全体を読み込んで鍵・値キャッシュ（Key–Value Cache; KVキャッシュ）を形成する事前充填（プリフィル）の時間が、最初のトークンを返すまでの待ち時間を大きく左右する。RULERやLongBenchでは同じ鍵・値予算を使う比較方式より高い精度を保つ。
+  選択したKVだけを通常の密注意カーネルへ渡すため、専用の疎行列GPUカーネルを必須としない。主な検証はNVIDIA A100上のQwen3-4Bなどで、分割プリフィル時の初回トークンまでの時間（TTFT）を長文条件で最大約3倍改善し、注意演算単体では約5倍の高速化を示した。
 
 - **2026-02 · [LycheeDecode: Accelerating Long-Context LLM Inference via Hybrid-Head Sparse Decoding](2026-2602.04541-lycheedecode-accelerating-long-context-llm-inference-via-hybrid-head-spa.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
