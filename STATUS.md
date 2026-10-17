@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-10-17 23:12:28 JST**
+> 自動生成: **2026-10-17 23:16:38 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -13,8 +13,8 @@
 |---|---:|
 | 収録候補論文数 | **1648** |
 | 未claim Research job | **1648** |
-| 直近24hのResearch処理完了 | **106** |
-| 最終Research処理完了 | **10-17 23:08:00 JST** |
+| 直近24hのResearch処理完了 | **105** |
+| 最終Research処理完了 | **10-17 23:16:00 JST** |
 | 最終Discovery探索完了 | **10-17 22:30:00 JST** |
 | 整合性異常 | **0** |
 
@@ -31,7 +31,7 @@
 | :30ワーカー担当残 | **4** |
 | :45ワーカー担当残 | **3** |
 
-- キュー最終生成: **2026-10-17 22:42:35 JST** / 再監査版: `2026-10-07-v1`。
+- キュー最終生成: **2026-10-17 23:14:33 JST** / 再監査版: `2026-10-07-v1`。
 - 機械検査PASS/WARNでも意味内容の再監査に合格したとは限りません。合格した論文はキュー再生成時に除外されます。
 - 残件数と担当別・機械検査別件数は `entries` から再計算し、`count`・`worker_counts` の保存値は使いません。累計完了件数・完了率は現在の待機リスト単独では算出できません。
 
@@ -116,7 +116,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **10-17 09:18:14 JST（13時間54分前）** |
+| 最終maintenance完了 | **10-17 09:18:14 JST（13時間58分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **issues_found** |
 | health | **issues_found** |
@@ -136,16 +136,16 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 指標 | 現在値 |
 |---|---:|
-| 直近6hのResearch完了 | **25** |
+| 直近6hのResearch完了 | **26** |
 | 直近6hのDiscovery run | **1** |
 | 直近6hのDiscovery本文確認・分類 | **1** |
-| 最終Research完了 | **10-17 23:08:00 JST** |
+| 最終Research完了 | **10-17 23:16:00 JST** |
 | 最終Discovery完了 | **10-17 22:30:00 JST** |
 
 ### 最新Library-first run
 
-- Research: **10-17 23:08:00 JST** / worker — / run 20261017-2300-scheduled-chat-00/r01 / 成果 **1件**
-  - evidence: .survey/import-inbox/results/research/libfile_dece06594be0819199991fe84f913856--2026-2603.27819-kvsculpt-quality-headings-verified-20261017-2300-scheduled-chat-00-r01.json
+- Research: **10-17 23:16:00 JST** / worker — / run 20261017-2300-scheduled-chat-00/r01 / 成果 **2件**
+  - evidence: .survey/import-inbox/results/research/libfile_54c6e857d78881919b3002665133c7bd--2025-2502.09334-thunderserve-method-section-verified-20261017-2300-scheduled-chat-00-r01.json
 - Discovery: **10-17 22:30:00 JST** / worker scheduled-chat-30 / run 20261017-2230-scheduled-chat-30/r01/research-relevance/121
   - 本文確認・分類 **1件** / accept **0件** / unrelated+borderline **1件**
   - evidence: .survey/import-inbox/results/discovery/libfile_dd1728d11b188191953a3e6270418dc0--discovery-20261017-2230-scheduled-chat-30-research-relevance-r01-121.json
