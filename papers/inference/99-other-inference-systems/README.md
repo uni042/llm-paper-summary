@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（755本）
+## 自動生成の論文一覧（758本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -1252,6 +1252,10 @@
   実装：[✓](https://github.com/amao0o0/InfoDensity) ・ リポジトリ内被引用：0  
   そこで、後方からの最大値包絡（suffix-max envelope）によって軌跡全体の形を要約し、同一問題に対する複数生成の相対的な長さで補正する報酬を設計した。原著表2では、DeepSeek-R1-Distill-Qwen-1.5Bの4ベンチマーク平均正答率が36.5%から50.8%へ上がり、平均生成長は11.1千から7.5千トークンへ短縮した。
 
+- **2026-03 · [HiCI: Hierarchical Construction-Integration for Long-Context Attention](2026-2603.20843-hici-hierarchical-construction-integration-for-long-context-attention.md)**  
+  実装：[✓](https://github.com/zengxyyu/HiCI) ・ リポジトリ内被引用：0  
+  HiCI（Hierarchical Construction–Integration）は、長文脈言語モデルの注意機構を、セグメント単位の局所表現の構築、局所表現からの全体文脈の統合、全体と局所の情報を各セグメントへ再配信する処理へ分解する研究である。
+
 - **2026-03 · [Gumbel Distillation for Parallel Text Generation](2026-2603.22216-gumbel-distillation-for-parallel-text-generation.md)**  
   実装：[✓](https://github.com/hxixixh/gumbel-distill) ・ リポジトリ内被引用：0  
   自己回帰言語モデル（autoregressive language モデル）は、前のトークンを条件に次の一個を順番に予測するため、隣接する語の依存関係を扱いやすい。例えば「San Francisco」を同時に予測する場合、「San」を選んだ条件で「Francisco」を選ぶという自己回帰的な関係が明示されない。
@@ -1355,6 +1359,10 @@
 - **2026-02 · [On the Limits of Layer Pruning for Generative Reasoning in Large Language Models](2026-2602.01997-on-the-limits-of-layer-pruning-for-generative-reasoning-in-large-languag.md)**  
   実装：[✓](https://github.com/safal312/on-the-limits-of-layer-pruning) ・ リポジトリ内被引用：0  
   本論文は、大規模言語モデルの層を丸ごと削除してモデルを軽くする「深さ方向の枝刈り」について、分類問題では精度が比較的保たれるのに、数学的推論やコード生成では著しく悪化する理由を分析する。約25%の層削除を行った条件では、分類課題で元の性能の約90%を保てても、生成課題で63.4%しか保てない例がある。
+
+- **2026-02 · [Neural Attention Search Linear: Towards Adaptive Token-Level Hybrid Attention Models](2026-2602.03681-neural-attention-search-linear-towards-adaptive-token-level-hybrid-atten.md)**  
+  実装：[✓](https://github.com/automl/NeuralAttentionSearchLinear) ・ リポジトリ内被引用：0  
+  NAtS-L（Neural 注意機構 Search Linear）は、従来の「ある層はソフトマックス注意、別の層は線形注意」という固定的な混成構成を、同じ層の中で入力トークン塊ごとに注意演算を選択する構成へ拡張した研究である。
 
 - **2026-02 · [Learning Query-Aware Budget-Tier Routing for Runtime Agent Memory](2026-2602.06025-learning-query-aware-budget-tier-routing-for-runtime-agent-memory.md)**  
   実装：[✓](https://github.com/ViktorAxelsen/BudgetMem) ・ リポジトリ内被引用：0  
@@ -1511,6 +1519,10 @@
 - **2025-12 · [RouteRAG: Efficient Retrieval-Augmented Generation from Text and Graph via Reinforcement Learning](2025-2512.09487-routerag-efficient-retrieval-augmented-generation-from-text-and-graph-vi.md)**  
   実装：[✓](https://github.com/YucanGuo/RouteRAG) ・ リポジトリ内被引用：0  
   RouteRAGは、言語モデルが推論途中に外部知識を調べる際、通常の文書検索、知識グラフ検索、両者の混合検索を状況に応じて切り替える方策を強化学習で獲得する検索拡張生成方式である。
+
+- **2025-12 · [Post-Training Quantization of OpenPangu Models for Efficient Deployment on Atlas A2](2025-2512.23367-post-training-quantization-of-openpangu-models-for-efficient-deployment-.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  単なる量子化誤差の研究ではなく、Ascendの演算子テンプレートライブラリCATLASSへ、量子化された重み配置、逆量子化、行列積を組み込み、不要な形式変換を避ける実行経路を構築する点が推論基盤上の寄与である。実測の前処理（プリフィル）では、バッチ32のFP16遅延5419msがINT8で3611msへ減少し、1.50倍の高速化となる。
 
 - **2025-12 · [Parallel Token Prediction for Language Models](2025-2512.21323-parallel-token-prediction-for-language-models.md)**  
   実装：[✓](https://github.com/mandt-lab/ptp) ・ リポジトリ内被引用：0  

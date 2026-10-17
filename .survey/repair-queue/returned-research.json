@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-17T11:20:00+00:00",
+  "generated_at": "2026-10-17T11:32:48+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -1244,34 +1244,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-5228937d075e--libfile_86f29951dfc081919a2a311b2f4e5ef5--2026-2606.26762-protokv-streaming-video-memory-research-20261014-1855-scheduled-chat-00-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-5228937d075e--libfile_86f29951dfc081919a2a311b2f4e5ef5--2026-2606.26762-protokv-streaming-video-memory-research-20261014-1855-scheduled-chat-00-r.json",
       "worker_run_key": "20261014-1855-scheduled-chat-00/r01"
-    },
-    {
-      "canonical_id": "arXiv:2603.20843",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-14T12:45:07+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 425 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 6262,
-        "body_paragraphs": 35,
-        "method_chars": 1857,
-        "method_paragraphs": 11,
-        "evaluation_chars": 425,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "評価説明量 425 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-56b25364b336--libfile_2053c3d4802c8191b012db05908fc17d--2026-2603.20843-hici-hierarchical-long-context-attention-research-20261014-1130-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-56b25364b336--libfile_2053c3d4802c8191b012db05908fc17d--2026-2603.20843-hici-hierarchical-long-context-attention-research-20261014-1130-scheduled.json",
-      "worker_run_key": "20261014-1130-scheduled-chat-30/r01"
     },
     {
       "canonical_id": "arXiv:2605.23071",
@@ -4232,8 +4204,8 @@
     },
     {
       "canonical_id": "arXiv:2601.05038",
-      "title": "ArcAligner: Adaptive Recursive Aligner for Compressed Context Embeddings in RAG",
-      "source_url": "https://arxiv.org/html/2601.05038v1",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-17T11:17:36+00:00",
       "return_count": 3,
       "assigned_worker": "scheduled-chat-00",
@@ -4256,6 +4228,34 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-10b88736b350--libfile_0a59e6e7e9a08191be37c6b8a5ac380a--2026-2601.05038-arcaligner-compressed-context-alignment-research-20261017-1930-scheduled-chat-30-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-10b88736b350--libfile_0a59e6e7e9a08191be37c6b8a5ac380a--2026-2601.05038-arcaligner-compressed-context-alignment-research-20261017-1930-scheduled-.json",
       "worker_run_key": "20261017-1930-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2511.16595",
+      "title": "TimeViper: A Hybrid Mamba-Transformer Vision-Language Model for Efficient Long Video Understanding",
+      "source_url": "https://arxiv.org/abs/2511.16595",
+      "returned_at": "2026-10-17T11:31:00+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 102 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 4771,
+        "body_paragraphs": 26,
+        "method_chars": 1568,
+        "method_paragraphs": 8,
+        "evaluation_chars": 102,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "評価説明量 102 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-20261017-exact--libfile_9d909978c71c8191be28f6cf86433438.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-20261017-exact--libfile_9d909978c71c8191be28f6cf86433438.json",
+      "worker_run_key": "20261015-0530-scheduled-chat-30/r01"
     }
   ]
 }
