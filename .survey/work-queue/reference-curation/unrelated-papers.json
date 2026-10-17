@@ -2,7 +2,7 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-17T05:06:15+00:00",
+  "updated_at": "2026-10-17T14:51:09+00:00",
   "record_count": 12422,
   "records": {
     "arXiv:2303.08774": {
@@ -164265,9 +164265,9 @@
         "id:arXiv:2203.10314",
         "url:https://arxiv.org/abs/2203.10314"
       ],
-      "reason": "一次要旨は点群の三次元物体検出のためのボクセル集合注意（VSA）と潜在コードによる集合間変換を提案し、KITTIとWaymoの検出性能を評価する。線形計算量の注意機構は点群専用で、LLMの自己回帰復号・サービングやKVキャッシュ管理を直接扱わない。",
+      "reason": "点群の3次元物体検出に向け、ボクセルごとに潜在コードを介する2段階の交差注意で可変サイズの点集合を処理するVoxel Set Transformer（VoxSeT）を提案する。KITTI・Waymoの検出ベンチマークが評価対象で、線形計算量の注意機構は3D知覚モデルの特徴抽出に使われる。自己回帰型LLMの生成推論、KVキャッシュ、GPUサービング、推論時のメモリ階層を検証しておらず、汎用LLM推論基盤への直接適用が示されていないため対象外。",
       "first_checked_at": "2026-10-11T14:41:43+00:00",
-      "last_checked_at": "2026-10-16T18:54:54+00:00",
+      "last_checked_at": "2026-10-17T14:51:09+00:00",
       "linked_from": [],
       "title": "Voxel Set Transformer: A Set-to-Set Approach to 3D Object Detection from Point Clouds"
     },
