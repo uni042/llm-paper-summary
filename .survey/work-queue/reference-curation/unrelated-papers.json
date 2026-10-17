@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-17T05:04:56+00:00",
-  "record_count": 12421,
+  "updated_at": "2026-10-17T05:06:15+00:00",
+  "record_count": 12422,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -163181,11 +163181,11 @@
         "id:arXiv:2204.13767",
         "url:https://arxiv.org/abs/2204.13767"
       ],
-      "reason": "タイトルで明示された最終タスクは多変量時系列の予測であり、LLMの自己回帰復号、KVキャッシュ、サービング、MoE推論、推論基盤の最適化を扱う研究ではない。",
+      "reason": "一次要旨で対象は多変量時系列の長期予測であり、変数固有の投影と三角形のパッチ注意で時系列長に対する線形計算量を達成する研究。注意計算の効率化はあるが、LLMの生成推論、KVキャッシュ、MoE、LLMサービングへの適用は示されていない。",
       "first_checked_at": "2026-10-11T02:48:44+00:00",
-      "last_checked_at": "2026-10-16T09:27:37+00:00",
+      "last_checked_at": "2026-10-17T05:06:14+00:00",
       "linked_from": [],
-      "title": "Triformer: Triangular, Variable-Specific Attentions for Long Sequence Multivariate Time Series Forecasting-Full Version"
+      "title": "Triformer: Triangular, Variable-Specific Attentions for Long Sequence Multivariate Time Series Forecasting--Full Version"
     },
     "DOI:10.1109/tcsvt.2026.3661516": {
       "classification": "unrelated",
@@ -168550,9 +168550,9 @@
         "DOI:10.48550/arxiv.2403.18421",
         "arXiv:2403.18421"
       ],
-      "reason": "タイトルが示す主題は生物医学文書で学習した27億パラメータ言語モデルの構築であり、医療領域への適応と事前学習が中心である。LLM推論基盤のメモリ管理、スケジューリング、低ビット推論、カーネル最適化を提案する論文とは読み取れないため、現行サーベイのシステム研究から除外した。タイトルのみ確認し、要旨・本文は未読。",
+      "reason": "一次要旨で主貢献はPubMed論文から学習した27億パラメータの医療言語モデルと医学質問応答の精度評価（MedMCQA開発57.3%、MMLU Medical Genetics 69.0%）。小規模化による運用上の利点は論じるが、推論エンジン・量子化・メモリ階層・スケジューラの新しい効率化方式は提案していない。",
       "first_checked_at": "2026-10-13T13:47:00+00:00",
-      "last_checked_at": "2026-10-16T07:46:06+00:00",
+      "last_checked_at": "2026-10-17T05:06:15+00:00",
       "linked_from": [],
       "title": "BioMedLM: A 2.7B Parameter Language Model Trained On Biomedical Text"
     },
@@ -179127,6 +179127,18 @@
       "last_checked_at": "2026-10-17T05:04:56+00:00",
       "linked_from": [],
       "title": "VISTAv2: World Imagination for Indoor Vision-and-Language Navigation"
+    },
+    "arXiv:2601.10011": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.10011",
+      "identity_tokens": [
+        "arXiv:2601.10011"
+      ],
+      "reason": "自然言語からSQLを生成する応用タスクで、質問の構造的分解と成功例・エラー修正例の検索によってBIRDの実行正答率68.5%を達成する。計算資源削減の記述はあるが、LLMの重み配置、復号カーネル、メモリ階層、サービング実装を最適化する研究ではなく、SQL推論戦略と応用精度が中心。",
+      "first_checked_at": "2026-10-17T05:06:13+00:00",
+      "last_checked_at": "2026-10-17T05:06:13+00:00",
+      "linked_from": [],
+      "title": "Memo-SQL: Structured Decomposition and Experience-Driven Self-Correction for Training-Free NL2SQL"
     }
   }
 }

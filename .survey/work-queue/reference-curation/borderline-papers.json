@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-17T05:04:58+00:00",
-  "record_count": 5233,
+  "updated_at": "2026-10-17T05:06:14+00:00",
+  "record_count": 5232,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -71097,9 +71097,9 @@
         "semanticscholar:5e364810740f92046868a4ddb7a1b30576439e4d",
         "url:https://arxiv.org/abs/2512.06688"
       ],
-      "reason": "一次要旨では個人化対話データセット、Qwen3-4Bの強化微調整、長期エージェント記憶が中心。32K対話履歴を約2Kの記憶へ置換して入力トークンを16分の1にする実験は推論入力コストに関連するが、KVキャッシュ・サービング・実行カーネルの最適化は主題ではないため境界候補とする。",
+      "reason": "一次要旨では暗黙の利用者嗜好を学習する個人化ベンチマークとエージェント記憶が主題。2千トークンの記憶で3万2千トークンの会話履歴を置き換え、入力トークンを16分の1にするという推論費用に関連する効果がある一方、主要評価は個人化回答正答率（記憶方式55%）であり、KVキャッシュ、実行時配置、サービング遅延・スループットのシステム最適化を直接検証していないため境界とする。",
       "first_checked_at": "2026-10-11T10:43:47+00:00",
-      "last_checked_at": "2026-10-16T09:27:32+00:00",
+      "last_checked_at": "2026-10-17T05:06:14+00:00",
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "PersonaMem-v2: Towards Personalized Intelligence via Learning Implicit User Personas and Agentic Memory"
@@ -71822,19 +71822,6 @@
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "Lazarus: Resilient and Elastic Training of Mixture-of-Experts Models with Adaptive Expert Placement"
-    },
-    "arXiv:2601.10011": {
-      "classification": "borderline",
-      "canonical_id": "arXiv:2601.10011",
-      "identity_tokens": [
-        "arXiv:2601.10011"
-      ],
-      "reason": "Memo-SQLは自然言語からSQLへの変換において、構造化分解と過去の誤り修正事例の検索で自己修正を行い、BIRDで68.5%の実行正解率を報告する。テスト時の多候補生成の計算資源を10分の1以下に減らすという推論費用面の効果はあるが、主要貢献はNL2SQLのアプリケーション推論戦略であり、GPU推論基盤、KVキャッシュ、階層メモリ、カーネル最適化は直接扱わない。境界的として保留する。",
-      "first_checked_at": "2026-10-12T21:39:40+00:00",
-      "last_checked_at": "2026-10-12T21:39:40+00:00",
-      "linked_from": [],
-      "borderline_recheck_count": 0,
-      "title": "Memo-SQL: Structured Decomposition and Experience-Driven Self-Correction for Training-Free NL2SQL"
     },
     "arXiv:2607.27881": {
       "classification": "borderline",
