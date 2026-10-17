@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "2192af2dad702fc28b21d66c96db410ad9dd81fa768624d5920d3b4ddcedd924",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/retry-research-6f22ec23bfe7--library-final-audit--2503.10135--gumiho.md",
+  "canonical_id": "arXiv:2503.10135",
+  "worker_completed_at": "2026-10-18T02:33:00+09:00",
+  "worker_run_key": "20261018-0230-scheduled-chat-30/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 4566,
+    "body_paragraphs": 29,
+    "method_chars": 1596,
+    "method_paragraphs": 9,
+    "evaluation_chars": 666,
+    "limitation_chars": 491,
+    "insufficiency_flags": []
+  },
+  "failures": [
+    "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2025-2503.10135-gumiho-a-hybrid-architecture-to-prioritize-early-tokens-in-speculative-decoding.md と 14 段落 / 2831文字 (100.0%) が完全一致"
+  ],
+  "processed_at": "2026-10-17T18:13:38+00:00"
+}

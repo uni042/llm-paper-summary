@@ -35,6 +35,8 @@ worker_run_key: '20261018-0230-scheduled-chat-30/r01'
 reference_main_sha: '5edaff43e52466b6ddd3710f41d8830342450457'
 quality_self_review_passed: true
 quality_self_review_version: 'PAPER-QUALITY-GUIDE-2026-10-07'
+last_audited: null
+audit_version: 0
 ---
 
 # Gumiho：投機的復号の先頭トークンを重視する逐次・並列混成下書き器

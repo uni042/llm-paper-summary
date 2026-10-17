@@ -33,6 +33,8 @@ worker_run_key: '20261018-0230-scheduled-chat-30/r01'
 reference_main_sha: '5edaff43e52466b6ddd3710f41d8830342450457'
 quality_self_review_passed: true
 quality_self_review_version: 'PAPER-QUALITY-GUIDE-2026-10-07'
+last_audited: null
+audit_version: 0
 ---
 
 # 投機的復号における蒸留温度と復号温度の関係：TempSpecの実証研究

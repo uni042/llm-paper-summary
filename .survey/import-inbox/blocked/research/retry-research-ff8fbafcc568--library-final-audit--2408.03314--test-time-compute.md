@@ -29,6 +29,8 @@ worker_run_key: '20261018-0230-scheduled-chat-30/r02'
 reference_main_sha: '5edaff43e52466b6ddd3710f41d8830342450457'
 quality_self_review_passed: true
 quality_self_review_version: 'PAPER-QUALITY-GUIDE-2026-10-07'
+last_audited: null
+audit_version: 0
 ---
 
 # 推論時計算の最適配分：探索・自己修正と事前学習の計算量交換
