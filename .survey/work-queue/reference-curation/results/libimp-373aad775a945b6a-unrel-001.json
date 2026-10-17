@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-373aad775a945b6a-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2602.05827",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2602.05827",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2602.05827",
+      "arXiv:2602.05827"
+    ],
+    "reason": "一次要旨で、未知環境の視覚言語ナビゲーション向けに疎な未来動画を生成して行動軌跡を推定するSparseVideoNavを提案。27倍の高速化は連続動画生成を用いた同タスクの非最適化構成に対するもので、LLMの自己回帰復号・KVキャッシュ・MoEサービングの高速化ではない。最終適用先はロボットの視覚ナビゲーションなので対象外。",
+    "first_checked_at": "2026-10-16T09:27:34+00:00",
+    "last_checked_at": "2026-10-17T05:04:56+00:00",
+    "linked_from": [],
+    "title": "Sparse Video Generation Propels Real-World Beyond-the-View Vision-Language Navigation"
+  },
+  "processed_at": "2026-10-17T05:04:56+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-373aad775a94",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

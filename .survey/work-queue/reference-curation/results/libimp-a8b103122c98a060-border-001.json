@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a8b103122c98a060-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1145/3772052.3772206",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1145/3772052.3772206",
+    "identity_tokens": [
+      "DOI:10.1145/3772052.3772206"
+    ],
+    "reason": "一次要旨で、商用画像生成サービスの350万件の要求と300台超のGPUの観測に基づき、拡散画像生成の多段パイプライン、階層キャッシュ、動的スケーリング、先読みを最適化する研究と確認。サービング・メモリ階層・負荷分散は本サーベイと技術的に隣接する一方、対象モデルは画像生成用拡散モデルであり、言語モデルのKVキャッシュやトークン復号の評価ではないため境界判定。",
+    "first_checked_at": "2026-10-17T05:04:57+00:00",
+    "last_checked_at": "2026-10-17T05:04:57+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Understanding Diffusion Model Serving in Production: A Top-Down Analysis of Workload, Scheduling, and Resource Efficiency"
+  },
+  "processed_at": "2026-10-17T05:04:57+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a8b103122c98",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

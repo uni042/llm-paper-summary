@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-17T04:46:13+00:00",
-  "record_count": 12420,
+  "updated_at": "2026-10-17T05:04:56+00:00",
+  "record_count": 12421,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -178976,9 +178976,9 @@
         "DOI:10.48550/arxiv.2602.05827",
         "arXiv:2602.05827"
       ],
-      "reason": "一次要旨はロボットの長距離ナビゲーションで疎な未来映像を生成し、動画拡散モデルの軌道推定を未最適化構成より27倍高速化する。主対象は動画生成と実世界の移動制御であり、LLMの自己回帰推論・KVキャッシュ・MoE・GPUサービングの一般的な最適化ではないため無関係とする。",
+      "reason": "一次要旨で、未知環境の視覚言語ナビゲーション向けに疎な未来動画を生成して行動軌跡を推定するSparseVideoNavを提案。27倍の高速化は連続動画生成を用いた同タスクの非最適化構成に対するもので、LLMの自己回帰復号・KVキャッシュ・MoEサービングの高速化ではない。最終適用先はロボットの視覚ナビゲーションなので対象外。",
       "first_checked_at": "2026-10-16T09:27:34+00:00",
-      "last_checked_at": "2026-10-16T09:27:34+00:00",
+      "last_checked_at": "2026-10-17T05:04:56+00:00",
       "linked_from": [],
       "title": "Sparse Video Generation Propels Real-World Beyond-the-View Vision-Language Navigation"
     },
@@ -179115,6 +179115,18 @@
       "last_checked_at": "2026-10-17T03:54:27+00:00",
       "linked_from": [],
       "title": "DEEPMED: Building a Medical DeepResearch Agent via Multi-hop Med-Search Data and Turn-Controlled Agentic Training & Inference"
+    },
+    "arXiv:2512.00041": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2512.00041",
+      "identity_tokens": [
+        "arXiv:2512.00041"
+      ],
+      "reason": "一次要旨で、行動条件付き動画拡散モデルによりロボットの短期未来視点を生成し、言語指示に合わせた価値地図をオンライン経路計画へ統合する研究と確認。VAE潜在空間や疎な復号で単一GPU推論に対応するが、主要課題と評価は室内ナビゲーション成功率・経路効率であり、LLM推論基盤・学習システムの最適化を検証しないため対象外。",
+      "first_checked_at": "2026-10-17T05:04:56+00:00",
+      "last_checked_at": "2026-10-17T05:04:56+00:00",
+      "linked_from": [],
+      "title": "VISTAv2: World Imagination for Indoor Vision-and-Language Navigation"
     }
   }
 }
