@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-17T09:35:58+00:00",
+  "generated_at": "2026-10-17T10:00:39+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 162,
+  "count": 161,
   "entries": [
     {
       "canonical_id": "DOI:10.1145/3714983.3714987",
@@ -2138,33 +2138,6 @@
       "worker_run_key": "20261013-2200-scheduled-chat-00/r01"
     },
     {
-      "canonical_id": "arXiv:2605.01910",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-14T14:07:12+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 0 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5675,
-        "body_paragraphs": 27,
-        "method_chars": 2010,
-        "method_paragraphs": 9,
-        "evaluation_chars": 0,
-        "limitation_chars": 633,
-        "insufficiency_flags": [
-          "評価説明量 0 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-5f737f8abe7d--libfile_dba2ad65366481919f3fd75b6c9daeb9--2026-2605.01910-santa-stochastic-sparse-attention-research-20261014-2200-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-5f737f8abe7d--libfile_dba2ad65366481919f3fd75b6c9daeb9--2026-2605.01910-santa-stochastic-sparse-attention-research-20261014-2200-scheduled-chat-0.json",
-      "worker_run_key": "20261014-2200-scheduled-chat-00/r01"
-    },
-    {
       "canonical_id": "arXiv:2603.01236",
       "title": null,
       "source_url": null,
@@ -2273,35 +2246,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-3c5df45b52b0--libfile_bba482f53fc48191a8687816f7c83ac0--2025-2512.16843-llmcache-layer-wise-activation-reuse-research-20261014-2330-scheduled-chat-30-r01-v2.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-3c5df45b52b0--libfile_bba482f53fc48191a8687816f7c83ac0--2025-2512.16843-llmcache-layer-wise-activation-reuse-research-20261014-2330-scheduled-cha.json",
       "worker_run_key": "20261014-2330-scheduled-chat-30/r01"
-    },
-    {
-      "canonical_id": "arXiv:2604.17701",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-14T15:54:40+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700",
-        "説明不足トリガー: 評価説明量 0 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5393,
-        "body_paragraphs": 31,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 0,
-        "limitation_chars": 530,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700",
-          "評価説明量 0 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-4c9ba072cff3--libfile_af51bf81b7588191bac3f66b5b12dd55--2026-2604.17701-wisv-wireless-semantic-verification-research-20261014-2258-scheduled-chat-00-r01-rev1.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-4c9ba072cff3--libfile_af51bf81b7588191bac3f66b5b12dd55--2026-2604.17701-wisv-wireless-semantic-verification-research-20261014-2258-scheduled-chat.json",
-      "worker_run_key": "20261014-2258-scheduled-chat-00/r01"
     },
     {
       "canonical_id": "arXiv:2605.15206",
@@ -4179,8 +4123,8 @@
     },
     {
       "canonical_id": "arXiv:2604.20937",
-      "title": "Sink-Token-Aware Pruning for Fine-Grained Video Understanding in Efficient Video LLMs",
-      "source_url": "https://arxiv.org/html/2604.20937v2",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-17T09:33:42+00:00",
       "return_count": 1,
       "assigned_worker": "scheduled-chat-45",
@@ -4206,8 +4150,8 @@
     },
     {
       "canonical_id": "arXiv:2601.08743",
-      "title": "TableCache: Primary Foreign Key Guided KV Cache Precomputation for Low Latency Text-to-SQL",
-      "source_url": "https://arxiv.org/abs/2601.08743",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-17T09:34:35+00:00",
       "return_count": 1,
       "assigned_worker": "scheduled-chat-30",
@@ -4230,6 +4174,33 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-20261017-exact--libfile_392c9bbcb4208191af63cd4fc23511e5.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-20261017-exact--libfile_392c9bbcb4208191af63cd4fc23511e5.json",
       "worker_run_key": "20261014-2330-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2604.15356",
+      "title": "Sequential KV Cache Compression via Probabilistic Language Tries: Beyond the Per-Vector Shannon Limit",
+      "source_url": "https://arxiv.org/abs/2604.15356",
+      "returned_at": "2026-10-17T09:57:35+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 457 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 4595,
+        "body_paragraphs": 27,
+        "method_chars": 1903,
+        "method_paragraphs": 11,
+        "evaluation_chars": 457,
+        "limitation_chars": 599,
+        "insufficiency_flags": [
+          "評価説明量 457 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_d22640076de48191b61993ee268910e4--2026-2604.15356-sequential-kv-language-tries-research-20261017-1730-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_d22640076de48191b61993ee268910e4--2026-2604.15356-sequential-kv-language-tries-research-20261017-1730-scheduled-chat-30-r01.json",
+      "worker_run_key": "20261017-1730-scheduled-chat-30/r01"
     }
   ]
 }
