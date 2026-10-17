@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-10-17T06:11:06.563169+00:00",
+  "generated_at": "2026-10-17T06:43:24.225613+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 15,
+  "count": 14,
   "worker_counts": {
-    "scheduled-chat-00": 5,
+    "scheduled-chat-00": 4,
     "scheduled-chat-30": 5,
     "scheduled-chat-45": 5
   },
@@ -140,26 +140,6 @@
         "body_chars": 3639,
         "method_chars": 1063,
         "evaluation_chars": 1088,
-        "limitation_chars": 0
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2026-2603.21096-mixture-of-chapters-scaling-learnt-memory-in-transformers.md",
-      "canonical_id": "arXiv:2603.21096",
-      "title": "Mixture of Chapters: Scaling Learnt Memory in Transformers",
-      "file_bytes": 15180,
-      "source_sha256": "da95596a79876d2769d33f6378dee143517a991abf4188e0ef2c99b6a9f840d5",
-      "source_git_blob_sha": "e3314c21f6f9c055c9d2489b9df20f56ea9cefb1",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.964554,
-      "quality_metrics": {
-        "body_chars": 3189,
-        "method_chars": 1121,
-        "evaluation_chars": 793,
         "limitation_chars": 0
       },
       "mechanical_failures": [],
