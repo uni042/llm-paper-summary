@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-17T15:45:49+00:00",
+  "generated_at": "2026-10-17T15:54:59+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 145,
+  "count": 147,
   "entries": [
     {
       "canonical_id": "DOI:10.1145/3714983.3714987",
@@ -3611,8 +3611,8 @@
     },
     {
       "canonical_id": "arXiv:2505.22913",
-      "title": "Mustafar: Promoting Unstructured Sparsity for KV Cache Pruning in LLM Inference",
-      "source_url": "https://arxiv.org/html/2505.22913v2",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-17T15:45:44+00:00",
       "return_count": 1,
       "assigned_worker": "scheduled-chat-30",
@@ -3639,10 +3639,66 @@
       "worker_run_key": "20261018-0030-scheduled-chat-30/r01"
     },
     {
+      "canonical_id": "arXiv:2607.28069",
+      "title": null,
+      "source_url": null,
+      "returned_at": "2026-10-17T15:45:48+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700",
+        "説明不足トリガー: 評価説明量 0 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5689,
+        "body_paragraphs": 30,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 0,
+        "limitation_chars": 555,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700",
+          "評価説明量 0 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-63d610dcd1ee--libfile_8bd005de60908191ba10d020f4414e95--2026-2607.28069-sempic-semantic-position-independent-kv-cache-research-20261017-1030-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-63d610dcd1ee--libfile_8bd005de60908191ba10d020f4414e95--2026-2607.28069-sempic-semantic-position-independent-kv-cache-research-20261017-1030-sche.json",
+      "worker_run_key": "20261017-1030-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2606.27791",
+      "title": null,
+      "source_url": null,
+      "returned_at": "2026-10-17T15:45:49+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 209 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5156,
+        "body_paragraphs": 28,
+        "method_chars": 1467,
+        "method_paragraphs": 9,
+        "evaluation_chars": 209,
+        "limitation_chars": 856,
+        "insufficiency_flags": [
+          "評価説明量 209 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-7756c140a603--libfile_83cb736106b08191b01ee109df11642b--2026-2606.27791-nll-guided-full-attention-layer-selection-research-20261017-1230-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-7756c140a603--libfile_83cb736106b08191b01ee109df11642b--2026-2606.27791-nll-guided-full-attention-layer-selection-research-20261017-1230-schedule.json",
+      "worker_run_key": "20261017-1230-scheduled-chat-30/r01"
+    },
+    {
       "canonical_id": "arXiv:2510.04371",
       "title": "Speculative Actions: A Lossless Framework for Faster Agentic Systems",
       "source_url": "https://arxiv.org/html/2510.04371v2",
-      "returned_at": "2026-10-17T15:45:45+00:00",
+      "returned_at": "2026-10-17T15:54:54+00:00",
       "return_count": 1,
       "assigned_worker": "scheduled-chat-30",
       "reason": "blocked_quality",
@@ -3671,7 +3727,7 @@
       "canonical_id": "arXiv:2410.17980",
       "title": "Scaling Stick-Breaking Attention: An Efficient Implementation and In-depth Study",
       "source_url": "https://arxiv.org/html/2410.17980v2",
-      "returned_at": "2026-10-17T15:45:47+00:00",
+      "returned_at": "2026-10-17T15:54:56+00:00",
       "return_count": 1,
       "assigned_worker": "scheduled-chat-45",
       "reason": "blocked_quality",
@@ -3695,60 +3751,56 @@
       "worker_run_key": "20261018-0030-scheduled-chat-30/r01"
     },
     {
-      "canonical_id": "arXiv:2607.28069",
-      "title": "SemPIC: Learning Semantic Position-Independent KV Caches",
-      "source_url": "https://arxiv.org/abs/2607.28069",
-      "returned_at": "2026-10-17T15:45:48+00:00",
+      "canonical_id": "arXiv:2603.12634",
+      "title": "Spend Less, Reason Better: Budget-Aware Value Tree Search for LLM Agents",
+      "source_url": "https://arxiv.org/html/2603.12634v1",
+      "returned_at": "2026-10-17T15:54:57+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-30",
       "reason": "blocked_quality",
       "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700",
-        "説明不足トリガー: 評価説明量 0 < 500"
+        "長文定型文の再利用を検出: papers/inference/19-inference-evaluation-benchmarking/2026-2603.12634-spend-less-reason-better-budget-aware-value-tree-search-for-llm-agents.md と 14 段落 / 3622文字 (100.0%) が完全一致"
       ],
       "quality_metrics": {
         "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5689,
-        "body_paragraphs": 30,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 0,
-        "limitation_chars": 555,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700",
-          "評価説明量 0 < 500"
-        ]
+        "body_chars": 6045,
+        "body_paragraphs": 41,
+        "method_chars": 1980,
+        "method_paragraphs": 16,
+        "evaluation_chars": 1971,
+        "limitation_chars": 697,
+        "insufficiency_flags": []
       },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-63d610dcd1ee--libfile_8bd005de60908191ba10d020f4414e95--2026-2607.28069-sempic-semantic-position-independent-kv-cache-research-20261017-1030-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-63d610dcd1ee--libfile_8bd005de60908191ba10d020f4414e95--2026-2607.28069-sempic-semantic-position-independent-kv-cache-research-20261017-1030-sche.json",
-      "worker_run_key": "20261017-1030-scheduled-chat-30/r01"
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_7bb37a0464f88191957cf61ce087c882--2026-2603.12634-bavt-budget-aware-agent-search-research-20261015-1325-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_7bb37a0464f88191957cf61ce087c882--2026-2603.12634-bavt-budget-aware-agent-search-research-20261015-1325-scheduled-chat-30-r01.json",
+      "worker_run_key": "20261015-1325-scheduled-chat-30/r01"
     },
     {
-      "canonical_id": "arXiv:2606.27791",
-      "title": "NLL-Guided Full-Attention Layer Selection for Training-Free Sliding-Window Adaptation",
-      "source_url": "https://arxiv.org/abs/2606.27791",
-      "returned_at": "2026-10-17T15:45:49+00:00",
+      "canonical_id": "arXiv:2502.20704",
+      "title": "Fuzzy Speculative Decoding for a Tunable Accuracy-Runtime Tradeoff",
+      "source_url": "https://arxiv.org/pdf/2502.20704",
+      "returned_at": "2026-10-17T15:54:59+00:00",
       "return_count": 2,
-      "assigned_worker": "scheduled-chat-00",
+      "assigned_worker": "scheduled-chat-45",
       "reason": "blocked_quality",
       "failures": [
-        "説明不足トリガー: 評価説明量 209 < 500"
+        "長文定型文の再利用を検出: papers/inference/05-speculative-decoding-moe/2025-2502.20704-fuzzy-speculative-decoding-for-a-tunable-accuracy-runtime-tradeoff.md と 18 段落 / 4118文字 (100.0%) が完全一致"
       ],
       "quality_metrics": {
         "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5156,
-        "body_paragraphs": 28,
-        "method_chars": 1467,
-        "method_paragraphs": 9,
-        "evaluation_chars": 209,
-        "limitation_chars": 856,
+        "body_chars": 4859,
+        "body_paragraphs": 23,
+        "method_chars": 1548,
+        "method_paragraphs": 8,
+        "evaluation_chars": 2252,
+        "limitation_chars": 0,
         "insufficiency_flags": [
-          "評価説明量 209 < 500"
+          "限界説明量 0 < 推奨 120"
         ]
       },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-7756c140a603--libfile_83cb736106b08191b01ee109df11642b--2026-2606.27791-nll-guided-full-attention-layer-selection-research-20261017-1230-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-7756c140a603--libfile_83cb736106b08191b01ee109df11642b--2026-2606.27791-nll-guided-full-attention-layer-selection-research-20261017-1230-schedule.json",
-      "worker_run_key": "20261017-1230-scheduled-chat-30/r01"
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_8c6476348c948191ba731ed0c4b9efaa--2025-2502.20704-fuzzy-speculative-decoding-research-20261015-1655-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_8c6476348c948191ba731ed0c4b9efaa--2025-2502.20704-fuzzy-speculative-decoding-research-20261015-1655-scheduled-chat-00-r01.json",
+      "worker_run_key": "20261015-1655-scheduled-chat-00/r01"
     }
   ]
 }
