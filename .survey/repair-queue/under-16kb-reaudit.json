@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-10-17T10:58:35.978104+00:00",
+  "generated_at": "2026-10-17T11:21:43.353164+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 9,
+  "count": 8,
   "worker_counts": {
     "scheduled-chat-00": 3,
     "scheduled-chat-30": 3,
-    "scheduled-chat-45": 3
+    "scheduled-chat-45": 2
   },
   "entries": [
     {
@@ -62,26 +62,6 @@
       ]
     },
     {
-      "path": "papers/inference/99-other-inference-systems/2026-2602.01997-on-the-limits-of-layer-pruning-for-generative-reasoning-in-large-languag.md",
-      "canonical_id": "arXiv:2602.01997",
-      "title": "On the Limits of Layer Pruning for Generative Reasoning in Large Language Models",
-      "file_bytes": 12702,
-      "source_sha256": "cd83ee4601c1745d6cd09e716f58242224bfde6c9749e638d4d88f56dcfa8e1b",
-      "source_git_blob_sha": "02c25003eecef798a48fdb63d4d7e3071aa72124",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.940717,
-      "quality_metrics": {
-        "body_chars": 3418,
-        "method_chars": 1117,
-        "evaluation_chars": 844,
-        "limitation_chars": 0
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
       "path": "papers/inference/17-pim-near-data-acceleration/2026-h3-attn.md",
       "canonical_id": "DOI:10.1145/3816440.3818602",
       "title": "H3-Attn: Attention-Efficient 3D DRAM PNM Processor with Hybrid Head Parallelism and Hierarchical SFU",
@@ -96,6 +76,26 @@
         "body_chars": 2413,
         "method_chars": 1072,
         "evaluation_chars": 505,
+        "limitation_chars": 0
+      },
+      "mechanical_failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/99-other-inference-systems/2026-2602.01997-on-the-limits-of-layer-pruning-for-generative-reasoning-in-large-languag.md",
+      "canonical_id": "arXiv:2602.01997",
+      "title": "On the Limits of Layer Pruning for Generative Reasoning in Large Language Models",
+      "file_bytes": 14895,
+      "source_sha256": "049d925b380b45f01235e3a0dae69863a9c7ddf37bce784c4ae47d2bdd952c23",
+      "source_git_blob_sha": "5878233da3fc27d78682dc455bdf6a8ee8d2d91b",
+      "assigned_worker": "scheduled-chat-00",
+      "semantic_status": "pending",
+      "mechanical_status": "PASS",
+      "japanese_ratio": 0.940717,
+      "quality_metrics": {
+        "body_chars": 3418,
+        "method_chars": 1117,
+        "evaluation_chars": 844,
         "limitation_chars": 0
       },
       "mechanical_failures": [],
@@ -117,26 +117,6 @@
         "method_chars": 1028,
         "evaluation_chars": 932,
         "limitation_chars": 473
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/13-sparse-attention/2026-2602.05191-double-p-hierarchical-top-p-sparse-attention-for-long-context-llms.md",
-      "canonical_id": "arXiv:2602.05191",
-      "title": "Double-P: Hierarchical Top-P Sparse Attention for Long-Context LLMs",
-      "file_bytes": 15705,
-      "source_sha256": "b1bc14d34837f737faa4d4c15f858f11aa0ad3e60c6e122e573f7b6445e7a64a",
-      "source_git_blob_sha": "34bb9983e7ceddb1396ca7510debdc74b1730b5a",
-      "assigned_worker": "scheduled-chat-45",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.943744,
-      "quality_metrics": {
-        "body_chars": 4125,
-        "method_chars": 1222,
-        "evaluation_chars": 1318,
-        "limitation_chars": 551
       },
       "mechanical_failures": [],
       "warnings": []
