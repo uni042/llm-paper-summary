@@ -1435,7 +1435,7 @@
 ### 4年前（2022-11〜2023-10）
 
 - **2023-09 · [Efficient Memory Management for Large Language Model Serving with PagedAttention](2023-2309.06180-vllm-pagedattention-efficient-memory-management.md)**  
-  実装：[✓](https://github.com/vllm-project/vllm) ・ リポジトリ内被引用：1089  
+  実装：[✓](https://github.com/vllm-project/vllm) ・ リポジトリ内被引用：1091  
   vLLMは、要求ごとに大きな連続領域を予約していたKVキャッシュを固定長ブロックへ分解し、論理的な並びとGPU上の物理配置を分離する。必要なブロックだけ動的に割り当て、同じ接頭辞のKVを共有することで、限られたGPUメモリへより多くの要求を同時に載せる。
 
 - **2023-02 · [AlpaServe: Statistical Multiplexing with Model Parallelism for Deep Learning Serving](2023-2302.11665-alpaserve.md)**  
@@ -1459,7 +1459,7 @@
   Vicuna自身を軽量な応答長予測器として使い、生成前に要求を長さ別へ並べ替える。予測外れを失敗回収・再計算で隔離し、短い要求には大きなバッチを使うことで、可変長生成に特有のバッチ内遊休を減らす。
 
 - **2023-09 · [LLMCarbon: Modeling the End-To-End Carbon Footprint of Large Language Models](2023-2309.14393-llmcarbon-modeling-the-end-to-end-carbon-footprint-of-large-language-mod.md)**  
-  実装：[✓](https://github.com/SotaroKaneda/MLCarbon) ・ リポジトリ内被引用：8  
+  実装：[✓](https://github.com/SotaroKaneda/MLCarbon) ・ リポジトリ内被引用：9  
   LLMCarbonは、大規模言語モデル（LLM）を設計・運用する前に、モデル構造とハードウェア、データセンター条件から二酸化炭素換算排出量（CO2eq）を推定するシステムである。T5、GPT-3、GShard、Switch、XLMの5モデルで既報の学習運用排出量と比較すると、LLMCarbonの推定誤差は-3.54%～+8.2%の範囲だった。
 
 - **2023-05 · [Large Language Models as Tool Makers](2023-2305.17126-large-language-models-as-tool-makers.md)**  

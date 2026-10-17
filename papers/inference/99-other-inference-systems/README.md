@@ -350,6 +350,10 @@
   実装：[✓](https://github.com/jushengzhang/HybridToken-VLM) ・ リポジトリ内被引用：1  
   一方、離散量子化した符号だけでは姿勢・質感・細部の変化が失われやすい。一次論文v2の7種類の画像理解評価では、無圧縮モデルを上限、学習しない1トークン圧縮を下限とする正規化性能保持率が87.2%であり、連続圧縮方式VoCo-LLaMAの81.0%を上回る。
 
+- **2025-11 · [Thinking with Drafts: Speculative Temporal Reasoning for Efficient Long Video Understanding](2025-2512.00805-thinking-with-drafts-speculative-temporal-reasoning-for-efficient-long-v.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  長い動画の質問応答では、最初に少数のフレームを見て全体を把握し、必要な時間区間を細かく調べる「フレームを見ながら考える」方式が使われる。原著の観測では、動画トークンに対する注意スコアの90%以上が 10^-3 未満で、密に読み込んだフレームには冗長な情報が多い。
+
 - **2025-11 · [Revisiting Disaggregated Large Language Model Serving for Performance and Energy Implications](2026-2601.08833-revisiting-disaggregated-large-language-model-serving-for-performance-and-energy-implications.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   公平な2-GPU基準と複数KV転送階層・DVFSでプリフィル/デコード分離を再評価し、性能・省電力の優位が条件依存であることを示す。
@@ -1644,10 +1648,6 @@
   実装：[✓](https://github.com/yandex-research/AsyncReasoning) ・ リポジトリ内被引用：0  
   推論時計算を増やすほど対話の即応性が下がるという問題である。二つの流れがそれぞれ通常の「入力→思考→回答」という順序で文脈を見ているように、鍵・値キャッシュ（KV キャッシュ）の論理的な並びを切り替える。
 
-- **2025-11 · [Thinking with Drafts: Speculative Temporal Reasoning for Efficient Long Video Understanding](2025-2512.00805-thinking-with-drafts-speculative-temporal-reasoning-for-efficient-long-v.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  長い動画の質問応答では、最初に少数のフレームを見て全体を把握し、必要な時間区間を細かく調べる「フレームを見ながら考える」方式が使われる。原著の観測では、動画トークンに対する注意スコアの90%以上が 10^-3 未満で、密に読み込んだフレームには冗長な情報が多い。
-
 - **2025-11 · [T-SAR: A Full-Stack Co-design for CPU-Only Ternary LLM Inference via In-Place SIMD ALU Reorganization](2025-2511.13676-t-sar-a-full-stack-co-design-for-cpu-only-ternary-llm-inference-via-in-p.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   T-SARは、重みを−1、0、+1の三値に制約した大規模言語モデル（LLM）を、専用の大きな行列演算器なしにCPUで高速実行するための、アルゴリズム・命令セット・マイクロアーキテクチャ・ソフトウェアの協調設計である。
@@ -2184,13 +2184,13 @@
   実装：[✓](https://github.com/HugoZHL/PQCache) ・ リポジトリ内被引用：36  
   文脈が長くなるほどKVキャッシュは大きくなり、GPUメモリへ収まらない場合にはCPUメモリへの退避と転送が必要になる。Llama-3.1-8Bの128K文脈を用いたInfiniteBenchでは、過去トークンの1/10だけを選択する条件で平均スコア46.80を報告し、比較方式に対する改善は+4.60%である。
 
+- **2024-10 · [PyramidDrop: Accelerating Your Large Vision-Language Models via Pyramid Visual Redundancy Reduction](2024-2410.17247-pyramiddrop-accelerating-your-large-vision-language-models-via-pyramid-v.md)**  
+  実装：[✓](https://github.com/Cooperx521/PyramidDrop) ・ リポジトリ内被引用：32  
+  大規模視覚言語モデル（Large Vision-Language モデル; LVLM）は、画像を数百から数千の画像トークンへ変換して、文章の質問と一緒に言語モデルへ入力する。画像解像度が上がると画像トークンが増え、注意計算と全結合層の演算量が大きくなる。複数の視覚言語ベンチマークで品質は概ね維持されるが、個別の高解像度課題では小さな低下もある。
+
 - **2024-03 · [ShortGPT: Layers in Large Language Models are More Redundant Than You Expect](2024-2403.03853-shortgpt-layers-in-large-language-models-are-more-redundant-than-you-exp.md)**  
   実装：[✓](https://github.com/icip-cas/ShortGPT) ・ リポジトリ内被引用：32  
   本論文は、大規模言語モデルの全ての変換層が同程度に必要とは限らないという観察から、計算の一部を省略する二種類の方式を提案する。ACL 2025掲載版の代表例では、Llama2-13Bの40層から10層を対象とする条件で、多肢選択指標の平均値は58.49から53.57となり、元の約91.59%を維持した。
-
-- **2024-10 · [PyramidDrop: Accelerating Your Large Vision-Language Models via Pyramid Visual Redundancy Reduction](2024-2410.17247-pyramiddrop-accelerating-your-large-vision-language-models-via-pyramid-v.md)**  
-  実装：[✓](https://github.com/Cooperx521/PyramidDrop) ・ リポジトリ内被引用：31  
-  大規模視覚言語モデル（Large Vision-Language モデル; LVLM）は、画像を数百から数千の画像トークンへ変換して、文章の質問と一緒に言語モデルへ入力する。画像解像度が上がると画像トークンが増え、注意計算と全結合層の演算量が大きくなる。複数の視覚言語ベンチマークで品質は概ね維持されるが、個別の高解像度課題では小さな低下もある。
 
 - **2024-04 · [Hybrid LLM: Cost-Efficient and Quality-Aware Query Routing](2024-2404.14618-hybrid-llm-cost-efficient-and-quality-aware-query-routing.md)**  
   実装：[✓](https://github.com/m365-core/hybrid_llm_routing) ・ リポジトリ内被引用：31  
@@ -2260,6 +2260,14 @@
   実装：[✓](https://github.com/test-time-training/ttt-lm-pytorch) ・ リポジトリ内被引用：17  
   本論文は、再帰型ニューラルネットワーク（Recurrent Neural Network、RNN）の隠れ状態を単なる固定長ベクトルではなく、小さな機械学習モデルの重みとして表現するテスト時訓練（Test-Time 学習、TTT）層を提案する。
 
+- **2024-01 · [Multi-Candidate Speculative Decoding](2024-2401.06706-multi-candidate-speculative-decoding.md)**  
+  実装：[✓](https://github.com/NJUNLP/MCSD) ・ リポジトリ内被引用：17  
+  標準方式では各深さに一つの候補しかない。したがって、研究の核は「候補幅による受理率向上」「分布保存の検証」「共有接頭辞による検証費用削減」の三点である。
+
+- **2024-01 · [MoE-LLaVA: Mixture of Experts for Large Vision-Language Models](2024-2401.15947-moe-llava-mixture-of-experts-for-large-vision-language-models.md)**  
+  実装：[✓](https://github.com/PKU-YuanGroup/MoE-LLaVA) ・ リポジトリ内被引用：17  
+  混合専門家（mixture of エキスパート、MoE）は、複数の専門家を持ちながらトークンごとに少数だけ活性化することで、総パラメータ数と一度の計算に使うパラメータ数を切り離せる。
+
 - **2024-03 · [DéjàVu：KVキャッシュ・ストリーミングによる高速・耐障害LLM配信](2024-2403.01876-dejavu-kv-cache-streaming-for-fast-fault-tolerant-generative-llm-serving.md)**  
   実装：[✓](https://github.com/msr-fiddle/dejavu) ・ リポジトリ内被引用：16  
   また各マイクロバッチのKVキャッシュをGPUに保持し続けるとメモリを過剰確保し、障害時には失われたKV状態を再計算するため復旧が遅い。DéjàVuはこれらをKVキャッシュの高速な非同期転送という一つの機構で扱う。
@@ -2267,14 +2275,6 @@
 - **2024-02 · [CLLMs: Consistency Large Language Models](2024-2403.00835-cllms-consistency-large-language-models.md)**  
   実装：[✓](https://github.com/hao-ai-lab/Consistency_LLM) ・ リポジトリ内被引用：16  
   整合性大規模言語モデル（Consistency Large Language Models; CLLMs）は、Jacobi型の並列復号で使う仮の複数トークン列から、自己回帰復号の最終固定点へ速く近づくよう既存LLMを追加学習する。固定点に対する大域整合性損失と通常の自己回帰損失を併用し、追加の小型草案モデルなしで生成を高速化する。
-
-- **2024-01 · [Multi-Candidate Speculative Decoding](2024-2401.06706-multi-candidate-speculative-decoding.md)**  
-  実装：[✓](https://github.com/NJUNLP/MCSD) ・ リポジトリ内被引用：16  
-  標準方式では各深さに一つの候補しかない。したがって、研究の核は「候補幅による受理率向上」「分布保存の検証」「共有接頭辞による検証費用削減」の三点である。
-
-- **2024-01 · [MoE-LLaVA: Mixture of Experts for Large Vision-Language Models](2024-2401.15947-moe-llava-mixture-of-experts-for-large-vision-language-models.md)**  
-  実装：[✓](https://github.com/PKU-YuanGroup/MoE-LLaVA) ・ リポジトリ内被引用：16  
-  混合専門家（mixture of エキスパート、MoE）は、複数の専門家を持ちながらトークンごとに少数だけ活性化することで、総パラメータ数と一度の計算に使うパラメータ数を切り離せる。
 
 - **2024-06 · [Your Absorbing Discrete Diffusion Secretly Models the Conditional Distributions of Clean Data](2026-2406.03736-your-absorbing-discrete-diffusion-secretly-models-the-conditional-distri.md)**  
   実装：[✓](https://github.com/ML-GSAI/RADD) ・ リポジトリ内被引用：15  
@@ -2615,7 +2615,7 @@
   標準の多頭注意（Multi-Head 注意機構; MHA）は各クエリ頭に独立した鍵頭と値頭を持つため、復号時には全KV頭のキャッシュを読み出す必要がある。
 
 - **2022-11 · [Efficiently Scaling Transformer Inference](2022-2211.05102-efficiently-scaling-transformer-inference.md)**  
-  実装：✓ ・ リポジトリ内被引用：167  
+  実装：✓ ・ リポジトリ内被引用：168  
   TPU v4上の大規模Transformer推論を通信・メモリ・計算モデルから設計し、2D重み固定/重み収集の切替とバッチ分割MQAで540B級の低遅延・高MFU・長文脈を両立する。
 
 - **2023-01 · [SparseGPT: Massive Language Models Can Be Accurately Pruned in One-Shot](2023-2301.00774-sparsegpt-massive-language-models-can-be-accurately-pruned-in-one-shot.md)**  
@@ -2635,7 +2635,7 @@
   LLM-Prunerは、大規模言語モデルのパラメータを実際に削除して小さい密行列モデルへ変換する構造枝刈り手法である。LLaMA-7B、Vicuna-7B、ChatGLM-6Bを評価し、LLaMA-7Bでは20%の構造削減でゼロショット七課題平均が63.25から56.82へ下がり、低ランク適応後60.07まで回復した。
 
 - **2023-10 · [DistillSpec: Improving Speculative Decoding via Knowledge Distillation](2023-2310.08461-distillspec-improving-speculative-decoding-via-knowledge-distillation.md)**  
-  実装：✓ ・ リポジトリ内被引用：79  
+  実装：✓ ・ リポジトリ内被引用：80  
   ドラフト自身の生成データと課題別の分布間距離でターゲットとの整合を蒸留し、投機的デコードの候補受理率を上げる手法。
 
 - **2023-05 · [LLM-QAT: Data-Free Quantization Aware Training for Large Language Models](2023-2305.17888-llm-qat-data-free-quantization-aware-training-for-large-language-models.md)**  
@@ -2861,7 +2861,7 @@
   タイル化、オンラインsoftmax、逆伝播時再計算により二次元注意行列の高帯域メモリ往復を避ける厳密注意カーネル。
 
 - **2022-06 · [DeepSpeed Inference: Enabling Efficient Inference of Transformer Models at Unprecedented Scale](2022-2207.00032-deepspeed-inference-enabling-efficient-inference-of-transformer-models-at-unprecedented-scale.md)**  
-  実装：[✓](https://github.com/microsoft/DeepSpeed) ・ リポジトリ内被引用：114  
+  実装：[✓](https://github.com/microsoft/DeepSpeed) ・ リポジトリ内被引用：115  
   単一の量子化方式や一種類の並列化を万能解とせず、GPU内実行向けのDeepSpeed Transformerと、CPU主記憶・NVMeを使うZeRO-Inferenceという二つの経路を組み合わせる。
 
 - **2022-06 · [ZeroQuant: Efficient and Affordable Post-Training Quantization for Large-Scale Transformers](2022-2206.01861-zeroquant-efficient-and-affordable-post-training-quantization-for-large-.md)**  
@@ -3091,7 +3091,7 @@
 ### 8年前（2018-11〜2019-10）
 
 - **2019-09 · [Megatron-LM: Training Multi-Billion Parameter Language Models Using Model Parallelism](2019-1909.08053-megatron-lm-training-multi-billion-parameter-language-models-using-model.md)**  
-  実装：[✓](https://github.com/NVIDIA/Megatron-LM) ・ リポジトリ内被引用：226  
+  実装：[✓](https://github.com/NVIDIA/Megatron-LM) ・ リポジトリ内被引用：227  
   この論文の対象は、巨大な言語モデルの学習時に、モデル重み・勾配・最適化器状態が単一GPUのメモリに収まらない問題である。従来のモデル全体を別の言語や専用コンパイラで書き直す方法とは異なり、PyTorchの既存Transformer実装へ少数の集約通信を挿入する設計である。
 
 - **2019-04 · [Generating Long Sequences with Sparse Transformers](2019-1904.10509-generating-long-sequences-with-sparse-transformers.md)**  
@@ -3099,7 +3099,7 @@
   全結合の自己注意を局所窓と周期・固定要約位置へ因数分解して O(n√n) 化し、再計算と疎GPUカーネルを併用して数万〜100万要素の生成を可能にしたSparse Transformer。
 
 - **2018-11 · [Blockwise Parallel Decoding for Deep Autoregressive Models](2018-1811.03115-blockwise-parallel-decoding-for-deep-autoregressive-models.md)**  
-  実装：[✓](https://github.com/tensorflow/tensor2tensor) ・ リポジトリ内被引用：61  
+  実装：[✓](https://github.com/tensorflow/tensor2tensor) ・ リポジトリ内被引用：62  
   深層自己回帰モデルの生成では、次のトークンが確定して初めてその次の条件付き分布を計算できる。注意計算を多数の位置で同時実行できる変換器（Transformer）でも、通常の貪欲復号（greedy デコード）は生成長に比例した逐次呼び出しを必要とする。厳密一致を要求する限り、元モデルの貪欲復号と同じ出力を維持できる。
 
 - **2019-05 · [Are Sixteen Heads Really Better than One?](2019-1905.10650-are-sixteen-heads-really-better-than-one.md)**  
