@@ -449,7 +449,7 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
   TwinPilotsは、モデルの重みと鍵・値キャッシュ（KVキャッシュ）が画像処理装置（GPU）の高帯域幅メモリに収まらない状況で、中央処理装置（CPU）を単なる重みの保管先ではなく、GPUと並行する計算装置として扱う推論方式である。
 
 - **2024-09 · [Cambricon-LLM: A Chiplet-Based Hybrid Architecture for On-Device Inference of 70B LLM](2024-2409.15654-cambricon-llm-chiplet-flash-inference.md)**  
-  実装：✓ ・ リポジトリ内被引用：11  
+  実装：✓ ・ リポジトリ内被引用：12  
   NPUと演算機能付きNANDフラッシュをチップレット接続し、重み近傍計算とハードウェア認識タイル化で70B級の端末内推論を実現する。
 
 - **2024-01 · [FlightLLM: Efficient Large Language Model Inference with a Complete Mapping Flow on FPGAs](2024-2401.03868-flightllm-efficient-large-language-model-inference-with-a-complete-mappi.md)**  
@@ -491,7 +491,7 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
 ### 6年前（2020-11〜2021-10）
 
 - **2021-01 · [ZeRO-Offload: Democratizing Billion-Scale Model Training](2021-2101.06840-zero-offload-democratizing-billion-scale-model-training.md)**  
-  実装：[✓](https://github.com/deepspeedai/DeepSpeed) ・ リポジトリ内被引用：10  
+  実装：[✓](https://github.com/deepspeedai/DeepSpeed) ・ リポジトリ内被引用：11  
   ZeRO-Offloadは、巨大モデルの学習時に必要な状態をCPUとGPUへ分担させ、GPUメモリの制約を緩和しながら、低速なホスト–デバイス転送を抑える方式である。著者らはNVIDIA V100 32GB単体で130億パラメータのGPT型モデルを学習可能にし、標準PyTorchの14億に比べ9倍超の規模へ拡大した。
 
 - **2021-10 · [M6-10T: A Sharing-Delinking Paradigm for Efficient Multi-Trillion Parameter Pretraining](2021-2110.03888-m6-10t-a-sharing-delinking-paradigm-for-efficient-multi-trillion-paramet.md)**  
