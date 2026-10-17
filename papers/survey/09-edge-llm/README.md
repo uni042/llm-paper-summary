@@ -15,6 +15,6 @@
 ### 2年前（2024-11〜2025-10）
 
 - **2025-03 · [A Review on Edge Large Language Models: Design, Execution, and Applications](2025-2410.11845-edge-llm-review.md)**  
-  実装：✓ ・ リポジトリ内被引用：11  
+  実装：✓ ・ リポジトリ内被引用：12  
   しかしスマートフォン、組込み装置、車載機器、産業用エッジ計算機は、データセンターのGPUサーバと異なり、メモリ容量、帯域、演算能力、電力、熱設計に強い制約がある。
 <!-- survey:auto:end -->
