@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（718本）
+## 自動生成の論文一覧（719本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -1319,6 +1319,10 @@
 - **2026-01 · [MHLA: Restoring Expressivity of Linear Attention via Token-Level Multi-Head](2026-2601.07832-mhla-restoring-expressivity-of-linear-attention-via-token-level-multi-he.md)**  
   実装：[✓](https://github.com/DAGroup-PKU/MHLA) ・ リポジトリ内被引用：0  
   MHLA（Multi-Head Linear 注意機構）は、系列長に対して計算量が線形に増える注意機構を維持しながら、従来の線形注意（linear 注意機構）で失われるトークン間の選択性を回復する構造である。DeiT-TのImageNet-1K正答率は通常の線形注意69.8%からMHLA75.8%へ、通常のソフトマックス注意72.2%も上回った。
+
+- **2026-01 · [Low-Rank Key Value Attention](2026-2601.11471-low-rank-key-value-attention.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  低ランク鍵・値注意（Low-Rank Key Value 注意機構; LRKV）は、Transformerの各注意ヘッドが別々に保存する鍵・値（key/value; KV）キャッシュの重複を減らすため、各層に一組の共有射影を持たせ、ヘッド固有の違いだけを低ランク残差で表す注意機構である。
 
 - **2026-01 · [LOOKAT: Lookup-Optimized Key-Attention for Memory-Efficient Transformers](2026-2601.10155-lookat-lookup-optimized-key-attention-for-memory-efficient-transformers.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

@@ -3,7 +3,7 @@
 複数requestを複数GPU / nodeで処理するLLM servingについて、request順、batch、prefill / decodeのGPU配分、KV再利用・転送、request移動などを調整し、latencyとresource効率を改善する研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（361本）
+## 自動生成の論文一覧（362本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -1449,6 +1449,10 @@
   本論文は、Transformerの自己注意における「どの単語対の関連度が小さいかは入力が来るまで分からない」という制約を、学習可能な層別閾値と専用演算器の共同設計で解く。
 
 ### 6年前（2020-11〜2021-10）
+
+- **2021-10 · [OneFlow: Redesign the Distributed Deep Learning Framework from Scratch](2021-2110.15032-oneflow-redesign-the-distributed-deep-learning-framework-from-scratch.md)**  
+  実装：[✓](https://github.com/Oneflow-Inc/oneflow) ・ リポジトリ内被引用：3  
+  論文は分散学習を二つの問題に分解する。OneFlowはコンパイラと実行系を一体で設計し、これらを明示的に扱う。
 
 - **2020-11 · [Serving DNNs like Clockwork: Performance Predictability from the Bottom Up](2020-2006.02464-serving-dnns-like-clockwork-performance-predictability-from-the-bottom-u.md)**  
   実装：✓ ・ リポジトリ内被引用：3  

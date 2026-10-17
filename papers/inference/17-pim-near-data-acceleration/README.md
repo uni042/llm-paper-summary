@@ -24,7 +24,7 @@
 - [08-edge-on-device-llm-systems](../08-edge-on-device-llm-systems/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（23本）
+## 自動生成の論文一覧（24本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -120,6 +120,10 @@
 - **2024-03 · [NeuPIMs: NPU-PIM Heterogeneous Acceleration for Batched LLM Inferencing](2024-2403.00579-neupims-npu-pim-heterogeneous-acceleration-for-batched-llm-inferencing.md)**  
   実装：[✓](https://github.com/casys-kaist/NeuPIMs) ・ リポジトリ内被引用：19  
   一方、各要求が別々の過去トークン列を持つ多頭注意では、問い合わせベクトルと鍵キャッシュ、注意重みと値キャッシュの積が、メモリ帯域に制約されやすい行列とベクトルの積（GEMV）になる。NeuPIMsは、この非対称性をNPUとPIMの役割分担で解決するだけでなく、従来のNPU+PIM結合方式では双方を同時に動かせないという問題まで対象にする。
+
+- **2024-04 · [IANUS: Integrated Accelerator based on NPU-PIM Unified Memory System](2024-2410.15008-ianus-integrated-accelerator-based-on-npu-pim-unified-memory-system.md)**  
+  実装：✓ ・ リポジトリ内被引用：6  
+  IANUSは、大規模言語モデル（LLM）の入力処理と逐次生成を、演算特性の異なる二種類のハードウェアへ分担させる推論専用システムである。論文の主結果は、GPT-2系列におけるNVIDIA A100比平均6.2倍、先行DFX比平均3.2倍の推論高速化である。
 
 ### 4年前（2022-11〜2023-10）
 
