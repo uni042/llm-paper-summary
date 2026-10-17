@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "468b5b5c7bafe32d48111ec903f6aff6f5329571fbd43e53e19ca376b2d4123b",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/retry-research-d2299fdd223b--libfile_844bff42005081919d6adb6e53449239--2026-2605.11093-dmi-lib-internal-observability-inference-research-20261017-1130-scheduled-chat-30-r01.md",
+  "canonical_id": "arXiv:2605.11093",
+  "worker_completed_at": "2026-10-17T11:30:55+09:00",
+  "worker_run_key": "20261017-1130-scheduled-chat-30/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 6922,
+    "body_paragraphs": 37,
+    "method_chars": 0,
+    "method_paragraphs": 0,
+    "evaluation_chars": 0,
+    "limitation_chars": 741,
+    "insufficiency_flags": [
+      "手法説明量 0 < 700",
+      "評価説明量 0 < 500"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 手法説明量 0 < 700",
+    "説明不足トリガー: 評価説明量 0 < 500"
+  ],
+  "processed_at": "2026-10-17T17:23:50+00:00"
+}
