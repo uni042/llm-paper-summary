@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-10-17T13:30:06.648744+00:00",
+  "generated_at": "2026-10-17T13:42:35.278304+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 10,
+  "count": 11,
   "worker_counts": {
-    "scheduled-chat-00": 3,
+    "scheduled-chat-00": 4,
     "scheduled-chat-30": 4,
     "scheduled-chat-45": 3
   },
@@ -102,41 +102,21 @@
       "warnings": []
     },
     {
-      "path": "papers/inference/07-kv-cache-optimization-compression/2026-2605.03884-qkvshare-quantized-kv-cache-handoff-for-multi-agent-on-device-llms.md",
-      "canonical_id": "arXiv:2605.03884",
-      "title": "QKVShare: Quantized KV-Cache Handoff for Multi-Agent On-Device LLMs",
-      "file_bytes": 15594,
-      "source_sha256": "ad2a119bc93d9da9e281e6ff0bcc14175c72fb2dc38d59881c44b34151e861a4",
-      "source_git_blob_sha": "a66caa512f45fa6817098af22acee47fe2234262",
-      "assigned_worker": "scheduled-chat-30",
+      "path": "papers/inference/99-other-inference-systems/2026-2604.20937-sink-token-aware-pruning-for-fine-grained-video-understanding-in-efficie.md",
+      "canonical_id": "arXiv:2604.20937",
+      "title": "Sink-Token-Aware Pruning for Fine-Grained Video Understanding in Efficient Video LLMs",
+      "file_bytes": 15172,
+      "source_sha256": "1241179fd9d2ee9c01d9868f8138d67af71fdf417b5d3d81bac215bae0a5cbba",
+      "source_git_blob_sha": "7b0950b27447f8d7c6bd3c2a100baf2bd0468f16",
+      "assigned_worker": "scheduled-chat-00",
       "semantic_status": "pending",
       "mechanical_status": "PASS",
-      "japanese_ratio": 0.958961,
+      "japanese_ratio": 0.962531,
       "quality_metrics": {
-        "body_chars": 4173,
-        "method_chars": 1028,
-        "evaluation_chars": 932,
-        "limitation_chars": 473
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/09-kernel-runtime-compilation/2025-2511.08083-hipkittens-fast-and-furious-amd-kernels.md",
-      "canonical_id": "arXiv:2511.08083",
-      "title": "HipKittens: Fast and Furious AMD Kernels",
-      "file_bytes": 15689,
-      "source_sha256": "4bd8c22fa4603afd293c3111739c1ce1965ec2550703d88a16d3fe4de2cd2516",
-      "source_git_blob_sha": "7233e6df072434752288de013dd86074c446c191",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.982436,
-      "quality_metrics": {
-        "body_chars": 4055,
-        "method_chars": 1740,
-        "evaluation_chars": 834,
-        "limitation_chars": 301
+        "body_chars": 4332,
+        "method_chars": 983,
+        "evaluation_chars": 1113,
+        "limitation_chars": 645
       },
       "mechanical_failures": [],
       "warnings": []
@@ -182,6 +162,26 @@
       "warnings": []
     },
     {
+      "path": "papers/inference/09-kernel-runtime-compilation/2025-2511.08083-hipkittens-fast-and-furious-amd-kernels.md",
+      "canonical_id": "arXiv:2511.08083",
+      "title": "HipKittens: Fast and Furious AMD Kernels",
+      "file_bytes": 16410,
+      "source_sha256": "4a108a1638c117efa793ba7f708c788c299792255404b57cf6a812aedba333ce",
+      "source_git_blob_sha": "b2f4c8e7e3b369db9c36b708e07c4138e15bc3cd",
+      "assigned_worker": "scheduled-chat-30",
+      "semantic_status": "pending",
+      "mechanical_status": "PASS",
+      "japanese_ratio": 0.982436,
+      "quality_metrics": {
+        "body_chars": 4055,
+        "method_chars": 1740,
+        "evaluation_chars": 834,
+        "limitation_chars": 301
+      },
+      "mechanical_failures": [],
+      "warnings": []
+    },
+    {
       "path": "papers/inference/99-other-inference-systems/2025-2512.02901-fairy2i-training-complex-llms-from-real-llms-with-all-parameters-in-1-i.md",
       "canonical_id": "arXiv:2512.02901",
       "title": "Fairy2i: Training Complex LLMs from Real LLMs with All Parameters in {±1, ±i}",
@@ -217,6 +217,26 @@
         "method_chars": 1414,
         "evaluation_chars": 837,
         "limitation_chars": 0
+      },
+      "mechanical_failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/07-kv-cache-optimization-compression/2026-2605.03884-qkvshare-quantized-kv-cache-handoff-for-multi-agent-on-device-llms.md",
+      "canonical_id": "arXiv:2605.03884",
+      "title": "QKVShare: Quantized KV-Cache Handoff for Multi-Agent On-Device LLMs",
+      "file_bytes": 22962,
+      "source_sha256": "a3eb27ff1660d64eee995be47b43a0f7a4870acb3b8351eda7de36f26fb70bf7",
+      "source_git_blob_sha": "524afa221925121ff5977f7db5737fd2f72f05ea",
+      "assigned_worker": "scheduled-chat-30",
+      "semantic_status": "pending",
+      "mechanical_status": "PASS",
+      "japanese_ratio": 0.980613,
+      "quality_metrics": {
+        "body_chars": 5969,
+        "method_chars": 1916,
+        "evaluation_chars": 1694,
+        "limitation_chars": 625
       },
       "mechanical_failures": [],
       "warnings": []
