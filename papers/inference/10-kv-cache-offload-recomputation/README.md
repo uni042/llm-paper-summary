@@ -80,6 +80,10 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
   実装：✓ ・ リポジトリ内被引用：4  
   蒸留言語モデルの注意分布を「本体LLMがどの過去トークンを見るか」の安価な予測器として使い、重要KVを推論前に選択する。これによりKV検索とCPU-GPU転送を本体計算から切り離し、非同期先読み・差分更新・適応オフロードまで一体化する。
 
+- **2025-11 · [Efficient Multi-Adapter LLM Serving via Cross-Model KV-Cache Reuse with Activated LoRA](2025-2512.17910-activated-lora-cross-model-kv-reuse.md)**  
+  実装：[✓](https://github.com/tdoublep/vllm/tree/alora) ・ リポジトリ内被引用：4  
+  aLoRAの起動前KVを基盤モデル・別aLoRA間で共有できるようvLLMのブロックハッシュと実行時マスクを改修し、長文の多アダプタ処理で再プリフィルを避け、65K文脈で標準LoRA比E2E最大58倍・TTFT 100倍超を報告する。
+
 - **2026-07 · [No Buffer, No Bottleneck: Efficient Zero-Copy KV Cache Offloading for Long-Context LLMs](2026-osdi26-directkv-no-buffer-no-bottleneck-efficient-zero-copy-kv-cache-offloading-for-long-context-llms.md)**  
   実装：[✓](https://github.com/shutianluo/DirectKV) ・ リポジトリ内被引用：3  
   注意機構の計算を毎回最初からやり直さずに済む反面、数万トークンの文脈と複数の同時要求を抱えるとGPUの高帯域メモリ（HBM）を圧迫する。既存のオフロード方式と比べ、CPU–GPU間の転送量を最大50%減らし、GPUメモリ使用量を43%削減し、端点の性能を最大1.2倍改善した。
@@ -115,10 +119,6 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
 - **2026-02 · [Agent Memory Below the Prompt: Persistent Q4 KV Cache for Multi-Agent LLM Inference on Edge Devices](2026-2603.04428-persistent-q4-agent-kv-cache.md)**  
   実装：[✓](https://github.com/yshk-mxim/agent-memory) ・ リポジトリ内被引用：3  
   複数エージェントのKVをQ4ブロックとしてSSDへ永続化し、再プリフィルせず注意機構へ直接復元することで、固定KV容量あたり約4倍の文脈を保持し先頭トークン遅延を最大136倍短縮する。
-
-- **2025-11 · [Efficient Multi-Adapter LLM Serving via Cross-Model KV-Cache Reuse with Activated LoRA](2025-2512.17910-activated-lora-cross-model-kv-reuse.md)**  
-  実装：[✓](https://github.com/tdoublep/vllm/tree/alora) ・ リポジトリ内被引用：3  
-  aLoRAの起動前KVを基盤モデル・別aLoRA間で共有できるようvLLMのブロックハッシュと実行時マスクを改修し、長文の多アダプタ処理で再プリフィルを避け、65K文脈で標準LoRA比E2E最大58倍・TTFT 100倍超を報告する。
 
 - **2026-09 · [CacheBridge: Efficient Cross-Model KV Cache Transfer](2026-2609.00891-cachebridge.md)**  
   実装：✓ ・ リポジトリ内被引用：2  

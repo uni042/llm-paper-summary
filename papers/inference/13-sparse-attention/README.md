@@ -262,13 +262,13 @@
   実装：✓ ・ リポジトリ内被引用：7  
   既存の疎注意は重要なトークンだけを読むが、各注意ヘッドに同数のトークンを割り当てると、注意が集中するヘッドでは読み過ぎ、広く分散するヘッドでは読み足りない。
 
+- **2025-07 · [Compactor: Calibrated Query-Agnostic KV Cache Compression with Approximate Leverage Scores](2025-2507.08143-compactor-calibrated-query-agnostic-kv-cache-compression-with-approximat.md)**  
+  実装：[✓](https://github.com/vnchari/compactor-vllm) ・ リポジトリ内被引用：6  
+  近似レバレッジスコアで質問非依存にKVを選別し、文脈別の圧縮耐性を校正してLongBenchで完全KV相当の性能を保ちながら平均68%のKVメモリを削減する。
+
 - **2025-10 · [NOSA: Native and Offloadable Sparse Attention](2025-2510.13602-nosa-native-and-offloadable-sparse-attention.md)**  
   実装：[✓](https://github.com/thunlp/NOSA) ・ リポジトリ内被引用：5  
   NOSAは、学習可能な疎注意（trainable sparse 注意機構）とCPUへのKVキャッシュ退避を両立させるために、注意先の選択パターンを学習段階から転送局所性の高いものへ制約する手法である。
-
-- **2025-07 · [Compactor: Calibrated Query-Agnostic KV Cache Compression with Approximate Leverage Scores](2025-2507.08143-compactor-calibrated-query-agnostic-kv-cache-compression-with-approximat.md)**  
-  実装：[✓](https://github.com/vnchari/compactor-vllm) ・ リポジトリ内被引用：5  
-  近似レバレッジスコアで質問非依存にKVを選別し、文脈別の圧縮耐性を校正してLongBenchで完全KV相当の性能を保ちながら平均68%のKVメモリを削減する。
 
 - **2025-04 · [MMInference: Accelerating Pre-filling for Long-Context VLMs via Modality-Aware Permutation Sparse Attention](2025-2504.16083-mminference-accelerating-pre-filling-for-long-context-vlms-via-modality-.md)**  
   実装：[✓](https://aka.ms/MMInference) ・ リポジトリ内被引用：5  
