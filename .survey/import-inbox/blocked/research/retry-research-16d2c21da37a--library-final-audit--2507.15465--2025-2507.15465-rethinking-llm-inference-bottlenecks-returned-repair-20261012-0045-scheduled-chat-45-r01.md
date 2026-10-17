@@ -38,6 +38,8 @@ worker_id: scheduled-chat-45
 reference_main_sha: '85dc8bd6395defcfead1f2430f8c9373b659c48f'
 returned_research_repair_of: '.survey/import-inbox/blocked/research/libfile_9c7814efdf4081919d75c4c6a6d1eb29--2025-2507.15465-rethinking-llm-inference-bottlenecks.md'
 returned_research_failure_fixed: '差し戻し原稿のsource欠落。一次PDFから書誌・出典を再構成し、MLAとMoEの数式的な条件、実機・シミュレーションの区別、適用上の限界を日本語で補った。'
+last_audited: null
+audit_version: 0
 ---
 
 # 潜在注意と混合専門家モデルが変えるLLM推論の律速
