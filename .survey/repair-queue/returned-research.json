@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-17T15:28:10+00:00",
+  "generated_at": "2026-10-17T15:36:41+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -3554,63 +3554,9 @@
       "worker_run_key": "20261017-0145-scheduled-chat-45/r01"
     },
     {
-      "canonical_id": "arXiv:2502.07115",
-      "title": "Online Scheduling for LLM Inference with KV Cache Constraints",
-      "source_url": "https://arxiv.org/html/2502.07115v5",
-      "returned_at": "2026-10-17T15:26:59+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 6469,
-        "body_paragraphs": 39,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 1125,
-        "limitation_chars": 809,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_c5ee0eb5965081918839f9706665a83b--2025-2502.07115-online-kv-scheduling-mcsf-research-20261017-2330-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_c5ee0eb5965081918839f9706665a83b--2025-2502.07115-online-kv-scheduling-mcsf-research-20261017-2330-scheduled-chat-30-r01.json",
-      "worker_run_key": "20261017-2330-scheduled-chat-30/r01"
-    },
-    {
-      "canonical_id": "arXiv:2604.23466",
-      "title": "Evaluating CUDA Tile for AI Workloads on Hopper and Blackwell GPUs",
-      "source_url": "https://arxiv.org/abs/2604.23466",
-      "returned_at": "2026-10-17T15:26:59+00:00",
-      "return_count": 3,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 0 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 6456,
-        "body_paragraphs": 31,
-        "method_chars": 1568,
-        "method_paragraphs": 5,
-        "evaluation_chars": 0,
-        "limitation_chars": 383,
-        "insufficiency_flags": [
-          "評価説明量 0 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_f9d4255b5dfc8191a1fac446505bf996--2026-2604.23466-cuda-tile-method-returned-repair-20261018-0000-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_f9d4255b5dfc8191a1fac446505bf996--2026-2604.23466-cuda-tile-method-returned-repair-20261018-0000-scheduled-chat-00-r01.json",
-      "worker_run_key": "20261018-0000-scheduled-chat-00/r01"
-    },
-    {
       "canonical_id": "arXiv:2606.30265",
-      "title": "When Is a Draft Accepted? A Theory of Acceptance in Speculative Decoding",
-      "source_url": "https://arxiv.org/abs/2606.30265",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-17T15:27:27+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-45",
@@ -3636,8 +3582,8 @@
     },
     {
       "canonical_id": "arXiv:2608.02625",
-      "title": "Speculative Correction: Draft-then-Refine Decoding for Diffusion Language Models",
-      "source_url": "https://arxiv.org/html/2608.02625v1",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-17T15:27:27+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-45",
@@ -3662,6 +3608,62 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-32a7510e26ad--libfile_6cf102c22dd08191bd7aeaa0b0d32143--2026-2608.02625-speculative-correction-diffusion-draft-refine-research-20261017-1030-scheduled-chat-30-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-32a7510e26ad--libfile_6cf102c22dd08191bd7aeaa0b0d32143--2026-2608.02625-speculative-correction-diffusion-draft-refine-research-20261017-1030-sche.json",
       "worker_run_key": "20261017-1030-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2601.10823",
+      "title": "Mugi: Value Level Parallelism For Efficient LLMs",
+      "source_url": "https://arxiv.org/html/2601.10823v2",
+      "returned_at": "2026-10-17T15:35:14+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 0 < 500",
+        "長文定型文の再利用を検出: papers/inference/15-inference-simulation-emulation/2026-2601.10823-mugi-value-level-parallelism-for-efficient-llms.md と 19 段落 / 4308文字 (100.0%) が完全一致"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5505,
+        "body_paragraphs": 29,
+        "method_chars": 2084,
+        "method_paragraphs": 10,
+        "evaluation_chars": 0,
+        "limitation_chars": 791,
+        "insufficiency_flags": [
+          "評価説明量 0 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-4735c3108554--libfile_ef4558caa4e081918e07364435911f92--2026-2601.10823-mugi-value-level-parallelism-research-20261017-1930-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-4735c3108554--libfile_ef4558caa4e081918e07364435911f92--2026-2601.10823-mugi-value-level-parallelism-research-20261017-1930-scheduled-chat-30-r01.json",
+      "worker_run_key": "20261017-1930-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2604.15356",
+      "title": "Sequential KV Cache Compression via Probabilistic Language Tries: Beyond the Per-Vector Shannon Limit",
+      "source_url": "https://arxiv.org/abs/2604.15356",
+      "returned_at": "2026-10-17T15:35:16+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 457 < 500",
+        "長文定型文の再利用を検出: papers/inference/07-kv-cache-optimization-compression/2026-2604.15356-sequential-kv-cache-compression-via-probabilistic-language-tries-beyond-.md と 14 段落 / 2913文字 (100.0%) が完全一致"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 4595,
+        "body_paragraphs": 27,
+        "method_chars": 1903,
+        "method_paragraphs": 11,
+        "evaluation_chars": 457,
+        "limitation_chars": 599,
+        "insufficiency_flags": [
+          "評価説明量 457 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-5a90eaf8ccc5--libfile_d22640076de48191b61993ee268910e4--2026-2604.15356-sequential-kv-language-tries-research-20261017-1730-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-5a90eaf8ccc5--libfile_d22640076de48191b61993ee268910e4--2026-2604.15356-sequential-kv-language-tries-research-20261017-1730-scheduled-chat-30-r01.json",
+      "worker_run_key": "20261017-1730-scheduled-chat-30/r01"
     }
   ]
 }

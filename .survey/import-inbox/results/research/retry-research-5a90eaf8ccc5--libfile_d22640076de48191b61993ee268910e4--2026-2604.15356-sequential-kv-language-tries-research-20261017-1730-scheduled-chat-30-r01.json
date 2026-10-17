@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "1b91c1e40dba1fef15bea7ad3312f64cf7a35df31692e6534510bfc57949aeac",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/retry-research-5a90eaf8ccc5--libfile_d22640076de48191b61993ee268910e4--2026-2604.15356-sequential-kv-language-tries-research-20261017-1730-scheduled-chat-30-r01.md",
+  "canonical_id": "arXiv:2604.15356",
+  "worker_completed_at": "2026-10-17T17:31:00+09:00",
+  "worker_run_key": "20261017-1730-scheduled-chat-30/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 4595,
+    "body_paragraphs": 27,
+    "method_chars": 1903,
+    "method_paragraphs": 11,
+    "evaluation_chars": 457,
+    "limitation_chars": 599,
+    "insufficiency_flags": [
+      "評価説明量 457 < 500"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 評価説明量 457 < 500",
+    "長文定型文の再利用を検出: papers/inference/07-kv-cache-optimization-compression/2026-2604.15356-sequential-kv-cache-compression-via-probabilistic-language-tries-beyond-.md と 14 段落 / 2913文字 (100.0%) が完全一致"
+  ],
+  "processed_at": "2026-10-17T15:35:16+00:00"
+}

@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "e21458884ab65624b2a24b67e855922fbf1401dbdb160fc4db51a0868ca2cf51",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/retry-research-4735c3108554--libfile_ef4558caa4e081918e07364435911f92--2026-2601.10823-mugi-value-level-parallelism-research-20261017-1930-scheduled-chat-30-r01.md",
+  "canonical_id": "arXiv:2601.10823",
+  "worker_completed_at": "2026-10-17T19:35:30+09:00",
+  "worker_run_key": "20261017-1930-scheduled-chat-30/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 5505,
+    "body_paragraphs": 29,
+    "method_chars": 2084,
+    "method_paragraphs": 10,
+    "evaluation_chars": 0,
+    "limitation_chars": 791,
+    "insufficiency_flags": [
+      "評価説明量 0 < 500"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 評価説明量 0 < 500",
+    "長文定型文の再利用を検出: papers/inference/15-inference-simulation-emulation/2026-2601.10823-mugi-value-level-parallelism-for-efficient-llms.md と 19 段落 / 4308文字 (100.0%) が完全一致"
+  ],
+  "processed_at": "2026-10-17T15:35:14+00:00"
+}
