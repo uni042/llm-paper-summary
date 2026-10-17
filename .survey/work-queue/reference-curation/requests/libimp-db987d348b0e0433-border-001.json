@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-db987d348b0e0433-border-001",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2605.11856",
+  "reason": "一次要旨で、テキスト推論と補助画像を統合した視覚作業領域を潜在トークンに圧縮し、推論時に潜在表現だけで回答生成する方式と確認。生成する推論トークンを減らす点は推論計算削減に関係するが、主な実験は視覚理解・推論精度であり、GPUカーネル、メモリ移送、サービングの遅延・スループットの実測が要旨に示されないため境界判定。",
+  "title": "UniVLR: Unifying Text and Vision in Visual Latent Reasoning for Multimodal LLMs",
+  "identity_tokens": [
+    "arxiv:2605.11856"
+  ],
+  "linked_from": [],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-db987d348b0e",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}
