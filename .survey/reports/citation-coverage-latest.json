@@ -1,16 +1,16 @@
 {
   "schema_version": 1,
   "reference_audit_version": 1,
-  "checked_at": "2026-10-17T10:02:05+00:00",
+  "checked_at": "2026-10-17T10:17:23+00:00",
   "summary": {
-    "total": 2405,
-    "complete": 2398,
-    "incomplete": 7
+    "total": 2412,
+    "complete": 2404,
+    "incomplete": 8
   },
   "families": {
     "inference": {
-      "total": 2366,
-      "complete": 2359
+      "total": 2373,
+      "complete": 2365
     },
     "training": {
       "total": 25,
@@ -22,6 +22,11 @@
     }
   },
   "incomplete": [
+    {
+      "path": "papers/inference/07-kv-cache-optimization-compression/2026-2605.03884-qkvshare-quantized-kv-cache-handoff-for-multi-agent-on-device-llms.md",
+      "canonical_id": "arXiv:2605.03884",
+      "reason": "missing structured reference audit metadata"
+    },
     {
       "path": "papers/inference/10-kv-cache-offload-recomputation/2026-2605.18071-kvdrive-holistic-multi-tier-kv-cache-management.md",
       "canonical_id": "arXiv:2605.18071",
