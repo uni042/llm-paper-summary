@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-10-17T06:43:24.225613+00:00",
+  "generated_at": "2026-10-17T06:58:13.823597+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 14,
+  "count": 13,
   "worker_counts": {
     "scheduled-chat-00": 4,
-    "scheduled-chat-30": 5,
+    "scheduled-chat-30": 4,
     "scheduled-chat-45": 5
   },
   "entries": [
@@ -19,7 +19,7 @@
       "file_bytes": 9952,
       "source_sha256": "8b78672dfd3367b0494e3c7598b7da2601580cb6b08f4395783b6fda1b12e681",
       "source_git_blob_sha": "c799f4294b018595eed9c724fc6829cf8353f2d3",
-      "assigned_worker": "scheduled-chat-45",
+      "assigned_worker": "scheduled-chat-00",
       "semantic_status": "pending",
       "mechanical_status": "FAIL",
       "japanese_ratio": 0.8674,
@@ -146,20 +146,20 @@
       "warnings": []
     },
     {
-      "path": "papers/inference/99-other-inference-systems/2025-2503.12559-adaretake-adaptive-redundancy-reduction-to-perceive-longer-for-video-lan.md",
-      "canonical_id": "arXiv:2503.12559",
-      "title": "AdaReTaKe: Adaptive Redundancy Reduction to Perceive Longer for Video-language Understanding",
-      "file_bytes": 15285,
-      "source_sha256": "ec1a2ae0f0a0cfa5eae3dfcb76956745250f193120e73a6d48576b508679660a",
-      "source_git_blob_sha": "a87bc53d4dfdebe136441fd2b81dfa233a743d62",
-      "assigned_worker": "scheduled-chat-00",
+      "path": "papers/inference/13-sparse-attention/2023-2310.08152-context-compression-for-auto-regressive-transformers-with-sentinel-token.md",
+      "canonical_id": "arXiv:2310.08152",
+      "title": "Context Compression for Auto-regressive Transformers with Sentinel Tokens",
+      "file_bytes": 14949,
+      "source_sha256": "c50889e46d713c49ef69e6f83cb4020c1405a9c2e7af0822e2f1b4f8efa866eb",
+      "source_git_blob_sha": "2f0270df69221d5718348010d2bde7e6e91d0bcf",
+      "assigned_worker": "scheduled-chat-45",
       "semantic_status": "pending",
       "mechanical_status": "PASS",
-      "japanese_ratio": 0.977667,
+      "japanese_ratio": 0.958052,
       "quality_metrics": {
-        "body_chars": 3538,
-        "method_chars": 1138,
-        "evaluation_chars": 1160,
+        "body_chars": 4139,
+        "method_chars": 1351,
+        "evaluation_chars": 780,
         "limitation_chars": 0
       },
       "mechanical_failures": [],
@@ -172,7 +172,7 @@
       "file_bytes": 15529,
       "source_sha256": "e96797d4e81bf48872a40e7c87f1cab252b3c90638db46d61076f45d0a6c5990",
       "source_git_blob_sha": "a5ad42b3617df4d6cd38d0351752a7d02b00d70b",
-      "assigned_worker": "scheduled-chat-30",
+      "assigned_worker": "scheduled-chat-00",
       "semantic_status": "pending",
       "mechanical_status": "PASS",
       "japanese_ratio": 0.982691,
@@ -241,26 +241,6 @@
         "method_chars": 1314,
         "evaluation_chars": 1913,
         "limitation_chars": 0
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/17-pim-near-data-acceleration/2026-2604.04253-rethinking-compute-substrates-for-3d-stacked-near-memory-llm-decoding-mi.md",
-      "canonical_id": "arXiv:2604.04253",
-      "title": "Rethinking Compute Substrates for 3D-Stacked Near-Memory LLM Decoding: Microarchitecture-Scheduling Co-Design",
-      "file_bytes": 17284,
-      "source_sha256": "2eede9067de8c051889b50498e3212302204d8f85b09aad128f7c3721d9dcdad",
-      "source_git_blob_sha": "666c2cad96d0b4baf599caf7e2cac4fdbb416d71",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.966093,
-      "quality_metrics": {
-        "body_chars": 4913,
-        "method_chars": 1811,
-        "evaluation_chars": 1414,
-        "limitation_chars": 542
       },
       "mechanical_failures": [],
       "warnings": []
