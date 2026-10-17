@@ -401,7 +401,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   従来のGPU注意カーネルは通常の一本の系列を想定し、クエリごとに必要なKVを集めるため、同じ接頭辞のKVを何度もGPU広帯域メモリから共有メモリへ運ぶ。DeFT（デコード with Flash Tree-注意機構）は、木構造のKVと複数クエリを一緒に分割する際の基準を逆転させる。
 
 - **2024-03 · [AIOS: LLM Agent Operating System](2024-2403.16971-aios-llm-agent-operating-system.md)**  
-  実装：[✓](https://github.com/agiresearch/AIOS) ・ リポジトリ内被引用：4  
+  実装：[✓](https://github.com/agiresearch/AIOS) ・ リポジトリ内被引用：5  
   従来のエージェント枠組みでは、各エージェントがLLMやツールを直接呼び出し、GPUメモリの不足、競合するAPI呼び出し、長時間要求の独占を個別に処理しがちだった。AIOSはエージェントアプリケーションと資源管理を分離し、専用のAIOSカーネルを通じてサービスを提供する。
 
 - **2024-07 · [Inference Performance Optimization for Large Language Models on CPUs](2024-2407.07304-inference-performance-optimization-for-large-language-models-on-cpus.md)**  

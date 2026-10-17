@@ -334,6 +334,10 @@
   実装：✓ ・ リポジトリ内被引用：1  
   KV 枝刈りとI/Oの粒度をContiguousChunkへ統一し、二段非同期プリフェッチでSSD KV読み込みを計算と重ねてRe-プリフィルを最大3.85倍高速化する。
 
+- **2025-12 · [UniQL: Unified Quantization and Low-rank Compression for Adaptive Edge LLMs](2025-2512.03383-uniql-unified-quantization-and-low-rank-compression-for-adaptive-edge-ll.md)**  
+  実装：[✓](https://github.com/enyac-group/UniQL) ・ リポジトリ内被引用：1  
+  端末上で大規模言語モデル（LLM）を実行する際には、モデルの重みだけでなく、実行時の一時領域やほかのアプリケーションが共有するメモリも考慮する必要がある。4ビット量子化だけで端末に収まるモデルを作れても、別のアプリケーションが起動して空きメモリが減れば、固定サイズの量子化モデルは実行不能になる。
+
 - **2025-12 · [More Than Bits: Multi-Envelope Double Binary Factorization for Extreme Quantization](2025-2512.24545-more-than-bits-multi-envelope-double-binary-factorization-for-extreme-qu.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   大規模言語モデルの重みを1～1.5ビットまで圧縮すると、各重みを独立に丸める方式では振幅の情報が著しく失われ、生成品質が低下する。
@@ -1596,10 +1600,6 @@
   実装：[✓](https://github.com/dhruvdcoder/xlm-core) ・ リポジトリ内被引用：0  
   これに対して、非自己回帰言語モデルにはマスク拡散、挿入型生成、編集型生成など複数の方式がある。
 
-- **2025-12 · [UniQL: Unified Quantization and Low-rank Compression for Adaptive Edge LLMs](2025-2512.03383-uniql-unified-quantization-and-low-rank-compression-for-adaptive-edge-ll.md)**  
-  実装：[✓](https://github.com/enyac-group/UniQL) ・ リポジトリ内被引用：0  
-  端末上で大規模言語モデル（LLM）を実行する際には、モデルの重みだけでなく、実行時の一時領域やほかのアプリケーションが共有するメモリも考慮する必要がある。4ビット量子化だけで端末に収まるモデルを作れても、別のアプリケーションが起動して空きメモリが減れば、固定サイズの量子化モデルは実行不能になる。
-
 - **2025-12 · [Script: Graph-Structured and Query-Conditioned Semantic Token Pruning for Multimodal Large Language Models](2025-2512.01949-script-graph-structured-and-query-conditioned-semantic-token-pruning-for.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   手法は、余弦類似度の二部グラフを用いて冗長な視覚トークンを削るグラフ構造化枝刈り（Graph-Structured Pruning; GSP）と、質問との関連性に加えて特徴の多様性を考慮する質問条件付き意味枝刈り（Query-Conditioned Semantic Pruning; QCSP）から成る。
@@ -2208,13 +2208,13 @@
   実装：[✓](https://github.com/m365-core/hybrid_llm_routing) ・ リポジトリ内被引用：31  
   同じ大規模言語モデル（LLM）を全要求へ使うと、単純な質問にも高価な推論計算を割り当てる。小型Llama-2 7B／大型Llama-2 13Bの組合せでは、検証集合で品質低下を1%以下にするしきい値を選んだ確率的ルータが、テスト集合で96.80%の要求を小型へ送ったが、品質低下は1.42%となった。
 
+- **2024-02 · [Decoding Speculative Decoding](2024-2402.01528-decoding-speculative-decoding.md)**  
+  実装：✓ ・ リポジトリ内被引用：31  
+  350件超の投機的デコード実験からドラフト遅延と層深度を主要因と特定し、浅く広いドラフトモデルへ再設計して最大111%のスループット向上を示す。
+
 - **2024-09 · [HybridFlow: A Flexible and Efficient RLHF Framework](2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md)**  
   実装：[✓](https://github.com/volcengine/verl) ・ リポジトリ内被引用：30  
   HybridFlowは、人間フィードバックによる強化学習（Reinforcement Learning from Human Feedback: RLHF）を複数の大規模言語モデルからなる分散データフローとして扱い、その制御の柔軟性と学習処理率を両立するシステムである。
-
-- **2024-02 · [Decoding Speculative Decoding](2024-2402.01528-decoding-speculative-decoding.md)**  
-  実装：✓ ・ リポジトリ内被引用：30  
-  350件超の投機的デコード実験からドラフト遅延と層深度を主要因と特定し、浅く広いドラフトモデルへ再設計して最大111%のスループット向上を示す。
 
 - **2023-12 · [ASVD: Activation-aware Singular Value Decomposition for Compressing Large Language Models](2023-2312.05821-asvd-activation-aware-singular-value-decomposition-for-compressing-large.md)**  
   実装：[✓](https://github.com/hahnyuan/ASVD4LLM) ・ リポジトリ内被引用：30  
@@ -2313,7 +2313,7 @@
   JetMoE-8Bは、混合専門家モデル（Mixture of エキスパート、MoE）の条件付き計算を順伝播ネットワーク（FFN）だけでなく自己注意機構へも拡張した、総パラメータ約80億の言語モデルである。論文はLlama2-7Bとの比較で推論演算量を約70%削減できると述べるが、これは実測の生成遅延が70%減るという意味ではない。
 
 - **2023-12 · [Lookahead: An Inference Acceleration Framework for Large Language Model with Lossless Generation Accuracy](2023-2312.12728-lookahead-an-inference-acceleration-framework-for-large-language-model-w.md)**  
-  実装：[✓](https://github.com/alipay/PainlessInferenceAcceleration) ・ リポジトリ内被引用：12  
+  実装：[✓](https://github.com/alipay/PainlessInferenceAcceleration) ・ リポジトリ内被引用：13  
   Lookaheadは、この空きを利用して過去の生成履歴から複数の継続候補を構成し、一回の対象モデル計算で複数トークンを確定する推論高速化方式である。
 
 - **2024-04 · [HGRN2: Gated Linear RNNs with State Expansion](2024-2404.07904-hgrn2-gated-linear-rnns-with-state-expansion.md)**  
@@ -2412,6 +2412,10 @@
   実装：[✓](https://github.com/oujieww/ANPD) ・ リポジトリ内被引用：5  
   適応的N-gram並列復号（適応的 N-gram Parallel Decoding; ANPD）は、大規模言語モデル（LLM）を自己回帰で1トークンずつ実行する代わりに、安価なN-gram表で数トークンの候補を先に作り、元のLLMでまとめて検証する手法である。
 
+- **2024-04 · [ALTO: An Efficient Network Orchestrator for Compound AI Systems](2024-01aa9dc12834-alto-an-efficient-network-orchestrator-for-compound-ai-systems.md)**  
+  実装：✓ ・ リポジトリ内被引用：5  
+  ALTO（Automatic Language Token Orchestrator）は、言語モデルの生成結果を複数の検索・再順位付け・追加生成段へ渡す複合AIシステムの実行基盤である。論文の実機評価では、応答遅延4秒を目標とする条件で、非逐次転送の比較方式より最大3倍の要求到着負荷を処理し、低負荷での99パーセンタイル遅延を1.8分の1にした。
+
 - **2024-02 · [Training-Free Long-Context Scaling of Large Language Models](2024-2402.17463-training-free-long-context-scaling-of-large-language-models.md)**  
   実装：[✓](https://github.com/HKUNLP/ChunkLlama) ・ リポジトリ内被引用：5  
   二重チャンク注意（Dual Chunk 注意機構、以下DCA）は、回転位置埋め込み（Rotary Position Embedding、以下RoPE）を用いた大規模言語モデルが、事前学習時より長い系列で位置関係を見失う問題に対する推論時の注意計算の変更である。最後の比較は特定の閉形式4課題の平均であり、汎用能力の94%を意味しない。
@@ -2443,10 +2447,6 @@
 - **2024-06 · [Measuring and Improving the Energy Efficiency of Large Language Models Inference](2024-f40d5b5275ad-measuring-and-improving-the-energy-efficiency-of-large-language-models-i.md)**  
   実装：[✓](https://github.com/maufadel/EnergyMeter) ・ リポジトリ内被引用：4  
   著者らは推論をモデルパラメータ数だけで比較する慣習にも疑問を投げかけ、層の深さ、注意・フィードフォワードの並列化、バッチ数、量子化形式の実行実装を分けて検証した。
-
-- **2024-04 · [ALTO: An Efficient Network Orchestrator for Compound AI Systems](2024-01aa9dc12834-alto-an-efficient-network-orchestrator-for-compound-ai-systems.md)**  
-  実装：✓ ・ リポジトリ内被引用：4  
-  ALTO（Automatic Language Token Orchestrator）は、言語モデルの生成結果を複数の検索・再順位付け・追加生成段へ渡す複合AIシステムの実行基盤である。論文の実機評価では、応答遅延4秒を目標とする条件で、非逐次転送の比較方式より最大3倍の要求到着負荷を処理し、低負荷での99パーセンタイル遅延を1.8分の1にした。
 
 - **2024-03 · [AI and Memory Wall](2024-2403.14123-ai-and-memory-wall.md)**  
   実装：✓ ・ リポジトリ内被引用：4  
@@ -2627,7 +2627,7 @@
   初代FlashAttentionのオンライン・ソフトマックスとタイル分割を保ちつつ、行列積以外の演算とブロック・ワープ間の仕事分割を再設計し、A100で理論演算性能の最大73%と初代比約2倍の高速化を達成する。
 
 - **2022-11 · [SmoothQuant: Accurate and Efficient Post-Training Quantization for Large Language Models](2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md)**  
-  実装：[✓](https://github.com/mit-han-lab/smoothquant) ・ リポジトリ内被引用：273  
+  実装：[✓](https://github.com/mit-han-lab/smoothquant) ・ リポジトリ内被引用：274  
   活性値全体を単純に8ビットへ写すと、その少数の外れ値が量子化範囲を広げ、通常値へ割り当てられる段階数が減って精度が崩れる。OPT、BLOOM、GLM、MT-NLGなどで8ビット重み・8ビット活性値（W8A8）を実現し、精度低下をほぼ抑えながら最大1.56倍の推論高速化と2倍のメモリ削減を報告し、530Bモデルを単一ノードで提供可能にした。
 
 - **2023-05 · [GQA: Training Generalized Multi-Query Transformer Models from Multi-Head Checkpoints](2023-2305.13245-gqa.md)**  
@@ -2690,13 +2690,13 @@
   実装：[✓](https://github.com/getao/icae) ・ リポジトリ内被引用：42  
   本論文は、大規模言語モデル（LLM）の長い入力文脈を、同じモデルがそのまま利用できる短い連続表現へ学習圧縮する文脈内自己符号化器（In-context Autoencoder、ICAE）を提案する。
 
+- **2023-10 · [LongLLMLingua: Accelerating and Enhancing LLMs in Long Context Scenarios via Prompt Compression](2023-2310.06839-longllmlingua-accelerating-and-enhancing-llms-in-long-context-scenarios-.md)**  
+  実装：[✓](https://aka.ms/LongLLMLingua) ・ リポジトリ内被引用：40  
+  LongLLMLinguaは、長いプロンプトを単に一律に切り詰めるのではなく、「質問に対してどの文書・トークンが有用か」を小型言語モデルで推定し、重要部分へトークン予算を集中させる長文脈プロンプト圧縮法である。
+
 - **2022-12 · [The case for 4-bit precision: k-bit Inference Scaling Laws](2022-2212.09720-the-case-for-4-bit-precision-k-bit-inference-scaling-laws.md)**  
   実装：✓ ・ リポジトリ内被引用：40  
   量子化では、1パラメータ当たりのビット数を下げるほど同じ重みメモリへ大きなモデルを置ける。
-
-- **2023-10 · [LongLLMLingua: Accelerating and Enhancing LLMs in Long Context Scenarios via Prompt Compression](2023-2310.06839-longllmlingua-accelerating-and-enhancing-llms-in-long-context-scenarios-.md)**  
-  実装：[✓](https://aka.ms/LongLLMLingua) ・ リポジトリ内被引用：39  
-  LongLLMLinguaは、長いプロンプトを単に一律に切り詰めるのではなく、「質問に対してどの文書・トークンが有用か」を小型言語モデルで推定し、重要部分へトークン予算を集中させる長文脈プロンプト圧縮法である。
 
 - **2023-05 · [FrugalGPT: How to Use Large Language Models While Reducing Cost and Improving Performance](2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md)**  
   実装：[✓](https://github.com/stanford-futuredata/FrugalGPT) ・ リポジトリ内被引用：39  

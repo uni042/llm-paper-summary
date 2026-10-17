@@ -15,7 +15,7 @@
   Mooncakeは、大規模言語モデル（Large Language モデル、LLM）の推論サービスで、GPUの計算能力とメモリを同時に効率よく使うための分散サービング基盤である。中心にあるのは、KVの所在と移動費用を知る全体スケジューラ（Global Scheduler）であるConductorである。
 
 - **2025-11 · [Continnum: Efficient and Robust Multi-Turn LLM Agent Scheduling with KV Cache Time-to-Live](2025-2511.02230-continuum-agent-kv-cache-ttl-scheduling.md)**  
-  実装：[✓](https://github.com/Hanchenli/vllm-continuum) ・ リポジトリ内被引用：38  
+  実装：[✓](https://github.com/Hanchenli/vllm-continuum) ・ リポジトリ内被引用：39  
   ツール呼出しを挟む多ターンLLMエージェントで、ツール待ち時間・KV再構築費用・残りターンを見てKVキャッシュの保持期限を動的に決め、短い待ちではGPUに固定し長い待ちでは解放してターン間待ちを減らすスケジューラ。
 
 - **2026-07 · [Kimi K3: Open Frontier Intelligence](2026-2607.24653-kimi-k3-open-frontier-intelligence.md)**  
@@ -899,7 +899,7 @@
 ### 2年前（2024-11〜2025-10）
 
 - **2025-02 · [Autellix: An Efficient Serving Engine for LLM Agents as General Programs](2025-2502.13965-autellix-agent-program-serving.md)**  
-  実装：✓ ・ リポジトリ内被引用：50  
+  実装：✓ ・ リポジトリ内被引用：51  
   エージェントのLLM呼び出しをプログラム単位で追跡し、累積サービス時間と動的DAGの重要経路近似で優先順位を付け、KV局所性を保つ複数GPUルーティングまで組み合わせてプログラム全体の待ち時間を削減する。
 
 - **2025-04 · [MegaScale-Infer: Serving Mixture-of-Experts at Scale with Disaggregated Expert Parallelism](2025-2504.02263-megascale-infer-disaggregated-expert-parallelism.md)**  
@@ -1245,7 +1245,7 @@
 ### 3年前（2023-11〜2024-10）
 
 - **2023-12 · [SGLang: Efficient Execution of Structured Language Model Programs](2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md)**  
-  実装：[✓](https://github.com/sgl-project/sglang) ・ リポジトリ内被引用：496  
+  実装：[✓](https://github.com/sgl-project/sglang) ・ リポジトリ内被引用：498  
   複数のLLM呼び出しや条件分岐をランタイムが1つのプログラムとして理解し、共有接頭辞のKV再利用・並列実行・構造化出力生成をまとめて効率化する推論システム。
 
 - **2024-07 · [DistServe: Disaggregating Prefill and Decoding for Goodput-optimized Large Language Model Serving](2024-2401.09670-distserve-disaggregating-prefill-decoding-goodput.md)**  
@@ -1257,11 +1257,11 @@
   プリフィルとデコードを別の計算機群へ分け、それぞれに向くGPU世代・電力設定・台数を使い分けて、クラスタ全体のスループット・コスト・消費電力を改善するサービング設計。
 
 - **2024-03 · [Taming Throughput-Latency Tradeoff in LLM Inference with Sarathi-Serve](2024-2403.02310-sarathi-serve-chunked-prefills-stall-free-scheduling.md)**  
-  実装：[✓](https://github.com/microsoft/sarathi-serve) ・ リポジトリ内被引用：362  
+  実装：[✓](https://github.com/microsoft/sarathi-serve) ・ リポジトリ内被引用：363  
   本論文の重要な点は、単純に事前入力を分割するだけでなく、デコードと事前入力を同じ反復へ混ぜるスケジューリング規則、反復あたりの総トークン予算、パイプライン並列化での仕事量の均等化を一体で設計したことである。
 
 - **2024-06 · [Llumnix: Dynamic Scheduling for Large Language Model Serving](2024-2406.03243-llumnix-dynamic-scheduling-live-migration.md)**  
-  実装：[✓](https://github.com/AlibabaPAI/llumnix) ・ リポジトリ内被引用：137  
+  実装：[✓](https://github.com/AlibabaPAI/llumnix) ・ リポジトリ内被引用：138  
   Llumnixは、複数のGPU実行単位で大規模言語モデルを提供するとき、要求を最初に振り分けて終わりにせず、生成途中でも別の実行単位へ移動するスケジューラである。
 
 - **2024-03 · [Cost-Efficient Large Language Model Serving for Multi-turn Conversations with CachedAttention](2024-2403.19708-cachedattention-multi-turn-conversation-serving.md)**  
@@ -1272,24 +1272,24 @@
   実装：✓ ・ リポジトリ内被引用：95  
   事前充填を固定長チャンク化して復号インスタンスから分離し、生成長予測付き二段階配置で混合LLM要求の干渉を抑える配信システム。
 
+- **2024-01 · [DeepSpeed-FastGen: High-throughput Text Generation for LLMs via MII and DeepSpeed-Inference](2024-2401.08671-deepspeed-fastgen-dynamic-splitfuse.md)**  
+  実装：[✓](https://github.com/deepspeedai/DeepSpeed-MII) ・ リポジトリ内被引用：82  
+  長いプリフィルを小さく分割し、短いプロンプト・プリフィル 分割片・デコード トークンを毎回ほぼ同じ総トークン数になるよう混ぜることで、長いプリフィルがデコードを止める時間を抑えつつGPUを効率よく使うLLM 提供処理 システム。
+
 - **2024-01 · [ServerlessLLM: Low-Latency Serverless Inference for Large Language Models](2024-2401.14351-serverlessllm-low-latency-serverless-inference.md)**  
   実装：[✓](https://github.com/ServerlessLLM/ServerlessLLM) ・ リポジトリ内被引用：81  
   要求到着時にモデルをGPUへ読み込むサーバーレス環境で、チェックポイントをGPU近くのSSD / DRAMへキャッシュし、高速読み込み器とモデル所在地を考慮した要求配置、生成途中要求の移動を組み合わせてモデル起動待ちを短縮するシステム。
-
-- **2024-01 · [DeepSpeed-FastGen: High-throughput Text Generation for LLMs via MII and DeepSpeed-Inference](2024-2401.08671-deepspeed-fastgen-dynamic-splitfuse.md)**  
-  実装：[✓](https://github.com/deepspeedai/DeepSpeed-MII) ・ リポジトリ内被引用：81  
-  長いプリフィルを小さく分割し、短いプロンプト・プリフィル 分割片・デコード トークンを毎回ほぼ同じ総トークン数になるよう混ぜることで、長いプリフィルがデコードを止める時間を抑えつつGPUを効率よく使うLLM 提供処理 システム。
 
 - **2024-08 · [DynamoLLM: Designing LLM Inference Clusters for Performance and Energy Efficiency](2024-2408.00741-dynamollm.md)**  
   実装：✓ ・ リポジトリ内被引用：79  
   要求種別ごとのプールと階層制御でGPU数・並列度・周波数を動的最適化し、SLO維持下で推論クラスタのエネルギーを約52%削減する。
 
 - **2024-05 · [Parrot: Efficient Serving of LLM-based Applications with Semantic Variable](2024-2405.19888-parrot-efficient-serving-llm-applications-semantic-variable.md)**  
-  実装：[✓](https://github.com/microsoft/ParrotServe) ・ リポジトリ内被引用：75  
+  実装：[✓](https://github.com/microsoft/ParrotServe) ・ リポジトリ内被引用：76  
   複数の言語モデル呼出しから成るアプリケーションの入力・出力の関係を、意味変数という抽象化で推論提供側へ公開する。これにより要求間の依存関係、同一接頭部の再利用、アプリケーション全体の完了時間を考慮した要求配置を可能にする。単一要求の速度ではなく、複数要求を組み合わせた作業の完了時間を最適化する研究である。
 
 - **2023-11 · [SpotServe: Serving Generative Large Language Models on Preemptible Instances](2023-2311.15566-spotserve-preemptible-instance-serving.md)**  
-  実装：[✓](https://github.com/Hsword/SpotServe) ・ リポジトリ内被引用：72  
+  実装：[✓](https://github.com/Hsword/SpotServe) ・ リポジトリ内被引用：73  
   一覧用要約：スポットGPUの回収・獲得に合わせて並列構成を再最適化し、既存の重みとKVキャッシュを最大限再利用する配置・移行と、トークン単位の状態付き途中再開によって分散LLMの長尾遅延と運用費を抑える。
 
 - **2023-12 · [Fairness in Serving Large Language Models](2024-2401.00588-fairness-in-serving-large-language-models-vtc.md)**  
@@ -1333,7 +1333,7 @@
   根本原因を巨大なモデルサイズ、系列長に対して二乗に増える自己注意、逐次的な自己回帰復号へ分け、それぞれが計算量、メモリアクセス量、メモリ容量を通じて遅延、スループット、ストレージ、energyへ波及すると整理する。対策taxonomyはデータ層、モデル層、システム層の3階層である。
 
 - **2024-02 · [INFERCEPT: Efficient Intercept Support for Augmented Large Language Model Inference](2024-2402.01869-infercept-intercept-aware-llm-inference.md)**  
-  実装：✓ ・ リポジトリ内被引用：41  
+  実装：✓ ・ リポジトリ内被引用：42  
   外部ツールや人間応答を待つ間に生成が中断される拡張LLMで、KVキャッシュをGPUに保持する、CPUへ退避する、破棄して再計算するという三つの選択肢を、GPUメモリの時間積で表した浪費量を基準に要求ごとに切り替える推論基盤。
 
 - **2024-07 · [Queue Management for SLO-Oriented Large Language Model Serving](2024-2407.00047-qlm-queue-management-slo-oriented-llm-serving.md)**  
@@ -1447,7 +1447,7 @@
   複数モデルへ届くリクエスト数が時間ごとに偏る環境で、モデルを複数GPUへ分割して置き、空いているGPUをモデル間で共有しやすくすることで、特定モデルだけ待ち行列が伸びるのを抑えるサービング配置手法。
 
 - **2023-08 · [SARATHI: Efficient LLM Inference by Piggybacking Decodes with Chunked Prefills](2023-2308.16369-sarathi.md)**  
-  実装：✓ ・ リポジトリ内被引用：135  
+  実装：✓ ・ リポジトリ内被引用：136  
   プリフィル分割とデコード最大化混合バッチでデコードを重み読込みへ相乗りさせ、単一GPUとパイプライン並列の双方で推論スループットを改善する。
 
 - **2023-05 · [FastServe: Iteration-Level Preemptive Scheduling for Large Language Model Inference](2023-2305.05920-fastserve-iteration-level-preemptive-scheduling.md)**  
@@ -1473,7 +1473,7 @@
 ### 5年前（2021-11〜2022-10）
 
 - **2022-07 · [Orca: A Distributed Serving System for Transformer-Based Generative Models](2022-osdi22-orca-iteration-level-scheduling-selective-batching.md)**  
-  実装：✓ ・ リポジトリ内被引用：489  
+  実装：✓ ・ リポジトリ内被引用：490  
   出力トークンを1個生成するたびにスケジューラへ制御を戻し、終わった要求を外して新着要求を追加する。さらに、長さの違う要求を同じバッチで処理できるよう、注意機構だけを要求ごとに分け、それ以外の演算はトークン単位でまとめて実行する分散LLMサービングシステム。
 
 - **2022-04 · [Accelerating Attention through Gradient-Based Learned Runtime Pruning](2022-2204.03227-accelerating-attention-through-gradient-based-learned-runtime-pruning.md)**  

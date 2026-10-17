@@ -143,7 +143,7 @@
 ### 3年前（2023-11〜2024-10）
 
 - **2024-05 · [QServe: W4A8KV4 Quantization and System Co-design for Efficient LLM Serving](2024-2405.04532-qserve.md)**  
-  実装：[✓](https://github.com/mit-han-lab/omniserve) ・ リポジトリ内被引用：60  
+  実装：[✓](https://github.com/mit-han-lab/omniserve) ・ リポジトリ内被引用：61  
   QServeは、クラウド型の大規模言語モデル（LLM）サービングにおいて、重みを4ビットへ量子化してもGPU上の実行速度が期待ほど上がらない問題を、量子化アルゴリズムと推論カーネルの協調設計によって解く研究である。論文はこの量子化解除の費用が20〜90%に達する条件を示し、ビット数を減らすだけではサービング処理率を改善できないことを説明する。
 
 - **2024-01 · [SliceGPT: Compress Large Language Models by Deleting Rows and Columns](2024-2401.15024-slicegpt-compress-large-language-models-by-deleting-rows-and-columns.md)**  
@@ -217,7 +217,7 @@
 ### 4年前（2022-11〜2023-10）
 
 - **2023-06 · [AWQ: Activation-aware Weight Quantization for LLM Compression and Acceleration](2023-2306.00978-awq.md)**  
-  実装：[✓](https://github.com/mit-han-lab/llm-awq) ・ リポジトリ内被引用：175  
+  実装：[✓](https://github.com/mit-han-lab/llm-awq) ・ リポジトリ内被引用：176  
   活性の大きい入力チャネルに対応する重みを等価スケーリングで保護し、全重みを均一な低ビット形式のまま高精度化する重み専用量子化とTinyChat実装。
 
 - **2022-11 · [LLM.int8(): 8-bit Matrix Multiplication for Transformers at Scale](2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md)**  
