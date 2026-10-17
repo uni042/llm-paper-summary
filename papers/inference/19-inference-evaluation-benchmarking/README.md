@@ -1,5 +1,5 @@
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（50本）
+## 自動生成の論文一覧（51本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -51,6 +51,10 @@
 - **2026-07 · [Benchmarking Confidential GPU Inference on NVIDIA H100 under Intel TDX](2026-2607.19353-benchmarking-confidential-gpu-inference-on-nvidia-h100-under-intel-tdx.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   原著はサービス指標の比較研究であり、GPU内部の暗号化処理、PCIe転送、HBM帯域、スケジューラのどれが何%の原因かまで分解したマイクロアーキテクチャ解析ではない。
+
+- **2026-06 · [Beyond tokens: a unified framework for latent communication in LLM-based multi-agent systems](2026-2606.05711-beyond-tokens-a-unified-framework-for-latent-communication-in-llm-based-.md)**  
+  実装：[✓](https://github.com/enochliu98/Awesome-Latent-Communication) ・ リポジトリ内被引用：0  
+  2026年7月15日を調査打切りとして、2024～2026年の代表的な18研究を選び、送る情報の種類（WHAT）、送受信間の表現・層の整合（WHICH）、受信モデルへの統合方法（HOW）という3軸で比較する。
 
 - **2026-06 · [Benchmarking LLM Serving Systems for Agentic AI Workloads with XPerf](2026-2608.20370-xperf-benchmarking-llm-serving-agentic-ai-workloads.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

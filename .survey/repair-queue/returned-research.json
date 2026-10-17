@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-17T15:01:38+00:00",
+  "generated_at": "2026-10-17T15:11:09+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -2904,33 +2904,6 @@
       "worker_run_key": "20261016-1930-scheduled-chat-30/r01"
     },
     {
-      "canonical_id": "arXiv:2404.08698",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-16T16:20:01+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 0 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5432,
-        "body_paragraphs": 32,
-        "method_chars": 1624,
-        "method_paragraphs": 9,
-        "evaluation_chars": 0,
-        "limitation_chars": 746,
-        "insufficiency_flags": [
-          "評価説明量 0 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-e27c61914cab--libfile_67ba937edf848191b88ce6ac39ca9b1a--2024-2404.08698-anpd-adaptive-ngram-parallel-decoding-research-20261016-0330-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-e27c61914cab--libfile_67ba937edf848191b88ce6ac39ca9b1a--2024-2404.08698-anpd-adaptive-ngram-parallel-decoding-research-20261016-0330-scheduled-ch.json",
-      "worker_run_key": "20261016-0330-scheduled-chat-30/r01"
-    },
-    {
       "canonical_id": "arXiv:2508.08438",
       "title": null,
       "source_url": null,
@@ -3587,8 +3560,8 @@
     },
     {
       "canonical_id": "arXiv:2601.06562",
-      "title": "Mosaic: Unlocking Long-Context Inference for Diffusion LLMs via Global Memory Planning and Dynamic Peak Taming",
-      "source_url": "https://arxiv.org/html/2601.06562v1",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-17T14:59:52+00:00",
       "return_count": 4,
       "assigned_worker": "scheduled-chat-00",
@@ -3614,8 +3587,8 @@
     },
     {
       "canonical_id": "arXiv:2605.22884",
-      "title": "Tensor Cache: Eviction-conditioned Associative Memory for Transformers",
-      "source_url": "https://arxiv.org/abs/2605.22884",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-17T15:00:33+00:00",
       "return_count": 3,
       "assigned_worker": "scheduled-chat-30",
@@ -3639,6 +3612,33 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-20261017-heading-repair--libfile_f891d429007481918f520aafd7c623d3--2026-2605.22884-tensor-cache-eviction-conditioned-memory-research-20261014-1630-scheduled-chat-30-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-20261017-heading-repair--libfile_f891d429007481918f520aafd7c623d3--2026-2605.22884-tensor-cache-eviction-conditioned-memory-research-20261014-163.json",
       "worker_run_key": "20261014-1630-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2404.08698",
+      "title": "Lossless Acceleration of Large Language Model via Adaptive N-gram Parallel Decoding",
+      "source_url": "https://arxiv.org/html/2404.08698v2",
+      "returned_at": "2026-10-17T15:09:40+00:00",
+      "return_count": 3,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 152 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 6207,
+        "body_paragraphs": 34,
+        "method_chars": 1383,
+        "method_paragraphs": 8,
+        "evaluation_chars": 152,
+        "limitation_chars": 606,
+        "insufficiency_flags": [
+          "評価説明量 152 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-20261017-metadata-repair--libfile_3f1fd89eac6c819183bb829d82a9a152--2024-2404.08698-anpd-adaptive-ngram-parallel-decoding.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-20261017-metadata-repair--libfile_3f1fd89eac6c819183bb829d82a9a152--2024-2404.08698-anpd-adaptive-ngram-parallel-decoding.json",
+      "worker_run_key": "20261017-2030-scheduled-chat-30/r01"
     }
   ]
 }
