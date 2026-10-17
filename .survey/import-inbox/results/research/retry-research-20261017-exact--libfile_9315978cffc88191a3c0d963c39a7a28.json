@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "ba40061458e4a0cdd95b6fd4966afd46847a955d3b604e12619bf81719fbf96e",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/retry-research-20261017-exact--libfile_9315978cffc88191a3c0d963c39a7a28.md",
+  "canonical_id": "arXiv:2602.05853",
+  "worker_completed_at": "2026-10-17T01:44:00+09:00",
+  "worker_run_key": "20261017-0130-scheduled-chat-30/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 4554,
+    "body_paragraphs": 24,
+    "method_chars": 1031,
+    "method_paragraphs": 6,
+    "evaluation_chars": 2254,
+    "limitation_chars": 380,
+    "insufficiency_flags": []
+  },
+  "failures": [
+    "長文定型文の再利用を検出: papers/inference/13-sparse-attention/2026-2602.05853-rrattention-dynamic-block-sparse-attention-via-per-head-round-robin-shif.md と 23 段落 / 4978文字 (100.0%) が完全一致"
+  ],
+  "processed_at": "2026-10-17T07:28:57+00:00"
+}

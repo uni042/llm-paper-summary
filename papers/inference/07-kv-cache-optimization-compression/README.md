@@ -16,7 +16,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 方向は異なるが、いずれも**KV cacheがdecode時のmemory容量やmemory bandwidthのボトルネックになることを直接緩和する**研究として扱う。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（225本）
+## 自動生成の論文一覧（226本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -400,6 +400,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 - **2026-08 · [VisCache: Visual KV Cache Pruning for Efficient Vision Large Language Model Inference](2026-2608.24063-viscache-visual-kv-cache-pruning-for-efficient-vision-large-language-mod.md)**  
   実装：[✓](https://github.com/Wlklk/VisCache) ・ リポジトリ内被引用：0  
   前段で質問に関係する多様なフレームを残し、後段で層ごとの重要度と鍵・値の役割の違いを利用して圧縮する。論文の試作では、Qwen2.5-VLの3Bと32Bを使い、視覚KVの保持率28%で複数の動画理解課題の平均精度を比較方式より高く保ち、保持率19%でも大きく破綻しない結果を示す。
+
+- **2026-08 · [Spend Bits Where Queries Look: KV Cache Vector Quantization with Attention-Preserving Transforms](2026-2608.04074-spend-bits-where-queries-look-kv-cache-vector-quantization-with-attentio.md)**  
+  実装：[✓](https://github.com/Amir-zsh/nova-kv) ・ リポジトリ内被引用：0  
+  文脈長と同時実行数に比例してキャッシュが増えるため、読み出し帯域が復号速度と同時収容数の制約になる。NOVA-KVは、このキャッシュを単に数値として再現するのではなく、照会と鍵の内積、および注意重みと値の積を保つことを量子化の目的に置く。
 
 - **2026-08 · [SemKV: Semantic Mixed-Precision KV Cache Quantization Guided by the Quality Cliff for Long-Context LLM Inference](2026-2608.28911-semkv-semantic-mixed-precision-kv-cache-quantization-guided-by-the-quali.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

@@ -168,9 +168,9 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
   実装：[✓](https://github.com/togethercomputer/aurora) ・ リポジトリ内被引用：1  
   実配信の採用・棄却トレースからドラフトモデルを非同期更新し、停止なしで重みを差し替える閉ループ型の投機的復号により、初日配備と分布変化への継続適応を実現する。
 
-- **2026-02 · [Pacer: Blockwise Pre-verification for Speculative Decoding with Adaptive Length](2026-2602.01274-pacer-blockwise-pre-verification-for-speculative-decoding-with-adaptive-.md)**  
+- **2026-02 · [PACER: Blockwise Pre-verification for Speculative Decoding with Adaptive Length](2026-2602.01274-pacer-blockwise-pre-verification-for-speculative-decoding-with-adaptive-.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
-  Pacerは、投機的復号（投機的復号; SD）において、小さなドラフトモデルが一度に何トークンを先読みすべきかを動的に決める手法である。HumanEvalでLlama-2 7B/70Bの組合せを用いたとき、元の自己回帰復号に対する速度向上は2.66倍と報告される。
+  PACERは、投機的復号（投機的復号）において、小型の草稿モデルが何個の候補トークンを生成してから大型の目標モデルに検証を依頼するかを、復号の各段階で動的に決める方式である。Llama-2 7B/70BのHumanEvalでは自己回帰復号約9.1トークン/秒に対して24.2トークン/秒、すなわち2.66倍である。
 
 - **2026-02 · [HSD: Training-Free Acceleration for Document Parsing Vision-Language Models with Hierarchical Speculative Decoding](2026-2602.12957-hsd-training-free-acceleration-for-document-parsing-vision-language-mode.md)**  
   実装：[✓](https://github.com/whlscut/HSD) ・ リポジトリ内被引用：1  

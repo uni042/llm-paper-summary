@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-17T07:16:32+00:00",
+  "generated_at": "2026-10-17T07:34:38+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -2462,34 +2462,6 @@
       "worker_run_key": "20261013-2357-scheduled-chat-00/r01"
     },
     {
-      "canonical_id": "arXiv:2602.01274",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-14T18:53:12+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "16KB未満再監査: 評価説明量 122 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 4818,
-        "body_paragraphs": 23,
-        "method_chars": 1418,
-        "method_paragraphs": 7,
-        "evaluation_chars": 122,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "評価説明量 122 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-5308f05121f4--libfile_4cc0e9927ecc8191929be5cadde03ac2--2026-2602.01274-pacer-under16kb-reaudit-20261015-0330-scheduled-chat-30-r01-v2.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-5308f05121f4--libfile_4cc0e9927ecc8191929be5cadde03ac2--2026-2602.01274-pacer-under16kb-reaudit-20261015-0330-scheduled-chat-30-r01-v2.json",
-      "worker_run_key": "20261015-0330-scheduled-chat-30/r01"
-    },
-    {
       "canonical_id": "arXiv:2511.02017",
       "title": null,
       "source_url": null,
@@ -3427,33 +3399,6 @@
       "worker_run_key": "20261015-1325-scheduled-chat-30/r01"
     },
     {
-      "canonical_id": "DOI:10.1109/CLOUD67622.2025.00028",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-16T15:47:53+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 0 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 6073,
-        "body_paragraphs": 34,
-        "method_chars": 1953,
-        "method_paragraphs": 11,
-        "evaluation_chars": 0,
-        "limitation_chars": 709,
-        "insufficiency_flags": [
-          "評価説明量 0 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-8be4e0303c46--libfile_7ac792980d348191b290ec895c35ca2b--2025-2411.05239-zipnn-lossless-model-compression-research-20261015-1300-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-8be4e0303c46--libfile_7ac792980d348191b290ec895c35ca2b--2025-2411.05239-zipnn-lossless-model-compression-research-20261015-1300-scheduled-chat-00.json",
-      "worker_run_key": "20261015-1300-scheduled-chat-00/r01"
-    },
-    {
       "canonical_id": "arXiv:2601.06562",
       "title": null,
       "source_url": null,
@@ -3480,33 +3425,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-8e0e6c57566b--libfile_59c35bedd740819180aea404bbcfabbc--2026-2601.06562-mosaic-dllm-global-memory-planning-research-20261016-0200-scheduled-chat-00-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-8e0e6c57566b--libfile_59c35bedd740819180aea404bbcfabbc--2026-2601.06562-mosaic-dllm-global-memory-planning-research-20261016-0200-scheduled-chat-.json",
       "worker_run_key": "20261016-0200-scheduled-chat-00/r01"
-    },
-    {
-      "canonical_id": "arXiv:2608.04074",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-16T15:47:55+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 167 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 9013,
-        "body_paragraphs": 57,
-        "method_chars": 1337,
-        "method_paragraphs": 8,
-        "evaluation_chars": 167,
-        "limitation_chars": 1089,
-        "insufficiency_flags": [
-          "評価説明量 167 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-8f0df0c5a3de--libfile_e26e22d48f9c8191852410a6fe050ea0--2026-2608.04074-nova-kv-attention-vector-quantization-research-20261016-0930-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-8f0df0c5a3de--libfile_e26e22d48f9c8191852410a6fe050ea0--2026-2608.04074-nova-kv-attention-vector-quantization-research-20261016-0930-scheduled-ch.json",
-      "worker_run_key": "20261016-0930-scheduled-chat-30/r01"
     },
     {
       "canonical_id": "arXiv:2507.19595",
@@ -4208,33 +4126,6 @@
       "worker_run_key": "20261016-2030-scheduled-chat-30/r01"
     },
     {
-      "canonical_id": "arXiv:2602.02546",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-17T05:44:49+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "16KB未満再監査: 評価説明量 251 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 6049,
-        "body_paragraphs": 36,
-        "method_chars": 2060,
-        "method_paragraphs": 12,
-        "evaluation_chars": 251,
-        "limitation_chars": 824,
-        "insufficiency_flags": [
-          "評価説明量 251 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-3be4cb2788ce--libfile_7e091ada5d0081918b3c9caf4fb17eee--2026-2602.02546-d2quant-under16kb-reaudit-20261017-0945-scheduled-chat-45-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-3be4cb2788ce--libfile_7e091ada5d0081918b3c9caf4fb17eee--2026-2602.02546-d2quant-under16kb-reaudit-20261017-0945-scheduled-chat-45-r01.json",
-      "worker_run_key": "20261017-0945-scheduled-chat-45/r01"
-    },
-    {
       "canonical_id": "arXiv:2306.07174",
       "title": null,
       "source_url": null,
@@ -4458,8 +4349,8 @@
     },
     {
       "canonical_id": "arXiv:2604.11948",
-      "title": "Active Imitation Learning for Thermal- and Kernel-Aware LFM Inference on 3D S-NUCA Many-Cores",
-      "source_url": "https://arxiv.org/pdf/2604.11948v1",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-17T07:12:38+00:00",
       "return_count": 1,
       "assigned_worker": "scheduled-chat-30",
@@ -4483,6 +4374,108 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_c1579ae58d3081919c1e97007c9c2f0f--2026-2604.11948-ailfm-metadata-repair-20261016-1212-scheduled-chat-45-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_c1579ae58d3081919c1e97007c9c2f0f--2026-2604.11948-ailfm-metadata-repair-20261016-1212-scheduled-chat-45-r01.json",
       "worker_run_key": "20261016-1212-scheduled-chat-45/r01-metadata-repair"
+    },
+    {
+      "canonical_id": "arXiv:2603.14785",
+      "title": "SkipOPU: An FPGA-based Overlay Processor for Large Language Models with Dynamically Allocated Computation",
+      "source_url": "https://arxiv.org/abs/2603.14785",
+      "returned_at": "2026-10-17T07:28:28+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2026-2603.14785-skipopu-an-fpga-based-overlay-processor-for-large-language-models-with-d.md と 21 段落 / 4667文字 (100.0%) が完全一致"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 6765,
+        "body_paragraphs": 38,
+        "method_chars": 2854,
+        "method_paragraphs": 14,
+        "evaluation_chars": 1021,
+        "limitation_chars": 868,
+        "insufficiency_flags": []
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-20261017-exact--libfile_637a9d5949d0819186656f9d38072857.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-20261017-exact--libfile_637a9d5949d0819186656f9d38072857.json",
+      "worker_run_key": "20261017-0230-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2410.11305",
+      "title": "QSpec: Speculative Decoding with Complementary Quantization Schemes",
+      "source_url": "https://aclanthology.org/2025.emnlp-main.240.pdf",
+      "returned_at": "2026-10-17T07:28:30+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "16KB未満再監査: 手法説明量 0 < 700"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 3732,
+        "body_paragraphs": 19,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 799,
+        "limitation_chars": 582,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-20261017-exact--libfile_8b95b15a86e0819181befcb9a617d273.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-20261017-exact--libfile_8b95b15a86e0819181befcb9a617d273.json",
+      "worker_run_key": "20261017-1530-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2602.05853",
+      "title": "RRAttention: Dynamic Block Sparse Attention via Per-Head Round-Robin Shifts for Long-Context Inference",
+      "source_url": "https://aclanthology.org/2026.acl-long.1199.pdf",
+      "returned_at": "2026-10-17T07:28:57+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "長文定型文の再利用を検出: papers/inference/13-sparse-attention/2026-2602.05853-rrattention-dynamic-block-sparse-attention-via-per-head-round-robin-shif.md と 23 段落 / 4978文字 (100.0%) が完全一致"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 4554,
+        "body_paragraphs": 24,
+        "method_chars": 1031,
+        "method_paragraphs": 6,
+        "evaluation_chars": 2254,
+        "limitation_chars": 380,
+        "insufficiency_flags": []
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-20261017-exact--libfile_9315978cffc88191a3c0d963c39a7a28.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-20261017-exact--libfile_9315978cffc88191a3c0d963c39a7a28.json",
+      "worker_run_key": "20261017-0130-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2204.03227",
+      "title": "Accelerating Attention through Gradient-Based Learned Runtime Pruning",
+      "source_url": "https://arxiv.org/html/2204.03227v3",
+      "returned_at": "2026-10-17T07:31:33+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "長文定型文の再利用を検出: papers/inference/11-llm-serving-scheduling-disaggregation/2022-2204.03227-accelerating-attention-through-gradient-based-learned-runtime-pruning.md と 16 段落 / 3568文字 (100.0%) が完全一致"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5487,
+        "body_paragraphs": 31,
+        "method_chars": 2046,
+        "method_paragraphs": 12,
+        "evaluation_chars": 1065,
+        "limitation_chars": 669,
+        "insufficiency_flags": []
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_d05f65204a80819195495b548582b530--2022-2204.03227-leopard-gradient-runtime-pruning-research-20261015-1104-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_d05f65204a80819195495b548582b530--2022-2204.03227-leopard-gradient-runtime-pruning-research-20261015-1104-scheduled-chat-00-r01.json",
+      "worker_run_key": "20261015-1104-scheduled-chat-00/r01"
     }
   ]
 }

@@ -32,9 +32,14 @@
   "selection_reason": "long-context decodeの帯域律速を対象に、attention productを保つ変換とvector quantizationでKV cacheを低bit化する。KV圧縮・量子化系統へ直接寄与する2026年候補。",
   "semantic_scholar_id": "6706e6ad3279542d8d553debefcd63d11ec64815",
   "source_url": "https://arxiv.org/abs/2608.04074",
-  "status": "ready",
+  "status": "superseded",
   "title": "Spend Bits Where Queries Look: KV Cache Vector Quantization with Attention-Preserving Transforms",
   "type": "research",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-10-17T07:34:38+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2608.04074-spend-bits-where-queries-look-kv-cache-vector-quantization-with-attentio.md",
+  "represented_canonical_id": "arXiv:2608.04074",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

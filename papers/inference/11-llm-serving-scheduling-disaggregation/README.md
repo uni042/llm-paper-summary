@@ -3,7 +3,7 @@
 複数requestを複数GPU / nodeで処理するLLM servingについて、request順、batch、prefill / decodeのGPU配分、KV再利用・転送、request移動などを調整し、latencyとresource効率を改善する研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（365本）
+## 自動生成の論文一覧（366本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -727,6 +727,10 @@
 - **2026-05 · [VibeServe: Can AI Agents Build Bespoke LLM Serving Systems?](2026-2605.06068-vibeserve-agent-generated-bespoke-serving-systems.md)**  
   実装：[✓](https://github.com/uw-syfi/vibe-serve) ・ リポジトリ内被引用：0  
   モデル・ワークロード・ハードウェアごとに複数AIエージェントがLLMサービング基盤を生成し、標準条件ではvLLM相当、特殊条件では予測出力・ハイブリッドキャッシュ・Apple Silicon特化などを自動実装して最大6.27倍高速化する。
+
+- **2026-05 · [Trading Complexity for Expressivity Through Structured Generalized Linear Token Mixing](2026-2605.31367-trading-complexity-for-expressivity-through-structured-generalized-linea.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  本論文は、大規模言語モデルの長文脈処理で使う「過去のどの位置から情報を受け取るか」という接続構造を、注意機構と状態空間モデルの二者択一ではなく、一般化された線形再帰の設計問題として扱う。合成コピー課題では二次間隔型が99.66%、指数間隔型が92.63%、密な再帰型が100%である。
 
 - **2026-05 · [Towards Multi-Model LLM Schedulers: Empirical Insights into Offloading and Preemption](2026-2605.19593-multi-model-offloading-preemption-schedulers.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
