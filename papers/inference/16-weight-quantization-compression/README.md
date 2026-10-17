@@ -25,7 +25,7 @@
 - [08-edge-on-device-llm-systems](../08-edge-on-device-llm-systems/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（52本）
+## 自動生成の論文一覧（53本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -65,6 +65,10 @@
 - **2026-09 · [Predict Before You Deploy: Offline Prediction of Quantization-Induced Task Degradation for World Action Models](2026-2609.19441-prede-quantization-task-degradation-prediction.md)**  
   実装：[✓](https://github.com/jiuyixu25/PreDE) ・ リポジトリ内被引用：0  
   PreDE（Predict Before You Deploy）は、世界行動モデル（World Action モデル、WAM）を学習後量子化したとき、候補ごとに高価な閉ループ試験を行う前に、タスク成功率の劣化を「受理・棄却・保留」の三値で予測する方式である。
+
+- **2026-09 · [Faster Block-Diffusion Serving with Distribution-Free Risk Guarantees](2026-2609.33887-faster-block-diffusion-serving-with-distribution-free-risk-guarantees.md)**  
+  実装：[✓](https://github.com/js-lee-AI/Redline) ・ リポジトリ内被引用：0  
+  高速設定ほど未確定なトークンを早く確定する傾向があり、正答率の低下が問題になる。提案方式Redlineは、候補となる複数の推論設定を較正用の質問集合で実行し、基準設定が正解し候補設定が不正解となる件数を数える。
 
 - **2026-09 · [All for 1-Bit: Towards Genuine 1-Bit Post-Training Quantization for LLMs](2026-2609.06161-all-for-1-bit.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

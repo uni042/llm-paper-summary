@@ -35,10 +35,15 @@
   "selection_reason": "200M+ parameter NMT modelのweight pruningでstorage footprintを削減し、80% pruning後のretrainingで元性能を回復/超過する。古いNMT対象だが言語生成modelの推論deployment向けweight compressionとして対象。",
   "semantic_scholar_id": "230579a14d54ae00073d6c3522ffcef313320be9",
   "source_url": "https://arxiv.org/abs/1606.09274",
-  "status": "ready",
+  "status": "superseded",
   "title": "Compression of Neural Machine Translation Models via Pruning",
   "type": "research",
   "venue": "Conference on Computational Natural Language Learning",
   "workflow_version": 10,
-  "year": 2016
+  "year": 2016,
+  "superseded_at": "2026-10-17T07:16:32+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2016-1606.09274-compression-of-neural-machine-translation-models-via-pruning.md",
+  "represented_canonical_id": "arXiv:1606.09274",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

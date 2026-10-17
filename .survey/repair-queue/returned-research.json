@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-17T06:55:25+00:00",
+  "generated_at": "2026-10-17T07:16:32+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 172,
+  "count": 171,
   "entries": [
     {
       "canonical_id": "DOI:10.1145/3714983.3714987",
@@ -2790,34 +2790,6 @@
       "worker_run_key": "20261016-0730-scheduled-chat-30/r01"
     },
     {
-      "canonical_id": "arXiv:1606.09274",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-16T09:25:38+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 489 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5432,
-        "body_paragraphs": 31,
-        "method_chars": 1033,
-        "method_paragraphs": 6,
-        "evaluation_chars": 489,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "評価説明量 489 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-212c36ab5656--libfile_ee229bd06d688191b12c3e3af1c4f1ec--2016-1606.09274-nmt-magnitude-pruning-research-20261016-1700-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-212c36ab5656--libfile_ee229bd06d688191b12c3e3af1c4f1ec--2016-1606.09274-nmt-magnitude-pruning-research-20261016-1700-scheduled-chat-00-r01.json",
-      "worker_run_key": "20261016-1700-scheduled-chat-00/r01"
-    },
-    {
       "canonical_id": "DOI:10.13140/rg.2.2.28167.37282",
       "title": null,
       "source_url": null,
@@ -3258,33 +3230,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-442d340d78d6--libfile_1737164089608191b33ff2914b267d13--2026-2602.22675-smtl-parallel-agentic-search-research-20261016-1600-scheduled-chat-00-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-442d340d78d6--libfile_1737164089608191b33ff2914b267d13--2026-2602.22675-smtl-parallel-agentic-search-research-20261016-1600-scheduled-chat-00-r01.json",
       "worker_run_key": "20261016-1600-scheduled-chat-00/r01"
-    },
-    {
-      "canonical_id": "arXiv:2607.02303",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-16T15:23:47+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 176 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 4569,
-        "body_paragraphs": 26,
-        "method_chars": 1549,
-        "method_paragraphs": 9,
-        "evaluation_chars": 176,
-        "limitation_chars": 673,
-        "insufficiency_flags": [
-          "評価説明量 176 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-4768f230d179--libfile_a7767e5f2e308191b7f80761b9438eeb--2026-2607.02303-hola-hippocampal-linear-attention-research-20261015-0530-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-4768f230d179--libfile_a7767e5f2e308191b7f80761b9438eeb--2026-2607.02303-hola-hippocampal-linear-attention-research-20261015-0530-scheduled-chat-3.json",
-      "worker_run_key": "20261015-0530-scheduled-chat-30/r01"
     },
     {
       "canonical_id": "arXiv:2502.20704",
@@ -4457,8 +4402,8 @@
     },
     {
       "canonical_id": "arXiv:2604.26963",
-      "title": "MARS: Efficient, Adaptive Co-Scheduling for Heterogeneous Agentic Systems",
-      "source_url": "https://arxiv.org/html/2604.26963v2",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-17T06:52:39+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-45",
@@ -4484,8 +4429,8 @@
     },
     {
       "canonical_id": "arXiv:2606.04446",
-      "title": "D^2SD: Accelerating Speculative Decoding with Dual Diffusion Draft Models",
-      "source_url": "https://arxiv.org/html/2606.04446v1",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-17T06:54:10+00:00",
       "return_count": 1,
       "assigned_worker": "scheduled-chat-30",
@@ -4510,6 +4455,34 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_bc2c9675f5c08191841e3cfd61baac66--2026-2606.04446-d2sd-dual-diffusion-speculative-decoding-research-20261017-1130-scheduled-chat-30-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_bc2c9675f5c08191841e3cfd61baac66--2026-2606.04446-d2sd-dual-diffusion-speculative-decoding-research-20261017-1130-scheduled-chat-30-r01.json",
       "worker_run_key": "20261017-1130-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2604.11948",
+      "title": "Active Imitation Learning for Thermal- and Kernel-Aware LFM Inference on 3D S-NUCA Many-Cores",
+      "source_url": "https://arxiv.org/pdf/2604.11948v1",
+      "returned_at": "2026-10-17T07:12:38+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 427 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 9398,
+        "body_paragraphs": 50,
+        "method_chars": 2607,
+        "method_paragraphs": 13,
+        "evaluation_chars": 427,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "評価説明量 427 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_c1579ae58d3081919c1e97007c9c2f0f--2026-2604.11948-ailfm-metadata-repair-20261016-1212-scheduled-chat-45-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_c1579ae58d3081919c1e97007c9c2f0f--2026-2604.11948-ailfm-metadata-repair-20261016-1212-scheduled-chat-45-r01.json",
+      "worker_run_key": "20261016-1212-scheduled-chat-45/r01-metadata-repair"
     }
   ]
 }
