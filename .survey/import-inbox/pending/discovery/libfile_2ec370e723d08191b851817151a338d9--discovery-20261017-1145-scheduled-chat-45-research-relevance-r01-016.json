@@ -1,0 +1,26 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-45",
+  "run_key": "20261017-1145-scheduled-chat-45/r01/research-prescreen",
+  "reference_main_sha": "300c4bb516a733eb34ea50aafbdae1365dd2a68a",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.18496",
+      "identity_tokens": [
+        "arxiv:2601.18496"
+      ],
+      "title": "DEEPMED: Building a Medical DeepResearch Agent via Multi-hop Med-Search Data and Turn-Controlled Agentic Training & Inference",
+      "reason": "一次要旨で、医療向け複数段検索の学習データ合成、難易度を考慮したツール呼出し罰則、医療仮説検証用の推論監視を提案。主評価は7つの医療ベンチマークにおける回答性能で、LLM推論エンジン、GPU・KVメモリ階層、バッチ処理などの効率化方式は示されない。医療エージェントのタスク適応・学習最適化が中心のため対象外。",
+      "source_url": "https://arxiv.org/abs/2601.18496",
+      "body_check": "abstract_screen_only; body_not_read; 2026-10-17 arXiv一次要旨を確認",
+      "first_checked_at": "2026-10-17T11:45:31+09:00",
+      "last_checked_at": "2026-10-17T11:45:31+09:00",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance",
+      "worklist_rank": 16
+    }
+  ]
+}
