@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-10-17T11:21:43.353164+00:00",
+  "generated_at": "2026-10-17T12:10:06.127169+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 8,
+  "count": 9,
   "worker_counts": {
     "scheduled-chat-00": 3,
     "scheduled-chat-30": 3,
-    "scheduled-chat-45": 2
+    "scheduled-chat-45": 3
   },
   "entries": [
     {
@@ -19,7 +19,7 @@
       "file_bytes": 9952,
       "source_sha256": "8b78672dfd3367b0494e3c7598b7da2601580cb6b08f4395783b6fda1b12e681",
       "source_git_blob_sha": "c799f4294b018595eed9c724fc6829cf8353f2d3",
-      "assigned_worker": "scheduled-chat-30",
+      "assigned_worker": "scheduled-chat-45",
       "semantic_status": "pending",
       "mechanical_status": "FAIL",
       "japanese_ratio": 0.8674,
@@ -97,6 +97,26 @@
         "method_chars": 1117,
         "evaluation_chars": 844,
         "limitation_chars": 0
+      },
+      "mechanical_failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/99-other-inference-systems/2025-2512.02901-fairy2i-training-complex-llms-from-real-llms-with-all-parameters-in-1-i.md",
+      "canonical_id": "arXiv:2512.02901",
+      "title": "Fairy2i: Training Complex LLMs from Real LLMs with All Parameters in {±1, ±i}",
+      "file_bytes": 15074,
+      "source_sha256": "4ccc3484552568df1e4d62a2b0db9b1144298141aae0a3aed1f3356221cf9560",
+      "source_git_blob_sha": "1da23bdb493437d6e2bf29ecc9bc00d92480f3a2",
+      "assigned_worker": "scheduled-chat-30",
+      "semantic_status": "pending",
+      "mechanical_status": "PASS",
+      "japanese_ratio": 0.967164,
+      "quality_metrics": {
+        "body_chars": 3640,
+        "method_chars": 1297,
+        "evaluation_chars": 583,
+        "limitation_chars": 515
       },
       "mechanical_failures": [],
       "warnings": []
