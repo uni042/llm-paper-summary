@@ -35,10 +35,15 @@
   "selection_reason": "The method prunes unproductive MCTS trajectories and reallocates compute among concurrent searches; integration in vLLM reports lower p99 end-to-end latency and higher throughput at maintained reasoning accuracy, squarely in inference serving.",
   "semantic_scholar_id": "c55310bd337ce4c166596276191eff3eb44cbffc",
   "source_url": "https://arxiv.org/abs/2604.00510",
-  "status": "ready",
+  "status": "superseded",
   "title": "Adaptive Parallel Monte Carlo Tree Search for Efficient Test-time Compute Scaling",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-10-17T08:57:37+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2026-2604.00510-adaptive-parallel-monte-carlo-tree-search-for-efficient-test-time-comput.md",
+  "represented_canonical_id": "arXiv:2604.00510",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

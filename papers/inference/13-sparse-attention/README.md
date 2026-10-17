@@ -23,7 +23,7 @@
 - [11-llm-serving-scheduling-disaggregation](../11-llm-serving-scheduling-disaggregation/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（79本）
+## 自動生成の論文一覧（80本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -179,6 +179,10 @@
 - **2026-02 · [RRAttention: Dynamic Block Sparse Attention via Per-Head Round-Robin Shifts for Long-Context Inference](2026-2602.05853-rrattention-dynamic-block-sparse-attention-via-per-head-round-robin-shif.md)**  
   実装：[✓](https://github.com/PaddlePaddle/PaddleFleet) ・ リポジトリ内被引用：0  
   提案法は各 S トークン区間からヘッドごとに異なる問い合わせを一つ選び、鍵を区間単位で集約して重要度を計算する。Llama-3.1-8BとQwen2.5-7BのHELMETでは、注意ブロックの約半分を省略しながら全注意の平均性能の99%以上を再現した。
+
+- **2026-02 · [QUOKA: Query-Oriented KV Selection For Efficient LLM Prefill](2026-2602.08722-quoka-query-oriented-kv-selection-for-efficient-llm-prefill.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  長い入力を持つ大規模言語モデル（Large Language モデル; LLM）では、入力全体を読み込んで鍵・値キャッシュ（Key–Value Cache; KVキャッシュ）を形成する事前充填（プリフィル）の時間が、最初のトークンを返すまでの待ち時間を大きく左右する。RULERやLongBenchでは同じ鍵・値予算を使う比較方式より高い精度を保つ。
 
 - **2026-01 · [Sparse Attention as Compact Kernel Regression](2026-2601.22766-sparse-attention-as-compact-kernel-regression.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
