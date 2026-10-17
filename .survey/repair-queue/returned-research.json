@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-17T11:58:06+00:00",
+  "generated_at": "2026-10-17T12:07:48+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -1740,34 +1740,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-bf545f226cc9--libfile_4aff3285df88819181f1fa65fb0cb6e3--2025-2512.09487-routerag-adaptive-hybrid-retrieval-research-20261013-2100-scheduled-chat-00-r02.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-bf545f226cc9--libfile_4aff3285df88819181f1fa65fb0cb6e3--2025-2512.09487-routerag-adaptive-hybrid-retrieval-research-20261013-2100-scheduled-chat-.json",
       "worker_run_key": "20261013-2100-scheduled-chat-00/r02"
-    },
-    {
-      "canonical_id": "arXiv:2602.13215",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-14T13:18:44+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 0 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 4621,
-        "body_paragraphs": 26,
-        "method_chars": 1645,
-        "method_paragraphs": 10,
-        "evaluation_chars": 0,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "評価説明量 0 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-c234b8b064ad--libfile_dd17990729f08191b760e44839055232--2026-2602.13215-amor-adaptive-entropy-gate-research-20261014-1630-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-c234b8b064ad--libfile_dd17990729f08191b760e44839055232--2026-2602.13215-amor-adaptive-entropy-gate-research-20261014-1630-scheduled-chat-30-r01.json",
-      "worker_run_key": "20261014-1630-scheduled-chat-30/r01"
     },
     {
       "canonical_id": "arXiv:2511.18868",
@@ -4258,8 +4230,8 @@
     },
     {
       "canonical_id": "arXiv:2604.18471",
-      "title": "NI Sampling: Accelerating Discrete Diffusion Sampling by Token Order Optimization",
-      "source_url": "https://arxiv.org/abs/2604.18471",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-17T11:54:08+00:00",
       "return_count": 1,
       "assigned_worker": "scheduled-chat-30",
@@ -4285,8 +4257,8 @@
     },
     {
       "canonical_id": "arXiv:2604.25326",
-      "title": "AHASD: Asynchronous Heterogeneous Architecture for LLM Adaptive Drafting Speculative Decoding on Mobile Devices",
-      "source_url": "https://arxiv.org/pdf/2604.25326",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-17T11:55:52+00:00",
       "return_count": 1,
       "assigned_worker": "scheduled-chat-00",
@@ -4311,6 +4283,34 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-20261017-exact--libfile_b48c41164a3c819186ecffabf7e619a3.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-20261017-exact--libfile_b48c41164a3c819186ecffabf7e619a3.json",
       "worker_run_key": "20261014-2200-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2604.25925",
+      "title": "SpecTr-GBV: Multi-Draft Block Verification Accelerating Speculative Decoding",
+      "source_url": "https://arxiv.org/abs/2604.25925",
+      "returned_at": "2026-10-17T12:06:48+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 109 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 4658,
+        "body_paragraphs": 25,
+        "method_chars": 1208,
+        "method_paragraphs": 7,
+        "evaluation_chars": 109,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "評価説明量 109 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-20261017-exact--libfile_c713a9de433c819195d3724bf2b87533.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-20261017-exact--libfile_c713a9de433c819195d3724bf2b87533.json",
+      "worker_run_key": "20261014-2330-scheduled-chat-30/r01"
     }
   ]
 }
