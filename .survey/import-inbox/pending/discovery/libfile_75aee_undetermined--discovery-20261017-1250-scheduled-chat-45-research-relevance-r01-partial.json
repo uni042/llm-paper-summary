@@ -1,0 +1,58 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-45",
+  "run_key": "20261017-1250-scheduled-chat-45/r01/research-prescreen",
+  "reference_main_sha": "c5a039cb8de6fa906de8031f3a1ae7a301ab3ed1",
+  "record_count": 3,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2501.15061",
+      "identity_tokens": [
+        "arxiv:2501.15061"
+      ],
+      "title": "PolaFormer: Polarity-aware Linear Attention for Vision Transformers",
+      "reason": "一次要旨で、正負のクエリ・キー相互作用を取り込む線形注意を画像分類などの視覚Transformerへ適用する研究と確認。LLMの推論サービング、KVキャッシュ、言語生成や分散学習の実装・評価は示されず、対象外。",
+      "source_url": "https://arxiv.org/abs/2501.15061",
+      "body_check": "abstract_screen_only; body_not_read; 2026-10-17 arXiv一次要旨を確認",
+      "first_checked_at": "2026-10-17T12:58:34+09:00",
+      "last_checked_at": "2026-10-17T12:58:34+09:00",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance",
+      "worklist_rank": 19
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2601.08815",
+      "identity_tokens": [
+        "arxiv:2601.08815"
+      ],
+      "title": "Agent Contracts: A Formal Framework for Resource-Bounded Autonomous AI Systems",
+      "reason": "一次要旨で、エージェントの入出力仕様・資源予算・実行時間・委譲制約を形式的に規定し、反復ワークフローでトークン数90%削減などを報告。LLM利用時の予算制御との関連はあるが、GPU推論カーネル、KVメモリ、モデル学習効率そのものを最適化する研究ではなく境界判定。",
+      "source_url": "https://arxiv.org/abs/2601.08815",
+      "body_check": "abstract_screen_only; body_not_read; 2026-10-17 arXiv一次要旨を確認",
+      "first_checked_at": "2026-10-17T12:58:34+09:00",
+      "last_checked_at": "2026-10-17T12:58:34+09:00",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance",
+      "worklist_rank": 20
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.18112",
+      "identity_tokens": [
+        "arxiv:2606.18112"
+      ],
+      "title": "Qwen-RobotNav Technical Report: A Scalable Navigation Model Designed for an Agentic Navigation System",
+      "reason": "一次要旨で、ロボットの経路計画・視覚履歴を、タスクモードとカメラ別重み・トークン予算を切り替えて制御するナビゲーション基盤モデルと確認。観測トークン数の制御は含むが、主評価はロボットナビゲーションの成功率・汎化であり、LLM推論基盤の高速化や学習システム最適化の研究ではない。",
+      "source_url": "https://arxiv.org/abs/2606.18112",
+      "body_check": "abstract_screen_only; body_not_read; 2026-10-17 arXiv一次要旨を確認",
+      "first_checked_at": "2026-10-17T12:58:34+09:00",
+      "last_checked_at": "2026-10-17T12:58:34+09:00",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance",
+      "worklist_rank": 21
+    }
+  ]
+}
