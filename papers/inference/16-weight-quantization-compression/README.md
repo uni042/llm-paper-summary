@@ -147,7 +147,7 @@
   SliceGPTは、学習済みTransformerの埋め込み次元を減らす学習後圧縮である。代表的なLLaMA-2 70Bの25%削減では、A100 40GBで1トークン生成時間が125ミリ秒から110ミリ秒へ、必要GPUが4台から3台へ減った。
 
 - **2024-06 · [DuQuant: Distributing Outliers via Dual Transformation Makes Stronger Quantized LLMs](2024-2406.01721-duquant-distributing-outliers-via-dual-transformation-makes-stronger-quantized-llms.md)**  
-  実装：[✓](https://github.com/Hsu1023/DuQuant) ・ リポジトリ内被引用：32  
+  実装：[✓](https://github.com/Hsu1023/DuQuant) ・ リポジトリ内被引用：33  
   巨大外れ値を外れ値誘導のブロック回転とジグザグ置換で分散し、4ビット重み・活性量子化の精度を改善しつつ、LLaMA2-7Bでプリフィル最大2.08倍・復号時メモリ3.50倍削減を示す。
 
 - **2024-02 · [BiLLM: Pushing the Limit of Post-Training Quantization for LLMs](2024-2402.04291-billm-pushing-the-limit-of-post-training-quantization-for-llms.md)**  
@@ -155,7 +155,7 @@
   ヘッセ感度で重要列を選び二値残差近似し、残りのベル形重み分布を最適分割して別々に二値化することで、再学習なしにLLM重みを約1.1ビットまで圧縮する。
 
 - **2024-10 · [FlatQuant: Flatness Matters for LLM Quantization](2024-2410.09426-flatquant-flatness-matters-for-llm-quantization.md)**  
-  実装：[✓](https://github.com/ruikangliu/FlatQuant) ・ リポジトリ内被引用：20  
+  実装：[✓](https://github.com/ruikangliu/FlatQuant) ・ リポジトリ内被引用：21  
   層ごとの学習可能アフィン変換を小さなクロネッカー積へ分解し量子化と融合して、LLaMA-3-70BのW4A4で精度低下1%未満とプリフィル最大2.3倍高速化を両立する。
 
 - **2024-02 · [GPTVQ: The Blessing of Dimensionality for LLM Quantization](2024-2402.15319-gptvq-the-blessing-of-dimensionality-for-llm-quantization.md)**  
@@ -171,7 +171,7 @@
   要素単位で重要重みだけ高精度に残すのではなく、重要度が空間的にまとまる性質を使ってグループ単位で1/2/3ビットを割り当てる。さらに各グループ内部の少数の重要要素を量子化器校正で重く扱い、LLaMA-7Bの2ビット級でWikiText2パープレキシティ14.58を達成する。
 
 - **2024-03 · [AffineQuant: Affine Transformation Quantization for Large Language Models](2024-2403.12544-affinequant-affine-transformation-quantization-for-large-language-models.md)**  
-  実装：✓ ・ リポジトリ内被引用：14  
+  実装：✓ ・ リポジトリ内被引用：15  
   スカラーの拡大縮小や平行移動に限られていた等価変換を、可逆な行列によるアフィン変換へ拡張する。変換を量子化前の重みへ掛け、逆変換を活性値側へ入れることで元の線形演算を保ったまま量子化しやすい座標系を学習し、LLaMA2-7BのW4A4でC4パープレキシティをOmniQuantの18.02から15.76へ改善する。
 
 - **2024-07 · [Compact Language Models via Pruning and Knowledge Distillation](2024-2407.14679-compact-language-models-via-pruning-and-knowledge-distillation.md)**  
@@ -259,6 +259,6 @@
 ### 5年前（2021-11〜2022-10）
 
 - **2022-10 · [GPTQ: Accurate Post-Training Quantization for Generative Pre-trained Transformers](2022-2210.17323-gptq.md)**  
-  実装：[✓](https://github.com/IST-DASLab/gptq) ・ リポジトリ内被引用：323  
+  実装：[✓](https://github.com/IST-DASLab/gptq) ・ リポジトリ内被引用：324  
   二次情報に基づく誤差補償をGPU向けに再設計し、175B級LLMを数時間で3〜4bit化して単一A100実行と約3.24倍の生成高速化を実現した基礎的GPTQ研究。
 <!-- survey:auto:end -->
