@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "c6d1ac116f779fe28ddf3ea69a43a84030cb7630e64efff22658ad295207e20e",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_9d909978c71c8191be28f6cf86433438--2025-2511.16595-timeviper-hybrid-mamba-transformer-video-research-20261015-0530-scheduled-chat-30-r01.md",
+  "canonical_id": "arXiv:2511.16595",
+  "worker_completed_at": "2026-10-15T05:30:00+09:00",
+  "worker_run_key": "20261015-0530-scheduled-chat-30/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 4771,
+    "body_paragraphs": 26,
+    "method_chars": 1568,
+    "method_paragraphs": 8,
+    "evaluation_chars": 102,
+    "limitation_chars": 0,
+    "insufficiency_flags": [
+      "評価説明量 102 < 500",
+      "限界説明量 0 < 推奨 120"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 評価説明量 102 < 500",
+    "長文定型文の再利用を検出: papers/inference/19-inference-evaluation-benchmarking/2025-2511.16595-timeviper-a-hybrid-mamba-transformer-vision-language-model-for-efficient.md と 17 段落 / 3431文字 (100.0%) が完全一致"
+  ],
+  "processed_at": "2026-10-17T16:03:56+00:00"
+}

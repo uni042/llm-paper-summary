@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-17T15:54:59+00:00",
+  "generated_at": "2026-10-17T16:06:19+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 147,
+  "count": 150,
   "entries": [
     {
       "canonical_id": "DOI:10.1145/3714983.3714987",
@@ -3610,35 +3610,6 @@
       "worker_run_key": "20261017-1730-scheduled-chat-30/r01"
     },
     {
-      "canonical_id": "arXiv:2505.22913",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-17T15:45:44+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700",
-        "説明不足トリガー: 評価説明量 0 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 8723,
-        "body_paragraphs": 45,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 0,
-        "limitation_chars": 713,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700",
-          "評価説明量 0 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_3402febe50e88191bb0fc12b537e085b--2025-2505.22913-mustafar-kv-cache-unstructured-sparsity-research-20261018-0030-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_3402febe50e88191bb0fc12b537e085b--2025-2505.22913-mustafar-kv-cache-unstructured-sparsity-research-20261018-0030-scheduled-chat-30-r01.json",
-      "worker_run_key": "20261018-0030-scheduled-chat-30/r01"
-    },
-    {
       "canonical_id": "arXiv:2607.28069",
       "title": null,
       "source_url": null,
@@ -3752,8 +3723,8 @@
     },
     {
       "canonical_id": "arXiv:2603.12634",
-      "title": "Spend Less, Reason Better: Budget-Aware Value Tree Search for LLM Agents",
-      "source_url": "https://arxiv.org/html/2603.12634v1",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-17T15:54:57+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-30",
@@ -3777,8 +3748,8 @@
     },
     {
       "canonical_id": "arXiv:2502.20704",
-      "title": "Fuzzy Speculative Decoding for a Tunable Accuracy-Runtime Tradeoff",
-      "source_url": "https://arxiv.org/pdf/2502.20704",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-17T15:54:59+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-45",
@@ -3801,6 +3772,122 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_8c6476348c948191ba731ed0c4b9efaa--2025-2502.20704-fuzzy-speculative-decoding-research-20261015-1655-scheduled-chat-00-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_8c6476348c948191ba731ed0c4b9efaa--2025-2502.20704-fuzzy-speculative-decoding-research-20261015-1655-scheduled-chat-00-r01.json",
       "worker_run_key": "20261015-1655-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2511.16595",
+      "title": "TimeViper: A Hybrid Mamba-Transformer Vision-Language Model for Efficient Long Video Understanding",
+      "source_url": "https://arxiv.org/abs/2511.16595",
+      "returned_at": "2026-10-17T16:03:56+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 102 < 500",
+        "長文定型文の再利用を検出: papers/inference/19-inference-evaluation-benchmarking/2025-2511.16595-timeviper-a-hybrid-mamba-transformer-vision-language-model-for-efficient.md と 17 段落 / 3431文字 (100.0%) が完全一致"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 4771,
+        "body_paragraphs": 26,
+        "method_chars": 1568,
+        "method_paragraphs": 8,
+        "evaluation_chars": 102,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "評価説明量 102 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_9d909978c71c8191be28f6cf86433438--2025-2511.16595-timeviper-hybrid-mamba-transformer-video-research-20261015-0530-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_9d909978c71c8191be28f6cf86433438--2025-2511.16595-timeviper-hybrid-mamba-transformer-video-research-20261015-0530-scheduled-chat-30-r01.json",
+      "worker_run_key": "20261015-0530-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2604.18471",
+      "title": "NI Sampling: Accelerating Discrete Diffusion Sampling by Token Order Optimization",
+      "source_url": "https://arxiv.org/abs/2604.18471",
+      "returned_at": "2026-10-17T16:03:57+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 163 < 500",
+        "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2026-2604.18471-ni-sampling-accelerating-discrete-diffusion-sampling-by-token-order-opti.md と 20 段落 / 4342文字 (100.0%) が完全一致"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5818,
+        "body_paragraphs": 32,
+        "method_chars": 1829,
+        "method_paragraphs": 9,
+        "evaluation_chars": 163,
+        "limitation_chars": 730,
+        "insufficiency_flags": [
+          "評価説明量 163 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_a5686755f0ac819182e11bdcd113c039--2026-2604.18471-ni-sampling-token-order-research-20261014-2356-scheduled-chat-00-r01-rev2.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_a5686755f0ac819182e11bdcd113c039--2026-2604.18471-ni-sampling-token-order-research-20261014-2356-scheduled-chat-00-r01-rev2.json",
+      "worker_run_key": "20261014-2356-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2604.25326",
+      "title": "AHASD: Asynchronous Heterogeneous Architecture for LLM Adaptive Drafting Speculative Decoding on Mobile Devices",
+      "source_url": "https://arxiv.org/pdf/2604.25326",
+      "returned_at": "2026-10-17T16:03:59+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700",
+        "説明不足トリガー: 評価説明量 467 < 500",
+        "長文定型文の再利用を検出: papers/inference/05-speculative-decoding-moe/2026-2604.25326-ahasd-asynchronous-heterogeneous-architecture-for-llm-adaptive-drafting-.md と 18 段落 / 4769文字 (100.0%) が完全一致"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5804,
+        "body_paragraphs": 27,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 467,
+        "limitation_chars": 684,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700",
+          "評価説明量 467 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_b48c41164a3c819186ecffabf7e619a3--2026-2604.25326-ahasd-mobile-npu-pim-speculative-decoding-research-20261014-2200-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_b48c41164a3c819186ecffabf7e619a3--2026-2604.25326-ahasd-mobile-npu-pim-speculative-decoding-research-20261014-2200-scheduled-chat-00-r01.json",
+      "worker_run_key": "20261014-2200-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2604.25925",
+      "title": "SpecTr-GBV: Multi-Draft Block Verification Accelerating Speculative Decoding",
+      "source_url": "https://arxiv.org/abs/2604.25925",
+      "returned_at": "2026-10-17T16:04:00+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 109 < 500",
+        "長文定型文の再利用を検出: papers/inference/05-speculative-decoding-moe/2026-2604.25925-spectr-gbv-multi-draft-block-verification-accelerating-speculative-decod.md と 14 段落 / 2955文字 (100.0%) が完全一致"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 4658,
+        "body_paragraphs": 25,
+        "method_chars": 1208,
+        "method_paragraphs": 7,
+        "evaluation_chars": 109,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "評価説明量 109 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_c713a9de433c819195d3724bf2b87533--2026-2604.25925-spectr-gbv-multidraft-block-verification-research-20261014-2330-scheduled-chat-30-r01-v2.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_c713a9de433c819195d3724bf2b87533--2026-2604.25925-spectr-gbv-multidraft-block-verification-research-20261014-2330-scheduled-chat-30-r01-v2.json",
+      "worker_run_key": "20261014-2330-scheduled-chat-30/r01"
     }
   ]
 }

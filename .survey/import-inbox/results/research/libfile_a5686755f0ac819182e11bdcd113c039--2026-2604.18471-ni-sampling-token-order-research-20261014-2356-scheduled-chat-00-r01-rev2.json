@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "0565f6536c705372c9b3bb7b3f66c6a3f34b36b4f6d350f18e3456c81b9857cc",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_a5686755f0ac819182e11bdcd113c039--2026-2604.18471-ni-sampling-token-order-research-20261014-2356-scheduled-chat-00-r01-rev2.md",
+  "canonical_id": "arXiv:2604.18471",
+  "worker_completed_at": "2026-10-15T00:00:14+09:00",
+  "worker_run_key": "20261014-2356-scheduled-chat-00/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 5818,
+    "body_paragraphs": 32,
+    "method_chars": 1829,
+    "method_paragraphs": 9,
+    "evaluation_chars": 163,
+    "limitation_chars": 730,
+    "insufficiency_flags": [
+      "評価説明量 163 < 500"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 評価説明量 163 < 500",
+    "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2026-2604.18471-ni-sampling-accelerating-discrete-diffusion-sampling-by-token-order-opti.md と 20 段落 / 4342文字 (100.0%) が完全一致"
+  ],
+  "processed_at": "2026-10-17T16:03:57+00:00"
+}

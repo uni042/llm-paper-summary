@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "53f61a3538d07f7e47392ea188edf9aea082e9ff61cbf455a9bc76fb9046cec4",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_b48c41164a3c819186ecffabf7e619a3--2026-2604.25326-ahasd-mobile-npu-pim-speculative-decoding-research-20261014-2200-scheduled-chat-00-r01.md",
+  "canonical_id": "arXiv:2604.25326",
+  "worker_completed_at": "2026-10-14T22:10:47+09:00",
+  "worker_run_key": "20261014-2200-scheduled-chat-00/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 5804,
+    "body_paragraphs": 27,
+    "method_chars": 0,
+    "method_paragraphs": 0,
+    "evaluation_chars": 467,
+    "limitation_chars": 684,
+    "insufficiency_flags": [
+      "手法説明量 0 < 700",
+      "評価説明量 467 < 500"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 手法説明量 0 < 700",
+    "説明不足トリガー: 評価説明量 467 < 500",
+    "長文定型文の再利用を検出: papers/inference/05-speculative-decoding-moe/2026-2604.25326-ahasd-asynchronous-heterogeneous-architecture-for-llm-adaptive-drafting-.md と 18 段落 / 4769文字 (100.0%) が完全一致"
+  ],
+  "processed_at": "2026-10-17T16:03:59+00:00"
+}

@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "9c539bff415b1c6f2603e06291f9e5a3cbf045d11c43c4820f15896f941d3d95",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_c713a9de433c819195d3724bf2b87533--2026-2604.25925-spectr-gbv-multidraft-block-verification-research-20261014-2330-scheduled-chat-30-r01-v2.md",
+  "canonical_id": "arXiv:2604.25925",
+  "worker_completed_at": "2026-10-14T23:32:00+09:00",
+  "worker_run_key": "20261014-2330-scheduled-chat-30/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 4658,
+    "body_paragraphs": 25,
+    "method_chars": 1208,
+    "method_paragraphs": 7,
+    "evaluation_chars": 109,
+    "limitation_chars": 0,
+    "insufficiency_flags": [
+      "評価説明量 109 < 500",
+      "限界説明量 0 < 推奨 120"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 評価説明量 109 < 500",
+    "長文定型文の再利用を検出: papers/inference/05-speculative-decoding-moe/2026-2604.25925-spectr-gbv-multi-draft-block-verification-accelerating-speculative-decod.md と 14 段落 / 2955文字 (100.0%) が完全一致"
+  ],
+  "processed_at": "2026-10-17T16:04:00+00:00"
+}
