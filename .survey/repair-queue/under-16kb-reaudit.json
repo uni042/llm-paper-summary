@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-10-17T07:19:37.519097+00:00",
+  "generated_at": "2026-10-17T07:37:55.411751+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 13,
+  "count": 8,
   "worker_counts": {
-    "scheduled-chat-00": 4,
-    "scheduled-chat-30": 4,
-    "scheduled-chat-45": 5
+    "scheduled-chat-00": 3,
+    "scheduled-chat-30": 2,
+    "scheduled-chat-45": 3
   },
   "entries": [
     {
@@ -86,26 +86,6 @@
       ]
     },
     {
-      "path": "papers/inference/16-weight-quantization-compression/2026-2602.02546-d2quant-accurate-low-bit-post-training-weight-quantization-for-llms.md",
-      "canonical_id": "arXiv:2602.02546",
-      "title": "D2Quant: Accurate Low-bit Post-Training Weight Quantization for LLMs",
-      "file_bytes": 12380,
-      "source_sha256": "e35ca1673681fb42e058c9a2b27061fb81716aac8fe0c96c59264f1c7a1eeec6",
-      "source_git_blob_sha": "c0a43b1f208d83cb34c245808662108847c7cbb3",
-      "assigned_worker": "scheduled-chat-45",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.925788,
-      "quality_metrics": {
-        "body_chars": 2942,
-        "method_chars": 1214,
-        "evaluation_chars": 578,
-        "limitation_chars": 315
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
       "path": "papers/inference/17-pim-near-data-acceleration/2026-h3-attn.md",
       "canonical_id": "DOI:10.1145/3816440.3818602",
       "title": "H3-Attn: Attention-Efficient 3D DRAM PNM Processor with Hybrid Head Parallelism and Hierarchical SFU",
@@ -120,46 +100,6 @@
         "body_chars": 2413,
         "method_chars": 1072,
         "evaluation_chars": 505,
-        "limitation_chars": 0
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/05-speculative-decoding-moe/2026-2602.01274-pacer-blockwise-pre-verification-for-speculative-decoding-with-adaptive-.md",
-      "canonical_id": "arXiv:2602.01274",
-      "title": "Pacer: Blockwise Pre-verification for Speculative Decoding with Adaptive Length",
-      "file_bytes": 14678,
-      "source_sha256": "4be3f7d2e4d21d157732a3b4e9752eab4a130ee1d3dfdd9c8978ef950b676b36",
-      "source_git_blob_sha": "f7fe126be61907f310e72d2e53f70d74a2e58d6f",
-      "assigned_worker": "scheduled-chat-45",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.916606,
-      "quality_metrics": {
-        "body_chars": 3639,
-        "method_chars": 1063,
-        "evaluation_chars": 1088,
-        "limitation_chars": 0
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2025-2501.02086-instruction-following-pruning-for-large-language-models.md",
-      "canonical_id": "arXiv:2501.02086",
-      "title": "Instruction-Following Pruning for Large Language Models",
-      "file_bytes": 15529,
-      "source_sha256": "e96797d4e81bf48872a40e7c87f1cab252b3c90638db46d61076f45d0a6c5990",
-      "source_git_blob_sha": "a5ad42b3617df4d6cd38d0351752a7d02b00d70b",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.982691,
-      "quality_metrics": {
-        "body_chars": 4076,
-        "method_chars": 1226,
-        "evaluation_chars": 1387,
         "limitation_chars": 0
       },
       "mechanical_failures": [],
@@ -206,26 +146,6 @@
       "warnings": []
     },
     {
-      "path": "papers/inference/99-other-inference-systems/2024-2403.01632-syncode-llm-generation-with-grammar-augmentation.md",
-      "canonical_id": "arXiv:2403.01632",
-      "title": "SynCode: LLM Generation with Grammar Augmentation",
-      "file_bytes": 16924,
-      "source_sha256": "ed930b210b8bd3d80f89f229fe144f3a065123397bd5a20709a4a99a7dca6b84",
-      "source_git_blob_sha": "d1626714e89bd2ac599c05e89d744f1e31d0e42b",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.920688,
-      "quality_metrics": {
-        "body_chars": 4048,
-        "method_chars": 1248,
-        "evaluation_chars": 1418,
-        "limitation_chars": 0
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
       "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2605.11605-keep-what-audio-cannot-say-context-preserving-token-pruning-for-omni-llm.md",
       "canonical_id": "arXiv:2605.11605",
       "title": "Keep What Audio Cannot Say: Context-Preserving Token Pruning for Omni-LLMs",
@@ -261,26 +181,6 @@
         "method_chars": 1320,
         "evaluation_chars": 721,
         "limitation_chars": 0
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2025-2512.14244-from-context-to-edus-faithful-and-structured-context-compression-via-ele.md",
-      "canonical_id": "arXiv:2512.14244",
-      "title": "From Context to EDUs: Faithful and Structured Context Compression via Elementary Discourse Unit Decomposition",
-      "file_bytes": 18509,
-      "source_sha256": "e7457a254f3b94590e1066a62f357a43dd86515cb979863427797d81b3580d5b",
-      "source_git_blob_sha": "f671dabbf0511de1662b73039c757ff0519d7793",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.922341,
-      "quality_metrics": {
-        "body_chars": 3680,
-        "method_chars": 1320,
-        "evaluation_chars": 519,
-        "limitation_chars": 599
       },
       "mechanical_failures": [],
       "warnings": []
