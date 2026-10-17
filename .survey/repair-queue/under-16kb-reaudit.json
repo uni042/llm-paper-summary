@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-10-16T15:03:55.710820+00:00",
+  "generated_at": "2026-10-17T05:39:25.795041+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 19,
+  "count": 15,
   "worker_counts": {
-    "scheduled-chat-00": 6,
-    "scheduled-chat-30": 7,
-    "scheduled-chat-45": 6
+    "scheduled-chat-00": 5,
+    "scheduled-chat-30": 5,
+    "scheduled-chat-45": 5
   },
   "entries": [
     {
@@ -126,66 +126,6 @@
       "warnings": []
     },
     {
-      "path": "papers/inference/13-sparse-attention/2026-2602.05853-rrattention-dynamic-block-sparse-attention-via-per-head-round-robin-shif.md",
-      "canonical_id": "arXiv:2602.05853",
-      "title": "RRAttention: Dynamic Block Sparse Attention via Per-Head Round-Robin Shifts for Long-Context Inference",
-      "file_bytes": 13664,
-      "source_sha256": "edc13b5e9ea40ff460f618c0fff38a310cc1a40a033951cd64cbaac78a19799c",
-      "source_git_blob_sha": "ae9b725e416004ad62bf1a2937d0b4ebc746ea40",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.967904,
-      "quality_metrics": {
-        "body_chars": 2901,
-        "method_chars": 1031,
-        "evaluation_chars": 665,
-        "limitation_chars": 316
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2026-2603.23525-prompt-compression-in-production-task-orchestration-a-pre-registered-ran.md",
-      "canonical_id": "arXiv:2603.23525",
-      "title": "Prompt Compression in Production Task Orchestration: A Pre-Registered Randomized Trial",
-      "file_bytes": 13827,
-      "source_sha256": "fa6b4e15eb89fa178af28a9fcd615659ea180221c94d85e4f34dfb241a19f588",
-      "source_git_blob_sha": "44b2c7b27205f2c36f276f3b44c8344b78f099d3",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.991652,
-      "quality_metrics": {
-        "body_chars": 3236,
-        "method_chars": 1031,
-        "evaluation_chars": 689,
-        "limitation_chars": 0
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2024-2401.11504-with-greater-text-comes-greater-necessity-inference-time-training-helps-.md",
-      "canonical_id": "arXiv:2401.11504",
-      "title": "With Greater Text Comes Greater Necessity: Inference-Time Training Helps Long Text Generation",
-      "file_bytes": 13877,
-      "source_sha256": "b5510a7895258f113b9bceb02f0596ea64a3787b334af6fd19d4c69bdef95805",
-      "source_git_blob_sha": "5c2aaeee30fc8752bb01ceaa667510b4c2bf83a5",
-      "assigned_worker": "scheduled-chat-45",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.993257,
-      "quality_metrics": {
-        "body_chars": 3902,
-        "method_chars": 1235,
-        "evaluation_chars": 1168,
-        "limitation_chars": 0
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
       "path": "papers/inference/99-other-inference-systems/2026-2602.20205-otprune-distribution-aligned-visual-token-pruning-via-optimal-transport.md",
       "canonical_id": "arXiv:2602.20205",
       "title": "OTPrune: Distribution-Aligned Visual Token Pruning via Optimal Transport",
@@ -261,26 +201,6 @@
         "method_chars": 1138,
         "evaluation_chars": 1160,
         "limitation_chars": 0
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2026-2603.14785-skipopu-an-fpga-based-overlay-processor-for-large-language-models-with-d.md",
-      "canonical_id": "arXiv:2603.14785",
-      "title": "SkipOPU: An FPGA-based Overlay Processor for Large Language Models with Dynamically Allocated Computation",
-      "file_bytes": 15457,
-      "source_sha256": "1157d880bad7dbb8b62f91fd83c1400cbecd7185f3c9d13494ba88997c9644d5",
-      "source_git_blob_sha": "b46a4452d1fe03b1af2acdcd903b1a944bdb8625",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.99478,
-      "quality_metrics": {
-        "body_chars": 3180,
-        "method_chars": 1135,
-        "evaluation_chars": 858,
-        "limitation_chars": 333
       },
       "mechanical_failures": [],
       "warnings": []
