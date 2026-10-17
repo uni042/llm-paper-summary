@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-10-17T05:39:25.795041+00:00",
+  "generated_at": "2026-10-17T05:49:38.128942+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 15,
+  "count": 17,
   "worker_counts": {
     "scheduled-chat-00": 5,
-    "scheduled-chat-30": 5,
-    "scheduled-chat-45": 5
+    "scheduled-chat-30": 6,
+    "scheduled-chat-45": 6
   },
   "entries": [
     {
@@ -84,6 +84,26 @@
       "warnings": [
         "日本語比率 73.8% < 警告基準 80%"
       ]
+    },
+    {
+      "path": "papers/inference/99-other-inference-systems/2023-1685e89adb79-tabi-an-efficient-multi-level-inference-system-for-large-language-models.md",
+      "canonical_id": "DOI:10.1145/3552326.3587438",
+      "title": "Tabi: An Efficient Multi-Level Inference System for Large Language Models",
+      "file_bytes": 12265,
+      "source_sha256": "0ef23fcffb072dbee88912f169846c894406381813491caaca6862e15f71a6fd",
+      "source_git_blob_sha": "29a57180aa142014c122870a399d2e8948e129d6",
+      "assigned_worker": "scheduled-chat-45",
+      "semantic_status": "pending",
+      "mechanical_status": "PASS",
+      "japanese_ratio": 0.944689,
+      "quality_metrics": {
+        "body_chars": 3005,
+        "method_chars": 1290,
+        "evaluation_chars": 636,
+        "limitation_chars": 345
+      },
+      "mechanical_failures": [],
+      "warnings": []
     },
     {
       "path": "papers/inference/16-weight-quantization-compression/2026-2602.02546-d2quant-accurate-low-bit-post-training-weight-quantization-for-llms.md",
@@ -220,6 +240,26 @@
         "body_chars": 4076,
         "method_chars": 1226,
         "evaluation_chars": 1387,
+        "limitation_chars": 0
+      },
+      "mechanical_failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/05-speculative-decoding-moe/2024-2410.11305-qspec-speculative-decoding-with-complementary-quantization-schemes.md",
+      "canonical_id": "arXiv:2410.11305",
+      "title": "QSpec: Speculative Decoding with Complementary Quantization Schemes",
+      "file_bytes": 15592,
+      "source_sha256": "b4e55bf6609b3bc385ec5dbb017a1dcbfff589d81bcbaba2f8bc482107b9771e",
+      "source_git_blob_sha": "3138a22ab3439aa498abcb497ebb75ed8501cbc6",
+      "assigned_worker": "scheduled-chat-30",
+      "semantic_status": "pending",
+      "mechanical_status": "PASS",
+      "japanese_ratio": 0.97414,
+      "quality_metrics": {
+        "body_chars": 4564,
+        "method_chars": 1320,
+        "evaluation_chars": 721,
         "limitation_chars": 0
       },
       "mechanical_failures": [],
