@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-17T16:18:48+00:00",
+  "generated_at": "2026-10-17T16:46:19+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 151,
+  "count": 150,
   "entries": [
     {
       "canonical_id": "DOI:10.1145/3714983.3714987",
@@ -485,33 +485,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_79b879895234819185968e0f57f55e30--2026-2604.13519-toolspec-returned-repair-20261012-1130-scheduled-chat-30-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_79b879895234819185968e0f57f55e30--2026-2604.13519-toolspec-returned-repair-20261012-1130-scheduled-chat-30-r01.json",
       "worker_run_key": "20261012-1130-scheduled-chat-30/r01"
-    },
-    {
-      "canonical_id": "arXiv:2507.15465",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-12T03:26:14+00:00",
-      "return_count": 3,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5480,
-        "body_paragraphs": 29,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 1288,
-        "limitation_chars": 611,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-663533a4bd8c--libfile_8c90c9791ab481919a8364f6c7779d87--2025-2507.15465-rethinking-llm-inference-bottlenecks-metadata-repair-20261012-0245-scheduled-chat-45-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-663533a4bd8c--libfile_8c90c9791ab481919a8364f6c7779d87--2025-2507.15465-rethinking-llm-inference-bottlenecks-metadata-repair-20261012-0245-schedu.json",
-      "worker_run_key": "20261012-0245-scheduled-chat-45/r01"
     },
     {
       "canonical_id": "arXiv:2507.19635",
@@ -3179,34 +3152,6 @@
       "worker_run_key": "20261017-1130-scheduled-chat-30/r01"
     },
     {
-      "canonical_id": "arXiv:2604.11948",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-17T07:12:38+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 427 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 9398,
-        "body_paragraphs": 50,
-        "method_chars": 2607,
-        "method_paragraphs": 13,
-        "evaluation_chars": 427,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "評価説明量 427 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_c1579ae58d3081919c1e97007c9c2f0f--2026-2604.11948-ailfm-metadata-repair-20261016-1212-scheduled-chat-45-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_c1579ae58d3081919c1e97007c9c2f0f--2026-2604.11948-ailfm-metadata-repair-20261016-1212-scheduled-chat-45-r01.json",
-      "worker_run_key": "20261016-1212-scheduled-chat-45/r01-metadata-repair"
-    },
-    {
       "canonical_id": "arXiv:2603.14785",
       "title": null,
       "source_url": null,
@@ -3834,61 +3779,9 @@
       "worker_run_key": "20261014-2330-scheduled-chat-30/r01"
     },
     {
-      "canonical_id": "arXiv:2606.13707",
-      "title": "Orchestra-o1: Omnimodal Agent Orchestration",
-      "source_url": "https://arxiv.org/abs/2606.13707",
-      "returned_at": "2026-10-17T16:16:27+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 147 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5666,
-        "body_paragraphs": 39,
-        "method_chars": 2220,
-        "method_paragraphs": 14,
-        "evaluation_chars": 147,
-        "limitation_chars": 637,
-        "insufficiency_flags": [
-          "評価説明量 147 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_8162432857d48191a08c7721b0858c2c--2026-2606.13707-orchestra-o1-metadata-repair-20261018-0045-scheduled-chat-45-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_8162432857d48191a08c7721b0858c2c--2026-2606.13707-orchestra-o1-metadata-repair-20261018-0045-scheduled-chat-45-r01.json",
-      "worker_run_key": "20261018-0045-scheduled-chat-45/r01/metadata-repair"
-    },
-    {
-      "canonical_id": "arXiv:2510.04371",
-      "title": "Speculative Actions: A Lossless Framework for Faster Agentic Systems",
-      "source_url": "https://arxiv.org/html/2510.04371v2",
-      "returned_at": "2026-10-17T16:17:21+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "長文定型文の再利用を検出: papers/inference/14-agentic-inference-serving-runtime/2025-2510.04371-speculative-actions-a-lossless-framework-for-faster-agentic-systems.md と 26 段落 / 5723文字 (100.0%) が完全一致"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 8036,
-        "body_paragraphs": 46,
-        "method_chars": 1865,
-        "method_paragraphs": 11,
-        "evaluation_chars": 1708,
-        "limitation_chars": 597,
-        "insufficiency_flags": []
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-20261017-section-normalized--libfile_35790332bb5081918d348c6cc4c66cce--2025-2510.04371-speculative-actions.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-20261017-section-normalized--libfile_35790332bb5081918d348c6cc4c66cce--2025-2510.04371-speculative-actions.json",
-      "worker_run_key": "20261018-0030-scheduled-chat-30/r01"
-    },
-    {
       "canonical_id": "arXiv:2410.17980",
-      "title": "Scaling Stick-Breaking Attention: An Efficient Implementation and In-depth Study",
-      "source_url": "https://arxiv.org/html/2410.17980v2",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-17T16:17:22+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-45",
@@ -3908,6 +3801,91 @@
       },
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-20261017-section-normalized--libfile_5625c1704a4c8191a988b0ed86a721a6--2024-2410.17980-stick-breaking.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-20261017-section-normalized--libfile_5625c1704a4c8191a988b0ed86a721a6--2024-2410.17980-stick-breaking.json",
+      "worker_run_key": "20261018-0030-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2507.15465",
+      "title": "Rethinking LLM Inference Bottlenecks: Insights from Latent Attention and Mixture-of-Experts",
+      "source_url": "https://arxiv.org/pdf/2507.15465",
+      "returned_at": "2026-10-17T16:43:06+00:00",
+      "return_count": 4,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5480,
+        "body_paragraphs": 29,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 1288,
+        "limitation_chars": 611,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/library-final-audit--2507.15465--2025-2507.15465-rethinking-llm-inference-bottlenecks-returned-repair-20261012-0045-scheduled-chat-45-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/library-final-audit--2507.15465--2025-2507.15465-rethinking-llm-inference-bottlenecks-returned-repair-20261012-0045-scheduled-chat-45-r01.json",
+      "worker_run_key": "20261012-0045-scheduled-chat-45/r01"
+    },
+    {
+      "canonical_id": "arXiv:2511.19480",
+      "title": "Exploiting the Experts: Unauthorized Compression in MoE-LLMs",
+      "source_url": "https://arxiv.org/abs/2511.19480",
+      "returned_at": "2026-10-17T16:43:07+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 4464,
+        "body_paragraphs": 22,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 1047,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/library-final-audit--2511.19480--2025-2511.19480-exploiting-experts-moe-compression-security-research-20261015-0410-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/library-final-audit--2511.19480--2025-2511.19480-exploiting-experts-moe-compression-security-research-20261015-0410-scheduled-chat-00-r01.json",
+      "worker_run_key": "20261015-0410-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2510.04371",
+      "title": "Speculative Actions: A Lossless Framework for Faster Agentic Systems",
+      "source_url": "https://arxiv.org/html/2510.04371v2",
+      "returned_at": "2026-10-17T16:44:53+00:00",
+      "return_count": 3,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700",
+        "説明不足トリガー: 評価説明量 0 < 500",
+        "長文定型文の再利用を検出: papers/inference/14-agentic-inference-serving-runtime/2025-2510.04371-speculative-actions-a-lossless-framework-for-faster-agentic-systems.md と 26 段落 / 5723文字 (100.0%) が完全一致"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 8036,
+        "body_paragraphs": 46,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 0,
+        "limitation_chars": 597,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700",
+          "評価説明量 0 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-22e9e9ce56b1--libfile_35790332bb5081918d348c6cc4c66cce--2025-2510.04371-speculative-actions-agentic-systems-research-20261018-0030-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-22e9e9ce56b1--libfile_35790332bb5081918d348c6cc4c66cce--2025-2510.04371-speculative-actions-agentic-systems-research-20261018-0030-scheduled-chat.json",
       "worker_run_key": "20261018-0030-scheduled-chat-30/r01"
     }
   ]
