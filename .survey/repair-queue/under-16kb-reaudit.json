@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-10-17T08:19:14.984647+00:00",
+  "generated_at": "2026-10-17T08:45:44.235478+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 8,
+  "count": 7,
   "worker_counts": {
-    "scheduled-chat-00": 3,
+    "scheduled-chat-00": 2,
     "scheduled-chat-30": 2,
     "scheduled-chat-45": 3
   },
@@ -62,30 +62,6 @@
       ]
     },
     {
-      "path": "papers/inference/07-kv-cache-optimization-compression/2026-5497c425b6df-to-keep-or-not-to-keep-learning-kv-cache-retention-in-disaggregated-llm-.md",
-      "canonical_id": "DOI:10.1145/3793230.3837769",
-      "title": "To Keep or Not to Keep: Learning KV Cache Retention in Disaggregated LLM Serving Systems",
-      "file_bytes": 11591,
-      "source_sha256": "da888b53ee82e640f2477d11ae1e7189930d0245c88b475d792485cbf22b684c",
-      "source_git_blob_sha": "bfaac5edecb3f5347981eca23eb75980c3e1721d",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.737968,
-      "quality_metrics": {
-        "body_chars": 3071,
-        "method_chars": 1053,
-        "evaluation_chars": 677,
-        "limitation_chars": 330
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 日本語比率 73.8% < 80%"
-      ],
-      "warnings": [
-        "日本語比率 73.8% < 警告基準 80%"
-      ]
-    },
-    {
       "path": "papers/inference/17-pim-near-data-acceleration/2026-h3-attn.md",
       "canonical_id": "DOI:10.1145/3816440.3818602",
       "title": "H3-Attn: Attention-Efficient 3D DRAM PNM Processor with Hybrid Head Parallelism and Hierarchical SFU",
@@ -109,9 +85,9 @@
       "path": "papers/inference/07-kv-cache-optimization-compression/2025-2511.16786-revisiting-multimodal-kv-cache-compression-a-frequency-domain-guided-out.md",
       "canonical_id": "arXiv:2511.16786",
       "title": "Revisiting Multimodal KV Cache Compression: A Frequency-Domain-Guided Outlier-KV-Aware Approach",
-      "file_bytes": 13382,
-      "source_sha256": "4ce09e4cc2ed40583eb5463a290f61d0cffef582e7b12dfe9e449a7afb561d7b",
-      "source_git_blob_sha": "a9a4196158e3712da9fa7b8b007ccbf698766827",
+      "file_bytes": 15155,
+      "source_sha256": "c516a95cf88bd0ad7abaa77204a3d5de8470f8138b0b0ca94d9c9514d6e33119",
+      "source_git_blob_sha": "5bf96b02bea4046387d4ce16ae0f387c4b4b78ef",
       "assigned_worker": "scheduled-chat-30",
       "semantic_status": "pending",
       "mechanical_status": "PASS",
@@ -121,26 +97,6 @@
         "method_chars": 1085,
         "evaluation_chars": 1134,
         "limitation_chars": 342
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/07-kv-cache-optimization-compression/2025-2505.20334-lookahead-q-cache-achieving-more-consistent-kv-cache-eviction-via-pseudo.md",
-      "canonical_id": "arXiv:2505.20334",
-      "title": "Lookahead Q-Cache: Achieving More Consistent KV Cache Eviction via Pseudo Query",
-      "file_bytes": 15007,
-      "source_sha256": "ca1af34d621a15a73707685175a783244a99363b86d87809022eeda7deb2144f",
-      "source_git_blob_sha": "2024db354f5b85cf0c07c7d7d540a85b44a8f767",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.986256,
-      "quality_metrics": {
-        "body_chars": 4000,
-        "method_chars": 1059,
-        "evaluation_chars": 523,
-        "limitation_chars": 0
       },
       "mechanical_failures": [],
       "warnings": []
@@ -181,6 +137,26 @@
         "method_chars": 1290,
         "evaluation_chars": 636,
         "limitation_chars": 345
+      },
+      "mechanical_failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/07-kv-cache-optimization-compression/2025-2505.20334-lookahead-q-cache-achieving-more-consistent-kv-cache-eviction-via-pseudo.md",
+      "canonical_id": "arXiv:2505.20334",
+      "title": "Lookahead Q-Cache: Achieving More Consistent KV Cache Eviction via Pseudo Query",
+      "file_bytes": 17141,
+      "source_sha256": "76dd1d25c2765446fa9268a2ef4c5def34c6a87d50656070b73d774324f5081a",
+      "source_git_blob_sha": "8b81e3ed2a7f239a3dc0f6895c41a978c5b232b2",
+      "assigned_worker": "scheduled-chat-30",
+      "semantic_status": "pending",
+      "mechanical_status": "PASS",
+      "japanese_ratio": 0.986256,
+      "quality_metrics": {
+        "body_chars": 4000,
+        "method_chars": 1059,
+        "evaluation_chars": 523,
+        "limitation_chars": 0
       },
       "mechanical_failures": [],
       "warnings": []
