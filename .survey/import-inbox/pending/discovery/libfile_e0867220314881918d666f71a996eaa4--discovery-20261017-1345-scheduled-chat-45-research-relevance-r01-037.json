@@ -1,0 +1,27 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-45",
+  "run_key": "20261017-1345-scheduled-chat-45/r01/research-prescreen/037",
+  "reference_main_sha": "a9a05c8d9caaabba725943f760b39c05818089a9",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2512.00041",
+      "identity_tokens": [
+        "arxiv:2512.00041"
+      ],
+      "title": "VISTAv2: World Imagination for Indoor Vision-and-Language Navigation",
+      "reason": "一次要旨で、行動条件付き動画拡散モデルによりロボットの短期未来視点を生成し、言語指示に合わせた価値地図をオンライン経路計画へ統合する研究と確認。VAE潜在空間や疎な復号で単一GPU推論に対応するが、主要課題と評価は室内ナビゲーション成功率・経路効率であり、LLM推論基盤・学習システムの最適化を検証しないため対象外。",
+      "source_url": "https://arxiv.org/abs/2512.00041",
+      "body_check": "abstract_screen_only; body_not_read; 2026-10-17 一次論文の著者・出版社掲載要旨を確認",
+      "first_checked_at": "2026-10-17T13:48:32+09:00",
+      "last_checked_at": "2026-10-17T13:48:32+09:00",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance",
+      "research_job_id": "job-research-7cacfd96063b3888",
+      "worklist_rank": 37
+    }
+  ]
+}
