@@ -1,0 +1,26 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-45",
+  "run_key": "20261017-1145-scheduled-chat-45/r01/research-prescreen",
+  "reference_main_sha": "300c4bb516a733eb34ea50aafbdae1365dd2a68a",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.02050",
+      "identity_tokens": [
+        "arxiv:2602.02050"
+      ],
+      "title": "Rethinking the Role of Entropy in Optimizing Tool-Use Behaviors for Large Language Model Agents",
+      "reason": "一次要旨で、ツール実行前後のエントロピー減少を報酬信号とする強化学習によってエージェントの不要なツール呼出しを削減する研究と確認。72.07%の呼出し削減は学習済み方策の振る舞いの改善であり、推論ランタイムの計算グラフ、GPUスケジューラ、KVキャッシュ、モデル圧縮の新方式を示さない。学習・エージェント行動最適化のため対象外。",
+      "source_url": "https://arxiv.org/abs/2602.02050",
+      "body_check": "abstract_screen_only; body_not_read; 2026-10-17 arXiv一次要旨を確認",
+      "first_checked_at": "2026-10-17T11:45:31+09:00",
+      "last_checked_at": "2026-10-17T11:45:31+09:00",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance",
+      "worklist_rank": 18
+    }
+  ]
+}
