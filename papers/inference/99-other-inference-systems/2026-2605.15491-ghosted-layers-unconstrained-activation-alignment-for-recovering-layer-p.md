@@ -32,6 +32,8 @@ references:
   - canonical_id: 'arXiv:2310.06694'
 references_checked_at: '2026-10-14'
 references_source: 'paper-related-work; references identity unverified; for follow-up only'
+last_audited: null
+audit_version: 0
 ---
 # Ghosted Layers：層枝刈りで失われた変換を境界活性値から再構成する
 
