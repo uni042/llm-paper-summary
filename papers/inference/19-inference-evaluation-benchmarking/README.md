@@ -14,6 +14,10 @@
   実装：[✓](https://github.com/ZongfangLiu/AIMER) ・ リポジトリ内被引用：5  
   特にGPUメモリが限られる場合、未使用時間の長い専門家であっても保存・読込み費用がかかる。この方式は代表入力の分布に依存し、校正用入力の収集・推論・統計保存が必要となる。Qwen3-30Bの専門家50%削減ではコード評価平均がAIMERで0.361、REAPで0.046となった。
 
+- **2025-12 · [Less Is More, but Where? Dynamic Token Compression via LLM-Guided Keyframe Prior](2025-2512.06866-less-is-more-but-where-dynamic-token-compression-via-llm-guided-keyframe.md)**  
+  実装：[✓](https://github.com/yu-lin-li/DyToK) ・ リポジトリ内被引用：2  
+  映像が長くなると入力トークン数が増え、自己注意と全結合層の計算費用、入力事前充填の遅延、メモリ消費が増える。既存の視覚トークン圧縮は、各フレームに同じ保持率を適用する場合が多い。
+
 - **2026-04 · [NeuReasoner: Towards Explainable, Controllable, and Unified Reasoning via Mixture-of-Neurons](2026-2604.02972-neureasoner-towards-explainable-controllable-and-unified-reasoning-via-m.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   失敗を、単一推論段階内の計算・論理誤り、複数段階間で同じ考えを繰り返す停滞、問題の難易度に対して考え過ぎる過剰思考の三つに分類する。原著付録のA100実測では、監視と介入を加えた方式の実行時間が元モデルより増えている。
@@ -25,10 +29,6 @@
 - **2026-03 · [QMoP: Query Guided Mixture-of-Projector for Efficient Visual Token Compression](2026-2603.21232-qmop-query-guided-mixture-of-projector-for-efficient-visual-token-compre.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   QMoP（Query Guided Mixture-of-Projector）は、マルチモーダル大規模言語モデル（Multimodal Large Language モデル、MLLM）の画像トークン数を減らす際に、一つの固定圧縮法では画像と質問の組合せによって必要な情報を失うという問題を扱う。
-
-- **2025-12 · [Less Is More, but Where? Dynamic Token Compression via LLM-Guided Keyframe Prior](2025-2512.06866-less-is-more-but-where-dynamic-token-compression-via-llm-guided-keyframe.md)**  
-  実装：[✓](https://github.com/yu-lin-li/DyToK) ・ リポジトリ内被引用：1  
-  映像が長くなると入力トークン数が増え、自己注意と全結合層の計算費用、入力事前充填の遅延、メモリ消費が増える。既存の視覚トークン圧縮は、各フレームに同じ保持率を適用する場合が多い。
 
 ### 直近12か月・未被引用（2025-11〜2026-10）
 
