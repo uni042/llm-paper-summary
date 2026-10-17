@@ -1,16 +1,16 @@
 {
   "schema_version": 1,
   "reference_audit_version": 1,
-  "checked_at": "2026-10-17T08:45:36+00:00",
+  "checked_at": "2026-10-17T09:11:48+00:00",
   "summary": {
-    "total": 2386,
-    "complete": 2379,
-    "incomplete": 7
+    "total": 2398,
+    "complete": 2390,
+    "incomplete": 8
   },
   "families": {
     "inference": {
-      "total": 2347,
-      "complete": 2340
+      "total": 2359,
+      "complete": 2351
     },
     "training": {
       "total": 25,
@@ -22,6 +22,11 @@
     }
   },
   "incomplete": [
+    {
+      "path": "papers/inference/07-kv-cache-optimization-compression/2026-5497c425b6df-to-keep-or-not-to-keep-learning-kv-cache-retention-in-disaggregated-llm-.md",
+      "canonical_id": "DOI:10.1145/3793230.3837769",
+      "reason": "missing structured reference audit metadata"
+    },
     {
       "path": "papers/inference/10-kv-cache-offload-recomputation/2026-2605.18071-kvdrive-holistic-multi-tier-kv-cache-management.md",
       "canonical_id": "arXiv:2605.18071",
