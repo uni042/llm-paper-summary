@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（739本）
+## 自動生成の論文一覧（740本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -1004,6 +1004,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   自己回帰型モデルは基本的に次の一語を順番に生成するのに対し、マスク型dLLMは多数の未確定位置を同時に予測し、確信度の低い位置を再びマスクして次の反復で修正する。
 
+- **2026-05 · [EdgeRazor: A Lightweight Framework for Large Language Models via Mixed-Precision Quantization-Aware Distillation](2026-2605.04062-edgerazor-a-lightweight-framework-for-large-language-models-via-mixed-pr.md)**  
+  実装：[✓](https://github.com/zhangsq-nju/EdgeRazor) ・ リポジトリ内被引用：0  
+  対象は単なる事後量子化ではなく、量子化した生徒モデルを教師モデルで監督して再学習する混合精度量子化対応蒸留（Mixed-Precision Quantization-Aware Distillation; MPQAD）である。
+
 - **2026-05 · [DREAM-R: Multimodal Speculative Reasoning with RL-Based Refined Drafting, Precise Verification, and Fully Parallel Execution](2026-2605.28678-dream-r-multimodal-speculative-reasoning-with-rl-based-refined-drafting-.md)**  
   実装：[✓](https://github.com/HuYunhai-Alex/DREAM-R) ・ リポジトリ内被引用：0  
   生成の各ステップで大きな目標モデルを実行すると、この長い推論部分が待ち時間を支配する。目標モデルの品質を必ず数学的に保存する厳密なトークン投機復号とは異なり、推論ステップの意味的妥当性を判定する近似的な方式であることが重要である。
@@ -1834,14 +1838,6 @@
   実装：✓ ・ リポジトリ内被引用：2  
   マルチモーダル入力の符号化が全件終わるまで言語モデルを待機させる依存を解消する。要求内では準備済み埋め込みだけを順にプリフィルへ渡し、要求間では処理可能トークンを複数要求から集めて分割パイプラインの空きを減らす。Qwen2.5-VLの評価で初回トークン遅延最大66%削減、入力トークン処理量最大109%増加を報告する。
 
-- **2025-08 · [TinyServe: Query-Aware Cache Selection for Efficient LLM Serving](2025-2509.12211-tinyserve-query-aware-cache-selection.md)**  
-  実装：✓ ・ リポジトリ内被引用：2  
-  QueryごとにKVページの関連度を軽量メタデータで推定し、必要ページだけを融合CUDAカーネルで読むことで小型LLMサービングの復号とメモリ移動を削減する。
-
-- **2025-08 · [PiKV: KV Cache Management System for Mixture of Experts](2025-2508.06526-pikv-kv-cache-management-for-mixture-of-experts.md)**  
-  実装：[✓](https://github.com/NoakLiu/PiKV) ・ リポジトリ内被引用：2  
-  混合専門家モデルのKVを専門家単位に分散し、選択・圧縮・保持判断を統合する設計。第3版本文には独立した実測評価節がない。
-
 - **2025-08 · [MoE-Beyond: Learning-Based Expert Activation Prediction on Edge Devices](2025-2508.17137-moe-beyond-learning-based-expert-activation-prediction-on-edge-devices.md)**  
   実装：[✓](https://github.com/ngavhane/moe-beyond) ・ リポジトリ内被引用：2  
   トークン埋め込みと層IDから次のMoEエキスパートを予測する4層Transformerを学習し、10%容量のGPUキャッシュでMoE-Infinityの17%に対し約72%の適中率を示す。
@@ -1873,6 +1869,14 @@
 - **2025-01 · [Cache Me If You Must: Adaptive Key-Value Quantization for Large Language Models](2025-2501.19392-cache-me-if-you-must-adaptive-key-value-quantization-for-large-language-.md)**  
   実装：[✓](https://github.com/goodevening13/aquakv) ・ リポジトリ内被引用：2  
   長文脈の大規模言語モデル（LLM）では、生成済みトークンの注意機構に使う鍵・値（KV）を各層に保存する。原著の例では、131,072トークンを保持するLlama 3.2 3Bの16ビットKVは約15 GiB、Llama 3.1 70Bでは約42.9 GB（論文の導入部における十進表記）を占める。
+
+- **2025-08 · [TinyServe: Query-Aware Cache Selection for Efficient LLM Serving](2025-2509.12211-tinyserve-query-aware-cache-selection.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  QueryごとにKVページの関連度を軽量メタデータで推定し、必要ページだけを融合CUDAカーネルで読むことで小型LLMサービングの復号とメモリ移動を削減する。
+
+- **2025-08 · [PiKV: KV Cache Management System for Mixture of Experts](2025-2508.06526-pikv-kv-cache-management-for-mixture-of-experts.md)**  
+  実装：[✓](https://github.com/NoakLiu/PiKV) ・ リポジトリ内被引用：1  
+  混合専門家モデルのKVを専門家単位に分散し、選択・圧縮・保持判断を統合する設計。第3版本文には独立した実測評価節がない。
 
 - **2025-06 · [PecSched: Preemptive and Efficient Cluster Scheduling for LLM Inference](2024-2409.15104-csps-a-communication-efficient-sequence-parallelism-based-serving-system-for-transformer-based-models-with-long-prompts.md)**  
   実装：✓ ・ リポジトリ内被引用：1  

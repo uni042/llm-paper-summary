@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-17T08:16:14+00:00",
+  "generated_at": "2026-10-17T08:42:37+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 166,
+  "count": 164,
   "entries": [
     {
       "canonical_id": "DOI:10.1145/3714983.3714987",
@@ -2542,35 +2542,6 @@
       "worker_run_key": "20261014-0230-scheduled-chat-30/r01"
     },
     {
-      "canonical_id": "arXiv:2407.08454",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-15T00:05:28+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700",
-        "説明不足トリガー: 評価説明量 164 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5902,
-        "body_paragraphs": 31,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 164,
-        "limitation_chars": 574,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700",
-          "評価説明量 164 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-d64d0f9be909--libfile_493d7c663bbc8191b4453d238026b6f4--2024-2407.08454-kvmerger-adaptive-kv-cache-merging-research-20261015-0500-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-d64d0f9be909--libfile_493d7c663bbc8191b4453d238026b6f4--2024-2407.08454-kvmerger-adaptive-kv-cache-merging-research-20261015-0500-scheduled-chat-.json",
-      "worker_run_key": "20261015-0500-scheduled-chat-00/r01"
-    },
-    {
       "canonical_id": "arXiv:2602.03152",
       "title": null,
       "source_url": null,
@@ -2594,33 +2565,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-ebd9f6fc18d6--libfile_3c6b74fa6f3881919b56ef27ae5d6b15--2026-2602.03152-fasa-frequency-aware-sparse-attention-research-20261014-0330-scheduled-chat-30-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-ebd9f6fc18d6--libfile_3c6b74fa6f3881919b56ef27ae5d6b15--2026-2602.03152-fasa-frequency-aware-sparse-attention-research-20261014-0330-scheduled-ch.json",
       "worker_run_key": "20261014-0330-scheduled-chat-30/r01"
-    },
-    {
-      "canonical_id": "arXiv:2605.19049",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-15T05:57:27+00:00",
-      "return_count": 4,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 426 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 4860,
-        "body_paragraphs": 25,
-        "method_chars": 1918,
-        "method_paragraphs": 8,
-        "evaluation_chars": 426,
-        "limitation_chars": 582,
-        "insufficiency_flags": [
-          "評価説明量 426 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-7b1dfcf152f2--libfile_2461ed70d7888191a86e5aa292676aa9--2026-2605.19049-kvbuffer-linear-attention-serving-research-20261015-1430-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-7b1dfcf152f2--libfile_2461ed70d7888191a86e5aa292676aa9--2026-2605.19049-kvbuffer-linear-attention-serving-research-20261015-1430-scheduled-chat-3.json",
-      "worker_run_key": "20261015-1430-scheduled-chat-30/r01"
     },
     {
       "canonical_id": "arXiv:2604.07812",
@@ -4043,35 +3987,6 @@
       "worker_run_key": "20261017-1030-scheduled-chat-30/r01"
     },
     {
-      "canonical_id": "arXiv:2603.01399",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-17T06:32:34+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700",
-        "説明不足トリガー: 評価説明量 0 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5653,
-        "body_paragraphs": 34,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 0,
-        "limitation_chars": 599,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700",
-          "評価説明量 0 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_a33abd73646c8191b08724f77313f87d--2026-2603.01399-quasar-quantized-verification-speculative-decoding-research-20261017-1130-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_a33abd73646c8191b08724f77313f87d--2026-2603.01399-quasar-quantized-verification-speculative-decoding-research-20261017-1130-scheduled-chat-30-r01.json",
-      "worker_run_key": "20261017-1130-scheduled-chat-30/r01"
-    },
-    {
       "canonical_id": "DOI:10.1145/3725338",
       "title": null,
       "source_url": null,
@@ -4286,8 +4201,8 @@
     },
     {
       "canonical_id": "arXiv:2608.12114",
-      "title": "The Ingestion Tax: Adopting File-Backed Weights in Tensor Frameworks",
-      "source_url": "https://arxiv.org/abs/2608.12114",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-17T08:12:16+00:00",
       "return_count": 3,
       "assigned_worker": "scheduled-chat-45",
@@ -4316,8 +4231,8 @@
     },
     {
       "canonical_id": "arXiv:2601.06562",
-      "title": "Mosaic: Unlocking Long-Context Inference for Diffusion LLMs via Global Memory Planning and Dynamic Peak Taming",
-      "source_url": "https://arxiv.org/html/2601.06562v1",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-17T08:12:18+00:00",
       "return_count": 3,
       "assigned_worker": "scheduled-chat-00",
@@ -4340,6 +4255,35 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_edf18c83899c819187cb5233008f245b--2026-2601.06562-mosaic-dllm-global-memory-repair-20261016-2100-scheduled-chat-00-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_edf18c83899c819187cb5233008f245b--2026-2601.06562-mosaic-dllm-global-memory-repair-20261016-2100-scheduled-chat-00-r01.json",
       "worker_run_key": "20261016-2100-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2603.01399",
+      "title": "Quasar: Quantized Self-Speculative Acceleration for Rapid Inference via Memory-Efficient Verification",
+      "source_url": "https://arxiv.org/html/2603.01399v1",
+      "returned_at": "2026-10-17T08:38:41+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700",
+        "説明不足トリガー: 評価説明量 0 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5653,
+        "body_paragraphs": 34,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 0,
+        "limitation_chars": 599,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700",
+          "評価説明量 0 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-1dd697b0b847--libfile_a33abd73646c8191b08724f77313f87d--2026-2603.01399-quasar-quantized-verification-speculative-decoding-research-20261017-1130-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-1dd697b0b847--libfile_a33abd73646c8191b08724f77313f87d--2026-2603.01399-quasar-quantized-verification-speculative-decoding-research-20261017-1130.json",
+      "worker_run_key": "20261017-1130-scheduled-chat-30/r01"
     }
   ]
 }
