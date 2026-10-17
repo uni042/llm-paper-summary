@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-10-17T10:43:53.658866+00:00",
+  "generated_at": "2026-10-17T10:58:35.978104+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 8,
+  "count": 9,
   "worker_counts": {
     "scheduled-chat-00": 3,
-    "scheduled-chat-30": 2,
+    "scheduled-chat-30": 3,
     "scheduled-chat-45": 3
   },
   "entries": [
@@ -19,7 +19,7 @@
       "file_bytes": 9952,
       "source_sha256": "8b78672dfd3367b0494e3c7598b7da2601580cb6b08f4395783b6fda1b12e681",
       "source_git_blob_sha": "c799f4294b018595eed9c724fc6829cf8353f2d3",
-      "assigned_worker": "scheduled-chat-00",
+      "assigned_worker": "scheduled-chat-30",
       "semantic_status": "pending",
       "mechanical_status": "FAIL",
       "japanese_ratio": 0.8674,
@@ -60,6 +60,26 @@
       "warnings": [
         "日本語比率 78.9% < 警告基準 80%"
       ]
+    },
+    {
+      "path": "papers/inference/99-other-inference-systems/2026-2602.01997-on-the-limits-of-layer-pruning-for-generative-reasoning-in-large-languag.md",
+      "canonical_id": "arXiv:2602.01997",
+      "title": "On the Limits of Layer Pruning for Generative Reasoning in Large Language Models",
+      "file_bytes": 12702,
+      "source_sha256": "cd83ee4601c1745d6cd09e716f58242224bfde6c9749e638d4d88f56dcfa8e1b",
+      "source_git_blob_sha": "02c25003eecef798a48fdb63d4d7e3071aa72124",
+      "assigned_worker": "scheduled-chat-00",
+      "semantic_status": "pending",
+      "mechanical_status": "PASS",
+      "japanese_ratio": 0.940717,
+      "quality_metrics": {
+        "body_chars": 3418,
+        "method_chars": 1117,
+        "evaluation_chars": 844,
+        "limitation_chars": 0
+      },
+      "mechanical_failures": [],
+      "warnings": []
     },
     {
       "path": "papers/inference/17-pim-near-data-acceleration/2026-h3-attn.md",
