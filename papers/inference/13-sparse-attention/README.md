@@ -23,7 +23,7 @@
 - [11-llm-serving-scheduling-disaggregation](../11-llm-serving-scheduling-disaggregation/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（80本）
+## 自動生成の論文一覧（81本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -200,14 +200,18 @@
   実装：✓ ・ リポジトリ内被引用：0  
   長文脈の言語モデルでは、すべての過去トークンへ注意を計算する密な注意は計算・メモリ転送とも高価である。Native Sparse 注意機構（NSA）は、直近の窓、圧縮した過去ブロック、重要ブロックの選択という三つの枝を同じ注意層に置き、それらの出力をゲートで混ぜる。
 
+- **2025-11 · [OmniSparse: Training-Aware Fine-Grained Sparse Attention for Long-Video MLLMs](2025-2511.12201-omnisparse-training-aware-fine-grained-sparse-attention-for-long-video-m.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  従来の疎注意は推論時に重要そうな鍵だけを残す方式が多く、全注意で学習したモデルへ疎化を後付けすると、学習時と推論時の注意分布の不一致が生じる。論文の表1では、256フレーム・約65,600トークン条件で注意演算量を72.6%、鍵・値キャッシュ容量を53.4%削減しながら、動画質問応答の精度を概ね維持した。
+
 ### 2年前（2024-11〜2025-10）
 
 - **2025-02 · [Native Sparse Attention: Hardware-Aligned and Natively Trainable Sparse Attention](2025-2502.11089-native-sparse-attention-hardware-aligned-and-natively-trainable-sparse-a.md)**  
-  実装：✓ ・ リポジトリ内被引用：69  
+  実装：✓ ・ リポジトリ内被引用：70  
   Native Sparse 注意機構（NSA）は、長文脈Transformerの注意演算を、圧縮した長距離文脈、入力依存で選んだ重要ブロック、直近の局所窓という三つの枝に分ける疎注意方式である。注意カーネルは64K文脈で順伝播最大9.0倍、逆伝播最大6.0倍の実測高速化を報告する。
 
 - **2025-02 · [MoBA: Mixture of Block Attention for Long-Context LLMs](2025-2502.13189-moba.md)**  
-  実装：[✓](https://github.com/MoonshotAI/MoBA) ・ リポジトリ内被引用：51  
+  実装：[✓](https://github.com/MoonshotAI/MoBA) ・ リポジトリ内被引用：52  
   MoBAは各問い合わせが関連KVブロックを動的選択するMoE型疎注意で、1M文脈の品質を完全注意に近く保ちつつ注意層前処理を最大6.5倍高速化する。
 
 - **2025-02 · [FlexPrefill: A Context-Aware Sparse Attention Mechanism for Efficient Long-Sequence Inference](2025-2502.20766-flexprefill-a-context-aware-sparse-attention-mechanism-for-efficient-long-context-inference.md)**  
@@ -281,7 +285,7 @@
   KVページのキー最小・最大値と現在クエリから重要度上界を推定し、上位ページだけを読むことで全KVを保持したまま長文脈注意の帯域を削減し最大7.03倍高速化。
 
 - **2024-07 · [MInference 1.0: Accelerating Pre-filling for Long-Context LLMs via Dynamic Sparse Attention](2024-2407.02490-minference.md)**  
-  実装：[✓](https://github.com/microsoft/MInference) ・ リポジトリ内被引用：107  
+  実装：[✓](https://github.com/microsoft/MInference) ・ リポジトリ内被引用：108  
   注意ヘッドを3種の疎パターンへ割り当て、入力ごとの重要位置を動的推定して長文脈プリフィルを専用GPUカーネルで高速化する。
 
 - **2024-10 · [SeerAttention: Learning Intrinsic Sparse Attention in Your LLMs](2024-2410.13276-seerattention.md)**  

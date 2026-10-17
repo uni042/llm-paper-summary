@@ -3,7 +3,7 @@
 スマートフォン、個人PC、edge deviceなど、**VRAM・RAM・memory bandwidth・電力に厳しい制約がある環境でLLMを実行する**ためのsystem研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（44本）
+## 自動生成の論文一覧（45本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -83,6 +83,10 @@
 - **2026-05 · [Lever：スマートフォン向けフラッシュ常駐LLMの投機的推論](2026-2605.16786-lever-speculative-llm-inference-on-smartphones.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   OnePlus 12上の測定では、フラッシュ常駐標的モデルの検証時間のうち約78〜93%を入出力が占める条件があり、演算高速化だけではこの待ち時間を解消できない。Leverは投機的復号（投機的復号）を「サーバGPUで標的モデルの計算回数を減らす方式」ではなく、「フラッシュ常駐モデルの呼出し回数を複数トークンへ償却する方式」として再設計する。
+
+- **2026-05 · [CR^2: Cost-Aware Risk-Controlled Routing for Wireless Device-Edge LLM Inference](2026-2605.12001-cr-2-cost-aware-risk-controlled-routing-for-wireless-device-edge-llm-inf.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  端末上で小型の言語モデルを実行すれば、無線転送の待ち時間や通信電力を避けられる。CR²は、端末でローカル実行の可否を判定し、保留した問い合わせだけをエッジ側でモデル選択する二段階のルーティング方式である。
 
 - **2026-05 · [CoMIC: Collaborative Memory and Insights Circulation for Long-Horizon LLM Agents in Cloud-Edge Systems](2026-2606.00756-comic-collaborative-memory-and-insights-circulation-for-long-horizon-llm.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

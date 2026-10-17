@@ -46,6 +46,8 @@ references_checked_at: '2026-10-15'
 references_source: author_pdf_references_section
 references_total: 32
 references_preservation_note: 著者公開PDFの参考文献32件のうち、識別子を本文から確認できた8件を構造化。未照合の参考文献識別子は推測で補わない。
+last_audited: null
+audit_version: 0
 ---
 
 # ParaFlex：実行段階の時間整列による異種LLMの多重化サービング
