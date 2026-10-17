@@ -539,7 +539,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 
 - **2026-05 · [QKVShare: Quantized KV-Cache Handoff for Multi-Agent On-Device LLMs](2026-2605.03884-qkvshare-quantized-kv-cache-handoff-for-multi-agent-on-device-llms.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
-  QKVShareは、同じ端末上で複数のLLMエージェントが処理を引き継ぐとき、先行エージェントが既に計算した鍵・値キャッシュ（KV キャッシュ）を次のエージェントへ量子化した状態で渡す研究である。特に12GB程度のGPUでは、複数のエージェントが文脈を保持するだけで常駐可能な要求数が制限される。
+  送信側が既に計算した注意機構の鍵・値キャッシュ（KVキャッシュ）を、受信側がテキストから再計算する再事前充填（re-プリフィル）は無駄が大きい。
 
 - **2026-05 · [NestedKV: Nested Memory Routing for Long-Context KV Cache Compression](2026-2605.26678-nestedkv-nested-memory-routing-for-long-context-kv-cache-compression.md)**  
   実装：[✓](https://github.com/ChenHong30/NestedKV) ・ リポジトリ内被引用：0  

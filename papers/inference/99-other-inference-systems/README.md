@@ -1686,7 +1686,7 @@
 
 - **2025-11 · [C3PO: Optimized Large Language Model Cascades with Probabilistic Cost Constraints for Reasoning](2025-2511.07396-c3po-optimized-large-language-model-cascades-with-probabilistic-cost-con.md)**  
   実装：[✓](https://github.com/AntonValk/C3PO-LLM) ・ リポジトリ内被引用：0  
-  C3PO（コスト Controlled Cascaded Prediction Optimization）は、複数の大規模言語モデル（LLM）を安価なものから高価なものへ順に実行する段階型推論（cascade）の早期終了規則を学習する手法である。
+  すべての質問を最も高価なモデルへ送るのではなく、小型モデルが容易な質問へ回答し、難しい質問だけを高性能モデルへ順に送る方式をカスケード推論（cascaded inference）という。
 
 - **2025-11 · [Adaptive Layer-Wise Transformations for Post-Training Quantization of Large Language Models](2025-2511.17809-adaptive-layer-wise-transformations-for-post-training-quantization-of-la.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
