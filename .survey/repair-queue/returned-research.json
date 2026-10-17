@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-17T17:35:12+00:00",
+  "generated_at": "2026-10-17T17:51:31+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 153,
+  "count": 156,
   "entries": [
     {
       "canonical_id": "DOI:10.1145/3714983.3714987",
@@ -3873,8 +3873,8 @@
     },
     {
       "canonical_id": "arXiv:2604.14889",
-      "title": "MemoSight: Unifying Context Compression and Multi Token Prediction for Reasoning Acceleration",
-      "source_url": "https://arxiv.org/html/2604.14889v1",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-17T17:35:08+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-45",
@@ -3900,8 +3900,8 @@
     },
     {
       "canonical_id": "arXiv:2606.04446",
-      "title": "D^2SD: Accelerating Speculative Decoding with Dual Diffusion Draft Models",
-      "source_url": "https://arxiv.org/html/2606.04446v1",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-17T17:35:09+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-30",
@@ -3929,8 +3929,8 @@
     },
     {
       "canonical_id": "arXiv:2402.13720",
-      "title": "Ouroboros: Generating Longer Drafts Phrase by Phrase for Faster Speculative Decoding",
-      "source_url": "https://arxiv.org/pdf/2402.13720",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-17T17:35:10+00:00",
       "return_count": 4,
       "assigned_worker": "scheduled-chat-30",
@@ -3957,8 +3957,8 @@
     },
     {
       "canonical_id": "arXiv:2204.03227",
-      "title": "Accelerating Attention through Gradient-Based Learned Runtime Pruning",
-      "source_url": "https://arxiv.org/html/2204.03227v3",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-17T17:35:11+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-00",
@@ -3979,6 +3979,84 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-fe1981233236--libfile_d05f65204a80819195495b548582b530--2022-2204.03227-leopard-gradient-runtime-pruning-research-20261015-1104-scheduled-chat-00-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-fe1981233236--libfile_d05f65204a80819195495b548582b530--2022-2204.03227-leopard-gradient-runtime-pruning-research-20261015-1104-scheduled-chat-00.json",
       "worker_run_key": "20261015-1104-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2408.03314",
+      "title": "Scaling LLM Test-Time Compute Optimally can be More Effective than Scaling Model Parameters",
+      "source_url": "https://arxiv.org/html/2408.03314",
+      "returned_at": "2026-10-17T17:51:29+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 131 < 500",
+        "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2024-2408.03314-scaling-llm-test-time-compute-optimally-can-be-more-effective-than-scaling-model-parameters.md と 10 段落 / 1968文字 (100.0%) が完全一致"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 4522,
+        "body_paragraphs": 28,
+        "method_chars": 2066,
+        "method_paragraphs": 13,
+        "evaluation_chars": 131,
+        "limitation_chars": 537,
+        "insufficiency_flags": [
+          "評価説明量 131 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/library-final-audit--2408.03314--test-time-compute.md",
+      "import_result_path": ".survey/import-inbox/results/research/library-final-audit--2408.03314--test-time-compute.json",
+      "worker_run_key": "20261018-0230-scheduled-chat-30/r02"
+    },
+    {
+      "canonical_id": "arXiv:2410.10141",
+      "title": "Temperature-Centric Investigation of Speculative Decoding with Knowledge Distillation",
+      "source_url": "https://arxiv.org/html/2410.10141",
+      "returned_at": "2026-10-17T17:51:30+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2024-2410.10141-temperature-centric-investigation-of-speculative-decoding-with-knowledge-distillation.md と 9 段落 / 1887文字 (100.0%) が完全一致"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 4590,
+        "body_paragraphs": 28,
+        "method_chars": 1427,
+        "method_paragraphs": 9,
+        "evaluation_chars": 1179,
+        "limitation_chars": 544,
+        "insufficiency_flags": []
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/library-final-audit--2410.10141--temperature-centric.md",
+      "import_result_path": ".survey/import-inbox/results/research/library-final-audit--2410.10141--temperature-centric.json",
+      "worker_run_key": "20261018-0230-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2503.10135",
+      "title": "Gumiho: A Hybrid Architecture to Prioritize Early Tokens in Speculative Decoding",
+      "source_url": "https://arxiv.org/html/2503.10135",
+      "returned_at": "2026-10-17T17:51:31+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2025-2503.10135-gumiho-a-hybrid-architecture-to-prioritize-early-tokens-in-speculative-decoding.md と 14 段落 / 2831文字 (100.0%) が完全一致"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 4566,
+        "body_paragraphs": 29,
+        "method_chars": 1596,
+        "method_paragraphs": 9,
+        "evaluation_chars": 666,
+        "limitation_chars": 491,
+        "insufficiency_flags": []
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/library-final-audit--2503.10135--gumiho.md",
+      "import_result_path": ".survey/import-inbox/results/research/library-final-audit--2503.10135--gumiho.json",
+      "worker_run_key": "20261018-0230-scheduled-chat-30/r01"
     }
   ]
 }
