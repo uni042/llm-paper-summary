@@ -1,25 +1,25 @@
 ---
 canonical_id: DOI:10.1145/3452296.3472904
 doi: 10.1145/3452296.3472904
-title: 'Efficient Sparse Collective Communication and its application to Accelerate Distributed Deep Learning'
+title: Efficient Sparse Collective Communication and its application to Accelerate Distributed Deep Learning
 authors:
-  - Jiawei Fei
-  - Chen-Yu Ho
-  - Atal Narayan Sahu
-  - Marco Canini
-  - Amedeo Sapio
+- Jiawei Fei
+- Chen-Yu Ho
+- Atal Narayan Sahu
+- Marco Canini
+- Amedeo Sapio
 published: '2020-09-30'
 published_year: 2021
-publication: 'ACM SIGCOMM 2021, pages 676–691'
+publication: ACM SIGCOMM 2021, pages 676–691
 publication_type: conference_paper
 publication_status: published
 source: https://conferences.sigcomm.org/sigcomm/2021/files/papers/3452296.3472904.pdf
 sources:
-  - https://conferences.sigcomm.org/sigcomm/2021/files/papers/3452296.3472904.pdf
-  - https://doi.org/10.1145/3452296.3472904
-summary: 'OmniReduceは疎な勾配の集団通信において非ゼロブロックのみを送るストリーミング集約を設計し、集約器が各ワーカーの次の非ゼロ位置を協調して把握する。10Gbpsで最大8.2倍、100Gbpsで疎なワークロードに対し1.4〜2.9倍の学習処理量改善を報告するが、密なBERT・画像モデルでは改善が小さい。ブロック単位の勾配疎化も併用できる。'
-list_summary: '非ゼロ勾配ブロックを協調的に転送・集約するOmniReduceで、分散学習の集団通信を高速化。効果は勾配疎性とネットワーク帯域に依存する。'
-implementation: 'C++11/CUDAで実装。PyTorch DistributedDataParallelへ統合し、DPDK/UDPとRDMAをサポート。複数GPUサーバー内ではNCCL、サーバー間ではOmniReduceを用いる。'
+- https://conferences.sigcomm.org/sigcomm/2021/files/papers/3452296.3472904.pdf
+- https://doi.org/10.1145/3452296.3472904
+summary: OmniReduceは疎な勾配の集団通信において非ゼロブロックのみを送るストリーミング集約を設計し、集約器が各ワーカーの次の非ゼロ位置を協調して把握する。10Gbpsで最大8.2倍、100Gbpsで疎なワークロードに対し1.4〜2.9倍の学習処理量改善を報告するが、密なBERT・画像モデルでは改善が小さい。ブロック単位の勾配疎化も併用できる。
+list_summary: 非ゼロ勾配ブロックを協調的に転送・集約するOmniReduceで、分散学習の集団通信を高速化。効果は勾配疎性とネットワーク帯域に依存する。
+implementation: C++11/CUDAで実装。PyTorch DistributedDataParallelへ統合し、DPDK/UDPとRDMAをサポート。複数GPUサーバー内ではNCCL、サーバー間ではOmniReduceを用いる。
 code: https://github.com/sands-lab/omnireduce
 last_checked: '2026-10-18'
 worker_id: scheduled-chat-00
@@ -27,9 +27,52 @@ worker_completed_at: '2026-10-18T03:00:00+09:00'
 worker_run_key: 20261018-0300-scheduled-chat-00/r01
 reference_main_sha: ab380c6cbae592b3503a7613ac74c3aecb2e83fe
 quality_self_review_passed: true
-quality_self_review_version: 'PAPER-QUALITY-GUIDE-2026-10-07'
+quality_self_review_version: PAPER-QUALITY-GUIDE-2026-10-07
 last_audited: null
 audit_version: 0
+references:
+- canonical_id: DOI:10.1145/2656877.2656890
+  doi: 10.1145/2656877.2656890
+- canonical_id: DOI:10.21437/interspeech.2014-564
+  doi: 10.21437/interspeech.2014-564
+- canonical_id: DOI:10.1145/3437963.3441727
+  doi: 10.1145/3437963.3441727
+- canonical_id: DOI:10.1007/978-3-540-87475-1_17
+  doi: 10.1007/978-3-540-87475-1_17
+- canonical_id: SemanticScholar:d79a26226393f687ddbc375e32055b40b8ad8d38
+- canonical_id: DOI:10.1109/mlhpc.2016.006
+  doi: 10.1109/mlhpc.2016.006
+- canonical_id: DOI:10.1214/aoms/1177729392
+  doi: 10.1214/aoms/1177729392
+- canonical_id: DOI:10.1109/isca45697.2020.00085
+  doi: 10.1109/isca45697.2020.00085
+- canonical_id: DOI:10.1145/3267809.3267840
+  doi: 10.1145/3267809.3267840
+- canonical_id: DOI:10.1145/3341301.3359646
+  doi: 10.1145/3341301.3359646
+- canonical_id: DOI:10.1016/j.jpdc.2008.09.002
+  doi: 10.1016/j.jpdc.2008.09.002
+- canonical_id: DOI:10.1145/3341301.3359642
+  doi: 10.1145/3341301.3359642
+- canonical_id: DOI:10.18653/v1/n18-1202
+  doi: 10.18653/v1/n18-1202
+- canonical_id: DOI:10.18653/v1/p18-2124
+  doi: 10.18653/v1/p18-2124
+- canonical_id: DOI:10.1145/3295500.3356222
+  doi: 10.1145/3295500.3356222
+- canonical_id: DOI:10.1007/s11263-015-0816-y
+  doi: 10.1007/s11263-015-0816-y
+- canonical_id: DOI:10.1145/3152434.3152461
+  doi: 10.1145/3152434.3152461
+- canonical_id: DOI:10.21437/interspeech.2015-354
+  doi: 10.21437/interspeech.2015-354
+- canonical_id: DOI:10.1177/1094342005051521
+  doi: 10.1177/1094342005051521
+- canonical_id: DOI:10.1145/3405671.3405810
+  doi: 10.1145/3405671.3405810
+references_checked_at: '2026-10-17'
+references_source: crossref-deposited-reference-metadata
+references_total: 72
 ---
 
 # OmniReduce：疎な勾配の協調転送による分散学習の集団通信高速化
