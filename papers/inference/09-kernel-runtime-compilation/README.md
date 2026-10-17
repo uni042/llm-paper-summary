@@ -130,7 +130,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 
 - **2026-06 · [FOCUS: DLLMs Know How to Tame Their Compute Bound](2026-2601.23278-focus-dllms-know-how-to-tame-their-compute-bound.md)**  
   実装：[✓](https://github.com/sands-lab/FOCUS) ・ リポジトリ内被引用：0  
-  FOCUSは、初期層の注意分布から「今の拡散ステップで復号できそうな位置」を予測し、それ以外の位置を後段のTransformer層で計算しない推論システムである。SDAR-8B-Chatのブロック長32、確信度閾値0.9という条件では、1回の拡散ステップで確定する位置は全体の約10%に過ぎない。
+  拡散型言語モデル（diffusion language モデル、DLLM）は、マスクされた複数のトークンを一つのブロックとして反復的に復元する。自己回帰型言語モデルと違い、各反復でブロック内の複数位置を同時に処理できるが、実際に確定する位置が少ないと大部分の計算は次の反復でやり直される。直近の確定数と差分の分布から保持予算を決め、上位候補を残す。
 
 - **2026-06 · [ERA: Entropy-Guided Visual Token Pruning with Rectified Attention for Efficient MLLMs](2026-2606.31982-era-entropy-guided-visual-token-pruning-with-rectified-attention-for-eff.md)**  
   実装：[✓](https://github.com/924973292/ERA) ・ リポジトリ内被引用：0  
