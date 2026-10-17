@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-10-17T16:21:57.839472+00:00",
+  "generated_at": "2026-10-17T17:14:33.036780+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 10,
+  "count": 12,
   "worker_counts": {
-    "scheduled-chat-00": 3,
+    "scheduled-chat-00": 4,
     "scheduled-chat-30": 4,
-    "scheduled-chat-45": 3
+    "scheduled-chat-45": 4
   },
   "entries": [
     {
@@ -82,6 +82,46 @@
       "warnings": []
     },
     {
+      "path": "papers/inference/99-other-inference-systems/2025-2512.09946-elana-a-simple-energy-and-latency-analyzer-for-llms.md",
+      "canonical_id": "arXiv:2512.09946",
+      "title": "ELANA: A Simple Energy and Latency Analyzer for LLMs",
+      "file_bytes": 15253,
+      "source_sha256": "fef2b4cdcd817fbd5c462c9fd8fc8735c2d216d44c4bbf77bc06c3b502bd1aa8",
+      "source_git_blob_sha": "b9a2f7173d97425077887aa2c9fd746806d0a7ff",
+      "assigned_worker": "scheduled-chat-00",
+      "semantic_status": "pending",
+      "mechanical_status": "PASS",
+      "japanese_ratio": 0.898246,
+      "quality_metrics": {
+        "body_chars": 4249,
+        "method_chars": 1521,
+        "evaluation_chars": 1156,
+        "limitation_chars": 438
+      },
+      "mechanical_failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/05-speculative-decoding-moe/2026-2606.05742-adapld-adaptive-retrieval-and-reuse-for-efficient-model-free-speculative.md",
+      "canonical_id": "arXiv:2606.05742",
+      "title": "AdaPLD: Adaptive Retrieval and Reuse for Efficient Model-Free Speculative Decoding",
+      "file_bytes": 15873,
+      "source_sha256": "ea858ca1464eb888f62b65c5b78f6f00f1f2d5d2546bd53e38adb2531140fdfa",
+      "source_git_blob_sha": "6eca377ecfc0e6ad8674ba043960e06846b7f870",
+      "assigned_worker": "scheduled-chat-45",
+      "semantic_status": "pending",
+      "mechanical_status": "PASS",
+      "japanese_ratio": 0.96558,
+      "quality_metrics": {
+        "body_chars": 4137,
+        "method_chars": 1609,
+        "evaluation_chars": 774,
+        "limitation_chars": 329
+      },
+      "mechanical_failures": [],
+      "warnings": []
+    },
+    {
       "path": "papers/inference/13-sparse-attention/2023-2310.08152-context-compression-for-auto-regressive-transformers-with-sentinel-token.md",
       "canonical_id": "arXiv:2310.08152",
       "title": "Context Compression for Auto-regressive Transformers with Sentinel Tokens",
@@ -97,26 +137,6 @@
         "method_chars": 1198,
         "evaluation_chars": 882,
         "limitation_chars": 762
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2025-2512.02901-fairy2i-training-complex-llms-from-real-llms-with-all-parameters-in-1-i.md",
-      "canonical_id": "arXiv:2512.02901",
-      "title": "Fairy2i: Training Complex LLMs from Real LLMs with All Parameters in {±1, ±i}",
-      "file_bytes": 17501,
-      "source_sha256": "410af8e1b28501edb36d6a69a9fb960bb343cb617df51b24365d1f554fd7ae81",
-      "source_git_blob_sha": "401063dd76bdbb1e4dc17eb39d09f15c1a5e4458",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.967164,
-      "quality_metrics": {
-        "body_chars": 3640,
-        "method_chars": 1297,
-        "evaluation_chars": 583,
-        "limitation_chars": 515
       },
       "mechanical_failures": [],
       "warnings": []
@@ -157,6 +177,26 @@
         "method_chars": 1259,
         "evaluation_chars": 1785,
         "limitation_chars": 0
+      },
+      "mechanical_failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/99-other-inference-systems/2025-2512.02901-fairy2i-training-complex-llms-from-real-llms-with-all-parameters-in-1-i.md",
+      "canonical_id": "arXiv:2512.02901",
+      "title": "Fairy2i: Training Complex LLMs from Real LLMs with All Parameters in {±1, ±i}",
+      "file_bytes": 18746,
+      "source_sha256": "6eb68729432cce35bc189e5b55ff22616e1b9fc9ac0437753a8cadcc7c7d8632",
+      "source_git_blob_sha": "a17b91b3d8445cd5cc0c70e37ef700c9772ac045",
+      "assigned_worker": "scheduled-chat-30",
+      "semantic_status": "pending",
+      "mechanical_status": "PASS",
+      "japanese_ratio": 0.960957,
+      "quality_metrics": {
+        "body_chars": 4002,
+        "method_chars": 1297,
+        "evaluation_chars": 945,
+        "limitation_chars": 515
       },
       "mechanical_failures": [],
       "warnings": []
