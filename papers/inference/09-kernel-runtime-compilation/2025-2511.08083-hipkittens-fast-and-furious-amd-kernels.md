@@ -34,6 +34,8 @@ worker_id: scheduled-chat-30
 worker_run_key: '20261014-1630-scheduled-chat-30/r01'
 quality_self_review_passed: true
 quality_self_review_version: '2026-10-07'
+last_audited: null
+audit_version: 0
 ---
 
 # HipKittens：AMD GPUの行列積・注意カーネルをタイル抽象で高速化する

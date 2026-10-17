@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-17T13:20:23+00:00",
+  "generated_at": "2026-10-17T13:28:16+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 166,
+  "count": 162,
   "entries": [
     {
       "canonical_id": "DOI:10.1145/3714983.3714987",
@@ -1766,34 +1766,6 @@
       "worker_run_key": "20261014-1600-scheduled-chat-00/r01"
     },
     {
-      "canonical_id": "arXiv:2511.08083",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-14T13:30:50+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 0 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 4055,
-        "body_paragraphs": 22,
-        "method_chars": 1740,
-        "method_paragraphs": 9,
-        "evaluation_chars": 0,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "評価説明量 0 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-e5f917c8c9ef--libfile_089f03b42fa88191ade8d44d1d575d47--2025-2511.08083-hipkittens-amd-kernels-research-20261014-1630-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-e5f917c8c9ef--libfile_089f03b42fa88191ade8d44d1d575d47--2025-2511.08083-hipkittens-amd-kernels-research-20261014-1630-scheduled-chat-30-r01.json",
-      "worker_run_key": "20261014-1630-scheduled-chat-30/r01"
-    },
-    {
       "canonical_id": "arXiv:2306.08543",
       "title": null,
       "source_url": null,
@@ -2231,34 +2203,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_ded311cd47cc8191a429e5b92de682d4--2026-2604.07812-hawk-head-importance-visual-token-pruning-research-20261014-1430-scheduled-chat-30-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_ded311cd47cc8191a429e5b92de682d4--2026-2604.07812-hawk-head-importance-visual-token-pruning-research-20261014-1430-scheduled-chat-30-r01.json",
       "worker_run_key": "20261014-1430-scheduled-chat-30/r01"
-    },
-    {
-      "canonical_id": "arXiv:2501.19309",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-15T06:55:27+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 125 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 4501,
-        "body_paragraphs": 26,
-        "method_chars": 1480,
-        "method_paragraphs": 9,
-        "evaluation_chars": 125,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "評価説明量 125 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-5c8d12286723--libfile_132403cd5f908191a1b087bb3261a2b8--2025-2501.19309-judge-decoding-research-20261015-1500-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-5c8d12286723--libfile_132403cd5f908191a1b087bb3261a2b8--2025-2501.19309-judge-decoding-research-20261015-1500-scheduled-chat-00-r01.json",
-      "worker_run_key": "20261015-1500-scheduled-chat-00/r01"
     },
     {
       "canonical_id": "arXiv:2605.11222",
@@ -2867,36 +2811,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-8ad9b44de3d5--libfile_7bb37a0464f88191957cf61ce087c882--2026-2603.12634-bavt-budget-aware-agent-search-research-20261015-1325-scheduled-chat-30-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-8ad9b44de3d5--libfile_7bb37a0464f88191957cf61ce087c882--2026-2603.12634-bavt-budget-aware-agent-search-research-20261015-1325-scheduled-chat-30-r.json",
       "worker_run_key": "20261015-1325-scheduled-chat-30/r01"
-    },
-    {
-      "canonical_id": "arXiv:2507.19595",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-16T15:55:21+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700",
-        "説明不足トリガー: 評価説明量 0 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 7231,
-        "body_paragraphs": 43,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 0,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700",
-          "評価説明量 0 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-8f3a7dc1877a--libfile_1f44aee4d7e88191965628ed04796f5e--2025-2507.19595-efficient-attention-survey-research-20261015-1104-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-8f3a7dc1877a--libfile_1f44aee4d7e88191965628ed04796f5e--2025-2507.19595-efficient-attention-survey-research-20261015-1104-scheduled-chat-00-r01.json",
-      "worker_run_key": "20261015-1104-scheduled-chat-00/r01"
     },
     {
       "canonical_id": "arXiv:2401.08383",
@@ -4029,33 +3943,6 @@
       },
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_ef4558caa4e081918e07364435911f92--2026-2601.10823-mugi-value-level-parallelism-research-20261017-1930-scheduled-chat-30-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_ef4558caa4e081918e07364435911f92--2026-2601.10823-mugi-value-level-parallelism-research-20261017-1930-scheduled-chat-30-r01.json",
-      "worker_run_key": "20261017-1930-scheduled-chat-30/r01"
-    },
-    {
-      "canonical_id": "arXiv:2601.05038",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-17T11:17:36+00:00",
-      "return_count": 3,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 0 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 4666,
-        "body_paragraphs": 26,
-        "method_chars": 1729,
-        "method_paragraphs": 9,
-        "evaluation_chars": 0,
-        "limitation_chars": 650,
-        "insufficiency_flags": [
-          "評価説明量 0 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-10b88736b350--libfile_0a59e6e7e9a08191be37c6b8a5ac380a--2026-2601.05038-arcaligner-compressed-context-alignment-research-20261017-1930-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-10b88736b350--libfile_0a59e6e7e9a08191be37c6b8a5ac380a--2026-2601.05038-arcaligner-compressed-context-alignment-research-20261017-1930-scheduled-.json",
       "worker_run_key": "20261017-1930-scheduled-chat-30/r01"
     },
     {
