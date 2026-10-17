@@ -64,7 +64,7 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
 
 - **2026-05 · [EVA: Accelerating LLM Decoding via an Efficient Vector Quantization Architecture](2026-2605.24144-eva-accelerating-llm-decoding-via-an-efficient-vector-quantization-archi.md)**  
   実装：[✓](https://github.com/dbw6/Eva) ・ リポジトリ内被引用：1  
-  EVAは、重みだけをベクトル量子化（Vector Quantization; VQ）した大規模言語モデル（LLM）の逐次復号を高速化する、アルゴリズムと回路の協調設計である。論文の主たる比較は、実在の一般消費者向けGPUでのトークン生成実測ではなく、28nm技術、500MHz、64GB/sの外部メモリ帯域を仮定した専用アクセラレータのシミュレーションである。
+  ベクトル量子化は複数重みを一つの索引にまとめるため2ビット級の圧縮品質に優れる一方、従来の実装では重み索引から符号帳の値を不規則に読み出す。
 
 ### 直近12か月・未被引用（2025-11〜2026-10）
 
