@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（751本）
+## 自動生成の論文一覧（753本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -571,6 +571,10 @@
 - **2026-08 · [TurboBus: Pooling PCIe Bandwidth for LLM Workloads via Scale-Up Fabrics](2026-2fe550669a96-turbobus-pooling-pcie-bandwidth-for-llm-workloads-via-scale-up-fabrics.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   GPU間高速ファブリックを中継路として他GPUの空きPCIeリンクを借用し、モデル読込の初回トークン待ち時間を最大40%削減、鍵値退避推論を最大1.6倍高速化する。
+
+- **2026-08 · [TailSieve: Partial-Rollout-Guided Tail Routing for LLM Rollouts](2026-2608.22788-tailsieve-partial-rollout-guided-tail-routing-for-llm-rollouts.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  TailSieveは、以前の部分生成で時間切れとなったプロンプト群を、追加の長さ予測モデルなしで長尾候補として選び、長尾専用プールと通常プールへ割り当てる。
 
 - **2026-08 · [SplitScaling: Adaptive Scaling for Disaggregated LLM Serving Against Traffic Bursts via DRL](2026-92b65c48d388-splitscaling-adaptive-scaling-for-disaggregated-llm-serving-against-traffic-bursts-via-drl.md)**  
   実装：[✓](https://github.com/Onlytonight/SplitScaling) ・ リポジトリ内被引用：0  
@@ -1339,6 +1343,10 @@
 - **2026-02 · [Online Vector Quantized Attention](2026-2602.03922-online-vector-quantized-attention.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   オンラインベクトル量子化注意（Online Vector Quantized 注意機構、OVQ-注意機構）は、長い系列の情報を比較的大きな固定上限の記憶状態へ圧縮しながら、自己注意（self-注意機構）の長距離検索能力に近づける系列混合層である。
+
+- **2026-02 · [On the Limits of Layer Pruning for Generative Reasoning in Large Language Models](2026-2602.01997-on-the-limits-of-layer-pruning-for-generative-reasoning-in-large-languag.md)**  
+  実装：[✓](https://github.com/safal312/on-the-limits-of-layer-pruning) ・ リポジトリ内被引用：0  
+  本論文は、大規模言語モデルの層を丸ごと削除してモデルを軽くする「深さ方向の枝刈り」について、分類問題では精度が比較的保たれるのに、数学的推論やコード生成では著しく悪化する理由を分析する。約25%の層削除を行った条件では、分類課題で元の性能の約90%を保てても、生成課題で63.4%しか保てない例がある。
 
 - **2026-02 · [Learning Query-Aware Budget-Tier Routing for Runtime Agent Memory](2026-2602.06025-learning-query-aware-budget-tier-routing-for-runtime-agent-memory.md)**  
   実装：[✓](https://github.com/ViktorAxelsen/BudgetMem) ・ リポジトリ内被引用：0  
