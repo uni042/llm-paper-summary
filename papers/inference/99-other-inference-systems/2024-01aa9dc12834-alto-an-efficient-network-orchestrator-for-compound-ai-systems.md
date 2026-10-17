@@ -1,34 +1,108 @@
 ---
-canonical_id: 'DOI:10.1145/3642970.3655844'
+canonical_id: DOI:10.1145/3642970.3655844
 title: 'ALTO: An Efficient Network Orchestrator for Compound AI Systems'
-summary: 'ALTOは生成言語モデル、検索器、再順位付け器を接続した複合AI処理で、上流モデルの全出力を待つ逐次実行を改め、中間結果を単語・検索文・主張などの粒度で後段へ逐次送る。集約を要する部分出力を同じ実行インスタンスへ配送する制約付きルーティングと非同期キューを設計し、SQuAD質問を用いた6段の事実検証処理を8基のA100上で評価した。4秒の応答遅延目標で従来の非ストリーミング方式に対する処理可能要求数が最大3倍、低負荷時の99パーセンタイル遅延が1.8分の1となった。一方、分散したプロンプト内容を考慮する高度なスケジューラは構想段階であり、これらの改善をその機能の実測成果と混同できない。'
-list_summary: '複合LLM処理の中間結果を段階間で逐次転送し、集約単位に応じて配送先を固定するALTO。8基のA100による6段の事実検証処理で、4秒遅延目標の収容負荷を最大3倍に改善。'
+summary: ALTOは生成言語モデル、検索器、再順位付け器を接続した複合AI処理で、上流モデルの全出力を待つ逐次実行を改め、中間結果を単語・検索文・主張などの粒度で後段へ逐次送る。集約を要する部分出力を同じ実行インスタンスへ配送する制約付きルーティングと非同期キューを設計し、SQuAD質問を用いた6段の事実検証処理を8基のA100上で評価した。4秒の応答遅延目標で従来の非ストリーミング方式に対する処理可能要求数が最大3倍、低負荷時の99パーセンタイル遅延が1.8分の1となった。一方、分散したプロンプト内容を考慮する高度なスケジューラは構想段階であり、これらの改善をその機能の実測成果と混同できない。
+list_summary: 複合LLM処理の中間結果を段階間で逐次転送し、集約単位に応じて配送先を固定するALTO。8基のA100による6段の事実検証処理で、4秒遅延目標の収容負荷を最大3倍に改善。
 authors:
-  - Keshav Santhanam
-  - Deepti Raghavan
-  - Muhammad Shahir Rahman
-  - Thejas Venkatesh
-  - Neha Kunjal
-  - Pratiksha Thaker
-  - Philip Levis
-  - Matei Zaharia
+- Keshav Santhanam
+- Deepti Raghavan
+- Muhammad Shahir Rahman
+- Thejas Venkatesh
+- Neha Kunjal
+- Pratiksha Thaker
+- Philip Levis
+- Matei Zaharia
 published: '2024-04-22'
-publication: '4th Workshop on Machine Learning and Systems (EuroMLSys 2024), pp. 117–125'
+publication: 4th Workshop on Machine Learning and Systems (EuroMLSys 2024), pp. 117–125
 publication_type: conference_workshop
 publication_status: published
-source: 'https://sing.stanford.edu/site/assets/publications/alto-euromlsys24.pdf'
+source: https://sing.stanford.edu/site/assets/publications/alto-euromlsys24.pdf
 sources:
-  - 'https://sing.stanford.edu/site/assets/publications/alto-euromlsys24.pdf'
-  - 'https://doi.org/10.1145/3642970.3655844'
-implementation: '論文の試作では約7,000行のRust製集中制御実行基盤、Python製処理段、Protocol Buffersによる段間データ形式、UNIXドメインソケットによる非同期キューを使用。言語モデル実行器としてvLLMとSGLang Runtimeとの連携を実装したと記載。一次資料から公式公開コードの所在は確認できない。'
+- https://sing.stanford.edu/site/assets/publications/alto-euromlsys24.pdf
+- https://doi.org/10.1145/3642970.3655844
+implementation: 論文の試作では約7,000行のRust製集中制御実行基盤、Python製処理段、Protocol Buffersによる段間データ形式、UNIXドメインソケットによる非同期キューを使用。言語モデル実行器としてvLLMとSGLang Runtimeとの連携を実装したと記載。一次資料から公式公開コードの所在は確認できない。
 code: null
 last_checked: '2026-10-15'
 worker_completed_at: '2026-10-15T15:00:00+09:00'
-worker_run_key: '20261015-1500-scheduled-chat-00/r01'
+worker_run_key: 20261015-1500-scheduled-chat-00/r01
 worklist_rank: 195
-research_source_version: 'EuroMLSys 2024 DOI:10.1145/3642970.3655844, 9-page published workshop version'
+research_source_version: EuroMLSys 2024 DOI:10.1145/3642970.3655844, 9-page published workshop version
 last_audited: null
 audit_version: 0
+references:
+- canonical_id: DOI:10.1145/872757.872855
+  doi: 10.1145/872757.872855
+- canonical_id: DOI:10.1145/3183713.3190664
+  doi: 10.1145/3183713.3190664
+- canonical_id: arXiv:2308.09687
+  arxiv_id: '2308.09687'
+  doi: 10.1609/aaai.v38i16.29720
+- canonical_id: DOI:10.1145/872757.872857
+  doi: 10.1145/872757.872857
+- canonical_id: arXiv:2305.11859
+  arxiv_id: '2305.11859'
+- canonical_id: arXiv:2307.13528
+  arxiv_id: '2307.13528'
+- canonical_id: DOI:10.1145/3419111.3421285
+  doi: 10.1145/3419111.3421285
+- canonical_id: arXiv:2309.11495
+  arxiv_id: '2309.11495'
+- canonical_id: arXiv:2308.07922
+  arxiv_id: '2308.07922'
+- canonical_id: arXiv:2402.05099
+  arxiv_id: '2402.05099'
+- canonical_id: arXiv:2310.03714
+  arxiv_id: '2310.03714'
+- canonical_id: arXiv:2312.04511
+  arxiv_id: '2312.04511'
+- canonical_id: DOI:10.1145/3600006.3613165
+  doi: 10.1145/3600006.3613165
+- canonical_id: arXiv:2305.03111
+  arxiv_id: '2305.03111'
+- canonical_id: DOI:10.5281/zenodo.1234
+  doi: 10.5281/zenodo.1234
+- canonical_id: arXiv:2308.05960
+  arxiv_id: '2308.05960'
+- canonical_id: arXiv:1712.05889
+- canonical_id: DOI:10.1145/2517349.2522738
+  doi: 10.1145/2517349.2522738
+- canonical_id: arXiv:1910.14424
+  arxiv_id: '1910.14424'
+- canonical_id: arXiv:2305.15334
+  arxiv_id: '2305.15334'
+- canonical_id: arXiv:1606.05250
+  arxiv_id: '1606.05250'
+- canonical_id: arXiv:2302.00083
+  arxiv_id: '2302.00083'
+- canonical_id: arXiv:2308.03427
+  arxiv_id: '2308.03427'
+- canonical_id: arXiv:2310.15123
+  arxiv_id: '2310.15123'
+- canonical_id: DOI:10.1145/3511808.3557325
+  doi: 10.1145/3511808.3557325
+- canonical_id: DOI:10.18653/v1/2022.naacl-main.272
+  doi: 10.18653/v1/2022.naacl-main.272
+- canonical_id: DOI:10.18653/v1/2023.findings-emnlp.157
+  doi: 10.18653/v1/2023.findings-emnlp.157
+- canonical_id: arXiv:2306.00739
+  arxiv_id: '2306.00739'
+- canonical_id: DOI:10.1145/3448016.3457556
+  doi: 10.1145/3448016.3457556
+- canonical_id: DOI:10.1145/3341301.3359653
+  doi: 10.1145/3341301.3359653
+- canonical_id: DOI:10.1145/502034.502057
+  doi: 10.1145/502034.502057
+- canonical_id: arXiv:2308.08155
+  arxiv_id: '2308.08155'
+- canonical_id: arXiv:2305.10601
+  arxiv_id: '2305.10601'
+- canonical_id: DOI:10.1145/2517349.2522737
+  doi: 10.1145/2517349.2522737
+- canonical_id: arXiv:2312.07104
+  arxiv_id: '2312.07104'
+references_checked_at: '2026-10-17'
+references_source: crossref-deposited-reference-metadata
+references_total: 45
 ---
 
 # ALTO：複合AIパイプラインの部分出力を逐次配送するネットワーク実行基盤
