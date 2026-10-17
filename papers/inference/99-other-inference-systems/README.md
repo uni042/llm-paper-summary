@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（789本）
+## 自動生成の論文一覧（792本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -2106,6 +2106,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   CPU/NVMeオフロードを計算・重み読込・KV読込/保存の細粒度タスクへ分解し、転送パイプラインとINT4 CUDAカーネルで6GB RTX 3060上のGPU利用率を90%超へ高める。
 
+- **2025-03 · [Gumiho: A Hybrid Architecture to Prioritize Early Tokens in Speculative Decoding](2025-2503.10135-gumiho-a-hybrid-architecture-to-prioritize-early-tokens-in-speculative-decoding.md)**  
+  実装：[✓](https://github.com/AMD-AIG-AIMA/Gumiho) ・ リポジトリ内被引用：0  
+  したがって、すべての候補位置へ同じ計算量を割り当てるのは必ずしも最善ではない。先頭には過去の未検証トークンの依存関係を使える表現力を割り当て、後続は待ち時間を短縮する。
+
 - **2025-02 · [BumbleBee: Secure Two-party Inference Framework for Large Transformers](2025-93b16acfd7b9-bumblebee-secure-two-party-inference-framework-for-large-transformers.md)**  
   実装：[✓](https://github.com/AntCPLab/OpenBumbleBee) ・ リポジトリ内被引用：0  
   入力とモデル重みをそれぞれ秘匿したままBERT、GPT-2、LLaMA-7B、ViTを実行し、従来方式に比べて実測の転送量と実行時間を改善する。
@@ -2163,6 +2167,10 @@
 - **2024-09 · [RetrievalAttention: Accelerating Long-Context LLM Inference via Vector Retrieval](2024-2409.10516-retrievalattention-accelerating-long-context-llm-inference-via-vector-re.md)**  
   実装：✓ ・ リポジトリ内被引用：44  
   RetrievalAttentionは、長文脈の大規模言語モデルが自己回帰復号で過去のすべての鍵値を走査する負担を、現在の質問に重要なトークンだけを動的に検索することで減らす手法である。しかし注意の質問と鍵は異なる重み行列で射影され、ベクトル分布がずれるため、一般的な索引をそのまま使うと高い再現率を得るために鍵の30～50%を走査しなければならない。
+
+- **2024-08 · [Scaling LLM Test-Time Compute Optimally can be More Effective than Scaling Model Parameters](2024-2408.03314-scaling-llm-test-time-compute-optimally-can-be-more-effective-than-scaling-model-parameters.md)**  
+  実装：✓ ・ リポジトリ内被引用：44  
+  本論文は、大規模言語モデル（LLM）の推論時に追加の計算予算を与える場合、その予算を何回の独立サンプリング、何段の探索、何回の逐次自己修正へ割り当てるべきかを分析する。さらに、小型モデルの推論時追加計算と、約14倍大きいモデルの事前学習を浮動小数点演算回数（FLOPs）で揃えて比較する。
 
 - **2024-03 · [LLaVA-PruMerge: Adaptive Token Reduction for Efficient Large Multimodal Models](2024-2403.15388-llava-prumerge-adaptive-token-reduction-for-efficient-large-multimodal-m.md)**  
   実装：[✓](https://github.com/42Shawn/LLaVA-PruMerge) ・ リポジトリ内被引用：43  
@@ -2547,6 +2555,10 @@
 - **2023-11 · [One Pass Streaming Algorithm for Super Long Token Attention Approximation in Sublinear Space](2023-2311.14652-one-pass-streaming-algorithm-for-super-long-token-attention-approximatio.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
   長大な文脈を扱う注意機構では、問い合わせ、鍵、値の各行列から計算される注意重みが系列長に伴って大きくなる。主結果は実験的な高速化ではなく、厳密な入力条件の下での確率的な誤差・空間・復元時間の保証である。
+
+- **2024-10 · [Temperature-Centric Investigation of Speculative Decoding with Knowledge Distillation](2024-2410.10141-temperature-centric-investigation-of-speculative-decoding-with-knowledge-distillation.md)**  
+  実装：[✓](https://github.com/ozyyshr/TempSpec) ・ リポジトリ内被引用：1  
+  対象モデルの重みや注意機構を変えるのではなく、下書きモデルと対象モデルの出力分布の整合を、蒸留データの生成条件から改善する研究である。さらに、目的の復号温度に近い複数温度で生成した蒸留データを混合する方式を提案し、温度0.8のGSM8Kではオフライン蒸留の通常復号比4.93倍を5.62倍へ改善した。
 
 - **2024-08 · [Fortify the Shortest Stave in Attention: Enhancing Context Awareness of Large Language Models for Effective Tool Use](2024-2312.04455-fortify-the-shortest-stave-in-attention-enhancing-context-awareness-of-l.md)**  
   実装：[✓](https://github.com/Fiorina1212/Attention-buckets) ・ リポジトリ内被引用：1  
