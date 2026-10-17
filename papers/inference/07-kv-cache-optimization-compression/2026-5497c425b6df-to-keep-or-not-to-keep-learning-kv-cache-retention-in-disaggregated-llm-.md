@@ -1,39 +1,98 @@
 ---
-canonical_id: "DOI:10.1145/3793230.3837769"
-title: "To Keep or Not to Keep: Learning KV Cache Retention in Disaggregated LLM Serving Systems"
-summary: "KVLearnは、プリフィルと復号を分離したLLMサービングで、接頭部の再利用確率、再計算費用、ノード間転送費用、保存費用を統合してKVキャッシュの受入れと追い出しを決定する。軽量予測器PRP、費用評価CARS、適応閾値制御ATCを組み合わせ、著者報告では初回トークン時間を再計算方式比最大56%、LRU型比最大38%、Mooncake型比最大33%短縮する。"
-list_summary: "接頭部再利用のオンライン予測と再計算・転送・保存費用を結合し、分離LLMサービングのKV保持と初回トークン遅延を最適化する。"
+canonical_id: DOI:10.1145/3793230.3837769
+title: 'To Keep or Not to Keep: Learning KV Cache Retention in Disaggregated LLM Serving Systems'
+summary: KVLearnは、プリフィルと復号を分離したLLMサービングで、接頭部の再利用確率、再計算費用、ノード間転送費用、保存費用を統合してKVキャッシュの受入れと追い出しを決定する。軽量予測器PRP、費用評価CARS、適応閾値制御ATCを組み合わせ、著者報告では初回トークン時間を再計算方式比最大56%、LRU型比最大38%、Mooncake型比最大33%短縮する。
+list_summary: 接頭部再利用のオンライン予測と再計算・転送・保存費用を結合し、分離LLMサービングのKV保持と初回トークン遅延を最適化する。
 authors:
-  - Dong Liu
-  - Yanxuan Yu
-  - Eric Jiang
-  - Shu Wang
-  - Ying Nian Wu
-published: "2026-09"
-publication: "Proceedings of the 19th ACM International Systems and Storage Conference (SYSTOR 2026), pp. 52–65"
+- Dong Liu
+- Yanxuan Yu
+- Eric Jiang
+- Shu Wang
+- Ying Nian Wu
+published: 2026-09
+publication: Proceedings of the 19th ACM International Systems and Storage Conference (SYSTOR 2026), pp. 52–65
 publication_type: conference
 publication_status: published
-source: "https://doi.org/10.1145/3793230.3837769"
+source: https://doi.org/10.1145/3793230.3837769
 sources:
-  - "https://doi.org/10.1145/3793230.3837769"
-  - "https://github.com/FastLM/KVLearn"
-implementation: "著者公開のC++制御器と模擬実行環境を確認。KVプール制御器への組込み例、PRP・CARS・ATC・単体試験を公開するが、RDMA/NCCLのデータ転送本体は実装範囲外。論文の最大改善値は著者要旨の報告であり、公開模擬プログラムの単独再測定値とは区別する。"
-code: "https://github.com/FastLM/KVLearn"
-last_checked: "2026-10-17"
-worker_completed_at: "2026-10-17T17:07:01+09:00"
-worker_run_key: "20261017-1700-scheduled-chat-00/r01"
-under16kb_reaudit_target_path: "papers/inference/07-kv-cache-optimization-compression/2026-5497c425b6df-to-keep-or-not-to-keep-learning-kv-cache-retention-in-disaggregated-llm-.md"
-under16kb_reaudit_source_git_blob_sha: "bfaac5edecb3f5347981eca23eb75980c3e1721d"
-under16kb_reaudit_version: "2026-10-07-v1"
+- https://doi.org/10.1145/3793230.3837769
+- https://github.com/FastLM/KVLearn
+implementation: 著者公開のC++制御器と模擬実行環境を確認。KVプール制御器への組込み例、PRP・CARS・ATC・単体試験を公開するが、RDMA/NCCLのデータ転送本体は実装範囲外。論文の最大改善値は著者要旨の報告であり、公開模擬プログラムの単独再測定値とは区別する。
+code: https://github.com/FastLM/KVLearn
+last_checked: '2026-10-17'
+worker_completed_at: '2026-10-17T17:07:01+09:00'
+worker_run_key: 20261017-1700-scheduled-chat-00/r01
+under16kb_reaudit_target_path: papers/inference/07-kv-cache-optimization-compression/2026-5497c425b6df-to-keep-or-not-to-keep-learning-kv-cache-retention-in-disaggregated-llm-.md
+under16kb_reaudit_source_git_blob_sha: bfaac5edecb3f5347981eca23eb75980c3e1721d
+under16kb_reaudit_version: 2026-10-07-v1
 under16kb_reaudit_passed: true
 quality_self_review_passed: true
-quality_self_review_version: "2026-10-07-library-guide"
+quality_self_review_version: 2026-10-07-library-guide
 quality_body_chars: 8509
 quality_method_chars: 2885
 quality_eval_chars: 1077
 quality_limitation_chars: 960
 last_audited: null
 audit_version: 0
+references:
+- canonical_id: arXiv:2308.12966
+  arxiv_id: '2308.12966'
+- canonical_id: arXiv:2510.09665
+  arxiv_id: '2510.09665'
+- canonical_id: DOI:10.52202/068431-1189
+  doi: 10.52202/068431-1189
+- canonical_id: DOI:10.1145/3149371
+  doi: 10.1145/3149371
+- canonical_id: arXiv:2401.18079
+  arxiv_id: '2401.18079'
+- canonical_id: arXiv:2403.05527
+  arxiv_id: '2403.05527'
+- canonical_id: DOI:10.1145/3600006.3613165
+  doi: 10.1145/3600006.3613165
+- canonical_id: arXiv:2312.07533
+  arxiv_id: '2312.07533'
+- canonical_id: arXiv:2509.12211
+  doi: 10.1145/3746027.3758181
+- canonical_id: arXiv:2512.11920
+  doi: 10.1145/3748173.3779188
+- canonical_id: arXiv:2508.06526
+  arxiv_id: '2508.06526'
+- canonical_id: arXiv:2602.13357
+  arxiv_id: '2602.13357'
+- canonical_id: DOI:10.1145/3801487.3801812
+  doi: 10.1145/3801487.3801812
+- canonical_id: arXiv:2604.22901
+  arxiv_id: '2604.22901'
+- canonical_id: arXiv:2505.20353
+  arxiv_id: '2505.20353'
+- canonical_id: DOI:10.52202/075280-1516
+  doi: 10.52202/075280-1516
+- canonical_id: DOI:10.1145/3651890.3672274
+  doi: 10.1145/3651890.3672274
+- canonical_id: arXiv:2606.19746
+  arxiv_id: '2606.19746'
+- canonical_id: arXiv:2311.18677
+  doi: 10.1109/isca59077.2024.00019
+- canonical_id: arXiv:2407.00079
+  arxiv_id: '2407.00079'
+- canonical_id: DOI:10.5555/3277332.3277335
+  doi: 10.5555/3277332.3277335
+- canonical_id: arXiv:2410.10819
+- canonical_id: arXiv:2309.17453
+- canonical_id: arXiv:2405.16444
+  arxiv_id: '2405.16444'
+- canonical_id: arXiv:2512.18194
+  arxiv_id: '2512.18194'
+- canonical_id: DOI:10.1609/aaai.v33i01.33019127
+  doi: 10.1609/aaai.v33i01.33019127
+- canonical_id: arXiv:2306.14048
+  doi: 10.52202/075280-1506
+- canonical_id: DOI:10.52202/079017-2000
+  doi: 10.52202/079017-2000
+- canonical_id: arXiv:2401.09670
+references_checked_at: '2026-10-17'
+references_source: crossref-deposited-reference-metadata
+references_total: 34
 ---
 
 # To Keep or Not to Keep：分離LLMサービングにおける学習型KVキャッシュ保持
