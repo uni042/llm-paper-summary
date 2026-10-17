@@ -29,6 +29,8 @@ quality_self_review_version: 'PAPER-QUALITY-GUIDE-2026-10-07'
 returned_research_repair: true
 returned_research_original_failure: '説明不足トリガー: 手法説明量 0 < 700'
 returned_research_source_note: 'GitHub blocked receiptの同一原稿を方法節の見出し契約に適合させて修復。本文の数値・一次資料根拠は維持。'
+last_audited: null
+audit_version: 0
 ---
 
 # MaverIQ：小型指紋モデルによる推論性能外挿とGPU断片領域への不均等層配置

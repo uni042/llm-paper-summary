@@ -3,7 +3,7 @@
 複数requestを複数GPU / nodeで処理するLLM servingについて、request順、batch、prefill / decodeのGPU配分、KV再利用・転送、request移動などを調整し、latencyとresource効率を改善する研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（366本）
+## 自動生成の論文一覧（368本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -772,6 +772,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   出力長と各GPUの実効処理能力を予測し、SLOを満たす必要十分なGPUへ割り当て、実行中の違反リスクを軽量移行で補正してグッドプットを最大27.4%改善する。
 
+- **2026-05 · [Fine-Tuning and Serving Gemma 4 31B on Google Cloud TPU: A Technical Comparison with GPU Baselines](2026-2605.25645-fine-tuning-and-serving-gemma-4-31b-on-google-cloud-tpu-a-technical-comp.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  本論文は、Gemma 4 31BをTPU v5p-8上で低ランク適応（LoRA）によって教師あり微調整し、TPU v6e-8上のvLLMで推論提供するための具体的な移植手順と、2基のNVIDIA H100 GPUとの実測比較をまとめる。学習ではTPU v5p-8が3.34時間、2×H100が5.39時間で、時間比は1.61倍。
+
 - **2026-05 · [Fail-Closed Lowering of Resident KV Claims onto LLM Serving Runtimes](2026-2606.01387-fail-closed-lowering-of-resident-kv-claims-onto-llm-serving-runtimes.md)**  
   実装：[✓](https://github.com/gustavgauge/resident-kv-lowering-artifact) ・ リポジトリ内被引用：0  
   大規模言語モデルの推論基盤には、鍵・値キャッシュ（KVキャッシュ）の保持優先度、期限、CPU・ストレージへの退避、ブロックの保存・削除イベント、退避禁止、キャッシュ状態を考慮した経路選択などがある。
@@ -883,6 +887,10 @@
 - **2025-12 · [MS-SSM: A Multi-Scale State Space Model for Efficient Sequence Modeling](2025-2512.23824-ms-ssm-a-multi-scale-state-space-model-for-efficient-sequence-modeling.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   状態空間モデル（state space モデル; SSM）は、過去の情報を有限次元の内部状態へ圧縮し、入力を逐次取り込むことで長い系列を効率よく処理する。ListOpsの階層演算予測ではMambaの38.02%に対してMS-SSM(S6)は63.04%、MS-SSM(S4)は62.83%を報告する。
+
+- **2025-11 · [MaverIQ: Fingerprint-Guided Extrapolation and Fragmentation-Aware Layering for Intent-Based LLM Serving](2025-ef9c70168212-maveriq-fingerprint-guided-extrapolation-and-fragmentation-aware-layerin.md)**  
+  実装：[✓](https://github.com/UT-SysML/MaverIQ) ・ リポジトリ内被引用：0  
+  MaverIQは、大規模言語モデル（Large Language モデル; LLM）の推論サービスを配備する際、利用者が「遅延を最小化したい」「費用上限を守りたい」「精度を落とせない」といった目的を指定するだけで、モデル圧縮、テンソル並列（テンソル Parallelism; TP）、パイプライン並列（パイプライン Parallelism…
 
 - **2025-11 · [FailSafe: High-performance Resilient Serving](2025-2511.14116-failsafe-resilient-tensor-parallel-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -1376,10 +1384,6 @@
   実装：✓ ・ リポジトリ内被引用：7  
   Aladdinは、複数GPUで大規模言語モデルの推論要求を処理するとき、各要求をどのワーカーへ配置するかと、ワーカーを何台・何GPU構成で用意するかを共同で決めるクラスタスケジューラである。
 
-- **2024-03 · [LLM-PQ: Serving LLM on Heterogeneous Clusters with Phase-Aware Partition and Adaptive Quantization](2024-2403.01136-llm-pq-serving-llm-on-heterogeneous-clusters-with-phase-aware-partition-.md)**  
-  実装：[✓](https://github.com/tonyzhao-jt/LLM-PQ) ・ リポジトリ内被引用：7  
-  LLM-PQは、性能とメモリ容量が異なるGPUを組み合わせたクラスタで、大規模言語モデル（LLM）の一括推論を高速化するシステムである。異種構成でPipeEdgeを基準にした生成処理量の改善は平均2.26倍、最大2.88倍である。
-
 - **2024-10 · [GraphRouter: A Graph-based Router for LLM Selections](2024-2410.03834-graphrouter-a-graph-based-router-for-llm-selections.md)**  
   実装：[✓](https://github.com/ulab-uiuc/GraphRouter) ・ リポジトリ内被引用：6  
   常に最大モデルを使うと費用が高く、常に最小モデルを使うと精度が不足する。従来の二択ルータやモデル名だけを埋め込む方式では、候補モデルが増えた場合や新しいモデルが登場した場合に適切な選択が難しい。原著の主表では、品質と費用を同等に重視した条件の報酬が0.209となり、比較対象の最高0.196を上回った。
@@ -1391,6 +1395,10 @@
 - **2024-06 · [Enabling Efficient Batch Serving for LMaaS via Generation Length Prediction](2024-2406.04785-enabling-efficient-batch-serving-for-lmaas-via-generation-length-prediction.md)**  
   実装：✓ ・ リポジトリ内被引用：6  
   入力長・アプリ・利用者特徴から生成長を予測し、近い長さを適応バッチ化してHRRNで順序付けするMagnusにより、スループット最大234%向上・応答時間最大89.7%削減を達成する。
+
+- **2024-03 · [LLM-PQ: Serving LLM on Heterogeneous Clusters with Phase-Aware Partition and Adaptive Quantization](2024-2403.01136-llm-pq-serving-llm-on-heterogeneous-clusters-with-phase-aware-partition-.md)**  
+  実装：[✓](https://github.com/tonyzhao-jt/LLM-PQ) ・ リポジトリ内被引用：6  
+  LLM-PQは、性能とメモリ容量が異なるGPUを組み合わせたクラスタで、大規模言語モデル（LLM）の一括推論を高速化するシステムである。異種構成でPipeEdgeを基準にした生成処理量の改善は平均2.26倍、最大2.88倍である。
 
 - **2024-06 · [Slice-Level Scheduling for High-Throughput and Load-Balanced LLM Serving](2024-2406.13511-slice-level-scheduling-for-high-throughput-and-load-balanced-llm-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：5  
@@ -1423,7 +1431,7 @@
 ### 4年前（2022-11〜2023-10）
 
 - **2023-09 · [Efficient Memory Management for Large Language Model Serving with PagedAttention](2023-2309.06180-vllm-pagedattention-efficient-memory-management.md)**  
-  実装：[✓](https://github.com/vllm-project/vllm) ・ リポジトリ内被引用：1059  
+  実装：[✓](https://github.com/vllm-project/vllm) ・ リポジトリ内被引用：1057  
   vLLMは、要求ごとに大きな連続領域を予約していたKVキャッシュを固定長ブロックへ分解し、論理的な並びとGPU上の物理配置を分離する。必要なブロックだけ動的に割り当て、同じ接頭辞のKVを共有することで、限られたGPUメモリへより多くの要求を同時に載せる。
 
 - **2023-02 · [AlpaServe: Statistical Multiplexing with Model Parallelism for Deep Learning Serving](2023-2302.11665-alpaserve.md)**  
@@ -1457,7 +1465,7 @@
 ### 5年前（2021-11〜2022-10）
 
 - **2022-07 · [Orca: A Distributed Serving System for Transformer-Based Generative Models](2022-osdi22-orca-iteration-level-scheduling-selective-batching.md)**  
-  実装：✓ ・ リポジトリ内被引用：480  
+  実装：✓ ・ リポジトリ内被引用：478  
   出力トークンを1個生成するたびにスケジューラへ制御を戻し、終わった要求を外して新着要求を追加する。さらに、長さの違う要求を同じバッチで処理できるよう、注意機構だけを要求ごとに分け、それ以外の演算はトークン単位でまとめて実行する分散LLMサービングシステム。
 
 - **2022-04 · [Accelerating Attention through Gradient-Based Learned Runtime Pruning](2022-2204.03227-accelerating-attention-through-gradient-based-learned-runtime-pruning.md)**  

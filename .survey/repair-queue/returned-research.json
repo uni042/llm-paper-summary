@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-17T07:34:38+00:00",
+  "generated_at": "2026-10-17T08:03:48+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 171,
+  "count": 169,
   "entries": [
     {
       "canonical_id": "DOI:10.1145/3714983.3714987",
@@ -2959,34 +2959,6 @@
       "worker_run_key": "20261015-1803-scheduled-chat-00/r01"
     },
     {
-      "canonical_id": "arXiv:2511.16786",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-16T14:52:36+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 121 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 4862,
-        "body_paragraphs": 28,
-        "method_chars": 1316,
-        "method_paragraphs": 9,
-        "evaluation_chars": 121,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "評価説明量 121 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-1cb5500c9fb9--libfile_f6ed9476f1988191abce699d02b0eef7--2025-2511.16786-flashcache-frequency-outlier-kv-research-20261015-2300-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-1cb5500c9fb9--libfile_f6ed9476f1988191abce699d02b0eef7--2025-2511.16786-flashcache-frequency-outlier-kv-research-20261015-2300-scheduled-chat-00-.json",
-      "worker_run_key": "20261015-2300-scheduled-chat-00/r01"
-    },
-    {
       "canonical_id": "arXiv:2503.00979",
       "title": null,
       "source_url": null,
@@ -3851,33 +3823,6 @@
       "worker_run_key": "20261015-1803-scheduled-chat-00/r01"
     },
     {
-      "canonical_id": "DOI:10.1145/3712285.3759867",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-16T16:25:08+00:00",
-      "return_count": 4,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 6603,
-        "body_paragraphs": 34,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 946,
-        "limitation_chars": 783,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-f78887fb77ce--libfile_015daa53de0c81918da6933d5fd335a4--2025-doi-10.1145-3712285.3759867-maveriq-fingerprint-fragmentation-research-20261016-1930-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-f78887fb77ce--libfile_015daa53de0c81918da6933d5fd335a4--2025-doi-10.1145-3712285.3759867-maveriq-fingerprint-fragmentation-research-20261016-1930.json",
-      "worker_run_key": "20261016-1930-scheduled-chat-30/r01"
-    },
-    {
       "canonical_id": "arXiv:2605.24144",
       "title": null,
       "source_url": null,
@@ -4377,8 +4322,8 @@
     },
     {
       "canonical_id": "arXiv:2603.14785",
-      "title": "SkipOPU: An FPGA-based Overlay Processor for Large Language Models with Dynamically Allocated Computation",
-      "source_url": "https://arxiv.org/abs/2603.14785",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-17T07:28:28+00:00",
       "return_count": 1,
       "assigned_worker": "scheduled-chat-45",
@@ -4401,36 +4346,9 @@
       "worker_run_key": "20261017-0230-scheduled-chat-30/r01"
     },
     {
-      "canonical_id": "arXiv:2410.11305",
-      "title": "QSpec: Speculative Decoding with Complementary Quantization Schemes",
-      "source_url": "https://aclanthology.org/2025.emnlp-main.240.pdf",
-      "returned_at": "2026-10-17T07:28:30+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "16KB未満再監査: 手法説明量 0 < 700"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 3732,
-        "body_paragraphs": 19,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 799,
-        "limitation_chars": 582,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-20261017-exact--libfile_8b95b15a86e0819181befcb9a617d273.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-20261017-exact--libfile_8b95b15a86e0819181befcb9a617d273.json",
-      "worker_run_key": "20261017-1530-scheduled-chat-30/r01"
-    },
-    {
       "canonical_id": "arXiv:2602.05853",
-      "title": "RRAttention: Dynamic Block Sparse Attention via Per-Head Round-Robin Shifts for Long-Context Inference",
-      "source_url": "https://aclanthology.org/2026.acl-long.1199.pdf",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-17T07:28:57+00:00",
       "return_count": 1,
       "assigned_worker": "scheduled-chat-45",
@@ -4454,8 +4372,8 @@
     },
     {
       "canonical_id": "arXiv:2204.03227",
-      "title": "Accelerating Attention through Gradient-Based Learned Runtime Pruning",
-      "source_url": "https://arxiv.org/html/2204.03227v3",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-17T07:31:33+00:00",
       "return_count": 1,
       "assigned_worker": "scheduled-chat-00",
@@ -4476,6 +4394,33 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_d05f65204a80819195495b548582b530--2022-2204.03227-leopard-gradient-runtime-pruning-research-20261015-1104-scheduled-chat-00-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_d05f65204a80819195495b548582b530--2022-2204.03227-leopard-gradient-runtime-pruning-research-20261015-1104-scheduled-chat-00-r01.json",
       "worker_run_key": "20261015-1104-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2603.23483",
+      "title": "SpecEyes: Accelerating Agentic Multimodal LLMs via Speculative Perception and Planning",
+      "source_url": "https://arxiv.org/html/2603.23483v2",
+      "returned_at": "2026-10-17T08:02:49+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 382 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 6743,
+        "body_paragraphs": 40,
+        "method_chars": 2016,
+        "method_paragraphs": 11,
+        "evaluation_chars": 382,
+        "limitation_chars": 985,
+        "insufficiency_flags": [
+          "評価説明量 382 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_ed2138abe8e8819195c508b4cd44be18--2026-2603.23483-speceyes-agentic-multimodal-speculation-research-20261017-0730-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_ed2138abe8e8819195c508b4cd44be18--2026-2603.23483-speceyes-agentic-multimodal-speculation-research-20261017-0730-scheduled-chat-30-r01.json",
+      "worker_run_key": "20261017-0730-scheduled-chat-30/r01"
     }
   ]
 }

@@ -35,10 +35,15 @@
   "selection_reason": "Uses inexpensive pseudo lookahead queries to align cache-eviction importance with decoding queries, improving quality under constrained LLM KV-cache budgets.",
   "semantic_scholar_id": "b19879903aa52d9688373af1079ab1ef212d6ca8",
   "source_url": "https://arxiv.org/abs/2505.20334",
-  "status": "ready",
+  "status": "superseded",
   "title": "Lookahead Q-Cache: Achieving More Consistent KV Cache Eviction via Pseudo Query",
   "type": "research",
   "venue": "Conference on Empirical Methods in Natural Language Processing",
   "workflow_version": 10,
-  "year": 2025
+  "year": 2025,
+  "superseded_at": "2026-10-17T08:03:47+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2025-2505.20334-lookahead-q-cache-achieving-more-consistent-kv-cache-eviction-via-pseudo.md",
+  "represented_canonical_id": "arXiv:2505.20334",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
