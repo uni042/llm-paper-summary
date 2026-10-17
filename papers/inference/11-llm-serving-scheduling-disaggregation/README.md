@@ -1104,7 +1104,7 @@
 
 - **2025-05 · [PrefillOnly: An Inference Engine for Prefill-only Workloads in Large Language Model Applications](2025-2505.07203-prefillonly-an-inference-engine-for-prefill-only-workloads-in-large-language-model-applications.md)**  
   実装：✓ ・ リポジトリ内被引用：5  
-  PrefillOnlyは、推薦・信用審査・ラベル付けのように「長い入力を読むが出力は1トークンだけ」というプリフィル専用（プリフィル-only）要求へ通常の生成エンジンをそのまま使う無駄を取り除く。後続デコードで再利用しないキー・バリュー（Key-Value; KV）キャッシュを全層分保持せず、固定出力長から完了時間を予測して要求を並べ替える。
+  提案方式PrefillOnlyは、①注意機構以外の演算だけを分割する混成事前充填（hybrid prefilling）、②将来使わない接尾辞の鍵値キャッシュ（key-value キャッシュ; KVキャッシュ）の破棄、③接頭辞のキャッシュ命中状態を反映したジョブ完了時間（job completion time; JCT）の継続的な再推定を統合する。
 
 - **2025-04 · [SLO-Aware Scheduling for Large Language Model Inferences](2025-2504.14966-slo-aware-scheduling-for-large-language-model-inferences.md)**  
   実装：✓ ・ リポジトリ内被引用：5  
