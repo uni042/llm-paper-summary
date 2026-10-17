@@ -1237,7 +1237,7 @@
 ### 3年前（2023-11〜2024-10）
 
 - **2023-12 · [SGLang: Efficient Execution of Structured Language Model Programs](2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md)**  
-  実装：[✓](https://github.com/sgl-project/sglang) ・ リポジトリ内被引用：492  
+  実装：[✓](https://github.com/sgl-project/sglang) ・ リポジトリ内被引用：493  
   複数のLLM呼び出しや条件分岐をランタイムが1つのプログラムとして理解し、共有接頭辞のKV再利用・並列実行・構造化出力生成をまとめて効率化する推論システム。
 
 - **2024-07 · [DistServe: Disaggregating Prefill and Decoding for Goodput-optimized Large Language Model Serving](2024-2401.09670-distserve-disaggregating-prefill-decoding-goodput.md)**  
@@ -1305,7 +1305,7 @@
   正確な生成長を当てる代わりに「どの要求が相対的に短いか」を学習し、その順位で連続バッチ処理を並べ替える。OPT-125M級の補助予測器、ListMLE、要求飢餓を防ぐ優先度昇格を組み合わせ、先着順より最短ジョブ優先に近い配信を実現する。
 
 - **2024-04 · [LoongServe: Efficiently Serving Long-Context Large Language Models with Elastic Sequence Parallelism](2024-2404.09526-loongserve-efficiently-serving-long-context-large-language-models-with-e.md)**  
-  実装：[✓](https://github.com/LoongServe/LoongServe) ・ リポジトリ内被引用：50  
+  実装：[✓](https://github.com/LoongServe/LoongServe) ・ リポジトリ内被引用：51  
   従来の固定テンソル並列は事前充填に必要な多数のGPUを復号中にも占有し、逆に固定の事前充填・復号分離は各GPU群の遊休容量を相互利用できない。著者のSOSP 2024論文では、8基のNVIDIA A800を用いた長文脈モデルの評価で、最大処理率がチャンク化事前充填方式比で最大3.85倍、事前充填・復号分離方式比で最大5.81倍となった。
 
 - **2023-12 · [Stateful Large Language Model Serving with Pensieve](2023-2312.05516-pensieve-stateful-large-language-model-serving.md)**  
@@ -1404,13 +1404,13 @@
   実装：✓ ・ リポジトリ内被引用：5  
   SCLS（スライス単位スケジューリング）は、LLMの応答長が要求到着時に分からないことから生じる二つの資源浪費を解消するサービング手法である。著者らはAnt GroupのCodeFuse実運用要求記録を用い、8台のNVIDIA A100 80GBでLLaMA2-13Bを動かした。
 
+- **2024-04 · [Prepacking: A Simple Method for Fast Prefilling and Increased Throughput in Large Language Models](2024-2404.09529-prepacking-a-simple-method-for-fast-prefilling-and-increased-throughput-in-large-language-models.md)**  
+  実装：[✓](https://github.com/siyan-zhao/prepacking) ・ リポジトリ内被引用：5  
+  Prepackingは、長さの異なる複数の入力プロンプトを一括処理する際、短いプロンプトを最長プロンプトまでパディングすることで発生する無駄な計算とGPUメモリ消費を減らす方式である。論文は単一のNVIDIA A6000-48GBで、1.3Bから13Bまでのモデルを使って検証する。
+
 - **2024-02 · [FlexLLM: Token-Level Co-Serving of LLM Inference and Finetuning with SLO Guarantees](2024-2402.18789-flexllm-token-level-co-serving-of-llm-inference-and-finetuning.md)**  
   実装：[✓](https://github.com/FlexLLM/artifact) ・ リポジトリ内被引用：5  
   推論要求を優先しながら、パラメータ効率微調整（PEFT）の順伝播と逆伝播をトークン窓へ分解し、同じ基盤モデルを使うGPU反復へ混載する。推論の遅延制約を満たす範囲で学習トークン数を動的に選び、分離クラスタ方式より学習処理量を増やすシステムである。
-
-- **2024-04 · [Prepacking: A Simple Method for Fast Prefilling and Increased Throughput in Large Language Models](2024-2404.09529-prepacking-a-simple-method-for-fast-prefilling-and-increased-throughput-in-large-language-models.md)**  
-  実装：[✓](https://github.com/siyan-zhao/prepacking) ・ リポジトリ内被引用：4  
-  Prepackingは、長さの異なる複数の入力プロンプトを一括処理する際、短いプロンプトを最長プロンプトまでパディングすることで発生する無駄な計算とGPUメモリ消費を減らす方式である。論文は単一のNVIDIA A6000-48GBで、1.3Bから13Bまでのモデルを使って検証する。
 
 - **2024-08 · [SLO-aware GPU Frequency Scaling for Energy Efficient LLM Inference Serving](2024-2408.05235-slo-aware-gpu-frequency-scaling-for-energy-efficient-llm-inference-serving.md)**  
   実装：[✓](https://github.com/WilliamBlaskowicz/throttLL-eM) ・ リポジトリ内被引用：3  
@@ -1431,7 +1431,7 @@
 ### 4年前（2022-11〜2023-10）
 
 - **2023-09 · [Efficient Memory Management for Large Language Model Serving with PagedAttention](2023-2309.06180-vllm-pagedattention-efficient-memory-management.md)**  
-  実装：[✓](https://github.com/vllm-project/vllm) ・ リポジトリ内被引用：1076  
+  実装：[✓](https://github.com/vllm-project/vllm) ・ リポジトリ内被引用：1078  
   vLLMは、要求ごとに大きな連続領域を予約していたKVキャッシュを固定長ブロックへ分解し、論理的な並びとGPU上の物理配置を分離する。必要なブロックだけ動的に割り当て、同じ接頭辞のKVを共有することで、限られたGPUメモリへより多くの要求を同時に載せる。
 
 - **2023-02 · [AlpaServe: Statistical Multiplexing with Model Parallelism for Deep Learning Serving](2023-2302.11665-alpaserve.md)**  

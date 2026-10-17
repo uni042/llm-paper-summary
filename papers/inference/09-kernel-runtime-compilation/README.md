@@ -337,7 +337,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   しかし、数千の個別化モデルを同時提供する場合、アダプタの保存先、要求ごとの重み切替、系列長に応じて伸びる鍵・値キャッシュ、異なる低ランク行列を使う要求のバッチ化が問題になる。アダプタを基盤モデルへ統合して個別のモデル重みを作る方式では、基盤部分を要求間で共有してまとめて計算する機会を失う。
 
 - **2024-02 · [Simple linear attention language models balance the recall-throughput tradeoff](2024-2402.18668-simple-linear-attention-language-models-balance-the-recall-throughput-tr.md)**  
-  実装：[✓](https://github.com/HazyResearch/based) ・ リポジトリ内被引用：21  
+  実装：[✓](https://github.com/HazyResearch/based) ・ リポジトリ内被引用：22  
   通常のソフトマックス注意（softmax 注意機構）は、入力文脈に含まれる特定の情報を後から正確に参照する再取得（recall）に強い。モデル規模360M～1.3B、最大50Bトークンの学習、単一NVIDIA H100での実行測定を行い、1.3B・バッチ128・1024トークン生成でFlashAttention-2比最大24倍の処理量を報告する。
 
 - **2024-04 · [CATS: Contextually-Aware Thresholding for Sparsity in Large Language Models](2024-2404.08763-cats-contextually-aware-thresholding-for-sparsity-in-large-language-mode.md)**  
@@ -443,7 +443,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   提案システムは、GEMM（行列積）間の演算融合とSoftmax・LayerNormの並列縮約、系列長を受け取ってから行う中間領域の再利用、実測コストを使う動的計画法による要求バッチ分割を組み合わせる。
 
 - **2021-03 · [Random Feature Attention](2021-2103.02143-random-feature-attention.md)**  
-  実装：[✓](https://github.com/haopeng-nlp/transformer-rfa) ・ リポジトリ内被引用：8  
+  実装：[✓](https://github.com/haopeng-nlp/transformer-rfa) ・ リポジトリ内被引用：9  
   本論文が扱うのは、標準的な指数正規化注意（softmax 注意機構）において、各質問ベクトルが過去のすべての鍵ベクトルと内積を計算するため、自己回帰復号で生成長が増すほど注意処理が重くなる問題である。
 
 ### 7年前（2019-11〜2020-10）
