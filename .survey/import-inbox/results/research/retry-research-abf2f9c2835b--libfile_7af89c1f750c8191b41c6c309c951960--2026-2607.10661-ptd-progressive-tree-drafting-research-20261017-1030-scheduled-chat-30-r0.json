@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "e5954ddf4fe1b3ab0fad5f9b6b4dd92d562164de767ee8352ec1842afc917606",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/retry-research-abf2f9c2835b--libfile_7af89c1f750c8191b41c6c309c951960--2026-2607.10661-ptd-progressive-tree-drafting-research-20261017-1030-scheduled-chat-30-r01.md",
+  "canonical_id": "arXiv:2607.10661",
+  "worker_completed_at": "2026-10-17T10:38:20+09:00",
+  "worker_run_key": "20261017-1030-scheduled-chat-30/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 4740,
+    "body_paragraphs": 28,
+    "method_chars": 0,
+    "method_paragraphs": 0,
+    "evaluation_chars": 0,
+    "limitation_chars": 0,
+    "insufficiency_flags": [
+      "手法説明量 0 < 700",
+      "評価説明量 0 < 500",
+      "限界説明量 0 < 推奨 120"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 手法説明量 0 < 700",
+    "説明不足トリガー: 評価説明量 0 < 500"
+  ],
+  "processed_at": "2026-10-17T17:03:43+00:00"
+}

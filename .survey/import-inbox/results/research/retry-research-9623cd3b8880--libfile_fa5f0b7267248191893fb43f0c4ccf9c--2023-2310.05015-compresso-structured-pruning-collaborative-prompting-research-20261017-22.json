@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "50b9633a31869434448e5a15ad4c298998ed4889850d3a6e3ea4b2c6df0687e4",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/retry-research-9623cd3b8880--libfile_fa5f0b7267248191893fb43f0c4ccf9c--2023-2310.05015-compresso-structured-pruning-collaborative-prompting-research-20261017-2255-scheduled-chat-30-r01.md",
+  "canonical_id": "arXiv:2310.05015",
+  "worker_completed_at": "2026-10-17T23:09:00+09:00",
+  "worker_run_key": "20261017-2255-scheduled-chat-30/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 4850,
+    "body_paragraphs": 25,
+    "method_chars": 1920,
+    "method_paragraphs": 11,
+    "evaluation_chars": 0,
+    "limitation_chars": 0,
+    "insufficiency_flags": [
+      "評価説明量 0 < 500",
+      "限界説明量 0 < 推奨 120"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 評価説明量 0 < 500",
+    "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2023-2310.05015-compresso-structured-pruning-with-collaborative-prompting-learns-compact.md と 17 段落 / 3711文字 (100.0%) が完全一致"
+  ],
+  "processed_at": "2026-10-17T17:03:42+00:00"
+}

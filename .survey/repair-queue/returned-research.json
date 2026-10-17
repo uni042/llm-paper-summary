@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-17T16:56:24+00:00",
+  "generated_at": "2026-10-17T17:03:43+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 149,
+  "count": 152,
   "entries": [
     {
       "canonical_id": "DOI:10.1145/3714983.3714987",
@@ -2929,65 +2929,6 @@
       "worker_run_key": "20261017-0600-scheduled-chat-00/r01"
     },
     {
-      "canonical_id": "arXiv:2608.08237",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-17T05:11:32+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700",
-        "説明不足トリガー: 評価説明量 0 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 4963,
-        "body_paragraphs": 30,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 0,
-        "limitation_chars": 617,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700",
-          "評価説明量 0 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_19398017de288191a04cb82a7bb7c07b--2026-2608.08237-sage-slo-aware-adaptive-rag-retrieval-research-20261017-1030-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_19398017de288191a04cb82a7bb7c07b--2026-2608.08237-sage-slo-aware-adaptive-rag-retrieval-research-20261017-1030-scheduled-chat-30-r01.json",
-      "worker_run_key": "20261017-1030-scheduled-chat-30/r01"
-    },
-    {
-      "canonical_id": "arXiv:2607.10661",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-17T05:12:24+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700",
-        "説明不足トリガー: 評価説明量 0 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 4740,
-        "body_paragraphs": 28,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 0,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700",
-          "評価説明量 0 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_7af89c1f750c8191b41c6c309c951960--2026-2607.10661-ptd-progressive-tree-drafting-research-20261017-1030-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_7af89c1f750c8191b41c6c309c951960--2026-2607.10661-ptd-progressive-tree-drafting-research-20261017-1030-scheduled-chat-30-r01.json",
-      "worker_run_key": "20261017-1030-scheduled-chat-30/r01"
-    },
-    {
       "canonical_id": "arXiv:2605.11093",
       "title": null,
       "source_url": null,
@@ -3808,8 +3749,8 @@
     },
     {
       "canonical_id": "arXiv:2606.13707",
-      "title": "Orchestra-o1: Omnimodal Agent Orchestration",
-      "source_url": "https://arxiv.org/abs/2606.13707",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-17T16:54:57+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-00",
@@ -3836,8 +3777,8 @@
     },
     {
       "canonical_id": "arXiv:2604.26963",
-      "title": "MARS: Efficient, Adaptive Co-Scheduling for Heterogeneous Agentic Systems",
-      "source_url": "https://arxiv.org/html/2604.26963v2",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-17T16:54:59+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-45",
@@ -3860,6 +3801,149 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-7cd698f56b98--libfile_4527362751b8819195e101100fcd882e--2026-2604.26963-mars-agentic-gpu-cpu-coscheduling-research-20261014-1530-scheduled-chat-30-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-7cd698f56b98--libfile_4527362751b8819195e101100fcd882e--2026-2604.26963-mars-agentic-gpu-cpu-coscheduling-research-20261014-1530-scheduled-chat-3.json",
       "worker_run_key": "20261014-1530-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2511.19480",
+      "title": "Exploiting the Experts: Unauthorized Compression in MoE-LLMs",
+      "source_url": "https://arxiv.org/abs/2511.19480",
+      "returned_at": "2026-10-17T17:03:38+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2025-2511.19480-exploiting-the-experts-unauthorized-compression-in-moe-llms.md と 14 段落 / 3100文字 (100.0%) が完全一致"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 4464,
+        "body_paragraphs": 22,
+        "method_chars": 1427,
+        "method_paragraphs": 7,
+        "evaluation_chars": 1047,
+        "limitation_chars": 386,
+        "insufficiency_flags": []
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-20261017-limit-normalized--libfile_8fe5e67cf7708191ae94a4b90a8ee684--2025-2511.19480-exploiting-experts.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-20261017-limit-normalized--libfile_8fe5e67cf7708191ae94a4b90a8ee684--2025-2511.19480-exploiting-experts.json",
+      "worker_run_key": "20261015-0410-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2505.22913",
+      "title": "Mustafar: Promoting Unstructured Sparsity for KV Cache Pruning in LLM Inference",
+      "source_url": "https://arxiv.org/html/2505.22913v2",
+      "returned_at": "2026-10-17T17:03:39+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700",
+        "説明不足トリガー: 評価説明量 0 < 500",
+        "長文定型文の再利用を検出: papers/inference/07-kv-cache-optimization-compression/2025-2505.22913-mustafar-promoting-unstructured-sparsity-for-kv-cache-pruning-in-llm-inf.md と 30 段落 / 7078文字 (100.0%) が完全一致"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 8723,
+        "body_paragraphs": 45,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 0,
+        "limitation_chars": 713,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700",
+          "評価説明量 0 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-806e89215fd1--libfile_3402febe50e88191bb0fc12b537e085b--2025-2505.22913-mustafar-kv-cache-unstructured-sparsity-research-20261018-0030-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-806e89215fd1--libfile_3402febe50e88191bb0fc12b537e085b--2025-2505.22913-mustafar-kv-cache-unstructured-sparsity-research-20261018-0030-scheduled-.json",
+      "worker_run_key": "20261018-0030-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2608.08237",
+      "title": "SAGE: SLO-Aware Adaptive Retrieval for Production RAG Systems",
+      "source_url": "https://arxiv.org/html/2608.08237v1",
+      "returned_at": "2026-10-17T17:03:41+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700",
+        "説明不足トリガー: 評価説明量 0 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 4963,
+        "body_paragraphs": 30,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 0,
+        "limitation_chars": 617,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700",
+          "評価説明量 0 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-8701acff77e9--libfile_19398017de288191a04cb82a7bb7c07b--2026-2608.08237-sage-slo-aware-adaptive-rag-retrieval-research-20261017-1030-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-8701acff77e9--libfile_19398017de288191a04cb82a7bb7c07b--2026-2608.08237-sage-slo-aware-adaptive-rag-retrieval-research-20261017-1030-scheduled-ch.json",
+      "worker_run_key": "20261017-1030-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2310.05015",
+      "title": "Compresso: Structured Pruning with Collaborative Prompting Learns Compact Large Language Models",
+      "source_url": "https://arxiv.org/abs/2310.05015",
+      "returned_at": "2026-10-17T17:03:42+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 0 < 500",
+        "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2023-2310.05015-compresso-structured-pruning-with-collaborative-prompting-learns-compact.md と 17 段落 / 3711文字 (100.0%) が完全一致"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 4850,
+        "body_paragraphs": 25,
+        "method_chars": 1920,
+        "method_paragraphs": 11,
+        "evaluation_chars": 0,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "評価説明量 0 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-9623cd3b8880--libfile_fa5f0b7267248191893fb43f0c4ccf9c--2023-2310.05015-compresso-structured-pruning-collaborative-prompting-research-20261017-2255-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-9623cd3b8880--libfile_fa5f0b7267248191893fb43f0c4ccf9c--2023-2310.05015-compresso-structured-pruning-collaborative-prompting-research-20261017-22.json",
+      "worker_run_key": "20261017-2255-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2607.10661",
+      "title": "Unlocking Parallelism in Autoregressive Language Models via Speculative Decoding with Progressive Tree Drafting",
+      "source_url": "https://arxiv.org/html/2607.10661v1",
+      "returned_at": "2026-10-17T17:03:43+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700",
+        "説明不足トリガー: 評価説明量 0 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 4740,
+        "body_paragraphs": 28,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 0,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700",
+          "評価説明量 0 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-abf2f9c2835b--libfile_7af89c1f750c8191b41c6c309c951960--2026-2607.10661-ptd-progressive-tree-drafting-research-20261017-1030-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-abf2f9c2835b--libfile_7af89c1f750c8191b41c6c309c951960--2026-2607.10661-ptd-progressive-tree-drafting-research-20261017-1030-scheduled-chat-30-r0.json",
+      "worker_run_key": "20261017-1030-scheduled-chat-30/r01"
     }
   ]
 }
