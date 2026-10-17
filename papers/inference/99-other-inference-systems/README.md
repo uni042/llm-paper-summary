@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（725本）
+## 自動生成の論文一覧（727本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -1192,6 +1192,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   多くの既存削減方式は、視覚符号化器が全トークンを処理した後に削減を行うため、後段の言語モデルの事前入力処理は軽くできても、視覚符号化器がすでに使った演算量は取り戻せない。
 
+- **2026-03 · [EntropyCache: Decoded Token Entropy Guided KV Caching for Diffusion Language Models](2026-2603.18489-entropycache-decoded-token-entropy-guided-kv-caching-for-diffusion-langu.md)**  
+  実装：[✓](https://github.com/mscheong01/EntropyCache) ・ リポジトリ内被引用：0  
+  自己回帰型言語モデルの因果注意では、過去トークンの鍵・値（Key–Value; KV）表現は後続トークンの追加で変わらないため、過去KVを厳密に再利用できる。これに対して離散拡散言語モデル（discrete Diffusion Language モデル; dLLM）は双方向注意を使い、マスクされたトークンが一つ確定するだけで他の全位置の表現が変わり得る。
+
 - **2026-03 · [DASH: Dynamic Audio-Driven Semantic Chunking for Efficient Omnimodal Token Compression](2026-2603.15685-dash-dynamic-audio-driven-semantic-chunking-for-efficient-omnimodal-toke.md)**  
   実装：[✓](https://github.com/laychou666/DASH) ・ リポジトリ内被引用：0  
   LLMへ渡す前の入力列が長くなると、プリフィル（プリフィル）の注意演算とKVキャッシュのメモリ消費が増える。DASH（動的 Audio-driven Semantic cHunking）は、音声埋め込みの隣接トークンの変化を意味境界の手掛かりにし、音声と映像を可変長の区間へ分ける学習不要の圧縮方式である。
@@ -1515,6 +1519,10 @@
 - **2025-11 · [CLaRa: Bridging Retrieval and Generation with Continuous Latent Reasoning](2025-2511.18659-clara-bridging-retrieval-and-generation-with-continuous-latent-reasoning.md)**  
   実装：[✓](https://github.com/apple/ml-clara) ・ リポジトリ内被引用：0  
   CLaRa（Continuous Latent Reasoning）は、文書を少数の連続値メモリトークンへ圧縮し、その表現を文書検索と生成の双方に用いる。Mistral-7Bで16倍圧縮したSCPは、4質問応答課題の通常検索条件において平均CEM 38.96%を記録し、PISCOの37.83%を上回る。
+
+- **2025-11 · [Adaptive Layer-Wise Transformations for Post-Training Quantization of Large Language Models](2025-2511.17809-adaptive-layer-wise-transformations-for-post-training-quantization-of-la.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  大規模言語モデルの事後量子化（post-学習 量子化、PTQ）では、重みと活性値を低ビット整数へ丸める際、少数の外れ値に量子化範囲が引きずられて通常値の分解能が不足する。
 
 ### 2年前（2024-11〜2025-10）
 

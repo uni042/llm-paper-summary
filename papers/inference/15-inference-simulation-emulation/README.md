@@ -23,7 +23,7 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
 - [09-kernel-runtime-compilation](../09-kernel-runtime-compilation/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（30本）
+## 自動生成の論文一覧（31本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -99,6 +99,10 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
 - **2026-04 · [RouteNLP: Closed-Loop LLM Routing with Conformal Cascading and Distillation Co-Optimization](2026-2604.23577-routenlp-closed-loop-llm-routing-with-conformal-cascading-and-distillati.md)**  
   実装：[✓](https://github.com/bettyguo/RouteNLP) ・ リポジトリ内被引用：0  
   提案方式は、タスク条件付きの難易度予測器、共形リスク制御で初期化した品質確認付きの段階的移行、失敗した問い合わせを分類して小型モデルを再蒸留する閉ループという三つの機構を連結する。8週間・1日約5,000件の顧客サービス試験運用では、費用58%削減、専門家による応答受理率91%を報告した。
+
+- **2026-02 · [TOM: A Ternary Read-only Memory Accelerator for LLM-powered Edge Intelligence](2026-2602.20662-tom-a-ternary-read-only-memory-accelerator-for-llm-powered-edge-intellig.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  TOMは、三値重み（ternary 重み）を持つ大規模言語モデル（LLM）をエッジ端末で低遅延・低消費電力に動かすための、読出し専用メモリ（ROM）と静的ランダムアクセスメモリ（SRAM）の混合専用回路である。重みを毎トークン外部メモリから転送する方式と異なり、固定ベースモデルの重みをROMとしてオンチップへ焼き込み、各演算器の近くに分散配置する。
 
 - **2026-02 · [Harmonia: Algorithm-Hardware Co-Design for Memory- and Compute-Efficient BFP-based LLM Inference](2026-2602.04595-harmonia-algorithm-hardware-co-design-for-memory-and-compute-efficient-b.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

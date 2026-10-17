@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-17T05:58:02+00:00",
+  "generated_at": "2026-10-17T06:09:26+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 179,
+  "count": 178,
   "entries": [
     {
       "canonical_id": "DOI:10.1145/3714983.3714987",
@@ -2842,34 +2842,6 @@
       "worker_run_key": "20261014-1430-scheduled-chat-30/r01"
     },
     {
-      "canonical_id": "arXiv:2511.17809",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-15T15:10:39+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 6471,
-        "body_paragraphs": 33,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 673,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-ce9e0785e94d--libfile_1df25dfdb454819195a120fdf448abf7--2025-2511.17809-adaptive-layerwise-quantization-research-20261015-2330-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-ce9e0785e94d--libfile_1df25dfdb454819195a120fdf448abf7--2025-2511.17809-adaptive-layerwise-quantization-research-20261015-2330-scheduled-chat-30-.json",
-      "worker_run_key": "20261015-2330-scheduled-chat-30/r01"
-    },
-    {
       "canonical_id": "arXiv:2504.19720",
       "title": null,
       "source_url": null,
@@ -3733,33 +3705,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-80d07e638e0b--libfile_22eebea2972481919884d9a25ea43b52--2025-2511.07776-step-streaming-tensor-programs-research-20261016-0030-scheduled-chat-30-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-80d07e638e0b--libfile_22eebea2972481919884d9a25ea43b52--2025-2511.07776-step-streaming-tensor-programs-research-20261016-0030-scheduled-chat-30-r.json",
       "worker_run_key": "20261016-0030-scheduled-chat-30/r01"
-    },
-    {
-      "canonical_id": "arXiv:2603.18489",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-16T15:41:52+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 178 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5213,
-        "body_paragraphs": 28,
-        "method_chars": 1359,
-        "method_paragraphs": 8,
-        "evaluation_chars": 178,
-        "limitation_chars": 682,
-        "insufficiency_flags": [
-          "評価説明量 178 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-81f8dfe97ae8--libfile_4687a00721108191b154170bb8c1d04b--2026-2603.18489-entropycache-decoded-entropy-kv-research-20261016-0200-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-81f8dfe97ae8--libfile_4687a00721108191b154170bb8c1d04b--2026-2603.18489-entropycache-decoded-entropy-kv-research-20261016-0200-scheduled-chat-00-.json",
-      "worker_run_key": "20261016-0200-scheduled-chat-00/r01"
     },
     {
       "canonical_id": "arXiv:2606.05742",
@@ -4680,8 +4625,8 @@
     },
     {
       "canonical_id": "arXiv:2306.07174",
-      "title": "Augmenting Language Models with Long-Term Memory",
-      "source_url": "https://arxiv.org/html/2306.07174v1",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-17T05:54:46+00:00",
       "return_count": 1,
       "assigned_worker": "scheduled-chat-00",
@@ -4702,6 +4647,35 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_34a662b0db648191bebfd33ef3014e2d--2023-2306.07174-longmem-decoupled-long-term-memory-research-20261014-1645-scheduled-chat-45-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_34a662b0db648191bebfd33ef3014e2d--2023-2306.07174-longmem-decoupled-long-term-memory-research-20261014-1645-scheduled-chat-45-r01.json",
       "worker_run_key": "20261014-1645-scheduled-chat-45/r01"
+    },
+    {
+      "canonical_id": "arXiv:2608.02625",
+      "title": "Speculative Correction: Draft-then-Refine Decoding for Diffusion Language Models",
+      "source_url": "https://arxiv.org/html/2608.02625v1",
+      "returned_at": "2026-10-17T06:08:44+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700",
+        "説明不足トリガー: 評価説明量 0 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5428,
+        "body_paragraphs": 29,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 0,
+        "limitation_chars": 559,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700",
+          "評価説明量 0 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_6cf102c22dd08191bd7aeaa0b0d32143--2026-2608.02625-speculative-correction-diffusion-draft-refine-research-20261017-1030-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_6cf102c22dd08191bd7aeaa0b0d32143--2026-2608.02625-speculative-correction-diffusion-draft-refine-research-20261017-1030-scheduled-chat-30-r01.json",
+      "worker_run_key": "20261017-1030-scheduled-chat-30/r01"
     }
   ]
 }

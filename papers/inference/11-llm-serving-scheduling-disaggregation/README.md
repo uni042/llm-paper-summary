@@ -3,7 +3,7 @@
 複数requestを複数GPU / nodeで処理するLLM servingについて、request順、batch、prefill / decodeのGPU配分、KV再利用・転送、request移動などを調整し、latencyとresource効率を改善する研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（363本）
+## 自動生成の論文一覧（364本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -851,6 +851,10 @@
 - **2026-02 · [A State-Transition Framework for Efficient LLM Reasoning](2026-2602.01198-a-state-transition-framework-for-efficient-llm-reasoning.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   本研究は、長い思考連鎖（Chain-of-Thought; CoT）を生成する言語モデルで、思考トークンを短く削ることなく、過去の推論を保持するためのKVキャッシュと注意計算を減らす方式を提案する。Qwen2.5-1.5Bの数学5課題平均正答率は基盤モデルの51.5%から56.2%、平均推論遅延は300.0秒から253.0秒となった。
+
+- **2026-01 · [RelayGR: Scaling Long-Sequence Generative Recommendation via Cross-Stage Relay-Race Inference](2026-2601.01712-relaygr-scaling-long-sequence-generative-recommendation-via-cross-stage-.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  そこでRelayGRは、選択的な先行実行、利用者IDによる同一インスタンスへの振分け、ホストメモリへの短期退避を一体で設計する。
 
 - **2026-01 · [RAPID-Serve: Resource-efficient and Accelerated P/D Intra-GPU Disaggregation](2026-2601.11822-rapid-serve-intra-gpu-pd-disaggregation.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
