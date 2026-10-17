@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-17T15:36:41+00:00",
+  "generated_at": "2026-10-17T15:45:49+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 142,
+  "count": 145,
   "entries": [
     {
       "canonical_id": "DOI:10.1145/3714983.3714987",
@@ -3015,33 +3015,6 @@
       "worker_run_key": "20261017-1030-scheduled-chat-30/r01"
     },
     {
-      "canonical_id": "arXiv:2606.27791",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-17T05:12:25+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 209 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5156,
-        "body_paragraphs": 28,
-        "method_chars": 1467,
-        "method_paragraphs": 9,
-        "evaluation_chars": 209,
-        "limitation_chars": 856,
-        "insufficiency_flags": [
-          "評価説明量 209 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_83cb736106b08191b01ee109df11642b--2026-2606.27791-nll-guided-full-attention-layer-selection-research-20261017-1230-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_83cb736106b08191b01ee109df11642b--2026-2606.27791-nll-guided-full-attention-layer-selection-research-20261017-1230-scheduled-chat-30-r01.json",
-      "worker_run_key": "20261017-1230-scheduled-chat-30/r01"
-    },
-    {
       "canonical_id": "arXiv:2605.11093",
       "title": null,
       "source_url": null,
@@ -3121,35 +3094,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_88cdf01c22dc8191ac4bb88ce2721cce--2026-2604.14889-memosight-compression-mtp-reasoning-research-20261017-1130-scheduled-chat-30-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_88cdf01c22dc8191ac4bb88ce2721cce--2026-2604.14889-memosight-compression-mtp-reasoning-research-20261017-1130-scheduled-chat-30-r01.json",
       "worker_run_key": "20261017-1130-scheduled-chat-30/r01"
-    },
-    {
-      "canonical_id": "arXiv:2607.28069",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-17T06:31:06+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700",
-        "説明不足トリガー: 評価説明量 0 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5689,
-        "body_paragraphs": 30,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 0,
-        "limitation_chars": 555,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700",
-          "評価説明量 0 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_8bd005de60908191ba10d020f4414e95--2026-2607.28069-sempic-semantic-position-independent-kv-cache-research-20261017-1030-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_8bd005de60908191ba10d020f4414e95--2026-2607.28069-sempic-semantic-position-independent-kv-cache-research-20261017-1030-scheduled-chat-30-r01.json",
-      "worker_run_key": "20261017-1030-scheduled-chat-30/r01"
     },
     {
       "canonical_id": "DOI:10.1145/3725338",
@@ -3611,8 +3555,8 @@
     },
     {
       "canonical_id": "arXiv:2601.10823",
-      "title": "Mugi: Value Level Parallelism For Efficient LLMs",
-      "source_url": "https://arxiv.org/html/2601.10823v2",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-17T15:35:14+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-30",
@@ -3639,8 +3583,8 @@
     },
     {
       "canonical_id": "arXiv:2604.15356",
-      "title": "Sequential KV Cache Compression via Probabilistic Language Tries: Beyond the Per-Vector Shannon Limit",
-      "source_url": "https://arxiv.org/abs/2604.15356",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-17T15:35:16+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-00",
@@ -3664,6 +3608,147 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-5a90eaf8ccc5--libfile_d22640076de48191b61993ee268910e4--2026-2604.15356-sequential-kv-language-tries-research-20261017-1730-scheduled-chat-30-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-5a90eaf8ccc5--libfile_d22640076de48191b61993ee268910e4--2026-2604.15356-sequential-kv-language-tries-research-20261017-1730-scheduled-chat-30-r01.json",
       "worker_run_key": "20261017-1730-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2505.22913",
+      "title": "Mustafar: Promoting Unstructured Sparsity for KV Cache Pruning in LLM Inference",
+      "source_url": "https://arxiv.org/html/2505.22913v2",
+      "returned_at": "2026-10-17T15:45:44+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700",
+        "説明不足トリガー: 評価説明量 0 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 8723,
+        "body_paragraphs": 45,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 0,
+        "limitation_chars": 713,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700",
+          "評価説明量 0 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_3402febe50e88191bb0fc12b537e085b--2025-2505.22913-mustafar-kv-cache-unstructured-sparsity-research-20261018-0030-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_3402febe50e88191bb0fc12b537e085b--2025-2505.22913-mustafar-kv-cache-unstructured-sparsity-research-20261018-0030-scheduled-chat-30-r01.json",
+      "worker_run_key": "20261018-0030-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2510.04371",
+      "title": "Speculative Actions: A Lossless Framework for Faster Agentic Systems",
+      "source_url": "https://arxiv.org/html/2510.04371v2",
+      "returned_at": "2026-10-17T15:45:45+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700",
+        "説明不足トリガー: 評価説明量 0 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 8036,
+        "body_paragraphs": 46,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 0,
+        "limitation_chars": 597,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700",
+          "評価説明量 0 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_35790332bb5081918d348c6cc4c66cce--2025-2510.04371-speculative-actions-agentic-systems-research-20261018-0030-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_35790332bb5081918d348c6cc4c66cce--2025-2510.04371-speculative-actions-agentic-systems-research-20261018-0030-scheduled-chat-30-r01.json",
+      "worker_run_key": "20261018-0030-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2410.17980",
+      "title": "Scaling Stick-Breaking Attention: An Efficient Implementation and In-depth Study",
+      "source_url": "https://arxiv.org/html/2410.17980v2",
+      "returned_at": "2026-10-17T15:45:47+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 8362,
+        "body_paragraphs": 44,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 2403,
+        "limitation_chars": 882,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_5625c1704a4c8191a988b0ed86a721a6--2024-2410.17980-scaling-stick-breaking-attention-research-20261018-0030-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_5625c1704a4c8191a988b0ed86a721a6--2024-2410.17980-scaling-stick-breaking-attention-research-20261018-0030-scheduled-chat-30-r01.json",
+      "worker_run_key": "20261018-0030-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2607.28069",
+      "title": "SemPIC: Learning Semantic Position-Independent KV Caches",
+      "source_url": "https://arxiv.org/abs/2607.28069",
+      "returned_at": "2026-10-17T15:45:48+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700",
+        "説明不足トリガー: 評価説明量 0 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5689,
+        "body_paragraphs": 30,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 0,
+        "limitation_chars": 555,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700",
+          "評価説明量 0 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-63d610dcd1ee--libfile_8bd005de60908191ba10d020f4414e95--2026-2607.28069-sempic-semantic-position-independent-kv-cache-research-20261017-1030-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-63d610dcd1ee--libfile_8bd005de60908191ba10d020f4414e95--2026-2607.28069-sempic-semantic-position-independent-kv-cache-research-20261017-1030-sche.json",
+      "worker_run_key": "20261017-1030-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2606.27791",
+      "title": "NLL-Guided Full-Attention Layer Selection for Training-Free Sliding-Window Adaptation",
+      "source_url": "https://arxiv.org/abs/2606.27791",
+      "returned_at": "2026-10-17T15:45:49+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 209 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5156,
+        "body_paragraphs": 28,
+        "method_chars": 1467,
+        "method_paragraphs": 9,
+        "evaluation_chars": 209,
+        "limitation_chars": 856,
+        "insufficiency_flags": [
+          "評価説明量 209 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-7756c140a603--libfile_83cb736106b08191b01ee109df11642b--2026-2606.27791-nll-guided-full-attention-layer-selection-research-20261017-1230-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-7756c140a603--libfile_83cb736106b08191b01ee109df11642b--2026-2606.27791-nll-guided-full-attention-layer-selection-research-20261017-1230-schedule.json",
+      "worker_run_key": "20261017-1230-scheduled-chat-30/r01"
     }
   ]
 }

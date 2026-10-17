@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "573096790856457906d9e967c9076958d9bfa133df78c9db3f3b1e08f40c0e0f",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_3402febe50e88191bb0fc12b537e085b--2025-2505.22913-mustafar-kv-cache-unstructured-sparsity-research-20261018-0030-scheduled-chat-30-r01.md",
+  "canonical_id": "arXiv:2505.22913",
+  "worker_completed_at": "2026-10-18T00:34:59+09:00",
+  "worker_run_key": "20261018-0030-scheduled-chat-30/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 8723,
+    "body_paragraphs": 45,
+    "method_chars": 0,
+    "method_paragraphs": 0,
+    "evaluation_chars": 0,
+    "limitation_chars": 713,
+    "insufficiency_flags": [
+      "手法説明量 0 < 700",
+      "評価説明量 0 < 500"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 手法説明量 0 < 700",
+    "説明不足トリガー: 評価説明量 0 < 500"
+  ],
+  "processed_at": "2026-10-17T15:45:44+00:00"
+}

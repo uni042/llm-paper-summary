@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "edda3968acf29437d585ad21453b21ee2fb6e633281c5bf87493d7bcfce4355b",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_35790332bb5081918d348c6cc4c66cce--2025-2510.04371-speculative-actions-agentic-systems-research-20261018-0030-scheduled-chat-30-r01.md",
+  "canonical_id": "arXiv:2510.04371",
+  "worker_completed_at": "2026-10-18T00:37:00+09:00",
+  "worker_run_key": "20261018-0030-scheduled-chat-30/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 8036,
+    "body_paragraphs": 46,
+    "method_chars": 0,
+    "method_paragraphs": 0,
+    "evaluation_chars": 0,
+    "limitation_chars": 597,
+    "insufficiency_flags": [
+      "手法説明量 0 < 700",
+      "評価説明量 0 < 500"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 手法説明量 0 < 700",
+    "説明不足トリガー: 評価説明量 0 < 500"
+  ],
+  "processed_at": "2026-10-17T15:45:45+00:00"
+}
