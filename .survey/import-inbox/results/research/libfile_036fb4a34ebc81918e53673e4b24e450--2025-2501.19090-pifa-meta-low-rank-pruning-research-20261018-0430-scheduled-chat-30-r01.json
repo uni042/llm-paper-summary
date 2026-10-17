@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "976d7fd5cd30427f24054d596e88f6c3dbcb396a8efb139bf50c240937456cf4",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_036fb4a34ebc81918e53673e4b24e450--2025-2501.19090-pifa-meta-low-rank-pruning-research-20261018-0430-scheduled-chat-30-r01.md",
+  "canonical_id": "arXiv:2501.19090",
+  "worker_completed_at": "2026-10-18T04:38:46+09:00",
+  "worker_run_key": "20261018-0430-scheduled-chat-30/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 5504,
+    "body_paragraphs": 31,
+    "method_chars": 1901,
+    "method_paragraphs": 11,
+    "evaluation_chars": 0,
+    "limitation_chars": 0,
+    "insufficiency_flags": [
+      "評価説明量 0 < 500",
+      "限界説明量 0 < 推奨 120"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 評価説明量 0 < 500"
+  ],
+  "processed_at": "2026-10-17T19:43:48+00:00"
+}
