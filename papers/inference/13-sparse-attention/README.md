@@ -170,7 +170,7 @@
 
 - **2026-05 · [Stochastic Sparse Attention for Memory-Bound Inference](2026-2605.01910-stochastic-sparse-attention-for-memory-bound-inference.md)**  
   実装：[✓](https://github.com/OPUSLab/SANTA) ・ リポジトリ内被引用：0  
-  長文脈の復号ではこの値行列の読み出しがメモリ帯域を占める。著者は層化・系統抽出によって分散を抑えたS²ANTAを設計し、さらにGPUでの並列実行に合わせて、全体の確率質量を先に集計する比例配分型と、タイルごとに先行抽出するフラッシュ型を実装した。
+  SANTA（Stochastic Additive No-mulT 注意機構）は、注意確率を使って少数の値ベクトルだけを抽出し、その平均で密な注意出力を近似する。RTX 6000 Ada上の32K文脈では、精度が密注意と統計的に同等な設定で注意カーネルが約1.5倍高速化した。
 
 - **2026-05 · [AB-Sparse: Sparse Attention with Adaptive Block Size for Accurate and Efficient Long-Context Inference](2026-2605.12110-ab-sparse-sparse-attention-with-adaptive-block-size-for-accurate-and-eff.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

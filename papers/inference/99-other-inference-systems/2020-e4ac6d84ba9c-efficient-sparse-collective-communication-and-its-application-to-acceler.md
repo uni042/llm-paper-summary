@@ -28,6 +28,8 @@ worker_run_key: 20261018-0300-scheduled-chat-00/r01
 reference_main_sha: ab380c6cbae592b3503a7613ac74c3aecb2e83fe
 quality_self_review_passed: true
 quality_self_review_version: 'PAPER-QUALITY-GUIDE-2026-10-07'
+last_audited: null
+audit_version: 0
 ---
 
 # OmniReduce：疎な勾配の協調転送による分散学習の集団通信高速化
