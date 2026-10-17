@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-10-17T17:37:56.110024+00:00",
+  "generated_at": "2026-10-17T18:49:53.873664+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 10,
+  "count": 8,
   "worker_counts": {
-    "scheduled-chat-00": 4,
-    "scheduled-chat-30": 3,
+    "scheduled-chat-00": 3,
+    "scheduled-chat-30": 2,
     "scheduled-chat-45": 3
   },
   "entries": [
@@ -142,26 +142,6 @@
       "warnings": []
     },
     {
-      "path": "papers/inference/13-sparse-attention/2026-2605.01910-stochastic-sparse-attention-for-memory-bound-inference.md",
-      "canonical_id": "arXiv:2605.01910",
-      "title": "Stochastic Sparse Attention for Memory-Bound Inference",
-      "file_bytes": 17566,
-      "source_sha256": "0876b98d759130d704919587852b1f0593c705c95335d535c16875b20a394ecf",
-      "source_git_blob_sha": "e5160e7b2d0e686ae0e9fd03785071e141e31955",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.966866,
-      "quality_metrics": {
-        "body_chars": 4097,
-        "method_chars": 1414,
-        "evaluation_chars": 837,
-        "limitation_chars": 0
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
       "path": "papers/inference/05-speculative-decoding-moe/2026-2606.05742-adapld-adaptive-retrieval-and-reuse-for-efficient-model-free-speculative.md",
       "canonical_id": "arXiv:2606.05742",
       "title": "AdaPLD: Adaptive Retrieval and Reuse for Efficient Model-Free Speculative Decoding",
@@ -177,26 +157,6 @@
         "method_chars": 1609,
         "evaluation_chars": 774,
         "limitation_chars": 329
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2026-2602.01997-on-the-limits-of-layer-pruning-for-generative-reasoning-in-large-languag.md",
-      "canonical_id": "arXiv:2602.01997",
-      "title": "On the Limits of Layer Pruning for Generative Reasoning in Large Language Models",
-      "file_bytes": 18727,
-      "source_sha256": "8a5a17b93801a6281270131ef1deed07da368bcfa94339abb796fed724550348",
-      "source_git_blob_sha": "6ada641c97b53822071c4385ea6b0acd37626e81",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.947889,
-      "quality_metrics": {
-        "body_chars": 4801,
-        "method_chars": 1259,
-        "evaluation_chars": 1785,
-        "limitation_chars": 0
       },
       "mechanical_failures": [],
       "warnings": []
