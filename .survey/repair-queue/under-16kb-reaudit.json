@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-10-17T10:02:57.068485+00:00",
+  "generated_at": "2026-10-17T10:17:24.996573+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 10,
+  "count": 8,
   "worker_counts": {
     "scheduled-chat-00": 3,
-    "scheduled-chat-30": 4,
+    "scheduled-chat-30": 2,
     "scheduled-chat-45": 3
   },
   "entries": [
@@ -177,46 +177,6 @@
         "method_chars": 1290,
         "evaluation_chars": 636,
         "limitation_chars": 345
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/07-kv-cache-optimization-compression/2025-2505.20334-lookahead-q-cache-achieving-more-consistent-kv-cache-eviction-via-pseudo.md",
-      "canonical_id": "arXiv:2505.20334",
-      "title": "Lookahead Q-Cache: Achieving More Consistent KV Cache Eviction via Pseudo Query",
-      "file_bytes": 17141,
-      "source_sha256": "76dd1d25c2765446fa9268a2ef4c5def34c6a87d50656070b73d774324f5081a",
-      "source_git_blob_sha": "8b81e3ed2a7f239a3dc0f6895c41a978c5b232b2",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.986256,
-      "quality_metrics": {
-        "body_chars": 4000,
-        "method_chars": 1059,
-        "evaluation_chars": 523,
-        "limitation_chars": 0
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/09-kernel-runtime-compilation/2024-2407.10032-leanquant-accurate-and-scalable-large-language-model-quantization-with-l.md",
-      "canonical_id": "arXiv:2407.10032",
-      "title": "LeanQuant: Accurate and Scalable Large Language Model Quantization with Loss-error-aware Grid",
-      "file_bytes": 17335,
-      "source_sha256": "604b85fe74aa45d37b7af54ffab0f533f3fd9e93737e64619e3c419831a20c33",
-      "source_git_blob_sha": "b643629590fbc1359d59d3584465ae654f394751",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.966617,
-      "quality_metrics": {
-        "body_chars": 5043,
-        "method_chars": 1233,
-        "evaluation_chars": 2207,
-        "limitation_chars": 423
       },
       "mechanical_failures": [],
       "warnings": []
