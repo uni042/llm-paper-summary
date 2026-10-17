@@ -1,0 +1,61 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-45",
+  "run_key": "20261018-0145-scheduled-chat-45/r01/research-prescreen/005-010",
+  "reference_main_sha": "e2d7812375279a40ce8b2838075a8831303e91d2",
+  "record_count": 3,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2512.06688",
+      "identity_tokens": [
+        "arXiv:2512.06688",
+        "DOI:10.48550/arXiv.2512.06688"
+      ],
+      "title": "PersonaMem-v2: Towards Personalized Intelligence via Learning Implicit User Personas and Agentic Memory",
+      "reason": "一次要旨は、1,000件の利用者対話・20,000超の選好を扱う個人化評価集合と、強化学習およびエージェント記憶の構築を主眼とする。2,000トークンの記憶で32,000トークンの履歴に代える16倍の入力削減を報告しており推論時入力費用には間接的に関連するが、評価指標は暗黙の個人化の正答率（記憶方式55%）であり、汎用KV管理、GPUメモリ削減、サービング遅延の実測を直接提案・評価しないため境界的。",
+      "source_url": "https://arxiv.org/abs/2512.06688",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-18T01:54:34+09:00",
+      "last_checked_at": "2026-10-18T01:54:34+09:00",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance",
+      "worklist_rank": 5
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2112.06749",
+      "identity_tokens": [
+        "arXiv:2112.06749",
+        "DOI:10.48550/arXiv.2112.06749"
+      ],
+      "title": "Step-unrolled Denoising Autoencoders for Text Generation",
+      "reason": "一次要旨では自己回帰復号器に代わる反復改善型の非自己回帰テキスト生成器SUNDAEを提案し、拡散型生成より少ない反復回数で収束することを主張する。生成反復回数の削減は推論計算量に関係するが、主評価はWMT14英独翻訳品質と自然言語・Pythonコード生成品質であり、現行LLMサービングの遅延、GPU実測、バッチ実行器を対象とした最適化とは区別するため境界的。",
+      "source_url": "https://arxiv.org/abs/2112.06749",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-18T01:54:34+09:00",
+      "last_checked_at": "2026-10-18T01:54:34+09:00",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance",
+      "worklist_rank": 9
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2512.05665",
+      "identity_tokens": [
+        "arXiv:2512.05665",
+        "DOI:10.48550/arXiv.2512.05665"
+      ],
+      "title": "Interleaved Latent Visual Reasoning with Selective Perceptual Modeling",
+      "reason": "一次要旨ではマルチモーダル推論における高密度画像の繰り返し再符号化の計算費用を問題にし、画像の潜在表現をテキスト生成に交互に挿入して、運動量教師による選択的特徴蒸留で視覚状態を更新する。再符号化回避は推論効率と接点がある一方、主評価は視覚推論課題の品質であり、汎用推論サーバーのスループット、GPUメモリ、KVキャッシュの改善量は一次要旨から確定できないため境界的。",
+      "source_url": "https://arxiv.org/abs/2512.05665",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-18T01:54:34+09:00",
+      "last_checked_at": "2026-10-18T01:54:34+09:00",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance",
+      "worklist_rank": 10
+    }
+  ]
+}
