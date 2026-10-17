@@ -34,6 +34,8 @@ last_checked: "2026-10-17"
 worker_completed_at: "2026-10-17T11:33:00+09:00"
 worker_run_key: "20261017-1130-scheduled-chat-30/r01"
 worker_id: "scheduled-chat-30"
+last_audited: null
+audit_version: 0
 ---
 
 # MemoSight：思考連鎖の圧縮と複数トークン予測を一つの特別トークン設計に統合
