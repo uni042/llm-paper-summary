@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-17T05:36:27+00:00",
+  "generated_at": "2026-10-17T05:47:51+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 187,
+  "count": 184,
   "entries": [
     {
       "canonical_id": "DOI:10.1145/3714983.3714987",
@@ -3191,34 +3191,6 @@
       "worker_run_key": "20261016-0030-scheduled-chat-30/r01"
     },
     {
-      "canonical_id": "arXiv:2601.04359",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-16T14:46:22+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 163 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 6879,
-        "body_paragraphs": 38,
-        "method_chars": 2455,
-        "method_paragraphs": 13,
-        "evaluation_chars": 163,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "評価説明量 163 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-0a3c6dc34208--libfile_20e56325f2188191bf1cd672f823600c--2026-2601.04359-packcache-video-kv-cache-research-20261016-1300-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-0a3c6dc34208--libfile_20e56325f2188191bf1cd672f823600c--2026-2601.04359-packcache-video-kv-cache-research-20261016-1300-scheduled-chat-00-r01.json",
-      "worker_run_key": "20261016-1300-scheduled-chat-00/r01"
-    },
-    {
       "canonical_id": "arXiv:2502.11018",
       "title": null,
       "source_url": null,
@@ -3384,34 +3356,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-1f7aef196f19--libfile_eec4f4b459248191bff3e3b2907dbe7c--2025-2503.00979-morphkv-research-20261016-0230-scheduled-chat-30-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-1f7aef196f19--libfile_eec4f4b459248191bff3e3b2907dbe7c--2025-2503.00979-morphkv-research-20261016-0230-scheduled-chat-30-r01.json",
       "worker_run_key": "20261016-0230-scheduled-chat-30/r01"
-    },
-    {
-      "canonical_id": "arXiv:2602.15843",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-16T15:00:51+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5767,
-        "body_paragraphs": 28,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 1301,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-2358d1c31cfd--libfile_31dc6804ca588191a91247bc67cd2fce--2026-2602.15843-perplexity-paradox-taac-research-20261016-1400-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-2358d1c31cfd--libfile_31dc6804ca588191a91247bc67cd2fce--2026-2602.15843-perplexity-paradox-taac-research-20261016-1400-scheduled-chat-00-r01.json",
-      "worker_run_key": "20261016-1400-scheduled-chat-00/r01"
     },
     {
       "canonical_id": "arXiv:2511.16193",
@@ -3686,36 +3630,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-49672d3d24f8--libfile_32c0cbaaab688191a44699cf3b0d2f48--2024-2409.01141-duplex-logic-pim-research-20261015-1500-scheduled-chat-00-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-49672d3d24f8--libfile_32c0cbaaab688191a44699cf3b0d2f48--2024-2409.01141-duplex-logic-pim-research-20261015-1500-scheduled-chat-00-r01.json",
       "worker_run_key": "20261015-1500-scheduled-chat-00/r01"
-    },
-    {
-      "canonical_id": "DOI:10.1145/3552326.3587438",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-16T15:23:49+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700",
-        "説明不足トリガー: 評価説明量 0 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5287,
-        "body_paragraphs": 27,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 0,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700",
-          "評価説明量 0 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-4a97d30510f8--libfile_fa4f002121488191aed9f30d61aba9d4--2023-doi-10.1145.3552326.3587438-tabi-multilevel-inference-research-20261016-0030-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-4a97d30510f8--libfile_fa4f002121488191aed9f30d61aba9d4--2023-doi-10.1145.3552326.3587438-tabi-multilevel-inference-research-20261016-0030-schedul.json",
-      "worker_run_key": "20261016-0030-scheduled-chat-30/r01"
     },
     {
       "canonical_id": "arXiv:2502.20704",
@@ -4860,36 +4774,9 @@
       "worker_run_key": "20261017-1130-scheduled-chat-30/r01"
     },
     {
-      "canonical_id": "arXiv:2602.02546",
-      "title": "D2Quant: Accurate Low-bit Post-Training Weight Quantization for LLMs",
-      "source_url": "https://arxiv.org/html/2602.02546v1",
-      "returned_at": "2026-10-17T05:30:58+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "16KB未満再監査: 評価説明量 251 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 6049,
-        "body_paragraphs": 36,
-        "method_chars": 2060,
-        "method_paragraphs": 12,
-        "evaluation_chars": 251,
-        "limitation_chars": 824,
-        "insufficiency_flags": [
-          "評価説明量 251 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_7e091ada5d0081918b3c9caf4fb17eee--2026-2602.02546-d2quant-under16kb-reaudit-20261017-0945-scheduled-chat-45-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_7e091ada5d0081918b3c9caf4fb17eee--2026-2602.02546-d2quant-under16kb-reaudit-20261017-0945-scheduled-chat-45-r01.json",
-      "worker_run_key": "20261017-0945-scheduled-chat-45/r01"
-    },
-    {
       "canonical_id": "arXiv:2606.30265",
-      "title": "When Is a Draft Accepted? A Theory of Acceptance in Speculative Decoding",
-      "source_url": "https://arxiv.org/abs/2606.30265",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-17T05:35:07+00:00",
       "return_count": 1,
       "assigned_worker": "scheduled-chat-45",
@@ -4912,6 +4799,33 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_38a5c6b51fb08191a2bfac78c443ac90--2026-2606.30265-acceptance-certificates-speculative-decoding-research-20261016-2030-scheduled-chat-30-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_38a5c6b51fb08191a2bfac78c443ac90--2026-2606.30265-acceptance-certificates-speculative-decoding-research-20261016-2030-scheduled-chat-30-r01.json",
       "worker_run_key": "20261016-2030-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2602.02546",
+      "title": "D2Quant: Accurate Low-bit Post-Training Weight Quantization for LLMs",
+      "source_url": "https://arxiv.org/html/2602.02546v1",
+      "returned_at": "2026-10-17T05:44:49+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "16KB未満再監査: 評価説明量 251 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 6049,
+        "body_paragraphs": 36,
+        "method_chars": 2060,
+        "method_paragraphs": 12,
+        "evaluation_chars": 251,
+        "limitation_chars": 824,
+        "insufficiency_flags": [
+          "評価説明量 251 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-3be4cb2788ce--libfile_7e091ada5d0081918b3c9caf4fb17eee--2026-2602.02546-d2quant-under16kb-reaudit-20261017-0945-scheduled-chat-45-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-3be4cb2788ce--libfile_7e091ada5d0081918b3c9caf4fb17eee--2026-2602.02546-d2quant-under16kb-reaudit-20261017-0945-scheduled-chat-45-r01.json",
+      "worker_run_key": "20261017-0945-scheduled-chat-45/r01"
     }
   ]
 }

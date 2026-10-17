@@ -35,10 +35,15 @@
   "selection_reason": "PackCacheは動画生成用KV cacheを時間減衰・意味anchor・位置構造に沿って動的圧縮し、長尺動画生成を最大2.2x高速化。",
   "semantic_scholar_id": "52c18472c4ce46ee646348c64de6f0e7b8e33876",
   "source_url": "https://arxiv.org/abs/2601.04359",
-  "status": "ready",
+  "status": "superseded",
   "title": "PackCache: A Training-Free Acceleration Method for Unified Autoregressive Video Generation via Compact KV-Cache",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-10-17T05:47:51+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2601.04359-packcache-a-training-free-acceleration-method-for-unified-autoregressive.md",
+  "represented_canonical_id": "arXiv:2601.04359",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

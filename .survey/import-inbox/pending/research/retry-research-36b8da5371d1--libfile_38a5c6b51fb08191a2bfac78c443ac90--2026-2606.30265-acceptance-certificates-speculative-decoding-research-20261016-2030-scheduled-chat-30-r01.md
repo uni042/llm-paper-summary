@@ -27,6 +27,8 @@ worker_run_key: 20261016-2030-scheduled-chat-30/r01
 reference_main_sha: 8f8d9e5c3058a183df144bd4e46280ba984d4e68
 quality_self_review_passed: true
 quality_self_review_version: PAPER-QUALITY-GUIDE-2026-10-07
+last_audited: null
+audit_version: 0
 ---
 
 # 投機的復号で草稿が受理される条件：KL距離・受理規則・候補木の理論

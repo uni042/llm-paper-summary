@@ -35,10 +35,15 @@
   "selection_reason": "低精度ドラフトと高精度検証を重み・KVキャッシュ共有で切替える投機的復号により、メモリ制約下のLLMサービングを直接高速化するため対象。",
   "semantic_scholar_id": "139aea58a13e615a7e466fe0c74273804372b746",
   "source_url": "https://arxiv.org/abs/2410.11305",
-  "status": "ready",
+  "status": "superseded",
   "title": "QSpec: Speculative Decoding with Complementary Quantization Schemes",
   "type": "research",
   "venue": "Conference on Empirical Methods in Natural Language Processing",
   "workflow_version": 10,
-  "year": 2024
+  "year": 2024,
+  "superseded_at": "2026-10-17T05:47:51+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/05-speculative-decoding-moe/2024-2410.11305-qspec-speculative-decoding-with-complementary-quantization-schemes.md",
+  "represented_canonical_id": "arXiv:2410.11305",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
