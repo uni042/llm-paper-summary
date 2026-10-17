@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-10-17T08:45:44.235478+00:00",
+  "generated_at": "2026-10-17T09:25:10.102019+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 7,
+  "count": 9,
   "worker_counts": {
-    "scheduled-chat-00": 2,
-    "scheduled-chat-30": 2,
+    "scheduled-chat-00": 3,
+    "scheduled-chat-30": 3,
     "scheduled-chat-45": 3
   },
   "entries": [
@@ -68,7 +68,7 @@
       "file_bytes": 12962,
       "source_sha256": "7339d45eab389550de731537c7d36627aebdc75a270dab101b94bfd899cb2660",
       "source_git_blob_sha": "5166ab3aea106a5261f0e4caeea36b7bb9205d47",
-      "assigned_worker": "scheduled-chat-45",
+      "assigned_worker": "scheduled-chat-00",
       "semantic_status": "pending",
       "mechanical_status": "PASS",
       "japanese_ratio": 0.990361,
@@ -77,6 +77,46 @@
         "method_chars": 1072,
         "evaluation_chars": 505,
         "limitation_chars": 0
+      },
+      "mechanical_failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/13-sparse-attention/2026-2602.05191-double-p-hierarchical-top-p-sparse-attention-for-long-context-llms.md",
+      "canonical_id": "arXiv:2602.05191",
+      "title": "Double-P: Hierarchical Top-P Sparse Attention for Long-Context LLMs",
+      "file_bytes": 13715,
+      "source_sha256": "2b6e67d443616b23dfda3a02a413281947450083fe5135df35e7ec6a5dede5f5",
+      "source_git_blob_sha": "cc4e480e30a664fe10b66511b0df1471b7f97463",
+      "assigned_worker": "scheduled-chat-45",
+      "semantic_status": "pending",
+      "mechanical_status": "PASS",
+      "japanese_ratio": 0.943744,
+      "quality_metrics": {
+        "body_chars": 4125,
+        "method_chars": 1222,
+        "evaluation_chars": 1318,
+        "limitation_chars": 551
+      },
+      "mechanical_failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/09-kernel-runtime-compilation/2024-2407.10032-leanquant-accurate-and-scalable-large-language-model-quantization-with-l.md",
+      "canonical_id": "arXiv:2407.10032",
+      "title": "LeanQuant: Accurate and Scalable Large Language Model Quantization with Loss-error-aware Grid",
+      "file_bytes": 15089,
+      "source_sha256": "99086556ee69f8801537aa55bde4cd6f16e0ada22e04daabc7985607f0faece1",
+      "source_git_blob_sha": "a19ad4ab5f383f3522137d13d493be541a574045",
+      "assigned_worker": "scheduled-chat-30",
+      "semantic_status": "pending",
+      "mechanical_status": "PASS",
+      "japanese_ratio": 0.966617,
+      "quality_metrics": {
+        "body_chars": 5043,
+        "method_chars": 1233,
+        "evaluation_chars": 2207,
+        "limitation_chars": 423
       },
       "mechanical_failures": [],
       "warnings": []
