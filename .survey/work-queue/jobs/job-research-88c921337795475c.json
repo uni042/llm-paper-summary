@@ -35,10 +35,15 @@
   "selection_reason": "The abstract optimizes a smaller set of unconstrained KV pairs to preserve layer attention behavior, with adaptive compression-budget allocation; the measured target is long-context LLM inference cache compression.",
   "semantic_scholar_id": "084ad797780e4430605f741274a3ced5b06af697",
   "source_url": "https://arxiv.org/abs/2603.27819",
-  "status": "ready",
+  "status": "superseded",
   "title": "KVSculpt: KV Cache Compression as Distillation",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-10-17T14:12:21+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2603.27819-kvsculpt-kv-cache-compression-as-distillation.md",
+  "represented_canonical_id": "arXiv:2603.27819",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
