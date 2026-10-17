@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-17T19:43:49+00:00",
+  "generated_at": "2026-10-17T19:48:04+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -4029,39 +4029,38 @@
       "worker_run_key": "20261018-0230-scheduled-chat-30/r02"
     },
     {
-      "canonical_id": "arXiv:2501.19090",
-      "title": "Pivoting Factorization: A Compact Meta Low-Rank Representation of Sparsity for Efficient Inference in Large Language Models",
-      "source_url": "https://arxiv.org/html/2501.19090v3",
-      "returned_at": "2026-10-17T19:43:48+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-00",
+      "canonical_id": "arXiv:2510.16807",
+      "title": "Improving Model Representation and Reducing KV Cache via Skip Connections with First Value Heads",
+      "source_url": "https://arxiv.org/html/2510.16807v2",
+      "returned_at": "2026-10-17T19:48:03+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-45",
       "reason": "blocked_quality",
       "failures": [
         "説明不足トリガー: 評価説明量 0 < 500"
       ],
       "quality_metrics": {
         "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5504,
-        "body_paragraphs": 31,
-        "method_chars": 1901,
-        "method_paragraphs": 11,
+        "body_chars": 5674,
+        "body_paragraphs": 30,
+        "method_chars": 2066,
+        "method_paragraphs": 10,
         "evaluation_chars": 0,
-        "limitation_chars": 0,
+        "limitation_chars": 714,
         "insufficiency_flags": [
-          "評価説明量 0 < 500",
-          "限界説明量 0 < 推奨 120"
+          "評価説明量 0 < 500"
         ]
       },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_036fb4a34ebc81918e53673e4b24e450--2025-2501.19090-pifa-meta-low-rank-pruning-research-20261018-0430-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_036fb4a34ebc81918e53673e4b24e450--2025-2501.19090-pifa-meta-low-rank-pruning-research-20261018-0430-scheduled-chat-30-r01.json",
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-7674b7a14ad0--libfile_bf64d1d864488191b3cf0e73ea18cb34--2025-2510.16807-skipv1former-first-value-skip-kv-research-20261018-0430-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-7674b7a14ad0--libfile_bf64d1d864488191b3cf0e73ea18cb34--2025-2510.16807-skipv1former-first-value-skip-kv-research-20261018-0430-scheduled-chat-30.json",
       "worker_run_key": "20261018-0430-scheduled-chat-30/r01"
     },
     {
       "canonical_id": "arXiv:2606.25091",
       "title": "Speculation at a Distance: Where Edge-Cloud Speculative Decoding Actually Pays Off",
       "source_url": "https://arxiv.org/abs/2606.25091v2",
-      "returned_at": "2026-10-17T19:43:48+00:00",
-      "return_count": 3,
+      "returned_at": "2026-10-17T19:48:03+00:00",
+      "return_count": 4,
       "assigned_worker": "scheduled-chat-45",
       "reason": "blocked_quality",
       "failures": [
@@ -4082,35 +4081,36 @@
           "限界説明量 0 < 推奨 120"
         ]
       },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_530170eb4b8c8191994ad575028c911c--2026-2606.25091-edge-cloud-speculative-decoding-research-20261018-0358-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_530170eb4b8c8191994ad575028c911c--2026-2606.25091-edge-cloud-speculative-decoding-research-20261018-0358-scheduled-chat-00-r01.json",
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-4aea1eaf8b4d--libfile_530170eb4b8c8191994ad575028c911c--2026-2606.25091-edge-cloud-speculative-decoding-research-20261018-0358-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-4aea1eaf8b4d--libfile_530170eb4b8c8191994ad575028c911c--2026-2606.25091-edge-cloud-speculative-decoding-research-20261018-0358-scheduled-chat-00-.json",
       "worker_run_key": "20261018-0358-scheduled-chat-00/r01"
     },
     {
-      "canonical_id": "arXiv:2510.16807",
-      "title": "Improving Model Representation and Reducing KV Cache via Skip Connections with First Value Heads",
-      "source_url": "https://arxiv.org/html/2510.16807v2",
-      "returned_at": "2026-10-17T19:43:49+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-45",
+      "canonical_id": "arXiv:2501.19090",
+      "title": "Pivoting Factorization: A Compact Meta Low-Rank Representation of Sparsity for Efficient Inference in Large Language Models",
+      "source_url": "https://arxiv.org/html/2501.19090v3",
+      "returned_at": "2026-10-17T19:48:04+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-00",
       "reason": "blocked_quality",
       "failures": [
         "説明不足トリガー: 評価説明量 0 < 500"
       ],
       "quality_metrics": {
         "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5674,
-        "body_paragraphs": 30,
-        "method_chars": 2066,
-        "method_paragraphs": 10,
+        "body_chars": 5504,
+        "body_paragraphs": 31,
+        "method_chars": 1901,
+        "method_paragraphs": 11,
         "evaluation_chars": 0,
-        "limitation_chars": 714,
+        "limitation_chars": 0,
         "insufficiency_flags": [
-          "評価説明量 0 < 500"
+          "評価説明量 0 < 500",
+          "限界説明量 0 < 推奨 120"
         ]
       },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_bf64d1d864488191b3cf0e73ea18cb34--2025-2510.16807-skipv1former-first-value-skip-kv-research-20261018-0430-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_bf64d1d864488191b3cf0e73ea18cb34--2025-2510.16807-skipv1former-first-value-skip-kv-research-20261018-0430-scheduled-chat-30-r01.json",
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-a9a860ffc05c--libfile_036fb4a34ebc81918e53673e4b24e450--2025-2501.19090-pifa-meta-low-rank-pruning-research-20261018-0430-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-a9a860ffc05c--libfile_036fb4a34ebc81918e53673e4b24e450--2025-2501.19090-pifa-meta-low-rank-pruning-research-20261018-0430-scheduled-chat-30-r01.json",
       "worker_run_key": "20261018-0430-scheduled-chat-30/r01"
     }
   ]
