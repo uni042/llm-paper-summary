@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-10-17T09:39:14.371333+00:00",
+  "generated_at": "2026-10-17T10:02:57.068485+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 9,
+  "count": 10,
   "worker_counts": {
     "scheduled-chat-00": 3,
-    "scheduled-chat-30": 3,
+    "scheduled-chat-30": 4,
     "scheduled-chat-45": 3
   },
   "entries": [
@@ -82,21 +82,41 @@
       "warnings": []
     },
     {
-      "path": "papers/inference/07-kv-cache-optimization-compression/2025-2511.16786-revisiting-multimodal-kv-cache-compression-a-frequency-domain-guided-out.md",
-      "canonical_id": "arXiv:2511.16786",
-      "title": "Revisiting Multimodal KV Cache Compression: A Frequency-Domain-Guided Outlier-KV-Aware Approach",
-      "file_bytes": 15155,
-      "source_sha256": "c516a95cf88bd0ad7abaa77204a3d5de8470f8138b0b0ca94d9c9514d6e33119",
-      "source_git_blob_sha": "5bf96b02bea4046387d4ce16ae0f387c4b4b78ef",
+      "path": "papers/inference/07-kv-cache-optimization-compression/2026-2605.03884-qkvshare-quantized-kv-cache-handoff-for-multi-agent-on-device-llms.md",
+      "canonical_id": "arXiv:2605.03884",
+      "title": "QKVShare: Quantized KV-Cache Handoff for Multi-Agent On-Device LLMs",
+      "file_bytes": 14933,
+      "source_sha256": "28c054c29420c5382795c415d31168507fd846d6071de62fdbd1ef38b2334d81",
+      "source_git_blob_sha": "0d583aa4c839aa02b6b1fc8ddfecaa68605f2eee",
       "assigned_worker": "scheduled-chat-30",
       "semantic_status": "pending",
       "mechanical_status": "PASS",
-      "japanese_ratio": 0.978731,
+      "japanese_ratio": 0.958961,
       "quality_metrics": {
-        "body_chars": 3373,
-        "method_chars": 1085,
-        "evaluation_chars": 1134,
-        "limitation_chars": 342
+        "body_chars": 4173,
+        "method_chars": 1028,
+        "evaluation_chars": 932,
+        "limitation_chars": 473
+      },
+      "mechanical_failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/13-sparse-attention/2026-2605.01910-stochastic-sparse-attention-for-memory-bound-inference.md",
+      "canonical_id": "arXiv:2605.01910",
+      "title": "Stochastic Sparse Attention for Memory-Bound Inference",
+      "file_bytes": 15518,
+      "source_sha256": "03ad43c48cb8aac242b89c2e76853529932ad7084bf21e11159748dc4fc21962",
+      "source_git_blob_sha": "168621e12a741ec22036b4b5bc897ea53ad443a2",
+      "assigned_worker": "scheduled-chat-30",
+      "semantic_status": "pending",
+      "mechanical_status": "PASS",
+      "japanese_ratio": 0.966866,
+      "quality_metrics": {
+        "body_chars": 4097,
+        "method_chars": 1414,
+        "evaluation_chars": 837,
+        "limitation_chars": 0
       },
       "mechanical_failures": [],
       "warnings": []
