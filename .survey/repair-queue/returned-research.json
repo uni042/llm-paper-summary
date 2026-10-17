@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-17T14:51:52+00:00",
+  "generated_at": "2026-10-17T15:01:38+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 142,
+  "count": 141,
   "entries": [
     {
       "canonical_id": "DOI:10.1145/3714983.3714987",
@@ -3451,63 +3451,6 @@
       "worker_run_key": "20261015-1104-scheduled-chat-00/r01"
     },
     {
-      "canonical_id": "arXiv:2608.12114",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-17T08:12:16+00:00",
-      "return_count": 3,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700",
-        "説明不足トリガー: 評価説明量 0 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5566,
-        "body_paragraphs": 28,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 0,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700",
-          "評価説明量 0 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_ed638f6b66cc81918106957aa631f979--2026-2608.12114-ingestion-tax-file-backed-weights-research-20261017-1030-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_ed638f6b66cc81918106957aa631f979--2026-2608.12114-ingestion-tax-file-backed-weights-research-20261017-1030-scheduled-chat-30-r01.json",
-      "worker_run_key": "20261017-1030-scheduled-chat-30/r01"
-    },
-    {
-      "canonical_id": "arXiv:2601.06562",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-17T08:12:18+00:00",
-      "return_count": 3,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 453 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 4797,
-        "body_paragraphs": 27,
-        "method_chars": 1967,
-        "method_paragraphs": 10,
-        "evaluation_chars": 453,
-        "limitation_chars": 656,
-        "insufficiency_flags": [
-          "評価説明量 453 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_edf18c83899c819187cb5233008f245b--2026-2601.06562-mosaic-dllm-global-memory-repair-20261016-2100-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_edf18c83899c819187cb5233008f245b--2026-2601.06562-mosaic-dllm-global-memory-repair-20261016-2100-scheduled-chat-00-r01.json",
-      "worker_run_key": "20261016-2100-scheduled-chat-00/r01"
-    },
-    {
       "canonical_id": "arXiv:2603.01399",
       "title": null,
       "source_url": null,
@@ -3562,33 +3505,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-20261017-exact--libfile_594cc7b764f48191a0a695c2555719ac.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-20261017-exact--libfile_594cc7b764f48191a0a695c2555719ac.json",
       "worker_run_key": "20261015-0230-scheduled-chat-30/r01"
-    },
-    {
-      "canonical_id": "arXiv:2601.10823",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-17T10:52:29+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 0 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5505,
-        "body_paragraphs": 29,
-        "method_chars": 2084,
-        "method_paragraphs": 10,
-        "evaluation_chars": 0,
-        "limitation_chars": 791,
-        "insufficiency_flags": [
-          "評価説明量 0 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_ef4558caa4e081918e07364435911f92--2026-2601.10823-mugi-value-level-parallelism-research-20261017-1930-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_ef4558caa4e081918e07364435911f92--2026-2601.10823-mugi-value-level-parallelism-research-20261017-1930-scheduled-chat-30-r01.json",
-      "worker_run_key": "20261017-1930-scheduled-chat-30/r01"
     },
     {
       "canonical_id": "arXiv:2601.23278",
@@ -3668,6 +3584,61 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-20261017-heading-repair--libfile_a2250582ef308191941713ae34abb40e--2026-2604.23466-cuda-tile-cross-gpu-evaluation.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-20261017-heading-repair--libfile_a2250582ef308191941713ae34abb40e--2026-2604.23466-cuda-tile-cross-gpu-evaluation.json",
       "worker_run_key": "20261014-2258-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2601.06562",
+      "title": "Mosaic: Unlocking Long-Context Inference for Diffusion LLMs via Global Memory Planning and Dynamic Peak Taming",
+      "source_url": "https://arxiv.org/html/2601.06562v1",
+      "returned_at": "2026-10-17T14:59:52+00:00",
+      "return_count": 4,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 453 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 4797,
+        "body_paragraphs": 27,
+        "method_chars": 1967,
+        "method_paragraphs": 10,
+        "evaluation_chars": 453,
+        "limitation_chars": 656,
+        "insufficiency_flags": [
+          "評価説明量 453 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-20261017-heading-repair--libfile_edf18c83899c819187cb5233008f245b--libfile_edf18c83899c819187cb5233008f245b--2026-2601.06562-mosaic-dllm-global-memory-repair-20261016-2100-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-20261017-heading-repair--libfile_edf18c83899c819187cb5233008f245b--libfile_edf18c83899c819187cb5233008f245b--2026-2601.06562-mosaic-dllm-global-m.json",
+      "worker_run_key": "20261016-2100-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2605.22884",
+      "title": "Tensor Cache: Eviction-conditioned Associative Memory for Transformers",
+      "source_url": "https://arxiv.org/abs/2605.22884",
+      "returned_at": "2026-10-17T15:00:33+00:00",
+      "return_count": 3,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 0 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 4315,
+        "body_paragraphs": 27,
+        "method_chars": 1421,
+        "method_paragraphs": 10,
+        "evaluation_chars": 0,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "評価説明量 0 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-20261017-heading-repair--libfile_f891d429007481918f520aafd7c623d3--2026-2605.22884-tensor-cache-eviction-conditioned-memory-research-20261014-1630-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-20261017-heading-repair--libfile_f891d429007481918f520aafd7c623d3--2026-2605.22884-tensor-cache-eviction-conditioned-memory-research-20261014-163.json",
+      "worker_run_key": "20261014-1630-scheduled-chat-30/r01"
     }
   ]
 }

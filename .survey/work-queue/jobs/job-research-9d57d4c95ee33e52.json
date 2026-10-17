@@ -40,10 +40,15 @@
   "selection_reason": "OS page cache上のfile-backed weightをDLPack経由でframework storageとしてzero-copy採用し、page cacheをreclaimable accelerator-storage tierとして扱う。大規模checkpointの初回token時間・複数process容量・llama.cpp等を実測しており、storage/DRAM/GPU階層の研究価値が高い。",
   "semantic_scholar_id": "9b834d19a58d214015c357133f3ad02421940e89",
   "source_url": "https://arxiv.org/abs/2608.12114",
-  "status": "ready",
+  "status": "superseded",
   "status_submission": ".survey/work-queue/submissions/research/attempt-b4be6a1ab5725fa47fd44d34.json",
   "title": "The Ingestion Tax: Adopting File-Backed Weights in Tensor Frameworks",
   "type": "research",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-10-17T15:01:38+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2026-2608.12114-the-ingestion-tax-adopting-file-backed-weights-in-tensor-frameworks.md",
+  "represented_canonical_id": "arXiv:2608.12114",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
