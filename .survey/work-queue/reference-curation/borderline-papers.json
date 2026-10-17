@@ -2,7 +2,7 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-17T03:54:27+00:00",
+  "updated_at": "2026-10-17T04:46:12+00:00",
   "record_count": 5232,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
@@ -70744,9 +70744,9 @@
       "identity_tokens": [
         "arXiv:2601.08815"
       ],
-      "reason": "一次要旨は入出力・資源予算・時間制限・成功条件を形式契約で統合し、複数エージェントへの予算委譲で保存則を保証する。反復作業でトークン90%削減を報告するが、対象はエージェントの資源統治であり、LLM推論エンジンの性能改善そのものではない。",
+      "reason": "一次要旨で、エージェントの入出力仕様・資源予算・実行時間・委譲制約を形式的に規定し、反復ワークフローでトークン数90%削減などを報告。LLM利用時の予算制御との関連はあるが、GPU推論カーネル、KVメモリ、モデル学習効率そのものを最適化する研究ではなく境界判定。",
       "first_checked_at": "2026-10-11T03:32:19+00:00",
-      "last_checked_at": "2026-10-12T21:38:01+00:00",
+      "last_checked_at": "2026-10-17T04:46:12+00:00",
       "linked_from": [
         ".survey/work-queue/WORKLIST-30.md"
       ],
