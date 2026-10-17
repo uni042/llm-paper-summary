@@ -35,10 +35,15 @@
   "selection_reason": "global KV cache共有のtiming side-channelを抑えつつcache reuse性能を維持するSafeKVを提案し、HBM/DRAM/SSDを跨ぐpublic/private cache管理を行う。per-user isolation比TTFT最大40.58%、throughput最大2.66倍改善し、Qwen3-235Bのcache-induced TTFT overheadを50.41%から11.74%へ低減するため対象内。",
   "semantic_scholar_id": "370ea3e5e8f544c9d34dc8bb153bbce5c6811665",
   "source_url": "https://arxiv.org/abs/2508.08438",
-  "status": "ready",
+  "status": "superseded",
   "title": "Selective KV-Cache Sharing to Mitigate Timing Side-Channels in LLM Inference",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2025
+  "year": 2025,
+  "superseded_at": "2026-10-17T15:22:09+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2025-2508.08438-selective-kv-cache-sharing-to-mitigate-timing-side-channels-in-llm-infer.md",
+  "represented_canonical_id": "arXiv:2508.08438",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

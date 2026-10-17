@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-17T15:11:09+00:00",
+  "generated_at": "2026-10-17T15:22:10+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 141,
+  "count": 142,
   "entries": [
     {
       "canonical_id": "DOI:10.1145/3714983.3714987",
@@ -2904,36 +2904,6 @@
       "worker_run_key": "20261016-1930-scheduled-chat-30/r01"
     },
     {
-      "canonical_id": "arXiv:2508.08438",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-16T16:20:02+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700",
-        "説明不足トリガー: 評価説明量 0 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 6599,
-        "body_paragraphs": 30,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 0,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700",
-          "評価説明量 0 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-ea34a107df11--libfile_a05483024d5c81919a3e8ccbe9c52687--2025-2508.08438-safekv-selective-cache-sharing-research-20261015-1803-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-ea34a107df11--libfile_a05483024d5c81919a3e8ccbe9c52687--2025-2508.08438-safekv-selective-cache-sharing-research-20261015-1803-scheduled-chat-00-r.json",
-      "worker_run_key": "20261015-1803-scheduled-chat-00/r01"
-    },
-    {
       "canonical_id": "arXiv:2605.19932",
       "title": null,
       "source_url": null,
@@ -3614,30 +3584,84 @@
       "worker_run_key": "20261014-1630-scheduled-chat-30/r01"
     },
     {
-      "canonical_id": "arXiv:2404.08698",
-      "title": "Lossless Acceleration of Large Language Model via Adaptive N-gram Parallel Decoding",
-      "source_url": "https://arxiv.org/html/2404.08698v2",
-      "returned_at": "2026-10-17T15:09:40+00:00",
-      "return_count": 3,
+      "canonical_id": "arXiv:2406.15486",
+      "title": "SampleAttention: Near-Lossless Acceleration of Long Context LLM Inference with Adaptive Structured Sparse Attention",
+      "source_url": "https://arxiv.org/html/2406.15486v3",
+      "returned_at": "2026-10-17T15:20:32+00:00",
+      "return_count": 1,
       "assigned_worker": "scheduled-chat-30",
       "reason": "blocked_quality",
       "failures": [
-        "説明不足トリガー: 評価説明量 152 < 500"
+        "説明不足トリガー: 評価説明量 176 < 500"
       ],
       "quality_metrics": {
         "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 6207,
-        "body_paragraphs": 34,
-        "method_chars": 1383,
-        "method_paragraphs": 8,
-        "evaluation_chars": 152,
-        "limitation_chars": 606,
+        "body_chars": 6897,
+        "body_paragraphs": 36,
+        "method_chars": 1645,
+        "method_paragraphs": 9,
+        "evaluation_chars": 176,
+        "limitation_chars": 0,
         "insufficiency_flags": [
-          "評価説明量 152 < 500"
+          "評価説明量 176 < 500",
+          "限界説明量 0 < 推奨 120"
         ]
       },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-20261017-metadata-repair--libfile_3f1fd89eac6c819183bb829d82a9a152--2024-2404.08698-anpd-adaptive-ngram-parallel-decoding.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-20261017-metadata-repair--libfile_3f1fd89eac6c819183bb829d82a9a152--2024-2404.08698-anpd-adaptive-ngram-parallel-decoding.json",
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-20261017-metadata-repair--libfile_6581607a95b88191b96d2ddc8e5919fd--2024-2406.15486-sampleattention-adaptive-sparse-prefill.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-20261017-metadata-repair--libfile_6581607a95b88191b96d2ddc8e5919fd--2024-2406.15486-sampleattention-adaptive-sparse-prefill.json",
+      "worker_run_key": "20261017-2030-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2606.05711",
+      "title": "Beyond tokens: a unified framework for latent communication in LLM-based multi-agent systems",
+      "source_url": "https://arxiv.org/html/2606.05711v3",
+      "returned_at": "2026-10-17T15:20:33+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "長文定型文の再利用を検出: papers/inference/19-inference-evaluation-benchmarking/2026-2606.05711-beyond-tokens-a-unified-framework-for-latent-communication-in-llm-based-.md と 26 段落 / 5893文字 (100.0%) が完全一致"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 8021,
+        "body_paragraphs": 42,
+        "method_chars": 2325,
+        "method_paragraphs": 12,
+        "evaluation_chars": 1116,
+        "limitation_chars": 999,
+        "insufficiency_flags": []
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-20261017-metadata-repair--libfile_7ff38bc9dfa481918784791e06d131bc--2026-2606.05711-beyond-tokens-latent-communication-survey.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-20261017-metadata-repair--libfile_7ff38bc9dfa481918784791e06d131bc--2026-2606.05711-beyond-tokens-latent-communication-survey.json",
+      "worker_run_key": "20261017-0145-scheduled-chat-45/r01"
+    },
+    {
+      "canonical_id": "arXiv:2505.22101",
+      "title": "MemOS: An Operating System for Memory-Augmented Generation (MAG) in Large Language Models",
+      "source_url": "https://arxiv.org/html/2505.22101v1",
+      "returned_at": "2026-10-17T15:20:34+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 7713,
+        "body_paragraphs": 41,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 628,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-20261017-metadata-repair--libfile_d9a917efd210819186a21238cb489fb4--2025-2505.22101-memos.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-20261017-metadata-repair--libfile_d9a917efd210819186a21238cb489fb4--2025-2505.22101-memos.json",
       "worker_run_key": "20261017-2030-scheduled-chat-30/r01"
     }
   ]

@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "995e1929499888f604b68a7dd0fef6a56d02d30f3b586ae4f1f3e8290ff91bf2",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/retry-research-20261017-metadata-repair--libfile_7ff38bc9dfa481918784791e06d131bc--2026-2606.05711-beyond-tokens-latent-communication-survey.md",
+  "canonical_id": "arXiv:2606.05711",
+  "worker_completed_at": "2026-10-17T01:45:00+09:00",
+  "worker_run_key": "20261017-0145-scheduled-chat-45/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 8021,
+    "body_paragraphs": 42,
+    "method_chars": 2325,
+    "method_paragraphs": 12,
+    "evaluation_chars": 1116,
+    "limitation_chars": 999,
+    "insufficiency_flags": []
+  },
+  "failures": [
+    "長文定型文の再利用を検出: papers/inference/19-inference-evaluation-benchmarking/2026-2606.05711-beyond-tokens-a-unified-framework-for-latent-communication-in-llm-based-.md と 26 段落 / 5893文字 (100.0%) が完全一致"
+  ],
+  "processed_at": "2026-10-17T15:20:33+00:00"
+}
