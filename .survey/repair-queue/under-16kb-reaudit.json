@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-10-17T17:26:23.037828+00:00",
+  "generated_at": "2026-10-17T17:37:56.110024+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 13,
+  "count": 10,
   "worker_counts": {
-    "scheduled-chat-00": 5,
-    "scheduled-chat-30": 4,
-    "scheduled-chat-45": 4
+    "scheduled-chat-00": 4,
+    "scheduled-chat-30": 3,
+    "scheduled-chat-45": 3
   },
   "entries": [
     {
@@ -19,7 +19,7 @@
       "file_bytes": 9952,
       "source_sha256": "8b78672dfd3367b0494e3c7598b7da2601580cb6b08f4395783b6fda1b12e681",
       "source_git_blob_sha": "c799f4294b018595eed9c724fc6829cf8353f2d3",
-      "assigned_worker": "scheduled-chat-45",
+      "assigned_worker": "scheduled-chat-30",
       "semantic_status": "pending",
       "mechanical_status": "FAIL",
       "japanese_ratio": 0.8674,
@@ -41,7 +41,7 @@
       "file_bytes": 10421,
       "source_sha256": "b567ecd24a6b929729be201f7e450f810d2dc44b6e3a93a7bdcdc5e8a9e40067",
       "source_git_blob_sha": "71fd61aae1645a21c651c0c1fd2998b179dd9bbb",
-      "assigned_worker": "scheduled-chat-00",
+      "assigned_worker": "scheduled-chat-30",
       "semantic_status": "pending",
       "mechanical_status": "FAIL",
       "japanese_ratio": 0.789025,
@@ -82,26 +82,6 @@
       "warnings": []
     },
     {
-      "path": "papers/inference/05-speculative-decoding-moe/2026-2605.15609-psd-pushing-the-pareto-frontier-of-diffusion-llms-via-parallel-speculati.md",
-      "canonical_id": "arXiv:2605.15609",
-      "title": "PSD: Pushing the Pareto Frontier of Diffusion LLMs via Parallel Speculative Decoding",
-      "file_bytes": 13688,
-      "source_sha256": "44679c96897ec7fb5ff0bd37d82346ab744583e0e1a8b3408a10e4b7ad592529",
-      "source_git_blob_sha": "c064040da0ed64d99a3de74b275362f86693b842",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.944293,
-      "quality_metrics": {
-        "body_chars": 3644,
-        "method_chars": 1253,
-        "evaluation_chars": 871,
-        "limitation_chars": 593
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
       "path": "papers/inference/99-other-inference-systems/2025-2512.09946-elana-a-simple-energy-and-latency-analyzer-for-llms.md",
       "canonical_id": "arXiv:2512.09946",
       "title": "ELANA: A Simple Energy and Latency Analyzer for LLMs",
@@ -117,6 +97,26 @@
         "method_chars": 1521,
         "evaluation_chars": 1156,
         "limitation_chars": 438
+      },
+      "mechanical_failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/05-speculative-decoding-moe/2026-2605.15609-psd-pushing-the-pareto-frontier-of-diffusion-llms-via-parallel-speculati.md",
+      "canonical_id": "arXiv:2605.15609",
+      "title": "PSD: Pushing the Pareto Frontier of Diffusion LLMs via Parallel Speculative Decoding",
+      "file_bytes": 15966,
+      "source_sha256": "4e327f9e17e368b6939384b36b123a14a6b8918d0aac3262af53849f6f27c6ec",
+      "source_git_blob_sha": "7b6fae1c9621a1ae0fd568b53f9d8205c27f6c30",
+      "assigned_worker": "scheduled-chat-00",
+      "semantic_status": "pending",
+      "mechanical_status": "PASS",
+      "japanese_ratio": 0.944293,
+      "quality_metrics": {
+        "body_chars": 3644,
+        "method_chars": 1253,
+        "evaluation_chars": 871,
+        "limitation_chars": 593
       },
       "mechanical_failures": [],
       "warnings": []
@@ -197,66 +197,6 @@
         "method_chars": 1259,
         "evaluation_chars": 1785,
         "limitation_chars": 0
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2025-2512.02901-fairy2i-training-complex-llms-from-real-llms-with-all-parameters-in-1-i.md",
-      "canonical_id": "arXiv:2512.02901",
-      "title": "Fairy2i: Training Complex LLMs from Real LLMs with All Parameters in {±1, ±i}",
-      "file_bytes": 18746,
-      "source_sha256": "6eb68729432cce35bc189e5b55ff22616e1b9fc9ac0437753a8cadcc7c7d8632",
-      "source_git_blob_sha": "a17b91b3d8445cd5cc0c70e37ef700c9772ac045",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.960957,
-      "quality_metrics": {
-        "body_chars": 4002,
-        "method_chars": 1297,
-        "evaluation_chars": 945,
-        "limitation_chars": 515
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/09-kernel-runtime-compilation/2025-2511.08083-hipkittens-fast-and-furious-amd-kernels.md",
-      "canonical_id": "arXiv:2511.08083",
-      "title": "HipKittens: Fast and Furious AMD Kernels",
-      "file_bytes": 21126,
-      "source_sha256": "34d824536a6c2b472eecd33944b7c88980991323660d7f9f0bdaeb02bfe4dacf",
-      "source_git_blob_sha": "b6acaf742ce3cd4063f7c1a8ce5a3b210446ff1b",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.986561,
-      "quality_metrics": {
-        "body_chars": 5855,
-        "method_chars": 2617,
-        "evaluation_chars": 667,
-        "limitation_chars": 0
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/07-kv-cache-optimization-compression/2026-2605.03884-qkvshare-quantized-kv-cache-handoff-for-multi-agent-on-device-llms.md",
-      "canonical_id": "arXiv:2605.03884",
-      "title": "QKVShare: Quantized KV-Cache Handoff for Multi-Agent On-Device LLMs",
-      "file_bytes": 22962,
-      "source_sha256": "a3eb27ff1660d64eee995be47b43a0f7a4870acb3b8351eda7de36f26fb70bf7",
-      "source_git_blob_sha": "524afa221925121ff5977f7db5737fd2f72f05ea",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.980613,
-      "quality_metrics": {
-        "body_chars": 5969,
-        "method_chars": 1916,
-        "evaluation_chars": 1694,
-        "limitation_chars": 625
       },
       "mechanical_failures": [],
       "warnings": []
