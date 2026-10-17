@@ -33,7 +33,32 @@ jobs:
         uses: actions/checkout@v4
         with:
           ref: main
-          fetch-depth: 0
+          fetch-depth: 1
+
+      - name: Restore main ancestry
+        shell: bash
+        run: |
+          set -euo pipefail
+          # Keep the complete main commit graph while fetching historical blobs lazily.
+          fetch_stderr="$(mktemp)"
+          trap 'rm -f "$fetch_stderr"' EXIT
+          if git -c protocol.version=2 fetch --unshallow --filter=blob:none --no-tags origin main 2>"$fetch_stderr"; then
+            if grep -Fq 'filtering not recognized by server, ignoring' "$fetch_stderr"; then
+              cat "$fetch_stderr" >&2
+              echo 'Git server ignored the requested blob filter; refusing to continue.' >&2
+              exit 1
+            fi
+            cat "$fetch_stderr" >&2
+          else
+            fetch_rc=$?
+            cat "$fetch_stderr" >&2
+            echo "Fetching full main ancestry failed (exit ${fetch_rc})." >&2
+            exit "$fetch_rc"
+          fi
+          if [ "$(git rev-parse --is-shallow-repository)" != false ]; then
+            echo 'Library import requires full main ancestry; refusing shallow history.' >&2
+            exit 1
+          fi
 
       - name: Set up Python
         uses: actions/setup-python@v5

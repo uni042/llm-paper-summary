@@ -104,6 +104,25 @@ jobs:
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
 
+          run_timed() {
+            local attempt="$1"
+            local stage="$2"
+            shift 2
+            local started ended duration rc
+            started="$(date +%s)"
+            printf 'attempt=%s stage=%s event=start\n' "$attempt" "$stage" >&2
+            if "$@"; then
+              rc=0
+            else
+              rc=$?
+            fi
+            ended="$(date +%s)"
+            duration=$((ended - started))
+            printf 'attempt=%s stage=%s event=complete duration_seconds=%s exit_code=%s\n' \
+              "$attempt" "$stage" "$duration" "$rc" >&2
+            return "$rc"
+          }
+
           if [ "${{ github.event_name }}" = "push" ]; then
             if git diff --name-only "${{ github.event.before }}" "${{ github.sha }}" | grep -Fxq 'STATUS.md'; then
               echo 'Triggering paper push already included STATUS.md; dashboard refresh is already atomic.'
@@ -114,17 +133,17 @@ jobs:
           for attempt in 1 2 3 4; do
             git fetch origin main
             git reset --hard origin/main
-            python .survey/scripts/reconcile_represented_research_jobs.py --repo-root .
-            python .survey/scripts/refresh_queue_snapshot.py --repo-root . >/tmp/next-jobs.json
-            python .survey/scripts/render_status_dashboard.py --repo-root . --output STATUS.md
-            python .survey/scripts/build_worker_worklist.py --repo-root .
+            run_timed "$attempt" reconciliation python .survey/scripts/reconcile_represented_research_jobs.py --repo-root .
+            run_timed "$attempt" 'queue snapshot' python .survey/scripts/refresh_queue_snapshot.py --repo-root . >/tmp/next-jobs.json
+            run_timed "$attempt" 'STATUS render' python .survey/scripts/render_status_dashboard.py --repo-root . --output STATUS.md
+            run_timed "$attempt" 'worklist build' python .survey/scripts/build_worker_worklist.py --repo-root .
             git add -A STATUS.md .survey/work-queue/jobs .survey/work-queue/next-jobs.json .survey/work-queue/WORKLIST-00.md .survey/work-queue/WORKLIST-30.md .survey/work-queue/WORKLIST-45.md .survey/work-queue/worker-worklist-00.json .survey/work-queue/worker-worklist-30.json .survey/work-queue/worker-worklist-45.json
             if git diff --cached --quiet; then
               echo 'Dashboard already current.'
               exit 0
             fi
             git commit -m 'chore: refresh survey status dashboard'
-            if git push origin HEAD:main; then
+            if run_timed "$attempt" push git push origin HEAD:main; then
               exit 0
             fi
             echo "Push conflict on attempt ${attempt}; regenerating from latest main."
