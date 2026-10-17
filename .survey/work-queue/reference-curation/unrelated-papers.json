@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-16T19:48:15+00:00",
-  "record_count": 12418,
+  "updated_at": "2026-10-17T01:43:30+00:00",
+  "record_count": 12417,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -164998,9 +164998,9 @@
         "id:arXiv:2311.17049",
         "url:https://arxiv.org/abs/2311.17049"
       ],
-      "reason": "一次要旨で対象はCLIP系の画像・テキスト対照符号器であり、ゼロショット画像分類と画像検索の遅延・精度、強化データセットによる学習効率を評価する。自己回帰LLMの復号・KV管理・MoE・言語モデルの推論サービングではないため本サーベイ対象外。",
+      "reason": "対象は画像・テキストの対照学習エンコーダとモバイル画像分類・検索であり、推論対象は生成型LLMではない。MobileCLIP-S2の2.3倍高速化と学習効率の改善は画像テキストモデルの設計・訓練に対する結果で、LLM生成復号やKVキャッシュ・サービング基盤の新方式ではない。",
       "first_checked_at": "2026-10-12T10:58:05+00:00",
-      "last_checked_at": "2026-10-16T01:51:53+00:00",
+      "last_checked_at": "2026-10-17T01:43:30+00:00",
       "linked_from": [],
       "title": "MobileCLIP: Fast Image-Text Models through Multi-Modal Reinforced Training"
     },
@@ -165113,9 +165113,9 @@
         "id:arXiv:2403.01232",
         "url:https://arxiv.org/abs/2403.01232"
       ],
-      "reason": "グラフトランスフォーマーに局所・大域の置換同変注意を組み込み、高次多項式の表現力を線形計算量で得る研究。13の同質・異質グラフデータセットでGNN/GTを比較するもので、自然言語LLMの復号・推論メモリ・サービングへの評価はない。名称にTransformerと線形時間を含むが、最終適用先はグラフ学習である。",
+      "reason": "グラフトランスフォーマーの高次多項式表現と線形計算量の局所・大域注意を提案し、13件のグラフデータセットでノード表現を評価する研究。対象はグラフ学習であり、自己回帰型LLMの生成推論、KVキャッシュ、MoE、推論サーバの効率化ではない。",
       "first_checked_at": "2026-10-12T21:38:02+00:00",
-      "last_checked_at": "2026-10-13T14:44:23+00:00",
+      "last_checked_at": "2026-10-17T01:43:30+00:00",
       "linked_from": [],
       "title": "Polynormer: Polynomial-Expressive Graph Transformer in Linear Time"
     },
@@ -178931,19 +178931,6 @@
       "last_checked_at": "2026-10-16T06:53:27+00:00",
       "linked_from": [],
       "title": "Dynamic Sparse No Training: Training-Free Fine-tuning for Sparse LLMs"
-    },
-    "arXiv:2407.18370": {
-      "classification": "unrelated",
-      "canonical_id": "arXiv:2407.18370",
-      "identity_tokens": [
-        "DOI:10.48550/arxiv.2407.18370",
-        "arXiv:2407.18370"
-      ],
-      "reason": "タイトルに明示された研究課題はLLM評価器の人間との判定一致に対する保証とエスカレーション判断である。主題は判定品質・人手評価との整合であり、推論サービングの速度、GPU利用率、KV管理、専門家配置、分散実行などの基盤最適化ではないため対象外とした。タイトル段階の適格性確認のみであり、要旨・本文は未読。",
-      "first_checked_at": "2026-10-16T07:46:05+00:00",
-      "last_checked_at": "2026-10-16T07:46:05+00:00",
-      "linked_from": [],
-      "title": "Trust or Escalate: LLM Judges with Provable Guarantees for Human Agreement"
     },
     "arXiv:2011.00241": {
       "classification": "unrelated",

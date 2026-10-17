@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-12f03577d6443131-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2311.17049",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2311.17049",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2311.17049",
+      "arXiv:2311.17049",
+      "id:arXiv:2311.17049",
+      "url:https://arxiv.org/abs/2311.17049"
+    ],
+    "reason": "対象は画像・テキストの対照学習エンコーダとモバイル画像分類・検索であり、推論対象は生成型LLMではない。MobileCLIP-S2の2.3倍高速化と学習効率の改善は画像テキストモデルの設計・訓練に対する結果で、LLM生成復号やKVキャッシュ・サービング基盤の新方式ではない。",
+    "first_checked_at": "2026-10-12T10:58:05+00:00",
+    "last_checked_at": "2026-10-17T01:43:30+00:00",
+    "linked_from": [],
+    "title": "MobileCLIP: Fast Image-Text Models through Multi-Modal Reinforced Training"
+  },
+  "processed_at": "2026-10-17T01:43:30+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-12f03577d644",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

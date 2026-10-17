@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-16T19:48:15+00:00",
-  "record_count": 5234,
+  "updated_at": "2026-10-17T01:43:29+00:00",
+  "record_count": 5235,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -71686,9 +71686,9 @@
         "DOI:10.48550/arxiv.2410.03051",
         "arXiv:2410.03051"
       ],
-      "reason": "一次要旨は動画の詳細キャプション生成モデルAuroraCapとVDCベンチマークを主題とする一方、長い動画列の入力視覚トークンを統合して処理負荷を削減し、性能低下が小さいと報告する。多モーダルLLMの入力圧縮に関連するが、独立した汎用LLM推論サービング機構や実測生成遅延・メモリ帯域の評価が中心ではないため境界的とする。",
+      "reason": "動画詳細キャプションの精度と新ベンチマークが中心だが、長い動画の視覚トークンを統合して入力トークン数を削減し、性能劣化が小さいと報告する。多モーダル推論の入力処理効率と関係する一方、LLMサービングのGPUメモリ、復号速度、スケジューラを主評価していないため境界と判定。",
       "first_checked_at": "2026-10-12T18:49:58+00:00",
-      "last_checked_at": "2026-10-15T06:43:50+00:00",
+      "last_checked_at": "2026-10-17T01:43:29+00:00",
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "AuroraCap: Efficient, Performant Video Detailed Captioning and a New Benchmark"
@@ -81334,6 +81334,19 @@
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "M6-Rec: Generative Pretrained Language Models are Open-Ended Recommender Systems"
+    },
+    "arXiv:2407.18370": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2407.18370",
+      "identity_tokens": [
+        "arXiv:2407.18370"
+      ],
+      "reason": "安価なLLM判定器から強い判定器へ必要時だけ段階的に委譲するカスケード選択評価を提案し、費用を抑えつつ人間との一致率保証を目指す。モデル選択による推論計算削減という接点があるが、主眼は評価の信頼性・保証と判定器校正であり、LLMサービングの遅延・GPU効率・メモリ最適化を直接検証する研究ではないため境界と判定。",
+      "first_checked_at": "2026-10-17T01:43:29+00:00",
+      "last_checked_at": "2026-10-17T01:43:29+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Trust or Escalate: LLM Judges with Provable Guarantees for Human Agreement"
     }
   }
 }

@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-12f03577d6443131-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2410.03051",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2410.03051",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2410.03051",
+      "arXiv:2410.03051"
+    ],
+    "reason": "動画詳細キャプションの精度と新ベンチマークが中心だが、長い動画の視覚トークンを統合して入力トークン数を削減し、性能劣化が小さいと報告する。多モーダル推論の入力処理効率と関係する一方、LLMサービングのGPUメモリ、復号速度、スケジューラを主評価していないため境界と判定。",
+    "first_checked_at": "2026-10-12T18:49:58+00:00",
+    "last_checked_at": "2026-10-17T01:43:29+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "AuroraCap: Efficient, Performant Video Detailed Captioning and a New Benchmark"
+  },
+  "processed_at": "2026-10-17T01:43:29+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-12f03577d644",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
