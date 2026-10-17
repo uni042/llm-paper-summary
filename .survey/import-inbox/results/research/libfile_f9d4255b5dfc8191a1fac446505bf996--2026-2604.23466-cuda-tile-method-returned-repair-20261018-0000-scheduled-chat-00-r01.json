@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "0c6359cbebae6180a6cd45cfbd1f5335a12ced7415bcf5c0dd455dfb0ad76511",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_f9d4255b5dfc8191a1fac446505bf996--2026-2604.23466-cuda-tile-method-returned-repair-20261018-0000-scheduled-chat-00-r01.md",
+  "canonical_id": "arXiv:2604.23466",
+  "worker_completed_at": "2026-10-18T00:05:00+09:00",
+  "worker_run_key": "20261018-0000-scheduled-chat-00/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 6456,
+    "body_paragraphs": 31,
+    "method_chars": 1568,
+    "method_paragraphs": 5,
+    "evaluation_chars": 0,
+    "limitation_chars": 383,
+    "insufficiency_flags": [
+      "評価説明量 0 < 500"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 評価説明量 0 < 500"
+  ],
+  "processed_at": "2026-10-17T15:26:59+00:00"
+}
