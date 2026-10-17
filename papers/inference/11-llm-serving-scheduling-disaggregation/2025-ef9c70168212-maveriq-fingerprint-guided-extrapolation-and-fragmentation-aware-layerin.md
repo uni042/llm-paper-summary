@@ -1,36 +1,193 @@
 ---
-canonical_id: 'DOI:10.1145/3712285.3759867'
+canonical_id: DOI:10.1145/3712285.3759867
 title: 'MaverIQ: Fingerprint-Guided Extrapolation and Fragmentation-Aware Layering for Intent-Based LLM Serving'
-summary: 'MaverIQは、大規模言語モデルの配備時に求められる遅延・費用・メモリ・精度の条件から、圧縮方式とテンソル並列・パイプライン並列の組合せを選び、断片化したGPU空きメモリへ層を不均等配置する推論サービング基盤である。1〜2層の小型代理モデルを計測し、解析式で全構成の性能を外挿する。8基のRTX A6000を使う評価では、既存方式に比べて事前計測のGPU時間を7〜15倍削減し、厳しい精度制約下でも利用者の中央値遅延を28〜45%短縮、事業者の運用費を3.8〜8.3倍削減した。ただし性能モデルは同種GPUと対象とした自己回帰モデルを中心に検証されている。'
-list_summary: '1〜2層の小型代理モデルから配備構成の遅延・メモリを推定し、GPUの空き領域に層を不均等配置することで、事前計測GPU時間を7〜15倍、運用費を3.8〜8.3倍削減するLLMサービング基盤。'
+summary: MaverIQは、大規模言語モデルの配備時に求められる遅延・費用・メモリ・精度の条件から、圧縮方式とテンソル並列・パイプライン並列の組合せを選び、断片化したGPU空きメモリへ層を不均等配置する推論サービング基盤である。1〜2層の小型代理モデルを計測し、解析式で全構成の性能を外挿する。8基のRTX A6000を使う評価では、既存方式に比べて事前計測のGPU時間を7〜15倍削減し、厳しい精度制約下でも利用者の中央値遅延を28〜45%短縮、事業者の運用費を3.8〜8.3倍削減した。ただし性能モデルは同種GPUと対象とした自己回帰モデルを中心に検証されている。
+list_summary: 1〜2層の小型代理モデルから配備構成の遅延・メモリを推定し、GPUの空き領域に層を不均等配置することで、事前計測GPU時間を7〜15倍、運用費を3.8〜8.3倍削減するLLMサービング基盤。
 authors:
-  - Dimitrios Liakopoulos
-  - Prasoon Sinha
-  - Tianrui Hu
-  - Myungjin Lee
-  - Neeraja J. Yadwadkar
+- Dimitrios Liakopoulos
+- Prasoon Sinha
+- Tianrui Hu
+- Myungjin Lee
+- Neeraja J. Yadwadkar
 published: '2025-11-15'
 publication: 'SC 2025: Proceedings of the International Conference for High Performance Computing, Networking, Storage and Analysis, pp. 1676-1696'
 publication_type: conference
 publication_status: published
-source: 'https://ut-sysml.ece.utexas.edu/publications/prints/sc2025_liakopoulos.pdf'
+source: https://ut-sysml.ece.utexas.edu/publications/prints/sc2025_liakopoulos.pdf
 sources:
-  - 'https://ut-sysml.ece.utexas.edu/publications/prints/sc2025_liakopoulos.pdf'
-  - 'https://doi.org/10.1145/3712285.3759867'
-  - 'https://github.com/UT-SysML/MaverIQ'
-implementation: 'Python約3,000行の制御基盤を、手動の層配置を許すよう拡張したTensorRT-LLM 0.9.0.dev2024022000の上に実装。GPU負荷と空きメモリをCPU側監視デーモンから1秒ごとに報告する。公式実装はUT-SysML/MaverIQ。'
-code: 'https://github.com/UT-SysML/MaverIQ'
+- https://ut-sysml.ece.utexas.edu/publications/prints/sc2025_liakopoulos.pdf
+- https://doi.org/10.1145/3712285.3759867
+- https://github.com/UT-SysML/MaverIQ
+implementation: Python約3,000行の制御基盤を、手動の層配置を許すよう拡張したTensorRT-LLM 0.9.0.dev2024022000の上に実装。GPU負荷と空きメモリをCPU側監視デーモンから1秒ごとに報告する。公式実装はUT-SysML/MaverIQ。
+code: https://github.com/UT-SysML/MaverIQ
 last_checked: '2026-10-16'
 worker_completed_at: '2026-10-16T19:55:00+09:00'
-worker_id: 'scheduled-chat-45'
-worker_run_key: '20261016-1945-scheduled-chat-45/r01'
+worker_id: scheduled-chat-45
+worker_run_key: 20261016-1945-scheduled-chat-45/r01
 quality_self_review_passed: true
-quality_self_review_version: 'PAPER-QUALITY-GUIDE-2026-10-07'
+quality_self_review_version: PAPER-QUALITY-GUIDE-2026-10-07
 returned_research_repair: true
 returned_research_original_failure: '説明不足トリガー: 手法説明量 0 < 700'
-returned_research_source_note: 'GitHub blocked receiptの同一原稿を方法節の見出し契約に適合させて修復。本文の数値・一次資料根拠は維持。'
+returned_research_source_note: GitHub blocked receiptの同一原稿を方法節の見出し契約に適合させて修復。本文の数値・一次資料根拠は維持。
 last_audited: null
 audit_version: 0
+references:
+- canonical_id: arXiv:2405.05465
+- canonical_id: arXiv:2403.02310
+- canonical_id: DOI:10.1145/3617232.3624849
+  doi: 10.1145/3617232.3624849
+- canonical_id: DOI:10.52202/068431-1723
+  doi: 10.52202/068431-1723
+- canonical_id: arXiv:2207.00032
+  arxiv_id: '2207.00032'
+  doi: 10.1109/sc41404.2022.00051
+- canonical_id: DOI:10.1145/3492321.3519584
+  doi: 10.1145/3492321.3519584
+- canonical_id: DOI:10.1109/sc41406.2024.00046
+  doi: 10.1109/sc41406.2024.00046
+- canonical_id: DOI:10.1145/3458817.3476138
+  doi: 10.1145/3458817.3476138
+- canonical_id: arXiv:2405.01814
+  arxiv_id: '2405.01814'
+- canonical_id: DOI:10.1109/sc41406.2024.00080
+  doi: 10.1109/sc41406.2024.00080
+- canonical_id: arXiv:2208.07339
+- canonical_id: DOI:10.52202/075280-0441
+  doi: 10.52202/075280-0441
+- canonical_id: arXiv:2212.09720
+- canonical_id: arXiv:2403.04643
+  arxiv_id: '2403.04643'
+- canonical_id: arXiv:2404.02445
+  arxiv_id: '2404.02445'
+- canonical_id: arXiv:2309.14393
+  openreview_id: aIok3ZD9to.
+- canonical_id: DOI:10.1145/3689031.3717481
+  doi: 10.1145/3689031.3717481
+- canonical_id: arXiv:2010.05680
+  doi: 10.1145/3437801.3441578
+- canonical_id: arXiv:2301.00774
+- canonical_id: arXiv:2210.17323
+- canonical_id: arXiv:2408.11743
+  arxiv_id: '2408.11743'
+- canonical_id: arXiv:2401.14351
+- canonical_id: DOI:10.5555/3086952
+  doi: 10.5555/3086952
+- canonical_id: arXiv:2006.02464
+- canonical_id: DOI:10.1145/3579371.3589038
+  doi: 10.1145/3579371.3589038
+- canonical_id: arXiv:2401.08671
+  arxiv_id: '2401.08671'
+- canonical_id: DOI:10.1109/isca59077.2024.00064
+  doi: 10.1109/isca59077.2024.00064
+- canonical_id: OpenReview:nZeVKeeFYf9.
+  openreview_id: nZeVKeeFYf9.
+- canonical_id: SemanticScholar:d79a26226393f687ddbc375e32055b40b8ad8d38
+- canonical_id: DOI:10.1145/3676641.3716245
+  doi: 10.1145/3676641.3716245
+- canonical_id: arXiv:2401.04088
+  arxiv_id: '2401.04088'
+- canonical_id: arXiv:2402.16775
+  doi: 10.18653/v1/2024.findings-acl.726
+- canonical_id: DOI:10.1145/3542929.3563468
+  doi: 10.1145/3542929.3563468
+- canonical_id: DOI:10.1145/3600006.3613165
+  doi: 10.1145/3600006.3613165
+- canonical_id: DOI:10.1109/sc41406.2024.00022
+  doi: 10.1109/sc41406.2024.00022
+- canonical_id: DOI:10.1145/3669940.3707265
+  doi: 10.1145/3669940.3707265
+- canonical_id: DOI:10.18653/v1/2020.acl-main.703
+  doi: 10.18653/v1/2020.acl-main.703
+- canonical_id: arXiv:2302.11665
+- canonical_id: arXiv:2306.00978
+- canonical_id: arXiv:2301.08984
+  arxiv_id: '2301.08984'
+- canonical_id: DOI:10.1109/cluster51413.2022.00042
+  doi: 10.1109/cluster51413.2022.00042
+- canonical_id: arXiv:2310.17157
+- canonical_id: arXiv:2311.01635
+  arxiv_id: '2311.01635'
+- canonical_id: arXiv:2402.17764
+  arxiv_id: '2402.17764'
+- canonical_id: arXiv:2305.11627
+- canonical_id: arXiv:2406.01566
+  doi: 10.1145/3669940.3707215
+- canonical_id: arXiv:2305.09781
+  doi: 10.1145/3620666.3651335
+- canonical_id: DOI:10.1145/3620665.3640411
+  doi: 10.1145/3620665.3640411
+- canonical_id: DOI:10.1145/3458817.3476209
+  doi: 10.1145/3458817.3476209
+- canonical_id: DOI:10.1145/3620665.3640383
+  doi: 10.1145/3620665.3640383
+- canonical_id: arXiv:2409.04992
+  arxiv_id: '2409.04992'
+- canonical_id: arXiv:2311.18677
+  doi: 10.1109/isca59077.2024.00019
+- canonical_id: DOI:10.18653/v1/2023.findings-emnlp.936
+  doi: 10.18653/v1/2023.findings-emnlp.936
+- canonical_id: arXiv:2405.04437
+  arxiv_id: '2405.04437'
+- canonical_id: arXiv:1910.02054
+- canonical_id: arXiv:1609.04747
+  arxiv_id: '1609.04747'
+- canonical_id: arXiv:2303.06865
+- canonical_id: arXiv:1909.08053
+  arxiv_id: '1909.08053'
+- canonical_id: DOI:10.1145/3577193.3593704
+  doi: 10.1145/3577193.3593704
+- canonical_id: arXiv:2312.12456
+  doi: 10.1145/3694715.3695964
+- canonical_id: arXiv:2408.00741
+  arxiv_id: '2408.00741'
+- canonical_id: DOI:10.1016/j.neucom.2023.127063
+  doi: 10.1016/j.neucom.2023.127063
+- canonical_id: arXiv:2306.11695
+- canonical_id: DOI:10.1145/3620666.3651359
+  doi: 10.1145/3620666.3651359
+- canonical_id: DOI:10.1145/3689031.3717469
+  doi: 10.1145/3689031.3717469
+- canonical_id: DOI:10.18653/v1/2024.naacl-demo.14
+  doi: 10.18653/v1/2024.naacl-demo.14
+- canonical_id: arXiv:2308.02019
+  arxiv_id: '2308.02019'
+  doi: 10.18653/v1/2023.conll-babylm.24
+- canonical_id: DOI:10.1145/3694715.3695975
+  doi: 10.1145/3694715.3695975
+- canonical_id: DOI:10.1145/3545008.3545087
+  doi: 10.1145/3545008.3545087
+- canonical_id: arXiv:2310.11453
+  arxiv_id: '2310.11453'
+- canonical_id: DOI:10.1109/sc41406.2024.00081
+  doi: 10.1109/sc41406.2024.00081
+- canonical_id: DOI:10.1145/3552326.3587438
+  doi: 10.1145/3552326.3587438
+- canonical_id: arXiv:2404.09526
+  doi: 10.1145/3694715.3695948
+- canonical_id: DOI:10.1109/tpds.2023.3266246
+  doi: 10.1109/tpds.2023.3266246
+- canonical_id: arXiv:2211.10438
+- canonical_id: arXiv:2401.14361
+  arxiv_id: '2401.14361'
+- canonical_id: DOI:10.1109/socc62300.2024.10737825
+  doi: 10.1109/socc62300.2024.10737825
+- canonical_id: arXiv:2405.16444
+  doi: 10.1145/3689031.3696098
+- canonical_id: arXiv:2303.08302
+  arxiv_id: '2303.08302'
+- canonical_id: DOI:10.5555/3600237.3600268
+- canonical_id: DOI:10.1145/3620666.3651368
+  doi: 10.1145/3620666.3651368
+- canonical_id: arXiv:2312.05516
+  doi: 10.1145/3689031.3696086
+- canonical_id: DOI:10.1109/tpds.2021.3094364
+  doi: 10.1109/tpds.2021.3094364
+- canonical_id: arXiv:2304.11277
+  arxiv_id: '2304.11277'
+  doi: 10.14778/3611540.3611569
+references_checked_at: '2026-10-17'
+references_source: crossref-deposited-reference-metadata
+references_total: 115
 ---
 
 # MaverIQ：小型指紋モデルによる推論性能外挿とGPU断片領域への不均等層配置
