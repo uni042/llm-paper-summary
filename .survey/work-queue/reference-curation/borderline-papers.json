@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-17T05:06:14+00:00",
-  "record_count": 5232,
+  "updated_at": "2026-10-17T13:43:42+00:00",
+  "record_count": 5233,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -81304,6 +81304,21 @@
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "UniVLR: Unifying Text and Vision in Visual Latent Reasoning for Multimodal LLMs"
+    },
+    "arXiv:2209.09004": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2209.09004",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2209.09004",
+        "SemanticScholar:adf56c96978fad861e92917f95708ae9935cc132",
+        "arXiv:2209.09004"
+      ],
+      "reason": "NeurIPS 2022のEcoFormerはクエリとキーをカーネル化ハッシュで短い二値符号へ写像し、ハミング親和性に基づく線形時間の注意計算と積和演算の削減を狙う。一次論文の主実験はPVTv2-B0を用いたImageNet-1K/CIFAR-100の画像分類およびLong Range Arenaの系列分類で、ImageNet-1Kのオンチップエネルギー73%減・精度0.33ポイント低下を報告する。一方、自己回帰型生成LLMの復号、KVキャッシュ、長文サービングでの品質・遅延・処理量は実証されていない。汎用注意カーネルの省エネルギー研究として関連するが、現在のLLM推論システム直接貢献という収録基準では境界的。",
+      "first_checked_at": "2026-10-17T13:43:42+00:00",
+      "last_checked_at": "2026-10-17T13:43:42+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "EcoFormer: Energy-Saving Attention with Linear Complexity"
     }
   }
 }
