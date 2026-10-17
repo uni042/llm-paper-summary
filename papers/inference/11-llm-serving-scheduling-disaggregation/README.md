@@ -758,7 +758,7 @@
 
 - **2026-05 · [Keep What Audio Cannot Say: Context-Preserving Token Pruning for Omni-LLMs](2026-2605.11605-keep-what-audio-cannot-say-context-preserving-token-pruning-for-omni-llm.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
-  音声・映像を同時に扱う全モダリティ大規模言語モデルでは、映像の特徴列が音声に比べて長くなり、入力の事前充填（プリフィル）時間とGPUメモリを消費する。さらに空間格子による細部の救済と、時間方向で重複する映像特徴の統合を行う。Qwen2.5-Omni 7Bでは6評価課題の平均入力トークンを55%削減し、無削減を100とする正規化平均性能は100.0を維持する。
+  音声は短い特徴系列に圧縮されることが多い一方、映像はフレーム数と空間パッチ数に比例して長くなり、事前充填の計算、注意用メモリ、入力長の制限に影響する。Qwen2.5-Omni 7Bの6つの音声映像課題では、入力トークンを平均55%減らして、無圧縮を100とする正規化平均性能100.0を得た。
 
 - **2026-05 · [Human-Less LLM Serving: Quantifying the Human Tax on Throughput](2026-2606.20577-human-less-llm-serving-human-tax-throughput.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

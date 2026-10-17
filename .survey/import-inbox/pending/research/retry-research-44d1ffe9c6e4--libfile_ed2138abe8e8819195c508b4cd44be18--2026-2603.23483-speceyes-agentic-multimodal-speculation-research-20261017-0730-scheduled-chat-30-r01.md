@@ -33,6 +33,8 @@ worklist_rank: 68
 reference_main_sha: "3b9fc724b52719636f403dd076f11570dab7cfc0"
 quality_self_review_passed: true
 quality_self_review_version: "PAPER-QUALITY-GUIDE-2026-10-07"
+last_audited: null
+audit_version: 0
 ---
 
 # SpecEyes：視覚エージェントのツール呼出し連鎖を迂回する推論時投機実行

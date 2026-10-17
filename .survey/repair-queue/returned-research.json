@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-17T08:03:48+00:00",
+  "generated_at": "2026-10-17T08:16:14+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 169,
+  "count": 166,
   "entries": [
     {
       "canonical_id": "DOI:10.1145/3714983.3714987",
@@ -641,33 +641,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_eead8a97f5e481918462104d5fddd3d0--2026-2603.05451-flashattention4-returned-repair-20261012-2002-scheduled-chat-00-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_eead8a97f5e481918462104d5fddd3d0--2026-2603.05451-flashattention4-returned-repair-20261012-2002-scheduled-chat-00-r01.json",
       "worker_run_key": "20261012-2002-scheduled-chat-00/r01"
-    },
-    {
-      "canonical_id": "arXiv:2608.12114",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-13T06:59:41+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 394 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5356,
-        "body_paragraphs": 34,
-        "method_chars": 1160,
-        "method_paragraphs": 8,
-        "evaluation_chars": 394,
-        "limitation_chars": 746,
-        "insufficiency_flags": [
-          "評価説明量 394 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-9a7672998899--libfile_68c7919974bc8191979ab7131c8435f9--2026-2608.12114-ingestion-tax-metadata-repair-20261013-1445-scheduled-chat-45-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-9a7672998899--libfile_68c7919974bc8191979ab7131c8435f9--2026-2608.12114-ingestion-tax-metadata-repair-20261013-1445-scheduled-chat-45-r01.json",
-      "worker_run_key": "20261013-1445-scheduled-chat-45/r01"
     },
     {
       "canonical_id": "arXiv:2605.14249",
@@ -2817,35 +2790,6 @@
       "worker_run_key": "20261016-2030-scheduled-chat-30/r01"
     },
     {
-      "canonical_id": "arXiv:2403.10059",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-16T14:40:09+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700",
-        "説明不足トリガー: 評価説明量 191 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 8070,
-        "body_paragraphs": 43,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 191,
-        "limitation_chars": 900,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700",
-          "評価説明量 191 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-017486cd84f9--libfile_604896c3db5081919d32901694a18b74--2024-2403.10059-repoformer-selective-retrieval-code-completion-research-20261016-1145-scheduled-chat-45-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-017486cd84f9--libfile_604896c3db5081919d32901694a18b74--2024-2403.10059-repoformer-selective-retrieval-code-completion-research-20261016-1145-sch.json",
-      "worker_run_key": "20261016-1145-scheduled-chat-45/r01"
-    },
-    {
       "canonical_id": "arXiv:2403.11805",
       "title": null,
       "source_url": null,
@@ -3371,34 +3315,6 @@
       "worker_run_key": "20261015-1325-scheduled-chat-30/r01"
     },
     {
-      "canonical_id": "arXiv:2601.06562",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-16T15:47:54+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 148 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 4714,
-        "body_paragraphs": 28,
-        "method_chars": 1810,
-        "method_paragraphs": 11,
-        "evaluation_chars": 148,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "評価説明量 148 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-8e0e6c57566b--libfile_59c35bedd740819180aea404bbcfabbc--2026-2601.06562-mosaic-dllm-global-memory-planning-research-20261016-0200-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-8e0e6c57566b--libfile_59c35bedd740819180aea404bbcfabbc--2026-2601.06562-mosaic-dllm-global-memory-planning-research-20261016-0200-scheduled-chat-.json",
-      "worker_run_key": "20261016-0200-scheduled-chat-00/r01"
-    },
-    {
       "canonical_id": "arXiv:2507.19595",
       "title": null,
       "source_url": null,
@@ -3596,33 +3512,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-ba3c11fb41af--libfile_36eee027a3dc81919047c761346d1b05--2025-2505.19201-dream-multimodal-speculative-decoding-research-20261015-1900-scheduled-chat-00-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-ba3c11fb41af--libfile_36eee027a3dc81919047c761346d1b05--2025-2505.19201-dream-multimodal-speculative-decoding-research-20261015-1900-scheduled-ch.json",
       "worker_run_key": "20261015-1900-scheduled-chat-00/r01"
-    },
-    {
-      "canonical_id": "arXiv:2602.20309",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-16T16:07:41+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 448 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 6694,
-        "body_paragraphs": 35,
-        "method_chars": 1898,
-        "method_paragraphs": 11,
-        "evaluation_chars": 448,
-        "limitation_chars": 659,
-        "insufficiency_flags": [
-          "評価説明量 448 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-c5509075353e--libfile_f60f2a3fae1c819186a2aebaaab88d54--2026-2602.20309-quantvla-scale-calibrated-vla-quantization-research-20261016-1730-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-c5509075353e--libfile_f60f2a3fae1c819186a2aebaaab88d54--2026-2602.20309-quantvla-scale-calibrated-vla-quantization-research-20261016-1730-schedul.json",
-      "worker_run_key": "20261016-1730-scheduled-chat-30/r01"
     },
     {
       "canonical_id": "arXiv:2602.08722",
@@ -3900,33 +3789,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_7645b0e1785c819186e4698f07ed3ed3--2024-2403.01136-llm-pq-phase-aware-partition-returned-repair-20261017-0600-scheduled-chat-00-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_7645b0e1785c819186e4698f07ed3ed3--2024-2403.01136-llm-pq-phase-aware-partition-returned-repair-20261017-0600-scheduled-chat-00-r01.json",
       "worker_run_key": "20261017-0600-scheduled-chat-00/r01"
-    },
-    {
-      "canonical_id": "arXiv:2602.07804",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-16T22:07:37+00:00",
-      "return_count": 6,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 180 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 6125,
-        "body_paragraphs": 39,
-        "method_chars": 1668,
-        "method_paragraphs": 11,
-        "evaluation_chars": 180,
-        "limitation_chars": 828,
-        "insufficiency_flags": [
-          "評価説明量 180 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-4d6bc1b78914--libfile_3f8d7f8db73081918fa8a9d231b8d2fc--2026-2602.07804-cooperative-game-shapley-layer-pruning-research-20261017-0430-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-4d6bc1b78914--libfile_3f8d7f8db73081918fa8a9d231b8d2fc--2026-2602.07804-cooperative-game-shapley-layer-pruning-research-20261017-0430-scheduled-c.json",
-      "worker_run_key": "20261017-0430-scheduled-chat-30/r01"
     },
     {
       "canonical_id": "arXiv:2608.08237",
@@ -4397,8 +4259,8 @@
     },
     {
       "canonical_id": "arXiv:2603.23483",
-      "title": "SpecEyes: Accelerating Agentic Multimodal LLMs via Speculative Perception and Planning",
-      "source_url": "https://arxiv.org/html/2603.23483v2",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-17T08:02:49+00:00",
       "return_count": 1,
       "assigned_worker": "scheduled-chat-00",
@@ -4421,6 +4283,63 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_ed2138abe8e8819195c508b4cd44be18--2026-2603.23483-speceyes-agentic-multimodal-speculation-research-20261017-0730-scheduled-chat-30-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_ed2138abe8e8819195c508b4cd44be18--2026-2603.23483-speceyes-agentic-multimodal-speculation-research-20261017-0730-scheduled-chat-30-r01.json",
       "worker_run_key": "20261017-0730-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2608.12114",
+      "title": "The Ingestion Tax: Adopting File-Backed Weights in Tensor Frameworks",
+      "source_url": "https://arxiv.org/abs/2608.12114",
+      "returned_at": "2026-10-17T08:12:16+00:00",
+      "return_count": 3,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700",
+        "説明不足トリガー: 評価説明量 0 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5566,
+        "body_paragraphs": 28,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 0,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700",
+          "評価説明量 0 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_ed638f6b66cc81918106957aa631f979--2026-2608.12114-ingestion-tax-file-backed-weights-research-20261017-1030-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_ed638f6b66cc81918106957aa631f979--2026-2608.12114-ingestion-tax-file-backed-weights-research-20261017-1030-scheduled-chat-30-r01.json",
+      "worker_run_key": "20261017-1030-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2601.06562",
+      "title": "Mosaic: Unlocking Long-Context Inference for Diffusion LLMs via Global Memory Planning and Dynamic Peak Taming",
+      "source_url": "https://arxiv.org/html/2601.06562v1",
+      "returned_at": "2026-10-17T08:12:18+00:00",
+      "return_count": 3,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 453 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 4797,
+        "body_paragraphs": 27,
+        "method_chars": 1967,
+        "method_paragraphs": 10,
+        "evaluation_chars": 453,
+        "limitation_chars": 656,
+        "insufficiency_flags": [
+          "評価説明量 453 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_edf18c83899c819187cb5233008f245b--2026-2601.06562-mosaic-dllm-global-memory-repair-20261016-2100-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_edf18c83899c819187cb5233008f245b--2026-2601.06562-mosaic-dllm-global-memory-repair-20261016-2100-scheduled-chat-00-r01.json",
+      "worker_run_key": "20261016-2100-scheduled-chat-00/r01"
     }
   ]
 }
