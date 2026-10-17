@@ -157,7 +157,7 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
   提案手法は、画像・言語の意味理解を約4.2億〜13億パラメータの小型マルチモーダル基盤モデルへ、連続行動の生成を拡散方策（diffusion policy）復号器へ分担させる。実機のFranka単腕ロボット5タスクでは、最大構成TinyVLA-Hの平均成功率が94.0%、OpenVLAが68.3%であり、差は25.7パーセントポイントだった。
 
 - **2024-06 · [Demystifying AI Platform Design for Distributed Inference of Next-Generation LLM models](2024-2406.01698-demystifying-ai-platform-design-for-distributed-inference-of-next-generation-llm-models.md)**  
-  実装：[✓](https://github.com/abhibambhaniya/GenZ-LLM-Analyzer) ・ リポジトリ内被引用：4  
+  実装：[✓](https://github.com/abhibambhaniya/GenZ-LLM-Analyzer) ・ リポジトリ内被引用：5  
   演算子-level ルーフラインと集合通信通信モデルでLLM構造・推論提供最適化・分散方式からcompute/メモリ/ネットワーク要件を逆算するGenZ。
 
 ### 4年前（2022-11〜2023-10）

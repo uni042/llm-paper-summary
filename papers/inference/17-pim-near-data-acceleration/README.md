@@ -92,7 +92,7 @@
 ### 2年前（2024-11〜2025-10）
 
 - **2025-10 · [Stratum: System-Hardware Co-Design with Tiered Monolithic 3D-Stackable DRAM for Efficient MoE Serving](2025-stratum-system-hardware-co-design-with-tiered-monolithic-3d-stackable-dram-for-efficient-moe-serving.md)**  
-  実装：✓ ・ リポジトリ内被引用：8  
+  実装：✓ ・ リポジトリ内被引用：9  
   Mono3D DRAM＋近メモリ処理をGPUと統合し、層ごとの遅延差を8-階層化、話題別の高頻度 専門家配置へ利用してGPU比最大8.29倍の復号スループットを示す。
 
 - **2025-09 · [Combating the Memory Walls: Optimization Pathways for Long-Context Agentic LLM Inference](2025-2509.09505-combating-the-memory-walls-optimization-pathways-for-long-context-agentic-llm-inference.md)**  
@@ -114,11 +114,11 @@
 ### 3年前（2023-11〜2024-10）
 
 - **2024-03 · [NeuPIMs: NPU-PIM Heterogeneous Acceleration for Batched LLM Inferencing](2024-2403.00579-neupims-npu-pim-heterogeneous-acceleration-for-batched-llm-inferencing.md)**  
-  実装：[✓](https://github.com/casys-kaist/NeuPIMs) ・ リポジトリ内被引用：22  
+  実装：[✓](https://github.com/casys-kaist/NeuPIMs) ・ リポジトリ内被引用：23  
   一方、各要求が別々の過去トークン列を持つ多頭注意では、問い合わせベクトルと鍵キャッシュ、注意重みと値キャッシュの積が、メモリ帯域に制約されやすい行列とベクトルの積（GEMV）になる。NeuPIMsは、この非対称性をNPUとPIMの役割分担で解決するだけでなく、従来のNPU+PIM結合方式では双方を同時に動かせないという問題まで対象にする。
 
 - **2024-04 · [AttAcc! Unleashing the Power of PIM for Batched Transformer-based Generative Model Inference](2024-attacc-unleashing-the-power-of-pim-for-batched-transformer-based-generative-model-inference.md)**  
-  実装：[✓](https://github.com/scale-snu/attacc_simulator) ・ リポジトリ内被引用：21  
+  実装：[✓](https://github.com/scale-snu/attacc_simulator) ・ リポジトリ内被引用：22  
   GPUではバッチ化しても帯域律速の注意だけが残る点を狙い、FCをxPU、KV注意をHBM-PIMへ分担するAttAcc。bank-level PIM、head-level パイプライン、FFN co-processingを組み合わせ、175Bで同容量GPU系比最大2.81倍の性能・2.67倍のエネルギー効率を報告する。
 
 - **2024-04 · [IANUS: Integrated Accelerator based on NPU-PIM Unified Memory System](2024-2410.15008-ianus-integrated-accelerator-based-on-npu-pim-unified-memory-system.md)**  
@@ -126,7 +126,7 @@
   IANUSは、大規模言語モデル（LLM）の入力処理と逐次生成を、演算特性の異なる二種類のハードウェアへ分担させる推論専用システムである。論文の主結果は、GPT-2系列におけるNVIDIA A100比平均6.2倍、先行DFX比平均3.2倍の推論高速化である。
 
 - **2024-09 · [Duplex: A Device for Large Language Models with Mixture of Experts, Grouped Query Attention, and Continuous Batching](2024-2409.01141-duplex-a-device-for-large-language-models-with-mixture-of-experts-groupe.md)**  
-  実装：✓ ・ リポジトリ内被引用：4  
+  実装：✓ ・ リポジトリ内被引用：5  
   Duplexは、大規模言語モデルの推論を対象に、通常の高演算密度処理器（xPU）と、広帯域メモリのロジックダイに演算器を設けるメモリ内演算器（Logic-PIM）を同じ装置へ統合する計算機構である。
 
 ### 4年前（2022-11〜2023-10）
