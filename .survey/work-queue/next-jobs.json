@@ -9,17 +9,17 @@
       "ready": 2
     },
     "research": {
-      "ready": 1668,
-      "superseded": 685,
+      "superseded": 690,
+      "ready": 1663,
       "deferred": 8,
       "completed": 22,
       "rejected": 1
     }
   },
   "claiming": {
-    "ready_research_audit": 1670,
+    "ready_research_audit": 1665,
     "actively_claimed": 0,
-    "claimable": 1670
+    "claimable": 1665
   },
   "next_jobs": [
     {
@@ -59,20 +59,6 @@
       "title": "DriveVLM: The Convergence of Autonomous Driving and Large Vision-Language Models",
       "source_url": "https://arxiv.org/abs/2402.12289",
       "paper_path": "papers/inference/99-other-inference-systems/2024-2402.12289-drivevlm-the-convergence-of-autonomous-driving-and-large-vision-language-models.md",
-      "workflow_version": 10,
-      "artifact_transport": "structured_record_v10",
-      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. A technically successful full-text fetch is not sufficient when tables, appendices, or other evidence needed for the five slots are missing; continue through the ordered official full-text routes and use the next route only to fill the missing primary evidence. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
-      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. Return blocked with retrieval evidence only after the ordered official full-text routes have been exhausted without enough primary evidence; do not stop merely because the first successful fetch is incomplete."
-    },
-    {
-      "job_id": "job-research-e50efd51d0e08cc6",
-      "type": "research",
-      "lane": null,
-      "priority": 593,
-      "canonical_id": "arXiv:2506.01844",
-      "title": "SmolVLA: A Vision-Language-Action Model for Affordable and Efficient Robotics",
-      "source_url": "https://arxiv.org/abs/2506.01844",
-      "paper_path": "papers/inference/99-other-inference-systems/2025-2506.01844-smolvla-a-vision-language-action-model-for-affordable-and-efficient-robotics.md",
       "workflow_version": 10,
       "artifact_transport": "structured_record_v10",
       "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. A technically successful full-text fetch is not sufficient when tables, appendices, or other evidence needed for the five slots are missing; continue through the ordered official full-text routes and use the next route only to fill the missing primary evidence. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
@@ -135,6 +121,20 @@
       "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. Return blocked with retrieval evidence only after the ordered official full-text routes have been exhausted without enough primary evidence; do not stop merely because the first successful fetch is incomplete."
     },
     {
+      "job_id": "job-research-870b10d23da8d735",
+      "type": "research",
+      "lane": null,
+      "priority": 240,
+      "canonical_id": "arXiv:2203.10314",
+      "title": "Voxel Set Transformer: A Set-to-Set Approach to 3D Object Detection from Point Clouds",
+      "source_url": "https://arxiv.org/abs/2203.10314",
+      "paper_path": "papers/inference/99-other-inference-systems/2022-2203.10314-voxel-set-transformer-a-set-to-set-approach-to-3d-object-detection-from-point-clouds.md",
+      "workflow_version": 10,
+      "artifact_transport": "structured_record_v10",
+      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. A technically successful full-text fetch is not sufficient when tables, appendices, or other evidence needed for the five slots are missing; continue through the ordered official full-text routes and use the next route only to fill the missing primary evidence. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. Return blocked with retrieval evidence only after the ordered official full-text routes have been exhausted without enough primary evidence; do not stop merely because the first successful fetch is incomplete."
+    },
+    {
       "job_id": "job-ec0fd38638abd5c5",
       "type": "discovery",
       "lane": "discovery",
@@ -149,5 +149,5 @@
       "completion": "Submit 0-5 strong candidates. Empty is valid."
     }
   ],
-  "generated_at": "2026-10-17T13:08:38+00:00"
+  "generated_at": "2026-10-17T13:20:27+00:00"
 }
