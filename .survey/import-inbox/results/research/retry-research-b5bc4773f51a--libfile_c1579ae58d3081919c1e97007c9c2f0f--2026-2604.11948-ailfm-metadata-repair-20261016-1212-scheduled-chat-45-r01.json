@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "f67e7a0f5c3aa6a175fb9cdf9da9410fe6bb21c4f133ddbce4cdfecd45cd2f2d",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/retry-research-b5bc4773f51a--libfile_c1579ae58d3081919c1e97007c9c2f0f--2026-2604.11948-ailfm-metadata-repair-20261016-1212-scheduled-chat-45-r01.md",
+  "canonical_id": "arXiv:2604.11948",
+  "worker_completed_at": "2026-10-16T12:18:00+09:00",
+  "worker_run_key": "20261016-1212-scheduled-chat-45/r01-metadata-repair",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 9398,
+    "body_paragraphs": 50,
+    "method_chars": 2607,
+    "method_paragraphs": 13,
+    "evaluation_chars": 1612,
+    "limitation_chars": 0,
+    "insufficiency_flags": [
+      "限界説明量 0 < 推奨 120"
+    ]
+  },
+  "failures": [
+    "長文定型文の再利用を検出: papers/inference/09-kernel-runtime-compilation/2026-2604.11948-active-imitation-learning-for-thermal-and-kernel-aware-lfm-inference-on-.md と 23 段落 / 5922文字 (100.0%) が完全一致"
+  ],
+  "processed_at": "2026-10-17T17:11:15+00:00"
+}

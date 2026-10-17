@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-17T17:03:43+00:00",
+  "generated_at": "2026-10-17T17:12:15+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 152,
+  "count": 151,
   "entries": [
     {
       "canonical_id": "DOI:10.1145/3714983.3714987",
@@ -2621,34 +2621,6 @@
       "worker_run_key": "20261016-0030-scheduled-chat-30/r01"
     },
     {
-      "canonical_id": "arXiv:2606.05742",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-16T15:41:53+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 157 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 6677,
-        "body_paragraphs": 43,
-        "method_chars": 2356,
-        "method_paragraphs": 15,
-        "evaluation_chars": 157,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "評価説明量 157 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-8a2b9e26c691--libfile_9a2511a3d5948191bea9bf503bf34e01--2026-2606.05742-adapld-model-free-speculative-decoding-research-20261016-1830-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-8a2b9e26c691--libfile_9a2511a3d5948191bea9bf503bf34e01--2026-2606.05742-adapld-model-free-speculative-decoding-research-20261016-1830-scheduled-c.json",
-      "worker_run_key": "20261016-1830-scheduled-chat-30/r01"
-    },
-    {
       "canonical_id": "arXiv:2401.08383",
       "title": null,
       "source_url": null,
@@ -3776,36 +3748,9 @@
       "worker_run_key": "20261018-0045-scheduled-chat-45/r01/metadata-repair"
     },
     {
-      "canonical_id": "arXiv:2604.26963",
+      "canonical_id": "arXiv:2511.19480",
       "title": null,
       "source_url": null,
-      "returned_at": "2026-10-17T16:54:59+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 211 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 6562,
-        "body_paragraphs": 34,
-        "method_chars": 2366,
-        "method_paragraphs": 12,
-        "evaluation_chars": 211,
-        "limitation_chars": 834,
-        "insufficiency_flags": [
-          "評価説明量 211 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-7cd698f56b98--libfile_4527362751b8819195e101100fcd882e--2026-2604.26963-mars-agentic-gpu-cpu-coscheduling-research-20261014-1530-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-7cd698f56b98--libfile_4527362751b8819195e101100fcd882e--2026-2604.26963-mars-agentic-gpu-cpu-coscheduling-research-20261014-1530-scheduled-chat-3.json",
-      "worker_run_key": "20261014-1530-scheduled-chat-30/r01"
-    },
-    {
-      "canonical_id": "arXiv:2511.19480",
-      "title": "Exploiting the Experts: Unauthorized Compression in MoE-LLMs",
-      "source_url": "https://arxiv.org/abs/2511.19480",
       "returned_at": "2026-10-17T17:03:38+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-30",
@@ -3829,8 +3774,8 @@
     },
     {
       "canonical_id": "arXiv:2505.22913",
-      "title": "Mustafar: Promoting Unstructured Sparsity for KV Cache Pruning in LLM Inference",
-      "source_url": "https://arxiv.org/html/2505.22913v2",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-17T17:03:39+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-30",
@@ -3859,8 +3804,8 @@
     },
     {
       "canonical_id": "arXiv:2608.08237",
-      "title": "SAGE: SLO-Aware Adaptive Retrieval for Production RAG Systems",
-      "source_url": "https://arxiv.org/html/2608.08237v1",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-17T17:03:41+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-00",
@@ -3888,8 +3833,8 @@
     },
     {
       "canonical_id": "arXiv:2310.05015",
-      "title": "Compresso: Structured Pruning with Collaborative Prompting Learns Compact Large Language Models",
-      "source_url": "https://arxiv.org/abs/2310.05015",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-17T17:03:42+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-30",
@@ -3917,8 +3862,8 @@
     },
     {
       "canonical_id": "arXiv:2607.10661",
-      "title": "Unlocking Parallelism in Autoregressive Language Models via Speculative Decoding with Progressive Tree Drafting",
-      "source_url": "https://arxiv.org/html/2607.10661v1",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-17T17:03:43+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-00",
@@ -3944,6 +3889,33 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-abf2f9c2835b--libfile_7af89c1f750c8191b41c6c309c951960--2026-2607.10661-ptd-progressive-tree-drafting-research-20261017-1030-scheduled-chat-30-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-abf2f9c2835b--libfile_7af89c1f750c8191b41c6c309c951960--2026-2607.10661-ptd-progressive-tree-drafting-research-20261017-1030-scheduled-chat-30-r0.json",
       "worker_run_key": "20261017-1030-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2604.11948",
+      "title": "Active Imitation Learning for Thermal- and Kernel-Aware LFM Inference on 3D S-NUCA Many-Cores",
+      "source_url": "https://arxiv.org/pdf/2604.11948v1",
+      "returned_at": "2026-10-17T17:11:15+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "長文定型文の再利用を検出: papers/inference/09-kernel-runtime-compilation/2026-2604.11948-active-imitation-learning-for-thermal-and-kernel-aware-lfm-inference-on-.md と 23 段落 / 5922文字 (100.0%) が完全一致"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 9398,
+        "body_paragraphs": 50,
+        "method_chars": 2607,
+        "method_paragraphs": 13,
+        "evaluation_chars": 1612,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-b5bc4773f51a--libfile_c1579ae58d3081919c1e97007c9c2f0f--2026-2604.11948-ailfm-metadata-repair-20261016-1212-scheduled-chat-45-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-b5bc4773f51a--libfile_c1579ae58d3081919c1e97007c9c2f0f--2026-2604.11948-ailfm-metadata-repair-20261016-1212-scheduled-chat-45-r01.json",
+      "worker_run_key": "20261016-1212-scheduled-chat-45/r01-metadata-repair"
     }
   ]
 }
