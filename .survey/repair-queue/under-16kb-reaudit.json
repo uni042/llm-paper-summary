@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-10-17T17:14:33.036780+00:00",
+  "generated_at": "2026-10-17T17:26:23.037828+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 12,
+  "count": 13,
   "worker_counts": {
-    "scheduled-chat-00": 4,
+    "scheduled-chat-00": 5,
     "scheduled-chat-30": 4,
     "scheduled-chat-45": 4
   },
@@ -82,12 +82,32 @@
       "warnings": []
     },
     {
+      "path": "papers/inference/05-speculative-decoding-moe/2026-2605.15609-psd-pushing-the-pareto-frontier-of-diffusion-llms-via-parallel-speculati.md",
+      "canonical_id": "arXiv:2605.15609",
+      "title": "PSD: Pushing the Pareto Frontier of Diffusion LLMs via Parallel Speculative Decoding",
+      "file_bytes": 13688,
+      "source_sha256": "44679c96897ec7fb5ff0bd37d82346ab744583e0e1a8b3408a10e4b7ad592529",
+      "source_git_blob_sha": "c064040da0ed64d99a3de74b275362f86693b842",
+      "assigned_worker": "scheduled-chat-00",
+      "semantic_status": "pending",
+      "mechanical_status": "PASS",
+      "japanese_ratio": 0.944293,
+      "quality_metrics": {
+        "body_chars": 3644,
+        "method_chars": 1253,
+        "evaluation_chars": 871,
+        "limitation_chars": 593
+      },
+      "mechanical_failures": [],
+      "warnings": []
+    },
+    {
       "path": "papers/inference/99-other-inference-systems/2025-2512.09946-elana-a-simple-energy-and-latency-analyzer-for-llms.md",
       "canonical_id": "arXiv:2512.09946",
       "title": "ELANA: A Simple Energy and Latency Analyzer for LLMs",
-      "file_bytes": 15253,
-      "source_sha256": "fef2b4cdcd817fbd5c462c9fd8fc8735c2d216d44c4bbf77bc06c3b502bd1aa8",
-      "source_git_blob_sha": "b9a2f7173d97425077887aa2c9fd746806d0a7ff",
+      "file_bytes": 15867,
+      "source_sha256": "08703f7efb5d91e5fa891442e2542f336f6ae294fe498f6ef8b956671b24dfb4",
+      "source_git_blob_sha": "307cf0eaae037420647a866692db3842827c91e4",
       "assigned_worker": "scheduled-chat-00",
       "semantic_status": "pending",
       "mechanical_status": "PASS",
@@ -97,26 +117,6 @@
         "method_chars": 1521,
         "evaluation_chars": 1156,
         "limitation_chars": 438
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/05-speculative-decoding-moe/2026-2606.05742-adapld-adaptive-retrieval-and-reuse-for-efficient-model-free-speculative.md",
-      "canonical_id": "arXiv:2606.05742",
-      "title": "AdaPLD: Adaptive Retrieval and Reuse for Efficient Model-Free Speculative Decoding",
-      "file_bytes": 15873,
-      "source_sha256": "ea858ca1464eb888f62b65c5b78f6f00f1f2d5d2546bd53e38adb2531140fdfa",
-      "source_git_blob_sha": "6eca377ecfc0e6ad8674ba043960e06846b7f870",
-      "assigned_worker": "scheduled-chat-45",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.96558,
-      "quality_metrics": {
-        "body_chars": 4137,
-        "method_chars": 1609,
-        "evaluation_chars": 774,
-        "limitation_chars": 329
       },
       "mechanical_failures": [],
       "warnings": []
@@ -157,6 +157,26 @@
         "method_chars": 1414,
         "evaluation_chars": 837,
         "limitation_chars": 0
+      },
+      "mechanical_failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/05-speculative-decoding-moe/2026-2606.05742-adapld-adaptive-retrieval-and-reuse-for-efficient-model-free-speculative.md",
+      "canonical_id": "arXiv:2606.05742",
+      "title": "AdaPLD: Adaptive Retrieval and Reuse for Efficient Model-Free Speculative Decoding",
+      "file_bytes": 18309,
+      "source_sha256": "fd8acfcee592d0b64ce5050a8e70f8e1ee09b4c5d7bc32e48e2b37c1c957e06f",
+      "source_git_blob_sha": "534ce2a12277c1b38af730b5eefccba88bc73d5c",
+      "assigned_worker": "scheduled-chat-45",
+      "semantic_status": "pending",
+      "mechanical_status": "PASS",
+      "japanese_ratio": 0.96558,
+      "quality_metrics": {
+        "body_chars": 4137,
+        "method_chars": 1609,
+        "evaluation_chars": 774,
+        "limitation_chars": 329
       },
       "mechanical_failures": [],
       "warnings": []
