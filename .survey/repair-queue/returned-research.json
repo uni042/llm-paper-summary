@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-17T12:07:48+00:00",
+  "generated_at": "2026-10-17T12:25:20+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -641,34 +641,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_eead8a97f5e481918462104d5fddd3d0--2026-2603.05451-flashattention4-returned-repair-20261012-2002-scheduled-chat-00-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_eead8a97f5e481918462104d5fddd3d0--2026-2603.05451-flashattention4-returned-repair-20261012-2002-scheduled-chat-00-r01.json",
       "worker_run_key": "20261012-2002-scheduled-chat-00/r01"
-    },
-    {
-      "canonical_id": "arXiv:2605.14249",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-13T13:36:41+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 159 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 6678,
-        "body_paragraphs": 38,
-        "method_chars": 2185,
-        "method_paragraphs": 13,
-        "evaluation_chars": 159,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "評価説明量 159 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-f44d6caca28e--libfile_9117b6b35de08191ba6aaa20ca4a9c34--2026-2605.14249-energylens-research-20261013-1300-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-f44d6caca28e--libfile_9117b6b35de08191ba6aaa20ca4a9c34--2026-2605.14249-energylens-research-20261013-1300-scheduled-chat-00-r01.json",
-      "worker_run_key": "20261013-1300-scheduled-chat-00/r01"
     },
     {
       "canonical_id": "arXiv:2605.28051",
@@ -2210,34 +2182,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-b006bdab8deb--libfile_fac695b5b1048191ab148dd229e0f576--2026-laco-layerwise-compensation-returned-repair-20261013-2357-scheduled-chat-00-r01-evaluation-heading-repair-20261014-0045-scheduled-cha.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-b006bdab8deb--libfile_fac695b5b1048191ab148dd229e0f576--2026-laco-layerwise-compensation-returned-repair-20261013-2357-scheduled-chat-00-r01-eval.json",
       "worker_run_key": "20261013-2357-scheduled-chat-00/r01"
-    },
-    {
-      "canonical_id": "arXiv:2511.02017",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-14T20:57:12+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 159 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 4524,
-        "body_paragraphs": 22,
-        "method_chars": 1378,
-        "method_paragraphs": 7,
-        "evaluation_chars": 159,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "評価説明量 159 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-c9658091e50a--libfile_53008ec96ba88191b6d8588297c6751b--2025-2511.02017-tapout-bandit-dynamic-speculative-decoding-research-20261015-0410-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-c9658091e50a--libfile_53008ec96ba88191b6d8588297c6751b--2025-2511.02017-tapout-bandit-dynamic-speculative-decoding-research-20261015-0410-schedul.json",
-      "worker_run_key": "20261015-0410-scheduled-chat-00/r01"
     },
     {
       "canonical_id": "arXiv:2603.28342",
@@ -4286,8 +4230,8 @@
     },
     {
       "canonical_id": "arXiv:2604.25925",
-      "title": "SpecTr-GBV: Multi-Draft Block Verification Accelerating Speculative Decoding",
-      "source_url": "https://arxiv.org/abs/2604.25925",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-17T12:06:48+00:00",
       "return_count": 1,
       "assigned_worker": "scheduled-chat-30",
@@ -4311,6 +4255,58 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-20261017-exact--libfile_c713a9de433c819195d3724bf2b87533.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-20261017-exact--libfile_c713a9de433c819195d3724bf2b87533.json",
       "worker_run_key": "20261014-2330-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2605.14249",
+      "title": "EnergyLens: Predictive Energy-Aware Exploration for Multi-GPU LLM Inference Optimization",
+      "source_url": "https://arxiv.org/abs/2605.14249",
+      "returned_at": "2026-10-17T12:23:02+00:00",
+      "return_count": 3,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 0 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 6051,
+        "body_paragraphs": 34,
+        "method_chars": 2266,
+        "method_paragraphs": 12,
+        "evaluation_chars": 0,
+        "limitation_chars": 864,
+        "insufficiency_flags": [
+          "評価説明量 0 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-20261017-exact--libfile_d110e1e4304481919da9cbe26acd7afa.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-20261017-exact--libfile_d110e1e4304481919da9cbe26acd7afa.json",
+      "worker_run_key": "20261014-2056-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2601.23278",
+      "title": "FOCUS: DLLMs Know How to Tame Their Compute Bound",
+      "source_url": "https://arxiv.org/html/2601.23278v1",
+      "returned_at": "2026-10-17T12:23:03+00:00",
+      "return_count": 3,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "長文定型文の再利用を検出: papers/inference/09-kernel-runtime-compilation/2026-2601.23278-focus-dllms-know-how-to-tame-their-compute-bound.md と 15 段落 / 3285文字 (100.0%) が完全一致"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 6058,
+        "body_paragraphs": 35,
+        "method_chars": 2300,
+        "method_paragraphs": 14,
+        "evaluation_chars": 1468,
+        "limitation_chars": 693,
+        "insufficiency_flags": []
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-20261017-exact--libfile_d8b2807c9df481919d7f3e946ad52f6e.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-20261017-exact--libfile_d8b2807c9df481919d7f3e946ad52f6e.json",
+      "worker_run_key": "20261014-2145-scheduled-chat-45/r01"
     }
   ]
 }

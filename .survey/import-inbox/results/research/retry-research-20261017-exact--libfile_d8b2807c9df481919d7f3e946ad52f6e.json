@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "06c2754986fb5d660750dc900e94bc9ed751dd25f22613bd61f913fff4738c0a",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/retry-research-20261017-exact--libfile_d8b2807c9df481919d7f3e946ad52f6e.md",
+  "canonical_id": "arXiv:2601.23278",
+  "worker_completed_at": "2026-10-14T22:00:54+09:00",
+  "worker_run_key": "20261014-2145-scheduled-chat-45/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 6058,
+    "body_paragraphs": 35,
+    "method_chars": 2300,
+    "method_paragraphs": 14,
+    "evaluation_chars": 1468,
+    "limitation_chars": 693,
+    "insufficiency_flags": []
+  },
+  "failures": [
+    "長文定型文の再利用を検出: papers/inference/09-kernel-runtime-compilation/2026-2601.23278-focus-dllms-know-how-to-tame-their-compute-bound.md と 15 段落 / 3285文字 (100.0%) が完全一致"
+  ],
+  "processed_at": "2026-10-17T12:23:03+00:00"
+}
