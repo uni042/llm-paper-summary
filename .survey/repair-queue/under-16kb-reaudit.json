@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-10-17T05:49:38.128942+00:00",
+  "generated_at": "2026-10-17T06:00:16.719429+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 17,
+  "count": 15,
   "worker_counts": {
     "scheduled-chat-00": 5,
-    "scheduled-chat-30": 6,
-    "scheduled-chat-45": 6
+    "scheduled-chat-30": 5,
+    "scheduled-chat-45": 5
   },
   "entries": [
     {
@@ -146,33 +146,13 @@
       "warnings": []
     },
     {
-      "path": "papers/inference/99-other-inference-systems/2026-2602.20205-otprune-distribution-aligned-visual-token-pruning-via-optimal-transport.md",
-      "canonical_id": "arXiv:2602.20205",
-      "title": "OTPrune: Distribution-Aligned Visual Token Pruning via Optimal Transport",
-      "file_bytes": 14429,
-      "source_sha256": "1183778fbe08230251636790e3b91413b3a704c4e4b022f5c0cec37b24906918",
-      "source_git_blob_sha": "e3451a995c2ec05f45eebde88858568fa7ab658e",
-      "assigned_worker": "scheduled-chat-45",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.983451,
-      "quality_metrics": {
-        "body_chars": 3540,
-        "method_chars": 1066,
-        "evaluation_chars": 1104,
-        "limitation_chars": 0
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
       "path": "papers/inference/05-speculative-decoding-moe/2026-2602.01274-pacer-blockwise-pre-verification-for-speculative-decoding-with-adaptive-.md",
       "canonical_id": "arXiv:2602.01274",
       "title": "Pacer: Blockwise Pre-verification for Speculative Decoding with Adaptive Length",
       "file_bytes": 14678,
       "source_sha256": "4be3f7d2e4d21d157732a3b4e9752eab4a130ee1d3dfdd9c8978ef950b676b36",
       "source_git_blob_sha": "f7fe126be61907f310e72d2e53f70d74a2e58d6f",
-      "assigned_worker": "scheduled-chat-30",
+      "assigned_worker": "scheduled-chat-45",
       "semantic_status": "pending",
       "mechanical_status": "PASS",
       "japanese_ratio": 0.916606,
@@ -246,26 +226,6 @@
       "warnings": []
     },
     {
-      "path": "papers/inference/05-speculative-decoding-moe/2024-2410.11305-qspec-speculative-decoding-with-complementary-quantization-schemes.md",
-      "canonical_id": "arXiv:2410.11305",
-      "title": "QSpec: Speculative Decoding with Complementary Quantization Schemes",
-      "file_bytes": 15592,
-      "source_sha256": "b4e55bf6609b3bc385ec5dbb017a1dcbfff589d81bcbaba2f8bc482107b9771e",
-      "source_git_blob_sha": "3138a22ab3439aa498abcb497ebb75ed8501cbc6",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.97414,
-      "quality_metrics": {
-        "body_chars": 4564,
-        "method_chars": 1320,
-        "evaluation_chars": 721,
-        "limitation_chars": 0
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
       "path": "papers/inference/99-other-inference-systems/2024-2403.01632-syncode-llm-generation-with-grammar-augmentation.md",
       "canonical_id": "arXiv:2403.01632",
       "title": "SynCode: LLM Generation with Grammar Augmentation",
@@ -326,6 +286,26 @@
       "warnings": []
     },
     {
+      "path": "papers/inference/05-speculative-decoding-moe/2024-2410.11305-qspec-speculative-decoding-with-complementary-quantization-schemes.md",
+      "canonical_id": "arXiv:2410.11305",
+      "title": "QSpec: Speculative Decoding with Complementary Quantization Schemes",
+      "file_bytes": 17980,
+      "source_sha256": "f8ca9ce4fb5d19bb6add9d9c007ee2231ab98c356cf6984752f322b2f5a6ad8c",
+      "source_git_blob_sha": "8e8b0225d04b52a7bf7e6738561647dbb38751f1",
+      "assigned_worker": "scheduled-chat-30",
+      "semantic_status": "pending",
+      "mechanical_status": "PASS",
+      "japanese_ratio": 0.97414,
+      "quality_metrics": {
+        "body_chars": 4564,
+        "method_chars": 1320,
+        "evaluation_chars": 721,
+        "limitation_chars": 0
+      },
+      "mechanical_failures": [],
+      "warnings": []
+    },
+    {
       "path": "papers/inference/99-other-inference-systems/2025-2512.14244-from-context-to-edus-faithful-and-structured-context-compression-via-ele.md",
       "canonical_id": "arXiv:2512.14244",
       "title": "From Context to EDUs: Faithful and Structured Context Compression via Elementary Discourse Unit Decomposition",
@@ -341,26 +321,6 @@
         "method_chars": 1320,
         "evaluation_chars": 519,
         "limitation_chars": 599
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2025-2512.24545-more-than-bits-multi-envelope-double-binary-factorization-for-extreme-qu.md",
-      "canonical_id": "arXiv:2512.24545",
-      "title": "More Than Bits: Multi-Envelope Double Binary Factorization for Extreme Quantization",
-      "file_bytes": 19297,
-      "source_sha256": "17359931c15794bd38e8ee556ac72060f244ac8609fb1cac7aa8bf0b63e68810",
-      "source_git_blob_sha": "041bae05ed78e26b652344dc55623fcf10d1cad5",
-      "assigned_worker": "scheduled-chat-45",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.989657,
-      "quality_metrics": {
-        "body_chars": 3749,
-        "method_chars": 1472,
-        "evaluation_chars": 569,
-        "limitation_chars": 276
       },
       "mechanical_failures": [],
       "warnings": []
