@@ -35,10 +35,15 @@
   "selection_reason": "MLLM入力の画像/動画長に応じてvisual tokenを1x–16x動的圧縮し、長動画は高圧縮、文書理解はnative resolutionと使い分ける。LLMへ渡すtoken budgetを直接削減するためMLLM推論効率の対象。",
   "semantic_scholar_id": "85c514db4e90e1fd4200d858353f27a3cc2c29ad",
   "source_url": "https://arxiv.org/abs/2409.12961",
-  "status": "ready",
+  "status": "superseded",
   "title": "Oryx MLLM: On-Demand Spatial-Temporal Understanding at Arbitrary Resolution",
   "type": "research",
   "venue": "International Conference on Learning Representations",
   "workflow_version": 10,
-  "year": 2024
+  "year": 2024,
+  "superseded_at": "2026-10-17T06:25:24+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2024-2409.12961-oryx-mllm-on-demand-spatial-temporal-understanding-at-arbitrary-resoluti.md",
+  "represented_canonical_id": "arXiv:2409.12961",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

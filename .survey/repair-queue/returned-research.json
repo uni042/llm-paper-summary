@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-17T06:18:35+00:00",
+  "generated_at": "2026-10-17T06:25:24+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 177,
+  "count": 175,
   "entries": [
     {
       "canonical_id": "DOI:10.1145/3714983.3714987",
@@ -3097,34 +3097,6 @@
       "worker_run_key": "20261016-0230-scheduled-chat-30/r01"
     },
     {
-      "canonical_id": "arXiv:2406.05981",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-16T14:46:24+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 152 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 6881,
-        "body_paragraphs": 39,
-        "method_chars": 2308,
-        "method_paragraphs": 13,
-        "evaluation_chars": 152,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "評価説明量 152 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-10a939127564--libfile_f82da8ade528819189e9b927eb21e774--2024-2406.05981-shiftaddllm-bcq-pot-reparameterization-research-20261016-0630-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-10a939127564--libfile_f82da8ade528819189e9b927eb21e774--2024-2406.05981-shiftaddllm-bcq-pot-reparameterization-research-20261016-0630-scheduled-c.json",
-      "worker_run_key": "20261016-0630-scheduled-chat-30/r01"
-    },
-    {
       "canonical_id": "arXiv:2502.09334",
       "title": null,
       "source_url": null,
@@ -3342,36 +3314,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-3d8954f09476--libfile_a562b6227ab88191b72c1560d1701f2c--2026-2602.04789-light-forcing-chunk-aware-hierarchical-sparse-attention-research-20261016-1800-scheduled-chat-00-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-3d8954f09476--libfile_a562b6227ab88191b72c1560d1701f2c--2026-2602.04789-light-forcing-chunk-aware-hierarchical-sparse-attention-research-20261016.json",
       "worker_run_key": "20261016-1800-scheduled-chat-00/r01"
-    },
-    {
-      "canonical_id": "arXiv:2409.12961",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-16T15:19:14+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700",
-        "説明不足トリガー: 評価説明量 0 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5232,
-        "body_paragraphs": 26,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 0,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700",
-          "評価説明量 0 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-41c8d26402fe--libfile_bef3eb5174a88191a7937d8d7660f061--2024-2409.12961-oryx-variable-resolution-dynamic-visual-token-compression-research-20261016-1745-scheduled-chat-45-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-41c8d26402fe--libfile_bef3eb5174a88191a7937d8d7660f061--2024-2409.12961-oryx-variable-resolution-dynamic-visual-token-compression-research-202610.json",
-      "worker_run_key": "20261016-1745-scheduled-chat-45/r01"
     },
     {
       "canonical_id": "arXiv:2608.00881",
@@ -3620,34 +3562,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-6ed199eae8a7--libfile_ca4497c870548191b78d3aeb3d90759c--2026-2601.13563-butterflymoe-ternary-shared-experts-research-20261015-2230-scheduled-chat-30-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-6ed199eae8a7--libfile_ca4497c870548191b78d3aeb3d90759c--2026-2601.13563-butterflymoe-ternary-shared-experts-research-20261015-2230-scheduled-chat.json",
       "worker_run_key": "20261015-2230-scheduled-chat-30/r01"
-    },
-    {
-      "canonical_id": "arXiv:2502.14051",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-16T15:36:28+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 195 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5931,
-        "body_paragraphs": 34,
-        "method_chars": 1848,
-        "method_paragraphs": 10,
-        "evaluation_chars": 195,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "評価説明量 195 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-79c7c030e585--libfile_eb8b1258e0b4819190097f01d81312f4--2025-2502.14051-rocketkv-two-stage-kv-cache-research-20261016-0130-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-79c7c030e585--libfile_eb8b1258e0b4819190097f01d81312f4--2025-2502.14051-rocketkv-two-stage-kv-cache-research-20261016-0130-scheduled-chat-30-r01.json",
-      "worker_run_key": "20261016-0130-scheduled-chat-30/r01"
     },
     {
       "canonical_id": "arXiv:2511.07776",
@@ -4648,6 +4562,33 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_6cf102c22dd08191bd7aeaa0b0d32143--2026-2608.02625-speculative-correction-diffusion-draft-refine-research-20261017-1030-scheduled-chat-30-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_6cf102c22dd08191bd7aeaa0b0d32143--2026-2608.02625-speculative-correction-diffusion-draft-refine-research-20261017-1030-scheduled-chat-30-r01.json",
       "worker_run_key": "20261017-1030-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2604.14889",
+      "title": "MemoSight: Unifying Context Compression and Multi Token Prediction for Reasoning Acceleration",
+      "source_url": "https://arxiv.org/html/2604.14889v1",
+      "returned_at": "2026-10-17T06:24:21+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 6423,
+        "body_paragraphs": 38,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 576,
+        "limitation_chars": 551,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_88cdf01c22dc8191ac4bb88ce2721cce--2026-2604.14889-memosight-compression-mtp-reasoning-research-20261017-1130-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_88cdf01c22dc8191ac4bb88ce2721cce--2026-2604.14889-memosight-compression-mtp-reasoning-research-20261017-1130-scheduled-chat-30-r01.json",
+      "worker_run_key": "20261017-1130-scheduled-chat-30/r01"
     }
   ]
 }
