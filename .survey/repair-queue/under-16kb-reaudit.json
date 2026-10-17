@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-10-17T14:14:33.494178+00:00",
+  "generated_at": "2026-10-17T16:21:57.839472+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 11,
+  "count": 10,
   "worker_counts": {
-    "scheduled-chat-00": 4,
+    "scheduled-chat-00": 3,
     "scheduled-chat-30": 4,
     "scheduled-chat-45": 3
   },
@@ -77,26 +77,6 @@
         "method_chars": 1072,
         "evaluation_chars": 505,
         "limitation_chars": 0
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2026-2604.20937-sink-token-aware-pruning-for-fine-grained-video-understanding-in-efficie.md",
-      "canonical_id": "arXiv:2604.20937",
-      "title": "Sink-Token-Aware Pruning for Fine-Grained Video Understanding in Efficient Video LLMs",
-      "file_bytes": 16995,
-      "source_sha256": "57145fdebc2390f2ea335e46096c82f39560c31d3c0d59772b23efa50e1c6230",
-      "source_git_blob_sha": "57733b9f013e38301b0894173893914c11f22735",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.962531,
-      "quality_metrics": {
-        "body_chars": 4332,
-        "method_chars": 983,
-        "evaluation_chars": 1113,
-        "limitation_chars": 645
       },
       "mechanical_failures": [],
       "warnings": []
