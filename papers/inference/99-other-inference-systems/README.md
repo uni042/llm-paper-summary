@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（715本）
+## 自動生成の論文一覧（717本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -932,6 +932,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   検索システムの再順位付け（reranking）では、初段のBM25や密ベクトル検索が返した文書候補を、より高価なTransformerで再評価する。Qwen3-0.6BのDL19段落再順位付けでは、28層中第8層から40%のトークンを残す設定でnDCG@10が無圧縮の約0.727と同水準のまま、QPSは5.35→6.69（25%増）となる。
 
+- **2026-05 · [GQLA: Group-Query Latent Attention for Hardware-Adaptive Large Language Model Decoding](2026-2605.15250-gqla-group-query-latent-attention-for-hardware-adaptive-large-language-m.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  多頭潜在注意（Multi-head Latent 注意機構; MLA）は鍵と値を共通の低ランク潜在ベクトルへまとめ、過去文脈から読み出すバイト数を大きく削減する。論文の中心的な「H20で3.4倍」は、文脈長8192・BF16・公開ピーク性能を入力した屋根線モデルによる注意部分の理論的処理量であり、実GPUで測ったモデル全体のトークン生成速度ではない。
+
 - **2026-05 · [Gated Subspace Inference for Transformer Acceleration](2026-2605.03109-gated-subspace-inference-for-transformer-acceleration.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   大規模言語モデル（LLM）のバッチサイズ1の逐次復号では、GPUの計算能力よりも重み行列を高帯域メモリ（HBM）から読む費用が律速になりやすい。Gated Subspace Inference（GSI）は、各層の活性化を低次元基底への射影と残差に分解し、残差が十分小さいトークンだけ、事前計算した低次元の重み像を使う方式である。
@@ -1419,6 +1423,10 @@
 - **2025-11 · [SpecQuant: Spectral Decomposition and Adaptive Truncation for Ultra-Low-Bit LLMs Quantization](2025-2511.11663-specquant-spectral-decomposition-and-adaptive-truncation-for-ultra-low-b.md)**  
   実装：[✓](https://github.com/Kishon-zzx/SpecQuant) ・ リポジトリ内被引用：0  
   本研究は、大規模言語モデル（LLM）の重みと活性を同時に4ビット程度へ圧縮するときに生じる、外れ値による量子化誤差を低減する手法を扱う。
+
+- **2025-11 · [Seer Self-Consistency: Advance Budget Estimation for Adaptive Test-Time Scaling](2025-2511.09345-seer-self-consistency-advance-budget-estimation-for-adaptive-test-time-s.md)**  
+  実装：[✓](https://github.com/noforit/SeerSC) ・ リポジトリ内被引用：0  
+  複数の推論経路を生成して最頻回答を選ぶ自己整合（自己整合性; SC）は、数学問題などで単一路線の思考連鎖より正解率を上げられる。各問題へ一律に $N$ 経路を割り当てると、容易な問題へも大量のトークンを使う。
 
 - **2025-11 · [Scaling Graph Chain-of-Thought Reasoning: A Multi-Agent Framework with Efficient LLM Serving](2025-2511.01633-graph-cot-multi-agent-efficient-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
