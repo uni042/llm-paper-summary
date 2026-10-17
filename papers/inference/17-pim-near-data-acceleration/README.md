@@ -77,9 +77,9 @@
   実装：✓ ・ リポジトリ内被引用：0  
   三次元NAND内部で専門家番号の照合と選択専門家の計算を一体化し、多値記憶とブロック並列化によって専門家混合モデルを高密度に直接実行する。
 
-- **2026-04 · [Rethinking Compute Substrates for 3D-Stacked Near-Memory LLM Decoding: Microarchitecture-Scheduling Co-Design](2026-2604.04253-rethinking-compute-substrates-for-3d-stacked-near-memory-llm-decoding-mi.md)**  
+- **2026-04 · [Rethinking Compute Substrates for 3D-Stacked Near-Memory LLM Decoding: Microarchitecture–Scheduling Co-Design](2026-2604.04253-rethinking-compute-substrates-for-3d-stacked-near-memory-llm-decoding-mi.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
-  本論文は、三次元積層メモリの近傍演算（near-メモリ processing、NMP）を用いたLLM復号の計算基盤を、ロジックダイの小さな面積に合わせて再設計する。Stratum由来のHBM3積層構成を共通条件にした論理合成・シミュレーション評価で、従来MAC木型NMPに対して復号速度は平均2.90倍、ロジックダイのエネルギー効率は2.40倍と報告される。
+  提案方式SNAKEは、同じ積層メモリ構成と処理ユニット面積を用いた回路合成・性能モデル上で、積和演算木方式比の復号速度平均2.90倍、ロジックダイのエネルギー効率2.40倍を報告する。
 
 - **2026-03 · [PIM-SHERPA: Software Method for On-device LLM Inference by Resolving PIM Memory Attribute and Layout Inconsistencies](2026-2603.09216-pim-sherpa-software-method-for-on-device-llm-inference-by-resolving-pim-memory-attribute-and-layout-inconsistencies.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

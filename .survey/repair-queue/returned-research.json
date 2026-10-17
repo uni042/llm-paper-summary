@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-17T06:41:33+00:00",
+  "generated_at": "2026-10-17T06:55:25+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 173,
+  "count": 172,
   "entries": [
     {
       "canonical_id": "DOI:10.1145/3714983.3714987",
@@ -1482,33 +1482,6 @@
       "worker_run_key": "20261014-1655-scheduled-chat-00/r01"
     },
     {
-      "canonical_id": "arXiv:2604.26963",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-14T13:02:33+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 211 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 6562,
-        "body_paragraphs": 34,
-        "method_chars": 2366,
-        "method_paragraphs": 12,
-        "evaluation_chars": 211,
-        "limitation_chars": 834,
-        "insufficiency_flags": [
-          "評価説明量 211 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-7cd698f56b98--libfile_4527362751b8819195e101100fcd882e--2026-2604.26963-mars-agentic-gpu-cpu-coscheduling-research-20261014-1530-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-7cd698f56b98--libfile_4527362751b8819195e101100fcd882e--2026-2604.26963-mars-agentic-gpu-cpu-coscheduling-research-20261014-1530-scheduled-chat-3.json",
-      "worker_run_key": "20261014-1530-scheduled-chat-30/r01"
-    },
-    {
       "canonical_id": "arXiv:2605.30571",
       "title": null,
       "source_url": null,
@@ -1796,34 +1769,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-accb44c7023a--libfile_affb286fc11081918427c99eab59b47d--2025-2512.03383-uniql-research-20261014-1100-scheduled-chat-00-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-accb44c7023a--libfile_affb286fc11081918427c99eab59b47d--2025-2512.03383-uniql-research-20261014-1100-scheduled-chat-00-r01.json",
       "worker_run_key": "20261014-1100-scheduled-chat-00/r01"
-    },
-    {
-      "canonical_id": "arXiv:2601.23278",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-14T13:13:12+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 0 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 6058,
-        "body_paragraphs": 35,
-        "method_chars": 2300,
-        "method_paragraphs": 14,
-        "evaluation_chars": 0,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "評価説明量 0 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-b35cb5b1ff94--libfile_e41afb7e7b1c8191bcdb6043d0fd7f5f--2026-2601.23278-focus-dllm-token-eviction-research-20261014-2130-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-b35cb5b1ff94--libfile_e41afb7e7b1c8191bcdb6043d0fd7f5f--2026-2601.23278-focus-dllm-token-eviction-research-20261014-2130-scheduled-chat-30-r01.json",
-      "worker_run_key": "20261014-2130-scheduled-chat-30/r01"
     },
     {
       "canonical_id": "arXiv:2605.22502",
@@ -2786,33 +2731,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-5c8d12286723--libfile_132403cd5f908191a1b087bb3261a2b8--2025-2501.19309-judge-decoding-research-20261015-1500-scheduled-chat-00-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-5c8d12286723--libfile_132403cd5f908191a1b087bb3261a2b8--2025-2501.19309-judge-decoding-research-20261015-1500-scheduled-chat-00-r01.json",
       "worker_run_key": "20261015-1500-scheduled-chat-00/r01"
-    },
-    {
-      "canonical_id": "arXiv:2602.18176",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-15T07:02:07+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 136 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 6275,
-        "body_paragraphs": 47,
-        "method_chars": 1975,
-        "method_paragraphs": 17,
-        "evaluation_chars": 136,
-        "limitation_chars": 624,
-        "insufficiency_flags": [
-          "評価説明量 136 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-a39594e4bab9--libfile_d438f284a60881919ecc9deeb8f1802c--2026-2602.18176-info-gain-masked-diffusion-research-20261015-1325-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-a39594e4bab9--libfile_d438f284a60881919ecc9deeb8f1802c--2026-2602.18176-info-gain-masked-diffusion-research-20261015-1325-scheduled-chat-30-r01.json",
-      "worker_run_key": "20261015-1325-scheduled-chat-30/r01"
     },
     {
       "canonical_id": "arXiv:2605.11222",
@@ -4512,8 +4430,8 @@
     },
     {
       "canonical_id": "DOI:10.1145/3725338",
-      "title": "PQCache: Product Quantization-based KVCache for Long Context LLM Inference",
-      "source_url": "https://arxiv.org/html/2407.12820v2",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-17T06:39:56+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-00",
@@ -4536,6 +4454,62 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_b02495c8702081918ba38f95ea04418c--2024-2407.12820-pqcache-product-quantization-kv-offload-research-20261017-0345-scheduled-chat-45-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_b02495c8702081918ba38f95ea04418c--2024-2407.12820-pqcache-product-quantization-kv-offload-research-20261017-0345-scheduled-chat-45-r01.json",
       "worker_run_key": "20261017-0345-scheduled-chat-45/r01"
+    },
+    {
+      "canonical_id": "arXiv:2604.26963",
+      "title": "MARS: Efficient, Adaptive Co-Scheduling for Heterogeneous Agentic Systems",
+      "source_url": "https://arxiv.org/html/2604.26963v2",
+      "returned_at": "2026-10-17T06:52:39+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 211 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 6562,
+        "body_paragraphs": 34,
+        "method_chars": 2366,
+        "method_paragraphs": 12,
+        "evaluation_chars": 211,
+        "limitation_chars": 834,
+        "insufficiency_flags": [
+          "評価説明量 211 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_4527362751b8819195e101100fcd882e--2026-2604.26963-mars-agentic-gpu-cpu-coscheduling-research-20261014-1530-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_4527362751b8819195e101100fcd882e--2026-2604.26963-mars-agentic-gpu-cpu-coscheduling-research-20261014-1530-scheduled-chat-30-r01.json",
+      "worker_run_key": "20261014-1530-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2606.04446",
+      "title": "D^2SD: Accelerating Speculative Decoding with Dual Diffusion Draft Models",
+      "source_url": "https://arxiv.org/html/2606.04446v1",
+      "returned_at": "2026-10-17T06:54:10+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700",
+        "説明不足トリガー: 評価説明量 0 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 6655,
+        "body_paragraphs": 39,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 0,
+        "limitation_chars": 728,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700",
+          "評価説明量 0 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_bc2c9675f5c08191841e3cfd61baac66--2026-2606.04446-d2sd-dual-diffusion-speculative-decoding-research-20261017-1130-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_bc2c9675f5c08191841e3cfd61baac66--2026-2606.04446-d2sd-dual-diffusion-speculative-decoding-research-20261017-1130-scheduled-chat-30-r01.json",
+      "worker_run_key": "20261017-1130-scheduled-chat-30/r01"
     }
   ]
 }

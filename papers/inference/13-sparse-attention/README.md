@@ -23,7 +23,7 @@
 - [11-llm-serving-scheduling-disaggregation](../11-llm-serving-scheduling-disaggregation/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（78本）
+## 自動生成の論文一覧（79本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -317,6 +317,10 @@
 - **2023-10 · [HyperAttention: Long-context Attention in Near-Linear Time](2023-2310.05869-hyperattention-long-context-attention-in-near-linear-time.md)**  
   実装：[✓](https://github.com/insuhan/hyper-attn) ・ リポジトリ内被引用：8  
   局所性鋭敏ハッシュで注意行列の大きな要素を効率的に見つけ、残りの小さい成分をサンプリングで近似する。全注意行列を作らずに正規化と値の加重和を計算し、長文脈での計算量を削減する。
+
+- **2023-10 · [Context Compression for Auto-regressive Transformers with Sentinel Tokens](2023-2310.08152-context-compression-for-auto-regressive-transformers-with-sentinel-token.md)**  
+  実装：[✓](https://github.com/DRSY/KV_Compression) ・ リポジトリ内被引用：0  
+  本論文の文脈圧縮（KV Compression）は、自己回帰Transformerが過去のトークンを参照するために保存する鍵・値キャッシュ（KVキャッシュ）を、単純に捨てるのではなく、学習済みの圧縮表現へ置き換える方式である。
 
 ### 6年前（2020-11〜2021-10）
 
