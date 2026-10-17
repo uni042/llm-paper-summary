@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-17T06:09:26+00:00",
+  "generated_at": "2026-10-17T06:18:35+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 178,
+  "count": 177,
   "entries": [
     {
       "canonical_id": "DOI:10.1145/3714983.3714987",
@@ -2872,34 +2872,6 @@
       "worker_run_key": "20261016-0730-scheduled-chat-30/r01"
     },
     {
-      "canonical_id": "DOI:10.1109/TKDE.2025.3554028",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-16T08:51:33+00:00",
-      "return_count": 3,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 446 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 7856,
-        "body_paragraphs": 41,
-        "method_chars": 1254,
-        "method_paragraphs": 6,
-        "evaluation_chars": 446,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "評価説明量 446 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_c8c2d4c8de9081919f3f5f7e80ac5dcd--2025-doi-10.1109-tkde.2025.3554028-moe-survey-research-20261016-1700-scheduled-chat-00-r01-reviewed.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_c8c2d4c8de9081919f3f5f7e80ac5dcd--2025-doi-10.1109-tkde.2025.3554028-moe-survey-research-20261016-1700-scheduled-chat-00-r01-reviewed.json",
-      "worker_run_key": "20261016-1700-scheduled-chat-00/r01"
-    },
-    {
       "canonical_id": "arXiv:1606.09274",
       "title": null,
       "source_url": null,
@@ -4650,8 +4622,8 @@
     },
     {
       "canonical_id": "arXiv:2608.02625",
-      "title": "Speculative Correction: Draft-then-Refine Decoding for Diffusion Language Models",
-      "source_url": "https://arxiv.org/html/2608.02625v1",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-17T06:08:44+00:00",
       "return_count": 1,
       "assigned_worker": "scheduled-chat-45",
