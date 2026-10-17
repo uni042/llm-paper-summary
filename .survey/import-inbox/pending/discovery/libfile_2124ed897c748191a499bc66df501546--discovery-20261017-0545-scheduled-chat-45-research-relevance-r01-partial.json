@@ -1,0 +1,58 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-45",
+  "run_key": "20261017-0545-scheduled-chat-45/r01/research-prescreen",
+  "reference_main_sha": "78b2241cdac6260d1257e5ddc16e7366b70b8368",
+  "record_count": 3,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2512.06688",
+      "identity_tokens": [
+        "arxiv:2512.06688"
+      ],
+      "title": "PersonaMem-v2: Towards Personalized Intelligence via Learning Implicit User Personas and Agentic Memory",
+      "reason": "一次要旨では暗黙の利用者嗜好を学習する個人化ベンチマークとエージェント記憶が主題。2千トークンの記憶で3万2千トークンの会話履歴を置き換え、入力トークンを16分の1にするという推論費用に関連する効果がある一方、主要評価は個人化回答正答率（記憶方式55%）であり、KVキャッシュ、実行時配置、サービング遅延・スループットのシステム最適化を直接検証していないため境界とする。",
+      "source_url": "https://arxiv.org/abs/2512.06688",
+      "body_check": "abstract_screen_only; body_not_read; 2026-10-17 arXiv一次要旨を確認",
+      "first_checked_at": "2026-10-17T05:47:46+09:00",
+      "last_checked_at": "2026-10-17T05:47:46+09:00",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance",
+      "worklist_rank": 6
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2204.13767",
+      "identity_tokens": [
+        "arxiv:2204.13767"
+      ],
+      "title": "Triformer: Triangular, Variable-Specific Attentions for Long Sequence Multivariate Time Series Forecasting--Full Version",
+      "reason": "一次要旨で対象は多変量時系列の長期予測であり、変数固有の投影と三角形のパッチ注意で時系列長に対する線形計算量を達成する研究。注意計算の効率化はあるが、LLMの生成推論、KVキャッシュ、MoE、LLMサービングへの適用は示されていない。",
+      "source_url": "https://arxiv.org/abs/2204.13767",
+      "body_check": "abstract_screen_only; body_not_read; 2026-10-17 arXiv一次要旨を確認",
+      "first_checked_at": "2026-10-17T05:47:46+09:00",
+      "last_checked_at": "2026-10-17T05:47:46+09:00",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance",
+      "worklist_rank": 8
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2403.18421",
+      "identity_tokens": [
+        "arxiv:2403.18421"
+      ],
+      "title": "BioMedLM: A 2.7B Parameter Language Model Trained On Biomedical Text",
+      "reason": "一次要旨で主貢献はPubMed論文から学習した27億パラメータの医療言語モデルと医学質問応答の精度評価（MedMCQA開発57.3%、MMLU Medical Genetics 69.0%）。小規模化による運用上の利点は論じるが、推論エンジン・量子化・メモリ階層・スケジューラの新しい効率化方式は提案していない。",
+      "source_url": "https://arxiv.org/abs/2403.18421",
+      "body_check": "abstract_screen_only; body_not_read; 2026-10-17 arXiv一次要旨を確認",
+      "first_checked_at": "2026-10-17T05:47:46+09:00",
+      "last_checked_at": "2026-10-17T05:47:46+09:00",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance",
+      "worklist_rank": 9
+    }
+  ]
+}
