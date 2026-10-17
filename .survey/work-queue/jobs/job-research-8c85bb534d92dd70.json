@@ -35,10 +35,15 @@
   "selection_reason": "EVAのcontrol variates attentionを効率実装し、Transformerを少量トークンで適応させて推論時のメモリ要求とthroughputを改善する。一次要旨はretrievalタスクでの限界と精度・速度の調整も示すため、LLM attention実行効率の読解候補としてaccept。",
   "semantic_scholar_id": "131a6031f2eaa21fa58fb8f42e3cc2cde005e20d",
   "source_url": "https://arxiv.org/abs/2511.00576",
-  "status": "ready",
+  "status": "superseded",
   "title": "FlashEVA: Accelerating LLM inference via Efficient Attention",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2025
+  "year": 2025,
+  "superseded_at": "2026-10-17T12:51:34+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/09-kernel-runtime-compilation/2025-2511.00576-flasheva-accelerating-llm-inference-via-efficient-attention.md",
+  "represented_canonical_id": "arXiv:2511.00576",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

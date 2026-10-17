@@ -23,7 +23,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - [06-moe-quantization-compression](../06-moe-quantization-compression/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（104本）
+## 自動生成の論文一覧（105本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -259,6 +259,10 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - **2025-11 · [You Had One Job: Per-Task Quantization Using LLMs’ Hidden Representations](2025-2511.06516-you-had-one-job-per-task-quantization-using-llms-hidden-representations.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   一般的な学習後量子化（Post-学習 量子化; PTQ）は、言語モデルの重みを一律に4ビットへ圧縮したり、重み再構成誤差に基づいて精度を選んだりする。原著第4版では、Qwen2.5-7B-InstructのMMLU-Proで、TAQ-KLが35.35点・重み5.95GB、均一4ビットのAWQが23.54点・5.19GBだった。
+
+- **2025-11 · [FlashEVA: Accelerating LLM inference via Efficient Attention](2025-2511.00576-flasheva-accelerating-llm-inference-via-efficient-attention.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  FlashEVAは、既存の全注意Transformerを再学習なしで置き換える方式ではなく、事前学習済み重みを出発点に、近似注意へ構造を変えたモデルを追加学習して高速化する研究である。2048トークンの入力に対して最大10240トークンを生成する条件では、通常Transformerに対して生成処理量が最大6.7倍、ピークGPUメモリが最大5分の1となった。
 
 - **2025-11 · [EcoSpa: Efficient Transformer Training with Coupled Sparsity](2025-2511.11641-ecospa-efficient-transformer-training-with-coupled-sparsity.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

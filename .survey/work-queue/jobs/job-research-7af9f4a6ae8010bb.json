@@ -32,10 +32,15 @@
   "selection_reason": "multi-agent間のprefix差を補正してcross-context KV reuseを70%以上にしTTFTを最大7.8倍高速化するため、分散・再利用KV cache系統に新しい比較軸を加える。",
   "semantic_scholar_id": "471de4fab0885f45dffb717512741128775bcbaa",
   "source_url": "https://www.semanticscholar.org/paper/471de4fab0885f45dffb717512741128775bcbaa",
-  "status": "ready",
+  "status": "superseded",
   "title": "KVCOMM: Online Cross-context KV-cache Communication for Efficient LLM-based Multi-agent Systems",
   "type": "research",
   "venue": "Neural Information Processing Systems",
   "workflow_version": 10,
-  "year": 2025
+  "year": 2025,
+  "superseded_at": "2026-10-17T12:51:34+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2025-2510.12872-kvcomm-online-cross-context-kv-cache-communication-for-efficient-llm-bas.md",
+  "represented_canonical_id": "arXiv:2510.12872",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（766本）
+## 自動生成の論文一覧（767本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -1284,6 +1284,10 @@
   実装：[✓](https://github.com/Tasmay-Tibrewal/Memory) ・ リポジトリ内被引用：0  
   Mixture of Chapters（MoC）は、言語モデルが事前学習で獲得する知識を、通常の重みとは別の学習可能な潜在記憶として保持し、入力に必要な部分だけを交差注意（cross-注意機構）で取り出す設計である。元のmain原稿にあった主要な正負両方の結果を維持し、計算量の内訳、選択単位、実施済み実験と将来計画の区別を明確化した。
 
+- **2026-03 · [LooComp: Leverage Leave-One-Out Strategy to Encoder-only Transformer for Efficient Query-aware Context Compression](2026-2603.09222-loocomp-leverage-leave-one-out-strategy-to-encoder-only-transformer-for-.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  しかし検索件数を増やすと、無関係な文章も入力され、事前充填の計算量、入力トークン費用、モデルの注意の分散が問題になる。生成型の圧縮器は文書を短い文章へ書き換えられるが、圧縮器自体がトークンを逐次生成するため遅延が大きくなる。
+
 - **2026-03 · [InfoDensity: Rewarding Information-Dense Traces for Efficient Reasoning](2026-2603.17310-infodensity-rewarding-information-dense-traces-for-efficient-reasoning.md)**  
   実装：[✓](https://github.com/amao0o0/InfoDensity) ・ リポジトリ内被引用：0  
   そこで、後方からの最大値包絡（suffix-max envelope）によって軌跡全体の形を要約し、同一問題に対する複数生成の相対的な長さで補正する報酬を設計した。原著表2では、DeepSeek-R1-Distill-Qwen-1.5Bの4ベンチマーク平均正答率が36.5%から50.8%へ上がり、平均生成長は11.1千から7.5千トークンへ短縮した。
@@ -1671,7 +1675,7 @@
   多様なKV配置と注意派生形をブロック疎形式と実行時コンパイルで統一し、可変系列長を固定CTAへ動的に負荷均衡しながらCUDAグラフ互換性も保つ、LLMサービング向け高性能注意エンジン。
 
 - **2025-04 · [SpinQuant: LLM quantization with learned rotations](2025-2405.16406-spinquant-llm-quantization-with-learned-rotations.md)**  
-  実装：[✓](https://github.com/facebookresearch/SpinQuant) ・ リポジトリ内被引用：70  
+  実装：[✓](https://github.com/facebookresearch/SpinQuant) ・ リポジトリ内被引用：71  
   外れ値が低ビット量子化の誤差を大きくする問題に対して、全精度の機能を保つ旋回行列を学習し、重み・活性値・KVキャッシュの量子化に合わせる。
 
 - **2024-12 · [Gated Delta Networks: Improving Mamba2 with Delta Rule](2024-2412.06464-gated-delta-networks-improving-mamba2-with-delta-rule.md)**  
