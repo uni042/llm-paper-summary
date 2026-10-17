@@ -1,5 +1,5 @@
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（51本）
+## 自動生成の論文一覧（52本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -99,6 +99,10 @@
 - **2026-04 · [Beyond Accuracy: Unveiling Inefficiency Patterns in Tool-Integrated Reasoning](2026-2604.05404-beyond-accuracy-unveiling-inefficiency-patterns-in-tool-integrated-reaso.md)**  
   実装：[✓](https://github.com/sqs-ustc/tool-reasoning-framework-PTE) ・ リポジトリ内被引用：0  
   本論文は、推論と外部ツール利用を交互に行うツール統合推論（tool-integrated reasoning; TIR）の計算費用の測り方を提案する。
+
+- **2026-03 · [Wattchmen: Watching the Wattchers -- High Fidelity, Flexible GPU Energy Modeling](2026-2603.26435-wattchmen-watching-the-wattchers-high-fidelity-flexible-gpu-energy-model.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  一方、従来の細粒度モデルは一部の命令だけを対象にするか、別のGPU・冷却条件への移植性が不足していた。これはLLM専用推論の速度を改善する方式ではなく、GPUを使う学習・推論・科学計算のエネルギーを分析し最適化箇所を見つける基盤である。
 
 - **2026-03 · [Unified Spatiotemporal Token Compression for Video-LLMs at Ultra-Low Retention](2026-2603.21957-unified-spatiotemporal-token-compression-for-video-llms-at-ultra-low-ret.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
