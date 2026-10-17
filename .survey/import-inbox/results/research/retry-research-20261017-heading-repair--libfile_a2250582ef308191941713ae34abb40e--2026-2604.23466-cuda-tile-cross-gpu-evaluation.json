@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "d735c0c8683b9827f82fbd95b4883c7e61ea8b58793d336dea4763724903da40",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/retry-research-20261017-heading-repair--libfile_a2250582ef308191941713ae34abb40e--2026-2604.23466-cuda-tile-cross-gpu-evaluation.md",
+  "canonical_id": "arXiv:2604.23466",
+  "worker_completed_at": "2026-10-14T23:00:00+09:00",
+  "worker_run_key": "20261014-2258-scheduled-chat-00/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 4831,
+    "body_paragraphs": 25,
+    "method_chars": 662,
+    "method_paragraphs": 3,
+    "evaluation_chars": 2332,
+    "limitation_chars": 383,
+    "insufficiency_flags": [
+      "手法説明量 662 < 700"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 手法説明量 662 < 700"
+  ],
+  "processed_at": "2026-10-17T14:36:09+00:00"
+}

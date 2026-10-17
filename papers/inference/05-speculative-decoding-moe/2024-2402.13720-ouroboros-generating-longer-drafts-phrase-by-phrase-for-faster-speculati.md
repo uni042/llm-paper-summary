@@ -41,6 +41,8 @@ references:
     arxiv_id: '2401.10774'
   - canonical_id: arXiv:2305.09781
     arxiv_id: '2305.09781'
+last_audited: null
+audit_version: 0
 ---
 
 # Ouroboros：句単位の下書き生成と再利用による投機的復号の高速化

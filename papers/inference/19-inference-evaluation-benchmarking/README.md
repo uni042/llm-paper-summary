@@ -1,5 +1,5 @@
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（49本）
+## 自動生成の論文一覧（50本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -119,6 +119,10 @@
 - **2026-01 · [L³: Large Lookup Layers](2026-2601.21461-l-large-lookup-layers.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   このため、CPUに退避した専門家をGPUへ移す場合は、選択後の転送が計算の待ち時間になりやすい。推論速度はL³の配置に依存し、2.6B稼働モデルで最初のL³を第5層後に置くと、原著表2のバッチ1速度は密モデル776に対して772トークン/秒/系列だった。
+
+- **2025-11 · [TimeViper: A Hybrid Mamba-Transformer Vision-Language Model for Efficient Long Video Understanding](2025-2511.16595-timeviper-a-hybrid-mamba-transformer-vision-language-model-for-efficient.md)**  
+  実装：[✓](https://github.com/xiaomi-research/timeviper) ・ リポジトリ内被引用：0  
+  1時間の動画を毎秒1枚、1フレーム768トークンで表現すると約276万トークンになり、通常の全注意では処理費用とメモリが大きい。TimeViperは、状態空間モデル（State Space モデル; SSM）のMamba-2とTransformerの注意層を混ぜた基盤を使い、さらに言語モデルの途中で視覚トークンを圧縮する。
 
 - **2025-11 · [MemSearcher: Training LLMs to Reason, Search and Manage Memory via End-to-End Reinforcement Learning](2025-2511.02805-memsearcher-training-llms-to-reason-search-and-manage-memory-via-end-to-.md)**  
   実装：[✓](https://github.com/icip-cas/MemSearcher) ・ リポジトリ内被引用：0  

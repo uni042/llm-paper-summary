@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（781本）
+## 自動生成の論文一覧（782本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -1187,6 +1187,10 @@
 - **2026-04 · [Open-Loop Planning, Closed-Loop Verification: Speculative Verification for VLA](2026-2604.02965-open-loop-planning-closed-loop-verification-speculative-verification-for.md)**  
   実装：[✓](https://github.com/edsad122/SV-VLA) ・ リポジトリ内被引用：0  
   本論文は、計画は重いモデルで低頻度に実施し、計画が依然として妥当かの検査だけを軽いモデルで毎制御時刻に実施するSV-VLA（投機的 検証 for VLA Control）を提案する。
+
+- **2026-04 · [NI Sampling: Accelerating Discrete Diffusion Sampling by Token Order Optimization](2026-2604.18471-ni-sampling-accelerating-discrete-diffusion-sampling-by-token-order-opti.md)**  
+  実装：[✓](https://github.com/imagination-research/NI-Sampling) ・ リポジトリ内被引用：0  
+  そのため従来の全段階方式は一回のモデル実行で一位置だけを確定し、長さ512の出力では原則512回の推論が必要となる。ICLR 2026の論文に記載された単一GPU評価では、LLaDA-8B-InstructのMBPP、生成長512で全段階方式19.1トークン/秒に対し273.8トークン/秒（14.3倍）を報告する。
 
 - **2026-04 · [MI-Pruner: Crossmodal Mutual Information-guided Token Pruner for Efficient MLLMs](2026-2604.03072-mi-pruner-crossmodal-mutual-information-guided-token-pruner-for-efficien.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
