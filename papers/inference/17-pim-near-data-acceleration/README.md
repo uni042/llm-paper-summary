@@ -126,7 +126,7 @@
   IANUSは、大規模言語モデル（LLM）の入力処理と逐次生成を、演算特性の異なる二種類のハードウェアへ分担させる推論専用システムである。論文の主結果は、GPT-2系列におけるNVIDIA A100比平均6.2倍、先行DFX比平均3.2倍の推論高速化である。
 
 - **2024-09 · [Duplex: A Device for Large Language Models with Mixture of Experts, Grouped Query Attention, and Continuous Batching](2024-2409.01141-duplex-a-device-for-large-language-models-with-mixture-of-experts-groupe.md)**  
-  実装：✓ ・ リポジトリ内被引用：3  
+  実装：✓ ・ リポジトリ内被引用：4  
   Duplexは、大規模言語モデルの推論を対象に、通常の高演算密度処理器（xPU）と、広帯域メモリのロジックダイに演算器を設けるメモリ内演算器（Logic-PIM）を同じ装置へ統合する計算機構である。
 
 ### 4年前（2022-11〜2023-10）
