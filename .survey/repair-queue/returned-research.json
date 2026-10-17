@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-17T12:51:34+00:00",
+  "generated_at": "2026-10-17T13:08:33+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -2077,34 +2077,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-e8c2b930764a--libfile_be186c9ad72c8191a820e9193ceb1ca7--2026-2603.00573-comol-core-space-lora-experts-research-20261013-2100-scheduled-chat-00-r02.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-e8c2b930764a--libfile_be186c9ad72c8191a820e9193ceb1ca7--2026-2603.00573-comol-core-space-lora-experts-research-20261013-2100-scheduled-chat-00-r0.json",
       "worker_run_key": "20261013-2100-scheduled-chat-00/r02"
-    },
-    {
-      "canonical_id": "arXiv:2512.16843",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-14T15:08:09+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 158 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 4562,
-        "body_paragraphs": 26,
-        "method_chars": 1389,
-        "method_paragraphs": 9,
-        "evaluation_chars": 158,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "評価説明量 158 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-3c5df45b52b0--libfile_bba482f53fc48191a8687816f7c83ac0--2025-2512.16843-llmcache-layer-wise-activation-reuse-research-20261014-2330-scheduled-chat-30-r01-v2.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-3c5df45b52b0--libfile_bba482f53fc48191a8687816f7c83ac0--2025-2512.16843-llmcache-layer-wise-activation-reuse-research-20261014-2330-scheduled-cha.json",
-      "worker_run_key": "20261014-2330-scheduled-chat-30/r01"
     },
     {
       "canonical_id": "arXiv:2605.15206",
@@ -4281,8 +4253,8 @@
     },
     {
       "canonical_id": "arXiv:2402.13720",
-      "title": "Ouroboros: Generating Longer Drafts Phrase by Phrase for Faster Speculative Decoding",
-      "source_url": "https://arxiv.org/pdf/2402.13720",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-17T12:47:39+00:00",
       "return_count": 3,
       "assigned_worker": "scheduled-chat-30",
@@ -4308,8 +4280,8 @@
     },
     {
       "canonical_id": "arXiv:2505.07203",
-      "title": "PrefillOnly: An Inference Engine for Prefill-only Workloads in Large Language Model Applications",
-      "source_url": "https://arxiv.org/pdf/2505.07203",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-17T12:48:31+00:00",
       "return_count": 1,
       "assigned_worker": "scheduled-chat-45",
@@ -4332,6 +4304,33 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-20261017-exact--libfile_2006b174a0a0819189f72194063c53ac--2025-2505.07203-prefillonly-hybrid-prefilling-scheduling.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-20261017-exact--libfile_2006b174a0a0819189f72194063c53ac--2025-2505.07203-prefillonly-hybrid-prefilling-scheduling.json",
       "worker_run_key": "20261017-2130-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2601.23180",
+      "title": "TriSpec: Ternary Speculative Decoding via Lightweight Proxy Verification",
+      "source_url": "https://arxiv.org/abs/2601.23180",
+      "returned_at": "2026-10-17T13:04:26+00:00",
+      "return_count": 3,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 103 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 4255,
+        "body_paragraphs": 27,
+        "method_chars": 1393,
+        "method_paragraphs": 9,
+        "evaluation_chars": 103,
+        "limitation_chars": 579,
+        "insufficiency_flags": [
+          "評価説明量 103 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-20261017-exact--libfile_ed285db8b9cc819194487da8b2f7be3a--2026-2601.23180-trispec-proxy-verification-research-20261017-1730-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-20261017-exact--libfile_ed285db8b9cc819194487da8b2f7be3a--2026-2601.23180-trispec-proxy-verification-research-20261017-1730-scheduled-chat-30-r01.json",
+      "worker_run_key": "20261017-1730-scheduled-chat-30/r01"
     }
   ]
 }
