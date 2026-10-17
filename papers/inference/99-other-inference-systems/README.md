@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（758本）
+## 自動生成の論文一覧（759本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -1307,6 +1307,10 @@
 - **2026-03 · [Bielik-Minitron-7B: Compressing Large Language Models via Structured Pruning and Knowledge Distillation for the Polish Language](2026-2603.11881-bielik-minitron-7b-compressing-large-language-models-via-structured-prun.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   大規模言語モデルの重み容量と計算費用を下げる方法には、数値精度を落とす量子化と、モデル構造自体を小さくする枝刈りがある。パラメータ削減率は33.4%である。
+
+- **2026-03 · [Attention-Based Sampler for Diffusion Language Models](2026-2604.08564-attention-based-sampler-for-diffusion-language-models.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  本論文は、マスク拡散型大規模言語モデル（dLLM）の生成時に、どの位置のマスクを先に確定するかを注意行列から決める学習不要の復号法Attn-Samplerを提案する。
 
 - **2026-03 · [ASAP: Attention-Shift-Aware Pruning for Efficient LVLM Inference](2026-2603.14549-asap-attention-shift-aware-pruning-for-efficient-lvlm-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

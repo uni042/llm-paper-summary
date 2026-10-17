@@ -1,5 +1,5 @@
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（46本）
+## 自動生成の論文一覧（47本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -95,6 +95,10 @@
 - **2026-04 · [Beyond Accuracy: Unveiling Inefficiency Patterns in Tool-Integrated Reasoning](2026-2604.05404-beyond-accuracy-unveiling-inefficiency-patterns-in-tool-integrated-reaso.md)**  
   実装：[✓](https://github.com/sqs-ustc/tool-reasoning-framework-PTE) ・ リポジトリ内被引用：0  
   本論文は、推論と外部ツール利用を交互に行うツール統合推論（tool-integrated reasoning; TIR）の計算費用の測り方を提案する。
+
+- **2026-03 · [Unified Spatiotemporal Token Compression for Video-LLMs at Ultra-Low Retention](2026-2603.21957-unified-spatiotemporal-token-compression-for-video-llms-at-ultra-low-ret.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  既存の手法はフレーム内の空間圧縮とフレーム間の時間圧縮を順番に適用するものが多いが、保持率を5%以下まで下げると、先に決めた各段階の予算配分が適切でなくなり、質問に必要な短い出来事や小さな物体を落としやすい。
 
 - **2026-03 · [Token Reduction via Local and Global Contexts Optimization for Efficient Video Large Language Models](2026-2603.01400-token-reduction-via-local-and-global-contexts-optimization-for-efficient.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

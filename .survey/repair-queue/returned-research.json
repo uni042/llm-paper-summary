@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-17T11:32:48+00:00",
+  "generated_at": "2026-10-17T11:47:23+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -2135,36 +2135,6 @@
       "worker_run_key": "20261013-2100-scheduled-chat-00/r02"
     },
     {
-      "canonical_id": "arXiv:2604.08564",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-14T15:08:07+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700",
-        "説明不足トリガー: 評価説明量 333 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5032,
-        "body_paragraphs": 29,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 333,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700",
-          "評価説明量 333 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-267a1851b6da--libfile_acb4665f1598819197bea321a3641e12--2026-2604.08564-attn-sampler-diffusion-language-model-research-20261014-2258-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-267a1851b6da--libfile_acb4665f1598819197bea321a3641e12--2026-2604.08564-attn-sampler-diffusion-language-model-research-20261014-2258-scheduled-ch.json",
-      "worker_run_key": "20261014-2258-scheduled-chat-00/r01"
-    },
-    {
       "canonical_id": "arXiv:2512.16843",
       "title": null,
       "source_url": null,
@@ -4231,8 +4201,8 @@
     },
     {
       "canonical_id": "arXiv:2511.16595",
-      "title": "TimeViper: A Hybrid Mamba-Transformer Vision-Language Model for Efficient Long Video Understanding",
-      "source_url": "https://arxiv.org/abs/2511.16595",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-17T11:31:00+00:00",
       "return_count": 1,
       "assigned_worker": "scheduled-chat-00",
@@ -4256,6 +4226,35 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-20261017-exact--libfile_9d909978c71c8191be28f6cf86433438.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-20261017-exact--libfile_9d909978c71c8191be28f6cf86433438.json",
       "worker_run_key": "20261015-0530-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2604.23466",
+      "title": "Evaluating CUDA Tile for AI Workloads on Hopper and Blackwell GPUs",
+      "source_url": "https://arxiv.org/abs/2604.23466",
+      "returned_at": "2026-10-17T11:45:11+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700",
+        "説明不足トリガー: 評価説明量 0 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 4831,
+        "body_paragraphs": 25,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 0,
+        "limitation_chars": 383,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700",
+          "評価説明量 0 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-20261017-exact--libfile_a2250582ef308191941713ae34abb40e.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-20261017-exact--libfile_a2250582ef308191941713ae34abb40e.json",
+      "worker_run_key": "20261014-2258-scheduled-chat-00/r01"
     }
   ]
 }
