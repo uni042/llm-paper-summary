@@ -27,6 +27,8 @@ worker_completed_at: '2026-10-15T15:00:00+09:00'
 worker_run_key: '20261015-1500-scheduled-chat-00/r01'
 worklist_rank: 195
 research_source_version: 'EuroMLSys 2024 DOI:10.1145/3642970.3655844, 9-page published workshop version'
+last_audited: null
+audit_version: 0
 ---
 
 # ALTO：複合AIパイプラインの部分出力を逐次配送するネットワーク実行基盤

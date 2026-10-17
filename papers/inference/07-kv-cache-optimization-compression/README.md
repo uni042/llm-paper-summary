@@ -16,7 +16,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 方向は異なるが、いずれも**KV cacheがdecode時のmemory容量やmemory bandwidthのボトルネックになることを直接緩和する**研究として扱う。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（238本）
+## 自動生成の論文一覧（239本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -556,6 +556,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 - **2026-05 · [ArborKV: Structure-Aware KV Cache Management for Scaling Tree-based LLM Reasoning](2026-2605.22106-arborkv-structure-aware-kv-cache-management.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   活動経路の保護、トークン単位の選択的追い出し、後戻り時の遅延再構築を組み合わせ、単一RTX 4090上のToT評価で同一キャッシュ予算の系列方式を上回り、256展開の探索を5.6 GiBで完了した。
+
+- **2026-04 · [Sequential KV Cache Compression via Probabilistic Language Tries: Beyond the Per-Vector Shannon Limit](2026-2604.15356-sequential-kv-cache-compression-via-probabilistic-language-tries-beyond-.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  本論文は、言語モデルの鍵・値キャッシュ（KV Cache）を独立した浮動小数点ベクトルの集合として圧縮する従来の考え方を改め、元のトークン系列の確率構造に基づいてキャッシュ系列全体を圧縮する構想を示す。原著に対応するGPU実験表はなく、復号時の予測KV再計算、誤差許容、索引維持、圧縮・復元時間を含めた実用性は検証されていない。
 
 - **2026-04 · [PolyKV: A Shared Asymmetrically-Compressed KV Cache Pool for Multi-Agent LLM Inference](2026-2604.24971-polykv-shared-asymmetrically-compressed-kv-cache.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
