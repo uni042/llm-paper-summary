@@ -1384,6 +1384,10 @@
   実装：✓ ・ リポジトリ内被引用：7  
   Aladdinは、複数GPUで大規模言語モデルの推論要求を処理するとき、各要求をどのワーカーへ配置するかと、ワーカーを何台・何GPU構成で用意するかを共同で決めるクラスタスケジューラである。
 
+- **2024-03 · [LLM-PQ: Serving LLM on Heterogeneous Clusters with Phase-Aware Partition and Adaptive Quantization](2024-2403.01136-llm-pq-serving-llm-on-heterogeneous-clusters-with-phase-aware-partition-.md)**  
+  実装：[✓](https://github.com/tonyzhao-jt/LLM-PQ) ・ リポジトリ内被引用：7  
+  LLM-PQは、性能とメモリ容量が異なるGPUを組み合わせたクラスタで、大規模言語モデル（LLM）の一括推論を高速化するシステムである。異種構成でPipeEdgeを基準にした生成処理量の改善は平均2.26倍、最大2.88倍である。
+
 - **2024-10 · [GraphRouter: A Graph-based Router for LLM Selections](2024-2410.03834-graphrouter-a-graph-based-router-for-llm-selections.md)**  
   実装：[✓](https://github.com/ulab-uiuc/GraphRouter) ・ リポジトリ内被引用：6  
   常に最大モデルを使うと費用が高く、常に最小モデルを使うと精度が不足する。従来の二択ルータやモデル名だけを埋め込む方式では、候補モデルが増えた場合や新しいモデルが登場した場合に適切な選択が難しい。原著の主表では、品質と費用を同等に重視した条件の報酬が0.209となり、比較対象の最高0.196を上回った。
@@ -1395,10 +1399,6 @@
 - **2024-06 · [Enabling Efficient Batch Serving for LMaaS via Generation Length Prediction](2024-2406.04785-enabling-efficient-batch-serving-for-lmaas-via-generation-length-prediction.md)**  
   実装：✓ ・ リポジトリ内被引用：6  
   入力長・アプリ・利用者特徴から生成長を予測し、近い長さを適応バッチ化してHRRNで順序付けするMagnusにより、スループット最大234%向上・応答時間最大89.7%削減を達成する。
-
-- **2024-03 · [LLM-PQ: Serving LLM on Heterogeneous Clusters with Phase-Aware Partition and Adaptive Quantization](2024-2403.01136-llm-pq-serving-llm-on-heterogeneous-clusters-with-phase-aware-partition-.md)**  
-  実装：[✓](https://github.com/tonyzhao-jt/LLM-PQ) ・ リポジトリ内被引用：6  
-  LLM-PQは、性能とメモリ容量が異なるGPUを組み合わせたクラスタで、大規模言語モデル（LLM）の一括推論を高速化するシステムである。異種構成でPipeEdgeを基準にした生成処理量の改善は平均2.26倍、最大2.88倍である。
 
 - **2024-06 · [Slice-Level Scheduling for High-Throughput and Load-Balanced LLM Serving](2024-2406.13511-slice-level-scheduling-for-high-throughput-and-load-balanced-llm-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：5  
@@ -1431,7 +1431,7 @@
 ### 4年前（2022-11〜2023-10）
 
 - **2023-09 · [Efficient Memory Management for Large Language Model Serving with PagedAttention](2023-2309.06180-vllm-pagedattention-efficient-memory-management.md)**  
-  実装：[✓](https://github.com/vllm-project/vllm) ・ リポジトリ内被引用：1057  
+  実装：[✓](https://github.com/vllm-project/vllm) ・ リポジトリ内被引用：1061  
   vLLMは、要求ごとに大きな連続領域を予約していたKVキャッシュを固定長ブロックへ分解し、論理的な並びとGPU上の物理配置を分離する。必要なブロックだけ動的に割り当て、同じ接頭辞のKVを共有することで、限られたGPUメモリへより多くの要求を同時に載せる。
 
 - **2023-02 · [AlpaServe: Statistical Multiplexing with Model Parallelism for Deep Learning Serving](2023-2302.11665-alpaserve.md)**  
@@ -1465,7 +1465,7 @@
 ### 5年前（2021-11〜2022-10）
 
 - **2022-07 · [Orca: A Distributed Serving System for Transformer-Based Generative Models](2022-osdi22-orca-iteration-level-scheduling-selective-batching.md)**  
-  実装：✓ ・ リポジトリ内被引用：478  
+  実装：✓ ・ リポジトリ内被引用：480  
   出力トークンを1個生成するたびにスケジューラへ制御を戻し、終わった要求を外して新着要求を追加する。さらに、長さの違う要求を同じバッチで処理できるよう、注意機構だけを要求ごとに分け、それ以外の演算はトークン単位でまとめて実行する分散LLMサービングシステム。
 
 - **2022-04 · [Accelerating Attention through Gradient-Based Learned Runtime Pruning](2022-2204.03227-accelerating-attention-through-gradient-based-learned-runtime-pruning.md)**  

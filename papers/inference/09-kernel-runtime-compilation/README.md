@@ -353,7 +353,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   言語モデルに検索、計算、データ取得などの外部関数を使わせる場合、素朴な方式では「一つの関数を呼ぶ、結果を読む、次の関数を決める」という往復を繰り返す。HotpotQAでは逐次方式ReAct比1.80倍、Movie Recommendationでは3.74倍、依存付きParallelQAでは最大2.27倍の遅延改善を報告する。
 
 - **2024-08 · [STBLLM: Breaking the 1-Bit Barrier with Structured Binary LLMs](2024-2408.01803-stbllm-breaking-the-1-bit-barrier-with-structured-binary-llms.md)**  
-  実装：✓ ・ リポジトリ内被引用：6  
+  実装：✓ ・ リポジトリ内被引用：7  
   大規模言語モデルの推論では、特にバッチの小さい復号段階で重みを主記憶やGPUメモリから読み出す帯域が律速になりやすい。従来の二値化手法は、重要な重みを別扱いにしたり残差を追加したりして精度を回復するものの、重み当たり約1ビットの表現からさらに削る余地が残る。
 
 - **2024-06 · [T-MAC: CPU Renaissance via Table Lookup for Low-Bit LLM Deployment on Edge](2024-2407.00088-t-mac-cpu-renaissance-via-table-lookup-for-low-bit-llm-deployment-on-edg.md)**  
