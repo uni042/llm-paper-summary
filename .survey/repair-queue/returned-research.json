@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-17T05:47:51+00:00",
+  "generated_at": "2026-10-17T05:58:02+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 184,
+  "count": 179,
   "entries": [
     {
       "canonical_id": "DOI:10.1145/3714983.3714987",
@@ -205,22 +205,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_a7197634562481919df48707cbdfd64f--2026-2607.01444-pruned-moe-biomedical.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_a7197634562481919df48707cbdfd64f--2026-2607.01444-pruned-moe-biomedical.json",
       "worker_run_key": "20261004-0400-scheduled-chat-00/r01"
-    },
-    {
-      "canonical_id": "arXiv:2609.07786",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-04T03:13:55+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "日本語比率 50.0% < 70%"
-      ],
-      "quality_metrics": null,
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_daefc319f8e08191a4487b5637ecd9a5--2026-2609.07786-srr.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_daefc319f8e08191a4487b5637ecd9a5--2026-2609.07786-srr.json",
-      "worker_run_key": "20261004-0600-scheduled-chat-00/r02"
     },
     {
       "canonical_id": "arXiv:2402.12374",
@@ -843,31 +827,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_9ac11628c50c8191bda8984fc37bc078--2026-2604.22575-spikingbrain2-hybrid-long-context-research-20261014-1730-scheduled-chat-30-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_9ac11628c50c8191bda8984fc37bc078--2026-2604.22575-spikingbrain2-hybrid-long-context-research-20261014-1730-scheduled-chat-30-r01.json",
       "worker_run_key": "20261014-1730-scheduled-chat-30/r01"
-    },
-    {
-      "canonical_id": "arXiv:2306.07174",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-14T10:22:12+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2023-2306.07174-augmenting-language-models-with-long-term-memory.md と 15 段落 / 3334文字 (100.0%) が完全一致"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5933,
-        "body_paragraphs": 35,
-        "method_chars": 1937,
-        "method_paragraphs": 12,
-        "evaluation_chars": 1260,
-        "limitation_chars": 900,
-        "insufficiency_flags": []
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_34a662b0db648191bebfd33ef3014e2d--2023-2306.07174-longmem-decoupled-long-term-memory-research-20261014-1645-scheduled-chat-45-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_34a662b0db648191bebfd33ef3014e2d--2023-2306.07174-longmem-decoupled-long-term-memory-research-20261014-1645-scheduled-chat-45-r01.json",
-      "worker_run_key": "20261014-1645-scheduled-chat-45/r01"
     },
     {
       "canonical_id": "arXiv:2511.02647",
@@ -1496,31 +1455,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-72c2c9a424c9--libfile_d363acd88e20819195f8f9dc7895d435--2021-lightseq-returned-repair-20261013-2130-scheduled-chat-30-r01-v2.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-72c2c9a424c9--libfile_d363acd88e20819195f8f9dc7895d435--2021-lightseq-returned-repair-20261013-2130-scheduled-chat-30-r01-v2.json",
       "worker_run_key": "20261013-2130-scheduled-chat-30/r01"
-    },
-    {
-      "canonical_id": "arXiv:2512.24545",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-14T12:56:22+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2025-2512.24545-more-than-bits-multi-envelope-double-binary-factorization-for-extreme-qu.md と 13 段落 / 2741文字 (100.0%) が完全一致"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 3749,
-        "body_paragraphs": 24,
-        "method_chars": 1472,
-        "method_paragraphs": 10,
-        "evaluation_chars": 569,
-        "limitation_chars": 276,
-        "insufficiency_flags": []
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-75cd8dbc75af--libfile_3e8f152960808191980d0e882abdb7c3--2025-2512.24545-mdbf-multi-envelope-double-binary-factorization-research-20261014-1630-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-75cd8dbc75af--libfile_3e8f152960808191980d0e882abdb7c3--2025-2512.24545-mdbf-multi-envelope-double-binary-factorization-research-20261014-1630-sc.json",
-      "worker_run_key": "20261014-1630-scheduled-chat-30/r01"
     },
     {
       "canonical_id": "arXiv:2603.13430",
@@ -2936,34 +2870,6 @@
       "worker_run_key": "20261015-2330-scheduled-chat-30/r01"
     },
     {
-      "canonical_id": "arXiv:2312.07950",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-15T20:27:39+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 6113,
-        "body_paragraphs": 32,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 1873,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-5e0ef9c2d748--libfile_95561e2056bc8191904e16e20fabf2d8--2023-2312.07950-cbq-cross-block-quantization-research-20261016-0430-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-5e0ef9c2d748--libfile_95561e2056bc8191904e16e20fabf2d8--2023-2312.07950-cbq-cross-block-quantization-research-20261016-0430-scheduled-chat-30-r01.json",
-      "worker_run_key": "20261016-0430-scheduled-chat-30/r01"
-    },
-    {
       "canonical_id": "arXiv:2504.19720",
       "title": null,
       "source_url": null,
@@ -3829,34 +3735,6 @@
       "worker_run_key": "20261016-0030-scheduled-chat-30/r01"
     },
     {
-      "canonical_id": "arXiv:2502.04420",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-16T15:41:51+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 173 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5423,
-        "body_paragraphs": 32,
-        "method_chars": 1271,
-        "method_paragraphs": 8,
-        "evaluation_chars": 173,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "評価説明量 173 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-81dcb659ea5b--libfile_f41f4086aee88191b71226f3773226e9--2025-2502.04420-kvtuner-layerwise-kv-quantization-research-20261016-0130-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-81dcb659ea5b--libfile_f41f4086aee88191b71226f3773226e9--2025-2502.04420-kvtuner-layerwise-kv-quantization-research-20261016-0130-scheduled-chat-3.json",
-      "worker_run_key": "20261016-0130-scheduled-chat-30/r01"
-    },
-    {
       "canonical_id": "arXiv:2603.18489",
       "title": null,
       "source_url": null,
@@ -4133,33 +4011,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-a4957a409a45--libfile_39bbd72cc26481919d651249663a0ae4--2026-2606.25091-edge-cloud-speculative-decoding-economics-research-20261016-1730-scheduled-chat-30-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-a4957a409a45--libfile_39bbd72cc26481919d651249663a0ae4--2026-2606.25091-edge-cloud-speculative-decoding-economics-research-20261016-1730-schedule.json",
       "worker_run_key": "20261016-1730-scheduled-chat-30/r01"
-    },
-    {
-      "canonical_id": "arXiv:2601.23180",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-16T16:01:03+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 0 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5393,
-        "body_paragraphs": 36,
-        "method_chars": 1836,
-        "method_paragraphs": 12,
-        "evaluation_chars": 0,
-        "limitation_chars": 435,
-        "insufficiency_flags": [
-          "評価説明量 0 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-abaf6747c946--libfile_bd38edeef1348191badb67328e80541f--2026-2601.23180-trispec-proxy-verification-research-20261016-1830-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-abaf6747c946--libfile_bd38edeef1348191badb67328e80541f--2026-2601.23180-trispec-proxy-verification-research-20261016-1830-scheduled-chat-30-r01.json",
-      "worker_run_key": "20261016-1830-scheduled-chat-30/r01"
     },
     {
       "canonical_id": "arXiv:2406.02500",
@@ -4802,8 +4653,8 @@
     },
     {
       "canonical_id": "arXiv:2602.02546",
-      "title": "D2Quant: Accurate Low-bit Post-Training Weight Quantization for LLMs",
-      "source_url": "https://arxiv.org/html/2602.02546v1",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-17T05:44:49+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-45",
@@ -4826,6 +4677,31 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-3be4cb2788ce--libfile_7e091ada5d0081918b3c9caf4fb17eee--2026-2602.02546-d2quant-under16kb-reaudit-20261017-0945-scheduled-chat-45-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-3be4cb2788ce--libfile_7e091ada5d0081918b3c9caf4fb17eee--2026-2602.02546-d2quant-under16kb-reaudit-20261017-0945-scheduled-chat-45-r01.json",
       "worker_run_key": "20261017-0945-scheduled-chat-45/r01"
+    },
+    {
+      "canonical_id": "arXiv:2306.07174",
+      "title": "Augmenting Language Models with Long-Term Memory",
+      "source_url": "https://arxiv.org/html/2306.07174v1",
+      "returned_at": "2026-10-17T05:54:46+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2023-2306.07174-augmenting-language-models-with-long-term-memory.md と 15 段落 / 3334文字 (100.0%) が完全一致"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5933,
+        "body_paragraphs": 35,
+        "method_chars": 1937,
+        "method_paragraphs": 12,
+        "evaluation_chars": 1260,
+        "limitation_chars": 900,
+        "insufficiency_flags": []
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_34a662b0db648191bebfd33ef3014e2d--2023-2306.07174-longmem-decoupled-long-term-memory-research-20261014-1645-scheduled-chat-45-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_34a662b0db648191bebfd33ef3014e2d--2023-2306.07174-longmem-decoupled-long-term-memory-research-20261014-1645-scheduled-chat-45-r01.json",
+      "worker_run_key": "20261014-1645-scheduled-chat-45/r01"
     }
   ]
 }
