@@ -344,7 +344,7 @@
 
 - **2023-10 · [Context Compression for Auto-regressive Transformers with Sentinel Tokens](2023-2310.08152-context-compression-for-auto-regressive-transformers-with-sentinel-token.md)**  
   実装：[✓](https://github.com/DRSY/KV_Compression) ・ リポジトリ内被引用：0  
-  本論文の文脈圧縮（KV Compression）は、自己回帰Transformerが過去のトークンを参照するために保存する鍵・値キャッシュ（KVキャッシュ）を、単純に捨てるのではなく、学習済みの圧縮表現へ置き換える方式である。
+  次トークン予測を続けながら追加学習することで、 がその区間から必要な情報を選んで保持する。
 
 ### 6年前（2020-11〜2021-10）
 

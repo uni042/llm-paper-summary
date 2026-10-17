@@ -35,10 +35,15 @@
   "selection_reason": "自己回帰復号のメモリ帯域ボトルネックを対象に、細粒度weight-only量子化と専用GPU GEMMでLLM推論のメモリ・throughputを直接改善するため対象。",
   "semantic_scholar_id": "7ac38c3398f2696754bec69f296468e7a8237a64",
   "source_url": "https://arxiv.org/abs/2308.09723",
-  "status": "ready",
+  "status": "superseded",
   "title": "FineQuant: Unlocking Efficiency with Fine-Grained Weight-Only Quantization for LLMs",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2023
+  "year": 2023,
+  "superseded_at": "2026-10-17T14:03:51+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/16-weight-quantization-compression/2023-2308.09723-finequant-unlocking-efficiency-with-fine-grained-weight-only-quantizatio.md",
+  "represented_canonical_id": "arXiv:2308.09723",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

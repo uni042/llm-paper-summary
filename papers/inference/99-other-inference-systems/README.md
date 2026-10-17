@@ -750,7 +750,7 @@
 
 - **2026-08 · [Archer: Adaptive Reuse of Cached Hidden States for Efficient Rollback in Diffusion Language Models](2026-2608.08086-archer-adaptive-reuse-of-cached-hidden-states-for-efficient-rollback-in-.md)**  
   実装：[✓](https://github.com/Hxnng/Archer) ・ リポジトリ内被引用：0  
-  Archerは、固定された入力プロンプトのKVを一定期間だけ再利用し、修正可能な生成領域は各段階で全て再計算する。5種類の正答率指標を平均した値は33.63%で、比較した方式中の最高値だった。
+  本研究は、拡散言語モデル（Diffusion Language モデル; DLM）が一度生成したトークンを後から置換・再マスクできる「巻き戻し（rollback）」を保持しながら、繰り返しの全系列再計算を減らす推論時のキャッシュ制御を扱う。ただし応答を再計算することと、元の全再計算方式と同じ出力分布・復号経路を保証することは異なる。
 
 - **2026-08 · [ARCHead: Activation-Metric Residual Correction for Large Language Model Output Heads](2026-2608.02703-archead-activation-metric-residual-correction-for-large-language-model-output-heads.md)**  
   実装：[✓](https://github.com/suayptalha/archead) ・ リポジトリ内被引用：0  
@@ -1006,7 +1006,7 @@
 
 - **2026-05 · [PEEK: Context Map as an Orientation Cache for Long-Context LLM Agents](2026-2605.19932-peek-context-map-as-an-orientation-cache-for-long-context-llm-agents.md)**  
   実装：[✓](https://github.com/zhuohangu/peek) ・ リポジトリ内被引用：0  
-  PEEKは、大規模言語モデル（LLM）を使うエージェントが、同じ巨大な文書群、データ集合、コードリポジトリへ繰り返し質問する際の無駄な探索を減らすシステムである。CL-benchではRLMの解決率14.0%が26.0%、採点項目正答率54.5%が63.4%となる。
+  コンテキスト地図はエージェントのシステムプロンプトへ付与され、予算 B トークン以内に維持される。
 
 - **2026-05 · [OSAQ: Outlier Self-Absorption for Accurate Low-bit LLM Quantization](2026-2605.04738-osaq-outlier-self-absorption-for-accurate-low-bit-llm-quantization.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -1414,7 +1414,7 @@
 
 - **2026-02 · [On the Limits of Layer Pruning for Generative Reasoning in Large Language Models](2026-2602.01997-on-the-limits-of-layer-pruning-for-generative-reasoning-in-large-languag.md)**  
   実装：[✓](https://github.com/safal312/on-the-limits-of-layer-pruning) ・ リポジトリ内被引用：0  
-  本論文は、大規模言語モデルの層を丸ごと削除してモデルを軽くする「深さ方向の枝刈り」について、分類問題では精度が比較的保たれるのに、数学的推論やコード生成では著しく悪化する理由を分析する。約25%の層削除を行った条件では、分類課題で元の性能の約90%を保てても、生成課題で63.4%しか保てない例がある。
+  本研究は大規模言語モデルの層を丸ごと削る深さ方向の枝刈り（層 枝刈り）が、分類課題と生成型推論課題で異なる品質低下を起こす原因を調べる。主な実験では、層の約25%を除去し、元モデルが生成した回答を教師にして再学習する。
 
 - **2026-02 · [Neural Attention Search Linear: Towards Adaptive Token-Level Hybrid Attention Models](2026-2602.03681-neural-attention-search-linear-towards-adaptive-token-level-hybrid-atten.md)**  
   実装：[✓](https://github.com/automl/NeuralAttentionSearchLinear) ・ リポジトリ内被引用：0  
@@ -1466,7 +1466,7 @@
 
 - **2026-01 · [When to Think Fast and Slow? AMOR: Adaptive Entropy Gate for Hybrid Models](2026-2602.13215-when-to-think-fast-and-slow-amor-adaptive-entropy-gate-for-hybrid-models.md)**  
   実装：[✓](https://github.com/HaoranZhengRaul/AMOR) ・ リポジトリ内被引用：0  
-  一方、Mamba2やGated DeltaNetのような再帰型系列モデルは固定長状態を逐次更新できるため、復号中の状態メモリを抑えやすい。しかし固定長の状態へ過去を圧縮すると、離れた位置にある正確な文字列や事実を取り出す能力が不足する。
+  AMOR（適応的 Metacognitive Output Router）は、Mamba2またはGated DeltaNetの再帰型言語モデルに、トークンごとに必要性を判定して実行する注意ブロックを追加する方式である。ゲートの発火率は学習中に約40%となり、発火しない位置では注意の問い合わせと出力計算を省略する。
 
 - **2026-01 · [VTC-R1: Vision-Text Compression for Efficient Long-Context Reasoning](2026-2601.22069-vtc-r1-vision-text-compression-for-efficient-long-context-reasoning.md)**  
   実装：[✓](https://github.com/w-yibo/VTC-R1) ・ リポジトリ内被引用：0  
@@ -2760,7 +2760,7 @@
 
 - **2023-05 · [Tabi: An Efficient Multi-Level Inference System for Large Language Models](2023-1685e89adb79-tabi-an-efficient-multi-level-inference-system-for-large-language-models.md)**  
   実装：✓ ・ リポジトリ内被引用：6  
-  要求を小型モデルへ通し、校正済みの予測確信度に基づいて結果を返すか大型モデルへ転送するかを決める。転送時には小型モデルの注意重みを使って入力語を削り、両モデルの予測を重み付きで統合する。EuroSys 2023の2基V100によるバッチ1評価では、比較対象INFaaSより平均遅延を21～40%削減した。
+  Tabiは、文章分類や回帰の要求をすべて同じ大型モデルへ送る既存推論サービスの過剰計算を減らすため、要求ごとに必要なモデル容量を動的に決める方式である。
 
 - **2023-02 · [With Shared Microexponents, A Little Shifting Goes a Long Way](2023-2302.08007-with-shared-microexponents-a-little-shifting-goes-a-long-way.md)**  
   実装：✓ ・ リポジトリ内被引用：6  

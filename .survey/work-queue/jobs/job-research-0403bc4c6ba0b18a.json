@@ -35,10 +35,15 @@
   "selection_reason": "QSVD reduces VLM KV-cache size and compute using joint Q/K/V low-rank approximation, rank allocation, and low-bit weight/activation quantization; abstract states resource-constrained real-time deployment.",
   "semantic_scholar_id": "0266895a8db1a2b2973e97dffbb79fc3754f69aa",
   "source_url": "https://arxiv.org/abs/2510.16292",
-  "status": "ready",
+  "status": "superseded",
   "title": "QSVD: Efficient Low-rank Approximation for Unified Query-Key-Value Weight Compression in Low-Precision Vision-Language Models",
   "type": "research",
   "venue": "Neural Information Processing Systems",
   "workflow_version": 10,
-  "year": 2025
+  "year": 2025,
+  "superseded_at": "2026-10-17T14:03:51+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/16-weight-quantization-compression/2025-2510.16292-qsvd-efficient-low-rank-approximation-for-unified-query-key-value-weight.md",
+  "represented_canonical_id": "arXiv:2510.16292",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

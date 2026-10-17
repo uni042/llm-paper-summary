@@ -266,7 +266,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 
 - **2025-11 · [HipKittens: Fast and Furious AMD Kernels](2025-2511.08083-hipkittens-fast-and-furious-amd-kernels.md)**  
   実装：[✓](https://github.com/HazyResearch/HipKittens) ・ リポジトリ内被引用：0  
-  GPUで大規模言語モデルを実行する際、行列積や注意計算の効率はモデル構造だけでなく、GPUのレジスタ、共有メモリ、行列演算器、キャッシュへ命令をどの順番で流すかに強く依存する。NVIDIA向けのThunderKittensは、開発者が行列の小領域（タイル）単位で計算とデータ移動を指定できる仕組みを示した。
+  HipKittens（HK）は、AMDのCDNA3およびCDNA4世代のGPU上で、行列積と注意計算を効率よく記述するためのC++組込み型の領域特化言語である。従来の高性能AMDカーネルは、AITERなどの手書きアセンブリに強く依存していた。HKはタイルという小行列単位の操作を開発者へ公開し、性能に効く低水準制御を再利用可能な部品へまとめる。
 
 - **2025-11 · [FlashEVA: Accelerating LLM inference via Efficient Attention](2025-2511.00576-flasheva-accelerating-llm-inference-via-efficient-attention.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
