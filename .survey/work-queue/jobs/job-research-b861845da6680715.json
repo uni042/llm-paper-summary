@@ -35,10 +35,15 @@
   "selection_reason": "ProtoKVは、ストリーミング動画を扱うvision-language modelのKV memoryを一定容量に保ち、遅れて届く質問に対する推論を支援する方式である。近傍履歴は正確なKVのまま保持し、古い履歴はtoken instanceの保持・追い出しに依存せず、空間・時間情報を用いたprototype bankと残差統計へオンライン集約する。質問時には各prototypeを少数のpseudo-KV tokenとして合成し、mass-aware biasとともに通常のattentionへ渡す。固定memory budget下で、長い遅延のあるstreaming video understandingを評価し、特にfar historyに依存する領域でKV token retentionやsliding-window baselineより精度低下を抑える。これは既存H2Oが扱うKV cacheの選択・圧縮とは対象モデルと動画ストリーミングの遅延queryという設定を異にするが、LLM/VLM推論時のKV memory管理を直接研究し、同じKV cache最適化の系統に位置付くためacceptとする。根拠と限界: arXiv本文§3はnear window、continuity-awareなprototype assignment、残差統計、pseudo-token interfaceを説明し、§4.2–4.4は二つの7B vision-language backboneと四つのSVU benchmarkでmatched memory budgetの比較・ablationを報告する。最大遅延ではRVS-MovieでSWA比+20.4ポイント、token-retention比+12.5ポイントを報告する一方、精度は遅延増加に伴い全方式で下がる。評価上の制約として、benchmarkに各queryの実際のevidence timestampがないためdatasetのquery timestampを遅延のproxyに用い、query shiftで正解が変わらないretrospective queryだけを同一intersection subset上で評価している。加えてonline updateはQwen2.5-VL-7B/RTX 5090/RVS-Egoで33.8 ms/frame（per-frame processingの約30.8%）と計測され、query時のTTFTに直接加算されない説明だがstream ingestionのコストは残る。著者らは反復する視覚的に類似した事象の分離・計数ではprototype capacityが境界をぼかす弱点も報告する。従って効果の主張は報告されたSVU benchmark・backbone・budgetの範囲に限り、実環境の一般性能とは扱わない。",
   "semantic_scholar_id": "67c8156fb4b98f6c1669ff34224be1c9ecf8b9a2",
   "source_url": "https://arxiv.org/abs/2606.26762",
-  "status": "ready",
+  "status": "superseded",
   "title": "ProtoKV: Streaming Video Understanding under Delayed Query with Summary-State Memory",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-10-17T14:27:41+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2026-2606.26762-protokv-streaming-video-understanding-under-delayed-query-with-summary-s.md",
+  "represented_canonical_id": "arXiv:2606.26762",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
