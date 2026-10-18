@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-10-18 09:13:34 JST**
+> 自動生成: **2026-10-18 09:41:19 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -13,7 +13,7 @@
 |---|---:|
 | 収録候補論文数 | **1604** |
 | 未claim Research job | **1604** |
-| 直近24hのResearch処理完了 | **91** |
+| 直近24hのResearch処理完了 | **87** |
 | 最終Research処理完了 | **10-18 08:00:00 JST** |
 | 最終Discovery探索完了 | **10-18 06:45:00 JST** |
 | 整合性異常 | **0** |
@@ -51,9 +51,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 探索候補総数 | **142195** |
+| 探索候補総数 | **142276** |
 | 処理済み | **21243** |
-| 未処理Discovery候補 | **120952** |
+| 未処理Discovery候補 | **121033** |
 | 収録済み | **2504** |
 | Research / Audit候補へ昇格済み | **1374** |
 | 無関係として除外 | **12301** |
@@ -63,33 +63,33 @@
 
 | 判定段階 | 件数 |
 |---|---:|
-| 未処理候補（フィルタ前） | **120952** |
+| 未処理候補（フィルタ前） | **121033** |
 | 機械規則による暫定隔離 | **2120** |
-| 拡張機械規則による追加隔離 | **1343** |
-| 機械規則通過後 | **117489** |
-| 系統内前方引用スコアによる選抜保留 | **111614** |
-| 暫定隔離合計 | **115077** |
-| **読解可能候補（隔離後）** | **5875** |
-| 前方引用が同一系統で2本以上の候補 | **14962** |
-| 前方引用が同一系統で3本以上の候補 | **6607** |
+| 拡張機械規則による追加隔離 | **1345** |
+| 機械規則通過後 | **117568** |
+| 系統内前方引用スコアによる選抜保留 | **111689** |
+| 暫定隔離合計 | **115154** |
+| **読解可能候補（隔離後）** | **5879** |
+| 前方引用が同一系統で2本以上の候補 | **15007** |
+| 前方引用が同一系統で3本以上の候補 | **6611** |
 
 - 選抜順: **同一系統の前方引用本数（最多系統）→系統内引用合計→技術的関連語→従来の優先度**。
-- 可逆選抜: **quarantine** / 機械規則通過候補から **5.0%** / 目標 **5875件**（監査復活枠なし）。
+- 可逆選抜: **quarantine** / 機械規則通過候補から **5.0%** / 目標 **5879件**（監査復活枠なし）。
 
 ### 拡張規則の判定と適用状況
 
 - 拡張規則モード: **quarantine**
-- 拡張規則に一致した候補: **1343件**（基本規則との重複を除去）
-- 実際の追加隔離: **1343件**
-- 分野別内訳: **{'expanded_domain:clinical_applications': 100, 'expanded_domain:content_moderation': 24, 'expanded_domain:educational_legal_applications': 25, 'expanded_domain:environmental_applications': 8, 'expanded_domain:financial_applications': 52, 'expanded_domain:geoscience_applications': 57, 'expanded_domain:materials_applications': 30, 'expanded_domain:vision_applications': 1047}**
+- 拡張規則に一致した候補: **1345件**（基本規則との重複を除去）
+- 実際の追加隔離: **1345件**
+- 分野別内訳: **{'expanded_domain:clinical_applications': 100, 'expanded_domain:content_moderation': 24, 'expanded_domain:educational_legal_applications': 25, 'expanded_domain:environmental_applications': 8, 'expanded_domain:financial_applications': 52, 'expanded_domain:geoscience_applications': 57, 'expanded_domain:materials_applications': 30, 'expanded_domain:vision_applications': 1049}**
 - 拡張規則がshadowの場合は件数だけを測定し隔離には含めない。quarantineの場合は上記の隔離合計へ算入する。一次論文・候補台帳は削除せず、隔離候補の自動監査再投入は行わない。
 
 - モード: 規則 **quarantine** / 教師あり分類器は撤去済み。
 - 全数との差は暫定隔離数。元候補・引用プール・relevance判定台帳は削除せず、現在の候補identityから再計算する。
 
 - 消化率: **14.9%**
-- 現在の生在庫: 後方references **54523件** / 前方引用 **68808件**。後方候補を優先し、前方プールは後方プールに存在する同一identityを保持しません。
-- 前方・後方を統合してidentity重複を除いた未処理面は **122690件**。そこから既にResearch / Audit候補へ昇格したidentityを除いた値が上表の未処理Discovery候補です。
+- 現在の生在庫: 後方references **54523件** / 前方引用 **68883件**。後方候補を優先し、前方プールは後方プールに存在する同一identityを保持しません。
+- 前方・後方を統合してidentity重複を除いた未処理面は **122771件**。そこから既にResearch / Audit候補へ昇格したidentityを除いた値が上表の未処理Discovery候補です。
 - 処理済み = 収録済み + Research / Audit候補へ昇格済み + 無関係 + 微妙。前方引用・後方referencesの出自は区別せず、DOI/arXiv/title aliasを統合して数えます。
 - STATUS生成時にpaper実体、Research/Audit job、relevance台帳、現在の前方/後方候補からゼロベースで再計算します。
 
@@ -97,18 +97,18 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 収録論文seed台帳 | **2504** |
-| provider巡回可能 | **2499** |
+| 収録論文seed台帳 | **2507** |
+| provider巡回可能 | **2502** |
 | provider巡回不能 | **5** |
-| 1周以上完了 | **2489** |
+| 1周以上完了 | **2492** |
 | 巡回中 | **10** |
 | 未巡回 | **0** |
-| 今回run開始時due | **11** |
-| 前方引用から保持中の未処理候補 | **68808** |
+| 今回run開始時due | **13** |
+| 前方引用から保持中の未処理候補 | **68883** |
 | エラー状態保持seed | **9** |
 
 - 初回カバレッジ完了率: **99.6%**
-- state最終更新: **10-18 08:24:29 JST**
+- state最終更新: **10-18 09:28:59 JST**
 - 1周完了後も年齢別cadenceで先頭ページから再巡回し、後から増えた被引用論文を補足します。
 
 ## 日次メンテナンス状態
@@ -116,14 +116,14 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **10-17 09:18:14 JST（23時間55分前）** |
+| 最終maintenance完了 | **10-18 09:38:07 JST（3分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **issues_found** |
 | health | **issues_found** |
 | health errors / warnings | **1 / 0** |
 | metadata | **passed** |
 | metadata incomplete | **0** |
-| GC削除件数 | **40** |
+| GC削除件数 | **92** |
 | queue snapshot repaired | **true** |
 | index repairs | **0** |
 | quality regressions | **0** |
@@ -136,7 +136,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 指標 | 現在値 |
 |---|---:|
-| 直近6hのResearch完了 | **7** |
+| 直近6hのResearch完了 | **6** |
 | 直近6hのDiscovery run | **2** |
 | 直近6hのDiscovery本文確認・分類 | **2** |
 | 最終Research完了 | **10-18 08:00:00 JST** |
@@ -173,10 +173,10 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 区分 | 直近6h成功 | 最新run submission | 最新run検証済み成功 | 最新run個別result未照合 | 現在claim | 直近15分heartbeat | 最新run候補 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Research | **0** | **1** | **0** | **0** | **0** | **0** | — |
+| Research | **0** | **11** | **0** | **0** | **0** | **0** | — |
 | Audit | **0** | **0** | **0** | **0** | **0** | **0** | — |
 | Discovery | **0** | **8** | **0** | **8** | **0** | **0** | **25** |
-| 合計 | **0** | **9** | **0** | **8** | **0** | **0** | **25** |
+| 合計 | **0** | **19** | **0** | **8** | **0** | **0** | **25** |
 
 - 最新Discovery runの耐久探索round: **8件** （immutable submissionの `discovery_stats.run_key + round` の一意組だけを集計）
 
@@ -200,14 +200,32 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 #### Research（最新Research/Audit run）
 
-- 最新観測run: **2026-09-25 11:27 JST** / worker `scheduled-chat-30`
-- immutable submission: **1件** / 検証済み成功: **0件** / result照合済み非成功: **1件** / 個別result未照合: **0件**
-- **result照合済み非成功** `.survey/work-queue/submissions/research/attempt-preload-8fa24d135cc0417a00493d88.json` (job `job-research-14b72fcf4a8168cf`, failure_class `content_validation`)
-  - result: `.survey/work-queue/results/research/attempt-preload-8fa24d135cc0417a00493d88.json` (`ok=false`)
+- 最新観測run: **2026-09-25 11:00 JST** / worker `scheduled-chat-00`
+- immutable submission: **11件** / 検証済み成功: **0件** / result照合済み非成功: **11件** / 個別result未照合: **0件**
+- **result照合済み非成功** `.survey/work-queue/submissions/research/attempt-preload-13b2710cd58d1521bf8b8e29.json` (job `job-research-058d69df18b4e613`, failure_class `non_success`)
+  - result: `.survey/work-queue/results/research/attempt-preload-13b2710cd58d1521bf8b8e29.json` (`ok=true`)
+- **result照合済み非成功** `.survey/work-queue/submissions/research/attempt-preload-1d17d0afddf2c45d9cfc2443.json` (job `job-research-79a7b06357194cd1`, failure_class `non_success`)
+  - result: `.survey/work-queue/results/research/attempt-preload-1d17d0afddf2c45d9cfc2443.json` (`ok=true`)
+- **result照合済み非成功** `.survey/work-queue/submissions/research/attempt-preload-60392f6ae28160ede948e3b0.json` (job `job-research-6be480b73a6003b5`, failure_class `non_success`)
+  - result: `.survey/work-queue/results/research/attempt-preload-60392f6ae28160ede948e3b0.json` (`ok=true`)
+- **result照合済み非成功** `.survey/work-queue/submissions/research/attempt-preload-62fb2b4c96a75b8d5555856a.json` (job `job-research-0dc5dd60b4569a06`, failure_class `non_success`)
+  - result: `.survey/work-queue/results/research/attempt-preload-62fb2b4c96a75b8d5555856a.json` (`ok=true`)
+- **result照合済み非成功** `.survey/work-queue/submissions/research/attempt-preload-69ae8a3c79438bfdf2c77a86.json` (job `job-research-ac58200c186f3e5a`, failure_class `non_success`)
+  - result: `.survey/work-queue/results/research/attempt-preload-69ae8a3c79438bfdf2c77a86.json` (`ok=true`)
+- **result照合済み非成功** `.survey/work-queue/submissions/research/attempt-preload-a20114da784952a527840be6.json` (job `job-research-d13140588fd6d656`, failure_class `non_success`)
+  - result: `.survey/work-queue/results/research/attempt-preload-a20114da784952a527840be6.json` (`ok=true`)
+- **result照合済み非成功** `.survey/work-queue/submissions/research/attempt-preload-a97be831bb70984ef4b69fe8.json` (job `job-research-6884e3d688f660cb`, failure_class `non_success`)
+  - result: `.survey/work-queue/results/research/attempt-preload-a97be831bb70984ef4b69fe8.json` (`ok=true`)
+- **result照合済み非成功** `.survey/work-queue/submissions/research/attempt-preload-cec830eff891d08a2b883aa0.json` (job `job-research-d70a9b73142dca6a`, failure_class `non_success`)
+  - result: `.survey/work-queue/results/research/attempt-preload-cec830eff891d08a2b883aa0.json` (`ok=true`)
+- **result照合済み非成功** `.survey/work-queue/submissions/research/attempt-preload-d2a8c1e4593b098380bd5bc9.json` (job `job-research-c97d88c20de27e1f`, failure_class `non_success`)
+  - result: `.survey/work-queue/results/research/attempt-preload-d2a8c1e4593b098380bd5bc9.json` (`ok=true`)
+- **result照合済み非成功** `.survey/work-queue/submissions/research/attempt-preload-da156dd6a5b5908d24ee393b.json` (job `job-research-b374f59330145700`, failure_class `non_success`)
+  - result: `.survey/work-queue/results/research/attempt-preload-da156dd6a5b5908d24ee393b.json` (`ok=true`)
 
 #### Audit（最新Research/Audit run）
 
-- 最新観測run: **2026-09-25 11:27 JST** / worker `scheduled-chat-30`
+- 最新観測run: **2026-09-25 11:00 JST** / worker `scheduled-chat-00`
 - immutable submission: **0件** / 検証済み成功: **0件** / result照合済み非成功: **0件** / 個別result未照合: **0件**
 - このrunにAudit submissionはありません。
 
@@ -302,11 +320,10 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **255** |
-| └ Research | **100** |
+| 成功result未照合のimmutable submission | **239** |
+| └ Research | **94** |
 | └ Audit | **2** |
 | └ Discovery | **143** |
-| └ Other/Unknown | **10** |
 
 ### 厳格検証が未成立のcompleted job
 
