@@ -1,0 +1,26 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-45",
+  "run_key": "20261018-1045-scheduled-chat-45/r01/schema-repair/168",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2504.04308",
+      "identity_tokens": [
+        "arXiv:2504.04308"
+      ],
+      "title": "Gating is Weighting: Understanding Gated Linear Attention through In-context Learning",
+      "reason": "ゲート付き線形注意（Gated Linear Attention）の文脈内学習を重み付き前処理勾配降下（Weighted Preconditioned Gradient Descent）の理論として解析し、ゲーティングの機能と最適化地形を説明する。線形注意・Mamba・RWKVの機構理解には関係するが、要旨での主貢献は表現・最適化理論であり、LLM推論の実機速度、KV容量、学習処理量の直接改善を実証する研究としては確認できない。対象境界の理論背景として保留し、一次論文の実験節の十分な照合なしにResearch原稿を作成しない。",
+      "source_url": "https://arxiv.org/abs/2504.04308",
+      "body_check": "arxiv_author_abstract_verified_20261018; previous_worker_checked_abstract_and_contents",
+      "first_checked_at": "2026-10-18T10:45:00+09:00",
+      "last_checked_at": "2026-10-18T10:50:00+09:00",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance_schema_repair",
+      "original_worker_run_key": "20261018-0930-scheduled-chat-30/r01",
+      "worklist_rank": 168
+    }
+  ]
+}
