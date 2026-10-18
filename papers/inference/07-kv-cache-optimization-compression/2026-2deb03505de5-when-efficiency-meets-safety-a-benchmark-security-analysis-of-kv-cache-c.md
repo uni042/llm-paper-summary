@@ -30,6 +30,8 @@ code: null
 last_checked: '2026-10-19'
 worker_completed_at: '2026-10-19T01:04:48+09:00'
 worker_run_key: '20261019-0104-scheduled-chat-00/r01'
+last_audited: null
+audit_version: 0
 ---
 
 # KVキャッシュ圧縮は安全性を変える：方式別の検証とSafe-CAM
