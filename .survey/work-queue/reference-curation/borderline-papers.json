@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-18T01:47:12+00:00",
-  "record_count": 5235,
+  "updated_at": "2026-10-18T03:51:21+00:00",
+  "record_count": 5234,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -79916,22 +79916,6 @@
       ],
       "borderline_recheck_count": 0,
       "title": "Submodular Evaluation Subset Selection in Automatic Prompt Optimization"
-    },
-    "DOI:10.1007/s00371-025-04264-2": {
-      "classification": "borderline",
-      "canonical_id": "DOI:10.1007/s00371-025-04264-2",
-      "identity_tokens": [
-        "DOI:10.1007/s00371-025-04264-2",
-        "SemanticScholar:afb09c830f622cedb6871f0aef298869e88a1364"
-      ],
-      "reason": "The official Springer abstract describes MambaStereo for stereo-depth matching and says partial 3D convolutions reduce computation while maintaining vision accuracy. This is a concrete but task-specific stereo-vision optimization; a transferable inference-system contribution beyond the linked Mamba lineage is not established, so retain as borderline.",
-      "first_checked_at": "2026-10-14T14:34:50+00:00",
-      "last_checked_at": "2026-10-14T14:34:50+00:00",
-      "linked_from": [
-        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
-      ],
-      "borderline_recheck_count": 0,
-      "title": "MambaStereo: enhancing stereo matching accuracy in ill-posed regions via Mamba-based cost volume"
     },
     "arXiv:2512.15206": {
       "classification": "borderline",

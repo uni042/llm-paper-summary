@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-18T02:48:50+00:00",
-  "record_count": 12423,
+  "updated_at": "2026-10-18T03:51:21+00:00",
+  "record_count": 12425,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -5093,9 +5093,9 @@
       "identity_tokens": [
         "arXiv:2306.10209"
       ],
-      "reason": "学習工程そのものの高速化・省メモリ化が最終目的であり、現行サーベイではTraining側が凍結対象のため除外。 旧判定: 量子化・階層通信等でZeRO系大規模学習のcollective communication量を削減する直接的な分散学習システム研究。",
+      "reason": "一次要旨でのZeRO++の対象は巨大モデルの分散学習であり、ZeROの前向き・後向き重み収集と勾配集約の通信量をブロック量子化、データ再配置、量子化したall-to-all集約で削減する。評価する4倍の通信量削減と最大2.16倍の処理量改善は384 GPU規模の学習反復に対するもので、LLM推論時のトークン生成やサービングの高速化ではない。現在凍結中の学習専用高速化範囲に当たるため本ワーカーの推論収録対象外とする。",
       "first_checked_at": "2026-09-30T09:50:51+00:00",
-      "last_checked_at": "2026-09-30T09:50:51+00:00",
+      "last_checked_at": "2026-10-18T03:51:19+00:00",
       "linked_from": [
         "worker-worklist-30 discovery_review rank 238"
       ],
@@ -165087,9 +165087,9 @@
       "identity_tokens": [
         "arXiv:2605.05532"
       ],
-      "reason": "一次要旨は法律契約からの構造化情報抽出に特化した小型MoEモデルと汎用大型モデルのF1・抽出精度・利用料金を比較する応用評価である。78～97%の推論費用低下はモデル選択による業務費用差であり、KVキャッシュ管理、推論カーネル、分散サービング、オフロード等のシステム技術への直接的貢献は提示されていない。",
+      "reason": "一次要旨での研究対象は法律契約書からの構造化情報抽出であり、ドメイン特化小型モデルOlava Extractと五つの汎用大規模モデルの抽出精度・幻覚・推論利用料金を比較する。推論料金の低さはモデル選択の評価結果であり、KVキャッシュ、GPUカーネル、バッチ処理、分散サービング等の実行機構を新規提案していない。法律文書処理の応用性能比較を主題とするため、LLM推論基盤の技術サーベイ対象外と判断する。",
       "first_checked_at": "2026-10-12T19:45:24+00:00",
-      "last_checked_at": "2026-10-12T19:45:24+00:00",
+      "last_checked_at": "2026-10-18T03:51:21+00:00",
       "linked_from": [],
       "title": "A Few Good Clauses: Comparing LLMs vs Domain-Trained Small Language Models on Structured Contract Extraction"
     },
@@ -179152,6 +179152,30 @@
       "last_checked_at": "2026-10-18T02:48:50+00:00",
       "linked_from": [],
       "title": "Hankel Singular Value Regularization for Highly Compressible State Space Models"
+    },
+    "DOI:10.3390/jimaging12040142": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.3390/jimaging12040142",
+      "identity_tokens": [
+        "DOI:10.3390/jimaging12040142"
+      ],
+      "reason": "タイトルに示される研究対象は半導体ウェハの欠陥画像を識別する産業検査用FCS-VMambaである。画像分類の応用モデルであり、言語モデルの推論、KVキャッシュ、LLMサービング、MoE実行やLLM用GPUカーネルを研究するものとは読めない。出版社の一次本文・要旨は取得できていないため、タイトルで明白な応用領域の不一致だけを根拠に除外する。",
+      "first_checked_at": "2026-10-18T03:51:20+00:00",
+      "last_checked_at": "2026-10-18T03:51:20+00:00",
+      "linked_from": [],
+      "title": "Wafer Defect Recognition for Industrial Inspection: FCS-VMamba Model and Experimental Validation"
+    },
+    "DOI:10.1007/s00371-025-04264-2": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1007/s00371-025-04264-2",
+      "identity_tokens": [
+        "DOI:10.1007/s00371-025-04264-2"
+      ],
+      "reason": "著者の公開実装説明と要旨では、MambaStereoは両眼画像の視差推定で、遮蔽・低テクスチャ領域のコストボリューム相関をMambaと局所特徴強化で改善する方式である。対象モデルはステレオ視差推定網で、評価も画像からの奥行き推定に限定される。Mambaの利用や部分畳み込みによる軽量化はあっても、LLM推論のメモリ階層・トークン生成・サービング実行に直接の寄与を示していないため対象外とする。",
+      "first_checked_at": "2026-10-18T03:51:21+00:00",
+      "last_checked_at": "2026-10-18T03:51:21+00:00",
+      "linked_from": [],
+      "title": "MambaStereo: enhancing stereo matching accuracy in ill-posed regions via Mamba-based cost volume"
     }
   }
 }
