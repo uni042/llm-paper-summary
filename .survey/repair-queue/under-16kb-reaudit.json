@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-10-18T11:56:19.384599+00:00",
+  "generated_at": "2026-10-18T12:22:09.137930+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 8,
+  "count": 5,
   "worker_counts": {
-    "scheduled-chat-00": 3,
+    "scheduled-chat-00": 1,
     "scheduled-chat-30": 2,
-    "scheduled-chat-45": 3
+    "scheduled-chat-45": 2
   },
   "entries": [
     {
@@ -82,26 +82,6 @@
       "warnings": []
     },
     {
-      "path": "papers/inference/05-speculative-decoding-moe/2026-2605.15609-psd-pushing-the-pareto-frontier-of-diffusion-llms-via-parallel-speculati.md",
-      "canonical_id": "arXiv:2605.15609",
-      "title": "PSD: Pushing the Pareto Frontier of Diffusion LLMs via Parallel Speculative Decoding",
-      "file_bytes": 15966,
-      "source_sha256": "4e327f9e17e368b6939384b36b123a14a6b8918d0aac3262af53849f6f27c6ec",
-      "source_git_blob_sha": "7b6fae1c9621a1ae0fd568b53f9d8205c27f6c30",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.944293,
-      "quality_metrics": {
-        "body_chars": 3644,
-        "method_chars": 1253,
-        "evaluation_chars": 871,
-        "limitation_chars": 593
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
       "path": "papers/inference/99-other-inference-systems/2024-7a6bf47fa469-hybrid-slm-and-llm-for-edge-cloud-collaborative-inference.md",
       "canonical_id": "DOI:10.1145/3662006.3662067",
       "title": "Hybrid SLM and LLM for Edge-Cloud Collaborative Inference",
@@ -117,46 +97,6 @@
         "method_chars": 726,
         "evaluation_chars": 979,
         "limitation_chars": 527
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/13-sparse-attention/2023-2310.08152-context-compression-for-auto-regressive-transformers-with-sentinel-token.md",
-      "canonical_id": "arXiv:2310.08152",
-      "title": "Context Compression for Auto-regressive Transformers with Sentinel Tokens",
-      "file_bytes": 17412,
-      "source_sha256": "19cb04d438b0f63afe80bef2fb7db21cddde956b80b161484c99691883a2ee75",
-      "source_git_blob_sha": "1b7d335b4d4414907222be1d1f90db79533af015",
-      "assigned_worker": "scheduled-chat-45",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.956375,
-      "quality_metrics": {
-        "body_chars": 4294,
-        "method_chars": 1198,
-        "evaluation_chars": 882,
-        "limitation_chars": 762
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2026-2604.14889-memosight-unifying-context-compression-and-multi-token-prediction-for-re.md",
-      "canonical_id": "arXiv:2604.14889",
-      "title": "MemoSight: Unifying Context Compression and Multi Token Prediction for Reasoning Acceleration",
-      "file_bytes": 18112,
-      "source_sha256": "4743a4bc49507d83b903346022fe9ea2555638673de9fefb14bf01aab3ea049e",
-      "source_git_blob_sha": "c32ec8aa52a4ec5506dc7ba6691dcfe653022b52",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.961251,
-      "quality_metrics": {
-        "body_chars": 4219,
-        "method_chars": 1197,
-        "evaluation_chars": 1293,
-        "limitation_chars": 0
       },
       "mechanical_failures": [],
       "warnings": []
