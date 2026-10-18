@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-18T22:50:56+00:00",
+  "generated_at": "2026-10-18T22:59:04+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -5127,11 +5127,39 @@
       "worker_run_key": "20261019-0630-scheduled-chat-30/r01"
     },
     {
+      "canonical_id": "arXiv:2609.24298",
+      "title": "KV-COBRA: KV Cache Compression via Co-Optimized Bit-Rank Allocation",
+      "source_url": "https://arxiv.org/pdf/2609.24298",
+      "returned_at": "2026-10-18T22:59:03+00:00",
+      "return_count": 4,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 0 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5668,
+        "body_paragraphs": 36,
+        "method_chars": 2079,
+        "method_paragraphs": 15,
+        "evaluation_chars": 0,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "評価説明量 0 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-8cd1e2373a3c--libfile_e2afea3a96988191bd955c517b999db6--2026-2609.24298-kv-cobra-cooptimized-bit-rank-research-20261019-0700-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-8cd1e2373a3c--libfile_e2afea3a96988191bd955c517b999db6--2026-2609.24298-kv-cobra-cooptimized-bit-rank-research-20261019-0700-scheduled-chat-00-r0.json",
+      "worker_run_key": "20261019-0700-scheduled-chat-00/r01"
+    },
+    {
       "canonical_id": "arXiv:2407.12391",
       "title": "LLM Inference Serving: Survey of Recent Advances and Opportunities",
       "source_url": "https://arxiv.org/abs/2407.12391",
-      "returned_at": "2026-10-18T22:50:54+00:00",
-      "return_count": 1,
+      "returned_at": "2026-10-18T22:59:04+00:00",
+      "return_count": 2,
       "assigned_worker": "scheduled-chat-30",
       "reason": "blocked_quality",
       "failures": [
@@ -5152,37 +5180,9 @@
           "限界説明量 0 < 推奨 120"
         ]
       },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_8107a7047cd881918204b7ffe8531aa4--2024-2407.12391-llm-inference-serving-survey-research-20261019-0730-scheduled-chat-30-r01-v2.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_8107a7047cd881918204b7ffe8531aa4--2024-2407.12391-llm-inference-serving-survey-research-20261019-0730-scheduled-chat-30-r01-v2.json",
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-fbebc30b5259--libfile_8107a7047cd881918204b7ffe8531aa4--2024-2407.12391-llm-inference-serving-survey-research-20261019-0730-scheduled-chat-30-r01-v2.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-fbebc30b5259--libfile_8107a7047cd881918204b7ffe8531aa4--2024-2407.12391-llm-inference-serving-survey-research-20261019-0730-scheduled-chat-30-r01.json",
       "worker_run_key": "20261019-0730-scheduled-chat-30/r01"
-    },
-    {
-      "canonical_id": "arXiv:2609.24298",
-      "title": "KV-COBRA: KV Cache Compression via Co-Optimized Bit-Rank Allocation",
-      "source_url": "https://arxiv.org/pdf/2609.24298",
-      "returned_at": "2026-10-18T22:50:56+00:00",
-      "return_count": 3,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 0 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5668,
-        "body_paragraphs": 36,
-        "method_chars": 2079,
-        "method_paragraphs": 15,
-        "evaluation_chars": 0,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "評価説明量 0 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_e2afea3a96988191bd955c517b999db6--2026-2609.24298-kv-cobra-cooptimized-bit-rank-research-20261019-0700-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_e2afea3a96988191bd955c517b999db6--2026-2609.24298-kv-cobra-cooptimized-bit-rank-research-20261019-0700-scheduled-chat-00-r01.json",
-      "worker_run_key": "20261019-0700-scheduled-chat-00/r01"
     }
   ]
 }

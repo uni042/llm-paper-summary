@@ -26,6 +26,8 @@ last_checked: '2026-10-19'
 worker_completed_at: '2026-10-19T07:00:00+09:00'
 worker_run_key: '20261019-0700-scheduled-chat-00/r01'
 lineage: '07-kv-cache-optimization-compression'
+last_audited: null
+audit_version: 0
 ---
 
 # KV-COBRA：KVキャッシュのランクとビット幅の共同配分
