@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-18T18:54:30+00:00",
+  "generated_at": "2026-10-18T19:01:42+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -4989,39 +4989,11 @@
       "worker_run_key": "20261019-0201-scheduled-chat-00/r01"
     },
     {
-      "canonical_id": "arXiv:2609.32278",
-      "title": "RR-Evict: Fine-Grained Prefix Cache Eviction beyond LRU for Agentic LLM Serving",
-      "source_url": "https://arxiv.org/abs/2609.32278",
-      "returned_at": "2026-10-18T18:52:58+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 400 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 2662,
-        "body_paragraphs": 13,
-        "method_chars": 1085,
-        "method_paragraphs": 6,
-        "evaluation_chars": 400,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "評価説明量 400 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_684da4de91908191a1a23709da7977a2--2026-2609.32278-rr-evict-agent-prefix-cache-research-20261019-0304-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_684da4de91908191a1a23709da7977a2--2026-2609.32278-rr-evict-agent-prefix-cache-research-20261019-0304-scheduled-chat-00-r01.json",
-      "worker_run_key": "20261019-0304-scheduled-chat-00/r01"
-    },
-    {
       "canonical_id": "arXiv:2609.36222",
       "title": "BASE: Batch-Aware Selection of Experts Using Predicted Removal Error for Efficient MoE Decoding",
       "source_url": "https://arxiv.org/abs/2609.36222",
-      "returned_at": "2026-10-18T18:52:59+00:00",
-      "return_count": 1,
+      "returned_at": "2026-10-18T19:01:39+00:00",
+      "return_count": 2,
       "assigned_worker": "scheduled-chat-45",
       "reason": "blocked_quality",
       "failures": [
@@ -5040,16 +5012,16 @@
           "限界説明量 0 < 推奨 120"
         ]
       },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_f105bb85b13c8191bcbe4e4bd32bdb5f--2026-2609.36222-base-batch-expert-removal-cost-research-20261019-0304-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_f105bb85b13c8191bcbe4e4bd32bdb5f--2026-2609.36222-base-batch-expert-removal-cost-research-20261019-0304-scheduled-chat-00-r01.json",
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-0e6433180a32--libfile_f105bb85b13c8191bcbe4e4bd32bdb5f--2026-2609.36222-base-batch-expert-removal-cost-research-20261019-0304-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-0e6433180a32--libfile_f105bb85b13c8191bcbe4e4bd32bdb5f--2026-2609.36222-base-batch-expert-removal-cost-research-20261019-0304-scheduled-chat-00-r.json",
       "worker_run_key": "20261019-0304-scheduled-chat-00/r01"
     },
     {
       "canonical_id": "arXiv:2609.32712",
       "title": "MassAlloc Attention: Let Attention Allocate Its Own Compute",
       "source_url": "https://arxiv.org/abs/2609.32712",
-      "returned_at": "2026-10-18T18:53:01+00:00",
-      "return_count": 1,
+      "returned_at": "2026-10-18T19:01:40+00:00",
+      "return_count": 2,
       "assigned_worker": "scheduled-chat-00",
       "reason": "blocked_quality",
       "failures": [
@@ -5068,8 +5040,36 @@
           "限界説明量 0 < 推奨 120"
         ]
       },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_fc7a9e1147c08191becf1976abba4400--2026-2609.32712-massalloc-attention-postscore-compute-research-20261019-0304-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_fc7a9e1147c08191becf1976abba4400--2026-2609.32712-massalloc-attention-postscore-compute-research-20261019-0304-scheduled-chat-00-r01.json",
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-d877441197fc--libfile_fc7a9e1147c08191becf1976abba4400--2026-2609.32712-massalloc-attention-postscore-compute-research-20261019-0304-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-d877441197fc--libfile_fc7a9e1147c08191becf1976abba4400--2026-2609.32712-massalloc-attention-postscore-compute-research-20261019-0304-scheduled-ch.json",
+      "worker_run_key": "20261019-0304-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2609.32278",
+      "title": "RR-Evict: Fine-Grained Prefix Cache Eviction beyond LRU for Agentic LLM Serving",
+      "source_url": "https://arxiv.org/abs/2609.32278",
+      "returned_at": "2026-10-18T19:01:42+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 400 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 2662,
+        "body_paragraphs": 13,
+        "method_chars": 1085,
+        "method_paragraphs": 6,
+        "evaluation_chars": 400,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "評価説明量 400 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-dfa0a7f6ce86--libfile_684da4de91908191a1a23709da7977a2--2026-2609.32278-rr-evict-agent-prefix-cache-research-20261019-0304-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-dfa0a7f6ce86--libfile_684da4de91908191a1a23709da7977a2--2026-2609.32278-rr-evict-agent-prefix-cache-research-20261019-0304-scheduled-chat-00-r01.json",
       "worker_run_key": "20261019-0304-scheduled-chat-00/r01"
     }
   ]

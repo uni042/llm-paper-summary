@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "075a3302020dd93a2905e4e2277dc795795349accc2e0cf7fe6afbb8b7a62168",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/retry-research-d877441197fc--libfile_fc7a9e1147c08191becf1976abba4400--2026-2609.32712-massalloc-attention-postscore-compute-research-20261019-0304-scheduled-chat-00-r01.md",
+  "canonical_id": "arXiv:2609.32712",
+  "worker_completed_at": "2026-10-19T03:04:00+09:00",
+  "worker_run_key": "20261019-0304-scheduled-chat-00/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 2846,
+    "body_paragraphs": 15,
+    "method_chars": 1293,
+    "method_paragraphs": 8,
+    "evaluation_chars": 0,
+    "limitation_chars": 0,
+    "insufficiency_flags": [
+      "評価説明量 0 < 500",
+      "限界説明量 0 < 推奨 120"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 評価説明量 0 < 500"
+  ],
+  "processed_at": "2026-10-18T19:01:40+00:00"
+}
