@@ -32,9 +32,14 @@
   "selection_reason": "Dynamo recovery preserves GPU-resident model state across engine failures through decoupled device-memory ownership, directly relevant to inference runtime reliability and persistent accelerator memory.",
   "semantic_scholar_id": "1000762804db03f72081f51b269a675a3dc6d59a",
   "source_url": "https://www.semanticscholar.org/paper/1000762804db03f72081f51b269a675a3dc6d59a",
-  "status": "ready",
+  "status": "superseded",
   "title": "Fast Recovery for LLM Serving via Decoupled Device Memory Lifetime in Dynamo",
   "type": "research",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-10-18T14:50:46+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.25451-fast-recovery-for-llm-serving-via-decoupled-device-memory-lifetime-in-dy.md",
+  "represented_canonical_id": "arXiv:2609.25451",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

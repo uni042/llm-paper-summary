@@ -3,7 +3,7 @@
 複数requestを複数GPU / nodeで処理するLLM servingについて、request順、batch、prefill / decodeのGPU配分、KV再利用・転送、request移動などを調整し、latencyとresource効率を改善する研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（374本）
+## 自動生成の論文一覧（375本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -487,6 +487,10 @@
 - **2026-09 · [HeatCache: Thermal-aware Energy-efficient LLM Inference Scheduling for Chassis-level Liquid Cooling in Sustainable Edge Server Rooms](2026-2609.12449-heatcache-thermal-aware-energy-efficient-llm-inference-scheduling.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   HeatCacheはAIO液冷ループの残存熱容量を熱予算として推定し、ジョブ別の発熱予測とTTFT/TPOT制約を使ってvLLMのバッチ・GPU割当・周波数を再順位付けする。48℃級の実機環境で計算エネルギーを最大18.0%削減し、熱スロットリング曝露を大幅に抑える。
+
+- **2026-09 · [Fast Recovery for LLM Serving via Decoupled Device Memory Lifetime in Dynamo](2026-2609.25451-fast-recovery-for-llm-serving-via-decoupled-device-memory-lifetime-in-dy.md)**  
+  実装：[✓](https://github.com/ai-dynamo/dynamo) ・ リポジトリ内被引用：0  
+  本研究の問題意識は、推論サービスで障害が発生した際に最も高価なのは、失敗した個別要求の計算途中状態を失うことよりも、新しい要求を受け付けられる準備完了済みレプリカの能力が失われることだという点にある。著者はGPU上に残る重みをプロセスと独立に保持し、初期化済みの予備エンジンを切り替える設計をNVIDIA Dynamoに実装する。
 
 - **2026-09 · [ExaServe: Large-Scale LLM Serving on Exascale HPC Systems](2026-2609.10812-exaserve-large-scale-llm-serving-exascale-hpc-systems.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
