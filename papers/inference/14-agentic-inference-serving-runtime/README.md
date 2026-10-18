@@ -59,6 +59,10 @@
   実装：✓ ・ リポジトリ内被引用：4  
   1350万GitHub Copilotセッションを解析し、直列的なLLM↔ツール連鎖、入力偏重、KVキャッシュの境界崩壊、長いターン間遊休を定量化してエージェント向け資源管理の設計根拠を示す。
 
+- **2026-05 · [Agentic AI Workload Characteristics](2026-2605.26297-agentic-ai-workload-characteristics.md)**  
+  実装：✓ ・ リポジトリ内被引用：4  
+  ReAct型エージェントを追跡し、高い文脈再利用により実行がデコード支配となる一方、長寿命KV状態・再入場・ツール失敗が主要なシステム負荷になることを実測した研究。
+
 - **2026-04 · [KAIROS: Stateful, Context-Aware Power-Efficient Agentic Inference Serving](2026-2604.16682-kairos-stateful-context-aware-power-efficient-agentic-inference-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：4  
   エージェントの文脈成長を見てGPU周波数・同時実行数・配置を共同制御し、スラッシングを避けながら単一インスタンス平均27%、複数インスタンス46.3%の電力を削減する。
@@ -66,10 +70,6 @@
 - **2026-05 · [Irminsul: MLA-Native Position-Independent Caching for Agentic LLM Serving](2026-2605.05696-irminsul-mla-native-position-independent-caching-for-agentic-llm-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
   Irminsulは、複数ターンのエージェント型LLMサービングで、トークン内容は同じなのにプロンプト内の位置が変わるためKVキャッシュを再利用できない問題を扱う。システム変数、検索文書、ツール出力、会話の圧縮結果が途中に挿入されると、残りの大部分が以前と同じ内容でも、最初の不一致以降は再計算になる。
-
-- **2026-05 · [Agentic AI Workload Characteristics](2026-2605.26297-agentic-ai-workload-characteristics.md)**  
-  実装：✓ ・ リポジトリ内被引用：3  
-  ReAct型エージェントを追跡し、高い文脈再利用により実行がデコード支配となる一方、長寿命KV状態・再入場・ツール失敗が主要なシステム負荷になることを実測した研究。
 
 - **2026-01 · [Nalar: Workflow-Aware Management of Agentic Applications](2026-2601.05109-nalar-workflow-aware-management-of-agentic-applications.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
@@ -228,7 +228,7 @@
   Mem0は、長期にわたり対話を続ける大規模言語モデル（LLM）エージェントに対し、毎回の質問で過去の全会話を読み直す代わりに、今後も必要になる事実だけを抽出・統合・検索する外部記憶基盤を提案する。
 
 - **2025-02 · [A-Mem: Agentic Memory for LLM Agents](2025-2502.12110-a-mem-agentic-memory-for-llm-agents.md)**  
-  実装：[✓](https://github.com/WujiangXu/A-mem-sys) ・ リポジトリ内被引用：24  
+  実装：[✓](https://github.com/WujiangXu/A-mem-sys) ・ リポジトリ内被引用：25  
   従来の記憶システムでは、いつ保存し、どの形式で整理し、どの条件で取り出すかを開発者が固定する場合が多い。NeurIPS 2025正式掲載論文では、長期会話の質問応答データで六つの基盤モデルを評価し、特に時間推論や複数会話をまたぐ質問で改善を示した。
 
 - **2025-06 · [The Cost of Dynamic Reasoning: Demystifying AI Agents and Test-Time Scaling from an AI Infrastructure Perspective](2025-2506.04301-cost-dynamic-reasoning.md)**  
