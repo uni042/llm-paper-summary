@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-26337c6311a113e8-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2609.19702",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2609.19702",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2609.19702",
+      "arXiv:2609.19702"
+    ],
+    "reason": "一次要旨は自己回帰画像生成での視覚トークンの対角方向の注意疎性を観測し、直近窓内のKV参照を対角パターンに沿って省略するGPU実装を提案する。FlexGen、FlashAttention-2、独自カーネル上で処理量最大3.1倍、遅延1.19倍改善を報告し、推論基盤技術として関連する。一方、主な対象・品質指標は画像生成であり、テキストLLMの注意パターンへの直接適用は示さないため境界的とする。",
+    "first_checked_at": "2026-10-18T20:47:09+00:00",
+    "last_checked_at": "2026-10-18T20:47:09+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Understanding and Exploiting Diagonal Attention Sparsity in Autoregressive Image Generation"
+  },
+  "processed_at": "2026-10-18T20:47:09+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-26337c6311a1",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
