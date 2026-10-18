@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "b3afb6645a482635b428fbe0bae66cd710ce44b6cd66258f4052984aef81b1a0",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/retry-research-2481d2745e6f--libfile_43e2bf0889008191a77ff96cbfd83a0d--2025-2510.26527-polybasic-speculative-decoding-theoretical-research-20261018-1130-scheduled-chat-30-r01.md",
+  "canonical_id": "arXiv:2510.26527",
+  "worker_completed_at": "2026-10-18T11:50:00+09:00",
+  "worker_run_key": "20261018-1130-scheduled-chat-30/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 5102,
+    "body_paragraphs": 32,
+    "method_chars": 0,
+    "method_paragraphs": 0,
+    "evaluation_chars": 0,
+    "limitation_chars": 0,
+    "insufficiency_flags": [
+      "手法説明量 0 < 700",
+      "評価説明量 0 < 500",
+      "限界説明量 0 < 推奨 120"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 手法説明量 0 < 700",
+    "説明不足トリガー: 評価説明量 0 < 500"
+  ],
+  "processed_at": "2026-10-18T03:00:37+00:00"
+}
