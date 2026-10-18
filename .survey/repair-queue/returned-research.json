@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-18T06:09:18+00:00",
+  "generated_at": "2026-10-18T06:51:44+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -2237,33 +2237,6 @@
       "worker_run_key": "20261016-0030-scheduled-chat-30/r01"
     },
     {
-      "canonical_id": "arXiv:2502.11018",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-16T14:46:23+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 0 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 6190,
-        "body_paragraphs": 37,
-        "method_chars": 1476,
-        "method_paragraphs": 9,
-        "evaluation_chars": 0,
-        "limitation_chars": 773,
-        "insufficiency_flags": [
-          "評価説明量 0 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-0f1fe105033b--libfile_b9795715a81c8191b5b41f96a5e26a8f--2025-2502.11018-griffin-token-alignment-speculative-decoding-research-20261016-0330-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-0f1fe105033b--libfile_b9795715a81c8191b5b41f96a5e26a8f--2025-2502.11018-griffin-token-alignment-speculative-decoding-research-20261016-0330-sched.json",
-      "worker_run_key": "20261016-0330-scheduled-chat-30/r01"
-    },
-    {
       "canonical_id": "arXiv:2503.00979",
       "title": null,
       "source_url": null,
@@ -2534,33 +2507,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-80d07e638e0b--libfile_22eebea2972481919884d9a25ea43b52--2025-2511.07776-step-streaming-tensor-programs-research-20261016-0030-scheduled-chat-30-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-80d07e638e0b--libfile_22eebea2972481919884d9a25ea43b52--2025-2511.07776-step-streaming-tensor-programs-research-20261016-0030-scheduled-chat-30-r.json",
       "worker_run_key": "20261016-0030-scheduled-chat-30/r01"
-    },
-    {
-      "canonical_id": "arXiv:2401.08383",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-16T15:55:22+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 7294,
-        "body_paragraphs": 43,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 2109,
-        "limitation_chars": 789,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-94f391931431--libfile_e6dada5a19908191896597a719063534--2024-2401.08383-exflow-interlayer-expert-affinity-research-20261016-0630-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-94f391931431--libfile_e6dada5a19908191896597a719063534--2024-2401.08383-exflow-interlayer-expert-affinity-research-20261016-0630-scheduled-chat-3.json",
-      "worker_run_key": "20261016-0630-scheduled-chat-30/r01"
     },
     {
       "canonical_id": "arXiv:2406.02500",
@@ -4167,8 +4113,8 @@
     },
     {
       "canonical_id": "arXiv:2506.04203",
-      "title": "Cascadia: An Efficient Cascade Serving System for Large Language Models",
-      "source_url": "https://arxiv.org/pdf/2506.04203",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-18T06:09:17+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-45",
@@ -4195,8 +4141,8 @@
     },
     {
       "canonical_id": "DOI:10.1109/SIEDS69358.2026.11540265",
-      "title": "Parallelism Strategies and Concurrency Effects for Mixture-of-Experts Inference on GPU Systems",
-      "source_url": "https://s3.amazonaws.com/edas.manuscripts/final/1571253729.pdf",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-18T06:09:18+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-00",
@@ -4219,6 +4165,60 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-f0e93b6a927a--libfile_f385dd79293c819192d7e86828e4c4eb--2026-doi-10.1109.SIEDS69358.2026.11540265-moe-parallelism-concurrency-research-20261018-1345-scheduled-chat-45-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-f0e93b6a927a--libfile_f385dd79293c819192d7e86828e4c4eb--2026-doi-10.1109.SIEDS69358.2026.11540265-moe-parallelism-concurrency-research-20261018-1.json",
       "worker_run_key": "20261018-1345-scheduled-chat-45/r01"
+    },
+    {
+      "canonical_id": "arXiv:2401.08383",
+      "title": "Exploiting Inter-Layer Expert Affinity for Accelerating Mixture-of-Experts Model Inference",
+      "source_url": "https://arxiv.org/abs/2401.08383",
+      "returned_at": "2026-10-18T06:49:21+00:00",
+      "return_count": 3,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 261 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5249,
+        "body_paragraphs": 29,
+        "method_chars": 2078,
+        "method_paragraphs": 12,
+        "evaluation_chars": 261,
+        "limitation_chars": 610,
+        "insufficiency_flags": [
+          "評価説明量 261 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_221578263ae48191b9f5ffe45d9f56ff--2024-2401.08383-exflow-inter-layer-expert-affinity-research-20261018-1500-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_221578263ae48191b9f5ffe45d9f56ff--2024-2401.08383-exflow-inter-layer-expert-affinity-research-20261018-1500-scheduled-chat-00-r01.json",
+      "worker_run_key": "20261018-1500-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2412.20185",
+      "title": "DecDEC: A Systems Approach to Advancing Low-Bit LLM Quantization",
+      "source_url": "https://arxiv.org/abs/2412.20185",
+      "returned_at": "2026-10-18T06:50:16+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 416 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5754,
+        "body_paragraphs": 34,
+        "method_chars": 1801,
+        "method_paragraphs": 11,
+        "evaluation_chars": 416,
+        "limitation_chars": 492,
+        "insufficiency_flags": [
+          "評価説明量 416 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_78eab883a8188191bfc51b87dd64a182--2024-2412.20185-decdec-dynamic-error-compensation-research-20261018-1500-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_78eab883a8188191bfc51b87dd64a182--2024-2412.20185-decdec-dynamic-error-compensation-research-20261018-1500-scheduled-chat-00-r01.json",
+      "worker_run_key": "20261018-1500-scheduled-chat-00/r01"
     }
   ]
 }
