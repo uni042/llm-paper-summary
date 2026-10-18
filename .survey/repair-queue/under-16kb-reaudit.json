@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-10-17T18:49:53.873664+00:00",
+  "generated_at": "2026-10-18T01:00:39.102361+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 8,
+  "count": 9,
   "worker_counts": {
     "scheduled-chat-00": 3,
-    "scheduled-chat-30": 2,
+    "scheduled-chat-30": 3,
     "scheduled-chat-45": 3
   },
   "entries": [
@@ -77,6 +77,26 @@
         "method_chars": 1072,
         "evaluation_chars": 505,
         "limitation_chars": 0
+      },
+      "mechanical_failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/99-other-inference-systems/2026-2601.00919-attention-needs-to-focus-a-unified-perspective-on-attention-allocation.md",
+      "canonical_id": "arXiv:2601.00919",
+      "title": "Attention Needs to Focus: A Unified Perspective on Attention Allocation",
+      "file_bytes": 15475,
+      "source_sha256": "8c70e6ae177705ed976fbf31aa516685e4620e93e0979e8eb524002cba89f19c",
+      "source_git_blob_sha": "b3637f4c6ac9a8abc070b42be52cc5a0a9f55e6e",
+      "assigned_worker": "scheduled-chat-30",
+      "semantic_status": "pending",
+      "mechanical_status": "PASS",
+      "japanese_ratio": 0.903435,
+      "quality_metrics": {
+        "body_chars": 3816,
+        "method_chars": 1370,
+        "evaluation_chars": 504,
+        "limitation_chars": 354
       },
       "mechanical_failures": [],
       "warnings": []
