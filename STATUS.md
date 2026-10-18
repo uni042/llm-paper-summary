@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-10-18 21:41:42 JST**
+> 自動生成: **2026-10-18 21:50:42 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -13,8 +13,8 @@
 |---|---:|
 | 収録候補論文数 | **1547** |
 | 未claim Research job | **1547** |
-| 直近24hのResearch処理完了 | **97** |
-| 最終Research処理完了 | **10-18 21:11:33 JST** |
+| 直近24hのResearch処理完了 | **98** |
+| 最終Research処理完了 | **10-18 21:47:00 JST** |
 | 最終Discovery探索完了 | **10-18 20:00:00 JST** |
 | 整合性異常 | **0** |
 
@@ -51,9 +51,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 探索候補総数 | **142975** |
+| 探索候補総数 | **142957** |
 | 処理済み | **21245** |
-| 未処理Discovery候補 | **121730** |
+| 未処理Discovery候補 | **121712** |
 | 収録済み | **2561** |
 | Research / Audit候補へ昇格済み | **1295** |
 | 無関係として除外 | **12304** |
@@ -63,33 +63,33 @@
 
 | 判定段階 | 件数 |
 |---|---:|
-| 未処理候補（フィルタ前） | **121730** |
+| 未処理候補（フィルタ前） | **121712** |
 | 機械規則による暫定隔離 | **2124** |
-| 拡張機械規則による追加隔離 | **1349** |
-| 機械規則通過後 | **118257** |
-| 系統内前方引用スコアによる選抜保留 | **112344** |
-| 暫定隔離合計 | **115817** |
-| **読解可能候補（隔離後）** | **5913** |
+| 拡張機械規則による追加隔離 | **1348** |
+| 機械規則通過後 | **118240** |
+| 系統内前方引用スコアによる選抜保留 | **112328** |
+| 暫定隔離合計 | **115800** |
+| **読解可能候補（隔離後）** | **5912** |
 | 前方引用が同一系統で2本以上の候補 | **15142** |
 | 前方引用が同一系統で3本以上の候補 | **6627** |
 
 - 選抜順: **同一系統の前方引用本数（最多系統）→系統内引用合計→技術的関連語→従来の優先度**。
-- 可逆選抜: **quarantine** / 機械規則通過候補から **5.0%** / 目標 **5913件**（監査復活枠なし）。
+- 可逆選抜: **quarantine** / 機械規則通過候補から **5.0%** / 目標 **5912件**（監査復活枠なし）。
 
 ### 拡張規則の判定と適用状況
 
 - 拡張規則モード: **quarantine**
-- 拡張規則に一致した候補: **1349件**（基本規則との重複を除去）
-- 実際の追加隔離: **1349件**
-- 分野別内訳: **{'expanded_domain:clinical_applications': 101, 'expanded_domain:content_moderation': 24, 'expanded_domain:educational_legal_applications': 25, 'expanded_domain:environmental_applications': 9, 'expanded_domain:financial_applications': 53, 'expanded_domain:geoscience_applications': 57, 'expanded_domain:materials_applications': 30, 'expanded_domain:vision_applications': 1050}**
+- 拡張規則に一致した候補: **1348件**（基本規則との重複を除去）
+- 実際の追加隔離: **1348件**
+- 分野別内訳: **{'expanded_domain:clinical_applications': 101, 'expanded_domain:content_moderation': 24, 'expanded_domain:educational_legal_applications': 25, 'expanded_domain:environmental_applications': 9, 'expanded_domain:financial_applications': 53, 'expanded_domain:geoscience_applications': 57, 'expanded_domain:materials_applications': 30, 'expanded_domain:vision_applications': 1049}**
 - 拡張規則がshadowの場合は件数だけを測定し隔離には含めない。quarantineの場合は上記の隔離合計へ算入する。一次論文・候補台帳は削除せず、隔離候補の自動監査再投入は行わない。
 
 - モード: 規則 **quarantine** / 教師あり分類器は撤去済み。
 - 全数との差は暫定隔離数。元候補・引用プール・relevance判定台帳は削除せず、現在の候補identityから再計算する。
 
 - 消化率: **14.9%**
-- 現在の生在庫: 後方references **54729件** / 前方引用 **69312件**。後方候補を優先し、前方プールは後方プールに存在する同一identityを保持しません。
-- 前方・後方を統合してidentity重複を除いた未処理面は **123396件**。そこから既にResearch / Audit候補へ昇格したidentityを除いた値が上表の未処理Discovery候補です。
+- 現在の生在庫: 後方references **54709件** / 前方引用 **69312件**。後方候補を優先し、前方プールは後方プールに存在する同一identityを保持しません。
+- 前方・後方を統合してidentity重複を除いた未処理面は **123377件**。そこから既にResearch / Audit候補へ昇格したidentityを除いた値が上表の未処理Discovery候補です。
 - 処理済み = 収録済み + Research / Audit候補へ昇格済み + 無関係 + 微妙。前方引用・後方referencesの出自は区別せず、DOI/arXiv/title aliasを統合して数えます。
 - STATUS生成時にpaper実体、Research/Audit job、relevance台帳、現在の前方/後方候補からゼロベースで再計算します。
 
@@ -116,7 +116,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **10-18 09:38:07 JST（12時間3分前）** |
+| 最終maintenance完了 | **10-18 09:38:07 JST（12時間12分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **issues_found** |
 | health | **issues_found** |
@@ -136,16 +136,16 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 指標 | 現在値 |
 |---|---:|
-| 直近6hのResearch完了 | **26** |
+| 直近6hのResearch完了 | **27** |
 | 直近6hのDiscovery run | **12** |
 | 直近6hのDiscovery本文確認・分類 | **17** |
-| 最終Research完了 | **10-18 21:11:33 JST** |
+| 最終Research完了 | **10-18 21:47:00 JST** |
 | 最終Discovery完了 | **10-18 20:00:00 JST** |
 
 ### 最新Library-first run
 
-- Research: **10-18 21:11:33 JST** / worker — / run 20261018-2100-scheduled-chat-00/r02 / 成果 **1件**
-  - evidence: .survey/import-inbox/results/research/libfile_72b29f26dca48191bacc4624b109ad7b--2025-2505.06481-multi-moe-partial-reconfiguration-research-20261018-2100-scheduled-chat-00-r02.json
+- Research: **10-18 21:47:00 JST** / worker — / run 20261018-2145-scheduled-chat-45/r01 / 成果 **1件**
+  - evidence: .survey/import-inbox/results/research/libfile_be9b068333bc8191a586336ecdf6bfa5--2023-doi-10.1145.3552326.3587438-tabi-under16kb-reaudit-20261018-2145-scheduled-chat-45-r01.json
 - Discovery: **10-18 20:00:00 JST** / worker scheduled-chat-00 / run 20261018-2000-scheduled-chat-00/r01/research-relevance/122
   - 本文確認・分類 **1件** / accept **0件** / unrelated+borderline **1件**
   - evidence: .survey/import-inbox/results/discovery/libfile_a340d32be4e0819188ca7ba888e41ed9--discovery-20261018-2000-scheduled-chat-00-research-relevance-r01-122.json
