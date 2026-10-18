@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-10-18 11:53:46 JST**
+> 自動生成: **2026-10-18 12:00:41 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -14,7 +14,7 @@
 | 収録候補論文数 | **1598** |
 | 未claim Research job | **1598** |
 | 直近24hのResearch処理完了 | **89** |
-| 最終Research処理完了 | **10-18 11:20:00 JST** |
+| 最終Research処理完了 | **10-18 11:58:00 JST** |
 | 最終Discovery探索完了 | **10-18 10:45:00 JST** |
 | 整合性異常 | **0** |
 
@@ -116,7 +116,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **10-18 09:38:07 JST（2時間15分前）** |
+| 最終maintenance完了 | **10-18 09:38:07 JST（2時間22分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **issues_found** |
 | health | **issues_found** |
@@ -136,16 +136,16 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 指標 | 現在値 |
 |---|---:|
-| 直近6hのResearch完了 | **9** |
+| 直近6hのResearch完了 | **10** |
 | 直近6hのDiscovery run | **5** |
 | 直近6hのDiscovery本文確認・分類 | **5** |
-| 最終Research完了 | **10-18 11:20:00 JST** |
+| 最終Research完了 | **10-18 11:58:00 JST** |
 | 最終Discovery完了 | **10-18 10:45:00 JST** |
 
 ### 最新Library-first run
 
-- Research: **10-18 11:20:00 JST** / worker — / run 20261018-1100-scheduled-chat-00/r01 / 成果 **1件**
-  - evidence: .survey/import-inbox/results/research/libfile_e8244a64da0881918262f883c940cb4f--2026-2606.07571-bicache-diffusion-shared-prefix-kv-reuse-research-20261018-1100-scheduled-chat-00-r01.json
+- Research: **10-18 11:58:00 JST** / worker — / run 20261018-1130-scheduled-chat-30/r01 / 成果 **1件**
+  - evidence: .survey/import-inbox/results/research/libfile_57b728710dfc8191b9900bf6009ce3f3--2025-2504.05598-del-dynamic-exit-layer-self-speculative-research-20261018-1130-scheduled-chat-30-r01.json
 - Discovery: **10-18 10:45:00 JST** / worker scheduled-chat-45 / run 20261018-1045-scheduled-chat-45/r01/schema-repair/154
   - 本文確認・分類 **1件** / accept **0件** / unrelated+borderline **1件**
   - evidence: .survey/import-inbox/results/discovery/libfile_b975fd03b5c881919201067af8d73ce4--discovery-20261018-1045-scheduled-chat-45-schema-repair-r01-154.json
