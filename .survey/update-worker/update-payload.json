@@ -1,30 +1,30 @@
 {
   "schema_version": 1,
-  "attempt_id": "library-import-20261014-0830-chatgpt-20261014055332",
+  "attempt_id": "library-import-20261015-0830-chatgpt-20261019002000",
   "kind": "framework_llm_update",
   "artifacts": [
     {
-      "path": "framework-updates/inference-engines/llama-cpp/README.md",
-      "expected_blob_sha": "cbbebc7b111d134a660e981064d7036a1d7af78f",
+      "path": "framework-updates/inference-engines/ollama/README.md",
+      "expected_blob_sha": "08afccc7b5c5f86979e4c25a63524ab1de2e7631",
       "edits": [
         {
           "op": "insert_after_once",
           "anchor": "## 主要更新\n\n",
-          "text": "### 2026-10-14 — llama.cpp b11588〜b11602：画像MTP・Vulkanホストメモリ・埋め込み・アリーナ修正\n- **b11588**: Qwen3.8-Flash-Nextで画像埋め込みと複数トークン予測（MTP）を組み合わせる経路に対応。視覚入力と投機的生成の互換性改善。[公式版](https://github.com/ggml-org/llama.cpp/releases/tag/b11588)／[PR #30397](https://github.com/ggml-org/llama.cpp/pull/30397)。\n- **b11594**: Vulkanで複数デバイスからGPU可視ホストメモリへのアクセスを改善。Windowsを含むVulkan経路の変更であり、**CUDA固有の改善ではない**。[公式版](https://github.com/ggml-org/llama.cpp/releases/tag/b11594)／[PR #29741](https://github.com/ggml-org/llama.cpp/pull/29741)。\n- **b11597**: プーリング埋め込みで語彙logits算出に必要な不要の言語モデル出力ヘッド（LM head）計算とホストバッファを省略。**一般の生成復号の一律高速化とは異なる**。[公式版](https://github.com/ggml-org/llama.cpp/releases/tag/b11597)／[PR #30445](https://github.com/ggml-org/llama.cpp/pull/30445)。\n- **b11602**: メモリアリーナ再確保後のサブグラフ再生成で整合性を修正。定量的な性能改善は未報告。[公式版](https://github.com/ggml-org/llama.cpp/releases/tag/b11602)／[PR #30453](https://github.com/ggml-org/llama.cpp/pull/30453)。\n\n"
+          "text": "### 2026-10-12 — Ollama v0.40.4（正式版）\n- `v0.40.4`は正式版（Latest）として公開された。主な変更は判定モデルの直接利用、既検証manifestと読込済みmodelの再利用、`llama-server`経由のマルチモーダル埋め込み、短いcontext長での埋め込みmodel読込修正、Apple Silicon MLXの投機的復号後の状態管理修正、内蔵llama.cppの判定model対応。\n- 前項の`v0.40.4-rc2`は公開候補版、ここでは正式版として区別する。model準備やmanifest再利用はrequest開始費用の改善であり、全GPUのdecode速度向上を意味しない。MLX変更はWindows CUDAへ直接適用されない。[正式版](https://github.com/ollama/ollama/releases/tag/v0.40.4)\n\n"
         }
       ]
     },
     {
-      "path": "framework-updates/inference-engines/ollama/README.md",
-      "expected_blob_sha": "3dcaa202d942a4e2319aa0a7e180cb4e54c02852",
+      "path": "framework-updates/inference-engines/llama-cpp/README.md",
+      "expected_blob_sha": "1563aa0c2eecc74ef56e530f5a6dfbeda7b88160",
       "edits": [
         {
           "op": "insert_after_once",
           "anchor": "## 主要更新\n\n",
-          "text": "### 2026-10-14 — Ollama v0.40.4-rc2（公開候補版）\n- 内蔵llama.cppのb11521への更新、判定モデル（decision model）およびEmbeddingGemma 2の対応、検証済みmanifestと読み込みモデルの再利用、Apple MLXでの投機的復号巻戻し後の再帰状態整理などを含む。\n- **公開候補版であり安定版ではない**。リリースの作成日時と公開日時に不整合があるため日付は要確認。Apple MLXの改良をWindows CUDAの性能向上とみなさず、速度倍率の実測は未確認。[公式候補版](https://github.com/ollama/ollama/releases/tag/v0.40.4-rc2)。\n\n"
+          "text": "### 2026-10-14 — b11622：Jinja JSON浮動小数点表現の精度修正（開発版）\n- Jinjaの`tojson`、`string`、`safe`で浮動小数点数がC++既定の有効桁数6桁へ丸められる問題を修正し、元値へ読み戻せる短い表現を使う。ツール引数やtemplate内の数値を保つ互換性・正確性の修正で、一般的な生成速度向上ではない。\n- **開発ビルド（pre-release）**であり、正式版として扱わない。[公式版](https://github.com/ggml-org/llama.cpp/releases/tag/b11622)／[PR #30362](https://github.com/ggml-org/llama.cpp/pull/30362)\n\n"
         }
       ]
     }
   ],
-  "summary": "2026-10-14 08:30 JST Library update: llama.cpp b11588/b11594/b11597/b11602 and Ollama v0.40.4-rc2; only officially identified changes; no confirmed new model release"
+  "summary": "2026-10-15 maintenance: add Ollama v0.40.4 stable release and llama.cpp b11622 Jinja JSON numeric precision fix; distinguish stable and pre-release"
 }
