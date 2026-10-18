@@ -35,10 +35,15 @@
   "selection_reason": "対象内。並列 speculative decoding の推論時に、ドラフトブロック内の全位置から候補別の文脈を読む Global Read と、選択済み prefix に沿って各位置のKEEP/REPAIRを決めるCausal Selectorで早期の誤選択を修復し、検証で受理される連続prefixを伸ばす手法を提案・評価している。学習目的も候補supportとrepairを共同最適化する。",
   "semantic_scholar_id": "1d2007fd4a561a7b22e8221250d589b2895e8fff",
   "source_url": "https://arxiv.org/abs/2610.01439",
-  "status": "ready",
+  "status": "superseded",
   "title": "DRelay: Global Draft Context for Prefix-Aware Parallel Speculative Decoding Repair",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-10-18T04:51:43+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/05-speculative-decoding-moe/2026-2610.01439-drelay-global-draft-context-for-prefix-aware-parallel-speculative-decodi.md",
+  "represented_canonical_id": "arXiv:2610.01439",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

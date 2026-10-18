@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-18T04:38:21+00:00",
+  "generated_at": "2026-10-18T04:51:43+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 162,
+  "count": 161,
   "entries": [
     {
       "canonical_id": "DOI:10.1145/3714983.3714987",
@@ -1579,34 +1579,6 @@
       "worker_run_key": "20261014-0445-scheduled-chat-45/r01"
     },
     {
-      "canonical_id": "DOI:10.1145/3712285.3759834",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-14T13:18:41+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 0 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 6270,
-        "body_paragraphs": 33,
-        "method_chars": 1865,
-        "method_paragraphs": 10,
-        "evaluation_chars": 0,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "評価説明量 0 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-bd87e4f0dcd8--libfile_e925c473d4948191b343265733d91f2c--2025-doi-10.1145-3712285.3759834-smurfs-collective-adaptive-speculative-decoding-research-20261014-2130-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-bd87e4f0dcd8--libfile_e925c473d4948191b343265733d91f2c--2025-doi-10.1145-3712285.3759834-smurfs-collective-adaptive-speculative-decoding-research.json",
-      "worker_run_key": "20261014-2130-scheduled-chat-30/r01"
-    },
-    {
       "canonical_id": "arXiv:2512.09487",
       "title": null,
       "source_url": null,
@@ -2370,33 +2342,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-2fe6cde1ff6b--libfile_e18fe94f7a3c8191a82e04f2464b4556--2026-2605.05602-nearly-optimal-attention-coresets-quality-repair-20261016-1840.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-2fe6cde1ff6b--libfile_e18fe94f7a3c8191a82e04f2464b4556--2026-2605.05602-nearly-optimal-attention-coresets-quality-repair-20261016-1840.json",
       "worker_run_key": "20261016-1730-scheduled-chat-30/r01"
-    },
-    {
-      "canonical_id": "arXiv:2602.03769",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-16T15:13:25+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 7450,
-        "body_paragraphs": 43,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 1866,
-        "limitation_chars": 598,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-32cd5a6047f2--libfile_02dfdee654008191b0a35466ed822bfd--2026-2602.03769-latent-tokens-diffusion-language-reasoning-research-20261016-0345-scheduled-chat-45-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-32cd5a6047f2--libfile_02dfdee654008191b0a35466ed822bfd--2026-2602.03769-latent-tokens-diffusion-language-reasoning-research-20261016-0345-schedul.json",
-      "worker_run_key": "20261016-0345-scheduled-chat-45/r01"
     },
     {
       "canonical_id": "DOI:10.1145/3731569.3764823",
@@ -4220,6 +4165,33 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-f52cd920bdc2--libfile_27b3de4ce69c8191b87eb6b66681a6fa--2026-2610.00367-mora-router-bias-expert-approximation-research-20261018-1230-scheduled-chat-30-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-f52cd920bdc2--libfile_27b3de4ce69c8191b87eb6b66681a6fa--2026-2610.00367-mora-router-bias-expert-approximation-research-20261018-1230-scheduled-ch.json",
       "worker_run_key": "20261018-1230-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2403.07652",
+      "title": "Harder Tasks Need More Experts: Dynamic Routing in MoE Models",
+      "source_url": "https://arxiv.org/abs/2403.07652",
+      "returned_at": "2026-10-18T04:49:24+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 0 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 4687,
+        "body_paragraphs": 25,
+        "method_chars": 1741,
+        "method_paragraphs": 9,
+        "evaluation_chars": 0,
+        "limitation_chars": 420,
+        "insufficiency_flags": [
+          "評価説明量 0 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_d61b581226a48191aa7668c65c465ee5--2024-2403.07652-dynamic-routing-moe-research-20261018-1256-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_d61b581226a48191aa7668c65c465ee5--2024-2403.07652-dynamic-routing-moe-research-20261018-1256-scheduled-chat-00-r01.json",
+      "worker_run_key": "20261018-1256-scheduled-chat-00/r01"
     }
   ]
 }

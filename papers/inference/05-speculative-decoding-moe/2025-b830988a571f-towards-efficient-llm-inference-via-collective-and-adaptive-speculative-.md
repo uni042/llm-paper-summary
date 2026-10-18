@@ -36,6 +36,8 @@ worker_run_key: "20261018-1245-scheduled-chat-45/r01"
 worker_id: "scheduled-chat-45"
 quality_self_review_passed: true
 quality_self_review_version: "2026-10-07"
+last_audited: null
+audit_version: 0
 ---
 
 # Smurfs：複数ドラフトの選択・パイプライン・投機長適応を統合する推論基盤
