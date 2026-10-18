@@ -1,0 +1,26 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-45",
+  "run_key": "20261018-1145-scheduled-chat-45/r01/research-relevance/016",
+  "reference_main_sha": "813bd37c1ced6cb69e29b1b5beb68cd64b4122e5",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2601.08815",
+      "identity_tokens": [
+        "arXiv:2601.08815"
+      ],
+      "title": "Agent Contracts: A Formal Framework for Resource-Bounded Autonomous AI Systems",
+      "reason": "著者のarXiv一次要旨を確認。Agent Contractsはエージェントの入出力仕様、トークン等の多次元資源予算、実行期限、成功条件を契約に統合し、委譲先の予算が親契約を超えない保存則と実行ライフサイクルを定義する。反復ワークフローでトークン消費90%削減、分散525分の1、委譲予算違反ゼロを報告する。ただし主な貢献はエージェント運用の資源統制・形式的保証であり、LLM推論エンジンのスループット、カーネル、KVメモリ最適化の直接的実装評価ではないため境界的候補。",
+      "source_url": "https://arxiv.org/abs/2601.08815",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-18T11:53:18+09:00",
+      "last_checked_at": "2026-10-18T11:53:18+09:00",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance",
+      "worklist_rank": 16
+    }
+  ]
+}
