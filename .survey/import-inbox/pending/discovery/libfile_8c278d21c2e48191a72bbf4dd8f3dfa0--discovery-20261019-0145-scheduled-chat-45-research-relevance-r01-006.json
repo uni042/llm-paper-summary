@@ -1,0 +1,26 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-45",
+  "run_key": "20261019-0145-scheduled-chat-45/r01/research-relevance/6",
+  "reference_main_sha": "dfe0461473e7dcb1897c7ed67eefe36a3c35a638",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2204.13767",
+      "identity_tokens": [
+        "arxiv:2204.13767"
+      ],
+      "title": "Triformer: Triangular, Variable-Specific Attentions for Long Sequence Multivariate Time Series Forecasting--Full Version",
+      "reason": "一次要旨で、複数変量の長期時系列予測向けに、三角形に縮小するパッチ注意と変量別の軽量パラメータを提案することを確認した。線形計算量の注意機構はあるが、評価は時系列予測4データセットであり、生成型LLMの推論、KVキャッシュ、サービング、GPU実行基盤への適用を実証していないため対象外。",
+      "source_url": "https://arxiv.org/abs/2204.13767",
+      "body_check": "primary_arxiv_abstract_and_bibliography_screen_only; body_not_read",
+      "first_checked_at": "2026-10-19T01:46:19+09:00",
+      "last_checked_at": "2026-10-19T01:46:19+09:00",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance",
+      "worklist_rank": 6
+    }
+  ]
+}
