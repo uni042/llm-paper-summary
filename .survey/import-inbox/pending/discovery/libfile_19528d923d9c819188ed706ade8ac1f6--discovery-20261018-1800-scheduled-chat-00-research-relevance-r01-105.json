@@ -1,0 +1,26 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261018-1800-scheduled-chat-00/r01/relevance/105",
+  "reference_main_sha": "962f157b7fa6fb2d07cf23eaf41cbf380f51ac0b",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2505.22582",
+      "identity_tokens": [
+        "arxiv:2505.22582"
+      ],
+      "title": "Less, but Better: Efficient Multilingual Expansion for LLMs via Layer-wise Mixture-of-Experts",
+      "reason": "一次要旨は新言語への継続的拡張を目的とし、層間の言語表現類似度から新規専門家数を配分して旧言語の忘却を抑えるLayerMoEを提案する。単回拡張で新規専門家数60%削減、継続拡張で33.3%削減を報告するが、主たる評価目的は言語拡張学習と既存言語能力の保持である。専門家数削減は推論メモリに接続し得るものの、一次要旨だけではサービングの速度・メモリ実測を主貢献として確認できないため、学習専用凍結範囲との境界としてborderlineとする。",
+      "source_url": "https://arxiv.org/abs/2505.22582",
+      "body_check": "abstract_screen_only; body_not_read; arXiv abstract verified 2026-10-18",
+      "first_checked_at": "2026-10-18T18:04:14+09:00",
+      "last_checked_at": "2026-10-18T18:04:14+09:00",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance",
+      "worklist_rank": 105
+    }
+  ]
+}
