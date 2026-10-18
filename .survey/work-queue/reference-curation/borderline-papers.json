@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-18T03:51:21+00:00",
-  "record_count": 5234,
+  "updated_at": "2026-10-18T03:52:46+00:00",
+  "record_count": 5235,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -70729,9 +70729,9 @@
       "identity_tokens": [
         "arXiv:2601.08815"
       ],
-      "reason": "一次要旨で、エージェントの入出力仕様・資源予算・実行時間・委譲制約を形式的に規定し、反復ワークフローでトークン数90%削減などを報告。LLM利用時の予算制御との関連はあるが、GPU推論カーネル、KVメモリ、モデル学習効率そのものを最適化する研究ではなく境界判定。",
+      "reason": "著者のarXiv一次要旨を確認。Agent Contractsはエージェントの入出力仕様、トークン等の多次元資源予算、実行期限、成功条件を契約に統合し、委譲先の予算が親契約を超えない保存則と実行ライフサイクルを定義する。反復ワークフローでトークン消費90%削減、分散525分の1、委譲予算違反ゼロを報告する。ただし主な貢献はエージェント運用の資源統制・形式的保証であり、LLM推論エンジンのスループット、カーネル、KVメモリ最適化の直接的実装評価ではないため境界的候補。",
       "first_checked_at": "2026-10-11T03:32:19+00:00",
-      "last_checked_at": "2026-10-17T04:46:12+00:00",
+      "last_checked_at": "2026-10-18T03:52:46+00:00",
       "linked_from": [
         ".survey/work-queue/WORKLIST-30.md"
       ],
@@ -81330,6 +81330,19 @@
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "O-Mem: Omni Memory System for Personalized, Long Horizon, Self-Evolving Agents"
+    },
+    "arXiv:2601.10120": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2601.10120",
+      "identity_tokens": [
+        "arXiv:2601.10120"
+      ],
+      "reason": "著者のarXiv一次要旨を確認。TopoDIMはLLMベースの複数エージェントの通信トポロジーを一度で生成し、討論・フィードバック等の異種相互作用を分散実行することで、多段対話の遅延・計算・トークン費用を削減する。一次要旨は最先端方式比で総トークン消費46.41%削減、平均タスク性能1.50%向上と報告する。エージェント間の通信効率という実行時システム上の接点は強いが、モデル復号エンジン、GPU通信カーネル、KVキャッシュ、汎用サービング性能の最適化とは異なるため境界的候補。",
+      "first_checked_at": "2026-10-18T03:52:46+00:00",
+      "last_checked_at": "2026-10-18T03:52:46+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "TopoDIM: One-shot Topology Generation of Diverse Interaction Modes for Multi-Agent Systems"
     }
   }
 }

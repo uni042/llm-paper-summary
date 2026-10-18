@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-eda262c1da96d4cd-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2601.10120",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2601.10120",
+    "identity_tokens": [
+      "arXiv:2601.10120"
+    ],
+    "reason": "著者のarXiv一次要旨を確認。TopoDIMはLLMベースの複数エージェントの通信トポロジーを一度で生成し、討論・フィードバック等の異種相互作用を分散実行することで、多段対話の遅延・計算・トークン費用を削減する。一次要旨は最先端方式比で総トークン消費46.41%削減、平均タスク性能1.50%向上と報告する。エージェント間の通信効率という実行時システム上の接点は強いが、モデル復号エンジン、GPU通信カーネル、KVキャッシュ、汎用サービング性能の最適化とは異なるため境界的候補。",
+    "first_checked_at": "2026-10-18T03:52:46+00:00",
+    "last_checked_at": "2026-10-18T03:52:46+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "TopoDIM: One-shot Topology Generation of Diverse Interaction Modes for Multi-Agent Systems"
+  },
+  "processed_at": "2026-10-18T03:52:47+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-eda262c1da96",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

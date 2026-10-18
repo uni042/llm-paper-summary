@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-18T03:51:21+00:00",
-  "record_count": 12425,
+  "updated_at": "2026-10-18T03:52:47+00:00",
+  "record_count": 12424,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -168481,9 +168481,9 @@
         "id:arXiv:2606.18112",
         "url:https://arxiv.org/abs/2606.18112"
       ],
-      "reason": "一次要旨で、ロボットの経路計画・視覚履歴を、タスクモードとカメラ別重み・トークン予算を切り替えて制御するナビゲーション基盤モデルと確認。観測トークン数の制御は含むが、主評価はロボットナビゲーションの成功率・汎化であり、LLM推論基盤の高速化や学習システム最適化の研究ではない。",
+      "reason": "著者のarXiv一次要旨を確認。Qwen-RobotNavは視覚履歴のトークン予算やカメラ重み、タスクモードを推論時に変更できるナビゲーション基盤モデルで、1,560万例の学習と2B〜8Bの規模拡張、ロボット実環境への転移を評価する。観測トークン予算の制御は推論資源と接点があるが、主要目的・評価指標は指示追従、探索、追跡、運転等のナビゲーション能力であり、汎用LLMのサービング・復号・メモリ階層の最適化を直接検証していないため対象外。",
       "first_checked_at": "2026-10-13T10:41:38+00:00",
-      "last_checked_at": "2026-10-17T04:46:13+00:00",
+      "last_checked_at": "2026-10-18T03:52:44+00:00",
       "linked_from": [],
       "title": "Qwen-RobotNav Technical Report: A Scalable Navigation Model Designed for an Agentic Navigation System"
     },
@@ -168509,9 +168509,9 @@
         "id:arXiv:2601.08665",
         "url:https://arxiv.org/abs/2601.08665"
       ],
-      "reason": "視覚言語行動モデルによるロボット移動で、必要時だけ推論を起動する適応的思考と視覚補助の言語記憶を組み合わせ、強化学習とNav-AdaCoT-2.9Mでナビゲーション性能を改善する。計算の選択性はあるが、最終対象はロボット経路計画・行動制御であり、LLM推論基盤の一般的な高速化ではない。",
+      "reason": "著者の一次要旨を確認。VLingNavはロボットの視覚言語ナビゲーションを対象に、必要時だけ推論を起動する適応的思考連鎖、過去の観測を保持する視覚補助言語記憶、Nav-AdaCoT-2.9Mによる学習を統合する。評価の中心は実環境への転移を含む移動・経路探索の成功性能であり、汎用LLMの復号、サービング、GPU実行、KVキャッシュの性能改善を直接評価していない。適応推論という接点はあるが、主題は身体化ナビゲーションモデルの能力向上であるため対象外。",
       "first_checked_at": "2026-10-13T10:42:58+00:00",
-      "last_checked_at": "2026-10-16T19:48:12+00:00",
+      "last_checked_at": "2026-10-18T03:52:47+00:00",
       "linked_from": [],
       "title": "VLingNav: Embodied Navigation with Adaptive Reasoning and Visual-Assisted Linguistic Memory"
     },
@@ -170741,18 +170741,6 @@
         "papers/inference/99-other-inference-systems/2024-2402.01771-blackmamba-mixture-of-experts-for-state-space-models.md"
       ],
       "title": "Mamba State-Space Models Can Be Strong Downstream Learners"
-    },
-    "arXiv:2601.10120": {
-      "classification": "unrelated",
-      "canonical_id": "arXiv:2601.10120",
-      "identity_tokens": [
-        "arXiv:2601.10120"
-      ],
-      "reason": "題名の対象は複数エージェントの相互作用モードを表すトポロジーの一回生成であり、LLM推論カーネル、KVキャッシュ、モデル配信、GPUメモリ階層を最終目的とする研究ではない。タイトルだけから対象外と判断し、手法や実験結果については断定しない。",
-      "first_checked_at": "2026-10-13T21:31:15+00:00",
-      "last_checked_at": "2026-10-13T21:31:15+00:00",
-      "linked_from": [],
-      "title": "TopoDIM: One-shot Topology Generation of Diverse Interaction Modes for Multi-Agent Systems"
     },
     "arXiv:2607.10438": {
       "classification": "unrelated",

@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-468a3522d1495ab8-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2606.18112",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2606.18112",
+    "identity_tokens": [
+      "arXiv:2606.18112",
+      "id:arXiv:2606.18112",
+      "url:https://arxiv.org/abs/2606.18112"
+    ],
+    "reason": "著者のarXiv一次要旨を確認。Qwen-RobotNavは視覚履歴のトークン予算やカメラ重み、タスクモードを推論時に変更できるナビゲーション基盤モデルで、1,560万例の学習と2B〜8Bの規模拡張、ロボット実環境への転移を評価する。観測トークン予算の制御は推論資源と接点があるが、主要目的・評価指標は指示追従、探索、追跡、運転等のナビゲーション能力であり、汎用LLMのサービング・復号・メモリ階層の最適化を直接検証していないため対象外。",
+    "first_checked_at": "2026-10-13T10:41:38+00:00",
+    "last_checked_at": "2026-10-18T03:52:44+00:00",
+    "linked_from": [],
+    "title": "Qwen-RobotNav Technical Report: A Scalable Navigation Model Designed for an Agentic Navigation System"
+  },
+  "processed_at": "2026-10-18T03:52:45+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-468a3522d149",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
