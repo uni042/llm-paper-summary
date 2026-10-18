@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（794本）
+## 自動生成の論文一覧（797本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -1588,6 +1588,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   小型の草稿モデルが作った途中の推論を大型の対象モデルで検証する既存方式は、単語列が異なっていても意味が同じである推論を扱える一方、すべてのステップを高価な検証器へ送ると加速効果が弱くなる。論文の表2では、DeepSeek-R1-Distill 1.5B/32B構成で5課題平均の高速化が1.68倍、平均正答率が対象モデル81.99%に対して81.51%である。
 
+- **2026-01 · [Attention Needs to Focus: A Unified Perspective on Attention Allocation](2026-2601.00919-attention-needs-to-focus-a-unified-perspective-on-attention-allocation.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  関連するキーが少ない場合でも重みをどこかへ割り振るため、最初のトークンへ不自然に注意が集まる注意シンク（注意機構 sink）が起こり得る。340Mパラメータ・150億学習トークンの条件では複数課題の平均正答率48.01%で比較方式の最高値47.68%を上回るが、760M・300億トークンでは51.53%でTitansの51.56%にわずかに及ばない。
+
 - **2026-01 · [ArcAligner: Adaptive Recursive Aligner for Compressed Context Embeddings in RAG](2026-2601.05038-arcaligner-adaptive-recursive-aligner-for-compressed-context-embeddings-.md)**  
   実装：[✓](https://github.com/liunian-Jay/ArcAligner) ・ リポジトリ内被引用：0  
   ArcAlignerは、検索拡張生成（Retrieval-Augmented Generation; RAG）で取得した長文書を、少数の連続ベクトルへ圧縮した後の「情報が残っていても生成モデルが読めない」という問題を扱う。約24倍の文脈圧縮条件で、HotpotQAのF1は34.92、同じ論文で比較したCOCOMの16倍圧縮は31.77となった。
@@ -2026,6 +2030,10 @@
   実装：✓ ・ リポジトリ内被引用：2  
   マルチモーダル入力の符号化が全件終わるまで言語モデルを待機させる依存を解消する。要求内では準備済み埋め込みだけを順にプリフィルへ渡し、要求間では処理可能トークンを複数要求から集めて分割パイプラインの空きを減らす。Qwen2.5-VLの評価で初回トークン遅延最大66%削減、入力トークン処理量最大109%増加を報告する。
 
+- **2025-09 · [Dynamic Speculative Agent Planning](2025-2509.01920-dynamic-speculative-agent-planning.md)**  
+  実装：[✓](https://github.com/guanyilin428/Dynamic-Speculative-Planning) ・ リポジトリ内被引用：2  
+  動的 投機的 Planning（DSP）は、大規模言語モデル（LLM）を用いたエージェントが一連の計画・操作を逐次生成する際、弱い近似エージェントが未来の複数ステップを先読みし、強い対象エージェントが並列に検証することで全体の完了時間を短縮する方式である。
+
 - **2025-08 · [TinyServe: Query-Aware Cache Selection for Efficient LLM Serving](2025-2509.12211-tinyserve-query-aware-cache-selection.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
   QueryごとにKVページの関連度を軽量メタデータで推定し、必要ページだけを融合CUDAカーネルで読むことで小型LLMサービングの復号とメモリ移動を削減する。
@@ -2065,6 +2073,10 @@
 - **2025-06 · [EQuARX: Efficient Quantized AllReduce in XLA for Distributed Machine Learning Acceleration](2025-2506.17615-equarx-quantized-allreduce-xla.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   AllReduce内でブロック量子化と逆量子化を通信へ重ね、TPU/XLAの集団通信量を削減する方式。int8でBF16 AllReduce比最大1.8倍、Gemma 3 27Bプリフィル最大1.28倍を示す。
+
+- **2025-05 · [LoLA: Low-Rank Linear Attention with Sparse Caching](2025-2505.23666-lola-low-rank-linear-attention-with-sparse-caching.md)**  
+  実装：[✓](https://github.com/lukemcdermotttt/LoLA-release) ・ リポジトリ内被引用：1  
+  LoLA（Low-Rank Linear 注意機構 with Sparse Caching）は、線形注意（Linear 注意機構）が長い文脈を固定長の再帰状態に圧縮する際に失いやすい、個別の鍵と値の対応関係を守るための推論時キャッシュ管理方式である。
 
 - **2025-05 · [GMSA: Enhancing Context Compression via Group Merging and Layer Semantic Alignment](2025-2505.12215-gmsa-enhancing-context-compression-via-group-merging-and-layer-semantic-.md)**  
   実装：✓ ・ リポジトリ内被引用：1  

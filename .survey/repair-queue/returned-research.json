@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-17T23:57:32+00:00",
+  "generated_at": "2026-10-18T00:57:28+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 158,
+  "count": 159,
   "entries": [
     {
       "canonical_id": "DOI:10.1145/3714983.3714987",
@@ -4109,6 +4109,33 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-f897a5263aa3--libfile_9eb647f732a8819189932a49090d57cb--2024-2410.14268-modification-threshold-mixture-of-depths-research-20261018-0730-scheduled-chat-30-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-f897a5263aa3--libfile_9eb647f732a8819189932a49090d57cb--2024-2410.14268-modification-threshold-mixture-of-depths-research-20261018-0730-scheduled.json",
       "worker_run_key": "20261018-0730-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2605.06366",
+      "title": "Layer Collapse in Diffusion Language Models",
+      "source_url": "https://arxiv.org/abs/2605.06366",
+      "returned_at": "2026-10-18T00:55:06+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 4591,
+        "body_paragraphs": 31,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 559,
+        "limitation_chars": 509,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_a63458fb2d2c81918b5db81e92ac57ac--2026-2605.06366-layer-collapse-diffusion-llm-compression-research-20261018-0900-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_a63458fb2d2c81918b5db81e92ac57ac--2026-2605.06366-layer-collapse-diffusion-llm-compression-research-20261018-0900-scheduled-chat-00-r01.json",
+      "worker_run_key": "20261018-0900-scheduled-chat-00/r01"
     }
   ]
 }

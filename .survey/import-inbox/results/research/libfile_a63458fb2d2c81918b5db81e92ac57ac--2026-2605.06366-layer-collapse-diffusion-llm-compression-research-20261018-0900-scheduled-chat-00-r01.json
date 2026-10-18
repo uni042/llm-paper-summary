@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "87608e17249127337ebf8ee739ca3f3cafb6ed250e787ba0f185209e9ef0e54f",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_a63458fb2d2c81918b5db81e92ac57ac--2026-2605.06366-layer-collapse-diffusion-llm-compression-research-20261018-0900-scheduled-chat-00-r01.md",
+  "canonical_id": "arXiv:2605.06366",
+  "worker_completed_at": "2026-10-18T09:00:00+09:00",
+  "worker_run_key": "20261018-0900-scheduled-chat-00/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 4591,
+    "body_paragraphs": 31,
+    "method_chars": 0,
+    "method_paragraphs": 0,
+    "evaluation_chars": 559,
+    "limitation_chars": 509,
+    "insufficiency_flags": [
+      "手法説明量 0 < 700"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 手法説明量 0 < 700"
+  ],
+  "processed_at": "2026-10-18T00:55:06+00:00"
+}
