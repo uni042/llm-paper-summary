@@ -29,6 +29,8 @@ worker_id: scheduled-chat-30
 worker_run_key: 20261018-1930-scheduled-chat-30/r01
 quality_self_review_passed: true
 quality_self_review_version: 'PAPER-QUALITY-GUIDE-2026-10-07'
+last_audited: null
+audit_version: 0
 ---
 
 # XOR-Trellis：曲率を考慮したハダマード変換不要の超低ビットLLM重み量子化

@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-18T13:20:28+00:00",
+  "generated_at": "2026-10-18T13:27:27+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 184,
+  "count": 188,
   "entries": [
     {
       "canonical_id": "DOI:10.1145/3714983.3714987",
@@ -4788,8 +4788,8 @@
     },
     {
       "canonical_id": "arXiv:2601.21096",
-      "title": "Magellan: Autonomous Discovery of Novel Compiler Optimization Heuristics with AlphaEvolve",
-      "source_url": "https://arxiv.org/pdf/2601.21096",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-18T13:17:12+00:00",
       "return_count": 1,
       "assigned_worker": "scheduled-chat-30",
@@ -4815,8 +4815,8 @@
     },
     {
       "canonical_id": "arXiv:2610.00432",
-      "title": "XOR-Trellis: Ultra-Low-Complexity Dequantization and Curvature-Aware Hadamard-Free LLM Quantization",
-      "source_url": "https://arxiv.org/pdf/2610.00432",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-18T13:17:13+00:00",
       "return_count": 1,
       "assigned_worker": "scheduled-chat-30",
@@ -4840,6 +4840,116 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_e07dbe2665a48191a84f5e8dac672fa6--2026-2610.00432-xor-trellis-curvature-aware-hadamard-free-quantization-research-20261018-1930-scheduled-chat-30-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_e07dbe2665a48191a84f5e8dac672fa6--2026-2610.00432-xor-trellis-curvature-aware-hadamard-free-quantization-research-20261018-1930-scheduled-chat-30-r01.json",
       "worker_run_key": "20261018-1930-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2607.18171",
+      "title": "FlashRT: Agent Harness for Guiding Agents to Deploy Real-Time Multimodal Applications",
+      "source_url": "https://arxiv.org/pdf/2607.18171",
+      "returned_at": "2026-10-18T13:26:15+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 0 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5759,
+        "body_paragraphs": 34,
+        "method_chars": 1968,
+        "method_paragraphs": 12,
+        "evaluation_chars": 0,
+        "limitation_chars": 740,
+        "insufficiency_flags": [
+          "評価説明量 0 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_e4c28ade7ac0819192315362a0c350e8--2026-2607.18171-flashrt-multimodal-serving-agent-research-20261018-0700-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_e4c28ade7ac0819192315362a0c350e8--2026-2607.18171-flashrt-multimodal-serving-agent-research-20261018-0700-scheduled-chat-00-r01.json",
+      "worker_run_key": "scheduled-chat-00/20261018-0700/r01"
+    },
+    {
+      "canonical_id": "arXiv:2412.17246",
+      "title": "BLITZSCALE: Fast and Live Large Model Autoscaling with O(1) Host Caching",
+      "source_url": "https://www.usenix.org/conference/osdi25/presentation/zhang-dingyan",
+      "returned_at": "2026-10-18T13:26:16+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 150 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 6295,
+        "body_paragraphs": 31,
+        "method_chars": 2700,
+        "method_paragraphs": 14,
+        "evaluation_chars": 150,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "評価説明量 150 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_e69bf863f8a88191bf8e8e6af4414a6f--2024-2412.17246-blitzscale-live-autoscaling-research-20261018-1256-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_e69bf863f8a88191bf8e8e6af4414a6f--2024-2412.17246-blitzscale-live-autoscaling-research-20261018-1256-scheduled-chat-00-r01.json",
+      "worker_run_key": "20261018-1256-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2606.07571",
+      "title": "Enabling KV Caching of Shared Prefix for Diffusion Language Models",
+      "source_url": "https://arxiv.org/abs/2606.07571",
+      "returned_at": "2026-10-18T13:26:17+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "長文定型文の再利用を検出: papers/inference/10-kv-cache-offload-recomputation/2026-2606.07571-enabling-kv-caching-of-shared-prefix-for-diffusion-language-models.md と 17 段落 / 3964文字 (100.0%) が完全一致"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 8295,
+        "body_paragraphs": 58,
+        "method_chars": 2819,
+        "method_paragraphs": 20,
+        "evaluation_chars": 628,
+        "limitation_chars": 517,
+        "insufficiency_flags": []
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_e8244a64da0881918262f883c940cb4f--2026-2606.07571-bicache-diffusion-shared-prefix-kv-reuse-research-20261018-1100-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_e8244a64da0881918262f883c940cb4f--2026-2606.07571-bicache-diffusion-shared-prefix-kv-reuse-research-20261018-1100-scheduled-chat-00-r01.json",
+      "worker_run_key": "20261018-1100-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2609.39223",
+      "title": "QATFactory: A Versatile, Deployment-Aligned Framework for Quantization-aware Training and Distillation of LLMs",
+      "source_url": "https://arxiv.org/pdf/2609.39223",
+      "returned_at": "2026-10-18T13:26:17+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700",
+        "説明不足トリガー: 評価説明量 367 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5821,
+        "body_paragraphs": 32,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 367,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700",
+          "評価説明量 367 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_e98db928832481919ba3cbae9b119383--2026-2609.39223-qatfactory-deployment-aligned-quantization-research-20261018-1430-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_e98db928832481919ba3cbae9b119383--2026-2609.39223-qatfactory-deployment-aligned-quantization-research-20261018-1430-scheduled-chat-30-r01.json",
+      "worker_run_key": "20261018-1430-scheduled-chat-30/r01"
     }
   ]
 }
