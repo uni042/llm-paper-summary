@@ -1,0 +1,26 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261018-1200-scheduled-chat-00/r01/research-prescreen/071",
+  "reference_main_sha": "d8a914757679e1b3d0b06e45da62b0fa9a7eeab3",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.05532",
+      "identity_tokens": [
+        "arXiv:2605.05532"
+      ],
+      "title": "A Few Good Clauses: Comparing LLMs vs Domain-Trained Small Language Models on Structured Contract Extraction",
+      "reason": "一次要旨での研究対象は法律契約書からの構造化情報抽出であり、ドメイン特化小型モデルOlava Extractと五つの汎用大規模モデルの抽出精度・幻覚・推論利用料金を比較する。推論料金の低さはモデル選択の評価結果であり、KVキャッシュ、GPUカーネル、バッチ処理、分散サービング等の実行機構を新規提案していない。法律文書処理の応用性能比較を主題とするため、LLM推論基盤の技術サーベイ対象外と判断する。",
+      "source_url": "https://arxiv.org/abs/2605.05532",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-18T12:04:00+09:00",
+      "last_checked_at": "2026-10-18T12:04:00+09:00",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance",
+      "worklist_rank": 71
+    }
+  ]
+}
