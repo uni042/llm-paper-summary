@@ -79,11 +79,11 @@ MoEの大部分を占めるexpert重みを**低bit化、pruning、precision切�
   一律ビット幅ではなく、注意層・共有専門家・使用頻度・ブロック位置・線形重みの外れ値を手掛かりに精度を配分する効果を、同じ平均ビット予算で比較したベンチマーク。
 
 - **2024-05 · [A Provably Effective Method for Pruning Experts in Fine-tuned Sparse Mixture-of-Experts](2024-2405.16646-provably-effective-pruning-finetuned-sparse-moe.md)**  
-  実装：✓ ・ リポジトリ内被引用：11  
+  実装：✓ ・ リポジトリ内被引用：12  
   事前学習からファインチューニングまでのルーター変化を専門家重要度として使い、視覚MoEで専門家を大きく削減しながら精度を保つ、理論付きの専門家枝刈り法を示す。
 
 - **2024-07 · [Mixture of Experts with Mixture of Precisions for Tuning Quality of Service](2024-2407.14417-mixture-of-experts-with-mixture-of-precisions-for-tuning-quality-of-service.md)**  
-  実装：✓ ・ リポジトリ内被引用：7  
+  実装：✓ ・ リポジトリ内被引用：8  
   本論文は、混合専門家モデル（Mixture-of-Experts、MoE）を限られたGPUメモリで動かすとき、専門家の量子化精度とCPU/GPU上の配置を別々の選択変数として扱い、推論サービスの品質と生成速度を調整する方式を提案する。対象は単一GPU上のMixtral 8x7Bであり、分散学習や多数GPU間の専門家並列処理ではない。
 
 ### 4年前（2022-11〜2023-10）
