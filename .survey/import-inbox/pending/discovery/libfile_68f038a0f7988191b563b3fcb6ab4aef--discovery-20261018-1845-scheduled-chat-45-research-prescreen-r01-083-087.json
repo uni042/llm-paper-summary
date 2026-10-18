@@ -1,0 +1,74 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-45",
+  "run_key": "20261018-1845-scheduled-chat-45/r01/research-prescreen/083-087",
+  "reference_main_sha": "a31a157ad7e593df38622283af5834c2336e8f12",
+  "record_count": 4,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2512.06747",
+      "identity_tokens": [
+        "arxiv:2512.06747"
+      ],
+      "title": "PrivLLMSwarm: Privacy-Preserving LLM-Driven UAV Swarms for Secure IoT Surveillance",
+      "reason": "暗号化されたLLM推論を複数ドローンの協調に適用し、秘密分散計算（MPC）に合わせたTransformer非線形演算の近似で低遅延化を図る。一次要旨は推論効率を扱う一方、主要な実証対象はUAV群の機密性・指令の意味的精度・編隊制御である。一般的なLLM推論サービングへの適用可能性と基盤レベルの比較条件は要旨から十分に判定できないため境界的候補とする。",
+      "source_url": "https://arxiv.org/abs/2512.06747",
+      "body_check": "abstract_screen_only; body_not_read; arXiv primary abstract verified 2026-10-18",
+      "first_checked_at": "2026-10-18T18:50:23+09:00",
+      "last_checked_at": "2026-10-18T18:50:23+09:00",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance",
+      "worklist_rank": 83
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2511.17693",
+      "identity_tokens": [
+        "arxiv:2511.17693"
+      ],
+      "title": "DeepCoT: Deep Continual Transformers for Real-Time Inference on Data Streams",
+      "reason": "連続する時間窓の重複計算を深いエンコーダ型Transformerで再利用し、音声・動画・テキストストリームの実行時間を従来の効率化モデル比で最大2桁減らすと一次要旨は述べる。推論効率の機構は関連するが、自己回帰LLMの事前充填・復号やKVキャッシュ管理ではなく、主にストリーム入力のエンコーダ推論を対象とするため境界的とする。",
+      "source_url": "https://arxiv.org/abs/2511.17693",
+      "body_check": "abstract_screen_only; body_not_read; arXiv primary abstract verified 2026-10-18",
+      "first_checked_at": "2026-10-18T18:50:23+09:00",
+      "last_checked_at": "2026-10-18T18:50:23+09:00",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance",
+      "worklist_rank": 84
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2402.05964",
+      "identity_tokens": [
+        "arxiv:2402.05964"
+      ],
+      "title": "A Survey on Transformer Compression",
+      "reason": "Transformerの枝刈り、量子化、知識蒸留、効率的構造設計を横断比較し、大規模言語モデルと大規模視覚モデルのメモリ・計算削減に適用する方法を整理する総説である。一次要旨は圧縮法の再学習費用とTransformer固有の注意層・FFN構造を明示しており、LLM学習・推論効率サーベイの対象に直接合致する。個別の定量値や対象論文の比較軸は全文読解で確認する。",
+      "source_url": "https://arxiv.org/abs/2402.05964",
+      "body_check": "abstract_screen_only; body_not_read; arXiv primary abstract verified 2026-10-18",
+      "first_checked_at": "2026-10-18T18:50:23+09:00",
+      "last_checked_at": "2026-10-18T18:50:23+09:00",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance",
+      "worklist_rank": 86
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2407.12391",
+      "identity_tokens": [
+        "arxiv:2407.12391"
+      ],
+      "title": "LLM Inference Serving: Survey of Recent Advances and Opportunities",
+      "reason": "2023年以降のLLM推論サービングについて、モデルの復号方式を変えずに性能・効率を改善するシステム研究を比較する総説である。一次要旨は大規模展開と運用の観点を明示しており、KVキャッシュ、バッチ処理、資源管理、分散サービング等のサーベイ系統に直接関連する。代表研究と分類の正確さは全文読解段階で検証する。",
+      "source_url": "https://arxiv.org/abs/2407.12391",
+      "body_check": "abstract_screen_only; body_not_read; arXiv primary abstract verified 2026-10-18",
+      "first_checked_at": "2026-10-18T18:50:23+09:00",
+      "last_checked_at": "2026-10-18T18:50:23+09:00",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance",
+      "worklist_rank": 87
+    }
+  ]
+}
