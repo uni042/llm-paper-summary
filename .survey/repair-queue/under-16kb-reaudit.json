@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-10-18T12:22:09.137930+00:00",
+  "generated_at": "2026-10-18T12:52:56.220096+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 5,
+  "count": 4,
   "worker_counts": {
     "scheduled-chat-00": 1,
     "scheduled-chat-30": 2,
-    "scheduled-chat-45": 2
+    "scheduled-chat-45": 1
   },
   "entries": [
     {
@@ -97,26 +97,6 @@
         "method_chars": 726,
         "evaluation_chars": 979,
         "limitation_chars": 527
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2023-1685e89adb79-tabi-an-efficient-multi-level-inference-system-for-large-language-models.md",
-      "canonical_id": "DOI:10.1145/3552326.3587438",
-      "title": "Tabi: An Efficient Multi-Level Inference System for Large Language Models",
-      "file_bytes": 23109,
-      "source_sha256": "1f2523ec606fc0d6c65a14f70c70c07c76ac7d3a6c205550aff62bf92b728593",
-      "source_git_blob_sha": "144d5d01eca35cb14498a22e3802c226252a6ddc",
-      "assigned_worker": "scheduled-chat-45",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.966333,
-      "quality_metrics": {
-        "body_chars": 5638,
-        "method_chars": 1942,
-        "evaluation_chars": 1336,
-        "limitation_chars": 0
       },
       "mechanical_failures": [],
       "warnings": []
