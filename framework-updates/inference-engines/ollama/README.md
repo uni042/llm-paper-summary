@@ -27,6 +27,10 @@ Ollamaの主要な機能・性能更新を継続的に記録する集約ペー�
 
 ## 主要更新
 
+### 2026-10-16 — Ollama v0.40.6（正式版）
+- 前日に記録した`v0.40.6-rc0`が正式版へ進んだ。Windowsでorphan runnerを残す問題の修正、GGUF `q2_0` tensor / file type、Clef cloud提供、`--ask`の質問key識別子化を含む。
+- `q2_0`はmodel全般を自動で量子化・高速化せず、Clef cloudはlocal推論の高速化ではない。正式版として記録し、候補版rc0と段階を区別する。[正式版](https://github.com/ollama/ollama/releases/tag/v0.40.6)。
+
 ### 2026-10-16 — Ollama v0.40.6-rc0（公開候補版）
 - GGUFの`q2_0` tensor / file type、Windowsでrunnerがorphan processとして残る問題の修正、Clef cloud提供と`--ask` modeのquestion key識別子化を含む。
 - **RC0であり安定版ではない**。q2_0追加は既存modelの自動量子化や高速化を意味せず、Clef cloudはlocal inference速度の改善ではない。Windows runner修正はWindows 11で関連する。[公式候補版](https://github.com/ollama/ollama/releases/tag/v0.40.6-rc0)

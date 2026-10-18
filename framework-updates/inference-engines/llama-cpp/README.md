@@ -78,6 +78,14 @@ llama.cppの主要な機能・性能更新を継続的に記録する集約ペ�
 
 ## 主要更新
 
+### 2026-10-17 — b11709 / b11710 / b11713 / b11714 / b11715（開発版）
+- **b11709**：Aleph Alpha Kolibri-1のmodel構造を追加。model対応の追加であり、weightの初回公開日とは別。
+- **b11710**：CUDA grouped-expertのTop-k融合を追加。MoE中間演算を減らす狙いだが端から端の速度倍率は未確認。
+- **b11713**：低bit MMVQ CUDA kernelを更新。公式PRの`llama-bench`ではRTX 4090 / Qwen3.5-9B / Q3_K_S / `tg128`が162.65→174.93 tok/s（約1.08倍）、Q2_Kが181.37→186.79 tok/s（約1.03倍）。RTX 3090では同条件Q3_K_Sが81.04→126.22 tok/s（約1.56倍）。特定GPU・model・quantizationの結果でRTX 4070 SUPERや全modelへ一般化しない。
+- **b11714**：model管理UIへHugging Face model発見・downloadを追加し、対応するMTP / DFlash sidecarを同時取得できる。発見機能は既定で無効。download利便性でありlocal decode高速化の保証ではない。
+- **b11715**：AMD HIPのQ1_0 unpackを更新。AMD向けでNVIDIA CUDAの改善ではない。
+- すべて正式版v0.7.0以後の開発用pre-release。b11713のベンチはモデル全体の一条件の測定で、他GPU・設定へ外挿しない。[b11709](https://github.com/ggml-org/llama.cpp/releases/tag/b11709) / [b11710](https://github.com/ggml-org/llama.cpp/releases/tag/b11710) / [b11713](https://github.com/ggml-org/llama.cpp/releases/tag/b11713) / [b11714](https://github.com/ggml-org/llama.cpp/releases/tag/b11714) / [b11715](https://github.com/ggml-org/llama.cpp/releases/tag/b11715)
+
 ### 2026-10-16 — b11695 / b11699 / b11700（開発版）
 - **b11695**：Mellum 2.1のMTP対応とRoPE構築処理を追加。対応modelの投機的復号向けで、全model共通の高速化ではない。
 - **b11699**：HTTP clientが`HTTP_PROXY` / `HTTPS_PROXY`と`NO_PROXY`、loopback例外を処理し、企業proxy下の取得互換性や子server待機の問題を修正する。
