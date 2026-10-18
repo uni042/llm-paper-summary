@@ -1,0 +1,26 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261018-1130-scheduled-chat-30/r01",
+  "reference_main_sha": "e29b8a049c0399291014fba452212a09cdac006b",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2305.16340",
+      "identity_tokens": [
+        "arXiv:2305.16340"
+      ],
+      "title": "Segmented Recurrent Transformer: An Efficient Sequence-to-Sequence Model",
+      "reason": "一次論文arXiv:2305.16340v3全文の第3〜4節と表1・2を確認。T5-small(60M)とBART-base(140M)のエンコーダ・デコーダ型要約モデルで交差注意を局所分割し、RAF再帰状態で欠落情報を補う。CNN-DM等でROUGE1を単純な分割注意より6〜22%改善し、交差注意の理論演算量を約40%削減する。ただし現代の自己回帰型大規模言語モデルのデコード、KVキャッシュ最適化、GPU実測生成速度を直接扱わない。効率的注意と系列生成の基礎研究として境界的候補に分類。",
+      "source_url": "https://arxiv.org/html/2305.16340v3",
+      "body_check": "primary_full_text_read; sections 3-4, tables 1-2 verified",
+      "first_checked_at": "2026-10-18T11:30:00+09:00",
+      "last_checked_at": "2026-10-18T11:30:00+09:00",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance",
+      "worklist_rank": 173
+    }
+  ]
+}
