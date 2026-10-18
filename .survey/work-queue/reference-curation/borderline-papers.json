@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-18T22:46:49+00:00",
-  "record_count": 5263,
+  "updated_at": "2026-10-18T23:42:57+00:00",
+  "record_count": 5264,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -81722,6 +81722,19 @@
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "Dense to MoE Adaptation for Compact Vision Language Action Policies"
+    },
+    "arXiv:2605.25550": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.25550",
+      "identity_tokens": [
+        "arXiv:2605.25550"
+      ],
+      "reason": "非同期パイプラインと段階間通信の重ね合わせ、実測フィードバックによるインスタンス比率調整はLLMサービング基盤にも関連する。しかし一次要旨の主対象は画像生成向けの拡散Transformerであり、LLMの自己回帰復号、KVキャッシュ、トークン処理量を直接評価する研究ではない。",
+      "first_checked_at": "2026-10-18T23:42:57+00:00",
+      "last_checked_at": "2026-10-18T23:42:57+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "DisagFusion: Asynchronous Pipeline Parallelism and Elastic Scheduling for Disaggregated Diffusion Serving"
     }
   }
 }
