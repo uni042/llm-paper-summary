@@ -27,6 +27,10 @@ Ollamaの主要な機能・性能更新を継続的に記録する集約ペー�
 
 ## 主要更新
 
+### 2026-10-14 — Ollama v0.40.5（正式版）
+- Nemotron 3.5 Super VL / Bolt、内蔵llama.cppとMLXの更新を追加。判定modelを`clef:cloud` / `clef-flash:cloud`で利用可能にし、OpenAI互換Responses APIの独自tool継続時の不具合やcloud error表示を修正。
+- cloud判定はlocal inferenceの高速化ではない。Nemotron Superの配布サイズは約80〜90GBとされ、12GB VRAM単体には収まらない。前に記録したv0.40.4は正式版、RC2は候補版として区別する。[正式版](https://github.com/ollama/ollama/releases/tag/v0.40.5)。
+
 ### 2026-10-12 — Ollama v0.40.4（正式版）
 - `v0.40.4`は正式版（Latest）として公開された。主な変更は判定モデルの直接利用、既検証manifestと読込済みmodelの再利用、`llama-server`経由のマルチモーダル埋め込み、短いcontext長での埋め込みmodel読込修正、Apple Silicon MLXの投機的復号後の状態管理修正、内蔵llama.cppの判定model対応。
 - 前項の`v0.40.4-rc2`は公開候補版、ここでは正式版として区別する。model準備やmanifest再利用はrequest開始費用の改善であり、全GPUのdecode速度向上を意味しない。MLX変更はWindows CUDAへ直接適用されない。[正式版](https://github.com/ollama/ollama/releases/tag/v0.40.4)

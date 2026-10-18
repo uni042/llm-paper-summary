@@ -28,6 +28,10 @@ ExLlamaV2には期間内の本質的更新がなく、後継のExLlamaV3を同�
 
 ## 主要更新
 
+### 2026-10-14 — ExLlamaV3 v1.6.2（正式版）
+- CPU offloadingの高速化、tensor parallelismモデルのDFlash2 draft対応、GDN / KDA / MLA層のVRAM固定負荷削減、ROCm gfx11系の注意計算高速化・不具合修正を含む。
+- 公開release noteに条件付き速度倍率・VRAM削減量はない。TPとDFlash2の組合せは複数GPU向けで、単一RTX 4070 SUPERで使えると限らない。[正式版](https://github.com/turboderp-org/exllamav3/releases/tag/v1.6.2)。
+
 ### 2026-10-11 — ExLlamaV3 v1.6.1
 - GDN/KDA/Mambaドラフトの固定VRAM負荷を削減し、再帰型ドラフト、DFlashのスライディング注意、ドラフトとlong-ngramの混合投機的復号などを追加。Windows 11 / RTX 4070 SUPERでの速度・メモリ節約量は未確認。[公式版](https://github.com/turboderp-org/exllamav3/releases/tag/v1.6.1)。
 

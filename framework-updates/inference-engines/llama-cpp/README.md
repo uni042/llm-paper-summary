@@ -78,6 +78,11 @@ llama.cppの主要な機能・性能更新を継続的に記録する集約ペ�
 
 ## 主要更新
 
+### 2026-10-15 — v0.7.0（正式版）
+- CPU側へ退避したMoE expertをGPU LRU cacheへ載せる`--moe-cache-mib`を追加。複数GPU間のcache共有にも対応し、公式release noteは対象条件で復号速度最大約2.2倍を報告する。model、GPU、cache hit率で変わり、一般化できない。
+- LiLiCorrによるDFlash draft、GLM5-NextのMTP / sparse-attention経路、draft microbatchを独立指定する`--spec-draft-n-ubatch`を追加。pooled embeddingでは不要なLM head計算とlogits bufferを省き、公式値は該当経路のVRAM最大10分の1（通常生成には適用されない）。
+- 互換性注意：`llama-server`既定portを8080から9931へ変更（Docker内部portは8080のまま）。chat session APIと整形済み出力形式にも変更があるため、client・proxy・起動scriptを確認する。[正式版](https://github.com/ggml-org/llama.cpp/releases/tag/v0.7.0)。
+
 ### 2026-10-14 — b11622：Jinja JSON浮動小数点表現の精度修正（開発版）
 - Jinjaの`tojson`、`string`、`safe`で浮動小数点数がC++既定の有効桁数6桁へ丸められる問題を修正し、元値へ読み戻せる短い表現を使う。ツール引数やtemplate内の数値を保つ互換性・正確性の修正で、一般的な生成速度向上ではない。
 - **開発ビルド（pre-release）**であり、正式版として扱わない。[公式版](https://github.com/ggml-org/llama.cpp/releases/tag/b11622)／[PR #30362](https://github.com/ggml-org/llama.cpp/pull/30362)

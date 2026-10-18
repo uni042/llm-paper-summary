@@ -40,6 +40,10 @@ TensorRT-LLMの主要な機能・性能更新を継続的に記録する集約�
 
 ## 主要更新
 
+### 2026-10-14 — TensorRT-LLM v1.4.0rc0（公開候補版）
+- GLM-5.3-Flash、K-EXAONE-2、Nemotron Super 3.5 VL、MiniMax-M3のNVFP4 KV cacheなどへ対応を拡張。疎KV構成、階層認識lock / offload、DeepSeek V4向け疎KV offload準備、小batch（8 token以下）のMoE routing、MTP draft loopを更新。
+- **RC0であり正式版ではない**。KVCacheManagerV2のPython backend削除、LlmRequest field移行は破壊的変更。H100のmulti-GPU worker pool再利用でhangする可能性、SM120/121のDeepSeek MLAでCUDA Graph capture時の不正memory accessという既知問題がある。[公式RC](https://github.com/NVIDIA/TensorRT-LLM/releases/tag/v1.4.0rc0)。
+
 ### 2026-10-12 — ReplaySSMの再帰状態最適化（研究・統合状況）
 - SSMの状態更新を定期保存・入力バッファ再生で代替し、投機的復号の巻き戻しと低精度状態読み出しを高速化する研究。NVIDIAの技術記事でTensorRT-LLMを含む関連基盤への適用を紹介。
 - B300/H100等で大規模バッチの復号ステップが最大1.47倍、対象120B級の投機的復号が1.85〜2.10倍という**研究評価**であり、**バッチ1では改善なし**。標準安定版のTensorRT-LLM全モデル・全経路で同倍率が利用可能という意味ではない。[NVIDIA解説](https://developer.nvidia.com/blog/replayssm-rethinking-state-storage-for-faster-hybrid-model-decoding/)／[原著](https://arxiv.org/abs/2610.13778)／[実装](https://github.com/Johnny-Liou/ReplaySSM)
