@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-10-18T10:11:08.393431+00:00",
+  "generated_at": "2026-10-18T10:27:58.823035+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 6,
+  "count": 7,
   "worker_counts": {
-    "scheduled-chat-00": 2,
+    "scheduled-chat-00": 3,
     "scheduled-chat-30": 2,
     "scheduled-chat-45": 2
   },
@@ -76,6 +76,26 @@
         "body_chars": 2413,
         "method_chars": 1072,
         "evaluation_chars": 505,
+        "limitation_chars": 0
+      },
+      "mechanical_failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/99-other-inference-systems/2026-2604.14889-memosight-unifying-context-compression-and-multi-token-prediction-for-re.md",
+      "canonical_id": "arXiv:2604.14889",
+      "title": "MemoSight: Unifying Context Compression and Multi Token Prediction for Reasoning Acceleration",
+      "file_bytes": 14836,
+      "source_sha256": "9d939651659ff40c2ddd51c5a78521f9b9577dc27982f6ee9c23fde560aff601",
+      "source_git_blob_sha": "e55129141c84627911c576cbbaee7bdc2ab0bed5",
+      "assigned_worker": "scheduled-chat-00",
+      "semantic_status": "pending",
+      "mechanical_status": "PASS",
+      "japanese_ratio": 0.961251,
+      "quality_metrics": {
+        "body_chars": 4219,
+        "method_chars": 1197,
+        "evaluation_chars": 1293,
         "limitation_chars": 0
       },
       "mechanical_failures": [],
