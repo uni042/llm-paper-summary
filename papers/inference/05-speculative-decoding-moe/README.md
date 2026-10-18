@@ -5,7 +5,7 @@ Speculative decodingで1回のtarget LLM実行から複数tokenを確定し、�
 MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexpert数や重み転送量も増えやすいため、受理されそうなdraftだけを選ぶ、必要expertを先読みする、GPU常駐expertを優先する等の研究も含める。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（164本）
+## 自動生成の論文一覧（165本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -503,6 +503,10 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
 - **2025-08 · [CARD: A Cache-Assisted Parallel Speculative Decoding Framework via Query-and-Correct Paradigm for Accelerating LLM Inference](2025-2508.04462-card-cache-assisted-parallel-speculative-decoding-for-efficient-large-la.md)**  
   実装：[✓](https://github.com/hunzhizi/CARD) ・ リポジトリ内被引用：0  
   CARDは、大規模言語モデル（LLM）の投機的復号（投機的復号）で、ドラフトモデルが候補を作り終わるまで対象モデルが待ち、対象モデルが検証している間ドラフトモデルが待つという相互待機を減らす方式である。
+
+- **2025-04 · [DEL: Context-Aware Dynamic Exit Layer for Efficient Self-Speculative Decoding](2025-2504.05598-del-context-aware-dynamic-exit-layer-for-efficient-self-speculative-deco.md)**  
+  実装：[✓](https://github.com/hoenza/DEL) ・ リポジトリ内被引用：0  
+  一般的な投機的復号は、軽い下書きモデルが複数トークンを予測し、重い目標モデルが一括検証する。実測ではLLaMA3-8Bで通常復号比2.62倍、LLaMA2-7Bで2.50倍、LLaMA2-70Bで2.41倍の全体高速化を報告する。
 
 ### 3年前（2023-11〜2024-10）
 

@@ -21,7 +21,7 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
 実行場所やmemory tierは異なるが、共通して**KVをlocal GPU HBMだけへ固定すると容量や転送帯域が限界になる問題を避ける、またはその限界を定量化する**研究として扱う。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（106本）
+## 自動生成の論文一覧（107本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -301,6 +301,10 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
 - **2026-05 · [LLM-PILOT: SLO-Aware and Cost-Efficient LLM Serving on Public Cloud VM Clusters via Offloading](2026-25a73d593e80-llm-pilot-slo-aware-and-cost-efficient-llm-serving-on-public-cloud-vm-cl.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   KV退避・注意計算退避・VM構成をSLO制約下で同時探索し、I/Oと待ち行列まで校正した性能モデルでAWSの費用効率を既存方式比最大2.31倍へ改善するLLM-PILOTを提案。
+
+- **2026-05 · [Enabling KV Caching of Shared Prefix for Diffusion Language Models](2026-2606.07571-enabling-kv-caching-of-shared-prefix-for-diffusion-language-models.md)**  
+  実装：[✓](https://github.com/OSSS-KU/BiCache) ・ リポジトリ内被引用：0  
+  自己回帰型言語モデルでは、先頭のシステムプロンプトが同じ要求を何度も処理するとき、その接頭辞のKVを一度だけ計算して別要求へ渡せる。LLaDA、NVIDIA B200、4ベンチマークの主評価では、無キャッシュに対し処理量が36.3〜82.8%向上し、正解率差は主に−0.8〜+0.6ポイントの範囲に収まる。
 
 - **2026-05 · [Adaptive KV Cache Reuse for Fast Long-Context LLM Serving](2026-2605.24022-cachetune-adaptive-kv-reuse.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
