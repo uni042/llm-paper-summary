@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-10-18T11:28:21.780288+00:00",
+  "generated_at": "2026-10-18T11:56:19.384599+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 9,
+  "count": 8,
   "worker_counts": {
     "scheduled-chat-00": 3,
-    "scheduled-chat-30": 3,
+    "scheduled-chat-30": 2,
     "scheduled-chat-45": 3
   },
   "entries": [
@@ -97,26 +97,6 @@
         "method_chars": 1253,
         "evaluation_chars": 871,
         "limitation_chars": 593
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/16-weight-quantization-compression/2026-2601.19320-stableqat-stable-quantization-aware-training-at-ultra-low-bitwidths.md",
-      "canonical_id": "arXiv:2601.19320",
-      "title": "StableQAT: Stable Quantization-Aware Training at Ultra-Low Bitwidths",
-      "file_bytes": 16645,
-      "source_sha256": "41504c81510b6d170348c12fb244ede8a1752717d3b1d1d18c0e402154ad4a96",
-      "source_git_blob_sha": "0f10125392e3da5bb5275a8a55572139441161a1",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.953463,
-      "quality_metrics": {
-        "body_chars": 3989,
-        "method_chars": 1493,
-        "evaluation_chars": 595,
-        "limitation_chars": 0
       },
       "mechanical_failures": [],
       "warnings": []
