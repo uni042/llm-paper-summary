@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "3de514729d9c77b86f3051575d648da63cbc0c7caa69c1d36883d9fedc24c67c",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_8ffd3c8761248191b6cac5589bd18ff6--2025-2503.05248-memory-sla-dynamic-batching-research-20261018-1900-scheduled-chat-00-r01.md",
+  "canonical_id": "arXiv:2503.05248",
+  "worker_completed_at": "2026-10-18T19:52:00+09:00",
+  "worker_run_key": "20261018-1900-scheduled-chat-00/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 4796,
+    "body_paragraphs": 32,
+    "method_chars": 0,
+    "method_paragraphs": 0,
+    "evaluation_chars": 702,
+    "limitation_chars": 727,
+    "insufficiency_flags": [
+      "手法説明量 0 < 700"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 手法説明量 0 < 700"
+  ],
+  "processed_at": "2026-10-18T11:39:38+00:00"
+}

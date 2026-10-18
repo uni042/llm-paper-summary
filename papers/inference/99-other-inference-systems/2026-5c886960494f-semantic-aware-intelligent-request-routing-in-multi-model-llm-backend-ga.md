@@ -24,6 +24,8 @@ last_checked: "2026-10-18"
 worker_id: "scheduled-chat-45"
 worker_run_key: "20261018-0445-scheduled-chat-45/r01"
 worker_completed_at: "2026-10-18T04:46:24+09:00"
+last_audited: null
+audit_version: 0
 ---
 
 # APIRouter：要求の意味的難易度とオンライン学習を組み合わせた複数LLMの経路選択

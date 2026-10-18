@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（814本）
+## 自動生成の論文一覧（816本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -1019,6 +1019,10 @@
 - **2026-05 · [SpecSA: Bridging Speculative Decoding and Sparse Attention for Efficient LLM Inference](2026-2605.19893-specsa-sparse-speculative-verification.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   投機的検証クエリが選ぶ重複KVブロックを一度だけ読み、厳密共有と近似共有、層間索引再利用、融合カーネルを比較して、長文脈の疎注意読出しを減らすシステム。
+
+- **2026-05 · [Semantic-Aware Intelligent Request Routing in Multi-Model LLM Backend Gateways](2026-5c886960494f-semantic-aware-intelligent-request-routing-in-multi-model-llm-backend-ga.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  APIRouterは異種LLMを接続するAPIゲートウェイで、要求の軽量特徴抽出、66MパラメータのDistilBERTによる難易度3分類、負荷・価格・品質を考慮する文脈付きバンディットの三段階でバックエンドを選択する。
 
 - **2026-05 · [Self-Orchestrating Language Models: Leveraging Semantic Dependence for Efficient Inference](2026-2609.14850-self-orchestrating-language-models-leveraging-semantic-dependence-for-ef.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -2177,6 +2181,10 @@
 - **2025-03 · [Reimagining Memory Access for LLM Inference: Compression-Aware Memory Controller Design](2025-2503.18869-reimagining-memory-access-for-llm-inference-compression-aware-memory-controller-design.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   重みとKVキャッシュをビットプレーン・チャネル単位に再配置して無損失圧縮を効かせ、動的量子化時は必要ビットだけを読むメモリ制御器で容量・帯域・エネルギーを同時に削減する。
+
+- **2025-03 · [Radar: Fast Long-Context Decoding for Any Transformer](2025-2503.10571-radar-fast-long-context-decoding-for-any-transformer.md)**  
+  実装：[✓](https://github.com/BorealisAI/radar-decoding) ・ リポジトリ内被引用：0  
+  Radarは、事前学習済みTransformerの重みを再学習せずに、長い文脈の自己回帰復号を高速化する方式である。論文のPG-19とコード系列の実験では、A100 40GB、Llama-3.1-8BおよびMistral-7Bを用い、密注意に近い困惑度（差がおよそ0.2以下）を維持しながら、2倍超の高速化を報告する。
 
 - **2025-03 · [PIPO: Pipelined Offloading for Efficient Inference on Consumer Devices](2025-2504.03664-pipo-pipelined-offloading-for-efficient-inference-on-consumer-devices.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

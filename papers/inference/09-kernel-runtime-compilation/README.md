@@ -23,7 +23,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - [06-moe-quantization-compression](../06-moe-quantization-compression/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（109本）
+## 自動生成の論文一覧（110本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -99,6 +99,10 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - **2026-09 · [Understanding LLM Quantization through Activation-Guided Compensation and Orthogonal Residuals](2026-2609.21450-understanding-llm-quantization-through-activation-guided-compensation-an.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   重みと活性値をともに4ビットへ縮小する学習後量子化では、特定の活性値チャネルに継続的に現れる大きな値が、量子化に使用する尺度を広げ、通常値に割り当てられる表現段階を粗くする。
+
+- **2026-09 · [Routing Should Pay for Itself: Sparse Supervision for Economical LLM Routing](2026-2609.37402-routing-should-pay-for-itself-sparse-supervision-for-economical-llm-rout.md)**  
+  実装：[✓](https://github.com/LAMDA-Model-Reuse/SaveRouter) ・ リポジトリ内被引用：0  
+  LLMの品質と推論単価はモデルごとに異なるため、容易な問い合わせを小型・安価なモデルへ送り、難しい問い合わせを高性能モデルへ送れば総費用を下げられる。しかし、どの問い合わせにどのモデルが適するかを学習するには、通常は大量の過去問い合わせに複数モデルを実行し、品質の教師信号を取得する必要がある。従来方式で最も早い損益分岐は11,500件である。
 
 - **2026-09 · [KV-Kaizen: Learning Context-Adaptive Cache Compression Choices](2026-2609.37988-kv-kaizen-learning-context-adaptive-cache-compression-choices.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
