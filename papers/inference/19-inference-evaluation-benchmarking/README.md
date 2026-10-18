@@ -147,7 +147,7 @@
   モデル自体に短い推論を学習させる方式、推論の出力軌跡を途中で圧縮・制御する方式、入力の難度や指示に応じて推論量を変える方式である。
 
 - **2025-02 · [KernelBench: Can LLMs Write Efficient GPU Kernels?](2025-2502.10517-kernelbench-can-llms-write-efficient-gpu-kernels.md)**  
-  実装：[✓](https://github.com/ScalingIntelligence/KernelBench) ・ リポジトリ内被引用：12  
+  実装：[✓](https://github.com/ScalingIntelligence/KernelBench) ・ リポジトリ内被引用：13  
   一般的なプログラム合成では単体試験に通ることを重視するが、GPUカーネルの実用性は入力形状、メモリ階層、並列実行、命令セットに左右される。正しくても遅い実装を成功とみなさないことが設計の中心にある。例えばDeepSeek-R1の fast1 は単一演算12%、複合演算36%、モデル全体2%である。
 
 - **2025-01 · [LLaVA-Mini: Efficient Image and Video Large Multimodal Models with One Vision Token](2025-2501.03895-llava-mini-efficient-image-and-video-large-multimodal-models-with-one-vi.md)**  

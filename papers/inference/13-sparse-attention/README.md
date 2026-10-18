@@ -263,7 +263,7 @@
   疎注意（sparse 注意機構）は参照対象を重要トークンへ限定して帯域を節約するが、従来の多くの方式は選択数を固定した上位k件（top-k）方式である。
 
 - **2024-11 · [Squeezed Attention: Accelerating Long Context Length LLM Inference](2024-2411.09688-squeezed-attention-accelerating-long-context-length-llm-inference.md)**  
-  実装：[✓](https://github.com/SqueezeAILab/SqueezedAttention) ・ リポジトリ内被引用：13  
+  実装：[✓](https://github.com/SqueezeAILab/SqueezedAttention) ・ リポジトリ内被引用：14  
   中心的な前提：入力の大部分が、複数リクエスト間で変化しない固定文書・指示・例示である。前処理で固定文脈の鍵をクラスタ化し、オンラインの問い合わせに関連する元の鍵・値だけを読出す。
 
 - **2025-06 · [SeerAttention-R: Sparse Attention Adaptation for Long Reasoning](2025-2506.08889-seerattention-r-sparse-attention-adaptation-for-long-reasoning.md)**  

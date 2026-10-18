@@ -298,6 +298,10 @@
   実装：[✓](https://github.com/Charmstok/Chunked_Prefill_Serving) ・ リポジトリ内被引用：1  
   待ち時間と残りプリフィル量で処理順を更新し、遅延予測でチャンク量を目標時間へ合わせ、同時プリフィル数も制限することで、分割プリフィル配信の公平性と裾遅延を改善する。
 
+- **2026-05 · [VibeServe: Can AI Agents Build Bespoke LLM Serving Systems?](2026-2605.06068-vibeserve-agent-generated-bespoke-serving-systems.md)**  
+  実装：[✓](https://github.com/uw-syfi/vibe-serve) ・ リポジトリ内被引用：1  
+  モデル・ワークロード・ハードウェアごとに複数AIエージェントがLLMサービング基盤を生成し、標準条件ではvLLM相当、特殊条件では予測出力・ハイブリッドキャッシュ・Apple Silicon特化などを自動実装して最大6.27倍高速化する。
+
 - **2026-05 · [Towards Distributed Inference of LLMs on a P2P Network](2026-2606.17059-p2p-prefix-cache-aware-routing.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   分散LLMサービングで各ノードの接頭辞KV基数木を交換し、キャッシュを持つノードへ要求を移すP2Pルーティングでプリフィル再計算を減らすが、転送遅延と負荷集中も測定する。
@@ -727,10 +731,6 @@
 - **2026-06 · [AgentServeSim: Serving-System Simulation and Policy Search for LLM Agent Programs](2026-2606.09613-agentservesim-multiturn-agent-serving-simulator.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   多輪エージェントを要求列ではなく因果的なプログラムとして模擬し、ツール待ちをまたぐKV保持・セッション配置・プログラム単位スケジューリングを同一評価基盤で比較する。実vLLMとの20条件で平均完了時間誤差を約5.5%以内に抑える。
-
-- **2026-05 · [VibeServe: Can AI Agents Build Bespoke LLM Serving Systems?](2026-2605.06068-vibeserve-agent-generated-bespoke-serving-systems.md)**  
-  実装：[✓](https://github.com/uw-syfi/vibe-serve) ・ リポジトリ内被引用：0  
-  モデル・ワークロード・ハードウェアごとに複数AIエージェントがLLMサービング基盤を生成し、標準条件ではvLLM相当、特殊条件では予測出力・ハイブリッドキャッシュ・Apple Silicon特化などを自動実装して最大6.27倍高速化する。
 
 - **2026-05 · [Trading Complexity for Expressivity Through Structured Generalized Linear Token Mixing](2026-2605.31367-trading-complexity-for-expressivity-through-structured-generalized-linea.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -1257,7 +1257,7 @@
 ### 3年前（2023-11〜2024-10）
 
 - **2023-12 · [SGLang: Efficient Execution of Structured Language Model Programs](2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md)**  
-  実装：[✓](https://github.com/sgl-project/sglang) ・ リポジトリ内被引用：506  
+  実装：[✓](https://github.com/sgl-project/sglang) ・ リポジトリ内被引用：507  
   複数のLLM呼び出しや条件分岐をランタイムが1つのプログラムとして理解し、共有接頭辞のKV再利用・並列実行・構造化出力生成をまとめて効率化する推論システム。
 
 - **2024-07 · [DistServe: Disaggregating Prefill and Decoding for Goodput-optimized Large Language Model Serving](2024-2401.09670-distserve-disaggregating-prefill-decoding-goodput.md)**  
@@ -1451,7 +1451,7 @@
 ### 4年前（2022-11〜2023-10）
 
 - **2023-09 · [Efficient Memory Management for Large Language Model Serving with PagedAttention](2023-2309.06180-vllm-pagedattention-efficient-memory-management.md)**  
-  実装：[✓](https://github.com/vllm-project/vllm) ・ リポジトリ内被引用：1122  
+  実装：[✓](https://github.com/vllm-project/vllm) ・ リポジトリ内被引用：1124  
   vLLMは、要求ごとに大きな連続領域を予約していたKVキャッシュを固定長ブロックへ分解し、論理的な並びとGPU上の物理配置を分離する。必要なブロックだけ動的に割り当て、同じ接頭辞のKVを共有することで、限られたGPUメモリへより多くの要求を同時に載せる。
 
 - **2023-08 · [SARATHI: Efficient LLM Inference by Piggybacking Decodes with Chunked Prefills](2023-2308.16369-sarathi.md)**  
