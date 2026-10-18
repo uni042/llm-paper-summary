@@ -22,5 +22,10 @@
   "failures": [
     "長文定型文の再利用を検出: papers/inference/10-kv-cache-offload-recomputation/2026-2606.07571-enabling-kv-caching-of-shared-prefix-for-diffusion-language-models.md と 17 段落 / 3964文字 (100.0%) が完全一致"
   ],
-  "processed_at": "2026-10-18T13:26:17+00:00"
+  "processed_at": "2026-10-18T13:26:17+00:00",
+  "manual_content_review": {
+    "decision": "kept_existing_paper",
+    "existing_paper_blob_sha": "cd46cd48eaafcf2dcb3450e7ab66384dfe5b1bb4",
+    "reason": "Compared the complete incoming file with the represented paper. All 54 body paragraphs match after whitespace normalization and headings are identical; the existing paper also carries richer references and audit metadata, so the incoming copy adds no distinct research content."
+  }
 }
