@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "9a2db2751e11695bd184ad58327b2793811e2fce761ec4ecb65db0ac6b05fb86",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/retry-research-357cc6c833ae--libfile_e8244a64da0881918262f883c940cb4f--2026-2606.07571-bicache-diffusion-shared-prefix-kv-reuse-research-20261018-1100-scheduled-chat-00-r01.md",
+  "canonical_id": "arXiv:2606.07571",
+  "worker_completed_at": "2026-10-18T11:20:00+09:00",
+  "worker_run_key": "20261018-1100-scheduled-chat-00/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 8295,
+    "body_paragraphs": 58,
+    "method_chars": 2819,
+    "method_paragraphs": 20,
+    "evaluation_chars": 628,
+    "limitation_chars": 517,
+    "insufficiency_flags": []
+  },
+  "failures": [
+    "長文定型文の再利用を検出: papers/inference/10-kv-cache-offload-recomputation/2026-2606.07571-enabling-kv-caching-of-shared-prefix-for-diffusion-language-models.md と 17 段落 / 3964文字 (100.0%) が完全一致"
+  ],
+  "processed_at": "2026-10-18T14:00:15+00:00"
+}
