@@ -106,6 +106,10 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
   実装：✓ ・ リポジトリ内被引用：1  
   MoE各層の専門家負荷偏りから複製1個当たりの均衡改善を推定し、限られたGPUメモリを効果の高い層へ集中配分して、過剰複製によるKV容量減少を避ける。
 
+- **2026-01 · [Making MoE-based LLM Inference Resilient with TARRAGON](2026-2601.01310-tarragon-resilient-moe-inference.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  注意側とエキスパート側を別故障領域に分け、動的エキスパート経路、増分KVチェックポイント、影エキスパートで故障ワーカーだけを自己修復し、MoE推論の全体再起動を避ける。
+
 - **2025-12 · [SliceMoE: Bit-Sliced Expert Caching under Miss-Rate Constraints for Efficient MoE Inference](2025-2512.12990-slicemoe-bit-sliced-expert-caching.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   MoEエキスパートを上位・下位ビットのスライス単位でキャッシュし、重要度に応じて精度を動的再構成することで、フラッシュ転送を抑えながら高精度を保つ端末向け推論方式。
@@ -292,10 +296,6 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
   実装：[✓](https://github.com/YiwengXie/FluxMem) ・ リポジトリ内被引用：0  
   すべての視覚トークンを保持すると、時間の経過とともに事前充填（プリフィル）の費用、KVキャッシュ、GPUメモリ使用量が増加する。直近のフレームは細部を残し、少し古いフレームは隣接時刻との重複を除き、さらに古いフレームは空間的に類似する領域を一つの代表トークンへ統合する。
 
-- **2026-01 · [Making MoE-based LLM Inference Resilient with TARRAGON](2026-2601.01310-tarragon-resilient-moe-inference.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  注意側とエキスパート側を別故障領域に分け、動的エキスパート経路、増分KVチェックポイント、影エキスパートで故障ワーカーだけを自己修復し、MoE推論の全体再起動を避ける。
-
 - **2025-12 · [ODMA: On-Demand Memory Allocation Framework for LLM Serving on LPDDR-Class Accelerators](2025-2512.09427-odma-on-demand-memory-allocation-lpddr.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   LPDDR系アクセラレータで長さ予測と動的連続バケットによりKVキャッシュをオンデマンド確保し、メモリ利用率とRPS/TPSを改善する方式。
@@ -413,7 +413,7 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
 ### 3年前（2023-11〜2024-10）
 
 - **2023-12 · [PowerInfer: Fast Large Language Model Serving with a Consumer-grade GPU](2023-2312.12456-powerinfer.md)**  
-  実装：[✓](https://github.com/SJTU-IPADS/PowerInfer) ・ リポジトリ内被引用：108  
+  実装：[✓](https://github.com/SJTU-IPADS/PowerInfer) ・ リポジトリ内被引用：109  
   活性化頻度の高いニューロンをGPUへ常駐させ、低頻度ニューロンをCPUで疎計算するニューロン粒度のCPU-GPU協調推論基盤。
 
 - **2023-12 · [LLM in a flash: Efficient Large Language Model Inference with Limited Memory](2023-2312.11514-llm-in-a-flash-efficient-large-language-model-inference-with-limited-memory.md)**  

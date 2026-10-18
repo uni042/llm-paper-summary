@@ -130,6 +130,10 @@
   実装：✓ ・ リポジトリ内被引用：3  
   問い合わせごとのモデル振り分けと異種GPU上のモデル配置・並列化を多目的ベイズ最適化で同時に探索し、品質制約下の遅延と運用費を削減する。
 
+- **2026-01 · [Towards Resiliency in Large Language Model Serving with KevlarFlow](2026-2601.22438-kevlarflow-resilient-llm-serving.md)**  
+  実装：✓ ・ リポジトリ内被引用：3  
+  故障したパイプライン段だけを健全ノードへ動的に差し替え、KVキャッシュを背景複製して処理中要求を継続するLLM配信耐障害化。A10の8/16台クラスタで復旧時間を約30秒まで短縮し、故障時TTFTを最大574.6倍改善。
+
 - **2025-12 · [Cornfigurator: Automated Planning for Any-to-Any Multimodal Model Serving](2025-2512.14098-cornserve-efficiently-serving-any-to-any-multimodal-models.md)**  
   実装：[✓](https://github.com/cornserve-ai/cornfigurator) ・ リポジトリ内被引用：3  
   これらを一つのGPU集合へ固定すると遅い構成要素が全体を止め、逆にすべてを分離すると使われないGPUや通信費が増える。実機評価ではQwen 3 Omni、InternVL 3、Qwen 3 VL、Qwen-Imageなどを対象に、既存方式や専門家調整配置と同等または最大6.32倍の有効スループットを報告する。
@@ -198,6 +202,10 @@
   実装：✓ ・ リポジトリ内被引用：2  
   実行中のKVキャッシュ容量とレイヤー配置を動的に組み替え、差分KV同期で停止を約10msに抑えながら、ワークロードに応じたパイプライン並列構成へ切り替えるLLMサービング方式。
 
+- **2026-04 · [Foundry: Template-Based CUDA Graph Context Materialization for Fast LLM Serving Cold Start](2026-2604.06664-foundry-cuda-graph-context-materialization.md)**  
+  実装：[✓](https://github.com/foundry-org/foundry) ・ リポジトリ内被引用：2  
+  CUDAグラフの仮想アドレス配置とカーネルバイナリまで保存し、少数の構造テンプレートから再構築することで、LLMサービングの起動時グラフ捕捉を数分から数秒へ短縮する方式。
+
 - **2026-04 · [fabric-lib: RDMA Point-to-Point Communication for LLM Systems](2026-2510.27656-fabric-lib-rdma-point-to-point-communication-for-llm-systems.md)**  
   実装：[✓](https://github.com/perplexityai/pplx-garden) ・ リポジトリ内被引用：2  
   fabric-libは、大規模言語モデルの分離推論、混合専門家モデルのトークン配送、非同期強化学習における重み更新を、異なるネットワーク機器でも共通の遠隔直接メモリアクセス（Remote Direct メモリ Access、RDMA）操作で実行する通信基盤である。
@@ -213,10 +221,6 @@
 - **2026-02 · [GORGO: Online Tuning for Cross-Region Network-Aware LLM Serving](2026-2602.11688-gorgo-online-tuning-for-cross-region-network-aware-llm-serving.md)**  
   実装：[✓](https://github.com/atoniolo76/GORGO) ・ リポジトリ内被引用：2  
   接頭辞再利用率だけを最大化すると負荷が一部のサーバーへ集中し、空いているサーバーを選ぶだけでは長い接頭辞を再計算してしまう。地域間の通信遅延が数十〜数百ミリ秒以上変動する場合、二つの指標だけを考慮する方式では、最初のトークンが返るまでの時間を適切に見積もれない。
-
-- **2026-01 · [Towards Resiliency in Large Language Model Serving with KevlarFlow](2026-2601.22438-kevlarflow-resilient-llm-serving.md)**  
-  実装：✓ ・ リポジトリ内被引用：2  
-  故障したパイプライン段だけを健全ノードへ動的に差し替え、KVキャッシュを背景複製して処理中要求を継続するLLM配信耐障害化。A10の8/16台クラスタで復旧時間を約30秒まで短縮し、故障時TTFTを最大574.6倍改善。
 
 - **2026-01 · [Power Aware Dynamic Reallocation For Inference](2026-2601.12241-rapid-power-aware-dynamic-reallocation.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
@@ -290,6 +294,10 @@
   実装：✓ ・ リポジトリ内被引用：1  
   TP/PP切替で重み・KV・通信群・ワーカーを作り直す代わりに、CPU共有重み、二次元KV移送、事前生成通信状態、待機ワーカーを再利用し、数秒で並列構成を変更できるLLMサービング方式。
 
+- **2026-06 · [LUMEN: Coordinated Failure Recovery for Distributed LLM Serving](2026-2606.17787-lumen-coordinated-failure-recovery.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  障害前の負荷認識キャッシュ保存、障害時の保存局所性と負荷を両立する再配分、モデル再読込中の小型下書きモデルによる投機補助を協調させ、分散大規模言語モデル提供基盤の復旧遅延を縮める方式。
+
 - **2026-06 · [HBM Is Not All You Need: Efficient Disaggregated LLM Serving across Memory-heterogeneous Accelerators](2026-2606.29986-hma-serve-memory-heterogeneous-accelerators.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   計算律速のプリフィルを安価なGDDR搭載アクセラレータ、メモリ律速のデコードをHBM GPUへ分担し、低精度KVの層別転送と遅延復元で異ベンダー間の形式差と通信待ちを隠す分離配信方式。
@@ -297,6 +305,10 @@
 - **2026-06 · [Fairness-Aware and Latency-Controllable Scheduling for Chunked-Prefill LLM Serving](2026-2606.09061-fairness-latency-chunked-prefill-scheduling.md)**  
   実装：[✓](https://github.com/Charmstok/Chunked_Prefill_Serving) ・ リポジトリ内被引用：1  
   待ち時間と残りプリフィル量で処理順を更新し、遅延予測でチャンク量を目標時間へ合わせ、同時プリフィル数も制限することで、分割プリフィル配信の公平性と裾遅延を改善する。
+
+- **2026-06 · [Concordia: JIT-Compiled Persistent-Kernel Checkpointing for Fault-Tolerant LLM Inference](2026-2606.23521-concordia-persistent-kernel-checkpointing.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  GPU常駐の永続カーネルでKVキャッシュ等の差分を検出・追記保存し、NCCL境界でのチェックポイントとGPU故障復旧をホストCPU依存なしに高速化する耐障害LLM推論基盤。
 
 - **2026-05 · [VibeServe: Can AI Agents Build Bespoke LLM Serving Systems?](2026-2605.06068-vibeserve-agent-generated-bespoke-serving-systems.md)**  
   実装：[✓](https://github.com/uw-syfi/vibe-serve) ・ リポジトリ内被引用：1  
@@ -342,10 +354,6 @@
   実装：✓ ・ リポジトリ内被引用：1  
   GPU割当とプロンプト振り分けを構成別遅延モデルと双対価格で共同最適化し、同一クラスタでも配備構成がSLO下の達成品質を最大87%変えることを示す。
 
-- **2026-04 · [Foundry: Template-Based CUDA Graph Context Materialization for Fast LLM Serving Cold Start](2026-2604.06664-foundry-cuda-graph-context-materialization.md)**  
-  実装：[✓](https://github.com/foundry-org/foundry) ・ リポジトリ内被引用：1  
-  CUDAグラフの仮想アドレス配置とカーネルバイナリまで保存し、少数の構造テンプレートから再構築することで、LLMサービングの起動時グラフ捕捉を数分から数秒へ短縮する方式。
-
 - **2026-04 · [Dual-Pool Token-Budget Routing for Cost-Efficient and Reliable LLM Serving](2026-2604.08075-dual-pool-token-budget-routing.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   短文が大半なのに全GPUを最長文脈向けに設定する無駄を、短文・長文の2群と自己較正する総トークン予算ルーティングで解き、KV容量の過剰予約、要求追い出し、GPU費用を同時に削減する。
@@ -369,6 +377,10 @@
 - **2026-03 · [MoEless: Efficient MoE LLM Serving via Serverless Computing](2026-2603.06350-moeless-serverless-moe-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   分散MoE推論で次の層のエキスパート負荷を予測し、混雑するエキスパートだけを一時複製して複数GPUへ配置し、ルータを変えずに同期点での最遅GPU待ちを減らすサーバーレス提供システム。
+
+- **2026-03 · [GhostServe: A Lightweight Checkpointing System in the Shadow for Fault-Tolerant LLM Serving](2026-2605.00831-ghostserve-shadow-checkpointing-fault-tolerant-serving.md)**  
+  実装：[✓](https://github.com/project-ghostserve/26mlsys-AE-GhostServe) ・ リポジトリ内被引用：1  
+  KVキャッシュ全体ではなく消失訂正符号パリティをホストメモリへ退避し、長文脈LLMの障害復旧を低メモリ・低遅延化する。
 
 - **2026-03 · [Cost-Efficient Multimodal LLM Inference via Cross-Tier GPU Heterogeneity](2026-2603.12707-cost-efficient-multimodal-llm-inference-via-cross-tier-gpu-heterogeneity.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
@@ -425,6 +437,10 @@
 - **2025-11 · [FREESH: Fair, Resource- and Energy-Efficient Scheduling for LLM Serving on Heterogeneous GPUs](2025-2511.00807-freesh-fair-resource-energy-efficient-scheduling.md)**  
   実装：[✓](https://github.com/AndrewFangZequan/LLM_Serving_FREESH) ・ リポジトリ内被引用：1  
   地域別炭素強度と異種GPU特性を使った30分単位の資源配置、1秒単位の動的周波数制御、要求単位の最小余裕時間優先を組み合わせ、エネルギー28.6%・炭素排出45.45%を削減する分散LLMサービング方式。
+
+- **2025-11 · [FailSafe: High-performance Resilient Serving](2025-2511.14116-failsafe-resilient-tensor-parallel-serving.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  GPU障害後も任意数のGPUでテンソル並列推論を継続し、KVキャッシュ配置・注意計算・要求割当を均衡化しながら状態復旧を高速化する。
 
 ### 直近12か月・未被引用（2025-11〜2026-10）
 
@@ -704,10 +720,6 @@
   実装：[✓](https://github.com/mstar-project/mstar) ・ リポジトリ内被引用：0  
   複合マルチモーダルモデルを構成要素グラフと要求別の『Walk』で宣言し、ループ・並列分岐・ストリーミング・GPU配置を共通実行時へ落とし込むことで、モデルごとの専用配線なしに高性能化する汎用サービング基盤。
 
-- **2026-06 · [LUMEN: Coordinated Failure Recovery for Distributed LLM Serving](2026-2606.17787-lumen-coordinated-failure-recovery.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  障害前の負荷認識キャッシュ保存、障害時の保存局所性と負荷を両立する再配分、モデル再読込中の小型下書きモデルによる投機補助を協調させ、分散大規模言語モデル提供基盤の復旧遅延を縮める方式。
-
 - **2026-06 · [KernelFlume: Elastic Core-Attention Scaling for Agentic Long-Context Decoding](2026-2606.29207-kernelflume-elastic-core-attention-scaling.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   モデル重みを固定した重みノードとKV保持・注意計算だけの重みなしノードへデコードを分離し、長文要求のKV増加に合わせて注意側だけを増設することで、完全モデル複製なしに低遅延で容量を拡張するサービング方式。
@@ -723,10 +735,6 @@
 - **2026-06 · [Energy-Aware Scheduling for Serverless LLM Serving on Shared GPUs](2026-2606.30391-energy-aware-scheduling-for-serverless-llm-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   共有GPU上の複数LLMについて、要求配置・SM分割・GPU周波数・低負荷時集約をSLO制約下で協調し、同居モデルの周波数不一致を避けてクラスタ全体の推論エネルギーを削減するサーバレス制御方式。
-
-- **2026-06 · [Concordia: JIT-Compiled Persistent-Kernel Checkpointing for Fault-Tolerant LLM Inference](2026-2606.23521-concordia-persistent-kernel-checkpointing.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  GPU常駐の永続カーネルでKVキャッシュ等の差分を検出・追記保存し、NCCL境界でのチェックポイントとGPU故障復旧をホストCPU依存なしに高速化する耐障害LLM推論基盤。
 
 - **2026-06 · [Beyond Prediction: Tail-Aware Scheduling for LLM Inference](2026-2606.18431-tail-aware-prediction-free-scheduling.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -844,10 +852,6 @@
   実装：✓ ・ リポジトリ内被引用：0  
   MFSは、遠隔KV取得・集団通信・プリフィルからデコードへの転送を依存付きの段階として追跡し、余裕のある通信を遅らせ、締切が近いフローを逆多段キューで昇格してTTFTのSLO違反を減らすネットワークスケジューラ。
 
-- **2026-03 · [GhostServe: A Lightweight Checkpointing System in the Shadow for Fault-Tolerant LLM Serving](2026-2605.00831-ghostserve-shadow-checkpointing-fault-tolerant-serving.md)**  
-  実装：[✓](https://github.com/project-ghostserve/26mlsys-AE-GhostServe) ・ リポジトリ内被引用：0  
-  KVキャッシュ全体ではなく消失訂正符号パリティをホストメモリへ退避し、長文脈LLMの障害復旧を低メモリ・低遅延化する。
-
 - **2026-03 · [CALVO: Improve Serving Efficiency for LLM Inferences with Intense Network Demands](2026-2603.21257-calvo-network-aware-kv-loading-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   遠隔KV読み込みを独立した非同期段階へ分離し、通信時間と計算時間を合わせた要求費用で順序付けすることで、長文脈の高キャッシュ再利用環境で平均最初のトークン時間を81.3%以上短縮し、期限達成率を最大61.67%改善する。
@@ -899,10 +903,6 @@
 - **2025-11 · [MaverIQ: Fingerprint-Guided Extrapolation and Fragmentation-Aware Layering for Intent-Based LLM Serving](2025-ef9c70168212-maveriq-fingerprint-guided-extrapolation-and-fragmentation-aware-layerin.md)**  
   実装：[✓](https://github.com/UT-SysML/MaverIQ) ・ リポジトリ内被引用：0  
   MaverIQは、大規模言語モデル（Large Language モデル; LLM）の推論サービスを配備する際、利用者が「遅延を最小化したい」「費用上限を守りたい」「精度を落とせない」といった目的を指定するだけで、モデル圧縮、テンソル並列（テンソル Parallelism; TP）、パイプライン並列（パイプライン Parallelism…
-
-- **2025-11 · [FailSafe: High-performance Resilient Serving](2025-2511.14116-failsafe-resilient-tensor-parallel-serving.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  GPU障害後も任意数のGPUでテンソル並列推論を継続し、KVキャッシュ配置・注意計算・要求割当を均衡化しながら状態復旧を高速化する。
 
 ### 2年前（2024-11〜2025-10）
 
@@ -1014,6 +1014,10 @@
   実装：[✓](https://github.com/hao-ai-lab/Dynasor) ・ リポジトリ内被引用：11  
   複雑な問題に対して大規模言語モデル（LLM）が長い思考過程を生成したり、複数経路を探索したりする場合、計算を増やすほど正答率が上がるとは限らない。本研究の焦点は、難度を入力問題の外見から事前に予測するのではなく、推論を実際に進めた結果、回答がどこまで安定したかを観測することである。
 
+- **2025-02 · [HydraServe: Minimizing Cold Start Latency for Serverless LLM Serving in Public Clouds](2025-2502.15524-hydraserve-serverless-cold-start.md)**  
+  実装：[✓](https://github.com/LLMServe/hydraserve) ・ リポジトリ内被引用：10  
+  起動時だけモデル層を複数サーバーへ分散して帯域を束ね、重み取得・GPU転送・実行環境初期化を重ね、起動後にワーカーを集約することでサーバーレスLLMのコールドスタートを1.7〜4.7倍短縮する。
+
 - **2025-01 · [DeepServe: Serverless Large Language Model Serving at Scale](2025-2501.14417-deepflow-serverless-llm-serving-at-scale.md)**  
   実装：✓ ・ リポジトリ内被引用：10  
   要求・ジョブ・タスク抽象、NPU中心FlowServe、KV局所性とPD構成を統合した分散スケジューラ、NPU-fork等の高速スケールを組み合わせたHuawei Cloud本番サーバーレスLLM基盤。
@@ -1041,10 +1045,6 @@
 - **2025-02 · [ThunderServe: High-performance and Cost-efficient LLM Serving in Cloud Environments](2025-2502.09334-thunderserve-high-performance-and-cost-efficient-llm-serving-in-cloud-en.md)**  
   実装：✓ ・ リポジトリ内被引用：9  
   ThunderServeは、同種の高性能GPUを大量に確保できない環境で、大規模言語モデル（LLM）の推論を低コストかつ高いサービス水準で提供する分散サービング方式である。
-
-- **2025-02 · [HydraServe: Minimizing Cold Start Latency for Serverless LLM Serving in Public Clouds](2025-2502.15524-hydraserve-serverless-cold-start.md)**  
-  実装：[✓](https://github.com/LLMServe/hydraserve) ・ リポジトリ内被引用：9  
-  起動時だけモデル層を複数サーバーへ分散して帯域を束ね、重み取得・GPU転送・実行環境初期化を重ね、起動後にワーカーを集約することでサーバーレスLLMのコールドスタートを1.7〜4.7倍短縮する。
 
 - **2025-01 · [Hierarchical Autoscaling for Large Language Model Serving with Chiron](2025-2501.08090-chiron-hierarchical-autoscaling.md)**  
   実装：✓ ・ リポジトリ内被引用：9  
@@ -1118,6 +1118,10 @@
   実装：✓ ・ リポジトリ内被引用：6  
   チャットとコード生成のように異なるサービス品質目標（Service Level Objective; SLO）を持つ要求を一つの先着順で処理せず、入力長・予想出力長・要求ごとのSLOから「どの順序・どのバッチなら何件が期限内に終わるか」を推定し、焼きなまし法（シミュレーション Annealing）で優先順を探索する。
 
+- **2024-12 · [BLITZSCALE: Fast and Live Large Model Autoscaling with O(1) Host Caching](2024-2412.17246-blitzscale-fast-and-live-large-model-autoscaling-with-o-1-host-caching.md)**  
+  実装：[✓](https://github.com/blitz-serving/blitz-scale) ・ リポジトリ内被引用：6  
+  一方、需要を観測してから新しい提供インスタンスを起動する従来方式では、数十GBから数百GBの重みをストレージやホストメモリからGPUへロードする時間が長く、急な要求増加に追いつけない。
+
 - **2025-09 · [Amoeba: Runtime Tensor Parallel Transformation for LLM Inference Services](2025-2509.19729-gyges-cross-instance-parallelism-transformation.md)**  
   実装：✓ ・ リポジトリ内被引用：5  
   要求長に応じて稼働中インスタンスをTP1↔TP2↔TP4へ変換し、KVページ配置と重み境界を事前整列して再計算なしで並列度を変えることで、短文時の高処理量と長文対応を両立する方式。
@@ -1129,10 +1133,6 @@
 - **2025-03 · [Seesaw: High-throughput LLM Inference via Model Re-sharding](2025-2503.06433-seesaw-high-throughput-llm-inference-via-model-re-sharding.md)**  
   実装：✓ ・ リポジトリ内被引用：5  
   プリフィルとデコードでモデルの並列分割を動的に切り替え、CPU階層KVバッファと遷移最小化で再配置費用を償却し、vLLM比最大1.78倍・平均1.36倍のスループットを達成する。
-
-- **2024-12 · [BLITZSCALE: Fast and Live Large Model Autoscaling with O(1) Host Caching](2024-2412.17246-blitzscale-fast-and-live-large-model-autoscaling-with-o-1-host-caching.md)**  
-  実装：[✓](https://github.com/blitz-serving/blitz-scale) ・ リポジトリ内被引用：5  
-  一方、需要を観測してから新しい提供インスタンスを起動する従来方式では、数十GBから数百GBの重みをストレージやホストメモリからGPUへロードする時間が長く、急な要求増加に追いつけない。
 
 - **2025-07 · [BucketServe: Bucket-Based Dynamic Batching for Smart and Efficient LLM Inference Serving](2025-2507.17120-bucketserve-dynamic-batching.md)**  
   実装：✓ ・ リポジトリ内被引用：4  
@@ -1265,11 +1265,11 @@
 ### 3年前（2023-11〜2024-10）
 
 - **2023-12 · [SGLang: Efficient Execution of Structured Language Model Programs](2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md)**  
-  実装：[✓](https://github.com/sgl-project/sglang) ・ リポジトリ内被引用：508  
+  実装：[✓](https://github.com/sgl-project/sglang) ・ リポジトリ内被引用：509  
   複数のLLM呼び出しや条件分岐をランタイムが1つのプログラムとして理解し、共有接頭辞のKV再利用・並列実行・構造化出力生成をまとめて効率化する推論システム。
 
 - **2024-07 · [DistServe: Disaggregating Prefill and Decoding for Goodput-optimized Large Language Model Serving](2024-2401.09670-distserve-disaggregating-prefill-decoding-goodput.md)**  
-  実装：[✓](https://github.com/LLMServe/DistServe) ・ リポジトリ内被引用：480  
+  実装：[✓](https://github.com/LLMServe/DistServe) ・ リポジトリ内被引用：481  
   DistServeは、二段階を異なるGPU群へ分離し、事前入力処理側と逐次復号側の装置配分、モデル並列化、要求の束ね方を独立に決める。OSDI 2024の論文は、四ノード・計32台のA100 80GBを用い、OPT-13B、OPT-66B、OPT-175Bと三種のアプリケーションを評価した。
 
 - **2023-11 · [Splitwise: Efficient Generative LLM Inference Using Phase Splitting](2023-2311.18677-splitwise-efficient-generative-llm-inference-phase-splitting.md)**  
@@ -1277,7 +1277,7 @@
   プリフィルとデコードを別の計算機群へ分け、それぞれに向くGPU世代・電力設定・台数を使い分けて、クラスタ全体のスループット・コスト・消費電力を改善するサービング設計。
 
 - **2024-03 · [Taming Throughput-Latency Tradeoff in LLM Inference with Sarathi-Serve](2024-2403.02310-sarathi-serve-chunked-prefills-stall-free-scheduling.md)**  
-  実装：[✓](https://github.com/microsoft/sarathi-serve) ・ リポジトリ内被引用：370  
+  実装：[✓](https://github.com/microsoft/sarathi-serve) ・ リポジトリ内被引用：371  
   本論文の重要な点は、単純に事前入力を分割するだけでなく、デコードと事前入力を同じ反復へ混ぜるスケジューリング規則、反復あたりの総トークン予算、パイプライン並列化での仕事量の均等化を一体で設計したことである。
 
 - **2024-06 · [Llumnix: Dynamic Scheduling for Large Language Model Serving](2024-2406.03243-llumnix-dynamic-scheduling-live-migration.md)**  
@@ -1285,20 +1285,20 @@
   Llumnixは、複数のGPU実行単位で大規模言語モデルを提供するとき、要求を最初に振り分けて終わりにせず、生成途中でも別の実行単位へ移動するスケジューラである。
 
 - **2024-03 · [Cost-Efficient Large Language Model Serving for Multi-turn Conversations with CachedAttention](2024-2403.19708-cachedattention-multi-turn-conversation-serving.md)**  
-  実装：✓ ・ リポジトリ内被引用：139  
+  実装：✓ ・ リポジトリ内被引用：140  
   本研究は、対話型の大規模言語モデル（LLM）において、利用者が同じ会話を再開するたびに過去の文章を読み直して注意機構の鍵・値（KV）を作り直す無駄を、会話状態の耐久保存で削減する。原著が調べたShareGPT会話では73%が複数ターンで、長く続いた会話の新規ターンでは過去の内容に由来する再計算が事前計算時間の最大99%に達する。
 
 - **2024-01 · [Inference without Interference: Disaggregate LLM Inference for Mixed Downstream Workloads](2024-2401.11181-tetriinfer.md)**  
   実装：✓ ・ リポジトリ内被引用：96  
   事前充填を固定長チャンク化して復号インスタンスから分離し、生成長予測付き二段階配置で混合LLM要求の干渉を抑える配信システム。
 
+- **2024-01 · [ServerlessLLM: Low-Latency Serverless Inference for Large Language Models](2024-2401.14351-serverlessllm-low-latency-serverless-inference.md)**  
+  実装：[✓](https://github.com/ServerlessLLM/ServerlessLLM) ・ リポジトリ内被引用：83  
+  要求到着時にモデルをGPUへ読み込むサーバーレス環境で、チェックポイントをGPU近くのSSD / DRAMへキャッシュし、高速読み込み器とモデル所在地を考慮した要求配置、生成途中要求の移動を組み合わせてモデル起動待ちを短縮するシステム。
+
 - **2024-01 · [DeepSpeed-FastGen: High-throughput Text Generation for LLMs via MII and DeepSpeed-Inference](2024-2401.08671-deepspeed-fastgen-dynamic-splitfuse.md)**  
   実装：[✓](https://github.com/deepspeedai/DeepSpeed-MII) ・ リポジトリ内被引用：83  
   長いプリフィルを小さく分割し、短いプロンプト・プリフィル 分割片・デコード トークンを毎回ほぼ同じ総トークン数になるよう混ぜることで、長いプリフィルがデコードを止める時間を抑えつつGPUを効率よく使うLLM 提供処理 システム。
-
-- **2024-01 · [ServerlessLLM: Low-Latency Serverless Inference for Large Language Models](2024-2401.14351-serverlessllm-low-latency-serverless-inference.md)**  
-  実装：[✓](https://github.com/ServerlessLLM/ServerlessLLM) ・ リポジトリ内被引用：82  
-  要求到着時にモデルをGPUへ読み込むサーバーレス環境で、チェックポイントをGPU近くのSSD / DRAMへキャッシュし、高速読み込み器とモデル所在地を考慮した要求配置、生成途中要求の移動を組み合わせてモデル起動待ちを短縮するシステム。
 
 - **2024-08 · [DynamoLLM: Designing LLM Inference Clusters for Performance and Energy Efficiency](2024-2408.00741-dynamollm.md)**  
   実装：✓ ・ リポジトリ内被引用：81  
@@ -1309,7 +1309,7 @@
   複数の言語モデル呼出しから成るアプリケーションの入力・出力の関係を、意味変数という抽象化で推論提供側へ公開する。これにより要求間の依存関係、同一接頭部の再利用、アプリケーション全体の完了時間を考慮した要求配置を可能にする。単一要求の速度ではなく、複数要求を組み合わせた作業の完了時間を最適化する研究である。
 
 - **2023-11 · [SpotServe: Serving Generative Large Language Models on Preemptible Instances](2023-2311.15566-spotserve-preemptible-instance-serving.md)**  
-  実装：[✓](https://github.com/Hsword/SpotServe) ・ リポジトリ内被引用：75  
+  実装：[✓](https://github.com/Hsword/SpotServe) ・ リポジトリ内被引用：76  
   一覧用要約：スポットGPUの回収・獲得に合わせて並列構成を再最適化し、既存の重みとKVキャッシュを最大限再利用する配置・移行と、トークン単位の状態付き途中再開によって分散LLMの長尾遅延と運用費を抑える。
 
 - **2023-12 · [Fairness in Serving Large Language Models](2024-2401.00588-fairness-in-serving-large-language-models-vtc.md)**  
@@ -1459,7 +1459,7 @@
 ### 4年前（2022-11〜2023-10）
 
 - **2023-09 · [Efficient Memory Management for Large Language Model Serving with PagedAttention](2023-2309.06180-vllm-pagedattention-efficient-memory-management.md)**  
-  実装：[✓](https://github.com/vllm-project/vllm) ・ リポジトリ内被引用：1128  
+  実装：[✓](https://github.com/vllm-project/vllm) ・ リポジトリ内被引用：1129  
   vLLMは、要求ごとに大きな連続領域を予約していたKVキャッシュを固定長ブロックへ分解し、論理的な並びとGPU上の物理配置を分離する。必要なブロックだけ動的に割り当て、同じ接頭辞のKVを共有することで、限られたGPUメモリへより多くの要求を同時に載せる。
 
 - **2023-02 · [AlpaServe: Statistical Multiplexing with Model Parallelism for Deep Learning Serving](2023-2302.11665-alpaserve.md)**  
