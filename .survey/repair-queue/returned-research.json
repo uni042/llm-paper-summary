@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-18T13:48:58+00:00",
+  "generated_at": "2026-10-18T13:55:14+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -3949,36 +3949,6 @@
       "worker_run_key": "20261018-1630-scheduled-chat-30/r01"
     },
     {
-      "canonical_id": "arXiv:2510.26527",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-18T10:35:32+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700",
-        "説明不足トリガー: 評価説明量 0 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5102,
-        "body_paragraphs": 32,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 0,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700",
-          "評価説明量 0 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_43e2bf0889008191a77ff96cbfd83a0d--2025-2510.26527-polybasic-speculative-decoding-theoretical-research-20261018-1130-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_43e2bf0889008191a77ff96cbfd83a0d--2025-2510.26527-polybasic-speculative-decoding-theoretical-research-20261018-1130-scheduled-chat-30-r01.json",
-      "worker_run_key": "20261018-1130-scheduled-chat-30/r01"
-    },
-    {
       "canonical_id": "arXiv:2609.40146",
       "title": null,
       "source_url": null,
@@ -4005,37 +3975,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_4501cb5e99b8819199d417142f18c617--2026-2609.40146-quloc-photonic-gated-low-rank-compression-research-20261018-1430-scheduled-chat-30-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_4501cb5e99b8819199d417142f18c617--2026-2609.40146-quloc-photonic-gated-low-rank-compression-research-20261018-1430-scheduled-chat-30-r01.json",
       "worker_run_key": "20261018-1430-scheduled-chat-30/r01"
-    },
-    {
-      "canonical_id": "arXiv:2203.14380",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-18T10:49:39+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "quality_self_review_version が空",
-        "説明不足トリガー: 手法説明量 0 < 700",
-        "説明不足トリガー: 評価説明量 0 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5845,
-        "body_paragraphs": 34,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 0,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700",
-          "評価説明量 0 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_4a6c13b485788191a11fd18001724e5d--2022-2203.14380-pyramid-bert-coreset-token-selection-research-20261018-1700-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_4a6c13b485788191a11fd18001724e5d--2022-2203.14380-pyramid-bert-coreset-token-selection-research-20261018-1700-scheduled-chat-00-r01.json",
-      "worker_run_key": "20261018-1700-scheduled-chat-00/r01"
     },
     {
       "canonical_id": "arXiv:2406.11016",
@@ -4232,31 +4171,6 @@
       "worker_run_key": "20261018-1430-scheduled-chat-30/r01"
     },
     {
-      "canonical_id": "arXiv:2604.12452",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-18T11:11:55+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "quality_self_review_version が空"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 7082,
-        "body_paragraphs": 44,
-        "method_chars": 2153,
-        "method_paragraphs": 13,
-        "evaluation_chars": 1468,
-        "limitation_chars": 780,
-        "insufficiency_flags": []
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_6b0ac4bb40608191804fde0d8fd894df--2026-2604.12452-latent-condensed-attention-research-20261018-0530-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_6b0ac4bb40608191804fde0d8fd894df--2026-2604.12452-latent-condensed-attention-research-20261018-0530-scheduled-chat-30-r01.json",
-      "worker_run_key": "20261018-0530-scheduled-chat-30/r01"
-    },
-    {
       "canonical_id": "arXiv:2503.06881",
       "title": null,
       "source_url": null,
@@ -4283,33 +4197,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_6f18a160ba9c819186f116fd89152e8c--2025-2503.06881-resmoe-wasserstein-residual-restoration-research-20261018-1800-scheduled-chat-00-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_6f18a160ba9c819186f116fd89152e8c--2025-2503.06881-resmoe-wasserstein-residual-restoration-research-20261018-1800-scheduled-chat-00-r01.json",
       "worker_run_key": "20261018-1800-scheduled-chat-00/r01"
-    },
-    {
-      "canonical_id": "arXiv:2503.05248",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-18T11:39:38+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 4796,
-        "body_paragraphs": 32,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 702,
-        "limitation_chars": 727,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_8ffd3c8761248191b6cac5589bd18ff6--2025-2503.05248-memory-sla-dynamic-batching-research-20261018-1900-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_8ffd3c8761248191b6cac5589bd18ff6--2025-2503.05248-memory-sla-dynamic-batching-research-20261018-1900-scheduled-chat-00-r01.json",
-      "worker_run_key": "20261018-1900-scheduled-chat-00/r01"
     },
     {
       "canonical_id": "arXiv:2406.02500",
@@ -4471,33 +4358,6 @@
       },
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_3d26323ba68c8191a20a1c298d019db2--2026-2609.21264-amd-xdna-flashattention-open-compiler-research-20261018-2130-scheduled-chat-30-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_3d26323ba68c8191a20a1c298d019db2--2026-2609.21264-amd-xdna-flashattention-open-compiler-research-20261018-2130-scheduled-chat-30-r01.json",
-      "worker_run_key": "20261018-2130-scheduled-chat-30/r01"
-    },
-    {
-      "canonical_id": "arXiv:2609.25451",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-18T12:49:32+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 8170,
-        "body_paragraphs": 46,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 840,
-        "limitation_chars": 881,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_561761c2d8388191afcc68c00856d698--2026-2609.25451-dynamo-gpu-memory-fast-recovery-research-20261018-2130-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_561761c2d8388191afcc68c00856d698--2026-2609.25451-dynamo-gpu-memory-fast-recovery-research-20261018-2130-scheduled-chat-30-r01.json",
       "worker_run_key": "20261018-2130-scheduled-chat-30/r01"
     },
     {
@@ -4839,8 +4699,8 @@
     },
     {
       "canonical_id": "arXiv:2606.04446",
-      "title": "D^2SD: Accelerating Speculative Decoding with Dual Diffusion Draft Models",
-      "source_url": "https://arxiv.org/abs/2606.04446",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-18T13:47:39+00:00",
       "return_count": 4,
       "assigned_worker": "scheduled-chat-30",
@@ -4866,8 +4726,8 @@
     },
     {
       "canonical_id": "arXiv:2601.21096",
-      "title": "Magellan: Autonomous Discovery of Novel Compiler Optimization Heuristics with AlphaEvolve",
-      "source_url": "https://arxiv.org/pdf/2601.21096",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-18T13:47:41+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-30",
@@ -4893,8 +4753,8 @@
     },
     {
       "canonical_id": "arXiv:2402.04902",
-      "title": "L4Q: Parameter Efficient Quantization-Aware Fine-Tuning on Large Language Models",
-      "source_url": "https://arxiv.org/abs/2402.04902",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-18T13:47:42+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-30",
@@ -4919,6 +4779,146 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-196a719fda78--libfile_684023af84748191a5f071abe08e3e88--2024-2402.04902-l4q-fully-quantized-lora-qat-research-20261018-2155-scheduled-chat-00-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-196a719fda78--libfile_684023af84748191a5f071abe08e3e88--2024-2402.04902-l4q-fully-quantized-lora-qat-research-20261018-2155-scheduled-chat-00-r01.json",
       "worker_run_key": "20261018-2155-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2503.05248",
+      "title": "Optimizing LLM Inference Throughput via Memory-aware and SLA-constrained Dynamic Batching",
+      "source_url": "https://arxiv.org/pdf/2503.05248",
+      "returned_at": "2026-10-18T13:55:09+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 4796,
+        "body_paragraphs": 32,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 702,
+        "limitation_chars": 727,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-1ac2135f0326--libfile_8ffd3c8761248191b6cac5589bd18ff6--2025-2503.05248-memory-sla-dynamic-batching-research-20261018-1900-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-1ac2135f0326--libfile_8ffd3c8761248191b6cac5589bd18ff6--2025-2503.05248-memory-sla-dynamic-batching-research-20261018-1900-scheduled-chat-00-r01.json",
+      "worker_run_key": "20261018-1900-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2609.25451",
+      "title": "Fast Recovery for LLM Serving via Decoupled Device Memory Lifetime in Dynamo",
+      "source_url": "https://arxiv.org/abs/2609.25451",
+      "returned_at": "2026-10-18T13:55:10+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 8170,
+        "body_paragraphs": 46,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 840,
+        "limitation_chars": 881,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-1c9dd08b9e7f--libfile_561761c2d8388191afcc68c00856d698--2026-2609.25451-dynamo-gpu-memory-fast-recovery-research-20261018-2130-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-1c9dd08b9e7f--libfile_561761c2d8388191afcc68c00856d698--2026-2609.25451-dynamo-gpu-memory-fast-recovery-research-20261018-2130-scheduled-chat-30-.json",
+      "worker_run_key": "20261018-2130-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2604.12452",
+      "title": "Latent-Condensed Transformer for Efficient Long Context Modeling",
+      "source_url": "https://arxiv.org/abs/2604.12452",
+      "returned_at": "2026-10-18T13:55:11+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "quality_self_review_version が空"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 7082,
+        "body_paragraphs": 44,
+        "method_chars": 2153,
+        "method_paragraphs": 13,
+        "evaluation_chars": 1468,
+        "limitation_chars": 780,
+        "insufficiency_flags": []
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-21daf25b4c41--libfile_6b0ac4bb40608191804fde0d8fd894df--2026-2604.12452-latent-condensed-attention-research-20261018-0530-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-21daf25b4c41--libfile_6b0ac4bb40608191804fde0d8fd894df--2026-2604.12452-latent-condensed-attention-research-20261018-0530-scheduled-chat-30-r01.json",
+      "worker_run_key": "20261018-0530-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2510.26527",
+      "title": "Polybasic Speculative Decoding Through a Theoretical Perspective",
+      "source_url": "https://arxiv.org/html/2510.26527v1",
+      "returned_at": "2026-10-18T13:55:13+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700",
+        "説明不足トリガー: 評価説明量 0 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5102,
+        "body_paragraphs": 32,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 0,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700",
+          "評価説明量 0 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-2481d2745e6f--libfile_43e2bf0889008191a77ff96cbfd83a0d--2025-2510.26527-polybasic-speculative-decoding-theoretical-research-20261018-1130-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-2481d2745e6f--libfile_43e2bf0889008191a77ff96cbfd83a0d--2025-2510.26527-polybasic-speculative-decoding-theoretical-research-20261018-1130-schedul.json",
+      "worker_run_key": "20261018-1130-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2203.14380",
+      "title": "Pyramid-BERT: Reducing Complexity via Successive Core-set based Token Selection",
+      "source_url": "https://arxiv.org/pdf/2203.14380",
+      "returned_at": "2026-10-18T13:55:14+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "quality_self_review_version が空",
+        "説明不足トリガー: 手法説明量 0 < 700",
+        "説明不足トリガー: 評価説明量 0 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5845,
+        "body_paragraphs": 34,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 0,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700",
+          "評価説明量 0 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-269109eb5b65--libfile_4a6c13b485788191a11fd18001724e5d--2022-2203.14380-pyramid-bert-coreset-token-selection-research-20261018-1700-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-269109eb5b65--libfile_4a6c13b485788191a11fd18001724e5d--2022-2203.14380-pyramid-bert-coreset-token-selection-research-20261018-1700-scheduled-cha.json",
+      "worker_run_key": "20261018-1700-scheduled-chat-00/r01"
     }
   ]
 }
