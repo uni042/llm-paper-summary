@@ -23,7 +23,7 @@
 - [11-llm-serving-scheduling-disaggregation](../11-llm-serving-scheduling-disaggregation/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（91本）
+## 自動生成の論文一覧（92本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -179,6 +179,10 @@
 - **2026-05 · [Stochastic Sparse Attention for Memory-Bound Inference](2026-2605.01910-stochastic-sparse-attention-for-memory-bound-inference.md)**  
   実装：[✓](https://github.com/OPUSLab/SANTA) ・ リポジトリ内被引用：0  
   SANTA（Stochastic Additive No-mulT 注意機構）は、注意確率を使って少数の値ベクトルだけを抽出し、その平均で密な注意出力を近似する。RTX 6000 Ada上の32K文脈では、精度が密注意と統計的に同等な設定で注意カーネルが約1.5倍高速化した。
+
+- **2026-05 · [Inference Time Context Sparsity: Illusion or Opportunity?](2026-2605.24168-inference-time-context-sparsity-illusion-or-opportunity.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  単なる疎化方式の提案ではなく、何を選ぶと品質が保たれ、選択器の計算費用を含めても高速化できるかを分離して調べた点が重要である。疎化の基準は通常の密な注意であり、例えば「50倍疎化」は各問い合わせ頭が文脈トークンの約1/50を参照する設定を意味する。
 
 - **2026-05 · [Efficient Long-Context Modeling in Diffusion Language Models via Block Approximate Sparse Attention](2026-2605.19726-efficient-long-context-modeling-in-diffusion-language-models-via-block-a.md)**  
   実装：[✓](https://github.com/JIA-Lab-research/Block-Approximate-Sparse-Attention) ・ リポジトリ内被引用：0  

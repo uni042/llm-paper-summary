@@ -32,6 +32,8 @@ implementation: >-
 last_checked: "2026-10-18"
 worker_completed_at: "2026-10-18T13:02:15+09:00"
 worker_run_key: "20261018-1256-scheduled-chat-00/r01"
+last_audited: null
+audit_version: 0
 ---
 
 # BLITZSCALE：モデルの読み込み完了を待たずにGPUを働かせるライブ自動拡張
