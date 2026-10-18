@@ -1,39 +1,64 @@
 ---
-canonical_id: 'SemanticScholar:beb9d034f9accbff20525bddf9d345fb799805b1'
+canonical_id: SemanticScholar:beb9d034f9accbff20525bddf9d345fb799805b1
 semantic_scholar_id: beb9d034f9accbff20525bddf9d345fb799805b1
-title: 'Exploring CXL-based KV Cache Storage for LLM Serving'
-summary: 'CXLメモリ拡張カードへ完了要求のKVキャッシュを保存し、同じ接頭辞を持つ後続要求のプリフィル開始時にGPUへ転送して再計算を省く実測研究。トークンチャンクと接頭辞のハッシュでキャッシュを識別し、gpt-fastにsave/loadインターフェースを実装した。Xeon/H100/256GB CXLの単一サーバで、LLaMA2-13Bの400ms TTFT制約下の最大バッチを全KV再計算の44から57へ約30%拡大。GPU必要台数87%減・プリフィル計算能力7.5倍は実測ではなく、接頭辞90%再利用等を仮定した費用モデルによる試算。'
-list_summary: 'CXL拡張メモリに接頭辞KVキャッシュを保存・再利用し、実機でTTFT制約下の最大バッチ44→57を確認、費用モデルでGPU削減余地を推定する。'
+title: Exploring CXL-based KV Cache Storage for LLM Serving
+summary: CXLメモリ拡張カードへ完了要求のKVキャッシュを保存し、同じ接頭辞を持つ後続要求のプリフィル開始時にGPUへ転送して再計算を省く実測研究。トークンチャンクと接頭辞のハッシュでキャッシュを識別し、gpt-fastにsave/loadインターフェースを実装した。Xeon/H100/256GB CXLの単一サーバで、LLaMA2-13Bの400ms TTFT制約下の最大バッチを全KV再計算の44から57へ約30%拡大。GPU必要台数87%減・プリフィル計算能力7.5倍は実測ではなく、接頭辞90%再利用等を仮定した費用モデルによる試算。
+list_summary: CXL拡張メモリに接頭辞KVキャッシュを保存・再利用し、実機でTTFT制約下の最大バッチ44→57を確認、費用モデルでGPU削減余地を推定する。
 authors:
-  - Yupeng Tang
-  - Runxiang Cheng
-  - Ping Zhou
-  - Tongping Liu
-  - Fei Liu
-  - Wei Tang
-  - Kyoungryun Bae
-  - Jianjun Chen
-  - Wu Xiang
-  - Rui Shi
-published: '2024-10'
-publication: 'Machine Learning for Systems Workshop at NeurIPS 2024'
+- Yupeng Tang
+- Runxiang Cheng
+- Ping Zhou
+- Tongping Liu
+- Fei Liu
+- Wei Tang
+- Kyoungryun Bae
+- Jianjun Chen
+- Wu Xiang
+- Rui Shi
+published: 2024-10
+publication: Machine Learning for Systems Workshop at NeurIPS 2024
 publication_type: workshop
 publication_status: published
 source: https://mlforsystems.org/assets/papers/neurips2024/paper17.pdf
 sources:
-  - https://mlforsystems.org/assets/papers/neurips2024/paper17.pdf
-  - https://yupengtang.com/publication/cxlnips/
-implementation: 'gpt-fastを改造してバッチ推論を可能にし、チャンク識別子をキーとするKV保存・復元APIを実装。Intel Xeon Platinum、H100 96GB、ホストDDR5 1TB、ASIC CXLカード256GBの実機で測定。公式公開コードURLは一次論文中で確認できず、引用するgpt-fastは基盤ソフトウェアであって本提案の公開実装ではない。'
+- https://mlforsystems.org/assets/papers/neurips2024/paper17.pdf
+- https://yupengtang.com/publication/cxlnips/
+implementation: gpt-fastを改造してバッチ推論を可能にし、チャンク識別子をキーとするKV保存・復元APIを実装。Intel Xeon Platinum、H100 96GB、ホストDDR5 1TB、ASIC CXLカード256GBの実機で測定。公式公開コードURLは一次論文中で確認できず、引用するgpt-fastは基盤ソフトウェアであって本提案の公開実装ではない。
 code: null
 last_checked: '2026-10-18'
 worker_id: scheduled-chat-30
 worker_completed_at: '2026-10-18T10:30:00+09:00'
-worker_run_key: '20261018-1030-scheduled-chat-30/r01'
-reference_main_sha: '020b2c435c2d2e5f07ebad41da92df74a4f4f3fd'
+worker_run_key: 20261018-1030-scheduled-chat-30/r01
+reference_main_sha: 020b2c435c2d2e5f07ebad41da92df74a4f4f3fd
 quality_self_review_passed: true
-quality_self_review_version: 'PAPER-QUALITY-GUIDE-2026-10-07'
+quality_self_review_version: PAPER-QUALITY-GUIDE-2026-10-07
 last_audited: null
 audit_version: 0
+references:
+- canonical_id: arXiv:2303.08774
+  arxiv_id: '2303.08774'
+- canonical_id: arXiv:2403.02310
+- canonical_id: arXiv:2401.09670
+- canonical_id: arXiv:2311.18677
+- canonical_id: DOI:10.1145/3600006.3613165
+- canonical_id: arXiv:2406.17565
+- canonical_id: arXiv:2312.15234
+  arxiv_id: '2312.15234'
+- canonical_id: arXiv:2405.16444
+- canonical_id: arXiv:2303.06865
+- canonical_id: arXiv:2307.09288
+  arxiv_id: '2307.09288'
+- canonical_id: arXiv:2211.17192
+- canonical_id: arXiv:2104.04473
+- canonical_id: arXiv:2310.06825
+  arxiv_id: '2310.06825'
+- canonical_id: arXiv:2405.14209
+  arxiv_id: '2405.14209'
+- canonical_id: arXiv:2207.00032
+- canonical_id: arXiv:2406.19707
+references_checked_at: '2026-10-18'
+references_source: primary-pdf-reference-section
+references_total: 30
 ---
 
 # CXLを用いたLLM接頭辞KVキャッシュの保存と再利用
