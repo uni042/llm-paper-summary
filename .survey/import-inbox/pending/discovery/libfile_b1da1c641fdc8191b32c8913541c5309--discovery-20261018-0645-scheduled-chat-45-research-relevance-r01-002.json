@@ -1,0 +1,27 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-45",
+  "run_key": "20261018-0645-scheduled-chat-45/r01/research-relevance/002",
+  "reference_main_sha": "2162f1fe5840f5cffb942d1c3aca9cc5ac8de9ab",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2210.13452",
+      "identity_tokens": [
+        "arxiv:2210.13452"
+      ],
+      "title": "MetaFormer Baselines for Vision",
+      "reason": "MetaFormerの構造を画像分類モデルに適用し、IdentityFormer、RandFormer、ConvFormer、CAFormerをImageNet-1Kで比較する。StarReLUによる活性化演算量削減も示すが、論文の対象は視覚分類の認識精度・モデル構造であり、言語モデルの生成復号、KVキャッシュ、LLMサービングや学習基盤の高速化は評価しない。",
+      "source_url": "https://arxiv.org/abs/2210.13452",
+      "body_check": "abstract_screen_only; body_not_read; arXivの著者要旨と書誌の対象タスクを確認",
+      "first_checked_at": "2026-10-18T06:45:02+09:00",
+      "last_checked_at": "2026-10-18T06:45:02+09:00",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance",
+      "research_job_id": "job-research-dad38af0d9983c5a",
+      "worklist_rank": 2
+    }
+  ]
+}
