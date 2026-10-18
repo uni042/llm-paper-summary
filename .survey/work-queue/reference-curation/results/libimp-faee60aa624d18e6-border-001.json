@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-faee60aa624d18e6-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2512.05665",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2512.05665",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2512.05665",
+      "arXiv:2512.05665"
+    ],
+    "reason": "一次要旨では高密度画像を逐次再符号化する計算負担を避ける潜在視覚推論を提案し、教師モデルが中間画像から関連特徴を選択蒸留する。再符号化削減は推論効率に関係するが、中心は多モーダル推論の中間状態表現と正答率で、LLM推論エンジンの計算・メモリ削減の直接定量評価は要旨から確認できないため境界候補。",
+    "first_checked_at": "2026-10-11T11:49:06+00:00",
+    "last_checked_at": "2026-10-18T17:52:15+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Interleaved Latent Visual Reasoning with Selective Perceptual Modeling"
+  },
+  "processed_at": "2026-10-18T17:52:16+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-faee60aa624d",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

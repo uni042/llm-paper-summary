@@ -2,7 +2,7 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-18T16:44:51+00:00",
+  "updated_at": "2026-10-18T17:52:15+00:00",
   "record_count": 12428,
   "records": {
     "arXiv:2303.08774": {
@@ -41727,22 +41727,6 @@
         "papers/inference/99-other-inference-systems/2024-2402.05445-accurate-lora-finetuning-quantization-of-llms-via-information-retention.md"
       ],
       "title": "Automated Regulatory Compliance Question Answering in Financial Services with Domain-Adapted Retrieval-Augmented Generation"
-    },
-    "arXiv:2609.30057": {
-      "classification": "unrelated",
-      "canonical_id": "arXiv:2609.30057",
-      "identity_tokens": [
-        "arXiv:2609.30057"
-      ],
-      "reason": "LLM agents automate GPU kernel optimization by repeatedly composing candidates and measuring their duration on real GPUs. Existing systems preserve measurement fidelity by reserving a GPU for an entire agent session or benchmarking command. However, this results in poor utilization because only a small fraction of command execution requires exclusive GPU access. Sharing GPUs could recover this idle capacity, but introduces contention that compromises measurement fidelity and misdirects the agent's search. We presen",
-      "first_checked_at": "2026-10-05T05:38:57+00:00",
-      "last_checked_at": "2026-10-05T05:38:57+00:00",
-      "linked_from": [
-        "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md",
-        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
-        "papers/inference/99-other-inference-systems/2024-2407.08608-flashattention-3-fast-and-accurate-attention-with-asynchrony-and-low-pre.md"
-      ],
-      "title": "KREX: Concurrent Kernel Benchmarking on Shared GPUs via Region-Granular Exclusivity"
     },
     "arXiv:2609.30092": {
       "classification": "unrelated",
@@ -163142,9 +163126,9 @@
         "id:arXiv:2204.13767",
         "url:https://arxiv.org/abs/2204.13767"
       ],
-      "reason": "一次論文の要旨を確認。三角形のパッチ注意と変数別パラメータにより多変量時系列の長期予測を線形計算量で扱う。評価対象は時系列予測の精度・効率であり、LLM生成推論、サービング、KVキャッシュや言語モデルの学習基盤は直接扱わないため対象外。",
+      "reason": "一次要旨で、複数変量の長期時系列予測向けに、三角形に縮小するパッチ注意と変量別の軽量パラメータを提案することを確認した。線形計算量の注意機構はあるが、評価は時系列予測4データセットであり、生成型LLMの推論、KVキャッシュ、サービング、GPU実行基盤への適用を実証していないため対象外。",
       "first_checked_at": "2026-10-11T02:48:44+00:00",
-      "last_checked_at": "2026-10-18T10:00:30+00:00",
+      "last_checked_at": "2026-10-18T17:52:11+00:00",
       "linked_from": [],
       "title": "Triformer: Triangular, Variable-Specific Attentions for Long Sequence Multivariate Time Series Forecasting--Full Version"
     },
@@ -168483,9 +168467,9 @@
         "DOI:10.48550/arxiv.2403.18421",
         "arXiv:2403.18421"
       ],
-      "reason": "一次論文の要旨を確認。PubMedの抄録と全文で2.7Bの自己回帰モデルを事前学習し、医療質問応答の品質とドメイン特化モデルの実用性を評価する。主貢献はモデル公開と領域特化学習・応用評価であり、LLM推論基盤や学習アルゴリズムの計算効率改善を直接検証しないため対象外。",
+      "reason": "一次要旨ではPubMedの要旨・論文本文だけで学習した27億パラメータの医療特化自己回帰モデルを公開し、MedMCQAや医学MMLUの回答精度を評価する。小型化の利点は述べるが、推論ランタイム、圧縮方式、スケジューラ、通信・メモリ最適化の新規システム手法を提示していないため現行対象外。",
       "first_checked_at": "2026-10-13T13:47:00+00:00",
-      "last_checked_at": "2026-10-18T10:00:31+00:00",
+      "last_checked_at": "2026-10-18T17:52:15+00:00",
       "linked_from": [],
       "title": "BioMedLM: A 2.7B Parameter Language Model Trained On Biomedical Text"
     },
@@ -179194,6 +179178,18 @@
       "last_checked_at": "2026-10-18T16:44:51+00:00",
       "linked_from": [],
       "title": "Time Served"
+    },
+    "arXiv:2511.13593": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2511.13593",
+      "identity_tokens": [
+        "arXiv:2511.13593"
+      ],
+      "reason": "一次要旨で、エージェントのユーザー属性・イベント記録を能動的に抽出更新し、階層検索で長期対話の個人化を改善するアプリケーション記憶方式と確認した。LoCoMoとPERSONAMEMの回答品質やトークン効率を扱うが、GPU/CPU階層メモリ、KVキャッシュ、推論サービング基盤のメモリ管理とは異なるため対象外。",
+      "first_checked_at": "2026-10-18T17:52:13+00:00",
+      "last_checked_at": "2026-10-18T17:52:13+00:00",
+      "linked_from": [],
+      "title": "O-Mem: Omni Memory System for Personalized, Long Horizon, Self-Evolving Agents"
     }
   }
 }

@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-99a130d4e61f7300-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2511.13593",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2511.13593",
+    "identity_tokens": [
+      "arXiv:2511.13593"
+    ],
+    "reason": "一次要旨で、エージェントのユーザー属性・イベント記録を能動的に抽出更新し、階層検索で長期対話の個人化を改善するアプリケーション記憶方式と確認した。LoCoMoとPERSONAMEMの回答品質やトークン効率を扱うが、GPU/CPU階層メモリ、KVキャッシュ、推論サービング基盤のメモリ管理とは異なるため対象外。",
+    "first_checked_at": "2026-10-18T17:52:13+00:00",
+    "last_checked_at": "2026-10-18T17:52:13+00:00",
+    "linked_from": [],
+    "title": "O-Mem: Omni Memory System for Personalized, Long Horizon, Self-Evolving Agents"
+  },
+  "processed_at": "2026-10-18T17:52:14+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-99a130d4e61f",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
