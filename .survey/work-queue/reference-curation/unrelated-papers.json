@@ -2,7 +2,7 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-18T10:51:29+00:00",
+  "updated_at": "2026-10-18T13:06:38+00:00",
   "record_count": 12427,
   "records": {
     "arXiv:2303.08774": {
@@ -165078,9 +165078,9 @@
       "identity_tokens": [
         "arXiv:2405.19885"
       ],
-      "reason": "一次要旨で、FCNetはロボット軌跡の低周波成分を短時間フーリエ変換で表現し、FFTとSliding DFTでロボット方策のリアルタイム逐次推論を効率化すると確認した。評価はD4RLと実ロボットの移動・制御であり、Transformer比較も身体化学習のロボット方策モデルに限られる。LLMの生成、LLM推論サービス、KVキャッシュ、MoE、LLMのGPU推論基盤への適用・実測を提示していないため、本サーベイの対象外と判断する。",
+      "reason": "ロボット軌道の低周波成分を短時間フーリエ変換で表現し、FFT・Sliding DFTでロボット制御方策の学習と逐次推論を高速化する研究。対象は強化学習による身体化制御であり、LLMの復号・サービング・KVキャッシュ・MoE・言語モデル量子化への直接の技術貢献を要旨から確認できない。",
       "first_checked_at": "2026-10-12T21:37:57+00:00",
-      "last_checked_at": "2026-10-12T21:37:57+00:00",
+      "last_checked_at": "2026-10-18T13:06:38+00:00",
       "linked_from": [],
       "title": "Fourier Controller Networks for Real-Time Decision-Making in Embodied Learning"
     },
