@@ -78,6 +78,10 @@ llama.cppの主要な機能・性能更新を継続的に記録する集約ペ�
 
 ## 主要更新
 
+### 2026-10-14 — b11622：Jinja JSON浮動小数点表現の精度修正（開発版）
+- Jinjaの`tojson`、`string`、`safe`で浮動小数点数がC++既定の有効桁数6桁へ丸められる問題を修正し、元値へ読み戻せる短い表現を使う。ツール引数やtemplate内の数値を保つ互換性・正確性の修正で、一般的な生成速度向上ではない。
+- **開発ビルド（pre-release）**であり、正式版として扱わない。[公式版](https://github.com/ggml-org/llama.cpp/releases/tag/b11622)／[PR #30362](https://github.com/ggml-org/llama.cpp/pull/30362)
+
 ### 2026-10-14 — llama.cpp b11588〜b11602：画像MTP・Vulkanホストメモリ・埋め込み・アリーナ修正
 - **b11588**: Qwen3.8-Flash-Nextで画像埋め込みと複数トークン予測（MTP）を組み合わせる経路に対応。視覚入力と投機的生成の互換性改善。[公式版](https://github.com/ggml-org/llama.cpp/releases/tag/b11588)／[PR #30397](https://github.com/ggml-org/llama.cpp/pull/30397)。
 - **b11594**: Vulkanで複数デバイスからGPU可視ホストメモリへのアクセスを改善。Windowsを含むVulkan経路の変更であり、**CUDA固有の改善ではない**。[公式版](https://github.com/ggml-org/llama.cpp/releases/tag/b11594)／[PR #29741](https://github.com/ggml-org/llama.cpp/pull/29741)。

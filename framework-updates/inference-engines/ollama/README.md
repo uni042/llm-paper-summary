@@ -27,6 +27,10 @@ Ollamaの主要な機能・性能更新を継続的に記録する集約ペー�
 
 ## 主要更新
 
+### 2026-10-12 — Ollama v0.40.4（正式版）
+- `v0.40.4`は正式版（Latest）として公開された。主な変更は判定モデルの直接利用、既検証manifestと読込済みmodelの再利用、`llama-server`経由のマルチモーダル埋め込み、短いcontext長での埋め込みmodel読込修正、Apple Silicon MLXの投機的復号後の状態管理修正、内蔵llama.cppの判定model対応。
+- 前項の`v0.40.4-rc2`は公開候補版、ここでは正式版として区別する。model準備やmanifest再利用はrequest開始費用の改善であり、全GPUのdecode速度向上を意味しない。MLX変更はWindows CUDAへ直接適用されない。[正式版](https://github.com/ollama/ollama/releases/tag/v0.40.4)
+
 ### 2026-10-14 — Ollama v0.40.4-rc2（公開候補版）
 - 内蔵llama.cppのb11521への更新、判定モデル（decision model）およびEmbeddingGemma 2の対応、検証済みmanifestと読み込みモデルの再利用、Apple MLXでの投機的復号巻戻し後の再帰状態整理などを含む。
 - **公開候補版であり安定版ではない**。リリースの作成日時と公開日時に不整合があるため日付は要確認。Apple MLXの改良をWindows CUDAの性能向上とみなさず、速度倍率の実測は未確認。[公式候補版](https://github.com/ollama/ollama/releases/tag/v0.40.4-rc2)。
