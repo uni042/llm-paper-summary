@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-10-19 04:56:41 JST**
+> 自動生成: **2026-10-19 05:05:50 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -13,7 +13,7 @@
 |---|---:|
 | 収録候補論文数 | **1515** |
 | 未claim Research job | **1515** |
-| 直近24hのResearch処理完了 | **97** |
+| 直近24hのResearch処理完了 | **95** |
 | 最終Research処理完了 | **10-19 03:38:30 JST** |
 | 最終Discovery探索完了 | **10-19 02:30:00 JST** |
 | 整合性異常 | **0** |
@@ -116,7 +116,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **10-18 09:38:07 JST（19時間18分前）** |
+| 最終maintenance完了 | **10-18 09:38:07 JST（19時間27分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **issues_found** |
 | health | **issues_found** |
@@ -136,7 +136,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 指標 | 現在値 |
 |---|---:|
-| 直近6hのResearch完了 | **19** |
+| 直近6hのResearch完了 | **16** |
 | 直近6hのDiscovery run | **15** |
 | 直近6hのDiscovery本文確認・分類 | **17** |
 | 最終Research完了 | **10-19 03:38:30 JST** |
