@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-aae5948d3f3dde55-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2606.18112",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2606.18112",
+    "identity_tokens": [
+      "arXiv:2606.18112",
+      "id:arXiv:2606.18112",
+      "url:https://arxiv.org/abs/2606.18112"
+    ],
+    "reason": "ロボットの観測戦略とナビゲーション動作を切り替え可能にする視覚言語行動モデルの技術報告。視覚トークン予算の制御を含むものの、主評価はロボットの空間計画と実環境ナビゲーションであり、LLM汎用推論基盤の効率化を直接対象にしていない。",
+    "first_checked_at": "2026-10-13T10:41:38+00:00",
+    "last_checked_at": "2026-10-18T22:46:50+00:00",
+    "linked_from": [],
+    "title": "Qwen-RobotNav Technical Report: A Scalable Navigation Model Designed for an Agentic Navigation System"
+  },
+  "processed_at": "2026-10-18T22:46:50+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-aae5948d3f3d",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

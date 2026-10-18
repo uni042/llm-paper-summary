@@ -2,7 +2,7 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-18T20:47:11+00:00",
+  "updated_at": "2026-10-18T22:46:49+00:00",
   "record_count": 5263,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
@@ -81298,9 +81298,9 @@
       "identity_tokens": [
         "arXiv:2601.10011"
       ],
-      "reason": "著者要旨では、自然言語からSQLへの変換で実体別・階層別・原子的逐次の三種類の質問分解と、過去の誤り修正対を蓄積する動的記憶を使う。BIRDで実行正答率68.5%、既存のテスト時スケーリング方式より10倍超少ない資源を報告するが、最適化はNL2SQL専用の推論手順・自己修正であり、汎用LLMサービング基盤や復号実装の改善は直接評価していないため境界的。",
+      "reason": "自然言語からSQLへの変換を対象に、質問分解の多様化と過去の失敗・修正例の検索でテスト時推論の資源使用を抑える。BIRDで68.5%の実行正答率と従来のテスト時拡張方式より10倍超少ない資源使用を報告するため推論計算の節約とは関係するが、主目的はNL2SQLアプリケーションの正答率であり、汎用LLMの推論エンジンや学習基盤の最適化ではない。",
       "first_checked_at": "2026-10-18T01:47:11+00:00",
-      "last_checked_at": "2026-10-18T01:47:11+00:00",
+      "last_checked_at": "2026-10-18T22:46:48+00:00",
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "Memo-SQL: Structured Decomposition and Experience-Driven Self-Correction for Training-Free NL2SQL"
@@ -81311,9 +81311,9 @@
       "identity_tokens": [
         "arXiv:2601.10120"
       ],
-      "reason": "著者のarXiv一次要旨を確認。TopoDIMはLLMベースの複数エージェントの通信トポロジーを一度で生成し、討論・フィードバック等の異種相互作用を分散実行することで、多段対話の遅延・計算・トークン費用を削減する。一次要旨は最先端方式比で総トークン消費46.41%削減、平均タスク性能1.50%向上と報告する。エージェント間の通信効率という実行時システム上の接点は強いが、モデル復号エンジン、GPU通信カーネル、KVキャッシュ、汎用サービング性能の最適化とは異なるため境界的候補。",
+      "reason": "複数LLMエージェント間の通信グラフを一度で生成し、条件付き・フィードバック・討論の相互作用を設計する。平均性能を1.50%改善しトークン消費を46.41%削減するため推論時の資源効率に関連するが、主な対象はエージェント協調方式であり、GPU推論サービングやモデル内部の高速化ではない。",
       "first_checked_at": "2026-10-18T03:52:46+00:00",
-      "last_checked_at": "2026-10-18T03:52:46+00:00",
+      "last_checked_at": "2026-10-18T22:46:49+00:00",
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "TopoDIM: One-shot Topology Generation of Diverse Interaction Modes for Multi-Agent Systems"
