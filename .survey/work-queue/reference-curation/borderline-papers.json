@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-18T09:48:00+00:00",
-  "record_count": 5237,
+  "updated_at": "2026-10-18T10:00:33+00:00",
+  "record_count": 5253,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -71645,9 +71645,9 @@
       "identity_tokens": [
         "arXiv:2512.18706"
       ],
-      "reason": "音声対話を音声区間検出、音声強調、音声認識、感情解析、LLM、音声合成などの独立モジュールで連結し、1秒未満の対話遅延を狙う。LLMを含む複合サービスの遅延削減という接点はあるが、中心は音声対話タスク固有のモジュール設計・能力統合であり、汎用LLM推論ランタイム、KVキャッシュ、スケジューラの改善を直接提案するものではないため境界的。",
+      "reason": "著者要旨は音声活動検出、音声強調、音声認識、感情・環境音解析、LLMと検索拡張生成をモジュール化した音声対話パイプラインを提示し、1秒未満の応答遅延を主張する。エンドツーエンド遅延とモジュール接続は推論システムに関連するが、汎用LLMの復号カーネル、KVメモリ管理、バッチ処理を直接最適化したものではなく、音声対話アプリケーションのシステム設計が主眼のため境界的。",
       "first_checked_at": "2026-10-12T17:45:21+00:00",
-      "last_checked_at": "2026-10-16T19:48:15+00:00",
+      "last_checked_at": "2026-10-18T10:00:21+00:00",
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "X-Talk: On the Underestimated Potential of Modular Speech-to-Speech Dialogue System"
@@ -71672,9 +71672,9 @@
         "DOI:10.48550/arxiv.2410.03051",
         "arXiv:2410.03051"
       ],
-      "reason": "動画詳細キャプションの精度と新ベンチマークが中心だが、長い動画の視覚トークンを統合して入力トークン数を削減し、性能劣化が小さいと報告する。多モーダル推論の入力処理効率と関係する一方、LLMサービングのGPUメモリ、復号速度、スケジューラを主評価していないため境界と判定。",
+      "reason": "一次論文の要旨を確認。大規模マルチモーダルモデルの動画入力で視覚トークン結合を導入し、長い動画系列の入力費用を削減しつつ説明文生成品質を維持する。効率化機構は推論に関連するが、主たる貢献と評価は動画詳細キャプション、VDCベンチマークおよび評価指標であり、汎用LLMサービングの遅延・スループット改善の体系的検証ではないため境界的候補。",
       "first_checked_at": "2026-10-12T18:49:58+00:00",
-      "last_checked_at": "2026-10-17T01:43:29+00:00",
+      "last_checked_at": "2026-10-18T10:00:30+00:00",
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "AuroraCap: Efficient, Performant Video Detailed Captioning and a New Benchmark"
@@ -79166,11 +79166,12 @@
       "classification": "borderline",
       "canonical_id": "arXiv:2609.32754",
       "identity_tokens": [
+        "DOI:10.48550/arxiv.2609.32754",
         "arXiv:2609.32754"
       ],
-      "reason": "Adaptive Consistency Graph stores long-horizon execution evidence and builds requirement-focused views under a bounded context budget; it evaluates success and inference cost but does not state a concrete serving or runtime-efficiency improvement.",
+      "reason": "一次要旨では、長期エージェントの実行証拠と来歴を永続グラフに整理し、各判断に対して限られた文脈予算内の要求中心ビューを作る。GPT-5.6-lunaでの成功率44.5%→50.2%など、主な実証は長期タスクの意思決定品質改善である。文脈予算の制約と推論費用の分析はあるが、推論エンジン、KVキャッシュ、モデル実行時間、GPU使用量の改善を直接主目的として実証したとは要旨から断定できないため、サーベイ対象との境界的候補とする。",
       "first_checked_at": "2026-10-14T11:53:39+00:00",
-      "last_checked_at": "2026-10-14T11:53:39+00:00",
+      "last_checked_at": "2026-10-18T10:00:32+00:00",
       "linked_from": [
         "papers/inference/07-kv-cache-optimization-compression/2025-2510.00615-acon-optimizing-context-compression-for-long-horizon-llm-agents.md",
         "papers/inference/99-other-inference-systems/2023-2306.07174-augmenting-language-models-with-long-term-memory.md"
@@ -80142,9 +80143,9 @@
       "identity_tokens": [
         "arXiv:2602.03563"
       ],
-      "reason": "一次論文の方法節では分類器のラベル埋込みをアンカーとする対比学習（ACL-Embed）、交差エントロピーと対比損失の勾配が90度超で衝突するバッチでは対比損失を切るACL-Grad、深層出口から浅層出口へ蒸留するACL-CLを提案する。GLUEのBERT/RoBERTa分類精度と中間出口の精度向上が主要評価であり、早期終了推論に間接的に関連する一方、生成LLMの推論基盤・実測速度・メモリ・スループットを主対象としないため現行サーベイでは境界的。",
+      "reason": "教師出口と浅い学生出口を対照学習で整合させ、複数出口BERTの微調整品質を高める。一次要旨はGLUEで品質と低遅延の交換条件が改善すると報告するが、提案の主軸は学習損失の設計であり、生成LLMの復号・KV管理・GPU推論基盤は対象外。早期終了推論への関連はあるため境界的とし、システム評価の有無を全文段階で再確認する。",
       "first_checked_at": "2026-10-15T20:49:13+00:00",
-      "last_checked_at": "2026-10-15T20:49:13+00:00",
+      "last_checked_at": "2026-10-18T10:00:27+00:00",
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "ACL: Aligned Contrastive Learning Improves BERT and Multi-exit BERT Fine-tuning"
@@ -81130,20 +81131,6 @@
       "borderline_recheck_count": 0,
       "title": "BitVLA: 1-bit Vision-Language-Action Models for Robotics Manipulation"
     },
-    "arXiv:2512.08186": {
-      "classification": "borderline",
-      "canonical_id": "arXiv:2512.08186",
-      "identity_tokens": [
-        "arXiv:2512.08186",
-        "title:ground slow move fast a dual system foundation model for generalizable vision and language navigation"
-      ],
-      "reason": "視覚言語モデルQwen2.5-VL-7Bを約2Hzの高次経路計画へ限定し、軽量拡散変換器の局所制御を約30Hzで非同期実行する二重系によりロボットの実時間性を改善する点は推論頻度削減・非同期実行の設計に関連する。ただし主な貢献と評価はVLN-CE/VLN-PEのロボット経路成功率・衝突回避・汎化で、LLMサービング基盤、KV管理、GPUカーネル、生成速度の一般化可能な最適化を直接測定していない。推論システムの応用事例として境界扱い。",
-      "first_checked_at": "2026-10-16T09:21:28+00:00",
-      "last_checked_at": "2026-10-16T09:21:28+00:00",
-      "linked_from": [],
-      "borderline_recheck_count": 0,
-      "title": "Ground Slow, Move Fast: A Dual-System Foundation Model for Generalizable Vision-and-Language Navigation"
-    },
     "arXiv:2312.09193": {
       "classification": "borderline",
       "canonical_id": "arXiv:2312.09193",
@@ -81369,6 +81356,234 @@
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "Less, but Better: Efficient Multilingual Expansion for LLMs via Layer-wise Mixture-of-Experts"
+    },
+    "arXiv:2405.14297": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2405.14297",
+      "identity_tokens": [
+        "arXiv:2405.14297"
+      ],
+      "reason": "ICLR 2025論文の本文§3では、トークンと各専門家のコサイン類似度を学習可能な閾値と比較するtop-anyゲートにより、推論時にもトークンごとの起動専門家数を変えられる。一方、主要な新規性のもう一つは学習中に未対応トークンの記録RSから専門家を追加し、未使用専門家を削除する訓練アルゴリズムであり、評価§4は視覚・言語・視覚言語タスクの精度と活性化パラメータ数を中心とする。推論時の動的計算という関連性はあるが、サービング実装・GPUカーネル・推論遅延の直接改善を主目的とする論文ではなく、学習中心の凍結範囲との境界にあるためborderlineとする。",
+      "first_checked_at": "2026-10-18T10:00:21+00:00",
+      "last_checked_at": "2026-10-18T10:00:21+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Dynamic Mixture of Experts: An Auto-Tuning Approach for Efficient Transformer Models"
+    },
+    "arXiv:2505.13000": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2505.13000",
+      "identity_tokens": [
+        "arXiv:2505.13000"
+      ],
+      "reason": "一次論文の手法§3と評価§4を確認。自己教師あり音声特徴と波形特徴を別経路で符号化し、12.5/25Hzの低フレーム率で音声生成モデルのトークン列を短縮する。音声生成の推論効率への接続はあるが、主要な技術貢献・実験はニューラル音声符号化の音質・意味保持・音声合成であり、汎用LLM推論基盤のKVキャッシュ、GPU実行、サービング改善ではない。隣接領域としてborderlineにする。",
+      "first_checked_at": "2026-10-18T10:00:21+00:00",
+      "last_checked_at": "2026-10-18T10:00:21+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "DualCodec: A Low-Frame-Rate, Semantically-Enhanced Neural Audio Codec for Speech Generation"
+    },
+    "arXiv:2303.03982": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2303.03982",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2303.03982",
+        "arXiv:2303.03982"
+      ],
+      "reason": "S4状態空間モデルの隠れ状態の並列初期化・リセットを改良し、部分観測の強化学習・メタ学習でRNNより高速な実行を報告する。系列長に対する漸近計算量と状態管理はLLM推論アーキテクチャに関連するが、実験対象は強化学習の制御課題であり、生成LLMのトークン復号・サービング・KVキャッシュ運用の実測はない。アーキテクチャの境界資料として保留。",
+      "first_checked_at": "2026-10-18T10:00:22+00:00",
+      "last_checked_at": "2026-10-18T10:00:22+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Structured State Space Models for In-Context Reinforcement Learning"
+    },
+    "arXiv:2412.00081": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2412.00081",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2412.00081",
+        "arXiv:2412.00081"
+      ],
+      "reason": "タスク差分行列の特異値分解から圧縮と干渉低減を行い、モデル統合後の精度と保存容量を評価する。学習後のモデル統合・低ランク圧縮は推論時のモデル配置や容量に間接的に関連する一方、一次要旨の主な貢献はタスク干渉の抑制であり、生成LLMのサービング遅延、GPUメモリ実測、KV管理の最適化を主題としない。圧縮の関連性を認めつつ独立収録は保留。",
+      "first_checked_at": "2026-10-18T10:00:22+00:00",
+      "last_checked_at": "2026-10-18T10:00:22+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Task Singular Vectors: Reducing Task Interference in Model Merging"
+    },
+    "arXiv:2504.04308": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2504.04308",
+      "identity_tokens": [
+        "arXiv:2504.04308"
+      ],
+      "reason": "ゲート付き線形注意（Gated Linear Attention）の文脈内学習を重み付き前処理勾配降下（Weighted Preconditioned Gradient Descent）の理論として解析し、ゲーティングの機能と最適化地形を説明する。線形注意・Mamba・RWKVの機構理解には関係するが、要旨での主貢献は表現・最適化理論であり、LLM推論の実機速度、KV容量、学習処理量の直接改善を実証する研究としては確認できない。対象境界の理論背景として保留し、一次論文の実験節の十分な照合なしにResearch原稿を作成しない。",
+      "first_checked_at": "2026-10-18T10:00:24+00:00",
+      "last_checked_at": "2026-10-18T10:00:24+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Gating is Weighting: Understanding Gated Linear Attention through In-context Learning"
+    },
+    "arXiv:2512.06747": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2512.06747",
+      "identity_tokens": [
+        "arXiv:2512.06747"
+      ],
+      "reason": "暗号化されたLLM推論を複数ドローンの協調に適用し、秘密分散計算（MPC）に合わせたTransformer非線形演算の近似で低遅延化を図る。一次要旨は推論効率を扱う一方、主要な実証対象はUAV群の機密性・指令の意味的精度・編隊制御である。一般的なLLM推論サービングへの適用可能性と基盤レベルの比較条件は要旨から十分に判定できないため境界的候補とする。",
+      "first_checked_at": "2026-10-18T10:00:24+00:00",
+      "last_checked_at": "2026-10-18T10:00:24+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "PrivLLMSwarm: Privacy-Preserving LLM-Driven UAV Swarms for Secure IoT Surveillance"
+    },
+    "arXiv:2511.17693": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2511.17693",
+      "identity_tokens": [
+        "arXiv:2511.17693"
+      ],
+      "reason": "連続する時間窓の重複計算を深いエンコーダ型Transformerで再利用し、音声・動画・テキストストリームの実行時間を従来の効率化モデル比で最大2桁減らすと一次要旨は述べる。推論効率の機構は関連するが、自己回帰LLMの事前充填・復号やKVキャッシュ管理ではなく、主にストリーム入力のエンコーダ推論を対象とするため境界的とする。",
+      "first_checked_at": "2026-10-18T10:00:24+00:00",
+      "last_checked_at": "2026-10-18T10:00:24+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "DeepCoT: Deep Continual Transformers for Real-Time Inference on Data Streams"
+    },
+    "arXiv:2506.18145": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2506.18145",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2506.18145",
+        "arXiv:2506.18145"
+      ],
+      "reason": "MambaのConv/Gate/Out射影を共有ルータで疎な線形射影エキスパートに置換するモデル構造であり、各トークンで8専門家のうち1つだけを活性化する。論文は1.3B稼働/10B総パラメータ、SlimPajama 20Bトークンでの困惑度、Sambaの4K順伝播演算量4.74T対6.13T（約23%減）と訓練処理量を評価する。しかし実機の推論遅延・復号処理量・メモリ階層・専門家通信の評価は示さず、主目的はモデル表現力と事前学習時の疎拡張である。推論システムへの直接的な実証貢献が不足するためborderlineとする。",
+      "first_checked_at": "2026-10-18T10:00:25+00:00",
+      "last_checked_at": "2026-10-18T10:00:25+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Routing Mamba: Scaling State Space Models with Mixture-of-Experts Projection"
+    },
+    "arXiv:2605.09968": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.09968",
+      "identity_tokens": [
+        "arXiv:2605.09968"
+      ],
+      "reason": "学習状態の統合演算子Qと新証拠による拡張演算子Pの順序差を停止・再帰深度制御に利用する理論研究。第6節では再帰的言語モデルの推論反復回数を適応的に決める設計を扱い、推論計算予算との接点がある。一方、主要貢献は5領域に共通する収束・停止の数学的保証で、LLM推論エンジンのGPU実行速度、KVメモリ、実測レイテンシの改善は本論文単体では報告しない。伴走研究に実証を委ねるため境界的。",
+      "first_checked_at": "2026-10-18T10:00:26+00:00",
+      "last_checked_at": "2026-10-18T10:00:26+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Consolidation-Expansion Operator Mechanics: A Unified Framework for Adaptive Learning"
+    },
+    "arXiv:2310.07109": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2310.07109",
+      "identity_tokens": [
+        "DOI:10.1007/s10664-024-10558-1",
+        "SemanticScholar:c3e9318b38662c942752b922b0df47fdd9f4de48",
+        "arXiv:2310.07109"
+      ],
+      "reason": "一次論文の要旨とICSE 2025の正式な論文紹介を確認。SparseCoderはCodeBERT、RoBERTa、CodeT5を基礎とするソースコード脆弱性検出・解析モデルに疎注意と学習型トークン削除を適用し、従来比較で最大4倍の処理時間改善と約50%の演算量削減を報告する。しかし最終用途はコード系列の分類・解析であり、自己回帰型LLMのトークン生成、KVキャッシュ、デコード遅延、生成品質を評価していない。注意の疎化機構はLLM推論へ転用可能なため完全な無関係とはせず、現行サーベイの境界的候補とする。",
+      "first_checked_at": "2026-10-18T10:00:28+00:00",
+      "last_checked_at": "2026-10-18T10:00:28+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "SparseCoder: Advancing Source Code Analysis with Sparse Attention and Learned Token Pruning"
+    },
+    "arXiv:2507.07694": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2507.07694",
+      "identity_tokens": [
+        "arXiv:2507.07694"
+      ],
+      "reason": "一次論文v2の手法・実験節を確認。SASは問い合わせ・鍵の頭数と特徴次元を非線形射影で拡張し、PEAAでパラメータ費用を抑えて言語モデルの困惑度・学習効率を改善する。125M～2.7B級のモデル品質比較と事前学習トークン数の評価が中心で、LLMサービングの復号遅延、GPUカーネル速度、KVキャッシュ容量を直接改善した実測はない。推論機構には関連するがシステム効率の実証が不足するため境界的候補とする。",
+      "first_checked_at": "2026-10-18T10:00:28+00:00",
+      "last_checked_at": "2026-10-18T10:00:28+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "SAS: Simulated Attention Score"
+    },
+    "DOI:10.1145/3719027.3765150": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3719027.3765150",
+      "identity_tokens": [
+        "DOI:10.1145/3719027.3765150"
+      ],
+      "reason": "ACM CCS 2025の著者要旨を確認。準同型暗号の下で対角優先符号化・密文パッキング・行列積・非線形近似を改善し、BERT-baseの128トークン暗号化推論を単一GPUで約10分と報告する。暗号化推論システムの効率化として接点がある一方、主要実証はエンコーダ型BERTであり、自己回帰LLMの復号、KVキャッシュ、実運用サービングの評価ではないため境界的候補。",
+      "first_checked_at": "2026-10-18T10:00:29+00:00",
+      "last_checked_at": "2026-10-18T10:00:29+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "THOR: Secure Transformer Inference with Homomorphic Encryption"
+    },
+    "arXiv:2104.10640": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2104.10640",
+      "identity_tokens": [
+        "DOI:10.1109/access.2021.3077350",
+        "DOI:10.48550/arxiv.2104.10640",
+        "arXiv:2104.10640"
+      ],
+      "reason": "一次要旨はBERT・GPT系列の構成、転移学習、枝刈り、量子化、知識蒸留、検索器、長系列注意などを広く概説する27ページの総説である。推論効率化に関係する技術を分類しているが、特定の生成LLMサービング基盤の新しい実行方式、KV管理器、GPUカーネル、実機スケジューラを提案・比較する研究ではない。一般的なモデル構成の背景資料としては関連するものの、本サーベイの推論システムの独立収録論文としては境界的なため保留する。",
+      "first_checked_at": "2026-10-18T10:00:31+00:00",
+      "last_checked_at": "2026-10-18T10:00:31+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "The NLP Cookbook: Modern Recipes for Transformer based Deep Learning Architectures"
+    },
+    "arXiv:2305.16340": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2305.16340",
+      "identity_tokens": [
+        "arXiv:2305.16340"
+      ],
+      "reason": "一次論文arXiv:2305.16340v3全文の第3〜4節と表1・2を確認。T5-small(60M)とBART-base(140M)のエンコーダ・デコーダ型要約モデルで交差注意を局所分割し、RAF再帰状態で欠落情報を補う。CNN-DM等でROUGE1を単純な分割注意より6〜22%改善し、交差注意の理論演算量を約40%削減する。ただし現代の自己回帰型大規模言語モデルのデコード、KVキャッシュ最適化、GPU実測生成速度を直接扱わない。効率的注意と系列生成の基礎研究として境界的候補に分類。",
+      "first_checked_at": "2026-10-18T10:00:32+00:00",
+      "last_checked_at": "2026-10-18T10:00:32+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Segmented Recurrent Transformer: An Efficient Sequence-to-Sequence Model"
+    },
+    "arXiv:2604.23475": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2604.23475",
+      "identity_tokens": [
+        "arXiv:2604.23475"
+      ],
+      "reason": "FFNチャネルのFisher型損失代理量から少数の損失重要チャネルを同定し、保護しながら構造化枝刈りを診断する。Llama-3.1-8Bでは上位1%が損失代理量の中央値58.7%を占め、50% FFN疎化ではSCAR-Protの困惑度54.8に対してWanda-channelは989.2。モデル圧縮と推論時の演算削減へ接続し得るが、主要な論点はチャネル重要度の分析と診断であり、実測の推論速度・VRAM・カーネル性能改善を一次要旨から確認できないため境界的。",
+      "first_checked_at": "2026-10-18T10:00:32+00:00",
+      "last_checked_at": "2026-10-18T10:00:32+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Supernodes and Halos: Loss-Critical Hubs in LLM Feed-Forward Layers"
+    },
+    "arXiv:2604.14403": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2604.14403",
+      "identity_tokens": [
+        "arXiv:2604.14403"
+      ],
+      "reason": "端末内検索拡張生成で検索表現と圧縮文脈表現を統一し、保存容量と生成文脈長を減らす。著者要旨は通常のRAG読取器と同等の性能を平均約1/10の文脈で達成したと述べる。KVキャッシュと注意メモリの削減に直接関係するが、主な貢献は表現学習と検索・圧縮統合で、LLM推論ランタイムの実測スループット改善や汎用サービング機構は要旨では示されないため境界的。",
+      "first_checked_at": "2026-10-18T10:00:33+00:00",
+      "last_checked_at": "2026-10-18T10:00:33+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "A Unified Model and Document Representation for On-Device Retrieval-Augmented Generation"
+    },
+    "DOI:10.1145/3800690": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3800690",
+      "identity_tokens": [
+        "DOI:10.1145/3800690"
+      ],
+      "reason": "Torporはホストメモリにモデルを保持して要求到着時にGPUへ切り替え、非同期API転送、GPU実行時共有、パイプライン化、干渉を考慮したスケジューリングでGPU推論を提供する。著者所属機関の原著要旨では4GPUノードで数百の推論関数を共有し、GPU調達費を利用者70%、事業者65%削減したと報告する。推論提供基盤として強い関連性がある一方、一次要旨の対象は一般的な機械学習推論であり、LLM生成・KVキャッシュ・トークン遅延への固有評価を確認できないため、全文で対象モデルを検証するまで境界的。",
+      "first_checked_at": "2026-10-18T10:00:33+00:00",
+      "last_checked_at": "2026-10-18T10:00:33+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Enabling Low-Latency, GPU-Efficient Serverless Inference with Model Swapping"
     }
   }
 }

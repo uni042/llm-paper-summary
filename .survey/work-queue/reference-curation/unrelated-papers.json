@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-18T09:48:00+00:00",
-  "record_count": 12424,
+  "updated_at": "2026-10-18T10:00:31+00:00",
+  "record_count": 12425,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -162974,11 +162974,12 @@
       "classification": "unrelated",
       "canonical_id": "arXiv:2403.09898",
       "identity_tokens": [
+        "DOI:10.48550/arxiv.2403.09898",
         "arXiv:2403.09898"
       ],
-      "reason": "TimeMachineは多変量時系列の長期予測精度とメモリ効率を高めるため、4つのMamba状態空間モジュールでチャネル内外・複数解像度の依存関係をモデル化する。一次要旨の評価対象は時系列予測であり、LLMのトークン生成、サービング、KV管理、MoE推論やCPU/GPUオフロードへの直接貢献は示されないため対象外。",
+      "reason": "四つのMambaブロックを用いて多変量時系列の長期予測を行うモデルであり、評価はWeather・Traffic・Electricity等の時系列予測精度、スケーラビリティ、メモリに関するもの。状態空間モデルの線形計算量はLLM設計に間接的な示唆を持つが、生成LLMの推論サーバ、自己回帰復号、KV管理、量子化・GPU実行の改善を直接検証しない。",
       "first_checked_at": "2026-10-10T21:46:55+00:00",
-      "last_checked_at": "2026-10-11T02:48:45+00:00",
+      "last_checked_at": "2026-10-18T10:00:23+00:00",
       "linked_from": [],
       "title": "TimeMachine: A Time Series is Worth 4 Mambas for Long-term Forecasting"
     },
@@ -163181,9 +163182,9 @@
         "id:arXiv:2204.13767",
         "url:https://arxiv.org/abs/2204.13767"
       ],
-      "reason": "一次要旨で対象は多変量時系列の長期予測であり、変数固有の投影と三角形のパッチ注意で時系列長に対する線形計算量を達成する研究。注意計算の効率化はあるが、LLMの生成推論、KVキャッシュ、MoE、LLMサービングへの適用は示されていない。",
+      "reason": "一次論文の要旨を確認。三角形のパッチ注意と変数別パラメータにより多変量時系列の長期予測を線形計算量で扱う。評価対象は時系列予測の精度・効率であり、LLM生成推論、サービング、KVキャッシュや言語モデルの学習基盤は直接扱わないため対象外。",
       "first_checked_at": "2026-10-11T02:48:44+00:00",
-      "last_checked_at": "2026-10-17T05:06:14+00:00",
+      "last_checked_at": "2026-10-18T10:00:30+00:00",
       "linked_from": [],
       "title": "Triformer: Triangular, Variable-Specific Attentions for Long Sequence Multivariate Time Series Forecasting--Full Version"
     },
@@ -164755,9 +164756,9 @@
         "arXiv:2210.13452",
         "semanticscholar:fc4cbc7a75f5a3bbca59db5513231555f078fe78"
       ],
-      "reason": "IdentityFormer、RandFormer、ConvFormer、CAFormerという画像認識用のMetaFormer基準モデルを比較し、ImageNet-1Kの分類精度やStarReLUの演算量を評価する。研究対象は画像分類・視覚モデルのアーキテクチャであり、LLM推論サービングやLLMメモリ階層・実行カーネルへの直接の貢献は一次要旨に示されていない。",
+      "reason": "MetaFormerの構造を画像分類モデルに適用し、IdentityFormer、RandFormer、ConvFormer、CAFormerをImageNet-1Kで比較する。StarReLUによる活性化演算量削減も示すが、論文の対象は視覚分類の認識精度・モデル構造であり、言語モデルの生成復号、KVキャッシュ、LLMサービングや学習基盤の高速化は評価しない。",
       "first_checked_at": "2026-10-11T20:48:40+00:00",
-      "last_checked_at": "2026-10-15T23:47:14+00:00",
+      "last_checked_at": "2026-10-18T10:00:25+00:00",
       "linked_from": [],
       "title": "MetaFormer Baselines for Vision"
     },
@@ -165087,9 +165088,9 @@
       "identity_tokens": [
         "arXiv:2605.05532"
       ],
-      "reason": "一次要旨での研究対象は法律契約書からの構造化情報抽出であり、ドメイン特化小型モデルOlava Extractと五つの汎用大規模モデルの抽出精度・幻覚・推論利用料金を比較する。推論料金の低さはモデル選択の評価結果であり、KVキャッシュ、GPUカーネル、バッチ処理、分散サービング等の実行機構を新規提案していない。法律文書処理の応用性能比較を主題とするため、LLM推論基盤の技術サーベイ対象外と判断する。",
+      "reason": "法務契約からの構造化情報抽出において特化型小規模MoEモデルOlava Extractと外部提供の大型モデル5種の抽出品質とAPI費用を比較する応用研究。macro F1 0.812、micro F1 0.842、推論料金78〜97%削減という実務的比較はあるが、新規の生成復号アルゴリズム、GPU推論基盤、KV管理、負荷分散、スケジューリングを提案・検証する研究ではない。法務領域の抽出品質が主題のため対象外。",
       "first_checked_at": "2026-10-12T19:45:24+00:00",
-      "last_checked_at": "2026-10-18T03:51:21+00:00",
+      "last_checked_at": "2026-10-18T10:00:26+00:00",
       "linked_from": [],
       "title": "A Few Good Clauses: Comparing LLMs vs Domain-Trained Small Language Models on Structured Contract Extraction"
     },
@@ -168515,34 +168516,6 @@
       "linked_from": [],
       "title": "VLingNav: Embodied Navigation with Adaptive Reasoning and Visual-Assisted Linguistic Memory"
     },
-    "arXiv:2303.03982": {
-      "classification": "unrelated",
-      "canonical_id": "arXiv:2303.03982",
-      "identity_tokens": [
-        "arXiv:2303.03982",
-        "id:arXiv:2303.03982",
-        "url:https://arxiv.org/abs/2303.03982"
-      ],
-      "reason": "一次要旨では、構造化状態空間モデルS4の隠れ状態を並列に初期化・リセットできるよう変更し、部分観測の強化学習環境で再帰型モデルより5倍超速い推論を報告する。評価対象は連続制御と文脈内強化学習であり、テキストLLMの生成・配信・KVキャッシュ・MoE推論を対象にしたシステム最適化ではないため対象外とする。",
-      "first_checked_at": "2026-10-13T10:44:14+00:00",
-      "last_checked_at": "2026-10-13T10:44:14+00:00",
-      "linked_from": [],
-      "title": "Structured State Space Models for In-Context Reinforcement Learning"
-    },
-    "arXiv:2412.00081": {
-      "classification": "unrelated",
-      "canonical_id": "arXiv:2412.00081",
-      "identity_tokens": [
-        "arXiv:2412.00081",
-        "id:arXiv:2412.00081",
-        "url:https://arxiv.org/abs/2412.00081"
-      ],
-      "reason": "一次要旨で確認した主題は、複数タスクの学習済み重み差分を特異値分解し、低階数圧縮と干渉抑制によってモデル統合精度を改善する手法である。圧縮対象はタスク差分表現であり、LLM推論時のKV管理、推論カーネル、スケジューリング、オフロードや実測生成速度の改善を扱わない。推論基盤技術の収録範囲から除外する。",
-      "first_checked_at": "2026-10-13T10:44:17+00:00",
-      "last_checked_at": "2026-10-14T14:57:24+00:00",
-      "linked_from": [],
-      "title": "Task Singular Vectors: Reducing Task Interference in Model Merging"
-    },
     "arXiv:2403.18421": {
       "classification": "unrelated",
       "canonical_id": "arXiv:2403.18421",
@@ -168550,9 +168523,9 @@
         "DOI:10.48550/arxiv.2403.18421",
         "arXiv:2403.18421"
       ],
-      "reason": "一次要旨で主貢献はPubMed論文から学習した27億パラメータの医療言語モデルと医学質問応答の精度評価（MedMCQA開発57.3%、MMLU Medical Genetics 69.0%）。小規模化による運用上の利点は論じるが、推論エンジン・量子化・メモリ階層・スケジューラの新しい効率化方式は提案していない。",
+      "reason": "一次論文の要旨を確認。PubMedの抄録と全文で2.7Bの自己回帰モデルを事前学習し、医療質問応答の品質とドメイン特化モデルの実用性を評価する。主貢献はモデル公開と領域特化学習・応用評価であり、LLM推論基盤や学習アルゴリズムの計算効率改善を直接検証しないため対象外。",
       "first_checked_at": "2026-10-13T13:47:00+00:00",
-      "last_checked_at": "2026-10-17T05:06:15+00:00",
+      "last_checked_at": "2026-10-18T10:00:31+00:00",
       "linked_from": [],
       "title": "BioMedLM: A 2.7B Parameter Language Model Trained On Biomedical Text"
     },
@@ -176904,18 +176877,6 @@
       "linked_from": [],
       "title": "A Benchmark for Procedural Memory Retrieval in Language Agents"
     },
-    "arXiv:2505.13000": {
-      "classification": "unrelated",
-      "canonical_id": "arXiv:2505.13000",
-      "identity_tokens": [
-        "arXiv:2505.13000"
-      ],
-      "reason": "タイトルが対象とするのは音声生成のための低フレームレート神経音声コーデックであり、LLMの推論サービング、KVキャッシュ、GPUメモリ、MoE、分散実行、投機的復号等の基盤最適化を主題としていない。タイトルで明示される研究対象に基づく除外であり、要旨や本文の技術的寄与を確認したとは扱わない。",
-      "first_checked_at": "2026-10-15T17:52:11+00:00",
-      "last_checked_at": "2026-10-15T17:52:11+00:00",
-      "linked_from": [],
-      "title": "DualCodec: A Low-Frame-Rate, Semantically-Enhanced Neural Audio Codec for Speech Generation"
-    },
     "arXiv:2509.19128": {
       "classification": "unrelated",
       "canonical_id": "arXiv:2509.19128",
@@ -178911,12 +178872,13 @@
       "classification": "unrelated",
       "canonical_id": "arXiv:2011.00241",
       "identity_tokens": [
+        "DOI:10.48550/arxiv.2011.00241",
         "arXiv:2011.00241",
         "title:methods for pruning deep neural networks"
       ],
-      "reason": "本文は150超の既発表研究を整理した一般深層ニューラルネットワークの剪定総説で、中心対象はAlexNet、ResNet、VGG、DenseNet等の畳み込み画像分類モデル。ImageNet/CIFAR-10の分類精度と圧縮率の比較が主眼で、LLM・Transformerの推論サービング、KVキャッシュ、MoE、生成速度、GPUカーネル最適化への固有技術貢献・直接評価がないため現行LLM推論サーベイの対象外と判定。",
+      "reason": "一次要旨は深層ニューラルネットワークの剪定150研究超を、重みの大きさ・クラスタリング・感度分析で整理する。主な比較対象はAlexNet、ResNet、DenseNet、VGGと画像分類であり、自己回帰LLMの推論実行、KVキャッシュ、GPUサービング、MoE配置、LLM向け圧縮実装を独立して評価しない。一般的な圧縮技術の背景資料にはなるが本サーベイの独立収録対象外。",
       "first_checked_at": "2026-10-16T09:21:25+00:00",
-      "last_checked_at": "2026-10-16T09:21:25+00:00",
+      "last_checked_at": "2026-10-18T10:00:23+00:00",
       "linked_from": [],
       "title": "Methods for Pruning Deep Neural Networks"
     },
@@ -179124,7 +179086,7 @@
       ],
       "reason": "原著全文の問題設定・評価を確認。安定な線形状態空間モデルに対するHankel特異値正則化、平衡打切りによる状態次元圧縮が主題。評価はsCIFAR10、sMNIST、IMDB、PATH、PATH-Xの系列分類であり、LLMの推論、言語生成、サービング、KVキャッシュ、LLM学習性能の実測を扱わない。一般的なSSM圧縮としての研究価値はあるが、本サーベイのLLM推論・学習最適化の直接対象外とする。",
       "first_checked_at": "2026-10-18T02:48:50+00:00",
-      "last_checked_at": "2026-10-18T02:48:50+00:00",
+      "last_checked_at": "2026-10-18T10:00:26+00:00",
       "linked_from": [],
       "title": "Hankel Singular Value Regularization for Highly Compressible State Space Models"
     },
@@ -179163,6 +179125,54 @@
       "last_checked_at": "2026-10-18T04:43:17+00:00",
       "linked_from": [],
       "title": "LEAP: Learnable Pruning for Transformer-based Models"
+    },
+    "DOI:10.1007/s11432-020-3245-7": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1007/s11432-020-3245-7",
+      "identity_tokens": [
+        "DOI:10.1007/s11432-020-3245-7"
+      ],
+      "reason": "題名に明示された研究対象はRRAMベースのDNN推論アクセラレータ向けニューラルネットワーク構造探索であり、LLM・Transformerの推論、KVキャッシュ、MoE、生成サービングを対象にした方式ではない。タイトル段階で対象外と判断した。本文・要旨は未確認のため、個別の性能数値・手法詳細は推測しない。",
+      "first_checked_at": "2026-10-18T10:00:27+00:00",
+      "last_checked_at": "2026-10-18T10:00:27+00:00",
+      "linked_from": [],
+      "title": "NAS4RRAM: neural network architecture search for inference on RRAM-based accelerators"
+    },
+    "DOI:10.1007/s44196-026-01236-9": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1007/s44196-026-01236-9",
+      "identity_tokens": [
+        "DOI:10.1007/s44196-026-01236-9"
+      ],
+      "reason": "共有専門家を持つMoEの訓練中に、ARIMAで次の反復の専門家負荷を予測し、動的容量と損失関数を更新する方式。Switch Transformer-base-8のGLUE9課題平均81.55%（基準比+1.07ポイント）を報告する。主要な実証は訓練中の負荷均衡と分類精度で、推論時のGPU通信・トークン生成速度・サービングスケジューリング改善を検証していない。学習単独最適化の凍結方針により通常対象外。",
+      "first_checked_at": "2026-10-18T10:00:28+00:00",
+      "last_checked_at": "2026-10-18T10:00:28+00:00",
+      "linked_from": [],
+      "title": "Consensus-Expert DynamicMoE: ARIMA-based Capacity Prediction with Adaptive Load Balancing for Sparse Models"
+    },
+    "arXiv:2012.06153": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2012.06153",
+      "identity_tokens": [
+        "arXiv:2012.06153"
+      ],
+      "reason": "一次要旨を確認。遺伝的アルゴリズムで教師BERTと学生BERTの層対応を探索し、少量の蒸留データとGLUE評価を用いて学習後の学生モデル品質を改善する研究。大規模言語モデルの生成推論、サービング、KVキャッシュ、GPUカーネル、量子化実行等のシステム改善を直接扱わず、現行の学習単独最適化凍結範囲に属する。",
+      "first_checked_at": "2026-10-18T10:00:29+00:00",
+      "last_checked_at": "2026-10-18T10:00:29+00:00",
+      "linked_from": [],
+      "title": "Improving Task-Agnostic BERT Distillation with Layer Mapping Search"
+    },
+    "arXiv:2512.08186": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2512.08186",
+      "identity_tokens": [
+        "arXiv:2512.08186"
+      ],
+      "reason": "一次論文の要旨を確認。DualVLNは視覚言語モデルの大域的な経由点推論と軽量拡散方策によるロボットの局所運動制御を非同期に組み合わせる。実時間性はロボット行動生成の設計目標であり、汎用LLMのトークン生成、KVキャッシュ、推論サービングの高速化・メモリ削減を評価していないため対象外。",
+      "first_checked_at": "2026-10-18T10:00:30+00:00",
+      "last_checked_at": "2026-10-18T10:00:30+00:00",
+      "linked_from": [],
+      "title": "Ground Slow, Move Fast: A Dual-System Foundation Model for Generalizable Vision-and-Language Navigation"
     }
   }
 }

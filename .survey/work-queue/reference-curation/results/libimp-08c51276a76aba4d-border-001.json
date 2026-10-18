@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-08c51276a76aba4d-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2405.14297",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2405.14297",
+    "identity_tokens": [
+      "arXiv:2405.14297"
+    ],
+    "reason": "ICLR 2025論文の本文§3では、トークンと各専門家のコサイン類似度を学習可能な閾値と比較するtop-anyゲートにより、推論時にもトークンごとの起動専門家数を変えられる。一方、主要な新規性のもう一つは学習中に未対応トークンの記録RSから専門家を追加し、未使用専門家を削除する訓練アルゴリズムであり、評価§4は視覚・言語・視覚言語タスクの精度と活性化パラメータ数を中心とする。推論時の動的計算という関連性はあるが、サービング実装・GPUカーネル・推論遅延の直接改善を主目的とする論文ではなく、学習中心の凍結範囲との境界にあるためborderlineとする。",
+    "first_checked_at": "2026-10-18T10:00:21+00:00",
+    "last_checked_at": "2026-10-18T10:00:21+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Dynamic Mixture of Experts: An Auto-Tuning Approach for Efficient Transformer Models"
+  },
+  "processed_at": "2026-10-18T10:00:21+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-08c51276a76a",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a15efa426b4be4aa-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2507.07694",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2507.07694",
+    "identity_tokens": [
+      "arXiv:2507.07694"
+    ],
+    "reason": "一次論文v2の手法・実験節を確認。SASは問い合わせ・鍵の頭数と特徴次元を非線形射影で拡張し、PEAAでパラメータ費用を抑えて言語モデルの困惑度・学習効率を改善する。125M～2.7B級のモデル品質比較と事前学習トークン数の評価が中心で、LLMサービングの復号遅延、GPUカーネル速度、KVキャッシュ容量を直接改善した実測はない。推論機構には関連するがシステム効率の実証が不足するため境界的候補とする。",
+    "first_checked_at": "2026-10-18T10:00:28+00:00",
+    "last_checked_at": "2026-10-18T10:00:28+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "SAS: Simulated Attention Score"
+  },
+  "processed_at": "2026-10-18T10:00:29+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a15efa426b4b",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

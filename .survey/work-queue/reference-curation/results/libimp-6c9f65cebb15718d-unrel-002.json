@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-6c9f65cebb15718d-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2605.05532",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2605.05532",
+    "identity_tokens": [
+      "arXiv:2605.05532"
+    ],
+    "reason": "法務契約からの構造化情報抽出において特化型小規模MoEモデルOlava Extractと外部提供の大型モデル5種の抽出品質とAPI費用を比較する応用研究。macro F1 0.812、micro F1 0.842、推論料金78〜97%削減という実務的比較はあるが、新規の生成復号アルゴリズム、GPU推論基盤、KV管理、負荷分散、スケジューリングを提案・検証する研究ではない。法務領域の抽出品質が主題のため対象外。",
+    "first_checked_at": "2026-10-12T19:45:24+00:00",
+    "last_checked_at": "2026-10-18T10:00:26+00:00",
+    "linked_from": [],
+    "title": "A Few Good Clauses: Comparing LLMs vs Domain-Trained Small Language Models on Structured Contract Extraction"
+  },
+  "processed_at": "2026-10-18T10:00:26+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-6c9f65cebb15",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
