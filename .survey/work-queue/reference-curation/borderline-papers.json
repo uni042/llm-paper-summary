@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-17T20:45:50+00:00",
-  "record_count": 5233,
+  "updated_at": "2026-10-18T01:47:12+00:00",
+  "record_count": 5235,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -81320,6 +81320,32 @@
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "SAP: Syntactic Attention Pruning for Transformer-based Language Models"
+    },
+    "arXiv:2601.10011": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2601.10011",
+      "identity_tokens": [
+        "arXiv:2601.10011"
+      ],
+      "reason": "著者要旨では、自然言語からSQLへの変換で実体別・階層別・原子的逐次の三種類の質問分解と、過去の誤り修正対を蓄積する動的記憶を使う。BIRDで実行正答率68.5%、既存のテスト時スケーリング方式より10倍超少ない資源を報告するが、最適化はNL2SQL専用の推論手順・自己修正であり、汎用LLMサービング基盤や復号実装の改善は直接評価していないため境界的。",
+      "first_checked_at": "2026-10-18T01:47:11+00:00",
+      "last_checked_at": "2026-10-18T01:47:11+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Memo-SQL: Structured Decomposition and Experience-Driven Self-Correction for Training-Free NL2SQL"
+    },
+    "arXiv:2511.13593": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2511.13593",
+      "identity_tokens": [
+        "arXiv:2511.13593"
+      ],
+      "reason": "著者要旨では、能動的なユーザープロファイル抽出、イベント記録の更新、人物属性と話題関連文脈の階層検索によって長期対話の個人化を改善する。LoCoMo 51.67%、PERSONAMEM 62.99%と応答時間効率の改善を報告するが、主な貢献はエージェントの個人化記憶と回答品質であり、汎用LLM復号、KVキャッシュ、GPUメモリ階層、サービングスケジューラの直接的な最適化を示さないため境界的。",
+      "first_checked_at": "2026-10-18T01:47:12+00:00",
+      "last_checked_at": "2026-10-18T01:47:12+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "O-Mem: Omni Memory System for Personalized, Long Horizon, Self-Evolving Agents"
     }
   }
 }

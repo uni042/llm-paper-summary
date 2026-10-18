@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-17T22:45:10+00:00",
-  "record_count": 12423,
+  "updated_at": "2026-10-18T01:47:13+00:00",
+  "record_count": 12422,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -165113,9 +165113,9 @@
         "id:arXiv:2403.01232",
         "url:https://arxiv.org/abs/2403.01232"
       ],
-      "reason": "グラフトランスフォーマーの高次多項式表現と線形計算量の局所・大域注意を提案し、13件のグラフデータセットでノード表現を評価する研究。対象はグラフ学習であり、自己回帰型LLMの生成推論、KVキャッシュ、MoE、推論サーバの効率化ではない。",
+      "reason": "著者要旨によれば、グラフトランスフォーマーの局所・大域等変注意に高次多項式表現を導入し、13のグラフデータセットでグラフニューラルネットワークと比較する。線形時間の注意機構という用語上の接点はあるが、対象はグラフ分類・ノード予測であり、LLMの生成復号、KVキャッシュ、推論サービングの性能を評価していないため対象外。",
       "first_checked_at": "2026-10-12T21:38:02+00:00",
-      "last_checked_at": "2026-10-17T01:43:30+00:00",
+      "last_checked_at": "2026-10-18T01:47:13+00:00",
       "linked_from": [],
       "title": "Polynormer: Polynomial-Expressive Graph Transformer in Linear Time"
     },
@@ -179128,18 +179128,6 @@
       "last_checked_at": "2026-10-17T05:04:56+00:00",
       "linked_from": [],
       "title": "VISTAv2: World Imagination for Indoor Vision-and-Language Navigation"
-    },
-    "arXiv:2601.10011": {
-      "classification": "unrelated",
-      "canonical_id": "arXiv:2601.10011",
-      "identity_tokens": [
-        "arXiv:2601.10011"
-      ],
-      "reason": "自然言語からSQLを生成する応用タスクで、質問の構造的分解と成功例・エラー修正例の検索によってBIRDの実行正答率68.5%を達成する。計算資源削減の記述はあるが、LLMの重み配置、復号カーネル、メモリ階層、サービング実装を最適化する研究ではなく、SQL推論戦略と応用精度が中心。",
-      "first_checked_at": "2026-10-17T05:06:13+00:00",
-      "last_checked_at": "2026-10-17T05:06:13+00:00",
-      "linked_from": [],
-      "title": "Memo-SQL: Structured Decomposition and Experience-Driven Self-Correction for Training-Free NL2SQL"
     },
     "DOI:10.1007/s11227-026-08777-y": {
       "classification": "unrelated",
