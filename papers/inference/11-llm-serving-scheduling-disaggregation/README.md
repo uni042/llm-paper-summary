@@ -19,7 +19,7 @@
   ツール呼出しを挟む多ターンLLMエージェントで、ツール待ち時間・KV再構築費用・残りターンを見てKVキャッシュの保持期限を動的に決め、短い待ちではGPUに固定し長い待ちでは解放してターン間待ちを減らすスケジューラ。
 
 - **2026-07 · [Kimi K3: Open Frontier Intelligence](2026-2607.24653-kimi-k3-open-frontier-intelligence.md)**  
-  実装：✓ ・ リポジトリ内被引用：15  
+  実装：✓ ・ リポジトリ内被引用：16  
   KDA状態とMLAのKVを統合する接頭辞キャッシュ、512トークン境界の再利用、クラスタ親和ルーティングを記述するKimi K3技術報告。配信機構は具体的だが、節内に比較測定はない。
 
 - **2025-12 · [TraCT: Disaggregated LLM Serving with CXL Shared Memory KV Cache at Rack-Scale](2025-2512.18194-tract-rack-scale-cxl-shared-kv.md)**  
@@ -58,6 +58,10 @@
   実装：[✓](https://github.com/vllm-project/vllm-omni) ・ リポジトリ内被引用：6  
   複数LLM・拡散モデル・音声/画像生成器を段階グラフへ分解し、各段階を独立バッチ・独立GPU配置・共通コネクタで実行することで、any-to-any型マルチモーダル推論を単一モデル用サービング基盤から拡張する方式。
 
+- **2026-02 · [DualMap: Enabling Both Cache Affinity and Load Balancing for Distributed LLM Serving](2026-2602.06502-dualmap-enabling-both-cache-affinity-and-load-balancing-for-distributed-.md)**  
+  実装：[✓](https://github.com/ASISys/DualMap) ・ リポジトリ内被引用：6  
+  DualMapは、分散LLM推論でプロンプト接頭辞のKVキャッシュを再利用したいという要求と、各推論インスタンスへ負荷を均等に分けたいという要求の衝突を解く配車方式である。ICLR 2026の論文は、vLLMを用いた分散推論クラスタで実際の会話・ツール利用負荷を評価し、同じTTFT目標を満たす有効要求容量を既存方式比で最大2.25倍に改善したと報告する。
+
 - **2026-01 · [A Universal Load Balancing Principle and Its Application to Large Language Model Serving](2026-2601.17855-universal-load-balancing-principle-llm-serving.md)**  
   実装：[✓](https://github.com/Echoscd/Load-Balancing-Release) ・ リポジトリ内被引用：6  
   同期障壁で最遅GPUに全体が律速されるデータ並列デコードを、短期先読み付き整数最適化BF-IOで割り当て直し、256基A100相当のシミュレーションでFCFS比スループット約92%向上・エネルギー約29%削減を示す。
@@ -77,10 +81,6 @@
 - **2026-02 · [Efficient Multi-round LLM Inference over Disaggregated Serving](2026-2602.14516-ampd-multi-round-disaggregated-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：5  
   多ラウンド推論の追加プリフィルを、実行時負荷に応じてデコード側の局所実行かプリフィル側の遠隔実行へ振り分け、待ち行列の並べ替えとGPU配備計画を組み合わせてSLO達成率を高める分離サービング方式。
-
-- **2026-02 · [DualMap: Enabling Both Cache Affinity and Load Balancing for Distributed LLM Serving](2026-2602.06502-dualmap-enabling-both-cache-affinity-and-load-balancing-for-distributed-.md)**  
-  実装：[✓](https://github.com/ASISys/DualMap) ・ リポジトリ内被引用：5  
-  DualMapは、分散LLM推論でプロンプト接頭辞のKVキャッシュを再利用したいという要求と、各推論インスタンスへ負荷を均等に分けたいという要求の衝突を解く配車方式である。ICLR 2026の論文は、vLLMを用いた分散推論クラスタで実際の会話・ツール利用負荷を評価し、同じTTFT目標を満たす有効要求容量を既存方式比で最大2.25倍に改善したと報告する。
 
 - **2026-01 · [LLM-42: Enabling Determinism in LLM Inference with Verified Speculation](2026-2601.17768-llm42-verified-speculation-deterministic-inference.md)**  
   実装：[✓](https://github.com/microsoft/llm-42) ・ リポジトリ内被引用：5  
@@ -907,7 +907,7 @@
   エージェントのLLM呼び出しをプログラム単位で追跡し、累積サービス時間と動的DAGの重要経路近似で優先順位を付け、KV局所性を保つ複数GPUルーティングまで組み合わせてプログラム全体の待ち時間を削減する。
 
 - **2025-04 · [MegaScale-Infer: Serving Mixture-of-Experts at Scale with Disaggregated Expert Parallelism](2025-2504.02263-megascale-infer-disaggregated-expert-parallelism.md)**  
-  実装：✓ ・ リポジトリ内被引用：37  
+  実装：✓ ・ リポジトリ内被引用：38  
   注意機構とMoE専門家FFNを別GPU群へ分離し、複数注意レプリカから専門家要求を集約して大きな専門家バッチを作り、専用多対多RDMA通信とピンポン型パイプラインで通信を隠す大規模MoEサービング方式。
 
 - **2025-01 · [AdaServe: Accelerating Multi-SLO LLM Serving with SLO-Customized Speculative Decoding](2025-2501.12162-adaserve-multi-slo-speculative-serving.md)**  
@@ -1249,11 +1249,11 @@
 ### 3年前（2023-11〜2024-10）
 
 - **2023-12 · [SGLang: Efficient Execution of Structured Language Model Programs](2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md)**  
-  実装：[✓](https://github.com/sgl-project/sglang) ・ リポジトリ内被引用：502  
+  実装：[✓](https://github.com/sgl-project/sglang) ・ リポジトリ内被引用：503  
   複数のLLM呼び出しや条件分岐をランタイムが1つのプログラムとして理解し、共有接頭辞のKV再利用・並列実行・構造化出力生成をまとめて効率化する推論システム。
 
 - **2024-07 · [DistServe: Disaggregating Prefill and Decoding for Goodput-optimized Large Language Model Serving](2024-2401.09670-distserve-disaggregating-prefill-decoding-goodput.md)**  
-  実装：[✓](https://github.com/LLMServe/DistServe) ・ リポジトリ内被引用：477  
+  実装：[✓](https://github.com/LLMServe/DistServe) ・ リポジトリ内被引用：478  
   DistServeは、二段階を異なるGPU群へ分離し、事前入力処理側と逐次復号側の装置配分、モデル並列化、要求の束ね方を独立に決める。OSDI 2024の論文は、四ノード・計32台のA100 80GBを用い、OPT-13B、OPT-66B、OPT-175Bと三種のアプリケーションを評価した。
 
 - **2023-11 · [Splitwise: Efficient Generative LLM Inference Using Phase Splitting](2023-2311.18677-splitwise-efficient-generative-llm-inference-phase-splitting.md)**  
@@ -1301,7 +1301,7 @@
   仮想 トークン Counter（VTC）は、要求数ではなくクライアントごとに実際に処理した入力・出力トークンをサービス量として数え、累積サービス量が少ないクライアントから新しい要求を実行バッチへ入れる。空きGPUを意図的に遊ばせず、公平性と高い利用率を両立することを狙う。
 
 - **2024-05 · [Preble: Efficient Distributed Prompt Scheduling for LLM Serving](2024-2407.00023-preble-efficient-distributed-prompt-scheduling.md)**  
-  実装：✓ ・ リポジトリ内被引用：62  
+  実装：✓ ・ リポジトリ内被引用：63  
   同じプレフィックスのKVをすでに持つGPUへリクエストを送ればプリフィルを省ける一方、そのGPUだけ混むことがあるため、KV再利用で節約できる計算時間とGPUの混雑による待ち時間を比較してリクエストの送り先を決めるdistributed サービング スケジューラ。
 
 - **2024-06 · [MemServe: Context Caching for Disaggregated LLM Serving with Elastic Memory Pool](2024-2406.17565-memserve-context-caching-disaggregated-serving.md)**  
