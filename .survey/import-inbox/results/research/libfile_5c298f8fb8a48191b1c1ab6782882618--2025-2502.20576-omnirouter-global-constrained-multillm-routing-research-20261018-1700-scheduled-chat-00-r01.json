@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "4c32782430c6cd6887c90b4c6c5935215eb6ec80082e579e3654c6d74604f504",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_5c298f8fb8a48191b1c1ab6782882618--2025-2502.20576-omnirouter-global-constrained-multillm-routing-research-20261018-1700-scheduled-chat-00-r01.md",
+  "canonical_id": "arXiv:2502.20576",
+  "worker_completed_at": "2026-10-18T17:04:17+09:00",
+  "worker_run_key": "20261018-1700-scheduled-chat-00/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 6638,
+    "body_paragraphs": 37,
+    "method_chars": 0,
+    "method_paragraphs": 0,
+    "evaluation_chars": 632,
+    "limitation_chars": 0,
+    "insufficiency_flags": [
+      "手法説明量 0 < 700",
+      "限界説明量 0 < 推奨 120"
+    ]
+  },
+  "failures": [
+    "quality_self_review_version が空",
+    "説明不足トリガー: 手法説明量 0 < 700"
+  ],
+  "processed_at": "2026-10-18T10:59:59+00:00"
+}

@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-18T10:52:05+00:00",
+  "generated_at": "2026-10-18T11:02:21+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 165,
+  "count": 167,
   "entries": [
     {
       "canonical_id": "DOI:10.1145/3714983.3714987",
@@ -4203,8 +4203,8 @@
     },
     {
       "canonical_id": "arXiv:2203.14380",
-      "title": "Pyramid-BERT: Reducing Complexity via Successive Core-set based Token Selection",
-      "source_url": "https://arxiv.org/pdf/2203.14380",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-18T10:49:39+00:00",
       "return_count": 1,
       "assigned_worker": "scheduled-chat-45",
@@ -4234,8 +4234,8 @@
     },
     {
       "canonical_id": "arXiv:2406.11016",
-      "title": "Optimized Speculative Sampling for GPU Hardware Accelerators",
-      "source_url": "https://arxiv.org/pdf/2406.11016",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-18T10:50:34+00:00",
       "return_count": 1,
       "assigned_worker": "scheduled-chat-30",
@@ -4262,8 +4262,8 @@
     },
     {
       "canonical_id": "arXiv:2504.05598",
-      "title": "DEL: Context-Aware Dynamic Exit Layer for Efficient Self-Speculative Decoding",
-      "source_url": "https://arxiv.org/html/2504.05598v2",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-18T10:50:36+00:00",
       "return_count": 1,
       "assigned_worker": "scheduled-chat-45",
@@ -4287,8 +4287,8 @@
     },
     {
       "canonical_id": "arXiv:2503.24000",
-      "title": "Rethinking Key-Value Cache Compression Techniques for Large Language Model Serving",
-      "source_url": "https://arxiv.org/pdf/2503.24000",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-18T10:50:37+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-00",
@@ -4313,6 +4313,63 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_59332defff50819199e8207c7b21c17e--2025-2503.24000-rethinking-kv-compression-serving-research-20261018-1900-scheduled-chat-00-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_59332defff50819199e8207c7b21c17e--2025-2503.24000-rethinking-kv-compression-serving-research-20261018-1900-scheduled-chat-00-r01.json",
       "worker_run_key": "20261018-1900-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2502.20576",
+      "title": "OmniRouter: Budget and Performance Controllable Multi-LLM Routing",
+      "source_url": "https://arxiv.org/pdf/2502.20576",
+      "returned_at": "2026-10-18T10:59:59+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "quality_self_review_version が空",
+        "説明不足トリガー: 手法説明量 0 < 700"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 6638,
+        "body_paragraphs": 37,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 632,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_5c298f8fb8a48191b1c1ab6782882618--2025-2502.20576-omnirouter-global-constrained-multillm-routing-research-20261018-1700-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_5c298f8fb8a48191b1c1ab6782882618--2025-2502.20576-omnirouter-global-constrained-multillm-routing-research-20261018-1700-scheduled-chat-00-r01.json",
+      "worker_run_key": "20261018-1700-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2609.39816",
+      "title": "Beyond Accuracy: Prefix-Invariant Realizations of Low-Precision Fast Matrix Multiplication",
+      "source_url": "https://arxiv.org/abs/2609.39816",
+      "returned_at": "2026-10-18T11:00:53+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 7853,
+        "body_paragraphs": 46,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 657,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_618336cd1fd08191beb1ac22c445ad6d--2026-2609.39816-prefix-invariant-fast-matmul-research-20261018-1230-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_618336cd1fd08191beb1ac22c445ad6d--2026-2609.39816-prefix-invariant-fast-matmul-research-20261018-1230-scheduled-chat-30-r01.json",
+      "worker_run_key": "20261018-1230-scheduled-chat-30/r01"
     }
   ]
 }
