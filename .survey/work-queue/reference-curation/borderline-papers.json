@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-18T10:51:29+00:00",
-  "record_count": 5254,
+  "updated_at": "2026-10-18T11:10:42+00:00",
+  "record_count": 5255,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -81598,6 +81598,19 @@
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "QuantWM: Temporally Consistent 2-Bit KV Cache Quantization for World Models and Video Generation"
+    },
+    "arXiv:2405.18727": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2405.18727",
+      "identity_tokens": [
+        "arXiv:2405.18727"
+      ],
+      "reason": "著者一次書誌の要旨を確認。モデル内部の正直さ・確信度方向の表現を抽出して検索拡張生成の検索タイミングを制御し、必要なときだけ外部検索する手法。検索呼出回数の抑制という推論時費用に間接的な関連はあるが、主要貢献は検索の適応判断と回答品質であり、GPU推論カーネル、KV管理、デコード高速化、配信基盤の直接改善ではない。worklist表記の『Probe-Guided Control』は原著の正式題名『Inherent Control』と一致しないため、canonical IDを優先して修正した。",
+      "first_checked_at": "2026-10-18T11:10:42+00:00",
+      "last_checked_at": "2026-10-18T11:10:42+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "CtrlA: Adaptive Retrieval-Augmented Generation via Inherent Control"
     }
   }
 }

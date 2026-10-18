@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-4a3ed86176c4184c-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2405.18727",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2405.18727",
+    "identity_tokens": [
+      "arXiv:2405.18727"
+    ],
+    "reason": "著者一次書誌の要旨を確認。モデル内部の正直さ・確信度方向の表現を抽出して検索拡張生成の検索タイミングを制御し、必要なときだけ外部検索する手法。検索呼出回数の抑制という推論時費用に間接的な関連はあるが、主要貢献は検索の適応判断と回答品質であり、GPU推論カーネル、KV管理、デコード高速化、配信基盤の直接改善ではない。worklist表記の『Probe-Guided Control』は原著の正式題名『Inherent Control』と一致しないため、canonical IDを優先して修正した。",
+    "first_checked_at": "2026-10-18T11:10:42+00:00",
+    "last_checked_at": "2026-10-18T11:10:42+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "CtrlA: Adaptive Retrieval-Augmented Generation via Inherent Control"
+  },
+  "processed_at": "2026-10-18T11:10:42+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-4a3ed86176c4",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
