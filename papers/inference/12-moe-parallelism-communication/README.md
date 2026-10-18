@@ -24,7 +24,7 @@ MoEの専門家並列、テンソル並列との混成、all-to-all通信、専�
 - [02-adaptive-expert-computation-compression](../02-adaptive-expert-computation-compression/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（49本）
+## 自動生成の論文一覧（51本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -92,6 +92,10 @@ MoEの専門家並列、テンソル並列との混成、all-to-all通信、専�
 - **2026-09 · [Epoch: Compiling Diffusion Blocks for Sparse MoE Serving](2026-2609.09748-epoch-diffusion-blocks-sparse-moe-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   拡散MoEの生成ブロックを再利用単位にし、候補エキスパート集合、確定トークンの期限付き出力、エキスパート並列の通信データをブロック内で疎化して、8基H100上で最良比較対象より最大2.7倍高速化するサービング方式。
+
+- **2026-09 · [CascadeEP: Asynchronous Expert Execution for MoE Prefill under Attention Imbalance](2026-2609.33252-cascadeep-asynchronous-expert-execution-for-moe-prefill-under-attention-.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  混合専門家モデル（Mixture of エキスパート、MoE）の大規模提供では、注意計算を複数のデータ並列複製（data-parallel 注意機構 replicas）へ分散し、選択された専門家（エキスパート）の重みを複数GPUに分割配置する構成が用いられる。
 
 - **2026-08 · [HetRoute: Heterogeneous and Cost-aware Collaborative Routing Framework for Distributed Edge MoE Inference](2026-2608.00577-hetroute-collaborative-routing.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -222,6 +226,10 @@ MoEの専門家並列、テンソル並列との混成、all-to-all通信、専�
 - **2023-03 · [Towards MoE Deployment: Mitigating Inefficiencies in Mixture-of-Expert (MoE) Inference](2023-2303.06182-towards-moe-deployment-mitigating-inefficiencies-in-mixture-of-experts.md)**  
   実装：✓ ・ リポジトリ内被引用：22  
   提案する三機構は動的ゲート（動的 Gating）、専門家バッファ（専門家 Buffering）、専門家負荷分散（専門家 読み込み Balancing）である。動的ゲートによる最大スループットは、静的方式比で言語モデル6.21～11.23倍、機械翻訳エンコーダ5.75～10.98倍、デコーダ2.58～5.71倍へ改善した。
+
+- **2023-06 · [ZeRO++: Extremely Efficient Collective Communication for Giant Model Training](2023-2306.10209-zero-extremely-efficient-collective-communication-for-giant-model-traini.md)**  
+  実装：[✓](https://github.com/microsoft/DeepSpeed) ・ リポジトリ内被引用：4  
+  大規模言語モデル（LLM）を多数のGPUで学習する場合、重みや勾配、最適化器状態を分割してメモリ使用量を下げるZeRO-3は、各層の計算時に必要な重みを集め直す。ZeRO++は前向き重みをINT8に圧縮して0.5M、逆向き重みをノード内で再構成してノード間0、勾配をINT4で通信して0.25Mにする。
 
 ### 5年前（2021-11〜2022-10）
 
