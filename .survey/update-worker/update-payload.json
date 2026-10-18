@@ -1,30 +1,72 @@
 {
   "schema_version": 1,
-  "attempt_id": "library-import-20261015-0830-chatgpt-20261019002000",
+  "attempt_id": "library-import-20261016-0830-chatgpt-20261019002300",
   "kind": "framework_llm_update",
   "artifacts": [
     {
-      "path": "framework-updates/inference-engines/ollama/README.md",
-      "expected_blob_sha": "08afccc7b5c5f86979e4c25a63524ab1de2e7631",
+      "path": "llm-releases/README.md",
+      "expected_blob_sha": "0dd25e7b99287944062df4af7a7c97802814de06",
       "edits": [
         {
           "op": "insert_after_once",
-          "anchor": "## 主要更新\n\n",
-          "text": "### 2026-10-12 — Ollama v0.40.4（正式版）\n- `v0.40.4`は正式版（Latest）として公開された。主な変更は判定モデルの直接利用、既検証manifestと読込済みmodelの再利用、`llama-server`経由のマルチモーダル埋め込み、短いcontext長での埋め込みmodel読込修正、Apple Silicon MLXの投機的復号後の状態管理修正、内蔵llama.cppの判定model対応。\n- 前項の`v0.40.4-rc2`は公開候補版、ここでは正式版として区別する。model準備やmanifest再利用はrequest開始費用の改善であり、全GPUのdecode速度向上を意味しない。MLX変更はWindows CUDAへ直接適用されない。[正式版](https://github.com/ollama/ollama/releases/tag/v0.40.4)\n\n"
+          "anchor": "| リリース日 | モデル | 系統 | 概要 | 詳細 |\n|---|---|---|---|---|",
+          "text": "\n| 2026-10-15 | Nemotron 3.5 Super VL | NVIDIA Nemotron | 総120B / 有効12Bのopen-weight視覚言語MoE。Mamba-2 / TransformerとC-RADIOを組み合わせ、最大1M context。 | [NVIDIA Nemotron系](nvidia.md) |\n| 2026-10-15 | Nemotron 3.5 Bolt 74B-A9B 24GB | NVIDIA Nemotron | 総74B / 有効9Bの視覚言語MoE。24GB GPU向け設計値と約25GBの配布ファイル表示を区別する。 | [NVIDIA Nemotron系](nvidia.md) |"
+        },
+        {
+          "op": "insert_after_once",
+          "anchor": "- [Meta Muse系](meta-muse.md)",
+          "text": "\n- [NVIDIA Nemotron系](nvidia.md)"
         }
       ]
     },
     {
+      "path": "llm-releases/nvidia.md",
+      "content": "# NVIDIA Nemotron系 LLMリリース\n\nNVIDIAが公開するNemotron系モデルを記録する。総パラメータ数とtokenごとの有効パラメータ数、配布サイズと推論時メモリ、公式ベンチマークの条件を分けて読む。\n\n| 公開日 | モデル | 構成・用途 | 提供・ライセンス |\n|---|---|---|---|\n| 2026-10-15 | Nemotron 3.5 Super VL | 総120B / 有効12B。Mamba-2とTransformerを組み合わせたMoEにC-RADIO視覚encoderを接続。最大1M context。画像・文書・表・図表・動画の理解、tool calling、reasoning mode、MTPに対応。 | BF16 / NVFP4 checkpoint、LiLiCorr draft model。OpenMDW v1.1。公式資料：[発表](https://blogs.nvidia.com/blog/nemotron-3-5-super-vl/)、[技術概要](https://developer.nvidia.com/blog/nvidia-nemotron-3-5-super-vl-powers-specialized-agents-with-multimodal-reasoning/)、[BF16](https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-BF16)、[NVFP4](https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-NVFP4)。\n| 2026-10-15 | Nemotron 3.5 Bolt 74B-A9B 24GB | 総74B / 有効9Bの圧縮・追加学習版視覚言語MoE。公式GGUFはexpert重みにIQ2_XXS、他層にNVFP4 / Q8_0を組み合わせる。最大256K context。 | 24GB GPU向けは設計目標であり、Ollama配布ファイル表示は約25GB。長文脈・画像・draftの追加memoryを含む実測ではない。Apple Silicon / Metal非対応の案内あり。12GB VRAMへ全weightは載らず、CPU RAM退避を含む構成検討が必要。[公式発表](https://blogs.nvidia.com/blog/nemotron-3-5-super-vl/)、[Ollama](https://ollama.com/library/nemotron-3.5-bolt)、[GGUF](https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Bolt-74B-A9B-24GB-GGUF)。\n\n## 性能値の読み方\n\nNVIDIAはSuper VLについて同規模open-weight modelとの比較でagentic処理throughput最大5倍、LiLiCorrをDGX Sparkで使う場合に投機なしdecode比で最大2.3倍を報告する。別のDynamo評価は16基のB200と利用者当たり50 token/sの条件で同時利用者最大8倍、TTFT 85%減を報告する。これらは別々の特定条件であり、Windows / RTX 4070 SUPER 12GBの性能値や同一構成で同時に得られる倍率ではない。\n\n重み公開（open-weight）はopen sourceと同じ意味ではない。利用前に個別licenseを確認する。context上限だけから実利用可能なsequence長や速度を判断せず、KV cache、GPU memory、runtime設定を含めて測定する。\n"
+    },
+    {
       "path": "framework-updates/inference-engines/llama-cpp/README.md",
-      "expected_blob_sha": "1563aa0c2eecc74ef56e530f5a6dfbeda7b88160",
+      "expected_blob_sha": "5d70c05efc68cd0f64e8031fb27ed2514f5a33d7",
       "edits": [
         {
           "op": "insert_after_once",
           "anchor": "## 主要更新\n\n",
-          "text": "### 2026-10-14 — b11622：Jinja JSON浮動小数点表現の精度修正（開発版）\n- Jinjaの`tojson`、`string`、`safe`で浮動小数点数がC++既定の有効桁数6桁へ丸められる問題を修正し、元値へ読み戻せる短い表現を使う。ツール引数やtemplate内の数値を保つ互換性・正確性の修正で、一般的な生成速度向上ではない。\n- **開発ビルド（pre-release）**であり、正式版として扱わない。[公式版](https://github.com/ggml-org/llama.cpp/releases/tag/b11622)／[PR #30362](https://github.com/ggml-org/llama.cpp/pull/30362)\n\n"
+          "text": "### 2026-10-15 — v0.7.0（正式版）\n- CPU側へ退避したMoE expertをGPU LRU cacheへ載せる`--moe-cache-mib`を追加。複数GPU間のcache共有にも対応し、公式release noteは対象条件で復号速度最大約2.2倍を報告する。model、GPU、cache hit率で変わり、一般化できない。\n- LiLiCorrによるDFlash draft、GLM5-NextのMTP / sparse-attention経路、draft microbatchを独立指定する`--spec-draft-n-ubatch`を追加。pooled embeddingでは不要なLM head計算とlogits bufferを省き、公式値は該当経路のVRAM最大10分の1（通常生成には適用されない）。\n- 互換性注意：`llama-server`既定portを8080から9931へ変更（Docker内部portは8080のまま）。chat session APIと整形済み出力形式にも変更があるため、client・proxy・起動scriptを確認する。[正式版](https://github.com/ggml-org/llama.cpp/releases/tag/v0.7.0)。\n\n"
+        }
+      ]
+    },
+    {
+      "path": "framework-updates/inference-engines/ollama/README.md",
+      "expected_blob_sha": "39231c1c0336db17e564c0648dcb0ed1c4197341",
+      "edits": [
+        {
+          "op": "insert_after_once",
+          "anchor": "## 主要更新\n\n",
+          "text": "### 2026-10-14 — Ollama v0.40.5（正式版）\n- Nemotron 3.5 Super VL / Bolt、内蔵llama.cppとMLXの更新を追加。判定modelを`clef:cloud` / `clef-flash:cloud`で利用可能にし、OpenAI互換Responses APIの独自tool継続時の不具合やcloud error表示を修正。\n- cloud判定はlocal inferenceの高速化ではない。Nemotron Superの配布サイズは約80〜90GBとされ、12GB VRAM単体には収まらない。前に記録したv0.40.4は正式版、RC2は候補版として区別する。[正式版](https://github.com/ollama/ollama/releases/tag/v0.40.5)。\n\n"
+        }
+      ]
+    },
+    {
+      "path": "framework-updates/inference-engines/exllama/README.md",
+      "expected_blob_sha": "61090ad670df6e2fc2068a69720b14196df3580b",
+      "edits": [
+        {
+          "op": "insert_after_once",
+          "anchor": "## 主要更新\n\n",
+          "text": "### 2026-10-14 — ExLlamaV3 v1.6.2（正式版）\n- CPU offloadingの高速化、tensor parallelismモデルのDFlash2 draft対応、GDN / KDA / MLA層のVRAM固定負荷削減、ROCm gfx11系の注意計算高速化・不具合修正を含む。\n- 公開release noteに条件付き速度倍率・VRAM削減量はない。TPとDFlash2の組合せは複数GPU向けで、単一RTX 4070 SUPERで使えると限らない。[正式版](https://github.com/turboderp-org/exllamav3/releases/tag/v1.6.2)。\n\n"
+        }
+      ]
+    },
+    {
+      "path": "framework-updates/inference-engines/tensorrt-llm/README.md",
+      "expected_blob_sha": "0cc9a9f7077aa423d0e1dc9839d726de746f37dc",
+      "edits": [
+        {
+          "op": "insert_after_once",
+          "anchor": "## 主要更新\n\n",
+          "text": "### 2026-10-14 — TensorRT-LLM v1.4.0rc0（公開候補版）\n- GLM-5.3-Flash、K-EXAONE-2、Nemotron Super 3.5 VL、MiniMax-M3のNVFP4 KV cacheなどへ対応を拡張。疎KV構成、階層認識lock / offload、DeepSeek V4向け疎KV offload準備、小batch（8 token以下）のMoE routing、MTP draft loopを更新。\n- **RC0であり正式版ではない**。KVCacheManagerV2のPython backend削除、LlmRequest field移行は破壊的変更。H100のmulti-GPU worker pool再利用でhangする可能性、SM120/121のDeepSeek MLAでCUDA Graph capture時の不正memory accessという既知問題がある。[公式RC](https://github.com/NVIDIA/TensorRT-LLM/releases/tag/v1.4.0rc0)。\n\n"
         }
       ]
     }
   ],
-  "summary": "2026-10-15 maintenance: add Ollama v0.40.4 stable release and llama.cpp b11622 Jinja JSON numeric precision fix; distinguish stable and pre-release"
+  "summary": "2026-10-16 maintenance: record Nemotron 3.5 open-weight releases, llama.cpp v0.7.0, Ollama v0.40.5, ExLlamaV3 v1.6.2, TensorRT-LLM v1.4.0rc0 with release-stage and hardware caveats"
 }
