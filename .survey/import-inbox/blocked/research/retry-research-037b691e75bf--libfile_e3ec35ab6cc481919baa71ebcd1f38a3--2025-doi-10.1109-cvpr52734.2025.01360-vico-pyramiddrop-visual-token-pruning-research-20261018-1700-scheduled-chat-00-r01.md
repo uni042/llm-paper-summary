@@ -36,6 +36,8 @@ worker_completed_at: "2026-10-18T17:09:30+09:00"
 worker_run_key: "20261018-1700-scheduled-chat-00/r01"
 reference_main_sha: "9aa92a6b4f9e9e3c7669206e2fefa0393db19a1e"
 quality_self_review_passed: true
+last_audited: null
+audit_version: 0
 ---
 
 # ViCo / PyramidDrop：視覚トークンを深い層ほど削る円錐型圧縮
