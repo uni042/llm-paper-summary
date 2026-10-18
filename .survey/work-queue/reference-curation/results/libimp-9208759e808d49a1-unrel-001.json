@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-9208759e808d49a1-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2510.22951",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2510.22951",
+    "identity_tokens": [
+      "arXiv:2510.22951"
+    ],
+    "reason": "原著全文の問題設定・評価を確認。安定な線形状態空間モデルに対するHankel特異値正則化、平衡打切りによる状態次元圧縮が主題。評価はsCIFAR10、sMNIST、IMDB、PATH、PATH-Xの系列分類であり、LLMの推論、言語生成、サービング、KVキャッシュ、LLM学習性能の実測を扱わない。一般的なSSM圧縮としての研究価値はあるが、本サーベイのLLM推論・学習最適化の直接対象外とする。",
+    "first_checked_at": "2026-10-18T02:48:50+00:00",
+    "last_checked_at": "2026-10-18T02:48:50+00:00",
+    "linked_from": [],
+    "title": "Hankel Singular Value Regularization for Highly Compressible State Space Models"
+  },
+  "processed_at": "2026-10-18T02:48:50+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-9208759e808d",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-18T01:47:13+00:00",
-  "record_count": 12422,
+  "updated_at": "2026-10-18T02:48:50+00:00",
+  "record_count": 12423,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -179140,6 +179140,18 @@
       "last_checked_at": "2026-10-17T20:45:50+00:00",
       "linked_from": [],
       "title": "DNN task computation offloading and resource allocation optimization strategy based on probabilistic early exit"
+    },
+    "arXiv:2510.22951": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2510.22951",
+      "identity_tokens": [
+        "arXiv:2510.22951"
+      ],
+      "reason": "原著全文の問題設定・評価を確認。安定な線形状態空間モデルに対するHankel特異値正則化、平衡打切りによる状態次元圧縮が主題。評価はsCIFAR10、sMNIST、IMDB、PATH、PATH-Xの系列分類であり、LLMの推論、言語生成、サービング、KVキャッシュ、LLM学習性能の実測を扱わない。一般的なSSM圧縮としての研究価値はあるが、本サーベイのLLM推論・学習最適化の直接対象外とする。",
+      "first_checked_at": "2026-10-18T02:48:50+00:00",
+      "last_checked_at": "2026-10-18T02:48:50+00:00",
+      "linked_from": [],
+      "title": "Hankel Singular Value Regularization for Highly Compressible State Space Models"
     }
   }
 }
