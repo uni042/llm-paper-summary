@@ -1,0 +1,26 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-45",
+  "run_key": "20261018-0945-scheduled-chat-45/r01/research-prescreen/013",
+  "reference_main_sha": "d484b0839b30427af369c0b9c8a72fcc2cfc9368",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2601.10011",
+      "identity_tokens": [
+        "arxiv:2601.10011"
+      ],
+      "title": "Memo-SQL: Structured Decomposition and Experience-Driven Self-Correction for Training-Free NL2SQL",
+      "reason": "著者要旨では、自然言語からSQLへの変換で実体別・階層別・原子的逐次の三種類の質問分解と、過去の誤り修正対を蓄積する動的記憶を使う。BIRDで実行正答率68.5%、既存のテスト時スケーリング方式より10倍超少ない資源を報告するが、最適化はNL2SQL専用の推論手順・自己修正であり、汎用LLMサービング基盤や復号実装の改善は直接評価していないため境界的。",
+      "source_url": "https://arxiv.org/abs/2601.10011",
+      "body_check": "primary_author_abstract_screen_only; fulltext_not_reviewed",
+      "first_checked_at": "2026-10-18T09:52:50+09:00",
+      "last_checked_at": "2026-10-18T09:52:50+09:00",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance",
+      "worklist_rank": 13
+    }
+  ]
+}
