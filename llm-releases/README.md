@@ -30,8 +30,9 @@ modelを比較するときは「flagship」「frontier」のような宣伝上�
 | 2026-10-15 | Nemotron 3.5 Bolt 74B-A9B 24GB | NVIDIA Nemotron | 総74B / 有効9Bの視覚言語MoE。24GB GPU向け設計値と約25GBの配布ファイル表示を区別する。 | [NVIDIA Nemotron系](nvidia.md) |
 | 2026-09-23 | GPT-6 Sol / Luna | OpenAI GPT | GPT-6 Astraで導入したprofessional work、factuality、coding、computer use等の改善を高速・低cost帯へ展開。API IDは`gpt-6-sol` / `gpt-6-luna`。GPT-5.6のpromotional pricing比でSol / Lunaとも大幅に低価格化。 | [OpenAI GPT系](openai-gpt.md) |
 | 2026-09-02 | Qwen3.8-Max-0902 | Qwen | 2.4T級MoEを基盤とするQwen3.8-MaxのAPI snapshot。1M contextとtext / image / video入力を維持し、coding・長時間tool taskを更新。0902自体のopen-weight checkpointとは区別。 | [Qwen系](qwen.md) |
+| 2026-09-20 | Step 5 Preview | StepFun | 総600B / 有効27Bの疎MoE。公式BF16重みのrepo commitは2026-09-20、最大1M context。画像入力は仕様表に記載。 | [StepFun系](stepfun.md) |
 | 2026-09-15 | Gemini 3.8 Live / Live Extended Thinking | Gemini | Live API向けaudio-to-audioモデル。標準Liveは低latencyのreal-time dialogue、Extended Thinkingはlive audio中のbackground reasoningを重視する。両方とも一般提供（GA）。 | [Gemini系](gemini.md) |
-| 2026-09-02 | Muse Spark 1.3 | Meta Muse | codingとエージェント型タスク（agentic tasks）を更新し、Muse Code / Meta APIへ展開されたMuse Spark系モデル。 | [Meta Muse系](meta-muse.md) |
+| 2026-10-15 | Muse Spark Open | Meta Muse | 総816B / 有効42B、256 expertsから8を選ぶopen-weight multimodal MoE。最大1M context。NVFP4/BF16重みのGPU memory要件は700GB / 2TBと公式案内。 | [Meta Muse系](meta-muse.md) |
 | 2026-08-26 | GLM-5.3-Flash | GLM | 総320B / 約18B activeのnative multimodal MoE。sparse / linear attentionを組み合わせ、長context時のattention計算とKV増加を抑える設計。 | [GLM系](glm.md) |
 | 2026-09-22 | Claude Opus 5.5 | Claude | Claude 5.5 familyの最初のmodel。Opus 5からagentic coding、computer use、knowledge work、効率、安全性を更新し、通常workloadで約40%低cost、出力速度も30%以上高速化とAnthropicが報告。 | [Claude系](claude.md) |
 | 2026-09-10 | DeepSeek-V4.1-Flash | DeepSeek | 総552BのMoE。入力8B・出力16B activeの非対称構造を採用し、前世代比でKV cacheのHBM要求を1/4、SSD保存量を1/8へ削減。native multimodal対応でAPIとopen-weightを公開。 | [DeepSeek系](deepseek.md) |
@@ -59,6 +60,7 @@ modelを比較するときは「flagship」「frontier」のような宣伝上�
 - [MiniMax系](minimax.md)
 - [Phi系](phi.md)
 - [Meta Muse系](meta-muse.md)
+- [StepFun系](stepfun.md)
 - [NVIDIA Nemotron系](nvidia.md)
 
 ## 更新ルール

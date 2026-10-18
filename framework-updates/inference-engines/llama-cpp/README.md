@@ -78,6 +78,12 @@ llama.cppの主要な機能・性能更新を継続的に記録する集約ペ�
 
 ## 主要更新
 
+### 2026-10-16 — b11695 / b11699 / b11700（開発版）
+- **b11695**：Mellum 2.1のMTP対応とRoPE構築処理を追加。対応modelの投機的復号向けで、全model共通の高速化ではない。
+- **b11699**：HTTP clientが`HTTP_PROXY` / `HTTPS_PROXY`と`NO_PROXY`、loopback例外を処理し、企業proxy下の取得互換性や子server待機の問題を修正する。
+- **b11700**：IBM Granite Switch判定modelに対応。機能の追加・取り消しcommitが同じbuildに含まれるため、最終的な公開buildで挙動を確認する。
+- いずれも正式版v0.7.0より新しい開発用pre-release。b11699のWindows x64 CUDA 12配布物はCUDA 12.4 DLLを参照する。これらに共通する速度倍率は報告されていない。[b11695](https://github.com/ggml-org/llama.cpp/releases/tag/b11695) / [b11699](https://github.com/ggml-org/llama.cpp/releases/tag/b11699) / [b11700](https://github.com/ggml-org/llama.cpp/releases/tag/b11700)
+
 ### 2026-10-15 — v0.7.0（正式版）
 - CPU側へ退避したMoE expertをGPU LRU cacheへ載せる`--moe-cache-mib`を追加。複数GPU間のcache共有にも対応し、公式release noteは対象条件で復号速度最大約2.2倍を報告する。model、GPU、cache hit率で変わり、一般化できない。
 - LiLiCorrによるDFlash draft、GLM5-NextのMTP / sparse-attention経路、draft microbatchを独立指定する`--spec-draft-n-ubatch`を追加。pooled embeddingでは不要なLM head計算とlogits bufferを省き、公式値は該当経路のVRAM最大10分の1（通常生成には適用されない）。

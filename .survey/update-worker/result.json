@@ -1,25 +1,25 @@
 {
   "schema_version": 1,
   "ok": true,
-  "attempt_id": "library-import-20261016-0830-chatgpt-20261019002300",
+  "attempt_id": "library-import-20261017-0830-chatgpt-20261019003000",
   "kind": "framework_llm_update",
   "updated_paths": [
     "llm-releases/README.md",
-    "llm-releases/nvidia.md",
+    "llm-releases/meta-muse.md",
+    "llm-releases/stepfun.md",
     "framework-updates/inference-engines/llama-cpp/README.md",
     "framework-updates/inference-engines/ollama/README.md",
-    "framework-updates/inference-engines/exllama/README.md",
-    "framework-updates/inference-engines/tensorrt-llm/README.md"
+    "framework-updates/inference-engines/exllama/README.md"
   ],
   "created_paths": [
-    "llm-releases/nvidia.md"
+    "llm-releases/stepfun.md"
   ],
   "updated_existing_paths": [
     "llm-releases/README.md",
+    "llm-releases/meta-muse.md",
     "framework-updates/inference-engines/llama-cpp/README.md",
     "framework-updates/inference-engines/ollama/README.md",
-    "framework-updates/inference-engines/exllama/README.md",
-    "framework-updates/inference-engines/tensorrt-llm/README.md"
+    "framework-updates/inference-engines/exllama/README.md"
   ],
-  "summary": "2026-10-16 maintenance: record Nemotron 3.5 open-weight releases, llama.cpp v0.7.0, Ollama v0.40.5, ExLlamaV3 v1.6.2, TensorRT-LLM v1.4.0rc0 with release-stage and hardware caveats"
+  "summary": "2026-10-17 maintenance: update Meta Muse Spark Open and Step 5 Preview model records; add Ollama v0.40.6-rc0, llama.cpp b11695/b11699/b11700, and ExLlamaV3 v1.6.3 with date and release-stage caveats"
 }

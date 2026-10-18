@@ -28,6 +28,10 @@ ExLlamaV2には期間内の本質的更新がなく、後継のExLlamaV3を同�
 
 ## 主要更新
 
+### 2026-10-17 — ExLlamaV3 v1.6.3（正式版）
+- Ling-3.0 / 3.1の`BailingMoeV3ForCausalLM`構造に対応し、不具合修正を含む。release noteは修正の詳細や速度倍率を示していない。
+- Windows x64 CUDA 12.8（cu128）wheelが配布されているが、手元のCUDA環境での動作保証や12GB VRAMへのmodel収容を意味しない。[正式版](https://github.com/turboderp-org/exllamav3/releases/tag/v1.6.3)
+
 ### 2026-10-14 — ExLlamaV3 v1.6.2（正式版）
 - CPU offloadingの高速化、tensor parallelismモデルのDFlash2 draft対応、GDN / KDA / MLA層のVRAM固定負荷削減、ROCm gfx11系の注意計算高速化・不具合修正を含む。
 - 公開release noteに条件付き速度倍率・VRAM削減量はない。TPとDFlash2の組合せは複数GPU向けで、単一RTX 4070 SUPERで使えると限らない。[正式版](https://github.com/turboderp-org/exllamav3/releases/tag/v1.6.2)。
