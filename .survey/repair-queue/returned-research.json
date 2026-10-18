@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-18T13:04:35+00:00",
+  "generated_at": "2026-10-18T13:10:39+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 178,
+  "count": 182,
   "entries": [
     {
       "canonical_id": "DOI:10.1145/3714983.3714987",
@@ -4614,8 +4614,8 @@
     },
     {
       "canonical_id": "arXiv:2609.24298",
-      "title": "KV-COBRA: KV Cache Compression via Co-Optimized Bit-Rank Allocation",
-      "source_url": "https://arxiv.org/abs/2609.24298",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-18T13:03:05+00:00",
       "return_count": 1,
       "assigned_worker": "scheduled-chat-45",
@@ -4643,8 +4643,8 @@
     },
     {
       "canonical_id": "arXiv:2609.36835",
-      "title": "ARC-KV: Amortizing Anchor Search for Reconstruction-Based KV Cache Compaction",
-      "source_url": "https://arxiv.org/pdf/2609.36835",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-18T13:03:06+00:00",
       "return_count": 1,
       "assigned_worker": "scheduled-chat-45",
@@ -4667,6 +4667,124 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_d526d0090e30819193121452f80b2994--2026-2609.36835-arc-kv-amortized-anchor-search-reconstruction-research-20261018-1930-scheduled-chat-30-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_d526d0090e30819193121452f80b2994--2026-2609.36835-arc-kv-amortized-anchor-search-reconstruction-research-20261018-1930-scheduled-chat-30-r01.json",
       "worker_run_key": "20261018-1930-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2510.02758",
+      "title": "TokenFlow: Responsive LLM Text Streaming Serving under Request Burst via Preemptive Scheduling",
+      "source_url": "https://arxiv.org/abs/2510.02758",
+      "returned_at": "2026-10-18T13:10:36+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700",
+        "説明不足トリガー: 評価説明量 0 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 6437,
+        "body_paragraphs": 31,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 0,
+        "limitation_chars": 671,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700",
+          "評価説明量 0 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_004e811be8e48191a45430c3b385875b--2025-2510.02758-tokenflow-buffer-aware-preemptive-serving-research-20261018-2155-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_004e811be8e48191a45430c3b385875b--2025-2510.02758-tokenflow-buffer-aware-preemptive-serving-research-20261018-2155-scheduled-chat-00-r01.json",
+      "worker_run_key": "20261018-2155-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2506.05333",
+      "title": "Kinetics: Rethinking Test-Time Scaling Laws",
+      "source_url": "https://arxiv.org/abs/2506.05333",
+      "returned_at": "2026-10-18T13:10:37+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700",
+        "説明不足トリガー: 評価説明量 147 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5929,
+        "body_paragraphs": 33,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 147,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700",
+          "評価説明量 147 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_25c1b5b333188191809fac348047a21a--2025-2506.05333-kinetics-memory-aware-test-time-scaling-research-20261018-2155-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_25c1b5b333188191809fac348047a21a--2025-2506.05333-kinetics-memory-aware-test-time-scaling-research-20261018-2155-scheduled-chat-00-r01.json",
+      "worker_run_key": "20261018-2155-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2402.04902",
+      "title": "L4Q: Parameter Efficient Quantization-Aware Fine-Tuning on Large Language Models",
+      "source_url": "https://arxiv.org/abs/2402.04902",
+      "returned_at": "2026-10-18T13:10:38+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700",
+        "説明不足トリガー: 評価説明量 108 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5283,
+        "body_paragraphs": 32,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 108,
+        "limitation_chars": 537,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700",
+          "評価説明量 108 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_684023af84748191a5f071abe08e3e88--2024-2402.04902-l4q-fully-quantized-lora-qat-research-20261018-2155-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_684023af84748191a5f071abe08e3e88--2024-2402.04902-l4q-fully-quantized-lora-qat-research-20261018-2155-scheduled-chat-00-r01.json",
+      "worker_run_key": "20261018-2155-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2506.04642",
+      "title": "TaDA: Training-free recipe for Decoding with Adaptive KV Cache Compression and Mean-centering",
+      "source_url": "https://arxiv.org/abs/2506.04642",
+      "returned_at": "2026-10-18T13:10:39+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700",
+        "説明不足トリガー: 評価説明量 149 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5199,
+        "body_paragraphs": 28,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 149,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700",
+          "評価説明量 149 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_b0f5921c12d4819194ba08308f1f0860--2025-2506.04642-tada-adaptive-kv-mean-centering-research-20261018-2155-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_b0f5921c12d4819194ba08308f1f0860--2025-2506.04642-tada-adaptive-kv-mean-centering-research-20261018-2155-scheduled-chat-00-r01.json",
+      "worker_run_key": "20261018-2155-scheduled-chat-00/r01"
     }
   ]
 }

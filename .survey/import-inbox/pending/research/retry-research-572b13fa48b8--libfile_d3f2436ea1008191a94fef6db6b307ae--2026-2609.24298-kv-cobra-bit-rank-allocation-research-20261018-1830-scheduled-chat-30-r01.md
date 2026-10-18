@@ -33,6 +33,8 @@ worker_run_key: '20261018-1830-scheduled-chat-30/r01'
 reference_main_sha: '2159a2fcd0ca95f4a6f858a44f0f2fcb9ca92aa6'
 quality_self_review_passed: true
 quality_self_review_version: 'PAPER-QUALITY-GUIDE-2026-10-07'
+last_audited: null
+audit_version: 0
 ---
 
 # KV-COBRA：ヘッド別の低ランク保持と量子化ビット幅の共同最適化
