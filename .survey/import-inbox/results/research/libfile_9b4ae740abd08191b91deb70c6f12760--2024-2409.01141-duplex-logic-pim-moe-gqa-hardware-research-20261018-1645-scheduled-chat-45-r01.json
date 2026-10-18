@@ -17,5 +17,13 @@
     "limitation_chars": 762,
     "insufficiency_flags": []
   },
-  "processed_at": "2026-10-18T11:51:39+00:00"
+  "processed_at": "2026-10-18T11:51:39+00:00",
+  "manual_content_review": {
+    "reviewed_at": "2026-10-18T12:12:56.141Z",
+    "decision": "kept_incoming_library_source",
+    "compared_with": "papers/inference/17-pim-near-data-acceleration/2024-2409.01141-duplex-a-device-for-large-language-models-with-mixture-of-experts-groupe.md",
+    "prior_paper_git_blob_sha": "43504f55a008edbb0403013e46ae967e0cb683b0",
+    "kept_paper_git_blob_sha": "4163e36f5cb107e9456a0ae3aec6b47e8541e673",
+    "reason": "The source provides more complete method, workload/evaluation conditions, quantitative outcomes, negative results, and hardware/implementation limits. It passed the Research quality gate and its source_sha256 matches the retained bytes."
+  }
 }
