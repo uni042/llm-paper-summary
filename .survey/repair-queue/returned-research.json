@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-18T12:50:37+00:00",
+  "generated_at": "2026-10-18T13:04:35+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 177,
+  "count": 178,
   "entries": [
     {
       "canonical_id": "DOI:10.1145/3714983.3714987",
@@ -3752,33 +3752,6 @@
       "worker_run_key": "20261018-0900-scheduled-chat-00/r01"
     },
     {
-      "canonical_id": "arXiv:2610.04646",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-18T04:04:42+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 0 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 6218,
-        "body_paragraphs": 33,
-        "method_chars": 1443,
-        "method_paragraphs": 6,
-        "evaluation_chars": 0,
-        "limitation_chars": 545,
-        "insufficiency_flags": [
-          "評価説明量 0 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-222320b10c02--libfile_f0f2b275def48191af80b5c56f35a73f--2026-2610.04646-seis-self-evolving-inference-systems-research-20261018-1230-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-222320b10c02--libfile_f0f2b275def48191af80b5c56f35a73f--2026-2610.04646-seis-self-evolving-inference-systems-research-20261018-1230-scheduled-cha.json",
-      "worker_run_key": "20261018-1230-scheduled-chat-30/r01"
-    },
-    {
       "canonical_id": "arXiv:2403.07652",
       "title": null,
       "source_url": null,
@@ -4502,8 +4475,8 @@
     },
     {
       "canonical_id": "arXiv:2609.21264",
-      "title": "Programming AMD XDNA NPUs with Open-source Compiler Tools: A FlashAttention Case Study",
-      "source_url": "https://arxiv.org/abs/2609.21264",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-18T12:49:31+00:00",
       "return_count": 1,
       "assigned_worker": "scheduled-chat-45",
@@ -4529,8 +4502,8 @@
     },
     {
       "canonical_id": "arXiv:2609.25451",
-      "title": "Fast Recovery for LLM Serving via Decoupled Device Memory Lifetime in Dynamo",
-      "source_url": "https://arxiv.org/abs/2609.25451",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-18T12:49:32+00:00",
       "return_count": 1,
       "assigned_worker": "scheduled-chat-30",
@@ -4556,8 +4529,8 @@
     },
     {
       "canonical_id": "arXiv:2609.28870",
-      "title": "When Fancy Eviction Fails: Rethinking Cache Replacement For LLM Prefix Reuse",
-      "source_url": "https://arxiv.org/abs/2609.28870",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-18T12:49:33+00:00",
       "return_count": 1,
       "assigned_worker": "scheduled-chat-30",
@@ -4586,8 +4559,8 @@
     },
     {
       "canonical_id": "arXiv:2609.20874",
-      "title": "Decomposing Predictive Kubernetes Autoscaling for Large Language Model Serving Under Long Startup Delays",
-      "source_url": "https://arxiv.org/abs/2609.20874",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-18T12:49:34+00:00",
       "return_count": 1,
       "assigned_worker": "scheduled-chat-00",
@@ -4614,8 +4587,8 @@
     },
     {
       "canonical_id": "arXiv:2609.21137",
-      "title": "A Multi-Engine Dataflow for MoE Decoding on AWS Tranium",
-      "source_url": "https://arxiv.org/abs/2609.21137",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-18T12:49:35+00:00",
       "return_count": 1,
       "assigned_worker": "scheduled-chat-30",
@@ -4638,6 +4611,62 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_c25920423d2c81918919570f4f915ed6--2026-2609.21137-cardan-multi-engine-moe-trainium3-research-20261018-2130-scheduled-chat-30-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_c25920423d2c81918919570f4f915ed6--2026-2609.21137-cardan-multi-engine-moe-trainium3-research-20261018-2130-scheduled-chat-30-r01.json",
       "worker_run_key": "20261018-2130-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2609.24298",
+      "title": "KV-COBRA: KV Cache Compression via Co-Optimized Bit-Rank Allocation",
+      "source_url": "https://arxiv.org/abs/2609.24298",
+      "returned_at": "2026-10-18T13:03:05+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700",
+        "説明不足トリガー: 評価説明量 126 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 7493,
+        "body_paragraphs": 46,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 126,
+        "limitation_chars": 847,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700",
+          "評価説明量 126 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_d3f2436ea1008191a94fef6db6b307ae--2026-2609.24298-kv-cobra-bit-rank-allocation-research-20261018-1830-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_d3f2436ea1008191a94fef6db6b307ae--2026-2609.24298-kv-cobra-bit-rank-allocation-research-20261018-1830-scheduled-chat-30-r01.json",
+      "worker_run_key": "20261018-1830-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2609.36835",
+      "title": "ARC-KV: Amortizing Anchor Search for Reconstruction-Based KV Cache Compaction",
+      "source_url": "https://arxiv.org/pdf/2609.36835",
+      "returned_at": "2026-10-18T13:03:06+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 8875,
+        "body_paragraphs": 47,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 1773,
+        "limitation_chars": 755,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_d526d0090e30819193121452f80b2994--2026-2609.36835-arc-kv-amortized-anchor-search-reconstruction-research-20261018-1930-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_d526d0090e30819193121452f80b2994--2026-2609.36835-arc-kv-amortized-anchor-search-reconstruction-research-20261018-1930-scheduled-chat-30-r01.json",
+      "worker_run_key": "20261018-1930-scheduled-chat-30/r01"
     }
   ]
 }
