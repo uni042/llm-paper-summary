@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（799本）
+## 自動生成の論文一覧（800本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -599,6 +599,10 @@
 - **2026-09 · [CEDAR: Error-Bounded Residual Routing for Efficient Long-Context Attention](2026-2609.07237-cedar-error-bounded-residual-routing-for-efficient-long-context-attention.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   選外チャンクも要約経路で全域可視性を残し、鍵・値分散に基づく誤差上界で必要なチャンクだけ正確注意へ展開して、128Kで約3倍のカーネル高速化と品質回復を両立する疎注意方式。
+
+- **2026-09 · [CAST: Cost-Aware Speculative Trees from One-Pass Block Drafters](2026-2610.00321-cast-cost-aware-speculative-trees-from-one-pass-block-drafters.md)**  
+  実装：[✓](https://github.com/js-lee-AI/CAST) ・ リポジトリ内被引用：0  
+  最初の方で対象モデルの選ぶトークンと異なれば、後続の候補をいくら正しく予測していても、そのラウンドで確定できるトークンは短くなる。H100 SXMのQwen3-8Bでは、逐次復号比の平均高速化がDFlashの4.38倍からCASTの5.62倍へ改善した。
 
 - **2026-09 · [Breaking the 1.58-bit Barrier for Ternary LLMs](2026-2609.16338-breaking-the-1-58-bit-barrier-for-ternary-llms.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
