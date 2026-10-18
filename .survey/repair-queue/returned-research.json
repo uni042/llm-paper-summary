@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-18T06:01:13+00:00",
+  "generated_at": "2026-10-18T06:09:18+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -4169,8 +4169,8 @@
       "canonical_id": "arXiv:2506.04203",
       "title": "Cascadia: An Efficient Cascade Serving System for Large Language Models",
       "source_url": "https://arxiv.org/pdf/2506.04203",
-      "returned_at": "2026-10-18T05:58:54+00:00",
-      "return_count": 1,
+      "returned_at": "2026-10-18T06:09:17+00:00",
+      "return_count": 2,
       "assigned_worker": "scheduled-chat-45",
       "reason": "blocked_quality",
       "failures": [
@@ -4189,16 +4189,16 @@
           "限界説明量 0 < 推奨 120"
         ]
       },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_896dd18406508191b0ed291f3d556313--2025-2506.04203-cascadia-cascade-serving-joint-optimization-research-20261018-1430-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_896dd18406508191b0ed291f3d556313--2025-2506.04203-cascadia-cascade-serving-joint-optimization-research-20261018-1430-scheduled-chat-30-r01.json",
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-705d07f8307b--libfile_896dd18406508191b0ed291f3d556313--2025-2506.04203-cascadia-cascade-serving-joint-optimization-research-20261018-1430-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-705d07f8307b--libfile_896dd18406508191b0ed291f3d556313--2025-2506.04203-cascadia-cascade-serving-joint-optimization-research-20261018-1430-schedu.json",
       "worker_run_key": "20261018-1430-scheduled-chat-30/r01"
     },
     {
       "canonical_id": "DOI:10.1109/SIEDS69358.2026.11540265",
       "title": "Parallelism Strategies and Concurrency Effects for Mixture-of-Experts Inference on GPU Systems",
       "source_url": "https://s3.amazonaws.com/edas.manuscripts/final/1571253729.pdf",
-      "returned_at": "2026-10-18T05:59:48+00:00",
-      "return_count": 1,
+      "returned_at": "2026-10-18T06:09:18+00:00",
+      "return_count": 2,
       "assigned_worker": "scheduled-chat-00",
       "reason": "blocked_quality",
       "failures": [
@@ -4216,8 +4216,8 @@
           "手法説明量 0 < 700"
         ]
       },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_f385dd79293c819192d7e86828e4c4eb--2026-doi-10.1109.SIEDS69358.2026.11540265-moe-parallelism-concurrency-research-20261018-1345-scheduled-chat-45-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_f385dd79293c819192d7e86828e4c4eb--2026-doi-10.1109.SIEDS69358.2026.11540265-moe-parallelism-concurrency-research-20261018-1345-scheduled-chat-45-r01.json",
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-f0e93b6a927a--libfile_f385dd79293c819192d7e86828e4c4eb--2026-doi-10.1109.SIEDS69358.2026.11540265-moe-parallelism-concurrency-research-20261018-1345-scheduled-chat-45-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-f0e93b6a927a--libfile_f385dd79293c819192d7e86828e4c4eb--2026-doi-10.1109.SIEDS69358.2026.11540265-moe-parallelism-concurrency-research-20261018-1.json",
       "worker_run_key": "20261018-1345-scheduled-chat-45/r01"
     }
   ]
