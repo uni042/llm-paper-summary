@@ -1,0 +1,27 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261019-0030-scheduled-chat-30/r01/research-relevance/197",
+  "reference_main_sha": "346e9b94047b92a9369e8e8828bd676a5aabe15c",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.15303",
+      "identity_tokens": [
+        "arxiv:2608.15303",
+        "doi:10.48550/arxiv.2608.15303"
+      ],
+      "title": "Divergent-Convergent Reasoning: Scaling Test-Time Compute through Structured Solution Synthesis",
+      "reason": "一次要旨では複数の推論候補を生成した後、相違点を再検討する再帰的な調停によって正答率を上げ、AIME 2024で93.3%、AIME 2025で92.0%、API呼び出し数に基づく平均計算量を約27%削減したと報告する。推論時の計算配分と関係するが、主要目的は推論能力の向上と探索・調停戦略であり、GPUカーネル、モデルサービング、トークン生成の実測速度を最適化するシステム研究ではない。対象境界として保留する。",
+      "source_url": "https://arxiv.org/abs/2608.15303",
+      "body_check": "arxiv_primary_abstract_screen_only; body_not_read; application_and_system_scope_checked",
+      "first_checked_at": "2026-10-19T00:39:41+09:00",
+      "last_checked_at": "2026-10-19T00:39:41+09:00",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance",
+      "worklist_rank": 197
+    }
+  ]
+}
