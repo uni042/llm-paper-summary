@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-10-18T10:27:58.823035+00:00",
+  "generated_at": "2026-10-18T10:40:21.474647+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 7,
+  "count": 8,
   "worker_counts": {
     "scheduled-chat-00": 3,
-    "scheduled-chat-30": 2,
+    "scheduled-chat-30": 3,
     "scheduled-chat-45": 2
   },
   "entries": [
@@ -82,21 +82,21 @@
       "warnings": []
     },
     {
-      "path": "papers/inference/99-other-inference-systems/2026-2604.14889-memosight-unifying-context-compression-and-multi-token-prediction-for-re.md",
-      "canonical_id": "arXiv:2604.14889",
-      "title": "MemoSight: Unifying Context Compression and Multi Token Prediction for Reasoning Acceleration",
-      "file_bytes": 14836,
-      "source_sha256": "9d939651659ff40c2ddd51c5a78521f9b9577dc27982f6ee9c23fde560aff601",
-      "source_git_blob_sha": "e55129141c84627911c576cbbaee7bdc2ab0bed5",
-      "assigned_worker": "scheduled-chat-00",
+      "path": "papers/inference/99-other-inference-systems/2024-7a6bf47fa469-hybrid-slm-and-llm-for-edge-cloud-collaborative-inference.md",
+      "canonical_id": "DOI:10.1145/3662006.3662067",
+      "title": "Hybrid SLM and LLM for Edge-Cloud Collaborative Inference",
+      "file_bytes": 15023,
+      "source_sha256": "fa98112bb7e5261e002a120c59dc1f6065147d8bd65efa7fede39089cf83219d",
+      "source_git_blob_sha": "3a07ba9a762c57f3147b90182614e90a04c479e7",
+      "assigned_worker": "scheduled-chat-30",
       "semantic_status": "pending",
       "mechanical_status": "PASS",
-      "japanese_ratio": 0.961251,
+      "japanese_ratio": 0.942696,
       "quality_metrics": {
-        "body_chars": 4219,
-        "method_chars": 1197,
-        "evaluation_chars": 1293,
-        "limitation_chars": 0
+        "body_chars": 4075,
+        "method_chars": 726,
+        "evaluation_chars": 979,
+        "limitation_chars": 527
       },
       "mechanical_failures": [],
       "warnings": []
@@ -137,6 +137,26 @@
         "method_chars": 1198,
         "evaluation_chars": 882,
         "limitation_chars": 762
+      },
+      "mechanical_failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/99-other-inference-systems/2026-2604.14889-memosight-unifying-context-compression-and-multi-token-prediction-for-re.md",
+      "canonical_id": "arXiv:2604.14889",
+      "title": "MemoSight: Unifying Context Compression and Multi Token Prediction for Reasoning Acceleration",
+      "file_bytes": 18112,
+      "source_sha256": "4743a4bc49507d83b903346022fe9ea2555638673de9fefb14bf01aab3ea049e",
+      "source_git_blob_sha": "c32ec8aa52a4ec5506dc7ba6691dcfe653022b52",
+      "assigned_worker": "scheduled-chat-00",
+      "semantic_status": "pending",
+      "mechanical_status": "PASS",
+      "japanese_ratio": 0.961251,
+      "quality_metrics": {
+        "body_chars": 4219,
+        "method_chars": 1197,
+        "evaluation_chars": 1293,
+        "limitation_chars": 0
       },
       "mechanical_failures": [],
       "warnings": []
