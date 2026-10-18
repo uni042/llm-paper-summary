@@ -23,7 +23,7 @@
 - [11-llm-serving-scheduling-disaggregation](../11-llm-serving-scheduling-disaggregation/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（88本）
+## 自動生成の論文一覧（89本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -211,6 +211,10 @@
 - **2026-01 · [Elastic Attention: Test-time Adaptive Sparsity Ratios for Efficient Transformers](2026-2601.17367-elastic-attention-test-time-adaptive-sparsity-ratios-for-efficient-trans.md)**  
   実装：[✓](https://github.com/LCM-Lab/Elastic-Attention) ・ リポジトリ内被引用：0  
   長文脈の大規模言語モデル（Large Language モデル; LLM）では、すべての入力トークンへ注意を向ける全注意（Full 注意機構; FA）が計算量・メモリ帯域のボトルネックとなる。
+
+- **2025-12 · [Training-free Context-adaptive Attention for Efficient Long Context Modeling](2025-2512.09238-training-free-context-adaptive-attention-for-efficient-long-context-mode.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  別の方式では、注意ヘッドごとの疎性を学習で獲得するため、既存モデルへ適用する際の追加学習が必要になる。LLaMA3.1-8B-Instructの128Kトークン文脈では、全注意との比較で前処理遅延を2.8倍改善し、生成速度を2.1倍にし、KV容量を8.00GBから3.12GBへ61%削減したと報告する。
 
 - **2025-11 · [Optimizing Native Sparse Attention with Latent Attention and Local Global Alternating Strategies](2025-2511.00819-optimizing-native-sparse-attention-with-latent-attention-and-local-globa.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

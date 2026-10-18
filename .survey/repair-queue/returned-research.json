@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-18T11:13:37+00:00",
+  "generated_at": "2026-10-18T11:25:31+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 171,
+  "count": 170,
   "entries": [
     {
       "canonical_id": "DOI:10.1145/3714983.3714987",
@@ -3810,34 +3810,6 @@
       "worker_run_key": "20261018-0358-scheduled-chat-00/r01"
     },
     {
-      "canonical_id": "arXiv:2501.19090",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-17T19:48:04+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 0 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5504,
-        "body_paragraphs": 31,
-        "method_chars": 1901,
-        "method_paragraphs": 11,
-        "evaluation_chars": 0,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "評価説明量 0 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-a9a860ffc05c--libfile_036fb4a34ebc81918e53673e4b24e450--2025-2501.19090-pifa-meta-low-rank-pruning-research-20261018-0430-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-a9a860ffc05c--libfile_036fb4a34ebc81918e53673e4b24e450--2025-2501.19090-pifa-meta-low-rank-pruning-research-20261018-0430-scheduled-chat-30-r01.json",
-      "worker_run_key": "20261018-0430-scheduled-chat-30/r01"
-    },
-    {
       "canonical_id": "arXiv:2410.14268",
       "title": null,
       "source_url": null,
@@ -4373,8 +4345,8 @@
     },
     {
       "canonical_id": "arXiv:2609.39034",
-      "title": "Switching Linear Attention",
-      "source_url": "https://arxiv.org/html/2609.39034v1",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-18T11:11:53+00:00",
       "return_count": 1,
       "assigned_worker": "scheduled-chat-00",
@@ -4401,8 +4373,8 @@
     },
     {
       "canonical_id": "arXiv:2610.00418",
-      "title": "CommunityKV: Efficient Long-Context Decoding via Graph Partitioning",
-      "source_url": "https://arxiv.org/pdf/2610.00418",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-18T11:11:54+00:00",
       "return_count": 1,
       "assigned_worker": "scheduled-chat-00",
@@ -4428,8 +4400,8 @@
     },
     {
       "canonical_id": "arXiv:2604.12452",
-      "title": "Latent-Condensed Transformer for Efficient Long Context Modeling",
-      "source_url": "https://arxiv.org/abs/2604.12452",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-18T11:11:55+00:00",
       "return_count": 1,
       "assigned_worker": "scheduled-chat-30",
@@ -4453,8 +4425,8 @@
     },
     {
       "canonical_id": "arXiv:2503.06881",
-      "title": "ResMoE: Space-efficient Compression of Mixture of Experts LLMs via Residual Restoration",
-      "source_url": "https://arxiv.org/html/2503.06881v1",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-18T11:12:34+00:00",
       "return_count": 1,
       "assigned_worker": "scheduled-chat-30",

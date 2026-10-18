@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（810本）
+## 自動生成の論文一覧（814本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -1966,6 +1966,10 @@
   実装：✓ ・ リポジトリ内被引用：6  
   長い思考連鎖（Chain of Thought; CoT）を生成する推論モデルは、最初に正解へ到達しても別の推論経路を探索し、同じ問題を何度も検証することがある。オンラインで検証器を挿入したサービングシステムの最初のトークン遅延、処理率、VRAM消費、GPU時間を直接測定した結果ではない。
 
+- **2025-04 · [Efficient and Adaptable Overlapping for Computation and Communication via Signaling and Reordering](2025-2504.19519-efficient-and-adaptable-overlapping-for-computation-and-communication-vi.md)**  
+  実装：[✓](https://github.com/infinigence/FlashOverlap) ・ リポジトリ内被引用：6  
+  FlashOverlapは、複数GPUで大規模言語モデルを推論・学習するとき、行列積（general matrix multiplication、GEMM）と、それに依存するGPU間集団通信を重ねて実行する仕組みである。テンソル並列では、各GPUが計算した部分結果を全GPUで合計するAllReduceや、部分ごとに配布するReduceScatterを行う。
+
 - **2025-02 · [TeleRAG: Efficient Retrieval-Augmented Generation Inference with Lookahead Retrieval](2025-2502.20969-telerag-efficient-retrieval-augmented-generation-inference-with-lookahead-retrieval.md)**  
   実装：[✓](https://github.com/uw-syfi/TeleRAG) ・ リポジトリ内被引用：6  
   RAGの前段生成から次のIVF検索クラスタを予測し、LLM生成とCPU→GPU先読みを重ねつつ外れクラスタをCPU検索で補完して、大規模索引をGPU常駐せず検索待ちを隠す。
@@ -2134,6 +2138,10 @@
   実装：✓ ・ リポジトリ内被引用：1  
   共有部分をテンソル並列化して細粒度MoEの重複メモリを減らし、少数専門家で草稿生成した後に完全専門家設定でKVキャッシュを修整して復号を高速化する。
 
+- **2025-09 · [Self-Aligned Reward: Towards Effective and Efficient Reasoners](2025-2509.05489-self-aligned-reward-towards-effective-and-efficient-reasoners.md)**  
+  実装：[✓](https://github.com/amazon-science/Self-Aligned-Reward-Towards_Effective_and_Efficient_Reasoners) ・ リポジトリ内被引用：0  
+  提案する自己整合報酬（Self-Aligned Reward; SAR）は、同じ回答 $a$ の困惑度を、質問 $q$ を与えた場合と与えない場合で計算する。例えばQwen3-1.7Bでは、GRPOの平均正答率53.37%、回答長762.8トークンに対して、SAR付きGRPOは54.13%、602.0トークンだった。
+
 - **2025-09 · [RSAVQ: Riemannian Sensitivity-Aware Vector Quantization for Large Language Models](2025-2510.01240-rsavq-riemannian-sensitivity-aware-vector-quantization-for-large-languag.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   RSAVQ（Riemannian Sensitivity-Aware Vector Quantization）は、大規模言語モデル（LLM）の重みを2〜4ビット程度に圧縮するとき、量子化誤差がどの方向へ生じるかと、どの重みチャネルへ多くのビットを割くかを同時に最適化する学習後量子化（Post-学習 量子化; PTQ）方式である。
@@ -2158,6 +2166,10 @@
   実装：[✓](https://github.com/wuzhiyuan2000/RecServe) ・ リポジトリ内被引用：0  
   端末→エッジ→クラウドを信頼度で再帰的に上げ、履歴分位点から閾値を自動適応してCloudServe比50%以上の通信削減を狙う多層LLMサービング。
 
+- **2025-05 · [DenoiseRotator: Enhance Pruning Robustness for LLMs via Importance Concentration](2025-2505.23049-denoiserotator-enhance-pruning-robustness-for-llms-via-importance-concen.md)**  
+  実装：[✓](https://github.com/Axel-gu/DenoiseRotator) ・ リポジトリ内被引用：0  
+  DenoiseRotatorは、大規模言語モデル（LLM）の枝刈り（枝刈り）を行う前に、どの重みが重要かという分布自体を変える方式である。推論時の速度も重要で、A100上のLLaMA3-8B単層では、密行列5.80ms、回転なし2:4疎行列4.37ms、回転を含む2:4疎行列4.69msだった。
+
 - **2025-04 · [SPIRe: Boosting LLM Inference Throughput with Speculative Decoding](2025-2504.06419-spire-throughput-speculative-decoding.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   大バッチ投機的デコードの受理率とKV読出し量を実測し、浅くKVを制限したドラフトの性能モデルを構築して、重み読出しよりKV帯域が支配する条件の処理量を比較する研究。
@@ -2181,6 +2193,10 @@
 - **2025-02 · [AutoHete: An Automatic and Efficient Heterogeneous Training System for LLMs](2025-2503.01890-autohete-an-automatic-and-efficient-heterogeneous-training-system-for-llms.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   活性値再計算・パラメータ退避・オプティマイザ退避を整数線形計画で共同選択し、反復をまたぐ優先度付き処理重畳でCPU/GPU待ちを減らす異種混在LLM学習方式。
+
+- **2025-01 · [Pivoting Factorization: A Compact Meta Low-Rank Representation of Sparsity for Efficient Inference in Large Language Models](2025-2501.19090-pivoting-factorization-a-compact-meta-low-rank-representation-of-sparsit.md)**  
+  実装：[✓](https://github.com/biomedical-cybernetics/pivoting-factorization) ・ リポジトリ内被引用：0  
+  ランクが行列次元の半分の単層比較では、既存低ランク層から追加でメモリ24.2%・推論時間24.6%削減を報告。PIFAの無損失は元の低ランク近似に対する再表現の性質であり、密な原モデルを無損失圧縮するという意味ではない。
 
 - **2025-01 · [Instruction-Following Pruning for Large Language Models](2025-2501.02086-instruction-following-pruning-for-large-language-models.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
