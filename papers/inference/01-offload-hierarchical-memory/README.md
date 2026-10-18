@@ -50,6 +50,10 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
   実装：✓ ・ リポジトリ内被引用：2  
   ST-MoEは、隣接層と直前トークンのゲート相関から次層専門家を予測してオフチップDRAMから先読みし、誤り時は正しい重みを追加取得してデコードの転送待ちを減らす。
 
+- **2026-05 · [PALS: Power-Aware LLM Serving for Mixture-of-Experts Models](2026-2605.21427-pals-power-aware-moe-serving.md)**  
+  実装：✓ ・ リポジトリ内被引用：2  
+  GPU電力上限とバッチ量を共同制御しエネルギー効率最大26.3%、サービス品質違反4–7倍改善。
+
 - **2026-04 · [SpecMoE: A Fast and Efficient Mixture-of-Experts Inference via Self-Assisted Speculative Decoding](2026-2604.10152-specmoe-self-assisted-speculative-decoding.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
   MoE自身の常駐層と少数ホットエキスパートをドラフト化し、投機検証でエキスパート転送を集約してCPU/SSDオフロードMoEの通信量と推論時間を削減する。
@@ -97,10 +101,6 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
 - **2026-05 · [TIDE: Efficient and Lossless MoE Diffusion LLM Inference with I/O-aware Expert Offload](2026-2605.20179-tide-io-aware-expert-offload.md)**  
   実装：[✓](https://github.com/ims-kdks/TIDE) ・ リポジトリ内被引用：1  
   拡散MoEで近接デノイズ段階の専門家活性が安定する性質を使い、専門家配置を数ステップごとだけ更新してCPU計算とPCIe転送を両方抑え、出力を変えず単一GPU推論を高速化する。
-
-- **2026-05 · [PALS: Power-Aware LLM Serving for Mixture-of-Experts Models](2026-2605.21427-pals-power-aware-moe-serving.md)**  
-  実装：✓ ・ リポジトリ内被引用：1  
-  GPU電力上限とバッチ量を共同制御しエネルギー効率最大26.3%、サービス品質違反4–7倍改善。
 
 - **2026-05 · [CRAFT: Fine-Grained Cost-Aware Expert Replication For Efficient Mixture-of-Experts Serving](2026-2603.28768-craft-cost-aware-expert-replication.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
