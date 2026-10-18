@@ -1,0 +1,26 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261018-1700-scheduled-chat-00/r01/relevance/099",
+  "reference_main_sha": "9aa92a6b4f9e9e3c7669206e2fefa0393db19a1e",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2505.13000",
+      "identity_tokens": [
+        "arxiv:2505.13000"
+      ],
+      "title": "DualCodec: A Low-Frame-Rate, Semantically-Enhanced Neural Audio Codec for Speech Generation",
+      "reason": "一次論文の手法§3と評価§4を確認。自己教師あり音声特徴と波形特徴を別経路で符号化し、12.5/25Hzの低フレーム率で音声生成モデルのトークン列を短縮する。音声生成の推論効率への接続はあるが、主要な技術貢献・実験はニューラル音声符号化の音質・意味保持・音声合成であり、汎用LLM推論基盤のKVキャッシュ、GPU実行、サービング改善ではない。隣接領域としてborderlineにする。",
+      "source_url": "https://arxiv.org/abs/2505.13000",
+      "body_check": "research_fulltext_relevance_review: PDF sections 3 (dual SSL/waveform encoding and low frame rate) and 4 (speech codec quality and TTS evaluations) reviewed; no general LLM serving mechanism",
+      "first_checked_at": "2026-10-18T17:07:04+09:00",
+      "last_checked_at": "2026-10-18T17:07:04+09:00",
+      "linked_from": [],
+      "origin": "research_postread_relevance",
+      "worklist_rank": 99
+    }
+  ]
+}
