@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-18T03:57:15+00:00",
+  "generated_at": "2026-10-18T04:04:43+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -4168,38 +4168,11 @@
       "worker_run_key": "20261018-1130-scheduled-chat-30/r01"
     },
     {
-      "canonical_id": "arXiv:2610.00367",
-      "title": "MoRA: MoE Pruning via Router Bias Learning and Expert Approximation",
-      "source_url": "https://arxiv.org/html/2610.00367v1",
-      "returned_at": "2026-10-18T03:54:58+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 192 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 6059,
-        "body_paragraphs": 36,
-        "method_chars": 1622,
-        "method_paragraphs": 9,
-        "evaluation_chars": 192,
-        "limitation_chars": 600,
-        "insufficiency_flags": [
-          "評価説明量 192 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_27b3de4ce69c8191b87eb6b66681a6fa--2026-2610.00367-mora-router-bias-expert-approximation-research-20261018-1230-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_27b3de4ce69c8191b87eb6b66681a6fa--2026-2610.00367-mora-router-bias-expert-approximation-research-20261018-1230-scheduled-chat-30-r01.json",
-      "worker_run_key": "20261018-1230-scheduled-chat-30/r01"
-    },
-    {
       "canonical_id": "arXiv:2610.04646",
       "title": "SEIS: Self-Evolving Inference Systems",
       "source_url": "https://arxiv.org/abs/2610.04646",
-      "returned_at": "2026-10-18T03:55:51+00:00",
-      "return_count": 1,
+      "returned_at": "2026-10-18T04:04:42+00:00",
+      "return_count": 2,
       "assigned_worker": "scheduled-chat-00",
       "reason": "blocked_quality",
       "failures": [
@@ -4217,8 +4190,35 @@
           "評価説明量 0 < 500"
         ]
       },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_f0f2b275def48191af80b5c56f35a73f--2026-2610.04646-seis-self-evolving-inference-systems-research-20261018-1230-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_f0f2b275def48191af80b5c56f35a73f--2026-2610.04646-seis-self-evolving-inference-systems-research-20261018-1230-scheduled-chat-30-r01.json",
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-222320b10c02--libfile_f0f2b275def48191af80b5c56f35a73f--2026-2610.04646-seis-self-evolving-inference-systems-research-20261018-1230-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-222320b10c02--libfile_f0f2b275def48191af80b5c56f35a73f--2026-2610.04646-seis-self-evolving-inference-systems-research-20261018-1230-scheduled-cha.json",
+      "worker_run_key": "20261018-1230-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2610.00367",
+      "title": "MoRA: MoE Pruning via Router Bias Learning and Expert Approximation",
+      "source_url": "https://arxiv.org/html/2610.00367v1",
+      "returned_at": "2026-10-18T04:04:43+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 192 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 6059,
+        "body_paragraphs": 36,
+        "method_chars": 1622,
+        "method_paragraphs": 9,
+        "evaluation_chars": 192,
+        "limitation_chars": 600,
+        "insufficiency_flags": [
+          "評価説明量 192 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-f52cd920bdc2--libfile_27b3de4ce69c8191b87eb6b66681a6fa--2026-2610.00367-mora-router-bias-expert-approximation-research-20261018-1230-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-f52cd920bdc2--libfile_27b3de4ce69c8191b87eb6b66681a6fa--2026-2610.00367-mora-router-bias-expert-approximation-research-20261018-1230-scheduled-ch.json",
       "worker_run_key": "20261018-1230-scheduled-chat-30/r01"
     }
   ]
