@@ -10,5 +10,10 @@
   "failures": [
     "arxiv_categories.cross_list"
   ],
-  "processed_at": "2026-10-18T13:01:15+00:00"
+  "processed_at": "2026-10-18T13:01:15+00:00",
+  "manual_metadata_repair": {
+    "requeued_path": ".survey/import-inbox/pending/research/retry-research-c5d68a744454--libfile_c5d68a7444548191aad8dcc0c04a03d8--2026-2605.27786-lorp-locality-aware-depth-pruning-research-20261018-1100-scheduled-chat-00-r01.md",
+    "field": "arxiv_categories.cross_list",
+    "change": "Added an explicit empty list; the Library source declared only the primary category."
+  }
 }
