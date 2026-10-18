@@ -1,0 +1,26 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-45",
+  "run_key": "20261019-0145-scheduled-chat-45/r01/research-relevance/10",
+  "reference_main_sha": "dfe0461473e7dcb1897c7ed67eefe36a3c35a638",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2511.13593",
+      "identity_tokens": [
+        "arxiv:2511.13593"
+      ],
+      "title": "O-Mem: Omni Memory System for Personalized, Long Horizon, Self-Evolving Agents",
+      "reason": "一次要旨で、エージェントのユーザー属性・イベント記録を能動的に抽出更新し、階層検索で長期対話の個人化を改善するアプリケーション記憶方式と確認した。LoCoMoとPERSONAMEMの回答品質やトークン効率を扱うが、GPU/CPU階層メモリ、KVキャッシュ、推論サービング基盤のメモリ管理とは異なるため対象外。",
+      "source_url": "https://arxiv.org/abs/2511.13593",
+      "body_check": "primary_arxiv_abstract_and_bibliography_screen_only; body_not_read",
+      "first_checked_at": "2026-10-19T01:46:19+09:00",
+      "last_checked_at": "2026-10-19T01:46:19+09:00",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance",
+      "worklist_rank": 10
+    }
+  ]
+}
