@@ -1,0 +1,26 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261018-1700-scheduled-chat-00/r01/relevance/103",
+  "reference_main_sha": "9aa92a6b4f9e9e3c7669206e2fefa0393db19a1e",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1007/s11432-020-3245-7",
+      "identity_tokens": [
+        "doi:10.1007/s11432-020-3245-7"
+      ],
+      "title": "NAS4RRAM: neural network architecture search for inference on RRAM-based accelerators",
+      "reason": "題名に明示された研究対象はRRAMベースのDNN推論アクセラレータ向けニューラルネットワーク構造探索であり、LLM・Transformerの推論、KVキャッシュ、MoE、生成サービングを対象にした方式ではない。タイトル段階で対象外と判断した。本文・要旨は未確認のため、個別の性能数値・手法詳細は推測しない。",
+      "source_url": "https://doi.org/10.1007/s11432-020-3245-7",
+      "body_check": "title_screen_only; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-10-18T17:11:50+09:00",
+      "last_checked_at": "2026-10-18T17:11:50+09:00",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance",
+      "worklist_rank": 103
+    }
+  ]
+}
