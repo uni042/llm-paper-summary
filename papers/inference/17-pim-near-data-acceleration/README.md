@@ -114,20 +114,20 @@
 ### 3年前（2023-11〜2024-10）
 
 - **2024-03 · [NeuPIMs: NPU-PIM Heterogeneous Acceleration for Batched LLM Inferencing](2024-2403.00579-neupims-npu-pim-heterogeneous-acceleration-for-batched-llm-inferencing.md)**  
-  実装：[✓](https://github.com/casys-kaist/NeuPIMs) ・ リポジトリ内被引用：23  
+  実装：[✓](https://github.com/casys-kaist/NeuPIMs) ・ リポジトリ内被引用：24  
   一方、各要求が別々の過去トークン列を持つ多頭注意では、問い合わせベクトルと鍵キャッシュ、注意重みと値キャッシュの積が、メモリ帯域に制約されやすい行列とベクトルの積（GEMV）になる。NeuPIMsは、この非対称性をNPUとPIMの役割分担で解決するだけでなく、従来のNPU+PIM結合方式では双方を同時に動かせないという問題まで対象にする。
 
 - **2024-04 · [AttAcc! Unleashing the Power of PIM for Batched Transformer-based Generative Model Inference](2024-attacc-unleashing-the-power-of-pim-for-batched-transformer-based-generative-model-inference.md)**  
   実装：[✓](https://github.com/scale-snu/attacc_simulator) ・ リポジトリ内被引用：22  
   GPUではバッチ化しても帯域律速の注意だけが残る点を狙い、FCをxPU、KV注意をHBM-PIMへ分担するAttAcc。bank-level PIM、head-level パイプライン、FFN co-processingを組み合わせ、175Bで同容量GPU系比最大2.81倍の性能・2.67倍のエネルギー効率を報告する。
 
+- **2024-09 · [Duplex: A Device for Large Language Models with Mixture of Experts, Grouped Query Attention, and Continuous Batching](2024-2409.01141-duplex-a-device-for-large-language-models-with-mixture-of-experts-groupe.md)**  
+  実装：✓ ・ リポジトリ内被引用：6  
+  グループ化クエリ注意（Grouped-Query 注意機構; GQA）はKVキャッシュを減らすが、各要求の注意計算は依然として独立したKVにアクセスするため、メモリ帯域が性能を制限する。著者はMICRO 2024の論文で、GPU基準に対し最大2.67倍の推論処理量、最大2.57倍の端から端までの遅延改善、最大42.03%のエネルギー削減を報告する。
+
 - **2024-04 · [IANUS: Integrated Accelerator based on NPU-PIM Unified Memory System](2024-2410.15008-ianus-integrated-accelerator-based-on-npu-pim-unified-memory-system.md)**  
   実装：✓ ・ リポジトリ内被引用：6  
   IANUSは、大規模言語モデル（LLM）の入力処理と逐次生成を、演算特性の異なる二種類のハードウェアへ分担させる推論専用システムである。論文の主結果は、GPT-2系列におけるNVIDIA A100比平均6.2倍、先行DFX比平均3.2倍の推論高速化である。
-
-- **2024-09 · [Duplex: A Device for Large Language Models with Mixture of Experts, Grouped Query Attention, and Continuous Batching](2024-2409.01141-duplex-a-device-for-large-language-models-with-mixture-of-experts-groupe.md)**  
-  実装：✓ ・ リポジトリ内被引用：5  
-  グループ化クエリ注意（Grouped-Query 注意機構; GQA）はKVキャッシュを減らすが、各要求の注意計算は依然として独立したKVにアクセスするため、メモリ帯域が性能を制限する。著者はMICRO 2024の論文で、GPU基準に対し最大2.67倍の推論処理量、最大2.57倍の端から端までの遅延改善、最大42.03%のエネルギー削減を報告する。
 
 ### 4年前（2022-11〜2023-10）
 

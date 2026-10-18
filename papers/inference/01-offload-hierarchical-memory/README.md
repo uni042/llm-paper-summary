@@ -421,7 +421,7 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
   LLM in a flashは、モデル重み全体を端末の主記憶（DRAM）へ保持できない場合に、フラッシュストレージを重みの大容量置き場として利用し、トークン生成ごとに必要な重みだけを読み込む推論方式である。
 
 - **2024-01 · [MoE-Infinity: Efficient MoE Inference on Personal Machines with Sparsity-Aware Expert Cache](2024-2401.14361-moe-infinity-efficient-moe-inference-on-personal-machines-with-sparsity-aware-ex.md)**  
-  実装：[✓](https://github.com/EfficientMoE/MoE-Infinity) ・ リポジトリ内被引用：87  
+  実装：[✓](https://github.com/EfficientMoE/MoE-Infinity) ・ リポジトリ内被引用：88  
   MoE-Infinityは、混合専門家モデル（Mixture of エキスパート、MoE）の重みが単一GPUのメモリに収まらない場合に、ホスト主記憶から専門家重みを転送する時間を削減する推論システムである。
 
 - **2023-12 · [Fast Inference of Mixture-of-Experts Language Models with Offloading](2023-2312.17238-fast-inference-of-mixture-of-experts-language-models-with-offloading.md)**  
@@ -465,7 +465,7 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
   MoEのエキスパート配置・異種GPU割当・全対全通信順序を共同最適化し、4クラスタ条件を理論化して異種同居では二部マッチング近似を用い、最大3.54倍高速化する。
 
 - **2024-05 · [MoNDE: Mixture of Near-Data Experts for Large-Scale Sparse Models](2024-2405.18832-monde-mixture-of-experts-neural-network-inference-with-near-data-processing.md)**  
-  実装：✓ ・ リポジトリ内被引用：1  
+  実装：✓ ・ リポジトリ内被引用：2  
   GPUメモリに収まらない場合、ホストメモリから選択された専門家の重みを転送して計算する。本論文の重要な前提は、演算機能付き拡張メモリを新たに設計する研究であり、既存の通常DRAMやSSDにそのまま適用できるCPUオフロード手法ではないことである。
 
 - **2024-06 · [Endor: Hardware-Friendly Sparse Format for Offloaded LLM Inference](2024-2406.11674-endor-hardware-friendly-sparse-offloaded-inference.md)**  
