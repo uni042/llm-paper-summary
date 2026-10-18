@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-18T15:49:27+00:00",
-  "record_count": 5260,
+  "updated_at": "2026-10-18T16:44:50+00:00",
+  "record_count": 5261,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -81485,9 +81485,9 @@
         "SemanticScholar:c3e9318b38662c942752b922b0df47fdd9f4de48",
         "arXiv:2310.07109"
       ],
-      "reason": "一次論文の要旨とICSE 2025の正式な論文紹介を確認。SparseCoderはCodeBERT、RoBERTa、CodeT5を基礎とするソースコード脆弱性検出・解析モデルに疎注意と学習型トークン削除を適用し、従来比較で最大4倍の処理時間改善と約50%の演算量削減を報告する。しかし最終用途はコード系列の分類・解析であり、自己回帰型LLMのトークン生成、KVキャッシュ、デコード遅延、生成品質を評価していない。注意の疎化機構はLLM推論へ転用可能なため完全な無関係とはせず、現行サーベイの境界的候補とする。",
+      "reason": "arXiv一次要旨で正式題名と著者を確認。疎注意と学習型トークン枝刈りによりコード脆弱性検出のTransformer推論計算を削減するが、主対象はCodeBERT等のソースコード解析・分類であり、生成型LLMのサービング・デコード高速化の直接実証ではない。推論効率技術として間接的に関連するためborderlineとする。",
       "first_checked_at": "2026-10-18T10:00:28+00:00",
-      "last_checked_at": "2026-10-18T10:00:28+00:00",
+      "last_checked_at": "2026-10-18T16:44:50+00:00",
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "SparseCoder: Advancing Source Code Analysis with Sparse Attention and Learned Token Pruning"
@@ -81680,6 +81680,19 @@
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "Empowering Compact LLMs with Fusion of Layer-wise Exits for Recommendation"
+    },
+    "arXiv:2208.00406": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2208.00406",
+      "identity_tokens": [
+        "arXiv:2208.00406"
+      ],
+      "reason": "一次要旨では、汎用の機械学習学習・推論コードの消費電力量と地域別CO2排出量を計測するPythonパッケージを提案する。推論基盤の計測という隣接性はあるが、LLM推論に固有のサービング、KVキャッシュ、GPUカーネル、メモリ階層、推論スケジューラへの直接的な最適化や評価は示されず、現行サーベイへの直接採用根拠は弱い。",
+      "first_checked_at": "2026-10-18T16:44:48+00:00",
+      "last_checked_at": "2026-10-18T16:44:48+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Eco2AI: carbon emissions tracking of machine learning models as the first step towards sustainable AI"
     }
   }
 }

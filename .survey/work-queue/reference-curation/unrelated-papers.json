@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-18T15:49:26+00:00",
-  "record_count": 12427,
+  "updated_at": "2026-10-18T16:44:51+00:00",
+  "record_count": 12428,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -164716,9 +164716,9 @@
         "arXiv:2210.13452",
         "semanticscholar:fc4cbc7a75f5a3bbca59db5513231555f078fe78"
       ],
-      "reason": "MetaFormerの構造を画像分類モデルに適用し、IdentityFormer、RandFormer、ConvFormer、CAFormerをImageNet-1Kで比較する。StarReLUによる活性化演算量削減も示すが、論文の対象は視覚分類の認識精度・モデル構造であり、言語モデルの生成復号、KVキャッシュ、LLMサービングや学習基盤の高速化は評価しない。",
+      "reason": "一次要旨では、画像認識向けMetaFormerのトークン混合器を恒等写像・乱数行列・畳み込み・自己注意で比較し、ImageNet-1K分類精度とStarReLUの活性化演算量を評価する。画像分類モデルの構造・精度が中心で、LLM推論サービングやLLM向けメモリ・計算実行基盤の改善を検証した研究ではないため対象外。",
       "first_checked_at": "2026-10-11T20:48:40+00:00",
-      "last_checked_at": "2026-10-18T10:00:25+00:00",
+      "last_checked_at": "2026-10-18T16:44:47+00:00",
       "linked_from": [],
       "title": "MetaFormer Baselines for Vision"
     },
@@ -176849,18 +176849,6 @@
       "linked_from": [],
       "title": "PipelineRL: Faster On-policy Reinforcement Learning for Long Sequence Generation"
     },
-    "arXiv:2208.00406": {
-      "classification": "unrelated",
-      "canonical_id": "arXiv:2208.00406",
-      "identity_tokens": [
-        "arXiv:2208.00406"
-      ],
-      "reason": "eco2AIは一般的な機械学習の訓練・推論に伴う消費電力量と地域別CO2排出量を計測・換算するPythonパッケージである。測定の精度と排出係数を主題とし、LLM固有の推論カーネル、KV管理、分散配信、モデル圧縮、スケジューラ等を最適化・比較する研究ではない。エネルギー計測という周辺的な接点はあるが、現行のLLM推論・学習基盤の技術的寄与には該当しない。",
-      "first_checked_at": "2026-10-15T23:53:10+00:00",
-      "last_checked_at": "2026-10-17T22:45:10+00:00",
-      "linked_from": [],
-      "title": "eco2AI: Carbon Emissions Tracking of Machine Learning Models as the First Step Towards Sustainable AI"
-    },
     "arXiv:2507.12760": {
       "classification": "unrelated",
       "canonical_id": "arXiv:2507.12760",
@@ -178912,9 +178900,9 @@
         "DOI:10.48550/arxiv.2402.12289",
         "arXiv:2402.12289"
       ],
-      "reason": "自動運転車の長尾の交通状況を理解し、画像言語モデルで場面記述・状況分析・階層的走行計画を実行するDriveVLMと、従来の自動運転パイプラインを組み合わせるDriveVLM-Dualを提案する。nuScenesとSUP-ADでの評価、および実車への配備が主対象であり、生成LLMのKVキャッシュ、GPU推論カーネル、バッチスケジューラ、オフロードなどの汎用推論基盤を改良・評価する研究ではない。対象は自動運転の応用モデルであり、現行LLM推論システムサーベイの範囲外。",
+      "reason": "一次要旨では、複雑な市街地での自動運転を目的に、視覚言語モデルを場面記述・場面解析・階層的経路計画へ組み込み、DriveVLM-Dualを実車に導入している。対象は自動運転の理解・計画精度であり、LLM推論サービング、KVキャッシュ、分散配置、量子化、推論カーネル等の基盤最適化を主要貢献としていないため対象外。",
       "first_checked_at": "2026-10-16T18:54:53+00:00",
-      "last_checked_at": "2026-10-17T17:44:41+00:00",
+      "last_checked_at": "2026-10-18T16:44:49+00:00",
       "linked_from": [],
       "title": "DriveVLM: The Convergence of Autonomous Driving and Large Vision-Language Models"
     },
@@ -179182,6 +179170,30 @@
       "last_checked_at": "2026-10-18T15:49:24+00:00",
       "linked_from": [],
       "title": "Energy and Area Efficient Systolic Accelerator for Sparse Neural Networks"
+    },
+    "DOI:10.18653/v1/2026.acl-long.1622": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/2026.acl-long.1622",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2026.acl-long.1622"
+      ],
+      "reason": "worklist rank155にはLoRAExitという推論早期終了論文と書かれていたが、指定DOIのACL Anthology公式PDFの実際の題名はKG-ViPであり、知識グラフとシーングラフを融合して視覚質問応答の正答性を改善する研究。GPU推論・KV・デコード・メモリ等の効率化ではないためcanonical identityの一次資料に基づきunrelated。worklistの題名は誤紐付けであり、LoRAExitのidentityとして扱わない。",
+      "first_checked_at": "2026-10-18T16:44:50+00:00",
+      "last_checked_at": "2026-10-18T16:44:50+00:00",
+      "linked_from": [],
+      "title": "KG-ViP: Bridging Knowledge Grounding and Visual Perception in Multi-modal LLMs for Visual Question Answering"
+    },
+    "arXiv:2512.09647": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2512.09647",
+      "identity_tokens": [
+        "arXiv:2512.09647"
+      ],
+      "reason": "worklist rank159の題名『Structured Attention Fine-Tuning for Efficient LLM Inference』は指定arXiv番号の一次PDFと一致しない。実際の論文はFermilabの加速器タイミング制御・時計同期を扱う『Time Served』（Evan Miltonほか）でありLLMと無関係。worklist題名に引きずられてLLM論文としてResearchを作らず、実在するcanonical identityをunrelatedとして記録。",
+      "first_checked_at": "2026-10-18T16:44:51+00:00",
+      "last_checked_at": "2026-10-18T16:44:51+00:00",
+      "linked_from": [],
+      "title": "Time Served"
     }
   }
 }
