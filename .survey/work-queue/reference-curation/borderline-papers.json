@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-18T13:06:36+00:00",
-  "record_count": 5256,
+  "updated_at": "2026-10-18T15:19:22+00:00",
+  "record_count": 5257,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -81624,6 +81624,20 @@
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "MoEtion: Efficient and Reliable Checkpointing for Mixture-of-Experts Models at Scale"
+    },
+    "arXiv:2507.16018": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2507.16018",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2507.16018",
+        "arXiv:2507.16018"
+      ],
+      "reason": "一次要旨によれば、視覚Transformerの高ノルムなmassive tokenとartifact tokenが注意重みを相互抑制する構造を利用し、Fast Nyström Attentionで自己注意を線形時間・空間に近似する。注意計算の効率化という一般性はあるが、実験対象は視覚バックボーンの検索・分類・領域分割・VQAであり、LLMデコード、KVキャッシュ、言語生成サービングへの具体的適用は要旨にない。推論基盤技術へ移植可能性は残るため対象外確定ではなく境界的とする。",
+      "first_checked_at": "2026-10-18T15:19:22+00:00",
+      "last_checked_at": "2026-10-18T15:19:22+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Artifacts and Attention Sinks: Structured Approximations for Efficient Vision Transformers"
     }
   }
 }
