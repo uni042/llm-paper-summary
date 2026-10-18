@@ -35,10 +35,15 @@
   "selection_reason": "Training-free KV pruning reconstructs virtual context and selects cache tokens for query-agnostic compression, reducing inference overhead while retaining task quality.",
   "semantic_scholar_id": "913cc2a0875c5b2fdbfb79557b8e9b79bfaf144f",
   "source_url": "https://arxiv.org/abs/2610.00412",
-  "status": "ready",
+  "status": "superseded",
   "title": "EchoPress: Query-Agnostic KV Cache Pruning via Virtual Context Reconstruction",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-10-18T20:53:27+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2610.00412-echopress-query-agnostic-kv-cache-pruning-via-virtual-context-reconstruc.md",
+  "represented_canonical_id": "arXiv:2610.00412",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

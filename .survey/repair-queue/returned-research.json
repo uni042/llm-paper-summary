@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-18T20:32:53+00:00",
+  "generated_at": "2026-10-18T20:53:28+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -3698,33 +3698,6 @@
       "worker_run_key": "20261018-0358-scheduled-chat-00/r01"
     },
     {
-      "canonical_id": "arXiv:2605.06366",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-18T01:06:22+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 4591,
-        "body_paragraphs": 31,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 559,
-        "limitation_chars": 509,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-3ba3b33b0860--libfile_a63458fb2d2c81918b5db81e92ac57ac--2026-2605.06366-layer-collapse-diffusion-llm-compression-research-20261018-0900-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-3ba3b33b0860--libfile_a63458fb2d2c81918b5db81e92ac57ac--2026-2605.06366-layer-collapse-diffusion-llm-compression-research-20261018-0900-scheduled.json",
-      "worker_run_key": "20261018-0900-scheduled-chat-00/r01"
-    },
-    {
       "canonical_id": "arXiv:2403.07652",
       "title": null,
       "source_url": null,
@@ -5154,6 +5127,36 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-52d9ceac12bc--libfile_5aecdcf466dc81919fd9f0d5d1aeb966--2026-2609.22471-moe-expert-coactivation-speculative-decoding-research-20261019-0400-scheduled-chat-00-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-52d9ceac12bc--libfile_5aecdcf466dc81919fd9f0d5d1aeb966--2026-2609.22471-moe-expert-coactivation-speculative-decoding-research-20261019-0400-sched.json",
       "worker_run_key": "20261019-0400-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2605.06366",
+      "title": "Layer Collapse in Diffusion Language Models",
+      "source_url": "https://arxiv.org/html/2605.06366v2",
+      "returned_at": "2026-10-18T20:51:13+00:00",
+      "return_count": 3,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700",
+        "説明不足トリガー: 評価説明量 340 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 6005,
+        "body_paragraphs": 37,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 340,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700",
+          "評価説明量 340 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_4ce3569ed32881918a3cff4f40e1bed6--2026-2605.06366-layer-collapse-dlm-compression-research-20261019-0445-scheduled-chat-45-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_4ce3569ed32881918a3cff4f40e1bed6--2026-2605.06366-layer-collapse-dlm-compression-research-20261019-0445-scheduled-chat-45-r01.json",
+      "worker_run_key": "20261019-0445-scheduled-chat-45/r01"
     }
   ]
 }
