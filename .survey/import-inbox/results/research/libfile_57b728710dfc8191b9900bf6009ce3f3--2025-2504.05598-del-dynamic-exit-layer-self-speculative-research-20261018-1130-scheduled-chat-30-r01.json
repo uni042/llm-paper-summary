@@ -1,13 +1,12 @@
 {
   "schema_version": 1,
   "artifact_type": "research",
-  "status": "imported",
-  "source_sha256": "48804859f058b79d4cb7971a26fbb2644468e2833e5db9818a77f3ad080f3463",
-  "canonical_id": "arXiv:2504.05598",
-  "paper_path": "papers/inference/05-speculative-decoding-moe/2025-2504.05598-del-context-aware-dynamic-exit-layer-for-efficient-self-speculative-deco.md",
-  "lineage": "05-speculative-decoding-moe",
-  "audit_status": "PASS",
+  "status": "blocked_quality",
+  "source_sha256": "26f032da6728736aa508a31f70c236dd263667538fc721a3f92502f5593e96f3",
+  "normalized_source_sha256": null,
   "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_57b728710dfc8191b9900bf6009ce3f3--2025-2504.05598-del-dynamic-exit-layer-self-speculative-research-20261018-1130-scheduled-chat-30-r01.md",
+  "canonical_id": "arXiv:2504.05598",
   "worker_completed_at": "2026-10-18T11:58:00+09:00",
   "worker_run_key": "20261018-1130-scheduled-chat-30/r01",
   "quality_metrics": {
@@ -20,5 +19,8 @@
     "limitation_chars": 663,
     "insufficiency_flags": []
   },
-  "processed_at": "2026-10-18T02:52:26+00:00"
+  "failures": [
+    "長文定型文の再利用を検出: papers/inference/05-speculative-decoding-moe/2025-2504.05598-del-context-aware-dynamic-exit-layer-for-efficient-self-speculative-deco.md と 5 段落 / 1106文字 (100.0%) が完全一致"
+  ],
+  "processed_at": "2026-10-18T10:50:36+00:00"
 }

@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-18T10:37:35+00:00",
+  "generated_at": "2026-10-18T10:52:05+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 163,
+  "count": 165,
   "entries": [
     {
       "canonical_id": "DOI:10.1145/3714983.3714987",
@@ -2237,34 +2237,6 @@
       "worker_run_key": "20261016-0030-scheduled-chat-30/r01"
     },
     {
-      "canonical_id": "arXiv:2503.00979",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-16T15:00:49+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5523,
-        "body_paragraphs": 33,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 1255,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-1f7aef196f19--libfile_eec4f4b459248191bff3e3b2907dbe7c--2025-2503.00979-morphkv-research-20261016-0230-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-1f7aef196f19--libfile_eec4f4b459248191bff3e3b2907dbe7c--2025-2503.00979-morphkv-research-20261016-0230-scheduled-chat-30-r01.json",
-      "worker_run_key": "20261016-0230-scheduled-chat-30/r01"
-    },
-    {
       "canonical_id": "arXiv:2511.16193",
       "title": null,
       "source_url": null,
@@ -4173,8 +4145,8 @@
     },
     {
       "canonical_id": "arXiv:2510.26527",
-      "title": "Polybasic Speculative Decoding Through a Theoretical Perspective",
-      "source_url": "https://arxiv.org/html/2510.26527v1",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-18T10:35:32+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-30",
@@ -4203,8 +4175,8 @@
     },
     {
       "canonical_id": "arXiv:2609.40146",
-      "title": "QuLoC: Photonic Quantum-Assisted Low-Rank LLM Compression",
-      "source_url": "https://arxiv.org/html/2609.40146v1",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-18T10:35:33+00:00",
       "return_count": 1,
       "assigned_worker": "scheduled-chat-45",
@@ -4230,31 +4202,117 @@
       "worker_run_key": "20261018-1430-scheduled-chat-30/r01"
     },
     {
-      "canonical_id": "arXiv:2503.24000",
-      "title": "Rethinking Key-Value Cache Compression Techniques for Large Language Model Serving",
-      "source_url": "https://arxiv.org/html/2503.24000v1",
-      "returned_at": "2026-10-18T10:36:20+00:00",
+      "canonical_id": "arXiv:2203.14380",
+      "title": "Pyramid-BERT: Reducing Complexity via Successive Core-set based Token Selection",
+      "source_url": "https://arxiv.org/pdf/2203.14380",
+      "returned_at": "2026-10-18T10:49:39+00:00",
       "return_count": 1,
-      "assigned_worker": "scheduled-chat-00",
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "quality_self_review_version が空",
+        "説明不足トリガー: 手法説明量 0 < 700",
+        "説明不足トリガー: 評価説明量 0 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5845,
+        "body_paragraphs": 34,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 0,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700",
+          "評価説明量 0 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_4a6c13b485788191a11fd18001724e5d--2022-2203.14380-pyramid-bert-coreset-token-selection-research-20261018-1700-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_4a6c13b485788191a11fd18001724e5d--2022-2203.14380-pyramid-bert-coreset-token-selection-research-20261018-1700-scheduled-chat-00-r01.json",
+      "worker_run_key": "20261018-1700-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2406.11016",
+      "title": "Optimized Speculative Sampling for GPU Hardware Accelerators",
+      "source_url": "https://arxiv.org/pdf/2406.11016",
+      "returned_at": "2026-10-18T10:50:34+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-30",
       "reason": "blocked_quality",
       "failures": [
         "説明不足トリガー: 手法説明量 0 < 700"
       ],
       "quality_metrics": {
         "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 6982,
-        "body_paragraphs": 44,
+        "body_chars": 4369,
+        "body_paragraphs": 25,
         "method_chars": 0,
         "method_paragraphs": 0,
-        "evaluation_chars": 1278,
-        "limitation_chars": 823,
+        "evaluation_chars": 842,
+        "limitation_chars": 0,
         "insufficiency_flags": [
-          "手法説明量 0 < 700"
+          "手法説明量 0 < 700",
+          "限界説明量 0 < 推奨 120"
         ]
       },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_47d3ed2417608191814ee6c5f4aa4a54--2025-2503.24000-rethinking-kv-compression-production-research-20261018-0530-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_47d3ed2417608191814ee6c5f4aa4a54--2025-2503.24000-rethinking-kv-compression-production-research-20261018-0530-scheduled-chat-30-r01.json",
-      "worker_run_key": "20261018-0530-scheduled-chat-30/r01"
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_5709eab530648191bf4ed03b7612d060--2024-2406.11016-optimized-speculative-sampling-metadata-repair-20261018-1045-scheduled-chat-45-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_5709eab530648191bf4ed03b7612d060--2024-2406.11016-optimized-speculative-sampling-metadata-repair-20261018-1045-scheduled-chat-45-r01.json",
+      "worker_run_key": "20261018-1045-scheduled-chat-45/r01/metadata-repair"
+    },
+    {
+      "canonical_id": "arXiv:2504.05598",
+      "title": "DEL: Context-Aware Dynamic Exit Layer for Efficient Self-Speculative Decoding",
+      "source_url": "https://arxiv.org/html/2504.05598v2",
+      "returned_at": "2026-10-18T10:50:36+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "長文定型文の再利用を検出: papers/inference/05-speculative-decoding-moe/2025-2504.05598-del-context-aware-dynamic-exit-layer-for-efficient-self-speculative-deco.md と 5 段落 / 1106文字 (100.0%) が完全一致"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5552,
+        "body_paragraphs": 38,
+        "method_chars": 2261,
+        "method_paragraphs": 17,
+        "evaluation_chars": 731,
+        "limitation_chars": 663,
+        "insufficiency_flags": []
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_57b728710dfc8191b9900bf6009ce3f3--2025-2504.05598-del-dynamic-exit-layer-self-speculative-research-20261018-1130-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_57b728710dfc8191b9900bf6009ce3f3--2025-2504.05598-del-dynamic-exit-layer-self-speculative-research-20261018-1130-scheduled-chat-30-r01.json",
+      "worker_run_key": "20261018-1130-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2503.24000",
+      "title": "Rethinking Key-Value Cache Compression Techniques for Large Language Model Serving",
+      "source_url": "https://arxiv.org/pdf/2503.24000",
+      "returned_at": "2026-10-18T10:50:37+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700",
+        "説明不足トリガー: 評価説明量 0 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5474,
+        "body_paragraphs": 33,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 0,
+        "limitation_chars": 544,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700",
+          "評価説明量 0 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_59332defff50819199e8207c7b21c17e--2025-2503.24000-rethinking-kv-compression-serving-research-20261018-1900-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_59332defff50819199e8207c7b21c17e--2025-2503.24000-rethinking-kv-compression-serving-research-20261018-1900-scheduled-chat-00-r01.json",
+      "worker_run_key": "20261018-1900-scheduled-chat-00/r01"
     }
   ]
 }
