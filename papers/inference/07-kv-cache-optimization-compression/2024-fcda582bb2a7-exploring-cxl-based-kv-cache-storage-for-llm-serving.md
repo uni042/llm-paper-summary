@@ -32,6 +32,8 @@ worker_run_key: '20261018-1030-scheduled-chat-30/r01'
 reference_main_sha: '020b2c435c2d2e5f07ebad41da92df74a4f4f3fd'
 quality_self_review_passed: true
 quality_self_review_version: 'PAPER-QUALITY-GUIDE-2026-10-07'
+last_audited: null
+audit_version: 0
 ---
 
 # CXLを用いたLLM接頭辞KVキャッシュの保存と再利用
