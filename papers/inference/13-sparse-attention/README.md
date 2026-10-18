@@ -364,7 +364,7 @@
 
 - **2023-10 · [Context Compression for Auto-regressive Transformers with Sentinel Tokens](2023-2310.08152-context-compression-for-auto-regressive-transformers-with-sentinel-token.md)**  
   実装：[✓](https://github.com/DRSY/KV_Compression) ・ リポジトリ内被引用：0  
-  次トークン予測を続けながら追加学習することで、 がその区間から必要な情報を選んで保持する。
+  Ren・Jia・Zhuの研究は、自己回帰型の大規模言語モデル（Large Language モデル; LLM）で、長い入力に伴って増える鍵・値キャッシュ（Key–Value キャッシュ; KVキャッシュ）を、捨てる前に情報を短い表現へ移すことで削減する方式を提案する。
 
 ### 6年前（2020-11〜2021-10）
 
@@ -395,7 +395,7 @@
 ### 7年前（2019-11〜2020-10）
 
 - **2020-07 · [Big Bird: Transformers for Longer Sequences](2020-2007.14062-big-bird-transformers-for-longer-sequences.md)**  
-  実装：✓ ・ リポジトリ内被引用：127  
+  実装：✓ ・ リポジトリ内被引用：126  
   Big Birdは、系列長に対して二次の計算・メモリ費用が生じる完全自己注意を、局所窓、ランダム接続、少数の大域トークンからなる疎注意へ置き換える長文処理モデルである。各位置が全位置を直接参照する代わりに、近傍の限られた位置、ランダムに選んだ遠距離位置、全体と接続する大域位置だけを見る。論文は同程度のハードウェアで従来より最大8倍長い系列を扱えると報告する。
 
 - **2020-03 · [Efficient Content-Based Sparse Attention with Routing Transformers](2020-2003.05997-efficient-content-based-sparse-attention-with-routing-transformers.md)**  

@@ -35,6 +35,8 @@ quality_body_chars: 6563
 quality_method_chars: 2071
 quality_eval_chars: 2212
 quality_limitation_chars: 547
+last_audited: null
+audit_version: 0
 ---
 
 # Hybrid SLM and LLM for Edge-Cloud Collaborative Inference：端末とクラウドで生成トークンを分担する

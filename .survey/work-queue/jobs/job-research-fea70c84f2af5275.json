@@ -35,10 +35,15 @@
   "selection_reason": "ByteTransformerはvariable-length inputをpadding-freeに処理しzero tokenの計算・memoryを削減、fused MHAのarchitecture-aware最適化でBERT forward inferenceを高速化する。",
   "semantic_scholar_id": "22b58dce1a13382418b8372bbd50ed3b2533f899",
   "source_url": "https://arxiv.org/abs/2210.03052",
-  "status": "ready",
+  "status": "superseded",
   "title": "ByteTransformer: A High-Performance Transformer Boosted for Variable-Length Inputs",
   "type": "research",
   "venue": "IEEE International Parallel and Distributed Processing Symposium",
   "workflow_version": 10,
-  "year": 2022
+  "year": 2022,
+  "superseded_at": "2026-10-18T12:19:49+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/09-kernel-runtime-compilation/2022-2210.03052-bytetransformer-a-high-performance-transformer-boosted-for-variable-leng.md",
+  "represented_canonical_id": "arXiv:2210.03052",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

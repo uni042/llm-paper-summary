@@ -23,7 +23,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - [06-moe-quantization-compression](../06-moe-quantization-compression/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（111本）
+## 自動生成の論文一覧（112本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -459,6 +459,10 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - **2022-06 · [LUT-GEMM: Quantized Matrix Multiplication based on LUTs for Efficient Inference in Large-Scale Generative Language Models](2022-2206.09557-lut-gemm-quantized-matrix-multiplication-based-on-luts-for-efficient-inf.md)**  
   実装：[✓](https://github.com/naver-aics/lut-gemm) ・ リポジトリ内被引用：47  
   重みを3～4ビットへ圧縮すればGPUメモリへの転送量を減らせるが、既存の重みのみ量子化の多くは、積和を行う直前に重みを半精度へ展開する逆量子化処理を必要とする。
+
+- **2022-10 · [ByteTransformer: A High-Performance Transformer Boosted for Variable-Length Inputs](2022-2210.03052-bytetransformer-a-high-performance-transformer-boosted-for-variable-leng.md)**  
+  実装：[✓](https://github.com/bytedance/ByteTransformer) ・ リポジトリ内被引用：2  
+  ByteTransformerは、バッチに混在する長さの異なる文章をBERT系のTransformerへ入力する際、最長文章に合わせたゼロ埋め（padding）で発生する計算とGPUメモリ転送の無駄を削減する推論実装である。論文の重要性は、入力の有効トークンだけを扱う表現と、注意計算の実行形態を一体で設計した点にある。
 
 ### 6年前（2020-11〜2021-10）
 

@@ -3,7 +3,7 @@
 複数requestを複数GPU / nodeで処理するLLM servingについて、request順、batch、prefill / decodeのGPU配分、KV再利用・転送、request移動などを調整し、latencyとresource効率を改善する研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（371本）
+## 自動生成の論文一覧（373本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -1222,6 +1222,10 @@
   実装：✓ ・ リポジトリ内被引用：1  
   要求ごとに異なるTTFT/TPOTのSLOを、締切順の並べ替え・達成不能要求の拒否・SLO比例の処理機会配分で共同制御し、高負荷時の有効スループットを最大14.4倍にする。
 
+- **2025-05 · [QoS-Efficient Serving of Multiple Mixture-of-Expert LLMs Using Partial Runtime Reconfiguration](2025-2505.06481-qos-efficient-serving-of-multiple-mixture-of-expert-llms-using-partial-r.md)**  
+  実装：[✓](https://github.com/hamid-74/Multi-MoE) ・ リポジトリ内被引用：1  
+  混合専門家モデル（Mixture-of-Experts; MoE）は、入力ごとに少数の専門家だけを選択して計算するため、全パラメータ数が大きくても演算量を抑えられる。
+
 - **2025-01 · [iServe: An Intent-based Serving System for LLMs](2025-2501.13111-iserve-intent-based-llm-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   軽量なモデル・フィンガープリントで多数の並列化・圧縮構成の遅延とメモリを推定し、利用者の遅延・費用意図とGPU空き状況に合わせて配備構成を自動選択することで、遅延77.62%削減、SLO達成3.03〜7.09倍、GPUスループット4.72倍を示す。
@@ -1233,6 +1237,10 @@
 - **2025-10 · [From Principles to Practice: A Systematic Study of LLM Serving on Multi-core NPUs](2025-2510.05632-systematic-study-multicore-npu-llm-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   マルチコアNPU向け多層シミュレータで、テンソル分割・コア配置・SRAM/HBM管理・プリフィルとデコードの分離/融合をQwen3各サイズで比較し、入力長・通信競合・負荷構成ごとに有利な設計を明らかにする研究。
+
+- **2025-08 · [Semantic Caching for Low-Cost LLM Serving: From Offline Learning to Online Adaptation](2025-2508.07675-semantic-caching-for-low-cost-llm-serving-from-offline-learning-to-onlin.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  LLMサービングでは、同じ質問への回答を保存する通常の応答キャッシュによって再計算を減らせる。原著の評価は合成データ上の費用・後悔・切替回数が中心であり、実際の生成品質やGPU推論速度の実測改善と混同してはならない。
 
 - **2025-07 · [StreamVLN: Streaming Vision-and-Language Navigation via SlowFast Context Modeling](2025-2507.05240-streamvln-streaming-vision-and-language-navigation-via-slowfast-context-.md)**  
   実装：[✓](https://streamvln.github.io/) ・ リポジトリ内被引用：0  
