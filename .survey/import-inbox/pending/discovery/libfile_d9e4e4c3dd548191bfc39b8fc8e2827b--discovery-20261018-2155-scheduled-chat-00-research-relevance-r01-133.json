@@ -1,0 +1,28 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261018-2155-scheduled-chat-00/r01/research-relevance/133",
+  "reference_main_sha": "efbecccf02770a6778e1e38d0cdccc214cf87b16",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2405.19885",
+      "identity_tokens": [
+        "arXiv:2405.19885",
+        "arxiv:2405.19885",
+        "arxiv:2405.19885"
+      ],
+      "title": "Fourier Controller Networks for Real-Time Decision-Making in Embodied Learning",
+      "reason": "ロボット軌道の低周波成分を短時間フーリエ変換で表現し、FFT・Sliding DFTでロボット制御方策の学習と逐次推論を高速化する研究。対象は強化学習による身体化制御であり、LLMの復号・サービング・KVキャッシュ・MoE・言語モデル量子化への直接の技術貢献を要旨から確認できない。",
+      "source_url": "https://arxiv.org/abs/2405.19885",
+      "body_check": "abstract_screen_only; body_not_read; primary arXiv abstract checked; worklist title verified against current primary title",
+      "first_checked_at": "2026-10-18T22:00:08+09:00",
+      "last_checked_at": "2026-10-18T22:00:08+09:00",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance",
+      "worklist_rank": 133
+    }
+  ]
+}
