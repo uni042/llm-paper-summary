@@ -1,43 +1,137 @@
 ---
-canonical_id: "DOI:10.1145/3712285.3759834"
-title: "Towards Efficient LLM Inference via Collective and Adaptive Speculative Decoding"
-summary: "Smurfsは複数の小型ドラフトモデルの出力を重み付き多数決で統合し、検証する系列を要求ごとに一本へ絞ることで、異種タスク混在時の受理率と検証費用を両立する推論基盤。ドラフトと大型モデルの検証を要求バッチ間でパイプライン化し、実測の受理トークン数と検証時間から投機長を動的に探索する。A100上のOPT-13B/Llama2-70B-chatで既存サービング方式と比較し、構成要素除去実験と実運用例を報告。"
-list_summary: "小型モデル群の重み付き多数決、バッチ間の非同期投機、受理数と検証時間に基づく投機長探索を統合するSmurfs。混合タスクの受理率とLLM検証費用を同時に最適化する。"
+canonical_id: DOI:10.1145/3712285.3759834
+title: Towards Efficient LLM Inference via Collective and Adaptive Speculative Decoding
+summary: Smurfsは複数の小型ドラフトモデルの出力を重み付き多数決で統合し、検証する系列を要求ごとに一本へ絞ることで、異種タスク混在時の受理率と検証費用を両立する推論基盤。ドラフトと大型モデルの検証を要求バッチ間でパイプライン化し、実測の受理トークン数と検証時間から投機長を動的に探索する。A100上のOPT-13B/Llama2-70B-chatで既存サービング方式と比較し、構成要素除去実験と実運用例を報告。
+list_summary: 小型モデル群の重み付き多数決、バッチ間の非同期投機、受理数と検証時間に基づく投機長探索を統合するSmurfs。混合タスクの受理率とLLM検証費用を同時に最適化する。
 authors:
-  - Siqi Wang
-  - Hailong Yang
-  - Xuezhu Wang
-  - Tongxuan Liu
-  - Pengbo Wang
-  - Yufan Xu
-  - Xuning Liang
-  - Kejie Ma
-  - Tianyu Feng
-  - Xin You
-  - Ruihao Gong
-  - Rui Wang
-  - Zhongzhi Luan
-  - Yi Liu
-  - Depei Qian
-published: "2025-11-15"
-publication: "SC '25: Proceedings of the International Conference for High Performance Computing, Networking, Storage and Analysis, pp. 973–990"
-publication_type: "会議論文"
-publication_status: "published"
-source: "https://doi.org/10.1145/3712285.3759834"
+- Siqi Wang
+- Hailong Yang
+- Xuezhu Wang
+- Tongxuan Liu
+- Pengbo Wang
+- Yufan Xu
+- Xuning Liang
+- Kejie Ma
+- Tianyu Feng
+- Xin You
+- Ruihao Gong
+- Rui Wang
+- Zhongzhi Luan
+- Yi Liu
+- Depei Qian
+published: '2025-11-15'
+publication: 'SC ''25: Proceedings of the International Conference for High Performance Computing, Networking, Storage and Analysis, pp. 973–990'
+publication_type: 会議論文
+publication_status: published
+source: https://doi.org/10.1145/3712285.3759834
 sources:
-  - "https://doi.org/10.1145/3712285.3759834"
-  - "https://dl.acm.org/doi/10.1145/3712285.3759834"
-  - "https://doi.org/10.5281/zenodo.15291108"
-implementation: "vLLMの既存コミットを基礎にPython約1600行で実装。複数の小型ドラフトモデルを別タスクで蒸留し、A100 80GBとCUDA 11.8、MPSによる並行実行で評価。著者公開のSmurfsコードと実験成果物がある。"
-code: "https://github.com/kiki632/Smurfs"
-last_checked: "2026-10-18"
-worker_completed_at: "2026-10-18T12:57:00+09:00"
-worker_run_key: "20261018-1245-scheduled-chat-45/r01"
-worker_id: "scheduled-chat-45"
+- https://doi.org/10.1145/3712285.3759834
+- https://dl.acm.org/doi/10.1145/3712285.3759834
+- https://doi.org/10.5281/zenodo.15291108
+implementation: vLLMの既存コミットを基礎にPython約1600行で実装。複数の小型ドラフトモデルを別タスクで蒸留し、A100 80GBとCUDA 11.8、MPSによる並行実行で評価。著者公開のSmurfsコードと実験成果物がある。
+code: https://github.com/kiki632/Smurfs
+last_checked: '2026-10-18'
+worker_completed_at: '2026-10-18T12:57:00+09:00'
+worker_run_key: 20261018-1245-scheduled-chat-45/r01
+worker_id: scheduled-chat-45
 quality_self_review_passed: true
-quality_self_review_version: "2026-10-07"
+quality_self_review_version: '2026-10-07'
 last_audited: null
 audit_version: 0
+references:
+- canonical_id: arXiv:2303.08774
+  arxiv_id: '2303.08774'
+- canonical_id: arXiv:2001.09977
+  arxiv_id: '2001.09977'
+- canonical_id: DOI:10.18653/v1/d13-1160
+  doi: 10.18653/v1/d13-1160
+- canonical_id: DOI:10.1609/aaai.v34i05.6239
+  doi: 10.1609/aaai.v34i05.6239
+- canonical_id: arXiv:2407.11798
+  arxiv_id: '2407.11798'
+  doi: 10.1109/sc41406.2024.00046
+- canonical_id: arXiv:2401.10774
+  arxiv_id: '2401.10774'
+- canonical_id: arXiv:2411.11217
+- canonical_id: DOI:10.48550/arxiv.2302.01318
+  arxiv_id: '2302.01318'
+- canonical_id: arXiv:2107.03374
+  arxiv_id: '2107.03374'
+- canonical_id: arXiv:2312.11462
+  arxiv_id: '2312.11462'
+- canonical_id: arXiv:2110.14168
+  arxiv_id: '2110.14168'
+- canonical_id: DOI:10.1016/j.joule.2023.09.004
+  doi: 10.1016/j.joule.2023.09.004
+- canonical_id: arXiv:2305.14314
+  arxiv_id: '2305.14314'
+  doi: 10.52202/075280-0441
+- canonical_id: arXiv:2402.02082
+  arxiv_id: '2402.02082'
+- canonical_id: arXiv:2301.00774
+- canonical_id: arXiv:2402.02057
+  arxiv_id: '2402.02057'
+- canonical_id: arXiv:2311.08252
+  arxiv_id: '2311.08252'
+- canonical_id: arXiv:2310.12072
+  arxiv_id: '2310.12072'
+- canonical_id: arXiv:2305.02301
+  arxiv_id: '2305.02301'
+  doi: 10.18653/v1/2023.findings-acl.507
+- canonical_id: DOI:10.1145/3373376.3378530
+  doi: 10.1145/3373376.3378530
+- canonical_id: arXiv:2302.07863
+- canonical_id: DOI:10.1145/3600006.3613165
+  doi: 10.1145/3600006.3613165
+- canonical_id: arXiv:2211.17192
+- canonical_id: arXiv:2401.15077
+  arxiv_id: '2401.15077'
+- canonical_id: arXiv:2306.00978
+  arxiv_id: '2306.00978'
+- canonical_id: DOI:10.1006/inco.1994.1009
+  doi: 10.1006/inco.1994.1009
+- canonical_id: arXiv:2305.09781
+  doi: 10.1145/3620666.3651335
+- canonical_id: arXiv:1602.06023
+  arxiv_id: '1602.06023'
+  doi: 10.18653/v1/k16-1028
+- canonical_id: arXiv:1705.04304
+  arxiv_id: '1705.04304'
+- canonical_id: arXiv:2304.03277
+  arxiv_id: '2304.03277'
+- canonical_id: DOI:10.1145/3373376.3378505
+  doi: 10.1145/3373376.3378505
+- canonical_id: DOI:10.18653/v1/p19-1534
+  doi: 10.18653/v1/p19-1534
+- canonical_id: arXiv:2004.13637
+  arxiv_id: '2004.13637'
+- canonical_id: arXiv:1704.04368
+  arxiv_id: '1704.04368'
+- canonical_id: arXiv:2205.02318
+  arxiv_id: '2205.02318'
+- canonical_id: arXiv:1811.03115
+- canonical_id: arXiv:2406.03243
+- canonical_id: arXiv:2310.15141
+- canonical_id: arXiv:2307.09288
+  arxiv_id: '2307.09288'
+- canonical_id: DOI:10.1109/ipdps57955.2024.00086
+  doi: 10.1109/ipdps57955.2024.00086
+- canonical_id: arXiv:2206.01861
+  doi: 10.52202/068431-1970
+- canonical_id: arXiv:2309.08168
+  arxiv_id: '2309.08168'
+- canonical_id: arXiv:2205.01068
+  arxiv_id: '2205.01068'
+- canonical_id: arXiv:2402.13720
+  arxiv_id: '2402.13720'
+- canonical_id: arXiv:2303.18223
+  arxiv_id: '2303.18223'
+- canonical_id: arXiv:2401.09670
+- canonical_id: arXiv:2310.08461
+  arxiv_id: '2310.08461'
+references_checked_at: '2026-10-18'
+references_source: crossref-deposited-reference-metadata
+references_total: 67
 ---
 
 # Smurfs：複数ドラフトの選択・パイプライン・投機長適応を統合する推論基盤
