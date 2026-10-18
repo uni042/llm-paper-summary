@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-18T14:06:06+00:00",
+  "generated_at": "2026-10-18T14:13:38+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -3892,33 +3892,6 @@
       "worker_run_key": "20261018-1700-scheduled-chat-00/r01"
     },
     {
-      "canonical_id": "arXiv:2609.36173",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-18T10:04:44+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 155 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 7593,
-        "body_paragraphs": 53,
-        "method_chars": 1170,
-        "method_paragraphs": 7,
-        "evaluation_chars": 155,
-        "limitation_chars": 753,
-        "insufficiency_flags": [
-          "評価説明量 155 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_149db204e0dc819180a08616442b9987--2026-2609.36173-dspine-adjacent-causal-injection-research-20261018-1630-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_149db204e0dc819180a08616442b9987--2026-2609.36173-dspine-adjacent-causal-injection-research-20261018-1630-scheduled-chat-30-r01.json",
-      "worker_run_key": "20261018-1630-scheduled-chat-30/r01"
-    },
-    {
       "canonical_id": "arXiv:2609.40146",
       "title": null,
       "source_url": null,
@@ -3945,34 +3918,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_4501cb5e99b8819199d417142f18c617--2026-2609.40146-quloc-photonic-gated-low-rank-compression-research-20261018-1430-scheduled-chat-30-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_4501cb5e99b8819199d417142f18c617--2026-2609.40146-quloc-photonic-gated-low-rank-compression-research-20261018-1430-scheduled-chat-30-r01.json",
       "worker_run_key": "20261018-1430-scheduled-chat-30/r01"
-    },
-    {
-      "canonical_id": "arXiv:2406.11016",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-18T10:50:34+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 4369,
-        "body_paragraphs": 25,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 842,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_5709eab530648191bf4ed03b7612d060--2024-2406.11016-optimized-speculative-sampling-metadata-repair-20261018-1045-scheduled-chat-45-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_5709eab530648191bf4ed03b7612d060--2024-2406.11016-optimized-speculative-sampling-metadata-repair-20261018-1045-scheduled-chat-45-r01.json",
-      "worker_run_key": "20261018-1045-scheduled-chat-45/r01/metadata-repair"
     },
     {
       "canonical_id": "arXiv:2504.05598",
@@ -4027,35 +3972,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_59332defff50819199e8207c7b21c17e--2025-2503.24000-rethinking-kv-compression-serving-research-20261018-1900-scheduled-chat-00-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_59332defff50819199e8207c7b21c17e--2025-2503.24000-rethinking-kv-compression-serving-research-20261018-1900-scheduled-chat-00-r01.json",
       "worker_run_key": "20261018-1900-scheduled-chat-00/r01"
-    },
-    {
-      "canonical_id": "arXiv:2502.20576",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-18T10:59:59+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "quality_self_review_version が空",
-        "説明不足トリガー: 手法説明量 0 < 700"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 6638,
-        "body_paragraphs": 37,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 632,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_5c298f8fb8a48191b1c1ab6782882618--2025-2502.20576-omnirouter-global-constrained-multillm-routing-research-20261018-1700-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_5c298f8fb8a48191b1c1ab6782882618--2025-2502.20576-omnirouter-global-constrained-multillm-routing-research-20261018-1700-scheduled-chat-00-r01.json",
-      "worker_run_key": "20261018-1700-scheduled-chat-00/r01"
     },
     {
       "canonical_id": "arXiv:2609.39034",
@@ -4197,33 +4113,6 @@
       "worker_run_key": "20261018-2030-scheduled-chat-30/r01"
     },
     {
-      "canonical_id": "arXiv:2609.36760",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-18T12:18:11+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 0 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 8268,
-        "body_paragraphs": 52,
-        "method_chars": 1586,
-        "method_paragraphs": 9,
-        "evaluation_chars": 0,
-        "limitation_chars": 764,
-        "insufficiency_flags": [
-          "評価説明量 0 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_9cfc3075389c8191921462090cf16463--2026-2609.36760-quantmla-dual-path-lowbit-kv-research-20261018-1630-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_9cfc3075389c8191921462090cf16463--2026-2609.36760-quantmla-dual-path-lowbit-kv-research-20261018-1630-scheduled-chat-30-r01.json",
-      "worker_run_key": "20261018-1630-scheduled-chat-30/r01"
-    },
-    {
       "canonical_id": "arXiv:2609.37828",
       "title": null,
       "source_url": null,
@@ -4247,33 +4136,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_b2616de3a9248191980bfabe432496d0--2026-2609.37828-moe-topology-parallelism-metadata-repair-20261018-1545-scheduled-chat-45-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_b2616de3a9248191980bfabe432496d0--2026-2609.37828-moe-topology-parallelism-metadata-repair-20261018-1545-scheduled-chat-45-r01.json",
       "worker_run_key": "20261018-1545-scheduled-chat-45/r01/metadata-repair-2609.37828"
-    },
-    {
-      "canonical_id": "arXiv:2505.19155",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-18T12:40:09+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 0 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 4928,
-        "body_paragraphs": 29,
-        "method_chars": 1709,
-        "method_paragraphs": 13,
-        "evaluation_chars": 0,
-        "limitation_chars": 618,
-        "insufficiency_flags": [
-          "評価説明量 0 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_c3f56576169c81919a30fff1c8792e0d--2025-2505.19155-sparse-to-dense-video-llm-speculative-research-20261018-0730-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_c3f56576169c81919a30fff1c8792e0d--2025-2505.19155-sparse-to-dense-video-llm-speculative-research-20261018-0730-scheduled-chat-30-r01.json",
-      "worker_run_key": "20261018-0730-scheduled-chat-30/r01"
     },
     {
       "canonical_id": "arXiv:2609.36835",
@@ -4780,8 +4642,8 @@
     },
     {
       "canonical_id": "arXiv:2610.00432",
-      "title": "XOR-Trellis: Ultra-Low-Complexity Dequantization and Curvature-Aware Hadamard-Free LLM Quantization",
-      "source_url": "https://arxiv.org/pdf/2610.00432",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-18T14:06:00+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-30",
@@ -4808,8 +4670,8 @@
     },
     {
       "canonical_id": "arXiv:2609.39816",
-      "title": "Beyond Accuracy: Prefix-Invariant Realizations of Low-Precision Fast Matrix Multiplication",
-      "source_url": "https://arxiv.org/abs/2609.39816",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-18T14:06:01+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-30",
@@ -4836,8 +4698,8 @@
     },
     {
       "canonical_id": "arXiv:2609.21137",
-      "title": "A Multi-Engine Dataflow for MoE Decoding on AWS Tranium",
-      "source_url": "https://arxiv.org/abs/2609.21137",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-18T14:06:03+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-30",
@@ -4863,8 +4725,8 @@
     },
     {
       "canonical_id": "arXiv:2609.24298",
-      "title": "KV-COBRA: KV Cache Compression via Co-Optimized Bit-Rank Allocation",
-      "source_url": "https://arxiv.org/abs/2609.24298",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-18T14:06:04+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-45",
@@ -4892,8 +4754,8 @@
     },
     {
       "canonical_id": "arXiv:2506.13771",
-      "title": "LittleBit: Ultra Low-Bit Quantization via Latent Factorization",
-      "source_url": "https://arxiv.org/html/2506.13771v5",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-18T14:06:06+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-45",
@@ -4919,6 +4781,144 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-61423140d800--libfile_0fd44f5807d08191add265c32774aa11--2025-2506.13771-littlebit-latent-factorization-ultralowbit-research-20261018-1800-scheduled-chat-00-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-61423140d800--libfile_0fd44f5807d08191add265c32774aa11--2025-2506.13771-littlebit-latent-factorization-ultralowbit-research-20261018-1800-schedul.json",
       "worker_run_key": "20261018-1800-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2609.36760",
+      "title": "QuantMLA: Function-Aligned Dual-Path Quantization for Low-Bit MLA KV Caching",
+      "source_url": "https://arxiv.org/abs/2609.36760",
+      "returned_at": "2026-10-18T14:13:32+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 0 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 8268,
+        "body_paragraphs": 52,
+        "method_chars": 1586,
+        "method_paragraphs": 9,
+        "evaluation_chars": 0,
+        "limitation_chars": 764,
+        "insufficiency_flags": [
+          "評価説明量 0 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-6b6f738206e1--libfile_9cfc3075389c8191921462090cf16463--2026-2609.36760-quantmla-dual-path-lowbit-kv-research-20261018-1630-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-6b6f738206e1--libfile_9cfc3075389c8191921462090cf16463--2026-2609.36760-quantmla-dual-path-lowbit-kv-research-20261018-1630-scheduled-chat-30-r01.json",
+      "worker_run_key": "20261018-1630-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2502.20576",
+      "title": "OmniRouter: Budget and Performance Controllable Multi-LLM Routing",
+      "source_url": "https://arxiv.org/pdf/2502.20576",
+      "returned_at": "2026-10-18T14:13:34+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "quality_self_review_version が空",
+        "説明不足トリガー: 手法説明量 0 < 700"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 6638,
+        "body_paragraphs": 37,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 632,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-746115a6ad5a--libfile_5c298f8fb8a48191b1c1ab6782882618--2025-2502.20576-omnirouter-global-constrained-multillm-routing-research-20261018-1700-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-746115a6ad5a--libfile_5c298f8fb8a48191b1c1ab6782882618--2025-2502.20576-omnirouter-global-constrained-multillm-routing-research-20261018-1700-sch.json",
+      "worker_run_key": "20261018-1700-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2406.11016",
+      "title": "Optimized Speculative Sampling for GPU Hardware Accelerators",
+      "source_url": "https://arxiv.org/pdf/2406.11016",
+      "returned_at": "2026-10-18T14:13:35+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 4369,
+        "body_paragraphs": 25,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 842,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-79e2500a7ee3--libfile_5709eab530648191bf4ed03b7612d060--2024-2406.11016-optimized-speculative-sampling-metadata-repair-20261018-1045-scheduled-chat-45-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-79e2500a7ee3--libfile_5709eab530648191bf4ed03b7612d060--2024-2406.11016-optimized-speculative-sampling-metadata-repair-20261018-1045-scheduled-ch.json",
+      "worker_run_key": "20261018-1045-scheduled-chat-45/r01/metadata-repair"
+    },
+    {
+      "canonical_id": "arXiv:2609.36173",
+      "title": "Draft in Parallel, Condition Through Depth: Adjacent Causal Injection for Speculative Decoding",
+      "source_url": "https://arxiv.org/abs/2609.36173",
+      "returned_at": "2026-10-18T14:13:36+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 155 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 7593,
+        "body_paragraphs": 53,
+        "method_chars": 1170,
+        "method_paragraphs": 7,
+        "evaluation_chars": 155,
+        "limitation_chars": 753,
+        "insufficiency_flags": [
+          "評価説明量 155 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-8ec4e38d7efe--libfile_149db204e0dc819180a08616442b9987--2026-2609.36173-dspine-adjacent-causal-injection-research-20261018-1630-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-8ec4e38d7efe--libfile_149db204e0dc819180a08616442b9987--2026-2609.36173-dspine-adjacent-causal-injection-research-20261018-1630-scheduled-chat-30.json",
+      "worker_run_key": "20261018-1630-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2505.19155",
+      "title": "Sparse-to-Dense: A Free Lunch for Lossless Acceleration of Video Understanding in LLMs",
+      "source_url": "https://arxiv.org/html/2505.19155v2",
+      "returned_at": "2026-10-18T14:13:38+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 0 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 4928,
+        "body_paragraphs": 29,
+        "method_chars": 1709,
+        "method_paragraphs": 13,
+        "evaluation_chars": 0,
+        "limitation_chars": 618,
+        "insufficiency_flags": [
+          "評価説明量 0 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-9450c98a3a22--libfile_c3f56576169c81919a30fff1c8792e0d--2025-2505.19155-sparse-to-dense-video-llm-speculative-research-20261018-0730-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-9450c98a3a22--libfile_c3f56576169c81919a30fff1c8792e0d--2025-2505.19155-sparse-to-dense-video-llm-speculative-research-20261018-0730-scheduled-ch.json",
+      "worker_run_key": "20261018-0730-scheduled-chat-30/r01"
     }
   ]
 }
