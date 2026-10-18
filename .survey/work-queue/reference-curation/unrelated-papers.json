@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-18T10:00:31+00:00",
-  "record_count": 12425,
+  "updated_at": "2026-10-18T10:11:37+00:00",
+  "record_count": 12427,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -179173,6 +179173,30 @@
       "last_checked_at": "2026-10-18T10:00:30+00:00",
       "linked_from": [],
       "title": "Ground Slow, Move Fast: A Dual-System Foundation Model for Generalizable Vision-and-Language Navigation"
+    },
+    "arXiv:2503.22184": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2503.22184",
+      "identity_tokens": [
+        "arXiv:2503.22184"
+      ],
+      "reason": "本文の対象はコバルト・シリコンナノ散乱体の光学Tellegen効果で、非相反磁気電気結合の実験。MoEの専門家キャッシュやLLMサービングとは無関係。worklistの題名「MoECache」とarXiv IDの実際の論文が不一致。",
+      "first_checked_at": "2026-10-18T10:11:36+00:00",
+      "last_checked_at": "2026-10-18T10:11:36+00:00",
+      "linked_from": [],
+      "title": "Realization of the Tellegen Effect in Resonant Optical Metasurfaces"
+    },
+    "arXiv:2502.03229": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2502.03229",
+      "identity_tokens": [
+        "arXiv:2502.03229"
+      ],
+      "reason": "本文§1〜3で脳MRI画像の半教師あり領域分割と画像位置合わせを扱い、U-Net・MrRegNet・擬似マスクを用いる。KVキャッシュやLLM推論の動的圧縮方式ではない。worklistの題名「KVCachePolicy」とarXiv IDの実際の論文が不一致。",
+      "first_checked_at": "2026-10-18T10:11:37+00:00",
+      "last_checked_at": "2026-10-18T10:11:37+00:00",
+      "linked_from": [],
+      "title": "A Unified Framework for Semi-Supervised Image Segmentation and Registration"
     }
   }
 }
