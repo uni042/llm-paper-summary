@@ -124,13 +124,13 @@
 
 ### 2年前（2024-11〜2025-10）
 
+- **2025-08 · [LMDeploy Accelerates Mixed-Precision LLM Inference with TurboMind](2025-2508.15601-efficient-mixed-precision-large-language-model-inference.md)**  
+  実装：[✓](https://github.com/InternLM/lmdeploy) ・ リポジトリ内被引用：7  
+  量子化された重みを行列積の直前に浮動小数点へ復号すると、復号命令と共有メモリへの転送が計算の待ち時間になる。既存の混合精度推論基盤に対して配信遅延を最大61%（平均30%）削減し、処理率を最大156%（平均58%）向上したと報告する。
+
 - **2025-04 · [MiLo: Efficient Quantized MoE Inference with Mixture of Low-Rank Compensators](2025-2504.02658-milo-efficient-quantized-moe-inference-with-mixture-of-low-rank-compensa.md)**  
   実装：[✓](https://github.com/Supercomputing-System-AI-Lab/MiLo) ・ リポジトリ内被引用：7  
   Mixtral-8×7Bの半精度重みは約90GBに達し、単一の40GBや80GBのGPUに収まりにくい。4ビット量子化は比較的品質を保てる一方、3ビットに下げると重みを表現できる値が減り、WikiText-2の予測性能が顕著に悪化する。論文はMixtral-8×7BとDeepSeek-MoEで精度を測り、A100 40GBで推論遅延も測定した。
-
-- **2025-08 · [LMDeploy Accelerates Mixed-Precision LLM Inference with TurboMind](2025-2508.15601-efficient-mixed-precision-large-language-model-inference.md)**  
-  実装：[✓](https://github.com/InternLM/lmdeploy) ・ リポジトリ内被引用：6  
-  量子化された重みを行列積の直前に浮動小数点へ復号すると、復号命令と共有メモリへの転送が計算の待ち時間になる。既存の混合精度推論基盤に対して配信遅延を最大61%（平均30%）削減し、処理率を最大156%（平均58%）向上したと報告する。
 
 - **2025-02 · [Huff-LLM: End-to-End Lossless Compression for Efficient LLM Inference](2025-2502.00922-huff-llm-end-to-end-lossless-compression-for-efficient-llm-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：6  
@@ -241,7 +241,7 @@
   二次感度に基づく非一様量子化と、外れ値・高感度重みだけをFP16疎行列へ逃がすDense-and-Sparse分解により、3-bit級でも品質を保ちながら重み転送量と生成遅延を削減する。
 
 - **2023-10 · [Atom: Low-bit Quantization for Efficient and Accurate LLM Serving](2023-2310.19102-atom-low-bit-quantization-for-efficient-and-accurate-llm-serving.md)**  
-  実装：[✓](https://github.com/efeslab/Atom) ・ リポジトリ内被引用：56  
+  実装：[✓](https://github.com/efeslab/Atom) ・ リポジトリ内被引用：57  
   外れ値チャネルだけ高精度に残して重み・活性・KVキャッシュを低ビット化し、再配置と融合カーネルで4ビットGPU演算器を直接使ってLLM配信を高速化する。
 
 - **2023-06 · [OWQ: Outlier-Aware Weight Quantization for Efficient Fine-Tuning and Inference of Large Language Models](2023-2306.02272-owq-outlier-aware-weight-quantization-for-efficient-fine-tuning-and-infe.md)**  
