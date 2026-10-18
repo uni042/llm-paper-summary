@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（803本）
+## 自動生成の論文一覧（807本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -1220,6 +1220,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   注意の吸い込み（注意機構 Sink）、位置偏り、複数注意ヘッドの役割差、画像全体で目立つ物体への偏りがある。さらに64トークンのPOPE効率測定では、質問関連性だけを使うλ=1の構成が77.06ms、13.93GBであり、VisPrunerの89.48ms、14.35GBより小さい。
 
+- **2026-04 · [MemoSight: Unifying Context Compression and Multi Token Prediction for Reasoning Acceleration](2026-2604.14889-memosight-unifying-context-compression-and-multi-token-prediction-for-re.md)**  
+  実装：[✓](https://github.com/helldog-star/MemoSight) ・ リポジトリ内被引用：0  
+  過去の思考を圧縮するだけでは次のトークンを逐次生成する費用が残り、複数トークンを予測するだけでは長い過去を保持する費用が残る。主実験では文脈保持トークン数と生成速度が改善するが、平均正答率は低下しており、品質無損失の手法ではない。
+
 - **2026-04 · [LearnPruner: Rethinking Attention-based Token Pruning in Vision Language Models](2026-2604.23950-learnpruner-rethinking-attention-based-token-pruning-in-vision-language-.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   LLaVA-v1.5では1画像576トークン、LLaVA-NeXTの高解像度入力では最大2,880トークンとなり、画像の背景や類似領域にも長い系列を割り当てる。LLaVA-v1.5-7Bの8課題では、視覚トークンを平均576個から32個へ削減しても、元モデルを100%とした平均相対性能94.8%を維持した。
@@ -1547,6 +1551,10 @@
 - **2026-01 · [PLA-Serve: A Prefill-Length-Aware LLM Serving System](2026-a30e37ff7d4b-pla-serve-a-prefill-length-aware-llm-serving-system.md)**  
   実装：[✓](https://github.com/Jianshu-She/LAPS) ・ リポジトリ内被引用：0  
   プリフィル長で短要求と長要求を別キュー・別実行モードへ分離し、待機窓、CUDA Graph形状クラスタリング、動的GPU割当で短要求の待ちと長要求の干渉を同時に抑える。
+
+- **2026-01 · [Mosaic: Unlocking Long-Context Inference for Diffusion LLMs via Global Memory Planning and Dynamic Peak Taming](2026-2601.06562-mosaic-unlocking-long-context-inference-for-diffusion-llms-via-global-me.md)**  
+  実装：[✓](https://github.com/flashserve/Mosaic) ・ リポジトリ内被引用：0  
+  Mosaicは、拡散型大規模言語モデル（diffusion-based Large Language モデル; dLLM）の長文脈生成で生じる、鍵・値キャッシュではなく一時活性化が容量の限界になるという問題を解く推論基盤である。過去KVを長期保持する手法だけでは、この大きな一時メモリを削れない。
 
 - **2026-01 · [ModeX: Evaluator-Free Best-of-N Selection for Open-Ended Generation](2026-2601.02535-modex-evaluator-free-best-of-n-selection-for-open-ended-generation.md)**  
   実装：[✓](https://github.com/deeplearning-wisc/ModeX) ・ リポジトリ内被引用：0  
@@ -2026,6 +2034,10 @@
   実装：[✓](https://github.com/microsoft/wina) ・ リポジトリ内被引用：3  
   WINAは、既存の大規模言語モデル（LLM）を再学習せず、各層で計算に参加させる活性成分を選択する疎活性化方式である。代表例としてLlama-2-7Bの常識推論8課題平均では、65%の活性疎性でWINAが65.14、TEALが61.07、R-Sparseが59.37となった。
 
+- **2025-01 · [Rope to Nope and Back Again: A New Hybrid Attention Strategy](2025-2501.18795-rope-to-nope-and-back-again-a-new-hybrid-attention-strategy.md)**  
+  実装：✓ ・ リポジトリ内被引用：3  
+  大規模言語モデル（large language モデル; LLM）で長い入力を処理すると、全トークン同士の注意（注意機構）計算は入力長Lの二乗に近い費用を要する。長文脈評価では256Kトークンでの検索・質問応答が改善し、局所層を増やすことで長文推論時のキー・値キャッシュ（key-value キャッシュ; KVキャッシュ）も減らせる。
+
 - **2025-01 · [MoE²: Optimizing Collaborative Inference for Edge Large Language Models](2025-2501.09410-moe-optimizing-collaborative-inference-for-edge-large-language-models.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
   MoE²（Mixture-of-Edge-Experts）は、単一の大規模言語モデル内部に小さな専門家層を並べる方式ではなく、独立した端末・サーバーに配置された複数の大規模言語モデルそのものを専門家として扱う協調推論基盤である。
@@ -2085,6 +2097,10 @@
 - **2025-05 · [MorphServe: Efficient and Workload-Aware LLM Serving via Runtime Quantized Layer Swapping and KV Cache Resizing](2025-2506.02006-efficient-and-workload-aware-llm-serving-via-runtime-layer-swapping-and-kv-cache-resizing.md)**  
   実装：[✓](https://github.com/ds2-lab/MorphServe) ・ リポジトリ内被引用：2  
   負荷ピーク時だけ低影響層を低ビット版へ非同期交換し、空いたGPUメモリをKVキャッシュへ振り替えることで、平均SLO違反を92.45%削減しP95初回トークン遅延を2.2〜3.9倍改善する。
+
+- **2025-09 · [Quant-dLLM: Post-Training Extreme Low-Bit Quantization for Diffusion Large Language Models](2025-2510.03274-quant-dllm-post-training-extreme-low-bit-quantization-for-diffusion-larg.md)**  
+  実装：[✓](https://github.com/ZTA2785/Quant-dLLM) ・ リポジトリ内被引用：1  
+  本研究は、拡散型大規模言語モデル（diffusion large language モデル、以下dLLM）の重みを、追加の勾配学習なしに平均2ビットへ圧縮しながら、生成・推論課題の正答率を維持する手法を提案する。
 
 - **2025-06 · [PecSched: Preemptive and Efficient Cluster Scheduling for LLM Inference](2024-2409.15104-csps-a-communication-efficient-sequence-parallelism-based-serving-system-for-transformer-based-models-with-long-prompts.md)**  
   実装：✓ ・ リポジトリ内被引用：1  

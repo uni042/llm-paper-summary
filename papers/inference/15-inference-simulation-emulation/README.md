@@ -23,7 +23,7 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
 - [09-kernel-runtime-compilation](../09-kernel-runtime-compilation/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（34本）
+## 自動生成の論文一覧（35本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -159,6 +159,10 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
 - **2024-06 · [Demystifying AI Platform Design for Distributed Inference of Next-Generation LLM models](2024-2406.01698-demystifying-ai-platform-design-for-distributed-inference-of-next-generation-llm-models.md)**  
   実装：[✓](https://github.com/abhibambhaniya/GenZ-LLM-Analyzer) ・ リポジトリ内被引用：5  
   演算子-level ルーフラインと集合通信通信モデルでLLM構造・推論提供最適化・分散方式からcompute/メモリ/ネットワーク要件を逆算するGenZ。
+
+- **2024-08 · [LUT Tensor Core: A Software-Hardware Co-Design for LUT-Based Low-Bit LLM Inference](2024-2408.06003-lut-tensor-core-a-software-hardware-co-design-for-lut-based-low-bit-llm-.md)**  
+  実装：[✓](https://github.com/microsoft/T-MAC/tree/LUTTensorCore_ISCA25) ・ リポジトリ内被引用：1  
+  重みを1〜4ビットに量子化した大規模言語モデル（LLM）では、重みの転送量は小さくなる一方、活性化はFP16やINT8など比較的高い精度で保持される。ISCA 2025の原著は、従来のLUTアクセラレータに比べて計算密度とエネルギー効率を1.44倍改善し、低ビットLLMの推論をモデル単位のシミュレーションで2.06〜5.51倍高速化したと報告する。
 
 ### 4年前（2022-11〜2023-10）
 
