@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-dec6de0d3b9fc330-border-001",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2609.00103",
+  "reason": "一次要旨によればECCBenchは長期記憶を正答率だけでなく計算量（FLOPs）、圧縮性、誤答時の棄権較正で測る。Transformer以外の記憶構造を比較し、動画記憶の圧縮性と較正の弱さを示すため、長文脈推論の計測と関係する。ただし主要寄与は記憶能力の評価プロトコルとモデル挙動の比較であり、実行時KVキャッシュ削減・GPU推論高速化・具体的なサービング最適化の新方式を示すものではない。推論評価系統への収録可能性はあるが現行の実装最適化中心の対象範囲では境界的とする。",
+  "title": "Good Memory Has ECC: Evaluating the Memory of Vision-Language Models Beyond Accuracy",
+  "identity_tokens": [
+    "arxiv:2609.00103",
+    "doi:10.48550/arxiv.2609.00103"
+  ],
+  "linked_from": [],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-dec6de0d3b9f",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}
