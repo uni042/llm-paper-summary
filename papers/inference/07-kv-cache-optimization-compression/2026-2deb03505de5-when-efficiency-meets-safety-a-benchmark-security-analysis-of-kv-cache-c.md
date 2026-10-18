@@ -1,37 +1,47 @@
 ---
-canonical_id: 'DOI:10.18653/v1/2026.acl-long.1123'
-doi: '10.18653/v1/2026.acl-long.1123'
+canonical_id: DOI:10.18653/v1/2026.acl-long.1123
+doi: 10.18653/v1/2026.acl-long.1123
 title: 'When Efficiency Meets Safety: A Benchmark Security Analysis of KV Cache Compression in Large Language Models'
-summary: >-
-  KVキャッシュ圧縮がLLMの安全性に及ぼす副作用を、トークン破棄・値統合・量子化の三系統と四つのモデル系列で分析する。破棄は一部の攻撃を偶発的に抑える一方、CAM型のKV統合は浅い層で値が過度に重畳すると深い層の注意機能と拒否表現を損ない得る。LLaMA-2-7B-Chatでは文脈内攻撃の成功率が非圧縮0%からCAMの34%へ増加。対策Safe-CAMは各注意ヘッドの統合履歴に応じて次の統合確率を抑制し、同条件の攻撃成功率を0%へ戻し、LongBenchの良性タスク精度も通常CAMより改善する。安全性評価は50件のAdvBench有害要求と自動判定に依存し、全モデル・全攻撃での保証ではない。
-list_summary: >-
-  KVキャッシュ圧縮の安全性を方式別に測り、浅層の過剰な値統合が拒否表現を崩す条件を発見。注意ヘッド別の統合履歴を使うSafe-CAMでLLaMA-2の文脈内攻撃成功率34%を0%へ戻す。
+summary: KVキャッシュ圧縮がLLMの安全性に及ぼす副作用を、トークン破棄・値統合・量子化の三系統と四つのモデル系列で分析する。破棄は一部の攻撃を偶発的に抑える一方、CAM型のKV統合は浅い層で値が過度に重畳すると深い層の注意機能と拒否表現を損ない得る。LLaMA-2-7B-Chatでは文脈内攻撃の成功率が非圧縮0%からCAMの34%へ増加。対策Safe-CAMは各注意ヘッドの統合履歴に応じて次の統合確率を抑制し、同条件の攻撃成功率を0%へ戻し、LongBenchの良性タスク精度も通常CAMより改善する。安全性評価は50件のAdvBench有害要求と自動判定に依存し、全モデル・全攻撃での保証ではない。
+list_summary: KVキャッシュ圧縮の安全性を方式別に測り、浅層の過剰な値統合が拒否表現を崩す条件を発見。注意ヘッド別の統合履歴を使うSafe-CAMでLLaMA-2の文脈内攻撃成功率34%を0%へ戻す。
 authors:
-  - Xiaoxiao Ma
-  - Kuofeng Gao
-  - Zeyi Lu
-  - Wenxi Jiang
-  - Hao Fang
-  - Hao Wu
-  - Bin Chen
-  - Shu-Tao Xia
-published: '2026-07'
+- Xiaoxiao Ma
+- Kuofeng Gao
+- Zeyi Lu
+- Wenxi Jiang
+- Hao Fang
+- Hao Wu
+- Bin Chen
+- Shu-Tao Xia
+published: 2026-07
 publication: 'Proceedings of the 64th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers), pp. 24472–24485'
-publication_type: '査読付き国際会議論文'
+publication_type: 査読付き国際会議論文
 publication_status: published
-source: 'https://aclanthology.org/2026.acl-long.1123.pdf'
+source: https://aclanthology.org/2026.acl-long.1123.pdf
 sources:
-  - 'https://aclanthology.org/2026.acl-long.1123.pdf'
-  - 'https://aclanthology.org/2026.acl-long.1123/'
-  - 'https://doi.org/10.18653/v1/2026.acl-long.1123'
-implementation: >-
-  論文はSnapKV・CAM・KVQuantの圧縮と、各ヘッドの履歴を使うSafe-CAMの擬似コードを提示する。論文本文およびACL公式書誌から著者公式コードの公開URLは確認できなかった。公開コードが存在しないと断定するものではない。Safe-CAMは既存のCAM型KV統合へ統合履歴カウンタと確率抑制を加える提案であり、汎用推論エンジンへの統合性能は別途測定が必要。
+- https://aclanthology.org/2026.acl-long.1123.pdf
+- https://aclanthology.org/2026.acl-long.1123/
+- https://doi.org/10.18653/v1/2026.acl-long.1123
+implementation: 論文はSnapKV・CAM・KVQuantの圧縮と、各ヘッドの履歴を使うSafe-CAMの擬似コードを提示する。論文本文およびACL公式書誌から著者公式コードの公開URLは確認できなかった。公開コードが存在しないと断定するものではない。Safe-CAMは既存のCAM型KV統合へ統合履歴カウンタと確率抑制を加える提案であり、汎用推論エンジンへの統合性能は別途測定が必要。
 code: null
 last_checked: '2026-10-19'
 worker_completed_at: '2026-10-19T01:04:48+09:00'
-worker_run_key: '20261019-0104-scheduled-chat-00/r01'
+worker_run_key: 20261019-0104-scheduled-chat-00/r01
 last_audited: null
 audit_version: 0
+references:
+- canonical_id: arXiv:2406.11717
+  arxiv_id: '2406.11717'
+- canonical_id: arXiv:2306.14048
+- canonical_id: arXiv:2401.18079
+- canonical_id: arXiv:2406.02069
+- canonical_id: arXiv:2310.01801
+- canonical_id: arXiv:2402.02750
+- canonical_id: arXiv:2309.17453
+- canonical_id: arXiv:2404.14469
+references_checked_at: '2026-10-18'
+references_source: primary-pdf-reference-section
+references_total: 1
 ---
 
 # KVキャッシュ圧縮は安全性を変える：方式別の検証とSafe-CAM
