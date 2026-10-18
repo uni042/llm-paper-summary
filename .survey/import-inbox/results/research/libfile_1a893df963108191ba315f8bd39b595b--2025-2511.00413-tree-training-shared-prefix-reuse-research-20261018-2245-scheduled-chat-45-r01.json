@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "cca391b4031049b41450f75f52d1fde039e6e0e3c4ccda9e0a333f23366092f9",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_1a893df963108191ba315f8bd39b595b--2025-2511.00413-tree-training-shared-prefix-reuse-research-20261018-2245-scheduled-chat-45-r01.md",
+  "canonical_id": "arXiv:2511.00413",
+  "worker_completed_at": "2026-10-18T22:53:00+09:00",
+  "worker_run_key": "20261018-2245-scheduled-chat-45/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 6173,
+    "body_paragraphs": 46,
+    "method_chars": 0,
+    "method_paragraphs": 0,
+    "evaluation_chars": 184,
+    "limitation_chars": 0,
+    "insufficiency_flags": [
+      "手法説明量 0 < 700",
+      "評価説明量 184 < 500",
+      "限界説明量 0 < 推奨 120"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 手法説明量 0 < 700",
+    "説明不足トリガー: 評価説明量 184 < 500"
+  ],
+  "processed_at": "2026-10-18T15:21:28+00:00"
+}

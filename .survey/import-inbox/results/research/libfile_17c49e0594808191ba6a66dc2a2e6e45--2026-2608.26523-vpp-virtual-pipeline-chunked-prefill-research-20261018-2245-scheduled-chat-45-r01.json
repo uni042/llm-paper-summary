@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "0cb90c08fea0bda77e2ccf784f6e6f1dfdfdb2ec1c053e5d9718197d8f106b6a",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_17c49e0594808191ba6a66dc2a2e6e45--2026-2608.26523-vpp-virtual-pipeline-chunked-prefill-research-20261018-2245-scheduled-chat-45-r01.md",
+  "canonical_id": "arXiv:2608.26523",
+  "worker_completed_at": "2026-10-18T22:56:00+09:00",
+  "worker_run_key": "20261018-2245-scheduled-chat-45/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 5001,
+    "body_paragraphs": 37,
+    "method_chars": 0,
+    "method_paragraphs": 0,
+    "evaluation_chars": 134,
+    "limitation_chars": 0,
+    "insufficiency_flags": [
+      "手法説明量 0 < 700",
+      "評価説明量 134 < 500",
+      "限界説明量 0 < 推奨 120"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 手法説明量 0 < 700",
+    "説明不足トリガー: 評価説明量 134 < 500"
+  ],
+  "processed_at": "2026-10-18T15:21:27+00:00"
+}
