@@ -1,0 +1,26 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261018-1200-scheduled-chat-00/r01/research-prescreen/088",
+  "reference_main_sha": "d8a914757679e1b3d0b06e45da62b0fa9a7eeab3",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2306.10209",
+      "identity_tokens": [
+        "arXiv:2306.10209"
+      ],
+      "title": "ZeRO++: Extremely Efficient Collective Communication for Giant Model Training",
+      "reason": "一次要旨でのZeRO++の対象は巨大モデルの分散学習であり、ZeROの前向き・後向き重み収集と勾配集約の通信量をブロック量子化、データ再配置、量子化したall-to-all集約で削減する。評価する4倍の通信量削減と最大2.16倍の処理量改善は384 GPU規模の学習反復に対するもので、LLM推論時のトークン生成やサービングの高速化ではない。現在凍結中の学習専用高速化範囲に当たるため本ワーカーの推論収録対象外とする。",
+      "source_url": "https://arxiv.org/abs/2306.10209",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-18T12:04:00+09:00",
+      "last_checked_at": "2026-10-18T12:04:00+09:00",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance",
+      "worklist_rank": 88
+    }
+  ]
+}
