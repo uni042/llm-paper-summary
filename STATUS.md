@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-10-18 19:08:04 JST**
+> 自動生成: **2026-10-18 19:14:15 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -15,7 +15,7 @@
 | 未claim Research job | **1580** |
 | 直近24hのResearch処理完了 | **75** |
 | 最終Research処理完了 | **10-18 17:36:50 JST** |
-| 最終Discovery探索完了 | **10-18 18:45:00 JST** |
+| 最終Discovery探索完了 | **10-18 19:00:00 JST** |
 | 整合性異常 | **0** |
 
 ## 16KB未満論文サマリーの再監査
@@ -24,14 +24,14 @@
 
 | 指標 | 件数 |
 |---|---:|
-| **再監査残件数** | **9** |
+| **再監査残件数** | **6** |
 | 機械検査未達（FAIL） | **2** |
-| 機械検査適合・警告のみ（PASS/WARN） | **7** |
-| :00ワーカー担当残 | **3** |
-| :30ワーカー担当残 | **3** |
-| :45ワーカー担当残 | **3** |
+| 機械検査適合・警告のみ（PASS/WARN） | **4** |
+| :00ワーカー担当残 | **2** |
+| :30ワーカー担当残 | **2** |
+| :45ワーカー担当残 | **2** |
 
-- キュー最終生成: **2026-10-18 10:08:12 JST** / 再監査版: `2026-10-07-v1`。
+- キュー最終生成: **2026-10-18 19:11:08 JST** / 再監査版: `2026-10-07-v1`。
 - 機械検査PASS/WARNでも意味内容の再監査に合格したとは限りません。合格した論文はキュー再生成時に除外されます。
 - 残件数と担当別・機械検査別件数は `entries` から再計算し、`count`・`worker_counts` の保存値は使いません。累計完了件数・完了率は現在の待機リスト単独では算出できません。
 
@@ -51,12 +51,12 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 探索候補総数 | **142827** |
-| 処理済み | **21243** |
+| 探索候補総数 | **142829** |
+| 処理済み | **21245** |
 | 未処理Discovery候補 | **121584** |
 | 収録済み | **2528** |
 | Research / Audit候補へ昇格済み | **1330** |
-| 無関係として除外 | **12302** |
+| 無関係として除外 | **12304** |
 | 微妙として除外 | **5083** |
 
 ### 探索候補の事前フィルタリング（可逆）
@@ -116,7 +116,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **10-18 09:38:07 JST（9時間29分前）** |
+| 最終maintenance完了 | **10-18 09:38:07 JST（9時間36分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **issues_found** |
 | health | **issues_found** |
@@ -137,18 +137,18 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 | 指標 | 現在値 |
 |---|---:|
 | 直近6hのResearch完了 | **12** |
-| 直近6hのDiscovery run | **11** |
-| 直近6hのDiscovery本文確認・分類 | **23** |
+| 直近6hのDiscovery run | **12** |
+| 直近6hのDiscovery本文確認・分類 | **24** |
 | 最終Research完了 | **10-18 17:36:50 JST** |
-| 最終Discovery完了 | **10-18 18:45:00 JST** |
+| 最終Discovery完了 | **10-18 19:00:00 JST** |
 
 ### 最新Library-first run
 
 - Research: **10-18 17:36:50 JST** / worker — / run 20261018-1730-scheduled-chat-30/r01 / 成果 **1件**
   - evidence: .survey/import-inbox/results/research/libfile_5f15e3a72c2c819187901f7926f7c078--2026-2609.33252-cascadeep-asynchronous-expert-prefill-research-20261018-1730-scheduled-chat-30-r01.json
-- Discovery: **10-18 18:45:00 JST** / worker scheduled-chat-45 / run 20261018-1845-scheduled-chat-45/r01/research-prescreen/083-087
-  - 本文確認・分類 **4件** / accept **2件** / unrelated+borderline **2件**
-  - evidence: .survey/import-inbox/results/discovery/libfile_68f038a0f7988191b563b3fcb6ab4aef--discovery-20261018-1845-scheduled-chat-45-research-prescreen-r01-083-087.json
+- Discovery: **10-18 19:00:00 JST** / worker scheduled-chat-00 / run 20261018-1900-scheduled-chat-00/r01
+  - 本文確認・分類 **1件** / accept **0件** / unrelated+borderline **1件**
+  - evidence: .survey/import-inbox/results/discovery/libfile_5f519405300c81918d4c35555b5a5f08--discovery-20261018-1900-scheduled-chat-00-research-relevance-r01-120.json
 
 ### Codex探索成果の反映状況
 
