@@ -23,7 +23,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - [06-moe-quantization-compression](../06-moe-quantization-compression/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（115本）
+## 自動生成の論文一覧（116本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -87,6 +87,10 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   高性能な実装では、演算量だけでなく、レジスタ圧迫、共有メモリ、キャッシュ利用、メモリ帯域、スレッド配置を同時に考える必要がある。KernelBandは、この探索判断を文脈付き多腕バンディット（contextual multi-armed bandit、MAB）へ置き換える方式である。
 
 ### 直近12か月・未被引用（2025-11〜2026-10）
+
+- **2026-09 · [WavePP: High-Throughput Pipeline Parallel LLM Prefill under Prefix Reuse](2026-2609.35263-wavepp-high-throughput-pipeline-parallel-llm-prefill-under-prefix-reuse.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  再利用できる範囲の合意、キャッシュを削除されないように保護する処理、未計算部分のメモリ確保を同期的に行うと、GPUに次の入力を供給する頻度が下がり、段の間に空き時間が発生する。準備が整った要求は処理波（wave）に分割し、パイプラインを埋めるように波の大きさを動的に選ぶ。
 
 - **2026-09 · [VC-Attention: Value Smoothing and Softmax Casting for Low-bit Attention](2026-2609.15810-vc-attention-value-smoothing-and-softmax-casting-for-low-bit-attention.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

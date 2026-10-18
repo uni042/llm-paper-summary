@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-18T21:41:38+00:00",
+  "generated_at": "2026-10-18T21:59:04+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -5129,34 +5129,31 @@
       "worker_run_key": "20261019-0400-scheduled-chat-00/r01"
     },
     {
-      "canonical_id": "arXiv:2605.06366",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-18T21:00:03+00:00",
-      "return_count": 4,
+      "canonical_id": "arXiv:2610.01108",
+      "title": "AgSpec: Pushing the Limits of Retrieval-Based Speculative Decoding in Coding Agent Pipelines",
+      "source_url": "https://arxiv.org/html/2610.01108v1",
+      "returned_at": "2026-10-18T21:57:36+00:00",
+      "return_count": 1,
       "assigned_worker": "scheduled-chat-00",
       "reason": "blocked_quality",
       "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700",
-        "説明不足トリガー: 評価説明量 340 < 500"
+        "説明不足トリガー: 評価説明量 475 < 500"
       ],
       "quality_metrics": {
         "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 6005,
-        "body_paragraphs": 37,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 340,
-        "limitation_chars": 0,
+        "body_chars": 6101,
+        "body_paragraphs": 33,
+        "method_chars": 2876,
+        "method_paragraphs": 15,
+        "evaluation_chars": 475,
+        "limitation_chars": 778,
         "insufficiency_flags": [
-          "手法説明量 0 < 700",
-          "評価説明量 340 < 500",
-          "限界説明量 0 < 推奨 120"
+          "評価説明量 475 < 500"
         ]
       },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-345c72076a02--libfile_4ce3569ed32881918a3cff4f40e1bed6--2026-2605.06366-layer-collapse-dlm-compression-research-20261019-0445-scheduled-chat-45-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-345c72076a02--libfile_4ce3569ed32881918a3cff4f40e1bed6--2026-2605.06366-layer-collapse-dlm-compression-research-20261019-0445-scheduled-chat-45-r.json",
-      "worker_run_key": "20261019-0445-scheduled-chat-45/r01"
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_c74abecf3e608191b21fbfb6969f5534--2026-2610.01108-agspec-agent-aware-retrieval-speculative-decoding-research-20261019-0630-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_c74abecf3e608191b21fbfb6969f5534--2026-2610.01108-agspec-agent-aware-retrieval-speculative-decoding-research-20261019-0630-scheduled-chat-30-r01.json",
+      "worker_run_key": "20261019-0630-scheduled-chat-30/r01"
     }
   ]
 }
