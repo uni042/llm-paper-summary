@@ -1,13 +1,12 @@
 {
   "schema_version": 1,
   "artifact_type": "research",
-  "status": "imported",
+  "status": "blocked_quality",
   "source_sha256": "0544b156a200f36b2dd16113185863233cce57aa3705167b812588de51e2fbaf",
-  "canonical_id": "arXiv:2609.37828",
-  "paper_path": "papers/inference/12-moe-parallelism-communication/2026-2609.37828-joint-effects-of-gpu-server-topology-parallelism-and-congestion-control-.md",
-  "lineage": "12-moe-parallelism-communication",
-  "audit_status": "PASS",
+  "normalized_source_sha256": null,
   "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_b2616de3a9248191980bfabe432496d0--2026-2609.37828-moe-topology-parallelism-metadata-repair-20261018-1545-scheduled-chat-45-r01.md",
+  "canonical_id": "arXiv:2609.37828",
   "worker_completed_at": "2026-10-18T15:45:42+09:00",
   "worker_run_key": "20261018-1545-scheduled-chat-45/r01/metadata-repair-2609.37828",
   "quality_metrics": {
@@ -20,5 +19,8 @@
     "limitation_chars": 631,
     "insufficiency_flags": []
   },
-  "processed_at": "2026-10-18T07:55:57+00:00"
+  "failures": [
+    "長文定型文の再利用を検出: papers/inference/12-moe-parallelism-communication/2026-2609.37828-joint-effects-of-gpu-server-topology-parallelism-and-congestion-control-.md と 29 段落 / 6494文字 (100.0%) が完全一致"
+  ],
+  "processed_at": "2026-10-18T12:29:30+00:00"
 }

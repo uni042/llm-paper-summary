@@ -24,7 +24,7 @@
 - [10-kv-cache-offload-recomputation](../10-kv-cache-offload-recomputation/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（54本）
+## 自動生成の論文一覧（55本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -132,6 +132,10 @@
 - **2026-09 · [End-to-End Latency-Minimizing and Load-Balanced Request Scheduling for Edge LLM Inference in Agentic AI Services](2026-2609.17193-end-to-end-latency-minimizing-and-load-balanced-request-scheduling-for-edge-llm-inference-in-agentic-ai-services.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   キー・バリューの量と滞在時間、リアプノフ長期制約、遅延報酬再配分を組み合わせ、分散エッジ推論の遅延と負荷分散を同時最適化する割当方式。
+
+- **2026-09 · [DynBranch: Speculative Subgraph Reuse for Dynamic Agentic LLM Serving](2026-2609.31047-dynbranch-speculative-subgraph-reuse-for-dynamic-agentic-llm-serving.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  DynBranchは、エージェント型大規模言語モデルの推論基盤で生じる分岐解決障壁（branch-resolution barrier）を短縮するサービング方式である。4枚のH200 NVLでQwen3-32Bを提供する評価では、4種類のエージェント処理の各条件で、外部比較方式のうち最良のものに対して低負荷時の平均遅延を14～32%削減した。
 
 - **2026-09 · [BIO-MEMART: Biometric-Aware KV Cache Memory for Multi-User LLM Agents](2026-2609.08566-bio-memart-biometric-aware-kv-cache-memory-for-multi-user-llm-agents.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

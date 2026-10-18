@@ -31,6 +31,8 @@ references:
     title: 'Efficient Memory Management for Large Language Model Serving with PagedAttention'
   - canonical_id: 'arXiv:2401.09670'
     title: 'DistServe: Disaggregating Prefill and Decoding for Goodput-optimized Large Language Model Serving'
+last_audited: null
+audit_version: 0
 ---
 
 # eLLM：適応的KVキャッシュによる高スループット・低遅延LLM配信

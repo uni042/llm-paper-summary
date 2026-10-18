@@ -35,10 +35,15 @@
   "selection_reason": "SmallKV uses a smaller model to compensate compressed KV information, improving inference throughput 1.75–2.56x.",
   "semantic_scholar_id": "bb36f730698710cb98ba8abff7ac5e120ebf27f9",
   "source_url": "https://arxiv.org/abs/2508.02751",
-  "status": "ready",
+  "status": "superseded",
   "title": "SmallKV: Small Model Assisted Compensation of KV Cache Compression for Efficient LLM Inference",
   "type": "research",
   "venue": "Neural Information Processing Systems",
   "workflow_version": 10,
-  "year": 2025
+  "year": 2025,
+  "superseded_at": "2026-10-18T12:31:09+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2025-2508.02751-smallkv-small-model-assisted-compensation-of-kv-cache-compression-for-ef.md",
+  "represented_canonical_id": "arXiv:2508.02751",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
