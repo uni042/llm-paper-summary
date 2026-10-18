@@ -1,32 +1,44 @@
 ---
 canonical_id: DOI:10.52202/085713-4569
-doi: '10.52202/085713-4569'
+doi: 10.52202/085713-4569
 title: 'DynaPipe: Dynamic Layer Redistribution for Efficient Serving of LLMs with Pipeline Parallelism'
-summary: >-
-  DynaPipeは、複数GPUによるLLMパイプライン並列推論で、最終段だけがロジット計算・サンプリングを担当するために生じる段間の待ち時間を、層の動的再配置で削減する推論基盤である。各層の前向き計算時間と最終段のサンプリング時間を予測し、安定した負荷変化が検出されたときだけ末尾段の層を上流へ移す。移動先には候補層の重みを事前配置し、要求のKVキャッシュを非同期転送して通常計算と重ねる。Qwen2.5-14B/32B、4台のA100-PCIe-40GB、ShareGPT/Azure-ConvでvLLM・SGLang・gLLMと比較し、査読会議版PDF本文は要求完了までの平均遅延を8〜41%削減と報告する。公式概要の8〜49%という表記とは異なるため本文の数値を採用した。
-list_summary: >-
-  パイプライン末尾のサンプリング負荷を考慮してGPU間の層数を動的に再配分し、KVキャッシュを非同期移送する。4×A100上のQwen2.5-14B/32Bで要求完了遅延を8〜41%削減（本文値）。
+summary: DynaPipeは、複数GPUによるLLMパイプライン並列推論で、最終段だけがロジット計算・サンプリングを担当するために生じる段間の待ち時間を、層の動的再配置で削減する推論基盤である。各層の前向き計算時間と最終段のサンプリング時間を予測し、安定した負荷変化が検出されたときだけ末尾段の層を上流へ移す。移動先には候補層の重みを事前配置し、要求のKVキャッシュを非同期転送して通常計算と重ねる。Qwen2.5-14B/32B、4台のA100-PCIe-40GB、ShareGPT/Azure-ConvでvLLM・SGLang・gLLMと比較し、査読会議版PDF本文は要求完了までの平均遅延を8〜41%削減と報告する。公式概要の8〜49%という表記とは異なるため本文の数値を採用した。
+list_summary: パイプライン末尾のサンプリング負荷を考慮してGPU間の層数を動的に再配分し、KVキャッシュを非同期移送する。4×A100上のQwen2.5-14B/32Bで要求完了遅延を8〜41%削減（本文値）。
 authors:
-  - Hongxin Xu
-  - Tianyu Guo
-  - Xianwei Zhang
-published: '2025-12'
-publication: 'Advances in Neural Information Processing Systems 38 (NeurIPS 2025), pp. 151789–151811'
-publication_type: '査読付き国際会議論文'
+- Hongxin Xu
+- Tianyu Guo
+- Xianwei Zhang
+published: 2025-12
+publication: Advances in Neural Information Processing Systems 38 (NeurIPS 2025), pp. 151789–151811
+publication_type: 査読付き国際会議論文
 publication_status: published
-source: 'https://papers.nips.cc/paper_files/paper/2025/file/c80873f613504606542457ad715ac3c3-Paper-Conference.pdf'
+source: https://papers.nips.cc/paper_files/paper/2025/file/c80873f613504606542457ad715ac3c3-Paper-Conference.pdf
 sources:
-  - 'https://papers.nips.cc/paper_files/paper/2025/file/c80873f613504606542457ad715ac3c3-Paper-Conference.pdf'
-  - 'https://papers.nips.cc/paper_files/paper/2025/hash/c80873f613504606542457ad715ac3c3-Abstract-Conference.html'
-  - 'https://doi.org/10.52202/085713-4569'
-implementation: >-
-  著者公式GitHub xhx1022/DynaPipeにgLLMを基礎とする実装とオンラインサービング・ベンチマーク用の案内がある。層再配置時の通信はNCCL、パイプライン段間の通信はZeroMQを利用する。実験は4台のA100-PCIe-40GBで行い、別ノード相当の評価はNCCLの高速通信経路を無効化してTCPを使わせるエミュレーションである。GPU間に余分な候補層の重みを常駐させるため、メモリ余裕が必要。
-code: 'https://github.com/xhx1022/DynaPipe'
+- https://papers.nips.cc/paper_files/paper/2025/file/c80873f613504606542457ad715ac3c3-Paper-Conference.pdf
+- https://papers.nips.cc/paper_files/paper/2025/hash/c80873f613504606542457ad715ac3c3-Abstract-Conference.html
+- https://doi.org/10.52202/085713-4569
+implementation: 著者公式GitHub xhx1022/DynaPipeにgLLMを基礎とする実装とオンラインサービング・ベンチマーク用の案内がある。層再配置時の通信はNCCL、パイプライン段間の通信はZeroMQを利用する。実験は4台のA100-PCIe-40GBで行い、別ノード相当の評価はNCCLの高速通信経路を無効化してTCPを使わせるエミュレーションである。GPU間に余分な候補層の重みを常駐させるため、メモリ余裕が必要。
+code: https://github.com/xhx1022/DynaPipe
 last_checked: '2026-10-18'
 worker_completed_at: '2026-10-18T23:04:22+09:00'
-worker_run_key: '20261018-2257-scheduled-chat-00/r01'
+worker_run_key: 20261018-2257-scheduled-chat-00/r01
 last_audited: null
 audit_version: 0
+references:
+- canonical_id: arXiv:2405.19888
+- canonical_id: arXiv:2401.09670
+- canonical_id: DOI:10.1145/3676641.3715996
+- canonical_id: arXiv:2308.16369
+- canonical_id: DOI:10.1145/3600006.3613165
+- canonical_id: arXiv:2312.07104
+- canonical_id: arXiv:2506.10470
+- canonical_id: arXiv:2311.18677
+- canonical_id: arXiv:2406.03243
+- canonical_id: arXiv:2503.06433
+- canonical_id: arXiv:2104.04473
+references_checked_at: '2026-10-18'
+references_source: primary-pdf-reference-section
+references_total: 44
 ---
 
 # DynaPipe：サンプリング負荷を考慮したパイプライン層再配置

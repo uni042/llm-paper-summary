@@ -2046,6 +2046,10 @@
   実装：[✓](https://github.com/google-research/reasoning-bank) ・ リポジトリ内被引用：4  
   長期間にわたってウェブ操作やソフトウェア修正を行う大規模言語モデル（LLM）エージェントは、過去に成功した手順を別の課題で再発見したり、既に失敗した操作を繰り返したりする。過去の実行軌跡を丸ごと検索する方式では、現在の課題に関係ない画面遷移や局所的な操作が混ざる。
 
+- **2025-06 · [TD-Pipe: Temporally-Disaggregated Pipeline Parallelism Architecture for High-Throughput LLM Inference](2025-2506.10470-td-pipe-temporally-disaggregated-pipeline-parallelism-architecture-for-h.md)**  
+  実装：[✓](https://github.com/MLSysU/TD-Pipe) ・ リポジトリ内被引用：4  
+  PCIeのみで接続されたGPUのパイプライン並列推論において、プリフィルとデコードを時間分離し、予測型KVメモリ管理と負荷移送で遊休時間を削減する。
+
 - **2025-05 · [ELIS: Efficient LLM Iterative Scheduling System with Response Length Predictor](2025-2505.09142-elis-efficient-llm-iterative-scheduling-system-with-response-length-predictor.md)**  
   実装：✓ ・ リポジトリ内被引用：4  
   応答長を50トークンごとに再予測して短い残作業を優先し、LLM servingの先頭待ちを減らすKubernetes/vLLMスケジューラ。
@@ -2077,10 +2081,6 @@
 - **2025-09 · [Dynamic Speculative Agent Planning](2025-2509.01920-dynamic-speculative-agent-planning.md)**  
   実装：[✓](https://github.com/guanyilin428/Dynamic-Speculative-Planning) ・ リポジトリ内被引用：3  
   動的 投機的 Planning（DSP）は、大規模言語モデル（LLM）を用いたエージェントが一連の計画・操作を逐次生成する際、弱い近似エージェントが未来の複数ステップを先読みし、強い対象エージェントが並列に検証することで全体の完了時間を短縮する方式である。
-
-- **2025-06 · [TD-Pipe: Temporally-Disaggregated Pipeline Parallelism Architecture for High-Throughput LLM Inference](2025-2506.10470-td-pipe-temporally-disaggregated-pipeline-parallelism-architecture-for-h.md)**  
-  実装：[✓](https://github.com/MLSysU/TD-Pipe) ・ リポジトリ内被引用：3  
-  PCIeのみで接続されたGPUのパイプライン並列推論において、プリフィルとデコードを時間分離し、予測型KVメモリ管理と負荷移送で遊休時間を削減する。
 
 - **2025-06 · [SwiftSpec: Ultra-Low Latency LLM Decoding by Scaling Asynchronous Speculative Decoding](2025-2506.11309-swiftspec-asynchronous-speculative-decoding.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
@@ -3114,13 +3114,13 @@
 
 ### 6年前（2020-11〜2021-10）
 
+- **2021-04 · [Efficient Large-Scale Language Model Training on GPU Clusters Using Megatron-LM](2021-2104.04473-efficient-large-scale-language-model-training-on-gpu-clusters-using-mega.md)**  
+  実装：[✓](https://github.com/NVIDIA/Megatron-LM) ・ リポジトリ内被引用：28  
+  本論文は、巨大言語モデルの学習を数千基のGPUへ拡張するとき、メモリ容量、層内の集合通信、パイプラインの空泡、ノード間転送の重複が性能を制限する問題を扱う。パイプラインでは前向きと後向きを交互に処理する1F1Bを使い、さらに一つのGPUに複数の離れたモデル片を割り当てて空泡を短くする。
+
 - **2021-01 · [I-BERT: Integer-only BERT Quantization](2021-2101.01321-i-bert-integer-only-bert-quantization.md)**  
   実装：[✓](https://github.com/kssteven418/i-bert) ・ リポジトリ内被引用：28  
   Transformerの重みと行列積を8ビット整数へ量子化しても、推論全体が整数だけで実行できるとは限らない。Tesla T4上の予備的な整数カーネル実装では、FP32比で2.4～4.0倍の推論高速化を報告する。
-
-- **2021-04 · [Efficient Large-Scale Language Model Training on GPU Clusters Using Megatron-LM](2021-2104.04473-efficient-large-scale-language-model-training-on-gpu-clusters-using-mega.md)**  
-  実装：[✓](https://github.com/NVIDIA/Megatron-LM) ・ リポジトリ内被引用：27  
-  本論文は、巨大言語モデルの学習を数千基のGPUへ拡張するとき、メモリ容量、層内の集合通信、パイプラインの空泡、ノード間転送の重複が性能を制限する問題を扱う。パイプラインでは前向きと後向きを交互に処理する1F1Bを使い、さらに一つのGPUに複数の離れたモデル片を割り当てて空泡を短くする。
 
 - **2021-09 · [Block Pruning For Faster Transformers](2021-2109.04838-block-pruning-for-faster-transformers.md)**  
   実装：[✓](https://github.com/huggingface/nn_pruning) ・ リポジトリ内被引用：17  
