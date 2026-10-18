@@ -1,0 +1,74 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-45",
+  "run_key": "20261018-1445-scheduled-chat-45/r01/research-prescreen/071-074",
+  "reference_main_sha": "e3c0ec26cea5066633c6057d657af6b066ad16b6",
+  "record_count": 4,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2604.23475",
+      "identity_tokens": [
+        "arXiv:2604.23475"
+      ],
+      "title": "Supernodes and Halos: Loss-Critical Hubs in LLM Feed-Forward Layers",
+      "reason": "FFNチャネルのFisher型損失代理量から少数の損失重要チャネルを同定し、保護しながら構造化枝刈りを診断する。Llama-3.1-8Bでは上位1%が損失代理量の中央値58.7%を占め、50% FFN疎化ではSCAR-Protの困惑度54.8に対してWanda-channelは989.2。モデル圧縮と推論時の演算削減へ接続し得るが、主要な論点はチャネル重要度の分析と診断であり、実測の推論速度・VRAM・カーネル性能改善を一次要旨から確認できないため境界的。",
+      "source_url": "https://arxiv.org/abs/2604.23475",
+      "body_check": "primary_abstract_checked_only; fulltext_not_verified",
+      "first_checked_at": "2026-10-18T14:54:50+09:00",
+      "last_checked_at": "2026-10-18T14:54:50+09:00",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance",
+      "worklist_rank": 71
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2604.14403",
+      "identity_tokens": [
+        "arXiv:2604.14403"
+      ],
+      "title": "A Unified Model and Document Representation for On-Device Retrieval-Augmented Generation",
+      "reason": "端末内検索拡張生成で検索表現と圧縮文脈表現を統一し、保存容量と生成文脈長を減らす。著者要旨は通常のRAG読取器と同等の性能を平均約1/10の文脈で達成したと述べる。KVキャッシュと注意メモリの削減に直接関係するが、主な貢献は表現学習と検索・圧縮統合で、LLM推論ランタイムの実測スループット改善や汎用サービング機構は要旨では示されないため境界的。",
+      "source_url": "https://arxiv.org/abs/2604.14403",
+      "body_check": "primary_abstract_checked_only; fulltext_not_verified",
+      "first_checked_at": "2026-10-18T14:54:50+09:00",
+      "last_checked_at": "2026-10-18T14:54:50+09:00",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance",
+      "worklist_rank": 72
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3800690",
+      "identity_tokens": [
+        "DOI:10.1145/3800690"
+      ],
+      "title": "Enabling Low-Latency, GPU-Efficient Serverless Inference with Model Swapping",
+      "reason": "Torporはホストメモリにモデルを保持して要求到着時にGPUへ切り替え、非同期API転送、GPU実行時共有、パイプライン化、干渉を考慮したスケジューリングでGPU推論を提供する。著者所属機関の原著要旨では4GPUノードで数百の推論関数を共有し、GPU調達費を利用者70%、事業者65%削減したと報告する。推論提供基盤として強い関連性がある一方、一次要旨の対象は一般的な機械学習推論であり、LLM生成・KVキャッシュ・トークン遅延への固有評価を確認できないため、全文で対象モデルを検証するまで境界的。",
+      "source_url": "https://researchportal.hkust.edu.hk/en/publications/enabling-low-latency-gpu-efficient-serverless-inference-with-mode/",
+      "body_check": "primary_abstract_checked_only; fulltext_not_verified",
+      "first_checked_at": "2026-10-18T14:54:50+09:00",
+      "last_checked_at": "2026-10-18T14:54:50+09:00",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance",
+      "worklist_rank": 73
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2604.01178",
+      "identity_tokens": [
+        "arXiv:2604.01178"
+      ],
+      "title": "Screening Is Enough",
+      "reason": "Multiscreenは通常のsoftmax注意が全キーに重み総和1を配分する構造を変更し、正規化した問い合わせ・キー間の類似度を学習閾値で選別する。関連性のないキーに厳密なゼロを与え、長文脈の不要な参照を排除する。著者要旨はTransformer基準に対しパラメータ約40%減で同程度の検証損失、100K文脈で最大3.2倍の推論遅延短縮を報告。注意計算と長文脈生成速度に直接的なシステム上の改善があるため採用候補。ただし数値・条件の詳細はResearch段階で原著全文を検証する。",
+      "source_url": "https://arxiv.org/abs/2604.01178",
+      "body_check": "primary_abstract_checked_only; fulltext_not_verified",
+      "first_checked_at": "2026-10-18T14:54:50+09:00",
+      "last_checked_at": "2026-10-18T14:54:50+09:00",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance",
+      "worklist_rank": 74
+    }
+  ]
+}
