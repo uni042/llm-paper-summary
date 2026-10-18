@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-18T04:43:17+00:00",
-  "record_count": 5236,
+  "updated_at": "2026-10-18T09:48:00+00:00",
+  "record_count": 5237,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -81356,6 +81356,19 @@
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "PRISM a diagnostic framework for parametric recall degradation in quantized large language models"
+    },
+    "arXiv:2505.22582": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2505.22582",
+      "identity_tokens": [
+        "arXiv:2505.22582"
+      ],
+      "reason": "一次要旨は新言語への継続的拡張を目的とし、層間の言語表現類似度から新規専門家数を配分して旧言語の忘却を抑えるLayerMoEを提案する。単回拡張で新規専門家数60%削減、継続拡張で33.3%削減を報告するが、主たる評価目的は言語拡張学習と既存言語能力の保持である。専門家数削減は推論メモリに接続し得るものの、一次要旨だけではサービングの速度・メモリ実測を主貢献として確認できないため、学習専用凍結範囲との境界としてborderlineとする。",
+      "first_checked_at": "2026-10-18T09:48:00+00:00",
+      "last_checked_at": "2026-10-18T09:48:00+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Less, but Better: Efficient Multilingual Expansion for LLMs via Layer-wise Mixture-of-Experts"
     }
   }
 }
