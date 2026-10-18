@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "2ae7cfa87e688f60851282ab6e74fcf5f8d4ef29221bb218d099623860939f2c",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/retry-research-c5d68a744454--libfile_c5d68a7444548191aad8dcc0c04a03d8--2026-2605.27786-lorp-locality-aware-depth-pruning-research-20261018-1100-scheduled-chat-00-r01.md",
+  "canonical_id": "arXiv:2605.27786",
+  "worker_completed_at": "2026-10-18T11:38:00+09:00",
+  "worker_run_key": "20261018-1100-scheduled-chat-00/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 6773,
+    "body_paragraphs": 54,
+    "method_chars": 1905,
+    "method_paragraphs": 19,
+    "evaluation_chars": 489,
+    "limitation_chars": 0,
+    "insufficiency_flags": [
+      "評価説明量 489 < 500",
+      "限界説明量 0 < 推奨 120"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 評価説明量 489 < 500"
+  ],
+  "processed_at": "2026-10-18T14:26:50+00:00"
+}
