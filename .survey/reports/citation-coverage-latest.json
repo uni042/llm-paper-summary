@@ -1,15 +1,15 @@
 {
   "schema_version": 1,
   "reference_audit_version": 1,
-  "checked_at": "2026-10-18T01:21:36+00:00",
+  "checked_at": "2026-10-18T02:01:33+00:00",
   "summary": {
-    "total": 2510,
+    "total": 2511,
     "complete": 2503,
-    "incomplete": 7
+    "incomplete": 8
   },
   "families": {
     "inference": {
-      "total": 2471,
+      "total": 2472,
       "complete": 2464
     },
     "training": {
@@ -22,6 +22,11 @@
     }
   },
   "incomplete": [
+    {
+      "path": "papers/inference/07-kv-cache-optimization-compression/2024-fcda582bb2a7-exploring-cxl-based-kv-cache-storage-for-llm-serving.md",
+      "canonical_id": "SemanticScholar:beb9d034f9accbff20525bddf9d345fb799805b1",
+      "reason": "missing structured reference audit metadata"
+    },
     {
       "path": "papers/inference/10-kv-cache-offload-recomputation/2026-2605.18071-kvdrive-holistic-multi-tier-kv-cache-management.md",
       "canonical_id": "arXiv:2605.18071",
