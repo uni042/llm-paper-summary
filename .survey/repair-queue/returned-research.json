@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-18T12:31:10+00:00",
+  "generated_at": "2026-10-18T12:41:36+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 171,
+  "count": 172,
   "entries": [
     {
       "canonical_id": "DOI:10.1145/3714983.3714987",
@@ -3537,35 +3537,6 @@
       "worker_run_key": "20261015-0410-scheduled-chat-00/r01"
     },
     {
-      "canonical_id": "arXiv:2606.04446",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-17T17:35:09+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700",
-        "説明不足トリガー: 評価説明量 0 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 6655,
-        "body_paragraphs": 39,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 0,
-        "limitation_chars": 728,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700",
-          "評価説明量 0 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-e798d265029c--libfile_bc2c9675f5c08191841e3cfd61baac66--2026-2606.04446-d2sd-dual-diffusion-speculative-decoding-research-20261017-1130-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-e798d265029c--libfile_bc2c9675f5c08191841e3cfd61baac66--2026-2606.04446-d2sd-dual-diffusion-speculative-decoding-research-20261017-1130-scheduled.json",
-      "worker_run_key": "20261017-1130-scheduled-chat-30/r01"
-    },
-    {
       "canonical_id": "arXiv:2402.13720",
       "title": null,
       "source_url": null,
@@ -4452,8 +4423,8 @@
     },
     {
       "canonical_id": "arXiv:2609.37828",
-      "title": "Joint Effects of GPU Server Topology, Parallelism, and Congestion Control on MoE Inference: A Controlled Simulation Study",
-      "source_url": "https://arxiv.org/abs/2609.37828",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-18T12:29:30+00:00",
       "return_count": 1,
       "assigned_worker": "scheduled-chat-45",
@@ -4474,6 +4445,60 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_b2616de3a9248191980bfabe432496d0--2026-2609.37828-moe-topology-parallelism-metadata-repair-20261018-1545-scheduled-chat-45-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_b2616de3a9248191980bfabe432496d0--2026-2609.37828-moe-topology-parallelism-metadata-repair-20261018-1545-scheduled-chat-45-r01.json",
       "worker_run_key": "20261018-1545-scheduled-chat-45/r01/metadata-repair-2609.37828"
+    },
+    {
+      "canonical_id": "arXiv:2606.04446",
+      "title": "D^2SD: Accelerating Speculative Decoding with Dual Diffusion Draft Models",
+      "source_url": "https://arxiv.org/abs/2606.04446",
+      "returned_at": "2026-10-18T12:37:53+00:00",
+      "return_count": 3,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 0 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 7480,
+        "body_paragraphs": 53,
+        "method_chars": 2158,
+        "method_paragraphs": 14,
+        "evaluation_chars": 0,
+        "limitation_chars": 589,
+        "insufficiency_flags": [
+          "評価説明量 0 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_b2ce3feba32c81919defcb24c9984ed6--2026-2606.04446-d2sd-dual-diffusion-speculative-decoding-research-20261018-1100-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_b2ce3feba32c81919defcb24c9984ed6--2026-2606.04446-d2sd-dual-diffusion-speculative-decoding-research-20261018-1100-scheduled-chat-00-r01.json",
+      "worker_run_key": "20261018-1100-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2505.19155",
+      "title": "Sparse-to-Dense: A Free Lunch for Lossless Acceleration of Video Understanding in LLMs",
+      "source_url": "https://arxiv.org/html/2505.19155v2",
+      "returned_at": "2026-10-18T12:40:09+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 0 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 4928,
+        "body_paragraphs": 29,
+        "method_chars": 1709,
+        "method_paragraphs": 13,
+        "evaluation_chars": 0,
+        "limitation_chars": 618,
+        "insufficiency_flags": [
+          "評価説明量 0 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_c3f56576169c81919a30fff1c8792e0d--2025-2505.19155-sparse-to-dense-video-llm-speculative-research-20261018-0730-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_c3f56576169c81919a30fff1c8792e0d--2025-2505.19155-sparse-to-dense-video-llm-speculative-research-20261018-0730-scheduled-chat-30-r01.json",
+      "worker_run_key": "20261018-0730-scheduled-chat-30/r01"
     }
   ]
 }
