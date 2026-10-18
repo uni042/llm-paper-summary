@@ -295,7 +295,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   プリフィルとデコードの注意を同一SMで並行実行するSM認識型GPUカーネルにより、注意計算を平均28%、サービング処理量を最大22%改善する。
 
 - **2024-12 · [Flex Attention: A Programming Model for Generating Optimized Attention Kernels](2024-2412.05496-flexattention-a-programming-model-for-generating-optimized-attention-kernels.md)**  
-  実装：[✓](https://github.com/pytorch/pytorch) ・ リポジトリ内被引用：26  
+  実装：[✓](https://github.com/pytorch/pytorch) ・ リポジトリ内被引用：27  
   高速な融合注意カーネルを「注意変種ごとに手書きする」方式から、利用者が意味だけを書きコンパイラが高速カーネルへ落とす方式へ変える。
 
 - **2025-10 · [KTransformers: Unleashing the Full Potential of CPU/GPU Hybrid Inference for MoE Models](2025-b4e11ada8105-ktransformers-unleashing-the-full-potential-of-cpu-gpu-hybrid-inference-.md)**  
@@ -357,7 +357,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   Pythonの即時実行の柔軟性を残して演算グラフを実行時に取り出し、TritonやC++へコンパイルする仕組みを設計・評価した。
 
 - **2024-06 · [S-LoRA: Serving Thousands of Concurrent LoRA Adapters](2024-2311.03285-s-lora-serving-thousands-of-concurrent-lora-adapters.md)**  
-  実装：[✓](https://github.com/S-LoRA/S-LoRA) ・ リポジトリ内被引用：27  
+  実装：[✓](https://github.com/S-LoRA/S-LoRA) ・ リポジトリ内被引用：28  
   しかし、数千の個別化モデルを同時提供する場合、アダプタの保存先、要求ごとの重み切替、系列長に応じて伸びる鍵・値キャッシュ、異なる低ランク行列を使う要求のバッチ化が問題になる。アダプタを基盤モデルへ統合して個別のモデル重みを作る方式では、基盤部分を要求間で共有してまとめて計算する機会を失う。
 
 - **2024-02 · [Simple linear attention language models balance the recall-throughput tradeoff](2024-2402.18668-simple-linear-attention-language-models-balance-the-recall-throughput-tr.md)**  
