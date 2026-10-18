@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-5ef43559cbbe490c-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2609.26425",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2609.26425",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2609.26425",
+      "arXiv:2609.26425"
+    ],
+    "reason": "一次要旨を確認。QuantWMは動画生成・世界モデルの時空間トークンを対象に、履歴Queryの感度を考慮した2ビットKey量子化の重心選択（QSAC）と主部分空間に沿う注意スコア補償（PSAC）を組み合わせ、映像のちらつきを抑えつつ最大6.20倍のKVキャッシュ圧縮を報告する。KV量子化と注意補償という機構はLLM推論の隣接技術だが、実証対象はCausal-Forcing、LingBot-World-v2、HY-World 1.5、Matrix-Game-2、Longcat-Video等の動画生成・世界モデルであり、言語LLMの復号性能や品質を直接評価していない。よって現行LLM推論サーベイでは境界的候補とする。",
+    "first_checked_at": "2026-10-18T10:51:29+00:00",
+    "last_checked_at": "2026-10-18T10:51:29+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "QuantWM: Temporally Consistent 2-Bit KV Cache Quantization for World Models and Video Generation"
+  },
+  "processed_at": "2026-10-18T10:51:29+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-5ef43559cbbe",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
