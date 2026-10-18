@@ -35,6 +35,10 @@
   実装：[✓](https://github.com/ThunderAgent-org/ThunderAgent) ・ リポジトリ内被引用：16  
   エージェントの推論・ツール実行を独立要求ではなく永続プログラムとして追跡し、KVキャッシュの一時停止・復帰、GPU間移動、ツール環境の先行準備と回収を協調させ、配信スループットを最大3.58倍改善する。
 
+- **2025-11 · [Sherlock: Reliable and Efficient Agentic Workflow Execution](2025-2511.00330-sherlock-reliable-and-efficient-agentic-workflow-execution.md)**  
+  実装：✓ ・ リポジトリ内被引用：7  
+  反実仮想故障注入で脆弱節点へだけ検証器を置き、検証中に後続処理を投機実行して必要時だけ巻き戻すSherlock。平均精度+18.3%、検証費用-26.0%、検証完了時間最大-48.7%。
+
 - **2026-06 · [CacheWise: Understanding Workloads and Optimizing KVCache Management for Efficiently Serving LLM Coding Agents](2026-2606.16824-cachewise-understanding-workloads-and-optimizing-kvcache-management-for-efficiently-serving-llm-coding-agents.md)**  
   実装：[✓](https://github.com/cachewise-project/cachewise-coding-traces) ・ リポジトリ内被引用：6  
   実コーディングエージェントの接頭辞局所性とツール待ち時間を利用し、接頭辞優先スケジューリングと予測型KV追い出しでセッション完了を最大3.5倍改善。
@@ -43,17 +47,13 @@
   実装：✓ ・ リポジトリ内被引用：6  
   MORIはエージェントの直近の推論・ツール待機時間から相対アイドル度を求め、KVキャッシュをGPUとCPU DRAMへ容量適応的に配置して、高負荷時のスループットと応答性を改善する。
 
+- **2026-03 · [Efficient LLM Serving for Agentic Workflows: A Data Systems Perspective](2026-2603.16104-efficient-llm-serving-agentic-workflows-helium.md)**  
+  実装：[✓](https://github.com/mlsys-io/helium_demo) ・ リポジトリ内被引用：6  
+  エージェントワークフローを問い合わせ計画として解析し、共通部分削除、結果・KVの先行キャッシュ、接頭辞構造を見た費用認識スケジューリングを統合して、KVFlow比最大1.56倍、複合Tradingで最大1.34倍高速化する。
+
 - **2025-12 · [Optimizing Agentic Language Model Inference via Speculative Tool Calls](2025-2512.15834-optimizing-agentic-language-model-inference-via-speculative-tool-calls.md)**  
   実装：✓ ・ リポジトリ内被引用：6  
   ツール呼出しを「LLMが確定してから実行する」直列経路から外し、小型モデルが次の呼出しを先読みして外部処理を本体生成と重ねる。クライアント側だけでも6〜21%の時間短縮を報告し、ツールが短い条件では推論エンジン統合がさらに2〜3%を削る。
-
-- **2025-11 · [Sherlock: Reliable and Efficient Agentic Workflow Execution](2025-2511.00330-sherlock-reliable-and-efficient-agentic-workflow-execution.md)**  
-  実装：✓ ・ リポジトリ内被引用：6  
-  反実仮想故障注入で脆弱節点へだけ検証器を置き、検証中に後続処理を投機実行して必要時だけ巻き戻すSherlock。平均精度+18.3%、検証費用-26.0%、検証完了時間最大-48.7%。
-
-- **2026-03 · [Efficient LLM Serving for Agentic Workflows: A Data Systems Perspective](2026-2603.16104-efficient-llm-serving-agentic-workflows-helium.md)**  
-  実装：[✓](https://github.com/mlsys-io/helium_demo) ・ リポジトリ内被引用：5  
-  エージェントワークフローを問い合わせ計画として解析し、共通部分削除、結果・KVの先行キャッシュ、接頭辞構造を見た費用認識スケジューリングを統合して、KVFlow比最大1.56倍、複合Tradingで最大1.34倍高速化する。
 
 - **2026-04 · [KAIROS: Stateful, Context-Aware Power-Efficient Agentic Inference Serving](2026-2604.16682-kairos-stateful-context-aware-power-efficient-agentic-inference-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：4  
@@ -216,7 +216,7 @@
 ### 2年前（2024-11〜2025-10）
 
 - **2025-07 · [KVFlow: Efficient Prefix Caching for Accelerating LLM-Based Multi-Agent Workflows](2025-2507.07400-kvflow.md)**  
-  実装：✓ ・ リポジトリ内被引用：41  
+  実装：✓ ・ リポジトリ内被引用：42  
   エージェント実行グラフから将来再利用を予測してKV追出しとCPU→GPU先読みを制御し、SGLang HiCache比最大2.19倍高速化。
 
 - **2025-04 · [Mem0: Building Production-Ready AI Agents with Scalable Long-Term Memory](2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md)**  
@@ -236,7 +236,7 @@
   長期エージェントの記憶を、単なる「過去文書の検索」ではなく「時間とともに変わる事実の履歴」として扱う。LongMemEvalsではgpt-4oの全履歴投入60.2%に対して71.2%へ精度を上げつつ、平均文脈長を115k→1.6kトークン、応答遅延を28.9→2.58秒へ削減した。
 
 - **2025-09 · [Batch Query Processing and Optimization for Agentic Workflows](2025-2509.02121-batch-query-processing-and-optimization-for-agentic-workflows.md)**  
-  実装：[✓](https://anonymous.4open.science/r/Halo_Demo-BC86/) ・ リポジトリ内被引用：8  
+  実装：[✓](https://anonymous.4open.science/r/Halo_Demo-BC86/) ・ リポジトリ内被引用：9  
   Haloは「LLM呼出しを1件ずつ速くする」のではなく、同時に走るエージェントワークフロー全体を実行計画として扱う。最新版v2では、同一ツール要求の統合とCPU-GPU協調を加え、強いエージェント基盤に対してバッチ推論最大3.6倍、オンライン処理量最大2.58倍を報告する。
 
 - **2025-05 · [HEXGEN-FLOW: Optimizing LLM Inference Request Scheduling for Agentic Text-to-SQL](2025-2505.05286-hexgen-flow-optimizing-llm-inference-request-scheduling-for-agentic-text.md)**  
@@ -244,11 +244,11 @@
   本研究は、一つの利用者問い合わせが約20回の大規模言語モデル（LLM）呼び出しを誘発するエージェント型Text-to-SQL処理に対し、問い合わせ全体の応答期限を守る推論スケジューラを設計する。
 
 - **2025-10 · [Speculative Actions: A Lossless Framework for Faster Agentic Systems](2025-2510.04371-speculative-actions-a-lossless-framework-for-faster-agentic-systems.md)**  
-  実装：[✓](https://github.com/naimengye/speculative-action) ・ リポジトリ内被引用：5  
+  実装：[✓](https://github.com/naimengye/speculative-action) ・ リポジトリ内被引用：6  
   本研究は、LLMを使うエージェント（agentic systems）が環境へ問い合わせを行うたびに待機し、その結果を見てから次の操作を決めるという逐次的なツール呼び出しの待ち時間を短縮する。通常の投機的復号（投機的復号）は、小型モデルが次のトークンを予測し、対象モデルがそれを検証することで生成を高速化する。
 
 - **2025-10 · [FlowMesh: A Service Fabric for Composable LLM Workflows](2025-2510.26913-flowmesh-a-service-fabric-for-composable-llm-workflows.md)**  
-  実装：✓ ・ リポジトリ内被引用：5  
+  実装：✓ ・ リポジトリ内被引用：6  
   LLMワークフローをDAG演算子へ分解し、完全一致の重複排除・実行互換バッチ化・異種GPU配置・無状態ワーカーを一体化して、金銭コスト1.8〜3.8倍、エネルギー1.3〜2.0倍の改善を示す。
 
 - **2025-06 · [Agent.xpu: Efficient Scheduling of Agentic LLM Workloads on Heterogeneous SoC](2025-2506.24045-agent-xpu-efficient-scheduling-of-agentic-llm-workloads-on-heterogeneous.md)**  

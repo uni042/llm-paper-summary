@@ -1,38 +1,105 @@
 ---
 canonical_id: DOI:10.1145/3767295.3803570
-title: 'High Throughput and Low Latency LLM Serving via Adaptive KV Caching'
-summary: 'eLLMは、デコード中の古いトークンのKVを部分的に破棄して必要時に再計算し、要求単位のバッチ・保持率最適化と層単位の通信計算重畳・カーネル融合を組み合わせる推論配信基盤である。4基のA100を備えた実機で、長文脈L-EvalではvLLM-Swap比で最大3.03倍の出力トークン処理量を報告し、トークン間遅延のサービス目標を維持した。'
-list_summary: 'eLLMはKVキャッシュをトークン・層単位で部分保持し、再計算と転送・デコードを重ねることで、A100実機の長文脈配信でvLLM-Swap比最大3.03倍の出力処理量を達成した。'
+title: High Throughput and Low Latency LLM Serving via Adaptive KV Caching
+summary: eLLMは、デコード中の古いトークンのKVを部分的に破棄して必要時に再計算し、要求単位のバッチ・保持率最適化と層単位の通信計算重畳・カーネル融合を組み合わせる推論配信基盤である。4基のA100を備えた実機で、長文脈L-EvalではvLLM-Swap比で最大3.03倍の出力トークン処理量を報告し、トークン間遅延のサービス目標を維持した。
+list_summary: eLLMはKVキャッシュをトークン・層単位で部分保持し、再計算と転送・デコードを重ねることで、A100実機の長文脈配信でvLLM-Swap比最大3.03倍の出力処理量を達成した。
 authors:
-  - Wenyan Chen
-  - Chengzhi Lu
-  - Huanle Xu
-  - Kejiang Ye
-  - Chengzhong Xu
+- Wenyan Chen
+- Chengzhi Lu
+- Huanle Xu
+- Kejiang Ye
+- Chengzhong Xu
 published: '2026-04-26'
 published_year: 2026
-publication: 'Proceedings of the 21st European Conference on Computer Systems (EuroSys 2026), pp. 56–71'
-publication_type: '査読付き国際会議論文'
+publication: Proceedings of the 21st European Conference on Computer Systems (EuroSys 2026), pp. 56–71
+publication_type: 査読付き国際会議論文
 publication_status: published
-lineage: '07-kv-cache-optimization-compression'
-source: 'https://doi.org/10.1145/3767295.3803570'
+lineage: 07-kv-cache-optimization-compression
+source: https://doi.org/10.1145/3767295.3803570
 sources:
-  - 'https://chenwenyan.github.io/assets/pdf/eLLM-eurosys26.pdf'
-  - 'https://doi.org/10.1145/3767295.3803570'
+- https://chenwenyan.github.io/assets/pdf/eLLM-eurosys26.pdf
+- https://doi.org/10.1145/3767295.3803570
 code: null
-implementation: '著者らはvLLMを拡張し、Python約3,500行とCUDAカーネル約1,700行で実装したと記載。公開コードの公式リポジトリは本調査では確認できなかった。'
-implementation_status: 'paper-implementation-described-official-code-not-confirmed'
+implementation: 著者らはvLLMを拡張し、Python約3,500行とCUDAカーネル約1,700行で実装したと記載。公開コードの公式リポジトリは本調査では確認できなかった。
+implementation_status: paper-implementation-described-official-code-not-confirmed
 last_checked: '2026-10-18'
-worker_id: 'scheduled-chat-00'
+worker_id: scheduled-chat-00
 worker_completed_at: '2026-10-18T06:00:00+09:00'
-worker_run_key: 'scheduled-chat-00/20261018-0600/r01'
+worker_run_key: scheduled-chat-00/20261018-0600/r01
 references:
-  - canonical_id: 'arXiv:2309.06180'
-    title: 'Efficient Memory Management for Large Language Model Serving with PagedAttention'
-  - canonical_id: 'arXiv:2401.09670'
-    title: 'DistServe: Disaggregating Prefill and Decoding for Goodput-optimized Large Language Model Serving'
+- canonical_id: arXiv:2402.01869
+  arxiv_id: '2402.01869'
+- canonical_id: arXiv:2403.02310
+- canonical_id: arXiv:2207.00032
+  doi: 10.1109/sc41404.2022.00051
+- canonical_id: DOI:10.18653/v1/2024.acl-long.776
+  doi: 10.18653/v1/2024.acl-long.776
+- canonical_id: arXiv:2307.08691
+- canonical_id: DOI:10.52202/068431-1189
+  doi: 10.52202/068431-1189
+- canonical_id: DOI:10.48550/arxiv.2405.04434
+  arxiv_id: '2405.04434'
+- canonical_id: arXiv:2403.19708
+- canonical_id: DOI:10.1145/3689031.3696072
+  doi: 10.1145/3689031.3696072
+- canonical_id: arXiv:2310.01801
+- canonical_id: DOI:10.1007/978-1-4614-1927-3_6
+  doi: 10.1007/978-1-4614-1927-3_6
+- canonical_id: arXiv:2311.04934
+- canonical_id: DOI:10.1145/3620666.3651383
+  doi: 10.1145/3620666.3651383
+- canonical_id: DOI:10.1145/3676641.3716245
+  doi: 10.1145/3676641.3716245
+- canonical_id: arXiv:2411.17089
+  arxiv_id: '2411.17089'
+- canonical_id: arXiv:2411.01142
+- canonical_id: arXiv:2404.12457
+  arxiv_id: '2404.12457'
+- canonical_id: DOI:10.1145/3676641.3715996
+- canonical_id: DOI:10.1145/3600006.3613165
+  doi: 10.1145/3600006.3613165
+- canonical_id: arXiv:2406.19707
+- canonical_id: DOI:10.1109/cgo53902.2022.9741270
+  doi: 10.1109/cgo53902.2022.9741270
+- canonical_id: arXiv:2412.19437
+  arxiv_id: '2412.19437'
+- canonical_id: arXiv:2405.14366
+- canonical_id: DOI:10.1145/3676641.3716252
+  doi: 10.1145/3676641.3716252
+- canonical_id: DOI:10.1145/3651890.3672274
+  doi: 10.1145/3651890.3672274
+- canonical_id: arXiv:2311.18677
+  doi: 10.1109/isca59077.2024.00019
+- canonical_id: arXiv:2303.06865
+- canonical_id: arXiv:2408.00741
+  doi: 10.1109/hpca61900.2025.00102
+- canonical_id: arXiv:2406.03243
+- canonical_id: arXiv:2302.13971
+  arxiv_id: '2302.13971'
+- canonical_id: DOI:10.1038/s41592-020-0772-5
+  doi: 10.1038/s41592-020-0772-5
+- canonical_id: DOI:10.1145/3689031.3717455
+  doi: 10.1145/3689031.3717455
+- canonical_id: DOI:10.1145/3617232.3624858
+  doi: 10.1145/3617232.3624858
+- canonical_id: arXiv:2410.00428
+  arxiv_id: '2410.00428'
+- canonical_id: arXiv:2405.16444
+  doi: 10.1145/3689031.3696098
+- canonical_id: arXiv:2501.01005
+  arxiv_id: '2501.01005'
+- canonical_id: arXiv:2312.05516
+  doi: 10.1145/3689031.3696086
+- canonical_id: arXiv:2312.07104
+  arxiv_id: '2312.07104'
+- canonical_id: DOI:10.1109/hpca56546.2023.10071018
+  doi: 10.1109/hpca56546.2023.10071018
+- canonical_id: arXiv:2401.09670
 last_audited: null
 audit_version: 0
+references_checked_at: '2026-10-18'
+references_source: crossref-deposited-reference-metadata
+references_total: 56
 ---
 
 # eLLM：適応的KVキャッシュによる高スループット・低遅延LLM配信
