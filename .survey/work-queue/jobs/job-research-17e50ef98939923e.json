@@ -35,10 +35,15 @@
   "selection_reason": "対象。MoEモデルをデプロイする際に全expertの重みを保持するメモリ負荷を、各MoE層からexpert単位で構造的に削除して軽減する推論時圧縮手法を提案する。事前学習済みrouterを固定したままexpertごとの学習可能biasをC4上の言語モデル損失とrouting-diversity正則化で校正し、そのbias上位のexpertを保持する。削除expertの出力は、保持expertをproxyとしてtoken-conditionedな重み付きridge回帰でfitしたchannel-wise affine変換により補う。Qwen3-30B-A3B、DeepSeek-V2-Lite、Moonlight-16B-A3Bの3モデルを25%/50%のrouted-expert削減率で評価し、5 pruning baselineと比べ9 zero-shot benchmarkの平均値が各設定で最良と報告する。これは圧縮・予測品質評価であり、推論レイテンシやスループット向上を実測した結果ではない。",
   "semantic_scholar_id": "88134f018fc62391f1d99155790593619d7161c1",
   "source_url": "https://arxiv.org/abs/2610.00367",
-  "status": "ready",
+  "status": "superseded",
   "title": "MoRA: MoE Pruning via Router Bias Learning and Expert Approximation",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-10-18T10:37:34+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2026-2610.00367-mora-moe-pruning-via-router-bias-learning-and-expert-approximation.md",
+  "represented_canonical_id": "arXiv:2610.00367",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
