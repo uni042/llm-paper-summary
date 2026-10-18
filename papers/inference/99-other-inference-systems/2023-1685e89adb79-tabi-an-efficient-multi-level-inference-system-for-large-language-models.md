@@ -1,40 +1,154 @@
 ---
 canonical_id: DOI:10.1145/3552326.3587438
 title: 'Tabi: An Efficient Multi-Level Inference System for Large Language Models'
-summary: 'Tabiは分類・回帰を行う識別型言語モデルの推論要求を、小型モデルの校正済み確信度に応じて大型モデルへ段階的に振り分ける。注意重みに基づく単語削減と両モデルの予測統合により、精度下限を守りつつINFaaS比で平均遅延21～40%削減。生成型LLMは未評価。'
-list_summary: '識別型言語モデルを要求難度別に小型・大型へ段階的に振り分け、注意に基づく入力削減と予測統合で精度下限を守りながら平均遅延を削減する推論基盤。'
+summary: Tabiは分類・回帰を行う識別型言語モデルの推論要求を、小型モデルの校正済み確信度に応じて大型モデルへ段階的に振り分ける。注意重みに基づく単語削減と両モデルの予測統合により、精度下限を守りつつINFaaS比で平均遅延21～40%削減。生成型LLMは未評価。
+list_summary: 識別型言語モデルを要求難度別に小型・大型へ段階的に振り分け、注意に基づく入力削減と予測統合で精度下限を守りながら平均遅延を削減する推論基盤。
 authors:
-  - Yiding Wang
-  - Kai Chen
-  - Haisheng Tan
-  - Kun Guo
+- Yiding Wang
+- Kai Chen
+- Haisheng Tan
+- Kun Guo
 published: '2023-05-08'
-publication: 'EuroSys 2023, 18th European Conference on Computer Systems'
+publication: EuroSys 2023, 18th European Conference on Computer Systems
 publication_type: conference
 publication_status: published
 source: https://cse.hkust.edu.hk/~kaichen/papers/tabi-eurosys23.pdf
 sources:
-  - https://cse.hkust.edu.hk/~kaichen/papers/tabi-eurosys23.pdf
-  - https://doi.org/10.1145/3552326.3587438
-implementation: 'PyTorch・Transformers・TorchServe・GlusterFSを用いた単一サーバ上の実装を論文で評価。公式の公開ソースコードURLは一次論文から確認できない。'
+- https://cse.hkust.edu.hk/~kaichen/papers/tabi-eurosys23.pdf
+- https://doi.org/10.1145/3552326.3587438
+implementation: PyTorch・Transformers・TorchServe・GlusterFSを用いた単一サーバ上の実装を論文で評価。公式の公開ソースコードURLは一次論文から確認できない。
 code: null
 last_checked: '2026-10-18'
 worker_id: scheduled-chat-45
 worker_completed_at: '2026-10-18T21:47:00+09:00'
-worker_run_key: '20261018-2145-scheduled-chat-45/r01'
-reference_main_sha: 'efb8189640b8387f492081c65d0d7a0ef70cb06c'
-under16kb_reaudit_target_path: 'papers/inference/99-other-inference-systems/2023-1685e89adb79-tabi-an-efficient-multi-level-inference-system-for-large-language-models.md'
-under16kb_reaudit_source_git_blob_sha: '144d5d01eca35cb14498a22e3802c226252a6ddc'
-under16kb_reaudit_version: '2026-10-07-v1'
+worker_run_key: 20261018-2145-scheduled-chat-45/r01
+reference_main_sha: efb8189640b8387f492081c65d0d7a0ef70cb06c
+under16kb_reaudit_target_path: papers/inference/99-other-inference-systems/2023-1685e89adb79-tabi-an-efficient-multi-level-inference-system-for-large-language-models.md
+under16kb_reaudit_source_git_blob_sha: 144d5d01eca35cb14498a22e3802c226252a6ddc
+under16kb_reaudit_version: 2026-10-07-v1
 under16kb_reaudit_passed: true
 quality_body_chars: 7759
 quality_method_chars: 2195
 quality_eval_chars: 2683
 quality_limitation_chars: 743
 quality_self_review_passed: true
-quality_self_review_version: 'PAPER-QUALITY-GUIDE-2026-10-07'
+quality_self_review_version: PAPER-QUALITY-GUIDE-2026-10-07
 last_audited: null
 audit_version: 0
+references:
+- canonical_id: DOI:10.1109/sc41405.2020.00073
+  doi: 10.1109/sc41405.2020.00073
+- canonical_id: DOI:10.1145/3442188.3445922
+  doi: 10.1145/3442188.3445922
+- canonical_id: arXiv:2108.07258
+  arxiv_id: '2108.07258'
+- canonical_id: DOI:10.1007/bf00058655
+  doi: 10.1007/bf00058655
+- canonical_id: arXiv:2005.14165
+  arxiv_id: '2005.14165'
+- canonical_id: DOI:10.18653/v1/w19-4828
+  doi: 10.18653/v1/w19-4828
+- canonical_id: DOI:10.18653/v1/2020.findings-emnlp.58
+  doi: 10.18653/v1/2020.findings-emnlp.58
+- canonical_id: DOI:10.18653/v1/2020.emnlp-main.21
+  doi: 10.18653/v1/2020.emnlp-main.21
+- canonical_id: arXiv:1810.04805
+  arxiv_id: '1810.04805'
+- canonical_id: DOI:10.5555/648054.743935
+  doi: 10.5555/648054.743935
+- canonical_id: DOI:10.1145/3387514.3405887
+  doi: 10.1145/3387514.3405887
+- canonical_id: arXiv:2010.05680
+  doi: 10.1145/3437801.3441578
+- canonical_id: arXiv:2101.03961
+  arxiv_id: '2101.03961'
+- canonical_id: DOI:10.18653/v1/2020.findings-emnlp.139
+  doi: 10.18653/v1/2020.findings-emnlp.139
+- canonical_id: arXiv:2204.08582
+  arxiv_id: '2204.08582'
+- canonical_id: arXiv:1803.03635
+  arxiv_id: '1803.03635'
+- canonical_id: DOI:10.1162/tacl_a_00413
+  doi: 10.1162/tacl_a_00413
+- canonical_id: arXiv:2001.08950
+- canonical_id: arXiv:2006.02464
+- canonical_id: DOI:10.1145/3514221.3526173
+  doi: 10.1145/3514221.3526173
+- canonical_id: arXiv:2006.03654
+  arxiv_id: '2006.03654'
+- canonical_id: arXiv:1904.05342
+  arxiv_id: '1904.05342'
+- canonical_id: arXiv:1910.00762
+  arxiv_id: '1910.00762'
+- canonical_id: arXiv:2001.04451
+- canonical_id: arXiv:2112.13890
+  arxiv_id: '2112.13890'
+- canonical_id: arXiv:1909.11942
+  arxiv_id: '1909.11942'
+- canonical_id: DOI:10.18653/v1/d19-1131
+  doi: 10.18653/v1/d19-1131
+- canonical_id: DOI:10.1109/cvpr.2017.684
+  doi: 10.1109/cvpr.2017.684
+- canonical_id: arXiv:1907.11692
+  arxiv_id: '1907.11692'
+- canonical_id: DOI:10.5555/2002472.2002491
+  doi: 10.5555/2002472.2002491
+- canonical_id: DOI:10.1038/s41598-021-93783-8
+  doi: 10.1038/s41598-021-93783-8
+- canonical_id: arXiv:1905.10650
+- canonical_id: DOI:10.14778/3476311.3476402
+  doi: 10.14778/3476311.3476402
+- canonical_id: DOI:10.21437/interspeech.2021-456
+  doi: 10.21437/interspeech.2021-456
+- canonical_id: arXiv:1606.05250
+  arxiv_id: '1606.05250'
+- canonical_id: DOI:10.1162/tacl_a_00349
+  doi: 10.1162/tacl_a_00349
+- canonical_id: arXiv:1910.01108
+  arxiv_id: '1910.01108'
+- canonical_id: DOI:10.1145/3381831
+  doi: 10.1145/3381831
+- canonical_id: DOI:10.1145/3341301.3359658
+  doi: 10.1145/3341301.3359658
+- canonical_id: DOI:10.1109/cvpr.2016.89
+  doi: 10.1109/cvpr.2016.89
+- canonical_id: arXiv:2007.05832
+  arxiv_id: '2007.05832'
+- canonical_id: arXiv:1906.02243
+  arxiv_id: '1906.02243'
+- canonical_id: arXiv:1905.07799
+  arxiv_id: '1905.07799'
+- canonical_id: DOI:10.18653/v1/d19-1441
+  doi: 10.18653/v1/d19-1441
+- canonical_id: DOI:10.1109/icpr.2016.7900006
+  doi: 10.1109/icpr.2016.7900006
+- canonical_id: arXiv:1905.09418
+  doi: 10.18653/v1/p19-1580
+- canonical_id: DOI:10.18653/v1/w18-5446
+  doi: 10.18653/v1/w18-5446
+- canonical_id: arXiv:2012.09852
+  doi: 10.1109/hpca51647.2021.00018
+- canonical_id: DOI:10.1109/infocom42981.2021.9488801
+  doi: 10.1109/infocom42981.2021.9488801
+- canonical_id: DOI:10.1109/tcc.2022.3142066
+  doi: 10.1109/tcc.2022.3142066
+- canonical_id: DOI:10.18653/v1/2020.acl-main.204
+  doi: 10.18653/v1/2020.acl-main.204
+- canonical_id: arXiv:2110.01556
+  arxiv_id: '2110.01556'
+- canonical_id: DOI:10.1145/3492321.3519577
+  doi: 10.1145/3492321.3519577
+- canonical_id: arXiv:2007.14062
+- canonical_id: DOI:10.1109/cvpr52688.2022.01179
+  doi: 10.1109/cvpr52688.2022.01179
+- canonical_id: DOI:10.1145/3544216.3544229
+  doi: 10.1145/3544216.3544229
+- canonical_id: DOI:10.1145/3458864.3467882
+  doi: 10.1145/3458864.3467882
+- canonical_id: arXiv:2006.04152
+references_checked_at: '2026-10-18'
+references_source: crossref-deposited-reference-metadata
+references_total: 89
 ---
 
 # Tabi：識別型言語モデルの要求難度に合わせて実行モデルを変える多段推論基盤
