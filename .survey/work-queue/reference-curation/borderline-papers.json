@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-18T15:19:22+00:00",
-  "record_count": 5257,
+  "updated_at": "2026-10-18T15:49:27+00:00",
+  "record_count": 5260,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -81638,6 +81638,48 @@
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "Artifacts and Attention Sinks: Structured Approximations for Efficient Vision Transformers"
+    },
+    "arXiv:2609.00103": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.00103",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2609.00103",
+        "arXiv:2609.00103"
+      ],
+      "reason": "一次要旨によればECCBenchは長期記憶を正答率だけでなく計算量（FLOPs）、圧縮性、誤答時の棄権較正で測る。Transformer以外の記憶構造を比較し、動画記憶の圧縮性と較正の弱さを示すため、長文脈推論の計測と関係する。ただし主要寄与は記憶能力の評価プロトコルとモデル挙動の比較であり、実行時KVキャッシュ削減・GPU推論高速化・具体的なサービング最適化の新方式を示すものではない。推論評価系統への収録可能性はあるが現行の実装最適化中心の対象範囲では境界的とする。",
+      "first_checked_at": "2026-10-18T15:49:26+00:00",
+      "last_checked_at": "2026-10-18T15:49:26+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Good Memory Has ECC: Evaluating the Memory of Vision-Language Models Beyond Accuracy"
+    },
+    "arXiv:2608.15303": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.15303",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2608.15303",
+        "arXiv:2608.15303"
+      ],
+      "reason": "一次要旨では複数の推論候補を生成した後、相違点を再検討する再帰的な調停によって正答率を上げ、AIME 2024で93.3%、AIME 2025で92.0%、API呼び出し数に基づく平均計算量を約27%削減したと報告する。推論時の計算配分と関係するが、主要目的は推論能力の向上と探索・調停戦略であり、GPUカーネル、モデルサービング、トークン生成の実測速度を最適化するシステム研究ではない。対象境界として保留する。",
+      "first_checked_at": "2026-10-18T15:49:26+00:00",
+      "last_checked_at": "2026-10-18T15:49:26+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Divergent-Convergent Reasoning: Scaling Test-Time Compute through Structured Solution Synthesis"
+    },
+    "arXiv:2608.17316": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.17316",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2608.17316",
+        "arXiv:2608.17316"
+      ],
+      "reason": "一次要旨では、推薦システム向けにQwen3 1.7BとLlama3.2 3Bへ中間層の予測出口を追加し、連続ルータが利用する出口数と層をユーザー系列ごとに選ぶFLEXRecを提案する。推論計算の節約という機構はあるが、最終用途は推薦候補の識別的全件ランキングであり、通常の自己回帰LLMのデコード、KV管理、汎用サービングの改善を評価していない。特定応用向けの早期終了技術として関連性はあるため境界的とする。",
+      "first_checked_at": "2026-10-18T15:49:27+00:00",
+      "last_checked_at": "2026-10-18T15:49:27+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Empowering Compact LLMs with Fusion of Layer-wise Exits for Recommendation"
     }
   }
 }

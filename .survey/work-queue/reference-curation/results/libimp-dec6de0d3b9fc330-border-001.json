@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-dec6de0d3b9fc330-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2609.00103",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2609.00103",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2609.00103",
+      "arXiv:2609.00103"
+    ],
+    "reason": "一次要旨によればECCBenchは長期記憶を正答率だけでなく計算量（FLOPs）、圧縮性、誤答時の棄権較正で測る。Transformer以外の記憶構造を比較し、動画記憶の圧縮性と較正の弱さを示すため、長文脈推論の計測と関係する。ただし主要寄与は記憶能力の評価プロトコルとモデル挙動の比較であり、実行時KVキャッシュ削減・GPU推論高速化・具体的なサービング最適化の新方式を示すものではない。推論評価系統への収録可能性はあるが現行の実装最適化中心の対象範囲では境界的とする。",
+    "first_checked_at": "2026-10-18T15:49:26+00:00",
+    "last_checked_at": "2026-10-18T15:49:26+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Good Memory Has ECC: Evaluating the Memory of Vision-Language Models Beyond Accuracy"
+  },
+  "processed_at": "2026-10-18T15:49:26+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-dec6de0d3b9f",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
