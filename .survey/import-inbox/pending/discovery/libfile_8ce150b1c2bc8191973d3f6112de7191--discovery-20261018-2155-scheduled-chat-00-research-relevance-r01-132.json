@@ -1,0 +1,28 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261018-2155-scheduled-chat-00/r01/research-relevance/132",
+  "reference_main_sha": "efbecccf02770a6778e1e38d0cdccc214cf87b16",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2412.15411",
+      "identity_tokens": [
+        "arXiv:2412.15411",
+        "arxiv:2412.15411",
+        "arxiv:2412.15411"
+      ],
+      "title": "MoEtion: Efficient and Reliable Checkpointing for Mixture-of-Experts Models at Scale",
+      "reason": "大規模MoEの分散学習時に、専門家の人気の偏りを利用した疎なインメモリ・チェックポイントと障害回復を改善する。学習中の故障耐性・状態保存が主対象であり、LLM推論時の専門家配置、復号、KVキャッシュや推論サービングの高速化は要旨で示されないため、現在の推論中心・学習専用方式凍結スコープでは境界扱いとする。",
+      "source_url": "https://arxiv.org/abs/2412.15411",
+      "body_check": "abstract_screen_only; body_not_read; primary arXiv abstract checked; current paper title differs from stale worklist title",
+      "first_checked_at": "2026-10-18T22:00:08+09:00",
+      "last_checked_at": "2026-10-18T22:00:08+09:00",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance",
+      "worklist_rank": 132
+    }
+  ]
+}
