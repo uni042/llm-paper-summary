@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-18T11:40:40+00:00",
+  "generated_at": "2026-10-18T11:53:07+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 170,
+  "count": 171,
   "entries": [
     {
       "canonical_id": "DOI:10.1145/3714983.3714987",
@@ -2481,34 +2481,6 @@
       "worker_run_key": "20261016-0030-scheduled-chat-30/r01"
     },
     {
-      "canonical_id": "arXiv:2406.02500",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-16T16:01:05+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 339 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 6357,
-        "body_paragraphs": 38,
-        "method_chars": 1904,
-        "method_paragraphs": 11,
-        "evaluation_chars": 339,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "評価説明量 339 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-abb5aaaaa1cf--libfile_e55fdf760014819194953c8d62d54fc3--2024-2406.02500-holistic-moe-compression-research-20261016-0530-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-abb5aaaaa1cf--libfile_e55fdf760014819194953c8d62d54fc3--2024-2406.02500-holistic-moe-compression-research-20261016-0530-scheduled-chat-30-r01.json",
-      "worker_run_key": "20261016-0530-scheduled-chat-30/r01"
-    },
-    {
       "canonical_id": "arXiv:2411.10741",
       "title": null,
       "source_url": null,
@@ -4425,8 +4397,8 @@
     },
     {
       "canonical_id": "arXiv:2503.05248",
-      "title": "Optimizing LLM Inference Throughput via Memory-aware and SLA-constrained Dynamic Batching",
-      "source_url": "https://arxiv.org/pdf/2503.05248",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-18T11:39:38+00:00",
       "return_count": 1,
       "assigned_worker": "scheduled-chat-00",
@@ -4449,6 +4421,62 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_8ffd3c8761248191b6cac5589bd18ff6--2025-2503.05248-memory-sla-dynamic-batching-research-20261018-1900-scheduled-chat-00-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_8ffd3c8761248191b6cac5589bd18ff6--2025-2503.05248-memory-sla-dynamic-batching-research-20261018-1900-scheduled-chat-00-r01.json",
       "worker_run_key": "20261018-1900-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "DOI:10.1145/3662006.3662067",
+      "title": "Hybrid SLM and LLM for Edge-Cloud Collaborative Inference",
+      "source_url": "https://doi.org/10.1145/3662006.3662067",
+      "returned_at": "2026-10-18T11:48:00+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "16KB未満再監査: 評価説明量 437 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5109,
+        "body_paragraphs": 29,
+        "method_chars": 1621,
+        "method_paragraphs": 10,
+        "evaluation_chars": 437,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "評価説明量 437 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_d885233a57d88191aeab0e44bfaf3a3f--2024-hybrid-slm-llm-under16kb-reaudit-20261018-2030-scheduled-chat-30-r01-v2.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_d885233a57d88191aeab0e44bfaf3a3f--2024-hybrid-slm-llm-under16kb-reaudit-20261018-2030-scheduled-chat-30-r01-v2.json",
+      "worker_run_key": "20261018-2030-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2406.02500",
+      "title": "Towards Efficient Mixture of Experts: A Holistic Study of Compression Techniques",
+      "source_url": "https://arxiv.org/abs/2406.02500",
+      "returned_at": "2026-10-18T11:50:18+00:00",
+      "return_count": 3,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 8158,
+        "body_paragraphs": 42,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 1828,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_956d4f2253488191bde3caab3e060dd0--2024-2406.02500-unified-moe-compression-research-20261018-1800-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_956d4f2253488191bde3caab3e060dd0--2024-2406.02500-unified-moe-compression-research-20261018-1800-scheduled-chat-00-r01.json",
+      "worker_run_key": "20261018-1800-scheduled-chat-00/r01"
     }
   ]
 }
