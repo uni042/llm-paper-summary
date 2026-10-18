@@ -1,0 +1,24 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261018-1400-scheduled-chat-00/r01/research-relevance/090",
+  "reference_main_sha": "e81e1c9758f77f78b70cdcefd23894f2b8a3beb6",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2405.14297",
+      "identity_tokens": ["arxiv:2405.14297"],
+      "title": "Dynamic Mixture of Experts: An Auto-Tuning Approach for Efficient Transformer Models",
+      "reason": "ICLR 2025論文の本文§3では、トークンと各専門家のコサイン類似度を学習可能な閾値と比較するtop-anyゲートにより、推論時にもトークンごとの起動専門家数を変えられる。一方、主要な新規性のもう一つは学習中に未対応トークンの記録RSから専門家を追加し、未使用専門家を削除する訓練アルゴリズムであり、評価§4は視覚・言語・視覚言語タスクの精度と活性化パラメータ数を中心とする。推論時の動的計算という関連性はあるが、サービング実装・GPUカーネル・推論遅延の直接改善を主目的とする論文ではなく、学習中心の凍結範囲との境界にあるためborderlineとする。",
+      "source_url": "https://arxiv.org/pdf/2405.14297",
+      "body_check": "research_fulltext_relevance_review: 著者一次PDFの要旨、§1、§3.1 top-any gating、§3.2 adaptive training、§4実験設定を確認。推論時のゲート選択は対象と関係するが、専門家数の自動増減は訓練中の機構である。本文全30ページのうち方法・実験の主要部分を確認し、付録全表は精査していない。",
+      "first_checked_at": "2026-10-18T14:00:00+09:00",
+      "last_checked_at": "2026-10-18T14:00:00+09:00",
+      "linked_from": [],
+      "origin": "research_postread_relevance",
+      "worklist_rank": 90
+    }
+  ]
+}
