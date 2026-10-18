@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-18T17:57:06+00:00",
+  "generated_at": "2026-10-18T18:03:42+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -4934,11 +4934,38 @@
       "worker_run_key": "20261018-2245-scheduled-chat-45/r01"
     },
     {
+      "canonical_id": "arXiv:2609.39068",
+      "title": "SparseEngine: Sparse-First Inference Engine",
+      "source_url": "https://arxiv.org/html/2609.39068v1",
+      "returned_at": "2026-10-18T18:03:40+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 8376,
+        "body_paragraphs": 48,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 1689,
+        "limitation_chars": 716,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-2ca9bf15f026--libfile_aed71d11d21081918e96439b7d80592f--2026-2609.39068-sparseengine-sparse-first-inference-research-20261019-0230-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-2ca9bf15f026--libfile_aed71d11d21081918e96439b7d80592f--2026-2609.39068-sparseengine-sparse-first-inference-research-20261019-0230-scheduled-chat.json",
+      "worker_run_key": "20261019-0230-scheduled-chat-30/r01"
+    },
+    {
       "canonical_id": "arXiv:2307.02690",
       "title": "Scaling In-Context Demonstrations with Structured Attention",
       "source_url": "https://arxiv.org/abs/2307.02690",
-      "returned_at": "2026-10-18T17:55:15+00:00",
-      "return_count": 1,
+      "returned_at": "2026-10-18T18:03:42+00:00",
+      "return_count": 2,
       "assigned_worker": "scheduled-chat-45",
       "reason": "blocked_quality",
       "failures": [
@@ -4957,36 +4984,9 @@
           "限界説明量 0 < 推奨 120"
         ]
       },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_9fc1fba9cc7c8191abf70e005003eafd--2023-2307.02690-saicl-structured-attention-in-context-research-20261019-0201-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_9fc1fba9cc7c8191abf70e005003eafd--2023-2307.02690-saicl-structured-attention-in-context-research-20261019-0201-scheduled-chat-00-r01.json",
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-927b36a59c10--libfile_9fc1fba9cc7c8191abf70e005003eafd--2023-2307.02690-saicl-structured-attention-in-context-research-20261019-0201-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-927b36a59c10--libfile_9fc1fba9cc7c8191abf70e005003eafd--2023-2307.02690-saicl-structured-attention-in-context-research-20261019-0201-scheduled-ch.json",
       "worker_run_key": "20261019-0201-scheduled-chat-00/r01"
-    },
-    {
-      "canonical_id": "arXiv:2609.39068",
-      "title": "SparseEngine: Sparse-First Inference Engine",
-      "source_url": "https://arxiv.org/html/2609.39068v1",
-      "returned_at": "2026-10-18T17:55:17+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 8376,
-        "body_paragraphs": 48,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 1689,
-        "limitation_chars": 716,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_aed71d11d21081918e96439b7d80592f--2026-2609.39068-sparseengine-sparse-first-inference-research-20261019-0230-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_aed71d11d21081918e96439b7d80592f--2026-2609.39068-sparseengine-sparse-first-inference-research-20261019-0230-scheduled-chat-30-r01.json",
-      "worker_run_key": "20261019-0230-scheduled-chat-30/r01"
     }
   ]
 }

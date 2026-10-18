@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "6a6589c70d47f89c98d104fc770208f78bc58ec6d276a352d992d016f5205307",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/retry-research-2ca9bf15f026--libfile_aed71d11d21081918e96439b7d80592f--2026-2609.39068-sparseengine-sparse-first-inference-research-20261019-0230-scheduled-chat-30-r01.md",
+  "canonical_id": "arXiv:2609.39068",
+  "worker_completed_at": "2026-10-19T02:30:00+09:00",
+  "worker_run_key": "20261019-0230-scheduled-chat-30/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 8376,
+    "body_paragraphs": 48,
+    "method_chars": 0,
+    "method_paragraphs": 0,
+    "evaluation_chars": 1689,
+    "limitation_chars": 716,
+    "insufficiency_flags": [
+      "手法説明量 0 < 700"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 手法説明量 0 < 700"
+  ],
+  "processed_at": "2026-10-18T18:03:40+00:00"
+}

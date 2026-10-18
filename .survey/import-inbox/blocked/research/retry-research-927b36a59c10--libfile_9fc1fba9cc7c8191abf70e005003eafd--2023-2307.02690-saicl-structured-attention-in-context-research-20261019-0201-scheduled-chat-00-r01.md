@@ -32,6 +32,8 @@ worker_completed_at: '2026-10-19T02:06:24+09:00'
 worker_run_key: '20261019-0201-scheduled-chat-00/r01'
 quality_self_review_passed: true
 quality_self_review_version: '2026-10-07'
+last_audited: null
+audit_version: 0
 ---
 
 # SAICL：多数の文脈内例示を線形計算量で扱う構造化注意
