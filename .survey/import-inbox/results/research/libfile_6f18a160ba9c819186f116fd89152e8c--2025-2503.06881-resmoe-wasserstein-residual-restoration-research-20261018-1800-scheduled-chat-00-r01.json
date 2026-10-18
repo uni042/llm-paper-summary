@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "8e4d31956b5b551237a41cb581937f5ff259f2a034ec7c1588a2f3fb0916adb8",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_6f18a160ba9c819186f116fd89152e8c--2025-2503.06881-resmoe-wasserstein-residual-restoration-research-20261018-1800-scheduled-chat-00-r01.md",
+  "canonical_id": "arXiv:2503.06881",
+  "worker_completed_at": "2026-10-18T18:06:06+09:00",
+  "worker_run_key": "20261018-1800-scheduled-chat-00/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 7924,
+    "body_paragraphs": 41,
+    "method_chars": 0,
+    "method_paragraphs": 0,
+    "evaluation_chars": 684,
+    "limitation_chars": 0,
+    "insufficiency_flags": [
+      "手法説明量 0 < 700",
+      "限界説明量 0 < 推奨 120"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 手法説明量 0 < 700"
+  ],
+  "processed_at": "2026-10-18T11:12:34+00:00"
+}
