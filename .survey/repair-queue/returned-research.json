@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-18T19:50:54+00:00",
+  "generated_at": "2026-10-18T19:56:37+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -5076,8 +5076,8 @@
       "canonical_id": "arXiv:2609.30057",
       "title": "KREX: Concurrent Kernel Benchmarking on Shared GPUs via Region-Granular Exclusivity",
       "source_url": "https://arxiv.org/abs/2609.30057",
-      "returned_at": "2026-10-18T19:50:51+00:00",
-      "return_count": 1,
+      "returned_at": "2026-10-18T19:56:36+00:00",
+      "return_count": 2,
       "assigned_worker": "scheduled-chat-45",
       "reason": "blocked_quality",
       "failures": [
@@ -5096,43 +5096,16 @@
           "限界説明量 0 < 推奨 120"
         ]
       },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_2fd6d7bec9ec8191920fe37bef502dda--2026-2609.30057-krex-region-exclusive-gpu-kernel-benchmarking-research-20261019-0400-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_2fd6d7bec9ec8191920fe37bef502dda--2026-2609.30057-krex-region-exclusive-gpu-kernel-benchmarking-research-20261019-0400-scheduled-chat-00-r01.json",
-      "worker_run_key": "20261019-0400-scheduled-chat-00/r01"
-    },
-    {
-      "canonical_id": "arXiv:2609.22471",
-      "title": "Efficient Mixture-of-Experts with Speculative Decoding via Expert Coactivation",
-      "source_url": "https://arxiv.org/abs/2609.22471",
-      "returned_at": "2026-10-18T19:50:52+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5455,
-        "body_paragraphs": 30,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 1506,
-        "limitation_chars": 326,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_5aecdcf466dc81919fd9f0d5d1aeb966--2026-2609.22471-moe-expert-coactivation-speculative-decoding-research-20261019-0400-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_5aecdcf466dc81919fd9f0d5d1aeb966--2026-2609.22471-moe-expert-coactivation-speculative-decoding-research-20261019-0400-scheduled-chat-00-r01.json",
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-3bbb5a740b3e--libfile_2fd6d7bec9ec8191920fe37bef502dda--2026-2609.30057-krex-region-exclusive-gpu-kernel-benchmarking-research-20261019-0400-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-3bbb5a740b3e--libfile_2fd6d7bec9ec8191920fe37bef502dda--2026-2609.30057-krex-region-exclusive-gpu-kernel-benchmarking-research-20261019-0400-sche.json",
       "worker_run_key": "20261019-0400-scheduled-chat-00/r01"
     },
     {
       "canonical_id": "arXiv:2608.11045",
       "title": "ReRound: Reconstructive Rounding to Resolve Midpoint Ambiguity in Calibration-Free LLM Quantization",
       "source_url": "https://arxiv.org/html/2608.11045",
-      "returned_at": "2026-10-18T19:50:54+00:00",
-      "return_count": 1,
+      "returned_at": "2026-10-18T19:56:37+00:00",
+      "return_count": 2,
       "assigned_worker": "scheduled-chat-30",
       "reason": "blocked_quality",
       "failures": [
@@ -5151,9 +5124,36 @@
           "限界説明量 0 < 推奨 120"
         ]
       },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_8c657c2f4c2c8191b0ccff12551a1e60--2026-2608.11045-reround-calibration-free-quantization-research-20261019-0430-scheduled-chat-30-r01-v2.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_8c657c2f4c2c8191b0ccff12551a1e60--2026-2608.11045-reround-calibration-free-quantization-research-20261019-0430-scheduled-chat-30-r01-v2.json",
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-ae0780982af0--libfile_8c657c2f4c2c8191b0ccff12551a1e60--2026-2608.11045-reround-calibration-free-quantization-research-20261019-0430-scheduled-chat-30-r01-v2.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-ae0780982af0--libfile_8c657c2f4c2c8191b0ccff12551a1e60--2026-2608.11045-reround-calibration-free-quantization-research-20261019-0430-scheduled-ch.json",
       "worker_run_key": "20261019-0430-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2609.22471",
+      "title": "Efficient Mixture-of-Experts with Speculative Decoding via Expert Coactivation",
+      "source_url": "https://arxiv.org/abs/2609.22471",
+      "returned_at": "2026-10-18T19:56:37+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5455,
+        "body_paragraphs": 30,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 1506,
+        "limitation_chars": 326,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-52d9ceac12bc--libfile_5aecdcf466dc81919fd9f0d5d1aeb966--2026-2609.22471-moe-expert-coactivation-speculative-decoding-research-20261019-0400-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-52d9ceac12bc--libfile_5aecdcf466dc81919fd9f0d5d1aeb966--2026-2609.22471-moe-expert-coactivation-speculative-decoding-research-20261019-0400-sched.json",
+      "worker_run_key": "20261019-0400-scheduled-chat-00/r01"
     }
   ]
 }

@@ -40,6 +40,8 @@ worker_run_key: '20261019-0400-scheduled-chat-00/r01'
 reference_main_sha: '56757307e845bf1c6569f8e189eeea0f58b101dc'
 quality_self_review_passed: true
 quality_self_review_version: '2026-10-07'
+last_audited: null
+audit_version: 0
 ---
 
 # MoEと投機的復号を両立する専門家共活性化の学習設計
