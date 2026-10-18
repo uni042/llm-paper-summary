@@ -35,10 +35,15 @@
   "selection_reason": "DynaPipe predicts stage latency and redistributes layers online with asynchronous KV migration to reduce pipeline imbalance and request latency in LLM serving.",
   "semantic_scholar_id": "32e899b049daefca933022e82fdd95b0ee74623c",
   "source_url": "https://doi.org/10.52202/085713-4569",
-  "status": "ready",
+  "status": "superseded",
   "title": "DynaPipe: Dynamic Layer Redistribution for Efficient Serving of LLMs with Pipeline Parallelism",
   "type": "research",
   "venue": "Neural Information Processing Systems",
   "workflow_version": 10,
-  "year": 2025
+  "year": 2025,
+  "superseded_at": "2026-10-18T15:46:29+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2025-600ed7f01044-dynapipe-dynamic-layer-redistribution-for-efficient-serving-of-llms-with.md",
+  "represented_canonical_id": "DOI:10.52202/085713-4569",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

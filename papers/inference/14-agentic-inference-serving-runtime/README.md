@@ -24,7 +24,7 @@
 - [10-kv-cache-offload-recomputation](../10-kv-cache-offload-recomputation/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（55本）
+## 自動生成の論文一覧（56本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -208,6 +208,10 @@
 - **2026-01 · [Agentic Memory: Learning Unified Long-Term and Short-Term Memory Management for Large Language Model Agents](2026-2601.01885-agentic-memory-learning-unified-long-term-and-short-term-memory-manageme.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   長時間動作するLLMエージェントには、会話や作業をまたいで残す長期記憶（Long-Term メモリ; LTM）と、現在のプロンプト内で参照する短期記憶（Short-Term メモリ; STM）がある。従来は、長期記憶の追加・更新を外部の記憶管理器に任せ、短期文脈の検索・要約は一定間隔や文脈長しきい値で動かすことが多かった。
+
+- **2025-11 · [Tree Training: Accelerating Agentic LLMs Training via Shared Prefix Reuse](2025-2511.00413-tree-training-accelerating-agentic-llms-training-via-shared-prefix-reuse.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  エージェント型大規模言語モデルの学習軌跡が共有接頭辞を持つ木になることを利用し、各枝を独立学習する際の順伝播・逆伝播の重複を除く。深さ優先直列化、木に沿った注意・状態伝播、枝数に応じた損失重み付け、微分可能な分割境界を組み合わせ、学習目的を保ちながら計算を一度にする。
 
 - **2025-11 · [AccelOpt: A Self-Improving LLM Agentic System for AI Accelerator Kernel Optimization](2025-2511.15915-accelopt-a-self-improving-llm-agentic-system-for-ai-accelerator-kernel-o.md)**  
   実装：[✓](https://github.com/zhang677/AccelOpt) ・ リポジトリ内被引用：0  

@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-18T15:33:38+00:00",
+  "generated_at": "2026-10-18T15:46:30+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 189,
+  "count": 184,
   "entries": [
     {
       "canonical_id": "DOI:10.1145/3714983.3714987",
@@ -4254,34 +4254,6 @@
       "worker_run_key": "20261018-2130-scheduled-chat-30/r01"
     },
     {
-      "canonical_id": "arXiv:2610.00432",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-18T14:06:00+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 7559,
-        "body_paragraphs": 42,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 1387,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-445e1674fe6a--libfile_e07dbe2665a48191a84f5e8dac672fa6--2026-2610.00432-xor-trellis-curvature-aware-hadamard-free-quantization-research-20261018-1930-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-445e1674fe6a--libfile_e07dbe2665a48191a84f5e8dac672fa6--2026-2610.00432-xor-trellis-curvature-aware-hadamard-free-quantization-research-20261018-.json",
-      "worker_run_key": "20261018-1930-scheduled-chat-30/r01"
-    },
-    {
       "canonical_id": "arXiv:2609.39816",
       "title": null,
       "source_url": null,
@@ -4867,124 +4839,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-f23394883a59--libfile_59332defff50819199e8207c7b21c17e--2025-2503.24000-rethinking-kv-compression-serving-research-20261018-1900-scheduled-chat-00-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-f23394883a59--libfile_59332defff50819199e8207c7b21c17e--2025-2503.24000-rethinking-kv-compression-serving-research-20261018-1900-scheduled-chat-0.json",
       "worker_run_key": "20261018-1900-scheduled-chat-00/r01"
-    },
-    {
-      "canonical_id": "DOI:10.52202/085713-4569",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-18T15:21:25+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 6533,
-        "body_paragraphs": 44,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 1444,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_0dfdf87f85f881919ca4d839f6a2ef24--2025-doi-10.52202-085713-4569-dynapipe-dynamic-layer-redistribution-research-20261018-2257-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_0dfdf87f85f881919ca4d839f6a2ef24--2025-doi-10.52202-085713-4569-dynapipe-dynamic-layer-redistribution-research-20261018-2257-scheduled-chat-00-r01.json",
-      "worker_run_key": "20261018-2257-scheduled-chat-00/r01"
-    },
-    {
-      "canonical_id": "arXiv:2608.26523",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-18T15:21:27+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700",
-        "説明不足トリガー: 評価説明量 134 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5001,
-        "body_paragraphs": 37,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 134,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700",
-          "評価説明量 134 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_17c49e0594808191ba6a66dc2a2e6e45--2026-2608.26523-vpp-virtual-pipeline-chunked-prefill-research-20261018-2245-scheduled-chat-45-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_17c49e0594808191ba6a66dc2a2e6e45--2026-2608.26523-vpp-virtual-pipeline-chunked-prefill-research-20261018-2245-scheduled-chat-45-r01.json",
-      "worker_run_key": "20261018-2245-scheduled-chat-45/r01"
-    },
-    {
-      "canonical_id": "arXiv:2511.00413",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-18T15:21:28+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700",
-        "説明不足トリガー: 評価説明量 184 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 6173,
-        "body_paragraphs": 46,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 184,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700",
-          "評価説明量 184 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_1a893df963108191ba315f8bd39b595b--2025-2511.00413-tree-training-shared-prefix-reuse-research-20261018-2245-scheduled-chat-45-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_1a893df963108191ba315f8bd39b595b--2025-2511.00413-tree-training-shared-prefix-reuse-research-20261018-2245-scheduled-chat-45-r01.json",
-      "worker_run_key": "20261018-2245-scheduled-chat-45/r01"
-    },
-    {
-      "canonical_id": "arXiv:2411.03697",
-      "title": "TATAA: Programmable Mixed-Precision Transformer Acceleration with a Transformable Arithmetic Architecture",
-      "source_url": "https://arxiv.org/html/2411.03697v1",
-      "returned_at": "2026-10-18T15:30:58+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700",
-        "説明不足トリガー: 評価説明量 200 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 7176,
-        "body_paragraphs": 36,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 200,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700",
-          "評価説明量 200 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_1f779f6eab1481918f062b9092ef85c5--2024-2411.03697-tataa-transformable-arithmetic-transformer-accelerator-research-20261018-2358-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_1f779f6eab1481918f062b9092ef85c5--2024-2411.03697-tataa-transformable-arithmetic-transformer-accelerator-research-20261018-2358-scheduled-chat-00-r01.json",
-      "worker_run_key": "20261018-2358-scheduled-chat-00/r01"
     }
   ]
 }

@@ -35,10 +35,15 @@
   "selection_reason": "長文脈LLMのchunked prefill pipeline parallelismにおける推論時の負荷不均衡とpipeline bubbleを、固定chunkの仮想stage配置で減らす手法であり、LLM servingの推論効率化を直接扱う。本文ではDCPP比のthroughput改善を長系列・混合workloadで示す一方、通信露出増加やsparse attentionでの効果低下も評価しているため対象に含める。",
   "semantic_scholar_id": "9d7ad407246d10f1d9734966d55a8bd51fdcc720",
   "source_url": "https://arxiv.org/abs/2608.26523",
-  "status": "ready",
+  "status": "superseded",
   "title": "VPP: Virtual Pipeline Parallelism for Efficient Chunked Prefill in Long-Context LLM Inference",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-10-18T15:46:29+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2026-2608.26523-vpp-virtual-pipeline-parallelism-for-efficient-chunked-prefill-in-long-c.md",
+  "represented_canonical_id": "arXiv:2608.26523",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
