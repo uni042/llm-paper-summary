@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-18T03:52:47+00:00",
-  "record_count": 12424,
+  "updated_at": "2026-10-18T04:43:17+00:00",
+  "record_count": 12425,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -179164,6 +179164,18 @@
       "last_checked_at": "2026-10-18T03:51:21+00:00",
       "linked_from": [],
       "title": "MambaStereo: enhancing stereo matching accuracy in ill-posed regions via Mamba-based cost volume"
+    },
+    "arXiv:2105.14636": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2105.14636",
+      "identity_tokens": [
+        "arXiv:2105.14636"
+      ],
+      "reason": "学習可能な閾値と正則化でBERT-baseの非構造・構造・混合枝刈りを行う研究。実験はQQP/MNLI/SQuADの分類・抽出課題であり、自己回帰LLMのトークン生成、KV管理、推論基盤の実測性能を扱わない。一般的な圧縮技術として隣接するが現行LLM生成推論サーベイの直接対象外。",
+      "first_checked_at": "2026-10-18T04:43:17+00:00",
+      "last_checked_at": "2026-10-18T04:43:17+00:00",
+      "linked_from": [],
+      "title": "LEAP: Learnable Pruning for Transformer-based Models"
     }
   }
 }
