@@ -1,0 +1,26 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-45",
+  "run_key": "20261018-0945-scheduled-chat-45/r01/research-prescreen/011",
+  "reference_main_sha": "d484b0839b30427af369c0b9c8a72fcc2cfc9368",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2403.01232",
+      "identity_tokens": [
+        "arxiv:2403.01232"
+      ],
+      "title": "Polynormer: Polynomial-Expressive Graph Transformer in Linear Time",
+      "reason": "著者要旨によれば、グラフトランスフォーマーの局所・大域等変注意に高次多項式表現を導入し、13のグラフデータセットでグラフニューラルネットワークと比較する。線形時間の注意機構という用語上の接点はあるが、対象はグラフ分類・ノード予測であり、LLMの生成復号、KVキャッシュ、推論サービングの性能を評価していないため対象外。",
+      "source_url": "https://arxiv.org/abs/2403.01232",
+      "body_check": "primary_author_abstract_screen_only; fulltext_not_reviewed",
+      "first_checked_at": "2026-10-18T09:52:50+09:00",
+      "last_checked_at": "2026-10-18T09:52:50+09:00",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance",
+      "worklist_rank": 11
+    }
+  ]
+}
