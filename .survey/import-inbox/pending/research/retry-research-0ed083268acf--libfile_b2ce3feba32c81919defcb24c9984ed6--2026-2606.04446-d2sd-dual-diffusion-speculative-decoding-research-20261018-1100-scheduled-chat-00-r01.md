@@ -32,6 +32,8 @@ last_checked: '2026-10-18'
 worker_completed_at: '2026-10-18T11:12:00+09:00'
 worker_run_key: '20261018-1100-scheduled-chat-00/r01'
 lineage: '05-speculative-decoding-moe'
+last_audited: null
+audit_version: 0
 ---
 
 # D²SD：二つの拡散ドラフトで棄却境界を回復する投機的復号
