@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-18T09:51:48+00:00",
+  "generated_at": "2026-10-18T10:07:57+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 163,
+  "count": 164,
   "entries": [
     {
       "canonical_id": "DOI:10.1145/3714983.3714987",
@@ -3022,33 +3022,6 @@
       "worker_run_key": "20261017-0145-scheduled-chat-45/r01"
     },
     {
-      "canonical_id": "arXiv:2606.30265",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-17T15:27:27+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 6470,
-        "body_paragraphs": 46,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 1312,
-        "limitation_chars": 827,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-36b8da5371d1--libfile_38a5c6b51fb08191a2bfac78c443ac90--2026-2606.30265-acceptance-certificates-speculative-decoding-research-20261016-2030-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-36b8da5371d1--libfile_38a5c6b51fb08191a2bfac78c443ac90--2026-2606.30265-acceptance-certificates-speculative-decoding-research-20261016-2030-sched.json",
-      "worker_run_key": "20261016-2030-scheduled-chat-30/r01"
-    },
-    {
       "canonical_id": "arXiv:2608.02625",
       "title": null,
       "source_url": null,
@@ -4226,8 +4199,8 @@
     },
     {
       "canonical_id": "arXiv:2506.13771",
-      "title": "LittleBit: Ultra Low-Bit Quantization via Latent Factorization",
-      "source_url": "https://arxiv.org/html/2506.13771v5",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-18T09:51:48+00:00",
       "return_count": 1,
       "assigned_worker": "scheduled-chat-45",
@@ -4253,6 +4226,61 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_0fd44f5807d08191add265c32774aa11--2025-2506.13771-littlebit-latent-factorization-ultralowbit-research-20261018-1800-scheduled-chat-00-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_0fd44f5807d08191add265c32774aa11--2025-2506.13771-littlebit-latent-factorization-ultralowbit-research-20261018-1800-scheduled-chat-00-r01.json",
       "worker_run_key": "20261018-1800-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2605.15609",
+      "title": "PSD: Pushing the Pareto Frontier of Diffusion LLMs via Parallel Speculative Decoding",
+      "source_url": "https://arxiv.org/abs/2605.15609",
+      "returned_at": "2026-10-18T10:02:30+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "16KB未満再監査: 評価説明量 392 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 4281,
+        "body_paragraphs": 22,
+        "method_chars": 1253,
+        "method_paragraphs": 8,
+        "evaluation_chars": 392,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "評価説明量 392 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_4b419d4db2f08191a02e34ecfc6d81bb--2026-2605.15609-psd-under16kb-reaudit-20261018-0300-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_4b419d4db2f08191a02e34ecfc6d81bb--2026-2605.15609-psd-under16kb-reaudit-20261018-0300-scheduled-chat-00-r01.json",
+      "worker_run_key": "20261018-0300-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2609.36173",
+      "title": "Draft in Parallel, Condition Through Depth: Adjacent Causal Injection for Speculative Decoding",
+      "source_url": "https://arxiv.org/abs/2609.36173",
+      "returned_at": "2026-10-18T10:04:44+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 155 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 7593,
+        "body_paragraphs": 53,
+        "method_chars": 1170,
+        "method_paragraphs": 7,
+        "evaluation_chars": 155,
+        "limitation_chars": 753,
+        "insufficiency_flags": [
+          "評価説明量 155 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_149db204e0dc819180a08616442b9987--2026-2609.36173-dspine-adjacent-causal-injection-research-20261018-1630-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_149db204e0dc819180a08616442b9987--2026-2609.36173-dspine-adjacent-causal-injection-research-20261018-1630-scheduled-chat-30-r01.json",
+      "worker_run_key": "20261018-1630-scheduled-chat-30/r01"
     }
   ]
 }
