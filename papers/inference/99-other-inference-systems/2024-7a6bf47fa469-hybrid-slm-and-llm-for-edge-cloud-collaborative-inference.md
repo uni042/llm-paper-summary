@@ -1,24 +1,24 @@
 ---
 canonical_id: DOI:10.1145/3662006.3662067
 doi: 10.1145/3662006.3662067
-title: 'Hybrid SLM and LLM for Edge-Cloud Collaborative Inference'
-summary: '端末側の小型言語モデルが10トークンの草稿を生成し、クラウド側の大型言語モデルが一度の順伝播で各草稿トークンの確率を検証、閾値を下回る位置からクラウド生成へ切り替える端末・クラウド協調推論。Llama-2-7B単独のGSM8K正答率21.68%、Llama-2-70B単独53.07%に対し、閾値lg(pt)=-0.5では52.24%をモデル規模ベース費用3.250（70B単独10）で達成。著者はタスク別に70B品質相当を25.8%～31.2%の推定計算費用で得ると報告するが、実測通信遅延や端末側のトークン再生成負荷は別問題。'
-list_summary: '端末SLMの草稿をクラウドLLMがトークン確率で検証・修正し、品質と推定モデル呼び出し費用を調整する協調推論方式。'
+title: Hybrid SLM and LLM for Edge-Cloud Collaborative Inference
+summary: 端末側の小型言語モデルが10トークンの草稿を生成し、クラウド側の大型言語モデルが一度の順伝播で各草稿トークンの確率を検証、閾値を下回る位置からクラウド生成へ切り替える端末・クラウド協調推論。Llama-2-7B単独のGSM8K正答率21.68%、Llama-2-70B単独53.07%に対し、閾値lg(pt)=-0.5では52.24%をモデル規模ベース費用3.250（70B単独10）で達成。著者はタスク別に70B品質相当を25.8%～31.2%の推定計算費用で得ると報告するが、実測通信遅延や端末側のトークン再生成負荷は別問題。
+list_summary: 端末SLMの草稿をクラウドLLMがトークン確率で検証・修正し、品質と推定モデル呼び出し費用を調整する協調推論方式。
 authors:
-  - Zixu Hao
-  - Huiqiang Jiang
-  - Shiqi Jiang
-  - Ju Ren
-  - Ting Cao
+- Zixu Hao
+- Huiqiang Jiang
+- Shiqi Jiang
+- Ju Ren
+- Ting Cao
 published: '2024-06-03'
-publication: 'EdgeFM 2024, pp. 36-41, ACM'
+publication: EdgeFM 2024, pp. 36-41, ACM
 publication_type: conference_paper
 publication_status: published
 source: https://doi.org/10.1145/3662006.3662067
 sources:
-  - https://doi.org/10.1145/3662006.3662067
-  - https://www.scribd.com/document/907650351/Hybrid-SLM-and-LLM-for-Edge-Cloud-Collaborative-Inference
-implementation: 'Hugging Face Transformers、PyTorch 2.0.1、CUDA 11.7で実験。SLMはLlama-2-7B-chatまたはTinyLlama-1.1B、クラウドLLMはLlama-2-70B-chat。草稿長10、閾値を10^-0.5から10^-4まで掃引。著者が公式コードを公開したURLは本文から確認できなかった。'
+- https://doi.org/10.1145/3662006.3662067
+- https://www.scribd.com/document/907650351/Hybrid-SLM-and-LLM-for-Edge-Cloud-Collaborative-Inference
+implementation: Hugging Face Transformers、PyTorch 2.0.1、CUDA 11.7で実験。SLMはLlama-2-7B-chatまたはTinyLlama-1.1B、クラウドLLMはLlama-2-70B-chat。草稿長10、閾値を10^-0.5から10^-4まで掃引。著者が公式コードを公開したURLは本文から確認できなかった。
 code: null
 last_checked: '2026-10-18'
 worker_id: scheduled-chat-00
@@ -29,6 +29,72 @@ quality_self_review_passed: true
 quality_self_review_version: PAPER-QUALITY-GUIDE-2026-10-07
 last_audited: null
 audit_version: 0
+references:
+- canonical_id: DOI:10.1145/3510831
+  doi: 10.1145/3510831
+- canonical_id: arXiv:2401.10774
+  arxiv_id: '2401.10774'
+- canonical_id: DOI:10.48550/arxiv.2302.01318
+  arxiv_id: '2302.01318'
+- canonical_id: arXiv:2307.06148
+  arxiv_id: '2307.06148'
+- canonical_id: arXiv:2402.12374
+  arxiv_id: '2402.12374'
+- canonical_id: arXiv:2312.16886
+  arxiv_id: '2312.16886'
+- canonical_id: arXiv:2402.03766
+  arxiv_id: '2402.03766'
+- canonical_id: arXiv:2110.14168
+  arxiv_id: '2110.14168'
+- canonical_id: arXiv:2210.17323
+  arxiv_id: '2210.17323'
+- canonical_id: DOI:10.1145/3560905.3568511
+  doi: 10.1145/3560905.3568511
+- canonical_id: arXiv:2306.11644
+  arxiv_id: '2306.11644'
+- canonical_id: arXiv:2302.07863
+- canonical_id: DOI:10.1145/3372224.3419194
+  doi: 10.1145/3372224.3419194
+- canonical_id: arXiv:2211.17192
+- canonical_id: DOI:10.1109/twc.2019.2946140
+  doi: 10.1109/twc.2019.2946140
+- canonical_id: DOI:10.1109/dac18074.2021.9586176
+  doi: 10.1109/dac18074.2021.9586176
+- canonical_id: arXiv:2309.05463
+  arxiv_id: '2309.05463'
+- canonical_id: DOI:10.1162/tacl_a_00638
+  doi: 10.1162/tacl_a_00638
+- canonical_id: arXiv:2305.09781
+  arxiv_id: '2305.09781'
+- canonical_id: DOI:10.18653/v1/d18-1206
+  doi: 10.18653/v1/d18-1206
+- canonical_id: arXiv:2104.08803
+  arxiv_id: '2104.08803'
+- canonical_id: DOI:10.1109/iccworkshops49005.2020.9145068
+  doi: 10.1109/iccworkshops49005.2020.9145068
+- canonical_id: DOI:10.1109/mcom.001.2000373
+  doi: 10.1109/mcom.001.2000373
+- canonical_id: arXiv:2308.04623
+  arxiv_id: '2308.04623'
+- canonical_id: arXiv:2403.08295
+  arxiv_id: '2403.08295'
+- canonical_id: arXiv:2307.09288
+  arxiv_id: '2307.09288'
+- canonical_id: arXiv:2402.10200
+  arxiv_id: '2402.10200'
+- canonical_id: DOI:10.1145/3552326.3587438
+  doi: 10.1145/3552326.3587438
+- canonical_id: arXiv:2309.04255
+  arxiv_id: '2309.04255'
+- canonical_id: DOI:10.1109/tpds.2020.3032443
+  doi: 10.1109/tpds.2020.3032443
+- canonical_id: DOI:10.1109/tgcn.2021.3111731
+  doi: 10.1109/tgcn.2021.3111731
+- canonical_id: arXiv:2401.02385
+  arxiv_id: '2401.02385'
+references_checked_at: '2026-10-18'
+references_source: crossref-deposited-reference-metadata
+references_total: 34
 ---
 
 # Hybrid SLM and LLM for Edge-Cloud Collaborative Inference — 端末・クラウド間の確率閾値付き草稿検証
