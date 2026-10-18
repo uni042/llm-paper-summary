@@ -35,10 +35,15 @@
   "selection_reason": "The abstract describes multi-model early-exit selection and loading only likely-to-be-used layers to reduce token latency and memory use, then reuse memory savings for larger serving batches. This is a direct inference-serving optimization.",
   "semantic_scholar_id": "9671e9651fe0bd15d5c567e4694775517825a250",
   "source_url": "https://arxiv.org/abs/2504.10724",
-  "status": "ready",
+  "status": "superseded",
   "title": "HELIOS: Adaptive Model And Early-Exit Selection for Efficient LLM Inference Serving",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2025
+  "year": 2025,
+  "superseded_at": "2026-10-18T15:33:37+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2504.10724-helios-adaptive-model-and-early-exit-selection-for-efficient-llm-inferen.md",
+  "represented_canonical_id": "arXiv:2504.10724",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
