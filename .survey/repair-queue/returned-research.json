@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-18T14:13:38+00:00",
+  "generated_at": "2026-10-18T14:20:54+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -4057,34 +4057,6 @@
       "worker_run_key": "20261018-1800-scheduled-chat-00/r01"
     },
     {
-      "canonical_id": "arXiv:2406.02500",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-18T11:50:18+00:00",
-      "return_count": 3,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 8158,
-        "body_paragraphs": 42,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 1828,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_956d4f2253488191bde3caab3e060dd0--2024-2406.02500-unified-moe-compression-research-20261018-1800-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_956d4f2253488191bde3caab3e060dd0--2024-2406.02500-unified-moe-compression-research-20261018-1800-scheduled-chat-00-r01.json",
-      "worker_run_key": "20261018-1800-scheduled-chat-00/r01"
-    },
-    {
       "canonical_id": "DOI:10.1145/3662006.3662067",
       "title": null,
       "source_url": null,
@@ -4113,31 +4085,6 @@
       "worker_run_key": "20261018-2030-scheduled-chat-30/r01"
     },
     {
-      "canonical_id": "arXiv:2609.37828",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-18T12:29:30+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "長文定型文の再利用を検出: papers/inference/12-moe-parallelism-communication/2026-2609.37828-joint-effects-of-gpu-server-topology-parallelism-and-congestion-control-.md と 29 段落 / 6494文字 (100.0%) が完全一致"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 7255,
-        "body_paragraphs": 35,
-        "method_chars": 1694,
-        "method_paragraphs": 9,
-        "evaluation_chars": 2745,
-        "limitation_chars": 631,
-        "insufficiency_flags": []
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_b2616de3a9248191980bfabe432496d0--2026-2609.37828-moe-topology-parallelism-metadata-repair-20261018-1545-scheduled-chat-45-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_b2616de3a9248191980bfabe432496d0--2026-2609.37828-moe-topology-parallelism-metadata-repair-20261018-1545-scheduled-chat-45-r01.json",
-      "worker_run_key": "20261018-1545-scheduled-chat-45/r01/metadata-repair-2609.37828"
-    },
-    {
       "canonical_id": "arXiv:2609.36835",
       "title": null,
       "source_url": null,
@@ -4163,92 +4110,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_d526d0090e30819193121452f80b2994--2026-2609.36835-arc-kv-amortized-anchor-search-reconstruction-research-20261018-1930-scheduled-chat-30-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_d526d0090e30819193121452f80b2994--2026-2609.36835-arc-kv-amortized-anchor-search-reconstruction-research-20261018-1930-scheduled-chat-30-r01.json",
       "worker_run_key": "20261018-1930-scheduled-chat-30/r01"
-    },
-    {
-      "canonical_id": "arXiv:2510.02758",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-18T13:10:36+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700",
-        "説明不足トリガー: 評価説明量 0 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 6437,
-        "body_paragraphs": 31,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 0,
-        "limitation_chars": 671,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700",
-          "評価説明量 0 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_004e811be8e48191a45430c3b385875b--2025-2510.02758-tokenflow-buffer-aware-preemptive-serving-research-20261018-2155-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_004e811be8e48191a45430c3b385875b--2025-2510.02758-tokenflow-buffer-aware-preemptive-serving-research-20261018-2155-scheduled-chat-00-r01.json",
-      "worker_run_key": "20261018-2155-scheduled-chat-00/r01"
-    },
-    {
-      "canonical_id": "arXiv:2506.05333",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-18T13:10:37+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700",
-        "説明不足トリガー: 評価説明量 147 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5929,
-        "body_paragraphs": 33,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 147,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700",
-          "評価説明量 147 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_25c1b5b333188191809fac348047a21a--2025-2506.05333-kinetics-memory-aware-test-time-scaling-research-20261018-2155-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_25c1b5b333188191809fac348047a21a--2025-2506.05333-kinetics-memory-aware-test-time-scaling-research-20261018-2155-scheduled-chat-00-r01.json",
-      "worker_run_key": "20261018-2155-scheduled-chat-00/r01"
-    },
-    {
-      "canonical_id": "arXiv:2607.18171",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-18T13:26:15+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 0 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5759,
-        "body_paragraphs": 34,
-        "method_chars": 1968,
-        "method_paragraphs": 12,
-        "evaluation_chars": 0,
-        "limitation_chars": 740,
-        "insufficiency_flags": [
-          "評価説明量 0 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_e4c28ade7ac0819192315362a0c350e8--2026-2607.18171-flashrt-multimodal-serving-agent-research-20261018-0700-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_e4c28ade7ac0819192315362a0c350e8--2026-2607.18171-flashrt-multimodal-serving-agent-research-20261018-0700-scheduled-chat-00-r01.json",
-      "worker_run_key": "scheduled-chat-00/20261018-0700/r01"
     },
     {
       "canonical_id": "DOI:10.52202/085713-0097",
@@ -4784,8 +4645,8 @@
     },
     {
       "canonical_id": "arXiv:2609.36760",
-      "title": "QuantMLA: Function-Aligned Dual-Path Quantization for Low-Bit MLA KV Caching",
-      "source_url": "https://arxiv.org/abs/2609.36760",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-18T14:13:32+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-45",
@@ -4811,8 +4672,8 @@
     },
     {
       "canonical_id": "arXiv:2502.20576",
-      "title": "OmniRouter: Budget and Performance Controllable Multi-LLM Routing",
-      "source_url": "https://arxiv.org/pdf/2502.20576",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-18T14:13:34+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-45",
@@ -4840,8 +4701,8 @@
     },
     {
       "canonical_id": "arXiv:2406.11016",
-      "title": "Optimized Speculative Sampling for GPU Hardware Accelerators",
-      "source_url": "https://arxiv.org/pdf/2406.11016",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-18T14:13:35+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-30",
@@ -4868,8 +4729,8 @@
     },
     {
       "canonical_id": "arXiv:2609.36173",
-      "title": "Draft in Parallel, Condition Through Depth: Adjacent Causal Injection for Speculative Decoding",
-      "source_url": "https://arxiv.org/abs/2609.36173",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-18T14:13:36+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-30",
@@ -4895,8 +4756,8 @@
     },
     {
       "canonical_id": "arXiv:2505.19155",
-      "title": "Sparse-to-Dense: A Free Lunch for Lossless Acceleration of Video Understanding in LLMs",
-      "source_url": "https://arxiv.org/html/2505.19155v2",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-18T14:13:38+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-30",
@@ -4919,6 +4780,145 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-9450c98a3a22--libfile_c3f56576169c81919a30fff1c8792e0d--2025-2505.19155-sparse-to-dense-video-llm-speculative-research-20261018-0730-scheduled-chat-30-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-9450c98a3a22--libfile_c3f56576169c81919a30fff1c8792e0d--2025-2505.19155-sparse-to-dense-video-llm-speculative-research-20261018-0730-scheduled-ch.json",
       "worker_run_key": "20261018-0730-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2609.37828",
+      "title": "Joint Effects of GPU Server Topology, Parallelism, and Congestion Control on MoE Inference: A Controlled Simulation Study",
+      "source_url": "https://arxiv.org/abs/2609.37828",
+      "returned_at": "2026-10-18T14:20:48+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "長文定型文の再利用を検出: papers/inference/12-moe-parallelism-communication/2026-2609.37828-joint-effects-of-gpu-server-topology-parallelism-and-congestion-control-.md と 29 段落 / 6494文字 (100.0%) が完全一致"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 7255,
+        "body_paragraphs": 35,
+        "method_chars": 1694,
+        "method_paragraphs": 9,
+        "evaluation_chars": 2745,
+        "limitation_chars": 631,
+        "insufficiency_flags": []
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-94750541164d--libfile_b2616de3a9248191980bfabe432496d0--2026-2609.37828-moe-topology-parallelism-metadata-repair-20261018-1545-scheduled-chat-45-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-94750541164d--libfile_b2616de3a9248191980bfabe432496d0--2026-2609.37828-moe-topology-parallelism-metadata-repair-20261018-1545-scheduled-chat-45-.json",
+      "worker_run_key": "20261018-1545-scheduled-chat-45/r01/metadata-repair-2609.37828"
+    },
+    {
+      "canonical_id": "arXiv:2506.05333",
+      "title": "Kinetics: Rethinking Test-Time Scaling Laws",
+      "source_url": "https://arxiv.org/abs/2506.05333",
+      "returned_at": "2026-10-18T14:20:49+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700",
+        "説明不足トリガー: 評価説明量 147 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5929,
+        "body_paragraphs": 33,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 147,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700",
+          "評価説明量 147 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-987f8ce558ff--libfile_25c1b5b333188191809fac348047a21a--2025-2506.05333-kinetics-memory-aware-test-time-scaling-research-20261018-2155-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-987f8ce558ff--libfile_25c1b5b333188191809fac348047a21a--2025-2506.05333-kinetics-memory-aware-test-time-scaling-research-20261018-2155-scheduled-.json",
+      "worker_run_key": "20261018-2155-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2607.18171",
+      "title": "FlashRT: Agent Harness for Guiding Agents to Deploy Real-Time Multimodal Applications",
+      "source_url": "https://arxiv.org/pdf/2607.18171",
+      "returned_at": "2026-10-18T14:20:51+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 0 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5759,
+        "body_paragraphs": 34,
+        "method_chars": 1968,
+        "method_paragraphs": 12,
+        "evaluation_chars": 0,
+        "limitation_chars": 740,
+        "insufficiency_flags": [
+          "評価説明量 0 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-9b4e8c6c19ba--libfile_e4c28ade7ac0819192315362a0c350e8--2026-2607.18171-flashrt-multimodal-serving-agent-research-20261018-0700-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-9b4e8c6c19ba--libfile_e4c28ade7ac0819192315362a0c350e8--2026-2607.18171-flashrt-multimodal-serving-agent-research-20261018-0700-scheduled-chat-00.json",
+      "worker_run_key": "scheduled-chat-00/20261018-0700/r01"
+    },
+    {
+      "canonical_id": "arXiv:2510.02758",
+      "title": "TokenFlow: Responsive LLM Text Streaming Serving under Request Burst via Preemptive Scheduling",
+      "source_url": "https://arxiv.org/abs/2510.02758",
+      "returned_at": "2026-10-18T14:20:52+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700",
+        "説明不足トリガー: 評価説明量 0 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 6437,
+        "body_paragraphs": 31,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 0,
+        "limitation_chars": 671,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700",
+          "評価説明量 0 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-9edd9b1dd524--libfile_004e811be8e48191a45430c3b385875b--2025-2510.02758-tokenflow-buffer-aware-preemptive-serving-research-20261018-2155-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-9edd9b1dd524--libfile_004e811be8e48191a45430c3b385875b--2025-2510.02758-tokenflow-buffer-aware-preemptive-serving-research-20261018-2155-schedule.json",
+      "worker_run_key": "20261018-2155-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2406.02500",
+      "title": "Towards Efficient Mixture of Experts: A Holistic Study of Compression Techniques",
+      "source_url": "https://arxiv.org/abs/2406.02500",
+      "returned_at": "2026-10-18T14:20:54+00:00",
+      "return_count": 4,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 8158,
+        "body_paragraphs": 42,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 1828,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-a12973f87b3b--libfile_956d4f2253488191bde3caab3e060dd0--2024-2406.02500-unified-moe-compression-research-20261018-1800-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-a12973f87b3b--libfile_956d4f2253488191bde3caab3e060dd0--2024-2406.02500-unified-moe-compression-research-20261018-1800-scheduled-chat-00-r01.json",
+      "worker_run_key": "20261018-1800-scheduled-chat-00/r01"
     }
   ]
 }
