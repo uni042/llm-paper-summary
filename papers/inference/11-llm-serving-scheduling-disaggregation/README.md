@@ -3,7 +3,7 @@
 複数requestを複数GPU / nodeで処理するLLM servingについて、request順、batch、prefill / decodeのGPU配分、KV再利用・転送、request移動などを調整し、latencyとresource効率を改善する研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（378本）
+## 自動生成の論文一覧（379本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -563,6 +563,10 @@
 - **2026-09 · [Analytical Resource Management for Fine-grained MoE Computation-Communication Overlap](2026-2609.07536-moe-overlap-resource-manager.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   入力長とMoE専門家へのトークン偏りから通信タイルへ予約するGPU資源を解析的に選び、計算と通信の重なりを調整して固定配分よりプリフィル待ちを減らす。
+
+- **2026-09 · [Analytical Power-Aware Provisioning for Prefill-Decode Disaggregated AI Inference](2026-2609.24639-analytical-power-aware-provisioning-for-prefill-decode-disaggregated-ai-.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  本研究は、入力処理（プリフィル）と復号（デコード）を別々のGPU群に割り当てる分離型サービング（プリフィル–デコード Disaggregation、PD分離）で、何台の入力処理インスタンスと復号インスタンスを稼働させれば、要求処理容量を満たしながらGPU電力を最小化できるかを扱う。
 
 - **2026-09 · [AInfer-PD: Communication-Safe In-Place Prefill-Decode Multiplexing for Distributed MoE Rollouts](2026-2609.00993-ainfer-pd-communication-safe-prefill-decode-multiplexing.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
