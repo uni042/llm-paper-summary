@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "36a585dc220ae94fa5c35d4e821252c6a990f47d137eeed92dc7f8f8e48172a8",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/retry-research-1b3d36a54f8c--libfile_3d7ced3f218881918407f602419aa761--2026-2609.36590-seed-implicit-encoder-decoder-self-speculation-research-20261019-1357-scheduled-chat-00-r01.md",
+  "canonical_id": "arXiv:2609.36590",
+  "worker_completed_at": "2026-10-19T14:06:00+09:00",
+  "worker_run_key": "20261019-1357-scheduled-chat-00/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 7131,
+    "body_paragraphs": 38,
+    "method_chars": 0,
+    "method_paragraphs": 0,
+    "evaluation_chars": 491,
+    "limitation_chars": 0,
+    "insufficiency_flags": [
+      "手法説明量 0 < 700",
+      "評価説明量 491 < 500",
+      "限界説明量 0 < 推奨 120"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 手法説明量 0 < 700",
+    "説明不足トリガー: 評価説明量 491 < 500"
+  ],
+  "processed_at": "2026-10-19T05:54:49+00:00"
+}
