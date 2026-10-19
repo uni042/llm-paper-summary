@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-f73dd41ac3556121-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2511.00603",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2511.00603",
+    "identity_tokens": [
+      "arXiv:2511.00603"
+    ],
+    "reason": "遅延・処理頻度への感度とGPU資源要求からエッジAIタスクを分類し、要求処理・サービス配置・並列化方式を選ぶ汎用推論フレームワーク。LLMと画像分割の事例を含み最大2.1倍のgoodputを報告するが、LLM固有のKV・prefill/decode・MoE・GPUカーネルの改善を主対象とするわけではない。",
+    "first_checked_at": "2026-10-19T04:43:32+00:00",
+    "last_checked_at": "2026-10-19T04:43:32+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "EPARA: Parallelizing Categorized AI Inference in Edge Clouds"
+  },
+  "processed_at": "2026-10-19T04:43:33+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f73dd41ac355",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

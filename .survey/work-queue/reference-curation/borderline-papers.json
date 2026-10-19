@@ -2,7 +2,7 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-19T01:45:59+00:00",
+  "updated_at": "2026-10-19T04:43:32+00:00",
   "record_count": 5266,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
@@ -81411,19 +81411,6 @@
       "borderline_recheck_count": 0,
       "title": "Gating is Weighting: Understanding Gated Linear Attention through In-context Learning"
     },
-    "arXiv:2512.06747": {
-      "classification": "borderline",
-      "canonical_id": "arXiv:2512.06747",
-      "identity_tokens": [
-        "arXiv:2512.06747"
-      ],
-      "reason": "暗号化されたLLM推論を複数ドローンの協調に適用し、秘密分散計算（MPC）に合わせたTransformer非線形演算の近似で低遅延化を図る。一次要旨は推論効率を扱う一方、主要な実証対象はUAV群の機密性・指令の意味的精度・編隊制御である。一般的なLLM推論サービングへの適用可能性と基盤レベルの比較条件は要旨から十分に判定できないため境界的候補とする。",
-      "first_checked_at": "2026-10-18T10:00:24+00:00",
-      "last_checked_at": "2026-10-18T10:00:24+00:00",
-      "linked_from": [],
-      "borderline_recheck_count": 0,
-      "title": "PrivLLMSwarm: Privacy-Preserving LLM-Driven UAV Swarms for Secure IoT Surveillance"
-    },
     "arXiv:2511.17693": {
       "classification": "borderline",
       "canonical_id": "arXiv:2511.17693",
@@ -81761,6 +81748,19 @@
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "FlexMoRE: A Flexible Mixture of Rank-heterogeneous Experts for Efficient Federatedly-trained Large Language Models"
+    },
+    "arXiv:2511.00603": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2511.00603",
+      "identity_tokens": [
+        "arXiv:2511.00603"
+      ],
+      "reason": "遅延・処理頻度への感度とGPU資源要求からエッジAIタスクを分類し、要求処理・サービス配置・並列化方式を選ぶ汎用推論フレームワーク。LLMと画像分割の事例を含み最大2.1倍のgoodputを報告するが、LLM固有のKV・prefill/decode・MoE・GPUカーネルの改善を主対象とするわけではない。",
+      "first_checked_at": "2026-10-19T04:43:32+00:00",
+      "last_checked_at": "2026-10-19T04:43:32+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "EPARA: Parallelizing Categorized AI Inference in Edge Clouds"
     }
   }
 }

@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-19T01:45:59+00:00",
-  "record_count": 12428,
+  "updated_at": "2026-10-19T04:43:32+00:00",
+  "record_count": 12429,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -179004,9 +179004,9 @@
       "identity_tokens": [
         "DOI:10.1007/s00371-025-04264-2"
       ],
-      "reason": "Mamba系状態空間モデルを使うが、研究対象は両眼画像の視差推定とコストボリュームの構築・集約である。KITTI2012の視差誤差や画像認識ネットワークのパラメータ削減が評価指標で、LLMの生成復号、学習基盤、KVキャッシュ、量子化、サービングを対象にしていない。画像ステレオ対応の応用研究として対象外。",
+      "reason": "立体画像の視差推定におけるMamba型コスト体積を使ったステレオ対応精度が主題。LLM推論、モデル圧縮、GPU上の生成サービングとは異なる画像認識専用課題。",
       "first_checked_at": "2026-10-18T03:51:21+00:00",
-      "last_checked_at": "2026-10-18T08:44:14+00:00",
+      "last_checked_at": "2026-10-19T04:43:32+00:00",
       "linked_from": [],
       "title": "MambaStereo: enhancing stereo matching accuracy in ill-posed regions via Mamba-based cost volume"
     },
@@ -179166,6 +179166,18 @@
       "last_checked_at": "2026-10-19T01:45:59+00:00",
       "linked_from": [],
       "title": "Enhancing Image Quality Assessment Ability of LMMs via Retrieval-Augmented Generation"
+    },
+    "arXiv:2512.06747": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2512.06747",
+      "identity_tokens": [
+        "arXiv:2512.06747"
+      ],
+      "reason": "LLMを制御・協調判断に使う無人航空機群のプライバシー保護とIoT監視を扱う。主な貢献は飛行体の協調・セキュリティ用途であり、LLMサービング実行系、GPU推論カーネル、KV管理の性能改善ではない。",
+      "first_checked_at": "2026-10-19T04:43:31+00:00",
+      "last_checked_at": "2026-10-19T04:43:31+00:00",
+      "linked_from": [],
+      "title": "PrivLLMSwarm: Privacy-Preserving LLM-Driven UAV Swarms for Secure IoT Surveillance"
     }
   }
 }
