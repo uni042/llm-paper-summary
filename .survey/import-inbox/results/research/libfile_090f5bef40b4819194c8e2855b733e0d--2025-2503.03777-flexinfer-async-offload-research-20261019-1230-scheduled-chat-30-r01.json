@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "e98cad8677c128a0af20437be2497ab46a6f8e308adc8a0a41cd2061070ae80b",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_090f5bef40b4819194c8e2855b733e0d--2025-2503.03777-flexinfer-async-offload-research-20261019-1230-scheduled-chat-30-r01.md",
+  "canonical_id": "arXiv:2503.03777",
+  "worker_completed_at": "2026-10-19T12:30:00+09:00",
+  "worker_run_key": "20261019-1230-scheduled-chat-30/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 5947,
+    "body_paragraphs": 31,
+    "method_chars": 0,
+    "method_paragraphs": 0,
+    "evaluation_chars": 1004,
+    "limitation_chars": 0,
+    "insufficiency_flags": [
+      "手法説明量 0 < 700",
+      "限界説明量 0 < 推奨 120"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 手法説明量 0 < 700"
+  ],
+  "processed_at": "2026-10-19T03:45:43+00:00"
+}
