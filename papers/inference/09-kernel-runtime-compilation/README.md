@@ -82,6 +82,10 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   実装：[✓](https://github.com/bingreeky/MemEvolve) ・ リポジトリ内被引用：1  
   しかし既存の自己改善型エージェントでは、記憶をどの形式で要約するか、どこへ保存するか、いつ検索するか、どの記憶を忘れるかといった記憶機構の設計自体は人手で固定されていることが多い。
 
+- **2025-12 · [Dynamic Large Concept Models: Latent Reasoning in an Adaptive Semantic Space](2025-2512.24617-dynamic-large-concept-models-latent-reasoning-in-an-adaptive-semantic-sp.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  原著は平均4トークンを1概念へ圧縮するR=4の条件を中心に、通常の1.3B Transformerと、概念段に容量を再配分した2.3B DLCMを比較した。両者の推論浮動小数点演算量（FLOPs）を近づけた条件で、12種類のゼロショット課題の平均正解率は41.23%から43.92%へ2.69ポイント改善した。
+
 - **2025-11 · [KernelBand: Steering LLM-based Kernel Optimization via Hardware-Aware Multi-Armed Bandits](2025-2511.18868-kernelband-steering-llm-based-kernel-optimization-via-hardware-aware-mul.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   高性能な実装では、演算量だけでなく、レジスタ圧迫、共有メモリ、キャッシュ利用、メモリ帯域、スレッド配置を同時に考える必要がある。KernelBandは、この探索判断を文脈付き多腕バンディット（contextual multi-armed bandit、MAB）へ置き換える方式である。
@@ -280,10 +284,6 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   実装：[✓](https://github.com/eunomia-bpf/gpu_ext) ・ リポジトリ内被引用：0  
   大規模言語モデル（Large Language モデル; LLM）の推論性能は、GPUの演算能力だけでなく、GPUメモリへ何を保持し、何をCPU側へ退避させ、いつ事前読み込みし、複数処理へどのように実行時間を割り当てるかに大きく左右される。
 
-- **2025-12 · [Dynamic Large Concept Models: Latent Reasoning in an Adaptive Semantic Space](2025-2512.24617-dynamic-large-concept-models-latent-reasoning-in-an-adaptive-semantic-sp.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  原著は平均4トークンを1概念へ圧縮するR=4の条件を中心に、通常の1.3B Transformerと、概念段に容量を再配分した2.3B DLCMを比較した。両者の推論浮動小数点演算量（FLOPs）を近づけた条件で、12種類のゼロショット課題の平均正解率は41.23%から43.92%へ2.69ポイント改善した。
-
 - **2025-11 · [You Had One Job: Per-Task Quantization Using LLMs’ Hidden Representations](2025-2511.06516-you-had-one-job-per-task-quantization-using-llms-hidden-representations.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   一般的な学習後量子化（Post-学習 量子化; PTQ）は、言語モデルの重みを一律に4ビットへ圧縮したり、重み再構成誤差に基づいて精度を選んだりする。原著第4版では、Qwen2.5-7B-InstructのMMLU-Proで、TAQ-KLが35.35点・重み5.95GB、均一4ビットのAWQが23.54点・5.19GBだった。
@@ -467,7 +467,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   QUIKは、生成大規模言語モデルの線形層を重み・活性値の双方が4ビット整数であるW4A4へ移すための量子化方式である。CUTLASSによる低ビット行列積と量子化・逆量子化の融合カーネルを実装し、RTX3090の2048トークン入力一括処理でFP16比最大3.4倍の処理量改善を報告する。
 
 - **2023-05 · [Blockwise Parallel Transformer for Large Context Models](2023-2305.19370-blockwise-parallel-transformer-for-large-context-models.md)**  
-  実装：[✓](https://github.com/haoliuhl/ringattention) ・ リポジトリ内被引用：4  
+  実装：[✓](https://github.com/haoliuhl/ringattention) ・ リポジトリ内被引用：5  
   注意だけでなくFFNまで系列ブロック内で融合して学習時活性を保持しないBPT。A100/TPU v4でメモリ効率型注意より2〜4倍長い文脈を学習可能にし、1B・16Kでは通常Transformer比1.20倍の学習スループットを示す。
 
 - **2023-10 · [Sparse Fine-tuning for Inference Acceleration of Large Language Models](2023-2310.06927-sparse-fine-tuning-for-inference-acceleration-of-large-language-models.md)**  
@@ -507,7 +507,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   深層学習の演算を高速なGPUカーネルにするには、数式を記述するだけでは足りない。入力配列のどの部分をまとめて読み出し、何回再利用し、どのスレッドに配り、いつ共有メモリへ移すかによって性能が大きく変わる。既存のcuBLASやcuDNNが対象とする標準演算なら高性能な実装を利用できるが、新しい行列演算や不規則な参照を伴う演算では、そのまま使えない。
 
 - **2019-10 · [Structured Pruning of Large Language Models](2019-1910.04732-structured-pruning-of-large-language-models.md)**  
-  実装：[✓](https://github.com/asappresearch/flop) ・ リポジトリ内被引用：19  
+  実装：[✓](https://github.com/asappresearch/flop) ・ リポジトリ内被引用：20  
   FLOP（Factorized Low-rank Pruning、因子化低ランク枝刈り）は、重みを個別にゼロ化する非構造的な枝刈りでは、パラメータ数を減らしても一般的な計算装置で速度が上がりにくいという問題に取り組む。
 
 ### 9年前（2017-11〜2018-10）
