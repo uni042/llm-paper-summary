@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-10-19T14:50:39.131646+00:00",
+  "generated_at": "2026-10-19T21:55:42.128006+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 5,
+  "count": 7,
   "worker_counts": {
     "scheduled-chat-00": 2,
     "scheduled-chat-30": 2,
-    "scheduled-chat-45": 1
+    "scheduled-chat-45": 3
   },
   "entries": [
     {
@@ -62,6 +62,26 @@
       ]
     },
     {
+      "path": "papers/inference/07-kv-cache-optimization-compression/2024-2412.12706-more-tokens-lower-precision-towards-the-optimal-token-precision-trade-of.md",
+      "canonical_id": "arXiv:2412.12706",
+      "title": "More Tokens, Lower Precision: Towards the Optimal Token-Precision Trade-off in KV Cache Compression",
+      "file_bytes": 12950,
+      "source_sha256": "11f25dc3fdd7388d6448b5ed8417595dd3e64d42681835667b847941496bfc9e",
+      "source_git_blob_sha": "643b6758b5ae9404d4b061702eac604f5e08d84d",
+      "assigned_worker": "scheduled-chat-45",
+      "semantic_status": "pending",
+      "mechanical_status": "PASS",
+      "japanese_ratio": 0.992875,
+      "quality_metrics": {
+        "body_chars": 3530,
+        "method_chars": 1000,
+        "evaluation_chars": 887,
+        "limitation_chars": 366
+      },
+      "mechanical_failures": [],
+      "warnings": []
+    },
+    {
       "path": "papers/inference/17-pim-near-data-acceleration/2026-h3-attn.md",
       "canonical_id": "DOI:10.1145/3816440.3818602",
       "title": "H3-Attn: Attention-Efficient 3D DRAM PNM Processor with Hybrid Head Parallelism and Hierarchical SFU",
@@ -76,6 +96,26 @@
         "body_chars": 2413,
         "method_chars": 1072,
         "evaluation_chars": 505,
+        "limitation_chars": 0
+      },
+      "mechanical_failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/99-other-inference-systems/2026-2604.13806-robust-ultra-low-bit-post-training-quantization-via-stable-diagonal-curv.md",
+      "canonical_id": "arXiv:2604.13806",
+      "title": "Robust Ultra Low-Bit Post-Training Quantization via Stable Diagonal Curvature Estimate",
+      "file_bytes": 13000,
+      "source_sha256": "271ae186d4dc493fa612c3ed286cf3d98bbebc244531fb4411d40a0f8bf45dbc",
+      "source_git_blob_sha": "eead1e8e427e479626bd986a4be4450d8ad42a13",
+      "assigned_worker": "scheduled-chat-45",
+      "semantic_status": "pending",
+      "mechanical_status": "PASS",
+      "japanese_ratio": 0.986676,
+      "quality_metrics": {
+        "body_chars": 3473,
+        "method_chars": 1086,
+        "evaluation_chars": 916,
         "limitation_chars": 0
       },
       "mechanical_failures": [],
