@@ -1,0 +1,90 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-45",
+  "run_key": "20261019-0745-scheduled-chat-45/r01/research-prescreen/020-022-027-028-030",
+  "reference_main_sha": "e677042d40e13c8900ea332356709ab5b7862cf3",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.11856",
+      "identity_tokens": [
+        "arxiv:2605.11856"
+      ],
+      "title": "UniVLR: Unifying Text and Vision in Visual Latent Reasoning for Multimodal LLMs",
+      "reason": "テキストの推論軌跡と画像を共通の視覚潜在表現へ圧縮し、推論時の明示的な思考連鎖と外部ツール呼び出しを省く。生成トークン数削減は推論効率に関連するが、主な評価対象はマルチモーダル視覚推論の能力であり、汎用LLMサービング基盤の処理量やGPUメモリ管理ではない。",
+      "source_url": "https://arxiv.org/abs/2605.11856",
+      "body_check": "primary_arxiv_abstract_and_bibliography_screen_only; body_not_read",
+      "first_checked_at": "2026-10-19T07:47:48+09:00",
+      "last_checked_at": "2026-10-19T07:47:48+09:00",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance",
+      "worklist_rank": 20
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2604.20796",
+      "identity_tokens": [
+        "arxiv:2604.20796"
+      ],
+      "title": "LLaDA2.0-Uni: Unifying Multimodal Understanding and Generation with Diffusion Large Language Model",
+      "reason": "離散拡散型の混合専門家バックボーンと画像復号器を統合し、接頭辞認識最適化と少数ステップ蒸留で生成効率も改善する。推論アルゴリズムの効率化は対象範囲と重なるが、主な貢献は画像理解・生成を統合した基盤モデルと学習方式であり、汎用推論エンジンの比較ではない。",
+      "source_url": "https://arxiv.org/abs/2604.20796",
+      "body_check": "primary_arxiv_abstract_and_bibliography_screen_only; body_not_read",
+      "first_checked_at": "2026-10-19T07:47:48+09:00",
+      "last_checked_at": "2026-10-19T07:47:48+09:00",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance",
+      "worklist_rank": 22
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2602.24134",
+      "identity_tokens": [
+        "arxiv:2602.24134"
+      ],
+      "title": "AgenticOCR: Parsing Only What You Need for Efficient Retrieval-Augmented Generation",
+      "reason": "視覚文書の検索拡張生成で、ページ全体のOCRではなく質問に必要な領域だけを動的認識し、生成器に渡す無関係な文脈と視覚トークンを減らす。入力トークン削減による効率向上は関連するが、文書RAGのアプリケーション固有の抽出・検索方式が中心であり、LLM実行基盤自体の最適化ではない。",
+      "source_url": "https://arxiv.org/abs/2602.24134",
+      "body_check": "primary_arxiv_abstract_and_bibliography_screen_only; body_not_read",
+      "first_checked_at": "2026-10-19T07:47:48+09:00",
+      "last_checked_at": "2026-10-19T07:47:48+09:00",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance",
+      "worklist_rank": 27
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2602.22675",
+      "identity_tokens": [
+        "arxiv:2602.22675"
+      ],
+      "title": "Search More, Think Less: Rethinking Long-Horizon Agentic Search for Efficiency and Generalization",
+      "reason": "逐次的な深い推論を並列の証拠収集へ置き換え、長期検索エージェントの推論ステップと文脈予算を削減する。BrowseCompでは比較方式より平均推論ステップを70.7%削減したと報告するが、主対象は検索エージェントの行動方針と訓練であり、GPUサービング基盤の高速化ではない。",
+      "source_url": "https://arxiv.org/abs/2602.22675",
+      "body_check": "primary_arxiv_abstract_and_bibliography_screen_only; body_not_read",
+      "first_checked_at": "2026-10-19T07:47:48+09:00",
+      "last_checked_at": "2026-10-19T07:47:48+09:00",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance",
+      "worklist_rank": 28
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.15156",
+      "identity_tokens": [
+        "arxiv:2605.15156"
+      ],
+      "title": "MeMo: Memory as a Model",
+      "reason": "既存LLMの重みを固定し、追加知識を別の学習済み記憶モデルに格納して検索ノイズに強い知識補完を行う。推論時の検索費用が文書集合の大きさに依存しないと主張するが、対象は外部知識の更新と質問応答能力であり、KVキャッシュ・重み・GPUメモリの最適化ではない。",
+      "source_url": "https://arxiv.org/abs/2605.15156",
+      "body_check": "primary_arxiv_abstract_and_bibliography_screen_only; body_not_read",
+      "first_checked_at": "2026-10-19T07:47:48+09:00",
+      "last_checked_at": "2026-10-19T07:47:48+09:00",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance",
+      "worklist_rank": 30
+    }
+  ]
+}
