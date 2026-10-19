@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-19T14:51:18+00:00",
-  "record_count": 12430,
+  "updated_at": "2026-10-19T15:52:13+00:00",
+  "record_count": 12431,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -179186,6 +179186,18 @@
       "last_checked_at": "2026-10-19T14:51:18+00:00",
       "linked_from": [],
       "title": "FlexMoRE: A Flexible Mixture of Rank-heterogeneous Experts for Efficient Federatedly-trained Large Language Models"
+    },
+    "arXiv:2303.03982": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2303.03982",
+      "identity_tokens": [
+        "arXiv:2303.03982"
+      ],
+      "reason": "一次要旨では、構造化状態空間モデルS4の隠れ状態を並列に初期化・リセットする改変を提案し、部分観測の強化学習環境と連続制御のメタ学習を評価する。RNN比で5倍超の実行速度を報告するが、対象は強化学習エージェントの環境適応であり、LLMのトークン生成、KVキャッシュ、MoE、推論サービングやLLM学習基盤の効率化を検証していないため対象外。",
+      "first_checked_at": "2026-10-19T15:52:13+00:00",
+      "last_checked_at": "2026-10-19T15:52:13+00:00",
+      "linked_from": [],
+      "title": "Structured State Space Models for In-Context Reinforcement Learning"
     }
   }
 }

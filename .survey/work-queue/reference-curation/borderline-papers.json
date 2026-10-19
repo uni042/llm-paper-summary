@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-19T14:51:18+00:00",
-  "record_count": 5276,
+  "updated_at": "2026-10-19T15:52:15+00:00",
+  "record_count": 5275,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -71082,9 +71082,9 @@
         "semanticscholar:5e364810740f92046868a4ddb7a1b30576439e4d",
         "url:https://arxiv.org/abs/2512.06688"
       ],
-      "reason": "一次要旨は、1,000件の利用者対話・20,000超の選好を扱う個人化評価集合と、強化学習およびエージェント記憶の構築を主眼とする。2,000トークンの記憶で32,000トークンの履歴に代える16倍の入力削減を報告しており推論時入力費用には間接的に関連するが、評価指標は暗黙の個人化の正答率（記憶方式55%）であり、汎用KV管理、GPUメモリ削減、サービング遅延の実測を直接提案・評価しないため境界的。",
+      "reason": "一次要旨によると、暗黙的なユーザー選好を推測するための1000件の対話・300以上の状況・2万以上の選好を含む個人化データセットを作成し、強化微調整と可読なエージェント記憶を評価する。記憶を約2000トークンへ縮約し、3万2000トークンの会話履歴と比べて入力トークンを16分の1にする結果は推論費用に接点がある。しかし主たる技術的貢献は個人化能力・記憶の学習と正答率改善で、汎用LLMのKVキャッシュ、メモリ階層、配信スケジューラ等の実行基盤は直接最適化していないため境界判定。",
       "first_checked_at": "2026-10-11T10:43:47+00:00",
-      "last_checked_at": "2026-10-17T17:44:44+00:00",
+      "last_checked_at": "2026-10-19T15:52:13+00:00",
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "PersonaMem-v2: Towards Personalized Intelligence via Learning Implicit User Personas and Agentic Memory"
@@ -74213,9 +74213,9 @@
         "id:arXiv:2112.06749",
         "url:https://arxiv.org/abs/2112.06749"
       ],
-      "reason": "一次要旨では自己回帰復号器に代わる反復改善型の非自己回帰テキスト生成器SUNDAEを提案し、拡散型生成より少ない反復回数で収束することを主張する。生成反復回数の削減は推論計算量に関係するが、主評価はWMT14英独翻訳品質と自然言語・Pythonコード生成品質であり、現行LLMサービングの遅延、GPU実測、バッチ実行器を対象とした最適化とは区別するため境界的。",
+      "reason": "一次要旨では、自己回帰を使わず乱数トークン列を反復改善するSUNDAEを提案し、拡散型生成より少ない反復で高品質なサンプルを生成することを主張する。非自己回帰生成と反復回数の削減はLLM推論アルゴリズムに隣接するが、中心は生成モデルの学習方式・機械翻訳品質・無条件生成品質であり、GPU実測の推論処理量や配信ランタイムの直接最適化は要旨から確認できないため境界判定。",
       "first_checked_at": "2026-10-13T10:44:16+00:00",
-      "last_checked_at": "2026-10-17T17:44:44+00:00",
+      "last_checked_at": "2026-10-19T15:52:15+00:00",
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "Step-unrolled Denoising Autoencoders for Text Generation"
@@ -81370,20 +81370,6 @@
       "borderline_recheck_count": 0,
       "title": "DualCodec: A Low-Frame-Rate, Semantically-Enhanced Neural Audio Codec for Speech Generation"
     },
-    "arXiv:2303.03982": {
-      "classification": "borderline",
-      "canonical_id": "arXiv:2303.03982",
-      "identity_tokens": [
-        "DOI:10.48550/arxiv.2303.03982",
-        "arXiv:2303.03982"
-      ],
-      "reason": "S4状態空間モデルの隠れ状態の並列初期化・リセットを改良し、部分観測の強化学習・メタ学習でRNNより高速な実行を報告する。系列長に対する漸近計算量と状態管理はLLM推論アーキテクチャに関連するが、実験対象は強化学習の制御課題であり、生成LLMのトークン復号・サービング・KVキャッシュ運用の実測はない。アーキテクチャの境界資料として保留。",
-      "first_checked_at": "2026-10-18T10:00:22+00:00",
-      "last_checked_at": "2026-10-18T10:00:22+00:00",
-      "linked_from": [],
-      "borderline_recheck_count": 0,
-      "title": "Structured State Space Models for In-Context Reinforcement Learning"
-    },
     "arXiv:2412.00081": {
       "classification": "borderline",
       "canonical_id": "arXiv:2412.00081",
@@ -81500,9 +81486,9 @@
         "DOI:10.48550/arxiv.2104.10640",
         "arXiv:2104.10640"
       ],
-      "reason": "一次要旨はBERT・GPT系列の構成、転移学習、枝刈り、量子化、知識蒸留、検索器、長系列注意などを広く概説する27ページの総説である。推論効率化に関係する技術を分類しているが、特定の生成LLMサービング基盤の新しい実行方式、KV管理器、GPUカーネル、実機スケジューラを提案・比較する研究ではない。一般的なモデル構成の背景資料としては関連するものの、本サーベイの推論システムの独立収録論文としては境界的なため保留する。",
+      "reason": "一次要旨では、BERT・GPTなどのTransformer系NLPモデル、転移学習、枝刈り、量子化、知識蒸留、長文脈注意、検索器を横断して分類・比較する総説である。推論効率に関係する圧縮や長文脈注意も扱うが、中心は広範なNLPモデルと応用の分類であり、LLM推論基盤の測定・システム設計に絞ったサーベイではない。収録候補としての直接性が弱いため境界判定。",
       "first_checked_at": "2026-10-18T10:00:31+00:00",
-      "last_checked_at": "2026-10-18T10:00:31+00:00",
+      "last_checked_at": "2026-10-19T15:52:14+00:00",
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "The NLP Cookbook: Modern Recipes for Transformer based Deep Learning Architectures"

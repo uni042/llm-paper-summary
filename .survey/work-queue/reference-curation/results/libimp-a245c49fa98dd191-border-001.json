@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a245c49fa98dd191-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2112.06749",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2112.06749",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2112.06749",
+      "arXiv:2112.06749",
+      "id:arXiv:2112.06749",
+      "url:https://arxiv.org/abs/2112.06749"
+    ],
+    "reason": "一次要旨では、自己回帰を使わず乱数トークン列を反復改善するSUNDAEを提案し、拡散型生成より少ない反復で高品質なサンプルを生成することを主張する。非自己回帰生成と反復回数の削減はLLM推論アルゴリズムに隣接するが、中心は生成モデルの学習方式・機械翻訳品質・無条件生成品質であり、GPU実測の推論処理量や配信ランタイムの直接最適化は要旨から確認できないため境界判定。",
+    "first_checked_at": "2026-10-13T10:44:16+00:00",
+    "last_checked_at": "2026-10-19T15:52:15+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Step-unrolled Denoising Autoencoders for Text Generation"
+  },
+  "processed_at": "2026-10-19T15:52:15+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a245c49fa98d",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
