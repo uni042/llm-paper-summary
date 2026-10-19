@@ -23,7 +23,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - [06-moe-quantization-compression](../06-moe-quantization-compression/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（116本）
+## 自動生成の論文一覧（117本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -191,6 +191,10 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - **2026-05 · [KVBuffer: IO-aware Serving for Linear Attention](2026-2605.19049-kvbuffer-io-aware-serving-for-linear-attention.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   KVBufferは、線形注意（linear 注意機構）を使う大規模言語モデル（LLM）の推論サービングにおいて、毎トークン更新される大きな内部状態へのメモリアクセスを減らすための機構である。
+
+- **2026-05 · [Kaczmarz Linear Attention](2026-2605.08587-kaczmarz-linear-attention.md)**  
+  実装：[✓](https://github.com/anonymous-kla-review/kla-anonymous) ・ リポジトリ内被引用：0  
+  Kaczmarz Linear 注意機構（KLA）は、線形時間の再帰型注意で、過去の情報を有限サイズの状態行列に書き込む際の更新量を、オンライン回帰の最小化から導く研究である。32K文脈の単一バッチ復号の原著実測では3.54トークン/秒で、GDNの1.65トークン/秒に対し2.1倍だった。
 
 - **2026-05 · [Improving the Efficiency of Language Agent Teams with Adaptive Task Graphs](2026-2605.06320-improving-the-efficiency-of-language-agent-teams-with-adaptive-task-grap.md)**  
   実装：[✓](https://github.com/emieczkowski/latte) ・ リポジトリ内被引用：0  
