@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-d25d2308ce1428fb-border-003",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2602.08818",
+  "reason": "一次要旨を確認。フルサイズ専門家と低ランク適応専門家を混合し、推論用のモデルパラメータ容量を33.27Bから10.75Bへ減らしながら平均タスク得点45.46から47.18へ改善したと報告。圧縮されたMoEのメモリ効率には関係するが、主眼は連合的に訓練した専門家のランクと下流精度の交換条件であり、GPU推論実行・スケジューリング・トークン毎秒は評価対象ではない。",
+  "title": "FlexMoRE: A Flexible Mixture of Rank-heterogeneous Experts for Efficient Federatedly-trained Large Language Models",
+  "identity_tokens": [
+    "arxiv:2602.08818"
+  ],
+  "linked_from": [],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d25d2308ce14",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}
