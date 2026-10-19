@@ -1,0 +1,29 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261020-0608-scheduled-chat-00/r01",
+  "reference_main_sha": "b542400241f2d6d60cf960a4fe3cf2f8e545b1c8",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2206.04685",
+      "identity_tokens": [
+        "arXiv:2206.04685",
+        "2206.04685",
+        "Predictive Exit: Prediction of Fine-Grained Early Exits for Computation- and Energy-Efficient Inference"
+      ],
+      "title": "Predictive Exit: Prediction of Fine-Grained Early Exits for Computation- and Energy-Efficient Inference",
+      "reason": "論文は畳み込みニューラルネットワーク（CNN）による画像分類を例に、Bag-of-Featuresと全結合層で構成した途中終了分類器を置き、低コストの終了位置予測器と電圧・周波数動的制御（DVFS）を組み合わせる。主指標はCNNの演算量とエネルギーであり、LLMのトークン逐次生成、KVキャッシュ、Transformerのサービング、MoE実行等を研究・評価していない。推論一般への着想はあり得るが、現行のLLM推論システムサーベイの直接対象外。",
+      "source_url": "https://arxiv.org/pdf/2206.04685",
+      "body_check": "research_fulltext_relevance_review: arXiv原著の要旨、§III『The Framework of Predictive Exit』、§IV『Training the Network with Predictive Exit』、評価説明を確認。対象モデルはCNNの物体分類、途中終了器はBoF poolingとFC classifier、低消費電力化は予測した残り層数に応じたDVFS。LLM向け生成デコード・KV管理の実装や定量評価は主張していない。",
+      "first_checked_at": "2026-10-20T06:15:49+09:00",
+      "last_checked_at": "2026-10-20T06:15:49+09:00",
+      "linked_from": [],
+      "origin": "research_postread_relevance",
+      "research_job_id": "scheduled-chat-00-079",
+      "worklist_rank": 79
+    }
+  ]
+}
