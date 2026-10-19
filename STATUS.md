@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-10-20 00:52:06 JST**
+> 自動生成: **2026-10-20 00:58:25 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -56,8 +56,8 @@
 | 未処理Discovery候補 | **121986** |
 | 収録済み | **2663** |
 | Research / Audit候補へ昇格済み | **1178** |
-| 無関係として除外 | **12303** |
-| 微妙として除外 | **5103** |
+| 無関係として除外 | **12304** |
+| 微妙として除外 | **5102** |
 
 ### 探索候補の事前フィルタリング（可逆）
 
@@ -116,7 +116,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **10-19 09:35:05 JST（15時間17分前）** |
+| 最終maintenance完了 | **10-19 09:35:05 JST（15時間23分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **issues_found** |
 | health | **issues_found** |
@@ -148,7 +148,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
   - evidence: .survey/import-inbox/results/research/libfile_8a990a1a0d808191b6feec01f34ccda7--2025-2511.15950-northpole-vertically-integrated-llm-inference-research-20261019-2130-scheduled-chat-30-r01.json
 - Discovery: **10-20 00:00:00 JST** / worker scheduled-chat-00 / run 20261020-0000-scheduled-chat-00/r01/research-prescreen/010
   - 本文確認・分類 **1件** / accept **0件** / unrelated+borderline **1件**
-  - evidence: .survey/import-inbox/pending/discovery/libfile_49adfaa274d081919fee1126cfe1ce48--discovery-20261020-0000-scheduled-chat-00-research-relevance-r01-010.json
+  - evidence: .survey/import-inbox/results/discovery/libfile_49adfaa274d081919fee1126cfe1ce48--discovery-20261020-0000-scheduled-chat-00-research-relevance-r01-010.json
 
 ### Codex探索成果の反映状況
 
