@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-19T02:51:41+00:00",
+  "generated_at": "2026-10-19T02:57:35+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -5188,8 +5188,8 @@
       "canonical_id": "arXiv:2606.01412",
       "title": "GPTQ-intrinsic LoRA: A Near-optimal Algorithm for Low-precision Quantization with Low-rank Adaptation",
       "source_url": "https://arxiv.org/abs/2606.01412",
-      "returned_at": "2026-10-19T02:50:23+00:00",
-      "return_count": 1,
+      "returned_at": "2026-10-19T02:57:35+00:00",
+      "return_count": 2,
       "assigned_worker": "scheduled-chat-30",
       "reason": "blocked_quality",
       "failures": [
@@ -5209,8 +5209,8 @@
           "評価説明量 0 < 500"
         ]
       },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_e4f401cf10fc8191b856322a8aacc2d0--2026-2606.01412-gptq-intrinsic-lora-quantization-research-20261019-1130-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_e4f401cf10fc8191b856322a8aacc2d0--2026-2606.01412-gptq-intrinsic-lora-quantization-research-20261019-1130-scheduled-chat-30-r01.json",
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-10bbec070890--libfile_e4f401cf10fc8191b856322a8aacc2d0--2026-2606.01412-gptq-intrinsic-lora-quantization-research-20261019-1130-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-10bbec070890--libfile_e4f401cf10fc8191b856322a8aacc2d0--2026-2606.01412-gptq-intrinsic-lora-quantization-research-20261019-1130-scheduled-chat-30.json",
       "worker_run_key": "20261019-1130-scheduled-chat-30/r01"
     }
   ]
