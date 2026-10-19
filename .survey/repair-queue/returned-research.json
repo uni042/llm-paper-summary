@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-19T16:32:12+00:00",
+  "generated_at": "2026-10-19T18:54:18+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 196,
+  "count": 195,
   "entries": [
     {
       "canonical_id": "DOI:10.1145/3714983.3714987",
@@ -5026,34 +5026,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-20a4a77189fe--libfile_63f90b2edbf881918bc865539552623a--2026-2609.36222-base-under16kb-reaudit-20261020-0000-scheduled-chat-00-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-20a4a77189fe--libfile_63f90b2edbf881918bc865539552623a--2026-2609.36222-base-under16kb-reaudit-20261020-0000-scheduled-chat-00-r01.json",
       "worker_run_key": "20261020-0000-scheduled-chat-00/r01"
-    },
-    {
-      "canonical_id": "arXiv:2505.13109",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-19T15:58:15+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 189 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 9577,
-        "body_paragraphs": 61,
-        "method_chars": 1475,
-        "method_paragraphs": 9,
-        "evaluation_chars": 189,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "評価説明量 189 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-dc935136b463--libfile_fa47f440184081918d6d7a6aff04e2c7--2025-2505.13109-freekv-speculative-retrieval-cpu-gpu-layout-research-20261019-1930-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-dc935136b463--libfile_fa47f440184081918d6d7a6aff04e2c7--2025-2505.13109-freekv-speculative-retrieval-cpu-gpu-layout-research-20261019-1930-schedu.json",
-      "worker_run_key": "20261019-1930-scheduled-chat-30/r01"
     },
     {
       "canonical_id": "arXiv:2411.10741",
