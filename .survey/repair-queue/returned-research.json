@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-19T04:05:14+00:00",
+  "generated_at": "2026-10-19T04:51:27+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -5154,11 +5154,41 @@
       "worker_run_key": "20261019-1145-scheduled-chat-45/r01"
     },
     {
-      "canonical_id": "arXiv:2503.03777",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-19T03:53:17+00:00",
-      "return_count": 2,
+      "canonical_id": "arXiv:2605.17447",
+      "title": "FastOCR: Dynamic Visual Fixation via KV Cache Pruning for Efficient Document Parsing",
+      "source_url": "https://arxiv.org/abs/2605.17447",
+      "returned_at": "2026-10-19T04:48:34+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700",
+        "説明不足トリガー: 評価説明量 158 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 8910,
+        "body_paragraphs": 53,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 158,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700",
+          "評価説明量 158 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_1cfb40ff275c8191b6f64d40a78a5a5e--2026-2605.17447-fastocr-dynamic-visual-fixation-research-20261019-1130-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_1cfb40ff275c8191b6f64d40a78a5a5e--2026-2605.17447-fastocr-dynamic-visual-fixation-research-20261019-1130-scheduled-chat-30-r01.json",
+      "worker_run_key": "20261019-1130-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "DOI:10.1109/micro61859.2024.00105",
+      "title": "Duplex: A Device for Large Language Models with Mixture of Experts, Grouped Query Attention, and Continuous Batching",
+      "source_url": "https://arxiv.org/pdf/2409.01141",
+      "returned_at": "2026-10-19T04:48:35+00:00",
+      "return_count": 1,
       "assigned_worker": "scheduled-chat-30",
       "reason": "blocked_quality",
       "failures": [
@@ -5166,45 +5196,20 @@
       ],
       "quality_metrics": {
         "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5947,
-        "body_paragraphs": 31,
+        "body_chars": 8792,
+        "body_paragraphs": 46,
         "method_chars": 0,
         "method_paragraphs": 0,
-        "evaluation_chars": 1004,
+        "evaluation_chars": 611,
         "limitation_chars": 0,
         "insufficiency_flags": [
           "手法説明量 0 < 700",
           "限界説明量 0 < 推奨 120"
         ]
       },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-8c47a159e206--libfile_090f5bef40b4819194c8e2855b733e0d--2025-2503.03777-flexinfer-async-offload-research-20261019-1230-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-8c47a159e206--libfile_090f5bef40b4819194c8e2855b733e0d--2025-2503.03777-flexinfer-async-offload-research-20261019-1230-scheduled-chat-30-r01.json",
-      "worker_run_key": "20261019-1230-scheduled-chat-30/r01"
-    },
-    {
-      "canonical_id": "arXiv:2512.19125",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-19T03:53:18+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "quality_self_review_version が空"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5066,
-        "body_paragraphs": 28,
-        "method_chars": 1643,
-        "method_paragraphs": 10,
-        "evaluation_chars": 1001,
-        "limitation_chars": 734,
-        "insufficiency_flags": []
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-c54a6e209ffb--libfile_c5a83067823c8191b9c50287bc9efd34--2025-2512.19125-sap-syntactic-attention-pruning-research-20261019-0945-scheduled-chat-45-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-c54a6e209ffb--libfile_c5a83067823c8191b9c50287bc9efd34--2025-2512.19125-sap-syntactic-attention-pruning-research-20261019-0945-scheduled-chat-45-.json",
-      "worker_run_key": "20261019-0945-scheduled-chat-45/r01"
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_1e54238498148191a36a0ca1ebea72aa--2024-doi-10.1109-micro61859.2024.00105-duplex-logic-pim-moe-attention-research-20261019-1330-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_1e54238498148191a36a0ca1ebea72aa--2024-doi-10.1109-micro61859.2024.00105-duplex-logic-pim-moe-attention-research-20261019-1330-scheduled-chat-30-r01.json",
+      "worker_run_key": "20261019-1330-scheduled-chat-30/r01"
     }
   ]
 }

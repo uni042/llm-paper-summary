@@ -35,10 +35,15 @@
   "selection_reason": "CoMem reduces repeated-query long-context LLM serving work by caching intermediate-depth residuals and reports lower prefill memory/latency; arXiv v1 confirms the source-row title belongs to the same ID despite v2 retitling.",
   "semantic_scholar_id": "038a970c5fb648f0700ea9d0a119d0759739fcc5",
   "source_url": "https://arxiv.org/abs/2607.28263",
-  "status": "ready",
+  "status": "superseded",
   "title": "CoMem: Reusing Transformer Depth across Queries with Persistent Intermediate Residuals",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-10-19T04:51:27+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2026-2607.28263-comem-reusing-transformer-depth-across-queries-with-persistent-intermedi.md",
+  "represented_canonical_id": "arXiv:2607.28263",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
