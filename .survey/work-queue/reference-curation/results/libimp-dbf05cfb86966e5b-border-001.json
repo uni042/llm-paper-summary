@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-dbf05cfb86966e5b-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2605.27995",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2605.27995",
+    "identity_tokens": [
+      "arXiv:2605.27995"
+    ],
+    "reason": "複数の異種タスクと遅延するツール応答を同時に与え、LLMエージェントのタスク切替・依存追跡・待機時間活用を測るベンチマーク。エージェント実行効率の設計に参考になるが、主貢献は能力評価とデータセットであり、推論基盤の非同期スケジューラや実測GPU性能の最適化ではない。",
+    "first_checked_at": "2026-10-19T18:48:33+00:00",
+    "last_checked_at": "2026-10-19T18:48:33+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "AsyncTool: Evaluating the Asynchronous Function Calling Capability under Multi-Task Scenarios"
+  },
+  "processed_at": "2026-10-19T18:48:33+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-dbf05cfb8696",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
