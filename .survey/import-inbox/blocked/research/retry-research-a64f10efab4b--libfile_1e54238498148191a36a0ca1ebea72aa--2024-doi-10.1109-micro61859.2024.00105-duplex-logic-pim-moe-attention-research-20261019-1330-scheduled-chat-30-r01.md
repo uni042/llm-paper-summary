@@ -38,6 +38,8 @@ reference_main_sha: '59dd5bc5beae1d88a353abc111fac49b2b1494a3'
 lineage: '10-inference-hardware-accelerators'
 quality_self_review_passed: true
 quality_self_review_version: 'PAPER-QUALITY-GUIDE-2026-10-07'
+last_audited: null
+audit_version: 0
 ---
 
 # Duplex：MoEとGQAの連続バッチ推論に向けたGPU・Logic-PIM統合装置

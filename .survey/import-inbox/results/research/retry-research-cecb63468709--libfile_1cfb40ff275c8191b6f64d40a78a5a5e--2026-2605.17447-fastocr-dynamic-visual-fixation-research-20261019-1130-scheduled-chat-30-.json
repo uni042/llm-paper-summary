@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "2285037ff46c94f7ccc04208ba5f3a5e108cd64f91a45738bd66bd1d420fba1a",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/retry-research-cecb63468709--libfile_1cfb40ff275c8191b6f64d40a78a5a5e--2026-2605.17447-fastocr-dynamic-visual-fixation-research-20261019-1130-scheduled-chat-30-r01.md",
+  "canonical_id": "arXiv:2605.17447",
+  "worker_completed_at": "2026-10-19T11:30:00+09:00",
+  "worker_run_key": "20261019-1130-scheduled-chat-30/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 8910,
+    "body_paragraphs": 53,
+    "method_chars": 0,
+    "method_paragraphs": 0,
+    "evaluation_chars": 158,
+    "limitation_chars": 0,
+    "insufficiency_flags": [
+      "手法説明量 0 < 700",
+      "評価説明量 158 < 500",
+      "限界説明量 0 < 推奨 120"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 手法説明量 0 < 700",
+    "説明不足トリガー: 評価説明量 158 < 500"
+  ],
+  "processed_at": "2026-10-19T04:58:26+00:00"
+}
