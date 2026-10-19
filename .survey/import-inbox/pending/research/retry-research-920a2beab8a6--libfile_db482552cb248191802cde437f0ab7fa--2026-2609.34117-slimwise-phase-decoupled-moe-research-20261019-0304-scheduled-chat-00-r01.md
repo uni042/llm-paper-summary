@@ -28,6 +28,8 @@ worker_completed_at: '2026-10-19T03:04:00+09:00'
 worker_run_key: 20261019-0304-scheduled-chat-00/r01
 worker_id: scheduled-chat-00
 scheduled_slot: '00'
+last_audited: null
+audit_version: 0
 ---
 
 # SlimWise: Decoupling Expert Pruning Across Prefill and Decode for Efficient MoE Serving

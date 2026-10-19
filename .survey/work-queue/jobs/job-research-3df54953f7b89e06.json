@@ -33,9 +33,14 @@
   "selection_reason": "MoEと投機的デコーディングをexpert coactivationで結び、DRAM→NPU転送ボトルネックを抑えてthroughputを21%改善。MoE推論、expert転送、投機的デコーディングの交差領域として高優先度。",
   "semantic_scholar_id": "cf49524c8ee7b75a56467a5558a29487f84e7ad7",
   "source_url": "https://www.semanticscholar.org/paper/cf49524c8ee7b75a56467a5558a29487f84e7ad7",
-  "status": "ready",
+  "status": "superseded",
   "title": "Efficient Mixture-of-Experts with Speculative Decoding via Expert Coactivation",
   "type": "research",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-10-19T14:47:17+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/05-speculative-decoding-moe/2026-2609.22471-efficient-mixture-of-experts-with-speculative-decoding-via-expert-coacti.md",
+  "represented_canonical_id": "arXiv:2609.22471",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

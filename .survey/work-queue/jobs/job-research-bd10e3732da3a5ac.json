@@ -35,10 +35,15 @@
   "selection_reason": "プリフィル／デコード分離をノード間へ拡張するため、KVキャッシュ転送をテンソル中心通信とpull方式で高速化するLLMサービング研究。",
   "semantic_scholar_id": "03cf3b22608fbaaf3a37ff18434f4e7a8484a0d8",
   "source_url": "https://arxiv.org/abs/2501.14743",
-  "status": "ready",
+  "status": "superseded",
   "title": "KVDirect: Distributed Disaggregated LLM Inference",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2024
+  "year": 2024,
+  "superseded_at": "2026-10-19T14:47:17+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2501.14743-kvdirect-distributed-disaggregated-llm-inference.md",
+  "represented_canonical_id": "arXiv:2501.14743",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
