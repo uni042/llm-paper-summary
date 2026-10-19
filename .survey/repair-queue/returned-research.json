@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-19T14:21:27+00:00",
+  "generated_at": "2026-10-19T14:32:22+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 194,
+  "count": 195,
   "entries": [
     {
       "canonical_id": "DOI:10.1145/3714983.3714987",
@@ -4226,34 +4226,6 @@
       "worker_run_key": "20261019-0201-scheduled-chat-00/r01"
     },
     {
-      "canonical_id": "arXiv:2609.36222",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-18T19:01:39+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 0 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 2606,
-        "body_paragraphs": 13,
-        "method_chars": 1088,
-        "method_paragraphs": 6,
-        "evaluation_chars": 0,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "評価説明量 0 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-0e6433180a32--libfile_f105bb85b13c8191bcbe4e4bd32bdb5f--2026-2609.36222-base-batch-expert-removal-cost-research-20261019-0304-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-0e6433180a32--libfile_f105bb85b13c8191bcbe4e4bd32bdb5f--2026-2609.36222-base-batch-expert-removal-cost-research-20261019-0304-scheduled-chat-00-r.json",
-      "worker_run_key": "20261019-0304-scheduled-chat-00/r01"
-    },
-    {
       "canonical_id": "arXiv:2609.32712",
       "title": null,
       "source_url": null,
@@ -5031,8 +5003,8 @@
     },
     {
       "canonical_id": "arXiv:2609.09208",
-      "title": "Shift-Accumulate Attention: Multiplier-Free Query--Key Products for Transformer Decoding",
-      "source_url": "https://arxiv.org/abs/2609.09208",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-19T14:19:40+00:00",
       "return_count": 1,
       "assigned_worker": "scheduled-chat-45",
@@ -5059,8 +5031,8 @@
     },
     {
       "canonical_id": "arXiv:2607.15593",
-      "title": "Scalable LLM Agent Tool Access in the Cloud",
-      "source_url": "https://arxiv.org/html/2607.15593v1",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-19T14:20:20+00:00",
       "return_count": 1,
       "assigned_worker": "scheduled-chat-45",
@@ -5086,8 +5058,8 @@
     },
     {
       "canonical_id": "arXiv:2609.36835",
-      "title": "ARC-KV: Amortizing Anchor Search for Reconstruction-Based KV Cache Compaction",
-      "source_url": "https://arxiv.org/abs/2609.36835",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-19T14:20:21+00:00",
       "return_count": 3,
       "assigned_worker": "scheduled-chat-45",
@@ -5110,6 +5082,61 @@
       },
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_d80701e54e408191b235f9af5909e385--2026-2609.36835-arc-kv-reconstruction-indexer-research-20261019-0304-scheduled-chat-00-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_d80701e54e408191b235f9af5909e385--2026-2609.36835-arc-kv-reconstruction-indexer-research-20261019-0304-scheduled-chat-00-r01.json",
+      "worker_run_key": "20261019-0304-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2607.27269",
+      "title": "Beyond KV Reconstruction: Functional Reconstruction for MLA Draft Models in Speculative Decoding",
+      "source_url": "https://arxiv.org/abs/2607.27269",
+      "returned_at": "2026-10-19T14:28:09+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 165 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5305,
+        "body_paragraphs": 31,
+        "method_chars": 1456,
+        "method_paragraphs": 9,
+        "evaluation_chars": 165,
+        "limitation_chars": 651,
+        "insufficiency_flags": [
+          "評価説明量 165 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_d8f059406c888191b876493fd065742f--2026-2607.27269-functional-mla-draft-reconstruction-research-20261019-1157-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_d8f059406c888191b876493fd065742f--2026-2607.27269-functional-mla-draft-reconstruction-research-20261019-1157-scheduled-chat-00-r01.json",
+      "worker_run_key": "20261019-1157-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2609.34117",
+      "title": "SlimWise: Decoupling Expert Pruning Across Prefill and Decode for Efficient MoE Serving",
+      "source_url": "https://arxiv.org/abs/2609.34117",
+      "returned_at": "2026-10-19T14:29:05+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 0 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 2742,
+        "body_paragraphs": 13,
+        "method_chars": 1179,
+        "method_paragraphs": 6,
+        "evaluation_chars": 0,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "評価説明量 0 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_db482552cb248191802cde437f0ab7fa--2026-2609.34117-slimwise-phase-decoupled-moe-research-20261019-0304-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_db482552cb248191802cde437f0ab7fa--2026-2609.34117-slimwise-phase-decoupled-moe-research-20261019-0304-scheduled-chat-00-r01.json",
       "worker_run_key": "20261019-0304-scheduled-chat-00/r01"
     }
   ]

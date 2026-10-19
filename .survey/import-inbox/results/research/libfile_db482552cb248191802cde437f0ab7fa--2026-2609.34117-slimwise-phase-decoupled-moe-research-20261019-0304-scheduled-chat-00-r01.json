@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "0e503e533fe0db8eb4edbc1344478e1f76c836cc150f2e788347bd94243b2e90",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_db482552cb248191802cde437f0ab7fa--2026-2609.34117-slimwise-phase-decoupled-moe-research-20261019-0304-scheduled-chat-00-r01.md",
+  "canonical_id": "arXiv:2609.34117",
+  "worker_completed_at": "2026-10-19T03:04:00+09:00",
+  "worker_run_key": "20261019-0304-scheduled-chat-00/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 2742,
+    "body_paragraphs": 13,
+    "method_chars": 1179,
+    "method_paragraphs": 6,
+    "evaluation_chars": 0,
+    "limitation_chars": 0,
+    "insufficiency_flags": [
+      "評価説明量 0 < 500",
+      "限界説明量 0 < 推奨 120"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 評価説明量 0 < 500"
+  ],
+  "processed_at": "2026-10-19T14:29:05+00:00"
+}
