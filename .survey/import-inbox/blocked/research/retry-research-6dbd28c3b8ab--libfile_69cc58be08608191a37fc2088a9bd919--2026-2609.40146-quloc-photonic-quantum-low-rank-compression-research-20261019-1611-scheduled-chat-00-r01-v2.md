@@ -28,6 +28,8 @@ code: null
 last_checked: '2026-10-19'
 worker_completed_at: '2026-10-19T16:11:00+09:00'
 worker_run_key: '20261019-1611-scheduled-chat-00/r01'
+last_audited: null
+audit_version: 0
 ---
 
 # QuLoC — 光量子回路で低ランク成分を調節するLLM圧縮
