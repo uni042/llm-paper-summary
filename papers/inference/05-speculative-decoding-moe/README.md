@@ -5,7 +5,7 @@ Speculative decodingで1回のtarget LLM実行から複数tokenを確定し、�
 MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexpert数や重み転送量も増えやすいため、受理されそうなdraftだけを選ぶ、必要expertを先読みする、GPU常駐expertを優先する等の研究も含める。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（175本）
+## 自動生成の論文一覧（176本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -237,6 +237,10 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
 - **2026-09 · [UBTree: Parallel Tree Drafting via Unigram and Bigram Models for Speculative Decoding](2026-2609.39972-ubtree-parallel-tree-drafting-via-unigram-and-bigram-models-for-speculat.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   投機的復号（投機的復号）は軽いドラフトモデルが将来の候補トークンを提案し、大きなターゲットモデルが一度に検証することで自己回帰生成を高速化する。
+
+- **2026-09 · [SEED: Self-Speculative Decoding via Implicit Encoder-Decoder](2026-2609.36590-seed-self-speculative-decoding-via-implicit-encoder-decoder.md)**  
+  実装：[✓](https://github.com/lhk2004/SEED) ・ リポジトリ内被引用：0  
+  投機的復号（投機的復号）は軽い候補生成器で複数トークンを先に提案し、重い対象モデルがまとめて検証することで全層実行の回数を減らす。Qwen3-1.7B-BaseとQwen3-4B-Baseを数学・コード・一般知識・要約の4タスクで微調整し、単一NVIDIA A6000上の貪欲生成で、通常自己回帰生成に対して平均2.6倍および2.7倍の速度向上を報告した。
 
 - **2026-09 · [RheoSampling: Resolving the One-Hot Dilemma in Stochastic Dynamic-Tree Speculative Decoding](2026-2609.21827-rheosampling-resolving-the-one-hot-dilemma-in-stochastic-dynamic-tree-sp.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

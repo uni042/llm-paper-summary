@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-19T06:46:08+00:00",
+  "generated_at": "2026-10-19T06:55:01+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 200,
+  "count": 198,
   "entries": [
     {
       "canonical_id": "DOI:10.1145/3714983.3714987",
@@ -5182,66 +5182,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-cecb63468709--libfile_1cfb40ff275c8191b6f64d40a78a5a5e--2026-2605.17447-fastocr-dynamic-visual-fixation-research-20261019-1130-scheduled-chat-30-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-cecb63468709--libfile_1cfb40ff275c8191b6f64d40a78a5a5e--2026-2605.17447-fastocr-dynamic-visual-fixation-research-20261019-1130-scheduled-chat-30-.json",
       "worker_run_key": "20261019-1130-scheduled-chat-30/r01"
-    },
-    {
-      "canonical_id": "arXiv:2609.36590",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-19T05:54:49+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700",
-        "説明不足トリガー: 評価説明量 491 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 7131,
-        "body_paragraphs": 38,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 491,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700",
-          "評価説明量 491 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-1b3d36a54f8c--libfile_3d7ced3f218881918407f602419aa761--2026-2609.36590-seed-implicit-encoder-decoder-self-speculation-research-20261019-1357-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-1b3d36a54f8c--libfile_3d7ced3f218881918407f602419aa761--2026-2609.36590-seed-implicit-encoder-decoder-self-speculation-research-20261019-1357-sch.json",
-      "worker_run_key": "20261019-1357-scheduled-chat-00/r01"
-    },
-    {
-      "canonical_id": "arXiv:2607.08215",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-19T05:54:50+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700",
-        "説明不足トリガー: 評価説明量 0 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 6577,
-        "body_paragraphs": 38,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 0,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700",
-          "評価説明量 0 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-72f8c0372daa--libfile_efa851f91de48191a7319f48c7c84662--2026-2607.08215-ascend-nongpu-inference-field-study-research-20261019-1357-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-72f8c0372daa--libfile_efa851f91de48191a7319f48c7c84662--2026-2607.08215-ascend-nongpu-inference-field-study-research-20261019-1357-scheduled-chat.json",
-      "worker_run_key": "20261019-1357-scheduled-chat-00/r01"
     },
     {
       "canonical_id": "arXiv:2609.39816",

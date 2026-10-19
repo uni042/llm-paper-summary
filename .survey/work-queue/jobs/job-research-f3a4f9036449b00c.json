@@ -35,10 +35,15 @@
   "selection_reason": "対象。論文はLLM推論時の自己投機的デコードを高速化する手法を提案・評価している。検証時に得た深い文脈KV表現を再利用し、モデル最終層の軽量decoderでdraftを生成するため、推論servingのデコード速度・品質に直接関わる。",
   "semantic_scholar_id": "5900fb325c42fd15406c310e80efefe6fc340223",
   "source_url": "https://arxiv.org/abs/2609.36590",
-  "status": "ready",
+  "status": "superseded",
   "title": "SEED: Self-Speculative Decoding via Implicit Encoder-Decoder",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-10-19T06:55:00+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/05-speculative-decoding-moe/2026-2609.36590-seed-self-speculative-decoding-via-implicit-encoder-decoder.md",
+  "represented_canonical_id": "arXiv:2609.36590",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

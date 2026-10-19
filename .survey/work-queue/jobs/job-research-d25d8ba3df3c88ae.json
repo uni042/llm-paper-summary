@@ -28,10 +28,15 @@
   "selection_reason": "Ascend 910上でMoE/マルチモーダル大規模推論を実運用する際のruntime・operator・parallelism・graph compilation・observability上の制約を実機検証するfield study。vLLM-Ascend/CANNの移植・serving system観点で、GPU以外の推論基盤に関する実証的systems資料として有用。",
   "semantic_scholar_id": "7c6518c81a9476592dc03372076035fcd641d5a7",
   "source_url": "https://arxiv.org/abs/2607.08215",
-  "status": "ready",
+  "status": "superseded",
   "title": "On the Limitations of Non-GPU AI Accelerators for Large-Model Inference: A Field Study of MoE and Multimodal Serving on Huawei Ascend",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-10-19T06:55:00+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.08215-on-the-limitations-of-non-gpu-ai-accelerators-for-large-model-inference-.md",
+  "represented_canonical_id": "arXiv:2607.08215",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
