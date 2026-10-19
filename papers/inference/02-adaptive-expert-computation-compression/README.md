@@ -12,13 +12,13 @@ MoEで毎回同じ数のexpertを実行するのではなく、**token・layer�
 
 ### 注目：直近12か月・リポジトリ内で被引用（2025-11〜2026-10）
 
+- **2026-07 · [PuzzleMoE: Efficient Compression of Large Mixture-of-Experts Models via Fine-Grained Expert Merging and Bit-packed Inference](2025-2511.04805-puzzlemoe-efficient-compression-of-large-mixture-of-experts-models-via-s.md)**  
+  実装：[✓](https://github.com/Supercomputing-System-AI-Lab/PuzzleMoE) ・ リポジトリ内被引用：7  
+  混合専門家モデルの重みを要素ごとに共有・固有成分へ分け、復元用のマスクと符号をBF16指数部へ格納することで、圧縮容量の節約をGPUでの実行速度へ結び付ける。
+
 - **2025-11 · [MoDES: Accelerating Mixture-of-Experts Multimodal Large Language Models via Dynamic Expert Skipping](2025-2511.15690-modes-dynamic-expert-skipping.md)**  
   実装：[✓](https://github.com/ModelTC/MoDES) ・ リポジトリ内被引用：7  
   層重要度のKL較正と画像・テキスト別閾値で、重要なエキスパートだけを残し、高省略率でもマルチモーダル性能を保つ学習不要の動的エキスパート省略法。
-
-- **2026-07 · [PuzzleMoE: Efficient Compression of Large Mixture-of-Experts Models via Fine-Grained Expert Merging and Bit-packed Inference](2025-2511.04805-puzzlemoe-efficient-compression-of-large-mixture-of-experts-models-via-s.md)**  
-  実装：[✓](https://github.com/Supercomputing-System-AI-Lab/PuzzleMoE) ・ リポジトリ内被引用：6  
-  混合専門家モデルの重みを要素ごとに共有・固有成分へ分け、復元用のマスクと符号をBF16指数部へ格納することで、圧縮容量の節約をGPUでの実行速度へ結び付ける。
 
 - **2026-04 · [REAM: Merging Improves Pruning of Experts in LLMs](2026-2604.04356-ream-router-weighted-expert-merging.md)**  
   実装：[✓](https://github.com/SamsungSAILMontreal/ream) ・ リポジトリ内被引用：6  
@@ -269,7 +269,7 @@ MoEで毎回同じ数のexpertを実行するのではなく、**token・layer�
 ### 2年前（2024-11〜2025-10）
 
 - **2024-11 · [MoE-I²: Compressing Mixture of Experts Models through Inter-Expert Pruning and Intra-Expert Low-Rank Decomposition](2024-2411.01016-moe-i2-compressing-mixture-of-experts-models-through-inter-expert-pruning-and-intra-expert-low-rank-decomposition.md)**  
-  実装：[✓](https://github.com/xiaochengsky/MoEI-2) ・ リポジトリ内被引用：37  
+  実装：[✓](https://github.com/xiaochengsky/MoEI-2) ・ リポジトリ内被引用：38  
   MoEの冗長性を「専門家どうし」と「専門家内部」の二段階で削る。層ごとの感度に応じて削除数を変え、遺伝探索（Genetic Search）とブロック横断探索で削除専門家を選んだ後、残存専門家へ重要度に応じた低ランク分解を適用する。
 
 - **2025-10 · [REAP the Experts: Why Pruning Prevails for One-Shot MoE compression](2025-2510.13999-reap-one-shot-moe-compression.md)**  
@@ -304,6 +304,10 @@ MoEで毎回同じ数のexpertを実行するのではなく、**token・layer�
   実装：✓ ・ リポジトリ内被引用：7  
   低重要度エキスパートを削除後、内部ニューロンをセグメントとして互換な残存エキスパートへ再配置・クラスタ統合し、再学習なしで知識を回収するMoE圧縮法。
 
+- **2025-08 · [MoBE: Mixture-of-Basis-Experts for Compressing MoE-based LLMs](2025-2508.05257-mobe-mixture-of-basis-experts.md)**  
+  実装：[✓](https://github.com/inclusionAI/MoBE) ・ リポジトリ内被引用：6  
+  エキスパート固有の小行列と層共有basis行列の組合せでup/gate重みを再構成し、巨大MoEをdata-freeに24〜30%圧縮しながら性能低下を1〜2%程度へ抑える。
+
 - **2025-09 · [LExI: Layer-Adaptive Active Experts for Efficient MoE Model Inference](2025-2509.02753-lexi-layer-adaptive-active-experts-for-efficient-moe-model-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：5  
   重みを削除する枝刈りとは異なり、元の専門家集合は保持する。OLMoE-1B-7Bでは、専門家内部の50%枝刈りと同等の処理率に対し平均正答率が10%高い。
@@ -311,10 +315,6 @@ MoEで毎回同じ数のexpertを実行するのではなく、**token・layer�
 - **2025-09 · [Elastic MoE: Unlocking the Inference-Time Scalability of Mixture-of-Experts](2025-2509.21892-elastic-moe-inference-time-scalability.md)**  
   実装：✓ ・ リポジトリ内被引用：5  
   学習時と異なる活性エキスパート数でも性能が崩れないよう、多様な共活性組合せと階層的ルーター順位を学習し、単一MoEを2〜3倍の推論予算範囲へ弾性化する。
-
-- **2025-08 · [MoBE: Mixture-of-Basis-Experts for Compressing MoE-based LLMs](2025-2508.05257-mobe-mixture-of-basis-experts.md)**  
-  実装：[✓](https://github.com/inclusionAI/MoBE) ・ リポジトリ内被引用：5  
-  エキスパート固有の小行列と層共有basis行列の組合せでup/gate重みを再構成し、巨大MoEをdata-freeに24〜30%圧縮しながら性能低下を1〜2%程度へ抑える。
 
 - **2025-05 · [Faster MoE LLM Inference for Extremely Large Models](2025-2505.03531-faster-moe-llm-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：4  
