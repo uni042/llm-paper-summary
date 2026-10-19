@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-19T11:26:33+00:00",
-  "record_count": 5275,
+  "updated_at": "2026-10-19T11:49:08+00:00",
+  "record_count": 5277,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -81217,9 +81217,9 @@
       "identity_tokens": [
         "arXiv:2205.08084"
       ],
-      "reason": "一次要旨の主目的は商品・コンテンツ推薦の検索、順位付け、説明生成を一つの事前学習モデルで実行する応用である。ただし早期終了、パラメータ共有、剪定による推論時間・モデルサイズ削減にも言及する。LLM推論基盤そのものへの一般化可能性は要旨だけでは明確でないため、無関係と断定せず境界候補とする。",
+      "reason": "産業向け推薦を自然言語の検索・順位付け・説明生成へ統合するM6基盤モデル。遅延相互作用、早期終了、パラメータ共有、枝刈りによりクラウド・端末の推論時間とモデル容量も減らすため効率化との接点は明確だが、中心的寄与は推薦モデルの統合と下流適応であり、汎用LLM推論基盤の新規方式としての範囲は限定的。",
       "first_checked_at": "2026-10-16T17:49:37+00:00",
-      "last_checked_at": "2026-10-16T17:49:37+00:00",
+      "last_checked_at": "2026-10-19T11:49:08+00:00",
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "M6-Rec: Generative Pretrained Language Models are Open-Ended Recommender Systems"
@@ -81879,6 +81879,32 @@
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "Edge-Enhanced Intelligence: A Comprehensive Survey of Large Language Models and Edge-Cloud Computing Synergy"
+    },
+    "arXiv:2602.02050": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2602.02050",
+      "identity_tokens": [
+        "arXiv:2602.02050"
+      ],
+      "reason": "ツール呼出し前後の不確実性低下を報酬信号として使い、疎な結果報酬と密な過程報酬によりエージェントの不要なツール呼出しを抑える。呼出し回数削減は実行効率に寄与する一方、中心は強化学習による行動方策であり、LLM推論エンジンのスケジューリング・キャッシュ・計算機構の改良ではない。",
+      "first_checked_at": "2026-10-19T11:49:05+00:00",
+      "last_checked_at": "2026-10-19T11:49:05+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Rethinking the Role of Entropy in Optimizing Tool-Use Behaviors for Large Language Model Agents"
+    },
+    "arXiv:2511.21285": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2511.21285",
+      "identity_tokens": [
+        "arXiv:2511.21285"
+      ],
+      "reason": "27件の自然言語処理データセットと複数のパラメータ効率的微調整手法を比較する再現可能な評価基盤。推論速度を費用指標へ含む点は関連するが、中心は学習手法・学習メモリ・微調整性能の比較であり、推論サービングを直接最適化する新しい実装機構は要旨で示されない。",
+      "first_checked_at": "2026-10-19T11:49:07+00:00",
+      "last_checked_at": "2026-10-19T11:49:07+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "PEFT-Bench: A Parameter-Efficient Fine-Tuning Methods Benchmark"
     }
   }
 }

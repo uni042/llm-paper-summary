@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-19T11:26:31+00:00",
-  "record_count": 12430,
+  "updated_at": "2026-10-19T11:49:10+00:00",
+  "record_count": 12428,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -162871,11 +162871,11 @@
         "DOI:10.48550/arxiv.2403.09898",
         "arXiv:2403.09898"
       ],
-      "reason": "四つのMambaブロックを用いて多変量時系列の長期予測を行うモデルであり、評価はWeather・Traffic・Electricity等の時系列予測精度、スケーラビリティ、メモリに関するもの。状態空間モデルの線形計算量はLLM設計に間接的な示唆を持つが、生成LLMの推論サーバ、自己回帰復号、KV管理、量子化・GPU実行の改善を直接検証しない。",
+      "reason": "4つのMambaを組み合わせ、チャネル混合と独立処理を多尺度で統合して長期多変量時系列を予測する研究。主要評価は予測精度と時系列入力長に対する効率であり、LLMの生成・サービング・モデル実行時メモリ最適化への直接適用は要旨にない。",
       "first_checked_at": "2026-10-10T21:46:55+00:00",
-      "last_checked_at": "2026-10-18T10:00:23+00:00",
+      "last_checked_at": "2026-10-19T11:49:10+00:00",
       "linked_from": [],
-      "title": "TimeMachine: A Time Series is Worth 4 Mambas for Long-term Forecasting"
+      "title": "TimeMachine: A Time Series is Worth 4 Mambas for Long-Term Forecasting"
     },
     "DOI:10.1145/3452296.3472904": {
       "classification": "unrelated",
@@ -163923,9 +163923,9 @@
         "id:arXiv:2008.05000",
         "url:https://arxiv.org/abs/2008.05000"
       ],
-      "reason": "一次要旨はグラフニューラルネットワーク（GNN）固有の量子化誤差を次数情報で抑える量子化考慮学習を提案する。INT8でのCPU高速化やINT4の精度改善はGNNでの実験であり、LLMの重み・活性化量子化、生成時KV管理、LLM推論基盤を対象としない。",
+      "reason": "次数依存の量子化誤差を抑える学習方式をグラフニューラルネットワーク向けに提案し、INT8/INT4推論を評価する。対象はGNNのグラフ分類・推論であり、LLMの重み量子化、KVキャッシュ、生成復号、サービングを対象としていない。CPU高速化の数値だけではLLM推論基盤への直接貢献とならない。",
       "first_checked_at": "2026-10-11T07:45:44+00:00",
-      "last_checked_at": "2026-10-16T18:54:54+00:00",
+      "last_checked_at": "2026-10-19T11:49:06+00:00",
       "linked_from": [],
       "title": "Degree-Quant: Quantization-Aware Training for Graph Neural Networks"
     },
@@ -164627,20 +164627,6 @@
         "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
       ],
       "title": "When Mamba Meets KAN: A Hybrid Learning Network for Electric Vehicle Charging Demand Prediction"
-    },
-    "arXiv:2511.21285": {
-      "classification": "unrelated",
-      "canonical_id": "arXiv:2511.21285",
-      "identity_tokens": [
-        "DOI:10.18653/v1/2026.eacl-long.140",
-        "arXiv:2511.21285",
-        "semanticscholar:6c8f97f0dbfb37423ddb90075107aba860353d6d"
-      ],
-      "reason": "自己回帰LLMに対するパラメータ効率のよい微調整方式を27のNLPデータセットで比較するベンチマーク。指標に推論速度も含むが、提案の中心は学習可能パラメータ数・学習メモリと性能の評価枠組みであり、新しい推論カーネル・実行スケジューラ・圧縮配信方式を示すものではない。凍結中の学習最適化領域の評価研究として除外する。",
-      "first_checked_at": "2026-10-11T20:48:38+00:00",
-      "last_checked_at": "2026-10-13T14:44:23+00:00",
-      "linked_from": [],
-      "title": "PEFT-Bench: A Parameter-Efficient Fine-Tuning Methods Benchmark"
     },
     "arXiv:2210.13452": {
       "classification": "unrelated",
@@ -178846,9 +178832,9 @@
       "identity_tokens": [
         "arXiv:2602.22663"
       ],
-      "reason": "視覚言語行動モデルの実用性評価ベンチマークと基準モデルを主題とし、LLM推論の計算・メモリ・スケジューリング方式を主題としない。",
+      "reason": "ロボットの視覚言語行動モデルについてCEBenchを構築し、多視点知覚、自己状態トークン化、行動チャンク化を備えるLLaVA-VLAの実機動作を検証する。軽量化・民生GPU配備は論じるが、最終適用先はロボット行動学習と操作成功率であり、LLM推論基盤の共通機構は提案していない。",
       "first_checked_at": "2026-10-16T19:48:13+00:00",
-      "last_checked_at": "2026-10-16T19:48:13+00:00",
+      "last_checked_at": "2026-10-19T11:49:09+00:00",
       "linked_from": [],
       "title": "Rethinking the Practicality of Vision-language-action Model: A Comprehensive Benchmark and An Improved Baseline"
     },
@@ -178899,18 +178885,6 @@
       "last_checked_at": "2026-10-17T03:54:25+00:00",
       "linked_from": [],
       "title": "From Completion to Editing: Unlocking Context-Aware Code Infilling via Search-and-Replace Instruction Tuning"
-    },
-    "arXiv:2602.02050": {
-      "classification": "unrelated",
-      "canonical_id": "arXiv:2602.02050",
-      "identity_tokens": [
-        "arXiv:2602.02050"
-      ],
-      "reason": "一次要旨で、ツール実行前後のエントロピー減少を報酬信号とする強化学習によってエージェントの不要なツール呼出しを削減する研究と確認。72.07%の呼出し削減は学習済み方策の振る舞いの改善であり、推論ランタイムの計算グラフ、GPUスケジューラ、KVキャッシュ、モデル圧縮の新方式を示さない。学習・エージェント行動最適化のため対象外。",
-      "first_checked_at": "2026-10-17T03:54:25+00:00",
-      "last_checked_at": "2026-10-17T03:54:25+00:00",
-      "linked_from": [],
-      "title": "Rethinking the Role of Entropy in Optimizing Tool-Use Behaviors for Large Language Model Agents"
     },
     "arXiv:2601.18496": {
       "classification": "unrelated",
