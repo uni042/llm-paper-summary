@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-19T10:50:09+00:00",
+  "generated_at": "2026-10-19T11:17:18+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -4642,35 +4642,6 @@
       "worker_run_key": "20261018-2330-scheduled-chat-30/r01"
     },
     {
-      "canonical_id": "DOI:10.52202/085713-4569",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-18T15:56:36+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700",
-        "長文定型文の再利用を検出: papers/inference/11-llm-serving-scheduling-disaggregation/2025-600ed7f01044-dynapipe-dynamic-layer-redistribution-for-efficient-serving-of-llms-with.md と 12 段落 / 2687文字 (100.0%) が完全一致"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 6533,
-        "body_paragraphs": 44,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 1444,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-8152ab9a46e1--libfile_0dfdf87f85f881919ca4d839f6a2ef24--2025-doi-10.52202-085713-4569-dynapipe-dynamic-layer-redistribution-research-20261018-2257-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-8152ab9a46e1--libfile_0dfdf87f85f881919ca4d839f6a2ef24--2025-doi-10.52202-085713-4569-dynapipe-dynamic-layer-redistribution-research-20261018-225.json",
-      "worker_run_key": "20261018-2257-scheduled-chat-00/r01"
-    },
-    {
       "canonical_id": "arXiv:2608.26523",
       "title": null,
       "source_url": null,
@@ -5271,6 +5242,31 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-6dbd28c3b8ab--libfile_69cc58be08608191a37fc2088a9bd919--2026-2609.40146-quloc-photonic-quantum-low-rank-compression-research-20261019-1611-scheduled-chat-00-r01-v2.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-6dbd28c3b8ab--libfile_69cc58be08608191a37fc2088a9bd919--2026-2609.40146-quloc-photonic-quantum-low-rank-compression-research-20261019-1611-schedu.json",
       "worker_run_key": "20261019-1611-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "DOI:10.52202/085713-4569",
+      "title": "DynaPipe: Dynamic Layer Redistribution for Efficient Serving of LLMs with Pipeline Parallelism",
+      "source_url": "https://papers.nips.cc/paper_files/paper/2025/file/c80873f613504606542457ad715ac3c3-Paper-Conference.pdf",
+      "returned_at": "2026-10-19T11:13:55+00:00",
+      "return_count": 3,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "長文定型文の再利用を検出: papers/inference/11-llm-serving-scheduling-disaggregation/2025-600ed7f01044-dynapipe-dynamic-layer-redistribution-for-efficient-serving-of-llms-with.md と 12 段落 / 2687文字 (100.0%) が完全一致"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 6533,
+        "body_paragraphs": 44,
+        "method_chars": 2209,
+        "method_paragraphs": 18,
+        "evaluation_chars": 1444,
+        "limitation_chars": 592,
+        "insufficiency_flags": []
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_0dfdf87f85f881919ca4d839f6a2ef24--2025-doi-10.52202-085713-4569-dynapipe-dynamic-layer-redistribution-research-20261018-2257-scheduled-chat-00-r02.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_0dfdf87f85f881919ca4d839f6a2ef24--2025-doi-10.52202-085713-4569-dynapipe-dynamic-layer-redistribution-research-20261018-2257-scheduled-chat-00-r02.json",
+      "worker_run_key": "20261018-2257-scheduled-chat-00/r01"
     }
   ]
 }

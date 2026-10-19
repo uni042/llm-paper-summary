@@ -35,10 +35,15 @@
   "selection_reason": "The abstract adds attention dispersion and redundancy to KV-cache eviction scoring without extra forward passes, then evaluates retained quality across LongBench. This directly optimizes LLM inference memory use.",
   "semantic_scholar_id": "1d917c7987ca6676273e1e3a263765b740b0e541",
   "source_url": "https://arxiv.org/abs/2609.30738",
-  "status": "ready",
+  "status": "superseded",
   "title": "Beyond Mean Attention: Diversity-Aware, Layer-Wise Scoring for KV Cache Eviction",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-10-19T11:17:17+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2609.30738-beyond-mean-attention-diversity-aware-layer-wise-scoring-for-kv-cache-ev.md",
+  "represented_canonical_id": "arXiv:2609.30738",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

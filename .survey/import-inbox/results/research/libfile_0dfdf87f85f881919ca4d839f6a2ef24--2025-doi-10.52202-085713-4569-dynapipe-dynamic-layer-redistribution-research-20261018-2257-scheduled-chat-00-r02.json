@@ -1,13 +1,12 @@
 {
   "schema_version": 1,
   "artifact_type": "research",
-  "status": "imported",
-  "source_sha256": "b1040741465368c928194eb5f7babe644e1b5a698b6a3224be7541955de30cc4",
-  "canonical_id": "DOI:10.52202/085713-4569",
-  "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2025-600ed7f01044-dynapipe-dynamic-layer-redistribution-for-efficient-serving-of-llms-with.md",
-  "lineage": "11-llm-serving-scheduling-disaggregation",
-  "audit_status": "PASS",
+  "status": "blocked_quality",
+  "source_sha256": "7ea41d2ae88245164a8a09f54ed3461eb49867782b4d02c241c0886c84b98eed",
+  "normalized_source_sha256": null,
   "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_0dfdf87f85f881919ca4d839f6a2ef24--2025-doi-10.52202-085713-4569-dynapipe-dynamic-layer-redistribution-research-20261018-2257-scheduled-chat-00-r02.md",
+  "canonical_id": "DOI:10.52202/085713-4569",
   "worker_completed_at": "2026-10-18T23:04:22+09:00",
   "worker_run_key": "20261018-2257-scheduled-chat-00/r01",
   "quality_metrics": {
@@ -20,5 +19,8 @@
     "limitation_chars": 592,
     "insufficiency_flags": []
   },
-  "processed_at": "2026-10-18T15:41:26+00:00"
+  "failures": [
+    "長文定型文の再利用を検出: papers/inference/11-llm-serving-scheduling-disaggregation/2025-600ed7f01044-dynapipe-dynamic-layer-redistribution-for-efficient-serving-of-llms-with.md と 12 段落 / 2687文字 (100.0%) が完全一致"
+  ],
+  "processed_at": "2026-10-19T11:13:55+00:00"
 }
