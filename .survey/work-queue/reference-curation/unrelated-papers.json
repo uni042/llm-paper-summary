@@ -2,7 +2,7 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-19T16:50:39+00:00",
+  "updated_at": "2026-10-19T17:53:01+00:00",
   "record_count": 12431,
   "records": {
     "arXiv:2303.08774": {
@@ -178820,9 +178820,9 @@
       "identity_tokens": [
         "arXiv:2606.15869"
       ],
-      "reason": "動画生成と行動予測を分離した世界行動モデルで、推論時に未来映像生成を省いて自動運転・都市ナビゲーションを高速化する。効率改善はロボット行動生成の専用構造に依存し、汎用言語モデルの推論システム・学習基盤の最適化とは目的と評価対象が異なる。",
+      "reason": "自動運転・都市ナビゲーション用の世界行動モデル。動画生成専門家と行動専門家を非対称注意マスクで分離し、推論時の動画生成を省略するが、主要評価はNAVSIM/CityWalkerの経路計画と実ロボットであり、汎用LLM推論実行基盤・学習基盤の性能最適化ではない。",
       "first_checked_at": "2026-10-16T19:48:13+00:00",
-      "last_checked_at": "2026-10-18T22:46:50+00:00",
+      "last_checked_at": "2026-10-19T17:53:01+00:00",
       "linked_from": [],
       "title": "Metis: A Generalizable and Efficient World-Action Model for Autonomous Driving and Urban Navigation"
     },
