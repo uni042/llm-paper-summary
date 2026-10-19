@@ -42,6 +42,8 @@ worklist_rank: 100
 lineage: '10-kv-cache-offload-recomputation'
 quality_self_review_passed: true
 quality_self_review_version: 'PAPER-QUALITY-GUIDE-2026-10-07'
+last_audited: null
+audit_version: 0
 ---
 
 # KVキャッシュの保存トークン数と精度を同時に最適化する「量子化付き枝刈り」

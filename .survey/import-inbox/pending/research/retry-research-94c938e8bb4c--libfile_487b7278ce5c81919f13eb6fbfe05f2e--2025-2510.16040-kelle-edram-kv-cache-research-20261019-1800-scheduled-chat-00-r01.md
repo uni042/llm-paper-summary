@@ -23,6 +23,8 @@ code: null
 last_checked: '2026-10-19'
 worker_completed_at: '2026-10-19T18:00:00+09:00'
 worker_run_key: '20261019-1800-scheduled-chat-00/r01'
+last_audited: null
+audit_version: 0
 ---
 
 # Kelle：埋込DRAMの更新費用まで含めたKVキャッシュと推論回路の協調設計

@@ -35,10 +35,15 @@
   "selection_reason": "This paper analyzes distributed speculative decoding for LLM inference/serving across edge devices and cloud servers, directly within the survey's inference and serving scope. It compares synchronous and pipelined distributed speculative decoding with co-located speculative decoding and cloud autoregressive decoding, derives bounded latency conditions, and identifies multi-tenant server capacity as the strongest case for offloading draft compute. The paper's capacity result depends on cross-client overlap; its per-request analysis assumes fixed, contention-free service times. It is an analytical study supported by cited measurements from prior systems, not a new end-to-end experimental evaluation.",
   "semantic_scholar_id": "46caef6533311af3a7ca2849bfe8a0b92b0f78ee",
   "source_url": "https://arxiv.org/abs/2606.25091",
-  "status": "ready",
+  "status": "superseded",
   "title": "Speculation at a Distance: Where Edge-Cloud Speculative Decoding Actually Pays Off",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-10-19T12:37:49+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/05-speculative-decoding-moe/2026-2606.25091-speculation-at-a-distance-where-edge-cloud-speculative-decoding-actually.md",
+  "represented_canonical_id": "arXiv:2606.25091",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

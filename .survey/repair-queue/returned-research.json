@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-19T12:28:18+00:00",
+  "generated_at": "2026-10-19T12:37:49+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 195,
+  "count": 194,
   "entries": [
     {
       "canonical_id": "DOI:10.1145/3714983.3714987",
@@ -3496,63 +3496,6 @@
       "worker_run_key": "20261018-0430-scheduled-chat-30/r01"
     },
     {
-      "canonical_id": "arXiv:2606.25091",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-17T19:48:03+00:00",
-      "return_count": 4,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700",
-        "説明不足トリガー: 評価説明量 0 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 7485,
-        "body_paragraphs": 55,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 0,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700",
-          "評価説明量 0 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-4aea1eaf8b4d--libfile_530170eb4b8c8191994ad575028c911c--2026-2606.25091-edge-cloud-speculative-decoding-research-20261018-0358-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-4aea1eaf8b4d--libfile_530170eb4b8c8191994ad575028c911c--2026-2606.25091-edge-cloud-speculative-decoding-research-20261018-0358-scheduled-chat-00-.json",
-      "worker_run_key": "20261018-0358-scheduled-chat-00/r01"
-    },
-    {
-      "canonical_id": "arXiv:2403.07652",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-18T04:49:24+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 0 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 4687,
-        "body_paragraphs": 25,
-        "method_chars": 1741,
-        "method_paragraphs": 9,
-        "evaluation_chars": 0,
-        "limitation_chars": 420,
-        "insufficiency_flags": [
-          "評価説明量 0 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_d61b581226a48191aa7668c65c465ee5--2024-2403.07652-dynamic-routing-moe-research-20261018-1256-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_d61b581226a48191aa7668c65c465ee5--2024-2403.07652-dynamic-routing-moe-research-20261018-1256-scheduled-chat-00-r01.json",
-      "worker_run_key": "20261018-1256-scheduled-chat-00/r01"
-    },
-    {
       "canonical_id": "arXiv:2506.04203",
       "title": null,
       "source_url": null,
@@ -5070,8 +5013,8 @@
     },
     {
       "canonical_id": "arXiv:2510.16040",
-      "title": "Kelle: Co-design KV Caching and eDRAM for Efficient LLM Serving in Edge Computing",
-      "source_url": "https://arxiv.org/abs/2510.16040",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-19T12:26:40+00:00",
       "return_count": 1,
       "assigned_worker": "scheduled-chat-45",
@@ -5098,8 +5041,8 @@
     },
     {
       "canonical_id": "arXiv:2606.00724",
-      "title": "WaveFilter: Enhancing the Long-Context Capability of Diffusion LLMs via Wavelet-Guided KV Cache Filtering",
-      "source_url": "https://arxiv.org/html/2606.00724v1",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-19T12:26:40+00:00",
       "return_count": 1,
       "assigned_worker": "scheduled-chat-45",
@@ -5126,8 +5069,8 @@
     },
     {
       "canonical_id": "arXiv:2412.12706",
-      "title": "More Tokens, Lower Precision: Towards the Optimal Token-Precision Trade-off in KV Cache Compression",
-      "source_url": "https://aclanthology.org/2025.findings-emnlp.429/",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-19T12:27:08+00:00",
       "return_count": 1,
       "assigned_worker": "scheduled-chat-45",
@@ -5150,6 +5093,33 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_4ab65c15c03c81918f51b28afd2bb070--2024-2412.12706-quantized-pruning-token-precision-tradeoff-research-20261019-1930-scheduled-chat-30-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_4ab65c15c03c81918f51b28afd2bb070--2024-2412.12706-quantized-pruning-token-precision-tradeoff-research-20261019-1930-scheduled-chat-30-r01.json",
       "worker_run_key": "20261019-1930-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2510.04147",
+      "title": "Self Speculative Decoding for Diffusion Large Language Models",
+      "source_url": "https://arxiv.org/pdf/2510.04147",
+      "returned_at": "2026-10-19T12:35:55+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 7346,
+        "body_paragraphs": 43,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 542,
+        "limitation_chars": 596,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_531ec7f330248191bf24ee852eae23b4--2025-2510.04147-self-speculative-decoding-dllm-research-20261019-1345-scheduled-chat-45-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_531ec7f330248191bf24ee852eae23b4--2025-2510.04147-self-speculative-decoding-dllm-research-20261019-1345-scheduled-chat-45-r01.json",
+      "worker_run_key": "20261019-1345-scheduled-chat-45/r01"
     }
   ]
 }
