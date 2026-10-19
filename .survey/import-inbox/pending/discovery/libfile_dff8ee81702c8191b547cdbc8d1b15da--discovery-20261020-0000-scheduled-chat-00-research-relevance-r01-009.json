@@ -1,0 +1,26 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261020-0000-scheduled-chat-00/r01/research-prescreen/009",
+  "reference_main_sha": "d00022a61333bd1de3a96faeebfe859f513750d2",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2112.06749",
+      "identity_tokens": [
+        "arxiv:2112.06749"
+      ],
+      "title": "Step-unrolled Denoising Autoencoders for Text Generation",
+      "reason": "一次要旨では、自己回帰を使わず乱数トークン列を反復改善するSUNDAEを提案し、拡散型生成より少ない反復で高品質なサンプルを生成することを主張する。非自己回帰生成と反復回数の削減はLLM推論アルゴリズムに隣接するが、中心は生成モデルの学習方式・機械翻訳品質・無条件生成品質であり、GPU実測の推論処理量や配信ランタイムの直接最適化は要旨から確認できないため境界判定。",
+      "source_url": "https://arxiv.org/abs/2112.06749",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-20T00:10:25+09:00",
+      "last_checked_at": "2026-10-20T00:10:25+09:00",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance",
+      "worklist_rank": 9
+    }
+  ]
+}
