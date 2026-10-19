@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "8111955c170daf5e5019462195098785b38c5f7120fb35390dc6bf1e46a978dd",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/retry-research-45b8a1787fdf--libfile_601765286b1881918ac2420081b49d22--2025-2511.16193-specactor-decoupled-fastest-of-n-speculation-research-20261019-1707-scheduled-chat-00-r01.md",
+  "canonical_id": "arXiv:2511.16193",
+  "worker_completed_at": "2026-10-19T17:07:00+09:00",
+  "worker_run_key": "20261019-1707-scheduled-chat-00/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 5622,
+    "body_paragraphs": 30,
+    "method_chars": 0,
+    "method_paragraphs": 0,
+    "evaluation_chars": 104,
+    "limitation_chars": 0,
+    "insufficiency_flags": [
+      "手法説明量 0 < 700",
+      "評価説明量 104 < 500",
+      "限界説明量 0 < 推奨 120"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 手法説明量 0 < 700",
+    "説明不足トリガー: 評価説明量 104 < 500"
+  ],
+  "processed_at": "2026-10-19T15:25:40+00:00"
+}
