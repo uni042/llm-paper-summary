@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "9c186a4635a2d84a0796f7e8c0fb3fe4195fde3a96231b4cfb993c805a995300",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_3df90a67b4d08191a63c2df79c7d6c91--2025-2512.15586-bolmo-byteification-research-20261019-0445-scheduled-chat-45-r01.md",
+  "canonical_id": "arXiv:2512.15586",
+  "worker_completed_at": "2026-10-19T04:53:00+09:00",
+  "worker_run_key": "20261019-0445-scheduled-chat-45/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 7647,
+    "body_paragraphs": 39,
+    "method_chars": 0,
+    "method_paragraphs": 0,
+    "evaluation_chars": 1455,
+    "limitation_chars": 0,
+    "insufficiency_flags": [
+      "手法説明量 0 < 700",
+      "限界説明量 0 < 推奨 120"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 手法説明量 0 < 700"
+  ],
+  "processed_at": "2026-10-19T12:17:46+00:00"
+}

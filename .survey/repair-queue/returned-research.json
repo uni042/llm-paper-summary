@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-19T12:10:49+00:00",
+  "generated_at": "2026-10-19T12:20:38+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 194,
+  "count": 193,
   "entries": [
     {
       "canonical_id": "DOI:10.1145/3714983.3714987",
@@ -2397,34 +2397,6 @@
       "worker_run_key": "20261016-1645-scheduled-chat-45/r01"
     },
     {
-      "canonical_id": "arXiv:2601.13563",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-16T15:36:26+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 0 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 6855,
-        "body_paragraphs": 38,
-        "method_chars": 2251,
-        "method_paragraphs": 12,
-        "evaluation_chars": 0,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "評価説明量 0 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-6ed199eae8a7--libfile_ca4497c870548191b78d3aeb3d90759c--2026-2601.13563-butterflymoe-ternary-shared-experts-research-20261015-2230-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-6ed199eae8a7--libfile_ca4497c870548191b78d3aeb3d90759c--2026-2601.13563-butterflymoe-ternary-shared-experts-research-20261015-2230-scheduled-chat.json",
-      "worker_run_key": "20261015-2230-scheduled-chat-30/r01"
-    },
-    {
       "canonical_id": "arXiv:2511.07776",
       "title": null,
       "source_url": null,
@@ -2854,35 +2826,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-20261017-metadata-repair--libfile_7ff38bc9dfa481918784791e06d131bc--2026-2606.05711-beyond-tokens-latent-communication-survey.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-20261017-metadata-repair--libfile_7ff38bc9dfa481918784791e06d131bc--2026-2606.05711-beyond-tokens-latent-communication-survey.json",
       "worker_run_key": "20261017-0145-scheduled-chat-45/r01"
-    },
-    {
-      "canonical_id": "arXiv:2608.02625",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-17T15:27:27+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700",
-        "説明不足トリガー: 評価説明量 0 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5428,
-        "body_paragraphs": 29,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 0,
-        "limitation_chars": 559,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700",
-          "評価説明量 0 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-32a7510e26ad--libfile_6cf102c22dd08191bd7aeaa0b0d32143--2026-2608.02625-speculative-correction-diffusion-draft-refine-research-20261017-1030-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-32a7510e26ad--libfile_6cf102c22dd08191bd7aeaa0b0d32143--2026-2608.02625-speculative-correction-diffusion-draft-refine-research-20261017-1030-sche.json",
-      "worker_run_key": "20261017-1030-scheduled-chat-30/r01"
     },
     {
       "canonical_id": "arXiv:2601.10823",
@@ -4929,36 +4872,6 @@
       "worker_run_key": "20261019-1357-scheduled-chat-00/r01"
     },
     {
-      "canonical_id": "arXiv:2605.20982",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-19T05:54:53+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700",
-        "説明不足トリガー: 評価説明量 0 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 7778,
-        "body_paragraphs": 42,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 0,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700",
-          "評価説明量 0 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-808c86c8ed81--libfile_3d7d78e874fc819184f01cc4c9c9bd51--2026-2605.20982-dodoco-moe-routing-dispatch-observatory-research-20261019-1425-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-808c86c8ed81--libfile_3d7d78e874fc819184f01cc4c9c9bd51--2026-2605.20982-dodoco-moe-routing-dispatch-observatory-research-20261019-1425-scheduled-.json",
-      "worker_run_key": "20261019-1425-scheduled-chat-30/r01"
-    },
-    {
       "canonical_id": "DOI:10.13140/RG.2.2.28167.37282",
       "title": null,
       "source_url": null,
@@ -5123,6 +5036,64 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_23aed438311c819192723e8107869d77--2026-2608.00077-visual-provenance-pruning-audit-research-20261019-1256-scheduled-chat-00-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_23aed438311c819192723e8107869d77--2026-2608.00077-visual-provenance-pruning-audit-research-20261019-1256-scheduled-chat-00-r01.json",
       "worker_run_key": "20261019-1256-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2605.20982",
+      "title": "Diagnosing Overhead in Dispatch Operations: Cross-architecture Observatory",
+      "source_url": "https://arxiv.org/abs/2605.20982",
+      "returned_at": "2026-10-19T12:17:45+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700",
+        "説明不足トリガー: 評価説明量 0 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 7778,
+        "body_paragraphs": 42,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 0,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700",
+          "評価説明量 0 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_3d7d78e874fc819184f01cc4c9c9bd51--2026-2605.20982-dodoco-moe-routing-dispatch-observatory-research-20261019-1425-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_3d7d78e874fc819184f01cc4c9c9bd51--2026-2605.20982-dodoco-moe-routing-dispatch-observatory-research-20261019-1425-scheduled-chat-30-r01.json",
+      "worker_run_key": "20261019-1425-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2512.15586",
+      "title": "Bolmo: Byteifying the Next Generation of Language Models",
+      "source_url": "https://arxiv.org/html/2512.15586v2",
+      "returned_at": "2026-10-19T12:17:46+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 7647,
+        "body_paragraphs": 39,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 1455,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_3df90a67b4d08191a63c2df79c7d6c91--2025-2512.15586-bolmo-byteification-research-20261019-0445-scheduled-chat-45-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_3df90a67b4d08191a63c2df79c7d6c91--2025-2512.15586-bolmo-byteification-research-20261019-0445-scheduled-chat-45-r01.json",
+      "worker_run_key": "20261019-0445-scheduled-chat-45/r01"
     }
   ]
 }
