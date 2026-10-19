@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-19T08:44:11+00:00",
-  "record_count": 5269,
+  "updated_at": "2026-10-19T09:51:21+00:00",
+  "record_count": 5271,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -80076,9 +80076,9 @@
         "arXiv:2203.14380",
         "title:pyramid-bert-reducing-complexity-via-successive-core-set-based-token-selection"
       ],
-      "reason": "一次論文の第3〜7節を確認。層ごとにトークン表現のk-center被覆集合を選び、BERTの分類用CLS埋め込みを保ちながらエンコーダ系列長を減らす実行効率化手法。GLUEではBERT-baseの分類・照合課題を対象に3倍高速化時の平均指標80.0対無圧縮81.5を報告する。一方、実験はBERT型の双方向エンコーダとLong Range Arenaの分類課題に限られ、自己回帰LLMのKVキャッシュ・逐次生成・推論サービングへの具体的実装や性能検証はない。汎用Transformerのトークン選択として技術的関連性はあるが、現行のLLM推論システムへの直接的貢献を確認できないためborderlineとする。",
+      "reason": "BERT系エンコーダの分類・ランキング処理に対し、理論的根拠を持つコア集合選択で層を進むごとにトークン数を削減する。Transformer推論計算の削減には直接関係するが、一次要旨の主対象は単一埋込みで予測するエンコーダ課題であり、自己回帰LLMの復号・長文サービング性能は対象外。",
       "first_checked_at": "2026-10-15T03:49:02+00:00",
-      "last_checked_at": "2026-10-15T03:49:02+00:00",
+      "last_checked_at": "2026-10-19T09:51:19+00:00",
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "Pyramid-BERT: Reducing Complexity via Successive Core-set based Token Selection"
@@ -81729,9 +81729,9 @@
       "identity_tokens": [
         "arXiv:2605.05278"
       ],
-      "reason": "論文の有限専門家バンクと相互情報量I(X;T)に対する通信率正則化はMoEルーティングの理論として関連する。しかし本文の主実験はMNIST上の事前学習済みCNN 25個の有限バンクと離散ゲートであり、LLMの専門家並列実行、GPU間トークン通信、推論サーバの実測速度・メモリは評価していない。現行サーベイのMoE推論システムへの直接的寄与が薄いためborderline。",
+      "reason": "MoEの情報理論的なルーティング解析だが、主要な実証はMNIST分類と有限CNN専門家集合を用いる。LLM推論の実装・通信実測・サービング高速化は示されない。将来のルータ設計への理論的参考として保留する。",
       "first_checked_at": "2026-10-19T01:45:57+00:00",
-      "last_checked_at": "2026-10-19T01:45:57+00:00",
+      "last_checked_at": "2026-10-19T09:51:21+00:00",
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "Expert Routing for Communication-Efficient MoE via Finite Expert Banks"
@@ -81781,9 +81781,9 @@
       "identity_tokens": [
         "arXiv:2605.12396"
       ],
-      "reason": "NCCL集合通信に量子化とエントロピー符号化を別層で統合し、装置側の符号化選択と通信・圧縮重畳を実現する。分散LLM推論の通信最適化に応用可能な汎用基盤技術だが、一次要旨の実験は科学計算・学習勾配・合成負荷が中心で、LLM推論サービングへの適用実測は確認できない。",
+      "reason": "GPU集合通信を量子化とエントロピー符号化で高速化するシステム研究。論文本文の実験対象は科学計算、学習勾配、合成通信であり、LLM推論サービングやMoE推論での直接評価はない。分散推論への転用余地はあるが、主対象とは距離がある。",
       "first_checked_at": "2026-10-19T08:44:07+00:00",
-      "last_checked_at": "2026-10-19T08:44:07+00:00",
+      "last_checked_at": "2026-10-19T09:51:20+00:00",
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "NCCLZ: Compression-Enabled GPU Collectives with Decoupled Quantization and Entropy Coding"
@@ -81801,6 +81801,32 @@
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "CARVE: Cross-Slice Anisotropic Reallocation of Visual Evidence for Efficient 3D Medical Volume Understanding"
+    },
+    "arXiv:2206.04685": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2206.04685",
+      "identity_tokens": [
+        "arXiv:2206.04685"
+      ],
+      "reason": "深層ニューラルネットワークの早期終了位置を軽量予測器で事前推定し、残り層数に応じて動作電圧・周波数を調節する推論計算・電力最適化。一般DNNの省計算に技術的関連性はあるが、一次要旨では生成LLM、KVキャッシュ、LLMサービングに固有の評価を確認できない。",
+      "first_checked_at": "2026-10-19T09:51:18+00:00",
+      "last_checked_at": "2026-10-19T09:51:18+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Predictive Exit: Prediction of Fine-Grained Early Exits for Computation- and Energy-Efficient Inference"
+    },
+    "arXiv:2109.01611": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2109.01611",
+      "identity_tokens": [
+        "arXiv:2109.01611"
+      ],
+      "reason": "GPU MPSによる空間分割とSLOを満たす複数モデル推論スケジューリングの基礎研究。評価モデルはGoogLeNet、ResNet50、SSD-MobileNet-V1、VGG-16などの画像認識系であり、LLM固有のKVキャッシュ、自己回帰復号、生成遅延は扱わない。推論基盤一般には有用だがLLMへの直接評価はない。",
+      "first_checked_at": "2026-10-19T09:51:21+00:00",
+      "last_checked_at": "2026-10-19T09:51:21+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Multi-model Machine Learning Inference Serving with GPU Spatial Partitioning"
     }
   }
 }

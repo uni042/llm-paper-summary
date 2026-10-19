@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-19T08:44:11+00:00",
-  "record_count": 12431,
+  "updated_at": "2026-10-19T09:51:21+00:00",
+  "record_count": 12429,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -8912,20 +8912,6 @@
         "workers/discovery-02/ready/20260927-u-wave6/manifest.json#candidate[0]"
       ],
       "title": "ZeRO-Offload: Democratizing Billion-Scale Model Training"
-    },
-    "arXiv:2109.01611": {
-      "classification": "unrelated",
-      "canonical_id": "arXiv:2109.01611",
-      "identity_tokens": [
-        "arXiv:2109.01611"
-      ],
-      "reason": "The paper presents a general multi-model machine-learning inference server and evaluates it on GoogLeNet, LeNet, ResNet-50, SSD-MobileNet and VGG-16, including image/game/traffic workloads. Its gpu-let spatial partitioning improves throughput for these classical ML models, but the primary paper does not target LLM inference, LLM serving, or LLM-specific memory/compute costs. It is outside this LLM-inference-focused scope.",
-      "first_checked_at": "2026-10-03T14:28:52+00:00",
-      "last_checked_at": "2026-10-03T14:28:52+00:00",
-      "linked_from": [
-        "workers/discovery-02/ready/20260927-u-wave8/manifest.json#candidate[7]"
-      ],
-      "title": "Multi-model Machine Learning Inference Serving with GPU Spatial Partitioning"
     },
     "arXiv:2110.14895": {
       "classification": "unrelated",
@@ -176747,18 +176733,6 @@
       ],
       "title": "Mamba for Landslide Detection: A Lightweight Model for Mapping Landslides With Very High-Resolution Images"
     },
-    "arXiv:2206.04685": {
-      "classification": "unrelated",
-      "canonical_id": "arXiv:2206.04685",
-      "identity_tokens": [
-        "arXiv:2206.04685"
-      ],
-      "reason": "一次論文本文の第I〜III節と図1〜2を確認。対象はCNNの画像分類であり、途中の分類器の実行位置を予測して動的電圧・周波数制御でエネルギーを節約する方式。言語モデル、自己回帰復号、KVキャッシュ、LLM学習・推論基盤への実装・評価を扱わず、画像分類用のCNN推論を対象とするため本サーベイの対象外。",
-      "first_checked_at": "2026-10-15T00:46:46+00:00",
-      "last_checked_at": "2026-10-15T00:46:46+00:00",
-      "linked_from": [],
-      "title": "Predictive Exit: Prediction of Fine-Grained Early Exits for Computation- and Energy-Efficient Inference"
-    },
     "arXiv:2601.09473": {
       "classification": "unrelated",
       "canonical_id": "arXiv:2601.09473",
@@ -178968,9 +178942,9 @@
       "identity_tokens": [
         "DOI:10.1007/s11227-026-08777-y"
       ],
-      "reason": "出版社の一次要旨では、対象は多利用者のエッジ環境における一般的な深層ニューラルネットワークの確率的早期終了・モデル分割・計算退避であり、遺伝的アルゴリズムによる分割探索、複数エージェント深層決定論的方策勾配による資源配分、確率駆動スケジューリングを組み合わせる。評価データはImageNet ILSVRC2012で、LLMのトークン生成、KVキャッシュ、MoE、言語モデル推論基盤への適用は要旨と公開書誌から確認できないため、現行のLLM推論サーベイの収録対象外とする。",
+      "reason": "出版社一次要旨では、画像分類など一般DNNの端末・エッジ分割、早期終了確率、遺伝的探索と多主体強化学習による資源割当・サーバ待ち行列最適化を扱う。公開評価はImageNet検証集合と一般DNNの模擬負荷であり、LLM推論基盤固有の処理・評価がなく本サーベイの直接対象外。",
       "first_checked_at": "2026-10-17T20:45:50+00:00",
-      "last_checked_at": "2026-10-17T20:45:50+00:00",
+      "last_checked_at": "2026-10-19T09:51:19+00:00",
       "linked_from": [],
       "title": "DNN task computation offloading and resource allocation optimization strategy based on probabilistic early exit"
     },

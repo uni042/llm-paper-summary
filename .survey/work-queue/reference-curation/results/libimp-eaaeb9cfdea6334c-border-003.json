@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-eaaeb9cfdea6334c-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2109.01611",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2109.01611",
+    "identity_tokens": [
+      "arXiv:2109.01611"
+    ],
+    "reason": "GPU MPSによる空間分割とSLOを満たす複数モデル推論スケジューリングの基礎研究。評価モデルはGoogLeNet、ResNet50、SSD-MobileNet-V1、VGG-16などの画像認識系であり、LLM固有のKVキャッシュ、自己回帰復号、生成遅延は扱わない。推論基盤一般には有用だがLLMへの直接評価はない。",
+    "first_checked_at": "2026-10-19T09:51:21+00:00",
+    "last_checked_at": "2026-10-19T09:51:21+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Multi-model Machine Learning Inference Serving with GPU Spatial Partitioning"
+  },
+  "processed_at": "2026-10-19T09:51:21+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-eaaeb9cfdea6",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

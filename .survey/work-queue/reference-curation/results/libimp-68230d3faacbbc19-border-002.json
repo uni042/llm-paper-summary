@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-68230d3faacbbc19-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2203.14380",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2203.14380",
+    "identity_tokens": [
+      "arXiv:2203.14380",
+      "title:pyramid-bert-reducing-complexity-via-successive-core-set-based-token-selection"
+    ],
+    "reason": "BERT系エンコーダの分類・ランキング処理に対し、理論的根拠を持つコア集合選択で層を進むごとにトークン数を削減する。Transformer推論計算の削減には直接関係するが、一次要旨の主対象は単一埋込みで予測するエンコーダ課題であり、自己回帰LLMの復号・長文サービング性能は対象外。",
+    "first_checked_at": "2026-10-15T03:49:02+00:00",
+    "last_checked_at": "2026-10-19T09:51:19+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Pyramid-BERT: Reducing Complexity via Successive Core-set based Token Selection"
+  },
+  "processed_at": "2026-10-19T09:51:19+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-68230d3faacb",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
