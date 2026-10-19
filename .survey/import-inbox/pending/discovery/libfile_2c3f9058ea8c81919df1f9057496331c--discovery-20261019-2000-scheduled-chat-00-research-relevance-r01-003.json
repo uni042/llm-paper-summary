@@ -1,0 +1,26 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261019-2000-scheduled-chat-00/r01/research-prescreen/003",
+  "reference_main_sha": "eba740a31d2ca7e5a9208e5fd2a02cbb8c4e1b75",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2205.08084",
+      "identity_tokens": [
+        "arxiv:2205.08084"
+      ],
+      "title": "M6-Rec: Generative Pretrained Language Models are Open-Ended Recommender Systems",
+      "reason": "産業向け推薦を自然言語の検索・順位付け・説明生成へ統合するM6基盤モデル。遅延相互作用、早期終了、パラメータ共有、枝刈りによりクラウド・端末の推論時間とモデル容量も減らすため効率化との接点は明確だが、中心的寄与は推薦モデルの統合と下流適応であり、汎用LLM推論基盤の新規方式としての範囲は限定的。",
+      "source_url": "https://arxiv.org/abs/2205.08084",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-19T20:05:38+09:00",
+      "last_checked_at": "2026-10-19T20:05:38+09:00",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance",
+      "worklist_rank": 3
+    }
+  ]
+}
