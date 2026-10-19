@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-19T04:43:32+00:00",
-  "record_count": 5266,
+  "updated_at": "2026-10-19T06:48:02+00:00",
+  "record_count": 5267,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -74182,9 +74182,9 @@
         "id:arXiv:2208.07120",
         "url:https://arxiv.org/abs/2208.07120"
       ],
-      "reason": "原著はCodeBERT/GraphCodeBERT（125M級の双方向符号化器）を対象に、層数・隠れ次元・注意頭数・FFN次元・語彙数を遺伝的アルゴリズムで探索し、教師の予測から蒸留して3MBへ縮小する。CPU上のコード脆弱性予測とコードクローン検出で実推論4.31倍/4.15倍という効率化を示すため圧縮技術として関連する。一方、主対象はIDE向けのBERT系コード分類モデルであり、生成型LLMのデコード、KVキャッシュ、推論サービング、MoEなど本サーベイの中心対象を評価していない。推論への一般化可能性はあるが直接的なLLM推論システム貢献は境界的なのでborderlineとする。",
+      "reason": "コード脆弱性予測・クローン検出向けCodeBERT/GraphCodeBERTの圧縮で推論遅延を削減するが、自己回帰型LLMの生成推論基盤・KVキャッシュ・サービングの改善ではない。モデル圧縮技術の間接的な関連に留まる。",
       "first_checked_at": "2026-10-13T09:49:06+00:00",
-      "last_checked_at": "2026-10-13T09:49:06+00:00",
+      "last_checked_at": "2026-10-19T06:48:02+00:00",
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "Compressing Pre-trained Models of Code into 3 MB"
@@ -81761,6 +81761,19 @@
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "EPARA: Parallelizing Categorized AI Inference in Edge Clouds"
+    },
+    "DOI:10.1145/3600006.3613157": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3600006.3613157",
+      "identity_tokens": [
+        "DOI:10.1145/3600006.3613157"
+      ],
+      "reason": "一般的な遠隔メモリ管理を、プログラム解析・実行プロファイル・コンパイラ最適化で改善するOS研究。GPT-2を含むワークロードはあるが、LLM推論固有のKVキャッシュ管理やモデル配信の提案ではないため境界的。",
+      "first_checked_at": "2026-10-19T06:48:01+00:00",
+      "last_checked_at": "2026-10-19T06:48:01+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Mira: A Program-Behavior-Guided Far Memory System"
     }
   }
 }
