@@ -40,6 +40,8 @@ reference_main_sha: 'c3d27bb474e7ac096442bc021e2b3ad0b32602b1'
 lineage: '11-llm-serving-scheduling-disaggregation'
 quality_self_review_passed: true
 quality_self_review_version: 'PAPER-QUALITY-GUIDE-2026-10-07'
+last_audited: null
+audit_version: 0
 ---
 
 # KVDirect：テンソル単位のRDMA転送と遅延確保によるノード間分離型LLM推論
