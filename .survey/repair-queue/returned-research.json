@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-19T14:47:18+00:00",
+  "generated_at": "2026-10-19T15:04:48+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -2340,35 +2340,6 @@
       "worker_run_key": "20261016-1645-scheduled-chat-45/r01"
     },
     {
-      "canonical_id": "arXiv:2511.07776",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-16T15:36:30+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700",
-        "説明不足トリガー: 評価説明量 204 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5863,
-        "body_paragraphs": 29,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 204,
-        "limitation_chars": 768,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700",
-          "評価説明量 204 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-80d07e638e0b--libfile_22eebea2972481919884d9a25ea43b52--2025-2511.07776-step-streaming-tensor-programs-research-20261016-0030-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-80d07e638e0b--libfile_22eebea2972481919884d9a25ea43b52--2025-2511.07776-step-streaming-tensor-programs-research-20261016-0030-scheduled-chat-30-r.json",
-      "worker_run_key": "20261016-0030-scheduled-chat-30/r01"
-    },
-    {
       "canonical_id": "DOI:10.1145/3689031.3696072",
       "title": null,
       "source_url": null,
@@ -2552,35 +2523,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-20261017-exact--libfile_9315978cffc88191a3c0d963c39a7a28.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-20261017-exact--libfile_9315978cffc88191a3c0d963c39a7a28.json",
       "worker_run_key": "20261017-0130-scheduled-chat-30/r01"
-    },
-    {
-      "canonical_id": "arXiv:2603.01399",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-17T08:38:41+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700",
-        "説明不足トリガー: 評価説明量 0 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5653,
-        "body_paragraphs": 34,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 0,
-        "limitation_chars": 599,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700",
-          "評価説明量 0 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-1dd697b0b847--libfile_a33abd73646c8191b08724f77313f87d--2026-2603.01399-quasar-quantized-verification-speculative-decoding-research-20261017-1130-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-1dd697b0b847--libfile_a33abd73646c8191b08724f77313f87d--2026-2603.01399-quasar-quantized-verification-speculative-decoding-research-20261017-1130.json",
-      "worker_run_key": "20261017-1130-scheduled-chat-30/r01"
     },
     {
       "canonical_id": "arXiv:2511.04063",
@@ -4198,34 +4140,6 @@
       "worker_run_key": "20261019-0201-scheduled-chat-00/r01"
     },
     {
-      "canonical_id": "arXiv:2609.32712",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-18T19:01:40+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 0 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 2846,
-        "body_paragraphs": 15,
-        "method_chars": 1293,
-        "method_paragraphs": 8,
-        "evaluation_chars": 0,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "評価説明量 0 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-d877441197fc--libfile_fc7a9e1147c08191becf1976abba4400--2026-2609.32712-massalloc-attention-postscore-compute-research-20261019-0304-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-d877441197fc--libfile_fc7a9e1147c08191becf1976abba4400--2026-2609.32712-massalloc-attention-postscore-compute-research-20261019-0304-scheduled-ch.json",
-      "worker_run_key": "20261019-0304-scheduled-chat-00/r01"
-    },
-    {
       "canonical_id": "arXiv:2609.30057",
       "title": null,
       "source_url": null,
@@ -5059,8 +4973,8 @@
     },
     {
       "canonical_id": "DOI:10.1007/s40747-025-02200-4",
-      "title": "Multi-tier dynamic storage of KV cache for LLM inference under resource-constrained conditions",
-      "source_url": "https://doi.org/10.1007/s40747-025-02200-4",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-19T14:44:53+00:00",
       "return_count": 1,
       "assigned_worker": "scheduled-chat-45",
@@ -5081,6 +4995,90 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_ef3db7af27908191b1a84e69b821f313--2026-doi-10.1007-s40747-025-02200-4-mtds-multitier-kv-research-20261019-0945-scheduled-chat-45-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_ef3db7af27908191b1a84e69b821f313--2026-doi-10.1007-s40747-025-02200-4-mtds-multitier-kv-research-20261019-0945-scheduled-chat-45-r01.json",
       "worker_run_key": "20261019-0945-scheduled-chat-45/r01"
+    },
+    {
+      "canonical_id": "arXiv:2609.32712",
+      "title": "MassAlloc Attention: Let Attention Allocate Its Own Compute",
+      "source_url": "https://arxiv.org/abs/2609.32712",
+      "returned_at": "2026-10-19T15:01:24+00:00",
+      "return_count": 3,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 444 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 2846,
+        "body_paragraphs": 15,
+        "method_chars": 1293,
+        "method_paragraphs": 8,
+        "evaluation_chars": 444,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "評価説明量 444 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_f2a7af5fa28c81919fafb8f49841dcf6--2026-2609.32712-massalloc-attention-quality-repair-20261019-0345-scheduled-chat-45-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_f2a7af5fa28c81919fafb8f49841dcf6--2026-2609.32712-massalloc-attention-quality-repair-20261019-0345-scheduled-chat-45-r01.json",
+      "worker_run_key": "20261019-0345-scheduled-chat-45/r01"
+    },
+    {
+      "canonical_id": "arXiv:2505.13109",
+      "title": "FreeKV: Boosting KV Cache Retrieval for Efficient LLM Inference",
+      "source_url": "https://arxiv.org/html/2505.13109v5",
+      "returned_at": "2026-10-19T15:02:21+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 189 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 9577,
+        "body_paragraphs": 61,
+        "method_chars": 1475,
+        "method_paragraphs": 9,
+        "evaluation_chars": 189,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "評価説明量 189 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_fa47f440184081918d6d7a6aff04e2c7--2025-2505.13109-freekv-speculative-retrieval-cpu-gpu-layout-research-20261019-1930-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_fa47f440184081918d6d7a6aff04e2c7--2025-2505.13109-freekv-speculative-retrieval-cpu-gpu-layout-research-20261019-1930-scheduled-chat-30-r01.json",
+      "worker_run_key": "20261019-1930-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2609.16450",
+      "title": "Early-Bird Decoding: Accelerating Diffusion LLMs with Learnable Block Sizes and Parallel Sampling",
+      "source_url": "https://arxiv.org/abs/2609.16450",
+      "returned_at": "2026-10-19T15:03:18+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5162,
+        "body_paragraphs": 25,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 1920,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_ff2782011e30819190801b800d59b422--2026-2609.16450-early-bird-decoding-dllm-research-20261019-0400-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_ff2782011e30819190801b800d59b422--2026-2609.16450-early-bird-decoding-dllm-research-20261019-0400-scheduled-chat-00-r01.json",
+      "worker_run_key": "20261019-0400-scheduled-chat-00/r01"
     }
   ]
 }
