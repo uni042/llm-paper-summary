@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-19T19:52:49+00:00",
+  "generated_at": "2026-10-19T19:58:48+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -5076,63 +5076,11 @@
       "worker_run_key": "20261019-0700-scheduled-chat-00/r01"
     },
     {
-      "canonical_id": "arXiv:2511.15098",
-      "title": "A Comprehensive Study on Visual Token Redundancy for Discrete Diffusion-based Multimodal Large Language Models",
-      "source_url": "https://arxiv.org/html/2511.15098v1",
-      "returned_at": "2026-10-19T19:52:07+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "quality_self_review_version が空"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 6395,
-        "body_paragraphs": 34,
-        "method_chars": 1478,
-        "method_paragraphs": 8,
-        "evaluation_chars": 1484,
-        "limitation_chars": 771,
-        "insufficiency_flags": []
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_17f5f52cce7c8191b941f0cb8e9f2728--2025-2511.15098-visual-token-redundancy-diffusion-mllm-research-20261020-0345-scheduled-chat-45-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_17f5f52cce7c8191b941f0cb8e9f2728--2025-2511.15098-visual-token-redundancy-diffusion-mllm-research-20261020-0345-scheduled-chat-45-r01.json",
-      "worker_run_key": "20261020-0345-scheduled-chat-45/r01"
-    },
-    {
-      "canonical_id": "DOI:10.52202/085713-0350",
-      "title": "Accurate KV Cache Eviction via Anchor Direction Projection for Efficient LLM Inference",
-      "source_url": "https://papers.neurips.cc/paper_files/paper/2025/file/0f29157c7613e137834a607075c55e17-Paper-Conference.pdf",
-      "returned_at": "2026-10-19T19:52:48+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 7188,
-        "body_paragraphs": 41,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 2049,
-        "limitation_chars": 513,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_c34f541c5bac819199bd28fca500478f--2025-doi-10.52202-085713-0350-andpro-anchor-direction-projection-research-20261020-0355-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_c34f541c5bac819199bd28fca500478f--2025-doi-10.52202-085713-0350-andpro-anchor-direction-projection-research-20261020-0355-scheduled-chat-00-r01.json",
-      "worker_run_key": "20261020-0355-scheduled-chat-00/r01"
-    },
-    {
       "canonical_id": "arXiv:2506.03781",
       "title": "Unifying Uniform and Binary-coding Quantization for Accurate Compression of Large Language Models",
       "source_url": "https://arxiv.org/html/2506.03781v2",
-      "returned_at": "2026-10-19T19:52:49+00:00",
-      "return_count": 1,
+      "returned_at": "2026-10-19T19:58:47+00:00",
+      "return_count": 2,
       "assigned_worker": "scheduled-chat-30",
       "reason": "blocked_quality",
       "failures": [
@@ -5150,8 +5098,60 @@
           "手法説明量 0 < 700"
         ]
       },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_d859d7654af48191915df5ccfbfd5493--2025-2506.03781-uniquanf-unified-quantization-research-20261020-0355-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_d859d7654af48191915df5ccfbfd5493--2025-2506.03781-uniquanf-unified-quantization-research-20261020-0355-scheduled-chat-00-r01.json",
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-374cbc0dd9f1--libfile_d859d7654af48191915df5ccfbfd5493--2025-2506.03781-uniquanf-unified-quantization-research-20261020-0355-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-374cbc0dd9f1--libfile_d859d7654af48191915df5ccfbfd5493--2025-2506.03781-uniquanf-unified-quantization-research-20261020-0355-scheduled-chat-00-r0.json",
+      "worker_run_key": "20261020-0355-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2511.15098",
+      "title": "A Comprehensive Study on Visual Token Redundancy for Discrete Diffusion-based Multimodal Large Language Models",
+      "source_url": "https://arxiv.org/html/2511.15098v1",
+      "returned_at": "2026-10-19T19:58:47+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "quality_self_review_version が空"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 6395,
+        "body_paragraphs": 34,
+        "method_chars": 1478,
+        "method_paragraphs": 8,
+        "evaluation_chars": 1484,
+        "limitation_chars": 771,
+        "insufficiency_flags": []
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-c10c3e74b136--libfile_17f5f52cce7c8191b941f0cb8e9f2728--2025-2511.15098-visual-token-redundancy-diffusion-mllm-research-20261020-0345-scheduled-chat-45-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-c10c3e74b136--libfile_17f5f52cce7c8191b941f0cb8e9f2728--2025-2511.15098-visual-token-redundancy-diffusion-mllm-research-20261020-0345-scheduled-c.json",
+      "worker_run_key": "20261020-0345-scheduled-chat-45/r01"
+    },
+    {
+      "canonical_id": "DOI:10.52202/085713-0350",
+      "title": "Accurate KV Cache Eviction via Anchor Direction Projection for Efficient LLM Inference",
+      "source_url": "https://papers.neurips.cc/paper_files/paper/2025/file/0f29157c7613e137834a607075c55e17-Paper-Conference.pdf",
+      "returned_at": "2026-10-19T19:58:48+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 7188,
+        "body_paragraphs": 41,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 2049,
+        "limitation_chars": 513,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-ca14d268265e--libfile_c34f541c5bac819199bd28fca500478f--2025-doi-10.52202-085713-0350-andpro-anchor-direction-projection-research-20261020-0355-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-ca14d268265e--libfile_c34f541c5bac819199bd28fca500478f--2025-doi-10.52202-085713-0350-andpro-anchor-direction-projection-research-20261020-0355-s.json",
       "worker_run_key": "20261020-0355-scheduled-chat-00/r01"
     }
   ]

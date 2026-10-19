@@ -30,6 +30,8 @@ implementation: "著者がPyTorch/Hugging Faceによる量子化コードを公�
 last_checked: "2026-10-20"
 worker_completed_at: "2026-10-20T04:02:50+09:00"
 worker_run_key: "20261020-0355-scheduled-chat-00/r01"
+last_audited: null
+audit_version: 0
 ---
 
 # UniQuanF：均一量子化と二進符号量子化の統合

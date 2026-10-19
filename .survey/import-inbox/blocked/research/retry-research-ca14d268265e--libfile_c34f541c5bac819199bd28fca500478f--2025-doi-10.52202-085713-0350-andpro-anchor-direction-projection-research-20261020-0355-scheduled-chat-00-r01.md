@@ -32,6 +32,8 @@ last_checked: "2026-10-20"
 worker_completed_at: "2026-10-20T03:58:28+09:00"
 worker_run_key: "20261020-0355-scheduled-chat-00/r01"
 doi: "10.52202/085713-0350"
+last_audited: null
+audit_version: 0
 ---
 
 # AnDPro：基準方向射影による高精度KVキャッシュ削除
