@@ -1,0 +1,26 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-45",
+  "run_key": "20261019-1245-scheduled-chat-45/r01/research-prescreen/076",
+  "reference_main_sha": "e27f944012f30002bd9c73f82c506073c3d69c90",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2512.06747",
+      "identity_tokens": [
+        "arxiv:2512.06747"
+      ],
+      "title": "PrivLLMSwarm: Privacy-Preserving LLM-Driven UAV Swarms for Secure IoT Surveillance",
+      "reason": "LLMを制御・協調判断に使う無人航空機群のプライバシー保護とIoT監視を扱う。主な貢献は飛行体の協調・セキュリティ用途であり、LLMサービング実行系、GPU推論カーネル、KV管理の性能改善ではない。",
+      "source_url": "https://arxiv.org/abs/2512.06747",
+      "body_check": "title_screen_only; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-10-19T12:48:32+09:00",
+      "last_checked_at": "2026-10-19T12:48:32+09:00",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance",
+      "worklist_rank": 76
+    }
+  ]
+}
