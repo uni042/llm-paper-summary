@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-10-19T01:17:17.882683+00:00",
+  "generated_at": "2026-10-19T11:36:30.946739+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 5,
+  "count": 3,
   "worker_counts": {
-    "scheduled-chat-00": 2,
-    "scheduled-chat-30": 2,
+    "scheduled-chat-00": 1,
+    "scheduled-chat-30": 1,
     "scheduled-chat-45": 1
   },
   "entries": [
@@ -41,7 +41,7 @@
       "file_bytes": 10421,
       "source_sha256": "b567ecd24a6b929729be201f7e450f810d2dc44b6e3a93a7bdcdc5e8a9e40067",
       "source_git_blob_sha": "71fd61aae1645a21c651c0c1fd2998b179dd9bbb",
-      "assigned_worker": "scheduled-chat-00",
+      "assigned_worker": "scheduled-chat-30",
       "semantic_status": "pending",
       "mechanical_status": "FAIL",
       "japanese_ratio": 0.789025,
@@ -77,46 +77,6 @@
         "method_chars": 1072,
         "evaluation_chars": 505,
         "limitation_chars": 0
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2026-2602.02891-tracenas-zero-shot-llm-pruning-via-gradient-trace-correlation.md",
-      "canonical_id": "arXiv:2602.02891",
-      "title": "TraceNAS: Zero-shot LLM Pruning via Gradient Trace Correlation",
-      "file_bytes": 16589,
-      "source_sha256": "0b90d6c8f31d8425bf2f9a8da0429e9f6aace8711ad00e2a8f9561090dfa0334",
-      "source_git_blob_sha": "a2376bc09a12089b20bc85b8fb9d0cab2129afc3",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.963484,
-      "quality_metrics": {
-        "body_chars": 3813,
-        "method_chars": 1324,
-        "evaluation_chars": 720,
-        "limitation_chars": 0
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2024-7a6bf47fa469-hybrid-slm-and-llm-for-edge-cloud-collaborative-inference.md",
-      "canonical_id": "DOI:10.1145/3662006.3662067",
-      "title": "Hybrid SLM and LLM for Edge-Cloud Collaborative Inference",
-      "file_bytes": 17174,
-      "source_sha256": "e2f3ccb138980c5e59ec70588e246b13c0b67bbadb3b872fe3a3acc93461909a",
-      "source_git_blob_sha": "cf42c4a9a9e6d767aa98c7b2a4093e00e9b804b7",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.942696,
-      "quality_metrics": {
-        "body_chars": 4075,
-        "method_chars": 726,
-        "evaluation_chars": 979,
-        "limitation_chars": 527
       },
       "mechanical_failures": [],
       "warnings": []
