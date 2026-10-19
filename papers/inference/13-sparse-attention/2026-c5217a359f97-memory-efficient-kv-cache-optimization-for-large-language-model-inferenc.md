@@ -1,36 +1,64 @@
 ---
-canonical_id: "DOI:10.1109/INFOCOM59046.2026.11571411"
-title: "Memory-Efficient KV Cache Optimization for Large Language Model Inference at the Edge"
+canonical_id: DOI:10.1109/INFOCOM59046.2026.11571411
+title: Memory-Efficient KV Cache Optimization for Large Language Model Inference at the Edge
 authors:
-  - "Chi Zhang"
-  - "Haisheng Tan"
-  - "Haotian Pan"
-  - "Yang Xu"
-  - "Haohua Du"
-  - "Li Zhang"
-  - "Xiaoming Fu"
-published: "2026-06-29"
-publication: "IEEE INFOCOM 2026, DOI:10.1109/INFOCOM59046.2026.11571411"
-publication_type: "conference"
-publication_status: "published"
-source: "https://zhangchi-hfut.github.io/assets/paper/INFOCOM%202026.pdf"
+- Chi Zhang
+- Haisheng Tan
+- Haotian Pan
+- Yang Xu
+- Haohua Du
+- Li Zhang
+- Xiaoming Fu
+published: '2026-06-29'
+publication: IEEE INFOCOM 2026, DOI:10.1109/INFOCOM59046.2026.11571411
+publication_type: conference
+publication_status: published
+source: https://zhangchi-hfut.github.io/assets/paper/INFOCOM%202026.pdf
 sources:
-  - "https://zhangchi-hfut.github.io/assets/paper/INFOCOM%202026.pdf"
-  - "https://doi.org/10.1109/INFOCOM59046.2026.11571411"
-implementation: "Questを基礎とするGPU KVキャッシュ置換方式LiteKVの試作。厳密top-kをわずかに緩和して既存GPUメモリ上の代替ページを優先し、転送・再計算を減らす。原著に公開公式コードURLの明記は見当たらない。"
+- https://zhangchi-hfut.github.io/assets/paper/INFOCOM%202026.pdf
+- https://doi.org/10.1109/INFOCOM59046.2026.11571411
+implementation: Questを基礎とするGPU KVキャッシュ置換方式LiteKVの試作。厳密top-kをわずかに緩和して既存GPUメモリ上の代替ページを優先し、転送・再計算を減らす。原著に公開公式コードURLの明記は見当たらない。
 code: null
-summary: "LiteKVは、GPUメモリ容量Cが制約される長文脈LLM推論で、疎注意が選ぶ厳密なtop-kページの一部を、注意重みが(1+ε)以内で近いGPU常駐ページに置換するオンラインKVキャッシュ管理方式である。Questの疎注意とLRUを組み合わせた基準に比べ、キャッシュ不一致による転送を抑え、条件付きで復号遅延を最大54.84%低減する。KVメモリを最大75%減らしても非制限基準の復号効率の95%を保つと報告するが、εが大きいと検索精度が落ちる。"
-list_summary: "LiteKVはエッジGPUの容量制約下で、厳密top-k疎注意を近似的に緩和してGPU常駐KVページを再利用し、転送費用とメモリ容量を削減するオンライン置換方式。"
-last_checked: "2026-10-20"
-worker_completed_at: "2026-10-20T06:51:00+09:00"
-worker_run_key: "20261020-0645-scheduled-chat-45/r01"
-worker_id: "scheduled-chat-45"
-scheduled_slot: "45"
+summary: LiteKVは、GPUメモリ容量Cが制約される長文脈LLM推論で、疎注意が選ぶ厳密なtop-kページの一部を、注意重みが(1+ε)以内で近いGPU常駐ページに置換するオンラインKVキャッシュ管理方式である。Questの疎注意とLRUを組み合わせた基準に比べ、キャッシュ不一致による転送を抑え、条件付きで復号遅延を最大54.84%低減する。KVメモリを最大75%減らしても非制限基準の復号効率の95%を保つと報告するが、εが大きいと検索精度が落ちる。
+list_summary: LiteKVはエッジGPUの容量制約下で、厳密top-k疎注意を近似的に緩和してGPU常駐KVページを再利用し、転送費用とメモリ容量を削減するオンライン置換方式。
+last_checked: '2026-10-20'
+worker_completed_at: '2026-10-20T06:51:00+09:00'
+worker_run_key: 20261020-0645-scheduled-chat-45/r01
+worker_id: scheduled-chat-45
+scheduled_slot: '45'
 quality_self_review_passed: true
-quality_self_review_version: "PAPER-QUALITY-GUIDE-2026-10-07"
-reference_main_sha: "78ca82de575cd3328b0c69e4858cec95d979fafb"
+quality_self_review_version: PAPER-QUALITY-GUIDE-2026-10-07
+reference_main_sha: 78ca82de575cd3328b0c69e4858cec95d979fafb
 last_audited: null
 audit_version: 0
+references:
+- canonical_id: arXiv:2404.14469
+- canonical_id: arXiv:2406.10774
+  arxiv_id: '2406.10774'
+- canonical_id: arXiv:2408.07092
+  arxiv_id: '2408.07092'
+- canonical_id: arXiv:2502.02770
+  arxiv_id: '2502.02770'
+- canonical_id: arXiv:1911.05507
+  arxiv_id: '1911.05507'
+- canonical_id: arXiv:2308.14508
+  arxiv_id: '2308.14508'
+- canonical_id: arXiv:2309.00071
+  arxiv_id: '2309.00071'
+- canonical_id: arXiv:2307.09288
+  arxiv_id: '2307.09288'
+- canonical_id: arXiv:2104.02112
+  arxiv_id: '2104.02112'
+- canonical_id: arXiv:2401.18079
+- canonical_id: arXiv:2403.05527
+  arxiv_id: '2403.05527'
+- canonical_id: arXiv:2407.08608
+- canonical_id: arXiv:2407.00088
+- canonical_id: arXiv:2502.11089
+  arxiv_id: '2502.11089'
+references_checked_at: '2026-10-19'
+references_source: primary-pdf-reference-section
+references_total: 33
 ---
 
 # LiteKV：エッジLLMの容量制約を考慮したKVキャッシュ置換
