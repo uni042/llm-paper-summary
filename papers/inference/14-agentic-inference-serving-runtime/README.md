@@ -99,6 +99,10 @@
   実装：[✓](https://github.com/hyscale-lab/aries) ・ リポジトリ内被引用：1  
   AriesはLLM推論、ハーネス、状態付きツールを一つのエージェント軌跡として計測し、ツール待ち、長期文脈、サンドボックスの瞬間的な資源需要を同じタスク進捗へ結び付ける実験基盤である。
 
+- **2026-05 · [GraphFlow: A Graph-Based Workflow Management for Efficient LLM-Agent Serving](2026-2605.22566-graphflow-agent-workflow-serving.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  共有操作グラフからエージェント手順を動的生成し、操作単位の差分KV状態で約4倍のメモリ削減を狙うエージェント・サービング基盤。
+
 - **2026-04 · [Scepsy: Serving Agentic Workflows Using Aggregate LLM Pipelines](2026-2604.15186-scepsy-serving-agentic-workflows-using-aggregate-llm-pipelines.md)**  
   実装：[✓](https://github.com/anon/Scepsy) ・ リポジトリ内被引用：1  
   LLMごとの安定した相対負荷を集約パイプライン化し、GPU分数・テンソル並列・複製数・配置を共同探索して任意の複数LLMエージェント処理を効率化する。
@@ -173,10 +177,6 @@
   実装：✓ ・ リポジトリ内被引用：0  
   本論文は、複数のエージェントが道具呼出し（tool calling）を繰り返す大規模言語モデル（LLM）推論で、各ターンの会話履歴がほぼ前ターンの接頭辞になっている点を利用する推論サーバー設計を提案する。
 
-- **2026-05 · [GraphFlow: A Graph-Based Workflow Management for Efficient LLM-Agent Serving](2026-2605.22566-graphflow-agent-workflow-serving.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  共有操作グラフからエージェント手順を動的生成し、操作単位の差分KV状態で約4倍のメモリ削減を狙うエージェント・サービング基盤。
-
 - **2026-05 · [Compiling Agentic Workflows into LLM Weights: Near-Frontier Quality at Two Orders of Magnitude Less Cost](2026-2605.22502-compiling-agentic-workflows-into-llm-weights-near-frontier-quality-at-tw.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   この論文が扱うのは、複雑な業務フローチャートに従う対話型エージェントを、毎回外部の制御プログラムから指示される大規模言語モデルとして実装する必要があるのか、という問題である。別の構成としてフローチャート全体を毎回のシステム入力に含める方法もあるが、手順が長くなるほど入力トークンが増える。
@@ -224,7 +224,7 @@
 ### 2年前（2024-11〜2025-10）
 
 - **2025-07 · [KVFlow: Efficient Prefix Caching for Accelerating LLM-Based Multi-Agent Workflows](2025-2507.07400-kvflow.md)**  
-  実装：✓ ・ リポジトリ内被引用：44  
+  実装：✓ ・ リポジトリ内被引用：45  
   エージェント実行グラフから将来再利用を予測してKV追出しとCPU→GPU先読みを制御し、SGLang HiCache比最大2.19倍高速化。
 
 - **2025-04 · [Mem0: Building Production-Ready AI Agents with Scalable Long-Term Memory](2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md)**  
