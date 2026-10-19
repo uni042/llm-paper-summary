@@ -16,7 +16,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 方向は異なるが、いずれも**KV cacheがdecode時のmemory容量やmemory bandwidthのボトルネックになることを直接緩和する**研究として扱う。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（250本）
+## 自動生成の論文一覧（251本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -55,6 +55,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   実装：[✓](https://github.com/pzs19/TokenSelect) ・ リポジトリ内被引用：6  
   各問い合わせで重要な鍵値をトークン単位に選び、ヘッド軟投票・選択キャッシュ・ページ化内積カーネルで長文脈注意を高精度かつ高速化する。
 
+- **2026-06 · [STAR-KV: Low-Rank KV Cache Compression via Soft Thresholding for Adaptive Rank Control](2026-2606.08382-star-kv-adaptive-low-rank-cache-compression.md)**  
+  実装：[✓](https://github.com/PriyanshBhatnagar/STAR-KV) ・ リポジトリ内被引用：5  
+  特異値の学習可能なしきい値で層・ヘッドごとのKV低ランク次元を自動配分し、鍵/値で異なる分解と低ランク対応混合精度量子化を組み合わせ、強い圧縮を実GPU高速化へつなげる。
+
 - **2026-02 · [SideQuest: Model-Driven KV Cache Management for Long-Horizon Agentic Reasoning](2026-2602.22603-sidequest-model-driven-kv-cache-management-for-long-horizon-agentic-reas.md)**  
   実装：✓ ・ リポジトリ内被引用：5  
   調査エージェントが過去に開いた文書のうち不要になったものを、別の補助推論が意味的に判定し、主推論を止めずにKVキャッシュから削除する。
@@ -70,10 +74,6 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 - **2026-06 · [Value-Aware Stochastic KV Cache Eviction for Reasoning Models](2026-2606.03928-value-aware-stochastic-kv-cache-eviction-for-reasoning-models.md)**  
   実装：[✓](https://github.com/terarachang/VaSE) ・ リポジトリ内被引用：4  
   疎注意（Sparse 注意機構）には、キャッシュ全体を保持して計算対象だけを選ぶ方式と、重要度が低い過去トークンの鍵・値を実際に破棄する方式がある。Qwen3-4BとQwen3-14Bの数学・科学課題では約4倍のKV容量圧縮でも、既存の削除方式より高い平均正答率を得た。
-
-- **2026-06 · [STAR-KV: Low-Rank KV Cache Compression via Soft Thresholding for Adaptive Rank Control](2026-2606.08382-star-kv-adaptive-low-rank-cache-compression.md)**  
-  実装：[✓](https://github.com/PriyanshBhatnagar/STAR-KV) ・ リポジトリ内被引用：4  
-  特異値の学習可能なしきい値で層・ヘッドごとのKV低ランク次元を自動配分し、鍵/値で異なる分解と低ランク対応混合精度量子化を組み合わせ、強い圧縮を実GPU高速化へつなげる。
 
 - **2026-05 · [KVServe: Service-Aware KV Cache Compression for Communication-Efficient Disaggregated LLM Serving](2026-2605.13734-kvserve-service-aware-kv-cache-compression.md)**  
   実装：[✓](https://github.com/hpdps-group/KVServe) ・ リポジトリ内被引用：4  
@@ -134,6 +134,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 - **2026-07 · [KV Cache Translation across Heterogeneous Large Language Models](2026-2607.28979-kv-cache-translation-across-heterogeneous-large-language-models.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
   従来の単一射影や共有潜在空間を介す方式と異なり、MoTは複数の変換器を用意し、トークンごとに適切な変換器を上位K個選択して出力を混合する。Llama-3.2 3B、Gemma-3 4B、Qwen-3 4B間の異種変換を評価し、閉集合質問応答の平均正解率57.6%、抽出型質問応答の平均F1 0.42を報告する。
+
+- **2026-07 · [A JoLT for the KV cache: Near-Lossless KV Cache Compression via Joint Rank-bit Allocation](2026-2607.12550-a-jolt-for-the-kv-cache-near-lossless-kv-cache-compression-via-joint-ran.md)**  
+  実装：[✓](https://github.com/rahulk98/JoLT-Master-Thesis) ・ リポジトリ内被引用：2  
+  従来の低ランク圧縮は保持する特異ベクトル数を決め、量子化は値のビット幅を決めるが、両者を同じメモリ予算の下で同時に配分することは一般的ではなかった。5モデル・4系列の評価では2〜3倍のKV圧縮でパープレキシティ（perplexity）の相対変化を0.2%未満に抑えた。
 
 - **2026-06 · [RedKnot: Efficient Long-Context LLM Serving with Head-Aware KV Reuse and SegPagedAttention](2026-2606.06256-redknot-efficient-long-context-llm-serving-with-head-aware-kv-reuse-and-segpagedattention.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
@@ -834,7 +838,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   Key分布に合わせたチャネル別・RoPE前・非一様・外れ値分離量子化で、3ビットKVを約4.8倍圧縮しつつパープレキシティ悪化0.1未満を実現する。
 
 - **2024-02 · [KIVI: A Tuning-Free Asymmetric 2bit Quantization for KV Cache](2024-2402.02750-kivi.md)**  
-  実装：[✓](https://github.com/jy-yuan/KIVI) ・ リポジトリ内被引用：209  
+  実装：[✓](https://github.com/jy-yuan/KIVI) ・ リポジトリ内被引用：210  
   KIVIは、自己注意の鍵・値キャッシュ（KV キャッシュ）を追加学習なしで2ビットに圧縮する方式である。Llama-2-7Bを用いた単一A100 80GBの実機実験では、ピークメモリ（モデル重みを含む）が最大2.6分の1となり、同程度のメモリ上限で最大4倍のバッチを処理できる。
 
 - **2024-06 · [PyramidKV: Dynamic KV Cache Compression based on Pyramidal Information Funneling](2024-2406.02069-pyramidkv.md)**  
