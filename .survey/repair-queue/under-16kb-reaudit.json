@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-10-19T13:25:12.843501+00:00",
+  "generated_at": "2026-10-19T14:35:34.432773+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 4,
+  "count": 5,
   "worker_counts": {
-    "scheduled-chat-00": 1,
+    "scheduled-chat-00": 2,
     "scheduled-chat-30": 2,
     "scheduled-chat-45": 1
   },
@@ -60,6 +60,26 @@
       "warnings": [
         "日本語比率 78.9% < 警告基準 80%"
       ]
+    },
+    {
+      "path": "papers/inference/99-other-inference-systems/2026-2609.36222-base-batch-aware-selection-of-experts-using-predicted-removal-error-for-.md",
+      "canonical_id": "arXiv:2609.36222",
+      "title": "BASE: Batch-Aware Selection of Experts Using Predicted Removal Error for Efficient MoE Decoding",
+      "file_bytes": 11982,
+      "source_sha256": "44a869d1c90d1a369b656d80e0467370c77bd0d2a2dcbecc51213cf8e939e64e",
+      "source_git_blob_sha": "f13a95b5cfafbfd41ef1881ae6d9a6a3d85352b1",
+      "assigned_worker": "scheduled-chat-00",
+      "semantic_status": "pending",
+      "mechanical_status": "PASS",
+      "japanese_ratio": 0.964433,
+      "quality_metrics": {
+        "body_chars": 2985,
+        "method_chars": 1088,
+        "evaluation_chars": 777,
+        "limitation_chars": 0
+      },
+      "mechanical_failures": [],
+      "warnings": []
     },
     {
       "path": "papers/inference/17-pim-near-data-acceleration/2026-h3-attn.md",
