@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-10-19T11:36:30.946739+00:00",
+  "generated_at": "2026-10-19T13:13:22.844519+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 3,
+  "count": 4,
   "worker_counts": {
     "scheduled-chat-00": 1,
-    "scheduled-chat-30": 1,
+    "scheduled-chat-30": 2,
     "scheduled-chat-45": 1
   },
   "entries": [
@@ -60,6 +60,26 @@
       "warnings": [
         "日本語比率 78.9% < 警告基準 80%"
       ]
+    },
+    {
+      "path": "papers/inference/14-agentic-inference-serving-runtime/2026-2609.32278-rr-evict-fine-grained-prefix-cache-eviction-beyond-lru-for-agentic-llm-s.md",
+      "canonical_id": "arXiv:2609.32278",
+      "title": "RR-Evict: Fine-Grained Prefix Cache Eviction beyond LRU for Agentic LLM Serving",
+      "file_bytes": 12298,
+      "source_sha256": "f97c856dbe9a301324a884b5f647404e1a8b467158cca330286155e81fd81cdf",
+      "source_git_blob_sha": "4936d5574a5933e69eac6bcae14a710d3471a270",
+      "assigned_worker": "scheduled-chat-30",
+      "semantic_status": "pending",
+      "mechanical_status": "PASS",
+      "japanese_ratio": 0.978109,
+      "quality_metrics": {
+        "body_chars": 3026,
+        "method_chars": 1085,
+        "evaluation_chars": 764,
+        "limitation_chars": 0
+      },
+      "mechanical_failures": [],
+      "warnings": []
     },
     {
       "path": "papers/inference/17-pim-near-data-acceleration/2026-h3-attn.md",
