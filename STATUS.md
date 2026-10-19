@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-10-19 18:47:54 JST**
+> 自動生成: **2026-10-19 18:54:01 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -13,9 +13,9 @@
 |---|---:|
 | 収録候補論文数 | **1498** |
 | 未claim Research job | **1498** |
-| 直近24hのResearch処理完了 | **60** |
+| 直近24hのResearch処理完了 | **59** |
 | 最終Research処理完了 | **10-19 14:48:13 JST** |
-| 最終Discovery探索完了 | **10-19 14:45:00 JST** |
+| 最終Discovery探索完了 | **10-19 17:45:00 JST** |
 | 整合性異常 | **0** |
 
 ## 16KB未満論文サマリーの再監査
@@ -56,8 +56,8 @@
 | 未処理Discovery候補 | **121858** |
 | 収録済み | **2610** |
 | Research / Audit候補へ昇格済み | **1235** |
-| 無関係として除外 | **12306** |
-| 微妙として除外 | **5096** |
+| 無関係として除外 | **12304** |
+| 微妙として除外 | **5098** |
 
 ### 探索候補の事前フィルタリング（可逆）
 
@@ -116,7 +116,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **10-19 09:35:05 JST（9時間12分前）** |
+| 最終maintenance完了 | **10-19 09:35:05 JST（9時間18分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **issues_found** |
 | health | **issues_found** |
@@ -136,19 +136,19 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 指標 | 現在値 |
 |---|---:|
-| 直近6hのResearch完了 | **6** |
-| 直近6hのDiscovery run | **1** |
-| 直近6hのDiscovery本文確認・分類 | **3** |
+| 直近6hのResearch完了 | **4** |
+| 直近6hのDiscovery run | **3** |
+| 直近6hのDiscovery本文確認・分類 | **9** |
 | 最終Research完了 | **10-19 14:48:13 JST** |
-| 最終Discovery完了 | **10-19 14:45:00 JST** |
+| 最終Discovery完了 | **10-19 17:45:00 JST** |
 
 ### 最新Library-first run
 
 - Research: **10-19 14:48:13 JST** / worker — / run 20261019-1445-scheduled-chat-45/r01 / 成果 **2件**
   - evidence: .survey/import-inbox/results/research/libfile_2b1e32ead5bc81919001806383375794--2026-2609.36590-seed-implicit-encoder-decoder-self-speculation-quality-repair-20261019-1445-scheduled-chat-45-r01.json
-- Discovery: **10-19 14:45:00 JST** / worker scheduled-chat-45 / run 20261019-1445-scheduled-chat-45/r01/research-prescreen/079-081
+- Discovery: **10-19 17:45:00 JST** / worker scheduled-chat-45 / run 20261019-1745-scheduled-chat-45/r01/research-prescreen/085-090-102
   - 本文確認・分類 **3件** / accept **0件** / unrelated+borderline **3件**
-  - evidence: .survey/import-inbox/results/discovery/libfile_a1eb82710a588191902c58bd6dcf4f09--discovery-20261019-1445-scheduled-chat-45-research-prescreen-r01-079-081.json
+  - evidence: .survey/import-inbox/results/discovery/libfile_65baa027b7a88191b94c4bf16cc89976--discovery-20261019-1745-scheduled-chat-45-research-prescreen-r01-085-090-102.json
 
 ### Codex探索成果の反映状況
 
