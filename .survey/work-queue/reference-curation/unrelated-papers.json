@@ -2,7 +2,7 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-19T15:52:13+00:00",
+  "updated_at": "2026-10-19T16:50:39+00:00",
   "record_count": 12431,
   "records": {
     "arXiv:2303.08774": {
@@ -168362,9 +168362,9 @@
         "id:arXiv:2606.18112",
         "url:https://arxiv.org/abs/2606.18112"
       ],
-      "reason": "ロボットの観測戦略とナビゲーション動作を切り替え可能にする視覚言語行動モデルの技術報告。視覚トークン予算の制御を含むものの、主評価はロボットの空間計画と実環境ナビゲーションであり、LLM汎用推論基盤の効率化を直接対象にしていない。",
+      "reason": "一次要旨はロボット航法向け基盤モデルのタスクモードとカメラごとの視覚トークン予算を外部制御可能にし、航法ベンチマークと実機転移を評価する。視覚トークン予算は効率に関連するが、主眼はロボットの知覚・計画・学習と成功率であり、汎用LLM推論システムへの独立した技術貢献を示さないため対象外。",
       "first_checked_at": "2026-10-13T10:41:38+00:00",
-      "last_checked_at": "2026-10-18T22:46:50+00:00",
+      "last_checked_at": "2026-10-19T16:50:39+00:00",
       "linked_from": [],
       "title": "Qwen-RobotNav Technical Report: A Scalable Navigation Model Designed for an Agentic Navigation System"
     },
@@ -168390,9 +168390,9 @@
         "id:arXiv:2601.08665",
         "url:https://arxiv.org/abs/2601.08665"
       ],
-      "reason": "視覚言語行動モデルによるロボットの長期ナビゲーションが主題。適応的思考連鎖と視覚補助言語記憶は経路計画と実環境への汎化のための機構であり、LLM推論カーネル・サービング・重み圧縮・学習システムの性能改善を直接測定する研究ではない。",
+      "reason": "一次要旨の主題は視覚言語行動モデルのロボット航法、適応的思考、視覚補助言語記憶、航法成功率である。必要時だけ思考を起動する設計は計算量に間接的に関係するが、LLM推論基盤のカーネル・メモリ・サービング性能の独立したシステム改善を検証しないため対象外。",
       "first_checked_at": "2026-10-13T10:42:58+00:00",
-      "last_checked_at": "2026-10-18T22:46:49+00:00",
+      "last_checked_at": "2026-10-19T16:50:38+00:00",
       "linked_from": [],
       "title": "VLingNav: Embodied Navigation with Adaptive Reasoning and Visual-Assisted Linguistic Memory"
     },

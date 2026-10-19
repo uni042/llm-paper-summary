@@ -2,7 +2,7 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-19T15:52:15+00:00",
+  "updated_at": "2026-10-19T16:50:38+00:00",
   "record_count": 5275,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
@@ -70729,9 +70729,9 @@
       "identity_tokens": [
         "arXiv:2601.08815"
       ],
-      "reason": "一次論文の要旨では、LLMエージェントの入出力、トークン・API等の資源予算、時間制約、成功条件を契約として統合し、委譲先予算の保存則を定式化する。反復ワークフローで90%のトークン削減を報告するが、主貢献はアプリケーション層の資源統治であり、GPU推論基盤やモデル学習効率の改善とは区別する。",
+      "reason": "一次要旨はエージェントの入力出力仕様、トークン・時間など多次元資源上限、委任予算の保存則を定式化し、反復ワークフローでトークン90%削減と分散525分の1を報告する。推論資源管理に接続するが、LLM実行器やGPU資源割当の新規アルゴリズムより上位の契約・ガバナンスが中心であるため境界判定。",
       "first_checked_at": "2026-10-11T03:32:19+00:00",
-      "last_checked_at": "2026-10-19T11:26:30+00:00",
+      "last_checked_at": "2026-10-19T16:50:38+00:00",
       "linked_from": [
         ".survey/work-queue/WORKLIST-30.md"
       ],
@@ -81150,9 +81150,9 @@
       "identity_tokens": [
         "arXiv:2602.23368"
       ],
-      "reason": "一次要旨で比較するのは、エージェントに基本的なキーワード検索ツールを与えた質問応答と、ベクトルデータベースを使う検索拡張生成（RAG）の回答品質である。ベクトル索引の常時保持や更新コストを回避できるという運用上の効率性はあるが、GPUサービングの実行時間、KVキャッシュ、量子化、分散推論の実装を最適化する研究ではない。要旨はRAG品質指標の90%以上と述べるが、LLMの推論時間削減倍率を報告していないため境界的な関連と判定する。",
+      "reason": "一次要旨はベクトルDBを用いるRAGと、キーワード検索ツールだけを使うエージェントの回答品質・統合費用を比較し、従来RAGの評価指標の90%以上を達成と報告する。検索基盤の単純化は推論アプリケーションの費用へ関係するが、LLMトークン生成、推論メモリ、GPUスケジューラの改善は扱わないため境界判定。",
       "first_checked_at": "2026-10-16T09:22:42+00:00",
-      "last_checked_at": "2026-10-16T09:22:42+00:00",
+      "last_checked_at": "2026-10-19T16:50:38+00:00",
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "Keyword search is all you need: Achieving RAG-Level Performance without vector databases using agentic tool use"
@@ -81311,9 +81311,9 @@
       "identity_tokens": [
         "arXiv:2601.10120"
       ],
-      "reason": "複数LLMエージェント間の通信グラフを一度で生成し、条件付き・フィードバック・討論の相互作用を設計する。平均性能を1.50%改善しトークン消費を46.41%削減するため推論時の資源効率に関連するが、主な対象はエージェント協調方式であり、GPU推論サービングやモデル内部の高速化ではない。",
+      "reason": "一次要旨はLLMマルチエージェントの複数回対話を単発の通信トポロジ生成へ置換し、トークン消費46.41%減と平均課題性能1.50%改善を報告する。エージェントの推論時トークン費用・遅延に直接関係するが、主な新規性はエージェント間相互作用設計で、GPUサービング・KVキャッシュ・ランタイム最適化ではないため境界判定。",
       "first_checked_at": "2026-10-18T03:52:46+00:00",
-      "last_checked_at": "2026-10-18T22:46:49+00:00",
+      "last_checked_at": "2026-10-19T16:50:37+00:00",
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "TopoDIM: One-shot Topology Generation of Diverse Interaction Modes for Multi-Agent Systems"

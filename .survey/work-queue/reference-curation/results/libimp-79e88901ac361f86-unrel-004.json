@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-79e88901ac361f86-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2606.18112",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2606.18112",
+    "identity_tokens": [
+      "arXiv:2606.18112",
+      "id:arXiv:2606.18112",
+      "url:https://arxiv.org/abs/2606.18112"
+    ],
+    "reason": "一次要旨はロボット航法向け基盤モデルのタスクモードとカメラごとの視覚トークン予算を外部制御可能にし、航法ベンチマークと実機転移を評価する。視覚トークン予算は効率に関連するが、主眼はロボットの知覚・計画・学習と成功率であり、汎用LLM推論システムへの独立した技術貢献を示さないため対象外。",
+    "first_checked_at": "2026-10-13T10:41:38+00:00",
+    "last_checked_at": "2026-10-19T16:50:39+00:00",
+    "linked_from": [],
+    "title": "Qwen-RobotNav Technical Report: A Scalable Navigation Model Designed for an Agentic Navigation System"
+  },
+  "processed_at": "2026-10-19T16:50:39+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-79e88901ac36",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
