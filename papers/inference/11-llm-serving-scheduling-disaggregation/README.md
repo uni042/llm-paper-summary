@@ -3,7 +3,7 @@
 複数requestを複数GPU / nodeで処理するLLM servingについて、request順、batch、prefill / decodeのGPU配分、KV再利用・転送、request移動などを調整し、latencyとresource効率を改善する研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（385本）
+## 自動生成の論文一覧（387本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -640,6 +640,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   処理トークン、文脈長、自己注意の二次項、バッチ規模を使う加法的な区分線形モデルで、共バッチ処理のGPU時間を要求・テナント別へマイクロ秒級で帰属し、VTCより裾誤差を最大4.4倍改善する。
 
+- **2026-08 · [FleetSieve: Decision-Critical Profiling for SLO-Aware LLM Fleet Configuration](2026-2608.19659-fleetsieve-decision-critical-profiling-for-slo-aware-llm-fleet-configura.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  チャット、コード補完など異なる要求系列へ有限のGPUを配分するとき、テンソル並列度（テンソル parallelism; TP）、モデル複製数、要求負荷を変えると、処理容量と遅延の関係が複雑に変化する。ただしコード補完用途では無作為計測などの方が安く、すべての用途で優位な探索方式ではない。
+
 - **2026-08 · [Efficiency and Cost Alignment in Batched LLM Serving via Resource-Fair Scheduling](2026-2608.02244-resource-fair-batched-llm-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   長短要求を同居させたバッチで短い要求まで最大KV量相当の費用を負担する外部性を定式化し、デコード進捗差を制限するISJLを提案。一般のバッチ幅で競争比3/4を保証し、LMSYS再生ではLJFより最大17%高いスループットと21%低い平均遅延を示す。
@@ -823,6 +827,10 @@
 - **2026-05 · [Elastic-dLLM: Position Preserving Context Compression and Augmentation of Diffusion LLMs](2026-2605.18165-elastic-dllm-position-preserving-context-compression-and-augmentation-of.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   Elastic-dLLMは、この計算を削減する一方で、各[MASK]の位置情報と終端位置が持つ意味を維持する、追加学習不要の推論時方式である。LLaDA-1.5でElastic単独1.52倍、Fast-dLLMとの併用7.28倍という速度倍率を報告する。
+
+- **2026-05 · [DarkForest: Less Talk, Higher Accuracy for Multi-Agent LLMs](2026-2605.25188-darkforest-less-talk-higher-accuracy-for-multi-agent-llms.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  複数の大規模言語モデル（LLM）エージェントに同じ質問を解かせ、討論や相互修正を通じて回答を統合する方法は、単一モデルの誤りを発見できる可能性がある。論文は数学、コード生成、一般知識、科学、金融、法律の6ベンチマークで評価し、通信量の多い方式と比較して最大6.5倍のトークン使用量削減を報告する。
 
 - **2026-05 · [C2CServe: Leveraging NVLink-C2C for Elastic Serverless LLM Serving on MIG](2026-2605.19481-c2cserve-serverless-mig-nvlink-c2c.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

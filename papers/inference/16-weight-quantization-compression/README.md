@@ -25,7 +25,7 @@
 - [08-edge-on-device-llm-systems](../08-edge-on-device-llm-systems/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（61本）
+## 自動生成の論文一覧（62本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -279,6 +279,10 @@
 - **2023-08 · [FineQuant: Unlocking Efficiency with Fine-Grained Weight-Only Quantization for LLMs](2023-2308.09723-finequant-unlocking-efficiency-with-fine-grained-weight-only-quantizatio.md)**  
   実装：✓ ・ リポジトリ内被引用：5  
   FineQuantは、大規模言語モデル（Large Language モデル; LLM）の重みだけを低ビット化し、活性値と積和演算は浮動小数点で実行する重み専用量子化（重み-only 量子化）の研究である。最大3.65倍の総処理量改善は、この三番目の複製数増加を含むノード全体の処理量であり、単一要求のトークン生成速度が3.65倍という意味ではない。
+
+- **2023-10 · [E-Sparse: Boosting the Large Language Model Inference through Entropy-based N:M Sparsity](2023-2310.15929-e-sparse-boosting-the-large-language-model-inference-through-entropy-bas.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  こうした制約では重要な重みが同じ4要素のグループに集中すると、どれかを必ず削除しなければならず、言語モデルの品質が下がりやすい。残した重みの値を再学習・再最適化せずに疎性を作り、FasterTransformerへ統合した疎行列積（Sparse-GEMM）で実際の推論を高速化する。
 
 ### 5年前（2021-11〜2022-10）
 

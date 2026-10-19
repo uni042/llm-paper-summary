@@ -35,10 +35,15 @@
   "selection_reason": "LLM推論・配備時のモデル圧縮に直接関係する。SVD低ランク化したTransformer MLP投影を対象に、学習で調整するゲートと二段階再構成・蒸留で精度回復を試み、学習後はゲートを低ランク因子へ畳み込むため量子回路を実行せず古典ハードウェア上で推論できる。推論時の速度向上は測定されておらず、本分類はモデル容量・計算量を変える圧縮機構としての対象性に基づく。",
   "semantic_scholar_id": "5216d877ceee536a115031c78b8e872e1efd3d4b",
   "source_url": "https://arxiv.org/abs/2609.40146",
-  "status": "ready",
+  "status": "superseded",
   "title": "QuLoC: Photonic Quantum-Assisted Low-Rank LLM Compression",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-10-19T12:10:49+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2026-2609.40146-quloc-photonic-quantum-assisted-low-rank-llm-compression.md",
+  "represented_canonical_id": "arXiv:2609.40146",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
