@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-19T15:33:28+00:00",
+  "generated_at": "2026-10-19T15:45:30+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -4252,61 +4252,6 @@
       "worker_run_key": "20261019-1130-scheduled-chat-30/r01"
     },
     {
-      "canonical_id": "arXiv:2608.00077",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-19T11:59:37+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 0 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5338,
-        "body_paragraphs": 31,
-        "method_chars": 1449,
-        "method_paragraphs": 10,
-        "evaluation_chars": 0,
-        "limitation_chars": 459,
-        "insufficiency_flags": [
-          "評価説明量 0 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_23aed438311c819192723e8107869d77--2026-2608.00077-visual-provenance-pruning-audit-research-20261019-1256-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_23aed438311c819192723e8107869d77--2026-2608.00077-visual-provenance-pruning-audit-research-20261019-1256-scheduled-chat-00-r01.json",
-      "worker_run_key": "20261019-1256-scheduled-chat-00/r01"
-    },
-    {
-      "canonical_id": "arXiv:2510.16040",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-19T12:26:40+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 6559,
-        "body_paragraphs": 30,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 805,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_487b7278ce5c81919f13eb6fbfe05f2e--2025-2510.16040-kelle-edram-kv-cache-research-20261019-1800-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_487b7278ce5c81919f13eb6fbfe05f2e--2025-2510.16040-kelle-edram-kv-cache-research-20261019-1800-scheduled-chat-00-r01.json",
-      "worker_run_key": "20261019-1800-scheduled-chat-00/r01"
-    },
-    {
       "canonical_id": "arXiv:2510.04147",
       "title": null,
       "source_url": null,
@@ -4419,33 +4364,6 @@
       "worker_run_key": "20261019-1345-scheduled-chat-45/r01"
     },
     {
-      "canonical_id": "arXiv:2511.06247",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-19T13:49:29+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 216 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 7953,
-        "body_paragraphs": 43,
-        "method_chars": 2988,
-        "method_paragraphs": 16,
-        "evaluation_chars": 216,
-        "limitation_chars": 849,
-        "insufficiency_flags": [
-          "評価説明量 216 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_be5fe8f771f48191ad7b3cb8c47fb260--2025-2511.06247-tetris-chunkwise-dynamic-sequence-parallelism-research-20261019-1900-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_be5fe8f771f48191ad7b3cb8c47fb260--2025-2511.06247-tetris-chunkwise-dynamic-sequence-parallelism-research-20261019-1900-scheduled-chat-00-r01.json",
-      "worker_run_key": "20261019-1900-scheduled-chat-00/r01"
-    },
-    {
       "canonical_id": "arXiv:2607.15593",
       "title": null,
       "source_url": null,
@@ -4471,62 +4389,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_d12b069907748191a4340e9b878b2400--2026-2607.15593-scalable-agent-tool-gateway-research-20261019-1256-scheduled-chat-00-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_d12b069907748191a4340e9b878b2400--2026-2607.15593-scalable-agent-tool-gateway-research-20261019-1256-scheduled-chat-00-r01.json",
       "worker_run_key": "20261019-1256-scheduled-chat-00/r01"
-    },
-    {
-      "canonical_id": "arXiv:2609.34117",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-19T14:29:05+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 0 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 2742,
-        "body_paragraphs": 13,
-        "method_chars": 1179,
-        "method_paragraphs": 6,
-        "evaluation_chars": 0,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "評価説明量 0 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_db482552cb248191802cde437f0ab7fa--2026-2609.34117-slimwise-phase-decoupled-moe-research-20261019-0304-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_db482552cb248191802cde437f0ab7fa--2026-2609.34117-slimwise-phase-decoupled-moe-research-20261019-0304-scheduled-chat-00-r01.json",
-      "worker_run_key": "20261019-0304-scheduled-chat-00/r01"
-    },
-    {
-      "canonical_id": "arXiv:2609.32712",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-19T15:01:24+00:00",
-      "return_count": 3,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 444 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 2846,
-        "body_paragraphs": 15,
-        "method_chars": 1293,
-        "method_paragraphs": 8,
-        "evaluation_chars": 444,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "評価説明量 444 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_f2a7af5fa28c81919fafb8f49841dcf6--2026-2609.32712-massalloc-attention-quality-repair-20261019-0345-scheduled-chat-45-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_f2a7af5fa28c81919fafb8f49841dcf6--2026-2609.32712-massalloc-attention-quality-repair-20261019-0345-scheduled-chat-45-r01.json",
-      "worker_run_key": "20261019-0345-scheduled-chat-45/r01"
     },
     {
       "canonical_id": "arXiv:2505.13109",
@@ -4946,8 +4808,8 @@
     },
     {
       "canonical_id": "arXiv:2601.07878",
-      "title": "Sliced-Wasserstein Distribution Alignment Loss Improves the Ultra-Low-Bit Quantization of Large Language Models",
-      "source_url": "https://arxiv.org/pdf/2601.07878",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-19T15:33:22+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-30",
@@ -4974,8 +4836,8 @@
     },
     {
       "canonical_id": "arXiv:2605.20982",
-      "title": "Diagnosing Overhead in Dispatch Operations: Cross-architecture Observatory",
-      "source_url": "https://arxiv.org/abs/2605.20982",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-19T15:33:24+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-00",
@@ -5004,8 +4866,8 @@
     },
     {
       "canonical_id": "arXiv:2609.16450",
-      "title": "Early-Bird Decoding: Accelerating Diffusion LLMs with Learnable Block Sizes and Parallel Sampling",
-      "source_url": "https://arxiv.org/abs/2609.16450",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-19T15:33:25+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-00",
@@ -5032,8 +4894,8 @@
     },
     {
       "canonical_id": "DOI:10.52202/085713-4569",
-      "title": "DynaPipe: Dynamic Layer Redistribution for Efficient Serving of LLMs with Pipeline Parallelism",
-      "source_url": "https://papers.nips.cc/paper_files/paper/2025/file/c80873f613504606542457ad715ac3c3-Paper-Conference.pdf",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-19T15:33:27+00:00",
       "return_count": 4,
       "assigned_worker": "scheduled-chat-00",
@@ -5057,8 +4919,8 @@
     },
     {
       "canonical_id": "DOI:10.1007/s40747-025-02200-4",
-      "title": "Multi-tier dynamic storage of KV cache for LLM inference under resource-constrained conditions",
-      "source_url": "https://doi.org/10.1007/s40747-025-02200-4",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-19T15:33:28+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-45",
@@ -5079,6 +4941,144 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-8cc4fa2ccd73--libfile_ef3db7af27908191b1a84e69b821f313--2026-doi-10.1007-s40747-025-02200-4-mtds-multitier-kv-research-20261019-0945-scheduled-chat-45-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-8cc4fa2ccd73--libfile_ef3db7af27908191b1a84e69b821f313--2026-doi-10.1007-s40747-025-02200-4-mtds-multitier-kv-research-20261019-0945-scheduled-ch.json",
       "worker_run_key": "20261019-0945-scheduled-chat-45/r01"
+    },
+    {
+      "canonical_id": "arXiv:2609.34117",
+      "title": "SlimWise: Decoupling Expert Pruning Across Prefill and Decode for Efficient MoE Serving",
+      "source_url": "https://arxiv.org/abs/2609.34117",
+      "returned_at": "2026-10-19T15:45:24+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 0 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 2742,
+        "body_paragraphs": 13,
+        "method_chars": 1179,
+        "method_paragraphs": 6,
+        "evaluation_chars": 0,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "評価説明量 0 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-920a2beab8a6--libfile_db482552cb248191802cde437f0ab7fa--2026-2609.34117-slimwise-phase-decoupled-moe-research-20261019-0304-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-920a2beab8a6--libfile_db482552cb248191802cde437f0ab7fa--2026-2609.34117-slimwise-phase-decoupled-moe-research-20261019-0304-scheduled-chat-00-r01.json",
+      "worker_run_key": "20261019-0304-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2510.16040",
+      "title": "Kelle: Co-design KV Caching and eDRAM for Efficient LLM Serving in Edge Computing",
+      "source_url": "https://arxiv.org/abs/2510.16040",
+      "returned_at": "2026-10-19T15:45:25+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 6559,
+        "body_paragraphs": 30,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 805,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-94c938e8bb4c--libfile_487b7278ce5c81919f13eb6fbfe05f2e--2025-2510.16040-kelle-edram-kv-cache-research-20261019-1800-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-94c938e8bb4c--libfile_487b7278ce5c81919f13eb6fbfe05f2e--2025-2510.16040-kelle-edram-kv-cache-research-20261019-1800-scheduled-chat-00-r01.json",
+      "worker_run_key": "20261019-1800-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2511.06247",
+      "title": "Optimizing Long-context LLM Serving via Fine-grained Sequence Parallelism",
+      "source_url": "https://arxiv.org/html/2511.06247v1",
+      "returned_at": "2026-10-19T15:45:26+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 216 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 7953,
+        "body_paragraphs": 43,
+        "method_chars": 2988,
+        "method_paragraphs": 16,
+        "evaluation_chars": 216,
+        "limitation_chars": 849,
+        "insufficiency_flags": [
+          "評価説明量 216 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-a5fb4e7cebf0--libfile_be5fe8f771f48191ad7b3cb8c47fb260--2025-2511.06247-tetris-chunkwise-dynamic-sequence-parallelism-research-20261019-1900-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-a5fb4e7cebf0--libfile_be5fe8f771f48191ad7b3cb8c47fb260--2025-2511.06247-tetris-chunkwise-dynamic-sequence-parallelism-research-20261019-1900-sche.json",
+      "worker_run_key": "20261019-1900-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2608.00077",
+      "title": "Beyond Accuracy: Auditing Spatial Provenance in Visual Token Pruning for OCR-Critical MLLM Inference",
+      "source_url": "https://arxiv.org/abs/2608.00077",
+      "returned_at": "2026-10-19T15:45:28+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 0 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5338,
+        "body_paragraphs": 31,
+        "method_chars": 1449,
+        "method_paragraphs": 10,
+        "evaluation_chars": 0,
+        "limitation_chars": 459,
+        "insufficiency_flags": [
+          "評価説明量 0 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-aa5870966e56--libfile_23aed438311c819192723e8107869d77--2026-2608.00077-visual-provenance-pruning-audit-research-20261019-1256-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-aa5870966e56--libfile_23aed438311c819192723e8107869d77--2026-2608.00077-visual-provenance-pruning-audit-research-20261019-1256-scheduled-chat-00-.json",
+      "worker_run_key": "20261019-1256-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2609.32712",
+      "title": "MassAlloc Attention: Let Attention Allocate Its Own Compute",
+      "source_url": "https://arxiv.org/abs/2609.32712",
+      "returned_at": "2026-10-19T15:45:29+00:00",
+      "return_count": 4,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 444 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 2846,
+        "body_paragraphs": 15,
+        "method_chars": 1293,
+        "method_paragraphs": 8,
+        "evaluation_chars": 444,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "評価説明量 444 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-ab0939fa44c4--libfile_f2a7af5fa28c81919fafb8f49841dcf6--2026-2609.32712-massalloc-attention-quality-repair-20261019-0345-scheduled-chat-45-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-ab0939fa44c4--libfile_f2a7af5fa28c81919fafb8f49841dcf6--2026-2609.32712-massalloc-attention-quality-repair-20261019-0345-scheduled-chat-45-r01.json",
+      "worker_run_key": "20261019-0345-scheduled-chat-45/r01"
     }
   ]
 }

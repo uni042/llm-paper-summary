@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "b15b6c07b420e856bd2abed606b4ddaa6fdaf6a4280be8a2fd3f541f7c274d3d",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/retry-research-94c938e8bb4c--libfile_487b7278ce5c81919f13eb6fbfe05f2e--2025-2510.16040-kelle-edram-kv-cache-research-20261019-1800-scheduled-chat-00-r01.md",
+  "canonical_id": "arXiv:2510.16040",
+  "worker_completed_at": "2026-10-19T18:00:00+09:00",
+  "worker_run_key": "20261019-1800-scheduled-chat-00/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 6559,
+    "body_paragraphs": 30,
+    "method_chars": 0,
+    "method_paragraphs": 0,
+    "evaluation_chars": 805,
+    "limitation_chars": 0,
+    "insufficiency_flags": [
+      "手法説明量 0 < 700",
+      "限界説明量 0 < 推奨 120"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 手法説明量 0 < 700"
+  ],
+  "processed_at": "2026-10-19T15:45:25+00:00"
+}
