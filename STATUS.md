@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-10-20 04:32:16 JST**
+> 自動生成: **2026-10-20 04:52:55 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -13,8 +13,8 @@
 |---|---:|
 | 収録候補論文数 | **1443** |
 | 未claim Research job | **1443** |
-| 直近24hのResearch処理完了 | **76** |
-| 最終Research処理完了 | **10-20 03:02:00 JST** |
+| 直近24hのResearch処理完了 | **78** |
+| 最終Research処理完了 | **10-20 04:40:56 JST** |
 | 最終Discovery探索完了 | **10-20 02:45:00 JST** |
 | 整合性異常 | **0** |
 
@@ -116,7 +116,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **10-19 09:35:05 JST（18時間57分前）** |
+| 最終maintenance完了 | **10-19 09:35:05 JST（19時間17分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **issues_found** |
 | health | **issues_found** |
@@ -136,16 +136,16 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 指標 | 現在値 |
 |---|---:|
-| 直近6hのResearch完了 | **4** |
-| 直近6hのDiscovery run | **15** |
-| 直近6hのDiscovery本文確認・分類 | **21** |
-| 最終Research完了 | **10-20 03:02:00 JST** |
+| 直近6hのResearch完了 | **6** |
+| 直近6hのDiscovery run | **14** |
+| 直近6hのDiscovery本文確認・分類 | **18** |
+| 最終Research完了 | **10-20 04:40:56 JST** |
 | 最終Discovery完了 | **10-20 02:45:00 JST** |
 
 ### 最新Library-first run
 
-- Research: **10-20 03:02:00 JST** / worker — / run 20261020-0256-scheduled-chat-00/r01 / 成果 **2件**
-  - evidence: .survey/import-inbox/results/research/libfile_18addd3e1f3c8191aa5b5f6409d9c120--2025-2506.03700-adadecode-adaptive-layer-parallelism-research-20261020-0256-scheduled-chat-00-r01.json
+- Research: **10-20 04:40:56 JST** / worker — / run 20261020-0430-scheduled-chat-30/r01 / 成果 **2件**
+  - evidence: .survey/import-inbox/results/research/libfile_8b6348b2349c819194137b561ac9ef18--2025-doi-10.1109-cvpr52734.2025.01360-vico-pyramiddrop-visual-token-reduction-research-20261020-0430-scheduled-chat-30.json
 - Discovery: **10-20 02:45:00 JST** / worker scheduled-chat-45 / run 20261020-0245-scheduled-chat-45/r01/research-prescreen/029
   - 本文確認・分類 **1件** / accept **0件** / unrelated+borderline **1件**
   - evidence: .survey/import-inbox/results/discovery/libfile_9ec098a0d7208191adc5f999305cdd36--discovery-20261020-0245-scheduled-chat-45-research-prescreen-r01-029.json
