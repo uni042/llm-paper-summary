@@ -1,0 +1,26 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261019-2000-scheduled-chat-00/r01/research-prescreen/006",
+  "reference_main_sha": "eba740a31d2ca7e5a9208e5fd2a02cbb8c4e1b75",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2403.09898",
+      "identity_tokens": [
+        "arxiv:2403.09898"
+      ],
+      "title": "TimeMachine: A Time Series is Worth 4 Mambas for Long-Term Forecasting",
+      "reason": "4つのMambaを組み合わせ、チャネル混合と独立処理を多尺度で統合して長期多変量時系列を予測する研究。主要評価は予測精度と時系列入力長に対する効率であり、LLMの生成・サービング・モデル実行時メモリ最適化への直接適用は要旨にない。",
+      "source_url": "https://arxiv.org/abs/2403.09898",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-19T20:05:38+09:00",
+      "last_checked_at": "2026-10-19T20:05:38+09:00",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance",
+      "worklist_rank": 6
+    }
+  ]
+}
