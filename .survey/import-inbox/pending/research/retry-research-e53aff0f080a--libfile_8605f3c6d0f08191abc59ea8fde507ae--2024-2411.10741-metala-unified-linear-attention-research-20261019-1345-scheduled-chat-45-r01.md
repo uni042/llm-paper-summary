@@ -38,6 +38,8 @@ reference_main_sha: '9414cbe47cb0c95ed49e30cc0ed61e255084022d'
 lineage: '04-linear-attention-state-space-recurrent'
 quality_self_review_passed: true
 quality_self_review_version: 'PAPER-QUALITY-GUIDE-2026-10-07'
+last_audited: null
+audit_version: 0
 ---
 
 # MetaLA：ソフトマックス注意の機能近似から導くKey不要の線形注意

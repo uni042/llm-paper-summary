@@ -16,7 +16,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 方向は異なるが、いずれも**KV cacheがdecode時のmemory容量やmemory bandwidthのボトルネックになることを直接緩和する**研究として扱う。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（258本）
+## 自動生成の論文一覧（259本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -368,6 +368,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 - **2026-09 · [KVShareArena: KV-Cache Reuse Across Contexts and Model Checkpoints](2026-2609.10266-kvsharearena-cross-context-checkpoint-reuse.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   KVShareArenaは、文脈・チェックポイントをまたぐKV再利用で位置ずれと情報源間相互作用の欠落を分離測定し、補正・再計算・圧縮の品質と費用を共通基準で比較する。
+
+- **2026-09 · [KVCMAS: Efficient KV cache Correction for Shared Context in Multi-Agent Systems](2026-2609.34060-kvcmas-efficient-kv-cache-correction-for-shared-context-in-multi-agent-s.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  完全に再計算すると入力処理が何度も必要になる。一方、先行エージェントのキャッシュを無修正で使うと、注意機構が本来と異なる内部状態を参照して回答品質が大きく落ちる。著者のvLLM実装によるA100 80GBの同時要求試験では、共有文脈32Kトークン、毎秒8要求、キャッシュ再利用率約0.8で、初回トークン待ち時間（TTFT）の中央値が61.95秒であった。
 
 - **2026-09 · [KV-COBRA: KV Cache Compression via Co-Optimized Bit-Rank Allocation](2026-2609.24298-kv-cobra-kv-cache-compression-via-co-optimized-bit-rank-allocation.md)**  
   実装：[✓](https://github.com/seonha01/KV-COBRA) ・ リポジトリ内被引用：0  

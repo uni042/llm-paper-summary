@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-19T13:10:41+00:00",
+  "generated_at": "2026-10-19T13:22:35+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 191,
+  "count": 193,
   "entries": [
     {
       "canonical_id": "DOI:10.1145/3714983.3714987",
@@ -4533,35 +4533,6 @@
       "worker_run_key": "20261019-1145-scheduled-chat-45/r01"
     },
     {
-      "canonical_id": "arXiv:2609.39816",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-19T05:54:51+00:00",
-      "return_count": 4,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700",
-        "説明不足トリガー: 評価説明量 0 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 6256,
-        "body_paragraphs": 36,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 0,
-        "limitation_chars": 398,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700",
-          "評価説明量 0 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-7d6e11698004--libfile_b47bf4082134819199b6d9f7cf1d4763--2026-2609.39816-prefix-invariant-lowprecision-matmul-research-20261019-1357-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-7d6e11698004--libfile_b47bf4082134819199b6d9f7cf1d4763--2026-2609.39816-prefix-invariant-lowprecision-matmul-research-20261019-1357-scheduled-cha.json",
-      "worker_run_key": "20261019-1357-scheduled-chat-00/r01"
-    },
-    {
       "canonical_id": "DOI:10.52202/085713-4569",
       "title": null,
       "source_url": null,
@@ -4956,8 +4927,8 @@
     },
     {
       "canonical_id": "arXiv:2601.07878",
-      "title": "Sliced-Wasserstein Distribution Alignment Loss Improves the Ultra-Low-Bit Quantization of Large Language Models",
-      "source_url": "https://arxiv.org/pdf/2601.07878",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-19T13:08:00+00:00",
       "return_count": 1,
       "assigned_worker": "scheduled-chat-30",
@@ -4984,8 +4955,8 @@
     },
     {
       "canonical_id": "arXiv:2403.11805",
-      "title": "LLM as a System Service on Mobile Devices",
-      "source_url": "https://arxiv.org/html/2403.11805v1",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-19T13:08:02+00:00",
       "return_count": 3,
       "assigned_worker": "scheduled-chat-45",
@@ -5012,8 +4983,8 @@
     },
     {
       "canonical_id": "arXiv:2411.10741",
-      "title": "MetaLA: Unified Optimal Linear Approximation to Softmax Attention Map",
-      "source_url": "https://arxiv.org/pdf/2411.10741",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-19T13:08:03+00:00",
       "return_count": 3,
       "assigned_worker": "scheduled-chat-45",
@@ -5036,6 +5007,86 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_8605f3c6d0f08191abc59ea8fde507ae--2024-2411.10741-metala-unified-linear-attention-research-20261019-1345-scheduled-chat-45-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_8605f3c6d0f08191abc59ea8fde507ae--2024-2411.10741-metala-unified-linear-attention-research-20261019-1345-scheduled-chat-45-r01.json",
       "worker_run_key": "20261019-1345-scheduled-chat-45/r01"
+    },
+    {
+      "canonical_id": "arXiv:2608.24664",
+      "title": "Maia 200: A Software Defined Dataflow System for Large-scale AI Acceleration",
+      "source_url": "https://arxiv.org/pdf/2608.24664",
+      "returned_at": "2026-10-19T13:20:21+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 0 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 4761,
+        "body_paragraphs": 28,
+        "method_chars": 1712,
+        "method_paragraphs": 10,
+        "evaluation_chars": 0,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "評価説明量 0 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_872fbd15c1848191aec35718aa7ad4c8--2026-2608.24664-maia200-software-defined-dataflow-research-20261019-0700-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_872fbd15c1848191aec35718aa7ad4c8--2026-2608.24664-maia200-software-defined-dataflow-research-20261019-0700-scheduled-chat-00-r01.json",
+      "worker_run_key": "20261019-0700-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "DOI:10.1145/3800690",
+      "title": "Enabling Low-Latency, GPU-Efficient Serverless Inference with Model Swapping",
+      "source_url": "https://doi.org/10.1145/3800690",
+      "returned_at": "2026-10-19T13:20:44+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "quality_self_review_version が空"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 6924,
+        "body_paragraphs": 36,
+        "method_chars": 1991,
+        "method_paragraphs": 10,
+        "evaluation_chars": 1803,
+        "limitation_chars": 787,
+        "insufficiency_flags": []
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_8f7cafaa55588191b59c7d24bb0af61f--2026-doi-10.1145-3800690-torpor-serverless-model-swapping-research-20261019-0945-scheduled-chat-45-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_8f7cafaa55588191b59c7d24bb0af61f--2026-doi-10.1145-3800690-torpor-serverless-model-swapping-research-20261019-0945-scheduled-chat-45-r01.json",
+      "worker_run_key": "20261019-0945-scheduled-chat-45/r01"
+    },
+    {
+      "canonical_id": "arXiv:2609.39816",
+      "title": "Beyond Accuracy: Prefix-Invariant Realizations of Low-Precision Fast Matrix Multiplication",
+      "source_url": "https://arxiv.org/html/2609.39816",
+      "returned_at": "2026-10-19T13:20:45+00:00",
+      "return_count": 5,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 439 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 6256,
+        "body_paragraphs": 36,
+        "method_chars": 2668,
+        "method_paragraphs": 18,
+        "evaluation_chars": 439,
+        "limitation_chars": 398,
+        "insufficiency_flags": [
+          "評価説明量 439 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_912bc504fa948191b2971da439b15671--2026-2609.39816-prefix-invariant-lowprecision-matmul-quality-repair-20261019-1445-scheduled-chat-45-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_912bc504fa948191b2971da439b15671--2026-2609.39816-prefix-invariant-lowprecision-matmul-quality-repair-20261019-1445-scheduled-chat-45-r01.json",
+      "worker_run_key": "20261019-1445-scheduled-chat-45/r01"
     }
   ]
 }
