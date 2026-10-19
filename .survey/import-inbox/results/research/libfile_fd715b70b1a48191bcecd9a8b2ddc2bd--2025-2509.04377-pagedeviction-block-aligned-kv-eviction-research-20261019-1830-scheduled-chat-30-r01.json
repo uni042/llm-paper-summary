@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "29cc4d7b102de051afefbdb5ea450ff5564833dcce49df7d0a1ac677e5bceaf7",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_fd715b70b1a48191bcecd9a8b2ddc2bd--2025-2509.04377-pagedeviction-block-aligned-kv-eviction-research-20261019-1830-scheduled-chat-30-r01.md",
+  "canonical_id": "arXiv:2509.04377",
+  "worker_completed_at": "2026-10-19T18:30:00+09:00",
+  "worker_run_key": "20261019-1830-scheduled-chat-30/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 7401,
+    "body_paragraphs": 40,
+    "method_chars": 0,
+    "method_paragraphs": 0,
+    "evaluation_chars": 130,
+    "limitation_chars": 824,
+    "insufficiency_flags": [
+      "手法説明量 0 < 700",
+      "評価説明量 130 < 500"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 手法説明量 0 < 700",
+    "説明不足トリガー: 評価説明量 130 < 500"
+  ],
+  "processed_at": "2026-10-19T09:47:49+00:00"
+}
