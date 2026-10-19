@@ -25,6 +25,8 @@ code: 'https://github.com/xhx1022/DynaPipe'
 last_checked: '2026-10-18'
 worker_completed_at: '2026-10-18T23:04:22+09:00'
 worker_run_key: '20261018-2257-scheduled-chat-00/r01'
+last_audited: null
+audit_version: 0
 ---
 
 # DynaPipe：サンプリング負荷を考慮したパイプライン層再配置
