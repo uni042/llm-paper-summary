@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-1287329a5087d548-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2605.11856",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2605.11856",
+    "identity_tokens": [
+      "arXiv:2605.11856"
+    ],
+    "reason": "画像・文章の推論過程を共通視覚キャンバスへ描画し潜在視覚トークンへ圧縮する多模態推論手法。生成する推論トークンを減らす計算効率への接点はあるが、中心は視覚推論品質と推論表現の学習であり、LLM配信ランタイムやGPU資源管理ではない。",
+    "first_checked_at": "2026-10-17T05:04:58+00:00",
+    "last_checked_at": "2026-10-19T17:54:36+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "UniVLR: Unifying Text and Vision in Visual Latent Reasoning for Multimodal LLMs"
+  },
+  "processed_at": "2026-10-19T17:54:37+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-1287329a5087",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

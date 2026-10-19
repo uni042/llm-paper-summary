@@ -2,7 +2,7 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-19T17:53:02+00:00",
+  "updated_at": "2026-10-19T17:54:39+00:00",
   "record_count": 5276,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
@@ -81258,7 +81258,7 @@
       ],
       "reason": "画像・文章の推論過程を共通視覚キャンバスへ描画し潜在視覚トークンへ圧縮する多模態推論手法。生成する推論トークンを減らす計算効率への接点はあるが、中心は視覚推論品質と推論表現の学習であり、LLM配信ランタイムやGPU資源管理ではない。",
       "first_checked_at": "2026-10-17T05:04:58+00:00",
-      "last_checked_at": "2026-10-19T17:53:02+00:00",
+      "last_checked_at": "2026-10-19T17:54:36+00:00",
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "UniVLR: Unifying Text and Vision in Visual Latent Reasoning for Multimodal LLMs"
@@ -81809,7 +81809,7 @@
       ],
       "reason": "SigLIP-VQで視覚入力を離散化し、MoE型拡散言語モデルと画像復元器を統合する基盤モデル。接頭辞認識の最適化と少ステップ蒸留による生成高速化はサーベイに関係するが、主要目的は多模態理解・画像生成統合とモデル学習であり、実行基盤最適化の研究とは区別する。",
       "first_checked_at": "2026-10-19T11:26:28+00:00",
-      "last_checked_at": "2026-10-19T17:53:02+00:00",
+      "last_checked_at": "2026-10-19T17:54:39+00:00",
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "LLaDA2.0-Uni: Unifying Multimodal Understanding and Generation with Diffusion Large Language Model"
@@ -81887,7 +81887,7 @@
       ],
       "reason": "視覚マルチエージェント間で知覚と推論の二種類の潜在メモリを共有し、エントロピー駆動の選択的呼出で通信トークンを21.3～44.8%削減する。エージェント推論費用の低減には関係するが、主な評価は視覚協調タスクの精度・トークン数で、汎用LLMサービング基盤の設計ではない。",
       "first_checked_at": "2026-10-19T17:53:01+00:00",
-      "last_checked_at": "2026-10-19T17:53:01+00:00",
+      "last_checked_at": "2026-10-19T17:54:38+00:00",
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "Dual Latent Memory for Visual Multi-agent System"
