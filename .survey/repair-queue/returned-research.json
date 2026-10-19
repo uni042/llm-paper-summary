@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-19T22:33:32+00:00",
+  "generated_at": "2026-10-19T23:54:37+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 195,
+  "count": 198,
   "entries": [
     {
       "canonical_id": "DOI:10.1145/3714983.3714987",
@@ -5125,6 +5125,92 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-ab05f2db5c29--libfile_55c50a006558819194c62c6278b2009a--2026-2606.00724-wavefilter-wavelet-kv-cache-research-20261020-0608-scheduled-chat-00-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-ab05f2db5c29--libfile_55c50a006558819194c62c6278b2009a--2026-2606.00724-wavefilter-wavelet-kv-cache-research-20261020-0608-scheduled-chat-00-r01.json",
       "worker_run_key": "20261020-0608-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2501.01144",
+      "title": "BlockDialect: Block-wise Fine-grained Mixed Format Quantization for Energy-Efficient LLM Inference",
+      "source_url": "https://arxiv.org/abs/2501.01144",
+      "returned_at": "2026-10-19T23:54:34+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700",
+        "説明不足トリガー: 評価説明量 193 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 6741,
+        "body_paragraphs": 34,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 193,
+        "limitation_chars": 588,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700",
+          "評価説明量 193 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_9ff55cc3467481918c74054dfc3c928a--2025-2501.01144-blockdialect-mixed-format-quantization-research-20261020-0703-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_9ff55cc3467481918c74054dfc3c928a--2025-2501.01144-blockdialect-mixed-format-quantization-research-20261020-0703-scheduled-chat-00-r01.json",
+      "worker_run_key": "20261020-0703-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2604.23475",
+      "title": "Supernodes and Halos: Loss-Critical Hubs in LLM Feed-Forward Layers",
+      "source_url": "https://arxiv.org/html/2604.23475v2",
+      "returned_at": "2026-10-19T23:54:36+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 6521,
+        "body_paragraphs": 37,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 593,
+        "limitation_chars": 421,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_ca08ea967c1c81919ec1d31986c49220--2026-2604.23475-supernodes-halos-scar-structured-ffn-pruning-research-20261020-0745-scheduled-chat-45-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_ca08ea967c1c81919ec1d31986c49220--2026-2604.23475-supernodes-halos-scar-structured-ffn-pruning-research-20261020-0745-scheduled-chat-45-r01.json",
+      "worker_run_key": "20261020-0745-scheduled-chat-45/r01"
+    },
+    {
+      "canonical_id": "arXiv:2412.00556",
+      "title": "Accelerating Multimodal Large Language Models by Searching Optimal Vision Token Reduction",
+      "source_url": "https://arxiv.org/abs/2412.00556",
+      "returned_at": "2026-10-19T23:54:37+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700",
+        "説明不足トリガー: 評価説明量 122 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 6305,
+        "body_paragraphs": 38,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 122,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700",
+          "評価説明量 122 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_ddbb3bb32cb88191b9fbac4c39b90330--2024-2412.00556-gsearch-psigmoid-vision-token-reduction-research-20261020-0800-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_ddbb3bb32cb88191b9fbac4c39b90330--2024-2412.00556-gsearch-psigmoid-vision-token-reduction-research-20261020-0800-scheduled-chat-00-r01.json",
+      "worker_run_key": "20261020-0800-scheduled-chat-00/r01"
     }
   ]
 }
