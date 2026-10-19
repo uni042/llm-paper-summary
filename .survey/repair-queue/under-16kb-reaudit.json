@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-10-18T12:52:56.220096+00:00",
+  "generated_at": "2026-10-19T00:55:24.918490+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 4,
+  "count": 5,
   "worker_counts": {
-    "scheduled-chat-00": 1,
+    "scheduled-chat-00": 2,
     "scheduled-chat-30": 2,
     "scheduled-chat-45": 1
   },
@@ -41,7 +41,7 @@
       "file_bytes": 10421,
       "source_sha256": "b567ecd24a6b929729be201f7e450f810d2dc44b6e3a93a7bdcdc5e8a9e40067",
       "source_git_blob_sha": "71fd61aae1645a21c651c0c1fd2998b179dd9bbb",
-      "assigned_worker": "scheduled-chat-30",
+      "assigned_worker": "scheduled-chat-00",
       "semantic_status": "pending",
       "mechanical_status": "FAIL",
       "japanese_ratio": 0.789025,
@@ -76,6 +76,26 @@
         "body_chars": 2413,
         "method_chars": 1072,
         "evaluation_chars": 505,
+        "limitation_chars": 0
+      },
+      "mechanical_failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/99-other-inference-systems/2026-2602.02891-tracenas-zero-shot-llm-pruning-via-gradient-trace-correlation.md",
+      "canonical_id": "arXiv:2602.02891",
+      "title": "TraceNAS: Zero-shot LLM Pruning via Gradient Trace Correlation",
+      "file_bytes": 14064,
+      "source_sha256": "c71894141afcd69b0c7569d649c153b90e9047682c4aba5914f45396aff56412",
+      "source_git_blob_sha": "c8ec2668e3fd8b23c3a077c281d1e34d41aa5cb9",
+      "assigned_worker": "scheduled-chat-30",
+      "semantic_status": "pending",
+      "mechanical_status": "PASS",
+      "japanese_ratio": 0.963484,
+      "quality_metrics": {
+        "body_chars": 3813,
+        "method_chars": 1324,
+        "evaluation_chars": 720,
         "limitation_chars": 0
       },
       "mechanical_failures": [],
