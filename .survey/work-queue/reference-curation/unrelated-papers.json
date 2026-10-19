@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-19T00:44:42+00:00",
-  "record_count": 12427,
+  "updated_at": "2026-10-19T01:45:59+00:00",
+  "record_count": 12428,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -179040,9 +179040,9 @@
       "identity_tokens": [
         "DOI:10.1007/s44196-026-01236-9"
       ],
-      "reason": "共有専門家を持つMoEの訓練中に、ARIMAで次の反復の専門家負荷を予測し、動的容量と損失関数を更新する方式。Switch Transformer-base-8のGLUE9課題平均81.55%（基準比+1.07ポイント）を報告する。主要な実証は訓練中の負荷均衡と分類精度で、推論時のGPU通信・トークン生成速度・サービングスケジューリング改善を検証していない。学習単独最適化の凍結方針により通常対象外。",
+      "reason": "出版社の公開一次本文を確認。ARIMAで訓練中の専門家負荷を予測し、容量配分と負荷均衡損失を変更することでSwitch Transformerの学習安定性・GLUE精度を改善する。容量の動的割当ては訓練時の専門家過負荷とトークン落ちへの対処であり、生成推論時のGPU配置、オフロード、KV管理、サービング遅延の実測が中心ではないため、本推論サーベイでは対象外。学習サーベイには別途候補となる。",
       "first_checked_at": "2026-10-18T10:00:28+00:00",
-      "last_checked_at": "2026-10-18T10:00:28+00:00",
+      "last_checked_at": "2026-10-19T01:45:59+00:00",
       "linked_from": [],
       "title": "Consensus-Expert DynamicMoE: ARIMA-based Capacity Prediction with Adaptive Load Balancing for Sparse Models"
     },
@@ -179154,6 +179154,18 @@
       "last_checked_at": "2026-10-18T17:52:13+00:00",
       "linked_from": [],
       "title": "O-Mem: Omni Memory System for Personalized, Long Horizon, Self-Evolving Agents"
+    },
+    "arXiv:2601.08311": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.08311",
+      "identity_tokens": [
+        "arXiv:2601.08311"
+      ],
+      "reason": "一次要旨を確認。画質が異なる類似参照画像と主観評価スコアをRAGで提示し、視覚言語モデルによる画像品質評価の精度を追加学習なしで高める研究。主な評価はKADID、KonIQ、LIVE Challenge、SPAQの画質推定品質であり、LLM推論基盤の速度・メモリ・GPU配置・KV管理を直接改善する研究ではない。",
+      "first_checked_at": "2026-10-19T01:45:59+00:00",
+      "last_checked_at": "2026-10-19T01:45:59+00:00",
+      "linked_from": [],
+      "title": "Enhancing Image Quality Assessment Ability of LMMs via Retrieval-Augmented Generation"
     }
   }
 }

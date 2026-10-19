@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-d25d2308ce1428fb-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2604.14403",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2604.14403",
+    "identity_tokens": [
+      "arXiv:2604.14403"
+    ],
+    "reason": "一次論文の要旨を確認。端末内RAGで検索用表現と生成文脈圧縮を同一モデルに統合し、平均約1/10の文脈長で従来RAG読取り器に近い精度を維持する。短縮された入力によるKV・注意メモリと端末資源の節減に関連するが、主な貢献は検索・圧縮表現の共同学習であり、GPUサービング基盤、KV管理、推論カーネル、スケジューラを直接最適化したものではない。",
+    "first_checked_at": "2026-10-18T10:00:33+00:00",
+    "last_checked_at": "2026-10-19T01:45:58+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "A Unified Model and Document Representation for On-Device Retrieval-Augmented Generation"
+  },
+  "processed_at": "2026-10-19T01:45:59+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d25d2308ce14",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
