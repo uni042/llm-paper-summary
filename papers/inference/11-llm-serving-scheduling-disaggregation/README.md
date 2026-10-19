@@ -306,6 +306,10 @@
   実装：✓ ・ リポジトリ内被引用：1  
   TP/PP切替で重み・KV・通信群・ワーカーを作り直す代わりに、CPU共有重み、二次元KV移送、事前生成通信状態、待機ワーカーを再利用し、数秒で並列構成を変更できるLLMサービング方式。
 
+- **2026-06 · [QCFuse: Query-Aware Cache Fusion via Compressed View for Efficient RAG Serving](2026-2606.05875-qcfuse-query-aware-cache-fusion-via-compressed-view-for-efficient-rag-se.md)**  
+  実装：[✓](https://github.com/uYanJX/QCFuse) ・ リポジトリ内被引用：1  
+  キャッシュ融合（キャッシュ 融合）は、チャンクごとに事前構築した位置独立キャッシュ（Position-Independent Cache; PIC）を再利用し、重要なトークン位置だけ現在の質問とチャンク順序に合わせて再計算する折衷方式である。
+
 - **2026-06 · [LUMEN: Coordinated Failure Recovery for Distributed LLM Serving](2026-2606.17787-lumen-coordinated-failure-recovery.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   障害前の負荷認識キャッシュ保存、障害時の保存局所性と負荷を両立する再配分、モデル再読込中の小型下書きモデルによる投機補助を協調させ、分散大規模言語モデル提供基盤の復旧遅延を縮める方式。
@@ -723,10 +727,6 @@
 - **2026-06 · [Recency/Frequency Adaptive KV Caching for Large Language Model Serving](2026-2606.21238-recency-frequency-adaptive-kv-caching-for-large-language-model-serving.md)**  
   実装：[✓](https://github.com/Y-aang/vllm-ARC) ・ リポジトリ内被引用：0  
   LLMのprefix KV キャッシュは、過去の要求の入力表現を再利用することで、同じ文書や会話履歴を再度プリフィルする計算を省く。著者らはQwen3-14Bを単一NVIDIA H100 PCIe 80GB GPUで評価した。
-
-- **2026-06 · [QCFuse: Query-Aware Cache Fusion via Compressed View for Efficient RAG Serving](2026-2606.05875-qcfuse-query-aware-cache-fusion-via-compressed-view-for-efficient-rag-se.md)**  
-  実装：[✓](https://github.com/uYanJX/QCFuse) ・ リポジトリ内被引用：0  
-  キャッシュ融合（キャッシュ 融合）は、チャンクごとに事前構築した位置独立キャッシュ（Position-Independent Cache; PIC）を再利用し、重要なトークン位置だけ現在の質問とチャンク順序に合わせて再計算する折衷方式である。
 
 - **2026-06 · [PersistentKV: Page-Aware Decode Scheduling for Long-Context LLM Serving on Commodity GPUs](2026-2606.26666-persistentkv.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -1301,7 +1301,7 @@
 ### 3年前（2023-11〜2024-10）
 
 - **2023-12 · [SGLang: Efficient Execution of Structured Language Model Programs](2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md)**  
-  実装：[✓](https://github.com/sgl-project/sglang) ・ リポジトリ内被引用：519  
+  実装：[✓](https://github.com/sgl-project/sglang) ・ リポジトリ内被引用：520  
   複数のLLM呼び出しや条件分岐をランタイムが1つのプログラムとして理解し、共有接頭辞のKV再利用・並列実行・構造化出力生成をまとめて効率化する推論システム。
 
 - **2024-07 · [DistServe: Disaggregating Prefill and Decoding for Goodput-optimized Large Language Model Serving](2024-2401.09670-distserve-disaggregating-prefill-decoding-goodput.md)**  
@@ -1376,13 +1376,13 @@
   実装：✓ ・ リポジトリ内被引用：48  
   Pensieveは、会話型の大規模言語モデルを複数往復にわたって提供するとき、前回までの履歴を毎回最初から入力処理する重複計算を減らす状態保持型の推論提供システムである。
 
+- **2024-01 · [Infinite-LLM: Efficient LLM Service for Long Context with DistAttention and Distributed KVCache](2024-2401.02669-infinite-llm-distattention-distributed-kvcache.md)**  
+  実装：✓ ・ リポジトリ内被引用：47  
+  注意計算とKVを系列方向に分散し、クラスタ全体のGPUメモリを共有して最大200万トークンを処理し、提供スループットを1.35〜3.4倍改善する。
+
 - **2024-04 · [A Survey on Efficient Inference for Large Language Models](2024-2404.14294-a-survey-on-efficient-inference-for-large-language-models.md)**  
   実装：✓ ・ リポジトリ内被引用：46  
   根本原因を巨大なモデルサイズ、系列長に対して二乗に増える自己注意、逐次的な自己回帰復号へ分け、それぞれが計算量、メモリアクセス量、メモリ容量を通じて遅延、スループット、ストレージ、energyへ波及すると整理する。対策taxonomyはデータ層、モデル層、システム層の3階層である。
-
-- **2024-01 · [Infinite-LLM: Efficient LLM Service for Long Context with DistAttention and Distributed KVCache](2024-2401.02669-infinite-llm-distattention-distributed-kvcache.md)**  
-  実装：✓ ・ リポジトリ内被引用：46  
-  注意計算とKVを系列方向に分散し、クラスタ全体のGPUメモリを共有して最大200万トークンを処理し、提供スループットを1.35〜3.4倍改善する。
 
 - **2024-04 · [Efficient Interactive LLM Serving with Proxy Model-based Sequence Length Prediction](2024-2404.08509-ssjf.md)**  
   実装：[✓](https://github.com/James-QiuHaoran/LLM-serving-with-proxy-models) ・ リポジトリ内被引用：45  
@@ -1499,7 +1499,7 @@
 ### 4年前（2022-11〜2023-10）
 
 - **2023-09 · [Efficient Memory Management for Large Language Model Serving with PagedAttention](2023-2309.06180-vllm-pagedattention-efficient-memory-management.md)**  
-  実装：[✓](https://github.com/vllm-project/vllm) ・ リポジトリ内被引用：1146  
+  実装：[✓](https://github.com/vllm-project/vllm) ・ リポジトリ内被引用：1148  
   vLLMは、要求ごとに大きな連続領域を予約していたKVキャッシュを固定長ブロックへ分解し、論理的な並びとGPU上の物理配置を分離する。必要なブロックだけ動的に割り当て、同じ接頭辞のKVを共有することで、限られたGPUメモリへより多くの要求を同時に載せる。
 
 - **2023-08 · [SARATHI: Efficient LLM Inference by Piggybacking Decodes with Chunked Prefills](2023-2308.16369-sarathi.md)**  

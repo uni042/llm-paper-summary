@@ -374,13 +374,13 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
   実装：✓ ・ リポジトリ内被引用：4  
   eLLMは活性値とKVキャッシュを同じ物理メモリプールで動的に融通し、SLO違反に応じてCPU退避量も調整して長文脈サービングの待ち行列とバッチ容量を両立する。
 
+- **2025-03 · [Accelerating MoE Model Inference with Expert Sharding](2025-2503.08467-moe-expert-sharding.md)**  
+  実装：[✓](https://github.com/sacs-epfl/moe-inference) ・ リポジトリ内被引用：4  
+  全エキスパートを全GPUへテンソル分割してルーティング偏りを計算負荷偏りから切り離し、カーネル融合でMoEエンコーダ推論を高速化する。
+
 - **2025-04 · [MoE-Lens: Towards the Hardware Limit of High-Throughput MoE LLM Serving Under Resource Constraints](2025-2504.09345-moe-lens-hardware-limit-resource-constrained-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
   CPUメモリ容量と要求長まで含む性能上限モデルから、プリフィル・デコード重畳と重み転送を設計し、資源制約下MoE推論をハードウェア限界へ近づける。
-
-- **2025-03 · [Accelerating MoE Model Inference with Expert Sharding](2025-2503.08467-moe-expert-sharding.md)**  
-  実装：[✓](https://github.com/sacs-epfl/moe-inference) ・ リポジトリ内被引用：3  
-  全エキスパートを全GPUへテンソル分割してルーティング偏りを計算負荷偏りから切り離し、カーネル融合でMoEエンコーダ推論を高速化する。
 
 - **2025-02 · [Memory Offloading for Large Language Model Inference with Latency SLO Guarantees](2025-2502.08182-select-n-slo-aware-memory-offloading.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
@@ -485,7 +485,7 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
 ### 5年前（2021-11〜2022-10）
 
 - **2022-05 · [MoESys: A Distributed and Efficient Mixture-of-Experts Training and Inference System for Internet Services](2022-2205.10034-moesys-a-distributed-and-efficient-mixture-of-experts-training-and-inference-system-for-internet-services.md)**  
-  実装：✓ ・ リポジトリ内被引用：22  
+  実装：✓ ・ リポジトリ内被引用：23  
   MoEの不均衡とGPU容量不足を、訓練時のElastic MoE＋2D先読みと、推論時のCPU/GPU ring型section実行で処理し、DeepSpeed比で訓練33%・推論13%のスループット向上を報告する。
 
 ### 6年前（2020-11〜2021-10）
