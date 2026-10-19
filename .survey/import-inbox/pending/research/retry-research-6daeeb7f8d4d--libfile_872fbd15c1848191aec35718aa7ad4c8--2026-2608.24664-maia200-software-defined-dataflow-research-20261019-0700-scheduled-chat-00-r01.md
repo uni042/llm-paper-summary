@@ -39,6 +39,8 @@ last_checked: '2026-10-19'
 worker_completed_at: '2026-10-19T07:00:00+09:00'
 worker_run_key: '20261019-0700-scheduled-chat-00/r01'
 lineage: '17-inference-accelerators-hardware'
+last_audited: null
+audit_version: 0
 ---
 
 # Maia 200：データ移動を明示的に制御するLLM推論向け専用アクセラレータ

@@ -33,6 +33,8 @@ worker_id: scheduled-chat-45
 quality_repaired_at: "2026-10-19T11:56:00+09:00"
 quality_repair_run_key: "20261019-1145-scheduled-chat-45/r01"
 quality_self_review_passed: true
+last_audited: null
+audit_version: 0
 ---
 
 # Torpor：モデル入替えでGPUを共有する低遅延サーバレス推論

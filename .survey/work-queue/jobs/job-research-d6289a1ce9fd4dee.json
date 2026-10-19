@@ -35,10 +35,15 @@
   "selection_reason": "対象は学習ベースのLLM post-training quantizationであり、逐次量子化における再構成lossの桁差がMSE勾配と補助パラメータ更新の偏りを生むことを示し、4種のRMSE損失による置換を評価する。重み-onlyと重み・活性値量子化、複数LLMおよび量子化bit幅で品質を調べており、推論時LLM圧縮の方法・品質に直接関係する。",
   "semantic_scholar_id": "7f38969db72ab1dfb0156aa3902e05e0ab074a59",
   "source_url": "https://arxiv.org/abs/2610.00983",
-  "status": "ready",
+  "status": "superseded",
   "title": "The Devil Is in the Reconstruction Loss Scale: Rethinking Optimization in LLM Quantization",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-10-19T13:39:43+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2026-2610.00983-the-devil-is-in-the-reconstruction-loss-scale-rethinking-optimization-in.md",
+  "represented_canonical_id": "arXiv:2610.00983",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
