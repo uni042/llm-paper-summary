@@ -34,6 +34,8 @@ worker_completed_at: '2026-10-19T19:00:30+09:00'
 worker_run_key: '20261019-1900-scheduled-chat-00/r01'
 publication_doi: '10.1109/ISCA66397.2026.00098'
 notes: 'arXiv v2は2025-11-19に組織内公開方針との整合を理由に取り下げ。本文と評価表の確認には公開されているv1を使用。ISCA 2026版の題名は Tetris: Efficient Long-context LLM Serving with Chunkwise Dynamic Sequence Parallelism。出版版とv1の数値・記述の完全同一性までは検証していない。'
+last_audited: null
+audit_version: 0
 ---
 
 # Tetris：区間単位の動的系列並列による長文脈LLM配信の効率化

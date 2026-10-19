@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-19T13:50:51+00:00",
+  "generated_at": "2026-10-19T14:03:00+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 193,
+  "count": 194,
   "entries": [
     {
       "canonical_id": "DOI:10.1145/3714983.3714987",
@@ -5003,8 +5003,8 @@
     },
     {
       "canonical_id": "arXiv:2605.25550",
-      "title": "DisagFusion: Asynchronous Pipeline Parallelism and Elastic Scheduling for Disaggregated Diffusion Serving",
-      "source_url": "https://arxiv.org/html/2605.25550v1",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-19T13:47:48+00:00",
       "return_count": 1,
       "assigned_worker": "scheduled-chat-45",
@@ -5031,8 +5031,8 @@
     },
     {
       "canonical_id": "arXiv:2403.11805",
-      "title": "An Efficient Context Management System for On-Device LLMaaS (Libra; preprint: LLM as a System Service on Mobile Devices)",
-      "source_url": "https://doi.org/10.1145/3774906.3800479",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-19T13:48:39+00:00",
       "return_count": 4,
       "assigned_worker": "scheduled-chat-45",
@@ -5059,8 +5059,8 @@
     },
     {
       "canonical_id": "arXiv:2511.06247",
-      "title": "Optimizing Long-context LLM Serving via Fine-grained Sequence Parallelism",
-      "source_url": "https://arxiv.org/html/2511.06247v1",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-19T13:49:29+00:00",
       "return_count": 1,
       "assigned_worker": "scheduled-chat-30",
@@ -5083,6 +5083,34 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_be5fe8f771f48191ad7b3cb8c47fb260--2025-2511.06247-tetris-chunkwise-dynamic-sequence-parallelism-research-20261019-1900-scheduled-chat-00-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_be5fe8f771f48191ad7b3cb8c47fb260--2025-2511.06247-tetris-chunkwise-dynamic-sequence-parallelism-research-20261019-1900-scheduled-chat-00-r01.json",
       "worker_run_key": "20261019-1900-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2603.02188",
+      "title": "Multi-Head Low-Rank Attention",
+      "source_url": "https://arxiv.org/pdf/2603.02188",
+      "returned_at": "2026-10-19T14:00:51+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 450 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 4001,
+        "body_paragraphs": 23,
+        "method_chars": 1349,
+        "method_paragraphs": 8,
+        "evaluation_chars": 450,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "評価説明量 450 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_cb25a37a664481918d1ca91518969247--2026-2603.02188-multi-head-low-rank-attention-research-20261019-0845-scheduled-chat-45-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_cb25a37a664481918d1ca91518969247--2026-2603.02188-multi-head-low-rank-attention-research-20261019-0845-scheduled-chat-45-r01.json",
+      "worker_run_key": "20261019-0845-scheduled-chat-45/r01"
     }
   ]
 }
