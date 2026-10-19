@@ -144,13 +144,13 @@
   実装：✓ ・ リポジトリ内被引用：4  
   PTQTPは、学習済み重みを2枚の三値平面（trit-plane）と連続尺度へ分解し、約1.58ビット級の超低ビット表現を事後量子化（Post-学習 量子化; PTQ）だけで作る。二値PTQより表現力を増やしつつ、混合精度の例外経路を使わず一様な三値演算へ落とすのが狙いである。
 
+- **2025-10 · [QSVD: Efficient Low-rank Approximation for Unified Query-Key-Value Weight Compression in Low-Precision Vision-Language Models](2025-2510.16292-qsvd-efficient-low-rank-approximation-for-unified-query-key-value-weight.md)**  
+  実装：[✓](https://github.com/SAI-Lab-NYU/QSVD) ・ リポジトリ内被引用：1  
+  QSVDは、画像と文章を同時に処理する視覚言語モデル（Vision-Language モデル; VLM）の注意層で、問い合わせ（Query; Q）・鍵（Key; K）・値（Value; V）の射影重みを別々に圧縮するのではなく結合して低ランク分解する手法である。
+
 - **2025-05 · [ICQuant: Index Coding enables Low-bit LLM Quantization](2025-2505.00850-icquant-index-coding-enables-low-bit-llm-quantization.md)**  
   実装：[✓](https://github.com/Avery-xl/ICQuant) ・ リポジトリ内被引用：1  
   ICQuant（Index Coding enables Low-bit LLM Quantization）は、大規模言語モデル（LLM）の重みを2〜3ビット程度へ圧縮する際、少数の極端な値が量子化範囲を不必要に広げる問題を、外れ値の分離と位置索引の効率的な符号化で解く学習後量子化（Post-学習 量子化; PTQ）方式である。
-
-- **2025-10 · [QSVD: Efficient Low-rank Approximation for Unified Query-Key-Value Weight Compression in Low-Precision Vision-Language Models](2025-2510.16292-qsvd-efficient-low-rank-approximation-for-unified-query-key-value-weight.md)**  
-  実装：[✓](https://github.com/SAI-Lab-NYU/QSVD) ・ リポジトリ内被引用：0  
-  QSVDは、画像と文章を同時に処理する視覚言語モデル（Vision-Language モデル; VLM）の注意層で、問い合わせ（Query; Q）・鍵（Key; K）・値（Value; V）の射影重みを別々に圧縮するのではなく結合して低ランク分解する手法である。
 
 - **2024-12 · [RILQ: Rank-Insensitive LoRA-based Quantization Error Compensation for Boosting 2-bit Large Language Model Accuracy](2024-2412.01129-rilq-rank-insensitive-lora-based-quantization-error-compensation-for-boo.md)**  
   実装：[✓](https://github.com/aiha-lab/RILQ) ・ リポジトリ内被引用：0  
@@ -245,15 +245,15 @@
   特徴次元の外れ値を16-bitへ分離し、残る99.9%以上をベクトル単位INT8で計算する。175B級モデルの品質とほぼ半減の重み容量を両立する一方、小さい行列では量子化費用が速度改善を打ち消す。
 
 - **2023-07 · [QuIP: 2-Bit Quantization of Large Language Models With Guarantees](2023-2307.13304-quip-2-bit-quantization-of-large-language-models-with-guarantees.md)**  
-  実装：✓ ・ リポジトリ内被引用：100  
+  実装：✓ ・ リポジトリ内被引用：101  
   重みと代理ヘッセ行列（proxy Hessian）の座標依存の偏りをランダム直交変換で崩してから、LDL分解に基づく適応丸めを行う。Llama 2 70Bでは2ビット重みでもWikiText2パープレキシティ6.326を保ち、同条件のOPTQの123.908から大幅に改善する。
 
 - **2023-06 · [SpQR: A Sparse-Quantized Representation for Near-Lossless LLM Weight Compression](2023-2306.03078-spqr-a-sparse-quantized-representation-for-near-lossless-llm-weight-compression.md)**  
-  実装：[✓](https://github.com/Vahe1994/SpQR) ・ リポジトリ内被引用：99  
+  実装：[✓](https://github.com/Vahe1994/SpQR) ・ リポジトリ内被引用：100  
   高感度な少数重みだけを十六ビット疎表現に逃がし、残りと量子化尺度を三〜四ビット化してほぼ無損失圧縮する混合重み表現。
 
 - **2023-06 · [SqueezeLLM: Dense-and-Sparse Quantization](2023-2306.07629-squeezellm-dense-and-sparse-quantization.md)**  
-  実装：[✓](https://github.com/SqueezeAILab/SqueezeLLM) ・ リポジトリ内被引用：92  
+  実装：[✓](https://github.com/SqueezeAILab/SqueezeLLM) ・ リポジトリ内被引用：93  
   二次感度に基づく非一様量子化と、外れ値・高感度重みだけをFP16疎行列へ逃がすDense-and-Sparse分解により、3-bit級でも品質を保ちながら重み転送量と生成遅延を削減する。
 
 - **2023-10 · [Atom: Low-bit Quantization for Efficient and Accurate LLM Serving](2023-2310.19102-atom-low-bit-quantization-for-efficient-and-accurate-llm-serving.md)**  
@@ -283,6 +283,6 @@
 ### 5年前（2021-11〜2022-10）
 
 - **2022-10 · [GPTQ: Accurate Post-Training Quantization for Generative Pre-trained Transformers](2022-2210.17323-gptq.md)**  
-  実装：[✓](https://github.com/IST-DASLab/gptq) ・ リポジトリ内被引用：348  
+  実装：[✓](https://github.com/IST-DASLab/gptq) ・ リポジトリ内被引用：349  
   二次情報に基づく誤差補償をGPU向けに再設計し、175B級LLMを数時間で3〜4bit化して単一A100実行と約3.24倍の生成高速化を実現した基礎的GPTQ研究。
 <!-- survey:auto:end -->

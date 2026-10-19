@@ -11,7 +11,7 @@
 ### 注目：直近12か月・リポジトリ内で被引用（2025-11〜2026-10）
 
 - **2026-01 · [DART: Diffusion-Inspired Speculative Decoding for Fast LLM Inference](2026-2601.19278-dart-diffusion-inspired-speculative-decoding-for-fast-llm-inference.md)**  
-  実装：[✓](https://github.com/fvliang/DART) ・ リポジトリ内被引用：16  
+  実装：[✓](https://github.com/fvliang/DART) ・ リポジトリ内被引用：17  
   対象LLM特徴から未来ロジットを1回で並列予測しN-gram木刈り込みを行い、EAGLE3より平均約30%高い投機デコード高速化を得る。
 
 - **2026-02 · [Fast KV Compaction via Attention Matching](2026-2602.16284-fast-kv-compaction-via-attention-matching.md)**  
@@ -1839,7 +1839,7 @@
   多様なKV配置と注意派生形をブロック疎形式と実行時コンパイルで統一し、可変系列長を固定CTAへ動的に負荷均衡しながらCUDAグラフ互換性も保つ、LLMサービング向け高性能注意エンジン。
 
 - **2025-04 · [SpinQuant: LLM quantization with learned rotations](2025-2405.16406-spinquant-llm-quantization-with-learned-rotations.md)**  
-  実装：[✓](https://github.com/facebookresearch/SpinQuant) ・ リポジトリ内被引用：82  
+  実装：[✓](https://github.com/facebookresearch/SpinQuant) ・ リポジトリ内被引用：83  
   外れ値が低ビット量子化の誤差を大きくする問題に対して、全精度の機能を保つ旋回行列を学習し、重み・活性値・KVキャッシュの量子化に合わせる。
 
 - **2024-12 · [Gated Delta Networks: Improving Mamba2 with Delta Rule](2024-2412.06464-gated-delta-networks-improving-mamba2-with-delta-rule.md)**  
@@ -1874,13 +1874,13 @@
   実装：[✓](https://github.com/stepfun-ai/StepMesh) ・ リポジトリ内被引用：20  
   単純に総パラメータや活性パラメータを減らすのではなく、モデルの注意機構とサービング時のGPU配置を一緒に設計し、長い思考系列の復号費用を下げる。
 
+- **2025-04 · [JITServe: SLO-aware LLM Serving with Imprecise Request Information](2025-2504.20068-jitserve-slo-aware-llm-serving-with-imprecise-request-information.md)**  
+  実装：✓ ・ リポジトリ内被引用：20  
+  不確かな出力長と依存関係を逐次更新し、期限達成に必要な最小帯域で要求を選ぶことで、サービス有効処理量を1.4〜6.3倍へ改善する。
+
 - **2024-11 · [BatchLLM: Optimizing Large Batched LLM Inference with Global Prefix Sharing and Throughput-oriented Token Batching](2024-2412.03594-batchllm-optimizing-large-batched-llm-inference-with-global-prefix-shari.md)**  
   実装：[✓](https://github.com/microsoft/MixLLM/tree/batchllm_vllm_064) ・ リポジトリ内被引用：20  
   BatchLLMは、検索結果の説明文生成、広告文書の変換、推薦候補の採点など、数千件以上のプロンプトをまとめて処理する大規模言語モデル（LLM）の一括推論を対象とするシステムである。原著のMLSys 2026産業部門版は、NVIDIA A100とAMD MI200上で、vLLMやSGLangに対して1.3～10.8倍の端点処理率改善を報告する。
-
-- **2025-04 · [JITServe: SLO-aware LLM Serving with Imprecise Request Information](2025-2504.20068-jitserve-slo-aware-llm-serving-with-imprecise-request-information.md)**  
-  実装：✓ ・ リポジトリ内被引用：19  
-  不確かな出力長と依存関係を逐次更新し、期限達成に必要な最小帯域で要求を選ぶことで、サービス有効処理量を1.4〜6.3倍へ改善する。
 
 - **2025-03 · [Qwen2.5-Omni Technical Report](2025-2503.20215-qwen2-5-omni-technical-report.md)**  
   実装：[✓](https://github.com/QwenLM/Qwen2.5-Omni) ・ リポジトリ内被引用：19  
@@ -2010,6 +2010,10 @@
   実装：✓ ・ リポジトリ内被引用：7  
   一般的なINT4量子化は整数演算に向くが、各値の分布が一様でないと量子化誤差が大きくなる。専用アクセラレータのシミュレーションでは、先行するLLMアクセラレータに対して平均2.99倍、最大4.46倍の高速化と、平均2.81倍、最大4.10倍のエネルギー削減を報告する。
 
+- **2025-10 · [INT v.s. FP: A Comprehensive Study of Fine-Grained Low-bit Quantization Formats](2025-2510.25602-int-v-s-fp-a-comprehensive-study-of-fine-grained-low-bit-quantization-fo.md)**  
+  実装：[✓](https://github.com/ChenMnZ/INT_vs_FP) ・ リポジトリ内被引用：6  
+  しかし、32要素や16要素ごとに独立した尺度を持つ細粒度量子化では、外れ値と典型値を同じ広い範囲へ押し込める必要が小さくなる。ハードウェアの評価は論理回路モデルによる推定であり、MXINT8のエネルギーがMXFP8の0.63倍という数値を、既存GPUの実測消費電力や推論速度と混同してはならない。
+
 - **2025-06 · [SmolVLA: A Vision-Language-Action Model for Affordable and Efficient Robotics](2025-2506.01844-smolvla-a-vision-language-action-model-for-affordable-and-efficient-robo.md)**  
   実装：[✓](https://github.com/huggingface/lerobot) ・ リポジトリ内被引用：6  
   中核は、SmolVLM-2を使う視覚言語部の上位層を省略し、1画像の視覚トークンを64個に抑え、行動専門家（action 専門家）に交差注意と自己注意を交互に配置する設計である。実機のPick-Placeでは同期推論の平均完了時間13.75秒に対し、非同期推論は9.70秒、固定時間内の成功した物体移動数は9個から19個へ増えた。
@@ -2045,10 +2049,6 @@
 - **2024-11 · [ZipNN: Lossless Compression for AI Models](2024-2411.05239-zipnn-lossless-compression-for-ai-models.md)**  
   実装：[✓](https://github.com/zipnn/zipnn) ・ リポジトリ内被引用：6  
   ZipNNは、モデルの重みを変更せずに保存・転送時のバイト数を減らし、展開すると元の重みビット列を完全に復元する可逆圧縮（無損失 compression）である。論文表IIIのLlama 3.1（BF16）では、Zstd単体の圧縮後サイズが原寸の77.7%なのに対してZipNNは66.4%。
-
-- **2025-10 · [INT v.s. FP: A Comprehensive Study of Fine-Grained Low-bit Quantization Formats](2025-2510.25602-int-v-s-fp-a-comprehensive-study-of-fine-grained-low-bit-quantization-fo.md)**  
-  実装：[✓](https://github.com/ChenMnZ/INT_vs_FP) ・ リポジトリ内被引用：5  
-  しかし、32要素や16要素ごとに独立した尺度を持つ細粒度量子化では、外れ値と典型値を同じ広い範囲へ押し込める必要が小さくなる。ハードウェアの評価は論理回路モデルによる推定であり、MXINT8のエネルギーがMXFP8の0.63倍という数値を、既存GPUの実測消費電力や推論速度と混同してはならない。
 
 - **2025-06 · [TD-Pipe: Temporally-Disaggregated Pipeline Parallelism Architecture for High-Throughput LLM Inference](2025-2506.10470-td-pipe-temporally-disaggregated-pipeline-parallelism-architecture-for-h.md)**  
   実装：[✓](https://github.com/MLSysU/TD-Pipe) ・ リポジトリ内被引用：5  
@@ -2297,11 +2297,11 @@
 ### 3年前（2023-11〜2024-10）
 
 - **2023-12 · [Mamba: Linear-Time Sequence Modeling with Selective State Spaces](2023-2312.00752-mamba-selective-state-space-linear-time-inference.md)**  
-  実装：[✓](https://github.com/state-spaces/mamba) ・ リポジトリ内被引用：150  
+  実装：[✓](https://github.com/state-spaces/mamba) ・ リポジトリ内被引用：151  
   入力依存の選択的状態空間層とGPU向け融合走査を統合し、注意機構なしでTransformer級品質と4〜5倍の生成スループットを両立する。
 
 - **2024-03 · [QuaRot: Outlier-Free 4-Bit Inference in Rotated LLMs](2024-2404.00456-quarot-outlier-free-4-bit-inference-in-rotated-llms.md)**  
-  実装：[✓](https://github.com/spcl/QuaRot) ・ リポジトリ内被引用：103  
+  実装：[✓](https://github.com/spcl/QuaRot) ・ リポジトリ内被引用：104  
   QuaRotは、大規模言語モデル（LLM）の4ビット推論を難しくする活性値の外れ値を、高精度の例外チャネルへ逃がすのではなく、モデルの関数を変えない直交回転（orthogonal rotation）で多数の次元へ分散する量子化手法である。
 
 - **2024-07 · [FlashAttention-3: Fast and Accurate Attention with Asynchrony and Low-precision](2024-2407.08608-flashattention-3-fast-and-accurate-attention-with-asynchrony-and-low-pre.md)**  
@@ -2560,6 +2560,10 @@
   実装：✓ ・ リポジトリ内被引用：7  
   本論文は、入力ごとに必要な推論計算量を変える「モデル段階実行」（モデル cascade）の委譲規則を、生成言語モデルに合わせて設計する研究である。
 
+- **2024-02 · [LQER: Low-Rank Quantization Error Reconstruction for LLMs](2024-2402.02446-lqer-low-rank-quantization-error-reconstruction-for-llms.md)**  
+  実装：[✓](https://github.com/ChengZhang-98/lqer) ・ リポジトリ内被引用：7  
+  大規模言語モデルの重みを4ビットへ圧縮しても、実行時に半精度へ逆量子化してから行列積を計算するなら、重みの保存容量削減がそのまま演算器の省資源化につながるとは限らない。
+
 - **2023-12 · [Fluctuation-based Adaptive Structured Pruning for Large Language Models](2023-2312.11983-fluctuation-based-adaptive-structured-pruning-for-large-language-models.md)**  
   実装：[✓](https://github.com/CASIA-IVA-Lab/FLAP) ・ リポジトリ内被引用：7  
   FLAP（FLuctuation-based 適応的 Structured Pruning）は、大規模言語モデル（LLM）の重みを再学習せずに構造化枝刈りする手法である。
@@ -2583,10 +2587,6 @@
 - **2024-03 · [PipeRAG: Fast Retrieval-Augmented Generation via Algorithm-System Co-design](2024-2403.05676-piperag-fast-retrieval-augmented-generation-via-algorithm-system-co-desi.md)**  
   実装：[✓](https://github.com/amazon-science/piperag) ・ リポジトリ内被引用：6  
   検索拡張生成（Retrieval-Augmented Generation、RAG）では、生成開始前に一度だけ外部情報を検索する方式に加え、生成文が伸びる途中でも検索を繰り返す方式がある。1024トークン生成の端から端の遅延では、同等以上の困惑度を維持しながらRETRO比最大2.6倍の短縮を示す。
-
-- **2024-02 · [LQER: Low-Rank Quantization Error Reconstruction for LLMs](2024-2402.02446-lqer-low-rank-quantization-error-reconstruction-for-llms.md)**  
-  実装：[✓](https://github.com/ChengZhang-98/lqer) ・ リポジトリ内被引用：6  
-  大規模言語モデルの重みを4ビットへ圧縮しても、実行時に半精度へ逆量子化してから行列積を計算するなら、重みの保存容量削減がそのまま演算器の省資源化につながるとは限らない。
 
 - **2024-04 · [Mitigating the Impact of Outlier Channels for Language Model Quantization with Activation Regularization](2024-2404.03605-mitigating-the-impact-of-outlier-channels-for-language-model-quantizatio.md)**  
   実装：[✓](https://github.com/aninrusimha/qat-pretrain) ・ リポジトリ内被引用：5  
@@ -2811,7 +2811,7 @@
   初代FlashAttentionのオンライン・ソフトマックスとタイル分割を保ちつつ、行列積以外の演算とブロック・ワープ間の仕事分割を再設計し、A100で理論演算性能の最大73%と初代比約2倍の高速化を達成する。
 
 - **2022-11 · [SmoothQuant: Accurate and Efficient Post-Training Quantization for Large Language Models](2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md)**  
-  実装：[✓](https://github.com/mit-han-lab/smoothquant) ・ リポジトリ内被引用：291  
+  実装：[✓](https://github.com/mit-han-lab/smoothquant) ・ リポジトリ内被引用：292  
   活性値全体を単純に8ビットへ写すと、その少数の外れ値が量子化範囲を広げ、通常値へ割り当てられる段階数が減って精度が崩れる。OPT、BLOOM、GLM、MT-NLGなどで8ビット重み・8ビット活性値（W8A8）を実現し、精度低下をほぼ抑えながら最大1.56倍の推論高速化と2倍のメモリ削減を報告し、530Bモデルを単一ノードで提供可能にした。
 
 - **2023-05 · [GQA: Training Generalized Multi-Query Transformer Models from Multi-Head Checkpoints](2023-2305.13245-gqa.md)**  
@@ -2823,7 +2823,7 @@
   TPU v4上の大規模Transformer推論を通信・メモリ・計算モデルから設計し、2D重み固定/重み収集の切替とバッチ分割MQAで540B級の低遅延・高MFU・長文脈を両立する。
 
 - **2023-01 · [SparseGPT: Massive Language Models Can Be Accurately Pruned in One-Shot](2023-2301.00774-sparsegpt-massive-language-models-can-be-accurately-pruned-in-one-shot.md)**  
-  実装：[✓](https://github.com/IST-DASLab/sparsegpt) ・ リポジトリ内被引用：138  
+  実装：[✓](https://github.com/IST-DASLab/sparsegpt) ・ リポジトリ内被引用：139  
   重みの絶対値が小さい順に削除する単純な枝刈りでは、巨大モデルであっても削除による層出力誤差が累積し、50%の疎化で性能が崩壊し得る。
 
 - **2023-06 · [A Simple and Effective Pruning Approach for Large Language Models](2023-2306.11695-a-simple-and-effective-pruning-approach-for-large-language-models.md)**  
@@ -2914,6 +2914,10 @@
   実装：[✓](https://github.com/ModelTC/Outlier_Suppression_Plus) ・ リポジトリ内被引用：26  
   Outlier Suppression+（OS+）は、大規模言語モデルの活性値に現れる極端な外れ値が、事後量子化（Post-学習 量子化: PTQ）の精度を悪化させる問題に対する方法である。
 
+- **2023-03 · [ZeroQuant-V2: Exploring Post-training Quantization in LLMs from Comprehensive Study to Low Rank Compensation](2023-2303.08302-zeroquant-v2-exploring-post-training-quantization-in-llms-from-comprehen.md)**  
+  実装：✓ ・ リポジトリ内被引用：21  
+  ZeroQuant-V2は、大規模言語モデルの学習後量子化（Post-学習 量子化、PTQ）を、特定の一手法の成功例だけで評価するのではなく、量子化対象、数値精度、粒度、モデル系列、最適化方式を組み合わせて調べた研究である。元の16ビットモデルは10.33なので、この設定では測定上ほぼ同等となる。
+
 - **2023-10 · [ReLU Strikes Back: Exploiting Activation Sparsity in Large Language Models](2024-2310.04564-relu-strikes-back-exploiting-activation-sparsity-in-large-language-model.md)**  
   実装：✓ ・ リポジトリ内被引用：20  
   大規模言語モデルは推論時に膨大な重みを読み出す。特に小さなバッチでの一トークンずつの生成では、演算器のピーク性能より高帯域メモリからの重み移動が制約になることが多い。滑らかな活性化関数であるSiLUやGELUは、負の入力でも通常は厳密なゼロを出さないため、出力が小さくても対応する重みの読み出しを機械的に省略しにくい。
@@ -2921,10 +2925,6 @@
 - **2023-07 · [Hyena Hierarchy: Towards Larger Convolutional Language Models](2023-2302.10866-hyena-hierarchy-towards-larger-convolutional-language-models.md)**  
   実装：[✓](https://github.com/HazyResearch/safari) ・ リポジトリ内被引用：20  
   従来の線形注意や疎注意はこの費用を減らせる一方、長距離の連想記憶や文脈内での規則適用に必要な表現能力が不足し、密な注意層を混ぜないと大規模モデルの品質に届かない場合があった。著者らは、注意機構が持つ三つの性質、すなわち入力に応じて演算内容が変わること、系列長に対してパラメータ数が線形に増えないこと、任意の過去位置を参照できることに注目した。
-
-- **2023-03 · [ZeroQuant-V2: Exploring Post-training Quantization in LLMs from Comprehensive Study to Low Rank Compensation](2023-2303.08302-zeroquant-v2-exploring-post-training-quantization-in-llms-from-comprehen.md)**  
-  実装：✓ ・ リポジトリ内被引用：20  
-  ZeroQuant-V2は、大規模言語モデルの学習後量子化（Post-学習 量子化、PTQ）を、特定の一手法の成功例だけで評価するのではなく、量子化対象、数値精度、粒度、モデル系列、最適化方式を組み合わせて調べた研究である。元の16ビットモデルは10.33なので、この設定では測定上ほぼ同等となる。
 
 - **2023-03 · [Resurrecting Recurrent Neural Networks for Long Sequences](2023-2303.06349-resurrecting-recurrent-neural-networks-for-long-sequences.md)**  
   実装：✓ ・ リポジトリ内被引用：20  
@@ -2974,6 +2974,10 @@
   実装：✓ ・ リポジトリ内被引用：8  
   Tabiは、大型の言語モデルを用いた分類・回帰サービスで、すべての要求に同じ大きなモデルを実行する無駄を削減する推論システムである。サービスが例えば分類正答率95%以上という精度下限を指定すると、従来の推論基盤は平均精度が下限を超える単一モデルを選び、簡単な入力にも難しい入力にも同じ計算を行う。
 
+- **2023-05 · [LoRAPrune: Structured Pruning Meets Low-Rank Parameter-Efficient Fine-Tuning](2023-2305.18403-loraprune-structured-pruning-meets-low-rank-parameter-efficient-fine-tun.md)**  
+  実装：[✓](https://github.com/aim-uofa/LoRAPrune) ・ リポジトリ内被引用：8  
+  LoRAPruneは、事前学習済み大規模言語モデルを配備しやすい小型の密モデルへ変えるために、低ランク適応（Low-Rank Adaptation、LoRA）と構造化枝刈り（structured 枝刈り）を一体化する方式である。
+
 - **2023-10 · [Sparse Universal Transformer](2023-2310.07096-sparse-universal-transformer.md)**  
   実装：[✓](https://github.com/shawntan/SUT) ・ リポジトリ内被引用：7  
   Sparse Universal Transformer（SUT）は、同じTransformerブロックを複数回反復するユニバーサルTransformer（Universal Transformer; UT）の長所を残しながら、反復計算を疎な専門家選択と動的停止で削減するモデルである。通常のTransformerは各層に別の重みを持つ。
@@ -2981,10 +2985,6 @@
 - **2023-10 · [Adaptive Gating in Mixture-of-Experts based Language Models](2023-2310.07188-adaptive-gating-in-mixture-of-experts-based-language-models.md)**  
   実装：✓ ・ リポジトリ内被引用：7  
   混合専門家モデル（Mixture of エキスパート、MoE）では、各トークンをルータが選んだ少数の専門家に渡し、専門家の出力を統合する。BERT、FSMT、BART、GPT-2、DialoGPTを使う6課題の比較では、固定top-2学習と比べて学習時間を短縮し、推論時の品質は概ね維持した。
-
-- **2023-05 · [LoRAPrune: Structured Pruning Meets Low-Rank Parameter-Efficient Fine-Tuning](2023-2305.18403-loraprune-structured-pruning-meets-low-rank-parameter-efficient-fine-tun.md)**  
-  実装：[✓](https://github.com/aim-uofa/LoRAPrune) ・ リポジトリ内被引用：7  
-  LoRAPruneは、事前学習済み大規模言語モデルを配備しやすい小型の密モデルへ変えるために、低ランク適応（Low-Rank Adaptation、LoRA）と構造化枝刈り（structured 枝刈り）を一体化する方式である。
 
 - **2023-10 · [RECOMP: Improving Retrieval-Augmented LMs with Compression and Selective Augmentation](2023-2310.04408-recomp-improving-retrieval-augmented-lms-with-compression-and-selective-.md)**  
   実装：[✓](https://github.com/carriex/recomp) ・ リポジトリ内被引用：6  
@@ -3065,7 +3065,7 @@
 ### 5年前（2021-11〜2022-10）
 
 - **2022-05 · [FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness](2022-2205.14135-flashattention.md)**  
-  実装：[✓](https://github.com/HazyResearch/flash-attention) ・ リポジトリ内被引用：455  
+  実装：[✓](https://github.com/HazyResearch/flash-attention) ・ リポジトリ内被引用：456  
   タイル化、オンラインsoftmax、逆伝播時再計算により二次元注意行列の高帯域メモリ往復を避ける厳密注意カーネル。
 
 - **2022-06 · [DeepSpeed Inference: Enabling Efficient Inference of Transformer Models at Unprecedented Scale](2022-2207.00032-deepspeed-inference-enabling-efficient-inference-of-transformer-models-at-unprecedented-scale.md)**  
@@ -3303,11 +3303,11 @@
 ### 8年前（2018-11〜2019-10）
 
 - **2019-09 · [Megatron-LM: Training Multi-Billion Parameter Language Models Using Model Parallelism](2019-1909.08053-megatron-lm-training-multi-billion-parameter-language-models-using-model.md)**  
-  実装：[✓](https://github.com/NVIDIA/Megatron-LM) ・ リポジトリ内被引用：237  
+  実装：[✓](https://github.com/NVIDIA/Megatron-LM) ・ リポジトリ内被引用：238  
   この論文の対象は、巨大な言語モデルの学習時に、モデル重み・勾配・最適化器状態が単一GPUのメモリに収まらない問題である。従来のモデル全体を別の言語や専用コンパイラで書き直す方法とは異なり、PyTorchの既存Transformer実装へ少数の集約通信を挿入する設計である。
 
 - **2019-04 · [Generating Long Sequences with Sparse Transformers](2019-1904.10509-generating-long-sequences-with-sparse-transformers.md)**  
-  実装：✓ ・ リポジトリ内被引用：173  
+  実装：✓ ・ リポジトリ内被引用：174  
   全結合の自己注意を局所窓と周期・固定要約位置へ因数分解して O(n√n) 化し、再計算と疎GPUカーネルを併用して数万〜100万要素の生成を可能にしたSparse Transformer。
 
 - **2018-11 · [Blockwise Parallel Decoding for Deep Autoregressive Models](2018-1811.03115-blockwise-parallel-decoding-for-deep-autoregressive-models.md)**  
@@ -3331,7 +3331,7 @@
   深いTransformerは学習時に層をすべて使用する前提で最適化されるため、学習後に連続した層を削ると、残った層が想定しない中間表現を受け取り品質が悪化する。深度ごとに新しいモデルを一から学習したり知識蒸留を繰り返したりする方法では、必要な配備構成が増えるほど学習費用が増える。深度削減は品質低下を完全に取り除くわけではない。
 
 - **2018-11 · [GPipe: Efficient Training of Giant Neural Networks using Pipeline Parallelism](2018-1811.06965-gpipe-efficient-training-of-giant-neural-networks-using-pipeline-paralle.md)**  
-  実装：[✓](https://github.com/tensorflow/lingvo/blob/master/lingvo/core/gpipe.py) ・ リポジトリ内被引用：40  
+  実装：[✓](https://github.com/tensorflow/lingvo/blob/master/lingvo/core/gpipe.py) ・ リポジトリ内被引用：41  
   GPipeは、単一のGPUやTPUに収まらないニューラルネットワークを、層の連続区間ごとに複数の装置へ分割して学習する方式である。実際に学習した557百万パラメータのAmoebaNetはImageNet-2012の上位1件正解率84.4%、60億パラメータ・128層の多言語Transformerは102言語対で個別の二言語モデルを上回った。
 
 - **2019-05 · [Adaptive Attention Span in Transformers](2019-1905.07799-adaptive-attention-span-in-transformers.md)**  
@@ -3357,7 +3357,7 @@
 ### 9年前（2017-11〜2018-10）
 
 - **2018-06 · [PipeDream: Generalized Pipeline Parallelism for DNN Training](2018-1806.03377-pipedream-generalized-pipeline-parallelism-for-dnn-training.md)**  
-  実装：✓ ・ リポジトリ内被引用：60  
+  実装：✓ ・ リポジトリ内被引用：61  
   DNNの連続層を複数GPUへ割り当て、異なるミニバッチの順伝播と逆伝播を交互に重ねる。層の計算・通信費用を測って段を自動分割し、順伝播時の重み版を逆伝播まで保持することで非同期実行の整合性を保つ。
 
 - **2018-02 · [Horovod: fast and easy distributed deep learning in TensorFlow](2018-1802.05799-horovod-fast-and-easy-distributed-deep-learning-in-tensorflow.md)**  
@@ -3371,7 +3371,7 @@
 ### 10年前（2016-11〜2017-10）
 
 - **2017-01 · [Outrageously Large Neural Networks: The Sparsely-Gated Mixture-of-Experts Layer](2017-1701.06538-outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts.md)**  
-  実装：✓ ・ リポジトリ内被引用：216  
+  実装：✓ ・ リポジトリ内被引用：217  
   本論文は、ニューラルネットワークの総パラメータ数を増やすと各入力での計算量も増えるという密なモデルの制約を、入力ごとに一部の専門家だけを実行する条件付き計算によって緩和した基礎研究である。モデルの総容量を大きくしても、活性化する専門家数を固定すれば入力一件あたりの専門家演算量はほぼ一定にできる。ただし専門家を増やすだけでは高速にならない。
 
 ### 11年前（2015-11〜2016-10）
