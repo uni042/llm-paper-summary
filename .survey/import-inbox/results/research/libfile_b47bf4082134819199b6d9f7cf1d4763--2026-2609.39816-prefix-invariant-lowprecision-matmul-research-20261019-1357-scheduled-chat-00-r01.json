@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "35981f73a792493aab4c5328a40ff45e48ae4f03e674152ddb9c6f19ca4692f7",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_b47bf4082134819199b6d9f7cf1d4763--2026-2609.39816-prefix-invariant-lowprecision-matmul-research-20261019-1357-scheduled-chat-00-r01.md",
+  "canonical_id": "arXiv:2609.39816",
+  "worker_completed_at": "2026-10-19T14:03:00+09:00",
+  "worker_run_key": "20261019-1357-scheduled-chat-00/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 6256,
+    "body_paragraphs": 36,
+    "method_chars": 0,
+    "method_paragraphs": 0,
+    "evaluation_chars": 0,
+    "limitation_chars": 398,
+    "insufficiency_flags": [
+      "手法説明量 0 < 700",
+      "評価説明量 0 < 500"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 手法説明量 0 < 700",
+    "説明不足トリガー: 評価説明量 0 < 500"
+  ],
+  "processed_at": "2026-10-19T05:47:19+00:00"
+}
