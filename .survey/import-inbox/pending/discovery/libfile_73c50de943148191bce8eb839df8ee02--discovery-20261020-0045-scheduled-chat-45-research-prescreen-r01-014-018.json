@@ -1,0 +1,90 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-45",
+  "run_key": "20261020-0045-scheduled-chat-45/r01/research-prescreen",
+  "reference_main_sha": "02a24d5faef544f1ea994a4e4b792f70a090fec2",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.08665",
+      "identity_tokens": [
+        "arxiv:2601.08665"
+      ],
+      "title": "VLingNav: Embodied Navigation with Adaptive Reasoning and Visual-Assisted Linguistic Memory",
+      "reason": "一次要旨の主題は視覚言語行動モデルのロボット航法、適応的思考、視覚補助言語記憶、航法成功率である。必要時だけ思考を起動する設計は計算量に間接的に関係するが、LLM推論基盤のカーネル・メモリ・サービング性能の独立したシステム改善を検証しないため対象外。",
+      "source_url": "https://arxiv.org/abs/2601.08665",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-20T00:53:48+09:00",
+      "last_checked_at": "2026-10-20T00:53:48+09:00",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance",
+      "worklist_rank": 14
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2601.10120",
+      "identity_tokens": [
+        "arxiv:2601.10120"
+      ],
+      "title": "TopoDIM: One-shot Topology Generation of Diverse Interaction Modes for Multi-Agent Systems",
+      "reason": "一次要旨はLLMマルチエージェントの複数回対話を単発の通信トポロジ生成へ置換し、トークン消費46.41%減と平均課題性能1.50%改善を報告する。エージェントの推論時トークン費用・遅延に直接関係するが、主な新規性はエージェント間相互作用設計で、GPUサービング・KVキャッシュ・ランタイム最適化ではないため境界判定。",
+      "source_url": "https://arxiv.org/abs/2601.10120",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-20T00:53:48+09:00",
+      "last_checked_at": "2026-10-20T00:53:48+09:00",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance",
+      "worklist_rank": 15
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2601.08815",
+      "identity_tokens": [
+        "arxiv:2601.08815"
+      ],
+      "title": "Agent Contracts: A Formal Framework for Resource-Bounded Autonomous AI Systems",
+      "reason": "一次要旨はエージェントの入力出力仕様、トークン・時間など多次元資源上限、委任予算の保存則を定式化し、反復ワークフローでトークン90%削減と分散525分の1を報告する。推論資源管理に接続するが、LLM実行器やGPU資源割当の新規アルゴリズムより上位の契約・ガバナンスが中心であるため境界判定。",
+      "source_url": "https://arxiv.org/abs/2601.08815",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-20T00:53:48+09:00",
+      "last_checked_at": "2026-10-20T00:53:48+09:00",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance",
+      "worklist_rank": 16
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.18112",
+      "identity_tokens": [
+        "arxiv:2606.18112"
+      ],
+      "title": "Qwen-RobotNav Technical Report: A Scalable Navigation Model Designed for an Agentic Navigation System",
+      "reason": "一次要旨はロボット航法向け基盤モデルのタスクモードとカメラごとの視覚トークン予算を外部制御可能にし、航法ベンチマークと実機転移を評価する。視覚トークン予算は効率に関連するが、主眼はロボットの知覚・計画・学習と成功率であり、汎用LLM推論システムへの独立した技術貢献を示さないため対象外。",
+      "source_url": "https://arxiv.org/abs/2606.18112",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-20T00:53:48+09:00",
+      "last_checked_at": "2026-10-20T00:53:48+09:00",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance",
+      "worklist_rank": 17
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2602.23368",
+      "identity_tokens": [
+        "arxiv:2602.23368"
+      ],
+      "title": "Keyword search is all you need: Achieving RAG-Level Performance without vector databases using agentic tool use",
+      "reason": "一次要旨はベクトルDBを用いるRAGと、キーワード検索ツールだけを使うエージェントの回答品質・統合費用を比較し、従来RAGの評価指標の90%以上を達成と報告する。検索基盤の単純化は推論アプリケーションの費用へ関係するが、LLMトークン生成、推論メモリ、GPUスケジューラの改善は扱わないため境界判定。",
+      "source_url": "https://arxiv.org/abs/2602.23368",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-20T00:53:48+09:00",
+      "last_checked_at": "2026-10-20T00:53:48+09:00",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance",
+      "worklist_rank": 18
+    }
+  ]
+}
