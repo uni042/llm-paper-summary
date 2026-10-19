@@ -33,10 +33,15 @@
   "selection_reason": "ExFlowはGPT MoEの層間expert affinityを利用した配置でAll-to-All通信を減らし、事前学習済みモデルを変更せず分散MoE推論を直接高速化するため対象範囲。",
   "semantic_scholar_id": "dab65cdf3dcbe780ca5201d4576e8429e5fa1e07",
   "source_url": "https://arxiv.org/abs/2401.08383",
-  "status": "ready",
+  "status": "superseded",
   "title": "Exploiting Inter-Layer Expert Affinity for Accelerating Mixture-of-Experts Model Inference",
   "type": "research",
   "venue": "IEEE International Parallel and Distributed Processing Symposium",
   "workflow_version": 10,
-  "year": 2024
+  "year": 2024,
+  "superseded_at": "2026-10-19T14:21:26+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2024-2401.08383-exploiting-inter-layer-expert-affinity-for-accelerating-mixture-of-exper.md",
+  "represented_canonical_id": "arXiv:2401.08383",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

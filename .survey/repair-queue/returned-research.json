@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-19T14:03:00+00:00",
+  "generated_at": "2026-10-19T14:21:27+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -3408,33 +3408,6 @@
       "worker_run_key": "20261018-1345-scheduled-chat-45/r01"
     },
     {
-      "canonical_id": "arXiv:2401.08383",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-18T07:00:39+00:00",
-      "return_count": 4,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 261 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5249,
-        "body_paragraphs": 29,
-        "method_chars": 2078,
-        "method_paragraphs": 12,
-        "evaluation_chars": 261,
-        "limitation_chars": 610,
-        "insufficiency_flags": [
-          "評価説明量 261 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-7dbe65f72963--libfile_221578263ae48191b9f5ffe45d9f56ff--2024-2401.08383-exflow-inter-layer-expert-affinity-research-20261018-1500-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-7dbe65f72963--libfile_221578263ae48191b9f5ffe45d9f56ff--2024-2401.08383-exflow-inter-layer-expert-affinity-research-20261018-1500-scheduled-chat-.json",
-      "worker_run_key": "20261018-1500-scheduled-chat-00/r01"
-    },
-    {
       "canonical_id": "DOI:10.1109/CVPR52734.2025.01360",
       "title": null,
       "source_url": null,
@@ -3969,33 +3942,6 @@
       "worker_run_key": "20261018-2155-scheduled-chat-00/r01"
     },
     {
-      "canonical_id": "arXiv:2609.36835",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-18T14:26:48+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 8875,
-        "body_paragraphs": 47,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 1773,
-        "limitation_chars": 755,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-b2c7a805c7cd--libfile_d526d0090e30819193121452f80b2994--2026-2609.36835-arc-kv-amortized-anchor-search-reconstruction-research-20261018-1930-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-b2c7a805c7cd--libfile_d526d0090e30819193121452f80b2994--2026-2609.36835-arc-kv-amortized-anchor-search-reconstruction-research-20261018-1930-sche.json",
-      "worker_run_key": "20261018-1930-scheduled-chat-30/r01"
-    },
-    {
       "canonical_id": "arXiv:2504.05598",
       "title": null,
       "source_url": null,
@@ -4105,35 +4051,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-e1a065f8327d--libfile_e98db928832481919ba3cbae9b119383--2026-2609.39223-qatfactory-deployment-aligned-quantization-research-20261018-1430-scheduled-chat-30-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-e1a065f8327d--libfile_e98db928832481919ba3cbae9b119383--2026-2609.39223-qatfactory-deployment-aligned-quantization-research-20261018-1430-schedul.json",
       "worker_run_key": "20261018-1430-scheduled-chat-30/r01"
-    },
-    {
-      "canonical_id": "arXiv:2503.24000",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-18T14:32:25+00:00",
-      "return_count": 4,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700",
-        "説明不足トリガー: 評価説明量 0 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5474,
-        "body_paragraphs": 33,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 0,
-        "limitation_chars": 544,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700",
-          "評価説明量 0 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-f23394883a59--libfile_59332defff50819199e8207c7b21c17e--2025-2503.24000-rethinking-kv-compression-serving-research-20261018-1900-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-f23394883a59--libfile_59332defff50819199e8207c7b21c17e--2025-2503.24000-rethinking-kv-compression-serving-research-20261018-1900-scheduled-chat-0.json",
-      "worker_run_key": "20261018-1900-scheduled-chat-00/r01"
     },
     {
       "canonical_id": "arXiv:2609.21137",
@@ -5086,8 +5003,8 @@
     },
     {
       "canonical_id": "arXiv:2603.02188",
-      "title": "Multi-Head Low-Rank Attention",
-      "source_url": "https://arxiv.org/pdf/2603.02188",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-19T14:00:51+00:00",
       "return_count": 1,
       "assigned_worker": "scheduled-chat-30",
@@ -5111,6 +5028,89 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_cb25a37a664481918d1ca91518969247--2026-2603.02188-multi-head-low-rank-attention-research-20261019-0845-scheduled-chat-45-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_cb25a37a664481918d1ca91518969247--2026-2603.02188-multi-head-low-rank-attention-research-20261019-0845-scheduled-chat-45-r01.json",
       "worker_run_key": "20261019-0845-scheduled-chat-45/r01"
+    },
+    {
+      "canonical_id": "arXiv:2609.09208",
+      "title": "Shift-Accumulate Attention: Multiplier-Free Query--Key Products for Transformer Decoding",
+      "source_url": "https://arxiv.org/abs/2609.09208",
+      "returned_at": "2026-10-19T14:19:40+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5464,
+        "body_paragraphs": 29,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 1446,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_cd1a3f51a66c8191a42e57b05600f84f--2026-2609.09208-shift-accumulate-attention-research-20261019-0400-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_cd1a3f51a66c8191a42e57b05600f84f--2026-2609.09208-shift-accumulate-attention-research-20261019-0400-scheduled-chat-00-r01.json",
+      "worker_run_key": "20261019-0400-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2607.15593",
+      "title": "Scalable LLM Agent Tool Access in the Cloud",
+      "source_url": "https://arxiv.org/html/2607.15593v1",
+      "returned_at": "2026-10-19T14:20:20+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 0 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5538,
+        "body_paragraphs": 28,
+        "method_chars": 2446,
+        "method_paragraphs": 12,
+        "evaluation_chars": 0,
+        "limitation_chars": 507,
+        "insufficiency_flags": [
+          "評価説明量 0 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_d12b069907748191a4340e9b878b2400--2026-2607.15593-scalable-agent-tool-gateway-research-20261019-1256-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_d12b069907748191a4340e9b878b2400--2026-2607.15593-scalable-agent-tool-gateway-research-20261019-1256-scheduled-chat-00-r01.json",
+      "worker_run_key": "20261019-1256-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2609.36835",
+      "title": "ARC-KV: Amortizing Anchor Search for Reconstruction-Based KV Cache Compaction",
+      "source_url": "https://arxiv.org/abs/2609.36835",
+      "returned_at": "2026-10-19T14:20:21+00:00",
+      "return_count": 3,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 411 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 2772,
+        "body_paragraphs": 14,
+        "method_chars": 1233,
+        "method_paragraphs": 7,
+        "evaluation_chars": 411,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "評価説明量 411 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_d80701e54e408191b235f9af5909e385--2026-2609.36835-arc-kv-reconstruction-indexer-research-20261019-0304-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_d80701e54e408191b235f9af5909e385--2026-2609.36835-arc-kv-reconstruction-indexer-research-20261019-0304-scheduled-chat-00-r01.json",
+      "worker_run_key": "20261019-0304-scheduled-chat-00/r01"
     }
   ]
 }
