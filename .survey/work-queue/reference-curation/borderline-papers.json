@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-19T09:51:21+00:00",
-  "record_count": 5271,
+  "updated_at": "2026-10-19T11:26:33+00:00",
+  "record_count": 5275,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -70729,9 +70729,9 @@
       "identity_tokens": [
         "arXiv:2601.08815"
       ],
-      "reason": "著者のarXiv一次要旨を確認。Agent Contractsはエージェントの入出力仕様、トークン等の多次元資源予算、実行期限、成功条件を契約に統合し、委譲先の予算が親契約を超えない保存則と実行ライフサイクルを定義する。反復ワークフローでトークン消費90%削減、分散525分の1、委譲予算違反ゼロを報告する。ただし主な貢献はエージェント運用の資源統制・形式的保証であり、LLM推論エンジンのスループット、カーネル、KVメモリ最適化の直接的実装評価ではないため境界的候補。",
+      "reason": "一次論文の要旨では、LLMエージェントの入出力、トークン・API等の資源予算、時間制約、成功条件を契約として統合し、委譲先予算の保存則を定式化する。反復ワークフローで90%のトークン削減を報告するが、主貢献はアプリケーション層の資源統治であり、GPU推論基盤やモデル学習効率の改善とは区別する。",
       "first_checked_at": "2026-10-11T03:32:19+00:00",
-      "last_checked_at": "2026-10-18T03:52:46+00:00",
+      "last_checked_at": "2026-10-19T11:26:30+00:00",
       "linked_from": [
         ".survey/work-queue/WORKLIST-30.md"
       ],
@@ -71645,9 +71645,9 @@
       "identity_tokens": [
         "arXiv:2512.18706"
       ],
-      "reason": "著者要旨は音声活動検出、音声強調、音声認識、感情・環境音解析、LLMと検索拡張生成をモジュール化した音声対話パイプラインを提示し、1秒未満の応答遅延を主張する。エンドツーエンド遅延とモジュール接続は推論システムに関連するが、汎用LLMの復号カーネル、KVメモリ管理、バッチ処理を直接最適化したものではなく、音声対話アプリケーションのシステム設計が主眼のため境界的。",
+      "reason": "一次要旨では、音声認識・音声合成・LLMを分離したカスケード型音声対話基盤を最適化し、1秒未満の応答遅延と柔軟なモジュール連携を実現する。低遅延LLM実行パイプラインの編成という関連性はあるが、主評価は音声対話システム全体であり、LLMモデルの計算カーネル・KV管理・汎用サービングの最適化を直接検証する研究ではない。",
       "first_checked_at": "2026-10-12T17:45:21+00:00",
-      "last_checked_at": "2026-10-18T10:00:21+00:00",
+      "last_checked_at": "2026-10-19T11:26:30+00:00",
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "X-Talk: On the Underestimated Potential of Modular Speech-to-Speech Dialogue System"
@@ -71672,9 +71672,9 @@
         "DOI:10.48550/arxiv.2410.03051",
         "arXiv:2410.03051"
       ],
-      "reason": "一次論文の要旨を確認。大規模マルチモーダルモデルの動画入力で視覚トークン結合を導入し、長い動画系列の入力費用を削減しつつ説明文生成品質を維持する。効率化機構は推論に関連するが、主たる貢献と評価は動画詳細キャプション、VDCベンチマークおよび評価指標であり、汎用LLMサービングの遅延・スループット改善の体系的検証ではないため境界的候補。",
+      "reason": "一次要旨では動画キャプション用多モーダルモデルへ既存の視覚トークン統合を導入し、長い動画入力のトークン数を減らして性能低下を抑える。推論入力の圧縮という隣接性はあるが、主な新規貢献は詳細キャプションモデルとVDCベンチマーク・VDCscore評価であり、汎用LLMサービングの性能・メモリ最適化の独立した方式検証は弱いため保留。",
       "first_checked_at": "2026-10-12T18:49:58+00:00",
-      "last_checked_at": "2026-10-18T10:00:30+00:00",
+      "last_checked_at": "2026-10-19T11:26:33+00:00",
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "AuroraCap: Efficient, Performant Video Detailed Captioning and a New Benchmark"
@@ -81256,9 +81256,9 @@
       "identity_tokens": [
         "arXiv:2605.11856"
       ],
-      "reason": "一次要旨で、テキスト推論と補助画像を統合した視覚作業領域を潜在トークンに圧縮し、推論時に潜在表現だけで回答生成する方式と確認。生成する推論トークンを減らす点は推論計算削減に関係するが、主な実験は視覚理解・推論精度であり、GPUカーネル、メモリ移送、サービングの遅延・スループットの実測が要旨に示されないため境界判定。",
+      "reason": "テキストの推論軌跡と画像を共通の視覚潜在表現へ圧縮し、推論時の明示的な思考連鎖と外部ツール呼び出しを省く。生成トークン数削減は推論効率に関連するが、主な評価対象はマルチモーダル視覚推論の能力であり、汎用LLMサービング基盤の処理量やGPUメモリ管理ではない。",
       "first_checked_at": "2026-10-17T05:04:58+00:00",
-      "last_checked_at": "2026-10-17T05:04:58+00:00",
+      "last_checked_at": "2026-10-19T11:26:28+00:00",
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "UniVLR: Unifying Text and Vision in Visual Latent Reasoning for Multimodal LLMs"
@@ -81417,9 +81417,9 @@
       "identity_tokens": [
         "arXiv:2511.17693"
       ],
-      "reason": "連続する時間窓の重複計算を深いエンコーダ型Transformerで再利用し、音声・動画・テキストストリームの実行時間を従来の効率化モデル比で最大2桁減らすと一次要旨は述べる。推論効率の機構は関連するが、自己回帰LLMの事前充填・復号やKVキャッシュ管理ではなく、主にストリーム入力のエンコーダ推論を対象とするため境界的とする。",
+      "reason": "連続する音声・映像・テキストのスライディング窓に対して、深いエンコーダ専用Transformerの再計算を減らし全層で線形計算量を目指す。推論計算削減の技術的接点はあるが、対象はストリーム分類系であり、自己回帰型LLMの復号・KVキャッシュ・サービングは実証対象でない。",
       "first_checked_at": "2026-10-18T10:00:24+00:00",
-      "last_checked_at": "2026-10-18T10:00:24+00:00",
+      "last_checked_at": "2026-10-19T11:26:32+00:00",
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "DeepCoT: Deep Continual Transformers for Real-Time Inference on Data Streams"
@@ -81566,12 +81566,12 @@
         "DOI:10.48550/arxiv.2609.26425",
         "arXiv:2609.26425"
       ],
-      "reason": "一次要旨を確認。QuantWMは動画生成・世界モデルの時空間トークンを対象に、履歴Queryの感度を考慮した2ビットKey量子化の重心選択（QSAC）と主部分空間に沿う注意スコア補償（PSAC）を組み合わせ、映像のちらつきを抑えつつ最大6.20倍のKVキャッシュ圧縮を報告する。KV量子化と注意補償という機構はLLM推論の隣接技術だが、実証対象はCausal-Forcing、LingBot-World-v2、HY-World 1.5、Matrix-Game-2、Longcat-Video等の動画生成・世界モデルであり、言語LLMの復号性能や品質を直接評価していない。よって現行LLM推論サーベイでは境界的候補とする。",
+      "reason": "一次要旨では、動画生成と世界モデルの時間的一貫性を守る2ビットKVキャッシュ量子化が中心。履歴クエリ感度と残差範囲による鍵クラスタリング（QSAC）、主クエリ部分空間での鍵誤差補償（PSAC）を組み合わせ、視覚生成モデルで最大6.20倍のKV容量圧縮を報告する。推論メモリ最適化の技術的接点は明確だが、検証先はCausal-Forcing等の動画・世界モデルであり、LLMの文章生成・サービングでの実測は要旨から確認できないため境界的とする。",
       "first_checked_at": "2026-10-18T10:51:29+00:00",
-      "last_checked_at": "2026-10-18T10:51:29+00:00",
+      "last_checked_at": "2026-10-19T11:26:31+00:00",
       "linked_from": [],
       "borderline_recheck_count": 0,
-      "title": "QuantWM: Temporally Consistent 2-Bit KV Cache Quantization for World Models and Video Generation"
+      "title": "QuantWM: Temporally Consistent 2-Bit KV Cache Quantization for Video World Models"
     },
     "arXiv:2405.18727": {
       "classification": "borderline",
@@ -81608,7 +81608,7 @@
       ],
       "reason": "一次要旨によれば、視覚Transformerの高ノルムなmassive tokenとartifact tokenが注意重みを相互抑制する構造を利用し、Fast Nyström Attentionで自己注意を線形時間・空間に近似する。注意計算の効率化という一般性はあるが、実験対象は視覚バックボーンの検索・分類・領域分割・VQAであり、LLMデコード、KVキャッシュ、言語生成サービングへの具体的適用は要旨にない。推論基盤技術へ移植可能性は残るため対象外確定ではなく境界的とする。",
       "first_checked_at": "2026-10-18T15:19:22+00:00",
-      "last_checked_at": "2026-10-18T15:19:22+00:00",
+      "last_checked_at": "2026-10-19T11:26:33+00:00",
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "Artifacts and Attention Sinks: Structured Approximations for Efficient Vision Transformers"
@@ -81827,6 +81827,58 @@
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "Multi-model Machine Learning Inference Serving with GPU Spatial Partitioning"
+    },
+    "arXiv:2604.20796": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2604.20796",
+      "identity_tokens": [
+        "arXiv:2604.20796"
+      ],
+      "reason": "離散拡散型の混合専門家バックボーンと画像復号器を統合し、接頭辞認識最適化と少数ステップ蒸留で生成効率も改善する。推論アルゴリズムの効率化は対象範囲と重なるが、主な貢献は画像理解・生成を統合した基盤モデルと学習方式であり、汎用推論エンジンの比較ではない。",
+      "first_checked_at": "2026-10-19T11:26:28+00:00",
+      "last_checked_at": "2026-10-19T11:26:28+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "LLaDA2.0-Uni: Unifying Multimodal Understanding and Generation with Diffusion Large Language Model"
+    },
+    "arXiv:2602.24134": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2602.24134",
+      "identity_tokens": [
+        "arXiv:2602.24134"
+      ],
+      "reason": "視覚文書の検索拡張生成で、ページ全体のOCRではなく質問に必要な領域だけを動的認識し、生成器に渡す無関係な文脈と視覚トークンを減らす。入力トークン削減による効率向上は関連するが、文書RAGのアプリケーション固有の抽出・検索方式が中心であり、LLM実行基盤自体の最適化ではない。",
+      "first_checked_at": "2026-10-19T11:26:29+00:00",
+      "last_checked_at": "2026-10-19T11:26:29+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "AgenticOCR: Parsing Only What You Need for Efficient Retrieval-Augmented Generation"
+    },
+    "arXiv:2602.22675": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2602.22675",
+      "identity_tokens": [
+        "arXiv:2602.22675"
+      ],
+      "reason": "逐次的な深い推論を並列の証拠収集へ置き換え、長期検索エージェントの推論ステップと文脈予算を削減する。BrowseCompでは比較方式より平均推論ステップを70.7%削減したと報告するが、主対象は検索エージェントの行動方針と訓練であり、GPUサービング基盤の高速化ではない。",
+      "first_checked_at": "2026-10-19T11:26:29+00:00",
+      "last_checked_at": "2026-10-19T11:26:29+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Search More, Think Less: Rethinking Long-Horizon Agentic Search for Efficiency and Generalization"
+    },
+    "DOI:10.1109/comst.2025.3587225": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/comst.2025.3587225",
+      "identity_tokens": [
+        "DOI:10.1109/comst.2025.3587225"
+      ],
+      "reason": "出版社の一次要旨はエッジ・クラウドのLLM配備、推論効率、リアルタイム性、スケーラビリティを含む一方、学習・データ・通信・LLMがエッジを制御する逆方向の応用までを扱う広範な概観論文である。LLM推論基盤との関連は確かだが、特定の新規推論アルゴリズムの独立した実験結果を提供する論文ではない。全37ページの一次全文の体系的照合を今回完了できず、推論基盤サーベイとしての深さを確認するまで境界的として扱う。",
+      "first_checked_at": "2026-10-19T11:26:32+00:00",
+      "last_checked_at": "2026-10-19T11:26:32+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Edge-Enhanced Intelligence: A Comprehensive Survey of Large Language Models and Edge-Cloud Computing Synergy"
     }
   }
 }

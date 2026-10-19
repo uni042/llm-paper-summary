@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-efb663c7d492a72f-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2507.16018",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2507.16018",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2507.16018",
+      "arXiv:2507.16018"
+    ],
+    "reason": "一次要旨によれば、視覚Transformerの高ノルムなmassive tokenとartifact tokenが注意重みを相互抑制する構造を利用し、Fast Nyström Attentionで自己注意を線形時間・空間に近似する。注意計算の効率化という一般性はあるが、実験対象は視覚バックボーンの検索・分類・領域分割・VQAであり、LLMデコード、KVキャッシュ、言語生成サービングへの具体的適用は要旨にない。推論基盤技術へ移植可能性は残るため対象外確定ではなく境界的とする。",
+    "first_checked_at": "2026-10-18T15:19:22+00:00",
+    "last_checked_at": "2026-10-19T11:26:33+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Artifacts and Attention Sinks: Structured Approximations for Efficient Vision Transformers"
+  },
+  "processed_at": "2026-10-19T11:26:33+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-efb663c7d492",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

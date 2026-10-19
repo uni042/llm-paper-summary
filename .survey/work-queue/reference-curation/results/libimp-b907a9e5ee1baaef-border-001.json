@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-b907a9e5ee1baaef-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2511.17693",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2511.17693",
+    "identity_tokens": [
+      "arXiv:2511.17693"
+    ],
+    "reason": "連続する音声・映像・テキストのスライディング窓に対して、深いエンコーダ専用Transformerの再計算を減らし全層で線形計算量を目指す。推論計算削減の技術的接点はあるが、対象はストリーム分類系であり、自己回帰型LLMの復号・KVキャッシュ・サービングは実証対象でない。",
+    "first_checked_at": "2026-10-18T10:00:24+00:00",
+    "last_checked_at": "2026-10-19T11:26:32+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "DeepCoT: Deep Continual Transformers for Real-Time Inference on Data Streams"
+  },
+  "processed_at": "2026-10-19T11:26:32+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-b907a9e5ee1b",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

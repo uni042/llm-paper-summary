@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-54a4f618ccdd9335-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2602.22675",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2602.22675",
+    "identity_tokens": [
+      "arXiv:2602.22675"
+    ],
+    "reason": "逐次的な深い推論を並列の証拠収集へ置き換え、長期検索エージェントの推論ステップと文脈予算を削減する。BrowseCompでは比較方式より平均推論ステップを70.7%削減したと報告するが、主対象は検索エージェントの行動方針と訓練であり、GPUサービング基盤の高速化ではない。",
+    "first_checked_at": "2026-10-19T11:26:29+00:00",
+    "last_checked_at": "2026-10-19T11:26:29+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Search More, Think Less: Rethinking Long-Horizon Agentic Search for Efficiency and Generalization"
+  },
+  "processed_at": "2026-10-19T11:26:29+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-54a4f618ccdd",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

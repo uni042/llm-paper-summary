@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-54a4f618ccdd9335-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2605.15156",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2605.15156",
+    "identity_tokens": [
+      "arXiv:2605.15156"
+    ],
+    "reason": "既存LLMの重みを固定し、追加知識を別の学習済み記憶モデルに格納して検索ノイズに強い知識補完を行う。推論時の検索費用が文書集合の大きさに依存しないと主張するが、対象は外部知識の更新と質問応答能力であり、KVキャッシュ・重み・GPUメモリの最適化ではない。",
+    "first_checked_at": "2026-10-19T11:26:29+00:00",
+    "last_checked_at": "2026-10-19T11:26:29+00:00",
+    "linked_from": [],
+    "title": "MeMo: Memory as a Model"
+  },
+  "processed_at": "2026-10-19T11:26:30+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-54a4f618ccdd",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
