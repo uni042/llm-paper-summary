@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-19T11:49:08+00:00",
-  "record_count": 5277,
+  "updated_at": "2026-10-19T14:51:18+00:00",
+  "record_count": 5276,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -71672,9 +71672,9 @@
         "DOI:10.48550/arxiv.2410.03051",
         "arXiv:2410.03051"
       ],
-      "reason": "一次要旨では動画キャプション用多モーダルモデルへ既存の視覚トークン統合を導入し、長い動画入力のトークン数を減らして性能低下を抑える。推論入力の圧縮という隣接性はあるが、主な新規貢献は詳細キャプションモデルとVDCベンチマーク・VDCscore評価であり、汎用LLMサービングの性能・メモリ最適化の独立した方式検証は弱いため保留。",
+      "reason": "動画詳細説明生成を目的とするマルチモーダルモデルと評価ベンチマークの研究。入力視覚トークンの統合による計算負荷削減を副次的に扱うが、主要貢献は動画キャプション品質と評価指標であり、汎用LLM推論基盤の最適化としての検証は限定的。",
       "first_checked_at": "2026-10-12T18:49:58+00:00",
-      "last_checked_at": "2026-10-19T11:26:33+00:00",
+      "last_checked_at": "2026-10-19T14:51:15+00:00",
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "AuroraCap: Efficient, Performant Video Detailed Captioning and a New Benchmark"
@@ -81735,19 +81735,6 @@
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "Expert Routing for Communication-Efficient MoE via Finite Expert Banks"
-    },
-    "arXiv:2602.08818": {
-      "classification": "borderline",
-      "canonical_id": "arXiv:2602.08818",
-      "identity_tokens": [
-        "arXiv:2602.08818"
-      ],
-      "reason": "一次要旨を確認。フルサイズ専門家と低ランク適応専門家を混合し、推論用のモデルパラメータ容量を33.27Bから10.75Bへ減らしながら平均タスク得点45.46から47.18へ改善したと報告。圧縮されたMoEのメモリ効率には関係するが、主眼は連合的に訓練した専門家のランクと下流精度の交換条件であり、GPU推論実行・スケジューリング・トークン毎秒は評価対象ではない。",
-      "first_checked_at": "2026-10-19T01:45:59+00:00",
-      "last_checked_at": "2026-10-19T01:45:59+00:00",
-      "linked_from": [],
-      "borderline_recheck_count": 0,
-      "title": "FlexMoRE: A Flexible Mixture of Rank-heterogeneous Experts for Efficient Federatedly-trained Large Language Models"
     },
     "arXiv:2511.00603": {
       "classification": "borderline",

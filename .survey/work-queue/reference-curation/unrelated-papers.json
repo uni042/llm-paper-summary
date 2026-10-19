@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-19T13:57:37+00:00",
-  "record_count": 12428,
+  "updated_at": "2026-10-19T14:51:18+00:00",
+  "record_count": 12430,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -163076,9 +163076,9 @@
         "id:arXiv:2204.13767",
         "url:https://arxiv.org/abs/2204.13767"
       ],
-      "reason": "一次要旨で、複数変量の長期時系列予測向けに、三角形に縮小するパッチ注意と変量別の軽量パラメータを提案することを確認した。線形計算量の注意機構はあるが、評価は時系列予測4データセットであり、生成型LLMの推論、KVキャッシュ、サービング、GPU実行基盤への適用を実証していないため対象外。",
+      "reason": "多変量時系列の長期予測を対象に、三角階層構造と変数別注意パラメータで時系列予測の計算量・精度を改善する。LLMの自己回帰復号、KVキャッシュ、推論サービング、LLM用注意カーネルの最適化ではない。",
       "first_checked_at": "2026-10-11T02:48:44+00:00",
-      "last_checked_at": "2026-10-18T17:52:11+00:00",
+      "last_checked_at": "2026-10-19T14:51:15+00:00",
       "linked_from": [],
       "title": "Triformer: Triangular, Variable-Specific Attentions for Long Sequence Multivariate Time Series Forecasting--Full Version"
     },
@@ -168403,9 +168403,9 @@
         "DOI:10.48550/arxiv.2403.18421",
         "arXiv:2403.18421"
       ],
-      "reason": "一次要旨ではPubMedの要旨・論文本文だけで学習した27億パラメータの医療特化自己回帰モデルを公開し、MedMCQAや医学MMLUの回答精度を評価する。小型化の利点は述べるが、推論ランタイム、圧縮方式、スケジューラ、通信・メモリ最適化の新規システム手法を提示していないため現行対象外。",
+      "reason": "PubMed文献で事前学習した27億パラメータの生物医学向け言語モデルを公開し、医療質問応答の性能とモデル特化の可能性を評価する。主貢献はドメインモデル構築・学習・応用であり、推論基盤やサービング最適化の新規方式は提示しない。",
       "first_checked_at": "2026-10-13T13:47:00+00:00",
-      "last_checked_at": "2026-10-18T17:52:15+00:00",
+      "last_checked_at": "2026-10-19T14:51:16+00:00",
       "linked_from": [],
       "title": "BioMedLM: A 2.7B Parameter Language Model Trained On Biomedical Text"
     },
@@ -179162,6 +179162,30 @@
       "last_checked_at": "2026-10-19T11:26:29+00:00",
       "linked_from": [],
       "title": "MeMo: Memory as a Model"
+    },
+    "arXiv:2605.13295": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.13295",
+      "identity_tokens": [
+        "arXiv:2605.13295"
+      ],
+      "reason": "一次要旨では、複数エージェントの共同設定から得た全体報酬を各エージェントへ帰属させ、プロンプトを学習可能なパラメータとして最適化する方式。MBPP・GSM8K・HotpotQAの回答品質を主評価とし、推論時のKV管理、モデル配置、通信、サービングスケジューリングやカーネルの改善方式を提案していない。推論費用低下は付随結果であり、現在凍結対象のプロンプト最適化・学習アルゴリズムが中心のため対象外。",
+      "first_checked_at": "2026-10-19T14:51:17+00:00",
+      "last_checked_at": "2026-10-19T14:51:17+00:00",
+      "linked_from": [],
+      "title": "CANTANTE: Optimizing Agentic Systems via Contrastive Credit Attribution"
+    },
+    "arXiv:2602.08818": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.08818",
+      "identity_tokens": [
+        "arXiv:2602.08818"
+      ],
+      "reason": "一次要旨では、連合学習で独立訓練した専門家をフルサイズまたは低ランクアダプタとして組み合わせ、150種類の混合と120課題で専門家ランクと回答品質の関係を比較する。10.75B対33.27Bというパラメータ削減は推論メモリにも波及し得るが、主貢献は専門家の連合学習・ランク選択と下流課題品質の分析であり、推論時のルーティング、重みオフロード、実行系・カーネル・通信を直接最適化する手法は一次要旨で示されていない。現行の学習専用凍結範囲として対象外。",
+      "first_checked_at": "2026-10-19T14:51:18+00:00",
+      "last_checked_at": "2026-10-19T14:51:18+00:00",
+      "linked_from": [],
+      "title": "FlexMoRE: A Flexible Mixture of Rank-heterogeneous Experts for Efficient Federatedly-trained Large Language Models"
     }
   }
 }
