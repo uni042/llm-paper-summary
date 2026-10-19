@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-19T11:50:02+00:00",
+  "generated_at": "2026-10-19T12:02:17+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 197,
+  "count": 195,
   "entries": [
     {
       "canonical_id": "DOI:10.1145/3714983.3714987",
@@ -4309,34 +4309,6 @@
       "worker_run_key": "20261018-2155-scheduled-chat-00/r01"
     },
     {
-      "canonical_id": "arXiv:2406.02500",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-18T14:20:54+00:00",
-      "return_count": 4,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 8158,
-        "body_paragraphs": 42,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 1828,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-a12973f87b3b--libfile_956d4f2253488191bde3caab3e060dd0--2024-2406.02500-unified-moe-compression-research-20261018-1800-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-a12973f87b3b--libfile_956d4f2253488191bde3caab3e060dd0--2024-2406.02500-unified-moe-compression-research-20261018-1800-scheduled-chat-00-r01.json",
-      "worker_run_key": "20261018-1800-scheduled-chat-00/r01"
-    },
-    {
       "canonical_id": "arXiv:2609.36835",
       "title": null,
       "source_url": null,
@@ -4871,34 +4843,6 @@
       "worker_run_key": "20261019-0630-scheduled-chat-30/r01"
     },
     {
-      "canonical_id": "arXiv:2609.24298",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-18T22:59:03+00:00",
-      "return_count": 4,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 0 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5668,
-        "body_paragraphs": 36,
-        "method_chars": 2079,
-        "method_paragraphs": 15,
-        "evaluation_chars": 0,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "評価説明量 0 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-8cd1e2373a3c--libfile_e2afea3a96988191bd955c517b999db6--2026-2609.24298-kv-cobra-cooptimized-bit-rank-research-20261019-0700-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-8cd1e2373a3c--libfile_e2afea3a96988191bd955c517b999db6--2026-2609.24298-kv-cobra-cooptimized-bit-rank-research-20261019-0700-scheduled-chat-00-r0.json",
-      "worker_run_key": "20261019-0700-scheduled-chat-00/r01"
-    },
-    {
       "canonical_id": "arXiv:2407.12391",
       "title": null,
       "source_url": null,
@@ -5096,34 +5040,6 @@
       "worker_run_key": "20261018-2257-scheduled-chat-00/r01"
     },
     {
-      "canonical_id": "arXiv:2510.01290",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-19T11:30:54+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 9504,
-        "body_paragraphs": 48,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 773,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_08d6bd2de448819195b0312d425f1766--2025-2510.01290-thinkv-thought-adaptive-kv-cache-research-20261019-1830-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_08d6bd2de448819195b0312d425f1766--2025-2510.01290-thinkv-thought-adaptive-kv-cache-research-20261019-1830-scheduled-chat-30-r01.json",
-      "worker_run_key": "20261019-1830-scheduled-chat-30/r01"
-    },
-    {
       "canonical_id": "arXiv:2604.13634",
       "title": null,
       "source_url": null,
@@ -5180,8 +5096,8 @@
     },
     {
       "canonical_id": "arXiv:2605.17447",
-      "title": "FastOCR: Dynamic Visual Fixation via KV Cache Pruning for Efficient Document Parsing",
-      "source_url": "https://arxiv.org/abs/2605.17447",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-19T11:47:35+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-30",
@@ -5207,6 +5123,33 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_1cfb40ff275c8191b6f64d40a78a5a5e--2026-2605.17447-fastocr-dynamic-visual-fixation-research-20261019-1130-scheduled-chat-30-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_1cfb40ff275c8191b6f64d40a78a5a5e--2026-2605.17447-fastocr-dynamic-visual-fixation-research-20261019-1130-scheduled-chat-30-r01.json",
       "worker_run_key": "20261019-1130-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2608.00077",
+      "title": "Beyond Accuracy: Auditing Spatial Provenance in Visual Token Pruning for OCR-Critical MLLM Inference",
+      "source_url": "https://arxiv.org/abs/2608.00077",
+      "returned_at": "2026-10-19T11:59:37+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 0 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5338,
+        "body_paragraphs": 31,
+        "method_chars": 1449,
+        "method_paragraphs": 10,
+        "evaluation_chars": 0,
+        "limitation_chars": 459,
+        "insufficiency_flags": [
+          "評価説明量 0 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_23aed438311c819192723e8107869d77--2026-2608.00077-visual-provenance-pruning-audit-research-20261019-1256-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_23aed438311c819192723e8107869d77--2026-2608.00077-visual-provenance-pruning-audit-research-20261019-1256-scheduled-chat-00-r01.json",
+      "worker_run_key": "20261019-1256-scheduled-chat-00/r01"
     }
   ]
 }

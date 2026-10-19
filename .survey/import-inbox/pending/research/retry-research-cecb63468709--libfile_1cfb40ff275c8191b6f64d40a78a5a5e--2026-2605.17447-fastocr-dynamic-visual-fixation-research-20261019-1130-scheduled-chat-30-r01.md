@@ -38,6 +38,8 @@ reference_main_sha: 'c798f51ffe47cb39bfa37e537ec19a2892b23286'
 lineage: '03-kv-cache-attention-optimization'
 quality_self_review_passed: true
 quality_self_review_version: 'PAPER-QUALITY-GUIDE-2026-10-07'
+last_audited: null
+audit_version: 0
 ---
 
 # FastOCR：文書OCRで視覚注意の焦点を追跡する動的KV参照削減
