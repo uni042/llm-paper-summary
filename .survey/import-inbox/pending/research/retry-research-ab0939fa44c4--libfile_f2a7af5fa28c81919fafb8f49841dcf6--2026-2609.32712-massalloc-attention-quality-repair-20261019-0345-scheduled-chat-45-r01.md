@@ -35,6 +35,8 @@ scheduled_slot: '45'
 quality_self_review_passed: true
 quality_self_review_version: PAPER-QUALITY-GUIDE-2026-10-07
 repair_of_source_sha256: f86f8661cef53c375b871df12bc3a084214ab473c4ad92929b22082cc2f17c1c
+last_audited: null
+audit_version: 0
 ---
 
 # MassAlloc Attention: Let Attention Allocate Its Own Compute

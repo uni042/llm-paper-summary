@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "1a74105d088469fd43fd669bb0c50eebfbad0c23b18ce981c66a7147c38dbdb7",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/retry-research-193f6b71e9d6--libfile_b6c04c9d28588191b9eaa38e1516d197--2024-2403.11805-libra-mobile-llmaas-kv-context-management-research-20261019-2000-scheduled-chat-00-r01.md",
+  "canonical_id": "arXiv:2403.11805",
+  "worker_completed_at": "2026-10-19T20:09:14+09:00",
+  "worker_run_key": "20261019-2000-scheduled-chat-00/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 5855,
+    "body_paragraphs": 31,
+    "method_chars": 2220,
+    "method_paragraphs": 12,
+    "evaluation_chars": 0,
+    "limitation_chars": 0,
+    "insufficiency_flags": [
+      "評価説明量 0 < 500",
+      "限界説明量 0 < 推奨 120"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 評価説明量 0 < 500"
+  ],
+  "processed_at": "2026-10-19T15:12:31+00:00"
+}
