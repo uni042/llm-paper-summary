@@ -35,10 +35,15 @@
   "selection_reason": "The official IEEE abstract proposes LiteKV for edge LLM inference and reports up to 75% less KV-cache memory while preserving comparable quality and 95% decoding efficiency. It directly addresses constrained inference memory/latency.",
   "semantic_scholar_id": "77d0136313411122d60e879a9c8bd3674e0744c4",
   "source_url": "https://doi.org/10.1109/INFOCOM59046.2026.11571411",
-  "status": "ready",
+  "status": "superseded",
   "title": "Memory-Efficient KV Cache Optimization for Large Language Model Inference at the Edge",
   "type": "research",
   "venue": "IEEE Conference on Computer Communications",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-10-19T22:46:30+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/13-sparse-attention/2026-c5217a359f97-memory-efficient-kv-cache-optimization-for-large-language-model-inferenc.md",
+  "represented_canonical_id": "DOI:10.1109/INFOCOM59046.2026.11571411",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

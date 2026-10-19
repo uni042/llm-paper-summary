@@ -29,6 +29,8 @@ scheduled_slot: "45"
 quality_self_review_passed: true
 quality_self_review_version: "PAPER-QUALITY-GUIDE-2026-10-07"
 reference_main_sha: "78ca82de575cd3328b0c69e4858cec95d979fafb"
+last_audited: null
+audit_version: 0
 ---
 
 # LiteKV：エッジLLMの容量制約を考慮したKVキャッシュ置換

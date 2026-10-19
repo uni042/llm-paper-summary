@@ -23,7 +23,7 @@
 - [11-llm-serving-scheduling-disaggregation](../11-llm-serving-scheduling-disaggregation/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（95本）
+## 自動生成の論文一覧（96本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -179,6 +179,10 @@
 - **2026-07 · [From Logical to Computational Sparsity: Structure-Aware Block-Sparse Attention for Long Code Completion](2026-a55ddcf36e91-from-logical-to-computational-sparsity-structure-aware-block-sparse-atte.md)**  
   実装：[✓](https://github.com/DeepSoftwareAnalytics/SabreCoder) ・ リポジトリ内被引用：0  
   長いコードを補完する言語モデルでは、入力コードを一度に処理する事前計算（プリフィル）の注意演算が入力長の二乗に応じて増える。コード特有の関数・識別子・import文を考慮しない疎注意は重要な依存を失って補完精度が落ちやすい。次に同一チャンク内、明示的依存、埋め込み類似、グローバル参照という四つの規則を合成して注意マスクを作る。
+
+- **2026-06 · [Memory-Efficient KV Cache Optimization for Large Language Model Inference at the Edge](2026-c5217a359f97-memory-efficient-kv-cache-optimization-for-large-language-model-inferenc.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  既存のクエリ依存疎注意（query-aware sparse 注意機構）は、現在のトークンに必要な過去のKVの一部だけを計算に使う。Llama系モデルの実験では、メモリ削減率最大75%の条件で非制限基準の復号効率の95%を維持し、容量制限下の比較で復号遅延を最大54.84%低減したと報告する。
 
 - **2026-05 · [VisionPulse: Dynamic Visual Sparsity for Efficient Multimodal Reasoning](2026-2605.31457-visionpulse-dynamic-visual-sparsity-for-efficient-multimodal-reasoning.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
