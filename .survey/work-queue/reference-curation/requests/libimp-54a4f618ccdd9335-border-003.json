@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-54a4f618ccdd9335-border-003",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2602.24134",
+  "reason": "視覚文書の検索拡張生成で、ページ全体のOCRではなく質問に必要な領域だけを動的認識し、生成器に渡す無関係な文脈と視覚トークンを減らす。入力トークン削減による効率向上は関連するが、文書RAGのアプリケーション固有の抽出・検索方式が中心であり、LLM実行基盤自体の最適化ではない。",
+  "title": "AgenticOCR: Parsing Only What You Need for Efficient Retrieval-Augmented Generation",
+  "identity_tokens": [
+    "arxiv:2602.24134"
+  ],
+  "linked_from": [],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-54a4f618ccdd",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}
