@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-19T15:12:32+00:00",
+  "generated_at": "2026-10-19T15:19:05+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -4390,34 +4390,6 @@
       "worker_run_key": "20261019-1800-scheduled-chat-00/r01"
     },
     {
-      "canonical_id": "arXiv:2606.00724",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-19T12:26:40+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5663,
-        "body_paragraphs": 27,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 992,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_48824ac864dc8191b925a752e1e00a57--2026-2606.00724-wavefilter-diffusion-kv-wavelet-research-20261019-1800-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_48824ac864dc8191b925a752e1e00a57--2026-2606.00724-wavefilter-diffusion-kv-wavelet-research-20261019-1800-scheduled-chat-00-r01.json",
-      "worker_run_key": "20261019-1800-scheduled-chat-00/r01"
-    },
-    {
       "canonical_id": "arXiv:2510.04147",
       "title": null,
       "source_url": null,
@@ -4533,34 +4505,6 @@
       "worker_run_key": "20261019-1707-scheduled-chat-00/r01"
     },
     {
-      "canonical_id": "arXiv:2607.10661",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-19T12:58:36+00:00",
-      "return_count": 3,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 132 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 6663,
-        "body_paragraphs": 39,
-        "method_chars": 2109,
-        "method_paragraphs": 12,
-        "evaluation_chars": 132,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "評価説明量 132 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_69ac0034935c81918376ddc7b6703e54--2026-2607.10661-ptd-progressive-tree-drafting-research-20261019-1130-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_69ac0034935c81918376ddc7b6703e54--2026-2607.10661-ptd-progressive-tree-drafting-research-20261019-1130-scheduled-chat-30-r01.json",
-      "worker_run_key": "20261019-1130-scheduled-chat-30/r01"
-    },
-    {
       "canonical_id": "arXiv:2601.07878",
       "title": null,
       "source_url": null,
@@ -4644,59 +4588,6 @@
       "worker_run_key": "20261019-0700-scheduled-chat-00/r01"
     },
     {
-      "canonical_id": "DOI:10.1145/3800690",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-19T13:20:44+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "quality_self_review_version が空"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 6924,
-        "body_paragraphs": 36,
-        "method_chars": 1991,
-        "method_paragraphs": 10,
-        "evaluation_chars": 1803,
-        "limitation_chars": 787,
-        "insufficiency_flags": []
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_8f7cafaa55588191b59c7d24bb0af61f--2026-doi-10.1145-3800690-torpor-serverless-model-swapping-research-20261019-0945-scheduled-chat-45-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_8f7cafaa55588191b59c7d24bb0af61f--2026-doi-10.1145-3800690-torpor-serverless-model-swapping-research-20261019-0945-scheduled-chat-45-r01.json",
-      "worker_run_key": "20261019-0945-scheduled-chat-45/r01"
-    },
-    {
-      "canonical_id": "arXiv:2605.25550",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-19T13:47:48+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 0 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5989,
-        "body_paragraphs": 36,
-        "method_chars": 1948,
-        "method_paragraphs": 13,
-        "evaluation_chars": 0,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "評価説明量 0 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_a8f2db2d755c81918fa099eb858692b3--2026-2605.25550-disagfusion-asynchronous-diffusion-serving-research-20261019-1900-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_a8f2db2d755c81918fa099eb858692b3--2026-2605.25550-disagfusion-asynchronous-diffusion-serving-research-20261019-1900-scheduled-chat-00-r01.json",
-      "worker_run_key": "20261019-1900-scheduled-chat-00/r01"
-    },
-    {
       "canonical_id": "arXiv:2511.06247",
       "title": null,
       "source_url": null,
@@ -4722,34 +4613,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_be5fe8f771f48191ad7b3cb8c47fb260--2025-2511.06247-tetris-chunkwise-dynamic-sequence-parallelism-research-20261019-1900-scheduled-chat-00-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_be5fe8f771f48191ad7b3cb8c47fb260--2025-2511.06247-tetris-chunkwise-dynamic-sequence-parallelism-research-20261019-1900-scheduled-chat-00-r01.json",
       "worker_run_key": "20261019-1900-scheduled-chat-00/r01"
-    },
-    {
-      "canonical_id": "arXiv:2603.02188",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-19T14:00:51+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 450 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 4001,
-        "body_paragraphs": 23,
-        "method_chars": 1349,
-        "method_paragraphs": 8,
-        "evaluation_chars": 450,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "評価説明量 450 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_cb25a37a664481918d1ca91518969247--2026-2603.02188-multi-head-low-rank-attention-research-20261019-0845-scheduled-chat-45-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_cb25a37a664481918d1ca91518969247--2026-2603.02188-multi-head-low-rank-attention-research-20261019-0845-scheduled-chat-45-r01.json",
-      "worker_run_key": "20261019-0845-scheduled-chat-45/r01"
     },
     {
       "canonical_id": "arXiv:2609.09208",
@@ -4972,8 +4835,8 @@
     },
     {
       "canonical_id": "arXiv:2412.12706",
-      "title": "More Tokens, Lower Precision: Towards the Optimal Token-Precision Trade-off in KV Cache Compression",
-      "source_url": "https://aclanthology.org/2025.findings-emnlp.429/",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-19T15:12:28+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-45",
@@ -4999,8 +4862,8 @@
     },
     {
       "canonical_id": "arXiv:2609.36835",
-      "title": "ARC-KV: Amortizing Anchor Search for Reconstruction-Based KV Cache Compaction",
-      "source_url": "https://arxiv.org/abs/2609.36835",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-19T15:12:30+00:00",
       "return_count": 4,
       "assigned_worker": "scheduled-chat-45",
@@ -5027,8 +4890,8 @@
     },
     {
       "canonical_id": "arXiv:2403.11805",
-      "title": "An Efficient Context Management System for On-Device LLMaaS (Libra; preprint: LLM as a System Service on Mobile Devices)",
-      "source_url": "https://doi.org/10.1145/3774906.3800479",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-19T15:12:31+00:00",
       "return_count": 6,
       "assigned_worker": "scheduled-chat-45",
@@ -5055,8 +4918,8 @@
     },
     {
       "canonical_id": "arXiv:2609.39816",
-      "title": "Beyond Accuracy: Prefix-Invariant Realizations of Low-Precision Fast Matrix Multiplication",
-      "source_url": "https://arxiv.org/html/2609.39816",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-19T15:12:32+00:00",
       "return_count": 6,
       "assigned_worker": "scheduled-chat-30",
@@ -5079,6 +4942,143 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-1e472bcafb86--libfile_912bc504fa948191b2971da439b15671--2026-2609.39816-prefix-invariant-lowprecision-matmul-quality-repair-20261019-1445-scheduled-chat-45-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-1e472bcafb86--libfile_912bc504fa948191b2971da439b15671--2026-2609.39816-prefix-invariant-lowprecision-matmul-quality-repair-20261019-1445-schedul.json",
       "worker_run_key": "20261019-1445-scheduled-chat-45/r01"
+    },
+    {
+      "canonical_id": "arXiv:2605.25550",
+      "title": "DisagFusion: Asynchronous Pipeline Parallelism and Elastic Scheduling for Disaggregated Diffusion Serving",
+      "source_url": "https://arxiv.org/html/2605.25550v1",
+      "returned_at": "2026-10-19T15:19:00+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 0 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5989,
+        "body_paragraphs": 36,
+        "method_chars": 1948,
+        "method_paragraphs": 13,
+        "evaluation_chars": 0,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "評価説明量 0 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-2eb608a15329--libfile_a8f2db2d755c81918fa099eb858692b3--2026-2605.25550-disagfusion-asynchronous-diffusion-serving-research-20261019-1900-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-2eb608a15329--libfile_a8f2db2d755c81918fa099eb858692b3--2026-2605.25550-disagfusion-asynchronous-diffusion-serving-research-20261019-1900-schedul.json",
+      "worker_run_key": "20261019-1900-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2603.02188",
+      "title": "Multi-Head Low-Rank Attention",
+      "source_url": "https://arxiv.org/pdf/2603.02188",
+      "returned_at": "2026-10-19T15:19:01+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 450 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 4001,
+        "body_paragraphs": 23,
+        "method_chars": 1349,
+        "method_paragraphs": 8,
+        "evaluation_chars": 450,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "評価説明量 450 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-3298c2fae243--libfile_cb25a37a664481918d1ca91518969247--2026-2603.02188-multi-head-low-rank-attention-research-20261019-0845-scheduled-chat-45-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-3298c2fae243--libfile_cb25a37a664481918d1ca91518969247--2026-2603.02188-multi-head-low-rank-attention-research-20261019-0845-scheduled-chat-45-r0.json",
+      "worker_run_key": "20261019-0845-scheduled-chat-45/r01"
+    },
+    {
+      "canonical_id": "arXiv:2606.00724",
+      "title": "WaveFilter: Enhancing the Long-Context Capability of Diffusion LLMs via Wavelet-Guided KV Cache Filtering",
+      "source_url": "https://arxiv.org/html/2606.00724v1",
+      "returned_at": "2026-10-19T15:19:02+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5663,
+        "body_paragraphs": 27,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 992,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-33064ae93d47--libfile_48824ac864dc8191b925a752e1e00a57--2026-2606.00724-wavefilter-diffusion-kv-wavelet-research-20261019-1800-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-33064ae93d47--libfile_48824ac864dc8191b925a752e1e00a57--2026-2606.00724-wavefilter-diffusion-kv-wavelet-research-20261019-1800-scheduled-chat-00-.json",
+      "worker_run_key": "20261019-1800-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "DOI:10.1145/3800690",
+      "title": "Enabling Low-Latency, GPU-Efficient Serverless Inference with Model Swapping",
+      "source_url": "https://doi.org/10.1145/3800690",
+      "returned_at": "2026-10-19T15:19:03+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "quality_self_review_version が空"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 6924,
+        "body_paragraphs": 36,
+        "method_chars": 1991,
+        "method_paragraphs": 10,
+        "evaluation_chars": 1803,
+        "limitation_chars": 787,
+        "insufficiency_flags": []
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-342cd8cc615d--libfile_8f7cafaa55588191b59c7d24bb0af61f--2026-doi-10.1145-3800690-torpor-serverless-model-swapping-research-20261019-0945-scheduled-chat-45-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-342cd8cc615d--libfile_8f7cafaa55588191b59c7d24bb0af61f--2026-doi-10.1145-3800690-torpor-serverless-model-swapping-research-20261019-0945-schedule.json",
+      "worker_run_key": "20261019-0945-scheduled-chat-45/r01"
+    },
+    {
+      "canonical_id": "arXiv:2607.10661",
+      "title": "Unlocking Parallelism in Autoregressive Language Models via Speculative Decoding with Progressive Tree Drafting",
+      "source_url": "https://arxiv.org/abs/2607.10661",
+      "returned_at": "2026-10-19T15:19:05+00:00",
+      "return_count": 4,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 132 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 6663,
+        "body_paragraphs": 39,
+        "method_chars": 2109,
+        "method_paragraphs": 12,
+        "evaluation_chars": 132,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "評価説明量 132 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-3dff353ff347--libfile_69ac0034935c81918376ddc7b6703e54--2026-2607.10661-ptd-progressive-tree-drafting-research-20261019-1130-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-3dff353ff347--libfile_69ac0034935c81918376ddc7b6703e54--2026-2607.10661-ptd-progressive-tree-drafting-research-20261019-1130-scheduled-chat-30-r0.json",
+      "worker_run_key": "20261019-1130-scheduled-chat-30/r01"
     }
   ]
 }
