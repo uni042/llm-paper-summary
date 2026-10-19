@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-39d959d041800abf-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2206.04685",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2206.04685",
+    "identity_tokens": [
+      "Predictive Exit: Prediction of Fine-Grained Early Exits for Computation- and Energy-Efficient Inference",
+      "arXiv:2206.04685"
+    ],
+    "reason": "論文は畳み込みニューラルネットワーク（CNN）による画像分類を例に、Bag-of-Featuresと全結合層で構成した途中終了分類器を置き、低コストの終了位置予測器と電圧・周波数動的制御（DVFS）を組み合わせる。主指標はCNNの演算量とエネルギーであり、LLMのトークン逐次生成、KVキャッシュ、Transformerのサービング、MoE実行等を研究・評価していない。推論一般への着想はあり得るが、現行のLLM推論システムサーベイの直接対象外。",
+    "first_checked_at": "2026-10-19T21:45:41+00:00",
+    "last_checked_at": "2026-10-19T21:45:41+00:00",
+    "linked_from": [],
+    "title": "Predictive Exit: Prediction of Fine-Grained Early Exits for Computation- and Energy-Efficient Inference"
+  },
+  "processed_at": "2026-10-19T21:45:41+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-39d959d04180",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
