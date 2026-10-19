@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-19T11:33:20+00:00",
+  "generated_at": "2026-10-19T11:50:02+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 200,
+  "count": 197,
   "entries": [
     {
       "canonical_id": "DOI:10.1145/3714983.3714987",
@@ -2483,34 +2483,6 @@
       "worker_run_key": "20261016-0630-scheduled-chat-30/r01"
     },
     {
-      "canonical_id": "arXiv:2505.19201",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-16T16:07:39+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 387 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5330,
-        "body_paragraphs": 30,
-        "method_chars": 1414,
-        "method_paragraphs": 8,
-        "evaluation_chars": 387,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "評価説明量 387 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-ba3c11fb41af--libfile_36eee027a3dc81919047c761346d1b05--2025-2505.19201-dream-multimodal-speculative-decoding-research-20261015-1900-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-ba3c11fb41af--libfile_36eee027a3dc81919047c761346d1b05--2025-2505.19201-dream-multimodal-speculative-decoding-research-20261015-1900-scheduled-ch.json",
-      "worker_run_key": "20261015-1900-scheduled-chat-00/r01"
-    },
-    {
       "canonical_id": "DOI:10.1145/3689031.3696072",
       "title": null,
       "source_url": null,
@@ -2967,35 +2939,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-5a90eaf8ccc5--libfile_d22640076de48191b61993ee268910e4--2026-2604.15356-sequential-kv-language-tries-research-20261017-1730-scheduled-chat-30-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-5a90eaf8ccc5--libfile_d22640076de48191b61993ee268910e4--2026-2604.15356-sequential-kv-language-tries-research-20261017-1730-scheduled-chat-30-r01.json",
       "worker_run_key": "20261017-1730-scheduled-chat-30/r01"
-    },
-    {
-      "canonical_id": "arXiv:2607.28069",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-17T15:45:48+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700",
-        "説明不足トリガー: 評価説明量 0 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5689,
-        "body_paragraphs": 30,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 0,
-        "limitation_chars": 555,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700",
-          "評価説明量 0 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-63d610dcd1ee--libfile_8bd005de60908191ba10d020f4414e95--2026-2607.28069-sempic-semantic-position-independent-kv-cache-research-20261017-1030-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-63d610dcd1ee--libfile_8bd005de60908191ba10d020f4414e95--2026-2607.28069-sempic-semantic-position-independent-kv-cache-research-20261017-1030-sche.json",
-      "worker_run_key": "20261017-1030-scheduled-chat-30/r01"
     },
     {
       "canonical_id": "arXiv:2606.27791",
@@ -5013,36 +4956,6 @@
       "worker_run_key": "20261019-1145-scheduled-chat-45/r01"
     },
     {
-      "canonical_id": "arXiv:2605.17447",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-19T04:58:26+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700",
-        "説明不足トリガー: 評価説明量 158 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 8910,
-        "body_paragraphs": 53,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 158,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700",
-          "評価説明量 158 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-cecb63468709--libfile_1cfb40ff275c8191b6f64d40a78a5a5e--2026-2605.17447-fastocr-dynamic-visual-fixation-research-20261019-1130-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-cecb63468709--libfile_1cfb40ff275c8191b6f64d40a78a5a5e--2026-2605.17447-fastocr-dynamic-visual-fixation-research-20261019-1130-scheduled-chat-30-.json",
-      "worker_run_key": "20261019-1130-scheduled-chat-30/r01"
-    },
-    {
       "canonical_id": "arXiv:2609.39816",
       "title": null,
       "source_url": null,
@@ -5100,36 +5013,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-808c86c8ed81--libfile_3d7d78e874fc819184f01cc4c9c9bd51--2026-2605.20982-dodoco-moe-routing-dispatch-observatory-research-20261019-1425-scheduled-chat-30-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-808c86c8ed81--libfile_3d7d78e874fc819184f01cc4c9c9bd51--2026-2605.20982-dodoco-moe-routing-dispatch-observatory-research-20261019-1425-scheduled-.json",
       "worker_run_key": "20261019-1425-scheduled-chat-30/r01"
-    },
-    {
-      "canonical_id": "arXiv:2605.05888",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-19T09:59:47+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700",
-        "説明不足トリガー: 評価説明量 180 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 8415,
-        "body_paragraphs": 42,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 180,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700",
-          "評価説明量 180 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-53d6a13b6478--libfile_697b0c9f99d08191b3774dc2686c2b64--2026-2605.05888-moe-hub-destination-agnostic-gpu-communication-research-20261019-1830-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-53d6a13b6478--libfile_697b0c9f99d08191b3774dc2686c2b64--2026-2605.05888-moe-hub-destination-agnostic-gpu-communication-research-20261019-1830-sch.json",
-      "worker_run_key": "20261019-1830-scheduled-chat-30/r01"
     },
     {
       "canonical_id": "DOI:10.13140/RG.2.2.28167.37282",
@@ -5214,8 +5097,8 @@
     },
     {
       "canonical_id": "arXiv:2510.01290",
-      "title": "ThinKV: Thought-Adaptive KV Cache Compression for Efficient Reasoning Models",
-      "source_url": "https://arxiv.org/abs/2510.01290",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-19T11:30:54+00:00",
       "return_count": 1,
       "assigned_worker": "scheduled-chat-30",
@@ -5242,8 +5125,8 @@
     },
     {
       "canonical_id": "arXiv:2604.13634",
-      "title": "Calibrated Speculative Decoding: Frequency-Guided Candidate Selection for Efficient Inference",
-      "source_url": "https://arxiv.org/pdf/2604.13634",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-19T11:31:50+00:00",
       "return_count": 1,
       "assigned_worker": "scheduled-chat-00",
@@ -5269,8 +5152,8 @@
     },
     {
       "canonical_id": "arXiv:2609.31551",
-      "title": "EAServe: Encode-Aware Disaggregated Serving for Multimodal Large Language Models",
-      "source_url": "https://arxiv.org/abs/2609.31551",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-19T11:31:52+00:00",
       "return_count": 1,
       "assigned_worker": "scheduled-chat-30",
@@ -5294,6 +5177,36 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_10224c46d88c8191bb5b5d6812f1fd24--2026-2609.31551-easerve-encode-aware-epd-serving-research-20261019-0400-scheduled-chat-00-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_10224c46d88c8191bb5b5d6812f1fd24--2026-2609.31551-easerve-encode-aware-epd-serving-research-20261019-0400-scheduled-chat-00-r01.json",
       "worker_run_key": "20261019-0400-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2605.17447",
+      "title": "FastOCR: Dynamic Visual Fixation via KV Cache Pruning for Efficient Document Parsing",
+      "source_url": "https://arxiv.org/abs/2605.17447",
+      "returned_at": "2026-10-19T11:47:35+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700",
+        "説明不足トリガー: 評価説明量 158 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 8910,
+        "body_paragraphs": 53,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 158,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700",
+          "評価説明量 158 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_1cfb40ff275c8191b6f64d40a78a5a5e--2026-2605.17447-fastocr-dynamic-visual-fixation-research-20261019-1130-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_1cfb40ff275c8191b6f64d40a78a5a5e--2026-2605.17447-fastocr-dynamic-visual-fixation-research-20261019-1130-scheduled-chat-30-r01.json",
+      "worker_run_key": "20261019-1130-scheduled-chat-30/r01"
     }
   ]
 }

@@ -45,11 +45,16 @@
   "selection_reason": "位置非依存KV cacheをoffline構築するWriterを学習しReaderとcache-hit decode経路を変更せず再利用可能にする。KV Packet比で平均micro-F1 0.53→0.60。",
   "semantic_scholar_id": "f48d751da47d9a84046858a1ef820b02aa7775b1",
   "source_url": "https://www.semanticscholar.org/paper/f48d751da47d9a84046858a1ef820b02aa7775b1",
-  "status": "ready",
+  "status": "superseded",
   "status_submission": ".survey/work-queue/submissions/research/attempt-61820d4128366b34d1c14d50.json",
   "title": "SemPIC: Learning Semantic Position-Independent KV Caches",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-10-19T11:50:01+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2607.28069-sempic-learning-semantic-position-independent-kv-caches.md",
+  "represented_canonical_id": "arXiv:2607.28069",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
