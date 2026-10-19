@@ -171,7 +171,7 @@
   SliceGPTは、学習済みTransformerの埋め込み次元を減らす学習後圧縮である。代表的なLLaMA-2 70Bの25%削減では、A100 40GBで1トークン生成時間が125ミリ秒から110ミリ秒へ、必要GPUが4台から3台へ減った。
 
 - **2024-06 · [DuQuant: Distributing Outliers via Dual Transformation Makes Stronger Quantized LLMs](2024-2406.01721-duquant-distributing-outliers-via-dual-transformation-makes-stronger-quantized-llms.md)**  
-  実装：[✓](https://github.com/Hsu1023/DuQuant) ・ リポジトリ内被引用：35  
+  実装：[✓](https://github.com/Hsu1023/DuQuant) ・ リポジトリ内被引用：36  
   巨大外れ値を外れ値誘導のブロック回転とジグザグ置換で分散し、4ビット重み・活性量子化の精度を改善しつつ、LLaMA2-7Bでプリフィル最大2.08倍・復号時メモリ3.50倍削減を示す。
 
 - **2024-02 · [BiLLM: Pushing the Limit of Post-Training Quantization for LLMs](2024-2402.04291-billm-pushing-the-limit-of-post-training-quantization-for-llms.md)**  
@@ -179,7 +179,7 @@
   ヘッセ感度で重要列を選び二値残差近似し、残りのベル形重み分布を最適分割して別々に二値化することで、再学習なしにLLM重みを約1.1ビットまで圧縮する。
 
 - **2024-10 · [FlatQuant: Flatness Matters for LLM Quantization](2024-2410.09426-flatquant-flatness-matters-for-llm-quantization.md)**  
-  実装：[✓](https://github.com/ruikangliu/FlatQuant) ・ リポジトリ内被引用：26  
+  実装：[✓](https://github.com/ruikangliu/FlatQuant) ・ リポジトリ内被引用：27  
   層ごとの学習可能アフィン変換を小さなクロネッカー積へ分解し量子化と融合して、LLaMA-3-70BのW4A4で精度低下1%未満とプリフィル最大2.3倍高速化を両立する。
 
 - **2024-06 · [QTIP: Quantization with Trellises and Incoherence Processing](2024-2406.11235-qtip-quantization-with-trellises-and-incoherence-processing.md)**  
@@ -231,13 +231,13 @@
   BoA（Backpropagation-free optimization for 注意機構-aware PTQ）は、大規模言語モデルの学習後量子化（post-学習 量子化、PTQ）で、重みの整数化に伴う性能低下を抑える手法である。
 
 - **2023-12 · [CBQ: Cross-Block Quantization for Large Language Models](2023-2312.07950-cbq-cross-block-quantization-for-large-language-models.md)**  
-  実装：✓ ・ リポジトリ内被引用：1  
+  実装：✓ ・ リポジトリ内被引用：2  
   学習後量子化（Post-学習 量子化、PTQ）は、学習済み大規模言語モデルの重みや活性を少ないビット数で表現し、メモリ使用量や演算費用を下げる技術である。65Bの4ビット重み量子化を単一GPUで4.3時間で行ったという処理費用の報告はあるが、量子化後の推論速度を4.3倍にしたという意味ではない。
 
 ### 4年前（2022-11〜2023-10）
 
 - **2023-06 · [AWQ: Activation-aware Weight Quantization for LLM Compression and Acceleration](2023-2306.00978-awq.md)**  
-  実装：[✓](https://github.com/mit-han-lab/llm-awq) ・ リポジトリ内被引用：188  
+  実装：[✓](https://github.com/mit-han-lab/llm-awq) ・ リポジトリ内被引用：189  
   活性の大きい入力チャネルに対応する重みを等価スケーリングで保護し、全重みを均一な低ビット形式のまま高精度化する重み専用量子化とTinyChat実装。
 
 - **2022-11 · [LLM.int8(): 8-bit Matrix Multiplication for Transformers at Scale](2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md)**  
@@ -287,6 +287,6 @@
 ### 5年前（2021-11〜2022-10）
 
 - **2022-10 · [GPTQ: Accurate Post-Training Quantization for Generative Pre-trained Transformers](2022-2210.17323-gptq.md)**  
-  実装：[✓](https://github.com/IST-DASLab/gptq) ・ リポジトリ内被引用：353  
+  実装：[✓](https://github.com/IST-DASLab/gptq) ・ リポジトリ内被引用：354  
   二次情報に基づく誤差補償をGPU向けに再設計し、175B級LLMを数時間で3〜4bit化して単一A100実行と約3.24倍の生成高速化を実現した基礎的GPTQ研究。
 <!-- survey:auto:end -->

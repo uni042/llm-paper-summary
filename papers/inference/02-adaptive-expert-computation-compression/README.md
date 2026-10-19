@@ -419,7 +419,7 @@ MoEで毎回同じ数のexpertを実行するのではなく、**token・layer�
   単純なトークンにも固定のk個を実行すると計算が余り、逆に難しいトークンへ多く割り当てる自由度がなくなる。原著は既存のMixtral-8x7Bを微調整した6課題で、通常の上位2専門家選択の平均実行数2.00に対し、AdaMoEの設定m=8、k=3では1.66へ低下し、浮動小数点演算量（FLOPs）が平均15.21%減ったと報告する。
 
 - **2024-02 · [XMoE: Sparse Models with Fine-grained and Adaptive Expert Selection](2024-2403.18926-xmoe-sparse-models-with-fine-grained-and-adaptive-expert-selection.md)**  
-  実装：[✓](https://github.com/ysngki/XMoE) ・ リポジトリ内被引用：14  
+  実装：[✓](https://github.com/ysngki/XMoE) ・ リポジトリ内被引用：15  
   XMoEは、混合専門家モデル（Mixture-of-Experts、MoE）の計算を、専門家を細かく分割することとトークンごとに選ぶ専門家数を変えることで適応的に配分する手法である。
 
 ### 4年前（2022-11〜2023-10）
@@ -443,11 +443,11 @@ MoEで毎回同じ数のexpertを実行するのではなく、**token・layer�
 ### 5年前（2021-11〜2022-10）
 
 - **2022-01 · [DeepSpeed-MoE: Advancing Mixture-of-Experts Inference and Training to Power Next-Generation AI Scale](2022-2201.05596-deepspeed-moe-inference-compression.md)**  
-  実装：[✓](https://github.com/microsoft/DeepSpeed) ・ リポジトリ内被引用：108  
+  実装：[✓](https://github.com/microsoft/DeepSpeed) ・ リポジトリ内被引用：109  
   PR-MoE/MoSでMoEサイズを最大3.7倍縮小し、多次元並列・通信・融合カーネルを統合してPyTorch比最大7.3倍、同等品質dense比最大4.5倍高速な推論を実現。
 
 - **2022-02 · [Mixture-of-Experts with Expert Choice Routing](2022-2202.09368-expert-choice-routing.md)**  
-  実装：✓ ・ リポジトリ内被引用：70  
+  実装：✓ ・ リポジトリ内被引用：71  
   専門家側が固定容量ぶんの上位トークンを選ぶことで完全な負荷均衡とトークンごとの可変計算量を同時に実現するMoEルーティング。
 
 - **2022-06 · [Task-Specific Expert Pruning for Sparse Mixture-of-Experts](2022-2206.00277-task-specific-expert-pruning.md)**  
@@ -455,7 +455,7 @@ MoEで毎回同じ数のexpertを実行するのではなく、**token・layer�
   下流タスク微調整中のゲート寄与から専門家を段階的に1つまで削り、混合専門家事前学習の利得をほぼ保った密モデルへ変換する方式。
 
 - **2022-05 · [MoEfication: Transformer Feed-forward Layers are Mixtures of Experts](2021-2110.01786-moefication.md)**  
-  実装：[✓](https://github.com/thunlp/MoEfication) ・ リポジトリ内被引用：24  
+  実装：[✓](https://github.com/thunlp/MoEfication) ・ リポジトリ内被引用：25  
   密なTransformerのフィードフォワード層を共活性化するニューロン単位で専門家化し、入力ごとに一部だけを実行する疎推論方式。
 
 - **2022-01 · [One Student Knows All Experts Know: From Sparse to Dense](2022-2201.10890-one-student-knows-all-experts-know-from-sparse-to-dense.md)**  
