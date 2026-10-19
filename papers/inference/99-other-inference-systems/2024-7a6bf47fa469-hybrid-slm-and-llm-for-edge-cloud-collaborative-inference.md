@@ -38,6 +38,72 @@ quality_eval_chars: 2216
 quality_limitation_chars: 542
 last_audited: null
 audit_version: 0
+references:
+- canonical_id: DOI:10.1145/3510831
+  doi: 10.1145/3510831
+- canonical_id: arXiv:2401.10774
+  arxiv_id: '2401.10774'
+- canonical_id: DOI:10.48550/arxiv.2302.01318
+  arxiv_id: '2302.01318'
+- canonical_id: arXiv:2307.06148
+  arxiv_id: '2307.06148'
+- canonical_id: arXiv:2402.12374
+  arxiv_id: '2402.12374'
+- canonical_id: arXiv:2312.16886
+  arxiv_id: '2312.16886'
+- canonical_id: arXiv:2402.03766
+  arxiv_id: '2402.03766'
+- canonical_id: arXiv:2110.14168
+  arxiv_id: '2110.14168'
+- canonical_id: arXiv:2210.17323
+  arxiv_id: '2210.17323'
+- canonical_id: DOI:10.1145/3560905.3568511
+  doi: 10.1145/3560905.3568511
+- canonical_id: arXiv:2306.11644
+  arxiv_id: '2306.11644'
+- canonical_id: arXiv:2302.07863
+- canonical_id: DOI:10.1145/3372224.3419194
+  doi: 10.1145/3372224.3419194
+- canonical_id: arXiv:2211.17192
+- canonical_id: DOI:10.1109/twc.2019.2946140
+  doi: 10.1109/twc.2019.2946140
+- canonical_id: DOI:10.1109/dac18074.2021.9586176
+  doi: 10.1109/dac18074.2021.9586176
+- canonical_id: arXiv:2309.05463
+  arxiv_id: '2309.05463'
+- canonical_id: DOI:10.1162/tacl_a_00638
+  doi: 10.1162/tacl_a_00638
+- canonical_id: arXiv:2305.09781
+  arxiv_id: '2305.09781'
+- canonical_id: DOI:10.18653/v1/d18-1206
+  doi: 10.18653/v1/d18-1206
+- canonical_id: arXiv:2104.08803
+  arxiv_id: '2104.08803'
+- canonical_id: DOI:10.1109/iccworkshops49005.2020.9145068
+  doi: 10.1109/iccworkshops49005.2020.9145068
+- canonical_id: DOI:10.1109/mcom.001.2000373
+  doi: 10.1109/mcom.001.2000373
+- canonical_id: arXiv:2308.04623
+  arxiv_id: '2308.04623'
+- canonical_id: arXiv:2403.08295
+  arxiv_id: '2403.08295'
+- canonical_id: arXiv:2307.09288
+  arxiv_id: '2307.09288'
+- canonical_id: arXiv:2402.10200
+  arxiv_id: '2402.10200'
+- canonical_id: DOI:10.1145/3552326.3587438
+  doi: 10.1145/3552326.3587438
+- canonical_id: arXiv:2309.04255
+  arxiv_id: '2309.04255'
+- canonical_id: DOI:10.1109/tpds.2020.3032443
+  doi: 10.1109/tpds.2020.3032443
+- canonical_id: DOI:10.1109/tgcn.2021.3111731
+  doi: 10.1109/tgcn.2021.3111731
+- canonical_id: arXiv:2401.02385
+  arxiv_id: '2401.02385'
+references_checked_at: '2026-10-19'
+references_source: crossref-deposited-reference-metadata
+references_total: 34
 ---
 
 # Hybrid SLM and LLM for Edge-Cloud Collaborative Inference：端末とクラウドで生成トークンを分担する
