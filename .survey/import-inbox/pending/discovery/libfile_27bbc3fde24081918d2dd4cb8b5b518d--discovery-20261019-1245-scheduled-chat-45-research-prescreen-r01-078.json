@@ -1,0 +1,26 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-45",
+  "run_key": "20261019-1245-scheduled-chat-45/r01/research-prescreen/078",
+  "reference_main_sha": "e27f944012f30002bd9c73f82c506073c3d69c90",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2511.00603",
+      "identity_tokens": [
+        "arxiv:2511.00603"
+      ],
+      "title": "EPARA: Parallelizing Categorized AI Inference in Edge Clouds",
+      "reason": "遅延・処理頻度への感度とGPU資源要求からエッジAIタスクを分類し、要求処理・サービス配置・並列化方式を選ぶ汎用推論フレームワーク。LLMと画像分割の事例を含み最大2.1倍のgoodputを報告するが、LLM固有のKV・prefill/decode・MoE・GPUカーネルの改善を主対象とするわけではない。",
+      "source_url": "https://arxiv.org/abs/2511.00603",
+      "body_check": "primary_abstract_and_bibliography_screen_only; body_not_read",
+      "first_checked_at": "2026-10-19T12:48:32+09:00",
+      "last_checked_at": "2026-10-19T12:48:32+09:00",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance",
+      "worklist_rank": 78
+    }
+  ]
+}
