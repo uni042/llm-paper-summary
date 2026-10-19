@@ -3,7 +3,7 @@
 複数requestを複数GPU / nodeで処理するLLM servingについて、request順、batch、prefill / decodeのGPU配分、KV再利用・転送、request移動などを調整し、latencyとresource効率を改善する研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（389本）
+## 自動生成の論文一覧（390本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -943,6 +943,10 @@
 - **2025-11 · [MaverIQ: Fingerprint-Guided Extrapolation and Fragmentation-Aware Layering for Intent-Based LLM Serving](2025-ef9c70168212-maveriq-fingerprint-guided-extrapolation-and-fragmentation-aware-layerin.md)**  
   実装：[✓](https://github.com/UT-SysML/MaverIQ) ・ リポジトリ内被引用：0  
   MaverIQは、大規模言語モデル（Large Language モデル; LLM）の推論サービスを配備する際、利用者が「遅延を最小化したい」「費用上限を守りたい」「精度を落とせない」といった目的を指定するだけで、モデル圧縮、テンソル並列（テンソル Parallelism; TP）、パイプライン並列（パイプライン Parallelism…
+
+- **2025-11 · [A Scalable NorthPole System with End-to-End Vertical Integration for Low-Latency and Energy-Efficient LLM Inference](2025-2511.15950-a-scalable-northpole-system-with-end-to-end-vertical-integration-for-low.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  本研究はIBMの専用ニューラル推論アクセラレータNorthPoleを288枚組み合わせ、18台の2Uサーバからなるラックへ実装した大規模言語モデル推論システムである。2,048トークン文脈、28同時利用者の一インスタンスで、最初のトークンまでの時間64.8ミリ秒、トークン間遅延2.8ミリ秒、出力処理量10,341トークン/秒を報告する。
 
 ### 2年前（2024-11〜2025-10）
 

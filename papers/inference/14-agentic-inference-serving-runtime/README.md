@@ -24,7 +24,7 @@
 - [10-kv-cache-offload-recomputation](../10-kv-cache-offload-recomputation/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（57本）
+## 自動生成の論文一覧（58本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -116,6 +116,10 @@
 - **2026-09 · [SARA: SLO-Aware Resource Allocation for Disaggregated Agentic LLM Services](2026-2609.26763-sara.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   大規模言語モデルの分離型推論では、入力をまとめて処理する事前充填（プリフィル）、生成された鍵・値キャッシュ（KV キャッシュ）の転送、出力を逐次生成する復号（デコード）を別々の装置群へ配置する。原著の要旨は段階別SLO予測の平均誤差5%未満、同じ配備費用で既存比較方式より平均26.6%高い有効処理率を報告する。
+
+- **2026-09 · [RR-Evict: Fine-Grained Prefix Cache Eviction beyond LRU for Agentic LLM Serving](2026-2609.32278-rr-evict-fine-grained-prefix-cache-eviction-beyond-lru-for-agentic-llm-s.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  RR-Evictは、複数の長時間動作するLLMエージェントが交互にモデル呼び出しと外部ツール実行を行うとき、接頭辞キャッシュの削除単位を変える配信方式である。SGLang実装で、会話・コード修正エージェントの評価における99パーセンタイル初回トークン遅延（P99 TTFT）をLRU比最大75.4%減らした。
 
 - **2026-09 · [PipeSwift: Revisiting Pipeline Parallelism for Large-Scale Completion-Oriented Agentic LLM Serving](2026-2609.16491-pipeswift-pipeline-parallel-agentic-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
