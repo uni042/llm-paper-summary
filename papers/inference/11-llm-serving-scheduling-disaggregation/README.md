@@ -3,7 +3,7 @@
 複数requestを複数GPU / nodeで処理するLLM servingについて、request順、batch、prefill / decodeのGPU配分、KV再利用・転送、request移動などを調整し、latencyとresource効率を改善する研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（388本）
+## 自動生成の論文一覧（389本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -547,6 +547,10 @@
 - **2026-09 · [Efficient Iterative Retrieval with Heterogeneous Batching](2026-2609.25405-orthrus.md)**  
   実装：[✓](https://github.com/illinoisdata/Orthrus) ・ リポジトリ内被引用：0  
   従来の推論サーバでは埋め込みモデルと生成モデルを別GPU群へ割り当てるか、同じGPU上で別プロセスとして実行することが多い。4基のA100 40GBで、固定GPU分割に対して制御ワークロードの処理率を1.28〜4.52倍に高め、反復RAGの99パーセンタイル遅延を最大55.8%減らした。
+
+- **2026-09 · [EAServe: Encode-Aware Disaggregated Serving for Multimodal Large Language Models](2026-2609.31551-easerve-encode-aware-disaggregated-serving-for-multimodal-large-language.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  符号化、事前計算、逐次復号を別のGPU群に分ける三段階分離（Encode–プリフィル–デコード; EPD）では、最初の符号化が遅いと後段が待ち、逆に符号化から要求を一斉に流すと事前計算側が混雑する。論文が報告する最大倍率は、NVIDIA Dynamoに対するSLO達成処理率で4.3倍、vLLMに対して1.7倍である。
 
 - **2026-09 · [DLB: Distributed Load Balancing at Scale for Generative AI Inference](2026-2609.21079-dlb-distributed-load-balancing-at-scale-for-generative-ai-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

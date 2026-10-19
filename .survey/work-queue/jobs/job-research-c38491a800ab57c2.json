@@ -35,10 +35,15 @@
   "selection_reason": "EasySpecはdraft modelの層をmulti-GPUで並列化し、iterationごとにKVを補正するtraining-free speculative inference法。最大4.17x speedup。",
   "semantic_scholar_id": "7ebf679e89777f26655e0ea1c25757117f57e25d",
   "source_url": "https://arxiv.org/abs/2502.02493",
-  "status": "ready",
+  "status": "superseded",
   "title": "EasySpec: Layer-Parallel Speculative Decoding for Efficient Multi-GPU Utilization",
   "type": "research",
   "venue": "Neural Information Processing Systems",
   "workflow_version": 10,
-  "year": 2025
+  "year": 2025,
+  "superseded_at": "2026-10-19T13:00:48+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/05-speculative-decoding-moe/2025-2502.02493-easyspec-layer-parallel-speculative-decoding-for-efficient-multi-gpu-uti.md",
+  "represented_canonical_id": "arXiv:2502.02493",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

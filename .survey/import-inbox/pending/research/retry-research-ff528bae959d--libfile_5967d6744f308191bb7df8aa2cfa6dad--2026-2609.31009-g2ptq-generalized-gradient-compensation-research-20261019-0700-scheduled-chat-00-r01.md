@@ -34,6 +34,8 @@ last_checked: '2026-10-19'
 worker_completed_at: '2026-10-19T07:00:00+09:00'
 worker_run_key: '20261019-0700-scheduled-chat-00/r01'
 lineage: '08-weight-quantization'
+last_audited: null
+audit_version: 0
 ---
 
 # G²PTQ：一般化勾配補償による大規模言語モデルの学習後量子化
