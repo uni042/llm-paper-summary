@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-8cf79158f5ee0f92-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2608.15303",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2608.15303",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2608.15303",
+      "arXiv:2608.15303"
+    ],
+    "reason": "一次要旨では複数の解候補生成と照合・統合を反復する推論時計算の適応配分を提案し、AIMEで正答率を改善しつつ平均計算量を約27%削減する。推論時予算制御という点で効率化に接するが、主な寄与は回答合成・推論方針と正答率であり、KV管理、モデル実行カーネル、分散サービングの設計・測定は主題ではない。",
+    "first_checked_at": "2026-10-18T15:49:26+00:00",
+    "last_checked_at": "2026-10-19T08:44:10+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Divergent-Convergent Reasoning: Scaling Test-Time Compute through Structured Solution Synthesis"
+  },
+  "processed_at": "2026-10-19T08:44:11+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-8cf79158f5ee",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

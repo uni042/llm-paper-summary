@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-19T06:48:02+00:00",
-  "record_count": 5267,
+  "updated_at": "2026-10-19T08:44:11+00:00",
+  "record_count": 5269,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -71776,9 +71776,9 @@
       "identity_tokens": [
         "arXiv:2605.20473"
       ],
-      "reason": "一次要旨で、DiffCodeGenは複数のコード候補を生成し、既存テスト不要の被覆率誘導ファジングで入力を合成、候補間の実行結果をクラスタ化して最大クラスタの代表解を選ぶと確認した。候補選択時に追加LLM呼出しを不要にして推論時トークン消費と所要時間を減らすが、主たる貢献はコード生成問題の解答選択・検証手続きであり、汎用LLMサービング、GPU実行、KVキャッシュ、モデル並列化等の推論基盤そのものを最適化する方式ではない。推論時費用削減との接点はあるため対象外と断定せず微妙とする。",
+      "reason": "DiffCodeGenはLLMが生成したコード候補をカバレッジ誘導ファジングで比較・クラスタ化し、追加LLM呼出しを使わず代表候補を選ぶ。推論時トークン消費と選択費用の削減には関連するが、主目的はコード生成の正解率改善であり、LLMサービング実行系のGPU効率・メモリ管理は対象外。",
       "first_checked_at": "2026-10-12T21:38:03+00:00",
-      "last_checked_at": "2026-10-12T21:38:03+00:00",
+      "last_checked_at": "2026-10-19T08:44:07+00:00",
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "Code Generation by Differential Test Time Scaling"
@@ -81620,9 +81620,9 @@
         "DOI:10.48550/arxiv.2609.00103",
         "arXiv:2609.00103"
       ],
-      "reason": "一次要旨によればECCBenchは長期記憶を正答率だけでなく計算量（FLOPs）、圧縮性、誤答時の棄権較正で測る。Transformer以外の記憶構造を比較し、動画記憶の圧縮性と較正の弱さを示すため、長文脈推論の計測と関係する。ただし主要寄与は記憶能力の評価プロトコルとモデル挙動の比較であり、実行時KVキャッシュ削減・GPU推論高速化・具体的なサービング最適化の新方式を示すものではない。推論評価系統への収録可能性はあるが現行の実装最適化中心の対象範囲では境界的とする。",
+      "reason": "一次要旨では長文脈の視覚言語モデルの記憶を、計算量、入力圧縮可能性、確信度較正の観点から評価するECCBenchを提案する。計算費用と記憶圧縮の評価軸は推論効率サーベイと接するが、主な寄与は能力・評価指標とモデル挙動の比較であり、実行時のKVキャッシュ配置、圧縮アルゴリズム、GPUサービング基盤の直接的改善ではないため境界的。",
       "first_checked_at": "2026-10-18T15:49:26+00:00",
-      "last_checked_at": "2026-10-18T15:49:26+00:00",
+      "last_checked_at": "2026-10-19T08:44:10+00:00",
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "Good Memory Has ECC: Evaluating the Memory of Vision-Language Models Beyond Accuracy"
@@ -81634,9 +81634,9 @@
         "DOI:10.48550/arxiv.2608.15303",
         "arXiv:2608.15303"
       ],
-      "reason": "一次要旨では複数の推論候補を生成した後、相違点を再検討する再帰的な調停によって正答率を上げ、AIME 2024で93.3%、AIME 2025で92.0%、API呼び出し数に基づく平均計算量を約27%削減したと報告する。推論時の計算配分と関係するが、主要目的は推論能力の向上と探索・調停戦略であり、GPUカーネル、モデルサービング、トークン生成の実測速度を最適化するシステム研究ではない。対象境界として保留する。",
+      "reason": "一次要旨では複数の解候補生成と照合・統合を反復する推論時計算の適応配分を提案し、AIMEで正答率を改善しつつ平均計算量を約27%削減する。推論時予算制御という点で効率化に接するが、主な寄与は回答合成・推論方針と正答率であり、KV管理、モデル実行カーネル、分散サービングの設計・測定は主題ではない。",
       "first_checked_at": "2026-10-18T15:49:26+00:00",
-      "last_checked_at": "2026-10-18T15:49:26+00:00",
+      "last_checked_at": "2026-10-19T08:44:10+00:00",
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "Divergent-Convergent Reasoning: Scaling Test-Time Compute through Structured Solution Synthesis"
@@ -81648,9 +81648,9 @@
         "DOI:10.48550/arxiv.2608.17316",
         "arXiv:2608.17316"
       ],
-      "reason": "一次要旨では、推薦システム向けにQwen3 1.7BとLlama3.2 3Bへ中間層の予測出口を追加し、連続ルータが利用する出口数と層をユーザー系列ごとに選ぶFLEXRecを提案する。推論計算の節約という機構はあるが、最終用途は推薦候補の識別的全件ランキングであり、通常の自己回帰LLMのデコード、KV管理、汎用サービングの改善を評価していない。特定応用向けの早期終了技術として関連性はあるため境界的とする。",
+      "reason": "一次要旨では小型LLMの中間層に推薦スコア予測ヘッドを挿入し、入力ごとに出口集合を選択・融合するFLEXRecを提案する。層ごとの条件付き計算と小型モデルの実行効率は関連するが、主対象は逐次推薦の識別的ランキング精度であり、一般の文章生成LLMデコードやサービングを直接高速化する設計ではない。",
       "first_checked_at": "2026-10-18T15:49:27+00:00",
-      "last_checked_at": "2026-10-18T15:49:27+00:00",
+      "last_checked_at": "2026-10-19T08:44:10+00:00",
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "Empowering Compact LLMs with Fusion of Layer-wise Exits for Recommendation"
@@ -81774,6 +81774,33 @@
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "Mira: A Program-Behavior-Guided Far Memory System"
+    },
+    "arXiv:2605.12396": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.12396",
+      "identity_tokens": [
+        "arXiv:2605.12396"
+      ],
+      "reason": "NCCL集合通信に量子化とエントロピー符号化を別層で統合し、装置側の符号化選択と通信・圧縮重畳を実現する。分散LLM推論の通信最適化に応用可能な汎用基盤技術だが、一次要旨の実験は科学計算・学習勾配・合成負荷が中心で、LLM推論サービングへの適用実測は確認できない。",
+      "first_checked_at": "2026-10-19T08:44:07+00:00",
+      "last_checked_at": "2026-10-19T08:44:07+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "NCCLZ: Compression-Enabled GPU Collectives with Decoupled Quantization and Entropy Coding"
+    },
+    "arXiv:2608.04515": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.04515",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2608.04515",
+        "arXiv:2608.04515"
+      ],
+      "reason": "一次要旨では医療用3次元画像の隣接スライス間重複を利用し、視覚トークンを約80%削減して医療VQAの性能を保つ訓練不要のCARVEを提案する。LLM投入前のトークン圧縮と計算量削減は対象に近い一方、深さ方向の解剖学的画像冗長性と医療用スライスVLMに特化し、一般のテキストLLM推論基盤への適用は評価されていないため境界的。",
+      "first_checked_at": "2026-10-19T08:44:11+00:00",
+      "last_checked_at": "2026-10-19T08:44:11+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "CARVE: Cross-Slice Anisotropic Reallocation of Visual Evidence for Efficient 3D Medical Volume Understanding"
     }
   }
 }

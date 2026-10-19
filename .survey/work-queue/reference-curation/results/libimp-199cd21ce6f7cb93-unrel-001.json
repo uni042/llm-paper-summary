@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-199cd21ce6f7cb93-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.21105/joss.10304",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.21105/joss.10304",
+    "identity_tokens": [
+      "DOI:10.21105/joss.10304"
+    ],
+    "reason": "汎用の計算実験・ベンチマークを再現可能に実行するPython基盤であり、実験計画・最適化・出所追跡を主題とする。LLM向けGPU推論カーネル、サービング、KVキャッシュ、MoE実行の直接的な最適化を一次書誌・要旨で確認できない。",
+    "first_checked_at": "2026-10-14T13:49:00+00:00",
+    "last_checked_at": "2026-10-19T08:44:08+00:00",
+    "linked_from": [],
+    "title": "ado: a Python framework for computational experimentation and benchmarking"
+  },
+  "processed_at": "2026-10-19T08:44:08+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-199cd21ce6f7",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

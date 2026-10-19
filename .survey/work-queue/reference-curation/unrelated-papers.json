@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-19T06:48:02+00:00",
-  "record_count": 12430,
+  "updated_at": "2026-10-19T08:44:11+00:00",
+  "record_count": 12431,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -176410,9 +176410,9 @@
       "identity_tokens": [
         "DOI:10.21105/joss.10304"
       ],
-      "reason": "原著の公開要旨と著者機関の一次説明によると、adoは実験計画、探索空間、サンプリング、計測値の共有、由来記録、再利用を統合する汎用Python実験キャンペーン管理基盤であり、プラグインにより科学計算・基盤モデル性能測定を含む各分野の実験を扱う。並列実行機能は実験キャンペーンの実行管理であって、LLMオンライン推論のKVキャッシュ、モデル実行、スケジューラ、GPUカーネル、分散サービングの新規最適化を示すものではない。LLM推論性能を計測対象として利用できることと推論システム自体への直接的技術貢献を区別し、現行サーベイの対象外と判定する。",
+      "reason": "汎用の計算実験・ベンチマークを再現可能に実行するPython基盤であり、実験計画・最適化・出所追跡を主題とする。LLM向けGPU推論カーネル、サービング、KVキャッシュ、MoE実行の直接的な最適化を一次書誌・要旨で確認できない。",
       "first_checked_at": "2026-10-14T13:49:00+00:00",
-      "last_checked_at": "2026-10-15T09:45:42+00:00",
+      "last_checked_at": "2026-10-19T08:44:08+00:00",
       "linked_from": [],
       "title": "ado: a Python framework for computational experimentation and benchmarking"
     },
@@ -179113,9 +179113,9 @@
       "identity_tokens": [
         "DOI:10.1109/coins69995.2026.11715604"
       ],
-      "reason": "IEEEの一次要旨は、半構造化枝刈りとゼロ値演算を省くシストリック配列を共同設計し、50%疎行列で電力11%削減、行列演算速度100%改善、AlexNetの第三層以降の枝刈りで精度低下6%と報告する。対象は画像認識を含む一般DNNの演算器であり、LLMの自己回帰復号、Transformer注意計算、KVキャッシュ、MoE、サービングへの適用・実証は一次要旨に存在しない。汎用演算器として間接的関連はあるが、本サーベイのLLM推論システム研究としては収録対象外とする。",
+      "reason": "IEEE公開の一次要旨を確認。疎行列のゼロ乗算省略と粗粒度積和演算を備えた一般的なシストリック配列アクセラレータであり、評価モデルはAlexNet、指標は疎行列演算の電力・速度・画像分類精度。LLM固有の注意計算、推論サービング、KVキャッシュ、MoE、LLM量子化を対象としないため対象外。",
       "first_checked_at": "2026-10-18T15:49:24+00:00",
-      "last_checked_at": "2026-10-18T15:49:24+00:00",
+      "last_checked_at": "2026-10-19T08:44:11+00:00",
       "linked_from": [],
       "title": "Energy and Area Efficient Systolic Accelerator for Sparse Neural Networks"
     },
@@ -179190,6 +179190,18 @@
       "last_checked_at": "2026-10-19T06:48:02+00:00",
       "linked_from": [],
       "title": "Alpa: Automating Inter- and Intra-Operator Parallelism for Distributed Deep Learning"
+    },
+    "arXiv:2605.15556": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.15556",
+      "identity_tokens": [
+        "arXiv:2605.15556"
+      ],
+      "reason": "端末間の行動配置、利用者間の代理主体の帰属、社会的権限とアクセス制御を扱うエージェントOSの参照設計である。分散端末の操作実行は扱うが、LLM推論演算・GPUスケジューリング・KVメモリ・MoEサービングの効率化に直接の技術的貢献はない。",
+      "first_checked_at": "2026-10-19T08:44:08+00:00",
+      "last_checked_at": "2026-10-19T08:44:08+00:00",
+      "linked_from": [],
+      "title": "TopoClaw: A Human-Centric and Topology-Aware Agent Operating System"
     }
   }
 }
