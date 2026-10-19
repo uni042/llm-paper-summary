@@ -1,0 +1,26 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-45",
+  "run_key": "20261020-0145-scheduled-chat-45/r01/research-prescreen/019",
+  "reference_main_sha": "1b1f19ec14c43e55964fae9fb0e52dd5e1e4e75a",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.15869",
+      "identity_tokens": [
+        "arXiv:2606.15869"
+      ],
+      "title": "Metis: A Generalizable and Efficient World-Action Model for Autonomous Driving and Urban Navigation",
+      "reason": "自動運転・都市ナビゲーション用の世界行動モデル。動画生成専門家と行動専門家を非対称注意マスクで分離し、推論時の動画生成を省略するが、主要評価はNAVSIM/CityWalkerの経路計画と実ロボットであり、汎用LLM推論実行基盤・学習基盤の性能最適化ではない。",
+      "source_url": "https://arxiv.org/abs/2606.15869",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-20T01:52:35+09:00",
+      "last_checked_at": "2026-10-20T01:52:35+09:00",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance",
+      "worklist_rank": 19
+    }
+  ]
+}
