@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-19T09:47:49+00:00",
+  "generated_at": "2026-10-19T09:53:58+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 198,
+  "count": 199,
   "entries": [
     {
       "canonical_id": "DOI:10.1145/3714983.3714987",
@@ -5218,8 +5218,8 @@
       "canonical_id": "arXiv:2509.04377",
       "title": "PagedEviction: Structured Block-wise KV Cache Pruning for Efficient Large Language Model Inference",
       "source_url": "https://arxiv.org/abs/2509.04377",
-      "returned_at": "2026-10-19T09:47:49+00:00",
-      "return_count": 1,
+      "returned_at": "2026-10-19T09:53:57+00:00",
+      "return_count": 2,
       "assigned_worker": "scheduled-chat-45",
       "reason": "blocked_quality",
       "failures": [
@@ -5239,8 +5239,38 @@
           "評価説明量 130 < 500"
         ]
       },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_fd715b70b1a48191bcecd9a8b2ddc2bd--2025-2509.04377-pagedeviction-block-aligned-kv-eviction-research-20261019-1830-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_fd715b70b1a48191bcecd9a8b2ddc2bd--2025-2509.04377-pagedeviction-block-aligned-kv-eviction-research-20261019-1830-scheduled-chat-30-r01.json",
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-e9a939d0b176--libfile_fd715b70b1a48191bcecd9a8b2ddc2bd--2025-2509.04377-pagedeviction-block-aligned-kv-eviction-research-20261019-1830-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-e9a939d0b176--libfile_fd715b70b1a48191bcecd9a8b2ddc2bd--2025-2509.04377-pagedeviction-block-aligned-kv-eviction-research-20261019-1830-scheduled-.json",
+      "worker_run_key": "20261019-1830-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2605.05888",
+      "title": "MoE-Hub: Taming Software Complexity for Seamless MoE Overlap with Hardware-Accelerated Communication on Multi-GPU Systems",
+      "source_url": "https://arxiv.org/abs/2605.05888",
+      "returned_at": "2026-10-19T09:53:57+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700",
+        "説明不足トリガー: 評価説明量 180 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 8415,
+        "body_paragraphs": 42,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 180,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700",
+          "評価説明量 180 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_697b0c9f99d08191b3774dc2686c2b64--2026-2605.05888-moe-hub-destination-agnostic-gpu-communication-research-20261019-1830-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_697b0c9f99d08191b3774dc2686c2b64--2026-2605.05888-moe-hub-destination-agnostic-gpu-communication-research-20261019-1830-scheduled-chat-30-r01.json",
       "worker_run_key": "20261019-1830-scheduled-chat-30/r01"
     }
   ]

@@ -33,6 +33,8 @@ reference_main_sha: 'c75d6bcf091bd46c306b81b9b5fafd3c50658b1f'
 lineage: '07-kv-cache-optimization-compression'
 quality_self_review_passed: true
 quality_self_review_version: 'PAPER-QUALITY-GUIDE-2026-10-07'
+last_audited: null
+audit_version: 0
 ---
 
 # PagedEviction — ページ構造を維持するKVキャッシュのブロック単位削除
