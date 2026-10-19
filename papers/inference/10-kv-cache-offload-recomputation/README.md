@@ -144,6 +144,10 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
   実装：✓ ・ リポジトリ内被引用：2  
   全収集型マルチエージェントの共有文脈をラウンド単位で一括再利用し、兄弟KVキャッシュを1本のマスターと疎な差分だけで保存する。A100実機で同時エージェント数をvLLM比最大2.7倍、KV保存量を最大17.5倍圧縮する。
 
+- **2026-04 · [KV Packet: Recomputation-Free Context-Independent KV Caching for LLMs](2026-2604.13226-kv-packet-recomputation-free-context-independent-kv-caching-for-llms.md)**  
+  実装：[✓](https://github.com/ChuangtaoChen-TUM/KVPacket) ・ リポジトリ内被引用：2  
+  KV Packetは、検索拡張生成（Retrieval-Augmented Generation; RAG）で同じ文書が異なる問い合わせや異なる文書順序で繰り返し現れる状況に向けた、鍵・値キャッシュ（Key–Value Cache; KVキャッシュ）の再利用方式である。
+
 - **2025-11 · [LiteCache: A Query Similarity-Driven, GPU-Centric KVCache Subsystem for Efficient LLM Inference](2025-2511.14510-litecache-gpu-centric-kv-offloading.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
   LiteCacheはクエリ類似度で再利用価値の高いKVヘッドを選び、CPUの索引処理をGPU中心の一括取得へ置き換えて、細粒度管理・同期・カーネル起動のオーバーヘッドを減らす方式。
@@ -179,10 +183,6 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
 - **2026-04 · [Predictive Multi-Tier Memory Management for KV Cache in Large-Scale GPU Inference](2026-2604.26968-predictive-multi-tier-memory-management-for-kv-cache-in-large-scale-gpu-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   注意機構ごとの鍵・値キャッシュ（KV キャッシュ）容量を正しく見積もり、GPUから遠隔ストレージまでの6階層へ再利用予測で配置する。重要なのは、部品検証の実測と64 GPUクラスタの解析的な性能投影を明確に分けることである。
-
-- **2026-04 · [KV Packet: Recomputation-Free Context-Independent KV Caching for LLMs](2026-2604.13226-kv-packet-recomputation-free-context-independent-kv-caching-for-llms.md)**  
-  実装：[✓](https://github.com/ChuangtaoChen-TUM/KVPacket) ・ リポジトリ内被引用：1  
-  KV Packetは、検索拡張生成（Retrieval-Augmented Generation; RAG）で同じ文書が異なる問い合わせや異なる文書順序で繰り返し現れる状況に向けた、鍵・値キャッシュ（Key–Value Cache; KVキャッシュ）の再利用方式である。
 
 - **2026-04 · [ForkKV: Scaling Multi-LoRA Agent Serving via Copy-on-Write Disaggregated KV Cache](2026-2604.06370-forkkv-copy-on-write-disaggregated-kv-cache.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
@@ -423,11 +423,11 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
 ### 3年前（2023-11〜2024-10）
 
 - **2024-05 · [CacheBlend: Fast Large Language Model Serving for RAG with Cached Knowledge Fusion](2024-2405.16444-cacheblend-fast-rag-kv-cache-fusion.md)**  
-  実装：[✓](https://github.com/LMCache/LMCache) ・ リポジトリ内被引用：126  
+  実装：[✓](https://github.com/LMCache/LMCache) ・ リポジトリ内被引用：127  
   複数RAG文書の事前計算KVを連結し、交差注意の影響が大きい5〜18%程度のトークンだけを層ごとに再計算する方式。SSD読出しと再計算を重ね、完全再計算比でTTFTを2.2〜3.3倍短縮した。
 
 - **2023-11 · [Prompt Cache: Modular Attention Reuse for Low-Latency Inference](2023-2311.04934-prompt-cache.md)**  
-  実装：[✓](https://github.com/yale-sys/prompt-cache) ・ リポジトリ内被引用：91  
+  実装：[✓](https://github.com/yale-sys/prompt-cache) ・ リポジトリ内被引用：92  
   複数要求で再利用されるプロンプト断片のKV状態をモジュール単位で事前計算し、位置整合を保って合成することで初回トークン遅延を削減する。
 
 - **2024-10 · [ShadowKV: KV Cache in Shadows for High-Throughput Long-Context LLM Inference](2024-2410.21465-shadowkv-low-rank-key-value-offload.md)**  
@@ -439,7 +439,7 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
   FastDecodeは、言語モデルの逐次生成で巨大化する鍵・値キャッシュ（KVキャッシュ）をGPU外へ置くだけでなく、キャッシュを読む注意計算そのものを複数のCPUノードへ移す推論配信システムである。
 
 - **2024-10 · [EPIC: Efficient Position-Independent Caching for Serving Large Language Models](2024-2410.15332-epic-position-independent-caching.md)**  
-  実装：[✓](https://github.com/DerekHJH/epic) ・ リポジトリ内被引用：33  
+  実装：[✓](https://github.com/DerekHJH/epic) ・ リポジトリ内被引用：34  
   独立事前計算した文書チャンクを位置に依存せず再利用し、連結時は各チャンク先頭の少数トークンだけを再計算して注意シンクを修正することで、CacheBlend比で最大8倍の初回トークン時間短縮と7倍のスループットを得る。
 
 - **2024-09 · [InstAttention: In-Storage Attention Offloading for Cost-Effective Long-Context LLM Inference（preprint: InstInfer）](2024-2409.04992-instattention-instinfer-in-storage-attention-offloading.md)**  
@@ -455,7 +455,7 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
   一覧用要約：Aqa（リポジトリではAqua）は同一NVLink/NVSwitch領域内の余剰GPUメモリを、他の推論ジョブのKVキャッシュや推論状態の高速退避先として貸し借りする。貸し手・借り手の事前分類、モデル配置、弾力的テンソル管理、公平な先取りスケジューリングを組み合わせ、要求集中時の初回応答時間と処理率を改善する。
 
 - **2024-10 · [Fast State Restoration in LLM Serving with HCache](2024-2410.05004-hcache-fast-state-restoration-llm-serving.md)**  
-  実装：✓ ・ リポジトリ内被引用：9  
+  実装：✓ ・ リポジトリ内被引用：10  
   GPUから追い出した会話状態を、巨大なKVキャッシュそのものでも元トークン列でもなく中間活性として保存し、I/Oと再計算を重ねて高速にKVへ復元する状態再利用方式。
 
 ### 4年前（2022-11〜2023-10）
