@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-19T12:37:49+00:00",
+  "generated_at": "2026-10-19T12:48:10+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -2210,33 +2210,6 @@
       "worker_run_key": "20261016-0030-scheduled-chat-30/r01"
     },
     {
-      "canonical_id": "arXiv:2511.16193",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-16T15:00:53+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 104 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 6868,
-        "body_paragraphs": 38,
-        "method_chars": 2016,
-        "method_paragraphs": 11,
-        "evaluation_chars": 104,
-        "limitation_chars": 874,
-        "insufficiency_flags": [
-          "評価説明量 104 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-2df1118a233b--libfile_6017f33901cc819191f8400d2c8d5c45--2025-2511.16193-specactor-decoupled-fastest-of-n-speculative-rollout-research-20261016-0045-scheduled-chat-45-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-2df1118a233b--libfile_6017f33901cc819191f8400d2c8d5c45--2025-2511.16193-specactor-decoupled-fastest-of-n-speculative-rollout-research-20261016-00.json",
-      "worker_run_key": "20261016-0045-scheduled-chat-45/r01"
-    },
-    {
       "canonical_id": "arXiv:2605.05602",
       "title": null,
       "source_url": null,
@@ -2588,33 +2561,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_34a662b0db648191bebfd33ef3014e2d--2023-2306.07174-longmem-decoupled-long-term-memory-research-20261014-1645-scheduled-chat-45-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_34a662b0db648191bebfd33ef3014e2d--2023-2306.07174-longmem-decoupled-long-term-memory-research-20261014-1645-scheduled-chat-45-r01.json",
       "worker_run_key": "20261014-1645-scheduled-chat-45/r01"
-    },
-    {
-      "canonical_id": "DOI:10.1145/3725338",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-17T06:39:56+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 137 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 7575,
-        "body_paragraphs": 39,
-        "method_chars": 2273,
-        "method_paragraphs": 10,
-        "evaluation_chars": 137,
-        "limitation_chars": 932,
-        "insufficiency_flags": [
-          "評価説明量 137 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_b02495c8702081918ba38f95ea04418c--2024-2407.12820-pqcache-product-quantization-kv-offload-research-20261017-0345-scheduled-chat-45-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_b02495c8702081918ba38f95ea04418c--2024-2407.12820-pqcache-product-quantization-kv-offload-research-20261017-0345-scheduled-chat-45-r01.json",
-      "worker_run_key": "20261017-0345-scheduled-chat-45/r01"
     },
     {
       "canonical_id": "arXiv:2603.14785",
@@ -3946,33 +3892,6 @@
       "worker_run_key": "20261018-1800-scheduled-chat-00/r01"
     },
     {
-      "canonical_id": "arXiv:2609.36760",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-18T14:13:32+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 0 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 8268,
-        "body_paragraphs": 52,
-        "method_chars": 1586,
-        "method_paragraphs": 9,
-        "evaluation_chars": 0,
-        "limitation_chars": 764,
-        "insufficiency_flags": [
-          "評価説明量 0 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-6b6f738206e1--libfile_9cfc3075389c8191921462090cf16463--2026-2609.36760-quantmla-dual-path-lowbit-kv-research-20261018-1630-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-6b6f738206e1--libfile_9cfc3075389c8191921462090cf16463--2026-2609.36760-quantmla-dual-path-lowbit-kv-research-20261018-1630-scheduled-chat-30-r01.json",
-      "worker_run_key": "20261018-1630-scheduled-chat-30/r01"
-    },
-    {
       "canonical_id": "arXiv:2502.20576",
       "title": null,
       "source_url": null,
@@ -5096,8 +5015,8 @@
     },
     {
       "canonical_id": "arXiv:2510.04147",
-      "title": "Self Speculative Decoding for Diffusion Large Language Models",
-      "source_url": "https://arxiv.org/pdf/2510.04147",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-19T12:35:55+00:00",
       "return_count": 1,
       "assigned_worker": "scheduled-chat-00",
@@ -5120,6 +5039,94 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_531ec7f330248191bf24ee852eae23b4--2025-2510.04147-self-speculative-decoding-dllm-research-20261019-1345-scheduled-chat-45-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_531ec7f330248191bf24ee852eae23b4--2025-2510.04147-self-speculative-decoding-dllm-research-20261019-1345-scheduled-chat-45-r01.json",
       "worker_run_key": "20261019-1345-scheduled-chat-45/r01"
+    },
+    {
+      "canonical_id": "arXiv:2609.31009",
+      "title": "G²PTQ: Improving LLM Post-Training Quantization with Generalized Gradient Compensation",
+      "source_url": "https://arxiv.org/pdf/2609.31009",
+      "returned_at": "2026-10-19T12:45:43+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 0 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 4526,
+        "body_paragraphs": 27,
+        "method_chars": 1567,
+        "method_paragraphs": 11,
+        "evaluation_chars": 0,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "評価説明量 0 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_5967d6744f308191bb7df8aa2cfa6dad--2026-2609.31009-g2ptq-generalized-gradient-compensation-research-20261019-0700-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_5967d6744f308191bb7df8aa2cfa6dad--2026-2609.31009-g2ptq-generalized-gradient-compensation-research-20261019-0700-scheduled-chat-00-r01.json",
+      "worker_run_key": "20261019-0700-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "DOI:10.1145/3725338",
+      "title": "PQCache: Product Quantization-based KVCache for Long Context LLM Inference",
+      "source_url": "https://arxiv.org/html/2407.12820v2",
+      "returned_at": "2026-10-19T12:46:39+00:00",
+      "return_count": 3,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700",
+        "説明不足トリガー: 評価説明量 91 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5837,
+        "body_paragraphs": 29,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 91,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700",
+          "評価説明量 91 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_5e2027c049d08191a7a3a59f0ac96a16--2024-2407.12820-pqcache-product-quantization-kv-retrieval-research-20261019-1707-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_5e2027c049d08191a7a3a59f0ac96a16--2024-2407.12820-pqcache-product-quantization-kv-retrieval-research-20261019-1707-scheduled-chat-00-r01.json",
+      "worker_run_key": "20261019-1707-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2511.16193",
+      "title": "Fast LLM Post-training via Decoupled and Fastest-of-N Speculation",
+      "source_url": "https://arxiv.org/html/2511.16193v3",
+      "returned_at": "2026-10-19T12:46:41+00:00",
+      "return_count": 3,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700",
+        "説明不足トリガー: 評価説明量 104 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5622,
+        "body_paragraphs": 30,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 104,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700",
+          "評価説明量 104 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_601765286b1881918ac2420081b49d22--2025-2511.16193-specactor-decoupled-fastest-of-n-speculation-research-20261019-1707-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_601765286b1881918ac2420081b49d22--2025-2511.16193-specactor-decoupled-fastest-of-n-speculation-research-20261019-1707-scheduled-chat-00-r01.json",
+      "worker_run_key": "20261019-1707-scheduled-chat-00/r01"
     }
   ]
 }
