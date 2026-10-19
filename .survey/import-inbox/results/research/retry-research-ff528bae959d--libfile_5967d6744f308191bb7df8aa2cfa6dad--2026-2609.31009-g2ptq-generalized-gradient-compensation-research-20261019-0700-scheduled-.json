@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "b1c8175675e33f4b287af88ae3c3747d2d4c336c0f16429c9d04545e9ccca713",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/retry-research-ff528bae959d--libfile_5967d6744f308191bb7df8aa2cfa6dad--2026-2609.31009-g2ptq-generalized-gradient-compensation-research-20261019-0700-scheduled-chat-00-r01.md",
+  "canonical_id": "arXiv:2609.31009",
+  "worker_completed_at": "2026-10-19T07:00:00+09:00",
+  "worker_run_key": "20261019-0700-scheduled-chat-00/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 4526,
+    "body_paragraphs": 27,
+    "method_chars": 1567,
+    "method_paragraphs": 11,
+    "evaluation_chars": 0,
+    "limitation_chars": 0,
+    "insufficiency_flags": [
+      "評価説明量 0 < 500",
+      "限界説明量 0 < 推奨 120"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 評価説明量 0 < 500"
+  ],
+  "processed_at": "2026-10-19T15:58:20+00:00"
+}
