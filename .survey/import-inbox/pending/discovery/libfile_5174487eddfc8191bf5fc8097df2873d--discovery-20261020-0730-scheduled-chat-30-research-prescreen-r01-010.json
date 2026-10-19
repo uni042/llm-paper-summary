@@ -1,0 +1,26 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261020-0730-scheduled-chat-30/r01/research-prescreen/010",
+  "reference_main_sha": "7448109c9852c9501829e594272077869cc8b664",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2407.18370",
+      "identity_tokens": [
+        "arXiv:2407.18370"
+      ],
+      "title": "Trust or Escalate: LLM Judges with Provable Guarantees for Human Agreement",
+      "reason": "LLM判定器の人間評価との一致保証を扱う評価・信頼性研究であり、推論カーネルやデコード、分散サービングの性能技術ではない。",
+      "source_url": "https://arxiv.org/abs/2407.18370",
+      "body_check": "title_screen_only; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-10-20T07:29:49+09:00",
+      "last_checked_at": "2026-10-20T07:29:49+09:00",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance",
+      "worklist_rank": 10
+    }
+  ]
+}
