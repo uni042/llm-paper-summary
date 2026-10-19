@@ -35,10 +35,15 @@
   "selection_reason": "一次要旨はvLLM PagedAttentionのpage layoutに合わせたblock-wise KV evictionを提案し、long-context推論のcache memoryを改善する。",
   "semantic_scholar_id": "9fe1b20e08184204cb9667605832f43870ec6994",
   "source_url": "https://arxiv.org/abs/2509.04377",
-  "status": "ready",
+  "status": "superseded",
   "title": "PagedEviction: Structured Block-wise KV Cache Pruning for Efficient Large Language Model Inference",
   "type": "research",
   "venue": "Conference of the European Chapter of the Association for Computational Linguistics",
   "workflow_version": 10,
-  "year": 2025
+  "year": 2025,
+  "superseded_at": "2026-10-19T10:50:09+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2025-2509.04377-pagedeviction-structured-block-wise-kv-cache-pruning-for-efficient-large.md",
+  "represented_canonical_id": "arXiv:2509.04377",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
