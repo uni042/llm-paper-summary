@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-19T12:20:38+00:00",
+  "generated_at": "2026-10-19T12:28:18+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 193,
+  "count": 195,
   "entries": [
     {
       "canonical_id": "DOI:10.1145/3714983.3714987",
@@ -3721,33 +3721,6 @@
       "worker_run_key": "20261018-2155-scheduled-chat-00/r01"
     },
     {
-      "canonical_id": "arXiv:2606.04446",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-18T13:47:39+00:00",
-      "return_count": 4,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 0 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 7480,
-        "body_paragraphs": 53,
-        "method_chars": 2158,
-        "method_paragraphs": 14,
-        "evaluation_chars": 0,
-        "limitation_chars": 589,
-        "insufficiency_flags": [
-          "評価説明量 0 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-0ed083268acf--libfile_b2ce3feba32c81919defcb24c9984ed6--2026-2606.04446-d2sd-dual-diffusion-speculative-decoding-research-20261018-1100-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-0ed083268acf--libfile_b2ce3feba32c81919defcb24c9984ed6--2026-2606.04446-d2sd-dual-diffusion-speculative-decoding-research-20261018-1100-scheduled.json",
-      "worker_run_key": "20261018-1100-scheduled-chat-00/r01"
-    },
-    {
       "canonical_id": "arXiv:2601.21096",
       "title": null,
       "source_url": null,
@@ -5039,8 +5012,8 @@
     },
     {
       "canonical_id": "arXiv:2605.20982",
-      "title": "Diagnosing Overhead in Dispatch Operations: Cross-architecture Observatory",
-      "source_url": "https://arxiv.org/abs/2605.20982",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-19T12:17:45+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-00",
@@ -5069,8 +5042,8 @@
     },
     {
       "canonical_id": "arXiv:2512.15586",
-      "title": "Bolmo: Byteifying the Next Generation of Language Models",
-      "source_url": "https://arxiv.org/html/2512.15586v2",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-19T12:17:46+00:00",
       "return_count": 1,
       "assigned_worker": "scheduled-chat-45",
@@ -5094,6 +5067,89 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_3df90a67b4d08191a63c2df79c7d6c91--2025-2512.15586-bolmo-byteification-research-20261019-0445-scheduled-chat-45-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_3df90a67b4d08191a63c2df79c7d6c91--2025-2512.15586-bolmo-byteification-research-20261019-0445-scheduled-chat-45-r01.json",
       "worker_run_key": "20261019-0445-scheduled-chat-45/r01"
+    },
+    {
+      "canonical_id": "arXiv:2510.16040",
+      "title": "Kelle: Co-design KV Caching and eDRAM for Efficient LLM Serving in Edge Computing",
+      "source_url": "https://arxiv.org/abs/2510.16040",
+      "returned_at": "2026-10-19T12:26:40+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 6559,
+        "body_paragraphs": 30,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 805,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_487b7278ce5c81919f13eb6fbfe05f2e--2025-2510.16040-kelle-edram-kv-cache-research-20261019-1800-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_487b7278ce5c81919f13eb6fbfe05f2e--2025-2510.16040-kelle-edram-kv-cache-research-20261019-1800-scheduled-chat-00-r01.json",
+      "worker_run_key": "20261019-1800-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2606.00724",
+      "title": "WaveFilter: Enhancing the Long-Context Capability of Diffusion LLMs via Wavelet-Guided KV Cache Filtering",
+      "source_url": "https://arxiv.org/html/2606.00724v1",
+      "returned_at": "2026-10-19T12:26:40+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5663,
+        "body_paragraphs": 27,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 992,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_48824ac864dc8191b925a752e1e00a57--2026-2606.00724-wavefilter-diffusion-kv-wavelet-research-20261019-1800-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_48824ac864dc8191b925a752e1e00a57--2026-2606.00724-wavefilter-diffusion-kv-wavelet-research-20261019-1800-scheduled-chat-00-r01.json",
+      "worker_run_key": "20261019-1800-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2412.12706",
+      "title": "More Tokens, Lower Precision: Towards the Optimal Token-Precision Trade-off in KV Cache Compression",
+      "source_url": "https://aclanthology.org/2025.findings-emnlp.429/",
+      "returned_at": "2026-10-19T12:27:08+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 7377,
+        "body_paragraphs": 48,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 1965,
+        "limitation_chars": 902,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_4ab65c15c03c81918f51b28afd2bb070--2024-2412.12706-quantized-pruning-token-precision-tradeoff-research-20261019-1930-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_4ab65c15c03c81918f51b28afd2bb070--2024-2412.12706-quantized-pruning-token-precision-tradeoff-research-20261019-1930-scheduled-chat-30-r01.json",
+      "worker_run_key": "20261019-1930-scheduled-chat-30/r01"
     }
   ]
 }
