@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-199cd21ce6f7cb93-border-002",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2605.20473",
+  "reason": "DiffCodeGenはLLMが生成したコード候補をカバレッジ誘導ファジングで比較・クラスタ化し、追加LLM呼出しを使わず代表候補を選ぶ。推論時トークン消費と選択費用の削減には関連するが、主目的はコード生成の正解率改善であり、LLMサービング実行系のGPU効率・メモリ管理は対象外。",
+  "title": "Code Generation by Differential Test Time Scaling",
+  "identity_tokens": [
+    "arxiv:2605.20473"
+  ],
+  "linked_from": [],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-199cd21ce6f7",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}
