@@ -35,10 +35,15 @@
   "selection_reason": "NPUsper removes redundant Whisper decoder work, uses K-step chunk graphs to reduce KV-cache computation and dispatch overhead, and reports latency/TTFT/power reductions on mobile NPUs, directly matching edge-inference systems efficiency.",
   "semantic_scholar_id": "2726c1d9ee30a898ddb7d979d425db7ebe90131c",
   "source_url": "https://arxiv.org/abs/2607.01108",
-  "status": "ready",
+  "status": "superseded",
   "title": "NPUsper: Eliminating Redundant Computation for Real-Time Whisper on Mobile NPUs",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-10-20T10:50:18+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/08-edge-on-device-llm-systems/2026-2607.01108-npusper-eliminating-redundant-computation-for-real-time-whisper-on-mobil.md",
+  "represented_canonical_id": "arXiv:2607.01108",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
