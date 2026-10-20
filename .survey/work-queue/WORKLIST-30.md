@@ -1,7 +1,7 @@
 # Scheduled worker :30 worklist
 
 Worker: `scheduled-chat-30`  
-Generated: `2026-10-20T18:59:08+00:00`
+Generated: `2026-10-20T19:31:47+00:00`
 
 このページはこのworker専用の再構築可能な選択索引です。他のScheduled worker用ページとは候補を重複させません（十分な在庫がある場合）。
 正本は `.survey/work-queue/jobs/`、claim、論文実体、relevance ledgerです。処理直前に最新正本を再確認してください。
@@ -220,8 +220,8 @@ ready総数: **1362** / 未claim総数: **1362** / このworker向け: **200**
 
 ## リスト入り判定待ち Discovery候補
 
-未判定総数: **122717** / このworker向け: **500**
-事前選別: **quarantine** / 暫定隔離 **116755** / 監査再投入 **0** / 機械規則適用後 **119237** / 選抜率 **5.0%** （候補の正本は保持。隔離はunrelated判定ではない）
+未判定総数: **122718** / このworker向け: **500**
+事前選別: **quarantine** / 暫定隔離 **116756** / 監査再投入 **0** / 機械規則適用後 **119238** / 選抜率 **5.0%** （候補の正本は保持。隔離はunrelated判定ではない）
 
 | # | priority | 系統内引用最多 | 系統内引用合計 | identity | title | published | venue | 全被引用 | 参照関係 | 系統候補 | source |
 |---:|---:|---:|---:|---|---|---|---|---:|---:|---|---|
@@ -477,7 +477,7 @@ ready総数: **1362** / 未claim総数: **1362** / このworker向け: **200**
 | 250 | 10 | 6 | 9 | DOI:10.1016/j.neucom.2026.134349 | Multi-band residual fusion with per-head gating for enhanced transformer language models | 2026-06-25 | Neurocomputing | 0 | 9 | 正確な注意計算 / 入出力指向注意 / GPUカーネル最適化 / FlashAttention, 注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層 | [source](https://doi.org/10.1016/j.neucom.2026.134349) |
 | 251 | 1 | 6 | 9 | SemanticScholar:507c16fc6fae3aaffe6d38ef039f9879743356ce | A J O LT FOR THE KV C ACHE : N EAR -L OSSLESS KV C ACHE C OMPRESSION VIA J OINT L AGRANGIAN A LLOCATION OF T UCKER R ANKS AND A R OTATED R ESIDUAL FOR LLM S |  |  | 1 | 9 | KV Cache Optimization / Compression, KV cache eviction / heavy hitters / sparse attention / efficient inference, KV cache memory management / streaming inference / attention sinks / length extrapolation, KVキャッシュ圧縮 / 量子化 / 推論メモリ最適化, arXiv:2405.16406のICLR 2025採録版。 | [source](https://www.semanticscholar.org/paper/507c16fc6fae3aaffe6d38ef039f9879743356ce) |
 | 252 | 0 | 6 | 9 | SemanticScholar:b4fff1d2040a1000d9f666159647872d17e8f12c | Compass: SLO-aware � ery Planner for Compound AI Serving at Scale |  |  | 0 | 9 | CPUオフロード / 活性化疎性 / 階層メモリ, LLM Serving / Scheduling / Disaggregation, Weight Quantization / Compression, llm-serving-scheduling-disaggregation, 重み専用量子化 / 推論カーネル | [source](https://www.semanticscholar.org/paper/b4fff1d2040a1000d9f666159647872d17e8f12c) |
-| 253 | 21 | 6 | 9 | arXiv:2504.10449 | M1: Towards Scalable Test-Time Compute with Mamba Reasoning Models | 2025-04-14 | arXiv.org | 21 | 9 | LLM Serving / Scheduling / Disaggregation | [source](https://arxiv.org/abs/2504.10449) |
+| 253 | 21 | 6 | 9 | arXiv:2504.10449 | M1: Towards Scalable Test-Time Compute with Mamba Reasoning Models | 2025-04-14 | arXiv.org | 21 | 1 |  | [source](https://arxiv.org/abs/2504.10449) |
 | 254 | 0 | 6 | 9 | arXiv:2410.10553 | SLaNC: Static LayerNorm Calibration | 2024-10-14 | arXiv.org | 0 | 9 | KV cache quantization / long-context inference / activation compression, post-training quantization / second-order compression / weight-only LLM inference, 重み専用量子化 / 推論カーネル | [source](https://arxiv.org/abs/2410.10553) |
 | 255 | 10 | 6 | 8 | arXiv:2608.27514 | Trajectory-Level Speculative Decoding for Diffusion Language Models | 2026-08-27 |  | 0 | 8 | Speculative Decoding, diffusion language models / masked diffusion / parallel decoding / AR-to-diffusion conversion, 投機的デコード / 分布保存型デコード高速化, 投機的復号 / 無損失復号高速化, 拡散型LLM推論 / 近似KVキャッシュ / 並列復号 | [source](https://arxiv.org/abs/2608.27514) |
 | 256 | 10 | 6 | 8 | arXiv:2609.35139 | CacheRepair: Learning to Repair Cross-Chunk Context in RAG for KV Cache Fusion | 2026-09-28 |  | 0 | 8 | 10-kv-cache-offload-recomputation, kv-cache-offload-recomputation, 鍵・値キャッシュ再利用 / 検索拡張生成 / 長文脈推論 | [source](https://arxiv.org/abs/2609.35139) |
@@ -659,12 +659,12 @@ ready総数: **1362** / 未claim総数: **1362** / このworker向け: **200**
 | 432 | 3 | 5 | 7 | DOI:10.1109/CICC57935.2023.10121242 | AI SoC Design Challenges in the Foundation Model Era | 2023-04-01 | IEEE Custom Integrated Circuits Conference | 3 | 7 | 注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層 | [source](https://doi.org/10.1109/CICC57935.2023.10121242) |
 | 433 | 105 | 5 | 7 | arXiv:2606.06479 | Pretraining Recurrent Networks without Recurrence | 2026-06-04 | arXiv.org | 5 | 7 | state space models / selective SSM / recurrent inference / hardware-aware sequence modeling | [source](https://arxiv.org/abs/2606.06479) |
 | 434 | 101 | 5 | 7 | arXiv:2605.19150 | Flash PD-SSM: Memory-Optimized Structured Sparse State-Space Models | 2026-05-18 | arXiv.org | 1 | 7 | state space models / selective SSM / recurrent inference / hardware-aware sequence modeling | [source](https://arxiv.org/abs/2605.19150) |
-| 435 | 27 | 5 | 7 | arXiv:2502.20339 | Thinking Slow, Fast: Scaling Inference Compute with Distilled Reasoners | 2025-02-27 | arXiv.org | 27 | 7 | LLM Serving / Scheduling / Disaggregation, state space models / selective SSM / recurrent inference / hardware-aware sequence modeling, 正確な注意計算 / 入出力指向注意 / GPUカーネル最適化 / FlashAttention | [source](https://arxiv.org/abs/2502.20339) |
-| 436 | 10 | 5 | 7 | arXiv:2609.36651 | FocusVTC: Efficient and High-Performance Visual Text Compression with Adaptive Resolution | 2026-09-29 |  | 0 | 7 | LLM Serving / Scheduling / Disaggregation, 注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層 | [source](https://arxiv.org/abs/2609.36651) |
-| 437 | 4 | 5 | 7 | arXiv:2506.10205 | AWP: Activation-Aware Weight Pruning and Quantization with Projected Gradient Descent | 2025-06-11 | arXiv.org | 4 | 7 | post-training quantization / second-order compression / weight-only LLM inference, 重み専用量子化 / 推論カーネル | [source](https://arxiv.org/abs/2506.10205) |
-| 438 | 24 | 5 | 7 | arXiv:2509.03871 | A Comprehensive Survey on Trustworthiness in Reasoning with Large Language Models | 2025-09-04 | arXiv.org | 24 | 7 |  | [source](https://arxiv.org/abs/2509.03871) |
-| 439 | 10 | 5 | 7 | DOI:10.18653/v1/2026.findings-acl.1425 | ERRV: Eliciting Efficient Reasoning through Reasoning Vectors for Policy Optimization in Large Language Models | 2026 | Annual Meeting of the Association for Computational Linguistics | 0 | 7 | LLM Serving / Scheduling / Disaggregation | [source](https://doi.org/10.18653/v1/2026.findings-acl.1425) |
-| 440 | 101 | 5 | 7 | arXiv:2606.14350 | Design Methodology and Performance Trade-offs Management for Distributed and Compound AI Systems | 2026-06-12 | IEEE International Conference on Cloud Computing | 1 | 7 | LLM Serving / Scheduling / Disaggregation, LLM routing、hybrid inference、quality-aware model selection | [source](https://arxiv.org/abs/2606.14350) |
+| 435 | 14 | 5 | 7 | arXiv:2505.17020 | CrossLMM: Decoupling Long Video Sequences from LMMs via Dual Cross-Attention Mechanisms | 2025-05-22 | arXiv.org | 14 | 7 | Inference / Multimodal Long-Context Memory Compression | [source](https://arxiv.org/abs/2505.17020) |
+| 436 | 7 | 5 | 7 | arXiv:2509.18993 | CR-Net: Scaling Parameter-Efficient Training with Cross-Layer Low-Rank Structure | 2025-09-23 | arXiv.org | 7 | 7 | KV cache compression / cross-layer state merging, KVキャッシュ・注意アーキテクチャ, 正確な注意計算 / 入出力指向注意 / GPUカーネル最適化 / FlashAttention, 注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層 | [source](https://arxiv.org/abs/2509.18993) |
+| 437 | 2 | 5 | 7 | arXiv:2404.05843 | Softmax Attention with Constant Cost per Token | 2024-04-08 | arXiv.org | 2 | 7 | inference-systems, sparse attention / long-context Transformer, state space models / selective SSM / recurrent inference / hardware-aware sequence modeling | [source](https://arxiv.org/abs/2404.05843) |
+| 438 | 24 | 5 | 7 | arXiv:2510.07880 | Do LLMs Really Need 10+ Thoughts for "Find the Time 1000 Days Later"? Towards Structural Understanding of LLM Overthinking | 2025-10-09 | Annual Meeting of the Association for Computational Linguistics | 14 | 7 | LLM Serving / Scheduling / Disaggregation | [source](https://arxiv.org/abs/2510.07880) |
+| 439 | 1 | 5 | 7 | DOI:10.1016/j.ipm.2026.105065 | Stage-aware LLM-SLM collaboration for agentic tasks via joint routing and verification |  | Information Processing & Management | 1 | 7 | LLM routing、hybrid inference、quality-aware model selection, Speculative Decoding, inference-systems, survey-speculative-decoding, 投機的復号 / 無損失復号高速化 | [source](https://doi.org/10.1016/j.ipm.2026.105065) |
+| 440 | 27 | 5 | 7 | arXiv:2502.20339 | Thinking Slow, Fast: Scaling Inference Compute with Distilled Reasoners | 2025-02-27 | arXiv.org | 27 | 1 |  | [source](https://arxiv.org/abs/2502.20339) |
 | 441 | 0 | 5 | 7 | SemanticScholar:a73ea3d29881032b8e9d1bc9d012f7708886ca86 | Pureformer: Do We Even Need Attention? | 2021 | arXiv.org | 0 | 7 | inference-systems, sparse attention / long-context Transformer | [source](https://www.semanticscholar.org/paper/a73ea3d29881032b8e9d1bc9d012f7708886ca86) |
 | 442 | 112 | 5 | 7 | arXiv:2607.00053 | SWE-Router: Routing in Multi-turn Agentic Software Engineering Tasks | 2026-06-30 | arXiv.org | 12 | 7 | inference-systems | [source](https://arxiv.org/abs/2607.00053) |
 | 443 | 103 | 5 | 7 | arXiv:2512.10430 | T-pro 2.0: An Efficient Russian Hybrid-Reasoning Model and Playground | 2025-12-11 | arXiv.org | 3 | 7 | Speculative Decoding, 投機的デコード / 分布保存型デコード高速化, 投機的復号 / EAGLE, 投機的復号 / 無損失復号高速化 | [source](https://arxiv.org/abs/2512.10430) |

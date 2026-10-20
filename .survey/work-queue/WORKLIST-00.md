@@ -1,7 +1,7 @@
 # Scheduled worker :00 worklist
 
 Worker: `scheduled-chat-00`  
-Generated: `2026-10-20T18:59:08+00:00`
+Generated: `2026-10-20T19:31:46+00:00`
 
 このページはこのworker専用の再構築可能な選択索引です。他のScheduled worker用ページとは候補を重複させません（十分な在庫がある場合）。
 正本は `.survey/work-queue/jobs/`、claim、論文実体、relevance ledgerです。処理直前に最新正本を再確認してください。
@@ -220,8 +220,8 @@ ready総数: **1362** / 未claim総数: **1362** / このworker向け: **200**
 
 ## リスト入り判定待ち Discovery候補
 
-未判定総数: **122717** / このworker向け: **500**
-事前選別: **quarantine** / 暫定隔離 **116755** / 監査再投入 **0** / 機械規則適用後 **119237** / 選抜率 **5.0%** （候補の正本は保持。隔離はunrelated判定ではない）
+未判定総数: **122718** / このworker向け: **500**
+事前選別: **quarantine** / 暫定隔離 **116756** / 監査再投入 **0** / 機械規則適用後 **119238** / 選抜率 **5.0%** （候補の正本は保持。隔離はunrelated判定ではない）
 
 | # | priority | 系統内引用最多 | 系統内引用合計 | identity | title | published | venue | 全被引用 | 参照関係 | 系統候補 | source |
 |---:|---:|---:|---:|---|---|---|---|---:|---:|---|---|
@@ -660,11 +660,11 @@ ready総数: **1362** / 未claim総数: **1362** / このworker向け: **200**
 | 433 | 0 | 5 | 7 | arXiv:2508.04953 | Tesserae: Scalable Placement Policies for Deep Learning Workloads | 2025-08-07 | arXiv.org | 0 | 7 |  | [source](https://arxiv.org/abs/2508.04953) |
 | 434 | 102 | 5 | 7 | DOI:10.1145/3712285.3759859 | RingX: Scalable Parallel Attention for Long-Context Learning on HPC | 2025-11-15 | International Conference on Software Composition | 2 | 7 | Ring Attention / sequence parallelism / exact distributed attention, 注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層 | [source](https://doi.org/10.1145/3712285.3759859) |
 | 435 | 95 | 5 | 7 | arXiv:2509.24871 | StreamForest: Efficient Online Video Understanding with Persistent Event Memory | 2025-09-29 | Neural Information Processing Systems | 85 | 7 | 11-llm-serving-scheduling-disaggregation, Inference / Multimodal Long-Context Memory Compression | [source](https://arxiv.org/abs/2509.24871) |
-| 436 | 10 | 5 | 7 | arXiv:2608.29618 | Multi-Access Speculative Inference: Uplink or Downlink? | 2026-08-30 |  | 0 | 7 | distributed speculative decoding / edge collaborative inference / communication-efficient inference, speculative-decoding, エッジLLM推論・投機的デコーディング・無線資源配分・バッチスケジューリング, 投機的デコード / 分布保存型デコード高速化, 投機的復号 / 無損失復号高速化 | [source](https://arxiv.org/abs/2608.29618) |
-| 437 | 6 | 5 | 7 | arXiv:2408.14906 | Writing in the Margins: Better Inference Pattern for Long Context Retrieval | 2024-08-27 | arXiv.org | 6 | 7 | LLM Serving / Scheduling / Disaggregation, LLM serving scheduling / chunked prefill / iteration-level scheduling / pipeline parallelism, inference-systems | [source](https://arxiv.org/abs/2408.14906) |
-| 438 | 2 | 5 | 7 | arXiv:2505.11945 | Top–Down Compression: Revisit Efficient Vision Token Projection for Visual Instruction Tuning | 2025-05-17 | IEEE Transactions on Image Processing | 2 | 7 | 12-multimodal-inference, state space models / selective SSM / recurrent inference / hardware-aware sequence modeling | [source](https://arxiv.org/abs/2505.11945) |
-| 439 | 10 | 5 | 7 | DOI:10.1016/j.neucom.2026.134181 | DyToS: Budget-aware dynamic token scheduling for efficient multi-modal large language models | 2026-06-01 | Neurocomputing | 0 | 7 | Conditional Computation, 大規模モデル学習／分散学習メモリ最適化／DeepSpeed | [source](https://doi.org/10.1016/j.neucom.2026.134181) |
-| 440 | 106 | 5 | 7 | arXiv:2605.29662 | SAFE-Pruner: Semantic Attention-Guided Future-Aware Token Pruning for Efficient Vision-Language-Action Manipulation | 2026-05-28 | arXiv.org | 6 | 7 | LLM Serving / Scheduling / Disaggregation, 注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層 | [source](https://arxiv.org/abs/2605.29662) |
+| 436 | 10 | 5 | 7 | arXiv:2609.36651 | FocusVTC: Efficient and High-Performance Visual Text Compression with Adaptive Resolution | 2026-09-29 |  | 0 | 7 | LLM Serving / Scheduling / Disaggregation, 注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層 | [source](https://arxiv.org/abs/2609.36651) |
+| 437 | 4 | 5 | 7 | arXiv:2506.10205 | AWP: Activation-Aware Weight Pruning and Quantization with Projected Gradient Descent | 2025-06-11 | arXiv.org | 4 | 7 | post-training quantization / second-order compression / weight-only LLM inference, 重み専用量子化 / 推論カーネル | [source](https://arxiv.org/abs/2506.10205) |
+| 438 | 24 | 5 | 7 | arXiv:2509.03871 | A Comprehensive Survey on Trustworthiness in Reasoning with Large Language Models | 2025-09-04 | arXiv.org | 24 | 7 |  | [source](https://arxiv.org/abs/2509.03871) |
+| 439 | 10 | 5 | 7 | DOI:10.18653/v1/2026.findings-acl.1425 | ERRV: Eliciting Efficient Reasoning through Reasoning Vectors for Policy Optimization in Large Language Models | 2026 | Annual Meeting of the Association for Computational Linguistics | 0 | 7 | LLM Serving / Scheduling / Disaggregation | [source](https://doi.org/10.18653/v1/2026.findings-acl.1425) |
+| 440 | 101 | 5 | 7 | arXiv:2606.14350 | Design Methodology and Performance Trade-offs Management for Distributed and Compound AI Systems | 2026-06-12 | IEEE International Conference on Cloud Computing | 1 | 7 | LLM Serving / Scheduling / Disaggregation, LLM routing、hybrid inference、quality-aware model selection | [source](https://arxiv.org/abs/2606.14350) |
 | 441 | 0 | 5 | 7 | SemanticScholar:212ebf972046016123051028bee8effe1dbf7fe2 | P ARALLEL A TTENTION AND F EED -F ORWARD N ET D ESIGN FOR P RE - TRAINING AND I NFERENCE ON T RANSFORMERS | 2023 |  | 0 | 7 |  | [source](https://www.semanticscholar.org/paper/212ebf972046016123051028bee8effe1dbf7fe2) |
 | 442 | 112 | 5 | 7 | arXiv:2603.06577 | Omni-Diffusion: Unified Multimodal Understanding and Generation with Masked Discrete Diffusion | 2026-03-06 | arXiv.org | 12 | 7 | diffusion language models / masked diffusion / parallel decoding / AR-to-diffusion conversion, 拡散型LLM推論 / 近似KVキャッシュ / 並列復号 | [source](https://arxiv.org/abs/2603.06577) |
 | 443 | 104 | 5 | 7 | arXiv:2603.08659 | CODA: Difficulty-Aware Compute Allocation for Adaptive Reasoning | 2026-03-09 | arXiv.org | 4 | 7 |  | [source](https://arxiv.org/abs/2603.08659) |
