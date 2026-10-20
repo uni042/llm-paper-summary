@@ -1,0 +1,26 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261019-2000-scheduled-chat-00/r01/research-prescreen/017",
+  "reference_main_sha": "eba740a31d2ca7e5a9208e5fd2a02cbb8c4e1b75",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2511.19575",
+      "identity_tokens": [
+        "arxiv:2511.19575"
+      ],
+      "title": "HunyuanOCR Technical Report",
+      "reason": "1B規模の視覚言語モデルでOCRの検出・解析・翻訳を統合し、データと強化学習により認識品質を高める技術報告。vLLMを用いた高速配備にも言及するが、主要寄与はOCR向けモデル構造と学習・品質であり、汎用推論エンジンに新しい最適化を導入したとまでは要旨から判断できない。",
+      "source_url": "https://arxiv.org/abs/2511.19575",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-19T20:05:38+09:00",
+      "last_checked_at": "2026-10-19T20:05:38+09:00",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance",
+      "worklist_rank": 17
+    }
+  ]
+}
