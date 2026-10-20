@@ -306,6 +306,10 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
   実装：✓ ・ リポジトリ内被引用：44  
   重要度の低いキャッシュミス専門家だけを低精度化し、適応プリフェッチと多次元キャッシュを組み合わせてMoEオフロードの読込み遅延を削減する基盤。
 
+- **2025-03 · [Fast On-device LLM Inference with NPUs](2024-2407.05858-fast-on-device-llm-inference-with-npus.md)**  
+  実装：[✓](https://github.com/UbiquitousLearning/mllm) ・ リポジトリ内被引用：25  
+  可変長入力の固定長分割、量子化外れ値のCPU/GPU分離、ブロック単位の異種プロセッサ配置を組み合わせ、スマートフォンNPUでLLMプリフィルを高速化する。
+
 - **2025-02 · [Taming Latency-Memory Trade-Off in MoE-Based LLM Serving via Fine-Grained Expert Offloading](2025-2502.05370-taming-latency-memory-trade-off-in-moe-based-llm-serving-via-fine-grained-expert.md)**  
   実装：[✓](https://github.com/IntelliSys-Lab/FineMoE-EuroSys26) ・ リポジトリ内被引用：25  
   しかし専門家全体の重みは大きく、GPUメモリへすべてを常駐させるのは難しい。CPUメモリへ専門家を退避するとGPU容量の不足は補えるが、必要な専門家をその都度PCIeで転送するため、推論の遅延が増える。EuroSys 2026掲載版の要旨は、六GPU実機で推論遅延を最大47%削減し、専門家ヒット率を39%改善したと報告する。
@@ -313,10 +317,6 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
 - **2025-02 · [Klotski: Efficient Mixture-of-Expert Inference via Expert-Aware Multi-Batch Pipeline](2025-2502.06888-klotski-efficient-mixture-of-expert-inference-via-expert-aware-multi-batch-pipel.md)**  
   実装：[✓](https://openi.pcl.ac.cn/fangzhy/Klotski) ・ リポジトリ内被引用：25  
   Klotskiは複数バッチで共通する専門家を先に計算し、その間にCPU RAMやSSDから次の専門家を読み込んで巨大MoEのI/O待ちを隠す。
-
-- **2025-03 · [Fast On-device LLM Inference with NPUs](2024-2407.05858-fast-on-device-llm-inference-with-npus.md)**  
-  実装：[✓](https://github.com/UbiquitousLearning/mllm) ・ リポジトリ内被引用：24  
-  可変長入力の固定長分割、量子化外れ値のCPU/GPU分離、ブロック単位の異種プロセッサ配置を組み合わせ、スマートフォンNPUでLLMプリフィルを高速化する。
 
 - **2025-04 · [HybriMoE: Hybrid CPU-GPU Scheduling and Cache Management for Efficient MoE Inference](2025-2504.05897-hybrimoe-hybrid-cpu-gpu-scheduling-cache-management.md)**  
   実装：[✓](https://github.com/PKU-SEC-Lab/HybriMoE) ・ リポジトリ内被引用：20  
@@ -449,7 +449,7 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
   TwinPilotsは、モデルの重みと鍵・値キャッシュ（KVキャッシュ）が画像処理装置（GPU）の高帯域幅メモリに収まらない状況で、中央処理装置（CPU）を単なる重みの保管先ではなく、GPUと並行する計算装置として扱う推論方式である。
 
 - **2024-09 · [Cambricon-LLM: A Chiplet-Based Hybrid Architecture for On-Device Inference of 70B LLM](2024-2409.15654-cambricon-llm-chiplet-flash-inference.md)**  
-  実装：✓ ・ リポジトリ内被引用：12  
+  実装：✓ ・ リポジトリ内被引用：13  
   NPUと演算機能付きNANDフラッシュをチップレット接続し、重み近傍計算とハードウェア認識タイル化で70B級の端末内推論を実現する。
 
 - **2024-01 · [FlightLLM: Efficient Large Language Model Inference with a Complete Mapping Flow on FPGAs](2024-2401.03868-flightllm-efficient-large-language-model-inference-with-a-complete-mappi.md)**  
@@ -479,7 +479,7 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
 ### 4年前（2022-11〜2023-10）
 
 - **2023-03 · [FlexGen: High-Throughput Generative Inference of Large Language Models with a Single GPU](2023-2303.06865-flexgen-high-throughput-generative-inference-of-large-language-models-with-a-single-gpu.md)**  
-  実装：[✓](https://github.com/FMInference/FlexGen) ・ リポジトリ内被引用：395  
+  実装：[✓](https://github.com/FMInference/FlexGen) ・ リポジトリ内被引用：396  
   FlexGenは巨大LLMの重み・中間活性・KVキャッシュをGPU・CPU・SSDへ分け、計算順序とバッチでI/Oを使い回して単一GPUの生成スループットを高める。
 
 ### 5年前（2021-11〜2022-10）
