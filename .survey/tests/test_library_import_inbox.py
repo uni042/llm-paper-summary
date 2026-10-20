@@ -404,6 +404,45 @@ source: https://arxiv.org/abs/2609.12345
             )
             self.assertEqual(persisted["entries"], [])
 
+    def test_returned_research_queue_skips_only_proven_published_duplicates(self) -> None:
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            published = root / "papers/inference/05-speculative-decoding-moe/existing.md"
+            published.parent.mkdir(parents=True)
+            published.write_text(
+                "---\ncanonical_id: arXiv:2605.29707\n---\n# Already published\n",
+                encoding="utf-8",
+            )
+            results = root / ".survey/import-inbox/results/research"
+            results.mkdir(parents=True)
+            receipt = results / "blocked.json"
+            base = {
+                "status": "blocked_quality",
+                "canonical_id": "arXiv:2605.29707",
+                "processed_at": "2026-10-07T09:00:00+00:00",
+                "failures": [
+                    "長文定型文の再利用を検出: papers/inference/05-speculative-decoding-moe/existing.md と 8 段落 / 1887文字 (100.0%) が完全一致"
+                ],
+            }
+            receipt.write_text(json.dumps(base, ensure_ascii=False), encoding="utf-8")
+            self.assertEqual(inbox.sync_returned_research_queue(root)["count"], 0)
+
+            # Identity mismatch does not suppress a real repair.
+            published.write_text(
+                "---\ncanonical_id: arXiv:2600.00001\n---\n# Unrelated\n",
+                encoding="utf-8",
+            )
+            self.assertEqual(inbox.sync_returned_research_queue(root)["count"], 1)
+
+            # Existing identity alone does not suppress non-duplicate quality failures.
+            published.write_text(
+                "---\ncanonical_id: arXiv:2605.29707\n---\n# Already published\n",
+                encoding="utf-8",
+            )
+            base["failures"] = ["日本語比率 48.4% < 70%"]
+            receipt.write_text(json.dumps(base, ensure_ascii=False), encoding="utf-8")
+            self.assertEqual(inbox.sync_returned_research_queue(root)["count"], 1)
+
     def test_returned_research_queue_is_idempotent_when_entries_do_not_change(self) -> None:
         with tempfile.TemporaryDirectory() as td:
             root = Path(td)
