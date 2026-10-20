@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-20T18:43:35+00:00",
-  "record_count": 12442,
+  "updated_at": "2026-10-20T19:45:40+00:00",
+  "record_count": 12444,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -163076,11 +163076,11 @@
         "id:arXiv:2204.13767",
         "url:https://arxiv.org/abs/2204.13767"
       ],
-      "reason": "一次要旨は多変量時系列予測のため、系列長に線形なパッチ注意と階層を三角状に縮小する構造、変数ごとに異なる軽量パラメータを提案する。注意計算の効率化自体は扱うが、評価と最終適用は時系列予測モデルの予測精度・効率であり、大規模言語モデルの生成推論やサービング基盤に直接適用・検証したものではないため、現行の推論系統対象外とする。",
+      "reason": "多変量時系列予測用の注意機構を主題とする研究で、言語モデルの推論・学習実行基盤やKVキャッシュ、サービング性能の改善を扱う題名ではない。推論システムへの直接適用が確認できないためタイトル段階で対象外候補とする。",
       "first_checked_at": "2026-10-11T02:48:44+00:00",
-      "last_checked_at": "2026-10-20T13:06:24+00:00",
+      "last_checked_at": "2026-10-20T19:45:38+00:00",
       "linked_from": [],
-      "title": "Triformer: Triangular, Variable-Specific Attentions for Long Sequence Multivariate Time Series Forecasting--Full Version"
+      "title": "Triformer: Triangular, Variable-Specific Attentions for Long Sequence Multivariate Time Series Forecasting-Full Version"
     },
     "DOI:10.1109/tcsvt.2026.3661516": {
       "classification": "unrelated",
@@ -178829,9 +178829,9 @@
       "identity_tokens": [
         "arXiv:2601.18496"
       ],
-      "reason": "原著要旨では医療質問に対する多段検索データ生成、難易度に応じたツール呼出し回数の訓練時ペナルティ、推論時の仮説検証監視を組み合わせ、7件の医療ベンチマークで回答品質を改善する。ツール呼出し制御は医療エージェントの推論戦略であり、LLMサービングの資源管理・ランタイム性能改善を主目的としない。",
+      "reason": "医療分野の多段検索エージェントのデータと学習・推論を扱う応用研究。題名から確認できる中心課題は医療エージェントの能力獲得であり、汎用LLMの実行基盤、GPU資源管理、推論高速化ではない。",
       "first_checked_at": "2026-10-17T03:54:27+00:00",
-      "last_checked_at": "2026-10-20T07:56:50+00:00",
+      "last_checked_at": "2026-10-20T19:45:39+00:00",
       "linked_from": [],
       "title": "DEEPMED: Building a Medical DeepResearch Agent via Multi-hop Med-Search Data and Turn-Controlled Agentic Training & Inference"
     },
@@ -178949,9 +178949,9 @@
       "identity_tokens": [
         "arXiv:2512.08186"
       ],
-      "reason": "一次要旨では、画像と言語を使うロボットナビゲーションを対象に、視覚言語モデルが中期目標を選び軽量拡散方策が滑らかな移動軌道を生成するDualVLNを提案する。遅い高水準計画と速い局所制御を分離するが、主な技術的貢献と評価指標は実環境での経路計画・障害物回避・ナビゲーション成功率であり、汎用LLMの推論サービング、GPU資源配置、KVキャッシュやデコード高速化の機構ではないため対象外とする。",
+      "reason": "視覚と言語に基づくロボットのナビゲーション方策を主題とする。タイトルに示される研究対象は環境認識と行動計画であり、LLM推論サービング、KVキャッシュ、モデル量子化、GPUメモリ階層の改善を主張するものではない。タイトル段階で対象外候補と判定する。",
       "first_checked_at": "2026-10-18T10:00:30+00:00",
-      "last_checked_at": "2026-10-20T04:49:43+00:00",
+      "last_checked_at": "2026-10-20T19:45:38+00:00",
       "linked_from": [],
       "title": "Ground Slow, Move Fast: A Dual-System Foundation Model for Generalizable Vision-and-Language Navigation"
     },
@@ -179328,6 +179328,30 @@
       "last_checked_at": "2026-10-20T17:49:24+00:00",
       "linked_from": [],
       "title": "Computational study of Adhesion and Friction Behavior of Crosslinked Polymer Network"
+    },
+    "arXiv:2410.03051": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2410.03051",
+      "identity_tokens": [
+        "arXiv:2410.03051"
+      ],
+      "reason": "動画の詳細キャプション生成とベンチマーク構築を対象とする。効率性の語はあるが、タイトルから確認できる主貢献は視覚言語タスクと評価であり、LLMサービング・推論エンジン・メモリ最適化への貢献は確認できない。",
+      "first_checked_at": "2026-10-20T19:45:34+00:00",
+      "last_checked_at": "2026-10-20T19:45:39+00:00",
+      "linked_from": [],
+      "title": "AuroraCap: Efficient, Performant Video Detailed Captioning and a New Benchmark"
+    },
+    "arXiv:2602.05827": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.05827",
+      "identity_tokens": [
+        "arXiv:2602.05827"
+      ],
+      "reason": "実環境の視覚言語ナビゲーションを改善する動画生成技術の研究。疎な動画生成を含むが、対象はロボットの空間行動と視覚生成であり、LLM推論エンジンの計算・メモリ最適化ではない。",
+      "first_checked_at": "2026-10-20T19:45:35+00:00",
+      "last_checked_at": "2026-10-20T19:45:40+00:00",
+      "linked_from": [],
+      "title": "Sparse Video Generation Propels Real-World Beyond-the-View Vision-Language Navigation"
     }
   }
 }

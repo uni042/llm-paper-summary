@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-f37bb93cf3bae359-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2512.08186",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2512.08186",
+    "identity_tokens": [
+      "arXiv:2512.08186"
+    ],
+    "reason": "視覚と言語に基づくロボットのナビゲーション方策を主題とする。タイトルに示される研究対象は環境認識と行動計画であり、LLM推論サービング、KVキャッシュ、モデル量子化、GPUメモリ階層の改善を主張するものではない。タイトル段階で対象外候補と判定する。",
+    "first_checked_at": "2026-10-18T10:00:30+00:00",
+    "last_checked_at": "2026-10-20T19:45:38+00:00",
+    "linked_from": [],
+    "title": "Ground Slow, Move Fast: A Dual-System Foundation Model for Generalizable Vision-and-Language Navigation"
+  },
+  "processed_at": "2026-10-20T19:45:38+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f37bb93cf3ba",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
