@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-20T09:46:35+00:00",
-  "record_count": 12438,
+  "updated_at": "2026-10-20T11:55:39+00:00",
+  "record_count": 12437,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -178750,18 +178750,6 @@
       "linked_from": [],
       "title": "Pirate-GPT: A locally deployed large language model framework for reliable offline anti-piracy decision support and knowledge retrieval in maritime operations"
     },
-    "arXiv:2511.19575": {
-      "classification": "unrelated",
-      "canonical_id": "arXiv:2511.19575",
-      "identity_tokens": [
-        "arXiv:2511.19575"
-      ],
-      "reason": "一次要旨の主題は文字認識専用の1B視覚言語モデル、OCR精度、データ・強化学習とエンドツーエンド構成である。vLLMによる展開効率には触れるが、推論エンジンやKV管理の一般化可能な高速化機構を提案・評価する研究ではなく、OCR応用モデルの技術報告である。",
-      "first_checked_at": "2026-10-16T09:25:58+00:00",
-      "last_checked_at": "2026-10-16T09:25:58+00:00",
-      "linked_from": [],
-      "title": "HunyuanOCR Technical Report"
-    },
     "arXiv:2602.05827": {
       "classification": "unrelated",
       "canonical_id": "arXiv:2602.05827",
@@ -178837,18 +178825,6 @@
       "last_checked_at": "2026-10-19T11:49:09+00:00",
       "linked_from": [],
       "title": "Rethinking the Practicality of Vision-language-action Model: A Comprehensive Benchmark and An Improved Baseline"
-    },
-    "arXiv:2512.09616": {
-      "classification": "unrelated",
-      "canonical_id": "arXiv:2512.09616",
-      "identity_tokens": [
-        "arXiv:2512.09616"
-      ],
-      "reason": "動画を対象とする思考連鎖の推論能力・表現方式の研究であり、推論ランタイムやモデル圧縮・KVキャッシュの実装最適化を題名が示していない。",
-      "first_checked_at": "2026-10-16T19:48:14+00:00",
-      "last_checked_at": "2026-10-16T19:48:14+00:00",
-      "linked_from": [],
-      "title": "Rethinking Chain-of-Thought Reasoning for Videos"
     },
     "DOI:10.1016/j.dcan.2026.03.010": {
       "classification": "unrelated",
@@ -179283,6 +179259,18 @@
       "last_checked_at": "2026-10-20T09:46:35+00:00",
       "linked_from": [],
       "title": "Graph Neural Network Enhanced Retrieval for Question Answering of LLMs"
+    },
+    "arXiv:2412.00081": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2412.00081",
+      "identity_tokens": [
+        "arXiv:2412.00081"
+      ],
+      "reason": "タスク別の重み差分行列を特異値分解し、低ランク圧縮と干渉低減でモデル統合の精度を改善する。評価は主に画像Transformerの複数タスク統合であり、LLMの実行時圧縮、推論カーネル、KV管理やサービングを新規に改善する研究ではない。",
+      "first_checked_at": "2026-10-20T11:55:37+00:00",
+      "last_checked_at": "2026-10-20T11:55:37+00:00",
+      "linked_from": [],
+      "title": "Task Singular Vectors: Reducing Task Interference in Model Merging"
     }
   }
 }
