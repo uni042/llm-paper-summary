@@ -1,0 +1,26 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261020-1630-scheduled-chat-30/r01/research-prescreen/029",
+  "reference_main_sha": "1dce2db0b48420c6adb2a439804d270da65a1cc4",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.27995",
+      "identity_tokens": [
+        "arXiv:2605.27995"
+      ],
+      "title": "AsyncTool: Evaluating the Asynchronous Function Calling Capability under Multi-Task Scenarios",
+      "reason": "題名は複数タスクでの非同期関数呼出し能力の評価であり、エージェントの能力ベンチマークを主題とする。実行基盤の非同期スケジューリングやLLMサービング高速化を提案する題名ではないため対象外。",
+      "source_url": "https://arxiv.org/abs/2605.27995",
+      "body_check": "title_screen_only; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-10-20T16:40:52+09:00",
+      "last_checked_at": "2026-10-20T16:40:52+09:00",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance",
+      "worklist_rank": 29
+    }
+  ]
+}
