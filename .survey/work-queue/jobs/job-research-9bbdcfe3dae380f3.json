@@ -36,10 +36,15 @@
   "selection_reason": "プリエンプティブスケジューリングとGPU/CPU間KV移送を重畳し突発負荷時の配信性能を改善する。",
   "semantic_scholar_id": "8dc356c4a7c17fd02c616d1c1d5935a88a27c2b0",
   "source_url": "https://arxiv.org/abs/2510.02758",
-  "status": "ready",
+  "status": "superseded",
   "title": "TokenFlow: Responsive LLM Text Streaming Serving under Request Burst via Preemptive Scheduling",
   "type": "research",
   "venue": "European Conference on Computer Systems",
   "workflow_version": 10,
-  "year": 2025
+  "year": 2025,
+  "superseded_at": "2026-10-20T17:16:52+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2510.02758-tokenflow-responsive-llm-text-streaming-serving-under-request-burst-via-.md",
+  "represented_canonical_id": "arXiv:2510.02758",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

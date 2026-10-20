@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-20T17:08:44+00:00",
+  "generated_at": "2026-10-20T17:16:52+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 73,
+  "count": 72,
   "entries": [
     {
       "canonical_id": "DOI:10.1145/3714983.3714987",
@@ -288,33 +288,6 @@
       "worker_run_key": "20261017-1730-scheduled-chat-30/r01"
     },
     {
-      "canonical_id": "arXiv:2606.27791",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-17T15:45:49+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 209 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5156,
-        "body_paragraphs": 28,
-        "method_chars": 1467,
-        "method_paragraphs": 9,
-        "evaluation_chars": 209,
-        "limitation_chars": 856,
-        "insufficiency_flags": [
-          "評価説明量 209 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-7756c140a603--libfile_83cb736106b08191b01ee109df11642b--2026-2606.27791-nll-guided-full-attention-layer-selection-research-20261017-1230-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-7756c140a603--libfile_83cb736106b08191b01ee109df11642b--2026-2606.27791-nll-guided-full-attention-layer-selection-research-20261017-1230-schedule.json",
-      "worker_run_key": "20261017-1230-scheduled-chat-30/r01"
-    },
-    {
       "canonical_id": "arXiv:2510.16807",
       "title": null,
       "source_url": null,
@@ -340,34 +313,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-7674b7a14ad0--libfile_bf64d1d864488191b3cf0e73ea18cb34--2025-2510.16807-skipv1former-first-value-skip-kv-research-20261018-0430-scheduled-chat-30-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-7674b7a14ad0--libfile_bf64d1d864488191b3cf0e73ea18cb34--2025-2510.16807-skipv1former-first-value-skip-kv-research-20261018-0430-scheduled-chat-30.json",
       "worker_run_key": "20261018-0430-scheduled-chat-30/r01"
-    },
-    {
-      "canonical_id": "arXiv:2506.04203",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-18T06:09:17+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 7334,
-        "body_paragraphs": 39,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 853,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-705d07f8307b--libfile_896dd18406508191b0ed291f3d556313--2025-2506.04203-cascadia-cascade-serving-joint-optimization-research-20261018-1430-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-705d07f8307b--libfile_896dd18406508191b0ed291f3d556313--2025-2506.04203-cascadia-cascade-serving-joint-optimization-research-20261018-1430-schedu.json",
-      "worker_run_key": "20261018-1430-scheduled-chat-30/r01"
     },
     {
       "canonical_id": "DOI:10.1109/SIEDS69358.2026.11540265",
@@ -453,36 +398,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-269109eb5b65--libfile_4a6c13b485788191a11fd18001724e5d--2022-2203.14380-pyramid-bert-coreset-token-selection-research-20261018-1700-scheduled-chat-00-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-269109eb5b65--libfile_4a6c13b485788191a11fd18001724e5d--2022-2203.14380-pyramid-bert-coreset-token-selection-research-20261018-1700-scheduled-cha.json",
       "worker_run_key": "20261018-1700-scheduled-chat-00/r01"
-    },
-    {
-      "canonical_id": "arXiv:2506.04642",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-18T14:00:14+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700",
-        "説明不足トリガー: 評価説明量 149 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5199,
-        "body_paragraphs": 28,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 149,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700",
-          "評価説明量 149 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-33ef8d229b6f--libfile_b0f5921c12d4819194ba08308f1f0860--2025-2506.04642-tada-adaptive-kv-mean-centering-research-20261018-2155-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-33ef8d229b6f--libfile_b0f5921c12d4819194ba08308f1f0860--2025-2506.04642-tada-adaptive-kv-mean-centering-research-20261018-2155-scheduled-chat-00-.json",
-      "worker_run_key": "20261018-2155-scheduled-chat-00/r01"
     },
     {
       "canonical_id": "arXiv:2609.21264",
@@ -1011,33 +926,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-ffdb69accf09--libfile_329445c90bf4819199ba7e5b73738587--2026-2605.06850-shadow-mask-distillation-kv-rl-posttraining-research-20261020-1655-scheduled-chat-00-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-ffdb69accf09--libfile_329445c90bf4819199ba7e5b73738587--2026-2605.06850-shadow-mask-distillation-kv-rl-posttraining-research-20261020-1655-schedu.json",
       "worker_run_key": "20261020-1655-scheduled-chat-00/r01"
-    },
-    {
-      "canonical_id": "arXiv:2510.02758",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-20T12:07:03+00:00",
-      "return_count": 4,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 438 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5114,
-        "body_paragraphs": 26,
-        "method_chars": 2471,
-        "method_paragraphs": 13,
-        "evaluation_chars": 438,
-        "limitation_chars": 548,
-        "insufficiency_flags": [
-          "評価説明量 438 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-3e767f936755--libfile_9d252b8b0a6881919f494b1b1444084c--2025-2510.02758-tokenflow-preemptive-streaming-returned-repair-20261020-2000-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-3e767f936755--libfile_9d252b8b0a6881919f494b1b1444084c--2025-2510.02758-tokenflow-preemptive-streaming-returned-repair-20261020-2000-scheduled-ch.json",
-      "worker_run_key": "20261020-2000-scheduled-chat-00/r01"
     },
     {
       "canonical_id": "arXiv:2503.06881",
@@ -1964,8 +1852,8 @@
     },
     {
       "canonical_id": "arXiv:2609.20874",
-      "title": "Decomposing Predictive Kubernetes Autoscaling for Large Language Model Serving Under Long Startup Delays",
-      "source_url": "https://arxiv.org/html/2609.20874v1",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-20T17:05:15+00:00",
       "return_count": 3,
       "assigned_worker": "scheduled-chat-00",
@@ -1992,8 +1880,8 @@
     },
     {
       "canonical_id": "arXiv:2609.39816",
-      "title": "Beyond Accuracy: Prefix-Invariant Realizations of Low-Precision Fast Matrix Multiplication",
-      "source_url": "https://arxiv.org/abs/2609.39816",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-20T17:05:16+00:00",
       "return_count": 7,
       "assigned_worker": "scheduled-chat-30",
@@ -2020,8 +1908,8 @@
     },
     {
       "canonical_id": "DOI:10.18653/v1/2025.emnlp-main.1676",
-      "title": "Analyzing and Modeling LLM Response Lengths with Extreme Value Theory: Anchoring Effects and Hybrid Distributions",
-      "source_url": "https://aclanthology.org/2025.emnlp-main.1676.pdf",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-20T17:07:11+00:00",
       "return_count": 1,
       "assigned_worker": "scheduled-chat-30",
@@ -2044,6 +1932,89 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_f0af4687b3508191811f475c4efbb36c--2025-doi-10.18653-v1-2025.emnlp-main.1676-llm-response-length-extreme-value-research-20261020-1400-scheduled-chat-00-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_f0af4687b3508191811f475c4efbb36c--2025-doi-10.18653-v1-2025.emnlp-main.1676-llm-response-length-extreme-value-research-20261020-1400-scheduled-chat-00-r.json",
       "worker_run_key": "20261020-1400-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2604.07144",
+      "title": "AUTOPOIESIS: A Self-Evolving System Paradigm for LLM Serving Under Runtime Dynamics",
+      "source_url": "https://arxiv.org/pdf/2604.07144",
+      "returned_at": "2026-10-20T17:15:47+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 498 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 4424,
+        "body_paragraphs": 24,
+        "method_chars": 1709,
+        "method_paragraphs": 10,
+        "evaluation_chars": 498,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "評価説明量 498 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_f410251ee1788191849b4dc4cf4f835d--2026-2604.07144-autopoiesis-self-evolving-llm-serving-research-20261019-2130-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_f410251ee1788191849b4dc4cf4f835d--2026-2604.07144-autopoiesis-self-evolving-llm-serving-research-20261019-2130-scheduled-chat-30-r01.json",
+      "worker_run_key": "20261019-2130-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2606.27791",
+      "title": "NLL-Guided Full-Attention Layer Selection for Training-Free Sliding-Window Adaptation",
+      "source_url": "https://arxiv.org/pdf/2606.27791",
+      "returned_at": "2026-10-20T17:15:48+00:00",
+      "return_count": 3,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 0 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 4698,
+        "body_paragraphs": 24,
+        "method_chars": 1077,
+        "method_paragraphs": 6,
+        "evaluation_chars": 0,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "評価説明量 0 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_f57d143ca85c8191906aefbecaa27fd0--2026-2606.27791-nll-guided-full-attention-layer-selection-research-20261019-2130-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_f57d143ca85c8191906aefbecaa27fd0--2026-2606.27791-nll-guided-full-attention-layer-selection-research-20261019-2130-scheduled-chat-30-r01.json",
+      "worker_run_key": "20261019-2130-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2506.04642",
+      "title": "TaDA: Training-free recipe for Decoding with Adaptive KV Cache Compression and Mean-centering",
+      "source_url": "https://arxiv.org/pdf/2506.04642",
+      "returned_at": "2026-10-20T17:16:03+00:00",
+      "return_count": 3,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 418 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 4455,
+        "body_paragraphs": 24,
+        "method_chars": 1787,
+        "method_paragraphs": 10,
+        "evaluation_chars": 418,
+        "limitation_chars": 315,
+        "insufficiency_flags": [
+          "評価説明量 418 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_f92e0f4c4cb88191b1a1f57b21c3ae2a--2025-2506.04642-tada-mean-centered-kv-cache-research-20261020-1056-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_f92e0f4c4cb88191b1a1f57b21c3ae2a--2025-2506.04642-tada-mean-centered-kv-cache-research-20261020-1056-scheduled-chat-00-r01.json",
+      "worker_run_key": "20261020-1056-scheduled-chat-00/r01"
     }
   ]
 }

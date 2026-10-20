@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "8bd046decbebb71568f4d26edfb1be438f39657aa24bdde35a554a538ff7d5c5",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_f410251ee1788191849b4dc4cf4f835d--2026-2604.07144-autopoiesis-self-evolving-llm-serving-research-20261019-2130-scheduled-chat-30-r01.md",
+  "canonical_id": "arXiv:2604.07144",
+  "worker_completed_at": "2026-10-19T21:45:40+09:00",
+  "worker_run_key": "20261019-2130-scheduled-chat-30/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 4424,
+    "body_paragraphs": 24,
+    "method_chars": 1709,
+    "method_paragraphs": 10,
+    "evaluation_chars": 498,
+    "limitation_chars": 0,
+    "insufficiency_flags": [
+      "評価説明量 498 < 500",
+      "限界説明量 0 < 推奨 120"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 評価説明量 498 < 500"
+  ],
+  "processed_at": "2026-10-20T17:15:47+00:00"
+}

@@ -36,6 +36,8 @@ identity_tokens:
   - 'arxiv:2609.39816'
 repair_origin: returned_research_queue
 repair_original_failure: '説明不足トリガー: 評価説明量 439 < 500'
+last_audited: null
+audit_version: 0
 ---
 # Beyond Accuracy：低精度高速行列乗算で接頭辞不変性を証明する
 

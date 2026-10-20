@@ -31,6 +31,8 @@ reference_main_sha: 'ad5f2e57d2f95f83457d778b7fbe6c853db9ebc4'
 repair_of_source_sha256: '30018cd46cef0abac3c7403769524beae3a92e51bbdee3128efcb3272f53a40c'
 quality_self_review_passed: true
 quality_self_review_version: 'PAPER-QUALITY-GUIDE-2026-10-07'
+last_audited: null
+audit_version: 0
 ---
 
 # 長い起動遅延を伴うLLM配信の予測型自動増減：要因分解と実機検証
