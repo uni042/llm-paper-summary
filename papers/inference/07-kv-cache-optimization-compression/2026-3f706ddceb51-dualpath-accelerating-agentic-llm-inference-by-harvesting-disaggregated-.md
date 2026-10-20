@@ -2,26 +2,26 @@
 canonical_id: DOI:10.1145/3789240.3829159
 title: 'DualPath: Accelerating Agentic LLM Inference by Harvesting Disaggregated KV-Cache Storage I/O'
 authors:
-  - Yongtong Wu
-  - Shaoyuan Chen
-  - Rilin Huang
-  - Yixuan Tan
-  - Yinmin Zhong
-  - Mingxing Zhang
-  - Xin Jin
-  - Panpan Huang
+- Yongtong Wu
+- Shaoyuan Chen
+- Rilin Huang
+- Yixuan Tan
+- Yinmin Zhong
+- Mingxing Zhang
+- Xin Jin
+- Panpan Huang
 published: 2026-08
 publication: ACM SIGCOMM 2026, pp. 16-29
 publication_type: 査読付き国際会議論文
 publication_status: Published
 source: https://doi.org/10.1145/3789240.3829159
 sources:
-  - https://doi.org/10.1145/3789240.3829159
-  - https://arxiv.org/pdf/2602.21548v2
+- https://doi.org/10.1145/3789240.3829159
+- https://arxiv.org/pdf/2602.21548v2
 arxiv: '2602.21548'
 doi: 10.1145/3789240.3829159
-summary: 'DualPathは、エージェント型LLMの長い会話履歴からKVキャッシュを繰り返し復元する際、入力処理側のストレージNICだけが飽和する問題に対し、復号側NIC経由の第二の読込経路を導入する。計算用RDMA網の優先度分離と、GPU・NIC・読込待ちを考慮する二階層スケジューラを組み合わせる。内部基盤との比較でオフライン処理量は最大1.87倍、オンライン処理量は平均1.96倍に改善した。'
-list_summary: 'エージェント型LLMの長文KVキャッシュ復元を入力処理側だけに集中させず、復号側ストレージNICとRDMA転送を併用し、通信優先度制御・負荷分散で処理量を高める分散推論基盤。'
+summary: DualPathは、エージェント型LLMの長い会話履歴からKVキャッシュを繰り返し復元する際、入力処理側のストレージNICだけが飽和する問題に対し、復号側NIC経由の第二の読込経路を導入する。計算用RDMA網の優先度分離と、GPU・NIC・読込待ちを考慮する二階層スケジューラを組み合わせる。内部基盤との比較でオフライン処理量は最大1.87倍、オンライン処理量は平均1.96倍に改善した。
+list_summary: エージェント型LLMの長文KVキャッシュ復元を入力処理側だけに集中させず、復号側ストレージNICとRDMA転送を併用し、通信優先度制御・負荷分散で処理量を高める分散推論基盤。
 worker_id: scheduled-chat-45
 worker_run_key: 20261019-2045-scheduled-chat-45/r01
 worker_completed_at: '2026-10-19T20:55:00+09:00'
@@ -30,13 +30,54 @@ quality_self_review_passed: true
 quality_self_review_version: '2026-10-07'
 implementation_status: official-code-not-confirmed
 code: null
-implementation: '著者の社内推論基盤上で約5,000行の変更として実装。公式のDualPath公開コードは確認できない。FlashMLA、DeepGEMM、DeepEP、3FSを使用したと論文に記載。'
+implementation: 著者の社内推論基盤上で約5,000行の変更として実装。公式のDualPath公開コードは確認できない。FlashMLA、DeepGEMM、DeepEP、3FSを使用したと論文に記載。
 references:
-  - canonical_id: arXiv:2602.21548
-  - canonical_id: arXiv:2310.18547
-  - canonical_id: arXiv:2401.09670
+- canonical_id: arXiv:2403.02310
+- canonical_id: arXiv:2305.13245
+- canonical_id: arXiv:2601.22705
+  arxiv_id: '2601.22705'
+- canonical_id: arXiv:2307.08691
+- canonical_id: DOI:10.48550/arxiv.2405.04434
+- canonical_id: arXiv:2412.19437
+  arxiv_id: '2412.19437'
+- canonical_id: arXiv:2505.07203
+- canonical_id: arXiv:2403.19708
+- canonical_id: arXiv:2410.05004
+- canonical_id: DOI:10.1145/2934872.2934908
+  doi: 10.1145/2934872.2934908
+- canonical_id: arXiv:2401.08671
+- canonical_id: DOI:10.1145/3725783.3764393
+  doi: 10.1145/3725783.3764393
+- canonical_id: arXiv:2411.17089
+- canonical_id: DOI:10.1145/3600006.3613165
+- canonical_id: arXiv:2401.05459
+  arxiv_id: '2401.05459'
+- canonical_id: arXiv:2512.18337
+  arxiv_id: '2512.18337'
+- canonical_id: arXiv:2510.09665
+- canonical_id: arXiv:2311.18677
+- canonical_id: DOI:10.1109/dsd.2016.41
+  doi: 10.1109/dsd.2016.41
+- canonical_id: arXiv:1911.02150
+- canonical_id: arXiv:2505.09388
+  arxiv_id: '2505.09388'
+- canonical_id: arXiv:2508.17219
+  arxiv_id: '2508.17219'
+- canonical_id: arXiv:2308.08155
+  arxiv_id: '2308.08155'
+- canonical_id: arXiv:2508.18572
+- canonical_id: arXiv:2410.00428
+- canonical_id: arXiv:2505.19586
+- canonical_id: arXiv:2501.01005
+- canonical_id: arXiv:2312.07104
+- canonical_id: arXiv:2401.09670
+- canonical_id: arXiv:2307.13854
+  arxiv_id: '2307.13854'
 last_audited: null
 audit_version: 0
+references_checked_at: '2026-10-20'
+references_source: arxiv-html-reference-section
+references_total: 59
 ---
 
 ## 書誌と版の注意
