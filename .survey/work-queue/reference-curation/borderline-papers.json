@@ -2,7 +2,7 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-20T03:48:28+00:00",
+  "updated_at": "2026-10-20T04:46:49+00:00",
   "record_count": 5276,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
@@ -71672,9 +71672,9 @@
         "DOI:10.48550/arxiv.2410.03051",
         "arXiv:2410.03051"
       ],
-      "reason": "動画詳細説明生成を目的とするマルチモーダルモデルと評価ベンチマークの研究。入力視覚トークンの統合による計算負荷削減を副次的に扱うが、主要貢献は動画キャプション品質と評価指標であり、汎用LLM推論基盤の最適化としての検証は限定的。",
+      "reason": "一次要旨では長い動画入力の視覚トークン数を統合によって削減し、性能低下を小さく抑える実装上の工夫があり、マルチモーダル推論の入力圧縮に関連する。ただし中心的な貢献は詳細動画キャプション生成モデルAuroraCap、VDC評価データセットおよびVDCscore指標の提案で、GPU実測サービング遅延・KV管理・汎用推論基盤の効率化の定量検証は要旨から確認できないため、直接収録を保留する。",
       "first_checked_at": "2026-10-12T18:49:58+00:00",
-      "last_checked_at": "2026-10-19T14:51:15+00:00",
+      "last_checked_at": "2026-10-20T04:46:49+00:00",
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "AuroraCap: Efficient, Performant Video Detailed Captioning and a New Benchmark"

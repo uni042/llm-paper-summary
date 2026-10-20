@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-fe3beda0797ac35f-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2512.08186",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2512.08186",
+    "identity_tokens": [
+      "arXiv:2512.08186"
+    ],
+    "reason": "一次要旨では、画像と言語を使うロボットナビゲーションを対象に、視覚言語モデルが中期目標を選び軽量拡散方策が滑らかな移動軌道を生成するDualVLNを提案する。遅い高水準計画と速い局所制御を分離するが、主な技術的貢献と評価指標は実環境での経路計画・障害物回避・ナビゲーション成功率であり、汎用LLMの推論サービング、GPU資源配置、KVキャッシュやデコード高速化の機構ではないため対象外とする。",
+    "first_checked_at": "2026-10-18T10:00:30+00:00",
+    "last_checked_at": "2026-10-20T04:46:50+00:00",
+    "linked_from": [],
+    "title": "Ground Slow, Move Fast: A Dual-System Foundation Model for Generalizable Vision-and-Language Navigation"
+  },
+  "processed_at": "2026-10-20T04:46:50+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-fe3beda0797a",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

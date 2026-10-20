@@ -2,7 +2,7 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-19T22:43:01+00:00",
+  "updated_at": "2026-10-20T04:46:50+00:00",
   "record_count": 12433,
   "records": {
     "arXiv:2303.08774": {
@@ -163076,9 +163076,9 @@
         "id:arXiv:2204.13767",
         "url:https://arxiv.org/abs/2204.13767"
       ],
-      "reason": "多変量時系列の長期予測を対象に、三角階層構造と変数別注意パラメータで時系列予測の計算量・精度を改善する。LLMの自己回帰復号、KVキャッシュ、推論サービング、LLM用注意カーネルの最適化ではない。",
+      "reason": "一次要旨は多変量時系列予測のため、系列長に線形なパッチ注意と階層を三角状に縮小する構造、変数ごとに異なる軽量パラメータを提案する。注意計算の効率化自体は扱うが、評価と最終適用は時系列予測モデルの予測精度・効率であり、大規模言語モデルの生成推論やサービング基盤に直接適用・検証したものではないため、現行の推論系統対象外とする。",
       "first_checked_at": "2026-10-11T02:48:44+00:00",
-      "last_checked_at": "2026-10-19T14:51:15+00:00",
+      "last_checked_at": "2026-10-20T04:46:47+00:00",
       "linked_from": [],
       "title": "Triformer: Triangular, Variable-Specific Attentions for Long Sequence Multivariate Time Series Forecasting--Full Version"
     },
@@ -179012,9 +179012,9 @@
       "identity_tokens": [
         "arXiv:2512.08186"
       ],
-      "reason": "視覚言語ナビゲーションにおいて大規模視覚言語モデルの中期ウェイポイント推定と軽量拡散Transformerによる局所軌道生成を分離するロボット行動モデル。リアルタイム動作を目標とするが、主評価はナビゲーション・軌道品質であり、LLM汎用推論サービングの最適化ではない。",
+      "reason": "一次要旨では、画像と言語を使うロボットナビゲーションを対象に、視覚言語モデルが中期目標を選び軽量拡散方策が滑らかな移動軌道を生成するDualVLNを提案する。遅い高水準計画と速い局所制御を分離するが、主な技術的貢献と評価指標は実環境での経路計画・障害物回避・ナビゲーション成功率であり、汎用LLMの推論サービング、GPU資源配置、KVキャッシュやデコード高速化の機構ではないため対象外とする。",
       "first_checked_at": "2026-10-18T10:00:30+00:00",
-      "last_checked_at": "2026-10-19T13:57:37+00:00",
+      "last_checked_at": "2026-10-20T04:46:50+00:00",
       "linked_from": [],
       "title": "Ground Slow, Move Fast: A Dual-System Foundation Model for Generalizable Vision-and-Language Navigation"
     },
