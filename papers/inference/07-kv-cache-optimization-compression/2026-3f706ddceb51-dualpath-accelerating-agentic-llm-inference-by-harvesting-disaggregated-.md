@@ -35,6 +35,8 @@ references:
   - canonical_id: arXiv:2602.21548
   - canonical_id: arXiv:2310.18547
   - canonical_id: arXiv:2401.09670
+last_audited: null
+audit_version: 0
 ---
 
 ## 書誌と版の注意

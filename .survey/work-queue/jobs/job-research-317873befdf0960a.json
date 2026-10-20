@@ -33,10 +33,15 @@
   "selection_reason": "目標speedup比からskip layer数を決め、中間層を均等に飛ばして安定した実推論高速化を行うconditional-computation方式。batch decodingとKV cacheにも互換。",
   "semantic_scholar_id": "187ec6459d105f430a263284a1bab32cf75be59d",
   "source_url": "https://arxiv.org/abs/2404.06954",
-  "status": "ready",
+  "status": "superseded",
   "title": "Accelerating Inference in Large Language Models with a Unified Layer Skipping Strategy",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2024
+  "year": 2024,
+  "superseded_at": "2026-10-20T15:13:08+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2024-2404.06954-accelerating-inference-in-large-language-models-with-a-unified-layer-ski.md",
+  "represented_canonical_id": "arXiv:2404.06954",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

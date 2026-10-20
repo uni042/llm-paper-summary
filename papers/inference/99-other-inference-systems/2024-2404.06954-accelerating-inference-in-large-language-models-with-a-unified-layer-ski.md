@@ -29,6 +29,8 @@ quality_self_review_passed: true
 quality_self_review_version: PAPER-QUALITY-GUIDE-2026-10-07
 identity_tokens:
   - 'arxiv:2404.06954'
+last_audited: null
+audit_version: 0
 ---
 # Unified Layer Skipping：全入力で同じ中間層を間引く推論高速化
 

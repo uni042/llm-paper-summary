@@ -34,6 +34,8 @@ reference_main_sha: '4482c7d8d72d663018a468324156bc9d9939b423'
 quality_self_review_passed: true
 quality_self_review_version: PAPER-QUALITY-GUIDE-2026-10-07
 quality_self_review_notes: '査読誌DOIの著者・掲載誌・日付を大学機関一次ページで確認。方法と実測の詳細は著者のUSENIX ATC 2025公開全文の§2～8、表1/4、図6～14、Algorithm 1で確認。誌面と会議版で著者・題名が異なるため両者の出典を明示し、会議版の数値を誌面で再測定したと誤認させない。'
+last_audited: null
+audit_version: 0
 ---
 # Torpor：モデル交換と遅延結合によるGPUサーバーレス推論
 

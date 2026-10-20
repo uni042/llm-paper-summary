@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-20T15:03:26+00:00",
+  "generated_at": "2026-10-20T15:13:08+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 73,
+  "count": 70,
   "entries": [
     {
       "canonical_id": "DOI:10.1145/3714983.3714987",
@@ -29,22 +29,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_4717524bf0588191b03cde2c82b80c28--2025-awq-on-device.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_4717524bf0588191b03cde2c82b80c28--2025-awq-on-device.json",
       "worker_run_key": "20261003-0531-scheduled-chat-30"
-    },
-    {
-      "canonical_id": "arXiv:2607.01444",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-04T03:09:42+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "日本語比率 48.4% < 70%"
-      ],
-      "quality_metrics": null,
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_a7197634562481919df48707cbdfd64f--2026-2607.01444-pruned-moe-biomedical.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_a7197634562481919df48707cbdfd64f--2026-2607.01444-pruned-moe-biomedical.json",
-      "worker_run_key": "20261004-0400-scheduled-chat-00/r01"
     },
     {
       "canonical_id": "DOI:10.1109/ISCA59077.2024.00082",
@@ -975,31 +959,6 @@
       "worker_run_key": "20261019-0845-scheduled-chat-45/r01"
     },
     {
-      "canonical_id": "DOI:10.1145/3800690",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-19T15:19:03+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "quality_self_review_version が空"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 6924,
-        "body_paragraphs": 36,
-        "method_chars": 1991,
-        "method_paragraphs": 10,
-        "evaluation_chars": 1803,
-        "limitation_chars": 787,
-        "insufficiency_flags": []
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-342cd8cc615d--libfile_8f7cafaa55588191b59c7d24bb0af61f--2026-doi-10.1145-3800690-torpor-serverless-model-swapping-research-20261019-0945-scheduled-chat-45-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-342cd8cc615d--libfile_8f7cafaa55588191b59c7d24bb0af61f--2026-doi-10.1145-3800690-torpor-serverless-model-swapping-research-20261019-0945-schedule.json",
-      "worker_run_key": "20261019-0945-scheduled-chat-45/r01"
-    },
-    {
       "canonical_id": "arXiv:2607.27269",
       "title": null,
       "source_url": null,
@@ -1413,34 +1372,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-08e25ccdad2a--libfile_e3b8ca09cae881919b1574b114567756--2025-2510.26527-polybasic-speculative-decoding-returned-repair-20261020-1130-scheduled-chat-30-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-08e25ccdad2a--libfile_e3b8ca09cae881919b1574b114567756--2025-2510.26527-polybasic-speculative-decoding-returned-repair-20261020-1130-scheduled-ch.json",
       "worker_run_key": "20261020-1130-scheduled-chat-30/r01"
-    },
-    {
-      "canonical_id": "arXiv:2607.18171",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-20T04:56:23+00:00",
-      "return_count": 6,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 0 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 4317,
-        "body_paragraphs": 21,
-        "method_chars": 1239,
-        "method_paragraphs": 6,
-        "evaluation_chars": 0,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "評価説明量 0 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-5a0f134dbfe7--libfile_69b21658dc388191a38ae640e363e797--exactbytes-1345--2026-2607.18171-flashrt-multimodal-serving-agent-returned-repair-20261020-1330-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-5a0f134dbfe7--libfile_69b21658dc388191a38ae640e363e797--exactbytes-1345--2026-2607.18171-flashrt-multimodal-serving-agent-returned-repair-2026102.json",
-      "worker_run_key": "20261020-1330-scheduled-chat-30/r01"
     },
     {
       "canonical_id": "arXiv:2610.12060",
@@ -2003,8 +1934,8 @@
     },
     {
       "canonical_id": "arXiv:2407.05690",
-      "title": "Pruning Large Language Models to Intra-module Low-rank Architecture with Transitional Activations",
-      "source_url": "https://arxiv.org/abs/2407.05690",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-20T15:01:54+00:00",
       "return_count": 1,
       "assigned_worker": "scheduled-chat-45",
