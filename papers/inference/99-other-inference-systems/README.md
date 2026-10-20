@@ -1907,7 +1907,7 @@
 ### 2年前（2024-11〜2025-10）
 
 - **2025-01 · [FlashInfer: Efficient and Customizable Attention Engine for LLM Inference Serving](2025-2501.01005-flashinfer-attention-engine-serving.md)**  
-  実装：[✓](https://github.com/flashinfer-ai/flashinfer) ・ リポジトリ内被引用：127  
+  実装：[✓](https://github.com/flashinfer-ai/flashinfer) ・ リポジトリ内被引用：126  
   多様なKV配置と注意派生形をブロック疎形式と実行時コンパイルで統一し、可変系列長を固定CTAへ動的に負荷均衡しながらCUDAグラフ互換性も保つ、LLMサービング向け高性能注意エンジン。
 
 - **2025-04 · [SpinQuant: LLM quantization with learned rotations](2025-2405.16406-spinquant-llm-quantization-with-learned-rotations.md)**  
@@ -2444,10 +2444,6 @@
   実装：[✓](https://github.com/42Shawn/LLaVA-PruMerge) ・ リポジトリ内被引用：47  
   LLaVA-PruMergeは、画像を大規模言語モデルへ渡す際の視覚トークン数を削減する方式である。LLaVA-1.5は336×336画素の画像から24×24個、すなわち576個の視覚トークンを生成する。
 
-- **2024-04 · [RAGCache: Efficient Knowledge Caching for Retrieval-Augmented Generation](2024-2404.12457-ragcache-efficient-knowledge-caching-for-retrieval-augmented-generation.md)**  
-  実装：✓ ・ リポジトリ内被引用：45  
-  RAGCacheは、検索拡張生成（Retrieval-Augmented Generation; RAG）で同じ知識文書が何度も検索されることに着目し、その文書を言語モデルが処理したときの鍵・値キャッシュ（KVキャッシュ）を複数要求で再利用する推論提供システムである。
-
 - **2024-04 · [Mixture-of-Depths: Dynamically allocating compute in transformer-based language models](2024-2404.02258-mixture-of-depths-dynamically-allocating-compute-in-transformer-based-la.md)**  
   実装：✓ ・ リポジトリ内被引用：45  
   そのため、簡単な予測位置も難しい予測位置も同じ計算を受ける。方式の要点は、処理するトークンの「個数」kを事前に固定し、「どのトークンか」だけを学習済みルータが動的に選ぶ点にある。論文の代表構成では系列長2048に対し、一つおきの層で上位256トークン、すなわち12.5%だけを自己注意とMLPへ通す。
@@ -2455,6 +2451,10 @@
 - **2024-02 · [InfLLM: Training-Free Long-Context Extrapolation for LLMs with an Efficient Context Memory](2024-2402.04617-infllm-training-free-long-context-extrapolation-for-llms-with-an-efficie.md)**  
   実装：[✓](https://github.com/thunlp/InfLLM) ・ リポジトリ内被引用：45  
   InfLLMは、短い文脈長で事前学習された大規模言語モデル（LLM）を、重みの追加学習なしに非常に長い入力へ適用する方式である。
+
+- **2024-04 · [RAGCache: Efficient Knowledge Caching for Retrieval-Augmented Generation](2024-2404.12457-ragcache-efficient-knowledge-caching-for-retrieval-augmented-generation.md)**  
+  実装：✓ ・ リポジトリ内被引用：44  
+  RAGCacheは、検索拡張生成（Retrieval-Augmented Generation; RAG）で同じ知識文書が何度も検索されることに着目し、その文書を言語モデルが処理したときの鍵・値キャッシュ（KVキャッシュ）を複数要求で再利用する推論提供システムである。
 
 - **2024-10 · [SparseVLM: Visual Token Sparsification for Efficient Vision-Language Model Inference](2024-2410.04417-sparsevlm-visual-token-sparsification-for-efficient-vision-language-mode.md)**  
   実装：[✓](https://github.com/Gumpest/SparseVLMs) ・ リポジトリ内被引用：43  
@@ -3415,7 +3415,7 @@
 ### 8年前（2018-11〜2019-10）
 
 - **2019-09 · [Megatron-LM: Training Multi-Billion Parameter Language Models Using Model Parallelism](2019-1909.08053-megatron-lm-training-multi-billion-parameter-language-models-using-model.md)**  
-  実装：[✓](https://github.com/NVIDIA/Megatron-LM) ・ リポジトリ内被引用：249  
+  実装：[✓](https://github.com/NVIDIA/Megatron-LM) ・ リポジトリ内被引用：248  
   この論文の対象は、巨大な言語モデルの学習時に、モデル重み・勾配・最適化器状態が単一GPUのメモリに収まらない問題である。従来のモデル全体を別の言語や専用コンパイラで書き直す方法とは異なり、PyTorchの既存Transformer実装へ少数の集約通信を挿入する設計である。
 
 - **2019-04 · [Generating Long Sequences with Sparse Transformers](2019-1904.10509-generating-long-sequences-with-sparse-transformers.md)**  
