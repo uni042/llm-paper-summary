@@ -1,7 +1,7 @@
 # Scheduled worker :30 worklist
 
 Worker: `scheduled-chat-30`  
-Generated: `2026-10-20T09:08:54+00:00`
+Generated: `2026-10-20T09:25:23+00:00`
 
 このページはこのworker専用の再構築可能な選択索引です。他のScheduled worker用ページとは候補を重複させません（十分な在庫がある場合）。
 正本は `.survey/work-queue/jobs/`、claim、論文実体、relevance ledgerです。処理直前に最新正本を再確認してください。
@@ -86,7 +86,7 @@ ready総数: **1429** / 未claim総数: **1429** / このworker向け: **200**
 | 67 | 101 | research | arXiv:2512.06747 | PrivLLMSwarm: Privacy-Preserving LLM-Driven UAV Swarms for Secure IoT Surveillance | [primary](https://arxiv.org/abs/2512.06747) | `papers/inference/99-other-inference-systems/2025-2512.06747-privllmswarm-privacy-preserving-llm-driven-uav-swarms-for-secure-iot-surveillance.md` |
 | 68 | 101 | research | arXiv:2511.06247 | Optimizing Long-context LLM Serving via Fine-grained Sequence Parallelism | [primary](https://arxiv.org/abs/2511.06247) | `papers/inference/99-other-inference-systems/2025-2511.06247-optimizing-long-context-llm-serving-via-fine-grained-sequence-parallelism.md` |
 | 69 | 92 | research | arXiv:2402.05964 | A Survey on Transformer Compression | [primary](https://arxiv.org/abs/2402.05964) | `papers/inference/99-other-inference-systems/2024-2402.05964-a-survey-on-transformer-compression.md` |
-| 70 | 75 | research | DOI:10.1145/3600006.3613157 | Mira: A Program-Behavior-Guided Far Memory System | [primary](https://doi.org/10.1145/3600006.3613157) | `papers/inference/99-other-inference-systems/2026-3a6cb9499537-mira-a-program-behavior-guided-far-memory-system.md` |
+| 70 | 76 | research | DOI:10.1145/3600006.3613157 | Mira: A Program-Behavior-Guided Far Memory System | [primary](https://doi.org/10.1145/3600006.3613157) | `papers/inference/99-other-inference-systems/2026-3a6cb9499537-mira-a-program-behavior-guided-far-memory-system.md` |
 | 71 | 71 | research | arXiv:2201.12023 | Alpa: Automating Inter- and Intra-Operator Parallelism for Distributed Deep Learning | [primary](https://doi.org/10.48550/arxiv.2201.12023) | `papers/inference/99-other-inference-systems/2022-2201.12023-alpa-automating-inter-and-intra-operator-parallelism-for-distributed-deep-learning.md` |
 | 72 | 63 | research | arXiv:2208.07120 | Compressing Pre-trained Models of Code into 3 MB | [primary](https://arxiv.org/abs/2208.07120) | `papers/inference/99-other-inference-systems/2022-2208.07120-compressing-pre-trained-models-of-code-into-3-mb.md` |
 | 73 | 60 | research | DOI:10.1145/3725273 | Cache-Craft: Managing Chunk-Caches for Efficient Retrieval-Augmented Generation | [primary](https://arxiv.org/abs/2502.15734) | `papers/inference/99-other-inference-systems/0000-f3a794c4a5ee-cache-craft-managing-chunk-caches-for-efficient-retrieval-augmented-generation.md` |
