@@ -35,10 +35,15 @@
   "selection_reason": "拡散型マルチモーダルLLM（diffusion MLLM）の復号で時間的不安定tokenと視覚的groundingの弱いtokenをtraining-freeにvetoし、追加generation costなしで精度を最大9%改善する。拡散LLM推論の復号方式として対象内。",
   "semantic_scholar_id": "2b713bcbb0837a5c35baf1660d30a6ae27aa65d1",
   "source_url": "https://arxiv.org/abs/2607.17884",
-  "status": "ready",
+  "status": "superseded",
   "title": "ST-Veto: Spatio-Temporal Token Veto for Diffusion MLLMs via Taylor Prediction and Visual Grounding",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-10-20T07:59:17+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2026-2607.17884-st-veto-spatio-temporal-token-veto-for-diffusion-mllms-via-taylor-predic.md",
+  "represented_canonical_id": "arXiv:2607.17884",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
