@@ -35,7 +35,7 @@ CPUやSSDへモデルを退避することが中心の研究は `01-training-off
   一方、大規模な分散学習では、専門家の重みを保持するためのGPUメモリ、トークンを担当専門家へ運ぶ全対全通信、注意機構のテンソル・文脈並列化が競合する。
 
 - **2025-04 · [HeterMoE: Efficient Training of Mixture-of-Experts Models on Heterogeneous GPUs](2025-2504.03871-hetermoe-efficient-training-of-mixture-of-experts-models-on-heterogeneous-gpus.md)**  
-  実装：✓ ・ リポジトリ内被引用：3  
+  実装：✓ ・ リポジトリ内被引用：4  
   異なる世代のGPUを「一律に遅い／速い装置」とみなさず、注意計算と専門家計算の世代差を別々に測って配置するMoE学習システム。以下の速度値は学習処理率であり、生成時のトークン速度や推論待ち時間ではない。
 
 - **2025-04 · [SYMI: Efficient Mixture-of-Experts Training via Model and Optimizer State Decoupling](2025-2504.19925-symi-efficient-mixture-of-experts-training-via-model-and-optimizer-state-decoupl.md)**  
@@ -55,7 +55,7 @@ CPUやSSDへモデルを退避することが中心の研究は `01-training-off
 ### 4年前（2022-11〜2023-10）
 
 - **2023-04 · [FlexMoE: Scaling Large-scale Sparse Pre-trained Model Training via Dynamic Device Placement](2023-2304.03946-flexmoe-scaling-large-scale-sparse-pre-trained-model-training-via-dynamic-device.md)**  
-  実装：✓ ・ リポジトリ内被引用：21  
+  実装：✓ ・ リポジトリ内被引用：22  
   この疎な計算は理論上、パラメータを増やしても一トークン当たりの演算量を抑えられるが、複数のGPUに専門家を分散した学習ではトークンの偏りが大きな問題になる。FlexMoEはモデル側のトークン選択を変えず、同じ専門家の複製を複数GPUに配置し、実際の負荷に合わせて複製数と配置を調整する。
 
 ### 6年前（2020-11〜2021-10）
@@ -67,6 +67,6 @@ CPUやSSDへモデルを退避することが中心の研究は `01-training-off
 ### 7年前（2019-11〜2020-10）
 
 - **2020-06 · [GShard: Scaling Giant Models with Conditional Computation and Automatic Sharding](2020-2006.16668-gshard.md)**  
-  実装：✓ ・ リポジトリ内被引用：246  
+  実装：✓ ・ リポジトリ内被引用：247  
   疎な混合専門家モデルと自動SPMD分割を組み合わせ、少数の分割注釈だけで6000億パラメータ級Transformerを2048 TPUへ拡張し、4日で学習可能にした基礎システム。
 <!-- survey:auto:end -->
