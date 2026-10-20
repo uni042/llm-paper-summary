@@ -6,6 +6,8 @@ on:
     branches: [main]
     paths:
       - '.survey/import-inbox/pending/research/**'
+      # Reconcile returned Research queue when its importer logic changes.
+      - '.survey/scripts/process_library_import_inbox.py'
       - '.github/workflows/library-import.yml'
   workflow_dispatch:
     inputs:
