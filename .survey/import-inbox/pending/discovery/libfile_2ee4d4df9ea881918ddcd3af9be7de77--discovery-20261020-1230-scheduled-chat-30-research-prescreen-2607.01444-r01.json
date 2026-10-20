@@ -1,0 +1,23 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261020-1230-scheduled-chat-30/r01/research-prescreen/2607.01444",
+  "reference_main_sha": "05f47bc034aee3d719fdbb52cd4d5370b4b4df46",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2607.01444",
+      "identity_tokens": ["arxiv:2607.01444"],
+      "title": "On the Utility and Factual Reliability of Pruned Mixture-of-Experts Models in the Biomedical Domain",
+      "reason": "一次要旨は、既存の混合専門家（MoE）モデル4種類について既存の専門家枝刈り法6種類と複数の削減率を、生物医学分野内外の生成・分類タスクで比較し、軽度枝刈りでは分野内性能を保てても高削減率で幻覚が増え、一般分野へ移ると性能と事実信頼性が急落すると報告する。推論時のモデル容量削減という関係はあるが、新しい枝刈りアルゴリズム、推論カーネル、配置、オフロード、実測サービング機構の提案を一次要旨から確認できない。性能・信頼性の応用領域評価が中心なので、推論システム技術の直接貢献としてacceptせずborderlineとする。",
+      "source_url": "https://arxiv.org/abs/2607.01444",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-20T12:29:00+09:00",
+      "last_checked_at": "2026-10-20T12:29:00+09:00",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance"
+    }
+  ]
+}
