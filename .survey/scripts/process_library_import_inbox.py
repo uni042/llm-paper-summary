@@ -610,7 +610,7 @@ def _proven_existing_duplicate(repo_root: Path, canonical_id: str, failures: lis
         if not isinstance(failure, str) or "(100.0%) が完全一致" not in failure:
             continue
         match = re.search(
-            r"^長文定型文の再利用を検出:\\s+(papers/(?:inference|training|survey)/[^\\s]+\\.md)\\s+と\\s+\\d+\\s+段落\\s*/\\s*\\d+\\s*文字\\s+\\(100\\.0%\\)\\s+が完全一致",
+            r"^長文定型文の再利用を検出:\s+(papers/(?:inference|training|survey)/[^\s]+\.md)\s+と\s+\d+\s+段落\s*/\s*\d+\s*文字\s+\(100\.0%\)\s+が完全一致",
             failure,
         )
         if not match:
