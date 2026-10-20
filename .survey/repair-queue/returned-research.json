@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-20T17:38:29+00:00",
+  "generated_at": "2026-10-20T17:45:11+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -1095,33 +1095,6 @@
       "worker_run_key": "20261020-1530-scheduled-chat-30/r01"
     },
     {
-      "canonical_id": "DOI:10.1109/TC.2025.3628193",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-20T14:08:56+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "quality_self_review_passed が true ではない"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 8268,
-        "body_paragraphs": 46,
-        "method_chars": 2629,
-        "method_paragraphs": 14,
-        "evaluation_chars": 2288,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_3049860e0520819188d4a8d6c6dd22a8--2026-doi-10.1109-tc.2025.3628193-bitmod-bitserial-mixture-datatype-quantization-research-20261020-1730-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_3049860e0520819188d4a8d6c6dd22a8--2026-doi-10.1109-tc.2025.3628193-bitmod-bitserial-mixture-datatype-quantization-research-20261020-1730-scheduled-chat-.json",
-      "worker_run_key": "20261020-1730-scheduled-chat-30/r01"
-    },
-    {
       "canonical_id": "arXiv:2412.12706",
       "title": null,
       "source_url": null,
@@ -1235,31 +1208,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_7ad6fcf8cc1881918702b3708d962c85--2026-2605.28051-diffprune-fully-differentiable-visual-token-pruning-research-20261020-0445-scheduled-chat-45-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_7ad6fcf8cc1881918702b3708d962c85--2026-2605.28051-diffprune-fully-differentiable-visual-token-pruning-research-20261020-0445-scheduled-chat-45-r01.json",
       "worker_run_key": "20261020-0445-scheduled-chat-45/r01"
-    },
-    {
-      "canonical_id": "arXiv:2605.27965",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-20T15:35:17+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "quality_self_review_version が空"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 6971,
-        "body_paragraphs": 38,
-        "method_chars": 1696,
-        "method_paragraphs": 9,
-        "evaluation_chars": 2138,
-        "limitation_chars": 821,
-        "insufficiency_flags": []
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_8d524f2265348191ba556e69ea0fc138--2026-2605.27965-shape-of-overthinking-backtracking-bursts-research-20261020-0345-scheduled-chat-45-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_8d524f2265348191ba556e69ea0fc138--2026-2605.27965-shape-of-overthinking-backtracking-bursts-research-20261020-0345-scheduled-chat-45-r01.json",
-      "worker_run_key": "20261020-0345-scheduled-chat-45/r01"
     },
     {
       "canonical_id": "arXiv:2603.11220",
@@ -1396,34 +1344,6 @@
       "worker_run_key": "20261020-1945-scheduled-chat-45/r01"
     },
     {
-      "canonical_id": "DOI:10.1109/ISCA59077.2024.00082",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-20T16:46:09+00:00",
-      "return_count": 4,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 355 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 7075,
-        "body_paragraphs": 39,
-        "method_chars": 2583,
-        "method_paragraphs": 14,
-        "evaluation_chars": 355,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "評価説明量 355 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_cd78884b8a848191a02b2894417812b8--2024-2312.03134-llmcompass-returned-quality-repair-20261020-1430-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_cd78884b8a848191a02b2894417812b8--2024-2312.03134-llmcompass-returned-quality-repair-20261020-1430-scheduled-chat-30-r01.json",
-      "worker_run_key": "20261020-1430-scheduled-chat-30/r01"
-    },
-    {
       "canonical_id": "arXiv:2608.01985",
       "title": null,
       "source_url": null,
@@ -1450,36 +1370,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_cdbbfbebf8888191bf8974e0a93ca98d--2026-2608.01985-diffprune-information-throttling-visual-tokens-research-20261020-1555-scheduled-chat-00-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_cdbbfbebf8888191bf8974e0a93ca98d--2026-2608.01985-diffprune-information-throttling-visual-tokens-research-20261020-1555-scheduled-chat-00-r01.json",
       "worker_run_key": "20261020-1555-scheduled-chat-00/r01"
-    },
-    {
-      "canonical_id": "arXiv:2402.09360",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-20T16:54:28+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700",
-        "説明不足トリガー: 評価説明量 154 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 4370,
-        "body_paragraphs": 24,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 154,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700",
-          "評価説明量 154 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_d4c36ba87ef0819195dddf5b6acc5d93--2024-2402.09360-hire-sparse-topk-research-20261020-2230-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_d4c36ba87ef0819195dddf5b6acc5d93--2024-2402.09360-hire-sparse-topk-research-20261020-2230-scheduled-chat-30-r01.json",
-      "worker_run_key": "20261020-2230-scheduled-chat-30/r01"
     },
     {
       "canonical_id": "arXiv:2405.07542",
@@ -1562,34 +1452,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_f0af4687b3508191811f475c4efbb36c--2025-doi-10.18653-v1-2025.emnlp-main.1676-llm-response-length-extreme-value-research-20261020-1400-scheduled-chat-00-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_f0af4687b3508191811f475c4efbb36c--2025-doi-10.18653-v1-2025.emnlp-main.1676-llm-response-length-extreme-value-research-20261020-1400-scheduled-chat-00-r.json",
       "worker_run_key": "20261020-1400-scheduled-chat-00/r01"
-    },
-    {
-      "canonical_id": "arXiv:2606.27791",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-20T17:15:48+00:00",
-      "return_count": 3,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 0 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 4698,
-        "body_paragraphs": 24,
-        "method_chars": 1077,
-        "method_paragraphs": 6,
-        "evaluation_chars": 0,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "評価説明量 0 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_f57d143ca85c8191906aefbecaa27fd0--2026-2606.27791-nll-guided-full-attention-layer-selection-research-20261019-2130-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_f57d143ca85c8191906aefbecaa27fd0--2026-2606.27791-nll-guided-full-attention-layer-selection-research-20261019-2130-scheduled-chat-30-r01.json",
-      "worker_run_key": "20261019-2130-scheduled-chat-30/r01"
     },
     {
       "canonical_id": "arXiv:2506.04642",
@@ -1849,8 +1711,8 @@
     },
     {
       "canonical_id": "arXiv:2609.39816",
-      "title": "Beyond Accuracy: Prefix-Invariant Realizations of Low-Precision Fast Matrix Multiplication",
-      "source_url": "https://arxiv.org/abs/2609.39816",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-20T17:38:25+00:00",
       "return_count": 8,
       "assigned_worker": "scheduled-chat-30",
@@ -1877,8 +1739,8 @@
     },
     {
       "canonical_id": "arXiv:2407.12021",
-      "title": "Adaptive Draft-Verification for Efficient Large Language Model Decoding",
-      "source_url": "https://ojs.aaai.org/index.php/AAAI/article/view/34647/36802",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-20T17:38:26+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-30",
@@ -1905,8 +1767,8 @@
     },
     {
       "canonical_id": "arXiv:2311.08623",
-      "title": "DEED: Dynamic Early Exit on Decoder for Accelerating Encoder-Decoder Transformer Models",
-      "source_url": "https://aclanthology.org/2024.findings-naacl.9.pdf",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-20T17:38:27+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-00",
@@ -1933,8 +1795,8 @@
     },
     {
       "canonical_id": "arXiv:2610.12060",
-      "title": "Look Back, Think Ahead: Visual Memory on Demand for Efficient Multimodal Reasoning",
-      "source_url": "https://arxiv.org/abs/2610.12060",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-20T17:38:28+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-45",
@@ -1962,8 +1824,8 @@
     },
     {
       "canonical_id": "arXiv:2604.07144",
-      "title": "AUTOPOIESIS: A Self-Evolving System Paradigm for LLM Serving Under Runtime Dynamics",
-      "source_url": "https://arxiv.org/pdf/2604.07144",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-20T17:38:29+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-30",
@@ -1987,6 +1849,144 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-587e59534fcb--libfile_f410251ee1788191849b4dc4cf4f835d--2026-2604.07144-autopoiesis-self-evolving-llm-serving-research-20261019-2130-scheduled-chat-30-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-587e59534fcb--libfile_f410251ee1788191849b4dc4cf4f835d--2026-2604.07144-autopoiesis-self-evolving-llm-serving-research-20261019-2130-scheduled-ch.json",
       "worker_run_key": "20261019-2130-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2605.27965",
+      "title": "The Shape of Overthinking: Backtracking Bursts in Long Reasoning Traces",
+      "source_url": "https://arxiv.org/html/2605.27965v1",
+      "returned_at": "2026-10-20T17:45:04+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "quality_self_review_version が空"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 6971,
+        "body_paragraphs": 38,
+        "method_chars": 1696,
+        "method_paragraphs": 9,
+        "evaluation_chars": 2138,
+        "limitation_chars": 821,
+        "insufficiency_flags": []
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-5f1a247dfb29--libfile_8d524f2265348191ba556e69ea0fc138--2026-2605.27965-shape-of-overthinking-backtracking-bursts-research-20261020-0345-scheduled-chat-45-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-5f1a247dfb29--libfile_8d524f2265348191ba556e69ea0fc138--2026-2605.27965-shape-of-overthinking-backtracking-bursts-research-20261020-0345-schedule.json",
+      "worker_run_key": "20261020-0345-scheduled-chat-45/r01"
+    },
+    {
+      "canonical_id": "DOI:10.1109/ISCA59077.2024.00082",
+      "title": "LLMCompass: Enabling Efficient Hardware Design for Large Language Model Inference",
+      "source_url": "https://arxiv.org/html/2312.03134",
+      "returned_at": "2026-10-20T17:45:06+00:00",
+      "return_count": 5,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 355 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 7075,
+        "body_paragraphs": 39,
+        "method_chars": 2583,
+        "method_paragraphs": 14,
+        "evaluation_chars": 355,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "評価説明量 355 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-62b6dfd1ba4b--libfile_cd78884b8a848191a02b2894417812b8--2024-2312.03134-llmcompass-returned-quality-repair-20261020-1430-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-62b6dfd1ba4b--libfile_cd78884b8a848191a02b2894417812b8--2024-2312.03134-llmcompass-returned-quality-repair-20261020-1430-scheduled-chat-30-r01.json",
+      "worker_run_key": "20261020-1430-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "DOI:10.1109/TC.2025.3628193",
+      "title": "Bit-serial Acceleration of LLM Inference with Mixture-of-Datatype Quantization",
+      "source_url": "https://spiral.imperial.ac.uk/bitstreams/9e16fb03-ceaf-4258-ab61-8948949c2eca/download",
+      "returned_at": "2026-10-20T17:45:07+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "quality_self_review_passed が true ではない"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 8268,
+        "body_paragraphs": 46,
+        "method_chars": 2629,
+        "method_paragraphs": 14,
+        "evaluation_chars": 2288,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-81e13b1f31d7--libfile_3049860e0520819188d4a8d6c6dd22a8--2026-doi-10.1109-tc.2025.3628193-bitmod-bitserial-mixture-datatype-quantization-research-20261020-1730-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-81e13b1f31d7--libfile_3049860e0520819188d4a8d6c6dd22a8--2026-doi-10.1109-tc.2025.3628193-bitmod-bitserial-mixture-datatype-quantization-research-.json",
+      "worker_run_key": "20261020-1730-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2606.27791",
+      "title": "NLL-Guided Full-Attention Layer Selection for Training-Free Sliding-Window Adaptation",
+      "source_url": "https://arxiv.org/pdf/2606.27791",
+      "returned_at": "2026-10-20T17:45:09+00:00",
+      "return_count": 4,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 0 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 4698,
+        "body_paragraphs": 24,
+        "method_chars": 1077,
+        "method_paragraphs": 6,
+        "evaluation_chars": 0,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "評価説明量 0 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-8553bd83bc27--libfile_f57d143ca85c8191906aefbecaa27fd0--2026-2606.27791-nll-guided-full-attention-layer-selection-research-20261019-2130-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-8553bd83bc27--libfile_f57d143ca85c8191906aefbecaa27fd0--2026-2606.27791-nll-guided-full-attention-layer-selection-research-20261019-2130-schedule.json",
+      "worker_run_key": "20261019-2130-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2402.09360",
+      "title": "HiRE: High Recall Approximate Top-k Estimation for Efficient LLM Inference",
+      "source_url": "https://arxiv.org/pdf/2402.09360",
+      "returned_at": "2026-10-20T17:45:10+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700",
+        "説明不足トリガー: 評価説明量 154 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 4370,
+        "body_paragraphs": 24,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 154,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700",
+          "評価説明量 154 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-8c83a39190b3--libfile_d4c36ba87ef0819195dddf5b6acc5d93--2024-2402.09360-hire-sparse-topk-research-20261020-2230-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-8c83a39190b3--libfile_d4c36ba87ef0819195dddf5b6acc5d93--2024-2402.09360-hire-sparse-topk-research-20261020-2230-scheduled-chat-30-r01.json",
+      "worker_run_key": "20261020-2230-scheduled-chat-30/r01"
     }
   ]
 }
