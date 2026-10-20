@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "be31fc2c4455e5a64aa974c50b1a0118f90d1605ab8026d0943ac3e20481ab28",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/retry-research-42b04422b520--libfile_b1db7f5ee3348191a468e4a054184f33--2025-2407.12021-adaptix-adaptive-draft-verification-research-20261020-1400-scheduled-chat-00-r01.md",
+  "canonical_id": "arXiv:2407.12021",
+  "worker_completed_at": "2026-10-20T14:05:51+09:00",
+  "worker_run_key": "20261020-1400-scheduled-chat-00/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 4747,
+    "body_paragraphs": 22,
+    "method_chars": 1771,
+    "method_paragraphs": 8,
+    "evaluation_chars": 238,
+    "limitation_chars": 0,
+    "insufficiency_flags": [
+      "評価説明量 238 < 500",
+      "限界説明量 0 < 推奨 120"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 評価説明量 238 < 500"
+  ],
+  "processed_at": "2026-10-20T17:38:26+00:00"
+}

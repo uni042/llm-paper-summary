@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-20T17:31:58+00:00",
+  "generated_at": "2026-10-20T17:38:29+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -928,34 +928,6 @@
       "worker_run_key": "20261020-0800-scheduled-chat-00/r01"
     },
     {
-      "canonical_id": "arXiv:2311.08623",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-20T13:10:28+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 466 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5424,
-        "body_paragraphs": 29,
-        "method_chars": 1457,
-        "method_paragraphs": 8,
-        "evaluation_chars": 466,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "評価説明量 466 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_01392e66b16081919d067e9b473217e3--2024-2311.08623-deed-dynamic-decoder-early-exit-research-20261020-1400-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_01392e66b16081919d067e9b473217e3--2024-2311.08623-deed-dynamic-decoder-early-exit-research-20261020-1400-scheduled-chat-00-r01.json",
-      "worker_run_key": "20261020-1400-scheduled-chat-00/r01"
-    },
-    {
       "canonical_id": "arXiv:2411.10741",
       "title": null,
       "source_url": null,
@@ -1342,35 +1314,6 @@
       "worker_run_key": "20261020-1400-scheduled-chat-00/r01"
     },
     {
-      "canonical_id": "arXiv:2610.12060",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-20T15:43:52+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700",
-        "説明不足トリガー: 評価説明量 0 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 6399,
-        "body_paragraphs": 39,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 0,
-        "limitation_chars": 536,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700",
-          "評価説明量 0 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_9a7a3c58b0e8819193ac4aef9227c62c--2026-2610.12060-vimod-visual-memory-on-demand-research-20261020-1304-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_9a7a3c58b0e8819193ac4aef9227c62c--2026-2610.12060-vimod-visual-memory-on-demand-research-20261020-1304-scheduled-chat-00-r01.json",
-      "worker_run_key": "20261020-1304-scheduled-chat-00/r01"
-    },
-    {
       "canonical_id": "arXiv:2608.03276",
       "title": null,
       "source_url": null,
@@ -1424,34 +1367,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_b17bb91bc4f4819183f4767857103ba3--2026-2605.16839-compactattention-block-union-chunked-prefill-quality-repair-20261020-1945-scheduled-chat-45-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_b17bb91bc4f4819183f4767857103ba3--2026-2605.16839-compactattention-block-union-chunked-prefill-quality-repair-20261020-1945-scheduled-chat-45-r01.json",
       "worker_run_key": "20261020-1945-scheduled-chat-45/r01"
-    },
-    {
-      "canonical_id": "arXiv:2407.12021",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-20T16:22:30+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 238 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 4747,
-        "body_paragraphs": 22,
-        "method_chars": 1771,
-        "method_paragraphs": 8,
-        "evaluation_chars": 238,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "評価説明量 238 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_b1db7f5ee3348191a468e4a054184f33--2025-2407.12021-adaptix-adaptive-draft-verification-research-20261020-1400-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_b1db7f5ee3348191a468e4a054184f33--2025-2407.12021-adaptix-adaptive-draft-verification-research-20261020-1400-scheduled-chat-00-r01.json",
-      "worker_run_key": "20261020-1400-scheduled-chat-00/r01"
     },
     {
       "canonical_id": "arXiv:2605.18226",
@@ -1622,34 +1537,6 @@
       "worker_run_key": "20261020-2000-scheduled-chat-00/r01"
     },
     {
-      "canonical_id": "arXiv:2609.39816",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-20T17:05:16+00:00",
-      "return_count": 7,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 6262,
-        "body_paragraphs": 33,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 1090,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_e24c4d80c1c08191ad739fbdfc76eccc--2026-2609.39816-prefix-invariant-fast-matmul-returned-repair-20261020-1230-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_e24c4d80c1c08191ad739fbdfc76eccc--2026-2609.39816-prefix-invariant-fast-matmul-returned-repair-20261020-1230-scheduled-chat-30-r01.json",
-      "worker_run_key": "20261020-1230-scheduled-chat-30/r01"
-    },
-    {
       "canonical_id": "DOI:10.18653/v1/2025.emnlp-main.1676",
       "title": null,
       "source_url": null,
@@ -1675,34 +1562,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_f0af4687b3508191811f475c4efbb36c--2025-doi-10.18653-v1-2025.emnlp-main.1676-llm-response-length-extreme-value-research-20261020-1400-scheduled-chat-00-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_f0af4687b3508191811f475c4efbb36c--2025-doi-10.18653-v1-2025.emnlp-main.1676-llm-response-length-extreme-value-research-20261020-1400-scheduled-chat-00-r.json",
       "worker_run_key": "20261020-1400-scheduled-chat-00/r01"
-    },
-    {
-      "canonical_id": "arXiv:2604.07144",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-20T17:15:47+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 498 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 4424,
-        "body_paragraphs": 24,
-        "method_chars": 1709,
-        "method_paragraphs": 10,
-        "evaluation_chars": 498,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "評価説明量 498 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_f410251ee1788191849b4dc4cf4f835d--2026-2604.07144-autopoiesis-self-evolving-llm-serving-research-20261019-2130-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_f410251ee1788191849b4dc4cf4f835d--2026-2604.07144-autopoiesis-self-evolving-llm-serving-research-20261019-2130-scheduled-chat-30-r01.json",
-      "worker_run_key": "20261019-2130-scheduled-chat-30/r01"
     },
     {
       "canonical_id": "arXiv:2606.27791",
@@ -1848,8 +1707,8 @@
     },
     {
       "canonical_id": "arXiv:2403.11805",
-      "title": "An Efficient Context Management System for On-Device LLMaaS (Libra; preprint: LLM as a System Service on Mobile Devices)",
-      "source_url": "https://doi.org/10.1145/3774906.3800479",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-20T17:31:51+00:00",
       "return_count": 6,
       "assigned_worker": "scheduled-chat-45",
@@ -1876,8 +1735,8 @@
     },
     {
       "canonical_id": "arXiv:2603.02188",
-      "title": "Multi-Head Low-Rank Attention",
-      "source_url": "https://arxiv.org/html/2603.02188v1",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-20T17:31:53+00:00",
       "return_count": 4,
       "assigned_worker": "scheduled-chat-30",
@@ -1906,8 +1765,8 @@
     },
     {
       "canonical_id": "arXiv:2608.07169",
-      "title": "Agent Memory Distillation: Empowering Small LLM Agents with Hierarchical Teacher Memory",
-      "source_url": "https://arxiv.org/abs/2608.07169",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-20T17:31:54+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-45",
@@ -1933,8 +1792,8 @@
     },
     {
       "canonical_id": "arXiv:2506.05333",
-      "title": "Kinetics: Rethinking Test-Time Scaling Laws",
-      "source_url": "https://arxiv.org/html/2506.05333",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-20T17:31:56+00:00",
       "return_count": 4,
       "assigned_worker": "scheduled-chat-30",
@@ -1963,8 +1822,8 @@
     },
     {
       "canonical_id": "arXiv:2604.13634",
-      "title": "Calibrated Speculative Decoding: Frequency-Guided Candidate Selection for Efficient Inference",
-      "source_url": "https://arxiv.org/abs/2604.13634",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-20T17:31:57+00:00",
       "return_count": 4,
       "assigned_worker": "scheduled-chat-00",
@@ -1987,6 +1846,147 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-2a0585c746dd--libfile_5207f693f6148191ba7b5e5f75d66aef--2026-2604.13634-csd-calibrated-speculative-decoding-research-20261020-0703-scheduled-chat-00-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-2a0585c746dd--libfile_5207f693f6148191ba7b5e5f75d66aef--2026-2604.13634-csd-calibrated-speculative-decoding-research-20261020-0703-scheduled-chat.json",
       "worker_run_key": "20261020-0703-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2609.39816",
+      "title": "Beyond Accuracy: Prefix-Invariant Realizations of Low-Precision Fast Matrix Multiplication",
+      "source_url": "https://arxiv.org/abs/2609.39816",
+      "returned_at": "2026-10-20T17:38:25+00:00",
+      "return_count": 8,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 6262,
+        "body_paragraphs": 33,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 1090,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-388ad16f6383--libfile_e24c4d80c1c08191ad739fbdfc76eccc--2026-2609.39816-prefix-invariant-fast-matmul-returned-repair-20261020-1230-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-388ad16f6383--libfile_e24c4d80c1c08191ad739fbdfc76eccc--2026-2609.39816-prefix-invariant-fast-matmul-returned-repair-20261020-1230-scheduled-chat.json",
+      "worker_run_key": "20261020-1230-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2407.12021",
+      "title": "Adaptive Draft-Verification for Efficient Large Language Model Decoding",
+      "source_url": "https://ojs.aaai.org/index.php/AAAI/article/view/34647/36802",
+      "returned_at": "2026-10-20T17:38:26+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 238 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 4747,
+        "body_paragraphs": 22,
+        "method_chars": 1771,
+        "method_paragraphs": 8,
+        "evaluation_chars": 238,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "評価説明量 238 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-42b04422b520--libfile_b1db7f5ee3348191a468e4a054184f33--2025-2407.12021-adaptix-adaptive-draft-verification-research-20261020-1400-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-42b04422b520--libfile_b1db7f5ee3348191a468e4a054184f33--2025-2407.12021-adaptix-adaptive-draft-verification-research-20261020-1400-scheduled-chat.json",
+      "worker_run_key": "20261020-1400-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2311.08623",
+      "title": "DEED: Dynamic Early Exit on Decoder for Accelerating Encoder-Decoder Transformer Models",
+      "source_url": "https://aclanthology.org/2024.findings-naacl.9.pdf",
+      "returned_at": "2026-10-20T17:38:27+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 466 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5424,
+        "body_paragraphs": 29,
+        "method_chars": 1457,
+        "method_paragraphs": 8,
+        "evaluation_chars": 466,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "評価説明量 466 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-4543db03512f--libfile_01392e66b16081919d067e9b473217e3--2024-2311.08623-deed-dynamic-decoder-early-exit-research-20261020-1400-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-4543db03512f--libfile_01392e66b16081919d067e9b473217e3--2024-2311.08623-deed-dynamic-decoder-early-exit-research-20261020-1400-scheduled-chat-00-.json",
+      "worker_run_key": "20261020-1400-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2610.12060",
+      "title": "Look Back, Think Ahead: Visual Memory on Demand for Efficient Multimodal Reasoning",
+      "source_url": "https://arxiv.org/abs/2610.12060",
+      "returned_at": "2026-10-20T17:38:28+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700",
+        "説明不足トリガー: 評価説明量 0 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 6399,
+        "body_paragraphs": 39,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 0,
+        "limitation_chars": 536,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700",
+          "評価説明量 0 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-45d2d7d0c5a0--libfile_9a7a3c58b0e8819193ac4aef9227c62c--2026-2610.12060-vimod-visual-memory-on-demand-research-20261020-1304-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-45d2d7d0c5a0--libfile_9a7a3c58b0e8819193ac4aef9227c62c--2026-2610.12060-vimod-visual-memory-on-demand-research-20261020-1304-scheduled-chat-00-r0.json",
+      "worker_run_key": "20261020-1304-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2604.07144",
+      "title": "AUTOPOIESIS: A Self-Evolving System Paradigm for LLM Serving Under Runtime Dynamics",
+      "source_url": "https://arxiv.org/pdf/2604.07144",
+      "returned_at": "2026-10-20T17:38:29+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 498 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 4424,
+        "body_paragraphs": 24,
+        "method_chars": 1709,
+        "method_paragraphs": 10,
+        "evaluation_chars": 498,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "評価説明量 498 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-587e59534fcb--libfile_f410251ee1788191849b4dc4cf4f835d--2026-2604.07144-autopoiesis-self-evolving-llm-serving-research-20261019-2130-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-587e59534fcb--libfile_f410251ee1788191849b4dc4cf4f835d--2026-2604.07144-autopoiesis-self-evolving-llm-serving-research-20261019-2130-scheduled-ch.json",
+      "worker_run_key": "20261019-2130-scheduled-chat-30/r01"
     }
   ]
 }
