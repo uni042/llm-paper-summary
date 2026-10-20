@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-20T00:06:27+00:00",
+  "generated_at": "2026-10-20T00:14:23+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -5097,66 +5097,9 @@
       "worker_run_key": "20261020-0608-scheduled-chat-00/r01"
     },
     {
-      "canonical_id": "arXiv:2501.01144",
+      "canonical_id": "arXiv:2412.00556",
       "title": null,
       "source_url": null,
-      "returned_at": "2026-10-19T23:54:34+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700",
-        "説明不足トリガー: 評価説明量 193 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 6741,
-        "body_paragraphs": 34,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 193,
-        "limitation_chars": 588,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700",
-          "評価説明量 193 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_9ff55cc3467481918c74054dfc3c928a--2025-2501.01144-blockdialect-mixed-format-quantization-research-20261020-0703-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_9ff55cc3467481918c74054dfc3c928a--2025-2501.01144-blockdialect-mixed-format-quantization-research-20261020-0703-scheduled-chat-00-r01.json",
-      "worker_run_key": "20261020-0703-scheduled-chat-00/r01"
-    },
-    {
-      "canonical_id": "arXiv:2504.19720",
-      "title": "Taming the Titans: A Survey of Efficient LLM Inference Serving",
-      "source_url": "https://arxiv.org/html/2504.19720v1",
-      "returned_at": "2026-10-20T00:03:59+00:00",
-      "return_count": 4,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 499 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 4786,
-        "body_paragraphs": 28,
-        "method_chars": 2244,
-        "method_paragraphs": 13,
-        "evaluation_chars": 499,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "評価説明量 499 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_c8f5976b138c819192bffebd507f07e3--2025-2504.19720-taming-the-titans-serving-survey-research-20261020-0630-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_c8f5976b138c819192bffebd507f07e3--2025-2504.19720-taming-the-titans-serving-survey-research-20261020-0630-scheduled-chat-30-r01.json",
-      "worker_run_key": "20261020-0630-scheduled-chat-30/r01"
-    },
-    {
-      "canonical_id": "arXiv:2412.00556",
-      "title": "Accelerating Multimodal Large Language Models by Searching Optimal Vision Token Reduction",
-      "source_url": "https://arxiv.org/abs/2412.00556",
       "returned_at": "2026-10-20T00:04:55+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-45",
@@ -5185,8 +5128,8 @@
     },
     {
       "canonical_id": "arXiv:2604.23475",
-      "title": "Supernodes and Halos: Loss-Critical Hubs in LLM Feed-Forward Layers",
-      "source_url": "https://arxiv.org/html/2604.23475v2",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-20T00:04:57+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-45",
@@ -5209,6 +5152,63 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-b685c8487834--libfile_ca08ea967c1c81919ec1d31986c49220--2026-2604.23475-supernodes-halos-scar-structured-ffn-pruning-research-20261020-0745-scheduled-chat-45-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-b685c8487834--libfile_ca08ea967c1c81919ec1d31986c49220--2026-2604.23475-supernodes-halos-scar-structured-ffn-pruning-research-20261020-0745-sched.json",
       "worker_run_key": "20261020-0745-scheduled-chat-45/r01"
+    },
+    {
+      "canonical_id": "arXiv:2501.01144",
+      "title": "BlockDialect: Block-wise Fine-grained Mixed Format Quantization for Energy-Efficient LLM Inference",
+      "source_url": "https://arxiv.org/abs/2501.01144",
+      "returned_at": "2026-10-20T00:14:21+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700",
+        "説明不足トリガー: 評価説明量 193 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 6741,
+        "body_paragraphs": 34,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 193,
+        "limitation_chars": 588,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700",
+          "評価説明量 193 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-d5b42a13fb54--libfile_9ff55cc3467481918c74054dfc3c928a--2025-2501.01144-blockdialect-mixed-format-quantization-research-20261020-0703-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-d5b42a13fb54--libfile_9ff55cc3467481918c74054dfc3c928a--2025-2501.01144-blockdialect-mixed-format-quantization-research-20261020-0703-scheduled-c.json",
+      "worker_run_key": "20261020-0703-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2504.19720",
+      "title": "Taming the Titans: A Survey of Efficient LLM Inference Serving",
+      "source_url": "https://arxiv.org/html/2504.19720v1",
+      "returned_at": "2026-10-20T00:14:23+00:00",
+      "return_count": 6,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 499 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 4786,
+        "body_paragraphs": 28,
+        "method_chars": 2244,
+        "method_paragraphs": 13,
+        "evaluation_chars": 499,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "評価説明量 499 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-e8bf31619ac3--libfile_1a024ee06edc8191bb03c7c0ab6a2f73--2025-2504.19720-taming-the-titans-serving-survey-research-20261020-0630-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-e8bf31619ac3--libfile_1a024ee06edc8191bb03c7c0ab6a2f73--2025-2504.19720-taming-the-titans-serving-survey-research-20261020-0630-scheduled-chat-30.json",
+      "worker_run_key": "20261020-0630-scheduled-chat-30/r01"
     }
   ]
 }

@@ -31,6 +31,8 @@ list_summary: "LLM推論サービングの配置・スケジューリング・KV
 last_checked: "2026-10-20"
 worker_completed_at: "2026-10-20T06:54:00+09:00"
 worker_run_key: "20261020-0630-scheduled-chat-30/r01"
+last_audited: null
+audit_version: 0
 ---
 
 # Taming the Titans：LLM推論サービング最適化の体系的サーベイ
