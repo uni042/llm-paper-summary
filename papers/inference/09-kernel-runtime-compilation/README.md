@@ -23,7 +23,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - [06-moe-quantization-compression](../06-moe-quantization-compression/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（123本）
+## 自動生成の論文一覧（124本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -283,6 +283,10 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - **2026-01 · [SD-E2: Semantic Exploration for Reasoning Under Token Budgets](2026-2601.17982-sd-e2-semantic-exploration-for-reasoning-under-token-budgets.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   小型言語モデルに複雑な問題を解かせる際、複数の解法を試すことは有効だが、生成トークン数には限りがある。結果・形式・長さを用いるGRPO-CFLの76.80%、意味を考慮しない探索・活用方式GRPO-CFEEの80.52%も上回る。
+
+- **2026-01 · [Magellan: Autonomous Discovery of Novel Compiler Optimization Heuristics with AlphaEvolve](2026-2601.21096-magellan-autonomous-discovery-of-novel-compiler-optimization-heuristics-.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  MagellanはLLMのコード生成エージェント、進化的探索、外部のハイパーパラメータ調整器を閉ループで結び、LLVMやXLAのコンパイラ最適化パスに組み込めるC++の判断規則を自動発見する。生成したポリシーを実際のコンパイラへ挿入して再ビルドし、アプリケーションの最終バイナリサイズや実行時間を報酬にして改善する。
 
 - **2026-01 · [LLMs can Compress LLMs: Adaptive Pruning by Agents](2026-2601.09694-llms-can-compress-llms-adaptive-pruning-by-agents.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

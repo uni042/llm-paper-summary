@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "a9990ebaffdb96e0557dd45d010138135802dcab4e1c102a2a4193804ca47ee9",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_007edd6961948191a74d1acceed689f1--2025-2503.06881-resmoe-wasserstein-residual-compression-research-20261020-0800-scheduled-chat-00-r01.md",
+  "canonical_id": "arXiv:2503.06881",
+  "worker_completed_at": "2026-10-20T08:00:00+09:00",
+  "worker_run_key": "20261020-0800-scheduled-chat-00/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 5088,
+    "body_paragraphs": 28,
+    "method_chars": 1317,
+    "method_paragraphs": 8,
+    "evaluation_chars": 144,
+    "limitation_chars": 0,
+    "insufficiency_flags": [
+      "評価説明量 144 < 500",
+      "限界説明量 0 < 推奨 120"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 評価説明量 144 < 500"
+  ],
+  "processed_at": "2026-10-20T13:10:27+00:00"
+}

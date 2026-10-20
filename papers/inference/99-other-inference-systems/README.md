@@ -718,7 +718,7 @@
 
 - **2026-09 · [BASE: Batch-Aware Selection of Experts Using Predicted Removal Error for Efficient MoE Decoding](2026-2609.36222-base-batch-aware-selection-of-experts-using-predicted-removal-error-for-.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
-  BASEは、専門家混合（Mixture of エキスパート; MoE）モデルのバッチ逐次生成で、実際に読み込む専門家の種類数を制限しながら出力の変化を最小化する選択方式である。
+  逐次生成の律速が高帯域メモリから演算器近傍への重み転送にある場合、トークン単位の疎性はそのまま高速化へ結び付かない。Qwen3-30B-A3Bでは、厳しい専門家予算M=10のBASEが8課題平均76.38点・1463.5トークン/秒であり、速度が近い最良の既存方式Lynxの46.87点・1304.9トークン/秒を大きく上回る。
 
 - **2026-09 · [AutoTuneBench: Trustworthy Measurement for Agent Auto-Tuning of LLM Serving Engines](2026-2609.18123-autotunebench-trustworthy-serving-engine-measurement.md)**  
   実装：[✓](https://github.com/li-ch/autotunebench) ・ リポジトリ内被引用：0  
@@ -1326,7 +1326,7 @@
 
 - **2026-04 · [Robust Ultra Low-Bit Post-Training Quantization via Stable Diagonal Curvature Estimate](2026-2604.13806-robust-ultra-low-bit-post-training-quantization-via-stable-diagonal-curv.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
-  DASH-Qは、大規模言語モデル（LLM）の重みを学習後量子化（Post-学習 量子化、PTQ）する際、特に2ビット程度で生じる大きな品質劣化を抑える方式である。Llama-3.1-8B-Instructを2ビット・グループ32で量子化した表1では、ゼロショット8課題平均がDASH-Q 56.52%、OWQ 42.51%、GPTQ 35.66%となる。
+  DASH-Qは、学習済み大規模言語モデル（LLM）の重みを2〜4ビットへ圧縮する際、少量の較正入力から推定した相関情報を過信すると量子化後の回答品質が壊れるという問題を扱う。
 
 - **2026-04 · [Rethinking Residual Errors in Compensation-based LLM Quantization](2026-2604.07955-rethinking-residual-errors-in-compensation-based-llm-quantization.md)**  
   実装：[✓](https://github.com/list0830/ResComp) ・ リポジトリ内被引用：0  

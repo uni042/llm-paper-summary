@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-20T12:29:14+00:00",
+  "generated_at": "2026-10-20T13:14:21+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 85,
+  "count": 83,
   "entries": [
     {
       "canonical_id": "DOI:10.1145/3714983.3714987",
@@ -593,34 +593,6 @@
       "worker_run_key": "20261018-1345-scheduled-chat-45/r01"
     },
     {
-      "canonical_id": "arXiv:2503.06881",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-18T11:12:34+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 7924,
-        "body_paragraphs": 41,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 684,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_6f18a160ba9c819186f116fd89152e8c--2025-2503.06881-resmoe-wasserstein-residual-restoration-research-20261018-1800-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_6f18a160ba9c819186f116fd89152e8c--2025-2503.06881-resmoe-wasserstein-residual-restoration-research-20261018-1800-scheduled-chat-00-r01.json",
-      "worker_run_key": "20261018-1800-scheduled-chat-00/r01"
-    },
-    {
       "canonical_id": "DOI:10.52202/085713-0097",
       "title": null,
       "source_url": null,
@@ -646,33 +618,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-0c7639f0a118--libfile_0c7639f0a11881918fd2b76a34fce10c--2025-doi-10.52202-085713-0097-agserve-session-aware-agent-serving-research-20261018-2155-scheduled-chat-00-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-0c7639f0a118--libfile_0c7639f0a11881918fd2b76a34fce10c--2025-doi-10.52202-085713-0097-agserve-session-aware-agent-serving-research-20261018-2155-.json",
       "worker_run_key": "20261018-2155-scheduled-chat-00/r01"
-    },
-    {
-      "canonical_id": "arXiv:2601.21096",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-18T13:47:41+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 411 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5012,
-        "body_paragraphs": 30,
-        "method_chars": 1480,
-        "method_paragraphs": 9,
-        "evaluation_chars": 411,
-        "limitation_chars": 633,
-        "insufficiency_flags": [
-          "評価説明量 411 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-0ef39f144fac--libfile_df2165d25fec819194b4a7f84fa6e21f--2026-2601.21096-magellan-compiler-heuristic-evolution-research-20261018-0700-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-0ef39f144fac--libfile_df2165d25fec819194b4a7f84fa6e21f--2026-2601.21096-magellan-compiler-heuristic-evolution-research-20261018-0700-scheduled-ch.json",
-      "worker_run_key": "scheduled-chat-00/20261018-0700/r01"
     },
     {
       "canonical_id": "arXiv:2402.04902",
@@ -1682,33 +1627,6 @@
       "worker_run_key": "20261019-1130-scheduled-chat-30/r01"
     },
     {
-      "canonical_id": "arXiv:2609.36222",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-19T15:58:13+00:00",
-      "return_count": 4,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "16KB未満再監査: 評価説明量 336 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 4372,
-        "body_paragraphs": 22,
-        "method_chars": 1587,
-        "method_paragraphs": 8,
-        "evaluation_chars": 336,
-        "limitation_chars": 536,
-        "insufficiency_flags": [
-          "評価説明量 336 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-20a4a77189fe--libfile_63f90b2edbf881918bc865539552623a--2026-2609.36222-base-under16kb-reaudit-20261020-0000-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-20a4a77189fe--libfile_63f90b2edbf881918bc865539552623a--2026-2609.36222-base-under16kb-reaudit-20261020-0000-scheduled-chat-00-r01.json",
-      "worker_run_key": "20261020-0000-scheduled-chat-00/r01"
-    },
-    {
       "canonical_id": "arXiv:2411.10741",
       "title": null,
       "source_url": null,
@@ -1952,34 +1870,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-b685c8487834--libfile_ca08ea967c1c81919ec1d31986c49220--2026-2604.23475-supernodes-halos-scar-structured-ffn-pruning-research-20261020-0745-scheduled-chat-45-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-b685c8487834--libfile_ca08ea967c1c81919ec1d31986c49220--2026-2604.23475-supernodes-halos-scar-structured-ffn-pruning-research-20261020-0745-sched.json",
       "worker_run_key": "20261020-0745-scheduled-chat-45/r01"
-    },
-    {
-      "canonical_id": "arXiv:2504.19720",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-20T00:14:23+00:00",
-      "return_count": 6,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 499 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 4786,
-        "body_paragraphs": 28,
-        "method_chars": 2244,
-        "method_paragraphs": 13,
-        "evaluation_chars": 499,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "評価説明量 499 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-e8bf31619ac3--libfile_1a024ee06edc8191bb03c7c0ab6a2f73--2025-2504.19720-taming-the-titans-serving-survey-research-20261020-0630-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-e8bf31619ac3--libfile_1a024ee06edc8191bb03c7c0ab6a2f73--2025-2504.19720-taming-the-titans-serving-survey-research-20261020-0630-scheduled-chat-30.json",
-      "worker_run_key": "20261020-0630-scheduled-chat-30/r01"
     },
     {
       "canonical_id": "DOI:10.1109/ISCA66397.2026.00182",
@@ -2337,6 +2227,62 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-3e767f936755--libfile_9d252b8b0a6881919f494b1b1444084c--2025-2510.02758-tokenflow-preemptive-streaming-returned-repair-20261020-2000-scheduled-chat-00-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-3e767f936755--libfile_9d252b8b0a6881919f494b1b1444084c--2025-2510.02758-tokenflow-preemptive-streaming-returned-repair-20261020-2000-scheduled-ch.json",
       "worker_run_key": "20261020-2000-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2503.06881",
+      "title": "ResMoE: Space-efficient Compression of Mixture of Experts LLMs via Residual Restoration",
+      "source_url": "https://arxiv.org/abs/2503.06881",
+      "returned_at": "2026-10-20T13:10:27+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 144 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5088,
+        "body_paragraphs": 28,
+        "method_chars": 1317,
+        "method_paragraphs": 8,
+        "evaluation_chars": 144,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "評価説明量 144 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_007edd6961948191a74d1acceed689f1--2025-2503.06881-resmoe-wasserstein-residual-compression-research-20261020-0800-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_007edd6961948191a74d1acceed689f1--2025-2503.06881-resmoe-wasserstein-residual-compression-research-20261020-0800-scheduled-chat-00-r01.json",
+      "worker_run_key": "20261020-0800-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2311.08623",
+      "title": "DEED: Dynamic Early Exit on Decoder for Accelerating Encoder-Decoder Transformer Models",
+      "source_url": "https://aclanthology.org/2024.findings-naacl.9.pdf",
+      "returned_at": "2026-10-20T13:10:28+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 466 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5424,
+        "body_paragraphs": 29,
+        "method_chars": 1457,
+        "method_paragraphs": 8,
+        "evaluation_chars": 466,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "評価説明量 466 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_01392e66b16081919d067e9b473217e3--2024-2311.08623-deed-dynamic-decoder-early-exit-research-20261020-1400-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_01392e66b16081919d067e9b473217e3--2024-2311.08623-deed-dynamic-decoder-early-exit-research-20261020-1400-scheduled-chat-00-r01.json",
+      "worker_run_key": "20261020-1400-scheduled-chat-00/r01"
     }
   ]
 }

@@ -127,7 +127,7 @@
 
 - **2026-09 · [RR-Evict: Fine-Grained Prefix Cache Eviction beyond LRU for Agentic LLM Serving](2026-2609.32278-rr-evict-fine-grained-prefix-cache-eviction-beyond-lru-for-agentic-llm-s.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
-  RR-Evictは、複数の長時間動作するLLMエージェントが交互にモデル呼び出しと外部ツール実行を行うとき、接頭辞キャッシュの削除単位を変える配信方式である。SGLang実装で、会話・コード修正エージェントの評価における99パーセンタイル初回トークン遅延（P99 TTFT）をLRU比最大75.4%減らした。
+  通常の最近最少使用方式（Least Recently Used、LRU）では、同じエージェントのキャッシュ木に属するノードの最近使用時刻がほぼ同時に更新され、削除対象が特定のエージェントに偏る。
 
 - **2026-09 · [PipeSwift: Revisiting Pipeline Parallelism for Large-Scale Completion-Oriented Agentic LLM Serving](2026-2609.16491-pipeswift-pipeline-parallel-agentic-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
