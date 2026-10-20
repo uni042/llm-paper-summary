@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "990a18942f219f1bc2fed29ccf0efb2e19125a447e54cbf6a3bfa5cfbddef578",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_0808a7a4554081918f9aba46759c528f--2026-2602.09113-speculative-decoding-energy-benchmark-research-20261020-1830-scheduled-chat-30-r01.md",
+  "canonical_id": "arXiv:2602.09113",
+  "worker_completed_at": "2026-10-20T18:44:00+09:00",
+  "worker_run_key": "20261020-1830-scheduled-chat-30/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 5906,
+    "body_paragraphs": 28,
+    "method_chars": 0,
+    "method_paragraphs": 0,
+    "evaluation_chars": 243,
+    "limitation_chars": 665,
+    "insufficiency_flags": [
+      "手法説明量 0 < 700",
+      "評価説明量 243 < 500"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 手法説明量 0 < 700",
+    "説明不足トリガー: 評価説明量 243 < 500"
+  ],
+  "processed_at": "2026-10-20T09:48:43+00:00"
+}

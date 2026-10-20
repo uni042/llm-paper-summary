@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "b8141d73504c8add224386c8d1cae7952641552600905e39362c12cb06afe738",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_d0f7e42cc2d08191b3544ccc9f5239e1--2024-2410.01805-locret-causal-kv-eviction-research-20261020-1830-scheduled-chat-30-r01.md",
+  "canonical_id": "arXiv:2410.01805",
+  "worker_completed_at": "2026-10-20T18:52:00+09:00",
+  "worker_run_key": "20261020-1830-scheduled-chat-30/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 6523,
+    "body_paragraphs": 32,
+    "method_chars": 1700,
+    "method_paragraphs": 9,
+    "evaluation_chars": 171,
+    "limitation_chars": 867,
+    "insufficiency_flags": [
+      "評価説明量 171 < 500"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 評価説明量 171 < 500"
+  ],
+  "processed_at": "2026-10-20T09:48:45+00:00"
+}
