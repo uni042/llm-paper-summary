@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-20T17:23:49+00:00",
+  "generated_at": "2026-10-20T17:31:58+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -1209,33 +1209,6 @@
       "worker_run_key": "20261020-1000-scheduled-chat-00/r01"
     },
     {
-      "canonical_id": "arXiv:2604.13634",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-20T14:49:53+00:00",
-      "return_count": 3,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5540,
-        "body_paragraphs": 29,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 535,
-        "limitation_chars": 423,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_5207f693f6148191ba7b5e5f75d66aef--2026-2604.13634-csd-calibrated-speculative-decoding-research-20261020-0703-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_5207f693f6148191ba7b5e5f75d66aef--2026-2604.13634-csd-calibrated-speculative-decoding-research-20261020-0703-scheduled-chat-00-r01.json",
-      "worker_run_key": "20261020-0703-scheduled-chat-00/r01"
-    },
-    {
       "canonical_id": "arXiv:2407.05690",
       "title": null,
       "source_url": null,
@@ -1290,33 +1263,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_7ad6fcf8cc1881918702b3708d962c85--2026-2605.28051-diffprune-fully-differentiable-visual-token-pruning-research-20261020-0445-scheduled-chat-45-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_7ad6fcf8cc1881918702b3708d962c85--2026-2605.28051-diffprune-fully-differentiable-visual-token-pruning-research-20261020-0445-scheduled-chat-45-r01.json",
       "worker_run_key": "20261020-0445-scheduled-chat-45/r01"
-    },
-    {
-      "canonical_id": "arXiv:2608.07169",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-20T15:34:54+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 0 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 6086,
-        "body_paragraphs": 30,
-        "method_chars": 1638,
-        "method_paragraphs": 8,
-        "evaluation_chars": 0,
-        "limitation_chars": 737,
-        "insufficiency_flags": [
-          "評価説明量 0 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_8a64ddd6204c8191b02bee89270e6129--2026-2608.07169-agent-memory-distillation-hierarchical-teacher-memory-research-20261020-1500-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_8a64ddd6204c8191b02bee89270e6129--2026-2608.07169-agent-memory-distillation-hierarchical-teacher-memory-research-20261020-1500-scheduled-chat-00-r01.json",
-      "worker_run_key": "20261020-1500-scheduled-chat-00/r01"
     },
     {
       "canonical_id": "arXiv:2605.27965",
@@ -1425,36 +1371,6 @@
       "worker_run_key": "20261020-1304-scheduled-chat-00/r01"
     },
     {
-      "canonical_id": "arXiv:2603.02188",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-20T15:58:40+00:00",
-      "return_count": 3,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700",
-        "説明不足トリガー: 評価説明量 0 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5512,
-        "body_paragraphs": 27,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 0,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700",
-          "評価説明量 0 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_9d50398ff264819191885c6aff213f6a--2026-2603.02188-mlra-multi-head-low-rank-attention-research-20261020-0000-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_9d50398ff264819191885c6aff213f6a--2026-2603.02188-mlra-multi-head-low-rank-attention-research-20261020-0000-scheduled-chat-00-r01.json",
-      "worker_run_key": "20261020-0000-scheduled-chat-00/r01"
-    },
-    {
       "canonical_id": "arXiv:2608.03276",
       "title": null,
       "source_url": null,
@@ -1536,64 +1452,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_b1db7f5ee3348191a468e4a054184f33--2025-2407.12021-adaptix-adaptive-draft-verification-research-20261020-1400-scheduled-chat-00-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_b1db7f5ee3348191a468e4a054184f33--2025-2407.12021-adaptix-adaptive-draft-verification-research-20261020-1400-scheduled-chat-00-r01.json",
       "worker_run_key": "20261020-1400-scheduled-chat-00/r01"
-    },
-    {
-      "canonical_id": "arXiv:2403.11805",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-20T16:23:27+00:00",
-      "return_count": 6,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 0 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5855,
-        "body_paragraphs": 31,
-        "method_chars": 2220,
-        "method_paragraphs": 12,
-        "evaluation_chars": 0,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "評価説明量 0 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_b6c04c9d28588191b9eaa38e1516d197--2024-2403.11805-libra-mobile-llmaas-kv-context-management-research-20261019-2000-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_b6c04c9d28588191b9eaa38e1516d197--2024-2403.11805-libra-mobile-llmaas-kv-context-management-research-20261019-2000-scheduled-chat-00-r01.json",
-      "worker_run_key": "20261019-2000-scheduled-chat-00/r01"
-    },
-    {
-      "canonical_id": "arXiv:2506.05333",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-20T16:46:07+00:00",
-      "return_count": 3,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700",
-        "説明不足トリガー: 評価説明量 0 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 4765,
-        "body_paragraphs": 26,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 0,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700",
-          "評価説明量 0 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_c3c4033f669081919a4474987932e320--2025-2506.05333-kinetics-memory-aware-test-time-scaling-returned-repair-20261020-1330-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_c3c4033f669081919a4474987932e320--2025-2506.05333-kinetics-memory-aware-test-time-scaling-returned-repair-20261020-1330-scheduled-chat-30-r01.json",
-      "worker_run_key": "20261020-1330-scheduled-chat-30/r01"
     },
     {
       "canonical_id": "arXiv:2605.18226",
@@ -1876,8 +1734,8 @@
     },
     {
       "canonical_id": "arXiv:2506.04642",
-      "title": "TaDA: Training-free recipe for Decoding with Adaptive KV Cache Compression and Mean-centering",
-      "source_url": "https://arxiv.org/pdf/2506.04642",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-20T17:23:43+00:00",
       "return_count": 4,
       "assigned_worker": "scheduled-chat-45",
@@ -1903,8 +1761,8 @@
     },
     {
       "canonical_id": "arXiv:2508.06297",
-      "title": "KV Cache Compression for Inference Efficiency in LLMs: A Review",
-      "source_url": "https://arxiv.org/html/2508.06297v1",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-20T17:23:45+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-45",
@@ -1933,8 +1791,8 @@
     },
     {
       "canonical_id": "arXiv:2508.00904",
-      "title": "Forecasting LLM Inference Performance via Hardware-Agnostic Analytical Modeling",
-      "source_url": "https://arxiv.org/abs/2508.00904",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-20T17:23:46+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-30",
@@ -1963,8 +1821,8 @@
     },
     {
       "canonical_id": "arXiv:2610.05305",
-      "title": "Characterizing Parallelism Strategies in LLM Inference: Fundamental Compute-Communication Trade-offs",
-      "source_url": "https://arxiv.org/abs/2610.05305",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-20T17:23:48+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-30",
@@ -1987,6 +1845,148 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-18ce7eee8ee4--libfile_bea1fbf67aa48191a0389113a9cd849d--2026-2610.05305-parallelism-compute-communication-model-research-20261020-1304-scheduled-chat-00-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-18ce7eee8ee4--libfile_bea1fbf67aa48191a0389113a9cd849d--2026-2610.05305-parallelism-compute-communication-model-research-20261020-1304-scheduled-.json",
       "worker_run_key": "20261020-1304-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2403.11805",
+      "title": "An Efficient Context Management System for On-Device LLMaaS (Libra; preprint: LLM as a System Service on Mobile Devices)",
+      "source_url": "https://doi.org/10.1145/3774906.3800479",
+      "returned_at": "2026-10-20T17:31:51+00:00",
+      "return_count": 6,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 0 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5855,
+        "body_paragraphs": 31,
+        "method_chars": 2220,
+        "method_paragraphs": 12,
+        "evaluation_chars": 0,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "評価説明量 0 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-193f6b71e9d6--libfile_b6c04c9d28588191b9eaa38e1516d197--2024-2403.11805-libra-mobile-llmaas-kv-context-management-research-20261019-2000-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-193f6b71e9d6--libfile_b6c04c9d28588191b9eaa38e1516d197--2024-2403.11805-libra-mobile-llmaas-kv-context-management-research-20261019-2000-schedule.json",
+      "worker_run_key": "20261019-2000-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2603.02188",
+      "title": "Multi-Head Low-Rank Attention",
+      "source_url": "https://arxiv.org/html/2603.02188v1",
+      "returned_at": "2026-10-20T17:31:53+00:00",
+      "return_count": 4,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700",
+        "説明不足トリガー: 評価説明量 0 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5512,
+        "body_paragraphs": 27,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 0,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700",
+          "評価説明量 0 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-1b5550a4bf40--libfile_9d50398ff264819191885c6aff213f6a--2026-2603.02188-mlra-multi-head-low-rank-attention-research-20261020-0000-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-1b5550a4bf40--libfile_9d50398ff264819191885c6aff213f6a--2026-2603.02188-mlra-multi-head-low-rank-attention-research-20261020-0000-scheduled-chat-.json",
+      "worker_run_key": "20261020-0000-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2608.07169",
+      "title": "Agent Memory Distillation: Empowering Small LLM Agents with Hierarchical Teacher Memory",
+      "source_url": "https://arxiv.org/abs/2608.07169",
+      "returned_at": "2026-10-20T17:31:54+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 0 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 6086,
+        "body_paragraphs": 30,
+        "method_chars": 1638,
+        "method_paragraphs": 8,
+        "evaluation_chars": 0,
+        "limitation_chars": 737,
+        "insufficiency_flags": [
+          "評価説明量 0 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-1e6ce99eabdf--libfile_8a64ddd6204c8191b02bee89270e6129--2026-2608.07169-agent-memory-distillation-hierarchical-teacher-memory-research-20261020-1500-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-1e6ce99eabdf--libfile_8a64ddd6204c8191b02bee89270e6129--2026-2608.07169-agent-memory-distillation-hierarchical-teacher-memory-research-20261020-1.json",
+      "worker_run_key": "20261020-1500-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2506.05333",
+      "title": "Kinetics: Rethinking Test-Time Scaling Laws",
+      "source_url": "https://arxiv.org/html/2506.05333",
+      "returned_at": "2026-10-20T17:31:56+00:00",
+      "return_count": 4,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700",
+        "説明不足トリガー: 評価説明量 0 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 4765,
+        "body_paragraphs": 26,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 0,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700",
+          "評価説明量 0 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-1fe965fd405e--libfile_c3c4033f669081919a4474987932e320--2025-2506.05333-kinetics-memory-aware-test-time-scaling-returned-repair-20261020-1330-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-1fe965fd405e--libfile_c3c4033f669081919a4474987932e320--2025-2506.05333-kinetics-memory-aware-test-time-scaling-returned-repair-20261020-1330-sch.json",
+      "worker_run_key": "20261020-1330-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2604.13634",
+      "title": "Calibrated Speculative Decoding: Frequency-Guided Candidate Selection for Efficient Inference",
+      "source_url": "https://arxiv.org/abs/2604.13634",
+      "returned_at": "2026-10-20T17:31:57+00:00",
+      "return_count": 4,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5540,
+        "body_paragraphs": 29,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 535,
+        "limitation_chars": 423,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-2a0585c746dd--libfile_5207f693f6148191ba7b5e5f75d66aef--2026-2604.13634-csd-calibrated-speculative-decoding-research-20261020-0703-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-2a0585c746dd--libfile_5207f693f6148191ba7b5e5f75d66aef--2026-2604.13634-csd-calibrated-speculative-decoding-research-20261020-0703-scheduled-chat.json",
+      "worker_run_key": "20261020-0703-scheduled-chat-00/r01"
     }
   ]
 }
