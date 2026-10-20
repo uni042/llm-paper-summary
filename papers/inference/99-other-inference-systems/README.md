@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（876本）
+## 自動生成の論文一覧（877本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -1379,6 +1379,10 @@
 - **2026-04 · [MemoSight: Unifying Context Compression and Multi Token Prediction for Reasoning Acceleration](2026-2604.14889-memosight-unifying-context-compression-and-multi-token-prediction-for-re.md)**  
   実装：[✓](https://github.com/helldog-star/MemoSight) ・ リポジトリ内被引用：0  
   MemoSightは、長い思考連鎖（Chain-of-Thought; CoT）の鍵・値キャッシュ（KV キャッシュ）を減らす文脈圧縮と、次の複数トークンを予測する先読みを、一つの追加学習手順で実現する方式である。
+
+- **2026-04 · [LLaDA2.0-Uni: Unifying Multimodal Understanding and Generation with Diffusion Large Language Model](2026-2604.20796-llada2-0-uni-unifying-multimodal-understanding-and-generation-with-diffu.md)**  
+  実装：[✓](https://github.com/inclusionAI/LLaDA2.0-Uni) ・ リポジトリ内被引用：0  
+  画像理解と画像生成を一つの基盤モデルで扱うには、画像を言語モデルへどう渡すかが大きな設計課題になる。SPRINTの最大1.6倍とデコーダの段数削減は異なる処理段階の話であり、単純に掛け算してエンドツーエンドの高速化率とみなしてはならない。
 
 - **2026-04 · [LearnPruner: Rethinking Attention-based Token Pruning in Vision Language Models](2026-2604.23950-learnpruner-rethinking-attention-based-token-pruning-in-vision-language-.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

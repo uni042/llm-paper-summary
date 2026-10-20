@@ -43,6 +43,8 @@ reference_main_sha: '768b5f57329778b1a2f057042f31bf393a75083f'
 quality_self_review_passed: true
 quality_self_review_version: 'PAPER-QUALITY-GUIDE-2026-10-07'
 quality_self_review_notes: 'arXiv一次全文§2の3要素とSPRINT、§3のデータ、§4の学習とデコーダ蒸留、§5の理解・生成・編集評価を照合。総合性能と個別ベンチマーク、カーネル高速化と画像デコーダ段数、総パラメータと活性パラメータを混同しない。'
+last_audited: null
+audit_version: 0
 ---
 
 # LLaDA2.0-Uni：離散拡散で画像理解と画像生成を統合し、接頭辞KV選択で高速化する

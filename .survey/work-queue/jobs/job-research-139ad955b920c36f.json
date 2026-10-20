@@ -28,10 +28,15 @@
   "selection_reason": "edge LLM serving向けにKV cache eviction/recomputation policyとeDRAM refresh/memory-controller設計をco-designする。専用hardware寄りのためpriorityは抑えるが、KV cache policyとmemory technologyを同時最適化する系統が既存収録にないため比較価値がある。",
   "semantic_scholar_id": "9442e27b45e61f4839c20cf1402eaa2e72ce972d",
   "source_url": "https://arxiv.org/abs/2510.16040",
-  "status": "ready",
+  "status": "superseded",
   "title": "Kelle: Co-design KV Caching and eDRAM for Efficient LLM Serving in Edge Computing",
   "type": "research",
   "venue": "Micro",
   "workflow_version": 10,
-  "year": 2025
+  "year": 2025,
+  "superseded_at": "2026-10-20T15:24:35+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2510.16040-kelle-co-design-kv-caching-and-edram-for-efficient-llm-serving-in-edge-c.md",
+  "represented_canonical_id": "arXiv:2510.16040",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

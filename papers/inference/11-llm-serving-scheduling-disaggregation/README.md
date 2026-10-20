@@ -3,7 +3,7 @@
 複数requestを複数GPU / nodeで処理するLLM servingについて、request順、batch、prefill / decodeのGPU配分、KV再利用・転送、request移動などを調整し、latencyとresource効率を改善する研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（399本）
+## 自動生成の論文一覧（400本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -1329,6 +1329,10 @@
 - **2025-10 · [Loquetier: A Virtualized Multi-LoRA Framework for Unified LLM Fine-tuning and Serving](2025-2511.00101-loquetier-virtualized-multilora-serving.md)**  
   実装：[✓](https://github.com/NJUDeepEngine/Loquetier) ・ リポジトリ内被引用：0  
   共有基盤LLM上でLoRAごとの仮想モデルを隔離し、SMLMカーネルで微調整・評価・プリフィル・デコードを同一実行系へ統合する多数LoRA基盤。推論でFlexLLM比最大3.0倍、統一負荷でPEFT比46.4倍のSLO達成率を報告する。
+
+- **2025-10 · [Kelle: Co-design KV Caching and eDRAM for Efficient LLM Serving in Edge Computing](2025-2510.16040-kelle-co-design-kv-caching-and-edram-for-efficient-llm-serving-in-edge-c.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  Kelleは、端末上で大規模言語モデル（LLM）を推論する際、鍵・値の中間表現（KVキャッシュ）を面積効率の高い組込みDRAM（eDRAM）へ置き、記憶内容の削除・再計算・リフレッシュ頻度・演算順序まで一体で最適化する方式である。原著の合成・モデル評価では、元のSRAM構成に対し平均3.94倍の遅延改善と4.46倍のエネルギー効率改善を報告する。
 
 - **2025-10 · [From Principles to Practice: A Systematic Study of LLM Serving on Multi-core NPUs](2025-2510.05632-systematic-study-multicore-npu-llm-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
