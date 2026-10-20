@@ -41,6 +41,8 @@ references:
 - canonical_id: arXiv:2404.16821
 references_checked_at: '2026-10-20'
 references_source: arxiv-html-reference-section
+last_audited: null
+audit_version: 0
 ---
 
 # Accelerating Multimodal Large Language Models by Searching Optimal Vision Token Reduction
