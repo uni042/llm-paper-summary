@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "1151e450b7980834d8a08745e4ec392a7450fde001f837269673a8fc8189d917",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_38ff9371f1688191a601ff77e19ff400--2024-2412.12706-quantized-pruning-token-precision-tradeoff-research-20261020-0204-scheduled-chat-00-r01-v2.md",
+  "canonical_id": "arXiv:2412.12706",
+  "worker_completed_at": "2026-10-20T02:08:52+09:00",
+  "worker_run_key": "20261020-0204-scheduled-chat-00/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 6403,
+    "body_paragraphs": 34,
+    "method_chars": 0,
+    "method_paragraphs": 0,
+    "evaluation_chars": 0,
+    "limitation_chars": 592,
+    "insufficiency_flags": [
+      "手法説明量 0 < 700",
+      "評価説明量 0 < 500"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 手法説明量 0 < 700",
+    "説明不足トリガー: 評価説明量 0 < 500"
+  ],
+  "processed_at": "2026-10-20T14:27:39+00:00"
+}

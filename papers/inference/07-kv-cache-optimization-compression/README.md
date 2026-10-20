@@ -16,7 +16,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 方向は異なるが、いずれも**KV cacheがdecode時のmemory容量やmemory bandwidthのボトルネックになることを直接緩和する**研究として扱う。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（265本）
+## 自動生成の論文一覧（266本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -592,6 +592,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 - **2026-05 · [NestedKV: Nested Memory Routing for Long-Context KV Cache Compression](2026-2605.26678-nestedkv-nested-memory-routing-for-long-context-kv-cache-compression.md)**  
   実装：[✓](https://github.com/ChenHong30/NestedKV) ・ リポジトリ内被引用：0  
   学習不要のKV圧縮では、注意重みが大きいトークン、最近のトークン、鍵ベクトルが平均から離れたトークンなどを残す方法が使われる。Qwen3-4B、RULERの4,000トークン文脈、KVの75%を削除する条件でNestedKVは79.32点、単一の全文平均方向を使うKeyDiffは60.22点だった。
+
+- **2026-05 · [FastOCR: Dynamic Visual Fixation via KV Cache Pruning for Efficient Document Parsing](2026-2605.17447-fastocr-dynamic-visual-fixation-via-kv-cache-pruning-for-efficient-docum.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  FastOCRは追加学習不要で、焦点層誘導型の枝刈り（Focal-Guided Pruning、FGP）とステップ間注視再利用（Cross-Step Fixation Reuse、CSFR）を組み合わせる。Qwen2.5-VLでは画像トークンの保持率5%でOmniDocBench総合スコア72.76から71.34（98.0%保持）となる。
 
 - **2026-05 · [CONF-KV: Confidence-Aware KV Cache Eviction with Mixed-Precision Storage for Long-Horizon LLM Inference](2026-2605.24786-conf-kv-confidence-aware-kv-cache-eviction-with-mixed-precision-storage-.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

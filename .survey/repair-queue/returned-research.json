@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-20T14:21:14+00:00",
+  "generated_at": "2026-10-20T14:30:02+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 79,
+  "count": 78,
   "entries": [
     {
       "canonical_id": "DOI:10.1145/3714983.3714987",
@@ -779,33 +779,6 @@
       "worker_run_key": "20261018-2155-scheduled-chat-00/r01"
     },
     {
-      "canonical_id": "arXiv:2609.39068",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-18T18:03:40+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 8376,
-        "body_paragraphs": 48,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 1689,
-        "limitation_chars": 716,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-2ca9bf15f026--libfile_aed71d11d21081918e96439b7d80592f--2026-2609.39068-sparseengine-sparse-first-inference-research-20261019-0230-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-2ca9bf15f026--libfile_aed71d11d21081918e96439b7d80592f--2026-2609.39068-sparseengine-sparse-first-inference-research-20261019-0230-scheduled-chat.json",
-      "worker_run_key": "20261019-0230-scheduled-chat-30/r01"
-    },
-    {
       "canonical_id": "arXiv:2307.02690",
       "title": null,
       "source_url": null,
@@ -1416,36 +1389,6 @@
       "worker_run_key": "20261019-1145-scheduled-chat-45/r01"
     },
     {
-      "canonical_id": "arXiv:2605.17447",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-19T15:52:02+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700",
-        "説明不足トリガー: 評価説明量 158 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 8910,
-        "body_paragraphs": 53,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 158,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700",
-          "評価説明量 158 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-cecb63468709--libfile_1cfb40ff275c8191b6f64d40a78a5a5e--2026-2605.17447-fastocr-dynamic-visual-fixation-research-20261019-1130-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-cecb63468709--libfile_1cfb40ff275c8191b6f64d40a78a5a5e--2026-2605.17447-fastocr-dynamic-visual-fixation-research-20261019-1130-scheduled-chat-30-.json",
-      "worker_run_key": "20261019-1130-scheduled-chat-30/r01"
-    },
-    {
       "canonical_id": "arXiv:2510.04147",
       "title": null,
       "source_url": null,
@@ -1580,36 +1523,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-ca14d268265e--libfile_c34f541c5bac819199bd28fca500478f--2025-doi-10.52202-085713-0350-andpro-anchor-direction-projection-research-20261020-0355-scheduled-chat-00-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-ca14d268265e--libfile_c34f541c5bac819199bd28fca500478f--2025-doi-10.52202-085713-0350-andpro-anchor-direction-projection-research-20261020-0355-s.json",
       "worker_run_key": "20261020-0355-scheduled-chat-00/r01"
-    },
-    {
-      "canonical_id": "arXiv:2412.00556",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-20T00:04:55+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700",
-        "説明不足トリガー: 評価説明量 122 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 6305,
-        "body_paragraphs": 38,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 122,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700",
-          "評価説明量 122 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-29b0c8cf7254--libfile_ddbb3bb32cb88191b9fbac4c39b90330--2024-2412.00556-gsearch-psigmoid-vision-token-reduction-research-20261020-0800-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-29b0c8cf7254--libfile_ddbb3bb32cb88191b9fbac4c39b90330--2024-2412.00556-gsearch-psigmoid-vision-token-reduction-research-20261020-0800-scheduled-.json",
-      "worker_run_key": "20261020-0800-scheduled-chat-00/r01"
     },
     {
       "canonical_id": "arXiv:2604.23475",
@@ -2191,6 +2104,65 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_3049860e0520819188d4a8d6c6dd22a8--2026-doi-10.1109-tc.2025.3628193-bitmod-bitserial-mixture-datatype-quantization-research-20261020-1730-scheduled-chat-30-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_3049860e0520819188d4a8d6c6dd22a8--2026-doi-10.1109-tc.2025.3628193-bitmod-bitserial-mixture-datatype-quantization-research-20261020-1730-scheduled-chat-.json",
       "worker_run_key": "20261020-1730-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2412.12706",
+      "title": "More Tokens, Lower Precision: Towards the Optimal Token-Precision Trade-off in KV Cache Compression",
+      "source_url": "https://arxiv.org/pdf/2412.12706",
+      "returned_at": "2026-10-20T14:27:39+00:00",
+      "return_count": 3,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700",
+        "説明不足トリガー: 評価説明量 0 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 6403,
+        "body_paragraphs": 34,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 0,
+        "limitation_chars": 592,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700",
+          "評価説明量 0 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_38ff9371f1688191a601ff77e19ff400--2024-2412.12706-quantized-pruning-token-precision-tradeoff-research-20261020-0204-scheduled-chat-00-r01-v2.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_38ff9371f1688191a601ff77e19ff400--2024-2412.12706-quantized-pruning-token-precision-tradeoff-research-20261020-0204-scheduled-chat-00-r01-v2.json",
+      "worker_run_key": "20261020-0204-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2505.03031",
+      "title": "Radio: Rate–Distortion Optimization for Large Language Model Compression",
+      "source_url": "https://arxiv.org/abs/2505.03031",
+      "returned_at": "2026-10-20T14:27:40+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700",
+        "説明不足トリガー: 評価説明量 0 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 7122,
+        "body_paragraphs": 43,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 0,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700",
+          "評価説明量 0 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_422866636b488191957207d9e7a01e4e--2025-2505.03031-radio-rate-distortion-quantization-research-20261020-1000-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_422866636b488191957207d9e7a01e4e--2025-2505.03031-radio-rate-distortion-quantization-research-20261020-1000-scheduled-chat-00-r01.json",
+      "worker_run_key": "20261020-1000-scheduled-chat-00/r01"
     }
   ]
 }

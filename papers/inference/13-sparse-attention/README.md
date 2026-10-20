@@ -23,7 +23,7 @@
 - [11-llm-serving-scheduling-disaggregation](../11-llm-serving-scheduling-disaggregation/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（98本）
+## 自動生成の論文一覧（99本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -143,6 +143,10 @@
 - **2026-10 · [HHR: Hierarchical Hash Retrieval for Efficient LLM Generation](2026-2610.01230-hhr-hierarchical-hash-retrieval-for-efficient-llm-generation.md)**  
   実装：[✓](https://github.com/lianjunl13-sudo/HHR) ・ リポジトリ内被引用：0  
   品質ではLongBenchのLlama-3.1-8B平均が密注意47.51、HHR46.96と僅かに低下する一方、ハッシュ型の比較方式HATA45.86より高い。
+
+- **2026-09 · [SparseEngine: Sparse-First Inference Engine](2026-2609.39068-sparseengine-sparse-first-inference-engine.md)**  
+  実装：[✓](https://github.com/CURRENTF/SparseEngine) ・ リポジトリ内被引用：0  
+  SparseEngineの貢献は、新しい疎注意スコアそのものではなく、疎方式が持つ異なる物理KV表現と状態更新の規則を共通サービング基盤へ接続する抽象化である。
 
 - **2026-09 · [SANTA++: Sampling Attention through Representative Keys](2026-2609.35629-santa-sampling-attention-through-representative-keys.md)**  
   実装：[✓](https://github.com/OPUSLab/santapp-kernel-demo) ・ リポジトリ内被引用：0  
