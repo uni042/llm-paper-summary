@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-b08ab3c10b9598dc-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2602.05384",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2602.05384",
+    "identity_tokens": [
+      "arXiv:2602.05384"
+    ],
+    "reason": "原著要旨は文書画像の種類判別・レイアウト解析を行い、写真文書をページ全体、デジタル文書を要素単位で解析するDolphin-v2を提案する。並列解析は用いるが寄与はOCR/文書解析の認識精度とアンカープロンプトであり、LLM生成サービングや汎用GPU推論基盤の高速化ではない。",
+    "first_checked_at": "2026-10-20T07:56:50+00:00",
+    "last_checked_at": "2026-10-20T07:56:50+00:00",
+    "linked_from": [],
+    "title": "Dolphin-v2: Universal Document Parsing via Scalable Anchor Prompting"
+  },
+  "processed_at": "2026-10-20T07:56:50+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-b08ab3c10b95",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

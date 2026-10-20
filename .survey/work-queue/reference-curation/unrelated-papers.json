@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-20T07:55:02+00:00",
-  "record_count": 12435,
+  "updated_at": "2026-10-20T07:56:50+00:00",
+  "record_count": 12436,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -164956,9 +164956,9 @@
       "identity_tokens": [
         "arXiv:2601.13742"
       ],
-      "reason": "LLMの推論能力を音声評価へ適用するタスク研究であり、推論処理系・メモリ管理・量子化・サービング技術を対象としない。",
+      "reason": "原著要旨は音声信号からテキストの評価用特徴を作り、LLM審査員が音声対話の内容・音質・韻律を人間評価に近づけて判定するTRACEを提案する。評価用音声言語モデルより低コストだが、主な貢献は音声品質の自動評価法であり、LLM推論基盤の高速化やメモリ管理ではない。",
       "first_checked_at": "2026-10-12T18:50:00+00:00",
-      "last_checked_at": "2026-10-19T22:43:01+00:00",
+      "last_checked_at": "2026-10-20T07:56:49+00:00",
       "linked_from": [],
       "title": "Hearing Between the Lines: Unlocking the Reasoning Power of LLMs for Speech Evaluation"
     },
@@ -178892,9 +178892,9 @@
       "identity_tokens": [
         "arXiv:2601.18496"
       ],
-      "reason": "医療検索データとエージェント学習を用いた医療調査アプリケーションの構築であり、推論サービングやGPU・メモリ階層の最適化ではない。",
+      "reason": "原著要旨では医療質問に対する多段検索データ生成、難易度に応じたツール呼出し回数の訓練時ペナルティ、推論時の仮説検証監視を組み合わせ、7件の医療ベンチマークで回答品質を改善する。ツール呼出し制御は医療エージェントの推論戦略であり、LLMサービングの資源管理・ランタイム性能改善を主目的としない。",
       "first_checked_at": "2026-10-17T03:54:27+00:00",
-      "last_checked_at": "2026-10-19T22:43:01+00:00",
+      "last_checked_at": "2026-10-20T07:56:50+00:00",
       "linked_from": [],
       "title": "DEEPMED: Building a Medical DeepResearch Agent via Multi-hop Med-Search Data and Turn-Controlled Agentic Training & Inference"
     },
@@ -179247,6 +179247,18 @@
       "last_checked_at": "2026-10-20T07:55:02+00:00",
       "linked_from": [],
       "title": "AsyncTool: Evaluating the Asynchronous Function Calling Capability under Multi-Task Scenarios"
+    },
+    "arXiv:2602.05384": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.05384",
+      "identity_tokens": [
+        "arXiv:2602.05384"
+      ],
+      "reason": "原著要旨は文書画像の種類判別・レイアウト解析を行い、写真文書をページ全体、デジタル文書を要素単位で解析するDolphin-v2を提案する。並列解析は用いるが寄与はOCR/文書解析の認識精度とアンカープロンプトであり、LLM生成サービングや汎用GPU推論基盤の高速化ではない。",
+      "first_checked_at": "2026-10-20T07:56:50+00:00",
+      "last_checked_at": "2026-10-20T07:56:50+00:00",
+      "linked_from": [],
+      "title": "Dolphin-v2: Universal Document Parsing via Scalable Anchor Prompting"
     }
   }
 }

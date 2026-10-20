@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-60d846f1031cc2bd-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2601.13742",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2601.13742",
+    "identity_tokens": [
+      "arXiv:2601.13742"
+    ],
+    "reason": "原著要旨は音声信号からテキストの評価用特徴を作り、LLM審査員が音声対話の内容・音質・韻律を人間評価に近づけて判定するTRACEを提案する。評価用音声言語モデルより低コストだが、主な貢献は音声品質の自動評価法であり、LLM推論基盤の高速化やメモリ管理ではない。",
+    "first_checked_at": "2026-10-12T18:50:00+00:00",
+    "last_checked_at": "2026-10-20T07:56:49+00:00",
+    "linked_from": [],
+    "title": "Hearing Between the Lines: Unlocking the Reasoning Power of LLMs for Speech Evaluation"
+  },
+  "processed_at": "2026-10-20T07:56:49+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-60d846f1031c",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
