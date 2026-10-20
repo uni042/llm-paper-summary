@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-2cc80f449a2ced09-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2602.05827",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2602.05827",
+    "identity_tokens": [
+      "arXiv:2602.05827"
+    ],
+    "reason": "原著要旨はロボットの視野外ナビゲーションのため、20秒先の未来を疎な動画として生成し軌道推定を1秒未満へ短縮するSparseVideoNavを提案し、未最適化動画生成より27倍高速と報告する。生成処理の効率化には接点があるが、主対象は視覚言語ロボットの動作計画で、LLMデコード・サービング・KV管理に直接適用した評価はない。",
+    "first_checked_at": "2026-10-20T13:06:10+00:00",
+    "last_checked_at": "2026-10-20T13:06:10+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Sparse Video Generation Propels Real-World Beyond-the-View Vision-Language Navigation"
+  },
+  "processed_at": "2026-10-20T13:06:10+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-2cc80f449a2c",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

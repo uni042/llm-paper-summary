@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-70f4e6d0b3fe6ebd-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2606.20458",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2606.20458",
+    "identity_tokens": [
+      "arXiv:2606.20458"
+    ],
+    "reason": "一次要旨で対象は歩道を走行するロボットの経路候補選択。VLM応答の1〜3秒遅延を幾何学的類似度と時間減衰で制御器へ融合するが、VLMの計算・メモリ・推論サービング自体を高速化せず、評価指標は航法成功率と経路誤差である。",
+    "first_checked_at": "2026-10-20T13:06:16+00:00",
+    "last_checked_at": "2026-10-20T13:06:16+00:00",
+    "linked_from": [],
+    "title": "Slow Brain, Fast Planner: Latency-Resilient VLM-Augmented Urban Navigation"
+  },
+  "processed_at": "2026-10-20T13:06:17+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-70f4e6d0b3fe",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

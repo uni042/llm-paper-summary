@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-c19dd581aa9db1c1-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2204.13767",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2204.13767",
+    "identity_tokens": [
+      "arXiv:2204.13767",
+      "id:arXiv:2204.13767",
+      "url:https://arxiv.org/abs/2204.13767"
+    ],
+    "reason": "一次要旨は多変量時系列予測のため、系列長に線形なパッチ注意と階層を三角状に縮小する構造、変数ごとに異なる軽量パラメータを提案する。注意計算の効率化自体は扱うが、評価と最終適用は時系列予測モデルの予測精度・効率であり、大規模言語モデルの生成推論やサービング基盤に直接適用・検証したものではないため、現行の推論系統対象外とする。",
+    "first_checked_at": "2026-10-11T02:48:44+00:00",
+    "last_checked_at": "2026-10-20T13:06:24+00:00",
+    "linked_from": [],
+    "title": "Triformer: Triangular, Variable-Specific Attentions for Long Sequence Multivariate Time Series Forecasting--Full Version"
+  },
+  "processed_at": "2026-10-20T13:06:24+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-c19dd581aa9d",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

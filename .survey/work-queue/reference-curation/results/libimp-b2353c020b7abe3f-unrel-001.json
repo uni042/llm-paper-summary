@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-b2353c020b7abe3f-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2606.15869",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2606.15869",
+    "identity_tokens": [
+      "arXiv:2606.15869"
+    ],
+    "reason": "自動運転・都市ナビゲーション用の世界行動モデル。動画生成専門家と行動専門家を非対称注意マスクで分離し、推論時の動画生成を省略するが、主要評価はNAVSIM/CityWalkerの経路計画と実ロボットであり、汎用LLM推論実行基盤・学習基盤の性能最適化ではない。",
+    "first_checked_at": "2026-10-16T19:48:13+00:00",
+    "last_checked_at": "2026-10-20T13:06:23+00:00",
+    "linked_from": [],
+    "title": "Metis: A Generalizable and Efficient World-Action Model for Autonomous Driving and Urban Navigation"
+  },
+  "processed_at": "2026-10-20T13:06:23+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-b2353c020b7a",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

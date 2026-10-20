@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-20T11:55:39+00:00",
-  "record_count": 12437,
+  "updated_at": "2026-10-20T13:06:25+00:00",
+  "record_count": 12440,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -8961,9 +8961,9 @@
       "identity_tokens": [
         "arXiv:2509.15940"
       ],
-      "reason": "The primary title and abstract identify Arnold as a scheduler for LLM pre-training jobs across thousands of GPUs; the conclusion evaluates topology-aware scheduling for those pre-training jobs. The paper reports a 10.6% end-to-end improvement in production training, not inference. It is outside the inference-efficiency scope. The live worklist title field is a placeholder identity string rather than the primary paper title; the arXiv source was used to correct the reviewed title.",
+      "reason": "題名にLLMの事前学習（pre-training）を高速化する通信整合と明示されており、推論時のモデル実行・サービングではなく学習時の大規模GPU通信を対象とするため収録範囲外。",
       "first_checked_at": "2026-10-03T14:28:53+00:00",
-      "last_checked_at": "2026-10-03T14:28:53+00:00",
+      "last_checked_at": "2026-10-20T13:06:20+00:00",
       "linked_from": [
         "workers/discovery-02/ready/20260927-u-wave7/manifest.json#candidate[2]"
       ],
@@ -162910,9 +162910,9 @@
         "id:arXiv:2301.09474",
         "url:https://arxiv.org/abs/2301.09474"
       ],
-      "reason": "エネルギー制約付き拡散に基づくグラフTransformerの研究であり、対象はグラフ表現・グラフ学習で、LLM推論のメモリ、スケジューラ、カーネルの改善ではない。",
+      "reason": "原著要旨ではエネルギー制約付き拡散からグラフ上のインスタンス表現を学ぶDIFFormerを導出し、ノード分類、半教師あり画像・テキスト分類、時空間予測で評価する。線形計算量の変種はあるが、対象はグラフ表現学習バックボーンであり、LLM推論基盤や生成時の注意計算・サービングを改善する研究ではない。",
       "first_checked_at": "2026-10-11T00:45:52+00:00",
-      "last_checked_at": "2026-10-19T22:42:57+00:00",
+      "last_checked_at": "2026-10-20T13:06:21+00:00",
       "linked_from": [],
       "title": "DIFFormer: Scalable (Graph) Transformers Induced by Energy Constrained Diffusion"
     },
@@ -163078,7 +163078,7 @@
       ],
       "reason": "一次要旨は多変量時系列予測のため、系列長に線形なパッチ注意と階層を三角状に縮小する構造、変数ごとに異なる軽量パラメータを提案する。注意計算の効率化自体は扱うが、評価と最終適用は時系列予測モデルの予測精度・効率であり、大規模言語モデルの生成推論やサービング基盤に直接適用・検証したものではないため、現行の推論系統対象外とする。",
       "first_checked_at": "2026-10-11T02:48:44+00:00",
-      "last_checked_at": "2026-10-20T04:46:47+00:00",
+      "last_checked_at": "2026-10-20T13:06:24+00:00",
       "linked_from": [],
       "title": "Triformer: Triangular, Variable-Specific Attentions for Long Sequence Multivariate Time Series Forecasting--Full Version"
     },
@@ -163939,9 +163939,9 @@
         "id:arXiv:2303.05511",
         "url:https://arxiv.org/abs/2303.05511"
       ],
-      "reason": "一次要旨はGigaGANによる文章条件付き画像合成と高解像度画像生成の速度を扱う。0.13秒で512画素画像を生成する成果は画像GANの推論性能であり、大規模言語モデルのトークン生成、KV管理、LLMサービングの最適化ではない。",
+      "reason": "画像生成向け敵対的生成ネットワーク（GAN）の規模拡大を研究する題名であり、言語モデルの推論基盤、サービング、KVキャッシュ、量子化、推論メモリ管理を直接対象としていない。",
       "first_checked_at": "2026-10-11T08:49:39+00:00",
-      "last_checked_at": "2026-10-16T17:49:38+00:00",
+      "last_checked_at": "2026-10-20T13:06:13+00:00",
       "linked_from": [],
       "title": "Scaling up GANs for Text-to-Image Synthesis"
     },
@@ -164636,9 +164636,9 @@
         "arXiv:2210.13452",
         "semanticscholar:fc4cbc7a75f5a3bbca59db5513231555f078fe78"
       ],
-      "reason": "一次要旨では、画像認識向けMetaFormerのトークン混合器を恒等写像・乱数行列・畳み込み・自己注意で比較し、ImageNet-1K分類精度とStarReLUの活性化演算量を評価する。画像分類モデルの構造・精度が中心で、LLM推論サービングやLLM向けメモリ・計算実行基盤の改善を検証した研究ではないため対象外。",
+      "reason": "画像分類用MetaFormer骨格にIdentityFormer、RandFormer、ConvFormer、CAFormer等のトークン混合器を組み合わせ、ImageNet-1K分類精度と活性化関数StarReLUを検証する視覚モデル構造研究。LLM推論基盤の性能改善やサービングは対象外。",
       "first_checked_at": "2026-10-11T20:48:40+00:00",
-      "last_checked_at": "2026-10-18T16:44:47+00:00",
+      "last_checked_at": "2026-10-20T13:06:14+00:00",
       "linked_from": [],
       "title": "MetaFormer Baselines for Vision"
     },
@@ -164932,9 +164932,9 @@
         "id:arXiv:2512.04678",
         "url:https://arxiv.org/abs/2512.04678"
       ],
-      "reason": "一次要旨は映像拡散モデルによる連続動画生成を対象とし、EMA-Sinkと報酬付き分布整合蒸留で映像の動きと長期一貫性を改善する。H100で23.1 FPSの成果は動画フレーム生成であり、LLMの言語トークン復号やLLMサービングのシステム貢献を示さない。",
+      "reason": "報酬付き分布整合蒸留によるストリーミング動画生成の研究であり、動画生成モデルの蒸留・生成品質を主眼とする。LLM推論サービングの実装技術ではない。",
       "first_checked_at": "2026-10-12T18:49:58+00:00",
-      "last_checked_at": "2026-10-16T17:49:37+00:00",
+      "last_checked_at": "2026-10-20T13:06:12+00:00",
       "linked_from": [],
       "title": "Reward Forcing: Efficient Streaming Video Generation with Rewarded Distribution Matching Distillation"
     },
@@ -164994,9 +164994,9 @@
         "id:arXiv:2403.01232",
         "url:https://arxiv.org/abs/2403.01232"
       ],
-      "reason": "著者要旨によれば、グラフトランスフォーマーの局所・大域等変注意に高次多項式表現を導入し、13のグラフデータセットでグラフニューラルネットワークと比較する。線形時間の注意機構という用語上の接点はあるが、対象はグラフ分類・ノード予測であり、LLMの生成復号、KVキャッシュ、推論サービングの性能を評価していないため対象外。",
+      "reason": "一次要旨では、グラフの局所・大域同変注意を組み合わせて多項式表現能力を持つ線形計算量のグラフTransformerを構成し、13のグラフデータセットで分類性能を比較する。対象はグラフニューラルネットワークであり、LLM推論・学習・サービングの実行効率ではないため対象外。",
       "first_checked_at": "2026-10-12T21:38:02+00:00",
-      "last_checked_at": "2026-10-18T01:47:13+00:00",
+      "last_checked_at": "2026-10-20T13:06:23+00:00",
       "linked_from": [],
       "title": "Polynormer: Polynomial-Expressive Graph Transformer in Linear Time"
     },
@@ -168403,9 +168403,9 @@
         "DOI:10.48550/arxiv.2403.18421",
         "arXiv:2403.18421"
       ],
-      "reason": "PubMed文献で事前学習した27億パラメータの生物医学向け言語モデルを公開し、医療質問応答の性能とモデル特化の可能性を評価する。主貢献はドメインモデル構築・学習・応用であり、推論基盤やサービング最適化の新規方式は提示しない。",
+      "reason": "一次要旨はPubMed論文・要旨だけで訓練した27億パラメータのGPT型モデルを公開し、医学多肢選択質問への正答率など領域特化モデルの有効性を評価する。小規模化による運用費用への言及はあるが、新規の推論アルゴリズム、メモリ管理、量子化、分散サービング、GPUカーネル等を提案・評価しておらず、医学向け言語モデルの学習・応用が主目的なので対象外とする。",
       "first_checked_at": "2026-10-13T13:47:00+00:00",
-      "last_checked_at": "2026-10-19T14:51:16+00:00",
+      "last_checked_at": "2026-10-20T13:06:20+00:00",
       "linked_from": [],
       "title": "BioMedLM: A 2.7B Parameter Language Model Trained On Biomedical Text"
     },
@@ -170613,9 +170613,9 @@
       "identity_tokens": [
         "arXiv:2605.11722"
       ],
-      "reason": "一次要旨で対象は複数物体・属性・関係を満たす画像生成であり、画像生成器の再サンプリングと編集を述語検査で選ぶ方式と確認した。MLLM呼出削減は画像生成ワークフローの副次指標で、LLMの重み・KV・推論カーネル・サービング基盤の最適化ではない。",
+      "reason": "タイトルに明示された対象はテキストから画像を生成する際の述語条件による合成画像生成制御であり、LLMの推論基盤・量子化・KVキャッシュ・分散サービングの効率化を直接示していない。タイトル段階の対象外判定であり、要旨・本文は未確認。",
       "first_checked_at": "2026-10-13T21:31:16+00:00",
-      "last_checked_at": "2026-10-15T12:51:21+00:00",
+      "last_checked_at": "2026-10-20T13:06:17+00:00",
       "linked_from": [],
       "title": "EPIC: Efficient Predicate-Guided Inference-Time Control for Compositional Text-to-Image Generation"
     },
@@ -173511,20 +173511,6 @@
       "last_checked_at": "2026-10-14T04:37:31+00:00",
       "linked_from": [],
       "title": "Pose Magic: Efficient and Temporally Consistent Human Pose Estimation with a Hybrid Mamba-GCN Network"
-    },
-    "arXiv:2603.09163": {
-      "classification": "unrelated",
-      "canonical_id": "arXiv:2603.09163",
-      "identity_tokens": [
-        "arXiv:2603.09163",
-        "id:arXiv:2603.09163",
-        "url:https://arxiv.org/abs/2603.09163"
-      ],
-      "reason": "タイトルで明示される対象は視覚・言語による空間認識と実世界ナビゲーションであり、LLM推論のメモリ階層、モデル圧縮、GPUカーネル、サービング制御の研究ではない。空間認識を用いる身体化ナビゲーションのモデル研究であり、現行のLLM推論システムの収録対象から除外する。",
-      "first_checked_at": "2026-10-14T04:46:58+00:00",
-      "last_checked_at": "2026-10-14T04:46:58+00:00",
-      "linked_from": [],
-      "title": "SPAN-Nav: Generalized Spatial Awareness for Versatile Vision-Language Navigation"
     },
     "arXiv:2606.27807": {
       "classification": "unrelated",
@@ -176739,9 +176725,9 @@
         "DOI:10.48550/arxiv.2511.21730",
         "arXiv:2511.21730"
       ],
-      "reason": "タイトルに明示された中心課題は言語エージェントの手続き記憶検索を評価するベンチマークであり、LLMの推論計算・サービング・GPUメモリ管理・分散処理などのシステム最適化を対象とする研究ではない。タイトルで明白な対象外として本文調査前に除外する。",
+      "reason": "題名が言語エージェントの手続き的記憶検索のベンチマークであることを明示する。記憶検索能力の評価は、LLM推論のGPUメモリ階層・KVキャッシュ管理や実行速度の最適化ではないため対象外。",
       "first_checked_at": "2026-10-15T05:47:39+00:00",
-      "last_checked_at": "2026-10-15T05:47:39+00:00",
+      "last_checked_at": "2026-10-20T13:06:24+00:00",
       "linked_from": [],
       "title": "A Benchmark for Procedural Memory Retrieval in Language Agents"
     },
@@ -178750,19 +178736,6 @@
       "linked_from": [],
       "title": "Pirate-GPT: A locally deployed large language model framework for reliable offline anti-piracy decision support and knowledge retrieval in maritime operations"
     },
-    "arXiv:2602.05827": {
-      "classification": "unrelated",
-      "canonical_id": "arXiv:2602.05827",
-      "identity_tokens": [
-        "DOI:10.48550/arxiv.2602.05827",
-        "arXiv:2602.05827"
-      ],
-      "reason": "疎な動画生成によって視覚言語ナビゲーションを改善するロボティクス・ナビゲーション研究であり、LLM推論システムの最適化ではない。",
-      "first_checked_at": "2026-10-16T09:27:34+00:00",
-      "last_checked_at": "2026-10-19T22:42:58+00:00",
-      "linked_from": [],
-      "title": "Sparse Video Generation Propels Real-World Beyond-the-View Vision-Language Navigation"
-    },
     "arXiv:2607.20918": {
       "classification": "unrelated",
       "canonical_id": "arXiv:2607.20918",
@@ -178796,9 +178769,9 @@
         "DOI:10.48550/arxiv.2402.12289",
         "arXiv:2402.12289"
       ],
-      "reason": "一次要旨では、複雑な市街地での自動運転を目的に、視覚言語モデルを場面記述・場面解析・階層的経路計画へ組み込み、DriveVLM-Dualを実車に導入している。対象は自動運転の理解・計画精度であり、LLM推論サービング、KVキャッシュ、分散配置、量子化、推論カーネル等の基盤最適化を主要貢献としていないため対象外。",
+      "reason": "自動運転車の道路場面理解・階層的経路計画を視覚言語モデルと従来の運転制御系で組み合わせる研究。nuScenes・SUP-ADと実車走行で運転性能を評価しており、LLM推論サービング、キャッシュ、計算カーネル、モデル圧縮の最適化は主題ではない。",
       "first_checked_at": "2026-10-16T18:54:53+00:00",
-      "last_checked_at": "2026-10-18T16:44:49+00:00",
+      "last_checked_at": "2026-10-20T13:06:13+00:00",
       "linked_from": [],
       "title": "DriveVLM: The Convergence of Autonomous Driving and Large Vision-Language Models"
     },
@@ -178810,7 +178783,7 @@
       ],
       "reason": "自動運転・都市ナビゲーション用の世界行動モデル。動画生成専門家と行動専門家を非対称注意マスクで分離し、推論時の動画生成を省略するが、主要評価はNAVSIM/CityWalkerの経路計画と実ロボットであり、汎用LLM推論実行基盤・学習基盤の性能最適化ではない。",
       "first_checked_at": "2026-10-16T19:48:13+00:00",
-      "last_checked_at": "2026-10-19T17:53:01+00:00",
+      "last_checked_at": "2026-10-20T13:06:23+00:00",
       "linked_from": [],
       "title": "Metis: A Generalizable and Efficient World-Action Model for Autonomous Driving and Urban Navigation"
     },
@@ -178832,23 +178805,11 @@
       "identity_tokens": [
         "DOI:10.1016/j.dcan.2026.03.010"
       ],
-      "reason": "生成AIと大規模言語モデルをIoT領域へ応用する研究を題名が示し、推論サーバ・メモリ階層・カーネル・モデル圧縮の具体的な新方式を主題としない。",
+      "reason": "タイトルに明示された研究主題はIoT分野における生成AI・LLMの応用と展望であり、LLM推論エンジン、KVキャッシュ、量子化、分散実行の最適化研究ではない。本文・要旨は未読で、タイトルに基づく明確な対象外判定に限定する。",
       "first_checked_at": "2026-10-16T19:48:15+00:00",
-      "last_checked_at": "2026-10-16T19:48:15+00:00",
+      "last_checked_at": "2026-10-20T13:06:16+00:00",
       "linked_from": [],
       "title": "Generative IoT: advancing IoT with generative AI and large language models"
-    },
-    "arXiv:2607.29600": {
-      "classification": "unrelated",
-      "canonical_id": "arXiv:2607.29600",
-      "identity_tokens": [
-        "arXiv:2607.29600"
-      ],
-      "reason": "階層的エージェント記憶を使った視覚言語ナビゲーションのゼロショット制御が対象であり、LLMのKVキャッシュやサービング向けメモリ管理ではない。",
-      "first_checked_at": "2026-10-16T19:48:15+00:00",
-      "last_checked_at": "2026-10-16T19:48:15+00:00",
-      "linked_from": [],
-      "title": "HAM-VLN: Harnessing Hierarchical Agentic Memory for Zero-Shot Vision-and-Language Navigation"
     },
     "arXiv:2601.13384": {
       "classification": "unrelated",
@@ -178856,9 +178817,9 @@
       "identity_tokens": [
         "arXiv:2601.13384"
       ],
-      "reason": "一次要旨で、コード補完を検索・置換型の編集タスクへ変換し、SRI-200KデータでQwen3-Coder系列を追加学習する手法が主題と確認。単一推論パスで編集できる点は述べるが、推論カーネル、KVキャッシュ、モデル配置、サービングスケジューラ等のシステム最適化を提案・評価していない。コード生成タスクの能力・学習方式の研究として対象外。",
+      "reason": "検索・置換指示チューニングでコード補完から編集へ能力を拡張する研究であり、学習手法とコード生成能力が主題である。LLM推論基盤の最適化を直接扱わない。",
       "first_checked_at": "2026-10-17T03:54:25+00:00",
-      "last_checked_at": "2026-10-17T03:54:25+00:00",
+      "last_checked_at": "2026-10-20T13:06:11+00:00",
       "linked_from": [],
       "title": "From Completion to Editing: Unlocking Context-Aware Code Infilling via Search-and-Replace Instruction Tuning"
     },
@@ -179067,27 +179028,15 @@
       "linked_from": [],
       "title": "Time Served"
     },
-    "arXiv:2511.13593": {
-      "classification": "unrelated",
-      "canonical_id": "arXiv:2511.13593",
-      "identity_tokens": [
-        "arXiv:2511.13593"
-      ],
-      "reason": "一次要旨で、エージェントのユーザー属性・イベント記録を能動的に抽出更新し、階層検索で長期対話の個人化を改善するアプリケーション記憶方式と確認した。LoCoMoとPERSONAMEMの回答品質やトークン効率を扱うが、GPU/CPU階層メモリ、KVキャッシュ、推論サービング基盤のメモリ管理とは異なるため対象外。",
-      "first_checked_at": "2026-10-18T17:52:13+00:00",
-      "last_checked_at": "2026-10-18T17:52:13+00:00",
-      "linked_from": [],
-      "title": "O-Mem: Omni Memory System for Personalized, Long Horizon, Self-Evolving Agents"
-    },
     "arXiv:2601.08311": {
       "classification": "unrelated",
       "canonical_id": "arXiv:2601.08311",
       "identity_tokens": [
         "arXiv:2601.08311"
       ],
-      "reason": "一次要旨を確認。画質が異なる類似参照画像と主観評価スコアをRAGで提示し、視覚言語モデルによる画像品質評価の精度を追加学習なしで高める研究。主な評価はKADID、KonIQ、LIVE Challenge、SPAQの画質推定品質であり、LLM推論基盤の速度・メモリ・GPU配置・KV管理を直接改善する研究ではない。",
+      "reason": "題名が示す対象は検索拡張生成を利用した大規模マルチモーダルモデルの画像品質評価能力であり、推論時のGPU計算・KVキャッシュ・メモリ階層・サービングの効率化を提案する研究ではない。",
       "first_checked_at": "2026-10-19T01:45:59+00:00",
-      "last_checked_at": "2026-10-19T01:45:59+00:00",
+      "last_checked_at": "2026-10-20T13:06:19+00:00",
       "linked_from": [],
       "title": "Enhancing Image Quality Assessment Ability of LMMs via Retrieval-Augmented Generation"
     },
@@ -179097,9 +179046,9 @@
       "identity_tokens": [
         "arXiv:2512.06747"
       ],
-      "reason": "LLMを制御・協調判断に使う無人航空機群のプライバシー保護とIoT監視を扱う。主な貢献は飛行体の協調・セキュリティ用途であり、LLMサービング実行系、GPU推論カーネル、KV管理の性能改善ではない。",
+      "reason": "題名が示す主目的はLLMで制御する無人航空機群のプライバシー保護とIoT監視であり、LLM推論基盤の性能・量子化・MoE・分散実行の改善ではない。",
       "first_checked_at": "2026-10-19T04:43:31+00:00",
-      "last_checked_at": "2026-10-19T04:43:31+00:00",
+      "last_checked_at": "2026-10-20T13:06:19+00:00",
       "linked_from": [],
       "title": "PrivLLMSwarm: Privacy-Preserving LLM-Driven UAV Swarms for Secure IoT Surveillance"
     },
@@ -179194,9 +179143,9 @@
       "identity_tokens": [
         "arXiv:2407.18370"
       ],
-      "reason": "LLM判定器の人間評価との一致保証を扱う評価・信頼性研究であり、推論カーネルやデコード、分散サービングの性能技術ではない。",
+      "reason": "原著要旨はLLMによる回答品質判定を人間の評価との一致保証のもとで選択的に信頼・上位モデルへエスカレーションする統計的評価方式を提案する。低コストモデルの段階的利用は含むが、目的と指標は評価判断の信頼性・カバレッジであり、推論基盤の計算資源・メモリ・スケジューリング最適化ではない。",
       "first_checked_at": "2026-10-19T22:43:00+00:00",
-      "last_checked_at": "2026-10-19T22:43:00+00:00",
+      "last_checked_at": "2026-10-20T13:06:17+00:00",
       "linked_from": [],
       "title": "Trust or Escalate: LLM Judges with Provable Guarantees for Human Agreement"
     },
@@ -179271,6 +179220,90 @@
       "last_checked_at": "2026-10-20T11:55:37+00:00",
       "linked_from": [],
       "title": "Task Singular Vectors: Reducing Task Interference in Model Merging"
+    },
+    "arXiv:2601.21096": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.21096",
+      "identity_tokens": [
+        "arXiv:2601.21096"
+      ],
+      "reason": "原著arXivの要旨は、LLMをコード生成エージェントとして利用し、LLVMの関数インライン化・レジスタ割当てとXLAのコンパイラ最適化パスに組み込むC++判断規則を進化探索するMagellanを報告する。主要成果は一般コンパイラの最適化ヒューリスティクス自動発見であり、LLM自体の推論実行、サービング、KVキャッシュ、MoE配置、量子化、推論用カーネルの高速化を直接提案・評価していない。LLMは探索を行う道具であって、推論システムの改善対象ではないため本サーベイの収録対象外。",
+      "first_checked_at": "2026-10-20T13:06:12+00:00",
+      "last_checked_at": "2026-10-20T13:06:12+00:00",
+      "linked_from": [],
+      "title": "Magellan: Autonomous Discovery of Novel Compiler Optimization Heuristics with AlphaEvolve"
+    },
+    "arXiv:2603.20284": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.20284",
+      "identity_tokens": [
+        "arXiv:2603.20284"
+      ],
+      "reason": "因果Transformerの時空間KVキャッシュを、注意累積重みでの時間方向保持・ボクセル整列の空間圧縮・複数フレームのチャンク化で約10倍省メモリ化するが、最終対象はストリーミング3次元再構成（VGGT）であり、LLM推論・サービング・MoEではない。",
+      "first_checked_at": "2026-10-20T13:06:14+00:00",
+      "last_checked_at": "2026-10-20T13:06:14+00:00",
+      "linked_from": [],
+      "title": "STAC: Plug-and-Play Spatio-Temporal Aware Cache Compression for Streaming 3D Reconstruction"
+    },
+    "arXiv:2606.20458": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.20458",
+      "identity_tokens": [
+        "arXiv:2606.20458"
+      ],
+      "reason": "一次要旨で対象は歩道を走行するロボットの経路候補選択。VLM応答の1〜3秒遅延を幾何学的類似度と時間減衰で制御器へ融合するが、VLMの計算・メモリ・推論サービング自体を高速化せず、評価指標は航法成功率と経路誤差である。",
+      "first_checked_at": "2026-10-20T13:06:16+00:00",
+      "last_checked_at": "2026-10-20T13:06:16+00:00",
+      "linked_from": [],
+      "title": "Slow Brain, Fast Planner: Latency-Resilient VLM-Augmented Urban Navigation"
+    },
+    "arXiv:2511.16193": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2511.16193",
+      "identity_tokens": [
+        "arXiv:2511.16193"
+      ],
+      "reason": "SpecActorは推論時の投機的復号技術を利用するが、目的・実装・評価は強化学習後学習における大量rollout生成の高速化と学習全体の処理時間短縮である。現行サーベイの凍結対象である学習専用最適化であり、オンラインLLM推論サービングへの適用・評価を主張していない。",
+      "first_checked_at": "2026-10-20T13:06:18+00:00",
+      "last_checked_at": "2026-10-20T13:06:18+00:00",
+      "linked_from": [],
+      "title": "Fast LLM Post-training via Decoupled and Best-of-N Speculation"
+    },
+    "arXiv:2409.02361": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2409.02361",
+      "identity_tokens": [
+        "arXiv:2409.02361"
+      ],
+      "reason": "題名が示す対象は曖昧な質問に対する検索拡張回答の正確性と頑健性であり、LLMの実行エンジン・KVキャッシュ・GPU演算や推論サービングの高速化ではない。",
+      "first_checked_at": "2026-10-20T13:06:19+00:00",
+      "last_checked_at": "2026-10-20T13:06:19+00:00",
+      "linked_from": [],
+      "title": "Diversify-verify-adapt: Efficient and Robust Retrieval-Augmented Ambiguous Question Answering"
+    },
+    "arXiv:2208.00406": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2208.00406",
+      "identity_tokens": [
+        "arXiv:2208.00406"
+      ],
+      "reason": "機械学習プログラムの電力消費と地域別CO2排出換算を計測する汎用Pythonパッケージの研究。推論も計測対象に含み得るが、LLMの実行方式、推論カーネル、KVキャッシュ、モデル配備の効率化手法は提案していない。",
+      "first_checked_at": "2026-10-20T13:06:25+00:00",
+      "last_checked_at": "2026-10-20T13:06:25+00:00",
+      "linked_from": [],
+      "title": "eco2AI: Carbon Emissions Tracking of Machine Learning Models as the First Step Towards Sustainable AI"
+    },
+    "arXiv:2609.30579": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.30579",
+      "identity_tokens": [
+        "arXiv:2609.30579"
+      ],
+      "reason": "一次論文は離散群の部分群族に対する位相的複雑度TC_Fを定義し、分布的位相的複雑度の下界、Bredonコホモロジーによる不変量、torsion-free群の定理を証明する純粋数学研究である。本文のmotion planningは位相空間上の経路選択の不変量を意味し、LLMの推論計画・サービング・KVキャッシュ・MoE・量子化・分散実行とは関係しない。研究ワーカーの候補同一性が誤ってこの数学論文へ結び付いたため、収録対象外と確定する。",
+      "first_checked_at": "2026-10-20T13:06:25+00:00",
+      "last_checked_at": "2026-10-20T13:06:25+00:00",
+      "linked_from": [],
+      "title": "Motion planning invariants and families of subgroups"
     }
   }
 }

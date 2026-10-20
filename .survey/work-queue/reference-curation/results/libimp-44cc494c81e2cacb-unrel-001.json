@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-44cc494c81e2cacb-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2601.21096",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2601.21096",
+    "identity_tokens": [
+      "arXiv:2601.21096"
+    ],
+    "reason": "原著arXivの要旨は、LLMをコード生成エージェントとして利用し、LLVMの関数インライン化・レジスタ割当てとXLAのコンパイラ最適化パスに組み込むC++判断規則を進化探索するMagellanを報告する。主要成果は一般コンパイラの最適化ヒューリスティクス自動発見であり、LLM自体の推論実行、サービング、KVキャッシュ、MoE配置、量子化、推論用カーネルの高速化を直接提案・評価していない。LLMは探索を行う道具であって、推論システムの改善対象ではないため本サーベイの収録対象外。",
+    "first_checked_at": "2026-10-20T13:06:12+00:00",
+    "last_checked_at": "2026-10-20T13:06:12+00:00",
+    "linked_from": [],
+    "title": "Magellan: Autonomous Discovery of Novel Compiler Optimization Heuristics with AlphaEvolve"
+  },
+  "processed_at": "2026-10-20T13:06:12+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-44cc494c81e2",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-20T11:55:38+00:00",
-  "record_count": 5274,
+  "updated_at": "2026-10-20T13:06:25+00:00",
+  "record_count": 5281,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -71099,9 +71099,9 @@
         "DOI:10.48550/arxiv.2512.05665",
         "arXiv:2512.05665"
       ],
-      "reason": "一次要旨では高密度画像を逐次再符号化する計算負担を避ける潜在視覚推論を提案し、教師モデルが中間画像から関連特徴を選択蒸留する。再符号化削減は推論効率に関係するが、中心は多モーダル推論の中間状態表現と正答率で、LLM推論エンジンの計算・メモリ削減の直接定量評価は要旨から確認できないため境界候補。",
+      "reason": "一次要旨では、画素密度の高い中間画像を反復再符号化する計算費用を避けるため、文章生成と動的な潜在視覚表現を交互に出力し、モメンタム教師が関連視覚特徴を選択して学習を指導する。画像処理費用の削減は推論効率に関係するが、主要貢献は視覚推論の表現学習と品質であり、汎用LLMのKV・スケジューラ・推論実行系を直接最適化する研究ではないため境界判定。",
       "first_checked_at": "2026-10-11T11:49:06+00:00",
-      "last_checked_at": "2026-10-18T17:52:15+00:00",
+      "last_checked_at": "2026-10-20T13:06:21+00:00",
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "Interleaved Latent Visual Reasoning with Selective Perceptual Modeling"
@@ -71617,9 +71617,9 @@
       "identity_tokens": [
         "arXiv:2512.18706"
       ],
-      "reason": "一次要旨では、音声認識・音声合成・LLMを分離したカスケード型音声対話基盤を最適化し、1秒未満の応答遅延と柔軟なモジュール連携を実現する。低遅延LLM実行パイプラインの編成という関連性はあるが、主評価は音声対話システム全体であり、LLMモデルの計算カーネル・KV管理・汎用サービングの最適化を直接検証する研究ではない。",
+      "reason": "一次要旨では、音声活動検出・音声強調・認識・環境音理解とLLMをモジュール化して接続し、音声対話を1秒未満の遅延で処理する設計を提案する。LLMを含む実時間推論パイプラインの遅延最適化は関連するが、主貢献は音声対話アプリケーションのモジュール設計であり、汎用LLMランタイムやモデル内推論高速化は対象外のため境界判定。",
       "first_checked_at": "2026-10-12T17:45:21+00:00",
-      "last_checked_at": "2026-10-19T11:26:30+00:00",
+      "last_checked_at": "2026-10-20T13:06:22+00:00",
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "X-Talk: On the Underestimated Potential of Modular Speech-to-Speech Dialogue System"
@@ -71646,7 +71646,7 @@
       ],
       "reason": "一次要旨では長い動画入力の視覚トークン数を統合によって削減し、性能低下を小さく抑える実装上の工夫があり、マルチモーダル推論の入力圧縮に関連する。ただし中心的な貢献は詳細動画キャプション生成モデルAuroraCap、VDC評価データセットおよびVDCscore指標の提案で、GPU実測サービング遅延・KV管理・汎用推論基盤の効率化の定量検証は要旨から確認できないため、直接収録を保留する。",
       "first_checked_at": "2026-10-12T18:49:58+00:00",
-      "last_checked_at": "2026-10-20T04:46:49+00:00",
+      "last_checked_at": "2026-10-20T13:06:11+00:00",
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "AuroraCap: Efficient, Performant Video Detailed Captioning and a New Benchmark"
@@ -71681,11 +71681,12 @@
       "classification": "borderline",
       "canonical_id": "arXiv:2605.27480",
       "identity_tokens": [
+        "DOI:10.48550/arxiv.2605.27480",
         "arXiv:2605.27480"
       ],
-      "reason": "一次要旨はLLMサービングを要求単位で計測し、運用・製造由来の生物多様性影響と回答品質を同時に評価するBIRDSを提案する。モデル・GPU・地域・要求負荷によるサービング設計の比較指標として関連するが、提案の中心は環境影響の定量評価であり、推論スケジューラやGPU実行の高速化・メモリ削減を直接実装する研究ではない。",
+      "reason": "要旨で確認した中心課題はLLM配信の運用時・製造時の生物多様性影響と品質正規化生物多様性指標（QNBI）の計量であり、GPU実行カーネル、KVキャッシュ、MoE配置、スケジューラ、圧縮・オフロード、推論高速化そのものの新手法ではない。要求単位の資源評価はLLM配信の運用指標と関係するため完全な無関係とは断定せず、環境影響・配信効率評価の周辺研究としてborderlineとする。本文は未読であり、実装・測定の詳細を確認できた場合は再評価可能。",
       "first_checked_at": "2026-10-12T19:45:24+00:00",
-      "last_checked_at": "2026-10-12T19:45:24+00:00",
+      "last_checked_at": "2026-10-20T13:06:08+00:00",
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "BIRDS: Characterizing and Understanding Biodiversity Impact of Large Language Model Serving"
@@ -81142,19 +81143,6 @@
       "borderline_recheck_count": 0,
       "title": "Mixture of Distributions Matters: Dynamic Sparse Attention for Efficient Video Diffusion Transformers"
     },
-    "arXiv:2603.20284": {
-      "classification": "borderline",
-      "canonical_id": "arXiv:2603.20284",
-      "identity_tokens": [
-        "arXiv:2603.20284"
-      ],
-      "reason": "一次要旨は因果VGGTによる連続3D再構築で、減衰累積注意に基づく時間トークン保持、ボクセル整列した空間圧縮、複数フレーム一括処理によりKVキャッシュを約10分の1、推論を約4倍高速化すると報告する。キャッシュ管理機構はLLMへの転用可能性があるが、直接の適用先は3D再構築用Transformerであり、LLM生成・サービング実測ではないため境界的とする。",
-      "first_checked_at": "2026-10-16T09:22:42+00:00",
-      "last_checked_at": "2026-10-16T09:22:42+00:00",
-      "linked_from": [],
-      "borderline_recheck_count": 0,
-      "title": "STAC: Plug-and-Play Spatio-Temporal Aware Cache Compression for Streaming 3D Reconstruction"
-    },
     "arXiv:2601.09708": {
       "classification": "borderline",
       "canonical_id": "arXiv:2601.09708",
@@ -81257,9 +81245,9 @@
       "identity_tokens": [
         "arXiv:2601.10011"
       ],
-      "reason": "自然言語からSQLへの変換を対象に、質問分解の多様化と過去の失敗・修正例の検索でテスト時推論の資源使用を抑える。BIRDで68.5%の実行正答率と従来のテスト時拡張方式より10倍超少ない資源使用を報告するため推論計算の節約とは関係するが、主目的はNL2SQLアプリケーションの正答率であり、汎用LLMの推論エンジンや学習基盤の最適化ではない。",
+      "reason": "一次要旨では、SQL生成で質問をエンティティ別・階層別・逐次的に分解し、過去の誤りと修正例を検索して自己訂正する学習不要の推論方式を提案する。BIRDで実行正答率68.5%、既存のテスト時スケーリング手法比で10倍以上少ない資源を主張するが、主眼はNL2SQLの推論戦略・精度で、LLMサービング基盤の最適化は直接扱わないため境界判定。",
       "first_checked_at": "2026-10-18T01:47:11+00:00",
-      "last_checked_at": "2026-10-18T22:46:48+00:00",
+      "last_checked_at": "2026-10-20T13:06:22+00:00",
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "Memo-SQL: Structured Decomposition and Experience-Driven Self-Correction for Training-Free NL2SQL"
@@ -81586,19 +81574,6 @@
       "borderline_recheck_count": 0,
       "title": "Empowering Compact LLMs with Fusion of Layer-wise Exits for Recommendation"
     },
-    "arXiv:2208.00406": {
-      "classification": "borderline",
-      "canonical_id": "arXiv:2208.00406",
-      "identity_tokens": [
-        "arXiv:2208.00406"
-      ],
-      "reason": "一次要旨では、汎用の機械学習学習・推論コードの消費電力量と地域別CO2排出量を計測するPythonパッケージを提案する。推論基盤の計測という隣接性はあるが、LLM推論に固有のサービング、KVキャッシュ、GPUカーネル、メモリ階層、推論スケジューラへの直接的な最適化や評価は示されず、現行サーベイへの直接採用根拠は弱い。",
-      "first_checked_at": "2026-10-18T16:44:48+00:00",
-      "last_checked_at": "2026-10-18T16:44:48+00:00",
-      "linked_from": [],
-      "borderline_recheck_count": 0,
-      "title": "Eco2AI: carbon emissions tracking of machine learning models as the first step towards sustainable AI"
-    },
     "arXiv:2609.30057": {
       "classification": "borderline",
       "canonical_id": "arXiv:2609.30057",
@@ -81660,9 +81635,9 @@
       "identity_tokens": [
         "arXiv:2605.05278"
       ],
-      "reason": "MoEの情報理論的なルーティング解析だが、主要な実証はMNIST分類と有限CNN専門家集合を用いる。LLM推論の実装・通信実測・サービング高速化は示されない。将来のルータ設計への理論的参考として保留する。",
+      "reason": "一次論文の要旨ではMoEのルータを確率的な情報チャネルとみなし、入力と選択専門家の相互情報量I(X;T)および学習標本と選択モデルのI(S;W)を、MNIST画像分類と事前学習済みCNN専門家の有限集合で推定する。通信効率を設計目標に含むが、LLM推論の専門家並列通信・GPU実行・サービング遅延や実通信帯域は測定していない。MoEルーティング理論との接点はあるため境界的とする。",
       "first_checked_at": "2026-10-19T01:45:57+00:00",
-      "last_checked_at": "2026-10-19T09:51:21+00:00",
+      "last_checked_at": "2026-10-20T13:06:09+00:00",
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "Expert Routing for Communication-Efficient MoE via Finite Expert Banks"
@@ -81697,11 +81672,12 @@
       "classification": "borderline",
       "canonical_id": "arXiv:2605.12396",
       "identity_tokens": [
+        "NCCLZ",
         "arXiv:2605.12396"
       ],
-      "reason": "GPU集合通信を量子化とエントロピー符号化で高速化するシステム研究。論文本文の実験対象は科学計算、学習勾配、合成通信であり、LLM推論サービングやMoE推論での直接評価はない。分散推論への転用余地はあるが、主対象とは距離がある。",
+      "reason": "GPU集合通信の通信量を削減する基盤技術でありLLM分散推論の通信にも関連し得るが、原著の評価対象はQMCPack、CESM-ATM、ResNet-18/34の学習勾配、合成通信負荷である。論文の結論はLLMの分割並列や集合通信が多い推論への最適化を将来課題と明記する。LLM推論サービスの遅延、生成処理量、MoE通信などを実測した論文ではないため、現行の推論基盤サーベイでは境界領域として保留する。最大9.65倍という数値は科学データを含む圧縮通信の比較結果であり、LLM推論高速化倍率ではない。",
       "first_checked_at": "2026-10-19T08:44:07+00:00",
-      "last_checked_at": "2026-10-19T09:51:20+00:00",
+      "last_checked_at": "2026-10-20T13:06:08+00:00",
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "NCCLZ: Compression-Enabled GPU Collectives with Decoupled Quantization and Entropy Coding"
@@ -81862,6 +81838,123 @@
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "HunyuanOCR Technical Report"
+    },
+    "arXiv:2606.31796": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.31796",
+      "identity_tokens": [
+        "arXiv:2606.31796"
+      ],
+      "reason": "64ページの論文は選択的教師トークンによる学習、再帰深度圧縮、専門家融合、韓国語モデルの構築と自己修正能力の評価が中心。48層を6個の共有ブロックにまとめる方式や、122Bモデルを120GBの単一加速器へ83GBピークで常駐させる報告は推論メモリと関連するが、推論基盤の新しい実装を比較する独立の処理量・遅延実験ではない。学習専用研究の凍結範囲との境界にあるためborderlineとし、Research完成には数えない。",
+      "first_checked_at": "2026-10-20T13:06:09+00:00",
+      "last_checked_at": "2026-10-20T13:06:09+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "CHERRY: Compressed Hierarchical Experts with Recurrent Representational Yield"
+    },
+    "arXiv:2602.05827": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2602.05827",
+      "identity_tokens": [
+        "arXiv:2602.05827"
+      ],
+      "reason": "原著要旨はロボットの視野外ナビゲーションのため、20秒先の未来を疎な動画として生成し軌道推定を1秒未満へ短縮するSparseVideoNavを提案し、未最適化動画生成より27倍高速と報告する。生成処理の効率化には接点があるが、主対象は視覚言語ロボットの動作計画で、LLMデコード・サービング・KV管理に直接適用した評価はない。",
+      "first_checked_at": "2026-10-20T13:06:10+00:00",
+      "last_checked_at": "2026-10-20T13:06:10+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Sparse Video Generation Propels Real-World Beyond-the-View Vision-Language Navigation"
+    },
+    "DOI:10.1109/hpca68181.2026.11408564": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/hpca68181.2026.11408564",
+      "identity_tokens": [
+        "DOI:10.1109/hpca68181.2026.11408564"
+      ],
+      "reason": "HPCA 2026公式要旨ではGPUの統合仮想メモリ（UVM）のページフォールト処理をパイプライン化し、スレッド間共有度に基づいてGPUメモリとゼロコピー領域を動的配置するドライバ方式を提案する。GPUメモリ超過実行はLLM推論基盤と技術的に近いが、要旨では一般GPUアプリのUVM管理であり、LLM生成・KV退避での固有評価を確認できないため境界的。",
+      "first_checked_at": "2026-10-20T13:06:10+00:00",
+      "last_checked_at": "2026-10-20T13:06:10+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "ARIADNE: Adaptive UVM Management for Efficient GPU Memory Oversubscription"
+    },
+    "arXiv:2512.15586": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2512.15586",
+      "identity_tokens": [
+        "arXiv:2512.15586"
+      ],
+      "reason": "サブワード言語モデルをバイト単位へ変換する二段階学習方式。実用的な推論速度に言及するが、主な貢献はトークン化方式とモデル学習・文字単位能力であり、推論エンジンの高速化・分散配信最適化が主題ではない。",
+      "first_checked_at": "2026-10-20T13:06:12+00:00",
+      "last_checked_at": "2026-10-20T13:06:12+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Bolmo: Byteifying the Next Generation of Language Models"
+    },
+    "arXiv:2602.07878": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2602.07878",
+      "identity_tokens": [
+        "arXiv:2602.07878"
+      ],
+      "reason": "一次要旨は継続バッチ処理の論理的隔離とKVキャッシュ枯渇・プリエンプションによるサービング遅延の脆弱性を評価する。スケジューラとメモリ管理を直接扱うが、主たる寄与はサービス妨害攻撃の実証であり、推論性能を改善する新規実行方式ではないため境界判定。",
+      "first_checked_at": "2026-10-20T13:06:15+00:00",
+      "last_checked_at": "2026-10-20T13:06:15+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Rethinking Latency Denial-of-Service: Attacking the LLM Serving Framework, Not the Model"
+    },
+    "arXiv:2607.29600": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2607.29600",
+      "identity_tokens": [
+        "arXiv:2607.29600"
+      ],
+      "reason": "一次要旨ではロボットの視覚言語ナビゲーションで、直近経路を保持し過去履歴を関連性・新しさ・顕著性で検索する階層メモリにより文脈長を65%以上削減する。推論トークン量には影響するが、主な貢献と評価はロボット航法で、一般的なLLMサービングやKV管理基盤の改善ではない。",
+      "first_checked_at": "2026-10-20T13:06:15+00:00",
+      "last_checked_at": "2026-10-20T13:06:15+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "HAM-VLN: Harnessing Hierarchical Agentic Memory for Zero-Shot Vision-and-Language Navigation"
+    },
+    "arXiv:2605.31256": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.31256",
+      "identity_tokens": [
+        "arXiv:2605.31256"
+      ],
+      "reason": "一次要旨では自動運転向けLLM制御器を強化学習中に段階的枝刈りし、Jetson AGX Orinで復号スループット最大27%改善を報告する。推論向けモデル圧縮と実機速度に関連する一方、中心的な新規性は強化学習・教師あり微調整中の枝刈り時期であり、汎用推論実行基盤の方式ではないため境界判定。",
+      "first_checked_at": "2026-10-20T13:06:16+00:00",
+      "last_checked_at": "2026-10-20T13:06:16+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Before Parc Fermé: RL-Time Pruning for Efficient Embodied LLMs in Autonomous Driving"
+    },
+    "arXiv:2603.09163": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2603.09163",
+      "identity_tokens": [
+        "arXiv:2603.09163"
+      ],
+      "reason": "占有予測から得た空間事前情報を単一の空間トークンに圧縮し、視覚言語ナビゲーションの行動推論へ注入する。表現圧縮による計算量低減の接点はあるが、主要な貢献・評価はロボットの空間認識と経路計画であり、一般的なLLM生成推論・サービング基盤への適用は要旨で示されない。",
+      "first_checked_at": "2026-10-20T13:06:18+00:00",
+      "last_checked_at": "2026-10-20T13:06:18+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "SPAN-Nav: Generalized Spatial Awareness for Versatile Vision-Language Navigation"
+    },
+    "arXiv:2511.13593": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2511.13593",
+      "identity_tokens": [
+        "arXiv:2511.13593"
+      ],
+      "reason": "一次要旨では、ユーザー特性とイベント履歴を能動的に更新し、人物属性と話題に応じた階層検索で長期エージェント応答を改善する。トークン数・応答時間の効率改善にも言及するが、主たる評価はLoCoMoとPERSONAMEMの記憶・個人化品質で、LLM実行基盤のメモリ階層やKVキャッシュ最適化ではないため境界判定。",
+      "first_checked_at": "2026-10-20T13:06:21+00:00",
+      "last_checked_at": "2026-10-20T13:06:21+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "O-Mem: Omni Memory System for Personalized, Long Horizon, Self-Evolving Agents"
     }
   }
 }

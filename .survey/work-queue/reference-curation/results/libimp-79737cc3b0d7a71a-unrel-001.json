@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-79737cc3b0d7a71a-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2407.18370",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2407.18370",
+    "identity_tokens": [
+      "arXiv:2407.18370"
+    ],
+    "reason": "原著要旨はLLMによる回答品質判定を人間の評価との一致保証のもとで選択的に信頼・上位モデルへエスカレーションする統計的評価方式を提案する。低コストモデルの段階的利用は含むが、目的と指標は評価判断の信頼性・カバレッジであり、推論基盤の計算資源・メモリ・スケジューリング最適化ではない。",
+    "first_checked_at": "2026-10-19T22:43:00+00:00",
+    "last_checked_at": "2026-10-20T13:06:17+00:00",
+    "linked_from": [],
+    "title": "Trust or Escalate: LLM Judges with Provable Guarantees for Human Agreement"
+  },
+  "processed_at": "2026-10-20T13:06:17+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-79737cc3b0d7",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

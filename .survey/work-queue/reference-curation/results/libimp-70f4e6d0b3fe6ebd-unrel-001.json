@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-70f4e6d0b3fe6ebd-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1016/j.dcan.2026.03.010",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1016/j.dcan.2026.03.010",
+    "identity_tokens": [
+      "DOI:10.1016/j.dcan.2026.03.010"
+    ],
+    "reason": "タイトルに明示された研究主題はIoT分野における生成AI・LLMの応用と展望であり、LLM推論エンジン、KVキャッシュ、量子化、分散実行の最適化研究ではない。本文・要旨は未読で、タイトルに基づく明確な対象外判定に限定する。",
+    "first_checked_at": "2026-10-16T19:48:15+00:00",
+    "last_checked_at": "2026-10-20T13:06:16+00:00",
+    "linked_from": [],
+    "title": "Generative IoT: advancing IoT with generative AI and large language models"
+  },
+  "processed_at": "2026-10-20T13:06:16+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-70f4e6d0b3fe",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-8fc9123ffccaf033-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2511.16193",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2511.16193",
+    "identity_tokens": [
+      "arXiv:2511.16193"
+    ],
+    "reason": "SpecActorは推論時の投機的復号技術を利用するが、目的・実装・評価は強化学習後学習における大量rollout生成の高速化と学習全体の処理時間短縮である。現行サーベイの凍結対象である学習専用最適化であり、オンラインLLM推論サービングへの適用・評価を主張していない。",
+    "first_checked_at": "2026-10-20T13:06:18+00:00",
+    "last_checked_at": "2026-10-20T13:06:18+00:00",
+    "linked_from": [],
+    "title": "Fast LLM Post-training via Decoupled and Best-of-N Speculation"
+  },
+  "processed_at": "2026-10-20T13:06:18+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-8fc9123ffcca",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

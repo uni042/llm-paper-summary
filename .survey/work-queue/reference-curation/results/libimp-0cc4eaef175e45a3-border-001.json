@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-0cc4eaef175e45a3-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2605.27480",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2605.27480",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2605.27480",
+      "arXiv:2605.27480"
+    ],
+    "reason": "要旨で確認した中心課題はLLM配信の運用時・製造時の生物多様性影響と品質正規化生物多様性指標（QNBI）の計量であり、GPU実行カーネル、KVキャッシュ、MoE配置、スケジューラ、圧縮・オフロード、推論高速化そのものの新手法ではない。要求単位の資源評価はLLM配信の運用指標と関係するため完全な無関係とは断定せず、環境影響・配信効率評価の周辺研究としてborderlineとする。本文は未読であり、実装・測定の詳細を確認できた場合は再評価可能。",
+    "first_checked_at": "2026-10-12T19:45:24+00:00",
+    "last_checked_at": "2026-10-20T13:06:08+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "BIRDS: Characterizing and Understanding Biodiversity Impact of Large Language Model Serving"
+  },
+  "processed_at": "2026-10-20T13:06:08+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-0cc4eaef175e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

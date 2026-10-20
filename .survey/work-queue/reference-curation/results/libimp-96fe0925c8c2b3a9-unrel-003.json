@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-96fe0925c8c2b3a9-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2409.02361",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2409.02361",
+    "identity_tokens": [
+      "arXiv:2409.02361"
+    ],
+    "reason": "題名が示す対象は曖昧な質問に対する検索拡張回答の正確性と頑健性であり、LLMの実行エンジン・KVキャッシュ・GPU演算や推論サービングの高速化ではない。",
+    "first_checked_at": "2026-10-20T13:06:19+00:00",
+    "last_checked_at": "2026-10-20T13:06:19+00:00",
+    "linked_from": [],
+    "title": "Diversify-verify-adapt: Efficient and Robust Retrieval-Augmented Ambiguous Question Answering"
+  },
+  "processed_at": "2026-10-20T13:06:20+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-96fe0925c8c2",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
