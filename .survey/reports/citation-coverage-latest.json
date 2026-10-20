@@ -1,16 +1,16 @@
 {
   "schema_version": 1,
   "reference_audit_version": 1,
-  "checked_at": "2026-10-20T01:34:35+00:00",
+  "checked_at": "2026-10-20T01:43:07+00:00",
   "summary": {
     "total": 2674,
-    "complete": 2671,
-    "incomplete": 3
+    "complete": 2674,
+    "incomplete": 0
   },
   "families": {
     "inference": {
       "total": 2635,
-      "complete": 2632
+      "complete": 2635
     },
     "training": {
       "total": 25,
@@ -21,21 +21,5 @@
       "complete": 14
     }
   },
-  "incomplete": [
-    {
-      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-4b60583e1d6f-dynamic-micro-batch-and-token-budget-scheduling-for-iot-scale-pipeline-p.md",
-      "canonical_id": "DOI:10.3390/s26041101",
-      "reason": "missing structured reference audit metadata"
-    },
-    {
-      "path": "papers/inference/17-pim-near-data-acceleration/2023-0a1390643d73-samsung-pim-pnm-for-transformer-based-ai-energy-efficiency-on-pim-pnm-cl.md",
-      "canonical_id": "DOI:10.1109/hcs59251.2023.10254711",
-      "reason": "missing structured reference audit metadata"
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2026-5c886960494f-semantic-aware-intelligent-request-routing-in-multi-model-llm-backend-ga.md",
-      "canonical_id": "DOI:10.1109/cisat71030.2026.11682186",
-      "reason": "missing structured reference audit metadata"
-    }
-  ]
+  "incomplete": []
 }
