@@ -734,7 +734,7 @@
 
 - **2026-09 · [Accuracy is Not Enough: A Divergence-Based Approach to Evaluate Fidelity Loss in Quantized LLMs](2026-2609.07664-accuracy-is-not-enough-a-divergence-based-approach-to-evaluate-fidelity-.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
-  大規模言語モデル（LLM）を限られたGPUメモリやローカルPCで実行するために、重みの事後量子化（Post-学習 量子化; PTQ）が使われる。LLaMA-3.1-8BのMMLUでは、Q4Kの正解率32.2%、TVD0.055に対し、Q40は正解率32.1%、TVD0.221である。
+  大規模言語モデル（LLM）を低ビット量子化して端末へ載せるとき、一般的には困惑度（perplexity）や選択式問題の正答率がどれだけ落ちるかを確認する。例えばLLaMA-3.1-8BのMMLUでは、Q4KとQ40の正答率はそれぞれ32.2%と32.1%でほぼ等しいのに、BF16に対するTVDは0.055と0.221で約4倍異なる。
 
 - **2026-08 · [VoiceMem: Streaming Dual-Brain Memory for Real-Time Interaction](2026-2608.26005-voicemem-streaming-dual-brain-memory-for-real-time-interaction.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -3412,7 +3412,7 @@
 
 - **2018-11 · [Blockwise Parallel Decoding for Deep Autoregressive Models](2018-1811.03115-blockwise-parallel-decoding-for-deep-autoregressive-models.md)**  
   実装：[✓](https://github.com/tensorflow/tensor2tensor) ・ リポジトリ内被引用：76  
-  深層自己回帰モデルの生成では、次のトークンが確定して初めてその次の条件付き分布を計算できる。注意計算を多数の位置で同時実行できる変換器（Transformer）でも、通常の貪欲復号（greedy デコード）は生成長に比例した逐次呼び出しを必要とする。厳密一致を要求する限り、元モデルの貪欲復号と同じ出力を維持できる。
+  計算器に並列能力があっても、この依存関係が生成遅延を制限する。最大 $k$ 個の候補を同時に提案し、基準モデルで候補列を並列採点して、基準モデルの貪欲選択と一致する先頭からの連続部分だけを採用する。後年の投機的復号（投機的復号）と同じく、安い予測の正しさを基準モデルで検証するという基本構造を明示した初期研究である。
 
 - **2019-09 · [Q-BERT: Hessian Based Ultra Low Precision Quantization of BERT](2019-1909.05840-q-bert-hessian-based-ultra-low-precision-quantization-of-bert.md)**  
   実装：✓ ・ リポジトリ内被引用：47  
