@@ -1,11 +1,11 @@
 {
   "schema_version": 3,
   "source_commit": "citation-backfill-working-tree",
-  "checked_at": "2026-10-20T01:06:33.135076+00:00",
-  "status": "issues_found",
+  "checked_at": "2026-10-20T01:38:15.026783+00:00",
+  "status": "passed",
   "scope": "repository-wide structural consistency",
-  "inventory_file_count": 61971,
-  "checked_file_count": 61971,
+  "inventory_file_count": 61970,
+  "checked_file_count": 61970,
   "missing_files": [],
   "working_changes": [],
   "checks": [
@@ -27,21 +27,5 @@
     "Runtime execution of arbitrary repository code"
   ],
   "external_url_count": 3832,
-  "findings": [
-    {
-      "code": "broken_local_link",
-      "path": "PAPER-ADDITION-WORKFLOW.md",
-      "detail": "docs/CODEX-DISCOVERY-BACKFILL-VERIFIED.md"
-    },
-    {
-      "code": "broken_local_link",
-      "path": "papers/inference/08-edge-on-device-llm-systems/2026-2606.00756-comic-collaborative-memory-and-insights-circulation-for-long-horizon-llm.md",
-      "detail": "s_self"
-    },
-    {
-      "code": "broken_local_link",
-      "path": "papers/inference/13-sparse-attention/2026-2601.11641-mixture-of-distributions-matters-dynamic-sparse-attention-for-efficient-.md",
-      "detail": "t-t1"
-    }
-  ]
+  "findings": []
 }
