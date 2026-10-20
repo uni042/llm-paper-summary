@@ -37,6 +37,8 @@ worker_id: scheduled-chat-00
 scheduled_slot: '00'
 quality_self_review_passed: true
 quality_self_review_version: 'PAPER-QUALITY-GUIDE-2026-10-07'
+last_audited: null
+audit_version: 0
 ---
 
 # MetaLA：線形注意を統一した記憶更新式とキー射影削除
