@@ -2,7 +2,7 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-19T22:43:00+00:00",
+  "updated_at": "2026-10-20T03:48:28+00:00",
   "record_count": 5276,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
@@ -71263,9 +71263,9 @@
       "identity_tokens": [
         "arXiv:2607.01444"
       ],
-      "reason": "原著の一次要旨では4種類の混合専門家モデル、6種類の専門家枝刈り手法と複数の枝刈り率を比較し、生物医学領域での品質・事実信頼性および一般領域への転移低下を調べる。専門家削減は推論時のモデル常駐メモリ削減に接続するため無関係とはしない。一方、主貢献は特定領域の精度・幻覚リスクの比較評価であり、新規の推論サービング方式、枝刈りカーネル、実行時配置・通信最適化の提案ではない。システム技術の直接貢献が境界的なのでborderlineとする。",
+      "reason": "一次要旨は、既存の混合専門家（MoE）モデル4種類について既存の専門家枝刈り法6種類と複数の削減率を、生物医学分野内外の生成・分類タスクで比較し、軽度枝刈りでは分野内性能を保てても高削減率で幻覚が増え、一般分野へ移ると性能と事実信頼性が急落すると報告する。推論時のモデル容量削減という関係はあるが、新しい枝刈りアルゴリズム、推論カーネル、配置、オフロード、実測サービング機構の提案を一次要旨から確認できない。性能・信頼性の応用領域評価が中心なので、推論システム技術の直接貢献としてacceptせずborderlineとする。",
       "first_checked_at": "2026-10-11T17:49:18+00:00",
-      "last_checked_at": "2026-10-11T17:49:18+00:00",
+      "last_checked_at": "2026-10-20T03:48:28+00:00",
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "On the Utility and Factual Reliability of Pruned Mixture-of-Experts Models in the Biomedical Domain"
