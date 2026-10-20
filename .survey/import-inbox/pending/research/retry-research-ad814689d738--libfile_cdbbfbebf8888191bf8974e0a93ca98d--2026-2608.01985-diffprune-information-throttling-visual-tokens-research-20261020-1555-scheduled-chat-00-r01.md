@@ -32,6 +32,8 @@ scheduled_slot: "00"
 reference_main_sha: "6ed9196dacb077a1e0303d8a7447e16d8405bdb8"
 quality_self_review_passed: true
 quality_self_review_version: "PAPER-QUALITY-GUIDE-2026-10-07"
+last_audited: null
+audit_version: 0
 ---
 
 # DiffPrune：連続的な情報抑制によって学習する視覚トークン削減

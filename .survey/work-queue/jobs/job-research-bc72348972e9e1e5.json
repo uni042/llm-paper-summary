@@ -35,10 +35,15 @@
   "selection_reason": "NCCLZはquantizationとentropy codingでGPU collective通信を圧縮・重畳し、distributed GPU workloadの通信時間を短縮する機構。LLM推論の分散実行基盤に直接関係する。",
   "semantic_scholar_id": "34218995c994cba7b20ffd108491b09428fac252",
   "source_url": "https://arxiv.org/abs/2605.12396",
-  "status": "ready",
+  "status": "superseded",
   "title": "NCCLZ: Compression-Enabled GPU Collectives with Decoupled Quantization and Entropy Coding",
   "type": "research",
   "venue": "IEEE International Symposium on High-Performance Parallel Distributed Computing",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-10-20T17:08:43+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2026-2605.12396-ncclz-compression-enabled-gpu-collectives-with-decoupled-quantization-an.md",
+  "represented_canonical_id": "arXiv:2605.12396",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

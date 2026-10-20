@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-20T16:56:59+00:00",
+  "generated_at": "2026-10-20T17:08:44+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 72,
+  "count": 73,
   "entries": [
     {
       "canonical_id": "DOI:10.1145/3714983.3714987",
@@ -455,34 +455,6 @@
       "worker_run_key": "20261018-1700-scheduled-chat-00/r01"
     },
     {
-      "canonical_id": "arXiv:2609.20874",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-18T14:00:13+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 6921,
-        "body_paragraphs": 38,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 689,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-314bd549969c--libfile_c10e750d168c819197b972691805e91a--2026-2609.20874-predictive-kubernetes-autoscaling-llm-serving-research-20261018-2130-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-314bd549969c--libfile_c10e750d168c819197b972691805e91a--2026-2609.20874-predictive-kubernetes-autoscaling-llm-serving-research-20261018-2130-sche.json",
-      "worker_run_key": "20261018-2130-scheduled-chat-30/r01"
-    },
-    {
       "canonical_id": "arXiv:2506.04642",
       "title": null,
       "source_url": null,
@@ -682,33 +654,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-0f2ebca5ee3d--libfile_d80701e54e408191b235f9af5909e385--2026-2609.36835-arc-kv-reconstruction-indexer-research-20261019-0304-scheduled-chat-00-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-0f2ebca5ee3d--libfile_d80701e54e408191b235f9af5909e385--2026-2609.36835-arc-kv-reconstruction-indexer-research-20261019-0304-scheduled-chat-00-r0.json",
       "worker_run_key": "20261019-0304-scheduled-chat-00/r01"
-    },
-    {
-      "canonical_id": "arXiv:2609.39816",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-19T15:12:32+00:00",
-      "return_count": 6,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 439 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 6256,
-        "body_paragraphs": 36,
-        "method_chars": 2668,
-        "method_paragraphs": 18,
-        "evaluation_chars": 439,
-        "limitation_chars": 398,
-        "insufficiency_flags": [
-          "評価説明量 439 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-1e472bcafb86--libfile_912bc504fa948191b2971da439b15671--2026-2609.39816-prefix-invariant-lowprecision-matmul-quality-repair-20261019-1445-scheduled-chat-45-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-1e472bcafb86--libfile_912bc504fa948191b2971da439b15671--2026-2609.39816-prefix-invariant-lowprecision-matmul-quality-repair-20261019-1445-schedul.json",
-      "worker_run_key": "20261019-1445-scheduled-chat-45/r01"
     },
     {
       "canonical_id": "arXiv:2609.09208",
@@ -1934,8 +1879,8 @@
     },
     {
       "canonical_id": "arXiv:2608.01985",
-      "title": "DiffPrune: Differentiable Information Throttling for Token Pruning in Vision-Language Models",
-      "source_url": "https://arxiv.org/abs/2608.01985",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-20T16:53:30+00:00",
       "return_count": 1,
       "assigned_worker": "scheduled-chat-00",
@@ -1962,8 +1907,8 @@
     },
     {
       "canonical_id": "arXiv:2402.09360",
-      "title": "HiRE: High Recall Approximate Top-k Estimation for Efficient LLM Inference",
-      "source_url": "https://arxiv.org/pdf/2402.09360",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-20T16:54:28+00:00",
       "return_count": 1,
       "assigned_worker": "scheduled-chat-00",
@@ -1992,8 +1937,8 @@
     },
     {
       "canonical_id": "arXiv:2405.07542",
-      "title": "EMS-SD: Efficient Multi-sample Speculative Decoding for Accelerating Large Language Models",
-      "source_url": "https://arxiv.org/pdf/2405.07542",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-20T16:54:29+00:00",
       "return_count": 1,
       "assigned_worker": "scheduled-chat-45",
@@ -2016,6 +1961,89 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_d68341da19bc819185c7e6cc4773543f--2024-2405.07542-ems-sd-ragged-batch-speculative-decoding-research-20261020-1056-scheduled-chat-00-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_d68341da19bc819185c7e6cc4773543f--2024-2405.07542-ems-sd-ragged-batch-speculative-decoding-research-20261020-1056-scheduled-chat-00-r01.json",
       "worker_run_key": "20261020-1056-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2609.20874",
+      "title": "Decomposing Predictive Kubernetes Autoscaling for Large Language Model Serving Under Long Startup Delays",
+      "source_url": "https://arxiv.org/html/2609.20874v1",
+      "returned_at": "2026-10-20T17:05:15+00:00",
+      "return_count": 3,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 202 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 4716,
+        "body_paragraphs": 27,
+        "method_chars": 1335,
+        "method_paragraphs": 10,
+        "evaluation_chars": 202,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "評価説明量 202 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_e0ae22cc5d988191af94eb8e8e4d9b30--2026-2609.20874-predictive-kubernetes-autoscaling-returned-repair-20261020-2000-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_e0ae22cc5d988191af94eb8e8e4d9b30--2026-2609.20874-predictive-kubernetes-autoscaling-returned-repair-20261020-2000-scheduled-chat-00-r01.json",
+      "worker_run_key": "20261020-2000-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2609.39816",
+      "title": "Beyond Accuracy: Prefix-Invariant Realizations of Low-Precision Fast Matrix Multiplication",
+      "source_url": "https://arxiv.org/abs/2609.39816",
+      "returned_at": "2026-10-20T17:05:16+00:00",
+      "return_count": 7,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 6262,
+        "body_paragraphs": 33,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 1090,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_e24c4d80c1c08191ad739fbdfc76eccc--2026-2609.39816-prefix-invariant-fast-matmul-returned-repair-20261020-1230-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_e24c4d80c1c08191ad739fbdfc76eccc--2026-2609.39816-prefix-invariant-fast-matmul-returned-repair-20261020-1230-scheduled-chat-30-r01.json",
+      "worker_run_key": "20261020-1230-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "DOI:10.18653/v1/2025.emnlp-main.1676",
+      "title": "Analyzing and Modeling LLM Response Lengths with Extreme Value Theory: Anchoring Effects and Hybrid Distributions",
+      "source_url": "https://aclanthology.org/2025.emnlp-main.1676.pdf",
+      "returned_at": "2026-10-20T17:07:11+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 0 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5044,
+        "body_paragraphs": 27,
+        "method_chars": 1570,
+        "method_paragraphs": 8,
+        "evaluation_chars": 0,
+        "limitation_chars": 357,
+        "insufficiency_flags": [
+          "評価説明量 0 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_f0af4687b3508191811f475c4efbb36c--2025-doi-10.18653-v1-2025.emnlp-main.1676-llm-response-length-extreme-value-research-20261020-1400-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_f0af4687b3508191811f475c4efbb36c--2025-doi-10.18653-v1-2025.emnlp-main.1676-llm-response-length-extreme-value-research-20261020-1400-scheduled-chat-00-r.json",
+      "worker_run_key": "20261020-1400-scheduled-chat-00/r01"
     }
   ]
 }

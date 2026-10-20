@@ -34,6 +34,8 @@ worker_run_key: '20261020-2230-scheduled-chat-30/r01'
 reference_main_sha: '00c578ec51d7d1afe014b71772c82b36264640da'
 quality_self_review_passed: true
 quality_self_review_version: 'PAPER-QUALITY-GUIDE-2026-10-07'
+last_audited: null
+audit_version: 0
 ---
 # HiRE：高再現率の候補選択と選択後の正確な計算によるLLM推論高速化
 
