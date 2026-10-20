@@ -2,7 +2,7 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-20T13:06:25+00:00",
+  "updated_at": "2026-10-20T14:46:07+00:00",
   "record_count": 5281,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
@@ -70701,9 +70701,9 @@
       "identity_tokens": [
         "arXiv:2601.08815"
       ],
-      "reason": "一次要旨はエージェントの入力出力仕様、トークン・時間など多次元資源上限、委任予算の保存則を定式化し、反復ワークフローでトークン90%削減と分散525分の1を報告する。推論資源管理に接続するが、LLM実行器やGPU資源割当の新規アルゴリズムより上位の契約・ガバナンスが中心であるため境界判定。",
+      "reason": "一次要旨は自律エージェントの入力出力、時間制約、資源上限、成功条件を契約として形式化し、階層的な委譲時に資源予算の保存を保証する。反復ワークフローでトークン使用量90%削減、分散525分の1という実験を報告し、推論費用管理に関連するが、中心はエージェントの資源ガバナンスと形式的制約であり、汎用LLM推論サービングの実装改善ではないため境界判定。",
       "first_checked_at": "2026-10-11T03:32:19+00:00",
-      "last_checked_at": "2026-10-19T16:50:38+00:00",
+      "last_checked_at": "2026-10-20T14:46:07+00:00",
       "linked_from": [
         ".survey/work-queue/WORKLIST-30.md"
       ],
@@ -71617,9 +71617,9 @@
       "identity_tokens": [
         "arXiv:2512.18706"
       ],
-      "reason": "一次要旨では、音声活動検出・音声強調・認識・環境音理解とLLMをモジュール化して接続し、音声対話を1秒未満の遅延で処理する設計を提案する。LLMを含む実時間推論パイプラインの遅延最適化は関連するが、主貢献は音声対話アプリケーションのモジュール設計であり、汎用LLMランタイムやモデル内推論高速化は対象外のため境界判定。",
+      "reason": "一次要旨は音声区間検出、音声強調、音声認識、感情・環境音解析、LLM、検索拡張生成、道具利用を接続したモジュール型音声対話パイプラインを扱い、サブ秒応答遅延を主張する。LLMを含むシステムの応答性には関連するが、主眼は音声対話機能と複合モジュール設計であり、LLMのKV管理、バッチ形成、生成カーネルなど汎用推論基盤の直接改善は要旨から確認できないため境界判定。",
       "first_checked_at": "2026-10-12T17:45:21+00:00",
-      "last_checked_at": "2026-10-20T13:06:22+00:00",
+      "last_checked_at": "2026-10-20T14:46:03+00:00",
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "X-Talk: On the Underestimated Potential of Modular Speech-to-Speech Dialogue System"
@@ -81245,9 +81245,9 @@
       "identity_tokens": [
         "arXiv:2601.10011"
       ],
-      "reason": "一次要旨では、SQL生成で質問をエンティティ別・階層別・逐次的に分解し、過去の誤りと修正例を検索して自己訂正する学習不要の推論方式を提案する。BIRDで実行正答率68.5%、既存のテスト時スケーリング手法比で10倍以上少ない資源を主張するが、主眼はNL2SQLの推論戦略・精度で、LLMサービング基盤の最適化は直接扱わないため境界判定。",
+      "reason": "一次要旨は自然言語からSQLを生成する応用において、構造化した質問分解と過去の誤り修正事例の検索で推論時の自己修正を行う。BIRDで実行正答率68.5%、従来の推論時拡張方式より10倍超の資源削減を報告するが、削減対象はNL2SQLの候補生成・反復推論であり、LLMサービング一般のスケジューラやKVキャッシュの改良ではない。推論計算予算の配分という接点があるため境界判定。",
       "first_checked_at": "2026-10-18T01:47:11+00:00",
-      "last_checked_at": "2026-10-20T13:06:22+00:00",
+      "last_checked_at": "2026-10-20T14:46:06+00:00",
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "Memo-SQL: Structured Decomposition and Experience-Driven Self-Correction for Training-Free NL2SQL"

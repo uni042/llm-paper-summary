@@ -2,7 +2,7 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-20T13:49:02+00:00",
+  "updated_at": "2026-10-20T14:46:05+00:00",
   "record_count": 12440,
   "records": {
     "arXiv:2303.08774": {
@@ -164994,9 +164994,9 @@
         "id:arXiv:2403.01232",
         "url:https://arxiv.org/abs/2403.01232"
       ],
-      "reason": "一次要旨では、グラフの局所・大域同変注意を組み合わせて多項式表現能力を持つ線形計算量のグラフTransformerを構成し、13のグラフデータセットで分類性能を比較する。対象はグラフニューラルネットワークであり、LLM推論・学習・サービングの実行効率ではないため対象外。",
+      "reason": "一次要旨は、グラフのノード・トポロジーに対して局所・大域の置換同変注意を用い、高次多項式を表現するグラフTransformerを提案する。評価は13のグラフデータセットで、主目的はグラフ分類等の表現力と計算量の両立。言語モデルのKVキャッシュ、生成デコード、推論サービングの最適化ではないため現行のLLM推論基盤サーベイ対象外。",
       "first_checked_at": "2026-10-12T21:38:02+00:00",
-      "last_checked_at": "2026-10-20T13:06:23+00:00",
+      "last_checked_at": "2026-10-20T14:46:04+00:00",
       "linked_from": [],
       "title": "Polynormer: Polynomial-Expressive Graph Transformer in Linear Time"
     },
@@ -168362,9 +168362,9 @@
         "id:arXiv:2606.18112",
         "url:https://arxiv.org/abs/2606.18112"
       ],
-      "reason": "一次要旨はロボット航法向け基盤モデルのタスクモードとカメラごとの視覚トークン予算を外部制御可能にし、航法ベンチマークと実機転移を評価する。視覚トークン予算は効率に関連するが、主眼はロボットの知覚・計画・学習と成功率であり、汎用LLM推論システムへの独立した技術貢献を示さないため対象外。",
+      "reason": "一次要旨はロボット・自動運転の視覚観測をタスクモード、カメラ別重み、観測トークン予算で制御するナビゲーション基盤モデルを提案し、15.6M件の学習例と実世界の航行性能を評価する。観測トークン数の制御はあるが主目的は航行行動の汎化であり、一般LLMの生成デコード、KVメモリ、推論サービング実装の直接最適化ではないため対象外。",
       "first_checked_at": "2026-10-13T10:41:38+00:00",
-      "last_checked_at": "2026-10-19T16:50:39+00:00",
+      "last_checked_at": "2026-10-20T14:46:05+00:00",
       "linked_from": [],
       "title": "Qwen-RobotNav Technical Report: A Scalable Navigation Model Designed for an Agentic Navigation System"
     },
