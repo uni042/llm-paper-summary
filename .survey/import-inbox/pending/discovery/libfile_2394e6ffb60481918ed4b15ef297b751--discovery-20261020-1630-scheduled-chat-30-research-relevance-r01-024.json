@@ -1,0 +1,26 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261020-1630-scheduled-chat-30/r01/research-prescreen/024",
+  "reference_main_sha": "1dce2db0b48420c6adb2a439804d270da65a1cc4",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1016/j.ress.2025.111891",
+      "identity_tokens": [
+        "DOI:10.1016/j.ress.2025.111891"
+      ],
+      "title": "Pirate-GPT: A locally deployed large language model framework for reliable offline anti-piracy decision support and knowledge retrieval in maritime operations",
+      "reason": "題名で対象が海上の海賊対策の意思決定支援・知識検索という特定業務アプリケーションと明示されている。ローカル配備は含むが、題名に推論基盤の新しい計算・メモリ・スケジューリング機構は示されないため、タイトル先行段階で対象外とする。",
+      "source_url": "https://doi.org/10.1016/j.ress.2025.111891",
+      "body_check": "title_screen_only; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-10-20T16:40:52+09:00",
+      "last_checked_at": "2026-10-20T16:40:52+09:00",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance",
+      "worklist_rank": 24
+    }
+  ]
+}
