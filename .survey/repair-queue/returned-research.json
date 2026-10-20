@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-20T11:59:19+00:00",
+  "generated_at": "2026-10-20T12:07:05+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -2315,8 +2315,8 @@
       "canonical_id": "arXiv:2510.02758",
       "title": "TokenFlow: Responsive LLM Text Streaming Serving under Request Burst via Preemptive Scheduling",
       "source_url": "https://arxiv.org/html/2510.02758v1",
-      "returned_at": "2026-10-20T11:57:06+00:00",
-      "return_count": 3,
+      "returned_at": "2026-10-20T12:07:03+00:00",
+      "return_count": 4,
       "assigned_worker": "scheduled-chat-00",
       "reason": "blocked_quality",
       "failures": [
@@ -2334,8 +2334,8 @@
           "評価説明量 438 < 500"
         ]
       },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_9d252b8b0a6881919f494b1b1444084c--2025-2510.02758-tokenflow-preemptive-streaming-returned-repair-20261020-2000-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_9d252b8b0a6881919f494b1b1444084c--2025-2510.02758-tokenflow-preemptive-streaming-returned-repair-20261020-2000-scheduled-chat-00-r01.json",
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-3e767f936755--libfile_9d252b8b0a6881919f494b1b1444084c--2025-2510.02758-tokenflow-preemptive-streaming-returned-repair-20261020-2000-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-3e767f936755--libfile_9d252b8b0a6881919f494b1b1444084c--2025-2510.02758-tokenflow-preemptive-streaming-returned-repair-20261020-2000-scheduled-ch.json",
       "worker_run_key": "20261020-2000-scheduled-chat-00/r01"
     }
   ]
