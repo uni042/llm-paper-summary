@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-20T18:12:44+00:00",
+  "generated_at": "2026-10-20T18:21:51+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -1012,88 +1012,6 @@
       "worker_run_key": "20261020-0204-scheduled-chat-00/r01"
     },
     {
-      "canonical_id": "DOI:10.18653/v1/2025.findings-acl.1288",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-20T15:41:51+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 302 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5705,
-        "body_paragraphs": 27,
-        "method_chars": 1887,
-        "method_paragraphs": 8,
-        "evaluation_chars": 302,
-        "limitation_chars": 464,
-        "insufficiency_flags": [
-          "評価説明量 302 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_93739bab3bd481918de9ae30daf35fd2--2025-doi-10.18653-v1-2025.findings-acl.1288-mfa-matrix-factorization-attention-research-20261020-1400-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_93739bab3bd481918de9ae30daf35fd2--2025-doi-10.18653-v1-2025.findings-acl.1288-mfa-matrix-factorization-attention-research-20261020-1400-scheduled-chat-0.json",
-      "worker_run_key": "20261020-1400-scheduled-chat-00/r01"
-    },
-    {
-      "canonical_id": "arXiv:2608.03276",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-20T16:12:10+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 7388,
-        "body_paragraphs": 51,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 1720,
-        "limitation_chars": 653,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_a7298965817c8191875b98f7f7d7992c--2026-2608.03276-taskpress-query-agnostic-kv-cache-research-20261020-1304-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_a7298965817c8191875b98f7f7d7992c--2026-2608.03276-taskpress-query-agnostic-kv-cache-research-20261020-1304-scheduled-chat-00-r01.json",
-      "worker_run_key": "20261020-1304-scheduled-chat-00/r01"
-    },
-    {
-      "canonical_id": "arXiv:2609.20874",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-20T17:05:15+00:00",
-      "return_count": 3,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 202 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 4716,
-        "body_paragraphs": 27,
-        "method_chars": 1335,
-        "method_paragraphs": 10,
-        "evaluation_chars": 202,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "評価説明量 202 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_e0ae22cc5d988191af94eb8e8e4d9b30--2026-2609.20874-predictive-kubernetes-autoscaling-returned-repair-20261020-2000-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_e0ae22cc5d988191af94eb8e8e4d9b30--2026-2609.20874-predictive-kubernetes-autoscaling-returned-repair-20261020-2000-scheduled-chat-00-r01.json",
-      "worker_run_key": "20261020-2000-scheduled-chat-00/r01"
-    },
-    {
       "canonical_id": "arXiv:2506.04642",
       "title": null,
       "source_url": null,
@@ -1825,8 +1743,8 @@
     },
     {
       "canonical_id": "arXiv:2605.20813",
-      "title": "PulseCol: Periodically Refreshed Column-Sparse Attention for Accelerating Diffusion Language Models",
-      "source_url": "https://arxiv.org/abs/2605.20813",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-20T18:12:37+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-45",
@@ -1853,8 +1771,8 @@
     },
     {
       "canonical_id": "DOI:10.18653/v1/2025.emnlp-main.1676",
-      "title": "Analyzing and Modeling LLM Response Lengths with Extreme Value Theory: Anchoring Effects and Hybrid Distributions",
-      "source_url": "https://aclanthology.org/2025.emnlp-main.1676.pdf",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-20T18:12:39+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-30",
@@ -1880,8 +1798,8 @@
     },
     {
       "canonical_id": "arXiv:2603.11220",
-      "title": "Frequency-Modulated Visual Restoration for Matryoshka Large Multimodal Models",
-      "source_url": "https://arxiv.org/html/2603.11220v1",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-20T18:12:40+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-30",
@@ -1905,8 +1823,8 @@
     },
     {
       "canonical_id": "arXiv:2605.16839",
-      "title": "CompactAttention: Accelerating Chunked Prefill with Block-Union KV Selection",
-      "source_url": "https://arxiv.org/pdf/2605.16839",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-20T18:12:41+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-45",
@@ -1933,8 +1851,8 @@
     },
     {
       "canonical_id": "arXiv:2510.02295",
-      "title": "VideoNSA: Native Sparse Attention Scales Video Understanding",
-      "source_url": "https://arxiv.org/html/2510.02295v2",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-20T18:12:43+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-30",
@@ -1957,6 +1875,88 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-df23e83dc5be--libfile_284892f60a688191b578c27b44865267--2025-2510.02295-videonsa-research-20261020-2127-scheduled-chat-30-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-df23e83dc5be--libfile_284892f60a688191b578c27b44865267--2025-2510.02295-videonsa-research-20261020-2127-scheduled-chat-30-r01.json",
       "worker_run_key": "20261020-2127-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2608.03276",
+      "title": "TaskPress: Query-Agnostic KV Cache Compression via Task-Guided Pruning",
+      "source_url": "https://arxiv.org/abs/2608.03276",
+      "returned_at": "2026-10-20T18:21:47+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 7388,
+        "body_paragraphs": 51,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 1720,
+        "limitation_chars": 653,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-ea1b8f18ac0c--libfile_a7298965817c8191875b98f7f7d7992c--2026-2608.03276-taskpress-query-agnostic-kv-cache-research-20261020-1304-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-ea1b8f18ac0c--libfile_a7298965817c8191875b98f7f7d7992c--2026-2608.03276-taskpress-query-agnostic-kv-cache-research-20261020-1304-scheduled-chat-0.json",
+      "worker_run_key": "20261020-1304-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "DOI:10.18653/v1/2025.findings-acl.1288",
+      "title": "Multi-matrix Factorization Attention",
+      "source_url": "https://aclanthology.org/2025.findings-acl.1288.pdf",
+      "returned_at": "2026-10-20T18:21:49+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 302 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5705,
+        "body_paragraphs": 27,
+        "method_chars": 1887,
+        "method_paragraphs": 8,
+        "evaluation_chars": 302,
+        "limitation_chars": 464,
+        "insufficiency_flags": [
+          "評価説明量 302 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-feb3e30f07e4--libfile_93739bab3bd481918de9ae30daf35fd2--2025-doi-10.18653-v1-2025.findings-acl.1288-mfa-matrix-factorization-attention-research-20261020-1400-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-feb3e30f07e4--libfile_93739bab3bd481918de9ae30daf35fd2--2025-doi-10.18653-v1-2025.findings-acl.1288-mfa-matrix-factorization-attention-research-2.json",
+      "worker_run_key": "20261020-1400-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2609.20874",
+      "title": "Decomposing Predictive Kubernetes Autoscaling for Large Language Model Serving Under Long Startup Delays",
+      "source_url": "https://arxiv.org/html/2609.20874v1",
+      "returned_at": "2026-10-20T18:21:50+00:00",
+      "return_count": 4,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 202 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 4716,
+        "body_paragraphs": 27,
+        "method_chars": 1335,
+        "method_paragraphs": 10,
+        "evaluation_chars": 202,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "評価説明量 202 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-feed79046562--libfile_e0ae22cc5d988191af94eb8e8e4d9b30--2026-2609.20874-predictive-kubernetes-autoscaling-returned-repair-20261020-2000-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-feed79046562--libfile_e0ae22cc5d988191af94eb8e8e4d9b30--2026-2609.20874-predictive-kubernetes-autoscaling-returned-repair-20261020-2000-scheduled.json",
+      "worker_run_key": "20261020-2000-scheduled-chat-00/r01"
     }
   ]
 }

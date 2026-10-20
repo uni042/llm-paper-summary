@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "a641fb2d81689814479dcf6c4557b13e9cbbfd2acd36a2d6ccabb5ceb878c07b",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/retry-research-feed79046562--libfile_e0ae22cc5d988191af94eb8e8e4d9b30--2026-2609.20874-predictive-kubernetes-autoscaling-returned-repair-20261020-2000-scheduled-chat-00-r01.md",
+  "canonical_id": "arXiv:2609.20874",
+  "worker_completed_at": "2026-10-20T20:00:00+09:00",
+  "worker_run_key": "20261020-2000-scheduled-chat-00/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 4716,
+    "body_paragraphs": 27,
+    "method_chars": 1335,
+    "method_paragraphs": 10,
+    "evaluation_chars": 202,
+    "limitation_chars": 0,
+    "insufficiency_flags": [
+      "評価説明量 202 < 500",
+      "限界説明量 0 < 推奨 120"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 評価説明量 202 < 500"
+  ],
+  "processed_at": "2026-10-20T18:21:50+00:00"
+}
