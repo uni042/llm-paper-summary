@@ -26,6 +26,80 @@ worker_run_key: "20261018-0445-scheduled-chat-45/r01"
 worker_completed_at: "2026-10-18T04:46:24+09:00"
 last_audited: null
 audit_version: 0
+references:
+  - source_index: 1
+    title: "GPT-4 Technical Report"
+    canonical_id: arXiv:2303.08774
+  - source_index: 2
+    title: "Mistral 7B"
+  - source_index: 3
+    title: "FrugalGPT: How to Use Large Language Models While Reducing Cost and Improving Performance"
+    canonical_id: arXiv:2305.05176
+  - source_index: 4
+    title: "RouteLLM: Learning to Route LLMs with Preference Data"
+    canonical_id: arXiv:2406.18665
+  - source_index: 5
+    title: "Hybrid LLM: Cost-Efficient and Quality-Aware Query Routing"
+    canonical_id: arXiv:2404.14618
+  - source_index: 6
+    title: "RouterBench: A Benchmark for Multi-LLM Routing System"
+    canonical_id: arXiv:2403.12031
+  - source_index: 7
+    title: "DistilBERT, a Distilled Version of BERT"
+    canonical_id: arXiv:1910.01108
+  - source_index: 8
+    title: "A Contextual-Bandit Approach to Personalized News Article Recommendation"
+  - source_index: 9
+    title: "ShareGPT: Shared ChatGPT Conversations Dataset"
+  - source_index: 10
+    title: "AutoMix: Automatically Mixing Language Models"
+    canonical_id: arXiv:2310.12963
+  - source_index: 11
+    title: "Multi-Objective Scheduling for Large Language Model Inference with Prompt-Level Cost Prediction and SLO Awareness"
+  - source_index: 12
+    title: "Self-Supervised Graph Neural Networks for Enhanced Feature Extraction in Heterogeneous Information Networks"
+  - source_index: 13
+    title: "Learning Unified Multi-Granularity Representations for Backend Anomaly Detection and Causal Localization"
+  - source_index: 14
+    title: "The Synergistic Role of Deep Learning and Neural Architecture Search in Advancing Artificial Intelligence"
+  - source_index: 15
+    title: "Drift-Aware Agentic ETL for Schema-Evolving Data Lakes"
+  - source_index: 16
+    title: "Graph Spatiotemporal Attention-Based Collaborative Demand Forecasting for Multi-Level Supply Chains"
+  - source_index: 17
+    title: "Stable Fault Diagnosis Under Data Imbalance via Self-Supervised Learning in Industrial IoT"
+  - source_index: 18
+    title: "Generative Distribution Modeling for Credit Card Risk Identification under Noisy and Imbalanced Transactions"
+  - source_index: 19
+    title: "Constrained Learning-to-Rank for Controlled Trade-offs in Multi-Objective Ranking Systems"
+  - source_index: 20
+    title: "Graph-Based Financial Fraud Detection with Calibrated Risk Scoring and Structural Regularization"
+    canonical_id: arXiv:2605.12782
+  - source_index: 21
+    title: "Causal-LLM: A Hybrid Framework for Automated Budgetary Variance Diagnosis and Reasoning"
+  - source_index: 22
+    title: "Efficient Memory Management for Large Language Model Serving with PagedAttention"
+  - source_index: 23
+    title: "Structure-Aware Unified Modeling for Root Cause Localization in Microservice Systems Using Multi-Source Observability Data"
+  - source_index: 24
+    title: "Graph-Transformer Reconstruction Learning for Unsupervised Anomaly Detection in Dependency-Coupled Systems"
+  - source_index: 25
+    title: "Learning Augmented Cold Start Mitigation for Serverless Machine Learning Inference"
+  - source_index: 26
+    title: "Lightweight Edge-Cloud Cooperative Inference for Small and Medium Models under WAN Constraints"
+  - source_index: 27
+    title: "Drift-Aware Retrieval-Augmented Log Anomaly Detection for Cloud AIOps"
+  - source_index: 28
+    title: "An LLM-Augmented Predictive Auto-Scaling Framework for Latency-Sensitive Microservice Backends"
+  - source_index: 29
+    title: "Topology-Aware Cross-Modal Distillation for Communication-Efficient Decentralized Multimodal Federated Learning"
+  - source_index: 30
+    title: "Counterfactual Multimodal Tail-Risk Early Warning from Earnings Calls and News for Risk-Aware Portfolio Reweighting"
+  - source_index: 31
+    title: "Introduction to Multi-Armed Bandits"
+references_checked_at: '2026-10-20'
+references_source: 'author-posted May 2026 full 31-item numbered preprint bibliography; unresolved identities preserved as titles'
+references_total: 31
 ---
 
 # APIRouter：要求の意味的難易度とオンライン学習を組み合わせた複数LLMの経路選択
