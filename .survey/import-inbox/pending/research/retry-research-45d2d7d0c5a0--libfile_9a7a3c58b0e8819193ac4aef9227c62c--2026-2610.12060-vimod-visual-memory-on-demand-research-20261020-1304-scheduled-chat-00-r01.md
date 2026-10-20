@@ -33,6 +33,8 @@ scheduled_slot: '00'
 reference_main_sha: '0dd74b16e6a07127091a2766394eef9d29133ba0'
 quality_self_review_passed: true
 quality_self_review_version: PAPER-QUALITY-GUIDE-2026-10-07
+last_audited: null
+audit_version: 0
 ---
 
 # Look Back, Think Ahead: Visual Memory on Demand for Efficient Multimodal Reasoning

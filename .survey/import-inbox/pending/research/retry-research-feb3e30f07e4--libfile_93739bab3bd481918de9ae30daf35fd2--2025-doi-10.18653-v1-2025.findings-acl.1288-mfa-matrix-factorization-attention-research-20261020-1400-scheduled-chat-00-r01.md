@@ -36,6 +36,8 @@ worker_run_key: "20261020-1400-scheduled-chat-00/r01"
 reference_main_sha: "47a5b5a8d28c924827a488e1b9206b64511f3046"
 quality_self_review_passed: true
 quality_self_review_version: "PAPER-QUALITY-GUIDE-2026-10-07"
+last_audited: null
+audit_version: 0
 ---
 
 # Multi-matrix Factorization Attention：KVキャッシュ制約下で注意の表現力を維持する多行列因数分解
