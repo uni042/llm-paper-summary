@@ -26,6 +26,8 @@ worker_run_key: '20261020-1800-scheduled-chat-00/r01'
 reference_main_sha: '96787525cf339fb5163f5554233690dc7d8de15e'
 quality_self_review_passed: true
 quality_self_review_version: 'PAPER-QUALITY-GUIDE-2026-10-07'
+last_audited: null
+audit_version: 0
 ---
 
 # 再帰型LLMの状態容量を拡張する：長文脈の検索性能と計算費用

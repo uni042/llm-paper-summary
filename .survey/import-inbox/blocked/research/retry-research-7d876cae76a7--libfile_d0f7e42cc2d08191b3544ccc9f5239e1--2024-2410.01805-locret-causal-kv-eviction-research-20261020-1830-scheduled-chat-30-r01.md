@@ -32,6 +32,8 @@ reference_main_sha: '3070e48c48997d0810f8c82a24176ddf140893e6'
 quality_self_review_passed: true
 quality_self_review_version: 'PAPER-QUALITY-GUIDE-2026-10-07'
 quality_self_review_notes: 'arXiv v2本文第3・4節、表1〜3、付録B/C/D/E/F/Gを確認。CISの教師信号、SmoothL1+隣接平滑化、pre-RoPE再配置、安定化トークン、Locret-Qの問い合わせ前置、RTX4090のOOMとトークン速度、RULERとLongBenchの対照を照合。'
+last_audited: null
+audit_version: 0
 ---
 # Locret：因果的重要度を学習して分割プレフィル中にKVキャッシュを間引く
 
