@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-20T04:50:49+00:00",
+  "generated_at": "2026-10-20T04:56:24+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 81,
+  "count": 83,
   "entries": [
     {
       "canonical_id": "DOI:10.1145/3714983.3714987",
@@ -2176,10 +2176,39 @@
       "worker_run_key": "20261020-1130-scheduled-chat-30/r01"
     },
     {
-      "canonical_id": "arXiv:2605.20813",
-      "title": "PulseCol: Periodically Refreshed Column-Sparse Attention for Accelerating Diffusion Language Models",
-      "source_url": "https://arxiv.org/abs/2605.20813",
-      "returned_at": "2026-10-20T04:49:30+00:00",
+      "canonical_id": "arXiv:2610.12060",
+      "title": "Look Back, Think Ahead: Visual Memory on Demand for Efficient Multimodal Reasoning",
+      "source_url": "https://arxiv.org/abs/2610.12060",
+      "returned_at": "2026-10-20T04:56:19+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700",
+        "説明不足トリガー: 評価説明量 0 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 6399,
+        "body_paragraphs": 39,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 0,
+        "limitation_chars": 536,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700",
+          "評価説明量 0 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_9a7a3c58b0e8819193ac4aef9227c62c--2026-2610.12060-vimod-visual-memory-on-demand-research-20261020-1304-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_9a7a3c58b0e8819193ac4aef9227c62c--2026-2610.12060-vimod-visual-memory-on-demand-research-20261020-1304-scheduled-chat-00-r01.json",
+      "worker_run_key": "20261020-1304-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2608.03276",
+      "title": "TaskPress: Query-Agnostic KV Cache Compression via Task-Guided Pruning",
+      "source_url": "https://arxiv.org/abs/2608.03276",
+      "returned_at": "2026-10-20T04:56:20+00:00",
       "return_count": 1,
       "assigned_worker": "scheduled-chat-45",
       "reason": "blocked_quality",
@@ -2188,27 +2217,26 @@
       ],
       "quality_metrics": {
         "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5983,
-        "body_paragraphs": 38,
+        "body_chars": 7388,
+        "body_paragraphs": 51,
         "method_chars": 0,
         "method_paragraphs": 0,
-        "evaluation_chars": 653,
-        "limitation_chars": 0,
+        "evaluation_chars": 1720,
+        "limitation_chars": 653,
         "insufficiency_flags": [
-          "手法説明量 0 < 700",
-          "限界説明量 0 < 推奨 120"
+          "手法説明量 0 < 700"
         ]
       },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_23d13b9b64f08191abc741f005a194b4--2026-2605.20813-pulsecol-periodic-column-sparse-dllm-research-20261020-1304-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_23d13b9b64f08191abc741f005a194b4--2026-2605.20813-pulsecol-periodic-column-sparse-dllm-research-20261020-1304-scheduled-chat-00-r01.json",
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_a7298965817c8191875b98f7f7d7992c--2026-2608.03276-taskpress-query-agnostic-kv-cache-research-20261020-1304-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_a7298965817c8191875b98f7f7d7992c--2026-2608.03276-taskpress-query-agnostic-kv-cache-research-20261020-1304-scheduled-chat-00-r01.json",
       "worker_run_key": "20261020-1304-scheduled-chat-00/r01"
     },
     {
       "canonical_id": "arXiv:2607.18171",
       "title": "FlashRT: Agent Harness for Guiding Agents to Deploy Real-Time Multimodal Applications",
       "source_url": "https://arxiv.org/html/2607.18171",
-      "returned_at": "2026-10-20T04:49:31+00:00",
-      "return_count": 4,
+      "returned_at": "2026-10-20T04:56:23+00:00",
+      "return_count": 6,
       "assigned_worker": "scheduled-chat-30",
       "reason": "blocked_quality",
       "failures": [
@@ -2227,9 +2255,37 @@
           "限界説明量 0 < 推奨 120"
         ]
       },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_69b21658dc388191a38ae640e363e797--exactbytes-1345--2026-2607.18171-flashrt-multimodal-serving-agent-returned-repair-20261020-1330-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_69b21658dc388191a38ae640e363e797--exactbytes-1345--2026-2607.18171-flashrt-multimodal-serving-agent-returned-repair-20261020-1330-scheduled-chat-30-r01.json",
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-5a0f134dbfe7--libfile_69b21658dc388191a38ae640e363e797--exactbytes-1345--2026-2607.18171-flashrt-multimodal-serving-agent-returned-repair-20261020-1330-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-5a0f134dbfe7--libfile_69b21658dc388191a38ae640e363e797--exactbytes-1345--2026-2607.18171-flashrt-multimodal-serving-agent-returned-repair-2026102.json",
       "worker_run_key": "20261020-1330-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2605.20813",
+      "title": "PulseCol: Periodically Refreshed Column-Sparse Attention for Accelerating Diffusion Language Models",
+      "source_url": "https://arxiv.org/abs/2605.20813",
+      "returned_at": "2026-10-20T04:56:24+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5983,
+        "body_paragraphs": 38,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 653,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-b0bf207276d7--libfile_23d13b9b64f08191abc741f005a194b4--2026-2605.20813-pulsecol-periodic-column-sparse-dllm-research-20261020-1304-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-b0bf207276d7--libfile_23d13b9b64f08191abc741f005a194b4--2026-2605.20813-pulsecol-periodic-column-sparse-dllm-research-20261020-1304-scheduled-cha.json",
+      "worker_run_key": "20261020-1304-scheduled-chat-00/r01"
     }
   ]
 }

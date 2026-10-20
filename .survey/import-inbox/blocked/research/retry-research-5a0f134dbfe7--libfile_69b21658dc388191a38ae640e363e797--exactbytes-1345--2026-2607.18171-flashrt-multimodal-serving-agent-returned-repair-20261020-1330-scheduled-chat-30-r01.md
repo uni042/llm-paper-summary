@@ -31,6 +31,8 @@ worker_run_key: '20261020-1330-scheduled-chat-30/r01'
 reference_main_sha: 'a38bef4c4148b2c7d7152f2b4571b8701154ff92'
 quality_self_review_passed: true
 quality_self_review_version: 'PAPER-QUALITY-GUIDE-2026-10-07'
+last_audited: null
+audit_version: 0
 ---
 
 # FlashRT：依存関係を明示してリアルタイム複合推論の配置を自動最適化する

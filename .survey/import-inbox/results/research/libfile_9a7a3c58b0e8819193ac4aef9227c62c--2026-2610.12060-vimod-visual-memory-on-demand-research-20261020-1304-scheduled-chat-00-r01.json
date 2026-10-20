@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "efd0eb316bbaa651e1446effa535757afee7eda63211d58ada5cf939aabf86d4",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_9a7a3c58b0e8819193ac4aef9227c62c--2026-2610.12060-vimod-visual-memory-on-demand-research-20261020-1304-scheduled-chat-00-r01.md",
+  "canonical_id": "arXiv:2610.12060",
+  "worker_completed_at": "2026-10-20T13:08:47+09:00",
+  "worker_run_key": "20261020-1304-scheduled-chat-00/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 6399,
+    "body_paragraphs": 39,
+    "method_chars": 0,
+    "method_paragraphs": 0,
+    "evaluation_chars": 0,
+    "limitation_chars": 536,
+    "insufficiency_flags": [
+      "手法説明量 0 < 700",
+      "評価説明量 0 < 500"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 手法説明量 0 < 700",
+    "説明不足トリガー: 評価説明量 0 < 500"
+  ],
+  "processed_at": "2026-10-20T04:56:19+00:00"
+}
