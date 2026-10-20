@@ -30,6 +30,64 @@ returned_research_original_failure: '説明不足トリガー: 手法説明量 0
 returned_research_source_note: 'GitHub blocked receiptの同一原稿を方法節の見出し契約に適合させて修復。本文の数値・一次資料根拠は維持。'
 last_audited: null
 audit_version: 0
+references:
+  - source_index: 1
+    title: "vLLM: Open-source LLM Inference Library"
+  - source_index: 2
+    title: "Edge-Computing Architectures for Internet of Things Applications: A Survey"
+  - source_index: 3
+    title: "Edge Computing and Cloud Computing for Internet of Things: A Review"
+  - source_index: 4
+    title: "Latency-Aware Task Scheduling for IoT Applications Based on Artificial Intelligence with Partitioning"
+  - source_index: 5
+    title: "Offloading Decision and Resource Allocation in Mobile Edge Computing"
+  - source_index: 6
+    title: "Task Offloading in Edge and Cloud Computing: A Survey"
+  - source_index: 7
+    title: "Efficient Memory Management for Large Language Model Serving with PagedAttention"
+  - source_index: 8
+    title: "Orca: A Distributed Serving System for Transformer-Based Generative Models"
+  - source_index: 9
+    title: "SARATHI: Efficient LLM Inference by Piggybacking Decodes with Chunked Prefills"
+    canonical_id: arXiv:2308.16369
+  - source_index: 10
+    title: "Taming Throughput-Latency Tradeoff in LLM Inference with Sarathi-Serve"
+  - source_index: 11
+    title: "DistServe: Disaggregating Prefill and Decoding for Goodput-optimized LLM Serving"
+  - source_index: 12
+    title: "Splitwise: Efficient Generative LLM Inference Using Phase Splitting"
+  - source_index: 13
+    title: "Inference without Interference: Disaggregate LLM Inference for Mixed Downstream Workloads"
+    canonical_id: arXiv:2401.11181
+  - source_index: 14
+    title: "HexGen: Generative Inference of Large Language Model over Heterogeneous Environment"
+  - source_index: 15
+    title: "HexGen-2: Disaggregated Generative Inference of LLMs in Heterogeneous Environment"
+  - source_index: 16
+    title: "GPipe: Efficient Training of Giant Neural Networks using Pipeline Parallelism"
+  - source_index: 17
+    title: "H2O: Heavy-Hitter Oracle for Efficient Generative Inference of Large Language Models"
+  - source_index: 18
+    title: "Efficient Streaming Language Models with Attention Sinks"
+  - source_index: 19
+    title: "FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness"
+  - source_index: 20
+    title: "FlashAttention-2: Faster Attention with Better Parallelism and Work Partitioning"
+  - source_index: 21
+    title: "FlashAttention-3: Fast and Accurate Attention with Asynchrony and Low-precision"
+  - source_index: 22
+    title: "POD-Attention: Unlocking Full Prefill-Decode Overlap for Faster LLM Inference"
+  - source_index: 23
+    title: "ExeGPT: Constraint-Aware Resource Scheduling for LLM Inference"
+  - source_index: 24
+    title: "DeepSpeed-FastGen: High-throughput Text Generation for LLMs via MII and DeepSpeed-Inference"
+    canonical_id: arXiv:2401.08671
+  - source_index: 25
+    title: "Sequoia: Scalable, Robust, and Hardware-aware Speculative Decoding"
+    canonical_id: arXiv:2402.12374
+references_checked_at: '2026-10-20'
+references_source: 'author preprint full 25-item numbered reference section (Preprints.org 202512.0788; DOI version referenced separately); unresolved IDs retained as titles'
+references_total: 25
 ---
 
 # 動的トークン予算とマイクロバッチ数の共同調整によるパイプラインLLM推論の効率化
