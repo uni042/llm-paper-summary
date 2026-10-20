@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-20T18:49:03+00:00",
+  "generated_at": "2026-10-20T23:55:53+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 69,
+  "count": 66,
   "entries": [
     {
       "canonical_id": "DOI:10.1145/3714983.3714987",
@@ -455,34 +455,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-61423140d800--libfile_0fd44f5807d08191add265c32774aa11--2025-2506.13771-littlebit-latent-factorization-ultralowbit-research-20261018-1800-scheduled-chat-00-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-61423140d800--libfile_0fd44f5807d08191add265c32774aa11--2025-2506.13771-littlebit-latent-factorization-ultralowbit-research-20261018-1800-schedul.json",
       "worker_run_key": "20261018-1800-scheduled-chat-00/r01"
-    },
-    {
-      "canonical_id": "arXiv:2307.02690",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-18T18:03:42+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 0 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 6009,
-        "body_paragraphs": 33,
-        "method_chars": 1695,
-        "method_paragraphs": 9,
-        "evaluation_chars": 0,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "評価説明量 0 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-927b36a59c10--libfile_9fc1fba9cc7c8191abf70e005003eafd--2023-2307.02690-saicl-structured-attention-in-context-research-20261019-0201-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-927b36a59c10--libfile_9fc1fba9cc7c8191abf70e005003eafd--2023-2307.02690-saicl-structured-attention-in-context-research-20261019-0201-scheduled-ch.json",
-      "worker_run_key": "20261019-0201-scheduled-chat-00/r01"
     },
     {
       "canonical_id": "arXiv:2609.30057",
@@ -1012,33 +984,6 @@
       "worker_run_key": "20261020-0204-scheduled-chat-00/r01"
     },
     {
-      "canonical_id": "arXiv:2506.04642",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-20T17:23:43+00:00",
-      "return_count": 4,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 418 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 4455,
-        "body_paragraphs": 24,
-        "method_chars": 1787,
-        "method_paragraphs": 10,
-        "evaluation_chars": 418,
-        "limitation_chars": 315,
-        "insufficiency_flags": [
-          "評価説明量 418 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-09efebc28b27--libfile_f92e0f4c4cb88191b1a1f57b21c3ae2a--2025-2506.04642-tada-mean-centered-kv-cache-research-20261020-1056-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-09efebc28b27--libfile_f92e0f4c4cb88191b1a1f57b21c3ae2a--2025-2506.04642-tada-mean-centered-kv-cache-research-20261020-1056-scheduled-chat-00-r01.json",
-      "worker_run_key": "20261020-1056-scheduled-chat-00/r01"
-    },
-    {
       "canonical_id": "arXiv:2508.06297",
       "title": null,
       "source_url": null,
@@ -1094,34 +1039,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-18ce7eee8ee4--libfile_bea1fbf67aa48191a0389113a9cd849d--2026-2610.05305-parallelism-compute-communication-model-research-20261020-1304-scheduled-chat-00-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-18ce7eee8ee4--libfile_bea1fbf67aa48191a0389113a9cd849d--2026-2610.05305-parallelism-compute-communication-model-research-20261020-1304-scheduled-.json",
       "worker_run_key": "20261020-1304-scheduled-chat-00/r01"
-    },
-    {
-      "canonical_id": "arXiv:2403.11805",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-20T17:31:51+00:00",
-      "return_count": 6,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 0 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5855,
-        "body_paragraphs": 31,
-        "method_chars": 2220,
-        "method_paragraphs": 12,
-        "evaluation_chars": 0,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "評価説明量 0 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-193f6b71e9d6--libfile_b6c04c9d28588191b9eaa38e1516d197--2024-2403.11805-libra-mobile-llmaas-kv-context-management-research-20261019-2000-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-193f6b71e9d6--libfile_b6c04c9d28588191b9eaa38e1516d197--2024-2403.11805-libra-mobile-llmaas-kv-context-management-research-20261019-2000-schedule.json",
-      "worker_run_key": "20261019-2000-scheduled-chat-00/r01"
     },
     {
       "canonical_id": "arXiv:2603.02188",
@@ -1712,34 +1629,6 @@
       "worker_run_key": "20261020-1555-scheduled-chat-00/r01"
     },
     {
-      "canonical_id": "arXiv:2605.20813",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-20T18:12:37+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5983,
-        "body_paragraphs": 38,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 653,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-b0bf207276d7--libfile_23d13b9b64f08191abc741f005a194b4--2026-2605.20813-pulsecol-periodic-column-sparse-dllm-research-20261020-1304-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-b0bf207276d7--libfile_23d13b9b64f08191abc741f005a194b4--2026-2605.20813-pulsecol-periodic-column-sparse-dllm-research-20261020-1304-scheduled-cha.json",
-      "worker_run_key": "20261020-1304-scheduled-chat-00/r01"
-    },
-    {
       "canonical_id": "DOI:10.18653/v1/2025.emnlp-main.1676",
       "title": null,
       "source_url": null,
@@ -1927,6 +1816,33 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-feed79046562--libfile_e0ae22cc5d988191af94eb8e8e4d9b30--2026-2609.20874-predictive-kubernetes-autoscaling-returned-repair-20261020-2000-scheduled-chat-00-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-feed79046562--libfile_e0ae22cc5d988191af94eb8e8e4d9b30--2026-2609.20874-predictive-kubernetes-autoscaling-returned-repair-20261020-2000-scheduled.json",
       "worker_run_key": "20261020-2000-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2605.20813",
+      "title": "PulseCol: Periodically Refreshed Column-Sparse Attention for Accelerating Diffusion Language Models",
+      "source_url": "https://arxiv.org/pdf/2605.20813",
+      "returned_at": "2026-10-20T23:54:20+00:00",
+      "return_count": 3,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 165 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5972,
+        "body_paragraphs": 35,
+        "method_chars": 2052,
+        "method_paragraphs": 11,
+        "evaluation_chars": 165,
+        "limitation_chars": 592,
+        "insufficiency_flags": [
+          "評価説明量 165 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_b6aaf2cc3b8081919be71c5f49839652--2026-2605.20813-pulsecol-column-sparse-diffusion-inference-research-20261021-0628-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_b6aaf2cc3b8081919be71c5f49839652--2026-2605.20813-pulsecol-column-sparse-diffusion-inference-research-20261021-0628-scheduled-chat-30-r01.json",
+      "worker_run_key": "20261021-0628-scheduled-chat-30/r01"
     }
   ]
 }

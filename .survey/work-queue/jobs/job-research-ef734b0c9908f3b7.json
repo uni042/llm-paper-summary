@@ -35,10 +35,15 @@
   "selection_reason": "TaDA adaptively quantizes and mean-centers KV cache without separate outlier handling, reducing cache memory to 27% while retaining comparable accuracy for long-context inference.",
   "semantic_scholar_id": "23c5cabc6ae421ae3dcf2ed36cf4411b71a98d3d",
   "source_url": "https://arxiv.org/abs/2506.04642",
-  "status": "ready",
+  "status": "superseded",
   "title": "TaDA: Training-free recipe for Decoding with Adaptive KV Cache Compression and Mean-centering",
   "type": "research",
   "venue": "Annual Meeting of the Association for Computational Linguistics",
   "workflow_version": 10,
-  "year": 2025
+  "year": 2025,
+  "superseded_at": "2026-10-20T23:55:51+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2025-2506.04642-tada-training-free-recipe-for-decoding-with-adaptive-kv-cache-compressio.md",
+  "represented_canonical_id": "arXiv:2506.04642",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
