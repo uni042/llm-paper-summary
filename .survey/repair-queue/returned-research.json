@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-20T13:48:13+00:00",
+  "generated_at": "2026-10-20T13:59:59+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -860,33 +860,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-3bbb5a740b3e--libfile_2fd6d7bec9ec8191920fe37bef502dda--2026-2609.30057-krex-region-exclusive-gpu-kernel-benchmarking-research-20261019-0400-scheduled-chat-00-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-3bbb5a740b3e--libfile_2fd6d7bec9ec8191920fe37bef502dda--2026-2609.30057-krex-region-exclusive-gpu-kernel-benchmarking-research-20261019-0400-sche.json",
       "worker_run_key": "20261019-0400-scheduled-chat-00/r01"
-    },
-    {
-      "canonical_id": "arXiv:2610.01108",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-18T22:07:55+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 475 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 6101,
-        "body_paragraphs": 33,
-        "method_chars": 2876,
-        "method_paragraphs": 15,
-        "evaluation_chars": 475,
-        "limitation_chars": 778,
-        "insufficiency_flags": [
-          "評価説明量 475 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-878133658594--libfile_c74abecf3e608191b21fbfb6969f5534--2026-2610.01108-agspec-agent-aware-retrieval-speculative-decoding-research-20261019-0630-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-878133658594--libfile_c74abecf3e608191b21fbfb6969f5534--2026-2610.01108-agspec-agent-aware-retrieval-speculative-decoding-research-20261019-0630-.json",
-      "worker_run_key": "20261019-0630-scheduled-chat-30/r01"
     },
     {
       "canonical_id": "DOI:10.1145/3725338",
@@ -1883,34 +1856,6 @@
       "worker_run_key": "20261020-1330-scheduled-chat-30/r01"
     },
     {
-      "canonical_id": "arXiv:2605.20813",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-20T04:56:24+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5983,
-        "body_paragraphs": 38,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 653,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-b0bf207276d7--libfile_23d13b9b64f08191abc741f005a194b4--2026-2605.20813-pulsecol-periodic-column-sparse-dllm-research-20261020-1304-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-b0bf207276d7--libfile_23d13b9b64f08191abc741f005a194b4--2026-2605.20813-pulsecol-periodic-column-sparse-dllm-research-20261020-1304-scheduled-cha.json",
-      "worker_run_key": "20261020-1304-scheduled-chat-00/r01"
-    },
-    {
       "canonical_id": "arXiv:2610.12060",
       "title": null,
       "source_url": null,
@@ -2190,8 +2135,8 @@
     },
     {
       "canonical_id": "arXiv:2311.01282",
-      "title": "FlashDecoding++: Faster Large Language Model Inference on GPUs",
-      "source_url": "https://arxiv.org/html/2311.01282",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-20T13:45:46+00:00",
       "return_count": 3,
       "assigned_worker": "scheduled-chat-30",
@@ -2214,6 +2159,62 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_0db4a1d7261081918e50e8f3c8705784--2024-2311.01282-flashdecoding-plus-plus-repair-20261020-1430-scheduled-chat-30-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_0db4a1d7261081918e50e8f3c8705784--2024-2311.01282-flashdecoding-plus-plus-repair-20261020-1430-scheduled-chat-30-r01.json",
       "worker_run_key": "20261020-1430-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2610.01108",
+      "title": "AgSpec: Pushing the Limits of Retrieval-Based Speculative Decoding in Coding Agent Pipelines",
+      "source_url": "https://arxiv.org/html/2610.01108v2",
+      "returned_at": "2026-10-20T13:57:04+00:00",
+      "return_count": 3,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 120 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 6334,
+        "body_paragraphs": 38,
+        "method_chars": 2504,
+        "method_paragraphs": 16,
+        "evaluation_chars": 120,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "評価説明量 120 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_1b91d503d234819186067ef8046aaef8--2026-2610.01108-agspec-returned-repair-20261020-2056-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_1b91d503d234819186067ef8046aaef8--2026-2610.01108-agspec-returned-repair-20261020-2056-scheduled-chat-00-r01.json",
+      "worker_run_key": "20261020-2056-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2605.20813",
+      "title": "PulseCol: Periodically Refreshed Column-Sparse Attention for Accelerating Diffusion Language Models",
+      "source_url": "https://arxiv.org/abs/2605.20813",
+      "returned_at": "2026-10-20T13:58:00+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5983,
+        "body_paragraphs": 38,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 653,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_23d13b9b64f08191abc741f005a194b4--2026-2605.20813-pulsecol-periodic-column-sparse-dllm-research-20261020-1304-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_23d13b9b64f08191abc741f005a194b4--2026-2605.20813-pulsecol-periodic-column-sparse-dllm-research-20261020-1304-scheduled-chat-00-r01.json",
+      "worker_run_key": "20261020-1304-scheduled-chat-00/r01"
     }
   ]
 }

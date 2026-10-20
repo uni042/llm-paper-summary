@@ -23,7 +23,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - [06-moe-quantization-compression](../06-moe-quantization-compression/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（124本）
+## 自動生成の論文一覧（125本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -219,6 +219,10 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - **2026-05 · [GPU Forecasters: Language Models as Selective Surrogates for Kernel Runtime Optimization](2026-2605.31464-gpu-forecasters-kernel-runtime-surrogates.md)**  
   実装：[✓](https://github.com/codezakh/gpu-forecasters) ・ リポジトリ内被引用：0  
   実GPU計測をLLMの相対速度予測で選択的に代替し、同じGPU計測予算で候補数を4倍へ広げて6課題中4課題で基準と同等以上の高速カーネルを発見する。
+
+- **2026-05 · [DynaFlow: Transparent and Flexible Intra-Device Parallelism via Programmable Operator Scheduling](2026-2605.21603-dynaflow-transparent-and-flexible-intra-device-parallelism-via-programma.md)**  
+  実装：[✓](https://github.com/uw-syfi/DynaFlow) ・ リポジトリ内被引用：0  
+  複数の演算子を重畳する最適化自体は既知だが、実際のvLLMやSGLangへ組み込むにはモデル実行順序の大規模な変更が必要であり、入力長・バッチ量・GPU世代で最適な重畳方式も変わる。従来の配信・学習システム6種類へ代表的な装置内並列方式を導入し、元のシステム比で最大1.29倍の端から端までの処理量を実測した。
 
 - **2026-05 · [Ada-MK: Adaptive MegaKernel Optimization via Automated DAG-based Search for LLM Inference](2026-2605.11581-ada-mk-adaptive-megakernel-compilation.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
