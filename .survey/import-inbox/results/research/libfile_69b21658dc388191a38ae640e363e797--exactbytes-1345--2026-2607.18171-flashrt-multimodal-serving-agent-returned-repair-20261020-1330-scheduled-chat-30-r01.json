@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "812b9a20376765859beec1685f9d9d718987ad0ec774f54c7595f38d96db8c7a",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_69b21658dc388191a38ae640e363e797--exactbytes-1345--2026-2607.18171-flashrt-multimodal-serving-agent-returned-repair-20261020-1330-scheduled-chat-30-r01.md",
+  "canonical_id": "arXiv:2607.18171",
+  "worker_completed_at": "2026-10-20T13:30:00+09:00",
+  "worker_run_key": "20261020-1330-scheduled-chat-30/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 4317,
+    "body_paragraphs": 21,
+    "method_chars": 1239,
+    "method_paragraphs": 6,
+    "evaluation_chars": 0,
+    "limitation_chars": 0,
+    "insufficiency_flags": [
+      "評価説明量 0 < 500",
+      "限界説明量 0 < 推奨 120"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 評価説明量 0 < 500"
+  ],
+  "processed_at": "2026-10-20T04:49:31+00:00"
+}

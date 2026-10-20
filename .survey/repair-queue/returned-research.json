@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-20T03:58:23+00:00",
+  "generated_at": "2026-10-20T04:50:49+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -875,33 +875,6 @@
       "worker_run_key": "20261018-1800-scheduled-chat-00/r01"
     },
     {
-      "canonical_id": "arXiv:2505.19155",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-18T14:13:38+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 0 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 4928,
-        "body_paragraphs": 29,
-        "method_chars": 1709,
-        "method_paragraphs": 13,
-        "evaluation_chars": 0,
-        "limitation_chars": 618,
-        "insufficiency_flags": [
-          "評価説明量 0 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-9450c98a3a22--libfile_c3f56576169c81919a30fff1c8792e0d--2025-2505.19155-sparse-to-dense-video-llm-speculative-research-20261018-0730-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-9450c98a3a22--libfile_c3f56576169c81919a30fff1c8792e0d--2025-2505.19155-sparse-to-dense-video-llm-speculative-research-20261018-0730-scheduled-ch.json",
-      "worker_run_key": "20261018-0730-scheduled-chat-30/r01"
-    },
-    {
       "canonical_id": "arXiv:2506.05333",
       "title": null,
       "source_url": null,
@@ -930,33 +903,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-987f8ce558ff--libfile_25c1b5b333188191809fac348047a21a--2025-2506.05333-kinetics-memory-aware-test-time-scaling-research-20261018-2155-scheduled-chat-00-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-987f8ce558ff--libfile_25c1b5b333188191809fac348047a21a--2025-2506.05333-kinetics-memory-aware-test-time-scaling-research-20261018-2155-scheduled-.json",
       "worker_run_key": "20261018-2155-scheduled-chat-00/r01"
-    },
-    {
-      "canonical_id": "arXiv:2607.18171",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-18T14:20:51+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 0 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5759,
-        "body_paragraphs": 34,
-        "method_chars": 1968,
-        "method_paragraphs": 12,
-        "evaluation_chars": 0,
-        "limitation_chars": 740,
-        "insufficiency_flags": [
-          "評価説明量 0 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-9b4e8c6c19ba--libfile_e4c28ade7ac0819192315362a0c350e8--2026-2607.18171-flashrt-multimodal-serving-agent-research-20261018-0700-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-9b4e8c6c19ba--libfile_e4c28ade7ac0819192315362a0c350e8--2026-2607.18171-flashrt-multimodal-serving-agent-research-20261018-0700-scheduled-chat-00.json",
-      "worker_run_key": "scheduled-chat-00/20261018-0700/r01"
     },
     {
       "canonical_id": "arXiv:2510.02758",
@@ -2228,6 +2174,62 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-08e25ccdad2a--libfile_e3b8ca09cae881919b1574b114567756--2025-2510.26527-polybasic-speculative-decoding-returned-repair-20261020-1130-scheduled-chat-30-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-08e25ccdad2a--libfile_e3b8ca09cae881919b1574b114567756--2025-2510.26527-polybasic-speculative-decoding-returned-repair-20261020-1130-scheduled-ch.json",
       "worker_run_key": "20261020-1130-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2605.20813",
+      "title": "PulseCol: Periodically Refreshed Column-Sparse Attention for Accelerating Diffusion Language Models",
+      "source_url": "https://arxiv.org/abs/2605.20813",
+      "returned_at": "2026-10-20T04:49:30+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5983,
+        "body_paragraphs": 38,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 653,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_23d13b9b64f08191abc741f005a194b4--2026-2605.20813-pulsecol-periodic-column-sparse-dllm-research-20261020-1304-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_23d13b9b64f08191abc741f005a194b4--2026-2605.20813-pulsecol-periodic-column-sparse-dllm-research-20261020-1304-scheduled-chat-00-r01.json",
+      "worker_run_key": "20261020-1304-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2607.18171",
+      "title": "FlashRT: Agent Harness for Guiding Agents to Deploy Real-Time Multimodal Applications",
+      "source_url": "https://arxiv.org/html/2607.18171",
+      "returned_at": "2026-10-20T04:49:31+00:00",
+      "return_count": 4,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 0 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 4317,
+        "body_paragraphs": 21,
+        "method_chars": 1239,
+        "method_paragraphs": 6,
+        "evaluation_chars": 0,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "評価説明量 0 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_69b21658dc388191a38ae640e363e797--exactbytes-1345--2026-2607.18171-flashrt-multimodal-serving-agent-returned-repair-20261020-1330-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_69b21658dc388191a38ae640e363e797--exactbytes-1345--2026-2607.18171-flashrt-multimodal-serving-agent-returned-repair-20261020-1330-scheduled-chat-30-r01.json",
+      "worker_run_key": "20261020-1330-scheduled-chat-30/r01"
     }
   ]
 }

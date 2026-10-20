@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "58dee89d85b14c2d680158ccee1e216931e36cfe2943fc9933bd04b136833670",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_78487f80cfd8819187814caacea1892a--exactbytes-1345--2025-2505.19155-sparse-to-dense-video-llm-returned-repair-20261020-1330-scheduled-chat-30-r01.md",
+  "canonical_id": "arXiv:2505.19155",
+  "worker_completed_at": "2026-10-20T13:30:00+09:00",
+  "worker_run_key": "20261020-1330-scheduled-chat-30/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 5018,
+    "body_paragraphs": 30,
+    "method_chars": 1738,
+    "method_paragraphs": 13,
+    "evaluation_chars": 875,
+    "limitation_chars": 601,
+    "insufficiency_flags": []
+  },
+  "failures": [
+    "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2025-2505.19155-sparse-to-dense-a-free-lunch-for-lossless-acceleration-of-video-understa.md と 18 段落 / 3850文字 (100.0%) が完全一致"
+  ],
+  "processed_at": "2026-10-20T04:50:01+00:00"
+}
