@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-20T14:46:05+00:00",
-  "record_count": 12440,
+  "updated_at": "2026-10-20T17:49:24+00:00",
+  "record_count": 12442,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -179304,6 +179304,30 @@
       "last_checked_at": "2026-10-20T13:06:25+00:00",
       "linked_from": [],
       "title": "Motion planning invariants and families of subgroups"
+    },
+    "arXiv:2508.12145": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2508.12145",
+      "identity_tokens": [
+        "arXiv:2508.12145"
+      ],
+      "reason": "画像・多次元データの可視化で用いる2次元射影と逆射影を、微分エントロピー付き変分オートエンコーダで学習し、不確実性を可視化する研究。一次論文の要旨と導入でMNIST等の射影・UMAP・t-SNEとの比較を確認した。LLMの推論サービング、KVキャッシュ、MoE、量子化、GPU推論基盤の効率化を扱わず、現行サーベイの対象外。",
+      "first_checked_at": "2026-10-20T17:49:24+00:00",
+      "last_checked_at": "2026-10-20T17:49:24+00:00",
+      "linked_from": [],
+      "title": "DE-VAE: Revealing Uncertainty in Parametric and Inverse Projections with Variational Autoencoders using Differential Entropy"
+    },
+    "arXiv:2508.21360": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2508.21360",
+      "identity_tokens": [
+        "arXiv:2508.21360"
+      ],
+      "reason": "架橋高分子ネットワークの摩擦・接着を、剛体圧子による押込みと分子動力学シミュレーションで評価する材料力学研究。一次論文の要旨・導入では架橋密度、摩擦係数、接着力を主要対象とし、LLM推論、GPUカーネル、メモリ階層、サービング基盤への技術的寄与はない。対象外と判断する。",
+      "first_checked_at": "2026-10-20T17:49:24+00:00",
+      "last_checked_at": "2026-10-20T17:49:24+00:00",
+      "linked_from": [],
+      "title": "Computational study of Adhesion and Friction Behavior of Crosslinked Polymer Network"
     }
   }
 }

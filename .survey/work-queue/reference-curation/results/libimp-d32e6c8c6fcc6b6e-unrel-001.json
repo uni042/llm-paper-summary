@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-d32e6c8c6fcc6b6e-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2508.21360",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2508.21360",
+    "identity_tokens": [
+      "arXiv:2508.21360"
+    ],
+    "reason": "架橋高分子ネットワークの摩擦・接着を、剛体圧子による押込みと分子動力学シミュレーションで評価する材料力学研究。一次論文の要旨・導入では架橋密度、摩擦係数、接着力を主要対象とし、LLM推論、GPUカーネル、メモリ階層、サービング基盤への技術的寄与はない。対象外と判断する。",
+    "first_checked_at": "2026-10-20T17:49:24+00:00",
+    "last_checked_at": "2026-10-20T17:49:24+00:00",
+    "linked_from": [],
+    "title": "Computational study of Adhesion and Friction Behavior of Crosslinked Polymer Network"
+  },
+  "processed_at": "2026-10-20T17:49:24+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d32e6c8c6fcc",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
