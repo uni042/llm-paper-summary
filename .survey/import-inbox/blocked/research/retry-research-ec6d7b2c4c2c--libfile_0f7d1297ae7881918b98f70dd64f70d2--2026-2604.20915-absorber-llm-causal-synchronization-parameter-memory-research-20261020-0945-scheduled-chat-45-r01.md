@@ -37,6 +37,8 @@ scheduled_slot: '45'
 reference_main_sha: '70ad3a08b14ea462162f340bc83e3dd4c562b7b7'
 quality_self_review_passed: true
 quality_self_review_basis: '一次論文v1のアルゴリズム1・2、表1～7、評価設定、限界を照合。計算量の理論主張と実測範囲を区別した。'
+last_audited: null
+audit_version: 0
 ---
 
 # Absorber LLM：履歴の因果的効果をパラメータへ吸収する長文脈推論
