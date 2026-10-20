@@ -1,0 +1,27 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "scheduled_slot": "30",
+  "run_key": "20261020-2230-scheduled-chat-30/r02/research-prescreen/124",
+  "reference_main_sha": "00c578ec51d7d1afe014b71772c82b36264640da",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2510.27257",
+      "identity_tokens": [
+        "arxiv:2510.27257"
+      ],
+      "title": "Synergistic Tensor and Pipeline Parallelism",
+      "reason": "一次要旨では、テンソル並列の集合通信待ちとパイプライン並列の空泡を、順伝播・逆伝播を細粒度に編み込む学習スケジュールで削減する。LLMの学習スループット最大12%、マルチモーダルLLMの学習スループット最大16%という結果で、主目的・測定指標とも分散学習の高速化。推論サービング、KVキャッシュ、デコード実行基盤への直接的寄与は一次要旨に記載されないため現行の推論サーベイ対象外。",
+      "source_url": "https://arxiv.org/abs/2510.27257",
+      "body_check": "abstract_screen_only; body_not_read; arxiv abstract confirms training forward/backward and 12%/16% training throughput",
+      "first_checked_at": "2026-10-20T22:30:00+09:00",
+      "last_checked_at": "2026-10-20T22:30:00+09:00",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance",
+      "worklist_rank": 124
+    }
+  ]
+}
