@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-10-20 15:37:20 JST**
+> 自動生成: **2026-10-20 15:55:21 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文数 | **1431** |
-| 未claim Research job | **1431** |
-| 直近24hのResearch処理完了 | **44** |
-| 最終Research処理完了 | **10-20 13:30:00 JST** |
+| 収録候補論文数 | **1428** |
+| 未claim Research job | **1428** |
+| 直近24hのResearch処理完了 | **42** |
+| 最終Research処理完了 | **10-20 14:52:00 JST** |
 | 最終Discovery探索完了 | **10-20 12:45:00 JST** |
 | 整合性異常 | **0** |
 
@@ -41,9 +41,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **1431** |
+| canonical_id確認済みの一意な候補論文 | **1428** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **1431** |
+| 非終端Research job合計 | **1428** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -54,10 +54,10 @@
 | 探索候補総数 | **143287** |
 | 処理済み | **21247** |
 | 未処理Discovery候補 | **122040** |
-| 収録済み | **2677** |
-| Research / Audit候補へ昇格済み | **1161** |
-| 無関係として除外 | **12306** |
-| 微妙として除外 | **5103** |
+| 収録済み | **2680** |
+| Research / Audit候補へ昇格済み | **1160** |
+| 無関係として除外 | **12305** |
+| 微妙として除外 | **5102** |
 
 ### 探索候補の事前フィルタリング（可逆）
 
@@ -88,8 +88,8 @@
 - 全数との差は暫定隔離数。元候補・引用プール・relevance判定台帳は削除せず、現在の候補identityから再計算する。
 
 - 消化率: **14.8%**
-- 現在の生在庫: 後方references **55007件** / 前方引用 **69213件**。後方候補を優先し、前方プールは後方プールに存在する同一identityを保持しません。
-- 前方・後方を統合してidentity重複を除いた未処理面は **123579件**。そこから既にResearch / Audit候補へ昇格したidentityを除いた値が上表の未処理Discovery候補です。
+- 現在の生在庫: 後方references **55006件** / 前方引用 **69213件**。後方候補を優先し、前方プールは後方プールに存在する同一identityを保持しません。
+- 前方・後方を統合してidentity重複を除いた未処理面は **123578件**。そこから既にResearch / Audit候補へ昇格したidentityを除いた値が上表の未処理Discovery候補です。
 - 処理済み = 収録済み + Research / Audit候補へ昇格済み + 無関係 + 微妙。前方引用・後方referencesの出自は区別せず、DOI/arXiv/title aliasを統合して数えます。
 - STATUS生成時にpaper実体、Research/Audit job、relevance台帳、現在の前方/後方候補からゼロベースで再計算します。
 
@@ -116,7 +116,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **10-20 11:18:57 JST（4時間18分前）** |
+| 最終maintenance完了 | **10-20 11:18:57 JST（4時間36分前）** |
 | 最終maintenance status | **passed** |
 | consistency | **passed** |
 | health | **passed** |
@@ -136,16 +136,16 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 指標 | 現在値 |
 |---|---:|
-| 直近6hのResearch完了 | **8** |
+| 直近6hのResearch完了 | **10** |
 | 直近6hのDiscovery run | **4** |
 | 直近6hのDiscovery本文確認・分類 | **4** |
-| 最終Research完了 | **10-20 13:30:00 JST** |
+| 最終Research完了 | **10-20 14:52:00 JST** |
 | 最終Discovery完了 | **10-20 12:45:00 JST** |
 
 ### 最新Library-first run
 
-- Research: **10-20 13:30:00 JST** / worker — / run 20261020-1330-scheduled-chat-30/r01 / 成果 **1件**
-  - evidence: .survey/import-inbox/results/research/libfile_78487f80cfd8819187814caacea1892a--2025-2505.19155-sparse-to-dense-video-llm-returned-repair-20261020-1330-scheduled-chat-30-r01.json
+- Research: **10-20 14:52:00 JST** / worker — / run 20261020-1445-scheduled-chat-45/r01 / 成果 **1件**
+  - evidence: .survey/import-inbox/results/research/libfile_892d2f23ae648191b3398981fdae662a--2026-2609.39982-mid-harness-action-verification-testtime-scaling-research-20261020-1445-scheduled-chat-45-r01.json
 - Discovery: **10-20 12:45:00 JST** / worker scheduled-chat-45 / run 20261020-1245-scheduled-chat-45/r01/research-prescreen/004
   - 本文確認・分類 **1件** / accept **0件** / unrelated+borderline **1件**
   - evidence: .survey/import-inbox/results/discovery/libfile_092a5f919fe88191b424dbebff6a2265--discovery-20261020-1245-scheduled-chat-45-research-relevance-r01-004.json
@@ -292,7 +292,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | status | 件数 |
 |---|---:|
-| ready | **1431** |
+| ready | **1428** |
 
 ### 候補の重複・識別情報欠損
 
@@ -312,7 +312,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **2680** |
+| inference/training/survey配下の論文Markdown実体 | **2683** |
 
 ### immutable submissionの未照合
 
