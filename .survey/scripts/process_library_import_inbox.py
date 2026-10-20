@@ -599,6 +599,34 @@ def repair_owner(canonical_id: str) -> str:
     return REPAIR_WORKERS[digest[0] % len(REPAIR_WORKERS)]
 
 
+def _proven_existing_duplicate(repo_root: Path, canonical_id: str, failures: list[Any]) -> bool:
+    """Suppress only proven 100% duplicates already represented on main.
+
+    Some historical blocked source files were moved/removed, but the receipt
+    records that their body exactly matched the already-published paper.
+    Merely having a paper with the same identity is NOT sufficient.
+    """
+    for failure in failures:
+        if not isinstance(failure, str) or "(100.0%) が完全一致" not in failure:
+            continue
+        match = re.search(
+            r"^長文定型文の再利用を検出:\\s+(papers/(?:inference|training|survey)/[^\\s]+\\.md)\\s+と\\s+\\d+\\s+段落\\s*/\\s*\\d+\\s*文字\\s+\\(100\\.0%\\)\\s+が完全一致",
+            failure,
+        )
+        if not match:
+            continue
+        published = (repo_root / match.group(1)).resolve()
+        if not published.is_relative_to(repo_root.resolve()) or not published.is_file():
+            continue
+        try:
+            meta = parse_frontmatter(published.read_text(encoding="utf-8"))
+        except (OSError, UnicodeError, ValueError):
+            continue
+        if str(meta.get("canonical_id") or "").strip().casefold() == canonical_id.casefold():
+            return True
+    return False
+
+
 def sync_returned_research_queue(repo_root: Path) -> dict[str, Any]:
     """Rebuild the durable returned-Research queue from import receipts.
 
@@ -636,6 +664,8 @@ def sync_returned_research_queue(repo_root: Path) -> dict[str, Any]:
     entries: list[dict[str, Any]] = []
     for canonical_id, (_, result, result_path) in latest.items():
         if result.get("status") != "blocked_quality":
+            continue
+        if _proven_existing_duplicate(repo_root, canonical_id, list(result.get("failures") or [])):
             continue
         blocked_path = str(result.get("blocked_path") or "").strip() or None
         title = None
