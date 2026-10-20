@@ -24,7 +24,7 @@ MoEの専門家並列、テンソル並列との混成、all-to-all通信、専�
 - [02-adaptive-expert-computation-compression](../02-adaptive-expert-computation-compression/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（51本）
+## 自動生成の論文一覧（52本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -132,6 +132,10 @@ MoEの専門家並列、テンソル並列との混成、all-to-all通信、専�
 - **2026-05 · [EnergyLens: Predictive Energy-Aware Exploration for Multi-GPU LLM Inference Optimization](2026-2605.14249-energylens-predictive-energy-aware-exploration-for-multi-gpu-llm-inferen.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   EnergyLensは、演算を記号的に指定するだけで推論時のエネルギーと遅延を予測し、構成間のトレードオフを探索する枠組みである。
+
+- **2026-05 · [Diagnosing Overhead in Dispatch Operations: Cross-architecture Observatory](2026-2605.20982-diagnosing-overhead-in-dispatch-operations-cross-architecture-observator.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  新しい通信アルゴリズムを提案して直接高速化する論文ではない。代わりに、専門家配置や通信網の設計で暗黙に仮定されがちな「EPを増やせば負荷が均される」「乱数で作ったトークン列が実入力の通信を代表する」を、再現可能な測定で検証する。
 
 - **2026-05 · [CCL-Bench 1.0: A Trace-Based Benchmark for LLM Infrastructure](2026-2605.06544-ccl-bench-1-0-a-trace-based-benchmark-for-llm-infrastructure.md)**  
   実装：[✓](https://github.com/cornell-sysphotonics/ccl-bench) ・ リポジトリ内被引用：0  
