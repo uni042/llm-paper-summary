@@ -35,6 +35,8 @@ scheduled_slot: '00'
 reference_main_sha: '0be5063f1b6c57869038c1b09000371c7ded3326'
 quality_self_review_passed: true
 quality_self_review_version: PAPER-QUALITY-GUIDE-2026-10-07
+last_audited: null
+audit_version: 0
 ---
 
 # CompAir：3次元混成メモリ内演算と転送中演算によるLLM推論アクセラレータ
