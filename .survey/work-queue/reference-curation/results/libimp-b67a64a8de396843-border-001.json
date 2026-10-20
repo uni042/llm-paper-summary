@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-b67a64a8de396843-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2607.07707",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2607.07707",
+    "identity_tokens": [
+      "arXiv:2607.07707"
+    ],
+    "reason": "原著の主貢献は、事前学習時に事実知識をパラメータから外部知識ベースへ分離し、言語モデルと連続ベクトル検索を共同学習する方式である。推論時には<FACT>トークンの隠れ状態でtop-1検索し、返された事実テキストを文脈へ挿入して生成を再開するため、推論経路に技術的関係はある。一方、中心評価はパープレキシティとSimpleQAの知識正確性であり、推論サービングのスループット、TTFT/TPOT、GPUメモリ階層、検索遅延・通信の効率改善を実証するシステム研究ではない。学習専用範囲と推論時外部メモリの境界にあるため、現行の推論基盤サーベイではborderlineとして保留する。",
+    "first_checked_at": "2026-10-20T20:52:10+00:00",
+    "last_checked_at": "2026-10-20T20:52:10+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Co-LMLM: Continuous-Query Limited Memory Language Models"
+  },
+  "processed_at": "2026-10-20T20:52:11+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-b67a64a8de39",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
