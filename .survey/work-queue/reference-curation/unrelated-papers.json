@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-20T04:49:43+00:00",
-  "record_count": 12433,
+  "updated_at": "2026-10-20T07:55:02+00:00",
+  "record_count": 12435,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -168348,9 +168348,9 @@
         "id:arXiv:2606.10577",
         "url:https://arxiv.org/abs/2606.10577"
       ],
-      "reason": "視覚言語ナビゲーションをツール呼び出しハーネスとして構築するエージェント応用研究であり、LLM推論ランタイムやKVキャッシュ等のシステム最適化ではない。",
+      "reason": "原著要旨はVLMへRGB画素指定による移動、必要時の深度取得、地図画像と履歴の想起をツールとして公開するロボット航法ハーネスを提案する。R2R-CEで成功率76%を報告するが、目的はゼロショット視覚言語ナビゲーションのタスク性能であり、LLMサービング・推論スケジューリング・GPU実行高速化ではない。",
       "first_checked_at": "2026-10-13T10:40:03+00:00",
-      "last_checked_at": "2026-10-19T22:43:00+00:00",
+      "last_checked_at": "2026-10-20T07:55:01+00:00",
       "linked_from": [],
       "title": "AgenticNav: Zero-Shot Vision-and-Language Navigation as a Tool-Calling Harness"
     },
@@ -178744,11 +178744,11 @@
       "identity_tokens": [
         "DOI:10.1016/j.ress.2025.111891"
       ],
-      "reason": "タイトルは海賊行為対策のオフライン業務アプリケーション向けLLM利用を主題としており、推論カーネル、KVキャッシュ、MoE、量子化、汎用サービングスケジューリングの新規技術を明示していない。明白な応用領域研究として本文深読解の対象外とする。",
+      "reason": "題名で対象が海上の海賊対策の意思決定支援・知識検索という特定業務アプリケーションと明示されている。ローカル配備は含むが、題名に推論基盤の新しい計算・メモリ・スケジューリング機構は示されないため、タイトル先行段階で対象外とする。",
       "first_checked_at": "2026-10-16T09:22:43+00:00",
-      "last_checked_at": "2026-10-16T09:22:43+00:00",
+      "last_checked_at": "2026-10-20T07:55:01+00:00",
       "linked_from": [],
-      "title": "Pirate-GPT: A locally deployed large language model framework for reliable offline anti-piracy"
+      "title": "Pirate-GPT: A locally deployed large language model framework for reliable offline anti-piracy decision support and knowledge retrieval in maritime operations"
     },
     "arXiv:2511.19575": {
       "classification": "unrelated",
@@ -179223,6 +179223,30 @@
       "last_checked_at": "2026-10-19T22:43:00+00:00",
       "linked_from": [],
       "title": "Trust or Escalate: LLM Judges with Provable Guarantees for Human Agreement"
+    },
+    "DOI:10.1007/s11432-026-5028-5": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1007/s11432-026-5028-5",
+      "identity_tokens": [
+        "DOI:10.1007/s11432-026-5028-5"
+      ],
+      "reason": "題名は多層電子システムの時間スケーリング理論であり、LLM・GPU推論サービング・KVキャッシュ・MoE・モデル圧縮・推論用カーネルを対象とする論文ではないことが明白。",
+      "first_checked_at": "2026-10-20T07:54:59+00:00",
+      "last_checked_at": "2026-10-20T07:54:59+00:00",
+      "linked_from": [],
+      "title": "A time scaling theory for multi-layer electronic systems"
+    },
+    "arXiv:2605.27995": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.27995",
+      "identity_tokens": [
+        "arXiv:2605.27995"
+      ],
+      "reason": "題名は複数タスクでの非同期関数呼出し能力の評価であり、エージェントの能力ベンチマークを主題とする。実行基盤の非同期スケジューリングやLLMサービング高速化を提案する題名ではないため対象外。",
+      "first_checked_at": "2026-10-20T07:55:02+00:00",
+      "last_checked_at": "2026-10-20T07:55:02+00:00",
+      "linked_from": [],
+      "title": "AsyncTool: Evaluating the Asynchronous Function Calling Capability under Multi-Task Scenarios"
     }
   }
 }

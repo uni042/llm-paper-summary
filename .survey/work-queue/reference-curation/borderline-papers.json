@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-20T04:46:49+00:00",
-  "record_count": 5276,
+  "updated_at": "2026-10-20T07:55:03+00:00",
+  "record_count": 5274,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -7847,21 +7847,6 @@
         "papers/inference/09-kernel-runtime-compilation/2021-2010.05680-turbotransformers-an-efficient-gpu-serving-system-for-transformer-models.md"
       ],
       "title": "Robust Multi-tab Website Fingerprinting Attacks in the Wild"
-    },
-    "DOI:10.1007/s11432-026-5028-5": {
-      "classification": "borderline",
-      "canonical_id": "DOI:10.1007/s11432-026-5028-5",
-      "identity_tokens": [
-        "DOI:10.1007/s11432-026-5028-5"
-      ],
-      "reason": "候補記載のSpringer DOI一次ページで要旨本文を取得できず、タイトルから適合性を判定しない。",
-      "first_checked_at": "2026-10-05T01:28:57+00:00",
-      "last_checked_at": "2026-10-05T01:28:57+00:00",
-      "linked_from": [
-        "papers/inference/99-other-inference-systems/2022-2207.00032-deepspeed-inference-enabling-efficient-inference-of-transformer-models-at-unprecedented-scale.md",
-        "papers/inference/99-other-inference-systems/2024-2403.14123-ai-and-memory-wall.md"
-      ],
-      "title": "A time scaling theory for multi-layer electronic systems"
     },
     "DOI:10.1145/115952.115961": {
       "classification": "borderline",
@@ -81865,19 +81850,6 @@
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "Dual Latent Memory for Visual Multi-agent System"
-    },
-    "arXiv:2605.27995": {
-      "classification": "borderline",
-      "canonical_id": "arXiv:2605.27995",
-      "identity_tokens": [
-        "arXiv:2605.27995"
-      ],
-      "reason": "複数の異種タスクと遅延するツール応答を同時に与え、LLMエージェントのタスク切替・依存追跡・待機時間活用を測るベンチマーク。エージェント実行効率の設計に参考になるが、主貢献は能力評価とデータセットであり、推論基盤の非同期スケジューラや実測GPU性能の最適化ではない。",
-      "first_checked_at": "2026-10-19T18:48:33+00:00",
-      "last_checked_at": "2026-10-19T18:48:33+00:00",
-      "linked_from": [],
-      "borderline_recheck_count": 0,
-      "title": "AsyncTool: Evaluating the Asynchronous Function Calling Capability under Multi-Task Scenarios"
     },
     "arXiv:2602.00746": {
       "classification": "borderline",
