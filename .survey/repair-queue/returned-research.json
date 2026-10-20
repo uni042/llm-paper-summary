@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-20T17:56:36+00:00",
+  "generated_at": "2026-10-20T18:04:42+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -928,35 +928,6 @@
       "worker_run_key": "20261020-0800-scheduled-chat-00/r01"
     },
     {
-      "canonical_id": "arXiv:2411.10741",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-20T13:27:13+00:00",
-      "return_count": 5,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700",
-        "説明不足トリガー: 評価説明量 0 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5526,
-        "body_paragraphs": 29,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 0,
-        "limitation_chars": 474,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700",
-          "評価説明量 0 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_065fc6a915948191adbfb02fda86db70--2024-2411.10741-metala-linear-attention-research-20261020-0703-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_065fc6a915948191adbfb02fda86db70--2024-2411.10741-metala-linear-attention-research-20261020-0703-scheduled-chat-00-r01.json",
-      "worker_run_key": "20261020-0703-scheduled-chat-00/r01"
-    },
-    {
       "canonical_id": "arXiv:2311.01282",
       "title": null,
       "source_url": null,
@@ -1096,65 +1067,6 @@
       "worker_run_key": "20261020-0204-scheduled-chat-00/r01"
     },
     {
-      "canonical_id": "arXiv:2505.03031",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-20T14:27:40+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700",
-        "説明不足トリガー: 評価説明量 0 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 7122,
-        "body_paragraphs": 43,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 0,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700",
-          "評価説明量 0 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_422866636b488191957207d9e7a01e4e--2025-2505.03031-radio-rate-distortion-quantization-research-20261020-1000-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_422866636b488191957207d9e7a01e4e--2025-2505.03031-radio-rate-distortion-quantization-research-20261020-1000-scheduled-chat-00-r01.json",
-      "worker_run_key": "20261020-1000-scheduled-chat-00/r01"
-    },
-    {
-      "canonical_id": "arXiv:2407.05690",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-20T15:01:54+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700",
-        "説明不足トリガー: 評価説明量 496 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 7800,
-        "body_paragraphs": 46,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 496,
-        "limitation_chars": 633,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700",
-          "評価説明量 496 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_608715f0ee9881919fd7050286c3bcc9--2024-2407.05690-transact-transitional-activation-pruning-research-20261020-1000-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_608715f0ee9881919fd7050286c3bcc9--2024-2407.05690-transact-transitional-activation-pruning-research-20261020-1000-scheduled-chat-00-r01.json",
-      "worker_run_key": "20261020-1000-scheduled-chat-00/r01"
-    },
-    {
       "canonical_id": "arXiv:2603.11220",
       "title": null,
       "source_url": null,
@@ -1260,61 +1172,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_b17bb91bc4f4819183f4767857103ba3--2026-2605.16839-compactattention-block-union-chunked-prefill-quality-repair-20261020-1945-scheduled-chat-45-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_b17bb91bc4f4819183f4767857103ba3--2026-2605.16839-compactattention-block-union-chunked-prefill-quality-repair-20261020-1945-scheduled-chat-45-r01.json",
       "worker_run_key": "20261020-1945-scheduled-chat-45/r01"
-    },
-    {
-      "canonical_id": "arXiv:2608.01985",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-20T16:53:30+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 161 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5396,
-        "body_paragraphs": 27,
-        "method_chars": 1515,
-        "method_paragraphs": 7,
-        "evaluation_chars": 161,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "評価説明量 161 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_cdbbfbebf8888191bf8974e0a93ca98d--2026-2608.01985-diffprune-information-throttling-visual-tokens-research-20261020-1555-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_cdbbfbebf8888191bf8974e0a93ca98d--2026-2608.01985-diffprune-information-throttling-visual-tokens-research-20261020-1555-scheduled-chat-00-r01.json",
-      "worker_run_key": "20261020-1555-scheduled-chat-00/r01"
-    },
-    {
-      "canonical_id": "arXiv:2405.07542",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-20T16:54:29+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 392 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5389,
-        "body_paragraphs": 30,
-        "method_chars": 1662,
-        "method_paragraphs": 10,
-        "evaluation_chars": 392,
-        "limitation_chars": 531,
-        "insufficiency_flags": [
-          "評価説明量 392 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_d68341da19bc819185c7e6cc4773543f--2024-2405.07542-ems-sd-ragged-batch-speculative-decoding-research-20261020-1056-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_d68341da19bc819185c7e6cc4773543f--2024-2405.07542-ems-sd-ragged-batch-speculative-decoding-research-20261020-1056-scheduled-chat-00-r01.json",
-      "worker_run_key": "20261020-1056-scheduled-chat-00/r01"
     },
     {
       "canonical_id": "arXiv:2609.20874",
@@ -1878,8 +1735,8 @@
     },
     {
       "canonical_id": "arXiv:2610.01108",
-      "title": "AgSpec: Pushing the Limits of Retrieval-Based Speculative Decoding in Coding Agent Pipelines",
-      "source_url": "https://arxiv.org/html/2610.01108v2",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-20T17:54:59+00:00",
       "return_count": 4,
       "assigned_worker": "scheduled-chat-00",
@@ -1906,8 +1763,8 @@
     },
     {
       "canonical_id": "arXiv:2605.18226",
-      "title": "Context Memorization for Efficient Long Context Generation",
-      "source_url": "https://arxiv.org/pdf/2605.18226",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-20T17:55:00+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-00",
@@ -1933,8 +1790,8 @@
     },
     {
       "canonical_id": "arXiv:2605.28051",
-      "title": "Beyond Surrogate Gradients: Fully Differentiable Token Pruning for Vision-Language Models",
-      "source_url": "https://arxiv.org/abs/2605.28051",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-20T17:55:02+00:00",
       "return_count": 4,
       "assigned_worker": "scheduled-chat-45",
@@ -1957,6 +1814,149 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-956d819ad09a--libfile_7ad6fcf8cc1881918702b3708d962c85--2026-2605.28051-diffprune-fully-differentiable-visual-token-pruning-research-20261020-0445-scheduled-chat-45-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-956d819ad09a--libfile_7ad6fcf8cc1881918702b3708d962c85--2026-2605.28051-diffprune-fully-differentiable-visual-token-pruning-research-20261020-044.json",
       "worker_run_key": "20261020-0445-scheduled-chat-45/r01"
+    },
+    {
+      "canonical_id": "arXiv:2405.07542",
+      "title": "EMS-SD: Efficient Multi-sample Speculative Decoding for Accelerating Large Language Models",
+      "source_url": "https://arxiv.org/pdf/2405.07542",
+      "returned_at": "2026-10-20T18:04:35+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 392 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5389,
+        "body_paragraphs": 30,
+        "method_chars": 1662,
+        "method_paragraphs": 10,
+        "evaluation_chars": 392,
+        "limitation_chars": 531,
+        "insufficiency_flags": [
+          "評価説明量 392 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-9d5f66c18f73--libfile_d68341da19bc819185c7e6cc4773543f--2024-2405.07542-ems-sd-ragged-batch-speculative-decoding-research-20261020-1056-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-9d5f66c18f73--libfile_d68341da19bc819185c7e6cc4773543f--2024-2405.07542-ems-sd-ragged-batch-speculative-decoding-research-20261020-1056-scheduled.json",
+      "worker_run_key": "20261020-1056-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2505.03031",
+      "title": "Radio: Rate–Distortion Optimization for Large Language Model Compression",
+      "source_url": "https://arxiv.org/abs/2505.03031",
+      "returned_at": "2026-10-20T18:04:37+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700",
+        "説明不足トリガー: 評価説明量 0 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 7122,
+        "body_paragraphs": 43,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 0,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700",
+          "評価説明量 0 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-9de928890d93--libfile_422866636b488191957207d9e7a01e4e--2025-2505.03031-radio-rate-distortion-quantization-research-20261020-1000-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-9de928890d93--libfile_422866636b488191957207d9e7a01e4e--2025-2505.03031-radio-rate-distortion-quantization-research-20261020-1000-scheduled-chat-.json",
+      "worker_run_key": "20261020-1000-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2411.10741",
+      "title": "MetaLA: Unified Optimal Linear Approximation to Softmax Attention Map",
+      "source_url": "https://arxiv.org/abs/2411.10741",
+      "returned_at": "2026-10-20T18:04:38+00:00",
+      "return_count": 6,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700",
+        "説明不足トリガー: 評価説明量 0 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5526,
+        "body_paragraphs": 29,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 0,
+        "limitation_chars": 474,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700",
+          "評価説明量 0 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-a1c4af702eeb--libfile_065fc6a915948191adbfb02fda86db70--2024-2411.10741-metala-linear-attention-research-20261020-0703-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-a1c4af702eeb--libfile_065fc6a915948191adbfb02fda86db70--2024-2411.10741-metala-linear-attention-research-20261020-0703-scheduled-chat-00-r01.json",
+      "worker_run_key": "20261020-0703-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2407.05690",
+      "title": "Pruning Large Language Models to Intra-module Low-rank Architecture with Transitional Activations",
+      "source_url": "https://arxiv.org/abs/2407.05690",
+      "returned_at": "2026-10-20T18:04:39+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700",
+        "説明不足トリガー: 評価説明量 496 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 7800,
+        "body_paragraphs": 46,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 496,
+        "limitation_chars": 633,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700",
+          "評価説明量 496 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-a47c91d6a3ac--libfile_608715f0ee9881919fd7050286c3bcc9--2024-2407.05690-transact-transitional-activation-pruning-research-20261020-1000-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-a47c91d6a3ac--libfile_608715f0ee9881919fd7050286c3bcc9--2024-2407.05690-transact-transitional-activation-pruning-research-20261020-1000-scheduled.json",
+      "worker_run_key": "20261020-1000-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2608.01985",
+      "title": "DiffPrune: Differentiable Information Throttling for Token Pruning in Vision-Language Models",
+      "source_url": "https://arxiv.org/abs/2608.01985",
+      "returned_at": "2026-10-20T18:04:41+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 161 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5396,
+        "body_paragraphs": 27,
+        "method_chars": 1515,
+        "method_paragraphs": 7,
+        "evaluation_chars": 161,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "評価説明量 161 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-ad814689d738--libfile_cdbbfbebf8888191bf8974e0a93ca98d--2026-2608.01985-diffprune-information-throttling-visual-tokens-research-20261020-1555-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-ad814689d738--libfile_cdbbfbebf8888191bf8974e0a93ca98d--2026-2608.01985-diffprune-information-throttling-visual-tokens-research-20261020-1555-sch.json",
+      "worker_run_key": "20261020-1555-scheduled-chat-00/r01"
     }
   ]
 }

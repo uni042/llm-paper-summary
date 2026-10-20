@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "d5320d028b6666afdab1afe4491ccb0e611dd9b476c874a49fc7dc4ef6afda1e",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/retry-research-a1c4af702eeb--libfile_065fc6a915948191adbfb02fda86db70--2024-2411.10741-metala-linear-attention-research-20261020-0703-scheduled-chat-00-r01.md",
+  "canonical_id": "arXiv:2411.10741",
+  "worker_completed_at": "2026-10-20T07:10:00+09:00",
+  "worker_run_key": "20261020-0703-scheduled-chat-00/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 5526,
+    "body_paragraphs": 29,
+    "method_chars": 0,
+    "method_paragraphs": 0,
+    "evaluation_chars": 0,
+    "limitation_chars": 474,
+    "insufficiency_flags": [
+      "手法説明量 0 < 700",
+      "評価説明量 0 < 500"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 手法説明量 0 < 700",
+    "説明不足トリガー: 評価説明量 0 < 500"
+  ],
+  "processed_at": "2026-10-20T18:04:38+00:00"
+}
