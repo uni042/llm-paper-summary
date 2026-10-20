@@ -168,7 +168,7 @@ MoEの専門家並列、テンソル並列との混成、all-to-all通信、専�
 ### 2年前（2024-11〜2025-10）
 
 - **2025-02 · [MoETuner: Optimized Mixture of Expert Serving with Balanced Expert Placement and Token Routing](2025-2502.06643-moetuner-balanced-expert-placement-token-routing.md)**  
-  実装：✓ ・ リポジトリ内被引用：19  
+  実装：✓ ・ リポジトリ内被引用：20  
   層間のトークン遷移統計を二段階ILPへ入力し、MoEのエキスパート配置を計算負荷とGPU間通信の両方が均衡するよう最適化する。
 
 - **2025-09 · [Expert-as-a-Service: Towards Efficient, Scalable, and Robust Large-scale MoE Serving](2025-2509.17863-expert-as-a-service-moe-serving.md)**  
@@ -180,7 +180,7 @@ MoEの専門家並列、テンソル並列との混成、all-to-all通信、専�
   トークンと専門家の活性化親和性を事前学習し、専門家配置と要求・トークン配置を協調させてMoEの全対全通信を削減する推論方式。
 
 - **2025-09 · [GRACE-MoE: Grouping and Replication with Locality-Aware Routing for Efficient Distributed MoE Inference](2025-2509.25041-grace-moe-grouping-and-replication-with-locality-aware-routing-for-efficient-distributed-moe-inference.md)**  
-  実装：✓ ・ リポジトリ内被引用：6  
+  実装：✓ ・ リポジトリ内被引用：7  
   共活性に基づく階層専門家配置、動的複製、局所性・負荷認識ルーティング、階層疎通信を組み合わせ、分散MoE推論を最大4.66倍高速化するGRACE-MoE。
 
 - **2025-03 · [Capacity-Aware Inference: Mitigating the Straggler Effect in Mixture of Experts](2025-2503.05066-capacity-aware-inference-mitigating-the-straggler-effect-in-mixture-of-experts.md)**  
@@ -234,7 +234,7 @@ MoEの専門家並列、テンソル並列との混成、all-to-all通信、専�
 ### 5年前（2021-11〜2022-10）
 
 - **2022-06 · [Tutel: Adaptive Mixture-of-Experts at Scale](2022-2206.03382-tutel-adaptive-mixture-of-experts-at-scale.md)**  
-  実装：[✓](https://github.com/microsoft/tutel) ・ リポジトリ内被引用：32  
+  実装：[✓](https://github.com/microsoft/tutel) ・ リポジトリ内被引用：33  
   Tutelは、混合専門家モデル（Mixture-of-Experts; MoE）で反復ごとに変わる専門家負荷へ実行系を追従させる分散実行基盤である。固定の並列化方式や固定の通信・計算パイプラインは、この変動に対して一つの実行形態しか使えず、通信時間または専門家計算時間のどちらかを無駄にしやすい。
 
 - **2022-10 · [Accelerating Distributed MoE Training and Inference with Lina](2022-2210.17223-accelerating-distributed-moe-training-and-inference-with-lina.md)**  
@@ -244,6 +244,6 @@ MoEの専門家並列、テンソル並列との混成、all-to-all通信、専�
 ### 6年前（2020-11〜2021-10）
 
 - **2021-01 · [Switch Transformers: Scaling to Trillion Parameter Models with Simple and Efficient Sparsity](2021-2101.03961-switch-transformers-scaling-to-trillion-parameter-models-with-simple-and.md)**  
-  実装：[✓](https://github.com/tensorflow/mesh/blob/master/mesh_tensorflow/transformer/moe.py) ・ リポジトリ内被引用：190  
+  実装：[✓](https://github.com/tensorflow/mesh/blob/master/mesh_tensorflow/transformer/moe.py) ・ リポジトリ内被引用：191  
   論文は、専門家容量、容量超過トークンの扱い、負荷分散補助損失、ルータだけを高精度で計算する選択的精度、初期値スケールの縮小、専門家専用ドロップアウト、データ・モデル・専門家並列の組合せまで含め、巨大な疎モデルを実際に安定学習するための設計をまとめている。
 <!-- survey:auto:end -->
