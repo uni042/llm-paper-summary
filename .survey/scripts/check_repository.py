@@ -123,6 +123,9 @@ def check(root, inventory):
         if path.suffix != ".md":
             continue
         prose = re.sub(r"^```.*?^```\s*$", "", text, flags=re.M | re.S)
+        # Inline code is not Markdown link syntax. Without masking it,
+        # expressions such as `clip[0,1](s_self - ...)` are false links.
+        prose = re.sub(r"(?<!`)`[^`\n]+`(?!`)", "", prose)
         links = re.findall(r"!?\[[^\]\n]*\]\(([^\s)]+)(?:\s+[^)]*)?\)", prose)
         links += re.findall(r"^\s*\[[^\]]+\]:\s*(\S+)", prose, re.M)
         for link in links:
