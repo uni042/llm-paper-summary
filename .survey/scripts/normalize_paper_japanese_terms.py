@@ -25,6 +25,11 @@ EXCLUDED_H2 = {"書誌情報", "一次資料", "参考文献", "References", "�
 
 EXTRA_REPLACEMENTS = (
     # High-frequency generic English nouns in legacy survey prose.
+    # Prefer whole phrases to avoid mixed-language fragments such as 実-world.
+    ("real-world", "実世界"),
+    ("case study", "事例研究"),
+    ("use case", "用途"),
+    ("early-exit", "早期出口"),
     # Preserve proper names, URLs, code fences and inline code as below.
     ("source", "ソース"),
     ("window", "ウィンドウ"),
