@@ -1,0 +1,26 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261020-1630-scheduled-chat-30/r01/research-prescreen/007",
+  "reference_main_sha": "1dce2db0b48420c6adb2a439804d270da65a1cc4",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "SemanticScholar:a5fa6e7565dca654eab9372ace4b1ba7f63655f7",
+      "identity_tokens": [
+        "SemanticScholar:a5fa6e7565dca654eab9372ace4b1ba7f63655f7"
+      ],
+      "title": "CogLTX: Applying BERT to Long Texts",
+      "reason": "NeurIPS 2020の著者公開論文・要旨は、BERTの512トークン制約に対しJudgeが重要文を選択しReasonerへ渡すMemRecall（反復選択・保持・減衰）を提案し、長文QA・分類で入力長に依存しないメモリ使用量を報告する。長文処理の計算・メモリ効率には接点があるが、生成LLMのKVキャッシュ、デコード、推論サービングやGPU実行系の最適化を対象にしていないため境界的。",
+      "source_url": "https://keg.cs.tsinghua.edu.cn/jietang/publications/NIPS20-Ding-et-al-CogLTX.pdf",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-20T16:35:26+09:00",
+      "last_checked_at": "2026-10-20T16:35:26+09:00",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance",
+      "worklist_rank": 7
+    }
+  ]
+}
