@@ -3,7 +3,7 @@
 複数requestを複数GPU / nodeで処理するLLM servingについて、request順、batch、prefill / decodeのGPU配分、KV再利用・転送、request移動などを調整し、latencyとresource効率を改善する研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（394本）
+## 自動生成の論文一覧（395本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -453,6 +453,10 @@
 - **2025-11 · [FREESH: Fair, Resource- and Energy-Efficient Scheduling for LLM Serving on Heterogeneous GPUs](2025-2511.00807-freesh-fair-resource-energy-efficient-scheduling.md)**  
   実装：[✓](https://github.com/AndrewFangZequan/LLM_Serving_FREESH) ・ リポジトリ内被引用：1  
   地域別炭素強度と異種GPU特性を使った30分単位の資源配置、1秒単位の動的周波数制御、要求単位の最小余裕時間優先を組み合わせ、エネルギー28.6%・炭素排出45.45%を削減する分散LLMサービング方式。
+
+- **2025-11 · [Fast LLM Post-training via Decoupled and Fastest-of-N Speculation](2025-2511.16193-fast-llm-post-training-via-decoupled-and-fastest-of-n-speculation.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  大規模言語モデルの強化学習による後学習では、各学習ステップの前半で多数の問題に対する応答を生成し、報酬を計算してからパラメータを更新する。ChengらのSpecActorは、この待ち時間を単に他の学習処理で埋めるのではなく、ロールアウトそのものを投機的復号で高速化するシステムである。
 
 - **2025-11 · [FailSafe: High-performance Resilient Serving](2025-2511.14116-failsafe-resilient-tensor-parallel-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
