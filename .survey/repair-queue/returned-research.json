@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-20T15:24:36+00:00",
+  "generated_at": "2026-10-20T15:35:19+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 70,
+  "count": 73,
   "entries": [
     {
       "canonical_id": "DOI:10.1145/3714983.3714987",
@@ -1908,8 +1908,8 @@
     },
     {
       "canonical_id": "arXiv:2605.28051",
-      "title": "Beyond Surrogate Gradients: Fully Differentiable Token Pruning for Vision-Language Models",
-      "source_url": "https://arxiv.org/abs/2605.28051",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-20T15:21:57+00:00",
       "return_count": 3,
       "assigned_worker": "scheduled-chat-45",
@@ -1935,8 +1935,8 @@
     },
     {
       "canonical_id": "arXiv:2508.00904",
-      "title": "Forecasting LLM Inference Performance via Hardware-Agnostic Analytical Modeling",
-      "source_url": "https://arxiv.org/abs/2508.00904",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-20T15:22:48+00:00",
       "return_count": 1,
       "assigned_worker": "scheduled-chat-30",
@@ -1962,6 +1962,83 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_801aa09f87f88191ad4c1e7d844e6e8e--2025-2508.00904-life-analytical-inference-forecast-research-20261020-1000-scheduled-chat-00-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_801aa09f87f88191ad4c1e7d844e6e8e--2025-2508.00904-life-analytical-inference-forecast-research-20261020-1000-scheduled-chat-00-r01.json",
       "worker_run_key": "20261020-1000-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2608.07169",
+      "title": "Agent Memory Distillation: Empowering Small LLM Agents with Hierarchical Teacher Memory",
+      "source_url": "https://arxiv.org/abs/2608.07169",
+      "returned_at": "2026-10-20T15:34:54+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 0 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 6086,
+        "body_paragraphs": 30,
+        "method_chars": 1638,
+        "method_paragraphs": 8,
+        "evaluation_chars": 0,
+        "limitation_chars": 737,
+        "insufficiency_flags": [
+          "評価説明量 0 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_8a64ddd6204c8191b02bee89270e6129--2026-2608.07169-agent-memory-distillation-hierarchical-teacher-memory-research-20261020-1500-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_8a64ddd6204c8191b02bee89270e6129--2026-2608.07169-agent-memory-distillation-hierarchical-teacher-memory-research-20261020-1500-scheduled-chat-00-r01.json",
+      "worker_run_key": "20261020-1500-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2605.27965",
+      "title": "The Shape of Overthinking: Backtracking Bursts in Long Reasoning Traces",
+      "source_url": "https://arxiv.org/html/2605.27965v1",
+      "returned_at": "2026-10-20T15:35:17+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "quality_self_review_version が空"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 6971,
+        "body_paragraphs": 38,
+        "method_chars": 1696,
+        "method_paragraphs": 9,
+        "evaluation_chars": 2138,
+        "limitation_chars": 821,
+        "insufficiency_flags": []
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_8d524f2265348191ba556e69ea0fc138--2026-2605.27965-shape-of-overthinking-backtracking-bursts-research-20261020-0345-scheduled-chat-45-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_8d524f2265348191ba556e69ea0fc138--2026-2605.27965-shape-of-overthinking-backtracking-bursts-research-20261020-0345-scheduled-chat-45-r01.json",
+      "worker_run_key": "20261020-0345-scheduled-chat-45/r01"
+    },
+    {
+      "canonical_id": "arXiv:2603.11220",
+      "title": "Frequency-Modulated Visual Restoration for Matryoshka Large Multimodal Models",
+      "source_url": "https://arxiv.org/html/2603.11220v1",
+      "returned_at": "2026-10-20T15:35:19+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "quality_self_review_version が空"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 4828,
+        "body_paragraphs": 27,
+        "method_chars": 1680,
+        "method_paragraphs": 9,
+        "evaluation_chars": 1410,
+        "limitation_chars": 356,
+        "insufficiency_flags": []
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_8e272f4e13908191a499a04443c8c5ea--2026-2603.11220-fmvr-frequency-modulated-visual-restoration-research-20261020-0945-scheduled-chat-45-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_8e272f4e13908191a499a04443c8c5ea--2026-2603.11220-fmvr-frequency-modulated-visual-restoration-research-20261020-0945-scheduled-chat-45-r01.json",
+      "worker_run_key": "20261020-0945-scheduled-chat-45/r01"
     }
   ]
 }
