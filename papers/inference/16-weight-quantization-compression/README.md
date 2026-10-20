@@ -25,7 +25,7 @@
 - [08-edge-on-device-llm-systems](../08-edge-on-device-llm-systems/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（62本）
+## 自動生成の論文一覧（65本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -98,6 +98,10 @@
   実装：[✓](https://github.com/Heliulu/LiftQuant) ・ リポジトリ内被引用：0  
   LLMの重み量子化はGPUメモリ消費を減らす有力な方法だが、多くの方式は2ビット、3ビット、4ビットといった整数の量子化幅を単位にする。たとえば70Bモデルの3ビット版が24GBのGPUへ収まらず、2ビット版なら大きな余裕が残る場合、空いた容量を精度向上へ使いにくい。
 
+- **2026-06 · [GRINQH: Graded Input-based Quantization Hierarchy for Efficient LLM Generation](2026-2606.23419-grinqh-graded-input-based-quantization-hierarchy-for-efficient-llm-gener.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  後者、とりわけバッチ1では、大きな線形層の重みを毎トークン読み出すため帯域律速になりやすい。重みを一律に3ビットや4ビットへ量子化すると帯域は減るが、重要なチャネルの精度も同時に失われる。Qwen3-8BのRTX 4090上では、4ビットMARLINの最適化カーネルより約25%高速な、GSM8K品質とのパレート前線上の動作点を示す。
+
 - **2026-05 · [Fitting Is Not Enough: Smoothness in Extremely Quantized LLMs](2026-2605.08894-fitting-is-not-enough-smoothness-in-extremely-quantized-llms.md)**  
   実装：[✓](https://github.com/xuyuzhuang11/FINE) ・ リポジトリ内被引用：0  
   極低ビットの大規模言語モデル（LLM）量子化では、元の浮動小数点モデルと量子化モデルの中間出力を近付ける「順方向の再構成誤差」が一般的な最適化対象である。
@@ -117,6 +121,10 @@
 - **2026-01 · [StableQAT: Stable Quantization-Aware Training at Ultra-Low Bitwidths](2026-2601.19320-stableqat-stable-quantization-aware-training-at-ultra-low-bitwidths.md)**  
   実装：[✓](https://github.com/microsoft/StableQAT) ・ リポジトリ内被引用：0  
   量子化考慮学習（Quantization-Aware 学習、QAT）は、学習時に重みを低ビットへ丸めることによる誤差をモデルに経験させ、推論時の低ビット実装に適応させる手法である。
+
+- **2026-01 · [Sliced-Wasserstein Distribution Alignment Loss Improves the Ultra-Low-Bit Quantization of Large Language Models](2026-2601.07878-sliced-wasserstein-distribution-alignment-loss-improves-the-ultra-low-bi.md)**  
+  実装：[✓](https://github.com/TokuyuSou/SWLoss_LightCompress) ・ リポジトリ内被引用：0  
+  本論文は、大規模言語モデル（LLM）を4ビット未満へ量子化するとき、従来の要素ごとの再構成誤差だけでは失われる情報があることに着目する。LLaMA-2-7Bの重み4ビット・活性値4ビット（W4A4）では、六つのゼロショット課題の平均正答率がOmniQuantの46.24%から48.92%へ改善した。
 
 - **2026-01 · [D2Quant: Accurate Low-bit Post-Training Weight Quantization for LLMs](2026-2602.02546-d2quant-accurate-low-bit-post-training-weight-quantization-for-llms.md)**  
   実装：[✓](https://github.com/XIANGLONGYAN/D2Quant) ・ リポジトリ内被引用：0  
@@ -147,6 +155,10 @@
 - **2025-10 · [QSVD: Efficient Low-rank Approximation for Unified Query-Key-Value Weight Compression in Low-Precision Vision-Language Models](2025-2510.16292-qsvd-efficient-low-rank-approximation-for-unified-query-key-value-weight.md)**  
   実装：[✓](https://github.com/SAI-Lab-NYU/QSVD) ・ リポジトリ内被引用：2  
   QSVDは、画像と文章を同時に処理する視覚言語モデル（Vision-Language モデル; VLM）の注意層で、問い合わせ（Query; Q）・鍵（Key; K）・値（Value; V）の射影重みを別々に圧縮するのではなく結合して低ランク分解する手法である。
+
+- **2025-06 · [Unifying Uniform and Binary-coding Quantization for Accurate Compression of Large Language Models](2025-2506.03781-unifying-uniform-and-binary-coding-quantization-for-accurate-compression.md)**  
+  実装：[✓](https://github.com/snudm-starlab/UniQuanF) ・ リポジトリ内被引用：2  
+  UQは一定間隔に並んだ量子化レベルを使う。Llama-3 8B InstructのGSM8Kでは3ビットでUniQuanFが58.73%、FlexRoundが54.13%で、差は4.60パーセントポイント。
 
 - **2025-05 · [ICQuant: Index Coding enables Low-bit LLM Quantization](2025-2505.00850-icquant-index-coding-enables-low-bit-llm-quantization.md)**  
   実装：[✓](https://github.com/Avery-xl/ICQuant) ・ リポジトリ内被引用：1  
