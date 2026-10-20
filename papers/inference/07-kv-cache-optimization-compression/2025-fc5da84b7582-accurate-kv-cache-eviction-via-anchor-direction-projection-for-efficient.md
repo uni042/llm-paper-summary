@@ -1,41 +1,114 @@
 ---
-canonical_id: "DOI:10.52202/085713-0350"
-title: "Accurate KV Cache Eviction via Anchor Direction Projection for Efficient LLM Inference"
-summary: >-
-  AnDProは、KVキャッシュの残存トークンを注意重みの大小だけで決めず、削除前の注意出力ベクトルを基準方向として各値ベクトルの寄与を射影で測る方式である。観測窓の複数クエリから射影得点を集計し、層内の注意ヘッドを横断して予算配分する。Mistral-7BのLongBenchでは、256トークンの予算で平均40.84点（全キャッシュ42.51点の96.07%）を維持し、同等精度のCriticalKVに対し必要予算を46.0%削減した。速度自体は同予算のAda-KVとほぼ同等であり、主要な貢献は同じメモリ予算での精度改善である。
-list_summary: "AnDProは削除前の注意出力方向への値ベクトル射影でKV保持候補を評価し、注意ヘッド横断の予算配分と組み合わせ、LongBenchで同等精度に必要なキャッシュ予算をCriticalKV比46.0%削減した。"
+canonical_id: DOI:10.52202/085713-0350
+title: Accurate KV Cache Eviction via Anchor Direction Projection for Efficient LLM Inference
+summary: AnDProは、KVキャッシュの残存トークンを注意重みの大小だけで決めず、削除前の注意出力ベクトルを基準方向として各値ベクトルの寄与を射影で測る方式である。観測窓の複数クエリから射影得点を集計し、層内の注意ヘッドを横断して予算配分する。Mistral-7BのLongBenchでは、256トークンの予算で平均40.84点（全キャッシュ42.51点の96.07%）を維持し、同等精度のCriticalKVに対し必要予算を46.0%削減した。速度自体は同予算のAda-KVとほぼ同等であり、主要な貢献は同じメモリ予算での精度改善である。
+list_summary: AnDProは削除前の注意出力方向への値ベクトル射影でKV保持候補を評価し、注意ヘッド横断の予算配分と組み合わせ、LongBenchで同等精度に必要なキャッシュ予算をCriticalKV比46.0%削減した。
 authors:
-  - Zijie Geng
-  - Jie Wang
-  - Ziqi Liu
-  - Feng Ju
-  - Yiming Li
-  - Xing Li
-  - Mingxuan Yuan
-  - Jianye Hao
-  - Defu Lian
-  - Enhong Chen
-  - Yongdong Zhang
-  - Feng Wu
-published: "2025-12"
-publication: "Advances in Neural Information Processing Systems 38 (NeurIPS 2025), Main Conference Track"
-publication_type: "査読付き国際会議論文"
-publication_status: "published"
-source: "https://papers.neurips.cc/paper_files/paper/2025/file/0f29157c7613e137834a607075c55e17-Paper-Conference.pdf"
+- Zijie Geng
+- Jie Wang
+- Ziqi Liu
+- Feng Ju
+- Yiming Li
+- Xing Li
+- Mingxuan Yuan
+- Jianye Hao
+- Defu Lian
+- Enhong Chen
+- Yongdong Zhang
+- Feng Wu
+published: 2025-12
+publication: Advances in Neural Information Processing Systems 38 (NeurIPS 2025), Main Conference Track
+publication_type: 査読付き国際会議論文
+publication_status: published
+source: https://papers.neurips.cc/paper_files/paper/2025/file/0f29157c7613e137834a607075c55e17-Paper-Conference.pdf
 sources:
-  - "https://papers.neurips.cc/paper_files/paper/2025/file/0f29157c7613e137834a607075c55e17-Paper-Conference.pdf"
-  - "https://proceedings.nips.cc/paper_files/paper/2025/hash/0f29157c7613e137834a607075c55e17-Abstract-Conference.html"
-  - "https://openreview.net/pdf?id=Tdl89SZItB"
-code: "https://github.com/MIRALab-USTC/LLM-AnDPro"
-implementation: "公式GitHubにAda-KV実装を基礎としたAnDProコード、CUDA/C++拡張、LongBench実験手順が公開されている。READMEにはtransformers 4.44.2とflash-attn 2.4.0等の依存が記載される。論文の本実験は単一A800 80GBで評価。"
-last_checked: "2026-10-20"
-worker_completed_at: "2026-10-20T04:57:00+09:00"
-worker_run_key: "20261020-0445-scheduled-chat-45/r01"
-doi: "10.52202/085713-0350"
-quality_repair_of_source_sha256: "5317d520b93325bce81cfe971120a57353ee4ba72a273aef55c1c8d9e589109f"
-quality_repair_reason: "2026-10-20 import quality receipt"
+- https://papers.neurips.cc/paper_files/paper/2025/file/0f29157c7613e137834a607075c55e17-Paper-Conference.pdf
+- https://proceedings.nips.cc/paper_files/paper/2025/hash/0f29157c7613e137834a607075c55e17-Abstract-Conference.html
+- https://openreview.net/pdf?id=Tdl89SZItB
+code: https://github.com/MIRALab-USTC/LLM-AnDPro
+implementation: 公式GitHubにAda-KV実装を基礎としたAnDProコード、CUDA/C++拡張、LongBench実験手順が公開されている。READMEにはtransformers 4.44.2とflash-attn 2.4.0等の依存が記載される。論文の本実験は単一A800 80GBで評価。
+last_checked: '2026-10-20'
+worker_completed_at: '2026-10-20T04:57:00+09:00'
+worker_run_key: 20261020-0445-scheduled-chat-45/r01
+doi: 10.52202/085713-0350
+quality_repair_of_source_sha256: 5317d520b93325bce81cfe971120a57353ee4ba72a273aef55c1c8d9e589109f
+quality_repair_reason: 2026-10-20 import quality receipt
 last_audited: null
 audit_version: 0
+references:
+- canonical_id: arXiv:2303.18223
+  arxiv_id: '2303.18223'
+- canonical_id: arXiv:2402.06196
+  arxiv_id: '2402.06196'
+- canonical_id: arXiv:1904.10509
+- canonical_id: arXiv:2407.18003
+  openreview_id: 8tKjqqMM5z.
+- canonical_id: arXiv:2306.14048
+- canonical_id: arXiv:2305.17118
+- canonical_id: arXiv:2310.01801
+- canonical_id: arXiv:2412.19442
+  arxiv_id: '2412.19442'
+- canonical_id: arXiv:2309.17453
+  arxiv_id: '2309.17453'
+- canonical_id: arXiv:2404.14469
+  arxiv_id: '2404.14469'
+- canonical_id: arXiv:2407.11550
+  arxiv_id: '2407.11550'
+- canonical_id: arXiv:2308.16137
+- canonical_id: arXiv:2407.02490
+  arxiv_id: '2407.02490'
+- canonical_id: arXiv:2403.09054
+- canonical_id: arXiv:2305.13245
+  arxiv_id: '2305.13245'
+- canonical_id: arXiv:2412.19437
+  arxiv_id: '2412.19437'
+- canonical_id: arXiv:2312.03414
+  openreview_id: 64kSvC4iPg.
+- canonical_id: arXiv:2406.13035
+  doi: 10.48550/arxiv.2406.13035
+- canonical_id: arXiv:2405.14366
+  arxiv_id: '2405.14366'
+- canonical_id: arXiv:2410.18517
+  arxiv_id: '2410.18517'
+- canonical_id: arXiv:2206.01861
+- canonical_id: arXiv:2407.12820
+- canonical_id: arXiv:2401.18079
+  arxiv_id: '2401.18079'
+- canonical_id: arXiv:2405.06219
+  arxiv_id: '2405.06219'
+- canonical_id: arXiv:2410.05265
+  arxiv_id: '2410.05265'
+- canonical_id: arXiv:2405.04532
+  doi: 10.48550/arxiv.2405.04532
+- canonical_id: arXiv:2406.07056
+  arxiv_id: '2406.07056'
+- canonical_id: arXiv:2410.21465
+  arxiv_id: '2410.21465'
+- canonical_id: arXiv:2405.12591
+  arxiv_id: '2405.12591'
+- canonical_id: arXiv:2402.09398
+- canonical_id: arXiv:2410.23079
+  arxiv_id: '2410.23079'
+- canonical_id: arXiv:2408.03675
+- canonical_id: arXiv:2502.07861
+  arxiv_id: '2502.07861'
+- canonical_id: arXiv:2405.12532
+  arxiv_id: '2405.12532'
+- canonical_id: arXiv:2412.14838
+  arxiv_id: '2412.14838'
+- canonical_id: arXiv:2410.19258
+  arxiv_id: '2410.19258'
+- canonical_id: arXiv:2410.10819
+  arxiv_id: '2410.10819'
+- canonical_id: arXiv:2308.14508
+  arxiv_id: '2308.14508'
+- canonical_id: arXiv:2310.06825
+  arxiv_id: '2310.06825'
+- canonical_id: arXiv:2407.21783
+  arxiv_id: '2407.21783'
+references_checked_at: '2026-10-20'
+references_source: primary-pdf-reference-section
+references_total: 56
 ---
 
 # AnDPro：基準方向射影による高精度KVキャッシュ削除

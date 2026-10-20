@@ -1,16 +1,16 @@
 {
   "schema_version": 1,
   "reference_audit_version": 1,
-  "checked_at": "2026-10-20T15:19:15+00:00",
+  "checked_at": "2026-10-20T15:22:55+00:00",
   "summary": {
     "total": 2723,
-    "complete": 2721,
-    "incomplete": 2
+    "complete": 2723,
+    "incomplete": 0
   },
   "families": {
     "inference": {
       "total": 2684,
-      "complete": 2682
+      "complete": 2684
     },
     "training": {
       "total": 25,
@@ -21,16 +21,5 @@
       "complete": 14
     }
   },
-  "incomplete": [
-    {
-      "path": "papers/inference/07-kv-cache-optimization-compression/2025-fc5da84b7582-accurate-kv-cache-eviction-via-anchor-direction-projection-for-efficient.md",
-      "canonical_id": "DOI:10.52202/085713-0350",
-      "reason": "missing structured reference audit metadata"
-    },
-    {
-      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-7ca899e20e0a-enabling-low-latency-gpu-efficient-serverless-inference-with-model-swapp.md",
-      "canonical_id": "DOI:10.1145/3800690",
-      "reason": "missing structured reference audit metadata"
-    }
-  ]
+  "incomplete": []
 }

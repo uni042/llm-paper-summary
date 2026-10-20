@@ -1,41 +1,107 @@
 ---
-canonical_id: 'DOI:10.1145/3800690'
-title: 'Enabling Low-Latency, GPU-Efficient Serverless Inference with Model Swapping'
-summary: 'Torporは、低頻度で呼び出される推論モデルをGPUへ常駐させる従来のサーバーレス実行がGPUメモリと利用料金を浪費する問題に対し、アイドル時はホストメモリへ保持し要求時だけGPUへ動的配置する遅延結合とモデルスワップを実装する。非同期CUDA API転送、ピン留めメモリ・パイプライン転送、GPU間NVLink経由のモデル複製、干渉を考慮した要求スケジューリングとメモリ退避を統合。4基V100のワーカーで160関数の全SLOを達成し、商用試験導入で利用者70%、事業者65%のGPU費用を削減した。'
-list_summary: '推論関数をホストメモリに保持し、要求到着時だけGPUへ移動する遅延結合と、非同期CUDA呼び出し・NVLink優先転送・SLO優先スケジューリングを組み合わせたサーバーレスGPU基盤。'
+canonical_id: DOI:10.1145/3800690
+title: Enabling Low-Latency, GPU-Efficient Serverless Inference with Model Swapping
+summary: Torporは、低頻度で呼び出される推論モデルをGPUへ常駐させる従来のサーバーレス実行がGPUメモリと利用料金を浪費する問題に対し、アイドル時はホストメモリへ保持し要求時だけGPUへ動的配置する遅延結合とモデルスワップを実装する。非同期CUDA API転送、ピン留めメモリ・パイプライン転送、GPU間NVLink経由のモデル複製、干渉を考慮した要求スケジューリングとメモリ退避を統合。4基V100のワーカーで160関数の全SLOを達成し、商用試験導入で利用者70%、事業者65%のGPU費用を削減した。
+list_summary: 推論関数をホストメモリに保持し、要求到着時だけGPUへ移動する遅延結合と、非同期CUDA呼び出し・NVLink優先転送・SLO優先スケジューリングを組み合わせたサーバーレスGPU基盤。
 authors:
-  - Minchen Yu
-  - Ao Wang
-  - Bohui Wu
-  - Yuxuan Liu
-  - Dong Chen
-  - Haoxuan Yu
-  - Wei Wang
-  - Ruichuan Chen
-  - Dapeng Nie
-  - Haoran Yang
-  - Yu Ding
+- Minchen Yu
+- Ao Wang
+- Bohui Wu
+- Yuxuan Liu
+- Dong Chen
+- Haoxuan Yu
+- Wei Wang
+- Ruichuan Chen
+- Dapeng Nie
+- Haoran Yang
+- Yu Ding
 published: '2026-06-25'
-publication: 'ACM Transactions on Architecture and Code Optimization, 23(2), Article 39'
+publication: ACM Transactions on Architecture and Code Optimization, 23(2), Article 39
 publication_type: journal
 publication_status: published
-source: 'https://doi.org/10.1145/3800690'
+source: https://doi.org/10.1145/3800690
 sources:
-  - 'https://doi.org/10.1145/3800690'
-  - 'https://www.usenix.org/system/files/atc25-yu.pdf'
-  - 'https://www.usenix.org/conference/atc25/presentation/yu'
-implementation: 'Alibaba Cloud環境向けGPUサーバー約4,000行、GPUクライアント約1,500行のC++。PyTorchのCUDAライブラリをGPUクライアントへ差し替えて既存モデルコードを変更せずにGPUプールを使用。著者公開の単一ノード試作実装はs4-lab-cuhksz/torpor（旧FCSLab/torporの移転先）。'
-code: 'https://github.com/s4-lab-cuhksz/torpor'
+- https://doi.org/10.1145/3800690
+- https://www.usenix.org/system/files/atc25-yu.pdf
+- https://www.usenix.org/conference/atc25/presentation/yu
+implementation: Alibaba Cloud環境向けGPUサーバー約4,000行、GPUクライアント約1,500行のC++。PyTorchのCUDAライブラリをGPUクライアントへ差し替えて既存モデルコードを変更せずにGPUプールを使用。著者公開の単一ノード試作実装はs4-lab-cuhksz/torpor（旧FCSLab/torporの移転先）。
+code: https://github.com/s4-lab-cuhksz/torpor
 last_checked: '2026-10-20'
 worker_id: scheduled-chat-30
 worker_completed_at: '2026-10-20T15:51:00+09:00'
-worker_run_key: '20261020-1530-scheduled-chat-30/r01'
-reference_main_sha: '4482c7d8d72d663018a468324156bc9d9939b423'
+worker_run_key: 20261020-1530-scheduled-chat-30/r01
+reference_main_sha: 4482c7d8d72d663018a468324156bc9d9939b423
 quality_self_review_passed: true
 quality_self_review_version: PAPER-QUALITY-GUIDE-2026-10-07
-quality_self_review_notes: '査読誌DOIの著者・掲載誌・日付を大学機関一次ページで確認。方法と実測の詳細は著者のUSENIX ATC 2025公開全文の§2～8、表1/4、図6～14、Algorithm 1で確認。誌面と会議版で著者・題名が異なるため両者の出典を明示し、会議版の数値を誌面で再測定したと誤認させない。'
+quality_self_review_notes: 査読誌DOIの著者・掲載誌・日付を大学機関一次ページで確認。方法と実測の詳細は著者のUSENIX ATC 2025公開全文の§2～8、表1/4、図6～14、Algorithm 1で確認。誌面と会議版で著者・題名が異なるため両者の出典を明示し、会議版の数値を誌面で再測定したと誤認させない。
 last_audited: null
 audit_version: 0
+references:
+- canonical_id: DOI:10.1109/sc41405.2020.00073
+  doi: 10.1109/sc41405.2020.00073
+- canonical_id: DOI:10.1145/3126908.3126933
+  doi: 10.1145/3126908.3126933
+- canonical_id: DOI:10.18653/v1/n19-1423
+  doi: 10.18653/v1/n19-1423
+- canonical_id: DOI:10.1145/3503222.3507732
+  doi: 10.1145/3503222.3507732
+- canonical_id: DOI:10.1109/hpcs.2010.5547126
+  doi: 10.1109/hpcs.2010.5547126
+- canonical_id: DOI:10.1109/ipdps53621.2022.00077
+  doi: 10.1109/ipdps53621.2022.00077
+- canonical_id: arXiv:2401.14351
+- canonical_id: DOI:10.5555/1887695.1887738
+  doi: 10.5555/1887695.1887738
+- canonical_id: arXiv:2006.02464
+- canonical_id: arXiv:2501.14417
+- canonical_id: DOI:10.1145/3373376.3378530
+  doi: 10.1145/3373376.3378530
+- canonical_id: DOI:10.1145/3552326.3567508
+  doi: 10.1145/3552326.3567508
+- canonical_id: DOI:10.1145/3445814.3446701
+  doi: 10.1145/3445814.3446701
+- canonical_id: DOI:10.1145/3373376.3378529
+  doi: 10.1145/3373376.3378529
+- canonical_id: DOI:10.1145/365628.365655
+  doi: 10.1145/365628.365655
+- canonical_id: DOI:10.1145/3341301.3359654
+  doi: 10.1145/3341301.3359654
+- canonical_id: DOI:10.1145/3600006.3613165
+  doi: 10.1145/3600006.3613165
+- canonical_id: DOI:10.1145/3669940.3707251
+  doi: 10.1145/3669940.3707251
+- canonical_id: DOI:10.1145/3373376.3378505
+  doi: 10.1145/3373376.3378505
+- canonical_id: DOI:10.1109/hipc.2012.6507485
+  doi: 10.1109/hipc.2012.6507485
+- canonical_id: DOI:10.1109/micro.2016.7783721
+  doi: 10.1109/micro.2016.7783721
+- canonical_id: DOI:10.1145/3341301.3359658
+  doi: 10.1145/3341301.3359658
+- canonical_id: arXiv:2303.06865
+- canonical_id: DOI:10.1145/3627703.3629578
+  doi: 10.1145/3627703.3629578
+- canonical_id: DOI:10.1145/3542929.3563470
+  doi: 10.1145/3542929.3563470
+- canonical_id: DOI:10.1145/3445814.3446714
+  doi: 10.1145/3445814.3446714
+- canonical_id: DOI:10.1145/3731569.3764813
+  doi: 10.1145/3731569.3764813
+- canonical_id: DOI:10.1145/3767295.3769336
+  doi: 10.1145/3767295.3769336
+- canonical_id: DOI:10.1145/3503222.3507709
+  doi: 10.1145/3503222.3507709
+- canonical_id: DOI:10.1145/3373376.3378466
+  doi: 10.1145/3373376.3378466
+- canonical_id: DOI:10.1109/icdcs51616.2021.00022
+  doi: 10.1109/icdcs51616.2021.00022
+- canonical_id: DOI:10.1145/3669940.3707285
+  doi: 10.1145/3669940.3707285
+- canonical_id: arXiv:2412.17246
+- canonical_id: arXiv:2401.09670
+references_checked_at: '2026-10-20'
+references_source: crossref-deposited-reference-metadata
+references_total: 73
 ---
 # Torpor：モデル交換と遅延結合によるGPUサーバーレス推論
 
