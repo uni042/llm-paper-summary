@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-fc933d3a69537f91-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "SemanticScholar:a5fa6e7565dca654eab9372ace4b1ba7f63655f7",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "SemanticScholar:a5fa6e7565dca654eab9372ace4b1ba7f63655f7",
+    "identity_tokens": [
+      "SemanticScholar:a5fa6e7565dca654eab9372ace4b1ba7f63655f7",
+      "semanticscholar:a5fa6e7565dca654eab9372ace4b1ba7f63655f7"
+    ],
+    "reason": "NeurIPS 2020の著者公開論文・要旨は、BERTの512トークン制約に対しJudgeが重要文を選択しReasonerへ渡すMemRecall（反復選択・保持・減衰）を提案し、長文QA・分類で入力長に依存しないメモリ使用量を報告する。長文処理の計算・メモリ効率には接点があるが、生成LLMのKVキャッシュ、デコード、推論サービングやGPU実行系の最適化を対象にしていないため境界的。",
+    "first_checked_at": "2026-10-11T10:43:45+00:00",
+    "last_checked_at": "2026-10-20T08:45:52+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "CogLTX: Applying BERT to Long Texts"
+  },
+  "processed_at": "2026-10-20T08:45:52+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-fc933d3a6953",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-20T07:56:50+00:00",
-  "record_count": 12436,
+  "updated_at": "2026-10-20T08:45:51+00:00",
+  "record_count": 12437,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -164160,9 +164160,9 @@
         "id:arXiv:2203.10314",
         "url:https://arxiv.org/abs/2203.10314"
       ],
-      "reason": "点群からの3次元物体検出を目的とするVoxel Set Transformerであり、LLM推論システムや推論サービングの技術的改良ではない。",
+      "reason": "原著要旨で、ボクセル内の点群を潜在コードを用いた二つの交差注意で集約し、KITTIとWaymoの3D物体検出を評価するVoxSeTと確認。対象は点群認識用の視覚バックボーンであり、LLMの生成・推論サービング・KVキャッシュ・推論カーネルの効率化ではない。",
       "first_checked_at": "2026-10-11T14:41:43+00:00",
-      "last_checked_at": "2026-10-19T22:42:59+00:00",
+      "last_checked_at": "2026-10-20T08:45:50+00:00",
       "linked_from": [],
       "title": "Voxel Set Transformer: A Set-to-Set Approach to 3D Object Detection from Point Clouds"
     },
@@ -164879,9 +164879,9 @@
         "id:arXiv:2311.17049",
         "url:https://arxiv.org/abs/2311.17049"
       ],
-      "reason": "画像とテキストの表現モデルMobileCLIPをマルチモーダル強化学習で構築する研究であり、LLM推論時のKVキャッシュ、実行基盤、サービング効率を対象としていない。",
+      "reason": "原著要旨はCLIP画像・テキスト符号化器の小型化とマルチモーダル強化学習用データセットによる精度・推論速度の両立を報告する。主な評価はゼロショット画像分類・検索で、自己回帰LLM生成やLLMサービング・KVキャッシュ・推論カーネルの改善ではない。",
       "first_checked_at": "2026-10-12T10:58:05+00:00",
-      "last_checked_at": "2026-10-19T22:43:00+00:00",
+      "last_checked_at": "2026-10-20T08:45:51+00:00",
       "linked_from": [],
       "title": "MobileCLIP: Fast Image-Text Models through Multi-Modal Reinforced Training"
     },
@@ -178732,9 +178732,9 @@
         "arXiv:2011.00241",
         "title:methods for pruning deep neural networks"
       ],
-      "reason": "一次要旨は深層ニューラルネットワークの剪定150研究超を、重みの大きさ・クラスタリング・感度分析で整理する。主な比較対象はAlexNet、ResNet、DenseNet、VGGと画像分類であり、自己回帰LLMの推論実行、KVキャッシュ、GPUサービング、MoE配置、LLM向け圧縮実装を独立して評価しない。一般的な圧縮技術の背景資料にはなるが本サーベイの独立収録対象外。",
+      "reason": "原著要旨では150件以上の深層ニューラルネット枝刈り研究を重みの大きさ、クラスタリング、感度分析に分類し、AlexNet・ResNet・DenseNet・VGG等をImageNet/CIFAR10で比較する総説。LLM推論向け圧縮や実行時メモリ・サービング最適化の固有機構・評価は扱わないため、現在の推論システム専門サーベイの収録対象外。",
       "first_checked_at": "2026-10-16T09:21:25+00:00",
-      "last_checked_at": "2026-10-18T10:00:23+00:00",
+      "last_checked_at": "2026-10-20T08:45:51+00:00",
       "linked_from": [],
       "title": "Methods for Pruning Deep Neural Networks"
     },
@@ -179259,6 +179259,18 @@
       "last_checked_at": "2026-10-20T07:56:50+00:00",
       "linked_from": [],
       "title": "Dolphin-v2: Universal Document Parsing via Scalable Anchor Prompting"
+    },
+    "DOI:10.1145/3373376.3378530": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3373376.3378530",
+      "identity_tokens": [
+        "DOI:10.1145/3373376.3378530"
+      ],
+      "reason": "ASPLOS 2020公式要旨は、演算スケジューリング・メモリ割当・CPU/GPU間スワップを遺伝的探索で共同最適化し、GPU容量の最大12倍のニューラルネットを学習できることを評価する。最終用途は深層学習の訓練であり、LLM推論のKV退避・デコード・サービングの実測を扱わないため現行の凍結対象に該当する。",
+      "first_checked_at": "2026-10-20T08:45:50+00:00",
+      "last_checked_at": "2026-10-20T08:45:50+00:00",
+      "linked_from": [],
+      "title": "SwapAdvisor: Pushing Deep Learning Beyond the GPU Memory Limit via Smart Swapping"
     }
   }
 }
