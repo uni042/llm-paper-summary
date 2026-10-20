@@ -437,7 +437,7 @@ MoEで毎回同じ数のexpertを実行するのではなく、**token・layer�
   固定ランダム経路選択器と学習中の活性エキスパート数漸増により、1回の事前学習から推論資源に応じて容量を可変化できる自己スリム化SMoEを作る。
 
 - **2023-06 · [Soft Merging of Experts with Adaptive Routing](2023-2306.03745-smear-soft-merging-adaptive-routing.md)**  
-  実装：[✓](https://github.com/r-three/smear) ・ リポジトリ内被引用：10  
+  実装：[✓](https://github.com/r-three/smear) ・ リポジトリ内被引用：11  
   経路選択確率でエキスパート重みを入力ごとに合成して離散選択を消し、標準的な誤差逆伝播のまま適応的な専門化と単一エキスパート相当の活性計算を両立する。
 
 ### 5年前（2021-11〜2022-10）
