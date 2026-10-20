@@ -1,0 +1,26 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261020-1630-scheduled-chat-30/r01/research-prescreen/009",
+  "reference_main_sha": "1dce2db0b48420c6adb2a439804d270da65a1cc4",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2311.17049",
+      "identity_tokens": [
+        "arXiv:2311.17049"
+      ],
+      "title": "MobileCLIP: Fast Image-Text Models through Multi-Modal Reinforced Training",
+      "reason": "原著要旨はCLIP画像・テキスト符号化器の小型化とマルチモーダル強化学習用データセットによる精度・推論速度の両立を報告する。主な評価はゼロショット画像分類・検索で、自己回帰LLM生成やLLMサービング・KVキャッシュ・推論カーネルの改善ではない。",
+      "source_url": "https://arxiv.org/abs/2311.17049",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-20T16:35:26+09:00",
+      "last_checked_at": "2026-10-20T16:35:26+09:00",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance",
+      "worklist_rank": 9
+    }
+  ]
+}
