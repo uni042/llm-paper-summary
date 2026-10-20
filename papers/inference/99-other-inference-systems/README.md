@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（870本）
+## 自動生成の論文一覧（871本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -639,6 +639,10 @@
 - **2026-09 · [HEAT: Faster Fully Homomorphic Inference via Approximations-Weights Co-Adaptation](2026-2609.01730-heat-faster-fully-homomorphic-inference-via-approximations-weights-co-ad.md)**  
   実装：[✓](https://github.com/gladia-research-group/heat) ・ リポジトリ内被引用：0  
   対象は通常のGPU推論全般ではなく、暗号文上で加算・乗算・回転を組み合わせてTransformerを評価する、非常に高コストなプライバシー保護推論である。ただし比較する平文モデルは各方式の「自分自身の平文版」であり、同一平文モデルへの忠実度を直接比較した値ではない。
+
+- **2026-09 · [G²PTQ: Improving LLM Post-Training Quantization with Generalized Gradient Compensation](2026-2609.31009-g-ptq-improving-llm-post-training-quantization-with-generalized-gradient.md)**  
+  実装：[✓](https://github.com/G2PTQ/G2PTQ) ・ リポジトリ内被引用：0  
+  G²PTQは、学習済み大規模言語モデル（LLM）の重みを低ビットへ変換する学習後量子化（post-学習 量子化、PTQ）を、量子化途中のモデル状態に応じて誤差補償を更新する処理として再設計した研究である。
 
 - **2026-09 · [GrowMTP: Can RL Grow Its Own Draft Head?](2026-2609.16648-growmtp-efficient-multi-token-prediction-via-progressive-growth.md)**  
   実装：[✓](https://growmtp.github.io/) ・ リポジトリ内被引用：0  

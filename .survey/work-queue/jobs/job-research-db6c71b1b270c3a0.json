@@ -32,10 +32,15 @@
   "selection_reason": "量子化対応学習とLoRAを統合し、最終的に混合精度アダプタを残さない完全低ビットLLMを生成する。学習効率だけでなく4-bitモデルの実推論を1.8–2.3倍高速化しており推論向け量子化として対象。",
   "semantic_scholar_id": "ae0a8ca6eb067080e53b9618bb2653e8f02fe620",
   "source_url": "https://arxiv.org/abs/2402.04902",
-  "status": "ready",
+  "status": "superseded",
   "title": "L4Q: Parameter Efficient Quantization-Aware Fine-Tuning on Large Language Models",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2024
+  "year": 2024,
+  "superseded_at": "2026-10-20T14:42:32+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/09-kernel-runtime-compilation/2024-2402.04902-l4q-parameter-efficient-quantization-aware-fine-tuning-on-large-language.md",
+  "represented_canonical_id": "arXiv:2402.04902",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

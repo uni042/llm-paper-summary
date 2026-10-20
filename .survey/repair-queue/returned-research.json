@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-20T14:30:02+00:00",
+  "generated_at": "2026-10-20T14:42:33+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 78,
+  "count": 76,
   "entries": [
     {
       "canonical_id": "DOI:10.1145/3714983.3714987",
@@ -546,35 +546,6 @@
       },
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-0c7639f0a118--libfile_0c7639f0a11881918fd2b76a34fce10c--2025-doi-10.52202-085713-0097-agserve-session-aware-agent-serving-research-20261018-2155-scheduled-chat-00-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-0c7639f0a118--libfile_0c7639f0a11881918fd2b76a34fce10c--2025-doi-10.52202-085713-0097-agserve-session-aware-agent-serving-research-20261018-2155-.json",
-      "worker_run_key": "20261018-2155-scheduled-chat-00/r01"
-    },
-    {
-      "canonical_id": "arXiv:2402.04902",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-18T13:47:42+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700",
-        "説明不足トリガー: 評価説明量 108 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5283,
-        "body_paragraphs": 32,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 108,
-        "limitation_chars": 537,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700",
-          "評価説明量 108 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-196a719fda78--libfile_684023af84748191a5f071abe08e3e88--2024-2402.04902-l4q-fully-quantized-lora-qat-research-20261018-2155-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-196a719fda78--libfile_684023af84748191a5f071abe08e3e88--2024-2402.04902-l4q-fully-quantized-lora-qat-research-20261018-2155-scheduled-chat-00-r01.json",
       "worker_run_key": "20261018-2155-scheduled-chat-00/r01"
     },
     {
@@ -1389,33 +1360,6 @@
       "worker_run_key": "20261019-1145-scheduled-chat-45/r01"
     },
     {
-      "canonical_id": "arXiv:2510.04147",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-19T15:58:18+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 7346,
-        "body_paragraphs": 43,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 542,
-        "limitation_chars": 596,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-edb88c3518c8--libfile_531ec7f330248191bf24ee852eae23b4--2025-2510.04147-self-speculative-decoding-dllm-research-20261019-1345-scheduled-chat-45-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-edb88c3518c8--libfile_531ec7f330248191bf24ee852eae23b4--2025-2510.04147-self-speculative-decoding-dllm-research-20261019-1345-scheduled-chat-45-r.json",
-      "worker_run_key": "20261019-1345-scheduled-chat-45/r01"
-    },
-    {
       "canonical_id": "arXiv:2607.15593",
       "title": null,
       "source_url": null,
@@ -1441,34 +1385,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-f2723f23ac2c--libfile_d12b069907748191a4340e9b878b2400--2026-2607.15593-scalable-agent-tool-gateway-research-20261019-1256-scheduled-chat-00-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-f2723f23ac2c--libfile_d12b069907748191a4340e9b878b2400--2026-2607.15593-scalable-agent-tool-gateway-research-20261019-1256-scheduled-chat-00-r01.json",
       "worker_run_key": "20261019-1256-scheduled-chat-00/r01"
-    },
-    {
-      "canonical_id": "arXiv:2609.31009",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-19T15:58:20+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 0 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 4526,
-        "body_paragraphs": 27,
-        "method_chars": 1567,
-        "method_paragraphs": 11,
-        "evaluation_chars": 0,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "評価説明量 0 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-ff528bae959d--libfile_5967d6744f308191bb7df8aa2cfa6dad--2026-2609.31009-g2ptq-generalized-gradient-compensation-research-20261019-0700-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-ff528bae959d--libfile_5967d6744f308191bb7df8aa2cfa6dad--2026-2609.31009-g2ptq-generalized-gradient-compensation-research-20261019-0700-scheduled-.json",
-      "worker_run_key": "20261019-0700-scheduled-chat-00/r01"
     },
     {
       "canonical_id": "arXiv:2506.03781",
@@ -2107,8 +2023,8 @@
     },
     {
       "canonical_id": "arXiv:2412.12706",
-      "title": "More Tokens, Lower Precision: Towards the Optimal Token-Precision Trade-off in KV Cache Compression",
-      "source_url": "https://arxiv.org/pdf/2412.12706",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-20T14:27:39+00:00",
       "return_count": 3,
       "assigned_worker": "scheduled-chat-45",
@@ -2136,8 +2052,8 @@
     },
     {
       "canonical_id": "arXiv:2505.03031",
-      "title": "Radio: Rate–Distortion Optimization for Large Language Model Compression",
-      "source_url": "https://arxiv.org/abs/2505.03031",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-20T14:27:40+00:00",
       "return_count": 1,
       "assigned_worker": "scheduled-chat-45",
@@ -2163,6 +2079,36 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_422866636b488191957207d9e7a01e4e--2025-2505.03031-radio-rate-distortion-quantization-research-20261020-1000-scheduled-chat-00-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_422866636b488191957207d9e7a01e4e--2025-2505.03031-radio-rate-distortion-quantization-research-20261020-1000-scheduled-chat-00-r01.json",
       "worker_run_key": "20261020-1000-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2508.06297",
+      "title": "KV Cache Compression for Inference Efficiency in LLMs: A Review",
+      "source_url": "https://arxiv.org/html/2508.06297v1",
+      "returned_at": "2026-10-20T14:39:14+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700",
+        "説明不足トリガー: 評価説明量 0 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 7149,
+        "body_paragraphs": 37,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 0,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700",
+          "評価説明量 0 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_48d364f513a48191a110336f9e153bf2--2025-2508.06297-kv-cache-compression-review-research-20261020-0355-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_48d364f513a48191a110336f9e153bf2--2025-2508.06297-kv-cache-compression-review-research-20261020-0355-scheduled-chat-00-r01.json",
+      "worker_run_key": "20261020-0355-scheduled-chat-00/r01"
     }
   ]
 }
