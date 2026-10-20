@@ -1,7 +1,7 @@
 {
   "schema_version": 3,
   "audit_kind": "publication_integrity_with_explanation_metrics",
-  "generated_at": "2026-10-20T00:45:14+00:00",
+  "generated_at": "2026-10-20T02:13:49+00:00",
   "criteria": {
     "utf8": true,
     "parseable_frontmatter": true,
@@ -2179,26 +2179,26 @@
     },
     {
       "path": "papers/inference/01-offload-hierarchical-memory/2026-2608.23805-memory-sovereign-inference.md",
-      "status": "FAIL",
-      "file_bytes": 22096,
-      "prose_chars": 6516,
+      "status": "WARN",
+      "file_bytes": 22723,
+      "prose_chars": 6285,
       "paragraphs": 55,
       "method_paragraphs": 18,
       "method_components": 0,
       "method_detection": "measured",
-      "method_chars": 1952,
-      "evaluation_chars": 1948,
+      "method_chars": 1831,
+      "evaluation_chars": 1866,
       "limitation_chars": 275,
       "quality_gate_version": "2026-10-07-v1",
       "insufficiency_flags": [],
-      "japanese_ratio": 0.6765632774921214,
-      "japanese_chars": 4079,
-      "latin_chars": 1950,
+      "japanese_ratio": 0.7828947368421053,
+      "japanese_chars": 4522,
+      "latin_chars": 1254,
       "bare_english_terms": [],
-      "failures": [
-        "日本語比率 67.7% < 70%"
-      ],
-      "warnings": []
+      "failures": [],
+      "warnings": [
+        "日本語比率 78.3% < 警告基準 80%"
+      ]
     },
     {
       "path": "papers/inference/01-offload-hierarchical-memory/2026-2609.00407-dynande-near-data-expert-scheduling.md",
@@ -7001,25 +7001,23 @@
     },
     {
       "path": "papers/inference/05-speculative-decoding-moe/2025-2505.21594-fast-and-cost-effective-speculative-edge-cloud-decoding-with-early-exits.md",
-      "status": "FAIL",
-      "file_bytes": 17923,
-      "prose_chars": 4832,
+      "status": "PASS",
+      "file_bytes": 18648,
+      "prose_chars": 4546,
       "paragraphs": 39,
       "method_paragraphs": 15,
       "method_components": 0,
       "method_detection": "measured",
-      "method_chars": 1601,
-      "evaluation_chars": 588,
-      "limitation_chars": 503,
+      "method_chars": 1467,
+      "evaluation_chars": 556,
+      "limitation_chars": 473,
       "quality_gate_version": "2026-10-07-v1",
       "insufficiency_flags": [],
-      "japanese_ratio": 0.6744487678339819,
-      "japanese_chars": 3120,
-      "latin_chars": 1506,
+      "japanese_ratio": 0.8369840903850588,
+      "japanese_chars": 3630,
+      "latin_chars": 707,
       "bare_english_terms": [],
-      "failures": [
-        "日本語比率 67.4% < 70%"
-      ],
+      "failures": [],
       "warnings": []
     },
     {
@@ -13481,6 +13479,29 @@
       "japanese_ratio": 0.9806148720278661,
       "japanese_chars": 6475,
       "latin_chars": 128,
+      "bare_english_terms": [],
+      "failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/07-kv-cache-optimization-compression/2026-2606.00724-wavefilter-enhancing-the-long-context-capability-of-diffusion-llms-via-w.md",
+      "status": "PASS",
+      "file_bytes": 23702,
+      "prose_chars": 7212,
+      "paragraphs": 41,
+      "method_paragraphs": 12,
+      "method_components": 0,
+      "method_detection": "measured",
+      "method_chars": 1679,
+      "evaluation_chars": 3146,
+      "limitation_chars": 0,
+      "quality_gate_version": "2026-10-07-v1",
+      "insufficiency_flags": [
+        "限界説明量 0 < 推奨 120"
+      ],
+      "japanese_ratio": 0.9273447820343461,
+      "japanese_chars": 4914,
+      "latin_chars": 385,
       "bare_english_terms": [],
       "failures": [],
       "warnings": []
@@ -20915,7 +20936,7 @@
     {
       "path": "papers/inference/10-kv-cache-offload-recomputation/2026-2605.18071-kvdrive-holistic-multi-tier-kv-cache-management.md",
       "status": "PASS",
-      "file_bytes": 17655,
+      "file_bytes": 17675,
       "prose_chars": 4937,
       "paragraphs": 25,
       "method_paragraphs": 10,
@@ -25100,26 +25121,26 @@
     },
     {
       "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2510.11938-flexpipe-adapting-dynamic-llm-serving-through-inflight-pipeline-refactoring-in-fragmented-serverless-clusters.md",
-      "status": "FAIL",
-      "file_bytes": 20820,
-      "prose_chars": 6023,
+      "status": "WARN",
+      "file_bytes": 21029,
+      "prose_chars": 5633,
       "paragraphs": 42,
       "method_paragraphs": 19,
       "method_components": 0,
       "method_detection": "measured",
-      "method_chars": 2330,
-      "evaluation_chars": 652,
-      "limitation_chars": 401,
+      "method_chars": 2173,
+      "evaluation_chars": 601,
+      "limitation_chars": 362,
       "quality_gate_version": "2026-10-07-v1",
       "insufficiency_flags": [],
-      "japanese_ratio": 0.6538967136150234,
-      "japanese_chars": 3482,
-      "latin_chars": 1843,
+      "japanese_ratio": 0.7742659053833605,
+      "japanese_chars": 3797,
+      "latin_chars": 1107,
       "bare_english_terms": [],
-      "failures": [
-        "日本語比率 65.4% < 70%"
-      ],
-      "warnings": []
+      "failures": [],
+      "warnings": [
+        "日本語比率 77.4% < 警告基準 80%"
+      ]
     },
     {
       "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2510.13223-banaserve-dynamic-module-migration.md",
@@ -30116,7 +30137,7 @@
     {
       "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-4b60583e1d6f-dynamic-micro-batch-and-token-budget-scheduling-for-iot-scale-pipeline-p.md",
       "status": "PASS",
-      "file_bytes": 20431,
+      "file_bytes": 23532,
       "prose_chars": 5655,
       "paragraphs": 32,
       "method_paragraphs": 8,
@@ -31550,25 +31571,23 @@
     },
     {
       "path": "papers/inference/13-sparse-attention/2024-2406.14909-mixture-of-attention-spans-optimizing-llm-inference-efficiency-with-heterogeneous-sliding-window-lengths.md",
-      "status": "FAIL",
-      "file_bytes": 16358,
-      "prose_chars": 4714,
-      "paragraphs": 39,
+      "status": "PASS",
+      "file_bytes": 16558,
+      "prose_chars": 4285,
+      "paragraphs": 38,
       "method_paragraphs": 15,
       "method_components": 0,
       "method_detection": "measured",
-      "method_chars": 1663,
-      "evaluation_chars": 692,
-      "limitation_chars": 333,
+      "method_chars": 1504,
+      "evaluation_chars": 642,
+      "limitation_chars": 312,
       "quality_gate_version": "2026-10-07-v1",
       "insufficiency_flags": [],
-      "japanese_ratio": 0.6536151813595964,
-      "japanese_chars": 2721,
-      "latin_chars": 1442,
+      "japanese_ratio": 0.8279978296256104,
+      "japanese_chars": 3052,
+      "latin_chars": 634,
       "bare_english_terms": [],
-      "failures": [
-        "日本語比率 65.4% < 70%"
-      ],
+      "failures": [],
       "warnings": []
     },
     {
@@ -32802,6 +32821,27 @@
       "japanese_ratio": 0.9091811414392059,
       "japanese_chars": 5496,
       "latin_chars": 549,
+      "bare_english_terms": [],
+      "failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/13-sparse-attention/2026-2605.11733-position-llm-inference-should-be-evaluated-as-energy-to-token-production.md",
+      "status": "PASS",
+      "file_bytes": 24258,
+      "prose_chars": 6128,
+      "paragraphs": 38,
+      "method_paragraphs": 12,
+      "method_components": 0,
+      "method_detection": "measured",
+      "method_chars": 1775,
+      "evaluation_chars": 1446,
+      "limitation_chars": 628,
+      "quality_gate_version": "2026-10-07-v1",
+      "insufficiency_flags": [],
+      "japanese_ratio": 0.9505703422053232,
+      "japanese_chars": 5000,
+      "latin_chars": 260,
       "bare_english_terms": [],
       "failures": [],
       "warnings": []
@@ -34687,29 +34727,29 @@
     },
     {
       "path": "papers/inference/15-inference-simulation-emulation/2024-2406.01698-demystifying-ai-platform-design-for-distributed-inference-of-next-generation-llm-models.md",
-      "status": "FAIL",
-      "file_bytes": 20558,
-      "prose_chars": 6064,
-      "paragraphs": 52,
+      "status": "WARN",
+      "file_bytes": 20638,
+      "prose_chars": 5833,
+      "paragraphs": 51,
       "method_paragraphs": 0,
       "method_components": 0,
       "method_detection": "measured",
       "method_chars": 0,
       "evaluation_chars": 0,
-      "limitation_chars": 399,
+      "limitation_chars": 370,
       "quality_gate_version": "2026-10-07-v1",
       "insufficiency_flags": [
         "手法説明量 0 < 700",
         "評価説明量 0 < 500"
       ],
-      "japanese_ratio": 0.6925897336935546,
-      "japanese_chars": 3589,
-      "latin_chars": 1593,
+      "japanese_ratio": 0.7574287446937538,
+      "japanese_chars": 3747,
+      "latin_chars": 1200,
       "bare_english_terms": [],
-      "failures": [
-        "日本語比率 69.3% < 70%"
-      ],
-      "warnings": []
+      "failures": [],
+      "warnings": [
+        "日本語比率 75.7% < 警告基準 80%"
+      ]
     },
     {
       "path": "papers/inference/15-inference-simulation-emulation/2024-2408.05499-llmservingsim-a-hw-sw-co-simulation-infrastructure-for-llm-inference-ser.md",
@@ -36758,7 +36798,7 @@
     {
       "path": "papers/inference/17-pim-near-data-acceleration/2023-0a1390643d73-samsung-pim-pnm-for-transformer-based-ai-energy-efficiency-on-pim-pnm-cl.md",
       "status": "PASS",
-      "file_bytes": 16789,
+      "file_bytes": 16970,
       "prose_chars": 4648,
       "paragraphs": 23,
       "method_paragraphs": 10,
@@ -36977,26 +37017,26 @@
     },
     {
       "path": "papers/inference/17-pim-near-data-acceleration/2025-stratum-system-hardware-co-design-with-tiered-monolithic-3d-stackable-dram-for-efficient-moe-serving.md",
-      "status": "FAIL",
-      "file_bytes": 20533,
-      "prose_chars": 5558,
+      "status": "WARN",
+      "file_bytes": 20749,
+      "prose_chars": 5253,
       "paragraphs": 43,
       "method_paragraphs": 16,
       "method_components": 0,
       "method_detection": "measured",
-      "method_chars": 1814,
-      "evaluation_chars": 628,
-      "limitation_chars": 533,
+      "method_chars": 1675,
+      "evaluation_chars": 594,
+      "limitation_chars": 493,
       "quality_gate_version": "2026-10-07-v1",
       "insufficiency_flags": [],
-      "japanese_ratio": 0.649743062692703,
-      "japanese_chars": 3161,
-      "latin_chars": 1704,
+      "japanese_ratio": 0.75225126290358,
+      "japanese_chars": 3425,
+      "latin_chars": 1128,
       "bare_english_terms": [],
-      "failures": [
-        "日本語比率 65.0% < 70%"
-      ],
-      "warnings": []
+      "failures": [],
+      "warnings": [
+        "日本語比率 75.2% < 警告基準 80%"
+      ]
     },
     {
       "path": "papers/inference/17-pim-near-data-acceleration/2026-21d5070d498a-aif-accelerating-on-device-llm-inference-using-in-flash-processing.md",
@@ -40130,26 +40170,26 @@
     },
     {
       "path": "papers/inference/99-other-inference-systems/2022-2208.01313-unified-normalization-for-accelerating-and-stabilizing-transformers.md",
-      "status": "FAIL",
-      "file_bytes": 18108,
-      "prose_chars": 5659,
-      "paragraphs": 44,
+      "status": "WARN",
+      "file_bytes": 18145,
+      "prose_chars": 4841,
+      "paragraphs": 43,
       "method_paragraphs": 13,
       "method_components": 0,
       "method_detection": "measured",
-      "method_chars": 1523,
-      "evaluation_chars": 712,
-      "limitation_chars": 497,
+      "method_chars": 1323,
+      "evaluation_chars": 652,
+      "limitation_chars": 451,
       "quality_gate_version": "2026-10-07-v1",
       "insufficiency_flags": [],
-      "japanese_ratio": 0.5328920978740473,
-      "japanese_chars": 2657,
-      "latin_chars": 2329,
+      "japanese_ratio": 0.7385057471264368,
+      "japanese_chars": 3084,
+      "latin_chars": 1092,
       "bare_english_terms": [],
-      "failures": [
-        "日本語比率 53.3% < 70%"
-      ],
-      "warnings": []
+      "failures": [],
+      "warnings": [
+        "日本語比率 73.9% < 警告基準 80%"
+      ]
     },
     {
       "path": "papers/inference/99-other-inference-systems/2022-2211.05102-efficiently-scaling-transformer-inference.md",
@@ -41527,7 +41567,7 @@
     {
       "path": "papers/inference/99-other-inference-systems/2023-2311.01927-gateloop-fully-data-controlled-linear-recurrence-for-sequence-modeling.md",
       "status": "PASS",
-      "file_bytes": 16686,
+      "file_bytes": 16706,
       "prose_chars": 3964,
       "paragraphs": 26,
       "method_paragraphs": 9,
@@ -44796,6 +44836,27 @@
       "warnings": []
     },
     {
+      "path": "papers/inference/99-other-inference-systems/2025-2501.01144-blockdialect-block-wise-fine-grained-mixed-format-quantization-for-energ.md",
+      "status": "PASS",
+      "file_bytes": 25678,
+      "prose_chars": 6741,
+      "paragraphs": 34,
+      "method_paragraphs": 10,
+      "method_components": 0,
+      "method_detection": "measured",
+      "method_chars": 2027,
+      "evaluation_chars": 2181,
+      "limitation_chars": 588,
+      "quality_gate_version": "2026-10-07-v1",
+      "insufficiency_flags": [],
+      "japanese_ratio": 0.9585925004442865,
+      "japanese_chars": 5394,
+      "latin_chars": 233,
+      "bare_english_terms": [],
+      "failures": [],
+      "warnings": []
+    },
+    {
       "path": "papers/inference/99-other-inference-systems/2025-2501.02086-instruction-following-pruning-for-large-language-models.md",
       "status": "PASS",
       "file_bytes": 20206,
@@ -45430,7 +45491,7 @@
     {
       "path": "papers/inference/99-other-inference-systems/2025-2503.12559-adaretake-adaptive-redundancy-reduction-to-perceive-longer-for-video-lan.md",
       "status": "PASS",
-      "file_bytes": 22249,
+      "file_bytes": 22270,
       "prose_chars": 5360,
       "paragraphs": 26,
       "method_paragraphs": 9,
@@ -46206,7 +46267,7 @@
     {
       "path": "papers/inference/99-other-inference-systems/2025-2507.11851-your-llm-knows-the-future-uncovering-its-multi-token-prediction-potentia.md",
       "status": "PASS",
-      "file_bytes": 17891,
+      "file_bytes": 17911,
       "prose_chars": 4412,
       "paragraphs": 27,
       "method_paragraphs": 10,
@@ -47794,6 +47855,27 @@
       "japanese_ratio": 0.9914163090128756,
       "japanese_chars": 4620,
       "latin_chars": 40,
+      "bare_english_terms": [],
+      "failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/99-other-inference-systems/2025-2512.21857-fast-inference-of-visual-autoregressive-model-with-adjacency-adaptive-dy.md",
+      "status": "PASS",
+      "file_bytes": 24741,
+      "prose_chars": 6815,
+      "paragraphs": 39,
+      "method_paragraphs": 12,
+      "method_components": 0,
+      "method_detection": "measured",
+      "method_chars": 1984,
+      "evaluation_chars": 1823,
+      "limitation_chars": 631,
+      "quality_gate_version": "2026-10-07-v1",
+      "insufficiency_flags": [],
+      "japanese_ratio": 0.9395413481584434,
+      "japanese_chars": 5408,
+      "latin_chars": 348,
       "bare_english_terms": [],
       "failures": [],
       "warnings": []
@@ -53212,7 +53294,7 @@
     {
       "path": "papers/inference/99-other-inference-systems/2026-2606.13054-twla-achieving-ternary-weights-and-low-bit-activations-for-llms-via-post.md",
       "status": "PASS",
-      "file_bytes": 28212,
+      "file_bytes": 28233,
       "prose_chars": 7126,
       "paragraphs": 38,
       "method_paragraphs": 13,
@@ -53555,26 +53637,26 @@
     },
     {
       "path": "papers/inference/99-other-inference-systems/2026-2606.31093-omni-flow-a-unified-workflow-orchestration-and-distributed-kv-cache-sharing-framework-for-multimodal-inference.md",
-      "status": "FAIL",
-      "file_bytes": 20890,
-      "prose_chars": 6288,
+      "status": "WARN",
+      "file_bytes": 21098,
+      "prose_chars": 5918,
       "paragraphs": 50,
       "method_paragraphs": 21,
       "method_components": 0,
       "method_detection": "measured",
-      "method_chars": 2323,
-      "evaluation_chars": 920,
-      "limitation_chars": 439,
+      "method_chars": 2183,
+      "evaluation_chars": 841,
+      "limitation_chars": 417,
       "quality_gate_version": "2026-10-07-v1",
       "insufficiency_flags": [],
-      "japanese_ratio": 0.6445481251080006,
-      "japanese_chars": 3730,
-      "latin_chars": 2057,
+      "japanese_ratio": 0.7459259259259259,
+      "japanese_chars": 4028,
+      "latin_chars": 1372,
       "bare_english_terms": [],
-      "failures": [
-        "日本語比率 64.5% < 70%"
-      ],
-      "warnings": []
+      "failures": [],
+      "warnings": [
+        "日本語比率 74.6% < 警告基準 80%"
+      ]
     },
     {
       "path": "papers/inference/99-other-inference-systems/2026-2607.01617-3dls-disaggregated-serving-interconnect.md",
@@ -56643,7 +56725,7 @@
     {
       "path": "papers/inference/99-other-inference-systems/2026-5c886960494f-semantic-aware-intelligent-request-routing-in-multi-model-llm-backend-ga.md",
       "status": "PASS",
-      "file_bytes": 17644,
+      "file_bytes": 21647,
       "prose_chars": 5127,
       "paragraphs": 30,
       "method_paragraphs": 7,

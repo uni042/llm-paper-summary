@@ -5642,6 +5642,15 @@
       "warnings": []
     },
     {
+      "path": "papers/inference/07-kv-cache-optimization-compression/2026-2606.00724-wavefilter-enhancing-the-long-context-capability-of-diffusion-llms-via-w.md",
+      "status": "PASS",
+      "summary": "拡散LLMの長文脈KVをウェーブレットの粗密検索で選択する追加学習不要の手法。長文脈精度を一部回復する一方、キャッシュ単独比では大きな速度低下がある。",
+      "char_count": 75,
+      "japanese_ratio": 1.0,
+      "failures": [],
+      "warnings": []
+    },
+    {
       "path": "papers/inference/07-kv-cache-optimization-compression/2026-2606.02964-multi-segment-attention-enabling-efficient-kv-cache-management-for-faster-large-language-model-serving.md",
       "status": "PASS",
       "summary": "AsymCacheは、非連続KV区間を一つの注意カーネルで統合し、再利用確率と再計算遅延で追い出し、負荷適応チャンク化で長文サービングのGPU計算と管理費を減らす。",
@@ -13709,6 +13718,15 @@
       "warnings": []
     },
     {
+      "path": "papers/inference/13-sparse-attention/2026-2605.11733-position-llm-inference-should-be-evaluated-as-energy-to-token-production.md",
+      "status": "PASS",
+      "summary": "品質・遅延条件を固定したトークン生成率を計算能力と供給電力の二つの上限で定義し、J/token、PUE、実効利用率を推論評価へ導入する立場論文。既報実測と将来予測を明確に区別する。",
+      "char_count": 90,
+      "japanese_ratio": 0.9375,
+      "failures": [],
+      "warnings": []
+    },
+    {
       "path": "papers/inference/13-sparse-attention/2026-2605.12110-ab-sparse-sparse-attention-with-adaptive-block-size-for-accurate-and-eff.md",
       "status": "PASS",
       "summary": "ヘッドごとのブロック長感度を50標本で較正し、4ビット代表ベクトルと可変長GPUカーネルで疎注意を実装するAB-Sparse。RULER最大5.43ポイント改善、バッチ4で1.59倍処理量。",
@@ -18674,6 +18692,15 @@
       "warnings": []
     },
     {
+      "path": "papers/inference/99-other-inference-systems/2025-2501.01144-blockdialect-block-wise-fine-grained-mixed-format-quantization-for-energ.md",
+      "status": "PASS",
+      "summary": "重み・活性化の各小ブロックへ16種類のFP4変種を割り当て、二段階の軽量選択回路と整数積和演算により、注意行列積を含む4ビット量子化の精度低下を抑える。",
+      "char_count": 76,
+      "japanese_ratio": 1.0,
+      "failures": [],
+      "warnings": []
+    },
+    {
       "path": "papers/inference/99-other-inference-systems/2025-2501.02086-instruction-following-pruning-for-large-language-models.md",
       "status": "PASS",
       "summary": "指示ごとにFFN中間次元を選択して応答中は固定する構造化枝刈り。9B→活性3BでHumanEval42.4、TTFT0.846→0.471秒。",
@@ -19913,6 +19940,15 @@
       "status": "PASS",
       "summary": "生成時の乱数をモデル入力へ移して依存関係を持つ複数トークンを並列予測し、教師検証付きVicuna-7BのSpecBenchで平均2.40倍高速化する。",
       "char_count": 75,
+      "japanese_ratio": 1.0,
+      "failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/99-other-inference-systems/2025-2512.21857-fast-inference-of-visual-autoregressive-model-with-adjacency-adaptive-dy.md",
+      "status": "PASS",
+      "summary": "画像領域ごとの草稿採択率の違いを利用し、水平隣接トークンの履歴から草稿木の深さ・幅を調整する。Anoleでは厳密採択の温度0で2.21倍、LANTERN併用時に最大3.13倍の生成高速化を報告。",
+      "char_count": 97,
       "japanese_ratio": 1.0,
       "failures": [],
       "warnings": []

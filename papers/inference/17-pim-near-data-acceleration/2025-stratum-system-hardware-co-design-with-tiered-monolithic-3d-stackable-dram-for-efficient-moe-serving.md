@@ -162,29 +162,29 @@ references_total: 92
 
 混合専門家モデル（Mixture of Experts; MoE）は、各トークンで少数の専門家だけを実行するため演算は疎にできる。しかし専門家 FFNはモデル 重みの大部分を占めるので、**そのトークンで使わない専門家も含め、全専門家の重みをどこかへ保存する必要がある**。特にデコードは1 段階当たりの計算量が小さく、必要重みをメモリから読む時間が相対的に大きいため、GPUの演算器よりメモリ 帯域が律速になりやすい。
 
-Stratumはこの問題を「より多くのHBMを載せる」だけでは解かない。提案するモノリシック3D積層可能DRAM（Monolithic 3D-Stackable DRAM; Mono3D DRAM）は、DRAM cell 層を縦方向へ大量に積み、logic dieと細かいCu-Cu hybrid bondingで接続する。従来HBMのTSVより細密な垂直接続を使えるため、メモリ stack内部では非常に高い帯域をlogic側へ供給できる。
+Stratumはこの問題を「より多くのHBMを載せる」だけでは解かない。提案するモノリシック3D積層可能DRAM（Monolithic 3D-Stackable DRAM; Mono3D DRAM）は、DRAM cell 層を縦方向へ大量に積み、論理 ダイと細かいCu-Cu 混成 接合で接続する。従来HBMのTSVより細密な垂直接続を使えるため、メモリ stack内部では非常に高い帯域を論理側へ供給できる。
 
 ただしGPUとの2.5D silicon interposerを通る外部帯域は依然として限られる。そこで専門家計算と注意機構の一部をメモリ近傍の近メモリ処理（Near-Memory Processing; NMP）へ移し、巨大重みを毎回GPUへ運ばず、その場で処理する。
 
 Mono3D DRAMには別の癖がある。縦に数百〜1024 層まで伸ばすと、wordlineの長さと寄生抵抗・容量が位置によって変わり、上層と下層でアクセス 遅延が均一でなくなる。通常なら最悪遅延に合わせてメモリ全体を遅く動かすところを、Stratumはこの不均一性を **8段階のメモリ 階層** として利用する。
 
-さらにMoEでは専門家利用頻度がリクエスト topicに依存するという観察から、話題分類で次に使われやすい専門家を推定し、高頻度 専門家を速い階層、低頻度 専門家を遅い階層へ置く。つまりStratumの中心は、**新しいメモリ technologyの内部遅延差を欠点ではなく専門家 配置の資源へ変えること**にある。
+さらにMoEでは専門家利用頻度がリクエスト 話題に依存するという観察から、話題分類で次に使われやすい専門家を推定し、高頻度 専門家を速い階層、低頻度 専門家を遅い階層へ置く。つまりStratumの中心は、**新しいメモリ technologyの内部遅延差を欠点ではなく専門家 配置の資源へ変えること**にある。
 
-MICRO 2025のcross-層評価では、GPU 比較対象比の平均デコード スループットがOLMoEで8.29倍、Mixtralで5.39倍、Qwen2.5で6.13倍、Llama-4で4.48倍。Energy 効率は最大7.66倍を報告する。ただしこれは製造chipの実測ではなく、device/circuit/構成/システムを跨いだシミュレーション・modeling結果である。
+MICRO 2025のcross-層評価では、GPU 比較対象比の平均デコード スループットがOLMoEで8.29倍、Mixtralで5.39倍、Qwen2.5で6.13倍、Llama-4で4.48倍。Energy 効率は最大7.66倍を報告する。ただしこれは製造chipの実測ではなく、機器/circuit/構成/システムを跨いだシミュレーション・modeling結果である。
 
 ## 問題設定
 
 ### HBMの「GPU外側bandwidth」だけでなく、memory内部も使う
 
-HBMは多数のDRAM dieをTSVでstackし、GPUへ広いinterfaceを提供する。しかしデコードのようなメモリ律速 ワークロードでは、GPU compute capabilityが増えても重み/KVの供給が追い付かなければ演算器は待つ。
+HBMは多数のDRAM ダイをTSVでstackし、GPUへ広いinterfaceを提供する。しかしデコードのようなメモリ律速 ワークロードでは、GPU 計算 capabilityが増えても重み/KVの供給が追い付かなければ演算器は待つ。
 
-HBM base dieへNMPを置く既存方式は、GPUまでdataを運ばない点では有利だが、DRAM dieからbase dieへ抜けるTSVの本数・pitchが内部帯域の上限になる。StratumがMono3D DRAMに注目する理由は、メモリ cell 層とlogic dieの間をより細かなhybrid bondingでつなぎ、stack内部帯域をNMPから直接使えるためである。
+HBM base ダイへNMPを置く既存方式は、GPUまでデータを運ばない点では有利だが、DRAM ダイからbase ダイへ抜けるTSVの本数・pitchが内部帯域の上限になる。StratumがMono3D DRAMに注目する理由は、メモリ cell 層と論理 ダイの間をより細かな混成 接合でつなぎ、stack内部帯域をNMPから直接使えるためである。
 
 ### 1024 layer級の縦積層ではaccess latencyが均一でない
 
-Mono3D DRAMのwordlineはstaircase構造で外へ引き出される。Layer位置によってルーティング lengthが変わるため、積層数を増やすほどアクセス 遅延差が大きくなる。
+Mono3D DRAMのwordlineはstaircase構造で外へ引き出される。Layer位置によってルーティング 長さが変わるため、積層数を増やすほどアクセス 遅延差が大きくなる。
 
-全層を最遅層に合わせれば制御は簡単だが、高速層の性能を捨てることになる。Stratumはメモリ address spaceをアクセス 遅延別に8 階層へ分け、速い階層へ頻繁に読むdataを集める。
+全層を最遅層に合わせれば制御は簡単だが、高速層の性能を捨てることになる。Stratumはメモリ address spaceをアクセス 遅延別に8 階層へ分け、速い階層へ頻繁に読むデータを集める。
 
 ここでMoEとの相性が良い。すべての専門家を同頻度で読むわけではないため、高頻度/低頻度を正しく予測できれば、容量は全階層を使いながら、実際のアクセスの多くを高速階層へ偏らせられる。
 
@@ -192,45 +192,45 @@ Mono3D DRAMのwordlineはstaircase構造で外へ引き出される。Layer位�
 
 Stratumは三層の設計からなる。
 
-1. **Hardware:** Mono3D DRAMをlogic dieへhybrid bondingし、NMP processorを置く。GPUとはsilicon interposerで接続する。
-2. **Memory mapping:** DRAM 層を遅延で8 階層へ分け、専門家/注意機構 dataをNMPのlocalityと階層速度に合わせて配置する。
-3. **Serving システム:** リクエスト topicを軽量classifierで分類し、topicごとの専門家 活性値 profileから高頻度/低頻度 専門家を決める。SLOを守りながら同topic リクエストをqueue/分配し、高頻度 dataを高速階層で再利用しやすくする。
+1. **Hardware:** Mono3D DRAMを論理 ダイへ混成 接合し、NMP processorを置く。GPUとはsilicon interposerで接続する。
+2. **Memory 対応付け:** DRAM 層を遅延で8 階層へ分け、専門家/注意機構 データをNMPの局所性と階層速度に合わせて配置する。
+3. **Serving システム:** リクエスト 話題を軽量classifierで分類し、話題ごとの専門家 活性値 profileから高頻度/低頻度 専門家を決める。SLOを守りながら同話題 リクエストを待機列/分配し、高頻度 データを高速階層で再利用しやすくする。
 
-入力はリクエスト topicと事前測定した専門家 活性値 frequency、出力は専門家の物理階層配置とリクエスト 分配 orderである。Inference中はルーティングが本来選んだ専門家を実行し、topic 予測は「どの専門家を速いメモリへ置くか」のhintとして使う。
+入力はリクエスト 話題と事前測定した専門家 活性値 frequency、出力は専門家の物理階層配置とリクエスト 分配 orderである。Inference中はルーティングが本来選んだ専門家を実行し、話題 予測は「どの専門家を速いメモリへ置くか」のhintとして使う。
 
 ## 手法
 
 ### 1. Mono3D DRAM + NMP — expert weightをGPUまで往復させない
 
-Mono3D DRAM stackの下に高性能logic dieを置き、専門家 FFNと注意機構向けのprocessing unitを実装する。Memory cellとlogicをCu-Cu hybrid bondingで接続するため、外部interposerへ出る前の高い内部帯域を計算へ使える。
+Mono3D DRAM stackの下に高性能論理 ダイを置き、専門家 FFNと注意機構向けのprocessing unitを実装する。Memory cellと論理をCu-Cu 混成 接合で接続するため、外部interposerへ出る前の高い内部帯域を計算へ使える。
 
-Expert FFNでは重みをNMP近傍から読み、その場でmatrix operationを進める。AttentionでもKVをメモリ側で処理する。結果だけをGPU側と交換すればよく、巨大な重み/KV 通信量を外部interfaceへ毎回流す量を減らせる。
+Expert FFNでは重みをNMP近傍から読み、その場でmatrix 演算を進める。AttentionでもKVをメモリ側で処理する。結果だけをGPU側と交換すればよく、巨大な重み/KV 通信量を外部interfaceへ毎回流す量を減らせる。
 
-ただしNMP unit同士の通信が新たな律速にならないよう、論文は専門家/注意機構 data mappingとprocessing パイプラインを共同設計し、計算・活性値・processing-unit間通信を重ねる。
+ただしNMP unit同士の通信が新たな律速にならないよう、論文は専門家/注意機構 データ 対応付けとprocessing パイプラインを共同設計し、計算・活性値・processing-unit間通信を重ねる。
 
 ### 2. 8-tier in-memory tiering — 最悪latency基準をやめる
 
 縦方向の層 遅延を測定モデルから分類し、Mono3D DRAMを8 階層へ区切る。Fast 階層は小容量だが低遅延、slow 階層はより遅いという階層として扱う。
 
-No-tiering方式では最も遅い層に合わせたtimingをメモリ全体へ適用する。Tieringでは各領域を実際の遅延に近いtimingで使えるため、同じMono3D DRAMでもeffective 帯域が上がる。
+No-階層化方式では最も遅い層に合わせたtimingをメモリ全体へ適用する。Tieringでは各領域を実際の遅延に近いtimingで使えるため、同じMono3D DRAMでも実効 帯域が上がる。
 
-評価ではtiering + optimized mappingがno-tieringに対しモデルに応じて約1.32〜1.45倍の追加スループットをもたらす。したがって8.29倍というheadlineの全てが「新メモリだから」ではなく、**遅延 heterogeneityをシステムから利用する部分にも独立した寄与がある**。
+評価では階層化 + optimized 対応付けがno-階層化に対しモデルに応じて約1.32〜1.45倍の追加スループットをもたらす。したがって8.29倍というheadlineの全てが「新メモリだから」ではなく、**遅延 heterogeneityをシステムから利用する部分にも独立した寄与がある**。
 
 ### 3. Topic-aware hot expert placement — request内容から速いtierを使うexpertを決める
 
-MoE ルーティングの専門家 活性値にはtopic localityがある。同じ分野の質問が続けば、一部専門家が繰り返し選ばれやすい。
+MoE ルーティングの専門家 活性値には話題 局所性がある。同じ分野の質問が続けば、一部専門家が繰り返し選ばれやすい。
 
-Stratumは軽量topic classifierでリクエストを粗いtopicへ分類し、offline profileしたtopic別専門家 活性値 probabilityを参照する。利用確率の高い専門家を高頻度としてfast 階層へ、低い専門家を低頻度としてslow 階層へ配置する。
+Stratumは軽量話題 classifierでリクエストを粗い話題へ分類し、オフライン profileした話題別専門家 活性値 probabilityを参照する。利用確率の高い専門家を高頻度としてfast 階層へ、低い専門家を低頻度としてslow 階層へ配置する。
 
-ここで予測を外してもモデル出力の専門家を変更するわけではない。Cold 階層にある専門家を読むため遅くなるだけなので、qualityではなくperformanceのmissになる。この性質により、aggressiveな配置 予測を使いやすい。
+ここで予測を外してもモデル出力の専門家を変更するわけではない。Cold 階層にある専門家を読むため遅くなるだけなので、qualityではなくperformanceの不一致になる。この性質により、aggressiveな配置 予測を使いやすい。
 
 ### 4. Topic-aware scheduling — hot expertの再利用とSLOを両立する
 
-Expert 配置だけをtopic-awareにしても、リクエストがtopic A→B→C→Aのように高速で切り替われば高頻度 setの交換が頻発する。そこでスケジューラは同topic リクエストをまとめて処理し、高頻度 専門家配置を再利用する。
+Expert 配置だけを話題-awareにしても、リクエストが話題 A→B→C→Aのように高速で切り替われば高頻度 setの交換が頻発する。そこでスケジューラは同話題 リクエストをまとめて処理し、高頻度 専門家配置を再利用する。
 
-一方、バッチ形成のために待ち過ぎれば遅延 SLOを破る。Stratumはtopic localityを高めるqueueingとSLO制約を組み合わせ、専門家 swap回数とリクエスト待ち時間を両方制御する。
+一方、バッチ形成のために待ち過ぎれば遅延 SLOを破る。Stratumは話題 局所性を高めるqueueingとSLO制約を組み合わせ、専門家 入替え回数とリクエスト待ち時間を両方制御する。
 
-論文のworst-case寄りのswap検証でも、短い系列・バッチ 1で連続リクエストのtopicが異なる条件におけるswap オーバーヘッドは1%未満の時間割合として報告される。通常caseだけでなく、topic変化のコストを別評価している点が重要である。
+論文のworst-事例寄りの入替え検証でも、短い系列・バッチ 1で連続リクエストの話題が異なる条件における入替え オーバーヘッドは1%未満の時間割合として報告される。通常事例だけでなく、話題変化のコストを別評価している点が重要である。
 
 ## 評価
 
@@ -243,7 +243,7 @@ Expert 配置だけをtopic-awareにしても、リクエストがtopic A→B→
 | Qwen2.5-32B | 32B 密 | H100 ×2 | Stratum-L |
 | Llama-4 Scout | 約109B、shared + 16 エキスパート / top-1 | H100 ×4 | Stratum-XL |
 
-GPU側はvLLM系のスループット-oriented 推論提供を基準にし、Stratum側はMono3D DRAM device/circuit モデルとNMP システム シミュレーションを組み合わせる。Qwen2.5という密 モデルも含め、MoE固有の専門家-配置効果だけでなく、NMP/注意機構側の寄与も分けて見られる構成になっている。
+GPU側はvLLM系のスループット-oriented 推論提供を基準にし、Stratum側はMono3D DRAM 機器/circuit モデルとNMP システム シミュレーションを組み合わせる。Qwen2.5という密 モデルも含め、MoE固有の専門家-配置効果だけでなく、NMP/注意機構側の寄与も分けて見られる構成になっている。
 
 ### 代表的な結果
 
@@ -254,46 +254,46 @@ GPU側はvLLM系のスループット-oriented 推論提供を基準にし、Str
 | Qwen2.5 | 6.13× | 3.51× |
 | Llama-4 | 4.48× | 4.87× |
 
-Decode lengthが長くなるほどGPU 比較対象は注意機構のメモリ 通信量で強くメモリ律速になり、Stratumとの差が広がる。Headlineの最大値だけでなく、全4 モデルで方向が揃っている点がシステム-level主張を支える。
+Decode 長さが長くなるほどGPU 比較対象は注意機構のメモリ 通信量で強くメモリ律速になり、Stratumとの差が広がる。Headlineの最大値だけでなく、全4 モデルで方向が揃っている点がシステム-階層主張を支える。
 
 ### Tieringの寄与
 
-| Model | Tiering + mapping のno-tiering比 |
+| Model | Tiering + 対応付け のno-階層化比 |
 |---|---:|
 | OLMoE | 約1.45× |
 | Mixtral | 約1.39× |
 | Qwen2.5 | 約1.32× |
 | Llama-4 | 約1.34× |
 
-これは「Mono3D DRAMを使う」ことと、「その内部遅延差を8-階層として使う」ことを分離するablationである。最悪遅延へ揃えるだけでもHBMより内部帯域は高いが、階層-aware mappingでさらに伸びる。
+これは「Mono3D DRAMを使う」ことと、「その内部遅延差を8-階層として使う」ことを分離する構成要素除去である。最悪遅延へ揃えるだけでもHBMより内部帯域は高いが、階層-aware 対応付けでさらに伸びる。
 
 ### Expert placementの感度
 
-Hot 専門家 命中 rateが高くなるほどMoE MLP 遅延は下がり、システム スループットは上がる。論文のtopic 予測ではモデルごとに高頻度-専門家 命中率が異なり、ルーティング localityが強いモデルほど配置 benefitも得やすい。
+Hot 専門家 命中 rateが高くなるほどMoE MLP 遅延は下がり、システム スループットは上がる。論文の話題 予測ではモデルごとに高頻度-専門家 命中率が異なり、ルーティング 局所性が強いモデルほど配置 benefitも得やすい。
 
-したがってtopic classificationが難しいdomain、topicが頻繁に切り替わる通信量、専門家利用がほぼ均一なMoEでは、話題別tieringの追加利得は縮む。逆にMono3D/NMP自体のbenefitはそれとは独立して残る。
+したがって話題 classificationが難しいdomain、話題が頻繁に切り替わる通信量、専門家利用がほぼ均一なMoEでは、話題別階層化の追加利得は縮む。逆にMono3D/NMP自体のbenefitはそれとは独立して残る。
 
 ## 既存研究との差
 
-HBM-based PIM/NMPはGPUまでのdata 転送を減らすが、HBM stack内部ではTSV帯域が制約になり得る。StratumはMono3D DRAMの高密度hybrid bondingを使い、**メモリ内部帯域を大きくした上でlogic die NMPへ渡す**点がハードウェア側の差である。
+HBM-based PIM/NMPはGPUまでのデータ 転送を減らすが、HBM stack内部ではTSV帯域が制約になり得る。StratumはMono3D DRAMの高密度混成 接合を使い、**メモリ内部帯域を大きくした上で論理 ダイ NMPへ渡す**点がハードウェア側の差である。
 
-一方、MoE-Infinityや専門家 キャッシュ型のオフロードは既存CPU/GPU/SSD階層で「何を先読み・キャッシュするか」を最適化する。Stratumは新メモリ technologyの内部にfast/slow 階層そのものを作り、topic-aware 配置を物理メモリ layoutへ落とす。
+一方、MoE-Infinityや専門家 キャッシュ型のオフロードは既存CPU/GPU/SSD階層で「何を先読み・キャッシュするか」を最適化する。Stratumは新メモリ technologyの内部にfast/slow 階層そのものを作り、話題-aware 配置を物理メモリ layoutへ落とす。
 
-つまりsoftware-onlyな専門家 キャッシュの代替ではなく、専門家 localityをメモリ deviceの遅延 heterogeneityへ直接対応付けるハードウェア-システム co-designである。
+つまりsoftware-onlyな専門家 キャッシュの代替ではなく、専門家 局所性をメモリ 機器の遅延 heterogeneityへ直接対応付けるハードウェア-システム co-設計である。
 
 ## 限界・実装状況
 
-最重要の制約は、Stratumが市販GPUへsoftwareだけで導入できる技術ではないことだ。Mono3D DRAM、hybrid bonding、専用logic die、NMP processorを前提にする新構成である。
+最重要の制約は、Stratumが市販GPUへsoftwareだけで導入できる技術ではないことだ。Mono3D DRAM、混成 接合、専用論理 ダイ、NMP processorを前提にする新構成である。
 
-また評価はcross-層 シミュレーション/modelingであり、Stratum-S/L/XLを実製造してGPU 比較対象と同一rackで測った結果ではない。Device 遅延、power、interconnect、NMP utilizationのモデル誤差が最終スループット/energyへ影響する。
+また評価はcross-層 シミュレーション/modelingであり、Stratum-S/L/XLを実製造してGPU 比較対象と同一ラックで測った結果ではない。Device 遅延、power、interconnect、NMP 利用率のモデル誤差が最終スループット/エネルギーへ影響する。
 
-Topic-aware 配置の利得は専門家 活性値 localityに依存する。Traffic 分布が学習/profile時から変化すると高頻度 set予測が悪化し、階層 swapが増える。SLO-aware スケジューラもtopic groupingのためリクエストを待たせるので、極端に低通信量なtopicではbatching benefitが得にくい。
+Topic-aware 配置の利得は専門家 活性値 局所性に依存する。Traffic 分布が学習/profile時から変化すると高頻度 set予測が悪化し、階層 入替えが増える。SLO-aware スケジューラも話題 groupingのためリクエストを待たせるので、極端に低通信量な話題ではbatching benefitが得にくい。
 
-一方、paperはno-tiering、高頻度-命中-rate sensitivity、専門家 swap オーバーヘッドを個別に評価しており、headline 高速化倍率だけでは見えない依存条件をある程度切り分けている。
+一方、paperはno-階層化、高頻度-命中-rate sensitivity、専門家 入替え オーバーヘッドを個別に評価しており、headline 高速化倍率だけでは見えない依存条件をある程度切り分けている。
 
 ## 一般的な実装上の含意
 
-Memory technologyの「不均一性」は、常に最悪値へ揃えて隠す必要はない。Access frequencyを予測できるワークロードでは、遅延の異なる物理領域をsoftware-visibleな階層へ変換し、高頻度 data 配置へ使える。
+Memory technologyの「不均一性」は、常に最悪値へ揃えて隠す必要はない。Access frequencyを予測できるワークロードでは、遅延の異なる物理領域をsoftware-visibleな階層へ変換し、高頻度 データ 配置へ使える。
 
 MoEはその好例で、専門家 活性値が疎かつ偏るため、全専門家を最速メモリへ置けなくても、**よく使う専門家だけをfast 階層へ置けば平均アクセス timeを大きく下げられる**。この発想はCXL、HBM 階層、DRAM/NVMe階層にも一般化できる。
 
@@ -304,4 +304,4 @@ MoEはその好例で、専門家 活性値が疎かつ偏るため、全専門�
 
 ## 修正履歴
 
-- 2026-09-28（修正済み）: 最新品質ガイドに合わせ、汎用的な「観測・選択・資源削減」説明を削除。Mono3D DRAMとHBMの内部帯域差、z方向遅延 heterogeneity、8-階層 メモリ、NMP execution、topic-aware 高頻度/低頻度 専門家 配置、SLO-aware スケジューラを因果順に説明。OLMoE/Mixtral/Qwen2.5/Llama-4のGPU 比較対象、スループット・energy表、tiering ablation、高頻度-命中-rate依存、シミュレーション scopeを追記。
+- 2026-09-28（修正済み）: 最新品質ガイドに合わせ、汎用的な「観測・選択・資源削減」説明を削除。Mono3D DRAMとHBMの内部帯域差、z方向遅延 heterogeneity、8-階層 メモリ、NMP execution、話題-aware 高頻度/低頻度 専門家 配置、SLO-aware スケジューラを因果順に説明。OLMoE/Mixtral/Qwen2.5/Llama-4のGPU 比較対象、スループット・エネルギー表、階層化 構成要素除去、高頻度-命中-rate依存、シミュレーション scopeを追記。

@@ -1,19 +1,19 @@
 {
   "schema_version": 1,
-  "checked_at": "2026-10-20T00:47:57+00:00",
-  "status": "issues_found",
-  "error_count": 1,
+  "checked_at": "2026-10-20T02:15:44+00:00",
+  "status": "passed",
+  "error_count": 0,
   "warning_count": 0,
-  "paper_count": 2672,
-  "latest_paper_commit": "2026-10-20T00:16:53+00:00",
+  "paper_count": 2676,
+  "latest_paper_commit": "2026-10-20T02:04:58+00:00",
   "queue": {
-    "job_count": 2492,
+    "job_count": 2468,
     "snapshot_drift": true,
     "snapshot_repaired": true,
     "snapshot_repair_safe": true,
     "counts": {
       "discovery": {
-        "completed": 298,
+        "completed": 276,
         "processing": 7,
         "ready": 1
       },
@@ -21,8 +21,8 @@
         "ready": 2
       },
       "research": {
-        "superseded": 714,
-        "ready": 1439,
+        "superseded": 716,
+        "ready": 1435,
         "deferred": 8,
         "completed": 22,
         "rejected": 1
@@ -30,12 +30,27 @@
     }
   },
   "derived_indexes": {
-    "repaired_files": [],
-    "repair_count": 0
+    "repaired_files": [
+      "papers/inference/05-speculative-decoding-moe/README.md",
+      "papers/inference/13-sparse-attention/README.md",
+      "papers/inference/15-inference-simulation-emulation/README.md",
+      "papers/inference/99-other-inference-systems/README.md"
+    ],
+    "repair_count": 4
   },
   "quality": {
     "baseline_initialized": false,
     "failures": {
+      "paper": [],
+      "list_summary": [],
+      "overview": []
+    },
+    "new_failures": {
+      "paper": [],
+      "list_summary": [],
+      "overview": []
+    },
+    "resolved_failures": {
       "paper": [
         "papers/inference/01-offload-hierarchical-memory/2026-2608.23805-memory-sovereign-inference.md",
         "papers/inference/05-speculative-decoding-moe/2025-2505.21594-fast-and-cost-effective-speculative-edge-cloud-decoding-with-early-exits.md",
@@ -48,47 +63,23 @@
       ],
       "list_summary": [],
       "overview": []
-    },
-    "new_failures": {
-      "paper": [],
-      "list_summary": [],
-      "overview": []
-    },
-    "resolved_failures": {
-      "paper": [],
-      "list_summary": [],
-      "overview": []
     }
   },
   "coverage": {
     "citation": {
       "kind": "citation",
-      "checked_at": "2026-10-20T00:47:04+00:00",
-      "total": 2672,
-      "incomplete": 8,
-      "findings": [
-        {
-          "severity": "error",
-          "code": "citation_coverage_incomplete",
-          "detail": "citation coverage has 8 incomplete paper(s)",
-          "incomplete": 8
-        }
-      ]
+      "checked_at": "2026-10-20T02:15:07+00:00",
+      "total": 2676,
+      "incomplete": 0,
+      "findings": []
     },
     "metadata": {
       "kind": "metadata",
-      "checked_at": "2026-10-20T00:47:04+00:00",
-      "total": 2672,
+      "checked_at": "2026-10-20T02:15:07+00:00",
+      "total": 2676,
       "incomplete": 0,
       "findings": []
     }
   },
-  "findings": [
-    {
-      "severity": "error",
-      "code": "citation_coverage_incomplete",
-      "detail": "citation coverage has 8 incomplete paper(s)",
-      "incomplete": 8
-    }
-  ]
+  "findings": []
 }
