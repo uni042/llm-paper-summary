@@ -31,6 +31,8 @@ worker_run_key: '20261020-1500-scheduled-chat-00/r01'
 reference_main_sha: '4df7c82812969a0cd89bb9dec196b71ff107ec16'
 quality_self_review_passed: true
 quality_self_review_version: 'PAPER-QUALITY-GUIDE-2026-10-07'
+last_audited: null
+audit_version: 0
 ---
 
 # Agent Memory Distillation：小規模LLMエージェントへの階層型教師記憶移植

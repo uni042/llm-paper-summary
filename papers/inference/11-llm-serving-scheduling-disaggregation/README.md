@@ -3,7 +3,7 @@
 複数requestを複数GPU / nodeで処理するLLM servingについて、request順、batch、prefill / decodeのGPU配分、KV再利用・転送、request移動などを調整し、latencyとresource効率を改善する研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（400本）
+## 自動生成の論文一覧（402本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -844,6 +844,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   Elastic-dLLMは、この計算を削減する一方で、各[MASK]の位置情報と終端位置が持つ意味を維持する、追加学習不要の推論時方式である。LLaDA-1.5でElastic単独1.52倍、Fast-dLLMとの併用7.28倍という速度倍率を報告する。
 
+- **2026-05 · [DisagFusion: Asynchronous Pipeline Parallelism and Elastic Scheduling for Disaggregated Diffusion Serving](2026-2605.25550-disagfusion-asynchronous-pipeline-parallelism-and-elastic-scheduling-for.md)**  
+  実装：[✓](https://github.com/ModelTC/LightX2V) ・ リポジトリ内被引用：0  
+  DisagFusionは、画像・動画を生成する拡散モデル（diffusion モデル）の配信を、符号化器（Encoder）、拡散Transformer（Diffusion Transformer、DiT）、復号器（Decoder）の三段階に分離するシステムである。
+
 - **2026-05 · [DarkForest: Less Talk, Higher Accuracy for Multi-Agent LLMs](2026-2605.25188-darkforest-less-talk-higher-accuracy-for-multi-agent-llms.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   複数の大規模言語モデル（LLM）エージェントに同じ質問を解かせ、討論や相互修正を通じて回答を統合する方法は、単一モデルの誤りを発見できる可能性がある。論文は数学、コード生成、一般知識、科学、金融、法律の6ベンチマークで評価し、通信量の多い方式と比較して最大6.5倍のトークン使用量削減を報告する。
@@ -895,6 +899,10 @@
 - **2026-03 · [S-HPLB: Efficient LLM Attention Serving via Sparsity-Aware Head Parallelism Load Balance](2026-2603.10353-s-hplb-efficient-llm-attention-serving-via-sparsity-aware-head-paralleli.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   注意行列の全要素を計算せず重要なトークンだけを残す疎注意（sparse 注意機構）は有効だが、各注意ヘッドに同じトークン数を割り当てると、少数のトークンで十分なヘッドには過剰計算を与え、多くのトークンを必要とするヘッドでは重要な情報を捨てる。
+
+- **2026-03 · [Parallel In-context Learning for Large Vision Language Models](2026-2603.16092-parallel-in-context-learning-for-large-vision-language-models.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  LLaVA-OV-7BのMI-Bench-ICLで、例示数8→16→32に増やすと入力長は23,318→44,027→84,959トークン、平均遅延は1.004→2.376→3.479秒へ増加する。各群の予測を重み付き専門家積（weighted product of エキスパート、PoE）で統合し、全例示を一度に読んだときの分布を近似する。
 
 - **2026-03 · [Multi-stage Flow Scheduling for LLM Serving](2026-2603.17456-multi-stage-flow-scheduling.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

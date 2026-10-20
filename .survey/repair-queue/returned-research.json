@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-20T15:35:19+00:00",
+  "generated_at": "2026-10-20T15:44:59+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -876,34 +876,6 @@
       "worker_run_key": "20261019-1445-scheduled-chat-45/r01"
     },
     {
-      "canonical_id": "arXiv:2605.25550",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-19T15:19:00+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 0 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5989,
-        "body_paragraphs": 36,
-        "method_chars": 1948,
-        "method_paragraphs": 13,
-        "evaluation_chars": 0,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "評価説明量 0 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-2eb608a15329--libfile_a8f2db2d755c81918fa099eb858692b3--2026-2605.25550-disagfusion-asynchronous-diffusion-serving-research-20261019-1900-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-2eb608a15329--libfile_a8f2db2d755c81918fa099eb858692b3--2026-2605.25550-disagfusion-asynchronous-diffusion-serving-research-20261019-1900-schedul.json",
-      "worker_run_key": "20261019-1900-scheduled-chat-00/r01"
-    },
-    {
       "canonical_id": "arXiv:2603.02188",
       "title": null,
       "source_url": null,
@@ -1317,35 +1289,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-08e25ccdad2a--libfile_e3b8ca09cae881919b1574b114567756--2025-2510.26527-polybasic-speculative-decoding-returned-repair-20261020-1130-scheduled-chat-30-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-08e25ccdad2a--libfile_e3b8ca09cae881919b1574b114567756--2025-2510.26527-polybasic-speculative-decoding-returned-repair-20261020-1130-scheduled-ch.json",
       "worker_run_key": "20261020-1130-scheduled-chat-30/r01"
-    },
-    {
-      "canonical_id": "arXiv:2610.12060",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-20T05:35:15+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700",
-        "説明不足トリガー: 評価説明量 0 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 6399,
-        "body_paragraphs": 39,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 0,
-        "limitation_chars": 536,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700",
-          "評価説明量 0 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-45d2d7d0c5a0--libfile_9a7a3c58b0e8819193ac4aef9227c62c--2026-2610.12060-vimod-visual-memory-on-demand-research-20261020-1304-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-45d2d7d0c5a0--libfile_9a7a3c58b0e8819193ac4aef9227c62c--2026-2610.12060-vimod-visual-memory-on-demand-research-20261020-1304-scheduled-chat-00-r0.json",
-      "worker_run_key": "20261020-1304-scheduled-chat-00/r01"
     },
     {
       "canonical_id": "arXiv:2608.03276",
@@ -1965,8 +1908,8 @@
     },
     {
       "canonical_id": "arXiv:2608.07169",
-      "title": "Agent Memory Distillation: Empowering Small LLM Agents with Hierarchical Teacher Memory",
-      "source_url": "https://arxiv.org/abs/2608.07169",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-20T15:34:54+00:00",
       "return_count": 1,
       "assigned_worker": "scheduled-chat-45",
@@ -1992,8 +1935,8 @@
     },
     {
       "canonical_id": "arXiv:2605.27965",
-      "title": "The Shape of Overthinking: Backtracking Bursts in Long Reasoning Traces",
-      "source_url": "https://arxiv.org/html/2605.27965v1",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-20T15:35:17+00:00",
       "return_count": 1,
       "assigned_worker": "scheduled-chat-00",
@@ -2017,8 +1960,8 @@
     },
     {
       "canonical_id": "arXiv:2603.11220",
-      "title": "Frequency-Modulated Visual Restoration for Matryoshka Large Multimodal Models",
-      "source_url": "https://arxiv.org/html/2603.11220v1",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-20T15:35:19+00:00",
       "return_count": 1,
       "assigned_worker": "scheduled-chat-30",
@@ -2039,6 +1982,62 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_8e272f4e13908191a499a04443c8c5ea--2026-2603.11220-fmvr-frequency-modulated-visual-restoration-research-20261020-0945-scheduled-chat-45-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_8e272f4e13908191a499a04443c8c5ea--2026-2603.11220-fmvr-frequency-modulated-visual-restoration-research-20261020-0945-scheduled-chat-45-r01.json",
       "worker_run_key": "20261020-0945-scheduled-chat-45/r01"
+    },
+    {
+      "canonical_id": "DOI:10.18653/v1/2025.findings-acl.1288",
+      "title": "Multi-matrix Factorization Attention",
+      "source_url": "https://aclanthology.org/2025.findings-acl.1288.pdf",
+      "returned_at": "2026-10-20T15:41:51+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 302 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5705,
+        "body_paragraphs": 27,
+        "method_chars": 1887,
+        "method_paragraphs": 8,
+        "evaluation_chars": 302,
+        "limitation_chars": 464,
+        "insufficiency_flags": [
+          "評価説明量 302 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_93739bab3bd481918de9ae30daf35fd2--2025-doi-10.18653-v1-2025.findings-acl.1288-mfa-matrix-factorization-attention-research-20261020-1400-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_93739bab3bd481918de9ae30daf35fd2--2025-doi-10.18653-v1-2025.findings-acl.1288-mfa-matrix-factorization-attention-research-20261020-1400-scheduled-chat-0.json",
+      "worker_run_key": "20261020-1400-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2610.12060",
+      "title": "Look Back, Think Ahead: Visual Memory on Demand for Efficient Multimodal Reasoning",
+      "source_url": "https://arxiv.org/abs/2610.12060",
+      "returned_at": "2026-10-20T15:43:52+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700",
+        "説明不足トリガー: 評価説明量 0 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 6399,
+        "body_paragraphs": 39,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 0,
+        "limitation_chars": 536,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700",
+          "評価説明量 0 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_9a7a3c58b0e8819193ac4aef9227c62c--2026-2610.12060-vimod-visual-memory-on-demand-research-20261020-1304-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_9a7a3c58b0e8819193ac4aef9227c62c--2026-2610.12060-vimod-visual-memory-on-demand-research-20261020-1304-scheduled-chat-00-r01.json",
+      "worker_run_key": "20261020-1304-scheduled-chat-00/r01"
     }
   ]
 }
