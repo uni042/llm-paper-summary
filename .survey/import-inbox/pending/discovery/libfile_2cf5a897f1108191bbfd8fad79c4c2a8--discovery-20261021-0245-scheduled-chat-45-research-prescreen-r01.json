@@ -1,0 +1,58 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-45",
+  "run_key": "20261021-0245-scheduled-chat-45/r01",
+  "reference_main_sha": "d0f76479bf45f2c5cb06c59449906eb3e0645b7c",
+  "record_count": 3,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2402.12289",
+      "identity_tokens": [
+        "arxiv:2402.12289"
+      ],
+      "title": "DriveVLM: The Convergence of Autonomous Driving and Large Vision-Language Models",
+      "reason": "自動運転の視覚言語モデルによる運転シーン理解・意思決定が中心であり、LLM推論サービング、KVキャッシュ、GPUメモリ管理、モデル実行高速化を研究する論文ではない。タイトルに自動運転応用の研究対象が明示されているため、深い本文読解に進めない。",
+      "source_url": "https://arxiv.org/abs/2402.12289",
+      "body_check": "title_screen_only; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-10-21T02:54:05+09:00",
+      "last_checked_at": "2026-10-21T02:54:05+09:00",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance",
+      "worklist_rank": 1
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2210.13452",
+      "identity_tokens": [
+        "arxiv:2210.13452"
+      ],
+      "title": "MetaFormer Baselines for Vision",
+      "reason": "視覚認識向けMetaFormerアーキテクチャと基準モデルの比較を扱う研究であり、大規模言語モデルの推論エンジン・サービング基盤・KVメモリ階層・量子化の改善ではない。対象がVisionと明示されるため、タイトル段階で対象外と判断する。",
+      "source_url": "https://arxiv.org/abs/2210.13452",
+      "body_check": "title_screen_only; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-10-21T02:54:05+09:00",
+      "last_checked_at": "2026-10-21T02:54:05+09:00",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance",
+      "worklist_rank": 2
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2208.00406",
+      "identity_tokens": [
+        "arxiv:2208.00406"
+      ],
+      "title": "eco2AI: Carbon Emissions Tracking of Machine Learning Models as the First Step Towards Sustainable AI",
+      "reason": "機械学習実験の二酸化炭素排出量を追跡する汎用測定ツールの研究であり、LLM推論基盤の実行時間・スループット・メモリ階層・カーネル最適化を提案するものではない。省エネの周辺主題ではあるが、対象が一般の機械学習排出量追跡と明示されているため対象外とする。",
+      "source_url": "https://arxiv.org/abs/2208.00406",
+      "body_check": "title_screen_only; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-10-21T02:54:05+09:00",
+      "last_checked_at": "2026-10-21T02:54:05+09:00",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance",
+      "worklist_rank": 3
+    }
+  ]
+}
