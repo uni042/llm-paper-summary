@@ -34,6 +34,8 @@ worker_run_key: "20261020-0445-scheduled-chat-45/r01"
 doi: "10.52202/085713-0350"
 quality_repair_of_source_sha256: "5317d520b93325bce81cfe971120a57353ee4ba72a273aef55c1c8d9e589109f"
 quality_repair_reason: "2026-10-20 import quality receipt"
+last_audited: null
+audit_version: 0
 ---
 
 # AnDPro：基準方向射影による高精度KVキャッシュ削除

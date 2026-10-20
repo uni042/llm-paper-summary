@@ -35,10 +35,15 @@
   "selection_reason": "CPU/GPU異種hardwareをelasticに共有するserverless LLM inference schemeで、token-level resource allocation、forward-looking memory scaling、preemption/bin-packingを統合する。4 CPU+4 A100でsharingによりcapacity 47–62%、CPU活用込み86–154%向上を報告するため対象内。",
   "semantic_scholar_id": "604ac48db0b4dc0592664460fd45b30001cd1a8e",
   "source_url": "https://arxiv.org/abs/2507.00507",
-  "status": "ready",
+  "status": "superseded",
   "title": "Towards Resource-Efficient Serverless LLM Inference with SLINFER",
   "type": "research",
   "venue": "International Symposium on High-Performance Computer Architecture",
   "workflow_version": 10,
-  "year": 2025
+  "year": 2025,
+  "superseded_at": "2026-10-20T15:03:24+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2025-2507.00507-towards-resource-efficient-serverless-llm-inference-with-slinfer.md",
+  "represented_canonical_id": "arXiv:2507.00507",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-20T14:51:56+00:00",
+  "generated_at": "2026-10-20T15:03:26+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 74,
+  "count": 73,
   "entries": [
     {
       "canonical_id": "DOI:10.1145/3714983.3714987",
@@ -1332,60 +1332,6 @@
       "worker_run_key": "20261019-1256-scheduled-chat-00/r01"
     },
     {
-      "canonical_id": "DOI:10.52202/085713-0350",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-19T19:58:48+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 7188,
-        "body_paragraphs": 41,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 2049,
-        "limitation_chars": 513,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-ca14d268265e--libfile_c34f541c5bac819199bd28fca500478f--2025-doi-10.52202-085713-0350-andpro-anchor-direction-projection-research-20261020-0355-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-ca14d268265e--libfile_c34f541c5bac819199bd28fca500478f--2025-doi-10.52202-085713-0350-andpro-anchor-direction-projection-research-20261020-0355-s.json",
-      "worker_run_key": "20261020-0355-scheduled-chat-00/r01"
-    },
-    {
-      "canonical_id": "arXiv:2604.23475",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-20T00:04:57+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 6521,
-        "body_paragraphs": 37,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 593,
-        "limitation_chars": 421,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-b685c8487834--libfile_ca08ea967c1c81919ec1d31986c49220--2026-2604.23475-supernodes-halos-scar-structured-ffn-pruning-research-20261020-0745-scheduled-chat-45-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-b685c8487834--libfile_ca08ea967c1c81919ec1d31986c49220--2026-2604.23475-supernodes-halos-scar-structured-ffn-pruning-research-20261020-0745-sched.json",
-      "worker_run_key": "20261020-0745-scheduled-chat-45/r01"
-    },
-    {
       "canonical_id": "DOI:10.1109/ISCA66397.2026.00182",
       "title": null,
       "source_url": null,
@@ -2030,8 +1976,8 @@
     },
     {
       "canonical_id": "arXiv:2604.13634",
-      "title": "Calibrated Speculative Decoding: Frequency-Guided Candidate Selection for Efficient Inference",
-      "source_url": "https://arxiv.org/abs/2604.13634",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-20T14:49:53+00:00",
       "return_count": 3,
       "assigned_worker": "scheduled-chat-00",
@@ -2054,6 +2000,35 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_5207f693f6148191ba7b5e5f75d66aef--2026-2604.13634-csd-calibrated-speculative-decoding-research-20261020-0703-scheduled-chat-00-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_5207f693f6148191ba7b5e5f75d66aef--2026-2604.13634-csd-calibrated-speculative-decoding-research-20261020-0703-scheduled-chat-00-r01.json",
       "worker_run_key": "20261020-0703-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2407.05690",
+      "title": "Pruning Large Language Models to Intra-module Low-rank Architecture with Transitional Activations",
+      "source_url": "https://arxiv.org/abs/2407.05690",
+      "returned_at": "2026-10-20T15:01:54+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700",
+        "説明不足トリガー: 評価説明量 496 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 7800,
+        "body_paragraphs": 46,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 496,
+        "limitation_chars": 633,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700",
+          "評価説明量 496 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_608715f0ee9881919fd7050286c3bcc9--2024-2407.05690-transact-transitional-activation-pruning-research-20261020-1000-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_608715f0ee9881919fd7050286c3bcc9--2024-2407.05690-transact-transitional-activation-pruning-research-20261020-1000-scheduled-chat-00-r01.json",
+      "worker_run_key": "20261020-1000-scheduled-chat-00/r01"
     }
   ]
 }
