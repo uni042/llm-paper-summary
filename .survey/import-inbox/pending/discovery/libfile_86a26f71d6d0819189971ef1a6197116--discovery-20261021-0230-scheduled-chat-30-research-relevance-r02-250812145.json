@@ -1,0 +1,25 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261021-0230-scheduled-chat-30/r02",
+  "reference_main_sha": "afcc9501d5b757fb814470030930a4598a455487",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2508.12145",
+      "identity_tokens": [
+        "arxiv:2508.12145"
+      ],
+      "title": "DE-VAE: Revealing Uncertainty in Parametric and Inverse Projections with Variational Autoencoders using Differential Entropy",
+      "reason": "画像・多次元データの可視化で用いる2次元射影と逆射影を、微分エントロピー付き変分オートエンコーダで学習し、不確実性を可視化する研究。一次論文の要旨と導入でMNIST等の射影・UMAP・t-SNEとの比較を確認した。LLMの推論サービング、KVキャッシュ、MoE、量子化、GPU推論基盤の効率化を扱わず、現行サーベイの対象外。",
+      "source_url": "https://arxiv.org/pdf/2508.12145",
+      "body_check": "abstract_screen_only; body_not_read; original abstract and introduction inspected",
+      "first_checked_at": "2026-10-21T02:31:12+09:00",
+      "last_checked_at": "2026-10-21T02:31:12+09:00",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance"
+    }
+  ]
+}
