@@ -23,7 +23,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - [06-moe-quantization-compression](../06-moe-quantization-compression/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（122本）
+## 自動生成の論文一覧（123本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -183,6 +183,10 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - **2026-05 · [ThriftAttention: Selective Mixed Precision for Long-Context FP4 Attention](2026-2605.23081-thriftattention-selective-mixed-precision-for-long-context-fp4-attention.md)**  
   実装：[✓](https://github.com/joesharratt1229/ThriftAttention) ・ リポジトリ内被引用：0  
   Blackwell世代のGPUは4ビット浮動小数点（FP4）の行列積を高速に処理できるため、注意計算を16ビット浮動小数点（FP16）からFP4へ落とせば演算とメモリ転送を軽くできる。ThriftAttentionは、全ての問い合わせ・鍵の組を捨てず、重要なブロックだけFP16へ戻す方式である。
+
+- **2026-05 · [SonicSampler: Unified Tile-Aware Kernels for LLM Sampling and Speculative Verification](2026-2607.20475-sonicsampler-unified-tile-aware-kernels-for-llm-sampling-and-speculative.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  SonicSamplerは語彙を固定長タイルへ分割し、第1段階で要求別のロジット変換とタイル内top-k抽出を融合し、第2段階でタイル候補を統合して確率切り詰め・乱数抽出・投機的検証を行う。
 
 - **2026-05 · [Self-Pruned Key-Value Attention: Learning When to Write by Predicting Future Utility](2026-2605.14037-self-pruned-key-value-attention-learning-when-to-write-by-predicting-fut.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

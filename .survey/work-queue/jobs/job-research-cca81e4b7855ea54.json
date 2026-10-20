@@ -35,10 +35,15 @@
   "selection_reason": "CommunityKV is a training-free sparse-attention method for long-context LLM inference: it builds and partitions an attention-derived token graph during prefill, then retrieves semantic communities and incrementally assigns generated tokens during decoding. This directly targets KV-cache transfer and decoding cost, so it belongs in inference efficiency.",
   "semantic_scholar_id": "2e23c92d881a553587dd81b8480bc74e1687de11",
   "source_url": "https://arxiv.org/abs/2610.00418",
-  "status": "ready",
+  "status": "superseded",
   "title": "CommunityKV: Efficient Long-Context Decoding via Graph Partitioning",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-10-20T11:59:18+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/13-sparse-attention/2026-2610.00418-communitykv-efficient-long-context-decoding-via-graph-partitioning.md",
+  "represented_canonical_id": "arXiv:2610.00418",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

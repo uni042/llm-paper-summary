@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-20T11:27:16+00:00",
+  "generated_at": "2026-10-20T11:59:19+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 86,
+  "count": 85,
   "entries": [
     {
       "canonical_id": "DOI:10.1145/3714983.3714987",
@@ -903,62 +903,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-987f8ce558ff--libfile_25c1b5b333188191809fac348047a21a--2025-2506.05333-kinetics-memory-aware-test-time-scaling-research-20261018-2155-scheduled-chat-00-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-987f8ce558ff--libfile_25c1b5b333188191809fac348047a21a--2025-2506.05333-kinetics-memory-aware-test-time-scaling-research-20261018-2155-scheduled-.json",
       "worker_run_key": "20261018-2155-scheduled-chat-00/r01"
-    },
-    {
-      "canonical_id": "arXiv:2510.02758",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-18T14:20:52+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700",
-        "説明不足トリガー: 評価説明量 0 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 6437,
-        "body_paragraphs": 31,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 0,
-        "limitation_chars": 671,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700",
-          "評価説明量 0 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-9edd9b1dd524--libfile_004e811be8e48191a45430c3b385875b--2025-2510.02758-tokenflow-buffer-aware-preemptive-serving-research-20261018-2155-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-9edd9b1dd524--libfile_004e811be8e48191a45430c3b385875b--2025-2510.02758-tokenflow-buffer-aware-preemptive-serving-research-20261018-2155-schedule.json",
-      "worker_run_key": "20261018-2155-scheduled-chat-00/r01"
-    },
-    {
-      "canonical_id": "arXiv:2610.00418",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-18T14:26:50+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 6995,
-        "body_paragraphs": 37,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 940,
-        "limitation_chars": 752,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-bfbf93b173ea--libfile_69f99a32522481918cdc9267aa4d4589--2026-2610.00418-communitykv-graph-partition-sparse-decoding-research-20261018-1430-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-bfbf93b173ea--libfile_69f99a32522481918cdc9267aa4d4589--2026-2610.00418-communitykv-graph-partition-sparse-decoding-research-20261018-1430-schedu.json",
-      "worker_run_key": "20261018-1430-scheduled-chat-30/r01"
     },
     {
       "canonical_id": "arXiv:2609.39068",
@@ -2366,6 +2310,33 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-ffdb69accf09--libfile_329445c90bf4819199ba7e5b73738587--2026-2605.06850-shadow-mask-distillation-kv-rl-posttraining-research-20261020-1655-scheduled-chat-00-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-ffdb69accf09--libfile_329445c90bf4819199ba7e5b73738587--2026-2605.06850-shadow-mask-distillation-kv-rl-posttraining-research-20261020-1655-schedu.json",
       "worker_run_key": "20261020-1655-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2510.02758",
+      "title": "TokenFlow: Responsive LLM Text Streaming Serving under Request Burst via Preemptive Scheduling",
+      "source_url": "https://arxiv.org/html/2510.02758v1",
+      "returned_at": "2026-10-20T11:57:06+00:00",
+      "return_count": 3,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 438 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5114,
+        "body_paragraphs": 26,
+        "method_chars": 2471,
+        "method_paragraphs": 13,
+        "evaluation_chars": 438,
+        "limitation_chars": 548,
+        "insufficiency_flags": [
+          "評価説明量 438 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_9d252b8b0a6881919f494b1b1444084c--2025-2510.02758-tokenflow-preemptive-streaming-returned-repair-20261020-2000-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_9d252b8b0a6881919f494b1b1444084c--2025-2510.02758-tokenflow-preemptive-streaming-returned-repair-20261020-2000-scheduled-chat-00-r01.json",
+      "worker_run_key": "20261020-2000-scheduled-chat-00/r01"
     }
   ]
 }
