@@ -5,7 +5,7 @@ Speculative decodingで1回のtarget LLM実行から複数tokenを確定し、�
 MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexpert数や重み転送量も増えやすいため、受理されそうなdraftだけを選ぶ、必要expertを先読みする、GPU常駐expertを優先する等の研究も含める。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（190本）
+## 自動生成の論文一覧（191本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -591,6 +591,10 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
 - **2025-04 · [DEL: Context-Aware Dynamic Exit Layer for Efficient Self-Speculative Decoding](2025-2504.05598-del-context-aware-dynamic-exit-layer-for-efficient-self-speculative-deco.md)**  
   実装：[✓](https://github.com/hoenza/DEL) ・ リポジトリ内被引用：1  
   一般的な投機的復号は、軽い下書きモデルが複数トークンを予測し、重い目標モデルが一括検証する。実測ではLLaMA3-8Bで通常復号比2.62倍、LLaMA2-7Bで2.50倍、LLaMA2-70Bで2.41倍の全体高速化を報告する。
+
+- **2025-10 · [Polybasic Speculative Decoding Through a Theoretical Perspective](2025-2510.26527-polybasic-speculative-decoding-through-a-theoretical-perspective.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  投機的復号（投機的復号）は、小さく速いモデルが将来のトークンを先に提案し、大きなモデルがまとめて検証することで、最終モデルを毎トークン逐次実行する回数を減らす技術である。一方、ドラフト器を大きくすると提案自体の費用が増え、検証回数削減の利得を失う。
 
 - **2025-09 · [Speculate Deep and Accurate: Lossless and Training-Free Acceleration for Offloaded LLMs via Substitute Speculative Decoding](2025-2509.18344-speculate-deep-and-accurate-lossless-and-training-free-acceleration-for-.md)**  
   実装：[✓](https://github.com/NYCU-EDgeAi/subspec) ・ リポジトリ内被引用：0  
