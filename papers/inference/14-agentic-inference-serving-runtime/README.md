@@ -24,7 +24,7 @@
 - [10-kv-cache-offload-recomputation](../10-kv-cache-offload-recomputation/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（58本）
+## 自動生成の論文一覧（59本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -212,6 +212,10 @@
 - **2026-02 · [ClawMobile: Rethinking Smartphone-Native Agentic Systems](2026-2602.22942-clawmobile-rethinking-smartphone-native-agentic-systems.md)**  
   実装：[✓](https://github.com/ClawMobile/ClawMobile) ・ リポジトリ内被引用：0  
   一般的な画面操作型エージェントは、画面を解釈してタップや入力を決めるが、アプリ起動の遅延、画面遷移の非同期性、同じ場所に現れる別の操作対象などにより、言語モデルの計画が正しくても操作が失敗し得る。ClawMobileは、上位の計画と端末制御を分離し、構造化された端末命令を優先して使い、必要な場合だけ画面解釈型のエージェントへ処理を渡す。
+
+- **2026-02 · [AgenticOCR: Parsing Only What You Need for Efficient Retrieval-Augmented Generation](2026-2602.24134-agenticocr-parsing-only-what-you-need-for-efficient-retrieval-augmented-.md)**  
+  実装：[✓](https://github.com/OpenDataLab/AgenticOCR) ・ リポジトリ内被引用：0  
+  AgenticOCRは、画像を含む長いPDF文書から回答を生成する検索拡張生成（Retrieval-Augmented Generation、RAG）において、検索されたページを丸ごと大規模な生成モデルへ渡す代わりに、質問に必要な領域を選んで拡大・回転・文字認識する方式である。
 
 - **2026-01 · [Agentic Memory: Learning Unified Long-Term and Short-Term Memory Management for Large Language Model Agents](2026-2601.01885-agentic-memory-learning-unified-long-term-and-short-term-memory-manageme.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

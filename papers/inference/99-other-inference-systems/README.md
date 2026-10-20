@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（866本）
+## 自動生成の論文一覧（869本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -748,6 +748,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   GPU間高速ファブリックを中継路として他GPUの空きPCIeリンクを借用し、モデル読込の初回トークン待ち時間を最大40%削減、鍵値退避推論を最大1.6倍高速化する。
 
+- **2026-08 · [Thinking Hard, Not Smart: Reasoning Models Fail to Ration Test-Time Compute Across Questions](2026-2608.07968-thinking-hard-not-smart-reasoning-models-fail-to-ration-test-time-comput.md)**  
+  実装：[✓](https://github.com/Fcr09/thinking-hard-not-smart) ・ リポジトリ内被引用：0  
+  長い思考を許す推論言語モデルは、一問ごとの数学・コード問題で精度を高められる。しかし現実の計算資源は有限であり、複数の依頼を同時に処理する場合には「どの問題へ何トークン使うか」「いつ諦めて別の問題へ進むか」という別の判断が必要になる。この論文は新しい高速化カーネルや推論サービング基盤を提案するものではない。
+
 - **2026-08 · [TailSieve: Partial-Rollout-Guided Tail Routing for LLM Rollouts](2026-2608.22788-tailsieve-partial-rollout-guided-tail-routing-for-llm-rollouts.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   TailSieveは、以前の部分生成で時間切れとなったプロンプト群を、追加の長さ予測モデルなしで長尾候補として選び、長尾専用プールと通常プールへ割り当てる。
@@ -815,6 +819,10 @@
 - **2026-08 · [MAPLE: MoE Adaptive Plug-and-play Layer-wise Expert allocation](2026-2608.15299-maple-moe-adaptive-plug-and-play-layer-wise-expert-allocation.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   層によって専門家数を減らしたときの精度劣化が異なるにもかかわらず、一律に削ると重要な層の計算能力まで失う。DeepSeek-MoE-16B、DeepSeek-V2-Lite、Moonlight-16B-A3B、OLMoE-1B-7Bの4モデルを、ルーティング対象専門家の総活性数を元の75%とする条件で評価した。
+
+- **2026-08 · [Maia 200: A Software Defined Dataflow System for Large-scale AI Acceleration](2026-2608.24664-maia-200-a-software-defined-dataflow-system-for-large-scale-ai-accelerat.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  Maia 200はTSMC 3nmで製造した1400億超のトランジスタを持つSoCで、750Wの熱設計電力（TDP）の下、FP4で10,145 TFLOP/s、FP8で5,072 TFLOP/s、HBM3e帯域7 TiB/sを公称する。
 
 - **2026-08 · [M-LoRA: Efficient Serving for Concurrent LoRA Adapters with Memory-Aware Speculative Scheduler on Single GPU](2026-bbf40b71b5e2-m-lora-efficient-serving-for-concurrent-lora-adapters-with-memory-aware-speculative-scheduler-on-single-gpu.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -1431,6 +1439,10 @@
 - **2026-04 · [Adaptive Parallel Monte Carlo Tree Search for Efficient Test-time Compute Scaling](2026-2604.00510-adaptive-parallel-monte-carlo-tree-search-for-efficient-test-time-comput.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   成功候補を早期発見した場合に打ち切る「正の早期終了」は効果があるが、いくら探索しても十分な報酬に達しない要求には効かず、同時処理時の長い裾の遅延が残る。推論サーバーvLLMへ統合し、4基のNVIDIA H100でLlama-3.1-8B-InstructとQwen2.5-14B-Instructを評価した。
+
+- **2026-04 · [Absorber LLM: Harnessing Causal Synchronization for Test-Time Training](2026-2604.20915-absorber-llm-harnessing-causal-synchronization-for-test-time-training.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  長文脈の大規模言語モデルでは、生成済み履歴を鍵値キャッシュ（KV キャッシュ）へ蓄積すると、復号のたびに参照する過去位置が増える。この方式は推論時学習（test-time 学習）と長文脈推論の接点にある。
 
 - **2026-04 · [A Self-Evolving Framework for Efficient Terminal Agents via Observational Context Compression](2026-2604.19572-a-self-evolving-framework-for-efficient-terminal-agents-via-observationa.md)**  
   実装：[✓](https://github.com/multimodal-art-projection/TACO) ・ リポジトリ内被引用：0  

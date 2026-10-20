@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-20T14:11:23+00:00",
+  "generated_at": "2026-10-20T14:21:14+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 82,
+  "count": 79,
   "entries": [
     {
       "canonical_id": "DOI:10.1145/3714983.3714987",
@@ -1056,34 +1056,6 @@
       "worker_run_key": "20261019-0945-scheduled-chat-45/r01"
     },
     {
-      "canonical_id": "arXiv:2607.10661",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-19T15:19:05+00:00",
-      "return_count": 4,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 132 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 6663,
-        "body_paragraphs": 39,
-        "method_chars": 2109,
-        "method_paragraphs": 12,
-        "evaluation_chars": 132,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "評価説明量 132 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-3dff353ff347--libfile_69ac0034935c81918376ddc7b6703e54--2026-2607.10661-ptd-progressive-tree-drafting-research-20261019-1130-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-3dff353ff347--libfile_69ac0034935c81918376ddc7b6703e54--2026-2607.10661-ptd-progressive-tree-drafting-research-20261019-1130-scheduled-chat-30-r0.json",
-      "worker_run_key": "20261019-1130-scheduled-chat-30/r01"
-    },
-    {
       "canonical_id": "arXiv:2607.27269",
       "title": null,
       "source_url": null,
@@ -1165,34 +1137,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-6d9088669d78--libfile_3df90a67b4d08191a63c2df79c7d6c91--2025-2512.15586-bolmo-byteification-research-20261019-0445-scheduled-chat-45-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-6d9088669d78--libfile_3df90a67b4d08191a63c2df79c7d6c91--2025-2512.15586-bolmo-byteification-research-20261019-0445-scheduled-chat-45-r01.json",
       "worker_run_key": "20261019-0445-scheduled-chat-45/r01"
-    },
-    {
-      "canonical_id": "arXiv:2608.24664",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-19T15:25:46+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 0 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 4761,
-        "body_paragraphs": 28,
-        "method_chars": 1712,
-        "method_paragraphs": 10,
-        "evaluation_chars": 0,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "評価説明量 0 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-6daeeb7f8d4d--libfile_872fbd15c1848191aec35718aa7ad4c8--2026-2608.24664-maia200-software-defined-dataflow-research-20261019-0700-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-6daeeb7f8d4d--libfile_872fbd15c1848191aec35718aa7ad4c8--2026-2608.24664-maia200-software-defined-dataflow-research-20261019-0700-scheduled-chat-0.json",
-      "worker_run_key": "20261019-0700-scheduled-chat-00/r01"
     },
     {
       "canonical_id": "arXiv:2601.07878",
@@ -1751,31 +1695,6 @@
       "worker_run_key": "20261020-0905-scheduled-chat-00/r01"
     },
     {
-      "canonical_id": "arXiv:2604.20915",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-20T01:39:27+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "quality_self_review_version が空"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5397,
-        "body_paragraphs": 28,
-        "method_chars": 1657,
-        "method_paragraphs": 9,
-        "evaluation_chars": 1625,
-        "limitation_chars": 442,
-        "insufficiency_flags": []
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-ec6d7b2c4c2c--libfile_0f7d1297ae7881918b98f70dd64f70d2--2026-2604.20915-absorber-llm-causal-synchronization-parameter-memory-research-20261020-0945-scheduled-chat-45-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-ec6d7b2c4c2c--libfile_0f7d1297ae7881918b98f70dd64f70d2--2026-2604.20915-absorber-llm-causal-synchronization-parameter-memory-research-20261020-09.json",
-      "worker_run_key": "20261020-0945-scheduled-chat-45/r01"
-    },
-    {
       "canonical_id": "arXiv:2510.26527",
       "title": null,
       "source_url": null,
@@ -2193,8 +2112,8 @@
     },
     {
       "canonical_id": "arXiv:2510.02295",
-      "title": "VideoNSA: Native Sparse Attention Scales Video Understanding",
-      "source_url": "https://arxiv.org/html/2510.02295v2",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-20T14:07:56+00:00",
       "return_count": 1,
       "assigned_worker": "scheduled-chat-30",
@@ -2220,8 +2139,8 @@
     },
     {
       "canonical_id": "DOI:10.1109/tkde.2025.3554028",
-      "title": "A Survey on Mixture of Experts in Large Language Models",
-      "source_url": "https://arxiv.org/html/2407.06204",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-20T14:07:58+00:00",
       "return_count": 1,
       "assigned_worker": "scheduled-chat-30",
@@ -2248,8 +2167,8 @@
     },
     {
       "canonical_id": "DOI:10.1109/TC.2025.3628193",
-      "title": "Bit-serial Acceleration of LLM Inference with Mixture-of-Datatype Quantization",
-      "source_url": "https://spiral.imperial.ac.uk/bitstreams/9e16fb03-ceaf-4258-ab61-8948949c2eca/download",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-20T14:08:56+00:00",
       "return_count": 1,
       "assigned_worker": "scheduled-chat-30",
