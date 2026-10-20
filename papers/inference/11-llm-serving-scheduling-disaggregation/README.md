@@ -3,7 +3,7 @@
 複数requestを複数GPU / nodeで処理するLLM servingについて、request順、batch、prefill / decodeのGPU配分、KV再利用・転送、request移動などを調整し、latencyとresource効率を改善する研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（402本）
+## 自動生成の論文一覧（403本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -707,6 +707,10 @@
 - **2026-07 · [Metronome: Bound the Cache, Keep the Beat for Real-Time Interaction Model Serving](2026-2607.02640-metronome.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   一方、自由生成の品質維持に重要な冒頭の注意シンク（注意機構 sink）トークンは固定保持する。
+
+- **2026-07 · [Kalypso: Relational LLM Serving](2026-2607.23815-kalypso-relational-llm-serving.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  著者らは、段階ごとのメモリ予算、待機列の飢餓・飽和の検知、出力トークン数の予測、明示的または仮想的なKV保持を組み合わせる。利得はLLMの重みや注意機構を変更したためではなく、意味演算子の処理順とKV寿命を連動させたためである。
 
 - **2026-07 · [General Non-Clairvoyant KV-Cache Scheduling via Regime-Aware Routing](2026-2607.09248-regime-aware-non-clairvoyant-kv-scheduling.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-20T16:38:03+00:00",
+  "generated_at": "2026-10-20T16:47:03+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -29,33 +29,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_4717524bf0588191b03cde2c82b80c28--2025-awq-on-device.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_4717524bf0588191b03cde2c82b80c28--2025-awq-on-device.json",
       "worker_run_key": "20261003-0531-scheduled-chat-30"
-    },
-    {
-      "canonical_id": "DOI:10.1109/ISCA59077.2024.00082",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-07T14:03:07+00:00",
-      "return_count": 3,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 445 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 2433,
-        "body_paragraphs": 18,
-        "method_chars": 709,
-        "method_paragraphs": 6,
-        "evaluation_chars": 445,
-        "limitation_chars": 278,
-        "insufficiency_flags": [
-          "評価説明量 445 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-f8b0299f4890--libfile_e1f1fcc48d4c819185416a2564eb5a28--2312.03134-llmcompass-repair-20261007-v2.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-f8b0299f4890--libfile_e1f1fcc48d4c819185416a2564eb5a28--2312.03134-llmcompass-repair-20261007-v2.json",
-      "worker_run_key": "20261007-2133-scheduled-chat-30/repair-r01"
     },
     {
       "canonical_id": "arXiv:1911.02972",
@@ -229,34 +202,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_743e62328d4c81918b50337600a1b24e--2024-2402.02750-kivi-asymmetric-2bit-kv-cache-research-20261016-1330-scheduled-chat-30-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_743e62328d4c81918b50337600a1b24e--2024-2402.02750-kivi-asymmetric-2bit-kv-cache-research-20261016-1330-scheduled-chat-30-r01.json",
       "worker_run_key": "20261016-1330-scheduled-chat-30/r01"
-    },
-    {
-      "canonical_id": "arXiv:2602.22675",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-16T15:23:47+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 8634,
-        "body_paragraphs": 43,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 1793,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-442d340d78d6--libfile_1737164089608191b33ff2914b267d13--2026-2602.22675-smtl-parallel-agentic-search-research-20261016-1600-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-442d340d78d6--libfile_1737164089608191b33ff2914b267d13--2026-2602.22675-smtl-parallel-agentic-search-research-20261016-1600-scheduled-chat-00-r01.json",
-      "worker_run_key": "20261016-1600-scheduled-chat-00/r01"
     },
     {
       "canonical_id": "DOI:10.1145/3689031.3696072",
@@ -623,36 +568,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-61423140d800--libfile_0fd44f5807d08191add265c32774aa11--2025-2506.13771-littlebit-latent-factorization-ultralowbit-research-20261018-1800-scheduled-chat-00-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-61423140d800--libfile_0fd44f5807d08191add265c32774aa11--2025-2506.13771-littlebit-latent-factorization-ultralowbit-research-20261018-1800-schedul.json",
       "worker_run_key": "20261018-1800-scheduled-chat-00/r01"
-    },
-    {
-      "canonical_id": "arXiv:2506.05333",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-18T14:20:49+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700",
-        "説明不足トリガー: 評価説明量 147 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5929,
-        "body_paragraphs": 33,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 147,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700",
-          "評価説明量 147 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-987f8ce558ff--libfile_25c1b5b333188191809fac348047a21a--2025-2506.05333-kinetics-memory-aware-test-time-scaling-research-20261018-2155-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-987f8ce558ff--libfile_25c1b5b333188191809fac348047a21a--2025-2506.05333-kinetics-memory-aware-test-time-scaling-research-20261018-2155-scheduled-.json",
-      "worker_run_key": "20261018-2155-scheduled-chat-00/r01"
     },
     {
       "canonical_id": "arXiv:2307.02690",
@@ -1961,8 +1876,8 @@
     },
     {
       "canonical_id": "arXiv:2610.05305",
-      "title": "Characterizing Parallelism Strategies in LLM Inference: Fundamental Compute-Communication Trade-offs",
-      "source_url": "https://arxiv.org/abs/2610.05305",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-20T16:35:37+00:00",
       "return_count": 1,
       "assigned_worker": "scheduled-chat-30",
@@ -1985,6 +1900,91 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_bea1fbf67aa48191a0389113a9cd849d--2026-2610.05305-parallelism-compute-communication-model-research-20261020-1304-scheduled-chat-00-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_bea1fbf67aa48191a0389113a9cd849d--2026-2610.05305-parallelism-compute-communication-model-research-20261020-1304-scheduled-chat-00-r01.json",
       "worker_run_key": "20261020-1304-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2506.05333",
+      "title": "Kinetics: Rethinking Test-Time Scaling Laws",
+      "source_url": "https://arxiv.org/html/2506.05333",
+      "returned_at": "2026-10-20T16:46:07+00:00",
+      "return_count": 3,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700",
+        "説明不足トリガー: 評価説明量 0 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 4765,
+        "body_paragraphs": 26,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 0,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700",
+          "評価説明量 0 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_c3c4033f669081919a4474987932e320--2025-2506.05333-kinetics-memory-aware-test-time-scaling-returned-repair-20261020-1330-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_c3c4033f669081919a4474987932e320--2025-2506.05333-kinetics-memory-aware-test-time-scaling-returned-repair-20261020-1330-scheduled-chat-30-r01.json",
+      "worker_run_key": "20261020-1330-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2605.18226",
+      "title": "Context Memorization for Efficient Long Context Generation",
+      "source_url": "https://arxiv.org/pdf/2605.18226",
+      "returned_at": "2026-10-20T16:46:08+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 0 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 6931,
+        "body_paragraphs": 40,
+        "method_chars": 2025,
+        "method_paragraphs": 13,
+        "evaluation_chars": 0,
+        "limitation_chars": 763,
+        "insufficiency_flags": [
+          "評価説明量 0 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_c4c7c543c8108191b17a05ff296be15f--2026-2605.18226-attention-state-memory-context-memorization-quality-repair-20261020-1945-scheduled-chat-45-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_c4c7c543c8108191b17a05ff296be15f--2026-2605.18226-attention-state-memory-context-memorization-quality-repair-20261020-1945-scheduled-chat-45-r01.json",
+      "worker_run_key": "20261020-1945-scheduled-chat-45/r01"
+    },
+    {
+      "canonical_id": "DOI:10.1109/ISCA59077.2024.00082",
+      "title": "LLMCompass: Enabling Efficient Hardware Design for Large Language Model Inference",
+      "source_url": "https://arxiv.org/html/2312.03134",
+      "returned_at": "2026-10-20T16:46:09+00:00",
+      "return_count": 4,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 355 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 7075,
+        "body_paragraphs": 39,
+        "method_chars": 2583,
+        "method_paragraphs": 14,
+        "evaluation_chars": 355,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "評価説明量 355 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_cd78884b8a848191a02b2894417812b8--2024-2312.03134-llmcompass-returned-quality-repair-20261020-1430-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_cd78884b8a848191a02b2894417812b8--2024-2312.03134-llmcompass-returned-quality-repair-20261020-1430-scheduled-chat-30-r01.json",
+      "worker_run_key": "20261020-1430-scheduled-chat-30/r01"
     }
   ]
 }
