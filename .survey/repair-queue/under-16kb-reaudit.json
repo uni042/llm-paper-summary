@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-10-19T22:35:20.237137+00:00",
+  "generated_at": "2026-10-20T13:17:37.525436+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 7,
+  "count": 4,
   "worker_counts": {
-    "scheduled-chat-00": 2,
-    "scheduled-chat-30": 2,
-    "scheduled-chat-45": 3
+    "scheduled-chat-00": 1,
+    "scheduled-chat-30": 1,
+    "scheduled-chat-45": 2
   },
   "entries": [
     {
@@ -76,66 +76,6 @@
         "body_chars": 2413,
         "method_chars": 1072,
         "evaluation_chars": 505,
-        "limitation_chars": 0
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/14-agentic-inference-serving-runtime/2026-2609.32278-rr-evict-fine-grained-prefix-cache-eviction-beyond-lru-for-agentic-llm-s.md",
-      "canonical_id": "arXiv:2609.32278",
-      "title": "RR-Evict: Fine-Grained Prefix Cache Eviction beyond LRU for Agentic LLM Serving",
-      "file_bytes": 14119,
-      "source_sha256": "aa0c4566c96ec16d80f25ae8fb791b631ad4c16fd77def41fce4e4e217842fb8",
-      "source_git_blob_sha": "3d20efc172b253468d061cf73d1ce5362892515e",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.978109,
-      "quality_metrics": {
-        "body_chars": 3026,
-        "method_chars": 1085,
-        "evaluation_chars": 764,
-        "limitation_chars": 0
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2026-2609.36222-base-batch-aware-selection-of-experts-using-predicted-removal-error-for-.md",
-      "canonical_id": "arXiv:2609.36222",
-      "title": "BASE: Batch-Aware Selection of Experts Using Predicted Removal Error for Efficient MoE Decoding",
-      "file_bytes": 14437,
-      "source_sha256": "101cd43308c54c3070c6d53a02bb0bccbb99208ff7ce13d3917adb5a704364d7",
-      "source_git_blob_sha": "6416bd66e8a93d71a5bef7e10dbd065f1b699145",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.964433,
-      "quality_metrics": {
-        "body_chars": 2985,
-        "method_chars": 1088,
-        "evaluation_chars": 777,
-        "limitation_chars": 0
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2026-2604.13806-robust-ultra-low-bit-post-training-quantization-via-stable-diagonal-curv.md",
-      "canonical_id": "arXiv:2604.13806",
-      "title": "Robust Ultra Low-Bit Post-Training Quantization via Stable Diagonal Curvature Estimate",
-      "file_bytes": 14581,
-      "source_sha256": "3ab79c9b899c66f0c454ba48988d44f727eb48b65fe5f7306afebe860c1a758e",
-      "source_git_blob_sha": "897336c02a5f1c188e1c3202fc2a5f616c12320c",
-      "assigned_worker": "scheduled-chat-45",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.986676,
-      "quality_metrics": {
-        "body_chars": 3473,
-        "method_chars": 1086,
-        "evaluation_chars": 916,
         "limitation_chars": 0
       },
       "mechanical_failures": [],
