@@ -47,6 +47,10 @@ quality_evaluation_chars: 1497
 quality_limitation_chars: 530
 last_audited: null
 audit_version: 0
+references: []
+references_checked_at: '2026-10-20'
+references_source: 'Samsung Hot Chips 35 primary slide deck (31 pages; no bibliography/reference-list slide)'
+references_total: 0
 ---
 
 ## 概要
