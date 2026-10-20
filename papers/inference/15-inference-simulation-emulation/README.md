@@ -23,7 +23,7 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
 - [09-kernel-runtime-compilation](../09-kernel-runtime-compilation/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（36本）
+## 自動生成の論文一覧（37本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -133,6 +133,10 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
 - **2025-07 · [Rethinking LLM Inference Bottlenecks: Insights from Latent Attention and Mixture-of-Experts](2025-2507.15465-rethinking-llm-inference-bottlenecks-insights-from-latent-attention-and-.md)**  
   実装：✓ ・ リポジトリ内被引用：6  
   従来の大規模言語モデルでは、多頭注意（multi-head 注意機構、MHA）の復号時演算は過去の鍵・値キャッシュを大量に読み出すため、メモリ帯域が主要な制約と考えられてきた。
+
+- **2025-07 · [Efficient and Scalable Agentic AI with Heterogeneous Systems](2025-2507.19635-efficient-and-scalable-agentic-ai-with-heterogeneous-systems.md)**  
+  実装：✓ ・ リポジトリ内被引用：5  
+  本研究は、一つの大規模言語モデル（LLM）を高速化するのではなく、複数のモデル推論・外部検索・ツール実行を含むエージェント全体を、異なる計算特性を持つ装置へ配置することを目的とする。音声対話エージェントを例にすると、音声認識、文脈検索、LLMによる応答生成、検索API、音声合成は互いに依存するが、同じGPUを使う必要はない。
 
 - **2025-07 · [Quantifying the Energy Consumption and Carbon Emissions of LLM Inference via Simulations](2025-2507.11417-quantifying-the-energy-consumption-and-carbon-emissions-of-llm-inference.md)**  
   実装：[✓](https://github.com/ozcanmiraay/vidur-energy) ・ リポジトリ内被引用：3  
