@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-afb7667ca36b93e0-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1007/s10791-026-10353-0",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1007/s10791-026-10353-0",
+    "identity_tokens": [
+      "DOI:10.1007/s10791-026-10353-0"
+    ],
+    "reason": "出版社公開の一次要旨で、MambaTL-Detは送電線の航空写真から碍子・制振器・鳥の巣など5種類の設備異常を検出するRT-DETR系の物体検出器と確認。MobileMambaの選択的状態空間モデル、形状比率に応じた特徴強調、画像特徴融合、カテゴリ不均衡損失が主な貢献であり、評価もTL-Defect5Kの検出精度・画像処理速度である。LLMの推論実行、KVキャッシュ、言語モデルサービング等への技術的適用は一次要旨に示されず、現行サーベイの収録対象外。",
+    "first_checked_at": "2026-10-14T04:58:11+00:00",
+    "last_checked_at": "2026-10-20T18:43:35+00:00",
+    "linked_from": [],
+    "title": "Mamba-enhanced detection transformer with selective state space models for multi-category defect detection in transmission lines"
+  },
+  "processed_at": "2026-10-20T18:43:35+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-afb7667ca36b",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

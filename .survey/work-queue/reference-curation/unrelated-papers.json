@@ -2,7 +2,7 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-20T17:49:24+00:00",
+  "updated_at": "2026-10-20T18:43:35+00:00",
   "record_count": 12442,
   "records": {
     "arXiv:2303.08774": {
@@ -164636,9 +164636,9 @@
         "arXiv:2210.13452",
         "semanticscholar:fc4cbc7a75f5a3bbca59db5513231555f078fe78"
       ],
-      "reason": "画像分類用MetaFormer骨格にIdentityFormer、RandFormer、ConvFormer、CAFormer等のトークン混合器を組み合わせ、ImageNet-1K分類精度と活性化関数StarReLUを検証する視覚モデル構造研究。LLM推論基盤の性能改善やサービングは対象外。",
+      "reason": "視覚認識向けMetaFormerアーキテクチャと基準モデルの比較を扱う研究であり、大規模言語モデルの推論エンジン・サービング基盤・KVメモリ階層・量子化の改善ではない。対象がVisionと明示されるため、タイトル段階で対象外と判断する。",
       "first_checked_at": "2026-10-11T20:48:40+00:00",
-      "last_checked_at": "2026-10-20T13:06:14+00:00",
+      "last_checked_at": "2026-10-20T18:43:33+00:00",
       "linked_from": [],
       "title": "MetaFormer Baselines for Vision"
     },
@@ -173583,9 +173583,9 @@
       "identity_tokens": [
         "DOI:10.1007/s10791-026-10353-0"
       ],
-      "reason": "MambaTL-DetはMobileMamba、aspect perception、cross-scale fusionで送電線defect detectionを改善するvision検出研究。",
+      "reason": "出版社公開の一次要旨で、MambaTL-Detは送電線の航空写真から碍子・制振器・鳥の巣など5種類の設備異常を検出するRT-DETR系の物体検出器と確認。MobileMambaの選択的状態空間モデル、形状比率に応じた特徴強調、画像特徴融合、カテゴリ不均衡損失が主な貢献であり、評価もTL-Defect5Kの検出精度・画像処理速度である。LLMの推論実行、KVキャッシュ、言語モデルサービング等への技術的適用は一次要旨に示されず、現行サーベイの収録対象外。",
       "first_checked_at": "2026-10-14T04:58:11+00:00",
-      "last_checked_at": "2026-10-14T04:58:11+00:00",
+      "last_checked_at": "2026-10-20T18:43:35+00:00",
       "linked_from": [],
       "title": "Mamba-enhanced detection transformer with selective state space models for multi-category defect detection in transmission lines"
     },
@@ -178769,9 +178769,9 @@
         "DOI:10.48550/arxiv.2402.12289",
         "arXiv:2402.12289"
       ],
-      "reason": "自動運転車の道路場面理解・階層的経路計画を視覚言語モデルと従来の運転制御系で組み合わせる研究。nuScenes・SUP-ADと実車走行で運転性能を評価しており、LLM推論サービング、キャッシュ、計算カーネル、モデル圧縮の最適化は主題ではない。",
+      "reason": "自動運転の視覚言語モデルによる運転シーン理解・意思決定が中心であり、LLM推論サービング、KVキャッシュ、GPUメモリ管理、モデル実行高速化を研究する論文ではない。タイトルに自動運転応用の研究対象が明示されているため、深い本文読解に進めない。",
       "first_checked_at": "2026-10-16T18:54:53+00:00",
-      "last_checked_at": "2026-10-20T13:06:13+00:00",
+      "last_checked_at": "2026-10-20T18:43:33+00:00",
       "linked_from": [],
       "title": "DriveVLM: The Convergence of Autonomous Driving and Large Vision-Language Models"
     },
@@ -179287,9 +179287,9 @@
       "identity_tokens": [
         "arXiv:2208.00406"
       ],
-      "reason": "機械学習プログラムの電力消費と地域別CO2排出換算を計測する汎用Pythonパッケージの研究。推論も計測対象に含み得るが、LLMの実行方式、推論カーネル、KVキャッシュ、モデル配備の効率化手法は提案していない。",
+      "reason": "機械学習実験の二酸化炭素排出量を追跡する汎用測定ツールの研究であり、LLM推論基盤の実行時間・スループット・メモリ階層・カーネル最適化を提案するものではない。省エネの周辺主題ではあるが、対象が一般の機械学習排出量追跡と明示されているため対象外とする。",
       "first_checked_at": "2026-10-20T13:06:25+00:00",
-      "last_checked_at": "2026-10-20T13:06:25+00:00",
+      "last_checked_at": "2026-10-20T18:43:33+00:00",
       "linked_from": [],
       "title": "eco2AI: Carbon Emissions Tracking of Machine Learning Models as the First Step Towards Sustainable AI"
     },
