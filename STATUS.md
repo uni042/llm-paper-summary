@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-10-20 12:37:54 JST**
+> 自動生成: **2026-10-20 12:50:27 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -13,9 +13,9 @@
 |---|---:|
 | 収録候補論文数 | **1434** |
 | 未claim Research job | **1434** |
-| 直近24hのResearch処理完了 | **52** |
-| 最終Research処理完了 | **10-20 11:42:00 JST** |
-| 最終Discovery探索完了 | **10-20 07:30:00 JST** |
+| 直近24hのResearch処理完了 | **50** |
+| 最終Research処理完了 | **10-20 12:33:00 JST** |
+| 最終Discovery探索完了 | **10-20 12:30:00 JST** |
 | 整合性異常 | **0** |
 
 ## 16KB未満論文サマリーの再監査
@@ -116,7 +116,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **10-20 11:18:57 JST（1時間18分前）** |
+| 最終maintenance完了 | **10-20 11:18:57 JST（1時間31分前）** |
 | 最終maintenance status | **passed** |
 | consistency | **passed** |
 | health | **passed** |
@@ -136,19 +136,19 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 指標 | 現在値 |
 |---|---:|
-| 直近6hのResearch完了 | **10** |
-| 直近6hのDiscovery run | **9** |
-| 直近6hのDiscovery本文確認・分類 | **9** |
-| 最終Research完了 | **10-20 11:42:00 JST** |
-| 最終Discovery完了 | **10-20 07:30:00 JST** |
+| 直近6hのResearch完了 | **9** |
+| 直近6hのDiscovery run | **10** |
+| 直近6hのDiscovery本文確認・分類 | **10** |
+| 最終Research完了 | **10-20 12:33:00 JST** |
+| 最終Discovery完了 | **10-20 12:30:00 JST** |
 
 ### 最新Library-first run
 
-- Research: **10-20 11:42:00 JST** / worker — / run 20261020-1130-scheduled-chat-30/r01 / 成果 **1件**
-  - evidence: .survey/import-inbox/results/research/libfile_5a3df2d4505c8191be538a8fd8aada37--2024-2406.11016-optimized-speculative-sampling-gpu-returned-repair-20261020-1130-scheduled-chat-30-r01.json
-- Discovery: **10-20 07:30:00 JST** / worker scheduled-chat-30 / run 20261020-0730-scheduled-chat-30/r01/research-prescreen/010
+- Research: **10-20 12:33:00 JST** / worker — / run 20261020-1230-scheduled-chat-30/r01 / 成果 **1件**
+  - evidence: .survey/import-inbox/results/research/libfile_598ed82bc8e881918ccfba07438d1d14--2026-2605.22884-tensor-cache-eviction-associative-memory-returned-repair-20261020-1230-scheduled-chat-30-r01.json
+- Discovery: **10-20 12:30:00 JST** / worker scheduled-chat-30 / run 20261020-1230-scheduled-chat-30/r01/research-prescreen/2607.01444
   - 本文確認・分類 **1件** / accept **0件** / unrelated+borderline **1件**
-  - evidence: .survey/import-inbox/results/discovery/libfile_5174487eddfc8191bf5fc8097df2873d--discovery-20261020-0730-scheduled-chat-30-research-prescreen-r01-010.json
+  - evidence: .survey/import-inbox/results/discovery/libfile_2ee4d4df9ea881918ddcd3af9be7de77--discovery-20261020-1230-scheduled-chat-30-research-prescreen-2607.01444-r01.json
 
 ### Codex探索成果の反映状況
 
