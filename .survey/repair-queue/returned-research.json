@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-20T16:01:45+00:00",
+  "generated_at": "2026-10-20T16:13:36+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -1236,33 +1236,6 @@
       "worker_run_key": "20261020-1130-scheduled-chat-30/r01"
     },
     {
-      "canonical_id": "arXiv:2608.03276",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-20T05:35:16+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 7388,
-        "body_paragraphs": 51,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 1720,
-        "limitation_chars": 653,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-ea1b8f18ac0c--libfile_a7298965817c8191875b98f7f7d7992c--2026-2608.03276-taskpress-query-agnostic-kv-cache-research-20261020-1304-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-ea1b8f18ac0c--libfile_a7298965817c8191875b98f7f7d7992c--2026-2608.03276-taskpress-query-agnostic-kv-cache-research-20261020-1304-scheduled-chat-0.json",
-      "worker_run_key": "20261020-1304-scheduled-chat-00/r01"
-    },
-    {
       "canonical_id": "arXiv:2410.01805",
       "title": null,
       "source_url": null,
@@ -1957,8 +1930,8 @@
     },
     {
       "canonical_id": "arXiv:2603.02188",
-      "title": "Multi-Head Low-Rank Attention",
-      "source_url": "https://arxiv.org/html/2603.02188v1",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-20T15:58:40+00:00",
       "return_count": 3,
       "assigned_worker": "scheduled-chat-30",
@@ -1984,6 +1957,33 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_9d50398ff264819191885c6aff213f6a--2026-2603.02188-mlra-multi-head-low-rank-attention-research-20261020-0000-scheduled-chat-00-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_9d50398ff264819191885c6aff213f6a--2026-2603.02188-mlra-multi-head-low-rank-attention-research-20261020-0000-scheduled-chat-00-r01.json",
       "worker_run_key": "20261020-0000-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2608.03276",
+      "title": "TaskPress: Query-Agnostic KV Cache Compression via Task-Guided Pruning",
+      "source_url": "https://arxiv.org/abs/2608.03276",
+      "returned_at": "2026-10-20T16:12:10+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 7388,
+        "body_paragraphs": 51,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 1720,
+        "limitation_chars": 653,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_a7298965817c8191875b98f7f7d7992c--2026-2608.03276-taskpress-query-agnostic-kv-cache-research-20261020-1304-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_a7298965817c8191875b98f7f7d7992c--2026-2608.03276-taskpress-query-agnostic-kv-cache-research-20261020-1304-scheduled-chat-00-r01.json",
+      "worker_run_key": "20261020-1304-scheduled-chat-00/r01"
     }
   ]
 }
