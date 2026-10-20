@@ -35,10 +35,15 @@
   "selection_reason": "CAOTE evicts cached tokens using their contribution to attention outputs, improving the accuracy of cache-reduction methods and directly targeting long-context inference memory.",
   "semantic_scholar_id": "6e46021518c97f01a7282815a935c7a87b8fef86",
   "source_url": "https://arxiv.org/abs/2504.14051",
-  "status": "ready",
+  "status": "superseded",
   "title": "CAOTE: KV Cache Selection for LLMs via Attention Output Error-Based Token Eviction",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2025
+  "year": 2025,
+  "superseded_at": "2026-10-20T16:24:58+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2025-2504.14051-caote-kv-cache-selection-for-llms-via-attention-output-error-based-token.md",
+  "represented_canonical_id": "arXiv:2504.14051",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
