@@ -1,0 +1,26 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-45",
+  "run_key": "20261020-0245-scheduled-chat-45/r01/research-prescreen/027",
+  "reference_main_sha": "f7a0e376f9180429977f57fac75afa0729ace0c0",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2511.16193",
+      "identity_tokens": [
+        "arXiv:2511.16193"
+      ],
+      "title": "Fast LLM Post-training via Decoupled and Best-of-N Speculation",
+      "reason": "SpecActorは推論時の投機的復号技術を利用するが、目的・実装・評価は強化学習後学習における大量rollout生成の高速化と学習全体の処理時間短縮である。現行サーベイの凍結対象である学習専用最適化であり、オンラインLLM推論サービングへの適用・評価を主張していない。",
+      "source_url": "https://arxiv.org/abs/2511.16193",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-20T02:55:36+09:00",
+      "last_checked_at": "2026-10-20T02:55:36+09:00",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance",
+      "worklist_rank": 27
+    }
+  ]
+}

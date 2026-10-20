@@ -1,0 +1,29 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261020-0204-scheduled-chat-00/r01",
+  "reference_main_sha": "2179e3703bb060a964b3a8e33cabf01741880f02",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.12396",
+      "identity_tokens": [
+        "arXiv:2605.12396",
+        "2605.12396",
+        "NCCLZ"
+      ],
+      "title": "NCCLZ: Compression-Enabled GPU Collectives with Decoupled Quantization and Entropy Coding",
+      "reason": "GPU集合通信の通信量を削減する基盤技術でありLLM分散推論の通信にも関連し得るが、原著の評価対象はQMCPack、CESM-ATM、ResNet-18/34の学習勾配、合成通信負荷である。論文の結論はLLMの分割並列や集合通信が多い推論への最適化を将来課題と明記する。LLM推論サービスの遅延、生成処理量、MoE通信などを実測した論文ではないため、現行の推論基盤サーベイでは境界領域として保留する。最大9.65倍という数値は科学データを含む圧縮通信の比較結果であり、LLM推論高速化倍率ではない。",
+      "source_url": "https://arxiv.org/pdf/2605.12396",
+      "body_check": "research_fulltext_relevance_review: arXiv v2 12ページの全文を確認。§IV-A～Eは一度だけの損失あり量子化、NCCL内部の可逆エントロピー符号化、REAによるRAW/FixedLen/Huffman選択、8-slotフレームの重畳処理を記述。§V-Aの実験環境はPolaris/A100/Slingshot、データはQMCPack、CESM-ATM、ResNet-18/34の勾配。§V-CのAllReduce処理量比較、§V-Fの圧縮率と重畳効果を確認。§VIIはLLM並列処理への拡張を将来課題として記述。LLM推論の直接評価が存在しないためborderline。",
+      "first_checked_at": "2026-10-20T02:04:25+09:00",
+      "last_checked_at": "2026-10-20T02:04:25+09:00",
+      "linked_from": [],
+      "origin": "research_postread_relevance",
+      "research_job_id": "scheduled-chat-00-059",
+      "worklist_rank": 59
+    }
+  ]
+}

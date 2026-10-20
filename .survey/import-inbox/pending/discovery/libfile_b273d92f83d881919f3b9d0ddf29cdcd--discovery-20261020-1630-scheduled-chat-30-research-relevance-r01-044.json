@@ -1,0 +1,26 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261020-1630-scheduled-chat-30/r01/research-prescreen/044",
+  "reference_main_sha": "1dce2db0b48420c6adb2a439804d270da65a1cc4",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2511.21730",
+      "identity_tokens": [
+        "arXiv:2511.21730"
+      ],
+      "title": "A Benchmark for Procedural Memory Retrieval in Language Agents",
+      "reason": "題名が言語エージェントの手続き的記憶検索のベンチマークであることを明示する。記憶検索能力の評価は、LLM推論のGPUメモリ階層・KVキャッシュ管理や実行速度の最適化ではないため対象外。",
+      "source_url": "https://arxiv.org/abs/2511.21730",
+      "body_check": "title_screen_only; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-10-20T16:40:52+09:00",
+      "last_checked_at": "2026-10-20T16:40:52+09:00",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance",
+      "worklist_rank": 44
+    }
+  ]
+}

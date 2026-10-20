@@ -1,0 +1,24 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261020-0703-scheduled-chat-00/r01",
+  "reference_main_sha": "097bba2f78ac34a16740b548afb1bacf6ec209ff",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.27480",
+      "identity_tokens": ["arxiv:2605.27480", "doi:10.48550/arxiv.2605.27480"],
+      "title": "BIRDS: Characterizing and Understanding Biodiversity Impact of Large Language Model Serving",
+      "reason": "要旨で確認した中心課題はLLM配信の運用時・製造時の生物多様性影響と品質正規化生物多様性指標（QNBI）の計量であり、GPU実行カーネル、KVキャッシュ、MoE配置、スケジューラ、圧縮・オフロード、推論高速化そのものの新手法ではない。要求単位の資源評価はLLM配信の運用指標と関係するため完全な無関係とは断定せず、環境影響・配信効率評価の周辺研究としてborderlineとする。本文は未読であり、実装・測定の詳細を確認できた場合は再評価可能。",
+      "source_url": "https://arxiv.org/abs/2605.27480",
+      "body_check": "abstract_screen_only; body_not_read; verified_abstract_focus=request-level biodiversity impact, operational and embodied effects, quality-normalized biodiversity impact; no inference systems optimization algorithm asserted in abstract",
+      "first_checked_at": "2026-10-20T07:13:00+09:00",
+      "last_checked_at": "2026-10-20T07:13:00+09:00",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance",
+      "worklist_rank": 55
+    }
+  ]
+}

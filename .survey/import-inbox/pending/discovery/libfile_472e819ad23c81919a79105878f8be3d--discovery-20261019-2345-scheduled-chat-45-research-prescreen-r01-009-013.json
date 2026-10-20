@@ -1,0 +1,90 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-45",
+  "run_key": "20261019-2345-scheduled-chat-45/r01/research-prescreen",
+  "reference_main_sha": "1a71b5846ee9642d8ea1298a6c20669b146673bf",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2512.05665",
+      "identity_tokens": [
+        "arxiv:2512.05665"
+      ],
+      "title": "Interleaved Latent Visual Reasoning with Selective Perceptual Modeling",
+      "reason": "一次要旨では、画素密度の高い中間画像を反復再符号化する計算費用を避けるため、文章生成と動的な潜在視覚表現を交互に出力し、モメンタム教師が関連視覚特徴を選択して学習を指導する。画像処理費用の削減は推論効率に関係するが、主要貢献は視覚推論の表現学習と品質であり、汎用LLMのKV・スケジューラ・推論実行系を直接最適化する研究ではないため境界判定。",
+      "source_url": "https://arxiv.org/abs/2512.05665",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-19T23:52:00+09:00",
+      "last_checked_at": "2026-10-19T23:52:00+09:00",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance",
+      "worklist_rank": 9
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2511.13593",
+      "identity_tokens": [
+        "arxiv:2511.13593"
+      ],
+      "title": "O-Mem: Omni Memory System for Personalized, Long Horizon, Self-Evolving Agents",
+      "reason": "一次要旨では、ユーザー特性とイベント履歴を能動的に更新し、人物属性と話題に応じた階層検索で長期エージェント応答を改善する。トークン数・応答時間の効率改善にも言及するが、主たる評価はLoCoMoとPERSONAMEMの記憶・個人化品質で、LLM実行基盤のメモリ階層やKVキャッシュ最適化ではないため境界判定。",
+      "source_url": "https://arxiv.org/abs/2511.13593",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-19T23:52:00+09:00",
+      "last_checked_at": "2026-10-19T23:52:00+09:00",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance",
+      "worklist_rank": 10
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2403.01232",
+      "identity_tokens": [
+        "arxiv:2403.01232"
+      ],
+      "title": "Polynormer: Polynomial-Expressive Graph Transformer in Linear Time",
+      "reason": "一次要旨では、グラフの局所・大域同変注意を組み合わせて多項式表現能力を持つ線形計算量のグラフTransformerを構成し、13のグラフデータセットで分類性能を比較する。対象はグラフニューラルネットワークであり、LLM推論・学習・サービングの実行効率ではないため対象外。",
+      "source_url": "https://arxiv.org/abs/2403.01232",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-19T23:52:00+09:00",
+      "last_checked_at": "2026-10-19T23:52:00+09:00",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance",
+      "worklist_rank": 11
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2512.18706",
+      "identity_tokens": [
+        "arxiv:2512.18706"
+      ],
+      "title": "X-Talk: On the Underestimated Potential of Modular Speech-to-Speech Dialogue System",
+      "reason": "一次要旨では、音声活動検出・音声強調・認識・環境音理解とLLMをモジュール化して接続し、音声対話を1秒未満の遅延で処理する設計を提案する。LLMを含む実時間推論パイプラインの遅延最適化は関連するが、主貢献は音声対話アプリケーションのモジュール設計であり、汎用LLMランタイムやモデル内推論高速化は対象外のため境界判定。",
+      "source_url": "https://arxiv.org/abs/2512.18706",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-19T23:52:00+09:00",
+      "last_checked_at": "2026-10-19T23:52:00+09:00",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance",
+      "worklist_rank": 12
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2601.10011",
+      "identity_tokens": [
+        "arxiv:2601.10011"
+      ],
+      "title": "Memo-SQL: Structured Decomposition and Experience-Driven Self-Correction for Training-Free NL2SQL",
+      "reason": "一次要旨では、SQL生成で質問をエンティティ別・階層別・逐次的に分解し、過去の誤りと修正例を検索して自己訂正する学習不要の推論方式を提案する。BIRDで実行正答率68.5%、既存のテスト時スケーリング手法比で10倍以上少ない資源を主張するが、主眼はNL2SQLの推論戦略・精度で、LLMサービング基盤の最適化は直接扱わないため境界判定。",
+      "source_url": "https://arxiv.org/abs/2601.10011",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-19T23:52:00+09:00",
+      "last_checked_at": "2026-10-19T23:52:00+09:00",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance",
+      "worklist_rank": 13
+    }
+  ]
+}
