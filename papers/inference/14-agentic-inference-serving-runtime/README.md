@@ -276,6 +276,6 @@
   Agent.xpuは、個人端末で複数の言語モデル利用エージェントを同時に動かす際、中央処理装置、統合画像処理装置、ニューラル処理装置を協調させる推論実行基盤である。
 
 - **2025-09 · [Nova: Real-Time Agentic Vision-Language Model Serving with Adaptive Cross-Stage Parallelization](2025-2509.21301-nova-real-time-agentic-vision-language-model-serving-with-adaptive-cross.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
+  実装：✓ ・ リポジトリ内被引用：1  
   Novaは、画面画像を見て操作命令を生成する視覚言語エージェント（Vision-Language モデル agent、VLMエージェント）を、単一のGPUで低遅延に提供する推論基盤である。さらに、画像符号器の全重みをGPUへ常駐させず、CPUメモリから層ごとに先読みする。
 <!-- survey:auto:end -->
