@@ -29,6 +29,8 @@ worker_completed_at: '2026-10-19T21:45:00+09:00'
 worker_run_key: '20261019-2130-scheduled-chat-30/r01'
 quality_self_review_passed: true
 quality_self_review_version: 'library-paper-quality-guide-2026-10-07'
+last_audited: null
+audit_version: 0
 ---
 # NLL-Guided Full-Attention Layer Selection：長文脈で全域注意を残す層の選択
 
