@@ -1,7 +1,7 @@
 # Scheduled worker :00 worklist
 
 Worker: `scheduled-chat-00`  
-Generated: `2026-10-20T21:54:34+00:00`
+Generated: `2026-10-20T22:29:29+00:00`
 
 このページはこのworker専用の再構築可能な選択索引です。他のScheduled worker用ページとは候補を重複させません（十分な在庫がある場合）。
 正本は `.survey/work-queue/jobs/`、claim、論文実体、relevance ledgerです。処理直前に最新正本を再確認してください。
@@ -220,8 +220,8 @@ ready総数: **1360** / 未claim総数: **1360** / このworker向け: **200**
 
 ## リスト入り判定待ち Discovery候補
 
-未判定総数: **122787** / このworker向け: **500**
-事前選別: **quarantine** / 暫定隔離 **116821** / 監査再投入 **0** / 機械規則適用後 **119307** / 選抜率 **5.0%** （候補の正本は保持。隔離はunrelated判定ではない）
+未判定総数: **122786** / このworker向け: **500**
+事前選別: **quarantine** / 暫定隔離 **116820** / 監査再投入 **0** / 機械規則適用後 **119306** / 選抜率 **5.0%** （候補の正本は保持。隔離はunrelated判定ではない）
 
 | # | priority | 系統内引用最多 | 系統内引用合計 | identity | title | published | venue | 全被引用 | 参照関係 | 系統候補 | source |
 |---:|---:|---:|---:|---|---|---|---|---:|---:|---|---|
@@ -342,7 +342,7 @@ ready総数: **1360** / 未claim総数: **1360** / このworker向け: **200**
 | 115 | 101 | 8 | 12 | arXiv:2606.13862 | SuperThoughts: Reasoning Tokens in Superposition | 2026-06-11 | arXiv.org | 1 | 12 | LLM Serving / Scheduling / Disaggregation, Speculative Decoding, inference-systems | [source](https://arxiv.org/abs/2606.13862) |
 | 116 | 10 | 8 | 11 | arXiv:2609.24698 | Adapting Tree-Structured Speculative Decoding to DeepSeek-V4 for Efficient Inference | 2026-09-21 |  | 0 | 11 | KVキャッシュ圧縮・疎注意・階層メモリ・長文脈MoE推論, Speculative Decoding, inference-systems, speculative-decoding, 投機的復号 / EAGLE, 投機的復号 / 無損失復号高速化 | [source](https://arxiv.org/abs/2609.24698) |
 | 117 | 51 | 8 | 11 | arXiv:2108.02347 | FMMformer: Efficient and Flexible Transformer via Decomposed Near-field and Far-field Attention | 2021-08-05 | Neural Information Processing Systems | 41 | 11 | inference-systems, sparse attention / long-context Transformer | [source](https://arxiv.org/abs/2108.02347) |
-| 118 | 10 | 8 | 11 | DOI:10.1016/j.eswa.2026.133192 | Semantic-aware pruning of large language models via neuron importance explanation | 2026-06-11 | Expert Systems with Applications | 0 | 11 | 09-model-compression-pruning, inference-systems | [source](https://doi.org/10.1016/j.eswa.2026.133192) |
+| 118 | 10 | 8 | 11 | DOI:10.1016/j.eswa.2026.133192 | Semantic-aware pruning of large language models via neuron importance explanation | 2026-06-01 | Expert systems with applications | 0 | 11 | 09-model-compression-pruning, inference-systems | [source](https://doi.org/10.1016/j.eswa.2026.133192) |
 | 119 | 10 | 8 | 11 | arXiv:2608.12913 | Decoupled Contrastive Decoding via Expert-Aligned Drafting | 2026-08-13 |  | 0 | 11 | Conditional Computation, LLM Serving / Scheduling / Disaggregation, Speculative Decoding, survey-speculative-decoding, 投機的デコード / 分布保存型デコード高速化, 投機的復号 / EAGLE, 投機的復号 / 無損失復号高速化 | [source](https://arxiv.org/abs/2608.12913) |
 | 120 | 1 | 8 | 11 | SemanticScholar:119a9595b10e9713031adf2aabd2bd7de78468ad | ATTACC the Quadratic Bottleneck of Attention Layers | 2021 | arXiv.org | 1 | 11 | Sparse Attention, inference-systems, sparse attention / long-context Transformer | [source](https://www.semanticscholar.org/paper/119a9595b10e9713031adf2aabd2bd7de78468ad) |
 | 121 | 59 | 8 | 11 | arXiv:2403.00025 | On the Challenges and Opportunities in Generative AI | 2024-02-28 | Trans. Mach. Learn. Res. | 59 | 11 | state space models / selective SSM / recurrent inference / hardware-aware sequence modeling, 投機的復号 / 無損失復号高速化, 注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層, 重み専用量子化 / 推論カーネル | [source](https://arxiv.org/abs/2403.00025) |
@@ -570,7 +570,7 @@ ready総数: **1360** / 未claim総数: **1360** / このworker向け: **200**
 | 343 | 92 | 5 | 11 | SemanticScholar:dad1164d87e0cbea2b1bf8932a15b8499bba68b2 | Power-aware Deep Learning Model Serving with μ-Serve | 2024 | USENIX Annual Technical Conference | 82 | 11 | CPUオフロード / 活性化疎性 / 階層メモリ, LLM Serving / Scheduling / Disaggregation, LLMサービング／スケジューリング, Offload / Hierarchical Memory, Speculative Decoding, Transformer inference runtime and variable-length request batching, 投機的復号 / 無損失復号高速化 | [source](https://www.semanticscholar.org/paper/dad1164d87e0cbea2b1bf8932a15b8499bba68b2) |
 | 344 | 1 | 5 | 11 | DOI:10.1109/ICCBE65177.2025.11255928 | Comparative Survey of Small and Large Language Models | 2025-06-27 | 2025 IEEE International Conference on Computation, Big-Data and Engineering (ICCBE) | 1 | 11 | LLM Serving / Scheduling / Disaggregation, edge-on-device-llm-systems, post-training quantization / second-order compression / weight-only LLM inference, 分散学習 / 混合専門家モデル / 自動シャーディング / SPMD, 注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層 | [source](https://doi.org/10.1109/ICCBE65177.2025.11255928) |
 | 345 | 110 | 5 | 11 | arXiv:2606.31779 | Bridging the Gap Between Latent and Explicit Reasoning with Looped Transformers | 2026-06-30 | arXiv.org | 10 | 11 | Speculative Decoding, speculative-parallel-decoding, 投機的デコード / 分布保存型デコード高速化, 投機的復号 / 無損失復号高速化 | [source](https://arxiv.org/abs/2606.31779) |
-| 346 | 24 | 5 | 11 | arXiv:2407.08892 | Characterizing Prompt Compression Methods for Long Context Inference | 2024-07-11 | arXiv.org | 24 | 11 | KV cache eviction / heavy hitters / sparse attention / efficient inference, KV cache quantization / long-context inference / activation compression, KVキャッシュ圧縮 / 量子化 / 推論メモリ最適化, KVキャッシュ最適化／適応圧縮, Sparse Attention | [source](https://arxiv.org/abs/2407.08892) |
+| 346 | 101 | 5 | 11 | arXiv:2609.39740 | LatentHarness: Learning Latent Actions for Memory and Reasoning via Counterfactual Policy Distillation | 2026-09-30 |  | 1 | 11 | agentic inference / persistent memory | [source](https://arxiv.org/abs/2609.39740) |
 | 347 | 88 | 5 | 11 | arXiv:2408.16730 | VideoLLM-MoD: Efficient Video-Language Streaming with Mixture-of-Depths Vision Computation | 2024-08-29 | Neural Information Processing Systems | 78 | 11 | 11-llm-serving-scheduling-disaggregation, 15-inference-early-exit, Conditional Computation, Inference / Multimodal Long-Context Memory Compression, KV cache memory management / streaming inference / attention sinks / length extrapolation, KVキャッシュ最適化／適応圧縮 | [source](https://arxiv.org/abs/2408.16730) |
 | 348 | 2 | 5 | 10 | arXiv:2409.02026 | Foundations of Large Language Model Compression - Part 1: Weight Quantization | 2024-09-03 | arXiv.org | 2 | 10 | LLM inference surveys、roofline performance analysis, Weight Quantization / Compression, inference-systems, 大規模言語モデル重み量子化 / 混合精度 / 疎量子化, 重み専用量子化 / 推論カーネル | [source](https://arxiv.org/abs/2409.02026) |
 | 349 | 24 | 5 | 10 | arXiv:2506.19697 | Outlier-Safe Pre-Training for Robust 4-Bit Quantization of Large Language Models | 2025-06-24 | Annual Meeting of the Association for Computational Linguistics | 14 | 10 | KV cache memory management / streaming inference / attention sinks / length extrapolation, arXiv:2405.16406のICLR 2025採録版。, inference-systems, 重み専用量子化 / 推論カーネル | [source](https://arxiv.org/abs/2506.19697) |

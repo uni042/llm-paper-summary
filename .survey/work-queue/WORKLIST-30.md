@@ -1,7 +1,7 @@
 # Scheduled worker :30 worklist
 
 Worker: `scheduled-chat-30`  
-Generated: `2026-10-20T21:54:34+00:00`
+Generated: `2026-10-20T22:29:29+00:00`
 
 このページはこのworker専用の再構築可能な選択索引です。他のScheduled worker用ページとは候補を重複させません（十分な在庫がある場合）。
 正本は `.survey/work-queue/jobs/`、claim、論文実体、relevance ledgerです。処理直前に最新正本を再確認してください。
@@ -220,8 +220,8 @@ ready総数: **1360** / 未claim総数: **1360** / このworker向け: **200**
 
 ## リスト入り判定待ち Discovery候補
 
-未判定総数: **122787** / このworker向け: **500**
-事前選別: **quarantine** / 暫定隔離 **116821** / 監査再投入 **0** / 機械規則適用後 **119307** / 選抜率 **5.0%** （候補の正本は保持。隔離はunrelated判定ではない）
+未判定総数: **122786** / このworker向け: **500**
+事前選別: **quarantine** / 暫定隔離 **116820** / 監査再投入 **0** / 機械規則適用後 **119306** / 選抜率 **5.0%** （候補の正本は保持。隔離はunrelated判定ではない）
 
 | # | priority | 系統内引用最多 | 系統内引用合計 | identity | title | published | venue | 全被引用 | 参照関係 | 系統候補 | source |
 |---:|---:|---:|---:|---|---|---|---|---:|---:|---|---|
@@ -570,7 +570,7 @@ ready総数: **1360** / 未claim総数: **1360** / このworker向け: **200**
 | 343 | 19 | 5 | 11 | arXiv:2410.09982 | Self-Data Distillation for Recovering Quality in Pruned Large Language Models | 2024-10-13 | Conference on Machine Learning and Systems | 9 | 11 | 07-kv-cache-optimization-compression, survey-speculative-decoding, 投機的デコード / 分布保存型デコード高速化, 投機的復号 / 無損失復号高速化 | [source](https://arxiv.org/abs/2410.09982) |
 | 344 | 101 | 5 | 11 | arXiv:2609.31291 | Softmax Reparameterization for Output-Head Quantization | 2026-09-25 |  | 1 | 11 | LLM Serving / Scheduling / Disaggregation, arXiv:2405.16406のICLR 2025採録版。, post-training quantization / second-order compression / weight-only LLM inference, 重み専用量子化 / 推論カーネル | [source](https://arxiv.org/abs/2609.31291) |
 | 345 | 102 | 5 | 11 | arXiv:2603.20578 | Context Cartography: Toward Structured Governance of Contextual Space in Large Language Model Systems | 2026-03-21 | arXiv.org | 2 | 11 | 07-kv-cache-optimization-compression, KV cache memory management / streaming inference / attention sinks / length extrapolation, LLM推論基盤・記憶管理・KVキャッシュのライフサイクル, state space models / selective SSM / recurrent inference / hardware-aware sequence modeling, 注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層 | [source](https://arxiv.org/abs/2603.20578) |
-| 346 | 10 | 5 | 11 | arXiv:2609.39740 | LatentHarness: Learning Latent Actions for Memory and Reasoning via Counterfactual Policy Distillation | 2026-09-30 |  | 0 | 11 | agentic inference / persistent memory | [source](https://arxiv.org/abs/2609.39740) |
+| 346 | 24 | 5 | 11 | arXiv:2407.08892 | Characterizing Prompt Compression Methods for Long Context Inference | 2024-07-11 | arXiv.org | 24 | 11 | KV cache eviction / heavy hitters / sparse attention / efficient inference, KV cache quantization / long-context inference / activation compression, KVキャッシュ圧縮 / 量子化 / 推論メモリ最適化, KVキャッシュ最適化／適応圧縮, Sparse Attention | [source](https://arxiv.org/abs/2407.08892) |
 | 347 | 10 | 5 | 11 | arXiv:2511.22483 | Enhancing Trustworthiness with Mixed Precision: Benchmarks, Opportunities, and Challenges | 2025-11-27 | Asia and South Pacific Design Automation Conference | 0 | 11 | KV cache quantization / long-context inference / activation compression, KVキャッシュ圧縮 / 量子化 / 推論メモリ最適化, Weight Quantization / Compression, post-training quantization / second-order compression / weight-only LLM inference, 重み専用量子化 / 推論カーネル | [source](https://arxiv.org/abs/2511.22483) |
 | 348 | 7 | 5 | 10 | arXiv:2410.18701 | BATON: Enhancing Batch-wise Inference Efficiency for Large Language Models via Dynamic Re-batching | 2024-10-24 | The Web Conference | 7 | 10 | LLM Serving / Scheduling / Disaggregation, LLM serving scheduling / chunked prefill / iteration-level scheduling / pipeline parallelism, Transformer inference runtime and variable-length request batching, inference-systems, post-training quantization / second-order compression / weight-only LLM inference, 注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層 | [source](https://arxiv.org/abs/2410.18701) |
 | 349 | 10 | 5 | 10 | DOI:10.1109/JSSC.2026.3663603 | Adelia: A 4-nm LLM Processing Unit With Streamlined Dataflow and Dual-Mode Parallelism for Maximizing Hardware Efficiency | 2026-04-01 | IEEE Journal of Solid-State Circuits | 0 | 10 | 09-batching-scheduling-serving, KV Cache Optimization / Compression, LLM Serving / Scheduling / Disaggregation, kv-cache-memory, 注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層 | [source](https://doi.org/10.1109/JSSC.2026.3663603) |
