@@ -1,13 +1,12 @@
 {
   "schema_version": 1,
   "artifact_type": "research",
-  "status": "imported",
+  "status": "blocked_quality",
   "source_sha256": "13b696b9ff129161f900fec0daa61fc51bcb37d455440635732cf2560ea6d234",
-  "canonical_id": "arXiv:2602.22675",
-  "paper_path": "papers/inference/14-agentic-inference-serving-runtime/2026-2602.22675-search-more-think-less-rethinking-long-horizon-agentic-search-for-effici.md",
-  "lineage": "14-agentic-inference-serving-runtime",
-  "audit_status": "PASS",
+  "normalized_source_sha256": null,
   "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_c266488f8fe4819188cad40b40e38138--2026-2602.22675-search-more-think-less-parallel-agentic-search-research-20261020-0330-scheduled-chat-30-r01.md",
+  "canonical_id": "arXiv:2602.22675",
   "worker_completed_at": "2026-10-20T03:33:44+09:00",
   "worker_run_key": "20261020-0330-scheduled-chat-30/r01",
   "quality_metrics": {
@@ -20,5 +19,8 @@
     "limitation_chars": 778,
     "insufficiency_flags": []
   },
-  "processed_at": "2026-10-20T16:46:07+00:00"
+  "failures": [
+    "長文定型文の再利用を検出: papers/inference/14-agentic-inference-serving-runtime/2026-2602.22675-search-more-think-less-rethinking-long-horizon-agentic-search-for-effici.md と 10 段落 / 2218文字 (100.0%) が完全一致"
+  ],
+  "processed_at": "2026-10-21T23:19:46+00:00"
 }

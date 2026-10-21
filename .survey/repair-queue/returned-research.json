@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-21T23:12:17+00:00",
+  "generated_at": "2026-10-21T23:23:23+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,24 +12,8 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 29,
+  "count": 27,
   "entries": [
-    {
-      "canonical_id": "DOI:10.1145/3714983.3714987",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-03T02:07:15+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "frontmatter.source が空"
-      ],
-      "quality_metrics": null,
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_4717524bf0588191b03cde2c82b80c28--2025-awq-on-device.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_4717524bf0588191b03cde2c82b80c28--2025-awq-on-device.json",
-      "worker_run_key": "20261003-0531-scheduled-chat-30"
-    },
     {
       "canonical_id": "DOI:10.1109/HCS59251.2023.10254711",
       "title": null,
@@ -367,33 +351,6 @@
       "worker_run_key": "20261020-0355-scheduled-chat-00/r01"
     },
     {
-      "canonical_id": "arXiv:2610.05305",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-20T17:23:48+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5891,
-        "body_paragraphs": 37,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 1559,
-        "limitation_chars": 632,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-18ce7eee8ee4--libfile_bea1fbf67aa48191a0389113a9cd849d--2026-2610.05305-parallelism-compute-communication-model-research-20261020-1304-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-18ce7eee8ee4--libfile_bea1fbf67aa48191a0389113a9cd849d--2026-2610.05305-parallelism-compute-communication-model-research-20261020-1304-scheduled-.json",
-      "worker_run_key": "20261020-1304-scheduled-chat-00/r01"
-    },
-    {
       "canonical_id": "arXiv:2311.08623",
       "title": null,
       "source_url": null,
@@ -503,33 +460,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-8553bd83bc27--libfile_f57d143ca85c8191906aefbecaa27fd0--2026-2606.27791-nll-guided-full-attention-layer-selection-research-20261019-2130-scheduled-chat-30-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-8553bd83bc27--libfile_f57d143ca85c8191906aefbecaa27fd0--2026-2606.27791-nll-guided-full-attention-layer-selection-research-20261019-2130-schedule.json",
       "worker_run_key": "20261019-2130-scheduled-chat-30/r01"
-    },
-    {
-      "canonical_id": "arXiv:2605.18226",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-20T17:55:00+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 0 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 6931,
-        "body_paragraphs": 40,
-        "method_chars": 2025,
-        "method_paragraphs": 13,
-        "evaluation_chars": 0,
-        "limitation_chars": 763,
-        "insufficiency_flags": [
-          "評価説明量 0 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-91f0995623f9--libfile_c4c7c543c8108191b17a05ff296be15f--2026-2605.18226-attention-state-memory-context-memorization-quality-repair-20261020-1945-scheduled-chat-45-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-91f0995623f9--libfile_c4c7c543c8108191b17a05ff296be15f--2026-2605.18226-attention-state-memory-context-memorization-quality-repair-20261020-1945-.json",
-      "worker_run_key": "20261020-1945-scheduled-chat-45/r01"
     },
     {
       "canonical_id": "arXiv:2605.28051",
@@ -813,6 +743,33 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_bf16b1fc8ba081918394d7a0537eb8ae--2026-2601.21444-apb-v-video-sequence-parallel-attention-research-20261021-0956-scheduled-chat-00-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_bf16b1fc8ba081918394d7a0537eb8ae--2026-2601.21444-apb-v-video-sequence-parallel-attention-research-20261021-0956-scheduled-chat-00-r01.json",
       "worker_run_key": "20261021-0956-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2605.18226",
+      "title": "Context Memorization for Efficient Long Context Generation",
+      "source_url": "https://arxiv.org/pdf/2605.18226",
+      "returned_at": "2026-10-21T23:21:47+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 0 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 6931,
+        "body_paragraphs": 40,
+        "method_chars": 2025,
+        "method_paragraphs": 13,
+        "evaluation_chars": 0,
+        "limitation_chars": 763,
+        "insufficiency_flags": [
+          "評価説明量 0 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_c4c7c543c8108191b17a05ff296be15f--2026-2605.18226-attention-state-memory-context-memorization-quality-repair-20261020-1945-scheduled-chat-45-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_c4c7c543c8108191b17a05ff296be15f--2026-2605.18226-attention-state-memory-context-memorization-quality-repair-20261020-1945-scheduled-chat-45-r01.json",
+      "worker_run_key": "20261020-1945-scheduled-chat-45/r01"
     }
   ]
 }
