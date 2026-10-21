@@ -1,5 +1,5 @@
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（55本）
+## 自動生成の論文一覧（56本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -59,6 +59,10 @@
 - **2026-08 · [Diagnose Before You Compress: Prediction-Independent Bottleneck Witness Refinement for LLM Serving Traces](2026-2608.00423-bottleneck-preserving-witnessing.md)**  
   実装：[✓](https://github.com/llmllmllm/BPW) ・ リポジトリ内被引用：0  
   スケジューリング・入力処理・生成・KVキャッシュの各ボトルネックを実機測定で独立確認し、四要素すべてに複数の証拠を残す小さなLLMサービング再生用トレースを選ぶ。
+
+- **2026-08 · [Beyond Tokens: A Survey on Decoding Methods for Large Language and Vision-Language Models](2026-2608.14797-beyond-tokens-a-survey-on-decoding-methods-for-large-language-and-vision.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  対象はモデルの重みを更新する学習ではなく、既存モデルが出力した確率分布を、推論時にどのようなトークン列へ変換するかという復号（デコード）の設計である。表1の年代と分類は文献整理の結果であり、速度・品質の絶対値や改善倍率を示す統一ベンチマークではない。
 
 - **2026-07 · [CORVUS: Context Optimization and Reduction Via Underlying Synchronization for LLM Coding Agents](2026-2607.22711-corvus-context-optimization-and-reduction-via-underlying-synchronization.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

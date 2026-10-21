@@ -24,7 +24,7 @@
 - [10-kv-cache-offload-recomputation](../10-kv-cache-offload-recomputation/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（62本）
+## 自動生成の論文一覧（63本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -212,6 +212,10 @@
 - **2026-03 · [SpecEyes: Accelerating Agentic Multimodal LLMs via Speculative Perception and Planning](2026-2603.23483-speceyes-accelerating-agentic-multimodal-llms-via-speculative-perception.md)**  
   実装：[✓](https://github.com/MAC-AutoML/SpecEyes) ・ リポジトリ内被引用：0  
   本研究は、画像を一度だけ入力して答える通常の視覚言語モデルではなく、画像の拡大、切り出し、追加観察などの視覚ツールを複数回呼び出すエージェント型マルチモーダル大規模言語モデルの応答遅延を対象とする。提案方式SpecEyesは、ツールを必要としない質問を早期に見つけ、軽量な視覚言語モデルの回答をそのまま返す。
+
+- **2026-03 · [CUCo: An Agentic Framework for Compute and Communication Co-design](2026-2603.02376-cuco-an-agentic-framework-for-compute-and-communication-co-design.md)**  
+  実装：[✓](https://anonymous.4open.science/r/CUCo-06EC/) ・ リポジトリ内被引用：0  
+  既存の分散処理では、行列積や注意計算を高速化する担当と、NCCL通信を高速化する担当が分離されやすい。続いて性能探索の低速経路（slow-path）で、コンパイル・数値照合・実機ベンチマークを通した候補だけを残し、進化的な探索で転送と計算の重なり方を改善する。
 
 - **2026-02 · [Search More, Think Less: Rethinking Long-Horizon Agentic Search for Efficiency and Generalization](2026-2602.22675-search-more-think-less-rethinking-long-horizon-agentic-search-for-effici.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
