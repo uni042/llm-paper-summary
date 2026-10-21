@@ -19160,6 +19160,15 @@
       "warnings": []
     },
     {
+      "path": "papers/inference/99-other-inference-systems/2025-2407.12021-adaptive-draft-verification-for-efficient-large-language-model-decoding.md",
+      "status": "PASS",
+      "summary": "3-gram分布をLLMの確定出力で逐次更新し、モンテカルロ木探索と木構造注意でドラフトを効率化。小型モデル学習不要で最大約2.5倍高速化。",
+      "char_count": 70,
+      "japanese_ratio": 1.0,
+      "failures": [],
+      "warnings": []
+    },
+    {
       "path": "papers/inference/99-other-inference-systems/2025-2409.16560-dynamic-width-speculative-beam-decoding-for-llm-inference.md",
       "status": "PASS",
       "summary": "複数ビームの投機候補を森林構造で並列検証し、ビーム幅を動的調整。通常ビーム探索比1.5〜1.9倍高速、電力消費効率も改善。",
@@ -21477,6 +21486,15 @@
       "warnings": []
     },
     {
+      "path": "papers/inference/99-other-inference-systems/2026-2603.02188-multi-head-low-rank-attention.md",
+      "status": "PASS",
+      "summary": "MLAの単一潜在KVを独立した4注意分岐へ再設計し、4-wayテンソル並列時のKV重複読込を減らして長文脈デコードをMLA比約2.8倍高速化する。",
+      "char_count": 73,
+      "japanese_ratio": 1.0,
+      "failures": [],
+      "warnings": []
+    },
+    {
       "path": "papers/inference/99-other-inference-systems/2026-2603.02217-is-retraining-free-enough-the-necessity-of-router-calibration-for-effici.md",
       "status": "PASS",
       "summary": "MoEの専門家圧縮後に生じるルータと専門家の不整合を、非圧縮モデルの次トークン分布を使うルータ限定蒸留で校正し、品質低下を軽減する。",
@@ -22226,6 +22244,15 @@
       "warnings": [
         "日本語比率 79.7% < 警告基準 80.0%"
       ]
+    },
+    {
+      "path": "papers/inference/99-other-inference-systems/2026-2605.01111-when-less-is-enough-efficient-inference-via-collaborative-reasoning.md",
+      "status": "PASS",
+      "summary": "高性能モデルの推論信号を軽量モデルが最終回答へ変換するDUETを提案。限界効用報酬と適応的な長さ罰則で両モデルを共同学習し、難問の正解率をおおむね維持しながら大モデル生成トークンを大幅に減らす。",
+      "char_count": 97,
+      "japanese_ratio": 1.0,
+      "failures": [],
+      "warnings": []
     },
     {
       "path": "papers/inference/99-other-inference-systems/2026-2605.03109-gated-subspace-inference-for-transformer-acceleration.md",

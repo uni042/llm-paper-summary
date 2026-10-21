@@ -1,19 +1,19 @@
 {
   "schema_version": 1,
-  "checked_at": "2026-10-21T00:39:52+00:00",
-  "status": "passed",
-  "error_count": 0,
+  "checked_at": "2026-10-21T01:53:56+00:00",
+  "status": "issues_found",
+  "error_count": 1,
   "warning_count": 0,
-  "paper_count": 2760,
-  "latest_paper_commit": "2026-10-21T00:12:49+00:00",
+  "paper_count": 2763,
+  "latest_paper_commit": "2026-10-21T01:49:22+00:00",
   "queue": {
-    "job_count": 2223,
+    "job_count": 2191,
     "snapshot_drift": true,
     "snapshot_repaired": true,
     "snapshot_repair_safe": true,
     "counts": {
       "discovery": {
-        "completed": 139,
+        "completed": 113,
         "processing": 7,
         "ready": 1
       },
@@ -21,8 +21,8 @@
         "ready": 2
       },
       "research": {
-        "superseded": 692,
-        "ready": 1351,
+        "superseded": 689,
+        "ready": 1348,
         "deferred": 8,
         "completed": 22,
         "rejected": 1
@@ -54,18 +54,32 @@
   "coverage": {
     "citation": {
       "kind": "citation",
-      "checked_at": "2026-10-21T00:39:09+00:00",
-      "total": 2760,
-      "incomplete": 0,
-      "findings": []
+      "checked_at": "2026-10-21T01:53:28+00:00",
+      "total": 2763,
+      "incomplete": 2,
+      "findings": [
+        {
+          "severity": "error",
+          "code": "citation_coverage_incomplete",
+          "detail": "citation coverage has 2 incomplete paper(s)",
+          "incomplete": 2
+        }
+      ]
     },
     "metadata": {
       "kind": "metadata",
-      "checked_at": "2026-10-21T00:39:09+00:00",
-      "total": 2760,
+      "checked_at": "2026-10-21T01:53:29+00:00",
+      "total": 2763,
       "incomplete": 0,
       "findings": []
     }
   },
-  "findings": []
+  "findings": [
+    {
+      "severity": "error",
+      "code": "citation_coverage_incomplete",
+      "detail": "citation coverage has 2 incomplete paper(s)",
+      "incomplete": 2
+    }
+  ]
 }
