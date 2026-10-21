@@ -3,7 +3,7 @@
 複数requestを複数GPU / nodeで処理するLLM servingについて、request順、batch、prefill / decodeのGPU配分、KV再利用・転送、request移動などを調整し、latencyとresource効率を改善する研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（409本）
+## 自動生成の論文一覧（411本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -796,6 +796,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   出力長予測を使わず、既得サービス量と末尾分布から要求優先度を調整し、KVを壊す頻繁なプリエンプトを幾何学的に制限して平均ではなくP95/P99遅延を安定化する。
 
+- **2026-06 · [Beyond Greedy Chunking: SLO-Aware Sliding-Window Scheduling for LLM Inference](2026-2606.05933-beyond-greedy-chunking-slo-aware-sliding-window-scheduling-for-llm-infer.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  本論文は、対話型大規模言語モデル（LLM）のオンライン配信で、利用者が要求する最初のトークンまでの時間（TTFT）と、以降のトークン間隔（TBT）の期限を守りつつ、単位時間に処理できる要求数を増やすスケジューリング方式「SlidingServe」を提案する。
+
 - **2026-06 · [AgentServeSim: Serving-System Simulation and Policy Search for LLM Agent Programs](2026-2606.09613-agentservesim-multiturn-agent-serving-simulator.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   多輪エージェントを要求列ではなく因果的なプログラムとして模擬し、ツール待ちをまたぐKV保持・セッション配置・プログラム単位スケジューリングを同一評価基盤で比較する。実vLLMとの20条件で平均完了時間誤差を約5.5%以内に抑える。
@@ -831,6 +835,10 @@
 - **2026-05 · [Keep What Audio Cannot Say: Context-Preserving Token Pruning for Omni-LLMs](2026-2605.11605-keep-what-audio-cannot-say-context-preserving-token-pruning-for-omni-llm.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   音声は短い特徴系列に圧縮されることが多い一方、映像はフレーム数と空間パッチ数に比例して長くなり、事前充填の計算、注意用メモリ、入力長の制限に影響する。Qwen2.5-Omni 7Bの6つの音声映像課題では、入力トークンを平均55%減らして、無圧縮を100とする正規化平均性能100.0を得た。
+
+- **2026-05 · [JacQuant: STE-Free Quantization-Aware Training via Learned Jacobian Surrogates](2026-2605.25469-jacquant-ste-free-quantization-aware-training-via-learned-jacobian-surro.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  JacQuantは、大規模言語モデル（LLM）を重み1〜2ビットまで圧縮する際の量子化考慮学習（量子化-aware 学習、QAT）を改善する。
 
 - **2026-05 · [Human-Less LLM Serving: Quantifying the Human Tax on Throughput](2026-2606.20577-human-less-llm-serving-human-tax-throughput.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

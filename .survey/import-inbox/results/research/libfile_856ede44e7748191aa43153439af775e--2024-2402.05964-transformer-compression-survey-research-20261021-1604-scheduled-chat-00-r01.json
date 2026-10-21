@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "21c6baedc030fc51733f47d0b714dc2896f7775e223527abd58080064403bfc5",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_856ede44e7748191aa43153439af775e--2024-2402.05964-transformer-compression-survey-research-20261021-1604-scheduled-chat-00-r01.md",
+  "canonical_id": "arXiv:2402.05964",
+  "worker_completed_at": "2026-10-21T16:09:45+09:00",
+  "worker_run_key": "20261021-1604-scheduled-chat-00/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 5733,
+    "body_paragraphs": 30,
+    "method_chars": 0,
+    "method_paragraphs": 0,
+    "evaluation_chars": 0,
+    "limitation_chars": 0,
+    "insufficiency_flags": [
+      "手法説明量 0 < 700",
+      "評価説明量 0 < 500",
+      "限界説明量 0 < 推奨 120"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 手法説明量 0 < 700",
+    "説明不足トリガー: 評価説明量 0 < 500"
+  ],
+  "processed_at": "2026-10-21T20:14:35+00:00"
+}
