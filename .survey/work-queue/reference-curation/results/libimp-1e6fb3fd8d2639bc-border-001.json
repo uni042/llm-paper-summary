@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-1e6fb3fd8d2639bc-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2303.03982",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2303.03982",
+    "identity_tokens": [
+      "arXiv:2303.03982"
+    ],
+    "reason": "S4型状態空間モデルの隠れ状態を並列初期化・リセット可能に改変し、部分観測強化学習でRNN比5倍超の速度を報告。系列処理の効率化という移転可能な技術的接点はあるが、評価対象は強化学習の制御環境で、LLM推論や言語モデルのサービングへの直接適用は要旨から確認できない。",
+    "first_checked_at": "2026-10-21T15:27:47+00:00",
+    "last_checked_at": "2026-10-21T15:27:47+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Structured State Space Models for In-Context Reinforcement Learning"
+  },
+  "processed_at": "2026-10-21T15:27:47+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-1e6fb3fd8d26",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

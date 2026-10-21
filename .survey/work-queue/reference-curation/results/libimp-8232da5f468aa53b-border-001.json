@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-8232da5f468aa53b-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2606.05158",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2606.05158",
+    "identity_tokens": [
+      "arXiv:2606.05158"
+    ],
+    "reason": "複数のLLMエージェント間で推論ステップを生成直後に転送し、下流エージェントと処理をパイプライン化して応答遅延を削減するStreamMAを提案する。エージェント実行プロトコルの遅延・費用は推論システムに隣接するが、主題は複数エージェントの推論品質とステップ粒度の協調で、GPUサービング、KVキャッシュやMoEの実行基盤ではないためborderlineとする。",
+    "first_checked_at": "2026-10-21T15:27:50+00:00",
+    "last_checked_at": "2026-10-21T15:27:50+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Streaming Communication in Multi-Agent Reasoning"
+  },
+  "processed_at": "2026-10-21T15:27:51+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-8232da5f468a",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

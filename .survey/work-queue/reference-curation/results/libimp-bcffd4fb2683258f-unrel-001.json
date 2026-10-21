@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-bcffd4fb2683258f-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2602.02050",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2602.02050",
+    "identity_tokens": [
+      "arXiv:2602.02050"
+    ],
+    "reason": "題名が扱うのはLLMエージェントのツール使用行動をエントロピーに基づき最適化するモデルの振る舞いである。推論サービングの計算資源配置、カーネル、キャッシュや並列化の実装技術を示しておらず、行動品質・最適化の研究であるため対象外。",
+    "first_checked_at": "2026-10-21T15:27:53+00:00",
+    "last_checked_at": "2026-10-21T15:27:53+00:00",
+    "linked_from": [],
+    "title": "Rethinking the Role of Entropy in Optimizing Tool-Use Behaviors for Large Language Model Agents"
+  },
+  "processed_at": "2026-10-21T15:27:53+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-bcffd4fb2683",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

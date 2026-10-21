@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a10c05423c2b1ef0-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2606.15869",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2606.15869",
+    "identity_tokens": [
+      "arXiv:2606.15869"
+    ],
+    "reason": "一次要旨では動画生成専門部と行動予測専門部を分離した混合Transformerと非対称注意マスクを用い、学習時に協調させつつ推論時は明示的な未来動画生成を省略して計算費用を減らす。推論経路短縮は技術的に関連するが、最終対象と評価は自動運転・都市ナビゲーションであり、汎用LLMのトークン生成・サービング基盤には直接適用していない。",
+    "first_checked_at": "2026-10-20T22:49:09+00:00",
+    "last_checked_at": "2026-10-21T15:27:52+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Metis: A Generalizable and Efficient World-Action Model for Autonomous Driving and Urban Navigation"
+  },
+  "processed_at": "2026-10-21T15:27:52+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a10c05423c2b",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

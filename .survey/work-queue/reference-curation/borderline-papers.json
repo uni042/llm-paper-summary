@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-21T14:44:42+00:00",
-  "record_count": 5281,
+  "updated_at": "2026-10-21T15:27:54+00:00",
+  "record_count": 5287,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -70701,9 +70701,9 @@
       "identity_tokens": [
         "arXiv:2601.08815"
       ],
-      "reason": "一次要旨は自律エージェントの入力出力、時間制約、資源上限、成功条件を契約として形式化し、階層的な委譲時に資源予算の保存を保証する。反復ワークフローでトークン使用量90%削減、分散525分の1という実験を報告し、推論費用管理に関連するが、中心はエージェントの資源ガバナンスと形式的制約であり、汎用LLM推論サービングの実装改善ではないため境界判定。",
+      "reason": "一次要旨はエージェント契約に入力・出力仕様、多次元の資源予算、時間境界、成功条件を統合し、委譲時の予算保存則と実行時制約を扱う。反復作業でトークン消費90%削減と分散の525倍低減を報告するため実行資源管理との接点はあるが、対象は自律エージェントの契約統治であり、LLM推論エンジンやGPUサービングのスケジューラを直接設計・評価した研究ではない。",
       "first_checked_at": "2026-10-11T03:32:19+00:00",
-      "last_checked_at": "2026-10-20T14:46:07+00:00",
+      "last_checked_at": "2026-10-21T15:27:54+00:00",
       "linked_from": [
         ".survey/work-queue/WORKLIST-30.md"
       ],
@@ -71054,9 +71054,9 @@
         "semanticscholar:5e364810740f92046868a4ddb7a1b30576439e4d",
         "url:https://arxiv.org/abs/2512.06688"
       ],
-      "reason": "一次要旨によると、暗黙的なユーザー選好を推測するための1000件の対話・300以上の状況・2万以上の選好を含む個人化データセットを作成し、強化微調整と可読なエージェント記憶を評価する。記憶を約2000トークンへ縮約し、3万2000トークンの会話履歴と比べて入力トークンを16分の1にする結果は推論費用に接点がある。しかし主たる技術的貢献は個人化能力・記憶の学習と正答率改善で、汎用LLMのKVキャッシュ、メモリ階層、配信スケジューラ等の実行基盤は直接最適化していないため境界判定。",
+      "reason": "利用者の暗黙的嗜好を学習・検索するエージェント記憶と個人化のベンチマークが主題。32K履歴を2K記憶へ縮約し入力トークンを16分の1にするため推論コストへの接点はあるが、主たる貢献は個人化精度と記憶学習であり、汎用LLM推論基盤の実測処理量・メモリ管理機構は要旨から確認できない。",
       "first_checked_at": "2026-10-11T10:43:47+00:00",
-      "last_checked_at": "2026-10-19T15:52:13+00:00",
+      "last_checked_at": "2026-10-21T15:27:52+00:00",
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "PersonaMem-v2: Towards Personalized Intelligence via Learning Implicit User Personas and Agentic Memory"
@@ -81109,9 +81109,9 @@
       "identity_tokens": [
         "arXiv:2602.23368"
       ],
-      "reason": "一次要旨はベクトルDBを用いるRAGと、キーワード検索ツールだけを使うエージェントの回答品質・統合費用を比較し、従来RAGの評価指標の90%以上を達成と報告する。検索基盤の単純化は推論アプリケーションの費用へ関係するが、LLMトークン生成、推論メモリ、GPUスケジューラの改善は扱わないため境界判定。",
+      "reason": "一次要旨は常設ベクトルデータベースを使う検索拡張生成と、道具利用エージェントによる文書内キーワード検索を質問応答の品質と運用費用で比較する。従来RAGの指標の90%超を達成する一方、更新頻度が高い知識源で構成を単純化できると報告する。検索基盤の効率に関係するが、LLM本体のKVキャッシュやGPU推論実行の改善は主題ではないため境界判定。",
       "first_checked_at": "2026-10-16T09:22:42+00:00",
-      "last_checked_at": "2026-10-19T16:50:38+00:00",
+      "last_checked_at": "2026-10-21T15:27:49+00:00",
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "Keyword search is all you need: Achieving RAG-Level Performance without vector databases using agentic tool use"
@@ -81163,9 +81163,9 @@
       "identity_tokens": [
         "arXiv:2205.08084"
       ],
-      "reason": "産業向け推薦を自然言語の検索・順位付け・説明生成へ統合するM6基盤モデル。遅延相互作用、早期終了、パラメータ共有、枝刈りによりクラウド・端末の推論時間とモデル容量も減らすため効率化との接点は明確だが、中心的寄与は推薦モデルの統合と下流適応であり、汎用LLM推論基盤の新規方式としての範囲は限定的。",
+      "reason": "M6を商品推薦の検索・順位付け・説明生成などに転用する応用基盤が主題。要旨には遅延相互作用、早期終了、パラメータ共有、枝刈りによる推論時間・モデルサイズ削減も明記されるが、主要な新規性は推薦タスクの統合と軽量適応であり、汎用LLM推論システムに直接適用できる独立した新規機構・定量評価は要旨だけでは確認できないため境界扱い。",
       "first_checked_at": "2026-10-16T17:49:37+00:00",
-      "last_checked_at": "2026-10-19T11:49:08+00:00",
+      "last_checked_at": "2026-10-21T15:27:47+00:00",
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "M6-Rec: Generative Pretrained Language Models are Open-Ended Recommender Systems"
@@ -81189,9 +81189,9 @@
       "identity_tokens": [
         "arXiv:2605.11856"
       ],
-      "reason": "画像・文章の推論過程を共通視覚キャンバスへ描画し潜在視覚トークンへ圧縮する多模態推論手法。生成する推論トークンを減らす計算効率への接点はあるが、中心は視覚推論品質と推論表現の学習であり、LLM配信ランタイムやGPU資源管理ではない。",
+      "reason": "一次要旨ではテキスト推論過程と補助画像を共通の視覚作業領域へ描画・圧縮し、推論時に視覚潜在トークンだけで推論して最終回答を復号する。生成する推論トークン数の削減は推論効率と関連するが、主たる実験は視覚認識・推論能力の比較で、推論サーバの実測遅延・メモリ・同時処理能力を直接最適化した研究ではない。",
       "first_checked_at": "2026-10-17T05:04:58+00:00",
-      "last_checked_at": "2026-10-19T17:54:36+00:00",
+      "last_checked_at": "2026-10-21T15:27:54+00:00",
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "UniVLR: Unifying Text and Vision in Visual Latent Reasoning for Multimodal LLMs"
@@ -81244,9 +81244,9 @@
       "identity_tokens": [
         "arXiv:2601.10120"
       ],
-      "reason": "一次要旨はLLMマルチエージェントの複数回対話を単発の通信トポロジ生成へ置換し、トークン消費46.41%減と平均課題性能1.50%改善を報告する。エージェントの推論時トークン費用・遅延に直接関係するが、主な新規性はエージェント間相互作用設計で、GPUサービング・KVキャッシュ・ランタイム最適化ではないため境界判定。",
+      "reason": "一次要旨はLLM複数エージェントの通信トポロジーを一回で構築し、反復的な協調会話を省くことで総トークン消費を46.41%削減し平均課題性能を1.50%改善すると報告する。推論時の計算・通信費用削減に接点はあるが、対象はエージェントの協調方針とタスク性能であり、LLMデコードカーネル、KVキャッシュ、バッチスケジューラなど汎用推論基盤への直接貢献は要旨から不明なので境界判定。",
       "first_checked_at": "2026-10-18T03:52:46+00:00",
-      "last_checked_at": "2026-10-19T16:50:37+00:00",
+      "last_checked_at": "2026-10-21T15:27:49+00:00",
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "TopoDIM: One-shot Topology Generation of Diverse Interaction Modes for Multi-Agent Systems"
@@ -81732,19 +81732,6 @@
       "borderline_recheck_count": 0,
       "title": "Edge-Enhanced Intelligence: A Comprehensive Survey of Large Language Models and Edge-Cloud Computing Synergy"
     },
-    "arXiv:2602.02050": {
-      "classification": "borderline",
-      "canonical_id": "arXiv:2602.02050",
-      "identity_tokens": [
-        "arXiv:2602.02050"
-      ],
-      "reason": "ツール呼出し前後の不確実性低下を報酬信号として使い、疎な結果報酬と密な過程報酬によりエージェントの不要なツール呼出しを抑える。呼出し回数削減は実行効率に寄与する一方、中心は強化学習による行動方策であり、LLM推論エンジンのスケジューリング・キャッシュ・計算機構の改良ではない。",
-      "first_checked_at": "2026-10-19T11:49:05+00:00",
-      "last_checked_at": "2026-10-19T11:49:05+00:00",
-      "linked_from": [],
-      "borderline_recheck_count": 0,
-      "title": "Rethinking the Role of Entropy in Optimizing Tool-Use Behaviors for Large Language Model Agents"
-    },
     "arXiv:2602.00471": {
       "classification": "borderline",
       "canonical_id": "arXiv:2602.00471",
@@ -81920,9 +81907,9 @@
       "identity_tokens": [
         "arXiv:2606.15869"
       ],
-      "reason": "一次要旨は自動運転の世界・行動モデルで動画生成と行動予測を別の専門家へ分け、非対称注意マスクにより学習時には共同学習しつつ推論時は動画生成を省略する。推論演算を減らす具体的機構はあるが、評価対象は運転・都市航行の計画性能であり、一般的なLLM推論サービングの資源管理やデコード方式として検証されていないため境界判定。",
+      "reason": "一次要旨では動画生成専門部と行動予測専門部を分離した混合Transformerと非対称注意マスクを用い、学習時に協調させつつ推論時は明示的な未来動画生成を省略して計算費用を減らす。推論経路短縮は技術的に関連するが、最終対象と評価は自動運転・都市ナビゲーションであり、汎用LLMのトークン生成・サービング基盤には直接適用していない。",
       "first_checked_at": "2026-10-20T22:49:09+00:00",
-      "last_checked_at": "2026-10-20T22:55:03+00:00",
+      "last_checked_at": "2026-10-21T15:27:52+00:00",
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "Metis: A Generalizable and Efficient World-Action Model for Autonomous Driving and Urban Navigation"
@@ -81952,6 +81939,97 @@
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "From Completion to Editing: Unlocking Context-Aware Code Infilling via Search-and-Replace Instruction Tuning"
+    },
+    "arXiv:2606.18112": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.18112",
+      "identity_tokens": [
+        "arXiv:2606.18112"
+      ],
+      "reason": "一次要旨はタスクモードと観測設定（視覚トークン予算、カメラ別重み）を推論時に切り替えるロボットナビゲーションモデルを提示する。観測トークン配分には推論資源最適化の接点があるが、主たる貢献・評価はナビゲーション行動とゼロショットロボット性能で、汎用LLMサービングのメモリ・スループット改善は直接検証していない。",
+      "first_checked_at": "2026-10-21T15:27:46+00:00",
+      "last_checked_at": "2026-10-21T15:27:46+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Qwen-RobotNav Technical Report: A Scalable Navigation Model Designed for an Agentic Navigation System"
+    },
+    "arXiv:2303.03982": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2303.03982",
+      "identity_tokens": [
+        "arXiv:2303.03982"
+      ],
+      "reason": "S4型状態空間モデルの隠れ状態を並列初期化・リセット可能に改変し、部分観測強化学習でRNN比5倍超の速度を報告。系列処理の効率化という移転可能な技術的接点はあるが、評価対象は強化学習の制御環境で、LLM推論や言語モデルのサービングへの直接適用は要旨から確認できない。",
+      "first_checked_at": "2026-10-21T15:27:47+00:00",
+      "last_checked_at": "2026-10-21T15:27:47+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Structured State Space Models for In-Context Reinforcement Learning"
+    },
+    "arXiv:2104.10640": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2104.10640",
+      "identity_tokens": [
+        "arXiv:2104.10640"
+      ],
+      "reason": "一次要旨ではBERT/GPT等の自然言語処理アーキテクチャを横断的に整理し、転移学習、枝刈り、量子化、知識蒸留、長文注意などの効率化技術も概説している。一方で論文の中心は多様な自然言語処理課題向けモデルの分類と比較であり、LLM推論サービング基盤の固有アルゴリズムや性能評価に直接寄与する研究ではない。関連する圧縮・注意の概説を含むため境界扱いとする。",
+      "first_checked_at": "2026-10-21T15:27:48+00:00",
+      "last_checked_at": "2026-10-21T15:27:48+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "The NLP Cookbook: Modern Recipes for Transformer based Deep Learning Architectures"
+    },
+    "arXiv:2606.05158": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.05158",
+      "identity_tokens": [
+        "arXiv:2606.05158"
+      ],
+      "reason": "複数のLLMエージェント間で推論ステップを生成直後に転送し、下流エージェントと処理をパイプライン化して応答遅延を削減するStreamMAを提案する。エージェント実行プロトコルの遅延・費用は推論システムに隣接するが、主題は複数エージェントの推論品質とステップ粒度の協調で、GPUサービング、KVキャッシュやMoEの実行基盤ではないためborderlineとする。",
+      "first_checked_at": "2026-10-21T15:27:50+00:00",
+      "last_checked_at": "2026-10-21T15:27:50+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Streaming Communication in Multi-Agent Reasoning"
+    },
+    "arXiv:2410.03051": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2410.03051",
+      "identity_tokens": [
+        "arXiv:2410.03051"
+      ],
+      "reason": "一次要旨では長い動画系列の視覚トークンを統合して入力トークン数を減らす方式を採用しており、マルチモーダルLLMの入力圧縮という推論最適化に接点がある。一方、中心貢献は動画詳細キャプションモデルとVDC評価基盤で、定量結果はキャプション品質（Flickr30k CIDEr 88.9等）に重点があり、汎用LLM配信のトークン生成速度・KVメモリ・サービング負荷改善を直接示すものではないためborderlineとする。",
+      "first_checked_at": "2026-10-21T15:27:51+00:00",
+      "last_checked_at": "2026-10-21T15:27:51+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "AuroraCap: Efficient, Performant Video Detailed Captioning and a New Benchmark"
+    },
+    "arXiv:2407.18370": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2407.18370",
+      "identity_tokens": [
+        "arXiv:2407.18370"
+      ],
+      "reason": "LLMによる回答評価で人間との一致率を保証する選択的判定が主題。安価な判定モデルから高価な判定モデルへ必要時だけ切り替えるカスケードで評価費用を抑えるが、主たる貢献は判定信頼度の較正と人間一致率保証であり、一般的なLLM推論基盤のスケジューリング・メモリ・処理量改善を主眼としないため境界扱い。",
+      "first_checked_at": "2026-10-21T15:27:52+00:00",
+      "last_checked_at": "2026-10-21T15:27:52+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Trust or Escalate: LLM Judges with Provable Guarantees for Human Agreement"
+    },
+    "arXiv:2606.03557": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.03557",
+      "identity_tokens": [
+        "arXiv:2606.03557"
+      ],
+      "reason": "エッジ上の小型言語モデルで要求意図を判定し、サービスレジストリを介して異種AIバックエンドへルーティングする運用ゲートウェイを提案する。推論サービスへのリクエストルーティング・エッジ配置は本サーベイに隣接するが、評価の中心は仮想世界InterwovenXRでの意図分類・AIサービス統合であり、LLM推論カーネル、KVキャッシュ、バッチスケジューラの性能最適化を主題としないためborderlineとする。",
+      "first_checked_at": "2026-10-21T15:27:54+00:00",
+      "last_checked_at": "2026-10-21T15:27:54+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "From Prompt to Service: An SLM-Based Agent Orchestration Gateway for AI-Driven Virtual Worlds"
     }
   }
 }

@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-7a459f1e5e204dcb-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2412.00081",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2412.00081",
+    "identity_tokens": [
+      "arXiv:2412.00081"
+    ],
+    "reason": "複数タスクの重み差分を層単位の特異ベクトルへ分解し、タスク干渉を抑えてモデルを統合する研究。TSV-Cによる10%への圧縮はタスク差分行列が対象であり、実行時のLLM重み・KVキャッシュ・推論計算を削減する機構や性能評価ではないため対象外。",
+    "first_checked_at": "2026-10-20T11:55:37+00:00",
+    "last_checked_at": "2026-10-21T15:27:50+00:00",
+    "linked_from": [],
+    "title": "Task Singular Vectors: Reducing Task Interference in Model Merging"
+  },
+  "processed_at": "2026-10-21T15:27:50+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-7a459f1e5e20",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
