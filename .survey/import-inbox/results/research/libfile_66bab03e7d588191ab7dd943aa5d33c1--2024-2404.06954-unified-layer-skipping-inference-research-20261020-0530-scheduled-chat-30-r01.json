@@ -1,13 +1,12 @@
 {
   "schema_version": 1,
   "artifact_type": "research",
-  "status": "imported",
+  "status": "blocked_quality",
   "source_sha256": "452d6ceb19f8eb6fefe5deb10bad3507d8f6d5c6cd519e2e88140d27e423234d",
-  "canonical_id": "arXiv:2404.06954",
-  "paper_path": "papers/inference/99-other-inference-systems/2024-2404.06954-accelerating-inference-in-large-language-models-with-a-unified-layer-ski.md",
-  "lineage": "99-other-inference-systems",
-  "audit_status": "WARN",
+  "normalized_source_sha256": null,
   "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_66bab03e7d588191ab7dd943aa5d33c1--2024-2404.06954-unified-layer-skipping-inference-research-20261020-0530-scheduled-chat-30-r01.md",
+  "canonical_id": "arXiv:2404.06954",
   "worker_completed_at": "2026-10-20T05:32:29+09:00",
   "worker_run_key": "20261020-0530-scheduled-chat-30/r01",
   "quality_metrics": {
@@ -22,5 +21,8 @@
       "限界説明量 0 < 推奨 120"
     ]
   },
-  "processed_at": "2026-10-20T15:11:21+00:00"
+  "failures": [
+    "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2024-2404.06954-accelerating-inference-in-large-language-models-with-a-unified-layer-ski.md と 9 段落 / 1970文字 (100.0%) が完全一致"
+  ],
+  "processed_at": "2026-10-21T18:34:03+00:00"
 }
