@@ -1,7 +1,7 @@
 # Scheduled worker :00 worklist
 
 Worker: `scheduled-chat-00`  
-Generated: `2026-10-21T09:32:03+00:00`
+Generated: `2026-10-21T10:43:31+00:00`
 
 このページはこのworker専用の再構築可能な選択索引です。他のScheduled worker用ページとは候補を重複させません（十分な在庫がある場合）。
 正本は `.survey/work-queue/jobs/`、claim、論文実体、relevance ledgerです。処理直前に最新正本を再確認してください。
@@ -13,7 +13,7 @@ Generated: `2026-10-21T09:32:03+00:00`
 
 ## 未処理 Research / Audit
 
-ready総数: **1343** / 未claim総数: **1343** / このworker向け: **200**
+ready総数: **1340** / 未claim総数: **1340** / このworker向け: **200**
 
 | # | score | 種別 | identity | title | source | 想定配置先 |
 |---:|---:|---|---|---|---|---|
@@ -207,21 +207,21 @@ ready総数: **1343** / 未claim総数: **1343** / このworker向け: **200**
 | 188 | 10 | research | arXiv:2604.26469 | An Empirical Study of Speculative Decoding on Software Engineering Tasks | [primary](https://arxiv.org/abs/2604.26469) | `papers/inference/99-other-inference-systems/2026-2604.26469-an-empirical-study-of-speculative-decoding-on-software-engineering-tasks.md` |
 | 189 | 10 | research | arXiv:2606.19348 | DeepSeek-V4: Towards Highly Efficient Million-Token Context Intelligence | [primary](https://doi.org/10.48550/arxiv.2606.19348) | `papers/inference/99-other-inference-systems/2026-2606.19348-deepseek-v4-million-token-context-intelligence.md` |
 | 190 | 10 | research | DOI:10.18267/j.aip.313 | Cloud-Based Large Language Model Deployment: A Comparative Analysis of Serverless and Bring-Your-Own-Container Architectures | [primary](https://doi.org/10.18267/j.aip.313) | `papers/inference/99-other-inference-systems/2026-a46fa3dc951e-cloud-based-large-language-model-deployment-a-comparative-analysis-of-serverless-and-bring-your-own-container-architectu.md` |
-| 191 | 10 | research | arXiv:2604.20079 | On the Quantization Robustness of Diffusion Language Models in Coding Benchmarks | [primary](https://arxiv.org/abs/2604.20079) | `papers/inference/99-other-inference-systems/2026-2604.20079-on-the-quantization-robustness-of-diffusion-language-models-in-coding-benchmarks.md` |
-| 192 | 10 | research | arXiv:2604.20021 | Continuous Semantic Caching for Low-Cost LLM Serving | [primary](https://arxiv.org/abs/2604.20021) | `papers/inference/99-other-inference-systems/2026-2604.20021-continuous-semantic-caching-for-low-cost-llm-serving.md` |
-| 193 | 10 | research | arXiv:2604.16883 | SinkRouter: Sink-Aware Routing for Efficient Long-Context Decoding in Large Language and Multimodal Models | [primary](https://arxiv.org/abs/2604.16883) | `papers/inference/99-other-inference-systems/2026-2604.16883-sinkrouter-sink-aware-routing-for-efficient-long-context-decoding-in-large-language-and-multimodal-models.md` |
-| 194 | 10 | research | arXiv:2604.15009 | Towards Faster Language Model Inference Using Mixture-of-Experts Flow Matching | [primary](https://arxiv.org/abs/2604.15009) | `papers/inference/99-other-inference-systems/2026-2604.15009-towards-faster-language-model-inference-using-mixture-of-experts-flow-matching.md` |
-| 195 | 10 | research | arXiv:2604.10496 | CodeQuant: Unified Clustering and Quantization for Enhanced Outlier Smoothing in Low-Precision Mixture-of-Experts | [primary](https://arxiv.org/abs/2604.10496) | `papers/inference/99-other-inference-systems/2026-2604.10496-codequant-unified-clustering-and-quantization-for-enhanced-outlier-smoothing-in-low-precision-mixture-of-experts.md` |
-| 196 | 10 | research | arXiv:2604.09512 | Integrated electro-optic attention nonlinearities for transformers | [primary](https://arxiv.org/abs/2604.09512) | `papers/inference/99-other-inference-systems/2026-2604.09512-integrated-electro-optic-attention-nonlinearities-for-transformers.md` |
-| 197 | 10 | research | arXiv:2604.06804 | LASER: A Data-Centric Method for Low-Cost and Efficient SQL Rewriting based on SQL-GRPO | [primary](https://arxiv.org/abs/2604.06804) | `papers/inference/99-other-inference-systems/2026-2604.06804-laser-a-data-centric-method-for-low-cost-and-efficient-sql-rewriting-based-on-sql-grpo.md` |
-| 198 | 10 | research | arXiv:2604.04599 | LP-GEMM: Integrating Layout Propagation into GEMM Operations | [primary](https://arxiv.org/abs/2604.04599) | `papers/inference/99-other-inference-systems/2026-2604.04599-lp-gemm-integrating-layout-propagation-into-gemm-operations.md` |
-| 199 | 10 | research | arXiv:2604.16400 | CoLLM: Continuous Adaptation for SLO-Aware LLM Serving on Shared GPU Clusters | [primary](https://arxiv.org/abs/2604.16400) | `papers/inference/99-other-inference-systems/2026-2604.16400-collm-continuous-adaptation-for-slo-aware-llm-serving-on-shared-gpu-clusters.md` |
-| 200 | 10 | research | arXiv:2603.27027 | TAPS: Task Aware Proposal Distributions for Speculative Sampling | [primary](https://arxiv.org/abs/2603.27027) | `papers/inference/99-other-inference-systems/2026-2603.27027-taps-task-aware-proposal-distributions-for-speculative-sampling.md` |
+| 191 | 10 | research | arXiv:2604.19835 | Expert Upcycling: Shifting the Compute-Efficient Frontier of Mixture-of-Experts | [primary](https://arxiv.org/abs/2604.19835) | `papers/training/02-distributed-heterogeneous-moe-training/2026-2604.19835-expert-upcycling-progressive-moe-expansion.md` |
+| 192 | 10 | research | DOI:10.23919/DATE69613.2026.11539489 | IterQuant: Iterative Quantization Framework for Mixed-Precision LLM Compression | [primary](https://doi.org/10.23919/DATE69613.2026.11539489) | `papers/inference/99-other-inference-systems/2026-2a71263c4c71-iterquant-iterative-quantization-framework-for-mixed-precision-llm-compression.md` |
+| 193 | 10 | research | arXiv:2604.14690 | Switching Efficiency: A Novel Framework for Dissecting AI Data Center Network Efficiency | [primary](https://arxiv.org/abs/2604.14690) | `papers/inference/99-other-inference-systems/2026-2604.14690-switching-efficiency-a-novel-framework-for-dissecting-ai-data-center-network-efficiency.md` |
+| 194 | 10 | research | DOI:10.1145/3807449 | Optimizing Attention for Large Language Model Inference on the MT-3000 Many-Core Processor | [primary](https://doi.org/10.1145/3807449) | `papers/inference/99-other-inference-systems/0000-b773cb71ada7-optimizing-attention-for-large-language-model-inference-on-the-mt-3000-many-core-processor.md` |
+| 195 | 10 | research | arXiv:2604.10064 | On The Application of Linear Attention in Multimodal Transformers | [primary](https://arxiv.org/abs/2604.10064) | `papers/inference/99-other-inference-systems/2026-2604.10064-on-the-application-of-linear-attention-in-multimodal-transformers.md` |
+| 196 | 10 | research | arXiv:2604.06804 | LASER: A Data-Centric Method for Low-Cost and Efficient SQL Rewriting based on SQL-GRPO | [primary](https://arxiv.org/abs/2604.06804) | `papers/inference/99-other-inference-systems/2026-2604.06804-laser-a-data-centric-method-for-low-cost-and-efficient-sql-rewriting-based-on-sql-grpo.md` |
+| 197 | 10 | research | arXiv:2604.04599 | LP-GEMM: Integrating Layout Propagation into GEMM Operations | [primary](https://arxiv.org/abs/2604.04599) | `papers/inference/99-other-inference-systems/2026-2604.04599-lp-gemm-integrating-layout-propagation-into-gemm-operations.md` |
+| 198 | 10 | research | arXiv:2604.16400 | CoLLM: Continuous Adaptation for SLO-Aware LLM Serving on Shared GPU Clusters | [primary](https://arxiv.org/abs/2604.16400) | `papers/inference/99-other-inference-systems/2026-2604.16400-collm-continuous-adaptation-for-slo-aware-llm-serving-on-shared-gpu-clusters.md` |
+| 199 | 10 | research | arXiv:2603.27027 | TAPS: Task Aware Proposal Distributions for Speculative Sampling | [primary](https://arxiv.org/abs/2603.27027) | `papers/inference/99-other-inference-systems/2026-2603.27027-taps-task-aware-proposal-distributions-for-speculative-sampling.md` |
+| 200 | 10 | research | arXiv:2603.25766 | ETA-VLA: Efficient Token Adaptation via Temporal Fusion and Intra-LLM Sparsification for Vision-Language-Action Models | [primary](https://arxiv.org/abs/2603.25766) | `papers/inference/99-other-inference-systems/2026-2603.25766-eta-vla-efficient-token-adaptation-via-temporal-fusion-and-intra-llm-sparsification-for-vision-language-action-models.md` |
 
 ## リスト入り判定待ち Discovery候補
 
-未判定総数: **122954** / このworker向け: **500**
-事前選別: **quarantine** / 暫定隔離 **116980** / 監査再投入 **0** / 機械規則適用後 **119471** / 選抜率 **5.0%** （候補の正本は保持。隔離はunrelated判定ではない）
+未判定総数: **122958** / このworker向け: **500**
+事前選別: **quarantine** / 暫定隔離 **116984** / 監査再投入 **0** / 機械規則適用後 **119475** / 選抜率 **5.0%** （候補の正本は保持。隔離はunrelated判定ではない）
 
 | # | priority | 系統内引用最多 | 系統内引用合計 | identity | title | published | venue | 全被引用 | 参照関係 | 系統候補 | source |
 |---:|---:|---:|---:|---|---|---|---|---:|---:|---|---|
@@ -246,7 +246,7 @@ ready総数: **1343** / 未claim総数: **1343** / このworker向け: **200**
 | 19 | 105 | 12 | 23 | arXiv:2607.25380 | Memory for Large Language Models | 2026-07-28 | arXiv.org | 5 | 23 | 03-attention-kernels, KV cache memory management / streaming inference / attention sinks / length extrapolation, LLM Serving / Scheduling / Disaggregation, sparse attention / long-context Transformer, state space models / selective SSM / recurrent inference / hardware-aware sequence modeling, 疎注意／長文脈学習 | [source](https://arxiv.org/abs/2607.25380) |
 | 20 | 0 | 12 | 22 | SemanticScholar:821ab7f7d4a4439675366ae4e38edb2637e67afa | P OLYBASIC S PECULATIVE D ECODING U NDER A T HE - ORETICAL P ERSPECTIVE |  |  | 0 | 22 | Conditional Computation, KV cache eviction / heavy hitters / sparse attention / efficient inference, KV cache memory management / streaming inference / attention sinks / length extrapolation, KVキャッシュ最適化／適応圧縮, Speculative Decoding, inference-systems, survey-speculative-decoding, 投機的デコード / 分布保存型デコード高速化, 投機的復号 / 無損失復号高速化, 投機的復号・オンライン適応・知識蒸留 | [source](https://www.semanticscholar.org/paper/821ab7f7d4a4439675366ae4e38edb2637e67afa) |
 | 21 | 10 | 12 | 18 | arXiv:2605.27390 | EvoSpec: Evolving Speculative Decoding via Real-Time Vocabulary and Parameter Adaptation | 2026-04-17 | arXiv.org | 0 | 18 | LLM inference surveys、roofline performance analysis, Speculative Decoding, inference-systems, speculative-decoding, survey-speculative-decoding, 投機的デコード / 分布保存型デコード高速化, 投機的デコード / 知識蒸留 / ドラフトモデル整合, 投機的復号 / EAGLE, 投機的復号 / 無損失復号高速化, 投機的復号・オンライン適応・知識蒸留 | [source](https://arxiv.org/abs/2605.27390) |
-| 22 | 101 | 12 | 17 | arXiv:2603.20997 | When Does Content-Based Routing Work? Representation Requirements for Selective Attention in Hybrid Sequence Models | 2026-03-22 | arXiv.org | 1 | 17 | sparse attention / long-context Transformer, state space models / selective SSM / recurrent inference / hardware-aware sequence modeling, 注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層 | [source](https://arxiv.org/abs/2603.20997) |
+| 22 | 101 | 12 | 17 | arXiv:2603.20997 | When Does Content-Based Routing Work? Representation Requirements for Selective Attention in Hybrid Sequence Models | 2026-03-22 | arXiv.org | 1 | 1 |  | [source](https://arxiv.org/abs/2603.20997) |
 | 23 | 101 | 12 | 16 | arXiv:2605.13473 | OSDN: Improving Delta Rule with Provable Online Preconditioning in Linear Attention | 2026-05-13 | arXiv.org | 1 | 16 | state space models / selective SSM / recurrent inference / hardware-aware sequence modeling | [source](https://arxiv.org/abs/2605.13473) |
 | 24 | 10 | 12 | 13 | arXiv:2609.05152 | Compression Beyond the Uncompressed: A Two-Stage Training Recipe for Soft Context Compression in RAG | 2026-09-04 |  | 0 | 13 | inference-systems | [source](https://arxiv.org/abs/2609.05152) |
 | 25 | 106 | 11 | 23 | arXiv:2603.25284 | SliderQuant: Accurate Post-Training Quantization for LLMs | 2026-03-26 | arXiv.org | 6 | 23 | Weight Quantization / Compression, arXiv:2405.16406のICLR 2025採録版。, inference-systems, post-training quantization / second-order compression / weight-only LLM inference, 大規模言語モデル重み量子化 / 混合精度 / 疎量子化 | [source](https://arxiv.org/abs/2603.25284) |

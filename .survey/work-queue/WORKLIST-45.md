@@ -1,7 +1,7 @@
 # Scheduled worker :45 worklist
 
 Worker: `scheduled-chat-45`  
-Generated: `2026-10-21T09:32:03+00:00`
+Generated: `2026-10-21T10:43:31+00:00`
 
 このページはこのworker専用の再構築可能な選択索引です。他のScheduled worker用ページとは候補を重複させません（十分な在庫がある場合）。
 正本は `.survey/work-queue/jobs/`、claim、論文実体、relevance ledgerです。処理直前に最新正本を再確認してください。
@@ -13,7 +13,7 @@ Generated: `2026-10-21T09:32:03+00:00`
 
 ## 未処理 Research / Audit
 
-ready総数: **1343** / 未claim総数: **1343** / このworker向け: **200**
+ready総数: **1340** / 未claim総数: **1340** / このworker向け: **200**
 
 | # | score | 種別 | identity | title | source | 想定配置先 |
 |---:|---:|---|---|---|---|---|
@@ -206,22 +206,22 @@ ready総数: **1343** / 未claim総数: **1343** / このworker向け: **200**
 | 187 | 10 | research | arXiv:2604.26334 | Efficient, VRAM-Constrained xLM Inference on Clients | [primary](https://arxiv.org/abs/2604.26334) | `papers/inference/99-other-inference-systems/2026-2604.26334-efficient-vram-constrained-xlm-inference-on-clients.md` |
 | 188 | 10 | research | arXiv:2604.24715 | Long-Context Aware Upcycling: A New Frontier for Hybrid LLM Scaling | [primary](https://arxiv.org/abs/2604.24715) | `papers/inference/99-other-inference-systems/2026-2604.24715-long-context-aware-upcycling-a-new-frontier-for-hybrid-llm-scaling.md` |
 | 189 | 10 | research | DOI:10.1145/3767295.3769364 | SAS: Sparse Attention Synthesizer for Efficient Language Model Inference | [primary](https://doi.org/10.1145/3767295.3769364) | `papers/inference/99-other-inference-systems/2026-35256164722e-sas-sparse-attention-synthesizer-for-efficient-language-model-inference.md` |
-| 190 | 10 | research | arXiv:2604.21335 | Sub-Token Routing in LoRA for Adaptation and Query-Aware KV Compression | [primary](https://doi.org/10.48550/arXiv.2604.21335) | `papers/inference/99-other-inference-systems/2026-2604.21335-sub-token-routing-for-kv-cache-compression.md` |
-| 191 | 10 | research | arXiv:2604.19835 | Expert Upcycling: Shifting the Compute-Efficient Frontier of Mixture-of-Experts | [primary](https://arxiv.org/abs/2604.19835) | `papers/training/02-distributed-heterogeneous-moe-training/2026-2604.19835-expert-upcycling-progressive-moe-expansion.md` |
-| 192 | 10 | research | DOI:10.23919/DATE69613.2026.11539489 | IterQuant: Iterative Quantization Framework for Mixed-Precision LLM Compression | [primary](https://doi.org/10.23919/DATE69613.2026.11539489) | `papers/inference/99-other-inference-systems/2026-2a71263c4c71-iterquant-iterative-quantization-framework-for-mixed-precision-llm-compression.md` |
-| 193 | 10 | research | arXiv:2604.14690 | Switching Efficiency: A Novel Framework for Dissecting AI Data Center Network Efficiency | [primary](https://arxiv.org/abs/2604.14690) | `papers/inference/99-other-inference-systems/2026-2604.14690-switching-efficiency-a-novel-framework-for-dissecting-ai-data-center-network-efficiency.md` |
-| 194 | 10 | research | DOI:10.1145/3807449 | Optimizing Attention for Large Language Model Inference on the MT-3000 Many-Core Processor | [primary](https://doi.org/10.1145/3807449) | `papers/inference/99-other-inference-systems/0000-b773cb71ada7-optimizing-attention-for-large-language-model-inference-on-the-mt-3000-many-core-processor.md` |
-| 195 | 10 | research | arXiv:2604.10064 | On The Application of Linear Attention in Multimodal Transformers | [primary](https://arxiv.org/abs/2604.10064) | `papers/inference/99-other-inference-systems/2026-2604.10064-on-the-application-of-linear-attention-in-multimodal-transformers.md` |
-| 196 | 10 | research | arXiv:2604.07857 | Networking-Aware Energy Efficiency in Agentic AI Inference: A Survey | [primary](https://arxiv.org/abs/2604.07857) | `papers/inference/99-other-inference-systems/2026-2604.07857-networking-aware-energy-efficiency-in-agentic-ai-inference-a-survey.md` |
-| 197 | 10 | research | arXiv:2604.06296 | AgentOpt v0.1 Technical Report: Client-Side Optimization for LLM-Based Agent | [primary](https://arxiv.org/abs/2604.06296) | `papers/inference/99-other-inference-systems/2026-2604.06296-agentopt-v0-1-technical-report-client-side-optimization-for-llm-based-agent.md` |
-| 198 | 10 | research | arXiv:2604.00292 | MambaVoiceCloning: Efficient and Expressive Text-to-Speech via State-Space Modeling and Diffusion Control | [primary](https://arxiv.org/abs/2604.00292) | `papers/inference/99-other-inference-systems/2026-2604.00292-mambavoicecloning-efficient-and-expressive-text-to-speech-via-state-space-modeling-and-diffusion-control.md` |
-| 199 | 10 | research | arXiv:2603.27462 | RSR-core: A High-Performance Engine for Low-Bit Matrix-Vector Multiplication | [primary](https://arxiv.org/abs/2603.27462) | `papers/inference/99-other-inference-systems/2026-2603.27462-rsr-core-a-high-performance-engine-for-low-bit-matrix-vector-multiplication.md` |
-| 200 | 10 | research | arXiv:2604.19767 | Accelerating Paypal's Commerce Agent with Speculative Decoding: An Empirical Study on EAGLE3 with Fine-Tuned Nemotron Models | [primary](https://arxiv.org/abs/2604.19767) | `papers/inference/99-other-inference-systems/2026-2604.19767-accelerating-paypal-s-commerce-agent-with-speculative-decoding-an-empirical-study-on-eagle3-with-fine-tuned-nemotron-mod.md` |
+| 190 | 10 | research | arXiv:2604.20079 | On the Quantization Robustness of Diffusion Language Models in Coding Benchmarks | [primary](https://arxiv.org/abs/2604.20079) | `papers/inference/99-other-inference-systems/2026-2604.20079-on-the-quantization-robustness-of-diffusion-language-models-in-coding-benchmarks.md` |
+| 191 | 10 | research | DOI:10.23919/DATE69613.2026.11539270 | SA-ANT: Efficient Low-Bit Group-Wise Quantization for Large Language Models via Sign-Asymmetric Adaptive Numeric Type | [primary](https://doi.org/10.23919/DATE69613.2026.11539270) | `papers/inference/99-other-inference-systems/2026-4afc6233177a-sa-ant-efficient-low-bit-group-wise-quantization-for-large-language-models-via-sign-asymmetric-adaptive-numeric-type.md` |
+| 192 | 10 | research | arXiv:2604.15672 | Faster LLM Inference via Sequential Monte Carlo | [primary](https://arxiv.org/abs/2604.15672) | `papers/inference/99-other-inference-systems/2026-2604.15672-faster-llm-inference-via-sequential-monte-carlo.md` |
+| 193 | 10 | research | arXiv:2606.00024 | ART: Attention Run-time Termination for Efficient Large Language Model Decoding | [primary](https://arxiv.org/abs/2606.00024) | `papers/inference/99-other-inference-systems/2026-2606.00024-art-attention-run-time-termination-for-efficient-large-language-model-decoding.md` |
+| 194 | 10 | research | DOI:10.1145/3774904.3792382 | LaTune: Lightweight and Adaptive Configuration Tuning for LLM Inference on Edge Devices | [primary](https://doi.org/10.1145/3774904.3792382) | `papers/inference/99-other-inference-systems/0000-eca23c0f0708-latune-lightweight-and-adaptive-configuration-tuning-for-llm-inference-on-edge-devices.md` |
+| 195 | 10 | research | arXiv:2604.07857 | Networking-Aware Energy Efficiency in Agentic AI Inference: A Survey | [primary](https://arxiv.org/abs/2604.07857) | `papers/inference/99-other-inference-systems/2026-2604.07857-networking-aware-energy-efficiency-in-agentic-ai-inference-a-survey.md` |
+| 196 | 10 | research | arXiv:2604.06296 | AgentOpt v0.1 Technical Report: Client-Side Optimization for LLM-Based Agent | [primary](https://arxiv.org/abs/2604.06296) | `papers/inference/99-other-inference-systems/2026-2604.06296-agentopt-v0-1-technical-report-client-side-optimization-for-llm-based-agent.md` |
+| 197 | 10 | research | arXiv:2604.00292 | MambaVoiceCloning: Efficient and Expressive Text-to-Speech via State-Space Modeling and Diffusion Control | [primary](https://arxiv.org/abs/2604.00292) | `papers/inference/99-other-inference-systems/2026-2604.00292-mambavoicecloning-efficient-and-expressive-text-to-speech-via-state-space-modeling-and-diffusion-control.md` |
+| 198 | 10 | research | arXiv:2603.27462 | RSR-core: A High-Performance Engine for Low-Bit Matrix-Vector Multiplication | [primary](https://arxiv.org/abs/2603.27462) | `papers/inference/99-other-inference-systems/2026-2603.27462-rsr-core-a-high-performance-engine-for-low-bit-matrix-vector-multiplication.md` |
+| 199 | 10 | research | arXiv:2604.19767 | Accelerating Paypal's Commerce Agent with Speculative Decoding: An Empirical Study on EAGLE3 with Fine-Tuned Nemotron Models | [primary](https://arxiv.org/abs/2604.19767) | `papers/inference/99-other-inference-systems/2026-2604.19767-accelerating-paypal-s-commerce-agent-with-speculative-decoding-an-empirical-study-on-eagle3-with-fine-tuned-nemotron-mod.md` |
+| 200 | 10 | research | arXiv:2603.20616 | Beyond Token Eviction: Mixed-Dimension Budget Allocation for Efficient KV Cache Compression | [primary](https://arxiv.org/abs/2603.20616) | `papers/inference/99-other-inference-systems/2026-2603.20616-beyond-token-eviction-mixed-dimension-budget-allocation-for-efficient-kv-cache-compression.md` |
 
 ## リスト入り判定待ち Discovery候補
 
-未判定総数: **122954** / このworker向け: **500**
-事前選別: **quarantine** / 暫定隔離 **116980** / 監査再投入 **0** / 機械規則適用後 **119471** / 選抜率 **5.0%** （候補の正本は保持。隔離はunrelated判定ではない）
+未判定総数: **122958** / このworker向け: **500**
+事前選別: **quarantine** / 暫定隔離 **116984** / 監査再投入 **0** / 機械規則適用後 **119475** / 選抜率 **5.0%** （候補の正本は保持。隔離はunrelated判定ではない）
 
 | # | priority | 系統内引用最多 | 系統内引用合計 | identity | title | published | venue | 全被引用 | 参照関係 | 系統候補 | source |
 |---:|---:|---:|---:|---|---|---|---|---:|---:|---|---|

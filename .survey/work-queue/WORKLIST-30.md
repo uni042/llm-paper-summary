@@ -1,7 +1,7 @@
 # Scheduled worker :30 worklist
 
 Worker: `scheduled-chat-30`  
-Generated: `2026-10-21T09:32:03+00:00`
+Generated: `2026-10-21T10:43:31+00:00`
 
 このページはこのworker専用の再構築可能な選択索引です。他のScheduled worker用ページとは候補を重複させません（十分な在庫がある場合）。
 正本は `.survey/work-queue/jobs/`、claim、論文実体、relevance ledgerです。処理直前に最新正本を再確認してください。
@@ -13,7 +13,7 @@ Generated: `2026-10-21T09:32:03+00:00`
 
 ## 未処理 Research / Audit
 
-ready総数: **1343** / 未claim総数: **1343** / このworker向け: **200**
+ready総数: **1340** / 未claim総数: **1340** / このworker向け: **200**
 
 | # | score | 種別 | identity | title | source | 想定配置先 |
 |---:|---:|---|---|---|---|---|
@@ -206,22 +206,22 @@ ready総数: **1343** / 未claim総数: **1343** / このworker向け: **200**
 | 187 | 10 | research | DOI:10.1007/s44443-026-00801-8 | Lightweight surprise-on-memory: efficient engagement recognition via prediction error-guided updates | [primary](https://doi.org/10.1007/s44443-026-00801-8) | `papers/inference/99-other-inference-systems/2026-8006a0399534-lightweight-surprise-on-memory-efficient-engagement-recognition-via-prediction-error-guided-updates.md` |
 | 188 | 10 | research | arXiv:2604.26821 | Exploring the Efficiency of 3D-Stacked AI Chip Architecture for LLM Inference with Voxel | [primary](https://arxiv.org/abs/2604.26821) | `papers/inference/99-other-inference-systems/2026-2604.26821-exploring-the-efficiency-of-3d-stacked-ai-chip-architecture-for-llm-inference-with-voxel.md` |
 | 189 | 10 | research | DOI:10.1109/ISPASS69572.2026.00016 | HARMONI: Hierarchical ARchitecture MOdeling for LLMs with Near/In Memory Computing | [primary](https://doi.org/10.1109/ISPASS69572.2026.00016) | `papers/inference/99-other-inference-systems/2020-2026.00016-harmoni-hierarchical-architecture-modeling-for-llms-with-near-in-memory-computing.md` |
-| 190 | 10 | research | arXiv:2604.22442 | HubRouter: A Pluggable Sub-Quadratic Routing Primitive for Hybrid Sequence Models | [primary](https://arxiv.org/abs/2604.22442) | `papers/inference/99-other-inference-systems/2026-2604.22442-hubrouter-a-pluggable-sub-quadratic-routing-primitive-for-hybrid-sequence-models.md` |
-| 191 | 10 | research | arXiv:2604.21026 | MCAP: Deployment-Time Layer Profiling for Memory-Constrained LLM Inference | [primary](https://arxiv.org/abs/2604.21026) | `papers/inference/99-other-inference-systems/2026-2604.21026-mcap-deployment-time-layer-profiling-for-memory-constrained-llm-inference.md` |
-| 192 | 10 | research | DOI:10.23919/DATE69613.2026.11539270 | SA-ANT: Efficient Low-Bit Group-Wise Quantization for Large Language Models via Sign-Asymmetric Adaptive Numeric Type | [primary](https://doi.org/10.23919/DATE69613.2026.11539270) | `papers/inference/99-other-inference-systems/2026-4afc6233177a-sa-ant-efficient-low-bit-group-wise-quantization-for-large-language-models-via-sign-asymmetric-adaptive-numeric-type.md` |
-| 193 | 10 | research | arXiv:2604.15672 | Faster LLM Inference via Sequential Monte Carlo | [primary](https://arxiv.org/abs/2604.15672) | `papers/inference/99-other-inference-systems/2026-2604.15672-faster-llm-inference-via-sequential-monte-carlo.md` |
-| 194 | 10 | research | arXiv:2606.00024 | ART: Attention Run-time Termination for Efficient Large Language Model Decoding | [primary](https://arxiv.org/abs/2606.00024) | `papers/inference/99-other-inference-systems/2026-2606.00024-art-attention-run-time-termination-for-efficient-large-language-model-decoding.md` |
-| 195 | 10 | research | DOI:10.1145/3774904.3792382 | LaTune: Lightweight and Adaptive Configuration Tuning for LLM Inference on Edge Devices | [primary](https://doi.org/10.1145/3774904.3792382) | `papers/inference/99-other-inference-systems/0000-eca23c0f0708-latune-lightweight-and-adaptive-configuration-tuning-for-llm-inference-on-edge-devices.md` |
-| 196 | 10 | research | arXiv:2604.09547 | Tango: Taming Visual Signals for Efficient Video Large Language Models | [primary](https://arxiv.org/abs/2604.09547) | `papers/inference/99-other-inference-systems/2026-2604.09547-tango-taming-visual-signals-for-efficient-video-large-language-models.md` |
-| 197 | 10 | research | arXiv:2604.07023 | MARS: Enabling Autoregressive Models Multi-Token Generation | [primary](https://arxiv.org/abs/2604.07023) | `papers/inference/99-other-inference-systems/2026-2604.07023-mars-enabling-autoregressive-models-multi-token-generation.md` |
-| 198 | 10 | research | arXiv:2604.03446 | Fast Cross-Operator Optimization of Attention Dataflow | [primary](https://arxiv.org/abs/2604.03446) | `papers/inference/99-other-inference-systems/2026-2604.03446-fast-cross-operator-optimization-of-attention-dataflow.md` |
-| 199 | 10 | research | arXiv:2603.28622 | Trust-Aware Routing for Distributed Generative AI Inference at the Edge | [primary](https://arxiv.org/abs/2603.28622) | `papers/inference/99-other-inference-systems/2026-2603.28622-trust-aware-routing-for-distributed-generative-ai-inference-at-the-edge.md` |
-| 200 | 10 | research | arXiv:2604.18592 | Two-dimensional early exit optimisation of LLM inference | [primary](https://arxiv.org/abs/2604.18592) | `papers/inference/99-other-inference-systems/2026-2604.18592-two-dimensional-early-exit-optimisation-of-llm-inference.md` |
+| 190 | 10 | research | arXiv:2604.21335 | Sub-Token Routing in LoRA for Adaptation and Query-Aware KV Compression | [primary](https://doi.org/10.48550/arXiv.2604.21335) | `papers/inference/99-other-inference-systems/2026-2604.21335-sub-token-routing-for-kv-cache-compression.md` |
+| 191 | 10 | research | arXiv:2604.20021 | Continuous Semantic Caching for Low-Cost LLM Serving | [primary](https://arxiv.org/abs/2604.20021) | `papers/inference/99-other-inference-systems/2026-2604.20021-continuous-semantic-caching-for-low-cost-llm-serving.md` |
+| 192 | 10 | research | arXiv:2604.16883 | SinkRouter: Sink-Aware Routing for Efficient Long-Context Decoding in Large Language and Multimodal Models | [primary](https://arxiv.org/abs/2604.16883) | `papers/inference/99-other-inference-systems/2026-2604.16883-sinkrouter-sink-aware-routing-for-efficient-long-context-decoding-in-large-language-and-multimodal-models.md` |
+| 193 | 10 | research | arXiv:2604.15009 | Towards Faster Language Model Inference Using Mixture-of-Experts Flow Matching | [primary](https://arxiv.org/abs/2604.15009) | `papers/inference/99-other-inference-systems/2026-2604.15009-towards-faster-language-model-inference-using-mixture-of-experts-flow-matching.md` |
+| 194 | 10 | research | arXiv:2604.10496 | CodeQuant: Unified Clustering and Quantization for Enhanced Outlier Smoothing in Low-Precision Mixture-of-Experts | [primary](https://arxiv.org/abs/2604.10496) | `papers/inference/99-other-inference-systems/2026-2604.10496-codequant-unified-clustering-and-quantization-for-enhanced-outlier-smoothing-in-low-precision-mixture-of-experts.md` |
+| 195 | 10 | research | arXiv:2604.09512 | Integrated electro-optic attention nonlinearities for transformers | [primary](https://arxiv.org/abs/2604.09512) | `papers/inference/99-other-inference-systems/2026-2604.09512-integrated-electro-optic-attention-nonlinearities-for-transformers.md` |
+| 196 | 10 | research | arXiv:2604.07023 | MARS: Enabling Autoregressive Models Multi-Token Generation | [primary](https://arxiv.org/abs/2604.07023) | `papers/inference/99-other-inference-systems/2026-2604.07023-mars-enabling-autoregressive-models-multi-token-generation.md` |
+| 197 | 10 | research | arXiv:2604.03446 | Fast Cross-Operator Optimization of Attention Dataflow | [primary](https://arxiv.org/abs/2604.03446) | `papers/inference/99-other-inference-systems/2026-2604.03446-fast-cross-operator-optimization-of-attention-dataflow.md` |
+| 198 | 10 | research | arXiv:2603.28622 | Trust-Aware Routing for Distributed Generative AI Inference at the Edge | [primary](https://arxiv.org/abs/2603.28622) | `papers/inference/99-other-inference-systems/2026-2603.28622-trust-aware-routing-for-distributed-generative-ai-inference-at-the-edge.md` |
+| 199 | 10 | research | arXiv:2604.18592 | Two-dimensional early exit optimisation of LLM inference | [primary](https://arxiv.org/abs/2604.18592) | `papers/inference/99-other-inference-systems/2026-2604.18592-two-dimensional-early-exit-optimisation-of-llm-inference.md` |
+| 200 | 10 | research | arXiv:2603.21365 | TIDE: Token-Informed Depth Execution for Per-Token Early Exit in LLM Inference | [primary](https://arxiv.org/abs/2603.21365) | `papers/inference/99-other-inference-systems/2026-2603.21365-tide-token-informed-depth-execution-for-per-token-early-exit-in-llm-inference.md` |
 
 ## リスト入り判定待ち Discovery候補
 
-未判定総数: **122954** / このworker向け: **500**
-事前選別: **quarantine** / 暫定隔離 **116980** / 監査再投入 **0** / 機械規則適用後 **119471** / 選抜率 **5.0%** （候補の正本は保持。隔離はunrelated判定ではない）
+未判定総数: **122958** / このworker向け: **500**
+事前選別: **quarantine** / 暫定隔離 **116984** / 監査再投入 **0** / 機械規則適用後 **119475** / 選抜率 **5.0%** （候補の正本は保持。隔離はunrelated判定ではない）
 
 | # | priority | 系統内引用最多 | 系統内引用合計 | identity | title | published | venue | 全被引用 | 参照関係 | 系統候補 | source |
 |---:|---:|---:|---:|---|---|---|---|---:|---:|---|---|
