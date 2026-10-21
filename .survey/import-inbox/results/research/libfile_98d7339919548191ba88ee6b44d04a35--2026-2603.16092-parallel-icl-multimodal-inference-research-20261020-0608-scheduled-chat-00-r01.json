@@ -1,13 +1,12 @@
 {
   "schema_version": 1,
   "artifact_type": "research",
-  "status": "imported",
+  "status": "blocked_quality",
   "source_sha256": "1aa4452b89785cb3fa190b97871d9d7fd677da6e1109501c3b40532b5de2b1cf",
-  "canonical_id": "arXiv:2603.16092",
-  "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2603.16092-parallel-in-context-learning-for-large-vision-language-models.md",
-  "lineage": "11-llm-serving-scheduling-disaggregation",
-  "audit_status": "PASS",
+  "normalized_source_sha256": null,
   "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_98d7339919548191ba88ee6b44d04a35--2026-2603.16092-parallel-icl-multimodal-inference-research-20261020-0608-scheduled-chat-00-r01.md",
+  "canonical_id": "arXiv:2603.16092",
   "worker_completed_at": "2026-10-20T06:14:12+09:00",
   "worker_run_key": "20261020-0608-scheduled-chat-00/r01",
   "quality_metrics": {
@@ -20,5 +19,8 @@
     "limitation_chars": 792,
     "insufficiency_flags": []
   },
-  "processed_at": "2026-10-20T15:43:51+00:00"
+  "failures": [
+    "長文定型文の再利用を検出: papers/inference/11-llm-serving-scheduling-disaggregation/2026-2603.16092-parallel-in-context-learning-for-large-vision-language-models.md と 10 段落 / 2705文字 (100.0%) が完全一致"
+  ],
+  "processed_at": "2026-10-21T20:41:12+00:00"
 }

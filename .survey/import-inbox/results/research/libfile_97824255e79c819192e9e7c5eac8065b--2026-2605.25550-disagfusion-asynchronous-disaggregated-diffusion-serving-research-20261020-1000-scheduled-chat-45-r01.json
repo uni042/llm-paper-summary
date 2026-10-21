@@ -1,13 +1,12 @@
 {
   "schema_version": 1,
   "artifact_type": "research",
-  "status": "imported",
+  "status": "blocked_quality",
   "source_sha256": "25e007dd67d2b336d961040082b004d7380966620d323ff1d8f997262924675c",
-  "canonical_id": "arXiv:2605.25550",
-  "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2605.25550-disagfusion-asynchronous-pipeline-parallelism-and-elastic-scheduling-for.md",
-  "lineage": "11-llm-serving-scheduling-disaggregation",
-  "audit_status": "PASS",
+  "normalized_source_sha256": null,
   "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_97824255e79c819192e9e7c5eac8065b--2026-2605.25550-disagfusion-asynchronous-disaggregated-diffusion-serving-research-20261020-1000-scheduled-chat-45-r01.md",
+  "canonical_id": "arXiv:2605.25550",
   "worker_completed_at": "2026-10-20T10:06:00+09:00",
   "worker_run_key": "20261020-1000-scheduled-chat-45/r01",
   "quality_metrics": {
@@ -20,5 +19,8 @@
     "limitation_chars": 740,
     "insufficiency_flags": []
   },
-  "processed_at": "2026-10-20T15:43:11+00:00"
+  "failures": [
+    "長文定型文の再利用を検出: papers/inference/11-llm-serving-scheduling-disaggregation/2026-2605.25550-disagfusion-asynchronous-pipeline-parallelism-and-elastic-scheduling-for.md と 21 段落 / 4508文字 (100.0%) が完全一致"
+  ],
+  "processed_at": "2026-10-21T20:41:10+00:00"
 }
