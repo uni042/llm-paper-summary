@@ -54,6 +54,10 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   実装：✓ ・ リポジトリ内被引用：2  
   70B級モデルを端末上で動かすとき、重みを4ビット化しても長文脈の鍵・値（KV）キャッシュが巨大になる。合計約79.1GBとなり、64GBの統合メモリを持つMacには収まらない。Llama 3.1 70Bの128K文脈では、注意カーネル単体が逆量子化後に注意を実行する方式の480.6msから9.9msへ短縮され、約48倍となる。
 
+- **2025-12 · [MemEvolve: Meta-Evolution of Agent Memory Systems](2025-2512.18746-memevolve-meta-evolution-of-agent-memory-systems.md)**  
+  実装：[✓](https://github.com/bingreeky/MemEvolve) ・ リポジトリ内被引用：2  
+  しかし既存の自己改善型エージェントでは、記憶をどの形式で要約するか、どこへ保存するか、いつ検索するか、どの記憶を忘れるかといった記憶機構の設計自体は人手で固定されていることが多い。
+
 - **2026-04 · [FoE: Forest of Errors Makes the First Solution the Best in Large Reasoning Models](2026-2604.02967-foe-forest-of-errors-makes-the-first-solution-the-best-in-large-reasonin.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   提案手法RED（Refine First and Discard Subs）は、最初の解法を生成している途中で不確実性が高い箇所へ介入し、別解を無制限に増やす代わりに、複数の中間回答が十分に一致した時点で停止する。6種類の推論モデル、数学・科学の5課題で、通常復号と比較して正答率を改善しつつ生成トークンを37.7～70.4%削減した。
@@ -85,10 +89,6 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - **2026-01 · [Understanding Efficiency: Quantization, Batching, and Serving Strategies in LLM Energy Use](2026-2601.22362-understanding-efficiency-quantization-batching-and-serving-strategies-in.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   大規模言語モデル（Large Language モデル; LLM）の推論電力量は、モデルのパラメータ数や重みのビット幅だけでは決まらない。同じモデルを同じGPUで実行しても、事前充填（プリフィル）と逐次復号（デコード）では計算律速かメモリ律速かが異なり、要求を逐次処理するか連続バッチ化するかによってGPUの待機時間が大きく変わる。重要な結論は三つある。
-
-- **2025-12 · [MemEvolve: Meta-Evolution of Agent Memory Systems](2025-2512.18746-memevolve-meta-evolution-of-agent-memory-systems.md)**  
-  実装：[✓](https://github.com/bingreeky/MemEvolve) ・ リポジトリ内被引用：1  
-  しかし既存の自己改善型エージェントでは、記憶をどの形式で要約するか、どこへ保存するか、いつ検索するか、どの記憶を忘れるかといった記憶機構の設計自体は人手で固定されていることが多い。
 
 - **2025-12 · [Dynamic Large Concept Models: Latent Reasoning in an Adaptive Semantic Space](2025-2512.24617-dynamic-large-concept-models-latent-reasoning-in-an-adaptive-semantic-sp.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
