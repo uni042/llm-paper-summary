@@ -1,19 +1,19 @@
 {
   "schema_version": 1,
-  "checked_at": "2026-10-20T02:15:44+00:00",
+  "checked_at": "2026-10-21T00:39:52+00:00",
   "status": "passed",
   "error_count": 0,
   "warning_count": 0,
-  "paper_count": 2676,
-  "latest_paper_commit": "2026-10-20T02:04:58+00:00",
+  "paper_count": 2760,
+  "latest_paper_commit": "2026-10-21T00:12:49+00:00",
   "queue": {
-    "job_count": 2468,
+    "job_count": 2223,
     "snapshot_drift": true,
     "snapshot_repaired": true,
     "snapshot_repair_safe": true,
     "counts": {
       "discovery": {
-        "completed": 276,
+        "completed": 139,
         "processing": 7,
         "ready": 1
       },
@@ -21,8 +21,8 @@
         "ready": 2
       },
       "research": {
-        "superseded": 716,
-        "ready": 1435,
+        "superseded": 692,
+        "ready": 1351,
         "deferred": 8,
         "completed": 22,
         "rejected": 1
@@ -30,13 +30,8 @@
     }
   },
   "derived_indexes": {
-    "repaired_files": [
-      "papers/inference/05-speculative-decoding-moe/README.md",
-      "papers/inference/13-sparse-attention/README.md",
-      "papers/inference/15-inference-simulation-emulation/README.md",
-      "papers/inference/99-other-inference-systems/README.md"
-    ],
-    "repair_count": 4
+    "repaired_files": [],
+    "repair_count": 0
   },
   "quality": {
     "baseline_initialized": false,
@@ -51,16 +46,7 @@
       "overview": []
     },
     "resolved_failures": {
-      "paper": [
-        "papers/inference/01-offload-hierarchical-memory/2026-2608.23805-memory-sovereign-inference.md",
-        "papers/inference/05-speculative-decoding-moe/2025-2505.21594-fast-and-cost-effective-speculative-edge-cloud-decoding-with-early-exits.md",
-        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2510.11938-flexpipe-adapting-dynamic-llm-serving-through-inflight-pipeline-refactoring-in-fragmented-serverless-clusters.md",
-        "papers/inference/13-sparse-attention/2024-2406.14909-mixture-of-attention-spans-optimizing-llm-inference-efficiency-with-heterogeneous-sliding-window-lengths.md",
-        "papers/inference/15-inference-simulation-emulation/2024-2406.01698-demystifying-ai-platform-design-for-distributed-inference-of-next-generation-llm-models.md",
-        "papers/inference/17-pim-near-data-acceleration/2025-stratum-system-hardware-co-design-with-tiered-monolithic-3d-stackable-dram-for-efficient-moe-serving.md",
-        "papers/inference/99-other-inference-systems/2022-2208.01313-unified-normalization-for-accelerating-and-stabilizing-transformers.md",
-        "papers/inference/99-other-inference-systems/2026-2606.31093-omni-flow-a-unified-workflow-orchestration-and-distributed-kv-cache-sharing-framework-for-multimodal-inference.md"
-      ],
+      "paper": [],
       "list_summary": [],
       "overview": []
     }
@@ -68,15 +54,15 @@
   "coverage": {
     "citation": {
       "kind": "citation",
-      "checked_at": "2026-10-20T02:15:07+00:00",
-      "total": 2676,
+      "checked_at": "2026-10-21T00:39:09+00:00",
+      "total": 2760,
       "incomplete": 0,
       "findings": []
     },
     "metadata": {
       "kind": "metadata",
-      "checked_at": "2026-10-20T02:15:07+00:00",
-      "total": 2676,
+      "checked_at": "2026-10-21T00:39:09+00:00",
+      "total": 2760,
       "incomplete": 0,
       "findings": []
     }
