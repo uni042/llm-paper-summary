@@ -1,0 +1,27 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-45",
+  "scheduled_slot": "45",
+  "reference_main_sha": "9e995e68fa76df9b29dc64a4655a65328f94ed71",
+  "record_count": 1,
+  "run_key": "20261021-2345-scheduled-chat-45/r01/research-prescreen/018",
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.15869",
+      "identity_tokens": [
+        "arxiv:2606.15869"
+      ],
+      "title": "Metis: A Generalizable and Efficient World-Action Model for Autonomous Driving and Urban Navigation",
+      "reason": "一次要旨では動画生成専門部と行動予測専門部を分離した混合Transformerと非対称注意マスクを用い、学習時に協調させつつ推論時は明示的な未来動画生成を省略して計算費用を減らす。推論経路短縮は技術的に関連するが、最終対象と評価は自動運転・都市ナビゲーションであり、汎用LLMのトークン生成・サービング基盤には直接適用していない。",
+      "source_url": "https://arxiv.org/abs/2606.15869",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-21T23:46:59+09:00",
+      "last_checked_at": "2026-10-21T23:46:59+09:00",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance",
+      "worklist_rank": 18
+    }
+  ]
+}
