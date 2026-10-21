@@ -2,7 +2,7 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-21T09:53:03+00:00",
+  "updated_at": "2026-10-21T10:19:37+00:00",
   "record_count": 12451,
   "records": {
     "arXiv:2303.08774": {
@@ -164994,9 +164994,9 @@
         "id:arXiv:2403.01232",
         "url:https://arxiv.org/abs/2403.01232"
       ],
-      "reason": "一次要旨は、グラフのノード・トポロジーに対して局所・大域の置換同変注意を用い、高次多項式を表現するグラフTransformerを提案する。評価は13のグラフデータセットで、主目的はグラフ分類等の表現力と計算量の両立。言語モデルのKVキャッシュ、生成デコード、推論サービングの最適化ではないため現行のLLM推論基盤サーベイ対象外。",
+      "reason": "グラフの局所・大域構造を使う多項式表現の線形時間グラフTransformerを提案し、グラフの分類・予測データセット13件で評価する。線形時間注意は技術的な類似点だが、LLMの言語生成、KVキャッシュ、分散サービングを対象としないため本サーベイでは対象外。",
       "first_checked_at": "2026-10-12T21:38:02+00:00",
-      "last_checked_at": "2026-10-20T14:46:04+00:00",
+      "last_checked_at": "2026-10-21T10:19:37+00:00",
       "linked_from": [],
       "title": "Polynormer: Polynomial-Expressive Graph Transformer in Linear Time"
     },

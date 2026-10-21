@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-98463d4c5097eae8-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2403.01232",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2403.01232",
+    "identity_tokens": [
+      "arXiv:2403.01232",
+      "id:arXiv:2403.01232",
+      "url:https://arxiv.org/abs/2403.01232"
+    ],
+    "reason": "グラフの局所・大域構造を使う多項式表現の線形時間グラフTransformerを提案し、グラフの分類・予測データセット13件で評価する。線形時間注意は技術的な類似点だが、LLMの言語生成、KVキャッシュ、分散サービングを対象としないため本サーベイでは対象外。",
+    "first_checked_at": "2026-10-12T21:38:02+00:00",
+    "last_checked_at": "2026-10-21T10:19:37+00:00",
+    "linked_from": [],
+    "title": "Polynormer: Polynomial-Expressive Graph Transformer in Linear Time"
+  },
+  "processed_at": "2026-10-21T10:19:38+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-98463d4c5097",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
