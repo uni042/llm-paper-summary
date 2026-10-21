@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-20T22:49:09+00:00",
-  "record_count": 12443,
+  "updated_at": "2026-10-21T00:52:27+00:00",
+  "record_count": 12446,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -174440,9 +174440,9 @@
         "id:arXiv:2607.26148",
         "url:https://arxiv.org/abs/2607.26148"
       ],
-      "reason": "身体性エージェントによる視覚言語ナビゲーションの制御性能が対象であり、汎用LLMの生成カーネルやサービングを対象としない。",
+      "reason": "題名は視覚言語ナビゲーションでの身体化エージェントと行動方策の性能比較を明示している。推論システムの資源制御ではなくロボット行動の成功率・汎化を主題とするため対象外。",
       "first_checked_at": "2026-10-14T05:39:46+00:00",
-      "last_checked_at": "2026-10-16T19:48:14+00:00",
+      "last_checked_at": "2026-10-21T00:52:24+00:00",
       "linked_from": [],
       "title": "Embodied Agents Take Control: Minimal-Interface Zero-Shot Agents Rival Industrial-Scale Policies in Vision-and-Language Navigation"
     },
@@ -178805,9 +178805,9 @@
       "identity_tokens": [
         "arXiv:2601.13384"
       ],
-      "reason": "検索・置換指示チューニングでコード補完から編集へ能力を拡張する研究であり、学習手法とコード生成能力が主題である。LLM推論基盤の最適化を直接扱わない。",
+      "reason": "題名は検索置換形式の指示調整によってコード穴埋め・編集能力を学習させる研究を明示している。主目的はコード生成能力と学習データ設計であり、推論サービング基盤・KVメモリ・計算カーネルの最適化ではないため対象外。",
       "first_checked_at": "2026-10-17T03:54:25+00:00",
-      "last_checked_at": "2026-10-20T13:06:11+00:00",
+      "last_checked_at": "2026-10-21T00:52:25+00:00",
       "linked_from": [],
       "title": "From Completion to Editing: Unlocking Context-Aware Code Infilling via Search-and-Replace Instruction Tuning"
     },
@@ -179167,9 +179167,9 @@
       "identity_tokens": [
         "arXiv:2602.05384"
       ],
-      "reason": "原著要旨は文書画像の種類判別・レイアウト解析を行い、写真文書をページ全体、デジタル文書を要素単位で解析するDolphin-v2を提案する。並列解析は用いるが寄与はOCR/文書解析の認識精度とアンカープロンプトであり、LLM生成サービングや汎用GPU推論基盤の高速化ではない。",
+      "reason": "題名から研究目的はアンカー・プロンプトを用いた文書解析の汎用化であり、文書理解タスクのモデル・アルゴリズムを扱う。LLM推論実行基盤の速度・メモリ・並列化を改善する主題は示されていないため対象外。",
       "first_checked_at": "2026-10-20T07:56:50+00:00",
-      "last_checked_at": "2026-10-20T07:56:50+00:00",
+      "last_checked_at": "2026-10-21T00:52:26+00:00",
       "linked_from": [],
       "title": "Dolphin-v2: Universal Document Parsing via Scalable Anchor Prompting"
     },
@@ -179340,6 +179340,42 @@
       "last_checked_at": "2026-10-20T19:45:40+00:00",
       "linked_from": [],
       "title": "Sparse Video Generation Propels Real-World Beyond-the-View Vision-Language Navigation"
+    },
+    "arXiv:2603.09163": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.09163",
+      "identity_tokens": [
+        "arXiv:2603.09163"
+      ],
+      "reason": "題名は視覚言語ナビゲーションの空間認識を主題とする。ロボット・身体化エージェントの経路探索性能に関する研究であり、LLM推論ランタイムのスケジューリングやGPU・KVキャッシュ最適化を扱わないため対象外。",
+      "first_checked_at": "2026-10-21T00:52:24+00:00",
+      "last_checked_at": "2026-10-21T00:52:24+00:00",
+      "linked_from": [],
+      "title": "SPAN-Nav: Generalized Spatial Awareness for Versatile Vision-Language Navigation"
+    },
+    "arXiv:2104.10640": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2104.10640",
+      "identity_tokens": [
+        "arXiv:2104.10640"
+      ],
+      "reason": "題名は自然言語処理のTransformerアーキテクチャに関するレシピ集・概説を示す。特定のLLM推論サービング、KV管理、カーネル、並列化、量子化の新規実装や評価を示すものではないため、推論基盤の技術論文としては対象外。",
+      "first_checked_at": "2026-10-21T00:52:25+00:00",
+      "last_checked_at": "2026-10-21T00:52:25+00:00",
+      "linked_from": [],
+      "title": "The NLP Cookbook: Modern Recipes for Transformer Based Deep Learning Architectures"
+    },
+    "arXiv:2604.23477": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.23477",
+      "identity_tokens": [
+        "arXiv:2604.23477"
+      ],
+      "reason": "題名はLLMを用いた関係データ問い合わせ・SQL機能拡張を主題とする。データベースの意味問い合わせというアプリケーション研究であり、LLM推論サーバのGPU資源配分・KVキャッシュ・推論カーネルの改良ではないため対象外。",
+      "first_checked_at": "2026-10-21T00:52:27+00:00",
+      "last_checked_at": "2026-10-21T00:52:27+00:00",
+      "linked_from": [],
+      "title": "SEMA-SQL: Beyond Traditional Relational Querying with Large Language Models"
     }
   }
 }

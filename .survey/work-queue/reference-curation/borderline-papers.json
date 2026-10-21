@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-20T22:55:03+00:00",
-  "record_count": 5282,
+  "updated_at": "2026-10-21T00:52:25+00:00",
+  "record_count": 5280,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -81397,21 +81397,6 @@
       "borderline_recheck_count": 0,
       "title": "THOR: Secure Transformer Inference with Homomorphic Encryption"
     },
-    "arXiv:2104.10640": {
-      "classification": "borderline",
-      "canonical_id": "arXiv:2104.10640",
-      "identity_tokens": [
-        "DOI:10.1109/access.2021.3077350",
-        "DOI:10.48550/arxiv.2104.10640",
-        "arXiv:2104.10640"
-      ],
-      "reason": "一次要旨では、BERT・GPTなどのTransformer系NLPモデル、転移学習、枝刈り、量子化、知識蒸留、長文脈注意、検索器を横断して分類・比較する総説である。推論効率に関係する圧縮や長文脈注意も扱うが、中心は広範なNLPモデルと応用の分類であり、LLM推論基盤の測定・システム設計に絞ったサーベイではない。収録候補としての直接性が弱いため境界判定。",
-      "first_checked_at": "2026-10-18T10:00:31+00:00",
-      "last_checked_at": "2026-10-19T15:52:14+00:00",
-      "linked_from": [],
-      "borderline_recheck_count": 0,
-      "title": "The NLP Cookbook: Modern Recipes for Transformer based Deep Learning Architectures"
-    },
     "arXiv:2305.16340": {
       "classification": "borderline",
       "canonical_id": "arXiv:2305.16340",
@@ -81902,19 +81887,6 @@
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "Before Parc Fermé: RL-Time Pruning for Efficient Embodied LLMs in Autonomous Driving"
-    },
-    "arXiv:2603.09163": {
-      "classification": "borderline",
-      "canonical_id": "arXiv:2603.09163",
-      "identity_tokens": [
-        "arXiv:2603.09163"
-      ],
-      "reason": "占有予測から得た空間事前情報を単一の空間トークンに圧縮し、視覚言語ナビゲーションの行動推論へ注入する。表現圧縮による計算量低減の接点はあるが、主要な貢献・評価はロボットの空間認識と経路計画であり、一般的なLLM生成推論・サービング基盤への適用は要旨で示されない。",
-      "first_checked_at": "2026-10-20T13:06:18+00:00",
-      "last_checked_at": "2026-10-20T13:06:18+00:00",
-      "linked_from": [],
-      "borderline_recheck_count": 0,
-      "title": "SPAN-Nav: Generalized Spatial Awareness for Versatile Vision-Language Navigation"
     },
     "arXiv:2511.13593": {
       "classification": "borderline",

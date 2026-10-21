@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-4d42bb97b14fbd08-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2104.10640",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2104.10640",
+    "identity_tokens": [
+      "arXiv:2104.10640"
+    ],
+    "reason": "題名は自然言語処理のTransformerアーキテクチャに関するレシピ集・概説を示す。特定のLLM推論サービング、KV管理、カーネル、並列化、量子化の新規実装や評価を示すものではないため、推論基盤の技術論文としては対象外。",
+    "first_checked_at": "2026-10-21T00:52:25+00:00",
+    "last_checked_at": "2026-10-21T00:52:25+00:00",
+    "linked_from": [],
+    "title": "The NLP Cookbook: Modern Recipes for Transformer Based Deep Learning Architectures"
+  },
+  "processed_at": "2026-10-21T00:52:25+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-4d42bb97b14f",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

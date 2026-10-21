@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-12d1c6dbec3718dc-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2603.09163",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2603.09163",
+    "identity_tokens": [
+      "arXiv:2603.09163"
+    ],
+    "reason": "題名は視覚言語ナビゲーションの空間認識を主題とする。ロボット・身体化エージェントの経路探索性能に関する研究であり、LLM推論ランタイムのスケジューリングやGPU・KVキャッシュ最適化を扱わないため対象外。",
+    "first_checked_at": "2026-10-21T00:52:24+00:00",
+    "last_checked_at": "2026-10-21T00:52:24+00:00",
+    "linked_from": [],
+    "title": "SPAN-Nav: Generalized Spatial Awareness for Versatile Vision-Language Navigation"
+  },
+  "processed_at": "2026-10-21T00:52:24+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-12d1c6dbec37",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

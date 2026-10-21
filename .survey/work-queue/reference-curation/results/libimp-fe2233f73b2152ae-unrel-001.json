@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-fe2233f73b2152ae-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2604.23477",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2604.23477",
+    "identity_tokens": [
+      "arXiv:2604.23477"
+    ],
+    "reason": "題名はLLMを用いた関係データ問い合わせ・SQL機能拡張を主題とする。データベースの意味問い合わせというアプリケーション研究であり、LLM推論サーバのGPU資源配分・KVキャッシュ・推論カーネルの改良ではないため対象外。",
+    "first_checked_at": "2026-10-21T00:52:27+00:00",
+    "last_checked_at": "2026-10-21T00:52:27+00:00",
+    "linked_from": [],
+    "title": "SEMA-SQL: Beyond Traditional Relational Querying with Large Language Models"
+  },
+  "processed_at": "2026-10-21T00:52:28+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-fe2233f73b21",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
