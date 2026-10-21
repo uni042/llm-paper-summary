@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-21T22:47:54+00:00",
+  "generated_at": "2026-10-21T23:12:17+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 33,
+  "count": 29,
   "entries": [
     {
       "canonical_id": "DOI:10.1145/3714983.3714987",
@@ -673,93 +673,6 @@
       "worker_run_key": "20261020-2230-scheduled-chat-30/r01"
     },
     {
-      "canonical_id": "arXiv:2609.35065",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-21T16:56:45+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 225 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 6322,
-        "body_paragraphs": 31,
-        "method_chars": 2579,
-        "method_paragraphs": 14,
-        "evaluation_chars": 225,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "評価説明量 225 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_44c85531466081919386a0595babfc98--2026-2609.35065-tempokv-timely-staging-research-20261021-1528-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_44c85531466081919386a0595babfc98--2026-2609.35065-tempokv-timely-staging-research-20261021-1528-scheduled-chat-30-r01.json",
-      "worker_run_key": "20261021-1528-scheduled-chat-30/r01"
-    },
-    {
-      "canonical_id": "arXiv:2604.07857",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-21T17:24:02+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700",
-        "説明不足トリガー: 評価説明量 0 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5745,
-        "body_paragraphs": 32,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 0,
-        "limitation_chars": 380,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700",
-          "評価説明量 0 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_4a57f1d856588191ae4c0deda9c18fae--2026-2604.07857-networking-energy-agentic-inference-survey-20261021-2126-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_4a57f1d856588191ae4c0deda9c18fae--2026-2604.07857-networking-energy-agentic-inference-survey-20261021-2126-scheduled-chat-30-r01.json",
-      "worker_run_key": "20261021-2126-scheduled-chat-30/r01"
-    },
-    {
-      "canonical_id": "arXiv:2609.37626",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-21T17:46:28+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700",
-        "説明不足トリガー: 評価説明量 315 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 4397,
-        "body_paragraphs": 21,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 315,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700",
-          "評価説明量 315 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_523e3de05c8481918e4c32a29c3ad74e--2026-2609.37626-splash-research-20261021-1627-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_523e3de05c8481918e4c32a29c3ad74e--2026-2609.37626-splash-research-20261021-1627-scheduled-chat-30-r01.json",
-      "worker_run_key": "20261021-1627-scheduled-chat-30/r01"
-    },
-    {
       "canonical_id": "arXiv:2606.08411",
       "title": null,
       "source_url": null,
@@ -818,36 +731,6 @@
       "worker_run_key": "20261021-1604-scheduled-chat-00/r01"
     },
     {
-      "canonical_id": "arXiv:2606.26587",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-21T18:45:43+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700",
-        "説明不足トリガー: 評価説明量 427 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5669,
-        "body_paragraphs": 34,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 427,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700",
-          "評価説明量 427 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_68da10e789fc8191a73292818808130e--2026-2606.26587-sharq-sparse-dense-fp4-research-20261021-2231-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_68da10e789fc8191a73292818808130e--2026-2606.26587-sharq-sparse-dense-fp4-research-20261021-2231-scheduled-chat-30-r01.json",
-      "worker_run_key": "20261021-2231-scheduled-chat-30/r01"
-    },
-    {
       "canonical_id": "arXiv:2604.19767",
       "title": null,
       "source_url": null,
@@ -904,8 +787,8 @@
     },
     {
       "canonical_id": "arXiv:2601.21444",
-      "title": "APB-V: Accelerating Long-Video Understanding via Sequence-Parallelism-aware Approximate Attention",
-      "source_url": "https://arxiv.org/pdf/2601.21444",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-21T22:46:16+00:00",
       "return_count": 1,
       "assigned_worker": "scheduled-chat-00",

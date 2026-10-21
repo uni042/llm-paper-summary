@@ -36,6 +36,8 @@ reference_main_sha: "4bd02dd1ea8bc2308478a0865c5caa6b8889fed0"
 worklist_rank: 79
 quality_self_review_passed: true
 quality_self_review_version: "PAPER-QUALITY-GUIDE-2026-10-07"
+last_audited: null
+audit_version: 0
 ---
 
 # APB-V：長動画理解のための系列並列・近似注意

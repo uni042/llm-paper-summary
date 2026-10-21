@@ -3,7 +3,7 @@
 複数requestを複数GPU / nodeで処理するLLM servingについて、request順、batch、prefill / decodeのGPU配分、KV再利用・転送、request移動などを調整し、latencyとresource効率を改善する研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（413本）
+## 自動生成の論文一覧（414本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -475,6 +475,10 @@
 - **2026-09 · [Token Latency Fairness: Performance Isolation for Multi-Tenant LLM Serving](2026-2609.18112-fairinference-token-latency-fairness-multitenant.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   分離実行比δ以内のトークン遅延を保証するdeadline スケジューラとKV予約を統合し、高需要テナント下のp99 遅延 isolationを実現する。
+
+- **2026-09 · [SPLASH: Switching Parallel Layouts of Attention with Seamless Handoff for LLM Serving](2026-2609.37626-splash-switching-parallel-layouts-of-attention-with-seamless-handoff-for.md)**  
+  実装：[✓](https://github.com/ict-agent/SPLASH-sglang) ・ リポジトリ内被引用：0  
+  SPLASHは、LLM推論配信中に注意演算のGPU間並列配置を切り替えるシステムである。B200でGLM-5.3を配信する評価では、固定配置に対する端から端までの総処理量が1.3～1.73倍となる。
 
 - **2026-09 · [Spatial LLM Workload Shifting Needs Foresight: Model Commitment for AI Data Center Operation under Power Grid Constraints](2026-2609.09787-model-commitment-spatial-llm-workload-shifting.md)**  
   実装：[✓](https://github.com/EilabDBJ/Model-Commitment) ・ リポジトリ内被引用：0  

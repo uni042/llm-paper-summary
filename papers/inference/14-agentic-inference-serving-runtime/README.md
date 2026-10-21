@@ -24,7 +24,7 @@
 - [10-kv-cache-offload-recomputation](../10-kv-cache-offload-recomputation/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（66本）
+## 自動生成の論文一覧（67本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -200,6 +200,10 @@
 - **2026-04 · [Recursive Multi-Agent Systems](2026-2604.25917-recursive-multi-agent-systems.md)**  
   実装：[✓](https://github.com/RecursiveMAS/RecursiveMAS) ・ リポジトリ内被引用：0  
   通常の複数エージェントシステムでは、計画役が文章を生成し、批評役がその文章を読み、解答役が批評を受け取る。文章媒介型の同じ再帰的協調構造（Recursive-TextMAS）に対し、再帰1、2、3ラウンドで平均推論実行時間の相対改善が1.2、1.9、2.4倍へ広がり、外部トークン使用量は34.6%、65.5%、75.6%少なくなると報告する。
+
+- **2026-04 · [Networking-Aware Energy Efficiency in Agentic AI Inference: A Survey](2026-2604.07857-networking-aware-energy-efficiency-in-agentic-ai-inference-a-survey.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  本論文は、エージェント型人工知能（Agentic AI）の推論時エネルギーを、単一のLLM呼び出しではなく、知覚・推論・行動（Perception–Reasoning–Action）の循環と、端末・エッジ・クラウド間の通信まで含めて分析するサーベイである。著者は計算・メモリ・通信を別々に数え、これらを跨いだ共同設計の必要性を論じる。
 
 - **2026-04 · [MARS: Efficient, Adaptive Co-Scheduling for Heterogeneous Agentic Systems](2026-2604.26963-mars-efficient-adaptive-co-scheduling-for-heterogeneous-agentic-systems.md)**  
   実装：[✓](https://github.com/Afterglow231/MARS_preview) ・ リポジトリ内被引用：0  

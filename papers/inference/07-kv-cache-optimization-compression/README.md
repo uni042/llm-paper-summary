@@ -16,7 +16,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 方向は異なるが、いずれも**KV cacheがdecode時のmemory容量やmemory bandwidthのボトルネックになることを直接緩和する**研究として扱う。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（280本）
+## 自動生成の論文一覧（281本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -336,6 +336,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 - **2026-09 · [The KV Cache Is the New Memory Wall](2026-2609.30854-the-kv-cache-is-the-new-memory-wall.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   新しいKV圧縮器やGPUカーネルの実装ではなく、既存研究が異なる条件で報告してきた改善率を解釈するための分析枠組みを作る。例えばLlama-3-70BをBF16で扱う場合、重みは約140GB、1系列128kトークンのKVは約42GBである。
+
+- **2026-09 · [TempoKV: Timely Staging of LLM KV Caches for Memory-Semantic Flash](2026-2609.35065-tempokv-timely-staging-of-llm-kv-caches-for-memory-semantic-flash.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  TempoKVは、過去の要求で計算済みの接頭辞キー・バリュー（KV）キャッシュを、SSDを背後に持つ大容量メモリ階層から再利用する際、再利用が分かった時点で高速メモリを確保しないという設計を導入する。vLLMとLMCacheを拡張したH100実機評価では、即時予約と比べて保護容量時間を63～91%削減した。
 
 - **2026-09 · [StepKV: Step-Aware KV Cache Compression for LLM Agents](2026-2609.22158-stepkv-step-aware-kv-cache-compression-for-llm-agents.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -946,7 +950,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   通常の多頭注意（Multi-Head 注意機構; MHA）では、系列長が伸びるほどKVキャッシュが線形に増え、GPU高帯域メモリ（High Bandwidth メモリ; HBM）に置ける同時要求数や最大文脈長を圧迫する。
 
 - **2024-02 · [KIVI: A Tuning-Free Asymmetric 2bit Quantization for KV Cache](2024-2402.02750-kivi.md)**  
-  実装：[✓](https://github.com/jy-yuan/KIVI) ・ リポジトリ内被引用：241  
+  実装：[✓](https://github.com/jy-yuan/KIVI) ・ リポジトリ内被引用：242  
   KIVIは、自己注意の鍵・値キャッシュ（KV キャッシュ）を追加学習なしで2ビットに圧縮する方式である。Llama-2-7Bを用いた単一A100 80GBの実機実験では、ピークメモリ（モデル重みを含む）が最大2.6分の1となり、同程度のメモリ上限で最大4倍のバッチを処理できる。
 
 - **2024-01 · [KVQuant: Towards 10 Million Context Length LLM Inference with KV Cache Quantization](2024-2401.18079-kvquant.md)**  
@@ -1150,6 +1154,6 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 ### 7年前（2019-11〜2020-10）
 
 - **2019-11 · [Fast Transformer Decoding: One Write-Head is All You Need](2019-1911.02150-multi-query-attention.md)**  
-  実装：✓ ・ リポジトリ内被引用：203  
+  実装：✓ ・ リポジトリ内被引用：204  
   複数問い合わせ注意（Multi-Query 注意機構; MQA）は、問い合わせ側の8ヘッドを維持したまま、鍵と値だけを全ヘッドで1組へ共有する。長い履歴を毎生成ステップで読む増分復号のメモリ転送を減らし、TPUv2でのWMT英独翻訳のデコーダ測定を46から3.8マイクロ秒／出力トークンへ短縮した。
 <!-- survey:auto:end -->

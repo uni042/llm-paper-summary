@@ -35,10 +35,15 @@
   "selection_reason": "SPLASHは実行中にattention parallel layoutを切替え、cache配置再利用・背景移送でLLM servingのKV capacityとSLO対応を改善。",
   "semantic_scholar_id": "407270c7dd77b70917c58d4868e7d6c9044934c6",
   "source_url": "https://arxiv.org/abs/2609.37626",
-  "status": "ready",
+  "status": "superseded",
   "title": "SPLASH: Switching Parallel Layouts of Attention with Seamless Handoff for LLM Serving",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-10-21T23:12:16+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.37626-splash-switching-parallel-layouts-of-attention-with-seamless-handoff-for.md",
+  "represented_canonical_id": "arXiv:2609.37626",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

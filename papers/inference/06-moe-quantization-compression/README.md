@@ -5,7 +5,7 @@ MoEの大部分を占めるexpert重みを**低bit化、pruning、precision切�
 単にモデルを小さくするだけでなく、routing結果を崩さないこと、頻繁に使うexpertへ高い精度を残すこと、実際のGPU kernelで速くなるbit配置を選ぶことも重要な評価軸となる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（19本）
+## 自動生成の論文一覧（20本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -29,6 +29,10 @@ MoEの大部分を占めるexpert重みを**低bit化、pruning、precision切�
 - **2026-08 · [Tied Trit-Planes: Constraining PTQTP to a Uniform Nine-Level Quantizer, with a Persistent Folded Format for Disk-Streamed Mixture-of-Experts Serving](2026-2608.08910-tied-trit-planes.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   GPUや主記憶へ全専門家を置けない端末では必要な専門家をSSDから読むため、量子化は容量だけでなくSSD読込み量、専門家キャッシュ容量、実行カーネル入力まで同時に決める。DeepSeek-V4-Flash-0731のルーティング専門家を公開MXFP4重みから一括量子化し、64GBノートPCでSSDストリーミングした。
+
+- **2026-06 · [SharQ: Bridging Activation Sparsity and FP4 Quantization for LLM Inference](2026-2606.26587-sharq-bridging-activation-sparsity-and-fp4-quantization-for-llm-inferenc.md)**  
+  実装：[✓](https://github.com/actypedef/SharQ) ・ リポジトリ内被引用：0  
+  大規模言語モデルの線形層をFP4で実行すると演算密度を高められるが、入力によって変動する活性値には局所的な極大値が存在し、同じ量子化ブロックに属する通常値の分解能が犠牲になる。Llama-3.1-8Bの5課題平均正答率はNVFP4単独70.32%から71.55%に回復（FP16は72.50%）。
 
 - **2026-05 · [GEMQ: Global Expert-Level Mixed-Precision Quantization for MoE LLMs](2026-2605.23078-gemq-global-expert-level-mixed-precision-quantization-for-moe-llms.md)**  
   実装：[✓](https://github.com/jndeng/GEMQ) ・ リポジトリ内被引用：0  

@@ -26,6 +26,10 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
   実装：[✓](https://github.com/pku-lemonade/TokenSim) ・ リポジトリ内被引用：4  
   SSD型KV退避の保存先だけをHBFへ置換すると、近接メモリ減少・書込主体化・熱／耐久制約が利点を上回り、遅延が2〜5.5倍悪化することを本番トレースで示す。
 
+- **2026-06 · [ITME: Inference Tiered Memory Expansion with Disaggregated CXL-Hybrid Memories](2026-2606.12556-itme-cxl-hybrid-tiered-memory-expansion.md)**  
+  実装：✓ ・ リポジトリ内被引用：3  
+  CXLハイブリッドメモリ内のDRAM+NVMeをTB級の遠隔メモリとして公開し、重みと長文KVの予測可能なアクセスを多段DMA先読み・読出し優先I/Oで隠して、CPU DRAMを超える推論状態を保持する階層メモリ方式。
+
 - **2025-11 · [In-depth Analysis on Caching and Pre-fetching in Mixture of Experts Offloading](2025-2511.05814-in-depth-analysis-on-caching-and-pre-fetching-in-mixture-of-experts-offl.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
   本論文は、GPUメモリに全専門家重みを置けない混合専門家モデル（MoE）の推論について、CPUメモリからの重み転送を削減するキャッシュと、次層で必要になる専門家を早めに予測する先読みを分析する。実測では、A6000上の固定プロンプトにおける生成速度がLRUの2.34トークン毎秒からLFUの4.32トークン毎秒へ改善し、約84.6%の速度向上を報告する。
@@ -42,9 +46,9 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
   実装：[✓](https://github.com/nokia-applied-research/WiSP) ・ リポジトリ内被引用：2  
   WiSPはルーティング履歴から再利用される専門家をGPUワーキングセットとしてLRU保持し、限られたVRAMを専門家とKVキャッシュの限界便益で配分して、PCIe転送とKV不足を抑える。
 
-- **2026-06 · [ITME: Inference Tiered Memory Expansion with Disaggregated CXL-Hybrid Memories](2026-2606.12556-itme-cxl-hybrid-tiered-memory-expansion.md)**  
+- **2026-06 · [Moebius: Serving Mixture-of-Expert Models with Seamless Runtime Parallelism Switch](2026-2606.26607-moebius-runtime-parallelism-switch.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
-  CXLハイブリッドメモリ内のDRAM+NVMeをTB級の遠隔メモリとして公開し、重みと長文KVの予測可能なアクセスを多段DMA先読み・読出し優先I/Oで隠して、CPU DRAMを超える推論状態を保持する階層メモリ方式。
+  Moebiusは低同時実行時のテンソル並列と高同時実行時の専門家並列を実行中に切り替え、再起動せず各要求を継続して、負荷変動で固定方式が不利になる問題を減らす。
 
 - **2026-06 · [A Spatio-Temporal Expert Prefetching Framework for Efficient MoE-based LLM Inference](2026-2606.15453-spatio-temporal-expert-prefetching.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
@@ -93,10 +97,6 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
 - **2026-07 · [ExpertPlex: A High-Goodput Disaggregated Serving System for MoE LLMs with Adaptive Persistent Kernels](2026-2607.18002-expertplex-disaggregated-moe-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   注意計算だけを相分離し巨大MoEエキスパートを共有、タイル単位の適応型永続カーネルと注意側起動の片側通信で相間干渉を抑え、H800上でインスタンス単位P/D分離比最大2.01倍の有効スループットを達成する。
-
-- **2026-06 · [Moebius: Serving Mixture-of-Expert Models with Seamless Runtime Parallelism Switch](2026-2606.26607-moebius-runtime-parallelism-switch.md)**  
-  実装：✓ ・ リポジトリ内被引用：1  
-  Moebiusは低同時実行時のテンソル並列と高同時実行時の専門家並列を実行中に切り替え、再起動せず各要求を継続して、負荷変動で固定方式が不利になる問題を減らす。
 
 - **2026-05 · [ZipMoE: Efficient On-Device MoE Serving via Lossless Compression and Cache-Affinity Scheduling](2026-2601.21198-zipmoe-lossless-compression-cache-affinity-scheduling.md)**  
   実装：[✓](https://github.com/npnothard/ZipMoE-ICML26) ・ リポジトリ内被引用：1  
