@@ -29,6 +29,8 @@ quality_self_review_version: 'PAPER-QUALITY-GUIDE-2026-10-07'
 returned_repair_origin: '20261020-1800-scheduled-chat-00/r01'
 returned_repair_reason: '評価節の見出しが機械監査の評価区分に一致せず評価説明量0となったため、## 評価に正規化'
 returned_repair_verified_primary: 'https://aclanthology.org/2025.acl-long.564v2.pdf'
+last_audited: null
+audit_version: 0
 ---
 
 # 再帰型LLMの状態容量を拡張する：長文脈の検索性能と計算費用

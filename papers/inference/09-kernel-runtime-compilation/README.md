@@ -23,7 +23,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - [06-moe-quantization-compression](../06-moe-quantization-compression/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（137本）
+## 自動生成の論文一覧（140本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -128,6 +128,10 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   実装：✓ ・ リポジトリ内被引用：0  
   例えばQwen2.5-14Bの非圧縮キャッシュは1トークン当たり192 KiBを占め、8,000トークンの系列32本を同時に保持すると約48 GiBに達する。Qwen2.5-14Bの16K文脈では、提案法による4倍圧縮とSnapKVによる8分の1トークン保持を組み合わせ、復号時KV容量を32分の1にして質問応答精度0.531を得た。
 
+- **2026-09 · [Exploring the Efficiency of 3D-Stacked AI Chip Architecture for LLM Inference with VOXEL](2026-2604.26821-exploring-the-efficiency-of-3d-stacked-ai-chip-architecture-for-llm-infe.md)**  
+  実装：[✓](https://github.com/yiqiliu2/voxelsim) ・ リポジトリ内被引用：0  
+  VOXELは、演算コアの上に多数のDRAMバンクを三次元積層したAIチップを対象に、コンパイラが生成する演算配置・データ配置と、分散メモリ・オンチップ通信・熱制約を一体として評価するシミュレータである。性能差の大部分は設計空間を模擬した結果であり、量産シリコンの確定性能として扱わない。
+
 - **2026-09 · [Beyond Accuracy: Prefix-Invariant Realizations of Low-Precision Fast Matrix Multiplication](2026-2609.39816-beyond-accuracy-prefix-invariant-realizations-of-low-precision-fast-matr.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   本研究が問題にするのは、低精度の高速行列乗算で通常の正答率が保たれていても、言語モデルの出力が本来参照してはならない未来のトークンに依存することである。
@@ -151,6 +155,10 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - **2026-08 · [MonoMoE: An Efficient Fused Mega-kernel for Quantized MoE Decoding](2026-2609.04244-monomoe-fused-megakernel-quantized-moe-decoding.md)**  
   実装：[✓](https://github.com/flashinfer-ai/flashinfer/tree/main/csrc/fused_moe/monomoe) ・ リポジトリ内被引用：0  
   少トークンMoE復号を重み主導型の常駐巨大カーネルへ再構成し、ルーティングから二段の専門家射影と縮約までを融合してメモリ帯域利用を高める。
+
+- **2026-08 · [CoRun: Padding is Simple and Efficient for Deterministic LLM Inference](2026-2608.14376-corun-padding-is-simple-and-efficient-for-deterministic-llm-inference.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  再現性が重要なモデル比較や強化学習のロールアウトでは、単なる見かけのゆらぎではなく運用上の問題となる。しかしこれではGPUが入力形状に応じて分割を最適化できず、行列積や注意機構の並列分割を制限する。
 
 - **2026-08 · [Celty: SpMspV GPU Kernel and SIMT Co-Design for Efficient Dual-Sparse LLM Inference](2026-2608.01536-celty-dual-sparse-gpu-kernel.md)**  
   実装：[✓](https://github.com/RuokaiYin/Celty) ・ リポジトリ内被引用：0  
@@ -187,6 +195,10 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - **2026-06 · [Accelerating GPU Inference of Large Language Models with Moderately Unstructured Sparse Weight Matrices](2026-2607.08786-moderately-unstructured-sparse-gpu-inference.md)**  
   実装：[✓](https://github.com/moui0/cudac) ・ リポジトリ内被引用：0  
   約50%の非構造疎重みを2:4疎テンソルコア層・差分距離で再配置する補助層・微小残差層へ分解し、疎テンソルコアとCUDAコアを重ねて実行してSpInfer比最大1.64倍を達成する。
+
+- **2026-05 · [XFP: Quality-Targeted Adaptive Codebook Quantization with Sparse Outlier Separation for LLM Inference](2026-2605.14844-xfp-quality-targeted-adaptive-codebook-quantization-with-sparse-outlier-.md)**  
+  実装：[✓](https://github.com/flash7777/vllm/tree/multiquant) ・ リポジトリ内被引用：0  
+  XFPは、大規模言語モデルの重みを低ビット化する際に、最初からINT4やINT3などのビット幅を固定するのではなく、各層の重み再構成品質を満たす最小のビット幅を自動で選ぶ推論向け量子化方式である。後者を2ビットへ落としやすくすることで、モデルの全専門家を削除せず、2枚の96GBワークステーションGPUへ397B規模の重みを収める構成を探索する。
 
 - **2026-05 · [ViBE: Co-Optimizing Workload Skew and Hardware Variability for MoE Serving](2026-2606.00735-vibe-co-optimizing-workload-skew-and-hardware-variability-for-moe-servin.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

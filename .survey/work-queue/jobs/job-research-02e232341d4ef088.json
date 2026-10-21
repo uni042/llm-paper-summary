@@ -28,9 +28,14 @@
   "selection_reason": "動的バッチでGPUカーネルの形状・reduction順が変わることによるLLM推論の非決定性を、batch-invariant kernelへの全面置換ではなく、position-invariant性を利用したスケジューリングで解消する。isolated prefillと固定形状decode batch、CUDA Graphを組み合わせ、決定論的推論を維持しながら既存batch-invariant方式比でthroughputを15〜324%改善し、TTFTを51.8%、TPOTを48.6%平均削減する。推論再現性をkernel設計ではなくruntime/scheduling側で扱うため、GPU runtime系統として新規性が高い。",
   "semantic_scholar_id": "d59bbcfe67d1698b58b8f952c76605cbcae1ca24",
   "source_url": "https://arxiv.org/abs/2608.14376",
-  "status": "ready",
+  "status": "superseded",
   "title": "CoRun: Padding is Simple and Efficient for Deterministic LLM Inference",
   "type": "research",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-10-21T23:38:33+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/09-kernel-runtime-compilation/2026-2608.14376-corun-padding-is-simple-and-efficient-for-deterministic-llm-inference.md",
+  "represented_canonical_id": "arXiv:2608.14376",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
