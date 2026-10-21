@@ -1,0 +1,27 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261022-0100-scheduled-chat-00/r01/research-prescreen/049",
+  "reference_main_sha": "b4dd8f5d07317cb3b030957d587cd9b8189b9580",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.05278",
+      "identity_tokens": [
+        "arXiv:2605.05278",
+        "2605.05278"
+      ],
+      "title": "Expert Routing for Communication-Efficient MoE via Finite Expert Banks",
+      "reason": "MoEルーティングを通信レート・相互情報量の観点から分析する理論はLLM推論資源設計に関連するが、本文第III〜VI節の実証対象はMNIST上の事前学習済みCNN 25モデルの有限候補バンクであり、LLMの専門家トークン配送、GPU間通信、KV、推論遅延、スループットの実機検証がない。現行LLM推論サーベイの主要収録対象か判断を保留する。",
+      "source_url": "https://arxiv.org/html/2605.05278v1",
+      "body_check": "research_fulltext_relevance_review: 原著第III節はMNIST分類用CNN（畳込み16/32、隠れ層64）25候補を使い、第IV節はI(S;W)の推定、第V節はBlahut-Arimotoでレート歪曲曲線を導く。表IはMNISTの平均train/test error 0.0802/0.0846。LLMサービング・実通信性能は測定していない。",
+      "first_checked_at": "2026-10-22T01:04:36+09:00",
+      "last_checked_at": "2026-10-22T01:04:36+09:00",
+      "linked_from": [],
+      "origin": "research_postread_relevance",
+      "worklist_rank": 49
+    }
+  ]
+}
