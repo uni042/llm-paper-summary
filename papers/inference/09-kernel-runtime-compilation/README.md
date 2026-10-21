@@ -23,7 +23,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - [06-moe-quantization-compression](../06-moe-quantization-compression/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（130本）
+## 自動生成の論文一覧（131本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -263,6 +263,10 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - **2026-03 · [Scaling Attention via Feature Sparsity](2026-2603.22300-scaling-attention-via-feature-sparsity.md)**  
   実装：[✓](https://github.com/YannX1e/Sparse-Feature-Attention) ・ リポジトリ内被引用：0  
   一方、クエリ・キーの次元そのものを小さくする方法は、各トークンの表現力を減らすため、特定の推論・検索課題で精度を落とし得る。本論文の疎特徴注意（Sparse Feature 注意機構、SFA）は別の軸を選ぶ。
+
+- **2026-03 · [RSR-core: A High-Performance Engine for Low-Bit Matrix-Vector Multiplication](2026-2603.27462-rsr-core-a-high-performance-engine-for-low-bit-matrix-vector-multiplicat.md)**  
+  実装：[✓](https://github.com/UIC-InDeXLab/RSR-core) ・ リポジトリ内被引用：0  
+  RSR-coreは、二値または三値の重み行列に繰り返し現れる列パターンをまとめる冗長セグメント削減（Redundant Segment Reduction; RSR）アルゴリズムを、CPUおよびGPUで直接実行できる形に実装した推論エンジンである。
 
 - **2026-03 · [Model2Kernel: Model-Aware Symbolic Execution For Safe CUDA Kernels](2026-2603.24595-model2kernel-safe-cuda-kernels.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
