@@ -35,10 +35,15 @@
   "selection_reason": "MLAの単一latent headをtensor parallelで分割できず各GPUがKV全体を重複ロードする律速に対し、MLRAは分割可能なlatent stateを導入する。一次要旨で長文LLM decodeのHBM-SRAM trafficと4-way TP効率を改善する機構が確認できるためaccept。",
   "semantic_scholar_id": "a1b9042defdecc4fcd3d2a8dcb597dee86a4de30",
   "source_url": "https://arxiv.org/abs/2603.02188",
-  "status": "ready",
+  "status": "superseded",
   "title": "Multi-Head Low-Rank Attention",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-10-21T01:49:16+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2026-2603.02188-multi-head-low-rank-attention.md",
+  "represented_canonical_id": "arXiv:2603.02188",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
