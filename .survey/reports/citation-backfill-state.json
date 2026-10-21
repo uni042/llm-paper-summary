@@ -24938,14 +24938,17 @@
     "papers/inference/07-kv-cache-optimization-compression/2026-e905fcb3ff0a-multi-tier-dynamic-storage-of-kv-cache-for-llm-inference-under-resource-.md": {
       "status": "blocked",
       "source_fingerprint": "55e11e7d8a9612c5eecdbdf940b1649c20ab483fc247ae65c1a79ca065293708",
-      "error": "ValueError: no supported primary reference extractor for non-arXiv paper",
-      "checked_at": "2026-10-21T19:41:21+00:00"
+      "error": "PDF fallback failed: no primary PDF URL discovered",
+      "checked_at": "2026-10-21T19:47:36+00:00"
     },
     "papers/inference/09-kernel-runtime-compilation/2026-2604.20021-continuous-semantic-caching-for-low-cost-llm-serving.md": {
-      "status": "blocked",
+      "status": "complete",
       "source_fingerprint": "273a96d5f367828f58797839e478435f0c97909af7ad93400af7f651497a648a",
-      "error": "ValueError: arXiv HTML failed (HTTPError: HTTP Error 404: Not Found); source fallback failed (ValueError: arXiv source archive contained no compiled/reference-section bibitems)",
-      "checked_at": "2026-10-21T19:41:23+00:00"
+      "references_total": 482,
+      "normalized_references": 44,
+      "source": "arxiv-source-bibtex",
+      "source_url": "https://export.arxiv.org/e-print/2604.20021v1",
+      "checked_at": "2026-10-21T19:46:36+00:00"
     },
     "papers/inference/09-kernel-runtime-compilation/2026-2605.00686-eliminating-hidden-serialization-in-multi-node-megakernel-communication.md": {
       "status": "complete",
@@ -24988,5 +24991,5 @@
       "checked_at": "2026-10-21T19:41:42+00:00"
     }
   },
-  "updated_at": "2026-10-21T19:44:38+00:00"
+  "updated_at": "2026-10-21T19:48:13+00:00"
 }
