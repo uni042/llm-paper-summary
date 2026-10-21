@@ -1,0 +1,27 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-45",
+  "scheduled_slot": "45",
+  "run_key": "20261021-1145-scheduled-chat-45/r01/research-prescreen/026",
+  "reference_main_sha": "8bbae292f155dd3a5bef4c0dba56c0d86ba16269",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.03503",
+      "identity_tokens": [
+        "arxiv:2606.03503"
+      ],
+      "title": "ThoughtFold: Folding Reasoning Chains via Introspective Preference Learning",
+      "reason": "一次要旨によれば、正答推論軌跡内の冗長な探索を抽出し、マスク付き選好最適化の学習目標によって推論系列を短縮する手法である。出力トークン数約56%削減という推論効率への影響はあるが、主たる新規性はモデルの選好学習・強化学習後処理であり、推論サービング基盤、スケジューラ、KVキャッシュ、推論カーネルやメモリ階層の実装最適化を対象としていないため、現行の推論・学習システム基盤サーベイでは対象外とする。",
+      "source_url": "https://arxiv.org/abs/2606.03503",
+      "body_check": "abstract_screen_only; body_not_read; arXiv primary abstract checked",
+      "first_checked_at": "2026-10-21T11:56:30+09:00",
+      "last_checked_at": "2026-10-21T11:56:30+09:00",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance",
+      "worklist_rank": 26
+    }
+  ]
+}
