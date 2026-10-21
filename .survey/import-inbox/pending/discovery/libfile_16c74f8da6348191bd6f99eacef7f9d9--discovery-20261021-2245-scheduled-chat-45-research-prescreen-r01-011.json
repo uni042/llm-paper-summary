@@ -1,0 +1,27 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-45",
+  "scheduled_slot": "45",
+  "reference_main_sha": "bd22431a30fec228d05aef805ac2fa076f9c8dd7",
+  "record_count": 1,
+  "run_key": "20261021-2245-scheduled-chat-45/r01/research-prescreen/011",
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2601.13384",
+      "identity_tokens": [
+        "arxiv:2601.13384"
+      ],
+      "title": "From Completion to Editing: Unlocking Context-Aware Code Infilling via Search-and-Replace Instruction Tuning",
+      "reason": "一次要旨ではコード補完を検索・置換指示による単一パスの編集生成へ置き換え、20,000例の追加学習でも基盤モデルを超える補完性能を得たとする。エージェントによる反復編集と比べ推論遅延を抑える点は関連するが、中心はコード生成タスクの指示調整と能力改善で、一般のLLM実行器・スケジューラ・キャッシュ・カーネル最適化の新規方式ではないため境界扱いとする。",
+      "source_url": "https://arxiv.org/abs/2601.13384",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-21T22:47:29+09:00",
+      "last_checked_at": "2026-10-21T22:47:29+09:00",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance",
+      "worklist_rank": 11
+    }
+  ]
+}
