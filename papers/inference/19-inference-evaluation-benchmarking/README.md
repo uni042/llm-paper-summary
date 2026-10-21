@@ -1,5 +1,5 @@
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（53本）
+## 自動生成の論文一覧（54本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -87,6 +87,10 @@
 - **2026-04 · [SMoES: Soft Modality-Guided Expert Specialization in MoE-VLMs](2026-2604.23996-smoes-soft-modality-guided-expert-specialization-in-moe-vlms.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   SMoES（Soft Modality-guided 専門家 Specialization）は、視覚・言語モデル（Vision-Language モデル, VLM）の専門家混合（Mixture of エキスパート, MoE）層で、画像由来トークンと文章由来トークンが各層でどの程度混合しているかを推定し、専門家の配置と学習を調整する方式である。
+
+- **2026-04 · [ID-Selection: Importance-Diversity Based Visual Token Selection for Efficient LVLM Inference](2026-2604.05601-id-selection-importance-diversity-based-visual-token-selection-for-effic.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  候補N個からT個を残す計算量は概ねO(NT)であり、TがNより十分小さい強い圧縮で実用的とされる。LLaVA-1.5-7Bでは576個の視覚トークンを16個へ削減しても、9課題の集計で元モデルの91.8%の性能を維持する。
 
 - **2026-04 · [EvoComp: Learning Visual Token Compression for Multimodal Large Language Models via Semantic-Guided Evolutionary Labeling](2026-2604.17087-evocomp-learning-visual-token-compression-for-multimodal-large-language-.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
