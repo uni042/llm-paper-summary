@@ -1,0 +1,27 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "scheduled_slot": "00",
+  "run_key": "20261021-1900-scheduled-chat-00/r01/research-prescreen/010",
+  "reference_main_sha": "8d6386c93341c024933d7ac4c1a161f03578acfa",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2407.18370",
+      "identity_tokens": [
+        "arxiv:2407.18370"
+      ],
+      "title": "Trust or Escalate: LLM Judges with Provable Guarantees for Human Agreement",
+      "reason": "LLMによる回答評価で人間との一致率を保証する選択的判定が主題。安価な判定モデルから高価な判定モデルへ必要時だけ切り替えるカスケードで評価費用を抑えるが、主たる貢献は判定信頼度の較正と人間一致率保証であり、一般的なLLM推論基盤のスケジューリング・メモリ・処理量改善を主眼としないため境界扱い。",
+      "source_url": "https://arxiv.org/abs/2407.18370",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-21T19:01:16+09:00",
+      "last_checked_at": "2026-10-21T19:01:16+09:00",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance",
+      "worklist_rank": 10
+    }
+  ]
+}
