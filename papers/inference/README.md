@@ -1,6 +1,6 @@
 # 推論システム研究
 
-収録論文: **2766本**。
+収録論文: **2770本**。
 
 推論・serving・decoding・実行時memory / I/O・on-device実行など、**modelを使って出力を生成する段階の効率化**を目的とする研究を収録する。
 
@@ -34,7 +34,7 @@
 <!-- survey:auto:start -->
 ## 自動生成の収録状況
 
-推論論文：**2766本**。
+推論論文：**2770本**。
 
 | 系統 | 本数 |
 |---|---:|
@@ -42,9 +42,9 @@
 | [02-adaptive-expert-computation-compression](02-adaptive-expert-computation-compression/README.md) | 111 |
 | [03-expert-prefetch](03-expert-prefetch/README.md) | 15 |
 | [04-conditional-computation](04-conditional-computation/README.md) | 18 |
-| [05-speculative-decoding-moe](05-speculative-decoding-moe/README.md) | 195 |
+| [05-speculative-decoding-moe](05-speculative-decoding-moe/README.md) | 196 |
 | [06-moe-quantization-compression](06-moe-quantization-compression/README.md) | 19 |
-| [07-kv-cache-optimization-compression](07-kv-cache-optimization-compression/README.md) | 272 |
+| [07-kv-cache-optimization-compression](07-kv-cache-optimization-compression/README.md) | 273 |
 | [08-edge-on-device-llm-systems](08-edge-on-device-llm-systems/README.md) | 49 |
 | [09-kernel-runtime-compilation](09-kernel-runtime-compilation/README.md) | 133 |
 | [10-kv-cache-offload-recomputation](10-kv-cache-offload-recomputation/README.md) | 107 |
@@ -54,8 +54,8 @@
 | [14-agentic-inference-serving-runtime](14-agentic-inference-serving-runtime/README.md) | 64 |
 | [15-inference-simulation-emulation](15-inference-simulation-emulation/README.md) | 40 |
 | [16-weight-quantization-compression](16-weight-quantization-compression/README.md) | 65 |
-| [17-pim-near-data-acceleration](17-pim-near-data-acceleration/README.md) | 25 |
+| [17-pim-near-data-acceleration](17-pim-near-data-acceleration/README.md) | 26 |
 | [18-pipeline-native-cpu-inference](18-pipeline-native-cpu-inference/README.md) | 1 |
 | [19-inference-evaluation-benchmarking](19-inference-evaluation-benchmarking/README.md) | 57 |
-| [99-other-inference-systems](99-other-inference-systems/README.md) | 916 |
+| [99-other-inference-systems](99-other-inference-systems/README.md) | 917 |
 <!-- survey:auto:end -->

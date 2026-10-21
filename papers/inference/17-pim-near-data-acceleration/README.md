@@ -24,7 +24,7 @@
 - [08-edge-on-device-llm-systems](../08-edge-on-device-llm-systems/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（25本）
+## 自動生成の論文一覧（26本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -60,6 +60,10 @@
 - **2026-08 · [H3-Attn: Attention-Efficient 3D DRAM PNM Processor with Hybrid Head Parallelism and Hierarchical SFU](2026-h3-attn.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   H3-Attnは混成ヘッド並列と階層特殊関数ユニットを導入し、各種LLMで注意デコードを基準処理比1.54〜3.84倍高速化し、特殊関数ユニットの計算密度を従来設計比3.20倍へ高めた。
+
+- **2026-08 · [Bridging Efficiency and Scalability in LLM System via 3D Hybrid PIM with 2D In-Transit Computation](2026-2509.13710-bridging-efficiency-and-scalability-in-llm-system-via-3d-hybrid-pim-with.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  メモリ内演算（processing-in-メモリ、PIM）は重みや中間値の移動を抑えるが、DRAM上のPIMだけでは高バッチ時の行列演算性能が不足し、SRAM上のPIMだけではモデル重みを収める容量が足りない。さらにSoftmax、回転位置埋め込み、正規化のような非線形演算を中央の処理器へ集める方式では、長い文脈でバンク間の移動が増える。
 
 - **2026-07 · [StreamDQ: Near-Memory Weight DeQuantization in Custom HBM for Scalable AI Inference Acceleration](2026-2607.08993-streamdq-near-memory-weight-dequantization-custom-hbm.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
