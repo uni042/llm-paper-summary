@@ -987,7 +987,7 @@
 ### 2年前（2024-11〜2025-10）
 
 - **2025-02 · [Autellix: An Efficient Serving Engine for LLM Agents as General Programs](2025-2502.13965-autellix-agent-program-serving.md)**  
-  実装：✓ ・ リポジトリ内被引用：52  
+  実装：✓ ・ リポジトリ内被引用：53  
   エージェントのLLM呼び出しをプログラム単位で追跡し、累積サービス時間と動的DAGの重要経路近似で優先順位を付け、KV局所性を保つ複数GPUルーティングまで組み合わせてプログラム全体の待ち時間を削減する。
 
 - **2025-04 · [MegaScale-Infer: Serving Mixture-of-Experts at Scale with Disaggregated Expert Parallelism](2025-2504.02263-megascale-infer-disaggregated-expert-parallelism.md)**  
@@ -1106,6 +1106,10 @@
   実装：[✓](https://github.com/LLMServe/hydraserve) ・ リポジトリ内被引用：11  
   起動時だけモデル層を複数サーバーへ分散して帯域を束ね、重み取得・GPU転送・実行環境初期化を重ね、起動後にワーカーを集約することでサーバーレスLLMのコールドスタートを1.7〜4.7倍短縮する。
 
+- **2025-08 · [Kairos: Low-latency Multi-Agent Serving with Shared LLMs and Excessive Loads in the Public Cloud](2025-2508.06948-kairos-multi-agent-serving.md)**  
+  実装：✓ ・ リポジトリ内被引用：10  
+  動的ワークフローから残り遅延分布を学習して短く完了しやすいエージェントを優先し、将来KVメモリ需要を時間枠で予測してLLM実体へ配置するマルチエージェント配信基盤。
+
 - **2025-06 · [Beyond the Buzz: A Pragmatic Take on Inference Disaggregation](2025-2506.05508-beyond-the-buzz-a-pragmatic-take-on-inference-disaggregation.md)**  
   実装：✓ ・ リポジトリ内被引用：10  
   二つの段階を同じGPU群で混在させる同居方式は、片方を最適化するともう片方が悪化しやすい。
@@ -1121,10 +1125,6 @@
 - **2025-09 · [Parallax: Efficient LLM Inference Service over Decentralized Environment](2025-2509.26182-parallax-decentralized-heterogeneous-serving.md)**  
   実装：[✓](https://github.com/GradientHQ/parallax) ・ リポジトリ内被引用：9  
   地理的に離れた異種GPUでモデル層を地域・VRAM・計算性能に合わせて配置し、GPUごとの処理時間と通信遅延から要求ごとの層経路を選ぶことで、遅いGPU・低速回線によるパイプライン待ちを減らす分散LLMサービング。
-
-- **2025-08 · [Kairos: Low-latency Multi-Agent Serving with Shared LLMs and Excessive Loads in the Public Cloud](2025-2508.06948-kairos-multi-agent-serving.md)**  
-  実装：✓ ・ リポジトリ内被引用：9  
-  動的ワークフローから残り遅延分布を学習して短く完了しやすいエージェントを優先し、将来KVメモリ需要を時間枠で予測してLLM実体へ配置するマルチエージェント配信基盤。
 
 - **2025-07 · [PolyServe: Efficient Multi-SLO Serving at Scale](2025-2507.17769-polyserve-efficient-multi-slo-serving-at-scale.md)**  
   実装：✓ ・ リポジトリ内被引用：9  
@@ -1373,7 +1373,7 @@
 ### 3年前（2023-11〜2024-10）
 
 - **2023-12 · [SGLang: Efficient Execution of Structured Language Model Programs](2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md)**  
-  実装：[✓](https://github.com/sgl-project/sglang) ・ リポジトリ内被引用：542  
+  実装：[✓](https://github.com/sgl-project/sglang) ・ リポジトリ内被引用：543  
   複数のLLM呼び出しや条件分岐をランタイムが1つのプログラムとして理解し、共有接頭辞のKV再利用・並列実行・構造化出力生成をまとめて効率化する推論システム。
 
 - **2024-07 · [DistServe: Disaggregating Prefill and Decoding for Goodput-optimized Large Language Model Serving](2024-2401.09670-distserve-disaggregating-prefill-decoding-goodput.md)**  
@@ -1413,7 +1413,7 @@
   要求種別ごとのプールと階層制御でGPU数・並列度・周波数を動的最適化し、SLO維持下で推論クラスタのエネルギーを約52%削減する。
 
 - **2024-05 · [Parrot: Efficient Serving of LLM-based Applications with Semantic Variable](2024-2405.19888-parrot-efficient-serving-llm-applications-semantic-variable.md)**  
-  実装：[✓](https://github.com/microsoft/ParrotServe) ・ リポジトリ内被引用：82  
+  実装：[✓](https://github.com/microsoft/ParrotServe) ・ リポジトリ内被引用：83  
   複数の言語モデル呼出しから成るアプリケーションの入力・出力の関係を、意味変数という抽象化で推論提供側へ公開する。これにより要求間の依存関係、同一接頭部の再利用、アプリケーション全体の完了時間を考慮した要求配置を可能にする。単一要求の速度ではなく、複数要求を組み合わせた作業の完了時間を最適化する研究である。
 
 - **2023-11 · [SpotServe: Serving Generative Large Language Models on Preemptible Instances](2023-2311.15566-spotserve-preemptible-instance-serving.md)**  
@@ -1575,7 +1575,7 @@
 ### 4年前（2022-11〜2023-10）
 
 - **2023-09 · [Efficient Memory Management for Large Language Model Serving with PagedAttention](2023-2309.06180-vllm-pagedattention-efficient-memory-management.md)**  
-  実装：[✓](https://github.com/vllm-project/vllm) ・ リポジトリ内被引用：1202  
+  実装：[✓](https://github.com/vllm-project/vllm) ・ リポジトリ内被引用：1204  
   vLLMは、要求ごとに大きな連続領域を予約していたKVキャッシュを固定長ブロックへ分解し、論理的な並びとGPU上の物理配置を分離する。必要なブロックだけ動的に割り当て、同じ接頭辞のKVを共有することで、限られたGPUメモリへより多くの要求を同時に載せる。
 
 - **2023-08 · [SARATHI: Efficient LLM Inference by Piggybacking Decodes with Chunked Prefills](2023-2308.16369-sarathi.md)**  

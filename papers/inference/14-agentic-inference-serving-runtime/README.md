@@ -67,13 +67,13 @@
   実装：✓ ・ リポジトリ内被引用：4  
   エージェントの文脈成長を見てGPU周波数・同時実行数・配置を共同制御し、スラッシングを避けながら単一インスタンス平均27%、複数インスタンス46.3%の電力を削減する。
 
+- **2026-01 · [Nalar: Workflow-Aware Management of Agentic Applications](2026-2601.05109-nalar-workflow-aware-management-of-agentic-applications.md)**  
+  実装：✓ ・ リポジトリ内被引用：4  
+  複数の言語モデルエージェントが計画、検索、コード生成、試験などを繰り返す処理では、一つの利用者要求が多段階の作業へ分かれ、途中結果によって分岐や再試行が発生する。個々の言語モデルの生成速度だけを改善しても、外部ツールの待機、複数エージェントの依存関係、GPUメモリに残る鍵・値キャッシュ、資源の偏りによって、要求全体の終了時間が長くなる。
+
 - **2026-05 · [Irminsul: MLA-Native Position-Independent Caching for Agentic LLM Serving](2026-2605.05696-irminsul-mla-native-position-independent-caching-for-agentic-llm-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
   Irminsulは、複数ターンのエージェント型LLMサービングで、トークン内容は同じなのにプロンプト内の位置が変わるためKVキャッシュを再利用できない問題を扱う。システム変数、検索文書、ツール出力、会話の圧縮結果が途中に挿入されると、残りの大部分が以前と同じ内容でも、最初の不一致以降は再計算になる。
-
-- **2026-01 · [Nalar: Workflow-Aware Management of Agentic Applications](2026-2601.05109-nalar-workflow-aware-management-of-agentic-applications.md)**  
-  実装：✓ ・ リポジトリ内被引用：3  
-  複数の言語モデルエージェントが計画、検索、コード生成、試験などを繰り返す処理では、一つの利用者要求が多段階の作業へ分かれ、途中結果によって分岐や再試行が発生する。個々の言語モデルの生成速度だけを改善しても、外部ツールの待機、複数エージェントの依存関係、GPUメモリに残る鍵・値キャッシュ、資源の偏りによって、要求全体の終了時間が長くなる。
 
 - **2025-11 · [Aragog: Just-in-Time Model Routing for Scalable Serving of Agentic Workflows](2025-2511.20975-aragog-just-in-time-model-routing-for-scalable-serving-of-agentic-workfl.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
@@ -244,7 +244,7 @@
   エージェント実行グラフから将来再利用を予測してKV追出しとCPU→GPU先読みを制御し、SGLang HiCache比最大2.19倍高速化。
 
 - **2025-02 · [A-Mem: Agentic Memory for LLM Agents](2025-2502.12110-a-mem-agentic-memory-for-llm-agents.md)**  
-  実装：[✓](https://github.com/WujiangXu/A-mem-sys) ・ リポジトリ内被引用：28  
+  実装：[✓](https://github.com/WujiangXu/A-mem-sys) ・ リポジトリ内被引用：29  
   従来の記憶システムでは、いつ保存し、どの形式で整理し、どの条件で取り出すかを開発者が固定する場合が多い。NeurIPS 2025正式掲載論文では、長期会話の質問応答データで六つの基盤モデルを評価し、特に時間推論や複数会話をまたぐ質問で改善を示した。
 
 - **2025-04 · [Mem0: Building Production-Ready AI Agents with Scalable Long-Term Memory](2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md)**  

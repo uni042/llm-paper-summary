@@ -457,7 +457,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   重みのみを低ビット量子化した大規模言語モデルでは、重みは1〜4ビットでも活性値は8〜16ビット以上の精度を保つことが多い。論文はカーネルの最大6.6倍、平均3.6倍の改善、モデル全体で条件により2〜4倍の生成速度改善を報告する。
 
 - **2024-03 · [AIOS: LLM Agent Operating System](2024-2403.16971-aios-llm-agent-operating-system.md)**  
-  実装：[✓](https://github.com/agiresearch/AIOS) ・ リポジトリ内被引用：8  
+  実装：[✓](https://github.com/agiresearch/AIOS) ・ リポジトリ内被引用：9  
   従来のエージェント枠組みでは、各エージェントがLLMやツールを直接呼び出し、GPUメモリの不足、競合するAPI呼び出し、長時間要求の独占を個別に処理しがちだった。AIOSはエージェントアプリケーションと資源管理を分離し、専用のAIOSカーネルを通じてサービスを提供する。
 
 - **2024-04 · [DeFT: Decoding with Flash Tree-Attention for Efficient Tree-structured LLM Inference](2024-2404.00242-deft-decoding-with-flash-tree-attention-for-efficient-tree-structured-ll.md)**  
@@ -551,7 +551,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 ### 8年前（2018-11〜2019-10）
 
 - **2019-06 · [Triton: An Intermediate Language and Compiler for Tiled Neural Network Computations](2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md)**  
-  実装：[✓](https://github.com/triton-lang/triton) ・ リポジトリ内被引用：115  
+  実装：[✓](https://github.com/triton-lang/triton) ・ リポジトリ内被引用：116  
   深層学習の演算を高速なGPUカーネルにするには、数式を記述するだけでは足りない。入力配列のどの部分をまとめて読み出し、何回再利用し、どのスレッドに配り、いつ共有メモリへ移すかによって性能が大きく変わる。既存のcuBLASやcuDNNが対象とする標準演算なら高性能な実装を利用できるが、新しい行列演算や不規則な参照を伴う演算では、そのまま使えない。
 
 - **2019-10 · [Structured Pruning of Large Language Models](2019-1910.04732-structured-pruning-of-large-language-models.md)**  
@@ -561,6 +561,6 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 ### 9年前（2017-11〜2018-10）
 
 - **2018-05 · [Online normalizer calculation for softmax](2018-1805.02867-online-normalizer-calculation-for-softmax.md)**  
-  実装：[✓](https://github.com/NVIDIA/online-softmax) ・ リポジトリ内被引用：39  
+  実装：[✓](https://github.com/NVIDIA/online-softmax) ・ リポジトリ内被引用：40  
   本論文は、数値的に安全なソフトマックスの出力を変えずに、入力配列を読み直す回数を減らす「オンライン正規化子（online normalizer）」を提案する。著者らのTesla V100での単精度実装では、ソフトマックス単体で最大約1.3倍の高速化が報告される。
 <!-- survey:auto:end -->

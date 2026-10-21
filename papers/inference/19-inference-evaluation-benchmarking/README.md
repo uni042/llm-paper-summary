@@ -154,13 +154,13 @@
   実装：[✓](https://github.com/alibaba/ServeGen) ・ リポジトリ内被引用：24  
   4か月・12モデル・35.4億要求の本番記録から、到着率、バースト、入力・出力長、画像・音声・動画、推論過程の分布を分析する。顧客ごとの比較的安定した特性と時間変動する到着率を合成し、現実的な推論ベンチマークを作る。
 
+- **2025-02 · [KernelBench: Can LLMs Write Efficient GPU Kernels?](2025-2502.10517-kernelbench-can-llms-write-efficient-gpu-kernels.md)**  
+  実装：[✓](https://github.com/ScalingIntelligence/KernelBench) ・ リポジトリ内被引用：15  
+  一般的なプログラム合成では単体試験に通ることを重視するが、GPUカーネルの実用性は入力形状、メモリ階層、並列実行、命令セットに左右される。正しくても遅い実装を成功とみなさないことが設計の中心にある。例えばDeepSeek-R1の fast1 は単一演算12%、複合演算36%、モデル全体2%である。
+
 - **2025-03 · [Stop Overthinking: A Survey on Efficient Reasoning for Large Language Models](2025-2503.16419-stop-overthinking-a-survey-on-efficient-reasoning-for-large-language-mod.md)**  
   実装：✓ ・ リポジトリ内被引用：14  
   モデル自体に短い推論を学習させる方式、推論の出力軌跡を途中で圧縮・制御する方式、入力の難度や指示に応じて推論量を変える方式である。
-
-- **2025-02 · [KernelBench: Can LLMs Write Efficient GPU Kernels?](2025-2502.10517-kernelbench-can-llms-write-efficient-gpu-kernels.md)**  
-  実装：[✓](https://github.com/ScalingIntelligence/KernelBench) ・ リポジトリ内被引用：14  
-  一般的なプログラム合成では単体試験に通ることを重視するが、GPUカーネルの実用性は入力形状、メモリ階層、並列実行、命令セットに左右される。正しくても遅い実装を成功とみなさないことが設計の中心にある。例えばDeepSeek-R1の fast1 は単一演算12%、複合演算36%、モデル全体2%である。
 
 - **2025-01 · [LLaVA-Mini: Efficient Image and Video Large Multimodal Models with One Vision Token](2025-2501.03895-llava-mini-efficient-image-and-video-large-multimodal-models-with-one-vi.md)**  
   実装：[✓](https://github.com/ictnlp/LLaVA-Mini) ・ リポジトリ内被引用：14  
