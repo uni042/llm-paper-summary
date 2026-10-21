@@ -35,6 +35,8 @@ worker_run_key: '20261021-2126-scheduled-chat-30/r01'
 reference_main_sha: 'efd34e07ef2679bc8dcc3049d703f93905298f0e'
 quality_self_review_passed: true
 quality_self_review_version: PAPER-QUALITY-GUIDE-2026-10-07
+last_audited: null
+audit_version: 0
 ---
 
 # ネットワークを考慮したエージェント型AI推論の省エネルギー設計

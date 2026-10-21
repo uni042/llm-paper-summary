@@ -24,6 +24,8 @@ quality_self_review_passed: true
 quality_self_review_version: 'PAPER-QUALITY-GUIDE-2026-10-07'
 returned_repair_origin: '20261018-2155-scheduled-chat-00/r01'
 returned_repair_reason: '差し戻しキューで評価説明量120文字。旧blocked原稿が固定mainで404のため、NeurIPS 2025の原著全文と表1〜3・図8〜14から再構成。'
+last_audited: null
+audit_version: 0
 ---
 # AgServe：セッション認識型LLMエージェント推論基盤
 

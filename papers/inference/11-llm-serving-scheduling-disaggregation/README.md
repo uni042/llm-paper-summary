@@ -3,7 +3,7 @@
 複数requestを複数GPU / nodeで処理するLLM servingについて、request順、batch、prefill / decodeのGPU配分、KV再利用・転送、request移動などを調整し、latencyとresource効率を改善する研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（406本）
+## 自動生成の論文一覧（407本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -587,6 +587,10 @@
 - **2026-09 · [Crossflow: Prefill-Decode Elasticity for Agentic LLM Serving](2026-2609.27085-crossflow-prefill-decode-elasticity-for-agentic-llm-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   固定P/D分離は各段階を専用化できる一方、実運用では未キャッシュ入力と出力の比率が短時間に変動する。大規模フリートでは分単位のピーク対平均比が最大4.7倍、公開エージェント型トレースでは同日内の時間別比率幅が中央値24.5倍だった。
+
+- **2026-09 · [Cross-Model Autoscaling for Shared LLM Serving](2026-2609.29160-cross-model-autoscaling-for-shared-llm-serving.md)**  
+  実装：[✓](https://github.com/zxzx9898/Token-service-share_Rebalancing_Engine) ・ リポジトリ内被引用：0  
+  著者らは、要求1件当たりに供給される実効トークン処理能力を測り、モデルとSLOごとに定めた「健全なサービスの最低境界」で正規化するトークンサービス分配率（トークン Service Share: TSS）を設計する。二台の各4基A100 40 GBを備えた評価基盤で、AIBrixとvLLMのホット切替を利用し、3モデル・7種類の負荷トレースを測定した。
 
 - **2026-09 · [Calibrate, Then Route: A Measured Study of Learned Request Routing for Disaggregated LLM Serving](2026-2609.16206-calibrate-then-route-disaggregated-llm-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
