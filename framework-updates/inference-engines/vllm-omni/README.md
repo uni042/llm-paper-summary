@@ -14,6 +14,14 @@ vLLM-Omniの主要な機能・性能更新を継続的に記録する集約ペ�
 
 ## 主要更新
 
+### 2026-10-19 — vLLM-Omni v0.32.0rc1（公開候補版）
+
+- v0.31.0rc1から297件の変更を取り込み、vLLM本体v0.32.0へ整合。正式版ではなくrelease candidate。
+- session-aware replica placement、複数frontendをまたぐfull-duplex audio serving、`/v1/realtime`のserver-side VAD、RL learnerからserving workerへのweight transferを追加。
+- MOSS-Image、TaoMate-H3 streaming、LTX 2.5、JoyAI、YuE2を拡張。PersonaPlexのstage-wise batching / CUDA Graph / memory最適化、diffusion attentionのCUDA FA3 FP8とMammothModa2 DiTのonline FP8も含む。
+- Python `>=3.11,<3.14`。release時点ではPyPI wheel / container imageがpipeline待ちと記載されていた。すべてのmodelが初日から対応するとは扱わない。
+- 出典: [v0.32.0rc1 release](https://github.com/vllm-project/vllm-omni/releases/tag/v0.32.0rc1)
+
 ### 2026-10-06 — vLLM-Omni v0.31.0rc1（公開候補版・pre-release）
 
 - **多ノード推論**: Ray実行器を任意選択で追加し、段階ごとのGPUをクラスタ全体へ割り当て、環境情報を伝播できるようにした。vLLM本体0.31.0へ追随。

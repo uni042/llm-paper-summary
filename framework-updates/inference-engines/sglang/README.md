@@ -29,6 +29,14 @@ SGLangの主要な機能・性能更新を継続的に記録する集約ペー�
 
 以下の更新履歴は、**cache階層、長文処理、MoE負荷分散、speculative path、GPU同期削減**の拡張を追う。
 
+## 2026-10-19 — v0.5.22（正式版）
+
+- 公式releaseは950 PR / 245 contributorsを記録。DeepSeek-V4.1のH200上のGPU当たり処理量最大2.3倍、DSparkのMI350X / MI355X上最大1.9倍を報告。GLM-5.2 / 5.3ではdecode context parallelism + MTPを追加し、GLM-5.3で最大2.1倍とされる。いずれも対象model・hardware・benchmarkに限定した値。
+- HiSparseはEAGLE / MTPとCPU KVを使う長文speculative decodingに対応。InstantTensorはmodel loading最大10倍、長promptのprefill / decode分離はthroughput最大+27%・p95 TTFT約半分を報告するが、別条件の値で同時効果を保証しない。
+- Qwen3.8-Flash-Next、GLM-5.3-Flash、MiMo-V2.6-Proの個別測定も含むが、B200 / B300等の条件をRTX 4070 SUPERへ外挿しない。
+- **互換性と正しさ**: Python 3.11以上が必要。speculative decodingとstructured outputを併用するhybrid linear modelで、reject後に古いMamba stateから再開する問題を修正。標準NVIDIA Docker例はCUDA 13。
+- 出典: [v0.5.22 release](https://github.com/sgl-project/sglang/releases/tag/v0.5.22)
+
 ## 2026-10-02 — v0.5.21（released）
 
 - **prefill / decodeを再起動なしで動的切替**: PD instanceがruntimeでprefill roleとdecode roleを切り替え可能になった。固定P/D fleetより負荷変動へ追従しやすい。

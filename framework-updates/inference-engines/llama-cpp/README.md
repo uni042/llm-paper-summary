@@ -78,6 +78,17 @@ llama.cppの主要な機能・性能更新を継続的に記録する集約ペ�
 
 ## 主要更新
 
+### 2026-10-19 — b11724〜b11742（開発版）
+
+- **b11724**: CUDA Flash Attention `flash_attn_ext_vec`のshared-memory write-after-read競合を修正。正しさ・安定性の修正で、測定済み速度向上率ではない。
+- **b11727**: 分割GGUF / LoRA exportで途中切れのtensorを検知して拒否し、破損出力を避ける。
+- **b11729**: Qwen3のbidirectional attentionと`dense_2`出力射影を追加。model互換性の拡張。
+- **b11738**: serverのSWA checkpoint無効化条件と`n_past` / prefix境界の扱いを修正。
+- **b11741**: OpenCL Q4_0 / Q4_K / Q6_K向けcooperative-K `dp4a` GEMM kernelを追加。OpenCL専用経路。
+- **b11742**: Carbon-14B HybridDNAおよび旧Carbon系tokenizerの特殊token / merge変換を修正。
+- 以上は対象backend / modelの修正・対応で、端から端の生成速度改善は未測定。
+- 出典: [b11724](https://github.com/ggml-org/llama.cpp/releases/tag/b11724), [b11727](https://github.com/ggml-org/llama.cpp/releases/tag/b11727), [b11729](https://github.com/ggml-org/llama.cpp/releases/tag/b11729), [b11738](https://github.com/ggml-org/llama.cpp/releases/tag/b11738), [b11741](https://github.com/ggml-org/llama.cpp/releases/tag/b11741), [b11742](https://github.com/ggml-org/llama.cpp/releases/tag/b11742)
+
 ### 2026-10-18 — b11717〜b11721（開発版）
 
 - **b11717**: Qualcomm HexagonでHadamard演算とQ1_0 / Q2_0 `GET_ROWS` を追加。Hexagon向けの対応。
