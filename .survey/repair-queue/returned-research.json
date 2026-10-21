@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-21T18:35:40+00:00",
+  "generated_at": "2026-10-21T18:48:25+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 56,
+  "count": 54,
   "entries": [
     {
       "canonical_id": "DOI:10.1145/3714983.3714987",
@@ -815,34 +815,6 @@
       "worker_run_key": "20261019-2130-scheduled-chat-30/r01"
     },
     {
-      "canonical_id": "DOI:10.1109/ISCA59077.2024.00082",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-20T17:45:06+00:00",
-      "return_count": 5,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 355 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 7075,
-        "body_paragraphs": 39,
-        "method_chars": 2583,
-        "method_paragraphs": 14,
-        "evaluation_chars": 355,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "評価説明量 355 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-62b6dfd1ba4b--libfile_cd78884b8a848191a02b2894417812b8--2024-2312.03134-llmcompass-returned-quality-repair-20261020-1430-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-62b6dfd1ba4b--libfile_cd78884b8a848191a02b2894417812b8--2024-2312.03134-llmcompass-returned-quality-repair-20261020-1430-scheduled-chat-30-r01.json",
-      "worker_run_key": "20261020-1430-scheduled-chat-30/r01"
-    },
-    {
       "canonical_id": "DOI:10.1109/TC.2025.3628193",
       "title": null,
       "source_url": null,
@@ -1035,34 +1007,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-a47c91d6a3ac--libfile_608715f0ee9881919fd7050286c3bcc9--2024-2407.05690-transact-transitional-activation-pruning-research-20261020-1000-scheduled-chat-00-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-a47c91d6a3ac--libfile_608715f0ee9881919fd7050286c3bcc9--2024-2407.05690-transact-transitional-activation-pruning-research-20261020-1000-scheduled.json",
       "worker_run_key": "20261020-1000-scheduled-chat-00/r01"
-    },
-    {
-      "canonical_id": "arXiv:2608.01985",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-20T18:04:41+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 161 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5396,
-        "body_paragraphs": 27,
-        "method_chars": 1515,
-        "method_paragraphs": 7,
-        "evaluation_chars": 161,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "評価説明量 161 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-ad814689d738--libfile_cdbbfbebf8888191bf8974e0a93ca98d--2026-2608.01985-diffprune-information-throttling-visual-tokens-research-20261020-1555-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-ad814689d738--libfile_cdbbfbebf8888191bf8974e0a93ca98d--2026-2608.01985-diffprune-information-throttling-visual-tokens-research-20261020-1555-sch.json",
-      "worker_run_key": "20261020-1555-scheduled-chat-00/r01"
     },
     {
       "canonical_id": "DOI:10.18653/v1/2025.emnlp-main.1676",
@@ -1339,36 +1283,6 @@
       "worker_run_key": "20261021-2231-scheduled-chat-30/r01"
     },
     {
-      "canonical_id": "arXiv:2504.00424",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-21T16:46:01+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700",
-        "説明不足トリガー: 評価説明量 146 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 4275,
-        "body_paragraphs": 24,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 146,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700",
-          "評価説明量 146 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_388663af6cfc81918c5bb0b46fa37e31--2025-2504.00424-hawkeye-model-collaboration-research-20261020-2230-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_388663af6cfc81918c5bb0b46fa37e31--2025-2504.00424-hawkeye-model-collaboration-research-20261020-2230-scheduled-chat-30-r01.json",
-      "worker_run_key": "20261020-2230-scheduled-chat-30/r01"
-    },
-    {
       "canonical_id": "arXiv:2505.03031",
       "title": null,
       "source_url": null,
@@ -1568,6 +1482,36 @@
       },
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_5efb16cc5e908191b679a535a7aae073--2026-2605.14978-ppow-speculative-window-rl-research-20261021-2231-scheduled-chat-30-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_5efb16cc5e908191b679a535a7aae073--2026-2605.14978-ppow-speculative-window-rl-research-20261021-2231-scheduled-chat-30-r01.json",
+      "worker_run_key": "20261021-2231-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2606.26587",
+      "title": "SharQ: Bridging Activation Sparsity and FP4 Quantization for LLM Inference",
+      "source_url": "https://arxiv.org/pdf/2606.26587",
+      "returned_at": "2026-10-21T18:45:43+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700",
+        "説明不足トリガー: 評価説明量 427 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5669,
+        "body_paragraphs": 34,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 427,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700",
+          "評価説明量 427 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_68da10e789fc8191a73292818808130e--2026-2606.26587-sharq-sparse-dense-fp4-research-20261021-2231-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_68da10e789fc8191a73292818808130e--2026-2606.26587-sharq-sparse-dense-fp4-research-20261021-2231-scheduled-chat-30-r01.json",
       "worker_run_key": "20261021-2231-scheduled-chat-30/r01"
     }
   ]
