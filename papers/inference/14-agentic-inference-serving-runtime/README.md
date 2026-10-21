@@ -256,7 +256,7 @@
 ### 2年前（2024-11〜2025-10）
 
 - **2025-07 · [KVFlow: Efficient Prefix Caching for Accelerating LLM-Based Multi-Agent Workflows](2025-2507.07400-kvflow.md)**  
-  実装：✓ ・ リポジトリ内被引用：47  
+  実装：✓ ・ リポジトリ内被引用：48  
   エージェント実行グラフから将来再利用を予測してKV追出しとCPU→GPU先読みを制御し、SGLang HiCache比最大2.19倍高速化。
 
 - **2025-02 · [A-Mem: Agentic Memory for LLM Agents](2025-2502.12110-a-mem-agentic-memory-for-llm-agents.md)**  
@@ -279,13 +279,13 @@
   実装：[✓](https://anonymous.4open.science/r/Halo_Demo-BC86/) ・ リポジトリ内被引用：10  
   Haloは「LLM呼出しを1件ずつ速くする」のではなく、同時に走るエージェントワークフロー全体を実行計画として扱う。最新版v2では、同一ツール要求の統合とCPU-GPU協調を加え、強いエージェント基盤に対してバッチ推論最大3.6倍、オンライン処理量最大2.58倍を報告する。
 
+- **2025-10 · [Speculative Actions: A Lossless Framework for Faster Agentic Systems](2025-2510.04371-speculative-actions-a-lossless-framework-for-faster-agentic-systems.md)**  
+  実装：[✓](https://github.com/naimengye/speculative-action) ・ リポジトリ内被引用：8  
+  本研究は、LLMを使うエージェント（agentic systems）が環境へ問い合わせを行うたびに待機し、その結果を見てから次の操作を決めるという逐次的なツール呼び出しの待ち時間を短縮する。通常の投機的復号（投機的復号）は、小型モデルが次のトークンを予測し、対象モデルがそれを検証することで生成を高速化する。
+
 - **2025-05 · [HEXGEN-FLOW: Optimizing LLM Inference Request Scheduling for Agentic Text-to-SQL](2025-2505.05286-hexgen-flow-optimizing-llm-inference-request-scheduling-for-agentic-text.md)**  
   実装：[✓](https://github.com/Relaxed-System-Lab/Hexgen-Flow) ・ リポジトリ内被引用：8  
   本研究は、一つの利用者問い合わせが約20回の大規模言語モデル（LLM）呼び出しを誘発するエージェント型Text-to-SQL処理に対し、問い合わせ全体の応答期限を守る推論スケジューラを設計する。
-
-- **2025-10 · [Speculative Actions: A Lossless Framework for Faster Agentic Systems](2025-2510.04371-speculative-actions-a-lossless-framework-for-faster-agentic-systems.md)**  
-  実装：[✓](https://github.com/naimengye/speculative-action) ・ リポジトリ内被引用：7  
-  本研究は、LLMを使うエージェント（agentic systems）が環境へ問い合わせを行うたびに待機し、その結果を見てから次の操作を決めるという逐次的なツール呼び出しの待ち時間を短縮する。通常の投機的復号（投機的復号）は、小型モデルが次のトークンを予測し、対象モデルがそれを検証することで生成を高速化する。
 
 - **2025-10 · [FlowMesh: A Service Fabric for Composable LLM Workflows](2025-2510.26913-flowmesh-a-service-fabric-for-composable-llm-workflows.md)**  
   実装：✓ ・ リポジトリ内被引用：7  
