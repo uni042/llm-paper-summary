@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "93f0a7ad34e8b2bc8a63e244cf72c072af15dfbdaa2958fa97295bc13f315af1",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_44c85531466081919386a0595babfc98--2026-2609.35065-tempokv-timely-staging-research-20261021-1528-scheduled-chat-30-r01.md",
+  "canonical_id": "arXiv:2609.35065",
+  "worker_completed_at": "2026-10-21T15:31:00+09:00",
+  "worker_run_key": "20261021-1528-scheduled-chat-30/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 6322,
+    "body_paragraphs": 31,
+    "method_chars": 2579,
+    "method_paragraphs": 14,
+    "evaluation_chars": 225,
+    "limitation_chars": 0,
+    "insufficiency_flags": [
+      "評価説明量 225 < 500",
+      "限界説明量 0 < 推奨 120"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 評価説明量 225 < 500"
+  ],
+  "processed_at": "2026-10-21T16:56:45+00:00"
+}

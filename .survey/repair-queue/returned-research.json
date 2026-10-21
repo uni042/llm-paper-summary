@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-21T16:47:13+00:00",
+  "generated_at": "2026-10-21T16:59:15+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 57,
+  "count": 56,
   "entries": [
     {
       "canonical_id": "DOI:10.1145/3714983.3714987",
@@ -870,35 +870,6 @@
       "worker_run_key": "20261020-1400-scheduled-chat-00/r01"
     },
     {
-      "canonical_id": "arXiv:2610.12060",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-20T17:38:28+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700",
-        "説明不足トリガー: 評価説明量 0 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 6399,
-        "body_paragraphs": 39,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 0,
-        "limitation_chars": 536,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700",
-          "評価説明量 0 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-45d2d7d0c5a0--libfile_9a7a3c58b0e8819193ac4aef9227c62c--2026-2610.12060-vimod-visual-memory-on-demand-research-20261020-1304-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-45d2d7d0c5a0--libfile_9a7a3c58b0e8819193ac4aef9227c62c--2026-2610.12060-vimod-visual-memory-on-demand-research-20261020-1304-scheduled-chat-00-r0.json",
-      "worker_run_key": "20261020-1304-scheduled-chat-00/r01"
-    },
-    {
       "canonical_id": "arXiv:2604.07144",
       "title": null,
       "source_url": null,
@@ -1065,34 +1036,6 @@
       "worker_run_key": "20261020-2230-scheduled-chat-30/r01"
     },
     {
-      "canonical_id": "arXiv:2610.01108",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-20T17:54:59+00:00",
-      "return_count": 4,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 120 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 6334,
-        "body_paragraphs": 38,
-        "method_chars": 2504,
-        "method_paragraphs": 16,
-        "evaluation_chars": 120,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "評価説明量 120 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-910af399e499--libfile_1b91d503d234819186067ef8046aaef8--2026-2610.01108-agspec-returned-repair-20261020-2056-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-910af399e499--libfile_1b91d503d234819186067ef8046aaef8--2026-2610.01108-agspec-returned-repair-20261020-2056-scheduled-chat-00-r01.json",
-      "worker_run_key": "20261020-2056-scheduled-chat-00/r01"
-    },
-    {
       "canonical_id": "arXiv:2605.18226",
       "title": null,
       "source_url": null,
@@ -1172,36 +1115,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-9d5f66c18f73--libfile_d68341da19bc819185c7e6cc4773543f--2024-2405.07542-ems-sd-ragged-batch-speculative-decoding-research-20261020-1056-scheduled-chat-00-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-9d5f66c18f73--libfile_d68341da19bc819185c7e6cc4773543f--2024-2405.07542-ems-sd-ragged-batch-speculative-decoding-research-20261020-1056-scheduled.json",
       "worker_run_key": "20261020-1056-scheduled-chat-00/r01"
-    },
-    {
-      "canonical_id": "arXiv:2505.03031",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-20T18:04:37+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700",
-        "説明不足トリガー: 評価説明量 0 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 7122,
-        "body_paragraphs": 43,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 0,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700",
-          "評価説明量 0 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-9de928890d93--libfile_422866636b488191957207d9e7a01e4e--2025-2505.03031-radio-rate-distortion-quantization-research-20261020-1000-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-9de928890d93--libfile_422866636b488191957207d9e7a01e4e--2025-2505.03031-radio-rate-distortion-quantization-research-20261020-1000-scheduled-chat-.json",
-      "worker_run_key": "20261020-1000-scheduled-chat-00/r01"
     },
     {
       "canonical_id": "arXiv:2411.10741",
@@ -1538,8 +1451,8 @@
     },
     {
       "canonical_id": "arXiv:2603.20616",
-      "title": "Beyond Token Eviction: Mixed-Dimension Budget Allocation for Efficient KV Cache Compression",
-      "source_url": "https://arxiv.org/pdf/2603.20616",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-21T16:45:16+00:00",
       "return_count": 1,
       "assigned_worker": "scheduled-chat-30",
@@ -1565,8 +1478,8 @@
     },
     {
       "canonical_id": "arXiv:2504.00424",
-      "title": "Hawkeye: Model Collaboration for Efficient Reasoning",
-      "source_url": "https://arxiv.org/pdf/2504.00424",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-21T16:46:01+00:00",
       "return_count": 1,
       "assigned_worker": "scheduled-chat-30",
@@ -1592,6 +1505,62 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_388663af6cfc81918c5bb0b46fa37e31--2025-2504.00424-hawkeye-model-collaboration-research-20261020-2230-scheduled-chat-30-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_388663af6cfc81918c5bb0b46fa37e31--2025-2504.00424-hawkeye-model-collaboration-research-20261020-2230-scheduled-chat-30-r01.json",
       "worker_run_key": "20261020-2230-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2505.03031",
+      "title": "Radio: Rate–Distortion Optimization for Large Language Model Compression",
+      "source_url": "https://arxiv.org/pdf/2505.03031",
+      "returned_at": "2026-10-21T16:54:51+00:00",
+      "return_count": 3,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 6432,
+        "body_paragraphs": 34,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 725,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_3dbe2aad20608191881a0b006fd438d5--2025-2505.03031-radio-rate-distortion-llm-quantization-research-20261021-2200-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_3dbe2aad20608191881a0b006fd438d5--2025-2505.03031-radio-rate-distortion-llm-quantization-research-20261021-2200-scheduled-chat-00-r01.json",
+      "worker_run_key": "20261021-2200-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2609.35065",
+      "title": "TempoKV: Timely Staging of LLM KV Caches for Memory-Semantic Flash",
+      "source_url": "https://arxiv.org/abs/2609.35065",
+      "returned_at": "2026-10-21T16:56:45+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 225 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 6322,
+        "body_paragraphs": 31,
+        "method_chars": 2579,
+        "method_paragraphs": 14,
+        "evaluation_chars": 225,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "評価説明量 225 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_44c85531466081919386a0595babfc98--2026-2609.35065-tempokv-timely-staging-research-20261021-1528-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_44c85531466081919386a0595babfc98--2026-2609.35065-tempokv-timely-staging-research-20261021-1528-scheduled-chat-30-r01.json",
+      "worker_run_key": "20261021-1528-scheduled-chat-30/r01"
     }
   ]
 }
