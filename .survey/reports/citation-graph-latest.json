@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-21T11:22:59+00:00",
-  "paper_count": 2774,
-  "edge_count": 35622,
+  "generated_at": "2026-10-21T13:16:15+00:00",
+  "paper_count": 2775,
+  "edge_count": 35625,
   "citation_counts": {
     "papers/inference/01-offload-hierarchical-memory/2021-2101.06840-zero-offload-democratizing-billion-scale-model-training.md": 12,
     "papers/inference/01-offload-hierarchical-memory/2021-2110.03888-m6-10t-a-sharing-delinking-paradigm-for-efficient-multi-trillion-paramet.md": 4,
@@ -885,6 +885,7 @@
     "papers/inference/09-kernel-runtime-compilation/2026-2603.15854-flashsampling-fast-and-memory-efficient-exact-sampling.md": 1,
     "papers/inference/09-kernel-runtime-compilation/2026-2603.22300-scaling-attention-via-feature-sparsity.md": 0,
     "papers/inference/09-kernel-runtime-compilation/2026-2603.24595-model2kernel-safe-cuda-kernels.md": 0,
+    "papers/inference/09-kernel-runtime-compilation/2026-2603.27462-rsr-core-a-high-performance-engine-for-low-bit-matrix-vector-multiplicat.md": 0,
     "papers/inference/09-kernel-runtime-compilation/2026-2603.28342-kernel-smith-a-unified-recipe-for-evolutionary-kernel-optimization.md": 0,
     "papers/inference/09-kernel-runtime-compilation/2026-2604.01178-screening-is-enough.md": 0,
     "papers/inference/09-kernel-runtime-compilation/2026-2604.02967-foe-forest-of-errors-makes-the-first-solution-the-best-in-large-reasonin.md": 1,
@@ -1056,7 +1057,7 @@
     "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2311.18677-splitwise-efficient-generative-llm-inference-phase-splitting.md": 428,
     "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.05516-pensieve-stateful-large-language-model-serving.md": 50,
     "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md": 543,
-    "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.15234-towards-efficient-generative-large-language-model-serving-a-survey-from-.md": 34,
+    "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.15234-towards-efficient-generative-large-language-model-serving-a-survey-from-.md": 35,
     "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2401.00134-unicron-economizing-self-healing-llm-training-at-scale.md": 4,
     "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.00588-fairness-in-serving-large-language-models-vtc.md": 75,
     "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.02669-infinite-llm-distattention-distributed-kvcache.md": 49,
@@ -1074,7 +1075,7 @@
     "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2404.08509-ssjf.md": 50,
     "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2404.09526-loongserve-efficiently-serving-long-context-large-language-models-with-e.md": 59,
     "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2404.09529-prepacking-a-simple-method-for-fast-prefilling-and-increased-throughput-in-large-language-models.md": 5,
-    "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2404.14294-a-survey-on-efficient-inference-for-large-language-models.md": 51,
+    "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2404.14294-a-survey-on-efficient-inference-for-large-language-models.md": 52,
     "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2404.14527-m-lange-cost-efficient-large-language-model-serving-by-exploiting-gpu-he.md": 30,
     "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2404.16283-andes-qoe-text-streaming-serving.md": 31,
     "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2405.06856-aladdin-joint-placement-and-scaling-for-slo-aware-llm-serving.md": 8,
@@ -2034,7 +2035,7 @@
     "papers/inference/99-other-inference-systems/2024-2402.15678-minions-accelerating-large-language-model-inference-with-aggregated-speculative-execution.md": 7,
     "papers/inference/99-other-inference-systems/2024-2402.17463-training-free-long-context-scaling-of-large-language-models.md": 5,
     "papers/inference/99-other-inference-systems/2024-2402.17762-massive-activations-in-large-language-models.md": 33,
-    "papers/inference/99-other-inference-systems/2024-2402.17764-the-era-of-1-bit-llms-all-large-language-models-are-in-1-58-bits.md": 34,
+    "papers/inference/99-other-inference-systems/2024-2402.17764-the-era-of-1-bit-llms-all-large-language-models-are-in-1-58-bits.md": 35,
     "papers/inference/99-other-inference-systems/2024-2402.17946-sparsellm-towards-global-pruning-for-pre-trained-language-models.md": 0,
     "papers/inference/99-other-inference-systems/2024-2402.17985-flattenquant-breaking-through-the-inference-compute-bound-for-large-lang.md": 1,
     "papers/inference/99-other-inference-systems/2024-2402.19427-griffin-mixing-gated-linear-recurrences-with-local-attention-for-efficie.md": 29,
@@ -17203,6 +17204,11 @@
       "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md",
       "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md",
       "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md"
+    ],
+    "papers/inference/09-kernel-runtime-compilation/2026-2603.27462-rsr-core-a-high-performance-engine-for-low-bit-matrix-vector-multiplicat.md": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.15234-towards-efficient-generative-large-language-model-serving-a-survey-from-.md",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2404.14294-a-survey-on-efficient-inference-for-large-language-models.md",
+      "papers/inference/99-other-inference-systems/2024-2402.17764-the-era-of-1-bit-llms-all-large-language-models-are-in-1-58-bits.md"
     ],
     "papers/inference/09-kernel-runtime-compilation/2026-2603.28342-kernel-smith-a-unified-recipe-for-evolutionary-kernel-optimization.md": [
       "papers/inference/09-kernel-runtime-compilation/2025-2509.07506-astra-a-multi-agent-system-for-gpu-kernel-performance-optimization.md",
