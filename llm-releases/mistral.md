@@ -6,6 +6,7 @@ Mistral系はAPI提供だけでなく重み公開（open-weight）も多いた�
 
 | リリース日 | モデル | 簡単な説明 | 公式リンク |
 |---|---|---|---|
+| 2026-10-20 | Voxtral 3 音声モデル群 | Small / Mini Transcribe 3（Miniは4B）、Realtime Transcribe 3、Speech / Mini TTS 3とvoice-agent SDK。Transcribeは50以上の言語、話者分離、文脈語彙補正に対応。Realtimeは公式発表で35言語以上・500ms未満を掲げる一方、モデル資料の設定範囲は80〜2400msで、固定遅延ではない。API公開previewと導入相談が案内されるが、一般配布weight・licenseは未確認。音声認識/合成の系列であり汎用text LLMではない。 | [発表](https://mistral.ai/news/voxtral-3/) · [Small Transcribe](https://docs.mistral.ai/models/voxtral-small-transcribe-3-0) · [Mini Transcribe](https://docs.mistral.ai/models/voxtral-mini-transcribe-3-0) · [Realtime](https://docs.mistral.ai/models/voxtral-mini-transcribe-realtime-3-0) · [Mini TTS](https://docs.mistral.ai/models/voxtral-mini-tts-3-0) |
 | 2026-10-06 | Mistral Large 4 | 約1.05T total / 52B activeのnative multimodal flagship（2026-10-12公式情報再照合）。APIのpublic previewが利用可能で、model weightsは10月末公開予定のためopen-weight配布済みとは扱わない。coding、agentic workflows、multimodal understandingを重点化。 | https://mistral.ai/news/mistral-large-4/ |
 | 2026-04-28 | Mistral Medium 3.5 | codingやtool利用を伴うエージェント用途（agentic use）を重視したmultimodalモデル。最大256K-token contextを持ち、weightも公開されるためAPIだけでなく自前環境での実行対象にできる。 | https://docs.mistral.ai/models/mistral-medium-3-5-26-04 |
 | 2026-03-16 | Mistral Small 4 | 通常指示応答（instruct）、推論（reasoning）、multimodal理解、agentic codingを1 modelへ統合した小型側モデル。Apache 2.0 licenseのopen modelとして公開され、再配布・改変条件が比較的明確。 | https://mistral.ai/news/mistral-small-4/ |

@@ -78,6 +78,16 @@ llama.cppの主要な機能・性能更新を継続的に記録する集約ペ�
 
 ## 主要更新
 
+### 2026-10-20 — b11744〜b11765（開発版）
+
+- **b11744**: `llama-server --connect`の実験的P2P接続を追加。LAN外から到達できる経路に関わるため、利用時はbind先・外部到達性・アクセス制御を確認する。
+- **b11756**: Anthropic互換 `/v1/messages` から内部生成APIへ変換する際に`id_slot`を引き継ぎ、KV cacheを持つslotへのsession固定を可能にする。実測速度倍率は未公表。
+- **b11757**: 旧式CUDA memory poolのflush後にCUDA Graphを破棄し、解放済みmemory参照を避ける整合性修正。
+- **b11760**: HIP / CUDAのMMF reductionでtile幅が64の倍数でない形状を修正。
+- **b11763**: OpenCL MXFP4 matrix-vector経路の範囲外読み取りを修正し、小batch GEMM変種を追加。OpenCL向けでCUDA性能改善とはしない。
+- **b11765**: Kolibri-1 routerの冗長なprecision overrideを除去する保守。
+- 端から端の速度改善率は未測定。出典: [b11744](https://github.com/ggml-org/llama.cpp/releases/tag/b11744), [b11756](https://github.com/ggml-org/llama.cpp/releases/tag/b11756), [b11757](https://github.com/ggml-org/llama.cpp/releases/tag/b11757), [b11760](https://github.com/ggml-org/llama.cpp/releases/tag/b11760), [b11763](https://github.com/ggml-org/llama.cpp/releases/tag/b11763), [b11765](https://github.com/ggml-org/llama.cpp/releases/tag/b11765)
+
 ### 2026-10-19 — b11724〜b11742（開発版）
 
 - **b11724**: CUDA Flash Attention `flash_attn_ext_vec`のshared-memory write-after-read競合を修正。正しさ・安定性の修正で、測定済み速度向上率ではない。
