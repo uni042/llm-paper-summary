@@ -1,41 +1,30 @@
 {
   "schema_version": 1,
-  "attempt_id": "library-import-20261022-maintenance-20261020",
+  "attempt_id": "library-import-20261022-maintenance-20261021",
   "kind": "framework_llm_update",
   "artifacts": [
     {
-      "path": "framework-updates/inference-engines/sglang/README.md",
-      "expected_blob_sha": "7b0282cb2e910df2f5e371c55a78a168346e11f8",
+      "path": "llm-releases/mistral.md",
+      "expected_blob_sha": "bb0c5fd665f61a077d7501da01462cb03c348485",
       "edits": [
         {
           "op": "insert_before_once",
-          "anchor": "## 2026-10-02 — v0.5.21（released）",
-          "text": "## 2026-10-19 — v0.5.22（正式版）\n\n- 公式releaseは950 PR / 245 contributorsを記録。DeepSeek-V4.1のH200上のGPU当たり処理量最大2.3倍、DSparkのMI350X / MI355X上最大1.9倍を報告。GLM-5.2 / 5.3ではdecode context parallelism + MTPを追加し、GLM-5.3で最大2.1倍とされる。いずれも対象model・hardware・benchmarkに限定した値。\n- HiSparseはEAGLE / MTPとCPU KVを使う長文speculative decodingに対応。InstantTensorはmodel loading最大10倍、長promptのprefill / decode分離はthroughput最大+27%・p95 TTFT約半分を報告するが、別条件の値で同時効果を保証しない。\n- Qwen3.8-Flash-Next、GLM-5.3-Flash、MiMo-V2.6-Proの個別測定も含むが、B200 / B300等の条件をRTX 4070 SUPERへ外挿しない。\n- **互換性と正しさ**: Python 3.11以上が必要。speculative decodingとstructured outputを併用するhybrid linear modelで、reject後に古いMamba stateから再開する問題を修正。標準NVIDIA Docker例はCUDA 13。\n- 出典: [v0.5.22 release](https://github.com/sgl-project/sglang/releases/tag/v0.5.22)\n\n"
-        }
-      ]
-    },
-    {
-      "path": "framework-updates/inference-engines/vllm-omni/README.md",
-      "expected_blob_sha": "d3521f43b9b435100b58991bde58fd7b92a5b52d",
-      "edits": [
-        {
-          "op": "insert_before_once",
-          "anchor": "### 2026-10-06 — vLLM-Omni v0.31.0rc1（公開候補版・pre-release）",
-          "text": "### 2026-10-19 — vLLM-Omni v0.32.0rc1（公開候補版）\n\n- v0.31.0rc1から297件の変更を取り込み、vLLM本体v0.32.0へ整合。正式版ではなくrelease candidate。\n- session-aware replica placement、複数frontendをまたぐfull-duplex audio serving、`/v1/realtime`のserver-side VAD、RL learnerからserving workerへのweight transferを追加。\n- MOSS-Image、TaoMate-H3 streaming、LTX 2.5、JoyAI、YuE2を拡張。PersonaPlexのstage-wise batching / CUDA Graph / memory最適化、diffusion attentionのCUDA FA3 FP8とMammothModa2 DiTのonline FP8も含む。\n- Python `>=3.11,<3.14`。release時点ではPyPI wheel / container imageがpipeline待ちと記載されていた。すべてのmodelが初日から対応するとは扱わない。\n- 出典: [v0.32.0rc1 release](https://github.com/vllm-project/vllm-omni/releases/tag/v0.32.0rc1)\n\n"
+          "anchor": "| 2026-10-06 | Mistral Large 4 |",
+          "text": "| 2026-10-20 | Voxtral 3 音声モデル群 | Small / Mini Transcribe 3（Miniは4B）、Realtime Transcribe 3、Speech / Mini TTS 3とvoice-agent SDK。Transcribeは50以上の言語、話者分離、文脈語彙補正に対応。Realtimeは公式発表で35言語以上・500ms未満を掲げる一方、モデル資料の設定範囲は80〜2400msで、固定遅延ではない。API公開previewと導入相談が案内されるが、一般配布weight・licenseは未確認。音声認識/合成の系列であり汎用text LLMではない。 | [発表](https://mistral.ai/news/voxtral-3/) · [Small Transcribe](https://docs.mistral.ai/models/voxtral-small-transcribe-3-0) · [Mini Transcribe](https://docs.mistral.ai/models/voxtral-mini-transcribe-3-0) · [Realtime](https://docs.mistral.ai/models/voxtral-mini-transcribe-realtime-3-0) · [Mini TTS](https://docs.mistral.ai/models/voxtral-mini-tts-3-0) |\n"
         }
       ]
     },
     {
       "path": "framework-updates/inference-engines/llama-cpp/README.md",
-      "expected_blob_sha": "5bd15fb3f735949d008b07895ecbc3970739f720",
+      "expected_blob_sha": "1dd3d25070f3df336a5eb4308df675a88ca9ac6f",
       "edits": [
         {
           "op": "insert_before_once",
-          "anchor": "### 2026-10-18 — b11717〜b11721（開発版）",
-          "text": "### 2026-10-19 — b11724〜b11742（開発版）\n\n- **b11724**: CUDA Flash Attention `flash_attn_ext_vec`のshared-memory write-after-read競合を修正。正しさ・安定性の修正で、測定済み速度向上率ではない。\n- **b11727**: 分割GGUF / LoRA exportで途中切れのtensorを検知して拒否し、破損出力を避ける。\n- **b11729**: Qwen3のbidirectional attentionと`dense_2`出力射影を追加。model互換性の拡張。\n- **b11738**: serverのSWA checkpoint無効化条件と`n_past` / prefix境界の扱いを修正。\n- **b11741**: OpenCL Q4_0 / Q4_K / Q6_K向けcooperative-K `dp4a` GEMM kernelを追加。OpenCL専用経路。\n- **b11742**: Carbon-14B HybridDNAおよび旧Carbon系tokenizerの特殊token / merge変換を修正。\n- 以上は対象backend / modelの修正・対応で、端から端の生成速度改善は未測定。\n- 出典: [b11724](https://github.com/ggml-org/llama.cpp/releases/tag/b11724), [b11727](https://github.com/ggml-org/llama.cpp/releases/tag/b11727), [b11729](https://github.com/ggml-org/llama.cpp/releases/tag/b11729), [b11738](https://github.com/ggml-org/llama.cpp/releases/tag/b11738), [b11741](https://github.com/ggml-org/llama.cpp/releases/tag/b11741), [b11742](https://github.com/ggml-org/llama.cpp/releases/tag/b11742)\n\n"
+          "anchor": "### 2026-10-19 — b11724〜b11742（開発版）",
+          "text": "### 2026-10-20 — b11744〜b11765（開発版）\n\n- **b11744**: `llama-server --connect`の実験的P2P接続を追加。LAN外から到達できる経路に関わるため、利用時はbind先・外部到達性・アクセス制御を確認する。\n- **b11756**: Anthropic互換 `/v1/messages` から内部生成APIへ変換する際に`id_slot`を引き継ぎ、KV cacheを持つslotへのsession固定を可能にする。実測速度倍率は未公表。\n- **b11757**: 旧式CUDA memory poolのflush後にCUDA Graphを破棄し、解放済みmemory参照を避ける整合性修正。\n- **b11760**: HIP / CUDAのMMF reductionでtile幅が64の倍数でない形状を修正。\n- **b11763**: OpenCL MXFP4 matrix-vector経路の範囲外読み取りを修正し、小batch GEMM変種を追加。OpenCL向けでCUDA性能改善とはしない。\n- **b11765**: Kolibri-1 routerの冗長なprecision overrideを除去する保守。\n- 端から端の速度改善率は未測定。出典: [b11744](https://github.com/ggml-org/llama.cpp/releases/tag/b11744), [b11756](https://github.com/ggml-org/llama.cpp/releases/tag/b11756), [b11757](https://github.com/ggml-org/llama.cpp/releases/tag/b11757), [b11760](https://github.com/ggml-org/llama.cpp/releases/tag/b11760), [b11763](https://github.com/ggml-org/llama.cpp/releases/tag/b11763), [b11765](https://github.com/ggml-org/llama.cpp/releases/tag/b11765)\n\n"
         }
       ]
     }
   ],
-  "summary": "Applied Library maintenance dated 2026-10-20: SGLang v0.5.22, vLLM-Omni v0.32.0rc1, and llama.cpp b11724–b11742. Recorded release status, hardware-specific measurements, compatibility requirements, fixes, and primary sources."
+  "summary": "Applied Library maintenance dated 2026-10-21: Mistral Voxtral 3 audio model family and llama.cpp b11744–b11765. Kept API preview separate from weight availability, stated latency and hardware conditions, and linked official model and release sources."
 }
