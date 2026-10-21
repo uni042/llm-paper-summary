@@ -35,10 +35,15 @@
   "selection_reason": "SlimWiseはfull-model prefillとpruned decodeをKV conversionなしで接続し、MoE serving throughputと品質のtradeoffを改善。",
   "semantic_scholar_id": "0a3486ae2ad62fbf422176471a0028b9420bb0c4",
   "source_url": "https://arxiv.org/abs/2609.34117",
-  "status": "ready",
+  "status": "superseded",
   "title": "SlimWise: Decoupling Expert Pruning Across Prefill and Decode for Efficient MoE Serving",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-10-21T16:35:22+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.34117-slimwise-decoupling-expert-pruning-across-prefill-and-decode-for-efficie.md",
+  "represented_canonical_id": "arXiv:2609.34117",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

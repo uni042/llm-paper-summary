@@ -3,7 +3,7 @@
 複数requestを複数GPU / nodeで処理するLLM servingについて、request順、batch、prefill / decodeのGPU配分、KV再利用・転送、request移動などを調整し、latencyとresource効率を改善する研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（405本）
+## 自動生成の論文一覧（406本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -479,6 +479,10 @@
 - **2026-09 · [Spatial LLM Workload Shifting Needs Foresight: Model Commitment for AI Data Center Operation under Power Grid Constraints](2026-2609.09787-model-commitment-spatial-llm-workload-shifting.md)**  
   実装：[✓](https://github.com/EilabDBJ/Model-Commitment) ・ リポジトリ内被引用：0  
   モデル読込の先行時間とTTFT/TPOT制約をモデル配置・拠点間配送・電力制約へ統合し、3拠点事例で100%サービス率と総運用費29.0%削減を示す。
+
+- **2026-09 · [SlimWise: Decoupling Expert Pruning Across Prefill and Decode for Efficient MoE Serving](2026-2609.34117-slimwise-decoupling-expert-pruning-across-prefill-and-decode-for-efficie.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  混合専門家モデル（Mixture of エキスパート、MoE）は、各トークンに対して全エキスパートのうち少数だけを実行することで、モデル全体のパラメータ規模に比べた演算量を抑える。
 
 - **2026-09 · [Same Request, Different Answer: Quantization Amplifies Cache-Induced Divergence in LLM Serving](2026-2609.04748-cache-induced-divergence-quantization-llm-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
