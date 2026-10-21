@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（931本）
+## 自動生成の論文一覧（932本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -1299,6 +1299,10 @@
 - **2026-05 · [Language Modeling with Hyperspherical Flows](2026-2605.11125-language-modeling-with-hyperspherical-flows.md)**  
   実装：[✓](https://github.com/jdeschena/s-flm) ・ リポジトリ内被引用：0  
   S-FLMは代わりに次元 d の単位超球面 S^{d-1} 上へトークンを配置し、雑音ベクトルから正しい単語埋め込みへ回転する経路を学習する。
+
+- **2026-05 · [Interdomain Attention: Beyond Token-Level Key-Value Memory](2026-2605.24330-interdomain-attention-beyond-token-level-key-value-memory.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  この方式は必要な過去情報を内容に基づいて選べるが、復号が進むほどKVキャッシュ容量と参照帯域が増える。FineWeb-Eduを用いて125M〜1.3Bパラメータの復号型モデルを学習した結果、同じ再帰状態予算のS4Dだけのモデルより検証パープレキシティが13〜16%低い。
 
 - **2026-05 · [Influence-Inspired Spectral Rotations for Extreme Low-Bit LLM Quantization](2026-2605.25203-influence-inspired-spectral-rotations-for-extreme-low-bit-llm-quantizati.md)**  
   実装：[✓](https://github.com/gogipav14/spectral-llm) ・ リポジトリ内被引用：0  

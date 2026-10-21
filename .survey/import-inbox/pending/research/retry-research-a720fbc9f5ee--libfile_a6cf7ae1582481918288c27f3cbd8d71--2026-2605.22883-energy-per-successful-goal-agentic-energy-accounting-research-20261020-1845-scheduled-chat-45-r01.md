@@ -35,6 +35,8 @@ reference_main_sha: "fc3f8f9c0e6bd463180aad843fb9559be46eec2d"
 quality_self_review_passed: true
 quality_self_review_version: "PAPER-QUALITY-GUIDE-2026-10-07"
 quality_self_review_notes: "arXiv v2原著PDF全37ページを確認。§2〜§8の目標・試行・成功の定義、測定境界、L0〜L4のエネルギー帰属、EpG/OOIの式、表1、§8.7 GPU比率、§8.8遠隔待機、§10限界、付録の再現性・統計条件を照合。実測の装置範囲と遠隔サーバ側の未計測を区別。"
+last_audited: null
+audit_version: 0
 ---
 
 # 成功目標当たりの電力量でエージェントを測る：A-LEMS、EpG、OOI

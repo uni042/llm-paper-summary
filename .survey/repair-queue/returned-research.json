@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-21T21:18:14+00:00",
+  "generated_at": "2026-10-21T21:27:29+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 42,
+  "count": 40,
   "entries": [
     {
       "canonical_id": "DOI:10.1145/3714983.3714987",
@@ -60,35 +60,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-fdcebf6b97c1--libfile_8668892fb7d481918dc1dd6e94a25ee1--2023-samsung-pim-pnm-repair.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-fdcebf6b97c1--libfile_8668892fb7d481918dc1dd6e94a25ee1--2023-samsung-pim-pnm-repair.json",
       "worker_run_key": "20261008-0325-scheduled-chat-30/repair-r01"
-    },
-    {
-      "canonical_id": "arXiv:2503.16419",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-08T16:20:35+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "16KB未満再監査: 手法説明量 0 < 700",
-        "16KB未満再監査: 評価説明量 0 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5121,
-        "body_paragraphs": 29,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 0,
-        "limitation_chars": 538,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700",
-          "評価説明量 0 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-8a1e51a60949--libfile_9d20329326608191bbac5ff6e7abe6c8--2025-2503.16419-stop-overthinking-under16kb-reaudit-20261009-0100-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-8a1e51a60949--libfile_9d20329326608191bbac5ff6e7abe6c8--2025-2503.16419-stop-overthinking-under16kb-reaudit-20261009-0100-scheduled-chat-00-r01.json",
-      "worker_run_key": "20261009-0100-scheduled-chat-00/r01"
     },
     {
       "canonical_id": "DOI:10.13140/rg.2.2.28167.37282",
@@ -225,34 +196,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-3d377bab2ad8--libfile_3d26323ba68c8191a20a1c298d019db2--2026-2609.21264-amd-xdna-flashattention-open-compiler-research-20261018-2130-scheduled-chat-30-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-3d377bab2ad8--libfile_3d26323ba68c8191a20a1c298d019db2--2026-2609.21264-amd-xdna-flashattention-open-compiler-research-20261018-2130-scheduled-ch.json",
       "worker_run_key": "20261018-2130-scheduled-chat-30/r01"
-    },
-    {
-      "canonical_id": "arXiv:2609.36835",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-19T15:12:30+00:00",
-      "return_count": 4,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 411 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 2772,
-        "body_paragraphs": 14,
-        "method_chars": 1233,
-        "method_paragraphs": 7,
-        "evaluation_chars": 411,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "評価説明量 411 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-0f2ebca5ee3d--libfile_d80701e54e408191b235f9af5909e385--2026-2609.36835-arc-kv-reconstruction-indexer-research-20261019-0304-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-0f2ebca5ee3d--libfile_d80701e54e408191b235f9af5909e385--2026-2609.36835-arc-kv-reconstruction-indexer-research-20261019-0304-scheduled-chat-00-r0.json",
-      "worker_run_key": "20261019-0304-scheduled-chat-00/r01"
     },
     {
       "canonical_id": "arXiv:2609.16450",
@@ -755,34 +698,6 @@
       "worker_run_key": "20261020-1400-scheduled-chat-00/r01"
     },
     {
-      "canonical_id": "arXiv:2605.16839",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-20T18:12:41+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 0 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5921,
-        "body_paragraphs": 30,
-        "method_chars": 1546,
-        "method_paragraphs": 9,
-        "evaluation_chars": 0,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "評価説明量 0 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-dd67a7a03178--libfile_b17bb91bc4f4819183f4767857103ba3--2026-2605.16839-compactattention-block-union-chunked-prefill-quality-repair-20261020-1945-scheduled-chat-45-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-dd67a7a03178--libfile_b17bb91bc4f4819183f4767857103ba3--2026-2605.16839-compactattention-block-union-chunked-prefill-quality-repair-20261020-1945.json",
-      "worker_run_key": "20261020-1945-scheduled-chat-45/r01"
-    },
-    {
       "canonical_id": "arXiv:2605.20813",
       "title": null,
       "source_url": null,
@@ -1183,6 +1098,34 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_a4d75edd5c608191996dfc4a4e2fa437--2024-2311.01282-flashdecoding-plusplus-returned-repair-20261022-0132-scheduled-chat-30-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_a4d75edd5c608191996dfc4a4e2fa437--2024-2311.01282-flashdecoding-plusplus-returned-repair-20261022-0132-scheduled-chat-30-r01.json",
       "worker_run_key": "20261022-0132-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2605.16839",
+      "title": "CompactAttention: Accelerating Chunked Prefill with Block-Union KV Selection",
+      "source_url": "https://arxiv.org/pdf/2605.16839",
+      "returned_at": "2026-10-21T21:26:37+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 0 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5921,
+        "body_paragraphs": 30,
+        "method_chars": 1546,
+        "method_paragraphs": 9,
+        "evaluation_chars": 0,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "評価説明量 0 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_b17bb91bc4f4819183f4767857103ba3--2026-2605.16839-compactattention-block-union-chunked-prefill-quality-repair-20261020-1945-scheduled-chat-45-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_b17bb91bc4f4819183f4767857103ba3--2026-2605.16839-compactattention-block-union-chunked-prefill-quality-repair-20261020-1945-scheduled-chat-45-r01.json",
+      "worker_run_key": "20261020-1945-scheduled-chat-45/r01"
     }
   ]
 }
