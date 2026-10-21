@@ -1,32 +1,81 @@
 ---
-canonical_id: "DOI:10.1145/3757892.3757906"
-title: "A Thermal-aware Workload Scheduler for High-performance LLM Inference in Cooling-regulated Datacenters"
-summary: "冷却設定温度を引き上げたデータセンターでGPUの発熱が放熱能力を上回り、熱保護によるクロック低下や再起動がLLM推論の処理量を損なう問題を分析。TAWSは温度・周波数・電圧・バッチ配分と熱制約を組み込んだ強化学習スケジューラで、RTX 3090/4090とLlama 3-8Bの小規模実機評価において、高温条件の処理量とエネルギー効率を改善した。"
-list_summary: "冷却温度を上げた際のGPU熱保護を予測し、推論バッチ・クロック・配置を協調制御するTAWS。41℃条件で処理量改善と冷却を含むエネルギー削減を検証。"
+canonical_id: DOI:10.1145/3757892.3757906
+title: A Thermal-aware Workload Scheduler for High-performance LLM Inference in Cooling-regulated Datacenters
+summary: 冷却設定温度を引き上げたデータセンターでGPUの発熱が放熱能力を上回り、熱保護によるクロック低下や再起動がLLM推論の処理量を損なう問題を分析。TAWSは温度・周波数・電圧・バッチ配分と熱制約を組み込んだ強化学習スケジューラで、RTX 3090/4090とLlama 3-8Bの小規模実機評価において、高温条件の処理量とエネルギー効率を改善した。
+list_summary: 冷却温度を上げた際のGPU熱保護を予測し、推論バッチ・クロック・配置を協調制御するTAWS。41℃条件で処理量改善と冷却を含むエネルギー削減を検証。
 authors:
-  - Rui Lu
-  - Dan Wang
-published: "2025-07"
-publication: "ACM SIGENERGY Energy Informatics Review, Volume 5, Issue 2, pp. 98–104 (HotCarbon 2025)"
-publication_type: "journal_article"
-publication_status: "published"
-source: "https://hotcarbon.org/assets/2025/paper-70.pdf"
+- Rui Lu
+- Dan Wang
+published: 2025-07
+publication: ACM SIGENERGY Energy Informatics Review, Volume 5, Issue 2, pp. 98–104 (HotCarbon 2025)
+publication_type: journal_article
+publication_status: published
+source: https://hotcarbon.org/assets/2025/paper-70.pdf
 sources:
-  - "https://hotcarbon.org/assets/2025/paper-70.pdf"
-  - "https://doi.org/10.1145/3757892.3757906"
-implementation: "著者はRay ServeとvLLMを基盤にNVML/DCGMを用いるPythonサイドカーを実装し、RTX 3090/4090と制御した周囲温度環境で検証。大規模実データセンター展開は未評価。公式コード公開URLは一次資料から特定できない。"
+- https://hotcarbon.org/assets/2025/paper-70.pdf
+- https://doi.org/10.1145/3757892.3757906
+implementation: 著者はRay ServeとvLLMを基盤にNVML/DCGMを用いるPythonサイドカーを実装し、RTX 3090/4090と制御した周囲温度環境で検証。大規模実データセンター展開は未評価。公式コード公開URLは一次資料から特定できない。
 code: null
-last_checked: "2026-10-21"
+last_checked: '2026-10-21'
 worker_completed_at: '2026-10-21T19:09:03+09:00'
-worker_run_key: '20261021-1845-scheduled-chat-45/r02'
+worker_run_key: 20261021-1845-scheduled-chat-45/r02
 worker_id: scheduled-chat-45
 quality_self_review_passed: true
-repair_source_sha256: 'f22ff48467e93895f175afd688ffc038a2c922cbf2591d42b585edb3c687ffce'
-repair_reason: 'standard method/evaluation/limitation heading recognition; technical body and evaluation numbers preserved'
-quality_self_review_version: "PAPER-QUALITY-GUIDE-2026-10-07"
-reference_main_sha: "79c21080b0f5ff6cc20e5ff99df5ea5c938e4ee5"
+repair_source_sha256: f22ff48467e93895f175afd688ffc038a2c922cbf2591d42b585edb3c687ffce
+repair_reason: standard method/evaluation/limitation heading recognition; technical body and evaluation numbers preserved
+quality_self_review_version: PAPER-QUALITY-GUIDE-2026-10-07
+reference_main_sha: 79c21080b0f5ff6cc20e5ff99df5ea5c938e4ee5
 last_audited: null
 audit_version: 0
+references:
+- canonical_id: DOI:10.2760/9449356
+  doi: 10.2760/9449356
+- canonical_id: DOI:10.1145/3575693.3575754
+  doi: 10.1145/3575693.3575754
+- canonical_id: DOI:10.1145/3583740.3626616
+  doi: 10.1145/3583740.3626616
+- canonical_id: DOI:10.3390/en15238813
+  doi: 10.3390/en15238813
+- canonical_id: DOI:10.1145/3727200.3727222
+  doi: 10.1145/3727200.3727222
+- canonical_id: DOI:10.1145/3632775.3661942
+  doi: 10.1145/3632775.3661942
+- canonical_id: DOI:10.1145/3604930.3605705
+  doi: 10.1145/3604930.3605705
+- canonical_id: arXiv:2309.14393
+- canonical_id: DOI:10.1145/3632775.3661936
+  doi: 10.1145/3632775.3661936
+- canonical_id: DOI:10.1016/j.ijrefrig.2020.05.026
+  doi: 10.1016/j.ijrefrig.2020.05.026
+- canonical_id: DOI:10.1145/3466752.3480063
+  doi: 10.1145/3466752.3480063
+- canonical_id: arXiv:1412.6980
+  arxiv_id: '1412.6980'
+- canonical_id: arXiv:1609.02907
+  arxiv_id: '1609.02907'
+- canonical_id: DOI:10.1109/sc41406.2024.00048
+  doi: 10.1109/sc41406.2024.00048
+- canonical_id: arXiv:2309.02983
+  arxiv_id: '2309.02983'
+- canonical_id: arXiv:1509.02971
+  arxiv_id: '1509.02971'
+- canonical_id: DOI:10.1145/3620666.3651329
+- canonical_id: DOI:10.1145/3503222.3507713
+  doi: 10.1145/3503222.3507713
+- canonical_id: DOI:10.1145/3727200.3727214
+  doi: 10.1145/3727200.3727214
+- canonical_id: arXiv:1707.06347
+  arxiv_id: '1707.06347'
+- canonical_id: DOI:10.3390/en14020376
+  doi: 10.3390/en14020376
+- canonical_id: arXiv:2408.00741
+- canonical_id: DOI:10.1145/3676641.3716025
+  doi: 10.1145/3676641.3716025
+- canonical_id: arXiv:2206.10849
+  arxiv_id: '2206.10849'
+references_checked_at: '2026-10-21'
+references_source: crossref-deposited-reference-metadata
+references_total: 56
 ---
 
 # TAWS：冷却温度制約下の大規模言語モデル推論を支える熱認識型負荷スケジューリング
