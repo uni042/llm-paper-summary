@@ -1,10 +1,12 @@
 {
   "schema_version": 1,
   "artifact_type": "research",
-  "status": "already_represented",
+  "status": "blocked_quality",
   "source_sha256": "2562894dec375828005fe1ea26a03d145b246699103bd078bde61672841811c8",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_8264c9c9962881918f5baf7310e20631--2026-2607.17884-st-veto-spatiotemporal-diffusion-decoding-research-20261020-0645-scheduled-chat-45-r01.md",
   "canonical_id": "arXiv:2607.17884",
-  "paper_path": "papers/inference/99-other-inference-systems/2026-2607.17884-st-veto-spatio-temporal-token-veto-for-diffusion-mllms-via-taylor-predic.md",
   "worker_completed_at": "2026-10-20T06:49:00+09:00",
   "worker_run_key": "20261020-0645-scheduled-chat-45/r01",
   "quality_metrics": {
@@ -17,5 +19,8 @@
     "limitation_chars": 499,
     "insufficiency_flags": []
   },
-  "processed_at": "2026-10-20T15:23:14+00:00"
+  "failures": [
+    "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2026-2607.17884-st-veto-spatio-temporal-token-veto-for-diffusion-mllms-via-taylor-predic.md と 24 段落 / 5334文字 (100.0%) が完全一致"
+  ],
+  "processed_at": "2026-10-21T20:05:36+00:00"
 }

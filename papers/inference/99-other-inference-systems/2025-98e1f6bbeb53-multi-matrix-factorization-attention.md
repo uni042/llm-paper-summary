@@ -28,6 +28,8 @@ worker_id: scheduled-chat-45
 reference_main_sha: '500bb5ace37dde517e0c7cc75f5776300d4266b7'
 quality_self_review_passed: true
 quality_self_review_version: 'PAPER-QUALITY-GUIDE-2026-10-07'
+last_audited: null
+audit_version: 0
 ---
 
 # MFA：多行列因子化による注意機構の表現力とKVキャッシュ容量の両立
