@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-61ffb7743a6599f6-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2210.13452",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2210.13452",
+    "identity_tokens": [
+      "DOI:10.1109/tpami.2023.3329173",
+      "arXiv:2210.13452",
+      "semanticscholar:fc4cbc7a75f5a3bbca59db5513231555f078fe78"
+    ],
+    "reason": "画像認識用MetaFormerのトークン混合器を恒等写像・ランダム行列・深さ方向畳み込み・自己注意に置換し、ImageNet-1K分類精度やStarReLUの演算量を評価する視覚モデル構造の研究。画像分類精度と活性化演算の比較が中心で、LLMの学習・推論基盤、実運用の生成遅延、GPUサービング、KVキャッシュ最適化を扱わない。",
+    "first_checked_at": "2026-10-11T20:48:40+00:00",
+    "last_checked_at": "2026-10-21T21:44:13+00:00",
+    "linked_from": [],
+    "title": "MetaFormer Baselines for Vision"
+  },
+  "processed_at": "2026-10-21T21:44:13+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-61ffb7743a65",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

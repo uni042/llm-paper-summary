@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-45c8f46ba76372fd-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2402.12289",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2402.12289",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2402.12289",
+      "arXiv:2402.12289"
+    ],
+    "reason": "自動運転向けの視覚言語モデルを用いて道路状況の説明・場面分析・階層的走行計画を構成し、nuScenes、SUP-ADおよび実車で自動運転性能を評価する応用研究。DriveVLM-Dualで従来の運転パイプラインを併用するが、汎用LLMの推論サービング、KVキャッシュ、カーネル、オフロード、分散処理や学習効率を最適化する研究ではない。",
+    "first_checked_at": "2026-10-16T18:54:53+00:00",
+    "last_checked_at": "2026-10-21T21:44:13+00:00",
+    "linked_from": [],
+    "title": "DriveVLM: The Convergence of Autonomous Driving and Large Vision-Language Models"
+  },
+  "processed_at": "2026-10-21T21:44:13+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-45c8f46ba763",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
