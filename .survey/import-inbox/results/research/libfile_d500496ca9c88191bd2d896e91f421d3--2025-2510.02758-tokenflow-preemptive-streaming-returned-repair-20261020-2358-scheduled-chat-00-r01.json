@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "42ef83eb1699be4c2145545d3e14f860d781057ff0fcfc52a3dc6ebbb3a53ec7",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_d500496ca9c88191bd2d896e91f421d3--2025-2510.02758-tokenflow-preemptive-streaming-returned-repair-20261020-2358-scheduled-chat-00-r01.md",
+  "canonical_id": "arXiv:2510.02758",
+  "worker_completed_at": "2026-10-20T23:58:55+09:00",
+  "worker_run_key": "20261020-2358-scheduled-chat-00/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 5219,
+    "body_paragraphs": 27,
+    "method_chars": 2471,
+    "method_paragraphs": 13,
+    "evaluation_chars": 780,
+    "limitation_chars": 548,
+    "insufficiency_flags": []
+  },
+  "failures": [
+    "長文定型文の再利用を検出: papers/inference/11-llm-serving-scheduling-disaggregation/2025-2510.02758-tokenflow-responsive-llm-text-streaming-serving-under-request-burst-via-.md と 21 段落 / 4588文字 (100.0%) が完全一致"
+  ],
+  "processed_at": "2026-10-21T23:55:24+00:00"
+}

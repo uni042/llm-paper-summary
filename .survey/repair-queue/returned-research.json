@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-21T23:47:47+00:00",
+  "generated_at": "2026-10-21T23:57:52+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 25,
+  "count": 24,
   "entries": [
     {
       "canonical_id": "DOI:10.1109/HCS59251.2023.10254711",
@@ -630,35 +630,6 @@
       "worker_run_key": "20261022-0332-scheduled-chat-30/r01"
     },
     {
-      "canonical_id": "arXiv:2601.21444",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-21T22:46:16+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700",
-        "説明不足トリガー: 評価説明量 0 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5005,
-        "body_paragraphs": 27,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 0,
-        "limitation_chars": 459,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700",
-          "評価説明量 0 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_bf16b1fc8ba081918394d7a0537eb8ae--2026-2601.21444-apb-v-video-sequence-parallel-attention-research-20261021-0956-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_bf16b1fc8ba081918394d7a0537eb8ae--2026-2601.21444-apb-v-video-sequence-parallel-attention-research-20261021-0956-scheduled-chat-00-r01.json",
-      "worker_run_key": "20261021-0956-scheduled-chat-00/r01"
-    },
-    {
       "canonical_id": "arXiv:2605.18226",
       "title": null,
       "source_url": null,
@@ -687,8 +658,8 @@
     },
     {
       "canonical_id": "arXiv:2412.00099",
-      "title": "Mixture of Cache-Conditional Experts for Efficient Mobile Device Inference",
-      "source_url": "https://arxiv.org/pdf/2412.00099",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-21T23:45:25+00:00",
       "return_count": 1,
       "assigned_worker": "scheduled-chat-30",
