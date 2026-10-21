@@ -1,5 +1,5 @@
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（57本）
+## 自動生成の論文一覧（58本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -51,6 +51,10 @@
 - **2026-09 · [Predict, Don't Iterate: Efficient Adaptive-Length Infilling for Diffusion Language Models](2026-2609.02108-predict-don-t-iterate-efficient-adaptive-length-infilling-for-diffusion-.md)**  
   実装：[✓](https://github.com/Hsu1023/PILL) ・ リポジトリ内被引用：0  
   PILLは、拡散言語モデル（diffusion language モデル）が文章やプログラムの既知の前半と後半の間を補完する課題（infilling）において、欠落部分の長さをあらかじめ固定しなければならない制約を扱う。既存の可変長方式は長さを反復探索したり生成途中に伸縮操作を挿入したりするため、推論回数が増える。
+
+- **2026-09 · [MassAlloc Attention: Let Attention Allocate Its Own Compute](2026-2609.32712-massalloc-attention-let-attention-allocate-its-own-compute.md)**  
+  実装：[✓](https://github.com/HKUSTDial/flash-sparse-attention) ・ リポジトリ内被引用：0  
+  MassAlloc 注意機構（MALA）は、長文脈で計算負荷が大きくなる自己注意のうち、クエリとキーの内積スコアを求めた後の処理を削減する方式である。原著は8基のH100を用いた128K系列の注意演算子ベンチマークで、全注意（Full 注意機構; FullAttn）に対し順伝播の遅延を2.2倍、逆伝播を3.0倍、復号を1.6倍改善したと報告する。
 
 - **2026-09 · [KREX: Concurrent Kernel Benchmarking on Shared GPUs via Region-Granular Exclusivity](2026-2609.30057-krex-concurrent-kernel-benchmarking-on-shared-gpus-via-region-granular-e.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
