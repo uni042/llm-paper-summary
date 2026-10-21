@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-21T10:47:48+00:00",
+  "generated_at": "2026-10-21T16:05:02+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -1535,33 +1535,6 @@
       "worker_run_key": "20261020-2127-scheduled-chat-30/r01"
     },
     {
-      "canonical_id": "arXiv:2608.03276",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-20T18:21:47+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 7388,
-        "body_paragraphs": 51,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 1720,
-        "limitation_chars": 653,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-ea1b8f18ac0c--libfile_a7298965817c8191875b98f7f7d7992c--2026-2608.03276-taskpress-query-agnostic-kv-cache-research-20261020-1304-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-ea1b8f18ac0c--libfile_a7298965817c8191875b98f7f7d7992c--2026-2608.03276-taskpress-query-agnostic-kv-cache-research-20261020-1304-scheduled-chat-0.json",
-      "worker_run_key": "20261020-1304-scheduled-chat-00/r01"
-    },
-    {
       "canonical_id": "DOI:10.18653/v1/2025.findings-acl.1288",
       "title": null,
       "source_url": null,
@@ -1642,6 +1615,34 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-76125fff3ef4--libfile_b7c01314700c819192865396639ef52e--2026-2604.18592-2d-early-exit-research-20261021-1825-scheduled-chat-30-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-76125fff3ef4--libfile_b7c01314700c819192865396639ef52e--2026-2604.18592-2d-early-exit-research-20261021-1825-scheduled-chat-30-r01.json",
       "worker_run_key": "20261021-1825-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2605.04952",
+      "title": "Adaptive Inverted-Index Routing for Granular Mixtures-of-Experts",
+      "source_url": "https://arxiv.org/html/2605.04952v2",
+      "returned_at": "2026-10-21T16:01:18+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 231 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 3338,
+        "body_paragraphs": 19,
+        "method_chars": 1495,
+        "method_paragraphs": 9,
+        "evaluation_chars": 231,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "評価説明量 231 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_04b27cbfabcc81918538a5736ce454bf--2026-2605.04952-air-moe-inverted-index-routing-research-20261021-1926-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_04b27cbfabcc81918538a5736ce454bf--2026-2605.04952-air-moe-inverted-index-routing-research-20261021-1926-scheduled-chat-30-r01.json",
+      "worker_run_key": "20261021-1926-scheduled-chat-30/r01"
     }
   ]
 }
