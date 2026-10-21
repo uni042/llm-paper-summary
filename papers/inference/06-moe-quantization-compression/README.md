@@ -66,7 +66,7 @@ MoEの大部分を占めるexpert重みを**低bit化、pruning、precision切�
 
 - **2025-03 · [ResMoE: Space-efficient Compression of Mixture of Experts LLMs via Residual Restoration](2025-2503.06881-resmoe-space-efficient-compression-of-mixture-of-experts-llms-via-residual-restoration.md)**  
   実装：[✓](https://github.com/iDEA-iSAIL-Lab-UIUC/ResMoE) ・ リポジトリ内被引用：0  
-  専門家群の共有成分をワッサースタイン重心へ集約し、各専門家固有の差分だけを圧縮・実行時復元することで、専門家を消す方式より個性を残しつつ約75%の容量削減を狙う。
+  各専門家に共通する重みを、最適輸送（optimal transport）で整列させたWasserstein重心専門家として共有し、専門家ごとの差分行列だけを圧縮する。
 
 ### 3年前（2023-11〜2024-10）
 
