@@ -1,6 +1,6 @@
 # 推論システム研究
 
-収録論文: **2724本**。
+収録論文: **2725本**。
 
 推論・serving・decoding・実行時memory / I/O・on-device実行など、**modelを使って出力を生成する段階の効率化**を目的とする研究を収録する。
 
@@ -34,7 +34,7 @@
 <!-- survey:auto:start -->
 ## 自動生成の収録状況
 
-推論論文：**2724本**。
+推論論文：**2725本**。
 
 | 系統 | 本数 |
 |---|---:|
@@ -52,7 +52,7 @@
 | [12-moe-parallelism-communication](12-moe-parallelism-communication/README.md) | 52 |
 | [13-sparse-attention](13-sparse-attention/README.md) | 101 |
 | [14-agentic-inference-serving-runtime](14-agentic-inference-serving-runtime/README.md) | 61 |
-| [15-inference-simulation-emulation](15-inference-simulation-emulation/README.md) | 38 |
+| [15-inference-simulation-emulation](15-inference-simulation-emulation/README.md) | 39 |
 | [16-weight-quantization-compression](16-weight-quantization-compression/README.md) | 65 |
 | [17-pim-near-data-acceleration](17-pim-near-data-acceleration/README.md) | 25 |
 | [18-pipeline-native-cpu-inference](18-pipeline-native-cpu-inference/README.md) | 1 |
