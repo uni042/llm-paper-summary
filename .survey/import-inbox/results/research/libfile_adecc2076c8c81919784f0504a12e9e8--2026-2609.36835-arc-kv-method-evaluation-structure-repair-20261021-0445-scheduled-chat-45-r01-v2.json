@@ -1,13 +1,12 @@
 {
   "schema_version": 1,
   "artifact_type": "research",
-  "status": "imported",
+  "status": "blocked_quality",
   "source_sha256": "7b4b1826eb581a11c0730ebb9d6f91df58c744f237e88d44fc8cea8d0ff426e8",
-  "canonical_id": "arXiv:2609.36835",
-  "paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2609.36835-arc-kv-amortizing-anchor-search-for-reconstruction-based-kv-cache-compac.md",
-  "lineage": "07-kv-cache-optimization-compression",
-  "audit_status": "PASS",
+  "normalized_source_sha256": null,
   "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_adecc2076c8c81919784f0504a12e9e8--2026-2609.36835-arc-kv-method-evaluation-structure-repair-20261021-0445-scheduled-chat-45-r01-v2.md",
+  "canonical_id": "arXiv:2609.36835",
   "worker_completed_at": "2026-10-21T04:51:05+09:00",
   "worker_run_key": "20261021-0445-scheduled-chat-45/r01",
   "quality_metrics": {
@@ -20,5 +19,8 @@
     "limitation_chars": 440,
     "insufficiency_flags": []
   },
-  "processed_at": "2026-10-21T21:26:04+00:00"
+  "failures": [
+    "長文定型文の再利用を検出: papers/inference/07-kv-cache-optimization-compression/2026-2609.36835-arc-kv-amortizing-anchor-search-for-reconstruction-based-kv-cache-compac.md と 15 段落 / 3212文字 (100.0%) が完全一致"
+  ],
+  "processed_at": "2026-10-21T22:30:25+00:00"
 }

@@ -5,7 +5,7 @@ Speculative decodingで1回のtarget LLM実行から複数tokenを確定し、�
 MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexpert数や重み転送量も増えやすいため、受理されそうなdraftだけを選ぶ、必要expertを先読みする、GPU常駐expertを優先する等の研究も含める。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（200本）
+## 自動生成の論文一覧（201本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -781,6 +781,10 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
 - **2024-10 · [QSpec: Speculative Decoding with Complementary Quantization Schemes](2024-2410.11305-qspec-speculative-decoding-with-complementary-quantization-schemes.md)**  
   実装：[✓](https://github.com/hku-netexplo-lab/QSpec) ・ リポジトリ内被引用：3  
   QSPECが解決するのは、4ビット重みの言語モデルを動かす際に、活性化も4ビットへ落とすと演算は軽くなるものの、複数段階の推論やコード生成の正確さが損なわれるという問題である。著者は活性化まで4ビットにした実行経路を候補トークンの提案に限定し、同じ重みを活性化16ビットで計算する経路に採否の最終決定を任せる。
+
+- **2024-05 · [EMS-SD: Efficient Multi-sample Speculative Decoding for Accelerating Large Language Models](2024-2405.07542-ems-sd-efficient-multi-sample-speculative-decoding-for-accelerating-larg.md)**  
+  実装：[✓](https://github.com/niyunsheng/EMS-SD) ・ リポジトリ内被引用：0  
+  EMS-SDは、複数要求を一度に処理する投機的復号（投機的復号）で、要求ごとに草稿の受理数や予測長が違うために生じる無駄な埋め草トークン（padding）を除く実装方式である。非投機的な貪欲復号468.89との比較では、従来1.37倍、提案2.17倍である。
 
 ### 4年前（2022-11〜2023-10）
 

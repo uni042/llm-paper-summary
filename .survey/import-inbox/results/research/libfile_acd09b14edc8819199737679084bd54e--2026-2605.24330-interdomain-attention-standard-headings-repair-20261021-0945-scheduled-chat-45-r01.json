@@ -1,13 +1,12 @@
 {
   "schema_version": 1,
   "artifact_type": "research",
-  "status": "imported",
+  "status": "blocked_quality",
   "source_sha256": "d1c59b1f4ae38399515bf70b36006bafad5f65bd535d86977e3fdbd089e036f2",
-  "canonical_id": "arXiv:2605.24330",
-  "paper_path": "papers/inference/99-other-inference-systems/2026-2605.24330-interdomain-attention-beyond-token-level-key-value-memory.md",
-  "lineage": "99-other-inference-systems",
-  "audit_status": "PASS",
+  "normalized_source_sha256": null,
   "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_acd09b14edc8819199737679084bd54e--2026-2605.24330-interdomain-attention-standard-headings-repair-20261021-0945-scheduled-chat-45-r01.md",
+  "canonical_id": "arXiv:2605.24330",
   "worker_completed_at": "2026-10-21T10:02:08+09:00",
   "worker_run_key": "20261021-0945-scheduled-chat-45/r01",
   "quality_metrics": {
@@ -20,5 +19,8 @@
     "limitation_chars": 569,
     "insufficiency_flags": []
   },
-  "processed_at": "2026-10-21T21:25:33+00:00"
+  "failures": [
+    "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2026-2605.24330-interdomain-attention-beyond-token-level-key-value-memory.md と 21 段落 / 4793文字 (100.0%) が完全一致"
+  ],
+  "processed_at": "2026-10-21T22:30:24+00:00"
 }
