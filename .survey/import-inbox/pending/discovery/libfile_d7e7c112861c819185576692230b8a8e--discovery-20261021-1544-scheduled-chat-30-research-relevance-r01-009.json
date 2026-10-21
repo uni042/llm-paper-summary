@@ -1,0 +1,27 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "scheduled_slot": "30",
+  "run_key": "20261021-1544-scheduled-chat-30/r01/research-prescreen/009",
+  "reference_main_sha": "c769be0b7c785ce0904d14678802bd0a4d2917b1",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2311.17049",
+      "identity_tokens": [
+        "arxiv:2311.17049"
+      ],
+      "title": "MobileCLIP: Fast Image-Text Models through Multi-Modal Reinforced Training",
+      "reason": "題名は画像・テキストの対照的表現モデルMobileCLIPを強化されたマルチモーダル学習で構築する研究を示す。主眼は画像とテキストの表現学習であり、LLM生成推論の実行系、KVキャッシュ、サービング性能の改善ではないため対象外。",
+      "source_url": "https://arxiv.org/abs/2311.17049",
+      "body_check": "title_screen_only; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-10-21T15:51:56+09:00",
+      "last_checked_at": "2026-10-21T15:51:56+09:00",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance",
+      "worklist_rank": 9
+    }
+  ]
+}
