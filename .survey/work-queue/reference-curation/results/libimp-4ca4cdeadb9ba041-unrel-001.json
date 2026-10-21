@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-4ca4cdeadb9ba041-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2606.10577",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2606.10577",
+    "identity_tokens": [
+      "arXiv:2606.10577",
+      "id:arXiv:2606.10577",
+      "url:https://arxiv.org/abs/2606.10577"
+    ],
+    "reason": "題名はツール呼び出しを使ったゼロショット視覚言語ナビゲーションを主題としている。ツール呼び出しの応用先はナビゲーションであり、LLM推論基盤のレイテンシ、GPUメモリ、通信・スケジューリング改善を直接扱わないため対象外。",
+    "first_checked_at": "2026-10-13T10:40:03+00:00",
+    "last_checked_at": "2026-10-21T08:53:31+00:00",
+    "linked_from": [],
+    "title": "AgenticNav: Zero-Shot Vision-and-Language Navigation as a Tool-Calling Harness"
+  },
+  "processed_at": "2026-10-21T08:53:31+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-4ca4cdeadb9b",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

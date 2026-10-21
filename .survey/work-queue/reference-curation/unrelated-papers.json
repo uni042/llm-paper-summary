@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-21T03:42:37+00:00",
-  "record_count": 12447,
+  "updated_at": "2026-10-21T08:53:35+00:00",
+  "record_count": 12451,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -162910,9 +162910,9 @@
         "id:arXiv:2301.09474",
         "url:https://arxiv.org/abs/2301.09474"
       ],
-      "reason": "原著要旨ではエネルギー制約付き拡散からグラフ上のインスタンス表現を学ぶDIFFormerを導出し、ノード分類、半教師あり画像・テキスト分類、時空間予測で評価する。線形計算量の変種はあるが、対象はグラフ表現学習バックボーンであり、LLM推論基盤や生成時の注意計算・サービングを改善する研究ではない。",
+      "reason": "題名の対象はエネルギー制約付き拡散から導くグラフ変換器（Graph Transformer）の設計である。グラフ学習・グラフ表現のモデル方式であり、LLM推論時の計算・通信・キャッシュ最適化を直接扱うと示されていないため対象外。",
       "first_checked_at": "2026-10-11T00:45:52+00:00",
-      "last_checked_at": "2026-10-20T13:06:21+00:00",
+      "last_checked_at": "2026-10-21T08:53:32+00:00",
       "linked_from": [],
       "title": "DIFFormer: Scalable (Graph) Transformers Induced by Energy Constrained Diffusion"
     },
@@ -163939,9 +163939,9 @@
         "id:arXiv:2303.05511",
         "url:https://arxiv.org/abs/2303.05511"
       ],
-      "reason": "画像生成向け敵対的生成ネットワーク（GAN）の規模拡大を研究する題名であり、言語モデルの推論基盤、サービング、KVキャッシュ、量子化、推論メモリ管理を直接対象としていない。",
+      "reason": "題名が扱う対象はテキストから画像を合成する敵対的生成ネットワーク（GAN）の規模拡大である。大規模言語モデルの推論サービング、KVキャッシュ、GPU上のLLMデコードや推論基盤の高速化ではなく、画像生成モデルの設計・品質に属するため対象外。",
       "first_checked_at": "2026-10-11T08:49:39+00:00",
-      "last_checked_at": "2026-10-20T13:06:13+00:00",
+      "last_checked_at": "2026-10-21T08:53:35+00:00",
       "linked_from": [],
       "title": "Scaling up GANs for Text-to-Image Synthesis"
     },
@@ -164160,9 +164160,9 @@
         "id:arXiv:2203.10314",
         "url:https://arxiv.org/abs/2203.10314"
       ],
-      "reason": "原著要旨で、ボクセル内の点群を潜在コードを用いた二つの交差注意で集約し、KITTIとWaymoの3D物体検出を評価するVoxSeTと確認。対象は点群認識用の視覚バックボーンであり、LLMの生成・推論サービング・KVキャッシュ・推論カーネルの効率化ではない。",
+      "reason": "題名は点群からの三次元物体検出を目的とするVoxel Set Transformerを明示している。点群認識用の集合間変換であり、LLMの生成推論、推論サービング、KVキャッシュ管理やMoE実行を最終適用先としていないため対象外。",
       "first_checked_at": "2026-10-11T14:41:43+00:00",
-      "last_checked_at": "2026-10-20T08:45:50+00:00",
+      "last_checked_at": "2026-10-21T08:53:29+00:00",
       "linked_from": [],
       "title": "Voxel Set Transformer: A Set-to-Set Approach to 3D Object Detection from Point Clouds"
     },
@@ -167855,9 +167855,9 @@
       "identity_tokens": [
         "arXiv:2607.10383"
       ],
-      "reason": "遅い視覚言語推論器が画像座標の目標点を出し、速い行動専門家が制御周波数でウェイポイントを生成するロボット航法モデル。都市・屋内外の到達成功率が主評価で、汎用LLM実行基盤の性能最適化ではない。",
+      "reason": "題名は汎用視覚言語ナビゲーション基盤モデルABot-N1の開発を示す。ロボット・視覚言語ナビゲーションのモデル能力を目的とし、LLMの生成推論ランタイムやGPUサービング資源の最適化を主題としていないため対象外。",
       "first_checked_at": "2026-10-13T07:51:16+00:00",
-      "last_checked_at": "2026-10-19T18:48:32+00:00",
+      "last_checked_at": "2026-10-21T08:53:33+00:00",
       "linked_from": [],
       "title": "ABot-N1: Toward a General Visual Language Navigation Foundation Model"
     },
@@ -168348,9 +168348,9 @@
         "id:arXiv:2606.10577",
         "url:https://arxiv.org/abs/2606.10577"
       ],
-      "reason": "原著要旨はVLMへRGB画素指定による移動、必要時の深度取得、地図画像と履歴の想起をツールとして公開するロボット航法ハーネスを提案する。R2R-CEで成功率76%を報告するが、目的はゼロショット視覚言語ナビゲーションのタスク性能であり、LLMサービング・推論スケジューリング・GPU実行高速化ではない。",
+      "reason": "題名はツール呼び出しを使ったゼロショット視覚言語ナビゲーションを主題としている。ツール呼び出しの応用先はナビゲーションであり、LLM推論基盤のレイテンシ、GPUメモリ、通信・スケジューリング改善を直接扱わないため対象外。",
       "first_checked_at": "2026-10-13T10:40:03+00:00",
-      "last_checked_at": "2026-10-20T07:55:01+00:00",
+      "last_checked_at": "2026-10-21T08:53:31+00:00",
       "linked_from": [],
       "title": "AgenticNav: Zero-Shot Vision-and-Language Navigation as a Tool-Calling Harness"
     },
@@ -168415,9 +168415,9 @@
       "identity_tokens": [
         "arXiv:2512.10310"
       ],
-      "reason": "タイトルの効率化対象は視覚言語ナビゲーションモデルの学習であり、現在のサーベイが扱うLLM推論基盤の実行時高速化・メモリ最適化ではない。",
+      "reason": "題名が主張する効率化は視覚言語ナビゲーション（VLN）モデルの学習効率であり、ナビゲーション課題のモデル構築が最終目的である。LLMの推論サービングや実行時メモリ管理ではなく、学習専用最適化も現在の収録範囲外のため対象外。",
       "first_checked_at": "2026-10-13T13:47:01+00:00",
-      "last_checked_at": "2026-10-13T13:47:01+00:00",
+      "last_checked_at": "2026-10-21T08:53:30+00:00",
       "linked_from": [],
       "title": "Efficient-VLN: A Training-Efficient Vision-Language Navigation Model"
     },
@@ -179388,6 +179388,54 @@
       "last_checked_at": "2026-10-21T03:42:37+00:00",
       "linked_from": [],
       "title": "GA-VLN: Geometry-Aware BEV Representation for Efficient Vision-Language Navigation"
+    },
+    "arXiv:2511.21285": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2511.21285",
+      "identity_tokens": [
+        "arXiv:2511.21285"
+      ],
+      "reason": "題名はパラメータ効率の高い追加学習（PEFT）手法の比較基準を示す。比較対象は微調整の学習手法であり、学習専用の評価は現在凍結された範囲で、LLM生成推論のランタイム・メモリ・通信最適化を直接扱わないため対象外。",
+      "first_checked_at": "2026-10-21T08:53:30+00:00",
+      "last_checked_at": "2026-10-21T08:53:30+00:00",
+      "linked_from": [],
+      "title": "PEFT-Bench: A Parameter-Efficient Fine-Tuning Methods Benchmark"
+    },
+    "arXiv:2602.19281": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.19281",
+      "identity_tokens": [
+        "arXiv:2602.19281"
+      ],
+      "reason": "題名は大規模言語モデルの長期推論における思考空間の制約を分析する研究である。推論の能力・探索空間の問題であり、推論基盤の計算・通信・メモリ管理やサービングの実装最適化を示していないため対象外。",
+      "first_checked_at": "2026-10-21T08:53:32+00:00",
+      "last_checked_at": "2026-10-21T08:53:32+00:00",
+      "linked_from": [],
+      "title": "Limited Reasoning Space: The cage of long-horizon reasoning in LLMs"
+    },
+    "arXiv:2603.21269": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.21269",
+      "identity_tokens": [
+        "arXiv:2603.21269"
+      ],
+      "reason": "題名は動的幾何の基盤モデルを視覚言語ナビゲーションへ組み込む応用モデルを示している。幾何情報の活用とナビゲーション能力が対象で、LLM推論サービングやKVキャッシュ・GPUカーネルの効率化ではないため対象外。",
+      "first_checked_at": "2026-10-21T08:53:34+00:00",
+      "last_checked_at": "2026-10-21T08:53:34+00:00",
+      "linked_from": [],
+      "title": "DyGeoVLN: Infusing Dynamic Geometry Foundation Model into Vision-Language Navigation"
+    },
+    "arXiv:2602.02459": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.02459",
+      "identity_tokens": [
+        "arXiv:2602.02459"
+      ],
+      "reason": "題名は動的環境でのロボットナビゲーションを目的とした視覚・言語・行動モデルの制御方式を示している。ロボット行動決定のモデル研究であり、LLM推論カーネル、KVキャッシュ、サービング基盤の資源最適化ではないため対象外。",
+      "first_checked_at": "2026-10-21T08:53:34+00:00",
+      "last_checked_at": "2026-10-21T08:53:34+00:00",
+      "linked_from": [],
+      "title": "TIC-VLA: A Think-in-Control Vision-Language-Action Model for Robot Navigation in Dynamic Environments"
     }
   }
 }

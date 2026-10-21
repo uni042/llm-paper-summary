@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-75ac926637cf0a96-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2301.09474",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2301.09474",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2301.09474",
+      "arXiv:2301.09474",
+      "id:arXiv:2301.09474",
+      "url:https://arxiv.org/abs/2301.09474"
+    ],
+    "reason": "題名の対象はエネルギー制約付き拡散から導くグラフ変換器（Graph Transformer）の設計である。グラフ学習・グラフ表現のモデル方式であり、LLM推論時の計算・通信・キャッシュ最適化を直接扱うと示されていないため対象外。",
+    "first_checked_at": "2026-10-11T00:45:52+00:00",
+    "last_checked_at": "2026-10-21T08:53:32+00:00",
+    "linked_from": [],
+    "title": "DIFFormer: Scalable (Graph) Transformers Induced by Energy Constrained Diffusion"
+  },
+  "processed_at": "2026-10-21T08:53:32+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-75ac926637cf",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
