@@ -2,7 +2,7 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-21T12:53:00+00:00",
+  "updated_at": "2026-10-21T13:45:32+00:00",
   "record_count": 12452,
   "records": {
     "arXiv:2303.08774": {
@@ -163076,11 +163076,11 @@
         "id:arXiv:2204.13767",
         "url:https://arxiv.org/abs/2204.13767"
       ],
-      "reason": "多変量時系列予測用の注意機構を主題とする研究で、言語モデルの推論・学習実行基盤やKVキャッシュ、サービング性能の改善を扱う題名ではない。推論システムへの直接適用が確認できないためタイトル段階で対象外候補とする。",
+      "reason": "一次要旨の提案は多変量時系列予測のための三角形階層パッチ注意と変数別パラメータであり、線形計算量と予測精度を時系列データ4集合で評価する。注意演算を軽量化する点は一般に関連するが、LLMトークン生成・配信・KVキャッシュ・学習基盤への適用や性能評価が主要対象ではないため、現行のLLM推論サーベイから除外する。",
       "first_checked_at": "2026-10-11T02:48:44+00:00",
-      "last_checked_at": "2026-10-20T19:45:38+00:00",
+      "last_checked_at": "2026-10-21T13:45:31+00:00",
       "linked_from": [],
-      "title": "Triformer: Triangular, Variable-Specific Attentions for Long Sequence Multivariate Time Series Forecasting-Full Version"
+      "title": "Triformer: Triangular, Variable-Specific Attentions for Long Sequence Multivariate Time Series Forecasting--Full Version"
     },
     "DOI:10.1109/tcsvt.2026.3661516": {
       "classification": "unrelated",
@@ -179275,11 +179275,11 @@
       "identity_tokens": [
         "arXiv:2208.00406"
       ],
-      "reason": "機械学習実験の二酸化炭素排出量を追跡する汎用測定ツールの研究であり、LLM推論基盤の実行時間・スループット・メモリ階層・カーネル最適化を提案するものではない。省エネの周辺主題ではあるが、対象が一般の機械学習排出量追跡と明示されているため対象外とする。",
+      "reason": "一次要旨によれば、eco2AIは機械学習コードの実行時電力と地域別CO2排出量を記録するPython計測パッケージであり、LLMの注意計算、KVキャッシュ、生成時スケジューリング、MoE推論、学習アルゴリズム自体を改善する手法ではない。計測対象に推論が含まれ得ても、研究の主要機構は汎用の環境負荷トラッキングなのでサーベイの凍結対象外。",
       "first_checked_at": "2026-10-20T13:06:25+00:00",
-      "last_checked_at": "2026-10-20T18:43:33+00:00",
+      "last_checked_at": "2026-10-21T13:45:32+00:00",
       "linked_from": [],
-      "title": "eco2AI: Carbon Emissions Tracking of Machine Learning Models as the First Step Towards Sustainable AI"
+      "title": "Eco2AI: carbon emissions tracking of machine learning models as the first step towards sustainable AI"
     },
     "arXiv:2609.30579": {
       "classification": "unrelated",
