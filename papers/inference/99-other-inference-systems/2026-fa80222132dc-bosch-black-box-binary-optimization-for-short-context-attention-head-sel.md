@@ -1,38 +1,100 @@
 ---
-canonical_id: 'DOI:10.18653/v1/2026.acl-long.1877'
-doi: '10.18653/v1/2026.acl-long.1877'
+canonical_id: DOI:10.18653/v1/2026.acl-long.1877
+doi: 10.18653/v1/2026.acl-long.1877
 title: 'BOSCH: Black-Box Binary Optimization for Short-Context Attention-Head Selection in LLMs'
-summary: >-
-  BOSCHは事前学習済みLLMの注意頭を全域注意からスライディングウィンドウ注意（SWA）へ変更する際、静的な注意頭順位では頭間の相互依存を捉えられない問題に対し、層の局所化感度測定・層別SWA予算配分・複数層の注意頭共同探索からなる黒箱二値最適化を提案する。Qwen3の1.7B/8B/14B/30Bで25〜87.5%の注意頭をSWA化し、NIAHとLongBenchで静的選択方式より高いゼロショット性能を示した。8B・SWA比率75%ではNIAH平均72.7（FISHER 63.4、RAZOR 64.9）、LongBench平均31.6（FISHER 25.8、RAZOR 25.7）。ただし論文の主結果は品質評価であり、実際のKV容量削減・TTFT・復号スループットの実測値を直接示すものではない。
-list_summary: 'LLMのSWA化する注意頭を、層感度・層別予算・共同黒箱探索で選び、固定順位方式より長文脈の検索・QA性能を保持する。'
+summary: BOSCHは事前学習済みLLMの注意頭を全域注意からスライディングウィンドウ注意（SWA）へ変更する際、静的な注意頭順位では頭間の相互依存を捉えられない問題に対し、層の局所化感度測定・層別SWA予算配分・複数層の注意頭共同探索からなる黒箱二値最適化を提案する。Qwen3の1.7B/8B/14B/30Bで25〜87.5%の注意頭をSWA化し、NIAHとLongBenchで静的選択方式より高いゼロショット性能を示した。8B・SWA比率75%ではNIAH平均72.7（FISHER 63.4、RAZOR 64.9）、LongBench平均31.6（FISHER 25.8、RAZOR 25.7）。ただし論文の主結果は品質評価であり、実際のKV容量削減・TTFT・復号スループットの実測値を直接示すものではない。
+list_summary: LLMのSWA化する注意頭を、層感度・層別予算・共同黒箱探索で選び、固定順位方式より長文脈の検索・QA性能を保持する。
 authors:
-  - Abbas Ghaddar
-  - Ivan Kobyzev
-  - Boxing Chen
-  - Yufei Cui
-published: '2026-07'
-publication: 'Proceedings of the 64th Annual Meeting of the Association for Computational Linguistics (ACL 2026), Long Papers, pp.40417-40444'
+- Abbas Ghaddar
+- Ivan Kobyzev
+- Boxing Chen
+- Yufei Cui
+published: 2026-07
+publication: Proceedings of the 64th Annual Meeting of the Association for Computational Linguistics (ACL 2026), Long Papers, pp.40417-40444
 publication_type: conference
 publication_status: published
-source: 'https://aclanthology.org/2026.acl-long.1877.pdf'
+source: https://aclanthology.org/2026.acl-long.1877.pdf
 sources:
-  - 'https://aclanthology.org/2026.acl-long.1877.pdf'
-  - 'https://aclanthology.org/2026.acl-long.1877/'
-  - 'https://arxiv.org/abs/2604.05942'
-implementation: >-
-  既存のQwen3系列4モデルに対し、学習を伴わない黒箱評価による注意頭マスク探索を実施。較正には人工Needle-in-a-Haystackデータを用い、評価関数はプレフィル時の正解トークン予測率。層別探索、層別比率割当、複数層の頭の共同最適化を比較し、別途継続事前学習後の回復も検証。論文に公開コードURLが明示されていることは今回確認できず、実行可能な公式リポジトリの存在を保証しない。
+- https://aclanthology.org/2026.acl-long.1877.pdf
+- https://aclanthology.org/2026.acl-long.1877/
+- https://arxiv.org/abs/2604.05942
+implementation: 既存のQwen3系列4モデルに対し、学習を伴わない黒箱評価による注意頭マスク探索を実施。較正には人工Needle-in-a-Haystackデータを用い、評価関数はプレフィル時の正解トークン予測率。層別探索、層別比率割当、複数層の頭の共同最適化を比較し、別途継続事前学習後の回復も検証。論文に公開コードURLが明示されていることは今回確認できず、実行可能な公式リポジトリの存在を保証しない。
 code: null
 last_checked: '2026-10-21'
 worker_id: scheduled-chat-00
 scheduled_slot: '00'
 worker_completed_at: '2026-10-21T03:04:00+09:00'
-worker_run_key: '20261021-0304-scheduled-chat-00/r01'
-reference_main_sha: '090049c007e161833e3882d48df8c17f72fbe0f9'
+worker_run_key: 20261021-0304-scheduled-chat-00/r01
+reference_main_sha: 090049c007e161833e3882d48df8c17f72fbe0f9
 quality_self_review_passed: true
-quality_self_review_version: 'PAPER-QUALITY-GUIDE-2026-10-07'
+quality_self_review_version: PAPER-QUALITY-GUIDE-2026-10-07
 worklist_rank: 83
 last_audited: null
 audit_version: 0
+references:
+- canonical_id: arXiv:2412.08905
+  arxiv_id: '2412.08905'
+- canonical_id: arXiv:2305.13245
+- canonical_id: DOI:10.18653/v1/2024.acl-long.172
+  doi: 10.18653/v1/2024.acl-long.172
+- canonical_id: DOI:10.18653/v1/w19-4828
+  doi: 10.18653/v1/w19-4828
+- canonical_id: arXiv:1803.05457
+  arxiv_id: '1803.05457'
+- canonical_id: arXiv:2307.08691
+- canonical_id: OpenReview:A1ztozypga
+  openreview_id: A1ztozypga
+- canonical_id: arXiv:2411.13676
+  arxiv_id: '2411.13676'
+- canonical_id: arXiv:2407.21783
+  arxiv_id: '2407.21783'
+- canonical_id: arXiv:2410.02660
+  arxiv_id: '2410.02660'
+- canonical_id: arXiv:2205.10687
+  arxiv_id: '2205.10687'
+- canonical_id: arXiv:2112.04329
+  arxiv_id: '2112.04329'
+- canonical_id: OpenReview:WZQXaTNYEB
+  openreview_id: WZQXaTNYEB
+- canonical_id: OpenReview:kIoBbc76Sy
+  openreview_id: kIoBbc76Sy
+- canonical_id: arXiv:2410.10989
+  arxiv_id: '2410.10989'
+- canonical_id: DOI:10.48550/arxiv.2310.06825
+  doi: 10.48550/arxiv.2310.06825
+- canonical_id: arXiv:2204.09656
+- canonical_id: DOI:10.1145/1916461.1916468
+  doi: 10.1145/1916461.1916468
+- canonical_id: arXiv:2501.08313
+  arxiv_id: '2501.08313'
+- canonical_id: arXiv:2403.19887
+- canonical_id: arXiv:2412.19437
+  arxiv_id: '2412.19437'
+- canonical_id: arXiv:1711.05101
+  arxiv_id: '1711.05101'
+- canonical_id: arXiv:2508.10925
+  arxiv_id: '2508.10925'
+- canonical_id: DOI:10.18653/v1/2021.eacl-main.9
+  doi: 10.18653/v1/2021.eacl-main.9
+- canonical_id: arXiv:2309.00071
+- canonical_id: arXiv:2407.08608
+- canonical_id: arXiv:1701.06538
+- canonical_id: arXiv:2407.15891
+- canonical_id: arXiv:2403.08295
+  arxiv_id: '2403.08295'
+- canonical_id: arXiv:2507.20534
+  arxiv_id: '2507.20534'
+- canonical_id: DOI:10.48550/arxiv.2307.09288
+  doi: 10.48550/arxiv.2307.09288
+- canonical_id: arXiv:2505.09388
+  arxiv_id: '2505.09388'
+  doi: 10.48550/arxiv.2505.09388
+- canonical_id: arXiv:2412.06464
+  openreview_id: r8H7xhYPwz
+- canonical_id: arXiv:2309.08168
+references_checked_at: '2026-10-21'
+references_source: arxiv-html-reference-section
+references_total: 67
 ---
 
 # BOSCH：注意頭ごとのSWA化を黒箱探索する事後ハイブリッド化
