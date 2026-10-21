@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（897本）
+## 自動生成の論文一覧（900本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -293,6 +293,10 @@
 - **2026-05 · [Attention Once Is All You Need: Efficient Streaming Inference with Stateful Transformers](2026-2605.13784-attention-once-is-all-you-need-efficient-streaming-inference-with-statef.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   本論文は、金融時系列、センサ、ログのようにデータが継続的に追加され、利用者からの質問がときどき到着する用途に対し、質問の到着を待たずにデータを処理する状態保持型（Stateful）LLM推論を提案する。
+
+- **2026-04 · [Tango: Taming Visual Signals for Efficient Video Large Language Models](2026-2604.09547-tango-taming-visual-signals-for-efficient-video-large-language-models.md)**  
+  実装：[✓](https://github.com/xjtupanda/Tango) ・ リポジトリ内被引用：1  
+  Tangoは、動画大規模言語モデル（Video LLM）へ渡す視覚トークンの数を削減する、学習不要の前処理方式である。LLaVA-OneVision-7Bの32フレーム評価では、視覚トークンを10%にしたとき元の4ベンチマーク平均性能の98.9%を保持し、実測推論速度は1.88倍となった。
 
 - **2026-04 · [Stochastic KV Routing: Enabling Adaptive Depth-Wise Cache Sharing](2026-2604.22782-stochastic-kv-routing-enabling-adaptive-depth-wise-cache-sharing.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
@@ -1404,6 +1408,10 @@
   実装：[✓](https://github.com/helldog-star/MemoSight) ・ リポジトリ内被引用：0  
   MemoSightは、長い思考連鎖（Chain-of-Thought; CoT）の鍵・値キャッシュ（KV キャッシュ）を減らす文脈圧縮と、次の複数トークンを予測する先読みを、一つの追加学習手順で実現する方式である。
 
+- **2026-04 · [MCAP: Deployment-Time Layer Profiling for Memory-Constrained LLM Inference](2026-2604.21026-mcap-deployment-time-layer-profiling-for-memory-constrained-llm-inferenc.md)**  
+  実装：[✓](https://github.com/genovationtech/nve) ・ リポジトリ内被引用：0  
+  MCAP（Monte Carlo Activation Profiling）は、モデルを読み込む段階で少数の入力を使って層ごとの重要度を計測し、推論時の演算精度と重みの常駐先を同時に決める方式である。論文の代表例ではプロファイルは338バイトのJSONであり、初回計測は約60秒、同一アーキテクチャの再利用時は追加計測を省ける。
+
 - **2026-04 · [LLaDA2.0-Uni: Unifying Multimodal Understanding and Generation with Diffusion Large Language Model](2026-2604.20796-llada2-0-uni-unifying-multimodal-understanding-and-generation-with-diffu.md)**  
   実装：[✓](https://github.com/inclusionAI/LLaDA2.0-Uni) ・ リポジトリ内被引用：0  
   画像理解と画像生成を一つの基盤モデルで扱うには、画像を言語モデルへどう渡すかが大きな設計課題になる。SPRINTの最大1.6倍とデコーダの段数削減は異なる処理段階の話であり、単純に掛け算してエンドツーエンドの高速化率とみなしてはならない。
@@ -1419,6 +1427,10 @@
 - **2026-04 · [KV Cache Offloading for Context-Intensive Tasks](2026-2604.08426-kv-cache-offloading-for-context-intensive-tasks.md)**  
   実装：[✓](https://github.com/yandex-research/context-intensive-kv-offloading) ・ リポジトリ内被引用：0  
   文脈集約型課題でKV退避の選択誤差を分析し、低ビット量子化によるYAKVで精度とスループットを改善する。
+
+- **2026-04 · [HubRouter: A Pluggable Sub-Quadratic Routing Primitive for Hybrid Sequence Models](2026-2604.22442-hubrouter-a-pluggable-sub-quadratic-routing-primitive-for-hybrid-sequenc.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  重要なのは、学習済み大規模言語モデルへそのまま差し込める高速化手法ではない点である。Jamba型では系列長1024で訓練トークン処理量が約90倍になったが、これは双方をPyTorchの未最適化実装で比較した値であり、著者自身が最適化済み基準実装との倍率を推定10〜15倍まで下方修正している。
 
 - **2026-04 · [GSQ: Highly-Accurate Low-Precision Scalar Quantization for LLMs via Gumbel-Softmax Sampling](2026-2604.18556-gsq-highly-accurate-low-precision-scalar-quantization-for-llms-via-gumbe.md)**  
   実装：[✓](https://github.com/IST-DASLab/GSQ) ・ リポジトリ内被引用：0  
