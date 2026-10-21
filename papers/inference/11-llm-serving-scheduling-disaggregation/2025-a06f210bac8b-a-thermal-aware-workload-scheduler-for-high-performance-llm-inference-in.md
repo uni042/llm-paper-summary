@@ -25,6 +25,8 @@ repair_source_sha256: 'f22ff48467e93895f175afd688ffc038a2c922cbf2591d42b585edb3c
 repair_reason: 'standard method/evaluation/limitation heading recognition; technical body and evaluation numbers preserved'
 quality_self_review_version: "PAPER-QUALITY-GUIDE-2026-10-07"
 reference_main_sha: "79c21080b0f5ff6cc20e5ff99df5ea5c938e4ee5"
+last_audited: null
+audit_version: 0
 ---
 
 # TAWS：冷却温度制約下の大規模言語モデル推論を支える熱認識型負荷スケジューリング

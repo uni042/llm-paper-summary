@@ -1,13 +1,12 @@
 {
   "schema_version": 1,
   "artifact_type": "research",
-  "status": "imported",
+  "status": "blocked_quality",
   "source_sha256": "99ed4a5e1a8ee7e5cbc855245d8537edce53e03582d9de91289c6c1886028218",
-  "canonical_id": "arXiv:2509.18362",
-  "paper_path": "papers/inference/99-other-inference-systems/2025-2509.18362-fastmtp-accelerating-llm-inference-with-enhanced-multi-token-prediction.md",
-  "lineage": "99-other-inference-systems",
-  "audit_status": "WARN",
+  "normalized_source_sha256": null,
   "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_a06b3b7db0188191b65d18622431f694--2025-2509.18362-fastmtp-recursive-mtp-speculation-research-20261020-2030-scheduled-chat-30-r01.md",
+  "canonical_id": "arXiv:2509.18362",
   "worker_completed_at": "2026-10-20T20:56:00+09:00",
   "worker_run_key": "20261020-2030-scheduled-chat-30/r01",
   "quality_metrics": {
@@ -22,5 +21,8 @@
       "限界説明量 0 < 推奨 120"
     ]
   },
-  "processed_at": "2026-10-20T16:00:20+00:00"
+  "failures": [
+    "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2025-2509.18362-fastmtp-accelerating-llm-inference-with-enhanced-multi-token-prediction.md と 12 段落 / 2484文字 (100.0%) が完全一致"
+  ],
+  "processed_at": "2026-10-21T21:06:13+00:00"
 }

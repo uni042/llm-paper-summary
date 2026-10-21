@@ -3,7 +3,7 @@
 複数requestを複数GPU / nodeで処理するLLM servingについて、request順、batch、prefill / decodeのGPU配分、KV再利用・転送、request移動などを調整し、latencyとresource効率を改善する研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（411本）
+## 自動生成の論文一覧（412本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -1393,6 +1393,10 @@
 - **2025-07 · [StreamVLN: Streaming Vision-and-Language Navigation via SlowFast Context Modeling](2025-2507.05240-streamvln-streaming-vision-and-language-navigation-via-slowfast-context-.md)**  
   実装：[✓](https://streamvln.github.io/) ・ リポジトリ内被引用：0  
   StreamVLNは、視覚・言語・行動を連続して扱うロボット誘導システムにおいて、動画言語モデルの文脈長と鍵・値キャッシュ（KVキャッシュ）が際限なく増える問題を解決しようとする。
+
+- **2025-07 · [A Thermal-aware Workload Scheduler for High-performance LLM Inference in Cooling-regulated Datacenters](2025-a06f210bac8b-a-thermal-aware-workload-scheduler-for-high-performance-llm-inference-in.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  本研究は、データセンターの冷却設定温度を高めることで冷却電力を節約しようとすると、GPUの熱保護動作（thermal throttling）が逆に推論処理量を低下させる、という運用上の競合を扱う。従来の推論スケジューラはGPU利用率とトークン処理量を最適化しても、この熱的な履歴状態を明示的には考慮しない。
 
 - **2025-06 · [On-the-Fly Adaptive Distillation of Transformer to Dual-State Linear Attention for Long-Context LLM Serving](2025-2506.09316-on-the-fly-adaptive-distillation-of-transformer-to-dual-state-linear-att.md)**  
   実装：[✓](https://github.com/utnslab/DSLA-Serve) ・ リポジトリ内被引用：0  
