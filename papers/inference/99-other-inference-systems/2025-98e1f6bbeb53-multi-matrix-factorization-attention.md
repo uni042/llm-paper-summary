@@ -1,35 +1,54 @@
 ---
-canonical_id: 'DOI:10.18653/v1/2025.findings-acl.1288'
-title: 'Multi-matrix Factorization Attention'
+canonical_id: DOI:10.18653/v1/2025.findings-acl.1288
+title: Multi-matrix Factorization Attention
 authors:
-  - Jingcheng Hu
-  - Houyi Li
-  - Yinmin Zhang
-  - Zili Wang
-  - Shuigeng Zhou
-  - Xiangyu Zhang
-  - Heung-Yeung Shum
-published: '2025-07'
+- Jingcheng Hu
+- Houyi Li
+- Yinmin Zhang
+- Zili Wang
+- Shuigeng Zhou
+- Xiangyu Zhang
+- Heung-Yeung Shum
+published: 2025-07
 publication: 'Findings of the Association for Computational Linguistics: ACL 2025, pages 25114–25126'
 publication_type: conference
 publication_status: published
-source: 'https://aclanthology.org/2025.findings-acl.1288.pdf'
+source: https://aclanthology.org/2025.findings-acl.1288.pdf
 sources:
-  - 'https://aclanthology.org/2025.findings-acl.1288.pdf'
-  - 'https://aclanthology.org/2025.findings-acl.1288/'
-implementation: '著者が約69億総パラメータ・約12億活性パラメータのMoE言語モデルを一から学習してMHAと比較した構造研究。約10億パラメータの密モデルでも構成要素除去実験を実施。実際のサーバー上の生成遅延・トークン毎秒・GPUメモリ使用量を測定した実装評価は報告していない。公式コード公開URLは確認した一次論文・出版ページに見当たらない。'
+- https://aclanthology.org/2025.findings-acl.1288.pdf
+- https://aclanthology.org/2025.findings-acl.1288/
+implementation: 著者が約69億総パラメータ・約12億活性パラメータのMoE言語モデルを一から学習してMHAと比較した構造研究。約10億パラメータの密モデルでも構成要素除去実験を実施。実際のサーバー上の生成遅延・トークン毎秒・GPUメモリ使用量を測定した実装評価は報告していない。公式コード公開URLは確認した一次論文・出版ページに見当たらない。
 code: null
-summary: 'MFAは多頭注意のQK経路を共有低ランク射影と頭別の正方行列に分解し、鍵・値を頭間共有したまま頭数と頭あたりの有効階数を増やす。派生のMFA-KRは鍵キャッシュから値を再構成する零初期化ゲートを使い、保存量をさらに半減する。総約69億・活性約12億パラメータのMoEを1兆トークン学習した比較で、MHAのKVキャッシュ196.6KB/トークンに対しMFAは24.6KB、MFA-KRは12.3KB。12評価平均はMHA 49.0、MFA 49.9、MFA-KR 48.0である。これはモデル構造・予測品質の比較であり、推論スループットやレイテンシーの実測高速化ではない。'
-list_summary: '頭別QK行列の低ランク因子化と共有KVで表現力を維持するMFA、鍵を値にも再利用するMFA-KR。1兆トークン学習のMoEでKV量をMHA比87.5%／93.75%削減し、平均評価49.9／48.0対49.0。'
+summary: MFAは多頭注意のQK経路を共有低ランク射影と頭別の正方行列に分解し、鍵・値を頭間共有したまま頭数と頭あたりの有効階数を増やす。派生のMFA-KRは鍵キャッシュから値を再構成する零初期化ゲートを使い、保存量をさらに半減する。総約69億・活性約12億パラメータのMoEを1兆トークン学習した比較で、MHAのKVキャッシュ196.6KB/トークンに対しMFAは24.6KB、MFA-KRは12.3KB。12評価平均はMHA 49.0、MFA 49.9、MFA-KR 48.0である。これはモデル構造・予測品質の比較であり、推論スループットやレイテンシーの実測高速化ではない。
+list_summary: 頭別QK行列の低ランク因子化と共有KVで表現力を維持するMFA、鍵を値にも再利用するMFA-KR。1兆トークン学習のMoEでKV量をMHA比87.5%／93.75%削減し、平均評価49.9／48.0対49.0。
 last_checked: '2026-10-21'
 worker_completed_at: '2026-10-21T12:44:35+09:00'
-worker_run_key: '20261021-1245-scheduled-chat-45/r01'
+worker_run_key: 20261021-1245-scheduled-chat-45/r01
 worker_id: scheduled-chat-45
-reference_main_sha: '500bb5ace37dde517e0c7cc75f5776300d4266b7'
+reference_main_sha: 500bb5ace37dde517e0c7cc75f5776300d4266b7
 quality_self_review_passed: true
-quality_self_review_version: 'PAPER-QUALITY-GUIDE-2026-10-07'
+quality_self_review_version: PAPER-QUALITY-GUIDE-2026-10-07
 last_audited: null
 audit_version: 0
+references:
+- canonical_id: arXiv:2305.13245
+  arxiv_id: '2305.13245'
+- canonical_id: DOI:10.1145/3620665.3640366
+- canonical_id: DOI:10.48550/arxiv.2405.04434
+- canonical_id: arXiv:1701.06538
+- canonical_id: arXiv:2104.04473
+- canonical_id: arXiv:2205.14135
+- canonical_id: arXiv:2405.12981
+- canonical_id: arXiv:2404.05892
+- canonical_id: arXiv:2312.00752
+- canonical_id: arXiv:2402.16363
+- canonical_id: arXiv:1911.02150
+- canonical_id: arXiv:2403.19887
+- canonical_id: arXiv:2409.02060
+- canonical_id: arXiv:2211.05102
+references_checked_at: '2026-10-21'
+references_source: primary-pdf-reference-section
+references_total: 1
 ---
 
 # MFA：多行列因子化による注意機構の表現力とKVキャッシュ容量の両立
