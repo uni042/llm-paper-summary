@@ -249,11 +249,11 @@
 ### 4年前（2022-11〜2023-10）
 
 - **2023-06 · [AWQ: Activation-aware Weight Quantization for LLM Compression and Acceleration](2023-2306.00978-awq.md)**  
-  実装：[✓](https://github.com/mit-han-lab/llm-awq) ・ リポジトリ内被引用：202  
+  実装：[✓](https://github.com/mit-han-lab/llm-awq) ・ リポジトリ内被引用：203  
   活性の大きい入力チャネルに対応する重みを等価スケーリングで保護し、全重みを均一な低ビット形式のまま高精度化する重み専用量子化とTinyChat実装。
 
 - **2022-11 · [LLM.int8(): 8-bit Matrix Multiplication for Transformers at Scale](2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md)**  
-  実装：[✓](https://github.com/TimDettmers/bitsandbytes) ・ リポジトリ内被引用：168  
+  実装：[✓](https://github.com/TimDettmers/bitsandbytes) ・ リポジトリ内被引用：169  
   特徴次元の外れ値を16-bitへ分離し、残る99.9%以上をベクトル単位INT8で計算する。175B級モデルの品質とほぼ半減の重み容量を両立する一方、小さい行列では量子化費用が速度改善を打ち消す。
 
 - **2023-07 · [QuIP: 2-Bit Quantization of Large Language Models With Guarantees](2023-2307.13304-quip-2-bit-quantization-of-large-language-models-with-guarantees.md)**  
@@ -299,6 +299,6 @@
 ### 5年前（2021-11〜2022-10）
 
 - **2022-10 · [GPTQ: Accurate Post-Training Quantization for Generative Pre-trained Transformers](2022-2210.17323-gptq.md)**  
-  実装：[✓](https://github.com/IST-DASLab/gptq) ・ リポジトリ内被引用：378  
+  実装：[✓](https://github.com/IST-DASLab/gptq) ・ リポジトリ内被引用：379  
   二次情報に基づく誤差補償をGPU向けに再設計し、175B級LLMを数時間で3〜4bit化して単一A100実行と約3.24倍の生成高速化を実現した基礎的GPTQ研究。
 <!-- survey:auto:end -->

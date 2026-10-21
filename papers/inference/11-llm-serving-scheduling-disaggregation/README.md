@@ -1086,6 +1086,10 @@
   実装：✓ ・ リポジトリ内被引用：14  
   分離型推論（disaggregated inference）は、長い入力列を処理する入力処理（プリフィル）と、一トークンずつ出力する復号（デコード）を別のGPUワーカーに担当させる。最大4台のH100サーバを使った実験では、vLLMの一体型推論に対してarXiv論文要約負荷で要求遅延55%減、ShareGPT対話負荷で24%減を報告した。
 
+- **2024-12 · [Efficiently Scaling LLM Reasoning with Certaindex](2024-2412.20993-efficiently-scaling-llm-reasoning-with-certaindex.md)**  
+  実装：[✓](https://github.com/hao-ai-lab/Dynasor) ・ リポジトリ内被引用：14  
+  複雑な問題に対して大規模言語モデル（LLM）が長い思考過程を生成したり、複数経路を探索したりする場合、計算を増やすほど正答率が上がるとは限らない。本研究の焦点は、難度を入力問題の外見から事前に予測するのではなく、推論を実際に進めた結果、回答がどこまで安定したかを観測することである。
+
 - **2024-11 · [BlendServe: Optimizing Offline Inference for Auto-regressive Large Models with Resource-aware Batching](2024-2411.16102-blendserve-optimizing-offline-inference-for-auto-regressive-large-models.md)**  
   実装：✓ ・ リポジトリ内被引用：14  
   本論文は、応答を即時返す必要のないオフライン大規模言語モデル推論で、要求の並べ替えによってGPUの計算器とメモリ帯域を同時に使う方式を提案する。一次論文v1のA100・Llama 3.1 8B実機評価では、最良の比較対象NanoFlow-DFSに対して19.34〜22.65%の処理量改善、vLLMに対して最大1.44倍の改善を報告する。
@@ -1093,10 +1097,6 @@
 - **2025-01 · [Efficiently Serving Large Multimodal Models Using EPD Disaggregation](2025-2501.05460-efficiently-serving-large-multimodal-models-using-epd-disaggregation.md)**  
   実装：[✓](https://github.com/vbdi/epdserve) ・ リポジトリ内被引用：13  
   本論文は大規模マルチモーダルモデル（Large Multimodal モデル、LMM）の推論を、マルチモーダル符号化（Encode、E）、事前入力処理（プリフィル、P）、逐次復号（デコード、D）の三段階に分離するEPD分離（EPD Disaggregation）を提案する。
-
-- **2024-12 · [Efficiently Scaling LLM Reasoning with Certaindex](2024-2412.20993-efficiently-scaling-llm-reasoning-with-certaindex.md)**  
-  実装：[✓](https://github.com/hao-ai-lab/Dynasor) ・ リポジトリ内被引用：13  
-  複雑な問題に対して大規模言語モデル（LLM）が長い思考過程を生成したり、複数経路を探索したりする場合、計算を増やすほど正答率が上がるとは限らない。本研究の焦点は、難度を入力問題の外見から事前に予測するのではなく、推論を実際に進めた結果、回答がどこまで安定したかを観測することである。
 
 - **2025-01 · [Locality-aware Fair Scheduling in LLM Serving](2025-2501.14312-locality-aware-fair-scheduling-dlpm.md)**  
   実装：✓ ・ リポジトリ内被引用：12  
@@ -1385,7 +1385,7 @@
 ### 3年前（2023-11〜2024-10）
 
 - **2023-12 · [SGLang: Efficient Execution of Structured Language Model Programs](2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md)**  
-  実装：[✓](https://github.com/sgl-project/sglang) ・ リポジトリ内被引用：549  
+  実装：[✓](https://github.com/sgl-project/sglang) ・ リポジトリ内被引用：550  
   複数のLLM呼び出しや条件分岐をランタイムが1つのプログラムとして理解し、共有接頭辞のKV再利用・並列実行・構造化出力生成をまとめて効率化する推論システム。
 
 - **2024-07 · [DistServe: Disaggregating Prefill and Decoding for Goodput-optimized Large Language Model Serving](2024-2401.09670-distserve-disaggregating-prefill-decoding-goodput.md)**  

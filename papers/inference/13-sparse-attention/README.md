@@ -271,7 +271,7 @@
 ### 2年前（2024-11〜2025-10）
 
 - **2025-02 · [Native Sparse Attention: Hardware-Aligned and Natively Trainable Sparse Attention](2025-2502.11089-native-sparse-attention-hardware-aligned-and-natively-trainable-sparse-a.md)**  
-  実装：✓ ・ リポジトリ内被引用：91  
+  実装：✓ ・ リポジトリ内被引用：92  
   Native Sparse 注意機構（NSA）は、長文脈Transformerの注意演算を、圧縮した長距離文脈、入力依存で選んだ重要ブロック、直近の局所窓という三つの枝に分ける疎注意方式である。注意カーネルは64K文脈で順伝播最大9.0倍、逆伝播最大6.0倍の実測高速化を報告する。
 
 - **2025-02 · [MoBA: Mixture of Block Attention for Long-Context LLMs](2025-2502.13189-moba.md)**  
@@ -291,7 +291,7 @@
   自己類似度を使って重要ブロックを予測し、残ったブロックにもGPUワープ単位のsoftmax判定を適用する学習不要の疎注意演算子。近似誤差の許容範囲を層ごとに調整し、言語・画像・動画で実測性能と品質を比較する。
 
 - **2024-12 · [SCBench: A KV Cache-Centric Analysis of Long-Context Methods](2024-2412.10319-scbench-a-kv-cache-centric-analysis-of-long-context-methods.md)**  
-  実装：✓ ・ リポジトリ内被引用：22  
+  実装：✓ ・ リポジトリ内被引用：23  
   共有長文脈を複数ターンで再利用する12タスクを用い、KV生成・圧縮・検索・読み込みの各方式が初回だけでなく後続要求でどう崩れるかを比較する。
 
 - **2025-02 · [Twilight: Adaptive Attention Sparsity with Hierarchical Top-p Pruning](2025-2502.02770-twilight-adaptive-attention-sparsity-with-hierarchical-top-p-pruning.md)**  
@@ -319,7 +319,7 @@
   独自の統一実験ではなく既存研究の概念・設計制約を統合し、理論計算量と実測速度、疎演算とKV容量削減の違いを強調する。
 
 - **2025-02 · [RocketKV: Accelerating Long-Context LLM Inference via Two-Stage KV Cache Compression](2025-2502.14051-rocketkv-accelerating-long-context-llm-inference-via-two-stage-kv-cache-.md)**  
-  実装：[✓](https://github.com/NVlabs/RocketKV) ・ リポジトリ内被引用：8  
+  実装：[✓](https://github.com/NVlabs/RocketKV) ・ リポジトリ内被引用：9  
   大規模言語モデルの復号では、過去トークンの鍵・値（KV）を保存することで、同じ過去文脈の線形層を繰り返し計算することを避けられる。論文はLlama3.1-70B-Instruct、バッチ32、32K文脈のFP16 KVが約320 GBに達する例を挙げる。
 
 - **2025-07 · [RefreshKV: Updating Small KV Cache During Long-form Generation](2025-a2b748353aae-refreshkv-updating-small-kv-cache-during-long-form-generation.md)**  
@@ -361,7 +361,7 @@
   KVページのキー最小・最大値と現在クエリから重要度上界を推定し、上位ページだけを読むことで全KVを保持したまま長文脈注意の帯域を削減し最大7.03倍高速化。
 
 - **2024-07 · [MInference 1.0: Accelerating Pre-filling for Long-Context LLMs via Dynamic Sparse Attention](2024-2407.02490-minference.md)**  
-  実装：[✓](https://github.com/microsoft/MInference) ・ リポジトリ内被引用：132  
+  実装：[✓](https://github.com/microsoft/MInference) ・ リポジトリ内被引用：134  
   注意ヘッドを3種の疎パターンへ割り当て、入力ごとの重要位置を動的推定して長文脈プリフィルを専用GPUカーネルで高速化する。
 
 - **2024-10 · [SeerAttention: Learning Intrinsic Sparse Attention in Your LLMs](2024-2410.13276-seerattention.md)**  
@@ -439,7 +439,7 @@
 ### 7年前（2019-11〜2020-10）
 
 - **2020-07 · [Big Bird: Transformers for Longer Sequences](2020-2007.14062-big-bird-transformers-for-longer-sequences.md)**  
-  実装：✓ ・ リポジトリ内被引用：144  
+  実装：✓ ・ リポジトリ内被引用：145  
   Big Birdは、系列長に対して二次の計算・メモリ費用が生じる完全自己注意を、局所窓、ランダム接続、少数の大域トークンからなる疎注意へ置き換える長文処理モデルである。各位置が全位置を直接参照する代わりに、近傍の限られた位置、ランダムに選んだ遠距離位置、全体と接続する大域位置だけを見る。論文は同程度のハードウェアで従来より最大8倍長い系列を扱えると報告する。
 
 - **2020-03 · [Efficient Content-Based Sparse Attention with Routing Transformers](2020-2003.05997-efficient-content-based-sparse-attention-with-routing-transformers.md)**  
