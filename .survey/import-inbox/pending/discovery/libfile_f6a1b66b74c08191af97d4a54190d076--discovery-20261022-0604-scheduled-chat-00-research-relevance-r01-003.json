@@ -1,0 +1,24 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261022-0604-scheduled-chat-00/r01",
+  "reference_main_sha": "883c0a7dbc5f8fa0654795612d8aa9927b1f4995",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2205.08084",
+      "identity_tokens": ["arxiv:2205.08084", "2205.08084", "doi:10.48550/arxiv.2205.08084"],
+      "title": "M6-Rec: Generative Pretrained Language Models are Open-Ended Recommender Systems",
+      "reason": "主要貢献はM6事前学習モデルを推薦システムの検索・順位付け・説明生成・対話推薦へ統合する産業応用であり、一般のLLM生成サービングやKV/MoE最適化を直接対象としない。一方で§3.3のセグメント別遅延相互作用では24層中21層を事前計算・キャッシュし、表6でCTR推論の57msを16msへ短縮する独自の推論構成がある。§3.5では端末向け蒸留・枝刈り・8ビット量子化・早期終了も扱うため、明白な無関係ではなく、推論システム技術の収録境界として保留する。なお同じ表6でAUCは0.7995から0.7731へ悪化する。",
+      "source_url": "https://arxiv.org/html/2205.08084v2",
+      "body_check": "research_fulltext_relevance_review: 原著§1、§3.2〜3.5、§4.1〜4.5、表6〜8を確認。対象は推薦用M6-base約300MとM6-Edgeで、一般LLM推論基盤ではない。推論最適化として多区間事前計算・残り3層のオンライン相互作用と端末圧縮を確認したためborderline。",
+      "first_checked_at": "2026-10-22T06:04:00+09:00",
+      "last_checked_at": "2026-10-22T06:04:00+09:00",
+      "linked_from": [],
+      "origin": "research_postread_relevance",
+      "worklist_rank": 3
+    }
+  ]
+}
