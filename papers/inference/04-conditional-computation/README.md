@@ -43,7 +43,7 @@ MoEのexpert数を変えるAdaptive Expert Computationとは対象が異なり�
   大規模言語モデルは、次の単語を推測するたびに、難しい計算を要する単語にも文脈からほぼ写すだけの単語にも同じ数の変換層を適用する。DiffSkipは、トークンと層の組ごとに、後続のフィードフォワードネットワーク（FFN）を実行するか、軽量な補正器で代替するかを判断する手法である。
 
 - **2025-03 · [Position-Aware Depth Decay Decoding (D³): Boosting Large Language Model Inference Efficiency](2025-2503.08524-position-aware-depth-decay-decoding-boosting-large-language-model-inference-effi.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
+  実装：✓ ・ リポジトリ内被引用：1  
   位置考慮型深さ減衰復号（Position-Aware 深度減衰 デコード; D³）は、大規模言語モデルの自己回帰生成で、出力トークンの位置に応じて実行するTransformer層数を減らす方式である。
 
 ### 3年前（2023-11〜2024-10）

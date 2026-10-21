@@ -375,16 +375,16 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   OpenSHMEM通信をTritonへ統合し、計算・通信・メモリアクセスをPythonから細粒度に重ね合わせ、8〜64 GPUで分散カーネルを高速化するコンパイラ拡張。
 
 - **2025-09 · [Towards Robust Agentic CUDA Kernel Benchmarking, Verification, and Optimization](2025-2509.14279-towards-robust-agentic-cuda-kernel-benchmarking-verification-and-optimization.md)**  
-  実装：[✓](https://github.com/SakanaAI/robust-kbench) ・ リポジトリ内被引用：8  
+  実装：[✓](https://github.com/SakanaAI/robust-kbench) ・ リポジトリ内被引用：9  
   固定入力などを悪用した「高速だが一般化しないCUDA」を弾くrobust-kbenchと、翻訳・LLM検証・進化的最適化を統合したエージェントを提案し、KernelBenchの見かけの平均3.13倍高速化が堅牢化後1.49倍へ下がることを示す。
+
+- **2025-03 · [TileLink: Generating Efficient Compute-Communication Overlapping Kernels using Tile-Centric Primitives](2025-2503.20313-tilelink-generating-efficient-compute-communication-overlapping-kernels-using-tile-centric-primitives.md)**  
+  実装：[✓](https://github.com/ByteDance-Seed/Triton-distributed) ・ リポジトリ内被引用：9  
+  タイル中心プリミティブから計算・通信融合カーネルを生成し、8×H800で非重畳比1.17〜20.76倍、8モデルのエンドツーエンドでPyTorch比平均1.32倍を達成する。
 
 - **2025-06 · [FlashMoE: Fast Distributed MoE in a Single Kernel](2025-2506.04667-flashmoe-fast-distributed-moe-in-a-single-kernel.md)**  
   実装：[✓](https://github.com/osayamenja/FlashMoE) ・ リポジトリ内被引用：8  
   分散MoE全体を単一の常駐GPUカーネルへ融合し、装置起点通信とタイル単位スケジューリングでCPU起動・同期待ちを除き、8基H100で最大6.4倍の遅延改善と5.7倍のスループットを示す。
-
-- **2025-03 · [TileLink: Generating Efficient Compute-Communication Overlapping Kernels using Tile-Centric Primitives](2025-2503.20313-tilelink-generating-efficient-compute-communication-overlapping-kernels-using-tile-centric-primitives.md)**  
-  実装：[✓](https://github.com/ByteDance-Seed/Triton-distributed) ・ リポジトリ内被引用：8  
-  タイル中心プリミティブから計算・通信融合カーネルを生成し、8×H800で非重畳比1.17〜20.76倍、8モデルのエンドツーエンドでPyTorch比平均1.32倍を達成する。
 
 - **2025-09 · [Astra: A Multi-Agent System for GPU Kernel Performance Optimization](2025-2509.07506-astra-a-multi-agent-system-for-gpu-kernel-performance-optimization.md)**  
   実装：[✓](https://github.com/Anjiang-Wei/Astra) ・ リポジトリ内被引用：6  
@@ -559,7 +559,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 ### 8年前（2018-11〜2019-10）
 
 - **2019-06 · [Triton: An Intermediate Language and Compiler for Tiled Neural Network Computations](2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md)**  
-  実装：[✓](https://github.com/triton-lang/triton) ・ リポジトリ内被引用：117  
+  実装：[✓](https://github.com/triton-lang/triton) ・ リポジトリ内被引用：118  
   深層学習の演算を高速なGPUカーネルにするには、数式を記述するだけでは足りない。入力配列のどの部分をまとめて読み出し、何回再利用し、どのスレッドに配り、いつ共有メモリへ移すかによって性能が大きく変わる。既存のcuBLASやcuDNNが対象とする標準演算なら高性能な実装を利用できるが、新しい行列演算や不規則な参照を伴う演算では、そのまま使えない。
 
 - **2019-10 · [Structured Pruning of Large Language Models](2019-1910.04732-structured-pruning-of-large-language-models.md)**  

@@ -98,6 +98,10 @@
   実装：✓ ・ リポジトリ内被引用：4  
   外部APIや検索を待つ拡張LLMで、停止・再開状態、出力長・外部呼出し時間、KV保持・退避・再計算費用を観測して要求順位と反復トークン予算を変え、先頭待ちとGPUメモリ圧迫を減らすスケジューラ。
 
+- **2026-04 · [fabric-lib: RDMA Point-to-Point Communication for LLM Systems](2026-2510.27656-fabric-lib-rdma-point-to-point-communication-for-llm-systems.md)**  
+  実装：[✓](https://github.com/perplexityai/pplx-garden) ・ リポジトリ内被引用：4  
+  fabric-libは、大規模言語モデルの分離推論、混合専門家モデルのトークン配送、非同期強化学習における重み更新を、異なるネットワーク機器でも共通の遠隔直接メモリアクセス（Remote Direct メモリ Access、RDMA）操作で実行する通信基盤である。
+
 - **2026-02 · [Revealing the Challenges of Attention-FFN Disaggregation for Modern MoE Models and Hardware Systems](2026-2602.09721-revealing-the-challenges-of-attention-ffn-disaggregation-for-modern-moe-.md)**  
   実装：✓ ・ リポジトリ内被引用：4  
   注意計算と専門家FFNを別のGPU群へ配置すると、計算とメモリの資源配分を独立に調整できる。しかしトークンの往復通信が新しい上限を作り、専門家側のGPUを増やすほど全体の演算利用率が下がる場合がある。本研究はその成立条件を数式と実測に基づいて整理する。
@@ -129,10 +133,6 @@
 - **2026-04 · [PipeLive: Efficient Live In-place Pipeline Parallelism Reconfiguration for Dynamic LLM Serving](2026-2604.12171-pipelive.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
   実行中のKVキャッシュ容量とレイヤー配置を動的に組み替え、差分KV同期で停止を約10msに抑えながら、ワークロードに応じたパイプライン並列構成へ切り替えるLLMサービング方式。
-
-- **2026-04 · [fabric-lib: RDMA Point-to-Point Communication for LLM Systems](2026-2510.27656-fabric-lib-rdma-point-to-point-communication-for-llm-systems.md)**  
-  実装：[✓](https://github.com/perplexityai/pplx-garden) ・ リポジトリ内被引用：3  
-  fabric-libは、大規模言語モデルの分離推論、混合専門家モデルのトークン配送、非同期強化学習における重み更新を、異なるネットワーク機器でも共通の遠隔直接メモリアクセス（Remote Direct メモリ Access、RDMA）操作で実行する通信基盤である。
 
 - **2026-04 · [Cascadia: An Efficient Cascade Serving System for Large Language Models](2025-2506.04203-cascadia-cascade-serving-routing-deployment.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
@@ -1194,6 +1194,10 @@
   実装：[✓](https://github.com/eddiegaoo/Apt-Serve) ・ リポジトリ内被引用：7  
   KVキャッシュと半分の容量で済む隠れ状態キャッシュを反復ごとに切り替え、待機時間・メモリ量に基づく近似比2の適応バッチ編成でTTFTのSLO崩壊を抑え、有効スループットをvLLM比最大8.8倍へ高める。
 
+- **2025-03 · [Seesaw: High-throughput LLM Inference via Model Re-sharding](2025-2503.06433-seesaw-high-throughput-llm-inference-via-model-re-sharding.md)**  
+  実装：✓ ・ リポジトリ内被引用：7  
+  プリフィルとデコードでモデルの並列分割を動的に切り替え、CPU階層KVバッファと遷移最小化で再配置費用を償却し、vLLM比最大1.78倍・平均1.36倍のスループットを達成する。
+
 - **2025-10 · [FlexPipe: Adapting Dynamic LLM Serving Through Inflight Pipeline Refactoring in Fragmented Serverless Clusters](2025-2510.11938-flexpipe-adapting-dynamic-llm-serving-through-inflight-pipeline-refactoring-in-fragmented-serverless-clusters.md)**  
   実装：✓ ・ リポジトリ内被引用：6  
   断片化したserverless GPU上でパイプライン 段を実行中に細分化・統合し、KV整合性を保ちながら負荷変動へ追随するFlexPipe。
@@ -1209,10 +1213,6 @@
 - **2025-04 · [SLO-Aware Scheduling for Large Language Model Inferences](2025-2504.14966-slo-aware-scheduling-for-large-language-model-inferences.md)**  
   実装：✓ ・ リポジトリ内被引用：6  
   チャットとコード生成のように異なるサービス品質目標（Service Level Objective; SLO）を持つ要求を一つの先着順で処理せず、入力長・予想出力長・要求ごとのSLOから「どの順序・どのバッチなら何件が期限内に終わるか」を推定し、焼きなまし法（シミュレーション Annealing）で優先順を探索する。
-
-- **2025-03 · [Seesaw: High-throughput LLM Inference via Model Re-sharding](2025-2503.06433-seesaw-high-throughput-llm-inference-via-model-re-sharding.md)**  
-  実装：✓ ・ リポジトリ内被引用：6  
-  プリフィルとデコードでモデルの並列分割を動的に切り替え、CPU階層KVバッファと遷移最小化で再配置費用を償却し、vLLM比最大1.78倍・平均1.36倍のスループットを達成する。
 
 - **2025-09 · [Amoeba: Runtime Tensor Parallel Transformation for LLM Inference Services](2025-2509.19729-gyges-cross-instance-parallelism-transformation.md)**  
   実装：✓ ・ リポジトリ内被引用：5  
@@ -1425,7 +1425,7 @@
   仮想 トークン Counter（VTC）は、要求数ではなくクライアントごとに実際に処理した入力・出力トークンをサービス量として数え、累積サービス量が少ないクライアントから新しい要求を実行バッチへ入れる。空きGPUを意図的に遊ばせず、公平性と高い利用率を両立することを狙う。
 
 - **2024-08 · [NanoFlow: Towards Optimal Large Language Model Serving Throughput](2024-2408.12757-nanoflow.md)**  
-  実装：[✓](https://github.com/efeslab/Nanoflow) ・ リポジトリ内被引用：66  
+  実装：[✓](https://github.com/efeslab/Nanoflow) ・ リポジトリ内被引用：67  
   異種GPU資源を使う演算をナノバッチ化して同一装置内で重畳し、自動探索で高スループットな推論パイプラインを構成する。
 
 - **2024-05 · [Preble: Efficient Distributed Prompt Scheduling for LLM Serving](2024-2407.00023-preble-efficient-distributed-prompt-scheduling.md)**  
@@ -1575,7 +1575,7 @@
 ### 4年前（2022-11〜2023-10）
 
 - **2023-09 · [Efficient Memory Management for Large Language Model Serving with PagedAttention](2023-2309.06180-vllm-pagedattention-efficient-memory-management.md)**  
-  実装：[✓](https://github.com/vllm-project/vllm) ・ リポジトリ内被引用：1205  
+  実装：[✓](https://github.com/vllm-project/vllm) ・ リポジトリ内被引用：1206  
   vLLMは、要求ごとに大きな連続領域を予約していたKVキャッシュを固定長ブロックへ分解し、論理的な並びとGPU上の物理配置を分離する。必要なブロックだけ動的に割り当て、同じ接頭辞のKVを共有することで、限られたGPUメモリへより多くの要求を同時に載せる。
 
 - **2023-08 · [SARATHI: Efficient LLM Inference by Piggybacking Decodes with Chunked Prefills](2023-2308.16369-sarathi.md)**  

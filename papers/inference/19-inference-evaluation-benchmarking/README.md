@@ -159,7 +159,7 @@
   4か月・12モデル・35.4億要求の本番記録から、到着率、バースト、入力・出力長、画像・音声・動画、推論過程の分布を分析する。顧客ごとの比較的安定した特性と時間変動する到着率を合成し、現実的な推論ベンチマークを作る。
 
 - **2025-02 · [KernelBench: Can LLMs Write Efficient GPU Kernels?](2025-2502.10517-kernelbench-can-llms-write-efficient-gpu-kernels.md)**  
-  実装：[✓](https://github.com/ScalingIntelligence/KernelBench) ・ リポジトリ内被引用：15  
+  実装：[✓](https://github.com/ScalingIntelligence/KernelBench) ・ リポジトリ内被引用：16  
   一般的なプログラム合成では単体試験に通ることを重視するが、GPUカーネルの実用性は入力形状、メモリ階層、並列実行、命令セットに左右される。正しくても遅い実装を成功とみなさないことが設計の中心にある。例えばDeepSeek-R1の fast1 は単一演算12%、複合演算36%、モデル全体2%である。
 
 - **2025-03 · [Stop Overthinking: A Survey on Efficient Reasoning for Large Language Models](2025-2503.16419-stop-overthinking-a-survey-on-efficient-reasoning-for-large-language-mod.md)**  
