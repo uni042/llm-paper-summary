@@ -24,7 +24,7 @@
 - [10-kv-cache-offload-recomputation](../10-kv-cache-offload-recomputation/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（61本）
+## 自動生成の論文一覧（62本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -196,6 +196,10 @@
 - **2026-04 · [MARS: Efficient, Adaptive Co-Scheduling for Heterogeneous Agentic Systems](2026-2604.26963-mars-efficient-adaptive-co-scheduling-for-heterogeneous-agentic-systems.md)**  
   実装：[✓](https://github.com/Afterglow231/MARS_preview) ・ リポジトリ内被引用：0  
   MARSは、複数の大規模言語モデル（LLM）エージェントが同じホストで稼働する際、モデル推論のGPU時間だけでなく、ツール呼び出しで消費されるCPU時間と鍵・値キャッシュ（KV キャッシュ）の保持費用まで同時に制御するサービング方式である。
+
+- **2026-04 · [Hive: A Multi-Agent Infrastructure for Algorithm- and Task-Level Scaling](2026-2604.17353-hive-a-multi-agent-infrastructure-for-algorithm-and-task-level-scaling.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  一方、複数エージェントが交互に動く場合は、頻繁に再開する重要エージェントの鍵・値キャッシュ（KVキャッシュ）を残し、まれに呼ばれるエージェントのキャッシュを先に退避する方が有利なことがある。
 
 - **2026-04 · [EvolveRouter: Co-Evolving Routing and Prompt for Multi-Agent Question Answering](2026-2604.05149-evolverouter-co-evolving-routing-and-prompt-for-multi-agent-question-ans.md)**  
   実装：[✓](https://github.com/J-Huang01/EvolveRouter) ・ リポジトリ内被引用：0  
