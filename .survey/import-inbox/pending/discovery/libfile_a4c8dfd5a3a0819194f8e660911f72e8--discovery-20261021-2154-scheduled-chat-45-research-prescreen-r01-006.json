@@ -1,0 +1,27 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-45",
+  "scheduled_slot": "45",
+  "reference_main_sha": "5ef88cdeb191ff76377eae47f8b0dc28f5171858",
+  "record_count": 1,
+  "run_key": "20261021-2154-scheduled-chat-45/r01/research-prescreen/006",
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2204.13767",
+      "identity_tokens": [
+        "arxiv:2204.13767"
+      ],
+      "title": "Triformer: Triangular, Variable-Specific Attentions for Long Sequence Multivariate Time Series Forecasting--Full Version",
+      "reason": "一次要旨の提案は多変量時系列予測のための三角形階層パッチ注意と変数別パラメータであり、線形計算量と予測精度を時系列データ4集合で評価する。注意演算を軽量化する点は一般に関連するが、LLMトークン生成・配信・KVキャッシュ・学習基盤への適用や性能評価が主要対象ではないため、現行のLLM推論サーベイから除外する。",
+      "source_url": "https://arxiv.org/abs/2204.13767",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-21T21:54:52+09:00",
+      "last_checked_at": "2026-10-21T21:54:52+09:00",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance",
+      "worklist_rank": 6
+    }
+  ]
+}
