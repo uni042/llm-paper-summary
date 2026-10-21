@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-10-21T10:51:04.879430+00:00",
+  "generated_at": "2026-10-21T15:48:39.361535+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 6,
+  "count": 5,
   "worker_counts": {
-    "scheduled-chat-00": 2,
+    "scheduled-chat-00": 1,
     "scheduled-chat-30": 2,
     "scheduled-chat-45": 2
   },
@@ -117,26 +117,6 @@
         "method_chars": 1362,
         "evaluation_chars": 516,
         "limitation_chars": 0
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2510.16040-kelle-co-design-kv-caching-and-edram-for-efficient-llm-serving-in-edge-c.md",
-      "canonical_id": "arXiv:2510.16040",
-      "title": "Kelle: Co-design KV Caching and eDRAM for Efficient LLM Serving in Edge Computing",
-      "file_bytes": 19155,
-      "source_sha256": "600867e3ddef0f41a6b887113725f72294d601359a14881b17e87c2cd2f7ebcc",
-      "source_git_blob_sha": "2e9079269531383ac000674fdbe539a256ab8719",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.91832,
-      "quality_metrics": {
-        "body_chars": 4443,
-        "method_chars": 1577,
-        "evaluation_chars": 1186,
-        "limitation_chars": 382
       },
       "mechanical_failures": [],
       "warnings": []
