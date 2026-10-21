@@ -1,13 +1,12 @@
 {
   "schema_version": 1,
   "artifact_type": "research",
-  "status": "imported",
+  "status": "blocked_quality",
   "source_sha256": "7a829ad9b15bbe4ee5b5e16119f63e6db71a77c633cb41a9d3be27c3be69b82a",
-  "canonical_id": "arXiv:2607.01444",
-  "paper_path": "papers/inference/02-adaptive-expert-computation-compression/2026-2607.01444-on-the-utility-and-factual-reliability-of-pruned-mixture-of-experts-mode.md",
-  "lineage": "02-adaptive-expert-computation-compression",
-  "audit_status": "WARN",
+  "normalized_source_sha256": null,
   "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_621704f3ab908191a74fcc31c2850adb--2026-2607.01444-pruned-moe-factual-reliability-repair-20261020-1430-scheduled-chat-30-r01.md",
+  "canonical_id": "arXiv:2607.01444",
   "worker_completed_at": "2026-10-20T14:45:00+09:00",
   "worker_run_key": "20261020-1430-scheduled-chat-30/r01",
   "quality_metrics": {
@@ -22,5 +21,8 @@
       "限界説明量 0 < 推奨 120"
     ]
   },
-  "processed_at": "2026-10-20T15:10:52+00:00"
+  "failures": [
+    "長文定型文の再利用を検出: papers/inference/02-adaptive-expert-computation-compression/2026-2607.01444-on-the-utility-and-factual-reliability-of-pruned-mixture-of-experts-mode.md と 24 段落 / 5148文字 (100.0%) が完全一致"
+  ],
+  "processed_at": "2026-10-21T18:21:44+00:00"
 }
