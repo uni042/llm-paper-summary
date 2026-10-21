@@ -1,7 +1,41 @@
 {
   "schema_version": 1,
-  "attempt_id": "library-import-20261022-maintenance-20261017",
+  "attempt_id": "library-import-20261022-maintenance-20261019",
   "kind": "framework_llm_update",
-  "artifacts": [],
-  "summary": "No-op after latest-main comparison of Library maintenance 2026-10-17: Muse Spark Open, StepFun Step5, Ollama v0.40.6-rc0, llama.cpp b11695/b11699/b11700, and ExLlamaV3 v1.6.3 are already recorded in their release pages."
+  "artifacts": [
+    {
+      "path": "framework-updates/inference-engines/vllm/README.md",
+      "expected_blob_sha": "5a5a75fd379687d4915f99ca16de863d431db593",
+      "edits": [
+        {
+          "op": "insert_before_once",
+          "anchor": "## 2026-10-05",
+          "text": "## 2026-10-18 — v0.32.0（正式版）\n\n- `/v1/systemone` に `choice` / `noul` / `score` を返す構造化判定APIを追加。モデルカードに基づく汎用HF tool callと推論parserにも対応。\n- NVFP4 KV cacheの対象をSM8x / SM90 / SM12xへ拡張。GLM-5.xではSM100上の `--kv-cache-dtype auto` がFP8 KVを選択し、公式PRはGPU当たりKV容量を半分にする代わりに出力処理量+2.3〜5.5%、TTFT +7〜11%を報告。これはGLM-5.x / SM100条件の値で、他モデルへ一般化しない。ROCmには `ultraquant_4bit` KVを追加。\n- Model Runner V2へGPU上の可変長n-gram speculative decoding、Elastic EP、MLA向けpipeline + prefill-context parallel、DFlash / DSpark draft metadataのCUDA Graph内処理を追加。HiSparseのGPU context residencyは高並行性条件で最大58%と報告される。\n- `vllm download-kernels` と `vllm preload --preload-autotune` によるkernel / autotune準備、共有memoryのmultimodal tensor領域の既定有効化を追加。Qwen3.8-Flash-Next等の倍率は個別モデル・処理段階の結果であり、全体生成速度を表さない。\n- **互換性変更**: Python 3.11以上（3.10非対応）、`transformers>=5.16.1,<5.20.0`、`tokenizers>=0.23.2`。CORSの既定許可元はなしとなったため、browser clientは `--allowed-origins` を設定する。cascade attention等を削除し、CUDA source buildにはGCC 13が必要。Windows 11 / RTX 4070 SUPERでの動作は未検証。\n- 出典: [v0.32.0 release](https://github.com/vllm-project/vllm/releases/tag/v0.32.0), [PR #60140](https://github.com/vllm-project/vllm/pull/60140), [PR #40704](https://github.com/vllm-project/vllm/pull/40704), [PR #61009](https://github.com/vllm-project/vllm/pull/61009)\n\n"
+        }
+      ]
+    },
+    {
+      "path": "framework-updates/inference-engines/ollama/README.md",
+      "expected_blob_sha": "7344704b657d58c15e407fd4ce9ccdd81e7f41ad",
+      "edits": [
+        {
+          "op": "insert_before_once",
+          "anchor": "### 2026-10-16 — Ollama v0.40.6（正式版）",
+          "text": "### 2026-10-18 — Ollama v0.40.7-rc0（公開候補版）\n\n- Responses APIで、非thinking modelでもrequestの `effort` parameterを受け付ける変更、内蔵llama-serverによるdraft speculative decoding方式の自動判定、MLX backendのPPLX Decider v1.2対応を追加。\n- RCのため安定版と区別する。draft方式の自動判定は一律の高速化を示さず、PPLX対応はApple Silicon向けでWindows CUDAの改善ではない。\n- 出典: [v0.40.7-rc0 release](https://github.com/ollama/ollama/releases/tag/v0.40.7-rc0), [PR #19064](https://github.com/ollama/ollama/pull/19064), [PR #19072](https://github.com/ollama/ollama/pull/19072)\n\n"
+        }
+      ]
+    },
+    {
+      "path": "framework-updates/inference-engines/llama-cpp/README.md",
+      "expected_blob_sha": "ba4ed43f6ac0972a11a29d6b7b858078289f1d7f",
+      "edits": [
+        {
+          "op": "insert_before_once",
+          "anchor": "### 2026-10-17 — b11709 / b11710 / b11713 / b11714 / b11715（開発版）",
+          "text": "### 2026-10-18 — b11717〜b11721（開発版）\n\n- **b11717**: Qualcomm HexagonでHadamard演算とQ1_0 / Q2_0 `GET_ROWS` を追加。Hexagon向けの対応。\n- **b11718**: Intel ESIMDのFFN経路を再有効化し、Q8_0融合経路を拡張。Intel向け。\n- **b11719**: CUDA Flash Attentionの境界チェック経路を修正。公開資料に速度倍率なし。\n- **b11720**: 非連続tensorの `SUM` をCPU / CUDA / Vulkan / WebGPUでサポート。演算対応の追加で、性能計測結果ではない。\n- **b11721**: Qwen4Exp向けCUDAで `SCALE → SIGMOID → SCALE → hc_post` を4 kernelから1 kernelへ融合。中間転送・起動費を減らす設計だが、端から端の生成速度への効果は未公表。\n- 出典: [b11717](https://github.com/ggml-org/llama.cpp/releases/tag/b11717), [b11718](https://github.com/ggml-org/llama.cpp/releases/tag/b11718), [b11719](https://github.com/ggml-org/llama.cpp/releases/tag/b11719), [b11720](https://github.com/ggml-org/llama.cpp/releases/tag/b11720), [b11721](https://github.com/ggml-org/llama.cpp/releases/tag/b11721), [PR #30602](https://github.com/ggml-org/llama.cpp/pull/30602)\n\n"
+        }
+      ]
+    }
+  ],
+  "summary": "Applied Library maintenance dated 2026-10-19: vLLM v0.32.0, Ollama v0.40.7-rc0, and llama.cpp b11717–b11721, with release status, hardware/model limits, compatibility requirements, and primary-source links."
 }
