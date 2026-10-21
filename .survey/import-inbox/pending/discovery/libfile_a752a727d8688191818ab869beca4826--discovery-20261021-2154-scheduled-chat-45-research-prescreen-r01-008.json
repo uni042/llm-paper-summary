@@ -1,0 +1,27 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-45",
+  "scheduled_slot": "45",
+  "reference_main_sha": "5ef88cdeb191ff76377eae47f8b0dc28f5171858",
+  "record_count": 1,
+  "run_key": "20261021-2154-scheduled-chat-45/r01/research-prescreen/008",
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2410.03051",
+      "identity_tokens": [
+        "arxiv:2410.03051"
+      ],
+      "title": "AuroraCap: Efficient, Performant Video Detailed Captioning and a New Benchmark",
+      "reason": "一次要旨では長い動画系列の視覚トークンを統合して入力トークン数を減らす方式を採用しており、マルチモーダルLLMの入力圧縮という推論最適化に接点がある。一方、中心貢献は動画詳細キャプションモデルとVDC評価基盤で、定量結果はキャプション品質（Flickr30k CIDEr 88.9等）に重点があり、汎用LLM配信のトークン生成速度・KVメモリ・サービング負荷改善を直接示すものではないためborderlineとする。",
+      "source_url": "https://arxiv.org/abs/2410.03051",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-21T21:54:52+09:00",
+      "last_checked_at": "2026-10-21T21:54:52+09:00",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance",
+      "worklist_rank": 8
+    }
+  ]
+}
