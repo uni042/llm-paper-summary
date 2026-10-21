@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-10-21T21:54:44.184518+00:00",
+  "generated_at": "2026-10-21T22:51:19.166584+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 5,
+  "count": 6,
   "worker_counts": {
-    "scheduled-chat-00": 1,
+    "scheduled-chat-00": 2,
     "scheduled-chat-30": 2,
     "scheduled-chat-45": 2
   },
@@ -76,6 +76,26 @@
         "body_chars": 2413,
         "method_chars": 1072,
         "evaluation_chars": 505,
+        "limitation_chars": 0
+      },
+      "mechanical_failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/99-other-inference-systems/2026-2605.04263-parallel-prefix-verification-for-speculative-generation.md",
+      "canonical_id": "arXiv:2605.04263",
+      "title": "Parallel Prefix Verification for Speculative Generation",
+      "file_bytes": 15159,
+      "source_sha256": "fd27c415ded5cfb4012cc2218e951b84ae014bb5fe7a16b0e3f0da725bc58a42",
+      "source_git_blob_sha": "b06b9cb28bfa28d93a48e68f988823063f6dc12d",
+      "assigned_worker": "scheduled-chat-00",
+      "semantic_status": "pending",
+      "mechanical_status": "PASS",
+      "japanese_ratio": 0.950842,
+      "quality_metrics": {
+        "body_chars": 4365,
+        "method_chars": 1682,
+        "evaluation_chars": 756,
         "limitation_chars": 0
       },
       "mechanical_failures": [],
