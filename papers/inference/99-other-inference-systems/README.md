@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（892本）
+## 自動生成の論文一覧（893本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -1115,6 +1115,10 @@
 - **2026-06 · [Above the Inner Loop: Exceeding Accelerate at LLM Prefill GEMM on the M1 AMX](2026-2606.25426-above-the-inner-loop-exceeding-accelerate-at-llm-prefill-gemm-on-the-m1-amx.md)**  
   実装：[✓](https://github.com/dbhan08/inferc) ・ リポジトリ内被引用：0  
   M1 AMXの内側ループがロード発行律速であることを切り分け、細粒度パネルで第2 AMXブロックを使い、重み事前パッキングを併用してllama.cppの128トークンfp32プリフィルを1.44倍高速化する。
+
+- **2026-05 · [When Less is Enough: Efficient Inference via Collaborative Reasoning](2026-2605.01111-when-less-is-enough-efficient-inference-via-collaborative-reasoning.md)**  
+  実装：[✓](https://github.com/fairytale9/llm_bottleneck) ・ リポジトリ内被引用：0  
+  複雑な数学や科学の問題を解く推論モデルは、最終回答に到達する前に長い思考の連鎖を生成する。DUET（Dual-モデル Efficient Two-stage inference）は、高性能なモデルが「小モデルに渡すのに十分な推論信号」を生成し、軽量モデルが入力とその信号から最終回答を作る方式である。
 
 - **2026-05 · [When Are Experts Misrouted? Counterfactual Routing Analysis in Mixture-of-Experts Language Models](2026-2605.07260-when-are-experts-misrouted-counterfactual-routing-analysis-in-mixture-of.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
