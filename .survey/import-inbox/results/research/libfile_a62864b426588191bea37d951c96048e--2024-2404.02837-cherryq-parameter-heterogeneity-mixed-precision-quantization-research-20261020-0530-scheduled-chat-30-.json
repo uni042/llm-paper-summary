@@ -1,13 +1,12 @@
 {
   "schema_version": 1,
   "artifact_type": "research",
-  "status": "imported",
+  "status": "blocked_quality",
   "source_sha256": "ecb4d680eaa74939e7a4aff8213901388f4c730e26cced1ab7fd3c7eee83a8f1",
-  "canonical_id": "arXiv:2404.02837",
-  "paper_path": "papers/inference/99-other-inference-systems/2024-2404.02837-cherry-on-top-parameter-heterogeneity-and-quantization-in-large-language.md",
-  "lineage": "99-other-inference-systems",
-  "audit_status": "PASS",
+  "normalized_source_sha256": null,
   "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_a62864b426588191bea37d951c96048e--2024-2404.02837-cherryq-parameter-heterogeneity-mixed-precision-quantization-research-20261020-0530-scheduled-chat-30-r01.md",
+  "canonical_id": "arXiv:2404.02837",
   "worker_completed_at": "2026-10-20T05:30:45+09:00",
   "worker_run_key": "20261020-0530-scheduled-chat-30/r01",
   "quality_metrics": {
@@ -20,5 +19,8 @@
     "limitation_chars": 615,
     "insufficiency_flags": []
   },
-  "processed_at": "2026-10-20T16:11:19+00:00"
+  "failures": [
+    "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2024-2404.02837-cherry-on-top-parameter-heterogeneity-and-quantization-in-large-language.md と 14 段落 / 3126文字 (100.0%) が完全一致"
+  ],
+  "processed_at": "2026-10-21T21:16:36+00:00"
 }

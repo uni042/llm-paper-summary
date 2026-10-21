@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（930本）
+## 自動生成の論文一覧（931本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -1395,6 +1395,10 @@
 - **2026-04 · [Unlocking the Edge deployment and ondevice acceleration of multi-LoRA enabled one-for-all foundational LLM](2026-2604.18655-ondevice-multilora-runtime.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   実行時LoRA入力・NPU向け最適化・並行生成・自己投機的復号を統合し、Galaxy S24/S25で多用途LLMを単一グラフ展開する。
+
+- **2026-04 · [Two-dimensional early exit optimisation of LLM inference](2026-2604.18592-two-dimensional-early-exit-optimisation-of-llm-inference.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  本論文は、大規模言語モデルを文書分類器として使う場合に、何層まで計算するかと入力文書の何文目まで読むかを同時に制御する二次元早期終了（two-dimensional early exit）を提案する。
 
 - **2026-04 · [Thinking Without Words: Efficient Latent Reasoning with Abstract Chain-of-Thought](2026-2604.22709-thinking-without-words-efficient-latent-reasoning-with-abstract-chain-of.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

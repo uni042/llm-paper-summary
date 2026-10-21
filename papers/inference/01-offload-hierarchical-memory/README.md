@@ -3,7 +3,7 @@
 GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE expert**をCPU memory、peer GPU HBM、SSD / Flashなどへ置き、必要な部分だけGPUへ移す、CPU/GPUで分担して計算する、storage側で計算する研究をまとめる。KV cache固有のoffloadは [KV Cache Offload / Recomputation](../10-kv-cache-offload-recomputation/) に分離する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（119本）
+## 自動生成の論文一覧（120本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -255,6 +255,10 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
 - **2026-06 · [ASAP: A Disaggregated and Asynchronous Inference System for MoE Prefill](2026-2606.22541-asap-disaggregated-asynchronous-moe-prefill.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   注意機構のデータ並列群とMoE間の大域同期を非同期共有バッファ通信で外し、ばらつくプリフィル要求を独立進行させてSLO準拠スループットを最大90%改善する。
+
+- **2026-05 · [VisMMOE: Exploiting Visual-Expert Affinity for Efficient Visual-Language MoE Offloading](2026-2605.05899-vismmoe-exploiting-visual-expert-affinity-for-efficient-visual-language-.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  GPUへ置けない専門家をCPUメモリから要求時に転送する方式は、視覚トークンの数と専門家の起動の散らばりにより、転送が計算より長くなる。単一A100 40GB上のQwen3-VL-30B-A3Bでは、Accelerateを基準とする復号速度が最大2.68倍、KTransformersを基準とする速度が1.61倍になったと報告する。
 
 - **2026-05 · [Sieve: Dynamic Expert-Aware PIM Acceleration for Evolving Mixture-of-Experts Models](2026-2605.11277-sieve-dynamic-expert-aware-pim.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
