@@ -35,10 +35,15 @@
   "selection_reason": "This inference-time selective mentorship method limits large-model contribution and generated-token cost while preserving a small model as the primary generator. Full-text review found no latency measurement, so the efficiency link is token/cost reduction rather than a demonstrated speedup. Body review: The small model remains the generator and a larger mentor is used selectively; the paper reports an 18.4% average mentor-token share in final responses. The reviewed text did not provide an end-to-end latency measurement, so a speedup is not established.",
   "semantic_scholar_id": "0ac8fa7ff5cb97bd0d281989a9db3821ab793166",
   "source_url": "https://arxiv.org/abs/2602.05307",
-  "status": "ready",
+  "status": "superseded",
   "title": "MentorCollab: Large-to-Small Inference-Time Mentorship for Concise Reasoning in Language Models",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-10-21T20:32:44+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2026-2602.05307-mentorcollab-large-to-small-inference-time-mentorship-for-concise-reason.md",
+  "represented_canonical_id": "arXiv:2602.05307",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

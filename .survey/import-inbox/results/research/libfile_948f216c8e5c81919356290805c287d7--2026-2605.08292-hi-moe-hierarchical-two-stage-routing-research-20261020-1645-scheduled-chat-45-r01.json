@@ -1,13 +1,12 @@
 {
   "schema_version": 1,
   "artifact_type": "research",
-  "status": "imported",
+  "status": "blocked_quality",
   "source_sha256": "dcd1edd6be3465ebab8846485e7a6aa7fc1e577056603f2099962db8358c7a3a",
-  "canonical_id": "arXiv:2605.08292",
-  "paper_path": "papers/inference/99-other-inference-systems/2026-2605.08292-hierarchical-mixture-of-experts-with-two-stage-optimization.md",
-  "lineage": "99-other-inference-systems",
-  "audit_status": "PASS",
+  "normalized_source_sha256": null,
   "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_948f216c8e5c81919356290805c287d7--2026-2605.08292-hi-moe-hierarchical-two-stage-routing-research-20261020-1645-scheduled-chat-45-r01.md",
+  "canonical_id": "arXiv:2605.08292",
   "worker_completed_at": "2026-10-20T17:00:00+09:00",
   "worker_run_key": "20261020-1645-scheduled-chat-45/r01",
   "quality_metrics": {
@@ -20,5 +19,8 @@
     "limitation_chars": 937,
     "insufficiency_flags": []
   },
-  "processed_at": "2026-10-20T15:42:32+00:00"
+  "failures": [
+    "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2026-2605.08292-hierarchical-mixture-of-experts-with-two-stage-optimization.md と 24 段落 / 5245文字 (100.0%) が完全一致"
+  ],
+  "processed_at": "2026-10-21T20:30:10+00:00"
 }
