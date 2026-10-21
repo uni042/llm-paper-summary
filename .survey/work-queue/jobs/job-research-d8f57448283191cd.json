@@ -35,10 +35,15 @@
   "selection_reason": "MixedDimKV allocates KV dimensions per token and head; the abstract reports comparable LongBench performance at 6.25% cache and 100% needle accuracy at 50K context with 0.26% cache.",
   "semantic_scholar_id": "b4f01a4a2279884cf5adfc41a4c2d39b0e6065d9",
   "source_url": "https://arxiv.org/abs/2603.20616",
-  "status": "ready",
+  "status": "superseded",
   "title": "Beyond Token Eviction: Mixed-Dimension Budget Allocation for Efficient KV Cache Compression",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-10-21T20:57:37+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2603.20616-beyond-token-eviction-mixed-dimension-budget-allocation-for-efficient-kv.md",
+  "represented_canonical_id": "arXiv:2603.20616",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

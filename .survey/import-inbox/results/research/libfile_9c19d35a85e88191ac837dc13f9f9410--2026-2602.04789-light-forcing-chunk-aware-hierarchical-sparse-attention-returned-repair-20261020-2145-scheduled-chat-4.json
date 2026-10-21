@@ -1,13 +1,12 @@
 {
   "schema_version": 1,
   "artifact_type": "research",
-  "status": "imported",
+  "status": "blocked_quality",
   "source_sha256": "a047dfb790c10071d8a36dd8a375bc46f0b7f2df728717c1bfdf5ec6aff1dce8",
-  "canonical_id": "arXiv:2602.04789",
-  "paper_path": "papers/inference/13-sparse-attention/2026-2602.04789-light-forcing-accelerating-autoregressive-video-diffusion-via-sparse-att.md",
-  "lineage": "13-sparse-attention",
-  "audit_status": "PASS",
+  "normalized_source_sha256": null,
   "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_9c19d35a85e88191ac837dc13f9f9410--2026-2602.04789-light-forcing-chunk-aware-hierarchical-sparse-attention-returned-repair-20261020-2145-scheduled-chat-45-r01.md",
+  "canonical_id": "arXiv:2602.04789",
   "worker_completed_at": "2026-10-20T21:48:00+09:00",
   "worker_run_key": "20261020-2145-scheduled-chat-45/r01",
   "quality_metrics": {
@@ -20,5 +19,8 @@
     "limitation_chars": 677,
     "insufficiency_flags": []
   },
-  "processed_at": "2026-10-20T15:58:38+00:00"
+  "failures": [
+    "長文定型文の再利用を検出: papers/inference/13-sparse-attention/2026-2602.04789-light-forcing-accelerating-autoregressive-video-diffusion-via-sparse-att.md と 23 段落 / 5085文字 (100.0%) が完全一致"
+  ],
+  "processed_at": "2026-10-21T20:56:03+00:00"
 }

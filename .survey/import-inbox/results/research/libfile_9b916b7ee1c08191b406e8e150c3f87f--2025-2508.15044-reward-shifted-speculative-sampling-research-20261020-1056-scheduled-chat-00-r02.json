@@ -1,13 +1,12 @@
 {
   "schema_version": 1,
   "artifact_type": "research",
-  "status": "imported",
+  "status": "blocked_quality",
   "source_sha256": "0f3a0ed22e605e0b2d6a56312cc3839ec422327e399c458433c00bfba4906ba6",
-  "canonical_id": "arXiv:2508.15044",
-  "paper_path": "papers/inference/99-other-inference-systems/2025-2508.15044-reward-shifted-speculative-sampling-is-an-efficient-test-time-weak-to-st.md",
-  "lineage": "99-other-inference-systems",
-  "audit_status": "PASS",
+  "normalized_source_sha256": null,
   "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_9b916b7ee1c08191b406e8e150c3f87f--2025-2508.15044-reward-shifted-speculative-sampling-research-20261020-1056-scheduled-chat-00-r02.md",
+  "canonical_id": "arXiv:2508.15044",
   "worker_completed_at": "2026-10-20T11:09:32+09:00",
   "worker_run_key": "20261020-1056-scheduled-chat-00/r02",
   "quality_metrics": {
@@ -20,5 +19,8 @@
     "limitation_chars": 546,
     "insufficiency_flags": []
   },
-  "processed_at": "2026-10-20T15:57:48+00:00"
+  "failures": [
+    "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2025-2508.15044-reward-shifted-speculative-sampling-is-an-efficient-test-time-weak-to-st.md と 19 段落 / 4129文字 (100.0%) が完全一致"
+  ],
+  "processed_at": "2026-10-21T20:55:04+00:00"
 }
