@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-0dbe70b39b194fed-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2606.02994",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2606.02994",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2606.02994",
+      "arXiv:2606.02994"
+    ],
+    "reason": "成功したReActエージェント実行履歴から頻出の推論手順を抽出し、自然言語の説明を持つ型付き疑似ツールへ変換する研究。推論コスト低減には関係するが、主たる貢献はエージェントの推論方策・課題正答率であり、LLMサービング、GPU推論カーネル、KVキャッシュ、量子化、分散配置の実装や測定を主目的としない。したがって現行推論基盤サーベイの収録範囲では境界的関連とする。",
+    "first_checked_at": "2026-10-15T09:45:43+00:00",
+    "last_checked_at": "2026-10-21T16:46:46+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Inducing Reasoning Primitives from Agent Traces"
+  },
+  "processed_at": "2026-10-21T16:46:46+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-0dbe70b39b19",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

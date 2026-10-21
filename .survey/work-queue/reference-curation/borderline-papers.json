@@ -2,7 +2,7 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-21T15:27:54+00:00",
+  "updated_at": "2026-10-21T16:46:49+00:00",
   "record_count": 5287,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
@@ -71681,11 +71681,12 @@
       "classification": "borderline",
       "canonical_id": "arXiv:2605.27441",
       "identity_tokens": [
+        "DOI:10.48550/arxiv.2605.27441",
         "arXiv:2605.27441"
       ],
-      "reason": "一次要旨は産業用検索の複数のクエリ理解機能を一つの小型言語モデルによるスキーマ制約生成へ統合し、自動アノテーションと蒸留を行うQuery Illuminatorを提案する。限られたGPUと低遅延制約での運用費用削減は推論効率に接するが、主な技術貢献は検索タスクの統合・教師データ生成とモデル能力の改善であり、汎用LLM推論ランタイム自体の新しい最適化は要旨で確認できない。",
+      "reason": "求人検索・人材検索の問い合わせ理解を、複数段階のモデルから単一の小規模言語モデルによる構造化出力へ統合し、教師モデルQuery Illuminatorで訓練・評価する実運用研究。低遅延の推論配信とGPU制約、構造制約付き復号に接点はあるが、主たる新規性と評価は検索クエリ解釈の精度、運用保守、利用者エンゲージメントであり、汎用LLMサービングのスケジューラやGPUカーネルの新規提案ではないため境界的関連とする。",
       "first_checked_at": "2026-10-12T19:45:24+00:00",
-      "last_checked_at": "2026-10-12T19:45:24+00:00",
+      "last_checked_at": "2026-10-21T16:46:49+00:00",
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "A Unified Structured Query Understanding Framework for Industrial Semantic Search"
@@ -80063,9 +80064,9 @@
         "DOI:10.48550/arxiv.2606.02994",
         "arXiv:2606.02994"
       ],
-      "reason": "原著一次要旨では、成功したReActエージェントの推論軌跡から頻出の思考操作を抽出・統合し、自然言語の説明文を持つ型付き疑似ツールとして再利用する。試験時にはLLMが各疑似ツールを解釈して推論し、RuleArena NBA、MuSR、NatPlanなどで正答率を改善し、AWMより平均推論コストが低いと報告する。推論コストへの副次的言及はあるが、主要貢献はエージェントの問題解決能力・推論手順の再利用であり、サービング、GPUカーネル、キャッシュ、分散実行等のシステム機構の改善条件や直接的性能評価は要旨から確認できない。推論時効率との関連はあるためunrelatedと断定せずborderlineとする。",
+      "reason": "成功したReActエージェント実行履歴から頻出の推論手順を抽出し、自然言語の説明を持つ型付き疑似ツールへ変換する研究。推論コスト低減には関係するが、主たる貢献はエージェントの推論方策・課題正答率であり、LLMサービング、GPU推論カーネル、KVキャッシュ、量子化、分散配置の実装や測定を主目的としない。したがって現行推論基盤サーベイの収録範囲では境界的関連とする。",
       "first_checked_at": "2026-10-15T09:45:43+00:00",
-      "last_checked_at": "2026-10-15T09:45:43+00:00",
+      "last_checked_at": "2026-10-21T16:46:46+00:00",
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "Inducing Reasoning Primitives from Agent Traces"
@@ -81606,9 +81607,9 @@
       "identity_tokens": [
         "arXiv:2605.05278"
       ],
-      "reason": "一次論文の要旨ではMoEのルータを確率的な情報チャネルとみなし、入力と選択専門家の相互情報量I(X;T)および学習標本と選択モデルのI(S;W)を、MNIST画像分類と事前学習済みCNN専門家の有限集合で推定する。通信効率を設計目標に含むが、LLM推論の専門家並列通信・GPU実行・サービング遅延や実通信帯域は測定していない。MoEルーティング理論との接点はあるため境界的とする。",
+      "reason": "MoEルーティングを通信レート・相互情報量の観点から分析する理論はLLM推論資源設計に関連するが、本文第III〜VI節の実証対象はMNIST上の事前学習済みCNN 25モデルの有限候補バンクであり、LLMの専門家トークン配送、GPU間通信、KV、推論遅延、スループットの実機検証がない。現行LLM推論サーベイの主要収録対象か判断を保留する。",
       "first_checked_at": "2026-10-19T01:45:57+00:00",
-      "last_checked_at": "2026-10-20T13:06:09+00:00",
+      "last_checked_at": "2026-10-21T16:46:47+00:00",
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "Expert Routing for Communication-Efficient MoE via Finite Expert Banks"
