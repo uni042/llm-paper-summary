@@ -1,16 +1,16 @@
 {
   "schema_version": 1,
   "reference_audit_version": 1,
-  "checked_at": "2026-10-21T19:25:57+00:00",
+  "checked_at": "2026-10-21T19:42:46+00:00",
   "summary": {
-    "total": 2818,
-    "complete": 2818,
-    "incomplete": 0
+    "total": 2825,
+    "complete": 2823,
+    "incomplete": 2
   },
   "families": {
     "inference": {
-      "total": 2779,
-      "complete": 2779
+      "total": 2786,
+      "complete": 2784
     },
     "training": {
       "total": 25,
@@ -21,5 +21,16 @@
       "complete": 14
     }
   },
-  "incomplete": []
+  "incomplete": [
+    {
+      "path": "papers/inference/07-kv-cache-optimization-compression/2026-e905fcb3ff0a-multi-tier-dynamic-storage-of-kv-cache-for-llm-inference-under-resource-.md",
+      "canonical_id": "DOI:10.1007/s40747-025-02200-4",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/09-kernel-runtime-compilation/2026-2604.20021-continuous-semantic-caching-for-low-cost-llm-serving.md",
+      "canonical_id": "arXiv:2604.20021",
+      "reason": "missing structured reference audit metadata"
+    }
+  ]
 }

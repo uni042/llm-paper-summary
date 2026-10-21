@@ -31,16 +31,16 @@ MoEの専門家並列、テンソル並列との混成、all-to-all通信、専�
 
 ### 注目：直近12か月・リポジトリ内で被引用（2025-11〜2026-10）
 
+- **2025-11 · [GPU-Initiated Networking for NCCL](2025-2511.15076-gpu-initiated-networking-for-nccl.md)**  
+  実装：[✓](https://github.com/NVIDIA/nccl) ・ リポジトリ内被引用：6  
+  NCCL 2.28へGPUカーネルからRDMAを直接起動できるGINを追加し、直接GPU→NICとCPU代理を同一APIで切替。DeepEPのMoE通信をNVSHMEM相当の性能でNCCLへ統合する。
+
 - **2026-02 · [Step 3.5 Flash: Open Frontier-Level Intelligence with 11B Active Parameters](2026-2602.10604-step-3-5-flash-open-frontier-level-intelligence-with-11b-active-paramete.md)**  
   実装：[✓](https://github.com/stepfun-ai/Step-3.5-Flash) ・ リポジトリ内被引用：5  
   長文脈への対応では、512トークンの滑動窓注意（Sliding Window 注意機構、SWA）を3層、全注意を1層とする交互配置を使う。
 
-- **2025-11 · [GPU-Initiated Networking for NCCL](2025-2511.15076-gpu-initiated-networking-for-nccl.md)**  
-  実装：[✓](https://github.com/NVIDIA/nccl) ・ リポジトリ内被引用：5  
-  NCCL 2.28へGPUカーネルからRDMAを直接起動できるGINを追加し、直接GPU→NICとCPU代理を同一APIで切替。DeepEPのMoE通信をNVSHMEM相当の性能でNCCLへ統合する。
-
 - **2026-03 · [NCCL EP: Towards a Unified Expert Parallel Communication API for NCCL](2026-2603.13606-nccl-ep-towards-a-unified-expert-parallel-communication-api-for-nccl.md)**  
-  実装：✓ ・ リポジトリ内被引用：3  
+  実装：✓ ・ リポジトリ内被引用：4  
   大規模言語モデルの混合専門家（MoE）層では、ルータが各トークンを担当する専門家へ割り当て、専門家計算の後に結果を元の順序へ集約する。一方、実際にvLLMへ組み込んでQwen3-30B-A3Bを実行した場合は、DeepEPより出力トークン処理量が7〜10%低く、トークン間遅延も7〜9%長かった。
 
 - **2026-01 · [Least-Loaded Expert Parallelism: Load Balancing An Imbalanced Mixture-of-Experts](2026-2601.17111-least-loaded-expert-parallelism-load-balancing-an-imbalanced-mixture-of-.md)**  
@@ -238,11 +238,11 @@ MoEの専門家並列、テンソル並列との混成、all-to-all通信、専�
 ### 5年前（2021-11〜2022-10）
 
 - **2022-06 · [Tutel: Adaptive Mixture-of-Experts at Scale](2022-2206.03382-tutel-adaptive-mixture-of-experts-at-scale.md)**  
-  実装：[✓](https://github.com/microsoft/tutel) ・ リポジトリ内被引用：34  
+  実装：[✓](https://github.com/microsoft/tutel) ・ リポジトリ内被引用：35  
   Tutelは、混合専門家モデル（Mixture-of-Experts; MoE）で反復ごとに変わる専門家負荷へ実行系を追従させる分散実行基盤である。固定の並列化方式や固定の通信・計算パイプラインは、この変動に対して一つの実行形態しか使えず、通信時間または専門家計算時間のどちらかを無駄にしやすい。
 
 - **2022-10 · [Accelerating Distributed MoE Training and Inference with Lina](2022-2210.17223-accelerating-distributed-moe-training-and-inference-with-lina.md)**  
-  実装：✓ ・ リポジトリ内被引用：26  
+  実装：✓ ・ リポジトリ内被引用：27  
   Linaは、分散した混合専門家モデル（Mixture of エキスパート、MoE）の通信を、学習と推論で異なる原因に分解して高速化するシステムである。論文の事前計測では、全対全通信が処理段階時間の平均34.1%、ある層の順伝播時間の74.9%を占め、通信中のGPU演算器利用率は平均3.7%にとどまった。
 
 ### 6年前（2020-11〜2021-10）
