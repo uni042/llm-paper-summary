@@ -3,7 +3,7 @@
 複数requestを複数GPU / nodeで処理するLLM servingについて、request順、batch、prefill / decodeのGPU配分、KV再利用・転送、request移動などを調整し、latencyとresource効率を改善する研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（404本）
+## 自動生成の論文一覧（405本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -859,6 +859,10 @@
 - **2026-05 · [C2CServe: Leveraging NVLink-C2C for Elastic Serverless LLM Serving on MIG](2026-2605.19481-c2cserve-serverless-mig-nvlink-c2c.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   GH200のCPUメモリをNVLink-C2C経由の能動的な重み格納層として使い、MIGごとのHBM不足を回避するサーバレスLLM基盤。HybridGEMMと競合対応スケジューラで密モデルのコールドスタートを最大7.1倍短縮する。
+
+- **2026-05 · [Adaptive Memory Decay for Log-Linear Attention](2026-2605.06946-adaptive-memory-decay-for-log-linear-attention.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  線形注意や状態空間モデルは過去を固定長の状態へ圧縮することで生成時の記憶量を一定にできるが、長い文脈の細かな情報を再び取り出すのが難しい。追加パラメータは全モデルの0.007%未満と報告する。
 
 - **2026-04 · [UCCL-Zip: Lossless Compression Supercharged GPU Communication](2026-2604.17172-cccl-compression-coupled-collective-communication.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
