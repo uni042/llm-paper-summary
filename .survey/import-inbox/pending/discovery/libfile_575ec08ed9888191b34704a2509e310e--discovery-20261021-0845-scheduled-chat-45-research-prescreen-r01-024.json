@@ -1,0 +1,27 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-45",
+  "scheduled_slot": "45",
+  "run_key": "20261021-0845-scheduled-chat-45/r01/research-prescreen/024",
+  "reference_main_sha": "03b30d2c9b97d6d9ff63caad0ddf4a537cf3391f",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.26148",
+      "identity_tokens": [
+        "arxiv:2607.26148"
+      ],
+      "title": "Embodied Agents Take Control: Minimal-Interface Zero-Shot Agents Rival Industrial-Scale Policies in Vision-and-Language Navigation",
+      "reason": "題名は視覚言語ナビゲーションでの身体化エージェントと行動方策の性能比較を明示している。推論システムの資源制御ではなくロボット行動の成功率・汎化を主題とするため対象外。",
+      "source_url": "https://arxiv.org/abs/2607.26148",
+      "body_check": "title_screen_only; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-10-21T08:49:43+09:00",
+      "last_checked_at": "2026-10-21T08:49:43+09:00",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance",
+      "worklist_rank": 24
+    }
+  ]
+}
