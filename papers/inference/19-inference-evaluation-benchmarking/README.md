@@ -1,5 +1,5 @@
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（54本）
+## 自動生成の論文一覧（55本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -51,6 +51,10 @@
 - **2026-09 · [Predict, Don't Iterate: Efficient Adaptive-Length Infilling for Diffusion Language Models](2026-2609.02108-predict-don-t-iterate-efficient-adaptive-length-infilling-for-diffusion-.md)**  
   実装：[✓](https://github.com/Hsu1023/PILL) ・ リポジトリ内被引用：0  
   PILLは、拡散言語モデル（diffusion language モデル）が文章やプログラムの既知の前半と後半の間を補完する課題（infilling）において、欠落部分の長さをあらかじめ固定しなければならない制約を扱う。既存の可変長方式は長さを反復探索したり生成途中に伸縮操作を挿入したりするため、推論回数が増える。
+
+- **2026-09 · [KREX: Concurrent Kernel Benchmarking on Shared GPUs via Region-Granular Exclusivity](2026-2609.30057-krex-concurrent-kernel-benchmarking-on-shared-gpus-via-region-granular-e.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  実行時間のわずかな差が候補順位を変えるため、他の処理が同じGPUへ負荷をかけると測定が歪み、エージェントは遅い候補を良いものと誤認する。さらにGPUコンテキストを毎回作り直さず、長寿命のコンテキスト保持プロセスを再利用することで、GPU初期化時のノード全体の直列化を避ける。
 
 - **2026-08 · [Diagnose Before You Compress: Prediction-Independent Bottleneck Witness Refinement for LLM Serving Traces](2026-2608.00423-bottleneck-preserving-witnessing.md)**  
   実装：[✓](https://github.com/llmllmllm/BPW) ・ リポジトリ内被引用：0  

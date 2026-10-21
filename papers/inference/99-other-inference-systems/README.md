@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（896本）
+## 自動生成の論文一覧（897本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -927,6 +927,10 @@
 - **2026-07 · [SelectInfer: Selective Neuron Loading and Computation for On-Device LLMs](2026-2607.18081-selectinfer-selective-neuron-loading-and-computation-for-on-device-llms.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   オフラインで重要FFNニューロンを選別して必要分だけロードし、入力ごとの活性で計算対象も絞ることで、端末LLMのメモリ量と計算量を独立に調整する方式。
+
+- **2026-07 · [Scalable LLM Agent Tool Access in the Cloud](2026-2607.15593-scalable-llm-agent-tool-access-in-the-cloud.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  本論文は、LLMエージェントが数百から数千の外部操作を利用する際に、ツール定義を全件プロンプトへ詰め込む方式と、各ツールのMCPサーバへ個別接続する方式の両方が規模の壁に直面することを扱う。
 
 - **2026-07 · [OmniScope: Modality-Decoupled Token Compression for Omnimodal Large Language Models](2026-2607.23193-omniscope-modality-decoupled-token-compression-for-omnimodal-large-langu.md)**  
   実装：[✓](https://github.com/MAC-AutoML/OmniScope) ・ リポジトリ内被引用：0  
