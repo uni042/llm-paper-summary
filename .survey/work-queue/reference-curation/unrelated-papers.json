@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-21T13:45:32+00:00",
-  "record_count": 12452,
+  "updated_at": "2026-10-21T14:44:42+00:00",
+  "record_count": 12450,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -178799,27 +178799,15 @@
       "linked_from": [],
       "title": "Generative IoT: advancing IoT with generative AI and large language models"
     },
-    "arXiv:2601.13384": {
-      "classification": "unrelated",
-      "canonical_id": "arXiv:2601.13384",
-      "identity_tokens": [
-        "arXiv:2601.13384"
-      ],
-      "reason": "題名は検索置換形式の指示調整によってコード穴埋め・編集能力を学習させる研究を明示している。主目的はコード生成能力と学習データ設計であり、推論サービング基盤・KVメモリ・計算カーネルの最適化ではないため対象外。",
-      "first_checked_at": "2026-10-17T03:54:25+00:00",
-      "last_checked_at": "2026-10-21T00:52:25+00:00",
-      "linked_from": [],
-      "title": "From Completion to Editing: Unlocking Context-Aware Code Infilling via Search-and-Replace Instruction Tuning"
-    },
     "arXiv:2601.18496": {
       "classification": "unrelated",
       "canonical_id": "arXiv:2601.18496",
       "identity_tokens": [
         "arXiv:2601.18496"
       ],
-      "reason": "医療分野の多段検索エージェントのデータと学習・推論を扱う応用研究。題名から確認できる中心課題は医療エージェントの能力獲得であり、汎用LLMの実行基盤、GPU資源管理、推論高速化ではない。",
+      "reason": "一次要旨では医療質問への多段検索データ生成、難易度に応じたツール呼び出し回数への罰則、推論中の仮説監視を組み合わせ、医療ベンチマーク7件で基盤モデル比平均9.79%改善を報告する。ツール利用制御はあるが主たる新規性と評価は医療推論能力・検索証拠利用であり、汎用LLM配信システムの計算資源管理・KVキャッシュ・推論高速化ではないため対象外とする。",
       "first_checked_at": "2026-10-17T03:54:27+00:00",
-      "last_checked_at": "2026-10-20T19:45:39+00:00",
+      "last_checked_at": "2026-10-21T14:44:41+00:00",
       "linked_from": [],
       "title": "DEEPMED: Building a Medical DeepResearch Agent via Multi-hop Med-Search Data and Turn-Controlled Agentic Training & Inference"
     },
@@ -179167,9 +179155,9 @@
       "identity_tokens": [
         "arXiv:2602.05384"
       ],
-      "reason": "題名から研究目的はアンカー・プロンプトを用いた文書解析の汎用化であり、文書理解タスクのモデル・アルゴリズムを扱う。LLM推論実行基盤の速度・メモリ・並列化を改善する主題は示されていないため対象外。",
+      "reason": "一次要旨の提案は撮影文書とデジタル文書を識別し、前者はページ全体、後者は検出したレイアウト要素を並列解析する文書画像解析モデルである。OmniDocBenchでの解析精度改善と撮影文書の誤り低減が主な評価で、並列推論は文書解析の実装手段であり、汎用LLM生成基盤・KVキャッシュ・モデル配信の機構改善は主張していないため対象外とする。",
       "first_checked_at": "2026-10-20T07:56:50+00:00",
-      "last_checked_at": "2026-10-21T00:52:26+00:00",
+      "last_checked_at": "2026-10-21T14:44:40+00:00",
       "linked_from": [],
       "title": "Dolphin-v2: Universal Document Parsing via Scalable Anchor Prompting"
     },
@@ -179328,18 +179316,6 @@
       "last_checked_at": "2026-10-20T19:45:39+00:00",
       "linked_from": [],
       "title": "AuroraCap: Efficient, Performant Video Detailed Captioning and a New Benchmark"
-    },
-    "arXiv:2602.05827": {
-      "classification": "unrelated",
-      "canonical_id": "arXiv:2602.05827",
-      "identity_tokens": [
-        "arXiv:2602.05827"
-      ],
-      "reason": "実環境の視覚言語ナビゲーションを改善する動画生成技術の研究。疎な動画生成を含むが、対象はロボットの空間行動と視覚生成であり、LLM推論エンジンの計算・メモリ最適化ではない。",
-      "first_checked_at": "2026-10-20T19:45:35+00:00",
-      "last_checked_at": "2026-10-20T19:45:40+00:00",
-      "linked_from": [],
-      "title": "Sparse Video Generation Propels Real-World Beyond-the-View Vision-Language Navigation"
     },
     "arXiv:2603.09163": {
       "classification": "unrelated",

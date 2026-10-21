@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-21T08:53:30+00:00",
-  "record_count": 5279,
+  "updated_at": "2026-10-21T14:44:42+00:00",
+  "record_count": 5281,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -81926,6 +81926,32 @@
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "Metis: A Generalizable and Efficient World-Action Model for Autonomous Driving and Urban Navigation"
+    },
+    "arXiv:2602.05827": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2602.05827",
+      "identity_tokens": [
+        "arXiv:2602.05827"
+      ],
+      "reason": "一次要旨では長期の未来映像を疎に生成するSparseVideoNavにより、20秒先を見据えた移動経路を1秒未満で推論し、未最適化方式比27倍の速度向上を報告する。生成推論の遅延削減という技術的接点は明確だが、最終適用先と評価指標は視覚言語ナビゲーションのロボット行動であり、汎用LLMのトークン生成・サービング基盤への転用や資源改善は直接検証していないため境界扱いとする。",
+      "first_checked_at": "2026-10-21T14:44:40+00:00",
+      "last_checked_at": "2026-10-21T14:44:40+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Sparse Video Generation Propels Real-World Beyond-the-View Vision-Language Navigation"
+    },
+    "arXiv:2601.13384": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2601.13384",
+      "identity_tokens": [
+        "arXiv:2601.13384"
+      ],
+      "reason": "一次要旨ではコード補完を検索・置換指示による単一パスの編集生成へ置き換え、20,000例の追加学習でも基盤モデルを超える補完性能を得たとする。エージェントによる反復編集と比べ推論遅延を抑える点は関連するが、中心はコード生成タスクの指示調整と能力改善で、一般のLLM実行器・スケジューラ・キャッシュ・カーネル最適化の新規方式ではないため境界扱いとする。",
+      "first_checked_at": "2026-10-21T14:44:42+00:00",
+      "last_checked_at": "2026-10-21T14:44:42+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "From Completion to Editing: Unlocking Context-Aware Code Infilling via Search-and-Replace Instruction Tuning"
     }
   }
 }
