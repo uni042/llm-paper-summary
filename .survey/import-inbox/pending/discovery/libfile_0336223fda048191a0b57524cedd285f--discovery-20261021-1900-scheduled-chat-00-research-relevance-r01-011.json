@@ -1,0 +1,27 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "scheduled_slot": "00",
+  "run_key": "20261021-1900-scheduled-chat-00/r01/research-prescreen/011",
+  "reference_main_sha": "8d6386c93341c024933d7ac4c1a161f03578acfa",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2403.01232",
+      "identity_tokens": [
+        "arxiv:2403.01232"
+      ],
+      "title": "Polynormer: Polynomial-Expressive Graph Transformer in Linear Time",
+      "reason": "グラフの局所・大域構造を使う多項式表現の線形時間グラフTransformerを提案し、グラフの分類・予測データセット13件で評価する。線形時間注意は技術的な類似点だが、LLMの言語生成、KVキャッシュ、分散サービングを対象としないため本サーベイでは対象外。",
+      "source_url": "https://arxiv.org/abs/2403.01232",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-21T19:07:55+09:00",
+      "last_checked_at": "2026-10-21T19:07:55+09:00",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance",
+      "worklist_rank": 11
+    }
+  ]
+}
