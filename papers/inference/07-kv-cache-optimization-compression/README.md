@@ -119,6 +119,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   実装：✓ ・ リポジトリ内被引用：4  
   $A^3$（注意機構-Aware Accurate KV Cache Fusion）は、複数の質問で再利用される文書断片のKVキャッシュを事前に作り、質問に関係する部分だけを再計算して、長文入力の事前充填を高速化する手法である。Mistral-7B-Instruct-v0.2では全文計算38.27、A3が36.98で、再利用系の比較手法を上回った。
 
+- **2026-09 · [DeepSeek-V4.1-Flash: Pushing the Limits of KV Cache Compression](2026-2609.19969-deepseek-v4.1-flash-kv-cache-compression.md)**  
+  実装：✓ ・ リポジトリ内被引用：3  
+  CED・CSA2の層間KV再利用・FP4 KV・SWA限定再実行を統合し、100万トークン対応552B MoEのグローバルKVを890 bytes/トークン、永続KVを前世代比約1/8へ圧縮する。
+
 - **2026-07 · [[AAFLOW+] Stateful Operator Abstraction with Zero-Copy Distributed KV Cache Orchestration for Multi-Agent Workflows](2026-2607.10987-aaflow-stateful-operator-abstraction-with-zero-copy-distributed-kv-cache.md)**  
   実装：[✓](https://github.com/arupcsedu/AAFLOW) ・ リポジトリ内被引用：3  
   複数エージェントで検索、計画、推論、回答の統合を進めると、異なるエージェントが同じ文書や会話履歴を読み直す。主要な定量報告では、Mistral-7Bの平均初回トークン時間（TTFT）が0.041秒で、テキストを再計算するAAFLOW-textの2.057秒に対し50.2倍の差がある。
@@ -126,10 +130,6 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 - **2026-02 · [You Need an Encoder for Native Position-Independent Caching](2026-2602.01519-you-need-an-encoder-for-native-position-independent-caching.md)**  
   実装：[✓](https://github.com/shijuzhao/Comb) ・ リポジトリ内被引用：3  
   凍結したデコーダ専用LLMへPIC専用エンコーダを追加し、任意順序の文書KV再利用を高精度化しつつTTFTを51〜94%削減、KV容量も約75%以上削減するCOMBを提案。
-
-- **2026-09 · [DeepSeek-V4.1-Flash: Pushing the Limits of KV Cache Compression](2026-2609.19969-deepseek-v4.1-flash-kv-cache-compression.md)**  
-  実装：✓ ・ リポジトリ内被引用：2  
-  CED・CSA2の層間KV再利用・FP4 KV・SWA限定再実行を統合し、100万トークン対応552B MoEのグローバルKVを890 bytes/トークン、永続KVを前世代比約1/8へ圧縮する。
 
 - **2026-08 · [Faster Than Flash: Exploiting Attention Sparsity for Efficient Long-Context Decoding](2026-2609.00097-faster-than-flash-attention-sparsity-long-context-decoding.md)**  
   実装：[✓](https://github.com/qluoluo/faster-flash-decoding) ・ リポジトリ内被引用：2  

@@ -37,7 +37,7 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
   コンテキスト別の圧縮感度とアクセス頻度を用い、KV圧縮方式・圧縮率・CPU/SSD等への退避を統一効用で共同最適化し、同等品質でTTFTを大幅短縮する階層KV管理方式。
 
 - **2026-05 · [Tutti: Making SSD-Backed KV Cache Practical for Long-Context LLM Serving](2026-2605.03375-tutti-making-ssd-backed-kv-cache-practical-for-long-context-llm-serving.md)**  
-  実装：✓ ・ リポジトリ内被引用：7  
+  実装：✓ ・ リポジトリ内被引用：8  
   長い入力文脈や過去の会話を再利用する大規模言語モデル（LLM）の配信では、過去の入力を処理した際の鍵・値キャッシュ（KVキャッシュ）を保存しておけば、同じ接頭辞を再計算せずに済む。提案するのは、KVブロックに対応するGPU向けオブジェクト、GPUから非同期で要求を発行・完了確認する待ち行列、推論カーネルの実行余裕に応じて読み書きを配置する制御の三つである。
 
 - **2026-08 · [Cross-Model KV Cache Transfer in LLM Families: A Closed-Form Linear Mapping for Prefill Reuse](2026-2608.03893-cross-model-kv-cache-transfer.md)**  
@@ -321,7 +321,7 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
 ### 2年前（2024-11〜2025-10）
 
 - **2025-10 · [LMCache: An Efficient KV Cache Layer for Enterprise-Scale LLM Inference](2025-2510.09665-lmcache.md)**  
-  実装：[✓](https://github.com/LMCache/LMCache) ・ リポジトリ内被引用：120  
+  実装：[✓](https://github.com/LMCache/LMCache) ・ リポジトリ内被引用：121  
   LMCacheはKVを独立オブジェクトとしてページ集約し、複数要求・推論エンジン・保存階層間で検索／転送し、接頭辞再計算とGPU・I/O待ちを減らす基盤。
 
 - **2024-11 · [NEO: Saving GPU Memory Crisis with CPU Offloading for Online LLM Inference](2024-2411.01142-neo-saving-gpu-memory-crisis-with-cpu-offloading-for-online-llm-inference.md)**  
