@@ -28,6 +28,8 @@ reference_main_sha: "79b7bc7af184b36c878fe83312a197cbc62c70e5"
 quality_self_review_passed: true
 quality_self_review_version: "PAPER-QUALITY-GUIDE-2026-10-07"
 worklist_rank: 40
+last_audited: null
+audit_version: 0
 ---
 
 # Connex：動的LLMサービングで通信端点を移動可能にする仕組み

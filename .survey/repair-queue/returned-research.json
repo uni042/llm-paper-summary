@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-21T23:38:34+00:00",
+  "generated_at": "2026-10-21T23:47:47+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -462,35 +462,6 @@
       "worker_run_key": "20261020-0445-scheduled-chat-45/r01"
     },
     {
-      "canonical_id": "arXiv:2411.10741",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-20T18:04:38+00:00",
-      "return_count": 6,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700",
-        "説明不足トリガー: 評価説明量 0 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5526,
-        "body_paragraphs": 29,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 0,
-        "limitation_chars": 474,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700",
-          "評価説明量 0 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-a1c4af702eeb--libfile_065fc6a915948191adbfb02fda86db70--2024-2411.10741-metala-linear-attention-research-20261020-0703-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-a1c4af702eeb--libfile_065fc6a915948191adbfb02fda86db70--2024-2411.10741-metala-linear-attention-research-20261020-0703-scheduled-chat-00-r01.json",
-      "worker_run_key": "20261020-0703-scheduled-chat-00/r01"
-    },
-    {
       "canonical_id": "arXiv:2605.20813",
       "title": null,
       "source_url": null,
@@ -713,6 +684,34 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_c4c7c543c8108191b17a05ff296be15f--2026-2605.18226-attention-state-memory-context-memorization-quality-repair-20261020-1945-scheduled-chat-45-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_c4c7c543c8108191b17a05ff296be15f--2026-2605.18226-attention-state-memory-context-memorization-quality-repair-20261020-1945-scheduled-chat-45-r01.json",
       "worker_run_key": "20261020-1945-scheduled-chat-45/r01"
+    },
+    {
+      "canonical_id": "arXiv:2412.00099",
+      "title": "Mixture of Cache-Conditional Experts for Efficient Mobile Device Inference",
+      "source_url": "https://arxiv.org/pdf/2412.00099",
+      "returned_at": "2026-10-21T23:45:25+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 79 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 4896,
+        "body_paragraphs": 25,
+        "method_chars": 1470,
+        "method_paragraphs": 7,
+        "evaluation_chars": 79,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "評価説明量 79 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_ca8dd37579788191a2c7f53a7a46793d--2024-2412.00099-cache-conditional-experts-mobile-moe-research-20261021-0956-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_ca8dd37579788191a2c7f53a7a46793d--2024-2412.00099-cache-conditional-experts-mobile-moe-research-20261021-0956-scheduled-chat-00-r01.json",
+      "worker_run_key": "20261021-0956-scheduled-chat-00/r01"
     }
   ]
 }

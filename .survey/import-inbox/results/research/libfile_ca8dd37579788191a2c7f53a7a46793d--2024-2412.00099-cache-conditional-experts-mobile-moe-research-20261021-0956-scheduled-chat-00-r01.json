@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "52a4e0330da0cfe8f0b93b0c82cf59d9445b06d2c903fab7d595717229228dbe",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_ca8dd37579788191a2c7f53a7a46793d--2024-2412.00099-cache-conditional-experts-mobile-moe-research-20261021-0956-scheduled-chat-00-r01.md",
+  "canonical_id": "arXiv:2412.00099",
+  "worker_completed_at": "2026-10-21T10:08:00+09:00",
+  "worker_run_key": "20261021-0956-scheduled-chat-00/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 4896,
+    "body_paragraphs": 25,
+    "method_chars": 1470,
+    "method_paragraphs": 7,
+    "evaluation_chars": 79,
+    "limitation_chars": 0,
+    "insufficiency_flags": [
+      "評価説明量 79 < 500",
+      "限界説明量 0 < 推奨 120"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 評価説明量 79 < 500"
+  ],
+  "processed_at": "2026-10-21T23:45:25+00:00"
+}

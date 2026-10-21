@@ -1,13 +1,12 @@
 {
   "schema_version": 1,
   "artifact_type": "research",
-  "status": "imported",
+  "status": "blocked_quality",
   "source_sha256": "f9abcf8d287b14fb7657eeda6eb09f24a913854789cf14d8b4eb22ff289211f0",
-  "canonical_id": "arXiv:2410.01805",
-  "paper_path": "papers/inference/99-other-inference-systems/2024-2410.01805-locret-enhancing-eviction-in-long-context-llm-inference-with-trained-ret.md",
-  "lineage": "99-other-inference-systems",
-  "audit_status": "PASS",
+  "normalized_source_sha256": null,
   "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_cfea78de8fd08191bdd7e277edd5dc88--2024-2410.01805-locret-returned-repair-20261020-1930-scheduled-chat-30-r01-v2.md",
+  "canonical_id": "arXiv:2410.01805",
   "worker_completed_at": "2026-10-20T19:30:00+09:00",
   "worker_run_key": "20261020-1930-scheduled-chat-30/r01",
   "quality_metrics": {
@@ -20,5 +19,8 @@
     "limitation_chars": 684,
     "insufficiency_flags": []
   },
-  "processed_at": "2026-10-20T16:54:26+00:00"
+  "failures": [
+    "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2024-2410.01805-locret-enhancing-eviction-in-long-context-llm-inference-with-trained-ret.md と 18 段落 / 3975文字 (100.0%) が完全一致"
+  ],
+  "processed_at": "2026-10-21T23:46:26+00:00"
 }

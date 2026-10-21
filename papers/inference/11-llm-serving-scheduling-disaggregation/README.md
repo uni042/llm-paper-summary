@@ -3,7 +3,7 @@
 複数requestを複数GPU / nodeで処理するLLM servingについて、request順、batch、prefill / decodeのGPU配分、KV再利用・転送、request移動などを調整し、latencyとresource効率を改善する研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（414本）
+## 自動生成の論文一覧（415本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -679,6 +679,10 @@
 - **2026-08 · [Efficiency and Cost Alignment in Batched LLM Serving via Resource-Fair Scheduling](2026-2608.02244-resource-fair-batched-llm-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   長短要求を同居させたバッチで短い要求まで最大KV量相当の費用を負担する外部性を定式化し、デコード進捗差を制限するISJLを提案。一般のバッチ幅で競争比3/4を保証し、LMSYS再生ではLJFより最大17%高いスループットと21%低い平均遅延を示す。
+
+- **2026-08 · [Connex: Endpoint Mobility Primitives for Dynamic LLM Serving](2026-04a3072fd610-connex-endpoint-mobility-primitives-for-dynamic-llm-serving.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  Connexは、分離型プリフィル・デコードやパイプライン並列化を使う大規模言語モデル（LLM）のオンライン推論で、GPUワーカーの追加・離脱・故障・移動を通信経路を全面再構築せずに扱うための通信基盤である。構成変更中の中負荷では要求完了率100%を保ち、比較対象は条件によって0～28%まで低下する。
 
 - **2026-08 · [Cascade: Exploiting SLO-Aware latency budget for fair and high goodput LLM inference serving](2026-2608.06557-cascade-slo-aware-latency-budget-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

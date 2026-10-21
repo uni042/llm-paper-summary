@@ -31,6 +31,8 @@ reference_main_sha: '090049c007e161833e3882d48df8c17f72fbe0f9'
 quality_self_review_passed: true
 quality_self_review_version: 'PAPER-QUALITY-GUIDE-2026-10-07'
 worklist_rank: 83
+last_audited: null
+audit_version: 0
 ---
 
 # BOSCH：注意頭ごとのSWA化を黒箱探索する事後ハイブリッド化
