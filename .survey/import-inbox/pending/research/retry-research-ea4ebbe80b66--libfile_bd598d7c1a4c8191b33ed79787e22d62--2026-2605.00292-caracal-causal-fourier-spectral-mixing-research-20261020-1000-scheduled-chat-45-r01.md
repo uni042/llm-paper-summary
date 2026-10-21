@@ -38,6 +38,8 @@ reference_main_sha: '61157266590c963ee61afd547c760ac97f9bdd78'
 quality_self_review_passed: true
 quality_self_review_version: '2026-10-07-v1'
 quality_self_review_basis: '一次論文v1の問題設定、MHFの周波数領域の因果性、付録のL=2の畳み込み証明、実装コード、§5のモデル比較条件と長文脈訓練指標を照合。具体的な表の全数値は確認できた範囲のみ使用し、1トークン逐次復号への外挿を避けた。'
+last_audited: null
+audit_version: 0
 ---
 
 # Caracal：フーリエ領域の因果混合による長文脈言語モデル

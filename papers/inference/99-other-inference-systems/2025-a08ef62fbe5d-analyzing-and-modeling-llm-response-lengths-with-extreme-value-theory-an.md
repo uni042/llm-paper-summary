@@ -44,6 +44,8 @@ repair_origin_worker_run_key: 20261021-0230-scheduled-chat-30/r01
 repair_origin_reference_main_sha: afcc9501d5b757fb814470030930a4598a455487
 repair_reason: malformed_yaml_delimiter_and_unrecognized_method_heading
 repair_completed_at: "2026-10-21T02:54:44+09:00"
+last_audited: null
+audit_version: 0
 ---
 
 # LLM応答長の極値統計：アンカー効果とGEV-GPD混合分布
