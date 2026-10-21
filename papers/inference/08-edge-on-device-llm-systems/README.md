@@ -3,7 +3,7 @@
 スマートフォン、個人PC、edge deviceなど、**VRAM・RAM・memory bandwidth・電力に厳しい制約がある環境でLLMを実行する**ためのsystem研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（49本）
+## 自動生成の論文一覧（50本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -75,6 +75,10 @@
 - **2026-06 · [MawForge: Memory-Bounded Expert Materialization for Local Mixture-of-Experts Inference](2026-2607.09686-mawforge-memory-bounded-expert-materialization.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   MawForgeは、共通テンソルを常駐させ、ルーティングされた専門家だけをディスクから上限付きキャッシュへ実体化し、共有メモリ圧力と重み読出しを予算内で抑える方式。
+
+- **2026-06 · [From Prompt to Service: An SLM-Based Agent Orchestration Gateway for AI-Driven Virtual Worlds](2026-2606.03557-from-prompt-to-service-an-slm-based-agent-orchestration-gateway-for-ai-d.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  大きな言語モデル一つですべての入力を処理する設計は、簡単なサービス振り分けにも大きな推論費用と遅延を要する。著者はキプロスの文化財を題材にしたInterwovenXR仮想博物館で実装し、Jetson Orin NX 8GBを用いて複数の小型モデルを比較した。
 
 - **2026-06 · [EnerInfer: Energy-Aware On-Device LLM Inference](2026-2606.23001-enerinfer-energy-aware-on-device-llm-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

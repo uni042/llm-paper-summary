@@ -3,7 +3,7 @@
 複数requestを複数GPU / nodeで処理するLLM servingについて、request順、batch、prefill / decodeのGPU配分、KV再利用・転送、request移動などを調整し、latencyとresource効率を改善する研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（412本）
+## 自動生成の論文一覧（413本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -1657,6 +1657,10 @@
 - **2021-10 · [OneFlow: Redesign the Distributed Deep Learning Framework from Scratch](2021-2110.15032-oneflow-redesign-the-distributed-deep-learning-framework-from-scratch.md)**  
   実装：[✓](https://github.com/Oneflow-Inc/oneflow) ・ リポジトリ内被引用：3  
   論文は分散学習を二つの問題に分解する。OneFlowはコンパイラと実行系を一体で設計し、これらを明示的に扱う。
+
+- **2021-09 · [Multi-model Machine Learning Inference Serving with GPU Spatial Partitioning](2021-2109.01611-multi-model-machine-learning-inference-serving-with-gpu-spatial-partitio.md)**  
+  実装：✓ ・ リポジトリ内被引用：2  
+  複数モデルを時間順に切り替えるだけでは、この遊休部分を他モデルへ同時に渡せない。提案の干渉考慮版「gpulet+int」は、同一4 GPU実機で既存の時間共有方式SBPに対し、5種類の複数モデル推論シナリオにおける最大処理量を平均102.6%改善した。
 
 - **2021-07 · [Long-Short Transformer: Efficient Transformers for Language and Vision](2021-2107.02192-long-short-transformer-efficient-transformers-for-language-and-vision.md)**  
   実装：[✓](https://github.com/NVIDIA/transformer-ls) ・ リポジトリ内被引用：2  
