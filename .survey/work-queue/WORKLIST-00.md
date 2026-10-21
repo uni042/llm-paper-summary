@@ -1,7 +1,7 @@
 # Scheduled worker :00 worklist
 
 Worker: `scheduled-chat-00`  
-Generated: `2026-10-21T13:02:29+00:00`
+Generated: `2026-10-21T13:37:53+00:00`
 
 このページはこのworker専用の再構築可能な選択索引です。他のScheduled worker用ページとは候補を重複させません（十分な在庫がある場合）。
 正本は `.survey/work-queue/jobs/`、claim、論文実体、relevance ledgerです。処理直前に最新正本を再確認してください。
@@ -13,7 +13,7 @@ Generated: `2026-10-21T13:02:29+00:00`
 
 ## 未処理 Research / Audit
 
-ready総数: **1339** / 未claim総数: **1339** / このworker向け: **200**
+ready総数: **1338** / 未claim総数: **1338** / このworker向け: **200**
 
 | # | score | 種別 | identity | title | source | 想定配置先 |
 |---:|---:|---|---|---|---|---|
@@ -215,13 +215,13 @@ ready総数: **1339** / 未claim総数: **1339** / このworker向け: **200**
 | 196 | 10 | research | arXiv:2604.07023 | MARS: Enabling Autoregressive Models Multi-Token Generation | [primary](https://arxiv.org/abs/2604.07023) | `papers/inference/99-other-inference-systems/2026-2604.07023-mars-enabling-autoregressive-models-multi-token-generation.md` |
 | 197 | 10 | research | arXiv:2604.03446 | Fast Cross-Operator Optimization of Attention Dataflow | [primary](https://arxiv.org/abs/2604.03446) | `papers/inference/99-other-inference-systems/2026-2604.03446-fast-cross-operator-optimization-of-attention-dataflow.md` |
 | 198 | 10 | research | arXiv:2603.28622 | Trust-Aware Routing for Distributed Generative AI Inference at the Edge | [primary](https://arxiv.org/abs/2603.28622) | `papers/inference/99-other-inference-systems/2026-2603.28622-trust-aware-routing-for-distributed-generative-ai-inference-at-the-edge.md` |
-| 199 | 10 | research | arXiv:2604.18592 | Two-dimensional early exit optimisation of LLM inference | [primary](https://arxiv.org/abs/2604.18592) | `papers/inference/99-other-inference-systems/2026-2604.18592-two-dimensional-early-exit-optimisation-of-llm-inference.md` |
-| 200 | 10 | research | arXiv:2603.21365 | TIDE: Token-Informed Depth Execution for Per-Token Early Exit in LLM Inference | [primary](https://arxiv.org/abs/2603.21365) | `papers/inference/99-other-inference-systems/2026-2603.21365-tide-token-informed-depth-execution-for-per-token-early-exit-in-llm-inference.md` |
+| 199 | 10 | research | arXiv:2604.19767 | Accelerating Paypal's Commerce Agent with Speculative Decoding: An Empirical Study on EAGLE3 with Fine-Tuned Nemotron Models | [primary](https://arxiv.org/abs/2604.19767) | `papers/inference/99-other-inference-systems/2026-2604.19767-accelerating-paypal-s-commerce-agent-with-speculative-decoding-an-empirical-study-on-eagle3-with-fine-tuned-nemotron-mod.md` |
+| 200 | 10 | research | arXiv:2603.20616 | Beyond Token Eviction: Mixed-Dimension Budget Allocation for Efficient KV Cache Compression | [primary](https://arxiv.org/abs/2603.20616) | `papers/inference/99-other-inference-systems/2026-2603.20616-beyond-token-eviction-mixed-dimension-budget-allocation-for-efficient-kv-cache-compression.md` |
 
 ## リスト入り判定待ち Discovery候補
 
-未判定総数: **122968** / このworker向け: **500**
-事前選別: **quarantine** / 暫定隔離 **116993** / 監査再投入 **0** / 機械規則適用後 **119485** / 選抜率 **5.0%** （候補の正本は保持。隔離はunrelated判定ではない）
+未判定総数: **122969** / このworker向け: **500**
+事前選別: **quarantine** / 暫定隔離 **116994** / 監査再投入 **0** / 機械規則適用後 **119486** / 選抜率 **5.0%** （候補の正本は保持。隔離はunrelated判定ではない）
 
 | # | priority | 系統内引用最多 | 系統内引用合計 | identity | title | published | venue | 全被引用 | 参照関係 | 系統候補 | source |
 |---:|---:|---:|---:|---|---|---|---|---:|---:|---|---|

@@ -1,7 +1,7 @@
 # Scheduled worker :30 worklist
 
 Worker: `scheduled-chat-30`  
-Generated: `2026-10-21T13:02:29+00:00`
+Generated: `2026-10-21T13:37:53+00:00`
 
 このページはこのworker専用の再構築可能な選択索引です。他のScheduled worker用ページとは候補を重複させません（十分な在庫がある場合）。
 正本は `.survey/work-queue/jobs/`、claim、論文実体、relevance ledgerです。処理直前に最新正本を再確認してください。
@@ -13,7 +13,7 @@ Generated: `2026-10-21T13:02:29+00:00`
 
 ## 未処理 Research / Audit
 
-ready総数: **1339** / 未claim総数: **1339** / このworker向け: **200**
+ready総数: **1338** / 未claim総数: **1338** / このworker向け: **200**
 
 | # | score | 種別 | identity | title | source | 想定配置先 |
 |---:|---:|---|---|---|---|---|
@@ -214,14 +214,14 @@ ready総数: **1339** / 未claim総数: **1339** / このworker向け: **200**
 | 195 | 10 | research | arXiv:2604.07857 | Networking-Aware Energy Efficiency in Agentic AI Inference: A Survey | [primary](https://arxiv.org/abs/2604.07857) | `papers/inference/99-other-inference-systems/2026-2604.07857-networking-aware-energy-efficiency-in-agentic-ai-inference-a-survey.md` |
 | 196 | 10 | research | arXiv:2604.06296 | AgentOpt v0.1 Technical Report: Client-Side Optimization for LLM-Based Agent | [primary](https://arxiv.org/abs/2604.06296) | `papers/inference/99-other-inference-systems/2026-2604.06296-agentopt-v0-1-technical-report-client-side-optimization-for-llm-based-agent.md` |
 | 197 | 10 | research | arXiv:2604.00292 | MambaVoiceCloning: Efficient and Expressive Text-to-Speech via State-Space Modeling and Diffusion Control | [primary](https://arxiv.org/abs/2604.00292) | `papers/inference/99-other-inference-systems/2026-2604.00292-mambavoicecloning-efficient-and-expressive-text-to-speech-via-state-space-modeling-and-diffusion-control.md` |
-| 198 | 10 | research | arXiv:2603.27462 | RSR-core: A High-Performance Engine for Low-Bit Matrix-Vector Multiplication | [primary](https://arxiv.org/abs/2603.27462) | `papers/inference/99-other-inference-systems/2026-2603.27462-rsr-core-a-high-performance-engine-for-low-bit-matrix-vector-multiplication.md` |
-| 199 | 10 | research | arXiv:2604.19767 | Accelerating Paypal's Commerce Agent with Speculative Decoding: An Empirical Study on EAGLE3 with Fine-Tuned Nemotron Models | [primary](https://arxiv.org/abs/2604.19767) | `papers/inference/99-other-inference-systems/2026-2604.19767-accelerating-paypal-s-commerce-agent-with-speculative-decoding-an-empirical-study-on-eagle3-with-fine-tuned-nemotron-mod.md` |
-| 200 | 10 | research | arXiv:2603.20616 | Beyond Token Eviction: Mixed-Dimension Budget Allocation for Efficient KV Cache Compression | [primary](https://arxiv.org/abs/2603.20616) | `papers/inference/99-other-inference-systems/2026-2603.20616-beyond-token-eviction-mixed-dimension-budget-allocation-for-efficient-kv-cache-compression.md` |
+| 198 | 10 | research | arXiv:2603.27027 | TAPS: Task Aware Proposal Distributions for Speculative Sampling | [primary](https://arxiv.org/abs/2603.27027) | `papers/inference/99-other-inference-systems/2026-2603.27027-taps-task-aware-proposal-distributions-for-speculative-sampling.md` |
+| 199 | 10 | research | arXiv:2603.25766 | ETA-VLA: Efficient Token Adaptation via Temporal Fusion and Intra-LLM Sparsification for Vision-Language-Action Models | [primary](https://arxiv.org/abs/2603.25766) | `papers/inference/99-other-inference-systems/2026-2603.25766-eta-vla-efficient-token-adaptation-via-temporal-fusion-and-intra-llm-sparsification-for-vision-language-action-models.md` |
+| 200 | 10 | research | arXiv:2603.22333 | Graph Signal Processing Meets Mamba2: Adaptive Filter Bank via Delta Modulation | [primary](https://arxiv.org/abs/2603.22333) | `papers/inference/99-other-inference-systems/2026-2603.22333-graph-signal-processing-meets-mamba2-adaptive-filter-bank-via-delta-modulation.md` |
 
 ## リスト入り判定待ち Discovery候補
 
-未判定総数: **122968** / このworker向け: **500**
-事前選別: **quarantine** / 暫定隔離 **116993** / 監査再投入 **0** / 機械規則適用後 **119485** / 選抜率 **5.0%** （候補の正本は保持。隔離はunrelated判定ではない）
+未判定総数: **122969** / このworker向け: **500**
+事前選別: **quarantine** / 暫定隔離 **116994** / 監査再投入 **0** / 機械規則適用後 **119486** / 選抜率 **5.0%** （候補の正本は保持。隔離はunrelated判定ではない）
 
 | # | priority | 系統内引用最多 | 系統内引用合計 | identity | title | published | venue | 全被引用 | 参照関係 | 系統候補 | source |
 |---:|---:|---:|---:|---|---|---|---|---:|---:|---|---|
