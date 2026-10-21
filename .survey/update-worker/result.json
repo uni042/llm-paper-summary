@@ -1,20 +1,10 @@
 {
   "schema_version": 1,
   "ok": true,
-  "attempt_id": "library-import-20261018-0830-chatgpt-20261019003500",
+  "attempt_id": "library-import-20261022-maintenance-20261015",
   "kind": "framework_llm_update",
-  "updated_paths": [
-    "llm-releases/README.md",
-    "llm-releases/deepseek.md",
-    "framework-updates/inference-engines/ollama/README.md",
-    "framework-updates/inference-engines/llama-cpp/README.md"
-  ],
+  "updated_paths": [],
   "created_paths": [],
-  "updated_existing_paths": [
-    "llm-releases/README.md",
-    "llm-releases/deepseek.md",
-    "framework-updates/inference-engines/ollama/README.md",
-    "framework-updates/inference-engines/llama-cpp/README.md"
-  ],
-  "summary": "2026-10-18 maintenance: update DeepSeek-V4.1-Flash-1017 and Search/Fetch API notes; record stable Ollama v0.40.6 and llama.cpp b11709/b11710/b11713/b11714/b11715 development builds; avoid duplicating ExLlamaV3 v1.6.3"
+  "updated_existing_paths": [],
+  "summary": "No-op after latest-main comparison of Library maintenance 2026-10-15: Ollama v0.40.4 and llama.cpp b11622 are already recorded. Conditional b11612 NFC item is deferred because no target model was identified in the source plan."
 }
