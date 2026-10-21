@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-10-21T16:07:58.911840+00:00",
+  "generated_at": "2026-10-21T17:30:51.994901+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 4,
+  "count": 5,
   "worker_counts": {
-    "scheduled-chat-00": 1,
+    "scheduled-chat-00": 2,
     "scheduled-chat-30": 1,
     "scheduled-chat-45": 2
   },
@@ -77,6 +77,26 @@
         "method_chars": 1072,
         "evaluation_chars": 505,
         "limitation_chars": 0
+      },
+      "mechanical_failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/99-other-inference-systems/2026-2603.21365-tide-token-informed-depth-execution-for-per-token-early-exit-in-llm-infe.md",
+      "canonical_id": "arXiv:2603.21365",
+      "title": "TIDE: Token-Informed Depth Execution for Per-Token Early Exit in LLM Inference",
+      "file_bytes": 14394,
+      "source_sha256": "d821bdddac0d613d2d19fbd88e166b13f92e7de687fcbce76e41e0d66dfafa24",
+      "source_git_blob_sha": "9a98afd7e82c7e4443859ef1118902e884ff6537",
+      "assigned_worker": "scheduled-chat-00",
+      "semantic_status": "pending",
+      "mechanical_status": "PASS",
+      "japanese_ratio": 0.945877,
+      "quality_metrics": {
+        "body_chars": 3769,
+        "method_chars": 1581,
+        "evaluation_chars": 630,
+        "limitation_chars": 371
       },
       "mechanical_failures": [],
       "warnings": []
