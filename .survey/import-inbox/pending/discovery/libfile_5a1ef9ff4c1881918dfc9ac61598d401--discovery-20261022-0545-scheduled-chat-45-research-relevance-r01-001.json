@@ -1,0 +1,26 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-45",
+  "run_key": "20261022-0545-scheduled-chat-45/r01",
+  "reference_main_sha": "aef9d8089702942f9063c559e26e34e94c2de902",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2402.12289",
+      "identity_tokens": [
+        "arxiv:2402.12289"
+      ],
+      "title": "DriveVLM: The Convergence of Autonomous Driving and Large Vision-Language Models",
+      "reason": "自動運転向けの視覚言語モデルを用いて道路状況の説明・場面分析・階層的走行計画を構成し、nuScenes、SUP-ADおよび実車で自動運転性能を評価する応用研究。DriveVLM-Dualで従来の運転パイプラインを併用するが、汎用LLMの推論サービング、KVキャッシュ、カーネル、オフロード、分散処理や学習効率を最適化する研究ではない。",
+      "source_url": "https://arxiv.org/abs/2402.12289",
+      "body_check": "abstract_screen_only; body_not_read; arXiv公式要旨を確認。主要貢献・評価対象を確認し、汎用LLM推論・学習システムの最適化対象外と判定。",
+      "first_checked_at": "2026-10-22T05:44:51+09:00",
+      "last_checked_at": "2026-10-22T05:44:51+09:00",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance",
+      "worklist_rank": 1
+    }
+  ]
+}
