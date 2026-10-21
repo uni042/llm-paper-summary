@@ -35,10 +35,15 @@
   "selection_reason": "PackServeはprefill/decode干渉下のlatencyを予測してagentic LLM requestsをSLO-awareにpackingし、GPU-hour削減とproduction throughputを評価。",
   "semantic_scholar_id": "d07c54b105eedb5d6853337b23cffc09b6d93264",
   "source_url": "https://arxiv.org/abs/2609.33224",
-  "status": "ready",
+  "status": "superseded",
   "title": "PackServe: SLO-Aware Request Scheduling for Agentic LLM Serving at Scale",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-10-21T22:37:40+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/14-agentic-inference-serving-runtime/2026-2609.33224-packserve-slo-aware-request-scheduling-for-agentic-llm-serving-at-scale.md",
+  "represented_canonical_id": "arXiv:2609.33224",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

@@ -24,7 +24,7 @@
 - [10-kv-cache-offload-recomputation](../10-kv-cache-offload-recomputation/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（65本）
+## 自動生成の論文一覧（66本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -132,6 +132,10 @@
 - **2026-09 · [PipeSwift: Revisiting Pipeline Parallelism for Large-Scale Completion-Oriented Agentic LLM Serving](2026-2609.16491-pipeswift-pipeline-parallel-agentic-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   エージェント推論のJCTをプリフィルとデコードの均衡問題として捉え直し、JCT指向スケジューリングとMTP統合パイプライン並列で64基H800上の360B級MoE処理を高速化する。
+
+- **2026-09 · [PackServe: SLO-Aware Request Scheduling for Agentic LLM Serving at Scale](2026-2609.33224-packserve-slo-aware-request-scheduling-for-agentic-llm-serving-at-scale.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  PackServeは、エージェント型大規模言語モデル（LLM）の複数要求をGPU推論インスタンスへ振り分けるゲートウェイ型スケジューラである。64台のNVIDIA H20を使った再生実験では、比較方式より13.0～24.6%少ない稼働GPU時間で評価したTPOT目標を満たした。
 
 - **2026-09 · [Memory Compression for High-Fanout Agent Sandboxes](2026-2609.11294-agentzip-memory-compression-high-fanout-agent-sandboxes.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
