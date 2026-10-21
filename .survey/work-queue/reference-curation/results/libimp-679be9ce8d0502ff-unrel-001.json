@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-679be9ce8d0502ff-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2605.22036",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2605.22036",
+    "identity_tokens": [
+      "arXiv:2605.22036"
+    ],
+    "reason": "RGB-Dと3D基盤モデルから鳥瞰図（BEV）表現を作り、視覚履歴トークンを圧縮してロボットの視覚言語ナビゲーションを改善する研究である。トークン削減と推論費用の記述はあるが、主要な新規性・評価はロボットの空間表現と経路追従の成功率であり、汎用LLM推論基盤や推論カーネル最適化を対象としないためunrelatedとする。",
+    "first_checked_at": "2026-10-21T03:42:37+00:00",
+    "last_checked_at": "2026-10-21T03:42:37+00:00",
+    "linked_from": [],
+    "title": "GA-VLN: Geometry-Aware BEV Representation for Efficient Vision-Language Navigation"
+  },
+  "processed_at": "2026-10-21T03:42:37+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-679be9ce8d05",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

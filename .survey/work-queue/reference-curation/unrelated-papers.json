@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-21T00:52:27+00:00",
-  "record_count": 12446,
+  "updated_at": "2026-10-21T03:42:37+00:00",
+  "record_count": 12447,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -179376,6 +179376,18 @@
       "last_checked_at": "2026-10-21T00:52:27+00:00",
       "linked_from": [],
       "title": "SEMA-SQL: Beyond Traditional Relational Querying with Large Language Models"
+    },
+    "arXiv:2605.22036": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.22036",
+      "identity_tokens": [
+        "arXiv:2605.22036"
+      ],
+      "reason": "RGB-Dと3D基盤モデルから鳥瞰図（BEV）表現を作り、視覚履歴トークンを圧縮してロボットの視覚言語ナビゲーションを改善する研究である。トークン削減と推論費用の記述はあるが、主要な新規性・評価はロボットの空間表現と経路追従の成功率であり、汎用LLM推論基盤や推論カーネル最適化を対象としないためunrelatedとする。",
+      "first_checked_at": "2026-10-21T03:42:37+00:00",
+      "last_checked_at": "2026-10-21T03:42:37+00:00",
+      "linked_from": [],
+      "title": "GA-VLN: Geometry-Aware BEV Representation for Efficient Vision-Language Navigation"
     }
   }
 }
