@@ -61,13 +61,13 @@ MoEで次に使われるexpertを**routing結果が確定する前に予測し�
   将来必要になる専門家を予測しても、その先読みがPCIe帯域を占有すると、現在必要な専門家の緊急転送が遅れる。LayerScopeは、先読み、必要時転送、CPUでの直接計算を複数バッチ・複数層の時間軸で一体的に計画する。
 
 - **2025-10 · [ExpertFlow: Adaptive Expert Scheduling and Memory Coordination for Efficient MoE Inference](2025-2510.26730-expertflow-adaptive-prefetch.md)**  
-  実装：✓ ・ リポジトリ内被引用：1  
+  実装：✓ ・ リポジトリ内被引用：2  
   固定先読み幅を帯域・入力・待機フィードバックで動的化し、予測器・二段LRU・キャッシュ認識ルーティングを協調させてMoEエキスパート転送待ちを隠蔽する実行時システム。
 
 ### 3年前（2023-11〜2024-10）
 
 - **2024-10 · [ProMoE: Fast MoE-based LLM Serving using Proactive Caching](2024-2410.22134-promoe-fast-moe-based-llm-serving-using-proactive-caching.md)**  
-  実装：[✓](https://github.com/promoe-opensource/promoe) ・ リポジトリ内被引用：36  
+  実装：[✓](https://github.com/promoe-opensource/promoe) ・ リポジトリ内被引用：37  
   ProMoEは数層先のルーティングから必要な専門家を予測し、CPUからGPUへ分割転送する。誤予測を止め、到着済みから実行して、重み転送待ちを計算の裏に隠す。
 
 ### 4年前（2022-11〜2023-10）

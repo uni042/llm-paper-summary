@@ -13,7 +13,7 @@ MoEで毎回同じ数のexpertを実行するのではなく、**token・layer�
 ### 注目：直近12か月・リポジトリ内で被引用（2025-11〜2026-10）
 
 - **2025-11 · [MoDES: Accelerating Mixture-of-Experts Multimodal Large Language Models via Dynamic Expert Skipping](2025-2511.15690-modes-dynamic-expert-skipping.md)**  
-  実装：[✓](https://github.com/ModelTC/MoDES) ・ リポジトリ内被引用：8  
+  実装：[✓](https://github.com/ModelTC/MoDES) ・ リポジトリ内被引用：9  
   層重要度のKL較正と画像・テキスト別閾値で、重要なエキスパートだけを残し、高省略率でもマルチモーダル性能を保つ学習不要の動的エキスパート省略法。
 
 - **2026-07 · [PuzzleMoE: Efficient Compression of Large Mixture-of-Experts Models via Fine-Grained Expert Merging and Bit-packed Inference](2025-2511.04805-puzzlemoe-efficient-compression-of-large-mixture-of-experts-models-via-s.md)**  
@@ -348,6 +348,10 @@ MoEで毎回同じ数のexpertを実行するのではなく、**token・layer�
   実装：[✓](https://github.com/JieShibo/MoLE) ・ リポジトリ内被引用：2  
   学習時エキスパート入力を語彙埋め込みへ固定して推論前にFFN出力を検索表化し、巨大エキスパート重みではなく小さな出力ベクトルだけをストレージから読むことでMoEのVRAMと転送遅延を削減する。
 
+- **2025-10 · [MoE-Prism: Model and System Support for Request-Level Compute Elasticity in MoE Serving](2025-2510.19366-moe-prism-elastic-services.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  専門家を4分割してtop-k動作点を4倍に増やし、予算別バッチングと分割CUDAグラフで要求ごとの計算予算をvLLM上で効率的に実行する。
+
 - **2025-09 · [HEAPr: Hessian-based Efficient Atomic Expert Pruning in Output Space](2025-2509.22299-heapr-atomic-expert-pruning.md)**  
   実装：[✓](https://github.com/LLIKKE/HEAPr) ・ リポジトリ内被引用：1  
   MoE エキスパートをatomic エキスパートへ分解し、出力空間の二次情報で全層を大域順位付けして剪定することで、20〜25%程度の圧縮を多くのモデルでほぼ無損失に実現する。
@@ -355,10 +359,6 @@ MoEで毎回同じ数のexpertを実行するのではなく、**token・layer�
 - **2025-09 · [Ban&Pick: Enhancing Performance and Efficiency of MoE-LLMs via Smarter Routing](2025-2509.06346-ban-pick-smarter-routing.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   重要専門家をKL影響度でPickし、層・トークン感度に応じて冗長専門家をBanする学習不要のMoE推論時ルーティング補正。
-
-- **2025-10 · [MoE-Prism: Model and System Support for Request-Level Compute Elasticity in MoE Serving](2025-2510.19366-moe-prism-elastic-services.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  専門家を4分割してtop-k動作点を4倍に増やし、予算別バッチングと分割CUDAグラフで要求ごとの計算予算をvLLM上で効率的に実行する。
 
 - **2025-10 · [GatePro: Parameter-Free Expert Selection Optimization for Mixture-of-Experts Models](2025-2510.13079-gatepro-parameter-free-expert-selection.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
