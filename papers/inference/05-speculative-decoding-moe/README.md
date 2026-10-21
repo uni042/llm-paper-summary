@@ -671,7 +671,7 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
   したがって本研究は「精度を下げて速くする層削減」ではなく、「一時的な近似ドラフトで正確な検証を少ない回数にする」方式である。LLaMA-2-13Bでは通常自己回帰の20.10トークン/秒に対して28.26トークン/秒、全体1.41倍、LLaMA-2-70Bでは4.32に対して6.41トークン/秒、1.48倍を報告する。
 
 - **2023-12 · [Cascade Speculative Drafting for Even Faster LLM Inference](2023-2312.11462-cascade-speculative-drafting-for-even-faster-llm-inference.md)**  
-  実装：[✓](https://github.com/lfsszd/CS-Drafting) ・ リポジトリ内被引用：27  
+  実装：[✓](https://github.com/lfsszd/CS-Drafting) ・ リポジトリ内被引用：28  
   ChenらのCascade 投機的 Drafting（CS Drafting）は、下書きモデルの生成をさらに小さなモデルによる投機で加速する縦方向の連鎖（Vertical Cascade）と、候補列の位置ごとに異なる計算費の下書きモデルを割り当てる横方向の連鎖（Horizontal Cascade）を組み合わせる。
 
 - **2024-08 · [Learning Harmonized Representations for Speculative Sampling](2024-2408.15766-learning-harmonized-representations-for-speculative-sampling.md)**  
@@ -757,7 +757,7 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
   軽量モデルの複数トークン提案を対象モデルで並列検証し、出力分布を変えずに直列復号回数を削減する投機的復号の基礎研究。
 
 - **2023-02 · [Accelerating Large Language Model Decoding with Speculative Sampling](2023-2302.01318-speculative-sampling.md)**  
-  実装：✓ ・ リポジトリ内被引用：317  
+  実装：✓ ・ リポジトリ内被引用：318  
   小型モデルの複数候補を大型モデルで並列検証し、出力分布を変えず700億パラメータモデルのデコードを最大約2.5倍高速化。
 
 - **2023-05 · [SpecInfer: Accelerating Generative Large Language Model Serving with Tree-based Speculative Inference and Verification](2023-2305.09781-specinfer-tree-speculative-inference.md)**  

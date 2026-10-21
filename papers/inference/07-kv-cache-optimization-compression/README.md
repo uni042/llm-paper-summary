@@ -711,6 +711,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   実装：✓ ・ リポジトリ内被引用：20  
   DroidSpeakは、同じ基盤モデルを微調整して得た異なるLLMが、同じ会話履歴や文書を別々に処理する際の重複プリフィルを減らす分散推論システムである。著者らは8種類のモデル対で層別の感度を測定し、KV差異に敏感な層は平均約11%と報告した。
 
+- **2025-10 · [Cache-to-Cache: Direct Semantic Communication Between Large Language Models](2025-2510.03215-cache-to-cache-direct-semantic-communication-between-large-language-mode.md)**  
+  実装：[✓](https://github.com/thu-nics/C2C) ・ リポジトリ内被引用：18  
+  複数の大規模言語モデル（LLM）が協調するシステムでは、あるモデルが推論や分析の結果を文章として生成し、別のモデルがその文章を読み込んで次の応答を作ることが多い。
+
 - **2025-05 · [R-KV: Redundancy-aware KV Cache Compression for Reasoning Models](2025-2505.24133-r-kv-redundancy-aware-kv-cache-compression-for-reasoning-models.md)**  
   実装：[✓](https://github.com/Zefan-Cai/R-KV) ・ リポジトリ内被引用：18  
   R-KVは、推論モデルが数学問題を解く際に生成する長い思考過程に含まれる重複を利用し、自己回帰復号中の鍵値キャッシュ（Key-Value キャッシュ、以下KVキャッシュ）を固定予算に抑える手法である。論文の例では8Bモデルが約32Kトークンを生成する場合、重み15.5GBに加えてKVキャッシュ約4.1GBを要する。
@@ -726,10 +730,6 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 - **2025-10 · [KVComm: Online Cross-context KV-cache Communication for Efficient LLM-based Multi-agent Systems](2025-2510.12872-kvcomm-online-cross-context-kv-cache-communication-for-efficient-llm-bas.md)**  
   実装：[✓](https://github.com/FastMAS/KVCOMM) ・ リポジトリ内被引用：17  
   複数の大規模言語モデル（LLM）エージェントが役割を分担すると、各エージェントのシステム指示、直前の発言、道具から得た文章は異なる。
-
-- **2025-10 · [Cache-to-Cache: Direct Semantic Communication Between Large Language Models](2025-2510.03215-cache-to-cache-direct-semantic-communication-between-large-language-mode.md)**  
-  実装：[✓](https://github.com/thu-nics/C2C) ・ リポジトリ内被引用：17  
-  複数の大規模言語モデル（LLM）が協調するシステムでは、あるモデルが推論や分析の結果を文章として生成し、別のモデルがその文章を読み込んで次の応答を作ることが多い。
 
 - **2024-12 · [DiffKV: Differentiated Memory Management for Large Language Models with Parallel KV Compaction](2024-2412.03131-diffkv-differentiated-memory-management-for-large-language-models-with-parallel-kv-compaction.md)**  
   実装：[✓](https://github.com/zyqCSL/DiffKV) ・ リポジトリ内被引用：17  
