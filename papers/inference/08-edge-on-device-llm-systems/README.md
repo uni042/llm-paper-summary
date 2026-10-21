@@ -199,11 +199,11 @@
 ### 4年前（2022-11〜2023-10）
 
 - **2023-08 · [EdgeMoE: Empowering Sparse Large Language Models on Mobile Devices](2023-2308.14352-edgemoe.md)**  
-  実装：[✓](https://github.com/UbiquitousLearning/mllm) ・ リポジトリ内被引用：49  
+  実装：[✓](https://github.com/UbiquitousLearning/mllm) ・ リポジトリ内被引用：50  
   MoE エキスパートを外部ストレージ化し、エキスパート別混合量子化と活性相関に基づく先読み・キャッシュでモバイル推論のI/O律速を緩和する。
 
 - **2023-09 · [LLMCad: Fast and Scalable On-device Large Language Model Inference](2023-2309.04255-llmcad-fast-and-scalable-on-device-large-language-model-inference.md)**  
-  実装：✓ ・ リポジトリ内被引用：17  
+  実装：✓ ・ リポジトリ内被引用：18  
   端末で言語モデルを動かす場合、モデル重みがメモリ容量を超えると、生成のたびにストレージから重みを読み直すことがある。原著の構成は三つの機構からなる。Jetson TX2/Orin NXとAndroidスマートフォンで、標準の大型モデル単独生成に対してトークン当たり平均時間をIoT端末で2.9〜9.3倍、スマートフォンで3.47〜4.67倍短縮したと報告する。
 
 ### 5年前（2021-11〜2022-10）
