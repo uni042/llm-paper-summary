@@ -1,38 +1,129 @@
 ---
-canonical_id: "DOI:10.1145/3779212.3790240"
-title: "Trinity: Three-Dimensional Tensor Program Optimization via Tile-level Equality Saturation"
-summary: "TrinityはTransformerのテンソル計算を、代数的同値変換、メモリI/O、実行順序・並列化の三軸で共同最適化するコンパイラ。タイル単位のロード・ストア・ループ・演算を明示した中間表現に等価性飽和を適用し、状態を伴うメモリ操作の意味保存とコンテキスト依存コストを扱う。QKV投影から注意までの完全融合などを自動発見し、H100上のLLaMA3 8B相当の構成でTensorRT比最大2.09倍、Mirage比最大3.07倍、手作業のFlashInfer比1.35倍のカーネル性能を報告する。"
-list_summary: "タイル単位の等価性飽和で代数変換・メモリ配置・実行融合を一体探索し、FlashAttention型の最適化やQKV投影から注意までの完全融合を自動生成するGPUコンパイラ。"
+canonical_id: DOI:10.1145/3779212.3790240
+title: 'Trinity: Three-Dimensional Tensor Program Optimization via Tile-level Equality Saturation'
+summary: TrinityはTransformerのテンソル計算を、代数的同値変換、メモリI/O、実行順序・並列化の三軸で共同最適化するコンパイラ。タイル単位のロード・ストア・ループ・演算を明示した中間表現に等価性飽和を適用し、状態を伴うメモリ操作の意味保存とコンテキスト依存コストを扱う。QKV投影から注意までの完全融合などを自動発見し、H100上のLLaMA3 8B相当の構成でTensorRT比最大2.09倍、Mirage比最大3.07倍、手作業のFlashInfer比1.35倍のカーネル性能を報告する。
+list_summary: タイル単位の等価性飽和で代数変換・メモリ配置・実行融合を一体探索し、FlashAttention型の最適化やQKV投影から注意までの完全融合を自動生成するGPUコンパイラ。
 authors:
-  - "Jaehyeong Park"
-  - "Youngchan Kim"
-  - "Haechan An"
-  - "Gieun Jeong"
-  - "Jeehoon Kang"
-  - "Dongsu Han"
-published: "2026-03-22"
-publication: "ASPLOS 2026, Volume 2, pp. 2079–2107"
-publication_type: "conference"
-publication_status: "published"
-source: "https://ina.kaist.ac.kr/assets/bibliography/Trinity.pdf"
+- Jaehyeong Park
+- Youngchan Kim
+- Haechan An
+- Gieun Jeong
+- Jeehoon Kang
+- Dongsu Han
+published: '2026-03-22'
+publication: ASPLOS 2026, Volume 2, pp. 2079–2107
+publication_type: conference
+publication_status: published
+source: https://ina.kaist.ac.kr/assets/bibliography/Trinity.pdf
 sources:
-  - "https://ina.kaist.ac.kr/assets/bibliography/Trinity.pdf"
-  - "https://doi.org/10.1145/3779212.3790240"
-implementation: "Rustの等価性飽和最適化器、Triton GPUカーネル生成・実測による候補選択。H100/A100/RTX4090/RTX5090で評価。公開再現実験資材は https://github.com/kaist-ina/Trinity-AE 。"
-code: "https://github.com/kaist-ina/Trinity-AE"
-last_checked: "2026-10-21"
+- https://ina.kaist.ac.kr/assets/bibliography/Trinity.pdf
+- https://doi.org/10.1145/3779212.3790240
+implementation: Rustの等価性飽和最適化器、Triton GPUカーネル生成・実測による候補選択。H100/A100/RTX4090/RTX5090で評価。公開再現実験資材は https://github.com/kaist-ina/Trinity-AE 。
+code: https://github.com/kaist-ina/Trinity-AE
+last_checked: '2026-10-21'
 worker_id: scheduled-chat-45
-scheduled_slot: "45"
+scheduled_slot: '45'
 worker_completed_at: '2026-10-21T19:09:03+09:00'
-worker_run_key: '20261021-1845-scheduled-chat-45/r02'
-reference_main_sha: "cb98a5f2ba41179ed0d32d6fb24e2225ef78d829"
+worker_run_key: 20261021-1845-scheduled-chat-45/r02
+reference_main_sha: cb98a5f2ba41179ed0d32d6fb24e2225ef78d829
 quality_self_review_passed: true
-repair_source_sha256: 'f59770ade1e0333795843141425f4995f580a17bc0dc0689238f9626cb0e3f5b'
-repair_reason: 'standard method/evaluation/limitation heading recognition; technical body and evaluation numbers preserved'
-quality_self_review_version: "PAPER-QUALITY-GUIDE-2026-10-07"
-research_origin: "worker-worklist-45 rank31 DOI:10.1145/3779212.3790240; primary ACM open-access author PDF"
+repair_source_sha256: f59770ade1e0333795843141425f4995f580a17bc0dc0689238f9626cb0e3f5b
+repair_reason: standard method/evaluation/limitation heading recognition; technical body and evaluation numbers preserved
+quality_self_review_version: PAPER-QUALITY-GUIDE-2026-10-07
+research_origin: worker-worklist-45 rank31 DOI:10.1145/3779212.3790240; primary ACM open-access author PDF
 last_audited: null
 audit_version: 0
+references:
+- canonical_id: arXiv:2403.09054
+- canonical_id: arXiv:2305.13245
+  arxiv_id: '2305.13245'
+- canonical_id: arXiv:2311.16867
+  arxiv_id: '2311.16867'
+- canonical_id: DOI:10.1145/3620665.3640366
+  doi: 10.1145/3620665.3640366
+- canonical_id: DOI:10.5555/3314872.3314896
+  doi: 10.5555/3314872.3314896
+- canonical_id: arXiv:2309.16609
+  arxiv_id: '2309.16609'
+- canonical_id: arXiv:1410.0759
+  arxiv_id: '1410.0759'
+- canonical_id: arXiv:2307.08691
+  arxiv_id: '2307.08691'
+- canonical_id: arXiv:2205.14135
+- canonical_id: DOI:10.1145/3575693.3576933
+  doi: 10.1145/3575693.3576933
+- canonical_id: arXiv:2504.17674
+  arxiv_id: '2504.17674'
+- canonical_id: DOI:10.1145/3689801
+  doi: 10.1145/3689801
+- canonical_id: DOI:10.1145/3582016.3582018
+  doi: 10.1145/3582016.3582018
+- canonical_id: DOI:10.1145/3656019.3689611
+  doi: 10.1145/3656019.3689611
+- canonical_id: DOI:10.18653/v1/2020.findings-emnlp.379
+  doi: 10.18653/v1/2020.findings-emnlp.379
+- canonical_id: DOI:10.1145/3620666.3651383
+  doi: 10.1145/3620666.3651383
+- canonical_id: DOI:10.1145/3341301.3359630
+  doi: 10.1145/3341301.3359630
+- canonical_id: DOI:10.1145/3133901
+  doi: 10.1145/3133901
+- canonical_id: DOI:10.1145/3192366.3192379
+  doi: 10.1145/3192366.3192379
+- canonical_id: DOI:10.1145/3676641.3716249
+  doi: 10.1145/3676641.3716249
+- canonical_id: arXiv:2211.17192
+- canonical_id: DOI:10.1145/233561.233564
+  doi: 10.1145/233561.233564
+- canonical_id: DOI:10.1145/3453483.3454083
+  doi: 10.1145/3453483.3454083
+- canonical_id: DOI:10.1145/2499370.2462176
+  doi: 10.1145/2499370.2462176
+- canonical_id: arXiv:2402.06262
+  arxiv_id: '2402.06262'
+- canonical_id: DOI:10.1145/3211346.3211348
+  doi: 10.1145/3211346.3211348
+- canonical_id: arXiv:2407.08608
+- canonical_id: arXiv:2002.05202
+  arxiv_id: '2002.05202'
+- canonical_id: arXiv:2410.20399
+  arxiv_id: '2410.20399'
+- canonical_id: DOI:10.1145/1480881.1480915
+  doi: 10.1145/1480881.1480915
+- canonical_id: arXiv:2405.09818
+  arxiv_id: '2405.09818'
+- canonical_id: DOI:10.1145/3315508.3329973
+  doi: 10.1145/3315508.3329973
+- canonical_id: arXiv:2302.13971
+  arxiv_id: '2302.13971'
+- canonical_id: DOI:10.5555/3295222.3295349
+  doi: 10.5555/3295222.3295349
+- canonical_id: DOI:10.14778/3407790.3407799
+  doi: 10.14778/3407790.3407799
+- canonical_id: arXiv:2405.05751
+- canonical_id: DOI:10.1145/3617232.3624858
+  doi: 10.1145/3617232.3624858
+- canonical_id: DOI:10.1145/3552326.3587440
+  doi: 10.1145/3552326.3587440
+- canonical_id: DOI:10.1145/3729262
+  doi: 10.1145/3729262
+- canonical_id: arXiv:2505.09388
+  arxiv_id: '2505.09388'
+- canonical_id: arXiv:2501.01005
+  arxiv_id: '2501.01005'
+- canonical_id: DOI:10.1145/3453483.3454106
+  doi: 10.1145/3453483.3454106
+- canonical_id: DOI:10.1145/3470496.3527440
+  doi: 10.1145/3470496.3527440
+- canonical_id: DOI:10.1145/3373376.3378508
+  doi: 10.1145/3373376.3378508
+- canonical_id: arXiv:2009.10924
+  arxiv_id: '2009.10924'
+- canonical_id: DOI:10.1145/3710848.3710864
+  doi: 10.1145/3710848.3710864
+references_checked_at: '2026-10-21'
+references_source: crossref-deposited-reference-metadata
+references_total: 67
 ---
 # Trinity：タイル単位の等価性飽和によるテンソル計算の三次元共同最適化
 
