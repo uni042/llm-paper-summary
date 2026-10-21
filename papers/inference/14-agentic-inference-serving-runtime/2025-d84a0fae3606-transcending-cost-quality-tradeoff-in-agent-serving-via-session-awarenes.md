@@ -1,31 +1,104 @@
 ---
-canonical_id: 'DOI:10.52202/085713-0097'
-title: 'Transcending Cost-Quality Tradeoff in Agent Serving via Session-Awareness'
-summary: 'LLMエージェントの連続対話をセッションとして扱い、到着予測によるKVキャッシュ退避、途中切り詰め後のRoPE位置補正、品質判定に応じたモデル昇格、需要供給比に基づくGPU再配置を統合するAgServe。NeurIPS 2025の実機評価で、AWエージェントではGPT-4oと近い品質を16.5%の費用で達成し、複数エージェント負荷では比較システム比64%の費用削減を報告する。'
-list_summary: 'エージェントのセッション到着予測に基づくKVキャッシュ保持、RoPEの原位置補正、品質監視によるモデル昇格、GPU動的再配置を統合し、長期対話の費用と品質を両立する。'
-authors: [Yanyu Ren, Li Chen, Dan Li, Xizheng Wang, Zhiyuan Wu, Yukai Miao, Yu Bai]
+canonical_id: DOI:10.52202/085713-0097
+title: Transcending Cost-Quality Tradeoff in Agent Serving via Session-Awareness
+summary: LLMエージェントの連続対話をセッションとして扱い、到着予測によるKVキャッシュ退避、途中切り詰め後のRoPE位置補正、品質判定に応じたモデル昇格、需要供給比に基づくGPU再配置を統合するAgServe。NeurIPS 2025の実機評価で、AWエージェントではGPT-4oと近い品質を16.5%の費用で達成し、複数エージェント負荷では比較システム比64%の費用削減を報告する。
+list_summary: エージェントのセッション到着予測に基づくKVキャッシュ保持、RoPEの原位置補正、品質監視によるモデル昇格、GPU動的再配置を統合し、長期対話の費用と品質を両立する。
+authors:
+- Yanyu Ren
+- Li Chen
+- Dan Li
+- Xizheng Wang
+- Zhiyuan Wu
+- Yukai Miao
+- Yu Bai
 published: '2025-12-02'
-publication: 'NeurIPS 2025, Advances in Neural Information Processing Systems 38'
+publication: NeurIPS 2025, Advances in Neural Information Processing Systems 38
 publication_type: conference
 publication_status: published
-source: 'https://proceedings.nips.cc/paper_files/paper/2025/file/04132e28265a355456f86a1c3fec3bcd-Paper-Conference.pdf'
+source: https://proceedings.nips.cc/paper_files/paper/2025/file/04132e28265a355456f86a1c3fec3bcd-Paper-Conference.pdf
 sources:
-  - 'https://proceedings.nips.cc/paper_files/paper/2025/hash/04132e28265a355456f86a1c3fec3bcd-Abstract-Conference.html'
-  - 'https://proceedings.nips.cc/paper_files/paper/2025/file/04132e28265a355456f86a1c3fec3bcd-Paper-Conference.pdf'
-implementation: 'vLLMベースのPythonサーバーとKV位置補正のCUDAカーネル。A6000 48GB×4を2ノード、A800 80GB×8を2ノードでAgentBench由来の4種エージェントを評価。'
-code: 'https://github.com/robinren03/agserve'
+- https://proceedings.nips.cc/paper_files/paper/2025/hash/04132e28265a355456f86a1c3fec3bcd-Abstract-Conference.html
+- https://proceedings.nips.cc/paper_files/paper/2025/file/04132e28265a355456f86a1c3fec3bcd-Paper-Conference.pdf
+implementation: vLLMベースのPythonサーバーとKV位置補正のCUDAカーネル。A6000 48GB×4を2ノード、A800 80GB×8を2ノードでAgentBench由来の4種エージェントを評価。
+code: https://github.com/robinren03/agserve
 last_checked: '2026-10-21'
 worker_id: scheduled-chat-00
 scheduled_slot: '00'
 worker_completed_at: '2026-10-21T02:00:00+09:00'
-worker_run_key: '20261021-0200-scheduled-chat-00/r01'
-reference_main_sha: '7398f464734e66d1d003374da64f60fdbff7b556'
+worker_run_key: 20261021-0200-scheduled-chat-00/r01
+reference_main_sha: 7398f464734e66d1d003374da64f60fdbff7b556
 quality_self_review_passed: true
-quality_self_review_version: 'PAPER-QUALITY-GUIDE-2026-10-07'
-returned_repair_origin: '20261018-2155-scheduled-chat-00/r01'
-returned_repair_reason: '差し戻しキューで評価説明量120文字。旧blocked原稿が固定mainで404のため、NeurIPS 2025の原著全文と表1〜3・図8〜14から再構成。'
+quality_self_review_version: PAPER-QUALITY-GUIDE-2026-10-07
+returned_repair_origin: 20261018-2155-scheduled-chat-00/r01
+returned_repair_reason: 差し戻しキューで評価説明量120文字。旧blocked原稿が固定mainで404のため、NeurIPS 2025の原著全文と表1〜3・図8〜14から再構成。
 last_audited: null
 audit_version: 0
+references:
+- canonical_id: arXiv:2303.08774
+  arxiv_id: '2303.08774'
+- canonical_id: arXiv:2406.07545
+  arxiv_id: '2406.07545'
+- canonical_id: arXiv:2307.13304
+- canonical_id: arXiv:2305.05176
+  arxiv_id: '2305.05176'
+- canonical_id: arXiv:2403.04132
+  arxiv_id: '2403.04132'
+- canonical_id: arXiv:2307.08691
+  arxiv_id: '2307.08691'
+- canonical_id: arXiv:2205.14135
+- canonical_id: arXiv:2404.14618
+  arxiv_id: '2404.14618'
+- canonical_id: arXiv:2403.19708
+- canonical_id: arXiv:2310.01801
+  arxiv_id: '2310.01801'
+- canonical_id: arXiv:2311.04934
+- canonical_id: arXiv:2401.11181
+- canonical_id: DOI:10.1145/3600006.3613165
+- canonical_id: arXiv:2211.17192
+- canonical_id: arXiv:2302.11665
+- canonical_id: arXiv:2308.03688
+  arxiv_id: '2308.03688'
+- canonical_id: DOI:10.1145/3651890.3672274
+- canonical_id: arXiv:2402.15538
+  arxiv_id: '2402.15538'
+- canonical_id: arXiv:2310.02170
+  arxiv_id: '2310.02170'
+- canonical_id: arXiv:2403.16971
+- canonical_id: arXiv:2311.15566
+- canonical_id: arXiv:1712.05889
+- canonical_id: arXiv:2402.04513
+  arxiv_id: '2402.04513'
+- canonical_id: arXiv:2311.18677
+- canonical_id: arXiv:1910.01108
+  arxiv_id: '1910.01108'
+- canonical_id: arXiv:2401.00588
+- canonical_id: arXiv:2010.03768
+  arxiv_id: '2010.03768'
+- canonical_id: arXiv:2406.03243
+- canonical_id: arXiv:2306.03314
+  arxiv_id: '2306.03314'
+- canonical_id: arXiv:2506.02634
+- canonical_id: arXiv:2408.15971
+  arxiv_id: '2408.15971'
+- canonical_id: arXiv:2010.13887
+  arxiv_id: '2010.13887'
+- canonical_id: DOI:10.1145/3552326.3587438
+- canonical_id: arXiv:2406.14884
+  arxiv_id: '2406.14884'
+- canonical_id: arXiv:2407.10671
+  arxiv_id: '2407.10671'
+- canonical_id: arXiv:2405.16444
+- canonical_id: arXiv:2210.03629
+  arxiv_id: '2210.03629'
+- canonical_id: arXiv:2311.10751
+  arxiv_id: '2311.10751'
+- canonical_id: DOI:10.5555/3600237.3600268
+- canonical_id: arXiv:2312.07104
+- canonical_id: arXiv:2401.09670
+- canonical_id: DOI:10.18653/v1/2021.naacl-industry.15
+references_checked_at: '2026-10-21'
+references_source: primary-pdf-reference-section
+references_total: 63
 ---
 # AgServe：セッション認識型LLMエージェント推論基盤
 
