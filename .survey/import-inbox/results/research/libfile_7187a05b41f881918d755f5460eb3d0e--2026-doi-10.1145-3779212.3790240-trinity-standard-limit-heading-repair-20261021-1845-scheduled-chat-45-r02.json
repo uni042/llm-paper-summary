@@ -1,13 +1,12 @@
 {
   "schema_version": 1,
   "artifact_type": "research",
-  "status": "imported",
-  "source_sha256": "f4239732449f76bdd959b66251a35eedd3393a6c29bcc0c355c67bd575863a00",
-  "canonical_id": "DOI:10.1145/3779212.3790240",
-  "paper_path": "papers/inference/09-kernel-runtime-compilation/2026-f777f1110d4d-trinity-three-dimensional-tensor-program-optimization-via-tile-level-equ.md",
-  "lineage": "09-kernel-runtime-compilation",
-  "audit_status": "PASS",
+  "status": "blocked_quality",
+  "source_sha256": "b0000444ea20b025d1065b9c983974eb5b0417802eeb528627c6b84b7a5e6bbd",
+  "normalized_source_sha256": null,
   "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_7187a05b41f881918d755f5460eb3d0e--2026-doi-10.1145-3779212.3790240-trinity-standard-limit-heading-repair-20261021-1845-scheduled-chat-45-r02.md",
+  "canonical_id": "DOI:10.1145/3779212.3790240",
   "worker_completed_at": "2026-10-21T19:09:03+09:00",
   "worker_run_key": "20261021-1845-scheduled-chat-45/r02",
   "quality_metrics": {
@@ -20,5 +19,8 @@
     "limitation_chars": 635,
     "insufficiency_flags": []
   },
-  "processed_at": "2026-10-21T11:00:36+00:00"
+  "failures": [
+    "長文定型文の再利用を検出: papers/inference/09-kernel-runtime-compilation/2026-f777f1110d4d-trinity-three-dimensional-tensor-program-optimization-via-tile-level-equ.md と 21 段落 / 4788文字 (100.0%) が完全一致"
+  ],
+  "processed_at": "2026-10-21T19:04:40+00:00"
 }

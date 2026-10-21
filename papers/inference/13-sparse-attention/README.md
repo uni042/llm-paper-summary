@@ -23,7 +23,7 @@
 - [11-llm-serving-scheduling-disaggregation](../11-llm-serving-scheduling-disaggregation/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（101本）
+## 自動生成の論文一覧（102本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -337,6 +337,10 @@
 - **2025-04 · [MMInference: Accelerating Pre-filling for Long-Context VLMs via Modality-Aware Permutation Sparse Attention](2025-2504.16083-mminference-accelerating-pre-filling-for-long-context-vlms-via-modality-.md)**  
   実装：[✓](https://aka.ms/MMInference) ・ リポジトリ内被引用：5  
   MMInferenceは、長い動画や動画とテキストが混在する視覚言語モデル（Vision-Language モデル; VLM）の入力処理段階を、モダリティごとの疎注意パターンに合わせて高速化する。報告される8.3倍は1Mトークンでのプリフィル時間に関する値であり、生成段階の一トークン時間ではない。
+
+- **2025-10 · [VideoNSA: Native Sparse Attention Scales Video Understanding](2025-2510.02295-videonsa-native-sparse-attention-scales-video-understanding.md)**  
+  実装：[✓](https://github.com/Espere-1119-Song/VideoNSA) ・ リポジトリ内被引用：1  
+  視覚トークンを事前にまとめて削る方式は計算量を抑えられるが、削った後に質問に必要な細部を復元できないという問題がある。ただし長動画ベンチマークすべてで最良ではなく、推論の理論演算量削減がそのまま実測高速化になっていない。
 
 - **2025-06 · [Kinetics: Rethinking Test-Time Scaling Laws](2025-2506.05333-kinetics-rethinking-test-time-scaling-laws.md)**  
   実装：[✓](https://github.com/Infini-AI-Lab/Kinetics) ・ リポジトリ内被引用：1  

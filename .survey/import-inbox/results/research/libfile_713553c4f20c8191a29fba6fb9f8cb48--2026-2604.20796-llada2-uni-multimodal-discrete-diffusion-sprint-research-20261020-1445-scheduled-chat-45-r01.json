@@ -1,13 +1,12 @@
 {
   "schema_version": 1,
   "artifact_type": "research",
-  "status": "imported",
+  "status": "blocked_quality",
   "source_sha256": "12e64d0a12f1a23fb8483ccab42d574c876691f64a3e34af862ed47f5c3847e7",
-  "canonical_id": "arXiv:2604.20796",
-  "paper_path": "papers/inference/99-other-inference-systems/2026-2604.20796-llada2-0-uni-unifying-multimodal-understanding-and-generation-with-diffu.md",
-  "lineage": "99-other-inference-systems",
-  "audit_status": "PASS",
+  "normalized_source_sha256": null,
   "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_713553c4f20c8191a29fba6fb9f8cb48--2026-2604.20796-llada2-uni-multimodal-discrete-diffusion-sprint-research-20261020-1445-scheduled-chat-45-r01.md",
+  "canonical_id": "arXiv:2604.20796",
   "worker_completed_at": "2026-10-20T14:56:15+09:00",
   "worker_run_key": "20261020-1445-scheduled-chat-45/r01",
   "quality_metrics": {
@@ -20,5 +19,8 @@
     "limitation_chars": 810,
     "insufficiency_flags": []
   },
-  "processed_at": "2026-10-20T15:21:56+00:00"
+  "failures": [
+    "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2026-2604.20796-llada2-0-uni-unifying-multimodal-understanding-and-generation-with-diffu.md と 10 段落 / 2127文字 (100.0%) が完全一致"
+  ],
+  "processed_at": "2026-10-21T19:04:38+00:00"
 }
