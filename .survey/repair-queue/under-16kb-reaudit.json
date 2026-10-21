@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-10-20T15:47:34.949480+00:00",
+  "generated_at": "2026-10-21T10:01:31.287429+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 5,
+  "count": 6,
   "worker_counts": {
     "scheduled-chat-00": 2,
-    "scheduled-chat-30": 1,
+    "scheduled-chat-30": 2,
     "scheduled-chat-45": 2
   },
   "entries": [
@@ -76,6 +76,26 @@
         "body_chars": 2413,
         "method_chars": 1072,
         "evaluation_chars": 505,
+        "limitation_chars": 0
+      },
+      "mechanical_failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/99-other-inference-systems/2026-2604.22442-hubrouter-a-pluggable-sub-quadratic-routing-primitive-for-hybrid-sequenc.md",
+      "canonical_id": "arXiv:2604.22442",
+      "title": "HubRouter: A Pluggable Sub-Quadratic Routing Primitive for Hybrid Sequence Models",
+      "file_bytes": 14842,
+      "source_sha256": "fa6290f37c22a77180da6c21508d88e35e42adfbf122ac15aa247bb93b8fc8cb",
+      "source_git_blob_sha": "3530356bfa754a094ea586e428dd5553aa7061ef",
+      "assigned_worker": "scheduled-chat-30",
+      "semantic_status": "pending",
+      "mechanical_status": "PASS",
+      "japanese_ratio": 0.867002,
+      "quality_metrics": {
+        "body_chars": 3839,
+        "method_chars": 1362,
+        "evaluation_chars": 516,
         "limitation_chars": 0
       },
       "mechanical_failures": [],
