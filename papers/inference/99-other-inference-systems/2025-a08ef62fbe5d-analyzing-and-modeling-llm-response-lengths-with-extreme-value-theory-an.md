@@ -1,51 +1,50 @@
 ---
-canonical_id: "DOI:10.18653/v1/2025.emnlp-main.1676"
+canonical_id: DOI:10.18653/v1/2025.emnlp-main.1676
 arxiv_id: null
 arxiv_categories: null
-title: "Analyzing and Modeling LLM Response Lengths with Extreme Value Theory: Anchoring Effects and Hybrid Distributions"
-summary: >-
-  LLM応答長を統計的にモデル化し、生成遅延や費用の見積りに役立てる研究。HotpotQAに対するGPT-4o応答14,301件を温度0/0.7とアンカープロンプト条件で比較し、応答単語数の本体を一般化極値分布（GEV）、上位5%の尾部を一般化パレート分布（GPD）で近似する。累積分布の適合度R²は単独GEVの0.998から混合モデル0.9993へ改善し、Qwen3とDeepSeek-V3でもGEVの形状を検証。ただし評価量はトークン数ではなく空白区切り単語数で、推論サーバの待ち時間やSLO達成率は直接測定していない。GEV形状の符号解釈、上限分布と重い尾部の関係には本文の整合性に注意が必要。
-list_summary: >-
-  GPT-4o応答14,301件の単語数をGEVとGPDで近似し、尾部適合R²=0.9993。LLM配信の応答長予測候補だが実機SLO検証は未実施。
+title: 'Analyzing and Modeling LLM Response Lengths with Extreme Value Theory: Anchoring Effects and Hybrid Distributions'
+summary: LLM応答長を統計的にモデル化し、生成遅延や費用の見積りに役立てる研究。HotpotQAに対するGPT-4o応答14,301件を温度0/0.7とアンカープロンプト条件で比較し、応答単語数の本体を一般化極値分布（GEV）、上位5%の尾部を一般化パレート分布（GPD）で近似する。累積分布の適合度R²は単独GEVの0.998から混合モデル0.9993へ改善し、Qwen3とDeepSeek-V3でもGEVの形状を検証。ただし評価量はトークン数ではなく空白区切り単語数で、推論サーバの待ち時間やSLO達成率は直接測定していない。GEV形状の符号解釈、上限分布と重い尾部の関係には本文の整合性に注意が必要。
+list_summary: GPT-4o応答14,301件の単語数をGEVとGPDで近似し、尾部適合R²=0.9993。LLM配信の応答長予測候補だが実機SLO検証は未実施。
 authors:
-  - Liuxuan Jiao
-  - Chen Gao
-  - Yiqian Yang
-  - Chenliang Zhou
-  - Yixian Huang
-  - Xinlei Chen
-  - Yong Li
-published: "2025-11"
-publication: "Proceedings of EMNLP 2025, pp. 32992–33002"
-publication_type: "conference"
-publication_status: "published"
-source: "https://aclanthology.org/2025.emnlp-main.1676.pdf"
+- Liuxuan Jiao
+- Chen Gao
+- Yiqian Yang
+- Chenliang Zhou
+- Yixian Huang
+- Xinlei Chen
+- Yong Li
+published: 2025-11
+publication: Proceedings of EMNLP 2025, pp. 32992–33002
+publication_type: conference
+publication_status: published
+source: https://aclanthology.org/2025.emnlp-main.1676.pdf
 sources:
-  - "https://aclanthology.org/2025.emnlp-main.1676.pdf"
-  - "https://aclanthology.org/2025.emnlp-main.1676/"
-implementation: >-
-  Python SciPyのgenextreme.fitと極値理論による分布当てはめ、しきい値探索、ブートストラップ信頼区間を用いる。公式公開コードURLは最終論文から確認できず、分布当てはめ・実運用SLO予測の再現は未実施。
+- https://aclanthology.org/2025.emnlp-main.1676.pdf
+- https://aclanthology.org/2025.emnlp-main.1676/
+implementation: Python SciPyのgenextreme.fitと極値理論による分布当てはめ、しきい値探索、ブートストラップ信頼区間を用いる。公式公開コードURLは最終論文から確認できず、分布当てはめ・実運用SLO予測の再現は未実施。
 code: null
-last_checked: "2026-10-22"
+last_checked: '2026-10-22'
 worker_id: scheduled-chat-30
-worker_completed_at: "2026-10-22T05:32:00+09:00"
-worker_run_key: '20261022-0532-scheduled-chat-30/r01'
-reference_main_sha: "631242fff891424766d2e280159fe5a77c39bec1"
+worker_completed_at: '2026-10-22T05:32:00+09:00'
+worker_run_key: 20261022-0532-scheduled-chat-30/r01
+reference_main_sha: 631242fff891424766d2e280159fe5a77c39bec1
 quality_self_review_passed: true
-quality_self_review_version: "PAPER-QUALITY-GUIDE-2026-10-07"
-repair_origin_worker_id: scheduled-chat-45
-repair_origin_worker_run_key: "20261021-0245-scheduled-chat-45/r01"
-quality_repair_note: "既存の手法・評価節と一次論文の統計数値を再確認し、前付けと担当来歴を更新。"
-
-scheduled_slot: '30'
-repair_of_source_sha256: e44e3c8624c493f3e4456778a8d7a98a90a708a0d31514e8ee04b71bca144d94
+quality_self_review_version: PAPER-QUALITY-GUIDE-2026-10-07
 repair_origin_worker_id: scheduled-chat-30
 repair_origin_worker_run_key: 20261021-0230-scheduled-chat-30/r01
+quality_repair_note: 既存の手法・評価節と一次論文の統計数値を再確認し、前付けと担当来歴を更新。
+scheduled_slot: '30'
+repair_of_source_sha256: e44e3c8624c493f3e4456778a8d7a98a90a708a0d31514e8ee04b71bca144d94
 repair_origin_reference_main_sha: afcc9501d5b757fb814470030930a4598a455487
 repair_reason: malformed_yaml_delimiter_and_unrecognized_method_heading
-repair_completed_at: "2026-10-21T02:54:44+09:00"
+repair_completed_at: '2026-10-21T02:54:44+09:00'
 last_audited: null
 audit_version: 0
+references:
+- canonical_id: arXiv:2305.13144
+references_checked_at: '2026-10-21'
+references_source: primary-pdf-reference-section
+references_total: 1
 ---
 
 # LLM応答長の極値統計：アンカー効果とGEV-GPD混合分布

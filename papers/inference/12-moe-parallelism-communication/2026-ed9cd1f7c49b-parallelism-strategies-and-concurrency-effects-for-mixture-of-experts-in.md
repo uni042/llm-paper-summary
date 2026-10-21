@@ -1,33 +1,59 @@
 ---
-canonical_id: "DOI:10.1109/SIEDS69358.2026.11540265"
-doi: "10.1109/SIEDS69358.2026.11540265"
-title: "Parallelism Strategies and Concurrency Effects for Mixture-of-Experts Inference on GPU Systems"
+canonical_id: DOI:10.1109/SIEDS69358.2026.11540265
+doi: 10.1109/SIEDS69358.2026.11540265
+title: Parallelism Strategies and Concurrency Effects for Mixture-of-Experts Inference on GPU Systems
 authors:
-  - Ananya Hegde
-  - Akshata Kumble
-  - Ravi Gupta
-published: "2026-05"
-publication: "2026 Systems and Information Engineering Design Symposium (SIEDS 2026), IEEE"
-publication_type: "conference"
-publication_status: "published"
-source: "https://s3.amazonaws.com/edas.manuscripts/final/1571253729.pdf?title=PDF+file"
+- Ananya Hegde
+- Akshata Kumble
+- Ravi Gupta
+published: 2026-05
+publication: 2026 Systems and Information Engineering Design Symposium (SIEDS 2026), IEEE
+publication_type: conference
+publication_status: published
+source: https://s3.amazonaws.com/edas.manuscripts/final/1571253729.pdf?title=PDF+file
 sources:
-  - "https://s3.amazonaws.com/edas.manuscripts/final/1571253729.pdf?title=PDF+file"
-  - "https://doi.org/10.1109/SIEDS69358.2026.11540265"
-  - "https://ananya-mh.github.io/"
-summary: "GPU上の混合専門家モデル（MoE）の推論配置を、テンソル並列（TP）、専門家並列（EP）、両者の単純な併用で比較した実測研究。vLLM、A100、3種類の自己回帰MoEモデル、3種類の入出力負荷、同時要求数1～128の189構成を調べ、EPの平均処理量はTP比85.4～102.4%、60専門家のQwenでは128同時要求のデコード重視負荷で3070対2317 token/sとEPが32.5%優位だった。一方、4台のA100-40GBを用いた併用方式は2台のA100-80GBを用いた単独方式より大幅に遅く、GPU構成差のため厳密な同条件比較ではない。分散配置の優劣だけでなく、同時要求数が処理量変動に及ぼす影響、初回トークン遅延、GPU当たり効率、拡散型MoEの処理量、配置予測器の限界を一次論文の表・図に即して整理する。"
-list_summary: "A100上のMoE推論でTP・EP・併用配置を比較。60専門家Qwenの高同時要求ではEPが32.5%高速だが、単純併用は劣後し、同時要求数の調整が重要と示した。"
-implementation: "NVIDIA A100上のvLLM 0.8+オンラインサービングを用いた実機比較。拡散言語モデルの比較はHugging Face Transformers上の別のカスタム推論エンジンを用いる。著者が公開する実験コードリポジトリは存在するが、論文で評価した全環境・全結果を第三者が再現できることまでは確認していない。"
-code: "https://github.com/ananya-mh/optimizing-moe-inference"
-last_checked: "2026-10-21"
-worker_completed_at: "2026-10-22T00:01:04+09:00"
-worker_run_key: "20261021-2357-scheduled-chat-00/r01"
-worker_id: "scheduled-chat-00"
-reference_main_sha: "5ce708742d1c73081dfd6867f0c01a05dd2253f5"
+- https://s3.amazonaws.com/edas.manuscripts/final/1571253729.pdf?title=PDF+file
+- https://doi.org/10.1109/SIEDS69358.2026.11540265
+- https://ananya-mh.github.io/
+summary: GPU上の混合専門家モデル（MoE）の推論配置を、テンソル並列（TP）、専門家並列（EP）、両者の単純な併用で比較した実測研究。vLLM、A100、3種類の自己回帰MoEモデル、3種類の入出力負荷、同時要求数1～128の189構成を調べ、EPの平均処理量はTP比85.4～102.4%、60専門家のQwenでは128同時要求のデコード重視負荷で3070対2317 token/sとEPが32.5%優位だった。一方、4台のA100-40GBを用いた併用方式は2台のA100-80GBを用いた単独方式より大幅に遅く、GPU構成差のため厳密な同条件比較ではない。分散配置の優劣だけでなく、同時要求数が処理量変動に及ぼす影響、初回トークン遅延、GPU当たり効率、拡散型MoEの処理量、配置予測器の限界を一次論文の表・図に即して整理する。
+list_summary: A100上のMoE推論でTP・EP・併用配置を比較。60専門家Qwenの高同時要求ではEPが32.5%高速だが、単純併用は劣後し、同時要求数の調整が重要と示した。
+implementation: NVIDIA A100上のvLLM 0.8+オンラインサービングを用いた実機比較。拡散言語モデルの比較はHugging Face Transformers上の別のカスタム推論エンジンを用いる。著者が公開する実験コードリポジトリは存在するが、論文で評価した全環境・全結果を第三者が再現できることまでは確認していない。
+code: https://github.com/ananya-mh/optimizing-moe-inference
+last_checked: '2026-10-21'
+worker_completed_at: '2026-10-22T00:01:04+09:00'
+worker_run_key: 20261021-2357-scheduled-chat-00/r01
+worker_id: scheduled-chat-00
+reference_main_sha: 5ce708742d1c73081dfd6867f0c01a05dd2253f5
 quality_self_review_passed: true
-quality_self_review_version: "PAPER-QUALITY-GUIDE-2026-10-07"
+quality_self_review_version: PAPER-QUALITY-GUIDE-2026-10-07
 last_audited: null
 audit_version: 0
+references:
+- canonical_id: arXiv:1701.06538
+- canonical_id: arXiv:2401.04088
+  arxiv_id: '2401.04088'
+- canonical_id: arXiv:2412.19437
+  arxiv_id: '2412.19437'
+- canonical_id: arXiv:1909.08053
+  arxiv_id: '1909.08053'
+- canonical_id: arXiv:2201.05596
+- canonical_id: DOI:10.1145/3600006.3613165
+- canonical_id: arXiv:2409.02060
+  arxiv_id: '2409.02060'
+- canonical_id: arXiv:2502.09992
+  arxiv_id: '2502.09992'
+- canonical_id: arXiv:2509.24389
+  arxiv_id: '2509.24389'
+- canonical_id: arXiv:2101.03961
+- canonical_id: arXiv:2206.03382
+- canonical_id: arXiv:2006.16668
+  arxiv_id: '2006.16668'
+- canonical_id: arXiv:2307.08691
+- canonical_id: arXiv:2104.04473
+- canonical_id: DOI:10.5555/3600237.3600268
+references_checked_at: '2026-10-21'
+references_source: primary-pdf-reference-section
+references_total: 22
 ---
 
 # GPU上のMoE推論における並列配置と同時要求数の効果

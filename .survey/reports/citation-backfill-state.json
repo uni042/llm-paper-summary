@@ -24939,7 +24939,7 @@
       "status": "blocked",
       "source_fingerprint": "55e11e7d8a9612c5eecdbdf940b1649c20ab483fc247ae65c1a79ca065293708",
       "error": "PDF fallback failed: no primary PDF URL discovered",
-      "checked_at": "2026-10-21T21:30:08+00:00"
+      "checked_at": "2026-10-21T22:31:04+00:00"
     },
     "papers/inference/09-kernel-runtime-compilation/2026-2604.20021-continuous-semantic-caching-for-low-cost-llm-serving.md": {
       "status": "complete",
@@ -25164,10 +25164,13 @@
       "checked_at": "2026-10-21T21:29:02+00:00"
     },
     "papers/inference/12-moe-parallelism-communication/2026-ed9cd1f7c49b-parallelism-strategies-and-concurrency-effects-for-mixture-of-experts-in.md": {
-      "status": "blocked",
+      "status": "complete",
       "source_fingerprint": "cfc0b51ee345932d2cb6c515bd8bce5f10d441341e390072862d067c69e52173",
-      "error": "ValueError: no supported primary reference extractor for non-arXiv paper",
-      "checked_at": "2026-10-21T21:45:10+00:00"
+      "references_total": 22,
+      "normalized_references": 15,
+      "source": "primary-pdf-reference-section",
+      "source_url": "https://s3.amazonaws.com/edas.manuscripts/final/1571253729.pdf?title=PDF+file",
+      "checked_at": "2026-10-21T22:31:11+00:00"
     },
     "papers/inference/05-speculative-decoding-moe/2026-2605.14978-performance-driven-policy-optimization-for-speculative-decoding-with-ada.md": {
       "status": "complete",
@@ -25210,16 +25213,22 @@
       "checked_at": "2026-10-21T22:22:18+00:00"
     },
     "papers/inference/99-other-inference-systems/2025-2505.03031-radio-rate-distortion-optimization-for-large-language-model-compression.md": {
-      "status": "blocked",
+      "status": "complete",
       "source_fingerprint": "cc86ff65b60a82dd316a71a73454e1d26a188b88ac37be09d2740698459c465b",
-      "error": "ValueError: arXiv HTML failed (HTTPError: HTTP Error 404: Not Found); source fallback failed (ValueError: arXiv source archive contained no compiled/reference-section bibitems)",
-      "checked_at": "2026-10-21T22:22:28+00:00"
+      "references_total": 29,
+      "normalized_references": 16,
+      "source": "primary-pdf-reference-section",
+      "source_url": "https://arxiv.org/pdf/2505.03031.pdf",
+      "checked_at": "2026-10-21T22:31:29+00:00"
     },
     "papers/inference/99-other-inference-systems/2025-a08ef62fbe5d-analyzing-and-modeling-llm-response-lengths-with-extreme-value-theory-an.md": {
-      "status": "blocked",
+      "status": "complete",
       "source_fingerprint": "e02ec08dfb292c0cb00d0996983e32af3cc11632d709d0aeb0768ce30063f27e",
-      "error": "ValueError: no supported primary reference extractor for non-arXiv paper",
-      "checked_at": "2026-10-21T22:22:30+00:00"
+      "references_total": 1,
+      "normalized_references": 1,
+      "source": "primary-pdf-reference-section",
+      "source_url": "https://aclanthology.org/2025.emnlp-main.1676.pdf",
+      "checked_at": "2026-10-21T22:31:32+00:00"
     },
     "papers/inference/99-other-inference-systems/2026-2606.31796-cherry-compressed-hierarchical-experts-with-recurrent-representational-y.md": {
       "status": "complete",
@@ -25230,5 +25239,5 @@
       "checked_at": "2026-10-21T22:22:34+00:00"
     }
   },
-  "updated_at": "2026-10-21T22:26:50+00:00"
+  "updated_at": "2026-10-21T22:32:06+00:00"
 }
