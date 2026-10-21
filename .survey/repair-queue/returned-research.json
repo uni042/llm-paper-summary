@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-21T21:27:29+00:00",
+  "generated_at": "2026-10-21T21:36:32+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 40,
+  "count": 39,
   "entries": [
     {
       "canonical_id": "DOI:10.1145/3714983.3714987",
@@ -142,33 +142,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-7674b7a14ad0--libfile_bf64d1d864488191b3cf0e73ea18cb34--2025-2510.16807-skipv1former-first-value-skip-kv-research-20261018-0430-scheduled-chat-30-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-7674b7a14ad0--libfile_bf64d1d864488191b3cf0e73ea18cb34--2025-2510.16807-skipv1former-first-value-skip-kv-research-20261018-0430-scheduled-chat-30.json",
       "worker_run_key": "20261018-0430-scheduled-chat-30/r01"
-    },
-    {
-      "canonical_id": "DOI:10.1109/SIEDS69358.2026.11540265",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-18T06:09:18+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5289,
-        "body_paragraphs": 29,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 1994,
-        "limitation_chars": 552,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-f0e93b6a927a--libfile_f385dd79293c819192d7e86828e4c4eb--2026-doi-10.1109.SIEDS69358.2026.11540265-moe-parallelism-concurrency-research-20261018-1345-scheduled-chat-45-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-f0e93b6a927a--libfile_f385dd79293c819192d7e86828e4c4eb--2026-doi-10.1109.SIEDS69358.2026.11540265-moe-parallelism-concurrency-research-20261018-1.json",
-      "worker_run_key": "20261018-1345-scheduled-chat-45/r01"
     },
     {
       "canonical_id": "arXiv:2609.21264",
@@ -1101,8 +1074,8 @@
     },
     {
       "canonical_id": "arXiv:2605.16839",
-      "title": "CompactAttention: Accelerating Chunked Prefill with Block-Union KV Selection",
-      "source_url": "https://arxiv.org/pdf/2605.16839",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-21T21:26:37+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-45",

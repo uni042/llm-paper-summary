@@ -24,7 +24,7 @@ MoEの専門家並列、テンソル並列との混成、all-to-all通信、専�
 - [02-adaptive-expert-computation-compression](../02-adaptive-expert-computation-compression/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（52本）
+## 自動生成の論文一覧（53本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -128,6 +128,10 @@ MoEの専門家並列、テンソル並列との混成、all-to-all通信、専�
 - **2026-05 · [SiDP: Memory-Efficient Data Parallelism for Offline LLM Inference](2026-2605.28095-sidp-memory-efficient-data-parallelism.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   SiDPはデータ並列GPU間でFFN重みを一度だけ保持する共有プールを作り、バッチ規模に応じて重み先読み型と活性値集約型を切り替え、KV容量不足と重複重みを減らす。
+
+- **2026-05 · [Parallelism Strategies and Concurrency Effects for Mixture-of-Experts Inference on GPU Systems](2026-ed9cd1f7c49b-parallelism-strategies-and-concurrency-effects-for-mixture-of-experts-in.md)**  
+  実装：[✓](https://github.com/ananya-mh/optimizing-moe-inference) ・ リポジトリ内被引用：0  
+  単純なTP+EP併用は全モデルの平均でTPの38～54%の処理量にとどまり、実機構成が2台の80GB GPU対4台の40GB GPUと異なる点が大きな解釈上の制約となる。
 
 - **2026-05 · [EnergyLens: Predictive Energy-Aware Exploration for Multi-GPU LLM Inference Optimization](2026-2605.14249-energylens-predictive-energy-aware-exploration-for-multi-gpu-llm-inferen.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

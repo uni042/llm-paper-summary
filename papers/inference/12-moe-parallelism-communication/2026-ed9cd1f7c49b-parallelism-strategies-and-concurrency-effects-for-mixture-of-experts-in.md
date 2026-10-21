@@ -26,6 +26,8 @@ worker_id: "scheduled-chat-00"
 reference_main_sha: "5ce708742d1c73081dfd6867f0c01a05dd2253f5"
 quality_self_review_passed: true
 quality_self_review_version: "PAPER-QUALITY-GUIDE-2026-10-07"
+last_audited: null
+audit_version: 0
 ---
 
 # GPU上のMoE推論における並列配置と同時要求数の効果

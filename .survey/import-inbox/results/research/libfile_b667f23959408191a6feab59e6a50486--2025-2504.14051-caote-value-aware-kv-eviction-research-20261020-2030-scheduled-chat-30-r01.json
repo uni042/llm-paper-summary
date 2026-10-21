@@ -1,13 +1,12 @@
 {
   "schema_version": 1,
   "artifact_type": "research",
-  "status": "imported",
+  "status": "blocked_quality",
   "source_sha256": "cac57ca17d28b5e08274755693c1f617f11525c0be515e9c9d99de98163a8def",
-  "canonical_id": "arXiv:2504.14051",
-  "paper_path": "papers/inference/07-kv-cache-optimization-compression/2025-2504.14051-caote-kv-cache-selection-for-llms-via-attention-output-error-based-token.md",
-  "lineage": "07-kv-cache-optimization-compression",
-  "audit_status": "PASS",
+  "normalized_source_sha256": null,
   "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_b667f23959408191a6feab59e6a50486--2025-2504.14051-caote-value-aware-kv-eviction-research-20261020-2030-scheduled-chat-30-r01.md",
+  "canonical_id": "arXiv:2504.14051",
   "worker_completed_at": "2026-10-20T20:54:00+09:00",
   "worker_run_key": "20261020-2030-scheduled-chat-30/r01",
   "quality_metrics": {
@@ -20,5 +19,8 @@
     "limitation_chars": 364,
     "insufficiency_flags": []
   },
-  "processed_at": "2026-10-20T16:23:26+00:00"
+  "failures": [
+    "長文定型文の再利用を検出: papers/inference/07-kv-cache-optimization-compression/2025-2504.14051-caote-kv-cache-selection-for-llms-via-attention-output-error-based-token.md と 16 段落 / 3561文字 (100.0%) が完全一致"
+  ],
+  "processed_at": "2026-10-21T21:35:00+00:00"
 }
