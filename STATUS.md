@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-10-21 23:25:42 JST**
+> 自動生成: **2026-10-21 23:48:26 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -15,7 +15,7 @@
 | 未claim Research job | **1336** |
 | 直近24hのResearch処理完了 | **30** |
 | 最終Research処理完了 | **10-21 21:26:00 JST** |
-| 最終Discovery探索完了 | **10-21 21:54:00 JST** |
+| 最終Discovery探索完了 | **10-21 22:45:00 JST** |
 | 整合性異常 | **0** |
 
 ## 16KB未満論文サマリーの再監査
@@ -56,8 +56,8 @@
 | 未処理Discovery候補 | **122594** |
 | 収録済み | **2772** |
 | Research / Audit候補へ昇格済み | **1068** |
-| 無関係として除外 | **12320** |
-| 微妙として除外 | **5090** |
+| 無関係として除外 | **12318** |
+| 微妙として除外 | **5092** |
 
 ### 探索候補の事前フィルタリング（可逆）
 
@@ -116,7 +116,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **10-21 10:56:30 JST（12時間29分前）** |
+| 最終maintenance完了 | **10-21 10:56:30 JST（12時間51分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **passed** |
 | health | **issues_found** |
@@ -137,18 +137,18 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 | 指標 | 現在値 |
 |---|---:|
 | 直近6hのResearch完了 | **5** |
-| 直近6hのDiscovery run | **6** |
-| 直近6hのDiscovery本文確認・分類 | **6** |
+| 直近6hのDiscovery run | **10** |
+| 直近6hのDiscovery本文確認・分類 | **10** |
 | 最終Research完了 | **10-21 21:26:00 JST** |
-| 最終Discovery完了 | **10-21 21:54:00 JST** |
+| 最終Discovery完了 | **10-21 22:45:00 JST** |
 
 ### 最新Library-first run
 
 - Research: **10-21 21:26:00 JST** / worker — / run 20261021-2126-scheduled-chat-30/r01 / 成果 **1件**
   - evidence: .survey/import-inbox/results/research/libfile_28b73a7f8db88191a92ecbd4e314c0b6--2026-2603.27462-rsr-core-low-bit-matvec-research-20261021-2126-scheduled-chat-30-r01.json
-- Discovery: **10-21 21:54:00 JST** / worker scheduled-chat-45 / run 20261021-2154-scheduled-chat-45/r01/research-prescreen/003
+- Discovery: **10-21 22:45:00 JST** / worker scheduled-chat-45 / run 20261021-2245-scheduled-chat-45/r01/research-prescreen/010
   - 本文確認・分類 **1件** / accept **0件** / unrelated+borderline **1件**
-  - evidence: .survey/import-inbox/results/discovery/libfile_0e1fbf5bd54481918c5a26e76157b059--discovery-20261021-2154-scheduled-chat-45-research-prescreen-r01-003.json
+  - evidence: .survey/import-inbox/results/discovery/libfile_0c14d2fb8b648191a69ac7cf08471b70--discovery-20261021-2245-scheduled-chat-45-research-prescreen-r01-010.json
 
 ### Codex探索成果の反映状況
 
