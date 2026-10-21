@@ -23,7 +23,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - [06-moe-quantization-compression](../06-moe-quantization-compression/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（134本）
+## 自動生成の論文一覧（136本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -232,6 +232,10 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   実装：[✓](https://github.com/deep-spin/entmaxkv) ・ リポジトリ内被引用：0  
   疎なデコードは必要そうなトークンやページだけを読むが、softmaxは有限スコアを持つ全トークンに正の確率を割り当てるため、どれほど小さくても捨てた確率質量が残る。
 
+- **2026-05 · [Eliminating Hidden Serialization in Multi-Node Megakernel Communication](2026-2605.00686-eliminating-hidden-serialization-in-multi-node-megakernel-communication.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  提案システムPerseusは、(1)GPU側でデータ転送と通知を分離し、宛先群ごとに順序保証をまとめる分離通知（decoupled signaling）、(2)CPUプロキシが転送完了を待つ代わりに、NICのハードウェアfenceフラグで通知の順序を保証するNIC側順序制御（NIC-side ordering）を組み合わせる。
+
 - **2026-05 · [DynaFlow: Transparent and Flexible Intra-Device Parallelism via Programmable Operator Scheduling](2026-2605.21603-dynaflow-transparent-and-flexible-intra-device-parallelism-via-programma.md)**  
   実装：[✓](https://github.com/uw-syfi/DynaFlow) ・ リポジトリ内被引用：0  
   複数の演算子を重畳する最適化自体は既知だが、実際のvLLMやSGLangへ組み込むにはモデル実行順序の大規模な変更が必要であり、入力長・バッチ量・GPU世代で最適な重畳方式も変わる。従来の配信・学習システム6種類へ代表的な装置内並列方式を導入し、元のシステム比で最大1.29倍の端から端までの処理量を実測した。
@@ -259,6 +263,10 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - **2026-04 · [Evaluating CUDA Tile for AI Workloads on Hopper and Blackwell GPUs](2026-2604.23466-evaluating-cuda-tile-for-ai-workloads-on-hopper-and-blackwell-gpus.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   本論文は、NVIDIAのタイル単位GPUプログラミング基盤CUDA Tile（CuTile）を採用すべき条件を、性能と開発工数の両面から実測した比較研究である。CuTileは行列積や注意計算をタイル演算として記述し、スレッド束、共有メモリ配置、レジスタ割当の一部をコンパイラへ任せる。主要結果は二面的である。
+
+- **2026-04 · [Continuous Semantic Caching for Low-Cost LLM Serving](2026-2604.20021-continuous-semantic-caching-for-low-cost-llm-serving.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  キャッシュの容量は有限であり、どの応答を保存すれば推論費用と不一致費用の合計を小さくできるかが問題になる。提案の中心は、近い問い合わせを代表点へまとめるε-netによる離散化と、観測された一部の推論費用から周辺の費用を推定するカーネルリッジ回帰（カーネル ridge regression; KRR）である。
 
 - **2026-04 · [Active Imitation Learning for Thermal- and Kernel-Aware LFM Inference on 3D S-NUCA Many-Cores](2026-2604.11948-active-imitation-learning-for-thermal-and-kernel-aware-lfm-inference-on-.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

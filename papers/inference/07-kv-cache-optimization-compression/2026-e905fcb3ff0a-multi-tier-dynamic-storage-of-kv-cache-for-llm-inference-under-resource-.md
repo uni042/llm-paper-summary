@@ -27,6 +27,8 @@ worker_run_key: "20261022-0145-scheduled-chat-45/r01"
 reference_main_sha: "cdfca928211a5dcc63c33326f361b674eb54e79a"
 quality_self_review_passed: true
 quality_self_review_version: "PAPER-QUALITY-GUIDE-2026-10-07"
+last_audited: null
+audit_version: 0
 ---
 
 # MTDS：資源制約下のLLM推論に向けたKVキャッシュ階層記憶制御

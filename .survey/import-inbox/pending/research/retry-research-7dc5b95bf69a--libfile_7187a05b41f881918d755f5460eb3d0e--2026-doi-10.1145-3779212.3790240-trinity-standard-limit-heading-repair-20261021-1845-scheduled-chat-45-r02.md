@@ -31,6 +31,8 @@ repair_source_sha256: 'f59770ade1e0333795843141425f4995f580a17bc0dc0689238f9626c
 repair_reason: 'standard method/evaluation/limitation heading recognition; technical body and evaluation numbers preserved'
 quality_self_review_version: "PAPER-QUALITY-GUIDE-2026-10-07"
 research_origin: "worker-worklist-45 rank31 DOI:10.1145/3779212.3790240; primary ACM open-access author PDF"
+last_audited: null
+audit_version: 0
 ---
 # Trinity：タイル単位の等価性飽和によるテンソル計算の三次元共同最適化
 

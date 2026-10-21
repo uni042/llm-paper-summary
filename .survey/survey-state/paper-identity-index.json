@@ -1,6 +1,6 @@
 {
   "schema_version": 3,
-  "active_count": 2818,
+  "active_count": 2822,
   "papers": {
     "arXiv:2101.06840": {
       "path": "papers/inference/01-offload-hierarchical-memory/2021-2101.06840-zero-offload-democratizing-billion-scale-model-training.md",
@@ -5534,6 +5534,13 @@
       ],
       "source_hash": "7865fb54875760f85d2435a5fcf97d5b8717c4da7fd1be1bce0ea5261f133a71"
     },
+    "DOI:10.1007/s40747-025-02200-4": {
+      "path": "papers/inference/07-kv-cache-optimization-compression/2026-e905fcb3ff0a-multi-tier-dynamic-storage-of-kv-cache-for-llm-inference-under-resource-.md",
+      "identifiers": [
+        "DOI:10.1007/s40747-025-02200-4"
+      ],
+      "source_hash": "a11b4b1bc6266c38665f9a45c665b9ebeec539ec415542f17c8f1a7fa16eeefc"
+    },
     "DOI:10.18653/v1/2026.findings-acl.201": {
       "path": "papers/inference/07-kv-cache-optimization-compression/2026-ec9fa0b99268-hqekv-towards-hybrid-quantization-and-eviction-for-kv-cache-in-long-cont.md",
       "identifiers": [
@@ -6629,6 +6636,13 @@
       ],
       "source_hash": "2b1ca9ce5e5cafe43148c278e3dc5569027c4f15ae076f9bb4638f3026489c7d"
     },
+    "arXiv:2604.20021": {
+      "path": "papers/inference/09-kernel-runtime-compilation/2026-2604.20021-continuous-semantic-caching-for-low-cost-llm-serving.md",
+      "identifiers": [
+        "arXiv:2604.20021"
+      ],
+      "source_hash": "22c2591bf44cabd01578d3bdd6e14c927e7abe49ba3b2f0d06a5f6c7e464e7a9"
+    },
     "arXiv:2604.23466": {
       "path": "papers/inference/09-kernel-runtime-compilation/2026-2604.23466-evaluating-cuda-tile-for-ai-workloads-on-hopper-and-blackwell-gpus.md",
       "identifiers": [
@@ -6643,6 +6657,13 @@
         "arXiv:2604.23467"
       ],
       "source_hash": "4afe3d4884834d444737f56d55f69411750322c9081b4d4b7381749a6d0ee31d"
+    },
+    "arXiv:2605.00686": {
+      "path": "papers/inference/09-kernel-runtime-compilation/2026-2605.00686-eliminating-hidden-serialization-in-multi-node-megakernel-communication.md",
+      "identifiers": [
+        "arXiv:2605.00686"
+      ],
+      "source_hash": "312e5118d7560f90b1fe8b00a79d328f644084bef422d2077e1302d895459e0c"
     },
     "arXiv:2605.06320": {
       "path": "papers/inference/09-kernel-runtime-compilation/2026-2605.06320-improving-the-efficiency-of-language-agent-teams-with-adaptive-task-grap.md",
@@ -8208,6 +8229,13 @@
         "arXiv:2411.17741"
       ],
       "source_hash": "de8483a23c602b1ec26b284ae097f75e11025d7be86bfb2ad61279be9ed8ceb7"
+    },
+    "arXiv:2411.18424": {
+      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2411.18424-fastswitch-optimizing-context-switching-efficiency-in-fairness-aware-lar.md",
+      "identifiers": [
+        "arXiv:2411.18424"
+      ],
+      "source_hash": "3e803dea754a8f5cd64b336b1c4a65be10e776b37bafc7af0e552bf492c75495"
     },
     "arXiv:2411.19379": {
       "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2411.19379-marconi-prefix-caching-for-the-era-of-hybrid-llms.md",
@@ -21671,6 +21699,7 @@
     "DOI:10.1145/3789240.3829159": "DOI:10.1145/3789240.3829159",
     "DOI:10.1145/3793230.3837769": "DOI:10.1145/3793230.3837769",
     "DOI:10.1145/3767295.3803570": "DOI:10.1145/3767295.3803570",
+    "DOI:10.1007/s40747-025-02200-4": "DOI:10.1007/s40747-025-02200-4",
     "DOI:10.18653/v1/2026.findings-acl.201": "DOI:10.18653/v1/2026.findings-acl.201",
     "DOI:10.18653/v1/2026.acl-long.1683": "DOI:10.18653/v1/2026.acl-long.1683",
     "DOI:10.18653/v1/2026.findings-acl.494": "DOI:10.18653/v1/2026.findings-acl.494",
@@ -21860,9 +21889,11 @@
     "arXiv:2604.14825": "arXiv:2604.14825",
     "arXiv:2604.16883": "arXiv:2604.16883",
     "arXiv:2604.16957": "arXiv:2604.16957",
+    "arXiv:2604.20021": "arXiv:2604.20021",
     "arXiv:2604.23466": "arXiv:2604.23466",
     "DOI:10.48550/arxiv.2604.23467": "arXiv:2604.23467",
     "arXiv:2604.23467": "arXiv:2604.23467",
+    "arXiv:2605.00686": "arXiv:2605.00686",
     "arXiv:2605.06320": "arXiv:2605.06320",
     "arXiv:2605.08587": "arXiv:2605.08587",
     "arXiv:2605.11581": "arXiv:2605.11581",
@@ -22156,6 +22187,7 @@
     "arXiv:2411.16102": "arXiv:2411.16102",
     "DOI:10.1145/3725843.3756083": "arXiv:2411.17741",
     "arXiv:2411.17741": "arXiv:2411.17741",
+    "arXiv:2411.18424": "arXiv:2411.18424",
     "arXiv:2411.19379": "arXiv:2411.19379",
     "arXiv:2412.17246": "arXiv:2412.17246",
     "arXiv:2412.20322": "arXiv:2412.20322",

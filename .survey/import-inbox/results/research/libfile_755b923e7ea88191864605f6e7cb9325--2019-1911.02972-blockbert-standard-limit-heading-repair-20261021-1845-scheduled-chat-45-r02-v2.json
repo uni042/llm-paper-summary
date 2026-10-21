@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "07d3abe912f562c7313906c1132cccb031062bb5b8c0fb061b9d1176a40f237c",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_755b923e7ea88191864605f6e7cb9325--2019-1911.02972-blockbert-standard-limit-heading-repair-20261021-1845-scheduled-chat-45-r02-v2.md",
+  "canonical_id": "arXiv:1911.02972",
+  "worker_completed_at": "2026-10-21T19:09:03+09:00",
+  "worker_run_key": "20261021-1845-scheduled-chat-45/r02",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 6236,
+    "body_paragraphs": 28,
+    "method_chars": 1707,
+    "method_paragraphs": 8,
+    "evaluation_chars": 1576,
+    "limitation_chars": 742,
+    "insufficiency_flags": []
+  },
+  "failures": [
+    "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2019-1911.02972-blockwise-self-attention-for-long-document-understanding.md と 24 段落 / 5705文字 (100.0%) が完全一致"
+  ],
+  "processed_at": "2026-10-21T19:22:06+00:00"
+}
