@@ -68,6 +68,10 @@ MoEで毎回同じ数のexpertを実行するのではなく、**token・layer�
   実装：[✓](https://github.com/ZunhaiSu/Super-Experts-Profilling) ・ リポジトリ内被引用：3  
   全専門家の0.5%未満しかないスーパー専門家が巨大活性と注意シンクの起点であり、Qwen3-30B-A3Bでは6144個中わずか3個を削るだけで推論課題平均が69.37から4.02へ崩壊することを示す。
 
+- **2026-01 · [LatentMoE: Toward Optimal Accuracy per FLOP and Parameter in Mixture of Experts](2026-2601.18089-latentmoe-accuracy-per-flop-parameter.md)**  
+  実装：✓ ・ リポジトリ内被引用：3  
+  MoEエキスパートを低次元潜在空間で計算し、削減した帯域・通信コストを総エキスパート数と活性エキスパート数の拡大へ再投資して、計算量当たり精度とパラメータ当たり精度を同時に改善する設計。
+
 - **2026-07 · [It Takes a MAESTRO To Prune Bad Experts](2026-2607.08601-maestro-expert-pruning.md)**  
   実装：[✓](https://github.com/parmanu-lcs2) ・ リポジトリ内被引用：2  
   自己回帰生成時の層間専門家遷移をマルコフ連鎖として集計し、定常分布が小さい専門家を構造的に削除してMoEの常駐メモリを縮小する。
@@ -103,10 +107,6 @@ MoEで毎回同じ数のexpertを実行するのではなく、**token・layer�
 - **2026-02 · [Certain Head, Uncertain Tail: Expert-Sample for Test-Time Scaling in Fine-Grained MoE](2026-2602.02443-expert-sample-test-time-scaling.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
   細粒度MoEの高確信専門家を固定し低確信尾部だけを確率的に選ぶことで、単発品質を崩しにくいまま複数推論経路の多様性とpass@nを高める。
-
-- **2026-01 · [LatentMoE: Toward Optimal Accuracy per FLOP and Parameter in Mixture of Experts](2026-2601.18089-latentmoe-accuracy-per-flop-parameter.md)**  
-  実装：✓ ・ リポジトリ内被引用：2  
-  MoEエキスパートを低次元潜在空間で計算し、削減した帯域・通信コストを総エキスパート数と活性エキスパート数の拡大へ再投資して、計算量当たり精度とパラメータ当たり精度を同時に改善する設計。
 
 - **2025-11 · [Route Experts by Sequence, not by Token](2025-2511.06494-seqtopk-route-by-sequence.md)**  
   実装：[✓](https://github.com/Y-Research-SBU/SeqTopK) ・ リポジトリ内被引用：2  
@@ -387,7 +387,7 @@ MoEで毎回同じ数のexpertを実行するのではなく、**token・layer�
 ### 3年前（2023-11〜2024-10）
 
 - **2024-02 · [Not All Experts are Equal: Efficient Expert Pruning and Skipping for Mixture-of-Experts Large Language Models](2024-2402.14800-not-all-experts-are-equal-efficient-expert-pruning-and-skipping-for-mixture-of-e.md)**  
-  実装：[✓](https://github.com/Lucky-Lance/Expert_Sparsity) ・ リポジトリ内被引用：109  
+  実装：[✓](https://github.com/Lucky-Lance/Expert_Sparsity) ・ リポジトリ内被引用：110  
   本研究は、学習済みモデルを大規模に再学習せず、①各層の出力をできるだけ保つ専門家の集合を探索して重みを恒久的に削除する事後専門家枝刈り、②実行時にルータが選んだ2専門家のうち寄与の小さい第2専門家だけをトークン単位で省く動的専門家省略を組み合わせる。
 
 - **2024-10 · [MoE-Pruner: Pruning Mixture-of-Experts Large Language Model using the Hints from Its Router](2024-2410.12013-moe-pruner-router-hints.md)**  
@@ -429,7 +429,7 @@ MoEで毎回同じ数のexpertを実行するのではなく、**token・layer�
 ### 4年前（2022-11〜2023-10）
 
 - **2023-10 · [Merge, Then Compress: Demystify Efficient SMoE with Hints from Its Routing Policy](2023-2310.01334-merge-then-compress-demystify-efficient-smoe-with-hints-from-its-routing-policy.md)**  
-  実装：[✓](https://github.com/UNITES-Lab/MC-SMoE) ・ リポジトリ内被引用：71  
+  実装：[✓](https://github.com/UNITES-Lab/MC-SMoE) ・ リポジトリ内被引用：72  
   MC-SMoEはルータ履歴で似た専門家を代表へ統合し、統合重みを低ランク成分と疎な残差へ圧縮して、専門家数とメモリ使用量を減らす。
 
 - **2023-07 · [Memory-efficient NLLB-200: Language-specific Expert Pruning of a Massively Multilingual Machine Translation Model](2022-2212.09811-nllb-language-specific-expert-pruning.md)**  
@@ -447,7 +447,7 @@ MoEで毎回同じ数のexpertを実行するのではなく、**token・layer�
 ### 5年前（2021-11〜2022-10）
 
 - **2022-01 · [DeepSpeed-MoE: Advancing Mixture-of-Experts Inference and Training to Power Next-Generation AI Scale](2022-2201.05596-deepspeed-moe-inference-compression.md)**  
-  実装：[✓](https://github.com/microsoft/DeepSpeed) ・ リポジトリ内被引用：112  
+  実装：[✓](https://github.com/microsoft/DeepSpeed) ・ リポジトリ内被引用：113  
   PR-MoE/MoSでMoEサイズを最大3.7倍縮小し、多次元並列・通信・融合カーネルを統合してPyTorch比最大7.3倍、同等品質dense比最大4.5倍高速な推論を実現。
 
 - **2022-02 · [Mixture-of-Experts with Expert Choice Routing](2022-2202.09368-expert-choice-routing.md)**  
@@ -463,6 +463,6 @@ MoEで毎回同じ数のexpertを実行するのではなく、**token・layer�
   密なTransformerのフィードフォワード層を共活性化するニューロン単位で専門家化し、入力ごとに一部だけを実行する疎推論方式。
 
 - **2022-01 · [One Student Knows All Experts Know: From Sparse to Dense](2022-2201.10890-one-student-knows-all-experts-know-from-sparse-to-dense.md)**  
-  実装：✓ ・ リポジトリ内被引用：3  
+  実装：✓ ・ リポジトリ内被引用：4  
   事前学習済みMoEの専門家FFNを上位K抽出またはSVDで単一の密モデルへ統合し、MoE教師による蒸留で補正するOneSを提案。NLPでMoE利得88.2%を保持し、TPU v3-8上でWideNet比3.7倍の推論高速化を示す。
 <!-- survey:auto:end -->

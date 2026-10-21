@@ -181,7 +181,7 @@
   PowerInfer-2は、利用頻度を測った重みだけをスマホの高速メモリへ置き、残りをUFSから読みつつCPU・NPU計算と重ねて、容量不足と読出し待ちを減らす方式。
 
 - **2024-08 · [SwapMoE: Serving Off-the-shelf MoE-based Large Language Models with Tunable Memory Budget](2023-2308.15030-swapmoe-serving-off-the-shelf-moe-based-large-language-models-with-tunable-memor.md)**  
-  実装：✓ ・ リポジトリ内被引用：27  
+  実装：✓ ・ リポジトリ内被引用：28  
   SwapMoEは、全専門家をメモリに置けない問題に対し、層ごとの仮想枠へ入力で選ばれた専門家重みを入れ替え、メモリ容量と重み転送を抑える方式。
 
 - **2024-07 · [Mobile Edge Intelligence for Large Language Models: A Contemporary Survey](2024-2407.18921-mobile-edge-intelligence-for-large-language-models-a-contemporary-survey.md)**  
@@ -199,11 +199,11 @@
 ### 4年前（2022-11〜2023-10）
 
 - **2023-08 · [EdgeMoE: Empowering Sparse Large Language Models on Mobile Devices](2023-2308.14352-edgemoe.md)**  
-  実装：[✓](https://github.com/UbiquitousLearning/mllm) ・ リポジトリ内被引用：49  
+  実装：[✓](https://github.com/UbiquitousLearning/mllm) ・ リポジトリ内被引用：50  
   MoE エキスパートを外部ストレージ化し、エキスパート別混合量子化と活性相関に基づく先読み・キャッシュでモバイル推論のI/O律速を緩和する。
 
 - **2023-09 · [LLMCad: Fast and Scalable On-device Large Language Model Inference](2023-2309.04255-llmcad-fast-and-scalable-on-device-large-language-model-inference.md)**  
-  実装：✓ ・ リポジトリ内被引用：17  
+  実装：✓ ・ リポジトリ内被引用：18  
   端末で言語モデルを動かす場合、モデル重みがメモリ容量を超えると、生成のたびにストレージから重みを読み直すことがある。原著の構成は三つの機構からなる。Jetson TX2/Orin NXとAndroidスマートフォンで、標準の大型モデル単独生成に対してトークン当たり平均時間をIoT端末で2.9〜9.3倍、スマートフォンで3.47〜4.67倍短縮したと報告する。
 
 ### 5年前（2021-11〜2022-10）

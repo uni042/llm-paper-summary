@@ -315,7 +315,7 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
   しかし専門家全体の重みは大きく、GPUメモリへすべてを常駐させるのは難しい。CPUメモリへ専門家を退避するとGPU容量の不足は補えるが、必要な専門家をその都度PCIeで転送するため、推論の遅延が増える。EuroSys 2026掲載版の要旨は、六GPU実機で推論遅延を最大47%削減し、専門家ヒット率を39%改善したと報告する。
 
 - **2025-02 · [Klotski: Efficient Mixture-of-Expert Inference via Expert-Aware Multi-Batch Pipeline](2025-2502.06888-klotski-efficient-mixture-of-expert-inference-via-expert-aware-multi-batch-pipel.md)**  
-  実装：[✓](https://openi.pcl.ac.cn/fangzhy/Klotski) ・ リポジトリ内被引用：24  
+  実装：[✓](https://openi.pcl.ac.cn/fangzhy/Klotski) ・ リポジトリ内被引用：25  
   Klotskiは複数バッチで共通する専門家を先に計算し、その間にCPU RAMやSSDから次の専門家を読み込んで巨大MoEのI/O待ちを隠す。
 
 - **2025-04 · [HybriMoE: Hybrid CPU-GPU Scheduling and Cache Management for Efficient MoE Inference](2025-2504.05897-hybrimoe-hybrid-cpu-gpu-scheduling-cache-management.md)**  
@@ -413,11 +413,11 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
 ### 3年前（2023-11〜2024-10）
 
 - **2023-12 · [PowerInfer: Fast Large Language Model Serving with a Consumer-grade GPU](2023-2312.12456-powerinfer.md)**  
-  実装：[✓](https://github.com/SJTU-IPADS/PowerInfer) ・ リポジトリ内被引用：114  
+  実装：[✓](https://github.com/SJTU-IPADS/PowerInfer) ・ リポジトリ内被引用：115  
   活性化頻度の高いニューロンをGPUへ常駐させ、低頻度ニューロンをCPUで疎計算するニューロン粒度のCPU-GPU協調推論基盤。
 
 - **2023-12 · [LLM in a flash: Efficient Large Language Model Inference with Limited Memory](2023-2312.11514-llm-in-a-flash-efficient-large-language-model-inference-with-limited-memory.md)**  
-  実装：✓ ・ リポジトリ内被引用：92  
+  実装：✓ ・ リポジトリ内被引用：93  
   LLM in a flashは、モデル重み全体を端末の主記憶（DRAM）へ保持できない場合に、フラッシュストレージを重みの大容量置き場として利用し、トークン生成ごとに必要な重みだけを読み込む推論方式である。
 
 - **2024-01 · [MoE-Infinity: Efficient MoE Inference on Personal Machines with Sparsity-Aware Expert Cache](2024-2401.14361-moe-infinity-efficient-moe-inference-on-personal-machines-with-sparsity-aware-ex.md)**  
