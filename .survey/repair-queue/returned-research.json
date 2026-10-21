@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-21T17:14:40+00:00",
+  "generated_at": "2026-10-21T17:27:30+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 55,
+  "count": 54,
   "entries": [
     {
       "canonical_id": "DOI:10.1145/3714983.3714987",
@@ -426,34 +426,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-0f2ebca5ee3d--libfile_d80701e54e408191b235f9af5909e385--2026-2609.36835-arc-kv-reconstruction-indexer-research-20261019-0304-scheduled-chat-00-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-0f2ebca5ee3d--libfile_d80701e54e408191b235f9af5909e385--2026-2609.36835-arc-kv-reconstruction-indexer-research-20261019-0304-scheduled-chat-00-r0.json",
       "worker_run_key": "20261019-0304-scheduled-chat-00/r01"
-    },
-    {
-      "canonical_id": "arXiv:2512.15586",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-19T15:25:44+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 7647,
-        "body_paragraphs": 39,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 1455,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-6d9088669d78--libfile_3df90a67b4d08191a63c2df79c7d6c91--2025-2512.15586-bolmo-byteification-research-20261019-0445-scheduled-chat-45-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-6d9088669d78--libfile_3df90a67b4d08191a63c2df79c7d6c91--2025-2512.15586-bolmo-byteification-research-20261019-0445-scheduled-chat-45-r01.json",
-      "worker_run_key": "20261019-0445-scheduled-chat-45/r01"
     },
     {
       "canonical_id": "arXiv:2609.16450",
@@ -981,36 +953,6 @@
       "worker_run_key": "20261019-2130-scheduled-chat-30/r01"
     },
     {
-      "canonical_id": "arXiv:2402.09360",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-20T17:45:10+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700",
-        "説明不足トリガー: 評価説明量 154 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 4370,
-        "body_paragraphs": 24,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 154,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700",
-          "評価説明量 154 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-8c83a39190b3--libfile_d4c36ba87ef0819195dddf5b6acc5d93--2024-2402.09360-hire-sparse-topk-research-20261020-2230-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-8c83a39190b3--libfile_d4c36ba87ef0819195dddf5b6acc5d93--2024-2402.09360-hire-sparse-topk-research-20261020-2230-scheduled-chat-30-r01.json",
-      "worker_run_key": "20261020-2230-scheduled-chat-30/r01"
-    },
-    {
       "canonical_id": "arXiv:2605.18226",
       "title": null,
       "source_url": null,
@@ -1536,6 +1478,35 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_44c85531466081919386a0595babfc98--2026-2609.35065-tempokv-timely-staging-research-20261021-1528-scheduled-chat-30-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_44c85531466081919386a0595babfc98--2026-2609.35065-tempokv-timely-staging-research-20261021-1528-scheduled-chat-30-r01.json",
       "worker_run_key": "20261021-1528-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2604.07857",
+      "title": "Networking-Aware Energy Efficiency in Agentic AI Inference: A Survey",
+      "source_url": "https://arxiv.org/abs/2604.07857",
+      "returned_at": "2026-10-21T17:24:02+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700",
+        "説明不足トリガー: 評価説明量 0 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5745,
+        "body_paragraphs": 32,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 0,
+        "limitation_chars": 380,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700",
+          "評価説明量 0 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_4a57f1d856588191ae4c0deda9c18fae--2026-2604.07857-networking-energy-agentic-inference-survey-20261021-2126-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_4a57f1d856588191ae4c0deda9c18fae--2026-2604.07857-networking-energy-agentic-inference-survey-20261021-2126-scheduled-chat-30-r01.json",
+      "worker_run_key": "20261021-2126-scheduled-chat-30/r01"
     }
   ]
 }
