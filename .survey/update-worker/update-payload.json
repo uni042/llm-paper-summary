@@ -1,62 +1,7 @@
 {
   "schema_version": 1,
-  "attempt_id": "library-import-20261018-0830-chatgpt-20261019003500",
+  "attempt_id": "library-import-20261022-maintenance-20261015",
   "kind": "framework_llm_update",
-  "artifacts": [
-    {
-      "path": "llm-releases/README.md",
-      "expected_blob_sha": "d76791c2d6fbf5422b9d9a1961801cf253de6942",
-      "edits": [
-        {
-          "op": "replace_once",
-          "old": "| 2026-09-10 | DeepSeek-V4.1-Flash | DeepSeek | 総552BのMoE。入力8B・出力16B activeの非対称構造を採用し、前世代比でKV cacheのHBM要求を1/4、SSD保存量を1/8へ削減。native multimodal対応でAPIとopen-weightを公開。 | [DeepSeek系](deepseek.md) |",
-          "new": "| 2026-10-17 | DeepSeek-V4.1-Flash-1017 | DeepSeek | 10月17日に公式更新されたAPI snapshot。APIのmodel IDは`deepseek-flash`のまま。公式公表ベンチマークはタスクごとの条件付き比較で、hardware実測tokens/sの倍率とは区別する。 | [DeepSeek系](deepseek.md) |"
-        },
-        {
-          "op": "replace_once",
-          "old": "- リリース情報の最終確認: **2026-10-07**",
-          "new": "- リリース情報の最終確認: **2026-10-18**"
-        }
-      ]
-    },
-    {
-      "path": "llm-releases/deepseek.md",
-      "expected_blob_sha": "c6010946a45e0dfb3b8d15bf267c84f02e25ebc6",
-      "edits": [
-        {
-          "op": "insert_before_once",
-          "anchor": "| 2026-09-10 | DeepSeek-V4.1-Flash |",
-          "text": "| 2026-10-17 | DeepSeek-V4.1-Flash-1017 | 公式変更履歴でWeb / app / APIの提供更新とHugging Face / ModelScopeのcheckpoint案内を確認。API指定名は従来どおり`deepseek-flash`だが、新snapshotへ移るため出力再現性と費用見積を再確認する。公式公表比較ではTerminal-Bench 4.0が31.2→42.3、DeepSWE v1.1が74.2→77.0など。ただしbenchmark設定は各前回値と同一条件とは限らず、端から端のtokens/s改善は未提示。| [公式更新履歴](https://api-docs.deepseek.com/zh-cn/updates/) / [1017発表](https://api-docs.deepseek.com/news/news261017/) / [公式重み](https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017) |\n"
-        },
-        {
-          "op": "insert_before_once",
-          "anchor": "## 用語メモ",
-          "text": "## API機能の更新\n\n2026-10-17、公式発表でSearch APIとFetch APIの一般公開を告知。発表本文の料金は各endpoint 1,000回あたり0.75米ドルとされ、特定Harnessのserver-side tool経由は2026-10-31 16:00 UTCまで無料の案内がある。利用時には現行の公式料金ページで条件を再確認する。これはLLM重みや推論tokens/sの更新と別のAPI機能変更である。一次資料: https://api-docs.deepseek.com/news/news261017/。\n\n"
-        }
-      ]
-    },
-    {
-      "path": "framework-updates/inference-engines/ollama/README.md",
-      "expected_blob_sha": "a9a0c65c9bf6947be955b8ba9b60ddc50d90a365",
-      "edits": [
-        {
-          "op": "insert_after_once",
-          "anchor": "## 主要更新\n\n",
-          "text": "### 2026-10-16 — Ollama v0.40.6（正式版）\n- 前日に記録した`v0.40.6-rc0`が正式版へ進んだ。Windowsでorphan runnerを残す問題の修正、GGUF `q2_0` tensor / file type、Clef cloud提供、`--ask`の質問key識別子化を含む。\n- `q2_0`はmodel全般を自動で量子化・高速化せず、Clef cloudはlocal推論の高速化ではない。正式版として記録し、候補版rc0と段階を区別する。[正式版](https://github.com/ollama/ollama/releases/tag/v0.40.6)。\n\n"
-        }
-      ]
-    },
-    {
-      "path": "framework-updates/inference-engines/llama-cpp/README.md",
-      "expected_blob_sha": "75b92119ce8bd5f0daf59f6e6a92e34edd39130e",
-      "edits": [
-        {
-          "op": "insert_after_once",
-          "anchor": "## 主要更新\n\n",
-          "text": "### 2026-10-17 — b11709 / b11710 / b11713 / b11714 / b11715（開発版）\n- **b11709**：Aleph Alpha Kolibri-1のmodel構造を追加。model対応の追加であり、weightの初回公開日とは別。\n- **b11710**：CUDA grouped-expertのTop-k融合を追加。MoE中間演算を減らす狙いだが端から端の速度倍率は未確認。\n- **b11713**：低bit MMVQ CUDA kernelを更新。公式PRの`llama-bench`ではRTX 4090 / Qwen3.5-9B / Q3_K_S / `tg128`が162.65→174.93 tok/s（約1.08倍）、Q2_Kが181.37→186.79 tok/s（約1.03倍）。RTX 3090では同条件Q3_K_Sが81.04→126.22 tok/s（約1.56倍）。特定GPU・model・quantizationの結果でRTX 4070 SUPERや全modelへ一般化しない。\n- **b11714**：model管理UIへHugging Face model発見・downloadを追加し、対応するMTP / DFlash sidecarを同時取得できる。発見機能は既定で無効。download利便性でありlocal decode高速化の保証ではない。\n- **b11715**：AMD HIPのQ1_0 unpackを更新。AMD向けでNVIDIA CUDAの改善ではない。\n- すべて正式版v0.7.0以後の開発用pre-release。b11713のベンチはモデル全体の一条件の測定で、他GPU・設定へ外挿しない。[b11709](https://github.com/ggml-org/llama.cpp/releases/tag/b11709) / [b11710](https://github.com/ggml-org/llama.cpp/releases/tag/b11710) / [b11713](https://github.com/ggml-org/llama.cpp/releases/tag/b11713) / [b11714](https://github.com/ggml-org/llama.cpp/releases/tag/b11714) / [b11715](https://github.com/ggml-org/llama.cpp/releases/tag/b11715)\n\n"
-        }
-      ]
-    }
-  ],
-  "summary": "2026-10-18 maintenance: update DeepSeek-V4.1-Flash-1017 and Search/Fetch API notes; record stable Ollama v0.40.6 and llama.cpp b11709/b11710/b11713/b11714/b11715 development builds; avoid duplicating ExLlamaV3 v1.6.3"
+  "artifacts": [],
+  "summary": "No-op after latest-main comparison of Library maintenance 2026-10-15: Ollama v0.40.4 and llama.cpp b11622 are already recorded. Conditional b11612 NFC item is deferred because no target model was identified in the source plan."
 }
