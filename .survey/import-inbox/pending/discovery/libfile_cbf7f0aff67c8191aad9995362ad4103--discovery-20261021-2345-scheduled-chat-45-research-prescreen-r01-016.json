@@ -1,0 +1,27 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-45",
+  "scheduled_slot": "45",
+  "reference_main_sha": "9e995e68fa76df9b29dc64a4655a65328f94ed71",
+  "record_count": 1,
+  "run_key": "20261021-2345-scheduled-chat-45/r01/research-prescreen/016",
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.18112",
+      "identity_tokens": [
+        "arxiv:2606.18112"
+      ],
+      "title": "Qwen-RobotNav Technical Report: A Scalable Navigation Model Designed for an Agentic Navigation System",
+      "reason": "一次要旨はタスクモードと観測設定（視覚トークン予算、カメラ別重み）を推論時に切り替えるロボットナビゲーションモデルを提示する。観測トークン配分には推論資源最適化の接点があるが、主たる貢献・評価はナビゲーション行動とゼロショットロボット性能で、汎用LLMサービングのメモリ・スループット改善は直接検証していない。",
+      "source_url": "https://arxiv.org/abs/2606.18112",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-21T23:46:59+09:00",
+      "last_checked_at": "2026-10-21T23:46:59+09:00",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance",
+      "worklist_rank": 16
+    }
+  ]
+}
