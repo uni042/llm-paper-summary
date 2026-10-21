@@ -78,6 +78,15 @@ llama.cppの主要な機能・性能更新を継続的に記録する集約ペ�
 
 ## 主要更新
 
+### 2026-10-18 — b11717〜b11721（開発版）
+
+- **b11717**: Qualcomm HexagonでHadamard演算とQ1_0 / Q2_0 `GET_ROWS` を追加。Hexagon向けの対応。
+- **b11718**: Intel ESIMDのFFN経路を再有効化し、Q8_0融合経路を拡張。Intel向け。
+- **b11719**: CUDA Flash Attentionの境界チェック経路を修正。公開資料に速度倍率なし。
+- **b11720**: 非連続tensorの `SUM` をCPU / CUDA / Vulkan / WebGPUでサポート。演算対応の追加で、性能計測結果ではない。
+- **b11721**: Qwen4Exp向けCUDAで `SCALE → SIGMOID → SCALE → hc_post` を4 kernelから1 kernelへ融合。中間転送・起動費を減らす設計だが、端から端の生成速度への効果は未公表。
+- 出典: [b11717](https://github.com/ggml-org/llama.cpp/releases/tag/b11717), [b11718](https://github.com/ggml-org/llama.cpp/releases/tag/b11718), [b11719](https://github.com/ggml-org/llama.cpp/releases/tag/b11719), [b11720](https://github.com/ggml-org/llama.cpp/releases/tag/b11720), [b11721](https://github.com/ggml-org/llama.cpp/releases/tag/b11721), [PR #30602](https://github.com/ggml-org/llama.cpp/pull/30602)
+
 ### 2026-10-17 — b11709 / b11710 / b11713 / b11714 / b11715（開発版）
 - **b11709**：Aleph Alpha Kolibri-1のmodel構造を追加。model対応の追加であり、weightの初回公開日とは別。
 - **b11710**：CUDA grouped-expertのTop-k融合を追加。MoE中間演算を減らす狙いだが端から端の速度倍率は未確認。

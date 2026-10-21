@@ -44,6 +44,15 @@ vLLMの主要な機能・性能更新を継続的に記録する集約ページ�
 
 - **ROCm DeepSeek-V4.1のmHC post + delayed pre projectionを融合 — merged 2026-09-14 UTC**: AITER fused kernelで小batch decodeの各seamから1 launchを除去。40 layer × 2 seamでforward stepあたり80 launchを削減し、MI355X・TP4の二方向crossover測定でmean ITL **6.9015 → 6.8141 ms（-1.28%）**。[PR #56513](https://github.com/vllm-project/vllm/pull/56513)
 
+## 2026-10-18 — v0.32.0（正式版）
+
+- `/v1/systemone` に `choice` / `noul` / `score` を返す構造化判定APIを追加。モデルカードに基づく汎用HF tool callと推論parserにも対応。
+- NVFP4 KV cacheの対象をSM8x / SM90 / SM12xへ拡張。GLM-5.xではSM100上の `--kv-cache-dtype auto` がFP8 KVを選択し、公式PRはGPU当たりKV容量を半分にする代わりに出力処理量+2.3〜5.5%、TTFT +7〜11%を報告。これはGLM-5.x / SM100条件の値で、他モデルへ一般化しない。ROCmには `ultraquant_4bit` KVを追加。
+- Model Runner V2へGPU上の可変長n-gram speculative decoding、Elastic EP、MLA向けpipeline + prefill-context parallel、DFlash / DSpark draft metadataのCUDA Graph内処理を追加。HiSparseのGPU context residencyは高並行性条件で最大58%と報告される。
+- `vllm download-kernels` と `vllm preload --preload-autotune` によるkernel / autotune準備、共有memoryのmultimodal tensor領域の既定有効化を追加。Qwen3.8-Flash-Next等の倍率は個別モデル・処理段階の結果であり、全体生成速度を表さない。
+- **互換性変更**: Python 3.11以上（3.10非対応）、`transformers>=5.16.1,<5.20.0`、`tokenizers>=0.23.2`。CORSの既定許可元はなしとなったため、browser clientは `--allowed-origins` を設定する。cascade attention等を削除し、CUDA source buildにはGCC 13が必要。Windows 11 / RTX 4070 SUPERでの動作は未検証。
+- 出典: [v0.32.0 release](https://github.com/vllm-project/vllm/releases/tag/v0.32.0), [PR #60140](https://github.com/vllm-project/vllm/pull/60140), [PR #40704](https://github.com/vllm-project/vllm/pull/40704), [PR #61009](https://github.com/vllm-project/vllm/pull/61009)
+
 ## 2026-10-05
 
 - **v0.31.0（released）**: DeepSeek-V4.1-Flash向けFlashMLA mega attention + NVFP4圧縮KV cacheをSM100既定へ移し、sparse MQA logits、Mega-Gate、TP all-reduce / mHC入力準備 / MoE finalize等のfusionを追加。`vllm preload` のweight-cache daemonは量子化・TP shard済みweightをGPUへ保持してengine再起動時にCUDA IPCで再利用し、DP / MTP draft / health-readinessにも対応した。Model Runner V2ではdraft-model speculative decodingとcustom logits processorを追加し、DFlash async scheduling、DSpark adaptive verification等を拡張。MoonEP、prefill context parallelism + DP、DeepEPv2 + sequence parallelism、KV offloading back-pressure detectionも追加された。`tokenizer_mode="slow"`削除、online `quantization="fp8"`置換等のbreaking changeを含む。[release](https://github.com/vllm-project/vllm/releases/tag/v0.31.0)

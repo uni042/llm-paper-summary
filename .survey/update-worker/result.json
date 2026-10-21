@@ -1,10 +1,18 @@
 {
   "schema_version": 1,
   "ok": true,
-  "attempt_id": "library-import-20261022-maintenance-20261017",
+  "attempt_id": "library-import-20261022-maintenance-20261019",
   "kind": "framework_llm_update",
-  "updated_paths": [],
+  "updated_paths": [
+    "framework-updates/inference-engines/vllm/README.md",
+    "framework-updates/inference-engines/ollama/README.md",
+    "framework-updates/inference-engines/llama-cpp/README.md"
+  ],
   "created_paths": [],
-  "updated_existing_paths": [],
-  "summary": "No-op after latest-main comparison of Library maintenance 2026-10-17: Muse Spark Open, StepFun Step5, Ollama v0.40.6-rc0, llama.cpp b11695/b11699/b11700, and ExLlamaV3 v1.6.3 are already recorded in their release pages."
+  "updated_existing_paths": [
+    "framework-updates/inference-engines/vllm/README.md",
+    "framework-updates/inference-engines/ollama/README.md",
+    "framework-updates/inference-engines/llama-cpp/README.md"
+  ],
+  "summary": "Applied Library maintenance dated 2026-10-19: vLLM v0.32.0, Ollama v0.40.7-rc0, and llama.cpp b11717–b11721, with release status, hardware/model limits, compatibility requirements, and primary-source links."
 }

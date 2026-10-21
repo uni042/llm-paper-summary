@@ -27,6 +27,12 @@ Ollamaの主要な機能・性能更新を継続的に記録する集約ペー�
 
 ## 主要更新
 
+### 2026-10-18 — Ollama v0.40.7-rc0（公開候補版）
+
+- Responses APIで、非thinking modelでもrequestの `effort` parameterを受け付ける変更、内蔵llama-serverによるdraft speculative decoding方式の自動判定、MLX backendのPPLX Decider v1.2対応を追加。
+- RCのため安定版と区別する。draft方式の自動判定は一律の高速化を示さず、PPLX対応はApple Silicon向けでWindows CUDAの改善ではない。
+- 出典: [v0.40.7-rc0 release](https://github.com/ollama/ollama/releases/tag/v0.40.7-rc0), [PR #19064](https://github.com/ollama/ollama/pull/19064), [PR #19072](https://github.com/ollama/ollama/pull/19072)
+
 ### 2026-10-16 — Ollama v0.40.6（正式版）
 - 前日に記録した`v0.40.6-rc0`が正式版へ進んだ。Windowsでorphan runnerを残す問題の修正、GGUF `q2_0` tensor / file type、Clef cloud提供、`--ask`の質問key識別子化を含む。
 - `q2_0`はmodel全般を自動で量子化・高速化せず、Clef cloudはlocal推論の高速化ではない。正式版として記録し、候補版rc0と段階を区別する。[正式版](https://github.com/ollama/ollama/releases/tag/v0.40.6)。
