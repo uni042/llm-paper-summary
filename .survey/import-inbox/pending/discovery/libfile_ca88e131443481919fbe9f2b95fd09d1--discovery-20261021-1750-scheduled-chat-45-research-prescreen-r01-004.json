@@ -1,0 +1,27 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-45",
+  "scheduled_slot": "45",
+  "run_key": "20261021-1750-scheduled-chat-45/r01/research-prescreen/004",
+  "reference_main_sha": "5fb41db9d6ddb814a4734dddef74f698e0e722b3",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2512.08186",
+      "identity_tokens": [
+        "arxiv:2512.08186"
+      ],
+      "title": "Ground Slow, Move Fast: A Dual-System Foundation Model for Generalizable Vision-and-Language Navigation",
+      "reason": "視覚と言語を用いたナビゲーションのための二系統基盤モデルを扱う。モデルの環境理解・移動行動が対象であり、LLM推論基盤の処理時間・メモリ・並列化を改善するシステム研究ではないため対象外。",
+      "source_url": "https://arxiv.org/abs/2512.08186",
+      "body_check": "title_screen_only; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-10-21T17:55:46+09:00",
+      "last_checked_at": "2026-10-21T17:55:46+09:00",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance",
+      "worklist_rank": 4
+    }
+  ]
+}
