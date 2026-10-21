@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（937本）
+## 自動生成の論文一覧（938本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -1247,6 +1247,10 @@
 - **2026-05 · [PEEK: Context Map as an Orientation Cache for Long-Context LLM Agents](2026-2605.19932-peek-context-map-as-an-orientation-cache-for-long-context-llm-agents.md)**  
   実装：[✓](https://github.com/zhuohangu/peek) ・ リポジトリ内被引用：0  
   コンテキスト地図はエージェントのシステムプロンプトへ付与され、予算 B トークン以内に維持される。
+
+- **2026-05 · [Parallel Prefix Verification for Speculative Generation](2026-2605.04263-parallel-prefix-verification-for-speculative-generation.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  従来の投機的復号（投機的復号）は、小型モデルが次の数トークンを予測し、大型の対象モデルがその確率分布に照らして採否を決める。Qwen3-235B-A22B-FP8を対象モデル、Qwen3-8Bをドラフトとして4基のH200上で評価し、通常の対象モデル生成に対して1.25〜4.29倍のトークン処理量、EAGLE-3併用では最大4.46倍を報告する。
 
 - **2026-05 · [OccamToken: Efficient VLM Inference with Training-Free and Budget-Adaptive Token Pruning](2026-2605.29657-occamtoken-efficient-vlm-inference-with-training-free-and-budget-adaptiv.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

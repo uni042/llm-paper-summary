@@ -32,6 +32,8 @@ worker_id: "scheduled-chat-30"
 reference_main_sha: "e181daf5fb8e800da3d9d0d3058c97c9d2526f67"
 quality_self_review_passed: true
 quality_self_review_version: "PAPER-QUALITY-GUIDE-2026-10-07"
+last_audited: null
+audit_version: 0
 ---
 
 # GSI：小型モデルの推論候補を報酬と尤度比で選び直す誘導型投機的推論

@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-21T22:37:41+00:00",
+  "generated_at": "2026-10-21T22:47:54+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -876,8 +876,8 @@
     },
     {
       "canonical_id": "arXiv:2506.04118",
-      "title": "Guided Speculative Inference for Efficient Test-Time Alignment of LLMs",
-      "source_url": "https://arxiv.org/html/2506.04118v3",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-21T22:36:16+00:00",
       "return_count": 1,
       "assigned_worker": "scheduled-chat-30",
@@ -903,32 +903,33 @@
       "worker_run_key": "20261022-0332-scheduled-chat-30/r01"
     },
     {
-      "canonical_id": "arXiv:2605.16839",
-      "title": "CompactAttention: Accelerating Chunked Prefill with Block-Union KV Selection",
-      "source_url": "https://arxiv.org/pdf/2605.16839",
-      "returned_at": "2026-10-21T22:36:17+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-45",
+      "canonical_id": "arXiv:2601.21444",
+      "title": "APB-V: Accelerating Long-Video Understanding via Sequence-Parallelism-aware Approximate Attention",
+      "source_url": "https://arxiv.org/pdf/2601.21444",
+      "returned_at": "2026-10-21T22:46:16+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-00",
       "reason": "blocked_quality",
       "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700",
         "説明不足トリガー: 評価説明量 0 < 500"
       ],
       "quality_metrics": {
         "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5921,
-        "body_paragraphs": 30,
-        "method_chars": 1546,
-        "method_paragraphs": 9,
+        "body_chars": 5005,
+        "body_paragraphs": 27,
+        "method_chars": 0,
+        "method_paragraphs": 0,
         "evaluation_chars": 0,
-        "limitation_chars": 0,
+        "limitation_chars": 459,
         "insufficiency_flags": [
-          "評価説明量 0 < 500",
-          "限界説明量 0 < 推奨 120"
+          "手法説明量 0 < 700",
+          "評価説明量 0 < 500"
         ]
       },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_b17bb91bc4f4819183f4767857103ba3--2026-2605.16839-compactattention-block-union-chunked-prefill-quality-repair-20261020-1945-scheduled-chat-45-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_b17bb91bc4f4819183f4767857103ba3--2026-2605.16839-compactattention-block-union-chunked-prefill-quality-repair-20261020-1945-scheduled-chat-45-r01.json",
-      "worker_run_key": "20261020-1945-scheduled-chat-45/r01"
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_bf16b1fc8ba081918394d7a0537eb8ae--2026-2601.21444-apb-v-video-sequence-parallel-attention-research-20261021-0956-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_bf16b1fc8ba081918394d7a0537eb8ae--2026-2601.21444-apb-v-video-sequence-parallel-attention-research-20261021-0956-scheduled-chat-00-r01.json",
+      "worker_run_key": "20261021-0956-scheduled-chat-00/r01"
     }
   ]
 }

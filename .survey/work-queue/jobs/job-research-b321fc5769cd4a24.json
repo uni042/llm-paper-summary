@@ -35,10 +35,15 @@
   "selection_reason": "CompactAttention builds GQA-aware KV block tables for chunked prefill and reports up to 2.72x attention speedup at 128K context.",
   "semantic_scholar_id": "e8ce26e2c2dd35ca76df7fb074aaaa35f4b04a7c",
   "source_url": "https://arxiv.org/abs/2605.16839",
-  "status": "ready",
+  "status": "superseded",
   "title": "CompactAttention: Accelerating Chunked Prefill with Block-Union KV Selection",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-10-21T22:47:53+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/13-sparse-attention/2026-2605.16839-compactattention-accelerating-chunked-prefill-with-block-union-kv-select.md",
+  "represented_canonical_id": "arXiv:2605.16839",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

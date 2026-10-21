@@ -1,13 +1,12 @@
 {
   "schema_version": 1,
   "artifact_type": "research",
-  "status": "imported",
+  "status": "blocked_quality",
   "source_sha256": "bbbf553cae4e6f9a40613084c518b7d5899e486c3f4951ea357207abc2e1f167",
-  "canonical_id": "arXiv:2607.27269",
-  "paper_path": "papers/inference/05-speculative-decoding-moe/2026-2607.27269-beyond-kv-reconstruction-functional-reconstruction-for-mla-draft-models-.md",
-  "lineage": "05-speculative-decoding-moe",
-  "audit_status": "PASS",
+  "normalized_source_sha256": null,
   "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_c1da37a99b388191b32e8e7999046a11--2026-2607.27269-functional-mla-returned-quality-repair-20261019-2330-scheduled-chat-30-r01.md",
+  "canonical_id": "arXiv:2607.27269",
   "worker_completed_at": "2026-10-19T23:45:00+09:00",
   "worker_run_key": "20261019-2330-scheduled-chat-30/r01",
   "quality_metrics": {
@@ -20,5 +19,8 @@
     "limitation_chars": 651,
     "insufficiency_flags": []
   },
-  "processed_at": "2026-10-20T16:36:32+00:00"
+  "failures": [
+    "長文定型文の再利用を検出: papers/inference/05-speculative-decoding-moe/2026-2607.27269-beyond-kv-reconstruction-functional-reconstruction-for-mla-draft-models-.md と 19 段落 / 4232文字 (100.0%) が完全一致"
+  ],
+  "processed_at": "2026-10-21T22:46:18+00:00"
 }
