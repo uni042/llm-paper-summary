@@ -1,0 +1,78 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local",
+  "run_key": "20261022-lineage-diffusion-decoding-10",
+  "reference_main_sha": "b860207e286c25de99da8b3c735203523cf0f9b1",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2607.24306",
+      "identity_tokens": [
+        "arXiv:2607.24306",
+        "DOI:10.48550/arXiv.2607.24306"
+      ],
+      "title": "Rethinking the Generation Order of Block Diffusion Language Models",
+      "reason": "一次資料の本文でPARDを確認。block diffusion language model向けのtraining-free plug-in samplerとして、確信度の高い左端prefixを並列commitし、既存dLLMの生成順とsampling policyを改善する。3モデル・6ベンチマークで品質と速度を比較し、論文のtoken/s表ではpure ARに対し最大3.64倍のdecode throughputを報告する。token unmask/commit orderおよびdenoising iterationを中心に最適化するため、提案するDiffusion LLM Decodingの境界に合う。",
+      "source_url": "https://arxiv.org/abs/2607.24306",
+      "body_check": "公式arXiv HTML v1 (https://arxiv.org/html/2607.24306v1) のabstractおよびmethod/results本文を確認。PARDはblock diffusion samplerへ追加する推論時policyで、confidence-based parallel prefix commitmentを行う。base model factorizationやKV storage、request-level serving scheduler、autoregressive draft verificationを主題としない。",
+      "source_evidence": [
+        "https://arxiv.org/abs/2607.24306",
+        "https://arxiv.org/html/2607.24306v1"
+      ],
+      "first_checked_at": "2026-10-22T06:05:00Z",
+      "last_checked_at": "2026-10-22T06:05:00Z",
+      "lineage_proposal": {
+        "slug_tail": "diffusion-llm-decoding",
+        "title": "Diffusion LLM Decoding",
+        "description": "既存の拡散言語モデルと拡散multimodal LLMに対し、denoising反復、token commit、diffusion-native speculative verification、またはdraft-then-refine decodingを変えて、品質と推論効率のtradeoffを改善する推論時decoder研究をまとめる。",
+        "distinctness_reason": "Speculative Decoding系統の主対象であるAR targetへのdraft proposal/verificationではなく、既存拡散言語モデル内のdenoising unmask/commit policyと、同じdiffusion modelがdraft兼verifierとなるdiffusion-nativeな並列・時間方向samplerを対象とする。別のdiffusion drafterをAR verifierへ接続する方式は05に残す。KV Cache系統は保存・更新・再利用を、LLM Serving系統はrequestやGPU資源の配置・スケジューリングを主対象とし、本系統のdiffusion token acceptance/sampling policyとは最適化単位が異なる。",
+        "boundary_rule": "既存dLLM/dMLLM上のdenoising反復、text masked tokenのunmask順・同時commit集合、adaptive budget、推論sampler policy、同じdiffusion model内のdiffusion-native self-speculative/parallel decoding、またはDLMのdraft sequenceをDLMでbidirectional refineする推論時decodingが主貢献の論文を含める。視覚grounding・時間安定性等の条件でtext tokenの並列commitを変える方法も含める。新しいmodel factorization/architectureや学習だけの改善、image token pruning/compression、KV/cache branchの同期・更新、sequence/lane scheduler、diffusion drafterをAR targetに接続するspeculative decoding、benchmarkだけを主貢献とする論文は含めない。",
+        "scope_includes": [
+          "拡散言語モデルおよび拡散multimodal LLMのtext token unmask/commit順とparallel decoding rule",
+          "confidence、information gain、dependency、trajectory等に基づくdenoising step/budget制御",
+          "推論時sampler policyの学習とtraining-free sampling policy",
+          "同じdiffusion modelがdraftとverificationを担うdenoising-native parallel/self-speculative decoding",
+          "diffusion draft sequenceをdiffusion modelでbidirectional refinementするinference-time decoding",
+          "視覚grounding等を用いて拡散multimodal LLMのmasked-text token commit集合を制御する方法"
+        ],
+        "scope_excludes": [
+          "新しいdLLM/dMLLM model factorizationやdiffusion/autoregressive hybrid architecture",
+          "image token pruning/compressionなどmasked-text commit policy以外の視覚token処理",
+          "KV cache/state保存・更新・同期・圧縮が主貢献の手法",
+          "request serving、resource placement、sequence/lane execution scheduling",
+          "diffusion drafterをautoregressive targetへ接続するspeculative decoding",
+          "推論systemを測るだけのbenchmark/evaluation方法"
+        ],
+        "neighbor_lineages": [
+          "05-speculative-decoding-moe",
+          "07-kv-cache-optimization-compression",
+          "11-llm-serving-scheduling-disaggregation"
+        ],
+        "confidence": "high",
+        "supporting_papers": [
+          "arXiv:2506.10848",
+          "arXiv:2511.21103",
+          "arXiv:2512.09106",
+          "arXiv:2512.16229",
+          "arXiv:2512.02044",
+          "arXiv:2602.18176",
+          "arXiv:2603.12996",
+          "arXiv:2604.08564",
+          "arXiv:2604.18471",
+          "arXiv:2605.30753",
+          "arXiv:2510.07081",
+          "arXiv:2605.24697",
+          "arXiv:2602.04399",
+          "arXiv:2605.25820",
+          "arXiv:2607.17884",
+          "arXiv:2607.07026",
+          "arXiv:2510.04147",
+          "arXiv:2605.15609",
+          "arXiv:2608.02625"
+        ]
+      }
+    }
+  ]
+}
