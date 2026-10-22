@@ -1,0 +1,26 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261022-1803-scheduled-chat-00/r01/research-relevance-042",
+  "reference_main_sha": "f611d5581815bdaa85393736c53b4be1ebb05566",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.05278",
+      "identity_tokens": [
+        "arXiv:2605.05278"
+      ],
+      "title": "Expert Routing for Communication-Efficient MoE via Finite Expert Banks",
+      "reason": "タイトルにはMoE推論の通信効率があるが、一次論文の実体はMNIST上の事前学習済みCNN 25候補からのモデル選択と、サンプル依存性I(S;W)・入力からルータへの相互情報量I(X;T)の統計的推定である。表IはR=25、標本数m=256、反復M=300、訓練誤差0.0802、テスト誤差0.0846を報告。実際のLLM、トークン単位MoE、専門家並列通信、GPU推論時間、KVキャッシュを評価しておらず、現行LLM推論・学習効率サーベイの主対象から外す。",
+      "source_url": "https://arxiv.org/abs/2605.05278",
+      "body_check": "research_fulltext_relevance_review: primary PDF sections I-V and Tables I-II inspected; finite-bank MNIST CNN selection and information-theoretic rate-distortion, not LLM serving or GPU communication; remaining final discussion pages not independently inspected",
+      "first_checked_at": "2026-10-22T18:12:26+09:00",
+      "last_checked_at": "2026-10-22T18:12:26+09:00",
+      "linked_from": [],
+      "origin": "research_postread_relevance",
+      "worklist_rank": 42
+    }
+  ]
+}
