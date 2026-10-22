@@ -137,7 +137,7 @@
 ### 2年前（2024-11〜2025-10）
 
 - **2025-08 · [LMDeploy Accelerates Mixed-Precision LLM Inference with TurboMind](2025-2508.15601-efficient-mixed-precision-large-language-model-inference.md)**  
-  実装：[✓](https://github.com/InternLM/lmdeploy) ・ リポジトリ内被引用：7  
+  実装：[✓](https://github.com/InternLM/lmdeploy) ・ リポジトリ内被引用：8  
   量子化された重みを行列積の直前に浮動小数点へ復号すると、復号命令と共有メモリへの転送が計算の待ち時間になる。既存の混合精度推論基盤に対して配信遅延を最大61%（平均30%）削減し、処理率を最大156%（平均58%）向上したと報告する。
 
 - **2025-04 · [MiLo: Efficient Quantized MoE Inference with Mixture of Low-Rank Compensators](2025-2504.02658-milo-efficient-quantized-moe-inference-with-mixture-of-low-rank-compensa.md)**  
