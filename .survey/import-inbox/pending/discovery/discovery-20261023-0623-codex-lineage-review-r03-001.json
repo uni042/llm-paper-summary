@@ -1,0 +1,42 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-lineage-review",
+  "reference_main_sha": "1046afb9b44d3a69aa057a4fd858affca4c5ed26",
+  "record_count": 2,
+  "run_key": "20261023-0623-codex-lineage-review/r03/research-relevance-001",
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2409.04421",
+      "identity_tokens": [
+        "arxiv:2409.04421"
+      ],
+      "title": "RLPF: Reinforcement Learning from Prediction Feedback for User Summarization with LLMs",
+      "reason": "一次論文全文では、強化学習でユーザー履歴の要約器を学習し、個人化タスクの品質を保ちながら入力コンテキストを約74%短縮する。入力トークン削減は推論コストに接点がある一方、主眼は個人化向け要約の学習と下流タスク性能で、serving/runtimeやKV cache管理の改善を検証していないため微妙とする。",
+      "source_url": "https://arxiv.org/abs/2409.04421",
+      "body_check": "primary_pdf_read; full_text_reviewed",
+      "first_checked_at": "2026-10-22T21:23:05Z",
+      "last_checked_at": "2026-10-22T21:24:30Z",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance",
+      "worklist_rank": 68
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2502.00585",
+      "identity_tokens": [
+        "arxiv:2502.00585"
+      ],
+      "title": "Converting Transformers into DGNNs Form",
+      "reason": "一次論文全文では、自己注意の代わりに合成有向グラフ畳み込みを用いるSynvolution/Kernelutionを提案し、長系列での計算量を抑えるTransformer変種を示す。一方、評価対象はLong-Range Arena、長文書分類、DNA配列分類で、LLM生成・serving・KV cache上の効果は検証していない。注意計算効率への直接の接点はあるがLLM推論との適用確認がないため微妙とする。",
+      "source_url": "https://arxiv.org/abs/2502.00585",
+      "body_check": "primary_pdf_read; full_text_reviewed",
+      "first_checked_at": "2026-10-22T21:23:05Z",
+      "last_checked_at": "2026-10-22T21:24:30Z",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance",
+      "worklist_rank": 84
+    }
+  ]
+}
