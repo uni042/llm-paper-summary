@@ -4,7 +4,7 @@
 
 ## 検索と表示
 
-- タイトル、`summary` / `list_summary` を反映した日本語概要、frontmatterを除いた本文を検索する。HTMLタグ、HTMLコメント、Markdown link destination、bare URLは検索本文から除く。本文はbuild時にNFKCへ正規化し、入力のたびに数千本分の本文全体を再正規化しない。
+- タイトル、`summary` / `list_summary` と本文の「概要」節を反映した日本語概要、frontmatterを除いた本文を検索する。HTMLタグ、HTMLコメント、Markdown link destination、bare URLは検索本文から除く。本文はbuild時にNFKCへ正規化し、入力のたびに数千本分の本文全体を再正規化しない。
 - NFKCと小文字化を行い、空白区切りの複数語はAND、引用符で囲んだ語句はフレーズとして扱う。引用符内外の各語句もすべて一致する必要がある。
 - 空検索はscope内の全件を表示する。おすすめ順は直近12か月内かつリポジトリ内被引用1件以上の注目論文、被引用数、一致回数、公開日、タイトルで安定順にする。引用数順と新しい順も選べる。検索語に一致しない論文はどのsortでも加えない。
 - 公開年、注目のみ、実装情報ありのfilterは固定scope内で交差して絞る。「実装情報あり」は公開コードの有無を断定せず、解説に記載された実装・実装情報（未公開コードを含む）がある論文を示す。リポジトリ内被引用は収録論文の `references` から同一repositoryの対象を数えた値で、世界全体の被引用数ではない。
@@ -17,7 +17,7 @@
 
 Pages workflowはmainの論文や検索source変更、手動実行、毎日のrefreshで検索をbuildしてdeployする。`GITHUB_TOKEN` によるpaper-import commitではpush workflowが再実行されないため、成功した `Library import processor` の `workflow_run` 完了も更新契機にする。毎日のrefreshは他のbot更新に対するfallbackである。pull requestではartifact buildのみでdeploy jobを実行しない。手動実行を別branchから行った場合もbuildだけで、main以外はdeployしない。
 
-GitHub Pagesは `https://uni042.github.io/llm-paper-summary/` を既定URLとするが、この実装作業はPagesのsource/settingsを変更せず、サイトの公開も行っていない。公開にはrepositoryのPages sourceをGitHub Actionsへ設定する必要がある。
+公開先は `https://uni042.github.io/llm-paper-summary/`。repositoryのPages sourceはGitHub Actions方式を使用する。初回公開・更新は `Build and deploy paper search` workflowで行い、検索データとREADME索引は最新mainから再生成する。
 
 ## Payload
 
