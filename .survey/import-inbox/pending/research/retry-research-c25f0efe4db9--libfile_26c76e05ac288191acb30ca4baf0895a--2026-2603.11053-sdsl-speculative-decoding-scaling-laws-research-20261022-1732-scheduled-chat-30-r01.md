@@ -27,6 +27,8 @@ worker_id: "scheduled-chat-30"
 reference_main_sha: "f19dde54fd9b4376079b10408d754000f89496a1"
 worklist_rank: 158
 research_relevance: "accept"
+last_audited: null
+audit_version: 0
 ---
 
 # SDSL：投機的復号の草稿モデルをスケーリング則から選ぶ

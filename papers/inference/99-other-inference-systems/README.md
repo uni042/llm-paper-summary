@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（963本）
+## 自動生成の論文一覧（965本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -740,6 +740,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   本論文は混合専門家モデル（Mixture-of-Experts、MoE）の推論時に、各トークンで何個の専門家ネットワークを実行するかを決める問題を扱う。固定個数選択（Top-K）では容易なトークンにも同じ数の専門家を割り当てる。
 
+- **2026-09 · [Early-Bird Decoding: Accelerating Diffusion LLMs with Learnable Block Sizes and Parallel Sampling](2026-2609.16450-early-bird-decoding-accelerating-diffusion-llms-with-learnable-block-siz.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  拡散型大規模言語モデル（diffusion LLM、dLLM）は、未確定位置をマスクした系列に対し、双方向Transformerで各位置の語彙分布を同時に予測し、確信できる位置を確定して再び推論する。
+
 - **2026-09 · [Dynamic Semantic Compression for Efficient Latent-Space Inference in Large Language Models](2026-2609.15338-dynamic-semantic-compression-latent-space-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   文を長さに応じて1〜3区間へ分割し、重要トークンを重み付けした潜在表現を生成・復号するDSEI。固定文圧縮より品質を改善し、トークン単位推論より系列長とメモリ負荷を削減する。
@@ -859,6 +863,10 @@
 - **2026-08 · [ReRound: Reconstructive Rounding to Resolve Midpoint Ambiguity in Calibration-Free LLM Quantization](2026-2608.11045-reround-reconstructive-rounding-to-resolve-midpoint-ambiguity-in-calibra.md)**  
   実装：[✓](https://github.com/louisYen/ReRound) ・ リポジトリ内被引用：0  
   この研究が変更するのは量子化スケールそのものではなく、既に決められた量子化区間の下側整数・上側整数のどちらを選ぶかという最終段階である。例えばGemma 2 2Bの4ビット条件で、四つのゼロショット課題の平均正答率はグループ別RTNの66.4%から67.4%へ上昇した。
+
+- **2026-08 · [Read Less, Solve More: Token-Efficient Sparse Reading for AI Agents](2026-2608.22237-read-less-solve-more-token-efficient-sparse-reading-for-ai-agents.md)**  
+  実装：[✓](https://github.com/Zedong-Liu/SparseReadingOfficial) ・ リポジトリ内被引用：0  
+  これにより入力処理の計算費用と遅延が増えるだけでなく、重要な根拠が埋もれて道具選択や停止判断を誤る場合がある。全文を読むべき表計算や小さいファイルへ無理に適用すると、逆にトークン量が大きく増える例も確認しており、読解判定器はこの負の条件を避けるための主要機構である。
 
 - **2026-08 · [RAC: Reference-Aware Activation Compression for Communication-Efficient Split LLM Inference](2026-2608.04991-rac-reference-aware-activation-compression-for-communication-efficient-s.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
