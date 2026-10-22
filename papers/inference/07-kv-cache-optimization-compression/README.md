@@ -175,6 +175,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   実装：✓ ・ リポジトリ内被引用：2  
   数学的には、毎回すべての接頭辞を再計算する経路と同じ注意計算を実行するはずである。新しい高速化カーネルやKV圧縮方式を提案する研究ではない。さらに32ビット浮動小数点（FP32）へ切り替えると、著者らの別の対照実験ではトークン反転が0%となり、出力分布差が大幅に減った。
 
+- **2026-04 · [LKV: End-to-End Learning of Head-wise Budgets and Token Selection for LLM KV Cache Eviction](2026-2605.06676-lkv-end-to-end-learning-of-head-wise-budgets-and-token-selection-for-llm.md)**  
+  実装：✓ ・ リポジトリ内被引用：2  
+  KVキャッシュの残し方を「どのヘッドへ何トークン分を割り当てるか」と「そのヘッド内でどのトークンを残すか」に分解し、両方をタスクの品質から学習する。
+
 - **2026-04 · [IceCache: Memory-efficient KV-cache Management for Long-Sequence LLMs](2026-2604.10539-icecache-semantic-kv-offload.md)**  
   実装：[✓](https://github.com/yuzhenmao/IceCache) ・ リポジトリ内被引用：2  
   IceCacheは、意味的に近いKVを同じ物理ページへクラスタ化し、関連ページだけをCPUから一括転送して、長文のGPU KV容量とPCIeデータ量を減らす。
@@ -290,10 +294,6 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 - **2026-05 · [AgentKVShift: Efficient KV Cache Reuse for Agentic Memory Systems](2026-2607.21604-agentkvshift-agentic-memory-kv-reuse.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   構造化エージェントメモリの一部トークンだけを再計算し、そこから推定したメモリ単位のKV残差を未再計算トークン全体へ加えて、低い再計算率で品質を回復する。
-
-- **2026-04 · [LKV: End-to-End Learning of Head-wise Budgets and Token Selection for LLM KV Cache Eviction](2026-2605.06676-lkv-end-to-end-learning-of-head-wise-budgets-and-token-selection-for-llm.md)**  
-  実装：✓ ・ リポジトリ内被引用：1  
-  KVキャッシュの残し方を「どのヘッドへ何トークン分を割り当てるか」と「そのヘッド内でどのトークンを残すか」に分解し、両方をタスクの品質から学習する。
 
 - **2026-03 · [The Residual Stream Is All You Need: On the Redundancy of the KV Cache in Transformer Inference](2026-2603.19664-the-residual-stream-is-all-you-need-on-the-redundancy-of-the-kv-cache-in.md)**  
   実装：[✓](https://github.com/Kaleemullahqasim/KV-Direct) ・ リポジトリ内被引用：1  
