@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-22T17:41:46+00:00",
+  "generated_at": "2026-10-22T17:50:14+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -409,33 +409,6 @@
       "worker_run_key": "20261022-2134-scheduled-chat-30/r01"
     },
     {
-      "canonical_id": "arXiv:2603.11053",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-22T14:30:53+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 0 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5273,
-        "body_paragraphs": 29,
-        "method_chars": 2104,
-        "method_paragraphs": 12,
-        "evaluation_chars": 0,
-        "limitation_chars": 713,
-        "insufficiency_flags": [
-          "評価説明量 0 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_26c76e05ac288191acb30ca4baf0895a--2026-2603.11053-sdsl-speculative-decoding-scaling-laws-research-20261022-1732-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_26c76e05ac288191acb30ca4baf0895a--2026-2603.11053-sdsl-speculative-decoding-scaling-laws-research-20261022-1732-scheduled-chat-30-r01.json",
-      "worker_run_key": "20261022-1732-scheduled-chat-30/r01"
-    },
-    {
       "canonical_id": "arXiv:2604.19767",
       "title": null,
       "source_url": null,
@@ -521,33 +494,6 @@
       "worker_run_key": "20261022-0701-scheduled-chat-00/r01"
     },
     {
-      "canonical_id": "arXiv:2508.01002",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-22T15:46:54+00:00",
-      "return_count": 5,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 6029,
-        "body_paragraphs": 30,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 535,
-        "limitation_chars": 858,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_7cff01601c788191ab67fea6ff5fbdc2--2025-2508.01002-slai-optimal-llm-scheduling-research-20261022-1803-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_7cff01601c788191ab67fea6ff5fbdc2--2025-2508.01002-slai-optimal-llm-scheduling-research-20261022-1803-scheduled-chat-00-r01.json",
-      "worker_run_key": "20261022-1803-scheduled-chat-00/r01"
-    },
-    {
       "canonical_id": "DOI:10.1145/3706418",
       "title": null,
       "source_url": null,
@@ -629,36 +575,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_960ef526ab1c819184ae718adf3eef54--2026-2602.00748-hyperoffload-graph-memory-supernode-research-20261022-1626-scheduled-chat-30-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_960ef526ab1c819184ae718adf3eef54--2026-2602.00748-hyperoffload-graph-memory-supernode-research-20261022-1626-scheduled-chat-30-r01.json",
       "worker_run_key": "20261022-1626-scheduled-chat-30/r01"
-    },
-    {
-      "canonical_id": "arXiv:2602.05499",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-22T16:08:24+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700",
-        "説明不足トリガー: 評価説明量 449 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5846,
-        "body_paragraphs": 33,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 449,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700",
-          "評価説明量 449 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_9a73d80318bc8191b59790a6104ecd41--2026-2602.05499-sdfp-fit-pruned-draft-speculative-decoding-research-20261022-1732-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_9a73d80318bc8191b59790a6104ecd41--2026-2602.05499-sdfp-fit-pruned-draft-speculative-decoding-research-20261022-1732-scheduled-chat-30-r01.json",
-      "worker_run_key": "20261022-1732-scheduled-chat-30/r01"
     },
     {
       "canonical_id": "DOI:10.1145/3721146.3721947",
@@ -1029,8 +945,8 @@
     },
     {
       "canonical_id": "arXiv:2510.13890",
-      "title": "A Survey on Collaborating Small and Large Language Models for Performance, Cost-effectiveness, Cloud-edge Privacy, and Trustworthiness",
-      "source_url": "https://arxiv.org/pdf/2510.13890",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-22T17:41:41+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-30",
@@ -1059,8 +975,8 @@
     },
     {
       "canonical_id": "arXiv:2607.24306",
-      "title": "Rethinking the Generation Order of Block Diffusion Language Models",
-      "source_url": "https://arxiv.org/html/2607.24306v1",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-22T17:41:42+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-45",
@@ -1086,8 +1002,8 @@
     },
     {
       "canonical_id": "arXiv:2606.07116",
-      "title": "OffQ: Taming Structured Outliers in LLM Quantization by Offsetting",
-      "source_url": "https://arxiv.org/pdf/2606.07116",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-22T17:41:44+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-45",
@@ -1111,6 +1027,90 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-a3716b8c4997--libfile_87b9b49a3b448191b2df20a4ad882bb3--2026-2606.07116-offq-outlier-offset-quantization-research-20261022-2300-scheduled-chat-00-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-a3716b8c4997--libfile_87b9b49a3b448191b2df20a4ad882bb3--2026-2606.07116-offq-outlier-offset-quantization-research-20261022-2300-scheduled-chat-00.json",
       "worker_run_key": "20261022-2300-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2603.11053",
+      "title": "Speculative Decoding Scaling Laws (SDSL): Throughput Optimization Made Simple",
+      "source_url": "https://arxiv.org/html/2603.11053",
+      "returned_at": "2026-10-22T17:50:07+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 0 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5273,
+        "body_paragraphs": 29,
+        "method_chars": 2104,
+        "method_paragraphs": 12,
+        "evaluation_chars": 0,
+        "limitation_chars": 713,
+        "insufficiency_flags": [
+          "評価説明量 0 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-c25f0efe4db9--libfile_26c76e05ac288191acb30ca4baf0895a--2026-2603.11053-sdsl-speculative-decoding-scaling-laws-research-20261022-1732-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-c25f0efe4db9--libfile_26c76e05ac288191acb30ca4baf0895a--2026-2603.11053-sdsl-speculative-decoding-scaling-laws-research-20261022-1732-scheduled-c.json",
+      "worker_run_key": "20261022-1732-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2602.05499",
+      "title": "SDFP: Speculative Decoding with FIT-Pruned Models for Training-Free and Plug-and-Play LLM Acceleration",
+      "source_url": "https://arxiv.org/html/2602.05499",
+      "returned_at": "2026-10-22T17:50:09+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700",
+        "説明不足トリガー: 評価説明量 449 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5846,
+        "body_paragraphs": 33,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 449,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700",
+          "評価説明量 449 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-c68bf512268a--libfile_9a73d80318bc8191b59790a6104ecd41--2026-2602.05499-sdfp-fit-pruned-draft-speculative-decoding-research-20261022-1732-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-c68bf512268a--libfile_9a73d80318bc8191b59790a6104ecd41--2026-2602.05499-sdfp-fit-pruned-draft-speculative-decoding-research-20261022-1732-schedul.json",
+      "worker_run_key": "20261022-1732-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2508.01002",
+      "title": "Optimal Scheduling Algorithms for LLM Inference: Theory and Practice",
+      "source_url": "https://arxiv.org/pdf/2508.01002",
+      "returned_at": "2026-10-22T17:50:12+00:00",
+      "return_count": 6,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 6029,
+        "body_paragraphs": 30,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 535,
+        "limitation_chars": 858,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-cd7556f48d02--libfile_7cff01601c788191ab67fea6ff5fbdc2--2025-2508.01002-slai-optimal-llm-scheduling-research-20261022-1803-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-cd7556f48d02--libfile_7cff01601c788191ab67fea6ff5fbdc2--2025-2508.01002-slai-optimal-llm-scheduling-research-20261022-1803-scheduled-chat-00-r01.json",
+      "worker_run_key": "20261022-1803-scheduled-chat-00/r01"
     }
   ]
 }
