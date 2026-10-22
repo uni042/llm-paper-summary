@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "018b5d1a621abee9fe15b7c8b0a0cc82ffa65997f285920ec5690f39c45464e7",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_79312e304b748191a14038bdd26233af--2024-2402.02750-kivi-asymmetric-2bit-kv-cache-research-20261022-0701-scheduled-chat-00-r01.md",
+  "canonical_id": "arXiv:2402.02750",
+  "worker_completed_at": "2026-10-22T07:15:01+09:00",
+  "worker_run_key": "20261022-0701-scheduled-chat-00/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 5052,
+    "body_paragraphs": 31,
+    "method_chars": 1725,
+    "method_paragraphs": 9,
+    "evaluation_chars": 0,
+    "limitation_chars": 0,
+    "insufficiency_flags": [
+      "評価説明量 0 < 500",
+      "限界説明量 0 < 推奨 120"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 評価説明量 0 < 500"
+  ],
+  "processed_at": "2026-10-22T15:38:43+00:00"
+}

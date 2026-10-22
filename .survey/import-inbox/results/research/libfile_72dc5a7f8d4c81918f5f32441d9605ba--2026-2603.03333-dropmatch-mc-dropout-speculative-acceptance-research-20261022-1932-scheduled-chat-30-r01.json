@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "c026fbaba215affb43507fd862195b2f22383744b4f09ced2e7e74afb3ceb74d",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_72dc5a7f8d4c81918f5f32441d9605ba--2026-2603.03333-dropmatch-mc-dropout-speculative-acceptance-research-20261022-1932-scheduled-chat-30-r01.md",
+  "canonical_id": "arXiv:2603.03333",
+  "worker_completed_at": "2026-10-22T19:32:00+09:00",
+  "worker_run_key": "20261022-1932-scheduled-chat-30/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 6208,
+    "body_paragraphs": 39,
+    "method_chars": 0,
+    "method_paragraphs": 0,
+    "evaluation_chars": 0,
+    "limitation_chars": 683,
+    "insufficiency_flags": [
+      "手法説明量 0 < 700",
+      "評価説明量 0 < 500"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 手法説明量 0 < 700",
+    "説明不足トリガー: 評価説明量 0 < 500"
+  ],
+  "processed_at": "2026-10-22T15:37:57+00:00"
+}

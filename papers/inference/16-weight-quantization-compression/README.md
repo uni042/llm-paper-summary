@@ -25,7 +25,7 @@
 - [08-edge-on-device-llm-systems](../08-edge-on-device-llm-systems/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（65本）
+## 自動生成の論文一覧（66本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/16-weight-quantization-compression/)
 
@@ -71,6 +71,10 @@
 - **2026-09 · [Predict Before You Deploy: Offline Prediction of Quantization-Induced Task Degradation for World Action Models](2026-2609.19441-prede-quantization-task-degradation-prediction.md)**  
   実装：[✓](https://github.com/jiuyixu25/PreDE) ・ リポジトリ内被引用：0  
   PreDE（Predict Before You Deploy）は、世界行動モデル（World Action モデル、WAM）を学習後量子化したとき、候補ごとに高価な閉ループ試験を行う前に、タスク成功率の劣化を「受理・棄却・保留」の三値で予測する方式である。
+
+- **2026-09 · [FlexPosit: Tunable Fractional Precision for LLM Inference Accelerators](2026-2609.04724-flexposit-tunable-fractional-precision-for-llm-inference-accelerators.md)**  
+  実装：[✓](https://github.com/hplp/FlexPosit) ・ リポジトリ内被引用：0  
+  LLMの重み量子化には、精度を保つために細かいグループごとに倍率を持つ方式と、ハードウェア実装しやすいチャネル単位の方式がある。
 
 - **2026-09 · [Faster Block-Diffusion Serving with Distribution-Free Risk Guarantees](2026-2609.33887-faster-block-diffusion-serving-with-distribution-free-risk-guarantees.md)**  
   実装：[✓](https://github.com/js-lee-AI/Redline) ・ リポジトリ内被引用：0  
