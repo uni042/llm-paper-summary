@@ -1294,7 +1294,7 @@
 
 - **2026-05 · [Parallel Prefix Verification for Speculative Generation](2026-2605.04263-parallel-prefix-verification-for-speculative-generation.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
-  従来の投機的復号（投機的復号）は、小型モデルが次の数トークンを予測し、大型の対象モデルがその確率分布に照らして採否を決める。Qwen3-235B-A22B-FP8を対象モデル、Qwen3-8Bをドラフトとして4基のH200上で評価し、通常の対象モデル生成に対して1.25〜4.29倍のトークン処理量、EAGLE-3併用では最大4.46倍を報告する。
+  しかし従来の意味的投機方式では、節ごとに正誤を順番に判定するため、検証回数が新たな直列処理の負担となる。対象モデル単独に対する生成処理量はGPQAで1.25倍、GSM8Kで4.29倍となり、EAGLE-3併用では最大4.46倍を示した。
 
 - **2026-05 · [OccamToken: Efficient VLM Inference with Training-Free and Budget-Adaptive Token Pruning](2026-2605.29657-occamtoken-efficient-vlm-inference-with-training-free-and-budget-adaptiv.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

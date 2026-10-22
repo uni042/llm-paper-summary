@@ -23,7 +23,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - [06-moe-quantization-compression](../06-moe-quantization-compression/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（148本）
+## 自動生成の論文一覧（149本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -286,7 +286,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 
 - **2026-04 · [SinkRouter: Sink-Aware Routing for Efficient Long-Context Decoding in Large Language and Multimodal Models](2026-2604.16883-sinkrouter-sink-aware-routing-for-efficient-long-context-decoding-in-lar.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
-  SinkRouterは、長文脈の自己回帰生成で注意計算がGPUメモリからのKVキャッシュ読出しに律速される問題に対し、実際にはほとんど残差更新を生まない注意グループを検出し、そのグループの過去KVを読み込まない方式である。
+  先頭トークンに注意重みが集中する注意の沈み込み（注意機構 sink）を、重要な履歴情報を保持するための目印としてだけでなく、「現在の注意出力がほぼゼロとなり、残差流への更新が小さい」状態を示す手掛かりとして解釈する。原著はNVIDIA RTX PRO 6000で512Kトークン文脈の復号を最大2.03倍高速化したと報告する。
 
 - **2026-04 · [Screening Is Enough](2026-2604.01178-screening-is-enough.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -477,6 +477,10 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - **2025-06 · [LittleBit: Ultra Low-Bit Quantization via Latent Factorization](2025-2506.13771-littlebit-ultra-low-bit-quantization-via-latent-factorization.md)**  
   実装：[✓](https://github.com/SamsungLabs/LittleBit) ・ リポジトリ内被引用：1  
   大規模言語モデルの重みを4ビットへ量子化すると、FP16と比べて保存量を大きく減らせる。Llama2-13Bの0.1 BPWでは重み保存量をFP16の26.06GBから0.84GBへ縮小し、31.02倍の圧縮を報告する。
+
+- **2025-03 · [Samoyeds: Accelerating MoE Models with Structured Sparsity Leveraging Sparse Tensor Cores](2025-2503.10725-samoyeds-accelerating-moe-models-with-structured-sparsity-leveraging-spa.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  全専門家を毎回動かさないことで計算量を抑えられるが、実装上はトークンを専門家ごとに並べ替える入力転置、専門家の行列積、出力の再結合、GPUメモリの読み書きが必要になる。従来の高速化では、重みの構造化枝刈りによる疎性と、トークンが選択された専門家にだけ存在するという活性側の疎性を別々に扱うことが多かった。
 
 - **2024-11 · [TATAA: Programmable Mixed-Precision Transformer Acceleration with a Transformable Arithmetic Architecture](2024-2411.03697-tataa-programmable-mixed-precision-transformer-acceleration-with-a-trans.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

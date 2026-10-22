@@ -1,13 +1,12 @@
 {
   "schema_version": 1,
   "artifact_type": "research",
-  "status": "imported",
+  "status": "blocked_quality",
   "source_sha256": "609c752c997f8bc41aa60ed54810660f0e35e7ba713d18fcfd9849f08d05fc3b",
-  "canonical_id": "arXiv:2602.00777",
-  "paper_path": "papers/inference/99-other-inference-systems/2026-2602.00777-hylra-hybrid-layer-reuse-attention-for-efficient-long-context-inference.md",
-  "lineage": "99-other-inference-systems",
-  "audit_status": "PASS",
+  "normalized_source_sha256": null,
   "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_2ff62470d6dc81919880f75531be3beb--2026-2602.00777-hylra-hybrid-layer-reuse-attention-research-20261022-2134-scheduled-chat-30-r01.md",
+  "canonical_id": "arXiv:2602.00777",
   "worker_completed_at": "2026-10-22T21:38:48+09:00",
   "worker_run_key": "20261022-2134-scheduled-chat-30/r01",
   "quality_metrics": {
@@ -20,5 +19,8 @@
     "limitation_chars": 618,
     "insufficiency_flags": []
   },
-  "processed_at": "2026-10-22T14:21:18+00:00"
+  "failures": [
+    "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2026-2602.00777-hylra-hybrid-layer-reuse-attention-for-efficient-long-context-inference.md と 18 段落 / 4017文字 (100.0%) が完全一致"
+  ],
+  "processed_at": "2026-10-22T14:54:31+00:00"
 }

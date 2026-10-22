@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-22T14:43:00+00:00",
+  "generated_at": "2026-10-22T14:56:40+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -292,33 +292,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-108adf8a7baf--libfile_44c85531466081919386a0595babfc98--2026-2609.35065-tempokv-timely-staging-research-20261021-1528-scheduled-chat-30-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-108adf8a7baf--libfile_44c85531466081919386a0595babfc98--2026-2609.35065-tempokv-timely-staging-research-20261021-1528-scheduled-chat-30-r01.json",
       "worker_run_key": "20261021-1528-scheduled-chat-30/r01"
-    },
-    {
-      "canonical_id": "arXiv:2604.19767",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-22T02:02:16+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5179,
-        "body_paragraphs": 26,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 1767,
-        "limitation_chars": 584,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-218213fafd5f--libfile_8ded7292da70819189cf39439b4576c3--2026-2604.19767-paypal-eagle3-nemotron-research-20261021-2126-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-218213fafd5f--libfile_8ded7292da70819189cf39439b4576c3--2026-2604.19767-paypal-eagle3-nemotron-research-20261021-2126-scheduled-chat-30-r01.json",
-      "worker_run_key": "20261021-2126-scheduled-chat-30/r01"
     },
     {
       "canonical_id": "arXiv:2505.03031",
@@ -866,6 +839,35 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_3e2efd7cba1c81919e59ce78122c9a07--2026-2601.14279-limits-learned-kv-importance-research-20261022-1626-scheduled-chat-30-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_3e2efd7cba1c81919e59ce78122c9a07--2026-2601.14279-limits-learned-kv-importance-research-20261022-1626-scheduled-chat-30-r01.json",
       "worker_run_key": "20261022-1626-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2604.19767",
+      "title": "Accelerating PayPal's Commerce Agent with Speculative Decoding: An Empirical Study on EAGLE3 with Fine-Tuned Nemotron Models",
+      "source_url": "https://arxiv.org/pdf/2604.19767",
+      "returned_at": "2026-10-22T14:54:30+00:00",
+      "return_count": 3,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700",
+        "説明不足トリガー: 評価説明量 0 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 6504,
+        "body_paragraphs": 34,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 0,
+        "limitation_chars": 651,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700",
+          "評価説明量 0 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_18af5356fdbc819195db56ac7bec1e60--2026-2604.19767-paypal-eagle3-empirical-returned-repair-20261022-0745-scheduled-chat-45-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_18af5356fdbc819195db56ac7bec1e60--2026-2604.19767-paypal-eagle3-empirical-returned-repair-20261022-0745-scheduled-chat-45-r01.json",
+      "worker_run_key": "20261022-0742-scheduled-chat-45/r01"
     }
   ]
 }
