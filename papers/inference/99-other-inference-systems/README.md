@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（967本）
+## 自動生成の論文一覧（969本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -2062,6 +2062,10 @@
   実装：[✓](https://github.com/enyac-group/Elana) ・ リポジトリ内被引用：0  
   本論文は新しい推論アルゴリズムの高速化倍率を主張するものではなく、計測方法と計測例を提示する研究である。
 
+- **2025-12 · [Efficient LLM Deployment in Consumer Electronics Applications via Resource-Aware and Salience-Guided Quantization](2025-38c6f5463687-efficient-llm-deployment-in-consumer-electronics-applications-via-resour.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  全層を一律2ビットへ下げるとモデルは小さくなるが、重要な重みの量子化誤差によって生成品質が悪化し得る。
+
 - **2025-12 · [DiRL: An Efficient Post-Training Framework for Diffusion Language Models](2025-2512.22234-dirl-an-efficient-post-training-framework-for-diffusion-language-models.md)**  
   実装：[✓](https://github.com/OpenMOSS/DiRL) ・ リポジトリ内被引用：0  
   提案はこの問題を、ブロック間は自己回帰的、ブロック内は並列的な拡散という構造で扱う。著者は、学習処理の遅延を約6分の1にし、学習・推論の統合によって全体処理量を約2.5倍改善したと報告する。
@@ -2575,6 +2579,10 @@
 - **2025-03 · [AdaReTaKe: Adaptive Redundancy Reduction to Perceive Longer for Video-language Understanding](2025-2503.12559-adaretake-adaptive-redundancy-reduction-to-perceive-longer-for-video-lan.md)**  
   実装：[✓](https://github.com/SCZwangxiao/video-FlexReduc) ・ リポジトリ内被引用：1  
   動画を長くするほど事前充填で扱う系列が増え、言語モデルの鍵・値キャッシュ（KVキャッシュ）がGPUメモリを圧迫する。すべてのフレームを同じ割合で圧縮すると、静止区間へ不要な容量を割り当てる一方、質問に必要な短い場面の情報を失う。これは処理可能な動画情報量と理解精度の結果であり、トークン生成速度が同倍率で向上するという主張ではない。
+
+- **2025-02 · [SPECTRE: An FFT-Based Efficient Drop-In Replacement to Self-Attention for Long Contexts](2025-2502.18394-spectre-an-fft-based-efficient-drop-in-replacement-to-self-attention-for.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  SPECTREは、系列長$n$に対して二乗で増える通常の自己注意（Self-注意機構）を、実数高速フーリエ変換（Real Fast Fourier Transform、RFFT）、内容適応の周波数ゲート、逆変換の組合せで置き換える方式である。
 
 - **2025-02 · [BumbleBee: Secure Two-party Inference Framework for Large Transformers](2025-93b16acfd7b9-bumblebee-secure-two-party-inference-framework-for-large-transformers.md)**  
   実装：[✓](https://github.com/AntCPLab/OpenBumbleBee) ・ リポジトリ内被引用：1  

@@ -33,6 +33,8 @@ reference_main_sha: 'f611d5581815bdaa85393736c53b4be1ebb05566'
 research_origin: worklist_rank_79
 quality_self_review_passed: true
 quality_self_review_version: PAPER-QUALITY-GUIDE-2026-10-07
+last_audited: null
+audit_version: 0
 ---
 
 # 最適なLLM推論スケジューリング：理論上の処理量と締切を守るSLAI
