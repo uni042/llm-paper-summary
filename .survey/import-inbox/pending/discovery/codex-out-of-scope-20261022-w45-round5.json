@@ -1,0 +1,27 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-45",
+  "run_key": "codex-worklist-outscope-20261022-w45-round5",
+  "reference_main_sha": "f9b52aa0b132acba5b784b7071bad67ba7969b1a",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.20581",
+      "identity_tokens": [
+        "arXiv:2609.20581",
+        "DOI:10.48550/arxiv.2609.20581"
+      ],
+      "title": "Limits of Confidence in Diffusion",
+      "reason": "離散拡散で複数token位置を同時に確定する際のconfidence rankingと依存関係を解析し、拡散言語モデルの並列decodingに隣接する。主貢献は生成分布の正しさに関する理論・合成課題で、推論時間、メモリ、throughput、runtimeを改善する仕組みや評価はないため微妙とする。",
+      "source_url": "https://arxiv.org/abs/2609.20581v2",
+      "body_check": "一次要旨確認（arXiv v2、2026-09-18、本文未読）：離散拡散samplerが複数token位置を同時確定するconfidence rankingと、その分布依存性・合成課題での検証を確認。要旨に記載のない推論高速化やシステム実装は推定していない。",
+      "first_checked_at": "2026-10-22T17:27:26Z",
+      "last_checked_at": "2026-10-22T17:27:26Z",
+      "linked_from": [
+        ".survey/work-queue/WORKLIST-45.md"
+      ]
+    }
+  ]
+}
