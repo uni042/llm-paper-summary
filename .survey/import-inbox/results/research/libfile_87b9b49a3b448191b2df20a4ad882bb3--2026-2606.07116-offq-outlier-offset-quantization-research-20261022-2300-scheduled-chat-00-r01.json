@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "eea1068670538611642c099fc54e0190e698265cdc62b7ff576640479289f761",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_87b9b49a3b448191b2df20a4ad882bb3--2026-2606.07116-offq-outlier-offset-quantization-research-20261022-2300-scheduled-chat-00-r01.md",
+  "canonical_id": "arXiv:2606.07116",
+  "worker_completed_at": "2026-10-22T23:07:57+09:00",
+  "worker_run_key": "20261022-2300-scheduled-chat-00/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 4884,
+    "body_paragraphs": 26,
+    "method_chars": 1607,
+    "method_paragraphs": 9,
+    "evaluation_chars": 473,
+    "limitation_chars": 0,
+    "insufficiency_flags": [
+      "評価説明量 473 < 500",
+      "限界説明量 0 < 推奨 120"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 評価説明量 473 < 500"
+  ],
+  "processed_at": "2026-10-22T14:21:19+00:00"
+}

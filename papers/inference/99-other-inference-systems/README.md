@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（961本）
+## 自動生成の論文一覧（963本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -1728,6 +1728,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   新しい推論カーネルの提案ではなく、既存の推論基盤をどの条件でどう設定すると効率が変わるかを調べる。A100 40GB上でLlama-2-7Bを使い、入力長、出力長、バッチサイズ、GPU電力上限を変える。
 
+- **2026-03 · [CacheNotes: Task-Aware Key-Value Cache Compression for Reasoning-Intensive Knowledge Tasks](2026-04cca81d3e08-cachenotes-task-aware-key-value-cache-compression-for-reasoning-intensiv.md)**  
+  実装：[✓](https://github.com/giulio98/cachenotes) ・ リポジトリ内被引用：0  
+  コーパスに対しタスク別の圧縮計画トークン（CPTs）を生成し、CPTsからの注意を用いてコーパスKVキャッシュを一度だけ圧縮する。H100の128KコーパスでTTFT 0.13秒、RAG 0.61秒、全再入力15.88秒。
+
 - **2026-03 · [Bielik-Minitron-7B: Compressing Large Language Models via Structured Pruning and Knowledge Distillation for the Polish Language](2026-2603.11881-bielik-minitron-7b-compressing-large-language-models-via-structured-prun.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   大規模言語モデルの重み容量と計算費用を下げる方法には、数値精度を落とす量子化と、モデル構造自体を小さくする枝刈りがある。パラメータ削減率は33.4%である。
@@ -1811,6 +1815,10 @@
 - **2026-02 · [Learning Query-Aware Budget-Tier Routing for Runtime Agent Memory](2026-2602.06025-learning-query-aware-budget-tier-routing-for-runtime-agent-memory.md)**  
   実装：[✓](https://github.com/ViktorAxelsen/BudgetMem) ・ リポジトリ内被引用：0  
   従来の記憶方式は履歴全体を事前に要約・索引化することが多いが、将来どの質問が来るかを知らずに情報を圧縮するため、不要な部分へ計算を費やしたり、後で必要になる詳細を失ったりする。
+
+- **2026-02 · [HyLRA: Hybrid Layer Reuse Attention for Efficient Long-Context Inference](2026-2602.00777-hylra-hybrid-layer-reuse-attention-for-efficient-long-context-inference.md)**  
+  実装：[✓](https://anonymous.4open.science/r/unified-cache-management-CF80/) ・ リポジトリ内被引用：0  
+  HyLRA（Hybrid 層 Reuse 注意機構）は、長い入力を参照しながら一語ずつ生成する際に、各Transformer層が毎回すべての過去トークンへ注意を計算する費用を減らす手法である。系列長60Kの総合処理量は全注意比1.45倍だが、8Kでは0.93倍に低下する。
 
 - **2026-02 · [HiDrop: Hierarchical Vision Token Reduction in MLLMs via Late Injection, Concave Pyramid Pruning, and Early Exit](2026-2602.23699-hidrop-hierarchical-vision-token-reduction-in-mllms-via-late-injection-c.md)**  
   実装：[✓](https://github.com/EIT-NLP/HiDrop) ・ リポジトリ内被引用：0  
