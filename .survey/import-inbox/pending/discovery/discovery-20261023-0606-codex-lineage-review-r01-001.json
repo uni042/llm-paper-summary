@@ -1,0 +1,75 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-lineage-review",
+  "reference_main_sha": "92dfe9701be092ac671ea235005c4893378734f4",
+  "record_count": 4,
+  "run_key": "20261023-0606-codex-lineage-review/r01/research-relevance-001",
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.08302",
+      "identity_tokens": [
+        "arxiv:2606.08302"
+      ],
+      "title": "HACK++: Towards More Effective Head-Aware Key-Value Compression for Efficient Visual Autoregressive Modeling",
+      "reason": "一次要旨では、視覚自己回帰VARの尺度間に蓄積するKVキャッシュをhead別予算で圧縮し、attention計算量とメモリ負荷を抑える方式を提案する。LLM由来のKV圧縮を参考にしており技術上の接点は強いが、評価対象はtext-to-image等の視覚生成VARで、LLMのprefill/decodeやservingへの適用を検証していないため境界扱いとする。",
+      "source_url": "https://arxiv.org/abs/2606.08302",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-22T21:10:02.000+00:00",
+      "last_checked_at": "2026-10-22T21:10:02.000+00:00",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance",
+      "worklist_rank": 38
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2305.18952",
+      "identity_tokens": [
+        "arxiv:2305.18952",
+        "doi:10.48550/arxiv.2305.18952"
+      ],
+      "title": "Exploring the Practicality of Generative Retrieval on Dynamic Corpora",
+      "reason": "一次要旨（arXiv v5、2024-10-05改訂）は、動的コーパスの生成検索に自己回帰言語モデルを用い、Dual Encoderと推論FLOPs・索引時間・保存容量を比較する。言語モデル推論と検索システムの計算・保存効率には接点がある一方、主題は動的コーパスでの検索適応性であり、LLM serving/runtimeやKV cacheの改善を扱わないため境界扱いとする。",
+      "source_url": "https://arxiv.org/abs/2305.18952",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-22T21:10:02.000+00:00",
+      "last_checked_at": "2026-10-22T21:10:02.000+00:00",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance",
+      "worklist_rank": 62
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.24622",
+      "identity_tokens": [
+        "arxiv:2604.24622"
+      ],
+      "title": "CF-VLA: Efficient Coarse-to-Fine Action Generation for Vision-Language-Action Policies",
+      "reason": "一次要旨はflow-based VLA方策のロボット行動生成を粗い初期化と一段階の細部修正に分け、CALVIN/LIBEROで行動サンプリング遅延の短縮を報告する。改善対象はロボット制御ポリシーのaction samplingであり、LLM生成/serving、KV管理、推論ランタイム等の系統を対象としていないため無関係とする。",
+      "source_url": "https://arxiv.org/abs/2604.24622",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-22T21:10:02.000+00:00",
+      "last_checked_at": "2026-10-22T21:10:02.000+00:00",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance",
+      "worklist_rank": 27
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1007/s11042-021-11224-0",
+      "identity_tokens": [
+        "doi:10.1007/s11042-021-11224-0"
+      ],
+      "title": "A fire monitoring and alarm system based on channel-wise pruned YOLOv3",
+      "reason": "出版社の一次要旨では、channel-wise pruned YOLOv3で火災・煙の画像検知を軽量化する独立の監視応用を扱う。計算量削減はCNNによる火災検出向けで、LLM推論のserving・KV cache・言語モデル圧縮などの系統への具体的接続が確認できないため無関係とする。",
+      "source_url": "https://doi.org/10.1007/s11042-021-11224-0",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-22T21:10:02.000+00:00",
+      "last_checked_at": "2026-10-22T21:10:02.000+00:00",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance",
+      "worklist_rank": 59
+    }
+  ]
+}
