@@ -35,10 +35,15 @@
   "selection_reason": "SkipV1Former reuses first-layer value heads in deeper layers, cutting KV-cache requirements while improving representation quality, a direct autoregressive serving-memory optimization.",
   "semantic_scholar_id": "718a2db18c813aaf7182b86779eec5ec333717f7",
   "source_url": "https://arxiv.org/abs/2510.16807",
-  "status": "ready",
+  "status": "superseded",
   "title": "Improving Model Representation and Reducing KV Cache via Skip Connections with First Value Heads",
   "type": "research",
   "venue": "Neural Information Processing Systems",
   "workflow_version": 10,
-  "year": 2025
+  "year": 2025,
+  "superseded_at": "2026-10-22T00:40:44+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2025-2510.16807-improving-model-representation-and-reducing-kv-cache-via-skip-connection.md",
+  "represented_canonical_id": "arXiv:2510.16807",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

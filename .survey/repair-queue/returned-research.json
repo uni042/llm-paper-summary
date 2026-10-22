@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-22T00:29:41+00:00",
+  "generated_at": "2026-10-22T00:40:46+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 22,
+  "count": 20,
   "entries": [
     {
       "canonical_id": "DOI:10.1109/HCS59251.2023.10254711",
@@ -99,33 +99,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-20261017-exact--libfile_ed285db8b9cc819194487da8b2f7be3a--2026-2601.23180-trispec-proxy-verification-research-20261017-1730-scheduled-chat-30-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-20261017-exact--libfile_ed285db8b9cc819194487da8b2f7be3a--2026-2601.23180-trispec-proxy-verification-research-20261017-1730-scheduled-chat-30-r01.json",
       "worker_run_key": "20261017-1730-scheduled-chat-30/r01"
-    },
-    {
-      "canonical_id": "arXiv:2510.16807",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-17T19:48:03+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 0 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5674,
-        "body_paragraphs": 30,
-        "method_chars": 2066,
-        "method_paragraphs": 10,
-        "evaluation_chars": 0,
-        "limitation_chars": 714,
-        "insufficiency_flags": [
-          "評価説明量 0 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-7674b7a14ad0--libfile_bf64d1d864488191b3cf0e73ea18cb34--2025-2510.16807-skipv1former-first-value-skip-kv-research-20261018-0430-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-7674b7a14ad0--libfile_bf64d1d864488191b3cf0e73ea18cb34--2025-2510.16807-skipv1former-first-value-skip-kv-research-20261018-0430-scheduled-chat-30.json",
-      "worker_run_key": "20261018-0430-scheduled-chat-30/r01"
     },
     {
       "canonical_id": "arXiv:2609.16450",
@@ -267,63 +240,6 @@
       "worker_run_key": "20261020-0204-scheduled-chat-00/r01"
     },
     {
-      "canonical_id": "arXiv:2508.06297",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-20T17:23:45+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700",
-        "説明不足トリガー: 評価説明量 0 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 7149,
-        "body_paragraphs": 37,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 0,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700",
-          "評価説明量 0 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-165aeff9e3ee--libfile_48d364f513a48191a110336f9e153bf2--2025-2508.06297-kv-cache-compression-review-research-20261020-0355-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-165aeff9e3ee--libfile_48d364f513a48191a110336f9e153bf2--2025-2508.06297-kv-cache-compression-review-research-20261020-0355-scheduled-chat-00-r01.json",
-      "worker_run_key": "20261020-0355-scheduled-chat-00/r01"
-    },
-    {
-      "canonical_id": "DOI:10.1109/TC.2025.3628193",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-20T17:45:07+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "quality_self_review_passed が true ではない"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 8268,
-        "body_paragraphs": 46,
-        "method_chars": 2629,
-        "method_paragraphs": 14,
-        "evaluation_chars": 2288,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-81e13b1f31d7--libfile_3049860e0520819188d4a8d6c6dd22a8--2026-doi-10.1109-tc.2025.3628193-bitmod-bitserial-mixture-datatype-quantization-research-20261020-1730-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-81e13b1f31d7--libfile_3049860e0520819188d4a8d6c6dd22a8--2026-doi-10.1109-tc.2025.3628193-bitmod-bitserial-mixture-datatype-quantization-research-.json",
-      "worker_run_key": "20261020-1730-scheduled-chat-30/r01"
-    },
-    {
       "canonical_id": "arXiv:2606.27791",
       "title": null,
       "source_url": null,
@@ -377,36 +293,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-956d819ad09a--libfile_7ad6fcf8cc1881918702b3708d962c85--2026-2605.28051-diffprune-fully-differentiable-visual-token-pruning-research-20261020-0445-scheduled-chat-45-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-956d819ad09a--libfile_7ad6fcf8cc1881918702b3708d962c85--2026-2605.28051-diffprune-fully-differentiable-visual-token-pruning-research-20261020-044.json",
       "worker_run_key": "20261020-0445-scheduled-chat-45/r01"
-    },
-    {
-      "canonical_id": "arXiv:2508.01002",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-21T16:18:25+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700",
-        "説明不足トリガー: 評価説明量 142 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 4464,
-        "body_paragraphs": 22,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 142,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700",
-          "評価説明量 142 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_164ea39f39ec81918a522bc872a17b35--2025-2508.01002-slai-rad-scheduling-research-20261020-2230-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_164ea39f39ec81918a522bc872a17b35--2025-2508.01002-slai-rad-scheduling-research-20261020-2230-scheduled-chat-30-r01.json",
-      "worker_run_key": "20261020-2230-scheduled-chat-30/r01"
     },
     {
       "canonical_id": "arXiv:2411.04013",
@@ -606,8 +492,8 @@
     },
     {
       "canonical_id": "arXiv:2311.08623",
-      "title": "DEED: Dynamic Early Exit on Decoder for Accelerating Encoder-Decoder Transformer Models",
-      "source_url": "https://aclanthology.org/2024.findings-naacl.9.pdf",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-22T00:27:48+00:00",
       "return_count": 3,
       "assigned_worker": "scheduled-chat-00",
@@ -633,6 +519,64 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_e972d94cb720819192d504ccb4c997d8--2024-2311.08623-deed-dynamic-early-exit-returned-repair-20261022-0157-scheduled-chat-00-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_e972d94cb720819192d504ccb4c997d8--2024-2311.08623-deed-dynamic-early-exit-returned-repair-20261022-0157-scheduled-chat-00-r01.json",
       "worker_run_key": "20261022-0157-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2508.01002",
+      "title": "Optimal Scheduling Algorithms for LLM Inference: Theory and Practice",
+      "source_url": "https://arxiv.org/pdf/2508.01002",
+      "returned_at": "2026-10-22T00:36:16+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700",
+        "説明不足トリガー: 評価説明量 144 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 6696,
+        "body_paragraphs": 36,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 144,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700",
+          "評価説明量 144 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_ec7a7fcef60c8191aab3f8bfc83a101b--2025-2508.01002-slai-rad-scheduling-returned-repair-20261022-0445-scheduled-chat-45-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_ec7a7fcef60c8191aab3f8bfc83a101b--2025-2508.01002-slai-rad-scheduling-returned-repair-20261022-0445-scheduled-chat-45-r01.json",
+      "worker_run_key": "20261022-0445-scheduled-chat-45/r01"
+    },
+    {
+      "canonical_id": "arXiv:2112.06749",
+      "title": "Step-unrolled Denoising Autoencoders for Text Generation",
+      "source_url": "https://arxiv.org/html/2112.06749v3",
+      "returned_at": "2026-10-22T00:38:13+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 183 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 6351,
+        "body_paragraphs": 36,
+        "method_chars": 2481,
+        "method_paragraphs": 14,
+        "evaluation_chars": 183,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "評価説明量 183 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_ee0af9312d288191b4260a6c3d0a1570--2021-2112.06749-sundae-step-unrolled-denoising-nonautoregressive-research-20261021-1900-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_ee0af9312d288191b4260a6c3d0a1570--2021-2112.06749-sundae-step-unrolled-denoising-nonautoregressive-research-20261021-1900-scheduled-chat-00-r01.json",
+      "worker_run_key": "20261021-1900-scheduled-chat-00/r01"
     }
   ]
 }

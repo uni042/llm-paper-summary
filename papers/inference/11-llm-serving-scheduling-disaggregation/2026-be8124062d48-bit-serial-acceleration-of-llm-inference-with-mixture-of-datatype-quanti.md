@@ -28,6 +28,8 @@ worker_id: "scheduled-chat-30"
 reference_main_sha: "aed138df0d0c2e5b8e1fedc5a2daeccfd1c519db"
 quality_self_review_passed: true
 quality_self_review_version: "PAPER-QUALITY-GUIDE-2026-10-07"
+last_audited: null
+audit_version: 0
 ---
 # BitMoD：混合数値形式のビット直列演算によるLLM推論高速化
 
