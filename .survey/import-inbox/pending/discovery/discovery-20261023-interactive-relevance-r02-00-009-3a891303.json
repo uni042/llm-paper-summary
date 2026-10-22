@@ -1,0 +1,30 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "interactive-llm-relevance",
+  "run_key": "20261023-interactive-llm-relevance/r02/00-9-3a891303",
+  "reference_main_sha": "64549bfeacc243f3aba6273c4f705ea24b40ebaf",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2311.17049",
+      "identity_tokens": [
+        "arxiv:2311.17049",
+        "doi:10.48550/arxiv.2311.17049"
+      ],
+      "title": "MobileCLIP: Fast Image-Text Models through Multi-Modal Reinforced Training",
+      "reason": "CVPR 2024一次要旨はモバイル環境向けCLIP画像テキスト埋め込みモデルを設計し、モデルの推論速度・メモリと精度のトレードオフを検証する。低遅延推論モデルの設計としては関連するが、主対象はCLIPエンコーダの画像分類・検索と訓練データ強化であり、生成LLMの実行ランタイムやKVキャッシュは対象外なので境界扱い。",
+      "source_url": "https://arxiv.org/abs/2311.17049",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-23T00:49:23+09:00",
+      "last_checked_at": "2026-10-23T00:49:23+09:00",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance",
+      "research_job_id": "job-research-3a89130397a35e46",
+      "worklist_rank": 9,
+      "original_worklist_worker": "scheduled-chat-00",
+      "evidence_scope": "primary_abstract_only"
+    }
+  ]
+}
