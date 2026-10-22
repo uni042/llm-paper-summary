@@ -144,6 +144,10 @@
   実装：✓ ・ リポジトリ内被引用：3  
   プリフィル・デコード分離後も変動する生成長を最終層の隠れ状態から軽量MLPで継続予測し、KV移送費を回収できる要求を過負荷GPUから低負荷GPUへ移して、長出力の負荷偏りと尾部遅延を減らす再配置機構。
 
+- **2026-03 · [Characterizing CPU-Induced Slowdowns in Multi-GPU LLM Inference](2026-2603.22774-characterizing-cpu-induced-slowdowns-multi-gpu-llm-inference.md)**  
+  実装：✓ ・ リポジトリ内被引用：3  
+  多GPU LLM推論でCPUコア不足がトークン化・カーネル発行・NCCL同期・共有メモリ放送を遅らせGPUを遊休させる経路を実機分解し、CPU増強だけでTTFTを最大7.11倍改善できることを示す。
+
 - **2026-01 · [Towards Resiliency in Large Language Model Serving with KevlarFlow](2026-2601.22438-kevlarflow-resilient-llm-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
   故障したパイプライン段だけを健全ノードへ動的に差し替え、KVキャッシュを背景複製して処理中要求を継続するLLM配信耐障害化。A10の8/16台クラスタで復旧時間を約30秒まで短縮し、故障時TTFTを最大574.6倍改善。
@@ -239,10 +243,6 @@
 - **2026-03 · [Chimera: Latency- and Performance-Aware Multi-agent Serving for Heterogeneous LLMs](2026-2603.22206-chimera-latency-performance-aware-multi-agent-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
   異種LLM群で要求難易度、残りワークフロー長、実行中トークン量を同時予測し、モデル選択と待ち行列順序を共同制御して遅延とタスク性能のPareto前線を改善する。
-
-- **2026-03 · [Characterizing CPU-Induced Slowdowns in Multi-GPU LLM Inference](2026-2603.22774-characterizing-cpu-induced-slowdowns-multi-gpu-llm-inference.md)**  
-  実装：✓ ・ リポジトリ内被引用：2  
-  多GPU LLM推論でCPUコア不足がトークン化・カーネル発行・NCCL同期・共有メモリ放送を遅らせGPUを遊休させる経路を実機分解し、CPU増強だけでTTFTを最大7.11倍改善できることを示す。
 
 - **2026-02 · [Pancake: Hierarchical Memory System for Multi-Agent LLM Serving](2026-2602.21477-pancake-hierarchical-agentic-memory.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
@@ -1451,7 +1451,7 @@
   プリフィルとデコードを別の計算機群へ分け、それぞれに向くGPU世代・電力設定・台数を使い分けて、クラスタ全体のスループット・コスト・消費電力を改善するサービング設計。
 
 - **2024-03 · [Taming Throughput-Latency Tradeoff in LLM Inference with Sarathi-Serve](2024-2403.02310-sarathi-serve-chunked-prefills-stall-free-scheduling.md)**  
-  実装：[✓](https://github.com/microsoft/sarathi-serve) ・ リポジトリ内被引用：408  
+  実装：[✓](https://github.com/microsoft/sarathi-serve) ・ リポジトリ内被引用：409  
   本論文の重要な点は、単純に事前入力を分割するだけでなく、デコードと事前入力を同じ反復へ混ぜるスケジューリング規則、反復あたりの総トークン予算、パイプライン並列化での仕事量の均等化を一体で設計したことである。
 
 - **2024-06 · [Llumnix: Dynamic Scheduling for Large Language Model Serving](2024-2406.03243-llumnix-dynamic-scheduling-live-migration.md)**  
@@ -1511,11 +1511,11 @@
   正確な生成長を当てる代わりに「どの要求が相対的に短いか」を学習し、その順位で連続バッチ処理を並べ替える。OPT-125M級の補助予測器、ListMLE、要求飢餓を防ぐ優先度昇格を組み合わせ、先着順より最短ジョブ優先に近い配信を実現する。
 
 - **2024-04 · [A Survey on Efficient Inference for Large Language Models](2024-2404.14294-a-survey-on-efficient-inference-for-large-language-models.md)**  
-  実装：✓ ・ リポジトリ内被引用：54  
+  実装：✓ ・ リポジトリ内被引用：55  
   根本原因を巨大なモデルサイズ、系列長に対して二乗に増える自己注意、逐次的な自己回帰復号へ分け、それぞれが計算量、メモリアクセス量、メモリ容量を通じて遅延、スループット、ストレージ、energyへ波及すると整理する。対策taxonomyはデータ層、モデル層、システム層の3階層である。
 
 - **2023-12 · [Stateful Large Language Model Serving with Pensieve](2023-2312.05516-pensieve-stateful-large-language-model-serving.md)**  
-  実装：✓ ・ リポジトリ内被引用：53  
+  実装：✓ ・ リポジトリ内被引用：54  
   Pensieveは、会話型の大規模言語モデルを複数往復にわたって提供するとき、前回までの履歴を毎回最初から入力処理する重複計算を減らす状態保持型の推論提供システムである。
 
 - **2024-04 · [Efficient Interactive LLM Serving with Proxy Model-based Sequence Length Prediction](2024-2404.08509-ssjf.md)**  
@@ -1641,7 +1641,7 @@
 ### 4年前（2022-11〜2023-10）
 
 - **2023-09 · [Efficient Memory Management for Large Language Model Serving with PagedAttention](2023-2309.06180-vllm-pagedattention-efficient-memory-management.md)**  
-  実装：[✓](https://github.com/vllm-project/vllm) ・ リポジトリ内被引用：1265  
+  実装：[✓](https://github.com/vllm-project/vllm) ・ リポジトリ内被引用：1267  
   vLLMは、要求ごとに大きな連続領域を予約していたKVキャッシュを固定長ブロックへ分解し、論理的な並びとGPU上の物理配置を分離する。必要なブロックだけ動的に割り当て、同じ接頭辞のKVを共有することで、限られたGPUメモリへより多くの要求を同時に載せる。
 
 - **2023-08 · [SARATHI: Efficient LLM Inference by Piggybacking Decodes with Chunked Prefills](2023-2308.16369-sarathi.md)**  
