@@ -1,35 +1,63 @@
 ---
-canonical_id: 'SemanticScholar:84d13eb6c3fa53d9d45c5c4526ab88ba608c244d'
+canonical_id: SemanticScholar:84d13eb6c3fa53d9d45c5c4526ab88ba608c244d
 title: 'Libra: Flexible Request Partitioning and Scheduling for Serving Unbalanced and Dynamic LLM Workloads'
-summary: 'Libraは大規模言語モデルの入力処理と逐次生成を固定GPU群へ割り当てる代わりに、任意のトークン境界で要求を微小要求へ分割するFPS抽象を提案する。全体スケジューラが予測実行時間を均衡化する分割位置と配置先を選び、各GPUの局所スケジューラがサービス水準に従ってバッチを組み、KVキャッシュを分割転送する。A100/H100の実機と実負荷由来トレースでサービス水準を満たす処理量を改善した。'
-list_summary: '要求を任意のトークン境界で分割し、GPU間の負荷均衡、局所バッチ制御、KVキャッシュの分割転送を組み合わせ、変動するLLM要求でサービス水準を満たす処理量を改善する。'
+summary: Libraは大規模言語モデルの入力処理と逐次生成を固定GPU群へ割り当てる代わりに、任意のトークン境界で要求を微小要求へ分割するFPS抽象を提案する。全体スケジューラが予測実行時間を均衡化する分割位置と配置先を選び、各GPUの局所スケジューラがサービス水準に従ってバッチを組み、KVキャッシュを分割転送する。A100/H100の実機と実負荷由来トレースでサービス水準を満たす処理量を改善した。
+list_summary: 要求を任意のトークン境界で分割し、GPU間の負荷均衡、局所バッチ制御、KVキャッシュの分割転送を組み合わせ、変動するLLM要求でサービス水準を満たす処理量を改善する。
 authors:
-  - Chaoyi Ruan
-  - Yinhe Chen
-  - Dongqi Tian
-  - Yandong Shi
-  - Yongji Wu
-  - Jialin Li
-  - Cheng Li
+- Chaoyi Ruan
+- Yinhe Chen
+- Dongqi Tian
+- Yandong Shi
+- Yongji Wu
+- Jialin Li
+- Cheng Li
 published: '2026-05-04'
-publication: '23rd USENIX Symposium on Networked Systems Design and Implementation (NSDI 2026), pp. 1243–1258'
-publication_type: '査読付き国際会議論文'
-publication_status: 'published'
-source: 'https://www.usenix.org/system/files/nsdi26-ruan-libra.pdf'
+publication: 23rd USENIX Symposium on Networked Systems Design and Implementation (NSDI 2026), pp. 1243–1258
+publication_type: 査読付き国際会議論文
+publication_status: published
+source: https://www.usenix.org/system/files/nsdi26-ruan-libra.pdf
 sources:
-  - 'https://www.usenix.org/system/files/nsdi26-ruan-libra.pdf'
-  - 'https://www.usenix.org/conference/nsdi26/presentation/ruan-libra'
-implementation: 'vLLM 0.7.2を基礎に約4000行のPythonを追加した分散サービング実装。全体スケジューラの重要経路はC++で実装し、GPU間のKVキャッシュ移送にはRDMAを用いる。原著はコードを将来公開すると記載し、公式公開リポジトリURLは確認できない。'
+- https://www.usenix.org/system/files/nsdi26-ruan-libra.pdf
+- https://www.usenix.org/conference/nsdi26/presentation/ruan-libra
+implementation: vLLM 0.7.2を基礎に約4000行のPythonを追加した分散サービング実装。全体スケジューラの重要経路はC++で実装し、GPU間のKVキャッシュ移送にはRDMAを用いる。原著はコードを将来公開すると記載し、公式公開リポジトリURLは確認できない。
 code: null
 last_checked: '2026-10-22'
-worker_id: 'scheduled-chat-00'
+worker_id: scheduled-chat-00
 worker_completed_at: '2026-10-22T23:10:06+09:00'
-worker_run_key: '20261022-2300-scheduled-chat-00/r01'
-reference_main_sha: '74bdad32b614663314c7d53b22de7d42f27c5c99'
+worker_run_key: 20261022-2300-scheduled-chat-00/r01
+reference_main_sha: 74bdad32b614663314c7d53b22de7d42f27c5c99
 quality_self_review_passed: true
-quality_self_review_version: 'PAPER-QUALITY-GUIDE-2026-10-07'
+quality_self_review_version: PAPER-QUALITY-GUIDE-2026-10-07
 last_audited: null
 audit_version: 0
+references:
+- canonical_id: arXiv:2403.02310
+- canonical_id: arXiv:2308.16369
+  arxiv_id: '2308.16369'
+- canonical_id: arXiv:2503.22562
+- canonical_id: arXiv:2504.19867
+- canonical_id: DOI:10.1145/3676641.3715996
+  arxiv_id: '2410.18038'
+- canonical_id: DOI:10.1145/3600006.3613165
+- canonical_id: arXiv:2503.20552
+- canonical_id: arXiv:2401.02669
+- canonical_id: arXiv:2311.18677
+- canonical_id: arXiv:2407.00079
+  arxiv_id: '2407.00079'
+- canonical_id: arXiv:2404.08509
+- canonical_id: arXiv:2410.01035
+- canonical_id: arXiv:2406.03243
+- canonical_id: arXiv:2508.01989
+  arxiv_id: '2508.01989'
+- canonical_id: arXiv:2401.17644
+- canonical_id: arXiv:2404.09526
+- canonical_id: DOI:10.5555/3600237.3600268
+- canonical_id: arXiv:2401.09670
+- canonical_id: arXiv:2408.12757
+  arxiv_id: '2408.12757'
+references_checked_at: '2026-10-22'
+references_source: primary-pdf-reference-section
+references_total: 44
 ---
 
 # Libra：要求を任意のトークン位置で分割するLLMサービング
