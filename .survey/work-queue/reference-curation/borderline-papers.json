@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-22T17:12:51+00:00",
-  "record_count": 5302,
+  "updated_at": "2026-10-22T17:20:12+00:00",
+  "record_count": 5304,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -82263,6 +82263,38 @@
       ],
       "borderline_recheck_count": 0,
       "title": "Personalized LLM Service Updating in Collaborative Edge-Enabled Vehicle Autonomous System"
+    },
+    "arXiv:2404.03626": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2404.03626",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2404.03626",
+        "arXiv:2404.03626"
+      ],
+      "reason": "Equal-Info Windowsでニューラル圧縮テキスト上のLLM学習を可能にし、より短い系列での生成によって推論ステップ数とレイテンシを抑える研究である。圧縮表現と系列長は推論コストに直結するため接点がある。一方、中心的貢献は圧縮トークナイザと学習可能性の検討で、サービングランタイム、KV管理、スケジューリング、カーネル最適化を扱わないため境界扱いとする。",
+      "first_checked_at": "2026-10-22T17:20:12+00:00",
+      "last_checked_at": "2026-10-22T17:20:12+00:00",
+      "linked_from": [
+        ".survey/work-queue/WORKLIST-45.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Training LLMs over Neurally Compressed Text"
+    },
+    "arXiv:2604.19342": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2604.19342",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2604.19342",
+        "arXiv:2604.19342"
+      ],
+      "reason": "Edge-EvalとしてLLaMA/Qwenの適応・量子化・推論をTesla T4上で測り、レイテンシ、スループット、電力、リクエスト当たりエネルギーなど運用指標を体系化するため、LLM推論の実配備評価に接点がある。一方、貢献はライフサイクルの経済・効率ベンチマークで、配信アルゴリズム、サービングランタイムやカーネルを提案しないため境界扱いとする。",
+      "first_checked_at": "2026-10-22T17:20:12+00:00",
+      "last_checked_at": "2026-10-22T17:20:12+00:00",
+      "linked_from": [
+        ".survey/work-queue/WORKLIST-45.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Are Large Language Models Economically Viable for Industry Deployment?"
     }
   }
 }
