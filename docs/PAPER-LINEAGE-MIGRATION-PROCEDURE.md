@@ -47,3 +47,33 @@ applyと検証は最新mainから作った非公開branch/worktreeで行いま�
 - branchから固定commitをreadbackし、path・bytes・SHAを再照合する。
 
 ひとつでも失敗すればcommit/公開せず、次batchへ進みません。全check合格後にだけ移行状態をひとつのcommitにまとめ、承認済みの通常review/write経路へ出します。commit SHA、readback、hash、check、未解決制約をreportへ記録します。
+
+### 待機中の候補台帳と再利用可能な分類
+
+反映待ちと分類を混ぜないため、候補台帳はcanonical ID単位で管理し、各IDを次のどれか一つに置きます。
+
+- `pending-reflection`: apply済みだが、反映中PRがまだmainに入っていない。
+- `still-in-99`: 現在のidentity indexで99-other配下にあり、未apply。
+- `already-placed`: 現在pathが提案先と一致し、追加移動が不要。
+- `reviewed-retain`: 一次本文を確認し、99-otherまたは別系統に残す判断をした。
+- `neighbor-pull-in`: 99-other外にあるが、近接系統から別系統へ移す候補。
+
+古いmanifestのentry数を「残り件数」と見なしません。まず全候補をcanonical IDで重複排除し、最新のidentity indexで各IDの実pathを照合して上の状態へ分けます。`pending-reflection` と `already-placed` は次の99-other残数に含めず、`neighbor-pull-in` は99-other候補と別枠で数えます。source SHA、index SHA、照合日も台帳へ記録し、mainが変わったらpath判定だけを再実行します。過去manifestの重複や既移動paperを新しい候補と誤認しません。
+
+引用ネットワークは仕分け対象を絞るための優先順位付けに使います。citation graphのsnapshot SHAと集計条件を保存し、引用先lineageへの偏りが強いpaperから一次本文を確認します。引用先件数だけで移動を確定せず、主貢献・中核手法・評価対象がそのlineageの包含境界に合うかを確認します。citation graphが更新されたら候補順位を再計算できますが、一次資料確認済みの判断は根拠URL/version・確認節・判断理由とともに引き継ぎ、同じ本文を読み直しません。根拠versionや内容が変わったpaper、判断境界に近いpaperのみ再確認します。
+
+候補レビューの成果は、反映中manifestとは別のimmutable planへ保存します。1行あたりcanonical ID、全alias、現在path、一次資料URLとversion/節、短い主貢献、決定（移動先/保持/要追加調査）、隣接系統との境界、source/index snapshotを必須にします。引用ランキング、要旨だけの判断、未確認のID/pathは「分類済み」に数えません。新系統の候補は、既存系統への移動候補と混ぜず、共通の技術的中核・除外境界・隣接lineageを示せるclusterとして束ね、概ね10件を調査の目安に一次本文を比較します。
+
+反映待ち中はこのimmutable planの作成と読み取り専用レビューを進めます。前batchがmainに入った時点で、ledgerの重複IDと現在pathを再照合し、未反映・未移動の候補だけを次batchの `refresh-manifest` に渡します。refreshが返す全rejectを理由別に確認し、分類根拠が古いものは一次資料から再審査します。`dry-run` が有効な候補だけapplyし、反映後は実pathを台帳へ反映して次の待機区間へ進みます。
+
+### 反映待ち中の並行運用（実績に基づく標準 cadence）
+
+反映待ちを主作業にしません。反映処理は「出す・必要時に一度確認する・イベントまたは次の作業区切りで再確認する」に限定し、空いた時間を候補の読解と分類へ使います。
+
+1. batchのPRを出したら、PR URL、head SHA、CI状態、対象path集合、現在main SHAを台帳へ記録し、PRの完了を待つ間に次の10〜20件を独立したimmutable review planへまとめます。planは候補IDの重複を除き、99-otherからの候補と近接lineageからの引き抜き候補を両方含めます。batchサイズは一次本文の確認に使える時間で調整し、未読候補を「分類済み」に数えません。
+2. 次候補の優先順位はcitation graphとrepository内引用先lineageから作ります。引用は読む順序を決める信号に限り、各論文は一次本文の主貢献・手法・評価・制約を確認して分類します。既読本文のURL/version/確認節・根拠はplanから再利用し、同じ本文を読み直す代わりに未読候補へ進みます。
+3. PRのCIが実行中なら、短い間隔のpollingやPR画面の連続確認をしません。独立した分類単位（目安10件）を終えた時、CI完了通知を受けた時、または次にbatchを作る必要が生じた時に状態を確認します。失敗・競合・レビュー依頼が出た場合だけ、その原因に必要な確認へ切り替えます。mainに無関係なpath更新があっても分類を止めず、path overlapを確認してから次の判断をします。
+4. 次候補の読解中はGitHubへのpaper変更を行わず、分類planと証拠だけをローカルに保存します。反映PRがmainに入る前に次batchをapplyしません。main反映後、最新identity indexとlineage pathで候補を再照合し、既移動・重複・レビュー済み保持を除いて残った候補だけを新しいmain worktreeで `refresh-manifest` に渡します。これにより待機中に分類を進めながら、古いpath/hashを使った移動を防ぎます。
+5. `refresh-manifest` のrejectは全件を理由別に確認し、候補planのstateを `already-placed`、`reviewed-retain`、再審査または次batch対象へ更新します。rejectされた項目を機械的に再投入しません。`dry-run` 後にapplyできるものだけを反映し、PR作成まで進んだら次の分類blockへ戻ります。
+
+2026-10-23のbatch 2では、最新mainへのrefreshが25件保持・0件rejectとなり、dry-runとapply/readbackがすべて通りました。一方で、全体buildは月次表示を含むsurvey・training系READMEまで広く更新しました。以後、build後は移行対象のinference README、inference index/comparison、identity index、必要な上位件数READMEに変更を絞り、他カテゴリの差分は内容上必要と説明できない限り当該branchから除外します。変更理由が日付の経過だけの差分は分類移行のPRへ混ぜず、生成物の再生成時期を別途扱います。広い生成差分が出ても、それを理由に候補読解を止めず、生成差分の切り分けはPR準備の短い工程として行います。

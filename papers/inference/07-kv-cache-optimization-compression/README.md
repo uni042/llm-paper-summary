@@ -16,7 +16,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 方向は異なるが、いずれも**KV cacheがdecode時のmemory容量やmemory bandwidthのボトルネックになることを直接緩和する**研究として扱う。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（306本）
+## 自動生成の論文一覧（311本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/07-kv-cache-optimization-compression/)
 
@@ -343,6 +343,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   実装：✓ ・ リポジトリ内被引用：0  
   大規模言語モデル（LLM）の長文推論では、過去トークンの鍵・値キャッシュ（KV キャッシュ）がGPUメモリを圧迫し、復号のたびに大量のキーを読み直す。KVを2ビットへ量子化すれば保存容量は減るが、注意スコアに敏感な外れ値が量子化範囲を広げ、精度が崩れる。保存容量の約6.8倍削減と読出量の約8.3倍削減は形式・アクセス量の推定であり、実測速度そのものではない。
 
+- **2026-09 · [Where Should the KV Cache Live? Placement Policies Across GPU, CPU, and SSD for Long-Lived Sessions](2026-2609.16215-where-should-the-kv-cache-live-placement-policies-across-gpu-cpu-and-ssd-for-long-lived-sessions.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  GPU・CPU・SSD間のKV配置政策を比較し、SSDの容量利得とワークロード別の最適配置・遅延境界を定量化する。
+
 - **2026-09 · [What Matters for Aggressive Decoding-Time KV Eviction? Temporal Aggregation and Ranking Preservation](2026-2609.03515-inertiakv-temporal-aggregation-ranking-preservation.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   InertiaKVはデコード中の注意スコアをEMAで蓄積して保持順位を安定させ、Lazy4で更新を4ステップに1回へ間引き、KV再評価の計算費と一時的な誤追い出しを減らす。
@@ -470,6 +474,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 - **2026-09 · [Dynamic Flow, Static Graph: KV Cache Reuse for Efficient LLM Serving on Mobile NPUs](2026-2609.34727-dynamic-flow-static-graph-kv-cache-reuse-for-efficient-llm-serving-on-mo.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   本研究は、固定形状の計算グラフ内で必要なトークンだけ再計算する方式、複数グラフ呼出しを統合する動的計画法、NPU・CPUメモリ・フラッシュにまたがる階層KV保存、読み込み・位置補正・保存とNPU実行の非同期重畳を組み合わせる。
+
+- **2026-09 · [D-Quant: Driftable Entropy Coding for KV Cache Quantization](2026-2609.19880-d-quant-driftable-entropy-coding-for-kv-cache-quantization.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  固定サイズ容器と長さ制約付きドリフトを組み合わせ、エントロピー符号化KVキャッシュを注意カーネル内で直接並列復号できる形にした低ビット量子化方式。
 
 - **2026-09 · [Contiguity, Not Importance: Budgeted Repair of Stale KV Caches After Document Edits](2026-2609.17983-contiguity-budgeted-repair-stale-kv-cache.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -611,6 +619,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   実装：[✓](https://github.com/Js-Hwang1/locks) ・ リポジトリ内被引用：0  
   長文脈LLMでは復号のたびに過去トークンの鍵・値（KV）を読み、問い合わせと照合する。短文脈で小さなバッチならモデル重みの読出しが支配的だが、長文脈かつ複数要求では要求ごとのKV読出しが帯域を圧迫する。例えばLlama-3.1-8Bの128K文脈はbf16のKVだけで要求あたり約16GiBとなる。本方式はKVキャッシュの削除や容量圧縮ではない。
 
+- **2026-07 · [LaCache: Exact Caching and Precision-Adaptive Inference for Diffusion Large Language Models](2026-2607.16339-lacache-exact-caching-precision-adaptive-dllm.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  拡散型LLMの反復生成で不変なトークン状態とFlashAttention中間状態を無損失再利用し、第2層以降をFP8化して、既存の生成ステップ削減法と組み合わせ可能な推論高速化を実現する。
+
 - **2026-07 · [KAP: Bridging the Knowledge Selection-Runtime Consumption Gap in LLM Systems](2026-2607.24260-kap-knowledge-access-planning-kv-runtime.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   検索・グラフなど上流の知識選択情報を実行時アクセス計画へコンパイルし、論理プロンプトを変えず物理KV参照を選択化する。GraphSpecは128Kで提案時KVアクセスを元状態の5.5%まで減らす。
@@ -727,6 +739,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   実装：[✓](https://github.com/air-embodied-brain/OxyGen) ・ リポジトリ内被引用：0  
   OxyGenは、この重複を「専門家間で分離されていた鍵・値キャッシュ（KV キャッシュ）の寿命と所有権」の問題と捉え、観測から得た基盤モデルのKVを共有するとともに、文章の生成状態をフレームをまたいで保存する。
 
+- **2026-03 · [EntropyCache: Decoded Token Entropy Guided KV Caching for Diffusion Language Models](2026-2603.18489-entropycache-decoded-token-entropy-guided-kv-caching-for-diffusion-langu.md)**  
+  実装：[✓](https://github.com/mscheong01/EntropyCache) ・ リポジトリ内被引用：0  
+  自己回帰型言語モデルの因果注意では、過去トークンの鍵・値（Key–Value; KV）表現は後続トークンの追加で変わらないため、過去KVを厳密に再利用できる。これに対して離散拡散言語モデル（discrete Diffusion Language モデル; dLLM）は双方向注意を使い、マスクされたトークンが一つ確定するだけで他の全位置の表現が変わり得る。
+
 - **2026-03 · [Beyond Token Eviction: Mixed-Dimension Budget Allocation for Efficient KV Cache Compression](2026-2603.20616-beyond-token-eviction-mixed-dimension-budget-allocation-for-efficient-kv.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   MixedDimKVは、長文推論の鍵・値キャッシュ（key-value キャッシュ、KVキャッシュ）を「トークンを残すか破棄するか」だけで制御する従来の方式を拡張し、各トークンに異なる保持次元数を割り当てる圧縮方式である。
@@ -742,6 +758,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 - **2026-01 · [TableCache: Primary Foreign Key Guided KV Cache Precomputation for Low Latency Text-to-SQL](2026-2601.08743-tablecache-primary-foreign-key-guided-kv-cache-precomputation-for-low-la.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   TableCacheは、自然言語からSQLを生成するText-to-SQLシステムで、同じデータベースの表定義を何度も長いプロンプトへ挿入するために生じるプリフィル遅延を削減する。BIRDのOmniSQL-7Bを使った追加比較では累積初回トークン待ち時間（TTFT）が291.26秒から80.53秒へ短縮し、約3.62倍の改善となる。
+
+- **2026-01 · [Singular Proxies for Adaptive Caching in Diffusion Language Models](2026-2602.02544-singular-proxies-for-adaptive-caching-in-diffusion-language-models.md)**  
+  実装：[✓](https://github.com/wenhao728/spa-cache) ・ リポジトリ内被引用：0  
+  自己注意（self-注意機構）が双方向であるため、ある位置のトークンを更新すると別の位置の隠れ状態にも影響が及び、自己回帰型モデルのように過去の鍵・値（KV）を常に固定したまま再利用することはできない。LLaDA-8BのMBPPでは通常復号5.75トークン/秒に対し46.12トークン/秒（8.0倍）で、正解率は39.20から39.00へ変化した。
 
 - **2026-01 · [PackCache: A Training-Free Acceleration Method for Unified Autoregressive Video Generation via Compact KV-Cache](2026-2601.04359-packcache-a-training-free-acceleration-method-for-unified-autoregressive.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
