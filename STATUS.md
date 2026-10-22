@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-10-23 02:11:55 JST**
+> 自動生成: **2026-10-23 02:18:54 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,11 +11,11 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文数 | **1172** |
-| 未claim Research job | **1172** |
-| 直近24hのResearch処理完了 | **81** |
+| 収録候補論文数 | **1170** |
+| 未claim Research job | **1170** |
+| 直近24hのResearch処理完了 | **84** |
 | 最終Research処理完了 | **10-23 00:42:12 JST** |
-| 最終Discovery探索完了 | **10-23 02:10:05 JST** |
+| 最終Discovery探索完了 | **10-23 02:15:58 JST** |
 | 整合性異常 | **0** |
 
 ## 16KB未満論文サマリーの再監査
@@ -41,9 +41,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **1172** |
+| canonical_id確認済みの一意な候補論文 | **1170** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **1172** |
+| 非終端Research job合計 | **1170** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -54,10 +54,10 @@
 | 探索候補総数 | **144678** |
 | 処理済み | **21252** |
 | 未処理Discovery候補 | **123426** |
-| 収録済み | **2937** |
-| Research / Audit候補へ昇格済み | **914** |
+| 収録済み | **2939** |
+| Research / Audit候補へ昇格済み | **910** |
 | 無関係として除外 | **12308** |
-| 微妙として除外 | **5093** |
+| 微妙として除外 | **5095** |
 
 ### 探索候補の事前フィルタリング（可逆）
 
@@ -88,8 +88,8 @@
 - 全数との差は暫定隔離数。元候補・引用プール・relevance判定台帳は削除せず、現在の候補identityから再計算する。
 
 - 消化率: **14.7%**
-- 現在の生在庫: 後方references **56339件** / 前方引用 **69087件**。後方候補を優先し、前方プールは後方プールに存在する同一identityを保持しません。
-- 前方・後方を統合してidentity重複を除いた未処理面は **124733件**。そこから既にResearch / Audit候補へ昇格したidentityを除いた値が上表の未処理Discovery候補です。
+- 現在の生在庫: 後方references **56345件** / 前方引用 **69087件**。後方候補を優先し、前方プールは後方プールに存在する同一identityを保持しません。
+- 前方・後方を統合してidentity重複を除いた未処理面は **124729件**。そこから既にResearch / Audit候補へ昇格したidentityを除いた値が上表の未処理Discovery候補です。
 - 処理済み = 収録済み + Research / Audit候補へ昇格済み + 無関係 + 微妙。前方引用・後方referencesの出自は区別せず、DOI/arXiv/title aliasを統合して数えます。
 - STATUS生成時にpaper実体、Research/Audit job、relevance台帳、現在の前方/後方候補からゼロベースで再計算します。
 
@@ -116,7 +116,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **true** |
-| 最終maintenance完了 | **10-22 08:09:46 JST（18時間2分前）** |
+| 最終maintenance完了 | **10-22 08:09:46 JST（18時間9分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **passed** |
 | health | **issues_found** |
@@ -136,19 +136,19 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 指標 | 現在値 |
 |---|---:|
-| 直近6hのResearch完了 | **8** |
-| 直近6hのDiscovery run | **27** |
-| 直近6hのDiscovery本文確認・分類 | **34** |
+| 直近6hのResearch完了 | **9** |
+| 直近6hのDiscovery run | **28** |
+| 直近6hのDiscovery本文確認・分類 | **36** |
 | 最終Research完了 | **10-23 00:42:12 JST** |
-| 最終Discovery完了 | **10-23 02:10:05 JST** |
+| 最終Discovery完了 | **10-23 02:15:58 JST** |
 
 ### 最新Library-first run
 
 - Research: **10-23 00:42:12 JST** / worker — / run 20261023-0030-scheduled-chat-30/r01 / 成果 **2件**
   - evidence: .survey/import-inbox/results/research/libfile_32d086f7c83c8191ad5b199f8d767320--2025-2502.18394-spectre-fft-spectral-attention-replacement-research-20261023-0030-scheduled-chat-30-r01.json
-- Discovery: **10-23 02:10:05 JST** / worker scheduled-chat-45 / run codex-worklist-outscope-20261022-w45-round2
-  - 本文確認・分類 **3件** / accept **0件** / unrelated+borderline **3件**
-  - evidence: .survey/import-inbox/pending/discovery/codex-out-of-scope-20261022-w45-round2.json
+- Discovery: **10-23 02:15:58 JST** / worker scheduled-chat-45 / run codex-worklist-outscope-20261022-w45-round3
+  - 本文確認・分類 **2件** / accept **0件** / unrelated+borderline **2件**
+  - evidence: .survey/import-inbox/pending/discovery/codex-out-of-scope-20261022-w45-round3.json
 
 ### Codex探索成果の反映状況
 
@@ -292,7 +292,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | status | 件数 |
 |---|---:|
-| ready | **1172** |
+| ready | **1170** |
 
 ### 候補の重複・識別情報欠損
 
@@ -312,7 +312,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **2941** |
+| inference/training/survey配下の論文Markdown実体 | **2943** |
 
 ### immutable submissionの未照合
 
