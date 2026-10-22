@@ -29,6 +29,8 @@ reference_main_sha: "c5b697a6d94489cffb2c0cc4075630b347e9dfb6"
 worklist_rank: 172
 quality_self_review_passed: true
 quality_self_review_version: "PAPER-QUALITY-GUIDE-2026-10-07"
+last_audited: null
+audit_version: 0
 ---
 
 # EDSD：情報エントロピーに基づく投機的復号の草稿モデル設計

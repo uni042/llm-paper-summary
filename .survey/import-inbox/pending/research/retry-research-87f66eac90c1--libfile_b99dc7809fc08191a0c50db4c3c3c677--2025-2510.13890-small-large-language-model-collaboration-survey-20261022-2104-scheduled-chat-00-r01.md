@@ -33,6 +33,8 @@ reference_main_sha: "43ddcbb63725db690758d058eef11b683650baf4"
 worklist_rank: 79
 quality_self_review_passed: true
 quality_self_review_version: "PAPER-QUALITY-GUIDE-2026-10-07"
+last_audited: null
+audit_version: 0
 ---
 
 # 小型・大型言語モデルの協調：性能・費用・プライバシー・信頼性の横断サーベイ
