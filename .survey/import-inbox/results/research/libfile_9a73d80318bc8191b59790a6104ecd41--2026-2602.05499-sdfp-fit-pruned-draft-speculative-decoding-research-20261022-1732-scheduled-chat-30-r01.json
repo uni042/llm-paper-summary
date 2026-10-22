@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "384dc0bbcb7814e7868cadee170f0c8666072d1b61cd963cac9b225c3593202c",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_9a73d80318bc8191b59790a6104ecd41--2026-2602.05499-sdfp-fit-pruned-draft-speculative-decoding-research-20261022-1732-scheduled-chat-30-r01.md",
+  "canonical_id": "arXiv:2602.05499",
+  "worker_completed_at": "2026-10-22T18:09:00+09:00",
+  "worker_run_key": "20261022-1732-scheduled-chat-30/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 5846,
+    "body_paragraphs": 33,
+    "method_chars": 0,
+    "method_paragraphs": 0,
+    "evaluation_chars": 449,
+    "limitation_chars": 0,
+    "insufficiency_flags": [
+      "手法説明量 0 < 700",
+      "評価説明量 449 < 500",
+      "限界説明量 0 < 推奨 120"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 手法説明量 0 < 700",
+    "説明不足トリガー: 評価説明量 449 < 500"
+  ],
+  "processed_at": "2026-10-22T16:08:24+00:00"
+}

@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-22T16:00:56+00:00",
+  "generated_at": "2026-10-22T16:09:45+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 34,
+  "count": 37,
   "entries": [
     {
       "canonical_id": "DOI:10.1109/HCS59251.2023.10254711",
@@ -972,6 +972,92 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_7f967b092d508191942ce31e0aeb287b--2026-2608.00077-visual-provenance-pruning-returned-repair-20261022-0701-scheduled-chat-00-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_7f967b092d508191942ce31e0aeb287b--2026-2608.00077-visual-provenance-pruning-returned-repair-20261022-0701-scheduled-chat-00-r01.json",
       "worker_run_key": "20261022-0701-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2602.00748",
+      "title": "HyperOffload: Graph-Driven Hierarchical Memory Management for Large Language Models on SuperNode Architectures",
+      "source_url": "https://arxiv.org/abs/2602.00748",
+      "returned_at": "2026-10-22T16:07:53+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5997,
+        "body_paragraphs": 38,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 1299,
+        "limitation_chars": 671,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_960ef526ab1c819184ae718adf3eef54--2026-2602.00748-hyperoffload-graph-memory-supernode-research-20261022-1626-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_960ef526ab1c819184ae718adf3eef54--2026-2602.00748-hyperoffload-graph-memory-supernode-research-20261022-1626-scheduled-chat-30-r01.json",
+      "worker_run_key": "20261022-1626-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2602.05499",
+      "title": "SDFP: Speculative Decoding with FIT-Pruned Models for Training-Free and Plug-and-Play LLM Acceleration",
+      "source_url": "https://arxiv.org/html/2602.05499",
+      "returned_at": "2026-10-22T16:08:24+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700",
+        "説明不足トリガー: 評価説明量 449 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5846,
+        "body_paragraphs": 33,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 449,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700",
+          "評価説明量 449 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_9a73d80318bc8191b59790a6104ecd41--2026-2602.05499-sdfp-fit-pruned-draft-speculative-decoding-research-20261022-1732-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_9a73d80318bc8191b59790a6104ecd41--2026-2602.05499-sdfp-fit-pruned-draft-speculative-decoding-research-20261022-1732-scheduled-chat-30-r01.json",
+      "worker_run_key": "20261022-1732-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "DOI:10.1145/3721146.3721947",
+      "title": "Performance Aware LLM Load Balancer for Mixed Workloads",
+      "source_url": "https://euromlsys.eu/pdf/euromlsys25-20.pdf",
+      "returned_at": "2026-10-22T16:08:55+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700",
+        "説明不足トリガー: 評価説明量 399 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 8636,
+        "body_paragraphs": 42,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 399,
+        "limitation_chars": 895,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700",
+          "評価説明量 399 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_a2ecba4689c081919c19695e7502bf50--2025-doi-10.1145-3721146.3721947-performance-aware-llm-load-balancer-research-20261022-0845-scheduled-chat-45-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_a2ecba4689c081919c19695e7502bf50--2025-doi-10.1145-3721146.3721947-performance-aware-llm-load-balancer-research-20261022-0845-scheduled-chat-45-r01.json",
+      "worker_run_key": "20261022-0845-scheduled-chat-45/r01"
     }
   ]
 }

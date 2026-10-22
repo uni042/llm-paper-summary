@@ -35,10 +35,15 @@
   "selection_reason": "PipelineRL overlaps asynchronous LLM generation and RL training to increase accelerator utilization and speed up learning; this is training throughput, not inference serving efficiency.",
   "semantic_scholar_id": "a6478bab4f1985f3eb008e7ebca4a84a1af273cd",
   "source_url": "https://arxiv.org/abs/2509.19128",
-  "status": "ready",
+  "status": "superseded",
   "title": "PipelineRL: Faster On-policy Reinforcement Learning for Long Sequence Generation",
   "type": "research",
   "venue": "Trans. Mach. Learn. Res.",
   "workflow_version": 10,
-  "year": 2025
+  "year": 2025,
+  "superseded_at": "2026-10-22T16:09:44+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2025-2509.19128-pipelinerl-faster-on-policy-reinforcement-learning-for-long-sequence-gen.md",
+  "represented_canonical_id": "arXiv:2509.19128",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

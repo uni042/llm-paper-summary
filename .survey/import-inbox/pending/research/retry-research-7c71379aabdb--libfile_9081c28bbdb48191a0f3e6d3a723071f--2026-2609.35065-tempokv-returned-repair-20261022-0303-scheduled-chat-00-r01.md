@@ -41,6 +41,8 @@ references:
     arxiv_id: '2606.12556'
   - canonical_id: 'arXiv:2607.18141'
     arxiv_id: '2607.18141'
+last_audited: null
+audit_version: 0
 ---
 
 # TempoKV：再利用KVの発見と高速メモリ予約の時刻を分離する配信基盤
