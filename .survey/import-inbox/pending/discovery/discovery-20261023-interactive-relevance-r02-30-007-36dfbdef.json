@@ -1,0 +1,29 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "interactive-llm-relevance",
+  "run_key": "20261023-interactive-llm-relevance/r02/30-7-36dfbdef",
+  "reference_main_sha": "64549bfeacc243f3aba6273c4f705ea24b40ebaf",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "SemanticScholar:a5fa6e7565dca654eab9372ace4b1ba7f63655f7",
+      "identity_tokens": [
+        "semanticscholar:a5fa6e7565dca654eab9372ace4b1ba7f63655f7"
+      ],
+      "title": "CogLTX: Applying BERT to Long Texts",
+      "reason": "NeurIPS 2020公式要旨は長文BERTの計算量・メモリ増大を、重要文抽出と再読による入力選択で抑え、元テキスト長に依存しないメモリ使用量を報告する。長文脈の計算削減には技術的接点があるが、抽出的BERTの質問応答・分類を主対象とし、自己回帰LLMのKVキャッシュ管理やサービングを扱わないため保留。",
+      "source_url": "https://papers.neurips.cc/paper_files/paper/2020/hash/96671501524948bc3937b4b30d0e57b9-Abstract.html",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-23T00:49:23+09:00",
+      "last_checked_at": "2026-10-23T00:49:23+09:00",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance",
+      "research_job_id": "job-research-36dfbdef5bae35fc",
+      "worklist_rank": 7,
+      "original_worklist_worker": "scheduled-chat-30",
+      "evidence_scope": "primary_abstract_only"
+    }
+  ]
+}
