@@ -1,36 +1,52 @@
 ---
 canonical_id: DOI:10.18653/v1/2025.acl-long.564
 doi: 10.18653/v1/2025.acl-long.564
-title: 'Scaling up the State Size of RNN LLMs for Long-Context Scenarios'
+title: Scaling up the State Size of RNN LLMs for Long-Context Scenarios
 summary: RNN型大規模言語モデルの長文脈検索性能を、固定サイズの再帰状態行列を拡張して改善する研究。従来の鍵・値次元を単純に拡大すると投影行列のパラメータとCUDA共有メモリが増えるため、ヘッドごとの小型拡張投影と副ヘッドへの分割を併用する。400M級Gated DeltaNetのE8拡張ではFDA/SWDE/SQuAD平均が28.03から37.39へ改善し、1.5B級E8では42.91から54.64へ改善。ただし同じ状態容量で比較したTransformer++の複数needle検索には及ばず、容量増だけで注意機構の検索性を再現できない。
 list_summary: RNN型LLMの再帰状態をヘッド内拡張と副ヘッド分割で低コストに大型化し、長文脈検索性能を改善するが、同容量Transformerの複数needle検索には及ばない。
 authors:
-  - Kai Liu
-  - Jianfei Gao
-  - Kai Chen
-published: '2025-07'
+- Kai Liu
+- Jianfei Gao
+- Kai Chen
+published: 2025-07
 publication: 'Proceedings of ACL 2025, Volume 1: Long Papers, pp.11516–11529'
-publication_type: '査読付き国際会議論文'
+publication_type: 査読付き国際会議論文
 publication_status: published
 source: https://aclanthology.org/2025.acl-long.564/
 sources:
-  - https://aclanthology.org/2025.acl-long.564/
-  - https://aclanthology.org/2025.acl-long.564v2.pdf
+- https://aclanthology.org/2025.acl-long.564/
+- https://aclanthology.org/2025.acl-long.564v2.pdf
 code: null
-implementation: '論文はGated DeltaNetとGLAへ状態拡張・副ヘッドCUDA実行を組み込んだ学習実験を報告。公式実装の公開URLは一次論文の確認範囲で特定できない。'
+implementation: 論文はGated DeltaNetとGLAへ状態拡張・副ヘッドCUDA実行を組み込んだ学習実験を報告。公式実装の公開URLは一次論文の確認範囲で特定できない。
 last_checked: '2026-10-20'
 worker_id: scheduled-chat-00
 scheduled_slot: '00'
 worker_completed_at: '2026-10-20T23:58:55+09:00'
-worker_run_key: '20261020-2358-scheduled-chat-00/r01'
-reference_main_sha: '6f2934629f539b074d614ef31624a5430b05872a'
+worker_run_key: 20261020-2358-scheduled-chat-00/r01
+reference_main_sha: 6f2934629f539b074d614ef31624a5430b05872a
 quality_self_review_passed: true
-quality_self_review_version: 'PAPER-QUALITY-GUIDE-2026-10-07'
-returned_repair_origin: '20261020-1800-scheduled-chat-00/r01'
-returned_repair_reason: '評価節の見出しが機械監査の評価区分に一致せず評価説明量0となったため、## 評価に正規化'
-returned_repair_verified_primary: 'https://aclanthology.org/2025.acl-long.564v2.pdf'
+quality_self_review_version: PAPER-QUALITY-GUIDE-2026-10-07
+returned_repair_origin: 20261020-1800-scheduled-chat-00/r01
+returned_repair_reason: 評価節の見出しが機械監査の評価区分に一致せず評価説明量0となったため、## 評価に正規化
+returned_repair_verified_primary: https://aclanthology.org/2025.acl-long.564v2.pdf
 last_audited: null
 audit_version: 0
+references:
+- canonical_id: arXiv:2303.08774
+  arxiv_id: '2303.08774'
+- canonical_id: DOI:10.1145/3315508.3329973
+- canonical_id: arXiv:2307.08691
+- canonical_id: arXiv:2307.08621
+- canonical_id: arXiv:2312.06635
+- canonical_id: arXiv:2404.05892
+- canonical_id: arXiv:2312.00752
+- canonical_id: arXiv:2407.04620
+- canonical_id: arXiv:2412.06464
+- canonical_id: arXiv:2305.13048
+- canonical_id: arXiv:2404.07904
+references_checked_at: '2026-10-21'
+references_source: primary-pdf-reference-section
+references_total: 1
 ---
 
 # 再帰型LLMの状態容量を拡張する：長文脈の検索性能と計算費用

@@ -1,35 +1,102 @@
 ---
-canonical_id: "DOI:10.1145/3789240.3829200"
-title: "Connex: Endpoint Mobility Primitives for Dynamic LLM Serving"
-summary: "動的な大規模言語モデル推論サービスでGPUワーカーが増減・移動すると、固定メンバーを前提とする通信グループの再構築が処理停止や要求喪失を招く。Connexは論理端点IDとエポック付き経路、三段階のストリーム引き継ぎ、受信容量に基づくクレジット制御、接続再利用を通信層で組み合わせ、稼働中の端点移動を扱う。5台・計20基のA40 GPUで、構成変更時の要求完了率とP99遅延を既存通信方式と比較した。"
-list_summary: "GPUワーカーの増減時に経路を局所更新し、未完了トークン転送を順序保証付きで引き継ぐ通信層Connex。5台のGPUサーバーで構成変更中の要求完了率と遅延を評価。"
+canonical_id: DOI:10.1145/3789240.3829200
+title: 'Connex: Endpoint Mobility Primitives for Dynamic LLM Serving'
+summary: 動的な大規模言語モデル推論サービスでGPUワーカーが増減・移動すると、固定メンバーを前提とする通信グループの再構築が処理停止や要求喪失を招く。Connexは論理端点IDとエポック付き経路、三段階のストリーム引き継ぎ、受信容量に基づくクレジット制御、接続再利用を通信層で組み合わせ、稼働中の端点移動を扱う。5台・計20基のA40 GPUで、構成変更時の要求完了率とP99遅延を既存通信方式と比較した。
+list_summary: GPUワーカーの増減時に経路を局所更新し、未完了トークン転送を順序保証付きで引き継ぐ通信層Connex。5台のGPUサーバーで構成変更中の要求完了率と遅延を評価。
 authors:
-  - "Yanying Lin"
-  - "Vincent Liu"
-  - "Tao Luo"
-  - "Chengzhong Xu"
-  - "Kejiang Ye"
-published: "2026-08"
-publication: "ACM SIGCOMM 2026, pp. 46–59"
-publication_type: "conference"
-publication_status: "published"
-source: "https://yanyinglin.github.io/assets/pdf/Connex-Sigcomm26.pdf"
+- Yanying Lin
+- Vincent Liu
+- Tao Luo
+- Chengzhong Xu
+- Kejiang Ye
+published: 2026-08
+publication: ACM SIGCOMM 2026, pp. 46–59
+publication_type: conference
+publication_status: published
+source: https://yanyinglin.github.io/assets/pdf/Connex-Sigcomm26.pdf
 sources:
-  - "https://yanyinglin.github.io/assets/pdf/Connex-Sigcomm26.pdf"
-  - "https://doi.org/10.1145/3789240.3829200"
-  - "https://yanyinglin.github.io/publications/"
-implementation: "著者はZeroMQ制御面、UCX/RDMAベースのConnex Transport Engine、輸送方式を選択する中間層を実装し、5台のA40サーバーで実験。一般公開された公式ソースコードのURLは一次資料中で確認できない。"
+- https://yanyinglin.github.io/assets/pdf/Connex-Sigcomm26.pdf
+- https://doi.org/10.1145/3789240.3829200
+- https://yanyinglin.github.io/publications/
+implementation: 著者はZeroMQ制御面、UCX/RDMAベースのConnex Transport Engine、輸送方式を選択する中間層を実装し、5台のA40サーバーで実験。一般公開された公式ソースコードのURLは一次資料中で確認できない。
 code: null
-last_checked: "2026-10-22"
-worker_id: "scheduled-chat-00"
-worker_run_key: "20261022-0458-scheduled-chat-00/r01"
-worker_completed_at: "2026-10-22T05:02:12+09:00"
-reference_main_sha: "79b7bc7af184b36c878fe83312a197cbc62c70e5"
+last_checked: '2026-10-22'
+worker_id: scheduled-chat-00
+worker_run_key: 20261022-0458-scheduled-chat-00/r01
+worker_completed_at: '2026-10-22T05:02:12+09:00'
+reference_main_sha: 79b7bc7af184b36c878fe83312a197cbc62c70e5
 quality_self_review_passed: true
-quality_self_review_version: "PAPER-QUALITY-GUIDE-2026-10-07"
+quality_self_review_version: PAPER-QUALITY-GUIDE-2026-10-07
 worklist_rank: 40
 last_audited: null
 audit_version: 0
+references:
+- canonical_id: DOI:10.1145/3603269.3604878
+  doi: 10.1145/3603269.3604878
+- canonical_id: DOI:10.1145/3575693.3575724
+  doi: 10.1145/3575693.3575724
+- canonical_id: arXiv:2401.14351
+- canonical_id: DOI:10.1145/3689031.3696072
+  doi: 10.1145/3689031.3696072
+- canonical_id: arXiv:2407.21783
+  arxiv_id: '2407.21783'
+- canonical_id: arXiv:2406.17565
+  arxiv_id: '2406.17565'
+- canonical_id: DOI:10.1145/3600006.3613152
+  doi: 10.1145/3600006.3613152
+- canonical_id: DOI:10.5555/3358807.3358888
+  doi: 10.5555/3358807.3358888
+- canonical_id: DOI:10.1145/3620666.3651362
+  doi: 10.1145/3620666.3651362
+- canonical_id: DOI:10.1145/3387514.3406591
+  doi: 10.1145/3387514.3406591
+- canonical_id: DOI:10.1145/3600006.3613165
+  doi: 10.1145/3600006.3613165
+- canonical_id: arXiv:2407.08980
+  arxiv_id: '2407.08980'
+- canonical_id: DOI:10.1145/3718958.3750487
+  doi: 10.1145/3718958.3750487
+- canonical_id: arXiv:2510.27656
+  arxiv_id: '2510.27656'
+- canonical_id: DOI:10.1145/3552326.3587453
+  doi: 10.1145/3552326.3587453
+- canonical_id: arXiv:2510.11938
+  arxiv_id: '2510.11938'
+- canonical_id: DOI:10.1145/3651890.3672249
+  doi: 10.1145/3651890.3672249
+- canonical_id: DOI:10.1145/3718958.3750539
+  doi: 10.1145/3718958.3750539
+- canonical_id: DOI:10.1145/3718958.3754342
+  doi: 10.1145/3718958.3754342
+- canonical_id: DOI:10.1145/3620665.3640411
+  doi: 10.1145/3620665.3640411
+- canonical_id: DOI:10.1145/3341301.3359646
+  doi: 10.1145/3341301.3359646
+- canonical_id: arXiv:2311.18677
+- canonical_id: DOI:10.1145/3731569.3764795
+  doi: 10.1145/3731569.3764795
+- canonical_id: arXiv:2510.20171
+  arxiv_id: '2510.20171'
+- canonical_id: arXiv:2403.01876
+  arxiv_id: '2403.01876'
+- canonical_id: DOI:10.1145/3731569.3764839
+  doi: 10.1145/3731569.3764839
+- canonical_id: DOI:10.1145/3600006.3613145
+  doi: 10.1145/3600006.3613145
+- canonical_id: DOI:10.1145/3387514.3405880
+  doi: 10.1145/3387514.3405880
+- canonical_id: arXiv:2312.05516
+  doi: 10.1145/3689031.3696086
+- canonical_id: DOI:10.1145/3575693.3575752
+  doi: 10.1145/3575693.3575752
+- canonical_id: arXiv:2401.09670
+- canonical_id: arXiv:2504.17307
+  arxiv_id: '2504.17307'
+- canonical_id: DOI:10.1145/3452296.3472897
+  doi: 10.1145/3452296.3472897
+references_checked_at: '2026-10-21'
+references_source: crossref-deposited-reference-metadata
+references_total: 56
 ---
 
 # Connex：動的LLMサービングで通信端点を移動可能にする仕組み
