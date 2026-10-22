@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-2e4543aaef13c5e1-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2607.03093",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2607.03093",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2607.03093",
+      "arXiv:2607.03093"
+    ],
+    "reason": "利用者の入力待ち時間に応答候補を先行計算し、投機的な継続思考で対話レイテンシを下げるモデル側の手法である。時間を考慮した対話ベンチマークで応答時間を評価する点は推論レイテンシと関係するが、配信スケジューラ・キャッシュ・kernel等の実行基盤を改善するものではなく、適用範囲が会話方式に限られるため微妙に分類する。",
+    "first_checked_at": "2026-10-22T16:59:00+00:00",
+    "last_checked_at": "2026-10-22T16:59:00+00:00",
+    "linked_from": [
+      ".survey/work-queue/WORKLIST-45.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Don't Wait to Reply: Towards Responsive yet Thoughtful Dialogue through Proactive Thinking"
+  },
+  "processed_at": "2026-10-22T16:59:01+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-2e4543aaef13",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
