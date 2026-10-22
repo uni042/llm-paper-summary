@@ -23,7 +23,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - [06-moe-quantization-compression](../06-moe-quantization-compression/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（149本）
+## 自動生成の論文一覧（150本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/09-kernel-runtime-compilation/)
 
@@ -141,6 +141,10 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - **2026-09 · [Exploring the Efficiency of 3D-Stacked AI Chip Architecture for LLM Inference with VOXEL](2026-2604.26821-exploring-the-efficiency-of-3d-stacked-ai-chip-architecture-for-llm-infe.md)**  
   実装：[✓](https://github.com/yiqiliu2/voxelsim) ・ リポジトリ内被引用：0  
   VOXELは、演算コアの上に多数のDRAMバンクを三次元積層したAIチップを対象に、コンパイラが生成する演算配置・データ配置と、分散メモリ・オンチップ通信・熱制約を一体として評価するシミュレータである。性能差の大部分は設計空間を模擬した結果であり、量産シリコンの確定性能として扱わない。
+
+- **2026-09 · [Does Execution Require Target KV Fidelity? A Mixed-Fidelity KV Runtime for LLM Serving](2026-2609.33536-does-execution-require-target-kv-fidelity-a-mixed-fidelity-kv-runtime-fo.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  本研究は精度が完全でないKVでも、処理を進める方が総遅延を小さくできるという観察から、KVの精度を実行時に変更するElasticKVを提案する。
 
 - **2026-09 · [Beyond Accuracy: Prefix-Invariant Realizations of Low-Precision Fast Matrix Multiplication](2026-2609.39816-beyond-accuracy-prefix-invariant-realizations-of-low-precision-fast-matr.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
